@@ -1,0 +1,454 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー14章
+;;第1話　タイトル：それぞれの決意
+;;1_6_10
+;;スクリプト最後の背景：ティルヘルム（夜）
+;;-----------------------------------------
+# script "lisp"
+# background "fairy_world"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス（ジョブチェンジ後）
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# layer 172 2
+# alpha 172 0 0
+# mask 172 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 2
+# alpha 139 0 0
+# mask 139 off
+;;リル=ティルフィング
+# body 3101411
+# pos 3101411 3
+# scale 3101411 0.8 0
+# layer 3101411 2
+# alpha 3101411 0 0
+# mask 3101411 off
+;;レーヴァテイン
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# layer 3100211 2
+# alpha 3100211 0 0
+# mask 3100211 off
+;;ティファレト
+# body 3503211
+# pos 3503211 3
+# scale 3503211 0.8 0
+# layer 3503211 2
+# alpha 3503211 0 0
+# mask 3503211 off
+;;フェイルノート
+# body 3401911
+# pos 3401911 3
+# scale 3401911 0.8 0
+# layer 3401911 2
+# alpha 3401911 0 0
+# mask 3401911 off
+;;カシウス
+# body 3303111
+# pos 3303111 3
+# scale 3303111 0.8 0
+# layer 3303111 2
+# alpha 3303111 0 0
+# mask 3303111 off
+;;ガンバンテイン
+# body 3600211
+# pos 3600211 3
+# scale 3600211 0.8 0
+# layer 3600211 2
+# alpha 3600211 0 0
+# mask 3600211 off
+;;ヴァナルガンド
+# body 3601111
+# pos 3601111 3
+# scale 3601111 0.8 0
+# layer 3601111 2
+# alpha 3601111 0 0
+# mask 3601111 off
+;;オベロン
+# body 135
+# pos 135 3
+# scale 135 0.8 0
+# layer 135 2
+# alpha 135 0 0
+# mask 135 off
+;;-----------------------------------------
+;;//背景：ティルヘルム
+# move 3401911 3 0
+# face 3401911 "normal"
+# alpha 3401911 1 0
+# mask 3401911 off
+# textflame 1 1
+# textboxarrow 0 2
+@フェイルノート
+…作戦としては、こんなものかしら
+どう？何か意見は？
+
+# move 3601111 2 0
+# face 3601111 "normal"
+# alpha 3601111 1 0.5
+# mask 3601111 on
+# textboxarrow 0 1
+# move 3401911 4 0.5
+# mask 3401911 on
+@ヴァナルガンド
+さすがはケイオスリオンの皇帝と
+言うべきでしょうか…
+何も言うことがありません
+
+# voice 360021 "ganbantein_a_0028"
+# alpha 3601111 0 0.5
+# move 3600211 2 0
+# face 3600211 "sad"
+# alpha 3600211 1 0.5
+# mask 3600211 on
+# textboxarrow 0 1
+@ガンバンテイン
+あたしの仕事、減らして欲しいなー
+あい・どんと・らいく・びじー
+
+# voice 4019 "failnaught_a_0010"
+# face 3401911 "angry"
+# textboxarrow 0 3
+@フェイルノート
+今、何と言ったのかしら？
+ガンバンテイン
+
+# voice 360021 "ganbantein_a_0001"
+# textboxarrow 0 1
+@ガンバンテイン
+やっぱりブラックだよー…
+マスター、へるぷ・みー
+
+# voice 310141 "tyrufing_lo_0002"
+# alpha 3600211 0 0.5
+# alpha 3401911 0 0.5
+# move 3101411 3 0
+# face 3101411 "normal"
+# alpha 3101411 1 0.5
+# mask 3101411 off
+# textboxarrow 0 2
+@ティルフィング
+それでは、この作戦でいくという
+ことで、よろしいですか？
+
+# voice 5032 "tiphereth_t_0001"
+# alpha 3101411 0 0.5
+# move 3503211 3 0
+# face 3503211 "normal"
+# alpha 3503211 1 0.5
+# mask 3503211 off
+# textboxarrow 0 2
+@ティファレト
+いかがでしょう、主よ？
+
+;;//選択肢
+;;
+;;Ａそれでいこう
+;;Ｂみんな、無理せずに
+;;Ｃ良いと思う
+# select "それでいこう" "select_label_01" "みんな、無理せずに" "select_label_01" "良いと思う" "select_label_01"
+いかがでしょう、主よ？
+
+;;ＡＢＣ共通
+# label "select_label_01"
+# voice 1038 "almace_0002"
+# alpha 3503211 0 0.5
+# move 172 3 0
+# face 172 "angry"
+# alpha 172 1 0.5
+# mask 172 off
+# textboxarrow 0 2
+@アルマス
+ちょっと待って！
+私の出番、全然ないような気が
+するんだけどっ…
+
+# move 172 2 0.5
+# mask 172 on
+# move 3401911 4 0
+# face 3401911 "normal"
+# alpha 3401911 1 0.5
+# mask 3401911 on
+# textboxarrow 0 3
+@フェイルノート
+気のせいじゃないわよ
+お前の出番はほとんどないわ
+あいつらは私達だけで圧倒できる
+
+# voice 310021 "revatein_ge_0003"
+# alpha 3401911 0 0.5
+# move 3100211 4 0
+# face 3100211 "normal"
+# alpha 3100211 1 0.5
+# mask 3100211 on
+# textboxarrow 0 3
+@レーヴァテイン
+仲間が増えたときも…私達と
+ティルで対処する
+あなたは守りに徹しなさい
+
+# textboxarrow 0 1
+@アルマス
+何で除け者なのよっ？
+この角笛で助けてあげたこと、
+忘れてないでしょうね！
+
+# voice 4019 "failnaught_a_0009"
+# alpha 3100211 0 0.5
+# move 3401911 4 0
+# face 3401911 "normal"
+# alpha 3401911 1 0.5
+# mask 3401911 on
+# textboxarrow 0 3
+@フェイルノート
+恩着せがましい奴…
+さっきも言ったけど、そんなの
+私にだって吹けたのよ
+
+# se "SE_5200"
+# waitandnext 0.5
+
+# face 172 "surprise"
+# textboxarrow 0 1
+@アルマス
+あ、ちょっと…
+返しなさいよ
+
+;;//フェイルノートが角笛を吹くが音がしない
+# se "SE_0788"
+# waitandnext 0.5
+
+# voice 4019 "failnaught_a_0022"
+# face 3401911 "surprise"
+# textboxarrow 0 3
+# textwindow "normal"
+@フェイルノート
+ほら、こんな風に…
+あら？音がしないわよ
+壊れたの？
+
+# se "SE_0784"
+# face 172 "normal"
+# textboxarrow 0 1
+@アルマス
+何するのよっ
+…って、ちゃんと音、鳴るわよ
+吹き方が悪かったんじゃないの？
+
+# voice 4019 "failnaught_a_0006"
+# face 3401911 "normal"
+# textboxarrow 0 3
+@フェイルノート
+どうでもいいわ
+その記録装置はお前の物だから
+お前が吹けるのは当然だもの
+
+# voice 1038 "almace_0022"
+# face 172 "surprise"
+# textboxarrow 0 1
+@アルマス
+えっ…？
+これ、私のだったっけ？
+ビフレストにあった物じゃ…
+
+# voice 3031 "cassius_ge_0004"
+# alpha 3401911 0 0.5
+# move 3303111 4 0
+# face 3303111 "normal"
+# alpha 3303111 1 0.5
+# mask 3303111 on
+# textboxarrow 0 3
+@カシウス
+その角笛はアルマスと初めての
+邂逅を果たした折、その掌中に
+あったと記憶の水底に残ってる
+
+# alpha 3303111 0 0.5
+# move 3503211 4 0
+# face 3503211 "normal"
+# alpha 3503211 1 0.5
+# mask 3503211 on
+# textboxarrow 0 3
+@ティファレト
+そういえば、私も会って間もない頃に
+触らせてもらった覚えがありますね
+
+# voice 1038 "almace_0028"
+# face 172 "sad"
+# textboxarrow 0 1
+@アルマス
+そうだったっけ…
+この角笛、私の物だったの？
+
+# voice 4019 "failnaught_a_0059"
+# alpha 3503211 0 0.5
+# move 3401911 4 0
+# face 3401911 "normal"
+# alpha 3401911 1 0.5
+# mask 3401911 on
+# textboxarrow 0 3
+@フェイルノート
+話を戻すわよ
+アルマス、お前は後詰め
+あいつらは私達メインで叩くわ
+
+# voice 5032 "tiphereth_t_0003"
+# alpha 3401911 0 0.5
+# move 3503211 4 0
+# face 3503211 "normal"
+# alpha 3503211 1 0.5
+# mask 3503211 on
+# textboxarrow 0 3
+@ティファレト
+あなたには最後の切り札として、
+この地の人々を守って
+欲しいのです
+
+# alpha 3503211 0 0.5
+# move 3303111 4 0
+# face 3303111 "normal"
+# alpha 3303111 1 0.5
+# mask 3303111 on
+# textboxarrow 0 3
+@カシウス
+先頭は後尾でもあるわ
+輪廻の理において前後の要は
+意味を成さないの
+
+# voice 1038 "almace_0013"
+# face 172 "normal"
+# textboxarrow 0 1
+@アルマス
+…分かったわよ
+しっかりやってね
+
+# voice 9967 "titania_0066"
+# alpha 3303111 0 0.5
+# move 139 4 0
+# face 139 "worry"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 3
+@ティターニア
+アルマス、あなた…
+
+;;//背景：ティルヘルム（夜）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "201_room"
+# alpha 172 0 0
+# alpha 139 0 0
+# move 172 3 0
+# face 172 "sad"
+# alpha 172 1 0
+# mask 172 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm273" "BgmLostRagnarokEvent" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+…………
+
+# move 172 2 0.5
+# mask 172 on
+# move 139 4 0
+# face 139 "worry"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 3
+@ティターニア
+まだ寝ないのですか？
+…悩み事があるようですね
+
+# voice 1038 "almace_0003"
+# face 172 "normal"
+# textboxarrow 0 1
+@アルマス
+昼間の戦いでね…
+スイハ達はフェイルノート達の
+力量を察して退いていった…
+
+# textboxarrow 0 1
+@アルマス
+私はスイハ一人でも苦戦して…
+地底でもカシウスに助けてもらって
+ようやく難を逃れた…
+
+# face 172 "sad"
+# textboxarrow 0 1
+@アルマス
+強くなったと思ったのに…
+やっと、みんなと肩を並べて歩ける
+そう思ってたのになあ…
+
+# voice 9967 "titania_0063"
+# face 139 "normal"
+# textboxarrow 0 3
+@ティターニア
+アルマス…
+私達は、もっと強くなれます
+オベロンが言っていたでしょう
+
+# textboxarrow 0 3
+@ティターニア
+あなたと私の共鳴率が更に上がれば
+妖精結合は新たな可能性を見せて
+くれますよっ
+
+# textboxarrow 0 1
+@アルマス
+新たな可能性かぁ…
+
+# se "SE_0719"
+# voice 9970 "oberon_0002"
+# alpha 172 0 0.5
+# alpha 139 0 0.5
+# move 135 3 0
+# face 135 "normal"
+# alpha 135 1 0.5
+# mask 135 off
+# textboxarrow 0 2
+@オベロン
+夜分遅くにすまぬ
+少し良いか
+
+# voice 1038 "almace_0022"
+# alpha 135 0 0.5
+# move 172 3 0
+# face 172 "surprise"
+# alpha 172 1 0.5
+# mask 172 off
+# textboxarrow 0 2
+@アルマス
+オベロン様？
+どうしたの…？
+
+# voice 9970 "oberon_0003"
+# alpha 172 0 0.5
+# move 135 3 0
+# face 135 "normal"
+# alpha 135 1 0.5
+# mask 135 off
+# textboxarrow 0 2
+@オベロン
+うむ…
+これは話すかどうか迷っておった
+のだがな…
+
+# textboxarrow 0 2
+@オベロン
+アルマス…
+そなたは、死ぬのかもしれぬ…

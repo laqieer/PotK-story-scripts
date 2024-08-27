@@ -1,0 +1,665 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;３章１話　タイトル「地上の脅威―リバイヴ―」
+;;第1話　タイトル：異形の浸食
+;;7_1_6
+;;スクリプト最後の背景：部屋
+;;-----------------------------------------
+# script "lisp"
+# background "201_room"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 2
+# alpha 3201911 0 0
+# mask 3201911 off
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 3
+# alpha 211 0 0
+# mask 211 off
+;;フォルカス
+# body 3301811
+# pos 3301811 3
+# scale 3301811 0.8 0
+# layer 3301811 2
+# alpha 3301811 0 0
+# mask 3301811 off
+;;エンクウ
+# body 227
+# pos 227 3
+# scale 227 0.8 0
+# layer 227 2
+# alpha 227 0 0
+# mask 227 off
+;;クレイ
+# body 228
+# pos 228 3
+# scale 228 0.8 0
+# layer 228 2
+# alpha 228 0 0
+# mask 228 off
+;;ツカサ
+# body 229
+# pos 229 3
+# scale 229 0.8 0
+# layer 229 2
+# alpha 229 0 0
+# mask 229 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第1話　タイトル：異形の浸食
+;;//背景：部屋
+;;//画面揺れ
+# sedelay "SE_5223" 1
+# textwindow "close"
+# waitandnext 1
+
+# shake 0 0.5
+# waitandnext 0.5
+
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9936 "kamito_0026"
+@カミト
+うわっ？
+また地震か…
+
+# move 210 2 0.5
+# mask 210 on
+# move 3301811 4 0
+# face 3301811 "angry"
+# alpha 3301811 1 0.5
+# mask 3301811 on
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0001"
+@フォルカス
+マスター、起きて下さい！
+マスター！
+
+# face 210 "happy"
+# textboxarrow 0 1
+@カミト
+あ、おはようフォルカス
+けっこう揺れたね…
+
+# textboxarrow 0 3
+@フォルカス
+地震のことよりも、
+窓から外を見て下さい
+
+# face 210 "surprise"
+# textboxarrow 0 1
+# voice 9936 "kamito_0024"
+@カミト
+外…？
+何が…ええっ？
+
+;;//背景：下町
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "in_downtown"
+# alpha 210 0 0
+# alpha 3301811 0 0
+# move 211 3 0
+# face 211 "irregular"
+# alpha 211 1 0
+# mask 211 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9935 "vang_0001"
+@ヴァング
+朝っぱらから
+ぞろぞろと…
+何の用だ、お前ら？
+
+# move 227 2 0
+# face 227 "usual"
+# alpha 227 1 0.5
+# mask 227 on
+# textboxarrow 0 1
+# move 211 4 0.5
+# mask 211 on
+@坊主っぽい奏官
+拙僧はエンクウと申す
+そなたがヴァング殿かな？
+
+# textboxarrow 0 3
+# voice 9935 "vang_0003"
+@ヴァング
+ああ、そうだ
+そっちの連中もお前の仲間か？
+
+# voice 9931 "enkuu_0030"
+# textboxarrow 0 1
+@エンクウ
+ふむ…
+同志と呼ぶべきであろうな
+
+# voice 9930 "clay_0038"
+# alpha 227 0 0.5
+# alpha 211 0 0.5
+# move 228 2 0
+# face 228 "normal"
+# alpha 228 1 0.5
+# mask 228 on
+# textboxarrow 0 1
+# move 229 4 0
+# alpha 229 1 0.5
+# mask 229 on
+@医者らしき奏官
+私はクレイだ
+よろしく、ヴァングくん
+
+# textboxarrow 0 3
+@ローブを目深に被っている奏官
+…………
+
+# alpha 228 0 0.5
+# alpha 229 0 0.5
+# move 227 2 0
+# face 227 "usual"
+# alpha 227 1 0.5
+# mask 227 on
+# textboxarrow 0 1
+# move 211 4 0
+# face 211 "irregular"
+# alpha 211 1 0.5
+# mask 211 on
+@エンクウ
+あの者はツカサという
+顔を見せぬ非礼は詫びよう
+拙僧達にも顔を見せてはくれぬのだ
+
+# face 211 "usual"
+# textboxarrow 0 3
+# voice 9935 "vang_0008"
+@ヴァング
+いきなり胡散臭ぇじゃねぇか
+まあ、いいけどよ
+
+;;//カミトが走ってくる
+# se "SE_5575"
+# move 227 1 0.5
+# move 211 3 0.5
+# move 210 5 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+@カミト
+兄貴！
+敵襲なのっ？
+ぼ、僕もっ…
+
+# face 211 "normal"
+# textboxarrow 0 2
+# voice 9935 "vang_0034"
+@ヴァング
+おう、おはようカミト
+威勢良く出てきたのは良いが、
+声が震えてんぜ
+
+# face 210 "normal"
+# textboxarrow 0 3
+# voice 9936 "kamito_0016"
+@カミト
+そ、そんなことは…
+
+# voice 9931 "enkuu_0042"
+# textboxarrow 0 1
+@エンクウ
+そちらがカミト殿か
+思っていたより幼いな…
+
+# face 211 "irregular"
+# textboxarrow 0 2
+# voice 9935 "vang_0009"
+@ヴァング
+ああ？
+オレの弟分に文句でもあんのか？
+
+# voice 9931 "enkuu_0016"
+# textboxarrow 0 1
+@エンクウ
+いや、失敬
+キル姫を三人も引き連れていると
+聞いていたものでな
+
+# face 211 "normal"
+# textboxarrow 0 2
+@ヴァング
+人は見かけに寄らねぇって言うぜ
+
+# textboxarrow 0 3
+# voice 9936 "kamito_0030"
+@カミト
+あ、兄貴っ…
+煽るのはやめようよ…
+
+# face 211 "irregular"
+# textboxarrow 0 2
+@ヴァング
+カミト、堂々としてろ
+で、何しに来たんだ、お前ら？
+やろうってんなら受けて立つぜ
+
+# alpha 227 0 0.5
+# alpha 211 0 0.5
+# alpha 210 0 0.5
+# move 3201911 3 0
+# face 3201911 "normal"
+# alpha 3201911 1 0.5
+# mask 3201911 off
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_0029"
+@シユウ
+うがあああぁぁ！
+ますた～、シユウはいつでもいいぞ！
+
+# voice 9931 "enkuu_0012"
+# alpha 3201911 0 0.5
+# move 227 1 0
+# face 227 "usual"
+# alpha 227 1 0.5
+# mask 227 on
+# textboxarrow 0 1
+# move 211 3 0
+# face 211 "irregular"
+# alpha 211 1 0.5
+# mask 211 on
+# move 210 5 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+@エンクウ
+待たれよ、ヴァング殿
+拙僧達はそなた達と戦いに来たわけ
+ではない
+
+# alpha 227 0 0.5
+# move 228 1 0
+# face 228 "normal"
+# alpha 228 1 0.5
+# mask 228 on
+# textboxarrow 0 1
+@クレイ
+むしろ、その逆だよ
+どうだい？
+私達と組まないか
+
+# textboxarrow 0 2
+@ヴァング
+…立ち話もなんだな
+中で話そうぜ
+
+# face 210 "surprise"
+# textboxarrow 0 3
+# voice 9936 "kamito_0023"
+@カミト
+兄貴っ…？
+
+# textboxarrow 0 2
+@ヴァング
+ただし、お前らのキル姫は
+外に待機させろ
+
+# voice 9931 "enkuu_0030"
+# alpha 228 0 0.5
+# move 227 1 0
+# face 227 "usual"
+# alpha 227 1 0.5
+# mask 227 on
+# textboxarrow 0 1
+@エンクウ
+ふむ…
+さすがに勘づいておったか
+
+# alpha 227 0 0.5
+# move 228 1 0
+# face 228 "normal"
+# alpha 228 1 0.5
+# mask 228 on
+# textboxarrow 0 1
+@クレイ
+では、君のキル姫達で私達の
+キル姫を見張るというのはどうかな？
+
+# textboxarrow 0 2
+# voice 9935 "vang_0008"
+@ヴァング
+お互いに
+キル姫抜きで話そうって腹かよ
+…まあ、いいぜ
+
+# textboxarrow 0 2
+@ヴァング
+その代わり、妙な真似しやがったら
+容赦しねぇからな
+
+# voice 9931 "enkuu_0032"
+# alpha 228 0 0.5
+# move 227 1 0
+# face 227 "usual"
+# alpha 227 1 0.5
+# mask 227 on
+# textboxarrow 0 1
+@エンクウ
+かたじけない
+
+# face 210 "normal"
+# textboxarrow 0 3
+@カミト
+兄貴…大丈夫なの…？
+
+# face 211 "normal"
+# textboxarrow 0 2
+@ヴァング
+堂々としてろって言っただろ
+ほら、客人を案内してやれ
+
+# textboxarrow 0 3
+@カミト
+あ、うん…
+兄貴がそう言うなら
+
+# se "SE_0740"
+# textwindow "close"
+# alpha 210 0 0.5
+# waitandnext 1
+
+;;//背景：部屋
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "201_room"
+# alpha 227 0 0
+# alpha 211 0 0
+# move 227 1 0
+# face 227 "usual"
+# alpha 227 1 0
+# mask 227 on
+# move 211 3 0
+# face 211 "usual"
+# alpha 211 1 0
+# mask 211 off
+# textboxarrow 0 2
+# move 210 5 0
+# face 210 "normal"
+# alpha 210 1 0
+# mask 210 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9935 "vang_0042"
+@ヴァング
+…ようするに、お前ら三人と
+オレ、カミトの五人で
+新しいギルドを作ろうって話だな
+
+# voice 9931 "enkuu_0003"
+# textboxarrow 0 1
+@エンクウ
+うむ
+拙僧の下にはムラマサがいる
+
+# alpha 227 0 0.5
+# move 228 1 0
+# face 228 "normal"
+# alpha 228 1 0.5
+# mask 228 on
+# textboxarrow 0 1
+@クレイ
+私のところにはヴァナルガンドが
+ツカサのところには
+アフロディーテがいるんだ
+
+# alpha 228 0 0.5
+# move 227 1 0
+# face 227 "usual"
+# alpha 227 1 0.5
+# mask 227 on
+# textboxarrow 0 1
+@エンクウ
+ヴァング殿はセブンスキラーズという
+言葉を聞いたことがおありかな？
+
+# face 211 "irregular"
+# textboxarrow 0 2
+# voice 9935 "vang_0030"
+@ヴァング
+聞いたことがあるような、
+ないような…なぁ、カミト
+知ってるか？
+
+# textboxarrow 0 3
+# voice 9936 "kamito_0029"
+@カミト
+ええと…
+確か、キル姫の中でも「新世代」と
+呼ばれているとか…
+
+# textboxarrow 0 3
+@カミト
+そんなことを前にフォルカスが
+話してたと、思う
+
+# textboxarrow 0 1
+@エンクウ
+その通り
+拙僧達とそなた達の連れている
+キル姫がそれなのだ
+
+# textboxarrow 0 2
+@ヴァング
+つまり、何か？
+セブンスキラーズの奏官同士で
+集まろうってことかよ？
+
+# textboxarrow 0 2
+# voice 9935 "vang_0020"
+@ヴァング
+つまんねぇな！
+そんなもんに何の意味が
+あるんだよ
+
+# alpha 227 0 0.5
+# move 228 1 0
+# face 228 "irregular"
+# alpha 228 1 0.5
+# mask 228 on
+# textboxarrow 0 1
+@クレイ
+そこだよ、ヴァングくん
+地上世界は長らく奏官同士の
+争いが続いている
+
+# textboxarrow 0 1
+@クレイ
+だが、一時期、世界は三つの国に
+までまとまったんだ
+知っているかな？
+
+# face 211 "sad"
+# textboxarrow 0 2
+@ヴァング
+カミト～っ
+
+# textboxarrow 0 3
+@カミト
+兄貴だって知ってるだろ…
+ハルモニアとケイオスリオンと
+トレイセーマだよっ
+
+# voice 9930 "clay_0034"
+# textboxarrow 0 1
+@クレイ
+そうだ
+では、どうしてその三国が
+覇権を握ることができたと思う？
+
+# face 211 "usual"
+# textboxarrow 0 2
+@ヴァング
+カミト、ゴー！
+
+# textboxarrow 0 3
+# voice 9936 "kamito_0030"
+@カミト
+何だよ、その指示…
+三国が霊装支配の技術を作り上げて
+キル姫の強化に成功したから…
+
+# textboxarrow 0 1
+@クレイ
+正解だ
+その力によって三国は地上世界を
+統一するかに思われた
+
+# face 211 "irregular"
+# textboxarrow 0 2
+@ヴァング
+でも、結局ダメだった
+何でか三国はどこも崩壊
+理由は伝わってねぇらしいけどな
+
+# alpha 228 0 0.5
+# move 227 1 0
+# face 227 "usual"
+# alpha 227 1 0.5
+# mask 227 on
+# textboxarrow 0 1
+@エンクウ
+その点については拙僧も不可解だと
+考えておるが、今回の主題は
+そこではない
+
+# alpha 227 0 0.5
+# move 228 1 0
+# face 228 "irregular"
+# alpha 228 1 0.5
+# mask 228 on
+# textboxarrow 0 1
+@クレイ
+ようするに、新しい力こそが
+覇権を握る最重要ファクターって
+ことだよ
+
+# textboxarrow 0 1
+@クレイ
+私達の連れているセブンスには
+その可能性がある
+
+# textboxarrow 0 1
+@クレイ
+三国は何故、地上世界を統一
+できなかった？
+理由は様々なんだろうが…
+
+# textboxarrow 0 1
+@クレイ
+どこか一国だけが霊装支配の技術を
+独占していたら、恐らく今頃
+地上世界は統一されていたよ
+
+# textboxarrow 0 2
+@ヴァング
+…………
+
+# alpha 228 0 0.5
+# move 227 1 0
+# face 227 "usual"
+# alpha 227 1 0.5
+# mask 227 on
+# textboxarrow 0 1
+@エンクウ
+拙僧はセブンスキラーズが
+散らばって行動していることに
+懸念を抱いておる
+
+# textboxarrow 0 1
+@エンクウ
+三国の悲劇を繰り返さぬためにも
+拙僧達は一つにまとまり、
+天下統一を果たすべきではないか
+
+# face 210 "surprise"
+# textboxarrow 0 3
+@カミト
+天下統一…！
+兄貴と同じことを…
+
+# voice 9930 "clay_0021"
+# alpha 227 0 0.5
+# move 228 1 0
+# face 228 "normal"
+# alpha 228 1 0.5
+# mask 228 on
+# textboxarrow 0 1
+@クレイ
+どうだい？
+君達にとって有益な話だろう
+
+# alpha 228 0 0.5
+# move 227 1 0
+# face 227 "usual"
+# alpha 227 1 0.5
+# mask 227 on
+# textboxarrow 0 1
+@エンクウ
+拙僧達とギルドを作り、
+ともに天下統一を目指そう！
+
+# textboxarrow 0 2
+# voice 9935 "vang_0043"
+@ヴァング
+なるほどなぁ
+
+# face 210 "happy"
+# textboxarrow 0 3
+# voice 9936 "kamito_0051"
+@カミト
+兄貴っ
+これ、本当にいい話かも
+
+# face 211 "sad"
+# textboxarrow 0 2
+# voice 9935 "vang_0014"
+@ヴァング
+おいおい…
+そりゃねぇわ

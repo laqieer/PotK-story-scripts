@@ -1,0 +1,689 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第５章
+;;第1話　タイトル：中心部防衛戦
+;;5_1_7
+;;スクリプト最後の背景：市街地（夕方）
+;;-----------------------------------------
+# script "lisp"
+# background "in_city_evening"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;魔獣
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# layer 910013 2
+# alpha 910013 0 0
+# mask 910013 off
+;;魔獣1
+# entry 99100131 910013
+# pos 99100131 3
+# scale 99100131 0.8 0
+# layer 99100131 2
+# alpha 99100131 0 0
+# mask 99100131 off
+;;魔獣2
+# entry 99100132 910013
+# pos 99100132 3
+# scale 99100132 0.8 0
+# layer 99100132 2
+# alpha 99100132 0 0
+# mask 99100132 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;ミョルニル(キラーメイル)
+# body 1200111
+# pos 1200111 3
+# scale 1200111 0.8 0
+# layer 1200111 2
+# alpha 1200111 0 0
+# mask 1200111 off
+;;マサムネ(キラーメイル)
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# layer 1100111 2
+# alpha 1100111 0 0
+# mask 1100111 off
+;;アスクレピオス(キラーメイル)
+# body 1600111
+# pos 1600111 3
+# scale 1600111 0.8 0
+# layer 1600111 2
+# alpha 1600111 0 0
+# mask 1600111 off
+;;ペルーン・聖鎖・マスティマ
+# body 3200811
+# pos 3200811 3
+# scale 3200811 0.8 0
+# layer 3200811 2
+# alpha 3200811 0 0
+# mask 3200811 off
+;;幻獣ピナーカ
+# body 3400211
+# pos 3400211 3
+# scale 3400211 0.8 0
+# layer 3400211 2
+# alpha 3400211 0 0
+# mask 3400211 off
+;;シェキナー
+# body 3400711
+# pos 3400711 3
+# scale 3400711 0.8 0
+# layer 3400711 2
+# alpha 3400711 0 0
+# mask 3400711 off
+;;エロース
+# body 3400411
+# pos 3400411 3
+# scale 3400411 0.8 0
+# layer 3400411 2
+# alpha 3400411 0 0
+# mask 3400411 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第1話　タイトル：中心部防衛戦
+;;//背景：市街地（夕方）
+# voice 9935 "vang_0004"
+# move 211 2 0
+# face 211 "normal"
+# alpha 211 1 0
+# mask 211 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 210 4 0
+# face 210 "irregular"
+# alpha 210 1 0
+# mask 210 on
+@ヴァング
+かははっ
+中心部のキル姫達も
+やるじゃねえか！
+
+# voice 9936 "kamito_0001"
+# textboxarrow 0 3
+@カミト
+彼女達…ここを治めてるっていう
+四人の奏官に従ってるキル姫
+なのかな？
+
+# voice 9935 "vang_0003"
+# face 211 "usual"
+# textboxarrow 0 1
+@ヴァング
+間違いねぇだろ
+あとはペルーンと蜻蛉切だろ
+それから…
+
+# se "SE_0793"
+# alpha 211 0 0.5
+# alpha 210 0 0.5
+# move 99100131 1 0
+# alpha 99100131 1 0.5
+# mask 99100131 on
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 on
+# move 99100132 5 0
+# alpha 99100132 1 0.5
+# mask 99100132 on
+# textboxarrow 0 0
+@魔獣
+ガアアアアアアアアアアア！
+
+;;//魔獣の群れが歩いていく
+# se "SE_0887"
+# textwindow "close"
+# leftout 99100131 0.8
+# leftout 910013 0.9
+# leftout 99100132 1
+# waitandnext 1
+
+# voice 9936 "kamito_0051"
+# alpha 99100131 0 0
+# alpha 910013 0 0
+# alpha 99100132 0 0
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+兄貴！
+大群があそこのビルに向かって
+進んでるよ！
+
+# voice 350171 "grimoire_ge_0028"
+# alpha 210 0 0.5
+# move 3501711 2 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 1
+# move 3400211 4 0
+# face 3400211 "normal"
+# alpha 3400211 1 0.5
+# mask 3400211 on
+@グリモワール
+この辺りで一番高いビルね
+何かあるのかしら？
+
+# textboxarrow 0 3
+@ピナーカ
+町の人達が避難してるのかも
+しれないな！
+オイラがいくぜ！
+
+# alpha 3501711 0 0.5
+# move 211 2 0
+# face 211 "irregular"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+@ヴァング
+いや…
+その必要はなさそうだ
+
+;;//無数の矢が降り注ぐ
+# textwindow "close"
+# alpha 211 0 0.5
+# alpha 3400211 0 0.5
+# move 99100131 1 0
+# alpha 99100131 1 0.5
+# mask 99100131 on
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 on
+# move 99100132 5 0
+# alpha 99100132 1 0.5
+# mask 99100132 on
+# waitandnext 0.6
+
+# se "SE_11545"
+# sedelay "SE_11554" 0.8
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_0794"
+# textboxarrow 0 0
+# textwindow "normal"
+@魔獣
+ガアアアアアア…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 99100131 0 0.5
+# alpha 910013 0 0.5
+# alpha 99100132 0 0.5
+# waitandnext 0.5
+
+# voice 9936 "kamito_0024"
+# move 211 2 0
+# face 211 "usual"
+# alpha 211 1 0.5
+# mask 211 on
+# move 210 4 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# textwindow "normal"
+@カミト
+ビルから大量の矢が…！
+
+# voice 9935 "vang_0042"
+# face 211 "normal"
+# textboxarrow 0 1
+@ヴァング
+大したもんだな
+どんなキル姫か顔を拝ませて
+もらおうぜ
+
+# se "SE_5575"
+# textwindow "close"
+# leftout 211 0.5
+# waitandnext 0.5
+
+# alpha 211 0 0
+# face 210 "angry"
+# textboxarrow 0 3
+# textwindow "normal"
+@カミト
+あっ…
+待ってよ、兄貴！
+
+# se "SE_5575"
+# textwindow "close"
+# leftout 210 0.5
+# waitandnext 0.5
+
+# voice 340021 "pinaka_ge_0013"
+# alpha 210 0 0
+# move 3400211 3 0
+# face 3400211 "angry"
+# alpha 3400211 1 0.5
+# mask 3400211 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ピナーカ
+くそっ！
+オイラの出番を
+奪いやがって
+
+# se "SE_5575"
+# textwindow "close"
+# leftout 3400211 0.5
+# waitandnext 0.5
+
+;;//暗転挟む
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 3400211 0 0
+# move 99100131 1 0
+# alpha 99100131 1 0
+# mask 99100131 on
+# move 910013 3 0
+# alpha 910013 1 0
+# mask 910013 on
+# move 99100132 5 0
+# alpha 99100132 1 0
+# mask 99100132 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgm "stop"
+# se "SE_11545"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_0794"
+# textboxarrow 0 0
+# textwindow "normal"
+@魔獣
+ガアアアアアアアア…
+
+;;//魔獣の群れが全滅する
+# se "SE_3001"
+# textwindow "close"
+# alpha 99100131 0 0.5
+# alpha 910013 0 0.5
+# alpha 99100132 0 0.5
+# waitandnext 0.5
+
+# move 211 3 0
+# face 211 "irregular"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ヴァング
+あっという間に全滅かよ
+どんな射撃の名手だ？
+
+;;？？？（シェキナー）
+# alpha 211 0 0.5
+# move 3400711 3 0
+# face 3400711 "angry"
+# alpha 3400711 1 0.5
+# mask 3400711 off
+# textboxarrow 0 2
+@？？？
+何者ですか？
+
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# voice 340071 "shekina_t_0007"
+# textboxarrow 0 2
+@シェキナー
+それ以上、近づくことは
+このシェキナー・聖鎖・ラファエルが
+許しませんよ
+
+;;？？？（エロース）
+# move 3400411 2 0
+# face 3400411 "normal"
+# alpha 3400411 1 0.5
+# mask 3400411 on
+# textboxarrow 0 1
+# move 3400711 4 0.5
+# mask 3400711 on
+@？？？
+どうしたんですかぁ？
+まだ敵が残ってましたか～？
+
+# voice 340041 "erosu_t_0005"
+# textboxarrow 0 1
+@エロース
+あら、見かけない奏官ですね～
+エロースにお任せくださ～い♪
+
+# voice 340071 "shekina_t_0034"
+# textboxarrow 0 3
+@シェキナー
+いけません
+貴方の「導き」はマスターに
+禁じられているでしょう？
+
+# voice 340041 "erosu_t_0019"
+# face 3400411 "sad"
+# textboxarrow 0 1
+@エロース
+残念ですね～…
+それじゃあ、どうします～？
+
+# voice 350171 "grimoire_ge_0002"
+# alpha 3400411 0 0.5
+# alpha 3400711 0 0.5
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+@グリモワール
+ちょっと！
+ワタシ達は敵じゃないわよ！
+話をさせなさい！
+
+# alpha 3501711 0 0.5
+# move 3400211 3 0
+# face 3400211 "normal"
+# alpha 3400211 1 0.5
+# mask 3400211 off
+# textboxarrow 0 2
+@ピナーカ
+そうだ！
+オイラと全力で語り合って、
+分かり合おうぜ！
+
+# voice 9936 "kamito_0029"
+# alpha 3400211 0 0.5
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+ピナーカの「語り合い」って
+意味が違うような…
+
+# alpha 210 0 0.5
+# move 211 3 0
+# face 211 "normal"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+@ヴァング
+俺はヴァングだ！
+
+# textboxarrow 0 2
+@ヴァング
+町に現れた化け物どもを退治しろって
+招き入れたのは、お前達のマスター
+だろうが！
+
+# voice 340071 "shekina_t_0040"
+# move 211 2 0.5
+# mask 211 on
+# move 3400711 4 0
+# face 3400711 "usual"
+# alpha 3400711 1 0.5
+# mask 3400711 on
+# textboxarrow 0 3
+@シェキナー
+なるほど
+協力者の方々ですね
+
+# textboxarrow 0 3
+@シェキナー
+それでは、ここにいないで
+貴方達の役目を果たして下さい
+
+# se "SE_0740"
+# voice 11001 "masamunem_0007"
+# alpha 211 0 0.5
+# alpha 3400711 0 0.5
+# move 1100111 3 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 off
+# textboxarrow 0 2
+@マサムネ
+それなら終わった
+あの巨大な化け物は全て駆逐したぞ
+
+# alpha 1100111 0 0.5
+# move 210 3 0
+# face 210 "happy"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+マサムネ！
+みんな！
+お疲れ様っ
+
+# voice 12001 "mjolnirm_0001"
+# alpha 210 0 0.5
+# move 1600111 2 0
+# face 1600111 "normal"
+# alpha 1600111 1 0.5
+# mask 1600111 on
+# move 1200111 4 0
+# face 1200111 "normal"
+# alpha 1200111 1 0.5
+# mask 1200111 on
+# textboxarrow 0 3
+@ミョルニル
+あんた、無事だったんだな
+
+# voice 16001 "asklepiosm_0003"
+# textboxarrow 0 1
+@アスクレピオス
+作戦は完了したよ
+それから、彼女の治療も
+
+# voice 310231 "ascalon_a_0031"
+# alpha 1600111 0 0.5
+# alpha 1200111 0 0.5
+# move 3102311 2 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# move 210 4 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+@アスカロン
+マスター…
+お側を離れてしまって
+ごめんなさいっ
+
+# voice 9936 "kamito_0002"
+# textboxarrow 0 3
+@カミト
+アスカロン、体はもう大丈夫？
+
+# voice 310231 "ascalon_a_0003"
+# face 3102311 "happy"
+# textboxarrow 0 1
+@アスカロン
+はい
+ちゃんと回復しました
+
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# move 1600111 3 0
+# face 1600111 "normal"
+# alpha 1600111 1 0.5
+# mask 1600111 off
+# textboxarrow 0 2
+@アスクレピオス
+さてと…
+ひとまず化け物の脅威は去ったわけ
+だけど
+
+# textboxarrow 0 2
+@アスクレピオス
+君達のマスターは町を守った
+功労者にねぎらいの言葉一つ
+かけられない薄情者なのかな？
+
+# alpha 1600111 0 0.5
+# move 1200111 3 0
+# face 1200111 "trouble"
+# alpha 1200111 1 0.5
+# mask 1200111 off
+# textboxarrow 0 2
+@ミョルニル
+けっ…
+また始まったぜ
+
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 1
+# move 1200111 4 0.5
+# mask 1200111 on
+@マサムネ
+静かにしていろ、ミョルニル
+
+# voice 16001 "asklepiosm_0027"
+# alpha 1100111 0 0.5
+# alpha 1200111 0 0.5
+# move 1600111 3 0
+# face 1600111 "trouble"
+# alpha 1600111 1 0.5
+# mask 1600111 off
+# textboxarrow 0 2
+@アスクレピオス
+まあ、中心部を治めていると
+いっても、その程度なのかな…
+やれやれだよ…
+
+# move 3400711 2 0
+# face 3400711 "angry"
+# alpha 3400711 1 0.5
+# mask 3400711 on
+# textboxarrow 0 1
+# move 1600111 4 0.5
+# mask 1600111 on
+@シェキナー
+その発言は私達のマスターに対する
+侮辱と受け取りますよ
+
+# voice 340041 "erosu_t_0027"
+# alpha 3400711 0 0.5
+# move 3400411 2 0
+# face 3400411 "angry"
+# alpha 3400411 1 0.5
+# mask 3400411 on
+# textboxarrow 0 1
+@エロース
+いけませんねぇ…
+エロースも怒っちゃいますよ～
+
+# voice 16001 "asklepiosm_0019"
+# textboxarrow 0 3
+@アスクレピオス
+僕は当然の権利を主張しているだけ
+なんだけどなあ
+実に心外だ
+
+# alpha 3400411 0 0.5
+# move 3400711 2 0
+# face 3400711 "angry"
+# alpha 3400711 1 0.5
+# mask 3400711 on
+# textboxarrow 0 1
+@シェキナー
+私達のマスターは――
+
+# alpha 3400711 0 0.5
+# alpha 1600111 0 0.5
+# move 3200811 3 0
+# face 3200811 "angry"
+# alpha 3200811 1 0.5
+# mask 3200811 off
+# textboxarrow 0 2
+@ペルーン
+そこまでだよ！
+ケンカするなら
+ビシッと指導するからね！
+
+# move 3400711 2 0
+# face 3400711 "surprise"
+# alpha 3400711 1 0.5
+# mask 3400711 on
+# textboxarrow 0 1
+# move 3200811 4 0.5
+# mask 3200811 on
+@シェキナー
+ペルーン…
+どうしたのですか？
+
+# voice 320081 "perun_t_0003"
+# face 3200811 "normal"
+# textboxarrow 0 3
+@ペルーン
+マスターが、あの人達を
+ビルの中に入れろって
+
+# voice 340071 "shekina_t_0013"
+# face 3400711 "sad"
+# textboxarrow 0 1
+@シェキナー
+そうですか…
+貴方のマスターがそう仰るのなら
+私に異論はありません
+
+# voice 9935 "vang_0045"
+# alpha 3400711 0 0.5
+# alpha 3200811 0 0.5
+# move 211 3 0
+# face 211 "normal"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+@ヴァング
+おおっ！
+どうやら中心部の奏官達と
+会えるようだぜ

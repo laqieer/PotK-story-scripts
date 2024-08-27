@@ -1,0 +1,286 @@
+# script "lisp"
+# background "201_beast_night"
+# bgmfile "bgm071" "BgmHalloween001" 0
+;;-----------------------------------------
+;;ハロウィンモラルタ
+# body 3104071
+# pos 3104071 2
+# mask 3104071 on
+# scale 3104071 0.8 0
+# alpha 3104071 1 0
+;;ハロウィンベガルタ
+# body 3104171
+# pos 3104171 4
+# mask 3104171 on
+# scale 3104171 0.8 0
+# alpha 3104171 1 0
+# body 3104011
+# pos 3104011 2
+# mask 3104011 off
+# brightness 3104011 0 0
+# layer 3104011 23
+# scale 3104011 0.8 0
+# alpha 3104011 0 0
+# body 3104111
+# pos 3104111 4
+# layer 3104111 24
+# mask 3104011 off
+# brightness 3104111 0 0
+# scale 3104111 0.8 0
+# alpha 3104111 0 0
+# body 3201211
+# pos 3201211 4
+# scale 3201211 0.8 0
+# alpha 3201211 0 0
+# body 3400411
+# pos 3400411 2
+# scale 3400411 0.8 0
+# alpha 3400411 0 0
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# alpha 3100211 0 0
+# body 3503111
+# pos 3503111 5
+# scale 3503111 0.8 0
+# alpha 3503111 0 0
+# body 3602511
+# pos 3602511 1
+# scale 3602511 0.8 0
+# alpha 3602511 0 0
+# body 3103811
+# pos 3103811 2
+# mask 3103811 off
+# layer 3103811 1
+# scale 3103811 0.8 0
+# alpha 3103811 0 0
+# body 139
+# pos 139 4
+# mask 139 off
+# layer 139 2
+# scale 139 0.8 0
+# alpha 139 0 0
+;;-----------------------------------------
+;;//背景：紙芝居のような舞台
+# textwindow "close"
+# fadeout "black" 0.1
+# imageset 0 "st_thickcurtain_left"
+# imagealpha 0 0 0 
+# imageset 1 "st_thickcurtain_right"
+# imagealpha 1 0 0 
+# imageset 2 "st_thickcurtain_top"
+# imagealpha 2 0 0 
+# frameout 0 0.5
+# waitandnext 0.1
+
+# imagepos 0 -180 0
+# imagepos 1 180 0
+# imagepos 2 0 450
+# imagealpha 1 1 0
+# imagealpha 0 1 0
+# imagealpha 2 1 0
+# waitandnext 0.2
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# envbody 1001 4 0
+# effectstart 1001
+# envbody 1002 3 0
+# effectstart 1002
+# alpha 3104111 1 0.5
+# alpha 3104011 1 0.5
+# voice 1040 "morallta_event_1011"
+# voice 1041 "beagallta_event_1010"
+# textwindow "nomal"
+# textflame 1 1
+@？？？
+トリック・オア・トリート！！
+
+@？？？
+いたずらしちゃうぞ～！
+
+# fadein "black" 0.5
+# textwindow "close"
+# effectskip 1001
+# effectskip 1002
+# alpha 3104111 0 0
+# alpha 3104011 0 0
+# waitandnext 0.5
+
+# se "SE_0600"
+# textalign "center"
+# textwindow "nomal"
+# textflame 0 0
+@
+ハロウィンの季節に
+仮装した彼女たちが登場！！
+
+# se "SE_0635"
+# envbody 1000 10 0
+# effectstart 1000
+# imagemoveto 0 -540 0 2
+# imagemoveto 1 540 0 2
+# waitandnext 1
+
+# jump 3104071
+# waitandnext 0.3
+
+# jump 3104171
+# waitandnext 0.3
+
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 1
+@モラルタ
+がおー！
+赤ずきんだよ
+
+# textboxarrow 0 3
+@ベガルタ
+きゃっ！
+狼だよ、ぐすん
+
+# voice 1040 "morallta_0004"
+# textflame 1 1
+# textboxarrow 0 1
+@モラルタ
+4周年の前に
+ハロウィンだ！！
+
+# voice 1041 "beagallta_0004"
+# textboxarrow 0 3
+@ベガルタ
+…お菓子を下さい
+ハロウィンだ
+
+# bgm "stop"
+# textwindow "close"
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+# imagealpha 1 0 0
+# imagealpha 0 0 0
+# imagealpha 2 0 0
+# framein 1 0
+# background "ancient_back"
+# effectskip 1000
+# alpha 3104171 0 0
+# alpha 3104071 0 0
+# brightness 3201211 0 0
+# brightness 3400411 0 0
+# mask 3201211 off
+# mask 3400411 off
+# waitandnext 0.5
+
+# bgmfile "bgm291" "BgmLostRagnarokSideStory" 0
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# se "SE_0540"
+# textalign "center"
+# textwindow "nomal"
+# textflame 0 0
+# alpha 3400411 1 0.5
+# alpha 3201211 1 0.5
+@
+ロストラグナロク新ユニット
+登場
+
+# textwindow "close"
+# alpha 3400411 0 0.5
+# alpha 3201211 0 0.5
+# waitandnext 0.5
+
+
+# voice 320121 "srand_ge_0004"
+# se "SE_0502"
+# face 3201211 "happy"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# alpha 3201211 1 0.5
+# brightness 3201211 1 0
+# brightness 3400411 1 0
+# move 3201211 3 0
+# move 3400411 3 0
+@スラーンド
+スラーンド・獣刻・セトだ！
+偉大なる強さ、見せてやろうっ！
+…な～んてね♪
+
+# textwindow "close"
+# alpha 3201211 0 0.5
+# waitandnext 0.5
+
+# voice 340031 "erosu_t_0004"
+# se "SE_0502"
+# textwindow "nomal"
+# face 3400411 "happy"
+# alpha 3400411 1 0.5
+@エロース
+エロース・聖鎖・ハニエルですよぉ♪
+真なる愛を、教導しに来ました～
+断れませんよぉ。これは強制なので！
+
+# textwindow "close"
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+# alpha 3400411 0 0
+# background "2nd_anniversary_mypage"
+# waitandnext 0.5
+
+# envbody 1003 10 0
+# effectstart 1003
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# alpha 3100211 1 0.5
+# alpha 3503111 1 0.5
+# alpha 3602511 1 0.5
+# textwindow "nomal"
+# textalign "center"
+# textflame 0 0
+@
+4周年直前！
+特大ガチャ開催！！
+
+# textalign "center"
+# textwindow "nomal"
+# textflame 0 0
+@
+最大444連無料
+カウントダウンガチャ
+開催中！
+
+# alpha 139 1 0.5
+# alpha 3103811 1 0.5
+# alpha 3100211 0 0.5
+# alpha 3503111 0 0.5
+# alpha 3602511 0 0.5
+# textalign "center"
+# face 3103811 "happy1"
+# textwindow "nomal"
+# textflame 0 0
+@
+4周年カウントダウン！
+絶成長キャンペーン！
+開催！！
+
+# textalign "center"
+# textwindow "nomal"
+# textflame 0 0
+@
+ハロウィンや
+4周年カウントダウン
+など
+
+# textcolor "red"
+# textalign "center"
+# textsize 36
+# textwindow "nomal"
+# textflame 0 0
+@
+お得なイベント開催中！
+

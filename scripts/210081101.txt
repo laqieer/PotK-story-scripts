@@ -1,0 +1,227 @@
+;;【EP1】背景:プール
+# script "lisp"
+# background "sea_resort_day"
+# bgmfile "bgm255" "BgmSeaDate" 0
+# body 2100811
+# pos 2100811 3
+# mask 2100811 off
+# textflame 0 0
+# alpha 2100811 0 0
+@
+ある暑い日、マスターは
+グラムとふたりでプールに来ていた
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2100811
+# alpha 2100811 1 0.5
+# voice 1008 "guramu_0004"
+# face 2100811 "smile"
+@グラム
+ふふ、まさかマスターから
+私をプールに誘ってくれるなんて…！
+
+# voice 1008 "guramu_0003"
+@グラム
+今日はせっかくのふたりっきりだし
+たくさんいいことしようね！
+
+# face 2100811 "normal"
+@グラム
+え？いいことって何かって？
+それはね…
+
+# face 2100811 "smile"
+@グラム
+こういうこと…
+せーのっ！
+
+# fadein "white" 1
+# alpha 2100811 0 0.3
+# se "SE_0655"
+# textflame 0 0
+@
+グラムはマスターの手を掴むと
+勢いよくプールに飛び込んだ
+
+# se "SE_9377"
+# textflame 0 0
+@
+当然、マスターも一緒にプールの中へ
+水から顔を出したマスターは
+驚きから目を白黒させる
+
+# se "SE_9130"
+# alpha 2100811 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2100811
+# voice 1008 "guramu_0006"
+@グラム
+あっはははは！
+マスターってば、ビックリしすぎ！
+
+@グラム
+そんなマスターに追い打ち！
+それーっ！
+
+# se "SE_9130"
+# textflame 0 0
+@
+グラムは、プールの水を両手ですくい
+マスターにかけてきた
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2100811
+# voice 1008 "guramu_0020"
+# face 2100811 "normal"
+@グラム
+ほらほら、ぼんやりしてると
+また水かけちゃうよ？
+
+# select "受けて立つ" "select_label_01" "望むところ" "select_label_02" "痛くもかゆくもない" "select_label_03"
+ほらほら、ぼんやりしてると
+また水かけちゃうよ？
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2100811
+@グラム
+へぇ、私とやり合う気？
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2100811
+@グラム
+うーん…望まれてもなぁ
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2100811
+@グラム
+あ、言ったなぁ。本気出しちゃうよ？
+
+# label "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2100811
+@グラム
+なんかマスターもノリノリだね？
+やっぱり大きなプールにきて
+テンション上がってるの？
+
+# textflame 0 0
+@
+グラムと一緒だから楽しい、
+とマスターが伝える
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2100811
+# voice 1008 "guramu_0023"
+# face 2100811 "sad"
+@グラム
+え！？　なななっ！？
+へ、変なこと言わないでよ
+ビックリするでしょ！
+
+# face 2100811 "normal"
+@グラム
+もう…なんか暑くなってきちゃった
+ねぇ、ちょっと休憩しようよ
+
+# textflame 0 0
+@
+ならドリンクを取ってくる
+そう言ってマスターは
+グラムを残して、その場を離れた
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2100811
+# face 2100811 "smile"
+@グラム
+マスター、優しいな～
+せっかくふたりっきりなんだし
+もっともっと楽しんじゃおっと
+
+;;//暗転（時間経過）
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# bgmfile "bgm226" "BgmSeaEvent" 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2100811
+# voice 1008 "guramu_0028"
+# face 2100811 "sad"
+@グラム
+あ、あれ…？
+マスター、全然戻ってこない？
+
+# face 2100811 "normal"
+@グラム
+なにかあったのかな？
+ちょっと探してこよう！
+
+@グラム
+…あ！　あそこにいるの
+マスターだよね！
+おーい、マス…
+
+# voice 1008 "guramu_0023"
+# face 2100811 "sad"
+@グラム
+え…？
+マスター…女の子と一緒にいる？
+
+@グラム
+あの子、誰？
+なんだか、すごく仲良さそう…
+なに話してるんだろ？
+
+# textflame 0 0
+@
+“このことは、ここだけの秘密
+誰にも言わない”マスターは、
+そう女の子に話しかけていた
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2100811
+@グラム
+ひ、秘密って…なに！？
+二人で会ってること…？
+
+@グラム
+もしかしてマスター、
+ドリンク取ってくるって嘘ついて
+あの子と遊んでたの？
+
+# voice 1008 "guramu_0010"
+# face 2100811 "angry"
+@グラム
+私のこと騙すなんて許せない！
+文句言ってやらないと
+気が済まないよ！

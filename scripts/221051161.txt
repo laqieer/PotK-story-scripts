@@ -1,0 +1,329 @@
+;;-----------------------------------------
+;;【ファントムオブキル】クリスマス2019_イベントシナリオ
+;;【EP5】
+;;EP5_1
+;;スクリプト最後の背景：ハルモニア市街地（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "400_angel_town_daytime"
+# bgm "bgm032" 0
+;;-----------------------------------------
+;;グリモワール（クリスマス）
+# body 3501721
+# pos 3501721 3
+# scale 3501721 0.8 0
+# layer 3501721 2
+# alpha 3501721 0 0
+# mask 3501721 off
+;;リサナウト（クリスマス）
+# body 3203021
+# pos 3203021 3
+# scale 3203021 0.8 0
+# layer 3203021 2
+# alpha 3203021 0 0
+# mask 3203021 off
+;;アル
+# body 141
+# pos 141 3
+# scale 141 0.8 0
+# layer 141 2
+# alpha 141 0 0
+# mask 141 off
+;;ハルモニア兵
+# body 3810001
+# pos 3810001 3
+# scale 3810001 0.8 0
+# layer 3810001 2
+# alpha 3810001 0 0
+# mask 3810001 off
+;;-----------------------------------------
+;;【EP5】時と木を重ねて
+;;背景：ハルモニア市街地（昼）
+;;モノローグ
+# textflame 0 0
+@
+リサナウトとグリモワールが
+戻ってきて一晩が経った
+
+;;モノローグ
+@
+リサナウトが言うには
+きっともう木は元気になっている
+とのことだった
+
+# move 3501721 2 0
+# face 3501721 "happy"
+# alpha 3501721 1 0.5
+# mask 3501721 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 3203021 4 0
+# face 3203021 "usual"
+# alpha 3203021 1 0.5
+# mask 3203021 on
+# voice 350171 "grimoire_ge_0028"
+@グリモワール
+アルは…あの子の母親は
+木が息を吹き返すことを
+喜んでくれるかしら
+
+# se "SE_6504"
+# emotionbody 1001 3 3203021 10 290
+# effectpattern 1001 1 3
+# effectstart 1001
+# face 3203021 "happy"
+# textboxarrow 0 3
+# voice 2030 "risanautr_l_0005"
+@リサナウト
+それよりも立派な木を見て
+アルは目を真ん丸にして驚くわよ！
+これは確定された事象よ！
+
+;;モノローグ
+# textflame 0 0
+@
+リサナウトだけでなく
+普段は怒りっぽいグリモワールまで
+どこかうきうきしているようだった
+
+;;モノローグ
+@
+だが…
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# face 3501721 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 350171 "grimoire_ge_0017"
+@グリモワール
+ワタシの用意した
+人除けの結界が弱まっている…？
+
+# emotionbody 1002 1 3203021 10 280
+# effectpattern 1002 2 0
+# effectstart 1002
+# face 3203021 "surprise"
+# textboxarrow 0 3
+# voice 2030 "risanautr_l_0018"
+@リサナウト
+…なによこれ！
+どうして木がなくなってるの！？
+
+# textboxarrow 0 1
+# voice 350171 "grimoire_ge_0009"
+@グリモワール
+リサナウト
+…キミがなにかしたのか？
+
+# face 3203021 "angry"
+# textboxarrow 0 3
+@リサナウト
+する訳ないでしょう！
+それよりも…
+
+;;モノローグ
+# alpha 3501721 0 0.5
+# alpha 3203021 0 0.5
+# textflame 0 0
+@
+リサナウトは辺りを見回す
+この状況を見せてはいけない相手を
+捜したのだろう
+
+;;モノローグ
+@
+まだ来ていなければいい…
+だが、その願いは
+あっさりと打ち砕かれる
+
+# emotionbody 1003 9 141 -30 120
+# effectpattern 1003 6 0
+# effectstart 1003
+# move 141 3 0
+# face 141 "worry"
+# alpha 141 1 0.5
+# mask 141 off
+# textflame 1 1
+# textboxarrow 0 2
+@アル
+あ、ああ…
+お母さんの、お母さんの木が！
+
+# effectskip 1003
+# alpha 141 0 0.5
+# move 3203021 3 0
+# face 3203021 "surprise"
+# alpha 3203021 1 0.5
+# mask 3203021 off
+# textboxarrow 0 2
+@リサナウト
+アル！
+
+;;演出：少女に駆け寄るリサナウト
+# se "SE_5575"
+# textwindow "close"
+# face 3203021 "angry"
+# leftout 3203021 0.5
+# waitandnext 0.5
+
+# alpha 3203021 0 0
+# move 141 2 0
+# face 141 "worry"
+# alpha 141 1 0.5
+# mask 141 on
+# waitandnext 0.8
+
+# move 3203021 4 0
+# face 3203021 "angry"
+# alpha 3203021 1 0
+# mask 3203021 on
+# rightin 3203021 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+# textwindow "normal"
+@アル
+リサお姉ちゃん…
+お母さんの木、なくなっちゃった…
+
+# emotionbody 1004 6 3501721 50 200
+# effectpattern 1004 1 1
+# effectstart 1004
+# alpha 141 0 0.5
+# move 3501721 2 0
+# face 3501721 "angry"
+# alpha 3501721 1 0.5
+# mask 3501721 on
+# textboxarrow 0 1
+# voice 350171 "grimoire_ge_0027"
+@グリモワール
+…あの兵士たちのせいね
+
+# textboxarrow 0 1
+@グリモワール
+ワタシのせいだ
+ワタシが簡易的なもので間に合わせず
+きちんとした結界を準備していれば…
+
+# textboxarrow 0 3
+@リサナウト
+そんなことないわ
+まだ蘇らせられる可能性はあるはず
+
+# textboxarrow 0 3
+# voice 2030 "risanautr_l_0013"
+@リサナウト
+なんなら私の力で…っ！
+
+# textboxarrow 0 1
+# voice 350171 "grimoire_ge_0010"
+@グリモワール
+キミになにができるっていうのよ！
+
+;;モノローグ
+# textflame 0 0
+@
+グリモワールは知らないが
+リサナウトは時を遡る能力を
+有している
+
+;;モノローグ
+@
+その能力を使えば
+切り倒されてしまった木を
+元に戻せるかもしれない
+
+;;モノローグ
+@
+だが、仲間との時間を
+大事にしたいという理由から
+彼女は能力の使用を控えているのだ
+
+# alpha 3501721 0 0.5
+# alpha 3203021 0 0.5
+# move 141 3 0
+# face 141 "worry"
+# alpha 141 1 0.5
+# mask 141 off
+# textflame 1 1
+# textboxarrow 0 2
+@アル
+お姉ちゃんたち…
+
+;;演出：ハルモニア兵in
+# se "SE_0719"
+# alpha 141 0 0.5
+# move 3810001 3 0
+# alpha 3810001 1 0.5
+# mask 3810001 off
+# textboxarrow 0 2
+@ハルモニア兵
+来たか斬ル姫ども
+こざかしい真似をしおって！
+
+# textboxarrow 0 2
+@ハルモニア兵
+枯れた木は伐採させてもらった
+魔術で隠してまで育てようとは…
+いったいなにを企んでいる！？
+
+# move 3810001 2 0.5
+# mask 3810001 on
+# move 3203021 4 0
+# face 3203021 "angry"
+# alpha 3203021 1 0.5
+# mask 3203021 on
+# textboxarrow 0 3
+# voice 2030 "risanautr_l_0014"
+@リサナウト
+なにも企んでいないわ！
+私たちはアルにクリスマスツリーを
+飾らせてあげたかっただけ！
+
+# textboxarrow 0 1
+@ハルモニア兵
+クリスマス、だと？
+イミテーションの怪しげな祭りに
+隠れて我々に刃向かう気だったのだな
+
+# alpha 3810001 0 0.5
+# move 3501721 2 0
+# face 3501721 "angry"
+# alpha 3501721 1 0.5
+# mask 3501721 on
+# textboxarrow 0 1
+# voice 350171 "grimoire_ge_0007"
+@グリモワール
+話すだけ無駄よ、リサナウト
+アイツらに死者の悲しみは届かない
+
+# textboxarrow 0 1
+@グリモワール
+死者の怒りの炎に焼かれてはじめて
+後悔するような愚か者どもだから
+
+# textboxarrow 0 3
+# voice 2030 "risanautr_l_0028"
+@リサナウト
+そうね…
+私に死者の怒りは
+聞こえないけれど…
+
+# textboxarrow 0 3
+@リサナウト
+この怒りはあいつらに
+ぶつけないと気が済まないわ
+
+# textboxarrow 0 1
+# voice 350171 "grimoire_ge_0003"
+@グリモワール
+ええ、10分後…
+アイツらは全員怒りの炎に焼かれ
+この場に這いつくばることになる！
+
+# textboxarrow 0 3
+# voice 2030 "risanautr_l_0010"
+@リサナウト
+10分もいらない
+ものの数秒で沈めてやるわ
+これは確定事象…っ！

@@ -1,0 +1,233 @@
+;;-----------------------------------------
+;;【EP2_1】
+;;バレンタイン「オティヌス」キャラクエ
+;;背景：ケイオスリオン、伯爵の屋敷
+;;-----------------------------------------
+# script "lisp"
+# background "201_room"
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;オティヌス（バレンタイン衣装）
+# body 3400821
+# pos 3400821 3
+# scale 3400821 0.8 0
+# alpha 3400821 1 0
+# mask 3400821 off
+;;ケイオスリオン兵
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# alpha 3820001 0 0
+# mask 3820001 off
+;;-----------------------------------------
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "normal"
+# voice 340081 "otyinusu_a_0003"
+@オティヌス
+…これでよし、と
+扉を幻術で隠してしまえば、
+邪魔されることもないだろう？
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "usual"
+# voice 340081 "otyinusu_a_0002"
+@オティヌス
+さて、始めるとするか…
+マスター、荷物を渡してくれるかい？
+
+# textflame 0 0
+@
+オティヌスの荷物の中身は
+チョコレートの材料と箱だった
+
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+これが、君を避けたかった理由さ…
+君に贈るチョコレートを
+作りにきたんだよ
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 340081 "otyinusu_a_0027"
+@オティヌス
+だが、君があまりにも必死だから
+ついてくるな、とは言えなくてね
+
+# textflame 0 0
+@
+そう話しながら、オティヌスは
+手早くチョコレート作りを進めていく
+
+# textflame 0 0
+@
+マスターが、オティヌスの
+手際のよさに感心すると…
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 340081 "otyinusu_a_0004"
+@オティヌス
+ふふっ、そうだろう？
+手先の器用さには自信があるんだ、
+こんなこともできるよ？
+
+# fadein "white" 0.3
+# se "SE_0661"
+# textflame 0 0
+@
+オティヌスはそういって
+マスターの目の前で指を鳴らし、
+手から一輪の花を出す
+
+# textflame 0 0
+@
+マスターが手品に驚く様子を見て、
+オティヌスはニヤリと微笑む
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "normal"
+# voice 340081 "otyinusu_a_0002"
+@オティヌス
+そうだ、あれが完成するまで、
+まだ時間がかかるんだ
+味見がてら、ゲームをしてみないか？
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "usual"
+@オティヌス
+この3つの小さなチョコレートには、
+ひとつだけ「当たり」が入っている…
+
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+君が「当たり」を引けば君の勝ち、
+外したらあたしの負け…
+どうだい、やってみるかい？
+
+# textflame 0 0
+@
+マスターは、おもしろそうだね
+と、挑戦することにした
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "normal"
+# voice 340081 "otyinusu_a_0041"
+@オティヌス
+そうこなくちゃ！
+さぁ、いくよ…
+
+# textflame 0 0
+@
+オティヌスがチョコレートを
+シャッフルし、マスターの前に並べる
+
+;;選択肢
+# select "きっと右だ！" "select_label_01" "いや、真ん中かな？" "select_label_02" "やっぱり…左だ！" "select_label_03"
+@
+この3つの小さなチョコレートには、
+ひとつだけ「当たり」が入っている…
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "surprise"
+# voice 340081 "otyinusu_a_0040"
+@オティヌス
+なるほど…
+君はそれを選ぶか…
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "usual"
+# voice 340081 "otyinusu_a_0004"
+@オティヌス
+…それでいいのかな？
+もう変更はできないけどね、ふふっ
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "usual"
+# voice 340081 "otyinusu_a_0003"
+@オティヌス
+じゃあ、食べてごらん…
+ふふっ、思いっきりいこうか？
+
+# label "select_label_end"
+# alpha 3400821 0 0.5
+# fadein "red" 0.5
+# textflame 0 0
+@
+チョコを口に入れたマスターは、
+うぐっ！と声を出したあと、
+顔を真っ赤にして激しくむせる
+
+# textflame 0 0
+@
+マスターの選んだチョコレートには
+激辛ソースが入っていた
+
+# textflame 0 0
+@
+マスターが悶える様子を、
+オティヌスは楽しそうに眺める
+
+# alpha 3400821 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "normal"
+# voice 340081 "otyinusu_a_0005"
+@オティヌス
+ふふっ、大丈夫かい？
+残念だったねマスター
+ほら、水を飲んで落ち着くといい
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "usual"
+@オティヌス
+…さて、もういい頃合いだろう
+そろそろ、ここを出るとしようか
+
+# textflame 0 0
+@
+完成したチョコレートを持って、
+オティヌスは扉の幻術を解く
+
+# alpha 3400821 0 0.5
+# alpha 3820001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ケイオスリオン兵
+なんだ？　急に扉が…
+
+# mask 3400821 on
+# move 3400821 2 0
+# alpha 3400821 1 0.5
+# mask 3820001 on
+# move 3820001 4 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@ケイオスリオン兵
+うわっ！
+お前ら、どこから現れた！？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3400821 "surprise"
+# voice 340081 "otyinusu_a_0026"
+@オティヌス
+おっと…
+また見つかってしまったか…

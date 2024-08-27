@@ -1,0 +1,322 @@
+;;-----------------------------------------
+;;3_2_5_1
+;;-----------------------------------------
+# script "lisp"
+# background "devastated_city_night"
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;カミト
+# body 210
+# pos 210 2
+# scale 210 0.8 0
+# alpha 210 0 0
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# mask 3102311 off
+# alpha 3102311 0 0
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# alpha 3501711 0 0
+;;タスラム
+# body 3502011
+# pos 3502011 4
+# scale 3502011 0.8 0
+# mask 3502011 off
+# alpha 3502011 0 0
+;;スケルトン
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# mask 910013 off
+# alpha 910013 0 0
+;;魔獣化マサムネ
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# mask 1100111 off
+# alpha 1100111 0 0
+# brightness 1100111 0.5 0
+;;-----------------------------------------
+;;暗転
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;霧
+# imageset 1 "kiri_03"
+# imagescale 1 2.5 0
+# imagealpha 1 0 0
+# imagelayer 1 4
+# imageset 2 "kiri_03"
+# imagescale 2 2 0
+# imagealpha 2 0 0
+# imagelayer 2 3
+;;-----------------------------------------
+# textwindow "close"
+# waitandnext 0.2
+
+# imagealpha 1 1 0
+# imagepos 1 -70 170
+# imagealpha 2 1 0
+# imagepos 2 50 -100
+# fadein "black" 1
+# waitandnext 1
+
+;;霧演出
+# imageleftout 1 7
+# imagerightout 2 7
+# imagealpha 1 0 1
+# imagealpha 2 0 1
+# waitandnext 1
+
+# alpha 3502011 1 0.5
+# alpha 210 1 0.5
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 3
+@タスラム
+よっと
+ほれ、外に出られたろっ
+
+# face 3502011 "angry"
+# voice 350201 "tasuramu_ge_0007"
+# textboxarrow 0 3
+@タスラム
+この抜け道、あたしのお気に入り
+なんだから、誰にも言うなよっ
+
+# voice 9936 "kamito_0003"
+# textboxarrow 0 1
+@カミト
+う、うん
+ええと、アスカロンは…
+
+# alpha 3502011 0 0.5
+# alpha 210 0 0.5
+# alpha 3102311 1 0.5
+# face 3102311 "surprise"
+# textboxarrow 0 2
+@アスカロン
+マスター！
+こんなところから出てくるなんて
+驚きましたっ
+
+# voice 310231 "ascalon_a_0028"
+# textboxarrow 0 2
+@アスカロン
+秘密の抜け道を知っているなんて
+…タスラム、羨ましい
+
+# alpha 3502011 1 0.5
+# alpha 210 1 0.5
+# alpha 3102311 0 0.5
+# textboxarrow 0 3
+@タスラム
+何であたしを妬ましそうな目で
+見るんだよっ
+
+# textboxarrow 0 3
+@タスラム
+不幸になる前に、
+さっさとあたしから離れなっ
+そんじゃな！
+
+;;タスラムが去っていく
+# textwindow "close"
+# alpha 3502011 0 0.5
+# se "SE_0740"
+# waitandnext 0.5
+
+# face 210 "happy"
+# voice 9936 "kamito_0032"
+# textwindow "nomal"
+# textboxarrow 0 1
+@カミト
+ありがとう、タスラム…！
+
+# move 3102311 4 0
+# mask 3102311 on
+# alpha 3102311 1 0.5
+# face 3102311 "normal"
+# voice 310231 "ascalon_a_0003"
+# textboxarrow 0 3
+@アスカロン
+グリモワールも隙を見て
+抜け出すと言ってました
+急ぎましょう、マスター
+
+# face 210 "normal"
+# voice 9936 "kamito_0035"
+# textboxarrow 0 1
+@カミト
+うん…
+そうだね…
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：荒野
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+# background "wild"
+# imagealpha 1 1 0
+# imagepos 1 -70 170
+# imagealpha 2 1 0
+# imagepos 2 50 -100
+# alpha 3102311 0 0
+# alpha 210 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;霧演出
+# imageleftout 1 7
+# imagerightout 2 7
+# imagealpha 1 0 1
+# imagealpha 2 0 1
+# waitandnext 1
+
+# mask 3501711 off
+# alpha 3501711 1 0.5
+# face 3501711 "angry"
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+@グリモワール
+ちょっと
+遅いじゃないの、二人とも！
+
+# move 3501711 4 0.5
+# mask 3501711 on
+# alpha 210 1 0.5
+# face 210 "sad"
+# voice 9936 "kamito_0033"
+# textboxarrow 0 1
+@カミト
+ごめん…
+グリモワールも無事で良かったよ
+
+# voice 350171 "grimoire_ge_0027"
+# textboxarrow 0 3
+@グリモワール
+ふんっ！
+ワタシの心配をする暇があったら
+これからのことを考えなさい
+
+# face 3501711 "normal"
+# voice 350171 "grimoire_ge_0002"
+# textboxarrow 0 3
+@グリモワール
+「ネオ・ラグナロク」とかいう
+妙な連中からは逃げられたけど、
+次はどうするの？
+
+# alpha 3501711 0 0.5
+# alpha 3102311 1 0.5
+# voice 310231 "ascalon_a_0001"
+# textboxarrow 0 3
+@アスカロン
+家に帰りますか？
+それともヴァングさんを助けに？
+
+# voice 9936 "kamito_0036"
+# textboxarrow 0 1
+@カミト
+それは…
+僕には分からないよ…
+
+# textboxarrow 0 1
+@カミト
+兄貴は逃げろって…
+それだけしか言ってくれなかったし…
+
+# textboxarrow 0 1
+@カミト
+…フォルカス、
+家に帰ってきてないかな？
+そうしたら…
+
+# alpha 3501711 1 0.5
+# alpha 3102311 0 0.5
+# face 3501711 "angry"
+# voice 350171 "grimoire_ge_0010"
+# textboxarrow 0 3
+@グリモワール
+ふざけんじゃないわよ！
+
+# voice 9936 "kamito_0016"
+# textboxarrow 0 1
+@カミト
+うっ…
+
+# textboxarrow 0 3
+@グリモワール
+マスターはキミなのよ！
+マスターがキル姫に指示を仰ごうと
+するなんてありえない！
+
+# textboxarrow 0 3
+@グリモワール
+自分の意思で決めなさい！
+
+# voice 9936 "kamito_0017"
+# textboxarrow 0 1
+@カミト
+そ…そんなこと言われても…
+僕には…
+
+# alpha 3501711 0 0.5
+# alpha 3102311 1 0.5
+# face 3102311 "angry"
+# textboxarrow 0 3
+@アスカロン
+大丈夫ですよ、マスター！
+どんな命令でも
+私が成し遂げてみせます！
+
+# voice 9936 "kamito_0015"
+# textboxarrow 0 1
+@カミト
+でも…
+
+# alpha 3501711 1 0.5
+# alpha 3102311 0 0.5
+# voice 350171 "grimoire_ge_0028"
+# textboxarrow 0 3
+@グリモワール
+ああ、もうっ！
+腹が立つわね！
+
+;;魔獣が現れる
+# alpha 3501711 0 0.5
+# alpha 210 0 0.5
+# alpha 910013 1 0.5
+# se "SE_0792"
+# bgmfile "bgm417_418" "BgmIntegralNoahBattle003" 0
+# textboxarrow 0 2
+@魔獣
+ゴアアアアアアアアアアア！
+
+# alpha 910013 0 0.5
+# alpha 3501711 1 0.5
+# move 3102311 2 0
+# alpha 3102311 1 0.5
+# voice 310231 "ascalon_a_0029"
+# textboxarrow 0 1
+@アスカロン
+マスター、私の背後にっ
+こんなところにまで化け物が…
+
+# textboxarrow 0 3
+@グリモワール
+アスカロン、
+ワタシの邪魔だけはするんじゃ
+ないわよ！

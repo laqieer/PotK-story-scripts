@@ -1,0 +1,225 @@
+# script "lisp"
+# background "sea_jungle_day"
+# bgm "bgm007" 0
+# body 2501711
+# pos 2501711 4
+# scale 2501711 0.8 0
+# body 2301811
+# pos 2301811 2
+# scale 2301811 0.8 0
+# face 2501711 "angry"
+# face 2301811 "usual"
+# textflame 1 1
+# setname "グリモワール" 2
+急いで、フォルカス！
+
+# face 2301811 "sad"
+# setname "フォルカス" 2
+分かってる！
+ここまで完璧な奇襲…
+やっぱり全て罠だったの？
+
+# body 2600411
+# pos 2600411 3
+# scale 2600411 0.8 0
+# alpha 2600411 0 0
+# face 2600411 "sad"
+# face 2301811 "angry"
+# setname "フォルカス" 2
+だとしたら…
+カドケウス！
+
+# move 2501711 5 0.5
+# move 2301811 1 0.5
+# alpha 2600411 1 0.5
+# layer 2600411 1
+# setname "カドケウス" 2
+は～い
+ここでお説教とかやめてよ～
+砦までの道に敵はいなかったんだから
+
+# face 2301811 "usual"
+# setname "フォルカス" 2
+そんなことはいいの！
+急いで…
+
+# face 2600411 "usual"
+# voice 6004 "kadokeusu_0039"
+# setname "カドケウス" 2
+ふんふん…
+それ、楽しそうだから
+やってあげるね～
+
+;;カドケウスが走り去る
+# se "SE_5602"
+# alpha 2600411 0 0.5
+# waitandnext 1
+
+# body 2300611
+# pos 2300611 2
+# scale 2300611 0.8 0
+# alpha 2300611 0 0
+# body 2300211
+# pos 2300211 4
+# scale 2300211 0.8 0
+# alpha 2300211 0 0
+# face 2300611 "sad"
+# fadeout "black" 1
+# waitandnext 1
+
+# alpha 2300611 1 0
+# alpha 2300211 1 0
+# alpha 2301811 0 0
+# alpha 2501711 0 0
+# fadein "black" 0.5
+# setname "トリシューラ" 2
+い、てて…！
+やるじゃねえか！
+
+# body 2200211
+# pos 2200211 2
+# scale 2200211 0.8 0
+# alpha 2200211 0 0
+# body 2500511
+# pos 2500511 4
+# scale 2500511 0.8 0
+# alpha 2500511 0 0
+# voice 3002 "toraidento_0020"
+# setname "トライデント" 3
+ぅわお！
+トライデントってば絶好調！？
+
+# alpha 2300611 0 0.5
+# alpha 2300211 0 0.5
+# alpha 2200211 1 0.5
+# alpha 2500511 1 0.5
+# face 2500511 "sad"
+# voice 2002 "aimuru_unit_1005"
+# setname "アイムール" 3
+目標を確認しました
+徹底的に破壊します
+
+# face 2301811 "sad"
+# voice 5005 "vajura_0018"
+# setname "ヴァジュラ" 2
+なんてこった…
+この失敗は笑えない…かな？
+
+# move 2301811 2 0
+# move 2501711 4 0
+# alpha 2200211 0 0.5
+# alpha 2500511 0 0.5
+# alpha 2301811 1 0.5
+# alpha 2501711 1 0.5
+# setname "フォルカス" 2
+トリシューラ！
+ヴァジュラ！
+
+# setname "グリモワール" 2
+立ち止まっちゃダメ！
+みんなの頑張りを
+無駄にするつもり！？
+
+# face 2301811 "usual"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "moya"
+# voice 3018 "forcas_0018"
+# setname "フォルカス" 2
+私が甘かったんだ…
+疑問は幾つもあったはずなのに
+自分の感情を優先させてしまった…
+
+# face 2301811 "angry"
+# serif 1
+# textwindow "moya"
+# setname "フォルカス" 2
+今の私は、
+たくさんの仲間達の命を
+背負っているというのに！
+
+# emotionbody 5001 1 2301811 10 260
+# effectpattern 5001 2 0
+# effectstart 5001
+# emotionbody 5002 1 2501711 10 260
+# effectpattern 5002 2 0
+# effectstart 5002
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# body 2200511
+# pos 2200511 3
+# scale 2200511 0.8 0
+# alpha 2200511 0 0
+# voice 2005 "mitwumu_kyara_1001"
+# serif 1
+# textwindow "toge"
+# setname "ミトゥム" 1
+っしゃ～！
+敵の大将見つけたぜ～！
+どぅおらぁぁぁ！！
+
+# se "SE_9021"
+# serif 1
+# textwindow "close"
+# fadein "red" 0.5
+# imagescale 0 10 0
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# waitandnext 0.2
+
+# effectbody 2346 3 0 0
+# effectstart 2346
+# waitandnext 0.2
+
+# se "SE_5762"
+# effectbody 2347 4 0 0
+# effectstart 2347
+# waitandnext 0.6
+
+# face 2301811 "sad"
+# face 2501711 "sad"
+# alpha 2200511 1 0
+# alpha 2501711 0 0
+# move 2301811 1 0.2
+# rightin 2200511 0.4
+# fadein "red" 0.5
+# effectskip 2346
+# effectskip 2347
+# shake 0 0.5
+# imagealpha 0 0 0
+# waitandnext 0.8
+# face 2301811 "sad"
+
+;;ミトゥムがフォルカスに飛びかかる
+# serif 0
+# textwindow "nomal"
+# body 2302111
+# pos 2302111 3
+# scale 2302111 0.8 0
+# alpha 2302111 0 0
+# alpha 2501711 1 0.5
+# alpha 2301811 0 0.5
+# alpha 2200511 0 0.5
+# move 2501711 3 0
+# face 2302111 "angry"
+# setname "グリモワール" 2
+フォルカス、
+ダメぇぇぇっ…！
+
+;;ガ・ボーが間に入る
+# face 2200511 "angry"
+# move 2200511 5 0.3
+# shake 0 0.5
+# fadein "red" 0.5
+# leftin 2302111 0.3
+# alpha 2302111 1 0
+# alpha 2501711 0 0
+# alpha 2301811 1 0
+# alpha 2200511 1 0
+# se "SE_3006"
+# layer 2302111 1
+# setname "ガ・ボー" 2
+今度こそ…お守りします…
+ボー、たった一人でもっ

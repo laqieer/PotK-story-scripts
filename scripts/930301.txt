@@ -1,0 +1,1113 @@
+;;●3_3戦闘前　背景：森（泉に近い場所であれば）
+;;※黒奏官と対峙している主人公
+# script "lisp"
+# background "fountain"
+# bgmfile "bgm166" "BgmPJZero001" 0
+# body 41
+# pos 41 3
+# scale 41 0.8 0
+# mask 41 off
+;;ティルフィングボイス用
+# body 101411
+# alpha 101411 0 0
+# imageset 0 "yggdrasill"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 2
+# imageset 2 "black"
+# imagealpha 2 0 0
+# imagelayer 2 3
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0007"
+@黒奏官
+ふっ…
+
+# select "話とは…いったい、なんだ？" "select_label_01" "大天使が興味があると…その話か？" "select_label_01"
+ふっ…
+
+# label "select_label_01"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0021"
+@黒奏官
+そう急くな
+…お前は、自身が何者であるか
+気付いているのか？
+
+# select "俺が、何者なのか…？" "select_label_02" "…言ったはずだ。俺には記憶がないと" "select_label_02"
+そう急くな
+…お前は、自身が何者であるか
+気付いているのか？
+
+# label "select_label_02"
+# textboxarrow 0 2
+@黒奏官
+…やはり、まだ自覚していないのか
+
+# textboxarrow 0 2
+@黒奏官
+…我らに与するか否か、
+ここで判断したいところだったが
+やはり、そうはいかぬようだ
+
+;;※ジッと値踏みするように主人公を見つめる黒奏官
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0013"
+@黒奏官
+…まったく、思惑が見えん
+お前はなにを意図して、
+ここに存在しているのだ…？
+
+# select "…どういう意味だ？" "select_label_03" "…俺が何者なのか、知っているのか？" "select_label_03"
+…まったく、思惑が見えん
+お前はなにを意図して、
+ここに存在しているのだ…？
+
+# label "select_label_03"
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0020"
+@黒奏官
+…ラファエル様より、
+お前の正体を伺った
+…正直、驚かされたぞ
+
+# select "何者なんだ、俺は！？" "select_label_04" "教えろ！俺は何者なんだ…！？" "select_label_04"
+…ラファエル様より、
+お前の正体を伺った
+…正直、驚かされたぞ
+
+# label "select_label_04"
+# textboxarrow 0 2
+@黒奏官
+…お前のその焦りは、私にもわかる
+自身が何者なのかもわからぬ不安は、
+言葉では尽くせぬもの…
+
+# textboxarrow 0 2
+@黒奏官
+言わば、我々は
+似た者同士ということだ
+
+# select "！！お前も…自身の素性を…？" "select_label_05" "…お前も、記憶を失くしているのか？" "select_label_05"
+言わば、我々は
+似た者同士ということだ
+
+# label "select_label_05"
+# textboxarrow 0 2
+@黒奏官
+…口が過ぎたな
+ともあれ…その後、お前が下す判断に
+影響を及ぼす可能性がある
+
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0020"
+@黒奏官
+私の口からは、
+お前の素性は伝えられん…
+ラファエル様に、伺うがいい
+
+# select "拘束など、されてたまるか！" "select_label_06" "むざむざ、連れていかれはしない！" "select_label_06"
+私の口からは、
+お前の素性は伝えられん…
+ラファエル様に、伺うがいい
+
+;;※剣を構える主人公
+# label "select_label_06"
+# se "SE_5205"
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0021"
+@黒奏官
+…剣を向けたところで、
+お前になにができる？
+
+# imagepos 0 0 -780
+# imagepos 1 0 480
+# imagepos 2 0 -480
+# face 41 "angry"
+# textboxarrow 0 2
+@黒奏官
+悪いが、悠長にしている暇はない…
+力ずくでも、同行してもらう！
+
+;;※ドンッと主人公に向かい、駆け出す黒奏官
+# select "クッ！やられてたまるかっ！！" "select_label_07" "お前達の好きにはさせない！！" "select_label_07"
+悪いが、悠長にしている暇はない…
+力ずくでも、同行してもらう！
+
+;;※その時…ザワッとなびくユグドラシルの姿がカットイン
+# label "select_label_07"
+# se "SE_9024"
+# serif 0
+# textwindow "close"
+# fadein "white" 0.5
+# imagealpha 0 1 0
+# imagealpha 1 1 0
+# imagealpha 2 1 0
+# waitandnext 1.5
+
+# serif 0
+# textwindow "normal"
+# fadein "white" 0.5
+# imagealpha 0 0 0
+# imagealpha 1 0 0
+# imagealpha 2 0 0
+# face 41 "surprise"
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0022"
+@黒奏官
+！！
+
+;;※黒奏官の注意が、一瞬ユグドラシルに向けられる
+# select "…ハァァァァッ！！" "select_label_08" "…ハァァァァッ！！" "select_label_08"
+！！
+
+;;※ハッとした表情を見せる黒奏官
+# label "select_label_08"
+# textboxarrow 0 2
+@黒奏官
+！？
+しまった！
+
+;;※一閃…切り裂かれる黒奏官のフード。アルンの目が、一瞬垣間見える
+# se "SE_5723"
+# fadein "white" 0.5
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0024"
+@黒奏官
+クッ！！
+
+# select "伝えておけ…お前達には屈しないと" "select_label_09" "俺達は…必ず奇跡を起こしてみせる" "select_label_09"
+クッ！！
+
+# label "select_label_09"
+# face 41 "normal"
+# textboxarrow 0 2
+@黒奏官
+…先を急ぐか
+…急いで駆けつけたところで、
+意味をなさんと思うがな
+
+# select "…どういう意味だ？" "select_label_10" "！！…まさか" "select_label_10"
+…先を急ぐか
+…急いで駆けつけたところで、
+意味をなさんと思うがな
+
+# label "select_label_10"
+# face 41 "smile"
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0013"
+@黒奏官
+…クク
+この私が、なにも手立てを
+講じていないと思うか？
+
+# select "クソッ！" "select_label_11" "ティルフィング！" "select_label_11"
+…クク
+この私が、なにも手立てを
+講じていないと思うか？
+
+;;※慌てて去ってゆく主人公
+# label "select_label_11"
+# serif 0
+# textwindow "close"
+# fadein "white" 0.5
+# se "SE_5575"
+# waitandnext 2
+
+# serif 0
+# textwindow "normal"
+# face 41 "normal"
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0026"
+@黒奏官
+チッ
+私としたことが…
+
+;;※ユグドラシルを見上げる黒奏官
+# imageset 3 "black"
+# imagealpha 3 0 0
+# imagelayer 3 4
+# textboxarrow 0 2
+@黒奏官
+だが…やはり、
+ヤツが自身を知る時が
+近付いているようだ
+
+;;背景：泉のほとり、森、王都
+;;※エルフレストの森、泉のほとり。エイレーネの石像を探すティルフィング達
+;;――場面転換――
+# imagealpha 3 1 0
+# imagepos 3 0 30
+# imageleftin 3 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# bgm "bgm005" 0
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# alpha 24 0 0
+# body 0
+# pos 0 1
+# scale 0 0.8 0
+# alpha 0 0 0
+# body 4
+# pos 4 5
+# scale 4 0.8 0
+# alpha 4 0 0
+# alpha 41 0 0
+# layer 24 4
+# layer 0 5
+# face 24 "sad"
+# background "fountain"
+# waitandnext 0.2
+
+# imagealpha 3 0 0.5
+# imagerightout 3 0.5
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+エルフレストの泉のほとり
+
+# alpha 24 1 0.5
+# alpha 0 1 0.5
+# alpha 4 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@デュリン
+泉のほとり…
+確か、この辺りのはずなんだけど…
+
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0024"
+@ティルフィング
+ハァ…ハァ…
+…グッ！
+
+# face 0 "worry"
+# textboxarrow 0 1
+@デュリン
+！
+ティルフィング
+無理はしないで！
+
+# face 24 "normal"
+# textboxarrow 0 2
+@ティルフィング
+だ、大丈夫…
+もうすぐ、お母さんに
+会えるんだもの…
+
+# face 4 "angry"
+# textboxarrow 0 3
+@トト
+！
+…あれだ
+
+# face 0 "normal"
+# textboxarrow 0 1
+@デュリン
+えっ？
+
+# textboxarrow 0 3
+# voice 9998 "toto_0049"
+@トト
+あそこっ！
+像が立ってる！
+きっと、あれだよティルフィング！！
+
+# face 24 "surprise"
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0022"
+@ティルフィング
+！！
+
+;;※その頃…ティルフィング達を追って、疾走するグリード
+;;――場面転換――
+# imagealpha 3 1 0
+# imagepos 3 0 30
+# imageleftin 3 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# bgm "stop"
+# alpha 24 0 0
+# alpha 0 0 0
+# alpha 4 0 0
+# body 101471
+# pos 101471 3
+# scale 101471 0.8 0
+# alpha 101471 1 0
+# waitandnext 0.2
+
+# se "SE_5602"
+# imagealpha 3 0 0.5
+# imagerightout 3 0.5
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+エルフレストの森深く
+
+# serif 1
+# textboxarrow 1 0
+@？？？
+…なかなかのスピードだ
+やはり、そこらのキル姫とは
+毛色が違うようだな
+
+# se "SE_5004" 
+# body 42
+# pos 42 2
+# scale 42 0.8 0
+# alpha 42 0 0
+# move 101471 4 0.3
+# face 101471 "surprise"
+# serif 0
+# textflame 1 1
+# textboxarrow 0 3
+# voice 10147 "tyrufing_k_0022"
+@グリード
+！
+
+;;※立ち止まるグリード。その前に姿を現すティバルト
+# bgm "bgm031" 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# se "SE_9146"
+# alpha 42 1 0.5
+# waitandnext 1.5
+
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 1
+# voice 9980 "tybalt_0007"
+@ティバルト
+悪いが、しばし時間をもらうぞ
+お前達の話を聞きに来た
+
+# face 101471 "normal"
+# textboxarrow 0 3
+# voice 10147 "tyrufing_k_0009"
+@グリード
+…話を？
+
+# textboxarrow 0 1
+@ティバルト
+そうだ。俺の剣は、この大陸の正義
+一方の言い分を聞いただけで、
+判断するわけにはいかない
+
+# body 960023
+# pos 960023 3
+# scale 960023 0.8 0
+# alpha 960023 0 0
+# textboxarrow 0 3
+# voice 10147 "tyrufing_k_0019"
+@グリード
+…神々に与するか否かを
+判断しようというの？
+それなら、もう遅いわ
+
+# entry 7969623 960023
+# pos 7969623 5
+# scale 7969623 0.8 0
+# alpha 7969623 0 0
+# entry 8969623 960023
+# pos 8969623 1
+# scale 8969623 0.8 0
+# alpha 8969623 0 0
+# layer 960023 3
+# layer 7969623 2
+# layer 8969623 1
+# textboxarrow 0 1
+# voice 9980 "tybalt_0022"
+@ティバルト
+遅い…？
+
+;;※グリードの背後…上空に姿を現すカミノツカイの大群
+# serif 0
+# textwindow "close"
+# fadein "white" 0.3
+# se "SE_5221"
+# background "mov2_1"
+# alpha 42 0 0
+# alpha 101471 0 0
+# alpha 960023 1 0
+# alpha 7969623 1 0
+# alpha 8969623 1 0
+# waitandnext 1.5
+
+# fadein "white" 0.3
+# background "fountain"
+# alpha 42 1 0
+# alpha 101471 1 0
+# alpha 960023 0 0
+# alpha 7969623 0 0
+# alpha 8969623 0 0
+# serif 0
+# textwindow "normal"
+# face 42 "surprise"
+# textboxarrow 0 1
+# voice 9980 "tybalt_0026"
+@ティバルト
+！！
+カミノツカイ！
+
+# textboxarrow 0 3
+@グリード
+あの者達を庇い立てた段階で、
+アナタが選民として選ばれる権利は
+消失しているの
+
+# bgm "stop"
+# face 42 "normal"
+# textboxarrow 0 1
+# voice 9980 "tybalt_0007"
+@ティバルト
+…問答無用というわけか
+まぁ、悩まずに済んでいい
+
+;;※スラリと剣を抜くティバルト
+# se "SE_8004"
+# textboxarrow 0 3
+# voice 10147 "tyrufing_k_0007"
+@グリード
+…剣を向ける気？
+英雄と担ぎ上げられたゆえの
+驕りかしら…
+
+# textboxarrow 0 1
+@ティバルト
+悪いな…
+どれだけの数を率いてこようと、
+俺の正義は揺らぎはしない
+
+# face 101471 "angry"
+# textboxarrow 0 3
+@グリード
+フン、ただの人間の分際で！！
+
+;;※ドンッと襲い掛かるグリード。飛び散る火花…グリードの剣をいなすティバルト
+# se "SE_9092"
+# sedelay "SE_5234" 0.5
+# textboxarrow 0 0
+# move 101471 2 0.1
+# alpha 42 0 0.1
+# waitandnext 0.5
+
+# se "SE_3006"
+# fadein "white" 0.2
+# move 42 4 0.5
+# alpha 42 1 0.4
+# waitandnext 1.0
+
+# face 101471 "surprise"
+# textboxarrow 0 1
+# voice 10147 "tyrufing_k_0023"
+@グリード
+！？
+私の攻撃を、いなした…！？
+
+# face 42 "angry"
+# textboxarrow 0 3
+# voice 9980 "tybalt_0004"
+@ティバルト
+さぁ、始めようか…
+ただの人間の力を
+思い知らせてやる！
+
+;;※その頃…王都広場
+# imagealpha 3 1 0
+# imagepos 3 0 30
+# imageleftin 3 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# bgmfile "bgm189" "BgmStory007" 0
+# alpha 101471 0 0
+# alpha 42 0 0
+# body 6
+# pos 6 4
+# scale 6 0.8 0
+# alpha 6 0 0
+# body 28
+# pos 28 2
+# scale 28 0.8 0
+# alpha 28 0 0
+# face 6 "angry"
+# face 28 "trouble"
+# background "imperial_city"
+# waitandnext 0.2
+
+# imagealpha 3 0 0.5
+# imagerightout 3 0.5
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+その頃…王都広場
+
+# alpha 28 1 0.5
+# alpha 6 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9997 "deen_0028"
+@ディーン
+だ、大天使…
+ミカエルだと…！？
+
+# body 128
+# pos 128 4
+# scale 128 0.8 0
+# alpha 128 0 0
+# body 129
+# pos 129 2
+# scale 129 0.8 0
+# alpha 129 0 0
+# face 128 "angry"
+# face 28 "surprise"
+# textboxarrow 0 1
+# voice 9984 "ren_0023"
+@レン
+まさかっ！？
+なんなのよ、これっ！？
+
+# alpha 6 0 0.5
+# alpha 28 0 0.5
+# alpha 128 1 0.5
+# alpha 129 1 0.5
+# textboxarrow 0 1
+@フレンネル
+皆の者、落ち着くのだ！
+
+;;ミカエル仮
+# body 960029
+# pos 960029 3
+# scale 960029 0.8 0
+# alpha 960029 0 0
+# mask 960029 off
+# textboxarrow 0 1
+@フレンネル
+…大天使よ、我らの前に
+姿を現したということは、
+なにか伝えるべきことがあるのか？
+
+# alpha 128 0 0.5
+# alpha 129 0 0.5
+# alpha 960029 1 0.5
+# textboxarrow 0 2
+# voice 9972 "michael_0005"
+@ミカエル
+『…この状況で冷静さを保つとは…
+アナタのような者を、
+王位に就かせるべきでしたね』
+
+# alpha 128 1 0.5
+# alpha 129 1 0.5
+# alpha 960029 0 0.5
+# face 128 "surprise"
+# textboxarrow 0 3
+@ノーブル
+！
+やはり、王政府の裏には
+神々が！
+
+# face 128 "angry"
+# textboxarrow 0 1
+@フレンネル
+光栄だが、
+王位には“ルトゥーカ8世”が
+就いている
+
+# textboxarrow 0 1
+@フレンネル
+私の出る幕はないよ
+
+# alpha 128 0 0.5
+# alpha 129 0 0.5
+# alpha 960029 1 0.5
+# textboxarrow 0 2
+@ミカエル
+『就いていた…
+というべきでしょうか
+あの者は、既に世を去っています』
+
+# alpha 128 1 0.5
+# alpha 129 1 0.5
+# alpha 960029 0 0.5
+# face 129 "surprise"
+# textboxarrow 0 1
+@フレンネル
+！？
+まさか…国王を亡き者に！？
+なぜだ…
+
+# textboxarrow 0 1
+@フレンネル
+彼は、お前達の子飼いだったはず！
+いったい、なにを
+始めるつもりなのだ！？
+
+# alpha 128 0 0.5
+# alpha 129 0 0.5
+# alpha 960029 1 0.5
+# textboxarrow 0 2
+# voice 9972 "michael_0004"
+@ミカエル
+『フフ…ようやく、
+感情が見えてきましたね』
+
+# textboxarrow 0 2
+@ミカエル
+『…これより、この世界の
+初期化を開始します』
+
+# body 40
+# pos 40 3
+# scale 40 0.8 0
+# alpha 40 0 0
+# face 40 "irregular"
+# face 28 "trouble"
+# textboxarrow 0 2
+@ミカエル
+『なにも知らずに消え去るのは
+不憫と思い、伝えに来たのです』
+
+# alpha 128 1 0.5
+# alpha 129 1 0.5
+# alpha 960029 0 0.5
+# textboxarrow 0 1
+@フレンネル
+初期化だと…！？
+
+;;※その時、ドーンと激しく台地が揺れる
+# serif 0
+# textwindow "close"
+# se "SE_9100"
+# shake 1 1
+# waitandnext 2
+
+# alpha 28 1 0.5
+# alpha 6 1 0.5
+# alpha 128 0 0.5
+# alpha 129 0 0.5
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 3
+# voice 9997 "deen_0024"
+@ディーン
+！？
+な、なんだ…！？
+
+# alpha 40 1 0.5
+# move 28 1 0.5
+# move 6 5 0.5
+# textboxarrow 0 2
+@エドガー
+！！
+見ろ、あれを！
+大聖堂の方向だ！！
+
+;;※大聖堂の方角に、巨大な火柱が上がっているのが見える
+# se "SE_4820"
+# alpha 28 0 0.5
+# alpha 6 0 0.5
+# alpha 40 0 0.5
+# alpha 128 1 0.5
+# alpha 129 1 0.5
+# face 128 "surprise"
+# textboxarrow 0 1
+@フレンネル
+！
+まさか…！？
+
+# alpha 960029 1 0.5
+# alpha 128 0 0.5
+# alpha 129 0 0.5
+# textboxarrow 0 2
+# voice 9972 "michael_0008"
+@ミカエル
+『どうやら、ガブリエルが
+始めたようですね
+さぁ…こちらも始めましょうか』
+
+;;※ゆっくりと手を広げるミカエル。同様に手を広げるカミノツカイ達。その手の上に。光の玉が浮かび上がる
+# serif 0
+# textwindow "close"
+# se "SE_9169"
+# subfillrect 1 "white" 1 0 0.4
+# waitandnext 1.5
+
+# alpha 28 1 0.5
+# alpha 6 1 0.5
+# alpha 40 1 0.5
+# alpha 960029 0 0.5
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 3
+# voice 9997 "deen_0026"
+@ディーン
+光の玉…！？
+お、おい…
+なにをする気だよ…！？
+
+# alpha 28 0 0.5
+# alpha 6 0 0.5
+# alpha 40 0 0.5
+# alpha 128 1 0.5
+# alpha 129 1 0.5
+# face 129 "normal"
+# textboxarrow 0 1
+@フレンネル
+逃げるのだ！！
+人々を早く！
+
+# alpha 128 0 0.5
+# alpha 129 0 0.5
+# alpha 960029 1 0.5
+# textboxarrow 0 2
+# voice 9972 "michael_0041"
+@ミカエル
+『どこへ逃げようとも無駄です
+この世界に存在するものは、
+すべて消え去るのですから…』
+
+;;※放たれる光の玉
+# se "SE_9223"
+# subfillrect 1 "white" 1 0.4 0.8
+# alpha 960029 0 0.5
+# alpha 28 1 0.5
+# alpha 6 1 0.5
+# alpha 40 1 0.5
+# face 28 "surprise"
+# textboxarrow 0 1
+# voice 9984 "ren_0017"
+@レン
+う…うぁ！！
+
+;;※閃光に包まれ、暗転
+# se "SE_9173"
+# serif 0
+# textwindow "close"
+# subfillrect 1 "white" 1 0.8 1
+# waitandnext 1
+
+# bgm "stop"
+# fadeout "black" 1
+# waitandnext 1.5
+
+;;エイレーネ仮
+# subfillrect 1 "white" 0 1 0
+# alpha 28 0 0
+# alpha 6 0 0
+# alpha 40 0 0
+# body 133
+# pos 133 3
+# scale 133 0.8 0
+# alpha 133 0 0
+# background "fountain"
+# waitandnext 0.5
+
+;;※再び、ティルフィング達…エイレーネの石像の前に立つ一行
+# mask 133 off
+# bgm "bgm005" 0
+# fadein "black" 1
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+# textboxarrow 0 2
+@
+エルフレストの泉
+
+# serif 0
+# textwindow "close"
+# alpha 133 1 1
+# waitandnext 2.0
+
+# alpha 133 0 0.5
+# alpha 0 1 0.5
+# alpha 24 1 0.5
+# alpha 4 1 0.5
+# serif 0
+# textwindow "normal"
+# face 4 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@デュリン
+これが…女神エイレーネ！
+なんて、慈愛に満ちた姿なの…
+
+# textboxarrow 0 3
+# voice 9998 "toto_0004"
+@トト
+この人が、ティルフィングの！
+
+# face 24 "normal"
+# textboxarrow 0 2
+@ティルフィング
+私の…お母さん！
+
+;;※感慨深げに、石像を見上げるティルフィング
+# face 0 "serious2"
+# textboxarrow 0 1
+# voice 9999 "durin_0002"
+@デュリン
+…どう？
+なにか、感じることはある…？
+
+# face 24 "sad"
+# textboxarrow 0 2
+@ティルフィング
+…ううん
+まだ、なにも…
+
+;;※その時、激しく揺れる大地
+# se "SE_9100"
+# face 4 "sad"
+# face 0 "worry"
+# face 24 "surprise"
+# shake 1 0.5
+# textboxarrow 0 3
+@トト
+う、うわっ…！？
+
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0024"
+@ティルフィング
+な、なに…！？
+
+# face 0 "serious"
+# textboxarrow 0 1
+@デュリン
+！？
+み、見て…
+あれ！！ 
+
+;;※大聖堂の方角に、巨大な火柱が上がっているのが見える
+# se "SE_4820"
+# face 24 "angry"
+# textboxarrow 0 2
+@ティルフィング
+！？
+巨大な火柱が！！
+
+# face 0 "worry"
+# textboxarrow 0 1
+@デュリン
+あれは大聖堂の方角！
+まさか…大天使達が！？
+
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0015"
+@ティルフィング
+クッ！
+
+;;※エイレーネの石像に向き直るティルフィング
+# serif 0
+# textwindow "close"
+# alpha 24 0 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# alpha 133 1 0.5
+# waitandnext 1.5
+
+# face 24 "sad"
+# alpha 133 0 0.5
+# alpha 24 1 0.5
+# alpha 0 1 0.5
+# alpha 4 1 0.5
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 2
+@ティルフィング
+どうして…！？
+どうしてなにも反応してくれないの…
+お母さん！！
+
+# bgm "stop"
+# body 100161
+# pos 100161 3
+# scale 100161 0.8 0
+# alpha 100161 0 0
+# serif 1
+# textboxarrow 1 0
+@？？？
+…かつてエイレーネは
+神々すら介入することのできぬ
+深い闇にその意識を封じたと聞く…
+
+# face 24 "angry"
+# face 0 "serious2"
+# face 4 "normal"
+# serif 0
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0024"
+@ティルフィング
+！？
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# fadein "black" 0.3
+# se "SE_9077"
+# imagealpha 3 1 0
+# imagepos 3 0 30
+# effectbody 1000 2 0 0
+# effectpattern 1000 1 1
+# effectstart 1000
+# shake 1 1
+# waitandnext 0.5
+
+# serif 0
+# textwindow "normal"
+# imagealpha 3 0 0.5
+# alpha 24 0 0.3
+# face 24 "sad"
+;;※黒い閃光が走る…避ける間もなく、弾き飛ばされるティルフィング
+# textboxarrow 0 0
+@ティルフィング
+ガッ！！
+
+# effectskip 1000
+# face 0 "worry"
+# face 4 "sad"
+# mask 100161 off
+# textboxarrow 0 3
+# voice 9998 "toto_0049"
+@トト
+ティルフィング！！
+
+;;※ゆっくりと姿を現すラース
+# bgmfile "bgm166" "BgmPJZero001" 0
+# se "SE_5776"
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# alpha 100161 1 0.5
+# textboxarrow 0 2
+# voice 10016 "masamune_k_0007"
+@ラース
+奇跡を求め、ここへ参ったのだろう…
+だが…女神エイレーネが
+復活することは、万に一つもありえぬ
+
+# alpha 100161 0 0.5
+# alpha 24 1 0.5
+# textboxarrow 0 2
+@ティルフィング
+うぐっ！
+…ア、アナタ…どうして！？
+
+# alpha 100161 1 0.5
+# alpha 24 0 0.5
+# textboxarrow 0 2
+@ラース
+神々にとっての最大の懸念…
+それは、かつて人類の側に立った
+女神エイレーネの復活にある…
+
+# textboxarrow 0 2
+@ラース
+万に一つもない可能性だが、
+警戒するに越したことはあるまい
+
+# alpha 100161 0 0.5
+# alpha 0 1 0.5
+# alpha 4 1 0.5
+# textboxarrow 0 1
+@デュリン
+クッ！
+
+;;※エイレーネの石像に目を向けるラース
+# se "SE_5207"
+# mask 100161 on
+# mask 133 on
+# move 100161 2 0
+# move 133 5 0
+# alpha 133 1 0.5
+# alpha 100161 1 0.5
+# alpha 0 0 0.5
+# alpha 4 0 0.5
+# textboxarrow 0 1
+# voice 10016 "masamune_k_0028"
+@ラース
+…娘と面すれば、変化が生じるか
+とも思ったが…その気配もない
+…警戒するだけ無駄というものか
+
+;;※刀を構えるラース
+# se "SE_8000"
+# alpha 133 0 0.5
+# alpha 100161 0 0.5
+# alpha 24 1 0.5
+# textboxarrow 0 2
+@ティルフィング
+な、なにをする気…！？
+
+# alpha 133 1 0.5
+# alpha 100161 1 0.5
+# alpha 24 0 0.5
+# textboxarrow 0 1
+# voice 10016 "masamune_k_0008"
+@ラース
+決まっておろう
+もはや、ありもしない脅威に
+怯える必要はない…
+
+# face 24 "angry"
+# face 0 "angry"
+# textboxarrow 0 1
+@ラース
+この石像を破壊するのだ
+
+# alpha 133 0 0.5
+# alpha 100161 0 0.5
+# alpha 0 1 0.5
+# alpha 4 1 0.5
+# textboxarrow 0 1
+@デュリン
+なっ！？
+
+# move 100161 1 0.5
+# alpha 0 0 0.5
+# alpha 4 0 0.5
+# alpha 100161 1 0.5
+# alpha 24 1 0.5
+# alpha 133 1 0.5
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0015"
+@ティルフィング
+グッ！
+そ…そんなことはさせない！
+
+;;※必死に立ち上がるティルフィング
+# se "SE_5205"
+# textboxarrow 0 1
+# voice 10016 "masamune_k_0005"
+@ラース
+…笑止
+そのような身体で、
+拙者を止められると思うか…？
+
+# face 24 "mad2"
+# textboxarrow 0 2
+@ティルフィング
+と、止めるわ！
+お、お母さんは…人類の希望は…
+私が守ってみせる！！

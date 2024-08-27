@@ -1,0 +1,765 @@
+;;-----------------------------------------
+;;■□■新・海上編8月月初シナリオ_20180720■□■
+;;【OP】
+;;【第1幕】灼熱のブラック 戦闘前 7/31 CV入れ
+;;スクリプト最後の背景：プール
+;;-----------------------------------------
+;;●初登場キャラクター
+;;ラグナロク
+;;スイハ
+;;エンヴィ(黒ロンギヌス)
+;;-----------------------------------------
+# script "lisp"
+# fadein "white" 1
+# background "mov2_1"
+# bgmfile "bgm224_story" "BgmSeaEvent" 0
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;島背景（一枚絵）
+# imageset 1 "e170701_map"
+# imagealpha 1 0 0
+;;op演出用一枚絵
+# imageset 2 "mov2_2"
+# imagescale 2 1.15 0
+# imagealpha 2 0 0
+;;op演出用一枚絵
+# imageset 3 "bg_white"
+# imagealpha 3 1 0
+# imagescale 3 2.5 0
+;;
+;;水着ラスト（アルテミス）
+# body 2400121
+# pos 2400121 3
+# scale 2400121 0.8 0
+# layer 2400121 2
+# alpha 2400121 0 0
+# mask 2400121 on
+# face 2400121 "normal"
+;;エンヴィ（ロンギヌス）
+# body 2300121
+# pos 2300121 2
+# scale 2300121 0.8 0
+# layer 2300121 2
+# alpha 2300121 0 0
+# mask 2300121 on
+# face 2300121 "normal"
+;;ラグナロク
+# body 2103611
+# pos 2103611 3
+# scale 2103611 0.8 0
+# layer 2103611 2
+# alpha 2103611 0 0
+# mask 2103611 on
+# face 2103611 "normal"
+;;スイハ
+# body 2401711
+# pos 2401711 3
+# scale 2401711 0.8 0
+# layer 2401711 2
+# alpha 2401711 0 0
+# mask 2401711 on
+# face 2401711 "normal"
+;;水着ミネルヴァ
+# body 2302511
+# pos 2302511 4
+# scale 2302511 0.8 0
+# layer 2302511 2
+# mask 2302511 on
+# alpha 2302511 0 0
+# face 2302511 "normal"
+;;水着グリード（ティルフィング）
+# body 2101421
+# pos 2101421 2
+# scale 2101421 0.8 0
+# layer 2101421 2
+# alpha 2101421 0 0
+# mask 2101421 on
+# face 2101421 "normal"
+# textwindow "close"
+;;水着グラトニー（パラシュ）
+# body 2200421
+# pos 2200421 2
+# scale 2200421 0.8 0
+# layer 2200421 2
+# alpha 2200421 0 0
+# mask 2200421 on
+# face 2200421 "normal"
+;;フライシュッツ（水着）
+# body 2502711
+# pos 2502711 4
+# scale 2502711 0.8 0
+# layer 2502711 1
+# mask 2502711 off
+# alpha 2502711 0 0
+# face 2502711 "normal"
+# textwindow "close"
+# waitandnext 0.1
+
+;;//背景：島全景
+# imagealpha 2 1 0.5
+# imagepos 2 0 -590
+# waitandnext 0.5
+
+# se "SE_0050"
+# imagealpha 3 0 0
+# imagemoveto 2 0 -50 0.8
+# waitandnext 0.8
+
+# imagealpha 2 0 0.8
+# imagealpha 1 1 0.3
+# imagepos 1 0 15
+# textwindow "nomal"
+# textflame 0 0
+;;ナレーション
+@
+青い海に浮かぶ常夏の島
+ラグーナ島―
+
+@
+ここではキラープリンセスたちと
+マスターが平和な日々を
+過ごしていた
+
+@
+しかし、神々の命で島の制圧を目論む
+ブラックキラーズが次々に襲来
+
+@
+さらには、島にいないはずの
+異族も出現してしまう
+
+@
+ブラックキラーズは、マスターの
+心を支配するために試行錯誤するが、
+なかなかうまくいかない
+
+@
+一方、神々による封印が解かれた
+エンシェントキラーズは
+マスターと島を守るべく奮戦
+
+@
+エンシェントキラーズのひとり、
+ミネルヴァは島に起きた異変の原因を
+解明すべく、調査にとりかかる
+
+@
+時には争い、時には共闘することで
+少しずつ距離が近づいていく
+ブラックキラーズとエンシェントたち
+
+@
+そんな中、
+自分の変化に戸惑うラストは
+一人、自問自答を繰り返していた―
+
+# textwindow "close"
+# fadeout "black" 1.5
+# waitandnext 2
+
+# imagealpha 0 0 0
+# imagealpha 1 0 0
+# imagealpha 2 0 0
+# imagealpha 3 0 0
+;;//背景：ビーチ
+# background "sea_beach_day"
+;;ラスト
+# face 2400121 "usual"
+# alpha 2400121 1 0
+# waitandnext 0.1
+
+# fadein "black" 2
+# waitandnext 2
+
+;;【第1幕】灼熱のブラック
+;;//背景：ビーチ---------------------
+# bgmfile "bgm166" "BgmPJZero001" 0
+# textflame 1 1
+# textwindow "normal"
+# voice 40015 "arutemisu_k_0027"
+# textboxarrow 0 2
+@ラスト
+この私が「親愛」だなんて…
+
+@ラスト
+“愛”なんて言葉は、“色欲”を
+ごまかすために作り出された言葉…
+私が射抜くべき幻想です…
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "normal"
+@？？？
+…あ、こんなところにいたんですね
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# face 2400121 "angry"
+@ラスト
+誰です！？
+
+# move 2400121 4 0.5
+# mask 2400121 on
+# face 2300121 "usual"
+# alpha 2300121 1 0.5
+# voice 30018 "ronginusu_k_0002"
+# textboxarrow 0 1
+@エンヴィ
+あの…エンヴィです、
+あなたを迎えにきました
+
+# face 2400121 "sad"
+# textboxarrow 0 3
+@ラスト
+エンヴィ…！
+いつ、この島に？
+
+# textboxarrow 0 1
+@エンヴィ
+つい先ほどです
+グリードたちと合流しましたが
+あなたを探して連れてくるようにと…
+
+# face 2400121 "normal"
+# textboxarrow 0 3
+# voice 40015 "arutemisu_k_0003"
+@ラスト
+そうですか…
+では、行きましょうか
+
+;;ナレーション
+# alpha 2400121 0 0.5
+# textflame 0 0
+@
+ラストは体についた砂を払いながら
+立ち上がり、歩き出す
+
+# face 2300121 "normal"
+@
+その優雅な後ろ姿に、
+エンヴィは熱い嫉妬の視線を送る
+
+# voice 30018 "ronginusu_k_0015"
+# textflame 1 1
+# textboxarrow 0 1
+@エンヴィ
+…羨ましい
+私もあんな風に、もう少し…出て、
+引っ込んでいればいいのに…
+
+;;//演出：場面転換
+;;//背景：密林
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# alpha 2400121 0 0
+# alpha 2300121 0 0
+# background "sea_jungle_day"
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+# bgmfile "bgm230" "BgmSeaEvent" 0
+@
+その頃、ジャングルでは
+ふたりのエンシェントキラーズが
+封印から目覚めようとしていた
+
+;;//画面白フラッシュ
+;;//ラグナロク復活
+# se "SE_5548"
+# fadeout "white" 0.4
+# textwindow "close"
+# waitandnext 0.6
+
+# face 2103611 "usual"
+# alpha 2103611 1 0
+# mask 2103611 off
+# waitandnext 0.1
+
+# fadein "white" 0.4
+# waitandnext 0.6
+
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 1036 "ragnarok_0004"
+@ラグナロク
+ふぅ…バイブスを持つ者、
+すなわちマスターが
+やっと現れたようね…
+
+;;//画面白フラッシュ
+;;//スイハ復活
+# se "SE_5548"
+# fadeout "white" 0.4
+# textwindow "close"
+# waitandnext 0.6
+
+# alpha 2103611 0 0
+# alpha 2401711 1 0
+# waitandnext 0.1
+
+# fadein "white" 0.4
+# waitandnext 0.6
+
+# textflame 1 1
+# textwindow "normal"
+# voice 4017 "suiha_0028"
+@スイハ
+ここは…
+
+# move 2401711 4 0.5
+# move 2103611 2 0
+# alpha 2103611 1 0.5
+# mask 2103611 on
+# textboxarrow 0 1
+@ラグナロク
+スイハ！
+あなたも目覚めましたか
+
+# face 2401711 "usual"
+# textboxarrow 0 3
+@スイハ
+なるほど…
+封印が弱まったおかげです
+
+@スイハ
+すでに何人かエンシェントも…
+この気配は…
+ミネルヴァとフライシュッツ？
+
+# voice 1036 "ragnarok_0028"
+# textboxarrow 0 1
+@ラグナロク
+そのようね…
+まずは、彼女たちを探しましょう
+
+# voice 4017 "suiha_0032"
+# textboxarrow 0 3
+@スイハ
+はい！
+
+;;//演出：場面転換
+;;//背景：プール
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# alpha 2103611 0 0
+# alpha 2401711 0 0
+# background "sea_resort_day"
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# alpha 2400121 1 0.5
+# alpha 2300121 1 0.5
+# textflame 0 0
+# textwindow "normal"
+# bgmfile "bgm166" "BgmPJZero001" 0
+@
+一方、
+プールに移動したエンヴィとラストは
+グリードたちを探して辺りを見回す
+
+# face 2300121 "usual"
+# textflame 1 1
+# voice 30018 "ronginusu_k_0003"
+# textboxarrow 0 1
+@エンヴィ
+あ…あそこですね、
+一緒にいるのはマスターと
+エンシェントキラーズですか？
+
+# voice 40015 "arutemisu_k_0002"
+# textboxarrow 0 3
+@ラスト
+エンヴィ…
+あなたはもうマスターと
+会いました？
+
+# textboxarrow 0 1
+@エンヴィ
+いいえ…まだですけど…？
+
+# face 2400121 "usual"
+# textboxarrow 0 3
+@ラスト
+マスターの力はとても危険です
+できれば近づかない方がいいでしょう
+
+# voice 30018 "ronginusu_k_0033"
+# face 2300121 "normal"
+# textboxarrow 0 1
+@エンヴィ
+そんなに恐ろしいのですか？
+わかりました
+気をつけることにします
+
+@エンヴィ
+あなたはみんなと合流してください
+
+# alpha 2400121 0 0.5
+# alpha 2300121 0 0.5
+# textflame 0 0
+@
+ラストはグリードたちのもとへ行き、
+エンヴィは反対側のプールサイドに
+座って、マスターの観察を始めた
+
+# face 2302511 "angry"
+# alpha 2302511 1 0.5
+# face 2101421 "usual"
+# alpha 2101421 1 0.5
+# voice 3025 "minerva_0007"
+# textflame 1 1
+# textboxarrow 0 3
+@ミネルヴァ
+ですから…異族の対処をしなければ、
+マスターの安全は…
+
+# voice 10147 "tyrufing_k_0010"
+# textboxarrow 0 1
+@グリード
+異族ぐらい障害になる
+私たちではないわ
+わざわざ対処する必要を感じない
+
+# textflame 0 0
+@
+今後のことを協議するメンバーと
+剣呑さに慌てるマスター
+それを身ながらエンヴィは呟く
+
+# alpha 2101421 0 0.5
+# alpha 2302511 0 0.5
+# move 2300121 3 0
+# face 2300121 "usual"
+# alpha 2300121 1 0.5
+# mask 2300121 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 30018 "ronginusu_k_0028"
+@エンヴィ
+あれがマスター…
+見れば見るほど、ラストたちが恐れる
+ほどの相手には思えませんが…
+
+# textflame 0 0
+# textsize 22
+@
+エンヴィがそう思った瞬間、
+視線を感じたマスターが急に振り向き、
+目が合ってしまう
+
+# se "SE_3001"
+# textflame 1 1
+# face 2300121 "normal"
+# textsize 24
+@エンヴィ
+あ…なんだか、胸が苦しいような…？
+顔も熱くて、クラクラする…
+
+# textflame 0 0
+@
+プールサイドに倒れ込んだ
+エンヴィに気づいたマスターは
+慌てて駆け寄って助け起こす
+
+@
+大丈夫？どこか苦しいの？と
+エンヴィの顔を覗き込むマスター
+
+# face 2300121 "sad"
+# textflame 1 1
+# voice 30018 "ronginusu_k_0024"
+@エンヴィ
+…っ！
+近くで、声をかけられると…
+さらに鼓動が早くなって…苦しい…
+
+@エンヴィ
+これが、マスターの呪い…？
+こんなこと…ありえない！
+
+# textflame 0 0
+@
+バイブスの共鳴による感情の昂りに
+恐れを感じたエンヴィは、とっさに
+距離を取り、武器をマスターに向ける
+
+# alpha 2300121 0 0.5
+# alpha 2302511 1 0.5
+# alpha 2101421 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 3025 "minerva_0037"
+@ミネルヴァ
+マスター！
+
+# face 2101421 "angry"
+# textboxarrow 0 1
+# voice 10147 "tyrufing_k_0012"
+@グリード
+エンヴィ！
+やめなさい！
+
+# alpha 2302511 0 0.5
+# alpha 2101421 0 0.5
+# alpha 2200421 1 0.5
+# alpha 2400121 1 0.5
+# voice 20047 "parashu_k_0027"
+# textboxarrow 0 1
+@グラトニー
+あーあ…
+ラストと同じ轍を踏んでいるよ
+キミ、教えてあげなかったのかい？
+
+# voice 40015 "arutemisu_k_0008"
+# textboxarrow 0 3
+@ラスト
+近づかないように忠告はしました
+ですが、マスターから近づくことは…
+
+# alpha 2200421 0 0.5
+# alpha 2400121 0 0.5
+# move 2101421 3 0
+# alpha 2101421 1 0.5
+# mask 2101421 off
+# textboxarrow 0 2
+# voice 10147 "tyrufing_k_0011"
+@グリード
+エンヴィ…
+いますぐマスターから離れなさい
+私たちと戦いたくはないでしょう？
+
+# alpha 2101421 0 0.5
+# face 2300121 "normal"
+# alpha 2300121 1 0.5
+# voice 30018 "ronginusu_k_0026"
+@エンヴィ
+はぁ…はぁ…
+…そう、ですね
+私は別のプールで休ませてもらいます
+
+;;//エンヴィ移動
+# textwindow "close"
+# rightout 2300121 0.8
+# waitandnext 0.8
+
+# alpha 2300121 0 0
+# textflame 0 0
+# textwindow "nomal"
+# bgm "bgm005" 0
+@
+協議を再開したブラックキラーズと
+エンシェントキラーズだが、
+内容は平行線だった
+
+# alpha 2302511 1 0.5
+# move 2101421 2 0
+# alpha 2101421 1 0.5
+# mask 2101421 on
+# textflame 1 1
+# textboxarrow 0 3
+@ミネルヴァ
+マスターの安全のためにも、
+異族討伐は協力をお願いしたいと、
+私は考えているのですが…
+
+# textboxarrow 0 1
+@グリード
+私たちの目的はマスターを支配する、
+それだけです
+島がどうなろうと関係ありません
+
+# alpha 2302511 0 0.5
+# face 2502711 "usual"
+# alpha 2502711 1 0.5
+# textboxarrow 0 3
+# voice 5027 "freischotz_0004"
+@フライシュッツ
+みんなで仲良くしようよー！
+そうすれば、マスターくんも
+嬉しいんじゃないかなぁ？
+
+# alpha 2101421 0 0.5
+# alpha 2200421 1 0.5
+# textboxarrow 0 1
+# voice 20047 "parashu_k_0012"
+@グラトニー
+マスターはボクのものだ！
+次は必ず、マスターの心を
+手に入れてみせるよ
+
+# alpha 2502711 0 0.5
+# face 2101421 "usual"
+# move 2101421 4 0
+# alpha 2101421 1 0.5
+# textboxarrow 0 3
+# voice 10147 "tyrufing_k_0035"
+@グリード
+勝手なことを…
+マスターの心を奪うのは私です！
+
+;;//演出：場面転換（場所移動なし）
+;;//エンヴィ登場
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# alpha 2200421 0 0
+# alpha 2101421 0 0
+# move 2300121 3 0
+# alpha 2300121 1 0
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textwindow "nomal"
+# textflame 0 0
+# bgmfile "bgm166_167" "BgmPJZero001" 0
+@
+その頃エンヴィは、
+協議が終わるのを
+別のプールで待っていた
+
+# voice 30018 "ronginusu_k_0015"
+# textflame 1 1
+# textboxarrow 0 2
+@エンヴィ
+はぁ…
+あちらは屋根があって羨ましい…
+こちらは、暑いですね…
+
+# textflame 0 0
+@
+そう呟きながらエンヴィが
+何気なく空に目をやると…
+
+@
+二人のキラープリンセスが
+舞い降りてきた
+
+# alpha 2300121 0 0.5
+# alpha 2103611 1 0.5
+# alpha 2401711 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0031"
+@ラグナロク
+驚かせてごめんなさい、
+私たちの仲間を見かけなかった？
+
+# voice 4017 "suiha_0002"
+# textboxarrow 0 3
+@スイハ
+私たちのように白い水着を
+着ていると思います
+この辺りにいるはずなのですが…
+
+# alpha 2103611 0 0.5
+# alpha 2401711 0 0.5
+# face 2300121 "usual"
+# alpha 2300121 1 0.5
+# voice 30018 "ronginusu_k_0032"
+# textboxarrow 0 2
+@エンヴィ
+…知っていますよ？
+あなたたち、エンシェントキラーズ
+ですね？
+
+# textflame 0 0
+@
+じろりとエンシェントと思しき
+キル姫を見つめるエンヴィは
+嫉妬の炎を燃やす
+
+;;//モヤモヤ
+# textflame 1 1
+# move 2300121 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+# face 2300121 "normal"
+@エンヴィ
+私に見せびらかすように現れて…
+そのスタイルが羨ましいっ
+
+# textwindow "normal"
+# textboxarrow 0 2
+@エンヴィ
+あなたたちも、あのマスターが
+目的なのでしょう？
+
+# textflame 0 0
+# se "SE_5207"
+@
+そういうとエンヴィは槍を構え、
+ラグナロクに向かって突き出す
+
+# face 2300121 "angry"
+# textflame 1 1
+# se "SE_4200"
+# voice 30018 "ronginusu_k_battle_0003"
+@エンヴィ
+えぁいっ！
+
+# alpha 2300121 0 0.5
+# face 2103611 "angry"
+# move 2103611 3 0
+# alpha 2103611 1 0.5
+# mask 2103611 off
+# voice 1036 "ragnarok_0010"
+@ラグナロク
+急に何を！？
+
+# alpha 2103611 0 0.5
+# alpha 2300121 1 0.5
+# se "SE_4200"
+# voice 30018 "ronginusu_k_0029"
+@エンヴィ
+あなたたちは邪魔なのです！
+ここで消えてください！
+せいっ！
+
+# alpha 2300121 0 0.5
+# move 2103611 2 0
+# alpha 2103611 1 0.5
+# mask 2103611 on
+# face 2401711 "angry"
+# alpha 2401711 1 0.5
+# textboxarrow 0 3
+# voice 4017 "suiha_0037"
+@スイハ
+くっ！
+
+# textflame 0 0
+# se "SE_5205"
+@
+スイハとラグナロクは
+エンヴィの振り回す槍を避けて、
+武器を構える
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+わけがわからないけど
+…仕方ない！
+スイハ、やるわよ！
+
+# textboxarrow 0 3
+@スイハ
+わかりました！
+援護はお任せください！

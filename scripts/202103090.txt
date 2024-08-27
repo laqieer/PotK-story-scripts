@@ -1,0 +1,534 @@
+;;-----------------------------------------
+;;SEA5章_9
+;;-----------------------------------------
+# script "lisp"
+# background "201_room"
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;神令スイハ
+# body 3401711
+# pos 3401711 3
+# scale 3401711 0.8 0
+# layer 3401711 2
+# mask 3401711 off
+# alpha 3401711 0 0
+# body 401711
+# alpha 401711 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 5
+# scale 6603811 0.8 0
+# layer 6603811 4
+# alpha 6603811 0 0
+;;enemy
+# body 910013
+# pos 910013 3
+# scale 910013 0.7 0
+# layer 910013 2
+# alpha 910013 0 0
+# body 920014
+# pos 920014 3
+# scale 920014 0.7 0
+# layer 920014 4
+# alpha 920014 0 0
+# reversal 920014 0
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;ミネルヴァ
+# body 302511
+# pos 302511 3
+# scale 302511 0.8 0
+# layer 302511 2
+# mask 302511 off
+# alpha 302511 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "bg_crack1"
+# imagealpha 1 0 0
+# imagelayer 1 5
+# imageset 2 "bg_crack2"
+# imagealpha 2 0 0
+# imagelayer 2 5
+;;-----------------------------------------
+;;背景：室内
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# sedelay "bgm602_basic_on" 2
+# face 270 "sad"
+# alpha 270 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+…………
+
+;;独白
+# move 270 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+@ミーミル
+スイハさんのお話は
+衝撃的なものでした…
+
+@ミーミル
+私を生け贄にして“彼女”を
+取り戻す…よく分からない部分も
+ございますが…
+
+@ミーミル
+スイハさんは本気でした
+それに、たびたびエルキュールさんの
+お名前も出ていました
+
+@ミーミル
+お会いしたときは「孤高」な雰囲気を
+感じましたが、先程のスイハさんは…
+
+@ミーミル
+どこか辛そうで、揺らいでいるように
+見受けられました
+
+@ミーミル
+スイハさんの「揺らぎ」の原因は
+“彼女”なのでしょうか？
+
+@ミーミル
+それに、エルキュールさんも同じ
+お考えで行動していらっしゃるのかも
+気になります…
+
+@ミーミル
+エルキュールさんともお話を――
+
+;;マクリルがドアをノックする
+# bgm "stop"
+# se  "SE_0679"
+# waitandnext 2
+
+# voice 660381 "maclir_ura_0049"
+# serif 1
+@マクリル
+ミーミル、いる…？
+
+# serif 0
+# voice 9917 "mimir_navikan_0003"
+# face 270 "normal"
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+マクリルさん？
+はい、私はここに
+
+# serif 1
+@マクリル
+良かった…
+今、ドアを開けるね
+
+;;マクリルが入ってくる
+# se "SE_0914"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 1
+
+;;ここからマクリルの立ち絵表示
+# se "SE_0740"
+# move 270 2 0.5
+# move 6603811 4 0.5
+# face 6603811 "usual"
+# alpha 6603811 1 0.3
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 3
+@マクリル
+こ、こんにちは…
+
+# voice 9917 "mimir_navikan_0002"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+アナタがマクリルさん…
+あの、どうやって
+鍵を開けたのですか？
+
+# voice 660381 "maclir_ura_0003"
+# textboxarrow 0 3
+@マクリル
+ん…壊した…
+
+# voice 9917 "mimir_navikan_0023"
+# textboxarrow 0 1
+@ミーミル
+ええっ？
+ですが、物音は何も…
+
+# textboxarrow 0 3
+@マクリル
+うん…音を立てずに壊すの…
+練習したんだ
+大きな音って怖いから…
+
+# textboxarrow 0 3
+@マクリル
+それより、早く連れていって
+私の“相棒”のところまで
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+…はい
+行きましょう、マクリルさん
+
+# move 270 2 0
+# face 270 "sad"
+# textwindow "moya"
+# textboxarrow 0 0
+@ミーミル
+ごめんなさい、スイハさん
+生け贄のことをもう少し詳しく
+お伺いしたかったのですが…
+
+@ミーミル
+やはりマスター様の
+無事を確認しなければ
+落ち着きません
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：町（夜）
+# background "town_night_3"
+# face 270 "normal"
+# face 6603811 "usual"
+# waitandnext 0.2
+
+# se "SE_6211"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+建物から出られましたね
+ひとまず、ここから離れましょう
+
+# voice 660381 "maclir_ura_0003"
+# textboxarrow 0 3
+@マクリル
+うん…感じる…
+“相棒”が近くにいるっ
+
+;;マクリルが前に出る
+# sestop "SE_6211"
+# se "SE_5006"
+# se "SE_5007" 0.8
+# scale 6603811 0.85 0.8
+# textboxarrow 0 3
+@マクリル
+早く会いに――
+
+;;マクリルに矢が刺さる
+# se "SE_4817"
+# fadein "red" 1
+# move 6603811 5 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+# voice 660381 "maclir_ura_0038"
+# face 6603811 "surprise"
+# textboxarrow 0 3
+@マクリル
+痛っ…！？
+
+# bgm "bgm031" 0
+# alpha 270 0 0.3
+# alpha 6603811 0 0.3
+# face 3401711 "angry"
+# alpha 3401711 1 0.3
+# textboxarrow 0 2
+@スイハ
+逃がしませんよ
+
+# alpha 3401711 0 0.3
+# move 270 3 0
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+スイハさん…！
+
+# alpha 270 0 0.3
+# scale 6603811 0.8 0
+# layer 6603811 3
+# face 6603811 "normal"
+# alpha 6603811 1 0.3
+# voice 4017 "suiha_0013"
+# move 3401711 2 0
+# layer 3401711 2
+# mask 3401711 on
+# face 3401711 "angry"
+# alpha 3401711 1 0.3
+# textboxarrow 0 1
+@スイハ
+エルキュールの客人でしたので
+好きにさせていましたが、
+これはいけません
+
+# voice 660381 "maclir_ura_0037"
+# textboxarrow 0 3
+@マクリル
+うぅっ…痛い…痛いよぉ…
+
+# textboxarrow 0 1
+@スイハ
+あなたがいけないんですよ
+さあ、部屋に戻って下さい
+
+# alpha 6603811 0 0.3
+# alpha 3401711 0 0.3
+# face 270 "angry"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+分かりました…
+戻りますので、これ以上、
+マクリルさんを射るのは――
+
+# alpha 270 0 0.3
+# move 6603811 3 0
+# mask 6603811 off
+# face 6603811 "sad"
+# alpha 6603811 1 0.3
+# textboxarrow 0 2
+@マクリル
+嫌だ…もう少しで“相棒”に
+会えるのに…嫌だ嫌だ嫌だ嫌だ嫌だ…
+
+# voice 660381 "maclir_ura_0025"
+# textboxarrow 0 2
+@マクリル
+嫌だよおおおおおおおお…！！
+
+;;ヒビ割れが生じる
+# bgm "stop"
+# alpha 6603811 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# fadein "white" 0.5
+# se "SE_6210"
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# waitandnext 2
+
+# imagealpha 1 0 0.3
+# move 270 2 0
+# face 270 "surprise"
+# alpha 270 1 0.3
+# move 3401711 4 0
+# mask 3401711 on
+# voice 9917 "mimir_navikan_0022"
+# face 3401711 "surprise"
+# alpha 3401711 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+えっ…？
+これは「揺らぎ」の…
+
+# voice 4017 "suiha_0022"
+# textboxarrow 0 3
+@スイハ
+何事ですか？
+
+# bgm "bgm029_030" 0
+# alpha 270 0 0.3
+# alpha 3401711 0 0.3
+# face 6603811 "sad"
+# alpha 6603811 1 0.3
+# textboxarrow 0 2
+@マクリル
+うわああああああああああ…！？
+
+;;マクリルが走り去る
+# se "SE_5575"
+# move 6603811 1 0.5
+# scale 6603811 0.7 0.5
+# alpha 6603811 0 0.3
+# textwindow "close"
+# waitandnext 1.5
+
+# imagealpha 1 1 1
+# imagepos 1 0 0
+# waitandnext 1
+
+;;ヒビ割れから魔獣の群れが現れる
+# se "SE_6146"
+# imagealpha 1 0 0
+# imagealpha 2 1 0.2
+# imagepos 2 0 0
+# waitandnext 1
+
+# move 910013 4 0.4
+# scale 910013 0.8 0.4
+# alpha 910013 1 0.6
+# move 920014 2 0.4
+# scale 920014 0.8 0.4
+# alpha 920014 1 0.6
+# waitandnext 1
+
+# se "SE_0792"
+# imagealpha 2 0 0.3
+# textwindow "toge"
+# textboxarrow 0 0
+@魔獣
+ガアアアアアアアア！！
+
+# alpha 910013 0 0.3
+# alpha 920014 0 0.3
+# move 270 3 0
+# voice 9917 "mimir_navikan_0023"
+# face 270 "sad"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+そんなっ…
+マクリルさん、何をなさって…
+
+# alpha 270 0 0.3
+# move 3401711 3 0
+# mask 3401711 off
+# face 3401711 "angry"
+# alpha 3401711 1 0.3
+# se "SE_4300"
+# textboxarrow 0 2
+@スイハ
+ミーミル、早く部屋に！
+魔獣は私が相手をします！
+
+;;スイハが魔獣の群れに突っ込む
+# se "SE_9021"
+# move 3401711 2 0.5
+# alpha 3401711 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# face 270 "angry"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+スイハさん、お一人では無理です！
+
+# voice 9917 "mimir_navikan_0028"
+# textboxarrow 0 2
+@ミーミル
+ああっ…
+どなたか、助けを！
+
+;;ミーミルが走り去る
+# se "SE_5575"
+# scale 270 0.75 0.3
+# alpha 270 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# face 302511 "angry"
+# alpha 302511 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミネルヴァ
+マスター、こちらです
+そこの角を曲がって…
+
+# alpha 302511 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;ミーミルが飛び出してくる
+# se "SE_5575"
+# move 270 3 0.3
+# scale 270 0.9 0.3
+# face 270 "normal"
+# alpha 270 1 0.3
+# waitandnext 0.2
+
+;;マスターにぶつかる
+# se "SE_6239"
+# shake 0 1
+# waitandnext 1
+
+# voice 9917 "mimir_navikan_0024"
+# face 270 "sad"
+# scale 270 0.8 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+きゃっ…！
+も、申し訳ございませんっ…
+お怪我は…
+
+# voice 9917 "mimir_navikan_0048"
+# face 270 "surprise"
+# textboxarrow 0 2
+@ミーミル
+ああっ！？
+マスター様！
+
+# voice 650401 "manannan_ura_0054"
+# move 270 2 0.5
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# textboxarrow 0 3
+@マナナン
+ミーミルだ！
+こんなところで会えるなんて
+喜劇的だねっ
+
+# voice 9917 "mimir_navikan_0019"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+マスター様…
+マナナンさんもご無事で何よりです
+
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+あのっ
+大変なことになっておりまして…
+
+# fadeout "black" 1
+# waitandnext 1

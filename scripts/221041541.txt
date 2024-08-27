@@ -1,0 +1,405 @@
+;;-----------------------------------------
+;;ファンキル2019ウェディングイベントシナリオ
+;;タイトル：契約と計画のブライダル
+;;-----------------------------------------
+;;【EP.3_1】教会の鐘は遠く
+;;-----------------------------------------
+# script "lisp"
+# background "400_angel_town_daytime"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;ソロモンウェディング
+# body 3503131
+# pos 3503131 3
+# scale 3503131 0.8 0
+# layer 3503131 3
+# alpha 3503131 1 0
+# mask 3503131 off
+;;グラウ
+# body 164
+# pos 164 3
+# scale 164 0.6 0
+# layer 164 4
+# alpha 164 0 0
+# mask 164 off
+;;ロンギヌスウェディング
+# body 3300121
+# pos 3300121 2
+# scale 3300121 0.8 0
+# layer 3300121 3
+# alpha 3300121 0 0
+;;-----------------------------------------
+# face 3503131 "angry"
+# voice 5031 "solomon_t_0069"
+# textflame 1 1
+# textboxarrow 0 2
+@ソロモン
+グラウ、これはどういうこと？
+どの教会にも人があふれているわ
+
+;;モノローグ
+# textflame 0 0
+@
+マスターたちは、グラウの先導で
+街中を歩き回っていた
+
+;;モノローグ
+# textflame 0 0
+@
+契約の儀にふさわしい教会を探して
+いるのだが、事前に調査した教会が
+すべて人で埋まっている
+
+# voice 5031 "solomon_t_0028"
+# textflame 1 1
+# textboxarrow 0 2
+@ソロモン
+やっぱり妙だわ…
+これは少し厄介なことに
+なっているかもね…
+
+# face 3503131 "usual"
+# voice 5031 "solomon_t_0002"
+# textflame 1 1
+# textboxarrow 0 2
+@ソロモン
+マスター、
+ここで少し待っててくれる？
+
+# alpha 3503131 0 0.5
+;;モノローグ
+# textflame 0 0
+@
+異常事態だと理解したソロモンは、
+マスターを安全な場所に残し、
+そこから少し離れた場所に移動する
+
+;;モノローグ
+# textflame 0 0
+@
+そして、グラウとロンギヌスと
+今後の方針を話し合うことにした
+
+# move 3503131 4 0
+# alpha 3503131 1 0.5
+# mask 3503131 on
+# alpha 3300121 1 0.5
+# alpha 164 1 0.5
+# face 3503131 "normal"
+# face 3300121 "usual"
+# voice 9950 "glau_0028"
+# textflame 1 1
+# textboxarrow 0 2
+@グラウ
+…人々の会話から情報を収集しました
+祈りの儀式の会場が、警備上の理由で
+広場から各教会に変更されたようです
+
+# emotionbody 1000 2 3300121 10 260
+# effectpattern 1000 1 1
+# effectstart 1000
+# face 3300121 "surprise"
+# voice 330011 "ronginusu_t_0022"
+# textflame 1 1
+# textboxarrow 0 1
+@ロンギヌス
+それは…
+先ほどの戦闘が
+原因なのでしょうか？
+
+# voice 9950 "glau_0032"
+# textflame 1 1
+# textboxarrow 0 2
+@グラウ
+その可能性は否めません
+
+# face 3300121 "sad"
+# voice 330011 "ronginusu_t_0028"
+# textflame 1 1
+# textboxarrow 0 1
+@ロンギヌス
+でしたら、マスターを連れて
+歩き回るのは避けるべきですね…
+目的地がばれるのも時間の問題ですし
+
+# voice 5031 "solomon_t_0069"
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+グラウ、教会の候補はまだあるわね？
+目立たないように、
+空から偵察をお願いできる？
+
+# voice 9950 "glau_0033"
+# textflame 1 1
+# textboxarrow 0 2
+@グラウ
+承知しました
+では…
+
+;;演出：グラウout
+# se "SE_4747"
+# alpha 164 0 0.7
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 1.5
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.8
+
+# alpha 3503131 0 0
+# alpha 3300121 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 3300121 3 0
+# alpha 3300121 1 0.5
+# mask 3300121 off
+# face 3300121 "normal"
+# voice 330011 "ronginusu_t_0001"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ロンギヌス
+マスター、お待たせしました
+
+;;モノローグ
+# textflame 0 0
+@
+そう言って戻ってきたのは、
+ロンギヌスだけだった
+
+;;モノローグ
+# textflame 0 0
+@
+ソロモンたちはどうしたの？
+と、尋ねるマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+ソロモンは、周囲を見回ってくると…
+ここで帰りを待ちましょう
+
+;;モノローグ
+# textflame 0 0
+@
+ロンギヌスは、マスターの隣に立ち、
+周囲を警戒しながら
+ソロモンたちの帰りを待つことにした
+
+;;モノローグ
+# textflame 0 0
+@
+マスターは、ロンギヌスとソロモンの
+組み合わせって珍しいよね
+と、ふと気になったことを聞いてみた
+
+# face 3300121 "sad"
+# voice 330011 "ronginusu_t_0003"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+そう…ですね
+同じハルモニア出身ですが、
+国を出た時期が違いますから…
+
+;;モノローグ
+# textflame 0 0
+@
+国にいた頃も二人は仲が良かったの？
+と、マスターはなにげなく聞いてみた
+
+# voice 330011 "ronginusu_t_0028"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+それは、少々複雑な話なのです
+私とソロモンのことについて
+少し、話をしてもいいですか？
+
+;;モノローグ
+# bgm "stop"
+# textflame 0 0
+@
+マスターは、ロンギヌスの真剣な声色
+に気づき、居住まいを正した
+
+# bgmfile "bgm293" "BgmLostRagnarokSideStory" 0
+# face 3300121 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+あの頃の私は、
+教皇を盲信していました
+
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+だから、国を裏切ったソロモンの話を
+信じることなど…できませんでした
+
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+現在は自分が間違っていたことも、
+ソロモンが正しかったことも
+理解できます
+
+# face 3300121 "sad"
+# voice 330011 "ronginusu_t_0015"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+でも、あの頃は何も知らずに
+ソロモンを疑い続けたのです
+
+;;モノローグ
+# textflame 0 0
+@
+でもそれは、過去の話だよね、
+今は一緒に戦う仲間なんだし…
+と、マスターは言う
+
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+ですが、私たちはお互いに、
+一定の距離を置きあっていました
+
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+わかりやすくいえば、
+少し気まずい間柄だったのです
+
+;;モノローグ
+# textflame 0 0
+@
+今日の二人はそんな風には見えない、
+もう仲良しになれたんだね
+と、マスターは笑う
+
+# face 3300121 "shy"
+# voice 330011 "ronginusu_t_0022"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+なな、仲良しですか？
+それはさすがに、
+早計ではないでしょうか…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+ただ…以前よりは、ソロモンとの
+距離が縮められたのではないか、と
+
+;;モノローグ
+# textflame 0 0
+@
+ロンギヌスは、ソロモンと
+もっと近づきたいのかな？
+と、マスターは尋ねる
+
+# face 3300121 "usual"
+# voice 330011 "ronginusu_t_0003"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+叶うのであれば、そう願います
+ですが、心から信頼してもらうのは
+まだ難しいでしょうね
+
+# face 3300121 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+彼女を信じられなかった私に、
+その資格はありませんから…
+
+# bgm "stop"
+# face 3300121 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+ですから、今日のことはチャンスだと
+そう考えていて…
+
+;;モノローグ
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+# textflame 0 0
+@
+うっかり口を滑らせたロンギヌスに、
+今日のことって？
+と、マスターが聞き返す
+
+# emotionbody 1001 9 3300121 10 160
+# effectpattern 1001 5 0
+# effectstart 1001
+# face 3300121 "surprise"
+# voice 330011 "ronginusu_t_0025"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+あの、その…
+もちろん、今日の
+買い出し当番のことです！
+
+;;モノローグ
+# effectskip 1001
+# textflame 0 0
+@
+慌ててごまかすロンギヌス
+今日が二人の転機になるといいね
+と、マスターは笑顔で告げた
+
+;;モノローグ
+# textflame 0 0
+@
+マスターを上手くかわした
+ロンギヌスだったが、
+その視界に不穏な影が映りこむ
+
+;;演出：ソロモンin
+# se "SE_5575"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# move 3300121 2 0.5
+# mask 3300121 on
+# move 3503131 4 0
+# alpha 3503131 1 0.5
+# mask 3503131 on
+# waitandnext 0.8
+
+# face 3503131 "angry"
+# voice 5031 "solomon_t_0002"
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+ロンギヌス、マスター！
+巡回中のハルモニア兵が
+近づいているわ
+
+# face 3300121 "angry"
+# voice 330011 "ronginusu_t_0003"
+# textflame 1 1
+# textboxarrow 0 1
+@ロンギヌス
+私も視認しました
+また警備の数が増えたようですね
+
+# voice 5031 "solomon_t_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+ここでの長居は危険ね…
+すぐにグラウを呼び寄せて
+移動しましょう

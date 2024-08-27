@@ -1,0 +1,456 @@
+;;-----------------------------------------
+;;ティルフィング3
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgm "bgm002" 0
+;;-----------------------------------------
+# body 6101411
+# pos 6101411 3
+# scale 6101411 0.8 0
+# layer 6101411 3
+# mask 6101411 off
+# alpha 6101411 1 0
+# face 6101411 "usual"
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "c6101411"
+# imagelayer 1 3
+# imagealpha 1 0 0
+;;-----------------------------------------
+# textflame 0 0
+# textwindow "nomal"
+@
+あれから間もなく、
+マスターとティルフィングは
+次のデートを楽しんでいた
+
+# textflame 0 0
+@
+二人で一緒に洋服を選び、
+ティルフィングは着せ替え人形の
+ように衣装を変えていく
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 610141 "tyrufing_7th_0001"
+@ティルフィング
+マスター、どうですか？
+どれが似合ってますか？
+
+# textflame 0 0
+@
+試着室ではしゃぐ
+ティルフィングを
+マスターは目を細めて見守る
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+これも可愛いですけど
+さっきのはおしゃれでしたし、
+あっちのも色が気になってて…
+
+# textflame 0 0
+@
+マスターは、うんうん、と
+うなずきながらティルフィングの
+意見を聞いていた
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 6101411 "sad"
+# voice 610141 "tyrufing_7th_0028"
+@ティルフィング
+うーん…
+すみません、マスター
+別のお店も見ていいですか？
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+どれも素敵なんですけど、
+なんとなく違う気がして…
+
+# textflame 0 0
+@
+好きなものが見つかるまで
+何軒でも回ろうよ
+と、マスターは意欲を見せる
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+いいんですか？
+マスターは退屈なのでは…
+
+;;選択肢
+# select "すごく楽しいよ！" "select_label_01" "心配いらないよ" "select_label_02" "そんなことないよ" "select_label_03"
+いいんですか？
+マスターは退屈なのでは…
+
+;;回答
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 6101411 "happy"
+# voice 610141 "tyrufing_7th_0020"
+@ティルフィング
+本当ですか？嬉しいです…
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 6101411 "surprise"
+# voice 610141 "tyrufing_7th_0028"
+@ティルフィング
+そうですか？
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 6101411 "sad"
+# voice 610141 "tyrufing_7th_0028"
+@ティルフィング
+そ、そうですか…
+
+# label "select_label_end"
+# textflame 0 0
+@
+今日は自分も楽しみにして来たから
+大丈夫だよ、気にしないで楽しんで
+と、マスターは伝える
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 6101411 "sad"
+@ティルフィング
+うーん…
+では、もう一軒だけ…
+次のお店で絶対に決めます！
+
+;;演出：場所移動
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# background "sea_cafe"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 610141 "tyrufing_7th_0031"
+@ティルフィング
+すみません…
+ここは私がご馳走しますので
+好きなものをどうぞ…
+
+# textflame 0 0
+@
+カフェで謝るティルフィングに
+本当に気にしないで
+と、マスターは声をかける
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+でも、1日中お店を巡ったのに
+結局手ぶらで帰るなんて…
+
+# textflame 0 0
+@
+あれから山ほど試着したが
+彼女の心に響くコーディネイトは
+見つからなかったらしい
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 610141 "tyrufing_7th_0019"
+@ティルフィング
+はぁ…
+こんなはずじゃなかったのに…
+
+# textflame 0 0
+@
+いろんなティルフィングが
+見られて楽しかったよ
+全部似合ってたし、可愛かったし…
+
+# textflame 0 0
+@
+と、マスターはティルフィングを
+元気付けようとするが…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+…そうですか
+
+# textflame 0 0
+@
+しかし、彼女はぎこちなく
+微笑むだけだった
+
+# textflame 0 0
+@
+ティルフィングの表情が気になり、
+なにか気になることがあるの？
+と、たずねるマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 6101411 "normal"
+@ティルフィング
+…っ！
+…マスターに隠し事は
+できませんね
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+以前の私なら言えませんでした…
+ですが正直になると決めたから、
+私の本当の気持ちをお話しします
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 6101411 "usual"
+# voice 610141 "tyrufing_7th_0003"
+@ティルフィング
+これは私のわがままですが
+私は、マスターの本音が
+聞きたかったんです
+
+# textflame 0 0
+@
+え？
+と、驚くマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+似合うと言われれば嬉しいです
+それがお世辞ではないことも
+わかっています
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+だけど、私はマスターの
+本心を知りたいんです
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 6101411 "shy"
+@ティルフィング
+アナタの前では、
+一番可愛い私でいたいから…
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 610141 "tyrufing_7th_0002"
+@ティルフィング
+アナタが本当に、一番
+私に似合うと思ったのは、
+どの洋服でしたか？
+
+;;選択肢
+# select "仕方ない、本当のことを話すよ" "select_label_04" "ええと、困ったな…" "select_label_05" "君が着れば全部一番なのに…" "select_label_06"
+アナタが本当に、一番
+私に似合うと思ったのは、
+どの洋服でしたか？
+
+;;回答
+# label "select_label_04"
+# labeljump "select_label_end2"
+# textflame 1 1
+# textboxarrow 0 2
+# face 6101411 "angry"
+@ティルフィング
+お願いします！
+
+# label "select_label_05"
+# labeljump "select_label_end2"
+# textflame 1 1
+# textboxarrow 0 2
+# face 6101411 "sad"
+@ティルフィング
+わがままを言ってすみません…
+
+# label "select_label_06"
+# labeljump "select_label_end2"
+# textflame 1 1
+# textboxarrow 0 2
+# face 6101411 "sad"
+@ティルフィング
+…………
+
+# label "select_label_end2"
+# textflame 0 0
+@
+彼女の顔は真剣そのもので
+ごまかすことはできそうにない
+
+# textflame 0 0
+@
+君が正直に話してくれたから、
+自分も正直に話すよ
+と、マスターも覚悟を決めた
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 6101411 "usual"
+@ティルフィング
+はい…
+
+# textflame 0 0
+@
+全部似合うっていうのは
+君の言う通り、嘘じゃない
+だけど…
+
+# textflame 0 0
+@
+正直にいうと、目の前にいる
+いまの君が一番好きなんだ
+と、マスター
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 6101411 "surprise"
+# voice 610141 "tyrufing_7th_0022"
+@ティルフィング
+あ…
+
+# textflame 0 0
+@
+どの洋服も似合ってたけど、
+再会したあの瞬間の気持ちが
+忘れられなくて…
+
+# textflame 0 0
+@
+一緒に歩んだ時間を感じられる
+いまの姿が好きなんだ
+と、本心を明かした
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 6101411 "shy"
+@ティルフィング
+そ、そうだったんですか…
+
+# textflame 0 0
+@
+マスターとティルフィングは
+二人とも耳まで赤くしてうつむく
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 610141 "tyrufing_7th_0004"
+@ティルフィング
+すごく恥ずかしいですけど、
+マスターの本心が聞けて
+嬉しいです…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+そんな風に思われているとは
+想像もしていませんでした…
+思い切ってお話してよかったです
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+長い時を一緒に過ごしたのに
+聞いてみないとわからないことが
+まだまだあるのかもしれませんね
+
+# textflame 0 0
+@
+わがままだって言っていいし
+これからはお互いに本音で話そうね
+と、マスターは笑いかける
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 6101411 "happy"
+# voice 610141 "tyrufing_7th_0005"
+@ティルフィング
+はい！
+ありがとうございます！
+
+# textflame 0 0
+@
+二人の絆が深まり、
+ティルフィングには
+新たな力が宿った
+
+# se "SE_0602"
+# textflame 1 1
+# textboxarrow 0 2
+# face 6101411 "usual"
+@ティルフィング
+この力…
+『ワールドリコレクション』
+そう名付けます
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 610141 "tyrufing_7th_0001"
+@ティルフィング
+マスター…
+近いうちに、また二人で
+お出かけしてもらえますか？
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+そして、今度は2番目に
+好きな服を選んでください
+これが次のお願いです
+
+# textflame 0 0
+@
+もちろんいいけど、
+そんな普通のことでいいの？
+と、マスターが聞き返す
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 6101411 "shy"
+# voice 610141 "tyrufing_7th_0004"
+@ティルフィング
+普通だから…いいんです
+
+# textflame 0 0
+@
+ティルフィングはそう言って笑う
+無邪気に微笑む彼女の姿は、
+普通の女の子そのものだった
+
+# textflame 0 0
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# fadein "white" 3
+# buttonsout 0 0
+# textwindow "close"
+# voice 610141 "tyrufing_7th_kyara_0025"
+
+# frameout 0 1
+
+# waitandnext 0.8
+
+# fadeout "black" 1.5
+# waitandnext 1.5

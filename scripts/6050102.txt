@@ -1,0 +1,395 @@
+;;【EP1】戦闘後　背景：森
+# script "lisp"
+# background "forest"
+# bgmfile "bgm168" "BgmPJZero001" 0
+# body 100221
+# pos 100221 5
+# scale 100221 0.8 0
+# body 500261
+# pos 500261 2
+# scale 500261 0.8 0
+# body 300181
+# pos 300181 4
+# scale 300181 0.8 0
+# alpha 300181 0 0
+# textflame 1 1
+# textboxarrow 0 1
+# chara 500261
+# voice 50026 "furaikugeru_k_0005"
+# face 500261 "usual"
+# face 100221 "angry"
+@プライド
+アハハハハ！
+そのサァッドな顔、最高デス
+追いかけっこはベァッドエンド？
+
+# textboxarrow 0 3
+# move 300181 4 0
+# chara 100221
+@レーヴァテイン
+面倒くさい…
+アナタは下がってて
+
+# textflame 0 0
+# textflame 0 0
+# face 100221 "surprise"
+@考古学奏官
+!?
+レーヴァ、右だ！
+
+# move 100221 2 0.3
+# alpha 300181 1 0.5
+# alpha 500261 0 0.5
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 300181
+# voice 30018 "ronginusu_k_battle_0004"
+# face 300181 "angry"
+@エンヴィ
+もう終わりです
+
+# textboxarrow 0 1
+# chara 100221
+# voice 1002 "revatein_0037"
+# chara 100221
+# face 100221 "angry"
+@レーヴァテイン
+しまった…
+
+;;//エンヴィがレーヴァテインを突き刺す
+;;//画面揺れ
+;;//破壊音
+# effectbody 1234 1 -300 10
+# effectstart 1234
+# se "SE_5743"
+# sedelay "SE_0637" 0.5
+# sedelay "SE_8005" 0.7
+# layer 300181 3
+# layer 100221 1
+# move 300181 3 0.2
+# shakeloop 1
+# fadein "red" 0.4
+# waitandnext 1
+
+# effectskip 1234
+# textflame 0 0
+# move 300181 4 0.3
+# textflame 0 0
+@考古学奏官
+なっ…？
+ブラックキラーズの攻撃で
+地面が割れた!?
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 100221
+@レーヴァテイン
+くっ…マスター…！
+
+;;//暗転
+;;//背景：洞窟
+# fadeout "black" 3
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 4
+
+# bgm "bgm004" 0.7
+# shakestop
+# mask 100221 off
+# alpha 300181 0 0
+# move 100221 3 0
+# bgm "bgm003" 0
+# alpha 100221 1 0
+# background "006_jail"
+# fadein "black" 2
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+# face 100221 "normal"
+@考古学奏官
+ううっ…ここは？
+俺は…助かったのか…？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 100221
+@レーヴァテイン
+やっと目を覚ました…
+
+# textflame 0 0
+@考古学奏官
+レーヴァ、お前も無事だったか
+良かった
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1002 "revatein_0013"
+# chara 100221
+# face 100221 "angry"
+@レーヴァテイン
+ハア…全然よくないんだけど…
+地面に空いた穴に落ちて…
+地上に上がる方法が分からない
+
+# textflame 0 0
+@考古学奏官
+まあ、命あっての物種ってな…
+ブラックキラーズから一時的にでも
+逃げられたんだから良しとしよう
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1002 "revatein_0009"
+# chara 100221
+# face 100221 "normal"
+@レーヴァテイン
+…ホント、楽観的な性格
+
+# textflame 0 0
+@考古学奏官
+ここはどうやら遺跡の中だな
+丁度いい
+調査を始めるぞ
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 100221
+@レーヴァテイン
+正気…なんだよね？
+
+# textboxarrow 0 2
+# voice 1002 "revatein_0013"
+# chara 100221
+@レーヴァテイン
+はぁ…、ハイハイ…
+あなたはそういう
+性格なんだって知ってるし…
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textflame 0 0
+@考古学奏官
+ひとまず奥に進んでみよう
+
+;;//背景：壁画の間
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@考古学奏官
+これは!?
+かなり古い時代の壁画だ…
+やはりここに“彼女達”の痕跡が…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 100221
+# face 100221 "surprise"
+@レーヴァテイン
+…ねえ、
+あなたのバッグが光ってるんだけど
+中になにが入ってるの？
+
+# textflame 0 0
+@考古学奏官
+光ってる？本当だ!?
+でも光るような物はなにも…
+古文書が光っているのか!?
+
+;;//古文書の封が外れる
+# fadein "white" 0.5
+# se "SE_5917"
+# textflame 0 0
+@考古学奏官
+古文書の封が外れた！
+今までどんなことをしても
+開かなかったっていうのに
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 100221
+# face 100221 "angry"
+@レーヴァテイン
+気味が悪い…
+
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textflame 0 0
+@考古学奏官
+ついに中身を読むことができるぞ！
+一体、なにが書かれてあるんだっ？
+
+# bgm "stop"
+# se "SE_4779"
+# fadeout "black" 2
+# waitandnext 3
+;;//暗転
+
+;;――場面転換――
+# fadein "black" 0.5
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 100221 0 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+# se "SE_9169"
+@古文書
+――いつか、
+失われた歴史を追い求め
+
+# textwindow "nomal"
+# textboxarrow 0 0
+@古文書
+“彼女達”のことを
+思い出してくれる者が
+現れることを信じて、書き記す
+
+# textwindow "nomal"
+# textboxarrow 0 0
+@古文書
+――神々に抗い、
+最後まで勇敢に戦った
+“革命の乙女達”の記録を
+
+# textwindow "nomal"
+# textboxarrow 0 0
+@古文書
+――《蝕》のとき“予言”通り、
+あの男に出会ったことから
+全ては始まった…
+
+;;//暗転
+;;//背景：建物内
+# se "SE_4779"
+# imageset 1 "bg_white"
+# imagealpha 1 0 0
+# imagescale 1 10 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fillrect "white" 2.3 0 1
+# waitandnext 2.7
+
+# imagepos 1 0 0
+# imagealpha 1 1 0
+# fillrect "white" 1 1 0
+# waitandnext 0.1
+
+# background "church_room"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# imagealpha 0 0 1
+# imagealpha 1 0 1
+# waitandnext 1.1
+
+# bgm "bgm005" 0.7
+# body 75
+# pos 75 3
+# mask 75 off
+# scale 75 0.8 0
+# alpha 75 0 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@フレンネル
+ついにこのときが来てしまった…
+
+# textflame 0 0
+@フレンネル
+《蝕》のとき、
+我が先祖、エルライトの残した
+“予言”のときだ
+
+# textflame 0 0
+@フレンネル
+私の代で、
+ようやく真偽がはっきりする
+
+# textflame 0 0
+@フレンネル
+そして、結果いかんによって
+私の身の振り方も決まるというわけか
+
+# textflame 0 0
+@フレンネル
+…この扉の先、そこに全ての答えが
+
+;;//扉を開く音
+# se "SE_0667"
+# textflame 0 0
+@フレンネル
+…………
+
+# textflame 0 0
+@フレンネル
+誰も、いない、か…
+
+# textflame 0 0
+@フレンネル
+…安心したような、落胆したような
+不思議な気分だな
+まあ、こんなものか…
+
+# textflame 0 0
+@フレンネル
+さて――
+
+;;//稲妻が走る。画面フラッシュ
+# shake 0 1
+# se "SE_4829"
+# alpha 75 1 0
+# fadein "white" 0.5
+# waitandnext 1
+# brightness 75 0 0
+
+# textflame 0 0
+@フレンネル
+なに！？
+
+;;//リベリオンのシルエットを出す
+# textflame 0 0
+@フレンネル
+まさか…
+さっきまで誰もいなかった
+はずなのにっ…
+
+# fadein "white" 1
+# waitandnext 1
+# brightness 75 1 0
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 75
+# face 75 "surprise"
+@眼帯をした男
+…ここは？
+俺は、成功したのか…？

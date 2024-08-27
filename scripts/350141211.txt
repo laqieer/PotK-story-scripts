@@ -1,0 +1,321 @@
+;;-----------------------------------------
+;;【ファントムオブキル_まどかコラボ】巴マミドレスVer.　キャラクタークエスト修正稿
+;;【EP1】
+;;スクリプト最後の背景：平原など
+;;背景：平原など
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;マミ
+# body 3501411
+# pos 3501411 3
+# scale 3501411 0.8 0
+# layer 3501411 2
+# alpha 3501411 0 0
+# mask 3501411 off
+;;マミ（通常）
+# body 501411
+# pos 501411 3
+# scale 501411 0.8 0
+# layer 501411 2
+# alpha 501411 0 0
+# mask 501411 off
+;;-----------------------------------------
+;;背景の明転
+# imageset 2 "bg_white"
+# imagelayer 2 3
+# imagealpha 2 0 0
+;;-----------------------------------------
+;;【EP1】
+;;背景：平原など
+;;演出：マミ立ち絵通常Ver.
+# voice 5014 "mami_unit_0008"
+# move 501411 3 0
+# face 501411 "normal"
+# alpha 501411 1 0
+# mask 501411 off
+# textflame 1 1
+# textboxarrow 0 2
+@マミ
+ティロ・フィナーレ！
+
+;;演出：銃撃系の攻撃エフェクト
+# se "SE_4400"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+@
+違う世界からやってきた
+魔法少女だというマミ
+
+;;モノローグ
+@
+その能力は実に戦闘向きであり
+マスターの隊でもその力を
+遺憾なく発揮していた
+
+# serif 1
+@兵士
+くそっ！
+退却だ、退け！
+
+;;モノローグ
+# serif 1
+# textwindow "close"
+# serif 0
+@
+兵士達が逃げ去っていく
+
+# voice 5014 "mami_0004"
+# face 501411 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@マミ
+…ふぅ
+この辺りに敵はもういないわ
+ふふっ、お疲れ様
+
+;;モノローグ
+# textflame 0 0
+@
+斬ル姫顔負けの
+マミの活躍にマスターは
+いつもありがとう、と感謝を述べる
+
+# face 501411 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@マミ
+あら、やさしいのね
+そう言ってくれるマスターのために
+もっともっと頑張らなきゃね
+
+;;モノローグ
+# textflame 0 0
+@
+労いのつもりでかけた言葉だが
+マミは意気込んで
+より活躍すると宣言する
+
+# face 501411 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@マミ
+斬ル姫のみんなや
+マスターと一緒にいられることは
+私にはとても嬉しいことなの
+
+;;モノローグ
+# textflame 0 0
+@
+そう言って笑うマミを
+マスターは頼もしく思う
+
+;;モノローグ
+@
+だが、それと同時に
+疲れた素振りすら見せない彼女に
+少しばかりの不安を覚えるマスター
+
+# voice 5014 "mami_0004"
+# face 501411 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@マミ
+ふふっ、大丈夫よ
+こう見えてもタフなんだから！
+
+;;モノローグ
+# textflame 0 0
+@
+たしかにマミの調子は良さそうだ
+杞憂だったのであればいいが…
+
+;;モノローグ
+@
+と、そこでマミの服の一部が
+ほつれていることに気付くマスター
+
+# face 3501411 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@マミ
+あら？
+さっきの戦闘で少し
+引っかけてしまったみたいね
+
+;;選択肢
+;;@
+;;A　怪我してない！？
+;;B　縫えるかな…
+;;C　替えの服あったかな…
+# select "怪我してない！？" "select_label_01" "縫えるかな…" "select_label_02" "替えの服あったかな…" "select_label_03"
+あら？
+さっきの戦闘で少し
+引っかけてしまったみたいね
+
+;;アンサー
+;;A
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 501411 "normal"
+# textboxarrow 0 2
+@マミ
+かすっただけだから大丈夫よ
+
+;;B
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 501411 "normal"
+# textboxarrow 0 2
+@マミ
+あら、お裁縫できるの？
+
+;;C
+# label "select_label_03"
+# labeljump "select_label_end"
+# voice 5014 "mami_0028"
+# face 501411 "normal"
+# textboxarrow 0 2
+@マミ
+うーん、たぶんないと思うわ
+
+# label "select_label_end"
+# voice 5014 "mami_0004"
+# face 501411 "happy"
+# textboxarrow 0 2
+@マミ
+ふふっ、気にしないで
+これくらい…
+
+# voice 5014 "mami_0022"
+# face 501411 "surprise"
+# textboxarrow 0 2
+@マミ
+…え？
+
+;;演出：明転（光に包まれるようなイメージ）
+# se "SE_9091"
+# textwindow "close"
+# imagepos 2 0 0
+# imagealpha 2 1 0.5
+# waitandnext 0.5
+
+# alpha 501411 0 0
+# move 3501411 3 0
+# face 3501411 "surprise"
+# alpha 3501411 1 0
+# mask 3501411 off
+# waitandnext 0.2
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+突如、彼女の姿が光に包まれる
+
+;;演出：明転おわり、マミの立ち絵がドレスVerに（以後ずっとドレスVer）
+# textwindow "close"
+# imagealpha 2 0 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@マミ
+…あら？
+
+;;モノローグ
+# textflame 0 0
+@
+光が収まり
+再び現れたマミの姿は
+元の服装とは違うものになっていた
+
+# voice 5014 "mami_0023"
+# textflame 1 1
+# textboxarrow 0 2
+@マミ
+ど、どうしちゃったのかしら！？
+
+;;モノローグ
+# textflame 0 0
+@
+マミの様子から
+どうやら想定外のことが
+起きたのだとわかる
+
+# textflame 1 1
+# textboxarrow 0 2
+@マミ
+ええっ
+どうして…？
+
+;;演出：何度か明転
+# se "SE_9091"
+# textwindow "close"
+# imagepos 2 0 0
+# imagealpha 2 1 0.5
+# waitandnext 0.5
+
+# waitandnext 0.2
+
+# imagealpha 2 0 0.5
+# waitandnext 0.5
+
+# waitandnext 0.5
+
+# se "SE_9091"
+# textwindow "close"
+# imagepos 2 0 0
+# imagealpha 2 1 0.5
+# waitandnext 0.5
+
+# waitandnext 0.2
+
+# imagealpha 2 0 0.5
+# waitandnext 0.5
+
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+@マミ
+元に戻らない…っ！？
+
+;;モノローグ
+# textflame 0 0
+@
+変身を解こうとするマミだが
+何度やっても上手くいかず
+ドレス姿のままだ
+
+;;モノローグ
+@
+どうやら異なる世界に来た影響で
+不思議な力が働いたようだ
+
+;;演出：敵兵in
+# serif 1
+@兵士
+報告にあったのはコイツらか！
+
+;;モノローグ
+# serif 1
+# textwindow "close"
+# serif 0
+@
+マミの異常事態もお構いなしに
+先ほど戦闘した兵士が
+仲間を引き連れて現れた
+
+# face 3501411 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@マミ
+もう、こんなときに！
+マスター、まずは迎撃しないと！

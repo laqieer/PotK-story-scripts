@@ -1,0 +1,329 @@
+;;-----------------------------------------
+;;SEA夏1_1_0
+;;-----------------------------------------
+# script "lisp"
+# background "diary"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;-----------------------------------------
+;;紙
+# imageset 0 "SEA_diary_bg"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imagescale 0 1.2 0
+;;1枚め
+# imageset 1 "SEAsummer_diary_101"
+# imagealpha 1 0 0
+# imagescale 1 1 0
+# imagelayer 1 3
+;;タイトル
+# imageset 2 "e220706_title"
+# imagealpha 2 0 0
+# imagelayer 2 5
+# imageset 3 "bg_white_circle"
+# imagealpha 3 0 0
+# imagelayer 3 4
+# imagescale 3 1.5 0
+;;-----------------------------------------
+;;水遊びと涼風、祭の熱気
+;;日記演出
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_6165"
+# face 270 "normal"
+# alpha 270 1 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+旅の記録二百二十二日目――
+
+;;ミーミル消す
+;;テキストウィンドウを外す
+# alpha 270 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;フレームを外す
+# frameout 0 1
+# waitandnext 1
+
+;;紙を表示
+# imagealpha 0 1 1
+# imagepos 0 0 0
+# waitandnext 1
+
+;;1枚目を表示
+# se "SE_6175"
+# imagealpha 1 1 2
+# imagepos 1 0 -1000
+# waitandnext 1
+
+;;1枚目を上に
+# imagemoveto 1 0 900 20
+# waitandnext 18
+
+;;1枚目を消す
+# imagealpha 1 0 2
+# waitandnext 2
+
+;;紙を消す
+# se "SE_6167"
+# imagealpha 0 0 1
+# waitandnext 1
+
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# sestop "SE_6175"
+# framein 0 0
+# waitandnext 0.2
+
+;;背景：平原
+# background "plain"
+#setnextbgmblock 1
+# se "SE_6170"
+# face 270 "normal"
+# face 6504011 "usual"
+# alpha 270 1 0
+# alpha 6504011 1 0
+# fadein "black" 1.5
+# waitandnext 1.5
+
+# voice 650401 "manannan_ura_0005"
+# face 6504011 "happy"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+暑いね～っ
+
+# textboxarrow 0 1
+@ミーミル
+この辺りは
+季節がはっきりしているそうです
+
+# textboxarrow 0 1
+@ミーミル
+春、夏、秋、冬
+四季と呼ばれ、それぞれに特徴的な
+気候をしているとか
+
+# textboxarrow 0 1
+@ミーミル
+今は夏の季節にあたります
+日差しが強く気温が高いので
+お気をつけ下さい
+
+# voice 650401 "manannan_ura_0004"
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+すぐ汗かいちゃうね！
+面白～い
+
+# voice 9917 "mimir_navikan_0004"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+マナナンさんはこの暑さの中でも
+元気ですね
+
+# voice 9917 "mimir_navikan_0001"
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+マスター様
+少しでもご気分が優れないときは
+遠慮なく仰って下さい
+
+# textboxarrow 0 1
+@ミーミル
+ミーミルは万全の態勢を整えて
+おりますのでっ
+
+;;ミーミルのペンダントが光る
+# se "SE_6191"
+# bgm "stop"
+# effectbody 100 51 -140 35 0
+# effectstart 100
+# textwindow "close"
+# waitandnext 1.5
+
+# face 270 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+あっ
+これは…
+
+# face 6504011 "usual"
+# textboxarrow 0 3
+@マナナン
+ティルフィングからの連絡だね！
+今度はどんな喜劇的なことが
+起きたのかなっ？
+
+# voice 9917 "mimir_navikan_0049"
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+ティルフィング様
+どちらに「揺らぎ」が
+発生したのでしょう？
+
+# serif 1
+@ティルフィング
+ふふっ
+やる気があるのは嬉しいのですけれど
+
+# serif 1
+@ティルフィング
+今日はいつもと違うんですよ、
+ミーミル
+
+# serif 0
+# voice 9917 "mimir_navikan_0023"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+なんと
+では、どのようなご用件ですか？
+
+# serif 1
+@ティルフィング
+ミーミル、
+マスター
+久し振りに会いましょう
+
+# serif 1
+@ティルフィング
+マナナンとは
+初めて会うことになりますね
+
+# serif 0
+# voice 9917 "mimir_navikan_0022"
+# textboxarrow 0 1
+@ミーミル
+ええっ？
+ティルフィング様がこちらに
+いらっしゃるのですか！？
+
+# serif 0
+# voice 650401 "manannan_ura_0005"
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+ティルフィングと会えるんだ
+愉快なことになりそうっ
+
+# serif 1
+@ティルフィング
+アナタ達のいるところから
+南に向かうと、大きな町があります
+
+# serif 1
+@ティルフィング
+そこで夏祭りが行われていますので
+その会場前で待ち合わせましょう
+
+# serif 0
+# voice 9917 "mimir_navikan_0003"
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+は、はい！
+急いで向かいますっ
+
+# serif 1
+@ティルフィング
+今日も暑くなりそうですから
+気をつけて来て下さいね
+
+;;通信を終える
+# sestop "SE_6191"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# bgmfile "bgm601_yukata_block" "BgmSecretlyEverAfter001" 0
+# voice 9917 "mimir_navikan_0046"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+ま、マスター様っ
+一大事でございます！
+
+# textboxarrow 0 1
+@ミーミル
+ティルフィング様が直々に
+いらっしゃるなんて…
+何が起きるのでしょう
+
+# textboxarrow 0 1
+@ミーミル
+私、どこかおかしくないでしょうか…
+身だしなみは
+整っておりますでしょうか…
+
+;;選択肢
+# select "落ち着こう" "select_label_01" "深呼吸をして" "select_label_01"
+私、どこかおかしくないでしょうか…
+
+# label "select_label_01"
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+失礼致しました…
+落ち着いて、かつ迅速に
+待ち合わせ場所に向かいましょう
+
+# face 6504011 "happy"
+# textboxarrow 0 3
+@マナナン
+私もテンション上がってきたよ～！
+
+;;タイトル演出
+# bgm "stop"
+# fadeout "white" 1
+# waitandnext 1
+
+# se "SE_0605"
+# waitandnext 1.5
+
+# frameout 0 0
+# fadein "white" 1
+# background "SEAsummer_plain_night"
+# alpha 270 0 0
+# alpha 6504011 0 0
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# imagealpha 3 1 0
+# imagepos 3 0 0
+# textwindow "close"
+
+# fadeout "black" 1
+# waitandnext 1

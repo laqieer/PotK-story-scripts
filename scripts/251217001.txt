@@ -1,0 +1,506 @@
+;;-----------------------------------------
+;;ファントムオブキル　この素晴らしい世界に祝福を！コラボ2019水着　シナリオ後半
+;;【EP.10】
+;;10_1
+;;スクリプト最後の背景：ビーチ
+;;-----------------------------------------
+# script "lisp"
+# background "sea_beach_day"
+# bgmfile "bgm351_352" "BgmKScollabo002" 0
+;;-----------------------------------------
+;;アクア
+# body 2601711
+# pos 2601711 3
+# scale 2601711 0.8 0
+# layer 2601711 3
+# alpha 2601711 0 0
+# mask 2601711 off
+;;ダクネス
+# body 2103411
+# pos 2103411 3
+# scale 2103411 0.8 0
+# layer 2103411 2
+# alpha 2103411 0 0
+# mask 2103411 off
+;;水着ティルフィング
+# body 2101411
+# pos 2101411 3
+# scale 2101411 0.8 0
+# layer 2101411 2
+# alpha 2101411 0 0
+# mask 2101411 off
+;;めぐみん
+# body 2502511
+# pos 2502511 3
+# scale 2502511 0.8 0
+# layer 2502511 2
+# alpha 2502511 0 0
+# mask 2502511 off
+;;ゆんゆん
+# body 2502611
+# pos 2502611 3
+# scale 2502611 0.8 0
+# layer 2502611 2
+# alpha 2502611 0 0
+# mask 2502611 off
+;;ウィズ
+# body 2601811
+# pos 2601811 3
+# scale 2601811 0.8 0
+# layer 2601811 2
+# alpha 2601811 0 0
+# mask 2601811 off
+;;-----------------------------------------
+;;【EP.10】
+;;背景：ビーチ
+;;演出：異族に追い回されるゆんゆん
+# se "SE_0617"
+# textwindow "close"
+# move 2502611 1 0
+# face 2502611 "sad"
+# alpha 2502611 1 0
+# mask 2502611 off
+# waitandnext 0.5
+
+# rightout 2502611 0.5
+# waitandnext 0.5
+
+# alpha 2502611 0 0
+# waitandnext 0.2
+
+# move 2502611 3 0
+# face 2502611 "sad"
+# alpha 2502611 1 0.5
+# mask 2502611 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 5026 "yunyun_battle_0006"
+@ゆんゆん
+どうして急に
+私ばかり狙われるように！？
+
+;;モノローグ
+# textflame 0 0
+@
+異族の動きの変化に合わせ
+マスターはダクネスに
+ゆんゆんを守るように指示を出す
+
+# alpha 2502611 0 0.5
+# move 2103411 3 0
+# face 2103411 "normal"
+# alpha 2103411 1 0.5
+# mask 2103411 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1034 "dakunesu_0003"
+@ダクネス
+的確な指示だ
+さすがだな、マスター！
+こっちは任せてくれ！
+
+# alpha 2103411 0 0.5
+# move 2502511 3 0
+# face 2502511 "angry"
+# alpha 2502511 1 0.5
+# mask 2502511 off
+# textboxarrow 0 2
+# voice 5025 "megumin_0027"
+@めぐみん
+そこでにやけ顔じゃなければ
+クルセイダーらしく締まるのに
+
+;;モノローグ
+# textflame 0 0
+@
+そう言うめぐみんは次々と
+襲い来る異族を前に爆裂魔法を
+撃てるタイミングがなく苦戦している
+
+# alpha 2502511 0 0.5
+# move 2101411 3 0
+# face 2101411 "angry"
+# alpha 2101411 1 0.5
+# mask 2101411 off
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+私もダクネスさんと
+ゆんゆんさんの援護にまわります！
+
+# move 2103411 2 0
+# face 2103411 "sad"
+# alpha 2103411 1 0.5
+# mask 2103411 on
+# textboxarrow 0 1
+# move 2101411 4 0.5
+# mask 2101411 on
+@ダクネス
+ああ、ありがとう
+ティルフィング…
+
+;;モノローグ
+# textflame 0 0
+@
+ダクネスがなぜ残念そうな
+顔をしたのかわからないが
+おかげで態勢を立て直せそうだ
+
+# face 2103411 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@ダクネス
+相手の数が多いときに
+散らばるのは得策ではないからな
+
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0003"
+@ティルフィング
+はい！
+でも、何か打開策がないと
+どうしようもないのも事実です
+
+# alpha 2103411 0 0.5
+# alpha 2101411 0 0.5
+# move 2502511 2 0
+# face 2502511 "normal"
+# alpha 2502511 1 0.5
+# mask 2502511 on
+# textboxarrow 0 1
+# move 2502611 4 0
+# face 2502611 "usual"
+# alpha 2502611 1 0.5
+# mask 2502611 on
+# voice 5025 "megumin_0001"
+@めぐみん
+それにしてもゆんゆんは
+異族の怒りを買うようなことでも
+したんですか？
+
+# emotionbody 1000 6 2502611 -70 160
+# effectpattern 1000 1 0
+# effectstart 1000
+# face 2502611 "angry"
+# textboxarrow 0 3
+@ゆんゆん
+そんなことしてないわよ！
+心当たりもまったくないし…
+
+;;モノローグ
+# textflame 0 0
+@
+原因がわからないままだが
+対処しないとゆんゆんが危険だ
+焦るマスター
+
+# emotionbody 1002 1 2601711 10 240
+# effectpattern 1002 1 0
+# effectstart 1002
+# alpha 2502511 0 0.5
+# alpha 2502611 0 0.5
+# move 2601711 3 0
+# face 2601711 "normal"
+# alpha 2601711 1 0.5
+# mask 2601711 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6017 "akua_0043"
+@アクア
+あっ、いいこと思いついたわ！
+
+# alpha 2601711 0 0.5
+# move 2502511 3 0
+# face 2502511 "sad"
+# alpha 2502511 1 0.5
+# mask 2502511 off
+# textboxarrow 0 2
+@めぐみん
+アクアがそんな風に
+思いつくときは大抵ロクなことじゃ
+ない気がするんですけど…
+
+# alpha 2502511 0 0.5
+# move 2601711 3 0
+# face 2601711 "normal"
+# alpha 2601711 1 0.5
+# mask 2601711 off
+# textboxarrow 0 2
+@アクア
+この状況にぴったりの
+ナイスな作戦よ！
+
+;;モノローグ
+# textflame 0 0
+@
+自信満々のアクアに
+期待を込めて、作戦を聞くマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6017 "akua_0046"
+@アクア
+簡単よ
+ゆんゆんが狙われているんだから
+ゆんゆんを囮にすればいいの！
+
+# textboxarrow 0 2
+@アクア
+それで集まってきた異族を
+めぐみんの爆裂魔法で一網打尽！
+バッチリだと思わない？
+
+;;モノローグ
+# textflame 0 0
+@
+ひどい策だがアクアの案も一理ある
+マスターはアクアの作戦を元に
+二手に分かれることを提案する
+
+# alpha 2601711 0 0.5
+# move 2101411 3 0
+# face 2101411 "normal"
+# alpha 2101411 1 0.5
+# mask 2101411 off
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+私とダクネスさんがそれぞれ
+盾として分かれて
+
+# alpha 2101411 0 0.5
+# move 2502611 3 0
+# face 2502611 "usual"
+# alpha 2502611 1 0.5
+# mask 2502611 off
+# textboxarrow 0 2
+@ゆんゆん
+私を中心にした囮になるチームと
+
+# alpha 2502611 0 0.5
+# move 2601711 3 0
+# face 2601711 "usual"
+# alpha 2601711 1 0.5
+# mask 2601711 off
+# textboxarrow 0 2
+@アクア
+異族が離れたその隙に、
+あのデュラハンを叩くチームね
+
+# emotionbody 1003 2 2502511 10 250
+# effectpattern 1003 1 1
+# effectstart 1003
+# alpha 2601711 0 0.5
+# move 2502511 3 0
+# face 2502511 "normal"
+# alpha 2502511 1 0.5
+# mask 2502511 off
+# textboxarrow 0 2
+@めぐみん
+でも、私の爆裂魔法で
+異族を一掃する手もありますよ？
+なぜ先にデュラハンを攻めるんです？
+
+;;モノローグ
+# textflame 0 0
+@
+以前デュラハンが自分を倒せば
+異族も大人しくなると言っていたと
+マスターは思い出したのだ
+
+# alpha 2502511 0 0.5
+# move 2101411 3 0
+# face 2101411 "normal"
+# alpha 2101411 1 0.5
+# mask 2101411 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0040"
+@ティルフィング
+なるほど…
+試してみる価値はありますね！
+
+# alpha 2101411 0 0.5
+# move 2502511 2 0
+# face 2502511 "normal"
+# alpha 2502511 1 0.5
+# mask 2502511 on
+# textboxarrow 0 1
+# move 2502611 4 0
+# face 2502611 "usual"
+# alpha 2502611 1 0.5
+# mask 2502611 on
+# voice 5025 "megumin_0003"
+@めぐみん
+あとはゆんゆんの覚悟次第、ですね
+
+# face 2502611 "happy"
+# textboxarrow 0 3
+# voice 5026 "yunyun_0004"
+@ゆんゆん
+私は…大丈夫！
+だってみんなが、
+仲間が一緒に戦ってくれるから！
+
+# alpha 2502511 0 0.5
+# alpha 2502611 0 0.5
+# move 2601811 2 0
+# face 2601811 "usual"
+# alpha 2601811 1 0.5
+# mask 2601811 on
+# move 2601711 4 0
+# face 2601711 "angry"
+# alpha 2601711 1 0.5
+# mask 2601711 on
+# textboxarrow 0 3
+@アクア
+ウィズも手伝いなさいよ！
+
+# emotionbody 1005 9 2601811 -30 200
+# effectpattern 1005 6 0
+# effectstart 1005
+# face 2601811 "sad"
+# textboxarrow 0 1
+# voice 6018 "wizu_0026"
+@ウィズ
+えっと、私は…
+
+# textboxarrow 0 3
+# voice 6017 "akua_0053"
+@アクア
+緊急事態よ！？
+もう見学なんて言わせないわ！
+
+# textboxarrow 0 1
+@ウィズ
+いろいろと事情がありまして…
+
+;;モノローグ
+# textflame 0 0
+@
+クエストではないが
+デュラハン討伐を依頼するよう
+マスターもウィズへ伝える
+
+# effectskip 1005
+# textboxarrow 0 1
+# textflame 1 1
+# voice 6018 "wizu_0022"
+@ウィズ
+依頼、ですか…？
+
+;;モノローグ
+# textflame 0 0
+@
+ウィズへの依頼の報酬は
+まだ貰っていない前回の報酬と
+相殺するってことでどう？とマスター
+
+# face 2601711 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 6017 "akua_0065"
+@アクア
+えっ、それはちょっと…
+
+# face 2601811 "normal"
+# textboxarrow 0 1
+@ウィズ
+本当ですかマスターさん！
+それにアクア様も！
+
+# emotionbody 1006 8 2601711 -60 220
+# effectpattern 1006 1 0
+# effectstart 1006
+# textboxarrow 0 3
+# voice 6017 "akua_0051"
+@アクア
+ううう…
+緊急事態には違いないし…
+わかったわ、それで手を打ちましょう
+
+# effectskip 1006
+# alpha 2601811 0 0.5
+# alpha 2601711 0 0.5
+# move 2502511 3 0
+# face 2502511 "sad"
+# alpha 2502511 1 0.5
+# mask 2502511 off
+# textboxarrow 0 2
+@めぐみん
+あのアクアが報酬を手放すとは…
+
+# alpha 2502511 0 0.5
+# move 2601811 2 0
+# face 2601811 "usual"
+# alpha 2601811 1 0.5
+# mask 2601811 on
+# move 2601711 4 0
+# face 2601711 "angry"
+# alpha 2601711 1 0.5
+# mask 2601711 on
+# textboxarrow 0 3
+@アクア
+その代わり！
+全力出しなさいよ！
+手を抜いたら許さないから！
+
+# face 2601811 "angry"
+# textboxarrow 0 1
+@ウィズ
+わ、わかりました…
+頑張ってみます！
+
+# se "SE_0617"
+# serif 1
+@異族
+ギャアアアアアアオオオオオ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 2601811 0 0.5
+# alpha 2601711 0 0.5
+# move 2101411 3 0
+# face 2101411 "angry"
+# alpha 2101411 1 0.5
+# mask 2101411 off
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0037"
+@ティルフィング
+そろそろ抑えるのも限界です！
+みなさん、準備はいいですか！？
+
+;;演出：めぐみんゆんゆん、ダクネスアクアウィズを表示し頷いているイメージ
+# textwindow "close"
+# alpha 2101411 0 0.5
+# move 2502511 2 0
+# face 2502511 "angry"
+# alpha 2502511 1 0.5
+# mask 2502511 on
+# move 2502611 4 0
+# face 2502611 "angry"
+# alpha 2502611 1 0.5
+# mask 2502611 on
+# waitandnext 1.5
+
+# alpha 2502511 0 0.5
+# alpha 2502611 0 0.5
+# move 2103411 1 0
+# face 2103411 "normal"
+# alpha 2103411 1 0.5
+# mask 2103411 on
+# move 2601711 3 0
+# face 2601711 "angry"
+# alpha 2601711 1 0.5
+# mask 2601711 on
+# move 2601811 5 0
+# face 2601811 "usual"
+# alpha 2601811 1 0.5
+# mask 2601811 on
+# waitandnext 1.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+@アクア
+いざ、デュラハン討伐！

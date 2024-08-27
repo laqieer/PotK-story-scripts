@@ -1,0 +1,352 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１３章 章タイトル「ラルゴカタストロフィ―攪乱―」
+;;第1話－１０　タイトル：眩惑のキル姫
+;;1_10_3
+;;スクリプト最後の背景：マサムネ城内
+;;-----------------------------------------
+# script "lisp"
+# background "masamune_arena"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 2
+# alpha 5401721 0 0
+# mask 5401721 off
+;;擬装フライシュッツ
+# body 5502721
+# pos 5502721 3
+# scale 5502721 0.8 0
+# layer 5502721 3
+# alpha 5502721 0 0
+# mask 5502721 off
+;;八咫鏡
+# body 500331
+# pos 500331 3
+# scale 500331 0.8 0
+# layer 500331 2
+# alpha 500331 0 0
+# mask 500331 off
+;;草薙剣
+# body 100441
+# pos 100441 3
+# scale 100441 0.8 0
+# layer 100441 2
+# alpha 100441 0 0
+# mask 100441 off
+;;ヘレナ・D. plug・ロキ
+# body 5302811
+# pos 5302811 3
+# scale 5302811 0.8 0
+# layer 5302811 2
+# alpha 5302811 0 0
+# mask 5302811 off
+;;ニール
+# body 162
+# pos 162 3
+# scale 162 0.8 0
+# layer 162 2
+# alpha 162 0 0
+# mask 162 off
+;;雑賀
+# body 502411
+# pos 502411 3
+# scale 502411 0.8 0
+# layer 502411 2
+# alpha 502411 0 0
+# mask 502411 off
+;;-----------------------------------------
+# voice 530281 "herena_di_0007"
+# move 5302811 3 0
+# face 5302811 "normal"
+# alpha 5302811 1 0
+# mask 5302811 off
+# textflame 1 1
+# textboxarrow 0 2
+@ヘレナ
+なかなか良い連携だな
+さすがのヘレナも苦戦必至だ
+…くふっ
+
+# alpha 5302811 0 0.5
+# move 500331 2 0
+# face 500331 "angry"
+# alpha 500331 1 0.5
+# mask 500331 on
+# move 100441 4 0
+# face 100441 "angry"
+# alpha 100441 1 0.5
+# mask 100441 on
+# textboxarrow 0 3
+@草薙剣
+当然じゃ！
+この一撃、神罰と思え！
+
+# textboxarrow 0 1
+@八咫鏡
+お主の動きなど全てお見通しじゃ！
+
+;;スイハ（独白）
+# voice 4017 "suiha_0028"
+# alpha 500331 0 0.5
+# alpha 100441 0 0.5
+# move 5401721 3 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 0
+# textwindow "moya"
+@スイハ
+ヘレナの動き…どこかおかしい…
+まるで、わざと攻撃をさせている
+ような…
+
+;;スイハ（独白）
+# textboxarrow 0 0
+@スイハ
+こちらの攻撃は見た目ほど当たって
+いない…紙一重で躱されてる…
+
+;;スイハ（独白）
+# textboxarrow 0 0
+@スイハ
+彼女は何を狙ってる？
+このこと…みんなに伝えた方が
+いいのかな？
+
+;;スイハ（独白）
+# textboxarrow 0 0
+@スイハ
+でも、この勢いを止めるのも
+良くないし…
+
+;;スイハ（独白）
+# face 5401721 "angry"
+# textboxarrow 0 0
+@スイハ
+…だったら、私が前に出て彼女の
+仕掛けを見切る！
+
+# voice 4017 "suiha_im_0029"
+# textboxarrow 0 2
+# textwindow "normal"
+@スイハ
+せやあああ！
+
+;;//スイハが飛び出す
+# textwindow "close"
+# se "SE_9021"
+# leftout 5401721 0.4
+# waitandnext 0.4
+
+# alpha 5401721 0 0
+# move 5302811 3 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 off
+# waitandnext 0.5
+
+# leftout 5302811 0.4
+# waitandnext 0.4
+
+# alpha 5302811 0 0
+# se "SE_9083"
+# fadein "white" 0.5
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# move 5302811 2 0
+# face 5302811 "normal"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 1
+# move 162 4 0
+# alpha 162 1 0.5
+# mask 162 on
+# textwindow "normal"
+@ヘレナ
+おっと…！
+危ない危ない
+…なんてな
+
+# voice 9952 "nir_0005"
+# textboxarrow 0 3
+@ニール
+うふふっ
+ヘレナの狙い通りね
+
+# voice 4017 "suiha_0022"
+# alpha 5302811 0 0.5
+# alpha 162 0 0.5
+# move 5401721 3 0
+# face 5401721 "surprise"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 2
+@スイハ
+なにっ？
+
+;;//画面揺れ
+# se "SE_0918"
+# shake 0 1
+# waitandnext 1
+
+# alpha 5401721 0 0.5
+# move 5502721 3 0
+# face 5502721 "angry"
+# alpha 5502721 1 0.5
+# mask 5502721 off
+# textboxarrow 0 2
+@フライシュッツ
+スイハちゃん、そこから離れてー！
+
+# alpha 5502721 0 0.5
+# move 5401721 3 0
+# face 5401721 "surprise"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 2
+@スイハ
+壁がっ…！？
+
+;;スイハ（独白）
+# move 5401721 3 0
+# face 5401721 "angry"
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 5401721 off
+@スイハ
+しまった…！
+壁が崩れる…
+
+;;スイハ（独白）
+# textboxarrow 0 0
+@スイハ
+しかし…あのくらいの攻撃で崩れる
+ほど柔な作りではないはずなのにっ…
+
+# voice 530281 "herena_di_0004"
+# alpha 5401721 0 0.5
+# move 5302811 2 0
+# face 5302811 "normal"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 1
+# move 162 4 0
+# alpha 162 1 0.5
+# mask 162 on
+# textwindow "normal"
+@ヘレナ
+ふふっ
+それでは、さようなら
+
+# textboxarrow 0 3
+@ニール
+この壁が崩れたら、最上階への道も
+封鎖されて、誰も上には
+上がれなくなるわね
+
+# alpha 5302811 0 0.5
+# alpha 162 0 0.5
+# move 502411 3 0
+# face 502411 "angry"
+# alpha 502411 1 0.5
+# mask 502411 off
+# textboxarrow 0 2
+@雑賀
+逃がさないっすよ！
+
+# alpha 502411 0 0.5
+# move 5302811 2 0
+# face 5302811 "normal"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 1
+# move 162 4 0
+# alpha 162 1 0.5
+# mask 162 on
+@ヘレナ
+ふっ
+ヘレナの速さについてこれるか？
+
+;;//ヘレナとニールが最上階に逃げる
+# textwindow "close"
+# se "SE_9021"
+# sedelay "SE_9021" 0.8
+# alpha 5302811 0 0.5
+# waitandnext 0.8
+
+# alpha 162 0 0.5
+# waitandnext 0.5
+
+# voice 1004 "kusanagi_0037"
+# move 502411 2 0
+# face 502411 "angry"
+# alpha 502411 1 0.5
+# mask 502411 on
+# move 100441 4 0
+# face 100441 "angry"
+# alpha 100441 1 0.5
+# mask 100441 on
+# textboxarrow 0 3
+# textwindow "normal"
+@草薙剣
+おのれっ…！
+あやつら、最上階に逃げおったぞ
+
+# voice 5024 "saika_0037"
+# textboxarrow 0 1
+@雑賀
+くっ…
+間に合わないっす
+
+# alpha 502411 0 0.5
+# alpha 100441 0 0.5
+# move 5401721 3 0
+# face 5401721 "angry"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 2
+@スイハ
+私が何とか…！
+
+# voice 5027 "freischotz_im_0029"
+# alpha 5401721 0 0.5
+# move 5502721 3 0
+# face 5502721 "angry"
+# alpha 5502721 1 0.5
+# mask 5502721 off
+# textboxarrow 0 2
+@フライシュッツ
+はあああああああああ！
+
+;;//フライシュッツが最上階に突っ込む
+# textwindow "close"
+# se "SE_9021"
+# leftout 5502721 0.5
+# waitandnext 0.5
+
+# alpha 5502721 0 0
+# move 5401721 3 0
+# face 5401721 "angry"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 2
+# textwindow "normal"
+@スイハ
+フライシュッツ！？
+無茶です…！
+
+;;//壁が崩れる
+# textwindow "close"
+# alpha 5401721 0 0.5
+# waitandnext 0.5
+
+;;//SE切れない程度のwaitお願いします（サウンドメモ
+# se "SE_0637"
+# shake 0 4.4
+# waitandnext 4.4

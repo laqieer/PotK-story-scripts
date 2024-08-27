@@ -1,0 +1,181 @@
+;;-----------------------------------------
+;;第2話　タイトル：城内突入【2－2戦闘後】
+;;//背景：ラグナロク王国
+;;スクリプトID:100402023
+;;スクリプト最後の背景:201_border
+;;-----------------------------------------
+# script "lisp"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# background "201_border"
+;;アルマス
+# body 3103811
+# pos 3103811 2
+# scale 3103811 0.8 0
+# alpha 3103811 1 0
+# face 3103811 "sad"
+;;ナディア
+# body 136
+# pos 136 4
+# scale 136 0.8 0
+# alpha 136 0 0
+# mask 136 off
+# face 136 "angry"
+;;ティターニア
+# body 139
+# pos 139 4
+# scale 139 0.8 0
+# alpha 139 0 0
+# layer 139 3
+# face 139 "worry"
+;;ギル
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# alpha 137 0 0
+# mask 137 off
+# face 137 "angry"
+;;シユウ
+# body 3201911
+# pos 3201911 4
+# scale 3201911 0.8 0
+# alpha 3201911 1 0
+# layer 3201911 2
+# face 3201911 "happy"
+;;-----------------------------------------
+;;剣閃（アルマス）
+# effectbody 1000 1 0 0 7
+;;剣閃（シユウ）
+# effectbody 2000 2 0 0 1
+;;◆背景：ラグナロク王国-------------------
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1038 "almace_0015"
+@アルマス
+ぐっ…攻撃が、重い…！
+何なの、この威力っ？
+
+# voice 320191 "chihyu_a_0005"
+# textboxarrow 0 3
+@シユウ
+あはははは！
+もっともっといくぞー！！
+たのしいなーっ♪
+
+# move 3201911 3 0.3
+# shake 0 0.5
+# face 3103811 "angry"
+# effectstart 2000
+# textboxarrow 0 1
+@アルマス
+これがカルマキラーズ…だけど、
+私だってぇっ！
+
+;;//アルマスがシユウを押し返す
+# se "SE_9017"
+# effectstart 1000
+# move 3103811 3 0.4
+# rightout 3201911 0.4
+# face 3201911 "surprise"
+# shake 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 3103811 0 0.5
+# alpha 136 1 0.5
+# alpha 3201911 1 0.5
+# leftin 3201911 0.4
+# move 3201911 3 0.4
+# waitandnext 0.5
+
+# textwindow "normal"
+# textboxarrow 0 3
+@ナディア
+あっ…！
+
+# face 3201911 "normal"
+# textboxarrow 0 2
+@シユウ
+何だ！？
+
+# alpha 136 0 0.5
+# alpha 3201911 0 0.5
+# move 3103811 3 0
+# mask 3103811 off
+# alpha 3103811 1 0.5
+# textboxarrow 0 2
+@アルマス
+ナディア、危ない！
+
+;;//シユウがナディアにぶつかる
+# alpha 3103811 0 0.5
+# alpha 136 1 0.5
+# alpha 3201911 1 0.5
+# face 3201911 "happy"
+# textboxarrow 0 2
+@シユウ
+ぶつかっちゃったなー
+おまえ、へいきか？
+…ん？いいにおいがするぞ
+
+# textboxarrow 0 3
+@ナディア
+あ、あのっ…
+私、そんなに匂いますか？
+
+# alpha 136 0 0.5
+# alpha 3201911 0 0.5
+# alpha 137 1 0.5
+# textboxarrow 0 2
+@ギル
+このやろっ！
+ナディア様から離れろよっ
+
+# alpha 137 0 0.5
+# alpha 136 1 0.5
+# alpha 3201911 1 0.5
+# face 3201911 "usual"
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_battle_0001"
+@シユウ
+そこだ！
+
+@シユウ
+おまえ、
+そこにいいものをかくしているな！
+シユウによこせっ
+
+# face 3201911 "angry"
+# voice 320191 "chihyu_a_0029"
+@シユウ
+うがああああ！
+
+# voice 9968 "nadia_0027"
+# textboxarrow 0 3
+@ナディア
+キャアアアア…！
+
+# bgm "stop"
+# alpha 136 0 0.5
+# alpha 3201911 0 0.5
+# alpha 3103811 1 0.5
+# textboxarrow 0 2
+@アルマス
+ナディアー！！
+
+# alpha 3103811 0 0.5
+# alpha 136 1 0.5
+# alpha 3201911 1 0.5
+@シユウ
+みつけたぞ…
+
+# face 3201911 "happy"
+@シユウ
+なんだ、
+このしろくてふわふわしたものは？
+あまくていいにおいがするぞ
+
+# face 136 "normal"
+# voice 9968 "nadia_0004"
+# textboxarrow 0 3
+@ナディア
+それは…マシュマロです

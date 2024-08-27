@@ -1,0 +1,293 @@
+;;-----------------------------------------
+;;SEA_16_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "stop"
+;;-----------------------------------------
+;;ラグナロク
+# body 103611
+# pos 103611 2
+# scale 103611 0.8 0
+# layer 103611 2
+# mask 103611 off
+# alpha 103611 0 0
+;;ミネルヴァ
+# body 302511
+# pos 302511 3
+# scale 302511 0.8 0
+# layer 302511 3
+# mask 302511 off
+# alpha 302511 0 0
+;;エルキュール
+# body 202511
+# pos 202511 3
+# scale 202511 0.8 0
+# layer 202511 3
+# mask 202511 off
+# alpha 202511 0 0
+;;グラーシーザ
+# body 302611
+# pos 302611 3
+# scale 302611 0.8 0
+# layer 302611 3
+# mask 302611 off
+# alpha 302611 0 0
+;;スイハ
+# body 401711
+# pos 401711 3
+# scale 401711 0.8 0
+# layer 401711 3
+# mask 401711 off
+# alpha 401711 0 0
+;;フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.8 0
+# layer 502711 3
+# mask 502711 off
+# alpha 502711 0 0
+;;ダモクレス
+# body 103511
+# pos 103511 3
+# scale 103511 0.8 0
+# layer 103511 2
+# mask 103511 off
+# alpha 103511 0 0
+;;ネス
+# body 602011
+# pos 602011 2
+# scale 602011 0.8 0
+# layer 602011 4
+# alpha 602011 0 0
+;;マサムネ
+# body 100111
+# pos 100111 2
+# scale 100111 0.8 0
+# layer 100111 4
+# alpha 100111 0 0
+;;アルテミス
+# body 400131
+# pos 400131 4
+# scale 400131 0.8 0
+# layer 400131 2
+# mask 400131 off
+# alpha 400131 0 0
+;;レーヴァテイン
+# body 100221
+# pos 100221 4
+# scale 100221 0.8 0
+# layer 100221 4
+# alpha 100221 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 4
+;;-----------------------------------------
+# background "bg_black"
+# textwindow "close"
+# waitandnext 0.2
+
+;;背景：中心部（夕）：in_city_evening
+# background "in_city_evening"
+# bgmfile "bgm405" "BgmIntegralNoahEvent003" 0
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 1001 "masamune_0004"
+# face 100111 "happy"
+# alpha 100111 1 0.3
+# alpha 400131 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@マサムネ
+やった…
+やったぞ
+異族の群れを押し返した！
+
+# voice 4001 "arutemisu_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@アルテミス
+一時はどうなることかと思いましたが
+何とか乗り切りましたね
+
+# voice 1036 "ragnarok_0004"
+# alpha 100111 0 0.3
+# alpha 400131 0 0.3
+# face 103611 "normal"
+# alpha 103611 1 0.3
+# face 100221 "angry"
+# alpha 100221 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+皆、お疲れ様
+よく戦ってくれたわ
+あなた達は真に勇敢なる姫よ
+
+# voice 1002 "revatein_0013"
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+急に出てきて…偉そうに
+言い回しも鬱陶しい…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+レーヴァテイン
+会えて嬉しいわ
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+ついに運命は私達がともに歩む
+ことを認めたのね
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+はぁ…面倒臭い…
+マスター、何とかして
+
+;;選択肢
+# select "こっちに振られても…" "select_label_01" "ラグナロク、お帰り" "select_label_02" "まだ油断できないよ" "select_label_03"
+はぁ…面倒臭い…
+マスター、何とかして
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# voice 1036 "ragnarok_0005"
+# face 103611 "happy"
+# move 103611 3 0.5
+# alpha 100221 0 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+ふふっ
+あなたもレーヴァテインの無茶振りに
+困らされているのね
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# voice 1036 "ragnarok_0032"
+# face 103611 "shy"
+# move 103611 3 0.5
+# alpha 100221 0 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+あ…
+ただいま、マスター
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# voice 1036 "ragnarok_0003"
+# face 103611 "usual"
+# move 103611 3 0.5
+# alpha 100221 0 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+その通りね
+まだ全ての解決には至っていないわ
+
+# label "select_label_end"
+;;エンシェントキラーズが駆け寄ってくる
+# face 103611 "surprise"
+# textflame 1 1
+# textboxarrow 0 0
+@エンシェントキラーズ達
+ラグナロクーっ！！
+
+# alpha 103611 0 0.3
+# waitandnext 1
+
+;;ダモクレス、エルキュール、フライシュッツが急いで駆け寄って
+# face 103511 "happy"
+# alpha 103511 1 0.3
+# waitandnext 1
+
+# se "SE_5575"
+# rightout 103511 0.7
+# waitandnext 1
+
+# move 202511 2 0
+# layer 202511 2
+# face 202511 "happy"
+# alpha 202511 1 0.3
+# move 502711 4 0
+# layer 502711 4
+# mask 502711 on
+# face 502711 "happy"
+# alpha 502711 1 0.3
+# waitandnext 1
+
+# se "SE_5575"
+# sedelay "SE_5575" 0.2
+# rightout 202511 1
+# rightout 502711 1
+# waitandnext 1.5
+
+# alpha 202511 0 0
+# alpha 502711 0 0
+;;グラーシーザ、ネスがそれに続いて
+# move 302611 2 0
+# layer 302611 2
+# face 302611 "happy"
+# alpha 302611 1 0.3
+# move 602011 4 0
+# layer 602011 4
+# mask 602011 on
+# face 602011 "happy"
+# alpha 602011 1 0.3
+# waitandnext 1
+
+# se "SE_5575"
+# sedelay "SE_5575" 0.4
+# rightout 302611 1.3
+# rightout 602011 1.3
+# waitandnext 1.5
+
+# alpha 302611 0 0
+# alpha 602011 0 0
+;;見守りながらミネルヴァ、スイハが続く
+# move 302511 2 0
+# layer 302511 2
+# alpha 302511 1 0.3
+# move 401711 4 0
+# layer 401711 4
+# mask 401711 on
+# face 401711 "happy"
+# alpha 401711 1 0.3
+# waitandnext 1
+
+# se "SE_5575"
+# sedelay "SE_5575" 0.2
+# move 302511 3 0.5
+# alpha 302511 0 0.3
+# move 401711 5 0.5
+# alpha 401711 0 0.3
+# waitandnext 1
+
+;;ラグナロク笑顔になる
+# voice 1036 "ragnarok_0005"
+# face 103611 "happy"
+# alpha 103611 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ラグナロク
+みんな！
+今度こそ胸を張って言えるわ
+ただいま！！
+
+# fadeout "black" 2
+# waitandnext 2

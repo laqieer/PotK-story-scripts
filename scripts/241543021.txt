@@ -1,0 +1,559 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;セブンスサイドストーリー後編
+;;第1話　タイトル：七人の反逆者（１－２）
+;;1_2_1
+;;スクリプト最後の背景：廊下（トレイセーマ矯正施設）
+;;-----------------------------------------
+# script "lisp"
+# background "201_center"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;ヴァナルガンド
+# body 3601111
+# pos 3601111 3
+# scale 3601111 0.8 0
+# layer 3601111 2
+# alpha 3601111 0 0
+# mask 3601111 off
+;;ムラマサ
+# body 3102511
+# pos 3102511 3
+# scale 3102511 0.8 0
+# layer 3102511 2
+# alpha 3102511 0 0
+# mask 3102511 off
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;フォルカス
+# body 3301811
+# pos 3301811 3
+# scale 3301811 0.8 0
+# layer 3301811 2
+# alpha 3301811 0 0
+# mask 3301811 off
+;;アフロディーテ
+# body 3401311
+# pos 3401311 3
+# scale 3401311 0.8 0
+# layer 3401311 2
+# alpha 3401311 0 0
+# mask 3401311 off
+;;ケラウノス
+# body 3500111
+# pos 3500111 3
+# scale 3500111 0.8 0
+# layer 3500111 3
+# alpha 3500111 0 0
+# mask 3500111 off
+;;アルテミス
+# body 3400111
+# pos 3400111 3
+# scale 3400111 0.8 0
+# layer 3400111 2
+# alpha 3400111 0 0
+# mask 3400111 off
+;;アロンダイト
+# body 3100711
+# pos 3100711 3
+# scale 3100711 0.8 0
+# layer 3100711 2
+# alpha 3100711 0 0
+# mask 3100711 off
+;;-----------------------------------------
+;;第1話　タイトル：七人の反逆者（１－２）
+;;//背景：廊下（トレイセーマ矯正施設）
+# move 3102511 3 0
+# face 3102511 "angry"
+# alpha 3102511 1 0
+# mask 3102511 off
+# textflame 1 1
+# textboxarrow 0 2
+@ムラマサ
+あの部屋です
+警備の兵士は見当たらないの
+ですけれど…
+
+# voice 360111 "vanargand_t_0028"
+# alpha 3102511 0 0.5
+# move 3601111 2 0
+# face 3601111 "usual"
+# alpha 3601111 1 0.5
+# mask 3601111 on
+# textboxarrow 0 1
+# move 3301811 4 0
+# face 3301811 "usual"
+# alpha 3301811 1 0.5
+# mask 3301811 on
+@ヴァナルガンド
+魔力の気配を感じますね
+確かに、怪しいです
+
+# textboxarrow 0 3
+@フォルカス
+迂闊に近づけば罠が発動するの
+でしょう
+
+# textboxarrow 0 1
+@ヴァナルガンド
+魔術的な結界なら、
+私の邪眼で解除してみせます
+
+;;//ヴァナルガンドが罠を解除する
+# se "SE_5517"
+# sedelay "SE_0851" 0.8
+# fadein "white" 0.5
+# waitandnext 0.8
+
+# face 3601111 "normal"
+# textboxarrow 0 1
+@ヴァナルガンド
+…これで上手くいったと思うの
+ですけれど
+
+# alpha 3601111 0 0.5
+# alpha 3301811 0 0.5
+# move 3102511 3 0
+# face 3102511 "angry"
+# alpha 3102511 1 0.5
+# mask 3102511 off
+# textboxarrow 0 2
+@ムラマサ
+では、まず拙者が確認して
+まいりますので――
+
+# voice 340131 "aphrodite_a_0004"
+# alpha 3102511 0 0.5
+# move 3401311 3 0
+# face 3401311 "usual"
+# alpha 3401311 1 0.5
+# mask 3401311 off
+# textboxarrow 0 2
+@アフロディーテ
+あらぁ
+そんなに焦らさなくても
+いいのではありません？
+
+;;//アフロディーテが先に進む
+# se "SE_0740"
+# textwindow "close"
+# alpha 3401311 0 0.5
+# waitandnext 0.5
+
+# voice 310251 "muramasa_ge_0012"
+# move 3102511 3 0
+# face 3102511 "angry"
+# alpha 3102511 1 0.5
+# mask 3102511 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ムラマサ
+あ！
+勝手な行動は慎んでくださいっ
+
+# voice 360111 "vanargand_t_0010"
+# alpha 3102511 0 0.5
+# move 3601111 3 0
+# face 3601111 "angry"
+# alpha 3601111 1 0.5
+# mask 3601111 off
+# textboxarrow 0 2
+@ヴァナルガンド
+アフロディーテ！
+群れの規律を乱す行為は許しません
+
+;;//ヴァナルガンドも先に進む
+# se "SE_0740"
+# textwindow "close"
+# alpha 3601111 0 0.5
+# waitandnext 0.5
+
+# move 3102511 3 0
+# face 3102511 "sad"
+# alpha 3102511 1 0.5
+# mask 3102511 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ムラマサ
+あううっ…
+
+# alpha 3102511 0 0.5
+# move 3301811 3 0
+# face 3301811 "angry"
+# alpha 3301811 1 0.5
+# mask 3301811 off
+# textboxarrow 0 2
+@フォルカス
+二人とも何をしているんですかっ
+裁きますよ！
+
+# alpha 3301811 0 0.5
+# move 3401311 3 0
+# face 3401311 "usual"
+# alpha 3401311 1 0.5
+# mask 3401311 off
+# textboxarrow 0 2
+@アフロディーテ
+誰もいませんわよ
+皆さんも早くお入りになって
+
+# voice 330181 "forcas_t_0027"
+# alpha 3401311 0 0.5
+# move 3301811 3 0
+# face 3301811 "usual"
+# alpha 3301811 1 0.5
+# mask 3301811 off
+# textboxarrow 0 2
+@フォルカス
+まったく…
+これだから悪魔に憑かれたキル姫はっ
+
+# alpha 3301811 0 0.5
+# move 3102311 3 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+@アスカロン
+…………
+
+;;アスカロン（独白）
+# voice 310231 "ascalon_a_0028"
+# move 3102311 3 0
+# alpha 3102311 1 0.5
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 3102311 off
+@アスカロン
+悪魔に憑かれたキル姫…
+フォルカスにとっては、
+やっぱり私も…
+
+# voice 310251 "muramasa_ge_0015"
+# alpha 3102311 0 0.5
+# move 3102511 3 0
+# face 3102511 "sad"
+# alpha 3102511 1 0.5
+# mask 3102511 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ムラマサ
+ううっ…
+拙者がもっとしっかりしないと…
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 3102511 0 0
+# move 3102511 2 0
+# face 3102511 "normal"
+# alpha 3102511 1 0
+# mask 3102511 on
+# move 3301811 4 0
+# face 3301811 "usual"
+# alpha 3301811 1 0
+# mask 3301811 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 330181 "forcas_t_0040"
+# textboxarrow 0 3
+# textwindow "normal"
+@フォルカス
+…なるほど
+ウロボロスに関する資料が揃って
+いるようですね
+
+# textboxarrow 0 1
+@ムラマサ
+拙者もこれほどのものは初めて
+見ます
+
+# voice 340131 "aphrodite_a_0039"
+# alpha 3301811 0 0.5
+# move 3401311 4 0
+# face 3401311 "usual"
+# alpha 3401311 1 0.5
+# mask 3401311 on
+# textboxarrow 0 3
+@アフロディーテ
+こんなに綿密に研究されているなんて
+愛を感じますわ！
+
+# alpha 3102511 0 0.5
+# move 3601111 2 0
+# face 3601111 "usual"
+# alpha 3601111 1 0.5
+# mask 3601111 on
+# textboxarrow 0 1
+@ヴァナルガンド
+トレイセーマ国民にとっては
+信仰の対象であるはずなのに…
+少し怖いですね…
+
+# alpha 3401311 0 0.5
+# move 3301811 4 0
+# face 3301811 "usual"
+# alpha 3301811 1 0.5
+# mask 3301811 on
+# textboxarrow 0 3
+@フォルカス
+もしミカエルが同じように研究されて
+いるとしたら…ゾッとします…
+
+# alpha 3601111 0 0.5
+# move 3102311 2 0
+# face 3102311 "surprise"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+@アスカロン
+…あ！
+これじゃないですかっ？
+「ウロボロス計画」ってあります
+
+# textboxarrow 0 3
+@フォルカス
+アスカロン、見せて下さい
+
+# voice 310231 "ascalon_a_0003"
+# face 3102311 "happy"
+# textboxarrow 0 1
+@アスカロン
+はい、どうぞ
+
+# voice 330181 "forcas_t_0028"
+# textboxarrow 0 3
+@フォルカス
+確かに、これは――
+
+;;//トレイセーマのキル姫が現れる
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# alpha 3102311 0 0.5
+# alpha 3301811 0 0.5
+# move 3100711 1 0
+# face 3100711 "angry"
+# alpha 3100711 1 0.5
+# mask 3100711 on
+# move 3500111 3 0
+# face 3500111 "normal"
+# alpha 3500111 1 0.5
+# mask 3500111 on
+# textboxarrow 0 2
+# move 3400111 5 0
+# face 3400111 "usual"
+# alpha 3400111 1 0.5
+# mask 3400111 on
+@ケラウノス
+はい、ダウト～っ
+これで完全に黒だね～
+
+# textboxarrow 0 3
+@アルテミス
+ここは最高議会の方々以外、
+立ち入り禁止ですよ
+
+# voice 340011 "arutemisu_ge_0002"
+# textboxarrow 0 3
+@アルテミス
+ムラマサ、何をしているんです？
+グリモワールが捕らえたという
+キル姫達と一緒に
+
+# voice 310071 "arondaito_ge_0013"
+# textboxarrow 0 1
+@アロンダイト
+おかしいですね
+皆、拘置所にいるはずなのに
+
+# textboxarrow 0 2
+@ケラウノス
+やっぱり…
+怪しいと思ってたんだよね～
+ねえ、ムラマサ？
+
+# alpha 3100711 0 0.5
+# alpha 3500111 0 0.5
+# alpha 3400111 0 0.5
+# move 3102511 3 0
+# face 3102511 "sad"
+# alpha 3102511 1 0.5
+# mask 3102511 off
+# textboxarrow 0 2
+@ムラマサ
+くうっ…
+
+# voice 360111 "vanargand_t_0031"
+# alpha 3102511 0 0.5
+# move 3601111 2 0
+# face 3601111 "usual"
+# alpha 3601111 1 0.5
+# mask 3601111 on
+# textboxarrow 0 1
+# move 3301811 4 0
+# face 3301811 "usual"
+# alpha 3301811 1 0.5
+# mask 3301811 on
+@ヴァナルガンド
+すみません…
+私が罠を解除し損ねていたのかも
+
+# textboxarrow 0 3
+@フォルカス
+気に病むことはありませんよ
+もっと前から疑われていた
+ようですから
+
+# alpha 3601111 0 0.5
+# alpha 3301811 0 0.5
+# move 3100711 1 0
+# face 3100711 "sad"
+# alpha 3100711 1 0.5
+# mask 3100711 on
+# textboxarrow 0 1
+# move 3500111 3 0
+# face 3500111 "normal"
+# alpha 3500111 1 0.5
+# mask 3500111 on
+# move 3400111 5 0
+# face 3400111 "usual"
+# alpha 3400111 1 0.5
+# mask 3400111 on
+@アロンダイト
+ええ…
+仲間を疑うなど、義に悖ると思って
+いたのですけれど…
+
+# voice 350011 "keraunosu_ge_0002"
+# textboxarrow 0 2
+@ケラウノス
+念のため、見張っておいて
+良かったでしょ
+
+# face 3400111 "normal"
+# textboxarrow 0 3
+@アルテミス
+残念です、ムラマサ
+そして恐らく、グリモワールも…
+
+# voice 310071 "arondaito_ge_0027"
+# textboxarrow 0 1
+@アロンダイト
+トレイセーマを裏切ったということ
+なのでしょうね
+
+# voice 350011 "keraunosu_ge_0027"
+# face 3500111 "sad"
+# textboxarrow 0 2
+@ケラウノス
+あーあ…
+ムラマサはひたむきで可愛くて…
+好みだったのにな～…
+
+# voice 350011 "keraunosu_ge_0010"
+# face 3500111 "angry"
+# textboxarrow 0 2
+@ケラウノス
+裏切るなんて…裏切るなんて…
+許しておけねぇなァ！！
+
+# se "SE_5208"
+# waitandnext 0.5
+
+# voice 310231 "ascalon_a_0022"
+# alpha 3100711 0 0.5
+# alpha 3500111 0 0.5
+# alpha 3400111 0 0.5
+# move 3102311 3 0
+# face 3102311 "surprise"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+@アスカロン
+えっ…？
+ケラウノスの雰囲気が変わりました…
+
+# voice 340131 "aphrodite_a_0028"
+# alpha 3102311 0 0.5
+# move 3401311 3 0
+# face 3401311 "sad"
+# alpha 3401311 1 0.5
+# mask 3401311 off
+# textboxarrow 0 2
+@アフロディーテ
+あらあら
+困りましたねぇ
+
+# alpha 3401311 0 0.5
+# move 3601111 2 0
+# face 3601111 "angry"
+# alpha 3601111 1 0.5
+# mask 3601111 on
+# textboxarrow 0 1
+# move 3301811 4 0
+# face 3301811 "usual"
+# alpha 3301811 1 0.5
+# mask 3301811 on
+@ヴァナルガンド
+相手は三人
+数ではこちらが勝っています
+こうなったら押し切りましょう
+
+# face 3301811 "angry"
+# textboxarrow 0 3
+@フォルカス
+そうですね！
+申し訳ないのですけれど、
+そこを通していただきます
+
+# alpha 3601111 0 0.5
+# alpha 3301811 0 0.5
+# move 3400111 3 0
+# face 3400111 "usual"
+# alpha 3400111 1 0.5
+# mask 3400111 off
+# textboxarrow 0 2
+@アルテミス
+そんな無法が通ると思うのですか？
+あなた達には…
+
+# se "SE_4300"
+# voice 340011 "arutemisu_ge_unit_0010"
+# face 3400111 "angry"
+# textboxarrow 0 2
+@アルテミス
+制裁を下してやるっ！
+息をする暇もないと思えっ！
+
+# voice 330181 "forcas_t_0023"
+# alpha 3400111 0 0.5
+# move 3301811 3 0
+# face 3301811 "surprise"
+# alpha 3301811 1 0.5
+# mask 3301811 off
+# textboxarrow 0 2
+@フォルカス
+…………！？
+
+# move 3301811 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 3301811 off
+@フォルカス
+（何ですか、今の直感は…？
+私達が…負ける？）
+
+# face 3301811 "angry"
+# textboxarrow 0 0
+@フォルカス
+（いいえ！
+そんなはずがありませんっ）

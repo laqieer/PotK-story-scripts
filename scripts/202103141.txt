@@ -1,0 +1,653 @@
+;;-----------------------------------------
+;;SEA5章_14-1
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm473_block" "BgmIntegralNoahEvent009" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;ミネルヴァ
+# body 302511
+# pos 302511 4
+# scale 302511 0.8 0
+# layer 302511 3
+# alpha 302511 0 0
+# body 3302511
+# pos 3302511 4
+# scale 3302511 0.8 0
+# layer 3302511 4
+# alpha 3302511 0 0
+;;フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.8 0
+# layer 502711 3
+# mask 502711 off
+# alpha 502711 0 0
+# body 3502711
+# pos 3502711 5
+# scale 3502711 0.8 0
+# layer 3502711 3
+# alpha 3502711 0 0
+;;ダモクレス
+# body 103511
+# pos 103511 3
+# scale 103511 0.8 0
+# layer 103511 3
+# mask 103511 off
+# alpha 103511 0 0
+# body 3103511
+# pos 3103511 3
+# scale 3103511 0.8 0
+# layer 3103511 3
+# mask 3103511 off
+# alpha 3103511 0 0
+;;グラーシーザ
+# body 302611
+# pos 302611 2
+# scale 302611 0.8 0
+# layer 302611 2
+# alpha 302611 0 0
+# body 3302611
+# pos 3302611 1
+# scale 3302611 0.8 0
+# layer 3302611 3
+# alpha 3302611 0 0
+;;ネス
+# body 602011
+# pos 602011 3
+# scale 602011 0.8 0
+# layer 602011 3
+# mask 602011 off
+# alpha 602011 0 0
+# body 3602011
+# pos 3602011 3
+# scale 3602011 0.8 0
+# layer 3602011 3
+# mask 3602011 off
+# alpha 3602011 0 0
+;;神令エルキュール
+# body 3202511
+# pos 3202511 2
+# scale 3202511 0.8 0
+# layer 3202511 2
+# alpha 3202511 0 0
+;;神令スイハ
+# body 3401711
+# pos 3401711 3
+# scale 3401711 0.8 0
+# layer 3401711 3
+# mask 3401711 off
+# alpha 3401711 0 0
+;;ラグナロクシルエット
+# body 3103611
+# pos 3103611 4
+# scale 3103611 0.8 0
+# layer 3103611 1
+# mask 3103611 off
+# alpha 3103611 0 0
+# brightness 3103611 0 0
+;;終焉シルエット
+# body 806164
+# pos 806164 3
+# scale 806164 0.8 0
+# layer 806164 1
+# mask 806164 off
+# alpha 806164 0 0
+# brightness 806164 0 0
+;;魔獣
+# body 910013
+# pos 910013 2
+# scale 910013 0.8 0
+# layer 910013 2
+# alpha 910013 0 0
+# reversal 910013 0
+# body 920014
+# pos 920014 4
+# scale 920014 0.8 0
+# layer 920014 4
+# alpha 920014 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：黒
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# face 270 "sad"
+# alpha 270 1 1
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+…………
+
+# face 270 "normal"
+# textboxarrow 0 2
+@ミーミル
+…あ
+
+# textboxarrow 0 2
+@ミーミル
+私は…地面の崩落に巻き込まれて…
+気を失っていたのでしょうか…？
+
+# textboxarrow 0 2
+@ミーミル
+ここは…？
+マスター様はご無事で…
+
+;;ラグナロクの旗が画面端に
+# se "SE_0930"
+# textboxarrow 0 0
+# waitandnext 1.5
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 2
+@ミーミル
+あっ！
+あれは…旗…？
+ハタハタと…ああっ
+
+;;ミーミルがふらふらと旗に近づいていく
+# se "SE_5006"
+# sedelay "SE_5007" 0.8
+# move 270 5 2
+# textboxarrow 0 0
+# waitandnext 3
+
+# face 270 "sad"
+# textboxarrow 0 3
+@ミーミル
+マスター様を探さなければ
+なりませんのに…
+抗えませんっ
+
+;;ミーミルが立ち去る
+# se "SE_0740"
+# scale 270 0.75 0.5
+# alpha 270 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 0.5
+
+;;背景：ラグナロクの間（ロスラグ編）
+# background "abyss_room"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# scale 270 0.8 0.5
+# move 270 3 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+旗を追って歩いてきましたが、
+ここはどこでしょう？
+
+;;神令ラグナロクのシルエットがいる
+# alpha 3103611 1 0.5
+# move 270 2 0.5
+# textboxarrow 0 1
+@ミーミル
+あちらにいらっしゃるのは…
+
+;;画面が真っ白になり場面が変わる
+;;背景：町（ロスラグ編の地上世界）
+# fadein "white" 2
+# background "101_hole"
+# alpha 3103611 0 0
+# alpha 270 0 0
+# textwindow "close"
+# waitandnext 2
+
+# voice 9917 "mimir_navikan_0022"
+# move 270 3 0
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+えっ？
+先程とは全く違う風景に変わりました
+今度はどこに…
+
+# alpha 270 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;神令ラグナロクのシルエットがいる
+# move 3103611 3 0
+# alpha 3103611 1 0.5
+# textboxarrow 0 2
+# textwindow "normal"
+@？？？
+…………
+
+;;神令エンシェント達がいる
+# alpha 3103611 0 0.5
+# face 3202511 "usual"
+# alpha 3202511 1 0.3
+# voice 330251 "minerva_c_0004"
+# face 3302511 "happy"
+# alpha 3302511 1 0.3
+# textboxarrow 0 3
+@ミネルヴァ
+この町も静かになりました
+私の計算通り
+完全勝利です
+
+# textboxarrow 0 1
+@エルキュール
+喜んでいる暇なんてありません
+早く先に進まなくては
+
+# face 3302511 "usual"
+# textboxarrow 0 3
+@ミネルヴァ
+バイブス所持者を見つけ出すのも
+難しくなってきましたね
+
+# textboxarrow 0 3
+@ミネルヴァ
+もちろん、逃がしはしませんけれど
+ねぇ、ニケ？
+
+# alpha 3202511 0 0.3
+# alpha 3302511 0 0.3
+# voice 310351 "damocles_c_0003"
+# face 3103511 "normal"
+# alpha 3103511 1 0.3
+# textboxarrow 0 2
+@ダモクレス
+クレス様、
+今日もたくさん愛してあげたよ
+
+# textboxarrow 0 2
+@ダモクレス
+他人と争いたがる人達は、
+一人残らずクレス様が
+愛してあげるんだっ
+
+# alpha 3103511 0 0.3
+# voice 320251 "hercule_c_0004"
+# move 3202511 3 0
+# mask 3202511 off
+# face 3202511 "normal"
+# alpha 3202511 1 0.3
+# textboxarrow 0 2
+@エルキュール
+やっと…戦いが、争いが、
+この世界からなくなりますね
+
+# textboxarrow 0 2
+@エルキュール
+世界の救済まであと少し
+私は決して歩みを止めません
+
+# textboxarrow 0 2
+@エルキュール
+この世界からバイブスを、共鳴を、
+完全に消し去ります！
+
+# textboxarrow 0 2
+@エルキュール
+みんなが笑って暮らせる世界のために
+そのためにはこの身が朽ち果てても
+構いません
+
+# textboxarrow 0 2
+@エルキュール
+どこまでも、突き進みます！
+
+# alpha 3202511 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# face 270 "sad"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+皆さん、あのお姿は…
+この光景は、もしかして…
+
+;;画面が真っ白になり場面が変わる
+;;背景：宇宙
+# fadein "white" 2
+# background "in_perspective"
+# alpha 270 0 0
+# textwindow "close"
+# waitandnext 2
+
+;;神令エンシェントが戦っている
+;;終焉のシルエットを神令エンシェントが攻撃している
+# alpha 806164 1 0.5
+# waitandnext 1
+
+# voice 350271 "freischotz_c_0004"
+# face 3502711 "happy"
+# alpha 3502711 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@フライシュッツ
+ふふっ
+見えてるよ
+
+# voice 330261 "grayside_c_battle_0004"
+# face 3302611 "normal"
+# alpha 3302611 1 0.3
+# textboxarrow 0 1
+@グラーシーザ
+しゅくせいしてやろう！
+
+# alpha 806164 0 0.3
+# alpha 3502711 0 0.3
+# alpha 3302611 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+また風景が変わりました…！
+フライシュッツさん達が誰かと
+戦っています
+
+# face 270 "sad"
+# textboxarrow 0 2
+@ミーミル
+もしかして…
+この光景はティルフィング様が以前、
+仰っていた「前世」の記憶…
+
+# voice 9917 "mimir_navikan_0040"
+# textboxarrow 0 2
+@ミーミル
+私はそれを見ているのですね
+でも、どうして？
+
+;;神令ラグナロクのシルエットがいる
+#setnextbgmblock 1
+# alpha 270 0 0.3
+# alpha 3103611 1 0.5
+# textwindow "close"
+# waitandnext 3
+
+# face 270 "surprise"
+# alpha 270 1 0.3
+# alpha 3103611 0 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+あっ
+あそこにまた…
+
+# face 270 "normal"
+# textboxarrow 0 2
+@ミーミル
+…………
+
+# textboxarrow 0 2
+@ミーミル
+あの方が、エルキュールさんや
+スイハさんが言っていた
+“彼女”でしょうか…
+
+# textboxarrow 0 2
+@ミーミル
+他の方々ははっきり見えるのに、
+あの方だけはぼんやりしています
+
+# textboxarrow 0 2
+@ミーミル
+でも、私は“彼女”を
+知っているような…
+
+# textboxarrow 0 2
+@ミーミル
+もっと側で…“彼女”に触れることが
+できたならっ
+
+;;神令ラグナロクのシルエットが一瞬、神令ラグナロクになる
+# alpha 270 0 0.3
+# face 3103611 "normal"
+# alpha 3103611 1 0.5
+# textwindow "close"
+# waitandnext 1
+
+# brightness 3103611 1 0.2
+# waitandnext 0.2
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# alpha 270 1 0.3
+# brightness 3103611 0 0.2
+# alpha 3103611 0 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+あっ！
+“彼女”は…
+
+# textboxarrow 0 2
+@ミーミル
+―――――！
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：地下空洞
+# background "101_cave"
+# bgm "stop"
+# alpha 270 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 9917 "mimir_navikan_0037"
+# move 270 2 0
+# face 270 "sad"
+# alpha 270 1 0.3
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+うぅっ…
+あ…
+
+# voice 3025 "minerva_0004"
+# face 302511 "normal"
+# textboxarrow 0 3
+@ミネルヴァ
+ミーミル！
+良かった
+意識が戻ったのですね
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+ミネルヴァさん…
+マスター様は…？
+
+;;選択肢
+# select "ここだよ" "select_label_01" "大丈夫かい？" "select_label_01"
+マスター様は…？
+
+# label "select_label_01"
+# voice 9917 "mimir_navikan_0004"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+マスター様…
+ご無事なようでホッとしました
+
+# bgm "bgm005" 0
+# face 302511 "angry"
+# textboxarrow 0 3
+@ミネルヴァ
+起きたばかりで申し訳ないのですけど
+動けますか、ミーミル？
+
+# textboxarrow 0 3
+@ミネルヴァ
+早くここから脱出しないと
+まずい状況なんです
+
+# voice 9917 "mimir_navikan_0003"
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+私は大丈夫です
+何が起きているのでしょう？
+
+# voice 3025 "minerva_0003"
+# textboxarrow 0 3
+@ミネルヴァ
+そっと向こうを覗いて下さい
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+はい
+失礼致します
+…ええっ？
+
+# alpha 270 0 0.3
+# alpha 302511 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;魔獣の群れがうろうろしている
+# alpha 910013 1 0.5
+# waitandnext 0.2
+
+# alpha 920014 1 0.5
+# waitandnext 2.3
+
+# alpha 910013 0 0.5
+# alpha 920014 0 0.5
+# waitandnext 1
+
+# face 270 "angry"
+# alpha 270 1 0.3
+# face 302511 "sad"
+# alpha 302511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+おびただしい数の魔獣がいます
+それに、あの大きな穴は
+何なのですか？
+
+# textboxarrow 0 3
+@ミネルヴァ
+細かい説明は後回しにしますが、
+あの中から“彼女”と大量のマナが
+あふれ出てきたんです
+
+# textboxarrow 0 3
+@ミネルヴァ
+マナは魔獣へと姿を変えました
+このままだと地上に出てしまいます
+
+# textboxarrow 0 3
+@ミネルヴァ
+早く何とかしないと
+いけないのですが…
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+他のキル姫さん達はどちらに？
+
+# textboxarrow 0 3
+@ミネルヴァ
+あそこです…
+
+# voice 9917 "mimir_navikan_0024"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+皆さん…！？
+
+# textboxarrow 0 3
+@ミネルヴァ
+大量のマナにあてられて
+急激に「揺らいで」しまったんです
+
+# textboxarrow 0 3
+@ミネルヴァ
+強い負荷に耐えきれず、
+意識を失っています…
+
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+それでは…
+
+# alpha 270 0 0.3
+# alpha 302511 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# bgm "bgm023_024" 0
+# se "SE_0792"
+# move 910013 3 0.5
+# alpha 910013 1 0.3
+# mask 910013 off
+# textwindow "toge"
+# textboxarrow 0 2
+@魔獣
+ガアアアアアアアアアアア！
+
+# alpha 910013 0 0.3
+# move 302511 3 0
+# mask 302511 off
+# face 302511 "angry"
+# alpha 302511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミネルヴァ
+気づかれてしまいました
+皆さん、走って下さい！
+
+;;バトル
+;;マップ：木の洞窟・闇（567）
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 302511 0 0
+# waitandnext 0.2

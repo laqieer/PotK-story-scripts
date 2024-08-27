@@ -1,0 +1,435 @@
+;;----------------------------------------------
+;;100211023
+;;第1-2話後半　タイトル：チーキー・プリズナー
+;;----------------------------------------------
+# script "lisp"
+# background "300_devil_daytime03"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;ムー
+# body 161
+# pos 161 4
+# scale 161 0.6 0
+# layer 161 5
+# mask 161 on
+# alpha 161 1 0
+;;レーヴァ
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# layer 3100211 4
+# mask 3100211 on
+# alpha 3100211 1 0
+;;ヘレナ
+# body 3302811
+# pos 3302811 4
+# scale 3302811 0.8 0
+# layer 3302811 5
+# mask 3302811 on
+# alpha 3302811 0 0
+;;ケイオス兵１
+# body 3820001
+# pos 3820001 1
+# scale 3820001 0.8 0
+# layer 3820001 1
+# mask 3820001 on
+# alpha 3820001 0 0
+;;ケイオス兵２
+# entry 938200019 3820001
+# pos 938200019 3
+# scale 938200019 0.8 0
+# mask 938200019 on
+# layer 938200019 2
+# alpha 938200019 0 0
+;;ケイオス兵３
+# entry 938200018 3820001
+# pos 938200018 5
+# scale 938200018 0.8 0
+# mask 938200018 on
+# layer 938200018 3
+# alpha 938200018 0 0
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;剣閃エフェクト１（レーヴァ）
+# effectbody 2000 1 100 0 5
+;;剣閃エフェクト２（レーヴァ）
+# effectbody 2001 3 150 0 5
+;;剣閃エフェクト３（ヘレナ）
+# effectbody 2002 4 -50 0 1
+;;◆ケイオスリオン１--------------------------------------
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0001"
+# chara 161
+@ムー
+追っ手もあっけなく振り切って
+ケイオスリオンに入っちまったなあ
+あーあ、マサムネ可愛かったのに
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 161
+@ムー
+すんげぇ悲しそうな顔してたぞ
+霊装支配されてても、理由を話したら
+味方になってくれたんじゃねぇか？
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 161
+@ムー
+他にも強そうな斬ル姫はいたのに
+自分一人で飛び出しちまって、
+レヴァは背負い込み過ぎだぜ
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0004"
+# chara 161
+@ムー
+ま！俺とレヴァが最強であることは
+間違いねぇし、足手まといだから
+連れていかなかったってんなら――
+
+# move 3100211 4 0.3
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100211 "angry"
+# voice 310021 "revatein_ge_0085"
+# chara 3100211
+@レーヴァテイン
+黙って
+
+;;ムギュ
+# se "SE_0694"
+# shake 0 0.6
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0025"
+# chara 161
+@ムー
+ムギュギュギュギュッ…
+なんだよ…ご機嫌斜めかよ…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100211 "normal"
+# voice 310021 "revatein_ge_0013"
+# chara 3100211
+@レーヴァテイン
+違う…悪魔人達よ
+なにかやってるわ
+
+;;◆兵士オラオラ------------------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# alpha 161 0 0
+# alpha 3100211 0 0
+# alpha 3820001 1 0
+# alpha 938200019 1 0
+# alpha 938200018 1 0
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 0
+# voice 382000 "demon_0005"
+@ケイオスリオン兵
+どうした、どうした？
+その程度か、イミテーションども
+
+# textflame 1 1
+# textboxarrow 0 0
+@ケイオスリオン兵
+オラオラ、かかってこいよ！
+許さないんじゃなかったのかぁ？
+
+# brightness 3820001 0.6 0.3
+# brightness 938200019 0.6 0.3
+# brightness 938200018 0.6 0.3
+# serif 1
+# textboxarrow 1 0
+# textwindow "normal"
+@男
+くそぉっ…てめえらなんか…
+
+;;ケイオスリオン兵が男性を殴り倒す
+# se "SE_4602"
+# shake 0 0.6
+# fadein "white" 0.6
+# serif 1
+# textboxarrow 1 0
+@男
+ぐは！？
+
+# brightness 3820001 1.0 0.3
+# brightness 938200019 1.0 0.3
+# brightness 938200018 1.0 0.3
+# serif 0
+# textflame 1 1
+# textboxarrow 0 0
+# voice 382000 "demon_0001"
+@ケイオスリオン兵
+イミテーションごときが人間様に
+楯突いてんじゃねえよ
+この雑魚がっ
+
+# serif 0
+# textflame 1 1
+# textboxarrow 0 0
+@ケイオスリオン兵
+力のない奴は力ある者に従う
+それが正義だ
+つまり…
+
+# serif 0
+# textflame 1 1
+# textboxarrow 0 0
+# voice 382000 "demon_0006"
+@ケイオスリオン兵
+力のないイミテーションどもは
+奴隷として扱われるのが正しいんだよ
+分かったか、この雑魚！
+
+# brightness 3820001 0.6 0.3
+# brightness 938200019 0.6 0.3
+# brightness 938200018 0.6 0.3
+# serif 1
+# textboxarrow 1 0
+@男
+ううう…ちくしょう…
+
+;;◆ケイオスリオン２--------------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "bottom_close"
+# textwindow "top_close"
+# waitandnext 0.6
+
+# brightness 3820001 1.0 0
+# brightness 938200019 1.0 0
+# alpha 3820001 0 0
+# alpha 938200019 0 0
+# alpha 938200018 0 0
+# pos 3100211 3
+# alpha 3100211 1 0
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 310021 "revatein_ge_0027"
+# chara 3100211
+@レーヴァテイン
+ずいぶんと楽しそうね…
+
+# textwindow "close"
+# move 3100211 1 0.5
+# pos 3820001 5
+# pos 938200019 3
+# alpha 3820001 1 0.5
+# alpha 938200019 1 0.5
+# rightin 3820001 0.5
+# rightin 938200019 0.5
+# waitandnext 0.8
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 382000 "demon_0002"
+# chara 3820001
+@ケイオスリオン兵
+誰だ！？
+…なんだ斬ル姫かよ
+ビックリさせるんじゃ…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3820001
+@ケイオスリオン兵
+いや待て！
+こいつトレイセーマの斬ル姫だ！
+なんでこんなところに――
+
+;;レーヴァテインが兵士達を切り捨てる
+# bgm "stop"
+# voice 310021 "revatein_ge_battle_0001"
+# textwindow "close"
+# effectstart 2000
+# voice 382000 "demon_0038"
+# se "SE_4830"
+# subfillrect 1 "red" 0.5 0.8 0
+# effectbody 2000 4 10 0 5
+# effectstart 2000
+# shake 0 0.6
+# waitandnext 0.5
+
+;;敵消滅
+# se "SE_3001"
+# alpha 938200019 0 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm295" "BgmLostRagnarokBattle003" 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "angry"
+# voice 310021 "revatein_ge_0014"
+# chara 3100211
+@レーヴァテイン
+悪魔に支配された人間…あなた達こそ
+イミテーションよ…
+
+# alpha 3100211 0 0.3
+# pos 161 1
+# alpha 161 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0005"
+# chara 161
+@ムー
+ははは！
+さすがレヴァだぜ！
+剣筋に迷いがねぇっ
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 161
+@ムー
+そこの悪魔人達、
+まとめて片付けちまうかっ？
+俺は準備万端だぞ
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0029"
+# chara 161
+@ムー
+最大最強の幻獣バハムート様の
+実力を見せつけてやる！
+いっくぜええええ！！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 382000 "demon_0024"
+# chara 3820001
+@ケイオスリオン兵
+まずいぞっ…！
+急いであいつを呼べ！
+ヘレナを、早くっ！
+
+# se "SE_5205"
+# alpha 3100211 1 0.3
+# alpha 161 0 0.3
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310021 "revatein_ge_0010"
+# chara 3100211
+@レーヴァテイン
+そんな暇は…与えない
+
+# voice 310021 "revatein_ge_0029"
+# move 3100211 3 0.3
+# textwindow "close"
+# alpha 161 0 0.5
+# se "SE_4830"
+# subfillrect 1 "red" 0.5 0.8 0
+# effectstart 2001
+# shake 0 0.6
+# waitandnext 0.8
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 382000 "demon_0025"
+# chara 3820001
+@ケイオスリオン兵
+ギャアアアアアアアア…！
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3820001
+@ケイオスリオン兵
+た…助けてぇっ…
+
+;;敵消滅
+# textwindow "close"
+# se "SE_3001"
+# alpha 3820001 0 0.5
+# waitandnext 0.8
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100211 "normal"
+# voice 310021 "revatein_ge_0004"
+# chara 3100211
+@レーヴァテイン
+力なき者は力ある者に従う…
+それがあなた達の正義なんでしょ？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3100211
+@レーヴァテイン
+だったら…自分達が踏みにじられる
+側になることも…受け入れるべきね
+
+;;ヘレナの攻撃をレーヴァテインが受け流す
+# textwindow "close"
+# voice 3028 "herena_a_battle_0002"
+# move 3100211 2 0.5
+# se "SE_5205"
+# face 3100211 "surprise"
+# effectstart 2002
+# shake 0 0.6
+;;ヘレナ登場
+# alpha 3302811 1 0.5
+# rightin 3302811 0.5
+# waitandnext 0.5
+
+# se "SE_4818"
+# shake 1 0.2
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "surprise"
+# voice 3028 "herena_a_0022"
+# chara 3302811
+@ヘレナ
+あれっ？
+良い感じに死角を突いたと思ったん
+だけど…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "normal"
+# voice 3028 "herena_a_0020"
+# chara 3302811
+@ヘレナ
+お姉さん、けっこうやるねぇ
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "angry"
+# voice 310021 "revatein_ge_0007"
+# chara 3100211
+@レーヴァテイン
+あなた、ケイオスリオンの斬ル姫ね…

@@ -1,0 +1,445 @@
+;;-----------------------------------------
+;;SEA2章_15_0
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm602_1" "BgmSecretlyEverAfter002" 0
+;;-----------------------------------------
+;;イシューリエル（否）
+# body 301421
+# pos 301421 4
+# scale 301421 0.8 0
+# layer 301421 2
+# mask 301421 off
+# alpha 301421 0 0
+;;イシューリエル（肯）
+# entry 301499 301421
+# pos 301499 2
+# scale 301499 0.8 0
+# layer 301499 4
+# alpha 301499 0 0
+# brightness 301499 0.8 0
+;;SEAイシューリエル（肯）
+# body 6301411
+# pos 6301411 3
+# scale 6301411 0.8 0
+# layer 6301411 2
+# mask 6301411 off
+# alpha 6301411 0 0
+# brightness 6301411 0.8 0
+;;ghost
+# body 302
+# pos 302 5
+# scale 302 0.8 0
+# layer 302 1
+# mask 302 off
+# alpha 302 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+# imageset 1 "bg_black"
+# imagealpha 1 0 0
+# imagescale 1 2 0
+# imagelayer 1 5
+# imageset 2 "bg_white_circle"
+# imagealpha 2 0 0
+# imagescale 2 1.3 0
+# imagelayer 2 4
+;;-----------------------------------------
+;;背景：室内
+# textwindow "close"
+# waitandnext 0.2
+
+;;以下、回想
+# background "office_room"
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# imagealpha 2 0.7 0
+# imagepos 2 0 0
+# waitandnext 0.3
+
+# se "SE_0742"
+# imagealpha 1 0 1
+# face 301499 "angry"
+# alpha 301499 1 0
+# face 301421 "angry"
+# alpha 301421 1 0
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@イシューリエル
+ああ、もう！
+何て頑固者なんですの！
+
+# voice 3014 "ithuriel_0009"
+# textboxarrow 0 3
+@イシューリエル
+あなたこそ、
+オカルトに傾倒するなんて
+間違ってますわ！
+
+# textboxarrow 0 1
+@イシューリエル
+傾倒しているのではありません
+十分な検証の結果、得られた真実です
+
+# textboxarrow 0 3
+@イシューリエル
+検証は不十分ですわ
+証明は為されていません
+
+# textboxarrow 0 1
+@イシューリエル
+そうですか
+分かりました
+でしたら…
+
+# se "SE_0613"
+# face 301499 "normal"
+# textboxarrow 0 1
+@イシューリエル
+わたくしが証明して差し上げますわ
+ぐうの音も出ないほど確かな証拠を
+突きつけてみせます
+
+# se "SE_0613"
+# face 301421 "normal"
+# textboxarrow 0 3
+@イシューリエル
+いいでしょう
+どのようなオカルトを見せられても
+全て看破して差し上げますわ
+
+# textboxarrow 0 1
+@イシューリエル
+その言葉、
+お忘れにならないで下さいね
+
+# textboxarrow 0 3
+@イシューリエル
+あなたこそ、雑なオカルトを
+持ってこないで下さいね
+
+# face 301499 "angry"
+# face 301421 "angry"
+# textboxarrow 0 0
+@イシューリエルたち
+フン！
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：町
+# background "in_downtown"
+# move 301421 3 0
+# face 301421 "angry"
+# mask 301421 off
+# alpha 301499 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@イシューリエル
+もっともっと厳しく
+心霊現象を
+否定しなければなりませんね
+
+# textboxarrow 0 2
+@イシューリエル
+全ての心霊現象はインチキ
+そのことを証明するために！
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：町（夜）
+# background "in_downtown_night"
+# alpha 301421 0 0
+# waitandnext 0.2
+
+;;ここからSEA編イシューリエルに切り替え
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# textboxarrow 0 2
+# textwindow "normal"
+@イシューリエル
+わたくしに心霊現象の存在を認め
+させるには、生半可な証拠では
+不可能でしょう
+
+# textboxarrow 0 2
+@イシューリエル
+どんなに否定したくても否定できない
+圧倒的な証拠を見せつけなくては
+
+# face 6301411 "surprise"
+# textboxarrow 0 2
+@イシューリエル
+そうですね…あら？
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：廃病院の正門（夜）
+# background "schoolgate_night"
+# face 6301411 "normal"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@イシューリエル
+この病院…
+何かの「気配」を感じますわ
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：中庭（夜）
+# background "courtyard_night"
+# face 6301411 "usual"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 3014 "ithuriel_kyara_1021"
+# textwindow "nomal"
+# textboxarrow 0 2
+@イシューリエル
+ふむ…
+なかなかのロケーションですわね
+
+# textboxarrow 0 2
+@イシューリエル
+まず「噂」を作りましょう
+心霊現象は常に人々の心の中から
+生じているようですから
+
+# textboxarrow 0 2
+@イシューリエル
+まずは…
+
+# se "SE_0902"
+# serif 1
+@学生１
+えーっ…
+本当に入るのーっ？
+
+# serif 1
+@学生２
+余裕だって
+行こうぜー
+
+# serif 1
+@学生達
+ワイワイ…ガヤガヤ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 6301411 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 2
+@イシューリエル
+あら？
+玄関の方が騒々しいですわね
+あれは…学生達ですの？
+
+# face 6301411 "usual"
+# textboxarrow 0 2
+なるほど
+肝試しに来たんですわね
+これは好都合ですわ
+
+# textboxarrow 0 2
+あの学生達が幽霊の噂を
+広めてくれれば…
+
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：町
+# background "in_downtown"
+# alpha 6301411 0 0
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_0970"
+# serif 1
+@学生達
+本当だって…！
+見たんだよっ…
+廃病院でっ…
+
+# serif 1
+@学生達
+眼球を寄越せって…
+廊下を追いかけ回されたの…！
+
+# alpha 302 0.5 0.6
+# serif 1
+# textwindow "close"
+# waitandnext 0.6
+
+;;画面を幽霊が飛び交う
+# se "SE_11585"
+# move 302 1 1.2
+# alpha 302 0 1.2
+# waitandnext 1.5
+
+# voice 3014 "ithuriel_0004"
+# face 6301411 "usual"
+# alpha 6301411 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@イシューリエル
+第一段階は
+上手くいったようですね
+噂が町中に広まっていきます
+
+# textboxarrow 0 2
+@イシューリエル
+幽霊役、どなたか役者を手配する
+必要がありますわね
+
+# textboxarrow 0 2
+@イシューリエル
+あとは最新技術を駆使して
+人体模型と骨格標本のドローンを…
+
+# alpha 302 0.5 0.6
+# textboxarrow 0 0
+# waitandnext 0.6
+
+;;画面を幽霊が飛び交う
+# se "SE_11585"
+# move 302 1 1.2
+# alpha 302 0 1.2
+# waitandnext 1.5
+
+# se "SE_0902"
+# serif 1
+@町人１
+うわあっ！？
+今、何か通り過ぎたような…
+
+# serif 1
+@町人２
+きゃっ…！
+鏡に…何か映ってた…
+
+# se "SE_0970"
+# serif 1
+@町人３
+ぎゃああああ…！？
+井戸から髪の長い女が…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 6301411 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 2
+@イシューリエル
+…廃病院だけでなく、町中にも
+幽霊が現れているようですけど
+
+# textboxarrow 0 2
+@イシューリエル
+おかしいですわね
+わたくしの細工は
+廃病院にのみ施してあるのに…
+
+# textboxarrow 0 2
+@イシューリエル
+あれは本物？
+それとも偽物？
+
+# alpha 6301411 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 302 0.5 0.6
+# waitandnext 0.6
+
+;;画面を幽霊が飛び交う
+# se "SE_11585"
+# move 302 1 1.2
+# alpha 302 0 1.2
+# waitandnext 1.5
+
+# se "SE_0970"
+# serif 1
+@町人達
+わああああ…！？
+きゃああああ…！？
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：中庭
+# background "courtyard"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@イシューリエル
+どちらにしろ、わたくしが
+やることは一つです
+
+# move 6301411 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+@イシューリエル
+オカルトを否定するわたくしは、
+必ずここにやって来ます
+
+# face 6301411 "usual"
+@イシューリエル
+そこで白黒はっきりさせますわ！
+さすが、わたくし
+パーフェクトな計画ですわね！
+
+# fadeout "black" 1
+# waitandnext 1

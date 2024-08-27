@@ -1,0 +1,557 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第７章 章タイトル：「夢追い人―デザイア―」
+;;第1話　タイトル：ラグナロク機関へ
+;;7_1_1
+;;スクリプト最後の背景：上層階
+;;-----------------------------------------
+# script "lisp"
+# background "parchment_map02"
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;異族化アルマス（ナレーションのボイス用）
+# body 5103831
+# alpha 5103831 0 0
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;マサムネ(キラーメイル)
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# layer 1100111 2
+# alpha 1100111 0 0
+# mask 1100111 off
+;;ゴウバラ
+# body 220
+# pos 220 3
+# scale 220 0.8 0
+# layer 220 2
+# alpha 220 0 0
+# mask 220 off
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;第1話　タイトル：ラグナロク機関へ
+;;//背景：新天上世界遠景
+;;ナレーション
+# voice 9922 "IntegralNoah_Narration_7_1_0001"
+# textflame 0 0
+@
+インテグラルキラーズの思わぬ
+参戦もあり、辛くもフォルカスを
+退けたアルマス
+
+;;ナレーション
+# voice 9922 "IntegralNoah_Narration_7_1_0002"
+@
+天上世界のいずこかへと去った
+彼女を追おうとするが、
+それはラグナロクに止められる
+
+;;ナレーション
+# voice 9922 "IntegralNoah_Narration_7_1_0003"
+@
+ラグナロクは世界の異変について、
+情報が不足していることに
+危機感を抱いていた
+
+;;ナレーション
+# voice 9922 "IntegralNoah_Narration_7_1_0004"
+@
+一方、その頃――
+天上世界の復興を見て回っていた
+モニカ・ワーズワースは
+
+;;ナレーション
+# voice 9922 "IntegralNoah_Narration_7_1_0005"
+@
+立ち寄った村で
+インテグラルキラーズの一人、
+ロンギヌスと再会する
+
+;;ナレーション
+# voice 9922 "IntegralNoah_Narration_7_1_0006"
+@
+世界の“終焉”について語り合う二人
+そこにコマンドキラーズ・フォルカス
+が姿を現した
+
+;;ナレーション
+# voice 9922 "IntegralNoah_Narration_7_1_0007"
+@
+激しく対立し、激突するフォルカスと
+ロンギヌス
+
+;;ナレーション
+# voice 9922 "IntegralNoah_Narration_7_1_0008"
+@
+戦いは紙一重でフォルカスが勝利する
+そこに駆けつけたティルフィング達
+に追われ
+
+;;ナレーション
+# voice 9922 "IntegralNoah_Narration_7_1_0009"
+@
+彼女は“海”へと身を投げ、
+地上世界に降りていった
+
+;;ナレーション
+# voice 9922 "IntegralNoah_Narration_7_1_0010"
+@
+そして同じ頃、ユグドラシルにて
+アルマス達も地上世界に向かおうと
+していた
+
+;;ナレーション
+# voice 9922 "IntegralNoah_Narration_7_1_0011"
+@
+運命の糸は交錯する――
+
+;;//天上世界から地上世界に降りる演出
+;;
+;;//背景：ユグドラシル（地上）
+# bgm "stop"
+# se "SE_0055"
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_underwild"
+# move 211 3 0
+# face 211 "irregular"
+# alpha 211 1 0
+# mask 211 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ヴァング
+…………
+
+# se "SE_5000"
+# sedelay "SE_5001" 0.4
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 1
+# move 211 4 0.5
+# mask 211 on
+@マサムネ
+ここにいたのか
+…随分、渋い顔をしているな
+
+# voice 9935 "vang_0017"
+# face 211 "angry"
+# textboxarrow 0 3
+@ヴァング
+当然だろ
+あのジジイども…
+くそっ！
+
+;;//回想シーン
+;;//背景：上層階
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "mamon_room"
+# alpha 1100111 0 0
+# alpha 211 0 0
+# move 220 2 0
+# face 220 "normal"
+# alpha 220 1 0
+# mask 220 on
+# move 211 4 0
+# face 211 "surprise"
+# alpha 211 1 0
+# mask 211 on
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+# voice 9935 "vang_0024"
+# textboxarrow 0 3
+# textwindow "normal"
+@ヴァング
+これ以上動く気はない、だと！？
+
+# voice 9933 "goubara_0003"
+# textboxarrow 0 1
+@ゴウバラ
+うむ…
+それが儂らの、総意だ…
+
+# serif 1
+@西
+コマンドキラーズの脅威は
+我らの治める地から去った
+
+# serif 1
+@北
+逃げた虎の尾をわざわざ踏みに
+いくこともあるまい
+
+# face 211 "angry"
+# textboxarrow 0 3
+@ヴァング
+ふざけんな！
+あいつらは逃げたんじゃねえ！
+さっきも話しただろうがっ
+
+# serif 1
+@西
+一人がユグドラシルに入り、
+残った二人はどこかへ立ち去った…
+そう言っていたな
+
+# serif 1
+@北
+つまり我々が勝利したのだ
+外敵を追い払うことに成功した
+
+# serif 1
+@西
+君達の手柄だぞ
+大いに誇ればいい
+
+# serif 1
+@北
+奏官が一人死んだようだが、
+何事にも犠牲はつきものだよ
+
+# serif 1
+@西
+むしろ、その程度で済んで良かったと
+捉えるべきだな
+
+# voice 9935 "vang_0013"
+# textboxarrow 0 3
+@ヴァング
+てめえら！！
+
+# voice 9933 "goubara_0013"
+# face 220 "angry"
+# textboxarrow 0 1
+@ゴウバラ
+北も西も、口が過ぎるぞ
+
+# textboxarrow 0 1
+@ゴウバラ
+ヴァング君もカミト君も、
+その身を賭して戦ってくれたのだ
+そのような言い方はなかろう
+
+# serif 1
+@西
+フン…
+随分と若造に肩入れするな、東
+
+# serif 1
+@北
+いずれにせよ、我らはこの地を守る
+ことに専念する
+
+# voice 9935 "vang_0016"
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 3
+@ヴァング
+ああ、そうかいっ…
+自分さえ良ければ他の奴らはどうでも
+いいってことかよ！
+
+# textboxarrow 0 3
+@ヴァング
+中心部の連中がそんなんだから、
+いつまで経っても争いが止まなかった
+んだろうが！
+
+# face 220 "normal"
+# textboxarrow 0 1
+@ゴウバラ
+ヴァング君
+
+# textboxarrow 0 3
+@ヴァング
+上等だ！
+あんたらが動かねえのなら、
+それで構わねえ
+
+# textboxarrow 0 3
+@ヴァング
+俺は俺で好きにやらせてもらうぜ！
+
+# textboxarrow 0 1
+@ゴウバラ
+…何をする気だね？
+
+# textboxarrow 0 3
+@ヴァング
+ユグドラシルを調べるんだよ！
+そのくらいの権利はあるだろ！？
+
+# voice 9933 "goubara_0003"
+# textboxarrow 0 1
+@ゴウバラ
+ふむ
+それは一向に構わ――
+
+# bgm "stop"
+# serif 1
+@北
+待て、東
+彼らには早々にここから出ていって
+もらわねばならん
+
+# voice 9933 "goubara_0024"
+# face 220 "angry"
+# textboxarrow 0 1
+@ゴウバラ
+何だと？
+
+# textboxarrow 0 3
+@ヴァング
+どういう了見だ、てめえ！
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# serif 1
+@西
+それはこちらの台詞だよ
+シタから報告を受けている
+
+# serif 1
+@北
+キラーメイル、というそうだな
+君達が連れている、
+あの「用心棒」どもは
+
+# face 211 "surprise"
+# textboxarrow 0 3
+@ヴァング
+！！
+
+;;ヴァング（独白）
+# voice 9935 "vang_0039"
+# move 211 4 0
+# face 211 "irregular"
+# textboxarrow 0 0
+# textwindow "moya"
+@ヴァング
+チッ…ここでその話を持ち出し
+やがるかっ
+
+# face 220 "normal"
+# textboxarrow 0 1
+# textwindow "normal"
+@ゴウバラ
+何の話かね？
+
+# serif 1
+@北
+おやおや
+東は知らされていなかったか
+まあ、そうであろうな
+
+# serif 1
+@西
+事前に知っていたのであれば、
+彼らを中心部に招き入れることも
+なかったはずだ
+
+# serif 1
+@北
+先日、人型の魔獣が町に現れたで
+あろう？
+あれがキラーメイルだ
+
+# serif 1
+@西
+そこの彼と行動を供にしている
+奏官でない男が数人いたな
+あ奴らもキラーメイルなのだよ
+
+# voice 9933 "goubara_0023"
+# face 220 "angry"
+# textboxarrow 0 1
+@ゴウバラ
+何と…！？
+そのようなことがっ…
+
+# face 211 "angry"
+# textboxarrow 0 3
+@ヴァング
+おい待て！
+確かにあいつらはキラーメイルだが
+魔獣じゃねえ！
+
+# textboxarrow 0 3
+@ヴァング
+カミトが正気に戻したんだ！
+今は俺達の味方だぞ！
+
+# serif 1
+@北
+事の経緯は知らぬ
+どちらにしろ魔獣だったことは
+違いないのだろう？
+
+# serif 1
+@西
+あ奴らがまた魔獣になって
+暴れないという保証がどこにある？
+
+# voice 9935 "vang_0013"
+# textboxarrow 0 3
+@ヴァング
+ふざけんなよ、てめえら！
+
+# serif 1
+@北
+ふざけているのは君の方だな
+キラーメイルの存在を隠していた
+ことが何よりの証拠
+
+# serif 1
+@西
+やましいことがあるから
+隠していたのだろう？
+
+# serif 1
+@西
+信頼関係が大事だと言っていたのは
+誰だったかな？
+
+# voice 9935 "vang_0004"
+# serif 1
+# textwindow "close"
+# serif 0
+# face 211 "normal"
+# textboxarrow 0 3
+@ヴァング
+…………ハハッ
+
+# face 220 "normal"
+# textboxarrow 0 1
+@ゴウバラ
+ヴァング君？
+
+# face 211 "irregular"
+# textboxarrow 0 3
+@ヴァング
+そうだな
+信頼関係が大事だよなぁ
+
+# textboxarrow 0 3
+@ヴァング
+つまり、端から俺らの間には
+そんなもんなかったってことだ！
+だったら、いいぜ
+
+# textboxarrow 0 3
+@ヴァング
+あんたらがビビって
+追い出したがってるキラーメイルと
+一緒に…
+
+# textboxarrow 0 3
+@ヴァング
+ここを叩き潰して――
+
+# face 220 "angry"
+# textboxarrow 0 1
+@ゴウバラ
+待ちなさい！！
+
+# face 211 "surprise"
+# textboxarrow 0 3
+@ヴァング
+！？
+
+# face 220 "normal"
+# textboxarrow 0 1
+@ゴウバラ
+ヴァング君…
+君達の働きには本当に感謝している
+お陰でこの地は守られた
+
+# textboxarrow 0 1
+@ゴウバラ
+こちらも君達を無下にするつもりは
+ないのだ
+ただ…
+
+# textboxarrow 0 1
+@ゴウバラ
+我らにも守るものがある
+君にもあるようにね
+
+# face 211 "irregular"
+# textboxarrow 0 3
+@ヴァング
+…………
+
+# voice 9933 "goubara_0033"
+# face 220 "sad"
+# textboxarrow 0 1
+@ゴウバラ
+非礼は儂が代表して詫びよう
+すまない
+
+# face 220 "normal"
+# textboxarrow 0 1
+@ゴウバラ
+その上で頼む
+一月だ
+
+# textboxarrow 0 1
+@ゴウバラ
+一月の間だけ、ユグドラシルを
+調べることを認めよう
+その後、ここから出て欲しい
+
+# serif 1
+@西
+いや、十日だ
+
+# face 220 "angry"
+# textboxarrow 0 1
+@ゴウバラ
+ぬっ…
+
+# serif 1
+@北
+私もそれなら認めよう
+十日だけ猶予をやる
+それ以上は断じて許さん
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 1
+@ゴウバラ
+…どうかな、ヴァング君？
+
+# voice 9935 "vang_0039"
+# textboxarrow 0 3
+@ヴァング
+…………チッ

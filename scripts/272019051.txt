@@ -1,0 +1,719 @@
+;;----------------------------------------
+;;【PUNK】3タイトルコラボ2019_シナリオ深浦_190515
+;;・メインタイトル
+;;「誰かの姫など忍びない」
+;;・サブタイトル
+;;「普通の恋は絶えず雪」5-1
+;;----------------------------------------
+# background "bg_black"
+# bgmfile "bgm337" "Bgm3Tcollabo005" 0
+;;----------------------------------------
+;;ヒイラギ
+# body 97
+# pos 97 3
+# scale 97 0.8 0
+# alpha 97 1 0
+;;ヨミ
+# body 401811
+# pos 401811 2
+# scale 401811 0.8 0
+# layer 401811 3
+# alpha 401811 0 0
+;;コイワズライ
+# body 808412
+# pos 808412 3
+# scale 808412 0.8 0
+# layer 808412 3
+# alpha 808412 0 0
+# mask 808412 off
+;;アルマス
+# body 138
+# pos 138 3
+# scale 138 0.8 0
+# layer 138 3
+# alpha 138 0 0
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 3
+# alpha 139 0 0
+;;メラ
+# body 188
+# pos 188 1
+# scale 188 0.8 0
+# layer 188 1
+# alpha 188 0 0
+;;ニクス
+# body 189
+# pos 189 5
+# scale 189 0.8 0
+# layer 189 2
+# layer 97 5
+# alpha 189 0 0
+;;enemy
+# body 7502311
+# pos 7502311 5
+# scale 7502311 0.8 0
+# layer 7502311 1
+# alpha 7502311 0 0
+# entry 7502312 7502311
+# pos 7502312 1
+# scale 7502312 0.8 0
+# layer 7502312 2
+# alpha 7502312 0 0
+# entry 7502313 7502311
+# pos 7502313 3
+# scale 7502313 0.8 0
+# layer 7502313 5
+# alpha 7502313 0 0
+;;kanon
+# entry 3101914 101914 549
+# pos 3101914 3
+# scale 3101914 0.8 0
+# layer 3101914 3
+# alpha 3101914 0 0
+;;izoku
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# alpha 810004 0 0.5
+# entry 810001 810004
+# pos 810001 1
+# scale 810001 0.8 0
+# alpha 810001 0 0.5
+# entry 810002 810004
+# pos 810002 5
+# scale 810002 0.8 0
+# alpha 810002 0 0.5
+;;----------------------------------------
+;;【EP5「木に冬が積もるような」】
+;;背景：黒
+;;演出・SE：ヒイラギが穢れに飲み込まれかけている。（可能であれば）穢れが渦巻く轟音が鳴り続けている。
+# imageset 0 "bg_black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# se "SE_0626"
+# mask 97 off
+# face 97 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@ヒイラギ
+ニクスくん！
+きこえてますか！？
+ヒイラギです！！
+
+# textboxarrow 0 2
+@ヒイラギ
+あの時の答え
+『お付き合いしてください』って
+言われた時の答え！
+
+;;演出・SE：ヒイラギが穢れに飲み込まれていく。姿が徐々に見えづらくなっていく
+# se "SE_5634"
+# imagealpha 0 0.3 1
+# imagepos 0 0 30
+# face 97 "angry"
+# textboxarrow 0 2
+@ヒイラギ
+ちゃんと言いますっ
+
+# textboxarrow 0 2
+@ヒイラギ
+フリでもウソでも
+ちょっと嬉しかった！
+
+;;演出・SE：ヒイラギが穢れに飲み込まれていく。姿が更に見えづらくなっていく
+# se "SE_5634"
+# imagealpha 0 0.5 1
+# face 97 "sad"
+# textboxarrow 0 2
+@ヒイラギ
+だから………！！
+
+;;演出・SE：ヒイラギが穢れに飲み込まれていく。姿が更に見えづらくなっていく
+# se "SE_5634"
+# imagealpha 0 0.7 1
+# face 97 "angry"
+# textboxarrow 0 2
+@ヒイラギ
+だけど…！！
+
+;;演出・SE：ヒイラギが穢れに飲み込まれていく。暗転し、背景は黒
+# se "SE_5634"
+# imagealpha 0 1 1.5
+# alpha 97 0 1.5
+# waitandnext 1.5
+
+# sestop "SE_0626"
+# imagealpha 0 0 1
+# textboxarrow 0 0
+@ヒイラギ
+…！
+
+# textboxarrow 0 0
+@ヒイラギ
+“ごめんなさい”！！！
+
+;;演出・SE：闇が晴れる
+;;演出：場転
+# textwindow "close"
+# fadein "white" 1
+# background "plain"
+# se "SE_9149"
+# face 97 "surprise"
+# alpha 97 1 0
+# waitandnext 2
+
+;;演出・SE：カノンが黒ヒイラギ複数人を斬り倒す
+# fadeout "black" 1
+# waitandnext 1
+
+# background "006_town"
+# alpha 97 0 0
+# mask 3101914 off
+# alpha 3101914 1 0
+# face 3101914 "sad"
+# alpha 7502311 1 0
+# alpha 7502312 1 0
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_4830"
+# shake 1 1
+# waitandnext 1
+
+# alpha 7502311 0 1
+# alpha 7502312 0 1
+# waitandnext 1
+
+# mask 3101914 off
+# textboxarrow 0 2
+# textwindow "nomal"
+# voice 1019 "kanon_0014"
+@カノン
+ニンポー、分身の術…！
+キリがない…っ！
+やっぱり沢山に増えて凄くコワイ…！
+
+# serif 1
+@町民A
+き、騎士様！！
+
+# textboxarrow 0 2
+@カノン
+皆さんは早く避難を！
+ニンポーはコワイんだから！
+
+# serif 1
+@町民A
+そ、それが
+町の混乱を好機と見たのか
+異族が押し寄せてきています！
+
+# textboxarrow 0 2
+# voice 1019 "kanon_0037"
+@カノン
+…ニンポーめ！！
+
+;;演出・SE：フラッシュ。町はずれから光の柱が上がる（イメージ）（町外れで邂逅ノ刻が発動！という状況ですので、それらしい演出があれば適用いただけますと幸いです）
+# se "SE_9133"
+# fadein "white" 0.3
+# waitandnext 0.5
+
+# serif 1
+@町民B
+騎士様！！
+
+# textboxarrow 0 2
+# voice 1019 "kanon_0023"
+@カノン
+またニンポー！？
+
+# serif 1
+@町民B
+わ、わかりませんが
+町はずれから光の柱が上がっており…
+
+# textboxarrow 0 2
+@カノン
+…！？
+
+;;演出・SE：大量の黒ヒイラギ、次々に消えていく
+# se "SE_0062"
+# se "SE_9088"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# alpha 3101914 0 0.5
+# alpha 7502311 1 0.5
+# alpha 7502312 1 0.5
+# alpha 7502313 1 0.5
+# waitandnext 1
+
+# fadein "black" 0.5
+# alpha 7502311 0 0.5
+# alpha 7502312 0 0.5
+# alpha 7502313 0 0.5
+# waitandnext 1
+
+# serif 1
+# alpha 3101914 1 0.5
+@町民B
+に、ニンジャが消えていく…！？
+
+# serif 1
+@町民A
+ニンポー、カクレミノジュツ！？
+
+# textboxarrow 0 2
+# textwindow "normal"
+@カノン
+違うわ、これは………
+
+# textboxarrow 0 2
+# face 3101914 "normal"
+# voice 1019 "kanon_0004"
+@カノン
+…そっか
+
+# textboxarrow 0 2
+@カノン
+帰り道を
+作ってあげられたのかな
+
+# serif 1
+@町民A
+ニンジャは全て消えたようです…！
+騎士様、今のうちに逃げましょう
+
+# textboxarrow 0 2
+# voice 1019 "kanon_0003"
+@カノン
+異族を討伐するわ
+皆は逃げて
+
+# serif 1
+@町民B
+ご、ご武運を
+我々は避難誘導をしつつ
+一旦退避します！
+
+;;演出：町民達は逃げる。
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@カノン
+…
+
+# face 3101914 "sad"
+# textboxarrow 0 2
+@カノン
+…世界っていっぱいなんだ
+ここで知っただけでも
+3つもあるなんて…
+
+# face 3101914 "normal"
+# textboxarrow 0 2
+@カノン
+『世界を変え、光を灯す』
+
+;;演出・SE：カノンからアルケミィのオーラが噴き出す
+# se "SE_9040"
+# fadein "white" 0.3
+# textboxarrow 0 2
+@カノン
+みんなが歩く“道”に
+私が、光を
+
+;;演出：異族、大量に現れる
+# textwindow "close"
+# alpha 3101914 0 0.5
+# alpha 810004 1 0.5
+# alpha 810001 1 0.5
+# alpha 810002 1 0.5
+# waitandnext 1
+
+# se "SE_0617"
+# shake 1 1
+# textboxarrow 0 0
+# textwindow "normal"
+@異族
+ガアアアアアアーーーーッッ！！
+
+# face 3101914 "normal"
+# alpha 3101914 1 0.5
+# alpha 810004 0 0.5
+# alpha 810001 0 0.5
+# alpha 810002 0 0.5
+# textboxarrow 0 2
+# voice 1019 "kanon_0007"
+@カノン
+“ロード”ナイツ・カノンが
+相手をしてあげる
+
+# textboxarrow 0 2
+@カノン
+この道は、通さない
+
+;;演出：場転
+;;背景：邂逅ノ刻
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# bgmfile "bgm336" "Bgm3Tcollabo005" 0
+# alpha 3101914 0 0
+# face 97 "angry"
+# alpha 97 1 0
+# background "dimensions"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@ヒイラギ
+今のヒイラギにとって“恋”は
+もう過ぎ去った未練だから
+乗り越えた過去だから
+
+# textboxarrow 0 2
+@ヒイラギ
+元の世界で“普通の私”として
+クノイチとして戦って
+クノイチの皆と過ごす日々が愛しいの
+
+;;モノローグ
+# textflame 0 0
+@
+ヒイラギの叫びが
+ヒーちゃんの穢れを一掃し…
+
+;;モノローグ
+# textflame 0 0
+@
+“不確定要素”が
+あらかた取り除かれた瞬間
+メラとニクスは邂逅ノ刻を発動させた
+
+# mask 97 on
+# mask 188 on
+# mask 189 on
+# alpha 188 1 0.5
+# face 189 "irregular"
+# alpha 189 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9944 "nix_0027"
+@ニクス
+…フラれちゃったな
+
+# face 97 "usual"
+# textboxarrow 0 2
+# voice 5023 "hiiragi_0009"
+@ヒイラギ
+考え通りだったクセに
+
+# textboxarrow 0 1
+# voice 5034 "mela_0027"
+@メラ
+ひやひやしたねえ
+
+# alpha 97 0 0.5
+# face 139 "normal"
+# alpha 139 1 0.5
+# textboxarrow 0 2
+# voice 9967 "titania_0003"
+@ティターニア
+メラさんは
+わかっていたのですか？
+
+# face 97 "smile"
+# textboxarrow 0 1
+# voice 5034 "mela_0005"
+@メラ
+ギリギリまで
+辛抱して良かったっ
+
+# face 189 "normal"
+# textboxarrow 0 3
+# voice 9944 "nix_0003"
+@ニクス
+飲み込まれそうになるとは
+思わなかったけど
+ヒイラギが気づいてくれた
+
+# textboxarrow 0 1
+# voice 5034 "mela_0003"
+@メラ
+弟のことだからねっ
+だからニクスの作戦に乗ったの
+コイワズライを打倒するためっ
+
+# face 189 "irregular"
+# textboxarrow 0 3
+@ニクス
+色んな願望や力が
+グチャグチャに混ざっていて
+実体に攻撃が届かなかったからね
+
+# face 189 "normal"
+# textboxarrow 0 3
+@ニクス
+その願望や力の持ち主を見つけて
+こちらから働きかけて
+顕在化させる必要があった
+
+# face 188 "angry"
+# textboxarrow 0 1
+@メラ
+まずは『恋がしたい』未練を
+持つのが誰か探すために
+片っ端から告白して…
+
+# face 189 "happy"
+# textboxarrow 0 3
+# voice 9944 "nix_0005"
+@ニクス
+すぐにわかった
+
+# face 97 "angry"
+# alpha 97 1 0.5
+# alpha 139 0 0.5
+# textboxarrow 0 2
+# voice 5023 "hiiragi_0010"
+@ヒイラギ
+ぷぅ～！
+
+# textboxarrow 0 3
+@ニクス
+コイワズライがクノイチに
+深く関係するものだっていう話も
+聞いたしね
+
+# textboxarrow 0 3
+@ニクス
+あとはアルマスの自己犠牲精神を
+くすぐりつつ、彼女を当て馬に
+ヒイラギとの関係を深めて…
+
+# face 138 "angry"
+# alpha 97 0 0.5
+# alpha 138 1 0.5
+# textboxarrow 0 2
+# voice 1038 "almace_0009"
+@アルマス
+あ、当て馬…！！
+
+# textboxarrow 0 1
+# voice 5034 "mela_0003"
+@メラ
+コイワズライが宿した
+あたしの行動力は
+力でねじ伏せるとして…
+
+# face 139 "normal"
+# alpha 139 1 0.5
+# alpha 138 0 0.5
+# textboxarrow 0 2
+# voice 9967 "titania_0002"
+@ティターニア
+アルマスの自己犠牲精神は
+最終的に
+自身で払拭させて…
+
+# face 189 "irregular"
+# textboxarrow 0 3
+# voice 9944 "nix_0003"
+@ニクス
+…未練は、捨てなきゃダメだからね
+荒療治だったけど
+
+# face 97 "sad"
+# alpha 97 1 0.5
+# alpha 139 0 0.5
+# textboxarrow 0 2
+@ヒイラギ
+ヒイラギ・ザ・ハーレムなんて…
+
+# textboxarrow 0 3
+# voice 9944 "nix_0027"
+@ニクス
+我ながら下世話で酷い
+
+# face 97 "angry"
+# textboxarrow 0 2
+# voice 5023 "hiiragi_0019"
+@ヒイラギ
+ほんとだよ…っ
+
+# alpha 97 0 0.5
+# face 138 "sad"
+# alpha 138 1 0.5
+# textboxarrow 0 2
+# voice 1038 "almace_0003"
+@アルマス
+素直に
+褒められたやり方じゃなかったけど
+ニクニクだって、自己犠牲で…
+
+# face 189 "normal"
+# textboxarrow 0 3
+# voice 9944 "nix_0034"
+@ニクス
+時にはね
+必要かもしれないけど
+
+# face 138 "normal"
+# textboxarrow 0 2
+@アルマス
+うん、よくわかった
+
+# textboxarrow 0 3
+# voice 9944 "nix_0005"
+@ニクス
+みんなごめん
+弄んでしまって
+罪な男だネ☆
+
+# face 188 "angry"
+# textboxarrow 0 1
+# voice 5034 "mela_0013"
+@メラ
+イラッ
+
+# alpha 138 0 0.5
+# face 139 "normal"
+# alpha 139 1 0.5
+# textboxarrow 0 2
+# voice 9967 "titania_0006"
+@ティターニア
+もうそういうのはいいですから
+
+# alpha 188 0 0.5
+# alpha 189 0 0.5
+# alpha 139 0 0.5
+# alpha 7502311 1 0.5
+# textboxarrow 0 3
+@ヒーちゃん
+恋…
+
+# bgmfile "bgm337_338" "Bgm3Tcollabo005" 0
+# alpha 7502311 0 0.5
+# face 97 "normal"
+# alpha 97 1 0.5
+# textboxarrow 0 2
+# voice 5023 "hiiragi_0003"
+@ヒイラギ
+もう恋なんてしないの
+
+# alpha 97 0 0.5
+# alpha 7502311 1 0.5
+# alpha 7502312 1 0.5
+# move 7502313 3 0
+# alpha 7502313 1 0.5
+# shake 0 1
+# textboxarrow 0 0
+@ヒーちゃん
+おおおおおお…っ
+
+;;演出・SE：黒ヒイラギ達と穢れが一点に集まり始める
+;;演出・SE：穢れと黒ヒイラギの集まりはコイワズライ（ウズシオマル色変えハード）へと姿を変える
+;;//演出・SE：黒ヒイラギ達も大量に出現
+# se "SE_5627"
+# se "SE_4763"
+# se "SE_4730"
+# se "SE_7010"
+# move 7502311 3 0.5
+# move 7502312 3 0.5
+# move 7502313 3 0.5
+# fadeout "white" 1
+# waitandnext 1
+
+# fadein "white" 0.3
+# alpha 7502311 0 0
+# alpha 7502312 0 0
+# alpha 7502313 0 0
+# alpha 808412 1 0
+# textboxarrow 0 2
+@コイワズライ
+おおおおおおおおおおおお！！！
+
+# alpha 138 1 0.5
+# mask 138 off
+# alpha 808412 0 0.5
+# textboxarrow 0 2
+# voice 1038 "almace_0001"
+@アルマス
+行こう、マスター
+
+# alpha 138 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+アルマスは
+マスターの方を振り返ると
+少し、微笑んで見せる
+
+# textflame 1 1
+# face 97 "angry"
+# alpha 97 1 0.5
+# textboxarrow 0 2
+@ヒイラギ
+サムライ！！
+
+;;演出・SE：ヨミ、出現
+# se "SE_5660"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# fadein "white" 0.3
+# move 97 4 0
+# alpha 401811 1 0
+# textboxarrow 0 1
+# voice 4018 "yomi_0005"
+@ヨミ
+引導を渡してやれ、ヒイラギ
+
+# face 97 "normal"
+# textboxarrow 0 3
+# voice 5023 "hiiragi_0032"
+@ヒイラギ
+うん
+ヒイラギはやっぱり
+あの日々が恋しいから
+
+# textboxarrow 0 3
+@ヒイラギ
+戦いばかりだとしても
+痛いことが沢山あっても…
+
+# textboxarrow 0 3
+@ヒイラギ
+あの“普通の毎日”に戻れないのは…
+
+# se "SE_5627"
+# shake 1 1
+# serif 1
+@コイワズライ
+おおおおおおおおおおおお！！！
+
+# textboxarrow 0 3
+@ヒイラギ
+───しのびないんだ

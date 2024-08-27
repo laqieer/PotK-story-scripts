@@ -1,0 +1,761 @@
+;;-----------------------------------------
+;;【ファントムオブキル_まどマギコラボ】イベントシナリオ後編　修正稿
+;;【EP5】
+;;5-1
+;;スクリプト最後の背景：平原など
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm055" "BgmMMcollabo001" 0
+;;-----------------------------------------
+;;アルマス
+# body 3103811
+# pos 3103811 3
+# scale 3103811 0.8 0
+# layer 3103811 2
+# alpha 3103811 0 0
+# mask 3103811 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 1
+# alpha 139 0 0
+# mask 139 off
+;;まどか
+# body 3401111
+# pos 3401111 3
+# scale 3401111 0.8 0
+# layer 3401111 1
+# alpha 3401111 0 0
+# mask 3401111 off
+;;マミ
+# body 3501411
+# pos 3501411 3
+# scale 3501411 0.8 0
+# layer 3501411 2
+# alpha 3501411 0 0
+# mask 3501411 off
+;;さやか
+# body 3102011
+# pos 3102011 3
+# scale 3102011 0.8 0
+# layer 3102011 2
+# alpha 3102011 0 0
+# mask 3102011 off
+;;杏子
+# body 3301511
+# pos 3301511 3
+# scale 3301511 0.8 0
+# layer 3301511 2
+# alpha 3301511 0 0
+# mask 3301511 off
+;;ほむら
+# body 3501311
+# pos 3501311 3
+# scale 3501311 0.8 0
+# layer 3501311 2
+# alpha 3501311 0 0
+# mask 3501311 off
+;;アンソニー
+# body 809711
+# pos 809711 3
+# scale 809711 0.8 0
+# layer 809711 2
+# alpha 809711 0 0
+# mask 809711 off
+;;トレイセーマ兵
+# body 3830001
+# pos 3830001 3
+# scale 3830001 0.8 0
+# layer 3830001 2
+# alpha 3830001 0 0
+# mask 3830001 off
+;;トレイセーマ兵（クローン1）
+# entry 938300011 3830001
+# pos 938300011 3
+# scale 938300011 0.8 0
+# layer 938300011 2
+# alpha 938300011 0 0
+# mask 938300011 off
+;;-----------------------------------------
+;;【EP5】
+;;背景：平原など
+# se "SE_4000"
+# sedelay "SE_4000" 0.4
+# move 3830001 3 0
+# alpha 3830001 1 0
+# mask 3830001 off
+# textflame 1 1
+# textboxarrow 0 2
+@兵士
+あ、あーあー
+あー！あー！
+
+;;演出：攻撃エフェクト、倒される兵士
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 3830001 0 0.5
+# waitandnext 0.5
+
+# emotionbody 1001 6 3301511 50 250
+# effectpattern 1001 1 1
+# effectstart 1001
+# voice 3015 "kyoko_0026"
+# serif 1
+# textwindow "close"
+# serif 0
+# move 3103811 2 0
+# face 3103811 "normal"
+# alpha 3103811 1 0.5
+# mask 3103811 on
+# move 3301511 4 0
+# face 3301511 "angry"
+# alpha 3301511 1 0.5
+# mask 3301511 on
+# textboxarrow 0 3
+# textwindow "normal"
+@杏子
+ったく、気持ち悪い声出しやがって
+なぁ、しばらくこいつらとしか
+戦ってないんじゃないか？
+
+# voice 1038 "almace_0003"
+# alpha 3103811 0 0.5
+# move 3103811 2 0
+# face 3103811 "angry"
+# alpha 3103811 1 0.5
+# mask 3103811 on
+# textboxarrow 0 1
+@アルマス
+…そうね
+兵士ばっかり相手にしてても
+埒があかないわ
+
+# voice 9967 "titania_0042"
+# alpha 3301511 0 0.5
+# move 139 4 0
+# face 139 "worry"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 3
+@ティターニア
+魔女の手下を見つけないと…
+でも、あれから
+姿を見せませんね
+
+# alpha 3103811 0 0.5
+# move 3501411 2 0
+# face 3501411 "angry"
+# alpha 3501411 1 0.5
+# mask 3501411 on
+# textboxarrow 0 1
+@マミ
+たしかに…
+魔女と遭遇してからは
+手下を見かけないわね…
+
+# alpha 3501411 0 0.5
+# move 3102011 2 0
+# face 3102011 "angry"
+# alpha 3102011 1 0.5
+# mask 3102011 on
+# textboxarrow 0 1
+@さやか
+魔女が手下を引き連れて
+逃げて行ったんじゃない？
+
+# alpha 139 0 0.5
+# move 3401111 4 0
+# face 3401111 "angry"
+# alpha 3401111 1 0.5
+# mask 3401111 on
+# textboxarrow 0 3
+@まどか
+でも、この人達がこの状態
+ということは魔女の結界から
+抜け出せた訳じゃない…よね？
+
+# voice 5013 "homura_0037"
+# alpha 3102011 0 0.5
+# move 3501311 2 0
+# face 3501311 "usual"
+# alpha 3501311 1 0.5
+# mask 3501311 on
+# textboxarrow 0 1
+@ほむら
+…抜け出せたとしても
+魔女を倒さない限り意味はないわ
+
+;;モノローグ
+# textflame 0 0
+@
+元を断たねば何度でも
+このような事態が起きるだろう
+マスターもほむらに同意する
+
+# textflame 1 1
+# textboxarrow 0 1
+@ほむら
+魔女探しは続行…
+ということでいいわね
+
+# voice 4011 "madoka_0028"
+# face 3401111 "sad"
+# textboxarrow 0 3
+@まどか
+けど、どうしたらいいんだろう…
+ほむらちゃん、何かいい案あるかな？
+
+# voice 5013 "homura_0015"
+# face 3501311 "sad"
+# textboxarrow 0 1
+@ほむら
+いえ…
+私の持っている情報は
+みんなと同じ…何もわからないわ
+
+# alpha 3401111 0 0.5
+# move 3102011 4 0
+# face 3102011 "normal"
+# alpha 3102011 1 0.5
+# mask 3102011 on
+# textboxarrow 0 3
+@さやか
+まぁでも変な兵士を倒していけば
+さっきみたいにまた魔女が急に
+現れるかもしれないよね
+
+# voice 5014 "mami_0028"
+# alpha 3501311 0 0.5
+# move 3501411 2 0
+# face 3501411 "sad"
+# alpha 3501411 1 0.5
+# mask 3501411 on
+# textboxarrow 0 1
+@マミ
+そう上手くいけば
+いいのだけど…
+
+;;演出：兵士in
+# bgmfile "bgm059" "BgmMMcollabo001" 0
+# se "SE_0719"
+# alpha 3501411 0 0.5
+# alpha 3102011 0 0.5
+# move 3830001 3 0
+# alpha 3830001 1 0.5
+# mask 3830001 off
+# textboxarrow 0 2
+@兵士
+らーららー、らー！
+
+# emotionbody 1002 1 3301511 10 260
+# effectpattern 1002 2 0
+# effectstart 1002
+# voice 3015 "kyoko_0024"
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 3830001 0 0.5
+# move 3301511 3 0
+# face 3301511 "surprise"
+# alpha 3301511 1 0.5
+# mask 3301511 off
+# textboxarrow 0 2
+@杏子
+うわっ！？
+なんだよ、びっくりしたじゃんか！
+
+# emotionbody 1003 2 3401111 10 260
+# effectpattern 1003 1 1
+# effectstart 1003
+# voice 4011 "madoka_0022"
+# alpha 3301511 0 0.5
+# move 3401111 3 0
+# face 3401111 "surprise"
+# alpha 3401111 1 0.5
+# mask 3401111 off
+# textboxarrow 0 2
+@まどか
+歌って…る？
+さっきまでの兵士と様子が違うみたい
+
+# voice 5014 "mami_0026"
+# alpha 3401111 0 0.5
+# move 3501411 3 0
+# face 3501411 "sad"
+# alpha 3501411 1 0.5
+# mask 3501411 off
+# textboxarrow 0 2
+@マミ
+ソウルジェムが
+濁りそうな歌声ね…
+
+# voice 1020 "sayaka_0026"
+# alpha 3501411 0 0.5
+# move 3102011 3 0
+# face 3102011 "sad"
+# alpha 3102011 1 0.5
+# mask 3102011 off
+# textboxarrow 0 2
+@さやか
+不協和音って感じ…
+
+# alpha 3102011 0 0.5
+# move 3103811 3 0
+# face 3103811 "angry"
+# alpha 3103811 1 0.5
+# mask 3103811 off
+# textboxarrow 0 2
+@アルマス
+絶・不愉快！
+
+;;演出：攻撃エフェクト、倒される兵士
+# textwindow "close"
+# alpha 3103811 0 0.5
+# move 3830001 3 0
+# alpha 3830001 1 0.5
+# mask 3830001 off
+# waitandnext 0.8
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 2000 1 0 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+# se "SE_3001"
+# alpha 3830001 0 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+今までと違うということは
+何かの手掛かりだったのでは
+と、マスター
+
+# emotionbody 1004 11 3103811 80 280
+# effectpattern 1004 1 0
+# effectstart 1004
+# voice 1038 "almace_0023"
+# move 3103811 3 0
+# face 3103811 "surprise"
+# alpha 3103811 1 0.5
+# mask 3103811 off
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+あっ…
+
+# alpha 3103811 0 0.5
+# move 3501311 2 0
+# face 3501311 "usual"
+# alpha 3501311 1 0.5
+# mask 3501311 on
+# move 3401111 4 0
+# face 3401111 "sad"
+# alpha 3401111 1 0.5
+# mask 3401111 on
+# textboxarrow 0 3
+@まどか
+倒しちゃったね…
+
+# textboxarrow 0 1
+@ほむら
+…今のは倒しても
+問題はなさそうよ
+
+;;モノローグ
+# textflame 0 0
+@
+そう言ったほむらが
+視線を向ける先には
+魔女の手下がいた
+
+# alpha 3501311 0 0.5
+# alpha 3401111 0 0.5
+# move 3501411 3 0
+# face 3501411 "angry"
+# alpha 3501411 1 0.5
+# mask 3501411 off
+# textflame 1 1
+# textboxarrow 0 2
+@マミ
+あれは…
+やっと姿を見せたわね
+
+;;演出：薔薇園の魔女の手下out
+# textwindow "close"
+# alpha 3501411 0 0.5
+# move 809711 3 0
+# alpha 809711 1 0.5
+# mask 809711 off
+# waitandnext 1.2
+
+# se "SE_5339"
+# leftout 809711 0.5
+# waitandnext 0.5
+
+# emotionbody 1005 1 3102011 10 310
+# effectpattern 1005 1 0
+# effectstart 1005
+# alpha 809711 0 0
+# move 3102011 2 0
+# face 3102011 "angry"
+# alpha 3102011 1 0.5
+# mask 3102011 on
+# textboxarrow 0 1
+# move 3301511 4 0
+# face 3301511 "angry"
+# alpha 3301511 1 0.5
+# mask 3301511 on
+# textwindow "normal"
+@さやか
+あ、逃げてく！
+…追ったほうがいいよね？
+
+# textboxarrow 0 3
+@杏子
+いやぁ…
+さすがにあれは罠じゃねぇの？
+
+# voice 4011 "madoka_0003"
+# alpha 3102011 0 0.5
+# move 3401111 2 0
+# face 3401111 "angry"
+# alpha 3401111 1 0.5
+# mask 3401111 on
+# textboxarrow 0 1
+@まどか
+だとしても
+ずっとここにいても
+何の解決にもならないし…
+
+# voice 1038 "almace_0003"
+# alpha 3401111 0 0.5
+# move 3103811 2 0
+# face 3103811 "normal"
+# alpha 3103811 1 0.5
+# mask 3103811 on
+# textboxarrow 0 1
+@アルマス
+まどかの言う通りね
+追うしかないんじゃない？
+
+;;モノローグ
+# textflame 0 0
+@
+たとえ罠であろうと
+みんながいれば大丈夫だ
+と、マスター
+
+# voice 5014 "mami_0004"
+# alpha 3103811 0 0.5
+# move 3501411 2 0
+# face 3501411 "happy"
+# alpha 3501411 1 0.5
+# mask 3501411 on
+# textflame 1 1
+# textboxarrow 0 1
+@マミ
+ふふ、マスターの
+その信頼には応えないとね
+
+# textboxarrow 0 3
+@杏子
+そしたら見失う前に追わないとな
+ほら、行くぞ！
+
+;;演出：移動の暗転
+# se "SE_5575"
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# alpha 3501411 0 0
+# alpha 3301511 0 0
+# move 3830001 2 0
+# alpha 3830001 1 0
+# mask 3830001 on
+# move 938300011 4 0
+# alpha 938300011 1 0
+# mask 938300011 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_11618"
+# sedelay "SE_10131" 1
+# textboxarrow 0 0
+# textwindow "normal"
+@兵士
+らーらららーらー！
+
+;;演出：兵士数体を揺らすなど踊っているような動きができればお願いします。
+# textwindow "close"
+# move 3830001 1 0.2
+# move 938300011 5 0.2
+# waitandnext 0.2
+
+# move 3830001 2 0.2
+# move 938300011 4 0.2
+# waitandnext 0.2
+
+# move 3830001 1 0.2
+# move 938300011 5 0.2
+# waitandnext 0.2
+
+# move 3830001 2 0.2
+# move 938300011 4 0.2
+# waitandnext 0.2
+
+# move 3830001 1 0.2
+# move 938300011 5 0.2
+# waitandnext 0.2
+
+# move 3830001 2 0.2
+# move 938300011 4 0.2
+# waitandnext 0.4
+
+# emotionbody 1006 8 3102011 80 250
+# effectpattern 1006 1 0
+# effectstart 1006
+# voice 1020 "sayaka_0023"
+# serif 1
+# textwindow "close"
+# alpha 3830001 0 0.5
+# alpha 938300011 0 0.5
+# move 3102011 3 0
+# face 3102011 "surprise"
+# alpha 3102011 1 0.5
+# mask 3102011 off
+# textboxarrow 0 2
+# serif 0
+# textwindow "normal"
+@さやか
+うげ…何あれ
+変な動きまでするように
+なってるんだけど…
+
+# effectskip 1006
+# alpha 3102011 0 0.5
+# move 809711 3 0
+# alpha 809711 1 0.5
+# mask 809711 off
+# textboxarrow 0 2
+@魔女の手下
+～♪
+
+# alpha 809711 0 0.5
+# move 3501411 2 0
+# face 3501411 "angry"
+# alpha 3501411 1 0.5
+# mask 3501411 on
+# textboxarrow 0 1
+# move 3401111 4 0
+# face 3401111 "normal"
+# alpha 3401111 1 0.5
+# mask 3401111 on
+@マミ
+魔女の手下の歌に合わせて
+踊っているように見えるわね…
+
+# se "SE_6504"
+# emotionbody 1007 3 3401111 10 260
+# effectpattern 1007 1 3
+# effectstart 1007
+# voice 4011 "madoka_0004"
+# face 3401111 "happy"
+# textboxarrow 0 3
+@まどか
+えへへ…こんなこと言うの
+変だってわかってるんだけど
+ちょっと楽しそうに見えるね
+
+# alpha 3501411 0 0.5
+# alpha 3401111 0 0.5
+# move 3501311 2 0
+# face 3501311 "usual"
+# alpha 3501311 1 0.5
+# mask 3501311 on
+# move 3301511 4 0
+# face 3301511 "angry"
+# alpha 3301511 1 0.5
+# mask 3301511 on
+# textboxarrow 0 3
+@杏子
+楽しそうにしてるだけなら
+それでもいいんだけどよ…
+
+# voice 5013 "homura_0037"
+# textboxarrow 0 1
+@ほむら
+無害だとしても最終的には
+倒さないといけない…
+
+# voice 1038 "almace_battle_0006"
+# alpha 3501311 0 0.5
+# alpha 3301511 0 0.5
+# move 3103811 3 0
+# face 3103811 "angry"
+# alpha 3103811 1 0.5
+# mask 3103811 off
+# textboxarrow 0 2
+@アルマス
+無害ですらないみたいよ
+
+# alpha 3103811 0 0.5
+# move 809711 3 0
+# alpha 809711 1 0.5
+# mask 809711 off
+# textboxarrow 0 2
+@魔女の手下
+～～～♪
+
+# se "SE_11618"
+# sedelay "SE_10131" 1
+# alpha 809711 0 0.5
+# move 3830001 3 0
+# alpha 3830001 1 0.5
+# mask 3830001 off
+# textboxarrow 0 2
+@兵士
+ら～ららら～！
+ふっふー！
+
+;;演出：兵士がアルマスへ襲い来る
+# se "SE_4000"
+# waitandnext 0.5
+
+# emotionbody 1008 6 3103811 50 250
+# effectpattern 1008 1 1
+# effectstart 1008
+# voice 1038 "almace_0042"
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 3830001 0 0.5
+# move 3103811 3 0
+# face 3103811 "angry"
+# alpha 3103811 1 0.5
+# mask 3103811 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+もうっ、なんなのよ！
+
+;;演出：攻撃エフェクト、アルマスに倒される兵士
+# textwindow "close"
+# alpha 3103811 0 0.5
+# move 3830001 3 0
+# alpha 3830001 1 0.5
+# mask 3830001 off
+# waitandnext 0.8
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 3000 1 0 0 0
+# effectstart 3000
+# waitandnext 0.5
+
+# se "SE_3001"
+# alpha 3830001 0 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+魔女の手下が出す音に合わせ
+兵士達の動きが激しくなっていく
+
+# voice 5013 "homura_0026"
+# alpha 3103811 0 0.5
+# move 3102011 2 0
+# face 3102011 "sad"
+# alpha 3102011 1 0.5
+# mask 3102011 on
+# move 3501311 4 0
+# face 3501311 "angry"
+# alpha 3501311 1 0.5
+# mask 3501311 on
+# textflame 1 1
+# textboxarrow 0 3
+@ほむら
+…兵士の数が増えてきたわ
+魔女の手下に呼ばれてきたのかしら
+
+# voice 1020 "sayaka_0037"
+# textboxarrow 0 1
+@さやか
+やっぱり罠だったのかなぁ
+
+# voice 3015 "kyoko_0007"
+# alpha 3501311 0 0.5
+# move 3301511 4 0
+# face 3301511 "angry"
+# alpha 3301511 1 0.5
+# mask 3301511 on
+# textboxarrow 0 3
+@杏子
+ま、こっちもハナから
+そのつもりで追っかけて来たんだ
+ぶっ倒してやりゃあいいさ
+
+# voice 5014 "mami_0004"
+# alpha 3102011 0 0.5
+# move 3501411 2 0
+# face 3501411 "normal"
+# alpha 3501411 1 0.5
+# mask 3501411 on
+# textboxarrow 0 1
+@マミ
+襲ってきたから倒す
+ふふ、わかりやすくていいわね
+
+# alpha 3501411 0 0.5
+# move 3103811 2 0
+# face 3103811 "normal"
+# alpha 3103811 1 0.5
+# mask 3103811 on
+# textboxarrow 0 1
+@アルマス
+みんな切り替え早いわね
+
+# voice 3015 "kyoko_0022"
+# face 3301511 "surprise"
+# textboxarrow 0 3
+@杏子
+なんだぁ？
+アルマスは怖気づいてんのか？
+
+# voice 1038 "almace_0009"
+# face 3103811 "angry"
+# textboxarrow 0 1
+@アルマス
+そんな訳ないじゃない
+暴れられるんなら
+とことんやってやるわよ！
+
+# alpha 3103811 0 0.5
+# alpha 3301511 0 0.5
+# move 3401111 3 0
+# face 3401111 "angry"
+# alpha 3401111 1 0.5
+# mask 3401111 off
+# textboxarrow 0 2
+@まどか
+みんな、気を付けてね！

@@ -1,0 +1,429 @@
+;;-----------------------------------------
+;;ファンキル学園8月
+;;2_1
+;;-----------------------------------------
+# script "lisp"
+# bgm "bgm002" 0
+# background "classroom01_culturefestival_daytime"
+;;-----------------------------------------
+;;ナーゲルリング
+# body 76
+# pos 76 3
+# scale 76 0.8 0
+# layer 76 3
+# mask 76 off
+# alpha 76 0 0
+# body 100611
+# alpha 100611 0 0
+;;フラベルム
+# body 501621
+# pos 501621 3
+# scale 501621 0.8 0
+# layer 501621 3
+# mask 501621 off
+# alpha 501621 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;背景：教室(文化祭・昼)
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2.5
+
+# alpha 76 1 0.5
+# face 76 "happy"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 1006 "nageruring_0003"
+@ナーゲルリング
+ご主人様っ、お嬢様っ！
+お待たせいたしました～♪
+
+# alpha 76 0 0.5
+# alpha 501621 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5016 "Flabellum_0030"
+@フラベルム
+ありがとうございます
+これは…素敵なデザートですね
+
+# move 76 2 0
+# mask 76 on
+# alpha 76 1 0.5
+# move 501621 4 0.5
+# mask 501621 on
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1006 "nageruring_0030"
+@ナーゲルリング
+光栄です♪
+みんなで一生懸命
+作ったんですよ！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 76 "normal"
+@ナーゲルリング
+マスターはいかがですか？
+
+# textflame 0 0
+@マスター
+うん、美味しいよ
+
+# se "SE_6505"
+# emotionbody 1000 3 76 10 180
+# effectpattern 1000 2 3
+# effectstart 1000
+# textflame 1 1
+# textboxarrow 0 1
+# face 76 "happy"
+@ナーゲルリング
+…わあ、褒めてくれて嬉しいです！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5016 "Flabellum_0040"
+@フラベルム
+なるほど、見た目だけでなく
+味もしっかりしています
+
+# textflame 1 1
+# textboxarrow 0 3
+@フラベルム
+マスターのように、
+メイドを下卑た目で見る豚には
+もったいない美味しさかと
+
+# effectskip 1000
+# se "SE_6514"
+# emotionbody 1001 9 76 50 180
+# effectpattern 1001 1 0
+# effectstart 1001
+# textflame 1 1
+# textboxarrow 0 1
+# face 76 "normal"
+# voice 1006 "nageruring_0008"
+@ナーゲルリング
+あ、あはは…
+
+;;演出：画面揺れ
+# shake 0 0.5
+;;ＳＥ：バシャッ！(水をこぼす音)
+# se "SE_9140"
+# waitandnext 0.8
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 501621 "surprise"
+@フラベルム
+あら…
+メイドが転倒して
+しまいましたね
+
+# textflame 1 1
+# textboxarrow 0 3
+@フラベルム
+あんな派手にこぼして…
+マスター、手を貸して
+差し上げましょう
+
+# textflame 0 0
+@マスター
+そうだね
+
+;;演出：画面揺れ
+# shake 0 0.5
+;;ＳＥ：バシャッ！(水をこぼす音)
+# se "SE_9141"
+# waitandnext 0.8
+
+# textflame 1 1
+# textboxarrow 0 3
+@フラベルム
+あ、またおひとり…
+
+;;演出：画面揺れ
+# shake 0 0.5
+;;ＳＥ：バシャッ！(水をこぼす音)
+# se "SE_9140"
+# waitandnext 0.8
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5016 "Flabellum_0028"
+@フラベルム
+…あの、いくらなんでも
+転びすぎではありませんか？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1006 "nageruring_0004"
+@ナーゲルリング
+ふっふっふ…
+ご心配には及びません！
+
+# se "SE_6521"
+# emotionbody 1002 10 76 -40 180
+# effectpattern 1002 4 0
+# effectstart 1002
+# textflame 1 1
+# textboxarrow 0 1
+# face 76 "happy"
+@ナーゲルリング
+あれは当店のイチ押しメニュー、
+"ドジっ娘ドリンク"の
+パフォーマンスですから♪
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 501621 "angry"
+# voice 5016 "Flabellum_0022"
+@フラベルム
+は？
+ドジっ娘ドリンク…？
+
+# effectskip 1002
+# textflame 1 1
+# textboxarrow 0 1
+# face 76 "normal"
+# voice 1006 "nageruring_0003"
+@ナーゲルリング
+私、考えたんです
+人はメイドという存在の
+どんなところに惹かれるのか
+
+# textflame 1 1
+# textboxarrow 0 1
+@ナーゲルリング
+健気に奉仕する姿
+愛想を振りまく姿
+どれも魅力的ではありますが
+
+# textflame 1 1
+# textboxarrow 0 1
+@ナーゲルリング
+一番の魅力はやっぱり…
+"ドジを踏んでしまう"ことです！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5016 "Flabellum_0028"
+@フラベルム
+はあ…？
+
+# textflame 1 1
+# textboxarrow 0 1
+@ナーゲルリング
+メイドが転び、
+やってしまいましたぁ～…と
+うるうる涙を浮かべる
+
+# textflame 1 1
+# textboxarrow 0 1
+@ナーゲルリング
+それを見たお客さんは、
+あの娘を笑顔にしてあげたい！と
+沸き立つ庇護欲を抑えられず
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 76 "angry"
+@ナーゲルリング
+次から次へと
+注文を重ねてしまうものなんです！
+
+# textflame 1 1
+# textboxarrow 0 3
+@フラベルム
+…そうなんですの？
+マスター
+
+# textflame 0 0
+@マスター
+さ、さあ…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 76 "normal"
+# voice 1006 "nageruring_0004"
+@ナーゲルリング
+ふふ…このメニューのおかげで、
+当店の売り上げは急上昇中！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ナーゲルリング
+このままいけば、
+豪華賞品は必ずや
+私達のもとに…！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ナーゲルリング
+あ、よかったらお二人も
+頼んでみませんか？
+ぜひこの魅力を実感してください！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 501621 "surprise"
+@フラベルム
+いえ、わたくしは結構
+普通の紅茶をお願いいたします
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1006 "nageruring_0032"
+@ナーゲルリング
+そ、そうですか…
+ただいまお持ちいたしますね！
+
+;;ＳＥ：タッタッタッ(ナーゲルリングが去る音)
+# se "SE_5575"
+;;ト書き：ナーゲルリング、画面から消える
+# textwindow "close"
+# alpha 76 0 0.5
+# waitandnext 0.7
+
+# move 501621 3 0.5
+# mask 501621 off
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 5016 "Flabellum_0019"
+@フラベルム
+はぁ…
+慌ただしい方ですね
+
+# se "SE_6502"
+# emotionbody 1004 2 501621 10 290
+# effectpattern 1004 1 1
+# effectstart 1004
+# textflame 1 1
+# textboxarrow 0 2
+@フラベルム
+…どうしました、マスター
+何かおかしいことでも？
+
+# textflame 0 0
+@マスター
+フラベルムも
+楽しんでるみたいで
+よかった、って思って
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 501621 "angry"
+# voice 5016 "Flabellum_0009"
+@フラベルム
+…は？
+どこをどう見たら
+そう見えるのですか？
+
+# textflame 1 1
+# textboxarrow 0 2
+@フラベルム
+わたくしが楽しんでいる
+ように見えるなど…
+また適当なことを――
+
+;;演出：画面揺れ
+;;ＳＥ：バッシャアアア！！(紅茶をこぼす音)
+# se "SE_9141"
+# bgm "stop"
+# shake 1 0.7
+# fadein "red" 0.5
+# waitandnext 1.1
+
+# textflame 1 1
+# textboxarrow 0 2
+@フラベルム
+………
+
+;;ト書き：↑紅茶をかけられ、怖い表情になるフラベルム
+# se "SE_6515"
+# emotionbody 1005 9 76 -50 100
+# effectpattern 1005 6 0
+# effectstart 1005
+# bgm "bgm006" 0
+# move 76 2 0
+# mask 76 on
+# alpha 76 1 0.5
+# move 501621 4 0.5
+# mask 501621 on
+# textflame 1 1
+# textboxarrow 0 1
+# face 76 "sad"
+# voice 1006 "nageruring_0023"
+@ナーゲルリング
+あ…あわわわわっ！
+紅茶が…
+やってしまいました…！！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ナーゲルリング
+あのっ、違うんですっ！
+わざとじゃなくて、
+本当に転んじゃって…！
+
+;;ト書き：笑顔でわなわなと怒るフラベルム
+# brightness 501621 0.7 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 501621 "normal"
+# voice 5016 "Flabellum_0010"
+@フラベルム
+…これはこれは…
+とっても香りの良い
+紅茶ですね…
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1006 "nageruring_0024"
+@ナーゲルリング
+ひっ…！！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5016 "Flabellum_0009"
+@フラベルム
+こうして頭から被れば、
+存分に香りを楽しめると
+言うわけですか…
+
+# textflame 0 0
+@マスター
+フラベルム、落ち着いて！
+わざとじゃないから！
+ね？
+
+# textflame 1 1
+# textboxarrow 0 3
+@フラベルム
+マスターは黙ってなさい
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5016 "Flabellum_0005"
+@フラベルム
+このお店は素晴らしい接客です…
+これは何か、"お礼"をしなくては
+いけませんね…？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1006 "nageruring_0038"
+@ナーゲルリング
+ごっ…
+ごめんなさ～～～いっ！！
+
+# fadeout "black" 1
+# waitandnext 1.2

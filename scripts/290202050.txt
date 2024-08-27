@@ -1,0 +1,437 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;２章２話　「エデンクライシス―覚醒―」
+;;第5話　タイトル：愚者の進行
+;;5_5
+;;スクリプト最後の背景：牢獄
+;;-----------------------------------------
+# script "lisp"
+# background "006_jail"
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;スイハ（声だけ）
+# body 401711
+# pos 401711 3
+# scale 401711 0.8 0
+# layer 401711 2
+# alpha 401711 0 0
+# mask 401711 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;フラガラッハ（声だけ）
+# body 101011
+# pos 101011 3
+# scale 101011 0.8 0
+# layer 101011 2
+# alpha 101011 0 0
+# mask 101011 off
+;;アロンダイト
+# body 100711
+# pos 100711 3
+# scale 100711 0.8 0
+# layer 100711 2
+# alpha 100711 0 0
+# mask 100711 off
+;;-----------------------------------------
+;;第5話　タイトル：愚者の進行
+;;//背景：牢獄
+# textwindow "close"
+# serif 1
+@兵士１
+よし、お前達はここだ！
+さっさと中に入れ！
+
+# se "SE_0656"
+# waitandnext 0.5
+
+# se "SE_0846"
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9943 "almace_navikan_0053"
+@アルマス
+そんなに乱暴に
+押さなくてもいいでしょっ
+
+# serif 1
+@兵士１
+フン！
+大人しくしていることだな
+
+;;//兵士が立ち去る
+# se "SE_0740"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 196 0 0.5
+# move 100711 3 0
+# face 100711 "normal"
+# alpha 100711 1 0.5
+# mask 100711 off
+# textboxarrow 0 2
+# textwindow "normal"
+# serif 0
+# voice 1007 "Arondaito_0007"
+@アロンダイト
+ここから逃げられるとは
+思わないことですね
+
+# textboxarrow 0 2
+@アロンダイト
+この檻はキル姫の攻撃にも耐えられる
+よう作られています
+
+# alpha 100711 0 0.5
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# voice 1036 "ragnarok_0002"
+@ラグナロク
+アロンダイト、あなたはこのままで
+良いと思っているの？
+
+# alpha 103611 0 0.5
+# move 100711 3 0
+# face 100711 "normal"
+# alpha 100711 1 0.5
+# mask 100711 off
+# textboxarrow 0 2
+# voice 1007 "Arondaito_0003"
+@アロンダイト
+私はマスターに忠実であり続けます
+それこそが私の騎士道
+
+# textboxarrow 0 2
+@アロンダイト
+皆さんはここで最後のときまで
+過ごして下さい
+それでは
+
+;;//アロンダイトが立ち去る
+# se "SE_0740"
+# textwindow "close"
+# alpha 100711 0 0.5
+# waitandnext 0.5
+
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+ちょっと！
+せめてロンギヌスに会わせなさいよ！
+
+# face 196 "normal"
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0042"
+@アルマス
+…仕方ないわね
+どうにかしてここから出ないとっ
+
+# move 103611 2 0
+# face 103611 "sad"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 196 4 0.5
+# mask 196 on
+# voice 1036 "ragnarok_0028"
+@ラグナロク
+バラバラに閉じ込められて
+しまったから、
+ネス達と話すこともできないわね…
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+こういうとき、ブリューナクが
+脱出経路を確保してくれてたら
+良かったのに…！
+
+# face 103611 "normal"
+# textboxarrow 0 1
+@ラグナロク
+彼女も万能ではないわ
+そこまで求めるのは酷よ
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0001"
+@アルマス
+誰か近くにいる！？
+いたら返事してっ
+
+;;フラガラッハ（声だけ）
+# serif 1
+# voice 1010 "furagaraha_0031"
+@フラガラッハ
+ごめんなさい、マスター…
+
+# face 196 "surprise"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0035"
+@アルマス
+フラガラッハ！
+もしかして隣にいるのっ？
+
+;;フラガラッハ（声だけ）
+# serif 1
+# voice 1010 "furagaraha_0015"
+@フラガラッハ
+たった一枚の壁に隔てられて…
+マスターに私の美貌をお見せできない
+なんて…悲劇ね
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+他は！
+他はいないのっ？
+
+# textboxarrow 0 1
+@ラグナロク
+もう少し構ってあげても
+いいんじゃない？
+
+;;フラガラッハ（声だけ）
+# serif 1
+# voice 1010 "furagaraha_0004"
+@フラガラッハ
+ふふふ
+いいのよ
+マスターは恥ずかしがり屋だから
+
+# face 196 "normal"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0015"
+@アルマス
+何でそんなに
+前向きな解釈ができるの？
+
+;;フラガラッハ（声だけ）
+# serif 1
+@フラガラッハ
+ちなみに、ここにはスイハもいるわ
+私に見惚れて
+声が出せなくなっているけれど
+
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0032"
+@ラグナロク
+スイハが無口なのは
+いつものことよ
+
+;;スイハ（声だけ）
+# serif 1
+# voice 4017 "suiha_0003"
+@スイハ
+私は大丈夫です
+
+;;フラガラッハ（声だけ）
+# serif 1
+# voice 1010 "furagaraha_0004"
+@フラガラッハ
+ふふふ
+クールなのね
+
+;;囚人（立ち絵無し）
+# serif 1
+@囚人
+スイハ…？
+あんた達、ひょっとして教会の
+キル姫なのかっ？
+
+# textboxarrow 0 3
+@アルマス
+向かいの牢屋にも誰かいるみたいね
+あなた、誰！？
+
+# serif 1
+@囚人
+早く助けてくれ！
+ロンギヌスに殺されちまうっ…
+
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0022"
+@ラグナロク
+ロンギヌスに…？
+どういうこと？
+あ…私はラグナロクよっ
+
+# serif 1
+@囚人
+ラグナロク様！？
+ああ！生きていたんですねっ
+良かった…
+
+# serif 1
+@囚人
+この町は…あの女中奏官に私物化
+されちまってるんですっ
+
+# serif 1
+@囚人
+あいつは私利私欲の塊だ！
+俺は…ここで死ぬわけには
+いかないのにっ…
+
+# textboxarrow 0 1
+@ラグナロク
+落ち着いて
+さっきロンギヌスに殺されるって
+言ったわよね
+
+# serif 1
+@囚人
+詳しいことは知らないんですけど…
+選定されなかった者はみんな、
+新世界のために殺されるって…
+
+# serif 1
+@囚人
+ここは殺される者達が一時的に
+閉じ込められるところらしいです…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+あいつっ…
+「最後のとき」ってそういう意味
+だったのね…！
+
+# textboxarrow 0 1
+@ラグナロク
+ロンギヌスがここに来るのなら、
+好都合かもしれない…
+
+# face 196 "normal"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0048"
+@アルマス
+…そうね
+そこが絶・好機かも
+
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0002"
+@ラグナロク
+ところで…
+あなたはどうして牢獄に
+入れられたの？
+
+# textboxarrow 0 3
+@アルマス
+私達みたく、モニカに楯突いたから？
+
+# serif 1
+@囚人
+あ、いえ…
+俺にそんな力はありませんから…
+
+# serif 1
+@囚人
+ただ…親のいない子を引き取って
+面倒見ていたんです
+
+# serif 1
+@囚人
+裕福ではないけど、何とか細々と
+食いつないできたんですよ
+みんな可愛い子達で…
+
+# serif 1
+@囚人
+それなのに、突然あいつの私兵が
+やってきて、賄賂を寄越せって
+
+# serif 1
+@囚人
+あの女中奏官への上納金だとか
+言ってました
+拒んだら、捕まって…
+
+# serif 1
+@囚人
+ああっ…！
+俺が死んだらあの子達は
+どうなっちまうんだよっ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 196 "angry"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0018"
+@アルマス
+モニカのやつ、
+何考えてんの…！
+
+# textwindow "close"
+# alpha 103611 0 0.5
+# alpha 196 0 0.5
+# waitandnext 0.5
+
+# move 103611 3 0
+# face 103611 "usual"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+…………
+
+;;ラグナロク（独白）
+# move 103611 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 103611 off
+@ラグナロク
+どういうこと…？
+今まで会ってきた
+インテグラルキラーズは…
+
+;;ラグナロク（独白）
+# textboxarrow 0 0
+@ラグナロク
+曲がりなりにも彼女達自身の正義に
+基づいて行動していた
+それなのに…
+
+;;ラグナロク（独白）
+# textboxarrow 0 0
+@ラグナロク
+ロンギヌスはモニカ中奏官の
+横暴を許して…それどころか
+言いなりになってるみたい…
+
+;;ラグナロク（独白）
+# face 103611 "normal"
+# textboxarrow 0 0
+@ラグナロク
+何かがおかしい…
+ロンギヌスは、本当にこの町に
+いるの？

@@ -1,0 +1,1087 @@
+;;-----------------------------------------
+;;SEAイベント不可思議仕儀ツークンフト1_1_0
+;;-----------------------------------------
+# script "lisp"
+# background "004_outland"
+# bgm "stop"
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 5
+# scale 196 0.8 0
+# layer 196 5
+# mask 196 off
+# alpha 196 0 0
+;;カシウス・誓約
+# body 5303111
+# pos 5303111 3
+# scale 5303111 0.8 0
+# layer 5303111 3
+# mask 5303111 off
+# alpha 5303111 0 0
+;;如意金箍棒
+# body 5203111
+# pos 5203111 3
+# scale 5203111 0.8 0
+# layer 5203111 3
+# mask 5203111 off
+# alpha 5203111 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：町
+# se "SE_6216"
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+# alpha 5303111 1 1
+;;wait 2秒
+# waitandnext 2
+
+# sestop "SE_6216"
+# voice 530311 "cassius_ca_0004"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@カシウス
+穏やかで、のどかで
+それでいて確かな人々の営みが
+感じられる町ね
+
+# textflame 0 0
+@
+町に到着したカシウスは
+早速周囲を見渡しながら歩く
+
+# textflame 0 0
+@
+それほど大きな規模ではないが
+人通りも多く活気が感じられる町並み
+
+# face 5303111 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@カシウス
+…………？
+
+# textflame 0 0
+@
+カシウスはそんな町並みの中で
+どったんがっしゃんと
+一際賑やかな場所があることに気付く
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# textflame 1 1
+# textboxarrow 0 2
+@カシウス
+この声は…
+
+# alpha 5303111 0 0.3
+# textflame 0 0
+@
+騒ぎとも表現できる
+その一画からの物音の中から
+カシウスは馴染みのある声に気付く
+
+;;捕獲後をシュールに
+# bgm "bgm034" 0
+# move 196 3 0.6
+# face 196 "angry"
+# alpha 196 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+くっ、一筋縄ではいかないわね
+けど、ここまで追い詰められたら
+もう逃げ場はないわよ！
+
+# serif 1
+@ビコウ
+キキ…
+
+# alpha 196 0 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+騒ぎを起こしていたのは
+アルマスと猿…ビコウだった
+
+# face 5303111 "normal"
+# alpha 5303111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@カシウス
+…………
+
+# alpha 5303111 0 0.3
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@ビコウ
+…キ！
+
+# face 5303111 "sad"
+# alpha 5303111 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@カシウス
+…………？
+
+;;演出：ビコウの視点に戻り、アルマスと対峙している様子
+# alpha 5303111 0 0.3
+# move 196 4 0
+# textwindow "close"
+# waitandnext 1
+
+;;走る
+# se "SE_0876"
+# serif 1
+@ビコウ
+キキィ…キッ！
+
+;;走る
+# se "SE_0876"
+# move 196 3 0.6
+# alpha 196 1 0.3
+;;wait 1秒
+# waitandnext 1
+
+# voice 9943 "almace_navikan_0036"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@アルマス
+甘いわね！
+その動きは読めてわぁあ！？
+
+;;演出：アルマスを飛び越えるビコウ
+# se "SE_10092"
+# scale 196 0.7 0.3
+# shake 0 0.5
+# waitandnext 1
+
+# se "SE_9430"
+# waitandnext 1
+
+# serif 1
+@ビコウ
+キキーッ！
+
+# voice 9943 "almace_navikan_0026"
+# face 196 "sad"
+# scale 196 0.8 0.7
+# serif 0
+# textboxarrow 0 2
+@アルマス
+…くっ、やるじゃない
+
+# serif 1
+@ビコウ
+キッキキ～
+
+# voice 9943 "almace_navikan_0011"
+# face 196 "angry"
+# serif 0
+# textboxarrow 0 2
+@アルマス
+でも、まだまだね！
+
+# serif 1
+@ビコウ
+キッ！？
+
+# serif 0
+# textboxarrow 0 2
+@アルマス
+その動きは読めていた
+私はそう言おうとしていたのよ！
+
+;;アルマス走る
+# se "SE_0876"
+# move 196 2 1
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+;;wait 1秒
+# waitandnext 1
+
+;;サウンドメモ　アルマス飛びつく
+# se "SE_9021"
+# move 196 1 0.5
+# scale 196 1 0.5
+# alpha 196 0 0.5
+;;wait 1秒
+# waitandnext 1
+
+;;尻もちみたいな音
+# se "SE_9347"
+# shake 1 1
+# waitandnext 2
+
+# serif 1
+@ビコウ
+キ、キィ…
+
+# bgm "stop"
+# waitandnext 1
+;;wait 1秒
+
+;;立ち上がるアルマス
+# voice 9943 "almace_navikan_0035"
+# se "SE_5000"
+# sedelay "SE_5200" 0.5
+# scale 196 0.8 0
+# face 196 "surprise"
+# move 196 3 0
+# alpha 196 1 0.3
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@アルマス
+ここは袋小路、逃げるなら一方向
+そこに罠を仕掛けておけば…え？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+ビコウ相手に勝ち誇った顔で
+解説を繰り広げていたアルマス
+
+# move 196 4 0.5
+# move 5303111 2 0
+# face 5303111 "normal"
+# alpha 5303111 1 0.3
+# textflame 0 0
+@
+その流れで一部始終を眺めていた
+カシウスとバッチリ目が合った
+
+# bgm "bgm002" 0
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+か、カシウス！？
+
+# voice 530311 "cassius_ca_0003"
+# textboxarrow 0 1
+@カシウス
+ええ、偽物ではないわ
+
+# textboxarrow 0 3
+@アルマス
+いや別に疑ってる訳じゃなくて…
+いるなら声かけてくれればいいのに！
+
+# textboxarrow 0 1
+@カシウス
+忙しそうだったもの
+
+# voice 9943 "almace_navikan_0042"
+# face 196 "sad"
+# textboxarrow 0 3
+@アルマス
+あー別にこれは…
+
+# serif 1
+@ビコウ
+キキー！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+『別に』という扱いに抗議するビコウ
+
+# face 196 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+ま、まぁ後で説明するわ
+それより、この町に来るなんて…
+何かの用事で来たの？
+
+# textboxarrow 0 1
+@カシウス
+見ているの
+
+# textboxarrow 0 3
+@アルマス
+何を？
+
+# textboxarrow 0 1
+@カシウス
+世界
+それは世界の在り方でもあり
+世界が導き出した――
+
+# voice 9943 "almace_navikan_0055"
+# textboxarrow 0 3
+@アルマス
+要は旅の途中ってことね
+
+# textboxarrow 0 1
+@カシウス
+それもひとつの答え…
+
+# voice 9943 "almace_navikan_0003"
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+そろそろ約束の時間だわ…
+ね、ちょっと付き合ってくれない？
+
+# textflame 0 0
+@
+特に用事があるという訳ではない
+カシウスはアルマスの誘いに首肯する
+
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+ほら、ビコウも
+
+# serif 1
+@ビコウ
+キキッ！
+
+;;演出：移動の暗転
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：町
+# background "004_outland"
+# move 196 5 0
+# scale 196 0.7 0
+# alpha 196 0 0
+# alpha 5303111 0 0
+# waitandnext 0.2
+
+# bgm "bgm003" 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;アルマスが走ってくる
+# se "SE_0876"
+# move 196 3 0.5
+# face 196 "angry"
+# scale 196 0.8 0.5
+# alpha 196 1 0.3
+;;wait 1秒
+# waitandnext 1
+
+# voice 9943 "almace_navikan_0016"
+# textwindow "nomal"
+# textboxarrow 0 2
+@アルマス
+ちょっと待って！
+そもそもケンカの原因はなんなの？
+そんな取っ組み合いするほど？
+
+# textflame 0 0
+@
+約束の時間だ、と歩き始めてすぐ
+アルマスは道端で起きていた
+いざこざに首を突っ込んでいた
+
+# face 196 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+お互い引けない物はあると思うけど、
+傷つけあうほどのことはないはずよ
+ちゃんと話し合って
+
+# voice 9943 "almace_navikan_0035"
+# face 196 "surprise"
+# textboxarrow 0 2
+@アルマス
+え、話し合った上でのこと…？
+
+# textboxarrow 0 2
+@アルマス
+ま、まぁそういうこともあるわね
+けど、手を出すのはよくないわ
+
+# face 196 "angry"
+# textboxarrow 0 2
+@アルマス
+とにかく、このケンカは私が
+預かるからね、今日はもう終わり！
+
+# textflame 0 0
+@
+アルマスに圧され
+ケンカをしていた当事者達は
+すごすごと引き下がって行った
+
+# alpha 196 0 0.3
+# move 5303111 3 0
+# alpha 5303111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@カシウス
+…………
+
+# face 196 "normal"
+# alpha 196 1 0.3
+# alpha 5303111 0 0.3
+# textboxarrow 0 2
+@アルマス
+待たせたわね
+それじゃ行きましょうか
+
+;;演出：移動の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# move 196 4 0
+# scale 196 0.7 0
+# alpha 196 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;歩く→
+# face 196 "surprise"
+# se "SE_0719"
+# alpha 196 1 0.3
+;;wait 1秒
+# waitandnext 1
+
+;;走る（止まる）→
+# se "SE_0876"
+# move 196 3 0.5
+;;wait 0.5秒
+# waitandnext 0.5
+
+;;かがむ
+# voice 9943 "almace_navikan_0001"
+# face 196 "angry"
+# se "SE_5200"
+# scale 196 0.8 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@アルマス
+ちょっと大丈夫！？
+意識は…あるみたいね
+貧血か何かかしら
+
+# textflame 0 0
+@
+再度歩き始めたアルマス達だったが
+目の前で突然倒れてしまった老婆を
+アルマスが慌てて抱きかかえた
+
+# voice 9943 "almace_navikan_0042"
+# face 196 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+荷物も多かったみたいだし
+疲れが出たのかしら…そこのお店で
+少し休ませてもらいましょう
+
+# move 196 2 1
+# textboxarrow 0 0
+;;wait 1秒
+# waitandnext 1
+
+;;歩く→
+# se "SE_0719"
+;;wait 1秒
+# waitandnext 1
+
+;;扉ノック→
+# se "SE_0679"
+;;wait 1秒
+# waitandnext 1
+
+;;扉開く
+# face 196 "normal"
+# se "SE_0914"
+# move 196 3 0.5
+# textboxarrow 0 2
+@アルマス
+ごめんくださーい
+かくかくしかじかで…
+
+# voice 9943 "almace_navikan_0044"
+# face 196 "happy"
+# textboxarrow 0 2
+@アルマス
+うん、ありがと
+それじゃあこの人のことお願いね
+
+# alpha 196 0 0.3
+# textflame 0 0
+@
+優しい店の主人に老婆を託し
+再びカシウスのもとへ戻るアルマス
+
+# move 196 5 0
+# move 5303111 2 0
+# alpha 5303111 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+…………
+
+;;サウンドメモ　戻ってくるアルマスの足音
+# se "SE_0719"
+# move 196 4 0.3
+# face 196 "normal"
+# alpha 196 1 0.3
+;;wait 1秒
+# waitandnext 1
+
+# textboxarrow 0 3
+@アルマス
+お待たせ
+ちょっと心配だけど
+あの店の人は頼りになるから大丈夫よ
+
+# textboxarrow 0 1
+@カシウス
+そう…
+
+;;演出：移動の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.7
+
+# face 196 "surprise"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 3
+@アルマス
+あれ、あなた
+どうしてこんなところに？
+
+# textflame 0 0
+@
+アルマスは通りの端で
+きょろきょろと周りを見ていた
+女の子に声を掛けた
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textflame 1 1
+@女の子
+あ、アルマスおねえちゃん！
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+@アルマス
+まだお迎えが来る時間じゃないわよね
+
+# serif 1
+@女の子
+う、うん…ちょっとはぐれちゃって
+
+# voice 9943 "almace_navikan_0004"
+# face 196 "happy"
+# serif 0
+# textboxarrow 0 3
+@アルマス
+そう、それは
+絶・グッドタイミングね！
+
+# face 196 "normal"
+# serif 0
+# textboxarrow 0 3
+@アルマス
+私達もこれから行くところなの
+一緒に向かいましょう？
+
+# serif 1
+@女の子
+わかった…
+ありがとうアルマスおねえちゃん
+
+;;子供連れて一緒に歩いている感じ
+# se "SE_0719"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+;;wait 1秒
+# waitandnext 1
+
+# se "SE_0719"
+# textflame 0 0
+# textwindow "nomal"
+@
+女の子を加え、アルマス一行は
+再び歩き出す
+
+# textflame 0 0
+@
+先頭を行くアルマス
+それに付いていくカシウス
+女の子はビコウが相手をしていた
+
+# face 5303111 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+…………
+
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+腑に落ちないことがあるって顔ね
+約束の時間だって言ったのに
+寄り道ばかりって言いたいんでしょ？
+
+# textboxarrow 0 3
+@アルマス
+まぁいいのよ
+向こうも理解してるし
+
+# textboxarrow 0 3
+@アルマス
+それに、この町に必要なことだから
+
+# textboxarrow 0 1
+@カシウス
+必要なこと？
+
+# voice 9943 "almace_navikan_0048"
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+この町は大きい割に見ての通り
+のどかで過ごしやすくていい町なの
+定住者もすごく多くてね
+
+# textboxarrow 0 3
+@アルマス
+けど、のどかってことは
+自然に囲まれてるってことで
+害獣とか危険も隣り合わせなの
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# voice 530311 "cassius_ca_0022"
+# textboxarrow 0 1
+@カシウス
+危険が…？
+
+# bgm "bgm004" 0
+# voice 9943 "almace_navikan_0042"
+# face 196 "sad"
+# textboxarrow 0 3
+@アルマス
+それに隣町との距離も結構あって
+最近はあちこちで魔獣も出るから
+町と町の交流があまりなくて…
+
+# textboxarrow 0 3
+@アルマス
+キル姫を警護につけた商人が
+時々やってくるくらいでなんだか
+町が閉鎖的な雰囲気になっちゃってね
+
+# face 5303111 "sad"
+# textboxarrow 0 1
+@カシウス
+でも、町の中は平穏そのもの
+特に問題はないように見えるけれど
+
+# textboxarrow 0 3
+@アルマス
+それがそうでもないのよ
+知らず知らずのうちに心の余裕が
+なくなっていざこざが起こりがちなの
+
+# textboxarrow 0 3
+@アルマス
+余裕がなければ助け合いの精神も
+それどころじゃないってなっちゃう
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+さっきのお店の人みたいに
+外との交流がある人はまだ
+なんとか頼めばよくしてくれるけどね
+
+# textboxarrow 0 3
+@アルマス
+カシウスの言う通り
+平穏は平穏なのかもしれないけれど
+不穏だって目に見えない物だから…
+
+# textboxarrow 0 1
+@カシウス
+見ているだけでは理解できない
+けど、見なければ識ることもできない
+
+# textboxarrow 0 3
+@アルマス
+まぁ、そういうことで私は
+ここに留まってできることをしてる
+って訳なのよ
+
+# textboxarrow 0 1
+@カシウス
+…………
+
+# textflame 0 0
+@
+考え込む仕草をするカシウスに
+アルマスはいつものこと、と思い
+話を先に進める
+
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+で、このビコウを
+追いかけてたのは
+
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+私と同じように
+この町で手伝いをしてる
+如意金箍棒の頼みって話なの
+
+# serif 1
+@ビコウ
+キキーッ！
+
+# voice 530311 "cassius_ca_0022"
+# face 5303111 "surprise"
+# serif 0
+# textboxarrow 0 1
+@カシウス
+ビコウと追いかけっこを頼まれる…？
+
+# voice 9943 "almace_navikan_0041"
+# face 196 "sad"
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# serif 0
+# textboxarrow 0 3
+@アルマス
+いや別に追いかけっこを
+頼まれてた訳じゃないけど…
+
+# serif 1
+@女の子
+あ、もうすぐだね！
+
+# alpha 196 0 0.3
+# alpha 5303111 0 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+そんなやり取りをしていた
+アルマス達に声が掛かる
+
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+# face 5203111 "surprise"
+# alpha 5203111 1 0.3
+# voice 520311 "nyoikinkobou_c_0023"
+# textflame 1 1
+# textboxarrow 0 2
+@如意金箍棒
+わ、心配してたんだよ！
+
+;;走る（止まる）→抱きかかえる
+# se "SE_0876"
+;;wait 1秒
+# waitandnext 1
+
+# se "SE_0648"
+# textflame 0 0
+@
+如意金箍棒は女の子へ
+一目散に駆け寄り抱きしめる
+
+# voice 9943 "almace_navikan_0004"
+# move 5203111 2 0.5
+# face 196 "normal"
+# alpha 196 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+ビコウを捕まえた帰りに出会ったの
+大事にならずに済んでよかったわ
+
+# voice 520311 "nyoikinkobou_c_0030"
+# face 5203111 "happy"
+# textboxarrow 0 1
+@如意金箍棒
+そう、アルマスちゃんが
+見つけてくれたのね、ありがとう
+
+# serif 1
+@ビコウ
+キキッ
+
+# serif 0
+# textboxarrow 0 1
+@如意金箍棒
+ビコウも？
+ふふ、ありがとう
+
+# voice 9943 "almace_navikan_0015"
+# face 196 "angry"
+# serif 0
+# textboxarrow 0 3
+@アルマス
+あんたは何もしてないでしょ
+
+# face 5203111 "surprise"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@如意金箍棒
+あれ、もしかして…？
+
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+ああ、カシウス？
+カシウスもさっき町で出会ったの
+さっき着いたばかりみたい
+
+# face 5203111 "happy"
+# textboxarrow 0 1
+@如意金箍棒
+そうだったのねっ
+とっても素敵な町だから
+ぜひゆっくりしていってね
+
+# voice 530311 "cassius_ca_0003"
+# face 5303111 "normal"
+# move 5303111 3 0
+# alpha 5303111 1 0.3
+# alpha 5203111 0 0.3
+# alpha 196 0 0.3
+# textboxarrow 0 2
+@カシウス
+ええ、見させてもらうわ
+
+# voice 520311 "nyoikinkobou_c_0022"
+# face 5203111 "surprise"
+# alpha 5303111 0 0.3
+# alpha 5203111 1 0.3
+# alpha 196 1 0.3
+# textboxarrow 0 1
+@如意金箍棒
+見る…？
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+町をいろいろ見て回るってことよ
+それより、そろそろ時間でしょ？
+
+# face 5203111 "surprise"
+# textboxarrow 0 1
+@如意金箍棒
+うん、何人かはもうお迎えが来てる
+この子の親はまだ、だけど…
+
+# serif 1
+@女の子
+うち、いつも遅いもん
+
+# face 5203111 "sad"
+# serif 0
+# textboxarrow 0 1
+@如意金箍棒
+うん、あなたのお父さんお母さん、
+それに大人はみんな、お仕事とか
+いろいろあるからね
+
+# voice 520311 "nyoikinkobou_c_0011"
+# serif 0
+# textboxarrow 0 1
+@如意金箍棒
+ちょっぴり寂しくても…
+勝手にどこか行っちゃだめだよ？
+
+# serif 1
+@女の子
+うちは…うん、そうだね
+
+# voice 9943 "almace_navikan_0035"
+# serif 0
+# textboxarrow 0 3
+@アルマス
+あれ…？
+――まぁいいわ
+
+# layer 5303111 2
+# alpha 5303111 1 0.3
+# alpha 5203111 0 0.3
+# alpha 196 0 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@カシウス
+…………
+
+# face 5203111 "normal"
+# move 5303111 2 0.5
+# move 5203111 4 0
+# layer 5203111 4
+# mask 5203111 on
+# alpha 5203111 1 0.3
+# textboxarrow 0 3
+@如意金箍棒
+という訳で
+手が空いてきたから
+ビコウのことはもう大丈夫
+
+# textboxarrow 0 3
+@如意金箍棒
+面倒見てくれてありがとうね
+
+# textboxarrow 0 1
+@カシウス
+面倒を見るとは…
+戦うこと…
+
+# textboxarrow 0 3
+@如意金箍棒
+？
+
+# alpha 5203111 0 0.3
+# move 196 4 0
+# face 196 "surprise"
+# alpha 196 1 0.3
+# textboxarrow 0 3
+@アルマス
+な、なんでもないわ
+それじゃまた明日ね！
+
+# voice 520311 "nyoikinkobou_c_0004"
+# alpha 196 0 0.3
+# alpha 5303111 0 0.3
+# move 5203111 3 0
+# mask 5203111 off
+# alpha 5203111 1 0.3
+# textboxarrow 0 2
+@如意金箍棒
+うん、また明日
+
+;;演出：場面転換の暗転
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 5203111 0 0
+# face 196 "normal"
+# alpha 196 1 0
+# alpha 5303111 1 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 9943 "almace_navikan_0001"
+# textwindow "nomal"
+# textboxarrow 0 3
+@アルマス
+それで？
+泊まるとことか決めてないでしょ？
+紹介するから付いて来て！
+
+# textboxarrow 0 1
+@カシウス
+…………
+
+# alpha 196 0 0.3
+# move 5303111 3 0.5
+# textflame 0 0
+@
+ポンポンと話を進めるアルマスに
+考え事をしながら付いていくカシウス
+
+# textflame 0 0
+@
+思考を止めないことこそが
+カシウスという存在であるのだが…
+
+# face 5303111 "sad"
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+;;もやもやフレーム
+# move 5303111 3 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@カシウス
+アルマスと出会ってからのこともそう
+
+# se "bgm602_basic_on_1"
+;;もやもやフレーム
+@カシウス
+この思考は巡るでなく
+考えれば考えるほど…
+
+;;もやもやフレーム
+@カシウス
+何か…
+澱みのようなものが溜まっていく…
+
+# fadeout "black" 2
+# waitandnext 2

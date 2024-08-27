@@ -1,0 +1,314 @@
+;;第１話「再開」戦闘後
+# script "lisp"
+# background "classroom03_daytime"
+# bgmfile "bgm185" "BgmGakuen003" 0
+;;ロンギ制服
+# body 147
+# pos 147 3
+# scale 147 0.8 0
+# layer 147 1
+# alpha 147 0 0
+;;さくら魔法服
+# body 143
+# pos 143 3
+# scale 143 0.8 0
+# layer 143 2
+# mask 143 off
+# face 143 "angry"
+;;ケロちゃん
+# body 144
+# pos 144 4
+# scale 144 0.8 0
+# layer 144 3
+# mask 144 off
+# alpha 144 0 0
+# body 146
+# pos 146 4
+# scale 146 0.8 0
+# layer 146 4
+# mask 146 off
+# alpha 146 0 0
+;;ロンギ魔法服
+# body 300191
+# pos 300191 3
+# layer 300191 5
+# mask 300191 off
+# scale 300191 0.8 0
+# alpha 300191 0 0
+;;さくらボイス用
+# body 602311
+# alpha 602311 0 0
+# imageset 0 "bg_white"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imagescale 0 2 0
+# textflame 0 0
+@
+見知らぬ少女から
+繰り出される
+見たこともない技の数々
+
+# textflame 0 0
+@
+見知らぬ少女の姿に
+マスターとロンギヌスは
+圧倒されていたが…
+
+# textflame 0 0
+@マスター
+おかしい
+どう見ても押してるのに
+どうして…
+
+# textflame 0 0
+@
+追い込まれているのは生徒だった
+だが、終わらせられる瞬間が来ても
+少女はそうしなかった
+
+# textflame 0 0
+@
+いや、それどころか
+とどめを刺すのを
+避けているようにも見えた
+
+# alpha 143 0 0.5
+# alpha 147 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 147
+# voice 3001 "ronginusu_0019"
+@ロンギヌス
+ど、どうして！？
+
+# alpha 143 1 0.5
+# alpha 147 0 0.5
+# textflame 0 0
+@
+それに気づいたのか、生徒が
+いっきに攻勢に出てきたことで
+少女は叫んだ
+
+;;さくら
+# textflame 1 1
+# textboxarrow 0 2
+# chara 143
+@さくら
+早く、逃げてっ！
+
+;;↑緊急な事態ですので、ため口としております。
+# face 147 "surprise"
+# alpha 143 0 0.5
+# alpha 147 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 147
+# voice 3001 "ronginusu_0022"
+@ロンギヌス
+！？
+
+# textflame 0 0
+@マスター
+しかたがない…
+ロンギヌスは逃げてくれ
+
+# textflame 0 0
+@マスター
+僕がここに残って
+あの子に何かあっても
+食い止めるから
+
+# face 147 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 147
+@ロンギヌス
+…………
+
+# face 147 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 147
+# voice 3001 "ronginusu_0009"
+@ロンギヌス
+で、できません
+あの子が戦っているのに
+それにマスターだって…
+
+# textflame 0 0
+@
+ロンギヌスは恐怖を感じつつ
+首を振った
+
+# serif 0
+# textwindow "close"
+# move 147 3 0
+# serif 1
+# textwindow "moya"
+# textboxarrow 1 0
+# chara 147
+@ロンギヌス
+私達を助けるために必死なのに
+私だけ、私だけ助かるなんて…
+
+# move 147 3 0
+# serif 1
+# textwindow "moya"
+# textflame 1 1
+# textboxarrow 1 0
+# chara 147
+@ロンギヌス
+どうにかして、助けたい！
+私達のために戦ってくれている
+あの子を…！
+
+# move 147 3 0
+# serif 1
+# textwindow "moya"
+# textflame 1 1
+# textboxarrow 1 0
+# chara 147
+@ロンギヌス
+私はあの子の力になりたい…！
+あんな風になりたい
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+それはロンギヌスの心からの願い
+その瞳に映る少女への憧れ
+
+# textflame 0 0
+@
+想いは同じく救いたいと
+願っている少女の存在と共鳴し
+そして…
+
+# bgm "stop"
+;;画面フラッシュ2回くらい
+;;ウエイトを入れる
+;;徐々に白は背景全画面にだし一瞬、全白にしてから背景を既存のものに
+;;クロスフェードでロンギヌス制服立ち絵を魔法少女コス立ち絵に変更
+;;画面フラッシュ１回（シュパーンとなるイメージ）
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# se "SE_9158"
+# fadein "white" 0.5
+# waitandnext 0.6
+
+# se "SE_9158"
+# fadein "white" 0.5
+# waitandnext 1
+
+# se "SE_0624"
+# fadeout "white" 1.5
+# waitandnext 1.5
+
+# envbody 1000 11 0
+# effectpattern 1000 2 0
+# effectstart 1000
+# alpha 147 0 0
+# alpha 300191 1 0
+# face 300191 "angry"
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 2.2
+
+# se "SE_9132"
+# effectskip 1000
+# fadein "white" 0.5
+# waitandnext 1
+
+# bgmfile "bgm183" "BgmGakuen003" 0
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@マスター
+えっ、ロンギヌス…
+その姿は？
+
+# emotionbody 1001 1 300191 20 270
+# effectpattern 1001 2 0
+# effectstart 1001
+# face 300191 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 300191
+# voice 3001 "ronginusu_0023"
+@ロンギヌス
+えっ、ええっ！？
+
+# effectskip 1001
+# face 143 "surprise"
+# alpha 143 1 0.5
+# alpha 146 1 0.5
+# alpha 300191 0 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 146
+# voice 9966 "cckero_g_0022"
+@ケロちゃん
+おい、さくら…あの嬢ちゃん
+いきなり光ったかと思ったら
+見覚えのある服になったで！？
+
+# face 143 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 143
+# voice 60231 "ccsakura_g_battle_0008"
+@さくら
+ケロちゃん！
+…きゃっ！？
+
+# alpha 146 0 0.5
+# alpha 144 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+# voice 9966 "cckero_g_0045"
+@ケロちゃん
+さくらっ！？
+
+# face 300191 "angry"
+# se "SE_14701"
+# alpha 143 0 0.5
+# alpha 144 0 0.5
+# alpha 300191 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 300191
+@ロンギヌス
+危ないっ！
+
+# textflame 0 0
+@
+ロンギヌスは自分の身を
+かえりみずに暴れる生徒と
+二人の間に割って入る
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 300191
+# voice 3001 "ronginusu_0029"
+@ロンギヌス
+えーい！！
+
+# se "SE_8009"
+# textflame 0 0
+@
+閃光の中で
+ロンギヌスの一撃が
+暴れる生徒に見事に決まった
+;;白フェードアウト
+;;仕様的な問題がありましたら白フェードの後で黒フェードを入れる形で終了
+
+# fadeout "white" 1
+# waitandnext 1.5
+

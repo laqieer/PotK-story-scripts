@@ -1,0 +1,271 @@
+;;----------------------------------------------
+;;100213101
+;;タイトル：ケアフル・シューター 10 戦闘前
+;;----------------------------------------------
+# script "lisp"
+# background "angel_world"
+# bgm "bgm029_030" 0
+;;ムー
+# body 161
+# pos 161 3
+# scale 161 0.6 0
+# layer 161 5
+# mask 161 off
+# alpha 161 0 0
+;;レーヴァ
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# layer 3100211 2
+# mask 3100211 on
+# alpha 3100211 0 0
+# face 3100211 "angry"
+;;ヘレナ
+# body 3302811
+# pos 3302811 3
+# scale 3302811 0.8 0
+# layer 3302811 3
+# mask 3302811 off
+# alpha 3302811 1 0
+;;ニール
+# body 162
+# pos 162 3
+# scale 162 0.6 0
+# layer 162 5
+# mask 162 off
+# alpha 162 0 0
+;;ヴァナルカンド
+# body 3601111
+# pos 3601111 1
+# scale 3601111 0.8 0
+# layer 3601111 4
+# mask 3601111 on
+# alpha 3601111 0 0
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;剣閃（ヘレナ）
+# effectbody 2000 2 -50 0 1
+;;剣閃（ヴァナル）
+# effectbody 3000 4 50 0 3
+;;◆背景：ハルモニア---------------------------------------------
+# textflame 1 1
+# textboxarrow 0 2
+# face 3302811 "normal"
+# voice 3028 "herena_a_0004"
+# chara 3302811
+@ヘレナ
+磔にしてやろう…くふっ
+
+;;ヘレナ
+# textwindow "close"
+# se "SE_5204"
+# leftout 3302811 0.3
+# waitandnext 0.3
+
+# voice 3028 "herena_a_battle_0001"
+# alpha 3100211 1 0.5
+# pos 3302811 5
+# mask 3302811 on
+# rightin 3302811 0.5
+# waitandnext 0.5
+
+# face 3302811 "angry"
+# face 3100211 "sad"
+# effectstart 2000
+# se "SE_4759"
+# shake 0 0.6
+# fadein "white" 0.5
+# leftout 3100211 0.5
+# alpha 3302811 0 0.5
+# waitandnext 0.5
+
+# se "SE_9146"
+# alpha 3601111 1 0.5
+# pos 3100211 4
+# alpha 3100211 1 0
+# rightin 3100211 0.5
+# waitandnext 0.5
+
+;;ヴァナル
+# face 3100211 "surprise"
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 360111 "vanargand_t_0004"
+# chara 3601111
+@ヴァナルガンド
+すっかり形勢が逆転しましたね
+せいっ
+
+# textwindow "close"
+# voice 360111 "vanargand_t_battle_0001"
+# face 3601111 "angry"
+# move 3601111 3 0.1
+# effectstart 3000
+# waitandnext 0.1
+
+# face 3100211 "surprise"
+# se "SE_4759"
+# shake 1 0.6
+# fadein "white" 0.5
+# rightout 3100211 0.6
+# alpha 3601111 0 0.6
+# waitandnext 0.6
+
+# se "SE_9146"
+# pos 3100211 3
+# face 3100211 "sad"
+# leftin 3100211 0.4
+# waitandnext 0.4
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100211 "angry"
+# voice 310021 "revatein_ge_battle_0005"
+# chara 3100211
+@レーヴァテイン
+くっ…
+
+# alpha 3100211 0 0.5
+# alpha 161 1 0.5
+# move 161 3 2
+# textwindow "toge"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9953 "mwu_0045"
+# chara 161
+@ムー
+何やってんだ、ヘレナ！
+敵に操られてんじゃねえ！！
+
+# move 161 3 2
+# textwindow "toge"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 161
+@ムー
+レヴァも、
+もちっと気合い入れて戦えよ！
+さっきから防戦一方じゃねえか！
+
+# textwindow "normal"
+# alpha 161 0 0.5
+# pos 3302811 4
+# face 3302811 "normal"
+# mask 3302811 on
+# alpha 3302811 1 0.5
+# pos 3601111 2
+# mask 3601111 on
+# alpha 3601111 1 0.5
+# pos 162 5
+# alpha 162 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 3601111 "normal"
+# voice 360111 "vanargand_t_0007"
+# chara 3601111
+@ヴァナルガンド
+反撃の隙を与えはしません！
+…この指輪、初めて使いましたけれど
+これほどの力があるとは
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9952 "nir_0038"
+# chara 162
+@ニール
+逃げて、レーヴァ！
+ヘレナは指輪の力で支配されてるのよ
+どうしようもないわ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 162
+@ニール
+アタチ達のことは放っておいて
+ここは退くのが一番よ！
+
+# alpha 3601111 0 0.5
+# alpha 3302811 0 0.5
+# alpha 162 0 0.5
+# alpha 161 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9953 "mwu_0061"
+# chara 161
+@ムー
+ニールも弱気な発言してんじゃねえ！
+レヴァ！お前の本気は
+こんなもんじゃねえだろうが！？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 161
+@ムー
+またヘレナをボコッちまうのは
+気が引けるが、全力でやりゃ
+二人相手でもいけるだろ！？
+
+# textwindow "close"
+# move 161 4 0.5
+# pos 3100211 3
+# mask 3100211 off
+# alpha 3100211 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100211 "angry"
+# voice 310021 "revatein_ge_0027"
+# chara 3100211
+@レーヴァテイン
+……………………
+
+# move 161 4 0
+# textwindow "toge"
+# se "SE_4756"
+# shake 0 0.5
+# fadein "white" 0.3
+# textflame 1 1
+# voice 9953 "mwu_0049"
+# textboxarrow 0 3
+# chara 161
+@ムー
+だああああ…！
+今日のお前、腑抜けてばっかだぞ
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100211 "normal"
+# voice 310021 "revatein_ge_0085"
+# chara 3100211
+@レーヴァテイン
+黙って
+…きっと、もう少しよ
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0022"
+# chara 161
+@ムー
+あん…？
+
+# alpha 161 0 0.3
+# alpha 3100211 0 0.3
+# pos 3601111 3
+# mask 3601111 off
+# alpha 3601111 1 0.3
+# move 3601111 3 0
+# textwindow "toge"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3601111 "angry"
+# voice 360111 "vanargand_t_0029"
+# chara 3601111
+@ヴァナルガンド
+私の前に立ったこと、後悔しなさい！

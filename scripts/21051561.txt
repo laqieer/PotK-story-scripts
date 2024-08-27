@@ -1,0 +1,341 @@
+;;-----------------------------------------
+;;ファンキル　2020ウェディングイベントシナリオ
+;;Will you marry us?
+;;【EP.5】予期せぬ参戦者
+;;EP5_1
+;;スクリプト最後の背景：ハルモニア市街地
+;;-----------------------------------------
+# script "lisp"
+# background "400_angel_town_daytime"
+# bgmfile "bgm334_335" "BgmWedding001" 0
+;;-----------------------------------------
+;;レーヴァテイン
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# layer 3100211 2
+# alpha 3100211 0 0
+# mask 3100211 off
+;;ムー
+# body 161
+# pos 161 3
+# scale 161 0.6 0
+# layer 161 3
+# alpha 161 0 0
+# mask 161 off
+;;ソロモンウェディング
+# body 3503131
+# pos 3503131 3
+# scale 3503131 0.8 0
+# layer 3503131 2
+# alpha 3503131 0 0
+# mask 3503131 off
+;;カシウス・獣刻・ウロボロス　ウェディングver.
+# body 3303131
+# pos 3303131 3
+# scale 3303131 0.8 0
+# layer 3303131 2
+# alpha 3303131 0 0
+# mask 3303131 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;【EP.5】予期せぬ参戦者
+;;//背景：ハルモニア市街地
+# move 3100211 3 0
+# face 3100211 "normal"
+# alpha 3100211 1 0
+# mask 3100211 off
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+この辺で騒ぎが
+あったみたいだけど…
+
+# face 3100211 "surprise"
+# textboxarrow 0 2
+@レーヴァテイン
+…ん？
+
+;;？？？（ムー）
+# serif 1
+@？？？
+いだっ、いだだだだ！！
+やめろっ、俺を引っ張るなっ！
+いてててて…！！
+
+# se "SE_6502"
+# emotionbody 1001 2 3100211 10 290
+# effectpattern 1001 1 1
+# effectstart 1001
+# serif 1
+# textwindow "close"
+# serif 0
+# face 3100211 "normal"
+# textboxarrow 0 2
+@レーヴァテイン
+これって…ムーの声？
+何をやってるの？
+
+;;//ＳＥ：タッタッタッ（レーヴァテインが走る音）
+# se "SE_0876"
+# textwindow "close"
+# leftout 3100211 0.5
+# waitandnext 0.5
+
+;;//演出：場面転換
+;;//背景：ハルモニア市街地
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 3100211 0 0
+# move 3303131 1 0
+# face 3303131 "angry"
+# alpha 3303131 1 0
+# mask 3303131 on
+# move 161 3 0
+# alpha 161 1 0
+# mask 161 on
+# move 3503131 5 0
+# face 3503131 "angry"
+# alpha 3503131 1 0
+# mask 3503131 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ムー
+いたいいたいいたいっ！！
+やめろーっ、放せーっ！
+
+# textboxarrow 0 1
+@カシウス
+あなたが指輪を渡すまで、
+絶対に放さないっ…
+
+# textboxarrow 0 3
+@ソロモン
+そうよ！
+おとなしく指輪を
+渡しなさいっ…！
+
+# voice 310021 "revatein_ge_0002"
+# alpha 3303131 0 0.5
+# alpha 161 0 0.5
+# alpha 3503131 0 0.5
+# move 3100211 3 0
+# face 3100211 "normal"
+# alpha 3100211 1 0.5
+# mask 3100211 off
+# textboxarrow 0 2
+@レーヴァテイン
+…なにやってるの、あなたたち？
+
+# emotionbody 1002 10 161 -60 180
+# effectpattern 1002 4 3
+# effectstart 1002
+# voice 9953 "mwu_0048"
+# alpha 3100211 0 0.5
+# move 3303131 1 0
+# face 3303131 "angry"
+# alpha 3303131 1 0.5
+# mask 3303131 on
+# move 161 3 0
+# alpha 161 1 0.5
+# mask 161 on
+# textboxarrow 0 2
+# move 3503131 5 0
+# face 3503131 "angry"
+# alpha 3503131 1 0.5
+# mask 3503131 on
+@ムー
+おおっ！レヴァ、
+来てくれたんだなっ！
+
+# effectskip 1002
+# textboxarrow 0 2
+@ムー
+た、助けてくれ！
+こいつら、ハルモニア兵に
+操られてるんだっ！
+
+# voice 310021 "revatein_ge_0022"
+# alpha 3303131 0 0.5
+# alpha 161 0 0.5
+# alpha 3503131 0 0.5
+# move 3100211 3 0
+# face 3100211 "surprise"
+# alpha 3100211 1 0.5
+# mask 3100211 off
+# textboxarrow 0 2
+@レーヴァテイン
+…まさか、ソロモンの指輪で？
+
+# alpha 3100211 0 0.5
+# move 3303131 1 0
+# face 3303131 "angry"
+# alpha 3303131 1 0.5
+# mask 3303131 on
+# move 161 3 0
+# alpha 161 1 0.5
+# mask 161 on
+# move 3503131 5 0
+# face 3503131 "angry"
+# alpha 3503131 1 0.5
+# mask 3503131 on
+# textboxarrow 0 3
+@ソロモン
+な、なに言ってるの？
+私たちは正気よ！
+ねっ、カシウス？
+
+# voice 3031 "cassius_ge_0003"
+# face 3303131 "usual"
+# textboxarrow 0 1
+@カシウス
+そうね…
+いえ、本当はどうなのかしら…
+
+# textboxarrow 0 1
+@カシウス
+この世のすべては円環の因子…
+見方を変えれば、わたしたちは皆
+輪廻に操られているとも言える…？
+
+# emotionbody 1003 6 3503131 50 250
+# effectpattern 1003 1 1
+# effectstart 1003
+# voice 5031 "solomon_t_0009"
+# textboxarrow 0 3
+@ソロモン
+ああ、もうっ！　こんなときに
+混乱させること言わないで！
+
+# alpha 3303131 0 0.5
+# alpha 161 0 0.5
+# alpha 3503131 0 0.5
+# move 3100211 3 0
+# face 3100211 "normal"
+# alpha 3100211 1 0.5
+# mask 3100211 off
+# textboxarrow 0 2
+@レーヴァテイン
+…事情は一切わからないけど、
+操られているわけじゃないってことは
+またムーが何かしたの？
+
+# emotionbody 1004 1 161 10 240
+# effectpattern 1004 2 0
+# effectstart 1004
+# alpha 3100211 0 0.5
+# move 3303131 1 0
+# face 3303131 "usual"
+# alpha 3303131 1 0.5
+# mask 3303131 on
+# move 161 3 0
+# alpha 161 1 0.5
+# mask 161 on
+# textboxarrow 0 2
+# move 3503131 5 0
+# face 3503131 "angry"
+# alpha 3503131 1 0.5
+# mask 3503131 on
+@ムー
+んなっ！？
+ち、違うぞレヴァ！
+俺は２人の喧嘩を止めるためにだな…
+
+# alpha 3303131 0 0.5
+# alpha 161 0 0.5
+# alpha 3503131 0 0.5
+# move 3100211 3 0
+# face 3100211 "normal"
+# alpha 3100211 1 0.5
+# mask 3100211 off
+# textboxarrow 0 2
+@レーヴァテイン
+…喧嘩を止めようとして
+その２人に詰め寄られてるわけね
+
+;;//ＳＥ：タッタッタッ（兵が走ってくる音）
+# se "SE_0876"
+# waitandnext 0.5
+
+# emotionbody 1005 1 161 10 240
+# effectpattern 1005 1 0
+# effectstart 1005
+# voice 9953 "mwu_0023"
+# alpha 3100211 0 0.5
+# move 3303131 1 0
+# face 3303131 "usual"
+# alpha 3303131 1 0.5
+# mask 3303131 on
+# move 161 3 0
+# alpha 161 1 0.5
+# mask 161 on
+# textboxarrow 0 2
+# move 3503131 5 0
+# face 3503131 "angry"
+# alpha 3503131 1 0.5
+# mask 3503131 on
+@ムー
+…あっ、ハルモニア兵だ！
+こっちに向かってくるぞ！
+
+# se "SE_6501"
+# emotionbody 1006 1 3503131 10 310
+# effectpattern 1006 2 0
+# effectstart 1006
+# voice 5031 "solomon_t_0022"
+# face 3503131 "surprise"
+# textboxarrow 0 3
+@ソロモン
+えっ！？
+もう追いついてきたのね…！
+
+# textboxarrow 0 2
+@ムー
+よし、この隙に
+…とうっ！
+
+;;//ムー、画面から消える
+# se "SE_4747"
+# textwindow "close"
+# alpha 161 0 0.5
+# waitandnext 0.5
+
+# move 3303131 2 0.5
+# move 3503131 4 0.5
+# waitandnext 0.5
+
+# face 3303131 "surprise"
+# textboxarrow 0 1
+# textwindow "normal"
+@カシウス
+あっ…
+逃げられてしまったわ…
+
+# voice 5031 "solomon_t_0037"
+# face 3503131 "angry"
+# textboxarrow 0 3
+@ソロモン
+くっ…早く追わないと！
+
+# voice 310021 "revatein_ge_0002"
+# alpha 3303131 0 0.5
+# alpha 3503131 0 0.5
+# move 3100211 3 0
+# face 3100211 "normal"
+# alpha 3100211 1 0.5
+# mask 3100211 off
+# textboxarrow 0 2
+@レーヴァテイン
+とりあえず追手を
+倒した方がいいんじゃない…？

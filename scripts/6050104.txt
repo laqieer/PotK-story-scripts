@@ -1,0 +1,304 @@
+;;【EP2】戦闘後
+# script "lisp"
+# bgm "stop"
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.1
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# alpha 100221 0 0
+# textflame 1 1
+# textboxarrow 0 0
+# se "SE_5776"
+@古文書
+――《蝕》のとき、
+フレンネル家に代々伝えられてきた
+“予言”通り彼は現れた
+
+# textboxarrow 0 0
+@古文書
+――この出会いこそが
+“終わりの始まり”だったのだ
+
+;;//背景：壁画の間
+# se "SE_4779"
+# imageset 1 "bg_white"
+# imagealpha 1 0 0
+# imagescale 1 10 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fillrect "white" 2.3 0 1
+# waitandnext 2
+
+# imagepos 1 0 0
+# imagealpha 1 1 0
+# fillrect "white" 1 1 0
+# waitandnext 0.1
+
+# bgm "bgm004" 0.7
+# background "006_jail"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# imagealpha 0 0 1
+# imagealpha 1 0 1
+# waitandnext 1
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@考古学奏官
+…なんてこった
+こいつはフレンネル大公の祖先が
+残した手記だったんだ
+
+# textflame 0 0
+@考古学奏官
+これを読めば欠落した
+歴史を埋めることが
+できるかもしれない…
+
+# mask 100221 off
+# alpha 100221 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 100221
+# voice 1002 "revatein_0027"
+# face 100221 "normal"
+@レーヴァテイン
+あー…なんだかもやもやする…
+私、寝るから
+
+# textflame 0 0
+@考古学奏官
+どうした？
+さっきまで随分、真剣に
+壁画を見ていたみたいだが
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 100221
+@レーヴァテイン
+別に…じゃ、お休み…
+
+# textflame 0 0
+@考古学奏官
+ああ、お休み
+…この壁画は手記が書かれたのと
+同じ時期に作られたようだな
+
+# textflame 0 0
+@考古学奏官
+手記を読み進めていけば
+“エンシェントキラーズ”のことも
+分かるんじゃないか？
+
+# se "SE_4779"
+# bgm "stop"
+# fadeout "black" 2
+# waitandnext 3
+;;//暗転
+
+;;――場面転換――
+# fadein "black" 0.5
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 100221 0 0
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 0
+@古文書
+――彼は私の話を
+なかなか聞こうとしなかった
+それどころか警戒していた
+
+;;//背景：平原
+# se "SE_4779"
+# imagealpha 1 0 0
+# imagescale 1 10 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fillrect "white" 2.3 0 1
+# waitandnext 2
+
+# imagepos 1 0 0
+# imagealpha 1 1 0
+# fillrect "white" 1 1 0
+# waitandnext 0.1
+
+# bgm "bgm005" 0.7
+# background "plain"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# imagealpha 0 0 1
+# imagealpha 1 0 1
+# waitandnext 1
+
+# body 75
+# pos 75 3
+# mask 75 off
+# scale 75 0.8 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 75
+# voice 9979 "rebellion_0057"
+# face 75 "angry"
+@リベリオン
+答えろ、フレンネル！
+どうして俺の名前を知っていた!?
+
+# textflame 0 0
+@フレンネル
+言っただろう
+君のことは“予言”されていたんだ
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 75
+# voice 9979 "rebellion_0027"
+@リベリオン
+予言だと？
+いい加減なことを言うようなら
+容赦はしねえぞ
+
+# textflame 0 0
+@フレンネル
+ま、待ってくれ！
+銃なんて物騒なもの仕舞ってくれ
+私に危害を加えたりはしないんだろ！
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 75
+# face 75 "irregular"
+@リベリオン
+悪いが、
+俺にはあまり時間がないんだ
+多少、手荒な真似も…
+
+;;//異族がリベリオンを襲う
+# face 75 "surprise"
+# se "SE_0618"
+# fadein "red" 0.5
+# shake 0 0.5
+# waitandnext 1
+
+# textboxarrow 0 2
+# chara 75
+@リベリオン
+なんだ!?
+
+# textflame 0 0
+@フレンネル
+逃げろ！
+そいつは異族といって人間を
+捕食するんだ
+
+# textflame 0 0
+@フレンネル
+普通の人間にはとても太刀打ち――
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 75
+# face 75 "angry"
+@リベリオン
+俺は今、気が立ってるんだ！
+消え失せろ！
+
+# se "SE_9069"
+# fadein "white" 0.3
+# shake 0 0.3
+# waitandnext 0.5
+
+# fadein "white" 0.3
+# shake 0 0.3
+# waitandnext 0.5
+
+;;//リベリオンが銃を撃ち、異族を倒す
+# sedelay "SE_0618" 0.8
+# waitandnext 0.5
+
+# serif 1
+# textwindow "toge"
+# textboxarrow 0 0
+@異族
+グギャアアア…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 75
+# voice 9979 "rebellion_0026"
+# face 75 "sad"
+@リベリオン
+ったく…
+こっちでも化け物の相手を
+することになるとはな…
+
+# textflame 0 0
+@フレンネル
+凄い！
+異族をいとも容易く…
+
+# textflame 0 0
+@フレンネル
+やはり彼を仲間にすべきなのだ
+…これは言いたくなかったが
+
+# textflame 0 0
+@フレンネル
+リベリオン！君に
+重大なことを伝えなければ
+ならない
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 75
+# voice 9979 "rebellion_0009"
+# face 75 "irregular"
+@リベリオン
+今度はなんだ？
+
+;;もやもや
+# textflame 0 0
+# textwindow "moya"
+@フレンネル
+“予言”にある通りの言葉を言えば
+彼は必ず私の話を聞いてくれるっ
+
+# textwindow "nomal"
+# textflame 0 0
+@フレンネル
+リベリオン…
+残念ながら君達の計画は
+失敗したんだ…人類の希望は潰えた

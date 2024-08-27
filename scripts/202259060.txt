@@ -1,0 +1,471 @@
+;;-----------------------------------------
+;;悪魔サイド1話6_0
+;;-----------------------------------------
+# script "lisp"
+# background "suburbs"
+# bgm "bgm031" 0
+;;-----------------------------------------
+;;ベルフェゴール
+# body 960017
+# pos 960017 3
+# scale 960017 0.8 0
+# layer 960017 2
+# mask 960017 off
+# alpha 960017 0 0
+;;上級魔獣
+# body 960025
+# pos 960025 2
+# scale 960025 0.8 0
+# layer 960025 2
+# mask 960025 off
+# alpha 960025 0 0
+# reversal 960025 0
+;;男
+# body 3
+# pos 3 4
+# scale 3 0.8 0
+# layer 3 4
+# alpha 3 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "mov2_3_overlay"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：地上世界
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# face 3 "angry"
+# alpha 960025 1 0.3
+# alpha 3 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@男
+この…悪魔どもめぇ…！
+
+# textboxarrow 0 1
+@上級魔獣
+ゲハハハハ！
+抵抗する奴は殺すって
+言ったよなあ！！
+
+# se "SE_4100"
+# move 960025 3 0.3
+# textboxarrow 0 0
+# waitandnext 0.2
+
+;;血しぶき演出
+# se "SE_9016"
+# fadein "red" 0.5
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# move 3 5 0.2
+# waitandnext 1.5
+
+# face 3 "sad"
+# imagealpha 1 0 0.5
+# textboxarrow 0 3
+@男
+ああ…
+
+;;男が倒れる
+# se "SE_3001"
+# alpha 3 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# serif 1
+# textwindow "nomal"
+@人々
+うわあああっ…
+もうやめてくれ…
+助けて…
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@上級魔獣
+てめえら弱者は強者に従え
+それがこの世界の掟だ！
+
+# serif 0
+# textboxarrow 0 2
+@上級魔獣
+従う奴らはベルフェゴール様が
+「夢の国」で飼って下さるぞ
+
+# serif 1
+@諦めた人々
+従います…
+ですから命だけは…
+
+# serif 0
+# textboxarrow 0 2
+@上級魔獣
+ゲハハハハ！
+よぉし、こいつらを
+「夢の国」に連れていくぞ！
+
+# se "SE_0792"
+# serif 1
+# textwindow "toge"
+@魔獣達
+ガアアアアアアア！
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：魔壁
+# background "makabe"
+# bgm "bgm005" 0
+# alpha 960025 0 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# face 960017 "amazed"
+# alpha 960017 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ベルフェゴール
+…………
+
+# voice 8031 "belphegor_0028"
+# textboxarrow 0 2
+@ベルフェゴール
+ふぅん
+これがルシファーの作った
+魔壁なのねぇ
+
+# textboxarrow 0 2
+@ベルフェゴール
+私の趣味じゃないけれど、
+あいつらと顔を合わせずに済むのなら
+大歓迎だわ
+
+# textboxarrow 0 2
+@ベルフェゴール
+あの木偶の坊や達と遊ぶために
+作ったみたいねぇ
+本当に、どっちも愚かだわぁ
+
+# voice 8031 "belphegor_0004"
+# face 960017 "normal"
+# move 960025 1 0
+# layer 960025 4
+# mask 960025 on
+# textboxarrow 0 2
+@ベルフェゴール
+でも、お陰で魔壁の外にいる人間達は
+みぃんな私が好きにできる
+養分を吸い放題ねぇ
+
+# move 960025 2 0.5
+# alpha 960025 1 0.5
+# move 960017 4 0.5
+# textboxarrow 0 1
+@上級魔獣
+ベルフェゴール様！
+新しい人間どもを「夢の国」に
+搬送致しました！
+
+# voice 8031 "belphegor_0020"
+# textboxarrow 0 3
+@ベルフェゴール
+あらぁ
+あなた達、仕事熱心ねぇ
+
+# textboxarrow 0 3
+@ベルフェゴール
+もっと怠惰に過ごしていいのよぉ
+それが強者の特権なんだからぁ
+
+# textboxarrow 0 1
+@上級魔獣
+あ…ありがとうございます…
+
+# textboxarrow 0 3
+@ベルフェゴール
+ふふっ
+さぁて、あのキラーズに相応しい子は
+いるかしらぁ？
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：夢の国
+# background "laboratory_area"
+# bgmfile "bgm166" "BgmPJZero001" 0
+# face 960017 "amazed"
+# alpha 960025 0 0
+# move 960017 3 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 8031 "belphegor_0027"
+# textwindow "nomal"
+# textboxarrow 0 2
+@ベルフェゴール
+…ダメ
+この子もダメねぇ
+全然、お話にならないわぁ
+
+# textboxarrow 0 2
+@ベルフェゴール
+ああ…自分で探さないと
+いけないのかしらねぇ…
+嫌だわぁ…
+
+# alpha 960025 1 0.5
+# move 960017 4 0.5
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# voice 8031 "belphegor_0002"
+# textboxarrow 0 3
+@ベルフェゴール
+ちょっと、あなた
+私の好みに合う娘を捜してきてぇ
+
+# textboxarrow 0 1
+@上級魔獣
+はい
+畏まりました
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：地上世界
+# background "ground_surface_break"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@上級魔獣
+ベルフェゴール様
+ご命令通りの人間を見つけました
+
+# face 960017 "normal"
+# textboxarrow 0 3
+@ベルフェゴール
+あらぁ
+どんな娘なのかしらぁ？
+
+# textboxarrow 0 1
+@上級魔獣
+人間達の大半は我々に怯えて
+隠れ潜み、こそこそ生きておりますが
+
+# textboxarrow 0 1
+@上級魔獣
+その人間達の間にも貧富の差は
+歴然と存在しております
+
+# voice 8031 "belphegor_0032"
+# textboxarrow 0 3
+@ベルフェゴール
+そうよねぇ
+そんな中でも、私の好みはぁ？
+
+# textboxarrow 0 1
+@上級魔獣
+安全なところで悠々と暮らしている
+怠惰な人間こそがお好みかと
+
+# textboxarrow 0 3
+@ベルフェゴール
+そうよぉ！
+そんな娘を見つけたのねぇ？
+
+# textboxarrow 0 1
+@上級魔獣
+はい
+ご命令頂ければ、
+すぐに連れてまいります
+
+# voice 8031 "belphegor_0033"
+# face 960017 "smile"
+# textboxarrow 0 3
+@ベルフェゴール
+そうねぇ…
+ふふっ♪
+
+# face 960017 "normal"
+# textboxarrow 0 3
+@ベルフェゴール
+もっと面白いことを思いついたわぁ
+
+;;ベルフェゴールが飛び去る
+# se "SE_9021"
+# move 960017 3 0.5
+# scale 960017 0.7 0.5
+# alpha 960017 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：上層階
+# background "red_corridor"
+# alpha 960025 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# scale 960017 0.8 0.5
+# alpha 960017 1 0.3
+# waitandnext 0.5
+
+# serif 1
+# textwindow "nomal"
+@警備員１
+何者だ、貴様！？
+
+# serif 1
+@警備員２
+ひっ…
+こいつ、悪魔なんじゃ…
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@ベルフェゴール
+あらぁ
+お仕事熱心なのねぇ
+イ・ケ・ナ・イ・子♪
+
+# serif 1
+@警備員達
+あがっ…？
+体が…動かない…
+
+# serif 0
+# textboxarrow 0 2
+@ベルフェゴール
+いいのよぉ
+ぐっすり、怠惰に、
+お休みなさぁい
+
+# serif 1
+@警備員達
+ああ…
+
+;;警備員が倒れる
+# se "SE_3001"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# waitandnext 1
+
+# voice 8031 "belphegor_0004"
+# serif 0
+# textboxarrow 0 2
+@ベルフェゴール
+ふふっ
+セキュリティがしっかりしていて
+内装も豪華…
+
+# serif 0
+# textboxarrow 0 2
+@ベルフェゴール
+間違いなく、
+怠惰を貪っている娘がいるわねぇ…
+あらぁ？
+
+# serif 1
+# textwindow "nomal"
+@？？？
+そこにいるのは、誰？
+
+# voice 8031 "belphegor_0041"
+# serif 0
+# textboxarrow 0 2
+@ベルフェゴール
+あらあらぁ
+何て美しい女なのかしらぁ
+
+# serif 0
+# textboxarrow 0 2
+@ベルフェゴール
+上等な仕立ての服を着て、
+髪の毛先まで
+手入れが行き届いていて
+
+# serif 0
+# textboxarrow 0 2
+@ベルフェゴール
+指の爪先まで綺麗ねぇ
+労働なんて全く知らない者の手よぉ
+大切に扱われているのねぇ
+
+# serif 1
+@？？？
+あの…
+褒めていただいて
+ありがとうございます
+
+# serif 1
+@？？？
+でも、その…
+あなたは随分と…個性的な姿を
+されているのね
+
+# voice 8031 "belphegor_0005"
+# face 960017 "smile"
+# serif 0
+# textboxarrow 0 2
+@ベルフェゴール
+ふふっ
+アハハハハハ！
+あなた、面白いわぁ
+
+# voice 8031 "belphegor_0002"
+# face 960017 "normal"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@ベルフェゴール
+ねぇ
+私とゆっくりお話しましょう
+二人きりで
+
+# textboxarrow 0 2
+@ベルフェゴール
+いいでしょう？
+箱入り娘さん
+
+# fadeout "black" 1
+# waitandnext 1

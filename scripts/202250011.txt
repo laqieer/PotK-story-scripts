@@ -1,0 +1,1475 @@
+;;-----------------------------------------
+;;「スライム倒して３００年、知らないうちにレベルMAXになってました」コラボイベントシナリオ
+;;【EP１】
+;;スクリプト最後の背景：平原・朝
+;;背景：夕暮れの森
+;;-----------------------------------------
+# script "lisp"
+# background "forest_evening"
+# bgm "stop"
+;;-----------------------------------------
+;;ティルフィング feat. はじまりの花に囲まれて
+# body 6101411
+# pos 6101411 3
+# scale 6101411 0.8 0
+# layer 6101411 2
+# alpha 6101411 0 0
+# mask 6101411 off
+;;アズサ
+# body 5105211
+# pos 5105211 3
+# scale 5105211 0.8 0
+# layer 5105211 2
+# alpha 5105211 0 0
+# mask 5105211 off
+;;ライカ
+# body 52001011
+# pos 52001011 3
+# scale 52001011 0.8 0
+# layer 52001011 2
+# alpha 52001011 0 0
+# mask 52001011 off
+;;ハルカラ
+# body 5604011
+# pos 5604011 3
+# scale 5604011 0.8 0
+# layer 5604011 3
+# alpha 5604011 0 0
+# mask 5604011 off
+;;ミストルティン
+# body 600621
+# pos 600621 3
+# scale 600621 0.8 0
+# layer 600621 2
+# alpha 600621 0 0
+# mask 600621 off
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;タイトル
+# imageset 2 "e220513_logo_only"
+# imagealpha 2 0 0
+# imagelayer 2 5
+;;-----------------------------------------
+;;【OP】
+;;背景：夕暮れの森
+;;演出：森を歩く足音
+;;演出：画面揺らし
+# fadein "black" 1.5
+# textwindow "close"
+# waitandnext 1.5
+
+# se "SE_6229"
+# se "SE_0719"
+# shake 0 1
+# waitandnext 1
+
+# move 5105211 3 0
+# face 5105211 "angry"
+# alpha 5105211 1 0.5
+# mask 5105211 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@アズサ
+ハルカラ～！
+聞こえてたら返事して～！
+
+# alpha 5105211 0 0.5
+# move 52001011 3 0
+# face 52001011 "happy"
+# alpha 52001011 1 0.5
+# mask 52001011 off
+# textboxarrow 0 2
+@ライカ
+ハルカラさ～ん！
+みなさん心配していますよ～！
+
+# move 5105211 2 0
+# face 5105211 "angry"
+# alpha 5105211 1 0.5
+# mask 5105211 on
+# textboxarrow 0 1
+# move 52001011 4 0.5
+# mask 52001011 on
+@アズサ
+ライカ、そっちはどうだった？
+
+# voice 5200101 "raika_0031"
+# face 52001011 "sad"
+# textboxarrow 0 3
+@ライカ
+すみません、アズサ様…
+ダメです、全然見当たりません…
+
+# voice 510521 "azusa_0028"
+# face 5105211 "sad"
+# textboxarrow 0 1
+@アズサ
+参ったなぁ～…
+一体どこ行っちゃったんだろう？
+
+# face 5105211 "surprise"
+# textboxarrow 0 1
+@アズサ
+まさか…家出とか？
+
+# face 52001011 "angry"
+# textboxarrow 0 3
+@ライカ
+そ、そんなことありません！
+ハルカラさんに限って…
+
+# face 5105211 "sad"
+# textboxarrow 0 1
+@アズサ
+そうだよねえ…
+
+;;モノローグ
+# face 52001011 "sad"
+# textflame 0 0
+@
+夕暮れ時、
+高原近くの森にて――
+
+;;モノローグ
+@
+高原に家を構える『高原の魔女』
+アズサと、その弟子であるライカは
+頭を悩ませていた
+
+;;モノローグ
+@
+それは同じく居を共にする
+エルフのハルカラのこと
+
+# textflame 1 1
+# textboxarrow 0 1
+@アズサ
+朝、「キノコを採ってきます」って
+置き手紙を残して、
+それっきりだから…
+
+# textboxarrow 0 3
+@ライカ
+恐らく森で迷っているだけ…
+であれば良いのですが
+
+;;モノローグ
+# textflame 0 0
+@
+行方不明となったハルカラを探し
+アズサとライカは彼女が入ったと
+思しき森を捜索していた
+
+# textflame 1 1
+# textboxarrow 0 1
+@アズサ
+丸一日だもんね…
+さすがに心配だよ…
+
+# textboxarrow 0 1
+@アズサ
+そろそろ暗くなって来ちゃったし…
+モンスターに襲われたりしてたら…
+
+# face 52001011 "angry"
+# textboxarrow 0 3
+@ライカ
+…あっ！　アズサ様！
+あれを見て下さい！
+
+# voice 510521 "azusa_0022"
+# face 5105211 "surprise"
+# textboxarrow 0 1
+@アズサ
+あれって…ハルカラがいつも
+キノコ採りで使ってるカゴ？
+
+# textboxarrow 0 3
+@ライカ
+しかも周りに
+キノコが散らばっています！
+点々と…
+
+;;モノローグ
+# textflame 0 0
+@
+ライカが指し示す方向には、
+ハルカラが落としていったキノコが
+道しるべのように点々と連なっていた
+
+# face 5105211 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@アズサ
+こっ、これは…
+なんて古典的な…
+
+# textboxarrow 0 3
+@ライカ
+これをたどってみましょう！
+
+# textboxarrow 0 3
+@ライカ
+もしかするとハルカラさんの
+元に行けるかもしれません！
+
+# face 5105211 "normal"
+# textboxarrow 0 1
+@アズサ
+そうだね…
+ほかに手がかりもないし
+追ってみようか
+
+;;モノローグ
+# se "SE_0719"
+# alpha 5105211 0 0.5
+# alpha 52001011 0 0.5
+# textflame 0 0
+@
+落ちたキノコを追って
+歩いて行くアズサとライカ
+
+;;モノローグ
+@
+既に日は傾き、暗くなった森は
+徐々に視界も悪くなっていくが、
+二人は歩き続けた
+
+;;モノローグ
+# sestop "SE_6229"
+@
+そして、森の奥地に到達した時
+二人の眼前に『それ』は現れた
+
+# se "SE_6230"
+# waitandnext 0.5
+
+# voice 510521 "azusa_0024"
+# move 5105211 2 0
+# face 5105211 "surprise"
+# alpha 5105211 1 0.5
+# mask 5105211 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 52001011 4 0
+# face 52001011 "surprise"
+# alpha 52001011 1 0.5
+# mask 52001011 on
+@アズサ
+な…なにこれ…？
+
+;;モノローグ
+# textflame 0 0
+@
+空中に浮かぶ奇妙な穴…
+しかもそれは、渦巻きのように
+怪しく回転している
+
+# textflame 1 1
+# textboxarrow 0 3
+@ライカ
+これは魔法…でしょうか？
+
+;;モノローグ
+# textflame 0 0
+@
+アズサは慎重に前に出て、
+穴の正体を自身の魔法で観察する
+
+# voice 510521 "azusa_0028"
+# face 5105211 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@アズサ
+う～ん…魔力は感じないけど…
+何か別の空間に繋がっているような…
+私も上手くは言えないんだけど
+
+# voice 5200101 "raika_0009"
+# face 52001011 "angry"
+# textboxarrow 0 3
+@ライカ
+アズサ様でもわからないとは…！
+一体何者がこんなことを…！
+
+# face 5105211 "normal"
+# textboxarrow 0 1
+@アズサ
+人為的なものとは限らないけど
+ただこんな自然現象、
+聞いたこともないけどね
+
+# textboxarrow 0 3
+@ライカ
+もしかすると、ハルカラさんは
+これに呑み込まれたのでしょうか？
+
+# face 5105211 "sad"
+# textboxarrow 0 1
+@アズサ
+それは…ありそう
+前の日飲み過ぎてたし、
+二日酔いでうっかり…とか
+
+# textboxarrow 0 3
+@ライカ
+そうですよ！
+きっと、フラフラして
+うっかりと…
+
+# textboxarrow 0 3
+@ライカ
+これはしっかり調査しなければ…！
+
+;;モノローグ
+# textflame 0 0
+@
+意を決したライカは
+穴へと近付いていく
+
+# face 5105211 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@アズサ
+あ、不用意に近づくと危ないよ
+ここは私が…
+
+# textboxarrow 0 3
+@ライカ
+いえっ！　ここは我が！
+アズサ様に危険なことを
+させるわけには…
+
+;;モノローグ
+# textflame 0 0
+@
+そう言って、
+ライカが手を伸ばした瞬間
+
+;;モノローグ
+# se "SE_7334"
+@
+彼女の手は
+竜巻に飲み込まれるように、
+穴へと吸い込まれて行ってしまう
+
+# voice 5200101 "raika_0023"
+# face 52001011 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@ライカ
+ひゃっ！？　ひゃあああっ！？
+あ、アズサ様！　す、吸われてます！
+
+# voice 510521 "azusa_0023"
+# face 5105211 "surprise"
+# textboxarrow 0 1
+@アズサ
+わ、わあああ！　ライカ！？
+ストップ！　ストーップ！
+
+# voice 5200101 "raika_0012"
+# face 52001011 "angry"
+# textboxarrow 0 3
+@ライカ
+だ、ダメですアズサ様！
+ドンドン呑み込まれて…！
+
+;;モノローグ
+# textflame 0 0
+@
+必死に穴から手を抜こうとする
+ライカだったが、抜けるどころか
+更に呑み込まれて行く
+
+;;モノローグ
+@
+あっと言う間に、ライカの腕全体が
+穴へと吸い込まれてしまっていた
+
+# face 5105211 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@アズサ
+ライカ！！
+
+# textboxarrow 0 3
+@ライカ
+あ、アズサ様！
+
+;;モノローグ
+# textflame 0 0
+@
+慌ててライカの脚を掴むアズサ
+ライカの体を穴から
+引っ張り出そうとするが…
+
+# voice 510521 "azusa_0037"
+# textflame 1 1
+# textboxarrow 0 1
+@アズサ
+うぐぐぐ…！
+
+;;モノローグ
+# textflame 0 0
+@
+レベルMAXの力を以てしても
+ライカを引き寄せることはできず…
+
+# face 5105211 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@アズサ
+あ……あああああっ！？
+
+# face 52001011 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@ライカ
+きゃああああああっ！？
+
+;;モノローグ
+# se "SE_7334"
+# move 5105211 1 0.5
+# scale 5105211 0.6 0.5
+# alpha 5105211 0 0.3
+# move 52001011 3 0.5
+# scale 52001011 0.6 0.5
+# alpha 52001011 0 0.5
+# textflame 0 0
+@
+アズサもろとも
+穴に吸い込まれてしまったのだった
+
+;;演出：渦巻き
+;;背景：黒
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# sestop "SE_6230"
+# background "bg_black"
+# move 5105211 2 0
+# face 5105211 "sad"
+# scale 5105211 0.8 0
+# alpha 5105211 1 0
+# mask 5105211 on
+# move 52001011 4 0
+# face 52001011 "sad"
+# scale 52001011 0.8 0
+# alpha 52001011 1 0
+# mask 52001011 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 1
+# textwindow "normal"
+@アズサ
+…う、うぅ
+
+# textboxarrow 0 3
+@ライカ
+だ、大丈夫ですか？
+アズサ様…
+
+# textboxarrow 0 1
+@アズサ
+な、なんとか…
+ライカこそ大丈夫？
+ケガは無い？
+
+# textboxarrow 0 3
+@ライカ
+はい、ですが…
+
+;;背景：朝の草原
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "plain"
+# alpha 5105211 0 0
+# alpha 52001011 0 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;モノローグ
+# bgmfile "bgm603" "BgmSlime300" 0
+# se "SE_0791"
+# textflame 0 0
+# textwindow "normal"
+@
+ゆっくりと周囲を見回す二人
+そこには一面の草原が広がっていた
+
+# move 5105211 2 0
+# face 5105211 "sad"
+# alpha 5105211 1 0.5
+# mask 5105211 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 52001011 4 0
+# face 52001011 "sad"
+# alpha 52001011 1 0.5
+# mask 52001011 on
+@アズサ
+うっ…眩しい…？
+
+# textboxarrow 0 3
+@ライカ
+そんな…
+さっきまで夕方だったのに…
+
+# voice 510521 "azusa_0022"
+# textboxarrow 0 1
+@アズサ
+ここって、一体…？
+
+;;暗転
+;;場面切り替え
+;;背景：ユグドラシル内部
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "yggdrasill_interior"
+# alpha 5105211 0 0
+# alpha 52001011 0 0
+# move 6101411 3 0
+# face 6101411 "surprise"
+# alpha 6101411 1 0
+# mask 6101411 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 610141 "tyrufing_7th_0022"
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+これは、「揺らぎ」？
+別の世界からの影響…？
+
+# face 6101411 "usual"
+# textboxarrow 0 2
+@ティルフィング
+だけど、
+邪悪な意思は感じられない…
+
+# textboxarrow 0 2
+@ティルフィング
+しばらく様子を見てみましょう
+
+;;タイトル
+# se "SE_5786"
+# fadein "white" 3
+# frameout 0 0
+# background "eventbg_slime"
+# alpha 6101411 0 0
+# textwindow "close"
+# waitandnext 4
+
+# se "SE_0738"
+# imagealpha 2 1 2
+# imagepos 2 0 0
+# waitandnext 2
+
+# textwindow "close"
+
+;;暗転
+# fadeout "black" 2
+# waitandnext 2
+
+# bgm "bgm002" 0
+# background "201_room"
+# imagealpha 2 0 0
+# framein 0 0
+# fadein "black" 2
+# waitandnext 2.5
+
+;;【EP１】
+;;背景：平原にある家
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+とある平原にぽつんと建つ一軒家
+
+;;モノローグ
+@
+相当年季の入った
+建物であったものの、
+そこにひとりのキル姫が入居してきた
+
+# move 600621 3 0
+# face 600621 "normal"
+# alpha 600621 1 0.5
+# mask 600621 off
+# textflame 1 1
+# textboxarrow 0 2
+@ミストルティン
+はぁ…遂に買ってしまいました…
+
+# textboxarrow 0 2
+@ミストルティン
+しかしあの安さなら買わない手は
+ないでしょう…
+曰く付きではありますが…
+
+# textboxarrow 0 2
+@ミストルティン
+この何も無い静かな場所…
+戦いから離れてひっそり暮らすには
+うってつけですよね
+
+;;モノローグ
+# textflame 0 0
+@
+ミストルティンには夢があった
+それは森の近くで、
+静かなスローライフを送ること
+
+;;モノローグ
+@
+そのために少しずつしていた
+貯金を使い、つい先日
+この家を購入したのだった
+
+# voice 6006 "misutoru_0004"
+# face 600621 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@ミストルティン
+ふふっ…まずはお掃除をしないと
+夢の第一歩ですからね♪
+
+;;モノローグ
+# textflame 0 0
+@
+家の中には以前の持ち主が置いて
+いったらしい本やアイテムが
+乱雑に散らばっていた
+
+;;モノローグ
+@
+さっそく鼻歌交じりに家の掃除を
+開始することにしたミストルティン
+
+# voice 6006 "misutoru_0005"
+# textflame 1 1
+# textboxarrow 0 2
+@ミストルティン
+ふんふ～ん♪
+
+# face 600621 "normal"
+# textboxarrow 0 2
+@ミストルティン
+あら…これはなんでしょう？
+
+;;モノローグ
+# textflame 0 0
+@
+掃除の最中、
+ふと奇妙な物体を見つける
+
+;;モノローグ
+@
+よくわからない材質でできた
+何らかの生き物の像
+
+;;モノローグ
+@
+布で埃を拭ってみると
+古代文字が刻まれていた
+
+# voice 6006 "misutoru_0028"
+# textflame 1 1
+# textboxarrow 0 2
+@ミストルティン
+う～ん…見たことの無い金属に…
+これまた知らない動物のような置物…
+一体なんでしょうか…？
+
+;;モノローグ
+# textflame 0 0
+@
+ミストルティンはなんとなしに
+古代文字が刻まれた部分に触れる
+
+;;;演出：画面揺れ
+# bgm "stop"
+# se "SE_9173"
+# shake 0 0.5
+# waitandnext 0.5
+
+# voice 6006 "misutoru_0025"
+# face 600621 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@ミストルティン
+きゃあっ！？
+な、なんですか！？
+
+;;モノローグ
+# se "SE_0989"
+# textflame 0 0
+@
+突然光り輝くアイテムに
+驚いたミストルティンは、
+そのアイテムを床に落としてしまう
+
+;;モノローグ
+# se "SE_6231"
+@
+と、ほぼ同時に家の玄関に
+『ドン』と言う鈍い音が聞こえた
+
+# voice 6006 "misutoru_0022"
+# textflame 1 1
+# textboxarrow 0 2
+@ミストルティン
+えっ…えっ…！？
+
+;;モノローグ
+# se "SE_0914"
+# textflame 0 0
+@
+恐る恐る玄関を開ける
+ミストルティン
+
+;;？？？（ハルカラ）
+# voice 560401 "harukara_0026"
+# serif 1
+@？？？
+う、うぅ～ん…？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textboxarrow 0 2
+@ミストルティン
+えっ…！？　人！？
+
+;;モノローグ
+# textflame 0 0
+@
+そこには長い耳と
+豊満な体型を持った
+ひとりの女性が倒れていた
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# alpha 600621 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;背景：黒
+;;モノローグ
+# textwindow "normal"
+@
+そして翌日―
+
+;;背景：家の中・朝
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "201_room"
+# move 5604011 2 0
+# face 5604011 "normal"
+# alpha 5604011 1 0
+# mask 5604011 on
+# move 600621 4 0
+# face 600621 "normal"
+# alpha 600621 1 0
+# mask 600621 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgmfile "bgm603" "BgmSlime300" 0
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@ミストルティン
+は、ハルカラさん…
+あの…食事が出来ました
+
+# voice 560401 "harukara_0030"
+# textboxarrow 0 1
+@ハルカラ
+あ、ありがとうございますぅ～！
+
+# face 5604011 "happy"
+# textboxarrow 0 1
+@ハルカラ
+んん～！　美味しいです！
+ミストルティンさんって、
+お料理が上手なんですねぇ～！
+
+# face 600621 "shy"
+# textboxarrow 0 3
+@ミストルティン
+い、いえ…それほどでも
+
+;;モノローグ
+# textflame 0 0
+@
+ミストルティンが用意した
+食事を幸せそうに頬張るハルカラ
+
+;;モノローグ
+@
+そんなハルカラの姿を、
+ミストルティンは内心
+びくびくしながら観察していた
+
+;;モヤモヤ吹き出しで
+# voice 6006 "misutoru_0028"
+# move 600621 4 0
+# face 600621 "worry"
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+@ミストルティン
+ハルカラさん…
+悪い人には見えませんけど
+
+;;モヤモヤ吹き出しで
+# textboxarrow 0 0
+@ミストルティン
+でも、キル姫にも人にも見えない…
+彼女は一体何者なのでしょうか…
+
+# face 5604011 "normal"
+# textboxarrow 0 1
+# textwindow "normal"
+@ハルカラ
+いやぁ、
+もう本当にびっくりなんですよ！
+
+# textboxarrow 0 1
+@ハルカラ
+興味本位で穴に入ってみたらこう…
+ズボーーーーって！
+
+# voice 560401 "harukara_0036"
+# textboxarrow 0 1
+@ハルカラ
+それで…昨日の話なんですけど…
+本当に、よろしくお願いしますね！
+
+# voice 6006 "misutoru_0003"
+# face 600621 "surprise"
+# textboxarrow 0 3
+@ミストルティン
+は…はいっ
+
+;;モノローグ
+# textflame 0 0
+@
+ハルカラの必死な様子に
+ドキリとするミストルティン
+
+;;演出：回想
+;;背景：家の中・夜
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "201_room"
+# move 5604011 2 0
+# face 5604011 "angry"
+# alpha 5604011 1 0
+# mask 5604011 on
+# move 600621 4 0
+# face 600621 "worry"
+# alpha 600621 1 0
+# mask 600621 on
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 1
+# textwindow "normal"
+@ハルカラ
+お願いしますよミストルティンさん！
+一生のお願いです！
+
+# textboxarrow 0 1
+@ハルカラ
+なんとか帰る方法を見つけますので、
+それまでの間
+わたしを泊めて下さいぃ～！
+
+;;モノローグ
+# textflame 0 0
+@
+ミストルティンに縋り付き、
+泣きわめくハルカラの姿に
+ミストルティンは困惑していた
+
+# face 600621 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@ミストルティン
+わ、わかりましたから
+落ち着いて下さい
+
+# textboxarrow 0 3
+@ミストルティン
+す、少しぐらいなら大丈夫なので
+
+# face 5604011 "normal"
+# textboxarrow 0 1
+@ハルカラ
+本当ですか！？　本当ですね！？
+
+# voice 560401 "harukara_0030"
+# face 5604011 "happy"
+# textboxarrow 0 1
+@ハルカラ
+ありがとうございます
+ミストルティンさん！
+このご恩は必ず…！
+
+;;モノローグ
+# alpha 5604011 0 0.5
+# alpha 600621 0 0.5
+# textflame 0 0
+@
+こうして半ば押し切られる形で
+ハルカラと同居することに
+
+;;モノローグ
+@
+当初の計画だった
+静かなスローライフは
+初日で頓挫したのだった
+
+;;演出：回想終わり
+;;背景：家の中・朝
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "201_room"
+# move 5604011 2 0
+# face 5604011 "normal"
+# alpha 5604011 1 0
+# mask 5604011 on
+# move 600621 4 0
+# face 600621 "normal"
+# alpha 600621 1 0
+# mask 600621 on
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@ミストルティン
+と…とにかく
+一緒に頑張っていきましょう
+私も出来る範囲で協力しますから…
+
+# textboxarrow 0 1
+@ハルカラ
+ミストルティンさん！
+
+# se "SE_5200"
+# textwindow "close"
+# move 5604011 3 0.2
+# waitandnext 0.2
+
+# voice 6006 "misutoru_0012"
+# face 600621 "worry"
+# textboxarrow 0 3
+# textwindow "normal"
+@ミストルティン
+あっ、その…
+抱きつかないで…
+
+;;モノローグ
+# alpha 5604011 0 0.5
+# alpha 600621 0 0.5
+# textflame 0 0
+@
+そして数日が経った―
+
+;;演出：場面転換
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 5604011 2 0
+# face 5604011 "happy"
+# alpha 5604011 1 0
+# mask 5604011 on
+# move 600621 4 0
+# face 600621 "normal"
+# alpha 600621 1 0
+# mask 600621 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 560401 "harukara_0005"
+# textflame 1 1
+# textboxarrow 0 1
+# textwindow "normal"
+@ハルカラ
+いやぁ～こっちのお酒も
+いいですね～ミストルティンさん
+あははははは！
+
+# face 600621 "worry"
+# textboxarrow 0 3
+@ミストルティン
+は、ハルカラさん…
+あまり飲み過ぎないで…
+
+# face 5604011 "surprise"
+# textboxarrow 0 1
+@ハルカラ
+大丈夫れすよ～これぐらい…
+うっ！？
+
+# face 600621 "surprise"
+# textboxarrow 0 3
+@ミストルティン
+ハルカラさん！？
+
+;;演出：場面転換
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 5604011 2 0
+# face 5604011 "normal"
+# alpha 5604011 1 0
+# mask 5604011 on
+# move 600621 4 0
+# face 600621 "normal"
+# alpha 600621 1 0
+# mask 600621 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 3
+# textwindow "normal"
+@ミストルティン
+あの、お掃除は私が…
+ハルカラさんは休んでいて
+構いませんので…
+
+# textboxarrow 0 1
+@ハルカラ
+大丈夫です！
+居候の身ですから！
+少しは協力を…
+
+;;モノローグ
+# textflame 0 0
+@
+言いながら、ハルカラは
+高所の埃を払おうとするが…
+
+# face 5604011 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@ハルカラ
+このハシゴ安定が…
+あっ…あっ…！？
+
+# face 600621 "surprise"
+# textboxarrow 0 3
+@ミストルティン
+は、ハルカラさん！
+動かないで！
+
+;;モノローグ
+# alpha 5604011 0 0.5
+# alpha 600621 0 0.5
+# textflame 0 0
+@
+ハルカラがいろいろ雑用を
+手伝ってくれようとするが…
+
+;;モノローグ
+@
+助けになるよりも、
+ミストルティンの手間を増やす
+結果になることの方が多かった
+
+;;モノローグ
+@
+しかし、そうこうしている内に…
+
+;;演出：場面転換
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# move 5604011 2 0
+# face 5604011 "normal"
+# alpha 5604011 1 0
+# mask 5604011 on
+# move 600621 4 0
+# face 600621 "normal"
+# alpha 600621 1 0
+# mask 600621 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 560401 "harukara_0021"
+# textflame 1 1
+# textboxarrow 0 1
+# textwindow "normal"
+@ハルカラ
+んん～！
+このキノコも美味しそうですね～
+焼くと風味が出て…
+
+# voice 6006 "misutoru_0021"
+# face 600621 "happy"
+# textboxarrow 0 3
+@ミストルティン
+わぁ…凄いです！
+シチューにしても良さそう
+
+# face 5604011 "happy"
+# textboxarrow 0 1
+@ハルカラ
+やってみましょう～！
+二人ならきっと最高の
+お料理が作れますよ～！
+
+# textboxarrow 0 3
+@ミストルティン
+はい…！
+
+;;演出：場面転換
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 5604011 0 0
+# alpha 600621 0 0
+# move 600621 3 0
+# face 600621 "happy"
+# alpha 600621 1 0
+# mask 600621 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ミストルティン
+ハルカラさ～ん！
+お茶の用意が出来ました～！
+
+# move 5604011 2 0
+# face 5604011 "happy"
+# alpha 5604011 1 0.5
+# mask 5604011 on
+# textboxarrow 0 1
+# move 600621 4 0.5
+# mask 600621 on
+@ハルカラ
+ミストルティンさ～ん！
+いつもありがとう～！
+
+# textboxarrow 0 1
+@ハルカラ
+んん～美味しいです！
+このクッキーも格別！
+
+;;モノローグ
+# textflame 0 0
+@
+静かなスローライフは
+ほど遠いものになったが…
+
+;;モノローグ
+@
+ハルカラの明るい性格のためか
+共同生活は思いのほか
+平穏に過ぎていた
+
+# face 600621 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@ミストルティン
+ところでハルカラさん、
+元の場所に帰る方法は
+見つかったんですか？
+
+# face 5604011 "sad"
+# textboxarrow 0 1
+@ハルカラ
+うぅ～ん…そうですよねえ
+もう数日も留守にしちゃって…
+きっと皆さんにご心配を…
+
+# textboxarrow 0 1
+@ハルカラ
+ここ数日森であの穴を探したり、
+図書館に行ってみたりしましたけど～
+
+# textboxarrow 0 1
+@ハルカラ
+特になんの成果も
+ありませんでしたし…
+
+# face 5604011 "normal"
+# textboxarrow 0 1
+@ハルカラ
+でもでも、念のためキノコで
+目印を付けておきましたから！
+
+# textboxarrow 0 1
+@ハルカラ
+必ず世界最強のお師匠様！
+高原の魔女様が助けてくれます！
+
+# textboxarrow 0 1
+@ハルカラ
+だから、慌てず騒がずが一番です
+
+# textboxarrow 0 1
+@ハルカラ
+そもそもですね、
+わたしが下手に動くと返って
+良くない結果になりそうですし～
+
+;;モノローグ
+# textflame 0 0
+@
+楽観的に構えるハルカラに
+ミストルティンはふと笑みを浮かべる
+
+# face 600621 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@ミストルティン
+世界最強のお師匠様ですか…
+
+# textboxarrow 0 3
+@ミストルティン
+話を聞く限り、温厚そうな方で…
+そんな方の元で庇護されて暮らせる…
+なんだか羨ましいです
+
+# voice 560401 "harukara_0004"
+# face 5604011 "happy"
+# textboxarrow 0 1
+@ハルカラ
+ふふふ～お師匠様は凄いんですから！
+きっと会ったらミストルティンさんも
+お師匠様にドキドキしちゃいます！
+
+;;演出：画面揺れ
+# bgm "stop"
+# se "SE_9100"
+# shake 0 0.5
+# waitandnext 0.5
+
+# voice 6006 "misutoru_0025"
+# face 600621 "surprise"
+# textboxarrow 0 3
+@ミストルティン
+きゃっ！？
+
+# voice 560401 "harukara_0025"
+# face 5604011 "surprise"
+# textboxarrow 0 1
+@ハルカラ
+ひゃあああっ！？
+
+;;モノローグ
+# textflame 0 0
+@
+突然の爆発音と振動に
+身構える二人
+
+;;モノローグ
+@
+どうやら家のすぐ近くで
+何か起きているようだった
+
+# voice 6006 "misutoru_0028"
+# face 600621 "worry"
+# textflame 1 1
+# textboxarrow 0 3
+@ミストルティン
+い、一体何が…？
+
+;;モノローグ
+# se "SE_0914"
+# textflame 0 0
+@
+ミストルティンは
+びくびくとしながら、
+玄関の扉をゆっくりと開いた…
+
+;;//背景：平原・朝
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "plain"
+# alpha 5604011 0 0
+# alpha 600621 0 0
+# move 5105211 2 0
+# face 5105211 "sad"
+# alpha 5105211 1 0
+# mask 5105211 on
+# move 52001011 4 0
+# face 52001011 "surprise"
+# alpha 52001011 1 0
+# mask 52001011 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgm "bgm007_011" 0
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@ライカ
+大丈夫ですか！？
+アズサ様！
+
+# textboxarrow 0 1
+@アズサ
+びっくりした～…
+あんなモンスター見たこと無いよ
+
+# voice 560401 "harukara_0022"
+# alpha 5105211 0 0.5
+# alpha 52001011 0 0.5
+# move 5604011 3 0
+# face 5604011 "surprise"
+# alpha 5604011 1 0.5
+# mask 5604011 off
+# textboxarrow 0 2
+@ハルカラ
+…！？　お師匠様！？
+
+# se "SE_0792"
+# serif 1
+@魔獣
+グワアアアアアア！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 5604011 0 0.5
+# move 5105211 2 0
+# face 5105211 "normal"
+# alpha 5105211 1 0.5
+# mask 5105211 on
+# move 52001011 4 0
+# face 52001011 "angry"
+# alpha 52001011 1 0.5
+# mask 52001011 on
+# textboxarrow 0 3
+@ライカ
+アズサ様！
+もう１匹来ます！
+
+# voice 510521 "azusa_0033"
+# textboxarrow 0 1
+@アズサ
+よ～し、任せといて！
+
+# alpha 5105211 0 0.5
+# alpha 52001011 0 0.5
+# move 5604011 2 0
+# face 5604011 "angry"
+# alpha 5604011 1 0.5
+# mask 5604011 on
+# textboxarrow 0 1
+# move 600621 4 0
+# face 600621 "normal"
+# alpha 600621 1 0.5
+# mask 600621 on
+@ハルカラ
+わたし達も行きましょう、
+ミストルティンさん！
+
+# voice 6006 "misutoru_0023"
+# face 600621 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@ミストルティン
+えっ…ええっ！？
+
+;;モノローグ
+# textflame 0 0
+@
+ハルカラに手を引かれ、
+魔獣と戦っているアズサの元へ
+向かうことになるミストルティン
+
+# se "SE_9430"
+# face 5604011 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@ハルカラ
+お師匠様～～～！
+
+# textboxarrow 0 3
+# textwindow "normal"
+@ミストルティン
+ま、待って下さい！
+私、戦いは…ハルカラさ～ん！
+
+# fadeout "black" 1
+# waitandnext 1

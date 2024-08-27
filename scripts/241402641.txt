@@ -1,0 +1,419 @@
+;;-----------------------------------------
+;;モラベガサイド『オーディトリアを抜け』 
+;;【EP1『コロスは歌う』】
+;;-----------------------------------------
+# script "lisp"
+# background "wild"
+# bgmfile "bgm263" "BgmLostRagnarok001" 0
+;;-----------------------------------------
+;;リサナウト
+# body 3203011
+# pos 3203011 3
+# scale 3203011 0.8 0
+# layer 3203011 3
+# mask 3203011 off
+# alpha 3203011 0 0
+;;モラベガ
+# body 3104211
+# pos 3104211 3
+# scale 3104211 0.8 0
+# layer 3104211 3
+# mask 3104211 off
+# alpha 3104211 0 0
+;;アルマス（13章）
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# layer 172 2
+# mask 172 off
+# alpha 172 0 0
+;;兵
+# body 3810001
+# pos 3810001 2
+# scale 3810001 0.8 0
+# layer 3810001 3
+# alpha 3810001 0 0
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# layer 3820001 5
+# mask 3820001 off
+# alpha 3820001 0 0
+# body 3830001
+# pos 3830001 4
+# scale 3830001 0.8 0
+# layer 3830001 3
+# alpha 3830001 0 0
+# reversal 3830001 0
+;;-----------------------------------------
+# imageset 0 "bg_white_circle"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imagescale 0 1.5 0
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 1
+;;-----------------------------------------
+;;背景：紙芝居のような舞台
+# textwindow "close"
+# fadeout "black" 0.2
+# imageset 2 "st_thickcurtain_left"
+# imagealpha 2 0 0 
+# imageset 3 "st_thickcurtain_right"
+# imagealpha 3 0 0 
+# imageset 4 "st_thickcurtain_top"
+# imagealpha 4 0 0 
+# frameout 0 0.5
+# waitandnext 0.7
+
+# imagepos 2 -180 0
+# imagepos 3 180 0
+# imagepos 4 0 450
+# imagealpha 2 1 0
+# imagealpha 3 1 0
+# imagealpha 4 1 0
+# waitandnext 0.3
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# imagemoveto 2 -640 0 2
+# imagemoveto 3 640 0 2
+# waitandnext 2.2
+
+# imagealpha 2 0 0
+# imagealpha 3 0 0
+;;-----------------------------------------
+# alpha 3203011 1 0.5
+# waitandnext 0.5
+
+# face 3203011 "normal"
+# voice 2030 "risanautr_l_0002"
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+知ってるかしら？
+
+# textboxarrow 0 2
+@リサナウト
+付け焼き刃
+という言葉があるわ
+
+# textboxarrow 0 2
+@リサナウト
+なまくらの刀に
+その場しのぎの焼き刃を付け足して
+それらしく繕ったモノのことね
+
+# textboxarrow 0 2
+@リサナウト
+一見切れそうに見えるけれど
+そんな間に合わせの品では
+すぐに使い物にならなくなるらしいわ
+
+# voice 2030 "risanautr_l_0003"
+# textboxarrow 0 2
+@リサナウト
+つまりは、そういうことよ
+
+# textboxarrow 0 2
+@リサナウト
+これは予言ではない
+確定事象の報告に過ぎないの
+
+# face 3203011 "smile"
+# voice 2030 "risanautr_l_0004"
+# textboxarrow 0 2
+@リサナウト
+こんな運命
+不愉快よね
+
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：大穴
+# background "101_hole"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# alpha 3203011 0 0
+# textwindow "close"
+# imagealpha 4 0 0
+# framein 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# move 3104211 3 0
+# mask 3104211 off
+# alpha 3104211 1 0.5
+# face 3104211 "angry"
+# voice 310421 "morabeaga_l_battle_0004"
+# textwindow "nomal"
+# textboxarrow 0 2
+@モラベガ
+巻きで行くよっ！！
+
+;;複数の斬撃、連合軍兵士達が撃退される
+# textwindow "close"
+# alpha 3104211 0 0.5
+# alpha 3810001 1 0.5
+# alpha 3830001 1 0.5
+# waitandnext 0.8
+
+# fadein "red" 0.5
+# se "SE_10588"
+# waitandnext 0.8
+
+# se "SE_3001"
+# alpha 3810001 0 0.5
+# alpha 3830001 0 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# textwindow "nomal"
+# textflame 0 0
+@
+大穴周辺戦線
+
+# alpha 3104211 1 0.5
+# voice 310421 "morabeaga_l_0029"
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+@モラベガ
+はああああぁぁっ！！
+
+# textwindow "close"
+# alpha 3104211 0 0.5
+# alpha 3820001 1 0.5
+# waitandnext 0.8
+
+;;モラベガが猛スピードで突進。それを押されながらも止める連合軍兵士達
+# move 3104211 2 0
+# mask 3104211 on
+# alpha 3104211 1 0
+# leftin 3104211 0.3
+# waitandnext 0.2
+
+# se "SE_9092"
+# fadein "white" 0.5
+# move 3820001 4 0.2
+# mask 3820001 on
+# waitandnext 0.5
+
+# voice 310421 "morabeaga_l_battle_0007"
+# textwindow "nomal"
+# textboxarrow 0 1
+@モラベガ
+攻め切れない…！！
+
+;;モラベガと連合軍兵士、弾き合う。
+# se "SE_3006"
+# fadein "white" 0.5
+# move 3820001 3 0.2
+# move 3104211 1 0.2
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# move 3104211 2 0.4
+# move 3820001 4 0.4
+# textboxarrow 0 1
+@モラベガ
+どうして
+進むルートを先回りされてるの…！？
+
+# alpha 3104211 0 0.5
+# alpha 3820001 0 0.5
+;;モノローグ
+# textflame 0 0
+@
+ピスカとの妖精結合を終え
+アルマス達の元へと急ぐモラベガは、
+三国連合軍兵士に足止めされていた
+
+# move 3104211 3 0
+# mask 3104211 off
+# alpha 3104211 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@モラベガ
+早く進まないと囲まれちゃう…！！
+でも…！
+
+# face 3104211 "sad"
+# move 3104211 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+@モラベガ
+剣がうまく
+言うことをきいてくれない…？
+
+# move 3104211 3 0
+# textwindow "moya"
+@モラベガ
+ピスカもお休み中…！！
+これじゃあ…！
+
+;;演出：連合軍兵士がモラベガを取り囲む
+# se "SE_0777"
+# alpha 3104211 0 0.5
+# move 3810001 1 0
+# alpha 3810001 1 0.5
+# move 3820001 3 0
+# mask 3820001 on
+# alpha 3820001 1 0.5
+# move 3830001 5 0
+# alpha 3830001 1 0.5
+# textwindow "close"
+# waitandnext 1.5
+
+# alpha 3104211 1 0.5
+# alpha 3810001 0 0.5
+# alpha 3820001 0 0.5
+# alpha 3830001 0 0.5
+# face 3104211 "angry"
+# textwindow "nomal"
+# textboxarrow 0 2
+@モラベガ
+…！
+
+;;演出：回想（13章第2話）
+# se "SE_0742"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "bg_black"
+# bgmfile "bgm263" "BgmLostRagnarok001" 0
+# alpha 3104211 0 0
+# textwindow "close"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# alpha 172 1 0.5
+# face 172 "angry"
+# textwindow "nomal"
+# textboxarrow 0 2
+@アルマス
+うううあああああああああ！
+届けぇぇぇっ！！
+
+;;※立ち絵なし
+# textboxarrow 0 0
+@モラベガ
+進んで先陣を切って
+たとえひとりでも
+真っ先に斬り込んで
+
+;;演出：回想（13章第2話）
+# se "SE_0742"
+# imagealpha 1 1 0
+# imagepos 1 0 30
+# imageleftin 1 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "ground_surface_break"
+# waitandnext 0.2
+
+# imagealpha 1 0 0.5
+# imagerightout 1 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@アルマス
+こんなことで挫ける私じゃない！
+モラルタとベガルタを必ず解放して
+みせるわ！
+
+;;※立ち絵なし
+# textboxarrow 0 0
+@モラベガ
+いつだって前に、前に………！！
+
+;;演出：回想（13章第2話）
+# se "SE_0742"
+# imagealpha 1 1 0
+# imagepos 1 0 30
+# imageleftin 1 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# imagealpha 1 0 0.5
+# imagerightout 1 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@アルマス
+そんなことさせない！
+あなた達は生きるの！
+生き残るのよ！
+
+;;※立ち絵なし
+# textboxarrow 0 0
+@モラベガ
+私達も決めたんだ
+前に進むって
+
+;;演出：回想（13章第3話）
+# se "SE_0742"
+# imagealpha 1 1 0
+# imagepos 1 0 30
+# imageleftin 1 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "red_corridor"
+# waitandnext 0.2
+
+# imagealpha 1 0 0.5
+# imagerightout 1 0.5
+# waitandnext 0.5
+
+# face 172 "normal"
+# textwindow "nomal"
+# textboxarrow 0 2
+@アルマス
+これからは好きに生きるといいわ
+二人、仲良くね！
+
+;;演出：回想終わり
+# fadeout "white" 1
+# waitandnext 1
+
+# background "101_hole"
+# bgmfile "bgm264_265" "BgmLostRagnarokBattle001" 0
+# alpha 172 0 0
+# textwindow "close"
+# imagealpha 0 0 0
+# imagepos 0 0 30
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# alpha 3104211 1 0.5
+# face 3104211 "normal"
+# voice 310421 "morabeaga_l_0003"
+# textwindow "nomal"
+# textboxarrow 0 2
+@モラベガ
+そっか
+いつもこうだったんだね
+アルマス
+
+# face 3104211 "angry"
+# textboxarrow 0 2
+@モラベガ
+私達、好きに生きるよっ！！
+
+# textboxarrow 0 2
+@モラベガ
+待ってて…！
+アルマスっ！！

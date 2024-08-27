@@ -1,0 +1,701 @@
+;;-----------------------------------------
+;;ファンキル学園
+;;5_1
+;;-----------------------------------------
+# script "lisp"
+# bgm "bgm005" 0
+# background "corridor_daytime"
+;;-----------------------------------------
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 3
+# mask 0 off
+# alpha 0 0 0
+;;マサムネ
+# body 101
+# pos 101 3
+# scale 101 0.8 0
+# layer 101 3
+# mask 101 off
+# alpha 101 0 0
+;;ティルフィング
+# body 101491
+# pos 101491 3
+# scale 101491 0.8 0
+# layer 101491 3
+# mask 101491 off
+# alpha 101491 0 0
+;;ダグダ
+# body 200651
+# pos 200651 3
+# scale 200651 0.8 0
+# layer 200651 3
+# mask 200651 off
+# alpha 200651 0 0
+;;メギド
+# body 500621
+# pos 500621 3
+# scale 500621 0.8 0
+# layer 500621 4
+# mask 500621 off
+# alpha 500621 0 0
+;;フライクーゲル
+# body 126
+# pos 126 3
+# scale 126 0.8 0
+# layer 126 3
+# mask 126 off
+# alpha 126 0 0
+;;ウコンバサラ
+# body 201021
+# pos 201021 3
+# scale 201021 0.8 0
+# layer 201021 3
+# mask 201021 off
+# alpha 201021 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;回想用ほわほわ
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagelayer 1 5
+# imagescale 1 1.2 0
+;;-----------------------------------------
+;;【EP.5】明かされる怪現象の解
+;;背景：廊下
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+# move 126 2 0
+# mask 126 on
+# alpha 126 1 0.5
+# face 126 "sad"
+# move 201021 4 0
+# mask 201021 on
+# alpha 201021 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 201021 "surprise"
+# voice 2010 "ukonbasara_0024"
+@ウコンバサラ
+キ…キミが、
+この事件の犯人なの…？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5002 "furaikugeru_0028"
+@フライクーゲル
+イエス…
+すべては私のせいなんだ
+
+# alpha 201021 0 0.5
+# move 101 4 0
+# mask 101 on
+# alpha 101 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 101 "normal"
+# voice 1001 "masamune_0009"
+@マサムネ
+どういうことだ
+説明してもらおうか
+
+# textflame 1 1
+# textboxarrow 0 1
+@フライクーゲル
+オフコース…
+一部始終を教えるよ
+
+# textflame 1 1
+# textboxarrow 0 1
+@フライクーゲル
+あれはラストナイト…
+昨日の夜のことだった―
+
+;;演出：場面転換
+# fadeout "black" 1
+# waitandnext 1
+
+;;回想シーンはじめ
+# textwindow "close"
+# alpha 126 0 0
+# alpha 101 0 0
+# imagealpha 1 1 0
+# imagepos 1 0 0
+;;背景：校門（夜）
+# background "schoolgate_night"
+# bgm "bgm002" 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_6505"
+# emotionbody 1000 3 126 -10 210
+# effectpattern 1000 2 3
+# effectstart 1000
+# move 126 3 0
+# mask 126 off
+# alpha 126 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 126 "normal"
+# voice 5002 "furaikugeru_0004"
+@フライクーゲル
+オッケー、
+誰もいないね♪
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+このままじゃ、
+いつ芭蕉扇に盗まれるか
+わからないからね
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+盗まれる前に隠すのが
+ベストだよ♪
+
+;;モノローグ
+# textflame 0 0
+@
+フライクーゲルと芭蕉扇は
+以前、マスターのことを取り合いして
+ひと悶着を起こしている
+
+;;モノローグ
+# textflame 0 0
+@
+それは今でも続いているため、
+フライクーゲルは
+いつも芭蕉扇を警戒していたのだった
+
+# effectskip 1000
+# textflame 1 1
+# textboxarrow 0 2
+# face 126 "surprise"
+# voice 5002 "furaikugeru_0022"
+@フライクーゲル
+さて、それじゃさっそく…
+あれっ！？
+
+# se "SE_6501"
+# emotionbody 1001 1 126 10 270
+# effectpattern 1001 2 0
+# effectstart 1001
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5002 "furaikugeru_0025"
+@フライクーゲル
+ち、ちょっとウェイト！！
+やばっ、このままじゃ倒れ…！？
+
+# alpha 126 0 0.5
+# textwindow "close"
+;;演出：画面揺れ
+# shake 0 2
+;;ＳＥ：ズゥウン…（銅像が倒れ、壊れる音）
+# se "SE_5215"
+# sedelay "SE_11575" 1
+# waitandnext 2.5
+
+# alpha 126 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 126 "sad"
+# voice 5002 "furaikugeru_0038"
+@フライクーゲル
+あ、あぁああ…！
+銅像が、こ、粉々に…！！
+
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 0
+@フライクーゲル
+オーーーウマイゴーーーッド！！
+
+;;演出：場面転換
+# fadeout "black" 1
+# waitandnext 1
+
+;;回想シーン終わり
+# textwindow "close"
+# alpha 126 0 0
+# imagealpha 1 0 0
+# imagepos 1 0 0
+;;背景：廊下
+# background "corridor_daytime"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# move 126 2 0
+# mask 126 on
+# alpha 126 1 0.5
+# move 201021 4 0
+# mask 201021 on
+# alpha 201021 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 126 "sad"
+@フライクーゲル
+あの銅像、土台の固定が
+すっごく甘かったみたいで…
+
+# textflame 1 1
+# textboxarrow 0 1
+@フライクーゲル
+ほんの少しタッチしただけで
+バランスが崩れて…
+ブロークンしてしまったの
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 201021 "sad"
+@ウコンバサラ
+そ、そうだったんだ…
+
+# alpha 201021 0 0.5
+# move 500621 4 0
+# mask 500621 on
+# alpha 500621 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 500621 "surprise"
+# voice 5006 "megido_0039"
+@メギド
+…被害を止めようとして
+逆に被害を大きくしてしまった
+ということですわね？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 126 "normal"
+# voice 5002 "furaikugeru_0006"
+@フライクーゲル
+うん、その通り！
+インガオーホーって
+このことだねっ☆
+
+# alpha 500621 0 0.5
+# move 200651 4 0
+# mask 200651 on
+# alpha 200651 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 200651 "usual"
+# voice 2006 "daguda_0028"
+@ダグダ
+意味が違うし、胸張って
+言うことじゃないよ～？
+
+# alpha 200651 0 0.5
+# move 101 4 0
+# mask 101 on
+# alpha 101 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1001 "masamune_0028"
+@マサムネ
+それで…
+貴様はそれからどうしたのだ？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 126 "sad"
+# voice 5002 "furaikugeru_0028"
+@フライクーゲル
+うん…
+その後すぐに、見回り中の
+マスターに見つかったんだけど
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 126 "normal"
+@フライクーゲル
+事情を話したら、
+なんとか銅像を直そうって
+マスターが言ってくれたの！
+
+# alpha 101 0 0.5
+# alpha 126 0 0.5
+# alpha 101491 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 101491 "surprise"
+# voice 1014 "tyrufing_0040"
+@ティルフィング
+マスター…
+そうだったんですね
+
+# alpha 101491 0 0.5
+# move 126 3 0
+# mask 126 off
+# alpha 126 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 126 "sad"
+@フライクーゲル
+それからオールナイトで、
+がんばって直そうとしたんだけど
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+朝になっても間に合わなくて…
+こうなったらプランＢだ！
+ってことで…
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+銅像の身代わりをお願いして、
+その間に新しい像を
+せっせと作ってたんだ
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 126 "normal"
+# voice 5002 "furaikugeru_0004"
+@フライクーゲル
+そうして出来たのがこの…
+ニューマスター像だよ！
+
+# alpha 126 0 0.5
+;;ト書き：ニューマスター像をみんなに見せる
+# se "SE_0673"
+# textwindow "close"
+# waitandnext 1
+
+# move 126 2 0
+# mask 126 on
+# alpha 126 1 0.5
+# move 201021 4 0
+# mask 201021 on
+# alpha 201021 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 201021 "usual"
+# voice 2010 "ukonbasara_0041"
+@ウコンバサラ
+わっ、すごい…！
+これも銅像なの？
+
+# textflame 1 1
+# textboxarrow 0 1
+@フライクーゲル
+ノーノー！
+木彫りで周りを
+それっぽくペイントしたの！
+
+# textflame 1 1
+# textboxarrow 0 1
+@フライクーゲル
+想像以上にグッドな出来でさ～♪
+完成したとき、
+ついスマイルがこぼれちゃったよ☆
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 201021 "sad"
+@ウコンバサラ
+あー、なるほど…
+これでやっとさっきの笑い声の
+謎が解けたね…
+
+# alpha 126 0 0.5
+# alpha 201021 0 0.5
+# move 500621 2 0
+# mask 500621 on
+# alpha 500621 1 0.5
+# move 101491 4 0
+# mask 101491 on
+# alpha 101491 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5006 "megido_0028"
+@メギド
+私が見た空き教室の残骸は、
+貴方が像を彫って出た木くず
+だったんですのね
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0002"
+@ティルフィング
+では、銅像が消えたのは…？
+
+# textflame 0 0
+@マスター
+ずっとあの体勢でいるのが
+キツくて…
+ちょっと木陰で休憩を…
+
+# alpha 500621 0 0.5
+# alpha 101491 0 0.5
+# alpha 126 1 0.5
+# move 101 4 0
+# mask 101 on
+# alpha 101 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1001 "masamune_0040"
+@マサムネ
+昨夜聞こえたという音も、
+先ほど拙者が聞いた笑い声も、
+すべてそなたが出していたと…
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5002 "furaikugeru_0006"
+@フライクーゲル
+イエース！
+イグザクトリィ☆
+
+# se "SE_6513"
+# emotionbody 1002 8 200651 -70 240
+# effectpattern 1002 1 0
+# effectstart 1002
+# alpha 101 0 0.5
+# move 200651 4 0
+# mask 200651 on
+# alpha 200651 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 200651 "sad"
+# voice 2006 "daguda_0027"
+@ダグダ
+はぁ～あ…
+心配して損したよ～
+
+# effectskip 1002
+# alpha 200651 0 0.5
+# move 126 3 0.5
+# mask 126 off
+# textflame 1 1
+# textboxarrow 0 2
+# face 126 "sad"
+# voice 5002 "furaikugeru_0015"
+@フライクーゲル
+ソーリィ…
+みんなを巻き込んじゃって
+ごめんね
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+この像が完成したら、
+身代わりのマスターとチェンジして
+事なきを得るプランだったけど…
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+結局間に合わなかったし…
+それにやっぱり、自分のミスには
+ちゃんとケジメをつけないとね
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+私…理事長に謝ってくるよ！
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+それで許してもらえるかは
+わからないけど、それでも…！
+
+# alpha 126 0 0.5
+# alpha 0 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 0 "normal"
+# voice 9999 "durin_0040"
+@デュリン
+いいんじゃない？
+許してあげる！
+
+# se "SE_6500"
+# emotionbody 1003 1 126 10 280
+# effectpattern 1003 1 0
+# effectstart 1003
+# move 0 4 0.5
+# move 126 2 0
+# mask 126 on
+# alpha 126 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 126 "surprise"
+# voice 5002 "furaikugeru_0022"
+@フライクーゲル
+えっ？
+り…理事長！？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 0 "happy"
+# voice 9999 "durin_0004"
+@デュリン
+はーい♪
+みんなお疲れ様！
+フライクーゲルもね！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 0 "serious"
+@デュリン
+話は聞かせてもらったわ
+まったく…最初から素直に
+言ってくれればよかったのに
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 126 "sad"
+# voice 5002 "furaikugeru_0015"
+@フライクーゲル
+ソ、ソーリィ…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 0 "usual2"
+# voice 9999 "durin_0002"
+@デュリン
+まあいいわ
+それよりこのニューマスター像、
+もらっちゃっていいかしら？
+
+# se "SE_6502"
+# emotionbody 1004 2 126 10 260
+# effectpattern 1004 1 1
+# effectstart 1004
+# textflame 1 1
+# textboxarrow 0 1
+# face 126 "surprise"
+# voice 5002 "furaikugeru_0023"
+@フライクーゲル
+えっ？
+いいけど…どうするの？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 0 "proud"
+# voice 9999 "durin_0007"
+@デュリン
+決まってるじゃない！
+壊れたマスター像の
+代わりにするのよ
+
+# textflame 1 1
+# textboxarrow 0 3
+@デュリン
+新しく作ったり
+直したりしたら
+費用掛かっちゃうでしょ！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 126 "sad"
+@フライクーゲル
+…像をブレイクしたこと、
+怒ってない？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 0 "usual2"
+@デュリン
+別にぃー
+面白いかなーって
+ノリで作ったものだし
+
+# textflame 0 0
+@マスター
+そんな軽いノリで
+作らないでほしい…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 0 "normal"
+# voice 9999 "durin_0002"
+@デュリン
+ってわけで、フライクーゲル！
+悪いけどこの像、
+校門のところに建ててきて！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 126 "normal"
+# voice 5002 "furaikugeru_0032"
+@フライクーゲル
+オ…オーケーっ！
+すぐに行ってくるよっ！
+
+;;ＳＥ：タッタッタッ（フライクーゲルが走る音）
+# textwindow "close"
+# alpha 126 0 0.5
+# se "SE_5575"
+# waitandnext 1
+
+# move 0 3 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 0 "usual"
+# voice 9999 "durin_0004"
+@デュリン
+ふうっ…
+これにて一件落着ね！
+
+# se "SE_6513"
+# emotionbody 1005 8 500621 -90 260
+# effectpattern 1005 1 0
+# effectstart 1005
+# alpha 0 0 0.5
+# move 500621 3 0
+# mask 500621 off
+# alpha 500621 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 500621 "sad"
+# voice 5006 "megido_0013"
+@メギド
+はぁ…
+解決したと思ったら、
+どっと疲れてきましたわ…
+
+# effectskip 1005
+# alpha 500621 0 0.5
+# move 201021 3 0
+# mask 201021 off
+# alpha 201021 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 201021 "normal"
+# voice 2010 "ukonbasara_0008"
+@ウコンバサラ
+あはは…
+えっと、それじゃとりあえず…
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 2010 "ukonbasara_0001"
+@ウコンバサラ
+マスター！
+元の格好に戻るの、手伝うね！
+
+# fadeout "black" 1
+# waitandnext 1.2

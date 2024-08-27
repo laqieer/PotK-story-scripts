@@ -1,0 +1,607 @@
+;;-----------------------------------------
+;;SEA5章_29
+;;-----------------------------------------
+# script "lisp"
+# background "town_2"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.6 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.6 0
+# layer 103611 2
+# mask 103611 off
+# alpha 103611 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 4
+# alpha 6504011 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 2
+# scale 6603811 0.8 0
+# layer 6603811 2
+# alpha 6603811 0 0
+;;ミネルヴァ
+# body 302511
+# pos 302511 2
+# scale 302511 0.8 0
+# layer 302511 2
+# alpha 302511 0 0
+;;スイハfeat
+# body 6401711
+# pos 6401711 4
+# scale 6401711 0.8 0
+# layer 6401711 4
+# alpha 6401711 0 0
+;;ダモクレス
+# body 103511
+# pos 103511 2
+# scale 103511 0.8 0
+# layer 103511 2
+# alpha 103511 0 0
+;;ネス
+# body 602011
+# pos 602011 4
+# scale 602011 0.8 0
+# layer 602011 4
+# alpha 602011 0 0
+;;グラーシーザ
+# body 302611
+# pos 302611 2
+# scale 302611 0.8 0
+# layer 302611 2
+# alpha 302611 0 0
+;;フライシュッツ
+# body 502711
+# pos 502711 4
+# scale 502711 0.8 0
+# layer 502711 4
+# alpha 502711 0 0
+;;エルキュール
+# body 202511
+# pos 202511 3
+# scale 202511 0.8 0
+# layer 202511 3
+# mask 202511 off
+# alpha 202511 0 0
+;;8thエルキュール
+# body 6202511
+# pos 6202511 3
+# scale 6202511 0.8 0
+# layer 6202511 2
+# mask 6202511 off
+# alpha 6202511 0 0
+;;8thティルフィング
+# body 6101431
+# pos 6101431 3
+# scale 6101431 0.8 0
+# layer 6101431 3
+# mask 6101431 off
+# alpha 6101431 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 2 "SEA6202511"
+# imagealpha 2 0 0
+# imagelayer 2 5
+# imageset 3 "bg_crack1"
+# imagealpha 3 0 0
+# imagelayer 3 4
+# imageset 4 "bg_crack2"
+# imagealpha 4 0 0
+# imagelayer 4 4
+;;-----------------------------------------
+;;背景：町：town_2
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# serif 1
+# textflame 1 1
+@ティルフィング
+…マスター、今です！
+
+;;選択肢
+# select "マナナン、今だ！" "select_label_01" "マクリル、今だ！" "select_label_01"
+…マスター、今です！
+
+# label "select_label_01"
+# bgmfile "bgm602_1" "BgmSecretlyEverAfter002" 0
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# face 6603811 "happy"
+# alpha 6603811 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 0
+@マナナン＆マクリル
+それじゃあ開くよ
+今から開くよ
+
+# textboxarrow 0 0
+@マナナン＆マクリル
+鬼が出るか蛇が出るか
+吉と出るか凶と出るか
+
+# textboxarrow 0 0
+@マナナン＆マクリル
+開いてみてのお楽しみ♪
+「裏側」からのご招待♪
+
+# textboxarrow 0 0
+@マナナン＆マクリル
+さぁさぁおいでよ
+出ておいで
+ここが君の、あなたの楽園だよ！
+
+;;空間に穴が開く
+# bgm "stop"
+# move 6504011 5 0.5
+# alpha 6504011 0 0.3
+# move 6603811 1 0.5
+# alpha 6603811 0 0.3
+# imagealpha 3 1 1
+# imagepos 3 0 0
+# textwindow "close"
+# waitandnext 1
+
+# se "SE_11462"
+# waitandnext 0.2
+
+# fadein "white" 1
+# imagealpha 3 0 0.2
+# imagealpha 4 1 0.3
+# imagepos 4 0 0
+# waitandnext 1
+
+;;ミーミルとラグナロクが出てくる
+# imagealpha 4 0 0.3
+# shake 0 0.2
+# voice 9917 "mimir_navikan_0024"
+# move 270 2 0.3
+# scale 270 0.8 0.3
+# face 270 "surprise"
+# alpha 270 1 0.3
+# se "SE_0846"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+きゃっ！？
+
+# move 103611 4 0.3
+# scale 103611 0.8 0.3
+# face 103611 "surprise"
+# alpha 103611 1 0.3
+# se "SE_8020"
+# textboxarrow 0 3
+@ラグナロク
+おっと！
+
+# move 270 1 0.3
+# alpha 270 0 0.3
+# move 103611 5 0.5
+# alpha 103611 0 0.3
+# textwindow "close"
+# waitandnext 1 
+
+# imagealpha 4 1 0.5
+# imagepos 4 0 0
+# waitandnext 1
+
+;;空間が閉じる
+# se  "SE_13862"
+# imagealpha 4 0 1
+# waitandnext 2
+
+# bgmfile "bgm214_03" "BgmAncientKillers001" 0
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# voice 3025 "minerva_0006"
+# face 6401711 "normal"
+# alpha 6401711 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミネルヴァ
+やりました！
+
+# voice 4017 "suiha_0004"
+# textboxarrow 0 3
+@スイハ
+お帰りなさい！
+
+# alpha 302511 0 0.3
+# alpha 6401711 0 0.3
+# voice 1035 "damocles_0021"
+# face 103511 "happy"
+# alpha 103511 1 0.3
+# face 602011 "happy"
+# alpha 602011 1 0.3
+# textboxarrow 0 1
+@ダモクレス
+やったー！
+
+# voice 6020 "ness_0005"
+# textboxarrow 0 3
+@ネス
+大成功です！
+
+# alpha 103511 0 0.3
+# alpha 602011 0 0.3
+# face 302611 "happy"
+# alpha 302611 1 0.3
+# voice 5027 "freischotz_0005"
+# face 502711 "happy"
+# alpha 502711 1 0.3
+# textboxarrow 0 3
+@フライシュッツ
+おねーちゃん、感激だよ～っ
+
+# voice 3026 "grayside_0006"
+# textboxarrow 0 1
+@グラーシーザ
+うむっ
+まこと、ちょうじょう！
+
+;;エルキュールシナリオカット表示
+;;ここからエルキュール新規立ち絵
+# frameout 0 0
+# fadein "white" 1
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# alpha 302611 0 0
+# alpha 502711 0 0
+# textwindow "close"
+# waitandnext 2
+
+# textwindow "nomal"
+# textboxarrow 0 0
+@エルキュール
+ああっ…
+
+@エルキュール
+お帰りなさい…
+
+@エルキュール
+お帰りなさい、ラグナロク！
+
+# voice 1036 "ragnarok_0004"
+# serif 1
+@ラグナロク
+ただいま
+迷惑をかけてしまったみたいね
+ごめんなさい
+
+# voice 2025 "hercule_0015"
+# serif 0
+@エルキュール
+いえ…いいえっ
+やっと、やっと取り戻せました…
+私達の希望をっ
+
+# serif 1
+@ラグナロク
+何を言っているの
+エルキュール、あなたこそが希望よ
+
+# voice 2025 "hercule_0022"
+# serif 0
+@エルキュール
+そんなことは…えっ？
+ラグナロク、体が…
+
+;;シナリオカット削除
+# imagealpha 2 0 1
+# framein 0 1
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 1
+
+# voice 3025 "minerva_0022"
+# face 302511 "surprise"
+# alpha 302511 1 0.3
+# face 6401711 "surprise"
+# alpha 6401711 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミネルヴァ
+そんなっ…
+透けてきています…！？
+
+# voice 4017 "suiha_0022"
+# textboxarrow 0 3
+@スイハ
+どうして…！？
+
+# alpha 302511 0 0.3
+# alpha 6401711 0 0.3
+# move 270 2 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# move 103611 4 0
+# alpha 103611 0.5 0.3
+# textboxarrow 0 3
+@ラグナロク
+驚かせてしまったわね
+でも、問題ないわ
+
+# voice 9917 "mimir_navikan_0002"
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+ラグナロクさんは
+完全な状態になっております
+ただ…
+
+# textboxarrow 0 1
+@ミーミル
+こちらの世界で存在を定着させるには
+伝承が足りないと言いましょうか…
+
+# voice 1036 "ragnarok_0032"
+# textboxarrow 0 3
+@ラグナロク
+私はこの世界で、
+まだ姿を維持できない
+だから…
+
+;;ラグナロクが光になる
+# se "SE_9147"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# alpha 103611 0 0
+# face 270 "normal"
+# textwindow "close"
+# fadein "white" 0.5
+# waitandnext 1
+
+;;ミーミルの中に光が入る
+# se "SE_13694"
+# effectbody 1000 51 0 35 0
+# effectstart 1000
+# move 270 3 0.5
+# waitandnext 5.4
+
+# alpha 270 0 0.3
+# face 6202511 "surprise"
+# alpha 6202511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@エルキュール
+ラグナロク…！
+ラグナロクが光になって
+ミーミルの中に入ってしまいました
+
+# voice 9917 "mimir_navikan_0003"
+# face 270 "normal"
+# alpha 270 1 0.3
+# alpha 6202511 0 0.3
+# textboxarrow 0 2
+@ミーミル
+はい
+ラグナロクさんは私の中に宿りました
+
+# textboxarrow 0 2
+@ミーミル
+これから、ともに
+世界を歩んでまいります
+そうすることで…
+
+# textboxarrow 0 2
+@ミーミル
+ラグナロクさんも新たな伝承を得て
+この世界に定着していくことと
+存じます
+
+# textboxarrow 0 2
+@ミーミル
+そして、再び皆さんの前に
+
+# alpha 270 0 0.3
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# voice 3025 "minerva_0040"
+# move 302611 4 0
+# layer 302611 4
+# face 302611 "normal"
+# alpha 302611 1 0.3
+# textboxarrow 0 1
+@ミネルヴァ
+なるほど
+予想外の展開ではありますけど…
+
+# voice 3026 "grayside_0004"
+# textboxarrow 0 3
+@グラーシーザ
+うむ
+かならずまたあおう！
+
+# alpha 302511 0 0.3
+# alpha 302611 0 0.3
+# move 502711 2 0
+# layer 502711 2
+# face 502711 "sad"
+# alpha 502711 1 0.3
+# face 602011 "normal"
+# alpha 602011 1 0.3
+# textboxarrow 0 1
+@フライシュッツ
+おねーちゃん、待ちきれないよ～っ
+
+# voice 6020 "ness_0036"
+# textboxarrow 0 3
+@ネス
+ミーミル
+ラグナロクを規律正しく
+お願いします
+
+# alpha 502711 0 0.3
+# alpha 602011 0 0.3
+# voice 1035 "damocles_0005"
+# face 103511 "usual"
+# alpha 103511 1 0.3
+# face 6401711 "surprise"
+# alpha 6401711 1 0.3
+# textboxarrow 0 1
+@ダモクレス
+うんうん
+愛があれば問題ない！
+
+# voice 4017 "suiha_0039"
+# textboxarrow 0 3
+@スイハ
+これは…
+驚きました
+
+# alpha 103511 0 0.3
+# alpha 6401711 0 0.3
+# face 6202511 "angry"
+# alpha 6202511 1 0.3
+# textboxarrow 0 2
+@エルキュール
+いつか会えるんですよね
+いえ、絶対に会えます！
+
+# textboxarrow 0 2
+@エルキュール
+そのときまで私は希望であり続けます
+この、ラグナロクのいる世界で！
+
+# face 6202511 "usual"
+# textboxarrow 0 2
+@エルキュール
+みんな！
+また必ず、御旗に集いましょう！!
+
+;;喜ぶエンシェント達
+# alpha 6202511 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# bgm "stop"
+# move 270 3 0
+# face 270 "sad"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+…………
+
+;;選択肢
+# select "お帰り、ミーミル" "select_label_02" "どうしたの？" "select_label_02"
+…………
+
+# label "select_label_02"
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+# voice 9917 "mimir_navikan_0001"
+# face 270 "happy"
+# textboxarrow 0 2
+@ミーミル
+あ！ご挨拶が遅れました
+ただいま戻りました、マスター様！
+
+# face 270 "normal"
+# textboxarrow 0 2
+@ミーミル
+実は、とても不思議な感覚を
+覚えております
+
+# textboxarrow 0 2
+@ミーミル
+「裏側」から帰ってきて、
+皆様のお顔やお姿を拝見して…
+
+# textboxarrow 0 2
+@ミーミル
+周りの景色も見てみたのですが
+何故か…
+
+# se "bgm601_windon"
+# textboxarrow 0 2
+@ミーミル
+「裏側」に行く前より、
+何もかも鮮明に
+目に映るのでございます
+
+# textboxarrow 0 2
+@ミーミル
+マスター様のお顔も、
+以前より細部までよく見えて…
+
+;;ミーミルがマスターに近づく
+# se "SE_5006"
+# sedelay "SE_5007" 1
+# scale 270 0.85 1.5
+# waitandnext 2
+
+# textboxarrow 0 2
+@ミーミル
+もっとよく見てみたいという思いが
+強くなっているのです
+
+;;ミーミルがマスターに近づく
+# se "SE_5006"
+# sedelay "SE_5007" 1
+# scale 270 0.9 1.5
+# waitandnext 2
+
+# voice 9917 "mimir_navikan_0043"
+# textboxarrow 0 2
+@ミーミル
+マスター様
+これはどういうことなのでしょう！？
+
+;;選択肢
+# select "それは…" "select_label_03"
+マスター様
+これはどういうことなのでしょう！？
+
+# label "select_label_03"
+# face 270 "surprise"
+# textboxarrow 0 2
+@ミーミル
+それはっ？
+
+;;選択肢
+# select "いつか分かるよ" "select_label_04"
+それはっ？
+
+# label "select_label_04"
+# voice 9917 "mimir_navikan_0048"
+# scale 270 0.8 1
+# face 270 "sad"
+# textboxarrow 0 2
+@ミーミル
+マスター様…！？
+うぅっ…自分で考えろという
+ことなのですね…
+
+# voice 9917 "mimir_navikan_0032"
+# face 270 "happy"
+# textboxarrow 0 2
+@ミーミル
+分かりました
+
+# textboxarrow 0 2
+@ミーミル
+ミーミルはマスター様の
+専属補佐官として、
+これからも精進致します！
+
+# fadeout "black" 1
+# waitandnext 1

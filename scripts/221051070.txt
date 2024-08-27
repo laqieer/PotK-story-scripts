@@ -1,0 +1,448 @@
+;;-----------------------------------------
+;;ファントム オブ キル
+;;2019ハロウィン：イベントシナリオ
+;;「笑顔をくれなきゃ悪戯しちゃうぞ？」
+;;【ED】
+;;スクリプト最後の背景：町中（夜）
+;;-----------------------------------------
+# script "lisp"
+# background "101_city_night3"
+# bgmfile "bgm069" "BgmHalloween001" 0
+;;-----------------------------------------
+;;ハロウィンマサムネ
+# body 3100121
+# pos 3100121 3
+# scale 3100121 0.8 0
+# layer 3100121 2
+# alpha 3100121 0 0
+# mask 3100121 off
+;;ハロウィンアロンダイト
+# body 3100721
+# pos 3100721 3
+# scale 3100721 0.8 0
+# layer 3100721 2
+# alpha 3100721 0 0
+# mask 3100721 off
+;;トレイセーマ隊長
+# body 3830007
+# pos 3830007 3
+# scale 3830007 0.8 0
+# layer 3830007 3
+# alpha 3830007 0 0
+# mask 3830007 off
+;;-----------------------------------------
+;;【ED】
+;;マサムネとアロンダイトの立ち絵は最初から表示させておいてください
+;;背景：「町中（夜）」のイメージでお願いします
+;;モノローグ
+# move 3100121 2 0
+# face 3100121 "usual"
+# alpha 3100121 1 0
+# mask 3100121 on
+# move 3100721 4 0
+# face 3100721 "normal"
+# alpha 3100721 1 0
+# mask 3100721 on
+# textflame 0 0
+@
+騒動も落ち着いたところで
+せっかくなので、とマスターたちも
+仮装してハロウィンに参加していた
+
+;;マサムネのグラフィックを小さく何度かジャンプさせてください。
+# jump 3100121
+# waitandnext 0.5
+
+# jump 3100121
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 1
+@ジャック
+やはりハロウィンは
+賑やかなほうが楽しいな！
+
+# se "SE_6504"
+# emotionbody 1001 3 3830007 10 290
+# effectpattern 1001 1 3
+# effectstart 1001
+# move 3100121 1 0.5
+# move 3830007 3 0
+# alpha 3830007 1 0.5
+# mask 3830007 on
+# textboxarrow 0 2
+# move 3100721 5 0.5
+@ルタバガ
+うむ
+実に愉快、愉快である！
+
+# voice 310011 "masamune_ge_0022"
+# face 3100121 "surprise"
+# textboxarrow 0 1
+@マサムネ
+なぜ
+そなたがいるのだ…
+
+# textboxarrow 0 2
+@ルタバガ
+しもべたちは帰らせたが
+ハロウィンが終わるまでは
+我輩もここにいるぞ
+
+# textboxarrow 0 3
+@アロンダイト
+もう町の人々を困らせないのなら
+構いませんよ
+
+;;モノローグ
+# alpha 3100121 0 0.5
+# alpha 3830007 0 0.5
+# alpha 3100721 0 0.5
+# textflame 0 0
+@
+広場のあちこちから
+ハロウィンを楽しむ
+人々の笑い声が響く
+
+# voice 310011 "masamune_ge_0015"
+# move 3100121 2 0
+# face 3100121 "sad"
+# alpha 3100121 1 0.5
+# mask 3100121 on
+# textboxarrow 0 1
+# move 3100721 4 0
+# face 3100721 "normal"
+# alpha 3100721 1 0.5
+# mask 3100721 on
+# textflame 1 1
+@マサムネ
+…結局、拙者にはできなかったな
+ああいう笑顔が
+
+# textboxarrow 0 3
+@アロンダイト
+私もです
+…でも、彼らの笑顔が守れたのなら
+それでよかった、と思います
+
+;;モノローグ
+# textflame 0 0
+@
+そんな二人に、マスターは提案する
+二人で笑顔を見せ合って
+みるのはどうだろう？
+
+# voice 310011 "masamune_ge_0040"
+# face 3100121 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+なるほど
+笑顔になってもらうには
+笑顔を見せればいい、ということか
+
+# face 3100721 "usual"
+# textboxarrow 0 3
+@アロンダイト
+やってみましょう、マサムネ！
+
+;;モノローグ
+# textflame 0 0
+@
+そしてふたりは向き合う
+
+# emotionbody 1002 9 3100721 30 220
+# effectpattern 1002 5 0
+# effectstart 1002
+# voice 310071 "arondaito_ge_0042"
+# face 3100721 "shy"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+…こうして面と向き合うと
+なんだか気恥ずかしいですね
+
+# effectskip 1002
+# textboxarrow 0 1
+@マサムネ
+そうだな、アロンダイト
+常に鍛錬をともにした顔だ
+…いくぞ
+
+;;モノローグ
+# face 3100121 "angry"
+# face 3100721 "angry"
+# textflame 0 0
+@
+二人は息を大きく吸い込んで
+そして、笑顔を放つ
+
+;;アロンダイト・ハロウィンver.の立ち絵を怒（気合入れ）の表情で表示。
+;;マサムネ・ハロウィンver.の立ち絵を怒（気合入れ）の表情で表示。
+;;モノローグ
+# bgm "stop"
+@
+すると…
+
+;;アロンダイト・ハロウィンver.の立ち絵を喜の表情で表示。
+# bgmfile "bgm069" "BgmHalloween001" 0
+# emotionbody 1003 10 3100121 60 260
+# effectpattern 1003 3 3
+# effectstart 1003
+# emotionbody 1004 10 3100721 -70 230
+# effectpattern 1004 4 3
+# effectstart 1004
+# voice 310071 "arondaito_ge_0005"
+# face 3100121 "happy"
+# face 3100721 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+…ぷ、あははっ！
+
+;;マサムネ・ハロウィンver.の立ち絵を喜の表情で表示。
+# voice 310011 "masamune_ge_0005"
+# textboxarrow 0 1
+@マサムネ
+ふ、ふははっ！
+
+# textboxarrow 0 3
+@アロンダイト
+な、なんですマサムネ
+その顔！
+とても怖い顔です！
+
+# textboxarrow 0 1
+@マサムネ
+そう言うアロンダイトこそ！
+不器用がすぎるぞ！
+
+;;モノローグ
+# effectskip 1003
+# effectskip 1004
+# textflame 0 0
+@
+提案したマスターも驚くことに
+ふたりは、声を上げて笑っていた
+
+;;モノローグ
+@
+どうしたの、と他の姫がやってくる
+ふたりの笑顔が面白いんだと伝えると
+みんな、見たい！と騒ぎ始める
+
+# voice 310071 "arondaito_ge_battle_0001"
+# face 3100721 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+はあッ！
+
+# voice 310011 "masamune_ge_battle_0003"
+# face 3100121 "angry"
+# textboxarrow 0 1
+@マサムネ
+とぉっ！
+
+;;モノローグ
+# textflame 0 0
+@
+おかしな掛け声とともに
+笑顔を放つふたり
+周りのみんなが笑っている
+
+# textflame 1 1
+# textboxarrow 0 1
+@ジャック
+これで周りのみんなも
+お嬢ちゃんたちに話しかけやすく
+なったんじゃないかな？
+
+;;モノローグ
+# textflame 0 0
+@
+と、ジャックは満足そうに微笑んだ
+
+;;モノローグ
+@
+明日からは、ふたりとも
+隊で笑顔を見せてくれそうだ
+と、マスターは笑い返す
+
+# textflame 1 1
+# textboxarrow 0 1
+@ジャック
+もうすぐハロウィンも終わるし
+これで僕ちゃんの目的も
+果たされた、ってなわけで
+
+# face 3100121 "surprise"
+# textboxarrow 0 1
+@マサムネ
+…なんだ、帽子よ
+別れのときか
+
+# face 3100721 "sad"
+# textboxarrow 0 3
+@アロンダイト
+なんだか寂しいですね、帽子さん
+
+# textboxarrow 0 1
+@ジャック
+…一度も僕のことを名前で
+呼んでくれなかったね
+ま、いいんだけどさ
+
+# alpha 3100121 0 0.5
+# alpha 3100721 0 0.5
+# move 3830007 3 0
+# alpha 3830007 1 0.5
+# mask 3830007 off
+# textboxarrow 0 2
+@ルタバガ
+あー、オホン、オホン
+
+# textboxarrow 0 2
+@ルタバガ
+ハロウィンであるぞ、お嬢さん方
+なにか我々に言い忘れている
+ことがあるのではないか？
+
+# alpha 3830007 0 0.5
+# move 3100121 2 0
+# face 3100121 "usual"
+# alpha 3100121 1 0.5
+# mask 3100121 on
+# textboxarrow 0 1
+# move 3100721 4 0
+# face 3100721 "sad"
+# alpha 3100721 1 0.5
+# mask 3100721 on
+# textflame 1 1
+@ジャック
+眺めてるだけじゃ
+ハロウィンに参加したとは
+言えないよ
+
+# textboxarrow 0 1
+@ジャック
+ふたりがそんな衣装を着ているのは
+変装して町に潜入する
+ためだけじゃないでしょ？
+
+# face 3100721 "normal"
+# textboxarrow 0 3
+@アロンダイト
+！
+そうですね
+
+# face 3100121 "happy"
+# textboxarrow 0 1
+@マサムネ
+では、アロンダイト
+
+# se "SE_6504"
+# emotionbody 1005 3 3100121 10 290
+# effectpattern 1005 1 3
+# effectstart 1005
+# se "SE_6504"
+# emotionbody 1006 3 3100721 10 290
+# effectpattern 1006 1 3
+# effectstart 1006
+# textboxarrow 0 0
+@ふたり
+トリック・オア・トリート？
+
+;;マサムネのグラフィックを小さく何度かジャンプさせてください。
+# jump 3100121
+# waitandnext 0.5
+
+# jump 3100121
+# waitandnext 0.5
+
+# se "SE_0738"
+# textboxarrow 0 1
+@ジャック
+ハッピー・ハロウィーン！
+
+;;モノローグ
+# se "SE_9457"
+# textflame 0 0
+@
+これも魔法の一種なのか
+空から大量のお菓子が
+ふたりの頭上に降り注ぐ
+
+# face 3100121 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+な、なんだこれは！
+おい、ジャック！
+どけてくれ！
+
+# face 3100721 "angry"
+# textboxarrow 0 3
+@アロンダイト
+ジャックくん、ルタバガさん！
+ま、前が見えませんよ！
+
+;;ジャックとルタバガはすでに妖精の世界に戻った想定なので、グラフィックなしで名前だけ表示してください。
+# serif 1
+@ジャック
+とびっきりの笑顔を見せてくれたふたりに
+僕ちゃんたちからのプレゼントさ！
+
+# serif 1
+@ルタバガ
+心ゆくまで
+ハロウィンを楽しんでくれ！
+
+;;モノローグ
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+@
+高らかな笑い声とともに
+妖精たちの気配は消えた
+
+# face 3100121 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+…
+
+;;モノローグ
+# se "SE_0648"
+# textflame 0 0
+@
+お菓子の山に埋もれながら
+マサムネは帽子を被り直す
+
+# voice 310011 "masamune_ge_0032"
+# face 3100121 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+…承知した
+みんなでハロウィンを楽しもう
+
+# emotionbody 1007 3 3100721 10 280
+# effectpattern 1007 2 3
+# effectstart 1007
+# voice 310071 "arondaito_ge_0005"
+# face 3100721 "happy"
+# textboxarrow 0 3
+@アロンダイト
+これからが
+私たちの
+ハロウィン・パーティの始まりですね
+
+;;モノローグ
+# effectskip 1007
+# textflame 0 0
+@
+マサムネの帽子に描かれた顔が
+にこりと
+笑ったような気がした

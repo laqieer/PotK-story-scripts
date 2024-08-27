@@ -1,0 +1,1098 @@
+;;//10話戦闘後
+;;//背景　荒野_黄昏（wild_evening）
+;;指定　bgm037
+# script "lisp"
+# background "wild_evening"
+# bgmfile "bgm037" "BgmStory004" 0
+# body 0
+# pos 0 4
+# scale 0 0.8 0
+# alpha 0 0 0
+# body 24
+# pos 24 4
+# scale 24 0.8 0
+# alpha 24 0 0
+# body 103421
+# pos 103421 2
+# scale 103421 0.8 0
+# alpha 103421 0 0
+# body 502521
+# pos 502521 4
+# scale 502521 0.8 0
+# alpha 502521 0 0
+# body 106
+# pos 106 5
+# scale 106 0.8 0
+# alpha 106 0 0
+# body 601811
+# pos 601811 3
+# alpha 601811 0 0
+# body 502611
+# pos 502611 3
+# alpha 502611 0 0
+# body 107
+# pos 107 2
+# scale 107 0.8 0
+# alpha 107 0 0
+# body 101411
+# pos 101411 1
+# alpha 101411 0 0
+# body 601711
+# pos 601711 3
+# mask 601711 off
+# scale 601711 0.8 0
+# alpha 601711 0 0
+# textflame 0 0
+@
+…異族の大半を殲滅したところで
+マスターがアクアに
+結界破壊の合図を送る
+
+# envbody 2101 12 0
+# effectpattern 2101 1 0
+# effectstart 2101
+# leftin 601711 0.5
+# alpha 601711 1 0
+# voice 6017 "akua_battle_0001"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 601711
+# face 601711 "angry"
+@アクア
+いくわよーっ！
+セイクリッド・ブレイクスペルッ！
+
+;;//画面：フラッシュ
+;;//SE：魔法が炸裂し結界が消滅する音　ばしゅうっ、等
+;;指定　SE_9049
+# se "SE_9049"
+# fadein "blue" 1
+# shake 0 1.5
+# waitandnext 2
+
+# effectskip 2101
+# move 601711 2 0.5
+# rightin 0 0.5
+# alpha 0 1 0
+# layer 0 2
+# layer 601711 1
+# voicedelay 9999 "durin_0036" 0.5
+# textboxarrow 0 3
+# chara 0
+# face 0 "serious"
+@デュリン
+次！
+めぐみん、ウィズ、
+思いっきりかましてやって！！
+
+# alpha 0 0 0.3
+# alpha 601711 0 0.3
+# leftin 107 0.5
+# rightin 502521 0.5
+# alpha 502521 1 0
+# alpha 107 1 0
+# face 107 "usual"
+# textboxarrow 0 3
+# chara 502521
+@めぐみん
+今回は負けませんよ、ウィズ！
+
+# textboxarrow 0 1
+# chara 601811
+# voice 6018 "wizu_0005"
+@ウィズ
+ふふふっ、めぐみんさんが
+どのぐらい成長したか楽しみです
+
+;;//下記２人は「めぐみん」「ウィズ」です
+;;指定　SE_9633
+# se "SE_9633"
+# shakeloop 1
+# fadein "red" 1
+# envbody 1501 6 0
+# effectpattern 1501 1 0
+# effectstart 1501
+# envbody 2102 12 0
+# effectpattern 2102 2 1
+# effectstart 2102
+# face 107 "angry"
+# face 502521 "angry"
+# textwindow "toge"
+# textboxarrow 0 0
+# textsize 32
+# textalign "center"
+# waitandnext 1.2
+@２人
+エクスプロージョンッッ！！！
+
+;;//画面：フラッシュ２回
+;;//画面：ホワイトアウト
+;;SE：強烈な爆裂魔法が２つ同時に炸裂する爆音
+# fadeout "white" 2.5
+# waitandnext 3.5
+# textsize 32
+# textalign "center"
+@２人
+エクスプロージョンッッ！！！
+
+# fadein "white" 0.5
+# effectskip 1501
+# effectskip 2102
+# shakestop
+# alpha 502521 0 0
+# alpha 107 0 0
+# alpha 103421 1 0
+# alpha 24 1 0
+# face 103421 "usual"
+# textsize 24
+# textwindow "nomal"
+# textboxarrow 0 3
+# chara 101411
+# voice 1014 "tyrufing_0021"
+# face 24 "happy2"
+@ティルフィング
+…見事です！
+脚を全部破壊できました！
+
+# emotionbody 5010 1 103411 0 310
+# effectpattern 5010 2 0
+# effectstart 5010
+# textboxarrow 0 1
+# chara 103421
+# face 103421 "angry"
+@ダクネス
+胴体が地面に落ちるぞ！
+みんな、離れろ…っ！！
+
+;;指定　SE_5790
+# se "SE_5790"
+# effectskip 5010
+# fadein "white" 1
+# rightin 106 0.5
+# alpha 106 1 0
+# move 24 3 0.5
+# move 103421 1 0.5
+# face 24 "angry"
+# layer 106 3
+# layer 24 2
+# layer 103421 1
+# textboxarrow 0 3
+# chara 502611
+# face 106 "angry"
+# voice 5026 "yunyun_battle_0001"
+@ゆんゆん
+危ない！ライトオブセイバー！
+破片に気を付けて！
+ダクネスさんも、早くこっちへ！
+
+;;//画面：大揺れ
+;;//SE：地響き　ずしーん
+;;指定　SE_5739
+# se "SE_5739"
+# fadein "black" 1
+# shakeloop 1.5
+# waitandnext 2
+
+# shakestop
+# textboxarrow 0 2
+# chara 101411
+# voice 1014 "tyrufing_unit_1014"
+# face 24 "mad2"
+@ティルフィング
+…では、乗り込みましょう！
+先陣は私が切ります！
+
+# se "SE_5575"
+# leftout 24 0.5
+# alpha 103421 0 0.3
+# alpha 106 0 0.3
+# textflame 0 0
+@
+落下した“デストロイヤー”の胴体を
+素早く駆け上がり、ティルフィングは
+胴体上の遺跡へと取り付く
+
+# textflame 0 0
+@
+そして、入り口を守るように陣取る
+異族をたちまちに切り伏せると
+マスター達の到着を待った
+
+# pos 0 5
+# pos 24 1
+# pos 601711 3
+# alpha 24 1 0.5
+# alpha 0 1 0.5
+# alpha 601711 1 0.5
+# mask 601711 on
+# face 24 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 0
+@デュリン
+…じゃあ、突入するわよ！
+
+# se "SE_0700"
+# bgm "stop"
+# effectbody 600 21 0 0
+# effectstart 600
+# textwindow "close"
+# waitandnext 2
+
+;;//場面転換
+;;//背景　小綺麗な部屋夜_通常（アルケ背景流用）
+;;指定　bgm006
+# bgm "bgm006" 0
+# effectskip 600
+# background "alc_ch3_basement"
+# body 108
+# pos 108 3
+# scale 108 0.8 0
+# alpha 108 0 0
+# alpha 24 0 0
+# alpha 0 0 0
+# alpha 601711 0 0
+# waitandnext 1
+
+# emotionbody 5100 2 108 10 290
+# effectpattern 5100 1 1
+# effectstart 5100
+# alpha 108 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# chara 108
+@カズマ
+…………あれ？
+みんな、早かったな？
+
+# effectskip 5100
+# emotionbody 6101 11 601711 110 230
+# effectpattern 6101 1 0
+# effectstart 6101
+# pos 601711 1
+# leftin 601711 0.5
+# alpha 601711 1 0
+# layer 108 2
+# layer 601711 1
+# voice 6017 "akua_0022"
+# textboxarrow 0 1
+# chara 601711
+# face 601711 "surprise"
+@アクア
+…えっ、なにこの食べ物とか水とか、
+なんなのこの生活空間！
+
+# effectskip 6101
+# textboxarrow 0 1
+# chara 601711
+@アクア
+ソファーもふかふかだし！
+お酒もあるし！
+
+# pos 502521 5
+# alpha 502521 1 0.5
+# textboxarrow 0 3
+# chara 502521
+# voice 5025 "megumin_0009"
+# face 502521 "usual2"
+@めぐみん
+なるほど、カズマは乗り物の
+“デストロイヤー”が迷惑をかける中
+食っちゃ寝食っちゃ寝していた、と…
+
+# alpha 601711 0 0.3
+# alpha 103421 1 0.5
+# textboxarrow 0 1
+# chara 103421
+# face 103421 "usual"
+@ダクネス
+うむ、私達が苦労する姿を尻目に
+ここでひとりだらだらと
+好き放題していたのだな
+
+# emotionbody 6114 12 103421 -25 105
+# effectpattern 6114 4 0
+# effectstart 6114
+# textboxarrow 0 1
+# chara 103421
+# voice 1034 "dakunesu_0005"
+# face 103421 "shy2"
+@ダクネス
+…さすがカズマ、私の見込んだ男だ！
+
+# alpha 502521 0 0.3
+# alpha 106 1 0.5
+# textboxarrow 0 3
+# chara 502611
+# voice 5026 "yunyun_0027"
+# face 106 "sad"
+@ゆんゆん
+カズマさん…
+
+;;指定　SE_0708
+# se "SE_0708"
+# effectskip 6114
+# effectbody 700 23 0 0
+# effectstart 700
+# serif 1
+# textboxarrow 1 1
+# chara 108
+@カズマ
+お、おいそんな目で見るなよ！
+俺は悪くない！
+勝手に動くんだよ、こいつ！
+
+# serif 1
+# textboxarrow 1 1
+@カズマ
+…多少はマニュアル操作もできるが…
+
+# effectskip 700
+# serif 1
+# textwindow "close"
+# pos 107 1
+# alpha 107 1 0.5
+# alpha 103421 0 0.3
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 601811
+# face 107 "usual"
+@ウィズ
+よく、操作方法がわかりましたね？
+
+# textboxarrow 0 2
+# chara 108
+@カズマ
+フッ、昔いた国で磨いたスキルが
+役に立ったのさ
+
+# textboxarrow 0 2
+# chara 108
+@カズマ
+説明書読まずにゲーム始めるのと
+そんなに変わらなかったなー
+
+# emotionbody 5855 9 108 70 210
+# effectpattern 5855 5 0
+# effectstart 5855
+# textboxarrow 0 2
+# chara 108
+@カズマ
+ただ、なぜか
+四六時中操作するのは無理で…
+
+# effectskip 5855
+# emotionbody 5944 10 108 -80 250
+# effectpattern 5944 4 0
+# effectstart 5944
+# textboxarrow 0 2
+# chara 108
+@カズマ
+ほんと、来てくれて助かったよ、
+ありがとな！
+
+# effectskip 5944
+# pos 24 5
+# alpha 106 0 0.3
+# alpha 24 1 0.5
+# textboxarrow 0 3
+# chara 101411
+# face 24 "normal"
+@ティルフィング
+いえ、困っている者がいるなら
+助けるのが当たり前です
+
+# textboxarrow 0 3
+# chara 101411
+# voice 1014 "tyrufing_0005"
+# face 24 "happy"
+@ティルフィング
+…私達のマスターは、
+そういう人ですから！
+
+# se "SE_5200"
+# alpha 24 0 0.5
+# alpha 107 0 0.5
+# scale 108 0.9 0.8
+# textflame 0 0
+@
+すると、カズマはマスターの前へと
+歩み寄り右手を差し出した
+
+# se "SE_5594"
+# envbody 2001 11 0
+# effectpattern 2001 2 0
+# effectstart 2001
+# textflame 0 0
+@
+マスターががっちりと握り返せば、
+それ以上の言葉はいらない
+自然と２人の顔に笑みがこぼれた！
+
+# se "SE_0700"
+# bgm "stop"
+# effectbody 611 21 0 0
+# effectstart 611
+# textwindow "close"
+# waitandnext 2
+
+;;//画面：ホワイトアウト
+;;//背景　荒野_黄昏（wild_evening）
+;;指定　BgmKScollabo001 bgm208
+# effectskip 2001
+# effectskip 611
+# bgmfile "bgm208" "BgmKScollabo001" 0
+# background "wild_evening"
+# alpha 0 1 0
+# alpha 601711 1 0
+# scale 108 0.8 0
+# face 601711 "usual"
+# voice 9999 "durin_0002"
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 0
+# face 0 "serious"
+@デュリン
+…それでアンタ達、
+これからどうすんの？
+
+# emotionbody 5881 9 108 50 250
+# effectpattern 5881 1 0
+# effectstart 5881
+# textboxarrow 0 2
+# chara 108
+@カズマ
+“デストロイヤー”をぶっ壊したら、
+超パワーかなにかで元の世界に
+戻れるかと思ってたんだが…
+
+# effectskip 5881
+# voice 6017 "akua_0021"
+# textboxarrow 0 1
+# chara 601711
+# face 601711 "normal"
+@アクア
+ま、なるようになるわよ
+なんといっても、この女神アクア様が
+ついてるんだもの！
+
+# textflame 0 0
+@
+そんな風に“デストロイヤー”の
+残骸の横で話をしていると、
+見知った女性が街からかけつける
+
+;;指定　SE_0708
+# se "SE_0708"
+# effectbody 100 26 0 0
+# effectstart 100
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 3
+@ルナ
+…皆さん！
+また見事に“デストロイヤー”を
+倒したようですね
+
+# serif 1
+# textboxarrow 1 3
+@ルナ
+おめでとうございます！
+これで、皆さんにはクエストクリアの
+報奨金が支払われますよ！
+
+# effectskip 100
+# emotionbody 5900 1 108 10 310
+# effectpattern 5900 1 0
+# effectstart 5900
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 108
+@カズマ
+おお！
+
+# effectskip 5900
+# emotionbody 5994 10 502521 -85 180
+# effectpattern 5994 4 0
+# effectstart 5994
+# alpha 0 0 0.3
+# rightin 502521 0.5
+# alpha 502521 1 0
+# textboxarrow 0 3
+# chara 502521
+# face 502521 "happy"
+@めぐみん
+やりましたね、カズマ！
+
+# emotionbody 5933 10 601711 100 230
+# effectpattern 5933 3 0
+# effectstart 5933
+# textboxarrow 0 1
+# chara 601711
+# voice 6017 "akua_0005"
+# face 601711 "happy2"
+@アクア
+久しぶりにみんなで
+パーッと飲みましょう！
+
+# effectskip 5994
+# effectskip 5933
+# alpha 601711 0 0.3
+# alpha 103421 1 0.5
+# textboxarrow 0 1
+# chara 103421
+# voice 1034 "dakunesu_0003"
+# face 103421 "happy2"
+@ダクネス
+そうだな、
+助けてくれた皆に御礼もしたい
+
+;;指定　SE_0709
+# se "SE_0709"
+# effectbody 100 26 0 0
+# effectstart 100
+# face 502521 "usual2"
+# face 103421 "usual"
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 3
+@ルナ
+あの、ただ…“デストロイヤー”を
+カズマさんが操作していたとなると
+その被害の弁償が必要になりまして…
+
+;;指定　SE_4702
+# se "SE_4702"
+# effectskip 100
+# effectbody 900 25 0 0
+# effectstart 900
+# serif 1
+# textboxarrow 1 1
+@カズマ
+マジかよ！？
+でも、街とかはなるべく
+壊さないようにしてたはずだぞ？
+
+# serif 1
+# textboxarrow 1 1
+@カズマ
+…はっ！！
+もしかして、“デストロイヤー”の
+コアか！？どうしたっけ！？
+
+# effectskip 900
+# pos 107 5
+# alpha 107 1 0.5
+# alpha 502521 0 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 601811
+# face 107 "happy"
+@ウィズ
+それについてはご心配なく
+さっき、私がテレポートで
+人気のない荒野に飛ばしましたから
+
+# emotionbody 5220 3 108 10 290
+# effectpattern 5220 1 3
+# effectstart 5220
+# textboxarrow 0 2
+# chara 108
+@カズマ
+さすがはウィズ！
+あーよかった
+だとすると、他になにかあったか？
+
+;;指定　SE_0708
+# se "SE_0708"
+# effectskip 5220
+# effectbody 100 26 0 0
+# effectstart 100
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 3
+@ルナ
+実は、カズマさんが壊したものが
+１つだけありまして…
+
+# serif 1
+# textboxarrow 1 3
+@ルナ
+それが、“外壁”と呼ばれている
+異族の侵入を防ぐための
+巨大な建造物なんです…
+
+;;指定　SE_4702
+# se "SE_4702"
+# effectskip 100
+# effectbody 900 25 0 0
+# effectstart 900
+# serif 1
+# textboxarrow 1 1
+# textboxarrow 0 0
+# chara 108
+@カズマ
+なー！！？？
+
+# effectskip 900
+# emotionbody 5411 6 601711 90 170
+# effectpattern 5411 2 1
+# effectstart 5411
+# serif 1
+# textwindow "close"
+# leftin 601711 0.5
+# alpha 601711 1 0
+# alpha 103421 0 0.3
+# serif 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# chara 601711
+# voice 6017 "akua_0009"
+# face 601711 "angry"
+@アクア
+ちょっとカズマ！
+なんてことしてくれたのよ！！
+
+# textboxarrow 0 1
+# chara 601711
+@アクア
+弁償のために
+報奨金が使われるなんて！
+
+# effectskip 5411
+# textboxarrow 0 1
+# chara 601711
+# face 601711 "sad"
+@アクア
+私、“デストロイヤー”の
+報奨金を当て込んで、結構
+借金しちゃってるんですけどぉぉ！！
+
+;;指定　SE_0709
+# se "SE_0709"
+# effectbody 800 24 0 0
+# effectstart 800
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 1
+# chara 108
+@カズマ
+知らねぇよ！
+お前の借金なんだから
+自分でなんとかしろよ！
+
+# effectskip 800
+# emotionbody 5440 6 601711 80 170
+# effectpattern 5440 1 1
+# effectstart 5440
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 601711
+# face 601711 "angry"
+@アクア
+だってなんともならないんだもの！
+ギルド作ったのにお金は全然
+増えないし！うそつき！！
+
+# effectskip 5440
+# alpha 0 1 0.5
+# alpha 107 0 0.3
+# textboxarrow 0 3
+# chara 0
+# face 0 "angry"
+@デュリン
+あれはギルドメンバーからの贈り物が
+必要なの！アンタのギルド、
+他のメンバー誰もいないじゃない！
+
+# alpha 24 1 0.5
+# alpha 0 0 0.3
+# textboxarrow 0 3
+# chara 101411
+# voice 1014 "tyrufing_0002"
+# face 24 "surprise"
+@ティルフィング
+でも、どうしてそんなにお金が
+ないんですか？クエストをして、
+生活費ぐらいは稼いでいるはずです
+
+# textboxarrow 0 1
+# chara 601711
+# face 601711 "sad"
+@アクア
+だってあれっぽっちじゃ
+足りないんだもの…酒代とか…
+宴会芸の小道具代とかで…
+
+# emotionbody 5831 9 24 50 250
+# effectpattern 5831 1 0
+# effectstart 5831
+# textboxarrow 0 3
+# chara 101411
+# voice 1014 "tyrufing_0022"
+@ティルフィング
+…宴会芸の小道具代、ですか…？
+
+# effectskip 5831
+# textboxarrow 0 2
+# chara 108
+@カズマ
+気にしなくていい
+アクアが酒代とかしょーもないことで
+借金背負うのはいつものことだからな
+
+# alpha 24 0 0.3
+# alpha 502521 1 0.5
+# textboxarrow 0 3
+# chara 502521
+# face 502521 "usual1"
+@めぐみん
+とはいえ、困りましたね
+まだしばらくはこの世界に
+滞在することになるのでしょう？
+
+# alpha 601711 0 0.3
+# alpha 103421 1 0.5
+# textboxarrow 0 1
+# chara 103421
+# face 103421 "usual"
+@ダクネス
+ああ
+
+# textboxarrow 0 1
+# chara 103421
+# face 103421 "sad"
+@ダクネス
+それに、迷惑をかけたのだから
+償いのための弁償は
+しなければならない
+
+# emotionbody 5875 9 107 70 210
+# effectpattern 5875 5 0
+# effectstart 5875
+# alpha 107 1 0.5
+# alpha 502521 0 0.3
+# textboxarrow 0 3
+# chara 601811
+# voice 6018 "wizu_0026"
+# face 107 "sad"
+@ウィズ
+ど、どうしましょうか…
+
+;;指定　SE_5594
+# se "SE_5594"
+# effectskip 5875
+# effectbody 200 27 0 0
+# effectstart 200
+# serif 1
+# textboxarrow 1 3
+@ルナ
+おほん
+そんなこともあろうかと…
+
+# serif 1
+# textboxarrow 1 3
+@ルナ
+ここで皆さんに
+とっておきのお知らせがあります！
+
+# serif 1
+# textboxarrow 1 3
+@ルナ
+実は…“デストロイヤー”が他にも
+たくさん出現しているそうで、
+討伐クエストが山ほど出ています！
+
+;;指定　SE_4702
+# se "SE_4702"
+# effectskip 200
+# effectbody 900 25 0 0
+# effectstart 900
+# serif 1
+# textboxarrow 1 1
+# chara 108
+@カズマ
+おおお！討伐クエスト！
+…って相手は
+“デストロイヤー”じゃねーか！
+
+# effectskip 900
+# serif 1
+# textwindow "close"
+# alpha 601711 1 0.5
+# alpha 103421 0 0.3
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 601711
+# face 601711 "happy1"
+@アクア
+大丈夫よカズマ、
+私達がいるじゃない！
+
+# emotionbody 5222 3 601711 50 260
+# effectpattern 5222 1 3
+# effectstart 5222
+# textboxarrow 0 1
+# chara 601711
+# face 601711 "irregular"
+@アクア
+それに、
+これは荒稼ぎするチャンスよ！
+逃す手はないわ！
+
+# effectskip 5222
+# alpha 107 0 0.3
+# alpha 502521 1 0.5
+# textboxarrow 0 3
+# chara 502521
+# voice 5025 "megumin_0005"
+# face 502521 "angry"
+@めぐみん
+そうですよカズマ、
+我が爆裂魔法があれば、
+“デストロイヤー”など一撃です！
+
+# pos 106 3
+# alpha 106 1 0.5
+# alpha 108 0 0.3
+# layer 106 3
+# layer 502521 2
+# layer 601711 1
+# textboxarrow 0 2
+# chara 502611
+@ゆんゆん
+でもめぐみん、あなた一日一回しか
+撃てないじゃない？
+撃ったら動けなくなるし
+
+# emotionbody 6191 11 502521 100 200
+# effectpattern 6191 1 0
+# effectstart 6191
+# textboxarrow 0 3
+# chara 502521
+# face 502521 "surprise"
+@めぐみん
+うっ…
+今回はウィズがいるから大丈夫です！
+
+# effectskip 6191
+# textboxarrow 0 3
+# chara 502521
+# face 502521 "shy"
+@めぐみん
+それに動けなくなっても
+ゆんゆんがいますから
+
+# emotionbody 5555 1 106 0 290
+# effectpattern 5555 2 0
+# effectstart 5555
+# textboxarrow 0 2
+# chara 502611
+# face 106 "irregular"
+@ゆんゆん
+そんなこと言って、また私に
+おんぶさせる気でしょう！？
+
+# effectskip 5555
+# envbody 2001 11 0
+# effectpattern 2001 2 0
+# effectstart 2001
+# textboxarrow 0 3
+# chara 502521
+# face 502521 "happy"
+@めぐみん
+そうですよ、
+私とゆんゆんは友達ですから
+
+# textboxarrow 0 2
+# chara 502611
+# voice 5026 "yunyun_0021"
+# face 106 "shy"
+@ゆんゆん
+友達！！
+
+# pos 107 1
+# alpha 107 1 0.5
+# alpha 601711 0 0.3
+# textboxarrow 0 1
+# chara 601811
+# voice 6018 "wizu_0004"
+# face 107 "happy"
+@ウィズ
+ふふふ、
+めぐみんさんとゆんゆんさんは
+本当に仲がいいですねぇ
+
+# effectskip 2001
+# emotionbody 6144 12 103421 -25 105
+# effectpattern 6144 4 0
+# effectstart 6144
+# alpha 103421 1 0.5
+# alpha 108 1 0.5
+# alpha 0 1 0.5
+# alpha 107 0 0.3
+# alpha 106 0 0.3
+# alpha 502521 0 0.3
+# layer 108 2
+# layer 103421 1
+# textboxarrow 0 1
+# chara 103421
+# face 103421 "shy1"
+@ダクネス
+…カズマの借金のために、
+強大な敵に何度も挑んでは
+ボロボロになり…
+
+# textboxarrow 0 1
+# chara 103421
+# face 103421 "shy2"
+# voice 1034 "dakunesu_kyara_ex_2001"
+@ダクネス
+やがて服も破れて
+あられもない姿にっ…
+望むところだ！ 
+
+# textboxarrow 0 2
+# chara 108
+@カズマ
+…本当に嫌な予感しかしないんだが
+まあ、やるしかないか！
+
+# textboxarrow 0 3
+# chara 0
+# voice 9999 "durin_0027"
+# face 0 "serious"
+@デュリン
+…ま、アタシ達がこれ以上
+つきあうことはないわね
+アクア達も仲間がそろったみたいだし
+
+# effectskip 6144
+# pos 24 1
+# alpha 103421 0 0.3
+# alpha 24 1 0.5
+# textboxarrow 0 1
+# chara 101411
+# face 24 "sad"
+@ティルフィング
+でも、“デストロイヤー”を
+放置すれば、それだけ
+人々に危害を受ける可能性が…
+
+# textboxarrow 0 3
+# chara 0
+# face 0 "usual2"
+@デュリン
+…そういえばそうね…
+アンタはどうしたい？
+マスターとして決めなさい
+
+# select "もちろん決まってるよ" "select_label_01" "乗りかかった船だもんね" "select_label_02" "危ない物を放ってはおけないよ" "select_label_03"
+…そういえばそうね…
+アンタはどうしたい？
+マスターとして決めなさい
+
+;;回答（どれを選んでも）
+;;指定　BgmKScollabo001 bgm207
+# label "select_label_01"
+# labeljump "select_label_end"
+# bgmfile "bgm207" "BgmKScollabo001" 0
+# textflame 1 1
+# textboxarrow 0 3
+# chara 0
+# voice 9999 "durin_0027"
+# face 0 "usual"
+@デュリン
+…はぁ
+ま、アンタがそういうなら
+これ以上は反対しないわ
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# bgmfile "bgm207" "BgmKScollabo001" 0
+# textflame 1 1
+# textboxarrow 0 3
+# chara 0
+# voice 9999 "durin_0027"
+# face 0 "usual"
+@デュリン
+…はぁ
+ま、アンタがそういうなら
+これ以上は反対しないわ
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# bgmfile "bgm207" "BgmKScollabo001" 0
+# textflame 1 1
+# textboxarrow 0 3
+# chara 0
+# voice 9999 "durin_0027"
+# face 0 "usual"
+@デュリン
+…はぁ
+ま、アンタがそういうなら
+これ以上は反対しないわ
+
+# label "select_label_end"
+# emotionbody 5255 3 24 20 280
+# effectpattern 5255 1 3
+# effectstart 5255
+# textboxarrow 0 1
+# chara 101411
+# voice 1014 "tyrufing_0033"
+# face 24 "happy"
+@ティルフィング
+私も、マスターの剣として
+“デストロイヤー”討伐の
+お手伝いをさせていただきます！
+
+# effectskip 5255
+# alpha 0 0 0.3
+# leftin 601711 0.5
+# alpha 601711 1 0
+# move 24 3 0.5
+# move 108 5 0.5
+# layer 24 3
+# layer 108 2
+# layer 601711 1
+# textboxarrow 0 1
+# chara 601711
+# face 601711 "happy2"
+@アクア
+あなた達ならきっと
+そう言ってくれると信じてたわ！
+
+# sedelay "SE_0673" 1.2
+# face 24 "normal"
+# textboxarrow 0 1
+# chara 601711
+# face 601711 "normal"
+@アクア
+…カズマ、マスター、行くわよ！
+もちろん、みんなも手を貸してね！
+私の借金返済のために！！
+
+;;//ホワイトアウト
+;;//第１０話終了
+# fadeout "white" 3
+# waitandnext 3.5

@@ -1,0 +1,370 @@
+;;【第3話　タイトル：幻獣の切望】
+;;3_1_10
+;;背景：ビフレスト
+;;-----------------------------------------
+# script "lisp"
+# background "bifrost"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス(ジョブチェンジ後)
+# body 172
+# pos 172 2
+# scale 172 0.8 0
+# alpha 172 0 0
+;;ティターニア
+# body 139
+# pos 139 4
+# scale 139 0.8 0
+# alpha 139 0 0
+;;ギル
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# alpha 137 0 0
+# mask 137 off
+;;フェイルノート
+# body 3401911
+# pos 3401911 4
+# scale 3401911 0.8 0
+# alpha 3401911 0 0
+;;パラシュ
+# body 3200411
+# pos 3200411 3
+# scale 3200411 0.8 0
+# alpha 3200411 0 0
+;;モラルタ
+# body 3104011
+# pos 3104011 4
+# scale 3104011 0.8 0
+# alpha 3104011 0 0
+;;ベガルタ
+# body 3104111
+# pos 3104111 2
+# scale 3104111 0.8 0
+# alpha 3104111 0 0 
+;;アフロディーテ
+# body 3401311
+# pos 3401311 3
+# scale 3401311 0.8 0
+# alpha 3401311 0 0
+;;-----------------------------------------
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# fadeout "black" 0.5
+# waitandnext 1
+
+# fadein "black" 1.5
+# waitandnext 1.5
+
+# alpha 172 1 1
+# alpha 139 1 1
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 172 "sad"
+# voice 1038 "almace_0028"
+@アルマス
+んんっ…
+
+# face 139 "surprise"
+# voice 9967 "titania_0064"
+# textboxarrow 0 3
+@ティターニア
+アルマス！
+気がつきましたかっ？
+
+# textboxarrow 0 1
+@アルマス
+あ、うん…
+ごめん、ティニ
+怒りのせいで妖精結合が乱れたのね
+
+# alpha 172 0 0.5
+# alpha 139 0 0.5
+# alpha 137 1 0.5
+# face 137 "surprise"
+# textboxarrow 0 2
+@ギル
+本当、焦ったぜー…
+二人とも意識を取り戻して良かった
+
+# alpha 172 1 0.5
+# alpha 139 1 0.5
+# alpha 137 0 0.5
+# face 139 "normal"
+# voice 9967 "titania_0004"
+# textboxarrow 0 3
+@ティターニア
+今回ばかりは、フェイルノートに
+感謝するしかありませんね
+
+# face 172 "angry"
+# voice 1038 "almace_0009"
+# textboxarrow 0 1
+@アルマス
+フェイルノート…？
+あ！そうだわ！
+
+# alpha 139 0 0.5
+# alpha 3401911 1 0.5
+# face 3401911 "normal"
+# voice 4019 "failnaught_a_0059"
+# textboxarrow 0 3
+@フェイルノート
+おはよう、お寝坊アルマス
+気分はいかがかしら？
+
+# voice 1038 "almace_0002"
+# textboxarrow 0 1
+@アルマス
+ねえ、フェイルノート
+さっき言ってたの、どういう意味？
+私を働かせるとか何とか…
+
+# face 3401911 "angry"
+# voice 4019 "failnaught_a_0007"
+# textboxarrow 0 3
+@フェイルノート
+あのときも言ったでしょ
+マスターに聞きなさいな
+
+# move 139 3 0
+# mask 139 off
+# alpha 3401911 0 0.5
+# alpha 172 0 0.5
+# alpha 139 1 0.5
+# face 139 "worry"
+# voice 9967 "titania_0003"
+# textboxarrow 0 2
+@ティターニア
+私も先程、聞いたのですけれど
+実はですね、アルマス…
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+# alpha 139 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# move 172 3 0
+# mask 172 off
+# alpha 172 1 0.5
+# face 172 "angry"
+# voice 1038 "almace_0022"
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+フェイルノートと
+そんな取り引きをしたの！？
+まさに悪魔の契約だわ…
+
+# voice 1038 "almace_0049"
+@アルマス
+マスター！
+何でそんな取り引きに応じたのよ！？
+
+;;選択肢
+# select "仕方なかったんだ" "select_label_01" "ごめん…" "select_label_02" "アルマスが大切だから" "select_label_03"
+@
+マスター！
+何でそんな取り引きに応じたのよ！？
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 172 "normal"
+# voice 1038 "almace_0028"
+@アルマス
+仕方なかったとしても、
+よりによってフェイルノートと
+取り引きするなんて…
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 172 "sad"
+# voice 1038 "almace_0028"
+@アルマス
+元はといえば私のせいだから
+マスターが謝らなくても
+いいんだけど…
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 172 "shy"
+# voice 1038 "almace_0042"
+@アルマス
+ちょっ…何、言ってんの！？
+ば、バカじゃないのっ…もう…
+
+# move 3401911 3 0
+# mask 3401911 off
+# alpha 3401911 1 0.5
+# alpha 172 0 0.5
+# label "select_label_end"
+# face 3401911 "normal"
+@フェイルノート
+もう契約は成立しているの
+お前には私の手駒として
+しっかり働いてもらうわよ
+
+# alpha 3401911 0 0.5
+# alpha 172 1 0.5
+# face 172 "normal"
+# voice 1038 "almace_0013"
+@アルマス
+くっ…
+分かったわよ
+で、何をしろって言うの？
+
+# alpha 3401911 1 0.5
+# alpha 172 0 0.5
+# face 3401911 "happy"
+# voice 4019 "failnaught_a_0004"
+@フェイルノート
+あら、随分と素直なのね
+いい子よ、アルマス
+
+# mask 3200411 off
+# alpha 3401911 0 0.5
+# alpha 3200411 1 0.5
+# face 3200411 "normal"
+# voice 320041 "parashu_a_0002"
+@パラシュ
+皇帝、そろそろアフロディーテを
+呼び戻しても良いんじゃないかな
+
+# alpha 3401911 1 0.5
+# alpha 3200411 0 0.5
+# face 3401911 "surprise"
+# voice 4019 "failnaught_a_0032"
+@フェイルノート
+ああ、そうね
+あの双子の足止めは
+もう十分だから、呼び戻しなさい
+
+# alpha 3401911 0 0.5
+# alpha 172 1 0.5
+# voice 1038 "almace_0009"
+@アルマス
+足止め？
+そういえば、モラルタとベガルタとは
+途中ではぐれたままだったわね…
+
+# alpha 172 0 0.5
+# alpha 3104011 1 0.5
+# alpha 3104111 1 0.5
+# face 3104011 "normal"
+# face 3104111 "happy"
+# voice 1040 "morallta_0006"
+# textboxarrow 0 3
+@モラルタ
+アルマスだ！
+アルマスがいたよ、ベガ！
+
+# voice 1041 "beagallta_0005"
+# textboxarrow 0 1
+@ベガルタ
+アルマスだ！
+アルマスがいたね、モラ！
+
+# layer 3401311 1
+# move 3104011 5 0.5
+# move 3104111 1 0.5
+# alpha 3401311 1 0.5
+# face 3401311 "normal"
+# voice 340131 "aphrodite_a_0041"
+# textboxarrow 0 2
+@アフロディーテ
+意中の人を激しく追い求める
+その姿、とても浅ましくて
+美しいですわ！
+
+# alpha 172 1 0.5
+# alpha 3104011 0 0.5
+# alpha 3104111 0 0.5
+# alpha 3401311 0 0.5
+# face 172 "angry"
+# voice 1038 "almace_0023"
+@アルマス
+わっ！？
+噂をすればっ…
+二人とも、どこ行ってたの？
+
+# move 3104011 4 0
+# move 3104111 2 0
+# alpha 3104011 1 0.5
+# alpha 3104111 1 0.5
+# alpha 172 0 0.5
+# face 3104011 "sad"
+# face 3104111 "normal"
+# voice 1040 "morallta_0013"
+# textboxarrow 0 3
+@モラルタ
+酷いんだよ、アルマス！
+あの斬ル姫がボク達の行く手を
+遮ったんだ
+
+# voice 1041 "beagallta_0013"
+# textboxarrow 0 1
+@ベガルタ
+酷いんだよ、アルマス！
+あの斬ル姫が私達をアルマスから
+遠ざけたんだ
+
+# move 3401311 4 0
+# move 3401911 2 0
+# mask 3401911 on
+# alpha 3401911 1 0.5
+# alpha 3401311 1 0.5
+# alpha 3104011 0 0.5
+# alpha 3104111 0 0.5
+# voice 340131 "aphrodite_a_0005"
+# textboxarrow 0 3
+@アフロディーテ
+うふふ…
+皇帝陛下の邪魔をされては
+美しくありませんからね
+
+# face 3401911 "happy"
+# voice 4019 "failnaught_a_0030"
+# textboxarrow 0 1
+@フェイルノート
+足止め、ご苦労さま
+下がっていいわよ、アフロディーテ
+
+# face 3401311 "happy"
+# voice 340131 "aphrodite_a_0033"
+# textboxarrow 0 3
+@アフロディーテ
+承知しました
+陛下直々のお言葉、高まりますわ♪
+
+;;アフロディーテ下がる
+# textboxarrow 0 0
+# alpha 3401311 0 1
+# waitandnext 1
+
+# move 3401911 3 0.5
+# mask 3401911 off
+# face 3401911 "normal"
+# voice 4019 "failnaught_a_0059"
+# textboxarrow 0 2
+@フェイルノート
+さて、話を続けましょう
+アルマス、お前にはトレイセーマ軍の
+様子を調べてきてもらうわ
+
+@フェイルノート
+お前とその妖精、それからマスター
+だけで行ってきなさい

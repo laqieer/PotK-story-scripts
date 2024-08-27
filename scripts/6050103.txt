@@ -1,0 +1,145 @@
+;;【EP2】戦闘前/解読進行～説得～/背景：建物内
+# script "lisp"
+# background "church_room"
+# bgm "bgm005" 0
+# body 75
+# pos 75 3 0
+# scale 75 0.8 0
+# mask 75 off
+# textflame 0 0
+# face 75 "smile"
+@フレンネル
+本当に人が現れた!?
+彼が“予言”にあった男…
+リベリオンなのかっ？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 75
+# voice 9979 "rebellion_0021"
+@眼帯の男
+やった！やったぞ！
+ついに成功した！
+これで…
+
+# textboxarrow 0 2
+# chara 75
+# face 75 "surprise"
+@眼帯の男
+おっと、人がいたのか…
+
+# textboxarrow 0 2
+# chara 75
+# voice 9979 "rebellion_0031"
+# face 75 "sad"
+@眼帯の男
+すまない
+決して怪しい者じゃないんだ
+あんたに危害を加えたりはしない
+
+# textboxarrow 0 2
+# chara 75
+# face 75 "normal"
+@眼帯の男
+だから質問に答えてくれ
+ここは、天上世界なのか？
+
+# textflame 0 0
+@フレンネル
+天上世界？
+…ここはラグナ大陸だ
+それより君は――
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 75
+# face 75 "irregular"
+@眼帯の男
+ラグナ大陸？
+天上世界じゃないのか？
+どういうことだ…？
+
+# textboxarrow 0 2
+# chara 75
+# voice 9979 "rebellion_0015"
+# face 75 "angry"
+@眼帯の男
+…くそっ！
+なにかはっきりした証拠があれば…
+
+;;//リベリオンが外に出ていく
+# se "SE_5575"
+# textboxarrow 0 0
+# alpha 75 0 0.5
+# waitandnext 0.8
+
+# move 75 3 0
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textflame 0 0
+@フレンネル
+あっ…ちょっと待ってくれ！
+
+;;//背景：平原
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# alpha 75 1 0.5
+# background "plain"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 75
+# face 75 "normal"
+@眼帯の男
+日食か…
+
+# textboxarrow 0 2
+# chara 75
+@眼帯の男
+事前情報だと
+神器奪還のために誰かが
+ここに来ているはずなんだが…
+
+# textflame 0 0
+@フレンネル
+待ってくれ！
+私の話を聞いてくれないか？
+リベリオン！
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 75
+# voice 9979 "rebellion_0009"
+# face 75 "surprise"
+@リベリオン
+お前!?
+何故、俺の名前を知っている!?
+
+# textflame 0 0
+@フレンネル
+私はフレンネル
+公爵の地位にある貴族だ
+やはり君がリベリオンなんだな
+
+# textflame 0 0
+@フレンネル
+君が現れることは
+“予言”されていたんだ
+私の話を聞いて欲しい
+
+;;//暗転
+# bgm "stop"
+# se "SE_4779"
+# fadeout "black" 2
+# waitandnext 3

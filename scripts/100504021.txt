@@ -1,0 +1,136 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー5章
+;;第4話　タイトル：拳
+;;スクリプト最後の背景：ユグドラシル（地上編）
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "bgm100" 0
+;;----------------------------------------------------------
+;;天沼矛（♂）
+# body 157
+# pos 157 3
+# scale 157 0.8 0
+# layer 157 2
+# alpha 157 0 0
+# mask 157 off
+# face 157 "normal"
+;;魔獣
+# body 960011
+# pos 960011 3
+# scale 960011 0.8 0
+# layer 960011 2
+# alpha 960011 0 0
+# mask 960011 off
+# face 960011 "normal"
+;;ミョルニル（♂）
+# body 1200111
+# pos 1200111 3
+# scale 1200111 0.8 0
+# layer 1200111 2
+# alpha 1200111 0 0
+# mask 1200111 off
+# face 1200111 "normal"
+;;-----------------------------------------
+;;背景：黒
+# textflame 0 0
+@ジョシュア
+奇妙なオッサンの誘いに俺は乗った
+多分、自棄になっていたんだろう…
+
+@ジョシュア
+なんの実験につき合わされるのかも
+知らず刑務所から出された俺は…
+
+@ジョシュア
+ミョルニルのキラーズを埋め込まれ
+キラーメイルになった
+
+;;背景：ユグドラシル（地上編）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# background "underwild"
+# alpha 157 1 0
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm154_155" "BgmPJZero001" 0
+# se "SE_4830"
+# voice 13004 "amenonubokom_battle_0001"
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 157 "angry"
+@天沼矛（♂）
+せいっ！
+…もう少しです！
+皆で乗り切りましょう！
+
+# alpha 157 0 0.5
+# alpha 960011 1 0.5
+@魔獣
+グルルルルルルルルル！
+
+# alpha 960011 0 0.5
+# alpha 157 1 0.5
+@天沼矛（♂）
+ハア…ハア…囲まれましたね
+でも、オレはこんなところで…
+倒れたりしません…！
+
+# alpha 157 0 0.5
+# alpha 960011 1 0.5
+@魔獣
+グアアアアアアアアアア！！
+
+# voice 12001 "mjolnirm_0029"
+# alpha 960011 0 0.5
+# face 1200111 "smile_1"
+# alpha 1200111 1 0.5
+# textflame 1 1
+@ミョルニル（♂）
+ふんっ！
+
+;;ミョルニルが魔獣達を薙ぎ倒す
+# se "SE_5234"
+# textwindow "close"
+# fadein "red" 0.5
+# shake 0 0.5
+# waitandnext 0.8
+
+# textwindow "normal"
+# voice 13004 "amenonubokom_0030"
+# alpha 1200111 0 0.5
+# face 157 "normal"
+# alpha 157 1 0.5
+# mask 157 on
+# textboxarrow 0 2
+@天沼矛（♂）
+ミョルニル！
+ありがとう…助かりましたっ
+
+# voice 12001 "mjolnirm_0001"
+# move 157 4 0.5
+# move 1200111 2 0
+# face 1200111 "normal"
+# alpha 1200111 1 0.5
+# mask 1200111 on
+# textboxarrow 0 1
+@ミョルニル（♂）
+無理しすぎだ
+あんた、魔獣化が進みすぎてんだよ
+
+# voice 12001 "mjolnirm_0007"
+# face 1200111 "smile_1"
+@ミョルニル（♂）
+下がってろ
+この俺が、
+一撃で終わらせてやらあああ！
+
+;;暗転挟む
+# fadeout "black" 1.5
+# waitandnext 1.5

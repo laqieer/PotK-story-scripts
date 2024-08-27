@@ -1,0 +1,570 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第６章 章タイトル：アナザー・コンフリクト―交錯―
+;;第2話　タイトル：相容れぬもの
+;;6_2_11_3
+;;スクリプト最後の背景：冥花繁殖帯
+;;-----------------------------------------
+# script "lisp"
+# background "flower_garden"
+# bgmfile "bgm424" "BgmIntegralNoahCommand" 0
+;;-----------------------------------------
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 2
+# alpha 5101431 0 0
+# mask 5101431 off
+;;ロンギヌス・擬彩
+# body 5300131
+# pos 5300131 3
+# scale 5300131 0.8 0
+# layer 5300131 2
+# alpha 5300131 0 0
+# mask 5300131 off
+;;エクスカリバー
+# body 101111
+# pos 101111 3
+# scale 101111 0.8 0
+# layer 101111 2
+# alpha 101111 0 0
+# mask 101111 off
+;;アロンダイト
+# body 100711
+# pos 100711 3
+# scale 100711 0.8 0
+# layer 100711 2
+# alpha 100711 0 0
+# mask 100711 off
+;;モニカ
+# body 209
+# pos 209 3
+# scale 209 0.8 0
+# layer 209 2
+# alpha 209 0 0
+# mask 209 off
+;;レーヴァテイン・擬彩
+# body 5100231
+# pos 5100231 3
+# scale 5100231 0.8 0
+# layer 5100231 2
+# alpha 5100231 0 0
+# mask 5100231 off
+;;神令フォルカス
+# body 5301811
+# pos 5301811 3
+# scale 5301811 0.8 0
+# layer 5301811 2
+# alpha 5301811 0 0
+# mask 5301811 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+# textwindow "close"
+# move 5301811 3 0
+# face 5301811 "angry"
+# alpha 5301811 1 0
+# mask 5301811 off
+# waitandnext 0.2
+
+# se "SE_4815"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 530181 "forcas_c_battle_0005"
+# textboxarrow 0 2
+# textwindow "normal"
+@フォルカス
+くっ…
+
+# textwindow "close"
+# alpha 5301811 0 0.5
+# move 5300131 3 0
+# face 5300131 "angry"
+# alpha 5300131 1 0.5
+# mask 5300131 off
+# waitandnext 0.6
+
+# se "SE_4815"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 530013 "ronginusu_iz_0038"
+# textboxarrow 0 2
+# textwindow "normal"
+@ロンギヌス
+ああっ…！
+
+;;//フォルカスとロンギヌスが切り結ぶ
+# se "SE_4200"
+# textwindow "close"
+# alpha 5300131 0 0.5
+# waitandnext 0.5
+
+# sedelay "SE_8023" 0.2
+# move 5301811 2 0
+# face 5301811 "angry"
+# alpha 5301811 1 0
+# mask 5301811 on
+# move 5300131 4 0
+# face 5300131 "angry"
+# alpha 5300131 1 0
+# mask 5300131 on
+# leftin 5301811 0.3
+# rightin 5300131 0.3
+# waitandnext 0.3
+
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+# textwindow "normal"
+@フォルカス
+世界のため…あなた達は、
+必ず還します！
+
+# textboxarrow 0 3
+@ロンギヌス
+新世界のため…あなた達は、
+必ず散らせます！
+
+;;//剣戟音
+# se "SE_9017"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 0
+@フォルカス＆ロンギヌス
+消えて下さい！！
+
+;;//フォルカスとロンギヌスが交叉する
+# se "SE_4200"
+# sedelay "SE_9084" 0.5
+# waitandnext 0.5
+
+# textwindow "close"
+# rightout 5301811 0.5
+# leftout 5300131 0.5
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.3
+
+# alpha 5301811 0 0
+# alpha 5300131 0 0
+# waitandnext 0.2
+
+# voice 530181 "forcas_c_battle_0008"
+# move 5301811 2 0
+# face 5301811 "sad"
+# alpha 5301811 1 0.5
+# mask 5301811 on
+# move 5300131 4 0
+# face 5300131 "sad"
+# alpha 5300131 1 0.5
+# mask 5300131 on
+# textboxarrow 0 1
+# textwindow "normal"
+@フォルカス
+ううぅっ…！
+
+# voice 530013 "ronginusu_iz_0015"
+# textboxarrow 0 3
+@ロンギヌス
+ああっ…
+こんなのって…
+
+;;//ロンギヌスが倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 5300131 0 0.5
+# waitandnext 0.5
+
+# voice 530181 "forcas_c_0027"
+# face 5301811 "normal"
+# textboxarrow 0 1
+# textwindow "normal"
+@フォルカス
+紙一重…でしたね…
+
+# alpha 5301811 0 0.5
+# move 5300131 3 0
+# face 5300131 "normal"
+# alpha 5300131 1 0.5
+# mask 5300131 off
+# textboxarrow 0 2
+@ロンギヌス
+何ですか、その力…？
+あなたには…神令の他にも…
+
+# alpha 5300131 0 0.5
+# move 5301811 3 0
+# face 5301811 "normal"
+# alpha 5301811 1 0.5
+# mask 5301811 off
+# textboxarrow 0 2
+@フォルカス
+ええ…
+お陰で今回は助かりました…
+さあ、ユグドラシルの糧に…
+
+# bgmfile "bgm411" "BgmIntegralNoahBattle001" 0
+# voice 510143 "tyrufing_iz_0012"
+# move 5301811 2 0.5
+# mask 5301811 on
+# move 5101431 4 0
+# face 5101431 "angry"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# textboxarrow 0 3
+@ティルフィング
+やっと追いつきました
+散るのは、アナタの方です！
+
+# voice 530181 "forcas_c_battle_0005"
+# face 5301811 "angry"
+# textboxarrow 0 1
+@フォルカス
+くっ…！
+
+# alpha 5101431 0 0.5
+# move 5100231 4 0
+# face 5100231 "angry"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+# textboxarrow 0 3
+@レーヴァテイン
+私の家族に手を出したね…
+容赦しないよ…！
+
+# se "SE_5205"
+# textboxarrow 0 1
+@フォルカス
+口惜しいですが…
+ここまでですねっ
+
+;;//フォルカスが逃げだす
+# textwindow "close"
+# se "SE_5575"
+# alpha 5301811 0 0.5
+# waitandnext 0.5
+
+# move 5101431 2 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# textboxarrow 0 1
+# textwindow "normal"
+@ティルフィング
+私が追います！
+レーヴァテインはロンギヌスをっ
+
+# voice 510023 "revatein_iz_0003"
+# face 5100231 "normal"
+# textboxarrow 0 3
+@レーヴァテイン
+うん…
+ここは任せて…
+
+;;//背景：海
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "coast"
+# alpha 5101431 0 0
+# alpha 5100231 0 0
+# move 5301811 3 0
+# face 5301811 "normal"
+# alpha 5301811 1 0
+# mask 5301811 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@フォルカス
+予定が大幅に狂ってしまいましたが、
+ここからなら…
+
+# move 5301811 2 0.5
+# mask 5301811 on
+# move 5101431 4 0
+# face 5101431 "angry"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# textboxarrow 0 3
+@ティルフィング
+逃がしません！
+ここで散らせます！
+
+# voice 530181 "forcas_c_0007"
+# face 5301811 "angry"
+# textboxarrow 0 1
+@フォルカス
+一歩遅かったですね
+決着は、いずれまた
+
+;;//フォルカスが海から飛び降りる
+# se "SE_9021"
+# se "SE_9145"
+# textwindow "close"
+# leftout 5301811 0.5
+# waitandnext 0.5
+
+# alpha 5301811 0 0
+# move 5101431 3 0.5
+# mask 5101431 off
+# waitandnext 0.5
+
+# voice 510143 "tyrufing_iz_0024"
+# face 5101431 "surprise"
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+あ…！
+躊躇無く飛び降りるなんて…
+
+# face 5101431 "normal"
+# textboxarrow 0 2
+@ティルフィング
+私一人で追っても、厳しいですね…
+
+;;ティルフィング（独白）
+# move 5101431 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 5101431 off
+@ティルフィング
+それに…“海”から地上に向かうのは
+リスクが伴います
+
+;;ティルフィング（独白）
+# textboxarrow 0 0
+@ティルフィング
+しばらく時間稼ぎが出来ると
+考えることにしましょう
+
+;;//背景：冥花繁殖帯
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "flower_garden"
+# alpha 5101431 0 0
+# move 5101431 3 0
+# face 5101431 "normal"
+# alpha 5101431 1 0
+# mask 5101431 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm409" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+戻りました
+ロンギヌスの傷は…？
+
+# voice 530013 "ronginusu_iz_0015"
+# alpha 5101431 0 0.5
+# move 5300131 3 0
+# face 5300131 "sad"
+# alpha 5300131 1 0.5
+# mask 5300131 off
+# textboxarrow 0 2
+@ロンギヌス
+ううっ…
+ごめんなさい…
+
+# alpha 5300131 0 0.5
+# move 5101431 2 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# move 5100231 4 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+# textboxarrow 0 3
+@レーヴァテイン
+とりあえず…応急処置はしたよ
+そっちは…？
+
+# voice 510143 "tyrufing_iz_0031"
+# face 5101431 "sad"
+# textboxarrow 0 1
+@ティルフィング
+逃がしてしまいました…
+
+# textboxarrow 0 3
+@レーヴァテイン
+そっか…
+これから、どうする…？
+
+# face 5101431 "normal"
+# textboxarrow 0 1
+@ティルフィング
+アルテミスには悪いのですけれど、
+また計画を練り直さないと
+いけません
+
+# textboxarrow 0 1
+@ティルフィング
+幸いと言うべきか、フォルカスも
+すぐには動けないでしょう
+時間はあります
+
+# textboxarrow 0 1
+@ティルフィング
+皆で集まって話し合いましょう
+
+# voice 510023 "revatein_iz_0014"
+# face 5100231 "sad"
+# textboxarrow 0 3
+@レーヴァテイン
+はぁ…めんどくさい…
+
+# voice 530013 "ronginusu_iz_0031"
+# alpha 5101431 0 0.5
+# move 5300131 2 0
+# face 5300131 "sad"
+# alpha 5300131 1 0.5
+# mask 5300131 on
+# textboxarrow 0 1
+@ロンギヌス
+ごめんなさい…
+私が…役に立てなくて…
+
+# face 5100231 "normal"
+# textboxarrow 0 3
+@レーヴァテイン
+怪我人は黙ってて…
+あいつには…きっちり借りを返して
+やるから
+
+# face 5300131 "normal"
+# textboxarrow 0 1
+@ロンギヌス
+レーヴァテイン…
+
+# alpha 5300131 0 0.5
+# alpha 5100231 0 0.5
+# move 5101431 3 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+@ティルフィング
+行きましょう、
+二人とも
+
+;;//三人が飛び去る
+# se "SE_9021"
+# textwindow "close"
+# leftout 5101431 0.5
+# waitandnext 0.5
+
+# alpha 5101431 0 0
+# move 5300131 2 0
+# face 5300131 "normal"
+# alpha 5300131 1 0.5
+# mask 5300131 on
+# move 5100231 4 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+# waitandnext 0.6
+
+# se "SE_9021"
+# leftout 5300131 0.5
+# waitandnext 0.4
+
+# se "SE_9021"
+# alpha 5300131 0 0
+# leftout 5100231 0.5
+# waitandnext 0.5
+
+;;//暗転挟む
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 5100231 0 0
+# move 209 3 0
+# face 209 "sad"
+# alpha 209 1 0
+# mask 209 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+@モニカ
+ハァ…ハァッ…
+ああ、もうっ
+間に合わなかったーっ
+
+# voice 9937 "monica_0018"
+# textboxarrow 0 2
+@モニカ
+もっと色々、
+聞きたかったのにっ…
+
+# move 209 2 0.5
+# alpha 209 1 0.5
+# move 101111 4 0
+# face 101111 "normal"
+# alpha 101111 1 0.5
+# mask 101111 on
+# textboxarrow 0 3
+@エクスカリバー
+インテグラルキラーズが飛び去るのは
+確認しました
+フォルカスは、恐らく…
+
+# face 209 "irregular"
+# textboxarrow 0 1
+@モニカ
+地上に降りたってとこね…
+地上かぁ…
+
+# voice 1007 "Arondaito_0001"
+# alpha 101111 0 0.5
+# move 100711 4 0
+# face 100711 "normal"
+# alpha 100711 1 0.5
+# mask 100711 on
+# textboxarrow 0 3
+@アロンダイト
+マスター
+ここに長居するのは良くありません
+村に戻りましょう
+
+# voice 9937 "monica_0034"
+# face 209 "normal"
+# textboxarrow 0 1
+@モニカ
+あ、うん
+そうだね
+
+;;モニカ（独白）
+# move 209 2 0
+# textboxarrow 0 0
+# textwindow "moya"
+@モニカ
+地上世界…
+ちょっと興味湧いてきたかも

@@ -1,0 +1,708 @@
+;;【EP3】戦闘前
+# script "lisp"
+# background "town"
+# bgm "bgm003" 0
+# body 201921
+# pos 201921 1
+# scale 201921 0.8 0
+# body 102521
+# pos 102521 3
+# scale 102521 0.8 0
+# body 501731
+# pos 501731 5
+# scale 501731 0.8 0
+# layer 102521 3
+# layer 201921 2
+# layer 501731 1
+# textflame 1 1
+# textboxarrow 0 1
+# voice 2019 "chihyu_0002"
+# face 501731 "usual"
+# face 201921 "usual"
+# chara 201921
+@シユウ
+ねぇねぇ！おまえとおまえも
+つよいいぞくっていうの
+たおしにいくんだろ？
+
+# textboxarrow 0 2
+# voice 1025 "muramasa_0013"
+# face 102521 "angry"
+# chara 102521
+@ムラマサ
+せ、拙者はそのつもりで…ござる！
+
+# textboxarrow 0 3
+# face 501731 "angry"
+# chara 501731
+@グリモワール
+…でぇ？
+ワタシがどうするつもりかなんて、
+キミには関係ないでしょ
+
+# emotionbody 5902 10 201921 -80 225
+# effectpattern 5902 2 0
+# effectstart 5902
+# textboxarrow 0 1
+# voice 2019 "chihyu_0004"
+# face 201921 "happy"
+# chara 201921
+@シユウ
+たおしにいくなら
+シユウときょうそうしよう！
+
+# effectskip 5902
+# se "SE_6510"
+# emotionbody 5501 6 501731 60 160
+# effectpattern 5501 2 1
+# effectstart 5501
+# textboxarrow 0 3
+# chara 501731
+@グリモワール
+キミ、もう少しくらい
+人の話を聞いたらぁ！？
+
+# effectskip 5501
+# textboxarrow 0 2
+# voice 1025 "muramasa_0004"
+# face 102521 "happy"
+# chara 102521
+@ムラマサ
+ふふっ…
+シユウさんは最初にあった時から
+こんな感じでしたよね…でござる
+
+# textboxarrow 0 3
+# face 501731 "usual"
+# chara 501731
+@グリモワール
+…そういうキミは、
+最初はそんな変な言葉遣い
+してなかったのに
+
+# textboxarrow 0 3
+# chara 501731
+# face 501731 "angry"
+@グリモワール
+む～、どうしてこんな変なヤツらと
+同じ扱いなのかしら！
+最初の、あの時からそうだったわ…
+
+;;//画面フェードアウト
+;;//ムラマサとグリモワールとシユウの出会いに関して
+;;――場面転換――
+# imageset 1 "bg_white"
+# imagealpha 1 0 0
+# imagescale 1 10 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fadeout "white" 2.3
+# waitandnext 2.7
+
+# alpha 102521 0 0
+# alpha 201921 0 0
+# alpha 501731 0 0
+# imagepos 1 0 0
+# imagealpha 1 1 0
+# fadein "white" 1
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+ティルフィング達と同様、
+パラシュとマサムネ、
+そしてフライクーゲルの三人も、
+
+# alpha 200411 0 0
+# body 200411
+# pos 200411 3
+# scale 200411 0.8 0
+# textflame 0 0
+@
+マスターの指示の下、手分けして
+新たなキラープリンセス探索の
+任に就いていた――
+
+# background "forest"
+# bgm "bgm002" 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# imagealpha 1 0 1
+# waitandnext 1.1
+
+# alpha 200411 1 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 200411 "smile"
+# chara 200411
+@パラシュ
+…さて、まずは問題の
+新人キラープリンセスがこの辺りに
+いるかどうかをはっきりさせないと…
+
+# textboxarrow 0 2
+# chara 200411
+@パラシュ
+捕まえられるか、
+すぐ近くにいるとわかったら
+マスターに連絡して合流しよう
+
+# textboxarrow 0 2
+# voice 2004 "parashu_0028"
+# chara 200411
+@パラシュ
+それで、この辺で見たって話だけど…
+どこにいるのかな？
+
+# textboxarrow 0 2
+# chara 200411
+@パラシュ
+すごく子どもっぽい外見で、
+天真爛漫そのものって聞いたけど…
+
+# bgm "stop" 0.5
+# waitandnext 0.5
+
+;;//SE:藪から飛び出る音
+# se "SE_5584"
+# waitandnext 1
+
+;;//SE:転がる音
+# emotionbody 7777 11 200411 90 200
+# effectpattern 7777 1 0
+# effectstart 7777
+# bgm "bgm006" 0
+# se "SE_9430"
+# alpha 201921 1 0.5
+# move 200411 4 0.5
+# leftin 201921 0.5
+# shake 0 0.3
+# serif 1
+# textboxarrow 1 1
+# textboxarrow 0 0
+# face 200411 "angry02"
+# chara 201921
+@シユウ
+ぷはぁ～！
+
+;;//驚いて言葉が出ない
+# effectskip 7777
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+# chara 200411
+@パラシュ
+…………
+
+# emotionbody 5100 2 201921 10 250
+# effectpattern 5100 1 1
+# effectstart 5100
+# textboxarrow 0 1
+# face 201921 "usual"
+# chara 201921
+@シユウ
+…お？なんだ？
+もしかして、シユウになにかようか？
+
+# effectskip 5100
+# textboxarrow 0 3
+# voice 2004 "parashu_0040"
+# face 200411 "smile"
+# chara 200411
+@パラシュ
+…なるほど、君がシユウか…！
+確かに、聞いた通りだな
+
+# textboxarrow 0 3
+# chara 200411
+@パラシュ
+さぁ、ボクと一緒に
+マスターのところへ行こう！
+
+# textboxarrow 0 1
+# face 201921 "happy"
+# chara 201921
+@シユウ
+んー…
+シユウをつかまえることが
+できたらいいぞ！
+
+;;//SE：駆け出す音
+;;//シユウアウト
+# emotionbody 5001 1 200411 25 280
+# effectpattern 5001 2 0
+# effectstart 5001
+# se "SE_9430"
+# alpha 201921 0 0.5
+# leftout 201921 0.5
+# move 200411 2 0.5
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textboxarrow 0 1
+# voice 2004 "parashu_0022"
+# face 200411 "angry02"
+# chara 200411
+@パラシュ
+あ、ちょっと、君！？
+待ってくれ…！！
+
+;;――場面転換――
+# effectskip 5001
+# alpha 100111 0 0
+# body 100111
+# pos 100111 1
+# scale 100111 0.8 0
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# face 102521 "angry"
+# waitandnext 1
+
+# bgm "bgm003" 0.3
+# alpha 102521 1 0
+# alpha 200411 0 0
+# background "forest"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1025 "muramasa_battle_0002"
+# chara 102521
+@ムラマサ
+…タァッ！
+…セイッ！
+
+# textboxarrow 0 2
+# face 102521 "sad"
+# chara 102521
+@ムラマサ
+…ふぅ…
+…どれだけ剣を振ったところで
+未熟な身のままでは…
+
+# alpha 100111 1 0.5
+# textboxarrow 0 1
+# face 100111 "nutual"
+# face 102521 "surprise"
+# chara 100111
+@マサムネ
+…いや、
+そう卑下したものでもなかろう
+なかなかの剣筋であった
+
+# emotionbody 1001 1 102521 20 310
+# effectpattern 1001 2 0
+# effectstart 1001
+# move 102521 4 0.3
+# textboxarrow 0 3
+# voice 1025 "muramasa_0023"
+# chara 102521
+@ムラマサ
+！！
+ど、どなたですか！？
+
+# effectskip 1001
+# textboxarrow 0 1
+# voice 1001 "masamune_0031"
+# face 100111 "unhappy"
+# chara 100111
+@マサムネ
+驚かせてすまない
+拙者、マサムネと申す
+怪しい者ではござらん
+
+# textboxarrow 0 3
+# voice 1025 "muramasa_0022"
+# face 102521 "sad"
+# chara 102521
+@ムラマサ
+せ、拙者…？ござらん…？
+あ、私、ムラマサです…
+
+# textboxarrow 0 1
+# face 100111 "nutual"
+# chara 100111
+@マサムネ
+教会が、そなたのような
+新たなキラープリンセスを
+探しておるのだ
+
+# textboxarrow 0 1
+# face 100111 "unhappy"
+# chara 100111
+@マサムネ
+どの主君にも仕えていない、
+浪人とも言うべき状況…
+決して、褒められたものではない
+
+# textboxarrow 0 3
+# voice 1025 "muramasa_0027"
+# chara 102521
+@ムラマサ
+で、ですが、
+私なんかじゃ、仕えたくても
+誰も相手してくれないんじゃ…
+
+# textboxarrow 0 1
+# voice 1001 "masamune_0004"
+# face 100111 "nutual"
+# chara 100111
+@マサムネ
+…どんな名刀も、
+使う者次第では
+なまくらになってしまう
+
+# textboxarrow 0 1
+# face 100111 "happy"
+# chara 100111
+@マサムネ
+だが、少なくとも拙者には
+先ほどの剣筋を見る限り
+そなたがなまくらとは思わなかったぞ
+
+# textboxarrow 0 1
+# face 100111 "nutual"
+# chara 100111
+@マサムネ
+そなたはもっと、
+自分の力を信じてみてはどうだ？
+
+# textboxarrow 0 3
+# face 102521 "surprise"
+# chara 102521
+@ムラマサ
+私の…力…
+
+# move 200411 1 0
+# move 201921 3 0
+# textboxarrow 0 1
+# voice 1001 "masamune_0003"
+# chara 100111
+@マサムネ
+…ふむ…
+
+# bgm "stop" 0.5
+# waitandnext 0.5
+
+;;//SE:藪から飛び出る音
+# se "SE_5584"
+# waitandnext 1
+
+;;//SE:転がる音
+# bgm "bgm006" 0
+# se "SE_9430"
+# emotionbody 5903 10 201921 95 225
+# effectpattern 5903 3 0
+# effectstart 5903
+# alpha 100111 0 0.5
+# alpha 102521 0 0.5
+# alpha 201921 1 0.5
+# leftin 201921 0.5
+# serif 1
+# textboxarrow 1 2
+# textboxarrow 0 0
+# voice 2019 "chihyu_0005"
+# face 201921 "happy"
+# chara 201921
+@シユウ
+あーははははははははは！！！！
+
+# se "SE_5575"
+# effectskip 5903
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# alpha 200411 1 0.5
+# leftin 200411 0.5
+# move 201921 5 0.5
+# textboxarrow 0 1
+# chara 200411
+@パラシュ
+…あっ、マサムネ！
+あの子を捕まえるのを
+手伝ってくれないか！？
+
+# alpha 200411 0 0.3
+# alpha 201921 0 0.3
+# alpha 100111 1 0.5
+# alpha 102521 1 0.5
+# textboxarrow 0 1
+# face 100111 "nutual"
+# chara 100111
+@マサムネ
+ふむ、なかなか手強い相手のようだな
+…心得た！
+ムラマサよ、お主もついてこい！
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textboxarrow 0 3
+# voice 1025 "muramasa_0022"
+# face 102521 "surprise"
+# chara 102521
+@ムラマサ
+えっ？
+あっ、は…はいっ！！
+
+;;――場面転換――
+# alpha 500211 0 0
+# move 501731 2 0
+# move 201921 1 0.5
+# body 500211
+# pos 500211 4
+# scale 500211 0.8 0
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# bgm "bgm002" 0.3
+# alpha 102521 0 0
+# alpha 100111 0 0
+# alpha 501731 1 0.5
+# background "forest"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 501731 "usual"
+# chara 501731
+@グリモワール
+…………
+
+# alpha 500211 1 0.5
+# textboxarrow 0 3
+# face 500211 "happy"
+# chara 500211
+@フライクーゲル
+ヘーイ　ユー！
+こんなところでなにしてるの？
+
+# textboxarrow 0 1
+# face 501731 "angry"
+# chara 501731
+@グリモワール
+…見てわからない？
+本を読んでるんだから、
+邪魔しないで！
+
+# textboxarrow 0 3
+# face 500211 "sad"
+# chara 500211
+@フライクーゲル
+ソーリーソーリー☆
+…でも、本を読むならもうちょっと
+場所を選んだ方がグッドじゃない？
+
+# textboxarrow 0 1
+# chara 501731
+@グリモワール
+そんなの、ワタシの勝手でしょ！
+誰かの邪魔になってるわけでも
+ないんだし…
+
+;;//SE:藪から飛び出る音
+# se "SE_5584"
+# waitandnext 1
+
+;;//SE:転がる音
+# se "SE_6525"
+# effectskip 1112
+# emotionbody 1112 11 501731 -90 190
+# effectpattern 1112 2 0
+# effectstart 1112
+# se "SE_6525"
+# effectskip 1113
+# emotionbody 1113 11 500211 -90 220
+# effectpattern 1113 2 0
+# effectstart 1113
+# se "SE_9430"
+# serif 1
+# textboxarrow 1 0
+# voice 2019 "chihyu_0022"
+# face 201921 "happy"
+# face 501731 "surprise"
+# face 500211 "surprise"
+# chara 201921
+@シユウ
+あーははは…あっ！
+
+# effectskip 1112
+# effectskip 1113
+# se "SE_9347"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# alpha 201921 1 0.5
+# leftin 201921 0.5
+# move 501731 3 0.5
+# move 500211 5 0.5
+# waitandnext 0.5
+# textboxarrow 0 2
+# chara 501731
+@グリモワール
+ええっ！？
+
+;;//SE:ぶつかる音
+;;//画面フラッシュ
+# se "SE_4759"
+# fadein "white" 0.3
+# shake 0 0.7
+# face 501731 "angry"
+# waitandnext 0.4
+
+# emotionbody 5560 6 501731 60 170
+# effectpattern 5560 1 1
+# effectstart 5560
+# textboxarrow 0 2
+# chara 501731
+@グリモワール
+いたあ…っ！
+ちょ、ちょっとキミ！？
+いきなりなんなの！？
+
+# effectskip 5560
+# emotionbody 6666 9 201921 -50 160
+# effectpattern 6666 6 0
+# effectstart 6666
+# textboxarrow 0 1
+# voice 2019 "chihyu_0031"
+# face 201921 "sad"
+# chara 201921
+@シユウ
+…うーん、ごめんなさい
+ちゃんとまえみてなかったー
+
+# effectskip 6666
+# textboxarrow 0 3
+# face 500211 "happy"
+# chara 500211
+@フライクーゲル
+アーユーオーライ？
+こういうこともあるから
+気をつけないとね☆
+
+# textboxarrow 0 2
+# chara 501731
+@グリモワール
+余計なお世話よ！
+でぇ？…さっきからなんなの？
+ワタシになんか用でもあるわけぇ？
+
+# textboxarrow 0 3
+# face 500211 "surprise"
+# chara 500211
+@フライクーゲル
+イエス！
+ユーがグリモワールでしょ？
+探してたんだよね～
+
+# emotionbody 5881 9 501731 60 185
+# effectpattern 5881 1 0
+# effectstart 5881
+# textboxarrow 0 2
+# face 501731 "usual"
+# chara 501731
+@グリモワール
+…ワタシを？なんで？
+てか、なんでそんなに
+テンション高いの…？
+
+# effectskip 5881
+# textboxarrow 0 3
+# face 500211 "happy"
+# chara 500211
+@フライクーゲル
+あはは☆
+細かいことは気にせず、
+マスターに会ってみるといいね！
+
+# emotionbody 5200 3 500211 10 290
+# effectpattern 5200 1 3
+# effectstart 5200
+# move 200411 1 0
+# textboxarrow 0 3
+# chara 500211
+@フライクーゲル
+そろそろここに着く頃…
+オー、エブリバディ、
+ナイスタイミング！
+
+# se "SE_5575"
+# effectskip 5200
+# move 500211 5 0.5
+# alpha 201921 0 0.3
+# alpha 200411 1 0
+# leftin 200411 0.5
+# textboxarrow 0 1
+# voice 2004 "parashu_0008"
+# face 200411 "smile"
+# chara 200411
+@パラシュ
+やっと追いついた！
+…おや、マスターに
+フライクーゲルもいたのか！
+
+# alpha 810004 0 0
+# body 810004
+# pos 810004 3
+# mask 810004 off
+# scale 810004 0.8 0
+# textboxarrow 0 3
+# face 500211 "normal"
+# face 501731 "angry"
+# face 200411 "angry01"
+# chara 500211
+@フライクーゲル
+…でも、あいさつは後回しだね！
+まずはこいつらを
+追い払ってからだよ☆
+
+# se "SE_0617"
+# serif 0
+# textwindow "close"
+# move 100111 3 0
+# alpha 501731 0 0.3
+# alpha 500211 0 0.3
+# alpha 200411 0 0.3
+# alpha 810004 1 0.5
+# waitandnext 2
+
+# alpha 810004 0 0.3
+# alpha 500211 1 0.5
+# alpha 200411 1 0.5
+# alpha 100111 1 0.5
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 200411 "angry02"
+# face 100111 "nutual"
+# chara 200411
+@パラシュ
+君達は後ろに下がって、
+マスターを守っていてくれ
+マサムネ、フライクーゲル、行くよ！

@@ -1,0 +1,571 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第５章
+;;第1話　タイトル：中心部防衛戦
+;;5_1_13_3
+;;スクリプト最後の背景：都市部（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "in_city"
+# bgmfile "bgm162" "BgmPJZero001" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;ミョルニル(キラーメイル)
+# body 1200111
+# pos 1200111 3
+# scale 1200111 0.8 0
+# layer 1200111 2
+# alpha 1200111 0 0
+# mask 1200111 off
+;;マサムネ(キラーメイル)
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# layer 1100111 2
+# alpha 1100111 0 0
+# mask 1100111 off
+;;アスクレピオス(キラーメイル)
+# body 1600111
+# pos 1600111 3
+# scale 1600111 0.8 0
+# layer 1600111 2
+# alpha 1600111 0 0
+# mask 1600111 off
+;;神令ヒョウハ
+# body 5402011
+# pos 5402011 3
+# scale 5402011 0.8 0
+# layer 5402011 2
+# alpha 5402011 0 0
+# mask 5402011 off
+;;シタ
+# body 3201611
+# pos 3201611 3
+# scale 3201611 0.8 0
+# layer 3201611 2
+# alpha 3201611 0 0
+# mask 3201611 off
+;;ミトゥム
+# body 3200511
+# pos 3200511 3
+# scale 3200511 0.8 0
+# layer 3200511 2
+# alpha 3200511 0 0
+# mask 3200511 off
+;;バルムンク
+# body 3100911
+# pos 3100911 3
+# scale 3100911 0.8 0
+# layer 3100911 2
+# alpha 3100911 0 0
+# mask 3100911 off
+;;グラム
+# body 3100811
+# pos 3100811 3
+# scale 3100811 0.8 0
+# layer 3100811 3
+# alpha 3100811 0 0
+# mask 3100811 off
+;;魔獣化アルテミス
+# body 1400131
+# pos 1400131 3
+# scale 1400131 0.8 0
+# layer 1400131 2
+# alpha 1400131 0 0
+# mask 1400131 off
+# brightness 1400131 0.5 0
+;;魔獣化アポロン
+# body 1400331
+# pos 1400331 3
+# scale 1400331 0.8 0
+# layer 1400331 2
+# alpha 1400331 0 0
+# mask 1400331 off
+# brightness 1400331 0.5 0
+;;-----------------------------------------
+# voice 320161 "shita_t_0002"
+# move 3200511 2 0
+# face 3200511 "angry"
+# alpha 3200511 1 0
+# mask 3200511 on
+# move 3201611 4 0
+# face 3201611 "usual"
+# alpha 3201611 1 0
+# mask 3201611 on
+# textflame 1 1
+# textboxarrow 0 3
+@シタ
+ミトゥムちゃん、
+準備はできてますか？
+
+# voice 320051 "mitwumu_t_0003"
+# textboxarrow 0 1
+@ミトゥム
+はい、シタお姉様
+これでフィナーレです！
+
+# se "SE_5250"
+# waitandnext 0.5
+
+;;//ミトゥムがアルテミスを攻撃する
+# se "SE_4100"
+# waitandnext 0.5
+
+;;？？？（アポロン）
+# alpha 3200511 0 0.5
+# alpha 3201611 0 0.5
+# move 1400331 2 0
+# face 1400331 "angry_1"
+# alpha 1400331 1 0.5
+# mask 1400331 on
+# textboxarrow 0 1
+# move 1400131 4 0
+# face 1400131 "angry"
+# alpha 1400131 1 0.5
+# mask 1400131 on
+@？？？
+ガアアアアアアアア！
+
+;;//アポロンがアルテミスを連れ去る
+# se "SE_9021"
+# textwindow "close"
+# rightout 1400331 0.6
+# waitandnext 0.2
+
+# rightout 1400131 0.4
+# waitandnext 0.4
+
+# voice 320051 "mitwumu_t_0023"
+# alpha 1400331 0 0
+# alpha 1400131 0 0
+# move 3200511 2 0
+# face 3200511 "angry"
+# alpha 3200511 1 0.5
+# mask 3200511 on
+# textboxarrow 0 1
+# move 3201611 4 0
+# face 3201611 "surprise"
+# alpha 3201611 1 0.5
+# mask 3201611 on
+# textwindow "normal"
+@ミトゥム
+ほえぇぇ！？
+ミトゥムの会心の一撃が
+避けられただとぉぉぉ…！
+
+# textboxarrow 0 3
+@シタ
+あの化け物…
+もう一方が攻撃を受けないよう
+連れ去ったみたいでした…
+
+# voice 320161 "shita_t_0024"
+# face 3201611 "angry"
+# textboxarrow 0 3
+@シタ
+あっ！？
+ミトゥムちゃん、
+避けて！
+
+;;？？？（アルテミス）
+# se "SE_4300"
+# alpha 3200511 0 0.5
+# alpha 3201611 0 0.5
+# move 1400131 3 0
+# face 1400131 "angry"
+# alpha 1400131 1 0.5
+# mask 1400131 off
+# textboxarrow 0 2
+@？？？
+グウウウウウウ！
+
+;;//アルテミスが矢を放つ
+# se "SE_4301"
+# waitandnext 0.5
+
+# textwindow "close"
+# alpha 1400131 0 0.5
+# move 3200511 2 0
+# face 3200511 "angry"
+# alpha 3200511 1 0.5
+# mask 3200511 on
+# move 3201611 4 0
+# face 3201611 "angry"
+# alpha 3201611 1 0.5
+# mask 3201611 on
+# waitandnext 0.6
+
+# se "SE_4815"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 320051 "mitwumu_t_battle_0006"
+# textboxarrow 0 1
+# textwindow "nomal"
+@ミトゥム
+くうっ！
+
+# voice 320161 "shita_t_battle_0006"
+# textboxarrow 0 3
+@シタ
+やはり、あの二体は連携してますね
+魔獣なのに…
+
+# alpha 3200511 0 0.5
+# alpha 3201611 0 0.5
+# move 1400331 3 0
+# face 1400331 "angry_1"
+# alpha 1400331 1 0.5
+# mask 1400331 off
+# textboxarrow 0 2
+@？？？
+ガアアアアアアアア！
+
+# voice 310081 "guramu_t_battle_0003"
+# alpha 1400331 0 0.5
+# move 3100811 3 0
+# face 3100811 "angry"
+# alpha 3100811 1 0.5
+# mask 3100811 off
+# textboxarrow 0 2
+@グラム
+そこだっ！
+
+;;//グラムがアポロンを攻撃する
+# textwindow "close"
+# alpha 3100811 0 0.5
+# move 1400331 3 0
+# face 1400331 "angry_1"
+# alpha 1400331 1 0.5
+# mask 1400331 off
+# waitandnext 0.6
+
+# se "SE_4000"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# voice 310091 "barumunku_t_battle_0002"
+# alpha 1400331 0 0.5
+# move 3100911 3 0
+# face 3100911 "angry"
+# alpha 3100911 1 0.5
+# mask 3100911 off
+# textboxarrow 0 2
+# textwindow "normal"
+@バルムンク
+やぁっ！
+
+;;//バルムンクがアポロンを攻撃する
+# textwindow "close"
+# alpha 3100911 0 0.5
+# move 1400331 3 0
+# face 1400331 "angry_1"
+# alpha 1400331 1 0.5
+# mask 1400331 off
+# waitandnext 0.6
+
+# se "SE_4001"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 2000 1 0 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+;;？？？（アルテミス）
+# se "SE_4300"
+# alpha 1400331 0 0.5
+# move 1400131 3 0
+# face 1400131 "angry"
+# alpha 1400131 1 0.5
+# mask 1400131 off
+# textboxarrow 0 2
+# textwindow "normal"
+@？？？
+グウウウウウウウウウ！
+
+# se "SE_4301"
+# waitandnext 0.5
+
+# alpha 1400131 0 0.5
+# move 3100811 3 0
+# face 3100811 "angry"
+# alpha 3100811 1 0.5
+# mask 3100811 off
+# textboxarrow 0 2
+@グラム
+バルムンク、危ない！
+
+;;//グラムがバルムンクを庇う
+# textwindow "close"
+# alpha 3100811 0 0.5
+# move 3100911 3 0
+# face 3100911 "angry"
+# alpha 3100911 1 0.5
+# mask 3100911 on
+# waitandnext 0.5
+
+# se "SE_5255"
+# move 3100811 3 0
+# face 3100811 "angry"
+# alpha 3100811 1 0
+# mask 3100811 on
+# leftin 3100811 0.5
+# waitandnext 0.4
+
+# move 3100911 5 0.2
+# waitandnext 0.2
+
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 310091 "barumunku_t_0030"
+# face 3100911 "happy"
+# textboxarrow 0 3
+# textwindow "normal"
+@バルムンク
+ありがとう、グラム
+私の王子様！
+
+# voice 310081 "guramu_t_0003"
+# face 3100811 "happy"
+# textboxarrow 0 2
+@グラム
+君のためなら、
+このくらい何でもないよ
+
+# voice 320161 "shita_t_0002"
+# move 3201611 1 0
+# face 3201611 "usual"
+# alpha 3201611 1 0.5
+# mask 3201611 on
+# textboxarrow 0 1
+@シタ
+加勢には感謝しますけど、
+節度を持って行動して下さいね
+
+# voice 310081 "guramu_t_0031"
+# face 3100811 "normal"
+# textboxarrow 0 2
+# textwindow "normal"
+@グラム
+ああ、失礼
+しかし不可解な魔獣達だね
+
+# voice 310091 "barumunku_t_0015"
+# face 3100911 "sad"
+# textboxarrow 0 3
+@バルムンク
+私達、剣と斧だから距離を取られると
+不利になるばかりよ…
+
+# face 3201611 "angry"
+# textboxarrow 0 1
+@シタ
+あの魔獣もそのことを理解して
+いるようです
+
+# voice 320051 "mitwumu_t_0028"
+# alpha 3201611 0 0.5
+# alpha 3100811 0 0.5
+# alpha 3100911 0 0.5
+# move 3200511 3 0
+# face 3200511 "sad"
+# alpha 3200511 1 0.5
+# mask 3200511 off
+# textboxarrow 0 2
+@ミトゥム
+先程から間合いを外されてばかりで…
+う～ん…
+
+;;//カミト達が駆けつける
+# se "SE_5575"
+# alpha 3200511 0 0.5
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 210 4 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+@カミト
+あそこだ！
+キル姫達もいるよ！
+
+# textboxarrow 0 1
+@アスカロン
+マスター、伏せて下さい！
+
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# move 1400331 3 0
+# face 1400331 "angry_1"
+# alpha 1400331 1 0.5
+# mask 1400331 off
+# textboxarrow 0 2
+@？？？
+ガアアアアアアアア！
+
+;;//アポロンがカミト達を攻撃する
+# se "SE_4301"
+# waitandnext 0.5
+
+# voice 11001 "masamunem_0022"
+# alpha 1400331 0 0.5
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 1
+# move 1600111 4 0
+# face 1600111 "normal"
+# alpha 1600111 1 0.5
+# mask 1600111 on
+@マサムネ
+あれは…アポロン！
+
+# textboxarrow 0 3
+@アスクレピオス
+それと、もう一人…
+アルテミスもいるね
+
+# voice 12001 "mjolnirm_0007"
+# alpha 1100111 0 0.5
+# move 1200111 2 0
+# face 1200111 "smile_1"
+# alpha 1200111 1 0.5
+# mask 1200111 on
+# textboxarrow 0 1
+# alpha 1600111 1 0.5
+# mask 1600111 on
+@ミョルニル
+フン！
+魔獣になっても二人一緒とは
+大した兄弟愛だなっ
+
+# voice 9936 "kamito_0015"
+# alpha 1600111 0 0.5
+# move 210 4 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+@カミト
+でも、魔獣化してるとき意識は
+ないんじゃなかったの？
+
+# voice 11001 "masamunem_0003"
+# alpha 1200111 0 0.5
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 1
+@マサムネ
+そのはずだが…
+あの連携は本能なのかもしれない
+
+# voice 16001 "asklepiosm_0027"
+# alpha 210 0 0.5
+# move 1600111 4 0
+# face 1600111 "normal"
+# alpha 1600111 1 0.5
+# mask 1600111 on
+# textboxarrow 0 3
+@アスクレピオス
+やれやれ…
+論理的じゃないけど、
+そう考えるしかないかな
+
+# voice 350171 "grimoire_ge_0028"
+# alpha 1100111 0 0.5
+# move 3501711 2 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 1
+@グリモワール
+何よ、それっ
+面倒な奴らね！
+
+# alpha 1600111 0 0.5
+# move 210 4 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+@カミト
+とにかく、接近しないと
+弓相手じゃどうにもならないよっ
+
+# alpha 3501711 0 0.5
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 1
+@マサムネ
+アポロンは馬に乗っている
+まず足止めをして――
+
+# bgmfile "bgm424_block" "BgmIntegralNoahCommand" 0
+# voice 540201 "hyoha_c_0021"
+# alpha 1100111 0 0.5
+# alpha 210 0 0.5
+# move 5402011 3 0
+# face 5402011 "normal"
+# alpha 5402011 1 0.5
+# mask 5402011 off
+# textboxarrow 0 2
+@ヒョウハ
+よっしゃあああああああ！！
+良い感じに集まってるなあ
+
+# voice 9936 "kamito_0026"
+# alpha 5402011 0 0.5
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+うわぁっ！
+…ヒョウハ！？
+
+# alpha 210 0 0.5
+# move 5402011 3 0
+# face 5402011 "angry"
+# alpha 5402011 1 0.5
+# mask 5402011 off
+# textboxarrow 0 2
+@ヒョウハ
+飛んで火にいる夏の虫ってなぁ！
+言葉通り、まとめてあたしに
+焼き尽くされなぁぁぁ！！

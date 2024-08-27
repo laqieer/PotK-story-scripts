@@ -1,0 +1,288 @@
+;;-----------------------------------------
+;;【このすばEP2･戦闘後】
+;;スクリプトID:2764004
+;;スクリプト最後の背景：sea_beach_day
+;;背景：ビーチ
+;;-----------------------------------------
+# script "lisp"
+# background "sea_beach_day"
+# bgm "bgm029" 0
+;;海上編ティルフィング
+# body 2101411
+# pos 2101411 4
+# scale 2101411 0.8 0
+# alpha 2101411 0 0
+;;デュリン
+# body 0
+# pos 0 2
+# scale 0 0.8 0
+# alpha 0 0 0
+# layer 0 3
+# mask 0 off
+;;水着シタ
+# body 2201611
+# pos 2201611 3
+# scale 2201611 0.8 0
+# alpha 2201611 0 0
+;;水着アスクレピオス
+# body 2600111
+# pos 2600111 4
+# scale 2600111 0.8 0
+# alpha 2600111 0 0
+;;水着めぐみん
+# body 2502511
+# pos 2502511 3
+# scale 2502511 0.8 0
+# alpha 2502511 1 0
+# mask 2502511 off
+# face 2502511 "angry"
+;;水着ダクネス
+# body 2103411
+# pos 2103411 2
+# scale 2103411 0.8 0
+# alpha 2103411 0 0
+# layer 2103411 4
+# face 2103411 "usual"
+;;◆背景：ビーチ（昼）---------------------
+# textflame 1 1
+# textboxarrow 0 2
+# se "SE_9173"
+# voice 5025 "megumin_battle_0002"
+@めぐみん
+…これが人類最大威力の攻撃手段
+これこそが究極の攻撃魔法…
+
+# se "SE_10666"
+# sedelay "SE_10667" 0.4
+# voice 5025 "megumin_dgcollabo_0001"
+@めぐみん
+ エクス
+ プローーーーー
+ ーーーージョン！！
+
+;;エフェクト、白フラッシュetc
+# bgm "stop"
+# se "SE_8015"
+# shake 0 0.8
+# fadein "white" 0.8
+# waitandnext 0.5
+
+# emotionbody 1001 1 2101411 0 300
+# effectpattern 1001 1 0
+# effectstart 1001
+# alpha 2502511 0 0.5
+# alpha 0 1 0.5
+# alpha 2101411 1 0.5
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0021"
+@ティルフィング
+すごい…
+これが爆裂魔法の一撃！
+異族がほとんど吹き飛びました！
+
+# emotionbody 1002 9 0 0 200
+# effectpattern 1002 1 0
+# effectstart 1002
+# voice 9999 "durin_0027"
+# textboxarrow 0 1
+@デュリン
+危うく巻き込まれるかと思ったわ
+
+# alpha 0 0 0.5
+# alpha 2101411 0 0.5
+# alpha 2502511 1 0.5
+# face 2502511 "happy"
+# textboxarrow 0 2
+@めぐみん
+や、やった！
+…はぅ…
+
+# se "SE_3001"
+# alpha 2502511 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# emotionbody 1003 1 2101411 0 300
+# effectpattern 1003 2 0
+# effectstart 1003
+# bgmfile "bgm208" "BgmKScollabo001" 0
+# alpha 2101411 1 0.5
+# alpha 2103411 1 0.5
+# face 2101411 "sad"
+# textwindow "normal"
+# textboxarrow 0 3
+@ティルフィング
+あっ
+めぐみんさんが倒れましたよ！
+
+# textboxarrow 0 1
+# voice 1034 "dakunesu_0003"
+@ダクネス
+魔力を使い果たしたんだな
+いつものことだ
+心配ないと思うが…
+
+# textboxarrow 0 3
+@ティルフィング
+でも砂浜で
+うつぶせは息苦しそうですよ
+
+# serif 0
+# textwindow "close"
+# brightness 2103411 0.5 0.2
+# brightness 2101411 0.5 0.2
+# serif 1
+# voice 5025 "megumin_0021"
+@めぐみん
+むぐぐぐ…
+だでが…おごじでぐだざい…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# brightness 2103411 1 0.2
+# brightness 2101411 1 0.2
+# alpha 2103411 0 0.5
+# alpha 2101411 0 0.5
+# alpha 2201611 1 0.5
+# textboxarrow 0 2
+# voice 2016 "shita_0004"
+@シタ
+仕方ないですね
+わたしが起こしてあげます
+よいしょっと
+
+# move 2502511 2 0
+# alpha 2502511 1 0.5
+# move 2201611 4 0.8
+# face 2502511 "worry"
+# textboxarrow 0 1
+@めぐみん
+…ぷはっ！
+少し生き返りました…
+まだ全然身動きはできませんが
+
+# textboxarrow 0 3
+@シタ
+もう、困ったさんですね
+誰も起こしてくれなかったら
+そのまま息の根が止まっちゃってます
+
+# textsize 22
+# textboxarrow 0 1
+@めぐみん
+うっ…わ、私ほど偉大な魔法の使い手を
+誰も助けないはずが…
+あ、いえ、助かりました
+
+# textsize 24
+# voice 2016 "shita_0005"
+# textboxarrow 0 3
+@シタ
+ふふふっ
+だけどあなたの爆裂の威力
+とっても素敵です！
+
+# emotionbody 1004 1 2502511 0 300
+# effectpattern 1004 1 0
+# effectstart 1004
+# face 2502511 "happy"
+# textboxarrow 0 1
+@めぐみん
+そうですかっ！？そうでしょう！
+爆裂魔法だけは
+誰にも負けませんから…は、はぅ…
+
+# face 2502511 "sad"
+# textboxarrow 0 3
+@シタ
+あらあら、めぐみん
+また倒れちゃいそうですね
+あ、そうだ…
+
+@シタ
+マナが溶け込んだ水源の水に浸かれば
+魔力の回復が早くなるかも
+しれませんよ？
+
+# emotionbody 1005 1 2502511 0 300
+# effectpattern 1005 2 0
+# effectstart 1005
+# voice 5025 "megumin_0022"
+# textboxarrow 0 1
+@めぐみん
+なっ
+この島の水にはそんな効能が！？
+
+# textboxarrow 0 3
+@シタ
+ええ
+わたしも疲れてますが
+水源の水はめぐみんに譲ります
+
+@シタ
+わたしはこうして
+マスターにくっついているだけで
+大丈夫ですので♪
+
+# se "SE_0683"
+# textflame 0 0
+@
+そう言って
+マスターの腕に飛びつくシタ
+
+# face 2502511 "worry"
+# textflame 1 1
+# textboxarrow 0 1
+@めぐみん
+むむむ…なんとなくですが
+そっちの方が効きそうな気が…
+
+# textflame 0 0
+@
+「あ、ええと…
+少しの間だけだよ？」
+マスター、やや困りながらも答える
+
+# alpha 2201611 0 0.5
+# alpha 2502511 0 0.5
+# alpha 2101411 1 0.5
+# alpha 2103411 1 0.5
+# face 2103411 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+…………
+
+# textboxarrow 0 1
+@ダクネス
+ティルフィングが
+あのような冷たい目を…！ 
+
+# se "SE_5005"
+# sedelay "SE_5006" 0.2
+# sedelay "SE_5005" 0.4
+;;アスク入ってきて
+# alpha 2101411 0 0.5
+# alpha 2103411 0 0.5
+# move 2201611 2 0
+# alpha 2201611 1 0.5
+# alpha 2600111 1 0.5
+# textboxarrow 0 3
+@アスクレピオス
+…なにをしてるんだか
+
+# textboxarrow 0 1
+# voice 2016 "shita_0002"
+@シタ
+あっ、アスクレピオス
+どこに行ってたんですか
+探しましたよ？
+
+# textboxarrow 0 3
+@アスクレピオス
+こちらのセリフよシタ
+さて、以後しばらくはマスターの
+護衛をさせてもらうわね

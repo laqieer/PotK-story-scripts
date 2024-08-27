@@ -1,0 +1,123 @@
+;;-----------------------------------------
+;;【EP.4】聖域に巣食うもの_3
+;;-----------------------------------------
+# script "lisp"
+# background "forest_totaleclipse"
+# bgmfile "bgm451_452" "BgmNewYear003" 0
+;;-----------------------------------------
+;;フライクーゲル
+# body 3500221
+# pos 3500221 3
+# scale 3500221 0.8 0
+# layer 3500221 2
+# alpha 3500221 1 0
+;;ラグナロク
+# body 103621
+# pos 103621 1
+# scale 103621 0.8 0
+# layer 103621 3
+# alpha 103621 1 0
+;;アロンダイト
+# body 100741
+# pos 100741 5
+# scale 100741 0.8 0
+# layer 100741 3
+# alpha 100741 1 0
+;;カオスディアブロ
+# body 802401
+# pos 802401 3
+# scale 802401 0.8 0
+# layer 802401 3
+# mask 802401 off
+# alpha 802401 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+# textwindow "close"
+# fadein "black" 0.5
+# face 103621 "angry"
+# face 100741 "angry"
+# face 3500221 "sad"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 10036 "ragnarok_0037"
+@ラグナロク
+はぁ…はぁ…！
+どう、大方片付いたんじゃない！？
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+さすがにそろそろ
+フィニッシュじゃなきゃ
+困るんだけど…！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1007 "Arondaito_0013"
+@アロンダイト
+いえ、まだです！
+一番凶悪な気配が、
+まだ祠の中に…
+
+# alpha 3500221 0 0.5
+# alpha 103621 0 0.5
+# alpha 100741 0 0.5
+;;ＳＥ：ズン……ズン……（ボス魔獣が近づく音）
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# se "SE_0864"
+# textwindow "close"
+# waitandnext 1.5
+
+# alpha 802401 1 1
+# se "SE_0864"
+# waitandnext 1
+
+;;ＳＥ：グオオオオオ……！！（ボス魔獣の鳴き声、それらしいものがございましたらお願いいたします）
+;;演出：画面揺れ
+# se "SE_7003"
+# shake 1 1
+# move 103621 3 0
+# mask 103621 off
+# move 100741 3 0
+# mask 100741 off
+# move 3500221 3 0
+# mask 3500221 off
+# waitandnext 1
+
+# alpha 802401 0 0.5
+# waitandnext 0.5
+
+# alpha 3500221 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 3500221 "surprise"
+# voice 350021 "furaikugeru_t_0024"
+@フライクーゲル
+ななななっ、なにあれーっ！？
+
+# alpha 3500221 0 0.5
+# alpha 100741 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1007 "Arondaito_0025"
+@アロンダイト
+そんな…こんな巨大な魔獣、
+見たことありません
+
+# alpha 100741 0 0.5
+# alpha 103621 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+ま、まさかっ！
+魔獣達の、ボス…！？
+
+# fadeout "black" 1
+# waitandnext 1

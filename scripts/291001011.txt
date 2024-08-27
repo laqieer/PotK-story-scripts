@@ -1,0 +1,389 @@
+;;-----------------------------------------
+;;■□■神器レーヴァテイン再強化イベントシナリオ_20190610■□■
+;;【第11話　隣に立つ聖剣】
+;;11_1
+;;スクリプト最後の背景：丘（天上編）
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "bgm003" 0
+;;-----------------------------------------
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 2
+# alpha 24 0 0
+# mask 24 off
+;;レーヴァテイン
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# layer 100221 2
+# alpha 100221 0 0
+# mask 100221 off
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 3
+# alpha 810004 0 0
+# mask 810004 off
+;;異族（クローン1）
+# entry 98100041 810004
+# pos 98100041 3
+# scale 98100041 0.8 0
+# layer 98100041 2
+# alpha 98100041 0 0
+# mask 98100041 off
+;;異族（クローン2）
+# entry 98100042 810004
+# pos 98100042 3
+# scale 98100042 0.8 0
+# layer 98100042 2
+# alpha 98100042 0 0
+# mask 98100042 off
+;;-----------------------------------------
+;;【第11話　隣に立つ聖剣】
+;;モノローグ
+# textflame 0 0
+@
+ある日、唐突に起きた凶事“蝕”―
+
+;;モノローグ
+@
+それは唐突に終わりを迎えた
+
+;;モノローグ
+@
+人々も今までと変わらず
+普段の生活を続け―
+
+;;モノローグ
+@
+キラープリンセス達の変調も
+終息を向かえた
+
+;;モノローグ
+@
+そう、そのはずだった…
+
+;;//場面変更
+;;
+;;//背景：丘（天上編）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "highland"
+# move 810004 3 0
+# alpha 810004 1 0
+# mask 810004 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm023" 0
+# se "SE_0618"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@異族
+グアァァァァッ!!
+
+# voice 1002 "revatein_0029"
+# alpha 810004 0 0.5
+# move 100221 3 0
+# face 100221 "angry"
+# alpha 100221 1 0.5
+# mask 100221 off
+# textboxarrow 0 2
+@レーヴァテイン
+はぁっ！
+
+;;//攻撃演出
+# textwindow "close"
+# alpha 100221 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# waitandnext 0.8
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# se "SE_0669"
+# textboxarrow 0 2
+# textwindow "normal"
+@異族
+グアァァァァッ…
+
+;;//異族、切られて消失
+# se "SE_3001"
+# textwindow "close"
+# alpha 810004 0 0.5
+# waitandnext 0.8
+
+;;//異族の群れが現れる
+# se "SE_0617"
+# move 98100041 1 0
+# alpha 98100041 1 0.5
+# mask 98100041 off
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# move 98100042 5 0
+# alpha 98100042 1 0.5
+# mask 98100042 off
+# waitandnext 1.2
+
+# voice 1002 "revatein_0013"
+# alpha 98100041 0 0.5
+# alpha 810004 0 0.5
+# alpha 98100042 0 0.5
+# move 100221 3 0
+# face 100221 "sad"
+# alpha 100221 1 0.5
+# mask 100221 off
+# textboxarrow 0 2
+# textwindow "normal"
+@レーヴァテイン
+はぁ…めんどうくさい…
+斬っても斬っても
+いなくならないし…
+
+;;モノローグ
+# textflame 0 0
+@
+マスターの隊は
+ユグドラシルに程近い平原に拠点を
+構え異族討伐に乗り出していた
+
+;;モノローグ
+@
+しかし、異族の数は予想よりも多く、
+隊に所属するキル姫は
+苦戦を強いられていた
+
+;;//選択肢
+;;Aレーヴァテイン！
+;;B怪我はない？
+;;Cまだいける？
+# select "レーヴァテイン！" "select_label_01" "怪我はない？" "select_label_02" "まだいける？" "select_label_03"
+しかし、異族の数は予想よりも多く、
+隊に所属するキル姫は
+苦戦を強いられていた
+
+;;//解答
+;;A
+# label "select_label_01"
+# labeljump "select_label_end"
+# voice 1002 "revatein_0032"
+# face 100221 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+そんなに大声出さなくても
+聞こえてるよ
+
+;;B
+# label "select_label_02"
+# labeljump "select_label_end"
+# voice 1002 "revatein_0003"
+# face 100221 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+平気
+数は多いけどそれだけだし
+
+;;C
+# label "select_label_03"
+# labeljump "select_label_end"
+# voice 1002 "revatein_0003"
+# face 100221 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+めんどうだけど、
+これぐらいならなんとかなるでしょ
+
+;;モノローグ
+# label "select_label_end"
+# textflame 0 0
+@
+レーヴァテインの言葉に
+安堵の息を漏らすマスター
+
+# voice 1002 "revatein_0001"
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+それよりマスター
+ここはまだ戦場だし、
+さっさと下がって
+
+;;//異族を切る演出
+# textwindow "close"
+# alpha 100221 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# waitandnext 0.8
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1001 1 0 0 0
+# effectstart 1001
+# waitandnext 0.5
+
+# se "SE_0669"
+# textboxarrow 0 2
+# textwindow "normal"
+@異族
+グ…アァァ…
+
+;;//異族倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 810004 0 0.5
+# waitandnext 0.5
+
+# move 100221 3 0
+# face 100221 "normal"
+# alpha 100221 1 0.5
+# mask 100221 off
+# textboxarrow 0 2
+# textwindow "normal"
+@レーヴァテイン
+ほら、まだウヨウヨいる
+私の後ろにいてよね
+あんまり守るの得意じゃないし
+
+;;//再び異族の群れ襲来
+# se "SE_0617"
+# textwindow "close"
+# alpha 100221 0 0.5
+# move 98100041 1 0
+# alpha 98100041 1 0.5
+# mask 98100041 on
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 on
+# move 98100042 5 0
+# alpha 98100042 1 0.5
+# mask 98100042 on
+# waitandnext 1.2
+
+# voice 1002 "revatein_0013"
+# alpha 98100041 0 0.5
+# alpha 810004 0 0.5
+# alpha 98100042 0 0.5
+# move 100221 3 0
+# face 100221 "sad"
+# alpha 100221 1 0.5
+# mask 100221 off
+# textboxarrow 0 2
+# textwindow "normal"
+@レーヴァテイン
+はぁ…もう疲れたし、
+さっさと終わらせよう
+
+;;？？？（ティルフィング）
+# serif 1
+@？？？
+マスター!!
+レーヴァテイン!!
+
+;;//切る演出
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# alpha 100221 0 0.5
+# move 98100041 1 0
+# alpha 98100041 1 0.5
+# mask 98100041 on
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 on
+# move 98100042 5 0
+# alpha 98100042 1 0.5
+# mask 98100042 on
+# waitandnext 0.8
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1002 1 0 0 0
+# effectstart 1002
+# waitandnext 0.5
+
+;;//異族の一体倒れる
+# se "SE_0669"
+# se "SE_3001"
+# alpha 810004 0 0.5
+# waitandnext 0.8
+
+;;//ティルフィング登場
+# voice 1014 "tyrufing_0001"
+# alpha 98100041 0 0.5
+# alpha 98100042 0 0.5
+# move 24 3 0
+# face 24 "angry"
+# alpha 24 1 0.5
+# mask 24 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+マスター！
+ご無事ですか!?
+
+# move 24 2 0.5
+# mask 24 on
+# move 100221 4 0
+# face 100221 "normal"
+# alpha 100221 1 0.5
+# mask 100221 on
+# textboxarrow 0 3
+@レーヴァテイン
+ティルフィングも来たんだ
+向こうは平気？
+
+# voice 1014 "tyrufing_0003"
+# face 24 "normal"
+# textboxarrow 0 1
+@ティルフィング
+ええ
+大体の異族は討伐しました
+そしたら、マスターがこっちに…
+
+# textboxarrow 0 3
+@レーヴァテイン
+そっか
+それならこっちも
+早く倒さなくちゃね
+
+# textboxarrow 0 1
+@ティフィング
+そうですね
+これでこの辺りの異族は
+すべて討伐し終えるはずです
+
+# se "SE_5206"
+# face 100221 "angry"
+# textboxarrow 0 3
+@レーヴァテイン
+それじゃ…いくよ
+
+# face 24 "angry"
+# textboxarrow 0 1
+@ティルフィング
+はいっ！

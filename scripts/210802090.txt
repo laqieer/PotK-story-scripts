@@ -1,0 +1,824 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第８章 章タイトル：「ビギニング・オブ・ジ・エンド」
+;;第2話－９　タイトル：黄昏の魔弾
+;;2_9_1
+;;スクリプト最後の背景：ユグドラシル（天上世界）
+;;-----------------------------------------
+# script "lisp"
+# background "in_underwild"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;グラーシーザ
+# body 302611
+# pos 302611 3
+# scale 302611 0.8 0
+# layer 302611 2
+# alpha 302611 0 0
+# mask 302611 off
+;;ネス
+# body 602011
+# pos 602011 3
+# scale 602011 0.8 0
+# layer 602011 2
+# alpha 602011 0 0
+# mask 602011 off
+;;ミネルヴァ
+# body 302511
+# pos 302511 3
+# scale 302511 0.8 0
+# layer 302511 2
+# alpha 302511 0 0
+# mask 302511 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;アスクレピオス
+# body 600131
+# pos 600131 3
+# scale 600131 0.8 0
+# layer 600131 2
+# alpha 600131 0 0
+# mask 600131 off
+;;ケラウノス
+# body 500131
+# pos 500131 3
+# scale 500131 0.8 0
+# layer 500131 2
+# alpha 500131 0 0
+# mask 500131 off
+;;デオン
+# body 203
+# pos 203 3
+# scale 203 0.8 0
+# layer 203 3
+# alpha 203 0 0
+# mask 203 off
+;;花異族
+# body 5809801
+# pos 5809801 3
+# scale 5809801 0.8 0
+# layer 5809801 2
+# alpha 5809801 0 0
+# mask 5809801 off
+;;花異族（クローン1）
+# entry 958098011 5809801
+# pos 958098011 3
+# scale 958098011 0.8 0
+# layer 958098011 2
+# alpha 958098011 0 0
+# mask 958098011 off
+;;花異族（クローン2）
+# entry 958098012 5809801
+# pos 958098012 3
+# scale 958098012 0.8 0
+# layer 958098012 2
+# alpha 958098012 0 0
+# mask 958098012 off
+;;異族化マサムネ
+# body 5100131
+# pos 5100131 3
+# scale 5100131 0.8 0
+# layer 5100131 2
+# alpha 5100131 0 0
+# mask 5100131 off
+;;異族化パラシュ
+# body 5200431
+# pos 5200431 3
+# scale 5200431 0.8 0
+# layer 5200431 2
+# alpha 5200431 0 0
+# mask 5200431 off
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 2
+# alpha 5401721 0 0
+# mask 5401721 off
+;;ミョルニル
+# body 200111
+# pos 200111 3
+# scale 200111 0.8 0
+# layer 200111 2
+# alpha 200111 0 0
+# mask 200111 off
+;;グラーシーザ・擬装・ウォーリアー
+# body 5302621
+# pos 5302621 3
+# scale 5302621 0.8 0
+# layer 5302621 2
+# alpha 5302621 0 0
+# mask 5302621 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;第2話－９　タイトル：黄昏の魔弾
+;;//背景：ユグドラシル（地上）
+# move 5401721 2 0
+# face 5401721 "normal"
+# alpha 5401721 1 0
+# mask 5401721 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0
+# mask 196 on
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+意外とあっけなく、
+ここまで戻って来れたわね
+
+# textboxarrow 0 1
+@スイハ
+ユグドラシルはあと少し…
+コマンドキラーズの気配は、
+ありません
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+それはそれで不気味なんだけど…
+今は急ぐしかないわっ
+
+# voice 4017 "suiha_0002"
+# textboxarrow 0 1
+@スイハ
+アルマス…
+少し焦り過ぎでは？
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+…ラグナロクに早く会いたいの
+それに…嫌な予感がするのよ
+
+# textboxarrow 0 1
+@スイハ
+予感ですか…
+確かに…
+
+;;スイハ（独白）
+# move 5401721 2 0
+# face 5401721 "sad"
+# textboxarrow 0 0
+# textwindow "moya"
+@スイハ
+天上世界では何事も起こってなければ
+いいんだけど…
+
+;;//背景：街中（天上世界）
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "town"
+# alpha 5401721 0 0
+# alpha 196 0 0
+# move 958098011 1 0
+# alpha 958098011 1 0
+# mask 958098011 on
+# move 5809801 3 0
+# alpha 5809801 1 0
+# mask 5809801 on
+# move 958098012 5 0
+# alpha 958098012 1 0
+# mask 958098012 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;//異族の群れが現れる
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# se "SE_0830"
+# textboxarrow 0 0
+# textwindow "normal"
+@異族
+イイイイイイイイ！
+
+# voice 9939 "deon_0026"
+# alpha 958098011 0 0.5
+# alpha 5809801 0 0.5
+# alpha 958098012 0 0.5
+# move 600131 1 0
+# face 600131 "normal"
+# alpha 600131 1 0.5
+# mask 600131 on
+# move 203 3 0
+# alpha 203 1 0.5
+# mask 203 on
+# face 203 "angry"
+# textboxarrow 0 2
+# move 500131 5 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 on
+@デオン
+ぬううっ…
+ここにも異族が出没したのである
+
+# voice 5001 "keraunosu_unit_0013"
+# textboxarrow 0 3
+@ケラウノス
+こっちは任せてよ
+マスターはラグナロク達と連携を
+取らないといけないんだから
+
+# voice 6001 "asukurepiosu_0013"
+# face 600131 "angry"
+# textboxarrow 0 1
+@アスクレピオス
+また前線に出ようとしてるの！？
+怪我したらどうするのよ、バカ！
+
+# textboxarrow 0 2
+@デオン
+皆の士気を高めるためにも、
+余が直々に…
+
+# voice 6001 "asukurepiosu_0010"
+# textboxarrow 0 1
+@アスクレピオス
+いいから本部に戻りなさい！
+
+;;アスクレピオス（独白）
+# move 600131 1 0
+# face 600131 "normal"
+# textboxarrow 0 0
+# textwindow "moya"
+@アスクレピオス
+各地で一斉に異族が現れるなんて…
+間違いなく陽動よね…
+きっと狙いは…
+
+;;//背景：ユグドラシル（天上世界）
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "in_yggdrasill"
+# alpha 600131 0 0
+# alpha 203 0 0
+# alpha 500131 0 0
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0
+# mask 103611 on
+# move 302511 4 0
+# face 302511 "angry"
+# alpha 302511 1 0
+# mask 302511 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 3
+# textwindow "normal"
+@ミネルヴァ
+また異族が出現しました
+「オリュンポスの座」が応戦している
+そうです
+
+# voice 1036 "ragnarok_0013"
+# face 103611 "angry"
+# textboxarrow 0 1
+@ラグナロク
+これで幾つめになるの…？
+出現場所が多すぎるっ
+
+# face 302511 "normal"
+# textboxarrow 0 3
+@ミネルヴァ
+落ち着いて下さい、ラグナロク
+異族達の移動手段は不明ですけれど
+敵の真意はそこにないと思います
+
+# textboxarrow 0 3
+@ミネルヴァ
+彼女達の狙いは、十中八九、ここ
+ユグドラシルです
+
+# face 103611 "normal"
+# textboxarrow 0 1
+@ラグナロク
+各地に異族を出没させているのは
+私達の戦力を分散させるため…
+そういうことね
+
+# voice 1036 "ragnarok_0015"
+# face 103611 "sad"
+# textboxarrow 0 1
+@ラグナロク
+厳しい戦いになりそう…
+
+# alpha 103611 0 0.5
+# alpha 302511 0 0.5
+# move 302611 3 0
+# face 302611 "normal"
+# alpha 302611 1 0.5
+# mask 302611 off
+# textboxarrow 0 2
+@グラーシーザ
+うむ！
+いまこそ、あたしたちのしんかが
+ためされるときだ
+
+# voice 3026 "grayside_0004"
+# textboxarrow 0 2
+@グラーシーザ
+あたしはじゅんびばんたんだぞ！
+
+# alpha 302611 0 0.5
+# move 602011 3 0
+# face 602011 "angry"
+# alpha 602011 1 0.5
+# mask 602011 off
+# textboxarrow 0 2
+@ネス
+大丈夫ですっ
+規律正しく対処すれば
+必ず勝てます！
+
+;;ネス（独白）
+# move 602011 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 602011 off
+@ネス
+わたしも、もっとみなさんを守れる
+ようにならないとっ
+
+# alpha 602011 0 0.5
+# move 302511 3 0
+# face 302511 "sad"
+# alpha 302511 1 0.5
+# mask 302511 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ミネルヴァ
+一人一人が十全に力を発揮する
+それが鍵でしょう
+ただ…
+
+# textboxarrow 0 2
+@ミネルヴァ
+すでにフライシュッツが出て
+しまいました
+
+# face 302511 "normal"
+# textboxarrow 0 2
+@ミネルヴァ
+エルキュールは、
+まだ戦える状態にありません…
+スイハも戻っていませんから…
+
+# textboxarrow 0 2
+@ミネルヴァ
+私達は出来る限り、
+まとまっているべきです
+
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 302511 4 0.5
+# mask 302511 on
+@ラグナロク
+でも、それだと周りの被害が
+大きくなるかもしれない
+
+# voice 3025 "minerva_0015"
+# face 302511 "sad"
+# textboxarrow 0 3
+@ミネルヴァ
+それは…心苦しいですが…
+
+# alpha 103611 0 0.5
+# alpha 302511 0 0.5
+# move 302611 3 0
+# face 302611 "normal"
+# alpha 302611 1 0.5
+# mask 302611 off
+# textboxarrow 0 2
+@グラーシーザ
+みなのちからをしんじるときだ！
+
+# alpha 302611 0 0.5
+# move 302511 3 0
+# face 302511 "surprise"
+# alpha 302511 1 0.5
+# mask 302511 off
+# textboxarrow 0 2
+@ミネルヴァ
+グラーシーザ…
+
+# alpha 302511 0 0.5
+# move 302611 3 0
+# face 302611 "normal"
+# alpha 302611 1 0.5
+# mask 302611 off
+# textboxarrow 0 2
+@グラーシーザ
+おまえたちのしんぱいはもっともだが
+ほかのキル姫たちも、
+たいしたものだぞ
+
+# textboxarrow 0 2
+@グラーシーザ
+あたしは、みなをしんじてうごかぬ
+それがせいぎだ！
+
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 302611 4 0.5
+# mask 302611 on
+@ラグナロク
+グラーシーザ
+あなたの正義を見出したのね
+
+# textboxarrow 0 3
+@グラーシーザ
+うむ！
+あたしのせいぎはひとまわりおおきく
+なったのだ
+
+# voice 520043 "parashu_iz_0013"
+# alpha 103611 0 0.5
+# alpha 302611 0 0.5
+# se "SE_5206"
+# move 5200431 3 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 off
+# textboxarrow 0 2
+@パラシュ
+ふぅん
+だったら、見せてもらおうか
+君の正義を
+
+# alpha 5200431 0 0.5
+# move 103611 3 0
+# face 103611 "surprise"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+パラシュ！
+
+# voice 510013 "masamune_iz_0011"
+# alpha 103611 0 0.5
+# move 5200431 2 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+# move 5100131 4 0
+# face 5100131 "normal"
+# alpha 5100131 1 0.5
+# mask 5100131 on
+# textboxarrow 0 3
+@マサムネ
+逸るな、パラシュ
+先行しすぎているぞ
+
+# voice 520043 "parashu_iz_0007"
+# face 5200431 "angry"
+# textboxarrow 0 1
+@パラシュ
+ボクについてこれないのなら
+置いていくだけだよ
+妥協なんかしない
+
+# voice 510013 "masamune_iz_0004"
+# face 5100131 "happy"
+# textboxarrow 0 3
+@マサムネ
+勝手が過ぎると言いたいが、
+その意志の強さは美しい
+
+# textboxarrow 0 3
+@マサムネ
+先に始めさせてもらうとしよう
+
+# face 5200431 "normal"
+# textboxarrow 0 1
+@パラシュ
+行くよ
+理想のために
+
+# alpha 5200431 0 0.5
+# alpha 5100131 0 0.5
+# move 302611 3 0
+# face 302611 "normal"
+# alpha 302611 1 0.5
+# mask 302611 off
+# textboxarrow 0 2
+@グラーシーザ
+うけてたつぞ！
+かかってこい！
+
+# move 302611 2 0.5
+# face 302611 "angry"
+# mask 302611 on
+# move 5200431 4 0
+# face 5200431 "angry"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+# textwindow "close"
+# waitandnext 0.7
+
+# voice 520043 "parashu_iz_battle_0001"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@パラシュ
+やああああ！！
+
+# se "SE_4100"
+# waitandnext 0.3
+
+;;//パラシュがグラーシーザを吹っ飛ばす
+# se "SE_11764"
+# waitandnext 0.2
+
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 3026 "grayside_0038"
+# textboxarrow 0 1
+@グラーシーザ
+ぐうううっ…
+
+# voice 520043 "parashu_iz_0007"
+# face 5200431 "normal"
+# textboxarrow 0 3
+@パラシュ
+どうしたんだい？
+君の正義っていうのは、
+随分と脆弱だね
+
+# face 302611 "sad"
+# textboxarrow 0 1
+@グラーシーザ
+うむ…
+あたしもそのことをかんがえていた
+
+# textboxarrow 0 1
+@グラーシーザ
+せいぎとはなんなのか
+あたしのせいぎはほんとうにせいぎ
+だったのか…
+
+# textboxarrow 0 1
+@グラーシーザ
+ただ、つらぬきとおすことばかり
+かんがえていた
+しかし、それでは…
+
+# face 302611 "normal"
+# textboxarrow 0 1
+@グラーシーザ
+せいぎとはいえぬ！
+せいぎとはもっとおおきく、
+ほうようりょくがあるものだ！
+
+# textboxarrow 0 3
+@パラシュ
+…………
+
+# textboxarrow 0 1
+@グラーシーザ
+あたしはみなにせいぎをしめす！
+
+;;//キーンという金属音
+# bgmfile "bgm422_block" "BgmIntegralNoahBattle004" 0
+# se "SE_5786"
+# waitandnext 0.5
+
+# serif 1
+@ラグナロク
+グラーシーザ、あなたの正義の形を
+強くイメージして！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 3026 "grayside_0021"
+# face 302611 "surprise"
+# textboxarrow 0 1
+@グラーシーザ
+おおっ！
+あたまのなかにラグナロクのこえが
+するぞ！
+
+# face 302611 "normal"
+# textboxarrow 0 1
+@グラーシーザ
+あたしのせいぎのかたちは…！
+
+;;//回想シーン
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "004_outland"
+# alpha 302611 0 0
+# alpha 5200431 0 0
+# move 200111 3 0
+# face 200111 "happy"
+# alpha 200111 1 0
+# mask 200111 off
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：村
+# voice 2001 "myuruniru_0006"
+# textboxarrow 0 2
+# textwindow "normal"
+@ミョルニル
+どんなでこぼこもぺったんこだよ～！
+えっへん！
+
+# serif 1
+@奏官
+派手な戦闘は得意じゃないんでね
+地味だけど、けっこう喜ばれてるから
+コツコツやってるんだ
+
+# serif 1
+@住人達
+本当に助かってるぜ！
+
+# voice 3026 "grayside_0006"
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 200111 0 0.5
+# move 302611 3 0
+# face 302611 "happy"
+# alpha 302611 1 0.5
+# mask 302611 off
+# textboxarrow 0 2
+@グラーシーザ
+それはちょうじょう！
+これもまた、せいぎなのだな…
+
+;;//回想終了
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "in_yggdrasill"
+# alpha 302611 0 0
+# move 302611 3 0
+# face 302611 "normal"
+# alpha 302611 1 0
+# mask 302611 off
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：天上ユグドラシル
+# textboxarrow 0 2
+# textwindow "normal"
+@グラーシーザ
+あのときのミョルニルのように、
+もっとおおらかで、ちからづよい
+ものだ！
+
+# move 103611 2 0
+# face 103611 "angry"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 302611 4 0.5
+# mask 302611 on
+@ラグナロク
+悠久の時より紡がれし、
+願いと望みの象徴よ
+我が前にあるべき姿を示せ
+
+# textboxarrow 0 1
+@ラグナロク
+深淵より希う
+無尽の正義に灼熱の炎を
+グラーシーザ！
+
+#setnextbgmblock 2
+# se "SE_11705"
+# sedelay "SE_11706" 0.5
+# voice 3026 "grayside_im_0051"
+# voice 1036 "ragnarok_im_0051"
+# textboxarrow 0 0
+@グラーシーザ＆ラグナロク
+擬装《イミテイト》！！
+
+;;//グラーシーザが擬装バージョンに
+# se "SE_11707"
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# alpha 103611 0 0
+# alpha 302611 0 0
+# move 5302621 3 0
+# face 5302621 "normal"
+# alpha 5302621 1 0
+# mask 5302621 off
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;グラーシーザ（擬装）
+# textboxarrow 0 2
+# textwindow "normal"
+@グラーシーザ
+あたしのせいぎは、みなのすすむ
+みちをさまたげるあらゆるものを
+ふきとばす！
+
+# voice 3026 "grayside_im_kyara_2001"
+# textboxarrow 0 2
+@グラーシーザ
+このみにときはなたれしは、
+きゅうてきをうがつ
+火のてっつい
+
+# voice 3026 "grayside_im_kyara_3001"
+# textboxarrow 0 2
+@グラーシーザ
+グラーシーザ・擬装・ウォーリアー
+すいさんっ！
+
+# voice 3026 "grayside_im_kyara_4001"
+# textboxarrow 0 2
+@グラーシーザ
+せいぎとは、
+人をてらすこころのかがみ
+七つの光は御旗とともにっ！
+
+# voice 520043 "parashu_iz_0040"
+# alpha 5302621 0 0.5
+# move 5200431 3 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 off
+# textboxarrow 0 2
+@パラシュ
+なるほど…
+それが君の理想というわけだ
+
+# voice 520043 "parashu_iz_0032"
+# face 5200431 "angry"
+# textboxarrow 0 2
+@パラシュ
+いいよ
+相手にとって不足はない
+全力で叩き潰してやる！！
+
+# voice 3026 "grayside_im_unit_0010"
+# alpha 5200431 0 0.5
+# move 5302621 3 0
+# face 5302621 "normal"
+# alpha 5302621 1 0.5
+# mask 5302621 off
+# textboxarrow 0 2
+@グラーシーザ
+せいぎのほのおにおびえぬなら、
+かかってくるがいい！

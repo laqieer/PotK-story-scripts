@@ -1,0 +1,533 @@
+;;-----------------------------------------
+;;340061202
+;;幻獣梓弓　キャラシナリオ【EP2】
+;;-----------------------------------------
+# script "lisp"
+# background "201_border"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# textwindow "close"
+;;梓弓
+# body 3400611
+# pos 3400611 3
+# scale 3400611 0.8 0
+# layer 3400611 1
+# alpha 3400611 0 0
+# mask 3400611 off
+;;ハルモニア
+# body 3810001
+# pos 3810001 3
+# scale 3810001 0.8 0
+# layer 3810001 1
+# alpha 3810001 0 0
+# mask 3810001 off
+;;暗転背景
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;一枚絵
+# imageset 1 "c3400611"
+# imagealpha 1 0 0
+# imagelayer 1 1
+;;黒バック
+# imageset 2 "bg_black"
+# imagepos 2 0 0
+# imagelayer 2 1
+# imageleftin 2 0
+# imagealpha 2 0 0
+;;戦場エフェクト
+# envbody 1000 6 0
+# effectpattern 1000 1 0
+# waitandnext 0.1
+
+# textwindow "nomal"
+# effectstart 1000
+;;◆戦場１--------------------------------------------------
+# textflame 0 0
+@
+数日経ったものの、
+占いの結果が本当だったのかと
+疑わしいほど、問題は起きていない
+
+# textflame 0 0
+@
+今も戦闘の途中だが、
+普段よりも気合の入った斬ル姫達の
+おかげで危なげなく進んでいる
+
+;;梓弓登場
+# textwindow "close"
+# alpha 3400611 1 0.5
+# waitandnext 0.8
+
+;;魔眼フラッシュ
+# se "SE_5562"
+# fadein "red" 0.5
+# shake 0 0.6
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400611 "angry"
+# voice 340061 "azusa_ge_battle_0001"
+# chara 3400611
+@梓弓
+わたくしの瞳の色、
+しかとその眼に焼き付けなさい
+
+;;◆戦場２--------------------------------------------------
+# textwindow "close"
+# fadeout "black" 1.0
+# waitandnext 1.0
+
+# effectskip 1000
+# alpha 3400611 0 0
+# fadein "black" 1.0
+# waitandnext 1.3
+
+# textwindow "normal"
+# textflame 0 0
+@
+大勢が決まったからか
+敵の多くも撤退し始めている
+
+;;SE：草掻き分ける音　がさ、みたいな
+# se "SE_0606"
+# textwindow "close"
+# alpha 3810001 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 381000 "angel_battle_0005"
+# chara 3810001
+@ハルモニア兵
+お前が、お前さえいなければっ…！
+主よっ、私に力を―！
+
+# textflame 0 0
+@
+…え？
+
+# textflame 0 0
+@
+マスターから少し離れた物影―
+そこから、ハルモニアの兵士
+が飛び出してきた
+
+# brightness 3810001 0.6 0
+# serif 1
+# textsize 50
+# textalign "center"
+# textwindow "toge"
+# textboxarrow 1 0
+# voice 340061 "azusa_ge_0024"
+# chara 3400611
+@梓弓
+マスター！
+
+# brightness 3810001 1.0 0
+# textwindow "top_close"
+# serif 0
+# textsize 24
+# textalign "left"
+# textflame 0 0
+@
+咄嗟のことで、
+マスターは動けずにいた
+
+# textflame 0 0
+@
+周りの斬ル姫達も気付くが、
+あまりに距離がありすぎていた
+
+# se "SE_4101"
+# shake 0 0.6
+# fadein "white" 0.6
+# textflame 1 1
+# textboxarrow 0 2
+# voice 381000 "angel_0029"
+# chara 3810001
+@ハルモニア兵
+くらえぇぇぇぇっ――！！
+
+# textflame 0 0
+@
+振り下ろされた凶刃が迫る
+そして―
+
+;;魔眼発動
+# textwindow "close"
+# se "SE_9150"
+# subfillrect 1 "red" 1 0 0.3
+# waitandnext 1.2
+
+# subfillrect 1 "red" 1 0.3 0
+# waitandnext 0.8
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 381000 "angel_0024"
+# chara 3810001
+@ハルモニア兵
+な、なんだ…
+これは…う、動け…動けっ！
+
+# textflame 0 0
+@
+眼を瞬かせるマスターの前で
+刃がピタリと止まっていた
+
+# textwindow "close"
+# move 3810001 1 0.5
+# alpha 3400611 1 0
+# pos 3400611 5
+# rightin 3400611 0.5
+# mask 3400611 on
+# mask 3810001 on
+# face 3400611 "usual"
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 340061 "azusa_ge_0012"
+# chara 3400611
+@梓弓
+マスターを傷つけさせは…
+しません
+
+# textflame 0 0
+@
+妖しく光る瞳を向け、
+息を切らせる梓弓
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3400611
+@梓弓
+この瞳に止められない物など
+ありはしません
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3400611 "angry"
+# chara 3400611
+@梓弓
+マスターに危害を加えようとした罪…
+地の底で購いなさい…
+
+;;SE：矢が空気を切り裂く音
+# voice 340061 "azusa_ge_battle_0002"
+# textwindow "close"
+# se "SE_4301"
+# shake 0 0.6
+# effectbody 2001 28 -180 0 2
+# effectstart 2001
+# waitandnext 0.3
+
+# fadein "red" 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 381000 "angel_0038"
+# chara 3810001
+@ハルモニア兵
+ぐっ…主よ…
+申し訳、ありません…
+
+;;ハルモニア兵倒れる
+# textwindow "close"
+# se "SE_3001"
+# alpha 3810001 0 0.5
+# waitandnext 1.0
+
+# textwindow "normal"
+# textflame 0 0
+@
+助けられ、お礼を言おうとする
+マスターだったが―
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3400611 "surprise"
+# voice 340061 "azusa_ge_battle_0005"
+# chara 3400611
+@梓弓
+ダメですっ…
+来ないで下さいっ！
+
+;;梓弓画面外へ走る
+# textwindow "close"
+# se "SE_5575"
+# leftout 3400611 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 0 0
+@
+悲鳴のような声を上げ、
+走り去る梓弓
+
+# textflame 0 0
+@
+そんな彼女を放っておけず、
+マスターも急いで彼女を追った
+
+;;◆屋内１（ナイのでっポイところ）--------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# bgmfile "bgm273" "BgmLostRagnarokEvent" 0
+# background "201_room"
+# pos 3400611 3
+# mask 3400611 off 
+# brightness 3400611 0.6 0
+# alpha 3400611 0 0
+# face 3400611 "normal"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.8
+
+# textwindow "normal"
+# textflame 0 0
+@
+息を切らせて追いかけるマスター
+そして、なんとか梓弓のもとに
+たどり着いた
+
+# textflame 0 0
+@
+だが…
+
+;;梓弓登場
+# textwindow "close"
+# alpha 3400611 1 0.5
+# waitandnext 0.8
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400611 "surprise"
+# voice 340061 "azusa_ge_0037"
+# chara 3400611
+@梓弓
+お願いです
+それ以上、近づかないで…
+今は…
+
+# textflame 0 0
+@
+今は…？
+入り口に立つマスターは尋ねる
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 340061 "azusa_ge_0038"
+# chara 3400611
+@梓弓
+わたくしの邪眼が…
+抑えられない…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3400611
+@梓弓
+このままではマスターを
+止めてしまう
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400611 "amazed"
+# chara 3400611
+@梓弓
+いつもわたくしが
+戦闘で最前線に立つのも…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3400611
+@梓弓
+味方に目を合わせなくするためです
+邪眼で止めないですむから
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400611 "sad"
+# chara 3400611
+@梓弓
+メデューサのこの力…
+どうしてわたくしがこんな…
+いらないのに…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3400611
+@梓弓
+大きな災いは、
+きっとわたくしのこと…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400611 "normal"
+# voice 340061 "azusa_ge_0031"
+# chara 3400611
+@梓弓
+ですから今は…来ないでください
+落ち着けば大丈夫ですから
+
+# textflame 0 0
+@
+だから、一人にしてください
+そう突き放す梓弓に、
+マスターは苦笑を返した
+
+# textflame 0 0
+@
+そして、彼女に近づく
+
+# bgm "stop"
+# brightness 3400611 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400611 "angry"
+# voice 340061 "azusa_ge_0022"
+# chara 3400611
+@梓弓
+ど、どうしてですかっ…！
+一人にしてくださいと
+言っているではないですかっ…！
+
+# textflame 0 0
+@
+マスターの方を見ないまま
+声を荒げる梓弓
+
+# bgmfile "bgm290" "BgmLostRagnarokEvent" 0
+# textflame 0 0
+@
+隊の大切な仲間が苦しんでいるのに
+見て見ぬフリなんて出来ない
+
+# textflame 0 0
+@
+それに、その力のおかげで
+助かったんだから、
+その力を怖がるつもりはないよ
+
+# textflame 0 0
+@
+そう言って、
+マスターは梓弓の隣に座った
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400611 "surprise"
+# voice 340061 "azusa_ge_0001"
+# chara 3400611
+@梓弓
+マスター…
+
+# textflame 0 0
+@
+それに、大きな災いは梓弓のおかげで
+切り抜けられたんだし、
+今は安心だよね
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400611 "happy"
+# voice 340061 "azusa_ge_0004"
+# chara 3400611
+@梓弓
+ふ、ふふっ…
+
+# textflame 0 0
+@
+そう笑うマスターに釣られて、
+梓弓もかすかに笑みを浮かべた
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400611 "shy"
+# voice 340061 "azusa_ge_0030"
+# chara 3400611
+@梓弓
+ですが…
+どうしてわたくしをここまで
+信頼してくださるのですか？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3400611
+@梓弓
+メデューサの力はとても強力です…
+わたくし自身にすら
+影響を及ぼすほど…
+
+# textflame 0 0
+@
+そんなの簡単だよ
+
+# textflame 0 0
+@
+梓弓はその力で僕を助けてくれた
+その強い力は使い方次第、
+梓弓が使う限り、大丈夫だよ
+
+# textwindow "normal"
+# textflame 0 0
+@
+全幅の信頼の篭った言葉、
+それが嬉しくて梓弓は眼を閉じて、
+近くにあった鏡に触れた
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 3400611 0 0
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 0
+# face 3400611 "happy"
+# voice 340061 "azusa_ge_0005"
+# chara 3400611
+@梓弓
+…ありがとうございます、マスター
+その言葉で、アズサは救われます
+
+# textflame 0 0
+@
+眼を閉じたまま笑顔を浮かべる
+梓弓の表情は、見たことがないほど
+やわらかいものだった
+
+;;◆一枚絵--------------------------------------------------
+# voice 340061 "azusa_ge_kyara_0026"
+# buttonsout 0 1.5
+# textwindow "close"
+;;「わたくしの目は、もう澄んだ目で
+;;　人のことを追うことは出来ないと思っていたのに…
+;;　あなた様のことを想うと、目で追ってしまうのです」
+;;azusa_ge_kyara_0026
+
+# frameout 0 1
+# waitandnext 1
+
+# fadeout "black" 1.5
+# waitandnext 1.5

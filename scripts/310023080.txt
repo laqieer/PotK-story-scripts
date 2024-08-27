@@ -1,0 +1,496 @@
+;;-----------------------------------------
+;;SEA3章_8
+;;-----------------------------------------
+# script "lisp"
+# background "schoolgate_night"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;七支刀
+# body 5105111
+# pos 5105111 3
+# scale 5105111 0.8 0
+# layer 5105111 3
+# mask 5105111 off
+# alpha 5105111 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 5
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;パラシュ
+# body 6200411
+# pos 6200411 2
+# scale 6200411 0.8 0
+# layer 6200411 4
+# alpha 6200411 1 0
+;;イシューリエル
+# body 6301411
+# pos 6301411 4
+# scale 6301411 0.8 0
+# layer 6301411 2
+# mask 6301411 off
+# alpha 6301411 1 0
+;;ghost
+# body 302
+# pos 302 5
+# scale 302 0.8 0
+# layer 302 1
+# mask 302 off
+# alpha 302 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：病院前（夜の校門）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# face 6200411 "usual"
+# face 6301411 "normal"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@イシューリエル
+まずはここ
+「首挟みの正門」ですわ
+
+# textboxarrow 0 1
+@パラシュ
+穏やかじゃない名称だね
+
+# textboxarrow 0 3
+@イシューリエル
+ここで囁かれている噂は…
+
+# imagealpha 0 0.4 1
+# imagepos 0 0 0
+# alpha 6200411 0 0.3
+# alpha 6301411 0 0.3
+# bgmfile "bgm373" "BgmGakuen005" 0
+# textflame 0 0
+# textsize 30
+@
+廃病院の噂１
+[8A0808]「首挟みの正門」[-]
+
+# textsize 24
+@廃病院の噂
+[8A0808]ある夜、勤務医が一人、
+忘れ物を取りに病院を訪れた[-]
+
+@廃病院の噂
+[8A0808]たまたま警備員は席を外しており
+医者は何も告げずに院内へ[-]
+
+@廃病院の噂
+[8A0808]首尾良く忘れ物を見つけた彼は
+病院を出ようとしたが…[-]
+
+@廃病院の噂
+[8A0808]医者が来ていたことを知らなかった
+警備員は門が開いていることに気づき
+慌てて門を閉めたのだ[-]
+
+@廃病院の噂
+[8A0808]運悪く、門を抜けようとしていた
+医者は首を挟まれて絶命した[-]
+
+@廃病院の噂
+[8A0808]それ以来、深夜
+病院の門をくぐろうとすると[-]
+
+@廃病院の噂
+[8A0808]ひとりでに勢い良く門が閉まり
+首を挟んでしまうという――[-]
+
+# voice 1051 "shichishito_0025"
+# imagealpha 0 0 1
+# face 5105111 "surprise"
+# alpha 5105111 1 0.3
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# textflame 1 1
+# textboxarrow 0 2
+@七支刀
+きゃああああ…！
+
+# face 5105111 "sad"
+# textboxarrow 0 2
+@七支刀
+そんな恐ろしい事件が起きたところ
+だったんですね…
+道理で強い気配がするわけです
+
+# alpha 5105111 0 0.3
+# move 6301411 3 0
+# layer 6301411 3
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# textboxarrow 0 2
+@イシューリエル
+ナンセンスですわ！
+
+# textboxarrow 0 2
+@イシューリエル
+そのような事件が
+起きたという記録は
+ありません
+
+# textboxarrow 0 2
+@イシューリエル
+それに、
+門が勝手に閉じるだなんて
+非科学的ですわ
+
+;;幽霊が通り過ぎる
+# alpha 302 0.5 0.6
+# textboxarrow 0 0
+# waitandnext 0.6
+
+# se "SE_11585"
+# move 302 1 1.2
+# alpha 302 0 1.2
+# waitandnext 1.5
+
+# voice 2004 "parashu_0024"
+# alpha 6301411 0 0.3
+# face 270 "normal"
+# alpha 270 1 0.3
+# move 6200411 4 0
+# layer 6200411 2
+# mask 6200411 off
+# face 6200411 "normal"
+# alpha 6200411 1 0.3
+# textboxarrow 0 3
+@パラシュ
+…ん？
+今、何か…
+
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+イシューリエルさん、
+避けて下さい！
+
+# alpha 6200411 0 0.3
+# alpha 270 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+;;門が勢い良く閉じる
+# se "SE_6234"
+# shake 0 1
+# waitandnext 1
+
+# voice 3014 "ithuriel_0023"
+# face 6301411 "surprise"
+# alpha 6301411 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@イシューリエル
+門がひとりでに…！？
+はっ！
+
+;;イシューリエルが避ける
+# se "SE_5204"
+# move 6301411 2 0.3
+# alpha 6301411 0 0.3
+# textwindow "close"
+# waitandnext 0.3
+
+# voice 9917 "mimir_navikan_0019"
+# face 270 "normal"
+# move 270 3 0
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+危ないところでした…
+イシューリエルさん、大丈夫ですか？
+
+# alpha 270 0 0.3
+# move 6200411 2 0
+# layer 6200411 4
+# mask 6200411 on
+# face 6200411 "normal"
+# alpha 6200411 1 0.3
+# move 5105111 4 0
+# layer 5105111 2
+# mask 5105111 off
+# face 5105111 "surprise"
+# alpha 5105111 1 0.3
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# sedelay "bgm602_basic_on" 3
+# textboxarrow 0 3
+@七支刀
+今、門が勝手に閉まって、
+イシューリエル様の首を
+挟もうとしましたよね…！？
+
+# voice 1051 "shichishito_0015"
+# face 5105111 "sad"
+# textboxarrow 0 3
+@七支刀
+やっぱり、さっき感じた
+良くない気配は本物…
+
+# face 6200411 "sad"
+# textboxarrow 0 1
+@パラシュ
+ボクも何かが通り過ぎるのを
+見たよ
+やはりこの廃病院は…
+
+# voice 650401 "manannan_ura_0005"
+# alpha 6200411 0 0.3
+# alpha 5105111 0 0.3
+# move 270 2 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# move 6504011 4 0.5
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+本当に幽霊がいるのかな？
+いたら愉快だよねっ
+
+# voice 9917 "mimir_navikan_0056"
+# textboxarrow 0 1
+@ミーミル
+マナナンさん
+合流できたのですね
+
+# voice 650401 "manannan_ura_0002"
+# face 6504011 "usual"
+# textboxarrow 0 3
+@マナナン
+ねぇねぇ
+早く病院に入ろうよ！
+
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# alpha 5105111 1 0.3
+# alpha 6504011 0 0.3
+# alpha 270 0 0.3
+# textboxarrow 0 1
+@パラシュ
+いや、待つんだ
+まださっきの奴がいるかもしれない
+
+# face 5105111 "sad"
+# textboxarrow 0 3
+@七支刀
+もう少し
+詳しく調べてからにした方が…
+
+# alpha 5105111 0 0.3
+# move 6301411 4 0
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# textboxarrow 0 3
+@イシューリエル
+狼狽えないで下さいな！
+
+# face 6200411 "normal"
+# textboxarrow 0 1
+@パラシュ
+イシューリエル？
+
+# textboxarrow 0 3
+@イシューリエル
+この程度のことで騙されるなんて
+皆さん、嘆かわしいですわよ
+
+# textboxarrow 0 3
+@イシューリエル
+この門の絡繰り
+わたくしは看破致しましたわ！
+
+# alpha 6200411 0 0.3
+# move 270 2 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ミーミル
+本当でございますかっ？
+是非、
+お聞かせいただけないでしょうか
+
+#setnextbgmblock 1
+# voice 3014 "ithuriel_0003"
+# face 6301411 "usual"
+# textboxarrow 0 3
+@イシューリエル
+もちろんですわ
+いいですか、皆さん
+大切なのは推理と観察です
+
+# textboxarrow 0 3
+@イシューリエル
+こちらの門…随分と古びております
+留め具もあまり機能しておりません
+そして…
+
+# se "bgm602_tension_on_1"
+# textboxarrow 0 3
+@イシューリエル
+この門は鉄製なのですわ！
+
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# alpha 270 0 0.3
+# textboxarrow 0 1
+@パラシュ
+うん…
+それは見れば分かるよ
+
+# face 6301411 "normal"
+# textboxarrow 0 3
+@イシューリエル
+でしたら全ては自明ですわ
+「首挟みの正門」…その真実は
+
+# alpha 6200411 0 0.3
+# move 6301411 3 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+# se "bgm602_rhythm_on"
+# textboxarrow 0 2
+@イシューリエル
+静電気ですわ！
+
+# alpha 6301411 0 0.3
+# move 6200411 3 0
+# mask 6200411 off
+# face 6200411 "sad"
+# alpha 6200411 1 0.3
+# textboxarrow 0 2
+@パラシュ
+…………
+
+# alpha 6200411 0 0.3
+# move 5105111 3 0
+# mask 5105111 off
+# face 5105111 "sad"
+# alpha 5105111 1 0.3
+# textboxarrow 0 2
+@七支刀
+…………
+
+# alpha 5105111 0 0.3
+# face 270 "sad"
+# alpha 270 1 0.3
+# alpha 6504011 1 0.3
+# textboxarrow 0 1
+@ミーミル
+…………
+
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+…………どういうこと？
+
+# alpha 6504011 0 0.3
+# move 6301411 4 0.5
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# textboxarrow 0 3
+@イシューリエル
+皆さんは電磁力の原理を
+ご存知ですわよね？
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+コイルに電気を流すと、
+一時的に磁力を生じるといった…
+アレでしょうか？
+
+# face 6301411 "usual"
+# textboxarrow 0 3
+@イシューリエル
+パーフェクトですわ！
+
+# textboxarrow 0 3
+@イシューリエル
+ここで起きた現象は
+同じ原理で説明できます
+
+# textboxarrow 0 3
+@イシューリエル
+留め具が簡単に外れてしまう鉄製の門
+ここに衣服などが擦れて
+静電気が発生した結果…
+
+# textboxarrow 0 3
+@イシューリエル
+門と門が磁力で引かれ合い、
+ひとりでに閉まったように
+見えたのですわ
+
+# alpha 270 0 0.3
+# move 6200411 2 0
+# mask 6200411 on
+# face 6200411 "normal"
+# alpha 6200411 1 0.3
+# textboxarrow 0 1
+@パラシュ
+ちょっと強引じゃないかな？
+
+# face 6301411 "normal"
+# textboxarrow 0 3
+@イシューリエル
+パラシュは先程、
+何かが通り過ぎるのを
+「見た」と言いましたわよね
+
+# textboxarrow 0 3
+@イシューリエル
+プラズマが発生していたのなら、
+その電子エネルギーも
+加わっていた可能性があります
+
+# textboxarrow 0 3
+@イシューリエル
+静電気とプラズマの電子エネルギー
+磁力の発生には十分な条件が
+揃っていますわ
+
+# textboxarrow 0 3
+@イシューリエル
+今回は、たまたまわたくしが
+挟まれる位置に立っていただけのこと
+
+# textboxarrow 0 3
+@イシューリエル
+つまりこれは、心霊現象ではなく
+偶発的な自然現象に過ぎません
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# se "SE_0613"
+# voice 3014 "ithuriel_kyara_2001"
+# face 6301411 "usual"
+# textboxarrow 0 3
+@イシューリエル
+これぞ、トゥルース！
+
+# face 6200411 "sad"
+# textboxarrow 0 1
+@パラシュ
+本当にそうかなぁ…
+
+# fadeout "black" 1
+# waitandnext 1

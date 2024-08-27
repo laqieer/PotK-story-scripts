@@ -1,0 +1,344 @@
+;;-----------------------------------------
+;;悪魔ワズラ_キャラクエ_シナリオ
+;;【EP3】
+;;スクリプト最後の背景：平原（昼）
+;;背景：平原（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;ワズラ・D. plug・フールフール
+# body 3201111
+# pos 3201111 3
+# scale 3201111 0.8 0
+# layer 3201111 2
+# alpha 3201111 0 0
+# mask 3201111 off
+;;-----------------------------------------
+;;悪魔ワズラ一枚絵
+# imageset 0 "c3201111"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;【EP3】
+;;背景：平原（昼）
+;;⇒戦闘
+# move 3201111 3 0
+# face 3201111 "normal"
+# alpha 3201111 1 0
+# mask 3201111 off
+# textflame 1 1
+# textboxarrow 0 2
+@ワズラ
+…おや、そこのあなた
+やけに重そうな荷物ですね
+
+# textboxarrow 0 2
+@ワズラ
+…なるほど
+ふたりで買出しに行くつもりが
+片方は熱を出してしまったと…
+
+# face 3201111 "happy"
+# textboxarrow 0 2
+@ワズラ
+では仕方がないので
+ワズラが手伝ってあげましょう
+
+;;モノローグ
+# textflame 0 0
+@
+と、買出しに行った姫と並んで
+仲良くお喋りをしながら
+隊へと帰還するワズラ
+
+;;演出；暗転（時間経過、少し）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 3201111 3 0
+# face 3201111 "normal"
+# alpha 3201111 1 0
+# mask 3201111 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textwindow "normal"
+@
+荷物運びまで手伝ってもらって…
+今日も一日ありがとう
+とマスターがお礼を伝える
+
+# textflame 1 1
+# textboxarrow 0 2
+@ワズラ
+いいんですよ
+これも契約の一部ですから
+
+;;モノローグ
+# textflame 0 0
+@
+荷物を運び終えると
+手伝ってもらったキル姫から
+お礼をしたいと伝えられるワズラ
+
+# voice 320111 "wazra_a_0004"
+# face 3201111 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@ワズラ
+お礼ですか？
+ふふっ、わかりました
+期待しておきましょう
+
+;;モノローグ
+# textflame 0 0
+@
+周りの子達とも
+仲良くなれたようでよかった
+と胸を撫で下ろすマスター
+
+# face 3201111 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ワズラ
+な、仲良くなんてしていませんよ
+ワズラは契約外の
+お節介はしませんから
+
+;;モノローグ
+# textflame 0 0
+@
+そう言って、不服そうに
+頬を膨らませるワズラ
+
+# face 3201111 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@ワズラ
+…ただ、あの日から
+少しだけ考えが変わっただけです
+
+# textboxarrow 0 2
+@ワズラ
+マスターの理想のための戦いは、
+任務だけではないと気づきました
+
+# textboxarrow 0 2
+@ワズラ
+他の姫達と信頼を築いておくと
+いざというときに力になるんです
+
+# textboxarrow 0 2
+@ワズラ
+…あのときのワズラのように
+
+# textboxarrow 0 2
+@ワズラ
+だから、これは善意などではなく
+あくまで契約上の行動ですっ
+
+;;モノローグ
+# textflame 0 0
+@
+そう言ってどこか強がるように
+胸を張るワズラ
+
+;;モノローグ
+@
+なんだかんだ言っても
+ワズラが他の姫達のことを信頼して
+くれるようになったことに違いはない
+
+# se "SE_0602"
+# textflame 1 1
+# textboxarrow 0 2
+@ワズラ
+あくまで契約の延長線上のこの行為
+これを、魔眼『享受せし愛憎』
+と名づけます
+
+# face 3201111 "happy"
+# textboxarrow 0 2
+@ワズラ
+立派でしょう？
+ワズラは契約のため
+日々、奮闘しているんです
+
+# voice 320111 "wazra_a_0001"
+# face 3201111 "normal"
+# textboxarrow 0 2
+@ワズラ
+さて、あなたはどうですか？
+マスター
+
+# textboxarrow 0 2
+@ワズラ
+『理想のための戦い』
+できていますか？
+
+# textboxarrow 0 2
+@ワズラ
+ちょっと疲れちゃったな、とか
+少しだけ休もうかな、とか
+
+# textboxarrow 0 2
+@ワズラ
+そんな気持ちになることも
+あるんじゃないですか？
+
+;;選択肢：
+;;A：そうだね…
+;;B：いや、理想は諦めないよ
+;;C：ないといえば嘘になるけど…
+# select "そうだね…" "select_label_01" "いや、理想は諦めないよ" "select_label_02" "ないといえば嘘になるけど…" "select_label_03"
+そんな気持ちになることも
+あるんじゃないですか？
+
+;;アンサー：
+;;A：
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 3201111 "happy"
+# textboxarrow 0 2
+@ワズラ
+そうですよねっ！
+さぁ、今こそ気持ちを切り替えて
+いきましょう、マスター！
+
+;;B：
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 3201111 "sad"
+# textboxarrow 0 2
+@ワズラ
+…そうですか
+やっぱり相変わらず
+戦い続けるんですね
+
+;;C：
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 3201111 "normal"
+# textboxarrow 0 2
+@ワズラ
+けど？
+やはり戦い続けると言うんですか？
+
+;;モノローグ
+# label "select_label_end"
+# textflame 0 0
+@
+平和のために戦う
+その気持ちに変わりはないから
+とマスターは苦笑する
+
+# face 3201111 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ワズラ
+…はぁ、どんなに疲弊しても
+そこは変わりませんか
+なんて強情な人でしょう
+
+# voice 320111 "wazra_a_0004"
+# face 3201111 "happy"
+# textboxarrow 0 2
+@ワズラ
+ふふ、本当に、困った人です
+でも、あなたのような人に出会えて
+…ワズラは満足です
+
+;;モノローグ
+# textflame 0 0
+@
+満足？ということは…
+とマスター
+
+# face 3201111 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@ワズラ
+ええ、契約内容は
+「マスターの理想のために戦う
+代わりに、ワズラを満足させること」
+
+# textboxarrow 0 2
+@ワズラ
+マスターの戦いはまだ
+終わっていないのに、
+ワズラは対価を貰ってしまいました
+
+;;モノローグ
+# textflame 0 0
+@
+これからどうなるの？
+とマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+@ワズラ
+…そんな寂しそうな目を
+しないでください
+
+;;モノローグ
+# textboxarrow 0 2
+@ワズラ
+理想のための戦いが終わるまで
+ワズラはこの隊で戦い続けますよ
+
+;;モノローグ
+# textflame 0 0
+@
+よかった…！
+と安堵するマスター
+
+# face 3201111 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@ワズラ
+…でも、忘れないでくださいね
+マスター
+
+# textboxarrow 0 2
+@ワズラ
+ワズラはいつでも
+マスターに罰を与えようと
+うずうずしていますから
+
+;;モノローグ
+# textflame 0 0
+@
+そう忠告したワズラは
+いつものように、
+含みのある笑みを浮かべた
+
+;;モノローグ
+@
+まるでいずれ与える罰に
+心を躍らせるかのように…
+
+;;★６（一枚絵同じ）
+;;ワズラ　　「あなたは契約を果たしてくれました。
+;;　　　　　　だからこそ、ワズラが今度は対価を支払う番ですね。
+;;　　　　　　…ふふっ、楽しみにしていてください」ボイス番号：wazra_a_kyara_0027
+;;ホワイトアウト
+# textflame 0 0
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# fadein "white" 3
+# buttonsout 0 0
+# textwindow "close"
+# voice 320111 "wazra_a_kyara_0027"
+
+# frameout 0 1
+
+# waitandnext 0.8
+
+# fadeout "black" 1.5
+# waitandnext 1.5

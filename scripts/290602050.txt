@@ -1,0 +1,419 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第６章 章タイトル：アナザー・コンフリクト―交錯―
+;;第2話　タイトル：相容れぬもの
+;;6_2_5
+;;スクリプト最後の背景：村（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "parchment_map01"
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;エクスカリバー
+# body 101111
+# pos 101111 3
+# scale 101111 0.8 0
+# layer 101111 2
+# alpha 101111 0 0
+# mask 101111 off
+;;アロンダイト
+# body 100711
+# pos 100711 3
+# scale 100711 0.8 0
+# layer 100711 2
+# alpha 100711 0 0
+# mask 100711 off
+;;ルーン
+# body 300531
+# pos 300531 3
+# scale 300531 0.8 0
+# layer 300531 2
+# alpha 300531 0 0
+# mask 300531 off
+;;ロンゴミアント
+# body 301021
+# pos 301021 3
+# scale 301021 0.8 0
+# layer 301021 2
+# alpha 301021 0 0
+# mask 301021 off
+;;モニカ
+# body 209
+# pos 209 3
+# scale 209 0.8 0
+# layer 209 2
+# alpha 209 0 0
+# mask 209 off
+;;パラケルスス
+# body 101311
+# pos 101311 3
+# scale 101311 0.8 0
+# layer 101311 2
+# alpha 101311 0 0
+# mask 101311 off
+;;ミョルニル
+# body 200111
+# pos 200111 3
+# scale 200111 0.8 0
+# layer 200111 2
+# alpha 200111 0 0
+# mask 200111 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第2話　タイトル：相容れぬもの
+;;//背景：新天上世界遠景
+;;ナレーション
+# textflame 0 0
+@
+アルマス達が地上世界へ向かう
+準備を行い、カミト達がフォルカスを
+追って旅に出たのと同じ頃――
+
+;;ナレーション
+@
+崩壊を免れた天上世界の一画では
+復興のため人々とキル姫達が
+活動していた――
+
+;;//背景：村（昼）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "004_outland"
+# move 101311 3 0
+# face 101311 "normal"
+# alpha 101311 1 0
+# mask 101311 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@パラケルスス
+怪我人は順番に並ぶんだ！
+わたくしの指示に従えない者は
+治療しないからな
+
+# serif 1
+@住人
+ここの医者、腕は良いんだけど
+怖いんだよなあ…
+
+# serif 1
+@ヘルマン
+ほっほっほ
+そんなに怖い顔をしておったら
+患者が逃げてしまうぞ、パラソル
+
+# voice 1013 "paracelsus_0001"
+# face 101311 "angry"
+# textboxarrow 0 2
+@パラケルスス
+マスターも包帯くらい巻けるだろう！
+呑気に座ってないで働くんだ！
+
+# serif 1
+@ヘルマン
+老人使いが粗いのう…
+どれ？どこを怪我なさった？
+
+# serif 1
+@住人
+資材を運んでるときに腕をな…
+まだ道がでこぼこで歩きにくいんだよ
+
+# serif 1
+@ヘルマン
+この辺りも地割れが起きたからのう…
+
+# face 101311 "normal"
+# textboxarrow 0 2
+@パラケルスス
+崩壊は止まって、また大地が戻りつつ
+あるようだけど…
+油断は禁物だな
+
+;;パラケルスス（独白）
+# serif 1
+# textwindow "close"
+# serif 0
+# move 101311 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 101311 off
+@パラケルスス
+フライクーゲル…
+君は今、どこで何をしているんだ？
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 101311 0 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# serif 1
+@住人１
+おい！邪魔なんだよっ
+さっさと道を空けろ！
+
+# serif 1
+@住人２
+ああん？
+そっちこそどきやがれ！
+
+# serif 1
+@住人１
+やんのか、てめえ！
+
+# serif 1
+@住人２
+やってやるよ！
+
+# move 209 3 0
+# face 209 "normal"
+# alpha 209 1 0.5
+# mask 209 off
+# textboxarrow 0 2
+# textwindow "normal"
+@モニカ
+はいはい、ケンカはなし
+みんな譲り合って通ろうね
+
+# serif 1
+@住人１
+何だ、女？
+怪我したくなかったら――
+
+# voice 3005 "roon_0009"
+# alpha 209 0 0.5
+# move 300531 3 0
+# face 300531 "normal"
+# alpha 300531 1 0.5
+# mask 300531 off
+# textboxarrow 0 2
+@ルーン
+怪我したくなかったら、
+お前が大人しくするんだよ
+
+# serif 1
+@住人１
+ひぃぃぃぃっ…！？
+キル姫っ…
+
+# serif 1
+@住人２
+あんた…奏官なのか…？
+
+# alpha 300531 0 0.5
+# move 209 3 0
+# face 209 "happy"
+# alpha 209 1 0.5
+# mask 209 off
+# textboxarrow 0 2
+@モニカ
+まあ、一応ね♪
+何かと大変で気が立ってるのは
+分かるけど
+
+# voice 9937 "monica_0004"
+# textboxarrow 0 2
+@モニカ
+もっと楽しくやろうよ
+大切なのは“愛”だよ、“愛”♪
+
+# alpha 209 0 0.5
+# move 300531 3 0
+# face 300531 "normal"
+# alpha 300531 1 0.5
+# mask 300531 off
+# textboxarrow 0 2
+@ルーン
+マスターのありがたいお言葉よ
+耳の穴かっぽじって聞きやがれ！
+
+# serif 1
+@住人１＆２
+失礼しましたぁっ…
+
+;;//二人とも立ち去る
+# se "SE_0719"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# serif 0
+# move 209 2 0
+# face 209 "normal"
+# alpha 209 1 0.5
+# mask 209 on
+# textboxarrow 0 1
+# move 300531 4 0.5
+# mask 300531 on
+@モニカ
+ルーンくん、言い過ぎだよ
+二人とも怖がってたじゃない
+
+# voice 3005 "roon_0007"
+# textboxarrow 0 3
+@ルーン
+ああいう輩には、
+あのくらいでちょうどいいのよ
+
+# alpha 209 0 0.5
+# move 101111 2 0
+# face 101111 "angry"
+# alpha 101111 1 0.5
+# mask 101111 on
+# textboxarrow 0 1
+@エクスカリバー
+相変わらず、口が悪いですね
+あまりマスターに汚い言葉を
+聞かせないで下さい
+
+# voice 1011 "excalibur_0001"
+# face 101111 "normal"
+# textboxarrow 0 1
+@エクスカリバー
+マスター、足元にご注意を
+この辺りの道も舗装が行き届いて
+いませんので
+
+# alpha 101111 0 0.5
+# alpha 300531 0 0.5
+# move 209 3 0
+# face 209 "normal"
+# alpha 209 1 0.5
+# mask 209 off
+# textboxarrow 0 2
+@モニカ
+ユグドラシルから随分離れたなあ…
+被害はこっちの方が深刻だった
+みたいね…
+
+# voice 1007 "Arondaito_0003"
+# move 209 2 0.5
+# mask 209 on
+# move 100711 4 0
+# face 100711 "normal"
+# alpha 100711 1 0.5
+# mask 100711 on
+# textboxarrow 0 3
+@アロンダイト
+端から崩れていったというわけでも
+ありませんけれど、崩壊の度合いは
+周辺部の方が高いですね
+
+# voice 3010 "rhongomiant_0001"
+# alpha 100711 0 0.5
+# move 301021 4 0
+# face 301021 "normal"
+# alpha 301021 1 0.5
+# mask 301021 on
+# textboxarrow 0 3
+@ロンゴミアント
+危険も多くなります
+マスター、けっしてお側を離れ
+ませんので
+
+# alpha 209 0 0.5
+# move 101111 2 0
+# face 101111 "angry"
+# alpha 101111 1 0.5
+# mask 101111 on
+# textboxarrow 0 1
+@エクスカリバー
+マスターをお守りするのは
+私の役目ですよ
+
+# face 301021 "angry"
+# textboxarrow 0 3
+@ロンゴミアント
+いえ、私が…
+
+# voice 9937 "monica_0032"
+# alpha 101111 0 0.5
+# alpha 301021 0 0.5
+# move 209 3 0
+# face 209 "happy"
+# alpha 209 1 0.5
+# mask 209 off
+# textboxarrow 0 2
+@モニカ
+あははは！
+二人とも、ありがと！
+
+# face 209 "normal"
+# textboxarrow 0 2
+@モニカ
+もちろん、ルーンくんも
+アロンダイトくんもねっ
+
+# serif 1
+@奏官
+おーい！
+ちょっと、どいてくれ！
+危ないぞーっ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 209 "surprise"
+# textboxarrow 0 2
+@モニカ
+ん？
+
+# move 209 2 0.5
+# mask 209 on
+# move 101111 4 0
+# face 101111 "angry"
+# alpha 101111 1 0.5
+# mask 101111 on
+# textboxarrow 0 3
+@エクスカリバー
+マスター！
+下がって下さい！
+
+# voice 2001 "myuruniru_battle_0002"
+# alpha 209 0 0.5
+# alpha 101111 0 0.5
+# move 200111 3 0
+# face 200111 "angry"
+# alpha 200111 1 0.5
+# mask 200111 off
+# textboxarrow 0 2
+@ミョルニル
+え～い！！
+
+;;//ミョルニルが大地をハンマーで叩く
+# se "SE_5223"
+# waitandnext 0.5
+
+# voice 2001 "myuruniru_battle_0004"
+# textboxarrow 0 2
+@ミョルニル
+ぺったんこにするよ～！
+
+# voice 9937 "monica_0023"
+# alpha 200111 0 0.5
+# move 209 3 0
+# face 209 "surprise"
+# alpha 209 1 0.5
+# mask 209 off
+# textboxarrow 0 2
+@モニカ
+えっ？
+なに、なにっ？

@@ -1,0 +1,487 @@
+;;-----------------------------------------
+;;エイプリル3_1
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgm "stop"
+;;-----------------------------------------
+;;スイハ
+# body 401711
+# alpha 401711 0 0
+# body 44017002
+# pos 44017002 4
+# scale 44017002 0.8 0
+# layer 44017002 2
+# mask 44017002 off
+# alpha 44017002 0 0
+;;ブラフマーストラ
+# body 500421
+# pos 500421 5
+# scale 500421 0.8 0
+# layer 500421 4
+# alpha 500421 0 0
+;;デュランダルゾンビ
+# body 900028
+# pos 900028 5
+# scale 900028 0.8 0
+# layer 900028 5
+# alpha 900028 0 0
+;;ゾンビ異族
+# body 810004
+# pos 810004 1
+# scale 810004 0.8 0
+# layer 810004 3
+# mask 810004 off
+# alpha 810004 0 0
+# brightness 810004 0.7 0
+# entry 810099 810004
+# pos 810099 3
+# scale 810099 0.8 0
+# layer 810099 4
+# mask 810099 off
+# alpha 810099 0 0
+# brightness 810099 0.7 0
+# entry 810098 810004
+# pos 810098 5
+# scale 810098 0.8 0
+# layer 810098 5
+# mask 810098 off
+# alpha 810098 0 0
+# brightness 810098 0.7 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：森
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_0886"
+# move 44017002 3 0.5
+# alpha 44017002 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@スイハ
+はっ、はっ、はっ――
+
+# textflame 0 0
+@
+走る、走る、走る
+辿り着かねば、すべてが無だ
+
+# face 44017002 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+でも、シェキナーなら、きっと
+はっ、はぁっ、これまでも…
+だから、きっと、今回も…
+
+# textflame 0 0
+@
+信じて、走る
+
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+ミョルニルも、大丈夫…
+絶対に、絶対に！
+
+# textflame 0 0
+@
+信じて、信じて…
+
+# textflame 0 0
+@
+周囲にうごめく気配が
+徐々に増えているのを感じる
+
+# face 44017002 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+ゾンビが、増えてきました
+目的地が、近い、のでしょうか…
+
+# sestop "SE_0886"
+# alpha 44017002 0 0.5
+# textflame 0 0
+@
+やがて、走ることもままならぬ
+ゾンビ達の壁に突き当たる
+
+# se "SE_4302"
+# alpha 810004 1 1
+# alpha 810099 1 1
+# alpha 810098 1 1
+# textflame 1 1
+# textboxarrow 0 0
+@ゾンビ異族
+アァァァ…
+
+;;演出：スイハの矢でゾンビ異族が倒れる
+# se "SE_4817"
+# effectbody 2001 32 -100 -200 0
+# effectstart 2001
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_6220"
+# se "SE_3001"
+# alpha 810098 0 0.5
+# waitandnext 1
+
+# se "SE_4817"
+# effectbody 2002 32 -320 -200 0
+# effectstart 2002
+# waitandnext 0.5
+
+# se "SE_6220"
+# se "SE_3001"
+# alpha 810099 0 0.5
+# waitandnext 1
+
+# se "SE_4817"
+# effectbody 2003 32 -520 -200 0
+# effectstart 2003
+# waitandnext 0.5
+
+# se "SE_6220"
+# se "SE_3001"
+# alpha 810004 0 0.5
+# waitandnext 1
+
+# face 44017002 "angry"
+# voice 4017 "suiha_0006"
+# alpha 44017002 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+@スイハ
+やれる、シェキナーのボウガンなら
+私にも倒せる…っ！
+
+# textboxarrow 0 2
+@スイハ
+…見えた！
+あれがビフレスト社の保有する洋館
+通信もきっとここからのものだった…
+
+# face 44017002 "surprise"
+# textboxarrow 0 2
+@スイハ
+！
+
+# se "SE_0762"
+# textflame 0 0
+@
+洋館は急な来訪者を歓迎するように
+その重苦しい扉をゆらりと開く
+
+# face 44017002 "sad"
+# voice 4017 "suiha_0013"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+歓迎してる雰囲気は
+なさそうな暗さですけれどね…
+
+# textflame 0 0
+@
+だが、こちらのほうへと
+手招きしているのは事実のようだ
+
+# face 44017002 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+中から手が…
+
+# move 44017002 2 0.5
+# move 900028 4 0.5
+# alpha 900028 1 1
+# textboxarrow 0 0
+# waitandnext 1.3
+
+;;文字赤く
+# textboxarrow 0 3
+@デュランダル
+[8b0000]ア、アア…[-]
+
+# face 44017002 "surprise"
+# textboxarrow 0 1
+@スイハ
+！
+
+# face 44017002 "angry"
+# textboxarrow 0 1
+@スイハ
+ごめんなさい
+少しの間だけ眠っていてください！
+
+# textboxarrow 0 1
+@スイハ
+私はなんとしてもマスターのもとに
+たどり着かないといけないのです
+
+# fadein "white" 0.5
+# move 44017002 3 0.4
+# move 900028 5 0.2
+# textboxarrow 0 0
+# waitandnext 0.5
+
+;;文字赤く
+# textboxarrow 0 3
+@デュランダル
+[8b0000]ウ…ウ、ウアァァ…[-]
+
+# alpha 900028 0 1
+# textwindow "close"
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@スイハ
+今の内に洋館へ…
+扉を内側から抑えれば
+ゾンビ達の侵入も防げるはず…
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：洋館の中
+# background "201_center"
+# bgm "stop"
+# alpha 44017002 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+;;戸を閉めた音
+# se "SE_0763"
+# fadein "black" 1
+# waitandnext 1.5
+
+# face 44017002 "normal"
+# voice 4017 "suiha_0037"
+# alpha 44017002 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+@スイハ
+はぁ、はぁ、はぁ…
+はぁ…………ふぅぅ
+
+# textboxarrow 0 2
+@スイハ
+目標に到達
+調査の続行は…できるのでしょうか
+
+# serif 1
+# textwindow "nomal"
+@？？？
+ああ…やっとお迎えが来たかな…
+
+# bgm "bgm005" 0
+# face 44017002 "surprise"
+# voice 4017 "suiha_0022"
+# serif 0
+# textboxarrow 0 2
+@スイハ
+今の声…生存者が！？
+
+# serif 1
+@？？？
+はは、そうね
+この命はまだ尽きてない感じ…
+
+# serif 0
+# textboxarrow 0 2
+@スイハ
+あなたは、先遣隊の…
+よかった、あなたは無事なんですね！
+
+# voice 5004 "burafumasutora_0028"
+# move 44017002 2 0.5
+# move 500421 4 0.5
+# alpha 500421 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+@ブラフマーストラ
+うーん、時間の問題…かな
+
+# face 44017002 "angry"
+# textboxarrow 0 1
+@スイハ
+その傷…！
+
+# textboxarrow 0 3
+@ブラフマーストラ
+説明は後
+まずはこれをアンタに
+
+# se "SE_6226"
+# subfillrect 1 "black" 0.2 0 0.7
+# textflame 0 0
+# textalign "center"
+@
+　
+『特殊矢』を入手した
+
+# subfillrect 1 "black" 0.2 0.7 0
+# face 44017002 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@スイハ
+…矢、ですか？
+
+# textboxarrow 0 3
+@ブラフマーストラ
+対ゾンビ用の特殊矢だよ
+
+# textboxarrow 0 1
+@スイハ
+…やっと近代的な
+武器になりました
+
+# imagescale 0 1.5 0
+# textboxarrow 0 3
+@ブラフマーストラ
+あとは、これも
+
+# se "SE_6226"
+# imagealpha 0 0.7 0.2
+# imagepos 0 0 0
+# textflame 0 0
+# textalign "center"
+@
+　
+『図面』を入手した
+
+# imagealpha 0 0 0.2
+# voice 4017 "suiha_0028"
+# textflame 1 1
+# textboxarrow 0 1
+@スイハ
+これは…メモ？
+それとマップ…いえ、図面？
+
+# face 500421 "sad"
+# voice 5004 "burafumasutora_0008"
+# textboxarrow 0 3
+@ブラフマーストラ
+洋館の中をくまなく探してね
+やっと辿り着いたのが入り口…
+はは、悟っちゃいそうじゃない？
+
+# textboxarrow 0 3
+@ブラフマーストラ
+…ふぅ、メモには、拾った
+この洋館と、ビフレスト社のこと…
+書いてあった
+
+# textboxarrow 0 3
+@ブラフマーストラ
+もうひとつは、ここの設計ず…
+マップとして使える、はず
+
+# face 500421 "amazed"
+# textboxarrow 0 3
+@ブラフマーストラ
+…スイハ、アンタに託したよ
+アンタならきっとやれる…
+
+# brightness 500421 0.9 0.5
+# textboxarrow 0 3
+@ブラフマーストラ
+もうすこし　で　宇宙
+アンタは、アタシを…
+
+# voice 5004 "burafumasutora_0037"
+# textboxarrow 0 3
+@ブラフマーストラ
+…くっ、ガチでヤバいじゃん
+意識、飛びそう…
+
+# face 44017002 "usual"
+# textboxarrow 0 1
+@スイハ
+無理しないでください
+ここなら外からゾンビ達が
+入ってくることもありませんから
+
+# brightness 500421 0.8 0.5
+# textboxarrow 0 3
+@ブラフマーストラ
+あー…待った
+その認識は　まちが…
+
+# brightness 500421 0.7 0.5
+# textboxarrow 0 3
+@ブラフマーストラ
+はぁ、だめ
+かいたら　だめ
+しっかりしろ、アタシ…
+
+# se "SE_6217"
+# move 44017002 1 0.5
+# alpha 44017002 0 0.3
+# move 500421 5 0.5
+# alpha 500421 0 0.3
+# alpha 810099 1 0.5
+# textboxarrow 0 0
+@ゾンビ異族
+ギャ、グ、ア、アア…
+
+# move 44017002 2 0
+# alpha 44017002 1 0.3
+# move 500421 4 0
+# alpha 500421 1 0.3
+# alpha 810099 0 0.5
+# textboxarrow 0 3
+@ブラフマーストラ
+あ　は　来た、じゃん
+
+# face 44017002 "angry"
+# voice 4017 "suiha_0022"
+# textboxarrow 0 1
+@スイハ
+！？
+一体どこから！
+
+# brightness 500421 0.6 0.5
+# textboxarrow 0 3
+@ブラフマーストラ
+すいハ、ここは、ここなの
+
+# textboxarrow 0 3
+@ブラフマーストラ
+ここが…ぞん
+つくちゃ　てる、けい…
+
+# brightness 500421 0.5 0.5
+# textboxarrow 0 3
+@ブラフマーストラ
+めも　よんで
+ます　そこ
+
+# textboxarrow 0 1
+@スイハ
+今はそれどころじゃ…
+ひとまず迎撃します！
+
+;;バトル
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 44017002 0 0
+# alpha 500421 0 0
+# waitandnext 0.2

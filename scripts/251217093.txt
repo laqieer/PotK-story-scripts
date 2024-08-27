@@ -1,0 +1,169 @@
+;;-----------------------------------------
+;;ファントムオブキル　この素晴らしい世界に祝福を！コラボ2019水着　シナリオ後半
+;;【EP.9】
+;;9_3
+;;スクリプト最後の背景：ビーチ
+;;-----------------------------------------
+# script "lisp"
+# background "sea_beach_day"
+# bgmfile "bgm351" "BgmKScollabo002" 0
+;;-----------------------------------------
+;;アクア
+# body 2601711
+# pos 2601711 3
+# scale 2601711 0.8 0
+# layer 2601711 2
+# alpha 2601711 0 0
+# mask 2601711 off
+;;ダクネス
+# body 2103411
+# pos 2103411 3
+# scale 2103411 0.8 0
+# layer 2103411 2
+# alpha 2103411 0 0
+# mask 2103411 off
+;;水着ティルフィング
+# body 2101411
+# pos 2101411 3
+# scale 2101411 0.8 0
+# layer 2101411 2
+# alpha 2101411 0 0
+# mask 2101411 off
+;;めぐみん
+# body 2502511
+# pos 2502511 3
+# scale 2502511 0.8 0
+# layer 2502511 2
+# alpha 2502511 0 0
+# mask 2502511 off
+;;ゆんゆん
+# body 2502611
+# pos 2502611 3
+# scale 2502611 0.8 0
+# layer 2502611 2
+# alpha 2502611 0 0
+# mask 2502611 off
+;;ウィズ
+# body 2601811
+# pos 2601811 3
+# scale 2601811 0.8 0
+# layer 2601811 2
+# alpha 2601811 0 0
+# mask 2601811 off
+;;ベルディア
+# body 809411
+# pos 809411 3
+# scale 809411 1.4 0
+# layer 809411 2
+# alpha 809411 0 0
+# mask 809411 off
+;;-----------------------------------------
+;;背景：ビーチ
+# move 2502511 2 0
+# face 2502511 "normal"
+# alpha 2502511 1 0
+# mask 2502511 on
+# move 2101411 4 0
+# face 2101411 "angry"
+# alpha 2101411 1 0
+# mask 2101411 on
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0037"
+@ティルフィング
+くっ！
+異族の数が多すぎます…っ！
+
+# face 2502511 "angry"
+# textboxarrow 0 1
+@めぐみん
+あきらかに前より増えてますね…
+
+# alpha 2101411 0 0.5
+# move 2103411 4 0
+# face 2103411 "sad"
+# alpha 2103411 1 0.5
+# mask 2103411 on
+# textboxarrow 0 3
+# voice 1034 "dakunesu_0026"
+@ダクネス
+一体一体の力はそれほどでなくとも
+この数の差ではしのぎ切れない…
+
+# alpha 2502511 0 0.5
+# move 2601811 2 0
+# face 2601811 "sad"
+# alpha 2601811 1 0.5
+# mask 2601811 on
+# textboxarrow 0 1
+# voice 6018 "wizu_0026"
+@ウィズ
+数が増えているとは
+聞いていましたが、ここまでなんて…
+
+# emotionbody 1004 6 2601711 50 150
+# effectpattern 1004 1 0
+# effectstart 1004
+# alpha 2103411 0 0.5
+# move 2601711 4 0
+# face 2601711 "angry"
+# alpha 2601711 1 0.5
+# mask 2601711 on
+# textboxarrow 0 3
+# voice 6017 "akua_0052"
+@アクア
+っていうかウィズ！
+なんで戦闘に参加しないのよ！
+
+# emotionbody 1005 9 2601811 -30 200
+# effectpattern 1005 6 0
+# effectstart 1005
+# textboxarrow 0 1
+# voice 6018 "wizu_0027"
+@ウィズ
+えっと、その…
+いろいろとありまして
+今回は見学で…
+
+# effectskip 1005
+# alpha 2601811 0 0.5
+# alpha 2601711 0 0.5
+# move 2502611 3 0
+# face 2502611 "angry"
+# alpha 2502611 1 0.5
+# mask 2502611 off
+# textboxarrow 0 2
+@ゆんゆん
+話をしている余裕はありませんよ！
+向こうからどんどんやってきます！
+
+;;演出：ゆんゆんの攻撃魔法で異族が倒される
+# se "SE_8006"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+@ゆんゆん
+倒しても倒してもキリがない…っ！
+
+# alpha 2502611 0 0.5
+# move 809411 3 0
+# alpha 809411 1 0.5
+# mask 809411 off
+# textboxarrow 0 2
+# voice 8094 "verdia_0022"
+@ベルディア
+あの魔法は…
+もしや、あの小娘が犯人か！
+
+# alpha 809411 0 0.5
+# move 2502611 3 0
+# face 2502611 "sad"
+# alpha 2502611 1 0.5
+# mask 2502611 off
+# textboxarrow 0 2
+# voice 5026 "yunyun_0026"
+@ゆんゆん
+ううっ…
+なんだか急に寒気が！

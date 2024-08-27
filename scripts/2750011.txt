@@ -1,0 +1,220 @@
+;;【EP3】真エンド戦闘前
+;;//バトル
+# script "lisp"
+# background "dimensions"
+# bgmfile "bgm195" "Bgm3Tcollabo002" 0
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# body 95
+# pos 95 5
+# scale 95 0.8 0
+# body 103211
+# pos 103211 1
+# alpha 103211 0 0
+# body 103311
+# pos 103311 1
+# scale 103311 0.8 0
+# body 601611
+# pos 601611 3
+# scale 601611 0.8 0
+# alpha 601611 0 0
+# layer 24 4
+# layer 103311 1
+# layer 95 2
+# layer 601611 3
+# mask 601611 off
+# face 24 "angry"
+# face 103311 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1032 "sakura_unit_0007"
+# face 95 "sad"
+# chara 103211
+@サクラ
+くっ…
+私の中の桜は、散らないわ…
+
+# textboxarrow 0 2
+# chara 101411
+# voice 1014 "tyrufing_unit_0007"
+@ティルフィング
+退かないわ…
+ここでやられるなら、
+それまでのこと…
+
+# textboxarrow 0 1
+# chara 103311
+# voice 1033 "chloe_battle_1028"
+@クロエ
+ヴェテル様…どうすれば…
+
+# alpha 24 0 0.3
+# alpha 103311 0 0.3
+# alpha 95 0 0.3
+# alpha 601611 1 1
+# textboxarrow 0 2
+# chara 601611
+# face 601611 "mad"
+@レナ
+ゴメンネ…
+ゴメンネ、ティル、クロエ、サクラ
+全テノ世界ガ消エル…
+
+;;//大きな揺れ
+# se "SE_0637"
+# shakeloop 1
+# alpha 24 1 0.5
+# alpha 103311 1 0.5
+# alpha 95 1 0.5
+# alpha 601611 0 0.3
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0038"
+# chara 101411
+# face 24 "sad"
+@ティルフィング
+私達には…
+なにも…できないのっ…？
+
+;;//暗転
+# body 601211
+# pos 601211 3
+# scale 601211 0.8 0
+# alpha 601211 0 0
+# fadeout "black" 2
+# imageset 1 "bg_white"
+# imagescale 1 10 0
+# imagealpha 1 0 0
+# waitandnext 2.5
+
+;;//背景白
+# se "SE_4779"
+# bgm "bgm000" 0.7
+# shakestop
+# fadein "white" 1.2
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 24 0 0
+# alpha 103311 0 0
+# alpha 95 0 0
+# alpha 601611 0 0
+# alpha 601211 1 0
+# mask 601211 off
+# layer 601211 4
+# textboxarrow 0 2
+# voice 6012 "uroboros_0040"
+# chara 601211
+@ウロボロス
+この先にあるのは、うぬが旅した
+三つの世界が一時的に重なっておる
+世界じゃ
+
+# textboxarrow 0 2
+# chara 601211
+# face 601211 "angry"
+@ウロボロス
+そこでなら、うぬの大それた願いも
+叶えることができるやもしれん
+
+;;//白フラッシュ
+;;//背景次元の狭間
+# bgmfile "bgm197" "Bgm3Tcollabo002" 0
+# fadein "white" 1
+# imagealpha 1 0 0
+# background "dimensions"
+# alpha 601211 0 0
+# alpha 601611 1 0
+# textboxarrow 0 2
+# chara 601611
+@レナ
+ゴメンナサイ…ゴメンナサイ…
+願ッチャイケナカッタ…私ハ…一人デ
+イナキャイケナカッタノニ…
+
+# textboxarrow 0 2
+# chara 601611
+@レナ
+アア…世界ガ崩壊スル…
+全テ飲ミ込ンデ消シ去ッテシマウ…
+私ガ…願ッテシマッタセイデ…
+
+# textboxarrow 0 2
+# chara 601611
+@レナ
+私ナンカ…死ネバ良イノニ…
+
+# select "そんなことはない！" "select_label_01" "希望はある！" "select_label_02"
+私ナンカ…死ネバ良イノニ…
+
+# bgmfile "bgm193" "Bgm3Tcollabo002" 0
+# label "select_label_01"
+# labeljump "select_label_end"
+# alpha 24 1 0.5
+# alpha 103311 1 0.5
+# alpha 95 1 0.5
+# alpha 601611 0 0.3
+# face 103311 "usual"
+# face 95 "smile"
+# textboxarrow 0 2
+# chara 101411
+# face 24 "happy2"
+@ティルフィング
+大丈夫ですよ、レナ！
+私にもやっと分かりました！
+レナを助ける方法がっ
+
+# bgmfile "bgm193" "Bgm3Tcollabo002" 0
+# label "select_label_02"
+# labeljump "select_label_end"
+# alpha 24 1 0.5
+# alpha 103311 1 0.5
+# alpha 95 1 0.5
+# alpha 601611 0 0.3
+# face 103311 "usual"
+# face 95 "smile"
+# textboxarrow 0 2
+# chara 101411
+# face 24 "happy2"
+@ティルフィング
+そうです！
+私にもやっと分かりました！
+レナを助ける方法がっ
+
+# label "select_label_end"
+# textboxarrow 0 1
+# chara 103311
+@クロエ
+ここでなければならなかった理由…
+%(userName)sが
+三つの世界を巡ってくれたおかげで
+
+# textboxarrow 0 3
+# chara 103211
+# face 95 "happy"
+@サクラ
+ここでは三つの世界が重なってる！
+%(userName)sが
+結びつけてくれたから！
+
+# textboxarrow 0 2
+# chara 101411
+# face 24 "mad2"
+@ティルフィング
+レナ！
+ここでならアナタの“過去”を
+断ち切れる！！
+
+# textboxarrow 0 1
+# chara 103311
+# face 103311 "normal"
+@クロエ
+行きますよ、ティル！サクラ！
+レナを孤独の鎖から解放しましょう
+
+# textboxarrow 0 3
+# chara 103211
+# voice 1032 "sakura_0029"
+# face 95 "angry"
+@サクラ
+そう来なくっちゃ！！
+レナ！今、行くわよーっ！

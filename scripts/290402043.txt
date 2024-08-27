@@ -1,0 +1,622 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第４章 タイトル：「世界樹の子―インベイション―」
+;;第2話　タイトル：絶望の到来
+;;4_2_4_3
+;;スクリプト最後の背景：道路
+;;-----------------------------------------
+# script "lisp"
+# background "in_cityroad"
+# bgmfile "bgm160" "BgmPJZero001" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 3
+# alpha 210 0 0
+# mask 210 off
+;;魔獣化ミョルニル
+# body 1200111
+# pos 1200111 3
+# scale 1200111 0.8 0
+# layer 1200111 3
+# alpha 1200111 0 0
+# mask 1200111 off
+# brightness 1200111 0.5 0
+;;マサムネ(キラーメイル)
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# layer 1100111 2
+# alpha 1100111 0 0
+# mask 1100111 off
+;;デュランダル
+# body 3100311
+# pos 3100311 3
+# scale 3100311 0.8 0
+# layer 3100311 2
+# alpha 3100311 0 0
+# mask 3100311 off
+;;ブリューナク・D. plug・バルバトス
+# body 3500711
+# pos 3500711 3
+# scale 3500711 0.8 0
+# layer 3500711 2
+# alpha 3500711 0 0
+# mask 3500711 off
+;;蜻蛉切・聖鎖・インドラ
+# body 3302411
+# pos 3302411 3
+# scale 3302411 0.8 0
+# layer 3302411 2
+# alpha 3302411 0 0
+# mask 3302411 off
+;;ペルーン・聖鎖・マスティマ
+# body 3200811
+# pos 3200811 3
+# scale 3200811 0.8 0
+# layer 3200811 2
+# alpha 3200811 0 0
+# mask 3200811 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+# move 3200811 3 0
+# alpha 3200811 1 0
+# mask 3200811 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 320081 "perun_t_0029"
+@ペルーン
+はああああーーーっ！
+
+# se "SE_4100"
+# waitandnext 0.5
+
+# alpha 3200811 0 0.5
+# move 3302411 3 0
+# face 3302411 "angry"
+# alpha 3302411 1 0.5
+# mask 3302411 off
+# textboxarrow 0 2
+# voice 330241 "tonbokiri_t_0029"
+@蜻蛉切
+はあぁぁぁぁぁ！
+
+# se "SE_4200"
+# waitandnext 0.5
+
+;;//ペルーンと蜻蛉切が魔獣化ミョルニルを押し止める
+# textwindow "close"
+# alpha 3302411 0 0.5
+# move 1200111 3 0
+# face 1200111 "angry_1"
+# alpha 1200111 1 0.5
+# mask 1200111 on
+# waitandnext 0.5
+
+# se "SE_9017"
+# move 3200811 1 0
+# alpha 3200811 1 0
+# mask 3200811 on
+# move 3302411 5 0
+# alpha 3302411 1 0
+# mask 3302411 on
+# leftin 3200811 0.3
+# rightin 3302411 0.3
+# waitandnext 0.8
+
+# alpha 3200811 0 0.5
+# alpha 1200111 0 0.5
+# alpha 3302411 0 0.5
+# move 210 2 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 1
+# move 3500711 4 0
+# face 3500711 "normal"
+# alpha 3500711 1 0.5
+# mask 3500711 on
+# textwindow "normal"
+# voice 9936 "kamito_0044"
+@カミト
+す、すごい…！
+あのキラーメイルを二人で
+押さえ込んでるっ
+
+# textboxarrow 0 3
+# voice 350071 "buryunaku_a_0028"
+@ブリューナク
+だが、少しずつ押されているな
+やはり重量差は
+いかんともしがたい…
+
+# alpha 210 0 0.5
+# alpha 3500711 0 0.5
+# move 3100311 3 0
+# face 3100311 "happy"
+# alpha 3100311 1 0.5
+# mask 3100311 off
+# textboxarrow 0 2
+# voice 310031 "durandaru_a_0004"
+@デュランダル
+ふふっ
+絶好機ですの
+バッサバサに仕上げるのですわ！
+
+# se "SE_5205"
+# waitandnext 0.5
+
+# alpha 3100311 0 0.5
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 210 4 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# voice 9936 "kamito_0057"
+@カミト
+待って、デュランダル！
+アスカロン、彼女をとめてっ
+
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0032"
+@アスカロン
+はい！
+
+# se "SE_5575"
+# textwindow "close"
+# alpha 3102311 0 0.5
+# waitandnext 0.8
+
+;;//アスカロンがデュランダルを止める
+# alpha 210 0 0.5
+# move 3100311 4 0
+# face 3100311 "angry"
+# alpha 3100311 1 0.5
+# mask 3100311 on
+# rightin 3100311 0.5
+# waitandnext 0.2
+
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# waitandnext 0.8
+
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 310031 "durandaru_a_0023"
+@デュランダル
+まぁ！
+何をなさいますのっ？
+
+# alpha 3102311 0 0.5
+# alpha 3100311 0 0.5
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+デュランダルの言う通り、
+これは絶好機だ！
+僕が行くよっ
+
+# move 3501711 2 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 1
+# move 210 4 0.5
+# mask 210 on
+# voice 350171 "grimoire_ge_0009"
+@グリモワール
+でぇ？
+いくら動きが止まってるからって
+戦場なのよ！
+
+# textboxarrow 0 1
+@グリモワール
+危険過ぎるわ！
+考え直しなさい
+
+# alpha 3501711 0 0.5
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 1
+@マサムネ
+いや！
+悪くない判断だ！
+俺が援護する
+
+# face 1100111 "angry"
+# textboxarrow 0 1
+@マサムネ
+あんたは思い切り突っ走れ！
+
+# textboxarrow 0 3
+@カミト
+ありがとう！
+
+;;//画面スライド
+# se "SE_0809"
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 1100111 0 0
+# alpha 210 0 0
+# move 3200811 1 0
+# face 3200811 "angry"
+# alpha 3200811 1 0
+# mask 3200811 on
+# move 1200111 3 0
+# alpha 1200111 1 0
+# mask 1200111 on
+# move 3302411 5 0
+# face 3302411 "angry"
+# alpha 3302411 1 0
+# mask 3302411 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textwindow "normal"
+# textboxarrow 0 2
+@？？？
+ガアアアアアアアアアアア！！
+
+# se "SE_4100"
+# waitandnext 0.5
+
+# textboxarrow 0 1
+# voice 320081 "perun_t_battle_0006"
+@ペルーン
+きゃっ
+
+# se "SE_5204"
+# textwindow "close"
+# leftout 3200811 0.5
+# waitandnext 0.5
+
+# alpha 3200811 0 0
+# face 3302411 "surprise"
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 330241 "tonbokiri_t_battle_0007"
+@蜻蛉切
+うわっ…
+
+# se "SE_5204"
+# textwindow "close"
+# rightout 3302411 0.5
+# waitandnext 0.5
+
+;;//ペルーンと蜻蛉切が魔獣化ミョルニルから離れる
+# alpha 3302411 0 0
+# textboxarrow 0 2
+# textwindow "normal"
+@？？？
+ガアアアアアアアアアアアアア！！
+
+;;//魔獣化ミョルニルが二人に迫る
+# se "SE_5008"
+# sedelay "SE_5009" 0.3
+# sedelay "SE_5008" 0.6
+# waitandnext 0.5
+
+# move 210 2 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 1
+# move 1200111 4 0.5
+@カミト
+こっちだ、キラーメイル！
+
+# face 1200111 "surprise"
+# textboxarrow 0 3
+@？？？
+ガアッ？
+
+;;//魔獣化ミョルニルの動きが止まる
+# se "SE_5201"
+# waitandnext 0.5
+
+# se "SE_0863"
+# shake 0 0.5
+# fadein "white" 0.5
+# textboxarrow 0 1
+@カミト
+“条理再構築”《ディスラプト》！！
+
+# face 1200111 "angry_1"
+# textboxarrow 0 3
+@？？？
+ガガアガガガガガガ…！？
+
+;;//魔獣化ミョルニルが倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 1200111 0 0.5
+# waitandnext 0.5
+
+# bgm "stop"
+# sedelay "SE_0846" 1
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 9936 "kamito_0006"
+@カミト
+やった！
+これで…あぐぅっ…！？
+ぐあああああああっ…！
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# alpha 210 0 0.5
+# move 3102311 3 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+@アスカロン
+マスター！？
+
+# alpha 3102311 0 0.5
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0037"
+@グリモワール
+あのバカ！
+
+;;//二人がカミトに駆け寄る
+# textwindow "close"
+# alpha 3501711 0 0.5
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+# waitandnext 0.5
+
+# se "SE_5575"
+# move 3102311 1 0
+# alpha 3102311 1 0
+# mask 3102311 on
+# move 3501711 5 0
+# alpha 3501711 1 0
+# mask 3501711 on
+# leftin 3102311 0.5
+# rightin 3501711 0.5
+# waitandnext 1
+
+# alpha 210 0 0.5
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# move 3200811 3 0
+# face 3200811 "angry"
+# alpha 3200811 1 0.5
+# mask 3200811 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 320081 "perun_t_0028"
+@ペルーン
+何だかよく分からないけど、
+急に倒れちゃったね
+
+# se "SE_5206"
+# textboxarrow 0 2
+@ペルーン
+みんなまとめて
+ビシビシ指導するよ！
+
+# move 1100111 2 0
+# face 1100111 "angry"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 1
+# move 3200811 4 0.5
+# mask 3200811 on
+# voice 11001 "masamunem_0010"
+@マサムネ
+ふざけるな
+それは恩を仇で返す所業だ！
+
+;;//マサムネがペルーンを止める
+# se "SE_8000"
+# waitandnext 0.5
+
+# alpha 1100111 0 0.5
+# alpha 3200811 0 0.5
+# move 3302411 3 0
+# face 3302411 "angry"
+# alpha 3302411 1 0.5
+# mask 3302411 off
+# textboxarrow 0 2
+# voice 330241 "tonbokiri_t_0013"
+@蜻蛉切
+せっかくの喧嘩がこんな幕切れじゃ
+納得いかないわ！
+
+# se "SE_5255"
+# waitandnext 0.5
+
+;;//銃声
+# se "SE_4400"
+# waitandnext 0.5
+
+# se "SE_5200"
+# textboxarrow 0 2
+# voice 330241 "tonbokiri_t_0022"
+@蜻蛉切
+おっと…
+
+# move 3302411 2 0.5
+# mask 3302411 on
+# move 3500711 4 0
+# face 3500711 "normal"
+# alpha 3500711 1 0.5
+# mask 3500711 on
+# textboxarrow 0 3
+# voice 350071 "buryunaku_a_0007"
+@ブリューナク
+動くな
+次は当てるぞ
+
+# alpha 3302411 0 0.5
+# alpha 3500711 0 0.5
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# move 3200811 4 0
+# face 3200811 "normal"
+# alpha 3200811 1 0.5
+# mask 3200811 on
+# textboxarrow 0 1
+@マサムネ
+おい！
+早くカミトを連れていけ！
+
+# textboxarrow 0 3
+# voice 320081 "perun_t_0011"
+@ペルーン
+ダメ！
+みんな指導するんだから！
+
+# alpha 1100111 0 0.5
+# alpha 3200811 0 0.5
+# move 3102311 1 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+# move 3501711 5 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+@アスカロン
+マスター、立てますかっ？
+
+# textboxarrow 0 2
+# voice 9936 "kamito_0040"
+@カミト
+そこのキラーメイルも…
+連れていかないと…
+ペルーン達に…
+
+# face 3501711 "angry"
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0027"
+@グリモワール
+どこまでお人好しなの！
+そんなの放っておきなさい！
+
+# face 210 "sad"
+# textboxarrow 0 2
+@カミト
+頼むよっ…
+その人には…聞きたいことが
+あるんだっ…ぐぅぅっ…！
+
+# face 3102311 "angry"
+# textboxarrow 0 1
+@アスカロン
+マスター…！
+分かりました！
+私が運びますっ
+
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# alpha 3501711 0 0.5
+# move 1100111 3 0
+# face 1100111 "sad"
+# alpha 1100111 1 0.5
+# mask 1100111 off
+# textboxarrow 0 2
+# voice 11001 "masamunem_0026"
+@マサムネ
+おいおい…
+あんたみたいな華奢なキル姫が
+そいつを――
+
+# se "SE_0812"
+# alpha 1100111 0 0.5
+# move 3102311 3 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+@アスカロン
+よいしょっ
+
+# alpha 3102311 0 0.5
+# move 1100111 3 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 off
+# textboxarrow 0 2
+# voice 11001 "masamunem_0023"
+@マサムネ
+担ぎ上げただと！？
+
+# move 1100111 2 0.5
+# mask 1100111 on
+# move 3102311 4 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 3
+# voice 310231 "ascalon_a_0042"
+@アスカロン
+あ、そのっ…
+怪力だからって巨大化したりは
+しませんから！…多分
+
+# textboxarrow 0 1
+@マサムネ
+何でもいい！
+早く行け！
+
+# alpha 1100111 0 0.5
+# alpha 3102311 0 0.5
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+@グリモワール
+しょうがないわね…！
+撤退するわよっ

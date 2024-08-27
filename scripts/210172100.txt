@@ -1,0 +1,663 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第17章 章タイトル「到来せし繋ぎ手―エクスプレス―」
+;;第2話―１０　タイトル：繋がる力
+;;10_0
+;;スクリプト最後の背景：白
+;;-----------------------------------------
+# script "lisp"
+# background "in_yggdrasill"
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 2
+# alpha 5101431 0 0
+# mask 5101431 off
+;;ハリー
+# body 208
+# pos 208 3
+# scale 208 0.8 0
+# layer 208 2
+# alpha 208 0 0
+# mask 208 off
+;;ダーインスレイヴ
+# body 102811
+# pos 102811 3
+# scale 102811 0.8 0
+# layer 102811 2
+# alpha 102811 0 0
+# mask 102811 off
+;;ミネルヴァ・擬装・アーチャー
+# body 5302521
+# pos 5302521 3
+# scale 5302521 0.8 0
+# layer 5302521 2
+# alpha 5302521 0 0
+# mask 5302521 off
+;;ラグナロク・擬装・ガンナー
+# body 5103621
+# pos 5103621 3
+# scale 5103621 0.8 0
+# layer 5103621 2
+# alpha 5103621 0 0
+# mask 5103621 off
+;;アルマス・誓約・ティターニア
+# body 5103811
+# pos 5103811 3
+# scale 5103811 0.8 0
+# layer 5103811 2
+# alpha 5103811 0 0
+# mask 5103811 off
+;;-----------------------------------------
+;;シナリオカット一枚絵
+# imageset 0 "integral_17"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;--------------------------------------------
+;;■ラグナロク
+;;//立ち絵：ラグナロク・擬装・ガンナー
+;;■ミネルヴァ
+;;//立ち絵：ミネルヴァ・擬装・アーチャー
+;;■ダーインスレイヴ
+;;//立ち絵：剣_ダーインスレイヴ_01
+;;■ハリー
+;;//立ち絵：ハリー
+;;■アルマス
+;;//立ち絵：アルマス・誓約・ティターニア
+;;■ティルフィング
+;;//立ち絵：ティルフィング・擬彩
+;;--------------------------------------------
+;;//背景：ユグドラシル（天上世界）：in_yggdrasill
+;;//キーンという金属音等
+# se "SE_9127"
+# voice 1036 "ragnarok_0022"
+# move 5103621 3 0
+# face 5103621 "surprise"
+# alpha 5103621 1 0
+# mask 5103621 off
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+えっ？
+この感覚…アルマス！？
+
+# alpha 5103621 0 0.5
+# move 5302521 3 0
+# face 5302521 "surprise"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+どうしました、ラグナロク？
+
+# alpha 5302521 0 0.5
+# move 5103621 3 0
+# face 5103621 "normal"
+# alpha 5103621 1 0.5
+# mask 5103621 off
+# textboxarrow 0 2
+@ラグナロク
+今、アルマスの声が…
+
+;;アルマス（声だけ）
+# voice 510381 "almace_ca_0046"
+# serif 1
+@アルマス
+ラグナロク…！
+
+# face 5103621 "surprise"
+# textboxarrow 0 2
+@ラグナロク
+アルマス！
+…声が聞こえる
+今、どこにいるのっ？
+
+# serif 1
+@アルマス
+やったわ！
+ラグナロクと繋がった
+話すことは色々あるけど、まずは…
+
+# serif 1
+@アルマス
+あなたにバイブスを返すわね
+これでインテグラルノア計画の
+準備が整うはずよっ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+@ラグナロク
+バイブスを返すって…
+繋がっているのならできるかも
+しれないけれど、本当に？
+
+# face 5103621 "angry"
+# textboxarrow 0 2
+@ラグナロク
+あ…あああああ！
+
+;;//ラグナロクの中にバイブスが戻る
+# se "SE_9088"
+# waitandnext 0.5
+
+# voice 1036 "ragnarok_0004"
+# face 5103621 "happy"
+# textboxarrow 0 2
+@ラグナロク
+私の中に…バイブスが戻ってきた
+アルマス、やり遂げたのね！
+
+# voice 1028 "dainsleif_0039"
+# alpha 5103621 0 0.5
+# move 102811 3 0
+# face 102811 "happy"
+# alpha 102811 1 0.5
+# mask 102811 off
+# textboxarrow 0 2
+@ダーインスレイヴ
+おお！
+地上に降りた者達は首尾良く
+事を為したのだな
+
+# alpha 102811 0 0.5
+# move 5103621 3 0
+# face 5103621 "happy"
+# alpha 5103621 1 0.5
+# mask 5103621 off
+# textboxarrow 0 2
+@ラグナロク
+これでインテグラルノア計画も――
+
+;;//画面白黒に
+# bgmfile "bgm409" "BgmIntegralNoahEvent" 0
+# subfillrect 0 "black" 0.5 0 0.5
+# move 5103621 2 0.5
+# mask 5103621 on
+# move 208 4 0
+# face 208 "normal"
+# alpha 208 1 0.5
+# mask 208 on
+# textboxarrow 0 3
+@ハリー
+エラーの復旧を確認
+インテグラルノア計画
+最終プロセスを始動します
+
+# face 5103621 "normal"
+# textboxarrow 0 1
+@ラグナロク
+始まった
+この情報、アルマスとティルフィング
+とも共有したいけど
+
+# textboxarrow 0 1
+@ラグナロク
+今は私が把握して、後で二人に
+伝えよう
+ハリー、計画を聞かせて
+
+# voice 9938 "harry_0003"
+# textboxarrow 0 3
+@ハリー
+はい
+それでは…
+
+;;//背景：白
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_white"
+# subfillrect 0 "black" 0 0.5 0
+# alpha 5103621 0 0
+# alpha 208 0 0
+# move 5103621 3 0
+# face 5103621 "surprise"
+# alpha 5103621 1 0
+# mask 5103621 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+ここは…？
+
+# voice 510381 "almace_ca_0048"
+# alpha 5103621 0 0.5
+# move 5103811 3 0
+# face 5103811 "surprise"
+# alpha 5103811 1 0.5
+# mask 5103811 off
+# textboxarrow 0 2
+@アルマス
+ラグナロク！？
+どうして、あなたがここにっ？
+
+# alpha 5103811 0 0.5
+# move 5101431 3 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+@ティルフィング
+そもそも、ここはどこでしょう？
+…私達三人とハリーしかいませんね
+
+# alpha 5101431 0 0.5
+# move 208 3 0
+# face 208 "normal"
+# alpha 208 1 0.5
+# mask 208 off
+# textboxarrow 0 2
+@ハリー
+ここは思念の世界です
+皆さんの意識が繋がっているので
+同じところにいるように感じられます
+
+# move 208 2 0.5
+# mask 208 on
+# move 5103811 4 0
+# face 5103811 "normal"
+# alpha 5103811 1 0.5
+# mask 5103811 on
+# textboxarrow 0 3
+@アルマス
+ふーん…
+ハリー、そんなこともできたのね
+先に教えておいてよ
+
+# voice 9938 "harry_0036"
+# textboxarrow 0 1
+@ハリー
+それは誤りです
+この機能はアルマスの能力に依存して
+います
+
+# voice 510381 "almace_ca_0022"
+# face 5103811 "surprise"
+# textboxarrow 0 3
+@アルマス
+えっ？
+私…！？
+
+# textboxarrow 0 1
+@ハリー
+アルマスを介して三人の意識が
+繋がっているので、この場を共有
+できています
+
+# alpha 208 0 0.5
+# alpha 5103811 0 0.5
+# move 5103621 2 0
+# face 5103621 "normal"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# move 5101431 4 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# textboxarrow 0 3
+@ティルフィング
+グランテピエの言う通りでした
+ヴァリンのお陰ですね
+
+# textboxarrow 0 1
+@ラグナロク
+話が早くて助かるわ
+ハリー、インテグラルノア計画に
+ついて説明して
+
+# voice 9938 "harry_0003"
+# alpha 5103621 0 0.5
+# alpha 5101431 0 0.5
+# move 208 3 0
+# face 208 "normal"
+# alpha 208 1 0.5
+# mask 208 off
+# textboxarrow 0 2
+@ハリー
+はい
+まず、ラグナロクが有している
+イミテイトシステム
+
+# textboxarrow 0 2
+@ハリー
+ティルフィングが有している
+ディスラプター
+
+# textboxarrow 0 2
+@ハリー
+この二つがインテグラルノア計画の
+要となります
+
+# textboxarrow 0 2
+@ハリー
+イミテイトシステムはラグナロクの
+バイブスを経由して他者のキラーズを
+模倣《イミテイト》します
+
+# textboxarrow 0 2
+@ハリー
+計画におけるこのシステムの鍵は、
+模倣よりも他者と繋がるという点に
+あります
+
+# textboxarrow 0 2
+@ハリー
+ディスラプターはキラーズを最適化
+してマナの消費量を格段に下げます
+
+# textboxarrow 0 2
+@ハリー
+この二つを組み合わせることにより
+ユグドラシルにマナを還すのが
+計画の大枠です
+
+# textboxarrow 0 2
+@ハリー
+イミテイトシステムをもつラグナロク
+と全てのキル姫が共鳴し、彼女達を
+最適化します
+
+# textboxarrow 0 2
+@ハリー
+それによって発生した余剰のマナを
+ラグナロクに集め、彼女から
+ユグドラシルに返還します
+
+# textboxarrow 0 2
+@ハリー
+これがヴァリン博士の計画…
+ハーフ・リーディング・システム
+である私の役割はここまでです
+
+# textboxarrow 0 2
+@ハリー
+あとは皆さんに委ねることになります
+
+# voice 510381 "almace_ca_0022"
+# alpha 208 0 0.5
+# move 5103811 3 0
+# face 5103811 "surprise"
+# alpha 5103811 1 0.5
+# mask 5103811 off
+# textboxarrow 0 2
+@アルマス
+えっ？
+私達に委ねるって言われても…
+
+# alpha 5103811 0 0.5
+# move 208 3 0
+# face 208 "normal"
+# alpha 208 1 0.5
+# mask 208 off
+# textboxarrow 0 2
+@ハリー
+私はハーフ・リーディング・システム
+半分までしか導くことはできません
+
+# textboxarrow 0 2
+@ハリー
+計画を完遂するための残り半分は
+皆さんの絆にかかっている
+ヴァリン博士はそう考えていました
+
+# voice 510143 "tyrufing_iz_0028"
+# alpha 208 0 0.5
+# move 5103621 2 0
+# face 5103621 "normal"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# move 5101431 4 0
+# face 5101431 "sad"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# textboxarrow 0 3
+@ティルフィング
+ヴァリン…
+彼女でも計画を完璧に作り上げる
+ことはできなかったのね…
+
+# textboxarrow 0 1
+@ラグナロク
+確かに、一つ気掛かりなことがあるわ
+イミテイトシステムで皆と共鳴すると
+いっても…
+
+# face 5101431 "normal"
+# textboxarrow 0 3
+@ティルフィング
+共鳴しない者達も当然いるはずです
+そういうキル姫はどうするのか…
+
+# textboxarrow 0 3
+@ティルフィング
+私のディスラプターだって同じです
+最適化といっても、無理強いは
+できないから…
+
+# alpha 5103621 0 0.5
+# alpha 5101431 0 0.5
+# move 5103811 3 0
+# face 5103811 "normal"
+# alpha 5103811 1 0.5
+# mask 5103811 off
+# textboxarrow 0 2
+@アルマス
+…つまり、それが残り半分
+私達の絆次第ってことでしょ
+
+# voice 510381 "almace_ca_0021"
+# bgm "stop"
+# face 5103811 "happy"
+# textboxarrow 0 2
+@アルマス
+絶・最高ね！
+
+# alpha 5103811 0 0.5
+# move 5101431 3 0
+# face 5101431 "surprise"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+@ティルフィング
+アルマス…？
+
+# bgmfile "bgm410_block_1" "BgmIntegralNoahBattle001" 0
+# alpha 5101431 0 0.5
+# move 5103811 3 0
+# face 5103811 "normal"
+# alpha 5103811 1 0.5
+# mask 5103811 off
+# textboxarrow 0 2
+@アルマス
+だって、そうじゃない
+今まで私達が何のために旅をして
+きたのか…
+
+# textboxarrow 0 2
+@アルマス
+どうして敵対してたキル姫達とも
+手を取り合う必要があったのか…
+
+# textboxarrow 0 2
+@アルマス
+その答えがここにあったって
+ことだもの
+
+# textboxarrow 0 2
+@アルマス
+思えば、色んなキル姫と会ってきた
+色んな奏官とも
+色んな人達とだって
+
+# textboxarrow 0 2
+@アルマス
+いきなりバイブスが適合して、
+マスターって呼ばれて
+戸惑うこともあったけど
+
+# textboxarrow 0 2
+@アルマス
+私達、意外とたくさんのキル姫達と
+繋がれてると思う
+
+# face 5103811 "happy"
+# textboxarrow 0 2
+@アルマス
+その繋がりを共鳴までもっていければ
+絶・上手くいくわ
+
+# voice 1036 "ragnarok_0003"
+# alpha 5103811 0 0.5
+# move 5103621 2 0
+# face 5103621 "normal"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# textboxarrow 0 1
+# move 5101431 4 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+@ラグナロク
+そうね
+確かにその通りよ
+
+# textboxarrow 0 1
+@ラグナロク
+半分はヴァリン博士が用意してくれた
+あと半分は、私達が作り上げていく
+それがインテグラルノア計画
+
+# textboxarrow 0 1
+@ラグナロク
+まだ繋がりのないキル姫達とも
+繋がって…計画を完遂させましょう
+
+# voice 510143 "tyrufing_iz_0003"
+# face 5101431 "happy"
+# textboxarrow 0 3
+@ティルフィング
+はい
+コマンドキラーズとも、きっと
+
+# voice 510381 "almace_ca_0036"
+# alpha 5103621 0 0.5
+# alpha 5101431 0 0.5
+# move 5103811 3 0
+# face 5103811 "happy"
+# alpha 5103811 1 0.5
+# mask 5103811 off
+# textboxarrow 0 2
+@アルマス
+うん！
+ラグナロク、ティルフィング、
+よろしくね！
+
+# voice 1036 "ragnarok_im_0050"
+# alpha 5103811 0 0.5
+# move 5103621 2 0
+# face 5103621 "normal"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# textboxarrow 0 1
+# move 5101431 4 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+@ラグナロク
+アルマス、あなたもきっと重要な
+位置にいると思う
+
+# textboxarrow 0 3
+@ティルフィング
+あなたがいなければ、こうして
+話すことはできなかったんですから
+
+# voice 510381 "almace_ca_0022"
+# alpha 5103621 0 0.5
+# alpha 5101431 0 0.5
+# move 5103811 3 0
+# face 5103811 "surprise"
+# alpha 5103811 1 0.5
+# mask 5103811 off
+# textboxarrow 0 2
+@アルマス
+そうかしら…何だか照れるわね…
+えっ？
+
+;;//ここでシナリオカット
+#setnextbgmblock 2
+# se "SE_9101"
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# alpha 5103811 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 0
+# textwindow "normal"
+@ラグナロク
+温かなものが胸に…
+
+# textboxarrow 0 0
+@ティルフィング
+溢れてきます
+これはきっと…
+
+# textboxarrow 0 0
+@アルマス
+私達の絆の形…
+新しい力…
+
+# textboxarrow 0 0
+@アルマス
+“絆の繋ぎ手”
+《テイルリンカー》よ！！
+
+# textboxarrow 0 0
+@ラグナロク
+ああ、分かるわ
+言葉を使わなくても伝わってくる
+
+# textboxarrow 0 0
+@ティルフィング
+お二人の思いが心に…
+私の思いもきっと、お二人に
+
+# voice 1036 "ragnarok_im_0050"
+# textboxarrow 0 0
+@ラグナロク
+アルマス、これはきっとあなたが
+使うための力よ
+
+# textboxarrow 0 0
+@ティルフィング
+私達が見出した三つ目の力
+「テイルリンカー」で皆さんを
+繋いで下さい
+
+# textboxarrow 0 0
+@アルマス
+うん
+この新しい力で…成し遂げるわ
+
+# textboxarrow 0 0
+@アルマス
+ユグドラシルを、世界を、
+“終焉”から守り抜いてみせる！

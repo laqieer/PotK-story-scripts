@@ -1,0 +1,529 @@
+;;-----------------------------------------
+;;ファンキル　学園イベント（2021年3月）シナリオ
+;;【エンディング】
+;;スクリプト最後の背景：校門_文化祭(昼)
+;;背景：廊下(昼)
+;;-----------------------------------------
+# script "lisp"
+# background "gymnasium"
+# bgmfile "bgm384_1" "BgmGakuen006" 0
+;;-----------------------------------------
+;;制服ヴァジュラ
+# body 38
+# pos 38 3
+# scale 38 0.8 0
+# layer 38 3
+# alpha 38 0 0
+# mask 38 off
+;;制服エクスカリバー
+# body 34
+# pos 34 3
+# scale 34 0.8 0
+# layer 34 2
+# alpha 34 0 0
+# mask 34 off
+;;制服アロンダイト
+# body 100751
+# pos 100751 3
+# scale 100751 0.8 0
+# layer 100751 2
+# alpha 100751 0 0
+# mask 100751 off
+;;ブラフマーストラ制服
+# body 115
+# pos 115 3
+# scale 115 0.8 0
+# layer 115 2
+# alpha 115 0 0
+# mask 115 off
+;;リサナウト 制服ver.
+# body 203011
+# pos 203011 3
+# scale 203011 0.8 0
+# layer 203011 2
+# alpha 203011 0 0
+# mask 203011 off
+;;フライクーゲル
+# body 126
+# pos 126 3
+# scale 126 0.8 0
+# layer 126 3
+# mask 126 off
+# alpha 126 0 0
+;;ロンギヌス
+# body 52
+# pos 52 3
+# scale 52 0.8 0
+# layer 52 3
+# mask 52 off
+# alpha 52 0 0
+;;-----------------------------------------
+;;【エンディング】
+;;//背景：体育館
+;;//ト書き：卒業式のＢＧＭが流れる。
+;;//キャラ多めに映すなどしてBGMの盛り上がりまでの尺を多少稼いでほしい(サウンドメモ
+;;モノローグ
+# textwindow "close"
+# fadein "black" 1.5
+# waitandnext 2
+
+# move 100751 2 0
+# mask 100751 on
+# alpha 100751 1 1
+# move 34 4 0
+# mask 34 on
+# alpha 34 1 1
+# waitandnext 1.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+聖ユグドラシル姫学院
+
+# alpha 100751 0 1
+# alpha 34 0 1
+# textwindow "close"
+# waitandnext 1.5
+
+# move 34 3 0
+# mask 34 off
+# move 38 2 0
+# mask 38 on
+# alpha 38 1 1
+# move 126 4 0
+# mask 126 on
+# alpha 126 1 1
+# waitandnext 1.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+ラグナロク女学院
+
+# alpha 38 0 1
+# alpha 126 0 1
+# textwindow "close"
+# waitandnext 1.5
+
+# move 38 3 0
+# mask 38 off
+# move 126 3 0
+# mask 126 off
+# move 115 2 0
+# mask 115 on
+# alpha 115 1 1
+# move 52 4 0
+# mask 52 on
+# alpha 52 1 1
+# waitandnext 1.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+牙克城学院――
+
+# alpha 115 0 1
+# alpha 52 0 1
+# textwindow "close"
+# waitandnext 1.5
+
+;;モノローグ
+# textflame 0 0
+# textwindow "nomal"
+@
+祭りの後の静かな学園都市に、
+生徒達の歌声が響き渡る
+
+;;モノローグ
+@
+真剣な表情で歌う生徒
+思わず涙を流す生徒
+様々な想いが立ち並ぶ中
+
+;;モノローグ
+@
+理事長デュリンの挨拶を最後に、
+卒業式は終わりを告げた……
+
+;;//演出：場面転換
+;;//ト書き：引き続きＢＧＭが流れる
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 203011 3 0
+# face 203011 "sad"
+# alpha 203011 1 0
+# mask 203011 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 2030 "risanautr_l_0027"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@リサナウト
+はぁ～～～っ
+今日の撮影は大変だったわ……
+
+# voice 2030 "risanautr_l_0030"
+# face 203011 "normal"
+# textboxarrow 0 2
+@リサナウト
+あら、マスター！
+それって差し入れ？
+ありがとう！
+
+# se "SE_6504"
+# emotionbody 1000 3 203011 10 290
+# effectpattern 1000 1 3
+# effectstart 1000
+# face 203011 "happy"
+# textboxarrow 0 2
+@リサナウト
+ごくっ、ごくっ、ごくっ……
+ぷはぁ、生き返るっ♪
+一気に若返った気分！
+
+;;モノローグ
+# textflame 0 0
+@
+受け取った飲み物を
+瞬く間に飲み干してしまう
+リサナウト
+
+;;モノローグ
+@
+撮影係の仕事が
+よほど大変だったようだ
+
+# face 203011 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+イベントのせいかしら
+なんだか昔のことを
+思い出してしまうわね
+
+# textboxarrow 0 2
+@リサナウト
+そう……あのブレスレットを
+見つけた時のことも
+
+# face 203011 "sad"
+# textboxarrow 0 2
+@リサナウト
+実験が成功したわけじゃなくて
+元からそういうアイテムだった、
+ってこともね……
+
+;;モノローグ
+# textflame 0 0
+@
+そう言いながらリサナウトは
+残念そうな表情を見せる
+
+;;モノローグ
+@
+オカルト研究部の部長として、
+先日の賭けの結果は
+複雑だったようだ……
+
+# face 203011 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+私、考えたの
+どうしてあのブレスレットが
+あんな力を持っていたのか……
+
+# textboxarrow 0 2
+@リサナウト
+きっと……かつての先輩達も、
+過去に戻りたいって
+考えていたんじゃないかって
+
+# textboxarrow 0 2
+@リサナウト
+その想いが力となって、
+あのブレスレットに宿った……
+そういうことなのかなって
+
+# textboxarrow 0 2
+@リサナウト
+まあ、真相は結局
+わからずじまいだけどね！
+
+# voice 2030 "risanautr_l_0004"
+# face 203011 "happy"
+# textboxarrow 0 2
+@リサナウト
+あれをヒントに
+イベントの計画も思いついたし
+結果オーライってところかしら？
+
+;;モノローグ
+# textflame 0 0
+@
+そう言って笑うリサナウトに、
+マスターも軽く微笑みを返した
+
+;;モノローグ
+@
+そのまま２人で
+しばらく話し込んでいると……
+
+# alpha 203011 0 0.5
+# move 34 1 0
+# face 34 "normal"
+# alpha 34 1 0.5
+# mask 34 on
+# move 38 3 0
+# face 38 "normal"
+# alpha 38 1 0.5
+# mask 38 on
+# textflame 1 1
+# textboxarrow 0 2
+# move 115 5 0
+# face 115 "normal"
+# alpha 115 1 0.5
+# mask 115 on
+@ヴァジュラ
+お疲れ様、２人とも！
+
+# alpha 34 0 0.5
+# alpha 38 0 0.5
+# alpha 115 0 0.5
+# move 203011 3 0
+# face 203011 "normal"
+# alpha 203011 1 0.5
+# mask 203011 off
+# textboxarrow 0 2
+@リサナウト
+あら、生徒会長さん達！
+卒業おめでとう！
+
+# se "SE_6504"
+# emotionbody 2000 3 115 10 290
+# effectpattern 2000 1 3
+# effectstart 2000
+# voice 5004 "burafumasutora_0030"
+# move 203011 2 0.5
+# alpha 203011 1 0.5
+# mask 203011 on
+# move 115 4 0
+# face 115 "happy"
+# alpha 115 1 0.5
+# mask 115 on
+# textboxarrow 0 3
+@ブラフマーストラ
+ありがと～♪
+いやー、めっちゃ楽しかったよっ！
+
+# textboxarrow 0 3
+@ブラフマーストラ
+在校生のみんなが
+ここまでやるとはね～？
+正直びっくり！
+
+# voice 2030 "risanautr_l_0005"
+# face 203011 "happy"
+# textboxarrow 0 1
+@リサナウト
+ふふん、そうでしょう！
+どう？安心したかしら？
+
+# voice 1011 "excalibur_0003"
+# alpha 115 0 0.5
+# move 34 4 0
+# face 34 "normal"
+# alpha 34 1 0.5
+# mask 34 on
+# textboxarrow 0 3
+@エクスカリバー
+ええ…何の気兼ねもなく
+この学び舎を旅立てます
+
+;;モノローグ
+# textflame 0 0
+@
+生徒会長達の言葉に、
+マスターは在校生として
+感動を覚える
+
+;;モノローグ
+@
+一同の間に再び、
+感動的な雰囲気が流れていった
+
+;;モノローグ
+# bgm "stop"
+# alpha 203011 0 0.5
+# alpha 34 0 0.5
+@
+…………のだが
+
+# move 34 1 0
+# face 34 "normal"
+# alpha 34 1 0.5
+# mask 34 on
+# move 38 3 0
+# face 38 "normal"
+# alpha 38 1 0.5
+# mask 38 on
+# move 115 5 0
+# face 115 "happy"
+# alpha 115 1 0.5
+# mask 115 on
+# textflame 1 1
+# textboxarrow 0 3
+@ブラフマーストラ
+てかさ、来年度は
+どんなイベントやるのかな？
+今から楽しみ～っ！
+
+# voice 5005 "vajura_0004"
+# face 38 "smile"
+# textboxarrow 0 2
+@ヴァジュラ
+そうだなっ！
+体育祭ももっと
+盛り上がりそうだ！
+
+# voice 1011 "excalibur_0004"
+# face 34 "happy"
+# textboxarrow 0 1
+@エクスカリバー
+今年の文化祭もぜひ、
+メイド姿のみなさんに
+お会いしたいものです
+
+# emotionbody 3000 2 203011 10 290
+# effectpattern 3000 1 1
+# effectstart 3000
+# alpha 34 0 0.5
+# alpha 38 0 0.5
+# alpha 115 0 0.5
+# move 203011 3 0
+# face 203011 "surprise"
+# alpha 203011 1 0.5
+# mask 203011 off
+# textboxarrow 0 2
+@リサナウト
+んっ？あれ？
+その口ぶり……もしかして、
+来年も来るつもりなの？
+
+# voice 5005 "vajura_0003"
+# alpha 203011 0 0.5
+# move 34 1 0
+# face 34 "normal"
+# alpha 34 1 0.5
+# mask 34 on
+# move 38 3 0
+# face 38 "normal"
+# alpha 38 1 0.5
+# mask 38 on
+# textboxarrow 0 2
+# move 115 5 0
+# face 115 "normal"
+# alpha 115 1 0.5
+# mask 115 on
+@ヴァジュラ
+ん？　あぁ、もちろん！
+っていうか……なあ？
+
+# bgmfile "bgm183" "BgmGakuen003" 0
+# textboxarrow 0 3
+@ブラフマーストラ
+アタシら３年生のほとんどは、
+付属の大学に行くだけだし～？
+
+# textboxarrow 0 1
+@エクスカリバー
+お休みの日でも、お昼休みでも
+いつでもこちらに伺えますよ
+
+# voice 2030 "risanautr_l_0039"
+# alpha 34 0 0.5
+# alpha 38 0 0.5
+# alpha 115 0 0.5
+# move 203011 3 0
+# face 203011 "normal"
+# alpha 203011 1 0.5
+# mask 203011 off
+# textboxarrow 0 2
+@リサナウト
+へ、へぇ～っ！
+そうだったのね……！
+
+# alpha 203011 0 0.5
+# move 34 1 0
+# face 34 "normal"
+# alpha 34 1 0.5
+# mask 34 on
+# move 38 3 0
+# face 38 "normal"
+# alpha 38 1 0.5
+# mask 38 on
+# textboxarrow 0 2
+# move 115 5 0
+# face 115 "normal"
+# alpha 115 1 0.5
+# mask 115 on
+@ヴァジュラ
+ああ！
+これからもよろしく頼むよ！
+
+;;モノローグ
+# textflame 0 0
+@
+３人と握手をしながら、
+な～んだ……と肩を落とすマスター
+
+;;モノローグ
+@
+一抹の寂しさが消え、
+また会えるという嬉しさが
+マスターの心を温めた…
+
+# voice 2030 "risanautr_l_0005"
+# alpha 34 0 0.5
+# alpha 38 0 0.5
+# alpha 115 0 0.5
+# move 203011 3 0
+# face 203011 "happy"
+# alpha 203011 1 0.5
+# mask 203011 off
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+ふふふ……じゃあ改めて、
+写真でも撮りましょうか！
+
+# face 203011 "normal"
+# textboxarrow 0 2
+@リサナウト
+３人とも、並んで並んで～！
+はい、チーズ！
+
+;;//ＳＥ：パシャッ！（カメラのシャッター音）
+;;//演出：画面フラッシュ
+# se "SE_12805"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# alpha 203011 0 0.5
+# textflame 0 0
+@
+３人の生徒会長が
+一同に会した記念写真
+
+;;モノローグ
+@
+彼女達は一様に、
+まぶしく輝く
+笑顔を浮かべていた……

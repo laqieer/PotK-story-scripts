@@ -1,0 +1,475 @@
+;;●１-１０＜戦闘終了後＞　背景：グランエクスペリ
+;;※ティバルトと対峙している、ティルフィングとリベリオン
+# script "lisp"
+# background "imperial_city"
+# bgm "bgm031" 0
+# body 42
+# pos 42 1
+# scale 42 0.8 0
+# body 75
+# pos 75 3
+# scale 75 0.8 0
+# layer 4 1
+# layer 75 2
+# layer 24 4
+# layer 0 5
+;;ティルフィングボイス用
+# body 101411
+# alpha 101411 0 0
+# face 42 "angry"
+# face 75 "irregular"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9980 "tybalt_battle_0002"
+@ティバルト
+…遅い！
+;;※一気に間合いを詰め、斬りかかるティバルト。咄嗟に銃身でガードするリベリオン
+
+# se "SE_5542"
+# textboxarrow 0 0
+# move 42 2 0.1
+# waitandnext 0.5
+
+# sedelay "SE_4601" 0.5
+# fadein "white" 0.3
+# shake 0 0.3
+# move 75 5 0.3
+# textboxarrow 0 3
+# voice 9979 "rebellion_0022"
+@リベリオン
+クッ…
+
+# textboxarrow 0 3
+@リベリオン
+あ、危ねぇ…
+まったく、人間技じゃねぇなっ
+
+# entry 751 75
+# pos 751 4
+# scale 751 0.8 0
+# alpha 751 0 0
+# face 42 "normal"
+# textboxarrow 0 1
+# voice 9980 "tybalt_0007"
+@ティバルト
+いいや、
+俺はただの人間だ
+…人類の力をナメるなよ？
+
+# face 75 "sad"
+# textboxarrow 0 3
+# voice 9979 "rebellion_0007"
+@リベリオン
+やれやれ…
+
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# alpha 24 0 0
+# face 24 "sad"
+# face 75 "normal"
+# textboxarrow 0 3
+@リベリオン
+立場は違うが、
+言ってることは俺達と同じだな…
+うぐっ…
+;;※ブンとブレるリベリオンの身体
+
+# serif 0
+# textwindow "close"
+# alpha 751 1 0
+# waitandnext 0.03
+
+# se "SE_4835"
+# shake 0 0.5
+# fadein "white" 0.5
+# scale 751 2 0.5
+# alpha 751 0 1
+# layer 751 4
+# waitandnext 1.5
+
+# serif 0
+# textwindow "normal"
+# alpha 24 1 0.5
+# alpha 75 0 0.5
+# alpha 42 0 0.5
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0015"
+@ティルフィング
+リベリオンさんっ…
+;;※フッとリベリオンの背後に現れるティバルト
+
+# move 42 5 0
+# waitandnext 0.1
+
+# move 42 4 0.5
+# move 75 3 0
+# alpha 24 0 0.5
+# alpha 75 1 0.5
+# alpha 42 1 0.5
+# textboxarrow 0 3
+@ティバルト
+…どうした
+…この世界の空気が合わないか？
+動きに精彩を欠いているぞ？
+
+# face 75 "surprise"
+# textboxarrow 0 2
+# voice 9979 "rebellion_0024"
+@リベリオン
+！？
+…グ…し、しまった！
+;;※スッと構えるティバルト
+
+# se "SE_5205"
+# body 4
+# pos 4 3
+# scale 4 0.8 0
+# alpha 4 0 0
+# move 24 3 0 
+# face 24 "angry"
+# face 42 "angry"
+# face 4 "angry"
+# textboxarrow 0 3
+# voice 9980 "tybalt_0029"
+@ティバルト
+終わりだ…
+“終わりなき夜に現れし悪魔”よ…！
+;;※一閃…飛び散る火花。ティバルトの剣をギリギリで受け止めているティルフィング
+
+# se "SE_8025"
+# fadein "red" 0.5
+# shake 0 0.5
+# sedelay "SE_5234" 0.6
+# waitandnext 1
+
+# se "SE_9086"
+# fadein "white" 0.5
+# alpha 24 1 0
+# move 75 2 0
+# shake 0 0.5
+# textboxarrow 0 2
+@ティルフィング
+クッ…
+
+# alpha 75 0 0.5
+# alpha 42 0 0.5
+# alpha 24 0 0.5
+# alpha 4 1 0.5
+# textboxarrow 0 2
+@トト
+ティルフィング！
+
+# move 24 2 0
+# alpha 42 1 0.5
+# alpha 24 1 0.5
+# alpha 4 0 0.5
+# face 42 "normal"
+# textboxarrow 0 3
+@ティバルト
+邪魔をするな…
+コイツを倒した後に、
+ゆっくり相手してやる
+
+# face 24 "mad2"
+# textboxarrow 0 1
+@ティルフィング
+ダメです！
+こんな無意味な闘い、
+今すぐにやめるべきです！
+
+# textboxarrow 0 3
+@ティバルト
+無意味だと…？
+
+# face 24 "sad"
+# textboxarrow 0 1
+@ティルフィング
+ともに、世の平和を
+願っているのに…
+
+# face 24 "mad2"
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0019"
+@ティルフィング
+どうして闘わなければ
+ならないんですか！？
+
+# body 0
+# pos 0 1
+# scale 0 0.8 0
+# alpha 0 0 0
+# face 0 "serious2"
+# face 24 "sad"
+# textboxarrow 0 1
+@ティルフィング
+本当に闘うべき相手は、
+他にいるのに…
+
+# alpha 75 0 0.5
+# alpha 0 1 0.5
+# move 24 3 0.5
+# move 42 5 0.5
+# textboxarrow 0 1
+@デュリン
+ティバルト団長、
+どうか話を聞いてください
+
+# textboxarrow 0 1
+@デュリン
+王政府には…
+世に知らされていない、
+裏の顔があるんです
+
+# textboxarrow 0 3
+# voice 9980 "tybalt_0009"
+@ティバルト
+…裏の顔？
+
+# face 0 "sad"
+# textboxarrow 0 1
+@デュリン
+にわかには
+信じて頂けないかも
+しれませんが…
+
+# face 0 "serious"
+# textboxarrow 0 1
+@デュリン
+王政府の上層部は異族を利用し、
+このユグド大陸の人口調整を
+行っているようなんです
+
+# alpha 42 0 0.5
+# alpha 24 0 0.5
+# alpha 0 0 0.5
+# alpha 4 1 0.5
+# textboxarrow 0 2
+# voice 9998 "toto_0002"
+@トト
+その証拠だってあるんだ！
+ねぇ、
+僕らの話を聞いてよ！
+
+# alpha 42 1 0.5
+# alpha 24 1 0.5
+# alpha 0 1 0.5
+# alpha 4 0 0.5
+# textboxarrow 0 3
+@ティバルト
+…地下水路
+…外壁に空いた穴の話か？
+
+# textboxarrow 0 1
+# voice 9999 "durin_0022"
+@デュリン
+！？
+ご存じなんですか…！？
+
+# face 0 "serious2"
+# face 75 "normal"
+# pos 75 3
+# textboxarrow 0 3
+# voice 9980 "tybalt_0007"
+@ティバルト
+お前達の足取りを追った先で、
+見かけただけだ
+
+# alpha 42 0 0.5
+# alpha 24 0 0.5
+# alpha 0 0 0.5
+# alpha 75 1 0.5
+# textboxarrow 0 2
+# voice 9979 "rebellion_0004"
+@リベリオン
+だったら、話が早ぇ
+
+# textboxarrow 0 2
+@リベリオン
+あれは、建設当時から
+意図的に開けられていたもの…
+
+# textboxarrow 0 2
+@リベリオン
+王政府が異族の侵入を
+容認しているなによりの証拠だ。
+
+# face 75 "irregular"
+# pos 42 2
+# textboxarrow 0 2
+# voice 9979 "rebellion_0007"
+@リベリオン
+お前は…
+そんな腐ったヤツらに、
+利用されてるんだぜ？
+
+# alpha 42 1 0.5
+# move 75 4 0.5
+# textboxarrow 0 1
+@ティバルト
+…………
+
+# select "逃げずに、現実に目を向けるべきです" "select_label_01" "正義の目を、政府にも向けるべきです" "select_label_01"
+…………
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9980 "tybalt_0013"
+@ティバルト
+…我が王政府も、
+公平に見つめ直せ…と？
+
+# label "select_label_end"
+# textboxarrow 0 1
+@ティバルト
+…それに関しては、異論はない
+;;※刹那…凄まじい速さで、斬りつけるティバルト。咄嗟にガードするリベリオン
+
+# se "SE_4000"
+# sedelay "SE_4601" 0.2
+# textboxarrow 0 0
+# move 42 3 0.1
+# face 42 "angry"
+# waitandnext 0.1
+
+# se "SE_9086"
+# face 75 "surprise"
+# fadein "white" 0.3
+# move 75 5 0.3
+# shake 0 0.3
+# textboxarrow 0 3
+# voice 9979 "rebellion_0024"
+@リベリオン
+うぉっ、危ねぇ…！？
+
+# textboxarrow 0 3
+@リベリオン
+お前、
+言ってることとやってることが
+矛盾してるぞ！？
+
+# face 42 "normal"
+# textboxarrow 0 2
+@ティバルト
+…確かに、
+上層部に確認したいことは
+山ほどある
+
+# textboxarrow 0 2
+@ティバルト
+だが、それ以上に…
+お前を通せぬ理由が、
+俺にはある
+
+# face 75 "irregular"
+# textboxarrow 0 3
+# voice 9979 "rebellion_0009"
+@リベリオン
+あ？
+なんだよ、
+それは？
+
+# textboxarrow 0 2
+# voice 9980 "tybalt_0007"
+@ティバルト
+…プライドだよ
+
+# textboxarrow 0 3
+@ティバルト
+お前は、ここで倒す…
+王政府に問いただすのは、
+その後だ
+
+# face 75 "sad"
+# pos 24 1
+# textboxarrow 0 3
+# voice 9979 "rebellion_0004"
+@リベリオン
+…イカしてるな、お前
+…俺が女だったら、
+惚れてるところだ
+
+# face 24 "angry"
+# face 75 "angry"
+# textboxarrow 0 3
+@リベリオン
+…ティルフィング！！
+;;※火花が散る…背後から忍び寄っていたティルフィングが、ティバルトの剣をかち上げる
+
+# se "SE_3006"
+# alpha 24 1 0.2
+# move 24 2 0.2
+# waitandnext 0.2
+
+# fadein "white" 0.3
+# se "SE_3006"
+# shake 0 0.3
+# face 42 "surprise"
+# textboxarrow 0 2
+# voice 9980 "tybalt_0022"
+@ティバルト
+なに…！？
+
+# face 75 "normal"
+# face 24 "sad"
+# move 24 1 0.5
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0031"
+@ティルフィング
+ごめんなさい…
+
+# face 24 "angry"
+# textboxarrow 0 1
+@ティルフィング
+私達は、
+どうしても
+先に進まなくてはならないんです
+;;※ガォンと響き渡る銃声…かち上げられたティバルトの剣を弾き飛ばすリベリオン
+
+# se "SE_4400"
+# sedelay "SE_9117" 0.5
+# textboxarrow 0 2
+# voice 9980 "tybalt_0024"
+@ティバルト
+クッ…！？
+しまった！
+
+# face 75 "sad"
+# textboxarrow 0 3
+# voice 9979 "rebellion_0008"
+@リベリオン
+時間がねぇ
+悪いが、先に行くぜ
+
+# textboxarrow 0 3
+@リベリオン
+…お前が本当に人々のためを
+思うのなら…
+
+# face 75 "normal"
+# textboxarrow 0 3
+@リベリオン
+さっきの話、
+よく考えてみるんだな
+
+# textboxarrow 0 1
+@ティルフィング
+行きます！
+デュリン、トト、
+私の背後にっ…
+;;※駆け出してゆく一行
+
+# face 42 "angry"
+# se "SE_5575"
+# textboxarrow 0 0
+# alpha 24 0 0.5
+# alpha 75 0 0.5
+# waitandnext 1.5
+
+# textboxarrow 0 2
+@ティバルト
+チッ！
+門を閉めろ！！
+決して、ヤツらを侵入させるな！！

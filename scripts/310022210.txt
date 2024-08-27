@@ -1,0 +1,430 @@
+;;-----------------------------------------
+;;SEA2章_21
+;;-----------------------------------------
+# script "lisp"
+# background "201_border"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;シェキナー（過去）
+# body 400711
+# pos 400711 3
+# scale 400711 0.8 0
+# layer 400711 3
+# mask 400711 off
+# alpha 400711 1 0
+;;リットゥ（剣無し）
+# body 285
+# pos 285 3
+# scale 285 0.8 0
+# layer 285 2
+# mask 285 off
+# alpha 285 0 0
+;;カドケウス
+# body 600431
+# pos 600431 2
+# scale 600431 0.8 0
+# layer 600431 2
+# mask 600431 off
+# alpha 600431 0 0
+;;ケーリュケイオン
+# body 600531
+# pos 600531 4
+# scale 600531 0.8 0
+# layer 600531 3
+# alpha 600531 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 4
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagescale 1 1.2 0
+# imagelayer 1 3
+;;-----------------------------------------
+;;背景：廃墟
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# face 400711 "normal"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@シェキナー
+リットゥの相手は私がします
+貴方達はその隙にアレを
+
+# voice 6004 "kadokeusu_0003"
+# alpha 400711 0 0.3
+# face 600431 "normal"
+# face 600531 "normal"
+# alpha 600431 1 0.3
+# alpha 600531 1 0.3
+# textboxarrow 0 1
+@カドケウス
+そういう作戦か～
+上手くいくといいけどね
+
+# voice 6005 "keryukeion_0003"
+# textboxarrow 0 3
+@ケーリュケイオン
+シェキナーが
+そうしたいって言うんなら、
+そうするよ
+
+# face 400711 "angry"
+# alpha 400711 1 0.3
+# alpha 600431 0 0.3
+# alpha 600531 0 0.3
+# textboxarrow 0 2
+@シェキナー
+余計なお喋りは慎んで下さい
+さあ、いきますよ！
+
+;;シェキナーが飛び出す
+# se "SE_9021"
+# move 400711 5 0.5
+# alpha 400711 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# move 400711 1 0
+# waitandnext 0.2
+
+# move 400711 3 0.5
+# alpha 400711 1 0.5
+# waitandnext 0.5
+
+;;見えない壁に遮られる
+# se "SE_3006"
+# fadein "white" 0.5
+# move 400711 2 0.3
+# waitandnext 0.5
+
+# voice 4007 "shekina_battle_0008"
+# face 400711 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 1
+@シェキナー
+きゃっ…！？
+
+# alpha 400711 0 0.3
+# face 600431 "sad"
+# face 600531 "angry"
+# alpha 600431 1 0.3
+# alpha 600531 1 0.3
+# textboxarrow 0 1
+@カドケウス
+あー…
+
+# voice 6005 "keryukeion_0027"
+# textboxarrow 0 3
+@ケーリュケイオン
+そうなっちゃうんだね…
+
+# move 400711 3 0.5
+# face 400711 "angry"
+# alpha 400711 1 0.3
+# alpha 600431 0 0.3
+# alpha 600531 0 0.3
+# textboxarrow 0 2
+@シェキナー
+これは…リットゥの力ですね
+何て強力な…！
+
+# alpha 400711 0 0.3
+# face 600431 "sad"
+# face 600531 "angry"
+# alpha 600431 1 0.3
+# alpha 600531 1 0.3
+# textboxarrow 0 1
+@カドケウス
+実は私達も困ってたんだよね
+どんどんリットゥの力が強くなってて
+
+# textboxarrow 0 3
+@ケーリュケイオン
+町中の人が、ここをお屋敷だって
+認識しだした頃からかな
+近づくこともできないんだ
+
+# face 600431 "usual"
+# textboxarrow 0 1
+@カドケウス
+シェキナーはリットゥの
+友達みたいだから、
+いけると思ったんだけどね～
+
+# face 600531 "normal"
+# layer 400711 3
+# textboxarrow 0 3
+@ケーリュケイオン
+さっきのケンカで、あなたも
+「聖域」に入れなくなったみたいだね
+
+# voice 4007 "shekina_battle_0005"
+# face 400711 "normal"
+# alpha 400711 1 0.3
+# alpha 600431 0 0.3
+# alpha 600531 0 0.3
+# textboxarrow 0 2
+@シェキナー
+くっ…では、私は唯一のチャンスを
+逃してしまったというのですか…
+
+# face 400711 "angry"
+# move 600431 1 0
+# mask 600431 on
+# layer 600431 2
+# move 600531 5 0
+# mask 600531 on
+# layer 600531 2
+# textboxarrow 0 2
+@シェキナー
+それでも、諦めるわけにはいきません
+何とかしてリットゥの力を
+打ち破る方法を考えましょう
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# voice 6004 "kadokeusu_0004"
+# move 600431 2 0.5
+# face 600431 "normal"
+# alpha 600431 1 0.3
+# move 400711 4 0.5
+# mask 400711 on
+# textboxarrow 0 1
+@カドケウス
+だったら、良い方法があるよ
+
+# voice 6005 "keryukeion_0004"
+# face 600531 "normal"
+# alpha 600531 1 0.3
+# move 600431 1 0.5
+# move 400711 3 0.5
+# textboxarrow 0 3
+@ケーリュケイオン
+シェキナーにお似合いの方法だよ
+
+# face 400711 "normal"
+# textboxarrow 0 2
+@シェキナー
+貴方達、策があるのなら
+もっと早く話して下さい
+どのようにすれば良いのですか？
+
+# face 600431 "usual"
+# textboxarrow 0 1
+@カドケウス
+リットゥの力が強くなったのは
+町の人達がお屋敷を認識するように
+なった頃からだって言ったよね
+
+# textboxarrow 0 3
+@ケーリュケイオン
+きっと、たくさんの人達が
+そう「認識」することで「聖域」は
+強固なものになるんだよ
+
+# textboxarrow 0 1
+@カドケウス
+つまり、その「認識」を崩せばいい
+
+# voice 4007 "shekina_0040"
+# textboxarrow 0 2
+@シェキナー
+なるほど
+町の皆さんに、屋敷は廃墟なのだと
+認識させればいいのですね
+
+# face 600531 "angry"
+# textboxarrow 0 3
+@ケーリュケイオン
+私達もそう思ってたんだけどね
+上手くいかなかったんだ…
+
+# textboxarrow 0 1
+@カドケウス
+だから、考え方を変えてリットゥの
+力を逆手に取ろうと思うんだよね～
+
+# textboxarrow 0 2
+@シェキナー
+どういうことですか？
+
+# textboxarrow 0 3
+@ケーリュケイオン
+丘の上に宝石商のお屋敷があるって
+認識は変えようがない
+だったら…
+
+# se "bgm602_basic_on"
+# textboxarrow 0 1
+@カドケウス
+お屋敷に侵入できる存在がいるって
+認識を新しくつけ加えちゃえば
+いいんだよ
+
+# voice 4007 "shekina_0039"
+# textboxarrow 0 2
+@シェキナー
+認識の上書き…
+なかなか面白い発想ですね
+それで、具体的には？
+
+# face 600431 "normal"
+# textboxarrow 0 1
+@カドケウス
+そんなの決まってるでしょ～
+私達のキラーズが何か忘れたの？
+
+# face 600531 "normal"
+# textboxarrow 0 3
+@ケーリュケイオン
+私達の伝承、持ち主はヘルメス神
+そしてヘルメスは旅人や、商人、
+それから…
+
+# bgm "stop"
+# textboxarrow 0 0
+@ふたり
+泥棒の神様なんだよ～！
+
+# voice 4007 "shekina_0023"
+# face 400711 "surprise"
+# textboxarrow 0 2
+@シェキナー
+泥棒…！？
+貴方達、まさかっ
+
+# bgm "bgm102" 0
+# voice 6004 "kadokeusu_0005"
+# face 600431 "happy"
+# textboxarrow 0 1
+@カドケウス
+宝石商のお屋敷に忍び込める存在って
+いったら、一つしかないよね～
+
+# voice 6005 "keryukeion_0007"
+# face 600531 "smile"
+# textboxarrow 0 3
+@ケーリュケイオン
+シェキナー、きっと似合うと思うな～
+
+# voice 4007 "shekina_0012"
+# face 400711 "angry"
+# textboxarrow 0 2
+@シェキナー
+何て不埒な…！
+私に盗みを働けというのですかっ
+なりませんよ！
+
+# voice 6004 "kadokeusu_0028"
+# face 600431 "sad"
+# textboxarrow 0 1
+@カドケウス
+うーん…
+それじゃ、リットゥの「聖域」を
+破るのは無理かなー
+
+# face 600531 "normal"
+# textboxarrow 0 3
+@ケーリュケイオン
+私達にできる手伝いは、
+ここまでだからねー
+
+# voice 4007 "shekina_0013"
+# face 400711 "sad"
+# textboxarrow 0 2
+@シェキナー
+くっ…
+私が、よりにもよって
+盗人になるだなんて…
+
+# face 600431 "normal"
+# textboxarrow 0 1
+@カドケウス
+盗人じゃなくて怪盗だよ
+宝石だけを華麗に盗む夜の蝶！
+
+# textboxarrow 0 3
+@ケーリュケイオン
+怪盗のイメージを
+町中の人達につけ加えれば、
+みんな助けられると思うんだけどな～
+
+# textboxarrow 0 2
+@シェキナー
+くぅっ…
+この私が…
+
+;;回想シーン
+# se "SE_0742"
+# fadeout "white" 1
+# waitandnext 1
+
+# alpha 400711 0 0
+# alpha 600431 0 0
+# alpha 600531 0 0
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+# face 285 "normal"
+# alpha 285 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@リットゥ
+理由があってのことだ
+見逃して欲しい
+
+;;回想終了
+# se "SE_11762"
+# fadeout "white" 1
+# waitandnext 1
+
+# alpha 285 0 0
+# face 600431 "usual"
+# face 400711 "normal"
+# face 600531 "normal"
+# alpha 600431 1 0
+# alpha 400711 1 0
+# alpha 600531 1 0
+# imagealpha 1 0 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1.5
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@シェキナー
+…分かりました
+
+# face 600431 "normal"
+# textboxarrow 0 1
+@カドケウス
+おおっ
+本当にやるの？
+
+# textboxarrow 0 3
+@ケーリュケイオン
+予想より早い決断だったね
+
+# textboxarrow 0 2
+@シェキナー
+私も覚悟を決めました
+ただし、いいですか
+
+# textboxarrow 0 2
+@シェキナー
+あくまで怪盗のイメージを作るため
+仕方なく、ですからっ
+
+# textboxarrow 0 2
+@シェキナー
+あと、盗んだものは後でちゃんと
+返しますからねっ
+
+# fadeout "black" 1
+# waitandnext 1

@@ -1,0 +1,329 @@
+;;-------------------
+;;■第１０話「友達」
+;;□登場人物：ロンギヌス(コラボコス)、ナーゲル（コラボコス）、与一(コラボコス)
+;;　　　　　　さくら(上旬コスチューム)→さくら(中旬コスチュームにできれば)
+;;□背景　　：(昼)※６話と同じ場面
+;;-------------------
+# script "lisp"
+# background "corridor_daytime"
+# bgmfile "bgm183_184" "BgmGakuen003" 0
+;;ナーゲル
+# body 100661
+# pos 100661 5
+# scale 100661 0.8 0
+# layer 100661 1
+# alpha 100661 0 0
+# face 100661 "angry"
+;;ロンギ
+# body 300191
+# pos 300191 3
+# scale 300191 0.8 0
+# layer 300191 2
+# alpha 300191 0 0
+# face 300191 "usual"
+;;さくら
+# body 143
+# pos 143 3
+# scale 143 0.8 0
+# layer 143 3
+# alpha 143 0 0
+# mask 143 off
+# face 143 "usual"
+;;さくら
+# body 148
+# pos 148 3
+# scale 148 0.8 0
+# layer 148 3
+# alpha 148 0 0
+# mask 148 off
+;;ナーゲル
+# body 77
+# pos 77 1
+# scale 77 0.8 0
+# layer 77 2
+# alpha 77 0 0
+;;ケルベロス
+# body 144
+# pos 144 4
+# scale 144 0.8 0
+# layer 144 5
+# alpha 144 0 0
+;;ケルベロス
+# body 146
+# pos 146 4
+# scale 146 0.8 0
+# layer 146 5
+# alpha 146 0 0
+;;ケルベロス
+# body 149
+# pos 149 4
+# scale 149 0.8 0
+# layer 149 5
+# alpha 149 0 0
+;;ケルベロス
+# imageset 1 "e180201_2"
+# imagealpha 1 0 0
+# imagelayer 1 2
+# imagescale 1 0.64 0
+# imageset 3 "e180201_1"
+# imagealpha 3 0 0
+# imagelayer 3 4
+# imagescale 3 0.64 0
+;;与一
+# body 400571
+# pos 400571 1
+# scale 400571 0.8 0
+# layer 400571 4
+# alpha 400571 0 0
+;;イビルドレイク
+# body 900018
+# pos 900018 3
+# scale 900018 1 0
+# layer 900018 4
+# mask 900018 off
+;;イビルドレイク
+# body 900017
+# pos 900017 3
+# scale 900017 1 0
+# layer 900017 5
+# mask 900017 off
+# alpha 900017 0 0
+;;さくらボイス用
+# body 602311
+# alpha 602311 0 0
+;;さくらボイス用
+# body 602331
+# alpha 602331 0 0
+# imageset 4 "bg_white"
+# imagealpha 4 0 0
+# imagelayer 4 5
+# imagescale 4 2 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+# chara 900018
+@イビルドレイク
+『なぜだ…
+　なぜ、これ程にまで…』
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# alpha 900018 0 0.5
+# alpha 144 1 0.5
+# alpha 143 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+なんや、さっきまで息巻いとったのに
+たいしたことないやっちゃなぁ
+
+# textflame 0 0
+@マスター
+そうだね
+みんなで乗り越えてきたことに
+比べれば、本当にたいしたことない
+
+# alpha 143 0 0.5
+# alpha 144 0 0.5
+# alpha 100661 1 0.5
+# alpha 300191 1 0.5
+# alpha 400571 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 100661
+# voice 1006 "nageruring_0003"
+@ナーゲルリング
+ええ、私たちに敵うわけないです
+
+# face 300191 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 300191
+@ロンギヌス
+うん、もう一押しだね！
+
+# alpha 143 1 0.5
+# alpha 144 1 0.5
+# alpha 100661 0 0.5
+# alpha 300191 0 0.5
+# alpha 400571 0 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+なら、改めて…
+さくら、総仕上げといこうや！
+
+# face 143 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 143
+# voice 60231 "ccsakura_g_0022"
+@さくら
+うん…って総仕上げって？
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+いいから、ほら準備するで！
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 143
+@さくら
+えっ、うん！
+
+# face 143 "angry"
+# imagepos 4 0 0
+# imagealpha 4 0.3 0.5
+# se "SE_10342"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 602311
+@さくら
+『包囲』！
+
+;;↑それっぽいエフェクトがあれば入れてください
+;;時間経過（暗転？
+;;さくらの立ち絵を中旬コスチュームへ
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# face 148 "normal"
+# imagealpha 4 0 0
+# alpha 143 0 0
+# alpha 148 1 0
+# alpha 144 0 0
+# alpha 149 1 0
+# waitandnext 0.6
+
+# fadein "black" 1
+# textflame 1 1
+# textboxarrow 0 2
+# chara 148
+# voice 60231 "ccsakura_g_0041"
+@さくら
+わあ…これって！
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+# voice 9966 "cckero_g_0032"
+@ケロちゃん
+こんなこともあろうかと
+知世から預かってきたんや
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+やっぱり、最後はビシッと決めんとな！
+
+# face 148 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 148
+# voice 60231 "ccsakura_g_0003"
+@さくら
+うん！
+ありがとう、知世ちゃん…
+
+# face 400571 "happy"
+# alpha 148 0 0.5
+# alpha 149 0 0.5
+# alpha 100661 1 0.5
+# alpha 300191 1 0.5
+# alpha 400571 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 400571
+# voice 4005 "yoichi_0021"
+@与一
+わあ、素敵です
+さくらちゃん！
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "normal"
+# alpha 100661 0 0.5
+# alpha 300191 0 0.5
+# alpha 400571 0 0.5
+# alpha 900018 1 0.5
+# textboxarrow 1 0
+# chara 900018
+@イビルドレイク
+『ええい、
+　ないがしろにしよって！』
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# alpha 900017 0.5 0.2
+# waitandnext 0.5
+
+# alpha 900017 0 0.5
+# waitandnext 0.7
+
+# alpha 900017 0.8 0.3
+# waitandnext 0.5
+
+# alpha 900017 0.4 0.5
+# waitandnext 0.8
+
+# fadein "black" 0.5
+# alpha 900017 1 0
+# alpha 900018 0 0
+# waitandnext 0.8
+
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@マスター
+な、なんだ…！？
+
+# face 148 "surprise"
+# alpha 900017 0 0.5
+# alpha 144 1 0.5
+# alpha 148 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+# voice 9966 "cckero_g_0022"
+@ケロちゃん
+なんや、
+なんか雰囲気が変わったで！？
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "normal"
+# alpha 900017 1 0.5
+# alpha 144 0 0.5
+# alpha 148 0 0.5
+# textboxarrow 1 0
+# chara 900017
+@イビルドレイク
+『これで、これで…
+　貴様らを亡き者にぃぃぃっ！！』
+
+;;戦闘っぽいエフェクトを
+;;～～～～～～～～
+;;★バトル（イビルドレイク風）
+;;※属性変更、変更する順番の属性は問いませんのでバランスで調整してください
+;;～～～～～～～～
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# se "SE_9157"
+# shake 0 0.5
+# waitandnext 1
+

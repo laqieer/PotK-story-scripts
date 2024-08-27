@@ -1,0 +1,315 @@
+;;-----------------------------------------
+;;【ファントムオブキル_まどかコラボ】鹿目まどかドレスVer.キャラクエ　修正稿
+;;【EP2】戦闘前
+;;スクリプト最後の背景：街中その２
+;;背景：街中
+;;-----------------------------------------
+# script "lisp"
+# background "004_outland"
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;まどか
+# body 3401111
+# pos 3401111 3
+# scale 3401111 0.8 0
+# layer 3401111 2
+# alpha 3401111 0 0
+# mask 3401111 off
+;;-----------------------------------------
+;;【EP2】
+;;背景：街中
+# move 3401111 3 0
+# face 3401111 "normal"
+# alpha 3401111 1 0
+# mask 3401111 off
+# textflame 1 1
+# textboxarrow 0 2
+@まどか
+なんとか街に入れたね
+マスターは大丈夫？
+
+;;モノローグ
+# textflame 0 0
+@
+大丈夫、と返すマスター
+どうやら、変装が上手くいったようだ
+
+# face 3401111 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@まどか
+うん、ならよかった
+じゃあ、メモに書いてある
+用事を済ませないと…あれ？
+
+;;モノローグ
+# textflame 0 0
+@
+メモを見て首をかしげるまどか
+マスターもそのメモを覗き見る
+
+# textflame 1 1
+# textboxarrow 0 2
+@まどか
+買い物に行って…
+疲れたらお茶をする？
+これって用事なのかな？
+
+;;モノローグ
+# textflame 0 0
+@
+お店を見つけるのも大変だから
+ちゃんと休みつつ進むことを
+考えてくれたのかも、とマスター
+
+# voice 4011 "madoka_0004"
+# face 3401111 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@まどか
+そうかもしれないね
+ふふ、みんな優しいんだね
+
+# face 3401111 "normal"
+# textboxarrow 0 2
+@まどか
+メモの意味は行ってみれば
+わかるかもしれないし…
+
+# voice 4011 "madoka_0001"
+# textboxarrow 0 2
+@まどか
+とりあえず市場のほうに
+行ってみよう、マスター
+
+;;演出：移動の暗転
+;;背景：街中その２
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "town"
+# move 3401111 3 0
+# face 3401111 "normal"
+# alpha 3401111 1 0
+# mask 3401111 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 4011 "madoka_0041"
+# textboxarrow 0 2
+# textwindow "normal"
+@まどか
+わぁ…いろいろあるんだね
+見たことないものがいっぱい！
+
+;;モノローグ
+# textflame 0 0
+@
+依頼をこなしている最中だが
+せっかくの機会だとマスターは
+まどかと市場を見て回っていた
+
+;;選択肢
+;;@
+;;A　楽しい？
+;;B　何が気になる？
+;;C　疲れたな…
+# select "楽しい？" "select_label_01" "何が気になる？" "select_label_02" "疲れたな…" "select_label_03"
+依頼をこなしている最中だが
+せっかくの機会だとマスターは
+まどかと市場を見て回っていた
+
+;;アンサー
+;;A
+# label "select_label_01"
+# labeljump "select_label_end"
+# voice 4011 "madoka_0042"
+# face 3401111 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@まどか
+えへへ、ちょっぴりね
+
+;;B
+# label "select_label_02"
+# labeljump "select_label_end"
+# voice 4011 "madoka_0028"
+# face 3401111 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@まどか
+あれは…お菓子、かな？
+
+;;C
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 3401111 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@まどか
+向こうに休めるところがあるみたい
+
+# label "select_label_end"
+# voice 4011 "madoka_0019"
+# face 3401111 "sad"
+# textboxarrow 0 2
+@まどか
+って、わたしってば
+遊びじゃないのにこんな気分で…
+
+;;モノローグ
+# textflame 0 0
+@
+しょんぼりするまどか
+だが、マスターは
+安心したよと話す
+
+# voice 4011 "madoka_0022"
+# face 3401111 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@まどか
+安心…どうして？
+
+;;モノローグ
+# textflame 0 0
+@
+いつも頑張るまどかを
+こんな風に労いたかったんだ
+と答える
+
+;;モノローグ
+@
+用事の途中だけど
+少しくらい息抜きしてもいい
+とマスターはまどかに提案する
+
+# voice 4011 "madoka_0030"
+# face 3401111 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@まどか
+マスター…ありがとう
+わたし、こんな風に街を
+歩くの久しぶりで…
+
+# textboxarrow 0 2
+@まどか
+わたしの暮らしてた街とは
+全然違うけど、それでも…
+
+;;モノローグ
+# textflame 0 0
+@
+元いた世界のことを
+思い返しているのだろう
+
+;;モノローグ
+@
+その物憂げな表情は
+今までのまどかにはいろいろあった
+のだろうと想起させるものだった
+
+# face 3401111 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@まどか
+でも、今のわたしには
+今のわたしにできることを
+しっかりやらないと
+
+;;モノローグ
+# textflame 0 0
+@
+まどかはそう言うと
+いつもの笑顔に戻る
+
+;;モノローグ
+@
+いつもみんなを助けてくれるまどか
+
+;;モノローグ
+@
+マスターや斬ル姫達も、
+そんなまどかの
+支えとなれたらいいなと話す
+
+# voice 4011 "madoka_0030"
+# face 3401111 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@まどか
+心配してくれてありがとう
+
+# textboxarrow 0 2
+@まどか
+でも、わたしのことは
+大丈夫だから、ね
+
+# face 3401111 "sad"
+# textboxarrow 0 2
+@まどか
+それにしても
+ずっと歩いてたから
+少し疲れちゃったね
+
+;;モノローグ
+# textflame 0 0
+@
+お茶をするのもメモに書かれていた
+従うことにしよう、とマスター
+
+# face 3401111 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@まどか
+うん、そうしよう
+…あれ、なんだか向こうが
+騒がしいよ？
+
+;;モノローグ
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# textflame 0 0
+@
+まどかの視線の先を見ると
+そこには一般人を詰問する
+兵士の姿があった
+
+# serif 1
+@兵士
+侵入者がこのあたりにいる
+という報告があった…
+貴様何か知っているんだろう！
+
+# serif 1
+@一般人
+し、知りません！
+ひええっ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 3401111 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@まどか
+あの侵入者って
+もしかしてわたし達のこと…
+
+;;モノローグ
+# textflame 0 0
+@
+自分達のせいで、他の人が
+傷つくのは見ていられない
+助けに行こう、とマスター
+
+# voice 4011 "madoka_0003"
+# face 3401111 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@まどか
+うん、マスターなら
+そう言ってくれると思ったよ！

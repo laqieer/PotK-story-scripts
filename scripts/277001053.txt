@@ -1,0 +1,1376 @@
+;;-----------------------------------------
+;;海上編5-3
+;;-----------------------------------------
+# script "lisp"
+# background "sea_floor_jungle_day"
+# bgm "stop"
+;;-----------------------------------------
+;;如意金箍棒
+# body 2203111
+# pos 2203111 3
+# scale 2203111 0.8 0
+# layer 2203111 3
+# mask 2203111 off
+# alpha 2203111 0 0
+;;フォルカス
+# body 2301821
+# pos 2301821 3
+# scale 2301821 0.8 0
+# layer 2301821 3
+# mask 2301821 off
+# alpha 2301821 0 0
+;;ティルフィング
+# body 2101441
+# pos 2101441 3
+# scale 2101441 0.8 0
+# layer 2101441 3
+# mask 2101441 off
+# alpha 2101441 0 0
+;;ソロモン
+# body 2503121
+# pos 2503121 3
+# scale 2503121 0.8 0
+# layer 2503121 4
+# mask 2503121 off
+# alpha 2503121 0 0
+;;カシウス
+# body 2303121
+# pos 2303121 3
+# scale 2303121 0.8 0
+# layer 2303121 3
+# mask 2303121 off
+# alpha 2303121 0 0
+;;レーヴァテイン
+# body 2100241
+# pos 2100241 3
+# scale 2100241 0.8 0
+# layer 2100241 3
+# mask 2100241 off
+# alpha 2100241 0 0
+;;ヒョウハ
+# body 2402011
+# pos 2402011 3
+# scale 2402011 0.8 0
+# layer 2402011 3
+# mask 2402011 off
+# alpha 2402011 0 0
+;;リサナウト
+# body 2203011
+# pos 2203011 3
+# scale 2203011 0.8 0
+# layer 2203011 3
+# mask 2203011 off
+# alpha 2203011 0 0
+;;ミュルグレス
+# body 2104611
+# pos 2104611 3
+# scale 2104611 0.8 0
+# layer 2104611 3
+# mask 2104611 off
+# alpha 2104611 0 0
+;;ロンギヌス
+# body 2300131
+# pos 2300131 3
+# scale 2300131 0.8 0
+# layer 2300131 3
+# mask 2300131 off
+# alpha 2300131 0 0
+;;ロジェスティラ
+# body 2503711
+# pos 2503711 3
+# scale 2503711 0.8 0
+# layer 2503711 3
+# mask 2503711 off
+# alpha 2503711 0 0
+;;オルフェウス
+# body 2603211
+# pos 2603211 3
+# scale 2603211 0.8 0
+# layer 2603211 3
+# mask 2603211 off
+# alpha 2603211 0 0
+;;イチイバル
+# body 2402211
+# pos 2402211 3
+# scale 2402211 0.8 0
+# layer 2402211 3
+# mask 2402211 off
+# alpha 2402211 0 0
+;;クラーケン
+# body 805088
+# pos 805088 3
+# scale 805088 0.8 0
+# layer 805088 3
+# mask 805088 off
+# alpha 805088 0 0
+;;クラーケン小
+# body 805121
+# pos 805121 3
+# scale 805121 0.8 0
+# layer 805121 2
+# mask 805121 off
+# alpha 805121 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imagescale 0 1.2 0
+# imageset 1 "e200701_map"
+# imagealpha 1 0 0
+# imageset 2 "noise_01"
+# imagealpha 2 0 0
+# imagescale 0 1.2 0
+# imageset 3 "noise_02"
+# imagealpha 3 0 0
+# imagescale 0 1.2 0
+# imageset 4 "noise_03"
+# imagealpha 4 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;背景：ジャングル
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_7046"
+# alpha 805088 1 1
+# waitandnext 1.5
+
+# fadeout "white" 0.8
+# waitandnext 0.8
+
+# alpha 805088 0 0
+# fadein "white" 0.8
+# waitandnext 0.8
+
+# bgmfile "bgm374" "BgmSeaEventBattle004" 0
+# alpha 2203011 1 0.5
+# textwindow "nomal"
+# face 2203011 "normal"
+# voice 2030 "risanautr_l_0006"
+@リサナウト
+やったわ！
+クラーケンのマナが、
+島に還っていく…
+
+# move 2203011 4 0.7
+# mask 2203011 on
+# move 805121 2 0
+# mask 805121 on
+# alpha 805121 1 0.7
+# waitandnext 0.8
+
+# se "SE_0928"
+# waitandnext 1
+
+@リサナウト
+やっぱり…
+あなただったのね
+
+@リサナウト
+こんな風に…
+手のひらに乗る大きさだったのに
+ずいぶん無茶をしたわね
+
+# se "SE_0928"
+# waitandnext 1
+
+# alpha 2203011 0 0.5
+# alpha 805121 0 0.5
+# move 2100241 2 0
+# mask 2100241 on
+# alpha 2100241 1 0.5
+# move 2101441 4 0
+# mask 2101441 on
+# alpha 2101441 1 0.5
+# face 2101441 "sad"
+# voice 210024 "revatein_lo_0002"
+@レーヴァテイン
+リサナウト…
+その子はひとりで、
+さびしかったって
+
+# voice 210144 "tyrufing_lo_0036"
+@ティルフィング
+リサナウトさん…
+おこらないであげてください、
+おねがいします
+
+# alpha 2100241 0 0.5
+# alpha 2101441 0 0.5
+# alpha 2203011 1 0.5
+# alpha 805121 1 0.5
+# voice 2030 "risanautr_l_0003"
+@リサナウト
+うん、わかってる…
+2人とも、ありがとう
+
+@クラーケン
+……（プルプル…）
+
+# voice 2030 "risanautr_l_0002"
+@リサナウト
+あなたも、私と一緒に帰ろうね
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 2203011 0 0
+# alpha 805121 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 2203011 1 0.5
+# move 2402211 2 0
+# mask 2402211 on
+# alpha 2402211 1 0.5
+# textwindow "nomal"
+# face 2203011 "angry"
+# voice 2030 "risanautr_l_0028"
+@リサナウト
+…最初は、ほんの軽い気持ちだった
+私の時間軸の世界で不足するマナを、
+この島から分けてもらおうとしたの
+
+@リサナウト
+それが、まさか
+こんなことになるなんて…
+
+# voice 540221 "ichiibal_c_0034"
+@イチイバル
+世界を想うキミの気持ちは
+間違っていないし、
+素晴らしいことだと思う
+
+@イチイバル
+やり方が…少し雑だっただけだよ
+もう同じ失敗はしないよね
+
+# face 2203011 "normal"
+@リサナウト
+もちろんよ！
+私を誰だと思っているの？
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 2203011 0 0
+# alpha 2402211 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 2203011 3 0
+# mask 2203011 off
+# alpha 2203011 1 0.5
+# textwindow "nomal"
+# voice 2030 "risanautr_l_0003"
+@リサナウト
+うん…これでよし！
+すべての時間軸を調整できたわよ
+これで、すべてが元通りになる
+
+# voice 2030 "risanautr_l_0030"
+@リサナウト
+あなた達のおかげよ、
+本当にありがとう…
+みんな、元気でね
+
+# move 2203011 4 0.5
+# mask 2203011 on
+# move 2603211 2 0
+# mask 2603211 on
+# alpha 2603211 1 0.5
+# face 2603211 "sad"
+# voice 560321 "orpheus_c_0013"
+@オルフェウス
+リサっち、これでお別れなの？
+マジで？
+てか、神曲まだ聴かせてないし！
+
+@リサナウト
+オルフェウス…本当に残念よ
+でも、曲作りに熱中するのも、
+ほどほどにね
+
+# alpha 2603211 0 0.5
+# move 2402011 2 0
+# mask 2402011 on
+# alpha 2402011 1 0.5
+# face 2402011 "normal"
+# voice 540201 "hyoha_c_0003"
+@ヒョウハ
+あたしは最初っから
+あんたのこと、仲間だと思ってたぞ！
+一度、手合わせしたかったなぁ
+
+# voice 2030 "risanautr_l_0004"
+@リサナウト
+いいけど、私が勝つわよ
+
+# voice 540201 "hyoha_c_0005"
+@ヒョウハ
+ははっ！
+そんなのわからないだろ？
+いまここで、やってみるか？
+
+# alpha 2402011 0 0.5
+# move 2104611 2 0
+# mask 2104611 on
+# alpha 2104611 1 0.5
+# face 2104611 "angry"
+# voice 510461 "murgleys_c_0027"
+@ミュルグレス
+ヒョウハったら、子供なんだから…
+
+@ミュルグレス
+てか、ミュルはニョイ子に騙されたの
+リサナウトがお金持ちだって…
+違うんでしょ？
+
+# face 2203011 "sad"
+# voice 2030 "risanautr_l_0031"
+@リサナウト
+残念だけど…ごめんなさい
+
+# face 2104611 "normal"
+# voice 510461 "murgleys_c_0004"
+@ミュルグレス
+アンタが謝ることじゃないわよ
+別の時間軸でも、元気でね
+
+# face 2203011 "normal"
+# voice 2030 "risanautr_l_0030"
+@リサナウト
+ありがとう、あなたも…
+糖分の取りすぎには、気をつけて
+
+# face 2104611 "angry"
+# voice 510461 "murgleys_c_0022"
+@ミュルグレス
+えっ？
+
+# alpha 2104611 0 0.5
+# move 2203111 2 0
+# mask 2203111 on
+# alpha 2203111 1 0.5
+# face 2203111 "sad"
+# voice 520311 "nyoikinkobou_c_0015"
+@如意金箍棒
+リサナウトちゃん…
+もっと、お話したかったよ
+
+@リサナウト
+私もよ、ニョイ子…
+
+# se "SE_0899"
+@ビコウ
+ウキッ！
+
+@リサナウト
+うん、ビコウも元気でね
+布を引っ張りすぎたらダメよ
+
+# alpha 2203111 0 0.5
+# move 2301821 2 0
+# mask 2301821 on
+# alpha 2301821 1 0.5
+# face 2301821 "sad"
+@フォルカス
+リサナウト…
+
+# voice 2030 "risanautr_l_0005"
+@リサナウト
+フォルカス…
+私の提案を受けてくれて、
+ありがとう
+
+# face 2301821 "normal"
+# voice 530181 "forcas_c_0005"
+@フォルカス
+ふふっ…
+あの時は、ここまで壮大な話だとは
+思ってませんでした
+
+@リサナウト
+この先に、どんな困難が
+待ち受けているとしても、
+あなた達なら、きっと超えていけるわ
+
+# face 2301821 "usual"
+# voice 530181 "forcas_c_0022"
+@フォルカス
+どうしたんですか？
+まるで、予言のような…
+
+# voice 2030 "risanautr_l_0032"
+@リサナウト
+いいえ、これは予言ではない
+確定事象の報告に過ぎないの
+
+# alpha 2301821 0 0.5
+# alpha 2203011 0 0.5
+# move 2402211 3 0
+# mask 2402211 off
+# alpha 2402211 1 0.5
+# voice 540221 "ichiibal_c_0032"
+@イチイバル
+そうだよ、予言や予知なんて
+無意味だよね
+
+@イチイバル
+どんなに離れていても、
+仲間は仲間だ
+そうだよね、フォルカス？
+
+# alpha 2402211 0 0.5
+# move 2301821 3 0
+# mask 2301821 off
+# alpha 2301821 1 0.5
+# face 2301821 "normal"
+# voice 530181 "forcas_c_0003"
+@フォルカス
+ええ、そう思います
+
+# alpha 2301821 0 0.5
+# alpha 2203011 1 0.5
+# move 2402211 2 0
+# mask 2402211 on
+# alpha 2402211 1 0.5
+# face 2402211 "shy"
+# voice 540221 "ichiibal_c_0042"
+@イチイバル
+じゃ、そういうことだから
+悲しいお別れは苦手なんだ
+テヘッ☆
+
+@リサナウト
+イチイバル…
+
+# alpha 2402211 0 0.5
+# move 2503711 2 0
+# mask 2503711 on
+# alpha 2503711 1 0.5
+# face 2503711 "surprise"
+# voice 550371 "logistille_c_0002"
+@ロジェスティラ
+あのあのっ
+リサナウトさん…
+
+@リサナウト
+ロジェスティラ、
+あなたには頼りきりだったわね
+
+@ロジェスティラ
+いえ、そんなっ…
+えと、その…
+わたしのことは、ロジェ、と…
+
+# voice 2030 "risanautr_l_0030"
+@リサナウト
+そうなの？
+じゃあ、ロジェ…
+ありがとう
+
+# face 2503711 "normal"
+# voice 550371 "logistille_c_0042"
+@ロジェスティラ
+えへえへっ…
+ありがとうございますっ
+
+# voice 550371 "logistille_c_0041"
+@ロジェスティラ
+リサナウトさんは美人で、
+すごい力を持ってて…素敵…
+
+# alpha 2503711 0 0.5
+# alpha 2203011 0 0.5
+# move 2503121 2 0
+# mask 2503121 on
+# alpha 2503121 1 0.5
+# move 2101441 4 0
+# mask 2101441 on
+# alpha 2101441 1 0.5
+# face 2503121 "sad"
+# voice 250312 "solomon_lo_0015"
+@ソロモン
+リサナウト…
+ほんとうにいっちゃうの？
+
+# voice 210144 "tyrufing_lo_0015"
+@ティルフィング
+おわかれは、さびしいです…
+もっと、いっしょに
+あそびたかったです…
+
+# alpha 2101441 0 0.5
+# alpha 2503121 0 0.5
+# move 2203011 3 0
+# mask 2203011 off
+# alpha 2203011 1 0.5
+@リサナウト
+ソロモン、ティルフィング…
+私もよ
+
+# alpha 2203011 0 0.5
+# move 2100241 2 0
+# mask 2100241 on
+# alpha 2100241 1 0.5
+# face 2100241 "smile"
+# move 2303121 4 0
+# mask 2303121 on
+# alpha 2303121 1 0.5
+# face 2303121 "normal"
+# voice 230312 "cassius_lo_0004"
+@カシウス
+このよのすべては、
+えんかんのいんし…
+
+# voice 210024 "revatein_lo_0003"
+@レーヴァテイン
+…うん、またあえるよね？
+
+# alpha 2100241 0 0.5
+# alpha 2303121 0 0.5
+# alpha 2203011 1 0.5
+@リサナウト
+カシウス、レーヴァテイン…
+ええ、きっと会えるわよ！
+
+# alpha 2203011 0 0.5
+# move 2300131 3 0
+# mask 2300131 off
+# alpha 2300131 1 0.5
+# face 2300131 "sad"
+# voice 230013 "ronginus_lo_0017"
+@ロンギヌス
+リサナウトさん…
+ふぇっ…ひっく…
+うぇぇぇぇんっ…！
+
+# alpha 2300131 0 0.5
+# alpha 2203011 1 0.5
+# face 2203011 "sad"
+@リサナウト
+ロンギヌス…
+
+# alpha 2203011 0 0.5
+# move 2603211 3 0
+# mask 2603211 off
+# alpha 2603211 1 0.5
+# voice 560321 "orpheus_c_0016"
+@オルフェウス
+ロンギヌス…
+お別れは笑顔でって…
+うぅ…うわーん！
+
+# alpha 2603211 0 0.5
+# alpha 2203011 1 0.5
+@リサナウト
+オルフェウスまで…
+
+# move 2203011 4 0.5
+# mask 2203011 on
+# move 2300131 2 0
+# mask 2300131 on
+# alpha 2300131 1 0.5
+# voice 230013 "ronginus_lo_0016"
+@ロンギヌス
+ひっく…
+えがおで、おわかれ…
+がんばらなくちゃ…
+
+# voice 230013 "ronginus_lo_0017"
+@ロンギヌス
+うぅぅ…
+うぇぇぇぇんっ…！
+
+# face 2203011 "normal"
+# voice 2030 "risanautr_l_0003"
+@リサナウト
+いいのよ、ロンギヌス
+悲しい時は、泣いていいの
+
+@リサナウト
+また、きっと会えるわ
+その時まで、元気でね
+
+# voice 230013 "ronginus_lo_0016"
+@ロンギヌス
+うん…
+リサナウト、さん、も…
+げ、げんき、で…
+
+@リサナウト
+うん…
+
+# alpha 2300131 0 0.5
+# alpha 2203011 0 0.5
+# textwindow "close"
+# waitandnext 0.8
+
+# bgm "stop"
+# move 2203111 3 0
+# mask 2203111 off
+# alpha 2203111 1 0.5
+# textwindow "nomal"
+# face 2203111 "normal"
+@如意金箍棒
+…………
+
+# alpha 2203111 0 0.5
+# move 2402211 3 0
+# mask 2402211 off
+# alpha 2402211 1 0.5
+# face 2402211 "surprise"
+@イチイバル
+…………
+
+# alpha 2402211 0 0.5
+# move 2503121 3 0
+# mask 2503121 off
+# alpha 2503121 1 0.5
+# face 2503121 "sad"
+@ソロモン
+…………
+
+# alpha 2503121 0 0.5
+# move 2303121 3 0
+# mask 2303121 off
+# alpha 2303121 1 0.5
+@カシウス
+…………
+
+# alpha 2303121 0 0.5
+# move 2104611 3 0
+# mask 2104611 off
+# alpha 2104611 1 0.5
+# face 2104611 "angry"
+# voice 510461 "murgleys_c_0001"
+@ミュルグレス
+…しみじみしてるとこ悪いけど、
+この後ってどうなるの？
+
+@ミュルグレス
+今のところ、
+なんの変化もないんだけど？ 
+
+# alpha 2104611 0 0.5
+# move 2203011 3 0
+# mask 2203011 off
+# alpha 2203011 1 0.5
+# face 2203011 "sad"
+# voice 2030 "risanautr_l_0042"
+@リサナウト
+おかしいわね？
+じきに元に戻るはずなんだけど…
+
+;;時間経過
+# fadeout "black" 1
+# waitandnext 1
+
+# bgmfile "bgm374" "BgmSeaEventBattle004" 0
+# alpha 2203011 0 0
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# move 2402011 3 0
+# mask 2402011 off
+# alpha 2402011 1 0.5
+# textwindow "nomal"
+# face 2402011 "surprise"
+# voice 540201 "hyoha_c_0023"
+@ヒョウハ
+…って、おかしいだろ！
+けっこう時間経ったよな！？
+なーんにも変わってないぞ？
+
+# move 2402011 2 0.5
+# mask 2402011 on
+# move 2203011 4 0
+# mask 2203011 on
+# alpha 2203011 1 0.5
+# voice 2030 "risanautr_l_0028"
+@リサナウト
+うーん…
+もしかしたら、長い間、
+違う時間軸と干渉したせいかも
+
+@リサナウト
+正常に戻るまで、
+時間がかかるのかもしれないわ
+
+@ヒョウハ
+いつになったら元に戻るんだ？
+
+@リサナウト
+とにかく、時間がたてば、
+ちゃんと戻ると思うよ
+…多分
+
+# alpha 2402011 0 0.5
+# move 2301821 2 0
+# mask 2301821 on
+# alpha 2301821 1 0.5
+# voice 530181 "forcas_c_0002"
+@フォルカス
+でしたら、みんなで一緒に
+この島が元に戻るのを見届けません？
+
+# face 2203011 "shy"
+# voice 2030 "risanautr_l_0022"
+@リサナウト
+えっ？
+でも、私は…
+
+# alpha 2301821 0 0.5
+# move 2603211 2 0
+# mask 2603211 on
+# alpha 2603211 1 0.5
+# face 2603211 "normal"
+# voice 560321 "orpheus_c_0004"
+@オルフェウス
+それ、名案っしょ！
+
+# alpha 2203011 0 0.5
+# alpha 2603211 0 0.5
+# move 2402211 3 0
+# mask 2402211 off
+# alpha 2402211 1 0.5
+# face 2402211 "normal"
+# voice 540221 "ichiibal_c_0002"
+@イチイバル
+はいはい
+イチイバルさんから提案でーす
+
+# voice 540221 "ichiibal_c_0021"
+@イチイバル
+リサナウトには罰として、
+この島で子供と遊ぶ係に任命します
+キランッ☆
+
+# alpha 2402211 0 0.5
+# move 2104611 3 0
+# mask 2104611 off
+# alpha 2104611 1 0.5
+# voice 510461 "murgleys_c_0032"
+@ミュルグレス
+ミュルも同意するわ
+無限の体力を持つ子供と遊ぶなんて、
+罰ゲーム以外のなにものでもないわよ
+
+# alpha 2104611 0 0.5
+# move 2203011 3 0
+# mask 2203011 off
+# alpha 2203011 1 0.5
+# face 2203011 "normal"
+# voice 2030 "risanautr_l_0008"
+@リサナウト
+ば、罰ゲームなら、仕方ないわね
+それじゃ、なにして遊ぼうか？
+
+# alpha 2203011 0 0.5
+# move 2300131 3 0
+# mask 2300131 off
+# alpha 2300131 1 0.5
+# face 2300131 "normal"
+# voice 230013 "ronginus_lo_0020"
+@ロンギヌス
+わぁっ！
+じゃあ、おんぶ！
+おんぶしてください！
+
+# alpha 2300131 0 0.5
+# move 2100241 2 0
+# mask 2100241 on
+# alpha 2100241 1 0.5
+# move 805121 4 0
+# mask 805121 on
+# alpha 805121 1 0.5
+# face 2100241 "normal"
+# voice 210024 "revatein_lo_0004"
+@レーヴァテイン
+くらーけんは、どこ？
+いっしょに、あそぶ
+
+@クラーケン
+（プルプルッ！）
+
+# alpha 2100241 0 0.5
+# alpha 805121 0 0.5
+# move 2503121 2 0
+# mask 2503121 on
+# alpha 2503121 1 0.5
+# face 2503121 "normal"
+# move 2101441 4 0
+# mask 2101441 on
+# alpha 2101441 1 0.5
+# eye 2101441 "close"
+# voice 210144 "tyrufing_lo_0005"
+@ティルフィング
+よろこんでますね！
+さあ、うみであそびましょう！
+
+# voice 250312 "solomon_lo_0009"
+@ソロモン
+ちょっと、あなたたち！
+うみにはいるまえに、
+じゅんびうんどうよ！
+
+# alpha 2503121 0 0.5
+# alpha 2101441 0 0.5
+# move 2203111 2 0
+# mask 2203111 on
+# alpha 2203111 1 0.5
+# face 2203111 "usual"
+# move 2303121 4 0
+# mask 2303121 on
+# alpha 2303121 1 0.5
+# face 2303121 "sad"
+@カシウス
+ふーっ
+ふー…っ
+
+# voice 520311 "nyoikinkobou_c_0004"
+@如意金箍棒
+カシウスちゃん、貸してみて？
+このボールに空気をいれるのね？
+せーの…
+
+@如意金箍棒
+ふーーーーーっ！
+
+# face 2303121 "happy"
+# voice 230312 "cassius_lo_0039"
+@カシウス
+わぁ…
+まんまる…
+
+# face 2203111 "happy"
+@如意金箍棒
+これでいい？
+それじゃ、泳ごうか？
+
+;;場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：ラグーナ島海底版（海上編MAP海底）
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 2203111 0 0
+# alpha 2303121 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+青い海に沈む常夏の島、
+ラグーナ島…
+
+@
+クラーケンによって
+危機を迎えた海底のラグーナ島は
+13人のキル姫によって救われた
+
+@
+リサナウトの出来心から端を発した
+夏の事件も終幕を迎えようとしている
+
+@
+海で戯れるキル姫に囲まれ、
+一匹の小さなイカは
+人生最高の幸せな時間を味わっていた
+
+@
+…はずだった
+
+# fadeout "black" 2
+# waitandnext 2
+
+# imagealpha 1 0 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "black" 2
+# waitandnext 2
+
+# alpha 2402211 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# face 2402211 "surprise"
+@イチイバル
+リサっち…
+リサリサ…
+リサちー…
+
+# voice 540221 "ichiibal_c_0028"
+@イチイバル
+ふむ…
+どれがいいかな
+
+# move 2402211 2 0.5
+# mask 2402211 on
+# move 2203011 4 0.5
+# mask 2203011 on
+# alpha 2203011 1 0.5
+# face 2203011 "sad"
+# voice 2030 "risanautr_l_0002"
+@リサナウト
+イチイバルったら、
+まだ悩んでるの？
+私は…どれでもいいわよ
+
+@イチイバル
+キミの力は、謎が多いよね
+複数の時間軸を行き来して、
+失敗したら、巻き戻せる…
+
+@イチイバル
+それなら、どうして最初に戻って
+イカを処理しなかったのかな？
+
+# alpha 2402211 0 0.5
+# alpha 2203011 0 0.5
+# move 2100241 3 0
+# mask 2100241 off
+# alpha 2100241 1 0.5
+# face 2100241 "angry"
+# voice 210024 "revatein_lo_0014"
+@レーヴァテイン
+…いかを、しょり？
+どういうこと？
+
+# alpha 2100241 0 0.5
+# alpha 2402211 1 0.5
+# alpha 2203011 1 0.5
+@イチイバル
+いや、たとえばの話だから
+怒らないでよ、レーヴァテイン
+
+# face 2203011 "angry"
+# voice 2030 "risanautr_l_0028"
+@リサナウト
+問題を解決する時間軸に
+たどり着くまで、
+すでに複数の時間軸をつなげたし…
+
+@リサナウト
+子供達と一緒に行動し始めたら、
+可愛いくて、離れられなかったのよ
+
+@リサナウト
+どうして、この島に
+子供達がいるのか
+私なりに考えてみたの
+
+# face 2402211 "normal"
+# voice 540221 "ichiibal_c_0020"
+@イチイバル
+いいね、聞かせてよ
+
+@リサナウト
+もしかしたら、島が海底に
+沈んだせいで重力が変化したことが
+原因なのかも
+
+# face 2402211 "surprise"
+# voice 540221 "ichiibal_c_0003"
+@イチイバル
+たしかに時間と重力には
+密接な関係があると
+言われているね
+
+@リサナウト
+その重力の変化によって、
+元々この島にいた彼女達の
+時間が巻き戻った
+
+@リサナウト
+どうしてそうなったのか、
+という点については
+私にもさっぱりね
+
+@リサナウト
+弘法も筆の誤りというわ
+
+@リサナウト
+いくら使いなれた能力でも
+理解できないことは起きるものよ
+
+# voice 540221 "ichiibal_c_0040"
+@イチイバル
+なるほどね
+ただ、その理論だと
+ボク達や建物も変化がありそうだけど
+
+@イチイバル
+なぜ、変化がないのかな？
+
+@リサナウト
+それは簡単
+建物に関しては、
+巻き戻った期間の問題ね
+
+@リサナウト
+ラグーナ島は古くからある島だから、
+形に変化がなかったというだけ
+
+@リサナウト
+私達に変化がないのは…
+
+@イチイバル
+ボク達は沈んだ後に
+この島へ来たから
+縮んでないってわけだね
+
+# face 2203011 "sad"
+# voice 2030 "risanautr_l_0003"
+@リサナウト
+ま、まあ、そういうことよ
+あくまで仮説だけどね
+
+# face 2402211 "normal"
+# voice 540221 "ichiibal_c_0039"
+@イチイバル
+ふーん
+だってさ、ティルフィング
+
+# alpha 2402211 0 0.5
+# alpha 2203011 0 0.5
+# move 2101441 3 0
+# mask 2101441 off
+# alpha 2101441 1 0.5
+# eye 2101441 "normal"
+# voice 210144 "tyrufing_lo_0028"
+@ティルフィング
+そ、そうなんですか？
+じぶんでは、わからないですけど…
+
+# alpha 2101441 0 0.5
+# move 2203011 3 0
+# mask 2203011 off
+# alpha 2203011 1 0.5
+# face 2203011 "normal"
+@リサナウト
+どちらにしても
+そのうち元に戻るはずだから、
+心配いらないわよ
+
+# alpha 2203011 0 0.5
+# alpha 2101441 1 0.5
+# face 2101441 "sad"
+# voice 210144 "tyrufing_lo_0002"
+@ティルフィング
+あの…
+さっきのおはなしなんですけど
+
+@ティルフィング
+もし、リサナウトさんが
+じかんじくをもどして
+イカさんを…しょりしていたら…
+
+# face 2101441 "usual"
+# voice 210144 "tyrufing_lo_0004"
+@ティルフィング
+私たちはあえなかったかも
+しれないんですね？
+よかったです、しょり、しなくて
+
+# alpha 2101441 0 0.5
+# move 2402211 2 0
+# mask 2402211 on
+# alpha 2402211 1 0.5
+# move 2503711 4 0
+# mask 2503711 on
+# alpha 2503711 1 0.5
+# face 2503711 "normal"
+@ロジェスティラ
+イチイバルさーん！
+リサナウトさーん！
+ほら、みんなで貝殻、拾ったんです
+
+# voice 540221 "ichiibal_c_0041"
+@イチイバル
+おお、これは色が鮮やかだね…
+
+# alpha 2402211 0 0.5
+# alpha 2503711 0 0.5
+# move 2303121 2 0
+# mask 2303121 on
+# alpha 2303121 1 0.5
+# move 2503121 4 0
+# mask 2503121 on
+# alpha 2503121 1 0.5
+# face 2503121 "normal"
+# voice 250312 "solomon_lo_0002"
+@ソロモン
+それは、わたしが見つけたのよ！
+きれいでしょ？
+
+@カシウス
+…これも
+
+# alpha 2303121 0 0.5
+# alpha 2503121 0 0.5
+# alpha 2402211 1 0.5
+# alpha 2503711 1 0.5
+# voice 540221 "ichiibal_c_0004"
+@イチイバル
+うん、素敵な巻貝だね
+美しい螺旋だ…
+キミらしいよ
+
+# voice 550371 "logistille_c_0004"
+@ロジェスティラ
+ロンギヌスちゃんも
+たくさん拾ったんですよ！
+ね？
+
+# alpha 2402211 0 0.5
+# alpha 2503711 0 0.5
+# move 2300131 2 0
+# mask 2300131 on
+# alpha 2300131 1 0.5
+# move 2203011 4 0
+# mask 2203011 on
+# alpha 2203011 1 0.5
+# face 2300131 "normal"
+# voice 230013 "ronginus_lo_0003"
+@ロンギヌス
+いちばんきれいなの…
+これ…リサナウトさんにあげます
+
+# voice 2030 "risanautr_l_0021"
+@リサナウト
+わぁ…
+とっても綺麗ね
+ありがとう、ロンギヌス
+
+# face 2300131 "happy"
+# voice 230013 "ronginus_lo_0005"
+@ロンギヌス
+えへへ…
+どういたしまして！
+
+# face 2300131 "normal"
+@ロンギヌス
+もっといいの、さがしてきますね！
+ロジェさん、いきましょう！
+
+# alpha 2300131 0 0.5
+# alpha 2203011 0 0.5
+# alpha 2303121 1 0.5
+# face 2303121 "happy"
+# alpha 2503121 1 0.5
+# face 2503121 "happy"
+# voice 250312 "solomon_lo_0006"
+@ソロモン
+わたしも！
+こんどはグラウの
+センサーぜんかいでやるわよ！
+
+# voice 230312 "cassius_lo_0002"
+@カシウス
+…レーヴァも、いく？
+
+# alpha 2303121 0 0.5
+# alpha 2503121 0 0.5
+# move 2100241 2 0
+# mask 2100241 on
+# alpha 2100241 1 0.5
+# move 2101441 4 0
+# mask 2101441 on
+# alpha 2101441 1 0.5
+# face 2101441 "normal"
+# face 2100241 "normal"
+# voice 210024 "revatein_lo_0002"
+@レーヴァテイン
+じゃ、ティルも…
+
+# voice 210144 "tyrufing_lo_0003"
+@ティルフィング
+あ、はい！
+それじゃ、いってきます！
+
+# alpha 2100241 0 0.5
+# alpha 2101441 0 0.5
+# move 2402211 3 0
+# mask 2402211 off
+# alpha 2402211 1 0.5
+# voice 540221 "ichiibal_c_0002"
+@イチイバル
+蟹とクラゲには
+触っちゃダメだよ
+
+# alpha 2402211 0 0.5
+# move 2203011 3 0
+# mask 2203011 off
+# alpha 2203011 1 0.5
+# voice 2030 "risanautr_l_0004"
+@リサナウト
+みんな、気をつけてね
+
+;;できれば、もやもやフレームで
+# move 2203011 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+@リサナウト
+嘘みたいに、平穏な時間ね…
+ずっとこのまま、
+ここにいられたらいいのに…
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 2203011 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 2203011 2 0
+# mask 2203011 on
+# alpha 2203011 1 0.5
+# move 2101441 4 0
+# mask 2101441 on
+# alpha 2101441 1 0.5
+# face 2101441 "sad"
+# textwindow "nomal"
+# face 2203011 "angry"
+# voice 2030 "risanautr_l_0023"
+@リサナウト
+ええ？
+クラーケンがいなくなった？
+
+# voice 210144 "tyrufing_lo_0028"
+@ティルフィング
+うきわにのせていたんですけど、
+いつのまにか、いなくなってて…
+
+# face 2203011 "sad"
+# voice 2030 "risanautr_l_0028"
+@リサナウト
+波に流されたのかしら…
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：海かビーチ
+# background "sea_beach_day"
+# bgm "stop"
+# alpha 2203011 0 0
+# alpha 2101441 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 805121 3 0
+# mask 805121 off
+# alpha 805121 1 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+@クラーケン
+……（プルプルッ）
+
+;;演出：場面転換
+# fadeout "black" 1
+# waitandnext 1
+
+# bgmfile "bgm224_story" "BgmSeaEvent" 0
+;;背景：ラグーナ島全景（通常版）
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 805121 0 0
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+;;演出：ザザッとノイズ的な演出
+# se "SE_9451"
+# imagealpha 2 0.5 0
+# imagepos 2 0 0
+# waitandnext 0.5
+
+# imagealpha 2 0 0
+# textwindow "nomal"
+@ナレーション
+いつかの時間軸、どこかの世界線で…
+
+;;演出：ザザッとノイズ的な演出
+# se "SE_9451"
+# imagealpha 3 0.5 0
+# imagepos 3 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# imagealpha 3 0 0
+# textwindow "nomal"
+@ナレーション
+いつかの時間軸、どこかの世界線で…
+
+;;演出：ザザッとノイズ的な演出
+# se "SE_9451"
+# imagealpha 3 0.5 0
+# imagepos 3 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# imagealpha 3 0 0
+# waitandnext 0.5
+
+# textwindow "nomal"
+@クラーケン
+…………
+
+@クラーケン
+…（ニュル）
+
+@リサナウト
+ここが、ラグーナ島ね
+…って、きゃあっ！
+な、なに？
+
+@クラーケン
+…（ニュル）
+
+@リサナウト
+悪いけど、あなたに
+かまっている時間はないの
+早く目的を達成しなくちゃ…
+
+# fadeout "black" 3
+# waitandnext 3

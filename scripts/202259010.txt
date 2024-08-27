@@ -1,0 +1,224 @@
+;;-----------------------------------------
+;;悪魔サイド1話1_0
+;;-----------------------------------------
+# script "lisp"
+# background "yggdrasill_interior"
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 1
+# scale 270 0.7 0
+# layer 270 3
+# mask 270 off
+# alpha 270 0 0
+;;ルシファー
+# body 960028
+# pos 960028 4
+# scale 960028 0.8 0
+# layer 960028 4
+# alpha 960028 0 0
+;;ミカエル
+# body 960029
+# pos 960029 2
+# scale 960029 0.8 0
+# layer 960029 2
+# mask 960029 off
+# alpha 960029 0 0
+;;エイレーネ
+# body 132
+# pos 132 3
+# scale 132 0.8 0
+# layer 132 3
+# mask 132 off
+# alpha 132 0 0
+;;-----------------------------------------
+# imageset 0 "yggdrasill"
+# imagealpha 0 0 0
+# imagelayer 0 5
+# imageset 1 "e220514_logo"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;タイトル："希望"の創造
+;;背景：ユグドラシル内部
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+;;ミーミルが歩いてくる
+# se "SE_0719"
+# move 270 3 1
+# scale 270 0.8 1
+# alpha 270 1 1
+# waitandnext 1
+
+# voice 9917 "mimir_navikan_0004"
+# face 270 "happy"
+# se "SE_0944"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+ああ、風が心地よいですね
+木陰もありますし
+
+@ミーミル
+ここなら落ち着いて
+本を読むことができそうです
+
+@ミーミル
+本日はこちらに失礼させて
+いただきますね
+
+@ミーミル
+さあ、
+世界についで学んでいきましょう
+
+@ミーミル
+早くティルフィング様の
+お手伝いができるようにならないと
+いけませんから
+
+# face 270 "normal"
+@ミーミル
+こちらの本は、ええと…
+「希望について」と表紙に
+書かれてありますね
+
+@ミーミル
+希望…「より良い状態を期待し、
+その実現を願うこと」と
+記憶しておりますが
+
+@ミーミル
+こちらの本は、そのような希望に
+満ち溢れた事柄が
+綴られたものなのでしょうか
+
+# face 270 "happy"
+@ミーミル
+とても楽しみです
+
+;;暗転
+;;頁が捲られる音
+# se "SE_6166"
+# fadeout "black" 0.9
+# waitandnext 0.9
+
+;;背景：ユグドラシル遠景
+# background "aerial_shoot"
+# bgm "bgm000" 0
+# frameout 0 0
+# alpha 270 0 0
+# sestop "SE_0944"
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "black" 0.9
+# waitandnext 0.9
+
+# textflame 0 0
+# textwindow "nomal"
+@
+遥か遠い昔――
+
+@
+神々と悪魔は長きに渡り
+戦いを続けていた
+
+@
+後に神魔大戦と呼ばれる戦いである
+
+;;ミカエルとルシファーが戦う
+# alpha 960028 1 0.5
+# alpha 960029 1 0.5
+# waitandnext 0.5
+
+# move 960028 3 0.2
+# move 960029 1 0.2
+# shake 0 0.3
+# waitandnext 0.5
+
+# move 960028 4 0.2
+# move 960029 2 0.2
+# fadein "white" 0.5
+# waitandnext 0.8
+
+;;ルシファーとミカエル削除
+# alpha 960028 0 0.5
+# alpha 960029 0 0.5
+@
+戦いがあまりに長く続き、
+どちらも争いの理由が
+判然としなくなった頃
+
+;;エイレーネ表示
+# alpha 132 1 0.5
+@
+一柱の女神と一人の人間によって
+戦いは終結する
+
+@
+神々と悪魔は神魔契約と呼ばれる
+契約を交わし、
+世界を二つに切り分けた
+
+;;エイレーネ削除
+# alpha 132 0 0.5
+# waitandnext 1
+
+;;斧で世界を切る
+# se "SE_9152"
+# fadeout "white" 1
+# waitandnext 1
+
+# se "SE_0638"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# frameout 0 0
+# fadein "white" 1
+# textwindow "close"
+# waitandnext 2
+
+# textwindow "nomal"
+@
+すなわち天上世界と地上世界である
+
+@
+契約により神々は天上世界を統べ、
+悪魔は地上世界を
+支配することとなった
+
+# background "asmodeus_countryofflame_vapor"
+@
+しかし、それは人間の全く
+預かり知らぬところでの契約
+
+;;地上世界遠景
+# imagealpha 0 0 1
+@
+地上世界に突如現れた
+悪魔の軍勢に対し、
+人々は徹底抗戦する
+
+@
+それが、悪魔と人間…そして
+神器の力を得た者達の
+
+@
+熾烈で過酷な
+戦いの始まりであった――
+
+# fadeout "black" 1
+# waitandnext 1
+
+# frameout 0 0
+# background "bg_black"
+# textwindow "close"
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# fadein "black" 3
+
+# fadeout "black" 1
+# waitandnext 1

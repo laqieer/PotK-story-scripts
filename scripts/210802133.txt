@@ -1,0 +1,535 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第８章 章タイトル：「ビギニング・オブ・ジ・エンド」
+;;第2話－１３　タイトル：黄昏の魔弾
+;;2_13_3
+;;スクリプト最後の背景：天上ユグドラシル
+;;-----------------------------------------
+# script "lisp"
+# background "in_yggdrasill"
+# bgmfile "bgm439" "BgmIntegralNoahBattle006" 0
+;;-----------------------------------------
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 2
+# alpha 5101431 0 0
+# mask 5101431 off
+;;異族化フライクーゲル
+# body 5500231
+# pos 5500231 3
+# scale 5500231 0.8 0
+# layer 5500231 2
+# alpha 5500231 0 0
+# mask 5500231 off
+;;アルテミス
+# body 5400131
+# pos 5400131 3
+# scale 5400131 0.8 0
+# layer 5400131 2
+# alpha 5400131 0 0
+# mask 5400131 off
+;;ロンギヌス・擬彩
+# body 5300131
+# pos 5300131 3
+# scale 5300131 0.8 0
+# layer 5300131 3
+# alpha 5300131 0 0
+# mask 5300131 off
+;;異族化マサムネ
+# body 5100131
+# pos 5100131 3
+# scale 5100131 0.8 0
+# layer 5100131 2
+# alpha 5100131 0 0
+# mask 5100131 off
+;;異族化パラシュ
+# body 5200431
+# pos 5200431 3
+# scale 5200431 0.8 0
+# layer 5200431 2
+# alpha 5200431 0 0
+# mask 5200431 off
+;;レーヴァテイン・擬彩
+# body 5100231
+# pos 5100231 3
+# scale 5100231 0.8 0
+# layer 5100231 2
+# alpha 5100231 0 0
+# mask 5100231 off
+;;擬装フライシュッツ
+# body 5502721
+# pos 5502721 3
+# scale 5502721 0.8 0
+# layer 5502721 2
+# alpha 5502721 0 0
+# mask 5502721 off
+;;擬装ダモクレス
+# body 5103521
+# pos 5103521 3
+# scale 5103521 0.8 0
+# layer 5103521 2
+# alpha 5103521 0 0
+# mask 5103521 off
+;;擬装エルキュール
+# body 5202521
+# pos 5202521 3
+# scale 5202521 0.8 0
+# layer 5202521 2
+# alpha 5202521 0 0
+# mask 5202521 off
+;;ミネルヴァ・擬装・アーチャー
+# body 5302521
+# pos 5302521 3
+# scale 5302521 0.8 0
+# layer 5302521 2
+# alpha 5302521 0 0
+# mask 5302521 off
+;;ネス・擬装・ランサー
+# body 5602021
+# pos 5602021 3
+# scale 5602021 0.8 0
+# layer 5602021 2
+# alpha 5602021 0 0
+# mask 5602021 off
+;;ラグナロク（擬装）
+# body 5103621
+# pos 5103621 3
+# scale 5103621 0.8 0
+# layer 5103621 2
+# alpha 5103621 0 0
+# mask 5103621 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+# voice 1036 "ragnarok_im_0029"
+# move 5103621 3 0
+# face 5103621 "angry"
+# alpha 5103621 1 0
+# mask 5103621 off
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+はあああああああっ！
+
+# voice 510143 "tyrufing_iz_0029"
+# alpha 5103621 0 0.5
+# move 5101431 3 0
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+@ティルフィング
+はあああああああっ！
+
+;;//ティルフィングの斬撃とラグナロクの銃撃がぶつかる
+# textwindow "close"
+# alpha 5101431 0 0.5
+# waitandnext 0.5
+
+# se "SE_9134"
+# textwindow "close"
+# fadeout "white" 2
+# waitandnext 2
+
+# waitandnext 0.2
+
+# fadein "white" 2
+# waitandnext 2
+
+;;//画面白フラッシュ
+;;//画面揺れ
+# se "SE_0887"
+# sedelay "SE_9027" 0.8
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 3025 "minerva_battle_0005"
+# move 5302521 3 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ミネルヴァ
+衝撃波が来ます！
+皆さん、堪えて下さい！
+
+# voice 540013 "arutemisu_iz_0018"
+# alpha 5302521 0 0.5
+# move 5400131 3 0
+# face 5400131 "surprise"
+# alpha 5400131 1 0.5
+# mask 5400131 off
+# textboxarrow 0 2
+@アルテミス
+これほどの威力だなんて…！
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 5400131 0 0
+# move 5103621 2 0
+# face 5103621 "normal"
+# alpha 5103621 1 0
+# mask 5103621 on
+# move 5101431 4 0
+# face 5101431 "angry"
+# alpha 5101431 1 0
+# mask 5101431 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 1
+# textwindow "normal"
+@ラグナロク
+ハァッ…ハァッ…
+
+# textboxarrow 0 3
+@ティルフィング
+ハァ…ハァ…
+
+# face 5101431 "normal"
+# textboxarrow 0 3
+@ティルフィング
+驚きました…
+本当に凌ぎきるなんて
+
+# face 5103621 "angry"
+# textboxarrow 0 1
+@ラグナロク
+まだよ
+まだ…決着はついていない
+
+# textboxarrow 0 1
+@ラグナロク
+そうでしょう、ティルフィング！
+神殺しの一撃、耐えられるとは
+思わないで！
+
+# textboxarrow 0 3
+@ティルフィング
+ええ…
+ですが、アナタとの決着をつける
+ことに意味はありません
+
+# voice 510023 "revatein_iz_0019"
+# alpha 5103621 0 0.5
+# alpha 5101431 0 0.5
+# move 5100231 3 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+はぁ…
+ここは任せて、ティルフィング
+
+;;//レーヴァテインがラグナロクに迫る
+# se "SE_9021"
+# textwindow "close"
+# leftout 5100231 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm411" "BgmIntegralNoahBattle001" 0
+# voice 1036 "ragnarok_0022"
+# alpha 5100231 0 0
+# move 5103621 2 0
+# face 5103621 "surprise"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# textboxarrow 0 1
+# move 5101431 4 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# textwindow "normal"
+@ラグナロク
+えっ？
+
+# voice 510143 "tyrufing_iz_0030"
+# textboxarrow 0 3
+@ティルフィング
+ありがとうございます
+これで…
+
+# se "SE_9092"
+# textwindow "close"
+# rightout 5101431 0.5
+# waitandnext 0.5
+
+# alpha 5101431 0 0
+# face 5103621 "angry"
+# textboxarrow 0 1
+# textwindow "normal"
+@ラグナロク
+待って！
+
+# textwindow "close"
+# move 5100231 4 0
+# face 5100231 "angry"
+# alpha 5100231 1 0
+# mask 5100231 on
+# rightin 5100231 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# textwindow "normal"
+@レーヴァテイン
+ティルの邪魔はさせない…！
+
+;;//レーヴァテインがラグナロクの行く手を遮る
+# se "SE_10585"
+# waitandnext 0.5
+
+# voice 1036 "ragnarok_0037"
+# textboxarrow 0 1
+@ラグナロク
+くっ…！
+
+;;//ティルフィングがユグドラシルに入る
+# textwindow "close"
+# alpha 5103621 0 0.5
+# alpha 5100231 0 0.5
+# waitandnext 0.5
+
+# move 5101431 3 0
+# face 5101431 "normal"
+# alpha 5101431 1 0
+# mask 5101431 off
+# leftin 5101431 0.5
+# waitandnext 1.2
+
+# se "SE_9469"
+# waitandnext 0.2
+
+# alpha 5101431 0 0.5
+# waitandnext 0.5
+
+# move 5202521 3 0
+# face 5202521 "surprise"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# textboxarrow 0 2
+# textwindow "normal"
+@エルキュール
+ああ！？
+ティルフィングがユグドラシルの
+中に…
+
+# alpha 5202521 0 0.5
+# move 5103621 2 0
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# textboxarrow 0 1
+# move 5100231 4 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+@ラグナロク
+しまった…
+力を集中させすぎて、
+ユグドラシルの方を疎かに…
+
+# voice 510023 "revatein_iz_0006"
+# face 5100231 "happy"
+# textboxarrow 0 3
+@レーヴァテイン
+やった…
+後はお願いね、ティル…
+
+# face 5103621 "surprise"
+# textboxarrow 0 1
+@ラグナロク
+レーヴァテイン、あなた…？
+
+# face 5100231 "normal"
+# textboxarrow 0 3
+@レーヴァテイン
+神器は…返してもらうから
+
+# face 5103621 "angry"
+# textboxarrow 0 1
+@ラグナロク
+あっ…！
+
+;;//レーヴァテインがラグナロクから離れる
+# se "SE_9021"
+# textwindow "close"
+# alpha 5100231 0 0.5
+# waitandnext 0.8
+
+# alpha 5103621 0 0.5
+# move 5400131 3 0
+# face 5400131 "normal"
+# alpha 5400131 1 0.5
+# mask 5400131 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アルテミス
+今回の作戦は成功です
+皆、退きますよ！
+
+# voice 520043 "parashu_iz_0007"
+# alpha 5400131 0 0.5
+# move 5500231 1 0
+# face 5500231 "normal"
+# alpha 5500231 1 0.5
+# mask 5500231 on
+# move 5300131 3 0
+# face 5300131 "normal"
+# alpha 5300131 1 0.5
+# mask 5300131 on
+# move 5200431 5 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+# textboxarrow 0 3
+@パラシュ
+ボクは物足りないけどね…
+
+# voice 530013 "ronginusu_iz_0009"
+# textboxarrow 0 2
+@ロンギヌス
+これ以上の争いは無意味ですから
+
+# voice 550023 "furaikugeru_iz_0032"
+# face 5500231 "happy"
+# textboxarrow 0 1
+@フライクーゲル
+オッケー！
+これできっとヘアピィなエンドに
+繋がるよねっ
+
+# voice 510013 "masamune_iz_0031"
+# alpha 5500231 0 0.5
+# alpha 5300131 0 0.5
+# alpha 5200431 0 0.5
+# move 5100131 3 0
+# face 5100131 "normal"
+# alpha 5100131 1 0.5
+# mask 5100131 off
+# textboxarrow 0 2
+@マサムネ
+しからば、ごめん
+
+;;//アルテミス達が立ち去る
+# se "SE_0719"
+# textwindow "close"
+# alpha 5100131 0 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# move 5103621 2 0
+# face 5103621 "normal"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# move 5202521 4 0
+# face 5202521 "angry"
+# alpha 5202521 1 0.5
+# mask 5202521 on
+# textboxarrow 0 3
+# textwindow "normal"
+@エルキュール
+追いましょう、ラグナロク！
+
+# textboxarrow 0 1
+@ラグナロク
+…どちらを？
+
+# voice 2025 "hercule_0022"
+# face 5202521 "surprise"
+# textboxarrow 0 3
+@エルキュール
+えっ…？
+あっ！
+
+# alpha 5202521 0 0.5
+# move 5302521 4 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 on
+# textboxarrow 0 3
+@ミネルヴァ
+ティルフィングの位置は…
+捕捉できますか？
+
+# voice 1036 "ragnarok_0031"
+# face 5103621 "sad"
+# textboxarrow 0 1
+@ラグナロク
+ごめんなさい…
+実はそんな力、もう残ってないの
+
+# voice 1035 "damocles_0031"
+# alpha 5302521 0 0.5
+# move 5103521 4 0
+# face 5103521 "sad"
+# alpha 5103521 1 0.5
+# mask 5103521 on
+# textboxarrow 0 3
+@ダモクレス
+クレスの回復が追いつかなくて
+ごめんね…
+
+# face 5103621 "normal"
+# textboxarrow 0 1
+@ラグナロク
+いいえ
+あなたのお陰で力尽きずに済んだわ
+
+# voice 6020 "ness_0010"
+# alpha 5103621 0 0.5
+# alpha 5103521 0 0.5
+# move 5602021 2 0
+# face 5602021 "angry"
+# alpha 5602021 1 0.5
+# mask 5602021 on
+# textboxarrow 0 1
+# move 5502721 4 0
+# face 5502721 "sad"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+@ネス
+隙をついてユグドラシルに入るなんて
+規律違反です…！
+
+# voice 5027 "freischotz_0028"
+# textboxarrow 0 3
+@フライシュッツ
+ティルフィングちゃんは何で
+ユグドラシルの中に入ったの～？
+おねーちゃん、分かんないよ～…
+
+# alpha 5602021 0 0.5
+# alpha 5502721 0 0.5
+# move 5103621 3 0
+# face 5103621 "normal"
+# alpha 5103621 1 0.5
+# mask 5103621 off
+# textboxarrow 0 2
+@ラグナロク
+…………
+
+# textboxarrow 0 2
+@ラグナロク
+…今は、残っている異族の
+掃討をしましょう
+
+;;ラグナロク（独白）
+# move 5103621 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 5103621 off
+@ラグナロク
+アルマスとスイハが帰ってきたら、
+対策を考えないと…

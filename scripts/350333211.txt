@@ -1,0 +1,304 @@
+;;-----------------------------------------
+;;【ファントムオブキル_Re:ゼロコラボ】ラムウェディングVer.
+;;【EP1】
+;;スクリプト最後の背景：004_outland
+;;背景：004_outland
+;;-----------------------------------------
+# script "lisp"
+# background "004_outland"
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;ラムウェディング
+# body 3503331
+# pos 3503331 3
+# scale 3503331 0.8 0
+# layer 3503331 2
+# alpha 3503331 0 0
+# mask 3503331 off
+;;-----------------------------------------
+;;【EP1】
+;;背景：村・昼
+;;演出：ラムウェディング衣装
+# move 3503331 3 0
+# face 3503331 "normal"
+# alpha 3503331 1 0
+# mask 3503331 off
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+…………
+
+;;モノローグ
+# textflame 0 0
+@
+ただ無言で立っているラムに
+謝り倒すマスター
+
+# voice 5033 "ramu_0002"
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+別にマスター様は悪くないわ
+ラムの気持ちはどうあれ
+こうなってしまったのは仕方ないもの
+
+;;モノローグ
+# textflame 0 0
+@
+ラムの無表情さに
+怒っていると思っていたマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+マスター様は
+ちゃんと断ってくれていたものね
+だから気にする必要はないわ
+
+;;モノローグ
+# textflame 0 0
+@
+立ち寄った村で、結婚式を模した
+祭事がありラムはその花嫁役にと
+声を掛けられたのがついさっきのこと
+
+;;モノローグ
+# textflame 0 0
+@
+一度は断ったのだが
+どうしてもと頼み込まれ
+ラムは仕方ないと了承した
+
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+これはあくまでそういう催しよ
+立ってるだけで終わるなら
+なんてことないわ
+
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+それに村の人達も
+花嫁役がいなくなって
+困っていたようだし
+
+# face 3503331 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+まぁ、それでもマスター様が
+申し訳なく思うのなら
+何かご褒美でも用意しておけばいいわ
+
+;;モノローグ
+# textflame 0 0
+@
+もちろん、と答えるマスター
+
+# voice 5033 "ramu_0001"
+# face 3503331 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+あまり安請け合いするのも
+褒められたことじゃないと思うわよ
+
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+それより、この姿を見て
+何か言うことがあるんじゃないの？
+
+;;選択肢
+;;@
+;;A かわいい花嫁さんだね
+;;B 綺麗だ
+;;C いつもと変わらない？
+# select "かわいい花嫁さんだね" "select_label_01" "綺麗だ" "select_label_02" "いつもと変わらない？" "select_label_03"
+それより、この姿を見て
+何か言うことがあるんじゃないの？
+
+;;アンサー
+;;A
+# label "select_label_01"
+# labeljump "select_label_end"
+# voice 5033 "ramu_0019"
+# face 3503331 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+ありきたりね
+
+;;B
+# label "select_label_02"
+# labeljump "select_label_end"
+# voice 5033 "ramu_0042"
+# face 3503331 "shy"
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+まぁ、悪くないわ
+
+;;C
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 3503331 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+言い残すことはそれだけ？
+
+# label "select_label_end"
+# face 3503331 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+マスター様で遊んでいたら
+もう時間のようね
+それじゃ、行ってくるわ
+
+;;モノローグ
+# alpha 3503331 0 0.5
+# textflame 0 0
+@
+準備に向かうラム
+出番は最後の最後
+祭事のメインのようだ
+
+;;演出：時間経過の暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+祭事では遠目にしか
+ラムを見られなかった
+
+;;演出：時間経過の暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 3503331 3 0
+# face 3503331 "normal"
+# alpha 3503331 1 0
+# mask 3503331 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 5033 "ramu_0017"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ラム
+立っているだけがこんなにも
+苦痛だなんてはじめて知ったわ
+
+;;モノローグ
+# textflame 0 0
+@
+ラムが言うには相手役の男が
+とても横柄な態度をとっていたようだ
+
+# face 3503331 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+ラムをあんなぞんざいに扱うなんて
+状況が違ったら捻り潰していたわね
+
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+花嫁役の子は
+出られなくなったんじゃなくて
+逃げ出したんじゃないかしら
+
+# face 3503331 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+そうに違いないわね
+あんな男の相手役だなんて
+知っていたら、ラムだって断ったわ
+
+;;モノローグ
+# textflame 0 0
+@
+再び申し訳なさそうにするマスター
+
+# face 3503331 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+だから、マスター様の
+落ち度じゃないわ
+悪いのはアイツよ
+
+;;モノローグ
+# textflame 0 0
+@
+ラムはあくまで
+マスターは悪くないと言ってくれる
+
+;;モノローグ
+# textflame 0 0
+@
+なら、どんな花婿だったら
+ラムは不満に思わなかったのだろう
+とマスター
+
+# voice 5033 "ramu_0022"
+# face 3503331 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+どんな花婿だったら
+よかったか？
+
+# voice 5033 "ramu_0033"
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+そうね、難しいわね
+ラムのお慕いする人は花婿、
+というのが似合う人ではないから
+
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+だから、ラムが花嫁の格好を
+することはそうそうないでしょうね
+
+# face 3503331 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+まぁ、こんな格好をしなくても
+ラムは常に素敵だから関係ないわ
+それで十分でしょう？
+
+;;モノローグ
+# textflame 0 0
+@
+ラムは相変わらずの態度だが
+マスターにはそれが悲しそうな顔を
+しているように見えた
+
+# face 3503331 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+さ、終わったんだから帰りましょう
+もうあの男と顔を合わせたくないわ

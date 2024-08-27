@@ -1,0 +1,595 @@
+;;-----------------------------------------
+;;SEA1章_20
+;;-----------------------------------------
+# script "lisp"
+# background "town_night"
+# bgm "bgm004" 0
+;;-----------------------------------------
+;;ゼロ
+# body 23
+# pos 23 2
+# scale 23 0.8 0
+# layer 23 2
+# mask 23 off
+# alpha 23 0 0
+# body 1100211
+# alpha 1100211 0 0
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 3
+# mask 270 off
+# alpha 270 1 0
+;;レーヴァテイン
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# layer 100221 5
+# mask 100221 off
+# alpha 100221 0 0
+;;与一
+# body 6400511
+# pos 6400511 4
+# scale 6400511 0.8 0
+# layer 6400511 2
+# mask 6400511 off
+# alpha 6400511 1 0
+;;グングニル
+# body 300841
+# pos 300841 4
+# scale 300841 0.8 0
+# layer 300841 4
+# alpha 300841 0 0
+;;蜻蛉切
+# body 302411
+# pos 302411 4
+# scale 302411 0.8 0
+# layer 302411 4
+# alpha 302411 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 3
+# scale 6504011 0.8 0
+# layer 6504011 3
+# mask 6504011 off
+# alpha 6504011 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagescale 1 1.2 0
+# imagelayer 1 1
+# imageset 3 "SEA6400511"
+# imagealpha 3 0 0
+# imagelayer 3 2
+;;-----------------------------------------
+;;背景：町（夜）
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# voice 4005 "yoichi_0038"
+# se "SE_6211"
+# face 270 "normal"
+# face 6400511 "sad"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@与一
+与一はダメダメなんです
+レーヴァテインさんとの大切な
+約束だったのに…
+
+# textboxarrow 0 3
+@与一
+もう…何もしない方が…
+
+;;選択肢
+# select "それは違うよ" "select_label_01" "与一はダメダメじゃない" "select_label_02"
+もう…何もしない方が…
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+与一さん、このままでは
+もっと悪い状況に陥ってしまいます
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+そうです
+与一さんは立派なキル姫です
+
+# label "select_label_end"
+# textboxarrow 0 3
+@与一
+でも、与一が頑張っても
+きっと上手くいかないんです…
+
+# textboxarrow 0 3
+@与一
+どうしたって
+悪い方向に転がってしまう…
+そんな不安でいっぱいで…
+
+# bgm "stop"
+# sestop "SE_6211"
+# se "SE_6178"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+あ…
+もしかして…
+
+# voice 9917 "mimir_navikan_0001"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+マスター様
+与一さんの抱いてる不安の正体が
+分かったかもしれません
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+与一さん
+アナタが鍛錬によって
+払拭しようとしていた不安、それは…
+
+# se "SE_6178"
+# textboxarrow 0 1
+@ミーミル
+「自分が本気を出すと
+悪いことが起きる」という
+恐れだったのですね
+
+# face 6400511 "surprise"
+# textboxarrow 0 3
+@与一
+え…？
+与一は、本気になることを
+怖がっていたんですか？
+
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+# voice 9917 "mimir_navikan_0003"
+# textboxarrow 0 1
+@ミーミル
+与一さんに関する伝承では、
+敵の船にある扇を射抜いた後、
+敵兵も射ることになります
+
+# textboxarrow 0 1
+@ミーミル
+それがきっかけで、終わるはずだった
+その日の戦が再び始まってしまう…
+
+# textboxarrow 0 1
+@ミーミル
+そんな伝承が、与一さんを
+無意識に縛っていたんです
+
+# textboxarrow 0 1
+@ミーミル
+扇を的として
+射ることができなかったのも、
+その現れではないでしょうか
+
+# textboxarrow 0 1
+@ミーミル
+扇を射るのは、本気を出すということ
+それを与一さんは避けてきました
+
+# textboxarrow 0 1
+@ミーミル
+だから、どれだけ鍛錬を続けても
+不安を払拭することはできず
+
+# textboxarrow 0 1
+@ミーミル
+むしろ、弓の腕が上達すればする程
+不安は増していったのでは…
+
+# face 6400511 "sad"
+# textboxarrow 0 3
+@与一
+…そう
+そうです
+与一は、ずっと怖かったんです
+
+# textboxarrow 0 3
+@与一
+失敗するのはもちろん怖い…
+でも、それ以上に
+
+# textboxarrow 0 3
+@与一
+本気を出した結果、
+良くないことが
+起きてしまうんじゃないか…
+
+# textboxarrow 0 3
+@与一
+それが怖かったんです！
+
+# voice 4005 "yoichi_0015"
+# textboxarrow 0 3
+@与一
+与一は…与一はやっぱり…
+何もしない方がいいんです！
+
+;;選択肢
+# select "約束したんだろ！" "select_label_03"
+与一は…与一はやっぱり…
+何もしない方がいいんです！
+
+# label "select_label_03"
+# voice 4005 "yoichi_0024"
+# textboxarrow 0 3
+@与一
+はぅ！
+でも…
+
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+与一さん
+レーヴァテインさんはアナタに
+最後の門の鍵を預けたんです
+
+# textboxarrow 0 1
+@ミーミル
+それはきっと、
+アナタを信じたからだと思います
+
+# textboxarrow 0 3
+@与一
+レーヴァテインさんが、与一を…
+
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+お願いです！
+このままではレガルの町も
+レーヴァテインさんも…
+
+# face 6400511 "surprise"
+# textboxarrow 0 3
+@与一
+…………！
+
+# move 6400511 4 0
+# face 6400511 "sad"
+# textwindow "moya"
+# textboxarrow 0 0
+@与一
+怖い…怖いよ…
+上手くいかなかったら、
+どうしよう…
+
+@与一
+上手くいっても、結局、悪いことが
+起きてしまったら、どうしよう…
+
+@与一
+だけど…
+
+;;回想シーン
+# fadeout "white" 0.5
+# se "SE_0742"
+# waitandnext 0.5
+
+#setnextbgmblock 1
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 270 0 0
+# alpha 6400511 0 0
+# textwindow "close"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 100221 "normal"
+# alpha 100221 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@レーヴァテイン
+持ってて
+
+;;回想終了
+# fadeout "white" 0.5
+# se "SE_11762"
+# waitandnext 0.5
+
+# imagealpha 1 0 0
+# alpha 100221 0 0
+# face 6400511 "normal"
+# alpha 6400511 1 0
+# face 270 "angry"
+# alpha 270 1 0
+# textwindow "close"
+# fadein "white" 0.5
+# waitandnext 0.8
+
+# textwindow "nomal"
+# textboxarrow 0 3
+@与一
+レーヴァテインさん
+
+# textboxarrow 0 3
+@与一
+…今、与一がやらないと
+もっと良くないことに
+なってしまうんですよね
+
+# textboxarrow 0 3
+@与一
+「約束」は守れませんでしたけど、
+もし、与一にまだ
+やれることがあるのなら…
+
+# textboxarrow 0 3
+@与一
+やってみます
+やらせていただきます！
+
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+与一さん！
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# bgm "bgm030" 0
+# se "SE_6194"
+# alpha 270 0 0
+# alpha 6400511 0 0
+# subfillrect 0 "red" 0 0 0.4
+# waitandnext 0.3
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# serif 1
+# textwindow "nomal"
+@住民達
+逃げろぉっ！
+もう…この町はおしまいだぁぁぁ…！
+
+# voice 11002 "laevateinm_battle_0007"
+# se "SE_4820"
+# face 23 "angry_1"
+# face 302411 "normal"
+# alpha 23 1 0.3
+# alpha 302411 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@ゼロ
+くそっ…！
+炎がどんどん
+大きくなっていきやがる
+
+# voice 3024 "tonbokiri_0017"
+# face 302411 "sad"
+# textboxarrow 0 3
+@蜻蛉切
+あんな巨大な火の玉が落ちてきたら
+この町は一瞬で焦土と化すわ…
+
+# alpha 302411 0 0.3
+# face 300841 "sad"
+# alpha 300841 1 0.3
+# textboxarrow 0 3
+@グングニル
+中心にいるレーヴァテインも、
+そろそろ限界であろうな…
+
+# move 6400511 3 0
+# scale 6400511 0.7 0
+# face 23 "angry_2"
+# textboxarrow 0 1
+@ゼロ
+ちくしょう！
+こうなったら、俺の命と
+引き換えにしてでも、アマネを！
+
+# move 23 1 0.5
+# alpha 23 0 0.3
+# move 300841 5 0.5
+# alpha 300841 0 0.3
+# scale 6400511 0.8 0.3
+# face 6400511 "normal"
+# alpha 6400511 1 0.3
+# se "SE_5575"
+# textwindow "close"
+# waitandnext 0.5
+
+# voice 4005 "yoichi_0009"
+# textwindow "nomal"
+# textboxarrow 0 2
+@与一
+ま、待って下さい！
+
+# alpha 6400511 0 0.3
+# face 6504011 "surprise"
+# alpha 6504011 1 0.3
+# textboxarrow 0 2
+@マナナン
+あ！
+与一もミーミル達も戻ってきた！
+
+# alpha 6504011 0 0.3
+# move 23 2 0
+# layer 23 2
+# mask 23 off
+# face 23 "normal"
+# alpha 23 1 0.3
+# move 6400511 4 0
+# layer 6400511 4
+# mask 6400511 on
+# face 6400511 "normal"
+# alpha 6400511 1 0.3
+# textboxarrow 0 3
+@与一
+お待たせしました
+与一が、レーヴァテインさんを
+射抜きます
+
+# voice 11002 "laevateinm_0009"
+# face 23 "surprise"
+# textboxarrow 0 1
+@ゼロ
+射抜くだと！？
+そんなことして、アマネは
+大丈夫なのかっ？
+
+# voice 4005 "yoichi_0032"
+# textboxarrow 0 3
+@与一
+大丈夫です
+狙いは外しません
+
+# textboxarrow 0 3
+@与一
+必ず、レーヴァテインさんを
+助け出してみせます！
+
+# voice 11002 "laevateinm_0036"
+# face 23 "normal"
+# textboxarrow 0 1
+@ゼロ
+…頼んだ、与一
+
+# voice 3008 "gunguniru_0002"
+# alpha 23 0 0.3
+# alpha 6400511 0 0.3
+# move 300841 2 0
+# layer 300841 4
+# mask 300841 on
+# face 300841 "angry"
+# alpha 300841 1 0.3
+# move 302411 4 0
+# layer 302411 2
+# mask 302411 off
+# face 302411 "normal"
+# alpha 302411 1 0.3
+# textboxarrow 0 1
+@グングニル
+皆、下がれ
+この気迫、与一の本気が見られそうだ
+
+# voice 3024 "tonbokiri_0022"
+# face 302411 "surprise"
+# textboxarrow 0 3
+@蜻蛉切
+え…
+このままレーヴァテインを
+射抜いて良いの？
+
+# face 302411 "sad"
+# textboxarrow 0 3
+@蜻蛉切
+与一の本気の一矢を受けたら、
+レーヴァテインでも
+耐えられないんじゃ…
+
+# textboxarrow 0 3
+@蜻蛉切
+かといって、手加減したら
+炎に巻かれて
+矢がレーヴァテインに届かないし…
+
+;;選択肢
+# select "与一を信じよう" "select_label_04"
+え…
+このままレーヴァテインを
+射抜いて良いの？
+
+# label "select_label_04"
+# voice 9917 "mimir_navikan_0003"
+# alpha 300841 0 0.3
+# face 270 "angry"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ミーミル
+お願いします
+信じてあげて下さい
+
+# voice 3024 "tonbokiri_0040"
+# face 302411 "normal"
+# textboxarrow 0 3
+@蜻蛉切
+勝算があるのね
+なら、もう何も言わないわ
+
+;;シナリオカット
+# fadein "white" 1
+# imagealpha 3 1 0
+# imagepos 3 0 0
+# frameout 0 0
+# alpha 270 0 0
+# alpha 302411 0 0
+# subfillrect 0 "red" 0 0.4 0
+# textwindow "close"
+# waitandnext 1
+
+# se "SE_4300"
+# textwindow "nomal"
+# textboxarrow 0 0
+@与一
+大丈夫
+ずっと練習してきたんだから
+
+@与一
+レーヴァテインさんは…
+ずっと空高く、ここからだと
+豆粒くらいで…遠いなぁ
+
+# se "SE_6169"
+@与一
+風が吹いてる
+炎も少し揺らいでて気流が
+読みにくい
+
+@与一
+ふぅ…
+
+@与一
+うん…ちゃんと見える
+ずっと持っててくれたんだ
+与一の扇
+
+@与一
+あの扇に当てれば、矢の威力を殺さず
+レーヴァテインさんに
+怪我させることもない
+
+@与一
+扇を射たら良くないことが起きる…
+そんな恐れから、
+与一はもう逃げません
+
+@与一
+この矢を外したら、
+与一も自害します
+どうか、当てさせて下さい
+
+@与一
+南無八幡大菩薩！！
+
+# fadeout "white" 1
+# waitandnext 1

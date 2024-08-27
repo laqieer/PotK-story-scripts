@@ -1,0 +1,799 @@
+;;-----------------------------------------
+;;SEAイベント不可欠彩度レルム1_1
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgm "bgm002" 0
+;;-----------------------------------------
+;;パンドラ
+# body 62001111
+# pos 62001111 3
+# scale 62001111 0.8 0
+# layer 62001111 2
+# mask 62001111 off
+# alpha 62001111 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 1
+# scale 6603811 0.77 0
+# layer 6603811 4
+# alpha 6603811 0 0
+;;フェイルノート
+# body 5401911
+# pos 5401911 3
+# scale 5401911 0.8 0
+# layer 5401911 3
+# mask 5401911 off
+# alpha 5401911 0 0
+;;魔獣
+# body 3870001
+# pos 3870001 3
+# scale 3870001 0.7 0
+# layer 3870001 1
+# mask 3870001 off
+# alpha 3870001 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;背景：平原
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+# move 62001111 4 0.5
+# alpha 62001111 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@パンドラ
+そろそろ目的地かしら
+不夜城と呼ばれる街、カコルフェ
+一体どんなところなんでしょうね
+
+# move 6603811 2 0.5
+# scale 6603811 0.8 0.5
+# face 6603811 "usual"
+# alpha 6603811 1 0.3
+# textboxarrow 0 1
+@マクリル
+…………
+
+# voice 6200111 "pandora_0028"
+# face 62001111 "sad"
+# textboxarrow 0 3
+@パンドラ
+私があなたを連れ出したの
+やっぱり不満だったかしら？
+
+# voice 660381 "maclir_ura_0034"
+# face 6603811 "normal"
+# textboxarrow 0 1
+@マクリル
+…ううん、そんなことない
+ミーミルもマナナンも
+頑張ってって言ってくれたし
+
+;;もやもや
+# move 62001111 4 0
+# textwindow "moya"
+# textboxarrow 0 0
+@パンドラ
+自分の意志で、じゃないのね
+そこに必ず誰かの存在がある
+
+;;もやもや
+@パンドラ
+本当に、以前の私みたい
+
+# face 6603811 "usual"
+# textwindow "nomal"
+# textboxarrow 0 1
+@マクリル
+…それにちゃんと頑張れたら
+私もマナナンみたいになれるって
+あなたが言ってくれたから
+
+# voice 6200111 "pandora_0032"
+# face 62001111 "normal"
+# textboxarrow 0 3
+@パンドラ
+そうね、なんとかなるわよ
+
+;;もやもや
+# move 62001111 4 0
+# textwindow "moya"
+# textboxarrow 0 0
+@パンドラ
+ティルフィングも、
+ミーミルもマクリルを私に託したのは
+何かが変わるかもと思ったからなはず
+
+;;もやもや
+@パンドラ
+その希望が、
+マクリルの中にあるのなら――
+
+# voice 6200111 "pandora_0005"
+# face 62001111 "happy"
+# textwindow "nomal"
+# textboxarrow 0 3
+@パンドラ
+ふふっ、楽しみね
+
+# textboxarrow 0 1
+@マクリル
+…？
+
+# voice 6200111 "pandora_0022"
+# face 62001111 "normal"
+# textboxarrow 0 3
+@パンドラ
+ああ、街が見えてきたわね
+この辺りかしら、魔獣がよく
+目撃されるようになったのは…
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 2
+# alpha 62001111 0 0.3
+# alpha 6603811 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;演出：魔獣の立ち絵表示
+# se "SE_0779"
+# scale 3870001 0.8 0.5
+# alpha 3870001 1 0.5
+# waitandnext 1
+
+# alpha 3870001 0 0.5
+# waitandnext 1
+
+# bgm "bgm021_022" 0
+# voice 6200111 "pandora_0019"
+# alpha 62001111 1 0.3
+# face 6603811 "normal"
+# alpha 6603811 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@パンドラ
+噂をすれば、というのかしら
+タイミングよく出てきてくれると
+話が早くて助かるわ
+
+# textboxarrow 0 1
+@マクリル
+…倒すの？
+
+# face 62001111 "angry"
+# textboxarrow 0 3
+@パンドラ
+話は早いと言いましたが
+話をしてくれる訳じゃありませんから
+倒すのが良さそうね
+
+# voice 660381 "maclir_ura_0003"
+# face 6603811 "usual"
+# textboxarrow 0 1
+@マクリル
+なら、戦う…！
+
+# alpha 62001111 0 0.3
+# alpha 6603811 0 0.3
+# textflame 0 0
+@
+魔獣と睨み合う形のふたり
+じりじりと距離を詰めると…
+
+# move 62001111 1 0
+# alpha 3870001 1 0.3
+# waitandnext 0.5
+
+# voice 6200111 "pandora_battle_0001"
+# move 62001111 2 0.3
+# alpha 62001111 1 0.3
+# move 3870001 4 0.3
+# se "SE_8623"
+# textflame 1 1
+# textboxarrow 0 1
+@パンドラ
+はっ！
+
+# se "SE_8624"
+# fadein "white" 1
+# move 62001111 3 0.3
+# move 3870001 5 1
+# textwindow "close"
+# waitandnext 1
+
+;;演出：魔獣すぐに逃げて行く
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# se "SE_5255"
+# scale 3870001 0.7 1
+# alpha 3870001 0 1
+# waitandnext 2
+
+# voice 6200111 "pandora_0023"
+# face 62001111 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 2
+@パンドラ
+逃げた…？
+
+# voice 660381 "maclir_ura_0022"
+# move 62001111 4 0.5
+# alpha 6603811 1 0.3
+# face 6603811 "surprise"
+# textboxarrow 0 1
+@マクリル
+もうあんなに遠く…
+攻撃も受け流されたし…
+
+# textboxarrow 0 3
+@パンドラ
+あの魔獣が逃げたのが
+街のほうじゃないから良いけれど…
+
+# face 6603811 "usual"
+# textboxarrow 0 1
+@マクリル
+何か理由があるのかな？
+「裏側」の気配が濃いほうから
+来た訳でもなかったけど…
+
+# voice 540191 "failnaught_ca_0002"
+# face 62001111 "surprise"
+# face 6603811 "surprise"
+;;フェイルノート立ち絵無し
+# serif 1
+@？？？
+そこのふたり、ちょっといいかしら
+
+# serif 0
+# textboxarrow 0 1
+@マクリル
+！
+
+# serif 0
+# textboxarrow 0 3
+@パンドラ
+何か用かしら？
+
+;;フェイルノートの立ち絵表示
+# move 62001111 5 0.5
+# alpha 62001111 0 0.3
+# move 6603811 1 0.5
+# alpha 6603811 0 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 1
+
+# alpha 5401911 1 1
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@フェイルノート
+私はフェイルノート
+今の魔獣との戦闘について
+話を聞かせなさい
+
+# textflame 0 0
+@
+突如現れたフェイルノートの言葉に
+思わず顔を見合わせる
+パンドラとマクリルだった
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：カコルフェの街中、昼
+# background "in_city"
+# move 5401911 4 0
+# alpha 5401911 0 0
+# move 62001111 2 0
+# layer 62001111 4
+# mask 62001111 on
+# move 6603811 1 0
+# layer 6603811 3
+# mask 6603811 on
+# textwindow "close"
+# waitandnext 0.5
+
+;;ガヤ
+# se "SE_6216"
+# fadein "black" 1
+# waitandnext 2
+
+# sestop "SE_6216"
+# move 5401911 5 0.5
+# layer 5401911 2
+# alpha 5401911 1 0.3
+# waitandnext 0.5
+
+# move 62001111 3 0.6
+# face 62001111 "normal"
+# alpha 62001111 1 0.3
+# waitandnext 0.5
+
+# alpha 6603811 1 0.3
+# face 6603811 "usual"
+# waitandnext 1.5
+
+# voice 660381 "maclir_ura_0041"
+# face 6603811 "happy"
+# bgm "bgm002" 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@マクリル
+わぁ…すごい…
+人がたくさんいる…
+
+# voice 6200111 "pandora_0039"
+# textboxarrow 0 2
+@パンドラ
+見事なものね
+あ、あれは何かしら、お店？
+何を売っているのかしら…
+
+# voice 540191 "failnaught_ca_0009"
+# face 5401911 "angry"
+# textboxarrow 0 3
+@フェイルノート
+…ふたりとも、
+遊びに来た訳じゃないんでしょう？
+
+# voice 6200111 "pandora_0003"
+# textboxarrow 0 2
+@パンドラ
+ええ、その通りよ
+わかっているわ
+
+# voice 540191 "failnaught_ca_0027"
+# face 5401911 "sad"
+# textboxarrow 0 3
+@フェイルノート
+街のあちこちに目移りしたままで
+よくそう言えるわね…
+
+# voice 660381 "maclir_ura_0028"
+# face 6603811 "usual"
+# textboxarrow 0 1
+@マクリル
+あっちもこっちも人が多くて
+なんだか目が回りそう…
+
+# textboxarrow 0 3
+@フェイルノート
+そっちはそっちで
+どこ見ながら言っているのよ…
+
+# voice 660381 "maclir_ura_0015"
+# face 6603811 "angry"
+# textboxarrow 0 1
+@マクリル
+あ…うぅ、でも、こんな風に
+街…それもこんな大きな街全体が
+「裏側」の気配で満ちてるなんて…
+
+# bgm "stop"
+# textboxarrow 0 1
+@マクリル
+すごいこと…だから…
+
+# voice 6200111 "pandora_0028"
+# face 62001111 "sad"
+# textboxarrow 0 2
+@パンドラ
+…それはよくないんじゃないかしら
+
+# face 6603811 "usual"
+# textboxarrow 0 1
+@マクリル
+…そうなの？
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# sedelay "bgm602_basic_on_1" 1
+# face 62001111 "normal"
+# textboxarrow 0 2
+@パンドラ
+旅慣れてるミーミル達が
+あちこち巡って、私達は
+この大きな街に腰を据えての調査…
+
+# textboxarrow 0 2
+@パンドラ
+その分担は大正解だったわ
+
+# textboxarrow 0 2
+@パンドラ
+ひとつの街と侮らないほうがいい
+ってティルフィングの言葉に
+間違いはなかったわね
+
+# voice 540191 "failnaught_ca_0003"
+# face 5401911 "normal"
+# textboxarrow 0 3
+@フェイルノート
+「裏側」や「揺らぎ」のことは
+詳しく知らないけど、この街の
+状況に当てはまると思うわ
+
+# textboxarrow 0 3
+@フェイルノート
+街が大きいからか、元から
+魔獣の目撃情報はよくあったけど
+最近のは異常も異常よ
+
+# textboxarrow 0 3
+@フェイルノート
+街の警備も厳戒態勢
+魔獣を減らせればいいんだけど…
+
+# textboxarrow 0 2
+@パンドラ
+さっきみたいに逃げられるのね
+
+# voice 540191 "failnaught_ca_0028"
+# face 5401911 "sad"
+# textboxarrow 0 3
+@フェイルノート
+そう、それどころか
+私の矢は魔獣にかすりもしない…
+
+# se "bgm602_rhythm_on"
+# face 5401911 "normal"
+# textboxarrow 0 3
+@フェイルノート
+そこで、よ
+結局は逃がしたとはいえ
+一撃は与えたお前の話を聞かせなさい
+
+# textboxarrow 0 2
+@パンドラ
+受け流されてはしまったけど
+私の攻撃自体は特に
+変わったことはしてないわ
+
+# textboxarrow 0 1
+@マクリル
+逃げ慣れて…
+避け慣れてる感じはした…
+
+# voice 540191 "failnaught_ca_0013"
+# face 5401911 "sad"
+# textboxarrow 0 3
+@フェイルノート
+それは私が逃がした魔獣だから
+そういうことかしら？
+
+# voice 660381 "maclir_ura_0028"
+# face 6603811 "surprise"
+# textboxarrow 0 1
+@マクリル
+あっ…えと、その…
+
+# textboxarrow 0 3
+@フェイルノート
+…いいわ、事実だもの
+この辺りに出る魔獣は大抵
+一度は私と戦闘しているはずよ
+
+# voice 6200111 "pandora_0022"
+# face 62001111 "surprise"
+# textboxarrow 0 2
+@パンドラ
+全部逃がしたの？
+
+# voice 540191 "failnaught_ca_battle_0005"
+# face 5401911 "angry"
+# textboxarrow 0 3
+@フェイルノート
+…くっ
+そうよ、その通りよ
+
+# face 6603811 "usual"
+# textboxarrow 0 1
+@マクリル
+でも、魔獣は街じゃないほうに
+逃げて行くんだから…
+
+# voice 6200111 "pandora_0032"
+# face 62001111 "normal"
+# textboxarrow 0 2
+@パンドラ
+そうね、街は守られている
+フェイルノートの行動は
+意味がない訳ではないわね
+
+#setnextbgmblock 1
+# se "bgm602_tension_on"
+# textboxarrow 0 3
+@フェイルノート
+それじゃ駄目なのよ
+倒さなきゃ、意味なんてないわ
+
+# textboxarrow 0 2
+@パンドラ
+そうかしら
+
+# textboxarrow 0 3
+@フェイルノート
+今はよくても、
+いつか被害が大きくなるかもしれない
+
+# textboxarrow 0 3
+@フェイルノート
+そんな恐怖心が
+街の人々に蔓延しているのよ
+
+# textboxarrow 0 3
+@フェイルノート
+元を叩いて終わらせないと
+この街は元の賑わいに戻らないわ
+
+# voice 6200111 "pandora_0039"
+# face 62001111 "surprise"
+# textboxarrow 0 2
+@パンドラ
+…そうは言うけど
+この街、とても賑わってると
+思うのだけれど？
+
+# textboxarrow 0 3
+@フェイルノート
+当たり前でしょう？
+そうでなければ眠らない街
+不夜城カコルフェの名が廃るわ
+
+# textboxarrow 0 3
+@フェイルノート
+でも…今の賑わいは偽り
+そうでなければならないという
+人々の思いが作り出した偽物の喧騒
+
+# face 62001111 "normal"
+# textboxarrow 0 2
+@パンドラ
+人々の願い、想いが形作った紛い物…
+
+# textboxarrow 0 3
+@フェイルノート
+本来の形に戻すべきでしょう？
+
+# face 5401911 "sad"
+# textboxarrow 0 3
+@フェイルノート
+…私の力も、そう
+
+# textboxarrow 0 1
+@マクリル
+…？
+
+# face 5401911 "normal"
+# textboxarrow 0 3
+@フェイルノート
+…なんでもないわ
+この街には私の力が必要なはず
+そう言っただけよ
+
+# textboxarrow 0 3
+@フェイルノート
+それはそうと、ふたりは
+魔獣に関連する事象を
+調べているのよね？
+
+# voice 6200111 "pandora_0003"
+# textboxarrow 0 2
+@パンドラ
+ええ、調査と…
+対処もできればいいわね
+
+# textboxarrow 0 1
+@マクリル
+…………
+
+# face 5401911 "angry"
+# textboxarrow 0 3
+@フェイルノート
+対処…それってきっと
+私と目的は一緒よね？
+
+# face 6603811 "surprise"
+# textboxarrow 0 1
+@マクリル
+目的…？
+
+# textboxarrow 0 3
+@フェイルノート
+魔獣を倒していけば
+きっとこの事態も収まる…
+それってふたりの言う対処でしょ？
+
+# voice 6200111 "pandora_0040"
+# textboxarrow 0 2
+@パンドラ
+なるほど、そういうことね
+完全に理解したわ
+
+# voice 540191 "failnaught_ca_0013"
+# face 5401911 "sad"
+# textboxarrow 0 3
+@フェイルノート
+…本当にわかってるのかしら
+
+# face 6603811 "usual"
+# textboxarrow 0 1
+@マクリル
+原因を調べてって
+マナナンもミーミルも言ってた…
+
+# textboxarrow 0 2
+@パンドラ
+そういう訳で協力するわ
+
+# textboxarrow 0 3
+@フェイルノート
+目的がある割に危機感ないわね…
+
+# voice 6200111 "pandora_0004"
+# textboxarrow 0 2
+@パンドラ
+最後にはどうにかなるからよ
+
+# textboxarrow 0 3
+@フェイルノート
+パンドラと話していると
+私の頭がどうにかなりそうだわ
+
+# textboxarrow 0 3
+@フェイルノート
+まぁいいわ…
+
+;;演出：時間経過
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：カコルフェの街中、夜
+# background "in_city_night"
+# alpha 5401911 0 0
+# alpha 62001111 0 0
+# alpha 6603811 0 0
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# bgm "bgm003" 0
+# voice 540191 "failnaught_ca_0002"
+# move 5401911 3 0
+# mask 5401911 off
+# face 5401911 "normal"
+# alpha 5401911 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@フェイルノート
+街の地理を知らないと
+調査も進まないだろうし
+私が案内してあげるわ
+
+# voice 6200111 "pandora_0021"
+# alpha 5401911 0 0.3
+# move 62001111 4 0
+# layer 62001111 2
+# mask 62001111 off
+# face 62001111 "happy"
+# alpha 62001111 1 0.3
+# move 6603811 2 0
+# face 6603811 "happy"
+# alpha 6603811 1 0.3
+# textboxarrow 0 3
+@パンドラ
+それはとても楽しみだわ…！
+
+# voice 660381 "maclir_ura_0004"
+# textboxarrow 0 1
+@マクリル
+…やった
+
+# voice 540191 "failnaught_ca_0027"
+# alpha 62001111 0 0.3
+# alpha 6603811 0 0.3
+# face 5401911 "sad"
+# alpha 5401911 1 0.3
+# textboxarrow 0 2
+@フェイルノート
+こっちの提案は食いつきがいいのね…
+
+# face 5401911 "normal"
+# textboxarrow 0 2
+@フェイルノート
+せっかくだし、観光の定番
+街の中心カコルフェタワーから――
+
+# bgm "stop"
+# alpha 5401911 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;演出：揺れ
+# se "SE_0637"
+# shake 0 2
+# waitandnext 2
+
+# bgm "bgm005" 0
+# voice 6200111 "pandora_0023"
+# face 62001111 "surprise"
+# alpha 62001111 1 0.3
+# face 6603811 "surprise"
+# alpha 6603811 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@パンドラ
+なにかしら、この揺れは！？
+
+# voice 660381 "maclir_ura_0024"
+# face 6603811 "sad"
+# textboxarrow 0 1
+@マクリル
+こ、怖いよぉ…
+
+# voice 540191 "failnaught_ca_0023"
+# alpha 62001111 0 0.3
+# alpha 6603811 0 0.3
+# face 5401911 "surprise"
+# alpha 5401911 1 0.3
+# textboxarrow 0 2
+@フェイルノート
+魔獣が暴れているの…？
+違う、この感じは…！
+
+;;演出：移動の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.7
+# move 5401911 2 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+;;背景：崩壊したカコルフェの街、夜
+# background "in_city_collapse_night"
+# alpha 5401911 0 0
+# waitandnext 0.6
+
+# se "SE_6141"
+# imagealpha 0 0 0.7
+# imagerightout 0 0.7
+# waitandnext 2.7
+
+# voice 540191 "failnaught_ca_0018"
+# sestop "SE_6141"
+# move 5401911 3 0
+# alpha 5401911 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@フェイルノート
+何よこれ…
+
+# textflame 0 0
+@
+徐々に静まりゆく地響き
+それと引き換えに響き渡るのは
+逃げ惑う人々の悲鳴
+
+# textflame 1 1
+# textboxarrow 0 2
+@フェイルノート
+カコルフェタワーが…
+
+# fadeout "black" 2
+# waitandnext 2

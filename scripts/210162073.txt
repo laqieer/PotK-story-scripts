@@ -1,0 +1,519 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１６章 章タイトル「・中心部決戦―エクリプス―」
+;;第2話―７　タイトル：前夜
+;;2_7_3
+;;スクリプト最後の背景：中心部（夜）：in_city_night
+;;-----------------------------------------
+# script "lisp"
+# background "in_city_night"
+# bgmfile "bgm160" "BgmPJZero001" 0
+;;-----------------------------------------
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;スラーンド
+# body 3201211
+# pos 3201211 3
+# scale 3201211 0.8 0
+# layer 3201211 3
+# alpha 3201211 0 0
+# mask 3201211 off
+;;ジーベン
+# body 212
+# pos 212 3
+# scale 212 0.8 0
+# layer 212 2
+# alpha 212 0 0
+# mask 212 off
+;;ゼロ
+# body 23
+# pos 23 3
+# scale 23 0.8 0
+# layer 23 2
+# alpha 23 0 0
+# mask 23 off
+# brightness 23 0.5 0
+;;-----------------------------------------
+;;？？？（ゼロ）
+# move 23 3 0
+# face 23 "BeastMode_1"
+# alpha 23 1 0
+# mask 23 off
+# textflame 1 1
+# textboxarrow 0 2
+@？？？
+ガアアアアアアアア！
+
+;;//ゼロがカミトを薙ぎ払う
+# se "SE_4001"
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# alpha 23 0 0.5
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# voice 9936 "kamito_0040"
+@カミト
+あぐぅっ…！
+
+# face 210 "sad"
+# textboxarrow 0 2
+@カミト
+くっ…
+あと一歩が、届かない…
+
+# textboxarrow 0 2
+@カミト
+僕一人じゃ無理なのかな…
+でも…！
+
+;;？？？（ゼロ）
+# alpha 210 0 0.5
+# move 23 3 0
+# face 23 "BeastMode_1"
+# alpha 23 1 0.5
+# mask 23 off
+# textboxarrow 0 2
+@？？？
+ガアアアアアアアアア！
+
+;;//ゼロがカミトに迫る
+# se "SE_9092"
+# textwindow "close"
+# rightout 23 0.5
+# waitandnext 0.5
+
+# alpha 23 0 0
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+あっ…
+
+;;//以下登場するジーベンと共にいるキル姫スラーンドは、スラーンド・獣刻・セトの立ち絵です。
+;;スラーンド（獣刻）
+# bgm "stop"
+# alpha 210 0 0.5
+# move 3201211 3 0
+# face 3201211 "angry"
+# alpha 3201211 1 0.5
+# mask 3201211 off
+# textboxarrow 0 2
+# voice 320121 "srand_ge_battle_0001"
+@スラーンド
+雷よ！
+
+# se "SE_5784"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;//スラーンドが割り込んでゼロを押しのける
+# textwindow "close"
+# alpha 3201211 0 0.5
+# waitandnext 0.5
+
+# move 23 3 0
+# move 23 1 0.3
+# face 23 "BeastMode_1"
+# alpha 23 1 0.2
+# mask 23 off
+# waitandnext 1
+
+# alpha 23 0 0.5
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9936 "kamito_0024"
+@カミト
+スラーンド…？
+ということは…
+
+;;//ジーベンがやって来る
+# se "SE_5575"
+# move 210 2 0.5
+# mask 210 on
+# move 212 4 0
+# face 212 "usual"
+# alpha 212 1 0.5
+# mask 212 on
+# textboxarrow 0 3
+# voice 9934 "sieben_0039"
+@ジーベン
+のんびり座り込んでないで
+さっさと立て！
+このお人好し暴走小僧めっ
+
+# face 210 "happy"
+# textboxarrow 0 1
+# voice 9936 "kamito_0032"
+@カミト
+ジーベン…
+あ、ありがとう…
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 210 0 0
+# alpha 212 0 0
+# move 212 3 0
+# face 212 "usual"
+# alpha 212 1 0
+# mask 212 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9934 "sieben_0020"
+@ジーベン
+…ったく
+何とか身を隠せたな
+
+# textboxarrow 0 2
+@ジーベン
+相手が理性なし・見境なし・
+節操なしのなしなし三拍子野郎で
+助かったぞ
+
+# textboxarrow 0 2
+# voice 9934 "sieben_0047"
+@ジーベン
+おい、スラーンド
+傷の具合はどうだ？
+
+# move 212 2 0.5
+# mask 212 on
+# move 3201211 4 0
+# face 3201211 "sad"
+# alpha 3201211 1 0.5
+# mask 3201211 on
+# textboxarrow 0 3
+# voice 320121 "srand_ge_0008"
+@スラーンド
+偉大なる強さをもつあたしが
+怪我をするわけ…あ痛たた…
+ごめん、ちょっと休ませて
+
+# move 210 1 0
+# face 210 "happy"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 1
+# move 212 3 0.5
+# move 3201211 5 0.5
+# voice 9936 "kamito_0062"
+@カミト
+スラーンド、ありがとう
+本当に助かった…
+
+# face 3201211 "happy"
+# textboxarrow 0 3
+# voice 320121 "srand_ge_0004"
+@スラーンド
+あたしはマスターの命令に
+従っただけだよ
+
+# face 3201211 "normal"
+# textboxarrow 0 3
+@スラーンド
+ほら、マスター
+カミトと話すチャンスなんじゃない？
+
+# face 212 "angry"
+# textboxarrow 0 2
+@ジーベン
+うるさい！
+怪我人は大人しくしてろっ
+
+# alpha 3201211 0 0.5
+# move 210 2 0.5
+# face 210 "normal"
+# textboxarrow 0 1
+# move 212 4 0.5
+# voice 9936 "kamito_0023"
+@カミト
+僕に、何か話したいことが？
+
+# textboxarrow 0 3
+# voice 9934 "sieben_0039"
+@ジーベン
+…チッ
+俺ばかり気にしているのも
+バカらしいな
+
+# bgm "stop"
+# face 212 "usual"
+# textboxarrow 0 3
+# voice 9934 "sieben_0001"
+@ジーベン
+おい、天然…いや、カミト
+
+# textboxarrow 0 1
+@カミト
+う、うん…
+
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 3
+@ジーベン
+俺は…七人目なんだ…
+そして、覚えてないみたいだが
+お前は八人目だ…
+
+# face 210 "surprise"
+# textboxarrow 0 1
+@カミト
+あ！
+もしかして…特務機関ラグナロクで
+被検体になっていた…
+
+# face 212 "surprise"
+# textboxarrow 0 3
+# voice 9934 "sieben_0023"
+@ジーベン
+お前、覚えていたのか！？
+
+# face 210 "sad"
+# textboxarrow 0 1
+# voice 9936 "kamito_0033"
+@カミト
+ごめん…
+ジーベンのことは分からない…
+ただ、あそこにいたことだけは…
+
+;;カミト（独白）
+# move 210 2 0
+# textboxarrow 0 0
+# textwindow "moya"
+@カミト
+フォルカスの記憶を追体験したとき
+僕は確かに、あそこにいた
+
+;;カミト（独白）
+# textboxarrow 0 0
+@カミト
+あの辛い記憶…
+あれを思い出さないように、
+フォルカスは僕に嘘の記憶を…
+
+# face 212 "usual"
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 9934 "sieben_0030"
+@ジーベン
+そうか…
+なら、それでいい
+無理に思い出すようなもんじゃない
+
+# textboxarrow 0 3
+@ジーベン
+俺は…お前に負い目を感じてたんだ
+あの酷い施設にいたとき、俺は
+お前のことを無視していた
+
+# textboxarrow 0 3
+@ジーベン
+兄さんや姉さんがいなくなっていって
+いつか、みんないなくなる…
+そんな絶望に囚われて
+
+# textboxarrow 0 3
+@ジーベン
+お前がオクトだって知ったとき、
+もう少し気に掛けておいてやれば
+良かったって…後悔したんだよ
+
+# textboxarrow 0 3
+@ジーベン
+しかも、とっくの昔に再会してたのに
+全く気づかなかったしな…
+
+# face 210 "normal"
+# textboxarrow 0 1
+@カミト
+それは僕も同じだから…
+ジーベンが気に病むことじゃないよ
+
+# textboxarrow 0 3
+# voice 9934 "sieben_0003"
+@ジーベン
+それでも、言っておきたかったんだ
+単なる自己満足だが…
+
+# face 212 "normal"
+# textboxarrow 0 3
+@ジーベン
+カミト…お前が生きていて良かったよ
+本当に、良かった
+
+# textboxarrow 0 1
+@カミト
+ジーベン…
+
+# face 212 "usual"
+# textboxarrow 0 3
+@ジーベン
+…しんみりするのはここまでだ
+カミト、もう一つ言っておかないと
+いけないことがある
+
+# face 210 "surprise"
+# textboxarrow 0 1
+# voice 9936 "kamito_0023"
+@カミト
+何？
+
+# textboxarrow 0 3
+# voice 9934 "sieben_0002"
+@ジーベン
+お前の義手…そいつは
+何があっても壊すなよ
+恐らくは、それが…
+
+# textboxarrow 0 3
+@ジーベン
+お前のバイブスの根源だ
+
+# face 210 "normal"
+# textboxarrow 0 1
+@カミト
+…うん
+そうみたいだね
+
+# face 212 "surprise"
+# textboxarrow 0 3
+# voice 9934 "sieben_0024"
+@ジーベン
+なっ…！？
+それも知ってやがったのか
+
+# textboxarrow 0 1
+@カミト
+あの施設での実験によるもの
+なんでしょ？
+
+# face 212 "usual"
+# textboxarrow 0 3
+# voice 9934 "sieben_0003"
+@ジーベン
+ああ
+俺もお前も、後天的にバイブスを
+手に入れたんだ
+
+# textboxarrow 0 3
+@ジーベン
+あのクソみたいな実験でな
+
+# textboxarrow 0 3
+@ジーベン
+俺は体の中身をほとんど弄られた
+その後、何でかバイブスを
+宿していた
+
+# textboxarrow 0 3
+@ジーベン
+お前は左腕だけのようだが、
+そこに人工的なバイブスが込められて
+いると考えて間違いない
+
+# textboxarrow 0 3
+@ジーベン
+俺は内臓を取り除いたら
+死んでしまうから
+考えても仕方ないが
+
+# textboxarrow 0 3
+@ジーベン
+お前は
+義手をなくしても
+生きていけるはずだ
+
+# textboxarrow 0 3
+@ジーベン
+その代わり、バイブスを失う
+つまり、キル姫を従えることが
+できなくなる
+
+# textboxarrow 0 3
+@ジーベン
+ただの人間に戻れるって考えると
+ひょっとしたらラッキーなのかも
+しれないが…
+
+# textboxarrow 0 3
+@ジーベン
+お前が奏官であり続けたいのなら
+その義手は絶対に失うな
+
+# face 210 "sad"
+# textboxarrow 0 1
+@カミト
+この義手を…
+
+;;カミト（独白）
+# move 210 2 0
+# textboxarrow 0 0
+# textwindow "moya"
+@カミト
+フォルカスは、この義手を壊すつもり
+なんだろうな…
+僕からバイブスをなくすために
+
+;;カミト（独白）
+# textboxarrow 0 0
+@カミト
+でも、そうなったら僕達の絆は…
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# alpha 210 0 0.5
+# alpha 212 0 0.5
+# move 3201211 3 0
+# face 3201211 "normal"
+# alpha 3201211 1 0.5
+# mask 3201211 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 320121 "srand_ge_0037"
+@スラーンド
+マスター！
+あいつ、意外としつこいよ
+
+# alpha 3201211 0 0.5
+# move 212 3 0
+# face 212 "angry"
+# alpha 212 1 0.5
+# mask 212 off
+# textboxarrow 0 2
+# voice 9934 "sieben_0039"
+@ジーベン
+チッ
+もう見つかったのか…
+
+;;？？？（ゼロ）
+# alpha 212 0 0.5
+# move 23 3 0
+# face 23 "BeastMode_1"
+# alpha 23 1 0.5
+# mask 23 off
+# textboxarrow 0 2
+@？？？
+ガアアアアアアアアアアアア！

@@ -1,0 +1,518 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第７章 章タイトル：「夢追い人―デザイア―」
+;;第1話　タイトル：ラグナロク機関へ
+;;7_1_8
+;;スクリプト最後の背景：下町（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "in_cityroad"
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;ブリューナク
+# body 500721
+# pos 500721 3
+# scale 500721 0.8 0
+# layer 500721 2
+# alpha 500721 0 0
+# mask 500721 off
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 2
+# alpha 3201911 0 0
+# mask 3201911 off
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;スラーンド
+# body 3201211
+# pos 3201211 3
+# scale 3201211 0.8 0
+# layer 3201211 2
+# alpha 3201211 0 0
+# mask 3201211 off
+;;ジーベン
+# body 212
+# pos 212 3
+# scale 212 0.8 0
+# layer 212 2
+# alpha 212 0 0
+# mask 212 off
+;;マサムネ(キラーメイル)
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# layer 1100111 2
+# alpha 1100111 0 0
+# mask 1100111 off
+;;ブリューナク・D. plug・バルバトス
+# body 3500711
+# pos 3500711 3
+# scale 3500711 0.8 0
+# layer 3500711 2
+# alpha 3500711 0 0
+# mask 3500711 off
+;;-----------------------------------------
+;;//背景：下町（昼）
+# move 211 2 0
+# face 211 "irregular"
+# alpha 211 1 0
+# mask 211 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0
+# mask 196 on
+@ヴァング
+ようやく家が見えてきたな
+結局、ここまで何日かかったんだ？
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+ちょっと！
+ラグナロク機関はまだなのっ？
+かなり歩いてるのにっ…
+
+;;ブリューナク（天上編）
+# voice 5007 "buryunaku_0009"
+# alpha 211 0 0.5
+# alpha 196 0 0.5
+# move 3500711 2 0
+# face 3500711 "normal"
+# alpha 3500711 1 0.5
+# mask 3500711 on
+# move 500721 4 0
+# face 500721 "angry"
+# alpha 500721 1 0.5
+# mask 500721 on
+# textboxarrow 0 3
+@ブリューナク
+焦燥感を抱くのは道理だが、
+精神的な不安定さは活動効率を
+低下させるぞ、アルマス
+
+;;ブリューナク（霊装支配）
+# voice 350071 "buryunaku_a_0004"
+# face 3500711 "happy"
+# textboxarrow 0 1
+@ブリューナク
+目的地に辿り着く道程にもまた
+ロマンがある
+穏やかな気持ちで歩んでいこう
+
+# alpha 3500711 0 0.5
+# alpha 500721 0 0.5
+# move 211 2 0
+# face 211 "irregular"
+# alpha 211 1 0.5
+# mask 211 on
+# move 196 4 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+二人がかりで説教してきた…！
+
+# voice 9935 "vang_0004"
+# face 211 "normal"
+# textboxarrow 0 1
+@ヴァング
+ははは…
+まあ、もう少しだ
+辛抱してくれ
+
+# face 211 "irregular"
+# textboxarrow 0 1
+@ヴァング
+グリモワール、アスカロン
+とっとと用事を済ませて――
+
+# bgm "stop"
+# voice 320191 "chihyu_a_0010"
+# alpha 196 0 0.5
+# move 3201911 4 0
+# face 3201911 "angry"
+# alpha 3201911 1 0.5
+# mask 3201911 on
+# textboxarrow 0 3
+@シユウ
+うがあああ！
+マスター、さがっていろ！
+
+# voice 9935 "vang_0026"
+# face 211 "angry"
+# textboxarrow 0 1
+@ヴァング
+何だ！？
+
+;;//スラーンドが攻撃してくる
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# voice 320121 "srand_ge_unit_0009"
+# alpha 211 0 0.5
+# alpha 3201911 0 0.5
+# move 3201211 3 0
+# face 3201211 "angry"
+# alpha 3201211 1 0.5
+# mask 3201211 off
+# textboxarrow 0 2
+@スラーンド
+偉大なる強さ、
+その身で味わえ！
+
+# se "SE_4100"
+# waitandnext 0.5
+
+# alpha 3201211 0 0.5
+# move 3201911 3 0
+# face 3201911 "angry"
+# alpha 3201911 1 0.5
+# mask 3201911 off
+# textboxarrow 0 2
+@シユウ
+おろかものめっ！
+
+# se "SE_4100"
+# waitandnext 0.5
+
+;;//シユウとスラーンドがぶつかり合う
+# textwindow "close"
+# alpha 3201911 0 0.5
+# waitandnext 0.5
+
+# move 3201911 2 0
+# face 3201911 "angry"
+# alpha 3201911 1 0
+# mask 3201911 on
+# move 3201211 4 0
+# face 3201211 "angry"
+# alpha 3201211 1 0
+# mask 3201211 on
+# leftin 3201911 0.3
+# rightin 3201211 0.3
+# waitandnext 0.3
+
+# se "SE_9086"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 9934 "sieben_0029"
+# alpha 3201911 0 0.5
+# alpha 3201211 0 0.5
+# move 211 2 0
+# face 211 "irregular"
+# alpha 211 1 0.5
+# mask 211 on
+# move 212 4 0
+# face 212 "normal"
+# alpha 212 1 0.5
+# mask 212 on
+# textboxarrow 0 3
+# textwindow "normal"
+@ジーベン
+待ちくたびれたぞ、
+この万年遅刻パン咥え小僧め！
+
+# voice 9935 "vang_0009"
+# textboxarrow 0 1
+@ヴァング
+ジーベンか…
+てめえの相手をしてるときじゃ
+ねぇんだよ
+
+# voice 9934 "sieben_0004"
+# textboxarrow 0 3
+@ジーベン
+僕に恐れを成して逃げ回っている
+ようじゃないか
+おや？泣き虫腰巾着はどうした？
+
+# face 211 "angry"
+# textboxarrow 0 1
+@ヴァング
+うるせぇ！
+カミトは泣き虫でも腰巾着でも
+ねえよ！
+
+# textboxarrow 0 1
+@ヴァング
+とにかく！
+今はてめえと戦ってる場合じゃ
+ねえんだ！
+
+# textboxarrow 0 1
+@ヴァング
+てめえだって分かってるだろうが！
+今、この世界はやべえ連中の脅威に
+さらされてやがる
+
+# textboxarrow 0 1
+@ヴァング
+まずはあいつらをどうにかしねぇと
+天下統一も何もあったもんじゃない
+
+# voice 9934 "sieben_0045"
+# textboxarrow 0 3
+@ジーベン
+フンッ…
+
+# voice 11001 "masamunem_0002"
+# alpha 211 0 0.5
+# alpha 212 0 0.5
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+@マサムネ
+そういえば、前もカミトにケンカを
+ふっかけていたな
+お前は何がしたいんだ？
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+悪いけど、先を急いでるの！
+あなた達の因縁とかは知らないけど
+ひとまず通してくれない？
+
+# alpha 1100111 0 0.5
+# alpha 196 0 0.5
+# move 211 2 0
+# face 211 "irregular"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+# move 212 4 0
+# face 212 "usual"
+# alpha 212 1 0.5
+# mask 212 on
+@ヴァング
+騒ぎが収まったら、
+またいつでも相手してやる――
+
+# voice 9934 "sieben_0011"
+# face 212 "angry"
+# textboxarrow 0 3
+@ジーベン
+ふざけるな！！
+
+# face 211 "surprise"
+# textboxarrow 0 1
+@ヴァング
+…………！？
+
+# textboxarrow 0 3
+@ジーベン
+おい、ヴァング
+いや、腰抜け過ぎて足ガクガク野郎
+勘違いするなよ
+
+# textboxarrow 0 3
+@ジーベン
+騒ぎが収まったら、相手してやる？
+今はそれどころじゃない？
+世界が脅威にさらされている？
+
+# voice 9934 "sieben_0009"
+# textboxarrow 0 3
+@ジーベン
+何だ、それは！？
+そんなこと、知るか！！
+
+# textboxarrow 0 1
+@ヴァング
+！！
+
+# face 212 "normal"
+# textboxarrow 0 3
+@ジーベン
+常々、脳みそカニ味噌野郎だと
+思っていたが、とうとう甲殻類より
+落ちぶれたな…
+
+# face 212 "angry"
+# textboxarrow 0 3
+@ジーベン
+いいか
+一度しか言わないから、良く聞け！
+お前を倒すのは、この僕だ
+
+# textboxarrow 0 3
+@ジーベン
+僕の知らないところで、お前が
+何処の誰とも知らない奴に殺される
+のは甚だ不愉快だよ
+
+# textboxarrow 0 3
+@ジーベン
+部屋の隅にいつの間にか溜まっている
+糸くずのようにちっぽけなお前が…
+
+# textboxarrow 0 3
+@ジーベン
+力尽きるのは、僕との戦いで
+完膚無きまでに敗北したとき
+そのときのみだ！
+
+# textboxarrow 0 3
+@ジーベン
+僕達は顔を合わせる度、
+戦ってきた
+そこに理由があったか？
+
+# textboxarrow 0 3
+@ジーベン
+おい、周回遅れファッションリーダー
+いい加減、目を覚ませよ
+
+# textboxarrow 0 3
+@ジーベン
+僕とお前が対峙した
+それだけで十分だろうが
+
+# textboxarrow 0 3
+@ジーベン
+戦わない理由を、
+とってつけたように並べ立てるん
+じゃない！
+
+# alpha 211 0 0.5
+# alpha 212 0 0.5
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# move 196 4 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+ええーっ…
+あいつ、言ってること
+無茶苦茶よ…
+
+# textboxarrow 0 1
+@マサムネ
+理解に苦しむな…
+だが…
+
+# bgmfile "bgm405" "BgmIntegralNoahEvent003" 0
+# voice 9935 "vang_0018"
+# alpha 1100111 0 0.5
+# alpha 196 0 0.5
+# move 211 3 0
+# face 211 "normal"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+@ヴァング
+あーあ…
+てめえに説教されるとはな…
+
+# textboxarrow 0 2
+@ヴァング
+本当に、落ちぶれちまうところ
+だったぜ
+
+# voice 9943 "almace_navikan_0035"
+# alpha 211 0 0.5
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# move 196 4 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+えっ？
+まさか…やる気になったの…
+何でっ？
+
+# textboxarrow 0 1
+@マサムネ
+下がっていよう
+ここからは、彼らの領域だ
+
+;;//マサムネ達が下がる
+# se "SE_5200"
+# voice 9935 "vang_0033"
+# alpha 1100111 0 0.5
+# alpha 196 0 0.5
+# move 211 3 0
+# face 211 "usual"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+@ヴァング
+悪ぃな…
+すぐ片をつける
+
+# alpha 211 0 0.5
+# move 3201211 2 0
+# face 3201211 "normal"
+# alpha 3201211 1 0.5
+# mask 3201211 on
+# move 212 4 0
+# face 212 "normal"
+# alpha 212 1 0.5
+# mask 212 on
+# textboxarrow 0 3
+@ジーベン
+ようやく戦う気になったか
+スラーンド！
+
+# se "SE_5206"
+# voice 320121 "srand_ge_0033"
+# face 3201211 "angry"
+# textboxarrow 0 1
+@スラーンド
+任せといてっ！
+偉大なる強さ、見せてやる！
+
+# voice 9935 "vang_0047"
+# alpha 3201211 0 0.5
+# alpha 212 0 0.5
+# move 211 2 0
+# face 211 "normal"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+# move 3201911 4 0
+# face 3201911 "normal"
+# alpha 3201911 1 0.5
+# mask 3201911 on
+@ヴァング
+シユウ！
+いくぞ！！
+
+# se "SE_10428"
+# voice 320191 "chihyu_a_0010"
+# face 3201911 "angry"
+# textboxarrow 0 3
+@シユウ
+うがあああぁぁ！
+こうていのおとおりだ！

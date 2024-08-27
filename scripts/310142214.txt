@@ -1,0 +1,607 @@
+;;-----------------------------------------
+;;ゴッティル3_1
+;;-----------------------------------------
+# script "lisp"
+# background "ice-world"
+# bgmfile "bgm150" "BgmPJZero001" 0
+;;-----------------------------------------
+;;ティル
+# body 101415
+# pos 101415 4
+# scale 101415 0.8 0
+# layer 101415 3
+# alpha 101415 0 0
+;;ゴッティル
+# body 3101421
+# pos 3101421 3
+# scale 3101421 0.8 0
+# layer 3101421 3
+# mask 3101421 off
+# alpha 3101421 0 0
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 5
+# mask 0 off
+# alpha 0 0 0
+;;ゼロ
+# body 23
+# pos 23 2
+# scale 23 0.8 0
+# layer 23 3
+# alpha 23 0 0
+# body 1100221
+# alpha 1100221 0 0
+;;ベルゼブブ
+# body 960022
+# pos 960022 4
+# scale 960022 0.8 0
+# layer 960022 4
+# alpha 960022 0 0
+;;ヴァリン
+# body 18
+# pos 18 3
+# scale 18 0.8 0
+# layer 18 3
+# mask 18 off
+# alpha 18 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "bg_white_circle"
+# imagescale 1 1.3 0
+# imagealpha 1 0 0
+# imagelayer 1 1
+;;-----------------------------------------
+;;背景：地上編７章のセフィロト・システムの場
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1.5
+
+# alpha 101415 1 0.5
+# face 101415 "surprise"
+# alpha 23 1 0.5
+# waitandnext 0.7
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@ティルフィング
+ここが…
+
+# textflame 0 0
+@
+魔獣の追撃に遭いながらも
+マスター達は希望の待つ場所へ
+辿り着いた
+
+# textflame 1 1
+# textboxarrow 0 1
+@ゼロ
+前に俺が見たときは
+もっと奥の方だった
+行くぞ
+
+;;場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 101415 0 0
+# alpha 23 0 0
+;;演出：クリスタルの花表示
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 101415 3 0
+# mask 101415 off
+# alpha 101415 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ティルフィング
+ありましたね
+綺麗…
+それに、とても懐かしいような…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 101415 "angry"
+@ティルフィング
+これを持って
+ヴァリンの元へ急ぎましょう
+マスター！
+
+# alpha 101415 0 0.5
+# alpha 23 1 0.5
+# alpha 960022 1 0.5
+# bgmfile "bgm164" "BgmPJZero001" 0
+# textflame 1 1
+# textboxarrow 0 3
+# face 960022 "happy"
+@？？？
+キャキャキャキャ♪
+行かせる訳ないじゃん
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 23 "angry_2"
+# voice 11002 "laevateinm_0013"
+@ゼロ
+…ベルゼブブ！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ベルゼブブ
+あ、お兄ちゃんは
+生かしておいてよかったよ
+
+# textflame 1 1
+# textboxarrow 0 3
+@ベルゼブブ
+ベルの邪魔になるやつを
+集めてくれるって思ってたから！
+
+# alpha 23 0 0.5
+# move 101415 2 0
+# mask 101415 on
+# alpha 101415 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+私達がここにくるのを
+待っていた、という訳ですね
+
+# textflame 1 1
+# textboxarrow 0 3
+@ベルゼブブ
+そ、今度は逃がさないんだから
+ベルが地上を食らい尽くすためにね！
+
+# alpha 23 1 0.5
+# alpha 101415 0 0.5
+# waitandnext 0.5
+
+;;演出：ベルゼブブがティルフィングを攻撃しようとするが弾かれる
+# se "SE_3006"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 11002 "laevateinm_0007"
+@ゼロ
+…お前は
+ここで遊んでいけよ、なぁ？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 960022 "normal"
+@ベルゼブブ
+…お兄ちゃんと遊ぶのも
+飽きてきたし、壊しちゃうかぁ！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ゼロ
+ってことだ
+お前達は先に行け！
+
+# alpha 23 0 0.5
+# alpha 960022 0 0.5
+# move 101415 3 0
+# mask 101415 off
+# alpha 101415 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0013"
+@ティルフィング
+ですが……
+
+# alpha 101415 0 0.5
+# se "SE_5575"
+# textflame 0 0
+@
+ティルフィング、行こう！
+マスターがティルフィングの
+手を握り走り出す
+
+# alpha 23 1 0.5
+# alpha 960022 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 960022 "happy"
+@ベルゼブブ
+キャキャキャ♪行っちゃった♪
+お兄ちゃんをぶっ殺して
+すぐに追いかけるね
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 23 "angry_1"
+@ゼロ
+やれるもんならやってみろよ
+
+;;演出：暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：研究所前
+# background "laboratory_area"
+# alpha 23 0 0
+# alpha 960022 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 101415 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0001"
+@ティルフィング
+もうすぐです、マスター！
+
+# move 101415 2 0.5
+# mask 101415 on
+# alpha 960022 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@ベルゼブブ
+ここがゴールなんだね？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 101415 "surprise"
+# voice 1014 "tyrufing_0024"
+@ティルフィング
+どうしてあなたがここに…
+
+# textflame 1 1
+# textboxarrow 0 3
+@ベルゼブブ
+どうしてだろうねぇ？
+どうしてだと思う？
+
+# textflame 0 0
+@
+ほんの少しでいい
+持ちこたえられるか？
+とティルフィングに問うマスター
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 101415 "angry"
+# voice 1014 "tyrufing_0003"
+@ティルフィング
+…はい！
+私の力なら、抑えられます
+マスターは花をヴァリンに！
+
+;;演出：暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "red_corridor"
+# alpha 101415 0 0
+# alpha 960022 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 18 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 9993 "valyn_0006"
+@ヴァリン
+待ってました！
+こっちの準備は整ってるわ！
+
+;;演出：クリスタルの花を装置に組み込むヴァリン（それっぽいSEなど）
+# se "SE_0851"
+# textflame 1 1
+# textboxarrow 0 2
+@ヴァリン
+これで完成のはず…
+って言っても研究中の理論を
+作動させられるようにしただけだけど
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヴァリン
+これはティルの持つキラーズの性質
+そしてティル自身の潜在能力を
+呼び起こすためのシステム…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヴァリン
+つまり、実験もできてないし
+そもそもティルにしか使えない
+出来損ないもいいとこのシステムよ！
+
+# textflame 0 0
+@
+だとしても
+使えるものを使うしかない！
+とマスターはヴァリンを急かす
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 18 "trouble"
+@ヴァリン
+わかってるって！
+後はティルがここに…って
+今は戦闘中よね、どーしよ！？
+
+# alpha 18 0 0.5
+# move 101415 3 0.5
+# mask 101415 off
+# alpha 101415 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 101415 "normal"
+@ティルフィング
+マスター、ヴァリン！
+完成したんですね！
+
+# alpha 101415 0 0.5
+# alpha 18 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 18 "surprise"
+# voice 9993 "valyn_0023"
+@ヴァリン
+ティル！？
+
+;;演出：回想に入る暗転
+# fadeout "white" 0.8
+# waitandnext 0.8
+
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 18 0 0
+# background "laboratory_area"
+# textwindow "close"
+# move 101415 2 0
+# mask 101415 on
+# alpha 101415 1 0
+# alpha 960022 1 0
+# face 101415 "angry"
+# waitandnext 0.2
+
+# fadein "white" 0.8
+# waitandnext 0.8
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ティルフィング
+マスターとヴァリンを信じて
+私は戦う…っ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 960022 "normal"
+@ベルゼブブ
+信じても裏切られるかもよ～？
+
+;;演出：ベルゼブブに攻撃が浴びせられる
+# se "SE_9019"
+# fadein "white" 0.3
+# waitandnext 0.3
+
+# bgmfile "bgm154_155" "BgmPJZero001" 0
+# textflame 1 1
+# textboxarrow 0 0
+@？？？
+お前達とは違う
+裏切ったりはしねぇよ
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 101415 "surprise"
+@ティルフィング
+ゼロ！
+私、てっきり…
+
+# move 23 4 0
+# mask 23 on
+# alpha 23 1 0.5
+# alpha 960022 0 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@ゼロ
+すまん、途中でやつに逃げられた
+ここは交代だ、お前は中へ！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 101415 "angry"
+@ティルフィング
+はい！
+
+;;演出：回想終わりの暗転
+# fadeout "white" 0.8
+# waitandnext 0.8
+
+# imagealpha 1 0 0
+# alpha 23 0 0
+# background "red_corridor"
+# textwindow "close"
+# move 18 4 0
+# mask 18 on
+# alpha 18 1 0
+# face 18 "angry_1"
+# waitandnext 0.2
+
+# fadein "white" 0.8
+# waitandnext 0.8
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ティルフィング
+すぐに戻らないと…
+ヴァリン、私はどうすれば？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァリン
+そこのセフィロト・システムを
+仮の接続装置として使うわ！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+セフィロト・システム…
+また、お世話になる日が来るなんて
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァリン
+あの花…キラーズフラワーは
+その名の通りキラーズが
+結晶化するほど詰まっているの
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァリン
+今からその、花に残った
+キラーズの残滓をティルに
+ありったけ注ぎ込むわ
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァリン
+それによってティルのキラーズを
+さらに強く結合させ、マスターとの
+バイブスを強化し、能力を高める
+
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+マスターとの繋がりを…
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァリン
+そう、ティルに宿ったキラーズを
+より上位の…階位の変更を
+無理やりやっちゃう訳
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァリン
+ティルがエイレーネ様…
+神の力を得たからこそできる芸当よ
+
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+お母さんの力が
+また私達を導いてくれる…
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァリン
+元はキラーズを分解するための…
+キラーメイルの皆のための研究
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァリン
+でも、まずは生き残らなきゃ
+研究もできないしね
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0003"
+@ティルフィング
+はい、生き残るため
+この地上を救うために！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァリン
+皆の希望と、私の想い
+受け取って、ティル！
+
+;;演出：辺りが光に包まれていく
+# fadein "white" 2
+# textflame 1 1
+# textboxarrow 0 1
+# face 101415 "normal"
+@ティルフィング
+マスターを感じます…
+より強く…マスターの希望が私にも…
+
+# fadeout "black" 0.8
+# waitandnext 0.8
+
+;;背景：研究所の外
+# background "laboratory_area"
+# alpha 18 0 0
+# alpha 101415 0 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "black" 0.8
+# waitandnext 0.8
+
+# fadein "white" 1
+# se "SE_9173"
+# waitandnext 1
+
+# move 23 2 0
+# alpha 23 1 0.5
+# alpha 960022 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 23 "normal"
+# voice 11002 "laevateinm_0004"
+@ゼロ
+やっと…希望に辿り着いた、のか…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 960022 "normal"
+@ベルゼブブ
+はぁ！？
+気持ち悪い気持ち悪い気持ち悪い！
+
+# alpha 23 0 0.5
+# alpha 960022 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;演出：ティルフィング（6周年ver）立ち絵表示
+# alpha 3101421 1 0.5
+# waitandnext 0.8
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ティルフィング
+もう、終わらせましょう

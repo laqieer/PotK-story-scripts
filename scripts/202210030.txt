@@ -1,0 +1,953 @@
+;;-----------------------------------------
+;;メギド軍団戦3
+;;-----------------------------------------
+# script "lisp"
+# background "006_town2"
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;megid
+# body 3500611
+# pos 3500611 4
+# scale 3500611 0.8 0
+# layer 3500611 2
+# mask 3500611 off
+# alpha 3500611 0 0
+;;taslam
+# body 3502011
+# pos 3502011 2
+# scale 3502011 0.8 0
+# layer 3502011 4
+# alpha 3502011 0 0
+;;enemy
+# body 900011
+# pos 900011 3
+# scale 900011 0.8 0
+# layer 900011 5
+# mask 900011 off
+# alpha 900011 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 2 "bg_white_circle"
+# imagealpha 2 0 0
+# imagescale 2 1.5 0
+# imagelayer 2 5
+# imageset 3 "mov2_3_overlay"
+# imagealpha 3 0 0
+# imagelayer 3 4
+;;-----------------------------------------
+;;背景：村　006_town2
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+のどかな町で繰り広げられる
+デンジャーでスリリングな
+ナンバーワンハンターコンテスト
+
+# textflame 0 0
+@
+予選の狩猟数競争に
+本選は獲物のサイズによる競争
+
+# face 3500611 "angry"
+# alpha 3500611 1 0.3
+# face 3502011 "angry"
+# alpha 3502011 1 0.3
+# textflame 0 0
+@
+白熱した戦いの末
+優勝争いはふたりのキル姫に絞られた
+
+# voice 350061 "megido_ge_0007"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+…正直、貴方がここまでやるとは
+思ってもいませんでしたわ、タスラム
+
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+…………
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+これまでの競技形式は
+ハンターらしく狩りを主として
+ポイントを競うものでした
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+しかし、どうでしょう？
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+せっかく射撃の腕が確かなキル姫が
+この場に並び立っているのですから
+狩猟能力以上にわかりやすく…
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+それに、何よりも
+観客の皆さんもより盛り上がる
+方法があると思うのですが？
+
+# voice 350201 "tasuramu_ge_0032"
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+あぁ？
+あたしはなんだっていいよ
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+では、コンテストの決勝戦は
+私と貴方の一騎打ちとしましょう！
+
+# se "SE_0607"
+# textflame 0 0
+@
+メギドの宣言により
+会場は大盛り上がり
+
+;;もやもやフレーム
+# move 3500611 4 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@メギド
+明確な勝敗がついたほうが
+後腐れもないでしょうしね
+
+# voice 350061 "megido_ge_0036"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@メギド
+試合開始は一時間後
+それでいいわね？
+
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+…ああ
+
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+…………
+
+;;演出：タスラムout
+# se "SE_0719"
+# move 3502011 1 0.5
+# alpha 3502011 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# face 3500611 "happy"
+;;もやもやフレーム
+# move 3500611 3 0.5
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@メギド
+ふふ、貴方にとって
+この状況は最後のチャンス
+
+@メギド
+コンテストの競技に紛れて
+私を狙うはず
+
+@メギド
+不意さえ突かれなければ、
+避けることなど容易
+
+@メギド
+貴方は負ければ
+この町を出て行き
+私の命を狙う機会も激減する…
+
+# face 3500611 "normal"
+@メギド
+ふふ、ふふふふ…
+自分の危機回避能力の高さに
+私自身感動してしまいそうなほどよ
+
+;;演出：時間経過の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：平原　plain
+# background "plain"
+# alpha 3500611 0 0
+# bgm "stop"
+# waitandnext 0.2
+
+# move 3500611 4 0
+# move 3502011 2 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 3500611 "angry"
+# alpha 3500611 1 0.3
+# alpha 3502011 1 0.3
+# textflame 0 0
+# textwindow "nomal"
+@
+そして、試合開始の時が来た
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@メギド
+先手必勝…っ！
+
+;;演出：メギドが何発か銃撃する
+# se "SE_5576"
+# effectbody 1000 30 -200 0 0
+# effectstart 1000
+# textboxarrow 0 0
+# waitandnext 2
+
+# voice 350201 "tasuramu_ge_battle_0001"
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+はっ！
+
+;;演出：対してタスラムは的確に一発を狙う
+# se "SE_4400"
+# effectbody 1001 28 100 0 0
+# effectstart 1001
+# face 3500611 "surprise"
+# move 3500611 5 0.3
+# textboxarrow 0 0
+# waitandnext 1
+
+# voice 350061 "megido_ge_0022"
+# face 3500611 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+なっ！？
+
+# move 3500611 4 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+まだまだ…
+勝負は始まったばかりですわ！
+
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+ああ…あたしはここで
+負ける訳にはいかないんだ！
+
+;;演出：激しい撃ち合いをするふたり
+# se "SE_5576"
+# sedelay "SE_4400" 0.5
+# fadeout "black" 1
+# waitandnext 1.2
+
+# se "SE_4400"
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_5576"
+# fadein "black" 1
+# waitandnext 1.2
+
+# textflame 0 0
+# textwindow "nomal"
+@
+激しい撃ち合いをするふたり
+
+# textflame 0 0
+@
+どちらも射撃の名手であることは
+ここまで残って来たことからも明白
+
+;;もやもやフレーム
+# move 3500611 4 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@メギド
+…そう簡単に
+勝敗が決まるものではないわね
+それどころか…
+
+# voice 350061 "megido_ge_battle_0001"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@メギド
+はっ！
+
+;;演出：メギドの銃撃を何発も躱し、
+# se "SE_5204"
+# effectbody 1002 30 -150 0 0
+# effectstart 1002
+# textboxarrow 0 0
+# waitandnext 1
+
+# voice 350201 "tasuramu_ge_battle_0002"
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+やっ！
+
+;;演出：的確な一発を決めるタスラム
+# se "SE_4400"
+# effectbody 1003 28 120 10 0
+# effectstart 1003
+# move 3500611 5 0.3
+# textboxarrow 0 0
+# waitandnext 1
+
+;;もやもやフレーム
+# move 3500611 4 0.5
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@メギド
+圧されているのは…私！
+
+# voice 350061 "megido_ge_0037"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@メギド
+くっ…
+
+# voice 350201 "tasuramu_ge_battle_0001"
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+はっ！
+
+# se "SE_4400"
+# effectbody 1004 28 100 0 0
+# effectstart 1004
+# move 3500611 5 0.3
+# textboxarrow 0 0
+# waitandnext 1
+
+;;もやもやフレーム
+# move 3500611 4 0.5
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@メギド
+この速度で私の攻撃を
+躱しながらの的確な射撃…
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@メギド
+元々実力の高さは伺えていましたが
+どうして今になってこうも必死に？
+
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+あたしはやらなくていいことは
+とことんやりたくないだけだっ！
+
+# voice 350061 "megido_ge_0039"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+なるほど…
+では追い詰められてはじめて
+やっと本気を見せるということね！
+
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+そうかも…なっ！
+
+;;演出：タスラムout
+# se "SE_9021"
+# move 3502011 1 0.3
+# alpha 3502011 0 0.3
+# textwindow "close"
+# waitandnext 0.7
+
+# voice 350061 "megido_ge_0023"
+# face 3500611 "surprise"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@メギド
+ここまで押していたのに
+突然森に逃げ込んだ！？
+
+# face 3500611 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+…罠とわかっていても
+コケにされるのは許せないわ！
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+;;背景：森　forest
+# background "forest"
+# move 3500611 5 0
+# alpha 3500611 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 350201 "tasuramu_ge_0028"
+# face 3502011 "normal"
+# move 3502011 2 0.5
+# alpha 3502011 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@タスラム
+あの時は…
+
+# voice 350061 "megido_ge_battle_0002"
+# move 3500611 4 0.3
+# alpha 3500611 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+逃げても無駄ですわ、タスラム！
+
+# voice 350201 "tasuramu_ge_0027"
+# face 3502011 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+追ってきたのかよ、メギド
+…なら、やるしかないか
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+第2ラウンド…というところかしら！
+
+;;演出：再び銃撃戦を繰り広げるふたり
+# voice 350061 "megido_ge_battle_0001"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+はっ！
+
+# se "SE_5576"
+# effectbody 1005 29 -100 -50 0
+# effectstart 1005
+# move 3502011 1 0.5
+# waitandnext 1
+
+# voice 350201 "tasuramu_ge_battle_0002"
+# move 3502011 3 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@タスラム
+やっ！
+
+;;演出：タスラムの一撃がメギドを追い詰める
+# se "SE_4400"
+# fadein "white" 0.5
+# effectbody 1006 28 100 0 0
+# effectstart 1006
+# move 3500611 5 0.2
+# waitandnext 1
+
+# voice 350061 "megido_ge_battle_0006"
+# face 3500611 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+…くっ！
+
+# move 3502011 2 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+ふぅー…
+これで、最後っ！
+
+# face 3500611 "angry"
+# se "SE_5208"
+# fadein "white" 1
+# shake 0 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+;;もやもやフレーム
+# move 3500611 4 0.5
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@メギド
+他者を陥れるような
+一方的な謀りは失敗して然るべき
+…ということかしらね
+
+# voice 350201 "tasuramu_ge_battle_0003"
+# bgm "stop"
+# se "SE_5200"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@タスラム
+そこだぁ！
+
+;;演出：タスラムはあらぬ方向に撃ちこむ
+# se "SE_4400"
+# fadein "white" 1
+# waitandnext 1.5
+
+# voice 350061 "megido_ge_0022"
+# face 3500611 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+えっ…あっ！
+
+# textflame 0 0
+@
+タスラムの暴発にも思える
+あらぬ方向への発砲
+
+# textflame 0 0
+@
+メギドは反射的に
+タスラムへ照準を合わせ…
+
+;;演出：一瞬の暗転
+# se "SE_5576"
+# imagealpha 0 1 0
+# imagescale 0 2 0
+# imagepos 0 0 0
+# waitandnext 2
+
+# imagealpha 0 0 1
+# textflame 0 0
+@
+最後の一撃が決め手となり
+軍配はメギドに上げられた
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+え…………
+
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+…………
+
+# se "SE_0607"
+# textflame 0 0
+@
+勝敗が決し
+会場は優勝者である
+メギドを褒め称える歓声で包まれる
+
+# textflame 0 0
+@
+しかし、当のメギドは
+会場の盛り上がりとは対照的に
+困惑の表情を浮かべていた…
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+タスラム、貴方――
+
+# alpha 3502011 0 0.3
+# alpha 3500611 0 0.3
+# textflame 0 0
+@
+メギドがタスラムへ
+声をかけようとしたところ
+背後で何かが倒れる音がする
+
+# alpha 900011 1 0.5
+# textwindow "close"
+# waitandnext 1
+
+;;演出：バイコーンが倒れる
+# se "SE_3001"
+# alpha 900011 0 1
+# waitandnext 1.5
+
+# face 3500611 "angry"
+# alpha 3502011 1 0.3
+# alpha 3500611 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@メギド
+バイコーン…！？
+これは…タスラムの銃創
+
+# face 3500611 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+一体どういう…
+
+# voice 350201 "tasuramu_ge_0004"
+# face 3502011 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+よかった…………
+
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+メギドの死は、もう見えない
+
+# textflame 0 0
+@
+敗者らしからぬ
+満足そうな笑顔を見せるのだった
+
+;;演出：時間経過の暗転
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+;;背景：村　006_town2
+# background "006_town2"
+# alpha 3502011 0 0
+# alpha 3500611 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1.5
+# waitandnext 1.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+大盛況で幕を閉じたコンテストから
+数日後のこと――
+
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+# face 3500611 "angry"
+# alpha 3502011 1 0.3
+# face 3502011 "sad"
+# alpha 3500611 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+…約束は約束です
+私が優勝したのだから
+貴方には町を出てもらいます
+
+# voice 350201 "tasuramu_ge_0003"
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+…うん、仕方ないね
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+では…
+
+# voice 350201 "tasuramu_ge_0028"
+# face 3502011 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+あー、また全力でサボってても
+許される仕事のある町探さないとなー
+
+# move 3502011 1 0.5
+# textflame 0 0
+@
+タスラムはぼやきながら、
+町の出口から一歩踏み出す
+
+# move 3500611 3 0.3
+# face 3502011 "surprise"
+# textflame 0 0
+@
+それと同時にメギドが
+タスラムの腕をつかむ
+
+# voice 350061 "megido_ge_0032"
+# textflame 1 1
+# textboxarrow 0 2
+@メギド
+…それでは参りましょう
+
+# voice 350201 "tasuramu_ge_0023"
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+な、何、え、ちょっと！？
+腕掴んで、何だよぉ！
+
+# face 3500611 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@メギド
+あなたはさっき、町から
+一歩出ましたよね
+それで約束は履行されました
+
+# move 3502011 2 0.6
+# move 3500611 4 0.5
+# textflame 0 0
+@
+メギドはそのまま
+町の中へと引っ張って行く
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+コンテスト優勝者には
+優勝トロフィーのほかに
+副賞として賞金が出ました
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+町おこしとしても
+大成功だったようで町長は
+大層お喜びになっていたらしいです
+
+# voice 350201 "tasuramu_ge_0022"
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+あ、うん
+それは知ってるけど、どゆこと？
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+功労者を労うことに
+異論はないでしょう？
+
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+待て待て
+そういう話じゃなくてさ
+
+# face 3500611 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+…助けてもらった礼をしないのは
+こちらの寝覚めが悪くなります
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+それこそ、気が散って
+私に害を及ぼすかもしれないじゃない
+
+# face 3502011 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+メギド…
+
+;;演出：時間経過の暗転
+# fadeout "black" 1
+# waitandnext 1
+
+# background "church_room"
+# alpha 3502011 0 0
+# alpha 3500611 0 0
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1.5
+
+# move 3500611 5 0
+# layer 3500611 4
+# mask 3500611 on
+# move 3502011 3 0
+# layer 3502011 2
+# mask 3502011 off
+# face 3502011 "normal"
+# alpha 3502011 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@タスラム
+バリッ！
+
+# voice 350201 "tasuramu_ge_0005"
+# face 3502011 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@タスラム
+いやぁ、任務をサボっての
+せんべいはまた格別だな！
+
+# textflame 1 1
+# textboxarrow 0 2
+@タスラム
+あ、サボってない
+せんべいを食べるのも
+立派な栄養補給、忙しい忙しい
+
+# move 3502011 2 0.5
+# move 3500611 4 0.5
+# alpha 3500611 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+…今は休憩中ですわよ
+せんべいを食べるのにいちいち
+理由をつけなくていいでしょう
+
+# voice 350201 "tasuramu_ge_0003"
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+そっか、じゃあ遠慮なく
+
+# face 3500611 "sad"
+;;もやもやフレーム
+# move 3500611 4 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@メギド
+私はタスラムのことを疑ってばかり
+それなのにこの子は私のことを
+助けるためにああも真剣に…
+
+# textflame 0 0
+# textwindow "nomal"
+@
+タスラムを町へ引きずり戻した
+メギドは、納得いっていない部分を
+食事しながら問い詰めたのだった
+
+# textflame 0 0
+@
+そこでお互いの事情を把握し
+ふたりは仲直りをしたのだった
+
+# face 3502011 "surprise"
+# face 3500611 "surprise"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@タスラム
+今回は、
+メギドがやたら絡んでくるおかげで
+死の危険が見えた訳だけど
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+ええ、タスラムの手で
+私が何よりも恐れていたことから
+回避することができた訳なのです
+
+# voice 350061 "megido_ge_0015"
+# face 3500611 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+…貴方を疑って、本当にごめんなさい
+
+# voice 350201 "tasuramu_ge_0017"
+# face 3502011 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+いやぁもう散々謝ってくれただろ？
+もう、そういうのいいからさ
+
+# face 3500611 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+そう…
+では、御礼を言わないとね
+
+# voice 350061 "megido_ge_0004"
+# face 3500611 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+助けてくれて、ありがとう
+
+# voice 350201 "tasuramu_ge_0033"
+# face 3502011 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+…おうっ！
+…あたしの方こそ、ありがとな
+
+;;もやもやフレーム
+# move 3500611 4 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@メギド
+けれど、このことは
+しっかり反省して今後は
+タスラムのことを少しは信じて――
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@タスラム
+こうしてダラダラしてても
+許される仕事辞めないで済んだしな
+
+# voice 350061 "megido_ge_0011"
+# face 3500611 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+ダラダラと仕事をサボるなんて
+そんなことは許されてませんよ？
+
+# voice 350201 "tasuramu_ge_0026"
+# face 3502011 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+えぇ～…
+
+# textflame 0 0
+@
+タスラムのことは
+あまり信じすぎないようにしよう
+と、思い改めるメギドだった
+
+# fadeout "black" 3
+# waitandnext 3

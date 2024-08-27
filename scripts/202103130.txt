@@ -1,0 +1,827 @@
+;;-----------------------------------------
+;;SEA5章_13
+;;-----------------------------------------
+# script "lisp"
+# background "101_cave"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 5
+# scale 6504011 0.8 0
+# layer 6504011 4
+# alpha 6504011 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 1
+# scale 6603811 0.8 0
+# layer 6603811 2
+# alpha 6603811 0 0
+;;ミネルヴァ
+# body 302511
+# pos 302511 3
+# scale 302511 0.8 0
+# layer 302511 3
+# mask 302511 off
+# alpha 302511 0 0
+;;フライシュッツ
+# body 502711
+# pos 502711 5
+# scale 502711 0.8 0
+# layer 502711 4
+# alpha 502711 0 0
+# body 3502719
+# pos 3502719 3
+# scale 3502719 0.8 0
+# layer 3502719 3
+# mask 3502719 off
+# alpha 3502719 0 0
+;;ダモクレス
+# body 103511
+# pos 103511 3
+# scale 103511 0.75 0
+# layer 103511 3
+# mask 103511 off
+# alpha 103511 0 0
+;;グラーシーザ
+# body 302611
+# pos 302611 2
+# scale 302611 0.8 0
+# layer 302611 2
+# alpha 302611 0 0
+# body 3302619
+# pos 3302619 3
+# scale 3302619 0.8 0
+# layer 3302619 3
+# mask 3302619 off
+# alpha 3302619 0 0
+;;ネス
+# body 602011
+# pos 602011 4
+# scale 602011 0.8 0
+# layer 602011 4
+# alpha 602011 0 0
+# body 3602019
+# pos 3602019 3
+# scale 3602019 0.8 0
+# layer 3602019 3
+# mask 3602019 off
+# alpha 3602019 0 0
+;;神令エルキュール
+# body 3202511
+# pos 3202511 3
+# scale 3202511 0.8 0
+# layer 3202511 3
+# mask 3202511 off
+# alpha 3202511 0 0
+# body 202511
+# alpha 202511 0 0
+;;神令スイハ
+# body 3401711
+# pos 3401711 5
+# scale 3401711 0.8 0
+# layer 3401711 4
+# alpha 3401711 0 0
+# body 401711
+# alpha 401711 0 0
+;;ラグナロクシルエット
+# body 103611
+# pos 103611 3
+# scale 103611 0 0
+# layer 103611 5
+# mask 103611 off
+# alpha 103611 0 0
+# brightness 103611 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 7
+# imageset 1 "bg_crack1"
+# imagealpha 1 0 0
+# imagelayer 1 5
+# imageset 2 "bg_crack2"
+# imagealpha 2 0 0
+# imagelayer 2 6
+;;-----------------------------------------
+;;背景：地下空洞：101_cave
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+;;選択肢
+# select "うぅっ…" "select_label_01" "ここは…？" "select_label_01"
+……
+
+# label "select_label_01"
+# bgm "bgm005" 0
+# voice 3025 "minerva_0001"
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミネルヴァ
+大丈夫ですか、マスター？
+怪我は…大したことないようですね
+
+# textboxarrow 0 2
+@ミネルヴァ
+あのまま落下していたら無事では
+済まなかったでしょうけれど、
+途中の壁に縫い付けられていたんです
+
+# textboxarrow 0 2
+@ミネルヴァ
+スイハがやったようですね
+やはり、彼女にはエルキュールとは
+別の思惑がありそうです
+
+# move 302511 2 0.5
+# move 502711 4 0.5
+# face 502711 "surprise"
+# alpha 502711 1 0.3
+# textboxarrow 0 3
+@フライシュッツ
+みんな大丈夫～？
+あ！マスターくんと
+ミネルヴァちゃんだ～っ
+
+# voice 5027 "freischotz_0005"
+# face 502711 "happy"
+# textboxarrow 0 3
+@フライシュッツ
+ハグだよ、ハグ～♪
+
+# se "SE_0648"
+# move 502711 3 0.8
+# textboxarrow 0 0
+# waitandnext 1.5
+
+# voice 3025 "minerva_0011"
+# face 302511 "angry"
+# textboxarrow 0 1
+@ミネルヴァ
+そんな場合ではありませんよ、
+フライシュッツ
+現状の把握をしなくては
+
+# voice 3026 "grayside_0006"
+# alpha 302511 0 0.3
+# move 502711 4 0.5
+# alpha 502711 0 0.3
+# face 302611 "normal"
+# alpha 302611 1 0.3
+# face 602011 "normal"
+# alpha 602011 1 0.3
+# textboxarrow 0 1
+@グラーシーザ
+おお！おまえたちもぶじだったか
+それはちょうじょう
+
+# textboxarrow 0 3
+@ネス
+治療をします
+傷を見せて下さいっ
+
+# alpha 302611 0 0.3
+# alpha 602011 0 0.3
+# move 302511 3 0
+# face 302511 "sad"
+# alpha 302511 1 0.3
+# textboxarrow 0 2
+@ミネルヴァ
+あとはダモクレスとミーミルですね…
+
+# alpha 302511 0 0.3
+# voice 1035 "damocles_0021"
+# scale 103511 0.8 0.3
+# face 103511 "normal"
+# alpha 103511 1 0.3
+# textboxarrow 0 2
+@ダモクレス
+わーっ！
+クレスならここだよ～っ
+
+# alpha 103511 0 0.3
+# move 302511 2 0
+# mask 302511 on
+# face 302511 "sad"
+# alpha 302511 1 0.3
+# face 502711 "sad"
+# alpha 502711 1 0.3
+# voice 5027 "freischotz_0014"
+# textboxarrow 0 3
+@フライシュッツ
+クレスちゃん、ビックリさせないで～
+おねーちゃんビックリしちゃうから～
+
+# textboxarrow 0 1
+@ミネルヴァ
+ミーミルは…
+それに地上の状況も気になります
+
+# textboxarrow 0 3
+@フライシュッツ
+町の人達、避難できたかなぁ…？
+
+# voice 3026 "grayside_0003"
+# alpha 502711 0 0.3
+# move 302611 4 0
+# face 302611 "normal"
+# alpha 302611 1 0.3
+# textboxarrow 0 3
+@グラーシーザ
+くずれたのはエルキュールたちのいた
+たてもののまわりだけだ
+
+# textboxarrow 0 3
+@グラーシーザ
+ちかくのものたちはおきだしていたし
+にげきれたことだろう
+
+# textboxarrow 0 1
+@ミネルヴァ
+そうであって欲しいですね…
+
+# alpha 302611 0 0.3
+# voice 1035 "damocles_0002"
+# move 103511 4 0
+# layer 103511 4
+# mask 103511 on
+# face 103511 "normal"
+# alpha 103511 1 0.3
+# textboxarrow 0 3
+@ダモクレス
+ねぇ！
+あっちの方から変な感じがするよ
+
+# voice 3025 "minerva_0003"
+# face 302511 "normal"
+# textboxarrow 0 1
+@ミネルヴァ
+ひとまず、行ってみましょう
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# alpha 302511 0 0
+# alpha 103511 0 0
+# waitandnext 0.2
+
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 2.5
+
+# imagealpha 1 0 1
+# waitandnext 1
+
+# voice 3026 "grayside_0028"
+# face 302511 "sad"
+# alpha 302511 1 0.3
+# face 302611 "sad"
+# alpha 302611 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@グラーシーザ
+むぅ…これは…
+
+# textboxarrow 0 1
+@ミネルヴァ
+空間に裂け目ができています
+しかし、これほど大きなものが
+この町の地下にあったなんて…
+
+# alpha 302511 0 0.3
+# alpha 302611 0 0.3
+# move 502711 3 0
+# mask 502711 off
+# face 502711 "sad"
+# alpha 502711 1 0.3
+# voice 5027 "freischotz_0028"
+# textboxarrow 0 2
+@フライシュッツ
+何だか見てるだけで…
+気分が悪くなってくるよぉ…
+
+# alpha 502711 0 0.3
+# voice 6020 "ness_0015"
+# move 602011 3 0
+# mask 602011 off
+# face 602011 "sad"
+# alpha 602011 1 0.3
+# textboxarrow 0 2
+@ネス
+胸がゾワゾワします…
+
+# alpha 602011 0 0.3
+# move 103511 3 0
+# mask 103511 off
+# face 103511 "normal"
+# voice 1035 "damocles_0022"
+# alpha 103511 1 0.3
+# textboxarrow 0 2
+@ダモクレス
+あれ…？
+あそこにいるのって
+
+# alpha 103511 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;エルキュールが現れる
+# se "bgm602_basic_on"
+# face 3202511 "happy"
+# alpha 3202511 1 0.3
+# waitandnext 0.5
+
+# voice 2025 "hercule_0004"
+# textwindow "nomal"
+# textboxarrow 0 2
+@エルキュール
+みんな、マスター
+無事で良かった
+
+# alpha 3202511 0 0.3
+# move 302511 3 0
+# mask 302511 off
+# face 302511 "angry"
+# alpha 302511 1 0.3
+# textboxarrow 0 2
+@ミネルヴァ
+エルキュール！
+その巨大な裂け目から離れて下さい
+とても良くない気配がします
+
+# alpha 302511 0 0.3
+# face 3202511 "surprise"
+# alpha 3202511 1 0.3
+# textboxarrow 0 2
+@エルキュール
+良くない気配？
+何を言っているんですか
+やっとここまで広げたんです
+
+#setnextbgmblock 1
+# se "bgm602_tension_on"
+# face 3202511 "normal"
+# textboxarrow 0 2
+@エルキュール
+これで“彼女”を
+こちらに呼ぶことができます！
+あと一歩なんですよ！
+
+# voice 3025 "minerva_0022"
+# face 302511 "surprise"
+# alpha 302511 1 0.3
+# alpha 3202511 0 0.3
+# textboxarrow 0 2
+@ミネルヴァ
+ここまで広げた？
+そう言ったのですか？
+
+# alpha 302511 0 0.3
+# voice 2025 "hercule_0003"
+# face 3202511 "normal"
+# alpha 3202511 1 0.3
+# textboxarrow 0 2
+@エルキュール
+はい！
+一生懸命願い続けたんです
+“彼女”のことを
+
+# textboxarrow 0 2
+@エルキュール
+真の希望になるために
+今の私ではダメだから…
+
+# textboxarrow 0 2
+@エルキュール
+“彼女”のことを思うたび、
+少しずつ裂け目が
+広がっていったんですよ
+
+# textboxarrow 0 2
+@エルキュール
+あとは…ミーミルを捧げて、
+“彼女”に中に入ってもらえば
+いいはずなんです
+
+# alpha 3202511 0 0.3
+# move 502711 2 0
+# layer 502711 2
+# mask 502711 on
+# face 502711 "surprise"
+# alpha 502711 1 0.3
+# move 302511 4 0
+# layer 302511 4
+# mask 302511 on
+# face 302511 "angry"
+# alpha 302511 1 0.3
+# voice 5027 "freischotz_0022"
+# textboxarrow 0 1
+@フライシュッツ
+あぁっ！
+裂け目のすぐ近くにミーミルちゃんが
+寝かされてるよ！
+
+# textboxarrow 0 3
+@ミネルヴァ
+エルキュール、やめて下さい！
+
+# face 3202511 "normal"
+# alpha 3202511 1 0.3
+# alpha 502711 0 0.3
+# alpha 302511 0 0.3
+# textboxarrow 0 2
+@エルキュール
+大丈夫です
+私には“彼女”の声が聞こえています
+もうすぐそこまで来てるんです
+
+# alpha 3202511 0 0.3
+# move 602011 2 0
+# layer 602011 2
+# mask 602011 on
+# face 602011 "angry"
+# alpha 602011 1 0.3
+# move 302611 4 0
+# layer 302611 4
+# face 302611 "angry"
+# alpha 302611 1 0.3
+# textboxarrow 0 3
+@グラーシーザ
+きく耳もたぬというのなら、
+せいぎの力でくっぷくさせる
+ほかあるまい！
+
+# textboxarrow 0 1
+@ネス
+規律を守らないのなら、
+罰を与えるべきです！
+
+# textboxarrow 0 3
+@グラーシーザ
+エルキュール、おとなしく…
+
+# voice 3026 "grayside_0038"
+# fadein "white" 0.3
+# face 302611 "sad"
+# textboxarrow 0 3
+@グラーシーザ
+ぐぅっ…？
+
+# voice 6020 "ness_0022"
+# face 602011 "surprise"
+# textboxarrow 0 1
+@ネス
+あれ…？
+何だか変な…気持ちに…
+
+;;グラーシーザとネスが一瞬、神令化する
+# shake 0 0.2
+# se "SE_9451"
+# se "bgm602_rhythm_on"
+# alpha 602011 0 0.2
+# alpha 302611 0 0.2
+# move 3602019 2 0
+# layer 3602019 2
+# mask 3602019 on
+# alpha 3602019 1 0.2
+# move 3302619 4 0
+# layer 3302619 4
+# mask 3302619 on
+# alpha 3302619 1 0.2
+# textboxarrow 0 0
+# waitandnext 0.4
+
+# face 602011 "normal"
+# alpha 602011 1 0.2
+# face 302611 "normal"
+# alpha 302611 1 0.2
+# alpha 3602019 0 0.2
+# alpha 3302619 0 0.2
+# waitandnext 1
+
+# alpha 602011 0 0.3
+# alpha 302611 0 0.3
+# face 103511 "normal"
+# alpha 103511 1 0.3
+# textboxarrow 0 2
+@ダモクレス
+今、グラーシーザとネスの雰囲気が
+ちょっと変わったよ
+
+# alpha 103511 0 0.3
+# move 502711 3 0
+# face 502711 "surprise"
+# alpha 502711 1 0.3
+# mask 502711 off
+# textboxarrow 0 2
+@フライシュッツ
+二人とも大丈夫～？
+あうっ…？
+
+;;フライシュッツが一瞬、神令化する
+# shake 0 0.2
+# se "SE_9451"
+# se "bgm602_rhythm_on"
+# alpha 502711 0 0.2
+# alpha 3502719 1 0.2
+# textboxarrow 0 0
+# waitandnext 0.4
+
+# face 502711 "surprise"
+# alpha 502711 1 0.2
+# alpha 3502719 0 0.2
+# waitandnext 1
+
+# voice 5027 "freischotz_0022"
+# textboxarrow 0 2
+@フライシュッツ
+あれ？
+今のって…あれ～？
+
+# alpha 502711 0 0.3
+# voice 3025 "minerva_0037"
+# move 302511 3 0
+# layer 302511 2
+# mask 302511 off
+# face 302511 "angry"
+# alpha 302511 1 0.3
+# textboxarrow 0 2
+@ミネルヴァ
+くっ…猶予はありません
+
+# move 302511 2 0.5
+# move 3401711 4 0.5
+# face 3401711 "normal"
+# alpha 3401711 1 0.3
+# textboxarrow 0 3
+@スイハ
+動かないで下さい
+
+# face 302511 "surprise"
+# textboxarrow 0 1
+@ミネルヴァ
+スイハ…！
+
+# face 302511 "angry"
+# textboxarrow 0 1
+@ミネルヴァ
+こんなこと、あなたは本当に
+望んでいるのですかっ？
+
+# textboxarrow 0 3
+@スイハ
+…………
+
+# textboxarrow 0 1
+@ミネルヴァ
+エルキュールもです！
+“彼女”のためにミーミルを
+犠牲にするなんて…
+
+# textboxarrow 0 1
+@ミネルヴァ
+それが本当にあなたの目指す
+真の希望なのですか！？
+
+# alpha 302511 0 0.3
+# alpha 3401711 0 0.3
+# voice 2025 "hercule_0024"
+# face 3202511 "angry"
+# alpha 3202511 1 0.3
+# textboxarrow 0 2
+@エルキュール
+わ、私は…！！
+
+;;マナナンとマクリルが現れる
+#setnextbgmblock 2
+# scale 3202511 0.75 0.5
+# alpha 3202511 0 0.3
+# voice 650401 "manannan_ura_0005"
+# move 6504011 4 0.5
+# face 6504011 "happy"
+# alpha 6504011 1 0.3
+# move 6603811 2 0.5
+# face 6603811 "happy"
+# alpha 6603811 1 0.3
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+見つけたよ、マクリル
+
+# voice 660381 "maclir_ura_0003"
+# textboxarrow 0 1
+@マクリル
+うん
+見つけたね、マナナン
+
+;;選択肢
+# select "マナナン！" "select_label_02" "マナナン？" "select_label_02"
+見つけたよ、マクリル
+見つけたね、マナナン
+
+# label "select_label_02"
+# voice 650401 "manannan_ura_0001"
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+マスター！
+私、“相棒”に会えたよ！
+それで、思い出したんだ
+
+# textboxarrow 0 1
+@マクリル
+私達の役割をね
+
+# face 6504011 "usual"
+# textboxarrow 0 3
+@マナナン
+それにしても、大きいな～っ
+こんなに大きくなくても良いのに
+
+# face 6603811 "usual"
+# textboxarrow 0 1
+@マクリル
+もしかして、私達なしで
+やろうとしてたのかな？
+それって悲劇的だよね…
+
+# voice 650401 "manannan_ura_0004"
+# face 6504011 "happy"
+# textboxarrow 0 3
+@マナナン
+でもでも、喜劇的だよ！
+
+# face 6603811 "happy"
+# face 6504011 "normal"
+# textboxarrow 0 0
+@マナナン＆マクリル
+さあさあ始めよう！
+私達は案内人
+旅人を導く水先案内人
+
+# textboxarrow 0 0
+@マナナン＆マクリル
+おいでおいでと呼びかけて、
+こっちこっちと手招いて
+願いを叶える案内人
+
+;;２人が裂け目を穴へと変化させる
+# se "SE_8582"
+# imagealpha 1 1 1
+# imagepos 1 0 0
+# alpha 6504011 0 0.3
+# alpha 6603811 0 0.3
+# textwindow "close"
+# waitandnext 2
+
+;;背景の上でひび割れエフェクトを徐々に大きくする
+# fadein "white" 2
+# se "SE_6210"
+# shake 1 2
+# imagealpha 1 0 0.5
+# imagealpha 2 1 0.5
+# imagescale 2 1.2 1
+# imagepos 2 0 0
+# waitandnext 4
+
+# imagealpha 2 0 0.5
+# scale 3202511 0.8 0
+# face 3202511 "surprise"
+# voice 2025 "hercule_0022"
+# alpha 3202511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@エルキュール
+えっ？
+私が広げた裂け目が…こんなきれいな
+形に変わりました…
+
+# textboxarrow 0 2
+@エルキュール
+あなた達は…？
+
+# alpha 3202511 0 0.3
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# face 6603811 "happy"
+# alpha 6603811 1 0.3
+# textboxarrow 0 0
+@マナナン＆マクリル
+私達は案内人
+道を作って指し示す
+早くおいでと囁きかける
+
+# textboxarrow 0 0
+@マナナン＆マクリル
+エルキュール…ううん
+君達あなた達みんなの願いを
+叶えるときだよ
+
+# textboxarrow 0 0
+@マナナン＆マクリル
+おいで、―――――！！
+
+# bgm "stop"
+;;画面が光り、真っ白に
+# se "SE_6147"
+# fadeout "white" 2
+# move 6504011 5 0.5
+# alpha 6504011 0 0.3
+# move 6603811 1 0.5
+# alpha 6603811 0 0.3
+# waitandnext 2
+
+# frameout 0 0
+# background "bg_white"
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# textwindow "close"
+# fadein "white" 2
+# waitandnext 2
+
+;;その後、真っ黒に
+# background "bg_black"
+# imagealpha 2 0 0
+# waitandnext 2
+
+;;また真っ白に
+# fadeout "white" 2
+# move 6504011 5 0.5
+# alpha 6504011 0 0.3
+# move 6603811 1 0.5
+# alpha 6603811 0 0.3
+# waitandnext 2
+
+# framein 0 0
+# background "bg_white"
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# textwindow "close"
+# fadein "white" 2
+# waitandnext 3
+
+;;画面の中央からラグナロクのシルエットがズームアップ
+# imagealpha 2 0 2
+# scale 103611 0.8 4
+# alpha 103611 1 4
+# waitandnext 5
+
+# move 302511 1 0
+# mask 302511 on
+# face 302511 "surprise"
+# alpha 302511 1 0.3
+# move 3202511 5 0
+# mask 3202511 on
+# face 3202511 "normal"
+# alpha 3202511 1 0.3
+# voice 2025 "hercule_0004"
+# se "SE_13694"
+# textboxarrow 0 3
+# textwindow "normal"
+@エルキュール
+あ…あれは…“彼女”が、やっと…！
+やっと来てくれました！
+
+# textboxarrow 0 1
+@ミネルヴァ
+あの姿は…
+
+;;ラグナロクのシルエットが更にズームアップされ、画面真っ黒に
+# se "SE_11631"
+# scale 103611 10 10
+# waitandnext 2
+
+# voice 2025 "hercule_battle_0008"
+# textboxarrow 0 0
+@エルキュール
+えっ？
+キャアアアアアアアア…！？
+
+# textboxarrow 0 0
+@ミネルヴァ
+いけません！
+裂け目から闇があふれ出して――
+
+# serif 1
+@全員
+アアアアアアアアアアアア…！！
+
+# fadeout "black" 1
+# waitandnext 1

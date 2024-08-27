@@ -1,0 +1,324 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー12章
+;;タイトル：天上、鳴動
+;;3-1
+;;背景：黒
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "stop"
+;;-----------------------------------------
+;;ティバルト
+# body 42
+# pos 42 3
+# scale 42 0.8 0
+# alpha 42 0 0
+# mask 42 off
+;;エドガー
+# body 40
+# pos 40 4
+# scale 40 0.8 0
+# alpha 40 0 0
+;;隊長
+# body 10
+# pos 10 3
+# scale 10 0.8 0
+# alpha 10 0 0
+# mask 10 off
+;;教皇
+# body 130
+# pos 130 3
+# scale 130 0.8 0
+# alpha 130 0 0
+# mask 130 off
+;;-----------------------------------------
+# imageset 1 "new_chapter_01"
+# imagepos 1 0 0
+# imagealpha 1 0 0
+# imagelayer 1 4
+;;-----------------------------------------
+;;心音演出
+;;奪還せよ――の白文字
+# textwindow "close"
+# waitandnext 1
+
+# fadein "white" 0.8
+# se "SE_0644"
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# waitandnext 1.5
+
+# imagealpha 1 0 1
+# waitandnext 1
+
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 0
+@
+なあ、そろそろ目を覚ましてくれ
+
+@
+マスター
+
+;;選択肢
+# select "思い…出した…！" "select_label_01"
+@
+マスター
+
+# label "select_label_01"
+# labeljump "select_label_end"
+;;背景：天上世界
+# fadein "white" 0.5
+# bgm "bgm005" 0
+# background "plain"
+# serif 0
+# textwindow "nomal"
+@兵士
+何がどうなっているんだ！？
+急いで地上に連絡をっ
+
+# label "select_label_end"
+# serif 1
+# textwindow "nomal"
+@兵士
+ダメです！
+何度呼びかけても、
+全く応答がありませんっ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 10 1 0.5
+# face 10 "normal"
+# textboxarrow 0 2
+@隊長
+先程の地震が関係しているのだろうが
+ユグドラシルに異変が起きるなど
+前代未聞だ
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+;;背景：聖堂
+# alpha 10 0 0
+# background "006_church"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 1
+# textwindow "nomal"
+@大奏官
+町の被害状況は軽微のようです
+他区画の調査と救援を急がせなさい
+
+# serif 1
+# textwindow "nomal"
+@中奏官
+はい！
+耕民区の少奏官とも連携して
+事に当たりますっ
+
+# serif 0
+# textwindow "nomal"
+# alpha 130 1 0.5
+# face 130 "normal"
+@教皇
+皆さん、落ち着いて行動して下さい
+神器の加護があらんことを
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# alpha 130 0 1
+# waitandnext 1
+
+# alpha 42 1 1
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 42 "normal"
+# voice 9980 "tybalt_0002"
+@ティバルト
+ラグナロク教会内も慌ただしいな
+しかし、先程の地震、震源地は
+どうやらユグドラシルのようだぞ
+
+# face 42 "angry"
+# voice 9980 "tybalt_0045"
+@ティバルト
+…なあ、聞いているのか？
+お前に言っているんだが
+
+;;選択肢
+# select "ああ、聞いている" "select_label_04" "大丈夫だ" "select_label_04" "分かってるよ" "select_label_04"
+@ティバルト
+…なあ、聞いているのか？
+お前に言っているんだが
+
+# label "select_label_04"
+# labeljump "select_label_end1"
+# voice 9980 "tybalt_0007"
+@ティバルト
+それならいい…
+やはり地上のことが
+気になってるんだろ？
+
+# label "select_label_end1"
+@ティバルト
+斬ル姫のマスターとして当然だ
+早く連絡が取れるといいな
+
+# serif 1
+# textwindow "nomal"
+@兵士
+ティバルト様！
+調査部隊の編成、整いました！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 9980 "tybalt_0047"
+@ティバルト
+よし！ユグドラシルに向けて
+出発だ！
+異変の原因を突き止めるぞ！
+
+# face 42 "normal"
+# voice 9980 "tybalt_0002"
+@ティバルト
+お前も一緒に来るよな？
+たまにはお前から彼女達に会いに
+行ってやると良い
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+;;背景：ユグドラシル（天上編）
+# background "aerial_shoot"
+# bgm "bgm003" 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# face 42 "normal"
+# voice 9980 "tybalt_0028"
+@ティバルト
+それにしても、この天上世界が昔は
+「神の箱庭」だっただなんて
+信じられないな…
+
+@ティバルト
+俺のご先祖様が斬ル姫と協力して
+世界を神の支配から解放したなんて
+伝わっているけれど…
+
+# voice 9980 "tybalt_0027"
+@ティバルト
+そんな昔のことなんて正直、ピンと
+来ないよ
+
+@ティバルト
+ご先祖様の手柄で偉そうな地位に
+就いている奴の言うことじゃ
+ないかもしれないがな
+
+# alpha 40 1 0.5
+# move 42 2 0.5
+# mask 42 on
+# textboxarrow 0 3
+# face 40 "normal"
+# voice 9982 "edgar_0001"
+@エドガー
+それについては俺も同意見だ
+
+# textboxarrow 0 1
+# voice 9980 "tybalt_0059"
+@ティバルト
+エドガー、先に来ていたのか
+お互い、偉大な先祖を持つと
+苦労するな
+
+# textboxarrow 0 3
+# voice 9982 "edgar_0032"
+@エドガー
+まったくだ
+でも、俺達はまだいい
+そちらの奏官さんは生き証人だぞ
+
+# textboxarrow 0 1
+# voice 9980 "tybalt_0032"
+@ティバルト
+確かに
+あの混迷の時代を斬ル姫とともに
+生き延びた英雄なんだからな
+
+# textboxarrow 0 3
+@エドガー
+そんな呆けた顔しないでくれよ
+あなたのことなんだから
+
+@エドガー
+天上世界を解放し、地上を救った
+斬ル姫達のマスター
+%(USERNAME)s
+
+# voice 9982 "edgar_0028"
+@エドガー
+再びあなたの力を借りるときが
+来たのかもしれないな
+
+# se "SE_5575"
+# bgm "bgm031" 0
+# serif 1
+# textwindow "nomal"
+@兵士
+ティバルト様！
+エドガー先生！
+急ぎ、こちらに来て下さい！
+
+# serif 0
+# textboxarrow 0 1
+# face 42 "angry"
+# voice 9980 "tybalt_0022"
+@ティバルト
+何か見つかったのか！？
+
+# serif 1
+# textwindow "nomal"
+@兵士
+それがっ…
+人間が…ユグドラシルの根元に…
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 40 "irregular"
+@エドガー
+人間が！？

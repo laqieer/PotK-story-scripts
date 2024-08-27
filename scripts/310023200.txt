@@ -1,0 +1,631 @@
+;;-----------------------------------------
+;;SEA2章_20_0
+;;-----------------------------------------
+# script "lisp"
+# background "courtyard_night"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;七支刀
+# body 5105111
+# pos 5105111 4
+# scale 5105111 0.8 0
+# layer 5105111 4
+# alpha 5105111 0 0
+;;パラシュ
+# body 6200411
+# pos 6200411 2
+# scale 6200411 0.8 0
+# layer 6200411 2
+# mask 6200411 off
+# alpha 6200411 0 0
+;;否定派イシューリエル
+# body 6301411
+# pos 6301411 4
+# scale 6301411 0.8 0
+# layer 6301411 4
+# mask 6301411 off
+# alpha 6301411 1 0
+;;肯定派イシューリエル（にせ）
+# entry 6301499 6301411 
+# pos 6301499 2
+# scale 6301499 0.8 0
+# layer 6301499 4
+# alpha 6301499 1 0
+# brightness 6301499 0.8 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：中庭（夜）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# voice 3014 "ithuriel_mix_0001"
+# face 6301499 "normal"
+# face 6301411 "normal"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@イシューリエルたち
+真実が…わたくしに語りかける！
+
+# se "SE_4200"
+# move 6301411 5 0.3
+# move 6301499 1 0.3
+# waitandnext 0.5
+
+;;互いに斬り合うと同時に一人に戻る
+# se "SE_4830"
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# effectbody 1001 2 0 0 0
+# effectstart 1001
+# move 6301411 4 0.2
+# move 6301499 2 0.2
+# fadeout "white" 2
+# waitandnext 2
+
+# move 6301411 3 0
+# alpha 6301411 0 0
+# alpha 6301499 0 0
+# textwindow "close"
+# fadein "white" 2
+# waitandnext 2
+
+# se "SE_0613"
+# voice 3014 "ithuriel_kyara_2001"
+# alpha 6301411 1 0.3
+# face 6301411 "normal"
+# textwindow "nomal"
+# textboxarrow 0 2
+@イシューリエル
+正しきものが勝つ
+これぞトゥルース！
+
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+# voice 1051 "shichishito_0022"
+# alpha 6301411 0 0.3
+# face 6200411 "happy"
+# alpha 6200411 1 0.3
+# face 5105111 "surprise"
+# alpha 5105111 1 0.3
+# textboxarrow 0 3
+@七支刀
+わぁっ！
+イシューリエル様が
+お一人に戻りましたっ
+
+# textboxarrow 0 1
+@パラシュ
+やっと終わったね…
+
+# voice 9917 "mimir_navikan_0001"
+# face 270 "normal"
+# alpha 270 1 0.3
+# alpha 6200411 0 0.3
+# alpha 5105111 0 0.3
+# textboxarrow 0 2
+@ミーミル
+マスター様、
+幾つもの魂が天に還っていきます
+
+# textboxarrow 0 2
+@ミーミル
+どうか、安らかに…
+
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：中庭
+# background "courtyard"
+# se "SE_0643"
+# face 270 "normal"
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+日が昇ってまいりました
+
+# voice 1051 "shichishito_0027"
+# alpha 270 0 0.3
+# move 6301411 2 0
+# layer 6301411 2
+# mask 6301411 off
+# face 6301411 "usual"
+# alpha 6301411 1 0.3
+# face 5105111 "sad"
+# alpha 5105111 1 0.3
+# textboxarrow 0 3
+@七支刀
+長い夜でしたぁ…
+もうへとへとです…
+
+# textboxarrow 0 1
+@イシューリエル
+あなた達、お疲れ様でした
+
+# move 6200411 3 0
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# alpha 6301411 0 0.3
+# alpha 5105111 0 0.3
+# textboxarrow 0 2
+@パラシュ
+イシューリエル
+元に戻ったということでいいんだね
+
+# voice 3014 "ithuriel_0003"
+# alpha 6200411 0 0.3
+# face 6301411 "usual"
+# alpha 6301411 1 0.3
+# face 5105111 "sad"
+# alpha 5105111 1 0.3
+# textboxarrow 0 1
+@イシューリエル
+おかげさまで
+七支刀、やはりわたくしの目に
+間違いはありませんでした
+
+# textboxarrow 0 1
+@イシューリエル
+あなたは、やるときはやる娘だと
+見抜いていましたわよ！
+
+# voice 1051 "shichishito_0030"
+# face 5105111 "normal"
+# textboxarrow 0 3
+@七支刀
+ありがとうございます、
+イシューリエル様！
+
+# voice 9917 "mimir_navikan_0002"
+# alpha 6301411 0 0.3
+# move 270 2 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ミーミル
+あの…
+巨大幽霊は一体、
+何だったのでしょう？
+
+# face 5105111 "sad"
+# textboxarrow 0 3
+@七支刀
+あれは、ええと…
+
+# move 6301411 3 0
+# face 6301411 "usual"
+# alpha 6301411 1 0.3
+# alpha 270 0 0.3
+# alpha 5105111 0 0.3
+# se "bgm601_windon"
+# textboxarrow 0 2
+@イシューリエル
+わたくしが説明して差し上げます
+巨大幽霊の中で七支刀と同じものを
+見ましたから
+
+# face 6301411 "normal"
+# textboxarrow 0 2
+@イシューリエル
+あれは…
+この病院で亡くなった方々の思い…
+
+# textboxarrow 0 2
+@イシューリエル
+ひとまず、
+残留思念と言っておきましょう
+
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# alpha 6301411 0 0.3
+# textboxarrow 0 2
+@パラシュ
+幽霊とは違うのかい？
+
+# alpha 6200411 0 0.3
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# textboxarrow 0 2
+@イシューリエル
+それについては、後ほど
+様々な残留思念が
+残っていたようですけれど…
+
+# textboxarrow 0 2
+@イシューリエル
+その大半が、
+この世に未練を残していたんです
+
+# textboxarrow 0 2
+@イシューリエル
+何かを為したいという思いが溢れて
+街中で騒ぎを
+起こしていたようですわね
+
+# face 6301411 "usual"
+# textboxarrow 0 2
+@イシューリエル
+それらの寄せ集めを七支刀、
+あなたが浄化してみせたのですわ！
+
+# voice 1051 "shichishito_0042"
+# alpha 6301411 0 0.3
+# move 5105111 3 0
+# mask 5105111 off
+# face 5105111 "normal"
+# alpha 5105111 1 0.3
+# textboxarrow 0 2
+@七支刀
+えへへ…
+わたくしは、ただ皆様の思いを
+受け止めただけです
+
+# textboxarrow 0 2
+@七支刀
+幽霊様方は、不安だったんです
+何の価値もなく消えていくだけの
+人生だったのかなって…
+
+# textboxarrow 0 2
+@七支刀
+でも、そんなことありません！
+皆様、かけがえのない
+存在なんですからっ
+
+# textboxarrow 0 2
+@七支刀
+そう、一心にお伝えしました
+
+# voice 2004 "parashu_0040"
+# alpha 5105111 0 0.3
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# textboxarrow 0 2
+@パラシュ
+ふーん…
+いつものように理想を語ったわけだ
+
+# move 6200411 2 0.5
+# move 5105111 4 0
+# mask 5105111 on
+# face 5105111 "sad"
+# alpha 5105111 1 0.3
+# textboxarrow 0 3
+@七支刀
+あ…その…
+わたくし、精一杯…
+
+#setnextbgmblock 1
+# se "bgm601_guitaron"
+# se "bgm601_glockenon"
+# voice 2004 "parashu_0004"
+# face 6200411 "happy"
+# textboxarrow 0 1
+@パラシュ
+…まあ、いいんじゃないかな
+少なくとも、今回は君の手柄だ
+
+# textboxarrow 0 1
+@パラシュ
+発言と行動が
+釣り合っていないというのは…
+撤回するよ
+
+# voice 1051 "shichishito_0061"
+# face 5105111 "normal"
+# textboxarrow 0 3
+@七支刀
+パラシュ様！
+
+# se "SE_6506"
+# emotionbody 2000 4 5105111 0 220
+# effectpattern 2000 1 12
+# effectstart 2000
+# voice 1051 "shichishito_0005"
+# face 5105111 "happy"
+# textboxarrow 0 3
+@七支刀
+それはつまり、わたくしを仲間として
+認めて下さったということですね！
+嬉しいですっ♪
+
+# face 6200411 "angry"
+# textboxarrow 0 1
+@パラシュ
+そこまでは言ってない！
+
+# alpha 6200411 0 0.3
+# alpha 5105111 0 0.3
+# move 270 3 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+イシューリエルさん
+お二人に分かれていたことに
+ついてなのですが…
+
+# alpha 270 0 0.3
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# textboxarrow 0 2
+@イシューリエル
+それについても、
+わたくし、理解致しました
+
+# textboxarrow 0 2
+@イシューリエル
+認めますわ
+わたくしは「揺らぎ」の影響を
+受けておりました
+
+# textboxarrow 0 2
+@イシューリエル
+どうやら心霊現象に対する見解が
+硬直し過ぎていたことが
+原因のようですわね
+
+# textboxarrow 0 2
+@イシューリエル
+世の中には心霊現象を騙るインチキや
+デタラメが数多く存在します
+
+# textboxarrow 0 2
+@イシューリエル
+ですが、そうでないものもある
+少なくとも現時点では
+解明できていない現象が存在します
+
+# textboxarrow 0 2
+@イシューリエル
+そのことを、もう無闇に
+否定したりは致しません
+
+# textboxarrow 0 2
+@イシューリエル
+その上で、検証を続けてまいりますわ
+
+# face 6301411 "usual"
+# textboxarrow 0 2
+@イシューリエル
+わたくし達が見た「幽霊」も、
+「残留思念」が何らかの方法で
+プラズマ内に記録されたものと…
+
+# textboxarrow 0 2
+@イシューリエル
+そのように考えれば、まだまだ
+科学的考察の余地がございます
+
+# move 270 2 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# move 6301411 4 0.5
+# textboxarrow 0 1
+@ミーミル
+もう二人に分かれてしまうことは
+なさそうですね
+
+# textboxarrow 0 3
+@イシューリエル
+ですから、ご安心なさって
+「揺らぎ」の影響を受けることは
+ありません
+
+# face 6301411 "normal"
+# textboxarrow 0 3
+@イシューリエル
+むしろ「揺らぎ」も興味深い
+調査対象ですわ
+
+# se "SE_0613"
+# voice 3014 "ithuriel_kyara_1007"
+# textboxarrow 0 3
+@イシューリエル
+いずれ、わたくしが
+真実を見出して差し上げます！
+これぞ、トゥルース！
+
+# voice 9917 "mimir_navikan_0003"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+はい
+是非、お力をお借りしたいと存じます
+
+# textboxarrow 0 1
+@ミーミル
+これで一件落着ですね、マスター様
+
+# textboxarrow 0 3
+@イシューリエル
+では、帰りますよ
+「超オカルトバスターズ」の皆――
+
+# move 270 1 0.5
+# alpha 270 0 0.3
+# move 6301411 5 0.5
+# alpha 6301411 0 0.3
+# move 6200411 3 0
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 0
+# textboxarrow 0 2
+@パラシュ
+ちょっと待ってもらおうか
+
+# textwindow "close"
+# alpha 6200411 0 0.3
+# waitandnext 0.5
+
+;;パラシュがイシューリエルを捕まえる
+# move 6200411 2 0
+# layer 6200411 2
+# mask 6200411 off
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# move 6301411 4 0
+# layer 6301411 4
+# mask 6301411 on
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# waitandnext 0.5
+
+# se "SE_0683"
+# move 6301411 5 0.3
+# waitandnext 0.3
+
+# se "SE_6236"
+# move 6200411 3 0.3
+# waitandnext 0.5
+
+# move 6301411 4 0.8
+# move 6200411 2 0.8
+# se "SE_0982"
+# waitandnext 1
+
+# se "SE_0694"
+# voice 3014 "ithuriel_0009"
+# face 6301411 "sad"
+# textwindow "nomal"
+# textboxarrow 0 3
+@イシューリエル
+どうなさいました、パラシュ？
+…ちょっと、痛いですわっ
+そんなに強く掴まないでっ
+
+# bgm "bgm006" 0
+# voice 2004 "parashu_0009"
+# textboxarrow 0 1
+@パラシュ
+…ひとつ、
+誤魔化していることがあるよね
+この廃病院の幽霊だけど…
+
+# textboxarrow 0 1
+@パラシュ
+どうして、二週間前から
+急に動きが活発になったんだい？
+何か原因があると考えるべきだ
+
+# alpha 6301411 0 0.3
+# alpha 6200411 0 0.3
+# move 5105111 3 0
+# mask 5105111 off
+# face 5105111 "sad"
+# alpha 5105111 1 0.3
+# textboxarrow 0 2
+@七支刀
+恐らく、擬似的にでも
+心霊現象を起こしたので、
+それに誘引されたんだと思います
+
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# alpha 5105111 0 0.3
+# textboxarrow 0 1
+@パラシュ
+だそうだよ、イシューリエル
+
+# textboxarrow 0 1
+@パラシュ
+ようするに、ここ最近、
+町中で心霊現象が起きていた遠因は
+君ってことになる
+
+# textboxarrow 0 3
+@イシューリエル
+パラシュ、お待ちになって…
+わたくし達は理想を追い求める
+同士であって…
+
+# textboxarrow 0 1
+@パラシュ
+その理想が
+おかしな方向に歪んでしまったのが
+問題だったんじゃなかったのかな？
+
+# face 6200411 "angry"
+# textboxarrow 0 1
+@パラシュ
+ボクは君の理想が
+人々のためになるものだと感じたから
+力を貸していたんだよ
+
+# textboxarrow 0 1
+@パラシュ
+それなのに、君自身が
+町の人々に迷惑をかけてしまったら
+本末転倒じゃないか
+
+# voice 3014 "ithuriel_battle_0007"
+# move 6301411 5 1
+# move 6200411 3 1.2
+# se "SE_0694"
+# textboxarrow 0 3
+@イシューリエル
+い、痛い…！
+痛いですわ、パラシュ…！
+肘はそっちには曲がりませんのよっ
+
+# face 6200411 "usual"
+# textboxarrow 0 2
+@パラシュ
+さあ、事務所でゆっくり話し合おう
+
+# face 6301411 "sad"
+# textboxarrow 0 3
+@イシューリエル
+あ…あああああ…
+
+;;イシューリエルがパラシュに引きずられていく
+# move 6301411 4 1
+# alpha 6301411 0 0.3
+# move 6200411 2 1.2
+# alpha 6200411 0 0.3
+# se "SE_6237"
+# textboxarrow 0 0
+# waitandnext 1
+
+# face 5105111 "sad"
+# alpha 5105111 1 0.3
+# textboxarrow 0 2
+@七支刀
+あわわわ…
+パラシュ様、どうか穏便に
+皆様、仲良く致しましょう…！
+
+;;七支刀が走り去る
+# se "SE_5575"
+# move 5105111 2 0.5
+# alpha 5105111 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# move 270 3 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+ええと…
+一件落着です…よね？
+
+# fadeout "black" 1
+# waitandnext 1

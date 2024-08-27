@@ -1,0 +1,1348 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第0話　タイトル：プロローグ
+;;プロローグ第2話
+;;スクリプト最後の背景：白
+;;-----------------------------------------
+# script "lisp"
+# background "101_plain_daytime"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;スイハ
+# body 401711
+# pos 401711 3
+# scale 401711 0.8 0
+# layer 401711 2
+# alpha 401711 0 0
+# mask 401711 off
+;;ミネルヴァ
+# body 302511
+# pos 302511 3
+# scale 302511 0.8 0
+# layer 302511 2
+# alpha 302511 0 0
+# mask 302511 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;異族化アルマス
+# body 5103831
+# pos 5103831 3
+# scale 5103831 0.8 0
+# layer 5103831 3
+# alpha 5103831 0 0
+# mask 5103831 off
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;-----------------------------------------
+;;シナリオカット一枚絵
+# imageset 0 "st191001_1"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;虚空の穴のエフェクト
+# envbody 2000 20 0
+;;-----------------------------------------
+;;第２話
+;;//背景：平原（バグあり）
+# effectstart 2000
+# voice 1036 "ragnarok_0038"
+# move 103611 2 0
+# face 103611 "usual"
+# alpha 103611 1 0
+# mask 103611 on
+# textboxarrow 0 1
+# move 302511 4 0
+# face 302511 "normal"
+# alpha 302511 1 0
+# mask 302511 on
+# textflame 1 1
+@ラグナロク
+これが報告にあった「虚空の穴」ね
+
+# face 302511 "angry"
+# textboxarrow 0 3
+@ミネルヴァ
+あまり近づかないようにして下さい
+人が吸い込まれたという報告も
+あります
+
+# voice 1036 "ragnarok_0022"
+# face 103611 "surprise"
+# textboxarrow 0 1
+@ラグナロク
+吸い込まれた…
+どこかに繋がっているということ？
+
+# voice 3025 "minerva_0034"
+# face 302511 "normal"
+# textboxarrow 0 3
+@ミネルヴァ
+いえ、その可能性は低いですね
+吸い込まれた人は…粉々に砕かれて
+「穴」に消えたそうですから…
+
+# voice 1036 "ragnarok_0025"
+# face 103611 "sad"
+# textboxarrow 0 1
+@ラグナロク
+何てこと…
+
+# textboxarrow 0 3
+@ミネルヴァ
+「虚空の穴」が発見されるように
+なったのはつい最近ですけれど
+
+# textboxarrow 0 3
+@ミネルヴァ
+数年前から現れていたのではないかと
+私は考えています
+
+# face 103611 "usual"
+# textboxarrow 0 1
+@ラグナロク
+…何か心当たりがあるの？
+
+# textboxarrow 0 3
+@ミネルヴァ
+発生報告の頻度から導き出した
+仮説です
+
+# textboxarrow 0 3
+@ミネルヴァ
+この「虚空の穴」と呼称されている
+現象は発見報告が日増しに増えて
+います
+
+# textboxarrow 0 3
+@ミネルヴァ
+それをグラフ化すると緩やかな
+二次曲線を描いているんです
+
+# voice 1036 "ragnarok_0039"
+# textboxarrow 0 1
+@ラグナロク
+そう…
+その曲線を遡れば発生し始めた
+時期がおおまかに分かるということね
+
+# textboxarrow 0 3
+@ミネルヴァ
+あくまで仮説に過ぎませんけれど…
+
+# textboxarrow 0 1
+@ラグナロク
+…「虚空の穴」は確認したわ
+一旦、教会に戻りましょう
+
+# face 302511 "surprise"
+# textboxarrow 0 3
+@ミネルヴァ
+そうですね
+あっ
+
+;;//風が吹く
+# se "SE_0791"
+# face 302511 "normal"
+# textboxarrow 0 3
+@ミネルヴァ
+今日は、いつになく風が強いですね
+
+# voice 1036 "ragnarok_0028"
+# face 103611 "sad"
+# textboxarrow 0 1
+@ラグナロク
+この風、何かを訴えかけているの
+かもしれない
+私達の運命を…
+
+# face 302511 "surprise"
+# textboxarrow 0 3
+@ミネルヴァ
+えっ？
+
+# face 103611 "usual"
+# textboxarrow 0 1
+@ラグナロク
+何でもないわ
+運命の歯車なら、
+とっくに回り続けているもの
+
+;;//背景：街中
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# effectskip 2000
+# background "004_outland"
+# alpha 103611 0 0
+# alpha 302511 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//街中の喧噪
+# bgm "bgm002" 0
+# waitandnext 0.5
+
+# se "SE_0719"
+# voice 3025 "minerva_0004"
+# move 103611 2 0
+# face 103611 "usual"
+# alpha 103611 1 0.5
+# mask 103611 on
+# move 302511 4 0
+# face 302511 "happy"
+# alpha 302511 1 0.5
+# mask 302511 on
+# textboxarrow 0 3
+# textwindow "normal"
+@ミネルヴァ
+この町は活気があって良いですね
+戦いの気配もありません
+
+# voice 1036 "ragnarok_0003"
+# textboxarrow 0 1
+@ラグナロク
+教会の近くだからということも
+あるのよ
+“海”に近づけば近づくほど…
+
+# face 302511 "normal"
+# textboxarrow 0 3
+@ミネルヴァ
+「領主」達の力が強まって、
+争いごとも多くなりますからね
+
+# textboxarrow 0 3
+@ミネルヴァ
+今日もエルキュール達は治安維持の
+ために世界中を飛び回っています…
+
+# textboxarrow 0 1
+@ラグナロク
+神々の軛を解き放って、
+平和な世界が築かれるはずだったのに
+どうして争いが続いているの…？
+
+;;ラグナロク（独白）
+# move 103611 2 0
+# textboxarrow 0 0
+# textwindow "moya"
+@ラグナロク
+あのときガブリエルが遺した言葉の
+意味は、このことを指していた？
+
+# textboxarrow 0 3
+# textwindow "normal"
+@ミネルヴァ
+それでも一歩一歩、歩き続けるしか
+ありません
+
+# textboxarrow 0 3
+@ミネルヴァ
+ラグナロク、私達は常にあなたの
+御旗の下にありますよ
+
+# face 103611 "happy"
+# textboxarrow 0 1
+@ラグナロク
+ありがとう、ミネルヴァ
+もちろん、歩みを止めはしないわ！
+
+;;ラグナロク（独白）
+# move 103611 2 0
+# face 103611 "usual"
+# textboxarrow 0 0
+# textwindow "moya"
+@ラグナロク
+そうよ
+どれだけ困難であろうとも、
+必ず未来に光明は差す
+
+;;ラグナロク（独白）
+# textboxarrow 0 0
+@ラグナロク
+全ての人々に平穏な日々を
+そのために、私達は歩み続けて
+いるのだから！
+
+;;//背景：王都
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "imperial_city"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm003" 0
+# move 103611 2 0
+# face 103611 "usual"
+# alpha 103611 1 0.5
+# mask 103611 on
+# move 302511 4 0
+# face 302511 "happy"
+# alpha 302511 1 0.5
+# mask 302511 on
+# textboxarrow 0 3
+# textwindow "normal"
+@ミネルヴァ
+教会が見えてきました
+やはり、家に帰ってくると
+ホッとしますね
+
+# serif 1
+@住人１
+ラグナロク様にミネルヴァ様
+こんにちは
+
+# face 103611 "happy"
+# textboxarrow 0 1
+@ラグナロク
+こんにちは
+何度も言うけれど、「様」なんて
+つけなくていいから
+
+# serif 1
+@住人１
+何を仰いますか
+私達が安心して暮らせるのは
+全てラグナロク教会のお陰です
+
+# serif 1
+@住人１
+教会直属の姫であられる
+お二人は敬うべき存在ですよ
+
+# serif 1
+@住人２
+まったくです
+外縁部では教会の権威が弱まって
+いるところもあると聞きますけど…
+
+# serif 1
+@住人３
+そういうところは領主同士の争いが
+絶えないんだろう？
+怖い、怖い…
+
+# serif 1
+@住人４
+その点、ラグナロク教会のお膝元で
+あるこの辺りは本当に安全よね
+
+# textboxarrow 0 3
+@ミネルヴァ
+そう言っていただけると
+励みになります
+
+# serif 1
+@住人１
+どうぞ、他の姫様方にも
+よろしくお伝え下さい
+
+# serif 1
+@住人２
+ああ、そうだ
+リンゴどうぞ
+
+# face 103611 "usual"
+# textboxarrow 0 1
+@ラグナロク
+そんな、悪いわ
+
+# serif 1
+@住人２
+いえいえ、このくらい
+日頃の感謝のしるしにすら
+なりませんよ
+
+# voice 3025 "minerva_0030"
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 3
+@ミネルヴァ
+ありがとうございます
+ラグナロク、せっかくですから
+
+# bgm "stop"
+# face 103611 "surprise"
+# textboxarrow 0 1
+@ラグナロク
+そう？
+それなら…………！？
+
+# se "SE_0814"
+# waitandnext 0.5
+
+# face 302511 "surprise"
+# textboxarrow 0 3
+@ミネルヴァ
+どうしました、ラグナロク？
+
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;ラグナロク（独白）
+# move 103611 2 0
+# textboxarrow 0 0
+# textwindow "normal"
+@ラグナロク
+今の感覚は何…？
+上…？
+空から何か…？
+
+;;//甲高い金属音
+;;//画面揺れ（継続）
+;;//賛美歌のような音楽があれば
+# textwindow "close"
+# se "SE_0815"
+# se "SE_0636"
+# waitandnext 0.5
+
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm410" "BgmIntegralNoahBattle001" 0
+# shakeloop 0
+# voice 1036 "ragnarok_0023"
+# textboxarrow 0 1
+# textwindow "normal"
+@ラグナロク
+なっ…
+
+;;ラグナロク（独白）
+# move 103611 2 0
+# textboxarrow 0 0
+# textwindow "moya"
+@ラグナロク
+今、空に人影が見えたような…
+
+# voice 3025 "minerva_0024"
+# textboxarrow 0 3
+# textwindow "normal"
+@ミネルヴァ
+何ですか、この揺れはっ？
+空…？
+空から…何か落ちてきます！？
+
+# serif 1
+@住人１
+何だっ？
+何が起きてるんだ！？
+
+# serif 1
+@住人２
+大樹様だっ
+大樹様から変な音がっ…
+あああああああ！？
+
+# serif 1
+@住人３
+空を見ろ！
+ばかでかいものが…
+落ちてくるぞぉっ！！
+
+# serif 1
+@住人４
+キャアアアアアアア！
+何なの、あれぇっ…？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 302511 "angry"
+# textboxarrow 0 3
+@ミネルヴァ
+いけません！
+人々が怯えていますっ
+このままではパニックに…
+
+# face 103611 "usual"
+# textboxarrow 0 1
+@ラグナロク
+ユグドラシル…
+
+# face 302511 "surprise"
+# textboxarrow 0 3
+@ミネルヴァ
+何か言いましたか、ラグナロク？
+
+# textboxarrow 0 1
+@ラグナロク
+ユグドラシルよ…
+逆さまになったユグドラシルが…
+落ちてきてる
+
+# voice 3025 "minerva_0023"
+# face 302511 "angry"
+# textboxarrow 0 3
+@ミネルヴァ
+そんな…まさかっ…
+
+# sestop "SE_0636"
+# waitandnext 0.2
+
+# se "SE_0809"
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "101_plain_daytime"
+# alpha 103611 0 0
+# alpha 302511 0 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;//背景：新規天上世界
+# shakeloop 0
+# serif 1
+@住人達
+うわああああああああああ…！！
+
+# serif 1
+@住人達
+大樹様がっ…逆さまになった
+大樹様が、空から落ちてくるぞぉ！
+
+# serif 1
+@住人達
+逃げろぉっ…！
+あんな巨大なものが落ちてきたら、
+この世界はおしまいだぁっ…
+
+;;//甲高い金属音
+# se "SE_0815"
+# waitandnext 0.5
+
+# move 103611 2 0
+# face 103611 "usual"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 302511 4 0
+# face 302511 "normal"
+# alpha 302511 1 0.5
+# mask 302511 on
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+@ラグナロク
+止まる！
+
+# face 302511 "surprise"
+# textboxarrow 0 3
+@ミネルヴァ
+えっ…？
+
+;;//画面揺れ終わり
+# shakestop
+# face 302511 "normal"
+# textboxarrow 0 3
+@ミネルヴァ
+止まった…
+落ちてきたユグドラシルが、
+空中で静止しました
+
+# serif 1
+@住人５
+助かったのか、俺達…
+
+# serif 1
+@住人６
+まるで鏡合わせみたいな光景ね
+不思議…
+
+# serif 1
+@住人７
+なあ…逆さまになった大樹様の
+ふもとに…町が見えないか？
+
+# serif 1
+@住人８
+本当だ、見えるぞっ…
+何だ、あれ…！？
+
+# textboxarrow 0 3
+# serif 1
+# textwindow "close"
+# serif 0
+@ミネルヴァ
+あれは…反転世界と
+呼ぶべきでしょうか
+
+# voice 3025 "minerva_0028"
+# face 302511 "angry"
+# textboxarrow 0 3
+@ミネルヴァ
+ラグナロク、急いで教会に…！
+あ！人々の避難を先にした方がっ…
+ええと…
+
+# textboxarrow 0 1
+@ラグナロク
+まだよ…
+何かが来るっ
+
+# face 302511 "surprise"
+# textboxarrow 0 3
+@ミネルヴァ
+えっ？
+反転したユグドラシルから
+…あれは…人？
+
+# alpha 103611 0 0.5
+# alpha 302511 0 0.5
+# move 5103831 3 0
+# face 5103831 "normal"
+# alpha 5103831 1 0.5
+# mask 5103831 off
+# textboxarrow 0 2
+@？？？
+再生のときが始まるわ
+
+# alpha 5103831 0 0.5
+# move 103611 2 0
+# face 103611 "usual"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 302511 4 0
+# face 302511 "normal"
+# alpha 302511 1 0.5
+# mask 302511 on
+@ラグナロク
+誰！？
+
+# move 103611 1 0.5
+# move 5103831 3 0
+# face 5103831 "normal"
+# alpha 5103831 1 0.5
+# mask 5103831 on
+# textboxarrow 0 2
+# move 302511 5 0.5
+@？？？
+初めまして
+私は“インテグラルキラーズ”の一人
+アルマス
+
+# textboxarrow 0 2
+@アルマス
+別に覚えなくてもいいわ
+あなた達は皆、世界再生のために
+剪定されるのだから
+
+# voice 3025 "minerva_0037"
+# face 302511 "angry"
+# textboxarrow 0 3
+@ミネルヴァ
+突然現れて、
+勝手なことを言わないで下さい！
+
+# voice 510383 "almace_iz_0022"
+# face 5103831 "surprise"
+# textboxarrow 0 2
+@アルマス
+勝手なこと？
+勝手なことをしてきたのは
+あなた達の方よ
+
+# face 5103831 "angry"
+# textboxarrow 0 2
+@アルマス
+お陰で理想郷創造のための計画――
+
+# textboxarrow 0 2
+@アルマス
+“擬彩されし不可逆世界”
+《インテグラルノア》は
+頓挫してしまった
+
+# textboxarrow 0 2
+@アルマス
+私達は理想の世界を創造するため
+改めて世界を作り替えるの
+
+# face 103611 "surprise"
+# textboxarrow 0 1
+@ラグナロク
+“擬彩されし不可逆世界”？
+聞き覚えのない言葉ね
+
+# face 5103831 "normal"
+# textboxarrow 0 2
+@アルマス
+あなた達が知らないのは当然よ
+全ては神魔契約によって定められ
+遂行されていたのだから
+
+# voice 510383 "almace_iz_0015"
+# face 5103831 "sad"
+# textboxarrow 0 2
+@アルマス
+それなのに、まさか管理者が被造物に
+敗れて支配権を失うだなんて…
+
+# voice 3025 "minerva_0022"
+# face 302511 "surprise"
+# textboxarrow 0 3
+@ミネルヴァ
+管理者…ガブリエル達のことですか？
+
+# voice 510383 "almace_iz_0032"
+# face 5103831 "normal"
+# textboxarrow 0 2
+@アルマス
+そうよ
+あの者達に管理され、この世界は
+永遠の理想郷へと至るはずだった
+
+# textboxarrow 0 2
+@アルマス
+異族達による剪定で人口は調節され
+美しい箱庭を現出させる計画だった
+のに…全て失われてしまったの
+
+# voice 1036 "ragnarok_0022"
+# textboxarrow 0 1
+@ラグナロク
+異族達による剪定？
+人口の調節って…何を言っているの
+
+# voice 3025 "minerva_0023"
+# textboxarrow 0 3
+@ミネルヴァ
+まさか…神々は意図的に人々を
+異族に捕食させていたというの
+ですかっ？
+
+# textboxarrow 0 1
+@ラグナロク
+異族は…
+そのために創り出された…？
+
+# textboxarrow 0 2
+@アルマス
+そうよ、“擬彩されし不可逆世界”
+による理想郷には容量が
+決められているのだから
+
+# textboxarrow 0 2
+@アルマス
+盆栽って知ってる？
+美しく、かつ大きくなりすぎないよう
+草木を丁寧に整えていくの
+
+# textboxarrow 0 2
+@アルマス
+異族は剪定バサミだったのに、
+それを失った世界は無様に
+膨れ上がってしまった
+
+# textboxarrow 0 2
+@アルマス
+そのせいで
+この世界は崩壊へと進みつつある
+だから、私達が来たの
+
+# textboxarrow 0 2
+@アルマス
+今再び“擬彩されし不可逆世界”を
+実行し、天上世界に永遠の理想郷を
+現出させるために
+
+;;//画面揺れ
+# se "SE_0637"
+# shake 0 1
+# waitandnext 1
+
+# face 302511 "angry"
+# textboxarrow 0 3
+@ミネルヴァ
+先程から断続的に揺れています…
+これもあなたの仕業ですかっ？
+
+# textboxarrow 0 2
+@アルマス
+あなた達にも見えているでしょう？
+鏡合わせのように反転した世界が
+
+# textboxarrow 0 2
+@アルマス
+あちらに世界を作り替えるの
+そのためにこちらの全てを
+一度、崩して移動させているのよ
+
+;;//虚空の穴が生まれる
+# se "SE_0816"
+# effectstart 2000
+# waitandnext 0.5
+
+# voice 1036 "ragnarok_0023"
+# face 103611 "surprise"
+# textboxarrow 0 1
+@ラグナロク
+虚空の穴！？
+こんなところにまで…
+
+# face 302511 "normal"
+# textboxarrow 0 3
+@ミネルヴァ
+…理解しました
+ラグナロク、虚空の穴は
+「失われた箇所」だったんです
+
+# textboxarrow 0 3
+@ミネルヴァ
+アルマスというキル姫の言葉が
+真実なら…
+
+# face 302511 "angry"
+# textboxarrow 0 3
+@ミネルヴァ
+彼女はこの世界を
+あの反転した世界に移し替えようと
+しています！
+
+# textboxarrow 0 3
+@ミネルヴァ
+よく見ると、あちらの世界はまだ
+それほど大きくありません
+奪われた部分が少ないからです
+
+# face 103611 "usual"
+# textboxarrow 0 1
+@ラグナロク
+奪われた部分に「穴」が開いていた
+ってわけね
+やってくれるわ
+
+# bgmfile "bgm214_215" "BgmAncientKillers001" 0
+# face 103611 "angry"
+# textboxarrow 0 1
+@ラグナロク
+この世界を奪わせはしない
+すでに奪われた分も、
+返してもらう！
+
+# voice 510383 "almace_iz_0009"
+# face 5103831 "angry"
+# textboxarrow 0 2
+@アルマス
+そんなことは不可能よ
+すでに崩壊は始まっている
+誰にも止められない
+
+# textboxarrow 0 2
+@アルマス
+私達は選定し、剪定する
+新たな世界へ導くに相応しい者達
+だけを連れていき
+
+# textboxarrow 0 2
+@アルマス
+残りは全て分解、再構築して
+新たな世界の礎となってもらうわ
+
+# face 5103831 "normal"
+# textboxarrow 0 2
+@アルマス
+もちろん、あなた達は全て
+礎となる運命よ
+
+# face 103611 "usual"
+# textboxarrow 0 1
+@ラグナロク
+運命？
+それは誰かに押しつけられるもの
+じゃない
+
+# textboxarrow 0 1
+@ラグナロク
+自分達の手で切り拓いていくものよ
+
+# face 103611 "angry"
+# textboxarrow 0 1
+@ラグナロク
+アルマスといったわね
+あなたの計画はここで潰える
+世界の崩壊は私が止める！
+
+# textboxarrow 0 3
+@ミネルヴァ
+ラグナロク、私も加勢します！
+
+# voice 1036 "ragnarok_0003"
+# textboxarrow 0 1
+@ラグナロク
+ええ、ともに戦いましょう
+この御旗に集え！
+
+# face 5103831 "angry"
+# textboxarrow 0 2
+@アルマス
+…ティルフィングの言っていた通りね
+抵抗は想定内
+力の差を思い知らせてあげるわ
+
+# voice 1036 "ragnarok_0029"
+# textboxarrow 0 1
+@ラグナロク
+はあああああああああ！
+
+# textboxarrow 0 2
+@アルマス
+その穢れた魂、私が散らしてあげる
+
+;;//ラグナロクとアルマスが切り結ぶ
+# se "SE_5716"
+# sedelay "SE_4601" 0.5
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@ミネルヴァ
+私の知謀をお使い下さい！
+
+# textboxarrow 0 1
+@ラグナロク
+私に任せて
+
+;;//アルマスが離れる
+# se "SE_9021"
+# alpha 5103831 0 0.5
+# waitandnext 0.8
+
+# alpha 103611 0 0.5
+# alpha 302511 0 0.5
+# move 5103831 3 0
+# face 5103831 "normal"
+# alpha 5103831 1 0.5
+# mask 5103831 off
+# textboxarrow 0 2
+@アルマス
+連携ね…
+二人までなら想定内よ
+
+# voice 3025 "minerva_0039"
+# alpha 5103831 0 0.5
+# move 302511 3 0
+# face 302511 "angry"
+# alpha 302511 1 0.5
+# mask 302511 off
+# textboxarrow 0 2
+@ミネルヴァ
+では、三人ならどうですか？
+
+# se "SE_4301"
+# voice 4017 "suiha_0029"
+# alpha 302511 0 0.5
+# move 401711 3 0
+# face 401711 "angry"
+# alpha 401711 1 0.5
+# mask 401711 off
+# textboxarrow 0 2
+@スイハ
+雲をも射抜く、我が一撃！
+
+;;//スイハの矢をアルマスが避ける
+# textwindow "close"
+# alpha 401711 0 0.5
+# move 5103831 3 0
+# face 5103831 "normal"
+# alpha 5103831 1 0.5
+# mask 5103831 on
+# waitandnext 0.6
+
+# se "SE_5204"
+# move 5103831 2 0.2
+# waitandnext 0.4
+
+# alpha 5103831 0 0.5
+# move 103611 3 0
+# face 103611 "happy"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+スイハ！
+戻っていたのねっ
+
+# alpha 103611 0 0.5
+# move 401711 3 0
+# face 401711 "normal"
+# alpha 401711 1 0.5
+# mask 401711 off
+# textboxarrow 0 2
+@スイハ
+はい…
+
+;;スイハ（独白）
+# voice 4017 "suiha_0028"
+# move 401711 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 401711 off
+@スイハ
+たまたま近くにいたから急いで
+戻ってきただけなんだけど…
+それは言わない方がいいかな…
+
+# alpha 401711 0 0.5
+# move 302511 3 0
+# face 302511 "angry"
+# alpha 302511 1 0.5
+# mask 302511 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ミネルヴァ
+三人で包囲しましょう
+
+# alpha 302511 0 0.5
+# move 5103831 3 0
+# face 5103831 "angry"
+# alpha 5103831 1 0.5
+# mask 5103831 off
+# textboxarrow 0 2
+@アルマス
+もう一人…
+さ、三人までなら想定内よっ
+
+# voice 1036 "ragnarok_0004"
+# move 5103831 2 0.5
+# mask 5103831 on
+# move 103611 4 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 3
+@ラグナロク
+さっき二人までならって言って
+なかった？
+
+# voice 510383 "almace_iz_0007"
+# textboxarrow 0 1
+@アルマス
+あなた達相手なら、二人も三人も
+同じようなものなのよ！
+
+# face 103611 "angry"
+# textboxarrow 0 3
+@ラグナロク
+その慢心があなたの運命を確定させる
+ことになるわ！
+
+;;//ラグナロクとアルマスが切り結ぶ
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 3025 "minerva_battle_0001"
+# alpha 5103831 0 0.5
+# alpha 103611 0 0.5
+# move 302511 3 0
+# face 302511 "angry"
+# alpha 302511 1 0.5
+# mask 302511 off
+# textboxarrow 0 2
+@ミネルヴァ
+えいっ！
+
+# se "SE_4200"
+# waitandnext 0.5
+
+# voice 4017 "suiha_battle_0001"
+# alpha 302511 0 0.5
+# move 401711 3 0
+# face 401711 "angry"
+# alpha 401711 1 0.5
+# mask 401711 off
+# textboxarrow 0 2
+@スイハ
+せいっ！
+
+# se "SE_5204"
+# waitandnext 0.5
+
+# voice 510383 "almace_iz_battle_0006"
+# alpha 401711 0 0.5
+# move 5103831 3 0
+# face 5103831 "angry"
+# alpha 5103831 1 0.5
+# mask 5103831 off
+# textboxarrow 0 2
+@アルマス
+くっ…
+やりにくい…
+
+# alpha 5103831 0 0.5
+# move 103611 3 0
+# face 103611 "angry"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+今よ！
+皆の力を一つに！
+
+;;//三人がアルマスを攻撃する
+# se "SE_9066"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 510383 "almace_iz_0037"
+# alpha 103611 0 0.5
+# move 5103831 3 0
+# face 5103831 "angry"
+# alpha 5103831 1 0.5
+# mask 5103831 off
+# textboxarrow 0 2
+@アルマス
+くうっ…
+まだよ…まだ…
+私はこんなところで…
+
+# textboxarrow 0 2
+@アルマス
+止まるわけにはいかないの！
+
+# voice 1036 "ragnarok_0023"
+# alpha 5103831 0 0.5
+# move 103611 3 0
+# face 103611 "surprise"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+！？
+
+;;//画面フラッシュ
+# se "SE_0644"
+# bgm "stop"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 510383 "almace_iz_0022"
+# alpha 103611 0 0.5
+# move 5103831 3 0
+# face 5103831 "surprise"
+# alpha 5103831 1 0.5
+# mask 5103831 off
+# textboxarrow 0 2
+@アルマス
+ここから絶・反撃…えっ？
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# face 5103831 "sad"
+# textboxarrow 0 2
+@アルマス
+何、この感覚…？
+ううっ…
+あああっ…
+
+# textboxarrow 0 2
+@アルマス
+あああああああああああああああああ
+あああああああああああああああああ
+ああああああああああああ…！
+
+# voice 1036 "ragnarok_0015"
+# alpha 5103831 0 0.5
+# move 103611 2 0
+# face 103611 "sad"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 302511 4 0
+# face 302511 "normal"
+# alpha 302511 1 0.5
+# mask 302511 on
+@ラグナロク
+あううっ…
+これって、私の中の…
+共鳴…しているの…？
+
+# face 302511 "angry"
+# textboxarrow 0 3
+@ミネルヴァ
+ラグナロク、しっかりして下さい！
+
+;;スイハ（独白）
+# voice 4017 "suiha_0028"
+# alpha 103611 0 0.5
+# alpha 302511 0 0.5
+# move 401711 3 0
+# face 401711 "normal"
+# alpha 401711 1 0.5
+# mask 401711 off
+# textboxarrow 0 0
+# textwindow "moya"
+@スイハ
+どうしよう…
+私もラグナロクに声を掛けたいけど
+あのキル姫の方も油断できないし…
+
+# alpha 401711 0 0.5
+# move 103611 3 0
+# face 103611 "sad"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+ううっ…あああああああああああああ
+あああああああああああああああああ
+あああああああああ…！
+
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1.2
+
+# effectskip 2000
+# background "bg_white"
+# move 5103831 2 0
+# face 5103831 "normal"
+# alpha 5103831 1 0
+# mask 5103831 on
+# move 103611 4 0
+# face 103611 "surprise"
+# alpha 103611 1 0
+# mask 103611 on
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：白
+;;//ラグナロクとアルマスの二人だけ
+# voice 1036 "ragnarok_0023"
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@ラグナロク
+…どうして？
+私のバイブスとあなたのキラーズが
+共鳴するなんて…
+
+# voice 510383 "almace_iz_0001"
+# face 5103831 "angry"
+# textboxarrow 0 1
+@アルマス
+何をしたの…？
+力が…体の自由が利かない…
+まるで縛られているみたいよ
+
+# face 103611 "usual"
+# textboxarrow 0 3
+@ラグナロク
+これは共鳴よ
+でも、私とあなたが適合するなんて
+考えられないのにっ
+
+# voice 510383 "almace_iz_0009"
+# textboxarrow 0 1
+@アルマス
+共鳴？
+そんなのはどうでもいいわ
+早く…私を解放してっ
+
+# textboxarrow 0 3
+@ラグナロク
+私もそうしたいのだけど…
+さっきから変なのよ
+バイブスが…うあああっ？
+
+;;//画面フラッシュ
+;;//鐘の音のような効果音を
+# se "SE_9089"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 510383 "almace_iz_0023"
+# face 5103831 "surprise"
+# textboxarrow 0 1
+@アルマス
+何っ…？
+今…何かが私の中にっ…
+これ…何なのっ？
+
+# face 5103831 "angry"
+# textboxarrow 0 1
+@アルマス
+絶・不可解…！
+
+;;//アルマスの姿が変化していく
+# textwindow "close"
+# alpha 5103831 0 1
+# move 196 2 0
+# face 196 "normal"
+# alpha 196 1 1
+# mask 196 on
+# waitandnext 1
+
+# voice 1036 "ragnarok_0025"
+# face 103611 "surprise"
+# textboxarrow 0 3
+# textwindow "normal"
+@ラグナロク
+そんな…私の中にあったバイブスが
+アルマスに移った…？
+いえ、それだけじゃない…
+
+# face 103611 "normal"
+# textboxarrow 0 3
+@ラグナロク
+バイブスを通して…繋がっている
+私とアルマスが…こんなこと…
+今まで一度もなかった…！
+
+# se "SE_9014"
+# textboxarrow 0 3
+@ラグナロク
+一体、何が起きて――
+
+;;//暗転
+# bgm "stop"
+# fadeout "black" 1
+# waitandnext 1

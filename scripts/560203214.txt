@@ -1,0 +1,341 @@
+;;-----------------------------------------
+;;ネス3_3
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgm "bgm002" 0
+;;-----------------------------------------
+# body 5602031
+# pos 5602031 3
+# scale 5602031 0.8 0
+# layer 5602031 3
+# mask 5602031 off
+# alpha 5602031 1 0
+# face 5602031 "happy"
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "c5602031"
+# imagelayer 1 3
+# imagealpha 1 0 0
+;;-----------------------------------------
+;;背景：街中（昼）
+# textflame 0 0
+@
+あれから数日後、ネスとマスターは
+食料の買い出しで街に出ていた
+
+# textflame 0 0
+@
+「お姉ちゃん、かわいいお洋服だね」
+「すごく似合ってるね、いいなぁ」
+「ねえねえ、こっち向いて」
+
+# textflame 0 0
+@
+ネスを見つけた子供達は、
+あの時と同じようにネスを囲む
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6020 "ness_0030"
+@ネス
+ふふっ…
+ありがとうございます
+
+# textflame 0 0
+@
+しかしネスは、あの時とは違い、
+笑顔で子供達にこたえていた
+
+# textflame 0 0
+@
+この衣装を恥ずかしがる彼女は、
+もうそこにはいなかった
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5602031 "normal"
+# voice 6020 "ness_0001"
+@ネス
+マスター、いきましょう
+次はあのお店でしたよね？
+
+# textflame 0 0
+@
+その店には野菜やお菓子など、
+あらゆる食料品が並んでいる
+
+# textflame 1 1
+# textboxarrow 0 2
+@ネス
+これと、これ…
+これも体に良さそうです
+新鮮な野菜がたくさんありますね…
+
+# textflame 0 0
+@
+ネスが体に良さそうなものを
+選ぶかたわらで、マスターは
+甘いお菓子やパンを抱えている
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5602031 "angry"
+# voice 6020 "ness_0011"
+@ネス
+マスター、ダメですよ？
+お菓子というのは節度を持って
+楽しむものです
+
+# textflame 1 1
+# textboxarrow 0 2
+@ネス
+いい大人なんですから、
+わかってますよね？
+
+# textflame 0 0
+@
+マスターはお菓子を抱えたままで
+ネスに反論する
+
+# textflame 0 0
+@
+そんなこと言ったって…
+
+;;選択肢
+# select "これ、全部新作なんだよ？" "select_label_01" "これでも厳選したんだよ" "select_label_02" "ネスにも分けてあげるから" "select_label_03"
+そんなこと言ったって…
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ネス
+関係ありません
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ネス
+そうは思えません
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ネス
+…賄賂など受けません
+
+# label "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ネス
+とにかく、それは戻してください
+いいですね？
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# background "plain"
+# face 5602031 "sad"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# serif 0
+# textwindow "nomal"
+;;背景：草原（昼）
+# textflame 0 0
+@
+はぁ…残念だなぁ
+あれもこれも、楽しみにしてたのに…
+と、店を出た後にマスターがつぶやく
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6020 "ness_0027"
+@ネス
+はぁ…
+わたしも残念です
+節制を理解いただけないとは…
+
+# textflame 0 0
+@
+理解はしてるけど、少しぐらいなら…
+と、マスター
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5602031 "angry"
+# voice 6020 "ness_0009"
+@ネス
+少し？あれが少しですか？
+両手に抱えるほどの量ですよ？
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5602031 "sad"
+@ネス
+はぁ…
+最近のマスターは、心も体も
+金銭感覚もゆるんでいるようですね
+
+# textflame 0 0
+@
+確かに、最近ちょっと食べすぎかも…
+と、自分のお腹を見るマスター
+
+# textflame 0 0
+@
+このお腹もネスの魔法で
+なんとかならないかな？
+と、マスターが冗談をいうと…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5602031 "angry"
+@ネス
+…なりませんが？
+
+# textflame 0 0
+@
+ネスはマスターに
+冷ややかな視線を向ける
+
+# textflame 1 1
+# textboxarrow 0 2
+@ネス
+なるとしてもやりませんし、
+そんなくだらない私利私欲のために
+わたしの力は使えません
+
+# textflame 1 1
+# textboxarrow 0 2
+@ネス
+やはりマスターには節制が足りません
+このわたしがついていながら、
+嘆かわしいことです
+
+# textflame 1 1
+# textboxarrow 0 2
+@ネス
+…仕方ありませんね
+わたしが適切な規律を定めます
+いいですね？
+
+# textflame 0 0
+@
+ネスの剣幕に押され、思わず
+よ…よろしくお願いします
+と、答えてしまうマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5602031 "happy"
+# voice 6020 "ness_0032"
+@ネス
+はい、いい返事です
+
+;;できればもやもやフレームで
+# move 5602031 3 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@ネス
+まったく…
+お兄ちゃんは、わたしがいないと
+ダメなんだから…
+
+;;できればもやもやフレームで
+@ネス
+これからも、お兄ちゃんのことは
+わたしが守ってあげるからね！
+
+# textflame 0 0
+# textwindow "nomal"
+@
+マスターを守ると密かに誓うネスに、
+杖は新たな力を授ける
+
+# se "SE_0602"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ネス
+これは…
+『白魔晶の調和』…
+あなたを守るための新たな力…
+
+# textflame 0 0
+@
+ネスの変化に驚きつつも、
+また君は強くなったんだね
+と、ネスを褒めるマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+@ネス
+はい！
+規律がわたしを強くするのです
+
+# textflame 0 0
+@
+自分もネスのように強くなれるかな
+と、マスターはつぶやく
+
+# textflame 1 1
+# textboxarrow 0 2
+@ネス
+もちろんです！
+わたしの規律で、
+マスターを正しく導いてみせます！
+
+# textflame 0 0
+@
+できれば手加減してもらえないかな？
+と、マスターは小声でネスにたずねる
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5602031 "normal"
+# voice 6020 "ness_0004"
+@ネス
+んー、そうですね…
+では、“少し”だけなら、
+手加減してあげてもいいですよ？
+
+# textflame 0 0
+@
+やる気に満ちたネスの笑顔に、
+自分で言い出したことながら
+早くも後悔し始めるマスターだった
+
+;;＜★６（一枚絵同じ）＞
+;;ネス「なんですか？　新たな規律が欲しいのですか？
+;;…いいでしょう。作ってさしあげます！」
+# textflame 0 0
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# fadein "white" 3
+# buttonsout 0 0
+# textwindow "close"
+# voice 6020 "ness_kyara_0011"
+
+# frameout 0 1
+
+# waitandnext 0.8
+
+# fadeout "black" 1.5
+# waitandnext 1.5

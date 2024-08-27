@@ -1,0 +1,370 @@
+;;-----------------------------------------
+;;【ファントムオブキル_まどかコラボ】巴マミドレスVer.　キャラクタークエスト修正稿
+;;【EP2】戦闘前
+;;スクリプト最後の背景：街中（昼）
+;;背景：平原など
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;マミ
+# body 3501411
+# pos 3501411 3
+# scale 3501411 0.8 0
+# layer 3501411 2
+# alpha 3501411 0 0
+# mask 3501411 off
+;;トレイセーマ兵
+# body 3830001
+# pos 3830001 3
+# scale 3830001 0.8 0
+# layer 3830001 2
+# alpha 3830001 0 0
+# mask 3830001 off
+;;トレイセーマ兵（クローン1）
+# entry 938300011 3830001
+# pos 938300011 3
+# scale 938300011 0.8 0
+# layer 938300011 2
+# alpha 938300011 0 0
+# mask 938300011 off
+;;トレイセーマ兵（クローン2）
+# entry 938300012 3830001
+# pos 938300012 3
+# scale 938300012 0.8 0
+# layer 938300012 2
+# alpha 938300012 0 0
+# mask 938300012 off
+;;-----------------------------------------
+;;背景の明転
+# imageset 2 "bg_white"
+# imagelayer 2 3
+# imagealpha 2 0 0
+;;-----------------------------------------
+;;【EP2】
+;;背景：平原など
+# move 3501411 3 0
+# face 3501411 "angry"
+# alpha 3501411 1 0
+# mask 3501411 off
+# textflame 1 1
+# textboxarrow 0 2
+@マミ
+ひとまず、戦いには
+影響が出てないみたいね…
+
+;;モノローグ
+# textflame 0 0
+@
+マミの魔法の異常は
+戦闘時には感じられなかった
+
+;;モノローグ
+@
+と、なるとなおさら
+服が変化してしまった
+原因が気になるマスター
+
+# voice 5014 "mami_0028"
+# face 3501411 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@マミ
+うーん
+戦えるなら一応大丈夫だと思うけど…
+
+;;モノローグ
+# textflame 0 0
+@
+マミは気にしなくても
+大丈夫だと話すが
+マスターはそうはいかないと言う
+
+# face 3501411 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+@マミ
+私はマスターの力になれれば
+今の私の役目を果たせるから…
+
+;;モノローグ
+# textflame 0 0
+@
+だが、もし突然元の世界に戻ったとき
+何か魔法に影響があった場合に
+困るのはマミだろう…
+
+;;モノローグ
+@
+それは避けたいと考えるマスター
+
+# face 3501411 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@マミ
+…もう、マスターは
+本当に優しいんだから
+
+# textboxarrow 0 2
+@マミ
+そんなに優しすぎると
+損な役回りばかり
+することになっちゃうわよ？
+
+;;モノローグ
+# textflame 0 0
+@
+でも、マミのことが心配だ
+とマスターは譲らない
+
+# face 3501411 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+@マミ
+マスターがそこまで言うなら…
+でも、原因に心当たりもないし
+解決できるかわからないわ…
+
+;;モノローグ
+# textflame 0 0
+@
+それでも、とマスターは
+何か手掛かりはあるはずと
+今まで行った場所を辿ろうと提案する
+
+# voice 5014 "mami_0032"
+# face 3501411 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@マミ
+そうね
+やるだけやってみましょう！
+
+;;演出：移動の暗転
+;;背景：平原など
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# move 3501411 3 0
+# face 3501411 "usual"
+# alpha 3501411 1 0
+# mask 3501411 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@マミ
+この場所で
+この格好になったのだけど…
+
+# textboxarrow 0 2
+@マミ
+ここに何かあるなら
+さすがに気付くはずよね
+
+# voice 5014 "mami_0003"
+# face 3501411 "normal"
+# textboxarrow 0 2
+@マミ
+うん、違うところに
+行ってみようかしら
+
+;;演出：暗転
+;;背景：森
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "forest"
+# move 3501411 3 0
+# face 3501411 "usual"
+# alpha 3501411 1 0.5
+# mask 3501411 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@マミ
+自然のエネルギーが
+魔法に何か影響したのかしら…
+
+;;演出：明転
+# se "SE_9091"
+# textwindow "close"
+# imagepos 2 0 0
+# imagealpha 2 1 0.5
+# waitandnext 0.5
+
+# waitandnext 0.2
+
+# textwindow "close"
+# imagealpha 2 0 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+試しに、とマミが魔法を使う
+だが、変化は起きなかった…
+
+# voice 5014 "mami_0028"
+# face 3501411 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@マミ
+魔法は関係ないのかしら…
+うーん、次に行ってみましょうか
+
+;;演出：移動の暗転
+;;背景：ケイオスリオン郊外
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "300_devil_daytime03"
+# move 3501411 3 0
+# face 3501411 "sad"
+# alpha 3501411 1 0
+# mask 3501411 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@マミ
+この国で何かおかしなことを
+された記憶はないけれど…
+
+# textboxarrow 0 2
+@マミ
+戦っている最中にも
+とくに変わったことはなかったし…
+
+;;演出：移動の暗転
+;;背景：街中（昼）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "004_outland"
+# move 3501411 3 0
+# face 3501411 "usual"
+# alpha 3501411 1 0
+# mask 3501411 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@マミ
+ここでも変わったことは
+なかったと思うわ
+
+;;モノローグ
+# textflame 0 0
+@
+成果の無さに
+少し落ち込むマスター
+
+# face 3501411 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@マミ
+…私、マスターと
+いろんなところに訪れていたのね
+
+;;モノローグ
+# textflame 0 0
+@
+マミはそう言うと
+マスターの顔を見て微笑む
+
+# voice 5014 "mami_0031"
+# face 3501411 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+@マミ
+関係ない話でごめんなさい
+でも、あなたと見てきた景色を
+改めて巡ってみて思ったの
+
+# textboxarrow 0 2
+@マミ
+ここに来てから
+たくさんの出来事があったわ
+
+# face 3501411 "surprise"
+# textboxarrow 0 2
+@マミ
+魔女だけでなく
+たくさんの敵と戦った…って、あら？
+
+;;演出：トレイセーマ兵in
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# textwindow "close"
+# alpha 3501411 0 0.5
+# move 938300011 1 0
+# alpha 938300011 1 0.5
+# mask 938300011 on
+# move 3830001 3 0
+# alpha 3830001 1 0.5
+# mask 3830001 on
+# move 938300012 5 0
+# alpha 938300012 1 0.5
+# mask 938300012 on
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+今までのことを振り返っていた
+マミの思い出に呼応するように
+現れる敵兵達
+
+# alpha 938300011 0 0.5
+# alpha 3830001 0 0.5
+# alpha 938300012 0 0.5
+# move 3501411 3 0
+# face 3501411 "surprise"
+# alpha 3501411 1 0.5
+# mask 3501411 off
+# textflame 1 1
+# textboxarrow 0 2
+@マミ
+あっ、このあたりは
+獣の変装してないと
+ダメなんだっけ…
+
+;;モノローグ
+# textflame 0 0
+@
+原因究明に集中していたせいか
+兵士に取り囲まれていることに
+マスターも気付かなかった
+
+;;モノローグ
+@
+敵はやる気だ
+迎撃するしかない
+
+# face 3501411 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@マミ
+もう、戦ったことまで
+再現してくれなくていいのに…っ！

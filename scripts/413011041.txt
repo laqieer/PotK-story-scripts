@@ -1,0 +1,483 @@
+;;モラベガマルチEP1（ベガルタ視点）
+;;//背景：研究所
+;;//警告アラーム
+;;//赤フラッシュ点滅
+# script "lisp"
+# background "red_corridor"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# sedelay "SE_0710" 0.5
+;;モラルタ
+# body 3104011
+# pos 3104011 4
+# scale 3104011 0.8 0
+# alpha 3104011 0 0
+# layer 3104011 2
+;;ベガルタ
+# body 3104111
+# pos 3104111 1
+# scale 3104111 0.8 0
+# alpha 3104111 0 0
+# layer 3104111 1
+# face 3104111 "angry"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# fadeout "red" 0.5
+# waitandnext 0.5
+
+# fadein "red" 0.5
+# waitandnext 0.5
+
+# waitandnext 0.3
+
+# fadeout "red" 0.5
+# waitandnext 0.5
+
+# fadein "red" 0.5
+# waitandnext 0.5
+
+# waitandnext 0.3
+
+# voice 1040 "morallta_battle_0002"
+# alpha 3104011 1 0.5
+# alpha 3104111 1 0.5
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+それそれ～♪
+こんな忌々しい実験施設なんて
+ぶっ壊しちゃえ～！
+
+# voice 1041 "beagallta_battle_0004"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+壊れろ…滅べっ…
+クソクソクソクソ
+クソ忌々しい設備だらけだ！
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@研究員
+ひぃぃぃっ…！
+逃げろ！早く隔壁を閉じてくれえ！
+
+# voice 1040 "morallta_0005"
+# face 3104011 "happy"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+待ってよ、オジサーン♪
+ぐっちゃぐちゃに引き裂いて
+あげるからさーっ
+
+;;//モラルタが研究員を追って走っていく
+# se "SE_5575"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# rightout 3104011 0.5
+# waitandnext 0.5
+
+# voice 1041 "beagallta_0022"
+# face 3104111 "surprise"
+# move 3104111 3 0.5
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+あ…待ってよ、モラ…
+えっ…なに、この壁…？
+
+# voice 1041 "beagallta_0016"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+ヤだ…モラと離ればなれになるのは
+嫌だよぉっ…！
+モラ！モラぁっ！
+
+# voice 1041 "beagallta_0018"
+# face 3104111 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+どうしよう…モラがいない…
+モラがいないと…
+ボクはなにもできないんだよぉっ…
+
+;;//ベガルタが倒れる
+# serif 0
+# textwindow "close"
+# alpha 3104111 0 0.5
+# waitandnext 0.3
+
+# se "SE_3001"
+# shake 0 0.5
+# waitandnext 1
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@研究員
+所長の狙い通りだ
+こいつら、別々にすると簡単に
+精神が崩れやがる
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@研究員
+よし！
+さっさと独房に放り込んで
+封鎖するぞ！
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@研究員
+こんな怪物、俺達の手に負えるわけが
+なかったんだ…野垂れ死ぬまで
+閉じ込めておくしかない…
+
+# voice 1041 "beagallta_0015"
+# alpha 3104111 1 0.5
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+モラ…モラ…お姉ちゃん…
+どこにいるの…？
+
+;;//背景：収容所
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# bgm "bgm004" 0
+# imageset 1 "bg_black"
+# imagealpha 1 0 0
+# imagelayer 1 2
+# imagescale 1 2 0
+# alpha 3104011 0 0
+# serif 0
+# textwindow "close"
+# background "006_jail"
+# waitandnext 0.6
+
+# imagepos 1 0 30
+# serif 1
+# textwindow "normal"
+# fadein "black" 1
+# textboxarrow 1 0
+@研究員
+もうお前は二度とここから出ることは
+ないんだよ！一人ぼっちで飢え死に
+しやがれ！
+
+;;//背景：黒
+# se "SE_0690"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# imagealpha 1 1 1
+# shake 0 0.5
+# alpha 3104111 0 0.5
+# waitandnext 1.5
+
+# voice 1041 "beagallta_0017"
+# serif 0
+# textwindow "normal"
+# layer 3104111 23
+# alpha 3104111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+あああ…なんで、こんなことに
+なっちゃったんだろう…？
+私のなにがいけなかったの…？
+
+# voice 1041 "beagallta_0015"
+# face 3104111 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+…そんなの決まってるよ
+ボク、モラの手を放したじゃないか
+ちゃんと握ってさえいれば――
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+あそこで離ればなれになることも
+なかったんだよね…全部、わたしの
+せいだよね…
+
+# voice 1041 "beagallta_0027"
+# face 3104111 "irregular"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+本当にあたしはどうしようもない
+クズだ…そもそも、あのときパパの
+手をなんで放したのよ…
+
+# voice 1041 "beagallta_0010"
+# face 3104111 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+あれのせいで俺の親父は殺され
+ちまったんだ…！まったく使えねえ
+グズだよ、俺はっ…
+
+# voice 1041 "beagallta_0016"
+# face 3104111 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+ううう…頭が、痛いっ…
+みんな一度に喋らないでよ…！
+そんなにボクを責めないでよ…！
+
+# voice 1041 "beagallta_0004"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+僕がゴミだってことくらい僕が一番
+よく分かってるよ！私は生きてる価値
+なんてないゴミクズだよっ…
+
+# voice 1041 "beagallta_0016"
+# face 3104111 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+それでも…モラがいたから生きて
+こられたのに…ワタシのせいでモラも
+いなくなっちゃった…
+
+# face 3104111 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+嫌だ嫌だ嫌だ嫌だ嫌だ嫌だ嫌だ嫌だ
+嫌だ嫌だ嫌だ嫌だ嫌だ嫌だ嫌だ嫌だ
+嫌だ嫌だ嫌だもう嫌だぁぁぁっ！！
+
+# voice 1041 "beagallta_0005"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+こんな世界に価値なんてない…
+こんなボクに価値なんてない…
+こんな世界は終わって良い…
+
+# voice 1041 "beagallta_0008"
+# face 3104111 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+モラのいない世界なんて闇に飲まれて
+滅びれば良いんだ…モラのいない私
+なんて死んで朽ち果てれば良いんだ…
+
+# voice 1041 "beagallta_0013"
+# face 3104111 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+もう終わりだ…
+なにもかも終わりなんだ…
+
+;;//背景：収容所
+# se "SE_0690"
+# face 3104011 "angry"
+# move 3104011 4 0
+# imagealpha 1 0 1
+# alpha 3104111 0 0.5
+# alpha 3104011 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+ベガ！ここにいるんだろっ？
+
+# voice 1041 "beagallta_0016"
+# face 3104111 "surprise"
+# layer 3104111 1
+# move 3104111 2 0
+# alpha 3104111 1 0.3
+# leftin 3104111 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+モラ…？
+モラなの…？
+うわああああああああん！
+
+# voice 1040 "morallta_0004"
+# face 3104111 "sad"
+# face 3104011 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+大丈夫、もう大丈夫だよ
+ベガ、一緒に外に出よう
+
+# voice 1041 "beagallta_0020"
+# face 3104111 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+本当に大丈夫…？
+もう、モラと
+引き離されたりしない？
+
+# face 3104011 "happy"
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+もちろん！
+私達はいつも一緒だよ！
+
+;;//モラルタとベガルタが走っていく
+;;――場面転換――
+# se "SE_5575"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# face 3104011 "normal"
+# face 3104111 "happy"
+# background "red_corridor"
+# waitandnext 0.6
+
+# voice 1041 "beagallta_0023"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+うわあ！みんな死んでる！！
+これ、全部モラがやったの！？
+
+# voice 1040 "morallta_0003"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+そうだよ！ついでだから、
+こいつらも飲み込んでいこっか？
+いろいろ知ってそうだし！
+
+# voice 1041 "beagallta_0005"
+# face 3104111 "shy"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+そうだね！そうしよう！
+ああ、やっぱりお姉ちゃんは
+すごいなあ…
+
+# voice 1040 "morallta_0020"
+# face 3104011 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+ここを登れば良さそうだね
+ベガ、行こう！
+
+# face 3104111 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+…………
+
+# voice 1041 "beagallta_0027"
+# face 3104111 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+本当に…
+私なんかでいいのかな…？
+
+# voice 1040 "morallta_0004"
+# face 3104011 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+大丈夫だよ、ベガ
+さあ、手を繋ごう！
+
+# voice 1041 "beagallta_0003"
+# face 3104111 "happy"
+# imageset 4 "c_3104011_3104111"
+# imagealpha 4 0 0
+# imagelayer 4 5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+お姉ちゃん…うん
+今度こそ、この手は放さない…
+私達はずっと一緒だからねっ
+
+;;一枚絵ボイス
+;;ベガ　「本当に…私なんかでいいのかな…？」
+;;ID:beagallta_event_0006
+# imagealpha 4 1 0
+# imagepos 4 0 0 
+# fadein "white" 3
+# voice 1041 "beagallta_event_0006"
+# textwindow "close"

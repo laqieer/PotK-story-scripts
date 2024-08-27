@@ -1,0 +1,423 @@
+;;■さくらコラボ_中旬分イベントシナリオ180128
+;;『;;』←これはコメントアウト記号です。冒頭にこの記号がアルものはゲーム内に表示されません
+;;『＠』表示される話者名となります
+;;-------------------
+;;■第８話「与一ちゃん…」
+;;□登場人物：ロンギヌス(コラボコス)、ナーゲル（コラボコス）
+;;　　　　　　与一(学園)→与一(コラボコス)、さくら(上旬コスチューム)
+;;□背景　　：(昼)※６話と同じ場面
+;;-------------------
+# script "lisp"
+# background "corridor_daytime"
+# bgmfile "bgm185" "BgmGakuen003" 0
+;;ナーゲル
+# body 100661
+# pos 100661 5
+# scale 100661 0.8 0
+# layer 100661 1
+# alpha 100661 0 0
+# face 100661 "sad"
+;;ロンギ
+# body 300191
+# pos 300191 1
+# scale 300191 0.8 0
+# layer 300191 2
+# alpha 300191 0 0
+# face 300191 "sad"
+;;さくら
+# body 143
+# pos 143 3
+# scale 143 0.8 0
+# layer 143 3
+# alpha 143 0 0
+# face 143 "sad"
+;;ケルベロス
+# body 144
+# pos 144 4
+# scale 144 0.8 0
+# layer 144 5
+# alpha 144 0 0
+;;ケルベロス
+# imageset 3 "e180201_1"
+# imagealpha 3 0 0
+# imagelayer 3 4
+# imagescale 3 0.64 0
+;;与一
+# body 400561
+# pos 400561 3
+# scale 400561 0.8 0
+# layer 400561 4
+# mask 400561 off
+# face 400561 "angry"
+;;さくらボイス用
+# body 602311
+# alpha 602311 0 0
+# imageset 4 "black"
+# imagealpha 4 0 0
+# imagelayer 4 5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400561
+@与一
+だから…
+わたしの邪魔をするなぁぁぁぁぁっ！！！
+
+;;SEゴゴゴゴ…と地鳴りの音
+;;稲妻の弾ける音とか入れたいですが、属性が変わったとユーザーが勘違いしそうなので、明らかにやばいと感じるようなSEがあれば入れてください
+# se "SE_9178"
+# imagepos 3 150 0
+# textflame 0 0
+@マスター
+よ、与一！
+一体、なにが起こってるんだ！？
+
+;;稲妻の弾ける音とか入れたいですが、属性が変わったとユーザーが勘違いしそうなので、明らかにやばいと感じるようなSEがあれば入れてください
+# se "SE_0638"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400561
+@与一
+与一はみんなの力になりたくて
+この力を手に入れたのに
+それなのに！なのに！
+
+# face 143 "surprise"
+# alpha 300191 1 0.5
+# alpha 143 1 0.5
+# alpha 100661 1 0.5
+# alpha 400561 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 143
+@さくら
+与一ちゃん！？
+
+# face 300191 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 300191
+# voice 3001 "ronginusu_0009"
+@ロンギヌス
+…とにかく、
+どうにかして止めないと！
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 100661
+@ナーゲルリング
+そうですね
+けど、どうやって…？
+
+# face 143 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 143
+@さくら
+…………
+
+;;他の立ちを消し、さくらの一人立ち絵だしに
+# serif 0
+# textwindow close
+# face 143 "angry"
+# alpha 300191 0 0.5
+# alpha 100661 0 0.5
+# scale 143 0.9 0.3
+# waitandnext 1.5
+;;さくら消し
+
+# serif 0
+# textwindow "normal"
+# face 100661 "surprise"
+# face 300191 "surprise"
+# alpha 143 0 0.5
+# alpha 100661 1 0.5
+# alpha 300191 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 100661
+@ナーゲルリング
+さ、さくらちゃん！
+なにを！？
+
+;;カーテンのトランディション
+;;トランディションあけ、与一の立ち絵だし
+;;与一の立ち絵の横にさくらの立ち絵表示
+;;↑さくらが一人、間を詰めたように見えるようにしてください
+# imagealpha 4 1 0
+# imagepos 4 0 30
+# imageleftin 4 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# se "SE_5241"
+# scale 143 0.8 0
+# alpha 100661 0 0
+# alpha 300191 0 0
+# alpha 400561 1 0
+# move 143 1 0
+# move 400561 4 0
+# mask 400561 on
+# waitandnext 0.6
+
+# alpha 143 1 0.5
+# move 143 2 0.5
+# imagealpha 4 0 0.5
+# imagerightout 4 0.5
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+@さくら
+与一ちゃんっ、やめて！
+…きゃっ！
+
+;;↓可能であれば
+;;与一ちゃんっ、やめて！
+;;（タップ待ち）…きゃっ！
+;;できなければ1行目と2行目を分割してください
+;;さくら立ちを消し、与一立ちを表示のまま中央へ
+;;↓飛ばされたさくらをマスターが受け止めます
+;;ザザザッと砂の上をスライディングするようなSE
+;;場面転換もせず、与一の立ち絵を表示しっぱなし
+;;画面のこちら側でマスターがさくらを受け止めた体
+;;さくらの立ち絵は表示しない
+# face 143 "sad"
+# serif 0
+# textwindow "close"
+# move 400561 3 0.2
+# waitandnext 0.1
+
+# se "SE_9039"
+# sedelay "SE_9146" 0.5
+# shake 0 0.5
+# fadein "white" 0.5
+# leftout 143 0.3
+# alpha 143 0 0.3
+# waitandnext 1.3
+
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@マスター
+さくらちゃん、大丈夫！？
+いた、た、た…
+
+# textflame 1 1
+# textboxarrow 0 0
+# chara 602311
+@さくら
+マスターさん！？
+
+;;ここで与一の立ち絵を消して、ナーゲルロンギの立ち絵を
+# face 300191 "normal"
+# se "SE_5575"
+# move 100661 4 0
+# move 300191 2 0
+# alpha 400561 0 0.5
+# alpha 100661 1 0.5
+# alpha 300191 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 300191
+@ロンギヌス
+さくらちゃん！
+マスター！
+
+# move 143 3 0
+# textflame 1 1
+# textboxarrow 0 3
+# chara 100661
+@ナーゲルリング
+大丈夫ですか！
+
+;;ナーゲルロンギの立ち絵の真ん中にさくらの立ち絵を表示
+;;二人に手を借りて、さくらが立ち上がった体
+# face 100661 "sad"
+# alpha 143 1 0.5
+# move 300191 1 0.5
+# move 100661 5 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 143
+@さくら
+うん、わたしは大丈夫
+でも…
+
+# textflame 0 0
+@マスター
+気にしなくていいよ
+僕も大丈夫だから
+
+# textflame 0 0
+@マスター
+それより…
+
+;;立ち絵全消し、与一の立ち絵表示
+;;ウエイト
+;;再度、さくらナーゲルロンギの立ち絵表示画面に
+;;知世から服を預かってきたので、ここまでいなかった形
+# serif 0
+# textwindow "close"
+# alpha 143 0 0.5
+# alpha 100661 0 0.5
+# alpha 300191 0 0.5
+# alpha 400561 1 0.5
+# mask 400561 off
+# waitandnext 1.5
+
+# face 300191 "sad"
+# alpha 143 1 0.5
+# alpha 100661 1 0.5
+# alpha 300191 1 0.5
+# alpha 400561 0 0.5
+# waitandnext 1
+
+# se "SE_5776"
+# imagealpha 3 1 0.3
+# imagemoveto 3 130 0 0.3
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+# voice 9966 "cckero_g_0022"
+@ケロちゃん
+なんや、なんや！
+ちょっとわいが目を離した隙に
+なにが起こったんや！？
+
+# textflame 0 0
+@マスター
+ケロちゃん、
+そういえば今まで…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+# voice 9966 "cckero_g_0010"
+@ケロちゃん
+そういえばって失礼なやっちゃな
+わいやて、暇なんとちゃうんやで！
+色々あったんや！
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+って、今はそんな場合やない
+与一のやつ、どないしたんや
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 143
+@さくら
+ケロちゃん、それが突然、
+与一ちゃんがあんな風になって…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 143
+# voice 60231 "ccsakura_g_0015"
+@さくら
+どうしようケロちゃん…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+落ち着け、さくら
+まずは話を…
+
+;;さくら、ケロちゃん立ち絵消し
+;;↓さくらがケロちゃんに事情を説明している間に、マスター達も話をしている体です
+# face 300191 "sad"
+# imagealpha 3 0 0.5
+# alpha 143 0 0.5
+# move 300191 2 0.5
+# move 100661 4 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 300191
+# voice 3001 "ronginusu_0015"
+@ロンギヌス
+マスター…どうしましょう
+どうやったら、与一ちゃんは…
+
+# textflame 0 0
+@マスター
+もし与一の身に起こったことが
+これまでの事件と同じだとすれば
+浄化できるかもしれない
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 100661
+@ナーゲルリング
+今やれることは
+それしかないですものね
+
+# textflame 0 0
+@マスター
+うん、なんとか、
+僕たちの力で止めるしかない…
+
+;;ケロちゃん
+# mask 143 off
+# alpha 144 1 0.5
+# alpha 143 1 0.5
+# alpha 300191 0 0.5
+# alpha 100661 0 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+# voice 9966 "cckero_g_0028"
+@ケロちゃん
+事情はわかったで
+今は、それを試してみるしかないな
+
+# face 143 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 143
+@さくら
+うん、
+お友達を放っておくなんてできないよ
+
+# textflame 0 0
+@マスター
+よし…じゃあ、行くよ！
+
+# se "SE_5205"
+# face 100661 "angry"
+# face 300191 "angry"
+# alpha 144 0 0.5
+# alpha 143 0 0.5
+# alpha 300191 1 0.5
+# alpha 100661 1 0.5
+# textflame 1 1
+# textboxarrow 0 0
+# chara 100661
+# voice 1006 "nageruring_0003"
+@二人
+はいっ！
+
+;;↑話者名数で入らない場合は次の形でお願いいたします。
+;;ナーゲルリング＆ロンギヌスの立ち絵を出して
+;;＠二人
+;;はいっ！
+;;---------
+;;バトル
+;;---------
+# alpha 143 1 0.5
+# alpha 300191 0 0.5
+# alpha 100661 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 143
+@さくら
+与一ちゃん
+今、助けるからね…！

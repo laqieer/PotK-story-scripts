@@ -1,0 +1,779 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;コマンドキラーズサイドストーリー前編シナリオ
+;;第3話　タイトル：欺く者
+;;3_9
+;;スクリプト最後の背景：村
+;;-----------------------------------------
+# script "lisp"
+# background "004_outland"
+# bgm "bgm002" 0
+;;-----------------------------------------
+;;ヒョウハ
+# body 231
+# pos 231 3
+# scale 231 0.8 0
+# layer 231 2
+# alpha 231 0 0
+# mask 231 off
+;;神令ヒョウハ（ボイス用）
+# body 5402011
+# alpha 5402011 0 0
+;;如意金箍棒
+# body 232
+# pos 232 3
+# scale 232 0.8 0
+# layer 232 2
+# alpha 232 0 0
+# mask 232 off
+;;如意金箍棒・神令・フリッグ（ボイス用）
+# body 5203111
+# alpha 5203111 0 0
+;;ナーゲルリング
+# body 100621
+# pos 100621 3
+# scale 100621 0.8 0
+# layer 100621 2
+# alpha 100621 0 0
+# mask 100621 off
+;;ミュルグレス
+# body 230
+# pos 230 3
+# scale 230 0.8 0
+# layer 230 2
+# alpha 230 0 0
+# mask 230 off
+;;ミュルグレス・神令・トール（ボイス用）
+# body 5104611
+# alpha 5104611 0 0
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;第3話　タイトル：欺く者
+;;//背景：村（壊れた町から通常の町に）
+# voice 540201 "hyoha_c_0021"
+# move 231 3 0
+# face 231 "surprise"
+# alpha 231 1 0
+# mask 231 off
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+ほんの数日で、見違えたなあ！
+
+# serif 1
+@祀官
+二つの町から賠償金が支払われて、
+教会だけでなく村全体の修復が
+進んだお陰です
+
+# serif 1
+@祀官
+じきにこの教会は建て直されます
+村の家々も全て
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 231 0 0.5
+# move 100621 3 0
+# face 100621 "usual"
+# alpha 100621 1 0.5
+# mask 100621 off
+# textboxarrow 0 2
+@ナーゲルリング
+数日前の惨状をご存知とのことです
+けれど、どちらから来られたの
+でしょう？
+
+# serif 1
+@祀官
+こら、ナーゲルリング
+旅人さんに立ち入ったことを
+聞くものではありませんよ
+
+# serif 1
+@祀官
+すみません
+今日、お会いしたばかりの方々に
+不躾で
+
+# alpha 100621 0 0.5
+# move 232 3 0
+# face 232 "usual"
+# alpha 232 1 0.5
+# mask 232 off
+# textboxarrow 0 2
+@如意金箍棒
+いえ、いいのよ
+
+# serif 1
+@子供達
+わーい！
+ビコウだ！
+ビコウだ！
+
+# textboxarrow 0 2
+@ビコウ
+ウキー…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 540201 "hyoha_c_0004"
+# alpha 232 0 0.5
+# move 231 3 0
+# face 231 "normal"
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+@ヒョウハ
+ははっ
+やっぱビコウは子供に大人気だなっ
+
+# alpha 231 0 0.5
+# move 100621 3 0
+# face 100621 "usual"
+# alpha 100621 1 0.5
+# mask 100621 off
+# textboxarrow 0 2
+@ナーゲルリング
+ビコウをご存知なんですね
+数日前、この村にやってきた
+お猿さんなんですよ
+
+# serif 1
+@祀官
+誰かに連れてこられたようにも
+思うのですが…
+気のせいですかな
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 540201 "hyoha_c_0046"
+# alpha 100621 0 0.5
+# move 231 2 0
+# face 231 "normal"
+# alpha 231 1 0.5
+# mask 231 on
+# textboxarrow 0 1
+# move 232 4 0
+# face 232 "usual"
+# alpha 232 1 0.5
+# mask 232 on
+@ヒョウハ
+そろそろ行こう、ニョイ子さん
+
+# voice 520311 "nyoikinkobou_c_0022"
+# face 232 "surprise"
+# textboxarrow 0 3
+@如意金箍棒
+そうね
+…あら、ビコウっ？
+そんなにしがみついて、どうしたの？
+
+# voice 1006 "nageruring_0004"
+# alpha 231 0 0.5
+# alpha 232 0 0.5
+# move 100621 3 0
+# face 100621 "usual"
+# alpha 100621 1 0.5
+# mask 100621 off
+# textboxarrow 0 2
+@ナーゲルリング
+それでは、さようなら
+お気をつけて
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 100621 0 0
+# move 231 2 0
+# face 231 "normal"
+# alpha 231 1 0
+# mask 231 on
+# move 230 4 0
+# face 230 "normal"
+# alpha 230 1 0
+# mask 230 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//# bgmfile "bgm429" "BgmIntegralNoahCommand" 0
+# bgm "bgm005" 0
+# textboxarrow 0 3
+# textwindow "normal"
+@ミュルグレス
+…………
+
+# textboxarrow 0 1
+@ヒョウハ
+よう、ミュルグレス！
+本当にまた会えるなんてなっ
+
+# voice 520311 "nyoikinkobou_c_0004"
+# alpha 231 0 0.5
+# move 232 2 0
+# face 232 "usual"
+# alpha 232 1 0.5
+# mask 232 on
+# textboxarrow 0 1
+@如意金箍棒
+この村にいれば、
+そのうち顔を出してくれると
+予想していたのよ
+
+# textboxarrow 0 3
+@ミュルグレス
+ミュルのこと、覚えてるんだね
+
+# voice 540201 "hyoha_c_0003"
+# alpha 232 0 0.5
+# move 231 2 0
+# face 231 "normal"
+# alpha 231 1 0.5
+# mask 231 on
+# textboxarrow 0 1
+@ヒョウハ
+理由は分かんないけど、
+同じ「呪い」を受けてる者同士には
+効かないみたいなんだ
+
+# voice 510461 "murgleys_c_0003"
+# textboxarrow 0 3
+@ミュルグレス
+ふ～ん
+で、ミュルに何か用？
+
+# face 231 "irregular"
+# textboxarrow 0 1
+@ヒョウハ
+…あんた、ナーゲルリングや
+教会の子供達と会ってたんだろ
+
+# textboxarrow 0 3
+@ミュルグレス
+何でそう思うの～？
+
+# textboxarrow 0 1
+@ヒョウハ
+子供達が遊んでたゲームだよ
+あれ、騙し合いの要素が強いよな
+
+# textboxarrow 0 1
+@ヒョウハ
+それに、誰が考えたのか
+誰も覚えてなかった
+なのに、いつの間にか流行ってた
+
+# textboxarrow 0 1
+@ヒョウハ
+二つの町で起きた騒動と、
+構造は同じだろ
+
+# textboxarrow 0 3
+@ミュルグレス
+へ～
+思ってたよりバカじゃないんだね
+
+# face 231 "normal"
+# textboxarrow 0 1
+@ヒョウハ
+まあな！
+あたしだってこのくらい考えられる
+んだよ！
+
+# textboxarrow 0 3
+@ミュルグレス
+褒めてないんだけど…
+
+# voice 540201 "hyoha_c_0002"
+# face 231 "irregular"
+# textboxarrow 0 1
+@ヒョウハ
+なあ、ミュルグレス…
+あれは復讐だったんだろ
+この村を攻めた二つの町への
+
+# textboxarrow 0 1
+@ヒョウハ
+それに、ナーゲルリングが言っていた
+異族を倒した人っていうのも
+あんたなんだろ？
+
+# textboxarrow 0 1
+@ヒョウハ
+ナーゲルリングも子供達も
+あんたのことを覚えてはいなかった
+だろうけど…
+
+# textboxarrow 0 1
+@ヒョウハ
+あんたにとっては…
+大切な存在で、あそこは大切な
+場所だったんだ
+
+# textboxarrow 0 1
+@ヒョウハ
+それを壊されたから…
+町に潜り込んで、ブラオとマロニの
+町が敵対するよう煽った
+
+# textboxarrow 0 1
+@ヒョウハ
+あんたの気持ちは分かるよ…
+でも、そういうのは――
+
+# bgm "stop"
+# voice 510461 "murgleys_c_0009"
+# face 230 "angry"
+# textboxarrow 0 3
+@ミュルグレス
+何それ？
+
+# voice 540201 "hyoha_c_0022"
+# face 231 "surprise"
+# textboxarrow 0 1
+@ヒョウハ
+へっ？
+
+# bgm "bgm004" 0
+# face 230 "normal"
+# textboxarrow 0 3
+@ミュルグレス
+ミュルは自分が贅沢するために
+二つの町を利用しただけだよ
+
+# textboxarrow 0 3
+@ミュルグレス
+言いなりにしてた商人の家で
+ミュルの部屋を見たんでしょ
+
+# textboxarrow 0 3
+@ミュルグレス
+毎日カステラを食べて好きなように
+過ごすために、二つの町が争うよう
+煽ってあげたんだ
+
+# textboxarrow 0 3
+@ミュルグレス
+あの町の連中は自分達の都合で
+村を襲ったんだよ
+だったら…
+
+# textboxarrow 0 3
+@ミュルグレス
+ミュルの都合で玩具にされても、
+文句は言えないよね
+
+# textboxarrow 0 3
+@ミュルグレス
+本当はどっちの町も滅ぶまで
+遊びたかったんだけど、
+邪魔が入っちゃったから――
+
+# voice 540201 "hyoha_c_0010"
+# face 231 "angry"
+# textboxarrow 0 1
+@ヒョウハ
+ふざけんな！
+
+# voice 510461 "murgleys_c_0024"
+# face 230 "surprise"
+# textboxarrow 0 3
+@ミュルグレス
+ひゃっ…
+
+# textboxarrow 0 1
+@ヒョウハ
+そういうのは…違うだろ！
+
+# face 230 "angry"
+# textboxarrow 0 3
+@ミュルグレス
+大きな声出さないでよ…
+そうやって威圧するのって、
+バカな大人がよくやる――
+
+# textboxarrow 0 1
+@ヒョウハ
+強がんなよっ
+そんな小さな体で…
+悪ぶらなくていいんだよ…！
+
+# textboxarrow 0 1
+@ヒョウハ
+あんた、教会を直すための金、
+商人に寄付させてただろ！
+あれが本心なんだろっ？
+
+# face 230 "sad"
+# textboxarrow 0 3
+@ミュルグレス
+…………
+
+# textboxarrow 0 1
+@ヒョウハ
+あんたのこと、あいつらは覚えて
+なくても…あんたが作ったゲームは
+残ってた！
+
+# textboxarrow 0 1
+@ヒョウハ
+きっと、あんたの思いだって
+あいつらの中に残ってる！
+
+# textboxarrow 0 1
+@ヒョウハ
+それでいいんだよ！
+素直になれよっ
+策士ぶるなよっ
+
+# voice 510461 "murgleys_c_0015"
+# textboxarrow 0 3
+@ミュルグレス
+…………ううっ
+
+# face 231 "irregular"
+# textboxarrow 0 1
+@ヒョウハ
+ミュルグレス…
+あんたは善い子なんだよ
+
+# voice 510461 "murgleys_c_0016"
+# face 230 "cry"
+# textboxarrow 0 3
+@ミュルグレス
+グスッ…
+うわあああああああああん…！
+
+# face 231 "surprise"
+# textboxarrow 0 1
+@ヒョウハ
+うおっ？
+ちょっ…そんな…
+泣かせるつもりじゃ…
+
+# textboxarrow 0 3
+@ミュルグレス
+うわあああああああん…！
+
+# voice 540201 "hyoha_c_0031"
+# face 231 "sad"
+# textboxarrow 0 1
+@ヒョウハ
+ごめん！
+ごめんよ！
+すみません！
+
+# textboxarrow 0 3
+@ミュルグレス
+わあああああああん…！
+
+# voice 520311 "nyoikinkobou_c_0005"
+# alpha 231 0 0.5
+# move 232 2 0
+# face 232 "usual"
+# alpha 232 1 0.5
+# mask 232 on
+# textboxarrow 0 1
+@如意金箍棒
+はいはい
+良い子ね、ミュルグレスちゃん
+
+;;//如意金箍棒がミュルグレスを抱きしめる
+# se "SE_11618"
+# bgm "stop"
+# textwindow "close"
+# move 232 3 0.2
+# waitandnext 0.2
+
+# textboxarrow 0 2
+# textwindow "normal"
+@如意金箍棒
+良い子だから、
+嘘泣きはやめようね
+
+# face 230 "angry"
+# textboxarrow 0 3
+@ミュルグレス
+…………
+
+# voice 540201 "hyoha_c_0022"
+# alpha 232 0 0.5
+# move 231 2 0
+# face 231 "surprise"
+# alpha 231 1 0.5
+# mask 231 on
+# textboxarrow 0 1
+@ヒョウハ
+へっ？
+
+# bgm "bgm002" 0
+# textboxarrow 0 3
+@ミュルグレス
+何だ…もうばれちゃったの
+つまんないな～
+
+# textboxarrow 0 1
+@ヒョウハ
+えっ？
+ちょっ…えっ？
+今のって…えっ？
+
+# face 230 "normal"
+# textboxarrow 0 3
+@ミュルグレス
+あんな見え見えの嘘泣きに騙される
+なんて、恥ずかしいね♪
+
+# textboxarrow 0 1
+@ヒョウハ
+う…嘘泣きぃっ…！？
+
+# textboxarrow 0 3
+@ミュルグレス
+あと～
+復讐っていうの、大外れだから
+確かにこの村で遊んでたけど
+
+# textboxarrow 0 3
+@ミュルグレス
+本当はナーゲルリングで遊ぶはずが
+もっと面白そうな人達が来たから
+そっちに狙いを変えただけなんだよね
+
+# voice 510461 "murgleys_c_0004"
+# textboxarrow 0 3
+@ミュルグレス
+ミュル、騙される大人を見るのが
+大好きなの♪
+
+# textboxarrow 0 1
+@ヒョウハ
+あ…あ…あんたっ…
+でも、教会に寄付を…！
+
+# textboxarrow 0 3
+@ミュルグレス
+ほら～♪
+たったそれだけで、ミュルのこと
+善い子だって思ってくれるでしょ
+
+# textboxarrow 0 3
+@ミュルグレス
+ヒョウハみたいなのをね、
+世間ではチョロいって言うんだよ
+
+# voice 510461 "murgleys_c_0005"
+# textboxarrow 0 3
+@ミュルグレス
+プーックスクス
+熱く語っちゃって
+とっても恥ずかしいね♪
+
+# face 231 "angry"
+# textboxarrow 0 1
+@ヒョウハ
+あんた…コラ、待てやーっ！
+
+# textboxarrow 0 3
+@ミュルグレス
+クスクス
+新しい玩具、見つけちゃったな～♪
+
+;;//二人が走り去る
+# se "SE_5575"
+# textwindow "close"
+# alpha 231 0 0.5
+# alpha 230 0 0.5
+# waitandnext 0.5
+
+# move 232 3 0
+# face 232 "sad"
+# alpha 232 1 0.5
+# mask 232 off
+# textboxarrow 0 2
+# textwindow "normal"
+@如意金箍棒
+あらあら…
+困った子達ね～
+
+;;//回想シーン
+;;//背景：村
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "004_outland"
+# alpha 232 0 0
+# move 100621 2 0
+# face 100621 "usual"
+# alpha 100621 1 0
+# mask 100621 on
+# move 230 4 0
+# face 230 "normal"
+# alpha 230 1 0
+# mask 230 on
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//ミュルグレス視点で
+# bgm "bgm003" 0
+# textboxarrow 0 1
+# textwindow "normal"
+@ナーゲルリング
+私はナーゲルリングです
+どうぞよろしくお願いしますね
+
+# textboxarrow 0 3
+@ミュルグレス
+毎日、子供達の面倒ばかりで
+大変だね～
+
+# textboxarrow 0 3
+@ミュルグレス
+アンタのマスターって、
+実はアンタを体のいい召使いだと
+思ってるのかもね
+
+# voice 1006 "nageruring_0005"
+# face 100621 "happy"
+# textboxarrow 0 1
+@ナーゲルリング
+あはは…
+そうかもしれませんね…
+
+# textboxarrow 0 3
+@ミュルグレス
+そんなのひどいよね～
+…裏切っちゃおうよ
+
+# textboxarrow 0 3
+@ミュルグレス
+裏切られる前に裏切る方が良いよ
+相手はアンタにひどいことしてるん
+だから
+
+# face 100621 "usual"
+# textboxarrow 0 1
+@ナーゲルリング
+そうですね…
+でも、それも当然かなーって
+思うんです
+
+# voice 510461 "murgleys_c_0009"
+# face 230 "angry"
+# textboxarrow 0 3
+@ミュルグレス
+は？
+
+# textboxarrow 0 1
+@ナーゲルリング
+私は…本当は誰にも心を開いていない
+んだろうなって、思うんです
+
+# textboxarrow 0 1
+@ナーゲルリング
+そういうキラーズだからかも
+しれませんけど、いつか裏切られるの
+かもって…いつも思ってます
+
+# textboxarrow 0 1
+@ナーゲルリング
+だから…それが現実になったと
+しても仕方ないんです…
+
+# voice 1006 "nageruring_0031"
+# textboxarrow 0 1
+@ナーゲルリング
+あ！ごめんなさい
+今日会ったばかりの方に
+こんな話をしてしまって…
+
+# face 230 "normal"
+# textboxarrow 0 3
+@ミュルグレス
+ううん！
+ナーゲルリングは悪くないよ～
+悪いのはマスターだよ、きっと
+
+# voice 1006 "nageruring_0030"
+# textboxarrow 0 1
+@ナーゲルリング
+ありがとうございます
+…何だか、あなたとは初めて会った
+気がしません
+
+# textboxarrow 0 1
+@ナーゲルリング
+こんなこと言うのは失礼かも
+しれませんけど、あなたと私が
+似てるからかもしれませんね
+
+# textboxarrow 0 1
+@ナーゲルリング
+お互い、本当は心を開いていない
+でも、そういう関係が
+私は心地いいんです
+
+# textboxarrow 0 1
+@ナーゲルリング
+あの…お気を悪くしたのなら、
+ごめんなさい
+
+# textboxarrow 0 1
+@ナーゲルリング
+何だかあなたは話しやすくて…
+背格好が近いからですかね？
+
+# voice 1006 "nageruring_0004"
+# face 100621 "happy"
+# textboxarrow 0 1
+@ナーゲルリング
+もし明日もお会いできるなら
+またお話ししたいです
+
+;;//回想終了
+;;//背景：村
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "004_outland"
+# alpha 100621 0 0
+# alpha 230 0 0
+# move 230 3 0
+# face 230 "normal"
+# alpha 230 1 0
+# mask 230 off
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ミュルグレス
+…………
+
+# face 230 "angry"
+# textboxarrow 0 2
+@ミュルグレス
+ほんと、バカみたい…

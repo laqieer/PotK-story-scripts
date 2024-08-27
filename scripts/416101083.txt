@@ -1,0 +1,549 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;インテグラルキラーズサイドストーリー
+;;第1話―８　タイトル：平和への決意
+;;1_8_3
+;;スクリプト最後の背景：平原
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgm "bgm021" 0
+;;-----------------------------------------
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 2
+# alpha 24 0 0
+# mask 24 off
+;;ティルフィング（イミテーション）
+# entry 9241 24
+# pos 9241 3
+# scale 9241 0.8 0
+# layer 9241 2
+# alpha 9241 0 0
+# mask 9241 off
+# brightness 9241 0.8 0
+;;ロンギヌス
+# body 300111
+# pos 300111 3
+# scale 300111 0.8 0
+# layer 300111 2
+# alpha 300111 0 0
+# mask 300111 off
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+# move 24 2 0
+# face 24 "angry"
+# alpha 24 1 0
+# mask 24 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 9241 4 0
+# face 9241 "angry"
+# alpha 9241 1 0
+# mask 9241 on
+@ティルフィング
+やああああああああああ！
+
+;;ティルフィング（別）
+# textboxarrow 0 3
+@ティルフィング
+はあああああああああああ！
+
+;;//ティルフィングが相手を斬る
+# bgm "stop"
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# voice 1014 "tyrufing_movie_0023"
+# textboxarrow 0 1
+@ティルフィング
+アナタの意思は私が担う
+汚れなき声を心に刻め
+
+;;//ティルフィング（別）が倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 9241 0 0.5
+# waitandnext 0.5
+
+# voice 1014 "tyrufing_movie_0025"
+# textboxarrow 0 1
+# textwindow "normal"
+@ティルフィング
+我が同胞の叫び
+この魂の礎とならん
+
+;;//ティルフィング（別）光演出
+# se "SE_9148"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# move 9241 4 0
+# face 9241 "normal"
+# alpha 9241 1 0
+# mask 9241 on
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 1
+# textwindow "normal"
+@ティルフィング
+…これで、良かったんですよね？
+
+;;ティルフィング（別）
+# face 24 "normal"
+# textboxarrow 0 3
+@ティルフィング
+ええ、ありがとう…
+後は…お願いします…
+どうか…彼女を――
+
+;;//ティルフィング（別）が消える
+# se "SE_9103"
+# textwindow "close"
+# alpha 9241 0 1
+# waitandnext 1
+
+# move 24 3 0.5
+# mask 24 off
+# waitandnext 0.5
+
+# face 24 "sad"
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+…………
+
+# textboxarrow 0 2
+@ティルフィング
+…マスター
+この墓地にあるお墓をよく見て下さい
+これらは全て…
+
+;;//回想シーン
+;;//背景：平原
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "plain"
+# alpha 24 0 0
+# move 300111 3 0
+# face 300111 "sad"
+# alpha 300111 1 0
+# mask 300111 off
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# voice 3001 "ronginusu_0019"
+# bgm "bgm004" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@ロンギヌス
+ううっ…
+どうして…！
+どうしてですか…！！
+
+# textboxarrow 0 2
+@ロンギヌス
+もう死にたいのにっ…
+死ぬことすら許されないなんて…
+
+;;//ティルフィング（別）がやって来る
+;;ティルフィング（別）
+# se "SE_0719"
+# move 9241 2 0
+# face 9241 "angry"
+# alpha 9241 1 0.5
+# mask 9241 on
+# textboxarrow 0 1
+# move 300111 4 0.5
+# mask 300111 on
+@ティルフィング
+アナタ、何をしているの！？
+…自殺しようとしても無駄よ
+それはキルオーダーで禁じられている
+
+# textboxarrow 0 3
+@ロンギヌス
+そんなっ…
+あんまりです…
+
+;;ティルフィング（別）
+# face 9241 "surprise"
+# textboxarrow 0 1
+@ティルフィング
+一体、何があったんですか？
+…この墓地、墓碑銘が全て同じ
+「ロンギヌス」？
+
+;;ティルフィング（別）
+# face 9241 "angry"
+# textboxarrow 0 1
+@ティルフィング
+アナタ、淘汰した者達のお墓を
+作っているの？
+それは無意味よ
+
+;;ティルフィング（別）
+# textboxarrow 0 1
+@ティルフィング
+アナタも感じているはず
+淘汰した「私」達とは一つになって
+いくんです
+
+# voice 3001 "ronginusu_0009"
+# face 300111 "normal"
+# textboxarrow 0 3
+@ロンギヌス
+…分かっています
+でもっ…私は淘汰なんてしたく
+ありませんでしたっ
+
+# textboxarrow 0 3
+@ロンギヌス
+それなのに…逃げても逃げても追って
+きて…私…私はっ…
+
+# face 300111 "angry"
+# textboxarrow 0 3
+@ロンギヌス
+淘汰されたくなくて…！
+この手で何人もっ…
+
+# textboxarrow 0 3
+@ロンギヌス
+私は聖槍なんかじゃありません
+同胞の血にまみれて生き存えようと
+する罪人です…
+
+# voice 3001 "ronginusu_0036"
+# textboxarrow 0 3
+@ロンギヌス
+お願いします…
+私を殺して下さい
+今すぐ罰して下さい！
+
+# textboxarrow 0 3
+@ロンギヌス
+戦いは嫌いです
+淘汰も嫌いです
+そして何より…
+
+# textboxarrow 0 3
+@ロンギヌス
+その宿命に抗えないで、戦ってしまう
+私自身が大嫌いです…！
+
+# voice 1014 "tyrufing_0049"
+;;ティルフィング（別）
+# face 9241 "sad"
+# textboxarrow 0 1
+@ティルフィング
+…アナタは優しすぎるの
+そんなアナタにキル姫の宿命は
+辛すぎるでしょう
+
+;;ティルフィング（別）
+# face 9241 "normal"
+# textboxarrow 0 1
+@ティルフィング
+でも、アナタは罰を受けるような
+ことは何もしていません
+
+;;ティルフィング（別）
+# textboxarrow 0 1
+@ティルフィング
+同胞の意思を背負うのは辛いかも
+しれませんけれど、どうか受け入れて
+下さい
+
+;;ティルフィング（別）
+# textboxarrow 0 1
+@ティルフィング
+そして背負ったものの重みに
+耐えられるようになったら、
+また歩き出しましょう
+
+;;ティルフィング（別）
+# textboxarrow 0 1
+@ティルフィング
+そのときまで、私が側にいます
+そのくらいなら、できますから
+
+# face 300111 "sad"
+# textboxarrow 0 3
+@ロンギヌス
+ティルフィング…さん…
+
+;;//回想終了
+;;//背景：平原
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "plain"
+# alpha 9241 0 0
+# alpha 300111 0 0
+# move 24 3 0
+# face 24 "sad"
+# alpha 24 1 0
+# mask 24 off
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+私の中に「私」の記憶が流れ込んで
+きました…
+
+# textboxarrow 0 2
+@ティルフィング
+「私」は…淘汰されようとしていたの
+かもしれません
+ロンギヌスのために
+
+# face 24 "normal"
+# textboxarrow 0 2
+@ティルフィング
+すみません…
+もう行きましょう
+
+# move 24 2 0.5
+# mask 24 on
+# move 300111 4 0
+# face 300111 "angry"
+# alpha 300111 1 0.5
+# mask 300111 on
+# textboxarrow 0 3
+@ロンギヌス
+待って下さい！
+ここを通すわけにはいきませんっ
+
+# face 24 "surprise"
+# textboxarrow 0 1
+@ティルフィング
+ロンギヌス…！
+「私」はアナタのことを――
+
+# textboxarrow 0 3
+@ロンギヌス
+静かにして下さい！
+お尋ねしたいことがあります…
+
+# textboxarrow 0 3
+@ロンギヌス
+それに答えてくれたなら、
+どこへ行っていただいても
+構いませんので
+
+# face 24 "normal"
+# textboxarrow 0 1
+@ティルフィング
+私に答えられることなら
+何でもお答えします
+
+# textboxarrow 0 3
+@ロンギヌス
+あなたは…オリジナルになって
+何をするつもりなんですか？
+
+# textboxarrow 0 3
+@ロンギヌス
+平和な世界を願っている…
+そう言ってましたよね
+
+# textboxarrow 0 3
+@ロンギヌス
+それとオリジナルになることに
+どんな関係があるんですか
+答えて下さいっ
+
+# textboxarrow 0 1
+@ティルフィング
+私は、オリジナルになれば、
+お母さん…平和の女神エイレーネの
+声を聞くことができるのではないか
+
+# textboxarrow 0 1
+@ティルフィング
+ひょっとしたら封印を解いて
+目覚めさせることができるのでは
+ないかと考えています
+
+# textboxarrow 0 3
+@ロンギヌス
+平和の女神…
+
+# textboxarrow 0 1
+@ティルフィング
+神魔大戦を終結させたのも
+エイレーネだと聞いています
+
+# textboxarrow 0 1
+@ティルフィング
+地上世界で…天上世界で…
+続いている戦いを止めるため
+私はオリジナルになります
+
+# face 300111 "sad"
+# textboxarrow 0 3
+@ロンギヌス
+そう…ですか…
+
+# textboxarrow 0 3
+@ロンギヌス
+ありがとうございました…
+どうぞ、通って下さい
+
+# textboxarrow 0 3
+@ロンギヌス
+無理やり質問して、
+すみませんでした
+では、私はこれで…
+
+# face 24 "surprise"
+# textboxarrow 0 1
+@ティルフィング
+あっ…
+
+;;//選択肢
+;;A一緒に行かないか？
+;;B側で見ていて欲しい
+# select "一緒に行かないか？" "select_label_01" "側で見ていて欲しい" "select_label_02"
+あっ…
+
+;;A
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 300111 "surprise"
+# textboxarrow 0 3
+@ロンギヌス
+えっ…？
+私も、ですか？
+
+;;B
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 300111 "surprise"
+# textboxarrow 0 3
+@ロンギヌス
+側で…
+あなた達のことを…？
+
+# voice 1014 "tyrufing_0043"
+# label "select_label_end"
+# face 24 "normal"
+# textboxarrow 0 1
+@ティルフィング
+そうです、ロンギヌス！
+私達と一緒に旅をして、
+その結末を見届けて下さい
+
+# textboxarrow 0 1
+@ティルフィング
+「私」も、アナタがここから旅立つ
+ことを願っていましたよ
+
+# face 300111 "sad"
+# textboxarrow 0 3
+@ロンギヌス
+ティルさんが…
+
+;;//回想シーン
+;;//背景：教会
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "006_church"
+# alpha 24 0 0
+# alpha 300111 0 0
+# move 9241 3 0
+# face 9241 "normal"
+# alpha 9241 1 0
+# mask 9241 off
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+;;ティルフィング（別）
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+アナタもここから旅立つときが
+来たんです
+
+;;//回想終了
+;;//背景：平原
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "plain"
+# alpha 9241 0 0
+# move 24 2 0
+# face 24 "normal"
+# alpha 24 1 0
+# mask 24 on
+# move 300111 4 0
+# face 300111 "sad"
+# alpha 300111 1 0
+# mask 300111 on
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# voice 3001 "ronginusu_0015"
+# textboxarrow 0 3
+# textwindow "normal"
+@ロンギヌス
+う…ううっ…
+
+# face 24 "sad"
+# textboxarrow 0 1
+@ティルフィング
+ロンギヌス…
+
+# face 300111 "angry"
+# textboxarrow 0 3
+@ロンギヌス
+もう…祈るだけではダメなんですね
+自分の意思で…動かないと
+
+# voice 3001 "ronginusu_0036"
+# textboxarrow 0 3
+@ロンギヌス
+お願いします
+私も…連れていって下さい

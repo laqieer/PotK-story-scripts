@@ -1,0 +1,748 @@
+;;-----------------------------------------
+;;■□■新・海上編9月月初シナリオ　FB修正版■□■
+;;《第五回》
+;;【OP】
+;;【第1幕】厳格のエンシェント
+;;スクリプト最後の背景：ビーチ
+;;-----------------------------------------
+# script "lisp"
+# fadein "white" 1
+# background "mov2_1"
+# bgmfile "bgm224_story" "BgmSeaEvent" 0
+;;島背景（一枚絵）
+# imageset 1 "e170701_map"
+# imagealpha 1 0 0
+;;op演出用一枚絵
+# imageset 2 "mov2_2"
+# imagescale 2 1.15 0
+# imagealpha 2 0 0
+;;op演出用一枚絵
+# imageset 3 "bg_white"
+# imagealpha 3 1 0
+# imagescale 3 2.5 0
+;;カーテンフェード
+# imageset 4 "black"
+# imagescale 4 1.2 0
+# imagealpha 4 0 0
+# imagelayer 4 5
+;;
+;;水着グリード（ティルフィング）
+# body 2101421
+# pos 2101421 3
+# scale 2101421 0.8 0
+# layer 2101421 3
+# alpha 2101421 0 0
+# mask 2101421 on
+# face 2101421 "normal"
+;;ラース（マサムネ）
+# body 2100121
+# pos 2100121 3
+# scale 2100121 0.8 0
+# layer 2100121 2
+# alpha 2100121 0 0
+# mask 2100121 on
+# face 2100121 "normal"
+;;フライシュッツ（水着）
+# body 2502711
+# pos 2502711 4
+# scale 2502711 0.8 0
+# layer 2502711 1
+# mask 2502711 on
+# alpha 2502711 0 0
+# face 2502711 "normal"
+;;スイハ
+# body 2401711
+# pos 2401711 3
+# scale 2401711 0.8 0
+# layer 2401711 2
+# alpha 2401711 0 0
+# mask 2401711 on
+# face 2401711 "normal"
+;;水着ラスト（アルテミス）
+# body 2400121
+# pos 2400121 3
+# scale 2400121 0.8 0
+# layer 2400121 2
+# alpha 2400121 0 0
+# mask 2400121 on
+# face 2400121 "normal"
+;;ネス
+# body 2602011
+# pos 2602011 3
+# scale 2602011 0.8 0
+# layer 2602011 2
+# alpha 2602011 0 0
+# mask 2602011 on
+# face 2602011 "normal"
+;;エルキュール
+# body 2202511
+# pos 2202511 3
+# scale 2202511 0.8 0
+# layer 2202511 2
+# alpha 2202511 0 0
+# mask 2202511 on
+# face 2202511 "normal"
+;;--------------------------------------
+# textwindow "close"
+# waitandnext 0.1
+
+;;【OP】
+;;背景：島全景
+# imagealpha 2 1 0.5
+# imagepos 2 0 -590
+# waitandnext 0.5
+
+# se "SE_0050"
+# imagealpha 3 0 0
+# imagemoveto 2 0 -50 0.8
+# waitandnext 0.8
+
+# imagealpha 2 0 0.8
+# imagealpha 1 1 0.3
+# imagepos 1 0 15
+# textwindow "nomal"
+# textflame 0 0
+;;ナレーション
+@
+青い海に浮かぶ常夏の島
+ラグーナ島―
+
+@
+ここではキラープリンセス達と
+マスターが平和な日々を
+過ごしていた
+
+@
+しかし、神々の命で島の制圧を目論む
+ブラックキラーズが次々と襲来し、
+マスターを我が物にしようと先を争う
+
+@
+一方、神々による封印が解かれた
+エンシェントキラーズは
+マスターと島を守るべく奮戦した
+
+@
+ところが、島の結界を安定させるには
+マスターの犠牲が必要と判明し、
+キル姫達の間に動揺が広がる―
+
+@
+それにより、二組のキル姫達は―
+
+@
+ブラックキラーズ全員と、
+フライシュッツ、スイハの
+結晶化反対派と
+
+@
+ラグナロク、ダモクレスの
+結晶化賛成派
+
+@
+そして、ミネルヴァの慎重派へと
+所属関係なく割れてしまった
+
+@
+そんな中、マスターは
+反対派のグリード達に強引に
+確保され、ジャングルを移動していた
+
+# textwindow "close"
+# fadeout "black" 1.5
+# waitandnext 2
+
+# imagealpha 1 0 0
+# imagealpha 2 0 0
+# imagealpha 3 0 0
+;;背景：ジャングル
+# background "sea_jungle_day"
+# move 2100121 2 0
+# face 2100121 "normal"
+# alpha 2100121 1 0
+# move 2101421 4 0
+# face 2101421 "usual"
+# alpha 2101421 1 0
+# waitandnext 0.1
+
+# fadein "black" 2
+# waitandnext 2
+
+;;【第1幕】厳格のエンシェント
+;;
+;;背景：ジャングル
+# bgmfile "bgm166" "BgmPJZero001" 0
+# voice 10147 "tyrufing_k_0013"
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 3
+@グリード
+ここまでくればいいでしょう
+みんな、適当に休んでください
+
+# face 2100121 "angry"
+# textboxarrow 0 1
+@ラース
+たとえ追っ手が来ても
+拙者が追い払う！
+安心して休むといい
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：ビーチ
+# background "sea_beach_day"
+# alpha 2100121 0 0
+# alpha 2101421 0 0
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "normal"
+;;ナレーション
+@
+マスターはグリードに抱えられ、
+ジャングルからビーチまで
+あっという間に運ばれてしまった
+
+@
+残してきたエンシェントを心配して
+遺跡の方を気にかけるマスターに、
+グリードが話しかける
+
+# voice 10147 "tyrufing_k_0007"
+# move 2101421 3 0
+# face 2101421 "usual"
+# alpha 2101421 1 0.5
+# mask 2101421 off
+# textflame 1 1
+# textboxarrow 0 2
+@グリード
+やはり彼女達も来ましたか…
+完全に信用するのは難しいですが…
+戦力として役立ってもらいましょう
+
+# alpha 2101421 0 0.5
+# move 2502711 2 0
+# face 2502711 "normal"
+# alpha 2502711 1 0.5
+# move 2401711 4 0
+# face 2401711 "usual"
+# alpha 2401711 1 0.5
+# textflame 0 0
+@
+グリードの視線の先を追うと、
+森からフライシュッツとスイハが
+現れた
+
+# voice 5027 "freischotz_0001"
+# textflame 1 1
+# textboxarrow 0 1
+@フライシュッツ
+マスターくん…
+おねーちゃんも、
+一緒にいていい？
+
+# textflame 0 0
+@
+マスターはもちろんだと返事をし、
+スイハにも心配をかけたことを謝る
+
+# textflame 1 1
+# textboxarrow 0 3
+@スイハ
+いえ…
+私のことはいいのですが、
+これからどうしましょうか？
+
+# textflame 0 0
+@
+やっぱりラグナロク達とも
+話し合って、それから考えよう、と
+マスターは話す
+
+# voice 5027 "freischotz_0002"
+# face 2502711 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@フライシュッツ
+おねーちゃんは、
+みんなで仲良くできたらいいなって
+思ってるよ〜！
+
+# voice 4017 "suiha_0003"
+# face 2401711 "smile"
+# textboxarrow 0 3
+@スイハ
+そうですね…
+本当にそうなるよう、
+“勇気”を持って努力しましょう
+
+# textflame 0 0
+@
+マスターもフライシュッツ達に
+同感だが、ブラックキラーズには
+冷たく否定されてしまう
+
+# voice 10016 "masamune_k_0010"
+# alpha 2502711 0 0.5
+# alpha 2401711 0 0.5
+# move 2100121 1 0
+# face 2100121 "angry"
+# alpha 2100121 1 0.5
+# mask 2100121 on
+# move 2101421 3 0
+# face 2101421 "usual"
+# alpha 2101421 1 0.5
+# mask 2101421 on
+# move 2400121 5 0
+# face 2400121 "normal"
+# alpha 2400121 1 0.5
+# mask 2400121 on
+# textflame 1 1
+# textboxarrow 0 1
+@ラース
+何を生ぬるいことを…！
+そんなことでは
+何も守れはせぬぞ！
+
+# voice 10147 "tyrufing_k_0013"
+# textboxarrow 0 2
+@グリード
+私達には無理な話ですね…
+私が司るのは“強欲”ですから
+もちろん、マスターも…
+
+# voice 40015 "arutemisu_k_0026"
+# face 2400121 "angry"
+# textboxarrow 0 3
+@ラスト
+待ってください！
+マスターを手に入れるのは、
+グリードとは決まっていません、
+
+# textflame 0 0
+@
+彼女たちの言い争いも見慣れた
+光景なのだが、マスターはいつも
+ヒヤヒヤしてしまうのだった
+
+;;場面転換
+;;
+;;背景：密林
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# alpha 2100121 0 0
+# alpha 2101421 0 0
+# alpha 2400121 0 0
+# background "sea_jungle_day"
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "normal"
+# bgmfile "bgm230" "BgmSeaEvent" 0
+;;ナレーション
+@
+その頃、ジャングルでは
+新たなエンシェントキラーズが
+封印から目覚めようとしていた
+
+;;画面白フラッシュ
+;;
+;;ネス復活
+# se "SE_5548"
+# fadeout "white" 0.4
+# textwindow "close"
+# waitandnext 0.6
+
+# face 2602011 "usual"
+# alpha 2602011 1 0
+# mask 2602011 off
+# waitandnext 0.1
+
+# fadein "white" 0.4
+# waitandnext 0.6
+
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 2
+@ネス
+ふぅ…
+封印が解かれましたか…
+
+# voice 6020 "ness_0028"
+# face 2602011 "sad"
+@ネス
+ですが、この気配は…？
+バイブスを持つ者と一緒なのは
+フライシュッツとスイハだけ…？
+
+;;画面白フラッシュ
+;;エルキュール復活
+# se "SE_5548"
+# fadeout "white" 0.4
+# textwindow "close"
+# waitandnext 0.6
+
+# alpha 2602011 0 0
+# face 2202511 "normal"
+# alpha 2202511 1 0
+# mask 2202511 off
+# waitandnext 0.1
+
+# fadein "white" 0.4
+# waitandnext 0.6
+
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 2
+@エルキュール
+んー！
+やっと出られました！
+さぁ、頑張りますよっ！
+
+# voice 2025 "hercule_0004"
+# face 2202511 "smile"
+@エルキュール
+わぁ！
+ネスも一緒だったのですね！
+
+# voice 6020 "ness_0027"
+# move 2202511 4 0.5
+# mask 2202511 on
+# move 2602011 2 0
+# face 2602011 "usual"
+# alpha 2602011 1 0.5
+# mask 2602011 on
+# textboxarrow 0 1
+@ネス
+エルキュール…
+先に目覚めたエンシェント達は
+別行動しているようなのです
+
+# voice 2025 "hercule_0022"
+# face 2202511 "sad"
+# textboxarrow 0 3
+@エルキュール
+えっ！？
+あ、本当ですね…
+
+# voice 6020 "ness_0028"
+# face 2602011 "sad"
+# textboxarrow 0 1
+@ネス
+何かあったのかもしれません
+
+# face 2602011 "usual"
+@ネス
+私は、バイブスを持つ者と同行する
+フライシュッツ達に会いに行こうかと
+
+# voice 2025 "hercule_0028"
+# face 2202511 "normal"
+# textboxarrow 0 3
+@エルキュール
+それでは、
+私は島の調査をしながら、
+ラグナロク達と合流しますね！
+
+# textboxarrow 0 1
+@ネス
+では、そちらはお任せします
+道中、気をつけてくださいね
+
+# voice 2025 "hercule_0003"
+# face 2202511 "smile"
+# textboxarrow 0 3
+@エルキュール
+はい！
+ネスも気をつけて！
+
+# textflame 0 0
+@
+こうして、
+ネスはフライシュッツのもとへ、
+エルキュールは島の調査へと出発した
+
+;;場面転換
+;;
+;;背景：ビーチ
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# alpha 2202511 0 0
+# move 2602011 3 0
+# face 2602011 "usual"
+# alpha 2602011 1 0
+# mask 2602011 off
+# background "sea_beach_day"
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "normal"
+# bgmfile "bgm227" "BgmSeaEvent" 0
+# voice 6020 "ness_0039"
+# textboxarrow 0 2
+@ネス
+あれが
+バイブスを持つ者ですか…
+
+# textflame 0 0
+;;ナレーション
+@
+エルキュールと別れて間もなく、
+ネスはマスター達を発見していた
+
+# voice 6020 "ness_0028"
+# face 2602011 "normal"
+# textflame 1 1
+@ネス
+一緒にいるのは誰なのでしょう？
+あまり穏やかな様子ではないですね…
+
+# textflame 0 0
+@
+言い争うブラック達に気後れし、
+声をかける機会を
+逃したネスだったが…
+
+# textwindow "close"
+# imagepos 4 0 30
+# imagealpha 4 1 0
+# imageleftin 4 0.6
+# waitandnext 0.6
+
+# alpha 2602011 0 0
+# move 2502711 3 0
+# face 2502711 "happy"
+# alpha 2502711 1 0
+# mask 2502711 off
+# imagealpha 4 0 0.5
+# imagerightout 4 0.6
+# waitandnext 0.6
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5027 "freischotz_0022"
+@フライシュッツ
+ん？
+この気配は…
+やっぱり、ネスちゃんだ〜！
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# move 2602011 2 0
+# face 2602011 "usual"
+# alpha 2602011 1 0
+# mask 2602011 on
+# move 2502711 4 0
+# face 2502711 "happy"
+# alpha 2502711 1 0
+# mask 2502711 on
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 2
+;;抱きつき効果音
+# se "SE_0646"
+# voice 5027 "freischotz_0005"
+# textboxarrow 0 3
+@フライシュッツ
+ネスちゃん、
+来てくれてありがとう〜！
+
+# textflame 0 0
+@
+彼女の存在に気付いた
+フライシュッツによって
+抱きしめられてしまった
+
+# textflame 1 1
+# textboxarrow 0 1
+@ネス
+遅くなって申し訳ありません…
+フライシュッツは、
+相変わらず元気そうですね
+
+# voice 4017 "suiha_0027"
+# alpha 2502711 0 0.5
+# move 2401711 4 0
+# face 2401711 "usual"
+# alpha 2401711 1 0.5
+# mask 2401711 on
+# textboxarrow 0 3
+@スイハ
+それが、
+そうでもないんです…
+実は…
+
+;;演出：暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "normal"
+;;背景：ビーチ
+;;ナレーション
+@
+スイハは、これまでのことを
+すべてネスに説明し―
+
+@
+フライシュッツにも
+試練があったことを語る
+
+# voice 6020 "ness_0027"
+# textflame 1 1
+# textboxarrow 0 1
+@ネス
+そうですか、
+そんなことが…
+
+# voice 5027 "freischotz_0008"
+# alpha 2401711 0 0.5
+# face 2502711 "normal"
+# alpha 2502711 1 0.5
+# textboxarrow 0 3
+@フライシュッツ
+おねーちゃんは大丈夫だよ〜！
+心配しないで！ね？
+
+# voice 6020 "ness_0031"
+# textboxarrow 0 1
+@ネス
+フライシュッツ、すみませんでした
+そして、あなたがマスターですね
+ネスと申します
+
+# textflame 0 0
+@
+ネスと名乗る少女に、
+マスターもぺこりと頭を下げる
+
+# textflame 1 1
+@ネス
+現時点では、
+私も安易な結晶体化には
+反対です
+
+@ネス
+ミネルヴァの調査報告を
+待ちたいと思います
+
+# voice 6020 "ness_0002"
+@ネス
+それと…
+ブラックキラーズの方達は、
+何を言い争っているのですか？
+
+# voice 4017 "suiha_0003"
+# alpha 2502711 0 0.5
+# face 2401711 "usual"
+# alpha 2401711 1 0.5
+# textboxarrow 0 3
+@スイハ
+彼女達は自分がマスターを
+支配すると、所有権を
+主張しているのです
+
+# textboxarrow 0 1
+@ネス
+己の欲望を“節制”せず、
+お互いにぶつけ合っている
+というのですね？
+
+# voice 6020 "ness_0029"
+@ネス
+…私、いってきます！
+
+# alpha 2602011 0 0.5
+# alpha 2401711 0 0.5
+# textflame 0 0
+@
+そういうと、
+ネスは言い争うブラックキラーズに
+向かっていった
+
+# voice 6020 "ness_0002"
+# face 2602011 "usual"
+# alpha 2602011 1 0.5
+# move 2101421 4 0
+# face 2101421 "usual"
+# alpha 2101421 1 0.5
+# textflame 1 1
+@ネス
+お取り込み中、
+失礼いたします！
+
+# voice 10147 "tyrufing_k_0013"
+# textboxarrow 0 3
+@グリード
+あなた…
+新手のエンシェントキラーズですね？
+
+# voice 6020 "ness_0003"
+# textboxarrow 0 1
+@ネス
+ネスと申します、
+早速ですが、マスターの所有権に
+ついて争うのは、早計だと思います！
+
+@ネス
+無駄な時間を過ごす
+余裕はありません！
+
+@ネス
+自己の欲望を節制し、
+皆で協力して一刻も早く問題解決に
+あたるべきだと…
+
+# bgmfile "bgm160_161" "BgmPJZero001" 0
+# voice 10016 "masamune_k_0039"
+# alpha 2101421 0 0.5
+# move 2100121 4 0
+# face 2100121 "angry"
+# alpha 2100121 1 0.5
+# textboxarrow 0 3
+@ラース
+なるほど…
+そなたも拙者の邪魔を
+するのだな！？
+
+# voice 6020 "ness_0022"
+# face 2602011 "sad"
+# textboxarrow 0 1
+@ネス
+ふぇっ！？
+違います、
+そんなつもりじゃ…！
+
+# se "SE_4000"
+# voice 10016 "masamune_k_0029"
+# textboxarrow 0 3
+@ラース
+問答無用！
+やあっ！

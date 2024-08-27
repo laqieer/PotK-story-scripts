@@ -1,0 +1,648 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第８章 章タイトル：「ビギニング・オブ・ジ・エンド」
+;;第2話－８　タイトル：黄昏の魔弾
+;;2_8_0
+;;スクリプト最後の背景：教会
+;;-----------------------------------------
+# script "lisp"
+# background "in_city"
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;ブリューナク
+# body 500721
+# pos 500721 3
+# scale 500721 0.8 0
+# layer 500721 2
+# alpha 500721 0 0
+# mask 500721 off
+;;フラガラッハ
+# body 101011
+# pos 101011 3
+# scale 101011 0.8 0
+# layer 101011 2
+# alpha 101011 0 0
+# mask 101011 off
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 2
+# alpha 5401721 0 0
+# mask 5401721 off
+;;シェキナー
+# body 3400711
+# pos 3400711 3
+# scale 3400711 0.8 0
+# layer 3400711 3
+# alpha 3400711 0 0
+# mask 3400711 off
+;;エロース
+# body 3400411
+# pos 3400411 3
+# scale 3400411 0.8 0
+# layer 3400411 2
+# alpha 3400411 0 0
+# mask 3400411 off
+;;ゴウバラ
+# body 220
+# pos 220 3
+# scale 220 0.8 0
+# layer 220 2
+# alpha 220 0 0
+# mask 220 off
+;;アフロディーテ・D. plug・アスモデウス 大罪ver.
+# body 5401311
+# pos 5401311 3
+# scale 5401311 0.8 0
+# layer 5401311 2
+# alpha 5401311 0 0
+# mask 5401311 off
+;;ツカサ
+# body 229
+# pos 229 3
+# scale 229 0.8 0
+# layer 229 2
+# alpha 229 0 0
+# mask 229 off
+;;ミカエル
+# body 3810008
+# pos 3810008 3
+# scale 3810008 0.8 0
+# layer 3810008 2
+# alpha 3810008 0 0
+# mask 3810008 off
+;;ツカサ
+# body 241
+# pos 241 3
+# scale 241 0.8 0
+# layer 241 2
+# alpha 241 0 0
+# mask 241 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第2話－８　タイトル：黄昏の魔弾
+;;//背景：中心部
+# move 3400711 2 0
+# face 3400711 "usual"
+# alpha 3400711 1 0
+# mask 3400711 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0
+# mask 196 on
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+本当にあっという間だったわね
+行きの苦労が嘘みたい…
+
+# face 3400711 "normal"
+# textboxarrow 0 1
+@シェキナー
+ユグドラシルまではすぐです
+今はコマンドキラーズの姿も
+見受けられません
+
+# textboxarrow 0 1
+@シェキナー
+天上世界に戻るのなら、
+チャンスでしょうね
+
+# voice 9943 "almace_navikan_0044"
+# face 196 "happy"
+# textboxarrow 0 3
+@アルマス
+ありがと！
+あなたのマスターにもお礼を
+言っておいてね
+
+# alpha 3400711 0 0.5
+# alpha 196 0 0.5
+# move 5401721 3 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 2
+@スイハ
+それでは、失礼します
+
+# voice 1010 "furagaraha_0015"
+# alpha 5401721 0 0.5
+# move 101011 3 0
+# face 101011 "sad"
+# alpha 101011 1 0.5
+# mask 101011 off
+# textboxarrow 0 2
+@フラガラッハ
+ああ、名残惜しいわ…
+窓に映る私の美しい姿を見ることが
+できなくなるなんて…
+
+# move 500721 2 0
+# face 500721 "normal"
+# alpha 500721 1 0.5
+# mask 500721 on
+# textboxarrow 0 1
+# move 101011 4 0.5
+# mask 101011 on
+@ブリューナク
+フラガラッハ
+ブリューナクは鏡を見ることを
+提案する
+
+# face 101011 "normal"
+# textboxarrow 0 3
+@フラガラッハ
+あら、違うのよ
+窓に映る姿には旅情が足されて、
+より美しいでしょ？
+
+# alpha 500721 0 0.5
+# alpha 101011 0 0.5
+# move 196 3 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+あなた達、
+置いていくわよ！
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 196 0 0
+# move 3400711 3 0
+# face 3400711 "usual"
+# alpha 3400711 1 0
+# mask 3400711 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+@シェキナー
+行ったようですね
+…もう出てきて結構ですよ、
+アフロディーテ
+
+# voice 340131 "aphrodite_a_0005"
+# move 3400711 2 0.5
+# mask 3400711 on
+# move 5401311 4 0
+# face 5401311 "happy"
+# alpha 5401311 1 0.5
+# mask 5401311 on
+# textboxarrow 0 3
+@アフロディーテ
+うふふふっ♪
+気づかれないよう潜み続けるなんて…
+
+# textboxarrow 0 3
+@アフロディーテ
+禁断の恋のようで
+甘美な時間でしたわ♪
+
+# face 3400711 "surprise"
+# textboxarrow 0 1
+@シェキナー
+あなたの趣味は知りません
+それより…ひゃっ？
+
+# voice 9929 "tsukasa_0022"
+# alpha 5401311 0 0.5
+# move 229 4 0
+# alpha 229 1 0.5
+# mask 229 on
+# textboxarrow 0 3
+@ツカサ
+あーっ、癒される～♪
+シェキナーの翼、モフモフ～♪
+
+# voice 340071 "shekina_t_0010"
+# face 3400711 "angry"
+# textboxarrow 0 1
+@シェキナー
+マスターっ
+このようなところで…
+いけません
+
+# textboxarrow 0 3
+@ツカサ
+もう少しだけ～
+今回は長かったから、モフモフ
+成分を補給しておかないとっ
+
+# voice 340071 "shekina_t_0027"
+# face 3400711 "sad"
+# textboxarrow 0 1
+@シェキナー
+困りましたね…
+少しだけですよ
+
+# voice 340041 "erosu_t_0001"
+# alpha 3400711 0 0.5
+# move 3400411 2 0
+# face 3400411 "surprise"
+# alpha 3400411 1 0.5
+# mask 3400411 on
+# textboxarrow 0 1
+@エロース
+マスター、お帰りなさ～い！
+あれぇ？アフロディーテ、
+その格好、どうしたんですかぁ～？
+
+# voice 340131 "aphrodite_a_0004"
+# alpha 229 0 0.5
+# move 5401311 4 0
+# face 5401311 "usual"
+# alpha 5401311 1 0.5
+# mask 5401311 on
+# textboxarrow 0 3
+@アフロディーテ
+ふふっ
+後でゆっくりと
+今回も美と愛を堪能できました
+
+# alpha 3400411 0 0.5
+# alpha 5401311 0 0.5
+# move 229 3 0
+# alpha 229 1 0.5
+# mask 229 off
+# textboxarrow 0 2
+@ツカサ
+エロースも留守番お疲れ様！
+さてと…
+
+;;//ここでツカサの顔を出す
+# textwindow "close"
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+# alpha 229 0 0
+# move 241 3 0
+# face 241 "happy"
+# alpha 241 1 0
+# mask 241 off
+# waitandnext 0.2
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ツカサ
+僕達の家に帰ろうか
+
+;;//背景：上層階
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "mamon_room"
+# alpha 241 0 0
+# move 220 2 0
+# face 220 "normal"
+# alpha 220 1 0
+# mask 220 on
+# move 241 4 0
+# face 241 "happy"
+# alpha 241 1 0
+# mask 241 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 9933 "goubara_0022"
+# textboxarrow 0 1
+# textwindow "normal"
+@ゴウバラ
+おお、南の
+久し振りに顔を見たぞ
+
+# textboxarrow 0 3
+@ツカサ
+こんにちは、東の
+先日は無理を言って
+すみませんでした
+
+# textboxarrow 0 1
+@ゴウバラ
+カミトくんのことかな？
+電車を走らせることくらい、
+訳ない
+
+# textboxarrow 0 1
+@ゴウバラ
+彼らはこの中心部を守ってくれた
+恩人なのだから
+
+# textboxarrow 0 1
+@ゴウバラ
+しかし、遠隔通信で連絡をしてきた
+ときは驚いたよ
+まさか、中心部の外にいたのか？
+
+# face 241 "normal"
+# textboxarrow 0 3
+@ツカサ
+少し風に当たっていただけです
+それじゃ、僕はこれで
+
+# voice 9933 "goubara_0003"
+# textboxarrow 0 1
+@ゴウバラ
+うむ
+たまには会合に顔を出してくれ
+北も西も心配しているぞ
+
+# textboxarrow 0 3
+@ツカサ
+気が向いたら
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 220 0 0
+# alpha 241 0 0
+# move 3400411 2 0
+# face 3400411 "normal"
+# alpha 3400411 1 0
+# mask 3400411 on
+# move 5401311 4 0
+# face 5401311 "angry"
+# alpha 5401311 1 0
+# mask 5401311 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 3
+# textwindow "normal"
+@アフロディーテ
+北と西が心配しているなんて…
+考えられませんわ
+
+# textboxarrow 0 1
+@エロース
+どうせ可愛い女の子マスターに
+ちょっかいかけたいだけですよ～
+そんなことより…
+
+# voice 340041 "erosu_t_0004"
+# textboxarrow 0 1
+@エロース
+旅先で素敵な恋物語とか、
+なかったんですかぁ～？
+
+# voice 340071 "shekina_t_0003"
+# move 3400411 1 0.5
+# move 3400711 3 0
+# face 3400711 "usual"
+# alpha 3400711 1 0.5
+# mask 3400711 on
+# textboxarrow 0 2
+# move 5401311 5 0.5
+@シェキナー
+はい、二人とも
+マスターはお疲れなんですから、
+ここまでですよ
+
+# voice 340041 "erosu_t_0018"
+# face 3400411 "sad"
+# textboxarrow 0 1
+@エロース
+せっかく久し振りに会えたのに、
+残念です～…
+
+# face 5401311 "usual"
+# textboxarrow 0 3
+@アフロディーテ
+では、わたしと美と愛について
+語り合いましょう
+
+# face 3400411 "normal"
+# textboxarrow 0 1
+@エロース
+それは素敵ですね～っ
+シェキナーもいかがですか？
+
+# textboxarrow 0 2
+@シェキナー
+私はマスターの守護をしなくては
+なりませんので
+
+# alpha 3400411 0 0.5
+# alpha 3400711 0 0.5
+# alpha 5401311 0 0.5
+# move 241 3 0
+# face 241 "happy"
+# alpha 241 1 0.5
+# mask 241 off
+# textboxarrow 0 2
+@ツカサ
+みんな、また後でね
+
+;;//背景：豪華な室内
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "400_angel_castle_room"
+# alpha 241 0 0
+# move 241 3 0
+# face 241 "normal"
+# alpha 241 1 0
+# mask 241 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "stop"
+# textboxarrow 0 2
+# textwindow "normal"
+@ツカサ
+…………
+
+# se "SE_0860"
+# serif 1
+@セキュリティ
+生体認証クリア
+周辺チェック完了
+オールグリーン
+
+# textboxarrow 0 2
+@ツカサ
+“天上の翼を広げよ”
+
+# serif 1
+@セキュリティ
+当該エリアへのロックを解除
+
+;;//扉が開く音
+# se "SE_0690"
+# waitandnext 1
+
+;;//背景：教会
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "006_church"
+# alpha 241 0 0
+# move 3810008 2 0
+# alpha 3810008 1 0
+# mask 3810008 on
+# move 241 4 0
+# face 241 "happy"
+# alpha 241 1 0
+# mask 241 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm188" "BgmStory007" 0
+# voice 9929 "tsukasa_0056"
+# textboxarrow 0 3
+# textwindow "normal"
+@ツカサ
+ただいま、ミカエル
+
+# textboxarrow 0 1
+@ミカエル
+お帰りなさい、ツカサ
+今回は長旅でしたね
+
+# voice 9929 "tsukasa_0003"
+# textboxarrow 0 3
+@ツカサ
+うん
+でも、それだけの成果はあったよ
+
+# voice 8056 "new_michael_0039"
+# textboxarrow 0 1
+@ミカエル
+どのようなものでしょう
+
+# face 241 "normal"
+# textboxarrow 0 3
+@ツカサ
+コマンドキラーズが動き出したのは
+知ってるよね？
+カミトのことは？
+
+# voice 8056 "new_michael_0032"
+# textboxarrow 0 1
+@ミカエル
+「ディスラプター」を持った少年の
+ことなら、先日、少し覗かせて
+いただきました
+
+# textboxarrow 0 3
+@ツカサ
+珍しいね、あなたがそんなことを
+するなんて
+気づかれなかったの？
+
+# textboxarrow 0 1
+@ミカエル
+私の視線は感じたようですけれど、
+あのときはそれどころでは
+ありませんでしたからね
+
+# textboxarrow 0 3
+@ツカサ
+そっか…
+ルシファーがセブンスに色々と
+肩入れしてるみたいだ
+
+# textboxarrow 0 1
+@ミカエル
+再び“大罪”の力を解放させたの
+ですね
+今度はマスターもいますから
+
+# textboxarrow 0 1
+@ミカエル
+十全に力を発揮できるでしょう
+あなたのアフロディーテも？
+
+# voice 9929 "tsukasa_0003"
+# face 241 "happy"
+# textboxarrow 0 3
+@ツカサ
+うん
+さすがにビックリした
+あの山羊…乗ってみたいなぁ
+
+# textboxarrow 0 1
+@ミカエル
+あの力でどこまで対抗できる
+でしょう…
+
+# textboxarrow 0 3
+@ツカサ
+と、ここまでは前置き…
+今回は、とっておきがあるんだ
+
+# textboxarrow 0 1
+@ミカエル
+私を驚かせる程のものですか？
+
+# textboxarrow 0 3
+@ツカサ
+やっと見つけたよ
+あなたの力を目覚めさせるキル姫を
+
+# textboxarrow 0 1
+@ミカエル
+ああ！
+ついにっ
+
+# textboxarrow 0 3
+@ツカサ
+ティファレト、だよね？
+居場所は分かった
+
+# textboxarrow 0 1
+@ミカエル
+ツカサ…ユグドラシルはもう長く
+ありません
+
+# textboxarrow 0 1
+@ミカエル
+“終焉”の到来は間近です
+急いで下さい
+
+# voice 9929 "tsukasa_0003"
+# textboxarrow 0 3
+@ツカサ
+うん
+僕に任せて
+必ずあなたと彼女を引き合わせるよ

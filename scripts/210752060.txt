@@ -1,0 +1,455 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;コマンドキラーズサイドストーリー前編シナリオ
+;;第2話　タイトル：見守る者
+;;2_6
+;;スクリプト最後の背景：町（夜）
+;;-----------------------------------------
+# script "lisp"
+# background "town_night"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;ヒョウハ
+# body 231
+# pos 231 3
+# scale 231 0.8 0
+# layer 231 2
+# alpha 231 0 0
+# mask 231 off
+;;神令ヒョウハ（ボイス用）
+# body 5402011
+# alpha 5402011 0 0
+;;アダマス
+# body 101221
+# pos 101221 3
+# scale 101221 0.8 0
+# layer 101221 2
+# alpha 101221 0 0
+# mask 101221 off
+;;カドケウス
+# body 600431
+# pos 600431 3
+# scale 600431 0.8 0
+# layer 600431 2
+# alpha 600431 0 0
+# mask 600431 off
+;;-----------------------------------------
+;;第2話　タイトル：見守る者
+;;//背景：町（夜）
+# move 231 3 0
+# face 231 "normal"
+# alpha 231 1 0
+# mask 231 off
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+よし！
+ブラオの町に潜り込めたぞ
+
+# voice 540201 "hyoha_c_0031"
+# textboxarrow 0 2
+@ヒョウハ
+勝手に入ってごめん！
+なるべく迷惑かけないように
+するからっ
+
+# textboxarrow 0 2
+@ヒョウハ
+まずは…情報が集まりそうな
+ところに行くとするか
+やっぱ、酒場かな？
+
+# se "SE_5575"
+# textwindow "close"
+# rightout 231 0.5
+# waitandnext 0.5
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 231 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# serif 1
+@兵士１
+こんなときに酒場を開けるとは
+どういうつもりだ！
+
+# serif 1
+@兵士２
+非常事態だぞ！
+酒を飲んで騒いでいる場合では
+ないだろうが！
+
+# serif 1
+@兵士３
+マロニの町の連中を叩き潰すため
+ブラオの町が一致団結するときに
+何を考えている！
+
+# serif 1
+@酒場の店主
+殴るのは…やめてくれっ…
+こっちだって生活があるんだっ…
+
+# serif 1
+@酒場の店主
+みんな鬱屈としてる…
+酒を飲んで憂さを晴らしても
+いいじゃないかっ…！
+
+# serif 1
+@兵士１
+貴様のような奴がいるから
+マロニの連中がつけあがるのだ！
+この裏切り者めっ
+
+# serif 1
+@群衆
+この裏切り者！
+お前はブラオの人間じゃない！
+町から出ていけ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# move 231 3 0
+# face 231 "irregular"
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ヒョウハ
+おいおい…
+ひどい私刑だな…
+何が起きてんだ？
+
+# move 231 2 0.5
+# mask 231 on
+# move 600431 4 0
+# face 600431 "usual"
+# alpha 600431 1 0.5
+# mask 600431 on
+# textboxarrow 0 3
+@カドケウス
+ああ～…
+今夜もつるし上げが始まったね～
+
+# face 231 "surprise"
+# textboxarrow 0 1
+@ヒョウハ
+うおっ？
+あんた、確かカドケウス…
+
+# textboxarrow 0 3
+@カドケウス
+シーッ！
+静かにしててね
+みんな殺気立ってるから
+
+# voice 540201 "hyoha_c_0002"
+# face 231 "irregular"
+# textboxarrow 0 1
+@ヒョウハ
+何で同じ町の人間同士で
+揉めてんだよっ？
+
+# textboxarrow 0 3
+@カドケウス
+マロニの町との争いが続いてる
+から、苛々してるんだよ
+
+# textboxarrow 0 3
+@カドケウス
+ああやって、町の規範に従わない人を
+吊し上げて憂さ晴らしをしてるだけ
+だから
+
+# face 231 "angry"
+# textboxarrow 0 1
+@ヒョウハ
+何だ、それ…
+最低だなっ
+
+# textwindow "close"
+# alpha 231 0 0.5
+# alpha 600431 0 0.5
+# serif 1
+@奏官
+まったく、不届き者め！
+おい、アダマス！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# move 101221 3 0
+# face 101221 "normal"
+# alpha 101221 1 0.5
+# mask 101221 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アダマス
+はいはい
+腐った野郎にお仕置きねぇ
+
+# face 101221 "angry"
+# textboxarrow 0 2
+@アダマス
+最近、こんなのばっかで
+うんざりしてんのよ
+どうしてくれんの、この豚！
+
+;;//アダマスが店主を蹴る
+# se "SE_4602"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# serif 1
+@酒場の店主
+あぐっ…！
+やめてくれっ…やめてっ…
+
+# voice 1012 "adamasu_0029"
+# face 101221 "smile"
+# textboxarrow 0 2
+@アダマス
+アハハハハ！
+無様に鳴いてみなさいよぉっ
+
+# serif 1
+@酒場の店主
+何で…あんた達が勝手に始めた
+争いじゃないかっ…！
+
+# face 101221 "angry"
+# textboxarrow 0 2
+@アダマス
+ああん？
+もっと良い声で鳴きなさい！
+
+# bgm "stop"
+# serif 1
+@奏官
+手ぬるいな
+アダマス、そいつは処刑する
+やれ
+
+# bgm "bgm031" 0
+# voice 1012 "adamasu_0026"
+# textboxarrow 0 2
+@アダマス
+はぁ？
+…マスター、あんた本気で言ってる？
+こいつ、ただの人間よ
+
+# textboxarrow 0 2
+@アダマス
+いつもみたいに
+軽くいたぶっておけば済む話じゃない
+
+# serif 1
+@奏官
+これは見せしめだ
+マロニの町と戦っていくためには
+一致団結しなければならない
+
+# serif 1
+@奏官
+人間だろうと構わん！
+殺せ！
+
+# serif 1
+@酒場の店主
+ひぃぃぃぃっ…！
+助けて…！
+
+# voice 1012 "adamasu_0028"
+# face 101221 "normal"
+# textboxarrow 0 2
+@アダマス
+あんたがやれって言うなら、
+やるけど…
+本当にいいの？
+
+# serif 1
+@奏官
+さっさとやれ！
+
+# serif 1
+# textwindow "close"
+# textboxarrow 0 2
+# serif 0
+@アダマス
+…わかったわ
+
+# voice 1012 "adamasu_0031"
+# textboxarrow 0 2
+@アダマス
+ごめんなさいね
+命令だから
+
+# se "SE_5206"
+# waitandnext 0.5
+
+# textboxarrow 0 2
+@アダマス
+その代わり、
+楽に逝かせてあげるわ
+
+;;//ヒョウハが矢を放つ
+# se "SE_4301"
+# sedelay "SE_0844" 0.5
+# waitandnext 1
+
+# move 231 2 0
+# face 231 "angry"
+# alpha 231 1 0.5
+# mask 231 on
+# textboxarrow 0 1
+# move 101221 4 0.5
+# mask 101221 on
+@ヒョウハ
+ちょっと待った！
+
+# voice 1012 "adamasu_0009"
+# textboxarrow 0 3
+@アダマス
+何、あんた？
+…誰かと思えば、昼間、しゃしゃり
+出てきたお邪魔虫ね
+
+# face 101221 "smile"
+# textboxarrow 0 3
+@アダマス
+尻尾巻いて逃げて、
+あれは無様だったねぇ
+何の用よ、負け犬？
+
+# textboxarrow 0 1
+@ヒョウハ
+同じ町の仲間だろ！
+殺すなんてひどいことするなよ！
+
+# face 101221 "angry"
+# textboxarrow 0 3
+@アダマス
+ウザいのよ、あんた…
+マスター、先にあっちから
+やって良いわよねぇ？
+
+# serif 1
+@奏官
+そ…そうだなっ
+よし！やれ、アダマス！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 231 "surprise"
+# textboxarrow 0 1
+@ヒョウハ
+しょうがない
+相手になって…ええっ？
+
+# voice 6004 "kadokeusu_0004"
+# alpha 231 0 0.5
+# alpha 101221 0 0.5
+# move 600431 3 0
+# face 600431 "usual"
+# alpha 600431 1 0.5
+# mask 600431 off
+# textboxarrow 0 2
+@カドケウス
+ちょっと、ごめんね～！
+
+;;//カドケウスが魔法を使う
+# se "SE_9127"
+# waitandnext 1
+
+# alpha 600431 0 0.5
+# move 101221 3 0
+# face 101221 "angry"
+# alpha 101221 1 0.5
+# mask 101221 off
+# textboxarrow 0 2
+@アダマス
+チィッ…！
+カドケウス、とうとう尻尾を出した
+わね、あんた！
+
+# alpha 101221 0 0.5
+# move 600431 3 0
+# face 600431 "sad"
+# alpha 600431 1 0.5
+# mask 600431 off
+# textboxarrow 0 2
+@カドケウス
+やっぱり勘づかれてたんだ…
+
+# face 600431 "normal"
+# textboxarrow 0 2
+@カドケウス
+ね～、あんた
+ここは逃げた方が良いと思うな～
+
+# voice 540201 "hyoha_c_0013"
+# move 231 2 0
+# face 231 "angry"
+# alpha 231 1 0.5
+# mask 231 on
+# textboxarrow 0 1
+# move 600431 4 0.5
+# mask 600431 on
+@ヒョウハ
+あたしはアダマスを止めようと
+しただけだぞっ
+さっきの魔法はあんたが――
+
+# face 600431 "usual"
+# textboxarrow 0 3
+@カドケウス
+まあまあ、細かいことは後にして
+ほら、今は私と一緒に来てよ！
+
+# textboxarrow 0 1
+@ヒョウハ
+ああ、もう！
+何がなんだか…！
+
+# alpha 231 0 0.5
+# alpha 600431 0 0.5
+# move 101221 3 0
+# face 101221 "angry"
+# alpha 101221 1 0.5
+# mask 101221 off
+# textboxarrow 0 2
+@アダマス
+逃がさないわよ、あんたら！
+
+# serif 1
+@奏官
+待て、アダマス！
+ギルドマスターに連絡する方が
+先だ！
+
+# textwindow "close"
+# alpha 101221 0 0.5
+# serif 1
+@兵士１
+裏切りだ！
+カドケウスが裏切ったぞー！
+
+# serif 1
+@兵士２
+あいつ…マロニのスパイだったんだ！
+ふざけやがって！
+
+# serif 1
+@兵士達
+裏切り者を許すな！
+マロニの連中は皆殺しだーっ！

@@ -1,0 +1,317 @@
+;;-----------------------------------------
+;;鎌倉7_1
+;;-----------------------------------------
+# script "lisp"
+# background "seahouse"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;鎌倉ヘレナ
+# body 6302811
+# pos 6302811 5
+# scale 6302811 0.8 0
+# layer 6302811 4
+# alpha 6302811 1 0
+;;鎌倉ニール
+# body 323
+# pos 323 3
+# scale 323 0.8 0
+# layer 323 5
+# mask 323 off
+# alpha 323 1 0
+;;鎌倉リサナウト
+# body 6203011
+# pos 6203011 1
+# scale 6203011 0.8 0
+# layer 6203011 3
+# alpha 6203011 1 0
+;;人々
+# body 69
+# pos 69 3
+# scale 69 0.8 0
+# layer 69 3
+# mask 69 off
+# alpha 69 0 0
+# brightness 69 0 0
+# body 79
+# pos 79 1
+# scale 79 0.8 0
+# layer 79 3
+# mask 79 off
+# alpha 79 0 0
+# brightness 79 0 0
+# body 80
+# pos 80 4
+# scale 80 0.8 0
+# layer 80 3
+# mask 80 off
+# alpha 80 0 0
+# brightness 80 0 0
+# reversal 80 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：町：seahouse
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# voice 530281 "herena_di_0028"
+# face 6203011 "usual"
+# face 6302811 "sad"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+今、一瞬、ニールの姿が
+消えかかったように見えたけど…
+
+# voice 9952 "nir_0028"
+# textboxarrow 0 2
+@ニール
+…アタチは何ともないわ
+
+# textboxarrow 0 1
+@リサナウト
+…………
+
+# voice 530281 "herena_di_0003"
+# textboxarrow 0 3
+@ヘレナ
+考えてみれば、ここは別世界なんだ
+あまり長居するのはよくないな
+
+# voice 530281 "herena_di_0002"
+# face 6302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+ニール、行こう
+さっさとマナを集めて、
+みんなのところに帰るよ
+
+# voice 9952 "nir_0032"
+# textboxarrow 0 2
+@ニール
+そうね…
+急ぎましょっ
+
+;;ヘレナとニールが立ち去る
+# se "SE_0740"
+# scale 323 0.7 0.5
+# alpha 323 0 0.3
+# scale 6302811 0.7 0.5
+# alpha 6302811 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# move 6203011 3 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+@リサナウト
+…………
+
+# voice 520301 "risanautr_ca_0003"
+# textboxarrow 0 2
+@リサナウト
+やっと始まったわね
+ここからが本番よ
+
+# textboxarrow 0 2
+@リサナウト
+別世界に来ちゃったのは想定外
+だったけど、これも彼女達に
+必要なことだったのかも
+
+# voice 520301 "risanautr_ca_0027"
+# face 6203011 "sad"
+# textboxarrow 0 2
+@リサナウト
+それにしても、
+まだ自覚がないみたいね…
+
+# textboxarrow 0 2
+@リサナウト
+それとも、気づいていないふりを
+してるだけなのかしら？
+
+# textboxarrow 0 2
+@リサナウト
+どっちにしろ、あまり時間は無いわよ
+ヘレナ、ニール…
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：beach
+# background "beach"
+# bgmfile "bgm063_064" "BgmMizugi001" 0
+# alpha 6203011 0 0
+# move 323 2 0
+# move 6302811 4 0
+# scale 323 0.8 0
+# scale 6302811 0.8 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 79 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 0
+@人々
+あ！見て見て
+これ、かわいい～っ
+
+# alpha 79 0 0.5
+# alpha 69 1 0.5
+@人々
+うわっ！？
+トンビに取られそうになったよ
+
+# alpha 69 0 0.5
+# alpha 80 1 0.5
+@人々
+しらす丼が美味しくて…
+
+# alpha 80 0 0.5
+# textwindow "close"
+# waitandnext 1.5
+
+# voice 9952 "nir_0004"
+# alpha 323 1 0.3
+# face 6302811 "normal"
+# alpha 6302811 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ニール
+みんな緩みきってるわねぇ
+
+# voice 530281 "herena_di_0004"
+# face 6302811 "happy"
+# textboxarrow 0 3
+@ヘレナ
+ああいうのを見ると、
+ちょっとイタズラしたくなるな
+ふふっ
+
+# textboxarrow 0 1
+@ニール
+やっちゃう？
+アタチに名案があるわよ
+
+# face 6302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+ヘレナにもあるよ
+例えば…ごにょごにょ
+
+# textboxarrow 0 1
+@ニール
+良いわね♪
+だったら、ごにょごにょ…
+
+# voice 530281 "herena_di_0005"
+# face 6302811 "happy"
+# textboxarrow 0 3
+@ヘレナ
+ふふふっ
+それは傑作だ！
+みんな大慌てだろうな
+
+# face 6302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+ああ…
+この世界は平和だな
+ヘレナ達の世界とは違う
+
+# textboxarrow 0 1
+@ニール
+あら？
+アタチ達の世界も、それなりに
+平和だと思うけど
+
+# textboxarrow 0 3
+@ヘレナ
+…以前に比べたらね
+それでも「揺らぎ」の問題は
+あるだろ
+
+# textboxarrow 0 1
+@ニール
+…………
+
+# voice 9952 "nir_0043"
+# textboxarrow 0 1
+@ニール
+…ねぇ、ヘレナ
+アタチ、ずっと思ってたことが――
+
+;;ニールが明滅する
+# se "SE_13075"
+# alpha 323 0.8 0.2
+# textboxarrow 0 0
+# waitandnext 0.2
+
+# alpha 323 1 0.2
+# waitandnext 0.2
+
+# alpha 323 0.4 0.3
+# waitandnext 0.3
+
+# alpha 323 1 0.3
+# waitandnext 0.3
+
+# voice 530281 "herena_di_0024"
+# face 6302811 "surprise"
+# textboxarrow 0 3
+@ヘレナ
+ニール…！？
+また消えそうになったぞ
+どうしたんだ？
+
+# voice 9952 "nir_0022"
+# textboxarrow 0 1
+@ニール
+あ…そ、そうなのっ？
+不思議よねっ
+
+# voice 530281 "herena_di_0044"
+# face 6302811 "sad"
+# textboxarrow 0 3
+@ヘレナ
+ニール…あの…
+本当は…
+
+# voice 9952 "nir_0002"
+# textboxarrow 0 1
+@ニール
+なぁに、ヘレナ？
+
+# face 6302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+…いや、何でもない
+早く装置を起動させて帰ろう
+
+# textboxarrow 0 1
+@ニール
+そうね…
+
+;;バトル
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 323 0 0
+# alpha 6302811 0 0
+# waitandnext 0.2

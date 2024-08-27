@@ -1,0 +1,613 @@
+;;1_3_3　背景：内壁関所
+;;※レーヴァテインと対峙しているティルフィング。
+# script "lisp"
+# background "005_Checkpoint"
+# bgm "bgm031" 0
+# body 24
+# pos 24 2
+# scale 24 0.8 0
+# body 100221
+# pos 100221 4
+# scale 100221 0.8 0
+# layer 100221 4
+# textboxarrow 0 1
+# face 24 "sad"
+@ティルフィング
+ウソよ、ウソだわ…！
+アナタは、暴走なんてしていない…！
+私にはわかるわ！
+
+# textboxarrow 0 3
+@レーヴァテイン
+…私は、我を失ってなんていないわ
+私もマスターも、
+こうすべきだと判断しただけ
+
+# textboxarrow 0 1
+@ティルフィング
+そんな…！
+どうして、こんな…！
+
+# face 100221 "angry"
+# textboxarrow 0 3
+@レーヴァテイン
+マスターが言った通り…
+信じた正義を貫くためには、
+悪に徹することも辞さない…
+
+@レーヴァテイン
+そう決めただけ
+…邪魔しないで
+
+;;※ギャリンとティルフィングを弾き飛ばすレーヴァテイン。
+# serif 0
+# textwindow "close"
+# face 24 "angry"
+# move 100221 3 0.3
+# waitandnext 0.3
+
+# se "SE_5205"
+# fadein "white" 0.3
+# waitandnext 0.4
+
+# se "SE_4601"
+# fadein "white" 0.3
+# shake 1 0.3
+# move 24 1 0.3
+# move 100221 4 0.3
+# waitandnext 0.7
+
+# serif 0
+# textwindow "nomal"
+# voice 1014 "tyrufing_0037"
+# body 10
+# pos 10 2
+# scale 10 0.8 0
+# alpha 10 0 0
+# body 41
+# pos 41 4
+# scale 41 0.8 0
+# alpha 41 0 0
+# reversal 10 0
+# textboxarrow 0 1
+@ティルフィング
+クッ…！！
+
+;;※そこへ関所から飛び出してくるゲートキーパー。その手には剣を握っている。
+# alpha 100221 0 0.5
+# alpha 24 0 0.5
+# alpha 10 1 0.5
+# leftin 10 0.5
+# alpha 41 1 0.5
+# se "SE_5205"
+# textboxarrow 0 1
+@ゲートキーパー
+反乱分子め…！
+なにがあろうと、
+決して通しはしない！！
+
+# face 41 "smile"
+# voice 9983 "kokusohkan_0039"
+# textboxarrow 0 3
+@黒奏官
+ほう…、最後の一人となろうと、
+命を顧みず職務を
+全うしようというのか
+
+# body 6
+# pos 6 3
+# scale 6 0.8 0
+# alpha 6 0 0
+# textboxarrow 0 3
+@黒奏官
+さすがはゲートキーパー…
+見上げた忠義心だ
+…ディーン中奏
+
+# face 6 "angry"
+# alpha 6 1 0.5
+# move 10 1 0.5
+# move 41 5 0.5
+# textboxarrow 0 2
+# layer 6 4
+@ディーン
+言われるまでもねぇ…
+レーヴァテイン！
+
+# alpha 6 0 0.5
+# alpha 41 0 0.5
+# alpha 10 0 0.5
+# alpha 24 1 0.5
+# alpha 100221 1 0.5
+@レーヴァテイン
+…任せて
+
+;;※猛然とゲートキーパーへ向け、駆け出すレーヴァテイン。
+# se "SE_9092"
+# rightout 100221 0.3
+# alpha 100221 0 0.5
+# textboxarrow 0 0
+# waitandnext 0.6
+
+# face 24 "surprise"
+# body 75
+# pos 75 4
+# scale 75 0.8 0
+# alpha 75 0 0
+# move 24 2 0.3
+# textboxarrow 0 1
+@ティルフィング
+レーヴァテイン！！
+ダメ…！！
+
+# face 75 "surprise"
+# voice 9979 "rebellion_0023"
+# textboxarrow 0 3
+# alpha 75 1 0.5
+@リベリオン
+！？
+しまった…！
+間に合わねぇ！！
+
+;;※ザッとゲートキーパーの背後に現れるレーヴァテイン。剣を高く掲げている。
+# se "SE_5582"
+# pos 10 3
+# alpha 10 1 0.5
+# alpha 24 0 0.5
+# alpha 75 0 0.5
+# alpha 41 1 0.5
+# textboxarrow 0 0
+# waitandnext 0.6
+
+# se "SE_4100"
+# alpha 100221 1 0.3
+# pos 100221 1
+# leftin 100221 0.5
+# textboxarrow 0 1
+@レーヴァテイン
+これで終わり…
+さようなら
+
+# serif 0
+# textwindow "close"
+# se "SE_5207"
+# fadein "red" 0.3
+# se "SE_4601"
+# effectbody 702 4 0 0
+# effectstart 702
+# waitandnext 0.3
+
+# serif 0
+# textwindow "nomal"
+# shake 1 0.5
+# textboxarrow 0 2
+@ゲートキーパー
+う、うぁ…！…ガッ！！！
+
+;;※峰打ちで、ゲートキーパーを気絶させるレーヴァテイン。
+# alpha 10 0 1
+# se "SE_3001"
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@黒奏官
+…峰打ち…？
+まったく…この期に及んで、
+不殺を突き通すつもりか？
+
+# alpha 6 1 0.5
+# textboxarrow 0 2
+@ディーン
+俺は、俺の正義を貫くだけ…
+指図される覚えはねぇ
+
+# textboxarrow 0 3
+@黒奏官
+フン…まぁいい
+
+;;【主人公選択】
+# select "ディーン…なぜ、心変わりを…！" "select_label_01" "俺達の絆は…こんなものなのか！？" "select_label_02"
+フン…まぁいい
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ディーン
+心変わり…？
+俺は別になにも変わっちゃいねぇよ
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ディーン
+オタオタしやがって…
+まったく、安い信頼だぜ
+
+# label "select_label_end"
+# textboxarrow 0 3
+@黒奏官
+さぁ、ゆくぞ…
+駒にヤツらの足止めをさせておけ
+
+# bgm "stop"
+# textboxarrow 0 2
+@ディーン
+…駒だってよ、
+レーヴァテイン
+
+# voice 1002 "revatein_0010"
+# textboxarrow 0 1
+@レーヴァテイン
+…ムカつく
+
+;;※フッと姿を消すレーヴァテイン。
+;;黒奏官の背後に現れ、その首筋に剣を突きつける。
+# alpha 100221 0 0.3
+# textboxarrow 0 0
+# waitandnext 0.6
+
+# fadein "white" 0.5
+# move 6 1 0
+# face 41 "normal"
+# move 41 3 0
+# se "SE_5205"
+# alpha 100221 1 0
+# move 100221 5 0
+# waitandnext 1
+
+# textboxarrow 0 3
+@レーヴァテイン
+少なくとも、
+アナタに駒呼ばわりされる
+覚えはないわ
+
+# bgm "bgm035" 0
+# body 40
+# pos 40 1
+# scale 40 0.8 0
+# alpha 40 0 0
+# textboxarrow 0 2
+@黒奏官
+！？
+貴様ら…！
+
+# alpha 40 1 0.5
+# alpha 6 1 0.5
+# alpha 24 1 0.5
+# move 6 3 0
+# move 24 5 0
+# layer 6 4
+# alpha 10 0 0.5
+# alpha 100221 0 0.5
+# alpha 41 0 0.5
+# textboxarrow 0 1
+# face 40 "irregular"
+@エドガー
+黒奏官に剣を…！？
+これは…
+
+# face 6 "normal"
+# textboxarrow 0 2
+@ディーン
+…おい、なにをボーっとしてんだよ？
+さっさと関を通過するぞ？
+
+# textboxarrow 0 3
+@ティルフィング
+え…？
+
+# face 6 "sad"
+# textboxarrow 0 2
+@ディーン
+被害を最小限に抑えるんだろうが？
+
+@ディーン
+どううまく立ち回ろうと、
+こっちにリベリオンがいる限り、
+闘いは避けられねぇ…
+
+@ディーン
+関所のヤツらを退散させるには、
+これしかなかった
+
+# face 24 "happy"
+# textboxarrow 0 3
+# body 0
+# pos 0 1
+# scale 0 0.8 0
+# alpha 0 0 0
+@ティルフィング
+ディーンくん…！
+
+# face 0 "serious"
+# textboxarrow 0 1
+# alpha 40 0 0.5
+# alpha 0 1 0.5
+@デュリン
+まったく、
+アンタってヤツは…
+
+# alpha 0 0 0.5
+# move 6 1 0.5
+# alpha 100221 1 0.5
+# alpha 24 0 0.5
+# alpha 41 1 0.5
+# textboxarrow 0 2
+@黒奏官
+…迂闊だったな
+お前に私を謀るほどの
+知恵があるとは…
+
+# face 6 "normal"
+# textboxarrow 0 1
+@ディーン
+謀ってなんていねぇよ
+サイラスとの誓いに生きる…
+その言葉にウソはない
+
+@ディーン
+俺は、
+俺が信じる正義に
+生きるだけだ
+
+# textboxarrow 0 2
+@黒奏官
+…世を揺るがす悪魔のなすことが、
+お前の信じる正義だと？
+
+# face 6 "angry"
+# textboxarrow 0 1
+@ディーン
+少なくとも、
+アンタよりは信じるに値する
+
+@ディーン
+…教会がそれを認めないというなら、
+追放だろうがなんだろうが好きにしな
+
+@ディーン
+たとえ悪と言われようと、
+俺は俺の信じた道をゆく…
+かつて、亡き兄と誓ったように
+
+# textboxarrow 0 2
+@黒奏官
+貴様…
+
+# textboxarrow 0 1
+@ディーン
+これで終わりだ…
+レーヴァテイン、そいつを拘束しろ
+
+# bgm "stop"
+# textboxarrow 0 2
+@黒奏官
+…そこまで乗せられてやるほど、
+私もお人よしではない
+
+# textboxarrow 0 1
+# body 100161
+# pos 100161 3
+# scale 100161 0.8 0
+# alpha 100161 0 0
+@ディーン
+なに…？
+
+;;※ギャリンと飛び散る火花…レーヴァテ
+インの剣が弾き飛ばされる。
+# se "SE_5776"
+# textwindow "close"
+# alpha 6 0 0.5
+# alpha 100161 1 0
+# leftin 100161 0.3
+# textboxarrow 0 0
+# layer 100161 4
+# subfillrect 1 "black" 0.2 0 1
+# waitandnext 0.4
+
+# move 41 1 0.3
+# se "SE_5207"
+# effectbody 703 5 0 0
+# effectpattern 703 1 1
+# effectstart 703
+# waitandnext 0.4
+
+# se "SE_4600"
+# effectbody 704 1 0 0
+# effectpattern 704 1 1
+# effectstart 704
+# waitandnext 0.3
+
+# subfillrect 1 "black" 0.2 1 0
+# shake 0 0.5
+# voice 1002 "revatein_0037"
+# textboxarrow 0 3
+# textwindow "normal"
+@レーヴァテイン
+！？
+
+;;※黒奏官を守るように立ちはだかる黒マサムネ。
+# bgmfile "bgm164" "BgmPJZero001" 0
+# textboxarrow 0 2
+@マサムネ
+ここは拙者が…
+先をお急ぎください
+
+# voice 1014 "tyrufing_0022"
+# face 24 "angry"
+# move 24 5 0
+# alpha 24 1 0.5
+# alpha 100221 0 0.5
+# textboxarrow 0 3
+@ティルフィング
+マサムネ…！
+アナタ、まだ…！
+
+# textboxarrow 0 1
+@黒奏官
+任せたぞ、マサムネ…
+“ラース”の名にかけて
+
+# textboxarrow 0 3
+# move 0 5 0
+# alpha 24 0 0.5
+# alpha 0 1 0.5
+@デュリン
+ラース…？
+
+# textboxarrow 0 2
+@ラース
+拙者はコードネーム“ラース”
+…“憤怒”の罪を背負いし
+キラープリンセス
+
+# se "SE_5205"
+# face 100161 "angry"
+@ラース
+…そこらのマサムネとは別ものと思え
+
+;;※グンと動き出そうとするラース。
+;;その行く手を阻むように、銃弾を撃ち放つリベリオン。
+;;咄嗟に刀で防御するラース…ギャリンと火花を散る。
+# serif 0
+# textwindow "close"
+# se "SE_4400"
+# fadein "red" 0.3 1
+# waitandnext 0.4
+
+# move 41 3 0.5
+# alpha 0 0 0.5
+# move 100161 1 0.5
+# se "SE_4601"
+# effectbody 706 1 0 0
+# effectpattern 706 1 1
+# effectstart 706
+# waitandnext 0.3
+
+# serif 0
+# textwindow "nomal"
+# shake 1 0.5
+# voice 10016 "masamune_k_0037"
+# textboxarrow 0 1
+@ラース
+クッ…！？
+
+;;※去ろうとする黒奏官の前に、立ちはだかるリベリオン。
+# move 75 5 0
+# layer 75 4
+# alpha 75 1 0.5
+# textboxarrow 0 3
+# face 75 "smile"
+@リベリオン
+動くな…。お前の大事な主人を、
+一瞬にして消し去ることも
+できるんだぜ？
+
+@リベリオン
+…もう少し付き合ってくれねぇかな？
+俺も、お前に聞きたいことがあるんだ
+
+# textboxarrow 0 2
+@黒奏官
+…私に、聞きたいことだと？
+
+;;※黒奏官に銃を向けるリベリオン。
+# se "SE_5208"
+# face 75 "normal"
+# textboxarrow 0 3
+@リベリオン
+お前の背後にいるのは、誰だ？
+どれだけの人間が、
+お前と行動をともにしている…？
+
+# textboxarrow 0 2
+@黒奏官
+…さて…なんの話だ？
+
+# entry 751 75
+# pos 751 5
+# scale 751 0.8 0
+# textboxarrow 0 3
+@リベリオン
+…口を割るわけがないか
+お前は危険だ…
+悪いが、ここで消えてもらう！
+
+;;※ブン、と一瞬リベリオンの体がブレる。
+# se "SE_4835"
+# face 75 "sad"
+# voice 9979 "rebellion_0037"
+# shake 0 0.5
+# fadein "white" 0.5
+# scale 751 2 0.5
+# alpha 751 0 1
+# layer 751 4
+# waitandnext 1
+
+# se "SE_5008"
+# textboxarrow 0 3
+@リベリオン
+グッ…！？
+
+;;※ガクリと膝をつくリベリオン。
+# textboxarrow 0 2
+@黒奏官
+…！
+…ラース！！
+
+# textboxarrow 0 1
+@ラース
+はっ！
+
+;;※一閃…リベリオンの銃を弾き飛ばすラース。
+# serif 0
+# textwindow "close"
+# se "SE_4601"
+# effectbody 705 1 100 0
+# effectpattern 705 1 1
+# effectstart 705
+# waitandnext 0.4
+
+# fadein "red" 0.5
+# shake 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+# imageset 0 "kiri_02"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# face 100161 "normal"
+@黒奏官
+どうやら、運も味方しているようだ
+…ゆくぞ
+
+;;※煙玉を叩き付け、去ってゆく黒奏官とラース。
+# se "SE_5633"
+# imagealpha 0 1 0.5
+# imagepos 0 0 30
+# fadein "white" 0.5
+# leftout 41 0.8
+# leftout 100161 0.8
+# textboxarrow 0 0
+# waitandnext 1
+
+# imagealpha 0 0 1
+# waitandnext 1
+
+# serif 0
+# face 75 "irregular"
+# textwindow "nomal"
+# move 24 2 0
+# alpha 24 1 0.5
+# face 24 "angry"
+# textboxarrow 0 3
+@リベリオン
+ウ…ウグ…！
+こ、こんな時に…！
+お、追うんだ、ティルフィング…！
+
+# textboxarrow 0 1
+@ティルフィング
+は、はい…！
+マスター、行きます！！

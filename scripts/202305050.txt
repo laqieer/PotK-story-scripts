@@ -1,0 +1,1207 @@
+;;-----------------------------------------
+;;SEAイベント不可思議仕儀ツークンフト1_4_0
+;;-----------------------------------------
+# script "lisp"
+# background "004_outland_enening"
+# bgm "stop"
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 5
+# mask 196 off
+# alpha 196 0 0
+;;SEAカシウス・誓約
+# body 6303121
+# pos 6303121 4
+# scale 6303121 0.8 0
+# layer 6303121 4
+# alpha 6303121 0 0
+;;如意金箍棒
+# body 5203111
+# pos 5203111 2
+# scale 5203111 0.8 0
+# layer 5203111 2
+# mask 5203111 off
+# alpha 5203111 0 0
+;;SEA如意金箍棒
+# body 6203121
+# pos 6203121 3
+# scale 6203121 0.8 0
+# layer 6203121 3
+# mask 6203121 off
+# alpha 6203121 0 0
+;;老人
+# body 1
+# pos 1 3
+# scale 1 0.8 0
+# layer 1 5
+# mask 1 off
+# alpha 1 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 2 "SEA6203121"
+# imagealpha 2 0 0
+# imagescale 2 1 0
+# imagelayer 2 5
+;;-----------------------------------------
+;;背景：町（夕方）
+# se "SE_6171"
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+;; wait 1秒
+# se "SE_0719"
+# alpha 6303121 1 0.3
+# alpha 5203111 1 0.3
+# waitandnext 2
+
+;;足音が鳴ってから2秒後にガヤのストップ
+# sestop "SE_6171"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@如意金箍棒
+ここがその人のお家、ね
+
+# voice 530311 "cassius_ca_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+アルマスから
+話を通してもらっているから
+時間を作ってくれているわ
+
+# textflame 0 0
+@
+カシウスに励まされ
+自分の目標を持つことをはじめ
+先へ進む努力を始めた如意金箍棒
+
+# textflame 0 0
+@
+その第一歩として
+如意金箍棒の前任者に話を
+聞きに来ていたのだった
+
+;;演出：暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：部屋の中
+# background "church_room"
+# alpha 6303121 0 0
+# alpha 5203111 0 0
+# waitandnext 0.2
+
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 1 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@老人
+やぁニョイ子さん
+本当にありがとうねぇ…
+
+# move 1 4 0.5
+# voice 520311 "nyoikinkobou_c_0023"
+# face 5203111 "surprise"
+# alpha 5203111 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+あ、え、ワタシはそんな…
+
+# textflame 1 1
+# textboxarrow 0 3
+@老人
+いやぁ、前から手伝ってもらって
+突然後をお願いしてしまったからねぇ
+
+# textflame 0 0
+@
+この男性は元々隣町の者で
+商人としてこの町に来ていたらしい
+
+# textflame 0 0
+@
+怪我で引退することになったが
+美しいこの町に定住し子供達の
+面倒を見るようになっていたのだ
+
+# textflame 1 1
+# textboxarrow 0 3
+@老人
+それが商人として
+町を行き来していた頃の
+知識を貸してほしいってんだ
+
+# textflame 1 1
+# textboxarrow 0 3
+@老人
+こんな老いぼれが役に立てるか
+なんて思ったけれど受け入れて
+くれた町の為とあっちゃあねぇ…
+
+# textflame 1 1
+# textboxarrow 0 3
+@老人
+ニョイ子さんには悪かったけど
+本当に引き受けてくれて助かったよ
+
+# voice 520311 "nyoikinkobou_c_0003"
+# face 5203111 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+ワタシもできることがしたいって
+そう思ってお引き受けしたんですが
+やはりわからないことも多くて…
+
+# textflame 1 1
+# textboxarrow 0 3
+@老人
+ははは、子供達というのは
+何にだってなれる、何だってできる
+そんな可能性の塊だからねぇ
+
+# textflame 1 1
+# textboxarrow 0 3
+@老人
+私もわからないことだらけさ
+
+# voice 520311 "nyoikinkobou_c_0022"
+# face 5203111 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+ええ！？
+
+# textflame 1 1
+# textboxarrow 0 3
+@老人
+ああ、でもあの子
+こないだ森で迷子になってたって子だ
+
+# alpha 1 0 0.3
+# alpha 5203111 0 0.3
+# move 6303121 3 0
+# mask 6303121 off
+# face 6303121 "surprise"
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@カシウス
+アルマスが見つけたあの子…
+
+# alpha 6303121 0 0.3
+# alpha 1 1 0.3
+# alpha 5203111 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@老人
+あの子は外への憧れが強くてね
+よく隣町の話をせがまれたもんさ
+
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+そういえばワタシにも
+ほかの町の話を聞いてくる…
+
+# textflame 1 1
+# textboxarrow 0 3
+@老人
+そうだろう？
+そしたら街道の話は大喜びだねぇ
+
+# voice 520311 "nyoikinkobou_c_0027"
+# face 5203111 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+それが…最近ちょっと元気がなくて
+
+# textflame 1 1
+# textboxarrow 0 3
+@老人
+ああ、それは…
+うん、きっと大丈夫だ
+そばにいてあげるだけでも十分さ
+
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+そう、ですか…
+
+# textflame 1 1
+# textboxarrow 0 3
+@老人
+ああそうだ、あの子は――
+
+;;演出：暗転
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+# textwindow "close"
+# waitandnext 0.5
+
+# face 5203111 "normal"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+その後も男性に
+子供達の近況を伝える如意金箍棒
+いつしか夜はすっかり更けていた
+
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+今日はありがとうございました
+みんなも喜びますから
+たまには顔を見せてくださいね
+
+# textflame 1 1
+# textboxarrow 0 3
+@老人
+こちらこそありがとう
+作業の休みにでも寄らせてもらうよ
+
+;;演出：移動の暗転
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：町（夕方）
+# background "004_outland_enening"
+# alpha 1 0 0.3
+# alpha 5203111 0 0.3
+# waitandnext 0.2
+
+# move 6303121 4 0
+# mask 6303121 on
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 5203111 1 0.3
+# voice 530311 "cassius_ca_0002"
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@カシウス
+相談らしい相談は
+しなかったようだけれど
+
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+…うん、大丈夫
+いろんなことを教えてもらったから
+
+# voice 530311 "cassius_ca_0032"
+# face 6303121 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+そう、糧になるものがあったのなら
+答えに至る道を照らせたのなら
+よかったと思う
+
+# voice 520311 "nyoikinkobou_c_0030"
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+うん、ありがとうカシウスちゃん
+
+;;演出：時間経過の暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：部屋の中
+# background "church_room"
+# bgm "bgm003" 0
+# alpha 5203111 0 0
+# alpha 6303121 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+;; wait 0.5秒後ぐらいにノックの音
+# se "SE_0679"
+# waitandnext 1.5
+
+;; wait 1.5秒後ぐらいにドアを開ける音
+# se "SE_0914"
+# move 5203111 3 0
+# alpha 5203111 1 0.3
+# waitandnext 1
+
+# serif 1
+# textflame 1 1
+@男性
+ああニョイ子さん
+いつもお世話になっています！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+翌日の夜、訪れたのは
+例の迷子になった女の子の家だった
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@男性
+街道作りでニョイ子さんには
+子供のことでさらに迷惑を
+掛けてしまって…
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@如意金箍棒
+迷惑なことなんてないですよ
+ワタシの方こそ上手くできてるか
+申し訳なくなっちゃうこともあって…
+
+# serif 1
+@男性
+うちの子は昔から大人の目を盗んで
+町を出ようとしたりはぐれたり
+するところがありますからね…
+
+# layer 5203111 2
+# move 6303121 4 0
+# layer 6303121 4
+# mask 6303121 on
+# serif 0
+# textboxarrow 0 2
+@如意金箍棒
+構ってほしさかと思えば
+本当に外へ出たい願望が強いなんて
+話を聞いて驚きました
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# serif 1
+@男性
+いやはや…まぁそんなあの子の夢を
+叶える為に私もこうして街道作りに
+精力的に参加しているんですが…
+
+# move 5203111 2 0.5
+# face 6303121 "surprise"
+# alpha 6303121 1 0.3
+# serif 0
+# textboxarrow 0 3
+@カシウス
+何か問題が？
+
+# bgm "bgm004" 0
+# serif 1
+@男性
+最初は喜んでくれたんですけどね
+
+# serif 1
+@男性
+作業が忙しくて
+一緒にいる時間が減って
+寂しい思いをさせてしまって…
+
+# serif 1
+@男性
+今では街道なんていいから
+お父さん早く帰ってきてなんて
+言われてしまいまして…
+
+# face 5203111 "surprise"
+# serif 0
+# textboxarrow 0 1
+@如意金箍棒
+それが、最近元気がなかった理由…
+
+# serif 1
+@男性
+あの子の夢だけじゃなく
+街道ができればきっと子供達の
+未来に繋がるものになると思うんです
+
+# serif 1
+@男性
+悲しい思いは互いに抱えていますが
+未来へ向けてやらねばならない
+そう、覚悟しているんです
+
+# serif 0
+# textboxarrow 0 1
+@如意金箍棒
+未来の、為…
+
+# serif 1
+@男性
+だから、ニョイ子さんが
+そばにいてくださって助かっています
+
+# serif 1
+@男性
+夜、寝る前のわずかな時間で一日に
+あったことを話してくれるんですが
+ニョイ子さんの話でいっぱいなんです
+
+# face 6303121 "happy"
+# serif 0
+# textboxarrow 0 1
+@如意金箍棒
+子供達の、そばに…
+
+# serif 0
+# textboxarrow 0 3
+@カシウス
+…………
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+短い会話の中ではあるが
+如意金箍棒はまた気付きを
+得ているようだった
+
+;;演出：時間経過の暗転
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+;;背景：町（昼）
+# background "004_outland"
+# alpha 5203111 0 0
+# alpha 6303121 0 0
+# se "SE_6171"
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1.5
+# waitandnext 1.5
+
+;;ガヤのストップ
+# sestop "SE_6171"
+# textflame 0 0
+# textwindow "nomal"
+@
+それから数日のこと
+
+# bgm "bgm002" 0
+# move 5203111 3 0
+# layer 5203111 2
+# mask 5203111 off
+# voice 520311 "nyoikinkobou_c_0004"
+# face 5203111 "happy"
+# alpha 5203111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@如意金箍棒
+よーし、今日はみんなで
+仙術の練習しよっかー！
+
+# serif 1
+@子供達
+え～無理だってぇ！
+
+# voice 520311 "nyoikinkobou_c_0039"
+# move 6303121 5 0
+# layer 6303121 4
+# mask 6303121 on
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@如意金箍棒
+ふふふ、冗談だよ
+今日はこのままお外で…あら
+
+# move 5203111 2 0.5
+# move 6303121 4 0.5
+# face 6303121 "normal"
+# alpha 6303121 1 0.3
+# textboxarrow 0 0
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+声を掛ける機会を伺っていたの
+とても楽しそうだったから
+
+# face 5203111 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+もう、すぐかけてくれたらいいのに
+
+# voice 530311 "cassius_ca_0004"
+# face 6303121 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+迷いが振り切れたような…
+張り切っているような、そんな雰囲気
+
+# voice 520311 "nyoikinkobou_c_0003"
+# face 5203111 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+…もっとちゃんと行動してみよう
+って思ったの
+
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+カシウスちゃんの言う通り
+未来をよりよいものにしようと
+思い続けてきたんだから…
+
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+目標とか以前に
+それをもっとやろうって
+
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+だって、みんな未来を見ているから
+何かを成そうとしているんだって
+知ることができたから…
+
+# textflame 0 0
+@
+如意金箍棒は連日
+周囲の者に話を聞きに
+行っていたのだという
+
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+目標があるから未来を考えられて
+それを子供達に伝えることができる
+
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+そう思ってたのに、違ったの
+未来を思えば自ずと目標ができて…
+
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+そうやって頑張るんだよ
+って姿を見せることも教育のひとつ
+
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+…カシウスちゃんが言っていたこと
+ワタシなりに解釈することができたの
+
+# voice 530311 "cassius_ca_0034"
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+いいえ…それは恐らく
+元から心の中にあった答えに
+辿り着くことができたということ
+
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+悩みの中にあっては
+わかっていたこと言われたことでも
+それを解と捉えるのは難しい
+
+# scale 196 0.7 0
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+そうかもしれないわね…
+
+;;wait 1秒
+# se "SE_0719"
+# move 5203111 1 0.5
+# alpha 5203111 0 0.3
+# move 6303121 5 0.5
+# alpha 6303121 0 0.3
+# scale 196 0.8 0.3
+# voice 9943 "almace_navikan_0002"
+# alpha 196 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+邪魔するわよー
+
+# serif 1
+@ビコウ
+キキーッ！
+
+# alpha 196 0 0.3
+# voice 520311 "nyoikinkobou_c_0022"
+# move 5203111 2 0.5
+# face 5203111 "surprise"
+# alpha 5203111 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 1
+@如意金箍棒
+あれ、アルマスちゃん？
+まだ時間には早いような…
+
+;;wait 1秒
+# se "SE_0719"
+# move 1 4 1
+# alpha 1 1 0.8
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 3
+@老人
+やぁ、お邪魔するよ
+
+# face 5203111 "shy"
+# serif 1
+@子供達
+あ！
+おじちゃん！
+
+# se "SE_5575"
+# sedelay "SE_5575" 0.1
+# sedelay "SE_5575" 0.2
+# sedelay "SE_5575" 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+子供達が一斉に男性へと駆け寄る
+
+# voice 520311 "nyoikinkobou_c_0021"
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+いらしてくださったんですね！
+
+# alpha 196 1 0.3
+# alpha 5203111 0 0.3
+# alpha 1 0 0.8
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+ニョイ子に謝りたいんだって
+
+# alpha 196 0 0.3
+# voice 520311 "nyoikinkobou_c_0022"
+# face 5203111 "surprise"
+# alpha 5203111 1 0.3
+# alpha 1 1 0.8
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+え？
+
+# textflame 1 1
+# textboxarrow 0 3
+@老人
+はは…いや恥ずかしい話なんだが
+自分の都合で役目を渡しただけで
+無責任だったなと思ってね
+
+# textflame 1 1
+# textboxarrow 0 3
+@老人
+あんな懸命にいろんな人に話を
+聞きに行くような誠実さに
+自分の行動を反省したんだよ…
+
+# textflame 1 1
+# textboxarrow 0 3
+@老人
+これからは街道作りの合間にでも
+自分のできることを手伝うよ
+改めてよろしく頼む、ニョイ子さん
+
+# face 5203111 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+ワタシはただ、自分がすべきことを
+皆さんとの話の中で見つけられれば
+と思っていただけで…
+
+# voice 9943 "almace_navikan_0006"
+# face 196 "happy"
+# alpha 196 1 0.3
+# alpha 5203111 0 0.3
+# alpha 1 0 0.8
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+その行動をたくさんの人が見ていた
+って話よ
+
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+街道作りの現場でも
+ニョイ子の話題でいっぱいなんだから
+
+# alpha 196 0 0.3
+# face 5203111 "shy"
+# alpha 5203111 1 0.3
+# move 6303121 4 0
+# face 6303121 "normal"
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+それはなんだか恥ずかしいような
+
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+無理をして人と関わるのではなく
+それでいて関わらないようにする
+ということでもなく…
+
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+あなたは目標を見つけるまでの
+通過点は気にするまでもなく
+通り過ぎていたということ
+
+# voice 530311 "cassius_ca_0004"
+# face 6303121 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+あなたはもう
+未来を見て歩む者のひとり
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# face 5203111 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+ワタシが…
+
+# voice 530311 "cassius_ca_0002"
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+如意金箍棒
+あなたはどんな未来を思ったの？
+
+# bgmfile "bgm429" "BgmIntegralNoahCommand" 0
+# voice 520311 "nyoikinkobou_c_0003"
+# face 5203111 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+子供達が寂しい思いをせずに
+安心して笑って暮らせる未来だよ
+
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+今は子供達のそばで
+みんなの笑顔を守りたいなって
+
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+そう、頑張ってみよう
+行動してみようって思うと
+子供達に教えたいことが思い浮かぶの
+
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+ワタシがどうとかはもう後回し
+考えるよりも先に伝えたいことが
+生まれてくるようになって…
+
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+あなた達のための未来を
+見ている大人がたくさんいること
+
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+その大人達も自分自身の未来を
+ちゃんと見ているってこと
+
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+未来を思うってことが素敵だってこと
+
+# voice 520311 "nyoikinkobou_c_0004"
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+そしてそれを素敵だって
+思える為に知ってほしいことが
+この世界にはたくさんあるから！
+
+# move 5203111 3 0.5
+# move 6303121 5 0.5
+# alpha 6303121 0 0.3
+# textflame 0 0
+@
+まだ目標がある訳ではない
+けれど、未来を思って目標を持った
+人々を素敵だと思った
+
+# textflame 0 0
+@
+ならば、その助けとなれるよう
+今は自分のできることを頑張る
+如意金箍棒はそう決心したのだ
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# voice 520311 "nyoikinkobou_c_0022"
+# face 5203111 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@如意金箍棒
+あれ、それって…！
+
+# textflame 0 0
+@
+その時、如意金箍棒は
+雷に打たれたような感覚を受ける
+
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+# face 5203111 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@如意金箍棒
+未来を、世界の未来を担う
+子供達を育てる…それがワタシの目標
+
+# se "bgm601_windon"
+# voice 520311 "nyoikinkobou_c_0005"
+# face 5203111 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@如意金箍棒
+ふふふ…
+やっぱりカシウスちゃんの
+言った通りだった
+
+# se "bgm601_guitaron"
+# textflame 1 1
+# textboxarrow 0 2
+@如意金箍棒
+ワタシはもう気付けたのに
+気付いていなかった
+
+# alpha 5203111 0 0.3
+# move 6303121 3 0
+# mask 6303121 off
+# face 6303121 "normal"
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@カシウス
+答えは自らの中にある
+けれど、それを導き出すことは
+容易ではないわ
+
+# face 6303121 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@カシウス
+だから、それができた
+あなたは素晴らしいの、如意金箍棒
+
+# voice 520311 "nyoikinkobou_c_0030"
+# alpha 5203111 1 0.3
+# alpha 6303121 0 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@如意金箍棒
+ありがとう、カシウスちゃん
+
+;;カシウスシナリオカット表示
+# frameout 0 0
+#setnextbgmblock 1
+# fadein "white" 1
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# alpha 5203111 0 0
+# textwindow "close"
+# waitandnext 3
+
+# textflame 0 0
+# textwindow "nomal"
+@
+未来を見つめ目標を得た
+如意金箍棒は新たなる力を手にする
+
+# textflame 1 1
+# textboxarrow 0 0
+@如意金箍棒
+この姿は…
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@カシウス
+わたしもそうだった…
+この世界にいる自分を真の意味で
+受け入れられた証のようね
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 0
+@如意金箍棒
+そっか…
+なら、もっと頑張らないと、かな
+
+;;シナリオカット削除
+# imagealpha 2 0 1
+# framein 0 1
+# serif 0
+# textwindow "close"
+# waitandnext 2
+
+# move 6303121 2 0
+# layer 6303121 4
+# mask 6303121 on
+# voice 530311 "cassius_ca_0022"
+# face 6303121 "surprise"
+# alpha 6303121 1 0.3
+# move 6203121 4 0
+# layer 6203121 2
+# mask 6203121 off
+# face 6203121 "happy"
+# alpha 6203121 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@カシウス
+これ以上何を？
+
+# voice 520311 "nyoikinkobou_c_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@如意金箍棒
+学校を作るの
+
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+学校？
+たしかにそれは子供達の
+面倒を見る以上のことだけれど…
+
+# face 6203121 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@如意金箍棒
+この町もそうだけど
+教育機関がこの世界には
+足りないと思うの
+
+# textflame 1 1
+# textboxarrow 0 3
+@如意金箍棒
+隣町を夢見て町を出ちゃった子も
+ちゃんとした教育を受けていれば
+外が危ないと理解できたはず…
+
+# face 6203121 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@如意金箍棒
+それに、魔獣を避ける植物みたいな
+知識を集約させることも
+未来には必要になるかなって
+
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+知識の集約、教育という継承
+それは人々の営みに大きな影響を
+及ぼすことになる…
+
+# voice 530311 "cassius_ca_0027"
+# face 6303121 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+では、各地に学校を…
+いいえ、それでは知識が散ってしまう
+
+# voice 530311 "cassius_ca_0032"
+# face 6303121 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+そう、世界の知を集積し
+自由に継承を受けられる場
+大きな学園をまずは作るべき
+
+# voice 520311 "nyoikinkobou_c_0021"
+# face 6203121 "shy"
+# textflame 1 1
+# textboxarrow 0 3
+@如意金箍棒
+それ、すごく素敵！
+あ、でも…
+
+# voice 530311 "cassius_ca_0011"
+# face 6303121 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+それには問題がある
+如意金箍棒は子供達のこと
+アルマスは街道作りの手伝い
+
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+それにこの町の立地では
+街道ができたとしても知の集積に
+課題が多く残るでしょう
+
+# voice 520311 "nyoikinkobou_c_0028"
+# face 6203121 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@如意金箍棒
+どうしたら…
+
+# voice 530311 "cassius_ca_0004"
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+わたしが候補地を探すわ
+元より世界を見る旅をしていたのよ
+適任だと思うわ
+
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+それに…
+
+# alpha 6203121 0 0.3
+# alpha 6303121 0 0.3
+# move 196 3 0
+# mask 196 off
+# face 196 "surprise"
+# alpha 196 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+？
+
+# alpha 196 0 0.3
+# move 6303121 3 0
+# mask 6303121 off
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@カシウス
+未来を描くことは
+今のわたしにとって目の前の問題
+
+# face 6303121 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@カシウス
+目の前の問題は
+解決すべきものでしょう？
+
+# textflame 0 0
+@
+ふふ、とアルマスへ微笑むカシウス
+アルマスもにやりと笑みを返す
+
+# alpha 6303121 0 0.3
+# voice 9943 "almace_navikan_0005"
+# face 196 "normal"
+# alpha 196 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+そうね、大問題だわ
+だから、絶・解決しちゃってよ！
+
+# alpha 196 0 0.3
+# voice 530311 "cassius_ca_0033"
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@カシウス
+任せて
+それと如意金箍棒
+学園のことが決まったら助力を願うわ
+
+# alpha 6303121 0 0.3
+# move 6203121 3 0
+# mask 6203121 off
+# face 6203121 "happy"
+# voice 520311 "nyoikinkobou_c_0033"
+# alpha 6203121 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@如意金箍棒
+ええ、もちろん！
+
+# textflame 0 0
+@
+未来を思うようになったカシウスと
+如意金箍棒は大きな目標を掲げ
+新たな一歩を踏み出したのだった
+
+;; サウンドメモ　フェードアウト長めでお願いします
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 4
+# fadeout "black" 4
+# waitandnext 4

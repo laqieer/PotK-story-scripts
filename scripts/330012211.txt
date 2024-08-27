@@ -1,0 +1,344 @@
+;;-----------------------------------------
+;;ファンキル キャラクエ「ロンギヌス（ウェディングVer）」シナリオ
+;;【EP.1】
+;;スクリプト最後の背景：ハルモニア市街地（昼）
+;;背景：ハルモニア市街地（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "400_angel_town_daytime"
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;ロンギヌス
+# body 3300111
+# pos 3300111 3
+# scale 3300111 0.8 0
+# layer 3300111 2
+# alpha 3300111 0 0
+# mask 3300111 off
+;;ロンギヌスウェディング
+# body 3300121
+# pos 3300121 3
+# scale 3300121 0.8 0
+# layer 3300121 2
+# alpha 3300121 0 0
+# mask 3300121 off
+;;ハルモニア兵
+# body 3810001
+# pos 3810001 3
+# scale 3810001 0.8 0
+# layer 3810001 2
+# alpha 3810001 0 0
+# mask 3810001 off
+;;ハルモニア兵（クローン1）
+# entry 938100011 3810001
+# pos 938100011 3
+# scale 938100011 0.8 0
+# layer 938100011 2
+# alpha 938100011 0 0
+# mask 938100011 off
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;【EP.1】
+;;モノローグ
+# textflame 0 0
+@
+ある日のこと、
+ロンギヌスと共にハルモニアに
+出かけることになったマスター
+
+;;モノローグ
+@
+しかし、周囲の様子を見てくると
+傍を離れたきり、戻らない
+ロンギヌスのことが心配になる
+
+;;モノローグ
+@
+何かあったのでは？
+と、探しに行こうとしていると
+
+;;ロンギヌス（可能であれば声だけ、またはシルエット）
+# voice 330011 "ronginusu_t_0002"
+# textflame 1 1
+@ロンギヌス
+あの、マスター…
+
+;;モノローグ
+# textflame 0 0
+@
+背後からロンギヌスの声が聞こえた
+
+;;モノローグ
+@
+よかった、心配したよ
+と、言いながらマスターは振り返る
+
+;;ロンギヌス（照）（以下、ウェディングVer）
+# voice 330011 "ronginusu_t_0031"
+# move 3300121 3 0
+# face 3300121 "shy"
+# alpha 3300121 1 0.5
+# mask 3300121 off
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+す…すみません、遅くなりました
+
+;;モノローグ
+# textflame 0 0
+@
+そこにいたのは、まさに天使だった
+予想外の光景にマスターは言葉を失う
+
+;;ロンギヌス（照）
+# voice 330011 "ronginusu_t_0042"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+あの、これには
+いろいろと事情がありまして…
+
+;;モノローグ
+# textflame 0 0
+@
+そう言って、花嫁衣装に身を包んだ
+ロンギヌスは、恥ずかしそうに
+うつむきながらも口を開くのだった
+
+;;演出：回想シーン
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "004_outland"
+# alpha 3300121 0 0
+# move 3300111 3 0
+# face 3300111 "normal"
+# alpha 3300111 1 0
+# mask 3300111 off
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;モノローグ
+# textwindow "normal"
+@
+マスターとの待ち合わせ場所に
+早めに到着していたロンギヌスは、
+教会の老神父の手伝いをしていた
+
+;;モノローグ
+@
+足腰も目も悪いらしく、
+作業が大変そうだったので
+ロンギヌスは放っておけなかった
+
+# voice 330011 "ronginusu_t_0039"
+# face 3300111 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+そうですか、この綺麗な花たちは
+花嫁のブーケに使うのですね…
+傷つけないように、摘みますね
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 3300111 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+ロンギヌスが摘んだ花は、
+老神父の手によって
+華やかなブーケへと変身した
+
+# voice 330011 "ronginusu_t_0006"
+# move 3300111 3 0
+# face 3300111 "happy"
+# alpha 3300111 1 0.5
+# mask 3300111 off
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+わぁ、すごいです…お上手ですね
+
+;;モノローグ
+# textflame 0 0
+@
+老神父は、試着できるドレスを着て、
+このブーケを持って見てくれないか
+と、ロンギヌスに頼む
+
+;;ロンギヌス（焦り）
+# voice 330011 "ronginusu_t_0023"
+# face 3300111 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+ええっ？ドレスですか？
+あの…私、待ち合わせをしていまして
+そろそろ行かなくてはいけないので…
+
+;;モノローグ
+# textflame 0 0
+@
+恥ずかしさからとっさに出た
+言い訳だったが、待ち合わせの時間が
+迫っていたのも本当だった
+
+;;モノローグ
+@
+すると、老神父は、ちょうどいい
+自分はよく見えないから、その相手に
+見てもらおう、と言い出したのだった
+
+;;演出：回想終わり
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "400_angel_town_daytime"
+# alpha 3300111 0 0
+# imagealpha 0 0 0
+# move 3300121 3 0
+# face 3300121 "shy"
+# alpha 3300121 1 0
+# mask 3300121 off
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;ロンギヌス（以下、ウェディングVer）
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ロンギヌス
+私には似合わないから、と
+何度もお断りしたのですが、
+最終的に押し切られてしまいまして…
+
+# textboxarrow 0 2
+@ロンギヌス
+恥ずかしくはありましたが、
+この姿でマスターを
+お待ちしていたのです…
+
+;;モノローグ
+# face 3300121 "normal"
+# textflame 0 0
+@
+ロンギヌスは、なにも言わない
+マスターの反応が気になり、
+おそるおそる顔を上げる
+
+;;モノローグ
+@
+マスターはニコニコしながら、
+とてもかわいい、すごく似合うよ！
+と、ロンギヌスのドレス姿をほめる
+
+;;ロンギヌス（困惑）
+# voice 330011 "ronginusu_t_0022"
+# face 3300121 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+…かわいい？
+私が…ですか？
+
+;;::できればもやもやフレームで
+# voice 330011 "ronginusu_t_0028"
+# move 3300121 3 0
+# face 3300121 "sad"
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 3300121 off
+@ロンギヌス
+マスターの言葉は嬉しいはずなのに、
+どうしてだろう…素直に喜べない
+なんだか、心の中がモヤモヤして…
+
+# face 3300121 "normal"
+# textboxarrow 0 2
+# textwindow "normal"
+@ロンギヌス
+そ、それでは…神父様に
+そう伝えてきますね
+
+;;モノローグ
+# textflame 0 0
+@
+そう言って、
+どこか落ち着かない様子の彼女が
+教会に入ろうとした時…
+
+# voice 330011 "ronginusu_t_battle_0005"
+# face 3300121 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+あれは…
+マスターっ！ハルモニア兵です！
+花畑に入っていきましたっ！
+
+;;モノローグ
+# alpha 3300121 0 0.5
+# textflame 0 0
+@
+兵たちのもとへ向かうと、
+彼らはマスターたちに気づいて
+口を開いた
+
+# move 3810001 2 0
+# alpha 3810001 1 0.5
+# mask 3810001 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 938100011 4 0
+# alpha 938100011 1 0.5
+# mask 938100011 on
+@ハルモニア兵1
+この教会に見慣れない者がいるという
+報告があったのですが…
+それが、貴方ですね？
+
+# textboxarrow 0 3
+@ハルモニア兵2
+神父を尋問する手間が省けましたね
+まったく汚らわしい…
+早く捕まえて粛清しましょう！
+
+# voice 330011 "ronginusu_t_0010"
+# alpha 3810001 0 0.5
+# alpha 938100011 0 0.5
+# move 3300121 3 0
+# face 3300121 "angry"
+# alpha 3300121 1 0.5
+# mask 3300121 off
+# textboxarrow 0 2
+@ロンギヌス
+…主に対してその態度、
+この私が許しません
+
+# textboxarrow 0 2
+@ロンギヌス
+主に仇なす者には、
+私が終焉を告げましょう

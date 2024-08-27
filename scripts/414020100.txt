@@ -1,0 +1,96 @@
+;;----------------------------------------------
+;;414020100
+;;２章 輪廻の斬ル姫【OP】
+;;----------------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm293" "BgmLostRagnarokSideStory" 0
+;;ロンギヌス
+# body 3300111
+# pos 3300111 2
+# scale 3300111 0.8 0
+# layer 3300111 2
+# mask 3300111 on
+# alpha 3300111 0 0
+;;フォルカス
+# body 3301811
+# pos 3301811 3
+# scale 3301811 0.8 0
+# layer 3301811 1
+# mask 3301811 on
+# alpha 3301811 0 0
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;◆背景：黒----------------------------------------------
+# textflame 0 0
+# textboxarrow 0 0
+# voice 330011 "ronginusu_t_0002"
+# chara 3300111
+@ロンギヌス
+例えば明日
+世界が終わるとしたら
+
+# textflame 0 0
+# textboxarrow 0 0
+# chara 3300111
+@ロンギヌス
+最期に何をしようかと
+一度は考えたこと
+ありますよね
+
+# textflame 0 0
+# textboxarrow 0 0
+# chara 3300111
+@ロンギヌス
+私はきっと
+いつもと変わらぬ
+…ありふれた日常を
+
+;;◆背景：洞の地下・不思議な空間--------------------------
+# textwindow "close"
+# fadeout "white" 1.0
+# waitandnext 1.0
+
+# background "101_cave"
+# waitandnext 0.5
+
+# fadein "white" 1.0
+# waitandnext 1.3
+
+;;フォルカス
+# alpha 3301811 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3301811 "surprise"
+# voice 330181 "forcas_t_0022"
+# chara 3301811
+@フォルカス
+この場所は…!?
+ここは…一体
+
+;;ロンギ合流
+# textwindow "close"
+# move 3301811 4 0.5
+# alpha 3300111 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 330011 "ronginusu_t_0005"
+# chara 3300111
+@ロンギヌス
+さあ
+終焉を告げる前に懺悔を終えて…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3300111 "angry"
+# chara 3300111
+@ロンギヌス
+“第二章”を始めましょう

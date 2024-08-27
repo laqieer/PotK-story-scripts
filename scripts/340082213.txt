@@ -1,0 +1,283 @@
+;;-----------------------------------------
+;;【EP2_3】
+;;バレンタイン「オティヌス」キャラクエ
+;;背景：ケイオスリオン、伯爵の屋敷
+;;-----------------------------------------
+# script "lisp"
+# background "201_room"
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;オティヌス（バレンタイン衣装）
+# body 3400821
+# pos 3400821 3
+# scale 3400821 0.8 0
+# alpha 3400821 0 0
+# mask 3400821 off
+;;ケイオスリオン兵
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# alpha 3820001 1 0
+# mask 3820001 off
+;;-----------------------------------------
+;;一枚絵
+# imageset 1 "c3400821"
+# imagelayer 1 3
+# imagealpha 1 0 0
+;;-----------------------------------------
+# textflame 1 1
+# textboxarrow 0 2
+@ケイオスリオン兵
+くっ…
+斬ル姫の分際で生意気な…
+勝手な行動は処罰の対象だぞ！
+
+# textflame 1 1
+# textboxarrow 0 2
+@ケイオスリオン兵
+お前らは戦うだけのただの道具だ！　
+道具は道具らしく、黙って従え！
+
+# alpha 3820001 0 0.5
+# textflame 0 0
+@
+度重なる兵士の勝手な言い分に、
+マスターの怒りが爆発した
+
+# textflame 0 0
+@
+いい加減にしろ、
+彼女は道具なんかじゃない！
+…気がつくと、そう叫んでいた
+
+# textflame 0 0
+@
+自分の意思で行動することができる
+大事な仲間だ！
+と、続ける
+
+# alpha 3400821 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "surprise"
+# voice 340081 "otyinusu_a_0015"
+@オティヌス
+マスター…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "usual"
+# voice 340081 otyinusu_a_0003""
+@オティヌス
+そうだ…
+あたしは、あたしの意思で
+マスターに従う
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "angry"
+# voice 340081 "otyinusu_a_0029"
+@オティヌス
+マスターの敵が、あたしの敵だ！
+はああぁぁぁっ！
+
+# fadein "white" 0.5
+# se "SE_0602"
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+『悪戯心の告白』！
+
+# alpha 3400821 0 0.5
+# textflame 0 0
+@
+それは彼女が
+新たなるスキルに目覚めた
+瞬間だった
+
+# alpha 3820001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ケイオスリオン兵
+うわぁああ！！
+
+# alpha 3820001 0 1
+# textflame 0 0
+@
+兵士たちは、オティヌスに
+恐れをなして逃げていく
+
+# alpha 3400821 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "sad"
+@オティヌス
+マスター…
+その…
+いや、なんでもない…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "usual"
+# voice 340081 "otyinusu_a_0002"
+@オティヌス
+さあ、兵士の増援が来る前に
+ここから立ち去るとしよう
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.2
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+;;背景：ケイオスリオン、屋外
+# background "plain"
+# alpha 3400821 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# textwindow "nomal"
+# textflame 0 0
+@
+屋敷を出たあと、オティヌスは
+チョコレートをこっそりと
+ビックリ箱に仕込み、準備は完了した
+
+# alpha 3400821 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "normal"
+# voice 340081 "otyinusu_a_0004"
+@オティヌス
+ふふっ…
+さて、マスターはどんな顔を
+見せてくれるんだろうね？
+
+# textflame 0 0
+@
+オティヌスは真剣な表情を作り、
+先を歩いていたマスターを呼び止める
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "shy"
+# voice 340081 "otyinusu_a_0001"
+@オティヌス
+マスター…
+さっきは、あたしを道具じゃない、
+仲間だと言ってくれて、ありがとう
+
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+お礼と言ってはなんだが…
+これを、受け取ってくれるかい？
+
+# textflame 0 0
+@
+マスターは、真剣なオティヌスに
+戸惑いながらも、喜んで箱を受け取り
+ありがとう、と礼を言う
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "usual"
+# voice 340081 "otyinusu_a_0002"
+@オティヌス
+なにが入っていると思う？
+開けてごらんよ？
+
+# fadein "white" 0.3
+# se "SE_0743"
+# shake 0 0.5
+# textflame 0 0
+@
+マスターがそっと箱を開けると、
+パーンという破裂音と同時に、
+小さなオティヌス人形が飛び出す
+
+# textflame 0 0
+@
+うわぁ！と驚いて尻もちをつく
+マスターを見て、オティヌスは
+嬉しそうに笑った
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "normal"
+# voice 340081 "otyinusu_a_0005"
+@オティヌス
+あはは！期待以上だ、最高だよ！
+ほら、チョコレートも食べてごらん
+
+# textflame 0 0
+@
+もしかしたら、さっきの激辛かも
+と、一瞬躊躇したマスターだったが、
+オティヌスを信じて口に放り込む
+
+# textflame 0 0
+@
+マスターはそのチョコレートの味に、
+目を大きくしたままで固まる
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "usual"
+# voice 340081 "otyinusu_a_0004"
+@オティヌス
+んふふっ…
+驚いたようだね？
+
+# textflame 0 0
+@
+チョコレートは驚くほど美味しかった
+マスターがそう言うと、
+オティヌスはニヤっと笑う
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "normal"
+# voice 340081 "otyinusu_a_0020"
+@オティヌス
+観客の予想を裏切る…
+それが
+ショウの醍醐味ってもんだろう？
+
+# textflame 1 1
+@オティヌス
+…あれ？
+物足りないって顔をしてるね
+じゃあ、口直しにこれをあげるよ
+
+# textflame 0 0
+@
+そう言って
+彼女は悪戯っぽく笑いながら
+もう一つの箱を渡してくるのだった
+
+;;■一枚絵指定
+;;★５
+;;背景：街道（朝）
+;;表情：得意げな表情に少しだけ、テレが入り頬を赤くしてください。
+;;構図：片腕を自転車のハンドルに寄りかかり、もう片方の腕でチョコを渡しているイメージです。
+;;　　　左手にボトルを持っているイメージになります。
+;;一枚絵ボイス：「はい、チョコレートだよ。大丈夫、ちゃんと食べられるさ。
+;;　　　　　　　辛いチョコレートも新鮮で美味しいよ」
+;;otyinusu_a_event_0004
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# fadein "white" 3
+# buttonsout 0 0
+# textwindow "close"
+# voice 340081 "otyinusu_a_event_0004"
+
+# frameout 0 1
+
+# fadeout "black" 1.5
+# waitandnext 1.5

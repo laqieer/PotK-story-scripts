@@ -1,0 +1,585 @@
+;;-----------------------------------------
+;;ファンキル学園8月
+;;4_1
+;;-----------------------------------------
+# script "lisp"
+# bgm "bgm002" 0
+# background "corridor_culturefestival_daytime"
+;;-----------------------------------------
+;;八咫鏡
+# body 98
+# pos 98 3
+# scale 98 0.8 0
+# layer 98 3
+# mask 98 off
+# alpha 98 0 0
+# body 500311
+# alpha 500311 0 0
+;;ナーゲルリング
+# body 77
+# pos 77 3
+# scale 77 0.8 0
+# layer 77 3
+# mask 77 off
+# alpha 77 0 0
+# body 100611
+# alpha 100611 0 0
+;;ラブリュス
+# body 67
+# pos 67 3
+# scale 67 0.8 0
+# layer 67 4
+# mask 67 off
+# alpha 67 0 0
+# body 200311
+# alpha 200311 0 0
+;;ダーインスレイヴ
+# body 110
+# pos 110 3
+# scale 110 0.8 0
+# layer 110 3
+# mask 110 off
+# alpha 110 0 0
+# body 102811
+# pos 102811 3
+# scale 102811 0.8 0
+# layer 102811 3
+# mask 102811 off
+# alpha 102811 0 0
+;;フラベルム
+# body 501621
+# pos 501621 3
+# scale 501621 0.8 0
+# layer 501621 3
+# mask 501621 off
+# alpha 501621 0 0
+# body 501611
+# pos 501611 3
+# scale 501611 0.8 0
+# layer 501611 3
+# mask 501611 off
+# alpha 501611 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;フラベルムの衣装の件ですが、演劇の非日常感を重視し、
+;;天上編verを使用させていただく方針で制作しております。
+;;背景：廊下(文化祭・昼)
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2.5
+
+# move 67 2 0
+# mask 67 on
+# alpha 67 1 0.5
+# move 501621 4 0
+# mask 501621 on
+# alpha 501621 1 0.5
+# face 501621 "angry"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 67 "happy"
+# voice 2003 "loveryus_0030"
+@ラブリュス
+ありがと～っ、
+マスター！　フラベルム！
+助かっちゃった！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラブリュス
+放送室を借りて
+みんなに声を届けるなんて、
+ナイスアイデアだよ～！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5016 "Flabellum_0028"
+@フラベルム
+いえ…わたくしはただ
+マスターの提案に
+乗っただけです
+
+# se "SE_6501"
+# emotionbody 1000 1 501621 10 300
+# effectpattern 1000 2 0
+# effectstart 1000
+# textflame 1 1
+# textboxarrow 0 3
+# face 501621 "surprise"
+# voice 5016 "Flabellum_0024"
+@フラベルム
+ファンの心を動かしたのは
+あなたの声…ひゃっ！？
+
+# se "SE_6505"
+# emotionbody 1001 3 67 10 200
+# effectpattern 1001 2 3
+# effectstart 1001
+# textflame 1 1
+# textboxarrow 0 1
+# voice 2003 "loveryus_0004"
+@ラブリュス
+んふふっ♪　これからも
+仲良くしよーね、の握手！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5016 "Flabellum_0012"
+@フラベルム
+は、離しなさいっ！
+無礼ですよ、
+突然手を握るなど…！
+
+# effectskip 1001
+# textflame 1 1
+# textboxarrow 0 1
+# face 67 "normal"
+@ラブリュス
+え～、いいじゃん！
+女の子どうしなんだし！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラブリュス
+それに、フラベルムって
+最初はちょっと
+怖いなーって思ってたけど…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 67 "happy"
+@ラブリュス
+ほんとはすっごく優しくて、
+いい子なんだな～って
+わかったからさ～♪
+
+# textflame 1 1
+# textboxarrow 0 3
+@フラベルム
+な、な、な…！！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 67 "normal"
+@ラブリュス
+だからこれからも仲良く…
+あっ、いけなーい！
+ライブ始まっちゃう！
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 2003 "loveryus_0020"
+@ラブリュス
+それじゃね、二人とも！
+良かったらライブも
+見に来てね～♪
+
+;;ＳＥ：タッタッタッ(ラブリュスが走る音)
+# se "SE_5575"
+;;ト書き：ラブリュス、画面から消える
+# alpha 67 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# move 501621 3 0.5
+# mask 501621 off
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@フラベルム
+…………
+
+# textflame 0 0
+@マスター
+よかったね、
+フラベルム
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 501621 "angry"
+# voice 5016 "Flabellum_0009"
+@フラベルム
+…なんですか、その目は？
+撃ち抜きますよ…！！
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：廊下(文化祭・夕)
+# background "corridor_culturefestival_evening"
+# alpha 501621 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 501621 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 501621 "normal"
+@フラベルム
+学園祭も
+いよいよ大詰めですね
+
+# textflame 1 1
+# textboxarrow 0 2
+@フラベルム
+あとはこのまま、
+何事もなく終わってくれれば…
+
+# serif 1
+# textwindow "nomal"
+@？？？
+マスター
+レディ・フラベルム
+
+# se "SE_6502"
+# emotionbody 1002 2 501621 10 290
+# effectpattern 1002 1 1
+# effectstart 1002
+# serif 0
+# textboxarrow 0 2
+# face 501621 "angry"
+# voice 5016 "Flabellum_0023"
+@フラベルム
+…？
+あなたは…
+
+# alpha 501621 0 0.5
+# alpha 110 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.8
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 1028 "dainsleif_0003"
+@ダーインスレイヴ
+ああ、申し遅れた…
+わたしの名はダーインスレイヴ
+
+# textflame 1 1
+# textboxarrow 0 2
+@ダーインスレイヴ
+おぬしらのことは耳にしている
+実行委員として
+活躍しているようではないか
+
+# move 110 2 0.5
+# mask 110 on
+# move 501621 4 0
+# mask 501621 on
+# alpha 501621 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5016 "Flabellum_0003"
+@フラベルム
+はあ、恐縮です
+…何か御用でしょうか？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 110 "happy"
+# voice 1028 "dainsleif_0005"
+@ダーインスレイヴ
+ふふ…
+話が早くて助かるよ、レディ
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 110 "normal"
+@ダーインスレイヴ
+お願いがあるんだ
+わたしと共に
+演劇に出る気はないか？
+
+# se "SE_6525"
+# emotionbody 1004 11 501621 -60 240
+# effectpattern 1004 2 0
+# effectstart 1004
+# textflame 1 1
+# textboxarrow 0 3
+# face 501621 "surprise"
+# voice 5016 "Flabellum_0023"
+@フラベルム
+…え？
+
+;;演出：場面転換
+# fadeout "black" 0.7
+# waitandnext 1
+
+;;背景：体育館
+# background "gymnasium"
+;;ト書き：体育館での演劇、クライマックスシーン。
+;;ロミオとジュリエットのラストシーンイメージです。
+# bgm "bgm004" 0
+# alpha 110 0 0
+# alpha 501621 0 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "black" 0.7
+# waitandnext 1
+
+# alpha 102811 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 102811 "sad"
+# voice 1028 "dainsleif_battle_0006"
+;;ダーインスレイヴ(以下、天上編ver)
+@ダーインスレイヴ
+―レディッ！！
+あぁ…なぜ…
+なぜこんなことに…！
+
+# serif 1
+# textwindow "nomal"
+;;フラベルム(以下、天上編ver)
+@フラベルム
+…………
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 1028 "dainsleif_0015"
+@ダーインスレイヴ
+どうか、許してくれ…
+おぬしを守れなかったわたしを…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ダーインスレイヴ
+待っていてほしい、
+わたしもすぐに
+そちらに逝くから…！
+
+;;ト書き：ダーインスレイヴが毒を飲む
+# fadein "red" 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 102811 "angry"
+# voice 1028 "dainsleif_0038"
+@ダーインスレイヴ
+んぐっ…！
+うっ…ごほっ！！
+か、はっ…
+
+;;ＳＥ：ドサッ(ダーインスレイヴが倒れる音)
+# se "SE_3001"
+# alpha 102811 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+;;演出：暗転(ステージの照明が消えた演出です)
+# bgm "stop"
+# imagealpha 0 1 1
+# imagepos 0 0 0
+# waitandnext 1.2
+
+;;ＳＥ：パチパチパチパチ…(観客の拍手)
+# move 102811 4 0
+# mask 102811 on
+# alpha 102811 1 0
+# move 501611 2 0
+# mask 501611 on
+# alpha 501611 1 0
+# se "SE_0600"
+# background "bg_black"
+# waitandnext 0.5
+
+;;ト書き：以下、小声で話しているイメージです。
+# imagealpha 0 0 0.5
+# waitandnext 0.5
+
+# textsize 20
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 501621 "sad"
+# voice 5016 "Flabellum_0019"
+@フラベルム
+…はあ
+死体の真似というのも、
+案外疲れるものですね
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 102811 "normal"
+# voice 1028 "dainsleif_0004"
+@ダーインスレイヴ
+ふふ、良い演技だったぞ？
+おぬしはなかなか
+役者肌のようだ
+
+# textflame 1 1
+# textboxarrow 0 3
+@ダーインスレイヴ
+これほどの歓声ならば、
+きっと最優秀賞は
+わたしたちのものとなるだろう
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 501621 "angry"
+@フラベルム
+やはりあなたも、
+最初からそれが狙いで？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 102811 "sad"
+# voice 1028 "dainsleif_0031"
+@ダーインスレイヴ
+利用してしまったようで
+すまないね
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 102811 "normal"
+@ダーインスレイヴ
+賞品に興味はないが…
+たまには名誉を手に入れるのも
+悪くないと思ったんだ
+
+# textflame 1 1
+# textboxarrow 0 3
+@ダーインスレイヴ
+…おっと、そろそろ
+ラストシーンが始まるぞ
+
+# textflame 1 1
+# textboxarrow 0 3
+@ダーインスレイヴ
+では、あとは台本通りに―
+
+;;ト書き：小声イメージここまで
+# imagealpha 0 1 0.5
+# imagepos 0 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：体育館(ステージの照明がついた演出です)
+# background "gymnasium"
+# alpha 501611 0 0
+# alpha 102811 0 0
+# bgm "bgm005" 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# waitandnext 0.5
+
+# textsize 24
+;;ト書き：以下、制服verのナーゲルリング、ラブリュス、八咫鏡登場
+# alpha 77 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 77 "angry"
+@ナーゲルリング
+待ってください！
+
+# textflame 1 1
+# textboxarrow 0 2
+@ナーゲルリング
+そう易々と、
+豪華賞品は渡しませんよっ！
+
+# se "SE_6501"
+# emotionbody 1005 1 501611 10 300
+# effectpattern 1005 2 0
+# effectstart 1005
+# alpha 77 0 0.5
+# move 501611 3 0
+# mask 501611 off
+# alpha 501611 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 501611 "angry"
+# voice 5016 "Flabellum_0022"
+@フラベルム
+なっ！？
+あなた…どうしてここに？
+
+# alpha 501611 0 0.5
+# move 67 2 0
+# mask 67 on
+# alpha 67 1 0.5
+# move 98 4 0
+# mask 98 on
+# alpha 98 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 67 "happy"
+# voice 2003 "loveryus_0002"
+@ラブリュス
+やっほー！
+ラブリュスちゃんもいるよ～♪
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5003 "yatanokagami_0002"
+@八咫鏡
+わらわもじゃ！
+
+# alpha 67 0 0.5
+# alpha 98 0 0.5
+# move 102811 4 0
+# mask 102811 on
+# alpha 102811 1 0.5
+# move 501611 2 0
+# mask 501611 on
+# alpha 501611 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1028 "dainsleif_0040"
+@ダーインスレイヴ
+これはこれは…
+とんだどんでん返しが
+やってきたようだ
+
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+いったい何の真似ですか？
+
+# alpha 102811 0 0.5
+# alpha 501611 0 0.5
+# alpha 77 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 77 "normal"
+# voice 1006 "nageruring_0004"
+@ナーゲルリング
+ふふふっ…
+私たちの望みはただひとつ！
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 77 "angry"
+@ナーゲルリング
+マスターの無事と引き換えに―
+豪華賞品を渡してくださいっ！
+
+# fadeout "black" 1
+# waitandnext 1.2

@@ -1,0 +1,213 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー11章
+;;第0話　タイトル：プロローグ
+;;00_OP
+;;スクリプト最後の背景：紙芝居のような舞台
+;;-----------------------------------------
+# script "lisp"
+# background "profound"
+# bgmfile "bgm263" "BgmLostRagnarok001" 0
+;;-----------------------------------------
+;;モラルタ
+# body 3104011
+# pos 3104011 3
+# scale 3104011 0.8 0
+# layer 3104011 2
+# alpha 3104011 0 0
+# mask 3104011 off
+;;ベガルタ
+# body 3104111
+# pos 3104111 3
+# scale 3104111 0.8 0
+# layer 3104111 3
+# alpha 3104111 0 0
+# mask 3104111 off
+;;-----------------------------------------
+;;//背景：紙芝居のような舞台
+# textwindow "close"
+# fadeout "black" 0.1
+# imageset 0 "st_thickcurtain_left"
+# imagealpha 0 0 0 
+# imageset 1 "st_thickcurtain_right"
+# imagealpha 1 0 0 
+# imageset 2 "st_thickcurtain_top"
+# imagealpha 2 0 0 
+# frameout 0 0.5
+# waitandnext 0.1
+
+# imagepos 0 -180 0
+# imagepos 1 180 0
+# imagepos 2 0 450
+# imagealpha 1 1 0
+# imagealpha 0 1 0
+# imagealpha 2 1 0
+# waitandnext 0.2
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# imagemoveto 0 -540 0 2
+# imagemoveto 1 540 0 2
+# waitandnext 2
+
+# imagealpha 1 0 0
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;//背景：紙芝居のような舞台
+# voice 1040 "morallta_kyara_1001"
+# move 3104111 2 0
+# face 3104111 "normal"
+# alpha 3104111 1 0.5
+# mask 3104111 on
+# move 3104011 4 0
+# face 3104011 "normal"
+# alpha 3104011 1 0.5
+# mask 3104011 on
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@モラルタ
+ねえねえ知ってる？
+ねえ知ってる？
+こんな喜劇をねえ知ってる？
+
+# voice 1041 "beagallta_kyara_1001"
+# textboxarrow 0 1
+@ベガルタ
+ねえねえ知ってる？
+ねえ知ってる？
+こんな悲劇をねえ知ってる？
+
+# voice 1040 "morallta_0006"
+# face 3104011 "happy"
+# textboxarrow 0 3
+@モラルタ
+やった！
+やったぞ、一等だ！
+僕が一番にゴールしたぞ！
+
+# face 3104111 "happy"
+# textboxarrow 0 1
+@ベガルタ
+おめでとう！
+私は神だ
+
+# face 3104011 "normal"
+# textboxarrow 0 3
+@モラルタ
+ふーん…
+神様、一等賞のご褒美を下さい！
+
+# voice 1041 "beagallta_0033"
+# textboxarrow 0 1
+@ベガルタ
+もちろんだともっ
+さあ、受け取りなさい
+
+# voice 1040 "morallta_0022"
+# face 3104011 "surprise"
+# textboxarrow 0 3
+@モラルタ
+神様…これは何？
+
+# voice 1041 "beagallta_0004"
+# textboxarrow 0 1
+@ベガルタ
+私特製の私人形だよ
+私の世界で大人気なんだ
+
+# voice 1040 "morallta_0026"
+# face 3104011 "angry"
+# textboxarrow 0 3
+@モラルタ
+気持ち悪い…
+こんなの欲しくないよっ
+もっと良いもの頂戴！
+
+# voice 1041 "beagallta_0009"
+# face 3104111 "angry"
+# textboxarrow 0 1
+@ベガルタ
+何を言っているんだ！
+私の世界では滅多に手に入らない
+大人気作品なんだよっ
+
+# voice 1040 "morallta_0013"
+# textboxarrow 0 3
+@モラルタ
+神様の世界のことなんて
+知らないよ！
+僕の欲しいものをくれよ！
+
+# voice 1041 "beagallta_0010"
+# textboxarrow 0 1
+@ベガルタ
+君の世界のことなんか知るものか！
+そんな奴は、こうしてくれるっ
+
+;;//モラルタが姿を消す
+# se "SE_5508"
+# alpha 3104011 0 0.5
+# waitandnext 0.5
+
+# face 3104111 "happy"
+# textboxarrow 0 1
+@ベガルタ
+ふう…
+これで世界は平和になった
+
+;;//モラルタが姿を現す
+# se "SE_5243"
+# voice 1040 "morallta_0010"
+# face 3104011 "angry"
+# alpha 3104011 1 0.5
+# textboxarrow 0 3
+@モラルタ
+よくもやったな！
+僕の世界に
+お前なんかいらないよ！
+
+;;//ベガルタの姿が消える
+# se "SE_5508"
+# alpha 3104111 0 0.5
+# waitandnext 0.5
+
+# face 3104011 "normal"
+# textboxarrow 0 3
+@モラルタ
+ふう…
+これで邪魔者はいなくなった
+
+# voice 1040 "morallta_0020"
+# face 3104011 "happy"
+# textboxarrow 0 3
+@モラルタ
+ここは僕だけの世界
+完璧で完全な僕だけの世界
+ああ、愉快愉快♪
+
+;;//ベガルタが現れる
+# se "SE_5243"
+# voice 1041 "beagallta_0020"
+# face 3104111 "happy"
+# alpha 3104111 1 0.5
+# textboxarrow 0 1
+@ベガルタ
+ここは私だけの世界
+誰にも邪魔されない素敵な世界
+ああ、愉快愉快♪
+
+# voice 1040 "morallta_0004"
+# voice 1041 "beagallta_0005"
+# textboxarrow 0 0
+@モラルタ＆ベガルタ
+ああ、愉快愉快♪
+
+# voice 1040 "morallta_kyara_1001"
+# voice 1041 "beagallta_kyara_1001"
+# face 3104011 "normal"
+# textboxarrow 0 0
+@モラルタ＆ベガルタ
+ねえねえ知ってる？
+ねえ知ってる？
+こんなお話し、ねえ知ってる？

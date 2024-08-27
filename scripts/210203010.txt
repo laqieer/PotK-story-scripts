@@ -1,0 +1,916 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第20章 章タイトル：ワールドサルベイション
+;;第2話―１　タイトル：エピローグ２
+;;3_0
+;;スクリプト最後の背景：黒
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgm "stop"
+;;-----------------------------------------
+;;異族化ティルフィング（ボイス用）
+# body 5101431
+# alpha 5101431 0 0
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 2
+# alpha 24 0 0
+# mask 24 off
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 2
+# alpha 0 0 0
+# mask 0 off
+;;パラシュ
+# body 200411
+# pos 200411 3
+# scale 200411 0.8 0
+# layer 200411 2
+# alpha 200411 0 0
+# mask 200411 off
+;;アルテミス
+# body 400131
+# pos 400131 3
+# scale 400131 0.8 0
+# layer 400131 2
+# alpha 400131 0 0
+# mask 400131 off
+;;フライクーゲル
+# body 500211
+# pos 500211 3
+# scale 500211 0.8 0
+# layer 500211 2
+# alpha 500211 0 0
+# mask 500211 off
+;;マサムネ（天上）
+# body 100111
+# pos 100111 3
+# scale 100111 0.8 0
+# layer 100111 2
+# alpha 100111 0 0
+# mask 100111 off
+;;ロンギヌス（天上）
+# body 300111
+# pos 300111 3
+# scale 300111 0.8 0
+# layer 300111 2
+# alpha 300111 0 0
+# mask 300111 off
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：平原：plain
+;;ユーザー名（もしくは空白）
+# se "SE_0944"
+# textflame 0 0
+@%(userName)s
+今日も世界は平和だ
+
+;;ユーザー名
+@%(userName)s
+もちろん小さな争いごとはあるけれど
+概ね穏やかに暮らしている
+
+;;ユーザー名
+@%(userName)s
+皆が幸せに過ごせる世界
+そんな理想郷みたいな日々が続いて
+いるのに…
+
+;;ユーザー名
+@%(userName)s
+何故か満たされない自分がいた
+
+;;ユーザー名
+@%(userName)s
+どうしてなのかは分からない
+ただ…
+ずっと心に引っ掛かっている…
+
+;;背景：町：town
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "town"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;喧騒の間を取る
+# se "SE_0902"
+# waitandnext 2
+
+;;マスターアルマスが駆けてきてぶつかる
+# se "SE_5575"
+# move 196 3 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 off
+# waitandnext 0.5
+
+# se "SE_0656"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;アルマス（マスターアルマス）
+# voice 9943 "almace_navikan_0046"
+# face 196 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+あっと！？
+ごめんなさいっ
+
+;;選択肢
+;;
+;;A大丈夫だよ
+;;B…………
+# select "大丈夫だよ" "select_label_01" "…………" "select_label_02"
+あっと！？
+ごめんなさいっ
+
+;;A
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 196 "happy"
+# textboxarrow 0 2
+@アルマス
+良かった
+久し振りの町だったから、
+ちょっと余所見してて…
+
+;;B
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 196 "normal"
+# textboxarrow 0 2
+@アルマス
+どうしたの？
+ボーッとしちゃって
+
+# label "select_label_end"
+# face 196 "happy"
+# textboxarrow 0 2
+@アルマス
+お詫びに、これあげるわ
+元気が出るわよっ
+
+# voice 9943 "almace_navikan_0006"
+# textboxarrow 0 2
+@アルマス
+チョコレート
+さっき良いの買ったんだ♪
+
+;;一瞬回想
+;;seなし
+;;背景：街中：town
+;;立ち絵表示　デュリン、天上編ティルフィング（二人とも顔に影）
+;;
+;;アルマスのチョコレートから
+;;デュリンにチョコレートをあげるティルフィングを一瞬連想した描写として
+;;ノイズを入れた回想や顔が見えない不鮮明な回想として演出できればと
+;;顔だけ影はできないので濃い目のシルエットにして回想的な演出で（齋藤）
+# sestop "SE_0944"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "town"
+# alpha 196 0 0
+# move 24 2 0
+# face 24 "normal"
+# alpha 24 1 0
+# mask 24 on
+# brightness 24 0.2 0
+# move 0 4 0
+# face 0 "normal"
+# alpha 0 1 0
+# mask 0 on
+# brightness 0 0.2 0
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# waitandnext 1
+
+# fadeout "white" 1
+# waitandnext 1
+
+# background "town"
+# alpha 24 0 0
+# alpha 0 0 0
+# move 196 3 0
+# face 196 "happy"
+# alpha 196 1 0
+# mask 196 off
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+どう？
+美味しいでしょっ
+
+# voice 9943 "almace_navikan_0001"
+# face 196 "normal"
+# textboxarrow 0 2
+@アルマス
+…ねえ
+チョコレートをじっと見て
+そんなに珍しいものじゃないわよ
+
+;;選択肢
+;;
+;;A何か忘れている気がする
+;;B誰か足りない気がする
+# select "何か忘れている気がする" "select_label_03" "誰か足りない気がする" "select_label_04"
+…ねえ
+チョコレートをじっと見て
+そんなに珍しいものじゃないわよ
+
+;;A
+# label "select_label_03"
+# labeljump "select_label_end1"
+;;ABどちらでも再生するように
+# bgmfile "bgm410_8" "BgmIntegralNoahBattle001" 0
+# face 196 "happy"
+# textboxarrow 0 2
+@アルマス
+忘れ物？
+一緒に探してあげよっか？
+
+;;B
+# label "select_label_04"
+# labeljump "select_label_end1"
+;;ABどちらでも再生するように
+# bgmfile "bgm410_8" "BgmIntegralNoahBattle001" 0
+# face 196 "normal"
+# textboxarrow 0 2
+@アルマス
+誰か足りないって…
+あなたの知り合い？
+
+# label "select_label_end1"
+# se "SE_5575"
+# waitandnext 0.5
+
+# face 196 "surprise"
+# textboxarrow 0 2
+@アルマス
+あっ！
+…急に走り出して
+どうしたのかしら？
+
+;;グランテピエ（声だけ）
+# serif 1
+@グランテピエ
+アルマスーっ
+どこにいったの、かな？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+@アルマス
+あ、いけないっ
+お姉ちゃんが捜してる…
+
+;;アルマスが立ち去る
+# se "SE_0740"
+# textwindow "close"
+# leftout 196 1
+# waitandnext 1
+
+;;暗転挟む
+# fadeout "black" 1
+# waitandnext 1.2
+
+;;# sestop "SE_0944"
+# alpha 196 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;# bgmfile "bgm410_8" "BgmIntegralNoahBattle001" 0
+# serif 1
+@住民１
+無くしたもの？
+何を無くしたんだい？
+…え？特徴も何も分からない？
+
+# serif 1
+@住民２
+人を捜してるのかも、ねぇ
+名前も知らない人を捜してるって…
+あんた、頭おかしいんじゃないか
+
+;;背景：町（夜）：town_night
+# serif 1
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "town_night"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# serif 1
+@住民３
+いや、無くしたものが何なのか
+分からないまま聞かれても…
+
+# serif 1
+@住民４
+そりゃ、あんたの気のせいだよ
+寝て起きたら全て忘れてるさ
+
+;;背景：教会　006_church
+# serif 1
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "006_church"
+# move 300111 3 0
+# face 300111 "happy"
+# alpha 300111 1 0
+# mask 300111 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ロンギヌス
+随分、思い詰めていますね…
+この教会はいつでも誰でも歓迎
+致しますので
+
+# textboxarrow 0 2
+@ロンギヌス
+主は、いつもあなたの側におわします
+ずっと見守り続けているんです
+
+# face 300111 "sad"
+# textboxarrow 0 2
+@ロンギヌス
+…………
+
+# textboxarrow 0 2
+@ロンギヌス
+誰かがいない気がする…
+その思い、少しだけなら分かります
+
+# textboxarrow 0 2
+@ロンギヌス
+私も以前、旅立つ勇気をくれた人が
+いたように思うことがあるんですけど
+…全く思い出せません…
+
+# voice 3001 "ronginusu_0028"
+# textboxarrow 0 2
+@ロンギヌス
+そもそも、そんな経験、私はして
+いないはずなのに…
+
+;;背景：室内　201_room
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "201_room"
+# alpha 300111 0 0
+# move 400131 3 0
+# face 400131 "angry"
+# alpha 400131 1 0
+# mask 400131 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 4001 "arutemisu_0009"
+# textboxarrow 0 2
+# textwindow "normal"
+@アルテミス
+全世界の戸籍を調べたい？
+あなた、からかっているんですか…
+
+# textboxarrow 0 2
+@アルテミス
+役所はそういう場所ではありません！
+…誰かをお捜しなら、まず名前と
+特徴を仰って下さい
+
+# face 400131 "nutual"
+# textboxarrow 0 2
+@アルテミス
+…キル姫かもしれない？
+それでしたら、一つ確認できることが
+ありますよ
+
+# textboxarrow 0 2
+@アルテミス
+こちらがキル姫の一覧です
+この中にあなたの捜している
+キル姫はいますか？
+
+# textboxarrow 0 2
+@アルテミス
+いないのでしたら、そんなキル姫は
+存在しません
+そういうことです
+
+# textboxarrow 0 2
+@アルテミス
+…………あの
+
+# textboxarrow 0 2
+@アルテミス
+これは、あくまで私個人の見解
+なのですけれど…
+
+# textboxarrow 0 2
+@アルテミス
+そのキル姫は、あなたと特別な絆が
+あったのかもしれませんね
+
+# face 400131 "angry"
+# textboxarrow 0 2
+@アルテミス
+存在していたらの話ですよっ
+この一覧の中にいないのですから
+考えられませんけれど！
+
+# face 400131 "sad"
+# textboxarrow 0 2
+@アルテミス
+けれど…
+理想を求めて歩み続けた背中を、
+私も見たことがあるような…
+
+# textboxarrow 0 2
+@アルテミス
+そんなはず、ないのに…
+
+;;背景：町：006_town2
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "006_town2"
+# alpha 400131 0 0
+# move 500211 3 0
+# face 500211 "happy"
+# alpha 500211 1 0
+# mask 500211 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 5002 "furaikugeru_0004"
+# textboxarrow 0 2
+# textwindow "normal"
+@フライクーゲル
+ヘ～イ！
+ヘアピィしてるぅ？
+
+# face 500211 "normal"
+# textboxarrow 0 2
+@フライクーゲル
+アウチッ…
+そんなサァッドな顔してちゃ
+ヘアピィが逃げちゃうよ！
+
+# voice 5002 "furaikugeru_0023"
+# face 500211 "surprise"
+# textboxarrow 0 2
+@フライクーゲル
+…ワッツ？
+誰か捜してるの？
+誰も知らない人を？
+
+# textboxarrow 0 2
+@フライクーゲル
+オウ！
+イッツ、アメイジング
+
+# face 500211 "normal"
+# textboxarrow 0 2
+@フライクーゲル
+バット…もし記憶を摘芯《ピンチ》
+してたのなら、忘れてるだけかも
+しれないね
+
+# textboxarrow 0 2
+@フライクーゲル
+世界中のどこにもいないキル姫
+世界そのものが記憶を無くして
+しまったのかも…
+
+# face 500211 "surprise"
+# textboxarrow 0 2
+@フライクーゲル
+…あれ？
+ピンチって…
+
+# voice 5002 "furaikugeru_0028"
+# face 500211 "sad"
+# textboxarrow 0 2
+@フライクーゲル
+うーん…
+何だか、わたしも少しサァッドな
+気持ちになっちゃった…ホワイ？
+
+;;背景：中心部　in_city
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_city"
+# alpha 500211 0 0
+# move 100111 3 0
+# face 100111 "angry"
+# alpha 100111 1 0
+# mask 100111 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 1001 "masamune_0012"
+# textboxarrow 0 2
+# textwindow "normal"
+@マサムネ
+そこの者、止まれ
+ここより先は関係者以外立ち入り
+禁止だ
+
+# face 100111 "nutual"
+# textboxarrow 0 2
+@マサムネ
+…キル姫を捜している？
+残念だが、ここにそなたの求める者は
+おらぬ
+
+# textboxarrow 0 2
+@マサムネ
+早々に立ち去るがいい
+…いや、待て
+
+# textboxarrow 0 2
+@マサムネ
+そなたが捜しているのは…
+剣ではないのか？
+
+# face 100111 "unhappy"
+# textboxarrow 0 2
+@マサムネ
+…不意にそのような気がしただけだ
+拙者の目の前で、ついに高みに至った
+剣持つ者
+
+# textboxarrow 0 2
+@マサムネ
+あれは…夢幻の類であったのか…
+
+# face 100111 "nutual"
+# textboxarrow 0 2
+@マサムネ
+…捜し続けるのなら、助言をやろう
+
+# textboxarrow 0 2
+@マサムネ
+外ばかりに目を向けず、内に目をやり
+己を見つめ直すことも肝要だ
+
+# textboxarrow 0 2
+@マサムネ
+一見して遠回りな道の方が、
+存外に近道なのやもしれん
+
+;;背景：庭園：greenhouse
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "greenhouse"
+# alpha 100111 0 0
+# move 200411 3 0
+# face 200411 "smile"
+# alpha 200411 1 0
+# mask 200411 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 2004 "parashu_0002"
+# textboxarrow 0 2
+# textwindow "normal"
+@パラシュ
+植物園にようこそ
+君も薔薇が目当てかい？
+
+# face 200411 "angry01"
+# textboxarrow 0 2
+@パラシュ
+…キル姫を捜している？
+花に興味があるわけじゃないのか
+だったら帰ってくれ
+
+# textboxarrow 0 2
+@パラシュ
+こんなところで時間を潰している
+場合じゃないだろう
+君の求めるものを一心に捜さないと
+
+# face 200411 "normal"
+# textboxarrow 0 2
+@パラシュ
+…自分を見つめ直したい？
+ふぅん
+それは悪くないね
+
+# face 200411 "smile"
+# textboxarrow 0 2
+@パラシュ
+匂いは記憶と繋がりやすいというよ
+ここに咲いている花々が捜索の
+手がかりになるといいね
+
+;;暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# face 200411 "normal"
+# textboxarrow 0 2
+# textwindow "normal"
+@パラシュ
+…どうしたんだい？
+随分、長いこと
+そこにいるね
+
+# face 200411 "shy"
+# textboxarrow 0 2
+@パラシュ
+ああ、それか…
+
+# textboxarrow 0 2
+@パラシュ
+コスモス…
+理由は分からないけど、
+この花を見ると…
+
+# textboxarrow 0 2
+@パラシュ
+何かを思い出しそうになって…
+胸が苦しくなるんだ
+だから、あまり見たくない…
+
+# face 200411 "normal"
+# textboxarrow 0 2
+@パラシュ
+そういえば、コスモスの花言葉は…
+
+;;選択肢
+;;
+;;A色褪せぬ純潔
+# select "色褪せぬ純潔" "select_label_05"
+そういえば、コスモスの花言葉は…
+
+# label "select_label_05"
+# se "bgm410_8_filter_off"
+# textboxarrow 0 2
+@パラシュ
+確か「乙女の純真」だったかな
+…何だい、「色褪せぬ純潔」って？
+そんな花言葉…
+
+# face 200411 "shy"
+# textboxarrow 0 2
+@パラシュ
+色褪せぬ純潔…
+汚れ無き純潔な存在…
+ボク達を導く…
+
+# textboxarrow 0 2
+@パラシュ
+何でだ…
+何も思い出せないのに…
+思い出せないから…胸が苦しいっ
+
+# textboxarrow 0 2
+@パラシュ
+ボク達は…
+なあ、君なら分かるのかっ？
+ボク達が何を忘れてしまったのか…
+
+# face 200411 "normal"
+# textboxarrow 0 2
+@パラシュ
+あ、君っ…！
+…走っていってしまった
+
+;;マスターが走り回る演出
+;;場面を次々に切り替えていくとか
+;;
+;;背景：道路：in_cityroad
+;;背景：下町：in_downtown
+;;背景：城下町：castle_town
+;;背景：キトゥリス市街地：006_town2
+;;背景：風車：005_Windmill_evening
+;;背景：天文台：004_observatory
+;;背景：荒野：wild
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_cityroad"
+# alpha 200411 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;背景：道路：in_cityroad
+# se "SE_0886"
+# waitandnext 0.5
+
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "in_downtown"
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;背景：下町：in_downtown
+# waitandnext 0.5
+
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "castle_town"
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;背景：城下町：castle_town
+# waitandnext 0.5
+
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "006_town2"
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;背景：キトゥリス市街地：006_town2
+# waitandnext 0.5
+
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "005_Windmill_evening"
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;背景：風車：005_Windmill_evening
+# waitandnext 0.5
+
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "004_observatory"
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;背景：天文台：004_observatory
+# waitandnext 0.5
+
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "wild"
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;背景：荒野：wild
+# waitandnext 0.5
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# sestop "SE_0886"
+# background "bg_black"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;背景：黒
+;;空白
+# voice 510143 "tyrufing_iz_0018"
+# textboxarrow 0 0
+# textwindow "normal"
+@？？？
+ああ、マスター…！
+止めて下さい…
+
+;;空白
+# textboxarrow 0 0
+@？？？
+どんなに捜しても、私を見つける
+ことはできません…
+もう、私は…
+
+;;空白
+# textboxarrow 0 0
+@？？？
+この世界の外で、世界全体を観測する
+存在になりました
+それに…
+
+;;空白
+# textboxarrow 0 0
+@？？？
+長い長い時を過ごすうち、
+自分自身の姿を思い出すことが
+できなくなってしまったんです…！
+
+;;空白
+# textboxarrow 0 0
+@？？？
+どうしたって…
+アナタの前に姿を現すことは
+できません
+
+;;空白
+# textboxarrow 0 0
+@？？？
+お願いです、マスター
+どうか、私のことは諦めて…
+
+# fadeout "black" 2
+# waitandnext 2

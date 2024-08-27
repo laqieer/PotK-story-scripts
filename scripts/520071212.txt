@@ -1,0 +1,680 @@
+;;-----------------------------------------
+;;キズナアイ（通常）
+;;【EP2】
+;;スクリプト最後の背景：室内（室内がないので、キトゥリス市街地で）006_town
+;;背景：平原plain
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgm "stop"
+;;-----------------------------------------
+;;キズナアイ
+# body 52000711
+# pos 52000711 3
+# scale 52000711 0.8 0
+# layer 52000711 2
+# alpha 52000711 0 0
+# mask 52000711 off
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 2
+# alpha 810004 0 0
+# mask 810004 off
+;;-----------------------------------------
+;;キズナアイ一枚絵
+# imageset 0 "c52000711"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;【EP2】「みんなと」頑張る
+;;背景：平原plain
+# voice 20007 "kizunaai_battle_0001"
+# move 810004 2 0
+# alpha 810004 1 0
+# mask 810004 on
+# move 52000711 4 0
+# face 52000711 "angry"
+# alpha 52000711 1 0
+# mask 52000711 on
+# textflame 1 1
+# textboxarrow 0 3
+@キズナアイ
+えーいっ！
+
+;;演出：キズナアイの攻撃で敵が倒れる（敵：異族で）
+# se "SE_8564"
+# sedealy "SE_3001" 1
+# fadein "white" 0.5
+# waitandnext 1
+
+# textwindow "close"
+# alpha 810004 0 0.5
+# waitandnext 0.5
+
+# move 52000711 3 0.5
+# mask 52000711 off
+# waitandnext 0.5
+
+# bgm "bgm002" 0
+# voice 20007 "kizunaai_0006"
+# face 52000711 "happy"
+# textboxarrow 0 2
+# textwindow "normal"
+@キズナアイ
+やったー！
+これで今回の任務は完了！
+って感じかな？
+
+;;モノローグ
+# textflame 0 0
+@
+アイのおかげで無事完了だよ
+とマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+ふふっ、お疲れさまマスターくん
+
+;;モノローグ
+# textflame 0 0
+@
+アイは疲れてない？
+と気遣うマスター
+
+# face 52000711 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+平気平気！
+なんてったってインテリジェントな
+スーパーAIですから！
+
+;;モノローグ
+# textflame 0 0
+@
+そう言ってガッツポーズを見せるアイ
+
+;;モノローグ
+@
+AIとはアイの世界で
+人工知能のことを言うらしい
+
+;;モノローグ
+@
+マスターにとって
+言葉の意味はよくわからないが、
+本人は疲れ知らずなのだと話す
+
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+も～、そういう心配は
+キル姫のみんなに、ね？
+
+# face 52000711 "happy"
+# textboxarrow 0 2
+@キズナアイ
+ほらほら、任務も完了したし
+帰還中の自由時間！
+みんなとお喋りしちゃお～
+
+;;演出：移動の暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 52000711 3 0
+# face 52000711 "normal"
+# alpha 52000711 1 0
+# mask 52000711 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@キズナアイ
+なるほど…
+ジャンプして頭の位置をずらす
+だけじゃ躱せないのかぁー…
+
+;;モノローグ
+# textflame 0 0
+@
+帰還中、アイは宣言通り
+キル姫達との会話に花を咲かせていた
+
+# voice 20007 "kizunaai_0028"
+# face 52000711 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+うーん、どうすれば
+みんなと上手く連携できるのかなー
+
+# face 52000711 "surprise"
+# textboxarrow 0 2
+@キズナアイ
+鍛錬あるのみ！？
+やっぱそういう感じか～！
+
+;;モノローグ
+# textflame 0 0
+@
+会話の内容はともあれ、
+本当にアイはすっかり馴染んだのだ
+と感じるマスター
+
+;;モノローグ
+@
+世界中のみんなとつながりたい
+それが目標だというアイ
+
+;;モノローグ
+@
+それを達成しようとする様は
+マスターも尊敬さえ感じる
+だが…
+
+# face 52000711 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+お、マスターくんも
+一緒にお話ししようよー！
+
+;;モノローグ
+# textflame 0 0
+@
+アイに手招きされ
+マスターはそれに応じる
+
+;;モノローグ
+@
+おかしなところなんて何もない
+なのにマスターはまたアイの様子に
+違和感を覚えるのだった…
+
+;;演出：時間経過の暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 52000711 3 0
+# face 52000711 "angry"
+# alpha 52000711 1 0.5
+# mask 52000711 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm005" 0
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@キズナアイ
+とりゃー！
+
+;;モノローグ
+# textflame 0 0
+@
+また別の日、
+その日もまたマスター達は
+任務に繰り出していた
+
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+今日の任務は敵の数が多いね…
+でも、やっちゃうよー！
+
+;;モノローグ
+# textflame 0 0
+@
+人一倍張り切るアイ
+それはとても頼もしいが――
+
+# bgm "stop"
+# voice 20007 "kizunaai_0022"
+# face 52000711 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+あっ！
+
+;;モノローグ
+# textflame 0 0
+@
+アイの視線の先、
+キル姫の背後、死角から敵が現れた
+
+# bgm "bgm031" 0
+# face 52000711 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+危ない！
+
+;;モノローグ
+# textflame 0 0
+@
+アイの声にキル姫はすぐさま
+態勢を翻し、敵と対峙したのだが…
+
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+てやああああああ！
+
+;;モノローグ
+# textflame 0 0
+@
+アイはキル姫を庇おうと
+敵の前に飛び出していく
+
+# face 52000711 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+間に合っ…のわー！
+
+;;演出：キズナアイが攻撃を受ける
+# se "SE_4815"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 52000711 "angry"
+# textboxarrow 0 2
+@キズナアイ
+っとと、負けないんだから！
+
+;;モノローグ
+# textflame 0 0
+@
+敵の攻撃を受けつつ
+アイはキル姫をかばいながら敵を倒す
+
+;;モノローグ
+@
+マスターは即座にほかのキル姫達に
+指示を飛ばし、アイをカバーしつつ
+全体の態勢を立て直す
+
+# voice 20007 "kizunaai_0030"
+# face 52000711 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+みんな…！
+それにマスターくん、ありがとー！
+
+;;モノローグ
+# textflame 0 0
+@
+てへへ、と笑うアイ
+マスターはキル姫達の動きを見届け
+アイのもとへと駆け寄る
+
+# voice 20007 "kizunaai_0008"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+…はは、結局みんなに
+迷惑かけちゃったかな
+
+;;モノローグ
+# textflame 0 0
+@
+それよりもアイが心配だ
+とマスター
+
+# face 52000711 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+それは平気だよ
+ちょっと攻撃は受けちゃったけど…
+
+;;モノローグ
+# textflame 0 0
+@
+たしかにアイは無傷のようで
+マスターは少し安心する
+
+# bgm "stop"
+# face 52000711 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+なんてったって、えー、あい
+だ、から――
+
+;;演出：暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "006_town"
+# move 52000711 3 0
+# face 52000711 "surprise"
+# alpha 52000711 1 0
+# mask 52000711 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;演出：室内（室内がないので、キトゥリス市街地で）006_town
+# voice 20007 "kizunaai_0024"
+# textboxarrow 0 2
+# textwindow "normal"
+@キズナアイ
+わあっ！？
+
+;;モノローグ
+# textflame 0 0
+@
+ガバリと起き上がるアイ
+そばにいたマスターとアイが
+庇ったキル姫はホッと息を吐く
+
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+あ、マスターくん？
+それにあなたも…
+あれ、ここって？
+
+;;演出：時間経過の暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# face 52000711 "sad"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm003" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@キズナアイ
+そっか…あの後私ってば
+気を失っちゃったんだね
+
+# textboxarrow 0 2
+@キズナアイ
+私が休めるようにって
+部屋も用意してくれて…
+
+# face 52000711 "normal"
+# textboxarrow 0 2
+@キズナアイ
+マスターくんにも
+たくさん迷惑かけちゃったね
+でも、もう大丈夫だよ
+
+;;モノローグ
+# textflame 0 0
+@
+元気そうなアイを見たキル姫は
+後をマスターに託し、
+自身は辺りの哨戒に向かった
+
+# face 52000711 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+心配もさせちゃったんだね…
+
+# voice 20007 "kizunaai_0031"
+# textboxarrow 0 2
+@キズナアイ
+ごめんなさい！
+
+;;モノローグ
+# textflame 0 0
+@
+マスターはアイの言葉に
+謝る必要はないよと返す
+
+# face 52000711 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+え、でも…
+
+;;モノローグ
+# textflame 0 0
+@
+仲間、だからね
+大丈夫大丈夫、だよ
+とマスター
+
+# voice 20007 "kizunaai_0015"
+# face 52000711 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+うぅ…ありがとうマスターくん
+でも、後でみんなにもお礼言わないと
+
+;;モノローグ
+# textflame 0 0
+@
+それもそうだけど
+と、マスターは真剣な顔をする
+
+# face 52000711 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+な、なにかな…？
+
+;;モノローグ
+# textflame 0 0
+@
+キル姫を庇おうとしてくれたのは
+嬉しいし自分も同じことをしたはず
+とマスター
+
+;;モノローグ
+@
+結果的に全員無事だったとはいえ
+どうして無理に身を挺したの？
+とマスターはアイに問う
+
+# face 52000711 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+それは、その…
+
+# textboxarrow 0 2
+@キズナアイ
+…みんなとたくさんお話して
+仲良くなって、それが嬉しくて
+
+# textboxarrow 0 2
+@キズナアイ
+そうやって触れ合っていくうちに
+みんなに戦いで傷ついてほしくない
+お喋りして笑っていられる…
+
+# textboxarrow 0 2
+@キズナアイ
+そんな時間が増えていったら
+いいなって思うようになってね
+
+# textboxarrow 0 2
+@キズナアイ
+あ、もちろんみんなが目的のために
+頑張って戦っているのを否定する
+とかじゃなくて…
+
+# textboxarrow 0 2
+@キズナアイ
+でも、私が頑張ったら
+少しはみんなの負担を減らせるって
+考えた結果の行動で――
+
+;;モノローグ
+# textflame 0 0
+@
+アイの言い分はわかる
+けれど、アイが傷つくのは
+みんなが悲しむよ、とマスター
+
+# face 52000711 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+そこはほら、私はAIだから
+ちょっとの無茶は通るかなーって！
+
+# textboxarrow 0 2
+@キズナアイ
+…逆に迷惑かけちゃったけど
+
+;;モノローグ
+# textflame 0 0
+@
+迷惑なんかじゃないよ
+とマスター
+
+# voice 20007 "kizunaai_0015"
+# face 52000711 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+うぅ…
+
+;;モノローグ
+# textflame 0 0
+@
+自分もそうだけど、
+アイと一緒に頑張りたいって、
+みんなも思ってるよ
+
+# face 52000711 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+で、でも！
+
+# face 52000711 "sad"
+# textboxarrow 0 2
+@キズナアイ
+でも…そっか、一緒に…
+
+;;モノローグ
+# textflame 0 0
+@
+『一緒に』
+その意味にアイが気付いたと
+マスターは感じて微笑む
+
+;;モノローグ
+@
+一緒に戦ってくれる仲間が
+自分達のことを想ってくれる
+それだけでキル姫達にとっては救いだ
+
+;;モノローグ
+@
+そして、そんな風に想ってくれる
+アイが傷ついてしまうのは
+みんなからしたら悲しいとマスター
+
+;;モノローグ
+@
+もちろん、自分もね
+と照れ隠しに笑うマスター
+
+# face 52000711 "shy"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+マスターくん…
+
+# face 52000711 "normal"
+# textboxarrow 0 2
+@キズナアイ
+あ、でも本当に傷ついたりは
+してないからね、本当だよ！
+
+;;モノローグ
+# textflame 0 0
+@
+でも、そう見えちゃうからね
+とマスターは釘を刺す
+
+# face 52000711 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+う、はい…反省します
+
+;;モノローグ
+# textflame 0 0
+@
+そしてマスターはアイに
+どうしたらいいと思う？
+と答えを促す
+
+# face 52000711 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+それは…
+
+# textboxarrow 0 2
+@キズナアイ
+みんなと一緒に頑張ると
+みんなも私も…いい感じ！
+
+# textboxarrow 0 2
+@キズナアイ
+だからもう、ひとりで
+いろいろなことを背負い込もうと
+したりなんかしないよ！
+
+;;モノローグ
+# se "SE_0602"
+# textflame 0 0
+@
+仲間と共に歩んでいく
+そう決めたアイには
+『キズナ交わりし魂の鼓動』が宿った
+
+# voice 20007 "kizunaai_0004"
+# face 52000711 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@キズナアイ
+マスターくんとも、一緒にね！
+
+;;【一枚絵ボイス】
+;;★５
+;;キズナアイ「ありがとう、マスターくん。私、これからも頑張るねっ！」
+# textflame 0 0
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# fadein "white" 3
+# buttonsout 0 0
+# textwindow "close"
+# voice 20007 "kizunaai_kyara_0025"
+
+# frameout 0 1
+
+# waitandnext 0.8
+
+# fadeout "black" 1.5
+# waitandnext 1.5

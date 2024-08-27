@@ -1,0 +1,629 @@
+;;-----------------------------------------
+;;ゴッティル2_3
+;;-----------------------------------------
+# script "lisp"
+# background "laboratory_area"
+# bgmfile "bgm158" "BgmPJZero001" 0
+;;-----------------------------------------
+;;ティル
+# body 101415
+# pos 101415 4
+# scale 101415 0.8 0
+# layer 101415 3
+# alpha 101415 1 0
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 5
+# mask 0 off
+# alpha 0 0 0
+;;ゼロ
+# body 23
+# pos 23 2
+# scale 23 0.8 0
+# layer 23 3
+# alpha 23 0 0
+# body 1100221
+# alpha 1100221 0 0
+;;アスモデウス
+# body 960021
+# pos 960021 2
+# scale 960021 0.8 0
+# layer 960021 4
+# alpha 960021 1 0
+;;ヴァリン
+# body 18
+# pos 18 4
+# scale 18 0.8 0
+# layer 18 4
+# alpha 18 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "c3101421"
+# imagelayer 1 3
+# imagealpha 1 0 0
+;;-----------------------------------------
+# textflame 1 1
+# textboxarrow 0 3
+# face 101415 "angry"
+# voice 1014 "tyrufing_0029"
+@ティルフィング
+はあああ！
+
+# se "SE_9084"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 960021 "sad"
+@アスモデウス
+なんで！？
+なんで私がまたこんな目に！？
+
+;;演出：ティルフィングの攻撃でアスモデウスが消滅する
+# alpha 960021 0 1
+# textboxarrow 0 0
+# waitandnext 1.5
+
+# alpha 23 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 11002 "laevateinm_0019"
+@ゼロ
+なんとかアスモデウスは倒したが……
+
+# serif 1
+# textwindow "nomal"
+@魔獣の群れ
+グオアアアア！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+# textwindow "nomal"
+@
+まだまだ
+魔獣の数は多い
+しかし、
+
+;;演出：退いていく魔獣
+# bgm "stop"
+# serif 0
+# textwindow "close"
+# serif 1
+# textflame 1 1
+# textwindow "nomal"
+@魔獣
+オ、グォォ…
+
+# alpha 23 0 0.5
+# move 101415 3 0.5
+# mask 101415 off
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 101415 "surprise"
+# voice 1014 "tyrufing_0022"
+@ティルフィング
+え、魔獣が…
+
+# textflame 1 1
+# textboxarrow 0 0
+# voice 9993 "valyn_0040"
+@？？？
+なるほどね
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+あなたは…
+
+# textflame 1 1
+# textboxarrow 0 0
+@？？？
+久しぶり、でいいのかしら？
+
+# alpha 18 1 0.5
+# move 101415 2 0.5
+# mask 101415 on
+# waitandnext 0.7
+
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+ヴァリン！
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：研究所
+# background "red_corridor"
+# bgm "bgm104" 0
+# alpha 18 0 0
+# alpha 101415 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# face 101415 "sad"
+# waitandnext 0.5
+
+# alpha 18 1 0.5
+# alpha 101415 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヴァリン
+ここはアタシがいなくなったあとも
+みんながいろんな記録を残して
+いってくれたみたいね…
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァリン
+おかげでこの短時間でも
+装置を作動させることができた
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0002"
+@ティルフィング
+ヴァリン…あの、その
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9993 "valyn_0044"
+@ヴァリン
+記憶のことね
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 18 "sad"
+@ヴァリン
+目覚めて間もないせいか
+中途半端…っていうのが
+実際のところかしら
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァリン
+それもあってか
+今のアタシにできるのは魔獣を
+避けるための装置を使うくらい
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァリン
+みんなの望むような成果は
+見せてあげられないのが悲しいわね
+
+# alpha 101415 0 0.5
+# alpha 23 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@ゼロ
+十分だ
+これでなんとか
+今の状況は打破できる
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 11002 "laevateinm_0002"
+@ゼロ
+で？
+お前のことだ
+次の一手も考えてあるんだろ？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 18 "normal"
+@ヴァリン
+ええ
+この不完全なシステムを改良して
+希望の火としてここに狼煙を上げる
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァリン
+そのためにも
+手伝ってほしいことがあるの
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9993 "valyn_0043"
+@ヴァリン
+頼めるかしら、ティル？
+
+# alpha 101415 1 0.5
+# alpha 23 0 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 101415 "surprise"
+# voice 1014 "tyrufing_0022"
+@ティルフィング
+え？あ、はい
+私にできることであれば
+
+;;演出：暗転
+# fadeout "black" 0.7
+# waitandnext 0.7
+
+;;背景：森（夜）
+# background "submerged_town_night"
+# bgmfile "bgm170" "BgmPJZero_EV001" 0
+# textwindow "close"
+# alpha 18 0 0
+# alpha 101415 0 0
+# waitandnext 0.2
+
+# fadein "black" 0.7
+# waitandnext 0.7
+
+# move 101415 3 0
+# mask 101415 off
+# alpha 101415 1 0.5
+# face 101415 "sad"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ティルフィング
+……
+
+# alpha 18 1 0.5
+# move 101415 2 0.5
+# mask 101415 on
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァリン
+こんなところにいたのね
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0002"
+@ティルフィング
+あの、ヴァリン
+その……
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 18 "sad"
+@ヴァリン
+さっきは誤魔化してごめんね
+デュリンのことだけど…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+……
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァリン
+正直に言うわね
+私の中にデュリンはいない
+あるのはデュリンの記憶だけ
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0017"
+@ティルフィング
+やっぱり、そうですか……
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァリン
+私が言うのは勝手で卑怯かも
+しれないけど……
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 18 "angry_1"
+@ヴァリン
+デュリンのためにも
+私達は悪魔に勝たないといけないわ
+
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+……はい
+
+# alpha 101415 0 0.5
+# move 18 3 0.5
+# mask 18 off
+# textflame 0 0
+@
+ヴァリンが去り際に
+マスターとすれ違う
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 18 "normal"
+@ヴァリン
+マスター、後は任せたわよ
+私じゃ、ティルの心は癒せないわ
+
+# alpha 18 0 0.5
+# move 101415 3 0
+# mask 101415 off
+# alpha 101415 1 0.5
+# textflame 0 0
+@
+マスターが頷き、
+ティルフィングの横に寄り添う
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+……マスター
+
+# textflame 0 0
+@
+我慢しなくていいんだよ、
+そうマスターが言うと
+ティルフィングが涙を浮かべる
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0055"
+@ティルフィング
+う、うう……
+
+# textflame 0 0
+@
+泣き始めるティルフィング
+マスターは何も言わず、
+寄り添い続けるのであった
+
+;;演出：暗転
+# fadeout "black" 0.7
+# waitandnext 0.7
+
+;;背景：森（昼）
+# background "submerged_town"
+# bgm "bgm104" 0
+# textwindow "close"
+# alpha 101415 0 0
+# waitandnext 0.2
+
+# fadein "black" 0.7
+# waitandnext 0.7
+
+# move 101415 5 0
+# mask 101415 on
+# alpha 101415 1 0.5
+# move 23 1 0
+# mask 23 on
+# alpha 23 1 0.5
+# move 18 3 0
+# mask 18 on
+# alpha 18 1 0.5
+# face 101415 "normal"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ゼロ
+花って、どんな花なんだ？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+クリスタルの花…
+地上の皆さんはキラーズフラワーと
+そう呼んでいたものです
+
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+魔獣を寄せ付けぬ孤高の花と
+重宝されてきたものです
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 11002 "laevateinm_0028"
+@ゼロ
+その花なら何度か
+見かけたような記憶がある…
+だが、あれはもう
+
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+研究所に回収されたものが
+少し残っていただけであとはすべて
+枯れてしまったと、記録に…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ゼロ
+それで、その花がどうしたんだ？
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 18 "normal"
+@ヴァリン
+キラーズフラワーが
+地上を救う一手になるわ
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヴァリン
+研究所に残っていたデータから、
+その花の力を増幅する装置を
+起動してみたのよ
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヴァリン
+だから私はひとりで
+研究所に残っても問題ないの
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 101415 "sad"
+@ティルフィング
+でも、先ほどの話の通り
+それも残りわずかでしかなく
+悪魔を倒しうるものではない、と
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヴァリン
+続きを聞いて？
+確かにキラーズフラワーは
+もうほとんど存在しない
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヴァリン
+でも、まだ一ヶ所だけ…
+咲いている場所があるのよ
+それもマナの濃い場所にね
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヴァリン
+そこに咲いたものであれば
+間違いなく、ティルに強大な力を
+もたらすはずよ
+
+# textflame 0 0
+@
+以上が研究所でわかったこと
+そして、これからの目的だ
+とマスターが締める
+
+# move 101415 3 0.5
+# mask 101415 off
+# alpha 23 0 0.5
+# alpha 18 0 0.5
+# textflame 0 0
+@
+そして、
+ティルフィングの手を握るマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 101415 "surprise"
+# voice 1014 "tyrufing_0022"
+@ティルフィング
+マスター？
+
+# textflame 0 0
+@
+この世界を救えると
+そう信じて降りてきたけれど…
+とマスターは確かめるように話す
+
+# textflame 0 0
+@
+でも、その信じたものさえ
+失ってしまいそうなほどの現実が
+待っていた、とマスターは嘆く
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 101415 "sad"
+@ティルフィング
+私の力では…足りませんでしたから
+
+# textflame 0 0
+@
+そう、ティルフィングの
+力だけじゃ足りなかったんだ
+とマスターは首を振る
+
+# textflame 0 0
+@
+皆で、希望を抱くことが
+必要だったんだ
+
+# textflame 0 0
+@
+ティルフィングひとりで
+背負う必要はないんだよ
+とマスターはティルフィングに告げる
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 101415 "surprise"
+# voice 1014 "tyrufing_0001"
+@ティルフィング
+…マスター！
+
+# textflame 0 0
+@
+世界を救うという使命じゃなく
+未来のため、希望のために皆と戦う
+それならできるよね、とマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 101415 "smile"
+# voice 1014 "tyrufing_0003"
+@ティルフィング
+はい…はい！
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 101415 "normal"
+@ティルフィング
+私にはゼロやヴァリンがいます
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+お母さん達から託された使命も
+たしかに私の力です
+そして、デュリンの想いも…
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0004"
+@ティルフィング
+それにマスターが
+隣にいてくれることが
+私にとって、一番の力になるんですよ
+
+# textflame 0 0
+@
+そう言って微笑む
+ティルフィングであった
+
+;;■一枚絵指定
+;;背景：森（昼）
+;;表情：照れと戸惑いが入っているようなイメージです。
+;;構図：座った状態で、手で髪に触れながら、こちらを見ている感じです。
+;;一枚絵ボイス
+;;ティルフィング「…感じる…！アナタが…私に満ちてゆくのを…！」
+# textflame 0 0
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# fadein "white" 3
+# buttonsout 0 0
+# textwindow "close"
+# voice 1014 "tyrufing_kyara_0015"
+
+# frameout 0 1
+
+# waitandnext 0.8
+
+# fadeout "black" 1.5
+# waitandnext 1.5

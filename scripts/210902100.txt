@@ -1,0 +1,641 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第９章 章タイトル：「雄弁な守人―プレッジ―」
+;;第2話－１０　タイトル：為すべきこと
+;;2_10_0
+;;スクリプト最後の背景：下町
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown_night"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 3
+# alpha 210 0 0
+# mask 210 off
+;;グリモワール・獣刻・ニーズヘッグ 大罪ver.
+# body 5501711
+# pos 5501711 3
+# scale 5501711 0.8 0
+# layer 5501711 2
+# alpha 5501711 0 0
+# mask 5501711 off
+;;アスカロン・D. plug・レヴィアタン 大罪ver.
+# body 5102311
+# pos 5102311 3
+# scale 5102311 0.8 0
+# layer 5102311 2
+# alpha 5102311 0 0
+# mask 5102311 off
+;;カラドボルグ・聖鎖・レリエル
+# body 3102611
+# pos 3102611 3
+# scale 3102611 0.8 0
+# layer 3102611 2
+# alpha 3102611 0 0
+# mask 3102611 off
+;;ティファレト（新ゴッド）
+# body 5503211
+# pos 5503211 3
+# scale 5503211 0.8 0
+# layer 5503211 2
+# alpha 5503211 0 0
+# mask 5503211 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;シナリオカット一枚絵
+# imageset 0 "integral_09"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;第2話－１０　タイトル：為すべきこと
+;;//背景：下町
+;;//炎上演出
+# se "SE_0753"
+# textwindow "close"
+# envbody 1000 7 0
+# effectstart 1000
+# waitandnext 0.5
+
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+こっちです！
+落ち着いて逃げて下さいっ
+
+# serif 1
+@住民達
+うわあああっ…
+
+# serif 1
+@住民達
+何でこんなことにっ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 210 0 0.5
+# move 5501711 3 0
+# face 5501711 "normal"
+# alpha 5501711 1 0.5
+# mask 5501711 off
+# textboxarrow 0 2
+@グリモワール
+ああ、もうっ
+火が燃え広がってばかりよ…！
+
+# alpha 5501711 0 0.5
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+町の幾つかの場所で爆発が起きた
+せいだ…
+消火が間に合ってないんだよ…
+
+# textboxarrow 0 2
+@カミト
+とにかく今は町の人達を安全な
+ところに避難させないとっ
+
+# alpha 210 0 0.5
+# move 5501711 3 0
+# face 5501711 "normal"
+# alpha 5501711 1 0.5
+# mask 5501711 off
+# textboxarrow 0 2
+@グリモワール
+分かってるわよ！
+ワタシもアスカロンも…
+
+# alpha 5501711 0 0.5
+# move 5102311 3 0
+# face 5102311 "usual"
+# alpha 5102311 1 0.5
+# mask 5102311 off
+# textboxarrow 0 2
+@アスカロン
+マスター、大変です！
+
+# textboxarrow 0 2
+@アスカロン
+カラドボルグのいる区画が、
+炎に囲まれてしまって…
+
+# voice 9936 "kamito_0018"
+# alpha 5102311 0 0.5
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+カラドボルグのいるところって…
+子供達が暮らしてる建物だよね！？
+早く助け出さないとっ
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 210 0 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# serif 1
+@住民達
+ああ、誰か！
+誰かーっ…！
+まだ子供達が中にっ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+くっ…
+炎の勢いが強すぎる…
+でも、行かないと！
+
+# voice 9936 "kamito_0002"
+# face 210 "angry"
+# textboxarrow 0 2
+@カミト
+アスカロン！
+何とか突破口を作れないかなっ？
+
+# voice 310231 "ascalon_a_0032"
+# move 210 2 0.5
+# mask 210 on
+# move 5102311 4 0
+# face 5102311 "normal"
+# alpha 5102311 1 0.5
+# mask 5102311 on
+# textboxarrow 0 3
+@アスカロン
+はい、やってみます！
+私の嫉妬の氷で…
+全てを凍てつかせます！！
+
+;;//アスカロンが氷で炎を一時的に抑える
+# se "SE_11029"
+# se "SE_0754"
+# waitandnext 0.5
+
+# effectskip 1000
+# waitandnext 0.2
+
+# face 210 "happy"
+# textboxarrow 0 1
+@カミト
+やった！
+これならいけるっ
+
+# move 5501711 1 0
+# face 5501711 "normal"
+# alpha 5501711 1 0.5
+# mask 5501711 on
+# textboxarrow 0 1
+# move 210 3 0.5
+# move 5102311 5 0.5
+@グリモワール
+待ちなさい！
+アスカロンの氷も長くは保たないわ…
+間に合う保証はないわよっ
+
+# voice 9936 "kamito_0064"
+# face 210 "angry"
+# textboxarrow 0 2
+@カミト
+それでも、希望はあるんだ！
+行くよ、二人とも！
+
+# voice 310231 "ascalon_a_0032"
+# textboxarrow 0 3
+@アスカロン
+はい、マスター！
+
+# voice 350171 "grimoire_ge_0032"
+# face 5501711 "usual"
+# textboxarrow 0 1
+@グリモワール
+まったく…
+つき合ってあげるわよ！
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# sestop "SE_0753"
+# alpha 5501711 0 0
+# alpha 210 0 0
+# alpha 5102311 0 0
+# move 5102311 3 0
+# face 5102311 "normal"
+# alpha 5102311 1 0
+# mask 5102311 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 310231 "ascalon_a_battle_0004"
+# textboxarrow 0 2
+# textwindow "normal"
+@アスカロン
+せいっ！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+# voice 310261 "caladbolg_t_0004"
+# alpha 5102311 0 0.5
+# move 3102611 3 0
+# face 3102611 "normal"
+# alpha 3102611 1 0.5
+# mask 3102611 off
+# textboxarrow 0 2
+@カラドボルグ
+まあ、皆さん！
+来てくれたのね
+素晴らしいわっ
+
+# serif 1
+@子供達
+うわああああん…！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 3102611 0 0.5
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+みんな無事！？
+早くここから出ようっ
+急げば間に合う…
+
+;;//炎上演出
+# se "SE_0753"
+# effectstart 1000
+# waitandnext 0.5
+
+# voice 310261 "caladbolg_t_0024"
+# alpha 210 0 0.5
+# move 3102611 3 0
+# face 3102611 "surprise"
+# alpha 3102611 1 0.5
+# mask 3102611 off
+# textboxarrow 0 2
+@カラドボルグ
+きゃっ…！
+少し収まっていた炎が、また…
+
+# voice 310231 "ascalon_a_0031"
+# alpha 3102611 0 0.5
+# move 210 2 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+# move 5102311 4 0
+# face 5102311 "sad"
+# alpha 5102311 1 0.5
+# mask 5102311 on
+# textboxarrow 0 3
+@アスカロン
+ごめんなさい、マスター…
+もう力がっ…
+
+# voice 9936 "kamito_0033"
+# textboxarrow 0 1
+@カミト
+ごめん、アスカロン…
+僕が無理をさせたから
+
+# voice 350171 "grimoire_ge_0033"
+# alpha 210 0 0.5
+# alpha 5102311 0 0.5
+# move 5501711 3 0
+# face 5501711 "normal"
+# alpha 5501711 1 0.5
+# mask 5501711 off
+# textboxarrow 0 2
+@グリモワール
+まったくよ！
+こうなったら、荒っぽい手だけど
+ワタシがやってあげるわ！
+
+# textboxarrow 0 2
+@グリモワール
+火には火を！
+全て焼き払ってあげる！
+
+;;//炎上演出
+# effectskip 1000
+# se "SE_4820"
+# envbody 2000 7 14
+# effectstart 2000
+# waitandnext 1
+
+# effectskip 2000
+# effectstart 1000
+# voice 9936 "kamito_0023"
+# alpha 5501711 0 0.5
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+ええっ？
+ここで炎は…
+
+# alpha 210 0 0.5
+# move 3102611 3 0
+# face 3102611 "usual"
+# alpha 3102611 1 0.5
+# mask 3102611 off
+# textboxarrow 0 2
+@カラドボルグ
+いえ、妙手よ
+先に燃えそうなものを焼き払って
+炎の壁に穴を開けるのね
+
+# face 3102611 "sad"
+# textboxarrow 0 2
+@カラドボルグ
+でも、すごく熱いわ…
+子供達も体力が限界かも…
+
+# serif 1
+@子供達
+ううっ…
+ぐすっ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 3102611 0 0.5
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+みんな、もう少しだから…！
+
+# voice 350171 "grimoire_ge_0037"
+# alpha 210 0 0.5
+# move 5501711 3 0
+# face 5501711 "usual"
+# alpha 5501711 1 0.5
+# mask 5501711 off
+# textboxarrow 0 2
+@グリモワール
+くぅっ…
+予想より…火の回りが早いわね…
+
+;;//グリモワールが倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 5501711 0 0.5
+# waitandnext 0.5
+
+# voice 9936 "kamito_0017"
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+グリモワール…！
+そんな…ここまでなのかっ…？
+
+# serif 1
+@子供達
+…………
+
+;;カミト（独白）
+# serif 1
+# textwindow "close"
+# serif 0
+# move 210 3 0
+# face 210 "normal"
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 210 off
+@カミト
+子供達も泣く力すらなくしてる
+みたいだ…
+どうしたら…
+
+# voice 310261 "caladbolg_t_0036"
+# alpha 210 0 0.5
+# move 3102611 3 0
+# face 3102611 "sad"
+# alpha 3102611 1 0.5
+# mask 3102611 off
+# textboxarrow 0 2
+# textwindow "normal"
+@カラドボルグ
+お願い
+この子達に明るい未来を…
+未来を見せてっ
+
+# alpha 3102611 0 0.5
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+カラドボルグ…？
+こんなときに占いなんて…
+
+# alpha 210 0 0.5
+# move 3102611 3 0
+# face 3102611 "sad"
+# alpha 3102611 1 0.5
+# mask 3102611 off
+# textboxarrow 0 2
+@カラドボルグ
+炎に巻かれて死んでしまう未来なんて
+見たくないの…！
+この子達には笑顔でいられる未来を
+
+# textboxarrow 0 2
+@カラドボルグ
+幸せな運命を…
+予言させて！
+
+# bgmfile "bgm447_block" "BgmNeoRagnarok" 0
+# serif 1
+@子供１
+カラドママ、泣いてるの？
+
+# serif 1
+@子供２
+よしよし
+だいじょうぶだよ
+
+# serif 1
+@子供３
+ぼくたち、いのるから
+
+# serif 1
+@子供４
+そうしたら、きっといのりが
+とどくんだよ
+
+# alpha 3102611 0 0.5
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+みんな、急にどうしたんだ？
+祈りって…
+
+# serif 1
+@子供５
+あのね！
+やくそくしてくれたんだっ
+ティファがねっ
+
+# serif 1
+@子供６
+あぶなくなったら、
+ぜったい、たすけにくるからって
+
+# serif 1
+@子供達
+だから、きっと来てくれるよ！
+ティファがきっと
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+@カミト
+ティファ…ティファレト…
+でも、そんなまさか…
+
+;;//建物が崩れる音
+# se "SE_11575"
+# waitandnext 0.5
+
+# voice 9936 "kamito_0024"
+# face 210 "angry"
+# textboxarrow 0 2
+@カミト
+あっ！？
+危ない…！！
+屋根が崩れるっ…
+
+# alpha 210 0 0.5
+# move 3102611 3 0
+# face 3102611 "angry"
+# alpha 3102611 1 0.5
+# mask 3102611 off
+# textboxarrow 0 2
+@カラドボルグ
+ダメーっ！！
+
+# serif 1
+@子供達
+…………！
+
+;;//画面フラッシュ
+# sestop "SE_0753"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;//ティファレトが降臨する
+#setnextbgmblock 1
+# voice 550321 "tiphereth_ca_battle_0004"
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 3102611 0 0.5
+# move 5503211 3 0
+# face 5503211 "angry"
+# alpha 5503211 1 0.5
+# mask 5503211 off
+# textboxarrow 0 2
+@？？？
+救いを！
+
+;;//炎上演出終わり
+;;シナリオカットここから最後まで
+# effectskip 1000
+# waitandnext 0.5
+
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# alpha 5503211 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 550321 "tiphereth_ca_0004"
+# face 5503211 "happy"
+# textboxarrow 0 0
+# textwindow "normal"
+@？？？
+良かった
+間に合いました
+
+# textboxarrow 0 0
+@カミト
+炎が一瞬で消えて…
+あれは、天使…？
+
+# textboxarrow 0 0
+@？？？
+結ばれし誓約のもと、
+我が名をここに示します
+
+# textboxarrow 0 0
+@ティファレト
+ティファレト・誓約・ミカエル、
+降臨いたしました
+
+# textboxarrow 0 0
+@ティファレト
+ああっ！
+見えます…子供達の姿が…！
+守るべき者達の顔がっ

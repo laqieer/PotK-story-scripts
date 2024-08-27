@@ -1,0 +1,322 @@
+;;-----------------------------------------
+;;お正月アバリス　キャラクエ　シナリオ FB修正版20181214
+;;【EP2戦闘前】
+;;//背景：野営地（ケイオスリオン）
+;;-----------------------------------------
+# script "lisp"
+# background "300_devil_daytime03"
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+# body 3401021
+# pos 3401021 3
+# scale 3401021 0.8 0
+# alpha 3401021 0 0
+# mask 3401021 off
+# body 3820001
+# pos 3820001 2
+# scale 3820001 0.8 0
+# alpha 3820001 1 0
+# entry 12345 3820001
+# pos 12345 4
+# scale 12345 0.8 0
+# alpha 12345 1 0
+;;-----------------------------------------
+# textflame 1 1
+# textboxarrow 0 1
+@ケイオスリオン兵
+くそっ…
+退却だ！
+
+# alpha 3820001 0 1
+# alpha 12345 0 1
+# textboxarrow 0 0
+# waitandnext 1
+
+# textflame 0 0
+@
+アバリスの弓に翻弄された兵たちは、
+ボロボロになって逃げていった
+
+# alpha 3401021 1 0.5
+# face 3401021 "angry"
+# voice 340101 "abaris_a_0013"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+マスター！大丈夫ですか？
+兵士の前に飛び出すなんて、
+無茶をしないでください！
+
+# textflame 0 0
+@
+アバリスに謝りながら、
+改めてその強さに感心し、
+さすが神弓だね、とほめるマスター
+
+# face 3401021 "surprise"
+# voice 340101 "abaris_a_0022"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+そ…そうですか？
+
+# face 3401021 "normal"
+# voice 340101 "abaris_a_0028"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+この晴れ着を着ていると
+背筋が伸びて、
+気が引き締まるというか…
+
+# face 3401021 "smile"
+# voice 340101 "abaris_a_0005"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+いつもより
+力が湧くような気がします
+
+;;できれば小さい文字で
+# face 3401021 "shy"
+# voice 340101 "abaris_a_0015"
+# chara 3401021
+# textsize 16
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+もしかしたら、
+マスターからの贈り物だから…かも
+
+# textsize 24
+# textflame 0 0
+@
+そうしてふたりが話している間に、
+逃げた人々も少しずつ戻ってきていた
+
+# face 3401021 "normal"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+あ…
+みなさん、ケガはありませんか？
+あなたも大丈夫でした？
+
+# textflame 0 0
+@
+捕まった子にアバリスが話しかけると
+その子はお礼を言ったあと、
+羽根つきはできるかと、きいてきた
+
+# face 3401021 "surprise"
+# voice 340101 "abaris_a_0022"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+え？羽根つき…ですか？
+ええ、できますけど…
+
+# textflame 0 0
+@
+じゃあ、うちの羽根つき大会にきなよ
+今度こそ一緒に遊ぼう、と誘われた
+
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0024"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+えっ…？
+あ、あの…
+マスター、どうしましょう？
+
+# textflame 0 0
+@
+マスターが、
+二度も誘ってくれたし行ってみよう
+と答える
+
+# textflame 0 0
+@
+子供は
+大喜びでアバリスの手を引いていった
+
+;;//演出：場面転換
+;;//背景：野営地（ケイオスリオン）
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# face 3401021 "surprise"
+# voice 340101 "abaris_a_0002"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+マスター、こちらの大会は
+二人一組で参加するのですが…
+
+# face 3401021 "sad"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+試合に出ない方は、
+墨を塗られる役なのだそうです
+
+# face 3401021 "angry"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+あの…私、がんばります！
+マスターを墨から守ってみせます！
+
+# textflame 0 0
+@
+マスターは、気にしないでと伝えたが
+アバリスは宣言通りに奮闘し、
+順調に勝ち進んでいく
+
+# textflame 0 0
+@
+しかし、そんなアバリスに
+試練の時が訪れた
+
+# face 3401021 "surprise"
+# voice 340101 "abaris_a_0017"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+そんな…
+マスター、ど…どうしましょう？
+
+# textflame 0 0
+@
+次の対戦相手が助けたあの子だと知り
+アバリスは思い悩んでいた
+
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0028"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+私が負ければ、マスターの顔に墨が…
+でも、私が本気を出してしまうのも、
+大人げがなさすぎるのでは…
+
+# textflame 0 0
+@
+そんなアバリスに、
+マスターは声をかける
+
+# select "本気でやろう！" "select_label_01" "手加減してあげた方が…" "select_label_02" "君に任せる！" "select_label_03"
+@
+そんなアバリスに、
+マスターは声をかける
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 3401021 "angry"
+# voice 340101 "abaris_a_0032"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+…はい、わかりました！
+全力でいきます！
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0028"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+そう…ですよね？
+でも、本当にいいのでしょうか…
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 3401021 "surprise"
+# voice 340101 "abaris_a_0015"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+そ…そんなの、ずるいです！
+うう…とにかく、やってみます！
+
+# label "select_label_end"
+# textflame 0 0
+@
+心を決めたアバリスが
+試合に向かおうとすると、
+ふいに騒がしい声が聞こえてた
+
+# alpha 3401021 0 0.5
+# alpha 3820001 1 0.5
+# alpha 12345 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@ケイオスリオン兵
+オラオラ！
+イミテーションどもが集まって
+なにを企んでやがる！？
+
+# textboxarrow 0 3
+# textflame 1 1
+@ケイオスリオン兵
+…ん？お前、ここにいたか！
+やっと見つけたぞ、オラァ！
+さっきはやってくれたなぁ！？
+
+# alpha 3401021 1 0.5
+# alpha 3820001 0 0.5
+# alpha 12345 0 0.5
+# face 3401021 "angry"
+# voice 340101 "abaris_a_unit_0012"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+マスター、私が嵐を起こします、
+その間にみんなを逃がしてください！
+
+# textflame 0 0
+@
+わかった、とマスターは返事をして
+みんなを屋内へと避難させると、
+いそいでアバリスの元へと戻る
+
+# voice 340101 "abaris_a_battle_0002"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+では、いきましょう！

@@ -1,0 +1,354 @@
+;;-----------------------------------------
+;;モラベガサイド
+;;【EP3『トリプルキャスト』】
+;;-----------------------------------------
+# script "lisp"
+# background "wild"
+# bgmfile "bgm263" "BgmLostRagnarok001" 0
+;;-----------------------------------------
+;;ケーリュケイオン
+# body 3600511
+# pos 3600511 2
+# scale 3600511 0.8 0
+# layer 3600511 3
+# alpha 3600511 0 0
+;;リットゥ
+# body 3100511
+# pos 3100511 4
+# scale 3100511 0.8 0
+# layer 3100511 3
+# alpha 3100511 0 0
+;;オベロン
+# body 135
+# pos 135 3
+# scale 135 0.8 0
+# layer 135 3
+# alpha 135 0 0
+# mask 135 off
+;;モラ
+# body 3104011
+# pos 3104011 4
+# scale 3104011 0.8 0
+# layer 3104011 3
+# alpha 3104011 0 0
+;;ベガ
+# body 3104111
+# pos 3104111 2
+# scale 3104111 0.8 0
+# layer 3104111 3
+# alpha 3104111 0 0
+;;-----------------------------------------
+;;背景：紙芝居のような舞台（幕が開いている）
+# textwindow "close"
+# fadeout "black" 0.2
+# imageset 0 "st_thickcurtain_left"
+# imagealpha 0 0 0 
+# imagelayer 0 5
+# imageset 1 "st_thickcurtain_right"
+# imagealpha 1 0 0 
+# imagelayer 1 5
+# imageset 2 "st_thickcurtain_top"
+# imagealpha 2 0 0
+# imagelayer 2 6 
+# frameout 0 0.5
+# waitandnext 0.2
+
+# imagepos 0 -540 0
+# imagepos 1 540 0
+# imagepos 2 0 450
+# imagealpha 0 0 0
+# imagealpha 1 0 0
+# imagealpha 2 1 0
+# waitandnext 0.2
+
+# fadein "black" 0.5
+# waitandnext 1
+
+# alpha 3104011 1 0.5
+# alpha 3104111 1 0.5
+;;# face 3104011 ""
+# voice 1040 "morallta_0002"
+# textwindow "nomal"
+# textboxarrow 0 3
+@モラルタ
+ねえ知ってる？
+
+;;# face 3104011 ""
+;;# voice 1040 ""
+# textboxarrow 0 3
+@モラルタ
+昔の昔
+元々ひとりの神さまの剣
+
+;;# face 3104011 ""
+;;# voice 1040 ""
+# textboxarrow 0 3
+@モラルタ
+新たな道を進むため
+ふたつに分かれてしまったけれど
+小さな勇者がそれをひとつに
+
+;;# face 3104111 ""
+;;# voice 1041 ""
+# textboxarrow 0 1
+@ベガルタ
+ねえ知ってる？
+
+;;# face 3104111 ""
+;;# voice 1041 ""
+# textboxarrow 0 1
+@ベガルタ
+『勇気は未来への羽根』
+小さな勇者のコトバ
+
+;;# face 3104111 ""
+;;# voice 1041 ""
+# textboxarrow 0 1
+@ベガルタ
+新しい誰かになるのが怖くて
+いつも呟いてた
+だけど羽根があれば飛べるから
+
+;;# face 3104011 ""
+;;# voice 1040 ""
+# textboxarrow 0 3
+@モラルタ
+誰でもなかった私達が
+
+;;# face 3104111 ""
+;;# voice 1041 ""
+# textboxarrow 0 1
+@ベガルタ
+誰でもあった私達が
+
+;;# face 3104011 ""
+;;# voice 1040 ""
+# textboxarrow 0 3
+@モラルタ
+これからは
+何にだってなれる
+
+# imagealpha 0 1 0
+# imagealpha 1 1 0
+;;# face 3104111 ""
+;;# voice 1041 ""
+# textboxarrow 0 1
+@ベガルタ
+キミがくれたこのコトバがあれば
+前に進める気がするよ
+
+;;演出：幕が閉じる（立ち絵消える）
+# bgm "stop"
+# se "SE_5508"
+# textwindow "close"
+# imagemoveto 0 -180 0 2
+# imagemoveto 1 180 0 2
+# waitandnext 2.5
+
+# alpha 3104011 0 0
+# alpha 3104111 0 0
+;;# voice 1040 ""
+# textwindow "nomal"
+# textboxarrow 0 0
+@モラルタ
+だからピスカ
+今はおやすみ
+
+;;# voice 1041 ""
+# textboxarrow 0 0
+@ベガルタ
+すっげえ疲れたでしょ？
+
+;;# voice 310421 ""
+# textboxarrow 0 0
+@モラベガ
+カーテンコールには
+応えてねっ
+
+;;演出：場転
+# fadeout "black" 2
+# waitandnext 2
+
+;;背景：森（夜）←森ないので平原で代用
+# background "plain_night"
+# face 3600511 "normal"
+# alpha 3600511 1 0
+# face 3100511 "normal"
+# alpha 3100511 1 0
+# framein 0 0
+# textwindow "close"
+# imagealpha 0 0 0
+# imagealpha 1 0 0
+# imagealpha 2 0 0
+# waitandnext 0.5
+
+# fadein "black" 2
+# waitandnext 2
+
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@ケーリュケイオン
+ここで問題です…
+
+# textboxarrow 0 3
+@リットゥ
+撤退中に私語はやめな
+
+# textboxarrow 0 1
+@ケーリュケイオン
+今回の事件
+勝ったのは誰でしょう～
+
+# voice 310051 "ritto_a_0013"
+# textboxarrow 0 3
+@リットゥ
+あいつらだろ
+
+# voice 360051 "keryukeion_ge_0004"
+# face 3600511 "happy"
+# textboxarrow 0 1
+@ケーリュケイオン
+わ・た・し・た・ち！よ！
+
+@ケーリュケイオン
+彼女らは
+３つの存在が１つになっちゃったのよ
+あっちにすれば戦力マイナス２よ！
+
+@ケーリュケイオン
+私達は残ってる！だから勝ち！
+Q！E！D！
+間違いなく私達の勝利なんだからっ！
+
+# voice 310051 "ritto_a_0006"
+# face 3100511 "happy"
+# textboxarrow 0 3
+@リットゥ
+カカッ
+卑怯な推理だ
+
+# voice 360051 "keryukeion_ge_0009"
+# face 3600511 "angry"
+# textboxarrow 0 1
+@ケーリュケイオン
+なによ！おバカぁ！！
+
+# voice 310051 "ritto_a_0004"
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textboxarrow 0 3
+@リットゥ
+褒めているのだ
+探偵サンよ
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：大穴（立ち絵なし）
+# background "101_hole"
+# alpha 3600511 0 0
+# alpha 3100511 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm275" "BgmLostRagnarokEvent" 0
+;;# voice 9970 ""
+# textwindow "nomal"
+# textboxarrow 0 0
+@オベロン
+本当に行くのだな…？
+アルマス達を助けるために
+ひとり、敵の巣窟へ
+
+# voice 310421 "morabeaga_l_0004"
+@モラベガ
+ひとりじゃないよ
+私達
+
+# voice 9970 "oberon_0007"
+@オベロン
+…ああ
+そうであったな
+
+;;# voice 310421 ""
+@モラベガ
+思い出の羽根を広げれば
+未来に飛べるんだ
+
+;;# voice 310421 ""
+@モラベガ
+聞こえるんだ
+大丈夫だよって
+ピスカの声が
+
+;;演出：場転
+# se "SE_0742"
+# fadeout "white" 1
+# waitandnext 1
+
+;;演出：回想（モラルタ・ベガルタキャラクエを引用）
+;;背景：崖
+# background "wild"
+# imageset 5 "bg_white_circle"
+# imagealpha 5 0 0
+# imagescale 5 1.5 0
+# imagelayer 5 3
+# textwindow "close"
+# alpha 3104011 1 0
+# alpha 3104111 1 0
+# waitandnext 0.2
+
+# imagealpha 5 1 0
+# imagepos 5 0 0
+# waitandnext 0.3
+
+# fadein "white" 1
+# waitandnext 1
+
+# face 3104011 "happy"
+;;# voice 1040 ""
+# textwindow "nomal"
+# textboxarrow 0 3
+@モラルタ
+もちろん！
+私達はいつも一緒だよ！
+
+# face 3104111 "sad"
+;;# voice 1041 ""
+# textboxarrow 0 1
+@ベガルタ
+本当に…
+私なんかでいいのかな…？
+
+;;# voice 1040 ""
+# textboxarrow 0 3
+@モラルタ
+大丈夫だよ、ベガ
+さあ、手を繋ごう！
+
+# face 3104111 "happy"
+;;# voice 1041 ""
+# textboxarrow 0 1
+@ベガルタ
+お姉ちゃん…うん
+今度こそ、この手は放さない…
+
+# voice 1041 "beagallta_0004"
+# textboxarrow 0 1
+@ベガルタ
+私達はずっと一緒だからねっ
+
+# fadeout "black" 2
+# waitandnext 2

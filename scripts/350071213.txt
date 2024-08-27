@@ -1,0 +1,433 @@
+;;-----------------------------------------
+;;【ファントムオブキル】悪魔ブリューナク
+;;【EP2】戦闘後
+;;スクリプト最後の背景：森（夜）
+;;背景：森（夕）
+;;-----------------------------------------
+# script "lisp"
+# background "forest_evening"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;ブリューナク
+# body 3500711
+# pos 3500711 3
+# scale 3500711 0.8 0
+# layer 3500711 2
+# alpha 3500711 0 0
+# mask 3500711 off
+# body 3830001
+# pos 3830001 3
+# scale 3830001 0.8 0
+# layer 3830001 3
+# alpha 3830001 0 0
+# mask 3830001 off
+;;-----------------------------------------
+;;ブリューナク一枚絵
+# imageset 0 "c3500711"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;背景：森（夕）
+# voice 350071 "buryunaku_a_battle_0001"
+# move 3500711 3 0
+# face 3500711 "angry"
+# alpha 3500711 1 0
+# mask 3500711 off
+# textflame 1 1
+# textboxarrow 0 2
+@ブリューナク
+はっ！　
+…次っ
+
+# textboxarrow 0 2
+@ブリューナク
+そこだ！
+
+# alpha 3500711 0 0.5
+# move 3830001 3 0
+# alpha 3830001 1 0.5
+# mask 3830001 off
+# textboxarrow 0 2
+@トレイセーマ兵
+くっ、うっ…
+
+;;演出：倒されるトレイセーマ兵
+# se "SE_3001"
+# textwindow "close"
+# alpha 3830001 0 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+今までも頼もしいと感じていた
+ブリューナクの戦いぶりだが
+今の戦闘では少し違うものに感じた
+
+;;モノローグ
+@
+冷静さの中に思いが乗るような
+そんな、熱を帯びた戦い方…
+
+# move 3500711 3 0
+# face 3500711 "normal"
+# alpha 3500711 1 0.5
+# mask 3500711 off
+# textflame 1 1
+# textboxarrow 0 2
+@ブリューナク
+戦闘終了だ
+驚かせてしまったか、マスター？
+
+# voice 350071 "buryunaku_a_0027"
+# face 3500711 "happy"
+# textboxarrow 0 2
+@ブリューナク
+ふぅ…少し熱くなってしまったようだ
+狩りとなると、我の中のバルバトスの
+血が、獲物を逃すまいと騒ぎ出すのだ
+
+# face 3500711 "normal"
+# textboxarrow 0 2
+@ブリューナク
+さぁ、あと少しだマスター
+我らの旅はどんな終わりを
+迎えるのだろうか…
+
+;;モノローグ
+# alpha 3500711 0 0.5
+# textflame 0 0
+@
+調査を始めた頃より確実に
+近づいているブリューナクとの距離
+
+;;モノローグ
+@
+まるで宝探しをするようで
+高鳴る気持ちを胸に、マスターたちは
+森の奥を目指すのだった
+
+;;演出：移動の暗転
+;;背景：森（夜）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "forest_totaleclipse"
+# move 3500711 3 0
+# face 3500711 "normal"
+# alpha 3500711 1 0
+# mask 3500711 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+# voice 350071 "buryunaku_a_0028"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ブリューナク
+地図によれば
+この遺跡の辺りのはずだが…
+
+;;モノローグ
+# textflame 0 0
+@
+目的地にたどり着いたが
+これといって変わったものもなく
+肩を落とすマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+@ブリューナク
+落ち込むにはまだ早いぞマスター
+財宝が、目立つ場所に置いて
+あるはずがないだろう？
+
+# voice 350071 "buryunaku_a_0004"
+# face 3500711 "happy"
+# textboxarrow 0 2
+@ブリューナク
+ふっ…ここは我に任せてほしい
+ブリューナクに宿る悪魔の血が、
+確かに財宝の気配を感じているのだ
+
+;;モノローグ
+# textflame 0 0
+@
+そう言うと、彼女は慣れた手つきで
+遺跡の一画にあった仕掛けを動かし
+隠された小箱を取り出す
+
+# voice 350071 "buryunaku_a_0003"
+# textflame 1 1
+# textboxarrow 0 2
+@ブリューナク
+ああ、この瞬間だ
+いつだって宝を手にする
+その瞬間がたまらない…
+
+;;モノローグ
+# textflame 0 0
+@
+ドキドキするマスターを横に、
+隠されていた宝をあっさりと
+見つけてしまったブリューナク
+
+;;モノローグ
+@
+財宝発見の瞬間に立ち会い、
+すごい！と声を上げるマスター
+そして興味津々な様子で箱を見つめる
+
+# voice 350071 "buryunaku_a_0005"
+# textflame 1 1
+# textboxarrow 0 2
+@ブリューナク
+はは、焦らずとも
+宝は我らの手中だ、マスター
+どれ、さっそく開けてみよう…
+
+# voice 350071 "buryunaku_a_0013"
+# face 3500711 "surprise"
+# textboxarrow 0 2
+@ブリューナク
+…む、これは…
+
+;;モノローグ
+# textflame 0 0
+@
+箱を開けると
+そこには紙切れが入っていた
+どうやら、また地図のようだ
+
+# voice 350071 "buryunaku_a_0040"
+# face 3500711 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@ブリューナク
+…ふふっ、なるほどな
+宝はそう簡単には手に入らない
+ということか
+
+;;モノローグ
+# textflame 0 0
+@
+宝が手に入った訳でもないのに
+嬉しそうに話すブリューナク
+
+;;モノローグ
+@
+楽しげな彼女の表情に、
+マスターも胸の高鳴りを覚え、
+また、旅が始まるね、と話す
+
+# voice 350071 "buryunaku_a_0022"
+# face 3500711 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@ブリューナク
+マスター、それは…
+
+;;モノローグ
+# textflame 0 0
+@
+驚いた表情を浮かべるブリューナク
+旅は何があるかわからないからこそ
+夢がある、と話すマスター
+
+;;モノローグ
+@
+そして、
+これがロマンってやつかな？
+と、笑顔で付け加えるマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+@ブリューナク
+……ッ！？
+
+# voice 350071 "buryunaku_a_0005"
+# face 3500711 "happy"
+# textboxarrow 0 2
+@ブリューナク
+…ああ…マスター
+ふふ…そうか、
+そうだったのだな
+
+# textboxarrow 0 2
+@ブリューナク
+ブリューナクの目に狂いはなかった
+今目の前にあるマスターの表情
+それは、ロマンを求める者の顔だ
+
+# textboxarrow 0 2
+@ブリューナク
+財宝を得ることは素晴らしいが
+それを求める旅路にこそロマンがある
+
+# textboxarrow 0 2
+@ブリューナク
+それを知っているとは…
+マスターもまたブリューナクと同じ
+ロマンを追い求める者だったのだな
+
+;;モノローグ
+# textflame 0 0
+@
+マスターとの繋がりを強く感じた
+ブリューナクに力が宿っていく
+
+;;モノローグ
+# bgm "stop"
+@
+そのとき…
+
+;;演出：トレイセーマ兵in
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# alpha 3500711 0 0.5
+# move 3830001 3 0
+# alpha 3830001 1 0.5
+# mask 3830001 off
+# textflame 1 1
+# textboxarrow 0 2
+@トレイセーマ兵
+見つけたぞ！
+
+;;モノローグ
+# textflame 0 0
+@
+突如、木の陰から
+兵士が姿を現した
+
+# textflame 1 1
+# textboxarrow 0 2
+@トレイセーマ兵
+泳がせておいて、宝の在処を
+探させる策は当たりだったようだな！
+
+# voice 350071 "buryunaku_a_0004"
+# alpha 3830001 0 0.5
+# move 3500711 3 0
+# face 3500711 "happy"
+# alpha 3500711 1 0.5
+# mask 3500711 off
+# textboxarrow 0 2
+@ブリューナク
+ふっ…いや、
+外れも外れ、大外れだよ、
+愚か者どもよ
+
+;;モノローグ
+# textflame 0 0
+@
+ブリューナクはそう言うと
+身に宿したばかりの力を解放し
+兵士たちを蹂躙する
+
+# se "SE_0602"
+# face 3500711 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@ブリューナク
+叫べ獰猛なる銃声よ
+これがブリューナクの新たなる力
+『高貴なる影弾』だ
+
+;;銃声の演出
+# se "SE_4400"
+# waitandnext 0.5
+
+# alpha 3500711 0 0.5
+# move 3830001 3 0
+# alpha 3830001 1 0.5
+# mask 3830001 off
+# textboxarrow 0 2
+@トレイセーマ兵
+ぐ、ぐあああああああっ！
+
+;;演出：倒れるトレイセーマ兵
+# bgm "stop"
+# se "SE_3001"
+# textwindow "close"
+# alpha 3830001 0 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+# voice 350071 "buryunaku_a_0004"
+# move 3500711 3 0
+# face 3500711 "happy"
+# alpha 3500711 1 0.5
+# mask 3500711 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ブリューナク
+ふっ…
+財宝とは勝者への褒美
+お前たちには不相応の品だ
+
+;;モノローグ
+# textflame 0 0
+@
+そう呟くと、戦闘で乱れた
+手袋を直しながら、マスターに
+向き直るブリューナク
+
+# textflame 1 1
+# textboxarrow 0 2
+@ブリューナク
+困難が多いほど旅は面白い
+どうやら、マスターとの旅路は
+ロマンに溢れていそうだな
+
+# textboxarrow 0 2
+@ブリューナク
+我らの旅はここでは終わらない
+そうだろう？
+
+;;モノローグ
+# textflame 0 0
+@
+ブリューナクの投げかけに、
+目を輝かせて頷くマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+@ブリューナク
+ふっ…いい目だ
+さぁ、行こうかマスター
+
+# textboxarrow 0 2
+@ブリューナク
+まだ見ぬロマンを求め、
+新たな舞台へ！
+
+;;モノローグ
+# textflame 0 0
+@
+そうマスターに告げるブリューナク
+ふたりの間にはもう距離などなかった
+
+;;⇒一枚絵ボイス
+;;★５
+;;「この先も、ブリューナクはマスターと共にある。
+;; 理由など、確認する必要もないだろう？
+;; そこにロマンがあるからだ」
+;;ホワイトアウト
+# textflame 0 0
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# fadein "white" 3
+# buttonsout 0 0
+# textwindow "close"
+# voice 350071 "buryunaku_a_kyara_0026"
+
+# frameout 0 1
+
+# waitandnext 0.8
+
+# fadeout "black" 1.5
+# waitandnext 1.5

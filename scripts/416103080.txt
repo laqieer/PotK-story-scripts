@@ -1,0 +1,808 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;インテグラルキラーズサイドストーリー
+;;第3話―８　タイトル：不可欠な痛み
+;;3_8_0
+;;スクリプト最後の背景：王都（壊滅）
+;;-----------------------------------------
+# script "lisp"
+# background "wild"
+# bgm "stop"
+;;-----------------------------------------
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 2
+# alpha 24 0 0
+# mask 24 off
+;;レーヴァテイン
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# layer 100221 2
+# alpha 100221 0 0
+# mask 100221 off
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 2
+# alpha 0 0 0
+# mask 0 off
+;;ティルフィング（別）
+# entry 9241 24
+# pos 9241 3
+# scale 9241 0.8 0
+# layer 9241 2
+# alpha 9241 0 0
+# mask 9241 off
+# brightness 9241 0.8 0
+;;ロンギヌス
+# body 300111
+# pos 300111 3
+# scale 300111 0.8 0
+# layer 300111 3
+# alpha 300111 0 0
+# mask 300111 off
+;;マサムネ
+# body 100111
+# pos 100111 3
+# scale 100111 0.8 0
+# layer 100111 2
+# alpha 100111 0 0
+# mask 100111 off
+;;マサムネ（別）
+# entry 91001111 100111
+# pos 91001111 3
+# scale 91001111 0.8 0
+# layer 91001111 2
+# alpha 91001111 0 0
+# mask 91001111 off
+# brightness 91001111 0.8 0
+;;パラシュ
+# body 200411
+# pos 200411 3
+# scale 200411 0.8 0
+# layer 200411 2
+# alpha 200411 0 0
+# mask 200411 off
+;;アルテミス
+# body 400131
+# pos 400131 3
+# scale 400131 0.8 0
+# layer 400131 2
+# alpha 400131 0 0
+# mask 400131 off
+;;フライクーゲル
+# body 500211
+# pos 500211 3
+# scale 500211 0.8 0
+# layer 500211 2
+# alpha 500211 0 0
+# mask 500211 off
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 2
+# alpha 810004 0 0
+# mask 810004 off
+;;異族（クローン1）
+# entry 98100041 810004
+# pos 98100041 3
+# scale 98100041 0.8 0
+# layer 98100041 2
+# alpha 98100041 0 0
+# mask 98100041 off
+;;異族（クローン2）
+# entry 98100042 810004
+# pos 98100042 3
+# scale 98100042 0.8 0
+# layer 98100042 2
+# alpha 98100042 0 0
+# mask 98100042 off
+;;-----------------------------------------
+;;第3話―８　タイトル：不可欠な痛み
+;;//背景：荒野
+;;//画面揺れ
+# textwindow "close"
+# waitandnext 0.2
+
+# se "SE_0637"
+# shake 0 1
+# waitandnext 1
+
+# move 24 3 0
+# face 24 "sad"
+# alpha 24 1 0.5
+# mask 24 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+世界が崩れていきます…
+これが「失敗」した世界線の破棄…
+何て残酷なの…
+
+# bgmfile "bgm473" "BgmIntegralNoahEvent009" 0
+# voice 9999 "durin_0064"
+# alpha 24 0 0.5
+# move 0 3 0
+# face 0 "serious"
+# alpha 0 1 0.5
+# mask 0 off
+# textboxarrow 0 2
+@デュリン
+ティル！？
+しっかりして…ティル！
+
+# alpha 0 0 0.5
+# move 24 3 0
+# face 24 "surprise"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+デュリン…
+えっ…あれは…
+
+# textwindow "close"
+# alpha 24 0 0.5
+# waitandnext 0.5
+
+;;ティルフィング（別）
+# move 9241 3 0
+# face 9241 "mad2"
+# alpha 9241 1 0.5
+# mask 9241 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+ああっ…あああああああアアア…！！
+
+;;//ティルフィングが異族化していく
+# se "SE_6107"
+# textwindow "close"
+# alpha 9241 0 1
+# move 810004 3 0
+# alpha 810004 1 1
+# mask 810004 off
+# waitandnext 1.4
+
+# alpha 810004 0 1
+# move 9241 3 0
+# face 9241 "mad2"
+# alpha 9241 1 1
+# mask 9241 off
+# waitandnext 1
+
+;;ティルフィング（別）
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+マスター…！
+マスター私はああああアアア…
+
+# textwindow "close"
+# alpha 9241 0 0.5
+# waitandnext 0.5
+
+# voice 1014 "tyrufing_0024"
+# move 24 3 0
+# face 24 "surprise"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+そんなっ…
+「私」の姿が変化していきます
+
+;;//周りのキラープリンセスも変化し始める
+# se "SE_6107"
+# textwindow "close"
+# alpha 24 0 0.5
+# serif 1
+@キラープリンセス達
+アアアアアアアアア！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 9999 "durin_0023"
+# move 0 3 0
+# face 0 "serious"
+# alpha 0 1 0.5
+# mask 0 off
+# textboxarrow 0 2
+# textwindow "normal"
+@デュリン
+暴走！？
+ううん…何かが違う…
+何なのよ、これっ？
+
+# textwindow "close"
+# alpha 0 0 0.5
+# serif 1
+@キラープリンセス達
+ガアアアアアアアアア！
+
+;;//キル姫達が異族に変化する（花異族ではなく、普通の異族でお願いいたします）
+# serif 1
+# textwindow "close"
+# serif 0
+# se "SE_0617"
+# move 98100041 1 0
+# alpha 98100041 1 0.5
+# mask 98100041 on
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 on
+# move 98100042 5 0
+# alpha 98100042 1 0.5
+# mask 98100042 on
+# textboxarrow 0 0
+# textwindow "normal"
+@異族
+ガアアアアアアアアアア！
+
+# alpha 98100041 0 0.5
+# alpha 810004 0 0.5
+# alpha 98100042 0 0.5
+# move 24 3 0
+# face 24 "surprise"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+あの姿…もしかして天上世界に
+昔、存在していたという異族…？
+
+# textboxarrow 0 2
+@ティルフィング
+どうしてキル姫が異族に？
+何が起きてるんですか…
+
+# textwindow "close"
+# alpha 24 0 0.5
+# waitandnext 0.5
+
+;;ティルフィング（別）
+# move 9241 3 0
+# face 9241 "mad2"
+# alpha 9241 1 0.5
+# mask 9241 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+ガアアアアアアアアアア！
+
+;;//ティルフィング（別）が異族になる
+# se "SE_0617"
+# alpha 9241 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# textboxarrow 0 2
+@異族
+ガアアアアアアアア！
+
+# voice 9999 "durin_0015"
+# alpha 810004 0 0.5
+# move 0 3 0
+# face 0 "serious"
+# alpha 0 1 0.5
+# mask 0 off
+# textboxarrow 0 2
+@デュリン
+何なの…アンタ…
+アタシのティルをどこに――
+
+;;//轟音とともに暗転
+# se "SE_0638"
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# alpha 0 0 0
+# move 24 3 0
+# face 24 "normal"
+# alpha 24 1 0
+# mask 24 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//背景：黒
+# voice 1014 "tyrufing_movie_0022"
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+マスター、無事ですかっ？
+
+# face 24 "happy2"
+# textboxarrow 0 2
+@ティルフィング
+…良かった
+私にしっかり掴まっていて下さいね
+
+# face 24 "sad"
+# textboxarrow 0 2
+@ティルフィング
+やっとマスターに触れることができる
+ようになりました
+でも…
+
+# textboxarrow 0 2
+@ティルフィング
+先程の世界線は破棄されて、
+マナへと還っていきます
+…あれは？
+
+;;//異族が他の世界線に送られていく
+# se "SE_0617"
+# alpha 24 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# textboxarrow 0 2
+@異族
+ガアアアアアアアアア！
+
+# se "SE_6108"
+# waitandnext 0.2
+
+# textwindow "close"
+# alpha 810004 0 0.5
+# waitandnext 0.5
+
+# move 24 3 0
+# face 24 "sad"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+異族が…別の世界線に…
+あちらの世界線には何があるの？
+
+;;//背景：ユグドラシル内部
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "yggdrasill_interior"
+# alpha 24 0 0
+# move 24 2 0
+# face 24 "normal"
+# alpha 24 1 0
+# mask 24 on
+# move 400131 4 0
+# face 400131 "nutual"
+# alpha 400131 1 0
+# mask 400131 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm437" "BgmIntegralNoahEvent005" 0
+# textboxarrow 0 3
+# textwindow "normal"
+@アルテミス
+ティルフィング！
+やっと戻ってきましたね
+
+# textboxarrow 0 1
+@ティルフィング
+遅くなりました…
+マスターも無事です
+
+# alpha 400131 0 0.5
+# move 100111 4 0
+# face 100111 "nutual"
+# alpha 100111 1 0.5
+# mask 100111 on
+# textboxarrow 0 3
+@マサムネ
+そなたらの様子は確認できておったが
+干渉する術がなかった
+無事で何よりだ
+
+# voice 1014 "tyrufing_0002"
+# face 24 "sad"
+# textboxarrow 0 1
+@ティルフィング
+あの…皆も見ましたよね？
+「私」達が異族になるところを
+
+# alpha 24 0 0.5
+# alpha 100111 0 0.5
+# move 500211 1 0
+# face 500211 "normal"
+# alpha 500211 1 0.5
+# mask 500211 on
+# move 300111 3 0
+# face 300111 "normal"
+# alpha 300111 1 0.5
+# mask 300111 on
+# textboxarrow 0 2
+# move 200411 5 0
+# face 200411 "normal"
+# alpha 200411 1 0.5
+# mask 200411 on
+@ロンギヌス
+はい…
+恐ろしい光景でした
+
+# textboxarrow 0 3
+@パラシュ
+あれが意味するところは何となく
+察しがつくよ
+
+# face 500211 "sad"
+# textboxarrow 0 1
+@フライクーゲル
+ベリィサァッドでベァッドな
+予感しかしないけどね…
+
+# alpha 500211 0 0.5
+# alpha 300111 0 0.5
+# alpha 200411 0 0.5
+# move 24 2 0
+# face 24 "sad"
+# alpha 24 1 0.5
+# move 100221 4 0
+# face 100221 "normal"
+# alpha 100221 1 0.5
+# mask 100221 on
+# textboxarrow 0 3
+@レーヴァテイン
+もしかして…確認するつもり…？
+
+# textboxarrow 0 1
+@ティルフィング
+…はい
+
+# textboxarrow 0 1
+@ティルフィング
+目の前で起きたことですけれど、
+まだ信じられません…
+いえ、信じたくありません
+
+# textboxarrow 0 1
+@ティルフィング
+でも、確かめないといけない
+そう思うんです…
+
+;;//背景：平原
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# alpha 24 0 0
+# alpha 100221 0 0
+# move 9241 2 0
+# face 9241 "angry"
+# alpha 9241 1 0
+# mask 9241 on
+# move 810004 4 0
+# alpha 810004 1 0
+# mask 810004 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_0617"
+# textboxarrow 0 3
+# textwindow "normal"
+@異族
+ガアアアアアアアアア！
+
+;;ティルフィング（別）
+# voice 1014 "tyrufing_battle_0004"
+# textboxarrow 0 1
+@ティルフィング
+せいっ！
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# se "SE_0669"
+# textboxarrow 0 3
+@異族
+ガアアアアアア…
+
+;;//背景：荒野
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "wild"
+# alpha 9241 0 0
+# alpha 810004 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_6107"
+# serif 1
+@キラープリンセス達
+ガアアアアアアアア！
+
+;;//異族に変化する
+# serif 1
+# textwindow "close"
+# serif 0
+# se "SE_0617"
+# move 98100041 1 0
+# alpha 98100041 1 0.5
+# mask 98100041 on
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 on
+# move 98100042 5 0
+# alpha 98100042 1 0.5
+# mask 98100042 on
+# textboxarrow 0 0
+# textwindow "normal"
+@異族
+ガアアアアアアアアアア！
+
+;;//背景：村
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "004_outland"
+# alpha 98100041 0 0
+# alpha 810004 0 0
+# alpha 98100042 0 0
+# move 91001111 2 0
+# face 91001111 "angry"
+# alpha 91001111 1 0
+# mask 91001111 on
+# move 810004 4 0
+# alpha 810004 1 0
+# mask 810004 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;マサムネ（別）
+# voice 1001 "masamune_0029"
+# textboxarrow 0 1
+# textwindow "normal"
+@マサムネ
+はあっ！
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 2000 1 200 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+# se "SE_0669"
+# textboxarrow 0 3
+@異族
+ギイイイイイイ…
+
+;;//背景：ユグドラシル内部
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "yggdrasill_interior"
+# alpha 91001111 0 0
+# alpha 810004 0 0
+# move 24 2 0
+# face 24 "sad"
+# alpha 24 1 0
+# mask 24 on
+# move 400131 4 0
+# face 400131 "nutual"
+# alpha 400131 1 0
+# mask 400131 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm473_block" "BgmIntegralNoahEvent009" 0
+# textboxarrow 0 1
+# textwindow "normal"
+@ティルフィング
+…………
+
+# voice 4001 "arutemisu_0013"
+# textboxarrow 0 3
+@アルテミス
+幾つかの世界線を見て回りましたが
+間違いないようですね
+
+# alpha 24 0 0.5
+# alpha 400131 0 0.5
+# move 100111 2 0
+# face 100111 "nutual"
+# alpha 100111 1 0.5
+# mask 100111 on
+# textboxarrow 0 1
+# move 200411 4 0
+# face 200411 "normal"
+# alpha 200411 1 0.5
+# mask 200411 on
+@マサムネ
+「箱庭実験」において「失敗」した
+世界線は破棄され、その大半はマナに
+還されるが…
+
+# textboxarrow 0 3
+@パラシュ
+キル姫は異族に変えられて
+他の世界線に送り込まれる
+そういうシステムができている
+
+# voice 3001 "ronginusu_0009"
+# alpha 100111 0 0.5
+# alpha 200411 0 0.5
+# move 300111 3 0
+# face 300111 "sad"
+# alpha 300111 1 0.5
+# mask 300111 off
+# textboxarrow 0 2
+@ロンギヌス
+こんなの…ひどすぎますっ
+つまり、異族は私達と同じ…
+
+# alpha 300111 0 0.5
+# move 400131 2 0
+# face 400131 "nutual"
+# alpha 400131 1 0.5
+# mask 400131 on
+# move 100221 4 0
+# face 100221 "normal"
+# alpha 100221 1 0.5
+# mask 100221 on
+# textboxarrow 0 3
+@レーヴァテイン
+でも…異族がいる世界線は何だかんだ
+で長続きしてるんだよね
+
+# textboxarrow 0 1
+@アルテミス
+はい…
+異族が人間を捕食することで
+人口調整を行い…
+
+# textboxarrow 0 1
+@アルテミス
+同時にキル姫の敵として存在する
+ことで教会のキル姫管理にも
+役立っています
+
+# face 400131 "sad"
+# textboxarrow 0 1
+@アルテミス
+皮肉なものですね…
+異族がいるお陰で維持されている
+世界線ばかりです
+
+# alpha 400131 0 0.5
+# alpha 100221 0 0.5
+# move 24 3 0
+# face 24 "sad"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+…………
+
+# alpha 24 0 0.5
+# move 100111 2 0
+# face 100111 "nutual"
+# alpha 100111 1 0.5
+# mask 100111 on
+# move 400131 4 0
+# face 400131 "nutual"
+# alpha 400131 1 0.5
+# mask 400131 on
+# textboxarrow 0 3
+@アルテミス
+それから、一つ理解できました
+どうして「異族」という名称なのか
+
+# textboxarrow 0 1
+@マサムネ
+何のことだ？
+
+# textboxarrow 0 3
+@アルテミス
+異族は当初から異族と呼ばれて
+きましたが、その理由は不明でした
+
+# textboxarrow 0 3
+@アルテミス
+人間を捕食する存在…
+確かに人間から見れば異なりますが
+異なるという点ならキル姫も同じはず
+
+# textboxarrow 0 3
+@アルテミス
+にも関わらず、ずっと異族と
+呼ばれてきたんです
+不思議ではありませんか？
+
+# alpha 100111 0 0.5
+# move 200411 2 0
+# face 200411 "normal"
+# alpha 200411 1 0.5
+# mask 200411 on
+# textboxarrow 0 1
+@パラシュ
+言われてみればね
+で、その答えは…
+
+# textboxarrow 0 3
+@アルテミス
+異族は「異なる世界線の存在」だから
+異族だったんです
+
+# voice 1002 "revatein_0028"
+# alpha 200411 0 0.5
+# alpha 400131 0 0.
+# move 100221 3 0
+# face 100221 "normal"
+# alpha 100221 1 0.5
+# mask 100221 off
+# textboxarrow 0 2
+@レーヴァテイン
+そう聞くと…単純な理由ね
+
+# alpha 100221 0 0.5
+# move 24 3 0
+# face 24 "angry"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+そんなこと…
+どうでもいいんです…！
+
+# voice 4001 "arutemisu_0031"
+# alpha 24 0 0.5
+# move 400131 3 0
+# face 400131 "sad"
+# alpha 400131 1 0.5
+# mask 400131 off
+# textboxarrow 0 2
+@アルテミス
+ティルフィング…
+すみません、つい…
+
+# alpha 400131 0 0.5
+# move 24 3 0
+# face 24 "sad"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+つまり私達は…「私」同士で淘汰して
+いただけでなく…異なる世界線の
+「私」達とも殺し合っていた
+
+# textboxarrow 0 2
+@ティルフィング
+どうして…どうしてこんな宿命を
+背負わされているんですかっ？

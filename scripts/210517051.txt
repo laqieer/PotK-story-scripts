@@ -1,0 +1,599 @@
+;;-----------------------------------------
+;;ファンキル　2021ウェディングイベント　シナリオ
+;;【EP.4】泥塗れの少女
+;;スクリプト最後の背景：街(夜)
+;;背景：街(夜)
+;;-----------------------------------------
+# script "lisp"
+# background "town_night"
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;ロジェスティラ・神令・スクルド
+# body 5503711
+# pos 5503711 3
+# scale 5503711 0.8 0
+# layer 5503711 2
+# alpha 5503711 0 0
+# mask 5503711 off
+;;イチイバル ウェディングver.
+# body 5402221
+# pos 5402221 3
+# scale 5402221 0.8 0
+# layer 5402221 2
+# alpha 5402221 0 0
+# mask 5402221 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;【EP.4】泥塗れの少女
+;;//背景：街(夜)
+# textwindow "close"
+# move 5503711 2 0
+# face 5503711 "usual"
+# alpha 5503711 1 0
+# mask 5503711 on
+# move 5402221 4 0
+# face 5402221 "usual"
+# alpha 5402221 1 0
+# mask 5402221 on
+# waitandnext 0.2
+
+;;//ＳＥ：ゴソゴソ…（袋を渡す音、衣擦れ音）
+# textwindow "close"
+# se "SE_0812"
+# waitandnext 1
+
+# emotionbody 1000 2 5503711 10 290
+# effectpattern 1000 1 1
+# effectstart 1000
+# voice 550371 "logistille_c_0022"
+# textflame 1 1
+# textboxarrow 0 1
+# textwindow "normal"
+@ロジェスティラ
+えっ、と…この袋は？
+
+# face 5402221 "normal"
+# textboxarrow 0 3
+@イチイバル
+開けてみてよ
+
+;;モノローグ
+# se "SE_11618"
+# textflame 0 0
+@
+イチイバルに促され、
+ロジェスティラは袋の口を
+そっと開いてみる…
+
+# emotionbody 2000 1 5503711 10 310
+# effectpattern 2000 2 0
+# effectstart 2000
+# face 5503711 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@ロジェスティラ
+…！？
+これ、って…！
+
+;;モノローグ
+# textflame 0 0
+@
+中に入っていたのは、
+イチイバルが仕立てた
+ドレスだった
+
+;;モノローグ
+@
+これは…？
+困惑する彼女に、
+イチイバルが語り掛ける
+
+# textflame 1 1
+# textboxarrow 0 3
+@イチイバル
+キミに教わった技術を駆使して
+ボクが作ったんだ
+
+# textboxarrow 0 3
+@イチイバル
+確かに、キミの作った
+ドレスには適わないけれど…
+
+# se "SE_6504"
+# emotionbody 3000 3 5503711 10 290
+# effectpattern 3000 1 3
+# effectstart 3000
+# face 5503711 "happy"
+# textboxarrow 0 1
+@ロジェスティラ
+そんなことありません！
+とっても、とっても
+素敵です！
+
+# face 5503711 "surprise"
+# textboxarrow 0 1
+@ロジェスティラ
+でも、そんなドレスをわたしに？
+それって、まさか…
+
+# voice 540221 "ichiibal_c_0003"
+# textboxarrow 0 3
+@イチイバル
+あぁ…やっぱりボクは、
+キミといっしょに舞踏会に出たい
+
+# emotionbody 4000 1 5503711 10 310
+# effectpattern 4000 1 0
+# effectstart 4000
+# textboxarrow 0 1
+@ロジェスティラ
+っ！！
+
+# voice 540221 "ichiibal_c_0031"
+# face 5402221 "usual"
+# textboxarrow 0 3
+@イチイバル
+驚かせてしまってごめん
+どうしても諦めきれなくて…
+
+# textboxarrow 0 3
+@イチイバル
+キミはいつも
+わたしなんかがって
+卑下しようとするけれど
+
+# face 5402221 "normal"
+# textboxarrow 0 3
+@イチイバル
+ボクにとっては…
+キミは誰よりも素敵で、
+誰よりもかわいい女の子なんだ
+
+# textboxarrow 0 3
+@イチイバル
+そう、まるで…
+絵本の中のお姫様みたいに
+
+# face 5503711 "usual"
+# textboxarrow 0 1
+@ロジェスティラ
+お姫、様…
+
+# face 5402221 "usual"
+# textboxarrow 0 3
+@イチイバル
+キミといっしょに踊れたら、
+今までで一番楽しい思い出が
+作れると思う
+
+# textboxarrow 0 3
+@イチイバル
+だから…ロジェ！
+どうかボクと…
+
+# bgm "stop"
+# voice 550371 "logistille_c_0035"
+# face 5503711 "sad"
+# textboxarrow 0 1
+@ロジェスティラ
+…ごめんなさいっ！！
+
+;;モノローグ
+# face 5402221 "surprise"
+# textflame 0 0
+@
+ロジェスティラの大きな声に、
+イチイバルはハッと息を飲む
+
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+# textflame 1 1
+# textboxarrow 0 1
+@ロジェスティラ
+わ、わたしは…ダメなんですっ！
+
+# textboxarrow 0 1
+@ロジェスティラ
+イチイバルさんと踊るなんて…
+そんな資格はありませんっ！
+
+# textboxarrow 0 3
+@イチイバル
+ど…どうして？
+
+# textboxarrow 0 1
+@ロジェスティラ
+だって…だってっ
+泥塗れなんです、わたしは…！
+
+# emotionbody 5000 2 5402221 10 290
+# effectpattern 5000 1 1
+# effectstart 5000
+# voice 540221 "ichiibal_c_0023"
+# textboxarrow 0 3
+@イチイバル
+…どういうこと？
+
+# face 5503711 "usual"
+# textboxarrow 0 1
+@ロジェスティラ
+まだ、駆け出しだった頃です
+
+# textboxarrow 0 1
+@ロジェスティラ
+ドレスの発表の催物があったんです
+友達は作ったドレスを着てもらえる
+人がいないと困っていました
+
+# textboxarrow 0 1
+@ロジェスティラ
+そのドレスは本当に素敵で…
+
+# face 5402221 "usual"
+# textboxarrow 0 3
+@イチイバル
+キミが自分で着たいと
+願い出たんだね？
+
+# voice 550371 "logistille_c_0003"
+# textboxarrow 0 1
+@ロジェスティラ
+はい
+友達は是非、お願いしたいって…
+
+# textboxarrow 0 1
+@ロジェスティラ
+最初は嬉しかったです
+こんな綺麗なドレスを着れるんだって
+夢が叶ったって
+
+# textboxarrow 0 1
+@ロジェスティラ
+でも、当日になって、
+急に恥ずかしくなって…怖くなって
+
+# textboxarrow 0 1
+@ロジェスティラ
+当日、緊張のせいで転んで…
+泥を付けてしまい
+ドレスをダメにしてしまったんです
+
+# textboxarrow 0 3
+@イチイバル
+……
+
+# voice 550371 "logistille_c_0015"
+# face 5503711 "sad"
+# textboxarrow 0 1
+@ロジェスティラ
+わたしのせいなんです
+わたしが着るなんて言わなければ
+ドレスは……
+
+# face 5503711 "angry"
+# textboxarrow 0 1
+@ロジェスティラ
+だから、わたしは決めたんです
+もう、ドレスは着ないって…
+
+# textboxarrow 0 1
+@ロジェスティラ
+それに、イチイバルさんみたいに
+綺麗じゃないっ…！
+あなたのようにはなれないっ！
+
+;;//ＳＥ：タッタッタッ（走り去る音）
+;;//ト書き：ロジェスティラ、画面から消える
+# se "SE_5575"
+# textwindow "close"
+# leftout 5503711 0.5
+# waitandnext 0.5
+
+# alpha 5503711 0 0
+# move 5402221 3 0.2
+# mask 5402221 off
+# waitandnext 0.2
+
+# face 5402221 "happy"
+# textboxarrow 0 2
+# textwindow "normal"
+@イチイバル
+ロジェ！！
+
+;;モノローグ
+# textflame 0 0
+@
+名前を叫ぶが、
+ロジェスティラは振り返らない…
+
+;;//ＳＥ：ポツ、ポツ、ポツ…（雨が降りはじめる音）
+# se "SE_6116"
+# envbody 9000 1 0
+# effectpattern 9000 1 0
+# effectstart 9000
+# waitandnext 0.2
+
+# voice 540221 "ichiibal_c_0017"
+# face 5402221 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@イチイバル
+そん、な…
+
+;;//ＳＥ：ザアアアアア…（雨が降り出す音）
+# se "SE_6117"
+# effectskip 9000
+# envbody 10000 1 0
+# effectpattern 10000 2 0
+# effectstart 10000
+# waitandnext 0.2
+
+;;モノローグ
+# textflame 0 0
+@
+純白のドレスが、
+雨粒をぱちぱちと弾く
+
+;;モノローグ
+@
+濡れていることにも
+気づかないまま、
+イチイバルは茫然と立ち尽くす…
+
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 5402221 0 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;//演出：場面転換
+;;//ＳＥ：パシャパシャパシャ…（雨の中走る音）
+# se "SE_5002"
+# sedelay "SE_5003" 0.25
+# sedelay "SE_5002" 0.5
+# sedelay "SE_5003" 0.75
+# sedelay "SE_5002" 1
+# move 5503711 3 0
+# face 5503711 "sad"
+# alpha 5503711 1 0.5
+# mask 5503711 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ロジェスティラ
+はぁっ…はぁっ…はぁっ…！
+
+;;モノローグ
+# textflame 0 0
+@
+逃げ出したロジェスティラは、
+雨に打たれながら
+とぼとぼと街を歩く
+
+;;//ＳＥ：ガラガラガラ…（馬車が走り去る音）
+# se "SE_5028"
+# sedelay "SE_5029" 1.5
+# waitandnext 1.5
+
+# face 5503711 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@ロジェスティラ
+あ…
+
+;;モノローグ
+# textflame 0 0
+@
+その横を通る豪奢な馬車と、
+ドレス姿の貴婦人たち
+
+;;モノローグ
+@
+きらびやかな世界を
+目の当たりにして、
+ロジェスティラは思わず目を伏せる
+
+;;ロジェスティラ（心の声）
+# move 5503711 3 0
+# face 5503711 "usual"
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 5503711 off
+@ロジェスティラ
+あの世界に、わたしはいられない
+わたしは汚れているから…
+
+;;ロジェスティラ（心の声）
+# textboxarrow 0 0
+@ロジェスティラ
+それにこの手だって…
+針を扱って傷だらけ…
+
+;;ロジェスティラ（心の声）
+# textboxarrow 0 0
+@ロジェスティラ
+わたしはドレスを着る立場じゃない
+誰にも知られず、ドレスを作れたら
+それだけで…
+
+;;モノローグ
+# textflame 0 0
+@
+ロジェスティラは今一度、
+イチイバルとの記憶を思い返した
+
+;;ロジェスティラ（心の声）
+# textflame 1 1
+# textboxarrow 0 0
+@ロジェスティラ
+あの時から、
+本当はもうわかってた…
+
+;;ロジェスティラ（心の声）
+# textboxarrow 0 0
+@ロジェスティラ
+ドレス姿のイチイバルさんを
+初めて見たとき
+
+;;ロジェスティラ（心の声）
+# textboxarrow 0 0
+@ロジェスティラ
+わたしは絶対、
+この人みたいには
+なれないって…
+
+;;モノローグ
+# textflame 0 0
+@
+幼いころからの憧れを、
+ついに形にできたロジェスティラ
+
+;;モノローグ
+@
+けれど彼女は頑なに
+自分で着ようとはしなかった
+
+;;モノローグ
+@
+なぜなら―
+自分はドレスに
+ふさわしい存在ではないから
+
+;;モノローグ
+@
+自分よりももっと上手く
+着こなせる誰かがいるから…
+
+;;ロジェスティラ（心の声）
+# textflame 1 1
+# textboxarrow 0 0
+@ロジェスティラ
+イチイバルさんに着てもらえたら、
+それで十分だと思えた
+
+;;ロジェスティラ（心の声）
+# textboxarrow 0 0
+@ロジェスティラ
+隣にわたしなんかが居たら、
+邪魔になってしまうだけ…
+
+;;ロジェスティラ（心の声）
+# textboxarrow 0 0
+@ロジェスティラ
+だから、これでいいの…
+あの人が喜んでくれたら、
+わたしは…
+
+# emotionbody 6000 1 5503711 10 310
+# effectpattern 6000 2 0
+# effectstart 6000
+# voice 550371 "logistille_c_0024"
+# face 5503711 "sad"
+# textboxarrow 0 2
+# textwindow "normal"
+@ロジェスティラ
+…ひゃっ！？
+
+;;//演出：画面揺れ
+;;//ＳＥ：バチャンっ！（転ぶ音）
+# se "SE_9141"
+# shake 0 0.5
+# textwindow "close"
+# alpha 5503711 0 0.5
+# waitandnext 1.2
+
+# move 5503711 3 0
+# face 5503711 "usual"
+# alpha 5503711 1 0.5
+# mask 5503711 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ロジェスティラ
+い、いたた…
+つまづいちゃった…
+
+# voice 550371 "logistille_c_0008"
+# face 5503711 "happy"
+# textboxarrow 0 2
+@ロジェスティラ
+あはは…ほんとに泥塗れ…
+あのときと同じ…
+どうしようもないなぁ…
+
+;;モノローグ
+# textflame 0 0
+@
+地面にへたりこんだまま、
+潤む目元をごしごしとこする
+ロジェスティラ
+
+# face 5503711 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@ロジェスティラ
+…あれ？
+
+;;モノローグ
+ふと、晴れた視界の端に
+こぼれた袋の中身が映った
+
+# emotionbody 7000 2 5503711 10 290
+# effectpattern 7000 1 1
+# effectstart 7000
+# face 5503711 "usual"
+# textboxarrow 0 2
+@ロジェスティラ
+花の刺繍？
+
+# textboxarrow 0 2
+@ロジェスティラ
+中に何か入ってる…
+これは、手紙…？
+
+;;モノローグ
+# textflame 0 0
+@
+ロジェスティラは急いで
+手紙の封を開けていく
+
+;;モノローグ
+@
+そこに書かれた文字を読み、
+ロジェスティラは両目を見開く
+
+# emotionbody 8000 1 5503711 10 310
+# effectpattern 8000 1 0
+# effectstart 8000
+# face 5503711 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@ロジェスティラ
+…イチイバルさんっ！！
+
+;;//ＳＥ：パシャパシャパシャ…（雨の中走る音）
+# textwindow "close"
+# se "SE_5002"
+# sedelay "SE_5003" 0.25
+# sedelay "SE_5002" 0.5
+# sedelay "SE_5003" 0.75
+# sedelay "SE_5002" 1
+# leftout 5503711 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# alpha 5503711 0 0
+# textflame 0 0
+# textwindow "normal"
+@
+泥塗れになるのもいとわず、
+ロジェスティラは再び
+会場に向けて走って行った…

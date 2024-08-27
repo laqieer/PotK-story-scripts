@@ -1,0 +1,490 @@
+;;-----------------------------------------
+;;ファンキル　2021ウェディングイベント　シナリオ
+;;【エンディング】
+;;スクリプト最後の背景：黒
+;;背景：街(夜)
+;;-----------------------------------------
+# script "lisp"
+# background "006_town_TotalEclipse"
+# bgm "stop"
+;;-----------------------------------------
+;;イチイバル ウェディングver.
+# body 5402221
+# pos 5402221 3
+# scale 5402221 0.8 0
+# layer 5402221 2
+# alpha 5402221 0 0
+# mask 5402221 off
+;;ロジェスティラ ウェディングver.
+# body 5503721
+# pos 5503721 3
+# scale 5503721 0.8 0
+# layer 5503721 2
+# alpha 5503721 0 0
+# mask 5503721 off
+;;-----------------------------------------
+;;【エンディング】
+;;//背景：街(夜)
+;;//ＳＥ：ザアアアアア…（雨が降る音）
+# textwindow "close"
+# se "SE_0610"
+# envbody 4000 1 0
+# effectpattern 4000 2 0
+# effectstart 4000
+# waitandnext 1
+
+# bgmfile "bgm334" "BgmWedding001" 0
+# se "SE_6505"
+# emotionbody 1000 3 5402221 10 200
+# effectpattern 1000 2 3
+# effectstart 1000
+# voice 540221 "ichiibal_c_0005"
+# move 5402221 3 0
+# face 5402221 "normal"
+# alpha 5402221 1 0.5
+# mask 5402221 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@イチイバル
+楽しいね、ロジェ！
+
+;;//ト書き：ロジェスティラ、以下ドレス姿でお願いいたします
+# effectskip 1000
+# se "SE_6504"
+# emotionbody 2000 3 5503721 10 290
+# effectpattern 2000 1 3
+# effectstart 2000
+# voice 550371 "logistille_c_0003"
+# alpha 5402221 0 0.5
+# move 5503721 1 0
+# face 5503721 "happy"
+# alpha 5503721 1 0.5
+# mask 5503721 on
+# textboxarrow 0 1
+@ロジェスティラ
+ふふふっ…はいっ！
+ドキドキします、とってもっ！
+
+;;//ＳＥ：バチャッ、バチャッ（地面でステップを踏む音）
+;;//動きに合わせていい感じに（サウンドメモ
+# textwindow "close"
+# se "SE_5002"
+# move 5503721 2 0.1
+# waitandnext 0.5
+
+# se "SE_5003"
+# move 5503721 3 0.2
+# waitandnext 0.5
+
+# se "SE_5010"
+# move 5503721 4 0.2
+# waitandnext 0.5
+
+# se "SE_5011"
+# move 5503721 3 0.2
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+街を歩く人々が、
+その光景に目を奪われ立ち止まる
+
+;;モノローグ
+@
+仄かな街灯りに照らされながら、
+二人の少女がステップを踏む姿
+
+# sestop "SE_0610"
+# voice 550371 "logistille_c_0005"
+# textflame 1 1
+# textboxarrow 0 2
+@ロジェスティラ
+あはははっ！
+イチイバルさんっ、こっち！
+こっちですよっ！
+
+;;モノローグ
+# textflame 0 0
+@
+あどけなく笑う少女は、
+気の向くままに踊り回り…
+
+# move 5503721 2 0.5
+# mask 5503721 on
+# move 5402221 4 0
+# face 5402221 "normal"
+# alpha 5402221 1 0.5
+# mask 5402221 on
+# textflame 1 1
+# textboxarrow 0 3
+@イチイバル
+わぁっ！
+ハハッ、元気だなぁ！
+じゃあボクも…それっ！
+
+;;モノローグ
+# textflame 0 0
+@
+そんな彼女に振り回されながらも、
+華麗なダンスを披露する
+もうひとりの少女
+
+;;モノローグ
+@
+跳ねる泥水を気にも留めず、
+二人だけの舞踏会は
+悠々と過ぎていく
+
+# voice 540221 "ichiibal_c_0047"
+# face 5402221 "usual"
+# textflame 1 1
+# textboxarrow 0 3
+@イチイバル
+ロジェ、
+キミの姿はとても素敵だよ
+泥なんて、色あせるくらいに
+
+# voice 550371 "logistille_c_0030"
+# face 5503721 "normal"
+# textboxarrow 0 1
+@ロジェスティラ
+イチイバルさん…
+ありがとうございます
+
+# textboxarrow 0 3
+@イチイバル
+ロジェ、ボクは気付いたんだ
+誰かを思う気持ちがあれば
+心が輝いていくってね
+
+# textboxarrow 0 3
+@イチイバル
+心が輝いていれば
+泥なんて気にならなくなるさ
+
+# voice 550371 "logistille_c_0003"
+# face 5503721 "happy"
+# textboxarrow 0 1
+@ロジェスティラ
+はい！
+そうですね
+
+;;モノローグ
+# textflame 0 0
+@
+二人だけの世界で
+心の底から語り合い…
+
+;;モノローグ
+@
+ついに二人は、本当の"友達"に
+なることができたのだった
+
+# face 5402221 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@イチイバル
+…あっ
+
+# voice 550371 "logistille_c_0024"
+# face 5503721 "surprise"
+# textboxarrow 0 1
+@ロジェスティラ
+わぁっ…！
+
+;;//演出：画面揺れ
+;;//ＳＥ：バチャンッ！（二人が地面に倒れる音）
+# se "SE_7240"
+# textwindow "close"
+# shake 0 0.5
+# alpha 5503721 0 0.5
+# alpha 5402221 0 0.5
+# waitandnext 1
+
+# voice 540221 "ichiibal_c_0038"
+# move 5402221 3 0
+# face 5402221 "sad"
+# alpha 5402221 1 0.5
+# mask 5402221 off
+# textboxarrow 0 2
+# textwindow "normal"
+@イチイバル
+いたた…
+手が滑っちゃった…
+
+;;//ＳＥ：パチパチパチ…（周りの拍手の音）
+# se "SE_0600"
+# sedelay "SE_0607" 1
+# waitandnext 0.5
+
+# emotionbody 3000 2 5402221 10 290
+# effectpattern 3000 1 1
+# effectstart 3000
+# voice 540221 "ichiibal_c_0023"
+# face 5402221 "surprise"
+# textboxarrow 0 2
+@イチイバル
+…えっ？
+
+;;モノローグ
+# textflame 0 0
+@
+余韻に浸る二人の耳に、
+観衆から割れんばかりの
+拍手が鳴り響く
+
+# voice 540221 "ichiibal_c_0005"
+# face 5402221 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@イチイバル
+ア、アハハ
+いつの間にこんなことに…
+
+;;モノローグ
+# effectskip 4000
+# move 5503721 2 0
+# face 5503721 "happy"
+# alpha 5503721 1 0.5
+# mask 5503721 on
+# move 5402221 4 0.5
+# mask 5402221 on
+# textflame 0 0
+@
+困った様子で頬をかくイチイバル
+そんな彼女を見て、
+くすくすと微笑むロジェスティラ
+
+;;モノローグ
+@
+顔を見合わせ笑いながら、
+少女たちはふと空を見上げた
+
+# voice 550371 "logistille_c_0021"
+# face 5503721 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@ロジェスティラ
+わぁぁぁっ…！
+
+;;モノローグ
+# textflame 0 0
+@
+いつの間にか夜空は晴れ渡り、
+星々の光が二人に降り注いでいた
+
+# textflame 1 1
+# face 5402221 "usual"
+# textboxarrow 0 3
+@イチイバル
+綺麗だね、ロジェ…
+
+# voice 550371 "logistille_c_0003"
+# face 5503721 "normal"
+# textboxarrow 0 1
+@ロジェスティラ
+はいっ…！
+
+;;モノローグ
+# alpha 5503721 0 0.5
+# alpha 5402221 0 0.5
+# textflame 0 0
+@
+光を浴びながら
+二人は地面に横たわる
+
+;;モノローグ
+@
+お互いの手を握りしめ…
+心地よい疲労感とともに、
+そっと両目を閉じていった…
+
+;;//演出：場面転換
+;;//背景：家(朝)　 201_room
+;;//ト書き：インテグラルノア編のイチイバルとロジェスティラ。どちらもドレス姿
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "201_room"
+# move 5402221 3 0
+# face 5402221 "surprise"
+# alpha 5402221 1 0
+# mask 5402221 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@イチイバル
+ん…んん…？
+
+# textboxarrow 0 2
+@イチイバル
+…あれ？
+寝ちゃってたのか…んん…
+
+# face 5402221 "usual"
+# textboxarrow 0 2
+@イチイバル
+あぁ、そうだ…
+昨日買ったドレスの
+試着会をしてて…そのまま…
+
+# move 5503721 2 0
+# face 5503721 "surprise"
+# alpha 5503721 1 0.5
+# mask 5503721 on
+# textboxarrow 0 1
+# move 5402221 4 0.5
+# mask 5402221 on
+@ロジェスティラ
+んっ…
+ん～っ…？
+
+# textboxarrow 0 1
+@ロジェスティラ
+はれ？
+イチイバル、さん…？
+
+# voice 540221 "ichiibal_c_0047"
+# textboxarrow 0 3
+@イチイバル
+おはよう、ロジェ
+幸せそうな寝顔だね
+
+# face 5503721 "normal"
+# textboxarrow 0 1
+@ロジェスティラ
+ふぁい…
+なんだかとっても
+いい夢を見たので、のでぇ…
+
+# face 5402221 "normal"
+# textboxarrow 0 3
+@イチイバル
+わぁ…奇遇だね？
+ボクもすごくいい夢を見たよ
+
+# textboxarrow 0 3
+@イチイバル
+キミと二人でドレスを着て…
+泥塗れのまま踊り回る夢さ
+
+# voice 550371 "logistille_c_0042"
+# face 5503721 "happy"
+# textboxarrow 0 1
+@ロジェスティラ
+わぁ、わたしと同じだぁ…
+えへえへ、嬉しいです…
+くぅ…
+
+# voice 540221 "ichiibal_c_0031"
+# face 5402221 "usual"
+# textboxarrow 0 3
+@イチイバル
+起こしてごめんね？
+まだ寝てていいよ
+
+# face 5503721 "normal"
+# textboxarrow 0 1
+@ロジェスティラ
+ふぁぁい…
+おやすみなさい…
+
+# face 5402221 "normal"
+# textboxarrow 0 3
+@イチイバル
+おやすみ…フフッ
+
+# textwindow "close"
+# alpha 5503721 0 0.5
+# waitandnext 0.5
+
+# move 5402221 3 0.5
+# waitandnext 0.5
+
+;;イチイバル（心の声）
+# move 5402221 3 0
+# face 5402221 "usual"
+# alpha 5402221 1 0.5
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 5402221 off
+@イチイバル
+さっきの夢…
+なんだかリアルで
+不思議な感じだったなぁ…
+
+;;イチイバル（心の声）
+@イチイバル
+もしかすると…
+こことは違う別の世界では
+
+;;イチイバル（心の声）
+@イチイバル
+ボクとこの子は、あんな風に
+出会っているのかもしれないな…
+
+# voice 540221 "ichiibal_c_0004"
+# face 5402221 "normal"
+# textboxarrow 0 2
+# textwindow "normal"
+@イチイバル
+フフ…なーんて、ね
+
+;;背景：黒
+;;キャラの立ち絵は無しでお願いします
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# alpha 5402221 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 0
+# textwindow "normal"
+@イチイバル
+この世界には
+数多くの世界が存在している
+
+@イチイバル
+そんな数ある世界の中の
+小さな一つの物語
+
+@イチイバル
+だけど、ボクにとっては
+何にも代えられない大切な思い出だ
+
+@イチイバル
+他人が聞けば
+他愛のない物語なのかもしれない
+
+@イチイバル
+だけど、確かにこの物語は
+存在したんだ
+
+@イチイバル
+数ある世界の中に存在する
+数多くのボクたち
+
+@イチイバル
+そんな中の誰かが
+素敵な時間を
+過ごしているのだとしたら
+
+@イチイバル
+ボクはとても、嬉しい
+
+# fadeout "black" 2
+# waitandnext 2

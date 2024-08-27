@@ -1,0 +1,356 @@
+;;-----------------------------------------
+;;ファンキル　10月学園イベント2020シナリオ
+;;【EP.3】共学化の鍵は
+;;スクリプト最後の背景：廊下(昼)
+;;背景：廊下(昼)
+;;-----------------------------------------
+# script "lisp"
+# background "corridor_daytime"
+# bgm "bgm002" 0
+;;-----------------------------------------
+;;アルマス (学園)
+# body 3103831
+# pos 3103831 3
+# scale 3103831 0.8 0
+# layer 3103831 2
+# alpha 3103831 0 0
+# mask 3103831 off
+;;ウコンバサラ 制服ver.
+# body 201021
+# pos 201021 3
+# scale 201021 0.8 0
+# layer 201021 2
+# alpha 201021 0 0
+# mask 201021 off
+;;-----------------------------------------
+;;【EP.3】共学化の鍵は
+;;//背景：廊下(昼)
+# voice 2010 "ukonbasara_0040"
+# move 3103831 2 0
+# face 3103831 "sad"
+# alpha 3103831 1 0
+# mask 3103831 on
+# move 201021 4 0
+# face 201021 "usual"
+# alpha 201021 1 0
+# mask 201021 on
+# textflame 1 1
+# textboxarrow 0 3
+@ウコンバサラ
+なるほど…
+なんだか大変みたいだね？
+
+;;モノローグ
+# textflame 0 0
+@
+ウコンバサラと共に
+廊下を歩く二人
+
+;;モノローグ
+@
+次々に広まる噂に
+アルマス達は頭を抱えていた
+
+# face 201021 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@ウコンバサラ
+まあ、噂なんて
+案外すぐに過ぎ去るものだし
+
+# textboxarrow 0 3
+@ウコンバサラ
+とりあえず今は
+視察を優先した方が
+いいんじゃないかな？
+
+# emotionbody 1001 1 3103831 10 310
+# effectpattern 1001 1 0
+# effectstart 1001
+# face 3103831 "normal"
+# textboxarrow 0 1
+@アルマス
+はっ、そうね…！
+危うく本来の目的を
+忘れるところだったわ
+
+# textboxarrow 0 1
+@アルマス
+共学化成功の鍵を見つけて、
+ティニに報告しなくちゃ！
+
+# textboxarrow 0 1
+@アルマス
+…ところで、私達って
+今どこに向かってるの？
+
+# textboxarrow 0 1
+@アルマス
+マスターに用事が
+あるっていうから、
+私もついていってるけど
+
+# voice 2010 "ukonbasara_0031"
+# face 201021 "surprise"
+# textboxarrow 0 3
+@ウコンバサラ
+あぁ、ごめん！
+説明してなかったね
+
+# face 201021 "usual"
+# textboxarrow 0 3
+@ウコンバサラ
+マスターにはいつも、
+授業に使う道具運びを
+手伝ってもらってるんだ
+
+# textboxarrow 0 3
+@ウコンバサラ
+先生に頼まれてるんだけど、
+私一人だと大変だからね
+
+# textboxarrow 0 1
+@アルマス
+そうだったのね
+それなら私も協力するわ！
+
+# textboxarrow 0 3
+@ウコンバサラ
+本当？
+無理しなくていいよ、
+けっこう重たいし…
+
+# emotionbody 1002 10 3103831 -80 250
+# effectpattern 1002 4 3
+# effectstart 1002
+# voice 1038 "almace_0005"
+# face 3103831 "happy"
+# textboxarrow 0 1
+@アルマス
+あはは、任せて！
+こう見えて力仕事には
+自信あるから！
+
+;;//演出：場面転換
+;;//背景：廊下(昼)
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# effectskip 1002
+# move 3103831 2 0
+# face 3103831 "angry"
+# alpha 3103831 1 0
+# mask 3103831 on
+# move 201021 4 0
+# face 201021 "usual"
+# alpha 201021 1 0
+# mask 201021 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 1
+# textwindow "normal"
+@アルマス
+ふぬぬぬぬ…
+なにこれぇっ！？
+絶・絶・絶・重い…！！
+
+# face 201021 "sad"
+# textboxarrow 0 3
+@ウコンバサラ
+大丈夫？
+もしきつかったら
+代わりに運んであげるけど…
+
+# textboxarrow 0 1
+@アルマス
+へ、平気よっ！
+マスターも持ってるもの、
+これくらいなんてことない…！
+
+;;モノローグ
+# textflame 0 0
+@
+そのまま並んで
+廊下を歩く三人
+
+;;モノローグ
+@
+通りすがりの生徒達に
+例の噂でからかわれたりしつつ、
+何気ない会話を交わす
+
+# voice 1038 "almace_0002"
+# face 3103831 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+ねえ、普段のマスターって
+どんな印象？
+
+# voice 2010 "ukonbasara_0028"
+# face 201021 "usual"
+# textboxarrow 0 3
+@ウコンバサラ
+そうだね…
+やさしくて頼りがいのある
+男子って感じかな
+
+# textboxarrow 0 3
+@ウコンバサラ
+この雑用もそうだけど、
+マスターはいろんなところで
+生徒達に頼られてるよ
+
+# textboxarrow 0 3
+@ウコンバサラ
+マスターを慕ってる子は
+けっこう多いんじゃないかな？
+
+# voice 1038 "almace_0039"
+# textboxarrow 0 1
+@アルマス
+ふぅん…
+学内での評判は良さそうね
+
+# textboxarrow 0 1
+@アルマス
+そういえば、
+マスターが来たばかりの頃って
+何かトラブルはなかったの？
+
+# textboxarrow 0 1
+@アルマス
+それこそ、今の私達みたいに
+変な噂流されたりとか…
+
+# voice 2010 "ukonbasara_0013"
+# textboxarrow 0 3
+@ウコンバサラ
+どうだろう…
+少しくらいはあったと思うけど
+
+# textboxarrow 0 3
+@ウコンバサラ
+学園に馴染んでいくうちに、
+そういう話は
+すっかり聞かなくなったね
+
+# voice 1038 "almace_0040"
+# textboxarrow 0 1
+@アルマス
+なるほどね…
+共学化成功の鍵は
+その辺にありそうだわ
+
+# face 201021 "happy"
+# textboxarrow 0 3
+@ウコンバサラ
+…あ、ここだよ！
+物理準備室だ
+
+;;//ＳＥ：ガラララ…（引き戸を開ける音）
+# se "SE_0955"
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@アルマス
+ほっ、やっと着いた…
+早く荷物置いて戻りましょ
+
+# emotionbody 1003 1 201021 10 310
+# effectpattern 1003 1 0
+# effectstart 1003
+# face 201021 "surprise"
+# textboxarrow 0 3
+@ウコンバサラ
+そうだね…あ、待って！
+入口に段差あるから気を付け…
+
+;;//ＳＥ：ガツッ！（段差に引っかかる音）
+# se "SE_0656"
+# bgm "stop"
+;;//演出：画面揺れ
+# shake 0 0.5
+# waitandnext 0.5
+
+# emotionbody 1004 1 3103831 10 310
+# effectpattern 1004 2 0
+# effectstart 1004
+# voice 1038 "almace_0022"
+# face 3103831 "surprise"
+# textboxarrow 0 1
+@アルマス
+えっ…
+ひやぁああああーーーっ！？
+
+;;モノローグ
+# alpha 3103831 0 0.5
+# alpha 201021 0 0.5
+# textflame 0 0
+@
+足を引っかけたアルマスが
+危うく転びかける！
+
+;;//ＳＥ：ガシッ！（マスターがアルマスを掴む音）
+# se "SE_5201"
+# waitandnext 0.5
+
+# bgm "bgm006" 0
+# move 3103831 3 0
+# face 3103831 "surprise"
+# alpha 3103831 1 0.5
+# mask 3103831 off
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+…あ、危なぁっ…！
+助かったわ、マスター！
+…って？
+
+# emotionbody 1005 1 3103831 10 310
+# effectpattern 1005 2 0
+# effectstart 1005
+# face 3103831 "angry"
+# textboxarrow 0 2
+@アルマス
+ち、ちょっとぉっ！？
+どこ触ってんのっ、
+早く放しなさいよ！？
+
+# textflame 0 0
+@マスター
+ご、ごめん
+でも、放したら
+荷物が落ちるよ
+
+# voice 1038 "almace_0022"
+# face 3103831 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+えっ…
+待って待って、私が持つから…！
+
+# voice 2010 "ukonbasara_0004"
+# move 3103831 2 0.5
+# mask 3103831 on
+# move 201021 4 0
+# face 201021 "usual"
+# alpha 201021 1 0.5
+# mask 201021 on
+# textboxarrow 0 3
+@ウコンバサラ
+ええっと…
+やっぱり仲いいね、二人とも？
+
+# emotionbody 1006 6 3103831 50 250
+# effectpattern 1006 1 1
+# effectstart 1006
+# face 3103831 "angry"
+# textboxarrow 0 1
+@アルマス
+仲良くないっ！！

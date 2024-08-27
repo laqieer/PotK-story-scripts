@@ -1,0 +1,349 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー12章
+;;第4話　タイトル：完全、覚醒
+;;4_4
+;;スクリプト最後の背景：地底
+;;-----------------------------------------
+# script "lisp"
+# background "underground_world_3"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;ギル
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# layer 137 2
+# alpha 137 0 0
+# mask 137 off
+;;リル=ティルフィング
+# body 3101411
+# pos 3101411 3
+# scale 3101411 0.8 0
+# layer 3101411 2
+# alpha 3101411 0 0
+# mask 3101411 off
+;;ティファレト
+# body 3503211
+# pos 3503211 3
+# scale 3503211 0.8 0
+# layer 3503211 2
+# alpha 3503211 0 0
+# mask 3503211 off
+;;ハルモニア兵
+# body 3810001
+# pos 3810001 3
+# scale 3810001 0.8 0
+# layer 3810001 2
+# alpha 3810001 0 0
+# mask 3810001 off
+;;ハルモニア兵（クローン）
+# entry 938100011 3810001
+# pos 938100011 3
+# scale 938100011 0.8 0
+# layer 938100011 2
+# alpha 938100011 0 0
+# mask 938100011 off
+;;-----------------------------------------
+;;//背景：地底
+# move 3810001 2 0
+# alpha 3810001 1 0
+# mask 3810001 on
+# move 938100011 4 0
+# alpha 938100011 1 0
+# mask 938100011 on
+# textflame 1 1
+# textboxarrow 0 1
+@ハルモニア兵
+ティルフィングとイミテーションは
+この辺りに潜んでいるはずです
+
+# textboxarrow 0 3
+@ハルモニア兵
+ティファレトの力に
+甘えてばかりはいられませんよ
+我々の手で断罪するのです！
+
+# voice 310141 "tyrufing_lo_0015"
+# alpha 3810001 0 0.5
+# alpha 938100011 0 0.5
+# move 3101411 3 0
+# face 3101411 "sad"
+# alpha 3101411 1 0.5
+# mask 3101411 off
+# textboxarrow 0 2
+@ティルフィング
+ううっ…
+ハァ…ハァ…
+
+# move 137 2 0
+# face 137 "surprise"
+# alpha 137 1 0.5
+# mask 137 on
+# textboxarrow 0 1
+# move 3101411 4 0.5
+# mask 3101411 on
+@ギル
+ティルフィングさん…
+大丈夫ですかっ？
+
+# voice 9969 "gill_0040"
+# face 137 "angry"
+# textboxarrow 0 1
+@ギル
+くそっ…
+傷が塞がらない…
+どうすりゃいいんだよ…！
+
+# textboxarrow 0 3
+@ティルフィング
+平気です…
+しばらく休めば…回復しますので…
+
+# textboxarrow 0 3
+@ティルフィング
+ギルは…身を隠していて下さい…
+見つかったりしたら…危険…
+
+# se "SE_5288"
+# face 137 "surprise"
+# textboxarrow 0 1
+# face 3101411 "irregular"
+@ギル
+ティルフィングさん！？
+…気を失ってる
+
+# face 137 "sad"
+# textboxarrow 0 1
+@ギル
+…このままじゃダメだ
+このままじゃ俺達二人とも…
+殺される…！
+
+# face 137 "normal"
+# textboxarrow 0 1
+@ギル
+ティルフィングさんは…
+しばらく休めば回復するって
+言ってたな…
+
+# textboxarrow 0 1
+@ギル
+だったら…
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 137 0 0
+# alpha 3101411 0 0
+# move 3503211 3 0
+# face 3503211 "sad"
+# alpha 3503211 1 0
+# mask 3503211 off
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ティファレト
+ティルフィング、
+どこにいったのですか…？
+
+# textboxarrow 0 2
+@ティファレト
+バイブスに穢されてしまった
+あなたを、私の手で天に還し、
+その魂を救ってあげたいのに
+
+# voice 5032 "tiphereth_t_0022"
+# face 3503211 "surprise"
+# textboxarrow 0 2
+@ティファレト
+あら？
+
+;;//ギルが駆け抜ける。その後をハルモニア兵が追う。
+# textwindow "close"
+# alpha 3503211 0 0.5
+# waitandnext 0.5
+
+# move 137 2 0
+# face 137 "normal"
+# alpha 137 1 0.5
+# mask 137 off
+# waitandnext 0.5
+
+# se "SE_5575"
+# sedelay "SE_5575" 0.8
+# rightout 137 0.5
+# waitandnext 0.5
+
+# alpha 137 0 0
+# move 3810001 3 0
+# alpha 3810001 1 0.5
+# mask 3810001 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ハルモニア兵
+逃亡は無意味ですよ
+卑小で脆弱なイミテーション
+
+# voice 9969 "gill_0007"
+# alpha 3810001 0 0.5
+# move 137 3 0
+# face 137 "usual"
+# alpha 137 1 0.5
+# mask 137 off
+# textboxarrow 0 2
+@ギル
+へへっ！
+捕まえられるもんなら
+捕まえてみろってんだ！
+
+# textboxarrow 0 2
+@ギル
+俺はこのまま地上まで
+逃げ切ってみせるぜ！
+
+# se "SE_9021"
+# move 137 2 0.5
+# mask 137 on
+# move 3503211 4 0
+# face 3503211 "angry"
+# alpha 3503211 1 0.5
+# mask 3503211 on
+# textboxarrow 0 3
+@ティファレト
+お待ちなさい
+
+# voice 9969 "gill_0027"
+# face 137 "surprise"
+# textboxarrow 0 1
+@ギル
+うわあああ！？
+
+# face 3503211 "normal"
+# textboxarrow 0 3
+@ティファレト
+あなたは…ティルフィングと
+一緒にいたイミテーションですね
+ティルフィングはどちらに？
+
+# face 137 "usual"
+# textboxarrow 0 1
+@ギル
+ティルフィングさんなら、
+俺より先に地上まで飛んでいったぜ
+残念だったな！
+
+# face 3503211 "angry"
+# textboxarrow 0 3
+@ティファレト
+…嘘はいけませんね
+ティルフィングがあなたを置いて
+一人で逃げるはずありません
+
+# textboxarrow 0 3
+@ティファレト
+どこにいるんですか？
+答えて下さい
+
+# textboxarrow 0 3
+@ティファレト
+私は彼女の魂を
+救わなければならないんです
+
+# face 137 "normal"
+# textboxarrow 0 1
+@ギル
+そうかよ…
+ええと、確か…
+あっちの方に
+
+# face 3503211 "normal"
+# textboxarrow 0 3
+@ティファレト
+あちらですか？
+
+# textboxarrow 0 1
+@ギル
+そうだよ
+そっちの方に…
+
+# face 137 "usual"
+# textboxarrow 0 1
+@ギル
+…何てな！
+食らいやがれ！
+
+;;//ギルが煙玉を投げる
+;;//画面：白
+# se "SE_5633"
+# textwindow "close"
+# shake 0 1
+# fadeout "white" 1
+# waitandnext 1
+
+# alpha 137 0 0
+# move 3503211 3 0
+# face 3503211 "angry"
+# alpha 3503211 1 0
+# mask 3503211 off
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ティファレト
+ケホッ…ケホッ…
+これは煙幕…？
+お待ちなさいっ
+
+# voice 9969 "gill_0021"
+# alpha 3503211 0 0.5
+# move 137 3 0
+# face 137 "usual"
+# alpha 137 1 0.5
+# mask 137 off
+# textboxarrow 0 2
+@ギル
+待てと言われて待つ奴なんか
+いねぇっての！
+
+# alpha 137 0 0.5
+# move 3810001 2 0
+# alpha 3810001 1 0.5
+# mask 3810001 on
+# textboxarrow 0 1
+# move 938100011 4 0
+# alpha 938100011 1 0.5
+# mask 938100011 on
+@ハルモニア兵
+小癪なイミテーションですね！
+構いません！
+手当たり次第に撃ちなさい！
+
+# textboxarrow 0 3
+@ハルモニア兵
+了解しました！
+愚かなイミテーションに死を！
+
+;;//銃声
+# fadein "red" 0.3
+# se "SE_4400"
+# waitandnext 0.5
+
+# voice 9969 "gill_0041"
+# alpha 3810001 0 0.5
+# alpha 938100011 0 0.5
+# move 137 3 0
+# face 137 "sad"
+# alpha 137 1 0.5
+# mask 137 off
+# textboxarrow 0 2
+@ギル
+あぐっ…？

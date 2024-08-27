@@ -1,0 +1,601 @@
+;;-----------------------------------------
+;;SEA1章_2
+;;-----------------------------------------
+# script "lisp"
+# background "005_Checkpoint"
+# bgm "bgm002" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 3
+# mask 6504011 off
+# alpha 6504011 0 0
+;;門番
+# body 10
+# pos 10 3
+# scale 10 0.8 0
+# layer 10 4
+# mask 10 off
+# alpha 10 0 0
+;;ゼロ
+# body 23
+# pos 23 2
+# scale 23 0.8 0
+# layer 23 2
+# mask 23 off
+# alpha 23 0 0
+# body 1100211
+# alpha 1100211 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：関所（大きな壁のある背景）
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# face 270 "normal"
+# face 6504011 "normal"
+# alpha 270 1 0.3
+# alpha 6504011 1 0.3
+# waitandnext 0.8
+
+# se "SE_6214"
+# face 270 "happy"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+町の門まで辿り着きました
+知識としては知っておりましたが、
+とても壁が高いのですね
+
+# voice 650401 "manannan_ura_0005"
+# face 6504011 "happy"
+# textboxarrow 0 3
+@マナナン
+わ～っ！
+喜劇的に大きい！
+アハハハハ！
+
+# voice 9917 "mimir_navikan_0001"
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+マスター様は、
+要塞都市レガルについて
+ご存知ですか？
+
+;;選択肢
+# select "いや、全然…" "select_label_01" "詳しくはないかな" "select_label_01"
+マスター様は、
+要塞都市レガルについて
+ご存知ですか？
+
+# label "select_label_01"
+# sestop "SE_6214"
+# bgm "bgm035" 0
+# textboxarrow 0 1
+@ミーミル
+それでは、僭越ながら私が
+こちらの町について簡単にご説明を
+
+# textboxarrow 0 1
+@ミーミル
+要塞都市レガルはご覧の通り
+四方を高い壁に囲まれた町です
+
+# textboxarrow 0 1
+@ミーミル
+東西南北にそれぞれ二つずつ
+門を備えており、交通の要衝として
+大変賑わっております
+
+# textboxarrow 0 1
+@ミーミル
+昔はこれほど高い壁を有しては
+いなかったのですが…
+
+# textboxarrow 0 1
+@ミーミル
+あるとき、町が
+「炎の巨人」に襲われるという
+事件が起きたのでございます
+
+# face 6504011 "surprise"
+# textboxarrow 0 3
+@マナナン
+あ！その巨人をやっつけたのが
+レーヴァテインってこと？
+
+# voice 9917 "mimir_navikan_0004"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+マナナンさん、ご明察です
+レーヴァテインさんのお陰で
+町は守られました
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+しかし、同じようなことが起きるのを
+危惧したのでしょう…
+
+# textboxarrow 0 1
+@ミーミル
+当時の市長がこのような高い壁を
+造らせたと伝えられております
+
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+高い壁のお陰で治安が良くなり、
+レガルでは交易が
+盛んになったそうですよ
+
+# textboxarrow 0 1
+@ミーミル
+そのようなことがございまして、
+「レーヴァテインに守られた町」と
+呼ばれるようになりました
+
+# se "SE_6214"
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# voice 650401 "manannan_ura_0002"
+# face 6504011 "usual"
+# textboxarrow 0 3
+@マナナン
+ねえねえ
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+どうしました、マナナンさん？
+
+# textboxarrow 0 3
+@マナナン
+門が閉まってるよ
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+えっ？
+
+# textboxarrow 0 3
+@マナナン
+どうやって中に入るの？
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+昼夜問わず活気に溢れていると
+聞き及んでおりますので、
+門が閉ざされることなんて…
+
+# voice 9917 "mimir_navikan_0018"
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+本当に閉ざされています
+どうしてなのでしょう…？
+
+# voice 9917 "mimir_navikan_0001"
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+マスター様
+門番の方に話を聞いてまいりますので
+しばしお待ち下さい
+
+;;ミーミルが走っていく
+# move 270 3 0.5
+# scale 270 0.6 1
+# alpha 270 0 0.3
+# se "SE_5575"
+# textwindow "close"
+# waitandnext 0.5
+
+# face 6504011 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+あ！
+私も行くよ～っ
+
+;;マナナンが走っていく
+# move 6504011 3 0.5
+# scale 6504011 0.6 1
+# alpha 6504011 0 0.3
+# se "SE_5575"
+# textwindow "close"
+# waitandnext 0.5
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# bgm "bgm005" 0
+# se "SE_6214_filteroff"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_0902"
+# serif 1
+# textwindow "nomal"
+@旅人達
+どうして町に入れないんだ！？
+困るよっ
+
+# serif 1
+@商人達
+これでは商売あがったりだ！
+早く門を開けてくれっ
+
+# face 10 "normal"
+# alpha 10 1 0.5
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@門番
+何度も説明しているように、
+市長の判断でこの町は封鎖された
+
+# serif 0
+# textboxarrow 0 2
+@門番
+旅人は迂回してくれ
+商人はしばらく交易中止だ
+
+# se "SE_0970"
+# serif 1
+@旅人達
+ここを迂回することになったら
+どれだけ遠回りしないといけないと
+思ってるんだ！
+
+# serif 1
+@商人達
+私達にも生活があるんだぞっ
+横暴にも程がある！
+
+# alpha 10 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# move 270 3 0
+# scale 270 0.8 0
+# face 270 "sad"
+# alpha 270 1 0.3
+# waitandnext 0.5
+
+# voice 9917 "mimir_navikan_0028"
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+皆さん、怒っています…
+これでは詳しいお話を聞こうにも…
+
+# serif 1
+# textwindow "toge"
+@？？？
+ふざけるな！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 9917 "mimir_navikan_0024"
+# face 270 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+きゃっ…
+今の怒鳴り声は、
+あちらの方からでしょうか…？
+
+# alpha 270 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+;;ゼロが門番に詰め寄っている
+# move 10 4 0
+# face 10 "normal"
+# face 23 "angry_1"
+# alpha 10 1 0.5
+# alpha 23 1 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@？？？
+俺はここの住人だぞ！
+家に帰れないとはどういうことだっ？
+
+# textboxarrow 0 3
+@門番
+市長の命令なんだ…
+俺に文句を言われても…
+
+# se "SE_0648"
+# sedelay "SE_0982" 0.4
+# voice 11002 "laevateinm_0010"
+# move 10 5 0.3
+# move 23 3 0.4
+# face 23 "angry_2"
+# textboxarrow 0 2
+@？？？
+お前ら、バカにしてるのか！？
+
+# alpha 10 0 0.3
+# alpha 23 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+あっ
+あの方は
+
+;;選択肢
+# select "ゼロ！" "select_label_02" "怖いお兄さんだ" "select_label_02"
+あっ
+あの方は
+
+# label "select_label_02"
+# alpha 270 0 0.3
+# move 10 4 0
+# move 23 2 0
+# face 23 "angry_1"
+# alpha 10 1 0.3
+# alpha 23 1 0.3
+# textboxarrow 0 1
+@ゼロ
+何か言ったか！？
+
+# se "SE_5200"
+# voice 11002 "laevateinm_0006"
+# face 23 "normal"
+# textboxarrow 0 1
+@ゼロ
+…%(userName)s
+久し振りだな
+
+;;ゼロが門番から離れる
+# alpha 10 0 0.3
+# move 23 3 0.5
+# se "SE_5008"
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# textboxarrow 0 2
+@ゼロ
+ここじゃなんだ
+場所を変えるぞ
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# bgm "bgm002" 0
+# move 23 2 0
+# face 23 "normal"
+# move 270 4 0
+# face 270 "happy"
+# alpha 270 1 0
+# se "SE_6214_filteron"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_11618"
+# textwindow "nomal"
+# textboxarrow 0 3
+@ミーミル
+ご挨拶が遅れました
+私、ミーミルと申します
+それと、こちらが
+
+# voice 650401 "manannan_ura_0004"
+# alpha 270 0 0.3
+# move 6504011 4 0
+# scale 6504011 0.8 0
+# mask 6504011 on
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# textboxarrow 0 3
+@マナナン
+マナナンって呼んでよ！
+よろしくね～
+
+# textboxarrow 0 1
+@ゼロ
+俺はゼロだ
+お前ら、キル姫か？
+見ない顔だが…
+
+# face 270 "normal"
+# alpha 270 1 0.3
+# alpha 6504011 0 0.3
+# textboxarrow 0 3
+@ミーミル
+そのことにつきましては、
+私からご説明致します
+
+# face 23 "surprise"
+# textboxarrow 0 1
+@ゼロ
+お、おう…
+妙に丁寧な奴だな
+
+# face 23 "normal"
+# textboxarrow 0 1
+@ゼロ
+口調もティルフィングを
+思い出すぜ
+
+# voice 9917 "mimir_navikan_0003"
+# face 270 "happy"
+# textboxarrow 0 3
+@ミーミル
+はい
+私はティルフィング様に
+育てていただきました
+
+;;暗転
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+# bgm "bgm005" 0
+# face 23 "normal"
+# face 270 "normal"
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# voice 11002 "laevateinm_0040"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ゼロ
+…なるほどな
+で、この町に来たのか
+
+# face 270 "sad"
+# textboxarrow 0 3
+@ミーミル
+やはり町の中で
+何かが起きているのでしょうか…
+
+# textboxarrow 0 1
+@ゼロ
+そのせいで市長が町を封鎖したって
+可能性は十分ある
+だったら尚のこと急がねぇと
+
+# alpha 270 0 0.3
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# textboxarrow 0 3
+@マナナン
+中で喜劇的なことが起きてるのかな？
+楽しそうだねっ
+
+# face 270 "normal"
+# alpha 270 1 0.3
+# alpha 6504011 0 0.3
+# textboxarrow 0 3
+@ミーミル
+ゼロさんは
+急いで帰らなければならない
+ご事情が？
+
+# bgm "stop"
+# face 23 "angry_1"
+# textboxarrow 0 1
+@ゼロ
+決まってるだろ
+アマネを一人にしておいたら…
+家事が滞るんだよ！
+
+# voice 11002 "laevateinm_0019"
+# face 23 "sad"
+# textboxarrow 0 1
+@ゼロ
+アマネのやつ…すぐサボるからな…
+今頃、家の中がどうなってるか…
+
+;;選択肢
+# select "ああー…" "select_label_03" "…………" "select_label_03"
+アマネのやつ…すぐサボるからな…
+今頃、家の中がどうなってるか…
+
+# label "select_label_03"
+# voice 11002 "laevateinm_0009"
+# face 23 "angry_1"
+# textboxarrow 0 1
+@ゼロ
+おい！
+そんな目で見るな！
+
+# bgm "bgm005" 0
+# face 23 "normal"
+# textboxarrow 0 1
+@ゼロ
+とにかく
+「揺らぎ」とやらが絡んでるかも
+しれないんだろ
+
+# textboxarrow 0 1
+@ゼロ
+急いだ方がいいぞ
+俺は強引にでも町に入る
+
+# voice 650401 "manannan_ura_0041"
+# alpha 23 0 0.3
+# alpha 270 0 0.3
+# move 6504011 3 0
+# mask 6504011 off
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# textboxarrow 0 2
+@マナナン
+いいね！
+私達もいこうよっ
+
+# alpha 6504011 0 0.3
+# move 270 3 0
+# face 270 "sad"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+強引なのは…
+でも、このままでは
+「揺らぎ」について調べることも…
+
+# voice 9917 "mimir_navikan_0001"
+# face 270 "normal"
+# textboxarrow 0 2
+@ミーミル
+マスター様、如何致しましょう？
+
+;;選択肢
+# select "行こう！" "select_label_04" "やむを得ない" "select_label_04"
+マスター様、如何致しましょう？
+
+# label "select_label_04"
+# face 270 "angry"
+# textboxarrow 0 2
+@ミーミル
+分かりました
+では、私達もゼロさんとともに
+
+# fadeout "black" 0.5
+# waitandnext 0.5

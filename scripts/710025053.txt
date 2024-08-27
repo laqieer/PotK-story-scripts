@@ -1,0 +1,476 @@
+;;------------------
+;;■第４話「ラグナロク女学院」戦闘後
+;;□登場人物：ロンギヌス(学園)→ロンギヌス(コラボコス)、さくら(学生服)
+;;　　　　　　ナーゲルリング(学園)→ナーゲルリング(コラボコス)、与一（学園）
+;;□背景　　：野外（かつバトル背景があるならならどこでもいい）
+;;------------------
+# script "lisp"
+# background "courtyard"
+# bgmfile "bgm183_story" "BgmGakuen003" 0
+;;ナーゲル制服
+# body 77
+# pos 77 3
+# scale 77 0.8 0
+# layer 77 5
+# alpha 77 0 0
+;;さくら魔法服
+# body 143
+# pos 143 3
+# scale 143 0.8 0
+# layer 143 2
+# alpha 143 0 0
+# face 143 "usual"
+# mask 143 off
+;;ケロちゃん
+# body 146
+# pos 146 4
+# scale 146 0.8 0
+# layer 146 23
+# alpha 146 0 0
+;;ロンギ魔法服
+# body 300191
+# pos 300191 5
+# scale 300191 0.8 0
+# layer 300191 4
+# alpha 300191 0 0
+;;与一
+# body 400561
+# pos 400561 3
+# scale 400561 0.8 0
+# layer 400561 4
+# alpha 400561 0 0
+;;ナーゲル魔法服
+# body 100661
+# pos 100661 3
+# scale 100661 0.8 0
+# layer 100661 4
+# mask 100661 off
+# entry 91006619 100661
+# entry 91006619 100661
+# pos 91006619 3
+# scale 91006619 1 0
+# alpha 91006619 0 0
+# layer 91006619 5
+# face 100661 "sad"
+# face 91006619 "sad"
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "bg_black"
+# imagealpha 1 0 0
+# imagelayer 1 2
+# imagescale 1 2 0
+;;さくらボイス用
+# body 602311
+# alpha 602311 0 0
+# textflame 1 1
+# textboxarrow 0 2
+# chara 100661
+@ナーゲルリング
+お、終わった…
+ふぅ…
+
+;;ナーゲルリングの立ち絵を一瞬消してすぐに再表示
+;;バッというSE
+;;マスターが倒れかけたナーゲルリングを抱えた体
+# serif 0
+# textwindow "close"
+# alpha 100661 0 0.5
+# waitandnext 0.5
+
+# se "SE_5527"
+# alpha 91006619 1 0.5
+# shake 0 0.5
+# waitandnext 1.5
+
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 100661
+# voice 1006 "nageruring_0011"
+@ナーゲルリング
+こ、子供みたいに抱えないで…
+一人で立てる…
+
+# textflame 0 0
+@マスター
+そんなことないでしょ
+見るからにふらついてたし
+
+# face 300191 "sad"
+# alpha 300191 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 300191
+@ロンギヌス
+そうですよ
+私も最初に姿が変わったとき、
+反動でそうなってしまいました
+
+# face 91006619 "shy"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 100661
+@ナーゲルリング
+じゃ、じゃあ、仕方なく…
+仕方なくだからね
+
+# face 300191 "shy"
+# alpha 91006619 0 0.5
+# alpha 300191 0 0.5
+# alpha 146 1 0.5
+# alpha 143 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 146
+# voice 9966 "cckero_g_0027"
+@ケロちゃん
+いきなり変身したかと思うと
+いきなりむくれて
+忙しい嬢ちゃんやな
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 143
+@さくら
+ロンギヌスちゃんと
+同じことがまた
+起こったんだね
+
+# alpha 91006619 1 0.5
+# alpha 300191 1 0.5
+# alpha 146 0 0.5
+# alpha 143 0 0.5
+# textflame 0 0
+@マスター
+ありがとう
+ナーゲルリング
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 100661
+@ナーゲルリング
+い、いいんです
+わかれば
+
+# bgm "stop"
+# face 91006619 "surprise"
+# face 300191 "surprise"
+# move 146 1 0
+# alpha 146 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 146
+@ケロちゃん
+！？
+そこにいるのは誰や！
+姿を見せいっ
+
+;;ケロちゃんの立ち絵が横スライドで動かせれば移動。
+# se "SE_9467"
+# rightout 146 0.5
+# textflame 0 0
+@
+一同が構える
+だが、そこにいたのは
+
+;;盤面転換
+;;与一のシルエット
+;;そのとなりにケロちゃんの立ち絵
+;;与一
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# layer 146 3
+# alpha 91006619 0 0
+# alpha 143 0 0
+# move 146 2 0
+# alpha 400561 1 0
+# brightness 400561 0.1 0
+# alpha 300191 0 0
+# mask 400561 off
+# waitandnext 0.6
+
+# leftin 146 0.5
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# bgm "bgm006" 0
+# emotionbody 4005 1 400561 40 250
+# effectpattern 4005 2 0
+# effectstart 4005
+# serif 0
+# textwindow "normal" 
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400561
+# voice 4005 "yoichi_0024"
+@？？？
+ひっ！！
+
+;;ずてーんっとSEがあれば
+;;与一
+# effectskip 4005
+# se "SE_5403"
+# serif 0
+# textwindow "close"
+# shake 0 0.5
+# move 400561 4 0.5
+# alpha 400561 0 0.5
+# waitandnext 1
+
+# brightness 400561 1 0
+# waitandnext 0.1
+
+# mask 400561 on
+# serif 0
+# textwindow "normal"
+# face 400561 "sad"
+# alpha 400561 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 400561
+@？？？
+ててて…
+
+;;与一の立ち絵を表示
+# textflame 0 0
+@マスター
+与一！？
+
+# face 400561 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 400561
+@与一
+こ、こんにちは…
+あの、その…
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 146
+@ケロちゃん
+はぁ、見られてもうたか…
+
+# face 400561 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 400561
+@与一
+うう、さっきの幻覚に続いて
+今度はぬいぐるみがしゃべる
+幻覚が…
+
+# face 400561 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 400561
+@与一
+きゅう～
+
+;;ずてーんっとSEがあれば
+# se "SE_5403"
+# serif 0
+# textwindow "close"
+# shake 0 0.5
+# alpha 400561 0 0.5
+# waitandnext 1
+
+;;暗転
+;;与一立ち絵表示
+;;ここからロンギヌスとナーゲルの立ち絵は通常のものを
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# face 400561 "usual"
+# bgmfile "bgm183" "BgmGakuen003" 0
+# alpha 400561 1 0
+# alpha 146 0 0
+# move 400561 3 0
+# mask 400561 off
+# waitandnext 0.6
+
+# fadein "black" 1
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@マスター
+…というわけなんだよ
+
+# textflame 0 0
+@
+目を覚ました与一に
+マスター達はすべてを
+包み隠さず話した
+
+# textflame 0 0
+@
+見られてしまった以上、
+隠す必要もない
+
+# face 400561 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400561
+# voice 4005 "yoichi_0039"
+@与一
+そうだったんですか
+他の学院ではそんなことが
+起こっていたんですね
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400561
+@与一
+わたし、今までそのことを
+知りませんでした…
+
+# face 143 "sad"
+# move 143 3 0
+# alpha 400561 0 0.5
+# alpha 143 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 143
+# voice 60231 "ccsakura_g_0031"
+@さくら
+ごめんなさい
+巻き込んじゃって
+
+# alpha 400561 1 0.5
+# alpha 143 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400561
+@与一
+いえ、そんな
+みなさんが頑張ろうとしてるのに
+
+# face 400561 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400561
+# voice 4005 "yoichi_0031"
+@与一
+逆に何も知らなくて
+申し訳ないというか…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400561
+# voice 4005 "yoichi_0002"
+@与一
+あの…
+わたしに何かできることは
+ないでしょうか
+
+# face 400561 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400561
+@与一
+みなさんのような力はありませんが
+わたし、わたしなりに頑張りたいです
+
+# textflame 0 0
+@マスター
+協力してくれるのは
+助かるけれど…
+
+# alpha 77 1 0.5
+# alpha 400561 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 77
+@ナーゲルリング
+与一さんが手伝ってくれるなら
+本来の目的を果たせるかもしれません
+
+# textflame 0 0
+@マスター
+というと？
+
+# move 143 5 0
+# textflame 1 1
+# textboxarrow 0 2
+# chara 77
+@ナーゲルリング
+これで三校の生徒が揃いました
+ですから、それを利用して
+さらに大きく活動もできるようにする
+
+# face 143 "surprise"
+# mask 143 on
+# move 143 4 0.5
+# alpha 143 1 0.5
+# move 77 2 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 143
+# voice 60231 "ccsakura_g_0022"
+@さくら
+でも、どうやって？？？
+
+# face 143 "usual"
+# face 77 "happy"
+# se "SE_0673"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 77
+@ナーゲルリング
+私たちを三校合同の演劇部として
+大々的に公表するんです
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 77
+@ナーゲルリング
+うまく取り次げば、
+三校すべての出入りが自由になります
+
+# face 77 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 77
+@ナーゲルリング
+そして私たちが行っている活動、
+それをすべて演劇部の活動の一環
+としてしまえば
+
+# face 143 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 143
+# voice 60231 "ccsakura_g_0039"
+@さくら
+そっか、わたしたちが衣装を着てても
+演劇部の活動の一環だと思われるし
+
+# move 146 3 0
+# alpha 146 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 146
+# voice 9966 "cckero_g_0003"
+@ケロちゃん
+嬢ちゃん、頭いいなぁ！
+
+# face 77 "shy"
+# textflame 0 0
+@マスター
+すごいよ、ナーゲルリング
+
+# textflame 0 0
+@
+こうして、僕たちの活動は
+演劇部の部活動としてある程度は
+周りをごまかせるようになった

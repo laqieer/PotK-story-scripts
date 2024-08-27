@@ -1,0 +1,330 @@
+;;-----------------------------------------
+;;SEA夏2_1_0
+;;-----------------------------------------
+# script "lisp"
+# background "sea_castle"
+# bgm "bgm002" 0
+;;-----------------------------------------
+;;浴衣ミーミル
+# body 318
+# pos 318 3
+# scale 318 0.8 0
+# layer 318 5
+# mask 318 off
+# alpha 318 0 0
+;;浴衣カシウス
+# body 6303111
+# pos 6303111 4
+# scale 6303111 0.7 0
+# layer 6303111 3
+# mask 6303111 off
+# alpha 6303111 0 0
+;;-----------------------------------------
+# imageset 1 "SEA6303111"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：神社
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# face 318 "normal"
+# alpha 318 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+「世界を見渡す庭」…
+こちらで合っておりますでしょうか
+
+# textboxarrow 0 2
+@ミーミル
+高台にある神社
+ここからなら、夏祭りの会場を
+見渡すことが可能でございます
+
+# face 318 "sad"
+# textboxarrow 0 2
+@ミーミル
+ですが、ティルフィング様の
+お姿は…
+
+# alpha 318 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# move 6303111 3 1
+# scale 6303111 0.8 1
+# face 6303111 "usual"
+# alpha 6303111 1 1
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@カシウス
+…………
+
+# alpha 6303111 0 0.3
+# face 318 "surprise"
+# alpha 318 1 0.3
+# textboxarrow 0 2
+@ミーミル
+あ！
+あちらにいらっしゃるのは
+カシウスさんです
+
+# face 318 "normal"
+# textboxarrow 0 2
+@ミーミル
+少しお話しを伺ってまいります
+
+;;ミーミルがカシウスに近づく
+# se "SE_0740"
+# move 318 4 0.5
+# alpha 318 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;カシウスシナリオカット
+# bgmfile "bgm612" "BgmSecretlyEverAfter003" 0
+# fadein "white" 1
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# frameout 0 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 1
+
+# serif 1
+@ミーミル
+カシウスさん、こんにちは
+…いえ、こんばんはと言うべき
+時間帯でしょうか？
+
+# serif 1
+@ミーミル
+私、ミーミルと申します
+あちらにいらっしゃるマスター様の
+専属補佐官でございます
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 0
+@カシウス
+わたしはカシウス
+そう…あなたがミーミルなのね
+
+# voice 9917 "mimir_navikan_0022"
+# serif 1
+@ミーミル
+私のことをご存知なのですかっ？
+
+# voice 530311 "cassius_ca_0003"
+# serif 0
+@カシウス
+ええ
+ティルフィングから言付けを
+預かっているの
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+@カシウス
+「世界を見渡す庭から
+最高の形を作りあげて」
+
+@カシウス
+そう伝えるよう言われた
+
+@カシウス
+大事なことだから、
+もう一度伝えるね
+
+@カシウス
+「世界を見渡す庭から
+最高の形を作りあげて」
+
+# move 318 2 0
+# alpha 318 1 0
+# move 6303111 4 0
+# alpha 6303111 1 0
+@カシウス
+ティルフィングからの言付けは
+それだけよ
+
+;;シナリオカット削除
+# imagealpha 1 0 1
+# framein 0 1
+# waitandnext 1
+
+# voice 9917 "mimir_navikan_0030"
+# face 318 "normal"
+# face 6303111 "usual"
+# textboxarrow 0 1
+@ミーミル
+ありがとうございます
+…最高の形とは、何でしょう？
+
+;;選択肢
+# select "格好良い形かな" "select_label_01" "可愛い形かな" "select_label_02"
+最高の形とは、何でしょう？
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 318 "happy"
+# textboxarrow 0 1
+@ミーミル
+なるほど…
+格好良いのは魅力的です
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 318 "happy"
+# textboxarrow 0 1
+@ミーミル
+なるほど…
+可愛いと人目を惹きます
+
+# label "select_label_end"
+# textboxarrow 0 3
+@カシウス
+最高の形…
+それはきっと、円環を現す
+
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+円環…輪ということでしょうか？
+
+# textboxarrow 0 3
+@カシウス
+輪…円…球体…
+輪廻の理を現す完全なる形よ
+
+# face 318 "happy"
+# textboxarrow 0 1
+@ミーミル
+なるほど…
+勉強になります
+
+# textboxarrow 0 3
+@カシウス
+そう…
+
+# voice 9917 "mimir_navikan_0002"
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+あの…不躾な質問になりますが、
+カシウスさんはこちらで何を？
+
+# textboxarrow 0 3
+@カシウス
+わたしは…皆を見ているの
+
+# textboxarrow 0 3
+@カシウス
+穏やかな日常を過ごしている人々を
+
+# voice 9917 "mimir_navikan_0004"
+# face 318 "happy"
+# textboxarrow 0 1
+@ミーミル
+ここからなら、夏祭りの会場が
+一望できますね
+
+# voice 530311 "cassius_ca_0032"
+# textboxarrow 0 3
+@カシウス
+そう…
+だけど、気になってる…
+
+# textboxarrow 0 3
+@カシウス
+人々は本当に、穏やかな日常を
+望んでいるの？
+
+# voice 9917 "mimir_navikan_0003"
+# textboxarrow 0 1
+@ミーミル
+もちろんでございますっ
+皆さん、とても楽しそうにして
+いらっしゃいます
+
+# textboxarrow 0 3
+@カシウス
+楽しい…
+それは、穏やかとは
+異なる意味をもつ言葉
+
+# textboxarrow 0 3
+@カシウス
+人々が本当に望んでいるものは
+別にあったの？
+
+# textboxarrow 0 3
+@カシウス
+わたしは思考を止めない
+変わらない穏やかな日常の価値を
+見定めなければ…
+
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+カシウスさん…
+
+# textboxarrow 0 3
+@カシウス
+わたしのことは気にしなくていい
+あなた達は為すべきことを為して
+
+;;選択肢
+# select "少し一緒に歩こう" "select_label_03" "別のところからも観察しよう" "select_label_03"
+あなた達は為すべきことを為して
+
+# label "select_label_03"
+# textboxarrow 0 3
+@カシウス
+…御館様がそう望むなら
+
+# face 318 "happy"
+# textboxarrow 0 1
+@ミーミル
+それでは、輪っかや丸いものを
+探してみましょう
+
+# textboxarrow 0 3
+@カシウス
+このリンゴ飴は丸いわ
+
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+リンゴ飴…
+これが最高の形なのでしょうか？
+
+# textboxarrow 0 3
+@カシウス
+向こうに輪投げもあった
+
+# textboxarrow 0 1
+@ミーミル
+輪投げでございますか…
+
+# textboxarrow 0 3
+@カシウス
+ボールを投げる的当てもあった
+
+# voice 9917 "mimir_navikan_0023"
+# face 318 "surprise"
+# textboxarrow 0 1
+@ミーミル
+なんと…
+どれが正解なのでしょう…
+
+# fadeout "black" 1
+# waitandnext 1

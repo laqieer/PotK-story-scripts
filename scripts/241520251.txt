@@ -1,0 +1,336 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;コマンドキラーズサイドストーリー後編
+;;第5話　タイトル：奏でる者
+;;5_5_1
+;;スクリプト最後の背景：古びた教会
+;;-----------------------------------------
+# script "lisp"
+# background "ancient_church"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;ロジェスティラ
+# body 235
+# pos 235 3
+# scale 235 0.8 0
+# layer 235 2
+# alpha 235 0 0
+# mask 235 off
+;;ロジェスティラ・神令・スクルド（ボイス用）
+# body 5503711
+# alpha 5503711 0 0
+;;イチイバル
+# body 233
+# pos 233 3
+# scale 233 0.8 0
+# layer 233 2
+# alpha 233 0 0
+# mask 233 off
+;;イチイバル・神令・オーディン（ボイス用）
+# body 5402211
+# alpha 5402211 0 0
+;;オルフェウス
+# body 234
+# pos 234 3
+# scale 234 0.8 0
+# layer 234 2
+# alpha 234 0 0
+# mask 234 off
+;;オルフェウス・神令・フォルセティ（ボイス用）
+# body 5603211
+# alpha 5603211 0 0
+;;ラブリュス
+# body 200331
+# pos 200331 3
+# scale 200331 0.8 0
+# layer 200331 2
+# alpha 200331 0 0
+# mask 200331 off
+;;シストルム
+# body 601311
+# pos 601311 3
+# scale 601311 0.8 0
+# layer 601311 2
+# alpha 601311 0 0
+# mask 601311 off
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 2
+# alpha 810004 0 0
+# mask 810004 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第5話　タイトル：奏でる者
+;;//背景：古びた教会
+# move 601311 2 0
+# face 601311 "normal"
+# alpha 601311 1 0
+# mask 601311 on
+# move 200331 4 0
+# face 200331 "angry2"
+# alpha 200331 1 0
+# mask 200331 on
+# textflame 1 1
+# textboxarrow 0 3
+@ラブリュス
+ここね～！
+ラブリュスちゃんのファンを横取り
+した異族がいるのはっ
+
+# face 601311 "angry"
+# textboxarrow 0 1
+@シストルム
+ラブリュス、静かにするにゃーっ
+
+# alpha 601311 0 0.5
+# alpha 200331 0 0.5
+# move 233 2 0
+# face 233 "irregular"
+# alpha 233 1 0.5
+# mask 233 on
+# textboxarrow 0 1
+# move 235 4 0
+# face 235 "normal"
+# alpha 235 1 0.5
+# mask 235 on
+@イチイバル
+町の人達が奥に進んでいく…
+何が行われているんだろう
+
+# face 235 "angry"
+# textboxarrow 0 3
+@ロジェスティラ
+笛の音は奥から聞こえてきます
+皆さん、気をつけて
+
+# alpha 233 0 0.5
+# alpha 235 0 0.5
+# move 234 3 0
+# face 234 "normal"
+# alpha 234 1 0.5
+# mask 234 off
+# textboxarrow 0 2
+@オルフェウス
+うん…
+慎重にいこう
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 234 0 0
+# move 810004 3 0
+# alpha 810004 1 0
+# mask 810004 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+@異族
+感情ハ容量ヲ圧迫…
+削除スル
+
+# serif 1
+@町の人々
+…………
+
+# textboxarrow 0 2
+@異族
+記憶ハ容量ヲ圧迫…
+消去スル
+
+# serif 1
+@町の人々
+…………
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 540221 "ichiibal_c_0022"
+# alpha 810004 0 0.5
+# move 601311 2 0
+# face 601311 "angry"
+# alpha 601311 1 0.5
+# mask 601311 on
+# move 233 4 0
+# face 233 "irregular"
+# alpha 233 1 0.5
+# mask 233 on
+# textboxarrow 0 3
+@イチイバル
+何だろう？
+あの異族、人の頭に手を置いて
+何か呟いているけれど…
+
+# voice 6013 "sistrum_0026"
+# textboxarrow 0 1
+@シストルム
+良くない匂いだにゃー…
+何か良くないことが行われてる
+気配がするにゃーっ
+
+# voice 2003 "loveryus_0009"
+# alpha 601311 0 0.5
+# alpha 233 0 0.5
+# move 200331 2 0
+# face 200331 "angry2"
+# alpha 200331 1 0.5
+# mask 200331 on
+# textboxarrow 0 1
+# move 234 4 0
+# face 234 "normal"
+# alpha 234 1 0.5
+# mask 234 on
+@ラブリュス
+あんなにたくさん人を集めて
+あの異族、ズルい！
+
+# voice 560321 "orpheus_c_0013"
+# face 234 "sad"
+# textboxarrow 0 3
+@オルフェウス
+そういうことではないんじゃ…
+
+# voice 550371 "logistille_c_0017"
+# alpha 200331 0 0.5
+# alpha 234 0 0.5
+# move 235 3 0
+# face 235 "sad"
+# alpha 235 1 0.5
+# mask 235 off
+# textboxarrow 0 2
+@ロジェスティラ
+あああああっ…
+そんなっ…
+
+# move 233 2 0
+# face 233 "usual"
+# alpha 233 1 0.5
+# mask 233 on
+# textboxarrow 0 1
+# move 235 4 0.5
+# mask 235 on
+@イチイバル
+どうしたの、ロジェスティラ？
+怯えないで
+ボクがいるよ
+
+# face 235 "angry"
+# textboxarrow 0 3
+@ロジェスティラ
+イチイバルさん…
+今すぐあの異族を倒さないとっ
+あの異族は…
+
+# textboxarrow 0 3
+@ロジェスティラ
+町の人から、心を抜き取って
+いるんです…！
+
+# voice 540221 "ichiibal_c_0025"
+# face 233 "surprise"
+# textboxarrow 0 1
+@イチイバル
+心だって…？
+
+# voice 550371 "logistille_c_0002"
+# textboxarrow 0 3
+@ロジェスティラ
+あのあのっ…
+細かいことは解析できてないんです
+けど…
+
+# textboxarrow 0 3
+@ロジェスティラ
+あの異族が使っているのは
+消去魔術ですっ
+
+# face 233 "angry"
+# textboxarrow 0 1
+@イチイバル
+そうかっ
+昼間、感情が抜け落ちたような
+人々を見かけたのは
+
+# alpha 233 0 0.5
+# alpha 235 0 0.5
+# move 601311 3 0
+# face 601311 "angry"
+# alpha 601311 1 0.5
+# mask 601311 off
+# textboxarrow 0 2
+@シストルム
+あいつに心を抜き取られて
+しまったからだったのにゃ！
+
+# alpha 601311 0 0.5
+# move 233 2 0
+# face 233 "irregular"
+# alpha 233 1 0.5
+# mask 233 on
+# move 234 4 0
+# face 234 "surprise"
+# alpha 234 1 0.5
+# mask 234 on
+# textboxarrow 0 3
+@オルフェウス
+何で、そんなことを…？
+異族は人を捕食するはずなのに…
+
+# textboxarrow 0 1
+@イチイバル
+あれもまた、ある種の「捕食」だよ
+肉体を食らうのではなく、
+精神を食らっているんだろう
+
+# alpha 233 0 0.5
+# move 601311 2 0
+# face 601311 "angry"
+# alpha 601311 1 0.5
+# mask 601311 on
+# textboxarrow 0 1
+@シストルム
+食べちゃうわけじゃないから、
+ボク達にも気づかれにくいって
+算段だったのかもしれないにゃ！
+
+# face 234 "sad"
+# textboxarrow 0 3
+@オルフェウス
+異族がそんな知性を持ってる
+なんて…
+
+# voice 2003 "loveryus_0014"
+# alpha 601311 0 0.5
+# alpha 234 0 0.5
+# move 200331 3 0
+# face 200331 "angry2"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textboxarrow 0 2
+@ラブリュス
+もーっ！
+そんな理屈はどうでもいいの！
+肝心なのはっ
+
+# textboxarrow 0 2
+@ラブリュス
+心がなくなっちゃったら、
+わたしのこと可愛いって言って
+くれる人がいなくなっちゃうじゃん！
+
+# textboxarrow 0 2
+@ラブリュス
+わたしの可愛さを崇めないなんて、
+絶許だよ～！！

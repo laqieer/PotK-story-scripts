@@ -1,0 +1,382 @@
+;;-----------------------------------------
+;;SEAイベント不可欠彩度レルム1_3_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm291" "BgmLostRagnarokSideStory" 0
+;;-----------------------------------------
+;;パンドラ
+# body 62001111
+# pos 62001111 5
+# scale 62001111 0.8 0
+# layer 62001111 4
+# mask 62001111 on
+# alpha 62001111 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 1
+# scale 6603811 0.8 0
+# layer 6603811 2
+# mask 6603811 off
+# alpha 6603811 0 0
+;;SEAフェイルノート
+# body 6401911
+# pos 6401911 3
+# scale 6401911 0.8 0
+# layer 6401911 2
+# mask 6401911 off
+# alpha 6401911 0 0
+;;天上編タスラム
+# body 502011
+# pos 502011 2
+# scale 502011 0.8 0
+# layer 502011 4
+# alpha 502011 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+# imageset 2 "SEA6401911"
+# imagealpha 2 0 0
+# imagescale 2 1 0
+# imagelayer 2 5
+;;-----------------------------------------
+;;背景：崩壊したカコルフェの街中：夜
+# textwindow "close"
+# waitandnext 0.2
+
+# background "in_city_collapse_night"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+では何故、今は矢を番えるのか
+
+;;フェイルノートシナリオカットを表示
+# frameout 0 0
+# fadein "white" 1
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# waitandnext 3
+
+# voice 540191 "failnaught_ca_0007"
+# textflame 1 1
+# textboxarrow 0 0
+@フェイルノート
+それは――“当たる”からよ
+
+# se "SE_4300"
+# textflame 0 0
+@
+揺らぎが消えたフェイルノートの
+矢は決して狙いを外さない
+
+# se "SE_4301"
+# waitandnext 1
+
+# se "SE_4824"
+# fadein "white" 2
+# textwindow "close"
+# waitandnext 2
+
+# se "SE_2019"
+# serif 1
+# textflame 1 1
+@タスラム
+やったなフェイルノート！
+肉も食わずにやり遂げるとは！
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 0
+@フェイルノート
+改めて礼を言うわタスラム
+それと、引き続き手伝いなさい
+
+# serif 0
+# textboxarrow 0 0
+@フェイルノート
+タスラムの一撃必殺と
+私の必中があれば
+タワーに魔獣は近づけないわ
+
+;;演出：空が白んでいく
+# subfillrect 0 "white" 0 0 0.2
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 4
+;;シナリオカット削除
+# imagealpha 2 0 1
+# framein 0 1
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 2
+
+# alpha 6401911 1 0.3
+# face 6401911 "surprise"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@フェイルノート
+…もうすぐ、夜が明けるわね
+
+# textflame 0 0
+@
+白みゆく空に
+一際輝く星を見据えるフェイルノート
+
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+# face 6401911 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+@フェイルノート
+私の存在意義は
+戦う力があることじゃないわ
+
+# textboxarrow 0 2
+@フェイルノート
+絶望という闇夜に
+希望という光をもたらすこと…
+
+# se "bgm601_windon"
+# voice 540191 "failnaught_ca_0004"
+# face 6401911 "happy"
+# textboxarrow 0 2
+@フェイルノート
+あの、明けの明星のように！
+
+# voice 540191 "failnaught_ca_0027"
+# face 6401911 "sad"
+# textboxarrow 0 2
+@フェイルノート
+…まだ言い張れないのが悔しいけどね
+
+# face 6401911 "surprise"
+# textboxarrow 0 2
+@フェイルノート
+パンドラ、マクリル
+ふたりにも礼を言うわ
+
+# face 6401911 "sad"
+# textboxarrow 0 2
+@フェイルノート
+私としたことが
+他者に指摘されるまで
+自分の無駄に気付かなかったなんてね
+
+# voice 6200111 "pandora_0004"
+# move 6401911 2 0.5
+# move 62001111 4 0.5
+# face 62001111 "happy"
+# alpha 62001111 1 0.3
+# textboxarrow 0 3
+@パンドラ
+…フェイルノートは変われたのね
+
+# textboxarrow 0 1
+@フェイルノート
+変わりかけてしまっていた自分を
+今一度見つめ直したようなものよ
+
+# textboxarrow 0 1
+@フェイルノート
+伝承再解釈、とでも言うのかしら
+
+# voice 660381 "maclir_ura_0002"
+# move 6401911 1 0.5
+# alpha 6401911 0 0.3
+# move 6603811 2 0.5
+# face 6603811 "usual"
+# alpha 6603811 1 0.3
+# textboxarrow 0 1
+@マクリル
+パンドラ、「裏側」の気配が…
+
+# face 62001111 "surprise"
+# textboxarrow 0 3
+@パンドラ
+…やっぱり
+タワーの方が気になるのね
+
+# voice 660381 "maclir_ura_0003"
+# textboxarrow 0 1
+@マクリル
+…うん、あそこに何かあるのかも
+
+# textboxarrow 0 1
+@マクリル
+フェイルノートからはもう
+全然感じないから…
+
+# voice 540191 "failnaught_ca_0033"
+# alpha 6603811 0 0.3
+# alpha 62001111 0 0.3
+# move 6401911 3 0
+# layer 6401911 2
+# mask 6401911 off
+# face 6401911 "happy"
+# alpha 6401911 1 0.3
+# textboxarrow 0 2
+@フェイルノート
+当然でしょう？
+私が「揺らぐ」ことなんてもうないわ
+
+# textboxarrow 0 2
+@フェイルノート
+だから行きなさい
+それがマクリルとパンドラの
+役目なのでしょう？
+
+# textboxarrow 0 2
+@フェイルノート
+ここは私とタスラム
+それに警備隊のキル姫がいれば十分よ
+
+# textflame 0 0
+@
+フェイルノート達の話を聞いていた
+警備隊のキル姫がパンドラと
+マクリルをタワーへと導く
+
+# move 6401911 4 0.5
+# layer 6603811 4
+# mask 6603811 on
+# alpha 6603811 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+…全部終わったら、また会える？
+
+# voice 540191 "failnaught_ca_0005"
+# face 6401911 "shy"
+# textboxarrow 0 3
+@フェイルノート
+…ふふっ、もちろんよ
+
+# alpha 6603811 0 0.3
+# alpha 502011 1 0.3
+# voice 5020 "tasuramu_0005"
+# face 502011 "smile"
+# textboxarrow 0 1
+@タスラム
+一緒に肉でも食おう！
+
+# face 6401911 "happy"
+# textboxarrow 0 3
+@フェイルノート
+ですって
+さぁ、行きなさい！
+
+# voice 6200111 "pandora_0036"
+# alpha 502011 0 0.3
+# alpha 6401911 0 0.3
+# move 62001111 4 0
+# layer 62001111 2
+# mask 62001111 off
+# face 62001111 "happy"
+# alpha 62001111 1 0.3
+# move 6603811 2 0
+# layer 6603811 4
+# mask 6603811 on
+# alpha 6603811 1 0.3
+# textboxarrow 0 3
+@パンドラ
+あとは頼んだわ、フェイルノート！
+
+# voice 660381 "maclir_ura_0004"
+# face 6603811 "happy"
+# textboxarrow 0 1
+@マクリル
+じゃあね…！
+
+;;演出：移動の暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：崩壊したカコルフェタワー
+# background "201_slum"
+# face 6603811 "usual"
+# face 62001111 "normal"
+# textwindow "close"
+# waitandnext 0.5
+
+#setnextbgmblock 1
+# se "bgm601_celloon"
+# se "bgm601_guitaron"
+# se "bgm601_glockenon"
+# fadein "black" 1
+# waitandnext 1
+
+;;もやもやフレーム
+# move 62001111 4 0
+# textwindow "moya"
+# textboxarrow 0 0
+@パンドラ
+私の言葉がきっかけだったなんて
+言われても実感はないけれど…
+
+;;もやもやフレーム
+@パンドラ
+たったひとつの気付きで
+あんなにも変われるものなのね
+
+# textwindow "nomal"
+# textboxarrow 0 3
+@パンドラ
+終わりよければ…
+なんて言葉で説明しきれないことが
+この世界にはあるのね
+
+# voice 660381 "maclir_ura_0022"
+# face 6603811 "normal"
+# textboxarrow 0 1
+@マクリル
+…パンドラ？
+
+# voice 6200111 "pandora_0034"
+# textboxarrow 0 3
+@パンドラ
+なんでもないわ
+ちょっと考え事をしていたの
+
+# textboxarrow 0 3
+@パンドラ
+それじゃあ行きましょう
+タワーが崩壊した原因を調べれば
+きっとわかることがあるはず…
+
+# voice 660381 "maclir_ura_0033"
+# face 6603811 "usual"
+# textboxarrow 0 1
+@マクリル
+うん…頑張ってみる…！
+
+;;演出：暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;演出：キャラ立ち絵無し
+# background "bg_black"
+# subfillrect 0 "white" 0 0.2 0
+# alpha 62001111 0 0
+# alpha 6603811 0 0
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+@
+パンドラとマクリルは
+フェイルノートを介し、
+世界のことをひとつ知ったのだった
+
+# fadeout "black" 2
+# waitandnext 2

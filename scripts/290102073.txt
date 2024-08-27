@@ -1,0 +1,536 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第2話　タイトル：雷霆の絆
+;;2_7
+;;スクリプト最後の背景：町（夜）
+;;-----------------------------------------
+# script "lisp"
+# background "town_night"
+# bgmfile "bgm403" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.8 0
+# layer 502711 2
+# alpha 502711 0 0
+# mask 502711 off
+;;ダモクレス
+# body 103511
+# pos 103511 3
+# scale 103511 0.8 0
+# layer 103511 2
+# alpha 103511 0 0
+# mask 103511 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;アスクレピオス
+# body 600131
+# pos 600131 3
+# scale 600131 0.8 0
+# layer 600131 2
+# alpha 600131 0 0
+# mask 600131 off
+;;アルテミス
+# body 5400131
+# pos 5400131 3
+# scale 5400131 0.8 0
+# layer 5400131 2
+# alpha 5400131 0 0
+# mask 5400131 off
+;;ケラウノス
+# body 500131
+# pos 500131 3
+# scale 500131 0.8 0
+# layer 500131 2
+# alpha 500131 0 0
+# mask 500131 off
+;;テュルソス
+# body 600321
+# pos 600321 3
+# scale 600321 0.8 0
+# layer 600321 2
+# alpha 600321 0 0
+# mask 600321 off
+;;ブリューナク
+# body 500721
+# pos 500721 3
+# scale 500721 0.8 0
+# layer 500721 2
+# alpha 500721 0 0
+# mask 500721 off
+;;フラガラッハ
+# body 101011
+# pos 101011 3
+# scale 101011 0.8 0
+# layer 101011 2
+# alpha 101011 0 0
+# mask 101011 off
+;;クラウ・ソラス
+# body 102711
+# pos 102711 3
+# scale 102711 0.8 0
+# layer 102711 2
+# alpha 102711 0 0
+# mask 102711 off
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 2
+# alpha 810004 0 0
+# mask 810004 off
+;;異族（クローン1）
+# entry 98100041 810004
+# pos 98100041 3
+# scale 98100041 0.8 0
+# layer 98100041 2
+# alpha 98100041 0 0
+# mask 98100041 off
+;;異族（クローン2）
+# entry 98100042 810004
+# pos 98100042 3
+# scale 98100042 0.8 0
+# layer 98100042 2
+# alpha 98100042 0 0
+# mask 98100042 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+# move 103511 2 0
+# face 103511 "usual"
+# alpha 103511 1 0
+# mask 103511 on
+# textboxarrow 0 1
+# move 5400131 4 0
+# face 5400131 "angry"
+# alpha 5400131 1 0
+# mask 5400131 on
+# voice 1035 "damocles_0029"
+@ダモクレス
+よーしっ！
+クレスもいっくよ～！
+
+# se "SE_5208"
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# voice 540013 "arutemisu_iz_0026"
+@アルテミス
+出ましたね、破廉恥娘！
+下賤な雑草は枯れ果てなさい
+
+# textboxarrow 0 1
+# voice 1035 "damocles_0004"
+@ダモクレス
+うんうん
+愛さえあれば問題ない！
+
+;;//アルテミスがダモクレスを追う
+# se "SE_5575"
+# textwindow "close"
+# alpha 103511 0 0.5
+# waitandnext 1
+
+# se "SE_5575"
+# alpha 5400131 0 0.5
+# waitandnext 0.5
+
+# move 102711 3 0
+# face 102711 "angry"
+# alpha 102711 1 0.5
+# mask 102711 off
+# textboxarrow 0 2
+# textwindow "normal"
+@クラウ・ソラス
+あ！
+アルテミスを討つのは…
+私のっ…
+
+# move 102711 2 0.5
+# mask 102711 on
+# move 500721 4 0
+# face 500721 "normal"
+# alpha 500721 1 0.5
+# mask 500721 on
+# textboxarrow 0 3
+# voice 5007 "buryunaku_0011"
+@ブリューナク
+ブリューナクは、
+ソラ男に休息を推奨する
+
+# textboxarrow 0 1
+# voice 1027 "solais_0009"
+@クラウ・ソラス
+ソラ男と呼ぶな！
+…ブリューナクまでいるとは
+
+# textboxarrow 0 3
+@ブリューナク
+旧交を温めたいところだが、
+ブリューナクには役割がある
+
+# alpha 500721 0 0.5
+# move 101011 4 0
+# face 101011 "normal"
+# alpha 101011 1 0.5
+# mask 101011 on
+# textboxarrow 0 3
+# voice 1010 "furagaraha_0005"
+@フラガラッハ
+ふふふ
+今は怪我を癒すべきね
+あとは私達に任せて
+
+# face 102711 "normal"
+# textboxarrow 0 1
+# voice 1027 "solais_0015"
+@クラウ・ソラス
+フラガラッハもいたのか…
+あなたの実力は信頼している
+悪いが、頼む
+
+# alpha 102711 0 0.5
+# alpha 101011 0 0.5
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0001"
+@アルマス
+二人とも彼女と知り合いなの？
+というか、ソラ男って…？
+
+# move 500721 2 0
+# face 500721 "normal"
+# alpha 500721 1 0.5
+# mask 500721 on
+# textboxarrow 0 1
+# move 196 4 0.5
+# alpha 196 1 0.5
+# mask 196 on
+# voice 5007 "buryunaku_0003"
+@ブリューナク
+ブリューナクとソラ男は親友だ
+本当はクラウ・ソラスという
+名なのだが
+
+# textboxarrow 0 1
+@ブリューナク
+ブリューナクとカラドボルグで
+彼女に相応しい仇名をつけてみた
+それが、ソラ男だ
+
+# textboxarrow 0 1
+@ブリューナク
+アルマスも彼女のことは
+ソラ男と呼ぶよう提案する
+
+# alpha 500721 0 0.5
+# alpha 196 0 0.5
+# move 102711 3 0
+# face 102711 "angry"
+# alpha 102711 1 0.5
+# mask 102711 off
+# textboxarrow 0 2
+# voice 1027 "solais_0011"
+@クラウ・ソラス
+その呼び方は止めろと
+何度も言っているだろうが！
+うっ…
+
+# alpha 102711 0 0.5
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+傷が深いわ…
+早く治療しないとっ
+
+# alpha 103611 0 0.5
+# move 600131 3 0
+# face 600131 "normal"
+# alpha 600131 1 0.5
+# mask 600131 off
+# textboxarrow 0 2
+# voice 6001 "asukurepiosu_0033"
+@アスクレピオス
+それなら任せなさい
+まったく！
+無茶するキル姫が多すぎよっ
+
+# alpha 600131 0 0.5
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+アスクレピオス、良いところに！
+…って、もしかして
+
+# alpha 196 0 0.5
+# move 600131 3 0
+# face 600131 "normal"
+# alpha 600131 1 0.5
+# mask 600131 off
+# textboxarrow 0 2
+# voice 6001 "asukurepiosu_0027"
+@アスクレピオス
+ケラウノスも来てるわ
+こういうとき、判断が速くて
+有能だから嫌になるのよね…
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "town_night"
+# alpha 600131 0 0
+# move 103511 2 0
+# face 103511 "usual"
+# alpha 103511 1 0
+# mask 103511 on
+# move 5400131 4 0
+# face 5400131 "normal"
+# alpha 5400131 1 0
+# mask 5400131 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 1
+# textwindow "normal"
+@ダモクレス
+クレスの愛の力、
+見せてあげよー！
+
+# face 5400131 "angry"
+# textboxarrow 0 3
+# voice 540013 "arutemisu_iz_battle_0001"
+@アルテミス
+枯れ果てなさい
+
+# textboxarrow 0 1
+# face 103511 "surprise"
+# voice 1035 "damocles_battle_0005"
+@ダモクレス
+あたっ！
+キミ、強いね～っ
+
+# textboxarrow 0 3
+# voice 540013 "arutemisu_iz_0027"
+@アルテミス
+そんな不埒な格好で跳びはねて…
+慎みを持ちなさい！
+
+# alpha 103511 0 0.5
+# move 500131 2 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 on
+# textboxarrow 0 1
+# voice 5001 "keraunosu_0023"
+@ケラウノス
+そうかな～？
+私は大好きだよ！
+
+# face 5400131 "normal"
+# textboxarrow 0 3
+@アルテミス
+下賤な雑草が増えましたね
+
+# face 500131 "amazed"
+# textboxarrow 0 1
+# voice 5001 "keraunosu_0003"
+@ケラウノス
+アルマス達も追いかけてくるよ
+さすがに不利なんじゃないかな～？
+
+# face 5400131 "angry"
+# textboxarrow 0 3
+@アルテミス
+…退けと？
+むしろ私を討つ絶好機では？
+
+# face 500131 "normal"
+# textboxarrow 0 1
+@ケラウノス
+そこまで自惚れてはいないかな～
+私、計算は得意なんだ
+
+# alpha 500131 0 0.5
+# alpha 5400131 0 0.5
+# move 103511 3 0
+# face 103511 "usual"
+# alpha 103511 1 0.5
+# mask 103511 off
+# textboxarrow 0 2
+# voice 1035 "damocles_0028"
+@ダモクレス
+クレスは計算とか苦手だな～…
+ケラウノスはすごいね！
+
+# alpha 103511 0 0.5
+# move 500131 3 0
+# face 500131 "happy"
+# alpha 500131 1 0.5
+# mask 500131 off
+# textboxarrow 0 2
+# voice 5001 "keraunosu_0042"
+@ケラウノス
+いや～
+それほどでもあるよ～♪
+
+# alpha 500131 0 0.5
+# move 5400131 3 0
+# face 5400131 "normal"
+# alpha 5400131 1 0.5
+# mask 5400131 off
+# textboxarrow 0 2
+# voice 540013 "arutemisu_iz_0007"
+@アルテミス
+…いいでしょう
+いずれ全て散りゆく身です
+今夜はこれで
+
+;;//アルテミスが去る
+# se "SE_0719"
+# textwindow "close"
+# alpha 5400131 0 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+# move 196 2 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# move 500131 4 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 on
+# textboxarrow 0 3
+# textwindow "normal"
+@ケラウノス
+ふぅ…行ってくれたね～
+
+# face 196 "angry"
+# textboxarrow 0 1
+@アルマス
+ケラウノス！ダモクレス！
+アルテミスはどこっ？
+
+# alpha 196 0 0.5
+# alpha 500131 0 0.5
+# move 502711 3 0
+# face 502711 "normal"
+# alpha 502711 1 0.5
+# mask 502711 off
+# textboxarrow 0 2
+@フライシュッツ
+ダモクレスちゃん大丈夫～？
+一人で飛び出していって、
+おねーちゃん心配したよ～
+
+# alpha 502711 0 0.5
+# move 196 2 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# move 500131 4 0
+# face 500131 "angry"
+# alpha 500131 1 0.5
+# mask 500131 on
+# textboxarrow 0 3
+# voice 5001 "keraunosu_0009"
+@ケラウノス
+アルテミスは逃げていったよ
+それより、ずるいじゃないか！
+
+# textboxarrow 0 3
+@ケラウノス
+私抜きで酒宴だなんて！
+みんなの酔って火照った顔を
+眺めたかったのに！
+
+# face 196 "surprise"
+# textboxarrow 0 1
+# voice 9943 "almace_navikan_0015"
+@アルマス
+何言ってるの、あなた…？
+
+# alpha 196 0 0.5
+# move 600321 2 0
+# face 600321 "normal"
+# alpha 600321 1 0.5
+# mask 600321 on
+# textboxarrow 0 1
+@テュルソス
+はいはい
+君はマスターの警護をしてないと
+いけなかったでしょ
+
+# textboxarrow 0 1
+@テュルソス
+親睦を深めるのは私の役目だから
+それどころじゃなくなったけど
+
+# face 500131 "normal"
+# textboxarrow 0 3
+# voice 5001 "keraunosu_0003"
+@ケラウノス
+…そういえばアルマス
+君からブリューナクでもフラガラッハ
+でもない姫の匂いがするんだけど
+
+# face 500131 "happy"
+# textboxarrow 0 3
+# voice 5001 "keraunosu_0005"
+@ケラウノス
+まだ私が会ってない
+キル姫がいるのなら
+紹介して欲しいな～♪
+
+# alpha 600321 0 0.5
+# move 196 2 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 1
+# voice 9943 "almace_navikan_0040"
+@アルマス
+ええっ…
+匂いって…怖っ
+
+# alpha 196 0 0.5
+# alpha 500131 0 0.5
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# voice 1036 "ragnarok_0002"
+@ラグナロク
+それより早く戻りましょう
+クラウ・ソラスの容態が気になるわ

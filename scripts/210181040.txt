@@ -1,0 +1,703 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第18章 章タイトル：×××アポカリプス
+;;第1話―４　タイトル：絆を胸に
+;;4_0
+;;スクリプト最後の背景：中心部（崩壊・昼）
+;;-----------------------------------------
+# script "lisp"
+# background "in_yggdrasill_up"
+# bgmfile "bgm483_484" "BgmIntegralNoahBattle007" 0
+;;-----------------------------------------
+;;タスラム
+# body 3502011
+# pos 3502011 3
+# scale 3502011 0.8 0
+# layer 3502011 2
+# alpha 3502011 0 0
+# mask 3502011 off
+;;レシェフ
+# body 3201311
+# pos 3201311 3
+# scale 3201311 0.8 0
+# layer 3201311 2
+# alpha 3201311 0 0
+# mask 3201311 off
+;;レーヴァテイン・擬彩
+# body 5100231
+# pos 5100231 3
+# scale 5100231 0.8 0
+# layer 5100231 2
+# alpha 5100231 0 0
+# mask 5100231 off
+;;テュルソス・D. plug・フォルネウス
+# body 3600311
+# pos 3600311 3
+# scale 3600311 0.8 0
+# layer 3600311 2
+# alpha 3600311 0 0
+# mask 3600311 off
+;;オルフェウス・神令・フォルセティ
+# body 5603211
+# pos 5603211 3
+# scale 5603211 0.8 0
+# layer 5603211 2
+# alpha 5603211 0 0
+# mask 5603211 off
+;;フォルカス・神令・ヘル
+# body 5301811
+# pos 5301811 3
+# scale 5301811 0.8 0
+# layer 5301811 2
+# alpha 5301811 0 0
+# mask 5301811 off
+;;イチイバル・神令・オーディン
+# body 5402211
+# pos 5402211 3
+# scale 5402211 0.8 0
+# layer 5402211 2
+# alpha 5402211 0 0
+# mask 5402211 off
+;;ミュルグレス・神令・トール
+# body 5104611
+# pos 5104611 3
+# scale 5104611 0.8 0
+# layer 5104611 2
+# alpha 5104611 0 0
+# mask 5104611 off
+;;如意金箍棒・神令・フリッグ
+# body 5203111
+# pos 5203111 3
+# scale 5203111 0.8 0
+# layer 5203111 2
+# alpha 5203111 0 0
+# mask 5203111 off
+;;ティファレト・誓約・ミカエル
+# body 5503211
+# pos 5503211 3
+# scale 5503211 0.8 0
+# layer 5503211 2
+# alpha 5503211 0 0
+# mask 5503211 off
+;;フェイルノート・誓約・ルシファー
+# body 5401911
+# pos 5401911 3
+# scale 5401911 0.8 0
+# layer 5401911 2
+# alpha 5401911 0 0
+# mask 5401911 off
+;;カシウス・誓約・ウロボロス
+# body 5303111
+# pos 5303111 3
+# scale 5303111 0.8 0
+# layer 5303111 2
+# alpha 5303111 0 0
+# mask 5303111 off
+;;リサナウト・誓約・クロノス
+# body 5203011
+# pos 5203011 3
+# scale 5203011 0.8 0
+# layer 5203011 2
+# alpha 5203011 0 0
+# mask 5203011 off
+;;アルマス・誓約・ティターニア
+# body 5103811
+# pos 5103811 3
+# scale 5103811 0.8 0
+# layer 5103811 2
+# alpha 5103811 0 0
+# mask 5103811 off
+;;フリズスキャールヴ
+# body 52000411
+# pos 52000411 3
+# scale 52000411 0.8 0
+# layer 52000411 2
+# alpha 52000411 0 0
+# mask 52000411 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;---------------------------------------------
+;;■アルマス
+;;//立ち絵：アルマス・誓約・ティターニア
+;;■レーヴァテイン
+;;//立ち絵：レーヴァテイン・擬彩
+;;■フリズスキャールヴ
+;;//立ち絵：フリズスキャールヴ
+;;■フェイルノート
+;;//立ち絵：フェイルノート・誓約・ルシファー
+;;■カシウス
+;;//立ち絵：カシウス・誓約・ウロボロス
+;;■リサナウト
+;;//立ち絵：リサナウト・誓約・クロノス
+;;■フォルカス
+;;//立ち絵：フォルカス・神令・ヘル
+;;■如意金箍棒
+;;//立ち絵：如意金箍棒・神令・フリッグ
+;;■ミュルグレス
+;;//立ち絵：ミュルグレス・神令・トール
+;;■オルフェウス
+;;//立ち絵：オルフェウス・神令・フォルセティ
+;;■イチイバル
+;;//立ち絵：イチイバル・神令・オーディン
+;;■レシェフ
+;;//立ち絵：レシェフ・獣刻・ネルガル
+;;■テュルソス
+;;//立ち絵：テュルソス・D. plug・フォルネウス
+;;■タスラム
+;;//立ち絵：タスラム・獣刻・バンシー
+;;■ティファレト
+;;//立ち絵：ティファレト・誓約・ミカエル
+;;■住民
+;;//立ち絵なし
+;;---------------------------------------------
+;;//背景：地上ユグドラシル（コマンドマーク無し差分）
+# bgm "stop"
+# se "SE_5575"
+# move 52000411 2 0
+# face 52000411 "usual"
+# alpha 52000411 1 0
+# mask 52000411 on
+# move 5301811 4 0
+# face 5301811 "angry"
+# alpha 5301811 1 0
+# mask 5301811 on
+# textflame 1 1
+# textboxarrow 0 3
+@フォルカス
+やっと見つけましたよ、
+フリズスキャールヴ！
+
+# textboxarrow 0 1
+@フリズスキャールヴ
+何じゃ
+わらわに用かのう
+
+# voice 530181 "forcas_c_0022"
+# face 5301811 "surprise"
+# textboxarrow 0 3
+@フォルカス
+あなたはここで討つ…えっ！？
+
+# bgmfile "bgm457" "BgmIntegralNoahEvent008" 0
+# voice 520311 "nyoikinkobou_c_0015"
+# alpha 52000411 0 0.5
+# alpha 5301811 0 0.5
+# move 5104611 2 0
+# face 5104611 "sad"
+# alpha 5104611 1 0.5
+# mask 5104611 on
+# move 5203111 4 0
+# face 5203111 "sad"
+# alpha 5203111 1 0.5
+# mask 5203111 on
+# textboxarrow 0 3
+@如意金箍棒
+うーん…
+失敗しちゃったかも…
+
+# textboxarrow 0 1
+@ミュルグレス
+ミュル、やってらんなーい…
+
+# voice 560321 "orpheus_c_0037"
+# alpha 5104611 0 0.5
+# alpha 5203111 0 0.5
+# move 5603211 2 0
+# face 5603211 "sad"
+# alpha 5603211 1 0.5
+# mask 5603211 on
+# textboxarrow 0 1
+# move 5402211 4 0
+# face 5402211 "sad"
+# alpha 5402211 1 0.5
+# mask 5402211 on
+@オルフェウス
+痛たた…
+マジありえんし…
+
+# textboxarrow 0 3
+@イチイバル
+これにはイチイバルさんも
+苦笑い…
+
+# alpha 5603211 0 0.5
+# alpha 5402211 0 0.5
+# move 52000411 2 0
+# face 52000411 "usual"
+# alpha 52000411 1 0.5
+# mask 52000411 on
+# move 5301811 4 0
+# face 5301811 "angry"
+# alpha 5301811 1 0.5
+# mask 5301811 on
+# textboxarrow 0 3
+@フォルカス
+皆さん…！
+まさか、四人をたった一人で？
+
+;;# voice 5200041 "hlidskjalf_0022"
+# face 52000411 "surprise"
+# textboxarrow 0 1
+@フリズスキャールヴ
+…………おや？
+わらわに聞いておるのか？
+
+# face 52000411 "happy"
+# textboxarrow 0 1
+@フリズスキャールヴ
+そのように睨むでない
+わらわはフリズスキャールヴ
+世界を見下ろす高座
+
+# textboxarrow 0 1
+@フリズスキャールヴ
+そなた達の動き
+どこに綻びがあり、どこに隙がある
+のか、よく見えるだけじゃ
+
+# textboxarrow 0 1
+@フリズスキャールヴ
+あとは駒を動かして追い詰めるだけ
+何も不思議なことなどない
+
+# voice 530181 "forcas_c_0028"
+# textboxarrow 0 3
+@フォルカス
+イチイバル達の連携に隙なんて
+あるはずないんです…！
+やはり、何かがおかしい…
+
+;;# voice 5200041 "hlidskjalf_0027"
+# face 52000411 "usual"
+# textboxarrow 0 1
+@フリズスキャールヴ
+まったく…
+おかしいのはこの世界だというのに…
+
+;;//アルマスがやって来る
+# se "SE_5575"
+# alpha 52000411 0 0.5
+# alpha 5301811 0 0.5
+# move 5103811 3 0
+# face 5103811 "angry"
+# alpha 5103811 1 0.5
+# mask 5103811 off
+# textboxarrow 0 2
+@アルマス
+見つけたわよ、
+フリズスキャールヴ！
+
+;;# voice 5200041 "hlidskjalf_0008"
+# alpha 5103811 0 0.5
+# move 52000411 3 0
+# face 52000411 "usual"
+# alpha 52000411 1 0.5
+# mask 52000411 off
+# textboxarrow 0 2
+@フリズスキャールヴ
+やれやれ…
+
+# se "SE_5205"
+# alpha 52000411 0 0.5
+# move 5401911 2 0
+# face 5401911 "angry"
+# alpha 5401911 1 0.5
+# mask 5401911 on
+# move 5100231 4 0
+# face 5100231 "angry"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+# textboxarrow 0 3
+@レーヴァテイン
+今度こそ…斬る…！
+
+# se "SE_4300"
+# voice 540191 "failnaught_ca_unit_0009"
+# textboxarrow 0 1
+@フェイルノート
+逃れられると思って？
+
+;;//三人が攻撃を仕掛ける
+# se "SE_8137"
+# textwindow "close"
+# leftout 5401911 0.5
+# rightout 5100231 0.5
+# waitandnext 0.5
+
+;;# voice 5200041 "hlidskjalf_0028"
+# alpha 5401911 0 0.5
+# alpha 5100231 0 0.5
+# move 52000411 3 0
+# face 52000411 "usual"
+# alpha 52000411 1 0.5
+# mask 52000411 off
+# textboxarrow 0 2
+# textwindow "normal"
+@フリズスキャールヴ
+さて…わらわが出るまでもなかろう
+
+;;//暗転挟む
+# bgm "stop"
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# move 52000411 3 0
+# face 52000411 "surprise"
+# alpha 52000411 1 0
+# mask 52000411 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;# voice 5200041 "hlidskjalf_0022"
+# textwindow "normal"
+# textboxarrow 0 2
+@フリズスキャールヴ
+おや？
+
+# voice 510381 "almace_ca_0022"
+# alpha 52000411 0 0.5
+# move 5103811 3 0
+# face 5103811 "surprise"
+# alpha 5103811 1 0.5
+# mask 5103811 off
+# textboxarrow 0 2
+@アルマス
+えっ…？
+位置が入れ替わってる？
+
+# alpha 5103811 0 0.5
+# move 5401911 3 0
+# face 5401911 "angry"
+# alpha 5401911 1 0.5
+# mask 5401911 off
+# textboxarrow 0 2
+@フェイルノート
+これは…リサナウト、お前ね！
+
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+# alpha 5401911 0 0.5
+# move 5203011 3 0
+# face 5203011 "normal"
+# alpha 5203011 1 0.5
+# mask 5203011 off
+# textboxarrow 0 2
+@リサナウト
+ふぅ…みんな焦り過ぎよ
+仕切り直させてもらったわ
+
+# move 5203011 2 0.5
+# mask 5203011 on
+# move 5103811 4 0
+# face 5103811 "normal"
+# alpha 5103811 1 0.5
+# mask 5103811 on
+# textboxarrow 0 3
+@アルマス
+いつの間にかいなくなってたと
+思えば、急に現れて…
+今度は何なのっ？
+
+# face 5203011 "happy2"
+# textboxarrow 0 1
+@リサナウト
+カシウスを呼びに言ってたのよ
+彼女に会わせたくて
+
+# alpha 5203011 0 0.5
+# move 5303111 2 0
+# face 5303111 "normal"
+# alpha 5303111 1 0.5
+# mask 5303111 on
+# textboxarrow 0 1
+@カシウス
+“終焉”を望むキル姫…
+あなたと話がしたいの
+
+# face 5103811 "surprise"
+# textboxarrow 0 3
+@アルマス
+話って、そんな悠長なことしてて
+大丈夫なのっ？
+
+# voice 530311 "cassius_ca_0046"
+# face 5303111 "angry"
+# textboxarrow 0 1
+@カシウス
+アルマス、あなたのもたらした力は
+相互理解にとても有用…でも、今は
+光を失っている
+
+# textboxarrow 0 1
+@カシウス
+だから私達は、不完全でも対話に
+よって互いを知る努力をしなければ
+ならないの
+
+# textboxarrow 0 1
+@カシウス
+大事なことだから、もう一度言うね
+私達は対話によって――
+
+# face 5103811 "normal"
+# textboxarrow 0 3
+@アルマス
+分かった
+分かったから…
+
+# alpha 5303111 0 0.5
+# alpha 5103811 0 0.5
+# move 52000411 3 0
+# face 52000411 "happy"
+# alpha 52000411 1 0.5
+# mask 52000411 off
+# textboxarrow 0 2
+@フリズスキャールヴ
+対話か
+それは良い
+争いは嫌いじゃ
+
+# voice 530181 "forcas_c_0015"
+# alpha 52000411 0 0.5
+# move 5301811 3 0
+# face 5301811 "angry"
+# alpha 5301811 1 0.5
+# mask 5301811 off
+# textboxarrow 0 2
+@フォルカス
+くっ…
+よくそんなことが言えますね
+
+# voice 530311 "cassius_ca_0002"
+# alpha 5301811 0 0.5
+# move 5303111 3 0
+# face 5303111 "normal"
+# alpha 5303111 1 0.5
+# mask 5303111 off
+# textboxarrow 0 2
+@カシウス
+聞かせて、フリズスキャールヴ
+あなたはどうして“終焉”を望むの？
+
+# alpha 5303111 0 0.5
+# move 52000411 3 0
+# face 52000411 "usual"
+# alpha 52000411 1 0.5
+# mask 52000411 off
+# textboxarrow 0 2
+@フリズスキャールヴ
+またその問いか
+何度も同じ話をするのは
+煩わしいものじゃな
+
+# textboxarrow 0 2
+@フリズスキャールヴ
+あまねく世界にわらわの声を
+届けるとしよう
+少し場所を変えるぞ
+
+;;//フリズスキャールヴが移動する
+# se "SE_5626"
+# textwindow "close"
+# rightout 52000411 0.5
+# waitandnext 0.5
+
+# alpha 52000411 0 0
+# move 5103811 3 0
+# face 5103811 "angry"
+# alpha 5103811 1 0.5
+# mask 5103811 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+ちょっと！
+どこに行くのよっ
+
+# voice 530311 "cassius_ca_0033"
+# alpha 5103811 0 0.5
+# move 5303111 3 0
+# face 5303111 "angry"
+# alpha 5303111 1 0.5
+# mask 5303111 off
+# textboxarrow 0 2
+@カシウス
+ここは私に任せて
+
+;;//カシウスが移動する
+# se "SE_11906"
+# textwindow "close"
+# rightout 5303111 0.5
+# waitandnext 0.5
+
+# alpha 5303111 0 0.5
+# move 5203011 2 0
+# face 5203011 "normal"
+# alpha 5203011 1 0.5
+# mask 5203011 on
+# textboxarrow 0 1
+# move 5103811 4 0
+# face 5103811 "normal"
+# alpha 5103811 1 0.5
+# mask 5103811 on
+# textwindow "normal"
+@リサナウト
+フリズスキャールヴはカシウスに
+任せて、体勢を整え直すわよ
+
+# voice 520301 "risanautr_ca_0027"
+# textboxarrow 0 1
+@リサナウト
+せっかく新しい可能性が生まれたのに
+“終焉”側にもあんなキル姫が
+現れるなんて…
+
+# face 5103811 "sad"
+# textboxarrow 0 3
+@アルマス
+想定外のことなのね…
+
+# voice 520301 "risanautr_ca_0014"
+# face 5203011 "surprise"
+# textboxarrow 0 1
+@リサナウト
+な、何を言ってるの…！？
+これだって想定にゃい…
+とにかく、みんなと合流よーっ
+
+;;//リサナウトが姿を消す
+# se "SE_5373"
+# textwindow "close"
+# alpha 5203011 0 0.5
+# waitandnext 0.5
+
+# face 5103811 "angry"
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+あ！
+逃げたわね、あいつっ
+
+;;//背景：中心部（崩壊・昼）
+;;//１７章合わせで地震後の崩壊差分をご制作いただいております
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_city_collapse"
+# alpha 5103811 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# serif 1
+@住民１
+ううっ…誰か…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# move 3201311 3 0
+# face 3201311 "normal"
+# alpha 3201311 1 0.5
+# mask 3201311 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@レシェフ
+大丈夫だ
+じっとしてな
+こいつをどければ
+
+;;//レシェフが瓦礫をどけて住民を助け出す
+# se "SE_6128"
+# waitandnext 0.5
+
+# alpha 3201311 0 0.5
+# move 3502011 2 0
+# face 3502011 "normal"
+# alpha 3502011 1 0.5
+# mask 3502011 on
+# move 3600311 4 0
+# face 3600311 "angry"
+# alpha 3600311 1 0.5
+# mask 3600311 on
+# textboxarrow 0 3
+@テュルソス
+治療が必要な人はこっちに運んで！
+大変なことになっちゃったね…
+
+# voice 350201 "tasuramu_ge_0015"
+# face 3502011 "sad"
+# textboxarrow 0 1
+@タスラム
+ううっ…
+やっぱり、あたしが来たから
+みんな不幸になっちまったんだ…
+
+# face 3600311 "normal"
+# textboxarrow 0 3
+@テュルソス
+そんなことないよ
+ほら、次の要救助者はどこ？
+
+# face 3502011 "normal"
+# textboxarrow 0 1
+@タスラム
+あっちの建物に三人…
+向こうの瓦礫の下に二人いる
+
+# voice 360031 "tyurusosu_a_0004"
+# face 3600311 "happy"
+# textboxarrow 0 3
+@テュルソス
+さすがタスラム！
+いい目してるね
+
+# voice 350201 "tasuramu_ge_0019"
+# textboxarrow 0 1
+@タスラム
+あたしはサボってたいのに…
+
+# alpha 3502011 0 0.5
+# alpha 3600311 0 0.5
+# move 5503211 3 0
+# face 5503211 "sad"
+# alpha 5503211 1 0.5
+# mask 5503211 off
+# textboxarrow 0 2
+@ティファレト
+皆さん、無事でしたかっ
+ああ…怪我された方がこんなに…
+
+# serif 1
+@住民達
+くそっ…
+どうしてこんなことに…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+@ティファレト
+それは…
+
+;;フリズスキャールヴ（声だけ）
+# bgm "stop"
+# serif 1
+@フリズスキャールヴ
+この世界があまりに歪みすぎて
+おるからじゃ
+
+# voice 550321 "tiphereth_ca_0022"
+# face 5503211 "surprise"
+# textboxarrow 0 2
+@ティファレト
+この声は…？

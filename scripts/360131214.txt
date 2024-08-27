@@ -1,0 +1,308 @@
+;;-----------------------------------------
+;;シストルム3-3　　　　　　　　　　　　　　　　　　　
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;シストルム
+# body 3601311
+# pos 3601311 3
+# scale 3601311 0.8 0
+# layer 3601311 3
+# mask 3601311 off
+# alpha 3601311 1 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;一枚絵
+# imageset 1 "c3601311"
+# imagelayer 1 3
+# imagealpha 1 0 0
+;;-----------------------------------------
+# voice 360131 "sistrum_ge_0022"
+# face 3601311 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+うにゃぁ、掃除当番？
+なんでボクが…
+え？この前はサボったから？
+
+# face 3601311 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+ボクは悪いヤツから
+子供たちを守っていたんだ
+サボっていたわけじゃない
+
+# textflame 0 0
+@
+彼女はマスターの指示をよそに
+木のベンチに寝転がって
+背中を向けている
+
+# textflame 0 0
+@
+なにやら手に持ったものを
+眺めているようだった
+
+# textflame 0 0
+@
+何を見ているの？
+と、マスターは彼女に歩み寄る
+
+# face 3601311 "surprise"
+# voice 360131 "sistrum_ge_0023"
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+にゃッ！？
+きゅ、急に近づくにゃッ！
+
+# face 3601311 "shy"
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+こ、これは別にその…
+
+# textflame 0 0
+@
+もごもごと言い淀むシストルム
+ベンチには色とりどりの手紙が
+無造作にちらかっていた
+
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+あ、そっちは子供たちと
+町の人たちからのお手紙だにゃ
+
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+あれから、ことあるごとに
+手紙を貰うんだ
+
+# face 3601311 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+ほら、これなんて見てよ
+あの子たちが自分で書いたんだよ
+
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+文字なんて書けなかったのに
+町の人たちから習ったんだって
+
+# face 3601311 "smile"
+# voice 360131 "sistrum_ge_0006"
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+自分の言葉を文字にして
+ありがとうが言えるなんて
+子供の成長は早いにゃぁ
+
+;;この台詞は照れの表情でお願いします（あれば）
+# face 3601311 "shy"
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+……
+
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+…えーと、その、
+なんていうか、まぁ
+
+# voice 360131 "sistrum_ge_0030"
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+…ありがと
+
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+キミはすごいにゃ
+子供たちと打ち解けるだけでも
+ボクには時間がかかったのに
+
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+子供たちだけじゃなく
+ボクが敵だと思っていた
+町の人とも仲良くなってさ
+
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+最終的には、子供たちと町の人が
+一緒に暮らせるようになるなんてね…
+あれは本当にびっくりしたにゃ
+
+# textflame 0 0
+@
+珍しく素直に褒めるシストルム
+そんな彼女に対し、マスターは…
+
+# select "まぁ当然かな、と胸を張る" "select_label_01" "シストルムのおかげ、と褒め返す" "select_label_02" "洗脳の魔法を使った、と嘘をつく" "select_label_03"
+珍しく素直に褒めるシストルム
+そんな彼女に対し、マスターは…
+
+;;Ａ
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 3601311 "normal"
+# voice 360131 "sistrum_ge_0004"
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+ふふ、少し腹立つけども
+そういう素直なところだにゃ
+
+;;Ｂ
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+もー、キミのことを褒めてるのに！
+でも、そういうところだにゃ
+
+;;Ｃ
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 3601311 "surprise"
+# voice 360131 "sistrum_ge_0023"
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+にゃにッ！？
+って、そんな嘘に騙されないにゃ
+
+;;答えたあと
+# label "select_label_end"
+# face 3601311 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+わかっているよ
+キミの優しさが
+みんなの心を繋げたんだにゃ
+
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+この手紙はその形
+君の優しさで紡がれた
+あたたかいお手紙なんだにゃ
+
+# textflame 0 0
+@
+嬉しそうだね
+と、マスターが告げる
+
+# voice 360131 "sistrum_ge_0032"
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+…うん
+嬉しかったから…
+ボクも書いてみたんだにゃ
+
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+…キミ宛に
+
+# textflame 0 0
+@
+彼女から手紙が差し出される
+マスターはその手紙を受け取って
+さっそく、封を切った
+
+# textflame 0 0
+@
+『親愛なるキミへ
+キミの頼みなら、ボクでよければ
+力になってあげるからね…』
+
+# face 3601311 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+って、なな、なんで
+本人の目の前で読むのにゃ！？
+後でこっそり読むにゃ！
+
+# textflame 0 0
+@
+頼りにしてるから頼ってね
+と、マスターが伝える
+
+# face 3601311 "shy"
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+…むー、わかってるにゃ
+キミを見習って
+ボクも少しは頼ることにするにゃ
+
+# se "SE_0602"
+# textflame 0 0
+@
+こうして手紙と一緒に
+獣血『凶猛宿す母性』
+が彼女に紡がれるのだった
+
+# face 3601311 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+あと、今度一緒に手紙を読もうよ
+子供たちと町の人たちの手紙を
+…どうかな？
+
+;;演出:できればここでファイル名「sistrum_ge_0001」のボイス再生をお願いします
+# face 3601311 "smile"
+# voice 360131 "sistrum_ge_0001"
+# textflame 1 1
+# textboxarrow 0 2
+@シストルム
+マスター
+
+# textflame 0 0
+@
+その問いかけに対してマスターは
+笑顔で、もちろん！
+と、頷いてみせるのだった
+
+;;⇒一枚絵ボイス
+;;★6：イラストは同じ。
+;;他の姫も、部隊の人たちも、町の人たちも
+;;みんなキミに優しい。
+;;それはキミが怪しい魔法を使ったせいだと思ってたけど
+;;そうじゃなかったんだね。
+;;キミが優しいから、みんなも優しかったんだね
+# textflame 0 0
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# fadein "white" 3
+# buttonsout 0 0
+# textwindow "close"
+# voice 360131 "sistrum_ge_kyara_0026"
+
+# frameout 0 1
+
+# waitandnext 0.8
+
+# fadeout "black" 1.5
+# waitandnext 1.5

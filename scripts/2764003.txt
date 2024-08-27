@@ -1,0 +1,274 @@
+;;-----------------------------------------
+;;【このすばEP2･戦闘前】
+;;スクリプトID:2764003
+;;スクリプト最後の背景：sea_beach_day
+;;背景：ビーチ
+;;-----------------------------------------
+# script "lisp"
+# bgmfile "bgm208" "BgmKScollabo001" 0
+# background "sea_beach_day"
+;;海上編ティルフィング
+# body 2101411
+# pos 2101411 4
+# scale 2101411 0.8 0
+# alpha 2101411 0 0
+;;デュリン
+# body 0
+# pos 0 4
+# scale 0 0.8 0
+# alpha 0 0 0
+# layer 0 3
+# mask 0 off
+;;水着シタ
+# body 2201611
+# pos 2201611 3
+# scale 2201611 0.8 0
+# alpha 2201611 0 0
+;;水着めぐみん
+# body 2502511
+# pos 2502511 3
+# scale 2502511 0.8 0
+# alpha 2502511 0 0
+# mask 2502511 off
+;;水着ダクネス
+# body 2103411
+# pos 2103411 5
+# scale 2103411 0.8 0
+# alpha 2103411 0 0
+# layer 2103411 4
+# face 2103411 "shy"
+;;◆背景：ビーチ（昼）---------------------
+# textflame 0 0
+# textboxarrow 0 2
+@
+討伐対象の異族の姿を探して
+さらにビーチを歩き回るマスター達
+すると…
+
+# emotionbody 1001 2 2201611 0 260
+# effectpattern 1001 1 0
+# effectstart 1001
+# alpha 2201611 1 0.5
+# textflame 1 1
+# voice 2016 "shita_0002"
+@シタ
+あ、マスター！
+アスクレピオスを
+見かけませんでしたか？
+
+# textflame 0 0
+@
+「ああ、彼女ならここに…
+あれ？いない…おかしいな？」
+マスター、見回してみるが…
+
+# textflame 1 1
+# voice 2016 "shita_0003"
+@シタ
+ふむ…いないですか
+どうやら、わたしと入れ違いに
+なってしまったようですね
+
+# emotionbody 1002 1 2103411 0 250
+# effectpattern 1002 2 0
+# effectstart 1002
+# move 2201611 2 0.8
+# alpha 2103411 1 0.5
+# move 2103411 4 0.8
+# textboxarrow 0 3
+# voice 1034 "dakunesu_0005"
+@ダクネス
+い、いつの間に！？
+これが噂の放置プレイというものか
+案外悪くない…ハァハァ
+
+# emotionbody 1003 2 2201611 0 260
+# effectpattern 1003 1 0
+# effectstart 1003
+# face 2201611 "sad"
+# textboxarrow 0 1
+# voice 2016 "shita_0023"
+@シタ
+…なにかあったんです？
+傷だらけで
+ハァハァしてるこのかたは？
+
+# alpha 2103411 0 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 3
+@デュリン
+こまかい説明は省くわ
+ところでシタは、なにしにきたの？
+
+# face 2201611 "normal"
+# textboxarrow 0 1
+@シタ
+異族がどこかで暴れていないか
+島の巡回警備です
+アスクレピオスも、同じお仕事ですよ
+
+# emotionbody 1004 2 2101411 0 260
+# effectpattern 1004 1 0
+# effectstart 1004
+# alpha 0 0 0.5
+# alpha 2101411 1 0.5
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0002"
+@ティルフィング
+巡回警備…
+何人かで分担して、島を回っている？
+
+# textboxarrow 0 1
+@シタ
+そんなところですね
+皆さんは討伐クエスト中ですか？
+くれぐれも、用心してくださいよ
+
+# textflame 0 0
+@
+「用心って？」
+マスターが問う
+
+# textflame 1 1
+@シタ
+近頃の異族は神出鬼没なんです
+急に興奮した状態で、一度に
+たくさん現れて襲ってきますから
+
+# alpha 2101411 0 0.5
+# alpha 2201611 0 0.5
+# alpha 2502511 1 0.5
+# face 2502511 "worry"
+# textboxarrow 0 2
+@めぐみん
+あー
+そういえば、そんな感じの話
+さっきも聞きましたね
+
+;;異族出てきて
+# bgm "bgm029_030" 0
+# se "SE_0618"
+# serif 0
+# textwindow "close"
+# brightness 2502511 0.5 0.2
+# serif 1
+@異族
+グギャーッ！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# emotionbody 1005 1 2502511 0 260
+# effectpattern 1005 2 0
+# effectstart 1005
+# brightness 2502511 1 0.2
+# face 2502511 "angry"
+# textboxarrow 0 2
+@めぐみん
+むっ！
+噂をすればなんとやらです！
+
+# alpha 2502511 0 0.5
+# alpha 2101411 1 0.5
+# move 2103411 2 0
+# alpha 2103411 1 0.5
+# face 2101411 "angry"
+# textboxarrow 0 3
+@ティルフィング
+また、異族が突然…
+相当な数です！
+さっきよりも多いかも？
+
+# textboxarrow 0 1
+# voice 1034 "dakunesu_0022"
+@ダクネス
+くっ…遠い！
+敵の集団に今すぐ突っ込みたいのに
+傷が治りかけの私には遠すぎる！
+
+# emotionbody 1006 3 2502511 0 260
+# effectpattern 1006 1 0
+# effectstart 1006
+# alpha 2101411 0 0.5
+# alpha 2103411 0 0.5
+# alpha 2502511 1 0.5
+# face 2502511 "happy"
+# textboxarrow 0 2
+# voice 5025 "megumin_0008"
+@めぐみん
+はっはっは！
+このときを待っていたのです！
+
+# alpha 2502511 0 0.5
+# move 2201611 3 0
+# alpha 2201611 1 0.5
+# mask 2201611 off
+# face 2201611 "sad"
+@シタ
+えっ？
+
+# alpha 2201611 0 0.5
+# alpha 2502511 1 0.5
+# face 2502511 "irregular"
+@めぐみん
+我が名はめぐみん！
+紅魔族随一の魔法の使い手にして
+爆裂魔法を操りし者！
+
+# voice 5025 "megumin_0004"
+@めぐみん
+今こそお見せしましょう
+我が力を！
+行きますよ…
+
+# se "SE_9169"
+# face 2502511 "angry"
+@めぐみん
+黒より黒く闇より暗き漆黒に――
+
+# alpha 2502511 0 0.5
+# alpha 2101411 1 0.5
+# face 2101411 "sad"
+# alpha 2103411 1 0.5
+# textboxarrow 0 3
+@ティルフィング
+あの…
+めぐみんさんが
+詠唱を始めましたが
+
+# serif 0
+# se "SE_0669"
+# textwindow "close"
+# brightness 2101411 0.5 0.2
+# brightness 2103411 0.5 0.2
+# serif 1
+@異族
+グギギギギ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# brightness 2101411 1 0.2
+# brightness 2103411 1 0.2
+# textboxarrow 0 1
+@ダクネス
+ああ、その魔法
+威力は保証するが
+発動までちょっと時間がかかる
+
+# alpha 2101411 0 0.5
+# alpha 2103411 0 0.5
+# move 2201611 2 0
+# alpha 2201611 1 0.5
+# mask 2201611 off
+# move 2201611 3 0
+# face 2201611 "normal"
+# textboxarrow 0 2
+# voice 2016 "shita_0027"
+@シタ
+では、わたし達で
+時間稼ぎをしましょう

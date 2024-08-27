@@ -1,0 +1,217 @@
+;;-----------------------------------------
+;;ファンキル お正月イベント2019
+;;タイトル：振袖に降る雪
+;;【EP3_3戦闘前】反撃の砂嵐
+;;背景：野外（可能であればハルモニア）
+;;-----------------------------------------
+# script "lisp"
+# background "300_devil_daytime02"
+# bgmfile "bgm177" "BgmGakuen001" 0
+;;-----------------------------------------
+;;アバリス透明
+# body 3401011
+# alpha 3401011 0 0
+;;振袖アバリス
+# body 3401021
+# pos 3401021 3
+# scale 3401021 0.8 0
+# alpha 3401021 1 0
+# layer 3401021 15
+# mask 3401021 off
+;;enemy
+# body 3820001
+# pos 3820001 2
+# scale 3820001 0.8 0
+# layer 3820001 15
+# alpha 3820001 0 0
+# entry 12345 3820001
+# pos 12345 4
+# scale 12345 0.8 0
+# layer 12345 15
+# alpha 12345 0 0
+;;-----------------------------------------
+# envbody 9999 2 0
+# effectpattern 9999 1 0
+# effectstart 9999
+# face 3401021 "angry"
+# voice 340101 "abaris_a_0027"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+…次から次へと、しつこいですね
+
+# textflame 0 0
+@
+領主の追っ手は続々とやってくる
+アバリスは一気に片付ける方法を
+思いつき、マスターに言った
+
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+マスター、私の後ろに！
+熱風と砂嵐で足止めします！
+
+;;//演出：アバリスの風の能力
+# se "SE_9051"
+# fadein "green" 0.3
+# shake 1 1
+# waitandnext 1
+
+# alpha 3401021 0 0.5
+# alpha 3820001 1 0.5
+# alpha 12345 1 0.5
+# textboxarrow 0 1
+@ケイオスリオン兵
+うわぁあ！
+目が…！
+砂で…前が見えないぞ！
+
+# textboxarrow 0 3
+@ケイオスリオン兵
+俺は体が熱い…
+なんだか熱がでてきたような…
+
+# alpha 3401021 1 0.5
+# alpha 3820001 0 0.5
+# alpha 12345 0 0.5
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+マスター、いまです！
+早く行きましょう！
+
+# se "SE_5575"
+# textflame 0 0
+@
+アバリスの能力で、二人は無事に
+追っ手から逃げ出す
+
+# bgm "bgm005" 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@少年
+おーい！
+ちょっと待ってよー
+
+# se "SE_5575"
+# waitandnext 0.5
+
+# emotionbody 1000 1 3401021 10 300
+# effectpattern 1000 1 0
+# effectstart 1000
+# face 3401021 "surprise"
+# voice 340101 "abaris_a_0022"
+# chara 3401021
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+あの子はさっきの集落にいた…
+なにかあったんでしょうか？
+
+# serif 1
+# textflame 1 1
+@少年
+ふう、よかった
+追いつけた
+
+# serif 1
+# textflame 1 1
+@少年
+はい、これ
+手伝ってくれたお礼
+
+# effectskip 1000
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+@
+そう言って、
+少年が渡してくたのは
+ご馳走を詰めた箱だった
+
+# face 3401021 "normal"
+# voice 340101 "abaris_a_0004"
+# chara 3401021
+# serif 0
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+わざわざ、これを届けるために
+追いかけてくれたのですか？
+…ありがとうございます！
+
+# face 3401021 "smile"
+# voice 340101 "abaris_a_0021"
+# chara 3401021
+# serif 0
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+ほら、マスター見てください、
+とてもおいしそうですよ！
+
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@少年
+ふふっ、喜んでもらえてよかった
+それじゃ、姉ちゃんたち
+また遊びにきてくれよな！
+
+# se "SE_5575"
+# waitandnext 1
+
+# voice 340101 "abaris_a_0020"
+# chara 3401021
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+ふふっ、元気ですね
+
+# face 3401021 "normal"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+…また会いたいと思ってもらえるほど
+私にも存在感が
+出てきたんでしょうか？
+
+# textflame 0 0
+@
+目立っているという意味では、
+かなり存在感はあったと思うよ
+と、マスターは返す
+
+# emotionbody 1001 9 3401021 -120 240
+# effectpattern 1001 4 0
+# effectstart 1001
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0022"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+そ…そうですか？
+
+# voice 340101 "abaris_a_0042"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+ええと…次の追っ手がくる前に
+ケイオスリオンを出ましょう
+次は、あの国ですね…

@@ -1,0 +1,404 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第８章 章タイトル：「ビギニング・オブ・ジ・エンド」
+;;第1話－１１　タイトル：幾つかの答え
+;;1_11_0
+;;スクリプト最後の背景：研究所
+;;-----------------------------------------
+# script "lisp"
+# background "in_ragnarok_institution"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 2
+# alpha 0 0 0
+# mask 0 off
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;ヴァリン
+# body 18
+# pos 18 3
+# scale 18 0.8 0
+# layer 18 2
+# alpha 18 0 0
+# mask 18 off
+;;-----------------------------------------
+;;背景を白にする。
+# imageset 2 "bg_white"
+# imagelayer 2 3
+# imagealpha 2 0 0
+;;-----------------------------------------
+;;第1話－１１　タイトル：幾つかの答え
+;;//背景：研究所
+;;//インテグラルノア編ラグナロク機関
+;;アルマス（独白）
+# move 196 3 0
+# face 196 "normal"
+# alpha 196 1 0
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 196 off
+@アルマス
+さっきの部屋より整然としてる…
+というより物が少ないのね
+
+;;アルマス（独白）
+# textboxarrow 0 0
+@アルマス
+これは…培養槽かな
+中身は空っぽだけど…
+
+;;アルマス（独白）
+# textboxarrow 0 0
+@アルマス
+プレートに何か書いてある
+ええと…生体番号――――
+
+# face 196 "sad"
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+このプレート、汚れてて
+ほとんど読めないじゃないっ
+拭けば落ちるかしら？
+
+# face 196 "angry"
+# textboxarrow 0 2
+@アルマス
+このっ
+このっ
+
+;;//アルマスがプレートを拭く
+# se "SE_0935"
+# waitandnext 0.5
+
+# voice 9943 "almace_navikan_0035"
+# face 196 "surprise"
+# textboxarrow 0 2
+@アルマス
+こんな感じ？
+ええと…「キラーズ：アルマス」…
+アルマス！？
+
+# face 196 "normal"
+# textboxarrow 0 2
+@アルマス
+アルマスって…私のこと…よね？
+それじゃ…ここが…！
+
+;;//ヴァリンの立ち絵を一瞬、出す（白背景の演出で）
+# se "SE_0742"
+# textwindow "close"
+# alpha 196 0 0.5
+# move 18 3 0
+# face 18 "normal"
+# alpha 18 1 0.5
+# mask 18 off
+# layer 18 20
+# imagepos 2 0 0
+# imagealpha 2 1 0.5
+# waitandnext 0.5
+
+# waitandnext 1
+
+;;白背景の終わり
+# alpha 18 0 0.5
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# imagealpha 2 0 0.5
+# waitandnext 0.5
+
+# layer 18 2
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+あっ…！？
+
+;;アルマス（独白）
+# move 196 3 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 0
+# textwindow "moya"
+@アルマス
+今の…前に天上世界で見た夢の…
+あの人は誰…？
+
+# face 196 "sad"
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+私はっ…！
+
+# voice 9943 "almace_navikan_0026"
+# textboxarrow 0 2
+@アルマス
+もう少しで思い出せそうなのに…
+何かが邪魔して…
+ううっ…！
+
+;;//アルマスがよろける
+;;//物にぶつかる音
+;;//電子音
+# se "SE_5200"
+# sedelay "SE_0878" 0.6
+# waitandnext 0.6
+
+# shake 0 0.5
+# waitandnext 0.5
+
+# se "SE_0861"
+# waitandnext 0.5
+
+# face 196 "normal"
+# textboxarrow 0 2
+@アルマス
+何か押しちゃったみたい…
+この設備、まだ稼働してるの？
+
+# se "SE_0860"
+# serif 1
+@合成音声
+声紋認証クリア
+サポート用ＡＩ「デュリン」を
+起動します
+
+# sestop "SE_0861"
+# waitandnext 0.2
+
+;;//デュリンのホログラム立ち絵を出す
+# bgm "stop"
+# se "SE_0889"
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 9999 "durin_0043"
+# move 0 2 0
+# face 0 "usual"
+# alpha 0 0.8 0.5
+# mask 0 on
+# textboxarrow 0 1
+# move 196 4 0.5
+# mask 196 on
+@デュリン
+久し振りね、アルマス！
+元気してたっ？
+
+# voice 9943 "almace_navikan_0036"
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+わっ？
+あなた、誰？
+
+# bgm "bgm104" 0
+# voice 9999 "durin_0002"
+# face 0 "normal"
+# textboxarrow 0 1
+@デュリン
+ちょっと！
+アンタまさか、アタシのこと
+忘れたんじゃないでしょうね！？
+
+# voice 9943 "almace_navikan_0046"
+# face 196 "sad"
+# textboxarrow 0 3
+@アルマス
+ご、ごめんなさい…
+記憶をなくしてるみたいなのよ…
+
+# voice 9999 "durin_0010"
+# face 0 "occur"
+# textboxarrow 0 1
+@デュリン
+はぁっ？
+何やってんのよ、もーっ…
+
+# face 0 "usual2"
+# textboxarrow 0 1
+@デュリン
+じゃあ、ここで過ごしてた頃の
+ことも覚えてないのね？
+
+# voice 9943 "almace_navikan_0035"
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+ここで！？
+私…ここで生活していたの？
+
+# face 0 "sad"
+# textboxarrow 0 1
+@デュリン
+そうよ！
+細かいことは記録とか残ってるん
+じゃ…あー、ダメだわ
+
+# textboxarrow 0 1
+@デュリン
+ヴァリン博士の承認がないと
+開けないみたい
+
+# voice 9943 "almace_navikan_0023"
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+私の記録なんでしょっ？
+本人なんだからいいじゃない！
+
+# face 0 "normal"
+# textboxarrow 0 1
+@デュリン
+アンタに関する記録は極秘扱いなのよ
+アタシの一存じゃ閲覧できないように
+なってるわ
+
+# textboxarrow 0 3
+@アルマス
+何なのよ、それっ！
+余計、気になる…！
+
+# textboxarrow 0 3
+@アルマス
+私だけでも見られるものは
+ないのっ？
+
+# face 0 "usual"
+# textboxarrow 0 1
+@デュリン
+そうねー…あ、あった！
+優先順位を高く設定してあるもの
+から順に出すわねっ
+
+# voice 9943 "almace_navikan_0052"
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+お願い！
+…私、やっぱりここにいたんだ
+きっと、あの培養槽で――
+
+# voice 9999 "durin_0002"
+# face 0 "normal"
+# textboxarrow 0 1
+@デュリン
+ちょっと！
+最優先指定のデータがあるわよっ
+
+# textboxarrow 0 1
+@デュリン
+これ、ヴァリン博士がアンタに
+宛てたものねっ
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+見せて！
+
+# textboxarrow 0 1
+@デュリン
+ちょっと待ちなさい
+今、開くから！
+
+;;//デュリンの立ち絵消える
+;;//ヴァリンの立ち絵（ホログラムのように加工は可能？）
+# se "SE_0889"
+# textwindow "close"
+# alpha 0 0 0.5
+# waitandnext 0.5
+
+# move 18 2 0
+# face 18 "normal"
+# alpha 18 0.8 1
+# mask 18 on
+# waitandnext 1
+
+# textboxarrow 0 1
+# textwindow "normal"
+@ヴァリン
+ん？
+ちゃんと映ってるかしら？
+アルマス、見てる？
+
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+この人が…ヴァリン博士…！
+さっきのデュリンと似てるような…
+
+# face 18 "normal_1"
+# textboxarrow 0 1
+@ヴァリン
+あんたがこれを見てるってことは、
+計画は上手くいっていないと考える
+べきよね
+
+# textboxarrow 0 1
+@ヴァリン
+もし上手くいってるのなら、
+あんたはこんなの見るまでもなく
+計画を進めてくれてるはずだから
+
+# face 18 "normal"
+# textboxarrow 0 1
+@ヴァリン
+この記録を残すことにしたのも
+万が一のためだし、知ってることも
+あるかもだけど、少し耳を貸しなさい
+
+# textboxarrow 0 1
+@ヴァリン
+私はあんたに、全てを託したの
+
+# voice 9943 "almace_navikan_0035"
+# textboxarrow 0 3
+@アルマス
+ええっ！？
+どういうことよ…
+
+# textboxarrow 0 1
+@ヴァリン
+目を丸くしてるのが容易に想像
+できるわ
+あんたは小さいときから…
+
+# face 18 "smile_2"
+# textboxarrow 0 1
+@ヴァリン
+…って、そんなことはいいのよ！
+重要なのはねっ
+あ、このチョコ美味しい♪
+
+# face 18 "normal"
+# textboxarrow 0 1
+@ヴァリン
+誰に似たんだか、あんたもチョコが
+好きだったわね…
+っとと、また脱線するとこだった
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+…この人、大丈夫なの？
+
+# textboxarrow 0 1
+@ヴァリン
+心配しなくても、ちゃんと説明するわ
+アルマス、あんたはね…
+
+# textboxarrow 0 1
+@ヴァリン
+「インテグラルノア」計画を遂行
+するために、天上世界に上がったのよ

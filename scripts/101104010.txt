@@ -1,0 +1,354 @@
+;;-----------------------------------------
+;;4-1-10　タイトル：神への叛逆
+;;背景：深奥
+;;-----------------------------------------
+# script "lisp"
+# background "profound"
+# bgm "stop"
+;;-----------------------------------------
+;;アルマス
+# body 172
+# pos 172 2
+# scale 172 0.8 0
+# alpha 172 0 0
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# alpha 139 0 0
+;;アフロディーテ
+# body 3401311
+# pos 3401311 4
+# scale 3401311 0.8 0
+# alpha 3401311 0 0
+;;-----------------------------------------
+# textwindow "nomal"
+# textflame 0 0
+@
+少し前――
+
+# bgmfile "bgm320" "BgmLostRagnarokBattle006" 0
+# alpha 172 1 0.5
+# alpha 3401311 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 172 "normal"
+# voice 1038 "almace_0027"
+@アルマス
+急いでるから通してって
+言っても無理よね？
+
+# textboxarrow 0 3
+# face 3401311 "normal"
+# voice 340131 "aphrodite_a_0004"
+@アフロディーテ
+その真摯な眼差し
+高まりますわ♪
+
+# textboxarrow 0 1
+# face 172 "angry"
+# voice 1038 "almace_0007"
+@アルマス
+行くわよ、ティニ！
+マスター！
+
+# move 3401311 5 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# voice 340131 "aphrodite_a_0032"
+@アフロディーテ
+ここを通りたいのなら
+どうぞ
+
+# textboxarrow 0 1
+# face 172 "surprise"
+# voice 1038 "almace_0022"
+@アルマス
+えっ…！？
+どういうつもりっ
+
+# textboxarrow 0 3
+# face 3401311 "sad"
+@アフロディーテ
+あのモニュメントに
+近づこうとしても無駄ですわ
+強力な結界に守られていますの
+
+@アフロディーテ
+先程からパラシュ達が総出で
+破壊を試みていましたけれど…
+彼女達の愛がまるで届きませんわ
+
+# face 3401311 "normal"
+@アフロディーテ
+ですから、あなた一人程度の愛が
+届くなどとは想像できません
+
+# textboxarrow 0 1
+# face 172 "normal"
+@アルマス
+そういうこと…！
+でも、ここまで来て
+引き下がるつもりはない
+
+# face 172 "angry"
+@アルマス
+絶対に道を切り拓いてみせる！
+
+# textboxarrow 0 3
+# face 3401311 "happy"
+# voice 340131 "aphrodite_a_0005"
+@アフロディーテ
+うふふ…その迷いのない瞳
+狂おしいほどの愛で
+包んであげたくなります
+
+# mask 172 off
+# move 172 3 0.5
+# alpha 3401311 0 0.5
+# textboxarrow 0 2
+@アルマス
+結界が何だっていうのよ！
+せいっ！
+
+# textboxarrow 0 0
+# se "SE_4000"
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# waitandnext 0.4
+
+;;アルマスが結界に弾かれる
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 0.5
+# move 172 2 0.2
+# waitandnext 1
+
+# move 172 3 0.5
+# textboxarrow 0 2
+# voice 1038 "almace_battle_0005"
+@アルマス
+くうっ…
+まだまだ！
+
+# alpha 172 0 0.5
+# alpha 139 1 0.5
+# face 139 "surprise"
+# voice 9967 "titania_0030"
+@ティターニア
+えっ…？
+今の感覚…気のせいでしょうか…
+
+# alpha 139 0 0.5
+# mask 3401311 off
+# move 3401311 3 0
+# alpha 3401311 1 0.5
+# face 3401311 "surprise"
+# voice 340131 "aphrodite_a_0022"
+@アフロディーテ
+あら…
+パラシュの攻撃はすり抜けていたと
+いうのに…
+
+# alpha 3401311 0 0.5
+# alpha 172 1 0.5
+# voice 1038 "almace_0029"
+@アルマス
+せええええええい！
+
+# textboxarrow 0 0
+# se "SE_4000"
+# effectbody 1001 1 0 0 0
+# effectstart 1001
+# waitandnext 0.4
+
+# se "SE_4000"
+# effectbody 1002 2 0 0 0
+# effectstart 1002
+# waitandnext 0.4
+
+;;結界にヒビが入る
+# se "SE_3006"
+# sedelay "SE_9484" 0.6
+# fadein "white" 1
+# shake 0 1
+# waitandnext 1.5
+
+# alpha 172 0 0.5
+# alpha 3401311 1 0.5
+# textboxarrow 0 2
+# voice 340131 "aphrodite_a_0023"
+@アフロディーテ
+なんと…！
+僅かですけれど、結界にヒビが…
+まさか本当に…
+
+# alpha 3401311 0 0.5
+# alpha 172 1 0.5
+# voice 1038 "almace_0038"
+@アルマス
+こんな結界…
+砕け散れえええええ！
+
+# textboxarrow 0 0
+# se "SE_4001"
+# effectbody 1003 1 0 0 0
+# effectstart 1003
+# waitandnext 0.4
+
+;;ヒビが大きくなる
+# move 139 4 0
+# mask 139 on
+# se "SE_3006"
+# sedelay "SE_9896" 0.5
+# fadein "white" 1
+# shake 1 0.5
+# waitandnext 1
+
+# alpha 3401311 0 0.5
+# alpha 139 1 0.5
+# move 172 2 0.5
+# mask 172 on
+# textboxarrow 0 3
+@ティターニア
+やっぱり微かに…
+アルマス、効いていますよっ
+もう一押しです
+
+# textboxarrow 0 1
+# voice 1038 "almace_battle_0006"
+@アルマス
+ハァ…ハァ…
+絶・固いわねっ
+このぉっ！
+
+# textboxarrow 0 0
+# alpha 139 0 0.5
+# waitandnext 0.5
+
+# se "SE_4000"
+# effectbody 1004 2 0 0 0
+# effectstart 1004
+# mask 172 off
+# move 172 3 0.2
+# waitandnext 0.4
+
+;;アルマスが結界に弾かれる
+# se "SE_3006"
+# shake 0 0.8
+# fadein "white" 0.5
+# move 172 2 0.2
+# waitandnext 0.8
+
+# alpha 172 0 0.5
+# alpha 3401311 1 0.5
+# textboxarrow 0 2
+# face 3401311 "angry"
+# voice 340131 "aphrodite_a_0007"
+@アフロディーテ
+まあ…
+良い感じでしたのに、
+ここまでですの？
+
+# alpha 3401311 0 0.5
+# alpha 139 1 0.5
+# mask 172 on
+# alpha 172 1 0.5
+# textboxarrow 0 3
+# voice 9967 "titania_0064"
+@ティターニア
+アルマスっ…
+踏ん張って下さい…！
+きっとアナタなら破れます！
+
+# alpha 139 0 0.5
+# move 172 3 0.5
+# mask 172 off
+# textboxarrow 0 2
+# voice 1038 "almace_0029"
+@アルマス
+ありがと、ティニ…！
+やああああああああ！！
+
+# textboxarrow 0 0
+# se "SE_4000"
+# effectbody 1005 1 0 0 0
+# effectstart 1005
+# waitandnext 0.4
+
+# se "SE_4000"
+# effectbody 1006 2 0 0 0
+# effectstart 1006
+# waitandnext 0.4
+
+;;アルマスが結界に弾かれる
+# se "SE_3006"
+# shake 1 0.5
+# fadein "white" 0.5
+# move 172 2 0.3
+# waitandnext 1
+
+# move 172 3 0.5
+# textboxarrow 0 2
+# face 172 "angry"
+# voice 1038 "almace_battle_0007"
+@アルマス
+くぅっ…
+何で…これ以上、届かないのよっ…
+
+;;選択肢
+# select "集中するんだ" "select_label_01" "結界のことを忘れろ" "select_label_02" "いつも通りで良いよ" "select_label_03"
+@アルマス
+くぅっ…
+何で…これ以上、届かないのよっ…
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textboxarrow 0 2
+# face 172 "normal"
+# voice 1038 "almace_0003"
+@アルマス
+そうね
+もう一度、集中する
+この一撃に全てを込めるわ
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textboxarrow 0 2
+# face 172 "surprise"
+# voice 1038 "almace_0022"
+@アルマス
+結界を忘れる？
+そっか…こんなもの私達の前では
+ないに等しいわよね！
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# textboxarrow 0 2
+# face 172 "shy"
+# voice 1038 "almace_0022"
+@アルマス
+こんなときに何よっ
+…でも、うん
+ちょっと力入りすぎてたのかも
+
+# label "select_label_end"
+# bgmfile "bgm266" "BgmLostRagnarokBattle001" 0
+# face 172 "shy"
+# voice 1038 "almace_0042"
+@アルマス
+普段はあまり役に立たないくせに
+マスターって、どうして
+こういうときばっかり…もうっ
+
+# se "SE_10585"
+# face 172 "normal"
+@アルマス
+いくわよ、ティニ！
+これで切り拓く
+
+# se "SE_9039"
+# face 172 "angry"
+@アルマス
+絶突破ーっ！！

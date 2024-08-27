@@ -1,0 +1,279 @@
+;;-----------------------------------------
+;;第2話　タイトル：城内突入【2－4戦闘後】
+;;//背景：ラグナロク王国
+;;スクリプトID:100402043
+;;スクリプト最後の背景:mamon_room
+;;-----------------------------------------
+# script "lisp"
+# background "201_border"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;アルマス
+# body 3103811
+# pos 3103811 3
+# scale 3103811 0.8 0
+# alpha 3103811 0 0
+# mask 3103811 off
+;;ナディア
+# body 136
+# pos 136 5
+# scale 136 0.8 0
+# alpha 136 0 0
+# mask 136 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# alpha 139 0 0
+# layer 139 3
+;;ギル
+# body 137
+# pos 137 1
+# scale 137 0.8 0
+# alpha 137 0 0
+# mask 137 off
+# face 137 "usual"
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# alpha 3201911 0 0
+# mask 3201911 off
+# face 3201911 "angry"
+;;ケイオスリオン兵
+# body 3820001
+# pos 3820001 2
+# scale 3820001 0.8 0
+# alpha 3820001 1 0
+# entry 3820002 3820001
+;;ケイオスリオン2
+# body 3820002
+# pos 3820002 4
+# scale 3820002 0.8 0
+# alpha 3820002 1 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;◆背景：ラグナロク王国-------------------
+# textflame 1 1
+# textboxarrow 0 1
+# voice 382000 "demon_0004"
+@ケイオスリオン隊長
+行ったか…
+
+# textboxarrow 0 3
+@ケイオスリオン兵
+隊長！
+
+@ケイオスリオン兵
+シユウの行動は
+我が軍への重大な裏切りだ！
+ただちに陛下へ連絡を！
+
+# textboxarrow 0 1
+@ケイオスリオン隊長
+まあ、待て
+実は先だって
+陛下からご命令を受けていた
+
+@ケイオスリオン隊長
+ナディア姫達が来たら、
+あえて城に入れてやれというものだ
+
+# textboxarrow 0 3
+@ケイオスリオン兵
+何と！？
+皇帝陛下は何をお考えなのか…
+
+# voice 382000 "demon_0027"
+# textboxarrow 0 1
+@ケイオスリオン隊長
+俺にも分からん…
+シユウが手伝ったのは想定外だったが
+全ては皇帝陛下の掌の上だ
+
+@ケイオスリオン隊長
+連中が城から出ようとしたら
+全力で阻止せよと命じられている
+出てきたら皆殺しにするぞ
+
+# textboxarrow 0 3
+@ケイオスリオン兵
+それはいい
+睨み合いを続けるのには
+うんざりしていたんだ
+
+;;//背景：ラグナロク城内
+;;//ラグナロク城内
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "mamon_room"
+# alpha 3820001 0 0
+# alpha 3820002 0 0
+# alpha 139 1 0
+# alpha 137 1 0
+# alpha 136 1 0
+# waitandnext 0.1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# voice 9967 "titania_0004"
+# textboxarrow 0 2
+@ティターニア
+城に入りました！
+皆さん、ご無事ですかっ？
+
+# voice 9969 "gill_0003"
+# textboxarrow 0 1
+@ギル
+俺は大丈夫だぜ！
+ナディア様はっ？
+
+# voice 9968 "nadia_0003"
+# textboxarrow 0 3
+@ナディア
+私も平気です
+マスターさんも
+お怪我はありませんか？
+
+;;//選択肢
+# select "大丈夫" "select_label_01" "アルマスは？" "select_label_02" "もうダメだ…" "select_label_03"
+私も平気です
+マスターさんも
+お怪我はありませんか？
+
+# label "select_label_01"
+@ナディア
+良かった
+ここまで来ればひとまず安全ですね
+
+# labeljump "select_label_end"
+# alpha 139 0 0.5
+# alpha 137 0 0.5
+# alpha 136 0 0.5
+# alpha 3103811 1 0.5
+# textboxarrow 0 2
+@アルマス
+お待たせ！
+みんな無事みたいね
+
+# label "select_label_02"
+# alpha 139 0 0.5
+# alpha 137 0 0.5
+# alpha 136 0 0.5
+# alpha 3103811 1 0.5
+# face 3103811 "angry"
+# voice 1038 "almace_0009"
+# textboxarrow 0 2
+@アルマス
+私ならここにいるわよ
+…別にあなたに心配してもらうこと
+なんてないわっ
+
+# labeljump "select_label_end"
+# alpha 3103811 0 0.5
+# move 139 3 0
+# alpha 139 1 0.5
+# face 139"usual"
+# voice 9967 "titania_0006"
+@ティターニア
+素直ではありませんね…
+
+# label "select_label_03"
+# voice 9969 "gill_0004"
+# textboxarrow 0 1
+@ギル
+そんな冗談言えるんなら大丈夫だろ
+
+# labeljump "select_label_end"
+# alpha 139 0 0.5
+# alpha 137 0 0.5
+# alpha 136 0 0.5
+# alpha 3103811 1 0.5
+# voice 1038 "almace_0003"
+# textboxarrow 0 2
+@アルマス
+大したことなかったわね
+追撃もしてこなかったし
+
+;;//選択肢ここまで
+# label "select_label_end"
+# alpha 139 0 0.5
+# alpha 137 0 0.5
+# alpha 136 0 0.5
+# alpha 3103811 0 0.5
+# alpha 3201911 1 0.5
+# voice 320191 "chihyu_a_0006"
+# textboxarrow 0 2
+@シユウ
+うがああぁぁ！
+シユウがてつだうのは
+ここまでだ
+
+# alpha 3201911 0 0.5
+# move 136 3 0
+# alpha 136 1 0.5
+# voice 9968 "nadia_0032"
+@ナディア
+ありがとうございました、シユウ
+
+# alpha 136 0 0.5
+# alpha 3201911 1 0.5
+# voice 320191 "chihyu_a_0003"
+@シユウ
+れいにはおよばない
+おい、アルマス！
+つぎはほんきでたたかおうなっ
+
+# alpha 3201911 0 0.5
+# face 3103811"worry"
+# alpha 3103811 1 0.5
+# voice 1038 "almace_0028"
+@アルマス
+でも、あなた…
+ケイオスリオン軍に戻れるの？
+酷い目に遭わされるんじゃ…
+
+# alpha 3103811 0 0.5
+# alpha 3201911 1 0.5
+@シユウ
+うがああぁぁ！
+こうていはすきにしててよいと
+いっていた
+
+# face 3201911 "happy"
+# voice 320191 "chihyu_a_0004"
+@シユウ
+だからしんぱいするな！
+かならずたたかうぞ！
+やくそくだからな！
+
+;;//シユウが去っていく
+# se "SE_5575"
+# leftout 3201911 0.4
+# textwindow "close"
+# waitandnext 0.5
+
+# move 3103811 2 0
+# alpha 3103811 1 0.5
+# move 136 4 0
+# alpha 136 1 0.5
+# face 136 "sad"
+# textwindow "normal"
+# textboxarrow 0 3
+@ナディア
+本当に大丈夫なのでしょうか…
+
+# textboxarrow 0 1
+@アルマス
+今は気にしてても仕方ない
+さあ、先を急ぐわよ！
+

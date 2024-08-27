@@ -1,0 +1,503 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;コマンドキラーズサイドストーリー前編シナリオ
+;;第1話　タイトル：射抜く者
+;;1_3
+;;スクリプト最後の背景：町
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgm "bgm003" 0
+;;-----------------------------------------
+;;ヒョウハ
+# body 231
+# pos 231 3
+# scale 231 0.8 0
+# layer 231 2
+# alpha 231 0 0
+# mask 231 off
+;;神令ヒョウハ（ボイス用）
+# body 5402011
+# alpha 5402011 0 0
+;;アバリス
+# body 401021
+# pos 401021 3
+# scale 401021 0.8 0
+# layer 401021 2
+# alpha 401021 0 0
+# mask 401021 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第1話　タイトル：射抜く者
+;;//背景：町
+# textwindow "close"
+# serif 1
+# move 231 3 0
+# face 231 "normal"
+# alpha 231 1 0
+# mask 231 off
+# textflame 1 1
+@町人
+へい、らっしゃい！
+おや？あんたキル姫かい？
+この辺じゃ見ない顔だね
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ヒョウハ
+まあね
+おじさん、これとこれ、
+それと…そっちのも
+
+# serif 1
+@町人
+まいど！
+そういや、ちょっと前に森で
+化け物に襲われたんだよ
+
+;;ヒョウハ（独白）
+# serif 1
+# textwindow "close"
+# serif 0
+# move 231 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 231 off
+@ヒョウハ
+知ってるよ、おじさん
+数日前、あんたを助けたのは
+あたしだ
+
+;;ヒョウハ（独白）
+# textboxarrow 0 0
+@ヒョウハ
+それだけじゃない
+買い出しのときは大抵、この店で
+買い物をするんだ
+
+;;ヒョウハ（独白）
+# textboxarrow 0 0
+@ヒョウハ
+それに、この町の人達のことは
+だいたい知ってる
+けっこう長く住んでるから
+
+;;ヒョウハ（独白）
+# textboxarrow 0 0
+@ヒョウハ
+町の外れにあたしの家があるんだよ
+あんたらは…覚えてないだろうけど…
+
+# serif 1
+@町人
+…でなあ
+スイハに助けてもらったんだよ
+ありゃ、すごいなあ
+
+# face 231 "happy"
+# textboxarrow 0 2
+# textwindow "normal"
+@ヒョウハ
+そうだね
+それじゃ！
+
+# se "SE_0719"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# rightout 231 1
+# waitandnext 1
+
+;;//暗転挟む
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 231 0 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;ヒョウハ（声だけ）
+# bgmfile "bgm429" "BgmIntegralNoahCommand" 0
+# textboxarrow 0 0
+# textwindow "normal"
+@ヒョウハ
+あたしには「呪い」がかけられてる
+どんな呪いかっていうと…
+
+# textboxarrow 0 0
+@ヒョウハ
+他人の記憶から、すっぽり抜け落ちて
+しまうっていう呪いだ
+
+# textboxarrow 0 0
+@ヒョウハ
+細かく調べたわけじゃないけど、
+どうやらみんな、あたしのことは
+一晩経つと忘れてしまう
+
+# textboxarrow 0 0
+@ヒョウハ
+一体どうしてそんな呪いをかけられて
+いるのか
+誰がこの呪いをかけたのか
+
+# textboxarrow 0 0
+@ヒョウハ
+そんなのは全く分からない
+
+# textboxarrow 0 0
+@ヒョウハ
+初めはひどく戸惑ったし、
+どうにかして呪いを解こうと
+したこともある
+
+# textboxarrow 0 0
+@ヒョウハ
+でも、無理だった…
+少なくともあたしの手に負える
+ものじゃなかったんだ
+
+# textboxarrow 0 0
+@ヒョウハ
+だけど、一つだけ確かなことは
+その呪いの効果が最近になって
+徐々に薄まりつつあるということだ
+
+# textboxarrow 0 0
+@ヒョウハ
+以前までは、すぐにでも
+あたしの存在は忘れられていた
+
+# textboxarrow 0 0
+@ヒョウハ
+だけど、最近は
+次の朝日が昇るまで、あたしの
+ことを覚えている人も出てきた
+
+# textboxarrow 0 0
+@ヒョウハ
+まあ、忘れられることには
+変わりないんだけど
+
+# textboxarrow 0 0
+@ヒョウハ
+この呪いが何なのか、どうして
+最近になって急に変化が起きたのか
+あたしにはそれを知る由もない
+
+# textboxarrow 0 0
+@ヒョウハ
+そして、呪いが薄まると同時に
+変わったことがある
+
+# textboxarrow 0 0
+@ヒョウハ
+それは、頭の中に響いてくる
+謎の声
+
+# textboxarrow 0 0
+@ヒョウハ
+まるであたしを呼ぶような
+そんな声が、最近は特に
+強く聴こえるようになった
+
+# textboxarrow 0 0
+@ヒョウハ
+あとは、あたしの中で
+ある感覚が強まったこと
+
+# textboxarrow 0 0
+@ヒョウハ
+それは使命感みたいなもので
+あたしは世界の
+ために戦わなくちゃならない
+
+# textboxarrow 0 0
+@ヒョウハ
+いつからか、まるで生まれた時から
+それが当たり前だったかのように
+そう、強く思うようになっていた
+
+# textboxarrow 0 0
+@ヒョウハ
+その感情がいったいどこからくるのか
+この呪いと関係があるものなのか
+あたしには分からないことだらけだ
+
+# textboxarrow 0 0
+@ヒョウハ
+もっと呪いや魔術に詳しい人に
+調べてもらうしかないんだろうけど…
+
+# textboxarrow 0 0
+@ヒョウハ
+頼んだ相手が、次の日にはあたしの
+ことを忘れてしまうんだ
+進展なんてあるわけがない
+
+# textboxarrow 0 0
+@ヒョウハ
+本当は、忘れられる度に思い知る
+所詮、あたしは誰の記憶にも
+残らないちっぽけな存在なんだって
+
+# textboxarrow 0 0
+@ヒョウハ
+だけど、そんなことを気にしても
+呪いが解けるわけでもないからさ
+
+# textboxarrow 0 0
+@ヒョウハ
+そのうち、あたしは気にしないよう
+心がけることにした
+
+# textboxarrow 0 0
+@ヒョウハ
+誰にも覚えてもらえなくても、
+あたしはあたしの為すべきことを
+為せば良い
+
+# textboxarrow 0 0
+@ヒョウハ
+こないだのように、時折、現れる
+異族を倒して人々の生活を守る
+
+# textboxarrow 0 0
+@ヒョウハ
+それが、あたしの使命なんだ
+
+# textboxarrow 0 0
+@ヒョウハ
+…そう、割り切ったはずなのに、
+一つだけ、どうしても胸の中が
+モヤモヤすることがある
+
+# textboxarrow 0 0
+@ヒョウハ
+スイハ…
+
+# textboxarrow 0 0
+@ヒョウハ
+あたしと一緒に扱われることもある
+キラーズ…それを持つキル姫…
+
+# textboxarrow 0 0
+@ヒョウハ
+みんなの尊敬を集める
+エンシェントキラーズの一人
+
+# textboxarrow 0 0
+@ヒョウハ
+あいつにはあいつの運命があって
+生き方がある
+あたしとは違う背負うべき使命が
+
+# textboxarrow 0 0
+@ヒョウハ
+遠巻きにだけど、弓の腕前を
+見たこともある
+正直、すごいと思った
+
+# textboxarrow 0 0
+@ヒョウハ
+だから…気にしたって
+しょうがないんだ
+あたしはあたし、あいつはあいつ
+
+# textboxarrow 0 0
+@ヒョウハ
+それなのに…
+どっかで何かが割り切れてない…
+
+;;ヒョウハ（ここから立ち絵あり）
+# voice 540201 "hyoha_c_0027"
+# move 231 3 0
+# face 231 "sad"
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+@ヒョウハ
+はぁ…
+あたし、鍛錬が足りないな…
+乱れてばっかだよ
+
+# face 231 "irregular"
+# textboxarrow 0 2
+@ヒョウハ
+自分の気持ちさえ分からないのに
+世界を救おうだなんて使命感
+抱えてさ…笑っちゃうよな
+
+# textboxarrow 0 2
+@ヒョウハ
+それでも、やらなくちゃダメなんだ
+それがあたしの使命――
+生まれた理由なんだろうから
+
+# face 231 "normal"
+# textboxarrow 0 2
+@ヒョウハ
+よし！
+気分転換を兼ねて、少し遠出――
+
+;;//ヒョウハとアバリスがぶつかる
+# bgm "stop"
+# se "SE_0656"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 540201 "hyoha_c_0023"
+# face 231 "surprise"
+# textboxarrow 0 2
+@ヒョウハ
+うおっと！？
+ごめん…！
+
+# move 231 2 0.5
+# mask 231 on
+# move 401021 4 0
+# face 401021 "normal"
+# alpha 401021 1 0.5
+# mask 401021 on
+# textboxarrow 0 3
+@アバリス
+いえ…こちらこそ…
+
+# face 231 "normal"
+# textboxarrow 0 1
+@ヒョウハ
+あ…誰かと思えばアバリスか…
+
+# voice 4010 "Abaris_0031"
+# face 401021 "sad"
+# textboxarrow 0 3
+@アバリス
+…ごめんなさい
+私、影が薄いので…
+
+# textboxarrow 0 1
+@ヒョウハ
+あたしがボーッとしてたから
+いけないんだ
+
+# textboxarrow 0 1
+@ヒョウハ
+それに、影の薄さなんて気にするな！
+隠密行動に向いてると思えば
+いいんだよっ
+
+# face 401021 "normal"
+# textboxarrow 0 3
+@アバリス
+そうですね…
+それでは、失礼します…
+
+;;//アバリスが立ち去る
+# se "SE_0719"
+# textwindow "close"
+# alpha 401021 0 0.5
+# waitandnext 0.5
+
+# move 231 3 0.5
+# mask 231 off
+# waitandnext 0.5
+
+# face 231 "sad"
+# textboxarrow 0 2
+# textwindow "normal"
+@ヒョウハ
+今ひとつフォローできてなかった
+かな？
+
+# textboxarrow 0 2
+@ヒョウハ
+アバリスの影の薄さは知ってたけど
+あたしに比べれば…
+
+# face 231 "angry"
+# textboxarrow 0 2
+@ヒョウハ
+…って、あたしまで暗くなっちゃ
+ダメだ！
+気合い入れ直して――
+
+# bgm "bgm031" 0
+# serif 1
+@町人
+キャアアアア…！？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 231 "surprise"
+# textboxarrow 0 2
+@ヒョウハ
+今度は何だよ！？
+まさか、異族かっ！？
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 231 0 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# serif 1
+@町人
+まただっ…
+これで三人目だぞっ…
+
+# serif 1
+@町人
+何が起きているんだ…！？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# move 231 3 0
+# face 231 "surprise"
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ヒョウハ
+ん？
+人だかりができてるな
+
+# textwindow "close"
+# serif 1
+# alpha 231 0 0.5
+@奏官
+ええい、散れ！散れ！
+現場に近づくな！
+
+# serif 1
+@傷ついた奏官
+ううっ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# move 231 3 0
+# face 231 "surprise"
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ヒョウハ
+あれは…
+こないだ梓弓と一緒にいた奏官っ？

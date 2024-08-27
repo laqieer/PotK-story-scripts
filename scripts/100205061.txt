@@ -1,0 +1,209 @@
+;;第５話　タイトル：笑顔でいられる世界
+# script "lisp"
+# background "ghost_town2"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# textwindow "nomal"
+# body 3100111
+# pos 3100111 5
+# scale 3100111 0.8 0
+# alpha 3100111 0 0
+# body 154
+# pos 154 3
+# scale 154 0.8 0
+# mask 154 off
+# body 3500111
+# pos 3500111 3
+# scale 3500111 0.8 0
+# alpha 3500111 0 0
+# mask 3500111 off
+# brightness 3500111 0.3 0
+# body 3103811
+# pos 3103811 1
+# scale 3103811 0.8 0
+# alpha 3103811 0 0
+# mask 3103811 off
+# body 3300711
+# pos 3300711 3
+# scale 3300711 0.8 0
+# alpha 3300711 0 0
+# textflame 1 1
+# textboxarrow 0 2
+@ユノ
+ああ、良かった
+やっと一人になってくれた
+
+@ユノ
+アルマス達がいると落ち着いて
+話しにくかったし、
+キミが一人になるのを待ってたんだ
+
+@ユノ
+おっと！あの子達を呼び戻すのは
+待って欲しいなっ
+とりあえず私の話を聞いてよ
+
+# select "君は誰だ？" "select_label_01" "ユノじゃないのか？" "select_label_01" "正体を明かせ！" "select_label_01"
+おっと！あの子達を呼び戻すのは
+待って欲しいなっ
+とりあえず私の話を聞いてよ
+
+# label "select_label_01"
+@ユノ
+あっはは
+そうだよね
+こんな格好はもうやめよっと
+
+;;//ユノが顔をさらしてケラウノスに
+# se "SE_0648"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# textwindow "close"
+# alpha 154 0 1.8
+# brightness 154 0.3 1.8
+# waitandnext 0.1
+
+# brightness 3500111 1 1.8
+# alpha 3500111 1 1.8
+# waitandnext 2
+
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3500111 "happy"
+# voice 350011 "keraunosu_ge_0036"
+@ケラウノス
+改めて自己紹介するね
+私はケラウノス・獣刻・テュポーン
+識別系統はG・○七
+
+@ケラウノス
+平等維持委員会の命令で
+「奴隷区」のイミテーションを
+見張ってるんだ
+
+# face 3500111 "normal"
+@ケラウノス
+反乱分子を事前に見つけ出して
+始末するためにね
+
+# face 3500111 "happy"
+# voice 350011 "keraunosu_ge_0004"
+@ケラウノス
+それにしても、今回は思いがけず
+面白いものを見せてもらったよ
+
+@ケラウノス
+アルマスと、君…
+
+@ケラウノス
+どっちも私の好みだし、
+個人的にも興味津々だなぁ
+それじゃ、また会おうね！
+
+;;//ケラウノスが立ち去る
+# se "SE_0719"
+# bgm "stop"
+# textwindow "close"
+# alpha 3500111 0 0.7
+# brightness 3500111 0 0.5
+# waitandnext 1.3
+
+# textwindow "nomal"
+# face 3103811 "angry"
+# move 3103811 3 0.5
+# alpha 3103811 1 0.5
+# textboxarrow 0 2
+# voice 1038 "almace_0049"
+@アルマス
+マスター！
+なにぼさっとしてるの！
+早く行くわよ！
+
+# face 3103811 "happy2"
+@アルマス
+まったく…
+頼りになるんだかならないんだか
+分からないわね！
+
+# face 3103811 "angry"
+@アルマス
+絶意味不明っ
+
+;;//背景：ナディアの部屋
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# alpha 3103811 0 0
+# alpha 3300711 1 0
+# face 3300711 "sad"
+# background "201_room"
+# waitandnext 0.4
+
+# fadein "black" 1
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@ゲイボルグ
+…………
+
+# face 3103811 "angry"
+# move 3300711 2 0.5
+# alpha 3100111 1 0.5
+# move 3100111 4 0.5
+# textboxarrow 0 3
+# voice 310011 "masamune_ge_0017"
+@マサムネ
+失態だな、ゲイボルグ
+それにしても、そなたを眠らせて
+ナディアを連れ去るとは…
+
+# face 3300711 "angry"
+# textboxarrow 0 1
+@ゲイボルグ
+ナディアは必ず私が連れ戻す！
+十三議会に捜索の申請を
+
+# face 3100111 "normal"
+# textboxarrow 0 3
+# voice 310011 "masamune_ge_0034"
+@マサムネ
+いや、その任務は別の者に当たらせる
+そなたにはしばしの謹慎が命じられた
+少し頭を冷やすと良い
+
+# face 3300711 "sad"
+# textboxarrow 0 1
+@ゲイボルグ
+くっ…
+
+# serif 0
+# textflame 1 1
+# move 3100111 4 0
+# textwindow "moya"
+# textboxarrow 0 0
+# voice 310011 "masamune_ge_0028"
+@マサムネ
+ゲイボルグの欠点を突いて
+ナディアを連れ出した手際…
+
+@マサムネ
+それに今まで
+町に現れることなどなかった
+キラーメイルが
+
+@マサムネ
+突然現れ、
+町を破壊したという騒動…
+
+@マサムネ
+これらの裏にいるのは…
+いよいよ地下世界が動き出したという
+ことであろうか
+
+# face 3100111 "angry"
+@マサムネ
+急ぎ「鍵」を…
+ナディアを取り戻さねば、
+今度こそ世界が滅ぶことになるぞ…！

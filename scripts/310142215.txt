@@ -1,0 +1,296 @@
+;;-----------------------------------------
+;;ゴッティル3_3
+;;-----------------------------------------
+# script "lisp"
+# background "laboratory_area"
+# bgm "bgm103" 0
+;;-----------------------------------------
+;;ゴッティル
+# body 3101421
+# pos 3101421 3
+# scale 3101421 0.8 0
+# layer 3101421 3
+# mask 3101421 off
+# alpha 3101421 1 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "c3101421"
+# imagelayer 1 3
+# imagealpha 1 0 0
+;;-----------------------------------------
+;;演出：ジョブチェンジティルフィング立ち絵表示
+# textflame 0 0
+@
+ベルゼブブを倒し、
+佇むティルフィング
+
+# textflame 0 0
+@
+マスターはその姿を
+「美しい」
+と、思った
+
+;;場面転換
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：荒廃した街
+# background "ground_surface_break"
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+@
+長い長い戦いの末、
+ティルフィングによって
+地上は平和を取り戻した
+
+# textflame 0 0
+@
+悪魔はすべて消滅し
+人々が魔獣に怯える日々に
+終わりが訪れたのだ
+
+# textflame 1 1
+# textboxarrow 0 2
+;;# face 3101421 ""
+@ティルフィング
+私達の勝利、ですね
+
+# textflame 0 0
+@
+高らかに告げた時と違い
+優しい口調で告げるティルフィング
+
+# textflame 0 0
+@
+やっと、終わったね
+と、マスターは笑いかける
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3101421 "happy"
+# voice 1014 "tyrufing_0003"
+@ティルフィング
+はい…終わりました
+
+# textflame 0 0
+@
+じゃあ、あとは任せてもいいかな
+と、マスター
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3101421 "surprise"
+# voice 1014 "tyrufing_0022"
+@ティルフィング
+マスター？
+それはどういう…
+
+# textflame 0 0
+@
+地上を救うことはできた
+けど、この世界は不安定だ
+とマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+;;# face 3101421 ""
+@ティルフィング
+地上に平和が訪れて
+これ以上不安定な要素は…
+
+# textflame 0 0
+@
+すっと、空を指さすマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+;;# face 3101421 ""
+@ティルフィング
+天上世界…
+
+# textflame 0 0
+@
+残してきたものもたくさんあるしね
+とマスターは笑う
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3101421 "sad"
+# voice 1014 "tyrufing_0013"
+@ティルフィング
+でも、それなら私も！
+この世界はもう大丈夫です
+私が離れたとしても…
+
+# textflame 0 0
+@
+それは違うよ
+とマスターは優しく否定する
+
+# textflame 0 0
+@
+ティルフィングがいるから
+この地上は平和なんだ
+とマスター
+
+# textflame 0 0
+@
+それに今のティルフィングなら
+気付いていると思うけど
+とマスターは続ける
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3101421 "surprise"
+@ティルフィング
+！
+
+# textflame 1 1
+# textboxarrow 0 2
+;;# face 3101421 ""
+@ティルフィング
+マスターと強く繋がった私には
+マスターの…ユグドラシルの
+感じることがわかる…ですか？
+
+# textflame 1 1
+# textboxarrow 0 2
+;;# face 3101421 ""
+@ティルフィング
+私達は天上世界と地上を救った
+けど、ユグドラシルから
+感じる力の干渉…
+
+# textflame 0 0
+@
+天上と地上
+両方からなら、できることがある
+とマスターはティルフィングを諭す
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3101421 "normal"
+# voice 1014 "tyrufing_0032"
+@ティルフィング
+…わかりました
+
+# textflame 0 0
+@
+それに、とマスターは付け加える
+
+# textflame 0 0
+@
+新たな力を得たティルフィングなら
+どんなに離れてもそばにいる
+そう感じられる、とマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+;;# face 3101421 ""
+# voice 1014 "tyrufing_0003"
+@ティルフィング
+はい…はい、マスター
+私はどんなに遠くても
+あなたのそばに…っ！
+
+;;選択肢
+# select "いつか必ず、また会いに来るから" "select_label_01" "また会える、そう思うだろ？" "select_label_02"
+はい、マスター
+私はどんなに遠くても
+あなたのそばに…っ！
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3101421 "shy"
+# voice 1014 "tyrufing_0004"
+@ティルフィング
+必ず、ですよ
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3101421 "shy"
+# voice 1014 "tyrufing_0004"
+@ティルフィング
+もう、マスターにそう言われたら
+何も言い返せないじゃないですか
+
+;;合流
+# label "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3101421 "happy"
+# voice 1014 "tyrufing_0003"
+@ティルフィング
+お待ちしています、いつまでも…
+
+;;演出：マスターが天上世界に上がっていくイメージで辺りが光に包まれていく
+# fadeout "white" 0.8
+# waitandnext 0.8
+
+# background "bg_white"
+# waitandnext 0.2
+
+# fadein "white" 0.8
+# waitandnext 0.8
+
+# textflame 1 1
+# textboxarrow 0 2
+;;# face 3101421 "sad"
+@ティルフィング
+マスター！
+私の想いは、常にあなたの傍に！
+
+# textflame 1 1
+# textboxarrow 0 2
+;;# face 3101421 ""
+@ティルフィング
+私は…あなたの剣ですから！
+
+# fadein "white" 1
+# background "laboratory_area"
+# textflame 0 0
+@
+そして、ティルフィングは
+空を見上げ、マスターへの想いを
+乗せて呟く
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3101421 "normal"
+@ティルフィング
+もし、本当の平和が訪れたら、
+そんな日が来たのなら、
+私の想いをマスターに伝えたい
+
+;;■一枚絵指定
+;;背景：森（昼）
+;;表情：照れと戸惑いが入っているようなイメージです。
+;;構図：座った状態で、手で髪に触れながら、こちらを見ている感じです。
+;;一枚絵ボイス
+;;ティルフィング　「あの…旅がすべて終わったら…私の願いも聞いてもらえますか？」
+# textflame 0 0
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# fadein "white" 3
+# buttonsout 0 0
+# textwindow "close"
+# voice 1014 "tyrufing_kyara_0028"
+
+# frameout 0 1
+
+# waitandnext 0.8
+
+# fadeout "black" 1.5
+# waitandnext 1.5

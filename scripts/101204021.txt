@@ -1,0 +1,298 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー12章
+;;第4話　タイトル：完全、覚醒
+;;4_2_1
+;;スクリプト最後の背景：地底
+;;-----------------------------------------
+# script "lisp"
+# background "underground_world_3"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス（ジョブチェンジ後）
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# layer 172 2
+# alpha 172 0 0
+# mask 172 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 2
+# alpha 139 0 0
+# mask 139 off
+;;ヴァナルガンド
+# body 3601111
+# pos 3601111 3
+# scale 3601111 0.8 0
+# layer 3601111 2
+# alpha 3601111 0 0
+# mask 3601111 off
+;;フォルカス
+# body 3301811
+# pos 3301811 3
+# scale 3301811 0.8 0
+# layer 3301811 2
+# alpha 3301811 0 0
+# mask 3301811 off
+;;ロンギヌス
+# body 3300111
+# pos 3300111 3
+# scale 3300111 0.8 0
+# layer 3300111 2
+# alpha 3300111 0 0
+# mask 3300111 off
+;;フライクーゲル
+# body 3500211
+# pos 3500211 3
+# scale 3500211 0.8 0
+# layer 3500211 2
+# alpha 3500211 0 0
+# mask 3500211 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;//背景：地底
+# move 139 3 0
+# face 139 "surprise"
+# alpha 139 1 0
+# mask 139 off
+# textflame 1 1
+# textboxarrow 0 2
+@ティターニア
+アルマス！
+マスター！
+しっかりしてください！
+
+# alpha 139 0 0.5
+# move 172 3 0
+# face 172 "surprise"
+# alpha 172 1 0.5
+# mask 172 off
+# textboxarrow 0 2
+@アルマス
+ううっ…
+ロンギヌスが…神器がマスターの
+体から飛び出して…ハッ！
+
+# voice 9967 "titania_0006"
+# alpha 172 0 0.5
+# move 139 3 0
+# face 139 "normal"
+# alpha 139 1 0.5
+# mask 139 off
+# textboxarrow 0 2
+@ティターニア
+二人とも意識が戻りましたねっ
+それに…マスター
+
+# textboxarrow 0 2
+@ティターニア
+アナタの中から槍が飛び出して
+きたときは驚きましたけれど、
+あれが神器ロンギヌスだったのですね
+
+# alpha 139 0 0.5
+# move 3300111 2 0
+# face 3300111 "sad"
+# alpha 3300111 1 0.5
+# mask 3300111 on
+# move 3301811 4 0
+# face 3301811 "angry"
+# alpha 3301811 1 0.5
+# mask 3301811 on
+# textboxarrow 0 3
+@フォルカス
+何が起きているんですかっ？
+ロンギヌス、しっかりしなさい！
+
+# voice 330011 "ronginusu_t_0031"
+# face 3300111 "normal"
+# textboxarrow 0 1
+@ロンギヌス
+ごめんなさい…
+私はもう大丈夫です
+
+# se "SE_5208"
+# voice 350021 "furaikugeru_t_0029"
+# alpha 3301811 0 0.5
+# move 3500211 4 0
+# face 3500211 "normal"
+# alpha 3500211 1 0.5
+# mask 3500211 on
+# textboxarrow 0 3
+@フライクーゲル
+キラーメイルのデリートは終わった
+仕切り直そうか
+ファイダップ！
+
+# voice 330011 "ronginusu_t_0032"
+# textboxarrow 0 1
+@ロンギヌス
+そうですね
+仕切り直さないといけません
+
+# bgm "stop"
+# face 3300111 "angry"
+# textboxarrow 0 1
+@ロンギヌス
+私は、私の信じる道を進みます！
+
+;;//ロンギヌスがフライクーゲルを攻撃する
+# se "SE_4200"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm264_265" "BgmLostRagnarokBattle001" 0
+# voice 350021 "furaikugeru_t_0025"
+# face 3500211 "angry"
+# textboxarrow 0 3
+@フライクーゲル
+ノゥ！
+アンビリーバボ－！！
+
+# alpha 3300111 0 0.5
+# alpha 3500211 0 0.5
+# move 3601111 2 0
+# face 3601111 "normal"
+# alpha 3601111 1 0.5
+# mask 3601111 on
+# move 3301811 4 0
+# face 3301811 "angry"
+# alpha 3301811 1 0.5
+# mask 3301811 on
+# textboxarrow 0 3
+@フォルカス
+何をしているのです、ロンギヌス！
+敵はこちらの――
+
+# voice 360111 "vanargand_t_0009"
+# face 3601111 "angry"
+# textboxarrow 0 1
+@ヴァナルガンド
+余所見はよくありませんね！
+
+;;//ヴァナルガンドがフォルカスを弾き飛ばす
+# se "SE_9066"
+# textwindow "close"
+# move 3601111 3 0.2
+# waitandnext 0.2
+
+# rightout 3301811 0.5
+# waitandnext 0.5
+
+# alpha 3601111 0 0.5
+# alpha 3301811 0 0.5
+# waitandnext 0.5
+
+# voice 330181 "forcas_t_battle_0005"
+# move 3301811 3 0
+# face 3301811 "angry"
+# alpha 3301811 1 0.5
+# mask 3301811 off
+# textboxarrow 0 2
+# textwindow "normal"
+@フォルカス
+くっ…！
+…おかしいですね
+ヴァナルガンドの力が増している？
+
+# alpha 3301811 0 0.5
+# move 3601111 3 0
+# face 3601111 "normal"
+# alpha 3601111 1 0.5
+# mask 3601111 off
+# textboxarrow 0 2
+@ヴァナルガンド
+気づきましたか
+私も少し驚いています
+
+# textboxarrow 0 2
+@ヴァナルガンド
+これが本来の共鳴…
+マスターのバイブスと私のキラーズが
+共鳴するということなのですねっ
+
+# voice 360111 "vanargand_t_0031"
+# face 3601111 "angry"
+# textboxarrow 0 2
+@ヴァナルガンド
+ごめんなさい、フォルカス
+圧倒させてもらいます！
+
+;;//画面スライド
+# se "SE_0539"
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 3601111 0 0
+# move 172 2 0
+# face 172 "surprise"
+# alpha 172 1 0
+# mask 172 on
+# move 139 4 0
+# face 139 "normal"
+# alpha 139 1 0
+# mask 139 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 1038 "almace_0023"
+# textboxarrow 0 1
+# textwindow "normal"
+@アルマス
+ヴァナルガンドとロンギヌスが
+押してる！
+
+# textboxarrow 0 3
+@ティターニア
+アルマスも感じているのでは
+ありませんか？
+マスターとの繋がりを
+
+# textboxarrow 0 3
+@ティターニア
+詳しいことは分かりませんけれど
+マスターのバイブスをより強く
+感じるようになっています！
+
+# face 172 "normal"
+# textboxarrow 0 1
+@アルマス
+その理由なら、私も「見た」と
+思うわ
+
+# voice 1038 "almace_0001"
+# textboxarrow 0 1
+@アルマス
+マスター、ようやく本調子になって
+記憶も全て戻ったのよね！？
+
+;;//選択肢
+;;Ａばっちりだ
+;;Ｂ全て思い出した
+;;Ｃ待たせたな！
+# select "ばっちりだ" "select_label_01" "全て思い出した" "select_label_01" "待たせたな！" "select_label_01"
+マスター、ようやく本調子になって
+記憶も全て戻ったのよね！？
+
+;;ＡＢＣ共通
+# label "select_label_01"
+# textboxarrow 0 1
+@アルマス
+私も力が強く安定してるのを
+感じてる
+
+# face 172 "angry"
+# textboxarrow 0 1
+@アルマス
+さあ、反撃するわよ！

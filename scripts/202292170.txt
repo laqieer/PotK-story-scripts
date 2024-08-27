@@ -1,0 +1,493 @@
+;;-----------------------------------------
+;;SEA4章_17
+;;-----------------------------------------
+# script "lisp"
+# background "in_city"
+# bgm "bgm029" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 1 0
+# face 270 "sad"
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;ロジェスティラ
+# body 329
+# pos 329 3
+# scale 329 0.8 0
+# layer 329 3
+# mask 329 off
+# alpha 329 0 0
+;;如意金箍棒
+# body 5203111
+# pos 5203111 4
+# scale 5203111 0.8 0
+# layer 5203111 2
+# mask 5203111 off
+# alpha 5203111 1 0
+# face 5203111 "sad"
+;;イージス
+# body 52000111
+# pos 52000111 3
+# scale 52000111 0.8 0
+# layer 52000111 3
+# mask 52000111 off
+# alpha 52000111 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：町：in_city
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+皆さんが、意思を失った「人形」に
+なってしまうなんて…
+
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+何としても止めなくてはなりません！
+ですが、何をすれば…
+
+# voice 520311 "nyoikinkobou_c_0031"
+# textboxarrow 0 3
+@如意金箍棒
+ごめんなさい…
+私も打開策までは…
+
+# face 270 "sad"
+# voice 9917 "mimir_navikan_0028"
+# textboxarrow 0 1
+@ミーミル
+一体、どうすれば…
+
+# serif 1
+@？？？
+………のっ
+………ますか…？
+
+# face 270 "surprise"
+# voice 9917 "mimir_navikan_0022"
+# move 270 3 0.5
+# alpha 5203111 0 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+えっ？
+マスター様、何か仰いましたか？
+
+;;選択肢
+# select "いいや" "select_label_01" "何も" "select_label_01"
+マスター様、何か仰いましたか？
+
+# label "select_label_01"
+# textboxarrow 0 2
+@ミーミル
+失礼致しました
+気のせいだったのでしょうか…
+
+;;選択肢
+# select "そういえば…" "select_label_02" "さっきイチイバルが…" "select_label_02"
+気のせいだったのでしょうか…
+
+# label "select_label_02"
+# textboxarrow 0 2
+@ミーミル
+あ、はいっ
+私と手を繋いで…そのとき、
+ほんのり何かを感じました
+
+# serif 1
+@？？？
+…………すっ
+……しの声を……
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+…やっぱり聞こえます
+どなたですかっ？
+どこにいらっしゃるのですか！？
+
+;;選択肢
+# select "ロジェスティラだ！" "select_label_03" "あっちの建物だ！" "select_label_03"
+気のせいだったのでしょうか…
+
+# label "select_label_03"
+# textboxarrow 0 2
+@ミーミル
+あ！
+マスター様、さすがですっ
+
+# move 270 2 0.5
+# face 5203111 "surprise"
+# alpha 5203111 1 0.3
+# textboxarrow 0 3
+@如意金箍棒
+もしかして打開策が
+見つかりそうなの？
+
+# face 270 "angry"
+# voice 9917 "mimir_navikan_0003"
+# textboxarrow 0 1
+@ミーミル
+可能性はあります
+ここはお任せしてよろしいでしょうか
+
+# voice 520311 "nyoikinkobou_c_0032"
+# face 5203111 "normal"
+# textboxarrow 0 3
+@如意金箍棒
+うん、分かったよ
+イージスちゃんと二人で
+持ちこたえてみせるね
+
+# voice 52000111 "aegis_c_0032"
+# alpha 270 0 0.3
+# alpha 5203111 0 0.3
+# face 52000111 "angry"
+# alpha 52000111 1 0.3
+# textboxarrow 0 2
+@イージス
+防御なら私の右に出る者はいない
+安心して行ってこい！
+
+# alpha 52000111 0 0.3
+# alpha 270 1 0.3
+# alpha 6504011 1 0.3
+# voice 9917 "mimir_navikan_0036"
+# textboxarrow 0 1
+@ミーミル
+それでは、お願い致します！
+
+# voice 650401 "manannan_ura_0005"
+# face 6504011 "happy"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+今度はどんな愉快なことが
+起きるのかなっ？
+
+;;ミーミル達が走っていく
+# se "SE_5575"
+# sedelay "SE_5575" 0.2
+# scale 270 0.75 0.5
+# scale 6504011 0.75 0.5
+# alpha 270 0 0.3
+# alpha 6504011 0 0.3
+# textwindow "close"
+# waitandnext 2
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：室内：201_room
+# background "201_room"
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# scale 270 0.8 0
+# scale 6504011 0.8 0
+# waitandnext 0.2
+
+# move 270 1 0
+# move 329 4 0
+# alpha 329 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 270 2 0.5
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+こちらにロジェスティラさんが…
+あ！いましたっ
+
+# textboxarrow 0 3
+@ロジェスティラ
+…………
+
+# alpha 329 0 0.3
+# move 6504011 4 0
+# face 6504011 "surprise"
+# alpha 6504011 1 0.3
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# textboxarrow 0 3
+@マナナン
+やっぱり寝てるね
+どうやって起こすの？
+
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+それは分かりませんが…
+イチイバルさんが何か
+してくれているのでは
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+先程、イチイバルさんと
+手を繋いだように…
+
+# textboxarrow 0 1
+@ミーミル
+ロジェスティラさん
+失礼致します
+
+# voice 650401 "manannan_ura_0028"
+# move 270 1 0.5
+# alpha 270 0 0.3
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+うーん…
+手を握っただけで
+何か起きるのかなぁ？
+
+# alpha 6504011 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# move 270 2 0
+# alpha 270 1 0.3
+# move 329 4 0
+# alpha 329 1 0.2
+# se SE_12406"
+# waitandnext 1
+
+# face 270 "sad"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+ロジェスティラさん…
+
+# se "bgm602_basic_on"
+# serif 1
+@？？？
+あのあのっ
+聞こえますかっ？
+
+# face 270 "surprise"
+# voice 9917 "mimir_navikan_0023"
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+ええっ…！？
+もしかして、ロジェスティラさん
+ですかっ？
+
+# serif 1
+@ロジェスティラ
+やっと、ちゃんと聞こえるように
+なったみたいで良かったぁ
+
+# voice 9917 "mimir_navikan_0002"
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+あの…
+ロジェスティラさんは
+お休みになっているのでは？
+
+# serif 1
+@ロジェスティラ
+はい
+自分で自分に魔法をかけて
+眠っています
+
+# serif 1
+@ロジェスティラ
+でもでもっ
+イチイバルさんがわたしとパスを
+繋いでくれていたので…
+
+# serif 1
+@ロジェスティラ
+皆さんの状況は把握できています
+わたしから話しかけることは
+できなかったんですけど…
+
+# voice 9917 "mimir_navikan_0040"
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+…では、あのときの握手は私と
+イチイバルさんを繋ぐための
+ものだったのですね
+
+# serif 1
+@ロジェスティラ
+ですですっ
+お陰で、あなたとも繋がることが
+できましたぁ
+
+# serif 1
+@ロジェスティラ
+パスを繋ぐには、直接、
+相手に触れないといけないので
+
+# face 270 "normal"
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+では、改めまして
+私、ミーミルと申します
+マスター様の専属補佐官でございます
+
+# serif 1
+@ロジェスティラ
+あわわわっ
+ご丁寧にどうもっ
+ロジェスティラといいます
+
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+ところで、先程、ご自身からは
+話しかけられないと仰っていましたが
+
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+今、ロジェスティラさんと
+お話できているのは
+どういうことなのでしょう？
+
+# serif 1
+@ロジェスティラ
+あのあのっ
+それはミーミルちゃんの力だと
+思います
+
+# face 270 "surprise"
+# voice 9917 "mimir_navikan_0022"
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+私の力？
+そのような自覚はございませんが…
+
+# serif 1
+@ロジェスティラ
+でもでもっ
+ミーミルちゃんにはわたしの声が
+届きました
+
+# serif 1
+@ロジェスティラ
+イチイバルさんにも
+話しかけられなかったのに…
+不思議です
+
+# face 270 "normal"
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+…私はティルフィング様からお力を
+幾分かお借りしていますので、
+その影響でしょうか？
+
+# serif 1
+@ロジェスティラ
+ティルフィングさん…
+違う雰囲気を感じますけど…
+あ！それより…あのあのっ
+
+# serif 1
+@ロジェスティラ
+わたしなら発動してしまった術式を
+破ることができると思うんです
+
+# face 270 "surprise"
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+本当ですかっ？
+大変、助かりますっ
+
+# serif 1
+@ロジェスティラ
+でもでも…
+わたしが目覚めたら、その瞬間…
+
+# se "bgm602_rhythm_on"
+# serif 1
+@ロジェスティラ
+スクルドの力が溢れ出して
+世界中に「死」を
+もたらすかもしれません…
+
+# face 270 "sad"
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+それは…
+
+# serif 1
+@ロジェスティラ
+感じてるんです…
+もう抑えきれないくらいに神令の力が
+強くなっているのを…
+
+# serif 1
+@ロジェスティラ
+わたし、どうすれば…
+
+;;選択肢
+# select "他のキル姫と繋がれる？" "select_label_04"
+わたし、どうすれば…
+
+# label "select_label_04"
+# serif 1
+@ロジェスティラ
+えっと…
+オルフェウスちゃんなら少し前に
+パスを繋いでくれたので
+
+# face 270 "surprise"
+# voice 9917 "mimir_navikan_0001"
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+マスター様、もしかしてっ
+
+;;選択肢
+# select "オルフェウスと繋いで" "select_label_05"
+わたし、どうすれば…
+
+# label "select_label_05"
+# serif 1
+@ロジェスティラ
+は、はいっ
+やってみますので…のでっ
+
+# fadeout "black" 1
+# waitandnext 1

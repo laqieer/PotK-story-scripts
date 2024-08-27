@@ -1,0 +1,373 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１５章 章タイトル「クリティカルフェイズ―連携―」
+;;第2話―２　タイトル：終焉を望む者
+;;2_2_3
+;;スクリプト最後の背景：荒野
+;;-----------------------------------------
+# script "lisp"
+# background "wild"
+# bgmfile "bgm479" "BgmIntegralNoahBoso002" 0
+;;-----------------------------------------
+;;グランテピエ・獣刻・バハムート
+# body 5303411
+# pos 5303411 3
+# scale 5303411 0.8 0
+# layer 5303411 4
+# alpha 5303411 0 0
+# mask 5303411 off
+;;アルテミス
+# body 5400131
+# pos 5400131 3
+# scale 5400131 0.8 0
+# layer 5400131 2
+# alpha 5400131 0 0
+# mask 5400131 off
+;;異族化フライクーゲル
+# body 5500231
+# pos 5500231 3
+# scale 5500231 0.8 0
+# layer 5500231 2
+# alpha 5500231 0 0
+# mask 5500231 off
+;;ムー
+# body 161
+# pos 161 3
+# scale 161 0.6 0
+# layer 161 5
+# alpha 161 0 0
+# mask 161 off
+;;盤古
+# body 250
+# pos 250 3
+# scale 250 0.8 0
+# layer 250 5
+# alpha 250 0 0
+# mask 250 off
+;;異族化アルマス
+# body 5103831
+# pos 5103831 3
+# scale 5103831 0.8 0
+# layer 5103831 3
+# alpha 5103831 0 0
+# mask 5103831 off
+# brightness 5103831 0.8 0
+;;-----------------------------------------
+# move 5303411 3 0
+# face 5303411 "angry"
+# alpha 5303411 1 0
+# mask 5303411 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 530341 "grandepieu_di_0029"
+@グランテピエ
+やあああああっ！
+
+;;//グランテピエがアルマスに突っ込む
+# textwindow "close"
+# se "SE_5204"
+# leftout 5303411 0.3
+# waitandnext 0.5
+
+# se "SE_9092"
+# fadein "white" 0.1
+# emotionbody 1000 15 5103831 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5103831 3 0
+# face 5103831 "normal"
+# alpha 5103831 1 0
+# mask 5103831 on
+# face 5303411 "angry"
+# move 5303411 4 0
+# alpha 5303411 1 0
+# mask 5303411 on
+# move 5103831 2 0.3
+# move 5303411 3 0.3
+# waitandnext 0.5
+
+# face 5103831 "angry"
+# textwindow "normal"
+# textboxarrow 0 1
+@アルマス
+ウウウウウウアアアア！
+
+;;//アルマスがグランテピエを押し返す
+# textwindow "close"
+# se "SE_9083"
+# shake 0 0.5
+# face 5303411 "surprise"
+# move 5103831 3 1.0
+# move 5303411 4 1.0
+# waitandnext 1.0
+
+# effectskip 1000
+# alpha 5103831 0 0.5
+# alpha 5303411 0 0.5
+# move 5400131 3 0
+# alpha 5400131 1 0.5
+# face 5400131 "surprise"
+# mask 5400131 off
+# textwindow "normal"
+# textboxarrow 0 2
+@アルテミス
+いけません！
+グランテピエ、アルマスから離れてっ
+
+# face 5400131 "angry"
+# textboxarrow 0 2
+@アルテミス
+ここは一旦、撤退しましょう！
+作戦を立て直して…
+
+# emotionbody 1000 15 5103831 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# alpha 5400131 0 0.5
+# move 5103831 3 0
+# alpha 5103831 1 0.5
+# face 5103831 "normal"
+# mask 5103831 on
+# move 5303411 4 0
+# alpha 5303411 1 0.5
+# face 5303411 "angry"
+# mask 5303411 on
+# textboxarrow 0 3
+# voice 530341 "grandepieu_di_battle_0006"
+@グランテピエ
+…ダメ
+私が何とかするからっ
+
+# textboxarrow 0 3
+@グランテピエ
+やっと会えた…
+たった一人の妹なの…！
+
+# voice 530341 "grandepieu_di_0044"
+# face 5303411 "normal"
+# textboxarrow 0 3
+@グランテピエ
+お願い、アルマス
+私の声を聞いて
+私を見て
+
+# face 5303411 "happy"
+# textboxarrow 0 3
+@グランテピエ
+助けに来たんだよ
+
+# shake 0 0.3
+# face 5103831 "angry"
+# face 5303411 "surprise"
+# textboxarrow 0 2
+@アルマス
+アアアアアアアアアア！
+
+;;//アルマスがグランテピエを押して画面外へ
+# textwindow "close"
+# shake 0 0.5
+# se "SE_5204"
+# rightout 5103831 0.3
+# rightout 5303411 0.3
+# effectskip 1000
+# waitandnext 0.5
+
+# alpha 5103831 0 0.5
+# alpha 5303411 0 0.5
+# move 5400131 3 0
+# alpha 5400131 1 0.5
+# face 5400131 "surprise"
+# mask 5400131 off
+# textwindow "normal"
+# textboxarrow 0 2
+@アルテミス
+グランテピエ…！？
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.0 
+
+# emotionbody 1000 15 5103831 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# alpha 5400131 0 0
+# move 5103831 2 0
+# alpha 5103831 1 0
+# face 5103831 "angry"
+# mask 5103831 on
+# move 5303411 3 0
+# alpha 5303411 1 0
+# face 5303411 "sad"
+# mask 5303411 on
+# shakeloop 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 530341 "grandepieu_di_0025"
+@グランテピエ
+キャアアアア…！
+
+# effectskip 1000
+# alpha 5103831 0 0.5
+# alpha 5303411 0 0.5
+# move 161 3 0
+# alpha 161 1 0.5
+# voice 9953 "mwu_0017"
+# textboxarrow 0 2
+@ムー
+くっそ、こいつぁマジでやべぇ…
+グラ！離れろっ
+このままじゃお前が…
+
+# emotionbody 1000 15 5103831 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# alpha 161 0 0.5
+# move 5103831 2 0
+# alpha 5103831 1 0.5
+# face 5103831 "normal"
+# mask 5103831 on
+# move 5303411 3 0
+# alpha 5303411 1 0.5
+# face 5303411 "angry"
+# mask 5303411 on
+# textboxarrow 0 2
+@グランテピエ
+私のことなんてどうでもいい…
+アルマスを…助ける…！
+絶対の、ぜーったいに！！
+
+# face 5103831 "angry"
+# textboxarrow 0 1
+@アルマス
+アアアアアアアアアアアアアアア！！
+
+;;//アルマスがグランテピエを斬る
+# textwindow "close"
+# shakestop
+# se "SE_4830"
+# fadein "white" 0.3
+# effectbody 1002 2 100 0 0
+# effectstart 1002
+# move 5103831 3 0.3
+# face 5303411 "sad"
+# rightout 5303411 0.3
+# waitandnext 0.5
+
+# effectskip 1000
+# textwindow "close"
+# alpha 5103831 0 0.5
+# waitandnext 0.5
+
+# move 5303411 2 0
+# alpha 5303411 1 0.5
+# move 5303411 3 0.5
+# face 5303411 "sad"
+# mask 5303411 off
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 530341 "grandepieu_di_battle_0005"
+@グランテピエ
+あぐっ…
+
+# move 161 1 0
+# alpha 161 1 0.5
+# move 161 2 0.5
+# textboxarrow 0 1
+@ムー
+グラ…！
+無理だ…今のアルマスにお前の声は
+届いてねぇよ…
+
+# face 5303411 "angry"
+# textboxarrow 0 2
+@グランテピエ
+そんなこと…ない…！
+そんなはずが…ないの…！
+だって、たった二人きりの――
+
+# emotionbody 1000 15 5103831 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# alpha 161 0 0.5
+# alpha 5303411 0 0.5
+# move 5103831 2 0
+# alpha 5103831 1 0.5
+# move 5103831 3 0.2
+# face 5103831 "angry"
+# mask 5103831 off
+# shake 0 0.5
+# textwindow "toge"
+@アルマス
+アアアアアアアア！
+
+# textwindow "close"
+# se "SE_9045"
+# effectskip 1000
+# rightout 5103831 0.3
+# waitandnext 0.3
+
+# move 161 2 0
+# alpha 161 1 0.5
+# move 161 3 0
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 9953 "mwu_0037"
+@ムー
+やべぇ…！
+避けろ、グラァッ
+
+# alpha 161 0 0.5
+# move 5303411 3 0
+# alpha 5303411 1 0.5
+# move 5303411 4 0.5
+# face 5303411 "sad"
+# mask 5303411 on
+# textboxarrow 0 3
+# voice 530341 "grandepieu_di_0045"
+@グランテピエ
+アルマス、お願い…！
+
+;;//盤古が飛び込んでくる
+# textwindow "close"
+# bgm "stop"
+# se "SE_9021"
+# move 250 5 0
+# alpha 250 1 0.2
+# move 250 3 0.2
+# mask 250 on
+# waitandnext 0.2
+
+;;//血しぶき演出
+# se "SE_9016"
+# emotionbody 1000 15 5103831 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5103831 2 0
+# leftin 5103831 0.2
+# waitandnext 0.2
+# mask 5303411 on
+# mask 5103831 on
+# fadein "red" 1.0
+# effectbody 1002 2 0 0 0
+# effectstart 1002
+# shake 0 0.5
+# face 250 "angry"
+# face 5103831 "normal"
+# face 5303411 "surprise"
+# waitandnext 2.0
+
+# move 5103831 1 0.5
+# waitandnext 2.0
+
+# alpha 250 0 1.0
+# waitandnext 1.0
+
+# se "SE_3001"
+# shake 0 0.5
+# waitandnext 1.0

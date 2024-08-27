@@ -1,0 +1,241 @@
+;;-----------------------------------------
+;;413022013
+;;ロンゴピックアップ【EP1】「獣の邂逅」後半
+;;-----------------------------------------
+# script "lisp"
+# background "201_border"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;ロンゴミアント
+# body 3301011
+# pos 3301011 4
+# scale 3301011 0.8 0
+# layer 3301011 4
+# mask 3301011 on
+# alpha 3301011 0 0
+;;ミョルニル
+# body 3200111
+# pos 3200111 3
+# scale 3200111 0.8 0
+# layer 3200111 3
+# mask 3200111 off
+# alpha 3200111 0 0
+;;トレイセーマA
+# body 3830001
+# pos 3830001 3
+# scale 3830001 0.8 0
+# layer 3830001 2
+# mask 3830001 on
+# alpha 3830001 1 0
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;剣閃（ロンゴ）
+# effectbody 1000 1 -100 0 1
+;;◆背景：国境-----------------------------------------
+# textflame 1 1
+# textboxarrow 0 2
+# voice 383000 "cryptid_battle_0005"
+# chara 3830001
+@トレイセーマ兵
+なんなんだ、あの斬ル姫はっ!?
+
+# textwindow "close"
+# se "SE_0719"
+# move 3830001 2 0.7
+# alpha 3301011 1 0
+# face 3301011 "shy"
+# rightin 3301011 0.7
+# waitandnext 0.7
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 330101 "rhongomiant_a_battle_0003"
+# chara 3301011
+@ロンゴミアント
+ふふふふっ…
+あなたの血は、どんな色を
+しているのですかぁっ!?
+
+# textwindow "close"
+# se "SE_5204"
+# face 3301011 "happy"
+# move 3301011 3 0.2
+# waitandnext 0.3
+
+# se "SE_4759"
+# voice 383000 "cryptid_0038"
+# effectstart 1000
+# shake 0 0.6
+# subfillrect 1 "red" 0.6 0.3 0
+# alpha 3830001 0 0.5
+# waitandnext 0.8
+
+;;◆背景：黒バック-------------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# alpha 3301011 0 0
+# background "bg_black"
+# waitandnext 0.1
+
+# imagealpha 0 0 0.1
+# imagerightout 0 0.1
+# waitandnext 0.3
+
+# textwindow "normal"
+# textflame 0 0
+@
+手に持つ槍を自由自在に
+操りながら、ロンゴミアントは
+敵陣に穴を開けていく
+
+# textflame 0 0
+@
+槍を振るたびに、
+悲鳴が響き、
+鮮血があたりに飛んだ
+
+;;◆背景：国境-----------------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.1
+# textwindow "close"
+# waitandnext 0.1
+
+# pos 3301011 3
+# mask 3301011 off
+# alpha 3301011 1 0
+# face 3301011 "happy"
+# background "201_border"
+# waitandnext 0.1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 330101 "rhongomiant_a_0020"
+# chara 3301011
+@ロンゴミアント
+悪魔の殺戮技法の味はいかがですぅ？
+と、言っても感想を言える人は
+もういませんが…ふふふふっ…
+
+# textflame 0 0
+@
+ニヤリ、陰のある笑みを浮かべ、
+ゆっくりと国境へと近づく
+ロンゴミアント
+
+# bgm "stop"
+# textflame 0 0
+@
+その時だった
+
+;;ミョルニル
+# face 3301011 "surprise"
+# brightness 3301011 0.6 0.3
+# serif 1
+# textwindow "toge"
+# textboxarrow 1 0
+# voice 320011 "myuruniru_ge_0021"
+# chara 3200111
+@？？？
+あーっ！
+楽しそうなことしてる！
+混ぜてー！
+
+# bgmfile "bgm279" "BgmLostRagnarokBattle002" 0
+;;ミョルニル登場
+# textwindow "top_close"
+# textwindow "bottom_close"
+# alpha 3301011 0 0.5
+# se "SE_5575"
+# alpha 3200111 1 0.7
+# waitandnext 0.7
+
+# textwindow "normal"
+# textflame 0 0
+@
+ばたばたと足音を立て、
+1人の少女が駆け寄ってくる
+
+# brightness 3301011 1.0 0
+# alpha 3200111 0 0.5
+# pos 3301011 3
+# mask 3301011 on
+# alpha 3301011 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3301011 "normal"
+# voice 330101 "rhongomiant_a_0040"
+# chara 3301011
+@ロンゴミアント
+トレイセーマの斬ル姫、ですか…
+
+# textwindow "close"
+# se "SE_9146"
+# move 3301011 4 0.5
+# pos 3200111 2
+# mask 3200111 on
+# alpha 3200111 1 0
+# leftin 3200111 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3200111 "normal"
+# voice 320011 "myuruniru_ge_0004"
+# chara 3200111
+@ミョルニル
+はぁ～い！
+ミョルニルちゃんだよぉ～！
+
+# textflame 0 0
+@
+今この場の状況など
+気にも留めていないような
+明るい声が響く
+
+;;モヤモヤ
+# textflame 1 1
+# move 3301011 4 0
+# textwindow "moya"
+# textboxarrow 0 0
+# face 3301011 "happy"
+# voice 330101 "rhongomiant_a_0004"
+# chara 3301011
+@ロンゴミアント
+ひとまず斬ル姫の1人が釣れた
+作戦としては十分でしょうか
+
+# textwindow "normal"
+# textflame 0 0
+@
+戦いが途切れたことで
+冷静になれた思考で
+そんなことを考える
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3200111 "happy"
+# voice 320011 "myuruniru_ge_0020"
+# chara 3200111
+@ミョルニル
+あはは～！
+たまたまだけど、
+いいところに来ちゃったみたい
+
+# textflame 0 0
+@
+そう言って、
+ミョルニルと名乗る斬ル姫は、
+純粋そうな瞳でロンゴミアントを見た

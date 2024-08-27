@@ -1,0 +1,441 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;インテグラルキラーズサイドストーリー
+;;第3話―６　タイトル：不可欠な痛み
+;;3_6_1
+;;スクリプト最後の背景：王都（壊滅）
+;;-----------------------------------------
+# script "lisp"
+# background "town_night"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 2
+# alpha 24 0 0
+# mask 24 off
+;;ティルフィング（別）
+# entry 9241 24
+# pos 9241 3
+# scale 9241 0.8 0
+# layer 9241 2
+# alpha 9241 0 0
+# mask 9241 off
+# brightness 9241 0.8 0
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 2
+# alpha 0 0 0
+# mask 0 off
+;;-----------------------------------------
+;;第3話―６　タイトル：不可欠な痛み
+;;//背景：町（夜）
+# voice 1014 "tyrufing_0028"
+# move 24 3 0
+# face 24 "sad"
+# alpha 24 1 0
+# mask 24 off
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+私の姿はマスターにしか見えていない
+ようですね…
+
+# textboxarrow 0 2
+@ティルフィング
+物に触れようとしてもすり抜けて
+しまいますし…まるで幽霊みたい…
+
+# voice 1014 "tyrufing_0002"
+# face 24 "normal"
+# textboxarrow 0 2
+@ティルフィング
+あの…マスターは「箱庭実験」の
+可能性の一つに入ってしまったんです
+急いで後を追ったんですけれど…
+
+# textboxarrow 0 2
+@ティルフィング
+ここはユグドラシルに記録された
+過去の世界…だから私は何も干渉でき
+ないんだと思います
+
+# textboxarrow 0 2
+@ティルフィング
+マスターにとっては、ご自身の記憶
+ですから実体を伴って追体験できて
+いるのではないでしょうか
+
+# textboxarrow 0 2
+@ティルフィング
+それで…
+マスターを捜しながら、この世界の
+ことも見てきました
+
+# face 24 "sad"
+# textboxarrow 0 2
+@ティルフィング
+ここは「失敗」とされた可能性…
+もうじき破棄される世界です
+
+# textboxarrow 0 2
+@ティルフィング
+この世界ではキル姫が衝動のままに
+戦い続けていて、巻き添えで多くの
+人々が亡くなっています
+
+# textboxarrow 0 2
+@ティルフィング
+ときには血を見たいがために
+町や村を襲うこともあるみたいで…
+皆、「私」達を恐れているんです
+
+# voice 1014 "tyrufing_0001"
+# face 24 "angry"
+# textboxarrow 0 2
+@ティルフィング
+マスター
+急いでこの世界から脱出して下さい
+もし、巻き込まれたりしたら…
+
+;;//選択肢
+;;
+;;A彼女を放っておけない
+;;Bデュリンに頼まれたんだ
+# select "彼女を放っておけない" "select_label_01" "デュリンに頼まれたんだ" "select_label_02"
+マスター
+急いでこの世界から脱出して下さい
+もし、巻き込まれたりしたら…
+
+;;A
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 24 "sad"
+# textboxarrow 0 2
+@ティルフィング
+この世界の「私」ですね…
+
+;;B
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 24 "sad"
+# textboxarrow 0 2
+@ティルフィング
+デュリンに…
+
+# label "select_label_end"
+# textboxarrow 0 2
+@ティルフィング
+マスターの優しさは美徳だと思います
+でも…少し複雑な気持ちです…
+
+# face 24 "normal"
+# textboxarrow 0 2
+@ティルフィング
+私も側にいますから、本当に危なく
+なったら迷わずここから抜け出して
+下さい
+
+;;//デュリンがやってくる
+# se "SE_5338"
+# alpha 24 0 0.5
+# move 0 3 0
+# face 0 "normal"
+# alpha 0 1 0.5
+# mask 0 off
+# textboxarrow 0 2
+@デュリン
+こんなところにいた！
+一人で夜空眺めてるんじゃないわよ
+ティルが目を覚ましたわ
+
+# textboxarrow 0 2
+@デュリン
+これからのこと、話し合うわよっ
+
+# voice 9999 "durin_0006"
+# textboxarrow 0 2
+@デュリン
+私達で世界を救ってみせるんだから！
+
+;;//背景：村
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "004_outland"
+# alpha 0 0 0
+# move 9241 3 0
+# face 9241 "mad2"
+# alpha 9241 1 0
+# mask 9241 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;ティルフィング（別）
+# voice 1014 "tyrufing_battle_0001"
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+はあっ！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+;;//ティルフィングがキル姫を斬る
+# se "SE_4830"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# serif 1
+@キラープリンセス
+くうっ…
+
+;;ティルフィング（別）
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 1014 "tyrufing_kyara_0019"
+# face 9241 "angry"
+# textboxarrow 0 2
+@ティルフィング
+…処理、完了
+
+# voice 9999 "durin_0021"
+# move 9241 2 0.5
+# mask 9241 on
+# move 0 4 0
+# face 0 "happy"
+# alpha 0 1 0.5
+# mask 0 on
+# textboxarrow 0 3
+@デュリン
+やったわ！
+すごいわよ、ティル
+
+;;ティルフィング（別）
+# face 9241 "happy"
+# textboxarrow 0 1
+@ティルフィング
+ふふふっ
+マスターのお陰です
+体が軽くて
+
+;;ティルフィング（別）
+# face 9241 "normal"
+# textboxarrow 0 1
+@ティルフィング
+村の皆さんは無事ですか？
+
+# face 0 "usual"
+# textboxarrow 0 3
+@デュリン
+アンタのお陰で被害は出てないわ
+さ、休みましょ
+
+# bgm "bgm004" 0
+# serif 1
+@村人１
+やっと終わったのか…？
+
+# serif 1
+@村人２
+まだだ…まだ一人残ってやがる…
+
+# serif 1
+@村人３
+ああっ…
+早く出ていってくれないかしら…
+
+;;ティルフィング（別）
+# serif 1
+# textwindow "close"
+# serif 0
+# face 9241 "sad"
+# textboxarrow 0 1
+@ティルフィング
+…デュリン、マスター
+休むのは後にしましょう
+
+# face 0 "serious2"
+# textboxarrow 0 3
+@デュリン
+ティル…！
+アンタはあの人達を守ったのよ
+それなのに…
+
+;;ティルフィング（別）
+# face 9241 "normal"
+# textboxarrow 0 1
+@ティルフィング
+いいの…
+ほら、あの丘の上とか風が気持ち
+良さそう
+
+;;//ティルフィング（別）が歩いていく
+# se "SE_0719"
+# textwindow "close"
+# leftout 9241 1
+# waitandnext 1
+
+# alpha 9241 0 0
+# face 0 "serious"
+# textboxarrow 0 3
+# textwindow "normal"
+@デュリン
+あ、ちょっと待ちなさいよ！
+
+;;//デュリンが飛んでいく
+# se "SE_5338"
+# textwindow "close"
+# leftout 0 0.5
+# waitandnext 0.5
+
+# alpha 0 0 0
+# move 24 3 0
+# face 24 "sad"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+…………
+
+# textboxarrow 0 2
+@ティルフィング
+やるせないですね、マスター…
+
+# textboxarrow 0 2
+@ティルフィング
+忌み嫌われながらも…
+人々を守るためにキル姫を斬り
+続けるなんて…
+
+;;//背景：平原
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# alpha 24 0 0
+# move 9241 2 0
+# face 9241 "normal"
+# alpha 9241 1 0
+# mask 9241 on
+# move 0 4 0
+# face 0 "normal"
+# alpha 0 1 0
+# mask 0 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm005" 0
+# voice 9999 "durin_0002"
+# textboxarrow 0 3
+# textwindow "normal"
+@デュリン
+いい？
+アタシ達の最終目的地は王都よ
+
+;;ティルフィング（別）
+# textboxarrow 0 1
+@ティルフィング
+すでに王都は周辺も含めて壊滅して
+います
+キラープリンセスの手によって…
+
+# face 0 "serious2"
+# textboxarrow 0 3
+@デュリン
+そこに居座ってる奴らをみんな倒すの
+そうすれば、希望はあるわ
+
+# textboxarrow 0 3
+@デュリン
+…分かってるわよ
+無謀なことだっていうのは
+
+;;ティルフィング（別）
+# face 9241 "angry"
+# textboxarrow 0 1
+@ティルフィング
+でも、やるしかない
+天上世界で生きる人々のためにも
+
+# face 0 "normal"
+# textboxarrow 0 3
+@デュリン
+マスター
+アンタもしっかりやんなさいよ！
+
+# alpha 9241 0 0.5
+# alpha 0 0 0.5
+# move 24 3 0
+# face 24 "sad"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+王都への単独突入…
+そんなの…結果は目に見えています
+
+# voice 1014 "tyrufing_0015"
+# textboxarrow 0 2
+@ティルフィング
+それでも「私」達は行くんですね
+何も触れられない自分がもどかしい…
+私には何もできないの…？
+
+;;//背景：王都（壊滅）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "imperial_city_destroyed"
+# alpha 24 0 0
+# move 9241 2 0
+# face 9241 "normal"
+# alpha 9241 1 0
+# mask 9241 on
+# move 0 4 0
+# face 0 "usual2"
+# alpha 0 1 0
+# mask 0 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;ティルフィング（別）
+# bgm "bgm023_024" 0
+# textboxarrow 0 1
+# textwindow "normal"
+@ティルフィング
+ここがかつての王都…
+
+# face 0 "normal"
+# textboxarrow 0 3
+@デュリン
+もう見る影もないわね…
+二人とも、準備はいい？
+
+;;ティルフィング（別）
+# face 9241 "angry"
+# textboxarrow 0 1
+@ティルフィング
+はい！
+世界を救うために…
+
+;;ティルフィング（別）
+# textboxarrow 0 1
+@ティルフィング
+私はキラープリンセスを
+全員、斬ります！

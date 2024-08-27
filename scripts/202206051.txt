@@ -1,0 +1,777 @@
+;;-----------------------------------------
+;;ラグナドールEP5
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown_night"
+# bgm "bgm030" 0
+;;-----------------------------------------
+;;ムラマサ
+# body 102511
+# pos 102511 3
+# scale 102511 0.8 0
+# layer 102511 3
+# mask 102511 off
+# alpha 102511 0 0
+;;マサムネ
+# body 100111
+# pos 100111 3
+# scale 100111 0.8 0
+# layer 100111 2
+# mask 100111 off
+# alpha 100111 0 0
+;;ぬりかべ
+# body 5203311
+# pos 5203311 3
+# scale 5203311 0.8 0
+# layer 5203311 2
+# mask 5203311 off
+# alpha 5203311 0 0
+;;滝夜叉姫
+# body 5303811
+# pos 5303811 3
+# scale 5303811 0.8 0
+# layer 5303811 2
+# mask 5303811 off
+# alpha 5303811 0 0
+;;怨霊（スケルトン）
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# layer 910013 2
+# mask 910013 off
+# alpha 910013 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：夜の村in_downtown_night
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textflame 0 0
+# textwindow "nomal"
+@
+大量の魔獣たちと
+戦うことになった４人
+
+;;モノローグ
+@
+滝夜叉姫の指揮、
+ぬりかべの守り…
+
+;;モノローグ
+@
+そしてマサムネと
+ムラマサの剣技によって
+
+;;モノローグ
+@
+村は被害を受けることなく、
+遂には魔獣を率いる怨霊の
+元へと迫っていた
+
+# move 5303811 3 0
+# face 5303811 "sad"
+# mask 5303811 off
+# alpha 5303811 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@滝夜叉姫
+うむ…！良いぞ！
+しかしここからが…
+
+# alpha 5303811 0 0.5
+# move 102511 3 0
+# face 102511 "irregular"
+# mask 102511 off
+# alpha 102511 1 0.5
+# textboxarrow 0 2
+@ムラマサ
+はぁ…はあ…
+
+# alpha 102511 0 0.5
+# move 100111 3 0
+# face 100111 "unhappy"
+# mask 100111 off
+# alpha 100111 1 0.5
+# textboxarrow 0 2
+@マサムネ
+後は怨霊を…！
+
+# alpha 100111 0 0.5
+# move 5303811 2 0
+# face 5303811 "sad"
+# alpha 5303811 1 0.5
+# mask 5303811 on
+# move 5203311 4 0
+# face 5203311 "sad"
+# alpha 5203311 1 0.5
+# mask 5203311 on
+# textboxarrow 0 3
+@ぬりかべ
+滝夜叉姫様…
+
+# textboxarrow 0 1
+@滝夜叉姫
+むう…
+
+;;モノローグ
+# textflame 0 0
+@
+朝から戦い続けた
+４人に疲労が見える
+
+;;モノローグ
+@
+後一歩とは言え、
+ここで負けては意味が無い
+
+;;モノローグ
+@
+怨霊の方も魔獣たちを失って
+諦めたのか、退却しようとしている
+
+# voice 530381 "takiyashahime_battle_0006"
+# face 5303811 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@滝夜叉姫
+悔しいが、今の体力では
+作戦を実行することは難しい…
+一旦退くぞ！日を改める！
+
+# voice 1001 "masamune_battle_0005"
+# alpha 5303811 0 0.5
+# alpha 5203311 0 0.5
+# move 102511 2 0
+# face 102511 "irregular"
+# alpha 102511 1 0.5
+# mask 102511 on
+# move 100111 4 0
+# face 100111 "nutual"
+# alpha 100111 1 0.5
+# mask 100111 on
+# textboxarrow 0 3
+@マサムネ
+くっ…！
+
+# voice 1025 "muramasa_0015"
+# textboxarrow 0 1
+@ムラマサ
+うぅ…
+
+;;モノローグ
+# bgm "stop"
+# alpha 102511 0 0.5
+# alpha 100111 0 0.5
+# textflame 0 0
+@
+だが、その時ぬりかべが
+怨霊の元へ向かって飛び出した！
+
+# move 910013 3 0
+# mask 910013 off
+# alpha 910013 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@怨霊
+オオオオオ！？
+
+;;演出：画面揺れ
+# shake 0 0.5
+# waitandnext 0.5
+
+# alpha 910013 0 0.5
+# move 5303811 3 0
+# face 5303811 "surprise"
+# mask 5303811 off
+# alpha 5303811 1 0.5
+# textboxarrow 0 2
+@滝夜叉姫
+ぬりかべ！？
+何をしておるのじゃ！
+
+# bgmfile "bgm607_608" "BgmKai" 0
+# alpha 5303811 0 0.5
+# move 5203311 3 0
+# face 5203311 "angry"
+# mask 5203311 off
+# alpha 5203311 1 0.5
+# textboxarrow 0 2
+@ぬりかべ
+ここで逃がしちゃダメ…！
+今が好機…！
+
+# textboxarrow 0 2
+@ぬりかべ
+私がとおせんぼする…！
+だから…！
+
+# alpha 5203311 0 0.5
+# move 102511 2 0
+# face 102511 "normal"
+# alpha 102511 1 0.5
+# mask 102511 on
+# move 100111 4 0
+# face 100111 "unhappy"
+# alpha 100111 1 0.5
+# mask 100111 on
+# textboxarrow 0 3
+@マサムネ
+ぬりかべ殿…
+
+# textboxarrow 0 1
+@ムラマサ
+ぬりかべちゃん…
+
+# voice 530381 "takiyashahime_0032"
+# alpha 102511 0 0.5
+# alpha 100111 0 0.5
+# move 5303811 3 0
+# face 5303811 "angry"
+# mask 5303811 off
+# alpha 5303811 1 0.5
+# textboxarrow 0 2
+@滝夜叉姫
+お主の覚悟…受け取った
+
+# textboxarrow 0 2
+@滝夜叉姫
+作戦を決行するぞ！
+マサムネ、ムラマサ！
+
+# alpha 5303811 0 0.5
+# move 102511 2 0
+# face 102511 "normal"
+# alpha 102511 1 0.5
+# mask 102511 on
+# move 100111 4 0
+# face 100111 "angry"
+# alpha 100111 1 0.5
+# mask 100111 on
+# textboxarrow 0 3
+@マサムネ
+ああ…承知！
+
+# face 102511 "angry"
+# textboxarrow 0 1
+@ムラマサ
+ぬりかべちゃんだけに…
+辛い思いはさせない…！
+
+# alpha 102511 0 0.5
+# alpha 100111 0 0.5
+# move 5303811 3 0
+# face 5303811 "normal"
+# mask 5303811 off
+# alpha 5303811 1 0.5
+# textboxarrow 0 2
+@滝夜叉姫
+わらわとぬりかべが
+ヤツを引き付け、
+お主たちの元へ誘導する！
+
+# textboxarrow 0 2
+@滝夜叉姫
+お主たちは隙を見て
+ヤツを倒すのじゃ！
+良いな！
+
+# voice 1001 "masamune_battle_0004"
+# alpha 5303811 0 0.5
+# move 102511 2 0
+# face 102511 "normal"
+# alpha 102511 1 0.5
+# mask 102511 on
+# move 100111 4 0
+# face 100111 "angry"
+# alpha 100111 1 0.5
+# mask 100111 on
+# textboxarrow 0 3
+@マサムネ
+問題ない、征くぞ
+ムラマサ！
+
+# voice 1025 "muramasa_0032"
+# face 102511 "angry"
+# textboxarrow 0 1
+@ムラマサ
+はい、姉上！
+
+;;演出：場面転換
+# textwindow "close"
+# imagealpha 1 1 0
+# imagepos 1 0 30
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+;;背景：夜の森
+# background "forest_night"
+# alpha 102511 0 0
+# alpha 100111 0 0
+# move 5203311 2 0
+# face 5203311 "angry"
+# alpha 5203311 1 0
+# mask 5203311 on
+# move 910013 4 0
+# alpha 910013 1 0
+# mask 910013 on
+# waitandnext 0.2
+
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 3
+# textwindow "normal"
+@怨霊
+オオオオオオ！！
+
+# voice 520331 "nurikabe_0037"
+# textboxarrow 0 1
+@ぬりかべ
+うっ…ううっ…！
+
+# alpha 5203311 0 0.5
+# alpha 910013 0 0.5
+# move 5303811 3 0
+# face 5303811 "angry"
+# mask 5303811 off
+# alpha 5303811 1 0.5
+# textboxarrow 0 2
+@滝夜叉姫
+もう少しじゃ！
+頑張るのじゃぬりかべ！
+
+# alpha 5303811 0 0.5
+# move 5203311 3 0
+# face 5203311 "angry"
+# mask 5203311 off
+# alpha 5203311 1 0.5
+# textboxarrow 0 2
+@ぬりかべ
+うん…！
+
+;;モノローグ
+# textflame 0 0
+@
+ボロボロの姿で
+攻撃を受けるぬりかべ
+
+;;モノローグ
+@
+その様子を物陰から
+窺っていたムラマサは
+逸る気持ちを抑える
+
+;;モヤモヤ吹き出しで
+# alpha 5203311 0 0.5
+# move 102511 2 0
+# face 102511 "normal"
+# alpha 102511 1 0.5
+# mask 102511 on
+# textflame 1 1
+# textboxarrow 0 0
+# move 100111 4 0
+# face 100111 "nutual"
+# alpha 100111 1 0.5
+# mask 100111 on
+# move 102511 2 0
+# textwindow "moya"
+@ムラマサ
+ぬりかべちゃん…！
+早く…助けないと…！
+
+# face 100111 "angry"
+# textboxarrow 0 3
+# textwindow "normal"
+@マサムネ
+落ち着け、ムラマサ
+気持ちは分かるが…
+辛抱するのだ
+
+# textboxarrow 0 3
+@マサムネ
+彼女たちを信じろ
+そして己を…！
+
+# textboxarrow 0 1
+@ムラマサ
+姉上…
+
+# alpha 102511 0 0.5
+# alpha 100111 0 0.5
+# move 5203311 2 0
+# face 5203311 "angry"
+# alpha 5203311 1 0.5
+# mask 5203311 on
+# move 910013 4 0
+# alpha 910013 1 0.5
+# mask 910013 on
+# textboxarrow 0 3
+@怨霊
+オオオオオオオ！！
+
+# face 5203311 "surprise"
+# textboxarrow 0 1
+@ぬりかべ
+…あっ！
+
+;;モノローグ
+# textflame 0 0
+@
+その時だった
+怨霊の鋭い一撃が、
+ぬりかべを襲う
+
+;;演出：画面揺れ
+# se "SE_5215"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 520331 "nurikabe_0024"
+# textflame 1 1
+# textboxarrow 0 1
+@ぬりかべ
+きゃあああっ！？
+
+# alpha 5203311 0 0.5
+# alpha 910013 0 0.5
+# move 5303811 3 0
+# face 5303811 "surprise"
+# mask 5303811 off
+# alpha 5303811 1 0.5
+# textboxarrow 0 2
+@滝夜叉姫
+ぬりかべ！？
+
+;;モノローグ
+# textflame 0 0
+@
+攻撃を受けきれず、
+遂には倒れ込んでしまう
+ぬりかべ
+
+# alpha 5303811 0 0.5
+# move 102511 3 0
+# face 102511 "angry"
+# mask 102511 off
+# alpha 102511 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ムラマサ
+ぬりかべちゃん―！
+
+;;モノローグ
+# textflame 0 0
+@
+いてもたってもいられず、
+物陰から飛び出そうとする
+ムラマサ―
+
+# alpha 102511 0 0.5
+# move 100111 3 0
+# face 100111 "angry"
+# mask 100111 off
+# alpha 100111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@マサムネ
+拙者が！
+
+# se "SE_9021"
+# textwindow "close"
+# move 100111 5 0.3
+# alpha 100111 0 0.3
+# waitandnext 0.3
+
+# move 102511 3 0
+# face 102511 "surprise"
+# mask 102511 off
+# alpha 102511 1 0.5
+# textboxarrow 0 2
+# textwindow "normal"
+@ムラマサ
+姉上！？
+
+;;モノローグ
+# textflame 0 0
+@
+しかしムラマサよりも先に
+飛び出したのはマサムネだった
+
+;;モヤモヤ吹き出しで
+# move 102511 3 0
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+@ムラマサ
+ど、どうして姉上が…？
+いつも冷静な姉上が何故…
+
+# se "SE_10585"
+# voice 1001 "masamune_0033"
+# alpha 102511 0 0.5
+# move 100111 3 0
+# face 100111 "angry"
+# mask 100111 off
+# alpha 100111 1 0.5
+# textboxarrow 0 2
+# textwindow "normal"
+@マサムネ
+ここは任せろ！
+
+# alpha 100111 0 0.5
+# move 5303811 3 0
+# face 5303811 "normal"
+# mask 5303811 off
+# alpha 5303811 1 0.5
+# textboxarrow 0 2
+@滝夜叉姫
+おお、助かる！
+
+# alpha 5303811 0 0.5
+# move 910013 4 0
+# alpha 910013 1 0.5
+# mask 910013 on
+# waitandnext 0.6
+
+# move 100111 1 0
+# move 100111 2 0.3
+# face 100111 "angry"
+# alpha 100111 1 0.3
+# mask 100111 on
+# waitandnext 0.3
+
+# se "SE_9017"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 -200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+ぬりかべの代わりに
+怨霊の攻撃を受けるマサムネ
+
+;;モノローグ
+@
+徐々にムラマサの待機している
+地点へと怨霊が迫っていた
+
+;;モヤモヤ吹き出しで
+# alpha 100111 0 0.5
+# alpha 910013 0 0.5
+# move 102511 3 0
+# face 102511 "normal"
+# mask 102511 off
+# alpha 102511 1 0.5
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+@ムラマサ
+そっか…姉上は拙者に…！
+拙者を信じて託してくれた！
+
+;;モヤモヤ吹き出しで
+# textboxarrow 0 0
+@ムラマサ
+で、でも拙者が失敗したら…
+これまでの戦いが無駄に…
+
+;;モノローグ
+# textflame 0 0
+@
+重大な役目を受け、
+呆然としてしまうムラマサ
+
+;;モノローグ
+@
+その時、視界に倒れ込んだ
+ぬりかべの姿を見つける
+
+# voice 520331 "nurikabe_0015"
+# alpha 102511 0 0.5
+# move 5203311 3 0
+# face 5203311 "sad"
+# mask 5203311 off
+# alpha 5203311 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ぬりかべ
+う、うぅ…
+
+;;モヤモヤ吹き出しで
+# alpha 5203311 0 0.5
+# move 102511 3 0
+# face 102511 "normal"
+# mask 102511 off
+# alpha 102511 1 0.5
+# textboxarrow 0 0
+# textwindow "moya"
+@ムラマサ
+ぬりかべちゃん…あんなに
+なるまで無理をして…
+
+;;モヤモヤ吹き出しで
+# textboxarrow 0 0
+@ムラマサ
+拙者が弱気になっちゃダメ…
+みんなのために、出来ることを…
+
+;;モノローグ
+# se "SE_0982"
+# textflame 0 0
+@
+ぎゅっと拳を握るムラマサ
+それと同時に、ぬりかべが立ち上がる
+
+# alpha 102511 0 0.5
+# move 5203311 3 0
+# face 5203311 "angry"
+# mask 5203311 off
+# alpha 5203311 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ぬりかべ
+ムラマサちゃん！
+今だよ！
+
+# voice 1025 "muramasa_0032"
+# alpha 5203311 0 0.5
+# move 102511 3 0
+# face 102511 "angry"
+# mask 102511 off
+# alpha 102511 1 0.5
+# textboxarrow 0 2
+@ムラマサ
+はいっ…！
+
+# se "SE_9092"
+# textwindow "close"
+# rightout 102511 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# alpha 102511 0 0
+# textflame 0 0
+# textwindow "normal"
+@
+ぬりかべの合図で
+飛び出すムラマサ
+
+# move 910013 3 0
+# mask 910013 off
+# alpha 910013 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@怨霊
+オオオオオ！？
+
+# voice 1025 "muramasa_0024"
+# alpha 910013 0 0.5
+# move 102511 3 0
+# face 102511 "surprise"
+# mask 102511 off
+# alpha 102511 1 0.5
+# textboxarrow 0 2
+@ムラマサ
+ひっ―！？
+
+;;モノローグ
+# textflame 0 0
+@
+しかしそれを予期して
+いたかのように怨霊が
+ムラマサへと攻撃する
+
+# alpha 102511 0 0.3
+# move 5203311 2 0
+# move 5203311 3 0.3
+# face 5203311 "angry"
+# mask 5203311 off
+# alpha 5203311 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ぬりかべ
+させない…！
+とおせんぼ…！
+
+# se "SE_7259"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+@
+だが、怨霊の攻撃を
+ぬりかべが受け止める
+
+# alpha 5203311 0 0.5
+# move 102511 3 0
+# face 102511 "surprise"
+# mask 102511 off
+# alpha 102511 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ムラマサ
+ぬりかべちゃん…！
+
+# alpha 102511 0 0.5
+# move 5203311 3 0
+# face 5203311 "angry"
+# mask 5203311 off
+# alpha 5203311 1 0.5
+# textboxarrow 0 2
+@ぬりかべ
+大丈夫…！
+絶対に出来るよ！
+特訓を思い出して！
+
+# alpha 5203311 0 0.5
+# move 102511 3 0
+# face 102511 "angry"
+# mask 102511 off
+# alpha 102511 1 0.5
+# textboxarrow 0 2
+@ムラマサ
+は…はいっ！
+
+;;モノローグ
+# textflame 0 0
+@
+ぬりかべに守られながら
+怨霊へと向かうムラマサ
+
+# alpha 102511 0 0.5
+# move 5303811 2 0
+# face 5303811 "angry"
+# alpha 5303811 1 0.5
+# mask 5303811 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 100111 4 0
+# face 100111 "nutual"
+# alpha 100111 1 0.5
+# mask 100111 on
+@滝夜叉姫
+今じゃ！わらわたちも！
+
+# face 100111 "angry"
+# textboxarrow 0 3
+@マサムネ
+承知、ここで終わらせる！
+
+# fadeout "black" 1
+# waitandnext 1

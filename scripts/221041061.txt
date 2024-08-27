@@ -1,0 +1,416 @@
+;;-----------------------------------------
+;;【ファンキル　クリスマスイベント2018　FB修正版2018.11.26
+;;【EP5】君の願いは？
+;;5_1
+;;スクリプト最後の背景：ハルモニア擬人区
+;;-----------------------------------------
+# script "lisp"
+# background "201_room"
+# bgm "bgm032" 0
+;;-----------------------------------------
+;;カリス（クリスマス用のボイスを鳴らすための呼び出し）
+# body 3602511
+# alpha 3602511 0 0
+;;フォルカス（クリスマス用のボイスを鳴らすための呼び出し）
+# body 3301811
+# alpha 3301811 0 0
+;;カリス（クリスマス）
+# body 3602521
+# pos 3602521 3
+# scale 3602521 0.8 0
+# layer 3602521 2
+# alpha 3602521 0 0
+# mask 3602521 off
+;;フォルカス（クリスマス）
+# body 3301821
+# pos 3301821 3
+# scale 3301821 0.8 0
+# layer 3301821 2
+# alpha 3301821 0 0
+# mask 3301821 off
+;;ハルモニア兵
+# body 3810001
+# pos 3810001 3
+# scale 3810001 0.8 0
+# layer 3810001 2
+# alpha 3810001 0 0
+# mask 3810001 off
+;;ハルモニア兵（クローン1）
+# entry 938100011 3810001
+# pos 938100011 3
+# scale 938100011 0.8 0
+# layer 938100011 2
+# alpha 938100011 0 0
+# mask 938100011 off
+;;-----------------------------------------
+;;【EP5】君の願いは？
+;;//背景：ハルモニア擬人区（可能であれば室内）
+# move 3602521 3 0
+# face 3602521 "normal"
+# alpha 3602521 1 0
+# mask 3602521 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0004"
+@カリス
+やっほい！カリスちゃんだよ～！
+あなたの病気、治しちゃうね！
+
+# textflame 0 0
+;;モノローグ
+@
+少年の家には、老女が寝かされていた
+突然の来客に戸惑う様子を見て、
+フォルカスが優しく語りかける
+
+# alpha 3602521 0 0.5
+# move 3301821 3 0
+# face 3301821 "usual"
+# alpha 3301821 1 0.5
+# mask 3301821 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 330181 "forcas_t_0031"
+@フォルカス
+驚かせてしまって申し訳ありません…
+どうか、彼女を信じてください
+
+# textflame 0 0
+;;モノローグ
+@
+老女は少年に部屋を出るように言い、
+少年は黙って部屋から出て行った
+
+# textflame 1 1
+# textboxarrow 0 2
+@フォルカス
+…………
+
+# bgmfile "bgm273" "BgmLostRagnarokEvent" 0
+# textflame 0 0
+;;モノローグ
+@
+そして老女は、治療は不要なので、
+このまま帰ってほしい、と言う
+
+# emotionbody 60251 11 3602521 -100 250
+# effectpattern 60251 2 0
+# effectstart 60251
+# alpha 3301821 0 0.5
+# move 3602521 3 0
+# face 3602521 "surprise"
+# alpha 3602521 1 0.5
+# mask 3602521 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0023"
+@カリス
+え？
+苦しいことは、全部消えるんだよ？
+ねえ、なんで？
+
+# move 3602521 2 0.5
+# mask 3602521 on
+# move 3301821 4 0
+# face 3301821 "usual"
+# alpha 3301821 1 0.5
+# mask 3301821 on
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0028"
+@フォルカス
+カリス、落ち着いてください、
+きっと理由があるのでしょう
+
+# alpha 3602521 0 0.5
+# alpha 3301821 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+時々、苦しそうに咳き込みながら、
+老女はその理由を話した
+
+# move 3301821 3 0
+# face 3301821 "usual"
+# alpha 3301821 1 0.5
+# mask 3301821 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 330181 "forcas_t_0040"
+@フォルカス
+あなたの願いはあの子の健康で、
+自分がいなければ家族の暮らしも
+楽になる、だから治療は不要だ、と…
+
+# face 3301821 "sad"
+# textboxarrow 0 2
+@フォルカス
+…人の願いというのは、
+単純なようで、複雑ですね
+二つの願いは相反しています
+
+# alpha 3301821 0 0.5
+# move 3602521 3 0
+# face 3602521 "normal"
+# alpha 3602521 1 0.5
+# mask 3602521 off
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0033"
+@カリス
+答えは決まってる！
+おばあさんは病気を治して、あの子が
+大きくなるのを見守ってあげるの！
+
+# textboxarrow 0 2
+@カリス
+子供に名前をつけてもらうんだって、
+あの子、言ってたもん！
+
+# move 3602521 2 0.5
+# mask 3602521 on
+# move 3301821 4 0
+# face 3301821 "usual"
+# alpha 3301821 1 0.5
+# mask 3301821 on
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0013"
+@フォルカス
+ですが、カリス、
+この方の願いはどうなりますか？
+
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0005"
+@カリス
+願いは、いつだって変えていいの！
+間違えたなら、直さなくちゃ！
+
+# face 3301821 "surprise"
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0015"
+@フォルカス
+カリス…
+
+# alpha 3602521 0 0.5
+# alpha 3301821 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+その時、部屋の扉が開いて
+少年が飛び込んできた
+
+;;モノローグ
+@
+少年は、僕が大きくなって、
+おばあちゃんも家族も守るから
+病気を治してと、涙ながらに訴える
+
+# move 3301821 3 0
+# face 3301821 "usual"
+# alpha 3301821 1 0.5
+# mask 3301821 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 330181 "forcas_t_0003"
+@フォルカス
+…私も、その意見に賛成です
+ここでカリスと出会ったことも、
+きっとあなたの運命なのでしょう
+
+# alpha 3301821 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+マスターもフォルカスと同じで、
+老女には少年と一緒に生きてほしい
+と、頼む
+
+;;モノローグ
+@
+老女は、全員の意見を聞き、
+自分は間違っていたようだ、と
+静かに涙を流した
+
+# bgm "stop"
+# move 3602521 3 0
+# face 3602521 "normal"
+# alpha 3602521 1 0.5
+# mask 3602521 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0002"
+@カリス
+…それじゃ、病気を治していい？
+
+# textflame 0 0
+;;モノローグ
+@
+老女は、黙ってうなずく
+
+# face 3602521 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0032"
+@カリス
+おっけい！いっくよー！
+
+;;//演出：カリスの治療
+;;//演出としてはフラッシュなど
+# se "SE_4781"
+# textwindow "close"
+# fadein "green" 1
+# waitandnext 1
+
+# bgmfile "bgm290" "BgmLostRagnarokEvent" 0
+# face 3602521 "normal"
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 6025 "chalice_t_0004"
+@カリス
+これでおっけい！
+明日には元気になってるよ～
+少しずつ動いて、体力をつけてね！
+
+# alpha 3602521 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+寝たきりだった老女は起き上がり、
+少年と抱き合って喜ぶ
+
+;;モノローグ
+@
+本当に奇跡だねと、
+マスターはカリスの力に感動する
+
+# move 3301821 3 0
+# face 3301821 "smile"
+# alpha 3301821 1 0.5
+# mask 3301821 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 330181 "forcas_t_0003"
+@フォルカス
+ええ…
+素晴らしい贈り物ですね
+
+# emotionbody 1000 3 3602521 10 290
+# effectpattern 1000 3 3
+# effectstart 1000
+# alpha 3301821 0 0.5
+# move 3602521 3 0
+# face 3602521 "happy"
+# alpha 3602521 1 0.5
+# mask 3602521 off
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0005"
+@カリス
+ふふふっ！
+カリスちゃんマジ天使！
+
+# effectskip 1000
+# face 3602521 "normal"
+# textboxarrow 0 2
+@カリス
+じゃ、帰ろっか！
+またね！
+
+# alpha 3602521 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+マスター達は少年と老女に
+お礼を言われながら家を出た
+
+;;//演出：場所移動
+;;//背景：ハルモニア擬人区
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "town_night_snow"
+# move 3810001 2 0
+# alpha 3810001 1 0
+# mask 3810001 on
+# move 938100011 4 0
+# alpha 938100011 1 0
+# mask 938100011 on
+# waitandnext 0.1
+
+# bgm "bgm005" 0
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 1
+# textwindow "normal"
+@ハルモニア兵1
+待ちなさい！
+擬人達に加担する斬ル姫というのは
+あなた達ですね！
+
+# emotionbody 60252 10 3602521 -70 200
+# effectpattern 60252 4 0
+# effectstart 60252
+# alpha 3810001 0 0.5
+# alpha 938100011 0 0.5
+# move 3602521 3 0
+# face 3602521 "happy"
+# alpha 3602521 1 0.5
+# mask 3602521 off
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0003"
+@カリス
+はーい！そうです！
+
+# effectskip 60252
+# emotionbody 30181 8 3301821 -100 250
+# effectpattern 30181 1 0
+# effectstart 30181
+# alpha 3602521 0 0.5
+# move 3301821 3 0
+# face 3301821 "sad"
+# alpha 3301821 1 0.5
+# mask 3301821 off
+# textboxarrow 0 2
+# voice 330181 "forcas_t_0027"
+@フォルカス
+はぁ…
+正直に答えなくてもいいでしょう…
+
+# effectskip 30181
+# alpha 3301821 0 0.5
+# move 3810001 2 0
+# alpha 3810001 1 0.5
+# mask 3810001 on
+# move 938100011 4 0
+# alpha 938100011 1 0.5
+# mask 938100011 on
+# textboxarrow 0 3
+@ハルモニア兵2
+教皇様の命に従い、裁きを下します！
+
+# alpha 3810001 0 0.5
+# alpha 938100011 0 0.5
+# move 3602521 2 0
+# face 3602521 "normal"
+# alpha 3602521 1 0.5
+# mask 3602521 on
+# move 3301821 4 0
+# face 3301821 "angry"
+# alpha 3301821 1 0.5
+# mask 3301821 on
+# textboxarrow 0 3
+# voice 330181 "forcas_t_battle_0005"
+@フォルカス
+これも運命…わかりました…
+カリス、行きますよ！
+
+# se "SE_6504"
+# emotionbody 1001 3 3602521 10 290
+# effectpattern 1001 1 3
+# effectstart 1001
+# face 3602521 "happy"
+# textboxarrow 0 1
+# voice 6025 "chalice_t_unit_0012"
+@カリス
+おっけい！
+カリスちゃんにお任せあれ！

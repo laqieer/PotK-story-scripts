@@ -1,0 +1,981 @@
+;;-----------------------------------------
+;;でんぱ3_1
+;;-----------------------------------------
+# script "lisp"
+# background "006_town"
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;nemo
+# body 5402411
+# pos 5402411 3
+# scale 5402411 0.8 0
+# layer 5402411 3
+# mask 5402411 off
+# alpha 5402411 0 0
+;;pero
+# body 5503911
+# pos 5503911 1
+# scale 5503911 0.8 0
+# layer 5503911 4
+# alpha 5503911 0 0
+;;izoku
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 3
+# mask 810004 off
+# alpha 810004 0 0
+;;big izoku
+# body 810008
+# pos 810008 3
+# scale 810008 0.8 0
+# layer 810008 3
+# mask 810008 off
+# alpha 810008 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagelayer 1 1
+# imagescale 1 1.2 0
+;;-----------------------------------------
+;;【EP3】二枚の絵
+;;背景：キトゥリス市場街（006_town）
+# fadein "black" 1
+# textwindow "close"
+# waitandnext 1.5
+
+;;ねも立ち絵表示
+# alpha 5402411 1 0.5
+# waitandnext 1.5
+
+;;ぺろりん立ち絵表示
+;;画面外からやってくるイメージ
+# se "SE_0740"
+# move 5402411 4 0.5
+# alpha 5503911 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 5039 "perorin_0002"
+@ぺろりん
+なにやってんの、ねもちゃん？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5402411 "surprise"
+# voice 4024 "nemo_0022"
+@ねも
+あ、ご、ごめん…！
+
+# textflame 0 0
+@
+慌てて店から出てくるねも
+
+# textflame 1 1
+# textboxarrow 0 1
+@ぺろりん
+なに買ったの？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ねも
+あ、細々したものなんだけど…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ぺろりん
+へ～、なになに？
+
+;;ぺろりん立ち絵少しねもに近づく
+# se "SE_5006"
+# sedelay "SE_5007" 0.5
+# move 5503911 2 0.5
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 4024 "nemo_0028"
+@ねも
+え…？別に…
+大したものじゃないよ
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 5503911 "angry"
+# voice 5039 "perorin_0013"
+@ぺろりん
+怪しいな～
+
+;;ぺろりん立ち絵少しねもに近づく
+# se "SE_5006"
+# sedelay "SE_5007" 0.5
+# textboxarrow 0 0
+# move 5503911 3 0.5
+# move 5402411 5 0.5
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5402411 "sad"
+@ねも
+え？な、なにが…？
+
+# textflame 1 1
+# textboxarrow 0 2
+@ぺろりん
+さては、お菓子を買って
+一人で食べようとしているな！？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5402411 "angry"
+# voice 4024 "nemo_0009"
+@ねも
+そんなことしないって！
+
+# move 5503911 2 0.5
+# move 5402411 4 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 5503911 "normal"
+# voice 5039 "perorin_0005"
+@ぺろりん
+あはは、冗談だって
+急がないと、宿取れなくなっちゃうよ
+
+# textflame 1 1
+# textboxarrow 0 3
+@ねも
+う、うん…！
+
+;;ねも、ぺろ立ち絵画面外へ
+# se "SE_5575"
+# alpha 5503911 0 0.3
+# alpha 5402411 0 0.3
+# textflame 0 0
+@
+慌てて、駆けて行く
+ねもとぺろりん
+
+# textflame 0 0
+@
+２人はあれ以来、旅を続けているが
+
+# textflame 0 0
+@
+ぺろりんの記憶の戻し方も、
+元の世界への帰り方も
+未だ分からないままだった
+
+;;暗転
+;;時間経過演出
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+;;背景：教会の一室（201_room）
+# background "201_room"
+# bgm "stop"
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+その夜――
+
+# bgmfile "bgm404" "BgmIntegralNoahEvent003" 0
+# move 5402411 3 0
+# alpha 5402411 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+# face 5402411 "normal"
+@ねも
+………
+
+# textflame 0 0
+@
+宿屋の一室で、
+なにやら集中しているねも
+
+# textflame 0 0
+@
+そこに……
+
+;;ぺろりん立ち絵表示
+;;画面外から入ってくる
+# se "SE_0740"
+# move 5402411 4 0.5
+# move 5503911 2 0.5
+# alpha 5503911 1 0.3
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 1
+@ぺろりん
+はー、いいお湯だった♪
+ねもちゃんも入ったら――
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5402411 "surprise"
+@ねも
+！？
+
+# se "SE_5200"
+# textflame 0 0
+@
+慌てて、なにかを隠すねも
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5402411 "sad"
+@ねも
+………
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 5503911 "surprise"
+# voice 5039 "perorin_0022"
+@ぺろりん
+……あれ？
+今……
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 4024 "nemo_0022"
+@ねも
+なななな…なに…？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 5503911 "angry"
+# voice 5039 "perorin_0010"
+@ぺろりん
+やっぱり一人で
+お菓子食べてた！？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5402411 "angry"
+@ねも
+だから、違うって！！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 5503911 "surprise"
+@ぺろりん
+あーーーっ！？それ！！
+
+# textflame 0 0
+@
+机の上には筆や絵の具が
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 5503911 "normal"
+@ぺろりん
+そっかー、
+街で買ってたのは
+画材だったんだね
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5402411 "sad"
+@ねも
+う、うん……
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5039 "perorin_0002"
+@ぺろりん
+ねぇ、見せて！
+どんな絵、描いてたの！？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ねも
+………
+
+# textflame 0 0
+@
+隠していた背中から
+恐る恐る絵を出して、
+見せるねも
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 4024 "nemo_0015"
+@ねも
+ごめんね、こんな……
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 5503911 "happy"
+# voice 5039 "perorin_0005"
+@ぺろりん
+すごーーーいっ！！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5402411 "surprise"
+@ねも
+！？
+
+# textflame 1 1
+# textboxarrow 0 1
+@ぺろりん
+これ、私！？
+すごいよ、ねもちゃん！！
+絵、めっちゃ上手いじゃん！！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5402411 "sad"
+@ねも
+……怒んないの？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 5503911 "surprise"
+# voice 5039 "perorin_0022"
+@ぺろりん
+え？なんで、私が怒るの？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ねも
+だって…
+私…戦闘でぺろりんに
+助けてもらってばっかだよ…？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ねも
+それなのに…
+のん気に絵なんか描いてて…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 5503911 "normal"
+# voice 5039 "perorin_0028"
+@ぺろりん
+そんなことないよー
+私だって、
+ねもちゃんに助けてもらってるし
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5402411 "surprise"
+@ねも
+……！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ぺろりん
+ねもちゃんは、
+もっと自信持っていいと思うよ？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5402411 "sad"
+# voice 4024 "nemo_0015"
+@ねも
+…で…でも……
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 5503911 "normal"
+@ぺろりん
+戦いにも段々慣れてきてるしさ～
+それに、絵もこんなに
+上手いじゃん！！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 5503911 "happy"
+# voice 5039 "perorin_0030"
+@ぺろりん
+カッコよく描いてくれてありがとね！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ねも
+………
+
+# textflame 0 0
+@
+嬉しさで、頬がほころぶねも
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 5503911 "surprise"
+@ぺろりん
+どうしたの…？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 4024 "nemo_0002"
+@ねも
+ねぇ…
+一緒に描かない？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5039 "perorin_0022"
+@ぺろりん
+え？私も？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ねも
+覚えてないかも知れないけど…
+ぺろりんも絵がすごく上手なんだよ
+
+# textflame 1 1
+# textboxarrow 0 1
+@ぺろりん
+ほんとに！？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5402411 "normal"
+# voice 4024 "nemo_0003"
+@ねも
+うん、だから…
+一緒に描こ
+
+# textflame 0 0
+@
+ぺろりんに画材を貸してあげるねも
+２人はお互いの肖像画を描き合う
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 5503911 "happy"
+# voice 5039 "perorin_0021"
+@ぺろりん
+ほんとだ、上手いっ！
+まさか、こんな才能があったなんて！
+私ってすごいじゃん！！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ねも
+ぺろりんはすごいよ
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5039 "perorin_0005"
+@ぺろりん
+だよねー！？あはは！！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ねも
+本当にすごい
+ぺろりんと一緒なら…
+
+# textflame 1 1
+# textboxarrow 0 3
+@ねも
+どんな苦しいことも
+乗り越えられる気がするよ
+
+# textflame 0 0
+@
+ぺろりんに笑顔を見せるねも
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 5503911 "shy"
+@ぺろりん
+……ねもちゃん
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5402411 "shy"
+# voice 4024 "nemo_0004"
+@ねも
+はい、完成
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 5503911 "happy"
+@ぺろりん
+私もーーーっ！！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 5503911 "normal"
+# voice 5039 "perorin_0002"
+@ぺろりん
+そうだ、今日の記念に
+お互いの絵を
+プレゼントし合おっか？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5402411 "happy"
+# voice 4024 "nemo_0003"
+@ねも
+うん！
+でも…なんの記念？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5039 "perorin_0028"
+@ぺろりん
+え？う～ん……
+…なんか…私たち…
+いい感じだよね……記念？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5402411 "shy"
+# voice 4024 "nemo_0005"
+@ねも
+プッ、なにそれ
+
+# textflame 0 0
+@
+笑い合うねもとぺろりん
+
+# textflame 0 0
+@
+２人は、お互いが描いた絵を
+プレゼントし合うのだった
+
+;;暗転
+;;時間経過演出
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+;;背景：丘（highland）
+# background "highland"
+# bgm "stop"
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 5503911 0 0
+# alpha 5402411 0 0
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+数日後――
+
+;;ねも立ち絵表示
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# move 5402411 3 0
+# alpha 5402411 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+# face 5402411 "angry"
+@ねも
+はぁ…はぁ…はぁ…
+
+# textflame 0 0
+@
+満身創痍で
+なんとか立っている状態のねも
+
+;;ぺろりん立ち絵
+# alpha 5402411 0 0.3
+# move 5503911 3 0
+# mask 5503911 off
+# alpha 5503911 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+# face 5503911 "sad"
+@ぺろりん
+ね、ねもちゃん……
+
+# alpha 5503911 0 0.3
+# textflame 0 0
+@
+ねもの足元には、
+傷ついたぺろりんが
+倒れ伏している
+
+;;大型異族立ち絵（使徒ミノタウロスとか重装兵あたり）
+# alpha 810008 1 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "toge"
+@異族
+グギギギギギッ！！
+
+# move 5503911 2 0
+# textflame 0 0
+# textwindow "nomal"
+@
+２人の前には、
+これまでに対峙したことのない
+強力な異族の個体が立っていた
+
+;;ぺろりん立ち絵表示
+;;倒れているところから立ち上がるので、下から震えながら現れるイメージ
+# alpha 810008 0 0.5
+# move 5503911 3 0
+# alpha 5503911 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ぺろりん
+に…逃げて……！
+
+# alpha 5503911 0 0.3
+# move 810008 2 0
+# layer 810008 5
+# alpha 810008 1 0.3
+# move 5402411 4 0
+# alpha 5402411 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@ねも
+イヤ…！
+ぺろりんを置いて、
+そんなこと出来ないよ…！
+
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 0
+@異族
+グギーーーッ！！
+
+;;異族攻撃
+# se "SE_4602"
+# fadein "white" 0.5
+# move 810008 3 0.3
+# waitandnext 0.2
+
+;;ねも、画面端に吹き飛ぶ
+# shake 0 0.5
+# move 5402411 5 0.3
+# waitandnext 0.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+強烈な一撃がねもを吹っ飛ばす
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 5402411 "sad"
+@ねも
+がはっ…！！
+
+# textflame 0 0
+@
+壁に叩きつけられるねも
+
+# alpha 810008 0 0.3
+# alpha 5402411 0 0.3
+# alpha 5503911 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ぺろりん
+ねもちゃん…！
+
+# move 810008 1 0
+# alpha 810008 1 0.3
+# alpha 5402411 1 0.3
+# alpha 5503911 0 0.3
+# textflame 1 1
+# textboxarrow 0 3
+# voice 4024 "nemo_battle_0006"
+@ねも
+うぅ……！！
+
+# textflame 0 0
+@
+全身に力を入れ、
+崩れ落ちそうになるのを
+必死にこらえるねも
+
+# textflame 0 0
+@
+だが、現実は容赦なく迫ってくる
+
+;;大型異族近寄る
+# move 810008 2 0.5
+# se "SE_5035"
+# textflame 1 1
+# textboxarrow 0 1
+@異族
+グギギギギッ
+
+# se "SE_5036"
+# textflame 0 0
+@
+ゆっくりと近づいてくる異族
+
+;;モヤモヤ吹き出し
+# move 5402411 5 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@ねも
+あぁ…もう……
+ここまでなのかな……
+
+# textflame 0 0
+# textwindow "nomal"
+@
+朦朧とする意識の中で、
+ねもは今までのことを
+思い返していた
+
+;;モヤモヤ吹き出し
+# move 5402411 5 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@ねも
+せっかく戦闘にも慣れてきたのに…
+
+;;モヤモヤ吹き出し
+@ねも
+ぺろりんの記憶を
+戻してあげることも…
+
+;;モヤモヤ吹き出し
+@ねも
+みんなのところに帰ることも
+出来なかったな……
+
+;;大型異族更に近寄る
+# move 810008 3 0.5
+# se "SE_5035"
+# sedelay "SE_5036" 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@異族
+グギギギギッ……
+
+;;モヤモヤ吹き出し
+# move 5402411 5 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@ねも
+あぁ……そういえば…
+ライブどうなったんだろ……
+
+;;モヤモヤ吹き出し
+@ねも
+もう一度……
+ぺろりんと……
+一緒に歌いたかったな……
+
+;;モヤモヤ吹き出し
+@ねも
+ぺろりんと……
+
+# bgm "stop"
+# serif 0
+# textwindow "close"
+# serif 1
+# textflame 1 1
+# textwindow "toge"
+# voice 5039 "perorin_0029"
+@ぺろりん
+やぁぁぁぁぁぁっ！！
+
+# move 5503911 2 0
+;;SE：銃撃音
+# se "SE_9452"
+;;銃撃エフェクト
+# fadein "white" 0.5
+# effectbody 1001 28 0 0 0
+# effectstart 1001
+# waitandnext 0.5
+
+;;モヤモヤ吹き出し
+# move 5402411 5 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 3
+@ねも
+ぺろ…りん……？
+
+# bgmfile "bgm405" "BgmIntegralNoahEvent003" 0
+# alpha 810008 0 0.3
+# alpha 5402411 0 0.3
+# move 5503911 3 0.5
+# alpha 5503911 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 5503911 "angry"
+@ぺろりん
+ねもちゃんに……
+近づくなぁぁぁぁぁっ！！
+
+# move 5503911 4 0.5
+# alpha 5503911 0 0.3
+# textflame 0 0
+# textwindow "nomal"
+@
+己の体に鞭を打ち、
+ぺろりんが異族に
+立ち向かっている
+
+# move 5402411 3 0
+# mask 5402411 off
+# alpha 5402411 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+# face 5402411 "surprise"
+# voice 4024 "nemo_0022"
+@ねも
+ぺろりん！！
+
+# alpha 5402411 0 0.3
+# move 5503911 2 0
+# alpha 5503911 1 0.3
+# move 810008 4 0
+# alpha 810008 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@ぺろりん
+ねもちゃんは…私が守るんだ！！
+
+;;大型異族攻撃
+# se "SE_4100"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 3
+@異族
+グギギギッ！！
+
+# alpha 5402411 1 0.3
+# alpha 5503911 0 0.3
+# alpha 810008 0 0.3
+# textflame 1 1
+# textboxarrow 0 2
+# face 5402411 "angry"
+@ねも
+ぺろ…りん…
+今……
+
+# textflame 0 0
+@
+ぺろりんの救出に向かおうと
+前のめりになった時、
+ねもの懐からなにかが落ちた
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5402411 "surprise"
+@ねも
+…あっ！
+
+# textflame 0 0
+@
+それはぺろりんが描いてくれた
+ねもの肖像画だった
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5402411 "angry"
+@ねも
+……たい
+
+# textflame 1 1
+# textboxarrow 0 2
+@ねも
+助け…たい
+
+# textflame 1 1
+# textboxarrow 0 2
+@ねも
+大好きなぺろりんのこと…
+助けたい！！
+
+# textflame 0 0
+@
+拾い上げようと、
+ねもの手が、絵の紙を握った
+その時――、
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textflame 1 1
+# textwindow "nomal"
+@謎の声
+その願い……確かに届いたよ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 5402411 "surprise"
+@ねも
+！！
+
+;;ねもの体が輝く（胸のあたりに光が出るとか可能なら）
+;;フラッシュ演出とかでもOKです
+# se "SE_13112"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# background "bg_white"
+# move 5402411 4 0
+# layer 5402411 3
+# mask 5402411 off
+# alpha 5402411 0 0
+# move 5503911 2 0
+# layer 5503911 4
+# mask 5503911 on
+# alpha 5503911 0 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1.2
+
+# textflame 0 0
+# textwindow "nomal"
+@
+ねもの全身が
+不思議な光に包まれてゆく
+
+# alpha 5402411 1 0.3
+# alpha 5503911 1 0.3
+# face 5503911 "surprise"
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5039 "perorin_0022"
+@ぺろりん
+ねも…ちゃん？
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textflame 1 1
+# textwindow "nomal"
+@謎の声
+解き放って…
+あなたの想いを……
+
+# fadeout "black" 0.5
+# waitandnext 0.5

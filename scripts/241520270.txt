@@ -1,0 +1,634 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;コマンドキラーズサイドストーリー後編
+;;第5話　タイトル：奏でる者
+;;5_7
+;;スクリプト最後の背景：古びた教会
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgm "bgm003" 0
+;;-----------------------------------------
+;;ロジェスティラ
+# body 235
+# pos 235 3
+# scale 235 0.8 0
+# layer 235 2
+# alpha 235 0 0
+# mask 235 off
+;;ロジェスティラ・神令・スクルド（ボイス用）
+# body 5503711
+# alpha 5503711 0 0
+;;イチイバル
+# body 233
+# pos 233 3
+# scale 233 0.8 0
+# layer 233 2
+# alpha 233 0 0
+# mask 233 off
+;;イチイバル・神令・オーディン（ボイス用）
+# body 5402211
+# alpha 5402211 0 0
+;;オルフェウス・神令・フォルセティ
+# body 5603211
+# pos 5603211 3
+# scale 5603211 0.8 0
+# layer 5603211 2
+# alpha 5603211 0 0
+# mask 5603211 off
+;;オルフェウス
+# body 234
+# pos 234 3
+# scale 234 0.8 0
+# layer 234 2
+# alpha 234 0 0
+# mask 234 off
+;;ラブリュス
+# body 200331
+# pos 200331 3
+# scale 200331 0.8 0
+# layer 200331 2
+# alpha 200331 0 0
+# mask 200331 off
+;;シストルム
+# body 601311
+# pos 601311 3
+# scale 601311 0.8 0
+# layer 601311 2
+# alpha 601311 0 0
+# mask 601311 off
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 2
+# alpha 810004 0 0
+# mask 810004 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;第5話　タイトル：奏でる者
+;;//回想シーン
+;;//背景：平原
+# textwindow "close"
+# waitandnext 0.2
+
+;;オルフェウス（立ち絵無し）
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "normal"
+@オルフェウス
+その日から、あたしは楽器を
+練習するようになった
+
+# textboxarrow 0 0
+@オルフェウス
+キラーズの影響かもしれないけど、
+楽器の練習は楽しくて、自然と
+作詞や作曲もするようになった
+
+# textboxarrow 0 0
+@オルフェウス
+リュディとは、あの平原でときどき
+会ってた
+
+# textboxarrow 0 0
+@オルフェウス
+いつも「初めまして」だったけど
+彼女の歌を聞くのは楽しくて
+励ましてもらえた
+
+# textboxarrow 0 0
+@オルフェウス
+あんなに辛かった毎日が、彼女と
+彼女の音楽のお陰で楽しいと思える
+ようになっていったんだ
+
+# textboxarrow 0 0
+@オルフェウス
+本当は二人で音を合わせてみたかった
+けど、あたしはまだ下手だから、
+そんなこと言い出せなくて…
+
+# textboxarrow 0 0
+@オルフェウス
+一人、部屋で練習を続けてた
+
+# textboxarrow 0 0
+@オルフェウス
+そんな、ある日…
+
+;;//背景：町
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "town"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm004" 0
+# serif 1
+@町人達
+可哀想に…
+まだ若かったのになあ
+
+# serif 1
+@町人達
+あまり長くはないって言われてた
+そうよ…
+それなのに毎日歌って…
+
+;;オルフェウス（立ち絵あり）
+# serif 1
+# textwindow "close"
+# serif 0
+# move 234 3 0
+# face 234 "normal"
+# alpha 234 1 0.5
+# mask 234 off
+# textboxarrow 0 2
+# textwindow "normal"
+@オルフェウス
+あ…お葬式だ…
+誰が亡くなったんだろう？
+
+# face 234 "surprise"
+# textboxarrow 0 2
+@オルフェウス
+え…？
+棺に載せてある、あのギターって…
+リュディの…
+
+;;//背景：室内
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "201_room"
+# alpha 234 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;オルフェウス（立ち絵無し）
+# textboxarrow 0 0
+# textwindow "normal"
+@オルフェウス
+リュディは病を患っていた
+
+# textboxarrow 0 0
+@オルフェウス
+治る見込みはなくて、
+本当は入院してないといけない
+体だったって…
+
+# textboxarrow 0 0
+@オルフェウス
+でも、彼女は療養するより音楽を
+選んだ
+思い切り弾いて歌うことを望んだ
+
+# textboxarrow 0 0
+@オルフェウス
+そうしてリュディは亡くなった
+
+# textboxarrow 0 0
+@オルフェウス
+でも、彼女の音楽は残った
+お葬式でも流れてた
+みんな泣きながら…
+
+# textboxarrow 0 0
+@オルフェウス
+彼女の思い出話をして笑ってた
+あたしの知らないリュディが
+たくさんいた
+
+# textboxarrow 0 0
+@オルフェウス
+あたしは一人、部屋に帰って
+それから…
+
+# textboxarrow 0 0
+@オルフェウス
+それから、ギターを弾いた
+
+# textboxarrow 0 0
+@オルフェウス
+そのとき、やっと分かったんだ
+あたしが何をすればいいのか
+
+# textboxarrow 0 0
+@オルフェウス
+世界を救うために、あたしは
+何がやれるのか
+
+# textboxarrow 0 0
+@オルフェウス
+あたしは音楽で世界を救う
+
+# textboxarrow 0 0
+@オルフェウス
+音楽になら、その力がある
+あたし自身がどこまでやれるのかは
+分からないけれど
+
+# textboxarrow 0 0
+@オルフェウス
+みんなを笑顔にする力が、
+音楽にはある
+みんなを癒す力が、音楽にはある
+
+# textboxarrow 0 0
+@オルフェウス
+この力を身につけることができれば
+胸の奥で疼く使命感とも
+向き合えるはずだ
+
+# textboxarrow 0 0
+@オルフェウス
+あたしは、一人で一生懸命、
+ギターを練習した
+
+# textboxarrow 0 0
+@オルフェウス
+バンドを組んで楽しそうにライブ
+したり、可愛い服を着て友達と
+お喋りしたり…
+
+# textboxarrow 0 0
+@オルフェウス
+そういう明るい世界にも憧れてたけど
+それは自分には手に入らないものだと
+思ってた
+
+# textboxarrow 0 0
+@オルフェウス
+こっそりメイク道具を買って、
+鏡の前だけでするオシャレ
+
+# textboxarrow 0 0
+@オルフェウス
+着ていく予定のない、可愛くて、
+少し大胆な服…
+
+# textboxarrow 0 0
+@オルフェウス
+たまに町を出て、
+リュディのいた草原で
+自分の作った歌を演奏しながら歌う
+
+# textboxarrow 0 0
+@オルフェウス
+いつか、誰かがあたしの曲を見つけて
+演奏してくれたら
+歌ってくれたら
+
+# textboxarrow 0 0
+@オルフェウス
+それで、みんなが笑顔になって
+くれたら…
+
+# textboxarrow 0 0
+@オルフェウス
+あたしの音楽で世界が平和になったら
+最高だなって
+それだけで報われるなって
+
+# textboxarrow 0 0
+@オルフェウス
+そう、思ってたのに…
+
+;;//回想終了
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "bg_black"
+# move 234 3 0
+# face 234 "sad"
+# alpha 234 1 0
+# mask 234 off
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：黒
+;;オルフェウス（独白）
+# bgm "stop"
+# voice 560321 "orpheus_c_0027"
+# move 234 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 234 off
+@オルフェウス
+あたしの音楽じゃ、
+誰の心にも届かない…
+
+;;オルフェウス（独白）
+# textboxarrow 0 0
+@オルフェウス
+みんなを笑顔に、なんて…
+おこがましい夢だったんだ…
+あたし…もう無理だよ…
+
+;;オルフェウス（独白）
+# textboxarrow 0 0
+@オルフェウス
+もう…消えてなくなりたい…
+
+# textboxarrow 0 2
+# textwindow "normal"
+@オルフェウス
+…………
+
+# bgmfile "bgm433_1" "BgmIntegralNoahEvent004" 0
+# face 234 "surprise"
+# textboxarrow 0 2
+@オルフェウス
+…………？
+
+;;オルフェウス（独白）
+# move 234 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 234 off
+@オルフェウス
+音が…聞こえる…
+どこから…？
+
+;;//背景：古びた教会
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "ancient_church"
+# alpha 234 0 0
+# move 601311 3 0
+# face 601311 "angry"
+# alpha 601311 1 0
+# mask 601311 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+@シストルム
+にゃにゃにゃにゃにゃにゃにゃにゃ！
+
+# voice 540221 "ichiibal_c_0015"
+# alpha 601311 0 0.5
+# move 233 3 0
+# face 233 "angry"
+# alpha 233 1 0.5
+# mask 233 off
+# textboxarrow 0 2
+@イチイバル
+まだだよ
+まだ…いける
+
+# voice 550371 "logistille_c_0033"
+# alpha 233 0 0.5
+# move 235 3 0
+# face 235 "angry"
+# alpha 235 1 0.5
+# mask 235 off
+# textboxarrow 0 2
+@ロジェスティラ
+わたしだって…頑張ります…！
+
+# alpha 235 0 0.5
+# move 200331 3 0
+# face 200331 "angry2"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textboxarrow 0 2
+@ラブリュス
+アイドルを～
+なめないでよね～っ！
+
+;;//背景：黒
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "bg_black"
+# alpha 200331 0 0
+# move 234 3 0
+# face 234 "sad"
+# alpha 234 1 0
+# mask 234 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;オルフェウス（独白）
+# move 234 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 234 off
+@オルフェウス
+みんな…諦めてない…
+音はほとんど消されてるのに…
+
+;;オルフェウス（独白）
+# textboxarrow 0 0
+@オルフェウス
+それでも抗って…
+ほんの少しだけ聞こえてくる…
+
+;;オルフェウス（独白）
+# textboxarrow 0 0
+@オルフェウス
+ああ、いいなあ…
+あたしもあんなふうに…
+なりたかった…
+
+;;オルフェウス（独白）
+# textboxarrow 0 0
+@オルフェウス
+でも…あたしの音楽は…
+誰にも届かないから…
+
+;;？？？（コマンド化オルフェウスの立ち絵）
+# bgm "stop"
+# move 5603211 2 0
+# face 5603211 "usual"
+# alpha 5603211 1 0.5
+# mask 5603211 on
+# textboxarrow 0 1
+# move 234 4 0.5
+# mask 234 on
+# textwindow "normal"
+@？？？
+ほんとに？
+
+# textboxarrow 0 1
+@？？？
+ほんとに、そう思ってるの？
+あたしは…
+
+# face 234 "surprise"
+# textboxarrow 0 3
+@オルフェウス
+えっ…？
+
+# bgmfile "bgm429" "BgmIntegralNoahCommand" 0
+# textboxarrow 0 1
+@？？？
+本当に自分の音楽が届かないって
+思ってる？
+違うよね
+
+# textboxarrow 0 1
+@？？？
+あたしはまだ、あたしの音楽を
+奏でてないよね
+
+# face 234 "sad"
+# textboxarrow 0 3
+@オルフェウス
+…………
+
+# textboxarrow 0 1
+@？？？
+みんなで演奏してたのは、
+ラブリュスの曲
+
+# textboxarrow 0 1
+@？？？
+さっき一人で弾いたのは、
+誰かに聞かれても良いように作った
+“余所行き”の曲
+
+# textboxarrow 0 1
+@？？？
+あたしはまだ、あたしの音楽を
+誰にも聞かせてない
+
+# textboxarrow 0 1
+@？？？
+心の奥から溢れ出す
+魂の叫びを
+
+# textboxarrow 0 3
+@オルフェウス
+だけど…それはっ…
+
+# textboxarrow 0 1
+@？？？
+みんなを笑顔にって…他人の心を
+震えさせようってのに…
+
+# textboxarrow 0 1
+@？？？
+自分が自分に嘘吐いてたら、
+そんなもん響くわけないっしょ
+
+# textboxarrow 0 1
+@？？？
+リュディは最期まで自分を偽って
+なかったよ
+
+# textboxarrow 0 1
+@？？？
+あたしも、あたしのビートを
+世界に響かせなよ
+みんなに叩きつけてやんなよ
+
+# textboxarrow 0 1
+@？？？
+そんとき初めて、
+あたしの音楽が届くかどうか
+分かるっしょ？
+
+;;オルフェウス（コマンド立ち絵の方）
+# voice 560321 "orpheus_c_battle_0004"
+# face 5603211 "normal"
+# textboxarrow 0 1
+@オルフェウス
+ほらほら！
+みんな待ってるし！
+行くよ、あたし
+
+;;オルフェウス（通常の方）
+# textboxarrow 0 3
+@オルフェウス
+…怖いよ
+そんなの、怖い
+だって、言い逃れできなくなる
+
+# textboxarrow 0 3
+@オルフェウス
+生のあたしをさらけ出したら…
+もう逃げ場がなくなっちゃうよ…！
+
+# textboxarrow 0 3
+@オルフェウス
+すごく怖いっ…
+すごく怖くて…
+
+# face 234 "normal"
+# textboxarrow 0 3
+@オルフェウス
+ああ…
+うん
+最高に…
+
+# bgm "stop"
+# face 234 "happy"
+# textboxarrow 0 3
+@オルフェウス
+最高に、楽しそうだよね！
+
+;;//背景：古びた教会
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "ancient_church"
+# alpha 5603211 0 0
+# alpha 234 0 0
+# move 234 3 0
+# face 234 "angry"
+# alpha 234 1 0
+# mask 234 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@オルフェウス
+あああああああああああああああああ
+あああああああああああああああああ
+あああああああああああああああ！！
+
+# textboxarrow 0 2
+@オルフェウス
+あたしのビートを
+胸に刻めえええええええええええ！！

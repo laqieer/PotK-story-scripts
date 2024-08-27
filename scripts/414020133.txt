@@ -1,0 +1,566 @@
+;;----------------------------------------------
+;;414020133
+;;２章 輪廻の斬ル姫【EP3バトル後】
+;;----------------------------------------------
+# script "lisp"
+# background "201_beast_night"
+# bgmfile "bgm222" "BgmTowerBattle" 0
+;;カシウス
+# body 166
+# pos 166 3
+# scale 166 0.8 0
+# layer 166 3
+# mask 166 off
+# alpha 166 0 0
+;;ムラマサ
+# body 3102511
+# pos 3102511 3
+# scale 3102511 0.8 0
+# layer 3102511 4
+# mask 3102511 off
+# alpha 3102511 0 0
+;;ロンギヌス
+# body 3300111
+# pos 3300111 3
+# scale 3300111 0.8 0
+# layer 3300111 2
+# mask 3300111 off
+# alpha 3300111 0 0
+;;トレイセーマ兵１
+# body 3830001
+# pos 3830001 3
+# scale 3830001 0.8 0
+# layer 3830001 2
+# mask 3830001 on
+# alpha 3830001 0 0
+# reversal 3830001 0
+;;トレイセーマ兵２
+# entry 938300019 3830001
+# pos 938300019 1
+# scale 938300019 0.8 0
+# layer 938300019 1
+# mask 938300019 on
+# alpha 938300019 0 0
+# reversal 938300019 0
+;;トレイセーマ兵３
+# entry 938300018 3830001
+# pos 938300018 5
+# scale 938300018 0.8 0
+# layer 938300018 1
+# mask 938300018 on
+# alpha 938300018 0 0
+# reversal 938300018 0
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;剣閃エフェクト(ムラマサ)
+# effectbody 1000 3 100 0 5
+;;◆背景：グライヒハイト都内・夜------------------------------
+;;演出・SE：警報が鳴り続けている。町は非常事態体制
+# se "SE_0710"
+# textflame 0 0
+@
+グライヒハイトに
+暴風が吹き上げていた
+
+# textwindow "close"
+# alpha 938300019 1 0
+# rightin 938300019 0.5
+# alpha 3830001 1 0
+# rightin 3830001 0.4
+# alpha 938300018 1 0
+# rightin 938300018 0.3
+# se "SE_5603"
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 383000 "cryptid_0023"
+# chara 3830001
+@トレイセーマ兵
+と、止まれっ、止まれーっ！
+
+# se "SE_5205"
+# alpha 3830001 0 0.5
+# alpha 938300019 0 0.5
+# alpha 938300018 0 0.5
+# alpha 3102511 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3102511 "normal"
+# voice 310251 "muramasa_ge_0012"
+# chara 3102511
+@ムラマサ
+押し、通る!!
+
+# se "SE_4600"
+# alpha 3102511 0 0.5
+# alpha 3830001 1 0.5
+# alpha 938300019 1 0.5
+# alpha 938300018 1 0.5
+# textboxarrow 0 2
+# voice 383000 "cryptid_0013"
+# chara 3830001
+@トレイセーマ兵
+オーダーキラーズと言えど…!!
+
+# alpha 3830001 0 0.5
+# alpha 938300019 0 0.5
+# alpha 938300018 0 0.5
+# alpha 3102511 1 0.5
+# move 3102511 3 0
+# textwindow "toge"
+# textsize 35
+# textflame 1 1
+# textboxarrow 0 0
+# face 3102511 "angry"
+# voice 310251 "muramasa_ge_0029"
+# chara 3102511
+@ムラマサ
+はあぁぁぁぁっ！
+
+;;演出・SE：八本の斬撃が走る
+# se "SE_5204"
+# textwindow "close"
+# rightout 3102511 0.3
+# waitandnext 0.3
+
+# alpha 3102511 0 0
+# pos 3830001 1
+# alpha 3830001 1 0.3
+# pos 938300019 3
+# alpha 938300019 1 0.3
+# pos 938300018 5
+# alpha 938300018 1 0.3
+# waitandnext 0.3
+
+# textwindow "normal"
+# textsize 24
+# se "SE_5655"
+# effectstart 1000
+# fadein "white" 0.5
+# shake 0 0.6
+# textboxarrow 0 2
+# voice 383000 "cryptid_0038"
+# chara 3830001
+@トレイセーマ兵
+グアアアアッ!!
+
+# textwindow "close"
+# alpha 3830001 0 0.5
+# alpha 938300019 0 0.5
+# alpha 938300018 0 0.5
+# se "SE_2019"
+# waitandnext 0.5
+
+# pos 3102511 3
+# alpha 3102511 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 0 0
+@
+ムラマサが一刀振り下ろせば
+八本の斬撃が剣風を巻き起こす
+
+# textwindow "close"
+# se "SE_5575"
+# rightout 3102511 0.4
+# waitandnext 0.4
+
+;;◆背景：黒バック--------------------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# waitandnext 0.6
+
+# alpha 3102511 0 0
+# background "bg_black"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.1
+# imagerightout 0 0.1
+# waitandnext 0.1
+
+# textwindow "normal"
+# textflame 0 0
+@
+ムラマサはカシウスの腕を引き
+グライヒハイトの路地を駆け抜ける
+
+;;◆背景：町はずれ・夜----------------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.1
+# textwindow "close"
+# waitandnext 0.1
+
+# bgm "bgm004" 0
+# pos 3102511 2
+# mask 3102511 on
+# alpha 3102511 1 0
+# face 3102511 "angry"
+# pos 166 4
+# mask 166 on
+# alpha 166 1 0
+# face 166 "sad"
+# background "101_plain_daytime"
+# waitandnext 0.5
+
+# se "SE_5603"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310251 "muramasa_ge_battle_0008"
+# chara 3102511
+@ムラマサ
+はぁ、はぁ、はぁ、ひとまず
+ここまで来れば
+一息、つけるはず…！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 166 "sad"
+# chara 166
+# voice 3031 "cassius_ge_battle_0008"
+@カシウス
+ハァ…ハァ…！
+一休みしたら
+私たちの潜伏場所へ案内するわ…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "sad"
+# chara 3102511
+@ムラマサ
+追われる身というのは
+案外厳しいものだな…！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 166 "normal"
+# chara 166
+# voice 3031 "cassius_ge_0047"
+@カシウス
+何言っているの
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "surprise"
+# voice 310251 "muramasa_ge_0022"
+# chara 3102511
+@ムラマサ
+え？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 166 "happy"
+# chara 166
+# voice 3031 "cassius_ge_0002"
+@カシウス
+あなたはこれから追うんでしょ
+あなた自身の理想を
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "happy"
+# chara 3102511
+@ムラマサ
+カシウス…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 166 "normal"
+# chara 166
+# voice 3031 "cassius_ge_0004"
+@カシウス
+悪しき獣に
+追いつかれないようにね
+
+;;ロンギヌス
+# bgm "stop"
+# se "SE_5586"
+# face 3102511 "surprise"
+# face 166 "surprise"
+# brightness 166 0.6 0.3
+# brightness 3102511 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+# voice 330011 "ronginusu_t_0002"
+# chara 3300111
+@？？？
+獣ではなく
+恐縮ですが
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# brightness 166 1.0 0.3
+# brightness 3102511 1.0 0.3 
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "angry"
+# voice 310251 "muramasa_ge_battle_0006"
+# chara 3102511
+@ムラマサ
+!?
+
+;;◆背景：黒バック--------------------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "top_close"
+# textwindow "bottom_close"
+# waitandnext 0.6
+
+# alpha 3102511 0 0
+# alpha 166 0 0
+# background "bg_black"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.1
+# imagerightout 0 0.1
+# waitandnext 0.1
+
+# textwindow "normal"
+# textflame 0 0
+@
+その瞬間、月明かりとも
+街の灯りとも異なる光が
+二人を照らした
+
+# textflame 0 0
+@
+…そんな錯覚に陥るような
+鮮烈な存在がそこにいた
+
+;;◆背景：町はずれ・夜----------------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.1
+# textwindow "close"
+# waitandnext 0.1
+
+# alpha 3300111 1 0
+# background "101_plain_daytime"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3300111 "normal"
+# voice 330011 "ronginusu_t_0004"
+# chara 3300111
+@ロンギヌス
+ロンギヌス・聖鎖・ガブリエル
+降臨しました
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3300111
+@ロンギヌス
+平穏なる世界の実現のため
+その少女を貰い受けましょう
+
+# textwindow "close"
+# alpha 3300111 0 0.5
+# waitandnext 0.5
+
+# pos 3300111 2
+# mask 3300111 on
+# alpha 3300111 1 0.5
+# pos 3102511 4
+# mask 3102511 on
+# alpha 3102511 1 0.5
+# face 3102511 "angry"
+# waitandnext 0.5
+
+# textwindow "normal"
+# se "SE_5205"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310251 "muramasa_ge_0009"
+# chara 3102511
+@ムラマサ
+…ハルモニア…！
+よくもこんなに早く
+街の中まで…!!
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3300111 "sad"
+# chara 3300111
+@ロンギヌス
+トレイセーマは考えも無しに
+国土を拡げ過ぎました
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3300111 "normal"
+# chara 3300111
+@ロンギヌス
+守備にまわせる兵も足らず
+首都周辺の僅かな騒ぎを囮にすれば
+こうした潜入も容易に
+
+# alpha 3102511 0 0.5
+# pos 166 4
+# mask 166 on
+# alpha 166 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 166 "surprise"
+# chara 166
+# voice 3031 "cassius_ge_0040"
+@カシウス
+ハルモニアの、斬ル姫…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3300111 "happy"
+# voice 330011 "ronginusu_t_0003"
+# chara 3300111
+@ロンギヌス
+残酷な刃同士
+共に行きましょう
+カシウス
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 166 "normal"
+# chara 166
+# voice 3031 "cassius_ge_0034"
+@カシウス
+生憎だけど
+これから獣たちの手綱を
+引かなきゃならないから
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3300111 "normal"
+# voice 330011 "ronginusu_t_0036"
+# chara 3300111
+@ロンギヌス
+悪いようにはしません
+
+# alpha 3300111 0 0.5
+# alpha 166 0 0.5
+# pos 3102511 3
+# mask 3102511 on
+# alpha 3102511 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3102511 "normal"
+# voice 310251 "muramasa_ge_battle_0005"
+# chara 3102511
+@ムラマサ
+カシウス、行って
+
+# textwindow "close"
+# move 3102511 2 0.5
+# pos 166 4
+# alpha 166 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 166 "surprise"
+# chara 166
+# voice 3031 "cassius_ge_0022"
+@カシウス
+あなたは？　ムラマサ
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "happy"
+# chara 3102511
+@ムラマサ
+追うから
+後から
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 166 "normal"
+# chara 166
+# voice 3031 "cassius_ge_0003"
+@カシウス
+…待ってるよ
+
+;;演出：カシウス、退場
+# textwindow "close"
+# se "SE_5575"
+# rightout 166 0.5
+# waitandnext 0.8
+
+# alpha 166 0 0.5
+# alpha 3102511 0 0.5
+# waitandnext 0.5
+
+# pos 3102511 3
+# mask 3102511 off
+# alpha 3102511 1 0.5
+# face 3102511 "angry"
+# se "SE_5582"
+# textwindow "normal"
+# textflame 0 0
+@
+駆け出したカシウスを背に
+ムラマサは刃を抜く
+
+# alpha 3102511 0 0.5
+# pos 3300111 3
+# mask 3300111 off
+# alpha 3300111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3300111 "normal"
+# voice 330011 "ronginusu_t_0027"
+# chara 3300111
+@ロンギヌス
+ガブリエルが吹き鳴らすは
+終焉を告げる調べ…覚悟なさい
+
+# textflame 0 0
+@
+ロンギヌスが長槍を構えると
+その殺気とも闘気ともわからぬ
+気迫がムラマサの肌を焼く
+
+# alpha 3300111 0 0.5
+# alpha 3102511 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3102511 "angry"
+# voice 310251 "muramasa_ge_battle_0006"
+# chara 3102511
+@ムラマサ
+…い、行かせはせぬ…！
+
+# textflame 0 0
+@
+斬ル姫同士の戦いに
+ムラマサが感じているのは
+怯えか、恐れか…
+
+# alpha 3102511 0 0.5
+# alpha 3300111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3300111 "angry"
+# voice 330011 "ronginusu_t_0029"
+# chara 3300111
+@ロンギヌス
+カウントダウンをしましょうか
+終わりまでの秒読みを

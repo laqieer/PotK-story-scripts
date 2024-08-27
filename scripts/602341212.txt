@@ -1,0 +1,568 @@
+;;-----------------------------------------
+;;■さくらコラボイベント_復刻キャラシナリオ2019/03/08
+;;【EP2前半】タイトル：準備で大忙し
+;;スクリプト最後の背景：中庭(夕)
+;;背景：中庭(昼)
+;;-----------------------------------------
+# script "lisp"
+# background "courtyard"
+# bgm "bgm002" 0
+;;-----------------------------------------
+;;さくら制服ver
+# body 145
+# pos 145 3
+# scale 145 0.8 0
+# layer 145 2
+# alpha 145 0 0
+# mask 145 off
+;;ケロちゃん制服ver
+# body 146
+# pos 146 3
+# scale 146 0.8 0
+# layer 146 2
+# alpha 146 0 0
+# mask 146 off
+;;さくらOP2衣装ver
+# body 602341
+# pos 602341 3
+# scale 602341 0.8 0
+# layer 602341 2
+# alpha 602341 0 0
+# mask 602341 off
+# body 179
+# pos 179 3
+# scale 179 0.8 0
+# layer 179 2
+# alpha 179 0 0
+# mask 179 off
+;;ケロちゃん
+# body 180
+# pos 180 2
+# scale 180 0.8 0
+# layer 180 3
+# alpha 180 0 0
+# mask 180 off
+# entry 18001 146
+# pos 18001 3
+# scale 18001 0.8 0
+# layer 18001 2
+# alpha 18001 0 0
+# mask 18001 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;【EP2前半】タイトル：準備で大忙し
+;;＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+;;背景は体育館か中庭(昼)
+;;立ち絵はさくらの単体ver出し
+# voice 60231 "ccsakura_g_0004"
+# move 145 3 0
+# face 145 "normal"
+# alpha 145 1 0
+# mask 145 off
+# textflame 1 1
+# textboxarrow 0 2
+@さくら
+まずは会場につける
+飾りづくりだね
+
+;;立ち絵をさくらの単体ver出し
+;;ケロちゃん単体ver出し
+;;以降、立ち絵をどちらが右にするか左にするかはキャラの向きによって調整ください
+# voice 9966 "cckero_g_0002"
+# move 146 4 0
+# alpha 146 1 0.5
+# mask 146 on
+# textboxarrow 0 3
+@ケロちゃん
+結構広いけど
+ほんまにさくらだけで大丈夫なんか？
+
+# voice 60231 "ccsakura_g_0003"
+# face 145 "happy"
+# textboxarrow 0 2
+@さくら
+うん！
+今から準備すれば間に合うはずだよ！
+
+;;時間経過のカーテン演出
+;;右→左の暗転通過
+;;
+;;背景は教室(昼)
+;;家庭科室の形で使用
+;;
+;;立ち絵はさくらの単体ver出し
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "classroom02_afternoon"
+# alpha 146 0 0
+# move 145 3 0
+# face 145 "normal"
+# alpha 145 1 0
+# mask 145 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@さくら
+次はお料理だね
+こんなに一人で作ったことないけど
+
+# face 145 "happy"
+# textboxarrow 0 2
+@さくら
+でもみんなの
+喜んでくれる顔がみたいから
+がんばる！
+
+;;さくら立ち絵消し
+;;ケロちゃん単体出し
+# voice 9966 "cckero_g_0032"
+# alpha 145 0 0.5
+# move 146 3 0
+# alpha 146 1 0.5
+# mask 146 off
+# textboxarrow 0 2
+@ケロちゃん
+おう、味見はまかしときいや！
+
+;;立ち絵をさくらの単体ver出し
+;;ケロちゃん単体ver出し
+# voice 60231 "ccsakura_g_0009"
+# move 145 3 0
+# face 145 "normal"
+# alpha 145 1 0.5
+# textboxarrow 0 2
+# move 146 4 0.5
+# mask 146 on
+@さくら
+もう、ケロちゃんたら
+調子いいんだから
+
+;;時間経過のカーテン演出
+;;右→左の暗転通過
+;;背景は体育館か中庭(夕方)
+;;
+;;立ち絵はケロちゃんの単体ver出し
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "courtyard_evening"
+# alpha 145 0 0
+# move 145 3 0
+# face 145 "normal"
+# alpha 145 1 0
+# mask 145 off
+# move 146 4 0
+# alpha 146 1 0
+# mask 146 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 9966 "cckero_g_0033"
+# textboxarrow 0 3
+# textwindow "normal"
+@ケロちゃん
+やっとわいの出番やな！
+マジックの演出はまかしときいや！
+
+# textboxarrow 0 2
+@さくら
+やっとの出番って…
+さんざんつまみ食いしてたじゃない
+
+# voice 9966 "cckero_g_0013"
+# textboxarrow 0 3
+@ケロちゃん
+味見や！
+それにあっちとこっちは別腹やしな
+
+# textboxarrow 0 3
+@ケロちゃん
+さあ、わいが演技指導を
+直々にしたるで
+
+# textboxarrow 0 3
+@ケロちゃん
+…と、その前に
+実は知世にこのことを話したらな
+これを用意してくれたんや
+
+# voice 60231 "ccsakura_g_0022"
+# face 145 "surprise"
+# textboxarrow 0 2
+@さくら
+え、これを知世ちゃんが…？
+
+;;衣装がどこから来たものなのかという点について
+;;知世からのものとしたいというご提案の箇所について、監修いただいた通り、
+;;知世が用意してくれたものとシナリオ内に記載しております
+;;ケロちゃん立ち絵消し
+;;さくら立ち絵単体表示
+;;さくらOP2衣装verの単体立ち絵使用
+;;以降はずっとこの衣装で通してください
+# fadeout "white" 0.3
+# waitandnext 0.3
+
+# alpha 145 0 0
+# alpha 146 0 0
+# move 602341 3 0
+# face 602341 "normal"
+# alpha 602341 1 0
+# mask 602341 off
+# waitandnext 0.1
+
+# fadein "white" 0.3
+# waitandnext 0.3
+
+# voice 60231 "ccsakura_g_0006"
+# textboxarrow 0 2
+@さくら
+わあ…
+知世ちゃん、ありがとう
+今度お礼を言わなくっちゃ
+
+# textboxarrow 0 1
+@ケロちゃん
+ことづけやが
+
+# textboxarrow 0 1
+@ケロちゃん
+「お礼はいいので
+『記録（レコード）』で記録を
+お願いしますわ」だそうや
+
+;;↓イベントシナリオでさくらとケロちゃんは魔力があるのでファンキル世界に来れる
+;;↓トンネルを通じて常時行き来できるとなっている立て付けなので整合性はとれてます
+# textboxarrow 0 1
+@ケロちゃん
+こっちの世界に来れるなら
+自分で撮影したのにって
+えらい残念がってたで
+
+;;さくら立ち絵単体ver表示
+;;ケロちゃん立ち絵単体ver表示
+;;の二人が画面内の形へ
+# textboxarrow 0 1
+@ケロちゃん
+さて、気合いも入ったことやし
+さっそく始めるで！
+
+# voice 60231 "ccsakura_g_0003"
+# textboxarrow 0 2
+@さくら
+うん
+
+# alpha 602341 0 0.5
+;;モノローグ
+# textflame 0 0
+@
+と、最初は持ち前の元気で
+数々の準備をこなしていった
+さくらだったのだが…
+
+;;一時暗転→背景表示
+;;背景は体育館か中庭(昼)
+;;
+;;さくら立ち絵単体だし
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "courtyard"
+# alpha 602341 1 0
+# mask 602341 off
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@さくら
+ふう、飾り付けは多かったけど
+これで最後かな
+
+;;立ち絵をさくらの単体ver出し
+;;ケロちゃん単体ver出し
+# textboxarrow 0 1
+@ケロちゃん
+さくら、この紅白のポンポン…
+ちょっと変やないか？
+
+# face 602341 "surprise"
+# textboxarrow 0 2
+@さくら
+あっ、切るほうを間違っちゃってる！
+うそ、これも！
+
+;;背景は教室(昼)
+;;家庭科室の形で使用
+;;立ち絵をさくらの単体ver出し
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "classroom02_afternoon"
+# face 602341 "surprise"
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 60231 "ccsakura_g_0022"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@さくら
+あれ、なんだか焦げ臭いような…
+
+;;立ち絵をさくらの単体ver出し
+;;ケロちゃん単体ver出し
+# voice 9966 "cckero_g_0045"
+# textboxarrow 0 1
+@ケロちゃん
+さくら、あの鍋からや！
+
+# voice 60231 "ccsakura_g_0023"
+# textboxarrow 0 2
+@さくら
+ほぇえええええ！
+火にかけっぱなしだったよぉ！
+
+;;時間経過のカーテン演出
+;;右→左の暗転通過
+;;背景は体育館か中庭(夕方)
+;;立ち絵をさくらの単体ver出し
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "courtyard_evening"
+# alpha 602341 0 0
+# move 179 3 0
+# alpha 179 1 0
+# mask 179 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+@さくら
+ではご覧ください
+あっという間に
+あちらに瞬間移動をします！
+
+;;↓台詞のみでさくらの立ち絵を出した状態
+# serif 1
+@ケロちゃん
+そう、そこでカードをこっそり…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+@さくら
+記録したものを映し出せ…
+『記録（レコード）』
+
+;;さくら立ち絵消し
+# alpha 179 0 0.5
+;;ケロちゃん立ち絵単体出し
+# move 18001 3 0
+# alpha 18001 1 0.5
+# mask 18001 off
+# textboxarrow 0 2
+@ケロちゃん
+…………
+
+;;ケロちゃん立ち絵単体をも一体出して
+;;ケロちゃんの立ち絵が画面に2体並んでいる形
+;;片方のケロちゃん(記録のカードで出したものではない方)にリアクションのエモーションをつけてください
+# textwindow "close"
+# move 18001 4 0.5
+# move 180 2 0
+# alpha 180 1 0.5
+# mask 180 on
+# waitandnext 1
+
+# voice 9966 "cckero_g_0010"
+# jump 180
+# textboxarrow 0 1
+# textwindow "normal"
+@ケロちゃん
+って、なんで
+わいが出てきとるんや！
+
+;;テンポ重視でさくらは台詞のみ
+# voice 60231 "ccsakura_g_0023"
+# serif 1
+@さくら
+ほえええええええー！？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 1
+@ケロちゃん
+さくら、映し出すもんが
+まちがっとるで！
+
+# textboxarrow 0 1
+@ケロちゃん
+これはこの前のピクニックの時に
+『記録（レコード）』で
+撮ってもらった、
+
+# textboxarrow 0 1
+@ケロちゃん
+わいのスナップやないかい！
+
+;;一時暗転→背景表示
+;;背景は中庭(昼)
+;;
+;;さくら立ち絵単体ver表示
+;;ケロちゃん立ち絵単体ver表示
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "courtyard"
+# alpha 180 0 0
+# alpha 18001 0 0
+# move 602341 3 0
+# face 602341 "sad"
+# alpha 602341 1 0
+# mask 602341 off
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@さくら
+…………
+
+# textboxarrow 0 1
+@ケロちゃん
+元気だしいや、さくら
+ひとりであない頑張ったさかい
+失敗が続くのも仕方ないで
+
+# voice 60231 "ccsakura_g_0028"
+# textboxarrow 0 2
+@さくら
+うん…
+
+# textboxarrow 0 2
+@さくら
+でもこのままじゃ
+みんなへ招待状を出せるのが
+いつになるかわからないし
+
+# textboxarrow 0 2
+@さくら
+それに少しでもみんなが
+喜んでくれるように
+もっと一つ一つをちゃんとしたいな
+
+# textboxarrow 0 1
+@ケロちゃん
+まあ、そうやけど…
+
+# textflame 0 0
+@マスター
+さくらちゃん
+どう、うまくいってる？
+
+# voice 60231 "ccsakura_g_0001"
+# face 602341 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@さくら
+あ、マスターさん
+ううん、実は…
+
+# textflame 0 0
+@マスター
+さくらちゃんはみんなを喜ばそうと
+笑顔にしようとしてるんだよね？
+
+# textflame 1 1
+# textboxarrow 0 2
+@さくら
+うん…
+
+# textflame 0 0
+@マスター
+みんなを笑顔にしたいさくらちゃんが
+そんな顔をしてるのは寂しいな
+
+@マスター
+ありがとう会が開催できたとしても
+さくらちゃんの今の顔を知ったら
+
+@マスター
+みんなも寂しいんじゃないかって
+思ったんだ
+
+@マスター
+だから…
+
+# voice 60231 "ccsakura_g_0022"
+# face 602341 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@さくら
+ほえ？
+
+# textflame 0 0
+@マスター
+だよね、みんな？
+
+# textflame 1 1
+# textboxarrow 0 1
+@ケロちゃん
+おっと…
+
+;;ケロちゃんの立ち絵を消して、さくらの胸元に隠れたと見えた形に
+;;現れた姫達から身を隠す（前回の取り決めでケロちゃんは正体を隠している）
+;;ここからさくらの立ち絵のみ表示
+# textwindow "close"
+# move 602341 3 0.5
+# alpha 602341 0 0.5
+# waitandnext 0.5
+
+# serif 1
+@姫たち
+「「「さくらちゃんっ！」」」
+
+# move 179 3 0.5
+# alpha 179 1 0.5
+# voice 60231 "ccsakura_g_0023"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@さくら
+ほええええええええー！？
+み、みんなどうしたの？

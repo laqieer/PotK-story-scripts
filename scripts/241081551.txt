@@ -1,0 +1,485 @@
+;;-----------------------------------------
+;;まどマギイベント5-1
+;;-----------------------------------------
+# script "lisp"
+# bgmfile "bgm348_349" "BgmSeaEventBattle003" 0
+# background "sea_palmbeach_day"
+;;-----------------------------------------
+;;アルマス
+# body 2103811
+# pos 2103811 3
+# scale 2103811 0.8 0
+# layer 2103811 3
+# mask 2103811 off
+# alpha 2103811 0 0
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 4
+# mask 139 off
+# alpha 139 0 0
+;;まどか
+# body 2401111
+# pos 2401111 3
+# scale 2401111 0.8 0
+# layer 2401111 3
+# mask 2401111 off
+# alpha 2401111 0 0
+;;マミ
+# body 2501411
+# pos 2501411 3
+# scale 2501411 0.8 0
+# layer 2501411 3
+# mask 2501411 off
+# alpha 2501411 0 0
+;;からまろ
+# body 805121
+# pos 805121 3
+# scale 805121 0.8 0
+# layer 805121 4
+# mask 805121 off
+# alpha 805121 0 0
+;;ほむら
+# body 2501311
+# pos 2501311 3
+# scale 2501311 0.8 0
+# layer 2501311 3
+# mask 2501311 off
+# alpha 2501311 0 0
+;;杏子
+# body 2301511
+# pos 2301511 3
+# scale 2301511 0.8 0
+# layer 2301511 3
+# mask 2301511 off
+# alpha 2301511 0 0
+;;さやか
+# body 2102011
+# pos 2102011 3
+# scale 2102011 0.8 0
+# layer 2102011 3
+# mask 2102011 off
+# alpha 2102011 0 0
+;;異族
+# body 2811004
+# pos 2811004 5
+# scale 2811004 0.7 0
+# layer 2811004 4
+# mask 2811004 on
+# alpha 2811004 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;背景：海辺
+# fadein "black" 1
+# textwindow "close"
+# waitandnext 1
+
+# emotionbody 1000 10 2301511 -80 200
+# effectpattern 1000 4 3
+# effectstart 1000
+# alpha 2301511 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 2301511 "usual"
+# voice 3015 "kyoko_0004"
+@杏子
+はむっ、ん～！
+海の家の焼きそばってなんで
+こんなにうまいんだろうな！
+
+# effectskip 1000
+# textflame 0 0
+@
+海の家についた一同は情報収集に
+向かったまどか達と杏子の食事に
+付き合うマスターとで分かれていた
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 2301511 "normal"
+# voice 3015 "kyoko_0003"
+@杏子
+あたしはさっきも言った通り
+ほむらを見かけてすぐに
+ここを出たから新しい情報はないぜ
+
+# textflame 0 0
+@
+杏子とも合流できたのは
+良かったのだが、またもや
+新しい情報は無し
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 2301511 "sad"
+# voice 3015 "kyoko_0028"
+@杏子
+こんな状況でもなきゃ
+常夏の島ってのは
+いい休暇になったのにな…
+
+# textflame 0 0
+@
+そう言ってため息をつく杏子
+それにはマスターも同意だ
+
+# textflame 0 0
+@
+ウォータースポーツに興じる
+集団を眺め、あんな風にみんなと
+遊べたら…とマスター
+
+# emotionbody 2000 2 2301511 0 240
+# effectpattern 2000 1 1
+# effectstart 2000
+# textflame 1 1
+# textboxarrow 0 2
+# face 2301511 "normal"
+# voice 3015 "kyoko_0002"
+@杏子
+だよなぁ…ん？
+あそこにいるの、さやかじゃないか？
+
+# textflame 0 0
+@
+マスターと杏子が眺めていた集団に
+たしかに見覚えのある姿がある
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 2301511 "usual"
+@杏子
+あ、気付いた
+
+;;演出：次のさやか、セリフのみ
+# alpha 2301511 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textflame 1 1
+# textwindow "nomal"
+@さやか
+あれー、マスターと杏子？
+今そっち行くねー！
+
+;;演出：さやか水着Ver.in
+# serif 1
+# textwindow "close"
+# alpha 2102011 1 0.5
+# se "SE_5602"
+# waitandnext 0.7
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 2102011 "usual"
+# voice 1020 "sayaka_0004"
+@さやか
+あれ、もしかして
+みんな集まってる感じ？
+最後になっちゃったかー
+
+# alpha 2102011 0 0.5
+# alpha 2301511 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2301511 "sad"
+# voice 3015 "kyoko_0027"
+@杏子
+呑気に遊んでた癖によく言うよ
+
+# alpha 2301511 0 0.5
+# alpha 2102011 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2102011 "usual"
+# voice 1020 "sayaka_0002"
+@さやか
+あ、そのことについて
+みんなに話があるの！
+
+;;演出：時間経過の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 2102011 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 2501411 2 0
+# mask 2501411 on
+# alpha 2501411 1 0.5
+# move 2103811 4 0
+# mask 2103811 on
+# face 2103811 "usual"
+# alpha 2103811 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 2501411 "sad"
+# voice 5014 "mami_0002"
+@マミ
+それで、どういうことなの？
+美樹さんは遊んでたらしいけど…
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1038 "almace_0028"
+@アルマス
+私達もさやかのこと言えないくらい
+ゆるい感じだったけどね
+
+# alpha 2501411 0 0.5
+# alpha 2103811 0 0.5
+# alpha 2102011 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2102011 "angry"
+@さやか
+それが、ただ遊んでた
+訳じゃないんですよマミさん！
+
+# textflame 1 1
+# textboxarrow 0 2
+@さやか
+この島に異族っていう化け物が
+現れるって話は知ってる？
+
+# move 2102011 2 0.5
+# mask 2102011 on
+# move 2401111 4 0
+# mask 2401111 on
+# alpha 2401111 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 2401111 "normal"
+# voice 4011 "madoka_0003"
+@まどか
+うん、何度か戦ったよ
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1020 "sayaka_0003"
+@さやか
+もう遭遇したなら話が早いや
+あの異族はね…
+遊んでると寄ってくるんだって！
+
+# alpha 2401111 0 0.5
+# alpha 2103811 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 2103811 "angry"
+# voice 1038 "almace_0009"
+@アルマス
+…どういうこと？
+そんないい加減な話信じられないわ
+
+# emotionbody 3000 6 2102011 50 200
+# effectpattern 3000 1 1
+# effectstart 3000
+# textflame 1 1
+# textboxarrow 0 1
+@さやか
+いい加減じゃないよ！
+寄ってきた異族を何体も倒したし
+
+# alpha 2103811 0 0.5
+# alpha 2102011 0 0.5
+# move 2501311 3 0
+# mask 2501311 off
+# alpha 2501311 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2501311 "angry"
+# voice 5013 "homura_0027"
+@ほむら
+遊んでるところへ仲間に入れてって
+寄ってきたとでも言うのかしら？
+なんて呑気なヤツらなの…
+
+# alpha 2501311 0 0.5
+# face 2103811 "usual"
+# alpha 2103811 1 0.5
+# move 139 2 0
+# mask 139 off
+# alpha 139 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 139 "worry"
+# voice 9967 "titania_0042"
+@ティターニア
+でも、寄ってきて暴れるのであれば
+危険なことには変わりありませんね
+
+# emotionbody 4000 2 2103811 10 290
+# effectpattern 4000 1 1
+# effectstart 4000
+# textflame 1 1
+# textboxarrow 0 3
+# face 2103811 "surprise"
+# voice 1038 "almace_0023"
+@アルマス
+ティニ、いつの間に復活したの？
+さっきまでしゃべるのも
+辛そうだったのに
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 139 "normal"
+# voice 9967 "titania_0007"
+@ティターニア
+海の家で涼んで元気回復です！
+ただここにも私に合うサイズの
+水着はありませんでした
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 139 "worry"
+# voice 9967 "titania_0026"
+@ティターニア
+うぅ…
+
+# textflame 0 0
+@
+それじゃあおびき寄せるためには
+まずは遊ばないと…と
+支度を始めるマスター
+
+# emotionbody 5000 10 2301511 -80 200
+# effectpattern 5000 4 3
+# effectstart 5000
+# alpha 139 0 0.5
+# alpha 2103811 0 0.5
+# move 805121 2 0
+# alpha 805121 1 0.5
+# mask 805121 on
+# move 2301511 4 0
+# mask 2301511 on
+# alpha 2301511 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 2301511 "happy"
+# voice 3015 "kyoko_0006"
+@杏子
+やることはあるって言っても
+遊んでいいんだろ？
+よっしゃー！海で遊ぶぞー！
+
+# effectskip 5000
+# se "SE_0928"
+# textflame 1 1
+# textboxarrow 0 1
+@からまろ
+キュキューッ！
+
+# se "SE_6504"
+# emotionbody 6000 3 2401111 10 220
+# effectpattern 6000 1 3
+# effectstart 6000
+# alpha 805121 0 0.5
+# alpha 2301511 0 0.5
+# move 2102011 2 0
+# mask 2102011 on
+# face 2102011 "usual"
+# alpha 2102011 1 0.5
+# move 2401111 4 0
+# mask 2401111 on
+# alpha 2401111 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 2401111 "happy"
+# voice 4011 "madoka_0004"
+@まどか
+ふふ、からまろも嬉しそうだね
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1020 "sayaka_0005"
+@さやか
+この、からまろ？
+なんだか人懐っこくてかわいいね！
+
+# se "SE_6504"
+# emotionbody 7000 3 805121 10 260
+# effectpattern 7000 1 3
+# effectstart 7000
+# move 2102011 1 0.5
+# move 2401111 5 0.5
+# move 805121 3 0
+# alpha 805121 1 0.5
+# mask 805121 on
+# se "SE_0928"
+# textflame 1 1
+# textboxarrow 0 2
+@からまろ
+キュッキュッキュ～♪
+
+# textflame 0 0
+@
+楽しそうにさやかの周りを
+ぴょんぴょん跳ねるからまろ
+
+# emotionbody 8000 1 2501311 10 260
+# effectpattern 8000 1 0
+# effectstart 8000
+# alpha 2102011 0 0.5
+# alpha 2401111 0 0.5
+# alpha 805121 0 0.5
+# move 2501311 3 0
+# mask 2501311 off
+# alpha 2501311 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2501311 "angry"
+# voice 5013 "homura_battle_0005"
+@ほむら
+…っ！
+
+# alpha 2501311 0 0.5
+# move 2811004 3 0
+# mask 2811004 off
+# alpha 2811004 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@異族
+グギィ…
+
+# textflame 0 0
+@
+異族の唐突な襲来に驚きつつ
+すぐさま戦闘態勢に入るまどか達
+
+# alpha 2811004 0 0.5
+# move 2102011 2 0
+# mask 2102011 on
+# face 2102011 "angry"
+# alpha 2102011 1 0.5
+# move 2401111 4 0
+# mask 2401111 on
+# alpha 2401111 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 2401111 "sad"
+# voice 4011 "madoka_0028"
+@まどか
+さやかちゃんの言う通り
+遊んでると寄ってくるのかな…
+
+# textflame 1 1
+# textboxarrow 0 1
+@さやか
+考えるのは後！
+さっさと倒しちゃお！

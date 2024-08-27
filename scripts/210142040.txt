@@ -1,0 +1,547 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１４章 章タイトル「ラルゴカタストロフィ―激突―」
+;;第2話－４　タイトル：決着の刻
+;;2_4_0
+;;スクリプト最後の背景：平原
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;アルテミス
+# body 5400131
+# pos 5400131 3
+# scale 5400131 0.8 0
+# layer 5400131 2
+# alpha 5400131 0 0
+# mask 5400131 off
+# brightness 5400131 0.8 0
+;;ケラウノス
+# body 500131
+# pos 500131 3
+# scale 500131 0.8 0
+# layer 500131 2
+# alpha 500131 0 0
+# mask 500131 off
+;;アポロン
+# body 400331
+# pos 400331 3
+# scale 400331 0.8 0
+# layer 400331 2
+# alpha 400331 0 0
+# mask 400331 off
+;;グラーシーザ・擬装・ウォーリアー
+# body 5302621
+# pos 5302621 3
+# scale 5302621 0.8 0
+# layer 5302621 2
+# alpha 5302621 0 0
+# mask 5302621 off
+;;グランテピエ・獣刻・バハムート
+# body 5303411
+# pos 5303411 3
+# scale 5303411 0.8 0
+# layer 5303411 2
+# alpha 5303411 0 0
+# mask 5303411 off
+;;ムー
+# body 161
+# pos 161 3
+# scale 161 0.6 0
+# layer 161 2
+# alpha 161 0 0
+# mask 161 off
+;;-----------------------------------------
+;;第2話－４　タイトル：決着の刻
+;;//背景：平原
+# move 5303411 3 0
+# face 5303411 "angry"
+# alpha 5303411 1 0
+# mask 5303411 off
+# textflame 1 1
+# textboxarrow 0 2
+@グランテピエ
+待って、アルテミス！
+私の声を聞いて欲しいの
+
+# emotionbody 1000 15 5400131 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# alpha 5303411 0 0.5
+# move 5400131 3 0
+# face 5400131 "angry"
+# alpha 5400131 1 0.5
+# mask 5400131 off
+# textboxarrow 0 2
+@アルテミス
+アアアアアアアアアアアアアア！
+
+;;//アルテミスが矢を放つ
+# se "SE_4301"
+# waitandnext 0.5
+
+# effectskip 1000
+# voice 9953 "mwu_0023"
+# alpha 5400131 0 0.5
+# move 161 2 0
+# alpha 161 1 0.5
+# mask 161 on
+# textboxarrow 0 1
+# move 5303411 4 0
+# face 5303411 "angry"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+@ムー
+おおっと…！
+グラ、ありゃ無理だぜ…
+聞く耳持たねぇってやつだ
+
+# voice 530341 "grandepieu_di_0015"
+# face 5303411 "sad"
+# textboxarrow 0 3
+@グランテピエ
+それでも彼女を止めないと…
+何か良い方法はない、かな？
+
+# textboxarrow 0 1
+@ムー
+取り押さえて無理やり意識を
+こっちに向けさせりゃ何とかって
+ところか？でもよぉ…
+
+;;//アルテミスが矢を放つ
+# se "SE_4301"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@ムー
+おっと…
+あの矢をかいくぐって取り押さえる
+のは命がけになるぜ
+
+# face 5303411 "angry"
+# textboxarrow 0 3
+@グランテピエ
+そうだね
+私はどうなってもいいから
+アルテミスを助けないと
+
+# textboxarrow 0 1
+@ムー
+だから、どうなってもいいとか
+言うなよなー
+俺はお前が一番心配だぜ
+
+# voice 530341 "grandepieu_di_0030"
+# face 5303411 "normal"
+# textboxarrow 0 3
+@グランテピエ
+心配してくれて、ありがとうムー
+でも、私がいかないと…
+
+# alpha 161 0 0.5
+# alpha 5303411 0 0.5
+# move 400331 3 0
+# face 400331 "normal"
+# alpha 400331 1 0.5
+# mask 400331 off
+# textboxarrow 0 2
+@アポロン
+お姉ちゃーん！
+
+# voice 9953 "mwu_0023"
+# alpha 400331 0 0.5
+# move 161 3 0
+# alpha 161 1 0.5
+# mask 161 off
+# textboxarrow 0 2
+@ムー
+うおっ！？
+あいつ…アポロンじゃねえか！？
+何でこんなところにいるんだ！？
+
+# move 5302621 1 0
+# face 5302621 "normal"
+# alpha 5302621 1 0.5
+# mask 5302621 on
+# mask 161 on
+# move 500131 5 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 on
+# textboxarrow 0 3
+@ケラウノス
+ああ、やっと追いついたね～
+
+# textboxarrow 0 1
+@グラーシーザ
+おまえたちがまちからはなれていった
+から、きになっておってきたのだ
+なんぎなことになっているな
+
+# voice 5001 "keraunosu_0004"
+# face 500131 "happy"
+# textboxarrow 0 3
+@ケラウノス
+私達にお姉さんのお手伝いをさせて
+欲しいな～
+あ、お礼なんていいよ～悪いな～
+
+# textboxarrow 0 2
+@ムー
+いや、まだ何も言ってねぇぞ！
+
+# alpha 5302621 0 0.5
+# alpha 161 0 0.5
+# alpha 500131 0 0.5
+# move 400331 3 0
+# face 400331 "normal"
+# alpha 400331 1 0.5
+# mask 400331 off
+# textboxarrow 0 2
+@アポロン
+お姉ちゃん！
+ボクだよ、アポロンだよ！
+
+# effectstart 1000
+# alpha 400331 0 0.5
+# move 5400131 3 0
+# face 5400131 "angry"
+# alpha 5400131 1 0.5
+# mask 5400131 off
+# textboxarrow 0 2
+@アルテミス
+アアアアアアアアア！
+
+;;//アルテミスがアポロンを攻撃する
+# se "SE_4301"
+# waitandnext 0.5
+
+# effectskip 1000
+# voice 4003 "aporon_0024"
+# alpha 5400131 0 0.5
+# move 400331 3 0
+# face 400331 "surprise"
+# alpha 400331 1 0.5
+# mask 400331 off
+# textboxarrow 0 2
+@アポロン
+うひゃあっ…！
+
+# move 400331 2 0.5
+# mask 400331 on
+# move 5303411 4 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# textboxarrow 0 3
+@グランテピエ
+手助けに来てくれたんだね
+みんな優しい子ばかりで
+お姉さん感激しちゃった
+
+# voice 530341 "grandepieu_di_0028"
+# textboxarrow 0 3
+@グランテピエ
+えっとね、
+アルテミスの動きを止めたいんだけど
+
+# voice 4003 "aporon_0010"
+# face 400331 "angry"
+# textboxarrow 0 1
+@アポロン
+ボクがやるよ！
+っていうか、ボク以外がお姉ちゃんに
+触るなんて許さないんだからね！
+
+# face 5303411 "sad"
+# textboxarrow 0 3
+@グランテピエ
+とても危険、だよ？
+
+# textboxarrow 0 1
+@アポロン
+キミ、誰？
+ボクとお姉ちゃんの間に割り込もうと
+するなら射るからね～っ
+
+# alpha 400331 0 0.5
+# alpha 5303411 0 0.5
+# move 500131 3 0
+# face 500131 "happy"
+# alpha 500131 1 0.5
+# mask 500131 off
+# textboxarrow 0 2
+@ケラウノス
+いや～
+美しい姉妹愛だな～
+
+# voice 5001 "keraunosu_0030"
+# textboxarrow 0 2
+@ケラウノス
+私もサポートするから
+アポロンに任せてみてよ
+あ、恩に着てくれるなんてありがとう
+
+# move 161 2 0
+# alpha 161 1 0.5
+# mask 161 on
+# textboxarrow 0 1
+# move 500131 4 0.5
+# mask 500131 on
+@ムー
+だからグラは何も言ってねぇ
+だろうが！
+
+# voice 530341 "grandepieu_di_0030"
+# alpha 161 0 0.5
+# alpha 500131 0 0.5
+# move 5303411 3 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# textboxarrow 0 2
+@グランテピエ
+アポロン、ケラウノス、
+ありがとう
+必ず暴走を解くから
+
+# voice 4003 "aporon_0029"
+# alpha 5303411 0 0.5
+# move 400331 3 0
+# face 400331 "normal"
+# alpha 400331 1 0.5
+# mask 400331 off
+# textboxarrow 0 2
+@アポロン
+よ～し、いっくぞ～！
+
+;;//アポロンが飛び出す
+# se "SE_9021"
+# textwindow "close"
+# leftout 400331 0.5
+# waitandnext 0.5
+
+# alpha 400331 0 0
+# waitandnext 0.2
+
+# move 400331 3 0
+# face 400331 "angry"
+# alpha 400331 1 0.5
+# mask 400331 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アポロン
+お姉ちゃん！
+止まって！
+
+;;//アポロンがアルテミスの前に立ちふさがる
+# effectstart 1000
+# textwindow "close"
+# alpha 400331 0 0.5
+# move 5400131 2 0
+# face 5400131 "angry"
+# alpha 5400131 1 0.5
+# mask 5400131 on
+# waitandnext 0.5
+
+# se "SE_5200"
+# move 400331 4 0
+# face 400331 "angry"
+# alpha 400331 1 0
+# mask 400331 on
+# rightin 400331 0.5
+# waitandnext 0.8
+
+# effectskip 1000
+# voice 9953 "mwu_0022"
+# alpha 5400131 0 0.5
+# alpha 400331 0 0.5
+# move 161 2 0
+# alpha 161 1 0.5
+# mask 161 on
+# textboxarrow 0 1
+# move 5303411 4 0
+# face 5303411 "angry"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# textwindow "normal"
+@ムー
+何やってんだ、あいつ！？
+弓矢を捨ててアルテミスの前に
+立ちやがった
+
+# textboxarrow 0 1
+@ムー
+あんなの射てくれと言わんばかり
+じゃねぇか！
+
+# voice 530341 "grandepieu_di_0012"
+# textboxarrow 0 3
+@グランテピエ
+アポロン、いけないっ！
+
+# alpha 161 0 0.5
+# move 500131 2 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 on
+# textboxarrow 0 1
+@ケラウノス
+まあまあ
+麗しい姉妹愛を信じようよ
+
+# face 5303411 "sad"
+# textboxarrow 0 3
+@グランテピエ
+姉妹愛…
+それは、信じたい、けど…
+
+# effectstart 1000
+# alpha 500131 0 0.5
+# alpha 5303411 0 0.5
+# move 5400131 2 0
+# face 5400131 "angry"
+# alpha 5400131 1 0.5
+# mask 5400131 on
+# move 400331 4 0
+# face 400331 "angry"
+# alpha 400331 1 0.5
+# mask 400331 on
+# textboxarrow 0 3
+@アポロン
+お姉ちゃん！
+
+# textboxarrow 0 1
+@アルテミス
+アアアアア…
+アアアアアアアア！
+
+# effectskip 1000
+# alpha 5400131 0 0.5
+# alpha 400331 0 0.5
+# move 161 2 0
+# alpha 161 1 0.5
+# mask 161 on
+# textboxarrow 0 1
+# move 500131 4 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 on
+@ムー
+くそっ！
+やっぱダメじゃねぇか…！
+
+;;//アルテミスが矢を放つ
+# se "SE_4301"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# bgm "stop"
+# textboxarrow 0 3
+@ケラウノス
+いいや
+狙い通りだよ
+
+;;//ケラウノスが銃を撃つ
+# se "SE_4400"
+# waitandnext 0.5
+
+;;//ケラウノスの銃弾がアルテミスの矢を弾く
+# se "SE_3006"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@ムー
+んなっ！？
+アルテミスの矢が逸れた！？
+
+# effectstart 1000
+# alpha 161 0 0.5
+# alpha 500131 0 0.5
+# move 5400131 2 0
+# face 5400131 "angry"
+# alpha 5400131 1 0.5
+# mask 5400131 on
+# move 400331 4 0
+# face 400331 "sad"
+# alpha 400331 1 0.5
+# mask 400331 on
+# textboxarrow 0 3
+@アポロン
+お姉ちゃん！
+やっぱりボクを射たりしないよねっ
+
+;;//アポロンがアルテミスに抱きつく
+# se "SE_5200"
+# textwindow "close"
+# move 400331 3 0.2
+# waitandnext 0.2
+
+# textboxarrow 0 1
+# textwindow "normal"
+@アルテミス
+アアアアアアアアアアアアアア！
+
+# textboxarrow 0 2
+@アポロン
+お姉ちゃん、ボクだよ！
+落ち着いてっ
+
+# bgmfile "bgm464_1" "BgmIntegralNoahDisrupters" 0
+# effectskip 1000
+# voice 530341 "grandepieu_di_0048"
+# alpha 400331 0 0.5
+# alpha 5400131 0 0.5
+# move 161 2 0
+# alpha 161 1 0.5
+# mask 161 on
+# move 5303411 4 0
+# face 5303411 "angry"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# textboxarrow 0 3
+@グランテピエ
+ムー、今だよ！
+アルテミスを暴走から解放しよう！
+
+# voice 9953 "mwu_0003"
+# textboxarrow 0 1
+@ムー
+任せろぉ！
+グラ！準備は万端だぜ！
+
+# textboxarrow 0 3
+@グランテピエ
+アルテミス、
+自分の意思を取り戻して！
+
+;;//グランテピエがアルテミスの暴走を解く
+# effectstart 1000
+# textwindow "close"
+# alpha 161 0 0.5
+# alpha 5303411 0 0.5
+# move 5400131 3 0
+# face 5400131 "angry"
+# alpha 5400131 1 0.5
+# mask 5400131 off
+# waitandnext 0.5
+
+# se "SE_0994"
+# waitandnext 0.5
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;//アルテミスから黒い霧が消える
+# effectskip 1000
+# brightness 5400131 1 0.5
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@アルテミス
+アアアアアアああああっ…

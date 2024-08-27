@@ -1,0 +1,340 @@
+;;----------------------------------------------
+;;100213083
+;;タイトル：ケアフル・シューター 08 戦闘後
+;;----------------------------------------------
+# script "lisp"
+# background "angel_world"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;ムー
+# body 161
+# pos 161 3
+# scale 161 0.6 0
+# layer 161 5
+# mask 161 off
+# alpha 161 0 0
+;;レーヴァ
+# body 3100211
+# pos 3100211 2
+# scale 3100211 0.8 0
+# layer 3100211 4
+# mask 3100211 on
+# alpha 3100211 1 0
+;;ヘレナ
+# body 3302811
+# pos 3302811 4
+# scale 3302811 0.8 0
+# layer 3302811 2
+# mask 3302811 on
+# alpha 3302811 0 0
+# face 3302811 "angry"
+;;ニール
+# body 162
+# pos 162 3
+# scale 162 0.6 0
+# layer 162 5
+# mask 162 off
+# alpha 162 0 0
+;;ヴァナルカンド
+# body 3601111
+# pos 3601111 4
+# scale 3601111 0.8 0
+# layer 3601111 3
+# mask 3601111 on
+# alpha 3601111 1 0
+# face 3601111 "angry"
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;剣閃（レーヴァ）
+# effectbody 1000 1 100 0 5
+;;剣閃（ヘレナ）
+# effectbody 2000 2 0 0 1
+;;剣閃（ヴァナル）
+# effectbody 3000 4 50 0 3
+# effectbody 3001 6 0 0 3
+;;◆背景：ハルモニア---------------------------------------------
+# move 3100211 2 0
+# textwindow "toge"
+# textsize 35
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "angry"
+# voice 310021 "revatein_ge_battle_0001"
+# chara 3100211
+@レーヴァテイン
+ハッ！
+
+;;レーヴァ
+# textwindow "close"
+# se "SE_5204"
+# move 3100211 3 0.3
+# effectstart 1000
+# waitandnext 0.3
+
+# voice 310021 "revatein_ge_battle_0002"
+# se "SE_5810"
+# shake 0 0.6
+# fadein "white" 0.6
+# rightout 3601111 0.5
+# alpha 3100211 0 0.5
+# waitandnext 0.5
+
+# voice 360111 "vanargand_t_battle_0005"
+# se "SE_9146"
+# pos 3601111 3
+# leftin 3601111 0.4
+# waitandnext 0.4
+
+;;ヘレナ
+# se "SE_5204"
+# alpha 3302811 1 0
+# rightin 3302811 0.4
+# waitandnext 0.4
+
+# se "SE_9117"
+# voice 3028 "herena_a_battle_0001"
+# face 3601111 "surprise"
+# effectstart 2000
+# shake 0 0.6
+# fadein "white" 0.6
+# leftout 3601111 0.5
+# move 3302811 3 0.3
+# waitandnext 0.5
+
+# textwindow "normal"
+# textsize 24
+# textflame 1 1
+# textboxarrow 0 2
+# face 3302811 "normal"
+# voice 3028 "herena_a_0004"
+# chara 3302811
+@ヘレナ
+ふっ…
+息が上がってきたんじゃないか
+セイントキラーズのヴァナルガンド
+
+# alpha 3302811 0 0.5
+# alpha 162 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9952 "nir_0005"
+# chara 162
+@ニール
+アタチ達の速さには誰もついて
+来られないんだから仕方ないわよね
+
+# alpha 162 0 0.5
+# alpha 161 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9953 "mwu_0020"
+# chara 161
+@ムー
+いけいけレヴァ！
+このまま押し切っちまおうぜ！
+
+# alpha 161 0 0.5
+# pos 3100211 2
+# alpha 3100211 1 0.5
+# pos 3601111 4
+# alpha 3601111 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 3601111 "usual"
+# voice 360111 "vanargand_t_0007"
+# chara 3601111
+@ヴァナルガンド
+…さすがに一対二は厳しいですね
+あまり手の内を
+見せたくはなかったのですけれど
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "angry"
+# voice 310021 "revatein_ge_0007"
+# chara 3100211
+@レーヴァテイン
+…！？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3601111 "angry"
+# voice 360111 "vanargand_t_battle_0001"
+# chara 3601111
+@ヴァナルガンド
+月より授かった魔術の深奥、
+見せてあげます！
+
+# textwindow "close"
+# se "SE_5575"
+# rightout 3601111 0.4
+# alpha 3100211 0 0.4
+# waitandnext 0.4
+
+# pos 3302811 4
+# face 3302811 "normal"
+# alpha 3302811 1 0.4
+# pos 3601111 3
+# leftin 3601111 0.4
+# waitandnext 0.4
+
+# voice 360111 "vanargand_t_battle_0002"
+# se "SE_4818"
+# effectstart 3000
+# face 3302811 "angry"
+# shake 0 0.6
+# fadein "white" 0.3
+# waitandnext 0.5
+
+;;仕切り直し
+# se "SE_5204"
+# rightout 3302811 0.1
+# waitandnext 0.1
+
+# se "SE_5575"
+# rightout 3601111 0.3
+# waitandnext 0.3
+
+# face 3302811 "surprise"
+# pos 3302811 3
+# leftin 3302811 0.4
+# waitandnext 0.4
+
+# pos 3601111 2
+# leftin 3601111 0.2
+# waitandnext 0.2
+
+# voice 360111 "vanargand_t_0029"
+# se "SE_4816"
+# effectstart 3001
+# move 3601111 3 0.1
+# move 3302811 5 0.1
+# waitandnext 0.1
+
+# se "SE_4756"
+# shake 0 0.6
+# fadein "white" 0.5
+# move 3601111 2 0.3
+# move 3302811 4 0.3
+# waitandnext 0.6
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "angry"
+# voice 3028 "herena_a_0023"
+# chara 3302811
+@ヘレナ
+はあっ！？
+今まで本気で相手してなかったのか…
+ヘレナも嘗められたものだね
+
+# alpha 3302811 0 0.5
+# alpha 3601111 0 0.5
+# pos 161 3
+# alpha 161 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9953 "mwu_0015"
+# chara 161
+@ムー
+くそっ…！
+あの眼鏡ちゃん、
+ヘレナに攻撃を集中してやがる
+
+# alpha 161 0 0.5
+# alpha 3302811 1 0.5
+# face 3302811 "normal"
+# alpha 3601111 1 0.5
+# move 3601111 2 0
+# textwindow "toge"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3601111 "angry"
+# voice 360111 "vanargand_t_0029"
+# chara 3601111
+@ヴァナルガンド
+私の瞳からは誰も逃れられません
+さあ、従いなさい！
+
+;;ヴァナルガンドがヘレナに指輪を押しつける
+# textwindow "normal"
+# se "SE_9036"
+# shake 1 0.6
+# subfillrect 1 "blue" 0.6 0.5 0
+# brightness 3302811 0.6 0.6
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "surprise"
+# voice 3028 "herena_a_0037"
+# chara 3302811
+@ヘレナ
+あうっ…！？
+まさか…その指輪…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3601111 "usual"
+# chara 3601111
+@ヴァナルガンド
+ソロモンの指輪…
+鉄でできた方を悪魔に当てると
+使役できる伝承があるそうですね
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3601111 "normal"
+# voice 360111 "vanargand_t_0004"
+# chara 3601111
+@ヴァナルガンド
+私も教皇様から
+教えていただいたのですけれど、
+ご気分はどうですか？
+
+# se "SE_9036"
+# subfillrect 1 "blue" 0.6 0.5 0
+# brightness 3302811 1.0 0.6
+# shake 1 0.6
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "sad"
+# voice 3028 "herena_a_0038"
+# chara 3302811
+@ヘレナ
+…………つぅっ！
+
+# alpha 3302811 0 0.5
+# alpha 3601111 0 0.5
+# alpha 161 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9953 "mwu_0023"
+# chara 161
+@ムー
+ヴァナルガンドが持ってるの…
+鉄製の指輪じゃねえか…！？
+
+# alpha 161 0 0.5
+# alpha 162 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9952 "nir_0038"
+# chara 162
+@ニール
+逃げて、レーヴァ！
+
+# alpha 162 0 0.5
+# pos 3601111 2
+# alpha 3601111 1 0.5
+# pos 3302811 4
+# alpha 3302811 1 0.5
+# face 3302811 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3601111 "angry"
+# voice 360111 "vanargand_t_battle_0003"
+# chara 3601111
+@ヴァナルガンド
+逃がしませんよ
+敵を排除しなさい、ヘレナ！

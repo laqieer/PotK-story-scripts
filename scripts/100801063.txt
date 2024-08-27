@@ -1,0 +1,137 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー8章
+;;第1話　タイトル：地底世界へ
+;;1_6_3
+;;スクリプト最後の背景：地底表層部
+;;-----------------------------------------
+# script "lisp"
+# background "101_hole"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 3
+# alpha 139 0 0
+# mask 139 off
+# face 139 "normal"
+;;アルマス
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# layer 172 3
+# alpha 172 0 0
+# mask 172 off
+# face 172 "normal"
+;;モラルタ
+# body 3104011
+# pos 3104011 3
+# scale 3104011 0.8 0
+# layer 3104011 2
+# alpha 3104011 0 0
+# mask 3104011 off
+# face 3104011 "normal"
+;;ベガルタ
+# body 3104111
+# pos 3104111 3
+# scale 3104111 0.8 0
+# layer 3104111 2
+# alpha 3104111 0 0
+# mask 3104111 off
+# face 3104111 "normal"
+;;地底アルマス
+# body 3840001
+# pos 3840001 3
+# scale 3840001 0.8 0
+# layer 3840001 2
+# alpha 3840001 0 0
+# mask 3840001 off
+# face 3840001 "normal"
+;;-----------------------------------------
+;;//背景：地底表層部
+# se "SE_0719"
+# voice 1038 "almace_0002"
+# move 172 3 0
+# face 172 "normal"
+# alpha 172 1 0
+# mask 172 off
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+ねえ、どこに向かってるの？
+本当に私のことが分かるんでしょうね
+
+# alpha 172 0 0.5
+# voice 1040 "morallta_0004"
+# move 3104111 2 0
+# face 3104111 "normal"
+# alpha 3104111 1 0.5
+# mask 3104111 on
+# move 3104011 4 0
+# face 3104011 "normal"
+# alpha 3104011 1 0.5
+# mask 3104011 on
+# textboxarrow 0 3
+@モラルタ
+大丈夫、大丈夫
+ほら、見えてきたよっ
+
+# voice 1041 "beagallta_0005"
+# face 3104111 "happy"
+# textboxarrow 0 1
+@ベガルタ
+問題ない、問題ない
+ほら、あの建物だよっ
+
+# alpha 3104111 0 0.5
+# alpha 3104011 0 0.5
+# voice 9967 "titania_0003"
+# move 172 2 0
+# face 172 "normal"
+# alpha 172 1 0.5
+# mask 172 on
+# move 139 4 0
+# face 139 "surprise"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 3
+@ティターニア
+あれは…何かの研究所でしょうか？
+けれど、酷く傷んでいるような
+
+# textboxarrow 0 1
+@アルマス
+どう見ても廃墟よ…
+あんなところに私の記憶が？
+
+# alpha 172 0 0.5
+# alpha 139 0 0.5
+# move 3104111 2 0
+# face 3104111 "happy"
+# alpha 3104111 1 0.5
+# mask 3104111 on
+# move 3104011 4 0
+# face 3104011 "normal"
+# alpha 3104011 1 0.5
+# mask 3104011 on
+# textboxarrow 0 0
+@モラルタ＆ベガルタ
+早く早く！
+こっちだよ、アルマス！
+
+;;//アルマス達が研究所に向かう
+# se "SE_0719"
+# textwindow "close"
+# alpha 3104111 0 0.5
+# alpha 3104011 0 0.5
+# waitandnext 0.5
+
+;;//その後で地底アルマス登場
+# textwindow "normal"
+# move 3840001 3 0
+# face 3840001 "normal"
+# alpha 3840001 1 0.5
+# mask 3840001 off
+@？？？
+…………見つけた

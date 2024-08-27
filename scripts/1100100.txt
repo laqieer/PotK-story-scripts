@@ -1,0 +1,531 @@
+;;//第0話　タイトル：喪失の際会
+;;//背景：セピアにする？
+;;//天上編・地上編のシーンを幾つか時系列バラバラで
+;;//フラッシュバックさせるように出す
+;;//ラストは天上編OPのティルフィングが
+;;//「この呪われた世界を…」と言っているシーンか
+;;//天上編ラストでマスターと別れるシーンか
+;;//テレビの電源を落とすような演出で急に終わる
+;;//黒画面に白文字で
+;;//――奪還せよ
+;;//背景：黒
+# script "lisp"
+# bgm "bgm103" 0
+# subfillrect 1 "black" 0 0 1
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# body 136
+# pos 136 3
+# scale 136 0.8 0
+# alpha 136 0 0
+# mask 136 off
+# face 136 "sad"
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# alpha 24 0 0
+# mask 24 off
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# alpha 137 0 0
+# mask 137 off
+;;回想用
+# imageset 0 "st160801_SS_01"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "st160801_SS_04"
+# imagealpha 1 0 0
+# imagelayer 1 2
+# imageset 2 "finale"
+# imagealpha 2 0 0
+# imagelayer 2 3
+# imageset 3 "bg_white_circle"
+# imagealpha 3 0 0
+# imagescale 3 1.2 0
+;;回想用ここまで
+# imageset 4 "bg_black"
+# imagealpha 4 0 0
+# imagescale 4 1 0
+# imagelayer 4 5
+# imagelayer 3 4
+# waitandnext 0.3
+
+# background "flower_garden"
+# waitandnext 0.3
+
+# imagepos 4 0 0
+# imagepos 3 0 0
+# background "fairy_world"
+# waitandnext 0.1
+
+# se "SE_0742"
+# fadein "red" 0.3
+# subfillrect 1 "black" 0 0 0
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imagealpha 3 1 0
+# waitandnext 1.5
+
+# se "SE_0742"
+# fadein "red" 0.3
+# imagealpha 0 0 0
+# imagealpha 1 1 0
+# imagepos 1 0 30
+# waitandnext 1.5
+
+# se "SE_0742"
+# fadein "red" 0.3
+# imagealpha 1 0 0
+# imagealpha 2 1 0
+# imagepos 2 0 30
+# imageset 1 "bg_black"
+# imagealpha 1 0 0
+# imagelayer 1 4
+# waitandnext 1
+
+# imagepos 1 0 1000
+# imagepos 4 0 -1000
+# waitandnext 1
+
+# bgm "stop"
+# se "SE_9451"
+# imagemoveto 1 0 0 0.5
+# imagemoveto 4 0 0 0.5
+# imagealpha 1 1 0.2
+# imagealpha 4 1 0.2
+# imagescale 2 3 0.6
+# waitandnext 1
+
+# imageset 0 "new_chapter_01"
+# imagelayer 0 6
+# imagealpha 0 0 0
+# imagealpha 2 0 0
+# imageset 3 "bg_black_circle"
+# imagealpha 3 1 0
+# imagescale 3 1.2 0
+# imagescale 4 10 0
+# imagealpha 1 0 0
+# waitandnext 0.1
+
+# imagepos 0 0 0
+# imagepos 3 0 0
+# waitandnext 1
+
+# se "SE_0644"
+# imagealpha 0 1 2
+# waitandnext 3
+
+# imagealpha 0 0 2
+# waitandnext 3
+
+# alpha 136 1 0
+# imagealpha 2 0 0
+# serif 1
+# textwindow "normal"
+# chara 136
+# voice 9968 "nadia_0002"
+@？？？
+あの…
+大丈夫ですか…
+
+;;//背景：ラグナロク王国
+;;//目を開けると目の前にナディアがいる
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# imagealpha 4 0 1
+# waitandnext 1.5
+
+# imagealpha 4 1 1
+# waitandnext 1
+
+# imagealpha 3 0 0
+# waitandnext 0.5
+
+# imagealpha 4 0 2
+# waitandnext 2
+
+# bgm "bgm003" 0
+# face 136 "normal"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 136
+@？？？
+ああ、良かった…
+目を覚ましてくれました
+
+# imageset 3 "bg_white_circle"
+# imagealpha 3 0 0
+# imagescale 3 1.2 0
+# textflame 1 1
+# textboxarrow 0 2
+# chara 136
+@？？？
+…ご安心下さい
+ここはラグナロク王国
+私はナディアと申します
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 136
+@ナディア
+アナタの声が、私に届きました…
+私はアナタを…
+探していたのかもしれません
+
+;;//ティルフィングの姿がフラッシュバック
+# se "SE_0742"
+# serif 0
+# textwindow "close"
+# fadein "white" 0.3
+# background "flower_garden"
+# imagealpha 3 1 0
+# imagepos 3 0 0
+# alpha 24 1 0
+# alpha 136 0 0
+# waitandnext 1.5
+
+# fadein "white" 0.3
+# imagealpha 3 0 0
+# alpha 24 0 0
+# alpha 136 1 0
+# background "fairy_world"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 136
+@ナディア
+…アナタのお名前を
+教えていただけませんか？
+
+# select "…なにも思い出せない" "select_label_01" "…自分は誰なんだ？" "select_label_01" "…分からない" "select_label_01"
+…アナタのお名前を
+教えていただけませんか？
+
+# label "select_label_01"
+# face 136 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 136
+@ナディア
+そうですか…
+なにか強いショックを受けて一時的に
+記憶が失われているのかも
+
+# face 136 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 136
+@ナディア
+おそろいですね、私も記憶が…
+
+# face 136 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 136
+# voice 9968 "nadia_0033"
+@ナディア
+あ、ごめんなさい…
+変なことを言ってしまって
+
+# face 136 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 136
+@ナディア
+ひとまず
+『妖精王』オベロン様の
+ところに――
+
+# voice 9969 "gill_0052"
+# bgm "stop"
+# scale 137 1 0
+# move 137 2 0
+# layer 137 2
+# layer 136 1
+# serif 1
+# textwindow "normal"
+@？？？
+姫様、危ねぇ！！
+
+;;//ギルがこちらに飛びかかってくる
+# se "SE_5575"
+# sedelay "SE_5732" 0.7
+# bgm "bgm005" 0
+# serif 1
+# textwindow "close"
+# alpha 137 1 0.3
+# leftin 137 0.3
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 137
+# voice 9969 "gill_0009"
+@ギル
+おい！ 
+ナディア様に近づくんじゃねえ
+
+# se "SE_5205"
+# face 136 "surprise"
+# move 136 4 0.4
+# textflame 1 1
+# textboxarrow 0 3
+# chara 136
+@ナディア
+ギル！乱暴はいけません…
+そのナイフも仕舞って下さい
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 137
+@ギル
+姫様は絶対に
+オレが守ってやるからなっ
+
+# se "SE_4000"
+# face 137 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 137
+# voice 9969 "gill_0031"
+@ギル
+たりゃあ！！
+
+# select "ナイフを避ける" "select_label_02" "ナイフを弾く" "select_label_02" "無視する" "select_label_02"
+たりゃあ！！
+
+# label "select_label_02"
+# face 137 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 137
+# voice 9969 "gill_0023"
+@ギル
+へっ？
+おわあああっ…！
+
+;;//ギルが勝手に転ぶ
+# se "SE_0683"
+# sedelay "SE_0656" 0.5
+# serif 0
+# textwindow "close"
+# shake 0 0.5
+# alpha 137 0 0.5
+# waitandnext 1
+
+# face 137 "sad"
+# scale 137 0.8 0
+# waitandnext 0.2
+
+# bgm "bgm002" 0
+# alpha 137 1 0.5
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 137
+# voice 9969 "gill_0039"
+@ギル
+痛てて…
+あんた、やるじゃねえか…
+
+# face 136 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 136
+@ナディア
+大丈夫ですか、ギル
+また擦り傷を作って…
+
+# face 137 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 137
+@ギル
+こ、このくらい
+たいしたことねえし！
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 137
+@ギル
+ちょっと、
+そいつの力量を確かめただけだよ！
+心配すんなって…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 136
+# voice 9968 "nadia_0012"
+@ナディア
+ギル…
+擦り傷を甘く見てはいけませんよ
+
+# face 137 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 137
+# voice 9969 "gill_0014"
+@ギル
+うぅ…
+
+# face 136 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 136
+# voice 9968 "nadia_0033"
+@ナディア
+私の従者が失礼致しました
+この子はギル
+ほら、ご挨拶をして
+
+# face 137 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 137
+@ギル
+なんでオレが！？
+…おい、あんた名前は？
+どこから来た？
+
+# face 136 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 136
+@ナディア
+この方は記憶がないようなの…
+そのように問い詰めては可哀想です
+
+# face 137 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 137
+# voice 9969 "gill_0030"
+@ギル
+いや、
+お人好しにも程があるって！
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 137
+@ギル
+ラグナロク王国の王女なんだから
+もっと警戒しろよっ
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 137
+@ギル
+オベロン様の「幻想結界」を
+破って入ってきたってのは、
+こいつのことなんだろ！？
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 136
+# voice 9968 "nadia_0030"
+@ナディア
+そのようですね…
+
+# face 136 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 136
+@ナディア
+あ、「幻想結界」というのは
+この国を覆っている
+マナの障壁なんです
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 136
+@ナディア
+「幻想結界」のお陰で、
+この国は外からだと存在自体が
+見えなくなっているんですよ
+
+# face 137 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 137
+@ギル
+で…
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 137
+@ギル
+そんなすげぇ結界があるのに
+こいつ、どうやって入ってきたんだよ
+怪しさしかないだろ！？
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 136
+@ナディア
+…ギル、私の身を案じて
+言ってくれているのには感謝します
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 136
+@ナディア
+でも、オベロン様は「幻想結界」を
+越えて来た方に「バイブス」を
+感じたと仰っていました
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 136
+@ナディア
+もし、この方がそうなら…
+きっと運命の――
+
+# face 137 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 137
+@ギル
+ちょっと待った！
+…こいつの正体はオベロン様に
+調べてもらえば良いし
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 136
+# voice 9968 "nadia_0003"
+@ナディア
+そうですね
+早くお城にお連れ致しましょう！
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 136
+@ナディア
+ギルも迷子にならないようにね！
+
+# face 137 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 137
+@ギル
+ったく、分かってるよ
+…オレはもう、あの頃とは違うんだ
+
+# face 137 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 137
+@ギル
+おい、あんた
+妙な真似すんじゃねえぞ
+見張ってっからな
+

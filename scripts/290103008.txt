@@ -1,0 +1,844 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第3話　タイトル：理想に殉じる者達よ
+;;3_8
+;;スクリプト最後の背景：森
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.8 0
+# layer 502711 2
+# alpha 502711 0 0
+# mask 502711 off
+;;ダモクレス
+# body 103511
+# pos 103511 3
+# scale 103511 0.8 0
+# layer 103511 2
+# alpha 103511 0 0
+# mask 103511 off
+;;ネス
+# body 602011
+# pos 602011 3
+# scale 602011 0.8 0
+# layer 602011 2
+# alpha 602011 0 0
+# mask 602011 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;ケラウノス
+# body 500131
+# pos 500131 3
+# scale 500131 0.8 0
+# layer 500131 2
+# alpha 500131 0 0
+# mask 500131 off
+;;アポロン
+# body 400331
+# pos 400331 3
+# scale 400331 0.8 0
+# layer 400331 2
+# alpha 400331 0 0
+# mask 400331 off
+;;ブリューナク
+# body 500721
+# pos 500721 3
+# scale 500721 0.8 0
+# layer 500721 2
+# alpha 500721 0 0
+# mask 500721 off
+;;フラガラッハ
+# body 101011
+# pos 101011 3
+# scale 101011 0.8 0
+# layer 101011 2
+# alpha 101011 0 0
+# mask 101011 off
+;;プタハ
+# body 601411
+# pos 601411 3
+# scale 601411 0.8 0
+# layer 601411 2
+# alpha 601411 0 0
+# mask 601411 off
+;;-----------------------------------------
+;;第3話　タイトル：理想に殉じる者達よ
+;;//背景：森
+# se "SE_0838"
+# sedelay "SE_0838" 0.8
+# textflame 0 0
+@
+トントン…トントン…
+
+# se "SE_0665"
+@
+チュンチュン♪
+チュンチュン♪
+
+# move 196 3 0
+# face 196 "sad"
+# alpha 196 1 0.5
+# mask 196 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0042"
+@アルマス
+うう～ん…
+
+;;プタハ（声だけ）
+# serif 1
+@プタハ
+アルマスよ、
+そろそろ起きる時間であるぞ
+
+# textboxarrow 0 2
+@アルマス
+うう～ん…
+あと五分…
+
+;;//プタハがやって来る
+# se "SE_0719"
+# sedelay "SE_0812" 1.8
+# serif 1
+# textwindow "close"
+# serif 0
+# move 601411 2 0
+# face 601411 "mad"
+# alpha 601411 1 0.5
+# mask 601411 on
+# textboxarrow 0 1
+# move 196 4 0.5
+# mask 196 on
+# voice 6014 "ptah_0009"
+@プタハ
+そのようなことを言って、
+毎朝寝坊しておるではないか
+早う起きるのだ
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0041"
+@アルマス
+も～っ…
+ママ、布団取らないでよ～…
+
+# face 601411 "normal"
+# textboxarrow 0 1
+@プタハ
+おはよう、アルマス
+早う顔を洗うのだぞ
+皆、もう起きておる故
+
+# textboxarrow 0 3
+@アルマス
+う～ん…
+もう朝か～…
+ふわあああっ
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "forest"
+# alpha 601411 0 0
+# alpha 196 0 0
+# move 400331 2 0
+# face 400331 "normal"
+# alpha 400331 1 0
+# mask 400331 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_0719"
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+おはよー
+
+# face 400331 "happy"
+# textboxarrow 0 1
+# voice 4003 "aporon_0004"
+@アポロン
+アルマス、おっはよ！
+今日もお日様が気持ちいいねっ
+
+# textboxarrow 0 3
+@アルマス
+朝っぱらから元気ねー…
+
+# alpha 400331 0 0.5
+# move 502711 2 0
+# face 502711 "happy"
+# alpha 502711 1 0.5
+# mask 502711 on
+# textboxarrow 0 1
+# voice 5027 "freischotz_0002"
+@フライシュッツ
+アルマスちゃん、おはようの
+はぐだよ、はぐ～♪
+
+# se "SE_0648"
+# textwindow "close"
+# move 502711 3 0.3
+# waitandnext 0.3
+
+# face 196 "angry"
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 9943 "almace_navikan_0061"
+@アルマス
+わっぷ…
+毎朝毎朝、抱きついてこないでよ
+
+# se "SE_0746"
+# alpha 502711 0 0.5
+# move 103511 2 0
+# face 103511 "usual"
+# alpha 103511 1 0.5
+# mask 103511 on
+# textboxarrow 0 1
+# voice 1035 "damocles_0021"
+@ダモクレス
+わ～！
+アルマス、おはよう！
+
+# textboxarrow 0 3
+@アルマス
+ダモクレスも毎朝
+驚かせようとするの、やめて！
+
+# face 103511 "happy"
+# textboxarrow 0 1
+# voice 1035 "damocles_0004"
+@ダモクレス
+これはクレスの愛情表現だよ～♪
+
+# textboxarrow 0 3
+@アルマス
+バカなこと言ってないで、
+さっさとテーブルにつきなさいよ
+朝ご飯食べないと
+
+# alpha 103511 0 0.5
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0002"
+@ラグナロク
+おはよう、アルマス
+
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+あ！
+もう、ラグナロクが来ちゃった
+朝ご飯いいやっ
+
+# alpha 103611 0 0.5
+# move 601411 2 0
+# face 601411 "mad"
+# alpha 601411 1 0.5
+# mask 601411 on
+# textboxarrow 0 1
+# voice 6014 "ptah_0011"
+@プタハ
+それはならぬ
+朝食を抜いては力が出ぬぞ
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+そんなこと言っても
+ラグナロクがっ
+
+# alpha 601411 0 0.5
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0032"
+@ラグナロク
+私はここで待ってるから、
+早く食べて
+
+# alpha 196 0 0.5
+# move 601411 4 0
+# face 601411 "normal"
+# alpha 601411 1 0.5
+# mask 601411 on
+# textboxarrow 0 3
+# voice 6014 "ptah_0031"
+@プタハ
+ラグナロク、いつもすまぬ
+アルマスは寝坊してばかりで…
+
+# textboxarrow 0 1
+@ラグナロク
+大丈夫です
+知ってますから
+
+# face 601411 "happy"
+# textboxarrow 0 3
+# voice 6014 "ptah_0005"
+@プタハ
+ほほほ
+二人は幼き頃より姉妹のように
+育ってきたからのう
+
+# alpha 103611 0 0.5
+# alpha 601411 0 0.5
+# move 400331 3 0
+# face 400331 "happy"
+# alpha 400331 1 0.5
+# mask 400331 off
+# textboxarrow 0 2
+# voice 4003 "aporon_0005"
+@アポロン
+ラグナロクも家族になっちゃえば
+いいのに～♪
+
+# alpha 400331 0 0.5
+# move 103611 2 0
+# face 103611 "usual"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# voice 1036 "ragnarok_0022"
+@ラグナロク
+えっ…それって…
+
+# face 196 "angry"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0017"
+@アルマス
+アポロン！
+ラグナロクが困ってるでしょっ
+
+# face 103611 "normal"
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0028"
+@ラグナロク
+私は…別に…
+
+# alpha 103611 0 0.5
+# alpha 196 0 0.5
+# move 601411 3 0
+# face 601411 "happy"
+# alpha 601411 1 0.5
+# mask 601411 off
+# textboxarrow 0 2
+@プタハ
+ほほほ
+仲良きことは美しきかな
+
+# textboxarrow 0 0
+@一同
+アハハハハハハハ！
+
+# bgm "stop"
+# alpha 601411 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+じゃない！
+
+# bgm "bgm006" 0
+# textboxarrow 0 2
+@アルマス
+何が「アハハハハハハハ！」よ！
+何なのよ、これっ？
+
+# textboxarrow 0 2
+@アルマス
+いつからプタハが私の母親に
+なったの！？
+
+# textboxarrow 0 2
+@アルマス
+とある家族の、
+騒がしくも和やかな朝の風景みたいな
+ことをやってる場合じゃないでしょ！
+
+;;//ブリューナクが現れる
+# se "SE_0719"
+# alpha 196 0 0.5
+# move 500721 3 0
+# face 500721 "normal"
+# alpha 500721 1 0.5
+# mask 500721 off
+# textboxarrow 0 2
+# voice 5007 "buryunaku_0002"
+@ブリューナク
+おはよう、みんな
+プタハ、ブリューナクは新聞の所在を
+知らせるよう要求する
+
+# move 500721 2 0.5
+# mask 500721 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+マイペースに続けようとしないで！
+ブリューナクは何役なのよっ？
+
+# textboxarrow 0 1
+# voice 5007 "buryunaku_0003"
+@ブリューナク
+無論、ブリューナクは父親だ
+アルマスは反抗期の娘であると
+認識している
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0018"
+@アルマス
+私のこれは反抗期じゃないわ！
+おかしいのはそっちだからねっ
+
+# alpha 500721 0 0.5
+# move 101011 2 0
+# face 101011 "normal"
+# alpha 101011 1 0.5
+# mask 101011 on
+# textboxarrow 0 1
+# voice 1010 "furagaraha_0004"
+@フラガラッハ
+ふふっ
+私は隣の家に住む憧れのお姉さんよ
+
+# textboxarrow 0 1
+# voice 1010 "furagaraha_0001"
+@フラガラッハ
+さあ、マスター
+私に見惚れていらして
+
+# textboxarrow 0 3
+@アルマス
+無理やり出てこなくていいからっ
+みんな正気に戻って！
+
+# alpha 101011 0 0.5
+# move 602011 2 0
+# face 602011 "normal"
+# alpha 602011 1 0.5
+# mask 602011 on
+# textboxarrow 0 1
+# voice 6020 "ness_0002"
+@ネス
+これで分かっていただけましたよね？
+
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+ネス！
+一体、何が起きてるのっ？
+
+# face 602011 "angry"
+# textboxarrow 0 1
+# voice 6020 "ness_0003"
+@ネス
+プタハの母性結界によって、
+皆さんは強制的に家族団らんを
+演じさせられていたのです
+
+# textboxarrow 0 1
+@ネス
+つまり！
+わたしが…子どもっぽい言動を取って
+しまっていたのも仕方ないことで…
+
+# alpha 602011 0 0.5
+# alpha 196 0 0.5
+# move 601411 3 0
+# face 601411 "normal"
+# alpha 601411 1 0.5
+# mask 601411 off
+# textboxarrow 0 2
+# voice 6014 "ptah_0006"
+@プタハ
+おお、ネスよ！
+今までどこに行っておったのだ？
+
+# move 601411 2 0.5
+# mask 601411 on
+# move 602011 4 0
+# face 602011 "angry"
+# alpha 602011 1 0.5
+# mask 602011 on
+# textboxarrow 0 3
+# voice 6020 "ness_0011"
+@ネス
+いけません…！
+それ以上、近づくと規律違反ですよっ
+
+# face 601411 "mad"
+# textboxarrow 0 1
+# voice 6014 "ptah_0022"
+@プタハ
+何を言っておるのだ？
+母が娘に近づいてはならぬなどという
+残酷な規律などあるものか
+
+# face 601411 "normal"
+# textboxarrow 0 1
+@プタハ
+さあ、おいで
+そなたのために甘いお菓子を作って
+おいたのだ
+
+# textboxarrow 0 1
+@プタハ
+我と一緒に食べようではないか
+間違い探しの絵本も新しいものを
+買っておいたぞ
+
+# face 602011 "sad"
+# textboxarrow 0 3
+@ネス
+わたしは…そのような誘惑には…
+
+# face 601411 "sad"
+# textboxarrow 0 1
+# voice 6014 "ptah_0019"
+@プタハ
+もう我に頭を
+撫でさせてはくれぬのか？
+寂しいのう…
+
+# face 602011 "happy"
+# textboxarrow 0 3
+# voice 6020 "ness_0042"
+@ネス
+あうっ…ううう…
+プタハママ～♪
+
+# se "SE_0648"
+# waitandnext 0.5
+
+# alpha 601411 0 0.5
+# alpha 602011 0 0.5
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0036"
+@アルマス
+誘惑に負けたーっ！？
+
+# move 601411 2 0
+# face 601411 "normal"
+# alpha 601411 1 0.5
+# textboxarrow 0 1
+# move 196 4 0.5
+# mask 196 on
+# voice 6014 "ptah_0028"
+@プタハ
+ふむ…
+実は我も驚いておるのだ
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+何を今更…
+
+# textboxarrow 0 1
+# voice 6014 "ptah_0003"
+@プタハ
+確かに我の母性結界は強力だと
+自負しておるが、そなた達と会って
+から、より力が増しておるようでな
+
+# textboxarrow 0 1
+@プタハ
+アルマスよ
+そなたのことを本当の娘のように
+愛おしく思っておるのだぞ
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+待って！
+お願いだから頭を冷やしてっ
+
+# alpha 601411 0 0.5
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0004"
+@ラグナロク
+きっと二人は魂の母娘なのよ
+運命的な出会いね
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0017"
+@アルマス
+ラグナロクもいい加減にして！
+あと、何で幼馴染みポジション
+だったの？
+
+# textboxarrow 0 1
+@ラグナロク
+細かいことは気にしないで
+それより、バイブスとキラーズが
+適合しているのよ
+
+# face 196 "surprise"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0042"
+@アルマス
+プタハと私が共鳴してるってこと？
+参ったわね…
+
+# alpha 103611 0 0.5
+# move 601411 2 0
+# face 601411 "normal"
+# alpha 601411 1 0.5
+# mask 601411 on
+# textboxarrow 0 1
+# voice 6014 "ptah_0040"
+@プタハ
+なるほど
+道理で、そなたのことをマスターと
+呼びたくて仕方なかったのだな
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+だったら、素直にそう呼んで！
+娘とか話がややこしくなるでしょっ
+
+# textboxarrow 0 1
+@プタハ
+実の母と慕ってくれて良いのだぞ
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+遠慮しておくわ…
+
+# alpha 601411 0 0.5
+# alpha 196 0 0.5
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# voice 1036 "ragnarok_0003"
+@ラグナロク
+アルマスをマスターと認めるのなら
+プタハもパラシュ達との戦いに
+力を貸して欲しいのだけど
+
+# alpha 103611 0 0.5
+# move 601411 3 0
+# face 601411 "normal"
+# alpha 601411 1 0.5
+# mask 601411 off
+# textboxarrow 0 2
+# voice 6014 "ptah_0028"
+@プタハ
+ふむ
+我は母として実家を守らねばならぬ
+からのう…
+
+# textboxarrow 0 2
+@プタハ
+帰るべき場所がなくなってしまっては
+娘も悲しもう
+
+# alpha 601411 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0041"
+@アルマス
+せめて名前で呼んで
+
+# alpha 196 0 0.5
+# move 602011 3 0
+# face 602011 "normal"
+# alpha 602011 1 0.5
+# mask 602011 off
+# textboxarrow 0 2
+# voice 6020 "ness_0002"
+@ネス
+こほんっ…お話は済みましたか？
+それではさっそく…
+
+# face 602011 "angry"
+# textboxarrow 0 2
+@ネス
+みなさん！
+わたし達には大切な使命があります！
+規律正しくいきましょうっ
+
+# textboxarrow 0 2
+@ネス
+作戦はわたしが考えておきました
+わたしの指揮に従って規律正しく
+戦えば勝利は間違いありま――
+
+# move 601411 2 0
+# face 601411 "normal"
+# alpha 601411 1 0.5
+# mask 601411 on
+# textboxarrow 0 1
+# move 602011 4 0.5
+# mask 602011 on
+# voice 6014 "ptah_0002"
+@プタハ
+ネスよ、ほっぺにクリームが
+ついておるぞ
+
+# face 602011 "sad"
+# textboxarrow 0 3
+# voice 6020 "ness_0022"
+@ネス
+あううっ…
+自分で拭けますぅっ
+
+# alpha 601411 0 0.5
+# alpha 602011 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+最後まで言えてなかったけど、
+勝機があるのねっ？
+なら、討って出るわよ！
+
+# alpha 196 0 0.5
+# move 103511 3 0
+# face 103511 "sad"
+# alpha 103511 1 0.5
+# mask 103511 off
+# textboxarrow 0 2
+# voice 1035 "damocles_0026"
+@ダモクレス
+何だ、もう出発なのか？
+クレスはもっと遊んでいたかったな～
+
+# alpha 103511 0 0.5
+# move 601411 2 0
+# face 601411 "normal"
+# alpha 601411 1 0.5
+# mask 601411 on
+# move 502711 4 0
+# face 502711 "normal"
+# alpha 502711 1 0.5
+# mask 502711 on
+# textboxarrow 0 3
+# voice 5027 "freischotz_0004"
+@フライシュッツ
+プタハちゃ～ん
+きっと帰ってくるからね～っ
+
+# face 601411 "happy"
+# textboxarrow 0 1
+# voice 6014 "ptah_0004"
+@プタハ
+よしよし
+そなたは体ばかり大きくなって
+甘えたがりは変わらぬのう
+
+# alpha 601411 0 0.5
+# alpha 502711 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+ほら、行くわよ！
+
+# alpha 196 0 0.5
+# move 500131 3 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 off
+# textboxarrow 0 2
+# voice 5001 "keraunosu_0040"
+@ケラウノス
+丁度いいタイミングだったね～
+向こうも動き出したよ
+
+# move 500131 2 0.5
+# mask 500131 on
+# move 196 4 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0035"
+@アルマス
+ケラウノス！？
+そういえば、どこ行ってたの？
+
+# face 500131 "happy"
+# textboxarrow 0 1
+# voice 5001 "keraunosu_0004"
+@ケラウノス
+いや～、プタハは母親感強すぎるから
+あんまり側にいると危ないな～って
+思って結界の外にいたんだよね
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+上手く逃げたわね
+
+# bgm "stop"
+# face 500131 "angry"
+# textboxarrow 0 1
+@ケラウノス
+それより急いだ方がいいよ
+さっき町の方で何本か光の柱が
+上がっていったと思ったら
+
+# textboxarrow 0 1
+@ケラウノス
+パラシュ達が
+こっちに向かってくるのが
+見えたんだよね～

@@ -1,0 +1,150 @@
+;;【EP2】反転奇襲～粉砕～:戦闘後/背景：遺跡
+# script "lisp"
+# background "antiquity"
+# bgmfile "bgm164" "BgmPJZero001" 0
+# body 100161
+# scale 100161 0.8 0
+# pos 100161 2
+# body 400151
+# scale 400151 0.8 0
+# pos 400151 4
+# textflame 1 1
+# textboxarrow 0 3
+# chara 400151
+# voice 40015 "arutemisu_k_0027"
+@ラスト
+あら？
+一歩遅かったみたいね
+
+;;//ラースとラストが石像を二つとも破壊する
+# se "SE_5830"
+# shake 0 0.5
+# fadein "red" 0.5
+# waitandnext 1
+
+# textflame 0 0
+@考古学奏官
+あああああ…！
+そんな…石像が二体とも…粉々に…
+貴様ら、よくもぉっ！
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 100161
+# voice 10016 "masamune_k_0009"
+# face 100161 "angry"
+@ラース
+なんだ？
+やるというなら拙者はいつでも
+相手になるぞ
+
+# textboxarrow 0 3
+# chara 400151
+# voice 40015 "arutemisu_k_0011"
+# face 400151 "sad"
+@ラスト
+やめなさい、ラース
+マスターのご命令は完遂したわ
+引き上げるわよ
+
+# textboxarrow 0 1
+# chara 100161
+# face 400151 "normal"
+# face 100161 "usual"
+@ラース
+…それもそうか
+では、ご免
+
+;;//ラースとラストが立ち去る
+# bgm "stop"
+# se "SE_0719"
+# textboxarrow 0 0
+# alpha 100161 0 1
+# alpha 400151 0 1
+# waitandnext 1
+
+# textflame 0 0
+@考古学奏官
+ちくしょう！
+エンシェントキラーズを…彼女達の
+仲間を…失ってしまった…
+
+;;//暗転
+;;//背景：街中（夜）
+# body 103611
+# scale 103611 0.8 0
+# pos 103611 3
+# mask 103611 off
+# alpha 103611 0 0
+# se "SE_4779"
+# imageset 1 "bg_white"
+# imagealpha 1 0 0
+# imagescale 1 10 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fillrect "white" 2.3 0 1
+# waitandnext 2
+
+# imagepos 1 0 0
+# imagealpha 1 1 0
+# fillrect "white" 1 1 0
+# waitandnext 0.1
+
+# bgm "bgm030" 0.7
+# background "foot_mountain_village_night"
+# imagealpha 1 0 1
+# waitandnext 1
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+# face 103611 "angry"
+@フレンネル
+うわああああああっ…！！
+
+# imageset 4 "kyodai_izoku"
+# imagealpha 4 0 0
+# alpha 103611 1 0.7
+# textflame 1 1
+# textboxarrow 0 2
+# chara 103611
+@？？？
+せいっ！
+
+;;//ラグナロクが巨大異族に斬りかかる
+# textboxarrow 0 0
+# imagealpha 4 1 0
+# imagescale 4 0.8 0
+# imagepos 4 -70 -480
+# alpha 103611 0 0
+# fadein "white" 0.5
+# waitandnext 1
+
+# bgmfile "bgm214_02" "BgmAncientKillers001" 0
+# effectbody 100 1 10 10
+# effectstart 100
+# se "SE_0693"
+# shake 0 0.5
+# waitandnext 1
+
+# se "SE_7001"
+# imagealpha 4 0 2
+# serif 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@巨大異族
+グルウウウウウウウウウ…！！
+
+# alpha 103611 1 0.8
+# textflame 1 1
+# textboxarrow 0 2
+# chara 103611
+# voice 1036 "ragnarok_unit_0005"
+@？？？
+皆、顔を上げなさい！
+白き意志は誰にも砕けはしない！
+この御旗に集え！！

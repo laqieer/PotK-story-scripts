@@ -1,0 +1,408 @@
+;;-----------------------------------------
+;;ファンキル2019ウェディングイベントシナリオ
+;;タイトル：契約と計画のブライダル
+;;-----------------------------------------
+;;【EP.1_3】契約の儀
+;;-----------------------------------------
+# script "lisp"
+# background "400_angel_town_daytime"
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;ソロモン
+# body 3503111
+# pos 3503111 5
+# scale 3503111 0.8 0
+# layer 3503111 3
+# alpha 3503111 1 0
+;;ソロモンウェディング
+# body 3503131
+# pos 3503131 3
+# scale 3503131 0.8 0
+# layer 3503131 3
+# alpha 3503131 0 0
+;;グラウ
+# body 164
+# pos 164 3
+# scale 164 0.6 0
+# layer 164 4
+# alpha 164 1 0
+# mask 164 off
+;;ロンギヌス
+# body 3300111
+# pos 3300111 1
+# scale 3300111 0.8 0
+# layer 3300111 3
+# alpha 3300111 1 0
+;;ロンギヌスウェディング
+# body 3300121
+# pos 3300121 3
+# scale 3300121 0.8 0
+# layer 3300121 3
+# alpha 3300121 0 0
+;;-----------------------------------------
+;;背景：ハルモニア市街地（昼）
+# face 3503111 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+ふぅ…
+とりあえず、追っ手はこないわね
+
+;;モノローグ
+# textflame 0 0
+@
+マスターたちは、巡回兵の追跡を
+振り切り、なんとかハルモニアへの
+侵入に成功した
+
+# voice 9950 "glau_0014"
+# textflame 1 1
+# textboxarrow 0 2
+@グラウ
+ですが全員が一緒にいれば、
+発見されるのは時間の問題です
+隊を分けて別行動を推奨します
+
+# face 3300111 "sad"
+# voice 330011 "ronginusu_t_0032"
+# textflame 1 1
+# textboxarrow 0 1
+@ロンギヌス
+そうですね…
+
+# face 3300111 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@ロンギヌス
+では、私とマスター、
+ソロモンとグラウで
+二手に分かれませんか？
+
+# voice 5031 "solomon_t_0032"
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+わかったわ
+それじゃあ、またあとでね
+
+# se "SE_0719"
+# alpha 3503111 0 0.5
+# alpha 164 0 0.5
+# textwindow "close"
+# waitandnext 0.8
+
+# move 3300111 3 0.8
+# mask 3300111 off
+# waitandnext 1
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textwindow "nomal"
+;;できればもやもやフレームで
+# move 3300111 3 0
+# face 3300111 "sad"
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 3300111 off
+@ロンギヌス
+この別行動の間に、
+ソロモンは儀式の準備をする…
+ここまでは計画通りですね
+
+;;演出：場面転換
+;;背景：ハルモニア市街地（昼）
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.8
+
+# alpha 3300111 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+;;モノローグ
+# textflame 0 0
+@
+マスターとロンギヌスは買い物を終え
+ソロモンとの待ち合わせ場所へと急ぐ
+
+# se "SE_0719"
+# alpha 3300111 1 0.5
+# mask 3300111 off
+# face 3300111 "normal"
+# voice 330011 "ronginusu_t_0002"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+ここです、マスター
+お先にどうぞ
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textwindow "nomal"
+;;できればもやもやフレームで
+# move 3300111 3 0
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 3300111 off
+@ロンギヌス
+ソロモンの姿を見て、
+マスターは驚くはず…
+計画通りにいきますように
+
+# bgm "stop"
+# se "SE_10595"
+# sedelay "SE_0690" 0.3
+# waitandnext 0.3
+
+# se "SE_5563"
+# bgmfile "bgm334" "BgmWedding001" 0
+# alpha 3300111 0 0.5
+;;モノローグ
+# textflame 0 0
+# textwindow "nomal"
+@
+マスターが扉を開けると、
+そこには女神のように美しい、
+ドレス姿のソロモンが立っていた
+
+# alpha 3503131 1 0.5
+# mask 3503131 off
+# face 3503111 "shy"
+# voice 5031 "solomon_t_0028"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+;;ソロモン（照）（以下、ウェディングVer）
+@ソロモン
+あ、マスター…
+これはね、その…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ソロモン
+ブライダルイベントで
+ドレスの試着ができたから、
+借りてきたの
+
+# textflame 1 1
+# textboxarrow 0 2
+@ソロモン
+これなら斬ル姫だとバレないでしょ？
+だから、変装にいいと思って…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ソロモン
+ど、どうかな？
+おかしくない、かな…
+
+;;モノローグ
+# textflame 0 0
+@
+ソロモンはマスターの返事を
+待っているが、マスターは
+あまりに突然のことで固まっていた
+
+# alpha 3503131 0 0.5
+# alpha 3300111 1 0.5
+# face 3300111 "happy"
+# voice 330011 "ronginusu_t_0001"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+マスター、どうですか？
+ソロモンのドレス、素敵ですよね？
+
+;;モノローグ
+# textflame 0 0
+@
+ロンギヌスに背中を突かれて
+マスターは、はっと我に返る
+
+;;モノローグ
+# textflame 0 0
+@
+あ、うん！そ、そうだね、
+その…綺麗だし、かわいいよ
+と、マスターは照れながら答える
+
+# alpha 3300111 0 0.5
+# alpha 3503131 1 0.5
+# voice 5031 "solomon_t_event_4006"
+# textflame 1 1
+# textboxarrow 0 2
+@ソロモン
+ななな…何を言っているの！
+ま、まったく…
+
+# se "SE_6504"
+# emotionbody 1000 3 3503131 10 290
+# effectpattern 1000 1 3
+# effectstart 1000
+# face 3503131 "smile"
+# voice 5031 "solomon_t_0004"
+# textflame 1 1
+# textboxarrow 0 2
+@ソロモン
+でも、ありがとう…
+
+;;モノローグ
+# textflame 0 0
+@
+ロンギヌスは作戦の成功を喜び、
+二人の様子をニコニコと見守っていた
+
+# face 3503131 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@ソロモン
+ええと、そうだわ、ロンギヌス
+ちょっとこっちに来て？
+
+# move 3503131 4 0.5
+# mask 3503131 on
+# move 3300111 2 0
+# alpha 3300111 1 0.5
+# mask 3300111 on
+# face 3300111 "surprise"
+# voice 330011 "ronginusu_t_0022"
+# textflame 1 1
+# textboxarrow 0 1
+@ロンギヌス
+……？
+どうされましたか？
+
+# face 3503111 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+ロンギヌスにも変装が必要でしょ？
+だから、これに着替えて？
+大丈夫よ、絶対に似合うから！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ロンギヌス
+わ、私もですか？
+でも、これって…
+
+# face 3503131 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+時間がないから急ぐわよ
+ほら、グラウも手伝って！
+
+# alpha 164 1 0.5
+# voice 9950 "glau_0033"
+# textflame 1 1
+# textboxarrow 0 2
+@グラウ
+承知しました
+
+# emotionbody 1003 9 3300111 20 180
+# effectpattern 1003 5 0
+# effectstart 1003
+# face 3300111 "shy"
+# voice 330011 "ronginusu_t_0022"
+# textflame 1 1
+# textboxarrow 0 1
+@ロンギヌス
+え、あのっ…
+ま、待ってください…！
+
+# textflame 1 1
+# textboxarrow 0 2
+@グラウ
+時間短縮のため、
+大人しく従うことを推奨します
+
+# effectskip 1003
+# emotionbody 1001 1 3300111 10 310
+# effectpattern 1001 2 0
+# effectstart 1001
+# voice 330011 "ronginusu_t_0023"
+# textflame 1 1
+# textboxarrow 0 1
+@ロンギヌス
+えっ！
+ふええっ！？
+
+;;演出：場面転換
+# se "SE_5563"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.8
+
+# alpha 3300111 0 0
+# alpha 3503131 0 0
+# alpha 164 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# alpha 3300121 1 0.5
+# mask 3300121 off
+# face 3300121 "shy"
+# voice 330011 "ronginusu_t_0042"
+# textflame 1 1
+# textboxarrow 0 2
+;;ロンギヌス（照）（以下、ウェディングVer）
+@ロンギヌス
+…お待たせしました
+
+;;モノローグ
+# textflame 0 0
+@
+わあ…ロンギヌスのドレスも素敵だね
+と、マスターはロンギヌスを褒める
+
+# emotionbody 1002 9 3300121 10 160
+# effectpattern 1002 5 0
+# effectstart 1002
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+うう…恥ずかしいです…！
+（でも、これも計画のため…）
+
+# effectskip 1002
+# move 3300121 2 0.5
+# mask 3300121 off
+# alpha 3503131 1 0.5
+# face 3503111 "happy"
+# voice 5031 "solomon_t_0005"
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+ふふっ
+やっぱり私の見立てに
+間違いはなかったわ
+
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+これで街を堂々と歩けるわね
+それじゃ、いくわよ
+
+;;モノローグ
+# textflame 0 0
+@
+こうしてマスターは
+二人の可憐な花嫁を連れて、
+ハルモニアの街を歩くことになった

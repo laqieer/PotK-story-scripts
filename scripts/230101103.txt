@@ -1,0 +1,202 @@
+;;【ＥＰ３】
+# script "lisp"
+# background "sea_jungle_day"
+# bgmfile "bgm230" "BgmSeaEvent" 0
+# body 2301011
+# pos 2301011 3
+# mask 2301011 off
+# scale 2301011 0.8 0
+# alpha 2301011 0 0
+# textflame 0 0
+# textboxarrow 0 2
+@
+異族を退けたロンゴミアントたちは
+ついに薬草の群生地へとたどり着いた
+
+# alpha 2301011 1 0.5
+# textflame 1 1
+@ロンゴミアント
+あなたのおかげで
+ここまでこれました…
+
+;;モノローグ
+# face 2301011 "sad"
+# textflame 0 0
+@
+ロンゴミアントは着くなり
+膝を折るように腰を下ろした
+
+;;モノローグ
+# textflame 0 0
+@
+マスターはガイドブックを参考に
+急いで薬草を煎じはじめた
+
+;;時間経過演出
+# fadeout "black" 1.5
+# waitandnext 2
+
+# face 2301011 "normal"
+# waitandnext 0.1
+
+# fadein "black" 1
+;;モノローグ
+# textflame 0 0
+@
+薬草を飲み込むロンゴミアント
+すると、赤かった顔がみるみるうちに
+いつもの顔色へと戻っていった
+
+;;モノローグ
+# face 2301011 "sad"
+# textflame 0 0
+@
+…と、安心したのもつかの間
+ロンゴミアントの顔色が今度は
+どんどん暗いものへと変わっていく
+
+# select "薬草、効かなかった？" "select_label_01" "なにか困ったことでもあった？" "select_label_02" "急に天気が悪くなってきたね" "select_label_03"
+…と、安心したのもつかの間
+ロンゴミアントの顔色が今度は
+どんどん暗いものへと変わっていく
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンゴミアント
+いえ、熱はすっかり引きました
+ただ…
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンゴミアント
+あ、いえ…
+困りごとというか、悩み事というか
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンゴミアント
+あなたは優しいのですね
+私を気遣ってくださるなんて
+
+# label "select_label_end"
+# textflame 1 1
+# voice 3010 "rhongomiant_0015"
+@ロンゴミアント
+実は…
+私、今回のことを振り返ると
+恥じているばかりで…
+
+# textflame 1 1
+@ロンゴミアント
+あなたをお守りしなければならない
+立場だというのに
+逆に助けられてしまって…
+
+# textflame 1 1
+@ロンゴミアント
+あなたを守ることのできない
+こんな私に
+価値なんてあるのでしょうか…
+
+;;モノローグ
+# textflame 0 0
+@
+気落ちしているロンゴミアントに
+マスターは言葉を告げる
+
+;;モノローグ
+# textflame 0 0
+@
+「ふだん守ってもらっている分
+今回はお返しができて嬉しかった」と
+
+# textflame 1 1
+@ロンゴミアント
+ご迷惑では、なかった…と？
+
+;;モノローグ
+# textflame 0 0
+@
+マスターは首を縦に振る
+すると、ロンゴミアントの表情が
+明るいものへと変わっていった
+
+# face 2301011 "normal"
+# textflame 1 1
+# voice 3010 "rhongomiant_0042"
+@ロンゴミアント
+本当ですか？
+これからもあなたのそばにいても
+いいのですか？
+
+;;モノローグ
+# textflame 0 0
+@
+ロンゴミアントは嬉しそうに
+マスターの手を取った
+どうやら、元気になってくれたようだ
+
+# textflame 1 1
+# voice 3010 "rhongomiant_0001"
+@ロンゴミアント
+マスター！
+実は私今回の一件で
+学んだことがあるんです
+
+# eye 2301011 "close"
+# textflame 1 1
+@ロンゴミアント
+私はいつも守る側の立場で
+ものを考えていました
+
+@ロンゴミアント
+しかし今回のことでは
+守られる側の立場を
+知ることができたんです
+
+# eye 2301011 "normal"
+# textflame 1 1
+@ロンゴミアント
+どういうときに助けてほしいのか
+どうすれば人に喜んでもらえるか
+それを学べたんです
+
+;;モノローグ
+# se "SE_0602"
+# textflame 0 0
+@
+それこそが新たなスキル
+『バディランサー』を
+習得した瞬間だった
+
+# face 2301011 "smile"
+# textflame 1 1
+@ロンゴミアント
+だからこれからは
+今まで以上にあなたのこと
+守ってあげられると思います！
+
+;;モノローグ
+# imageset 0 "c2301011"
+# imagealpha 0 0 0
+# textflame 0 0
+@
+ロンゴミアントが決意を込める
+彼女の内からは今まで以上に
+熱い想いが湧いているようだった
+
+;;【ボイス】
+;;「マスターのことが…いえ、これからもおそばにいますからね！」
+# voice 3010 "rhongomiant_kyara_0027"
+# frameout 0 0.5
+# buttonsout 0 0.5
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# fadein "white" 3
+# textwindow "close"

@@ -1,0 +1,551 @@
+;;-----------------------------------------
+;;覚醒ヴァナルガンド　シナリオ_1
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgm "bgm005" 0
+;;-----------------------------------------
+# body 601111
+# pos 601111 3
+# scale 601111 0.8 0
+# layer 601111 2
+# mask 601111 off
+# alpha 601111 0 0
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# layer 100221 3
+# mask 100221 off
+# alpha 100221 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;荒野または草原などの野外（昼）
+;;背景：草原　plain
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+自分自身のキラーズと
+向き合うと決意してから
+1ヶ月が過ぎた
+
+# alpha 601111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 601111 "normal"
+@ヴァナルガンド
+できることはやりました
+あとはみんなと合流して…ん？
+
+# alpha 601111 0 0.3
+# alpha 100221 1 0.5
+# textwindow "close"
+# waitandnext 1
+
+# move 100221 4 0.5
+# mask 100221 on
+# move 601111 2 0
+# alpha 601111 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 601111 "surprise"
+# voice 6011 "vanargand_0002"
+@ヴァナルガンド
+あれ～、このにおい…
+レーヴァテインさんですよね？
+どうしてここに？
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+…………
+
+# textflame 1 1
+# textboxarrow 0 1
+@ヴァナルガンド
+もしかして、わたしと一緒に
+マスターさんを取り返すために
+戦ってくれるんですか？
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+違うわ、その逆…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ヴァナルガンド
+逆…ですか？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 100221 "sad"
+# voice 1002 "revatein_0028"
+@レーヴァテイン
+ヴァナルガンド…
+あなたは今回のこと…
+セブンスキラーズから外れて
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 6011 "vanargand_0022"
+@ヴァナルガンド
+え？
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+あなたに戦いは似合わないわ
+自分でもわかってるでしょ？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 100221 "angry"
+@レーヴァテイン
+このまま戦い続ければ、
+いつか取り返しのつかないことに
+なるかもしれないわよ
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 601111 "amazed"
+# voice 6011 "vanargand_0028"
+@ヴァナルガンド
+…確かにわたしは戦いには
+向いてないかもしれません
+
+# textflame 1 1
+# textboxarrow 0 1
+@ヴァナルガンド
+でも、わたしだってキル姫です
+マスターさんのことも仲間のことも、
+放り出すわけにはいかないんです
+
+# bgm "stop"
+# textflame 1 1
+# textboxarrow 0 3
+# face 100221 "sad"
+# voice 1002 "revatein_0013"
+@レーヴァテイン
+やっぱりね…
+
+# se "SE_5205"
+# textflame 0 0
+@
+レーヴァテインは
+小さくため息をつき、
+武器を手に取った
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 601111 "surprise"
+# voice 6011 "vanargand_0022"
+@ヴァナルガンド
+あの…レーヴァテインさん？
+
+# bgm "bgm023" 0
+# textflame 1 1
+# textboxarrow 0 3
+# face 100221 "angry"
+@レーヴァテイン
+私は、あなたを止めると決めたの
+たとえ、力づくでもね…
+
+# textflame 0 0
+@
+剣を構えるレーヴァテインの目に、
+殺気が満ちていく
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 601111 "angry"
+@ヴァナルガンド
+ちょ、ちょっと待ってください！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1002 "revatein_battle_0004"
+@レーヴァテイン
+いくよ…
+はぁっ！！
+
+# se "SE_4000"
+# effectbody 1000 2 0 0 0
+# effectstart 1000
+# move 100221 3 0.2
+# move 601111 1 0.2
+# textboxarrow 0 0
+# waitandnext 0.2
+
+# sedelay "SE_9084" 0.3
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 6011 "vanargand_0025"
+@ヴァナルガンド
+きゃあっ！
+
+# textflame 0 0
+@
+レーヴァテインの強力な攻撃は
+ヴァナルガンドを吹き飛ばした
+
+# move 100221 4 0.5
+# move 601111 2 0.5
+# textflame 1 1
+# textboxarrow 0 1
+;# voice 6011 ""
+@ヴァナルガンド
+いたた…
+もう、手加減なしじゃないですか～
+
+# textflame 0 0
+@
+尻もちをついたヴァナルガンドは
+お尻をさすりながら立ち上がる
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+もしかして、寝ぼけてる？
+気を抜いてると
+死んじゃうかもよ？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 6011 "vanargand_battle_0005"
+@ヴァナルガンド
+くっ…
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+反撃しないの？
+どうせ当たらないと思うけど
+
+# textflame 1 1
+# textboxarrow 0 1
+@ヴァナルガンド
+本当はやりたくないけど、
+仕方ありませんね
+…やぁっ！
+
+# se "SE_4500"
+# move 100221 5 0.2
+# move 601111 3 0.2
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# move 100221 4 0.5
+# move 601111 2 0.5
+# textflame 0 0
+@
+ヴァナルガンドの攻撃を
+レーヴァテインは軽くかわす
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1002 "revatein_0007"
+@レーヴァテイン
+ほら、当たらない…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ヴァナルガンド
+まだまだですっ！
+はっ！
+たぁっ！
+
+# se "SE_4500"
+# move 100221 5 0.2
+# move 601111 3 0.2
+# textboxarrow 0 0
+# waitandnext 0.2
+
+# move 100221 4 0.4
+# move 601111 2 0.4
+# waitandnext 0.4
+
+# se "SE_4500"
+# move 100221 5 0.2
+# move 601111 3 0.2
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# move 100221 4 0.4
+# move 601111 2 0.4
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1002 "revatein_battle_0003"
+@レーヴァテイン
+何度やっても同じだってば…
+ほらっ！
+
+# textflame 0 0
+@
+レーヴァテインの攻撃は
+正確にヴァナルガンドの急所を突く
+
+# se "SE_4000"
+# effectbody 1001 2 0 0 0
+# effectstart 1001
+# move 100221 3 0.2
+# mask 100221 off
+# move 601111 1 0.2
+# textboxarrow 0 0
+# waitandnext 0.2
+
+# fadein "red" 0.5
+# se "SE_4815"
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 6011 "vanargand_battle_0008"
+@ヴァナルガンド
+ぐふ…っ
+
+# se "SE_3001"
+# bgm "stop"
+# alpha 601111 0 0.3
+# textflame 0 0
+@
+崩れ落ちるヴァナルガンドを
+レーヴァテインは
+苦しそうな表情で見下ろした
+
+# move 100221 3 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1002 "revatein_0013"
+@レーヴァテイン
+これでわかったでしょ？
+あなたは戦いには向いていない
+
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+相手が私じゃなかったら、
+殺されているわよ
+
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+…だからヴァナルガンド
+あなたは戦いから身をひいて
+いいわね？
+
+# se "SE_5000"
+# sedelay "SE_5001" 0.5
+# sedelay "SE_5200" 1
+# move 100221 4 0.5
+# mask 100221 on
+# move 601111 2 0
+# alpha 601111 1 0.3
+# textflame 0 0
+@
+そう言い残して立ち去ろうとする
+レーヴァテインの腕を
+ヴァナルガンドがつかんで引き止めた
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+……
+
+# bgmfile "bgm212_213" "BgmSeventhKillers001" 0
+# textflame 1 1
+# textboxarrow 0 1
+# voice 6011 "vanargand_0015"
+@ヴァナルガンド
+まだ…
+まだ、やれます！
+
+# textflame 0 0
+@
+レーヴァテインの攻撃は、
+普通のキル姫なら起き上がれないほど
+の強烈な一撃だった
+
+# textflame 0 0
+@
+しかし、ヴァナルガンドは立ち上がり
+レーヴァテインに杖を向けている
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 100221 "sad"
+# voice 1002 "revatein_0028"
+@レーヴァテイン
+あれだけの攻撃を受けて
+まだ立ち上がれるなんて…
+あなたのタフさには感心するよ
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+でもね、ヴァナルガンド
+戦いはタフなだけじゃ
+勝てないわ
+
+# textflame 1 1
+# textboxarrow 0 1
+@ヴァナルガンド
+……
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+もう一度…
+いえ、何度でも言うわ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 100221 "angry"
+@レーヴァテイン
+ヴァナルガンド
+あなたは戦いから降りて
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 601111 "amazed"
+@ヴァナルガンド
+レーヴァテインさん…
+どうしてそこまでわたしを
+戦いから遠ざけようとするんですか
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 601111 "angry"
+@ヴァナルガンド
+どうして、そんなに辛そうに
+戦うんですかっ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 100221 "sad"
+# voice 1002 "revatein_0003"
+@レーヴァテイン
+あなたにはたくさんのことを
+教えてもらった
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+あなたのことは、ファーストの
+みんなと同じように
+仲間だと思ってるわ
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+だからこそ…
+仲間には傷ついて欲しくない
+死んで欲しくないのよ
+
+# textflame 1 1
+# textboxarrow 0 1
+@ヴァナルガンド
+レーヴァテインさん…
+心配してくれて、ありがとう
+でも、わたしは…
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+わかってる
+これは私の我がまま
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 100221 "angry"
+@レーヴァテイン
+でも、私は
+この我がままを押し通す
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+例え、ここであなたを
+再起不能にしてでも、
+戦いから降りてもらう
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+あなたを死なせないために
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 6011 "vanargand_0031"
+@ヴァナルガンド
+ごめんなさい…
+セブンスキラーズの仲間と
+一緒に行くって決めたんです
+
+# textflame 1 1
+# textboxarrow 0 1
+@ヴァナルガンド
+わたしにもできることがあるから…
+だから、行かなくちゃ
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+あなたの強い意思はわかってる
+でもね、想いの強さだけでは、
+どうにもならないことがあるの
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+想いの強さだけじゃ、
+我がままを押し通すことはできない
+それを証明してあげるわ
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+あなたの想いを乗せた一撃を
+私に見せてよ…
+私がそれを打ち砕いてあげる
+
+# textflame 1 1
+# textboxarrow 0 1
+@ヴァナルガンド
+わかりました…
+本気でいきますからね
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1002 "revatein_0029"
+@レーヴァテイン
+こっちも本気でいくから…
+覚悟して
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 6011 "vanargand_battle_0003"
+@ヴァナルガンド
+やああぁっ！
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 100221 0 0
+# alpha 601111 0 0
+# waitandnext 0.5

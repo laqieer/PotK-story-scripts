@@ -1,0 +1,442 @@
+;;-----------------------------------------
+;;イースターOP
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス
+# body 138
+# pos 138 2
+# scale 138 0.8 0
+# layer 138 3
+# alpha 138 0 0
+;;イースターアルマス
+# body 3103821
+# pos 3103821 2
+# scale 3103821 0.8 0
+# layer 3103821 3
+# mask 3103821 off
+# alpha 3103821 0 0
+;;モラベガ
+# body 3104211
+# pos 3104211 4
+# scale 3104211 0.8 0
+# layer 3104211 3
+# alpha 3104211 0 0
+;;イースターモラベガ
+# body 3104221
+# pos 3104221 3
+# scale 3104221 0.8 0
+# layer 3104221 3
+# mask 3104221 off
+# alpha 3104221 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：街中
+;;通常verのモラベガとアルマスの立ち絵でお願いいたします
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_6513"
+# emotionbody 1000 8 3104211 80 220
+# effectpattern 1000 1 0
+# effectstart 1000
+# alpha 138 1 0.5
+# alpha 3104211 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 3104211 "sad"
+# voice 310421 "morabeaga_l_0027"
+@モラベガ
+…はぁ…
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1038 "almace_0002"
+@アルマス
+そんなに悩まなくても
+いいんじゃない？
+普通に伝えれば
+
+# effectskip 1000
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310421 "morabeaga_l_0028"
+@モラベガ
+でも…恥ずかしいよ
+アルマスは言えるの？
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+……
+
+# se "SE_6513"
+# emotionbody 1001 8 138 80 250
+# effectpattern 1001 1 0
+# effectstart 1001
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "shy2"
+@アルマス
+た、確かに面と向かっては
+難しいかもね
+
+# textflame 1 1
+# textboxarrow 0 3
+@モラベガ
+でしょ？
+
+# se "SE_6500"
+# emotionbody 1002 1 3104211 10 250
+# effectpattern 1002 1 0
+# effectstart 1002
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104211 "surprise"
+@モラベガ
+あ、そうだ！
+アルマスから言ってくれない？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "sad"
+# voice 1038 "almace_0028"
+@アルマス
+うーん…
+こういうのは本人から伝えた方が
+いいと思うんだけど…
+
+# textflame 0 0
+@
+ふと、店先に置いてある
+卵が目につくアルマス
+
+# effectskip 1001
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "surprise"
+# voice 1038 "almace_0039"
+@アルマス
+イースターのお祭り用の
+卵か…
+
+# se "SE_6500"
+# emotionbody 1003 1 138 10 310
+# effectpattern 1003 1 0
+# effectstart 1003
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+あ、そうだ！
+いい方法があるわよ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310421 "morabeaga_l_0022"
+@モラベガ
+え？ホント？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "happy1"
+# voice 1038 "almace_0004"
+@アルマス
+ちょっと耳貸して
+
+;;演出：場所移動
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：平原
+# background "plain"
+# bgm "stop"
+# alpha 138 0 0
+# alpha 3104211 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 3103821 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 3103821 "normal"
+@アルマス
+――よーい、スタート！
+
+# alpha 3103821 0 0.5
+# textwindow "close"
+# se "SE_5200"
+# waitandnext 0.5
+
+;;演出：画面揺れ
+;;ト書き：姫たちがいっせいに走り、地面が揺れる演出です
+# se "SE_0799"
+# waitandnext 1
+
+# alpha 3103821 1 0.5
+# bgmfile "bgm327" "BgmEaster001" 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 1038 "almace_0005"
+@アルマス
+みんなーっ！
+エッグハントがんばってねー！
+
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+時間になったら、
+必ず戻ってくるようにーっ！
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103821 "usual"
+@アルマス
+…ふぅ～、疲れたぁ…
+でも、これでひと段落ねっ！
+
+# textflame 0 0
+@
+おつかれ、と言うマスターに
+アルマスは微笑みを返し、
+隣にそっと腰掛けた
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1038 "almace_0003"
+@アルマス
+マスターこそお疲れ様
+あんなにたくさん卵を揃えるの、
+大変だったでしょ
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103821 "normal"
+# voice 1038 "almace_0004"
+@アルマス
+みんな喜んでたわよ
+見たことない卵が
+たくさんあって楽しいって！
+
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+これだけ手間暇かけて
+みんなで準備したんだもの
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103821 "happy"
+@アルマス
+今年も楽しいイースターに
+なるわよねっ！
+
+# se "SE_6502"
+# emotionbody 1004 2 3103821 10 290
+# effectpattern 1004 1 1
+# effectstart 1004
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103821 "surprise"
+@アルマス
+って、そういえば
+モラベガは…？
+
+# alpha 3103821 0 0.5
+# alpha 3104221 1 0.5
+# face 3104221 "sad"
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 2
+@モラベガ
+………じぃ～～～………
+
+# textflame 0 0
+@
+視線を感じた方向を見ると、
+物陰からモラベガが見つめている
+
+# alpha 3103821 1 0.5
+# alpha 3104221 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103821 "happy"
+# voice 1038 "almace_0042"
+@アルマス
+もう、何してるのよ
+早くしないと、
+エッグハント、終わっちゃうわよ
+
+# move 3103821 2 0.5
+# mask 3103821 on
+# move 3104221 4 0
+# mask 3104221 on
+# alpha 3104221 1 0.5
+# textflame 0 0
+@
+アルマスに呼ばれ、
+オズオズとマスターの前に
+やってくるモラベガ
+
+# textflame 0 0
+@
+マスターが
+どうかしたの？と尋ねると、
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104221 "surprise"
+@モラベガ
+う、うん！
+えっと、その、あのね…？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1038 "almace_0004"
+@アルマス
+ほら、モラベガ、頑張って
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310421 "morabeaga_l_0003"
+@モラベガ
+っ…！
+うんっ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104221 "happy"
+@モラベガ
+じ、実はねっ…！
+マスターに見つけてほしい
+卵があるんだっ！
+
+# textflame 1 1
+# textboxarrow 0 3
+@モラベガ
+私たちががんばって
+飾り付けした卵なんだけど…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104221 "shy"
+@モラベガ
+す、すごく良くできたから！
+よかったらマスターに
+見てもらいたいなぁって…！
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1038 "almace_0040"
+@アルマス
+へえ…なるほどねっ
+そういうことなら
+任せておいて！
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1038 "almace_0002"
+@アルマス
+ね？マスター
+
+# textflame 0 0
+@
+そういうことなら、と
+頷くマスター
+
+# se "SE_6505"
+# emotionbody 1005 3 3104221 10 200
+# effectpattern 1005 2 3
+# effectstart 1005
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310421 "morabeaga_l_0030"
+@モラベガ
+ほんとっ？
+やったぁ…ありがとうっ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104221 "happy"
+# voice 310421 "morabeaga_l_0002"
+@モラベガ
+それじゃ一緒に探しに行こう！
+はやくはやくっ！
+
+# effectskip 1005
+# alpha 3104221 0 0.5
+# mask 3103821 off
+# textwindow "close"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 3103821 "normal"
+# voice 1038 "almace_0005"
+@アルマス
+ふふふっ…
+あの子ってば、
+相変わらず元気よね
+
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+前から明るい子たちだったけど、
+隊に入ってからは、
+ますます元気になって…
+
+# textflame 0 0
+@
+アルマスと一緒のときは
+元気なモラベガ
+
+# textflame 0 0
+@
+だが、自分の前では
+どこか距離感があると
+感じているマスター
+
+# textflame 0 0
+@
+モラベガに嫌われているのでは
+と悩んでいたと
+アルマスに打ち明ける
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103821 "happy"
+# voice 1038 "almace_0032"
+@アルマス
+ああ、それは…って、
+私がここで言っちゃ
+絶・意味がなくなるわ
+
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+とにかく、
+モラベガの卵を見つけてあげて
+
+# textflame 0 0
+@
+わかった、と頷くマスターであった
+
+# fadeout "black" 2
+# waitandnext 2.5

@@ -1,0 +1,584 @@
+;;ベガルタ_EP1
+;;//背景：荒廃した街中
+# script "lisp"
+# background "ground_surface_break"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# alpha 810004 0 0
+# mask 810004 off
+# layer 810004 5
+;;悪魔
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# mask 910013 off
+# layer 910013 4
+;;幻獣
+# body 900016
+# pos 900016 3
+# scale 900016 0.8 0
+# alpha 900016 0 0
+# mask 900016 off
+# layer 900016 3
+;;モラルタ
+# body 3104011
+# pos 3104011 4
+# scale 3104011 0.8 0
+# alpha 3104011 0 0
+# face 3104011 "angry"
+# layer 3104011 1
+;;ベガルタ
+# body 3104111
+# pos 3104111 2
+# scale 3104111 0.8 0
+# alpha 3104111 0 0
+# layer 3104111 2
+# face 3104111 "usual"
+;;アルマス
+# body 3103811
+# pos 3103811 3
+# scale 3103811 0.8 0
+# alpha 3103811 0 0
+# brightness 3103811 0 0
+# layer 3103811 23
+;;レヴァ
+# body 100211
+# pos 100211 3
+# scale 100211 0.8 0
+# alpha 100211 0 0
+# brightness 100211 0 0
+# layer 100211 23
+;;マサムネ
+# body 100111
+# pos 100111 3
+# scale 100111 0.9 0
+# alpha 100111 0 0
+# brightness 100111 0 0
+# layer 100111 23
+;;ティル
+# body 24
+# pos 24 3
+# scale 24 0.9 0
+# alpha 24 0 0
+# brightness 24 0 0
+# layer 24 23
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 2
+# chara 910013
+@悪魔
+グアアアアアアア！
+
+# alpha 910013 0 0.5
+# alpha 900016 1 0.5
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 2
+# chara 900016
+@幻獣
+グルルルルルルルル！
+
+;;@天使（異族でも良いかも）
+# alpha 810004 1 0.5
+# alpha 900016 0 0.5
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 2
+# chara 810004
+@天使
+ギイイイイイイイイイ！
+
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 0
+@男
+逃げろぉっ！
+もう…この町はダメだぁっ…！
+
+# textboxarrow 0 0
+@女
+イヤアアア…！
+誰か助けてぇっ…！
+
+;;//魔獣達に追われて人々が逃げ惑う
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# alpha 810004 0 0.5
+# waitandnext 1.5
+
+# serif 0
+# textwindow "normal"
+# alpha 3104111 1 0.5
+# alpha 3104011 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+お姉ちゃぁん…！
+家が…家が燃えてるよぉっ…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+それより走って！
+お父さんの手を放しちゃダメだよっ
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+私もお母さんの手を放さないから…
+大丈夫だよ、きっと…
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+本当っ…？
+本当に大丈夫なのっ…？
+怖いよ、お姉ちゃん…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+お父さんもお母さんも、
+私だっているんだから大丈夫！
+ほら、しっかり走って！
+
+# face 3104111 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+うん…
+
+# serif 0
+# move 3104111 2 0
+# textwindow "moya"
+# textboxarrow 0 0
+# chara 3104111
+@ベガ
+お姉ちゃんはすごいな…
+私は怖くて泣いてばかりなのに
+
+# serif 1
+# textboxarrow 1 0
+@幻獣
+グルルルルルルルルル！
+
+# face 3104111 "surprise"
+# face 3104011 "surprise"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+キャアアアアア！
+ちっ…近づくなぁっ…！
+あっち行けぇっ…
+
+# face 3104111 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+ヤダヤダヤダヤダッ…！
+怖いよ、こっちに来ないでよぉっ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# move 3104111 2 0
+# textwindow "moya"
+# face 3104111 "surprise"
+# imageset 0 "bg_black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imagescale 0 2 0
+# imageset 1 "mov2_3_overlay"
+# imagealpha 1 0 0
+# imagelayer 1 2
+# imagescale 1 1.2 0
+# imageset 2 "mov2_3_sword"
+# imagealpha 2 0 0
+# imagelayer 2 3
+# imagescale 2 1.2 0
+# imageset 3 "bg_white"
+# imagealpha 3 0 0
+# imagelayer 3 4
+# imagescale 3 2 0
+# textboxarrow 0 0
+# chara 3104111
+@ベガ
+あっ…お父さんの手…
+放しちゃダメって
+お姉ちゃんに言われたのにっ…
+
+;;//幻獣や魔獣が襲い掛かる
+;;//斬撃演出（血しぶき演出ある？）
+# se "SE_9160"
+# fadein "black" 0.5
+# serif 0
+# textwindow "close"
+# imagepos 0 0 30
+# imagepos 1 0 30
+# imagepos 2 0 30
+# imagealpha 0 1 0
+# imagealpha 1 1 0
+# imagealpha 2 1 0
+# waitandnext 1
+
+# imagealpha 0 0 0.3
+# imagealpha 1 0 1
+# imagealpha 2 0 1
+# waitandnext 1.5
+
+# face 3104111 "usual"
+# face 3104011 "sad"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+お姉ちゃん…お父さんが…
+お母さんがぁっ…！
+
+# serif 0
+# move 3104111 2 0
+# textwindow "moya"
+# textboxarrow 0 0
+# chara 3104111
+@ベガ
+私…手を放しちゃった…
+だからお父さん、殺されて…
+私の…せい…？
+
+# face 3104111 "sad"
+# serif 0
+# move 3104111 2 0
+# textwindow "moya"
+# textboxarrow 0 0
+# chara 3104111
+@ベガ
+私がいけなかったの？
+私が言いつけ守れない子だから、
+お父さんもお母さんも…
+
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+私達、死ぬんだ…
+ここでみんな…
+殺されちゃうんだぁっ！！
+
+# face 3104111 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+お姉ちゃん！？
+しっかりして！
+しっかりしてよぉっ…！
+
+;;//モラルタが倒れる
+# serif 0
+# textwindow "close"
+# alpha 3104011 0 0.5
+# waitandnext 0.3
+
+# se "SE_3001"
+# shake 0 0.5
+# waitandnext 0.5
+
+# serif 0
+# textwindow "normal"
+# move 3104111 3 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+私を一人にしないでっ…！
+お姉ちゃん…！
+そんな…どうしよう…
+
+;;//幻獣や天使が迫ってくる
+# serif 0
+# textwindow "close"
+# alpha 3104111 0 0.5
+# waitandnext 0.5
+
+# mask 810004 on
+# mask 910013 on
+# mask 900016 on
+# move 910013 5 0
+# move 900016 1 0
+# alpha 810004 1 0.5
+# alpha 910013 1 0.5
+# alpha 900016 1 0.5
+# waitandnext 1
+
+# face 3104111 "sad"
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 0
+# chara 3104111
+@ベガ
+ああ、そっか…
+私達、みんなここで死ぬんだ…
+ここで終わりなんだ…
+
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 0
+# chara 3104111
+@ベガ
+なんで…
+こんな世界に生まれたんだろう…
+最悪だよ…
+
+# serif 1
+# textboxarrow 1 0
+@魔獣
+グオオオオオオオオ！
+
+# serif 1
+# textwindow "toge"
+# textboxarrow 1 0
+@？？？
+せいっ！
+
+;;//斬ル姫（アルマス？）が魔獣を斬り伏せる
+;;//逆光やシルエットなどでアルマスとわからないようにぼかす
+# serif 0
+# textwindow "close"
+# se "SE_4830"
+# effectbody 1002 4 0 0 7
+# effectstart 1002
+# imagealpha 0 1 0
+# waitandnext 0.2
+
+# shake 0 0.5
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# alpha 3103811 0.01 0
+# imagepos 3  0 30
+# imagealpha 0 0 0
+# imagealpha 3 1 0
+# alpha 810004 0 0
+# alpha 910013 0 0
+# alpha 900016 0 0
+# alpha 3104111 1 0
+# alpha 100211 0.01 0
+# alpha 100111 0.01 0
+# alpha 24 0.01 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# face 3104111 "surprise"
+# serif 0
+# textwindow "normal"
+# effectskip 1002
+# textflame 1 1
+# textboxarrow 0 0
+# chara 3104111
+@ベガ
+えっ…？
+お姉さん…誰…？
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 2
+@？？？
+…………
+
+;;//斬ル姫が走り去る
+# se "SE_5575"
+# serif 1
+# textwindow "close"
+# alpha 3103811 0 0.5
+# alpha 100211 0 0.5
+# alpha 100111 0 0.5
+# alpha 24 0 0.5
+# waitandnext 1
+
+# imagealpha 3 0 1
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+待って！待ってよぉ…！
+ああ、行っちゃった…
+ううっ…うっ…うっ…
+
+# face 3104111 "normal"
+# imageset 4 "black"
+# imagealpha 4 0 0
+# imagelayer 4 5
+# serif 0
+# move 3104111 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+# chara 3104111
+@ベガ
+逃げないと…お姉ちゃんと一緒に…
+どこか…化け物のいない世界にっ…
+
+;;//ベガルタがモラルタを担いで歩いていく
+;;――場面転換――
+# imagealpha 4 1 0
+# imagepos 4 0 30
+# imageleftin 4 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# background "laboratory_area"
+# alpha 3104111 1 0
+# waitandnext 0.6
+
+# imagealpha 4 0 0.5
+# imagerightout 4 0.5
+# serif 1
+# textwindow "normal" 
+# textboxarrow 1 0
+@研究員
+おい！
+こんなところに子どもが二人いるぞ！
+収容施設に運べ！
+
+# serif 0
+# move 3104111 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+# chara 3104111
+@ベガ
+この人達、誰…？
+私達、助かったの…？
+お姉ちゃん…
+
+;;//背景：収容所
+
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# serif 1
+# textwindow "close"
+# background "red_corridor"
+# move 3104111 2 0
+# move 3104011 4 0
+# alpha 3104011 1 0
+# face 3104011 "surprise"
+# waitandnext 0.6
+
+# serif 0
+# textwindow "normal"
+# fadein "black" 1
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+！？
+…あれ、ここは？
+
+# face 3104111 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+お姉ちゃん！
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+良かった…
+もう起きてくれないのかと
+心配したよぉ…
+
+# face 3104011 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+私、気絶してたんだ…
+ごめんね
+怖かったよね
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+お姉ちゃんが無事で…
+良かった…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+ねえ…ここ、どこ？
+
+# face 3104111 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+私にも良く分からないの…
+知らない人達に連れてこられて…
+他の人達も同じみたい…
+
+;;//研究者達が姿を現す
+# face 3104111 "normal"
+# serif 1
+# textboxarrow 1 0
+@所長
+やあやあ、ようこそ！
+よくぞ私達の実験室に来てくれました
+勇敢なる皆さん！
+
+# serif 1
+# textboxarrow 1 0
+@所長
+皆さんにはこれから人類の可能性を
+探求するための尊い実験台となって
+いただきます！
+
+# serif 1
+# textboxarrow 1 0
+@所長
+この実験が成功した暁には、
+人類史に新たな一頁が
+記されることでしょう
+
+# serif 1
+# textboxarrow 1 0
+@所長
+実に素晴らしい！
+
+# face 3104111 "usual"
+# serif 0
+# move 3104111 2 0
+# textwindow "moya"
+# textboxarrow 0 0
+# chara 3104111
+@ベガ
+あの人の目…怖い…
+私達、助かったんじゃなかったの？

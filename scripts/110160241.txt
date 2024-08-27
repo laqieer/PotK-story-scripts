@@ -1,0 +1,393 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー16章
+;;第2話　タイトル：不完全なる者達よ
+;;2_4_1
+;;スクリプト最後の背景：ラグナロクの間
+;;-----------------------------------------
+# script "lisp"
+# background "abyss_room"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;ゴッドアルマス
+# entry 201 3103811 523
+# pos 201 3
+# scale 201 0.8 0
+# layer 201 2
+# alpha 201 0 0
+# mask 201 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 2
+# alpha 139 0 0
+# mask 139 off
+;;リル=ティルフィング
+# body 3101411
+# pos 3101411 3
+# scale 3101411 0.8 0
+# layer 3101411 2
+# alpha 3101411 0 0
+# mask 3101411 off
+;;レーヴァテイン
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# layer 3100211 2
+# alpha 3100211 0 0
+# mask 3100211 off
+;;ティファレト
+# body 3503211
+# pos 3503211 3
+# scale 3503211 0.8 0
+# layer 3503211 2
+# alpha 3503211 0 0
+# mask 3503211 off
+;;フェイルノート
+# body 3401911
+# pos 3401911 3
+# scale 3401911 0.8 0
+# layer 3401911 2
+# alpha 3401911 0 0
+# mask 3401911 off
+;;カシウス
+# body 3303111
+# pos 3303111 3
+# scale 3303111 0.8 0
+# layer 3303111 2
+# alpha 3303111 0 0
+# mask 3303111 off
+;;魔獣
+# body 3850001
+# pos 3850001 3
+# scale 3850001 0.8 0
+# layer 3850001 2
+# alpha 3850001 0 0
+# mask 3850001 off
+;;魔獣（クローン1）
+# entry 938500011 3850001
+# pos 938500011 3
+# scale 938500011 0.8 0
+# layer 938500011 2
+# alpha 938500011 0 0
+# mask 938500011 off
+;;魔獣（クローン2）
+# entry 938500012 3850001
+# pos 938500012 3
+# scale 938500012 0.8 0
+# layer 938500012 2
+# alpha 938500012 0 0
+# mask 938500012 off
+;;モラベガ
+# body 187
+# pos 187 3
+# scale 187 0.8 0
+# layer 187 2
+# alpha 187 0 0
+# mask 187 off
+;;神令ラグナロク（仮面）
+# body 3103619
+# pos 3103619 3
+# scale 3103619 0.8 0
+# layer 3103619 2
+# alpha 3103619 0 0
+# mask 3103619 off
+;;-----------------------------------------
+;;//背景：ラグナロクの間
+# voice 4019 "failnaught_a_0002"
+# move 3401911 2 0
+# face 3401911 "happy"
+# alpha 3401911 1 0
+# mask 3401911 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 3103619 4 0
+# face 3103619 "normal"
+# alpha 3103619 1 0
+# mask 3103619 on
+@フェイルノート
+随分と余裕なのね
+何か切り札でも握っているのかしら？
+
+# textboxarrow 0 3
+@ラグナロク
+探りを入れなくてもいい
+私一人で十分対応できるから
+慌てる必要がないだけよ
+
+# alpha 3401911 0 0.5
+# alpha 3103619 0 0.5
+# move 3100211 3 0
+# face 3100211 "normal"
+# alpha 3100211 1 0.5
+# mask 3100211 off
+# textboxarrow 0 2
+@レーヴァテイン
+ふうん…
+
+# voice 310421 "morabeaga_l_battle_0004"
+# alpha 3100211 0 0.5
+# move 187 3 0
+# face 187 "normal"
+# alpha 187 1 0.5
+# mask 187 off
+# textboxarrow 0 2
+@モラベガ
+なら、試してみるね！
+お姉さんっ
+
+;;//モラベガが奇襲する
+# bgm "stop"
+# se "SE_9021"
+# textwindow "close"
+# rightout 187 0.3
+# waitandnext 0.3
+
+# alpha 187 0 0
+# move 3103619 4 0
+# face 3103619 "normal"
+# alpha 3103619 1 0.5
+# mask 3103619 on
+# waitandnext 0.8
+
+# sedelay "SE_4000" 0.3
+# move 187 3 0
+# face 187 "normal"
+# alpha 187 1 0
+# mask 187 on
+# leftin 187 0.2
+# waitandnext 0.2
+
+# se "SE_4601"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.2
+
+# bgmfile "bgm323_324" "BgmLostRagnarokCommand" 0
+# textboxarrow 0 3
+# textwindow "normal"
+@ラグナロク
+あなたが密かに回り込んで
+隙を窺っていたことも観測済み
+
+# voice 310421 "morabeaga_l_0039"
+# textboxarrow 0 2
+@モラベガ
+へぇ～！
+お姉さん、アドリブも得意なんだねっ
+
+# voice 310361 "ragnarok_c_0007"
+# textboxarrow 0 3
+@ラグナロク
+くだらない…
+
+# se "SE_5205"
+# alpha 187 0 0.5
+# alpha 3103619 0 0.5
+# move 3101411 2 0
+# face 3101411 "normal"
+# alpha 3101411 1 0.5
+# mask 3101411 on
+# move 3100211 4 0
+# face 3100211 "angry"
+# alpha 3100211 1 0.5
+# mask 3100211 on
+# textboxarrow 0 3
+@レーヴァテイン
+ティル、私達も…！
+
+# voice 310141 "tyrufing_lo_0003"
+# face 3101411 "angry"
+# textboxarrow 0 1
+@ティルフィング
+はい！
+
+# voice 3031 "cassius_ge_0009"
+# alpha 3101411 0 0.5
+# alpha 3100211 0 0.5
+# move 3303111 3 0
+# face 3303111 "normal"
+# alpha 3303111 1 0.5
+# mask 3303111 off
+# textboxarrow 0 2
+@カシウス
+逸る馬は足元の石に蹴躓くわ
+世界の有り様を捉えるべき
+
+# voice 310021 "revatein_ge_0023"
+# alpha 3303111 0 0.5
+# move 3100211 3 0
+# face 3100211 "surprise"
+# alpha 3100211 1 0.5
+# mask 3100211 off
+# textboxarrow 0 2
+@レーヴァテイン
+どういう意味…？
+
+# alpha 3100211 0 0.5
+# move 201 3 0
+# face 201 "normal"
+# alpha 201 1 0.5
+# mask 201 off
+# textboxarrow 0 2
+@アルマス
+動く前に周りを良く見ろって
+言いたいみたいよ！
+
+# alpha 201 0 0.5
+# move 3503211 3 0
+# face 3503211 "angry"
+# alpha 3503211 1 0.5
+# mask 3503211 off
+# textboxarrow 0 2
+@ティファレト
+モラベガ、下がってください！
+
+# voice 310421 "morabeaga_l_0023"
+# alpha 3503211 0 0.5
+# move 187 3 0
+# face 187 "angry"
+# alpha 187 1 0.5
+# mask 187 off
+# textboxarrow 0 2
+@モラベガ
+ひゃあっ！
+
+;;//地底の魔獣が現れる
+# se "SE_4826"
+# sedelay "SE_7023" 0.6
+# textwindow "close"
+# alpha 187 0 0.5
+# move 938500011 1 0
+# alpha 938500011 1 0.5
+# mask 938500011 on
+# move 3850001 3 0
+# alpha 3850001 1 0.5
+# mask 3850001 on
+# move 938500012 5 0
+# alpha 938500012 1 0.5
+# mask 938500012 on
+# waitandnext 1
+
+# voice 9967 "titania_0037"
+# alpha 938500011 0 0.5
+# alpha 3850001 0 0.5
+# alpha 938500012 0 0.5
+# move 139 3 0
+# face 139 "surprise"
+# alpha 139 1 0.5
+# mask 139 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ティターニア
+何もない空間から
+魔物達が現れましたっ…
+
+# voice 4019 "failnaught_a_0007"
+# alpha 139 0 0.5
+# move 3401911 3 0
+# face 3401911 "normal"
+# alpha 3401911 1 0.5
+# mask 3401911 off
+# textboxarrow 0 2
+@フェイルノート
+驚くこともないでしょう
+そのくらいできて当然よ
+
+# face 3401911 "sad"
+# textboxarrow 0 2
+@フェイルノート
+さっきから気になっていたのだけれど
+部屋の中央に浮いている球体、
+怪しすぎるわ
+
+# textboxarrow 0 2
+@フェイルノート
+あれが、ここの核じゃないかしら？
+
+# voice 1038 "almace_0007"
+# alpha 3401911 0 0.5
+# move 201 3 0
+# face 201 "angry"
+# alpha 201 1 0.5
+# mask 201 off
+# textboxarrow 0 2
+@アルマス
+あれで色々、操ってるってこと？
+だったら、破壊すれば！
+
+# voice 310421 "morabeaga_l_battle_0004"
+# alpha 201 0 0.5
+# move 187 3 0
+# face 187 "normal"
+# alpha 187 1 0.5
+# mask 187 off
+# textboxarrow 0 2
+@モラベガ
+任せて、アルマス！
+巻きで行くよ！
+
+# se "SE_9021"
+# textwindow "close"
+# rightout 187 0.3
+# waitandnext 0.3
+
+# voice 310361 "ragnarok_c_0027"
+# alpha 187 0 0.5
+# move 3103619 3 0
+# face 3103619 "normal"
+# alpha 3103619 1 0.5
+# mask 3103619 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+無駄なことを…
+
+# se "SE_4000"
+# voice 310421 "morabeaga_l_0022"
+# alpha 3103619 0 0.5
+# move 187 3 0
+# face 187 "angry"
+# alpha 187 1 0.5
+# mask 187 off
+# textboxarrow 0 2
+@モラベガ
+あれっ…？
+手応えが…ないよっ…？
+
+# alpha 187 0 0.5
+# move 3103619 3 0
+# face 3103619 "normal"
+# alpha 3103619 1 0.5
+# mask 3103619 off
+# textboxarrow 0 2
+@ラグナロク
+確かに、その球体が操作装置だ
+すでに私の手中にある
+
+# textboxarrow 0 2
+@ラグナロク
+球体が浮いているように見えるのは
+そう認識させているに過ぎない
+あなた達には触れられないわ
+
+# alpha 3103619 0 0.5
+# move 3401911 2 0
+# face 3401911 "normal"
+# alpha 3401911 1 0.5
+# mask 3401911 on
+# move 201 4 0
+# face 201 "normal"
+# alpha 201 1 0.5
+# mask 201 on
+# textboxarrow 0 3
+@アルマス
+さすがにモニュメントのときの
+ようにはいかないみたいね
+
+# face 3401911 "happy"
+# textboxarrow 0 1
+@フェイルノート
+何の問題もないわ
+ラグナロク一人を倒せば良いことに
+変わりはない

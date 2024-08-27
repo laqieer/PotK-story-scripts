@@ -1,0 +1,610 @@
+;;【指定】bgm101
+;;●３－７＜戦闘画面＞背景：祭壇
+;;※倒れ伏したアルンに声をかけているデュリンとティルフィング。
+# script "lisp"
+# background "altar"
+# bgm "bgm101" 0
+# body 101411
+# pos 101411 3
+# alpha 101411 0 0
+# body 127
+# pos 127 5
+# scale 127 0.8 0
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# body 0
+# pos 0 1
+# layer 0 2
+# scale 0 0.8 0
+# textflame 1 1
+# face 24 "sad"
+# face 0 "sad"
+# textboxarrow 0 1
+@デュリン
+アルン！！
+しっかり！
+
+# voice 9983 "kokusohkan_0022"
+# textboxarrow 0 3
+@アルン
+グ…
+わ、私のことは…いい…
+そ、それより…ラファエル…は…
+
+;;※振り返るティルフィング。そこには倒れ伏したラファエルの姿。
+# face 24 "angry"
+# voice 1014 "tyrufing_0003"
+# textboxarrow 0 2
+@ティルフィング
+…はい
+アルンさんのおかげで…
+なんとか倒すことができました
+
+# textboxarrow 0 3
+@アルン
+…そ…そうか
+…グフッ！！！
+
+# face 24 "sad"
+# textboxarrow 0 1
+@デュリン
+アルン！！
+
+# textboxarrow 0 3
+@アルン
+お…お前のおかげだ…
+
+# select "…え…？" "select_label_01" "…何の話だ…？" "select_label_01"
+お…お前のおかげだ…
+
+# label "select_label_01"
+@アルン
+に…人形として生きるのかと…
+お前に問われたおかげで…
+
+@アルン
+わ、私は…
+精神を強く保っていられたのだ…
+…グフッ！！！
+
+# textboxarrow 0 2
+@ティルフィング
+アルンさん…！！
+
+# textboxarrow 0 3
+@アルン
+ティ…ティルフィング…
+お前なら…必ず、
+初期化を阻止することができる…
+
+@アルン
+あ…あの…
+ラファエルを倒した…
+お前ならば…
+
+# body 960030
+# pos 960030 2
+# scale 960030 0.8 0
+# alpha 960030 0 0
+# body 960029
+# pos 960029 4
+# scale 960029 0.8 0
+# alpha 960029 0 0
+# textboxarrow 0 2
+# face 24 "angry"
+@ティルフィング
+はい！
+
+# bgm "stop"
+# serif 1
+@？？？
+『正確には…
+“追い詰めた”というべきですね…』
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 24 "surprise"
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0022"
+@ティルフィング
+！？
+
+# voice 1014 "tyrufing_0024"
+@ティルフィング
+な…！？
+
+# face 0 "worry"
+# face 24 "angry"
+# textboxarrow 0 1
+@デュリン
+う…うぁ…！！！
+
+# bgmfile "bgm188" "BgmStory007" 0
+# alpha 0 0 0.5
+# alpha 24 0 0.5
+# alpha 127 0 0.5
+# alpha 960030 1 0.5
+# alpha 960029 1 0.5
+# textboxarrow 0 3
+# voice 9972 "michael_0003"
+@ミカエル
+『ですが…
+まさか、ここまでラファエルが
+追い詰められようとは…』
+
+# pos 127 3
+# body 960031
+# pos 960031 3
+# scale 960031 0.8 0
+# mask 960031 off
+# layer 960031 1
+# alpha 960031 0 0
+# voice 9971 "gabriel_0026"
+# textboxarrow 0 1
+@ガブリエル
+『ええ…
+甘く見てはならないようですね…』
+
+# voice 9983 "kokusohkan_0022"
+# alpha 960030 0 0.5
+# alpha 960029 0 0.5
+# alpha 127 1 0.5
+# face 127 "surprise"
+# textboxarrow 0 2
+@アルン
+グッ…
+ミ…ミカエルとガブリエルが、
+揃って！
+
+# voice 9975 "raphael_0037"
+# alpha 127 0 0.5
+# alpha 960031 1 0.5
+# face 960031 "worry"
+@ラファエル
+『グ…
+う…迂闊でした…』
+
+# mask 960029 off
+# pos 960030 3
+# pos 960029 3
+# alpha 960031 0 0.5
+# alpha 24 1 0.5
+# voice 1014 "tyrufing_0015"
+# textboxarrow 0 2
+@ティルフィング
+ラファエル…！？
+まだ、息が…！？
+
+# se "SE_5205"
+# waitandnext 0.5
+
+# voice 9972 "michael_0007"
+# mask 960030 off
+# alpha 24 0 0.5
+# alpha 960029 1 0.5
+# textboxarrow 0 2
+@ミカエル
+『相応の力を持つ者と、
+みなしたほうがいい…』
+
+# alpha 960029 0 0.5
+# alpha 960030 1 0.5
+# textboxarrow 0 2
+@ガブリエル
+『ええ…
+光を…』
+
+# mask 960029 on
+# mask 960030 on
+# pos 960029 5
+# alpha 960030 0 0.5
+# alpha 960031 1 0.5
+# pos 127 5
+# textboxarrow 0 2
+@ラファエル
+『光を…ともに…』
+
+# pos 960030 1
+# se "SE_9169"
+# mask 960031 on
+# alpha 960030 1 0.5
+# alpha 960029 1 0.5
+# waitandnext 0.5
+
+# fadein "white" 1
+# shake 0 1
+# waitandnext 1
+
+# alpha 960030 0 0.5
+# alpha 960029 0 0.5
+# alpha 960031 0 0.5
+# alpha 0 1 0.5
+# alpha 24 1 0.5
+# alpha 127 1 0.5
+# textboxarrow 0 1
+@デュリン
+な、なにを…！？
+
+# voice 9983 "kokusohkan_0022"
+# textboxarrow 0 3
+# face 127 "surprise"
+@アルン
+！！
+し…しまった！
+…“融合”だ！！
+
+# textboxarrow 0 1
+@デュリン
+え…！？
+
+# textboxarrow 0 2
+# face 24 "mad2"
+@ティルフィング
+！？
+…下がって！！！
+
+# se "SE_5794"
+# flush "white" 0.3 1
+# shake 1 1
+# waitandnext 1
+
+# textboxarrow 0 1
+@デュリン
+う、うぁっ！！！！
+
+# voice 1014 "tyrufing_0015"
+# imageset 0 "fusion_angel"
+# imagealpha 0 0 0
+# textboxarrow 0 2
+# face 24 "angry"
+@ティルフィング
+クッ…！！！
+
+;;※立ち昇る土煙…その中から、声が聞こえてくる。
+# shake 0 0.5
+# fadeout "white" 1
+# waitandnext 1
+
+# alpha 24 0 0
+# alpha 0 0 0
+# alpha 127 0 0
+# textwindow "close"
+# imagescale 0 1 0
+# imagealpha 0 1 0
+# imagepos 0 0 400
+# waitandnext 1
+
+# fadein "white" 1
+# bgmfile "bgm189" "BgmStory007" 0
+# waitandnext 1
+
+# imagemoveto 0 0 -175 2
+# waitandnext 2
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@トライエル
+『最初から、
+全力で参ります…』
+
+# alpha 24 1 0.5
+# imagealpha 0 0 0.5
+# se "SE_5250"
+# waitandnext 0.5
+
+# voice 1014 "tyrufing_0022"
+# textboxarrow 0 2
+# face 24 "surprise"
+@ティルフィング
+え…？
+
+;;※一閃…次の瞬間、ドンッとかち上げられているティルフィング。
+# body 960032
+# pos 960032 3
+# scale 960032 0.8 0
+# alpha 960032 0 0
+# mask 960032 off
+# textboxarrow 0 0
+# shake 1 0.5
+# fadein "red" 0.5
+# se "SE_8022"
+# face 24 "sad"
+# move 24 5 0.3
+# waitandnext 0.5
+
+# voice 1014 "tyrufing_0037"
+# pos 0 1
+# textboxarrow 0 3
+@ティルフィング
+ガッ！！！！
+
+# alpha 0 1 0.5
+# textboxarrow 0 1
+@デュリン
+ティルフィング！？
+
+;;※宙に浮かぶティルフィングの身体。フッと凄まじいスピードで、目の前に現れる巨大な融合天使。
+# se "SE_9118"
+# alpha 0 0 0.5
+# alpha 24 0 0.5
+# alpha 960032 1 0.5
+# textboxarrow 0 2
+@トライエル
+『猶予は与えません…
+即座に消えて頂きます…』
+
+# alpha 960032 0 0.5
+# alpha 24 1 0.5
+# textboxarrow 0 3
+@ティルフィング
+う…
+うぁ…！！！
+
+;;※次の瞬間、マシンガンのような凄まじいスピードで、宙に浮いたままのティルフィングを乱打する融合天使。
+# flush "red" 0.1 4
+# se "SE_5805"
+# shake 1 1
+# waitandnext 1
+
+# textboxarrow 0 3
+@ティルフィング
+ガッ！！！
+グガッ！！！
+グガガガガ！！！！！
+
+# alpha 0 1 0.5
+# textboxarrow 0 1
+@デュリン
+ティルフィング！！！
+
+;;※ドンッと強烈な一撃で、さらにかち上げる融合天使。
+# textwindow "close"
+# alpha 24 0 0.5
+# alpha 0 0 0.5
+# alpha 960032 1 0.5
+# se "SE_5250"
+# alpha 0 0 0
+# waitandnext 1
+
+# alpha 960032 0 0.5
+# alpha 24 1 0.5
+# se "SE_8022"
+# shake 1 0.5
+# waitandnext 0.5
+
+# pos 127 2
+# move 24 1 0.3
+# fadein "red" 0.5
+# shake 1 0.5
+# serif 0
+# textwindow "nomal"
+# pos 0 4
+# voice 1014 "tyrufing_0038"
+# textboxarrow 0 1
+@ティルフィング
+ガッ…！！！！
+ガハッ…！！！！！
+
+;;※ギラリと巨大な剣を抜く融合天使
+# alpha 24 0 0.5
+# alpha 127 1 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 1
+@アルン
+…！！
+マ、マズい…！！
+
+# pos 24 3
+# textboxarrow 0 3
+@デュリン
+！？
+逃げて、
+ティルフィング！！！
+
+# alpha 0 0 0.5
+# alpha 127 0 0.5
+# alpha 24 1 0.5
+# textboxarrow 0 2
+@ティルフィング
+…………
+
+# alpha 24 0 0.5
+# alpha 960032 1 0.5
+# textboxarrow 0 2
+@トライエル
+『…終わりです』
+
+;;※ズバッと渾身の力で、ティルフィングを切り裂く融合天使。バッと空に、大量の血しぶきが舞う。
+# serif 0
+# alpha 960032 0 0.5
+# textwindow "close"
+# subfillrect 1 "black" 0.5 0 1
+# waitandnext 0.5
+
+# se "SE_9019"
+# effectbody 701 1 0 0
+# effectstart 701
+# effectpattern 701 1 1
+# waitandnext 0.3
+
+# alpha 0 1 0
+# alpha 24 1 0.5
+# subfillrect 1 "black" 0.2 1 0
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+@デュリン
+ティ…
+
+@デュリン
+！！！！！
+
+;;※力なく、落下してくるティルフィング。ズドンと土煙を上げ、地面に叩き付けられる。
+# alpha 24 0 0.5
+# se "SE_3001"
+# waitandnext 0.5
+
+# select "…ティル…フィング！" "select_label_02" "…ティル…フィング！" "select_label_02"
+！！！！！
+
+# label "select_label_02"
+# alpha 0 0 0.5
+# textboxarrow 0 2
+# alpha 960032 1 0.5
+@トライエル
+『…さぁ
+…次は、アナタです』
+
+# pos 0 3
+# select "クッ…！？" "select_label_03" "グッ…ク、クソッ…！！" "select_label_03"
+『…さぁ
+…次は、アナタです』
+
+# alpha 960032 0 0.5
+# alpha 0 1 0.5
+# label "select_label_03"
+# textboxarrow 0 2
+@デュリン
+！？
+…逃げて！！！
+
+;;※一閃…融合天使が斬りつける。が…再び現れた結界が、その剣を阻む。
+# serif 0
+# textwindow "close"
+# subfillrect 1 "black" 0.5 0 1
+# waitandnext 0.5
+
+# se "SE_5533"
+# effectbody 702 1 0 0
+# effectpattern 702 1 1
+# effectstart 702
+# waitandnext 0.5
+
+# alpha 0 0 0
+# subfillrect 1 "black" 0.2 1 0
+# waitandnext 0.5
+
+# fadein "white" 0.5
+# se "SE_0678"
+# waitandnext 0.5
+
+# serif 0
+# textwindow "nomal"
+# alpha 960032 1 0.5
+# textboxarrow 0 2
+@トライエル
+『！！
+…またも…結界！』
+
+@トライエル
+『構いません
+…その結界ごと、
+叩き割って差し上げましょう…！！』
+
+# se "SE_5772"
+# shake 0 0.5
+# waitandnext 0.5
+
+# alpha 960032 0 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 2
+@デュリン
+イヤーッ！！！！
+
+;;※ギャリンッと飛び散る火花…そこに瀕死の状態のティルフィングの姿。
+# serif 0
+# textwindow "close"
+# fadein "red" 0.5
+# alpha 0 0 0.5
+# face 24 "mad2"
+# alpha 24 1 0.5
+# se "SE_5234"
+# waitandnext 2
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# alpha 24 0 0.5
+# alpha 960032 1 0.5
+@トライエル
+『！！』
+
+# select "ティルフィング…！！" "select_label_04" "ティルフィング…！！" "select_label_04"
+『！！』
+
+# label "select_label_04"
+# alpha 960032 0 0.5
+# alpha 24 1 0.5
+# voice 1014 "tyrufing_0054"
+# textboxarrow 0 2
+@ティルフィング
+ハァ…ハァ…
+…う、うぐっ！
+
+@ティルフィング
+…マ…マスターに
+…手を出さないで！
+
+# body 101471
+# pos 101471 3
+# scale 101471 0.8 0
+# alpha 101471 0 0
+# mask 101471 off
+# alpha 24 0 0.5
+# textboxarrow 0 2
+# alpha 960032 1 0.5
+@トライエル
+『恐るべき執念…』
+
+# pos 127 4
+@トライエル
+『ですが…
+こちらも、何度でも
+叩き潰して差し上げましょう…』
+
+# se "SE_0715"
+# waitandnext 0.5
+
+# textboxarrow 0 1
+# move 0 1 0
+# alpha 127 1 0
+# alpha 0 1 0
+# alpha 960032 0 0.5
+@デュリン
+ティルフィング！！！
+
+# textboxarrow 0 3
+@アルン
+ダ…ダメだ…
+あ、あまりに…力の差が…
+
+# serif 1
+@？？？
+あんなにも傷を負って…
+あの者にやられたのですか…？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 3
+@アルン
+！？
+
+# textboxarrow 0 2
+# alpha 127 0 0.5
+# alpha 0 0 0.5
+# alpha 101471 1 0.5
+# voice 10147 "tyrufing_k_0002"
+@グリード
+なんなのです、あれは…？
+あれは、大天使なのですか…？
+
+# alpha 101471 0 0.5
+# alpha 0 1 0.5
+# alpha 127 1 0.5
+# textboxarrow 0 3
+@アルン
+グ、グリード…！？

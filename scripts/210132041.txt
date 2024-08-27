@@ -1,0 +1,429 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１３章 章タイトル「ラルゴカタストロフィ―攪乱―」
+;;第2話－４　タイトル：暴走の真実
+;;2_4_1
+;;スクリプト最後の背景：マサムネ城内
+;;-----------------------------------------
+# script "lisp"
+# background "masamune_arena"
+# bgmfile "bgm415_416" "BgmIntegralNoahBattle002" 0
+;;-----------------------------------------
+;;異族化マサムネ
+# body 5100131
+# pos 5100131 3
+# scale 5100131 0.8 0
+# layer 5100131 2
+# alpha 5100131 0 0
+# mask 5100131 off
+;;異族化パラシュ
+# body 5200431
+# pos 5200431 3
+# scale 5200431 0.8 0
+# layer 5200431 2
+# alpha 5200431 0 0
+# mask 5200431 off
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 2
+# alpha 5401721 0 0
+# mask 5401721 off
+;;天沼矛
+# body 300431
+# pos 300431 3
+# scale 300431 0.8 0
+# layer 300431 2
+# alpha 300431 0 0
+# mask 300431 off
+;;八咫鏡
+# body 500331
+# pos 500331 3
+# scale 500331 0.8 0
+# layer 500331 2
+# alpha 500331 0 0
+# mask 500331 off
+;;草薙剣
+# body 100441
+# pos 100441 3
+# scale 100441 0.8 0
+# layer 100441 2
+# alpha 100441 0 0
+# mask 100441 off
+;;雑賀
+# body 502411
+# pos 502411 3
+# scale 502411 0.8 0
+# layer 502411 2
+# alpha 502411 0 0
+# mask 502411 off
+;;-----------------------------------------
+;;第2話－４　タイトル：暴走の真実
+;;//背景：マサムネ城内
+# voice 4017 "suiha_im_0029"
+# move 5401721 2 0
+# face 5401721 "angry"
+# alpha 5401721 1 0
+# mask 5401721 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 5100131 4 0
+# face 5100131 "angry"
+# alpha 5100131 1 0
+# mask 5100131 on
+@スイハ
+はああああ！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@マサムネ
+まだまだ…！
+
+# se "SE_10585"
+# waitandnext 0.5
+
+;;//スイハとマサムネが切り結ぶ
+# se "SE_9086"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_5206"
+# alpha 5401721 0 0.5
+# alpha 5100131 0 0.5
+# move 502411 2 0
+# face 502411 "angry"
+# alpha 502411 1 0.5
+# mask 502411 on
+# move 5200431 4 0
+# face 5200431 "angry"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+# textboxarrow 0 3
+@パラシュ
+粉砕する！
+
+# se "SE_5208"
+# voice 5024 "saika_battle_0003"
+# textboxarrow 0 1
+@雑賀
+やらせないっす
+
+# se "SE_4400"
+# waitandnext 0.5
+
+;;//雑賀の攻撃をパラシュが避ける
+# se "SE_5204"
+# textwindow "close"
+# rightout 5200431 0.5
+# waitandnext 0.5
+
+# voice 1004 "kusanagi_0029"
+# alpha 5200431 0 0
+# alpha 502411 0 0.5
+# move 100441 2 0
+# face 100441 "angry"
+# alpha 100441 1 0.5
+# mask 100441 on
+# textboxarrow 0 1
+# move 5200431 4 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+# textwindow "normal"
+@草薙剣
+そこじゃ！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# voice 520043 "parashu_iz_0037"
+# face 5200431 "angry"
+# textboxarrow 0 3
+@パラシュ
+おのれっ…
+
+# se "SE_5208"
+# alpha 100441 0 0.5
+# alpha 5200431 0 0.5
+# move 300431 2 0
+# face 300431 "normal"
+# alpha 300431 1 0.5
+# mask 300431 on
+# move 500331 4 0
+# face 500331 "normal"
+# alpha 500331 1 0.5
+# mask 500331 on
+# textboxarrow 0 3
+@八咫鏡
+お主の動き、読めておるぞ
+
+# voice 3004 "amenonuboko_0029"
+# textboxarrow 0 1
+@天沼矛
+やあっ！
+
+# se "SE_4200"
+# waitandnext 0.5
+
+# voice 510013 "masamune_iz_battle_0005"
+# alpha 300431 0 0.5
+# alpha 500331 0 0.5
+# move 5401721 2 0
+# face 5401721 "angry"
+# alpha 5401721 1 0.5
+# mask 5401721 on
+# move 5100131 4 0
+# face 5100131 "angry"
+# alpha 5100131 1 0.5
+# mask 5100131 on
+# textboxarrow 0 3
+@マサムネ
+くっ…
+ちょこまかと小賢しい…！
+
+;;//天沼矛の攻撃を躱してマサムネがスイハから離れる
+# se "SE_5204"
+# textwindow "close"
+# rightout 5100131 0.5
+# waitandnext 0.5
+
+# alpha 5100131 0 0
+# face 5401721 "happy"
+# textboxarrow 0 1
+# textwindow "normal"
+@スイハ
+良い連携です
+
+# alpha 5401721 0 0.5
+# move 502411 2 0
+# face 502411 "normal"
+# alpha 502411 1 0.5
+# mask 502411 on
+# textboxarrow 0 1
+# move 100441 4 0
+# face 100441 "normal"
+# alpha 100441 1 0.5
+# mask 100441 on
+@雑賀
+そりゃ、どうもっす
+
+# voice 1004 "kusanagi_0005"
+# face 100441 "happy"
+# textboxarrow 0 3
+@草薙剣
+はっはっは！
+余達が本気を出せばインテグラル
+キラーズも恐るるに足りんのじゃ
+
+;;スイハ（独白）
+# alpha 502411 0 0.5
+# alpha 100441 0 0.5
+# move 5401721 3 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 5401721 off
+@スイハ
+マサムネもパラシュも攻撃力が
+凄まじいけど、四人が上手く連携して
+攻撃を封じてる
+
+;;スイハ（独白）
+# textboxarrow 0 0
+@スイハ
+これなら勝てるかもっ
+油断は禁物だけど…
+
+# alpha 5401721 0 0.5
+# move 5100131 2 0
+# face 5100131 "normal"
+# alpha 5100131 1 0.5
+# mask 5100131 on
+# textboxarrow 0 1
+# move 5200431 4 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+# textwindow "normal"
+@マサムネ
+個々の力では敵わぬと見て、
+集団での力を磨いてきたか
+その考えは悪くない
+
+# textboxarrow 0 3
+@パラシュ
+ボクとしては、もっと己を磨くことに
+専念しても良いと思うけどね
+
+# textboxarrow 0 1
+@マサムネ
+仲間に背中を預けられるのも
+強さのうちだ
+さて、パラシュよ…
+
+# textboxarrow 0 3
+@パラシュ
+君が何を言いたいのかは分かるよ
+少し時間を掛けすぎてるね
+
+# textboxarrow 0 3
+@パラシュ
+ヘレナとフライシュッツにトドメを
+刺さないといけないのに
+仕方ないな…
+
+# alpha 5100131 0 0.5
+# alpha 5200431 0 0.5
+# move 502411 3 0
+# face 502411 "normal"
+# alpha 502411 1 0.5
+# mask 502411 off
+# textboxarrow 0 2
+@雑賀
+お二人とも、何を話してるんすか？
+ひょっとして降参の相談っすか？
+
+# voice 510013 "masamune_iz_0004"
+# alpha 502411 0 0.5
+# move 5100131 2 0
+# face 5100131 "happy"
+# alpha 5100131 1 0.5
+# mask 5100131 on
+# textboxarrow 0 1
+# move 5200431 4 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+@マサムネ
+ふっ…
+そなたらの武勇、しかと見せて
+もらった
+
+# textboxarrow 0 3
+@パラシュ
+ボク達を討つために磨いた連携は
+認めてあげるよ
+だから…
+
+# textboxarrow 0 1
+@マサムネ
+今度は拙者達の連携を見せてやろう
+
+# face 5200431 "happy"
+# textboxarrow 0 3
+@パラシュ
+高みを目指す者へ、
+ボク達なりに敬意を表するよ
+
+;;//マサムネとパラシュが並ぶ
+# se "SE_5006"
+# se "SE_5200"
+# waitandnext 0.5
+
+# alpha 5100131 0 0.5
+# alpha 5200431 0 0.5
+# move 5401721 3 0
+# face 5401721 "surprise"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 2
+@スイハ
+うっ…！
+
+;;スイハ（独白）
+# move 5401721 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 5401721 off
+@スイハ
+二人から感じるプレッシャーが
+跳ね上がった…
+
+;;スイハ（独白）
+# textboxarrow 0 0
+@スイハ
+今までインテグラルキラーズは
+一緒に行動していても、戦闘の
+ときはバラバラだったのに…
+
+# alpha 5401721 0 0.5
+# move 502411 3 0
+# face 502411 "angry"
+# alpha 502411 1 0.5
+# mask 502411 off
+# textboxarrow 0 2
+# textwindow "normal"
+@雑賀
+悪いっすけど
+付け焼き刃の連携なんて怖くない
+っすよ！
+
+# se "SE_8000"
+# alpha 502411 0 0.5
+# move 5100131 2 0
+# face 5100131 "angry"
+# alpha 5100131 1 0.5
+# mask 5100131 on
+# textboxarrow 0 1
+# move 5200431 4 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+@マサムネ
+付け焼き刃かどうかは…
+その身で味わうがいい！
+
+# se "SE_5206"
+# face 5200431 "angry"
+# textboxarrow 0 3
+@パラシュ
+さあ、かかっておいで
+
+# alpha 5100131 0 0.5
+# alpha 5200431 0 0.5
+# move 502411 2 0
+# face 502411 "angry"
+# alpha 502411 1 0.5
+# mask 502411 on
+# textboxarrow 0 1
+# move 100441 4 0
+# face 100441 "normal"
+# alpha 100441 1 0.5
+# mask 100441 on
+@雑賀
+上等っす！
+
+# textboxarrow 0 3
+@草薙剣
+神剣、草薙剣の本領発揮じゃな！
+
+# alpha 502411 0 0.5
+# alpha 100441 0 0.5
+# move 300431 2 0
+# face 300431 "normal"
+# alpha 300431 1 0.5
+# mask 300431 on
+# move 500331 4 0
+# face 500331 "angry"
+# alpha 500331 1 0.5
+# mask 500331 on
+# textboxarrow 0 3
+@八咫鏡
+観念せい
+お主らに逃げ場はない
+
+# textboxarrow 0 1
+@天沼矛
+わたしもぐるぐるしますよ～！

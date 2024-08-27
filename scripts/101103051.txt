@@ -1,0 +1,287 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー11章
+;;第3話　タイトル：錯綜
+;;3-5-1
+;;スクリプト最後の背景：深奥
+;;-----------------------------------------
+# script "lisp"
+# background "profound"
+# bgmfile "bgm320_321" "BgmLostRagnarokBattle006" 0
+;;-----------------------------------------
+;;アルマス（ジョブチェンジ後）
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# layer 172 2
+# alpha 172 0 0
+# mask 172 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 2
+# alpha 139 0 0
+# mask 139 off
+;;レーヴァテイン
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# layer 3100211 2
+# alpha 3100211 0 0
+# mask 3100211 off
+;;パラシュ
+# body 3200411
+# pos 3200411 3
+# scale 3200411 0.8 0
+# layer 3200411 2
+# alpha 3200411 0 0
+# mask 3200411 off
+;;アフロディーテ
+# body 3401311
+# pos 3401311 3
+# scale 3401311 0.8 0
+# layer 3401311 2
+# alpha 3401311 0 0
+# mask 3401311 off
+;;ケイオスリオン兵
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# layer 3820001 2
+# alpha 3820001 0 0
+# mask 3820001 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;//背景：深奥
+# voice 310021 "revatein_ge_0031"
+# move 3100211 3 0
+# face 3100211 "normal"
+# alpha 3100211 1 0
+# mask 3100211 off
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+ティル、ごめん…
+あなたを待ってる時間はなさそう
+
+# face 3100211 "angry"
+# textboxarrow 0 2
+@レーヴァテイン
+私は…「神」を殺す…！
+
+;;//レーヴァテインが走り抜ける
+# se "SE_5575"
+# textwindow "close"
+# leftout 3100211 0.5
+# waitandnext 0.5
+
+# alpha 3100211 0 0
+# move 172 3 0
+# face 172 "angry"
+# alpha 172 1 0.5
+# mask 172 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+レーヴァテイン！
+あいつ…あのモニュメントに
+真っ直ぐ進んでる
+
+# voice 9967 "titania_0063"
+# move 172 2 0.5
+# mask 172 on
+# move 139 4 0
+# face 139 "surprise"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 3
+@ティターニア
+急ぎましょう、アルマス
+彼女は冷静さを失っています
+引き止めないと
+
+# voice 1038 "almace_0003"
+# textboxarrow 0 1
+@アルマス
+まだ本調子じゃないとか言って
+完全に回復してるじゃないの、
+あいつ…！
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 172 0 0
+# alpha 139 0 0
+# move 3100211 2 0
+# face 3100211 "angry"
+# alpha 3100211 1 0
+# mask 3100211 on
+# move 3820001 4 0
+# alpha 3820001 1 0
+# mask 3820001 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# se "SE_4000"
+# textboxarrow 0 1
+# textwindow "normal"
+@レーヴァテイン
+邪魔よ…！
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@ケイオスリオン兵
+何だっ…？
+ぐあああああっ…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 3820001 0 0.5
+# waitandnext 1
+
+# alpha 3820001 1 0.5
+# textboxarrow 0 3
+# textwindow "normal"
+@ケイオスリオン兵
+くそっ
+敵襲！敵襲だ！
+ディスラプターズが――
+
+# voice 310021 "revatein_ge_0084"
+# se "SE_4000"
+# textboxarrow 0 1
+@レーヴァテイン
+黙って
+
+;;//レーヴァテインが兵士を斬る
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 2000 1 200 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 3820001 0 0.5
+# waitandnext 1
+
+# alpha 3100211 0 0.5
+# waitandnext 0.5
+
+# voice 320041 "parashu_a_0013"
+# move 3200411 3 0
+# face 3200411 "angry"
+# alpha 3200411 1 0.5
+# mask 3200411 off
+# textboxarrow 0 2
+# textwindow "normal"
+@パラシュ
+こんなときに…
+アスカロン達は何をしているんだ？
+
+# textboxarrow 0 2
+@パラシュ
+早くこの結界を壊して
+皇帝を助け出さないと
+いけないっていうのに…！
+
+# textboxarrow 0 2
+@パラシュ
+アフロディーテ、
+始末してくるんだ
+
+# voice 340131 "aphrodite_a_0013"
+# move 3200411 2 0.5
+# mask 3200411 on
+# move 3401311 4 0
+# face 3401311 "normal"
+# alpha 3401311 1 0.5
+# mask 3401311 on
+# textboxarrow 0 3
+@アフロディーテ
+あら…そんなお願いは
+美しくありませんわ
+
+# face 3200411 "normal"
+# textboxarrow 0 1
+@パラシュ
+ボクの足を引っ張るつもりなら…
+いや、いい
+ボクが行くよ
+
+# textboxarrow 0 1
+@パラシュ
+ここにいても大したことは
+できそうにないからね
+
+# face 3401311 "sad"
+# textboxarrow 0 3
+@アフロディーテ
+皇帝陛下を助けるため
+必死に斧を振っていたあなたの姿は
+とても美しかったのに…
+
+# voice 340131 "aphrodite_a_0019"
+# textboxarrow 0 3
+@アフロディーテ
+それが見られなくなるだなんて
+残念ですわ
+
+# textboxarrow 0 1
+@パラシュ
+君は君の理想を追い求めている
+それだけは評価してあげるよ
+
+# voice 340131 "aphrodite_a_0004"
+# face 3401311 "normal"
+# textboxarrow 0 3
+@アフロディーテ
+お気をつけて
+ふふっ…その後ろ姿
+愛を感じますわ♪
+
+# textwindow "close"
+# alpha 3200411 0 0.5
+# alpha 3401311 0 0.5
+# waitandnext 0.5
+
+# se "SE_5205"
+# move 3100211 2 0
+# face 3100211 "angry"
+# alpha 3100211 1 0.5
+# mask 3100211 on
+# textboxarrow 0 1
+# move 3200411 4 0
+# face 3200411 "normal"
+# alpha 3200411 1 0.5
+# mask 3200411 on
+# textwindow "normal"
+@レーヴァテイン
+そこをどいて、パラシュ…！
+
+# voice 320041 "parashu_a_0002"
+# textboxarrow 0 3
+@パラシュ
+ボクが君の言うことを聞くとでも？
+
+# face 3100211 "normal"
+# textboxarrow 0 1
+@レーヴァテイン
+思ってないわ
+一応、言ってみただけよ

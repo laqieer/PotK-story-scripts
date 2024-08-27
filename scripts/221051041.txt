@@ -1,0 +1,537 @@
+;;-----------------------------------------
+;;ファントム オブ キル
+;;2019ハロウィン：イベントシナリオ
+;;「笑顔をくれなきゃ悪戯しちゃうぞ？」
+;;【EP3】
+;;スクリプト最後の背景：町中（夕方）
+;;-----------------------------------------
+# script "lisp"
+# background "004_outland_enening"
+# bgmfile "bgm071" "BgmHalloween001" 0
+;;-----------------------------------------
+;;ハロウィンマサムネ
+# body 3100121
+# pos 3100121 3
+# scale 3100121 0.8 0
+# layer 3100121 2
+# alpha 3100121 0 0
+# mask 3100121 off
+;;ハロウィンアロンダイト
+# body 3100721
+# pos 3100721 3
+# scale 3100721 0.8 0
+# layer 3100721 2
+# alpha 3100721 0 0
+# mask 3100721 off
+;;ハルモニア兵
+# body 3810001
+# pos 3810001 3
+# scale 3810001 0.8 0
+# layer 3810001 2
+# alpha 3810001 0 0
+# mask 3810001 off
+;;ハルモニア兵（クローン1）
+# entry 938100011 3810001
+# pos 938100011 3
+# scale 938100011 0.8 0
+# layer 938100011 2
+# alpha 938100011 0 0
+# mask 938100011 off
+;;ハルモニア兵（クローン2）
+# entry 938100012 3810001
+# pos 938100012 3
+# scale 938100012 0.8 0
+# layer 938100012 2
+# alpha 938100012 0 0
+# mask 938100012 off
+;;-----------------------------------------
+# emotionbody 1001 1 938100011 10 310
+# effectpattern 1001 1 0
+# emotionbody 1002 1 3810001 10 310
+# effectpattern 1002 1 0
+# emotionbody 1003 1 938100012 10 310
+# effectpattern 1003 1 0
+# emotionbody 1004 1 938100011 10 310
+# effectpattern 1004 1 0
+# emotionbody 1005 1 3810001 10 310
+# effectpattern 1005 1 0
+# emotionbody 1006 1 938100012 10 310
+# effectpattern 1006 1 0
+;;-----------------------------------------
+;;【EP3】
+;;背景：「町中（夕方）」のイメージでお願いします
+;;モノローグ
+# textflame 0 0
+@
+恐怖に支配されているという
+町にたどり着いたマスターたち
+そこで待ち受けていたのは…
+
+;;敵のグラフィックを数体表示させてください。仮装している想定ですので、天使人や悪魔人を使っていただいても構いません。
+# move 938100011 1 0
+# alpha 938100011 1 0.5
+# mask 938100011 on
+# move 3810001 3 0
+# alpha 3810001 1 0.5
+# mask 3810001 on
+# move 938100012 5 0
+# alpha 938100012 1 0.5
+# mask 938100012 on
+@
+ルタバガのしもべに憑依され
+町中を徘徊する
+仮装した集団だった
+
+# textflame 1 1
+# textboxarrow 0 0
+@仮装集団
+オカシヲクレナキャ…
+
+# textboxarrow 0 0
+@仮装集団
+イタズラシチャウゾォォ…
+
+# voice 310011 "masamune_ge_battle_0001"
+# se "SE_0623"
+# alpha 938100011 0 0.5
+# alpha 3810001 0 0.5
+# alpha 938100012 0 0.5
+# move 3100121 3 0
+# face 3100121 "angry"
+# alpha 3100121 1 0.5
+# mask 3100121 off
+# textboxarrow 0 2
+@マサムネ
+はぁ！
+
+# effectstart 1001
+# effectstart 1002
+# effectstart 1003
+# alpha 3100121 0 0.5
+# move 938100011 1 0
+# alpha 938100011 1 0.5
+# mask 938100011 on
+# move 3810001 3 0
+# alpha 3810001 1 0.5
+# mask 3810001 on
+# move 938100012 5 0
+# alpha 938100012 1 0.5
+# mask 938100012 on
+# textboxarrow 0 0
+@仮装集団
+！！
+
+# voice 310071 "arondaito_ge_battle_0003"
+# se "SE_0623"
+# alpha 938100011 0 0.5
+# alpha 3810001 0 0.5
+# alpha 938100012 0 0.5
+# move 3100721 3 0
+# face 3100721 "angry"
+# alpha 3100721 1 0.5
+# mask 3100721 off
+# textboxarrow 0 2
+@アロンダイト
+くらいなさいっ！
+
+# effectstart 1004
+# effectstart 1005
+# effectstart 1006
+# alpha 3100721 0 0.5
+# move 938100011 1 0
+# alpha 938100011 1 0.5
+# mask 938100011 on
+# move 3810001 3 0
+# alpha 3810001 1 0.5
+# mask 3810001 on
+# move 938100012 5 0
+# alpha 938100012 1 0.5
+# mask 938100012 on
+# textboxarrow 0 0
+@仮装集団
+！！
+
+;;モノローグ
+# textflame 0 0
+@
+マサムネとアロンダイトは
+仮装集団の口のなかへ
+次々とお菓子を投げ入れていく
+
+@
+…が、仮装集団の動きは止まらない
+
+# voice 310011 "masamune_ge_0037"
+# alpha 938100011 0 0.5
+# alpha 3810001 0 0.5
+# alpha 938100012 0 0.5
+# move 3100121 3 0
+# face 3100121 "angry"
+# alpha 3100121 1 0.5
+# mask 3100121 off
+# textflame 1 1
+# textboxarrow 0 2
+@マサムネ
+ぬぅ、馬鹿な！
+拙者の甘味が効かぬだと！？
+
+# voice 310071 "arondaito_ge_0037"
+# alpha 3100121 0 0.5
+# move 3100721 3 0
+# face 3100721 "angry"
+# alpha 3100721 1 0.5
+# mask 3100721 off
+# textboxarrow 0 2
+@アロンダイト
+うっ、ダメです！
+私のキャンディも効きません！
+
+# alpha 3100721 0 0.5
+# move 938100011 1 0
+# alpha 938100011 1 0.5
+# mask 938100011 on
+# move 3810001 3 0
+# alpha 3810001 1 0.5
+# mask 3810001 on
+# move 938100012 5 0
+# alpha 938100012 1 0.5
+# mask 938100012 on
+# textboxarrow 0 0
+@仮装集団
+カシクレェ…
+
+;;モノローグ
+# textflame 0 0
+@
+まるで津波のように
+仮装集団が押し寄せる
+
+@
+霊装支配の影響で
+波を恐れているアロンダイトは
+たまらず悲鳴をあげてしまう
+
+# voice 310071 "arondaito_ge_0025"
+# alpha 938100011 0 0.5
+# alpha 3810001 0 0.5
+# alpha 938100012 0 0.5
+# move 3100721 3 0
+# face 3100721 "sad"
+# alpha 3100721 1 0.5
+# mask 3100721 off
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+ひ、ひいぃっ…！
+
+# move 3100121 2 0
+# face 3100121 "angry"
+# alpha 3100121 1 0.5
+# mask 3100121 on
+# textboxarrow 0 1
+# move 3100721 4 0.5
+# mask 3100721 on
+@マサムネ
+しっかりしろ、アロンダイト！
+頭に刺した手裏剣は飾りかっ！？
+
+# face 3100721 "angry"
+# textboxarrow 0 3
+@アロンダイト
+か、飾りですっ！
+
+# textboxarrow 0 3
+@アロンダイト
+…帽子さん
+話が違うじゃありませんか！
+
+;;マサムネのグラフィックを小さく一度ジャンプさせてください。
+# jump 3100121
+# textboxarrow 0 1
+@ジャック
+あれ？　教えてなかったっけ
+トリック・オア・トリートと
+言わせてからじゃなきゃダメなんだ
+
+# emotionbody 1007 6 3100121 50 250
+# effectpattern 1007 1 1
+# effectstart 1007
+# voice 310011 "masamune_ge_0009"
+# textboxarrow 0 1
+@マサムネ
+そなた、一言もそんなことは…！ 
+
+# emotionbody 1008 6 3100721 50 250
+# effectpattern 1008 1 1
+# effectstart 1008
+# voice 310071 "arondaito_ge_0013"
+# textboxarrow 0 3
+@アロンダイト
+いくら私でも…
+怒るときは、怒りますからね…
+
+;;マサムネのグラフィックを左右にゆっくりと揺らしてください。
+# emotionbody 1009 9 3100121 -30 280
+# effectpattern 1009 5 0
+# effectstart 1009
+# se "SE_0812"
+# textboxarrow 0 1
+@ジャック
+…また一層
+ふたりの顔が怖くなったよ
+どうしよう、リーダー？
+
+;;モノローグ
+# effectskip 1009
+# textflame 0 0
+# textflame 0 0
+@
+大丈夫、一緒に謝ってあげるから
+と、マスターはフォローを入れる
+
+# alpha 3100121 0 0.5
+# alpha 3100721 0 0.5
+# move 938100011 1 0
+# alpha 938100011 1 0.5
+# mask 938100011 on
+# move 3810001 3 0
+# alpha 3810001 1 0.5
+# mask 3810001 on
+# move 938100012 5 0
+# alpha 938100012 1 0.5
+# mask 938100012 on
+# textflame 1 1
+# textboxarrow 0 0
+@仮装集団
+トリック・オア・トリートォォ…
+
+# alpha 938100011 0 0.5
+# alpha 3810001 0 0.5
+# alpha 938100012 0 0.5
+# move 3100721 3 0
+# face 3100721 "angry"
+# alpha 3100721 1 0.5
+# mask 3100721 off
+# textboxarrow 0 2
+@アロンダイト
+…！　チャンスです
+受けなさい
+この、砂糖菓子の弾丸を！
+
+# alpha 3100721 0 0.5
+# move 3100121 3 0
+# face 3100121 "angry"
+# alpha 3100121 1 0.5
+# mask 3100121 off
+# textboxarrow 0 2
+@マサムネ
+彼奴らの口腔、ブチ抜いてくれる！
+
+# se "SE_5220"
+# waitandnext 0.5
+
+;;マサムネのグラフィックを左右にゆっくりと揺らしてください。
+# emotionbody 1010 8 3100121 80 280
+# effectpattern 1010 1 0
+# effectstart 1010
+# textboxarrow 0 2
+@ジャック
+いや、喉に詰まるからさ
+そっと入れてやってよ？
+
+# effectskip 1010
+# alpha 3100121 0 0.5
+# move 938100011 1 0
+# alpha 938100011 1 0.5
+# mask 938100011 on
+# move 3810001 3 0
+# alpha 3810001 1 0.5
+# mask 3810001 on
+# move 938100012 5 0
+# alpha 938100012 1 0.5
+# mask 938100012 on
+# textboxarrow 0 0
+@仮装集団
+…グゥッ！？
+
+# alpha 938100011 0 0.5
+# alpha 3810001 0 0.5
+# alpha 938100012 0 0.5
+# move 3100121 3 0
+# face 3100121 "angry"
+# alpha 3100121 1 0.5
+# mask 3100121 off
+# textboxarrow 0 2
+@ジャック
+効いてる効いてる！
+そこでトドメだ
+笑顔をプレゼントしてあげて！
+
+# emotionbody 1011 2 3100721 10 290
+# effectpattern 1011 1 1
+# effectstart 1011
+# voice 310071 "arondaito_ge_0022"
+# move 3100121 2 0.5
+# mask 3100121 on
+# move 3100721 4 0
+# face 3100721 "surprise"
+# alpha 3100721 1 0.5
+# mask 3100721 on
+# textboxarrow 0 3
+@アロンダイト
+笑顔ですか？
+
+# textboxarrow 0 1
+@ジャック
+そうさ！
+笑顔は心をハッピーにしてくれる
+
+# textboxarrow 0 1
+@ジャック
+憑依されてる人の心から
+恐怖の気持ちを吹っ飛ばすんだ！
+スマイル、スマーイル！
+
+# emotionbody 1012 2 3100121 10 290
+# effectpattern 1012 1 1
+# effectstart 1012
+# voice 310011 "masamune_ge_0022"
+# face 3100121 "surprise"
+# textboxarrow 0 1
+@マサムネ
+え、笑顔…？
+どうすればいいのだ？
+
+# voice 310071 "arondaito_ge_0013"
+# face 3100721 "sad"
+# textboxarrow 0 3
+@アロンダイト
+戦いの場において白い歯を見せるなど
+騎士道に反します…
+
+;;モノローグ
+# textflame 0 0
+@
+いつも真面目で忠義に生きるふたり
+隊でリラックスした表情を
+見せることはほとんどない
+
+@
+そんな彼女たちを
+怖がる姫がいるとも聞いている
+
+@
+これは
+ふたりが笑顔を作れるようになる
+またとないチャンスだ
+
+@
+さぁ、にっこり笑って！
+マスターはふたりに向かって叫ぶ
+
+# face 3100721 "shy"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+わ、わかりました！ 
+
+# face 3100121 "usual"
+# textboxarrow 0 1
+@マサムネ
+にっこり、か…
+
+;;アロンダイト・ハロウィンver.の立ち絵を怒（気合入れ）の表情で表示。
+# bgm "stop"
+# voice 310071 "arondaito_ge_battle_0002"
+# face 3100721 "angry"
+# textboxarrow 0 3
+@アロンダイト
+せいっ！
+
+;;マサムネ・ハロウィンver.の立ち絵を怒（気合入れ）の表情で表示。
+# voice 310011 "masamune_ge_battle_0001"
+# face 3100121 "angry"
+# textboxarrow 0 1
+@マサムネ
+はぁ！
+
+;;マサムネのグラフィックを小さく何度かジャンプさせてください。
+# bgmfile "bgm071_072" "BgmHalloween001" 0
+# jump 3100121
+# waitandnext 0.5
+
+# jump 3100121
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@ジャック
+…怖っ！
+なんで笑顔に掛け声が必要なの？ 
+それじゃ魔法は解けないよ…
+
+# face 3100121 "surprise"
+# textboxarrow 0 1
+@マサムネ
+と、解けないのか…？
+
+;;モノローグ
+# textflame 0 0
+@
+ひとまずその場は
+マスターの笑顔で乗り切った
+
+# voice 310071 "arondaito_ge_0027"
+# face 3100721 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+…笑顔が怖い、ですか
+隊に来てから、少しは笑えるように
+なったつもりだったのですが…
+
+;;モノローグ
+# face 3100121 "sad"
+# textflame 0 0
+@
+マサムネとアロンダイトは
+笑顔が怖いと言われたことに
+ショックを受けている
+
+# voice 310011 "masamune_ge_0037"
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+…くぅ、なぜだ
+拙者の心でとぐろを巻いていた
+邪悪なモヤは澄み切ったはずでは…
+
+;;マサムネのグラフィックを小さく一度ジャンプさせてください。
+# jump 3100121
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@ジャック
+うーん、ふたりはまだ
+心の底から笑ったことが
+ないんじゃない？
+
+# textboxarrow 0 3
+@アロンダイト
+い、いえ
+笑ったことはある…はずです
+
+;;マサムネのグラフィックを小さく一度ジャンプさせてください。
+# jump 3100121
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@ジャック
+笑顔はね
+人を安心させてくれるんだ
+笑顔で人は分かり合えるんだよ
+
+;;モノローグ
+# textflame 0 0
+@
+斬ル姫だって同じはずだよ、と
+マスターは付け加えた

@@ -1,0 +1,238 @@
+;;-----------------------------------------
+;;ファントムオブキル　ハロウィンイベント2018
+;;【EP.3】狩人さんは助けない！
+;;【EP3】戦闘前
+;;スクリプト最後の背景：森
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgmfile "bgm071_072" "BgmHalloween001" 0
+;;-----------------------------------------
+;;ハロウィンモラルタ
+# body 3104071
+# pos 3104071 3
+# scale 3104071 0.8 0
+# alpha 3104071 0 0
+;;ハロウィンベガルタ
+# body 3104171
+# pos 3104171 3
+# scale 3104171 0.8 0
+# alpha 3104171 0 0
+;;トレイセーマ兵A
+# body 3830001
+# pos 3830001 3
+# scale 3830001 0.8 0
+# alpha 3830001 0 0
+;;トレイセーマ兵B
+# entry 938300018 3830001
+# pos 938300018 1
+# scale 938300018 0.8 0
+# alpha 938300018 0 0
+;;-----------------------------------------
+;;//背景：森
+# textwindow "close"
+# serif 1
+# voice 9965 "morallta_0002"
+@モラルタ
+コンコン
+おばあさんはいるかしら
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# move 3104171 3 0
+# face 3104171 "surprise"
+# alpha 3104171 1 0.5
+# mask 3104171 on
+# textflame 1 1
+# textboxarrow 0 2
+@ベガルタ
+おや、その声は赤ずきん
+どうぞ、お入りなさいな
+
+# textwindow "close"
+# se "SE_0719"
+;;//演出：モラルタin
+# move 3104071 2 0
+# face 3104071 "usual"
+# alpha 3104071 1 0
+# leftin 3104071 1
+# mask 3104071 on
+# move 3104171 4 0.5
+# waitandnext 1
+
+# textwindow "normal"
+# face 3104071 "surprise"
+# textboxarrow 0 1
+@モラルタ
+あら、おばあさん
+ずいぶんとお耳が大きいのね
+
+# face 3104171 "usual"
+# textboxarrow 0 3
+@ベガルタ
+そ、それは赤ずきんの声を
+よく聞くためで…
+
+# textboxarrow 0 1
+@モラルタ
+あら、おばあさん
+ずいぶんとおめめが大きいのね
+
+# textboxarrow 0 3
+@ベガルタ
+それも、赤ずきんのことを
+よーく見るためだよ
+
+# textboxarrow 0 1
+@モラルタ
+あら、おばあさん
+ずいぶんとお胸が大きいのね
+
+# emotionbody 2000 1 3104171 0 200
+# effectpattern 2000 2 1
+# effectstart 2000
+# voice 9959 "beagallta_0022"
+# face 3104171 "normal"
+# textboxarrow 0 3
+@ベガルタ
+へ、え！？
+そ、それは、どうしてか
+わからないけど…
+
+# textboxarrow 0 1
+@モラルタ
+あら、おばあさん
+ずいぶんとお洋服が破けているのね
+
+# emotionbody 1000 9 3104171 50 200
+# effectpattern 1000 5 1
+# effectstart 1000
+# voice 9959 "beagallta_0028"
+# textboxarrow 0 3
+@ベガルタ
+そ、それはわたしが
+ひっかいて破いちゃって…
+
+# effectskip 1000
+# textboxarrow 0 1
+@モラルタ
+あら、おばあさん
+どうしてそんなに
+泣きそうなお顔をしているの？
+
+# voice 9959 "beagallta_0015"
+# textboxarrow 0 3
+@ベガルタ
+それはモラがいじわるなこと
+言うからだよぉ…
+
+# voice 9965 "morallta_0004"
+# face 3104071 "usual"
+# textboxarrow 0 1
+@モラルタ
+えへへ、ごめんごめん
+…それじゃあ
+
+# face 3104071 "surprise"
+# textboxarrow 0 1
+@モラルタ
+あら、おばあさん
+とても大きなお手てなのね！
+
+# face 3104171 "usual"
+# textboxarrow 0 3
+@ベガルタ
+それは、赤ずきん
+お前を逃がさないためさ
+
+# textboxarrow 0 1
+@モラルタ
+まぁ！
+おばあさんのお口は
+なんて大きいのかしら！
+
+# face 3104171 "angry"
+# textboxarrow 0 3
+@ベガルタ
+それは…赤ずきん！
+お前を食べるためだ！
+
+# face 3104071 "usual"
+# textboxarrow 0 1
+@モラルタ
+それじゃあ
+私は全力で抵抗するわ！
+
+# face 3104171 "normal"
+# textboxarrow 0 3
+@ベガルタ
+それじゃあ
+わたしが赤ずきんを
+殺せなくなっちゃう…
+
+# textflame 0 0
+;;モノローグ
+@
+おそらくこの辺りには
+トレイセーマの拠点がある
+
+@
+だから逃げようと告げるマスター
+だったが、お構いなしに
+二人の劇は続いていた
+
+;;//演出：トレイセーマ兵
+# alpha 3104071 0 0.5
+# alpha 3104171 0 0.5
+# move 3830001 2 0
+# face 3830001 "normal"
+# alpha 3830001 1 0.5
+# mask 3830001 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 938300018 4 0
+# face 938300018 "normal"
+# alpha 938300018 1 0.5
+# mask 938300018 on
+@トレイセーマ兵A
+おわっ！
+なんだ貴様ら！
+
+# textboxarrow 0 3
+@トレイセーマ兵B
+クソッ
+この場所に
+気づかれるとは…！
+
+# textflame 0 0
+@
+二人の声にどんどん集まってくる
+兵士達に、この場所こそ
+拠点なのだとマスターは気づいた
+
+# alpha 3830001 0 0.5
+# alpha 938300018 0 0.5
+# move 3104071 2 0
+# face 3104071 "angry"
+# alpha 3104071 1 0.5
+# mask 3104071 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 3104171 4 0
+# face 3104171 "angry"
+# alpha 3104171 1 0.5
+# mask 3104171 on
+@モラルタ
+狩人だ！
+
+# textboxarrow 0 3
+@ベガルタ
+狩人も倒さないと…！
+
+# textflame 0 0
+@
+二人の話に気をとられないよう
+気を引き締めつつ、マスターは
+見守ることしか出来なかった

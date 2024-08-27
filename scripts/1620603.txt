@@ -1,0 +1,455 @@
+;;２－１０＜戦闘終了後＞
+;;二体の異族と戦闘中のティルフィング
+# script "lisp"
+# background "006_town"
+# bgm "bgm012" 0
+# body 4
+# pos 4 5
+# body 24
+# pos 24 5
+# body 810004
+# pos 810004 3
+# reversal 810004 0
+# body 820004
+# pos 820004 1
+# reversal 820004 0
+# alpha 4 0 0
+# scale 4 0.8 0
+# scale 24 0.8 0
+# scale 810004 0.8 0
+# scale 820004 0.8 0
+# textflame 1 1
+# textboxarrow 0 3
+# chara 101411
+# voice 1014 "tyrufing_0037"
+# face 24 "angry"
+@ティルフィング
+クッ…！
+この二体、連携しているの…！？
+
+# serif 1
+# textboxarrow 1 3
+# textboxarrow 0 0
+# move 24 1 0.5
+# rightin 4 0.5
+# alpha 4 1 0.5
+# alpha 810004 0 0.3
+# alpha 820004 0 0.3
+# chara 4
+# voice 9998 "toto_0049"
+# face 4 "angry"
+@トト
+ティルフィング！！
+後ろに回ったよ！！
+
+# serif 0
+# textboxarrow 0 1
+# body 100221
+# pos 100221 3
+# alpha 100221 0 0
+# scale 100221 0.8 0
+# chara 101411
+# voice 1014 "tyrufing_0024"
+# face 24 "surprise"
+@ティルフィング
+！？
+しまった…！！
+
+;;ギャリンッと散る火花。レーヴァテインが、後方から来た異族の刃を受け止めている
+# se "SE_3006"
+# textboxarrow 1 0
+# pos 810004 5
+# reversal 810004 1
+# rightin 810004 0.3
+# fadein "white" 1.5
+# alpha 810004 1 0.3
+# leftin 100221 0.3
+# alpha 100221 1 0
+# alpha 4 0 0.3
+# face 100221 "angry"
+
+# serif 1
+# textboxarrow 1 3
+# alpha 810004 0 0.5
+# mask 100221 off
+# layer 24 1
+# move 100221 5 0.5
+# move 24 2 0.5
+# chara 100221
+@レーヴァテイン
+…このコンビネーション
+一人で相手するには、骨が折れるわね
+
+# serif 0
+# textboxarrow 0 1
+# chara 101411
+# voice 1014 "tyrufing_0030"
+# face 24 "happy2"
+@ティルフィング
+レーヴァテイン！
+ありがとう…！
+
+# serif 1
+# textboxarrow 1 3
+# chara 100221
+# face 100221 "normal"
+@レーヴァテイン
+礼なら、マスターに…
+私は、手を貸すまでもないと
+タカをくくっていたんだもの
+
+# serif 1
+# textboxarrow 1 3
+# chara 100221
+# voice 1002 "revatein_0027"
+# face 100221 "angry"
+@レーヴァテイン
+…さっさと仕留めて
+一休みしましょ
+
+# serif 0
+# textboxarrow 0 1
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 1
+# imageset 2 "mov2_3_sword"
+# imageset 3 "mov2_3_overlay"
+# imagealpha 2 0 0
+# imagealpha 3 0 0
+# imagepos 2 0 0
+# imagepos 3 0 0
+# imagelayer 2 3
+# imagelayer 3 2
+# chara 101411
+# voicedelay 1014 "tyrufing_0029" 0.7
+# face 24 "mad2"
+@ティルフィング
+ええ…！ここで決めるわ…！！
+…ウァァァァァァァーッ！！！
+
+# se "SE_0660"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# leftout 24 0.5
+# leftout 100221 0.5
+# alpha 24 0 0.5
+# alpha 100221 0 0.5
+# imagealpha 1 1 0
+# imagepos 1 0 30
+# imageleftin 1 0.5
+
+# imagerightout 1 0.5
+# reversal 810004 0
+# pos 810004 2
+# pos 820004 4
+# mask 810004 off
+# mask 820004 off
+# alpha 810004 1 0
+# alpha 820004 1 0
+
+;;一閃…二体の異族に同時にトドメを刺す、ティルフィングとレーヴァテイン
+# se "SE_4815"
+# imagepos 2 0 0
+# imagepos 3 0 0
+# imagealpha 2 1 0
+# imagealpha 3 1 0
+# fadein "red" 1.5
+
+# se "SE_0669"
+# imageleftout 2 0
+# imagealpha 3 0 2
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 0
+# body 200641
+# pos 200641 5
+# body 6
+# pos 6 3
+# body 40
+# pos 40 1
+# alpha 200641 0 0
+# alpha 6 0 0
+# alpha 40 0 0
+# scale 200641 0.8 0
+# scale 6 0.8 0
+# scale 40 0.8 0
+# alpha 810004 0 1
+# alpha 820004 0 1
+@異族
+グ…グガ…ギャ…！
+
+;;崩れ落ちる異族二体。そこへ現れるダグダ・ディーン・エドガー
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 3
+# leftin 200641 0.5
+# alpha 200641 1 0
+# leftin 6 0.5
+# alpha 6 1 0
+# leftin 40 0.5
+# alpha 40 1 0
+# chara 200641
+# voice 2006 "daguda_0022"
+# face 200641 "surprise"
+@ダグダ
+あれぇ！？
+もう終わっちゃったの！？
+せっかく急いできたのにぃ！！
+
+# serif 0
+# textboxarrow 0 2
+# chara 6
+# voice 9997 "deen_0004"
+# face 6 "angry"
+@ディーン
+バカ、なにをガッカリしてんだよ？
+喜ぶべきところだろうが
+
+# serif 1
+# textboxarrow 1 3
+# pos 24 5
+# alpha 24 1 0.5
+# alpha 200641 0 0.5
+# chara 101411
+# voice 1014 "tyrufing_0030"
+# face 24 "normal"
+@ティルフィング
+ディーンくん、ありがとう
+…レーヴァテインのおかげで
+助かりました
+
+# serif 0
+# textboxarrow 0 2
+# chara 6
+# voice 9997 "deen_0048"
+# face 6 "sad"
+@ディーン
+べ、別に、礼なんて…！
+仲間のピンチを助けるのは、
+当然だろ！？
+
+# serif 1
+# textboxarrow 1 3
+# alpha 4 1 0.5
+# alpha 24 0 0.5
+# chara 4
+# voice 9998 "toto_0014"
+# face 4 "normal"
+@トト
+なんだよ、鼻の下を伸ばして…
+…その人、誰？
+
+# serif 0
+# textboxarrow 0 2
+# chara 6
+# face 6 "normal"
+@ディーン
+ああ…教会で会ったんだ
+お前らが洗礼前だって話したら、
+興味があるってさ…
+
+# serif 1
+# textboxarrow 1 1
+# chara 40
+# voice 9982 "edgar_0053"
+@エドガー
+俺は、エドガー・エルフォス中奏官…
+人民区を担当しているマスターだ
+
+# serif 1
+# textboxarrow 1 1
+# body 0
+# pos 0 3
+# layer 0 1
+# scale 0 0.7 0
+# alpha 0 0 0
+# chara 40
+# face 40 "smile"
+@エドガー
+洗礼前とは思えない、
+見事な闘いぶりだったよ
+
+;;訝しげに目を向けるデュリン
+# serif 0
+# textboxarrow 0 2
+# alpha 0 1 0.5
+# alpha 6 0 0.5
+# chara 0
+# face 0 "serious2"
+@デュリン
+…どうして、私達に興味が？
+
+# serif 1
+# textboxarrow 1 1
+# chara 40
+# face 40 "normal"
+@エドガー
+いや、別に深い意味が
+あるわけじゃないんだ
+…そう構えないで欲しい
+
+# serif 0
+# textboxarrow 0 2
+# chara 0
+# face 0 "serious"
+@デュリン
+…答えになってないんだけど？
+
+# serif 1
+# textboxarrow 1 3
+# alpha 24 1 0.5
+# alpha 4 0 0.5
+# chara 101411
+# voice 1014 "tyrufing_0065"
+# face 24 "sad"
+@ティルフィング
+デュリン…失礼よ？
+
+# serif 0
+# textboxarrow 0 1
+# chara 40
+# voice 9982 "edgar_0033"
+# face 40 "smile"
+@エドガー
+いや、いいんだ
+
+;;voice0027をボイスカット中(原田)
+# serif 0
+# textboxarrow 0 1
+# chara 40
+# voice 9982 "edgar_1027"
+# face 40 "normal"
+@エドガー
+…あまり大きな声では言えないが
+…組織に属した上での活動に、
+少しばかり限界を感じているんだ
+
+# serif 1
+# textboxarrow 1 2
+# chara 0
+# face 0 "serious2"
+@デュリン
+…どういう意味…？
+
+# serif 0
+# textboxarrow 0 1
+# chara 40
+@エドガー
+組織に属していれば、
+さまざまな制約が伴う
+
+# serif 0
+# textboxarrow 0 1
+# chara 40
+@エドガー
+本当に人々を救いたいと願うなら、
+なんのしがらみもない…
+
+# serif 0
+# textboxarrow 0 1
+# chara 40
+# face 40 "smile"
+@エドガー
+君達のような人材のほうが
+適しているんじゃないかと思ってね
+
+# select "教会組織に、不信感が…？" "select_label_01" "組織に背き、なにかしようと…？" "select_label_02"
+君達のような人材のほうが
+適しているんじゃないかと思ってね
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# serif 0
+# textboxarrow 0 1
+# chara 40
+# face 40 "normal"
+@エドガー
+いや、そんな大層な話じゃないんだ
+なんとなく、そう思っただけで…
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# serif 0
+# textboxarrow 0 1
+# chara 40
+# face 40 "normal"
+@エドガー
+いや、そんな大層な話じゃないんだ
+なんとなく、そう思っただけで…
+
+# label "select_label_end"
+# serif 0
+# textboxarrow 0 1
+# chara 40
+# face 40 "smile"
+@エドガー
+俺自身、なにかの行動を
+起こすほどの度胸もないしね
+
+# serif 1
+# textboxarrow 1 3
+# pos 6 5
+# alpha 6 1 0.5
+# alpha 24 0 0.5
+# chara 6
+# voice 9997 "deen_0001"
+@ディーン
+…お前が言ってんのは、
+例の黒奏官の存在なんかにも
+通じる話か…？
+
+# serif 0
+# textboxarrow 0 1
+# chara 40
+# voice 9982 "edgar_0011"
+# face 40 "normal"
+@エドガー
+おい、よしてくれ…
+そんなこと、大っぴらに
+言えるわけないだろう？
+
+# serif 1
+# textboxarrow 1 2
+# chara 0
+# voice 9999 "durin_0009"
+# face 0 "serious"
+@デュリン
+黒奏官…？
+なによ、それ？
+
+# serif 0
+# textboxarrow 0 3
+# alpha 24 1 0.5
+# alpha 6 0 0.5
+# chara 101411
+# face 24 "angry"
+@ティルフィング
+デュリン、話は後に…
+今は、レンを追うことが先決だわ
+
+# serif 1
+# textboxarrow 1 3
+# textboxarrow 0 0
+# alpha 6 1 0.5
+# alpha 24 0 0.5
+# chara 6
+@ディーン
+レンを追うって…どういうことだよ？
+
+# serif 0
+# textboxarrow 0 2
+# chara 0
+# face 0 "worry"
+@デュリン
+レンが“暦”を持ち出したのよ
+…街の外にね
+
+# serif 1
+# textboxarrow 1 3
+# chara 6
+# voice 9997 "deen_0024"
+# face 6 "angry"
+@ディーン
+ハァ…！？

@@ -1,0 +1,554 @@
+;;-----------------------------------------
+;;SEA_11_0
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown_evening"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;マサムネ
+# body 100111
+# pos 100111 4
+# scale 100111 0.8 0
+# layer 100111 2
+# mask 100111 off
+# alpha 100111 0 0
+;;アルテミス
+# body 400131
+# pos 400131 3
+# scale 400131 0.8 0
+# layer 400131 3
+# mask 400131 off
+# alpha 400131 0 0
+;;メギド
+# body 500611
+# pos 500611 4
+# scale 500611 0.8 0
+# layer 500611 2
+# mask 500611 off
+# alpha 500611 0 0
+;;ゼロ
+# body 23
+# pos 23 2
+# scale 23 0.8 0
+# layer 23 2
+# mask 23 off
+# alpha 23 0 0
+;;レーヴァテイン
+# body 100221
+# pos 100221 4
+# scale 100221 0.8 0
+# layer 100221 4
+# alpha 100221 0 0
+;;SEA与一
+# body 6400511
+# pos 6400511 3
+# scale 6400511 0.8 0
+# layer 6400511 2
+# mask 6400511 off
+# alpha 6400511 0 0
+;;ミネルヴァ
+# body 302511
+# pos 302511 3
+# scale 302511 0.8 0
+# layer 302511 3
+# mask 302511 off
+# alpha 302511 0 0
+;;エルキュール
+# body 202511
+# pos 202511 3
+# scale 202511 0.8 0
+# layer 202511 3
+# mask 202511 off
+# alpha 202511 0 0
+;;グラーシーザ
+# body 302611
+# pos 302611 3
+# scale 302611 0.8 0
+# layer 302611 3
+# mask 302611 off
+# alpha 302611 0 0
+;;スイハ
+# body 401711
+# pos 401711 3
+# scale 401711 0.8 0
+# layer 401711 3
+# mask 401711 off
+# alpha 401711 0 0
+;;フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.8 0
+# layer 502711 3
+# mask 502711 off
+# alpha 502711 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 4
+# imageset 1 "noise_03"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：下町（夕）：in_downtown_evening
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# voice 1001 "masamune_0023"
+# face 270 "angry"
+# alpha 270 1 0.3
+# face 100111 "angry"
+# alpha 100111 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@マサムネ
+前世との繋がりだと…！
+
+# voice 9917 "mimir_navikan_0003"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+はい
+霊装支配によるキル姫の支配
+そんな世界線がありました
+
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+私は「喪失原典」を読んで
+知っただけですが…
+
+;;選択肢
+# select "覚えているよ" "select_label_01" "そんなこともあったような…" "select_label_02" "何だったっけ？" "select_label_03"
+霊装支配によるキル姫の支配
+そんな世界線がありました
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# voice 9917 "mimir_navikan_0039"
+# face 270 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+さすがマスター様！
+覚えておられたのですね
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 270 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+やはりマスター様でも記憶が
+曖昧になっているのですね…
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 270 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+マスター様…
+ミーミルがサポート致しますので
+ご安心くださいっ
+
+# label "select_label_end"
+# face 270 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+霊装支配の中でも、
+天使の力を植えつけたものを
+聖鎖と呼んでいたようです
+
+# alpha 270 0 0.3
+# move 400131 2 0
+# layer 400131 4
+# mask 400131 on
+# voice 4001 "arutemisu_0039"
+# alpha 400131 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@アルテミス
+その聖鎖に縛られていたキル姫が
+トーキョーに入ると天使に意識を
+乗っ取られるということですね
+
+# voice 1001 "masamune_0028"
+# face 100111 "unhappy"
+# textflame 1 1
+# textboxarrow 0 3
+@マサムネ
+ふむ…
+原因は理解できたが、
+誰が聖鎖されていたのか…
+
+# textflame 1 1
+# textboxarrow 0 3
+@マサムネ
+拙者には思い出せぬ
+
+# alpha 100111 0 0.3
+# alpha 400131 0 0.3
+# move 270 3 0
+# alpha 270 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+それにつきましては、
+お任せ下さい
+記録を確認してまいりました
+
+# face 270 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+それで…一つ気になったのですが
+聖鎖されていたキル姫さんの中に
+ロンギヌスさんの名前も…
+
+;;メギドが走ってくる
+# se "SE_5575"
+# move 270 2 0.3
+# rightin 500611 0.5
+# face 500611 "mad"
+# alpha 500611 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+ロンギヌス！？
+今、ロンギヌスと言ったの？
+
+# voice 9917 "mimir_navikan_0024"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+は、はい…
+メギドさん、落ち着いて
+いただけますと…
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+ミーミル、学園でロンギヌスの
+手がかりを得たのよね？
+さあ、話しなさい
+
+# voice 9917 "mimir_navikan_0031"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+申し訳ございません…
+ロンギヌスさんの行方については
+判明しておらず
+
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+ただ、ロンギヌスさんも
+聖鎖されていたとの記録がありました
+そういたしますと…
+
+# alpha 270 0 0.3
+# alpha 500611 0 0.3
+# move 100111 3 0
+# mask 100111 off
+# voice 1001 "masamune_0040"
+# alpha 100111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@マサムネ
+ロンギヌスもすでに天使の手に墜ちて
+いるのやもしれんな
+
+# voice 1002 "revatein_0013"
+# alpha 100111 0 0.3
+# alpha 23 1 0.3
+# face 100221 "sad"
+# alpha 100221 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+はぁ…
+面倒臭いなぁ、もう…
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+だったら…探しにいけばいいでしょ
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+聖鎖…だっけ？
+それ、されてなかったキル姫だけで
+
+# voice 11002 "laevateinm_0039"
+# textflame 1 1
+# textboxarrow 0 1
+@ゼロ
+ちゃんと話を聞いていたんだな、
+アマネ
+
+# alpha 23 0 0.3
+# alpha 100221 0 0.3
+# voice 4005 "yoichi_0032"
+# face 6400511 "usual"
+# alpha 6400511 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@与一
+レーヴァテインさん、
+とても良い案だと思います！
+
+# face 6400511 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@与一
+マスターさん、ミーミルさん
+聖鎖されていなかったキル姫で
+探索チームを組みましょう
+
+# alpha 6400511 0 0.3
+# move 100111 2 0
+# layer 100111 2
+# mask 100111 off
+# alpha 100111 1 0.3
+# move 400131 4 0
+# layer 400131 4
+# mask 400131 on
+# alpha 400131 1 0.3
+# face 400131 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@アルテミス
+ちょっと待ってください
+異族を抑える戦力も維持して
+おかないと困ります
+
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+特にマスターが抜けるとなると
+戦力が大幅に下がる
+加えてキル姫が減るのでは…
+
+;;ミネルヴァがやってくる
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# se "SE_0719"
+# alpha 100111 0 0.3
+# alpha 400131 0 0.3
+# voice 3025 "minerva_unit_0012"
+# alpha 302511 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ミネルヴァ
+それなら、私達に任せてください
+
+;;エンシェント達が続く
+# bgmfile "bgm275" "BgmLostRagnarokEvent" 0
+# alpha 302511 0 0.3
+# move 202511 2 0
+# layer 202511 2
+# alpha 202511 1 0.3
+# move 302611 4 0
+# layer 302611 4
+# mask 302611 on
+# alpha 302611 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@エルキュール
+遅くなりました！
+もう大丈夫ですよ
+
+# voice 3026 "grayside_0005"
+# textflame 1 1
+# textboxarrow 0 3
+@グラーシーザ
+うむ
+われらがまもりのかなめとなろう！
+
+# alpha 202511 0 0.3
+# alpha 302611 0 0.3
+# move 270 3 0
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+エンシェントキラーズの皆さん！
+とても心強いです
+
+# voice 4017 "suiha_0003"
+# alpha 270 0 0.3
+# move 401711 4 0
+# layer 401711 2
+# alpha 401711 1 0.3
+# move 502711 2 0
+# layer 502711 4
+# mask 502711 on
+# alpha 502711 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@スイハ
+ティルフィングから応援要請を
+受けました
+
+# voice 5027 "freischotz_unit_0013"
+# textflame 1 1
+# textboxarrow 0 1
+@フライシュッツ
+みんなのこと、
+おねーちゃんが守るからね～
+
+# alpha 401711 0 0.3
+# alpha 502711 0 0.3
+# move 23 3 0
+# mask 23 off
+# face 23 "angry_2"
+# alpha 23 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ゼロ
+これなら戦力は十分そうだな
+探索チームを編成して、
+トーキョーに乗り込むぞ！
+
+;;暗転
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+;;背景：中心部：in_city
+# background "in_city"
+# alpha 23 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1.5
+# waitandnext 1.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+翌日――
+
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+# voice 1002 "revatein_0027"
+# move 100221 4 0
+# layer 100221 4
+# mask 100221 on
+# face 100221 "angry"
+# alpha 100221 1 0.3
+# move 6400511 2 0
+# layer 6400511 2
+# mask 6400511 off
+# face 6400511 "usual"
+# alpha 6400511 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+…何で私が入ってるの
+面倒臭い
+
+# textflame 1 1
+# textboxarrow 0 1
+@与一
+レーヴァテインさん、
+活躍の絶好機ですよ！
+与一も頑張ります！
+
+# alpha 100221 0 0.3
+# alpha 6400511 0 0.3
+# face 100111 "nutual"
+# alpha 100111 1 0.3
+# alpha 400131 1 0.3
+# face 400131 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+あちらの指揮をミネルヴァに任せる
+ことができて助かった
+
+# textflame 1 1
+# textboxarrow 0 3
+@アルテミス
+メギドがついて来たがったのを
+宥めるのは一苦労でしたけどね
+
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+あの火力は目立つからな
+隠密行動を取らねばならぬ
+作戦には向かん
+
+# alpha 400131 0 0.3
+# move 270 4 0
+# face 270 "sad"
+# alpha 270 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@ミーミル
+マナナンさんとマクリルさん、
+ちゃんとミネルヴァさんの指示に
+従ってくれているでしょうか…
+
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+なるべく戦闘を避けて進むぞ
+目指すは中心に建つビルだ
+
+# alpha 100111 0 0.3
+# alpha 270 0 0.3
+# voice 4005 "yoichi_0022"
+# face 100221 "normal"
+# alpha 100221 1 0.3
+# face 6400511 "surprise"
+# alpha 6400511 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@与一
+そちらに何が？
+
+# voice 1002 "revatein_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+強い気配を…感じるんでしょ
+そのくらいなら…ここからでも
+分かる
+
+# voice 4005 "yoichi_0024"
+# face 6400511 "shy"
+# textflame 1 1
+# textboxarrow 0 1
+@与一
+はうぅっ…
+与一は気づいていませんでした
+勉強になります！
+
+# alpha 100221 0 0.3
+# alpha 6400511 0 0.3
+# voice 1001 "masamune_0003"
+# move 100111 3 0
+# mask 100111 off
+# face 100111 "angry"
+# alpha 100111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@マサムネ
+よし！いざ参る！
+
+# fadeout "black" 2
+# waitandnext 2

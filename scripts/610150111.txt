@@ -1,0 +1,1131 @@
+;;-----------------------------------------
+;;ファンキル　学園イベント（2021年3月）シナリオ
+;;【オープニング】
+;;スクリプト最後の背景：校庭_体育祭(昼)
+;;背景：理事長室
+;;-----------------------------------------
+# script "lisp"
+# background "presidentroom"
+# bgm "bgm002" 0
+;;-----------------------------------------
+;;ティルフィング 制服ver.
+# body 101491
+# pos 101491 3
+# scale 101491 0.8 0
+# layer 101491 2
+# alpha 101491 0 0
+# mask 101491 off
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 2
+# alpha 0 0 0
+# mask 0 off
+;;ブラフマーストラ制服
+# body 115
+# pos 115 3
+# scale 115 0.8 0
+# layer 115 2
+# alpha 115 0 0
+# mask 115 off
+;;リサナウト 制服ver.
+# body 203011
+# pos 203011 3
+# scale 203011 0.8 0
+# layer 203011 2
+# alpha 203011 0 0
+# mask 203011 off
+;;制服グリダヴォル
+# body 32
+# pos 32 3
+# scale 32 0.8 0
+# layer 32 2
+# alpha 32 0 0
+# mask 32 off
+;;mob
+# body 34
+# pos 34 3
+# scale 34 0.8 0
+# layer 34 3
+# mask 34 off
+# alpha 34 0 0
+# body 38
+# pos 38 3
+# scale 38 0.8 0
+# layer 38 3
+# mask 38 off
+# alpha 38 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;学園ロゴ
+# imageset 2 "school_logo"
+# imagealpha 2 0 0
+# imagelayer 2 5
+;;イベントロゴ
+# imageset 3 "e210321_logo"
+# imagealpha 3 0 0
+# imagelayer 3 5
+;;-----------------------------------------
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1.5
+
+;;【オープニング】
+;;//背景：理事長室
+# move 0 3 0
+# face 0 "normal"
+# alpha 0 1 0.5
+# mask 0 off
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@デュリン
+やっと来たわね！
+遅かったじゃない
+
+;;モノローグ
+# textflame 0 0
+@
+ある日の朝…
+理事長のデュリンに
+呼び出されたマスター
+
+# voice 9999 "durin_0043"
+# face 0 "usual2"
+# textflame 1 1
+# textboxarrow 0 2
+@デュリン
+さっそくだけど…
+アルバムの進捗はどう？
+一応聞いておこうと思ってね！
+
+;;モノローグ
+# textflame 0 0
+@
+…………？
+と、頭に大きなハテナを
+浮かべるマスター
+
+# emotionbody 1000 6 0 80 140
+# effectpattern 1000 1 1
+# effectstart 1000
+# face 0 "serious"
+# textflame 1 1
+# textboxarrow 0 2
+@デュリン
+ちょっと～、何とぼけてるの？
+卒業アルバムの話よ！
+
+# bgm "stop"
+# textboxarrow 0 2
+@デュリン
+あなたに任せておいたでしょ？
+みんなの写真を撮って、
+アルバムにまとめてくれって！
+
+# textflame 0 0
+@マスター
+まったくの初耳なんですけど
+
+# bgm "bgm005" 0
+# voice 9999 "durin_0023"
+# face 0 "serious2"
+# textflame 1 1
+# textboxarrow 0 2
+@デュリン
+え？　聞いてない？
+なに言ってるの、
+だって転校初日に……
+
+# textboxarrow 0 2
+@デュリン
+あなたに、お願い……
+したわよ、ね……？
+
+# voice 1014 "tyrufing_0063"
+# move 101491 2 0
+# face 101491 "surprise"
+# alpha 101491 1 0.5
+# mask 101491 on
+# textboxarrow 0 1
+# move 0 4 0.5
+# mask 0 on
+@ティルフィング
+デュリン、もしかして
+お伝えするのを
+忘れていたのでは……？
+
+# emotionbody 2000 9 0 80 100
+# effectpattern 2000 5 0
+# effectstart 2000
+# voice 9999 "durin_0008"
+# face 0 "usual"
+# textboxarrow 0 3
+@デュリン
+あ、あははははは…
+でもまあ、今、伝えたし…
+お願いね
+
+# effectskip 2000
+# textflame 0 0
+@マスター
+いやいや、急にお願いされても
+写真とか全く撮ってませんけど
+
+# emotionbody 3000 8 101491 80 250
+# effectpattern 3000 1 0
+# effectstart 3000
+# voice 1014 "tyrufing_0049"
+# face 101491 "sad"
+# textboxarrow 0 1
+# textflame 1 1
+@ティルフィング
+卒業『アルバム』なのに
+思い出の写真がないのは
+まずいですね…
+
+# effectskip 3000
+# face 0 "sad"
+# textboxarrow 0 3
+@デュリン
+……
+
+;;::モノローグ
+# textflame 0 0
+@
+取り返しのつかない状況に
+どんどん青ざめていくデュリン
+
+;;モノローグ
+@
+そこに……
+
+;;//ＳＥ：パシャッ！（カメラのシャッター音）
+# bgm "stop"
+# se "SE_12805"
+;;//演出：画面フラッシュ
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# emotionbody 4000 1 0 40 180
+# effectpattern 4000 2 0
+# effectstart 4000
+# voice 9999 "durin_0022"
+# face 101491 "surprise"
+# face 0 "serious"
+# textflame 1 1
+# textboxarrow 0 3
+@デュリン
+わあっ！？
+な、何っ！？
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "courtyard"
+# alpha 101491 0 0
+# alpha 0 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;？？？（リサナウト）
+# voice 2030 "risanautr_l_0005"
+# move 203011 3 0
+# face 203011 "happy"
+# alpha 203011 1 0.5
+# mask 203011 off
+# textwindow "nomal"
+# textboxarrow 0 2
+@？？？
+ふっふっふ
+お困りのようねっ！
+
+# textboxarrow 0 2
+@リサナウト
+話はぜーんぶ、
+このリサナウトが
+聞かせてもらったわ！
+
+;;モノローグ
+# textflame 0 0
+@
+窓の外、樹の上に立ち、
+こちらにカメラを向ける謎の生徒
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "presidentroom"
+# alpha 203011 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# bgm "bgm006" 0
+# emotionbody 5000 2 0 40 180
+# effectpattern 5000 1 1
+# effectstart 5000
+# move 101491 2 0
+# face 101491 "sad"
+# alpha 101491 1 0.5
+# mask 101491 on
+# move 0 4 0
+# face 0 "normal"
+# alpha 0 1 0.5
+# mask 0 on
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@デュリン
+リサナウト！？
+……って……えーと、誰だっけ？
+ティルフィング、知ってる？
+
+# textboxarrow 0 1
+@ティルフィング
+…………
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "courtyard"
+# alpha 101491 0 0
+# alpha 0 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 203011 3 0
+# face 203011 "angry"
+# alpha 203011 1 0.5
+# mask 203011 off
+# textwindow "nomal"
+# textboxarrow 0 2
+@リサナウト
+ちょっと！？私よ私っ！
+聖ユグドラシル姫学院所属、
+新聞部兼オカルト研究部の部長！
+
+# textboxarrow 0 2
+@リサナウト
+学園随一の
+スクープハンターと言えば、
+私のことでしょう！
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "presidentroom"
+# alpha 203011 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 0 3 0
+# face 0 "usual2"
+# alpha 0 1 0.5
+# mask 0 off
+# textwindow "nomal"
+# textboxarrow 0 2
+@デュリン
+あぁ～？
+そんな生徒もいたような
+いなかったような……？
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "courtyard"
+# alpha 0 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 203011 3 0
+# face 203011 "normal"
+# alpha 203011 1 0.5
+# mask 203011 off
+# textwindow "nomal"
+# textboxarrow 0 2
+@リサナウト
+まあいいわ！
+それより、卒業アルバムの件で
+困っているんでしょう？
+
+# textboxarrow 0 2
+@リサナウト
+私でよければ協力してあげる！
+どうかしら？
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "presidentroom"
+# alpha 203011 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 0 3 0
+# face 0 "normal"
+# alpha 0 1 0.5
+# mask 0 off
+# textwindow "nomal"
+# textboxarrow 0 2
+@デュリン
+協力って、どうするのよ？
+撮れてないものは
+どうしようもないんじゃ……
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "courtyard"
+# alpha 0 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_6505"
+# emotionbody 6000 3 203011 10 200
+# effectpattern 6000 2 3
+# effectstart 6000
+# move 203011 3 0
+# face 203011 "happy"
+# alpha 203011 1 0.5
+# mask 203011 off
+# textwindow "nomal"
+# textboxarrow 0 2
+@リサナウト
+まあまあ♪
+おおびゅねに乗ったつもりで
+任せておいて！
+
+# effectskip 6000
+# textboxarrow 0 2
+@リサナウト
+……もちろん、
+噛んだのはわざとよ
+
+# face 203011 "normal"
+# textboxarrow 0 2
+@リサナウト
+それからあなた
+これから付き合ってもらえる？
+
+# textflame 0 0
+@マスター
+え？何をするの？
+
+# voice 2030 "risanautr_l_0004"
+# face 203011 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+ふふっ、それは後のお楽しみ♪
+
+;;モノローグ
+# textflame 0 0
+@
+決め顔をしているが
+明らかに足が震えているリサナウト
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "presidentroom"
+# alpha 203011 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+# textwindow "nomal"
+@
+マスターは理事長室を後にし
+リサナウトの立つ樹の下へと
+向かうのだった
+
+# move 101491 2 0
+# face 101491 "sad"
+# alpha 101491 1 0.5
+# mask 101491 on
+# move 0 4 0
+# face 0 "normal"
+# alpha 0 1 0.5
+# mask 0 on
+# textflame 1 1
+# textboxarrow 0 3
+@デュリン
+…大丈夫かしら？
+
+;;//モヤモヤ吹き出し
+# voice 1014 "tyrufing_0028"
+# move 101491 2 0
+# textboxarrow 0 0
+# textwindow "moya"
+@ティルフィング
+……どうやって
+登ったのでしょう？
+
+;;//演出：場面転換
+;;//背景：中庭(朝)
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "courtyard"
+# alpha 101491 0 0
+# alpha 0 0 0
+# move 203011 3 0
+# face 203011 "normal"
+# alpha 203011 1 0
+# mask 203011 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm002" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@リサナウト
+セルフタイマーよし！
+マスター、そこから動かないでね
+
+# textboxarrow 0 2
+@リサナウト
+よっ……と！
+
+;;モノローグ
+# textflame 0 0
+@
+カメラのセッティングを終え、
+マスターに密着するリサナウト
+
+;;モノローグ
+@
+動揺するマスターだったが、
+リサナウトは気にも留めず
+続けて話しかける
+
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+さあ、思い出して？
+あなたが初めて
+この学園に来た日のこと
+
+# textboxarrow 0 2
+@リサナウト
+そして強く念じるの
+……あの日にもう一度
+戻りたいって！
+
+;;モノローグ
+# textflame 0 0
+@
+言われるがまま、
+かつての記憶を
+掘り起こすマスター
+
+;;モノローグ
+@
+カメラのシャッターが
+降りると同時に
+
+;;モノローグ
+@
+突然リサナウトの手元が
+強く輝きはじめ――
+
+;;//ＳＥ：パシャッ！（カメラのシャッター音）
+# bgm "stop"
+# se "SE_12798"
+# sedelay "SE_12802" 0.8
+;;//演出：画面フラッシュ
+;;//ト書き：上記、時間遡行の演出です。
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;//演出：場面転換
+;;//背景：中庭(朝)
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "courtyard"
+# alpha 203011 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# bgm "bgm005" 0
+# move 203011 3 0
+# face 203011 "happy"
+# alpha 203011 1 0.5
+# mask 203011 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@リサナウト
+ふうっ……
+無事に成功したみたいね
+
+# textflame 0 0
+@マスター
+え？あれ？
+ここは…？
+
+;;モノローグ
+@
+戸惑うマスターの手を引く
+リサナウト
+
+# face 203011 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+行きましょうか！
+きっともう始まってる頃だわ
+
+# textboxarrow 0 2
+@リサナウト
+どこにって……もちろん体育館よ！
+ほら、早く早く！
+
+;;//演出：場面転換
+;;//背景：体育館
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "gymnasium"
+# alpha 203011 0 0
+# move 0 3 0
+# face 0 "normal"
+# alpha 0 1 0
+# mask 0 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//以下、１話冒頭の再現シーン。
+# textboxarrow 0 2
+# textwindow "normal"
+@デュリン
+えっへん！
+
+# textboxarrow 0 2
+@デュリン
+あたしが理事長よ！
+今日はみんなに大事な話があるわ！
+
+# textboxarrow 0 2
+@デュリン
+聖ユグドラシル姫学院と
+ラグナロク女学院と
+牙克城学院を共学化するから！
+
+;;//再現はここまで
+# alpha 0 0 0.5
+# textflame 0 0
+@マスター
+これって、まさか…
+
+;;モノローグ
+@
+目の前の現実に、
+思わず目をこするマスター
+
+# voice 2030 "risanautr_l_0004"
+# move 203011 3 0
+# face 203011 "happy"
+# alpha 203011 1 0.5
+# mask 203011 off
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+ふふ、
+そう！そのまさかよ！
+
+;;モノローグ
+# alpha 203011 0 0.5
+# textflame 0 0
+@
+全校生徒が集う体育館では……
+
+;;モノローグ
+@
+マスターが入学する時の―
+つまり、"過去"のイベントが
+行われていたのだ……
+
+;;いつものタイトル演出
+# fadeout "black" 1
+# waitandnext 1.5
+
+# bgmfile "bgm187" "BgmGakuen_OP" 0.3
+# fadein "white" 0.8
+# background "schoolgate_daytime"
+# textwindow "close"
+# waitandnext 1
+
+# move 34 5 0
+# mask 34 on
+# alpha 34 1 0.38
+# face 34 "normal"
+# waitandnext 0.38
+
+# move 32 1 0
+# mask 32 on
+# alpha 32 1 0.38
+# face 32 "normal"
+# waitandnext 0.38
+
+# move 38 3 0
+# mask 38 on
+# alpha 38 1 0.38
+# face 38 "normal"
+# waitandnext 0.5
+
+# fadein "white" 0.8
+# background "corridor_daytime"
+# alpha 34 0 0
+# alpha 32 0 0
+# alpha 38 0 0
+# waitandnext 1
+
+# move 101491 1 0
+# mask 101491 on
+# alpha 101491 1 0.39
+# face 101491 "normal"
+# waitandnext 0.4
+
+# move 0 3 0
+# alpha 0 1 0.39
+# face 0 "normal"
+# waitandnext 0.4
+
+# move 203011 5 0
+# mask 203011 on
+# alpha 203011 1 0.39
+# face 203011 "normal"
+# waitandnext 0.5
+
+# fadein "white" 0.8
+# background "classroom01"
+# alpha 101491 0 0
+# alpha 203011 0 0
+# alpha 0 0 0
+# waitandnext 0.8
+
+# fadeout "white" 1
+# waitandnext 1.2
+
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# bgm "stop"
+# fadein "white" 0.5
+# voice 1014 "tyrufing_g_title_0007"
+# voice 5004 "burafumasutora_g_title_0007"
+# voice 1011 "excalibur_g_title_0007"
+# voice 2003 "loveryus_g_title_0007"
+# waitandnext 2
+
+# buttonsout 0 0.5
+# frameout 0 0.5
+# imagealpha 2 0 1
+# imagepos 2 0 0
+# imagealpha 3 1 1
+# imagepos 3 0 0
+
+# fadeout "black" 2
+# waitandnext 3
+
+# buttonsin 0 0.5
+# framein 0 0.5
+# imagealpha 3 0 0
+;;//背景：体育館
+# background "gymnasium"
+# bgm "bgm002" 0
+# move 203011 3 0
+# face 203011 "normal"
+# alpha 203011 1 0
+# mask 203011 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;【EP.1】跳躍するカメラマン
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@リサナウト
+さっそく撮りましょ！
+ここからなら
+いい画が撮れるわよ～
+
+;;//ＳＥ：パシャ、パシャ…（カメラのシャッター音）
+# se "SE_12805"
+;;モノローグ
+# textflame 0 0
+@
+ノリノリのリサナウトに対し、
+何がなんだかわからないマスター
+
+@マスター
+えっと、これって
+どういうこと？
+
+# emotionbody 7000 10 203011 60 235
+# effectpattern 7000 3 3
+# effectstart 7000
+# voice 2030 "risanautr_l_0004"
+# face 203011 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+ふふっ……実はね？
+ついに発明してしまったの！
+タイムトラベルできる道具をね！
+
+;;モノローグ
+# textflame 0 0
+@
+そう言いながら、
+リサナウトは手元のブレスレットを
+これでもかと見せつけてくる
+
+# effectskip 7000
+# face 203011 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+これ、オカ研の部室にあった
+古いブレスレットなんだけど……
+
+# textboxarrow 0 2
+@リサナウト
+ボロボロでヒビが入っていたのを
+直すついでに、
+いろんな実験を試してみたのよ
+
+# textboxarrow 0 2
+@リサナウト
+不思議な力を感じたしね
+
+# face 203011 "happy"
+# textboxarrow 0 2
+@リサナウト
+そうしたらなんと！
+タイムトラベルの能力が
+見事に付与されたってわけ！
+
+# textboxarrow 0 2
+@リサナウト
+これを着けて写真に映ると、
+過去の好きな時間に飛べるのよ！
+ね、すごいでしょう！？
+
+;;モノローグ
+# textflame 0 0
+@
+目を輝かせながら
+リサナウトは語る
+
+;;モノローグ
+@
+にわかには信じがたいが、
+目の前の状況が
+彼女の話を後押ししていた
+
+# face 203011 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+ふう、こんなところね
+次は何を撮りにいく？
+
+# textflame 0 0
+@マスター
+え、えっと…
+
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+３年生が活躍してた
+イベントって言ったら……
+やっぱりアレかしら？
+
+;;//ＳＥ：パシャッ！（カメラのシャッター音）
+# bgm "stop"
+# se "SE_12798"
+# sedelay "SE_12802" 0.8
+;;//演出：画面フラッシュ
+;;//ト書き：上記、時間遡行の演出です。
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;//演出：場面転換
+;;//背景：校庭_体育祭(昼)
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "schoolyard_sportsfestival_daytime"
+# alpha 203011 0 0
+# move 32 3 0
+# face 32 "normal"
+# alpha 32 1 0
+# mask 32 off
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//以下、３話５３ページの内容再現。
+# bgmfile "bgm179_180" "BgmGakuen002" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@グリダヴォル
+熱い展開になってきました！
+勝敗の行方は
+両校のアンカーに託されるようです！
+
+# textboxarrow 0 2
+@グリダヴォル
+さぁ！
+ついにアンカーにバトンが、
+ほぼ同時に渡ったーっ！
+
+;;//再現はここまで
+# emotionbody 8000 10 203011 60 235
+# effectpattern 8000 3 3
+# effectstart 8000
+# alpha 32 0 0.5
+# move 203011 3 0
+# face 203011 "happy"
+# alpha 203011 1 0.5
+# mask 203011 off
+# textboxarrow 0 2
+@リサナウト
+行け行けーっ！
+ゴールはすぐそこよーっ！
+
+# textboxarrow 0 2
+@リサナウト
+みんなすっごくいい顔……！
+こっちこっちっ、
+目線ちょうだーいっ！
+
+;;モノローグ
+# textflame 0 0
+@
+体育祭の日…
+生徒達に混じって
+リレーの応援をするリサナウト
+
+;;モノローグ
+@
+またもや起こった
+タイムトラベルという現実に、
+マスターは驚きつつも受け入れていく
+
+# effectskip 8000
+# face 203011 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+あ、見て！
+あれって牙克城学院の
+生徒会長じゃない？
+
+# face 203011 "happy"
+# textboxarrow 0 2
+@リサナウト
+ちょっと話を
+聞きに行きましょう！
+取材、取材♪
+
+# textflame 0 0
+@マスター
+平気なの？
+過去に干渉することになるけど
+
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+うーん……まあ、
+これくらいなら大丈夫よ！
+たぶん！
+
+# textflame 0 0
+@マスター
+いや、たぶんって…
+
+;;モノローグ
+@
+勢いで押し切るリサナウトに、
+マスターは深いため息をついた……
+
+;;//演出：場面転換
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 203011 0 0
+# move 115 3 0
+# face 115 "happy"
+# alpha 115 1 0
+# mask 115 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_6505"
+# emotionbody 9000 3 115 10 200
+# effectpattern 9000 2 3
+# effectstart 9000
+# voice 5004 "burafumasutora_0039"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ブラフマーストラ
+へぇ～、卒業アルバム？
+それならじゃんじゃん撮ってよ～
+ピースピース♪
+
+;;モノローグ
+# textflame 0 0
+@
+カメラに向かっていい笑顔を見せる
+生徒会長・ブラフマーストラ
+
+;;モノローグ
+@
+リサナウトもノリノリで
+その笑顔を写真に収めている
+
+# effectskip 9000
+# move 203011 2 0
+# face 203011 "normal"
+# alpha 203011 1 0.5
+# mask 203011 on
+# textboxarrow 0 1
+# move 115 4 0.5
+# mask 115 on
+# textflame 1 1
+@リサナウト
+どう、生徒会長さん？
+卒業を前にして、
+何か思うことはある？
+
+# voice 5004 "burafumasutora_0005"
+# textboxarrow 0 3
+@ブラフマーストラ
+思うことか～……
+うーん、特にないかも！
+あっははっ！
+
+# face 115 "normal"
+# textboxarrow 0 3
+@ブラフマーストラ
+とりあえず今は、
+みんなをいい感じに導きながら、
+こうしてわいわい盛り上がって……
+
+# textboxarrow 0 3
+@ブラフマーストラ
+元気にやってるよーって姿を、
+後輩達に見せたいなって！
+そんな感じ！
+
+;;モノローグ
+# textflame 0 0
+@
+そう語りつつ、
+競技中の生徒達を
+全力で応援する
+
+;;モノローグ
+@
+彼女の優しい表情には、
+後輩達を見守る
+器の大きさが表れていた……
+
+# se "SE_6504"
+# emotionbody 10000 3 203011 10 290
+# effectpattern 10000 1 3
+# effectstart 10000
+# voice 2030 "risanautr_l_0030"
+# face 203011 "happy"
+# textboxarrow 0 1
+# textflame 1 1
+@リサナウト
+ふふっ、素敵な答えね♪
+ありがとう！
+
+# face 203011 "normal"
+# textboxarrow 0 1
+@リサナウト
+卒業アルバム、
+すぐに出来上がるから！
+楽しみに待ってて！
+
+# voice 5004 "burafumasutora_0004"
+# face 115 "happy"
+# textboxarrow 0 3
+@ブラフマーストラ
+あははっ、気が早いね～
+まだ秋だよ？
+
+# voice 2030 "risanautr_l_0005"
+# textboxarrow 0 1
+@リサナウト
+ふふっ♪
+じゃあまたいつか！
+行きましょう、マスター！

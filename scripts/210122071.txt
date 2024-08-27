@@ -1,0 +1,520 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１２章 章タイトル「ラルゴカタストロフィ―暴走―」
+;;第2話－７　タイトル：暴走の契機
+;;2_7_1
+;;スクリプト最後の背景：泉
+;;-----------------------------------------
+# script "lisp"
+# background "fountain"
+# bgmfile "bgm411_412" "BgmIntegralNoahBattle001" 0
+;;-----------------------------------------
+;;レーヴァテイン・擬彩
+# body 5100231
+# pos 5100231 3
+# scale 5100231 0.8 0
+# layer 5100231 2
+# alpha 5100231 0 0
+# mask 5100231 off
+;;擬装エルキュール
+# body 5202521
+# pos 5202521 3
+# scale 5202521 0.8 0
+# layer 5202521 2
+# alpha 5202521 0 0
+# mask 5202521 off
+;;ミネルヴァ・擬装・アーチャー
+# body 5302521
+# pos 5302521 3
+# scale 5302521 0.8 0
+# layer 5302521 2
+# alpha 5302521 0 0
+# mask 5302521 off
+;;-----------------------------------------
+;;第2話－７　タイトル：暴走の契機
+;;//背景：泉
+# voice 510023 "revatein_iz_unit_0010"
+# move 5100231 3 0
+# face 5100231 "angry"
+# alpha 5100231 1 0
+# mask 5100231 off
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+…私の家族に手を出したら、
+楽には死なせないよ
+
+# voice 3025 "minerva_0015"
+# alpha 5100231 0 0.5
+# move 5302521 3 0
+# face 5302521 "sad"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+うっ…
+何ですか、このプレッシャーは？
+
+# textboxarrow 0 2
+@ミネルヴァ
+レーヴァテイン…
+まさか…更に力が増して…
+
+# voice 510023 "revatein_iz_0045"
+# alpha 5302521 0 0.5
+# move 5100231 3 0
+# face 5100231 "angry"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+ロンギヌス…少し待ってて
+必ず…あいつらを
+
+# alpha 5100231 0 0.5
+# move 5302521 3 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+あっ！
+避けて下さい、エルキュール！
+
+# voice 2025 "hercule_0022"
+# alpha 5302521 0 0.5
+# move 5202521 3 0
+# face 5202521 "surprise"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# textboxarrow 0 2
+@エルキュール
+…………えっ？
+
+# se "SE_9092"
+# voice 510023 "revatein_iz_0029"
+# alpha 5202521 0 0.5
+# move 5100231 3 0
+# face 5100231 "angry"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+はあああああああああああ！！
+
+;;//レーヴァテインがエルキュールを斬る
+# textwindow "close"
+# alpha 5100231 0 0.5
+# move 5202521 2 0
+# face 5202521 "surprise"
+# alpha 5202521 1 0.5
+# mask 5202521 on
+# waitandnext 0.5
+
+# move 5100231 4 0
+# face 5100231 "angry"
+# alpha 5100231 1 0
+# mask 5100231 on
+# rightin 5100231 0.3
+# waitandnext 0.3
+
+# se "SE_4815"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 -200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# voice 2025 "hercule_battle_0006"
+# face 5202521 "angry"
+# textboxarrow 0 1
+# textwindow "normal"
+@エルキュール
+あうっ…！？
+
+# alpha 5202521 0 0.5
+# alpha 5100231 0 0.5
+# move 5302521 3 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+速い…！
+やっぱり力が増大していますっ
+
+# se "SE_8000"
+# alpha 5302521 0 0.5
+# move 5202521 2 0
+# face 5202521 "angry"
+# alpha 5202521 1 0.5
+# mask 5202521 on
+# move 5100231 4 0
+# face 5100231 "angry"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+# textboxarrow 0 3
+@レーヴァテイン
+浅かった…
+次は確実に…斬る
+
+# textboxarrow 0 1
+@エルキュール
+私は…！
+世界に希望の灯をっ
+
+;;//レーヴァテインの攻撃を受けてエルキュールが吹っ飛ぶ
+# se "SE_9083"
+# se "SE_5215"
+# sedelay "SE_9044" 0.8
+# sedelay "SE_9146" 1.3
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 2000 1 -200 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+# textwindow "close"
+# leftout 5202521 0.5
+# waitandnext 0.5
+
+# alpha 5202521 0 0
+# waitandnext 0.2
+
+# voice 2025 "hercule_0037"
+# alpha 5100231 0 0.5
+# move 5202521 3 0
+# face 5202521 "angry"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# textboxarrow 0 2
+# textwindow "normal"
+@エルキュール
+くうっ…！
+
+# alpha 5202521 0 0.5
+# move 5100231 3 0
+# face 5100231 "angry"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+よくもロンギヌスを…
+私の家族を…
+許さないから
+
+# textboxarrow 0 2
+@レーヴァテイン
+さっさと…消えて！
+
+# se "SE_9021"
+# textwindow "close"
+# leftout 5100231 0.3
+# waitandnext 0.3
+
+# alpha 5100231 0 0
+# move 5302521 3 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ミネルヴァ
+速すぎて狙いが定まりません…
+こんなこと…
+
+# alpha 5302521 0 0.5
+# move 5100231 3 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+そっちも…見えてるよ
+
+# se "SE_9092"
+# textwindow "close"
+# leftout 5100231 0.3
+# waitandnext 0.3
+
+;;//レーヴァテインがミネルヴァを斬る
+# alpha 5100231 0 0
+# move 5302521 2 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 on
+# waitandnext 0.5
+
+# move 5100231 4 0
+# face 5100231 "normal"
+# alpha 5100231 1 0
+# mask 5100231 on
+# rightin 5100231 0.3
+# waitandnext 0.3
+
+# se "SE_4815"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 3000 1 -200 0 0
+# effectstart 3000
+# waitandnext 0.5
+
+# voice 3025 "minerva_0015"
+# face 5302521 "sad"
+# textboxarrow 0 1
+# textwindow "normal"
+@ミネルヴァ
+うっ…
+一瞬で間合いを詰めるなんて…
+
+# textboxarrow 0 3
+@レーヴァテイン
+このくらいで驚かれたら…
+つまらない
+
+# textboxarrow 0 3
+@レーヴァテイン
+しっかり後悔して…
+苦しみ抜いて…
+それから死んで
+
+# voice 510023 "revatein_iz_0029"
+# face 5100231 "angry"
+# textboxarrow 0 3
+@レーヴァテイン
+はああああああああ！！
+
+# se "SE_9118"
+# waitandnext 0.5
+
+# face 5302521 "normal"
+# textboxarrow 0 1
+@ミネルヴァ
+さらに速く…！？
+何とかして足止めしないとっ
+
+# alpha 5302521 0 0.5
+# move 5202521 2 0
+# face 5202521 "angry"
+# alpha 5202521 1 0.5
+# mask 5202521 on
+# textboxarrow 0 1
+@エルキュール
+私が止めます！
+
+# textboxarrow 0 3
+@レーヴァテイン
+あなたには…無理だよ！
+
+# textboxarrow 0 1
+@エルキュール
+いいえ！
+無理なことなんてありません！
+だって私達はっ
+
+# textboxarrow 0 1
+@エルキュール
+世界の希望になるんです！
+
+;;//エルキュールとレーヴァテインが切り結ぶ
+# se "SE_9017"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@レーヴァテイン
+希望？
+この世界に…そんなものはないよ
+
+# textboxarrow 0 3
+@レーヴァテイン
+終わるだけの世界に…
+大切なものの存在しない世界に…
+希望なんて…ない！
+
+# textboxarrow 0 1
+@エルキュール
+あります！
+希望は決して潰えません！
+失われたように見えたとしても
+
+# textboxarrow 0 1
+@エルキュール
+必ず、また芽生えるんです！
+
+# textboxarrow 0 3
+@レーヴァテイン
+ロンギヌスを斬ったあなたが…
+そんなこと言わないで！！
+
+# face 5202521 "sad"
+# textboxarrow 0 1
+@エルキュール
+あっ…
+
+# alpha 5202521 0 0.5
+# alpha 5100231 0 0.5
+# move 5302521 3 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+いけません、エルキュール！
+
+# alpha 5302521 0 0.5
+# move 5202521 2 0
+# face 5202521 "sad"
+# alpha 5202521 1 0.5
+# mask 5202521 on
+# move 5100231 4 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+# textboxarrow 0 3
+@レーヴァテイン
+もう二度と…
+私達の前に現れないで
+
+;;//レーヴァテインがエルキュールを斬る
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 4000 1 -200 0 0
+# effectstart 4000
+# waitandnext 0.5
+
+# voice 2025 "hercule_battle_0008"
+# face 5202521 "angry"
+# textboxarrow 0 1
+@エルキュール
+ああああっ…
+
+# alpha 5202521 0 0.5
+# alpha 5100231 0 0.5
+# move 5302521 3 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+イヤッ…！
+イヤです、エルキュール…！
+
+# voice 2025 "hercule_0031"
+# alpha 5302521 0 0.5
+# move 5202521 3 0
+# face 5202521 "sad"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# textboxarrow 0 2
+@エルキュール
+ごめんなさい…みんな…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 5202521 0 0.5
+# waitandnext 0.5
+
+# voice 3025 "minerva_0015"
+# move 5302521 3 0
+# face 5302521 "sad"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ミネルヴァ
+ああっ…
+
+# se "SE_5205"
+# alpha 5302521 0 0.5
+# move 5100231 3 0
+# face 5100231 "angry"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+次は…あなた！
+
+# alpha 5100231 0 0.5
+# move 5302521 3 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+…………！
+
+;;//ミネルヴァがレーヴァテインの攻撃を躱す
+# se "SE_4000"
+# waitandnext 0.5
+
+# se "SE_5204"
+# textwindow "close"
+# leftout 5302521 0.5
+# waitandnext 0.5
+
+# alpha 5302521 0 0.5
+# move 5100231 3 0
+# face 5100231 "angry"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+# textwindow "normal"
+@レーヴァテイン
+チッ…
+
+# alpha 5100231 0 0.5
+# move 5302521 3 0
+# face 5302521 "sad"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+ロンギヌスを討たれたあなたの気持ち
+少しは理解できると思います…
+
+# textboxarrow 0 2
+@ミネルヴァ
+私もたった今、同じ思いをしました
+から…
+
+# alpha 5302521 0 0.5
+# move 5100231 3 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+同じ思いなんて…勝手に決めないで
+
+# alpha 5100231 0 0.5
+# move 5302521 3 0
+# face 5302521 "sad"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+そうですね…
+失言でした
+
+# face 5302521 "normal"
+# textboxarrow 0 2
+@ミネルヴァ
+この気持ちは…私だけのものです
+あなたと同じではありません
+
+# textboxarrow 0 2
+@ミネルヴァ
+この…言いようのない喪失感と…
+抑えきれない…怒りは！
+
+;;//ミネルヴァに少しだけ黒い霧演出
+# emotionbody 5000 15 5302521 0 0
+# effectpattern 5000 1 0
+# effectstart 5000
+# brightness 5302521 0.8 0.5
+# textboxarrow 0 2
+@ミネルヴァ
+私は…あなたを討ちます！

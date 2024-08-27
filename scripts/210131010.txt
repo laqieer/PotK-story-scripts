@@ -1,0 +1,505 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１３章 章タイトル「ラルゴカタストロフィ―攪乱―」
+;;第1話－１　タイトル：眩惑のキル姫
+;;1_1_0
+;;スクリプト最後の背景：マサムネ城内部
+;;-----------------------------------------
+# script "lisp"
+# background "parchment_map04"
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;異族化アルマス（ナレーションのボイス用）
+# body 5103831
+# alpha 5103831 0 0
+;;異族化マサムネ
+# body 5100131
+# pos 5100131 3
+# scale 5100131 0.8 0
+# layer 5100131 2
+# alpha 5100131 0 0
+# mask 5100131 off
+;;異族化パラシュ
+# body 5200431
+# pos 5200431 3
+# scale 5200431 0.8 0
+# layer 5200431 2
+# alpha 5200431 0 0
+# mask 5200431 off
+;;ヘレナ・D. plug・ロキ
+# body 5302811
+# pos 5302811 3
+# scale 5302811 0.8 0
+# layer 5302811 2
+# alpha 5302811 0 0
+# mask 5302811 off
+;;ニール
+# body 162
+# pos 162 3
+# scale 162 0.8 0
+# layer 162 2
+# alpha 162 0 0
+# mask 162 off
+;;-----------------------------------------
+;;第1話－１　タイトル：眩惑のキル姫
+;;※登場する異族は全て「花異族」、ヘレナは最初からインテグラルノア編のヘレナでお願いいたします。
+;;//背景：天上世界遠景
+;;ナレーション
+# voice 9920 "IntegralNoah_Narration_13_1_0001"
+# textflame 0 0
+@
+泉にて、インテグラルキラーズの
+レーヴァテイン、ロンギヌスと戦う
+エルキュール、ミネルヴァ
+
+;;ナレーション
+# voice 9920 "IntegralNoah_Narration_13_1_0002"
+@
+激戦の中、ロンギヌスが
+レーヴァテインを
+庇って倒れる
+
+;;ナレーション
+# voice 9920 "IntegralNoah_Narration_13_1_0003"
+@
+さらにエルキュールも
+レーヴァテインの攻撃によって
+瀕死の重傷を負った
+
+;;ナレーション
+# voice 9920 "IntegralNoah_Narration_13_1_0004"
+@
+息絶えそうなエルキュールを目にし
+ミネルヴァは怒りに囚われる
+
+;;ナレーション
+# voice 9920 "IntegralNoah_Narration_13_1_0005"
+@
+怒りのままに暴走しかけたとき、
+カリスの声がミネルヴァに正気を
+取り戻させた
+
+;;ナレーション
+# voice 9920 "IntegralNoah_Narration_13_1_0006"
+@
+カリスは己の身を顧みず、
+エルキュールとロンギヌスを癒して
+みせる
+
+;;ナレーション
+# voice 9920 "IntegralNoah_Narration_13_1_0007"
+@
+暴走したフラベルムとセファーをも
+助けた彼女は、皆に戦いをやめるよう
+訴えるが…
+
+;;ナレーション
+# voice 9920 "IntegralNoah_Narration_13_1_0008"
+@
+突如、ユグドラシルに黒い霧が
+まとわりつき、天上世界の各地に
+黒い柱が突き立った
+
+;;ナレーション
+# voice 9920 "IntegralNoah_Narration_13_1_0009"
+@
+運命が描き出されていく――
+
+;;//背景：マサムネ城内部
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "masamune_arena"
+# move 5100131 2 0
+# face 5100131 "normal"
+# alpha 5100131 1 0
+# mask 5100131 on
+# move 5200431 4 0
+# face 5200431 "normal"
+# alpha 5200431 1 0
+# mask 5200431 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm457" "BgmIntegralNoahEvent008" 0
+# se "bgm457_filteroff2"
+# textflame 1 1
+# textboxarrow 0 1
+# textwindow "normal"
+@マサムネ
+酷い揺れだったな…
+
+# voice 520043 "parashu_iz_0001"
+# textboxarrow 0 3
+@パラシュ
+外を見たかい？
+ユグドラシルに黒い霧が絡みついて
+いるよ
+
+# voice 510013 "masamune_iz_0003"
+# textboxarrow 0 1
+@マサムネ
+拙者も確認した
+あちらこちらに黒い柱も立っている
+ようだな
+
+# textboxarrow 0 3
+@パラシュ
+柱の周りは空間が不安定になってる
+みたいだ
+ボク達でも近づくと危険かな
+
+# textboxarrow 0 1
+@マサムネ
+あの柱は、天上世界そのものを砕く
+下準備といったところであろう…
+
+# textboxarrow 0 3
+@パラシュ
+霧の方は、逃がさないという
+意思の表れかな？
+ボク達の理想郷にまで絡みついて…
+
+# textboxarrow 0 1
+@マサムネ
+恐らく今後、霧は濃くなり
+柱は増えていく
+やはり…
+
+# textboxarrow 0 3
+@パラシュ
+“終焉”が近づいているね
+
+# textboxarrow 0 1
+@マサムネ
+想定より早いのではないか？
+ティルフィングは何をしている…
+
+# textboxarrow 0 3
+@パラシュ
+万が一、彼女が帰ってこなくても
+ボクは理想郷を船出させてみせるよ
+
+# textboxarrow 0 1
+@マサムネ
+それは拙者も同じだ
+覚悟はできている
+それにしても…
+
+# textboxarrow 0 1
+@マサムネ
+理想郷に相応しいバイブスは、
+もう見当たらぬようだな
+
+# textboxarrow 0 3
+@パラシュ
+なるべく集めておこうというくらいの
+方針だったから、相応しくないものを
+無理に送る必要はないよ
+
+# face 5200431 "sad"
+# textboxarrow 0 3
+@パラシュ
+それより、ボクが今、気になって
+いるのは…
+
+;;//ヘレナがやって来る
+;;？？？（ヘレナ）
+# bgmfile "bgm463" "BgmIntegralNoahDisrupters" 0
+# se "SE_0740"
+# voice 530281 "herena_di_0007"
+# alpha 5100131 0 0.5
+# alpha 5200431 0 0.5
+# move 5302811 2 0
+# face 5302811 "normal"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 1
+# move 162 4 0
+# alpha 162 1 0.5
+# mask 162 on
+@？？？
+やあ、お二人さん
+さっきの揺れは凄かったな
+ヘレナも驚いたぞ…くふっ
+
+;;？？？（ニール）
+# textboxarrow 0 3
+@？？？
+反転したユグドラシルにも黒い霧が
+絡みついてるみたい
+とっても心配ね
+
+# alpha 5302811 0 0.5
+# alpha 162 0 0.5
+# move 5100131 2 0
+# face 5100131 "normal"
+# alpha 5100131 1 0.5
+# mask 5100131 on
+# textboxarrow 0 1
+# move 5200431 4 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+@マサムネ
+ヘレナにニールか…
+
+# voice 520043 "parashu_iz_0009"
+# face 5200431 "angry"
+# textboxarrow 0 3
+@パラシュ
+ボク達に気安く話しかけないで
+欲しいな
+
+# alpha 5100131 0 0.5
+# alpha 5200431 0 0.5
+# move 5302811 3 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 off
+# textboxarrow 0 2
+@ヘレナ
+そんなに怖い顔をしなくても
+いいじゃないか
+せっかく情報を持ってきたんだから
+
+# voice 510013 "masamune_iz_0039"
+# alpha 5302811 0 0.5
+# move 5100131 3 0
+# face 5100131 "normal"
+# alpha 5100131 1 0.5
+# mask 5100131 off
+# textboxarrow 0 2
+@マサムネ
+ほう…
+何についての情報だ？
+
+# alpha 5100131 0 0.5
+# move 5302811 2 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 1
+# move 162 4 0
+# alpha 162 1 0.5
+# mask 162 on
+@ヘレナ
+アナタ達を倒すために、城下で
+奏官達がキル姫を集めているよ
+近々、攻めてくるだろうな
+
+# voice 9952 "nir_0025"
+# textboxarrow 0 3
+@ニール
+まあ、怖い！
+アタチ、震えちゃうわ
+
+# voice 510013 "masamune_iz_0004"
+# alpha 5302811 0 0.5
+# alpha 162 0 0.5
+# move 5100131 2 0
+# face 5100131 "normal"
+# alpha 5100131 1 0.5
+# mask 5100131 on
+# textboxarrow 0 1
+# move 5200431 4 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+@マサムネ
+そのようなことか
+つまらぬ些事だ
+
+# voice 520043 "parashu_iz_0007"
+# face 5200431 "angry"
+# textboxarrow 0 3
+@パラシュ
+理想の実現を邪魔する者は
+全て叩き潰す
+いつでも相手になるよ
+
+# voice 530281 "herena_di_0004"
+# alpha 5100131 0 0.5
+# alpha 5200431 0 0.5
+# move 5302811 3 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 off
+# textboxarrow 0 2
+@ヘレナ
+さすが、マサムネにパラシュ
+自信満々だな
+頼もしい限りだ
+
+# textboxarrow 0 2
+@ヘレナ
+でも、ここはヘレナに任せて
+欲しい
+
+# voice 510013 "masamune_iz_0009"
+# alpha 5302811 0 0.5
+# move 5100131 3 0
+# face 5100131 "surprise"
+# alpha 5100131 1 0.5
+# mask 5100131 off
+# textboxarrow 0 2
+@マサムネ
+何…？
+
+# alpha 5100131 0 0.5
+# move 5302811 3 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 off
+# textboxarrow 0 2
+@ヘレナ
+攻めてきたキル姫達は、ヘレナが
+上手いこと片付けておくよ
+
+# voice 510013 "masamune_iz_0013"
+# alpha 5302811 0 0.5
+# move 5100131 3 0
+# face 5100131 "angry"
+# alpha 5100131 1 0.5
+# mask 5100131 off
+# textboxarrow 0 2
+@マサムネ
+解せんな…
+そなたにそのような義理はないはずだ
+何を企んでいる？
+
+# voice 530281 "herena_di_0026"
+# alpha 5100131 0 0.5
+# move 5302811 3 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 off
+# textboxarrow 0 2
+@ヘレナ
+そんな言い方は寂しいなぁ…
+ヘレナだって一宿一飯の恩義くらい
+感じてるよ
+
+# alpha 5302811 0 0.5
+# move 5200431 3 0
+# face 5200431 "angry"
+# alpha 5200431 1 0.5
+# mask 5200431 off
+# textboxarrow 0 2
+@パラシュ
+君が勝手に上がり込んで、
+居座ってるだけじゃないか
+
+# voice 530281 "herena_di_0007"
+# alpha 5200431 0 0.5
+# move 5302811 3 0
+# face 5302811 "normal"
+# alpha 5302811 1 0.5
+# mask 5302811 off
+# textboxarrow 0 2
+@ヘレナ
+そんなヘレナを追い出そうとしない
+懐の深い二人に感謝してるんだよ
+…くふっ
+
+# voice 510013 "masamune_iz_0010"
+# alpha 5302811 0 0.5
+# move 5100131 3 0
+# face 5100131 "angry"
+# alpha 5100131 1 0.5
+# mask 5100131 off
+# textboxarrow 0 2
+@マサムネ
+あまり軽口ばかり叩くようなら
+斬って捨てるぞ
+
+# voice 530281 "herena_di_0016"
+# alpha 5100131 0 0.5
+# move 5302811 2 0
+# face 5302811 "sad"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 1
+# move 162 4 0
+# alpha 162 1 0.5
+# mask 162 on
+@ヘレナ
+ヘレナの純粋な思いが伝わらなくて
+悲しいなぁ…
+
+# face 5302811 "usual"
+# textboxarrow 0 1
+@ヘレナ
+そもそも、城下のキル姫達のことを
+「つまらぬ些事」だって言ったのは
+マサムネだぞ
+
+# textboxarrow 0 1
+@ヘレナ
+君達は二人とも、そんな些事に
+関わっている場合じゃないよね
+
+# voice 9952 "nir_0004"
+# textboxarrow 0 3
+@ニール
+雑用を率先して引き受けるなんて
+ヘレナは優しいわねっ
+
+# voice 530281 "herena_di_0007"
+# face 5302811 "normal"
+# textboxarrow 0 1
+@ヘレナ
+そうだろう？
+とりあえず任せてみてよ
+悪いようにはしないよ…くふっ
+
+# alpha 5302811 0 0.5
+# alpha 162 0 0.5
+# move 5100131 2 0
+# face 5100131 "normal"
+# alpha 5100131 1 0.5
+# mask 5100131 on
+# textboxarrow 0 1
+# move 5200431 4 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+@マサムネ
+…………
+
+# textboxarrow 0 3
+@パラシュ
+分かった
+君の好きにするといい
+ただし…
+
+# face 5200431 "angry"
+# textboxarrow 0 3
+@パラシュ
+ボク達の邪魔になるようなら
+容赦なく叩き潰すからね
+
+# voice 530281 "herena_di_0020"
+# alpha 5100131 0 0.5
+# alpha 5200431 0 0.5
+# move 5302811 2 0
+# face 5302811 "normal"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 1
+# move 162 4 0
+# alpha 162 1 0.5
+# mask 162 on
+@ヘレナ
+ヘレナの気持ちが伝わって嬉しいな
+それじゃあね
+
+;;//ヘレナとニールが立ち去る
+# se "SE_0740"
+# textwindow "close"
+# alpha 5302811 0 0.5
+# alpha 162 0 0.5
+# waitandnext 1.2

@@ -1,0 +1,772 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１１章 章タイトル「問いかける幻獣―ダイアローグ―」
+;;第2話－５　タイトル：対話のために
+;;2_5_0
+;;スクリプト最後の背景：地底・室内
+;;-----------------------------------------
+# script "lisp"
+# background "in_underground_world_room"
+# bgm "stop"
+;;-----------------------------------------
+;;デュランダル（キラーメイル）
+# body 1100341
+# pos 1100341 3
+# scale 1100341 0.8 0
+# layer 1100341 2
+# alpha 1100341 0 0
+# mask 1100341 off
+;;天沼矛（キラーメイル）、タツヤ
+# body 1300431
+# pos 1300431 3
+# scale 1300431 0.8 0
+# layer 1300431 2
+# alpha 1300431 0 0
+# mask 1300431 off
+;;ウロボロス
+# body 3830008
+# pos 3830008 3
+# scale 3830008 0.8 0
+# layer 3830008 2
+# alpha 3830008 0 0
+# mask 3830008 off
+;;カシウス
+# body 166
+# pos 166 3
+# scale 166 0.8 0
+# layer 166 2
+# alpha 166 0 0
+# mask 166 off
+;;カシウス（誓約）ボイス用
+# body 5303111
+# alpha 5303111 0 0
+;;天沼矛
+# body 300431
+# pos 300431 3
+# scale 300431 0.8 0
+# layer 300431 3
+# alpha 300431 0 0
+# mask 300431 off
+;;八咫鏡
+# body 500331
+# pos 500331 3
+# scale 500331 0.8 0
+# layer 500331 2
+# alpha 500331 0 0
+# mask 500331 off
+;;草薙剣
+# body 100421
+# pos 100421 3
+# scale 100421 0.8 0
+# layer 100421 2
+# alpha 100421 0 0
+# mask 100421 off
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;第2話－５　タイトル：対話のために
+;;//背景：地底・室内
+# voice 13004 "amenonubokom_battle_0001"
+# move 1300431 3 0
+# face 1300431 "normal_1"
+# alpha 1300431 1 0
+# mask 1300431 off
+# textflame 1 1
+# textboxarrow 0 2
+@天沼矛
+はああああああああ！！
+
+# textwindow "close"
+# alpha 1300431 0 0.5
+# waitandnext 0.5
+
+;;//結界が砕け散る
+# se "SE_9465"
+# se "SE_10391"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# move 166 1 0
+# face 166 "normal"
+# alpha 166 1 0.5
+# mask 166 on
+# move 1100341 3 0
+# face 1100341 "normal"
+# alpha 1100341 1 0.5
+# mask 1100341 on
+# move 1300431 5 0
+# face 1300431 "normal"
+# alpha 1300431 1 0.5
+# mask 1300431 on
+# textboxarrow 0 3
+# textwindow "normal"
+@天沼矛
+…ようやく中に入れました
+はじめまして
+天沼矛といいます！
+
+# textboxarrow 0 2
+@デュランダル
+私はデュランダル
+カシウス、今すぐここから出るんだ
+
+# voice 530311 "cassius_ca_0034"
+# textboxarrow 0 1
+@カシウス
+そういうわけにはいかない…
+わたしはウロボロスとの対話を
+続けなければならないの
+
+# textboxarrow 0 1
+@カシウス
+答えを見出すために
+
+# textboxarrow 0 2
+@デュランダル
+ここに答えなどない
+
+# voice 530311 "cassius_ca_0022"
+# face 166 "surprise"
+# textboxarrow 0 1
+@カシウス
+えっ…？
+
+# bgmfile "bgm170" "BgmPJZero_EV001" 0
+# face 1300431 "normal_1"
+# textboxarrow 0 3
+@天沼矛
+そう…こんなところで問答を続けて
+いても答えは永久に出ません！
+
+# textboxarrow 0 3
+@天沼矛
+答えはいつだって
+自分自身の中にあるんですから！
+
+# alpha 166 0 0.5
+# move 3830008 1 0
+# alpha 3830008 1 0.5
+# mask 3830008 on
+# textboxarrow 0 1
+@ウロボロス
+非論理的だな
+思考を放棄している
+
+# textboxarrow 0 3
+@天沼矛
+でも、それが常に悪いことだとは
+思いません！
+
+# textboxarrow 0 2
+@デュランダル
+思考することは大切だ
+思考とは理性
+自身を律する基となるもの
+
+# textboxarrow 0 2
+@デュランダル
+だが、もしそれに従っていたのなら
+私達はきっとキラーメイルになど
+なってはいなかった
+
+# voice 13004 "amenonubokom_0003"
+# textboxarrow 0 3
+@天沼矛
+はい
+その決断は決して論理的なものでは
+ありませんでした
+
+;;//ロスラグ２章の天沼矛過去シーン
+;;//回想のやついれるなら（サウンドメモ）
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "upper_clean_floors"
+# alpha 3830008 0 0
+# alpha 1100341 0 0
+# alpha 1300431 0 0
+# move 500331 1 0
+# face 500331 "sad"
+# alpha 500331 1 0
+# mask 500331 on
+# move 300431 3 0
+# face 300431 "sad"
+# alpha 300431 1 0
+# mask 300431 on
+# move 100421 5 0
+# face 100421 "sad"
+# alpha 100421 1 0
+# mask 100421 on
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# voice 3004 "amenonuboko_battle_0007"
+# textboxarrow 0 2
+# textwindow "normal"
+@天沼矛
+あううぅぅっ…！
+
+# voice 5003 "yatanokagami_0015"
+# textboxarrow 0 1
+@八咫鏡
+くうぅぅぅっ…！
+
+# voice 1004 "kusanagi_0038"
+# textboxarrow 0 3
+@草薙剣
+ぐぬうぅぅっ…！
+
+# alpha 500331 0 0.5
+# alpha 300431 0 0.5
+# alpha 100421 0 0.5
+# move 1300431 3 0
+# face 1300431 "normal_1"
+# alpha 1300431 1 0.5
+# mask 1300431 off
+# textboxarrow 0 2
+@タツヤ
+あんな幼い子達を苦しませて、オレが
+のうのうと生きていて良いはずが
+ないでしょう！
+
+# textboxarrow 0 2
+@タツヤ
+決めました
+オレもキラーメイルの実験体に
+なります！
+
+# textboxarrow 0 2
+@タツヤ
+彼女達が辛い思いをせず笑っていら
+れる世界をオレは作りたいんです
+そのためにキラーメイルになります！
+
+;;//回想のやついれるなら（サウンドメモ）
+;;//背景：地底・室内
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "in_underground_world_room"
+# alpha 1300431 0 0
+# move 166 1 0
+# face 166 "normal"
+# alpha 166 1 0
+# mask 166 on
+# move 1100341 3 0
+# face 1100341 "normal"
+# alpha 1100341 1 0
+# mask 1100341 on
+# move 1300431 5 0
+# face 1300431 "normal_1"
+# alpha 1300431 1 0
+# mask 1300431 on
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 3
+# textwindow "normal"
+@天沼矛
+オレは、目の前で苦しんでいる子達を
+見て決断しました
+
+# textboxarrow 0 3
+@天沼矛
+ただ、一心に
+彼女達が笑っていられる世界を
+作りたくて！
+
+# textboxarrow 0 2
+@デュランダル
+私も似たようなものだ
+多くは語らないが
+
+# textboxarrow 0 2
+@デュランダル
+私自身を突き動かした騎士道の根幹に
+あったものは理性ではなく…
+愛だった
+
+# textboxarrow 0 3
+@天沼矛
+カシウス！
+ここから出ましょう
+キミが求める世界がどんなものか…
+
+# textboxarrow 0 3
+@天沼矛
+オレ達に聞かせて下さい
+その世界を、オレ達は全力で実現
+させてみせます！
+
+# textboxarrow 0 2
+@デュランダル
+もう大丈夫だ
+「変わらない穏やかな日常」は
+永続できる
+
+# textboxarrow 0 1
+@カシウス
+その根拠は？
+価値は…本当にあるの？
+
+# voice 11003 "durandalm_0003"
+# textboxarrow 0 2
+@デュランダル
+根拠は私達が作り出す
+価値は、必ずある
+
+# textboxarrow 0 3
+@天沼矛
+あると信じればいいんです
+信じるキミがそこにいればいい
+それが始まりなんです！
+
+# textboxarrow 0 1
+@カシウス
+始まり…
+
+;;//回想
+;;//背景：町
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "town"
+# alpha 166 0 0
+# alpha 1100341 0 0
+# alpha 1300431 0 0
+# move 166 3 0
+# face 166 "normal"
+# alpha 166 1 0
+# mask 166 off
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# serif 1
+@老婆
+おや、お嬢ちゃん
+見ない顔だね
+
+;;//暗転挟む
+# serif 1
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 166 0 0
+# move 166 3 0
+# face 166 "normal"
+# alpha 166 1 0
+# mask 166 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# serif 1
+@ユニア
+あ！
+カシュ姉！カシュ姉！
+
+;;//暗転挟む
+# serif 1
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 166 0 0
+# move 166 3 0
+# face 166 "normal"
+# alpha 166 1 0.5
+# mask 166 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# serif 1
+@ユニア
+カシウスはカシウスのままでいるのが
+一番だよっ
+
+;;//暗転挟む
+# serif 1
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "ghost_town2"
+# alpha 166 0 0
+# move 166 3 0
+# face 166 "angry"
+# alpha 166 1 0
+# mask 166 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# serif 1
+@ユニア
+カシウス…あなたはずっと
+そのままでいてね
+私は、もう無理だから…
+
+# serif 1
+@ユニア
+ずっと穏やかな日々が続いて
+くれれば、それだけで良かったのに
+
+;;//背景：地底・室内
+# se "SE_11762"
+# serif 1
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "in_underground_world_room"
+# alpha 166 0 0
+# move 166 3 0
+# face 166 "normal"
+# alpha 166 1 0
+# mask 166 off
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# bgm "stop"
+# textboxarrow 0 2
+# textwindow "normal"
+@カシウス
+…………価値は、ある
+
+# textboxarrow 0 2
+@カシウス
+とても個人的なことだけれど…
+わたしにとっては、かけがえのない
+ものだった…
+
+# bgm "bgm103" 0
+# alpha 166 0 0.5
+# move 1100341 2 0
+# face 1100341 "normal"
+# alpha 1100341 1 0.5
+# mask 1100341 on
+# move 1300431 4 0
+# face 1300431 "normal_1"
+# alpha 1300431 1 0.5
+# mask 1300431 on
+# textboxarrow 0 3
+@天沼矛
+そうです！
+それこそが、君の答えなんです！
+
+# textboxarrow 0 1
+@デュランダル
+ここから出るんだ
+ウロボロスは君を永遠の問いに
+閉じ込めただけだ
+
+# textboxarrow 0 1
+@デュランダル
+君が力を求めるのなら、
+私がその剣となろう
+騎士道に誓って
+
+# face 1300431 "normal"
+# textboxarrow 0 3
+@天沼矛
+オレだっています
+キミが背負い、戦うことなんて
+ないんです
+
+# textboxarrow 0 3
+@天沼矛
+さあ、一緒にいきましょう！
+
+# alpha 1100341 0 0.5
+# alpha 1300431 0 0.5
+# move 166 2 0
+# face 166 "normal"
+# alpha 166 1 0.5
+# mask 166 on
+# move 3830008 4 0
+# alpha 3830008 1 0.5
+# mask 3830008 on
+# textboxarrow 0 3
+@ウロボロス
+…行くのか
+それもまた…必然
+
+# voice 530311 "cassius_ca_0030"
+# face 166 "happy"
+# textboxarrow 0 1
+@カシウス
+ありがとう…二人とも
+
+# face 166 "normal"
+# textboxarrow 0 1
+@カシウス
+でも、わたしはウロボロスに
+伝えないといけない
+わたしが見つけた答えを
+
+# textboxarrow 0 3
+@ウロボロス
+お前の見つけた答え…
+是非、聞かせて欲しい
+
+# textboxarrow 0 3
+@ウロボロス
+無常が理の世界で、
+「変わらない穏やかな日常」に
+どれほどの価値があるのか
+
+# voice 530311 "cassius_ca_0047"
+# textboxarrow 0 1
+@カシウス
+ウロボロス…
+あなたと幾つもの言葉を積み重ね
+思考を繰り返してきた
+
+# textboxarrow 0 1
+@カシウス
+だから、あなたの言う通り、
+すべては無常…人々の死も世界の
+終焉も自然の理だと分かる
+
+# textboxarrow 0 3
+@ウロボロス
+では、「変わらない穏やかな日常」に
+如何なる価値がある？
+
+# face 166 "sad"
+# textboxarrow 0 1
+@カシウス
+寂しいの…
+
+# textboxarrow 0 3
+@ウロボロス
+…………？
+
+# textboxarrow 0 1
+@カシウス
+たとえ誰しもがいつか死ぬ身だと
+しても…いなくなったら悲しい…
+会えないのは寂しい…
+
+# textboxarrow 0 1
+@カシウス
+わたしは…ユニアにいなくなって
+欲しくなかった…誰一人、失いたく
+なかった…
+
+# textboxarrow 0 1
+@カシウス
+自然の理だとしても、誰かがいなく
+なるのは悲しくて寂しい…
+
+# textboxarrow 0 1
+@カシウス
+「変わらない穏やかな日常」が
+失われるのは悲しくて寂しい…
+
+# textboxarrow 0 1
+@カシウス
+だから守りたい
+そう思った
+
+# voice 530311 "cassius_ca_0031"
+# textboxarrow 0 1
+@カシウス
+きっと、それだけのこと…
+あなたのように大きな視点で見る
+ことができなくて、ごめんなさい
+
+# face 166 "normal"
+# textboxarrow 0 1
+@カシウス
+でも、やっとわたしはわたしの生きる
+意味を見出すことができたから
+
+# textboxarrow 0 1
+@カシウス
+「変わらない穏やかな日常」を守る
+わたしは、そのために生きていく
+
+# textboxarrow 0 1
+@カシウス
+これがわたしの答えよ
+ささやかなものだけれど、
+とても、大切なことなの…
+
+# textboxarrow 0 1
+@カシウス
+あなたの力があれば、きっと多くの
+ことができたと思うけれど…
+それは諦めないとね
+
+# textboxarrow 0 1
+@カシウス
+わたしはわたしの力で、
+何とかやってみる…
+
+# alpha 166 0 0.5
+# alpha 3830008 0 0.5
+# move 1100341 2 0
+# alpha 1100341 1 0.5
+# mask 1100341 on
+# move 1300431 4 0
+# face 1300431 "normal"
+# alpha 1300431 1 0.5
+# mask 1300431 on
+# textboxarrow 0 3
+@天沼矛
+大丈夫です
+キミにはオレ達がいます！
+
+# textboxarrow 0 1
+@デュランダル
+嘆くことはない
+希望はある
+
+# textboxarrow 0 1
+@デュランダル
+私達が正気を取り戻したのは、
+一人の少年がその身を顧みずに
+勇敢な決断をしてくれたからだ
+
+# textboxarrow 0 3
+@天沼矛
+たった一人の命…それは小さなもの
+かもしれないけれど、きっと世界を
+変えるほどの可能性に満ちています！
+
+# textboxarrow 0 3
+@天沼矛
+カシウス、キミの答えは決して
+小さなものではありません
+
+# voice 530311 "cassius_ca_0004"
+# alpha 1100341 0 0.5
+# alpha 1300431 0 0.5
+# move 166 2 0
+# face 166 "happy"
+# alpha 166 1 0.5
+# mask 166 on
+# textboxarrow 0 1
+# move 3830008 4 0
+# alpha 3830008 1 0.5
+# mask 3830008 on
+@カシウス
+そうだと…いいな
+
+# textboxarrow 0 3
+@ウロボロス
+…………
+
+# bgmfile "bgm447_block" "BgmNeoRagnarok" 0
+# voice 530311 "cassius_ca_0047"
+# face 166 "normal"
+# textboxarrow 0 1
+@カシウス
+…ウロボロス
+一緒に来る？
+
+# textboxarrow 0 3
+@ウロボロス
+その問いかけは不可解だ
+お前は別の力を手に入れたはず…
+
+# textboxarrow 0 1
+@カシウス
+あなたが…寂しそうに見えたから
+
+# voice 8058 "new_uroboros_0008"
+# textboxarrow 0 3
+@ウロボロス
+寂しそう…このウロボロスが
+寂しさを感じていると？
+ふっ…興味深い…
+
+# textboxarrow 0 3
+@ウロボロス
+確かめたくなったのだ
+この者達を破滅の運命から救った
+という少年のように
+
+# textboxarrow 0 3
+@ウロボロス
+ささやかな日常に意味を見出した
+お前のように
+
+# textboxarrow 0 3
+@ウロボロス
+世界にまだ希望はあるのか
+終焉に抗う意味はあるのかをな
+
+# textboxarrow 0 3
+@ウロボロス
+カシウス…これからも思考を続けると
+誓えるか？
+
+# voice 530311 "cassius_ca_0003"
+# textboxarrow 0 1
+@カシウス
+もちろん
+わたしはどんなことがあっても、
+思考を止めたりしない
+
+# textboxarrow 0 1
+@カシウス
+「変わらない穏やかな日常」を守る
+ため、思考を続けるわ
+
+#setnextbgmblock 1
+# voice 8058 "new_uroboros_0040"
+# textboxarrow 0 3
+@ウロボロス
+ならば、それを誓約と為そう
+
+# textboxarrow 0 3
+@ウロボロス
+誓約は契約となり、ひとたび違えば
+お前は永遠に思考せぬ傀儡に墜ちる
+
+# textboxarrow 0 1
+@カシウス
+問題ない…
+
+# textboxarrow 0 3
+@ウロボロス
+では、ともに歩もう
+「変わらない穏やかな日常」が
+永遠に続く「久遠の世界」を求めて
+
+;;//画面フラッシュ
+# se "SE_9149"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1.6

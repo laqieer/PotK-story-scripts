@@ -1,0 +1,603 @@
+;;-----------------------------------------
+;;■□■新・海上編8月月初シナリオ_20180720■□■
+;;【第3幕】逆転のブラック 戦闘前
+;;スクリプト最後の背景：ビーチ
+;;-----------------------------------------
+# script "lisp"
+# background "sea_beach_day"
+# bgmfile "bgm236_237" "BgmSeaEventBattle" 0
+;;水着ラスト（アルテミス）
+# body 2400121
+# pos 2400121 5
+# scale 2400121 0.8 0
+# layer 2400121 2
+# alpha 2400121 0 0
+# mask 2400121 on
+# face 2400121 "normal"
+;;エンヴィ（ロンギヌス）
+# body 2300121
+# pos 2300121 2
+# scale 2300121 0.8 0
+# layer 2300121 2
+# alpha 2300121 0 0
+# mask 2300121 on
+# face 2300121 "normal"
+;;ラグナロク
+# body 2103611
+# pos 2103611 3
+# scale 2103611 0.8 0
+# layer 2103611 2
+# alpha 2103611 0 0
+# mask 2103611 on
+# face 2103611 "normal"
+;;スイハ
+# body 2401711
+# pos 2401711 4
+# scale 2401711 0.8 0
+# layer 2401711 2
+# alpha 2401711 0 0
+# mask 2401711 on
+# face 2401711 "normal"
+;;水着ミネルヴァ
+# body 2302511
+# pos 2302511 3
+# scale 2302511 0.8 0
+# layer 2302511 2
+# mask 2302511 on
+# alpha 2302511 0 0
+# face 2302511 "normal"
+;;水着グリード（ティルフィング）
+# body 2101421
+# pos 2101421 3
+# scale 2101421 0.8 0
+# layer 2101421 3
+# alpha 2101421 0 0
+# mask 2101421 on
+# face 2101421 "normal"
+;;水着グラトニー（パラシュ）
+# body 2200421
+# pos 2200421 3
+# scale 2200421 0.8 0
+# layer 2200421 2
+# alpha 2200421 0 0
+# mask 2200421 on
+# face 2200421 "normal"
+;;フライシュッツ（水着）
+# body 2502711
+# pos 2502711 2
+# scale 2502711 0.8 0
+# layer 2502711 1
+# mask 2502711 on
+# alpha 2502711 0 0
+# face 2502711 "normal"
+;;カーテンフェード
+# imageset 1 "black"
+# imagescale 1 1.2 0
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;//背景：ビーチ---------------------
+# textflame 0 0
+;;ナレーション
+@
+雲一つない晴天の下、
+全員がビーチに集まる中、
+ラグナロクが開始を宣言する
+
+# textflame 1 1
+# alpha 2103611 1 0.5
+# mask 2103611 off
+# textboxarrow 0 2
+# voice 1036 "ragnarok_0004"
+@ラグナロク
+さぁ、対決を始めるわよ！
+マスターは連れ去られたりしないよう
+中央で観戦すること！いいわね？
+
+# alpha 2103611 0 0.5
+# face 2101421 "usual"
+# alpha 2101421 1 0.5
+# voice 10147 "tyrufing_k_0002"
+@グリード
+さて…
+やるといった以上参加しますが…
+誰から行きますか？
+
+# face 2300121 "usual"
+# move 2101421 4 0.5
+# alpha 2300121 1 0.5
+# textboxarrow 0 1
+# voice 30018 "ronginusu_k_0002"
+@エンヴィ
+あちらに情報が少ない
+私が出ましょうか？
+戦闘での傷も、もう治りましたし…
+
+# alpha 2300121 0 0.5
+# alpha 2101421 0 0.5
+# alpha 2200421 1 0.5
+# mask 2200421 off
+# textboxarrow 0 2
+# voice 20047 "parashu_k_0040"
+@グラトニー
+エンヴィでいいんじゃないかな？
+ボクは賛成だよ
+
+;;//演出：場面転換（背景そのまま）
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 2200421 0 0
+# alpha 2302511 1 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 3025 "minerva_0003"
+@ミネルヴァ
+まずは私が出場します
+それから作戦を立てましょう
+
+# move 2302511 4 0.5
+# face 2502711 "sad"
+# alpha 2502711 1 0.5
+# textboxarrow 0 1
+# voice 5027 "freischotz_0008"
+@フライシュッツ
+えー？
+おねーちゃんがやりたいのにー！
+
+# alpha 2302511 0 0.5
+# face 2401711 "usual"
+# alpha 2401711 1 0.5
+# voice 4017 "suiha_0002"
+# textboxarrow 0 3
+@スイハ
+フライシュッツ、
+後で順番は回ってきます
+ここはミネルヴァに任せましょう
+
+# alpha 2502711 0 0.5
+# alpha 2401711 0 0.5
+# alpha 2103611 1 0.5
+# textboxarrow 0 2
+# voice 1036 "ragnarok_0033"
+@ラグナロク
+よしっ、決まりね！
+両者ともスタートラインに立って！
+
+# alpha 2103611 0 0.5
+;;エンヴィ（ロンギヌス）
+# alpha 2300121 1 0.5
+;;水着ミネルヴァ
+# alpha 2302511 1 0.5
+# textflame 0 0
+@
+ミネルヴァとエンヴィが
+スタートラインに立つと
+グラトニーから抗議の声があがった
+
+# se "SE_0613"
+# alpha 2300121 0 0.5
+# alpha 2302511 0 0.5
+# face 2200421 "usual"
+# alpha 2200421 1 0.5
+# mask 2200421 on
+# textflame 1 1
+# voice 20047 "parashu_k_0012"
+@グラトニー
+ミネルヴァはボクとの
+同盟関係がある！
+
+# textsize 22
+@グラトニー
+不正があると疑われてはかなわないよ、
+メンバーを変えてくれるかな？
+
+# textsize 24
+@グラトニー
+そのかわりボクも参加しない
+三回戦で白黒つけようじゃないか
+
+# move 2200421 4 0.5
+# move 2101421 2 0
+# alpha 2101421 1 0.5
+# textboxarrow 0 1
+# voice 10147 "tyrufing_k_0027"
+@グリード
+はあ…
+そう馬鹿正直に言う必要は
+ないでしょう？
+
+# face 2200421 "normal"
+# textboxarrow 0 3
+@グラトニー
+目的のために手段は選ばないが
+こういった勝負では正々堂々と勝つ、
+それがボクの理想の姿だ
+
+# textflame 0 0
+@
+胸を張るグラトニーの姿に、
+グリードは小さく息をこぼす
+
+# alpha 2101421 0 0.5
+# alpha 2200421 0 0.5
+# alpha 2300121 1 0.5
+# alpha 2302511 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@ミネルヴァ
+わかりました、では…
+
+# alpha 2302511 0 0.5
+# move 2502711 4 0
+# face 2502711 "normal"
+# alpha 2502711 1 0.5
+# voice 5027 "freischotz_0004"
+@フライシュッツ
+はーい！
+ミネルヴァちゃんのかわりに
+おねーちゃんが出まーす！
+
+# se "SE_9347"
+# face 2502711 "happy"
+@フライシュッツ
+エンヴィちゃん、よろしくねー！
+はぐだよ〜、はぐ〜！
+
+# face 2300121 "sad"
+# textboxarrow 0 1
+# voice 30018 "ronginusu_k_0025"
+@エンヴィ
+ひッ…
+大きい…！苦しい…！
+羨ましい…！
+
+# alpha 2300121 0 0.5
+# alpha 2502711 0 0.5
+# face 2103611 "angry"
+# alpha 2103611 1 0.5
+# textboxarrow 0 2
+# voice 1036 "ragnarok_0010"
+@ラグナロク
+フライシュッツ！
+スタート位置につきなさい！
+
+# alpha 2103611 0 0.5
+# face 2502711 "usual"
+# move 2502711 3 0
+# alpha 2502711 1 0.5
+# mask 2502711 off
+@フライシュッツ
+は～いっ！
+
+# alpha 2502711 0 0.5
+# face 2103611 "normal"
+# alpha 2103611 1 0.5
+@ラグナロク
+それじゃいくわよ！
+
+;;//SE：ホイッスル
+# se "SE_0739"
+# waitandnext 1
+
+# alpha 2103611 0 0.5
+# face 2300121 "angry"
+# move 2300121 3 0
+# alpha 2300121 1 0.5
+# mask 2300121 off
+# voice 30018 "ronginusu_k_0016"
+@エンヴィ
+くっ…！
+羨ましい…！羨ましい…！
+
+# textwindow "close"
+# rightout 2300121 0.5
+# se "SE_9430"
+# waitandnext 0.5
+
+# alpha 2300121 0 0
+# waitandnext 0.1
+
+# face 2502711 "sad"
+# alpha 2502711 1 0.5
+# textwindow "normal"
+# voice 5027 "freischotz_0025"
+@フライシュッツ
+えええーっ！？
+エンヴィちゃん、はやいよー！
+
+# alpha 2502711 0 0.5
+# face 2200421 "angry"
+# move 2200421 3 0
+# alpha 2200421 1 0.5
+# mask 2200421 off
+@グラトニー
+いいぞ、エンヴィ！
+そのままフラッグを掴むんだ！
+
+# alpha 2200421 0 0.5
+# move 2302511 3 0
+# face 2302511 "angry"
+# alpha 2302511 1 0.5
+# mask 2302511 off
+# voice 3025 "minerva_0012"
+@ミネルヴァ
+フライシュッツ！
+転ばないように気をつけてください！
+
+# alpha 2302511 0 0.5
+# textflame 0 0
+@
+スタートダッシュでフライシュッツを
+引き離したエンヴィが、フラッグを
+掴もうとした瞬間…
+
+# alpha 2502711 1 0.5
+# textflame 1 1
+@フライシュッツ
+きゃあああっ！
+
+# se "SE_9226"
+# textflame 0 0
+# textsize 22
+@
+つまづいたフライシュッツが宙を舞い、
+エンヴィの上に落ちていく
+
+# se "SE_9228"
+# alpha 2502711 0 0.5
+# move 2300121 3 0
+# alpha 2300121 1 0.5
+# face 2300121 "sad"
+# textflame 1 1
+# textsize 24
+@エンヴィ
+きゃぁっ！
+
+# alpha 2502711 1 0.5
+# alpha 2300121 0 0.5
+# voice 5027 "freischotz_0041"
+@フライシュッツ
+あたた…
+あれ、これがフラッグかな？
+よいしょっと…取ったー！
+
+# face 2502711 "happy"
+@フライシュッツ
+マスターく〜ん！
+おねーちゃん、勝ったよ〜！
+
+# textflame 0 0
+@
+フライシュッツはエンヴィの上に
+倒れこんだまま、フラッグを振って
+喜んでいる
+
+# alpha 2502711 0 0.5
+# alpha 2103611 1 0.5
+# textflame 1 1
+@ラグナロク
+勝者はフライシュッツ！
+
+# alpha 2103611 0 0.5
+# face 2200421 "usual"
+# alpha 2200421 1 0.5
+@グラトニー
+エンヴィ！
+無事かい！？
+
+# alpha 2200421 0 0.5
+# textflame 0 0
+@
+フライシュッツの下で砂まみれに
+なったエンヴィをみんなで救出する
+
+# face 2300121 "normal"
+# alpha 2300121 1 0.5
+# textflame 1 1
+# voice 30018 "ronginusu_k_0017"
+@エンヴィ
+うぅ…
+こんなことって…！
+
+# textflame 0 0
+@
+大丈夫？と尋ねるマスター
+それに対して、
+エンヴィは顔を背ける
+
+# face 2300121 "angry"
+# textflame 1 1
+@エンヴィ
+平気ですから…
+放っておいてください
+
+# alpha 2300121 0 0.5
+# alpha 2103611 1 0.5
+# voice 1036 "ragnarok_0003"
+@ラグナロク
+では、2回戦のメンバーが決まったら
+スタートラインへ！
+
+# alpha 2103611 0 0.5
+# move 2401711 3 0
+# alpha 2401711 1 0.5
+# mask 2401711 off
+# voice 4017 "suiha_0032"
+@スイハ
+次は私が出ます
+
+# alpha 2401711 0 0.5
+# face 2302511 "normal"
+# alpha 2302511 1 0.5
+# voice 3025 "minerva_0036"
+@ミネルヴァ
+そうですね
+スイハ、お願いしますね
+
+;;//演出：場面転換（背景そのまま）
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 2302511 0 0
+# move 2200421 3 0
+# alpha 2200421 1 0
+# move 2300121 1 0
+# alpha 2300121 1 0
+# mask 2300121 on
+# alpha 2400121 1 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textwindow "normal"
+# textboxarrow 0 3
+# voice 40015 "arutemisu_k_0027"
+@ラスト
+勝っていた試合だけに
+落としたのは残念でしたね
+
+# face 2300121 "usual"
+# textboxarrow 0 1
+# voice 30018 "ronginusu_k_0031"
+@エンヴィ
+…ごめんなさい
+
+# voice 20047 "parashu_k_0028"
+# textboxarrow 0 2
+@グラトニー
+エンヴィのせいじゃないさ、
+あの動きは予測不可能だよ
+そうだろう、ラスト？
+
+# textboxarrow 0 3
+@ラスト
+エンヴィを責めるつもりは
+ありません
+2回戦は私が出ます
+
+# alpha 2200421 0 0.5
+# alpha 2300121 0 0.5
+# alpha 2400121 0 0.5
+;;
+;;# move 2401711 2 0
+;;# alpha 2401711 1 0.5
+;;# move 2400121 4 0
+;;# alpha 2400121 1 0.5
+;;
+# textflame 0 0
+@
+両陣営からスイハとラストが出て
+スタートラインに並ぶ
+
+# alpha 2401711 0 0.5
+# alpha 2400121 0 0.5
+# face 2502711 "normal"
+# alpha 2502711 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5027 "freischotz_0005"
+@フライシュッツ
+スイハちゃーん！
+おねーちゃんからのエールだよー！
+頑張れー！頑張れー！！
+
+# alpha 2502711 0 0.5
+# face 2200421 "angry"
+# alpha 2200421 1 0.5
+# mask 2200421 off
+@グラトニー
+ラスト！
+キミが勝つに決まっているよ！
+
+# alpha 2200421 0 0.5
+# face 2401711 "normal"
+# alpha 2401711 1 0.5
+# mask 2401711 on
+# alpha 2400121 1 0.5
+# move 2401711 2 0
+# textwindow "moya"
+# textboxarrow 0 0
+;;//もやもや
+@スイハ
+わぁ…
+ラストさんってすごいスタイルが
+いいから、大胆な水着も似合ってる…
+
+;;//もやもや
+@スイハ
+私もラストさんにエールを送りたいな
+「正々堂々頑張りましょう」…
+これでいいかな？変じゃないかな？
+
+# face 2401711 "usual"
+# textwindow "normal"
+# textboxarrow 0 1
+# voice 4017 "suiha_0002"
+@スイハ
+あ…あの…
+
+# face 2400121 "angry"
+# textboxarrow 0 3
+# voice 40015 "arutemisu_k_0010"
+@ラスト
+あなた、さっきから私を
+にらんでいるようですけど、
+挑発と受け取っていいんですね？
+
+# voice 4017 "suiha_0024"
+# face 2401711 "sad"
+# textboxarrow 0 1
+@スイハ
+いえ、そんなつもりでは…
+
+# textboxarrow 0 3
+@ラスト
+ふん…
+
+# move 2401711 2 0
+# textwindow "moya"
+# textboxarrow 0 0
+;;//もやもや
+@スイハ
+ひぃっ…怒らせちゃった…！
+ううぅ…ううう…
+こうなったら早く終わらせよう…
+
+# alpha 2401711 0 0.5
+# alpha 2400121 0 0.5
+# alpha 2103611 1 0.5
+# textwindow "normal"
+# textboxarrow 0 2
+@ラグナロク
+2回戦はスイハ対ラスト！
+
+;;//SE：ホイッスル
+# se "SE_0739"
+# waitandnext 1
+
+# alpha 2103611 0 0.5
+# move 2401711 3 0
+# face 2401711 "angry"
+# alpha 2401711 1 0.5
+# mask 2401711 off
+# voice 4017 "suiha_0029"
+@スイハ
+たぁああああ！
+
+# alpha 2401711 0 0.5
+# move 2400121 3 0
+# alpha 2400121 1 0.5
+# mask 2400121 off
+# voice 40015 "arutemisu_k_0029"
+@ラスト
+ハァァァアアア！

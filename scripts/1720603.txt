@@ -1,0 +1,553 @@
+;;２－１０＜戦闘終了後＞
+;;【指定】bgm015
+# script "lisp"
+# background "006_town"
+# bgm "bgm015" 0
+# body 4
+# pos 4 1
+# alpha 4 0 0
+# body 0
+# pos 0 5
+# mask 0 off
+# layer 0 1
+# alpha 0 0 0
+# body 24
+# pos 24 1
+# body 810004
+# pos 810004 5
+# scale 810004 0.8 0
+# scale 4 0.8 0
+# scale 24 0.8 0
+# scale 0 0.7 0
+# textflame 1 1
+# textboxarrow 0 1
+# chara 101411
+# voice 1014 "tyrufing_0029"
+# face 24 "mad2"
+@ティルフィング
+消えなさい…！
+…ハァァァァァァーッ！！！！
+
+;;【指定】SE_9121
+;;一閃…ボス異族を切り倒すティルフィング
+# se "SE_9121"
+# fadein "red" 1
+# textboxarrow 0 0
+# move 24 3 0.2
+# waitandnext 1
+
+;;崩れ落ちるボス異族
+# se "SE_3001"
+# serif 1
+# textboxarrow 1 0
+# alpha 810004 0 0.8
+@異族
+…グ…グガッ…！！！
+
+# serif 0
+# textboxarrow 0 2
+# chara 101411
+@ティルフィング
+ハァ…ハァ…！
+…トト！！
+リベリオンさんは！？
+
+# serif 1
+# textboxarrow 1 1
+# leftin 4 0.5
+# alpha 4 1 0
+# chara 4
+# voice 9998 "toto_0049"
+# face 4 "angry"
+@トト
+向こうで闘ってる！！
+すごい強さだよ、英雄ティバルト…！
+このままじゃ…！
+
+# serif 0
+# textboxarrow 0 3
+# rightin 0 0.5
+# alpha 0 1 0
+# chara 0
+# voice 9999 "durin_navi_1108"
+# face 0 "angry"
+@デュリン
+ちょっと待って！
+行って、どうする気よ！？
+
+# chara 0
+@デュリン
+ヘタすれば、
+ラグナロク教会が王政府に
+牙をむくことになるのよ！？
+
+# serif 1
+# textboxarrow 1 2
+# imageset 0 "black"
+# imagealpha 0 0 0
+# chara 101411
+# voice 1014 "tyrufing_0037"
+# face 24 "sad"
+@ティルフィング
+クッ…！
+マスター、どうすれば…！？
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 1
+
+;;場面転換…ティバルトと対峙しているリベリオン
+;;ギリギリでティバルトの剣をかわす
+;;転換直後なのでかわす演出いらないかも
+# imagerightout 0 0.5
+# alpha 4 0 0
+# alpha 24 0 0
+# alpha 0 0 0
+# body 42
+# pos 42 1
+# scale 42 0.8 0
+# body 44
+# pos 44 5
+# scale 44 0.8 0
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+# chara 44
+# voice 9979 "rebellion_0024"
+# face 44 "surprise"
+@リベリオン
+危ねぇっ…！
+マジで強いな、お前…
+
+# chara 44
+# voice 9979 "rebellion_0001"
+# face 44 "normal"
+@リベリオン
+…ひとつ提案があるんだが
+
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 1
+# chara 42
+# voice 9980 "tybalt_0009"
+@ティバルト
+…なんだ？
+
+# serif 0
+# textboxarrow 0 3
+# chara 44
+@リベリオン
+その腕…
+俺達の世界で、
+振るってみる気はないか？
+
+# serif 1
+# textboxarrow 1 1
+# chara 42
+# voice 9980 "tybalt_0007"
+# face 42 "angry"
+@ティバルト
+…冗談なら、
+もう少し笑えるものにしろ
+
+;;ビュッと剣を振り抜くティバルト
+;;ギリギリでかわすリベリオン
+# fadein "white" 1
+# textboxarrow 1 0
+# move 42 4 0.3
+# alpha 44 0 0.3
+# serif 0
+# textboxarrow 0 0
+# chara 44
+# voice 9979 "rebellion_0024"
+# face 44 "surprise"
+@リベリオン
+うぉっ！！
+
+# serif 1
+# textboxarrow 1 1
+# move 42 1 0.5
+# rightin 44 0.8
+# alpha 44 1 0
+# chara 42
+# voice 9980 "tybalt_0045"
+@ティバルト
+…なぜ、本気を出さない
+俺をおちょくっているのか？
+
+# serif 0
+# textboxarrow 0 3
+# chara 44
+# face 44 "normal"
+@リベリオン
+…アンタのプライドを
+害するかもしれないが、
+被害は最小限に抑えたいんだよ
+
+# serif 1
+# textboxarrow 1 1
+# chara 42
+# voice 9980 "tybalt_0007"
+@ティバルト
+…大した余裕だな
+
+# serif 1
+# chara 42
+@ティバルト
+だが、その余裕が…
+足元をすくうことになる
+
+;;【指定】SE_0540
+;;フッと姿を消すティバルト
+# se "SE_0540"
+# fadein "black" 0.5
+# alpha 42 0 0.3
+# textboxarrow 1 0
+# waitandnext 0.8
+
+# serif 0
+# textboxarrow 0 3
+# chara 44
+# voice 9979 "rebellion_0024"
+# face 44 "surprise"
+@リベリオン
+！？
+…消えた！？
+
+;;【指定】SE_5711
+;;剣を掲げたティバルトが、スッとリベリオンの背後に現れる
+# serif 1
+# textboxarrow 1 3
+# textboxarrow 0 0
+# pos 42 5
+# alpha 42 1 0.5
+# move 44 2 0.3
+# chara 42
+# voice 9980 "tybalt_0008"
+@ティバルト
+悪いが…
+本気を出していないのは、
+お前だけじゃない
+
+# serif 0
+# textboxarrow 0 1
+# chara 44
+# voice 9979 "rebellion_0037"
+# face 44 "irregular"
+@リベリオン
+！？
+マズい…！！
+
+;;【指定】SE_5743
+;;ギャリンと飛び散る火花
+;;そこには、ティバルトの剣を受け止めているティルフィング
+# se "SE_5743"
+# fadein "white" 1.5
+# serif 1
+# textboxarrow 1 2
+# leftin 24 0.3
+# alpha 24 1 0
+# move 44 1 0.5
+# chara 101411
+# voice 1014 "tyrufing_0037"
+# face 24 "angry"
+@ティルフィング
+クッ…！
+
+# serif 0
+# textboxarrow 0 1
+# chara 44
+# voice 9979 "rebellion_0064"
+# face 44 "surprise"
+@リベリオン
+ティルフィング…！？
+
+# serif 1
+# textboxarrow 1 3
+# chara 42
+# voice 9980 "tybalt_0044"
+@ティバルト
+！？
+お前…！！
+
+# serif 0
+# textboxarrow 0 2
+# chara 101411
+@ティルフィング
+…ごめんなさい
+
+;;【指定】SE_9017
+;;一閃…ティバルトの剣を遠くへ弾き飛ばすティルフィング
+;;ここの演出不要かもしれない
+# se "SE_9017"
+# fadein "white" 1
+# waitandnext 1
+
+# serif 1
+# textboxarrow 1 3
+# chara 42
+# voice 9980 "tybalt_0013"
+@ティバルト
+…！…政府と教会の関係を
+理解した上での行動…
+そう捉えていいんだな？
+
+# serif 0
+# textboxarrow 0 2
+# chara 101411
+@ティルフィング
+私は…
+
+# chara 101411
+# face 24 "mad2"
+@ティルフィング
+リベリオンさんが
+おっしゃっていることが、
+間違いとは思えないんです！
+
+# chara 101411
+@ティルフィング
+いらぬ被害を出すべきじゃない…！
+無駄な争いは避けるべきなんです！！
+
+# serif 1
+# textboxarrow 1 3
+# chara 42
+@ティバルト
+争いを避けるべき…？
+
+# serif 1
+# chara 42
+# voice 9980 "tybalt_0007"
+@ティバルト
+“恍惚の惨殺者”とは
+思えぬセリフだな
+
+# serif 1
+# chara 42
+@ティバルト
+…そこのお前達も、
+同じ考えなのか？
+
+# select "自分達の正義に…嘘はつけません！" "select_label_01" "俺達は…真実を見極めたいんです！" "select_label_02"
+…そこのお前達も、
+同じ考えなのか？
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# serif 1
+# textboxarrow 1 3
+# chara 42
+@ティバルト
+そうか…
+俺もまた、自らの正義を追及する身…
+気持ちはわからんでもない
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# serif 1
+# textboxarrow 1 3
+# chara 42
+@ティバルト
+そうか…
+俺もまた、自らの正義を追及する身…
+気持ちはわからんでもない
+
+# label "select_label_end"
+# serif 1
+# textboxarrow 1 3
+# chara 42
+@ティバルト
+俺も、俺の信じる正義を
+貫かせてもらう…
+
+# serif 1
+# body 10
+# pos 10 1
+# body 12
+# pos 12 3
+# entry 99 12
+# body 99
+# pos 99 5
+# scale 10 0.8 0
+# scale 12 0.8 0
+# scale 99 0.8 0
+# alpha 10 0 0
+# alpha 12 0 0
+# alpha 99 0 0
+# chara 42
+@ティバルト
+構えろ！！！
+
+;;ザッと周囲に現れる王立軍・第一師団
+# textboxarrow 1 0
+# textboxarrow 0 0
+# alpha 24 0 0.3
+# alpha 44 0 0.3
+# alpha 42 0 0.3
+# rightin 10 0.5
+# rightin 12 0.5
+# rightin 99 0.5
+# alpha 10 1 0
+# alpha 12 1 0
+# alpha 99 1 0
+# waitandnext 1
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 1
+
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+# pos 44 3
+# alpha 44 1 0
+# alpha 4 1 0
+# alpha 0 1 0
+# alpha 10 0 0
+# alpha 12 0 0
+# alpha 99 0 0
+# chara 0
+# voice 9999 "durin_0028"
+# face 0 "worry"
+@デュリン
+！？
+だ、第一師団…！？
+マズい…！！
+
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 2
+# chara 44
+# voice 9979 "rebellion_0026"
+# face 44 "irregular"
+@リベリオン
+チッ…！
+逃げるぞ！
+早く来い、ガキ！！
+
+# serif 0
+# textboxarrow 0 1
+# chara 4
+@トト
+う、うん！！
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 1
+
+;;【指定】SE_5552
+# se "SE_5552"
+# textwindow "nomal"
+# textflame 0 0
+@
+トトを抱き、威嚇するように
+リベリオンは周囲に銃を乱射し、
+土煙を起こした
+
+# imagerightout 0 0.5
+# pos 42 1
+# pos 10 3
+# pos 12 5
+# alpha 44 0 0
+# alpha 4 0 0
+# alpha 0 0 0
+# alpha 10 1 0
+# alpha 12 1 0
+# alpha 42 1 0
+# serif 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# chara 42
+# voice 9980 "tybalt_0026"
+@ティバルト
+クッ…！
+…逃がすな！！
+
+# fadeout "black" 1
+# waitandnext 1.5
+
+# fadein "black" 0.5
+# pos 44 4
+# pos 24 2
+# face 24 "sad"
+# alpha 44 1 0
+# alpha 24 1 0
+# alpha 10 0 0
+# alpha 12 0 0
+# alpha 42 0 0
+# serif 0
+# textboxarrow 0 3
+# chara 44
+# face 44 "sad"
+@リベリオン
+やれやれ…
+助けられちまったな、
+ティルフィング
+
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 1
+# chara 101411
+@ティルフィング
+い、いえ…
+
+# serif 0
+# textboxarrow 0 3
+# chara 44
+# face 44 "irregular"
+@リベリオン
+しかし、とんでもねぇヤロウだぜ…
+生身の人間に、
+あそこまでやられちゃあ…
+
+# chara 44
+# voice 9979 "rebellion_0007"
+# face 44 "normal"
+@リベリオン
+俺達も、形なしだな？
+
+# serif 1
+# textboxarrow 1 1
+# chara 101411
+# voice 1014 "tyrufing_kyara_1006"
+@ティルフィング
+“俺達”…？
+
+# serif 0
+# textboxarrow 0 3
+# chara 44
+# voice 9979 "rebellion_0003"
+@リベリオン
+ああ
+…俺は“キラーメイル”
+
+# chara 44
+@リベリオン
+…お前と同じ、
+キラ－ズを宿す存在なんだよ
+
+# serif 1
+# textboxarrow 1 1
+# chara 101411
+# voice 1014 "tyrufing_0024"
+# face 24 "surprise"
+@ティルフィング
+な…！？

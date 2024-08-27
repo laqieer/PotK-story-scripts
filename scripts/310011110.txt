@@ -1,0 +1,421 @@
+;;--------------------------------------------
+;;SEA_幕間_1_0
+;;--------------------------------------------
+# bgm "stop"
+# background "201_room"
+;;--------------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 5
+# scale 6504011 0.8 0
+# layer 6504011 3
+# mask 6504011 off
+# alpha 6504011 0 0
+;;--------------------------------------------
+;;紙
+# imageset 0 "SEA_diary_bg"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imagescale 0 1.2 0
+;;1枚め
+# imageset 1 "SEA_diary_005"
+# imagealpha 1 0 0
+# imagescale 1 1 0
+# imagelayer 1 3
+;;--------------------------------------------
+;;日記演出
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_6165"
+# alpha 270 1 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 0
+# textboxarrow 0 0
+@ミーミル
+旅の記録七日目――
+
+;;ミーミル消す
+# alpha 270 0 0.5
+# waitandnext 0.5
+
+;;フレーム・テキストウィンドウを外す
+# textwindow "close"
+# frameout 0 1
+# waitandnext 1
+
+;;紙を表示
+# imagealpha 0 1 1
+# imagepos 0 0 0
+# waitandnext 1
+
+;;1枚目を表示
+# se "SE_6175"
+# imagealpha 1 1 2
+# imagepos 1 0 -1000
+# waitandnext 1
+
+;;1枚目を上に
+# imagemoveto 1 0 1000 25
+# waitandnext 23
+
+;;1枚目を消す
+# imagealpha 1 0 2
+# waitandnext 2
+
+;;紙を消す
+# se "SE_6167"
+# imagealpha 0 0 1
+# waitandnext 1
+
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# sestop "SE_6175"
+# framein 0 0
+;;背景：平原
+# background "plain"
+# bgm "bgm002" 0
+# se "SE_0791"
+# se "SE_0944"
+# fadein "black" 1.5
+# waitandnext 1.5
+
+# move 6504011 3 1
+# alpha 6504011 1 0.8
+# waitandnext 1
+
+# voice 650401 "manannan_ura_0005"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@マナナン
+今日も良い天気だね～！
+あ！あれ、何だろっ？
+
+;;マナナンが走っていく
+# textwindow "close"
+# se "SE_5575"
+# move 270 1 0
+# move 6504011 1 0.8
+# scale 6504011 0.6 1
+# alpha 6504011 0 0.5
+# waitandnext 1
+
+# move 6504011 5 0
+# scale 6504011 0.7 0
+# move 270 2 0.5
+# alpha 270 1 0.8
+# face 270 "surprise"
+# waitandnext 1
+
+# voice 9917 "mimir_navikan_0059"
+# textboxarrow 0 1
+# textwindow "nomal"
+@ミーミル
+マナナンさん
+単独行動は控えて下さいっ
+
+;;マナナンが戻ってくる
+# se "SE_5575"
+# move 6504011 4 0.5
+# scale 6504011 0.8 0.5
+# alpha 6504011 1 0.5
+# waitandnext 0.8
+
+# voice 650401 "manannan_ura_0022"
+# textboxarrow 0 3
+@マナナン
+なになに～？
+私のこと呼んだ？
+
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+お一人だけでの行動は
+慎んでいただきたいのです
+
+# textboxarrow 0 1
+@ミーミル
+私達は一緒に旅をする
+仲間なのですから
+
+# textboxarrow 0 3
+@マナナン
+ミーミルってば、気にしすぎだよ
+一緒にいたら何か良いことあるの？
+
+# voice 9917 "mimir_navikan_0003"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+もちろんです
+例えば、何らかの困難に
+見舞われたときなど…
+
+# textboxarrow 0 1
+@ミーミル
+一緒にいることで、協力して
+立ち向かうことができます
+
+# voice 650401 "manannan_ura_0028"
+# textboxarrow 0 3
+@マナナン
+ふーん…
+何で協力しなきゃいけないの？
+
+# textboxarrow 0 1
+@ミーミル
+協力すれば、
+一人では為し得ないことが
+できるんです
+
+# textboxarrow 0 1
+@ミーミル
+お互いの弱点を補い合うことも
+できます
+利点を高め合うことも
+
+# textboxarrow 0 1
+@ミーミル
+そうやって協力し合い、人々は
+進歩・発展してきたんですよ
+
+# voice 650401 "manannan_ura_0040"
+# textboxarrow 0 3
+@マナナン
+へーっ
+一緒にいると色々お得なんだね～
+
+# textboxarrow 0 3
+@マナナン
+じゃ、私はマスターと一緒に
+いよっかな
+
+;;マナナンがくっついてくる
+# textboxarrow 0 0
+# se "SE_5000"
+# scale 6504011 0.9 0.3
+# waitandnext 0.3
+
+# se "SE_5200"
+# se "SE_0982"
+# waitandnext 1
+
+# voice 9917 "mimir_navikan_0002"
+# face 270 "shy"
+# textboxarrow 0 1
+@ミーミル
+あ…あの…
+それは…マスター様がお困りに…
+
+# textboxarrow 0 3
+@マナナン
+えーっ
+だってミーミルが言ったんだよ
+一緒にいると得するって
+
+# textboxarrow 0 1
+@ミーミル
+ですが、そのようにくっついては
+マスター様が…
+
+;;ミーミルのペンダントが点滅する
+# face 270 "surprise"
+# bgm "stop"
+# se "SE_6191"
+# textwindow "close"
+# effectbody 100 51 -140 35 0
+# effectstart 100
+# waitandnext 1
+
+;;選択肢
+# select "何か光ってるよ" "select_label_01" "ミーミル、胸が…" "select_label_01"
+突如、ミーミルのペンダントが光る
+
+# voice 650401 "manannan_ura_0021"
+# label "select_label_01"
+# scale 6504011 0.8 0.5
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+わっ、光るペンダントだ！
+ねぇねぇ、何が起こるの！？
+
+# voice 9917 "mimir_navikan_0003"
+# textboxarrow 0 1
+@ミーミル
+あっ
+これは、ティルフィング様からの
+ご連絡のようです
+
+# textboxarrow 0 1
+@ミーミル
+マスター様、マナナンさん
+私に近づいてください
+
+;;ミーミルに近付く
+# textboxarrow 0 0
+# se "SE_5000"
+# sedelay "SE_5001" 0.5
+# scale 270 0.9 0.8
+# waitandnext 1
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+ティルフィング様からの
+ご連絡を共有いたしますね
+
+;;ティルフィング立ち絵なし
+# bgm "bgm003" 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@ティルフィング
+マスター、ミーミル
+それにマナナン
+聞こえますか？
+
+# voice 650401 "manannan_ura_0039"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+わっ、声が聞こえる！
+この人がティルフィング？
+すごいねっ
+
+# face 270 "angry"
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+マナナンさん
+少し静かにしていて下さい
+
+# voice 9917 "mimir_navikan_0049"
+# face 270 "surprise"
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+ティルフィング様、
+こちら、聞こえております
+どうなさったのですか？
+
+# serif 1
+@ティルフィング
+実は、連絡が少し
+遅くなってしまったのだけれど
+
+# serif 1
+@ティルフィング
+アナタ達のいるところから
+離れた場所で…
+
+# serif 1
+@ティルフィング
+「揺らぎ」を感知したんです
+
+# voice 9917 "mimir_navikan_0023"
+# face 270 "angry"
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+それは大変ですっ
+直ちにそちらへ向かいましょう
+
+# serif 1
+@ティルフィング
+安心して
+そこの「揺らぎ」については
+すでに解決済みよ
+
+# face 270 "surprise"
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+そうでしたか
+ホッと致しました…
+
+# serif 1
+@ティルフィング
+それで、そのとき居合わせた
+アルマスから、事のあらましを
+聞かせてもらったの
+
+# serif 1
+@ティルフィング
+その内容をアナタ達とも
+共有しておこうと思って
+
+# face 270 "normal"
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+お心遣い感謝致します
+
+# voice 9917 "mimir_navikan_0001"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+マスター様
+私は内容を聞かせていただきたいと
+思うのですが、よろしいでしょうか？
+
+;;選択肢
+# select "もちろん" "select_label_02" "自分も聞きたい" "select_label_02"
+マスター様
+私は内容を聞かせていただきたいと
+思うのですが、よろしいでしょうか？
+
+# voice 9917 "mimir_navikan_0030"
+# label "select_label_02"
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+ありがとうございます
+
+# textboxarrow 0 1
+@ミーミル
+では、ティルフィング様
+お願い致します
+
+# textboxarrow 0 3
+@マナナン
+ん？何々？
+何か始まるのかな？
+
+# scale 270 0.8 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@ティルフィング
+今からユグドラシルに記された
+記録の一部を皆様に送ります
+
+# serif 1
+@ティルフィング
+目を閉じて
+どうぞ、ご覧下さい
+
+;;白背景になる
+# se "SE_6192"
+# scale 270 0.6 3
+# scale 6504011 0.6 3
+# fadeout "white" 1.9
+# waitandnext 4

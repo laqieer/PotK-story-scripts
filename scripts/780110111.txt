@@ -1,0 +1,473 @@
+;;-----------------------------------------
+;;アハトストーリー：喪失の月を照らして【1_1】
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgm "stop"
+;;-----------------------------------------
+;;アハト
+# body 202711
+# pos 202711 3
+# scale 202711 0.8 0
+# layer 202711 3
+# mask 202711 off
+# alpha 202711 0 0
+;;イージス
+# body 52000111
+# pos 52000111 3
+# scale 52000111 0.8 0
+# layer 52000111 3
+# mask 52000111 off
+# alpha 52000111 0 0
+;;ルーン
+# body 3300511
+# pos 3300511 3
+# scale 3300511 0.8 0
+# layer 3300511 3
+# mask 3300511 off
+# alpha 3300511 0 0
+;;フラガラッハ
+# body 3101011
+# pos 3101011 3
+# scale 3101011 0.8 0
+# layer 3101011 3
+# mask 3101011 off
+# alpha 3101011 0 0
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 4
+# mask 810004 off
+# alpha 810004 0 0
+;;フライデヴィル
+# body 920014
+# pos 920014 3
+# scale 920014 0.8 0
+# layer 920014 4
+# mask 920014 off
+# alpha 920014 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 2 "e210617_logo"
+# imagealpha 2 0 0
+# imagelayer 2 1
+;;-----------------------------------------
+;;背景：平原　plain
+# fadein "black" 1
+# textwindow "close"
+# waitandnext 1.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+見上げた太陽
+それは遠く、眩しい
+
+;;立ち絵：ノーマルアハト
+# alpha 202711 1 0.5
+# waitandnext 0.8
+
+# textflame 1 1
+# textboxarrow 0 2
+@アハト
+ここがどこだとしても
+私は必ず帰ります…
+あの場所に
+
+# textflame 0 0
+@
+右眼に不屈の色を宿した少女
+彼女の冷たい鉄の義手が
+太陽を映す
+
+# alpha 202711 0 0.5
+# waitandnext 0.6
+
+;;演出：異族登場
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# alpha 810004 1 1.2
+# waitandnext 1.8
+
+# move 810004 4 0.5
+# move 202711 2 0
+# mask 202711 on
+# alpha 202711 1 0.3
+# waitandnext 0.8
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 202711 "angry"
+# voice 2027 "acht_0009"
+@アハト
+邪魔しないでください
+
+;;演出：アハト、異族を倒す
+# se "SE_6728"
+# fadein "white" 0.5
+# move 810004 5 0.2
+# move 202711 3 0.2
+# mask 202711 off
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# textboxarrow 0 0
+# waitandnext 1
+
+# se "SE_3001"
+# alpha 810004 0 0.8
+# waitandnext 1
+
+# textflame 0 0
+@
+それが異族と呼ばれることも知らず
+立ちはだかる異形を幾体倒したかも
+わからぬほど、旅は続いていた
+
+# textflame 1 1
+# textboxarrow 0 2
+@アハト
+私は絶対に…
+諦めません！
+
+;;演出：時間経過、場面転換
+# bgm "stop"
+# fadeout "black" 1
+# waitandnext 1.5
+
+# fadein "black" 1.5
+# frameout 0 0
+# buttonsout 0 0
+# imagealpha 0 1 0
+# imagescale 0 3 0
+# imagepos 0 0 0
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# bgmfile "bgm454" "BgmIntegralNoahEvent007" 0
+# alpha 202711 0 0
+# textwindow "close"
+
+# imagealpha 2 0 2
+# waitandnext 1.5
+
+# fadeout "black" 1
+# waitandnext 1
+
+# framein 0 0
+# buttonsin 0 0
+# imagealpha 0 0 0
+# imagescale 0 1 0
+;;背景：地底世界
+# background "in_underground_world"
+# fadein "black" 0.6
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+@
+長い旅の先で
+たどり着いた場所
+
+# alpha 202711 1 0.3
+# face 202711 "normal"
+# textflame 0 0
+@
+複数の木の根が絡み合った天井から
+差し込むかすかな光
+アハトの知る世界と良く似た景色
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 202711 "surprise"
+# voice 2027 "acht_0028"
+@アハト
+ここは…
+ロストブルーの近く…？
+
+# textflame 0 0
+@
+長く自分達のいた場所を
+探していたアハトにその景色は
+一縷の望みとなる
+
+;;SE：遠くの戦闘音
+# bgmfile "bgm455_456" "BgmIntegralNoahEvent007" 0
+# se "SE_6118"
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 2
+@アハト
+！
+誰かが戦ってる…？
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.8
+
+# alpha 202711 0 0
+# brightness 3300511 0.1 0
+# brightness 3101011 0.1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;スケルトン表示
+# se "SE_6118_filteroff"
+# move 3300511 2 0
+# mask 3300511 on
+# alpha 3300511 1 0.3
+# move 3101011 4 0
+# mask 3101011 on
+# alpha 3101011 1 0.3
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 330051 "roon_ge_0007"
+@？？？
+何度湧いて出てこようが、
+すぐに絶望の淵に追い落としてやるよ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310101 "furagaraha_t_0005"
+@？？？
+神の美の前にひれ伏していただきます
+
+;;ルーン、フラガラッハ、フライデビルを攻撃
+# alpha 3300511 0 0.3
+# alpha 3101011 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 920014 1 0.5
+# waitandnext 0.8
+
+# fadein "white" 0.5
+# se "SE_4830"
+# effectbody 1001 3 0 0 0
+# effectstart 1001
+# waitandnext 0.8
+
+# alpha 920014 0 0.8
+# brightness 52000111 0.1 0
+# brightness 3300511 1 0
+# brightness 3101011 1 0
+# waitandnext 1
+
+# sestop "SE_6118"
+# alpha 52000111 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 52000111 "normal"
+@？？？
+ルーン、フラガラッハ！
+さっさと片付けるぞ！
+
+# alpha 52000111 0 0.3
+# alpha 3300511 1 0.3
+# alpha 3101011 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+# voice 330051 "roon_ge_0032"
+@ルーン
+任せなイージス
+もう止めたって止まらねえからな！
+
+# brightness 52000111 1 0
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310101 "furagaraha_t_0033"
+@フラガラッハ
+安心してください
+すぐにわたしの美しさを
+崇めるようになりますから
+
+# alpha 52000111 1 0.3
+# alpha 3300511 0 0.3
+# alpha 3101011 0 0.3
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5200011 "aegis_c_0027"
+@イージス
+はあ…頼むぞ！
+死者の国との境は
+守りきらねばならんのだ！
+
+# se "SE_6120"
+;;立ち絵なし
+# alpha 52000111 0 0.3
+# serif 0
+# textwindow "close"
+# serif 1
+# textflame 1 1
+# textwindow "nomal"
+@アハト
+“レッグ”
+
+;;演出：アハトが現れ、フライデビルを攻撃。消滅
+# alpha 920014 1 0.5
+# move 202711 1 0
+# mask 202711 off
+# waitandnext 1
+
+# se "SE_9021"
+# fadein "white" 0.5
+# move 920014 5 0.2
+# move 202711 3 0.2
+# alpha 202711 1 0.3
+# face 202711 "normal"
+# effectbody 1002 1 0 0 0
+# effectstart 1002
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_3001"
+# alpha 920014 0 0.8
+# waitandnext 1
+
+# serif 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 2027 "acht_0001"
+@アハト
+見たことのない魔物ですが
+これはなんですか？
+
+# alpha 202711 0 0.3
+# move 3101011 5 0
+# mask 3101011 on
+# alpha 3101011 1 0.3
+# move 3300511 1 0
+# mask 3300511 on
+# alpha 3300511 1 0.3
+# face 3300511 "surprise"
+# move 52000111 3 0
+# mask 52000111 off
+# layer 52000111 2
+# alpha 52000111 1 0.3
+# face 52000111 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3101011 "surprise"
+@フラガラッハ
+助けていただいたようですが
+どなたですの？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 330051 "roon_ge_0002"
+@ルーン
+イージス、
+こいつがお前の言ってた
+コマンドキラーズの仲間か？
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5200011 "aegis_c_0034"
+@イージス
+いや、違うわ…
+それに、なんなの、その力は！？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3300511 "sad"
+# voice 330051 "roon_ge_0003"
+@ルーン
+なんだ、知らない奴か
+隊長なのにな
+知らないのか
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 52000111 "angry"
+# voice 5200011 "aegis_c_0026"
+@イージス
+ルーン、うるさい！
+ももも、もちろん知ってるわよ！
+
+# alpha 3101011 0 0.3
+# alpha 3300511 0 0.3
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5200011 "aegis_c_0001"
+@イージス
+そこの貴様！キル姫だな？
+なんだかわからないけど
+協力しろ！
+
+# alpha 52000111 0 0.3
+# alpha 202711 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+# face 202711 "surprise"
+# voice 2027 "acht_0022"
+@アハト
+私…？
+キル姫？
+
+# alpha 202711 0 0.3
+# move 3101011 4 0
+# alpha 3101011 1 0.3
+# move 3300511 2 0
+# alpha 3300511 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+# voice 330051 "roon_ge_0002"
+@ルーン
+わかってないってすぐばらすよな
+イージスって…
+面白いよな、なあフラガラッハ
+
+# move 202711 1 0
+# mask 202711 on
+# textflame 1 1
+# textboxarrow 0 3
+# face 3101011 "normal"
+@フラガラッハ
+見ていて飽きない方ですわね
+ですが見知らぬ方への頼み方としては
+最悪ですので、ここはわたしが
+
+# move 3300511 1 0.5
+# alpha 3300511 0 0.3
+# move 202711 2 0.5
+# alpha 202711 1 0.3
+# face 202711 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@フラガラッハ
+あの、すみません、旅の方
+その力を見込んでお願い申し上げます
+ご協力いただけませんか？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 2027 "acht_0033"
+@アハト
+…わかりました
+魔物を倒せばいいんですね
+私も聞きたいことがありますし
+
+;;バトル入れたほうがいいならここで
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# background "bg_black"
+# alpha 202711 0 0
+# alpha 3101011 0 0
+# waitandnext 0.5

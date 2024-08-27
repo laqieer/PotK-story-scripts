@@ -1,0 +1,667 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１５章 章タイトル「クリティカルフェイズ―連携―」
+;;第1話－１２　タイトル：新たな連携
+;;1_12_3
+;;スクリプト最後の背景：森
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgmfile "bgm479" "BgmIntegralNoahBoso002" 0
+;;-----------------------------------------
+;;擬装エルキュール
+# body 5202521
+# pos 5202521 3
+# scale 5202521 0.8 0
+# layer 5202521 2
+# alpha 5202521 0 0
+# mask 5202521 off
+;;ラグナロク・擬装・ガンナー
+# body 5103621
+# pos 5103621 3
+# scale 5103621 0.8 0
+# layer 5103621 2
+# alpha 5103621 0 0
+# mask 5103621 off
+# brightness 5103621 0.8 0
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 2
+# alpha 5401721 0 0
+# mask 5401721 off
+;;異族化マサムネ
+# body 5100131
+# pos 5100131 3
+# scale 5100131 0.8 0
+# layer 5100131 4
+# alpha 5100131 0 0
+# mask 5100131 off
+;;異族化パラシュ
+# body 5200431
+# pos 5200431 3
+# scale 5200431 0.8 0
+# layer 5200431 2
+# alpha 5200431 0 0
+# mask 5200431 off
+;;カリス・聖鎖・アザゼル
+# body 5602511
+# pos 5602511 3
+# scale 5602511 0.8 0
+# layer 5602511 2
+# alpha 5602511 0 0
+# mask 5602511 off
+;;ソロモン
+# body 5503111
+# pos 5503111 3
+# scale 5503111 0.8 0
+# layer 5503111 2
+# alpha 5503111 0 0
+# mask 5503111 off
+;;グラウ
+# body 164
+# pos 164 3
+# scale 164 0.6 0
+# layer 164 4
+# alpha 164 0 0
+# mask 164 off
+;;-----------------------------------------
+# move 5100131 3 0
+# face 5100131 "angry"
+# alpha 5100131 1 0
+# mask 5100131 off
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 510013 "masamune_iz_0029"
+@マサムネ
+せやあああああああ！
+
+# se "SE_10096"
+# textwindow "close"
+# leftout 5100131 0.3
+# waitandnext 0.3
+
+# alpha 5100131 1 0
+# move 5100131 4 0
+# mask 5100131 on
+# fadein "white" 0.5
+# effectbody 1001 2 0 0 0
+# effectstart 1001
+# emotionbody 1000 15 5103621 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5103621 3 0
+# face 5103621 "angry"
+# alpha 5103621 1 0
+# mask 5103621 on
+# move 5103621 2 0.2
+# move 5100131 3 0.2
+# waitandnext 0.3
+
+# textwindow "normal"
+# textboxarrow 0 1
+@ラグナロク
+アアアアアアアアアア！
+
+;;//マサムネが弾き飛ばされる
+# textwindow "close"
+# se "SE_12460"
+# fadein "white" 1.0
+# shake 0 1.0
+# rightout 5100131 0.3
+# waitandnext 0.5
+
+# effectskip 1000
+# alpha 5100131 0 0
+# alpha 5103621 0 0.5
+# waitandnext 0.5
+
+# mask 5100131 off
+# move 5100131 2 0
+# face 5100131 "angry"
+# move 5100131 3 0.3
+# waitandnext 0.3
+
+# alpha 5100131 1 0.6
+# se "SE_9084"
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 510013 "masamune_iz_battle_0008"
+@マサムネ
+ガハッ…
+
+# alpha 5100131 0 0.5
+# move 5503111 3 0
+# face 5503111 "surprise"
+# alpha 5503111 1 0.5
+# mask 5503111 off
+# textboxarrow 0 2
+@ソロモン
+マサムネ…！
+やっぱり無謀だったのよ…
+一度、撤退を――
+
+# alpha 5503111 0 0.5
+# move 5100131 3 0
+# face 5100131 "angry"
+# alpha 5100131 1 0.5
+# mask 5100131 off
+# textboxarrow 0 2
+@マサムネ
+時は稼いだ
+後は…頼んだぞ
+
+# textwindow "close"
+# alpha 5100131 0 0.5
+# waitandnext 0.5
+
+# se "SE_10585"
+# alpha 5503111 0 0.5
+# move 5401721 1 0
+# face 5401721 "angry"
+# alpha 5401721 1 0.5
+# move 5401721 3 0.2
+# mask 5401721 off
+# voice 4017 "suiha_0003"
+# textwindow "normal"
+# textboxarrow 0 2
+@スイハ
+はい
+
+# textwindow "close"
+# alpha 5401721 0 0.5
+# waitandnext 0.5
+
+# se "SE_5206"
+# move 5200431 5 0
+# face 5200431 "angry"
+# alpha 5200431 1 0.5
+# move 5200431 3 0.2
+# mask 5200431 off
+# textwindow "normal"
+# textboxarrow 0 2
+@パラシュ
+君の献身を無駄にはしないよ
+
+# alpha 5200431 0 0.5
+# emotionbody 1000 15 5103621 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5103621 3 0
+# face 5103621 "angry"
+# alpha 5103621 1 0.5
+# mask 5103621 off
+# textboxarrow 0 2
+@ラグナロク
+アアアアアアアアアアア！？
+
+# textwindow "close"
+;;//射撃音
+# se "SE_12460"
+# fadein "white" 1.0
+# shake 0 1.0
+# waitandnext 0.8
+
+# effectskip 1000
+# alpha 5103621 0 0.5
+# move 5200431 4 0
+# face 5200431 "angry"
+# alpha 5200431 1 0.5
+# move 5200431 3 0.2
+# mask 5200431 off
+# textwindow "normal"
+# textboxarrow 0 2
+@パラシュ
+もうボクの間合いだ
+
+# se "SE_4000"
+# textwindow "close"
+# leftout 5200431 0.3
+# waitandnext 0.3
+
+# alpha 5200431 0 0
+# move 5401721 2 0
+# face 5401721 "angry"
+# alpha 5401721 1 0.5
+# move 5401721 3 0.2
+# mask 5401721 off
+# textwindow "normal"
+# textboxarrow 0 2
+@スイハ
+勇気を持って、踏み出します！
+
+# textwindow "close"
+# se "SE_4000"
+# rightout 5401721 0.3
+# waitandnext 0.3
+
+# alpha 5401721 0 0
+# waitandnext 0.2
+
+;;//剣戟音
+# se "SE_9017"
+# fadein "white" 0.5
+# shake 0 0.3
+# emotionbody 1000 15 5103621 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5103621 3 0
+# face 5103621 "angry"
+# alpha 5103621 1 0
+# mask 5103621 on
+# move 5401721 1 0
+# face 5401721 "surprise"
+# alpha 5401721 1 0
+# leftin 5401721 0.3
+# mask 5401721 on
+# move 5200431 5 0
+# face 5200431 "surprise"
+# alpha 5200431 1 0
+# rightin 5200431 0.3
+# mask 5200431 on
+# waitandnext 1.0
+
+# textwindow "surprise"
+# textboxarrow 0 3
+@パラシュ
+何…！？
+
+# face 5401721 "sad"
+# textboxarrow 0 1
+@スイハ
+あと一歩、及ばず…ですか…
+
+# face 5103621 "angry"
+# textwindow "toge"
+# textboxarrow 0 2
+@ラグナロク
+アアアアアアアアアアアア！
+
+;;//スイハとパラシュが弾き飛ばされる
+# textwindow "close"
+# se "SE_9084"
+# fadein "white" 0.5
+# shake 0 0.5
+# face 5200431 "normal"
+# face 5401721 "sad"
+# rightout 5200431 0.3
+# leftout 5401721 0.3
+# waitandnext 0.4
+
+# alpha 5401721 0 0
+# alpha 5200431 0 0
+# alpha 5103621 0 0.5
+# effectskip 1000
+# waitandnext 0.4
+
+# mask 5200431 off
+# move 5200431 2 0
+# move 5200431 3 0.3
+# waitandnext 0.2
+
+# alpha 5200431 1 0.5
+# textwindow "angry"
+# textboxarrow 0 2
+# voice 520043 "parashu_iz_battle_0006"
+@パラシュ
+ぐっ…
+
+# textwindow "close"
+# alpha 5200431 0 0.5
+# waitandnext 0.5
+
+# mask 5401721 off
+# move 5401721 4 0
+# move 5401721 3 0.3
+# waitandnext 0.2
+
+# alpha 5401721 1 0.5
+# textboxarrow 0 2
+# voice 4017 "suiha_0037"
+# textwindow "normal"
+@スイハ
+あうっ…
+
+# alpha 5401721 0 0.5
+# move 5503111 3 0
+# face 5503111 "surprise"
+# alpha 5503111 1 0.5
+# mask 5503111 off
+# textboxarrow 0 2
+@ソロモン
+スイハ！パラシュ！
+接近戦で二人が力負けするなんて…
+もう打つ手はないの…？
+
+# alpha 5503111 0 0.5
+# move 5202521 2 0
+# face 5202521 "angry"
+# alpha 5202521 1 0.5
+# move 5202521 3 0.3
+# mask 5202521 off
+# textboxarrow 0 2
+@エルキュール
+希望はあります
+ここに！
+
+# alpha 5202521 0 0.5
+# emotionbody 1000 15 5103621 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5103621 3 0
+# face 5103621 "angry"
+# alpha 5103621 1 0.5
+# mask 5103621 off
+# textboxarrow 0 2
+@ラグナロク
+アアアアアアアアアア！
+
+# effectskip 1000
+# alpha 5103621 0 0.5
+# move 5202521 3 0
+# face 5202521 "angry"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# textboxarrow 0 2
+# se "SE_8003"
+# voice 2025 "hercule_im_0029"
+@エルキュール
+やあああああ！
+
+# textwindow "close"
+# alpha 5202521 0 0.1
+# move 5202521 5 0.1
+# waitandnext 0.2
+
+;;//剣戟音
+# se "SE_9182"
+# fadein "white" 0.5
+# move 5103621 3 0
+# emotionbody 1000 15 5103621 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# face 5103621 "angry"
+# alpha 5103621 1 0
+# mask 5103621 on
+# move 5202521 2 0
+# face 5202521 "angry"
+# alpha 5202521 1 0
+# mask 5202521 on
+# move 5103621 4 0.2
+# move 5202521 3 0.2
+# waitandnext 1.5
+
+;;//エルキュールが弾き飛ばされる
+# se "SE_9084"
+# shake 0 0.5
+# move 5103621 3 0.1
+# leftout 5202521 0.3
+# waitandnext 1.0
+
+# effectskip 1000
+# alpha 5202521 0 0
+# alpha 5103621 0 0.5
+# waitandnext 0.2
+
+# move 5202521 3 0
+# alpha 5202521 1 0.5
+# face 5202521 "sad"
+# mask 5202521 off
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 2025 "hercule_0038"
+@エルキュール
+うぐっ…
+
+# alpha 5202521 0 0.5
+# move 5503111 3 0
+# alpha 5503111 1 0.5
+# mask 5503111 off
+# face 5503111 "normal"
+# textwindow "normal"
+# textboxarrow 0 2
+@ソロモン
+エルキュールまで…
+こうなったら私一人でも！
+
+# alpha 5503111 0 0.5
+# emotionbody 1000 15 5103621 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5103621 3 0
+# face 5103621 "angry"
+# alpha 5103621 1 0.5
+# mask 5103621 off
+# se "SE_12464"
+# textboxarrow 0 2
+@ラグナロク
+アアアアアアアア！
+
+# effectskip 1000
+# alpha 5103621 0 0.5
+# move 5503111 3 0
+# alpha 5503111 1 0.5
+# mask 5503111 off
+# face 5503111 "surprise"
+# textboxarrow 0 2
+@ソロモン
+いけないっ
+こっちに銃口が――
+
+# textwindow "close"
+# alpha 5503111 0 0.5
+# emotionbody 1000 15 5103621 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5103621 3 0
+# face 5103621 "angry"
+# alpha 5103621 1 0.5
+# mask 5103621 off
+# waitandnext 1.0
+
+;;//爆発音
+# se "SE_9059"
+# bgm "stop"
+# fadein "red" 1.0
+# shake 0 1.0
+# waitandnext 1.0
+
+# face 5103621 "surprise"
+# textwindow "normal"
+# textboxarrow 0 2
+@ラグナロク
+アアアアアアアアアアアア…！？
+
+# effectskip 1000
+# alpha 5103621 0 0.5
+# move 5503111 3 0
+# alpha 5503111 1 0.5
+# mask 5503111 off
+# face 5503111 "surprise"
+# textboxarrow 0 2
+@ソロモン
+何が起きたの…？
+
+# alpha 5503111 0 0.5
+# move 5100131 4 0
+# alpha 5100131 1 0.5
+# mask 5100131 off
+# move 5100131 3 0.5
+# textboxarrow 0 2
+# bgmfile "bgm405" "BgmIntegralNoahEvent003" 0
+# voice 510013 "masamune_iz_0003"
+@マサムネ
+間一髪といったところか
+
+# alpha 5100131 0 0.5
+# move 5200431 4 0
+# alpha 5200431 1 0.5
+# mask 5200431 on
+# move 5401721 2 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# mask 5401721 on
+# textboxarrow 0 3
+@パラシュ
+でも、作戦通りだ
+フライシュッツがボクに仕掛けた
+手を応用させてもらったよ
+
+# textboxarrow 0 1
+@スイハ
+銃に上手く亀裂をつけられるかが
+鍵でした
+
+# alpha 5200431 0 0.5
+# alpha 5401721 0 0.5
+# move 5202521 3 0
+# face 5202521 "normal"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# textboxarrow 0 2
+@エルキュール
+ラグナロク、目が覚めましたか？
+あなたの銃を壊しました
+
+# textboxarrow 0 2
+@エルキュール
+思い出して下さい
+その力を手に入れた理由を
+
+# face 5202521 "happy"
+# textboxarrow 0 2
+@エルキュール
+あなたは破滅をもたらす力より、
+希望の御旗を掲げている方が
+ずっと格好良いですよ
+
+# alpha 5202521 0 0.5
+# emotionbody 1000 15 5103621 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5103621 3 0
+# face 5103621 "sad"
+# alpha 5103621 1 0.5
+# mask 5103621 off
+# textboxarrow 0 2
+@ラグナロク
+ア…アアアアア…
+
+# effectskip 1000
+# alpha 5103621 0 0.5
+# move 5503111 3 0
+# alpha 5503111 1 0.5
+# mask 5503111 off
+# face 5503111 "sad"
+# textboxarrow 0 2
+@ソロモン
+何てこと…
+あの突撃はラグナロクの銃に傷を
+つけて暴発を招くため…
+
+# face 5503111 "surprise"
+# textboxarrow 0 2
+@ソロモン
+ちょっと待って
+作戦通りって言っていたけど、
+そんなのどこにも載ってないわ
+
+# face 5503111 "happy"
+# textboxarrow 0 2
+@ソロモン
+まったく…
+私の計算もまだまだね
+完全に見誤っていた
+
+# face 5503111 "normal"
+# textboxarrow 0 2
+@ソロモン
+彼女達の「強さ」を
+
+# move 164 2 0
+# alpha 164 1 0.5
+# textboxarrow 0 2
+# face 5503111 "angry"
+# voice 550311 "solomon_di_0043"
+@ソロモン
+グラウ、いくわよ
+これだけお膳立てをしてもらったの
+だもの
+
+# face 5503111 "happy"
+# textboxarrow 0 2
+@ソロモン
+ここできちんと暴走を解いて
+彼女達の作戦を完遂しましょう
+
+# textboxarrow 0 1
+@グラウ
+いつでもいいですよ、ソロモン
+
+# face 5503111 "angry"
+# textboxarrow 0 2
+@ソロモン
+さあ、ラグナロク――
+
+# alpha 164 0 0.5
+# alpha 5503111 0 0.5
+# move 5602511 2 0
+# alpha 5602511 1 0.5
+# move 5602511 3 0.3
+# mask 5602511 off
+# face 5602511 "happy"
+# textboxarrow 0 2
+# voice 560251 "chalice_di_battle_0004"
+@カリス
+ラグナロク！
+わたしが暴走を解いてあげるね！
+え～い！
+
+# textwindow "close"
+# alpha 5602511 0 0.5
+# emotionbody 1000 15 5103621 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5103621 3 0
+# face 5103621 "normal"
+# alpha 5103621 1 0.5
+# mask 5103621 off
+# waitandnext 0.5
+
+;;//白フラッシュ
+# se "SE_0994"
+# fadein "white" 0.5
+# face 5103621 "surprise"
+# effectskip 1000
+# brightness 5103621 1 0.5
+# mask 5103621 off
+# waitandnext 1.5
+
+# alpha 5103621 0 0.5
+# waitandnext 0.5
+
+# move 5503111 3 0
+# alpha 5503111 1 0.5
+# mask 5503111 off
+# face 5503111 "surprise"
+# move 164 2 0
+# alpha 164 1 0.5
+# textboxarrow 0 2
+# textwindow "normal"
+@ソロモン
+カリスっ？
+そんなぁ…
+
+# textboxarrow 0 1
+@グラウ
+作戦完遂です
+おめでとうございます、ソロモン
+
+# face 5503111 "shy"
+# voice 550311 "solomon_di_0014"
+# textboxarrow 0 2
+@ソロモン
+グラウ！
+君、わざと言ってるでしょ！

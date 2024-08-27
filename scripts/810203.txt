@@ -1,0 +1,350 @@
+;;1_2_3　背景：城壁付近
+;;※飛び散る火花…プライドと対峙しているティルフィング。
+# script "lisp"
+# bgmfile "bgm166" "BgmPJZero001" 0
+# background "castle_wall"
+# body 500261
+# pos 500261 4
+# face 24 "mad2"
+# scale 500261 0.8 0
+# body 24
+# pos 24 2
+# scale 24 0.8 0
+# layer 24 4
+# serif 0
+# face 24 "angry"
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 500261 "happy"
+# voice 50026 "furaikugeru_k_0020"
+@プライド
+ワァオ！
+ここまで粘るなんてビックリだよ！
+ベリィクール！
+
+# face 500261 "usual"
+@プライド
+キミ、何者なわけ？
+
+# textboxarrow 0 1
+@ティルフィング
+…私はなんの変哲もない、
+ただのキラープリンセスよ
+
+# face 500261 "happy"
+# textboxarrow 0 3
+@プライド
+ホワァッツ？
+ただのキラープリンセスが、
+私達に勝てるとでも？
+
+# textboxarrow 0 1
+@ティルフィング
+えぇ
+決して譲れない想いが、
+この胸にあるかぎり
+
+# voice 50026 "furaikugeru_k_0007"
+# face 500261 "usual"
+# textboxarrow 0 3
+@プライド
+想い？クク…
+ただの精神論に帰結するわけ？
+そんなのナンセンスだっての
+
+# textboxarrow 0 1
+@ティルフィング
+いいえ。強い想いは、時をも超える…
+揺らぐことのない想いこそが、
+未来を切り拓く力になる…
+
+@ティルフィング
+私は、そのことに気付いたの
+そこに目を向けぬ限り…
+
+@ティルフィング
+アナタに、
+私を止めることは
+決して出来ないわ
+
+# textboxarrow 0 3
+@プライド
+言うじゃない
+一介のキラープリンセスの分際で…
+
+# face 500261 "happy"
+@プライド
+…オーケー！！
+フルバーストで行っちゃうよぉ！！
+
+# textboxarrow 0 1
+@ティルフィング
+クッ…！
+
+;;※ともに駆け出すティルフィングとプライド。
+# se "SE_9118"
+# textboxarrow 0 0
+# leftout 500261 0.5
+# leftout 24 0.5
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.6
+
+;;――場面転換――
+# alpha 500261 0 0
+# alpha 24 0 0
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.6
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# alpha 500261 1 0.5
+# alpha 24 1 0.5
+# pos 500261 4
+# pos 24 3
+# rightin 500261 0.5
+# rightin 24 0.5
+# waitandnext 0.5
+
+# se "SE_4400"
+# fadein "red" 0.3
+# waitandnext 0.5
+
+# se "SE_4601"
+# fadein "white" 0.3
+# shake 0 0.4
+# waitandnext 0.4
+
+# move 500261 3 0.5
+# move 24 2 0.5
+# waitandnext 0.5
+
+# se "SE_4400"
+# fadein "red" 0.3
+# waitandnext 0.5
+
+# se "SE_4601"
+# fadein "white" 0.3
+# shake 0 0.3
+# waitandnext 0.3
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 500261 "sad"
+# voice 50026 "furaikugeru_k_0027"
+@プライド
+はーあ
+プランでもあるのかと思えば、
+勢いのままに突っ込んでくるだけ…
+
+@プライド
+まったく、ベァッドだね！
+やっぱりキミも、
+そこらのキラープリンセスと一緒…
+
+# se "SE_9092"
+# voice 1014 "tyrufing_0029"
+# textboxarrow 0 1
+@ティルフィング
+…ハァァァァ！！！
+
+;;※グンと速度が上がるティルフィング。
+# textboxarrow 0 0
+# se "SE_4601"
+# fadein "red" 0.5
+# move 24 3 0.3
+# move 500261 5 0.3
+# shake 1 0.3
+# face 500261 "surprise"
+# waitandnext 0.7
+
+# textboxarrow 0 3
+@プライド
+！？
+
+# textboxarrow 0 1
+# move 24 2 0.5
+@ティルフィング
+おごらないで！
+この想いは、アナタに
+推し量れるようなものじゃないの！
+
+;;※一閃…プライドの銃弾をかわし、抜き胴を決めるティルフィング。
+# move 24 3  0.3
+# serif 0
+# textwindow "close"
+# se "SE_4400"
+# waitandnext 0.3
+
+# se "SE_5205"
+# effectbody 703 1 100 0
+# effectstart 703
+# waitandnext 0.3
+
+# se "SE_5207"
+# effectbody 2348 4 100 0
+# effectstart 2348
+# waitandnext 0.6
+
+# textboxarrow 0 0
+# fadein "red" 0.5
+# shake 0 0.5
+# face 500261 "sad"
+# waitandnext 0.6
+
+# bgm "stop"
+# serif 0
+# textwindow "nomal"
+# voice 50026 "furaikugeru_k_0038"
+# textboxarrow 0 3
+@プライド
+…グ！
+…ミ、ミステイク…
+こんな格下に…。カハッ…！
+
+;;※崩れ落ちるプライド。
+# se "SE_3001"
+# textboxarrow 0 0
+# body 4
+# pos 4 5
+# scale 4 0.8 0
+# alpha 4 0 0
+# body 128
+# pos 128 1
+# scale 128 0.8 0
+# alpha 128 0 0
+# alpha 500261 0 1
+# waitandnext 1.5
+
+# bgm "bgm005" 0
+# voice 9998 "toto_0006"
+# alpha 4 1 0.5
+# alpha 128 1 0.5
+# face 4 "happy"
+# textboxarrow 0 3
+@トト
+やった…！
+
+# textboxarrow 0 1
+@ノーブル
+まさか、息の根を…！？
+
+# voice 1014 "tyrufing_0037"
+# face 24 "sad"
+# textboxarrow 0 2
+@ティルフィング
+ハァ…ハァ…
+い、いえ…気を失っているだけです
+…ご無事ですか、ノーブル教授？
+
+# body 75
+# pos 75 5
+# scale 75 0.8 0
+# alpha 75 0 0
+# textboxarrow 0 1
+@ノーブル
+あ、ああ…
+すべては君のおかげだよ
+感謝の言葉も見つからん
+
+# face 75 "normal"
+# textboxarrow 0 3
+# alpha 4 0 0.5
+# alpha 75 1 0.5
+@リベリオン
+ったく、あんな小刀で
+ヤツらに立ち向かおうなんて…
+無茶にも程があるぜ
+
+# textboxarrow 0 1
+@ノーブル
+おお…！アナタがリベリオン…！
+我らが熱望していた、
+闇より生まれいでし悪魔…！
+
+# face 75 "sad"
+# textboxarrow 0 3
+@リベリオン
+だから…
+その呼び名はよしてくれと
+言ってるだろ…？
+
+# textboxarrow 0 1
+@ノーブル
+まさかこのような日が訪れようとは！
+我々は長きに渡り、
+アナタを心待ちに…
+
+# face 75 "normal"
+# textboxarrow 0 3
+@リベリオン
+話は聞いたよ。…悪いが、
+のんびりしている時間はねぇんだ
+
+# voice 9979 "rebellion_0002"
+@リベリオン
+単刀直入に訊く…
+アンタも、フレンネルの遺志を
+継ぐ者なんだな？
+
+# textboxarrow 0 1
+@ノーブル
+面目ない…
+つい、興奮してしまった
+
+# body 28
+# pos 28 3
+# scale 28 0.8 0
+# alpha 28 0 0
+@ノーブル
+そのことだが…
+私の見立てでは、
+おそらく彼は死んではいない
+
+# face 75 "surprise"
+# alpha 24 0 0.5
+# alpha 28 1 0.5
+# layer 28 4
+# textboxarrow 0 2
+@レン
+え、彼って…？
+
+# textboxarrow 0 1
+@ノーブル
+フレンネル大公だよ
+おそらく、彼は生きている…
+それが、私の見解だ
+
+# voice 9984 "ren_0022"
+# textboxarrow 0 2
+# face 28 "surprise"
+@レン
+な…！？
+
+# face 75 "smile"
+# voice 9979 "rebellion_0004"
+# textboxarrow 0 3
+@リベリオン
+クク…
+追い風が吹いてきやがったな
+
+@リベリオン
+さぁ、一気に突破するぞ
+あの壁を越えれば、
+決戦の地…王の都だ！
+
+# face 24 "angry"
+# textboxarrow 0 2
+# alpha 28 0 0.5
+# alpha 24 1 0.5
+@ティルフィング
+…！

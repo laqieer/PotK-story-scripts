@@ -1,0 +1,365 @@
+;;-----------------------------------------
+;;めあたまコラボ_チャレンジクエスト1_OP
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;神楽めあ
+# body 5105021
+# pos 5105021 4
+# scale 5105021 0.8 0
+# layer 5105021 2
+# mask 5105021 off
+# alpha 5105021 0 0
+;;犬山たまき
+# body 5303721
+# pos 5303721 2
+# scale 5303721 0.8 0
+# layer 5303721 3
+# mask 5303721 off
+# alpha 5303721 0 0
+;;ヘレナ・D. plug・ロキ
+# body 5302811
+# pos 5302811 3
+# scale 5302811 0.8 0
+# layer 5302811 2
+# mask 5302811 off
+# alpha 5302811 0 0
+# brightness 5302811 0 0
+;;ニール
+# body 162
+# pos 162 3
+# scale 162 0.8 0
+# layer 162 5
+# mask 162 off
+# alpha 162 0 0
+# brightness 162 0 0
+;;-----------------------------------------
+;;背景：街中
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# voice 530371 "inuyamatamaki_0027"
+# face 5303721 "sad"
+# alpha 5303721 1 0.5
+# face 5105021 "sad"
+# alpha 5105021 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@犬山たまき
+う～ん…
+せっかくゲームの世界に
+入ってみたけどさ…
+
+;;演出：画面を左右に振る
+# alpha 5303721 0 0.3
+# alpha 5105021 0 0.3
+# se "SE_0683"
+# textwindow "close"
+# waitandnext 1
+
+# se "SE_0683"
+# waitandnext 1
+
+# alpha 5303721 1 0.3
+# alpha 5105021 1 0.3
+# voice 510501 "kaguramea_0028"
+# textwindow "nomal"
+# textboxarrow 0 3
+@神楽めあ
+いないよね…
+キル姫
+
+# voice 530371 "inuyamatamaki_0019"
+# textboxarrow 0 1
+@犬山たまき
+たくさんいるって聞いたから
+簡単に見つかると
+思ってたんだけどなぁ…
+
+# textboxarrow 0 3
+@神楽めあ
+こっちから凸するつもりだったのに
+凸待ちの状況になってんね
+どーする？
+
+# face 5303721 "normal"
+# textboxarrow 0 1
+@犬山たまき
+まあ、いいや、
+しばらく散策してよっか
+
+# textboxarrow 0 1
+@犬山たまき
+この世界のことも
+もっと知りたいし
+
+# emotionbody 1000 10 5105021 -60 235
+# effectpattern 1000 4 3
+# effectstart 1000
+# face 5105021 "happy"
+# textboxarrow 0 3
+@神楽めあ
+さんせーいっ！
+
+;;2人消える
+# effectskip 1000
+# textwindow "close"
+# scale 5303721 0.7 0.5
+# alpha 5303721 0 0.5
+# scale 5105021 0.7 0.5
+# alpha 5105021 0 0.5
+# waitandnext 0.5
+
+;;？？？（ヘレナ）
+# voice 530281 "herena_di_0039"
+# move 162 2 0
+# alpha 162 1 0.5
+# move 5302811 4 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# textboxarrow 0 3
+# textwindow "normal"
+@？？？
+凸、か
+なにか面白そうな気配が
+するじゃないか
+
+;;？？？（ニール）
+# voice 9952 "nir_0004"
+# textboxarrow 0 1
+@？？？
+あはっ、
+アナタに目を付けられるなんて、
+あの2人は運がいいね
+
+;;？？？（ヘレナ）
+# voice 530281 "herena_di_0005"
+# face 5302811 "normal"
+# textboxarrow 0 3
+@？？？
+ふふふっ、そうだね
+なら、とびっきりの
+幸運を2人にあげてしまおうか
+
+;;場面転換
+# scale 5303721 0.8 0
+# scale 5105021 0.8 0
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+;;背景：荒野
+# background "wild"
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+# alpha 162 0 0
+# alpha 5302811 0 0
+# face 5303721 "normal"
+# alpha 5303721 1 0
+# face 5105021 "sad"
+# alpha 5105021 1 0
+# waitandnext 0.2
+
+# brightness 5302811 1 0
+# brightness 162 1 0
+# fadein "black" 1
+# waitandnext 1
+
+# voice 510501 "kaguramea_0002"
+# textboxarrow 0 3
+# textwindow "normal"
+@神楽めあ
+ねえ、たまきちゃん
+もしかして、あたしたち
+嫌われてる？
+
+# face 5303721 "angry"
+# textboxarrow 0 1
+@犬山たまき
+そ、そんなわけないじゃんっ！
+
+# textboxarrow 0 3
+@神楽めあ
+でもさ、これだけ探して
+見つからないって…
+
+;;？？？（ヘレナ）
+# voice 530281 "herena_di_0002"
+# serif 1
+@？？？
+キル姫を探しているのは、
+きみたちのことかな？
+
+# voice 510501 "kaguramea_0022"
+# voice 530371 "inuyamatamaki_0022"
+# face 5303721 "surprise"
+# face 5105021 "surprise"
+# textboxarrow 0 0
+@めあたま
+え？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# alpha 5303721 0 0.5
+# alpha 5105021 0 0.5
+# move 5302811 3 0
+# face 5302811 "usual"
+# mask 5302811 off
+# alpha 5302811 1 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@ヘレナ
+2人がキル姫を探しているって
+聞いたから、ヘレナが
+来てあげたよ
+
+# alpha 5302811 0 0.5
+# face 5303721 "normal"
+# alpha 5303721 1 0.5
+# face 5105021 "surprise"
+# alpha 5105021 1 0.5
+# textboxarrow 0 3
+@神楽めあ
+本当に凸待ちだった…
+
+# textboxarrow 0 1
+@犬山たまき
+よ、よかった…
+速攻で企画倒れにならなくて…
+
+# face 5105021 "usual"
+# textboxarrow 0 3
+@神楽めあ
+それじゃあ、さっさと質問を――
+
+# voice 530281 "herena_di_0004"
+# alpha 5303721 0 0.5
+# alpha 5105021 0 0.5
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# textboxarrow 0 2
+@ヘレナ
+ふふっ、答えてあげてもいいけど、
+ここにずっといるわけにも
+いかないし
+
+# textboxarrow 0 2
+@ヘレナ
+少し場所を変えないか？
+
+# voice 530371 "inuyamatamaki_0022"
+# alpha 5302811 0 0.5
+# move 5303721 3 0
+# face 5303721 "surprise"
+# mask 5303721 off
+# alpha 5303721 1 0.5
+# textboxarrow 0 2
+@犬山たまき
+え？まあ、いいけど
+
+# voice 530281 "herena_di_0007"
+# alpha 5303721 0 0.5
+# face 5302811 "normal"
+# alpha 5302811 1 0.5
+# textboxarrow 0 2
+@ヘレナ
+よかった
+じゃあ、こっちだよ
+…くふっ
+
+;;場面転換
+# move 5302811 2 0.7
+# alpha 5302811 0 0.5
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+;;背景：森
+# background "forest"
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# alpha 5302811 0 0
+# move 5303721 2 0
+# face 5303721 "surprise"
+# mask 5303721 on
+# alpha 5303721 1 0
+# move 5105021 4 0
+# face 5105021 "surprise"
+# alpha 5105021 1 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# emotionbody 2000 2 5105021 10 290
+# effectpattern 2000 1 1
+# effectstart 2000
+# voice 510501 "kaguramea_0022"
+# textboxarrow 0 3
+# textwindow "normal"
+@神楽めあ
+あれ？ここどこ？
+ヘレナちゃんに
+ついて来ただけなのに…
+
+# textboxarrow 0 1
+@犬山たまき
+ってか、ヘレナさんも
+いなくなってる！？
+
+;;？？？（異族）
+# se "SE_0617"
+# serif 1
+@？？？
+グギャアアアアアァァァ…！
+
+# bgmfile "bgm413_414" "BgmIntegralNoahBattle001" 0
+# emotionbody 3000 1 5105021 10 310
+# effectpattern 3000 1 0
+# effectstart 3000
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 510501 "kaguramea_0025"
+# face 5105021 "sad"
+# textboxarrow 0 3
+@神楽めあ
+ひぃっ！
+な、なに…
+
+# textboxarrow 0 1
+@犬山たまき
+も、もしかして…
+異族ってやつ？
+
+# textboxarrow 0 3
+@神楽めあ
+ち、近づいてきてない…？
+
+# emotionbody 4000 1 5303721 10 310
+# effectpattern 4000 2 0
+# effectstart 4000
+# textboxarrow 0 1
+@犬山たまき
+も、もしかして
+ヘレナさーんっ！？
+
+# textboxarrow 0 3
+@神楽めあ
+あたしたち…騙された！？
+
+# textflame 0 0
+@
+ファンキル×めあたまコラボ
+ライブチャレンジⅠが
+解放されました
+
+;;クエスト開始
+# fadeout "black" 1
+# waitandnext 1

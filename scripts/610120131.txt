@@ -1,0 +1,478 @@
+;;-----------------------------------------
+;;ファンキル学園8月
+;;3_1
+;;-----------------------------------------
+# script "lisp"
+# bgm "bgm002" 0
+# background "corridor_culturefestival_daytime"
+;;-----------------------------------------
+;;ラブリュス
+# body 67
+# pos 67 3
+# scale 67 0.8 0
+# layer 67 4
+# mask 67 off
+# alpha 67 0 0
+# body 200311
+# alpha 200311 0 0
+;;フラベルム
+# body 501621
+# pos 501621 3
+# scale 501621 0.8 0
+# layer 501621 3
+# mask 501621 off
+# alpha 501621 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;背景：廊下(文化祭・昼)
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2.5
+
+# alpha 501621 1 0.5
+# face 501621 "surprise"
+# waitandnext 0.5
+
+# se "SE_6513"
+# emotionbody 1001 8 501621 80 250
+# effectpattern 1001 1 0
+# effectstart 1001
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 5016 "Flabellum_0019"
+@フラベルム
+まったく…
+酷い目に遭いました
+
+# textflame 0 0
+@マスター
+そうだね
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 501621 "angry"
+@フラベルム
+どうですか、マスター？
+今のわたくしが
+楽しそうに見えるとでも？
+
+# textflame 0 0
+@マスター
+でも、フラベルムが
+あんなに感情をだしているところ
+初めて見たよ
+
+# textflame 0 0
+@マスター
+最後はなんだかんだ言って
+許してあげたし、
+実は意外と楽しんでたんじゃない？
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5016 "Flabellum_0028"
+@フラベルム
+…はぁ、まだ言うのですか
+あなたの目は本当に
+節穴なのですね
+
+# textflame 1 1
+# textboxarrow 0 2
+@フラベルム
+始末に負えません…
+さあ、見回りに戻りましょう
+
+# effectskip 1001
+# textwindow "close"
+# alpha 501621 0 0.5
+# waitandnext 0.7
+
+;;ＳＥ：タッタッタッ（ラブリュスが走ってくる音）
+# se "SE_5575"
+# bgm "stop"
+# alpha 67 1 0.5
+# face 67 "sad"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ラブリュス
+誰か～～～っ！！
+助けて～～～っ！！
+
+# se "SE_6501"
+# emotionbody 1002 1 501621 10 300
+# effectpattern 1002 2 0
+# effectstart 1002
+# move 67 2 0.5
+# mask 67 on
+# move 501621 4 0
+# mask 501621 on
+# alpha 501621 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5016 "Flabellum_0023"
+@フラベルム
+なっ…？
+そこの生徒、止まりなさい！
+
+# textflame 0 0
+@マスター
+ラブリュス？
+どうしたの？
+
+# bgm "bgm005" 0
+# textflame 1 1
+# textboxarrow 0 1
+# voice 2003 "loveryus_0001"
+@ラブリュス
+あっ、マスター！
+助けに来てくれたのっ？
+よかった～！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5016 "Flabellum_0011"
+@フラベルム
+何ですか、あなた？
+廊下をあんな速度で走って…
+騒々しいですよ
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 2003 "loveryus_0028"
+@ラブリュス
+ごめんなさい！
+でもでもっ、
+今はちょっと緊急事態で…！
+
+# textflame 1 1
+# textboxarrow 0 3
+@フラベルム
+どういうことです？
+きちんと説明を…
+
+;;演出：画面揺れ
+;;ＳＥ：ダダダダダッ（大量のファンたちが駆けてくる音）
+# se "SE_0924"
+# shake 0 1
+# waitandnext 1
+
+# se "SE_6525"
+# emotionbody 1003 11 501621 -60 240
+# effectpattern 1003 2 0
+# effectstart 1003
+# textflame 1 1
+# textboxarrow 0 3
+# face 501621 "surprise"
+# voice 5016 "Flabellum_0024"
+@フラベルム
+ひっ！？
+な、なんですかっ、
+あの暴徒たちは！？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 67 "angry"
+@ラブリュス
+やばっ…二人とも走って！
+どこかに隠れないと～っ！
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：教室(昼)
+# background "classroom01"
+# alpha 501621 0 0
+# alpha 67 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 501621 1 0.5
+# alpha 67 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 67 "normal"
+# voice 2003 "loveryus_0004"
+@ラブリュス
+ふ～、ギリギリセーフ…！
+なんとかみんなを撒けたよ～！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 67 "sad"
+# voice 2003 "loveryus_0031"
+@ラブリュス
+ごめんね二人とも、
+いきなり巻き込んじゃって
+
+# textflame 1 1
+# textboxarrow 0 3
+@フラベルム
+はぁ、はぁ…まったくです…
+実行委員たるわたくしたちを
+こうも振り回すなど…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 501621 "angry"
+@フラベルム
+どうやらあなたには、
+厳しい罰を与える
+必要がありそうですね…
+
+# se "SE_6515"
+# emotionbody 1004 9 76 -50 200
+# effectpattern 1004 6 0
+# effectstart 1004
+# textflame 1 1
+# textboxarrow 0 1
+# face 67 "surprise"
+# voice 2003 "loveryus_0022"
+@ラブリュス
+ま、待って待って！？
+お願い、話を聞いて～！？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 67 "sad"
+@ラブリュス
+今ね、すっごく困ってるの！
+このままじゃ私のライブが
+台無しになっちゃう！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラブリュス
+二人は実行委員だよね？
+よかったら私のお願い、
+聞いてくれないかな…？
+
+;;演出：場面転換
+# fadeout "black" 0.6
+# waitandnext 0.6
+
+# effectskip 1004
+# textwindow "close"
+# alpha 501621 0 0
+# alpha 67 0 0
+# waitandnext 0.2
+
+# fadein "black" 0.6
+# waitandnext 0.6
+
+# alpha 501621 1 0.5
+# alpha 67 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# voice 5016 "Flabellum_0039"
+@フラベルム
+ふむ、なるほど…
+
+# textflame 1 1
+# textboxarrow 0 3
+@フラベルム
+つまり、この学園祭で
+あなたに最優秀賞を
+取らせたいがために
+
+# textflame 1 1
+# textboxarrow 0 3
+@フラベルム
+ファンが張り切りすぎた結果、
+暴徒と化してしまっている…と？
+
+# textflame 0 0
+@マスター
+みんなの目が血走ってたのは
+そういう原因があったからなんだね
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラブリュス
+そうなんだよ～…
+確かに、ファンのみんなに
+声はかけたんだけど
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラブリュス
+まさかこんなにも
+がんばってくれるとは
+思ってなくて…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラブリュス
+もうすぐ体育館で
+ライブがあるんだけど
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラブリュス
+会場は今、
+ファンのみんなが
+一気に押し寄せちゃってて
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラブリュス
+私さえ入れないくらい
+ぎゅうぎゅう詰めで…
+もうどうしよ～って…
+
+# textflame 1 1
+# textboxarrow 0 3
+@フラベルム
+…その上、困ったあなたを
+追いかけ回すほどに
+理性をなくしている、と
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5016 "Flabellum_0019"
+@フラベルム
+まったく…
+ファンの風上にも置けない
+愚かな下衆どもですね
+
+# textflame 1 1
+# textboxarrow 0 3
+@フラベルム
+行きますわよ、マスター
+下衆どもは抹殺すべきです
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラブリュス
+ち、違うよ！
+みんなは私のために
+がんばってくれてるだけ！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラブリュス
+ただちょっと、
+がんばる方向を
+間違えちゃってるというか…
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5016 "Flabellum_0003"
+@フラベルム
+…いずれにせよ、
+これからどうするべきかを
+考えた方がよろしいかと
+
+# textflame 1 1
+# textboxarrow 0 3
+@フラベルム
+彼らを止める手段が
+何かあれば良いのですが
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 2003 "loveryus_0024"
+@ラブリュス
+そうなんだよね～…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラブリュス
+みんな私のファンだから、
+私が直接お願いすれば
+聞いてくれると思うんだけど
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラブリュス
+でも今はマイクもないし…
+どうやってみんなに声を
+届けたらいいんだろ？
+
+# textflame 0 0
+@マスター
+なるほど…
+声を届けるか…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 501621 "surprise"
+# voice 5016 "Flabellum_0001"
+@フラベルム
+あら、マスター
+何か思いつきましたの？
+
+# textflame 0 0
+@マスター
+うん、
+ひとつ提案があるんだけど…
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 501621 0 0
+# alpha 67 0 0
+# bgm "stop"
+;;背景：廊下(文化祭・昼)
+# background "corridor_culturefestival_daytime"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;ＳＥ：(アナウンスの開始音。ピンポンパンポン…など)
+# se "SE_0755"
+;;ト書き：以下、ラブリュスの姿なし
+# waitandnext 1.5
+
+# bgm "bgm002" 0
+# textflame 1 1
+# serif 1
+# textwindow "nomal"
+# voice 2003 "loveryus_0005"
+@ラブリュス
+学園のみんな～！
+ラブリュスちゃんだよ！
+聞こえてるかな？
+
+# serif 1
+@ラブリュス
+学園祭特別ライブ、
+お待たせしちゃっててごめんね！
+
+# serif 1
+@ラブリュス
+ライブを始めるために…
+ファンのみんなに
+お願いしたいことがあるの！
+
+# serif 1
+@ラブリュス
+その場で立ち止まって、
+静かに聞いてくれると
+嬉しいなっ！
+
+;;ト書き：ラブリュスの姿なし、ここまで
+# fadeout "black" 1
+# waitandnext 1.2

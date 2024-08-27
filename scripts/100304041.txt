@@ -1,0 +1,337 @@
+;;第4話　タイトル：鬩ぎ合う信念
+;;//背景：ケイオスリオン
+# script "lisp"
+# background "300_devil_night01"
+# bgmfile "bgm295_296" "BgmLostRagnarokBattle003" 0
+# body 3100711
+# pos 3100711 2
+# scale 3100711 0.8 0
+# body 3400611
+# pos 3400611 4
+# scale 3400611 0.8 0
+# body 137
+# pos 137 4
+# scale 137 0.8 0
+# alpha 137 0 0
+# body 3103811
+# pos 3103811 2
+# scale 3103811 0.8 0
+# alpha 3103811 0 0
+# body 139
+# pos 139 3
+# layer 139 3
+# scale 139 0.8 0
+# alpha 139 0 0
+# body 3502411
+# pos 3502411 2
+# scale 3502411 0.8 0
+# alpha 3502411 0 0
+# body 3820001
+# mask 3820001 off
+# pos 3820001 4
+# scale 3820001 0.8 0
+# alpha 3820001 0 0
+# body 3400611
+# pos 3400611 4
+# scale 3400611 0.8 0
+# textwindow "nomal"
+# face 3400611 "angry"
+# face 3100711 "angry"
+# textflame 1 1
+# voice 310071 "arondaito_ge_0036"
+# textboxarrow 0 1
+@アロンダイト
+梓弓、力を貸して下さい！
+あなたの力があれば、あの軍勢も
+突破できます
+
+# face 3400611 "surprise"
+# textboxarrow 0 3
+@梓弓
+なにを言っているんですか！？
+そんなことをしたら…
+
+# textboxarrow 0 1
+@アロンダイト
+分かっています
+でも、あの守りを突破しなければ
+なにも始まりません
+
+# voice 9969 "gill_0009"
+# alpha 3400611 0 0.5
+# alpha 3100711 0 0.5
+# alpha 137 1 0.5
+# alpha 3103811 1 0.5
+# face 137 "surprise"
+# textboxarrow 0 3
+@ギル
+なんだよ！？
+もう一人斬ル姫がついて来てたんだな
+ずるいぞ！
+
+# voice 1038 "almace_0007"
+# textboxarrow 0 1
+@アルマス
+そのくらいの準備はしていて当然よ
+それより、ここで私達に手の内を
+明かすような真似して良いの？
+
+# mask 3100711 off
+# alpha 137 0 0.5
+# alpha 3103811 0 0.5
+# move 3100711 3 0
+# alpha 3100711 1 0.5
+# voice 310071 "arondaito_ge_0003"
+# textboxarrow 0 2
+@アロンダイト
+あなたとは正々堂々と戦って勝ちます
+ですから問題ありません
+
+# face 3103811 "happy1"
+# move 3103811 3 0
+# alpha 3103811 1 0.5
+# mask 3103811 off
+# alpha 3100711 0 0.5
+# textboxarrow 0 2
+@アルマス
+言ってくれるじゃない
+
+# alpha 3103811 0 0.5
+# alpha 139 1 0.5
+# face 139 "surprise"
+@ティターニア
+梓弓は、この状況を打開できるような
+特殊な力があるのですか？
+
+# voice 9967 "titania_0042"
+# face 139 "worry"
+@ティターニア
+単に斬ル姫の人数を増やしたくらい
+では、あの守りは突破できそうに
+ありませんよ
+
+# alpha 139 0 0.5
+# alpha 3100711 1 0.5
+@アロンダイト
+それは…私の指示通りに動いて下さる
+なら必ず突破できると約束します！
+
+# face 3103811 "normal"
+# face 137 "sad"
+# alpha 3100711 0 0.5
+# move 3103811 2 0
+# alpha 3103811 1 0.5
+# alpha 137 1 0.5
+# voice 9969 "gill_0029"
+# textboxarrow 0 3
+@ギル
+そんなこと言って、背後からグサーッ
+てのは嫌だぜ…
+
+# face 137 "angry"
+# voice 1038 "almace_0001"
+# textboxarrow 0 1
+@アルマス
+ここで裏切る利点はないわ
+マスター、良いわよね？
+
+# select "アルマスの言う通りだ！" "select_label_01" "アルマスを信じるよ" "select_label_02" "アルマスはイケメンだな" "select_label_03"
+ここで裏切る利点はないわ
+マスター、良いわよね？
+
+# face 3103811 "happy1"
+# label "select_label_01"
+# labeljump "select_label_end"
+# textboxarrow 0 1
+@アルマス
+マスターらしくなってきたわね！
+アロンダイト、詳しく聞かせて
+
+# face 3103811 "shy1"
+# label "select_label_02"
+# labeljump "select_label_end"
+# textboxarrow 0 1
+@アルマス
+あ、ありがと…
+それで、どうすればいいの？
+
+# face 3103811 "shy1"
+# label "select_label_03"
+# labeljump "select_label_end"
+# textboxarrow 0 1
+@アルマス
+つまり、良いってことね！
+変な言い方しないでよ…もうっ
+
+# label "select_label_end"
+# alpha 3103811 0 0.5
+# alpha 137 0 0.5
+# alpha 3100711 1 0.5
+# textboxarrow 0 2
+@アロンダイト
+それでは、作戦を説明します
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+# move 3103811 4 0
+# alpha 3103811 1 0
+# move 3100711 2 0
+# face 3103811 "angry"
+# mask 3100711 on
+# waitandnext 0.5
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# se "SE_5582"
+# textwindow "nomal"
+# textboxarrow 0 3
+@アルマス
+行くわよ！
+この剣に続けーっ！
+
+# textboxarrow 0 1
+@アロンダイト
+一点突破を仕掛けます！
+
+# alpha 3103811 0 0.5
+# alpha 3100711 0 0.5
+# alpha 3820001 1 0.5
+# alpha 3502411 1 0.5
+# textboxarrow 0 3
+@ケイオスリオン兵
+来たぞ！
+防御陣を厚くしろ！！
+
+# voice 350241 "saika_a_0007"
+# face 3502411 "angry"
+# textboxarrow 0 1
+@雑賀
+予想通り、正面突破をしかけて
+きたっすね
+さあ、バチバチにやり合って下さい
+
+@雑賀
+兵士を集中させて分厚い防御陣を
+敷いています
+どれだけの血が流れるっすかね
+
+# textwindow "close"
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+# alpha 3103811 1 0
+# alpha 3820001 0 0
+# alpha 3502411 0 0
+# mask 3103811 off
+# mask 3100711 off
+# move 3103811 3 0
+# move 3100711 3 0
+# waitandnext 0.1
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# voice 1038 "almace_0029"
+# textboxarrow 0 2
+# textwindow "nomal"
+@アルマス
+はああああああああ！！
+
+# voice 310071 "arondaito_ge_0029"
+# alpha 3103811 0 0.5
+# alpha 3100711 1 0.5
+@アロンダイト
+この一撃で穿ちます！
+
+# textwindow "close"
+# subfillrect 1 "black" 0.2 0 1
+# waitandnext 0.4
+
+# se "SE_4830"
+# effectbody 700 1 0 0 7
+# effectstart 700
+# waitandnext 0.5
+
+# alpha 3100711 0 0
+# alpha 3820001 1 0
+# move 3820001 3 0
+# se "SE_4830"
+# effectbody 701 2 0 0 5
+# effectstart 701
+# waitandnext 0.3
+
+# subfillrect 1 "black" 0.2 1 0
+# waitandnext 0.2
+
+# shake 0 0.5
+# fadein "red" 0.5
+# textwindow "nomal"
+@ケイオスリオン兵
+ぐああああっ…！
+
+# textwindow "close"
+# alpha 3820001 0 0.5
+# waitandnext 0.5
+
+# rightin 3820001 0.8
+# textwindow "nomal"
+# textboxarrow 0 2
+# alpha 3820001 1 0.8
+@ケイオスリオン兵
+ひるむな！
+絶対に隙間を作るな！
+そうすれば――
+
+# alpha 3820001 0 0.5
+# alpha 3100711 1 0.5
+@アロンダイト
+今です！
+
+# mask 3400611 off
+# move 3400611 3 0
+# alpha 3100711 0 0.5
+# alpha 3400611 1 0.5
+# voice 340061 "azusa_ge_0007"
+# textboxarrow 0 2
+# face 3400611 "angry"
+@梓弓
+わたくしの邪眼をしっかり見て
+下さい！
+
+# textwindow "close"
+# alpha 3400611 0 0.5
+# alpha 3820001 1 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# shake 0 0.5
+# fadein "red" 0.5
+@ケイオスリオン兵
+なっ！？
+か、体がっ…
+
+# voice 350241 "saika_a_0022"
+# move 3502411 3 0
+# mask 3502411 off
+# alpha 3820001 0 0.5
+# alpha 3502411 1 0.5
+# face 3502411 "surprise"
+@雑賀
+何が起きたっすか？
+
+# face 3502411 "angry"
+@雑賀
+まずい…もう一人斬ル姫がいたんすね
+しかも、あの力…！
+
+# face 3103811 "angry"
+# alpha 3502411 0 0.5
+# alpha 3103811 1 0.5
+# textboxarrow 0 2
+@アルマス
+兵士の動きが止まった！？
+この機は逃さない！

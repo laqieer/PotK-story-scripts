@@ -1,0 +1,899 @@
+;;-------------------
+;;■第２話「聖ユグドラシル姫学院」
+;;□登場人物：ロンギヌス(学園)→ロンギヌス(コラボコス)、さくら(学生服)
+;;□背景　　：校庭(夕or夜)※第一話と同じ時間帯の差分を使用
+;;　　　　　　→校庭（昼）→学園(室内ならどこでもいい)
+;;　　　　　　→野外（かつバトル背景があるならならどこでもいい）
+;;-------------------
+;;前場面同じ背景
+# script "lisp"
+# background "classroom03_daytime"
+# bgm "stop"
+;;ロンギ制服
+# body 147
+# pos 147 3
+# scale 147 0.8 0
+# layer 147 4
+# alpha 147 0 0
+;;さくら魔法服
+# body 143
+# pos 143 1
+# scale 143 0.8 0
+# layer 143 2
+# alpha 143 0 0
+# face 143 "angry"
+;;ケロちゃん
+# body 146
+# pos 146 3
+# scale 146 0.8 0
+# layer 146 3
+# alpha 146 0 0
+# body 144
+# pos 144 3
+# scale 144 0.8 0
+# layer 144 4
+# alpha 144 0 0
+;;ロンギ魔法服
+# body 300191
+# pos 300191 3
+# layer 300191 24
+# mask 300191 off
+# scale 300191 0.8 0
+# alpha 300191 0 0
+;;さくらボイス用
+# body 602311
+# alpha 602311 0 0
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textflame 0 0
+@
+暴れていた生徒は
+ロンギヌスの一撃を受けたあと
+
+# textflame 0 0
+@
+毒を抜かれたかのように
+おとなしくなった
+
+# textflame 0 0
+@
+そして、いつもの黒い霧をまとった
+生徒と同じく何事も
+なかったかのように去っていった
+
+;;ケロちゃんを表示
+# bgm "bgm002" 0
+# alpha 146 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 146
+@ケロちゃん
+ふぅ、行ったみたいやな
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 146
+# voice 9966 "cckero_g_0030"
+@ケロちゃん
+いやー、助けるつもりが
+逆に助けられてしもたなあ
+かんにんな
+
+# alpha 146 0 0.5
+# alpha 300191 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 300191
+@ロンギヌス
+ぬいぐるみがしゃべってます…
+
+# textflame 0 0
+@マスター
+デュリン理事長の親戚かな？
+変な目で見るのはよそう
+
+# alpha 144 1 0.5
+# alpha 300191 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 144
+@ケロちゃん
+って、こそこそと
+なに二人で話してんねん！
+
+;;さくらとケロちゃんを表示
+# move 143 2 0.5
+# alpha 143 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+# voice 60231 "ccsakura_g_0009"
+@さくら
+こら、ケロちゃん
+初対面の人にそんな
+口きいたら失礼だよ！
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 144
+@ケロちゃん
+とめるな、さくら
+わいはな…むぐっ！
+んー！んー！
+
+;;ケロちゃんを消してさくら中央に表示
+;;ケロちゃんがさくらに口元を押さえられた体
+# face 143 "normal"
+# move 143 3 0.5
+# alpha 144 0 0.3
+# textflame 1 1
+# textboxarrow 0 2
+# chara 143
+# voice 60231 "ccsakura_g_0002"
+@さくら
+あの…初めまして
+えっと、この子はケロちゃん
+
+# mask 300191 on
+# face 143 "usual"
+# move 300191 5 0
+# textflame 1 1
+# textboxarrow 0 2
+# chara 143
+@さくら
+わたしは木之本桜
+友枝中学校の一年生です
+
+;;さくらとロンギヌスを二人立ちへ
+# face 300191 "usual"
+# move 300191 4 0.5
+# alpha 300191 1 0.5
+# move 143 2 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 300191
+# voice 3001 "ronginusu_0002"
+@ロンギヌス
+あ、あの…
+ロンギヌスです…
+私は牙克城学院の…
+
+# emotionbody 3001 2 300191 20 270
+# effectpattern 3001 1 0
+# effectstart 3001
+# face 300191 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 300191
+# voice 3001 "ronginusu_0028"
+@ロンギヌス
+友枝中学校？
+…マスター、知ってますか？
+
+;;なんでマスターと呼ばれているのかさくらユーザーのために説明を入れたいが、
+;;ファンキルユーザーに取っての駄文になってしまうので割愛
+;;ロンギヌスを消して、ケロちゃんとさくら立ち
+# effectskip 3001
+# move 146 4 0
+# alpha 300191 0 0.5
+# alpha 146 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 146
+@ケロちゃん
+ぷはっ！
+やっぱり思った通りや
+ここは…
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+@さくら
+うん…
+
+# textflame 0 0
+@マスター
+？
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 146
+@ケロちゃん
+説明するより見てもらった方が
+早いやろ
+ちょっと、こっちきいや
+
+;;校庭(夕or夜)※第一話と同じ時間帯の差分を使用
+;;ケロちゃん一人たち
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# bgm "bgm003" 0
+# background "Schoolyard_evening"
+# alpha 143 0 0
+# move 146 3 0
+# waitandnext 0.6
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "normal" 
+# textflame 1 1
+# textboxarrow 0 2
+# chara 146
+@ケロちゃん
+ほら、ここ
+ここや！
+
+# textflame 0 0
+@マスター
+？
+
+# move 143 1 0
+# textflame 1 1
+# textboxarrow 0 2
+# chara 146
+# voice 9966 "cckero_g_0028"
+@ケロちゃん
+やっぱ、見えんか…
+ほら、さくら
+ちょっと見せたってえや
+
+# face 143 "normal"
+# move 143 2 0.5
+# move 146 4 0.5
+# alpha 143 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+# voice 60231 "ccsakura_g_0032"
+@さくら
+うんっ
+
+;;ケロちゃん立ち絵を消してさくらの立ち絵を中央だし
+;;ウエイト
+;;さくらの立ち絵を一旦スケールを小さくして奥に進むイメージ
+;;そこから透過処理
+;;さくらの立ち絵を一旦消して再表示
+;;目の前に透明のトンネルがあって、さくらが出入りしているイメージです。
+;;スケールは見た目で違和感があったり、工数が取られそうな場合はなしで
+# se "SE_0719"
+# serif 0
+# textwindow "close"
+# move 143 3 0.5
+# alpha 146 0 0.5
+# move 146 5 0.5
+# waitandnext 1
+
+# se "SE_5508"
+# scale 143 0.6 0.7
+# alpha 143 0 0.7
+# waitandnext 1.5
+
+# scale 143 0.8 0.7
+# alpha 143 1 0.7
+# waitandnext 1
+
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@マスター
+き、消えた！？
+
+# face 143 "usual"
+# alpha 146 1 0.5
+# move 146 4 0.5
+# move 143 2 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 146
+# voice 9966 "cckero_g_0013"
+@ケロちゃん
+ちゃうちゃう
+ここにあんたらが見えない
+トンネルがあんねん
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 146
+@ケロちゃん
+それがこっちの世界と
+わいらの世界を
+つないどるちゅう訳やな
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+@さくら
+わたしたちは
+そのトンネルを偶然見つけて
+通ってきたの
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+@さくら
+不思議な気配を感じて
+それで
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 146
+@ケロちゃん
+わいらの世界とは違う魔力の構造を
+しとったけどな
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 146
+@ケロちゃん
+ま、安定しとるし
+ええやろってことでな
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 146
+@ケロちゃん
+にわかには信じられないことさかい
+信じろっていうことが
+本来、無理な話やけどな
+
+# face 300191 "shy"
+# textflame 0 0
+@マスター
+いや、信じるよ
+目の前であんな光景を見せられちゃ
+
+# move 144 5 0
+# move 300191 3 0
+# alpha 300191 1 0.5
+# alpha 146 0 0.5
+# alpha 143 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 300191
+@ロンギヌス
+助けてくれた人達のこと
+疑うわけないです
+それに私のこの姿…
+
+# move 144 4 0.5
+# alpha 144 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+# voice 9966 "cckero_g_0022"
+@ケロちゃん
+なんや、それ
+あんさんにもともとそんな力が
+あったんと違うんかい！？
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+ま、それやったら
+確かにトンネルの存在にも気づかない
+のにも納得がいくちゅーもんやな
+
+;;暗転
+;;ケロちゃんとさくらの立ち絵
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# bgm "bgm005" 0
+# alpha 144 0 0
+# alpha 146 1 0
+# alpha 143 1 0
+# alpha 300191 0 0
+# waitandnext 0.6
+
+# fadein "black" 1
+# textflame 1 1
+# textboxarrow 0 3
+# chara 146
+# voice 9966 "cckero_g_0003"
+@ケロちゃん
+なるほどな
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 146
+# voice 9966 "cckero_g_0028"
+@ケロちゃん
+あんたらの学校で起きてる事件…
+いつも見えるはずの霧…
+そして今回のロンギヌスの変身…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 146
+# voice 9966 "cckero_g_0027"
+@ケロちゃん
+わいらの話も大概やったけど
+あんさんらの話も奇想天外やな
+
+# face 143 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+# voice 60231 "ccsakura_g_0028"
+@さくら
+わたしたちの知らない世界で
+そんなことが起こっていたんだね
+
+# mask 300191 off
+# face 300191 "surprise"
+# alpha 300191 1 0.5
+# alpha 143 0 0.5
+# alpha 146 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 300191
+# voice 3001 "ronginusu_0002"
+@ロンギヌス
+あ、あの…！
+わたしと会ったことがないですか？
+わたしはあります、夢の中で
+
+# face 143 "surprise"
+# alpha 300191 0 0.5
+# alpha 143 1 0.5
+# alpha 146 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+@さくら
+…………もしかして
+
+# face 143 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+# voice 60231 "ccsakura_g_0040"
+@さくら
+夢の中で、
+わたしに問いかけてきたのは
+あなただったんですね
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 146
+@ケロちゃん
+ほう、さくらと夢で繋がったんは
+お嬢ちゃんやったんやな
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+@さくら
+わたしたちは夢の中で
+感じた気配を追ってきたの
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+@さくら
+そしたら、偶然あなた達を見つけたの
+
+# textflame 0 0
+@マスター
+もしかしたら、あの、
+暴走した生徒の気配がわかるのか？
+
+# face 143 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+@さくら
+はい、たぶん
+
+# textflame 0 0
+@マスター
+！！
+よかったら、助けてくれないか！？
+
+# face 143 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+@さくら
+え、えええっ！？
+
+# textflame 0 0
+@マスター
+君がいたら、
+あの気配がわかるというなら
+
+# textflame 0 0
+@マスター
+この事件、
+解決できるかもしれないんだ
+
+# alpha 146 0 0.5
+# alpha 144 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+ちょっと待ちぃや
+わいは反対や
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+# voice 60231 "ccsakura_g_0043"
+@さくら
+ケロちゃん！？
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+ただでさえ慣れない世界…
+どんな危険が待ち受けてるかも
+わからんのに
+
+# face 143 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+# voice 60231 "ccsakura_g_0028"
+@さくら
+でも困ってるんだよ
+困ってる人たちは放っておけないよ
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+@さくら
+それに私たちだって助けて
+もらったのに…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+# voice 9966 "cckero_g_0035"
+@ケロちゃん
+それとこれは別や！
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+ここ数日で、この気配が
+カードとは別もんちゅーことが
+ようわかったからな
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+昔からいうやろ、触らぬ神に祟りなし
+それにわいはさくらが苦労するとこ
+見とうないんや…
+
+# textflame 0 0
+@マスター
+…………
+
+# face 300191 "usual"
+# alpha 300191 1 0.5
+# alpha 143 0 0.5
+# alpha 144 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 300191
+@ロンギヌス
+わかりました
+
+# face 300191 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 300191
+@ロンギヌス
+きっと大丈夫ですよ
+わたし、この姿になれましたし、
+それにやっぱり迷惑掛けちゃ…
+
+# face 300191 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 300191
+# voice 3001 "ronginusu_0022"
+@ロンギヌス
+あれ、あれれ…？
+
+;;ロンギふらつく
+;;ロンギヌスの立ち絵を一瞬消す、そして通常制服立ち絵へ
+;;バッというSE
+;;マスターが倒れかけたロンギヌスを抱えた体
+# se "SE_5527"
+# serif 0
+# textwindow "close"
+# alpha 300191 0 0.5
+# alpha 147 1 0.5
+# shake 0 0.5
+# face 147 "sad"
+# waitandnext 1.5
+
+# face 143 "surprise"
+# alpha 147 0 0.5
+# alpha 143 1 0.5
+# alpha 144 1 0.5
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+@さくら
+だ、大丈夫！？
+
+# face 143 "sad"
+# textflame 0 0
+@マスター
+眠ってるだけみたい
+でも、かなり消耗してる
+
+# textflame 0 0
+@マスター
+ねえ、
+やっぱり力を貸してもらうことは
+無理かな？
+
+# textflame 0 0
+@マスター
+実は、君たちのいうこの世界では
+この事件は度々起きてるんだ
+けど、今回は様相が違う
+
+# textflame 0 0
+@マスター
+いつもは豹変する生徒に
+僕は霧がかかって見える
+だけど、今回は見えないんだ
+
+# textflame 0 0
+@マスター
+いつもは解決できるのに
+このまま行くと今回はこの子に
+全部背負わせないといけない
+
+# bgm "stop" 
+# textflame 0 0
+@マスター
+それはいやなんだ…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+……
+なんや、あんたにも
+事情がありそうやな
+
+# bgm "bgm002" 0
+# face 143 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+# voice 60231 "ccsakura_g_0042"
+@さくら
+ケロちゃん、
+力を貸してあげようよ
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+はぁ…わかった
+ただし、放課後だけやで
+戻らなみんなが心配するやろ
+
+# face 143 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+# voice 60231 "ccsakura_g_0032"
+@さくら
+わかった！
+
+# textflame 0 0
+@マスター
+やってくれるのか
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+トンネルが繋がってる限りはな
+さっきもいうたけど
+今は安定しとる
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+行き帰りもできるみたいやし
+あれが閉じへん限り…
+ま、しゃーないな
+
+# face 143 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+# voice 60231 "ccsakura_g_0030"
+@さくら
+ありがとう、ケロちゃん！
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+少しでもトンネルに変化があったら
+すぐに引き返すで
+もしくは来いへんで
+
+# face 143 "usual"
+# textflame 0 0
+@マスター
+ありがとう…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+最初から事情を
+説明してくれたらよかったのに
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+それをその嬢ちゃんが寝てから
+いうってことは…
+あんさんも苦労してるんやな
+
+# textflame 1 1
+# textboxarrow 0 0
+# chara 147
+# voice 3001 "ronginusu_0028"
+@ロンギヌス
+う、うう…ん…
+あ、あれ？
+
+# mask 300191 on
+# textflame 0 0
+@マスター
+目が覚めた？
+聞いてロンギヌス、
+二人とも協力してくれるってさ
+
+;;ロンギヌス立ち絵表示
+# face 147 "happy"
+# move 144 5 0.5
+# move 143 1 0.5
+# alpha 147 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 147
+# voice 3001 "ronginusu_0030"
+@ロンギヌス
+え、本当ですか！？
+やった、ありがとうございます
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+けど一つだけ約束してくれや
+さくらの力は人を傷つける力やない
+もっと別の目標のための力や
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+二人とも見ててわかってると
+思うけどな
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+だから根本の部分は
+自分らで解決するんやで？
+
+# textflame 0 0
+@マスター
+わかった、約束する
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 147
+# voice 3001 "ronginusu_0004"
+@ロンギヌス
+よろしくお願いします
+えっと、木之本さん
+
+# face 143 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+@さくら
+はい、こちらこそ！
+ロンギヌスさん
+
+# face 143 "usual"
+# textflame 0 0
+@マスター
+あのさ、せっかく仲間になったんだし
+敬語、やめない？
+もっと仲間らしくしようよ
+
+# move 146 5 0
+# alpha 144 0 0.5
+# alpha 146 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 146
+# voice 9966 "cckero_g_0039"
+@ケロちゃん
+お、兄ちゃんええこというなぁ
+わいは賛成やで
+
+# face 143 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+# voice 60231 "ccsakura_g_0009"
+@さくら
+もう、ケロちゃんは最初っから
+そうだったでしょ！？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 147
+# voice 3001 "ronginusu_0005"
+@ロンギヌス
+ふふふ、よろしくね…
+さくらちゃん、ケロちゃん！
+
+# face 143 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+# voice 60231 "ccsakura_g_0003"
+@さくら
+うん、よろしく
+ロンギヌスちゃん！
+
+# textflame 0 0
+@マスター
+さくらちゃん、
+ケロちゃん、よろしく！
+
+# serif 0
+# textflame 0 0
+# textwindow "moya" 
+@マスター
+これで見えない霧問題は一旦解決か
+理事長に報告…は、そうだな
+経過を見てからにしよう
+
+# serif 0
+# textflame 0 0
+# textwindow "normal" 
+@
+こうして明日の放課後
+また同じ場所での再会を約束し
+解散となった
+

@@ -1,0 +1,294 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー12章
+;;タイトル：天上、鳴動
+;;3-2
+;;背景：ユグドラシル（天上編）
+;;-----------------------------------------
+# script "lisp"
+# background "aerial_shoot"
+# bgm "bgm031" 0
+;;-----------------------------------------
+;;ティバルト
+# body 42
+# pos 42 2
+# scale 42 0.8 0
+# alpha 42 0 0
+# mask 42 off
+;;エドガー
+# body 40
+# pos 40 4
+# scale 40 0.8 0
+# alpha 40 0 0
+;;ゼロ
+# body 23
+# pos 23 3
+# scale 23 0.8 0
+# alpha 23 1 0
+# mask 23 off
+;;-----------------------------------------
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 23 "sad"
+# voice 11002 "laevateinm_0038"
+@ゼロ
+ううっ…
+
+# serif 1
+# textwindow "nomal"
+@兵士
+嘘だろ…
+こいつ、息があるぞ…
+
+# serif 1
+# textwindow "nomal"
+@兵士
+槍で磔にされてるんだぞっ
+とんでもない生命力だ
+化け物かよ…
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 23 "angry_2"
+# voice 11002 "laevateinm_battle_0007"
+@ゼロ
+ぐぅっ…あの野郎…！
+
+# alpha 23 0 0.5
+# alpha 42 1 0.5
+# alpha 40 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 1
+# face 42 "angry"
+# voice 9980 "tybalt_0047"
+@ティバルト
+道を空けろ！
+人間がいたというのは本当…
+こ、これはっ…
+
+# textboxarrow 0 3
+# face 40 "irregular"
+# voice 9982 "edgar_0018"
+@エドガー
+そんなバカな…！
+地震の前まで、ここに人など
+いなかったはずだ
+
+# textboxarrow 0 3
+@エドガー
+それにこの槍…ひょっとして
+神器ロンギヌスじゃないか！？
+
+# textboxarrow 0 1
+# voice 9980 "tybalt_0023"
+@ティバルト
+神器は斬ル姫達とともに
+ユグドラシルで眠っているはず…
+そう歴史書にも書かれてあるのにっ
+
+# textboxarrow 0 3
+# voice 9982 "edgar_0028"
+@エドガー
+これは…地上でとてつもないことが
+起きているのかもしれない…
+
+# textboxarrow 0 1
+# voice 9980 "tybalt_0002"
+@ティバルト
+なあ、お前はどう考える？
+…どうした？
+この男に見覚えがあるのか？
+
+;;//選択肢
+# select "ゼロ…！" "select_label_01" "どこかで見たような…" "select_label_02" "いや、知らない" "select_label_03"
+@ティバルト
+なあ、お前はどう考える？
+…どうした？
+この男に見覚えがあるのか？
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textboxarrow 0 3
+# voice 9982 "edgar_0023"
+@エドガー
+ゼロ！？
+まさか彼は、歴史書に載っている
+キラーメイルなのかっ？
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textboxarrow 0 1
+# face 42 "normal"
+# voice 9980 "tybalt_0028"
+@ティバルト
+俺も見覚えがあるような気がするが…
+何かの本で見たのか？
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# textboxarrow 0 1
+# face 42 "normal"
+# voice 9980 "tybalt_0003"
+@ティバルト
+そうか
+どこかで見たような気もするんだがな
+
+# label "select_label_end"
+# textboxarrow 0 3
+# voice 9982 "edgar_0002"
+@エドガー
+慎重に槍を抜いて手当をしよう
+まだ助かる可能性はあるっ
+
+# textboxarrow 0 1
+# face 42 "normal"
+# voice 9980 "tybalt_0033"
+@ティバルト
+そうだな
+救護班！救護班、急げ！
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+;;背景：室内
+# background "church_room"
+# bgm "bgm005" 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# alpha 23 1 0
+# alpha 42 0 0
+# alpha 40 0 0
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 23 "sad"
+@ゼロ
+…………
+
+# mask 23 on
+# move 23 2 0.5
+# move 42 4 0
+# alpha 42 1 0.5
+# textboxarrow 0 3
+# face 42 "normal"
+# voice 9980 "tybalt_0001"
+@ティバルト
+気がついたか
+運が良かったな
+何とか一命は取り留めたぞ
+
+# textboxarrow 0 1
+# face 23 "normal"
+# voice 11002 "laevateinm_0032"
+@ゼロ
+…………ああ
+
+# textboxarrow 0 3
+@ティバルト
+まだ本調子じゃないだろうが
+話を聞きたい
+こっちも異常事態に戸惑っていてね
+
+# textboxarrow 0 1
+# face 23 "angry_1"
+# voice 11002 "laevateinm_0033"
+@ゼロ
+もちろんだ
+俺も急いで伝えなきゃならねぇ
+俺が…終わっちまう前に…
+
+# textboxarrow 0 3
+@ティバルト
+まず、お前の名前を聞こうか
+それから地上で起きたことを――
+
+# textboxarrow 0 1
+# face 23 "normal"
+# voice 11002 "laevateinm_0002"
+@ゼロ
+俺のことなら、
+そいつが知ってるだろう？
+
+# textboxarrow 0 1
+@ゼロ
+ティルフィングやアマネから
+聞いているはずだ
+
+# textboxarrow 0 1
+# face 23 "angry_2"
+@ゼロ
+そんなことより地上の話をさせろ！
+ティルフィングがユグドラシルを
+斬ったんだ！
+
+# textboxarrow 0 3
+# face 42 "angry"
+# voice 9980 "tybalt_0022"
+@ティバルト
+何だと！？
+どうしてそんなことをっ…
+
+# textboxarrow 0 1
+# voice 11002 "laevateinm_0013"
+@ゼロ
+地底に潜んでやがったんだよ
+神や悪魔よりまずい奴がなっ
+
+# textboxarrow 0 1
+@ゼロ
+そいつが斬ル姫を奪いやがった
+世界を作り直すためだとか
+抜かしやがったらしい！
+
+;;//暗転挟む
+# fadeout "black" 2
+# waitandnext 2
+
+# fadein "black" 1
+# textboxarrow 0 3
+# face 42 "normal"
+# voice 9980 "tybalt_0028"
+@ティバルト
+にわかには信じがたい話だが…
+お前が天上世界まで来たことが
+何よりの証拠だろうな
+
+# textboxarrow 0 3
+# face 42 "angry"
+@ティバルト
+急いで王家や教皇に報告して
+対策を練らなければっ
+
+# textboxarrow 0 1
+# voice 11002 "laevateinm_0032"
+@ゼロ
+ああ、頼んだ…ぜ…
+ガハッ…！
+
+# textboxarrow 0 3
+# voice 9980 "tybalt_0001"
+@ティバルト
+おい、大丈夫か！？
+
+# textboxarrow 0 1
+# face 23 "sad"
+# voice 11002 "laevateinm_0015"
+@ゼロ
+そろそろ限界か…
+なあ、あんた
+少し…頼みがある

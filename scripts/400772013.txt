@@ -1,0 +1,254 @@
+;;-----------------------------------------
+;;4007723
+;;シェキナー(ウェディング)　キャラ【EP2後半】
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "bgm005" 0
+;;シェキナー
+# body 400771
+# pos 400771 3
+# scale 400771 0.8 0
+# layer 400771 1
+# mask 400771 off
+# alpha 400771 0 0
+# face 400771 "normal"
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;一枚絵
+# imageset 1 "c400771"
+# imagealpha 1 0 0
+# imagelayer 1 1
+;;雨エフェクト
+# envbody 1000 1 0
+# effectpattern 1000 2 0
+# textwindow "close"
+;;弓エフェクト
+# effectbody 1010 32 0 0 7
+# effectbody 1011 32 30 -60 7
+# effectbody 1012 32 0 0 7
+# effectbody 1013 32 -30 60 7
+# waitandnext 0.2
+
+;;◆背景：黒--------------------------------------
+;;弓発射
+# voice 4007 "shekina_0029"
+# se "SE_4301"
+# effectstart 1010
+# waitandnext 0.5
+
+# se "SE_4301"
+# effectstart 1011
+# waitandnext 0.1
+
+# se "SE_4301"
+# effectstart 1012
+# waitandnext 0.1
+
+# se "SE_4301"
+# effectstart 1013
+# waitandnext 0.6
+
+;;◆背景：森--------------------------------------
+# se "SE_4756"
+# fadeout "white" 0.1
+# effectstart 1000
+# waitandnext 0.1
+
+# alpha 400771 1 0
+# face 400771 "normal"
+# background "forest_totaleclipse"
+# waitandnext 0.5
+
+# fadein "white" 1.0
+# waitandnext 1.0
+
+# textwindow "normal"
+# textflame 0 0
+@
+たちまち、光の矢が
+嵐のように降り注ぐ…！
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "shy"
+# voice 4007 "shekina_0020"
+# chara 400771
+@シェキナー
+この光は…
+貴方が私にくれた夢です…！
+
+# se "SE_0602"
+# textflame 0 0
+@
+『誓いのアローシャワー』
+シェキナーが新たな技の
+境地を開いたその瞬間だった
+
+;;どさーっと音
+# face 400771 "normal"
+# textwindow "close"
+# se "SE_2019"
+# shake 0 0.6
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 0 0
+@
+「わああっ！？なんだ！？」
+驚いてひっくり返る覆面男
+
+# textflame 0 0
+@
+彼女の力強い矢により
+たちまち周囲の木が倒れ
+男に覆いかぶさってきたのだ
+
+# textflame 0 0
+@
+すかさず、姿を見せぬまま
+男へ一喝するシェキナー
+
+# textflame 1 1
+# textwindow "toge"
+# move 400771 3 0
+# textboxarrow 0 0
+# face 400771 "angry"
+# voice 4007 "shekina_0010"
+# chara 400771
+@シェキナー
+それほどの脚力があるなら
+盗みなどせず、規律正しく！
+真面目に、働きなさい！！
+
+# textwindow "normal"
+# se "SE_5575"
+# textflame 0 0
+@
+「ひいっ！森の精の怒りか！？」
+覆面男は宝石袋を投げ出し
+一目散に森の向こうへ消えていった…
+
+;;◆背景：教会------------------------------------
+;;すでに雨は上がっている（暗くない）
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# effectskip 1000
+# bgm "bgm003" 0
+# face 400771 "normal"
+# background "006_church"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 0 0
+@
+無事に奪還した石を宝石商に渡すと
+宝石商はシェキナーに
+その石をあげようと言った…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "surprise"
+# voice 4007 "shekina_0042"
+# chara 400771
+@シェキナー
+いえ、その…
+私は宝石を買い求めようとして
+偶然、泥棒を撃退できただけで…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "normal"
+# chara 400771
+@シェキナー
+それでも…とおっしゃるなら
+ありがたく頂きましょう
+私も、この輝きが欲しかったのです
+
+# textflame 0 0
+@
+シェキナーはその手で、
+石をマスターへと差し出す
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "happy"
+# voice 4007 "shekina_0001"
+# chara 400771
+@シェキナー
+どうぞ、マスター
+先程の助言のお礼も兼ねて…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400771
+@シェキナー
+一目見たときから
+貴方に似合うと思っていました
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "shy"
+# chara 400771
+@シェキナー
+本当はサプライズプレゼントに
+するつもりだったのですけど…ね
+
+# textflame 0 0
+@
+雨上がりの陽光が
+教会の窓から差し込み
+その不思議な石をいっそう輝かせた
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "normal"
+# voice 4007 "shekina_0013"
+# chara 400771
+@シェキナー
+それにしてもマスター
+さっきはどうして、私の居場所を？
+
+# textflame 0 0
+@
+派手なドレスのおかげですぐに
+きみを見つけることができたんだ
+と、答えるマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "happy"
+# voice 4007 "shekina_0004"
+# chara 400771
+@シェキナー
+ふふっ…
+いつでも貴方が私を
+見つけられるようにしています
+
+;;◆一枚絵----------------------------------------
+# textwindow "close"
+# fadein "white" 3
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 400771 0 0
+# voice 4007 "shekina_kyara_0025"
+# buttonsout 0 0
+# textwindow "close"
+;;「たしかに、私は普段から派手な格好が好きです。
+;;　だって、嫌でも貴方の目に止まるでしょう？　ふふふ」
+
+# frameout 0 1
+# waitandnext 0.8
+
+# fadeout "black" 1.5
+# waitandnext 1.5

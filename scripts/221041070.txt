@@ -1,0 +1,194 @@
+;;-----------------------------------------
+;;【ファンキル　クリスマスイベント2018　FB修正版2018.11.26
+;;【EP5】君の願いは？
+;;6_EP
+;;スクリプト最後の背景：ハルモニア周辺
+;;-----------------------------------------
+# script "lisp"
+# background "town_night_snow"
+# bgm "bgm032" 0
+;;-----------------------------------------
+;;カリス（クリスマス用のボイスを鳴らすための呼び出し）
+# body 3602511
+# alpha 3602511 0 0
+;;フォルカス（クリスマス用のボイスを鳴らすための呼び出し）
+# body 3301811
+# alpha 3301811 0 0
+;;カリス（クリスマス）
+# body 3602521
+# pos 3602521 3
+# scale 3602521 0.8 0
+# layer 3602521 2
+# alpha 3602521 0 0
+# mask 3602521 off
+;;フォルカス（クリスマス）
+# body 3301821
+# pos 3301821 3
+# scale 3301821 0.8 0
+# layer 3301821 2
+# alpha 3301821 0 0
+# mask 3301821 off
+;;-----------------------------------------
+;;【エピローグ】
+;;//背景：ハルモニア周辺
+# textflame 0 0
+;;モノローグ
+@
+実はマスターもカリスとフォルカスに
+クリスマスの贈り物を用意していた
+
+# se "SE_6504"
+# emotionbody 1000 3 3602521 10 290
+# effectpattern 1000 1 3
+# effectstart 1000
+# voice 6025 "chalice_t_0006"
+# move 3602521 3 0
+# face 3602521 "happy"
+# alpha 3602521 1 0.5
+# mask 3602521 off
+# textflame 1 1
+# textboxarrow 0 2
+@カリス
+やったー！
+マスターさん、ありがと！
+
+# voice 330181 "forcas_t_0030"
+# alpha 3602521 0 0.5
+# move 3301821 3 0
+# face 3301821 "normal"
+# alpha 3301821 1 0.5
+# mask 3301821 off
+# textboxarrow 0 2
+@フォルカス
+マスター…感謝します
+
+# alpha 3301821 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+だけど、予備の贈り物と混ざって
+中身がわからなくなっちゃって…
+と、マスター
+
+;;モノローグ
+@
+マスターは贈り物を並べ、
+よかったら好きなのを選んでみて、
+ちょっとした運試しだね、と提案する
+
+# emotionbody 1001 3 3602521 10 290
+# effectpattern 1001 3 3
+# effectstart 1001
+# voice 6025 "chalice_t_0021"
+# move 3602521 2 0
+# face 3602521 "normal"
+# alpha 3602521 1 0.5
+# mask 3602521 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 3301821 4 0
+# face 3301821 "usual"
+# alpha 3301821 1 0.5
+# mask 3301821 on
+@カリス
+キラキラリーン！楽しそう！
+じゃあ、カリスちゃんは…
+なんとなくだけど、これにする！
+
+# effectskip 1001
+# textboxarrow 0 3
+@フォルカス
+では、私は…これをいただきます
+理由ですか？直感です
+
+# textflame 0 0
+;;モノローグ
+@
+二人は選んだ箱を開けて、
+パッと笑顔を見せる
+
+# emotionbody 60251 10 3602521 -70 200
+# effectpattern 60251 4 0
+# effectstart 60251
+# voice 6025 "chalice_t_0041"
+# face 3602521 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@カリス
+わたしの好きなぶどうとパンだ！
+すっごーい！
+
+# emotionbody 1002 1 3301821 10 310
+# effectpattern 1002 2 0
+# effectstart 1002
+# voice 330181 "forcas_t_0041"
+# face 3301821 "smile"
+# textboxarrow 0 3
+@フォルカス
+これは、フォーチュンクッキー…
+私が占い好きだと知っていたのですか？
+
+# textflame 0 0
+;;モノローグ
+@
+喜んでもらえてよかった、と
+マスターが言うと…
+
+# se "SE_6504"
+# emotionbody 1003 3 3602521 10 290
+# effectpattern 1003 1 3
+# effectstart 1003
+# effectskip 60251
+# voice 6025 "chalice_t_0005"
+# face 3602521 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@カリス
+これもわたしのミラクルかな？
+カリスちゃんマジ天使！
+
+# voice 330181 "forcas_t_0004"
+# textboxarrow 0 3
+@フォルカス
+ふふっ、そうかもしれません
+マスター、私たちには
+すばらしい天使がついていますよ
+
+# emotionbody 60252 9 3602521 -80 180
+# effectpattern 60252 4 0
+# effectstart 60252
+# voice 6025 "chalice_t_0042"
+# face 3602521 "shy"
+# textboxarrow 0 1
+;;カリス（照れ）
+@カリス
+えっ？　えっと…
+そう言われると、照れちゃうよ…
+
+# textboxarrow 0 3
+@フォルカス
+照れ屋なところも可愛いですよ、
+カリス？
+
+# textboxarrow 0 1
+;;カリス（照れ）
+@カリス
+も～！
+
+# voice 330181 "forcas_t_0005"
+# textboxarrow 0 3
+@フォルカス
+ふふふっ…
+来年のクリスマスも楽しみですね
+
+# se "SE_6504"
+# emotionbody 1004 3 3602521 10 290
+# effectpattern 1004 1 3
+# effectstart 1004
+# voice 6025 "chalice_t_0001"
+# textboxarrow 0 1
+;;カリス（照れ）
+@カリス
+えへへ！
+マスターさん、
+また来年もよろしくね！

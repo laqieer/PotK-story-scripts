@@ -1,0 +1,376 @@
+;;-----------------------------------------
+;;バレンタイン「ヘレナ」キャラクエシナリオ
+;;【EP.2_1】
+;;スクリプト最後の背景：300_devil_daytime02
+;;背景：ケイオスリオン街中（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "300_devil_daytime02"
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;ヘレナ(バレンタイン)
+# body 3302821
+# pos 3302821 3
+# scale 3302821 0.8 0
+# layer 3302821 2
+# alpha 3302821 0 0
+# mask 3302821 off
+;;ニール
+# body 162
+# pos 162 3
+# scale 162 0.6 0
+# layer 162 2
+# alpha 162 0 0
+# mask 162 off
+;;ケイオスリオン兵
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# layer 3820001 2
+# alpha 3820001 0 0
+# mask 3820001 off
+;;ケイオスリオン兵（クローン1）
+# entry 938200011 3820001
+# pos 938200011 3
+# scale 938200011 0.8 0
+# layer 938200011 2
+# alpha 938200011 0 0
+# mask 938200011 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;【EP.2_1】
+;;//背景：ケイオスリオン、屋外
+# voice 3028 "herena_a_0001"
+# move 3302821 3 0
+# face 3302821 "usual"
+# alpha 3302821 1 0
+# mask 3302821 off
+# textflame 1 1
+# textboxarrow 0 2
+@ヘレナ
+ねえ、先輩…
+ヘレナは大事な実験中なんだ
+集中したいから外で待っていてくれ
+
+;;モノローグ
+# textflame 0 0
+@
+惚れ薬のことを知られたくない
+ヘレナは、マスターを外に締め出す
+
+;;モノローグ
+@
+そして、実験を再開するが、
+期待通りの結果が出ない
+
+# voice 3028 "herena_a_0028"
+# face 3302821 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ヘレナ
+おかしいぞ…
+ヘレナの計算では、
+うまくいくはずなのに…
+
+# face 3302821 "usual"
+# textboxarrow 0 2
+@ヘレナ
+この薬品を多めにしてみるか？
+これと、これと、あとこれも…
+
+# voice 9952 "nir_0044"
+# mask 3302821 on
+# move 162 4 0
+# alpha 162 1 0.5
+# mask 162 on
+# textflame 1 1
+# textboxarrow 0 3
+@ニール
+ヘレナ！
+最後の薬品は混ぜちゃダメ！
+
+# voice 3028 "herena_a_0022"
+# face 3302821 "surprise"
+# textboxarrow 0 2
+@ヘレナ
+…え？
+うわっ！
+
+;;モノローグ
+# textflame 0 0
+@
+ヘレナの持っている試験管から
+白い煙があがり始める
+
+# voice 9952 "nir_0023"
+# textflame 1 1
+# textboxarrow 0 3
+@ニール
+爆発するわよ！
+早く投げなさい！
+
+;;//演出：薬品の爆発（白フラッシュ？）
+;;//演出：爆発音
+# textwindow "close"
+# se "SE_2520"
+# shake 0 1
+# fadein "white" 1
+# alpha 3302821 0 0
+# alpha 162 0 0
+# waitandnext 1
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+ヘレナは間一髪で試験管を手放し、
+爆発の直撃は免れた
+実験室にもそれほど被害はないようだ
+
+# move 3302821 3 0
+# face 3302821 "usual"
+# alpha 3302821 1 0.5
+# mask 3302821 off
+# textflame 1 1
+# textboxarrow 0 2
+@ヘレナ
+ふう…危なかった
+音は大きかったが、
+それほどの威力ではなかったな…
+
+;;モノローグ
+# textflame 0 0
+@
+爆発音を聞いたマスターが
+まだ煙っている実験室に飛び込み、
+ヘレナを大声で呼ぶ
+
+# face 3302821 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@ヘレナ
+先輩、ヘレナは大丈夫だ！
+ちょっとした事故だよ、心配ない
+
+;;モノローグ
+# textflame 0 0
+@
+マスターはヘレナに駆け寄り、
+無事でよかった、驚いたよ
+と、ヘレナの頭をぽんぽんと叩いた
+
+;;モノローグ
+# face 3302821 "shy"
+@
+その時、ヘレナは急に顔が熱くなり、
+思わずマスターから顔を背ける
+
+# mask 3302821 on
+# move 162 4 0
+# alpha 162 1 0.5
+# mask 162 on
+# textflame 1 1
+# textboxarrow 0 3
+@ニール
+ゴホッ！アタチも無事よ！
+だれも心配してくれないけど
+
+# voice 3028 "herena_a_0069"
+# face 3302821 "normal"
+# textboxarrow 0 2
+@ヘレナ
+ああ、ニール！
+ヘレナは心配していたよ、本当だ
+…くふっ
+
+# textboxarrow 0 3
+@ニール
+まったく…
+あら、ヘレナ？
+顔を赤くして、どうしたの？
+
+# voice 3028 "herena_a_0022"
+# face 3302821 "surprise"
+# textboxarrow 0 2
+@ヘレナ
+うん？
+顔が赤いって？
+…そんなはずはないけど？
+
+# face 3302821 "usual"
+# textboxarrow 0 2
+@ヘレナ
+さてと、かなり材料が
+吹っ飛んでしまったな
+これでは実験ができないぞ
+
+# voice 3028 "herena_a_0004"
+# face 3302821 "happy"
+# textboxarrow 0 2
+@ヘレナ
+材料を調達してこないとな…
+先輩も来るかい？
+かなり危険だけどね…くふっ
+
+;;//演出：場面転換
+;;//背景：ケイオスリオン、屋敷内
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "300_devil_room"
+# alpha 162 0 0
+# move 3302821 3 0
+# face 3302821 "usual"
+# alpha 3302821 1 0
+# mask 3302821 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 3028 "herena_a_0001"
+# textboxarrow 0 2
+# textwindow "normal"
+@ヘレナ
+先輩、大丈夫かい？
+無理してついてこなくても
+よかったのに…
+
+;;モノローグ
+# textflame 0 0
+@
+でもヘレナが心配だから、と
+マスターは言う
+
+# voice 3028 "herena_a_0005"
+# face 3302821 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@ヘレナ
+ふふっ…
+この屋敷はよく知っているさ
+目をつぶっていても歩けるよ…
+
+# textboxarrow 0 2
+@ヘレナ
+さあ、この部屋だ
+お目当てのものがあるといいんだが…
+
+;;モノローグ
+# alpha 3302821 0 0.5
+# textflame 0 0
+@
+その部屋には、たくさんの瓶や箱が
+並べられていた
+どれも薬品や食材のようだった
+
+# voice 3028 "herena_a_0020"
+# move 3302821 3 0
+# face 3302821 "happy"
+# alpha 3302821 1 0.5
+# mask 3302821 off
+# textflame 1 1
+# textboxarrow 0 2
+@ヘレナ
+よし、あったぞ…
+ニール、そっちはどう？
+使えそうなものはあるかい？
+
+# voice 9952 "nir_0032"
+# mask 3302821 on
+# move 162 4 0
+# alpha 162 1 0.5
+# mask 162 on
+# textboxarrow 0 3
+@ニール
+ええ、高価そうなものは
+全部もらっておいたわ
+
+# voice 3028 "herena_a_0021"
+# textboxarrow 0 2
+@ヘレナ
+さすがニールだ…
+では、そろそろ行くとしよう
+ほら先輩、落とすなよ？
+
+;;//演出：場面転換
+;;//背景：ケイオスリオン、屋外
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "300_devil_daytime02"
+# alpha 3302821 0 0
+# alpha 162 0 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+マスターは荷物を持って
+ヘレナについていくが、歩くたびに
+薬の瓶がカチャカチャと鳴ってしまう
+
+# voice 9952 "nir_0001"
+# move 3302821 3 0
+# face 3302821 "usual"
+# alpha 3302821 1 0.5
+# mask 3302821 on
+# move 162 4 0
+# alpha 162 1 0.5
+# mask 162 off
+# textflame 1 1
+# textboxarrow 0 3
+@ニール
+マスター…
+そんなに音を出したら
+兵士に見つかってしまうわ
+
+# face 3302821 "happy"
+# textboxarrow 0 2
+@ヘレナ
+仕方ないさ、この量だからね…
+先輩、あと少し頑張ってくれ
+無事に帰れたらご褒美があるかもよ…
+
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# alpha 3302821 0 0.5
+# alpha 162 0 0.5
+# move 3820001 2 0
+# alpha 3820001 1 0.5
+# mask 3820001 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 938200011 4 0
+# alpha 938200011 1 0.5
+# mask 938200011 on
+@ケイオスリオン兵1
+おい、止まれ！
+お前ら、屋敷でなにをしている！？
+
+# textboxarrow 0 3
+@ケイオスリオン兵2
+その荷物もあやしいな
+おら、見せてみろよ！
+
+# alpha 3820001 0 0.5
+# alpha 938200011 0 0.5
+# move 3302821 3 0
+# face 3302821 "surprise"
+# alpha 3302821 1 0.5
+# mask 3302821 off
+# textboxarrow 0 2
+@ヘレナ
+おっと、残念…
+見つかってしまったか

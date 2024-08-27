@@ -1,0 +1,783 @@
+;;----------------------------------------
+;;【PUNK】3タイトルコラボ2019_シナリオ深浦_190515
+;;・メインタイトル
+;;「誰かの姫など忍びない」
+;;・サブタイトル
+;;「普通の恋は絶えず雪」4-3
+;;----------------------------------------
+# bgmfile "bgm337" "Bgm3Tcollabo005" 0
+# background "plain"
+;;----------------------------------------
+;;ヒイラギ
+# body 97
+# pos 97 3
+# scale 97 0.8 0
+# layer 97 3
+# alpha 97 0 0
+;;メラ
+# body 188
+# pos 188 3
+# scale 188 0.8 0
+# layer 188 3
+# alpha 188 0 0
+;;ニクス
+# body 189
+# pos 189 3
+# scale 189 0.8 0
+# layer 189 3
+# alpha 189 0 0
+;;アルマス
+# body 138
+# pos 138 3
+# scale 138 0.8 0
+# layer 138 3
+# alpha 138 0 0
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 3
+# alpha 139 0 0
+;;ヨミ
+# body 401811
+# pos 401811 3
+# scale 401811 0.8 0
+# layer 401811 3
+# alpha 401811 0 0
+;;コイワズライ
+# body 808412
+# pos 808412 3
+# scale 808412 0.8 0
+# layer 808412 3
+# alpha 808412 0 0
+;;ヒーちゃん達
+# body 7502311
+# pos 7502311 3
+# scale 7502311 0.8 0
+# layer 7502311 5
+# alpha 7502311 0 0
+# entry 75023111 7502311
+# pos 75023111 1
+# scale 75023111 0.8 0
+# layer 75023111 3
+# alpha 75023111 0 0
+# entry 75023112 7502311
+# pos 75023112 5
+# scale 75023112 0.8 0
+# layer 75023112 3
+# alpha 75023112 0 0
+;;----------------------------------------
+;;演出・SE：ヒイラギが黒ヒイラギを倒す
+# se "SE_5709"
+# move 97 3 0
+# mask 97 off
+# alpha 97 1 0.5
+# face 97 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@ヒイラギ
+ニン！ニン！ニン！
+
+# textwindow "close"
+# alpha 97 0 0.5
+# waitandnext 0.6
+
+;;演出・SE：次々に出現する黒ヒイラギ
+# se "SE_5635"
+# alpha 75023111 1 0.5
+# waitandnext 0.4
+
+# se "SE_5635"
+# alpha 75023112 1 0.5
+# waitandnext 0.4
+
+# se "SE_5635"
+# alpha 7502311 1 0.5
+# waitandnext 0.7
+
+# textwindow "nomal"
+# textboxarrow 0 0
+@ヒーちゃん
+恋！恋！恋！
+
+# alpha 7502311 0 0.5
+# alpha 75023111 0 0.5
+# alpha 75023112 0 0.5
+# move 97 3 0
+# mask 97 off
+# alpha 97 1 0.5
+# face 97 "irregular2"
+# voice 5023 "hiiragi_0016"
+# textflame 1 1
+# textboxarrow 0 2
+@ヒイラギ
+も、もうやだあー！！
+
+# alpha 97 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# move 188 3 0
+# mask 188 off
+# alpha 188 1 0.5
+# waitandnext 0.5
+
+# face 188 "angry"
+# voice 5034 "mela_0025"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@メラ
+もう来ないでーっ！
+
+;;演出：逃げ回るメラ。追いかける黒ヒイラギ
+# textwindow "close"
+# se "SE_5575"
+# alpha 188 0 0.5
+# waitandnext 0.4
+
+# move 7502311 3 0
+# mask 7502311 off
+# alpha 7502311 1 0
+# rightin 7502311 0.3
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@ヒーちゃん
+恋！
+
+# textwindow "close"
+# leftout 7502311 0.3
+# waitandnext 0.5
+
+# alpha 7502311 0 0
+# alpha 188 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@メラ
+来ないで！
+
+;;演出：逃げ回るメラ。追いかける黒ヒイラギ
+# textwindow "close"
+# se "SE_5575"
+# alpha 188 0 0.5
+# waitandnext 0.4
+
+# move 7502311 3 0
+# mask 7502311 off
+# alpha 7502311 1 0
+# leftin 7502311 0.3
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@ヒーちゃん
+恋！
+
+# textwindow "close"
+# rightout 7502311 0.3
+# waitandnext 0.5
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# alpha 7502311 0 0
+# alpha 188 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@メラ
+『来い！』って言いながら
+来るのやめてよ！矛盾してるよ！
+え？何？『恋』って言ってるの？
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 188 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;演出・SE：アルマス、黒ヒイラギ達を倒すも、次から次に出現する黒ヒイラギ
+# fadein "white" 0.5
+# se "SE_4830"
+# sedelay "SE_5635" 1
+# waitandnext 0.8
+
+# move 138 3 0
+# mask 138 off
+# alpha 138 1 0.5
+# face 138 "angry"
+# voice 1038 "almace_0038"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@アルマス
+いくら倒しても
+出現し続ける…！
+
+# alpha 138 0 0.5
+# move 189 3 0
+# mask 189 off
+# alpha 189 1 0.5
+# voice 9944 "nix_0003"
+# textflame 1 1
+# textboxarrow 0 2
+@ニクス
+それはそうだよ
+貴方達の未練なんだから
+
+# alpha 189 0 0.5
+# move 139 3 0
+# mask 139 off
+# alpha 139 1 0.5
+# face 139 "surprise"
+# voice 9967 "titania_0035"
+# textflame 1 1
+# textboxarrow 0 2
+@ティターニア
+アルマス達がいる限り…！？
+
+# alpha 139 0 0.5
+# alpha 189 1 0.5
+# face 189 "irregular"
+# voice 9944 "nix_0007"
+# textflame 1 1
+# textboxarrow 0 2
+@ニクス
+未練がある限りね
+
+# alpha 189 0 0.5
+# move 7502311 3 0
+# mask 7502311 off
+# alpha 7502311 1 0.5
+# textboxarrow 0 2
+@ヒーちゃん
+元ノ世界ニ戻レバ
+マタ戦イ続ケノ日々
+
+# alpha 7502311 0 0.5
+# alpha 138 1 0.5
+# face 138 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+…！！
+
+# alpha 138 0 0.5
+# alpha 7502311 1 0.5
+# textboxarrow 0 2
+@ヒーちゃん
+恋モ、大好キナ石集メモ出来ナイ
+延々ト戦イ続ケル灰色ノ日々
+
+# alpha 7502311 0 0.5
+# move 97 3 0
+# mask 97 off
+# alpha 97 1 0.5
+# face 97 "worry"
+# voice 5023 "hiiragi_0026"
+# textflame 1 1
+# textboxarrow 0 2
+@ヒイラギ
+これが…ヒイラギの…っ
+
+# alpha 97 0 0.5
+# alpha 7502311 1 0.5
+# textboxarrow 0 2
+@ヒーちゃん
+帰リタクナイ
+ズットズット
+“普通”ノ女ノ子デイタイ
+
+# alpha 7502311 0 0.5
+# alpha 139 1 0.5
+# face 139 "surprise"
+# voice 9967 "titania_0022"
+# textflame 1 1
+# textboxarrow 0 2
+@ティターニア
+こんなの…
+どう対処すれば…！？
+
+# alpha 139 0 0.5
+# alpha 189 1 0.5
+# voice 9944 "nix_0002"
+# textflame 1 1
+# textboxarrow 0 2
+@ニクス
+ほおら、ヒーちゃん
+僕が全部解決してあげるよ
+
+# alpha 189 0 0.5
+# alpha 7502311 1 0.5
+# textboxarrow 0 0
+@ヒーちゃん
+おおおおっ
+
+# mask 7502311 on
+# alpha 7502311 0 0.5
+# alpha 189 1 0.5
+# face 189 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@ニクス
+二度と元の世界に帰らなくてイイ
+普通の恋をしよう
+もう戦わなくったっていいんだ
+
+# alpha 189 0 0.5
+# alpha 7502311 1 0.5
+# alpha 75023111 1 0.5
+# alpha 75023112 1 0.5
+# textboxarrow 0 0
+@ヒーちゃん
+おおおおおっ
+
+;;演出・SE：大量の黒ヒイラギ、ニクスの元へ集まってくる
+# se "SE_0799"
+# alpha 7502311 0 0.5
+# alpha 75023111 0 0.5
+# alpha 75023112 0 0.5
+# waitandnext 0.2
+
+# alpha 189 1 0.5
+# face 189 "mad"
+# voice 9944 "nix_0020"
+# textflame 1 1
+# textboxarrow 0 2
+@ニクス
+ふふふふふ
+さあっ、ヒイラギ・ザ・ハーレムの
+完成だ
+
+# alpha 189 0 0.5
+# move 138 2 0
+# mask 138 on
+# alpha 138 1 0.5
+# face 138 "angry"
+# move 139 4 0
+# mask 139 on
+# alpha 139 1 0.5
+# face 139 "surprise"
+# voice 9967 "titania_0037"
+# textflame 1 1
+# textboxarrow 0 3
+@ティターニア
+ああっ、ニクスさんの所に
+ヒーちゃん達が
+集結していきます…！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ティターニア
+このままでは
+ヒイラギ・ザ・ハーレムが
+完成してしまいます！！
+
+# voice 1038 "almace_0002"
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+ヒイラギ・ザ・ハーレムを
+止める方法はないのっ！？
+
+;;モノローグ
+# textflame 0 0
+@
+もはやヒイラギ・ザ・ハーレムを
+止める手段はないように思え
+拳を握り締めるマスター
+
+# alpha 138 0 0.5
+# alpha 139 0 0.5
+# move 97 4 0
+# mask 97 on
+# alpha 97 1 0.5
+# face 97 "irregular2"
+# move 188 2 0
+# mask 188 on
+# alpha 188 1 0.5
+# face 188 "surprise"
+# voice 5034 "mela_0024"
+# textflame 1 1
+# textboxarrow 0 1
+@メラ
+ヒイラギ・ザ・ハーレムが完成したら
+ヒイラギ・ザ・ハーレムが完成したら
+あれっ…どうなるの？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヒイラギ
+ヒイラギが
+間接的に辱められます！！
+
+# face 188 "sad"
+# voice 5034 "mela_0025"
+# textflame 1 1
+# textboxarrow 0 1
+@メラ
+ニクスー！あたし
+義妹がこんなに増えるのヤダよーッ！
+目怖いし～～！！ 
+
+# textwindow "close"
+# alpha 97 0 0.5
+# alpha 188 0 0.5
+;;演出・SE：大量の黒ヒイラギ、ニクスの元へ集まってくる
+# alpha 7502311 1 0.5
+# alpha 75023111 1 0.5
+# alpha 75023112 1 0.5
+# waitandnext 0.8
+
+# textwindow "nomal"
+# textboxarrow 0 0
+@ヒーちゃん
+おおおおおおおおお
+
+# se "SE_0799"
+# alpha 7502311 0 0.5
+# alpha 75023111 0 0.5
+# alpha 75023112 0 0.5
+# waitandnext 0.8
+
+# alpha 189 1 0.5
+# face 189 "surprise"
+# voice 9944 "nix_0022"
+# textflame 1 1
+# textboxarrow 0 2
+@ニクス
+っ…！？
+
+# mask 189 on
+# alpha 75023111 1 0.5
+# alpha 75023112 1 0.5
+# textboxarrow 0 0
+@ヒーちゃん
+おおおおおおおおおおお
+おおおおおおおおおおお！！
+
+;;演出・SE：大量の黒ヒイラギ、ニクスを囲み、穢れでニクスを飲み込もうとする
+# se "SE_0799"
+# se "SE_5639"
+# fadeout "black" 1
+# waitandnext 1
+
+# textwindow "close"
+# alpha 189 0 0
+# alpha 75023111 0 0
+# alpha 75023112 0 0
+# background "plain_totaleclipse"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# alpha 188 1 0.5
+# face 188 "surprise"
+# alpha 97 1 0.5
+# face 97 "surprise"
+# voice 5023 "hiiragi_0022"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヒイラギ
+え…？！
+
+# voice 5034 "mela_0018"
+# textflame 1 1
+# textboxarrow 0 1
+@メラ
+う、うそ…、ヒーちゃん…
+ニクスを穢れで
+飲み込もうとしてる…！？
+
+# alpha 188 0 0.5
+# alpha 97 0 0.5
+# brightness 189 0.8 0
+# move 138 3 0
+# mask 138 off
+# alpha 138 1 0.5
+# face 138 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+ニクニク！！
+
+;;演出・SE：ニクス、黒ヒイラギと穢れに飲み込まれながら
+# alpha 138 0 0.5
+# se "SE_5634"
+# alpha 189 1 0.5
+# alpha 75023111 1 0.5
+# alpha 75023112 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ニクス
+アルルン…僕をまだ
+その名前で呼んでくれるんだね
+嬉しいな…☆
+
+# alpha 189 0 0.5
+# alpha 75023111 0 0.5
+# alpha 75023112 0 0.5
+# brightness 189 0.6 0.5
+# move 138 3 0
+# mask 138 off
+# alpha 138 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+そういうのもういいから！！！
+
+# alpha 138 0 0.5
+# alpha 189 1 0.5
+# face 189 "irregular"
+# voice 9944 "nix_0027"
+# textflame 1 1
+# textboxarrow 0 2
+@ニクス
+ああ、しまったなあ
+やっぱり、考え通りだ
+
+# brightness 189 0.5 0.5
+# alpha 189 0 0.5
+# move 188 3 0
+# mask 188 off
+# alpha 188 1 0.5
+# face 188 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@メラ
+ニクス！？
+
+# alpha 188 0 0.5
+# alpha 189 1 0.5
+# voice 9944 "nix_0002"
+# textflame 1 1
+# textboxarrow 0 2
+@ニクス
+メラ、ごめんね
+
+# brightness 189 0.4 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ニクス
+…帰れないや
+
+# brightness 189 0.3 0.5
+# alpha 189 0 0.5
+# alpha 188 1 0.5
+# face 188 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@メラ
+ニクス！今…！
+
+# alpha 188 0 0.5
+# alpha 189 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ニクス
+メラ
+時は正しく刻んで
+
+# alpha 189 0 0.5
+# alpha 188 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@メラ
+…！
+
+# textflame 1 1
+# textboxarrow 0 2
+@メラ
+考えがあるんだ…？
+
+# alpha 188 0 0.5
+# move 97 3 0
+# mask 97 off
+# alpha 97 1 0.5
+# face 97 "worry"
+# voice 5023 "hiiragi_battle_0005"
+# textflame 1 1
+# textboxarrow 0 2
+@ヒイラギ
+ニクスくん…まさか………
+
+# textwindow "close"
+# alpha 97 0 0.5
+# alpha 189 1 0.5
+# face 189 "happy"
+# waitandnext 0.9
+
+;;演出・SE：ニクス、黒ヒイラギと穢れに深く飲み込まれ、見えなくなる
+# brightness 189 0 1.5
+# alpha 189 0 1.5
+# se "SE_5639"
+# waitandnext 2.5
+
+# move 188 3 0
+# mask 188 off
+# alpha 188 1 0.5
+# face 188 "angry"
+# voice 5034 "mela_0014"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@メラ
+に、ニクスーーーーーッ！？
+そんな女の子に飲み込まれて死ぬとか
+ウソでしょーーーーーっ！？！？
+
+# imageset 1 "bg_white_circle"
+# imagescale 1 1.4 0
+# imagealpha 1 0 0
+# imagelayer 1 1
+# alpha 188 0 0.5
+# move 97 3 0
+# mask 97 off
+# alpha 97 1 0.5
+# face 97 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@ヒイラギ
+…っ！！！
+
+;;演出：回想IN（シノビナ3話ヒイラギ死亡シーン）
+;;背景：黒（シノビナ背景利用可能であればそちらを表示）立ち絵なし
+# fadein "white" 1.5
+# bgm "stop"
+# background "bg_black"
+# textwindow "close"
+# se "SE_0742"
+# alpha 97 0 0
+# imagealpha 1 1 0
+# imagepos 1 0 30
+# waitandnext 1.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@ヒイラギ
+………ごめん
+
+@ヒイラギ
+でもこれは
+ヒイラギの迷いが産んだ報いなの
+
+@ヒイラギ
+ヒイラギが行けば、全ては終わるから
+
+;;（※おばばのセリフですがモノローグで処理）
+;;モノローグ
+# textflame 0 0
+@
+ヒイラギは捨て置くぞ！
+他のクノイチの命には代えられん！
+
+# textflame 1 1
+# textboxarrow 0 0
+@ヒイラギ
+来なさい！
+ヒイラギはここよ！
+
+;;演出・SE：赤フラッシュ複数回、ヒイラギが物の怪に喰われている音
+# textwindow "close"
+# fadein "red" 0.5
+# se "SE_4774"
+# waitandnext 0.9
+
+# fadein "red" 0.5
+# se "SE_4774"
+# waitandnext 0.6
+
+# fadein "red" 0.5
+# se "SE_4774"
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@ヒイラギ
+ごめんね、みんな……
+
+@ヒイラギ
+楽しかったよ
+
+;;演出：背景黒⇒赤へ変化、回想OUT
+# fadeout "red" 3
+# waitandnext 3
+
+# background "plain_totaleclipse"
+# waitandnext 0.2
+
+# bgmfile "bgm337" "Bgm3Tcollabo005" 0
+# imagealpha 1 0 0
+# fadein "white" 1
+# move 97 3 0
+# mask 97 off
+# alpha 97 1 0.5
+# face 97 "angry"
+# waitandnext 0.8
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ヒイラギ
+一緒だ…
+あの時と…
+ヒイラギが死んだ、あの時と…！！
+
+;;演出・SE：ヒイラギ、駆けだす
+# alpha 97 0 0.5
+# textboxarrow 0 0
+# se "SE_5575"
+# waitandnext 1
+
+# move 138 3 0
+# mask 138 off
+# alpha 138 1 0.5
+# face 138 "angry"
+# voice 1038 "almace_0022"
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+ヒイラギ！？
+
+;;演出・SE：黒ヒイラギがたむろする穢れの海に突入するヒイラギ
+;;演出：暗転
+;;背景：そのまま黒
+# fadeout "black" 1
+# waitandnext 1
+
+# textwindow "close"
+# alpha 138 0 0
+# background "bg_black"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@ヒイラギ
+───ニクスくん！！
+
+# se "SE_4772"
+# textflame 1 1
+# textboxarrow 0 0
+@ヒイラギ
+きこえてますか！？
+ヒイラギです！！

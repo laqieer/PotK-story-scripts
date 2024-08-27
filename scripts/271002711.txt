@@ -1,0 +1,1213 @@
+;;-----------------------------------------
+;;ファントムオブキル　Ｒｅ：ゼロから始める異世界生活　シナリオ
+;;エピソードタイトル：
+;;【EP.1】白鯨が呼びし者 バトル前
+;;スクリプト最後の背景：plain_night
+;;-----------------------------------------
+# script "lisp"
+# background "town_night"
+# bgm "bgm003" 0
+;;-----------------------------------------
+;;アルマス
+# body 3103811
+# pos 3103811 3
+# scale 3103811 0.8 0
+# layer 3103811 3
+# alpha 3103811 0 0
+# mask 3103811 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 3
+# alpha 139 0 0
+# mask 139 off
+;;ギル
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# layer 137 3
+# alpha 137 0 0
+# mask 137 off
+;;スバル
+# body 174
+# pos 174 3
+# scale 174 0.8 0
+# layer 174 3
+# alpha 174 0 0
+# mask 174 off
+;;エミリア
+# body 3602711
+# pos 3602711 3
+# scale 3602711 0.8 0
+# layer 3602711 3
+# alpha 3602711 0 0
+# mask 3602711 off
+;;ラム
+# body 3503311
+# pos 3503311 3
+# scale 3503311 0.8 0
+# layer 3503311 3
+# alpha 3503311 0 0
+# mask 3503311 off
+;;レム
+# body 3202911
+# pos 3202911 3
+# scale 3202911 0.8 0
+# layer 3202911 3
+# alpha 3202911 0 0
+# mask 3202911 off
+;;パック
+# body 175
+# pos 175 4
+# scale 175 0.8 0
+# layer 175 4
+# alpha 175 0 0
+# mask 175 off
+;;魔女教徒
+# body 3808511
+# pos 3808511 3
+# scale 3808511 0.8 0
+# layer 3808511 3
+# alpha 3808511 0 0
+# mask 3808511 off
+;;魔女教徒（クローン1）
+# entry 938085111 3808511
+# pos 938085111 3
+# scale 938085111 0.8 0
+# layer 938085111 2
+# alpha 938085111 0 0
+# mask 938085111 off
+;;魔女教徒（クローン2）
+# entry 938085112 3808511
+# pos 938085112 3
+# scale 938085112 0.8 0
+# layer 938085112 2
+# alpha 938085112 0 0
+# mask 938085112 off
+;;白鯨
+# body 3808711
+# pos 3808711 3
+# scale 3808711 1.3 0
+# layer 3808711 3
+# alpha 3808711 0 0
+# mask 3808711 off
+# brightness 3808711 0.3 0
+;;ペテルギウス
+# body 3808611
+# pos 3808611 3
+# scale 3808611 0.8 0
+# layer 3808611 3
+# alpha 3808611 0 0
+# mask 3808611 off
+;;-----------------------------------------
+;;【EP.1】
+;;背景：丘など・夜
+;;モノローグ
+# textflame 0 0
+@
+それは、マスター達が
+珍しく穏やかなひと時を
+過ごしていたある日のこと…
+
+;;演出：画面揺れ
+;;ＳＥ：地響きのような音（白鯨の鳴き声）
+# bgm "stop"
+# se "SE_7019"
+# se "SE_0651"
+# shake 1 1
+# waitandnext 1
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# imageset 3 "bg_black"
+# imageset 2 "st171201_0"
+# imageset 1 "kiri_02"
+# imagealpha 1 0 0
+# imagealpha 2 0 0
+# imagealpha 3 0 0
+# imagelayer 1 5
+# imagelayer 3 3
+# imagelayer 2 1
+;;モノローグ
+@
+突然の地響きのような音に
+驚いたマスター達は
+思わずその発生源である方角を見る
+
+;;演出：白鯨のシルエットを表示（できれば）
+# se "SE_0540"
+# fadein "white" 0.3
+# imagescale 2 2.5 0
+# imagealpha 2 1 0
+# imagepos 1 0 -150
+# imagepos 2 -200 -650
+# imagealpha 3 0.5 0
+# imagepos 3 0 0
+# waitandnext 1
+
+# imagealpha 1 1 1
+# imagemoveto 1 -100 -150 1
+# alpha 3808711 1 1
+# layer 3808711 20
+
+# fadein "white" 0.3
+# imagealpha 3 0 0
+# imagealpha 2 0 0
+# imagealpha 1 0 0
+# alpha 3808711 0 0
+# move 3103811 2 0
+# face 3103811 "surprise"
+# alpha 3103811 1 0.5
+# mask 3103811 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 137 4 0
+# face 137 "surprise"
+# alpha 137 1 0.5
+# mask 137 on
+# voice 1038 "almace_0023"
+@アルマス
+はぁっ！？
+いや、え、何あれ？
+
+# textboxarrow 0 3
+# voice 9969 "gill_0025"
+@ギル
+いま、すげぇ音したけど…って
+え？向こうに？なんだ、雲じゃん
+ふわぁ…飛び起きて損した
+
+# face 3103811 "angry"
+# textboxarrow 0 1
+# voice 1038 "almace_0035"
+@アルマス
+いや、雲じゃないでしょ！？
+何寝ぼけてんの、絶異常事態よ！
+ほら、行くわよ！
+
+# se "SE_5575"
+# textwindow "close"
+# alpha 3103811 0 0.5
+# alpha 137 0 0.5
+# waitandnext 0.5
+
+# move 139 3 0
+# face 139 "surprise"
+# alpha 139 1 0.5
+# mask 139 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9967 "titania_0037"
+@ティターニア
+得体のしれないモノのところに
+行って大丈夫でしょうか…って
+もう行ってしまいました…
+
+# face 139 "normal"
+# voice 9967 "titania_0041"
+@ティターニア
+相変わらず
+落ち着きがないんですから…
+マスター、追いかけましょう
+
+;;演出：移動の暗転
+;;背景：丘
+# textwindow "close"
+# fadeout "black" 0.8
+# waitandnext 1
+
+# background "plain_night"
+# alpha 139 0 0
+# move 3103811 3 0
+# face 3103811 "surprise"
+# alpha 3103811 1 0
+# mask 3103811 off
+# waitandnext 0.1
+
+# fadein "black" 0.8
+# waitandnext 0.8
+
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 1038 "almace_0047"
+@アルマス
+ん、マスター
+あそこに誰かいるわ
+
+# alpha 3103811 0 0.5
+# move 174 3 0
+# face 174 "normal"
+# alpha 174 1 0.5
+# mask 174 off
+# textboxarrow 0 2
+# voice 9947 "subaru_0001"
+@？？？
+ん？
+おっ、第一村人発見！
+
+# move 3103811 2 0
+# face 3103811 "normal"
+# alpha 3103811 1 0.5
+# mask 3103811 on
+# textboxarrow 0 1
+# move 174 4 0.5
+# mask 174 on
+# voice 1038 "almace_0009"
+@アルマス
+馴れ馴れしいわね
+あのでっかいのを眺めてたし…
+もしかしてあなた達が元凶！？
+
+# textboxarrow 0 3
+# voice 9947 "subaru_0030"
+@？？？
+でっかいの…ああ、白鯨？
+俺らが元凶っていうか
+まぁ知らない仲じゃないな
+
+# face 3103811 "angry"
+# textboxarrow 0 1
+# voice 1038 "almace_battle_0001"
+@アルマス
+ふんっ！
+
+;;演出：スバルに切りかかるアルマス
+# se "SE_10585"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# face 174 "surprise"
+# voice 9947 "subaru_0023"
+@？？？
+おわっ！？
+急に攻撃された！？
+
+# alpha 3103811 0 0.5
+# alpha 174 0 0.5
+# move 3602711 3 0
+# face 3602711 "angry"
+# alpha 3602711 1 0.5
+# mask 3602711 off
+# textboxarrow 0 2
+# voice 6027 "emiria_0027"
+@？？？
+もう、スバルが紛らわしい
+言い方するから
+誤解されちゃったじゃない
+
+# alpha 3602711 0 0.5
+# move 3103811 2 0
+# face 3103811 "normal"
+# alpha 3103811 1 0.5
+# mask 3103811 on
+# move 139 4 0
+# face 139 "worry"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 3
+# voice 9967 "titania_0065"
+@ティターニア
+いきなり切りかかるアルマスも
+アルマスですよ！
+もう少し考えて行動を…
+
+# face 3103811 "angry"
+# textboxarrow 0 1
+# voice 1038 "almace_0007"
+@アルマス
+だって、絶怪しいじゃない
+倒してから考えればいいのよ
+
+# alpha 3103811 0 0.5
+# alpha 139 0 0.5
+# move 3503311 3 0
+# face 3503311 "angry"
+# alpha 3503311 1 0.5
+# mask 3503311 off
+# textboxarrow 0 2
+# voice 5033 "ramu_0028"
+@？？？
+たしかにバルスは怪しいわね
+それは否定できないわ
+
+# alpha 3503311 0 0.5
+# move 3103811 3 0
+# face 3103811 "angry"
+# alpha 3103811 1 0.5
+# mask 3103811 off
+# textboxarrow 0 2
+# voice 1038 "almace_0010"
+@アルマス
+怪しいのはあなた達全員よ
+マスター、ここで始末すべきだわ
+
+# alpha 3103811 0 0.5
+# move 3503311 3 0
+# face 3503311 "angry"
+# alpha 3503311 1 0.5
+# mask 3503311 off
+# textboxarrow 0 2
+# voice 5033 "ramu_0003"
+@？？？
+敵対するつもりなら仕方がないわね
+ラム達もむざむざやられる訳には
+いかないわ
+
+# move 3503311 2 0.5
+# mask 3503311 on
+# move 3602711 4 0
+# face 3602711 "angry"
+# alpha 3602711 1 0.5
+# mask 3602711 on
+# voice 6027 "emiria_0022"
+# textboxarrow 0 3
+@？？？
+待って待って！きっと
+話せばわかってもらえると思うの！
+
+# alpha 3503311 0 0.5
+# alpha 3602711 0 0.5
+# move 137 3 0
+# face 137 "surprise"
+# alpha 137 1 0.5
+# mask 137 off
+# textboxarrow 0 2
+# voice 9969 "gill_0030"
+@ギル
+そうは言っても怪しいもんは怪しい
+こればっかりはアルマスの
+言う通りだと思うぜ
+
+# move 137 2 0.5
+# mask 137 on
+# move 139 4 0
+# face 139 "worry"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 3
+# voice 9967 "titania_0042"
+@ティターニア
+アルマスだけじゃなくギルまで…
+あの物体のことを知っているようだし
+まずは話を聞いてからでも…
+
+# alpha 137 0 0.5
+# alpha 139 0 0.5
+# move 3103811 2 0
+# face 3103811 "angry"
+# alpha 3103811 1 0.5
+# mask 3103811 on
+# textboxarrow 0 1
+# move 174 4 0
+# face 174 "normal"
+# alpha 174 1 0.5
+# mask 174 on
+# voice 1038 "almace_0007"
+@アルマス
+そんなの痛めつければ
+いくらでも吐いてくれるでしょ
+
+;;演出：スバルに切りかかるアルマス
+# se "SE_10585"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# face 174 "surprise"
+# voice 9947 "subaru_0026"
+@？？？
+おわぁっ！？
+だからなんで俺ばっかり！？
+
+# alpha 3103811 0 0.5
+# alpha 174 0 0.5
+# move 3202911 3 0
+# face 3202911 "angry"
+# alpha 3202911 1 0.5
+# mask 3202911 off
+# textboxarrow 0 2
+# voice 2029 "remu_0028"
+@？？？
+姉様の言う通り、スバルくんが
+少しだけ怪しいのは事実ですが、
+これ以上手出しされるのなら…
+
+# alpha 3202911 0 0.5
+# move 3602711 3 0
+# face 3602711 "angry"
+# alpha 3602711 1 0.5
+# mask 3602711 off
+# textboxarrow 0 2
+# voice 6027 "emiria_0035"
+@？？？
+だから待ってってば！
+あの、私達も空に浮いてる白鯨…
+あの魔獣を追ってるの！
+
+# alpha 3602711 0 0.5
+# move 137 2 0
+# face 137 "normal"
+# alpha 137 1 0.5
+# mask 137 on
+# textboxarrow 0 1
+# move 139 4 0
+# face 139 "worry"
+# alpha 139 1 0.5
+# mask 139 on
+# voice 9969 "gill_0023"
+@ギル
+あんた達も？
+…なんだか訳ありのようだな
+
+# textboxarrow 0 3
+# voice 9967 "titania_0041"
+@ティターニア
+だから私は先ほどから
+そう言っているじゃないですか…
+
+# alpha 137 0 0.5
+# alpha 139 0 0.5
+# move 3103811 2 0
+# face 3103811 "normal"
+# alpha 3103811 1 0.5
+# mask 3103811 on
+# move 3602711 4 0
+# face 3602711 "normal"
+# alpha 3602711 1 0.5
+# mask 3602711 on
+# textboxarrow 0 3
+# voice 6027 "emiria_0002"
+@？？？
+私達は白鯨…あの鯨を追っていたら
+いつの間にかここにいたの
+
+# face 3103811 "surprise"
+# textboxarrow 0 1
+# voice 1038 "almace_0028"
+@アルマス
+くじら？はくげい？
+よくわかんないけど、あなた達は
+あれの仲間じゃないっていうの？
+
+# face 3602711 "angry"
+# textboxarrow 0 3
+# voice 6027 "emiria_0034"
+@？？？
+仲間だなんて！
+むしろ、あれは脅威…
+私達にとって災いの象徴なんだから
+
+;;演出：時間経過の暗転（エミリアが白鯨について説明している）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 3103811 0 0
+# alpha 3602711 0 0
+# move 3103811 1 0
+# face 3103811 "normal"
+# alpha 3103811 1 0.5
+# mask 3103811 on
+# move 137 3 0
+# face 137 "normal"
+# alpha 137 1 0
+# mask 137 on
+# move 3602711 5 0
+# face 3602711 "usual"
+# alpha 3602711 1 0
+# mask 3602711 on
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# layer 3202911 1
+# layer 137 2
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 1
+# voice 1038 "almace_0039"
+@アルマス
+…あのでかいのは白鯨って呼ばれてて
+あなた達はそれを退治しにきた、と
+
+# face 3602711 "normal"
+# textboxarrow 0 3
+# voice 6027 "emiria_0013"
+@？？？
+いままでたくさんの人が傷ついて
+だから私達は白鯨をやっつけようって
+追いかけて、いつの間にかここに…
+
+# face 137 "surprise"
+# textboxarrow 0 2
+# voice 9969 "gill_0023"
+@ギル
+いや、待ってくれよ
+あんなでかいのを
+あんた達だけでやるってか？
+
+# face 3602711 "sad"
+# textboxarrow 0 3
+# voice 6027 "emiria_0028"
+@？？？
+それは…
+
+# alpha 137 0 0.5
+# move 139 3 0
+# face 139 "normal"
+# alpha 139 1 0.5
+# mask 139 on
+# layer 139 4
+# textboxarrow 0 2
+# voice 9967 "titania_0002"
+@ティターニア
+…話はわかりました
+あれは私達にとってもいずれは
+脅威になりうるということですね
+
+# textboxarrow 0 2
+# voice 9967 "titania_0042"
+@ティターニア
+そして、彼女達にはあれの知識がある
+どうでしょうマスター
+ここは彼女達と手を組むというのは？
+
+# face 3103811 "surprise"
+# textboxarrow 0 1
+# voice 1038 "almace_0022"
+@アルマス
+手を組むって言ったって
+名前も知らない連中よ？
+大丈夫なの？
+
+# face 3602711 "normal"
+# textboxarrow 0 3
+# voice 6027 "emiria_0022"
+@エミリア
+あっ、ごめんなさい！
+私の名前は…エミリア
+ただのエミリアよ
+
+# alpha 139 0 0.5
+# move 174 3 0
+# face 174 "normal"
+# alpha 174 1 0.5
+# mask 174 on
+# layer 174 4
+# textboxarrow 0 2
+# voice 9947 "subaru_0005"
+@スバル
+俺はそのエミリアたんに仕える
+勇敢なる騎士ナツキ・スバルだ
+よろしくな！
+
+# face 3103811 "worry"
+# textboxarrow 0 1
+# voice 1038 "almace_0009"
+@アルマス
+騎士…？勇敢なる…？
+やっぱ無理、訳わかんないわ
+
+# alpha 3602711 0 0.5
+# move 3202911 5 0
+# face 3202911 "usual"
+# alpha 3202911 1 0.5
+# mask 3202911 on
+# textboxarrow 0 3
+# voice 2029 "remu_0008"
+@レム
+ですからスバルくん
+そういうことは
+話がこじれてしまいますから…
+
+# alpha 3103811 0 0.5
+# move 3503311 1 0
+# face 3503311 "angry"
+# alpha 3503311 1 0.5
+# mask 3503311 on
+# textboxarrow 0 1
+# voice 5033 "ramu_0027"
+@ラム
+あきらめなさい、レム
+バルスの駄目さはもう手遅れ
+諦めるほかないわ
+
+# textboxarrow 0 2
+# face 174 "surprise"
+# voice 9947 "subaru_0045"
+@スバル
+ぐおおっ、ここにやってきたのは
+俺ら4人だけだというのに
+この辛辣さ…頼りになる…！
+
+# serif 1
+# voice 9946 "pakku_0001"
+@？？？
+おやおや、そんなこと言っちゃって
+ボクを勘定に入れてくれてないのは
+いくらなんでも失礼じゃないかなぁ
+
+;;モノローグ
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+@
+目に見える4人以外の声に
+身構えるアルマスとギル
+声はエミリアの肩からするようだ
+
+# move 3602711 3 0
+# face 3602711 "normal"
+# alpha 3602711 1 0.5
+# mask 3602711 on
+# alpha 3503311 0 0.5
+# alpha 174 0 0.5
+# alpha 3202911 0 0.5
+# face 175 "normal"
+# alpha 175 1 0.5
+# mask 175 off
+# layer 175 5
+# textflame 1 1
+# textboxarrow 0 3
+# serif 0
+# voice 9946 "pakku_0004"
+@パック
+や、ボクの名前はパック
+リアの保護者みたいなものだよ
+よろしくー
+
+# alpha 175 0 0.5
+# move 3503311 1 0
+# face 3503311 "normal"
+# alpha 3503311 1 0.5
+# mask 3503311 on
+# textboxarrow 0 2
+# move 3202911 5 0
+# face 3202911 "usual"
+# alpha 3202911 1 0.5
+# mask 3202911 on
+# voice 6027 "emiria_0004"
+@エミリア
+それと、ふたりはラムとレム
+双子で…ラムがお姉さん
+
+# textboxarrow 0 1
+# voice 5033 "ramu_0004"
+@ラム
+以後お見知りおきを
+
+# face 3202911 "normal"
+# textboxarrow 0 3
+# voice 2029 "remu_0003"
+@レム
+よろしくお願いします
+
+;;モノローグ
+# alpha 3503311 0 0.5
+# alpha 3602711 0 0.5
+# alpha 3202911 0 0.5
+# textflame 0 0
+@
+エミリア達からの自己紹介に応え
+マスター達も自分らが
+何者であるかを話す
+
+# move 3103811 1 0
+# face 3103811 "normal"
+# alpha 3103811 1 0.5
+# mask 3103811 on
+# move 137 3 0
+# face 137 "normal"
+# alpha 137 1 0.5
+# mask 137 on
+# move 174 5 0
+# face 174 "happy"
+# alpha 174 1 0.5
+# mask 174 on
+# layer 174 1
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9947 "subaru_0003"
+@スバル
+マスターにアルマスにギル
+そしてティターニアか
+改めて、よろしく！
+
+# textboxarrow 0 3
+# face 174 "normal"
+# voice 9947 "subaru_0030"
+@スバル
+さて、問題の
+白鯨のことなんだけど…
+
+# textboxarrow 0 2
+# voice 9969 "gill_0001"
+@ギル
+そんな危険なのか？
+その…白鯨ってやつは
+
+# textboxarrow 0 1
+# voice 1038 "almace_0007"
+@アルマス
+まぁ、私がいれば倒せるでしょ
+ほら、行くわよ！
+
+# alpha 174 0 0.5
+# move 3602711 5 0
+# face 3602711 "normal"
+# alpha 3602711 1 0.5
+# mask 3602711 on
+# textboxarrow 0 3
+# voice 6027 "emiria_0022"
+@エミリア
+そ、そんな単純には
+いかないと思うんだけど…
+
+# face 3103811 "irregular"
+# voice 1038 "almace_0009"
+# textboxarrow 0 1
+@アルマス
+じゃあどうするのよ
+
+# alpha 3602711 0 0.5
+# move 175 5 0
+# face 175 "normal"
+# alpha 175 1 0.5
+# mask 175 on
+# textboxarrow 0 3
+# voice 9946 "pakku_0030"
+@パック
+なかなか行き当たりばったりな子だね
+周りの人は苦労しそうだ
+
+# alpha 137 0 0.5
+# move 139 3 0
+# face 139 "worry"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 2
+# voice 9967 "titania_0005"
+@ティターニア
+それはもう…
+アルマスには手を焼いていて…
+
+# face 3103811 "angry"
+# textboxarrow 0 1
+# voice 1038 "almace_0045"
+@アルマス
+そこ、余計なこと言わない！
+
+;;モノローグ
+# alpha 3103811 0 0.5
+# alpha 139 0 0.5
+# alpha 175 0 0.5
+# textflame 0 0
+@
+危険な存在であれば
+見過ごす訳にはいかない
+と協力する旨を伝えるマスター
+
+# move 3103811 3 0
+# face 3103811 "normal"
+# alpha 3103811 1 0.5
+# mask 3103811 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1038 "almace_0003"
+@アルマス
+マスターもこう言ってるし
+あなた達は絶安心して
+私に任せておけばいいのよ
+
+# alpha 3103811 0 0.5
+# move 3602711 3 0
+# face 3602711 "usual"
+# alpha 3602711 1 0.5
+# mask 3602711 off
+# textboxarrow 0 2
+# voice 6027 "emiria_0028"
+@エミリア
+絶…？
+ホントにいいのかしら…
+
+# move 3602711 2 0.5
+# mask 3602711 on
+# move 174 4 0
+# face 174 "normal"
+# alpha 174 1 0.5
+# mask 174 on
+# textboxarrow 0 3
+# voice 9947 "subaru_0002"
+@スバル
+まあまあ、エミリアたん
+ここはお言葉に甘えようぜ
+それに白鯨は俺達だけじゃキツイし
+
+# textboxarrow 0 1
+# voice 6027 "emiria_0013"
+@エミリア
+そ、それはそうだけど…
+
+# textboxarrow 0 3
+# face 174 "happy"
+# voice 9947 "subaru_0031"
+@スバル
+ってことで、
+よろしく頼むぜ、マスター
+
+# textboxarrow 0 3
+# voice 9947 "subaru_0030"
+@スバル
+さっそく、
+白鯨と戦うための
+準備をしたいんだけど…
+
+# bgm "stop"
+# face 3602711 "angry"
+# textboxarrow 0 1
+# voice 6027 "emiria_0017"
+@エミリア
+…はっ！？
+待って、スバル
+…嫌な感じがする
+
+# textboxarrow 0 3
+# face 174 "angry"
+# voice 9947 "subaru_0024"
+@スバル
+嫌な感じ…って、うぉい、マジか
+こんなとこまできて
+会いたくなかった奴らの登場だ…
+
+;;演出：魔女教徒in
+# se "SE_5602"
+# bgmfile "bgm318_319" "BgmReZerocollobo" 0
+# textwindow "close"
+# alpha 3602711 0 0.5
+# alpha 174 0 0.5
+# move 938085111 1 0
+# face 938085111 "normal"
+# alpha 938085111 1 0.5
+# mask 938085111 on
+# move 3808511 3 0
+# face 3808511 "normal"
+# alpha 3808511 1 0.5
+# mask 3808511 on
+# move 938085112 5 0
+# face 938085112 "normal"
+# alpha 938085112 1 0.5
+# mask 938085112 on
+# waitandnext 1
+
+# alpha 938085111 0 0.5
+# alpha 3808511 0 0.5
+# alpha 938085112 0 0.5
+# move 137 3 0
+# face 137 "surprise"
+# alpha 137 1 0.5
+# mask 137 off
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 9969 "gill_0026"
+@ギル
+おい、なんだよこいつら！
+変な恰好して… 
+
+# alpha 137 0 0.5
+# move 938085111 1 0
+# face 938085111 "normal"
+# alpha 938085111 1 0.5
+# mask 938085111 on
+# move 3808511 3 0
+# face 3808511 "normal"
+# alpha 3808511 1 0.5
+# mask 3808511 on
+# move 938085112 5 0
+# face 938085112 "normal"
+# alpha 938085112 1 0.5
+# mask 938085112 on
+# textboxarrow 0 0
+@黒ずくめの者達
+…………
+
+# alpha 938085111 0 0.5
+# alpha 3808511 0 0.5
+# alpha 938085112 0 0.5
+# move 3602711 3 0
+# face 3602711 "angry"
+# alpha 3602711 1 0.5
+# mask 3602711 off
+# textboxarrow 0 2
+# voice 6027 "emiria_0024"
+@エミリア
+あなた達は…魔女教徒っ！
+
+# alpha 3602711 0 0.5
+# move 3808611 3 0
+# alpha 3808611 1 0.5
+# mask 3808611 off
+# textboxarrow 0 2
+# voice 8086 "peterugiusu_0005"
+@痩せぎすの男
+見知らぬ場所へ出たと思いきや
+ああ、なんということデスか！
+これはワタシの勤勉さが招いた僥倖！
+
+# textboxarrow 0 2
+# voice 8086 "peterugiusu_0020"
+@痩せぎすの男
+この出会いに感謝、感謝をせねば！
+でなければ、アナタ達の怠惰さには
+もはや目も当てられないの、デス！！
+
+;;演出：攻撃のエフェクト
+# textwindow "close"
+# alpha 3808611 0 0.5
+# move 3103811 3 0
+# face 3103811 "angry"
+# alpha 3103811 1 0.5
+# mask 3103811 off
+# waitandnext 0.5
+
+# se "SE_6770"
+# shake 0 0.5
+# fadein "pink" 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 1038 "almace_battle_0005"
+@アルマス
+いきなり攻撃してくるなんて
+ずいぶんと失礼なヤツね！
+
+# alpha 3103811 0 0.5
+# move 137 3 0
+# face 137 "surprise"
+# alpha 137 1 0.5
+# mask 137 off
+# textboxarrow 0 2
+# voice 9969 "gill_0053"
+@ギル
+アルマスがそれ言うか？
+
+# alpha 137 0 0.5
+# move 3202911 3 0
+# face 3202911 "angry"
+# alpha 3202911 1 0.5
+# mask 3202911 off
+# textboxarrow 0 2
+# voice 2029 "remu_battle_0007"
+@レム
+お前達はいつも…
+いつも余計な時に現れて！
+
+# move 174 2 0
+# alpha 174 1 0.5
+# mask 174 on
+# textboxarrow 0 1
+# move 3202911 4 0.5
+# mask 3202911 on
+# voice 9947 "subaru_0013"
+@スバル
+だめだレム！
+感情的になったら
+ペテルギウスの思うつぼだ！
+
+# alpha 174 0 0.5
+# alpha 3202911 0 0.5
+# move 3103811 3 0
+# face 3103811 "angry"
+# alpha 3103811 1 0.5
+# mask 3103811 off
+# textboxarrow 0 2
+# voice 1038 "almace_0007"
+@アルマス
+そうは言うけど、向こうは
+話し合いで解決できそうな
+ヤツじゃないみたいだけど
+
+# alpha 3103811 0 0.5
+# move 3808611 3 0
+# alpha 3808611 1 0.5
+# mask 3808611 off
+# textboxarrow 0 2
+# voice 8086 "peterugiusu_0001"
+@ペテルギウス
+対話の意思さえ放棄するのデスか！
+
+# textboxarrow 0 2
+# voice 8086 "peterugiusu_0009"
+@ペテルギウス
+なんと！なんとなんとまったく！
+どこまで怠惰なのデスか、
+アナタ達は！
+
+# alpha 3808611 0 0.5
+# move 3503311 2 0
+# face 3503311 "normal"
+# alpha 3503311 1 0.5
+# mask 3503311 on
+# move 137 4 0
+# face 137 "surprise"
+# alpha 137 1 0.5
+# mask 137 on
+# textboxarrow 0 3
+# voice 9969 "gill_0030"
+@ギル
+話は通じているようだけど
+何言っているか全然わからないな
+
+# face 3503311 "angry"
+# textboxarrow 0 1
+# voice 5033 "ramu_0028"
+@ラム
+取り囲まれてるとは言っても、
+今はラム達だけじゃなくて
+マスター様達もいるわ
+
+# alpha 137 0 0.5
+# move 174 4 0
+# alpha 174 1 0.5
+# mask 174 on
+# textboxarrow 0 3
+# face 174 "surprise"
+# voice 9947 "subaru_0023"
+@スバル
+ちょちょちょ、マスターは
+会ったばっかなのに様付けすんの！？
+
+# alpha 3503311 0 0.5
+# move 3602711 2 0
+# face 3602711 "angry"
+# alpha 3602711 1 0.5
+# mask 3602711 on
+# textboxarrow 0 1
+# voice 6027 "emiria_0010"
+@エミリア
+スバル！
+今はそれどころじゃないでしょ！
+
+# textboxarrow 0 3
+# voice 9947 "subaru_0046"
+@スバル
+俺的には結構重要っつーか、
+最初から
+扱いがだいぶ違ったっつーか…
+
+;;演出：ペテルギウスの攻撃
+# se "SE_6770"
+# shake 0 0.5
+# fadein "pink" 0.5
+# waitandnext 0.5
+
+# se "SE_2055"
+# textboxarrow 0 3
+# voice 9947 "subaru_0039"
+@スバル
+おわっ、あぶねぇっ！
+
+# alpha 3602711 0 0.5
+# alpha 174 0 0.5
+# move 3808611 3 0
+# alpha 3808611 1 0.5
+# mask 3808611 off
+# textboxarrow 0 2
+# voice 8086 "peterugiusu_0006"
+@ペテルギウス
+余所見などとは油断の表れ！
+いったいどこまで怠惰であれば
+気が済むというのデスか！
+
+# alpha 3808611 0 0.5
+# move 3602711 2 0
+# face 3602711 "angry"
+# alpha 3602711 1 0.5
+# mask 3602711 on
+# textboxarrow 0 1
+# move 174 4 0
+# alpha 174 1 0.5
+# mask 174 on
+# voice 6027 "emiria_0038"
+@エミリア
+しゃんとして、スバル！
+なんとかここを切り抜けないと！
+
+# alpha 3602711 0 0.5
+# alpha 174 0 0.5
+# move 3503311 2 0
+# face 3503311 "normal"
+# alpha 3503311 1 0.5
+# mask 3503311 on
+# textboxarrow 0 1
+# move 3202911 4 0
+# face 3202911 "usual"
+# alpha 3202911 1 0.5
+# mask 3202911 on
+# voice 5033 "ramu_0002"
+@ラム
+バルスには言っても無駄ですよ
+せめて派手な囮としての役割に
+期待するとしましょう
+
+# face 3202911 "normal"
+# textboxarrow 0 3
+# voice 2029 "remu_0032"
+@レム
+はい！囮としてなら
+スバルくんの右に出る方はいません！
+
+# alpha 3503311 0 0.5
+# alpha 3202911 0 0.5
+# move 3602711 2 0
+# face 3602711 "angry"
+# alpha 3602711 1 0.5
+# mask 3602711 on
+# move 174 4 0
+# alpha 174 1 0.5
+# mask 174 on
+# textboxarrow 0 3
+# voice 9947 "subaru_0036"
+@スバル
+それ、フォローになってなくない！？
+
+# textboxarrow 0 1
+# voice 6027 "emiria_0027"
+@エミリア
+もう、ふたりもいじわる言わないの！
+
+# alpha 3602711 0 0.5
+# move 3103811 2 0
+# face 3103811 "normal"
+# alpha 3103811 1 0.5
+# mask 3103811 on
+# textboxarrow 0 1
+# voice 1038 "almace_0007"
+@アルマス
+ずいぶんと余裕なのね
+それじゃ私達の手伝いは
+必要ないみたいね？
+
+# textboxarrow 0 3
+# face 174 "normal"
+# voice 9947 "subaru_0008"
+@スバル
+いやいや、手助け必要助太刀歓迎！
+そんじゃ、こっからは本気モードで
+…いけるか、アルマス！
+
+# face 3103811 "angry"
+# textboxarrow 0 1
+# voice 1038 "almace_0033"
+@アルマス
+いつでもいいわよ！

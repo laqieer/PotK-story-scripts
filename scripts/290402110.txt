@@ -1,0 +1,710 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第４章 タイトル：「世界樹の子―インベイション―」
+;;第2話　タイトル：絶望の到来
+;;4_2_11_1
+;;スクリプト最後の背景：ユグドラシルの麓
+;;-----------------------------------------
+# script "lisp"
+# background "in_underwild"
+# bgmfile "bgm417" "BgmIntegralNoahBattle003" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 3
+# alpha 210 0 0
+# mask 210 off
+;;巨大死霊
+# body 5810301
+# pos 5810301 3
+# scale 5810301 0.8 0
+# layer 5810301 2
+# alpha 5810301 0 0
+# mask 5810301 off
+;;コマンドキラーズ_フード_中
+# body 214
+# pos 214 3
+# scale 214 0.8 0
+# layer 214 2
+# alpha 214 0 0
+# mask 214 off
+# brightness 214 0.5 0
+;;-----------------------------------------
+;;霧
+# imageset 2 "kiri_03"
+# imagescale 2 2.5 0
+# imagealpha 2 0 0
+# imagelayer 2 4
+# imageset 3 "kiri_03"
+# imagescale 3 2 0
+# imagealpha 3 0 0
+# imagelayer 3 3
+;;-----------------------------------------
+;;第2話　タイトル：絶望の到来
+;;//背景：ユグドラシルの麓
+# textwindow "close"
+# waitandnext 0.2
+
+;;霧演出
+# imagealpha 2 1 1
+# imagepos 2 -70 170
+# imagealpha 3 1 1
+# imagepos 3 50 -100
+# waitandnext 1
+
+# imagealpha 2 0.5 1
+# imagerightout 3 7
+# imagealpha 3 0 1
+# waitandnext 0.8
+
+# se "SE_0886"
+# move 3102311 1 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 210 3 0
+# face 210 "happy"
+# alpha 210 1 0.5
+# mask 210 on
+# textflame 1 1
+# textboxarrow 0 2
+# move 3501711 5 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textwindow "normal"
+@カミト
+町を抜けて、ユグドラシルまで
+あと少しだねっ
+
+# face 3501711 "angry"
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0002"
+@グリモワール
+油断するんじゃないわよ！
+死の匂いが濃くなってきたわ
+
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0003"
+@アスカロン
+霧も何となく濃くなってきたように
+感じます
+
+# face 210 "normal"
+# textboxarrow 0 2
+# voice 9936 "kamito_0030"
+@カミト
+やっぱりユグドラシルに異変の
+原因があるのかな…
+
+;;カミト（独白）
+# move 210 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+@カミト
+この感じ…
+前に幻覚を見たときと似ている
+気をつけないと
+
+# face 210 "irregular"
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9936 "kamito_0002"
+@カミト
+みんな
+はぐれないようにね
+
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0027"
+@グリモワール
+それはこっちの台詞よ！
+しっかりついてきなさい
+
+# se "SE_0876"
+# textwindow "close"
+# alpha 3501711 0 0.5
+# waitandnext 0.8
+
+;;//暗転挟む
+# fadeout "black" 1
+# waitandnext 1.2
+
+# sestop "SE_0886"
+# move 3102311 1 0
+# face 3102311 "normal"
+# alpha 3102311 1 0
+# mask 3102311 on
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0
+# mask 210 on
+# move 3501711 5 0
+# face 3501711 "normal"
+# alpha 3501711 1 0
+# mask 3501711 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+# se "SE_0719"
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9936 "kamito_0030"
+@カミト
+おかしいな…
+
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0028"
+@アスカロン
+歩いても歩いても、
+近づいてる感じがしません
+
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0028"
+@グリモワール
+むぅっ…
+結界の類は感じないのに…
+この霧のせいなのっ？
+
+# face 210 "irregular"
+# textboxarrow 0 2
+# voice 9936 "kamito_0023"
+@カミト
+霧…？
+そうか！
+霧のせいなんだっ
+
+# textboxarrow 0 3
+@グリモワール
+何か気づいたの？
+
+# textboxarrow 0 2
+@カミト
+グリモワール、アスカロン
+この霧を払うくらいの風を
+起こせないかなっ
+
+# textboxarrow 0 2
+@カミト
+霧の中から急に魔物達が出てくるのと
+同じような原理だよ
+
+# textboxarrow 0 2
+@カミト
+この霧のせいで方向も距離も
+滅茶苦茶になってるんだ
+
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0040"
+@グリモワール
+生死の境界すら曖昧にしてるんだから
+そのくらいの現象、引き起こしてても
+不思議じゃないわね
+
+# face 3501711 "angry"
+# textboxarrow 0 3
+# voice 350171 ""
+@グリモワール
+いいわ
+炎で焼き払ってあげる！
+
+# face 3102311 "angry"
+# textboxarrow 0 1
+@アスカロン
+私も嫉妬の氷で霧を打ち払います！
+
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0032"
+@グリモワール
+このおぉぉっ！
+
+# se "SE_5233"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0029"
+@アスカロン
+いきますっ！
+
+# se "SE_11623"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;//霧演出を一瞬、晴らす
+# textwindow "close"
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# alpha 3501711 0 0.5
+# waitandnext 0.8
+
+# imagealpha 2 0 1
+# waitandnext 1
+
+# move 3102311 1 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 2
+# move 3501711 5 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textwindow "normal"
+# voice 9936 "kamito_0006"
+@カミト
+やった！
+二人とも、霧の裂け目に向かって
+走るんだ！
+
+# face 3102311 "angry"
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0032"
+@アスカロン
+はい、マスター！
+
+# face 3501711 "angry"
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0007"
+@グリモワール
+言われなくても分かってるわよ！
+
+# se "SE_0876"
+# textwindow "close"
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# alpha 3501711 0 0.5
+# waitandnext 0.8
+
+;;//暗転挟む
+;;//霧演出戻す
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# imagealpha 2 0.5 0
+# imagepos 2 -70 170
+# move 3102311 1 0
+# face 3102311 "normal"
+# alpha 3102311 1 0
+# mask 3102311 on
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0
+# mask 210 on
+# move 3501711 5 0
+# face 3501711 "normal"
+# alpha 3501711 1 0
+# mask 3501711 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_0886"
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+もう少しだ…
+ユグドラシルの幹が目の前に
+広がってる
+
+# textboxarrow 0 2
+@カミト
+あそこまで辿り着けばっ
+
+# textboxarrow 0 3
+@グリモワール
+足元も緩やかにうねってきた
+この下に根が張ってるのね
+
+# sestop "SE_0886"
+# face 3102311 "surprise"
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0022"
+@アスカロン
+あっ…
+
+# bgmfile "bgm419_420" "BgmIntegralNoahBattle003" 0
+# face 3102311 "angry"
+# textboxarrow 0 1
+@アスカロン
+マスター！
+魔物が…来ます！
+
+;;？？？（巨大死霊）
+# se "SE_0865"
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# alpha 3501711 0 0.5
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# textboxarrow 0 2
+@？？？
+ＳＹＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ
+ＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ！！
+
+# alpha 5810301 0 0.5
+# move 3102311 1 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 2
+# move 3501711 5 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+@カミト
+こんなところにまでっ…
+二人とも、いける！？
+
+# face 3501711 "angry"
+# textboxarrow 0 3
+@グリモワール
+誰にものを言っているの？
+
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_battle_0001"
+@アスカロン
+二人だけでも、必ず倒してみせます！
+
+# fadeout "black" 1
+# waitandnext 1
+
+# alpha 3501711 0 0
+# alpha 210 0 0
+# alpha 3102311 0 0
+# move 5810301 3 0
+# alpha 5810301 1 0
+# mask 5810301 off
+# textwindow "close"
+# bgmfile "bgm421_1" "BgmIntegralNoahEvent002" 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_0867"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@？？？
+ＢＹＡＡＡＡＡＡＡＡＡＡ…
+
+;;//巨大死霊が消える
+# se "SE_5215"
+# textwindow "close"
+# alpha 5810301 0 1
+# waitandnext 1
+
+# move 3102311 1 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 off
+# move 3501711 5 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textwindow "normal"
+@アスカロン
+やりましたっ…！
+
+# face 3501711 "angry"
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0027"
+@グリモワール
+ふんっ…
+どうってこと…なかったわね…
+
+# textboxarrow 0 2
+# voice 9936 "kamito_0015"
+@カミト
+二人とも酷い傷だよっ
+急いで手当てしないと
+
+# face 3501711 "normal"
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0037"
+@グリモワール
+こんなの…少し休めば治るわ
+それより先を急ぎましょっ
+
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_battle_0005"
+@アスカロン
+はい…
+こんなところで…立ち止まって
+いられません
+
+# face 210 "angry"
+# textboxarrow 0 2
+# voice 9936 "kamito_0065"
+@カミト
+ダメだよ
+せめて傷を塞いでおかないと
+
+# textboxarrow 0 2
+@カミト
+いくらキル姫が人間より頑丈でも
+限度があるだろっ
+
+# se "SE_5200"
+# textboxarrow 0 3
+@グリモワール
+心配性ねっ…
+それなら回復薬を…
+
+# face 3102311 "surprise"
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0025"
+@アスカロン
+えっ？
+うわあぁっ！
+
+# face 210 "surprise"
+# textboxarrow 0 2
+@カミト
+どうしたの、アスカロン！？
+
+;;//霧の中から魔獣が次々に現れる
+# bgmfile "bgm420" "BgmIntegralNoahBattle003" 0
+# se "SE_0854"
+# textwindow "close"
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# alpha 3501711 0 0.5
+# move 5810301 2 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# waitandnext 1
+
+# textwindow "close"
+# alpha 5810301 0 0.5
+# waitandnext 0.5
+
+# se "SE_0865"
+# move 5810301 4 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# waitandnext 1
+
+# textwindow "close"
+# alpha 5810301 0 0.5
+# waitandnext 0.5
+
+# se "SE_0868"
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# textboxarrow 0 2
+# textwindow "normal"
+@？？？
+ＲＹＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ
+ＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ！！
+
+# alpha 5810301 0 0.5
+# move 3102311 1 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 210 3 0
+# face 210 "sad"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 2
+# move 3501711 5 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# voice 9936 "kamito_0017"
+@カミト
+そんな…
+あと少しなのに…
+こんな、たくさん…
+
+# face 210 "angry"
+# textboxarrow 0 2
+# voice 9936 "kamito_0054"
+@カミト
+くそっ…
+まだだ！
+まだ終わったわけじゃない！
+
+# face 3102311 "angry"
+# textboxarrow 0 1
+@アスカロン
+そうです…！
+私は…まだ戦えます！
+
+# face 3501711 "angry"
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_battle_0007"
+@グリモワール
+ワタシだっていけるわよ…！
+
+# textboxarrow 0 3
+@グリモワール
+マスター
+危ないからキミは離れていなさい！
+
+# face 210 "irregular"
+# textboxarrow 0 2
+# voice 9936 "kamito_0035"
+@カミト
+分かった
+必ず一緒に――
+
+;;//巨大死霊がグリモワールとアスカロンを弾き飛ばす
+# se "SE_5922"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_battle_0006"
+@グリモワール
+あぐぅっ…！
+
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_battle_0005"
+@アスカロン
+くぅっ…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# waitandnext 0.5
+
+# face 210 "surprise"
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9936 "kamito_0023"
+@カミト
+えっ…？
+アスカロン…？
+グリモワール…？
+
+# se "SE_0854"
+# alpha 210 0 0.5
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# textboxarrow 0 2
+@？？？
+ＧＹＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ
+ＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ！！
+
+# alpha 5810301 0 0.5
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# voice 9936 "kamito_0017"
+@カミト
+嘘だろ…
+たった一撃でっ…
+
+# se "SE_0865"
+# alpha 210 0 0.5
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# textboxarrow 0 2
+@？？？
+ＲＹＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ
+ＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ！！
+
+# alpha 5810301 0 0.5
+# move 210 3 0
+# face 210 "sad"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# voice 9936 "kamito_0019"
+@カミト
+あぁぁぁぁっ…！
+僕のせいで…
+
+# se "SE_0854"
+# alpha 210 0 0.5
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# textboxarrow 0 2
+@？？？
+ＢＹＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ
+ＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ！！
+
+# alpha 5810301 0 0.5
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# voice 9936 "kamito_0016"
+@カミト
+ここで終わる…？
+終わるのか…？
+僕達は…
+
+# face 210 "irregular"
+# textboxarrow 0 2
+@カミト
+こんなところで…
+終わって…
+終わって…
+
+# face 210 "angry"
+# textboxarrow 0 2
+@カミト
+終わって…たまるかぁぁぁっ！
+
+# textboxarrow 0 2
+@カミト
+絶対にユグドラシルに辿り着いて！
+この状況をひっくり――
+
+;;//画面フラッシュ
+# se "SE_11823"
+# textwindow "close"
+# fadein "white" 0.5
+# alpha 210 0 0
+# alpha 214 1 0
+# waitandnext 0.5
+
+;;//ローブを着たコマンドキラーズが現れる
+# waitandnext 1

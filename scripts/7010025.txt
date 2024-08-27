@@ -1,0 +1,126 @@
+;;-------------------------------------
+;;塔シナリオ　トライエル　遭遇
+;;-------------------------------------
+# script "lisp"
+;;ラファエル
+# body 960031
+# pos 960031 3
+# scale 960031 0.8 0
+# layer 960031 5
+# mask 960031 off
+# alpha 960031 1 0
+;;ミカエル
+# body 960029
+# pos 960029 2
+# scale 960029 0.8 0
+# layer 960029 2
+# mask 960029 on
+# alpha 960029 0 0
+;;ガブリエル
+# body 960030
+# pos 960030 4
+# scale 960030 0.8 0
+# layer 960030 1
+# mask 960030 on
+# alpha 960030 0 0
+;;トライエル（音声なし）
+# body 960032
+# pos 960032 3
+# layer 960030 3
+# mask 960032 off
+# alpha 960032 0 0
+;;◆背景はそのまま-----------------------------------------------
+;;最初だけラファエル、ガブリエル、ミカエルの３人の立ち絵を表示
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9975 "raphael_battle_0005"
+# chara 960031
+@ラファエル
+…光をともに
+
+# alpha 960031 0 0.5
+# alpha 960030 1 0.5
+# alpha 960029 1 0.5
+# textflame 1 1
+# textboxarrow 0 0
+# voice 9971 "gabriel_battle_0005"
+# voice 9972 "michael_battle_0005"
+@ガブリエル、ミカエル
+…光をともに
+
+# textwindow "close"
+# mask 960031 on
+# alpha 960031 1 0.5
+# move 960029 1 0.5
+# move 960030 5 0.5
+# waitandnext 0.8
+
+;;３人は消え、トライエルが立ち絵として表示
+# se "SE_5523"
+# alpha 960029 0 1.0
+# alpha 960030 0 1.0
+# alpha 960031 0 1.0
+# fadeout "white" 1.0
+# waitandnext 1.2
+
+# alpha 960032 1 0
+# fadein "white" 1.0
+# waitandnext 1.3
+
+# textwindow "normal"
+# se "SE_5776"
+# shake 0 0.8
+# subfillrect 1 "red" 0.8 0.3 0
+# textflame 1 1
+# textboxarrow 0 2
+# chara 960032
+@トライエル
+ここまでたどり着いた
+その恐るべし執念…
+称賛に値します
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 960032
+@トライエル
+見事です
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 960032
+@トライエル
+ですが…
+それもこれで終わりです
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 960032
+@トライエル
+アナタを支えてきた強い心…
+その心に、
+絶対的な絶望を与えましょう
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 960032
+@トライエル
+そこにいる混ざり者達の最期を
+アナタに突きつける…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 960032
+@トライエル
+それこそが
+最良だと判断しました
+
+;;「%(userName)s」にはユーザー名が入ります
+# se "SE_5777"
+# shake 0 0.6
+# subfillrect 1 "red" 0.8 0.3 0
+# textflame 1 1
+# textboxarrow 0 2
+# chara 960032
+@トライエル
+さぁ、%(userName)s…
+あなたの旅もこれで終わりです！

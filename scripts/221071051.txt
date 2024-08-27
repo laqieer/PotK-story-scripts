@@ -1,0 +1,294 @@
+;;-----------------------------------------
+;;【5_1】クリスマス・キャロルを歌おう
+;;-----------------------------------------
+# script "lisp"
+# background "town_night_snow"
+# bgmfile "bgm449_450" "BgmChristmas003" 0
+;;-----------------------------------------
+;;シタ
+# body 3201621
+# pos 3201621 2
+# scale 3201621 0.8 0
+# layer 3201621 3
+# alpha 3201621 0 0
+;;シェキナー
+# body 3400721
+# pos 3400721 4
+# scale 3400721 0.8 0
+# layer 3400721 3
+# alpha 3400721 0 0
+;;与一
+# body 400551
+# pos 400551 3
+# scale 400551 0.8 0
+# layer 400551 3
+# mask 400551 off
+# alpha 400551 0 0
+;;リサナウト
+# body 3203021
+# pos 3203021 3
+# scale 3203021 0.8 0
+# layer 3203021 3
+# mask 3203021 off
+# alpha 3203021 0 0
+;;アイムール
+# body 200251
+# pos 200251 3
+# scale 200251 0.8 0
+# layer 200251 3
+# mask 200251 off
+# alpha 200251 0 0
+;;グリモワール
+# body 3501721
+# pos 3501721 3
+# scale 3501721 0.8 0
+# layer 3501721 3
+# mask 3501721 off
+# alpha 3501721 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：下町(夜)
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# serif 1
+# textflame 1 1
+# textwindow "nomal"
+@？？？
+…………
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+# textwindow "nomal"
+@
+町の広場にそびえたつ
+巨大なクリスマスツリー
+
+# textflame 0 0
+@
+その荘厳な姿を見上げながら、
+サンタ姿の何者かが
+ひっそりと微笑む
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textflame 1 1
+# textwindow "nomal"
+@？？？
+今年の冬も、
+楽しいクリスマスになったなぁ…
+
+;;ＳＥ：タッタッタッ（マスター達の足音）
+# se "SE_5575"
+# alpha 3201621 1 0.5
+# alpha 3400721 1 0.5
+# face 3201621 "angry"
+# face 3400721 "angry"
+# waitandnext 0.5
+
+# serif 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@シェキナー
+ようやく見つけました…！
+貴方が首謀者ですね！？
+
+# serif 1
+@？？？
+なっ…！
+なんだい、君達は！？
+
+# serif 0
+# textboxarrow 0 1
+@シタ
+あなたを探していたんです
+もう逃げられませんよ！
+
+# serif 1
+@？？？
+むっ…！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+# textwindow "nomal"
+@
+２人に声をかけられるや否や、
+逃げる素振りを見せる謎のサンタ
+
+# textflame 1 1
+# textboxarrow 0 3
+@シェキナー
+待ちなさい！
+貴方に話が…
+
+;;ＳＥ：ジャラジャラ…（鎖の音）
+# se "SE_5347"
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+っ…！
+シェキナーさん、危ない！
+
+;;ＳＥ：（アイムールの攻撃音）
+;;演出：画面揺れ
+# se "SE_5215"
+# fadein "white" 0.5
+# shake 0 0.5
+# move 3400721 5 0.2
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 3
+@シェキナー
+なっ…！
+
+# alpha 3201621 0 0.5
+# alpha 3400721 0 0.5
+# alpha 200251 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 200251 "normal"
+# voice 2002 "aimuru_0037"
+@アイムール
+くっ…上手く避けましたね？
+次こそは確実に…！
+
+# alpha 200251 0 0.5
+# alpha 3203021 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3203021 "angry"
+# voice 2030 "risanautr_l_0007.wav"
+@リサナウト
+次は私の番よ！
+さっきのプレゼント、
+取り返してやるんだから！
+
+# alpha 3203021 0 0.5
+# alpha 400551 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 400551 "normal"
+# voice 4005 "yoichi_0002"
+@与一
+ふ、ふたりともっ…！
+乱暴すぎるのは
+良くないですぅ…！
+
+# alpha 400551 0 0.5
+# move 3201621 3 0
+# mask 3201621 off
+# alpha 3201621 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3201621 "surprise"
+# voice 320161 "shita_t_0022"
+@シタ
+サ、サンタ役のみなさん！？
+どうしてここに…！？
+
+# alpha 3201621 0 0.5
+# alpha 3501721 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501721 "angry"
+# voice 350171 "grimoire_ge_0007"
+@グリモワール
+あら…
+このワタシも忘れてもらっちゃ
+困るわねぇ…！
+
+;;ＳＥ：（炎をまとう音）
+# se "SE_4820"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# alpha 3501721 0 0.5
+# move 3400721 3 0
+# mask 3400721 off
+# alpha 3400721 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@シェキナー
+な、なぜ貴方まで！
+さっき和解したはずでしょう！？
+
+# alpha 3400721 0 0.5
+# alpha 3501721 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@グリモワール
+それはそれ、これはこれ！
+負けっぱなしじゃ悔しいじゃない！
+
+# textflame 1 1
+# textboxarrow 0 2
+@グリモワール
+クリスマスももうじき終わるし…
+最後の最後まで
+たっぷり楽しまないとねぇ…！
+
+# textflame 1 1
+# textboxarrow 0 2
+@グリモワール
+というわけで…
+行くわよ、サンタ役のみんな！
+
+;;ＳＥ：タッタッタッ（サンタ役達の足音）
+;;演出：シタとシェキナー以外、立ち絵が消える
+# se "SE_5575"
+# sedelay "SE_5575" 0.1
+# sedelay "SE_5575" 0.2
+# alpha 3501721 0 0.5
+# waitandnext 0.7
+
+# move 3201621 2 0
+# alpha 3201621 1 0.5
+# move 3400721 4 0
+# alpha 3400721 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+ぜ、全員こっちに
+向かってきます…！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 340071 "shekina_t_battle_0005"
+@シェキナー
+くうっ…！
+迎撃しますよ、マスター！
+
+# textflame 0 0
+@
+シェキナーの声に合わせ、
+マスターも臨戦態勢をとる
+
+# textflame 0 0
+@
+キル姫達の苛烈な戦いが
+ついに始まるのだった
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 3201621 0 0
+# alpha 3400721 0 0
+# background "bg_black"
+# waitandnext 0.5

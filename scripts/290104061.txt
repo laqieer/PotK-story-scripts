@@ -1,0 +1,569 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;２章１話　「エデンクライシス―覚醒―」
+;;第4話　タイトル：風雲！マサムネ城
+;;4_6_1
+;;スクリプト最後の背景：闘技場
+;;-----------------------------------------
+# script "lisp"
+# background "masamune_arena"
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.8 0
+# layer 502711 4
+# alpha 502711 0 0
+# mask 502711 off
+;;ダモクレス
+# body 103511
+# pos 103511 3
+# scale 103511 0.8 0
+# layer 103511 2
+# alpha 103511 0 0
+# mask 103511 off
+;;ネス
+# body 602011
+# pos 602011 3
+# scale 602011 0.8 0
+# layer 602011 2
+# alpha 602011 0 0
+# mask 602011 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;ハリー
+# body 208
+# pos 208 3
+# scale 208 0.8 0
+# layer 208 3
+# alpha 208 0 0
+# mask 208 off
+;;ダーインスレイヴ
+# body 102811
+# pos 102811 3
+# scale 102811 0.8 0
+# layer 102811 2
+# alpha 102811 0 0
+# mask 102811 off
+;;蜻蛉切
+# body 302411
+# pos 302411 3
+# scale 302411 0.8 0
+# layer 302411 2
+# alpha 302411 0 0
+# mask 302411 off
+;;司会
+# body 11
+# pos 11 3
+# scale 11 0.8 0
+# layer 11 2
+# alpha 11 0 0
+# mask 11 off
+;;-----------------------------------------
+;;第4話　タイトル：風雲！マサムネ城
+;;//背景：闘技場
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0
+# mask 103611 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 602011 4 0
+# face 602011 "normal"
+# alpha 602011 1 0
+# mask 602011 on
+# voice 1036 "ragnarok_0039"
+@ラグナロク
+スイハが負けるなんて…
+蜻蛉切、実力は本物ね
+
+# textboxarrow 0 1
+@ラグナロク
+いつもの彼女なら傷を負うことを
+避ける優雅な戦い方をするのに
+今回は違った…
+
+# textboxarrow 0 3
+# voice 6020 "ness_0028"
+@ネス
+肉を切らせて骨を断つ…
+あんな泥臭い戦い方をする
+蜻蛉切は私も初めて見ました
+
+# textboxarrow 0 1
+@ラグナロク
+この戦いに賭ける執念の差が
+勝敗を決したのかもしれない
+
+# alpha 103611 0 0.5
+# alpha 602011 0 0.5
+# move 502711 3 0
+# face 502711 "normal"
+# alpha 502711 1 0.5
+# mask 502711 off
+# textboxarrow 0 2
+# voice 5027 "freischotz_0028"
+@フライシュッツ
+スイハちゃん大丈夫かな～…
+心配だから見てくるね～っ
+
+# se "SE_5575"
+# textwindow "close"
+# leftout 502711 0.5
+# waitandnext 0.5
+
+# alpha 502711 0 0.5
+# move 602011 3 0
+# face 602011 "normal"
+# alpha 602011 1 0.5
+# mask 602011 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 6020 "ness_0011"
+@ネス
+フライシュッツ、
+満席なんですから、
+走ったりしたら…
+
+;;//フライシュッツとハリーがぶつかる
+# textwindow "close"
+# alpha 602011 0 0.5
+# move 208 3 0
+# alpha 208 1 0.5
+# mask 208 on
+# waitandnext 0.8
+
+# move 502711 3 0
+# face 502711 "normal"
+# alpha 502711 1 0
+# mask 502711 on
+# rightin 502711 0.5
+# waitandnext 0.5
+
+# se "SE_4727"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# move 208 2 0.2
+# move 502711 4 0.2
+# waitandnext 0.2
+
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 9938 "harry_0024"
+@？？？
+わっぷ…？
+
+# textboxarrow 0 3
+# voice 5027 "freischotz_0031"
+@フライシュッツ
+あら～
+ごめんね～…
+
+# textboxarrow 0 1
+# voice 9938 "harry_0036"
+@？？？
+ううん…
+大丈夫…
+
+# alpha 502711 0 0.5
+# move 602011 4 0
+# face 602011 "normal"
+# alpha 602011 1 0.5
+# mask 602011 on
+# textboxarrow 0 3
+# voice 6020 "ness_0031"
+@ネス
+言った側からっ
+本当にすみません
+ええと、迷子でしょうか？
+
+# textboxarrow 0 1
+@？？？
+いえ…僕は…
+そこの席なんです…
+
+# move 103611 1 0
+# face 103611 "usual"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 208 3 0.5
+# move 602011 5 0.5
+# voice 1036 "ragnarok_0028"
+@ラグナロク
+ここは参加キル姫の関係者席だけど…
+あなた、ひょっとして誰かの
+マスター？
+
+# textboxarrow 0 2
+# voice 9938 "harry_0003"
+@ハリー
+あ、はい…
+奏官ではないんですけど…
+あ…僕、ハリーっていいます
+
+# face 103611 "normal"
+# textboxarrow 0 1
+@ラグナロク
+名乗るのが遅れたわね
+私はラグナロクよ
+
+# textboxarrow 0 3
+@ネス
+ネスです
+どうぞ座って下さい
+
+# face 208 "sad"
+# textboxarrow 0 2
+@ハリー
+あ…ありがとうございます…
+
+# alpha 103611 0 0.5
+# alpha 208 0 0.5
+# alpha 602011 0 0.5
+# move 502711 3 0
+# face 502711 "normal"
+# alpha 502711 1 0.5
+# mask 502711 off
+# textboxarrow 0 2
+# voice 5027 "freischotz_0002"
+@フライシュッツ
+私はスイハちゃんのこと
+見てくるね～っ
+
+;;//フライシュッツが走り去る
+# se "SE_5575"
+# textwindow "close"
+# leftout 502711 0.5
+# waitandnext 0.5
+
+# alpha 502711 0 0.5
+# move 103511 2 0
+# face 103511 "usual"
+# alpha 103511 1 0.5
+# mask 103511 on
+# textboxarrow 0 1
+# move 208 4 0
+# alpha 208 1 0.5
+# mask 208 on
+# textwindow "normal"
+# voice 1035 "damocles_0004"
+@ダモクレス
+フライシュッツは心配性だね～
+それで、ハリーは
+誰のマスターなの～？
+
+# textboxarrow 0 3
+# voice 9938 "harry_0029"
+@ハリー
+えっと…
+
+# bgmfile "bgm415_416" "BgmIntegralNoahBattle002" 0
+# alpha 103511 0 0.5
+# alpha 208 0 0.5
+# move 11 3 0
+# face 11 "normal"
+# alpha 11 1 0.5
+# mask 11 off
+# textboxarrow 0 2
+@司会
+それでは第二試合を始めましょう！
+参加キル姫の入場ですっ
+
+;;//アルマスが現れる
+# se "SE_0740"
+# textwindow "close"
+# alpha 11 0 0.5
+# move 196 3 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 off
+# waitandnext 0.5
+
+# serif 1
+@司会
+昨日、マサムネ様に打ちのめされ、
+リベンジを誓う逆境の乙女！
+その実力は絶・未知数！
+
+# serif 1
+@司会
+雪辱・イズ・宿命！
+アルマス！！
+
+# se "SE_0840"
+# serif 1
+@観客達
+オオオオオオオオオオオオ！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 196 "surprise"
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9943 "almace_navikan_0035"
+@アルマス
+何で昨日のことまで知ってるの、
+あの司会者…？
+
+# alpha 196 0 0.5
+# move 103511 3 0
+# face 103511 "usual"
+# alpha 103511 1 0.5
+# mask 103511 off
+# textboxarrow 0 2
+@ダモクレス
+アルマスが出てきたよ～！
+がんばれ～っ
+
+# alpha 103511 0 0.5
+# move 103611 3 0
+# face 103611 "surprise"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+…………！
+
+;;//鼓動が鳴る
+# se "SE_0644"
+# waitandnext 0.5
+
+;;ラグナロク（独白）
+# move 103611 3 0
+# face 103611 "normal"
+# mask 103611 off
+# textboxarrow 0 0
+# textwindow "moya"
+@ラグナロク
+アルマスの昂ぶりが伝わってくる…
+少し、緊張しているの？
+
+# alpha 103611 0 0.5
+# move 602011 3 0
+# face 602011 "normal"
+# alpha 602011 1 0.5
+# mask 602011 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 6020 "ness_0003"
+@ネス
+正々堂々と戦って、
+勝って欲しいですねっ
+
+# alpha 602011 0 0.5
+# move 11 3 0
+# face 11 "normal"
+# alpha 11 1 0.5
+# mask 11 off
+# textboxarrow 0 2
+@司会
+対するは、このキル姫だぁ！
+
+;;//ダーインスレイヴが入ってくる
+# se "SE_0740"
+# textwindow "close"
+# alpha 11 0 0.5
+# move 102811 3 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 off
+# waitandnext 0.5
+
+# serif 1
+@司会
+その一閃は狙い過たず、
+決して癒えない傷を残す
+冷徹なる孤高の女王！
+
+# serif 1
+@司会
+内面・イズ・男前！
+ダーインスレイヴ！！
+
+# se "SE_0843"
+# serif 1
+@観客達
+ワアアアアアアアアアアアアア！！
+
+# serif 1
+@女性達
+キャーッ！
+ダーインスレイヴ様～っ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 102811 "happy"
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 1028 "dainsleif_0004"
+@ダーインスレイヴ
+ふっ
+困った子猫ちゃん達だ
+
+# alpha 102811 0 0.5
+# move 208 3 0
+# alpha 208 1 0.5
+# mask 208 off
+# face 208 "angry"
+# textboxarrow 0 2
+# voice 9938 "harry_0022"
+@ハリー
+ダーイン！
+頑張れっ
+
+# move 103611 2 0
+# face 103611 "usual"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 208 4 0.5
+# mask 208 on
+# voice 1036 "ragnarok_0002"
+@ラグナロク
+彼女が、あなたのキル姫なの？
+
+# face 208 "sad"
+# textboxarrow 0 3
+# voice 9938 "harry_0025"
+@ハリー
+あ…はい…
+その…ごめんなさい…
+
+# face 103611 "normal"
+# textboxarrow 0 1
+@ラグナロク
+謝ることはないわ
+そう…あのダーインスレイヴが
+あなたをマスターに
+
+# alpha 103611 0 0.5
+# alpha 208 0 0.5
+# move 102811 2 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0042"
+@アルマス
+何だか客席が騒がしいわね
+
+# textboxarrow 0 1
+# voice 1028 "dainsleif_0031"
+@ダーインスレイヴ
+すまない
+困っている者を見ると
+放っておけない質でね
+
+# textboxarrow 0 1
+@ダーインスレイヴ
+会場までの道すがら、
+幾人か人助けをしたら、
+随分と慕われてしまった
+
+# se "SE_11618"
+# textboxarrow 0 1
+# voice 1028 "dainsleif_0005"
+@ダーインスレイヴ
+わたしは当然のことを
+したまでなのだが
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0041"
+@アルマス
+そう言いながら
+ポーズ決めないでよ…
+
+# textboxarrow 0 1
+@ダーインスレイヴ
+おぬしの気に障ったのなら
+謝罪しよう
+
+# textboxarrow 0 3
+@アルマス
+それは別にいいけど…
+
+# alpha 102811 0 0.5
+# alpha 196 0 0.5
+# move 11 3 0
+# face 11 "normal"
+# alpha 11 1 0.5
+# mask 11 off
+# textboxarrow 0 2
+@司会
+それでは、試合開始！！
+
+# alpha 11 0 0.5
+# move 102811 2 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+私達はこんなところで
+止まっていられないの！
+悪いけど、勝たせてもらうわ！
+
+# face 102811 "happy"
+# textboxarrow 0 1
+# voice 1028 "dainsleif_0004"
+@ダーインスレイヴ
+ふふ…
+すまないが、わたし達も先を急いで
+いるものでね
+
+# textboxarrow 0 1
+@ダーインスレイヴ
+苦しまないようにするのが、
+せめてもの情け
+
+;;//アルマスとダーインスレイヴが切り結ぶ
+# se "SE_4000"
+# sedelay "SE_3006" 0.5
+# waitandnext 0.5
+
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0054"
+@アルマス
+このっ…！
+
+# face 102811 "happy"
+# textboxarrow 0 1
+# voice 1028 "dainsleif_0040"
+@ダーインスレイヴ
+良い剣筋だ
+おぬしの真っ直ぐな心根を感じるよ
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0011"
+@アルマス
+その余裕、いつまで続くかしらね！

@@ -1,0 +1,232 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第18章 章タイトル：×××アポカリプス
+;;第2話―３　タイトル：支えるために
+;;3_3
+;;スクリプト最後の背景：平原：plain
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm463_464_block" "BgmIntegralNoahDisrupters" 0
+;;-----------------------------------------
+;;カリス・聖鎖・アザゼル
+# body 5602511
+# pos 5602511 3
+# scale 5602511 0.8 0
+# layer 5602511 2
+# alpha 5602511 0 0
+# mask 5602511 off
+;;キプル
+# body 163
+# pos 163 3
+# scale 163 0.6 0
+# layer 163 2
+# alpha 163 0 0
+# mask 163 off
+;;ロンゴミアント・暴走
+# body 5301011
+# pos 5301011 3
+# scale 5301011 0.8 0
+# layer 5301011 2
+# alpha 5301011 0 0
+# mask 5301011 off
+# brightness 5301011 0.8 0
+;;-----------------------------------------
+;;ロンゴミアント（暴走）
+# se "SE_12835"
+# emotionbody 1000 15 5301011 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# voice 530101 "rhongomiant_bo_b_battle_0004"
+# move 5602511 2 0
+# face 5602511 "normal"
+# alpha 5602511 1 0
+# mask 5602511 on
+# move 5301011 4 0
+# face 5301011 "normal"
+# alpha 5301011 1 0
+# mask 5301011 on
+# textflame 1 1
+# textboxarrow 0 3
+@ロンゴミアント
+ウアアアアアアアアアア！
+キエテ！ゼンブ！
+ワタシノマエカラキエサッテ！
+
+# se "SE_12841"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 560251 "chalice_di_battle_0005"
+# face 5602511 "sad"
+# textboxarrow 0 1
+@カリス
+くぅっ…
+
+# effectskip 1000
+# alpha 5602511 0 0.5
+# alpha 5301011 0 0.5
+# move 163 3 0
+# alpha 163 1 0.5
+# mask 163 off
+# textboxarrow 0 2
+@キプル
+カリス…！
+このままでは身が持ちませんよっ
+
+# effectstart 1000
+# alpha 163 0 0.5
+# move 5602511 2 0
+# face 5602511 "normal"
+# alpha 5602511 1 0.5
+# mask 5602511 on
+# textboxarrow 0 1
+# move 5301011 4 0
+# face 5301011 "normal"
+# alpha 5301011 1 0.5
+# mask 5301011 on
+@カリス
+うん…
+でも、決めたんだ
+ロンゴミアントを癒すって
+
+;;//chalice_di_unit_0008(サウンドメモ
+# voice 560251 "chalice_di_unit_0008"
+# textboxarrow 0 1
+@カリス
+傷ついて…悲しんでる…その心を、
+わたしが救ってみせる！
+
+;;//画面フラッシュ
+# se "SE_0993"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;ロンゴミアント（暴走）
+# face 5301011 "sad"
+# textboxarrow 0 3
+@ロンゴミアント
+ヒイッ…！
+コンナヒカリ…イヤァァァッ…
+
+;;ロンゴミアント（暴走）
+# textboxarrow 0 3
+@ロンゴミアント
+アア…
+ヨウヤク…ワタシモ…
+マスターノモトニ…
+
+;;//ロンゴミアントが倒れそうになる
+# se "SE_11618"
+# textwindow "close"
+# waitandnext 0.5
+
+;;//カリスが近づいて抱き留める
+# se "SE_10131"
+# move 5602511 3 0.2
+# waitandnext 0.2
+
+;;//ロンゴミアントから黒い霧が消えていく
+# se "SE_5650"
+#setnextbgmblock 2
+# effectskip 1000
+# brightness 5301011 1 0.5
+# waitandnext 0.5
+
+;;ロンゴミアント（暴走）
+# voice 530101 "rhongomiant_bo_0022"
+# face 5301011 "surprise"
+# textboxarrow 0 3
+# textwindow "normal"
+@ロンゴミアント
+…え？
+
+# textboxarrow 0 2
+@カリス
+大丈夫
+ロンゴミアントは、大丈夫だよ
+
+# face 5602511 "sad"
+# textboxarrow 0 2
+@カリス
+悲しいことも辛いこともあるけど、
+世界はきっと美しいから…
+
+# textboxarrow 0 2
+@カリス
+生きていって欲しいんだ
+カリスちゃんと…一緒に…
+
+;;//カリスが倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 5602511 0 0.5
+# waitandnext 0.8
+
+# voice 9951 "kipuru_0022"
+# alpha 5301011 0 0.5
+# move 163 3 0
+# alpha 163 1 0.5
+# mask 163 off
+# textboxarrow 0 2
+# textwindow "normal"
+@キプル
+カリス…！？
+自分の傷は癒せないのに、
+無理をするから…
+
+;;ロンゴミアント（暴走）
+# alpha 163 0 0.5
+# move 5602511 2 0
+# face 5602511 "sad"
+# alpha 5602511 1 0.5
+# mask 5602511 on
+# move 5301011 4 0
+# face 5301011 "usual"
+# alpha 5301011 1 0.5
+# mask 5301011 on
+# textboxarrow 0 3
+@ロンゴミアント
+どうして…
+あなたはそこまでして…
+
+# voice 560251 "chalice_di_0042"
+# face 5602511 "shy"
+# textboxarrow 0 1
+@カリス
+えへへ…
+少し休めば…平気だよ…
+
+;;ロンゴミアント（暴走）
+# textboxarrow 0 3
+@ロンゴミアント
+…私は、これで失礼します
+
+# face 5602511 "surprise"
+# textboxarrow 0 1
+@カリス
+ロンゴミアント…
+どこ行くの…？
+
+;;ロンゴミアント（暴走）
+# textboxarrow 0 3
+@ロンゴミアント
+世界は醜悪で…人間は醜い…
+そして私自身も…
+その思いは変わりません…
+
+;;ロンゴミアント（暴走）
+# textboxarrow 0 3
+@ロンゴミアント
+ただ…もう少し考えてみたく
+なりました…
+世界が終わるときまで…
+
+# voice 560251 "chalice_di_0019"
+# face 5602511 "normal"
+# textboxarrow 0 1
+@カリス
+そっかぁ
+元気でね…
+きっと、大丈夫…だから

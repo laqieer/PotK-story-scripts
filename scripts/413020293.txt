@@ -1,0 +1,341 @@
+;;-------------------------------------------------------------
+;;413020293
+;; 梓弓【ＥＰ３】
+;;4/10　新規作成
+;;-------------------------------------------------------------
+;;◆戦場-----------------------------------------------------
+# script "lisp"
+# background "101_plain_daytime"
+# bgmfile "bgm279" "BgmLostRagnarokBattle002" 0
+;;梓弓
+# body 3400611
+# pos 3400611 4
+# scale 3400611 0.8 0
+# layer 3400611 1
+# alpha 3400611 0 0
+;;アロンダイト
+# body 3100711
+# pos 3100711 3
+# scale 3100711 0.8 0
+# layer 3100711 2
+# alpha 3100711 0 0
+;;ハルモニア兵１
+# body 3810001
+# pos 3810001 1
+# scale 3810001 0.8 0
+# mask 3810001 on
+# layer 3810001 1
+# alpha 3810001 0 0
+;;ハルモニア兵２
+# entry 938100019 3810001
+# pos 938100019 3
+# scale 938100019 0.8 0
+# mask 938100019 on
+# layer 938100019 2
+# alpha 938100019 0 0
+;;ハルモニア兵３
+# entry 938100018 3810001
+# pos 938100018 5
+# scale 938100018 0.8 0
+# mask 938100018 on
+# layer 938100018 3
+# alpha 938100018 0 0
+# sedelay "SE_0636" 1.0
+# textflame 0 0
+@
+あれから数日後─
+
+# textflame 0 0
+@
+傷もすっかり癒えた梓弓は、
+またアロンダイトと同じ隊として、
+戦闘に出ていた
+
+;;アロンダイト登場
+# textwindow "close"
+# alpha 3100711 1 0.5
+# waitandnext 0.8
+
+# se "SE_4818"
+# shake 1 0.2
+# fadein "white" 0.5
+# face 3100711 "angry"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 2
+# chara 3100711
+# voice 310071 "arondaito_ge_0037"
+@アロンダイト
+くっ…！
+
+# textflame 0 0
+@
+精鋭揃いのハルモニア兵に
+苦戦するアロンダイト
+すると…
+
+;;梓弓登場
+# textwindow "close"
+# move 3100711 2 0.5
+# alpha 3400611 1 0.5
+# waitandnext 0.5
+
+# textwindow "close"
+# se "SE_4759"
+# shake 1 0.2
+# fadein "white" 0.5
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 3
+# chara 3400611
+# voice 340061 "azusa_ge_battle_0002"
+# face 3400611 "angry"
+@梓弓
+はっ！
+
+# textwindow "close"
+# alpha 3400611 0 0.5
+# alpha 3100711 0 0.5
+# alpha 3810001 1 0.5
+# alpha 938100019 1 0.5
+# alpha 938100018 1 0.5
+# waitandnext 0.5
+
+# se "SE_5793"
+# shake 1 0.2
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# sestop "SE_0636"
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@ハルモニア兵
+ぐはっ！
+
+# textwindow "close"
+# se "SE_0634"
+# alpha 3810001 0 0.8
+# alpha 938100019 0 0.8
+# alpha 938100018 0 0.8
+# waitandnext 1.0
+
+# alpha 3400611 1 0.5
+# face 3400611 "normal"
+# alpha 3100711 1 0.5
+# face 3100711 "surprise"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 1
+# chara 3100711
+# voice 310071 "arondaito_ge_0009"
+@アロンダイト
+！
+
+# textflame 0 0
+@
+アロンダイトの窮地を救ったのは、
+梓弓だった
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3100711
+# voice 310071 "arondaito_ge_0030"
+# face 3100711 "happy"
+@アロンダイト
+あ、ありがとうございます！
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3400611
+# face 3400611 "sad"
+@梓弓
+先日のお返しをしたまでです
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3100711
+# face 3100711 "surprise"
+@アロンダイト
+お返し…？
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3400611
+# voice 340061 "azusa_ge_0004"
+# face 3400611 "amazed"
+@梓弓
+守られてばかりでは…
+わたくしの気が収まりませんから
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3100711
+# face 3100711 "normal"
+@アロンダイト
+そ、そうですか…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3400611
+# voice 340061 "azusa_ge_0027"
+# face 3400611 "amazed"
+@梓弓
+わたくしから見て、
+あなたは光り輝かしい存在
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3400611
+@梓弓
+それに比べて、
+怪物をプラントされたわたくしは、
+どうやっても禍々しき闇の存在です
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3100711
+# voice 310071 "arondaito_ge_0009"
+# face 3100711 "angry"
+@アロンダイト
+そ、そんなことありません！
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3400611
+# voice 340061 "azusa_ge_0007"
+# face 3400611 "usual"
+@梓弓
+でも…
+それでもいいと思いました
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3100711
+# face 3100711 "normal"
+@アロンダイト
+…え？
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3400611
+# voice 340061 "azusa_ge_0003"
+# face 3400611 "normal"
+@梓弓
+誰かを守りたいという気持ち…
+それを教えてくれた
+あなたのような輝かしい存在を…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3400611
+@梓弓
+超えてゆきたい
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3100711
+# voice 310071 "arondaito_ge_0042"
+# face 3100711 "shy"
+@アロンダイト
+…！
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3400611
+# face 3400611 "shy"
+@梓弓
+その想いが、
+わたくしを強くし…、
+また…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3400611
+@梓弓
+“吉”へと導いてくれる気がするから
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3400611
+# voice 340061 "azusa_ge_0005"
+# face 3400611 "happy"
+@梓弓
+あなたを超えてみせる
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3400611
+@梓弓
+その想いがわたくしの
+信念になるのかも知れません
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3100711
+# voice 310071 "arondaito_ge_0005"
+# face 3100711 "happy"
+@アロンダイト
+わかりました！
+これからも…
+共に戦っていきましょう！
+
+# textflame 0 0
+@
+キラキラと輝いた瞳で
+見つめるアロンダイト
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3400611
+# voice 340061 "azusa_ge_0039"
+# face 3400611 "shy"
+@梓弓
+そうですね…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3400611
+@梓弓
+まだ背中は預けられませんが…
+場合によっては
+援護程度なら加勢してあげましょう
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3400611
+# face 3400611 "happy"
+@梓弓
+先程のように
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3100711
+# voice 310071 "arondaito_ge_0032"
+# face 3100711 "happy"
+@アロンダイト
+はいっ！
+よろしくお願いします！
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3400611
+# voice 340061 "azusa_ge_0030"
+# face 3400611 "shy"
+@梓弓
+それでは…
+参りましょうか
+
+# textflame 0 0
+@
+新たなる戦地へと足を向ける彼女
+
+# textflame 0 0
+@
+新たなる目標を見つけた
+その瞳には、
+力強い光が宿っていた

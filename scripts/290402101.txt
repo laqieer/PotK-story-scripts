@@ -1,0 +1,393 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第４章 タイトル：「世界樹の子―インベイション―」
+;;第2話　タイトル：絶望の到来
+;;4_2_10_1
+;;スクリプト最後の背景：都市部
+;;-----------------------------------------
+# script "lisp"
+# background "in_city"
+# bgmfile "bgm419_420" "BgmIntegralNoahBattle003" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;魔獣
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# layer 910013 2
+# alpha 910013 0 0
+# mask 910013 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 3
+# alpha 210 0 0
+# mask 210 off
+;;魔獣化ミョルニル
+# body 1200111
+# pos 1200111 3
+# scale 1200111 0.8 0
+# layer 1200111 2
+# alpha 1200111 0 0
+# mask 1200111 off
+;;巨大死霊
+# body 5810301
+# pos 5810301 3
+# scale 5810301 0.8 0
+# layer 5810301 2
+# alpha 5810301 0 0
+# mask 5810301 off
+;;マサムネ(キラーメイル)
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# layer 1100111 2
+# alpha 1100111 0 0
+# mask 1100111 off
+;;デュランダル
+# body 3100311
+# pos 3100311 3
+# scale 3100311 0.8 0
+# layer 3100311 2
+# alpha 3100311 0 0
+# mask 3100311 off
+;;ブリューナク・D. plug・バルバトス
+# body 3500711
+# pos 3500711 3
+# scale 3500711 0.8 0
+# layer 3500711 2
+# alpha 3500711 0 0
+# mask 3500711 off
+;;ピサール
+# body 3302011
+# pos 3302011 3
+# scale 3302011 0.8 0
+# layer 3302011 2
+# alpha 3302011 0 0
+# mask 3302011 off
+;;魔獣化アスクレピオス
+# body 1600111
+# pos 1600111 3
+# scale 1600111 0.8 0
+# layer 1600111 2
+# alpha 1600111 0 0
+# mask 1600111 off
+;;蜻蛉切・聖鎖・インドラ
+# body 3302411
+# pos 3302411 3
+# scale 3302411 0.8 0
+# layer 3302411 2
+# alpha 3302411 0 0
+# mask 3302411 off
+;;ペルーン・聖鎖・マスティマ
+# body 3200811
+# pos 3200811 3
+# scale 3200811 0.8 0
+# layer 3200811 2
+# alpha 3200811 0 0
+# mask 3200811 off
+;;-----------------------------------------
+;;霧
+# imageset 2 "kiri_03"
+# imagescale 2 2.5 0
+# imagealpha 2 0 0
+# imagelayer 2 4
+# imageset 3 "kiri_03"
+# imagescale 3 2 0
+# imagealpha 3 0 0
+# imagelayer 3 3
+;;-----------------------------------------
+;;第2話　タイトル：絶望の到来
+;;//背景：都市部
+# textwindow "close"
+# waitandnext 0.2
+
+;;霧演出
+# imagealpha 2 1 1
+# imagepos 2 -70 170
+# imagealpha 3 1 1
+# imagepos 3 50 -100
+# waitandnext 1
+
+# imagealpha 2 0.5 1
+# imagerightout 3 7
+# imagealpha 3 0 1
+# waitandnext 0.8
+
+# se "SE_0868"
+# move 5810301 2 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# textflame 1 1
+# textboxarrow 0 1
+# textwindow "normal"
+@？？？
+ＪＹＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ
+ＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ！！
+
+# textwindow "close"
+# alpha 5810301 0 0.5
+# waitandnext 0.5
+
+# se "SE_0865"
+# move 5810301 4 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# textboxarrow 0 3
+# textwindow "normal"
+@？？？
+ＫＹＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ
+ＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ！！
+
+# textwindow "close"
+# alpha 5810301 0 0.5
+# waitandnext 0.5
+
+# se "SE_0854"
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# textboxarrow 0 2
+# textwindow "normal"
+@？？？
+ＢＹＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ
+ＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ！！
+
+# imagealpha 2 0 0.5
+# alpha 5810301 0 0.5
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# move 210 4 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# voice 9936 "kamito_0025"
+@カミト
+霧の中から、どんどん巨大な化け物が
+姿を現してるよ！
+
+# textboxarrow 0 1
+# voice 11001 "masamunem_battle_0005"
+@マサムネ
+向こうも本気を出してきたって
+ことか？
+
+# se "SE_5206"
+# alpha 210 0 0.5
+# move 1200111 4 0
+# face 1200111 "angry_1"
+# alpha 1200111 1 0.5
+# mask 1200111 on
+# textboxarrow 0 3
+# voice 12001 "mjolnirm_unit_0010"
+@ミョルニル
+関係ねぇ！
+一撃で終わらせてやらぁ！
+
+# alpha 1100111 0 0.5
+# alpha 1200111 0 0.5
+# move 3200811 2 0
+# face 3200811 "angry"
+# alpha 3200811 1 0.5
+# mask 3200811 on
+# move 3302411 4 0
+# face 3302411 "normal"
+# alpha 3302411 1 0.5
+# mask 3302411 on
+# textboxarrow 0 3
+# voice 330241 "tonbokiri_t_0007"
+@蜻蛉切
+すでに避難は済んでるわ！
+思う存分、ド派手にやりなさい！
+
+# textboxarrow 0 1
+@ペルーン
+サボったりしたら、
+あたしがビシッと指導するからね！
+
+# alpha 3200811 0 0.5
+# alpha 3302411 0 0.5
+# move 3302011 3 0
+# face 3302011 "sad"
+# alpha 3302011 1 0.5
+# mask 3302011 off
+# textboxarrow 0 2
+# voice 330201 "pisear_t_0028"
+@ピサール
+そういうの、
+わたしはパスしたいな～…
+
+# alpha 3302011 0 0.5
+# move 3100311 3 0
+# face 3100311 "happy"
+# alpha 3100311 1 0.5
+# mask 3100311 off
+# textboxarrow 0 2
+# voice 310031 "durandaru_a_0021"
+@デュランダル
+これこそ破壊と狂乱の舞台♪
+素敵ですわ！
+
+;;//デュランダルが走り去る
+# se "SE_0876"
+# textwindow "close"
+# leftout 3100311 0.5
+# waitandnext 0.5
+
+# alpha 3100311 0 0
+# move 3500711 3 0
+# face 3500711 "happy"
+# alpha 3500711 1 0.5
+# mask 3500711 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 350071 "buryunaku_a_0006"
+@ブリューナク
+財宝には強大な番人がつきものだ
+ロマンがあるな！
+
+# alpha 3500711 0 0.5
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# voice 9936 "kamito_0006"
+@カミト
+よし！
+アスカロン、グリモワール、
+僕達も戦おう！
+
+# move 210 2 0.5
+# mask 210 on
+# move 1600111 4 0
+# face 1600111 "normal"
+# alpha 1600111 1 0.5
+# mask 1600111 on
+# textboxarrow 0 3
+@アスクレピオス
+はい、ストップ
+
+# face 210 "surprise"
+# textboxarrow 0 1
+# voice 9936 "kamito_0023"
+@カミト
+えっ？
+何…？
+
+# face 1600111 "trouble"
+# textboxarrow 0 3
+# voice 16001 "asklepiosm_0027"
+@アスクレピオス
+やれやれ…
+本題を忘れてはいけないよ
+僕達は何のためにここまで来たんだ？
+
+# textboxarrow 0 1
+# voice 9936 "kamito_0029"
+@カミト
+ええと…ああっ！
+
+# face 1600111 "normal"
+# textboxarrow 0 3
+# voice 16001 "asklepiosm_0032"
+@アスクレピオス
+そうだ
+ユグドラシルに向かうんだろう？
+早く行くと良い
+
+# move 1100111 1 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 1
+# move 210 3 0.5
+# move 1600111 5 0.5
+# voice 11001 "masamunem_0003"
+@マサムネ
+ここは俺達に任せろ
+
+# textboxarrow 0 3
+@アスクレピオス
+この騒ぎに紛れて行動すれば、
+誰も気づかないよ
+さあ、早く！
+
+# face 210 "irregular"
+# textboxarrow 0 2
+# voice 9936 "kamito_0003"
+@カミト
+ありがとう！
+行こう、アスカロン！
+グリモワール！
+
+# alpha 1100111 0 0.5
+# alpha 210 0 0.5
+# alpha 1600111 0 0.5
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# move 3501711 4 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# voice 310231 "ascalon_a_0030"
+@アスカロン
+はい！
+皆さん、ありがとうございます
+
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0030"
+@グリモワール
+感謝してあげる
+キミ達、死ぬんじゃないわよ！
+
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# move 1600111 3 0
+# face 1600111 "normal"
+# alpha 1600111 1 0.5
+# mask 1600111 off
+# textboxarrow 0 2
+# voice 16001 "asklepiosm_0003"
+@アスクレピオス
+お互いにね
+
+# se "SE_0793"
+# alpha 1600111 0 0.5
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 off
+# textboxarrow 0 2
+@魔獣
+グアアアアアアアア！
+
+# alpha 910013 0 0.5
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0027"
+@グリモワール
+どきなさい！
+ワタシの怒りの炎に灼かれたいの！？

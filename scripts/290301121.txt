@@ -1,0 +1,419 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;３章１話　タイトル「地上の脅威―リバイヴ―」
+;;第1話　タイトル：異形の浸食
+;;7_12_1
+;;スクリプト最後の背景：下町
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown"
+# bgmfile "bgm417_418" "BgmIntegralNoahBattle003" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;魔獣
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# layer 910013 2
+# alpha 910013 0 0
+# mask 910013 off
+;;魔獣1
+# entry 99100131 910013
+# pos 99100131 3
+# scale 99100131 0.8 0
+# layer 99100131 2
+# alpha 99100131 0 0
+# mask 99100131 off
+;;魔獣2
+# entry 99100132 910013
+# pos 99100132 3
+# scale 99100132 0.8 0
+# layer 99100132 2
+# alpha 99100132 0 0
+# mask 99100132 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 2
+# alpha 3201911 0 0
+# mask 3201911 off
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;魔獣化ミョルニル
+# body 1200111
+# pos 1200111 3
+# scale 1200111 0.8 0
+# layer 1200111 2
+# alpha 1200111 0 0
+# mask 1200111 off
+# brightness 1200111 0 0
+;;魔獣化トライデント
+# body 1300231
+# pos 1300231 3
+# scale 1300231 0.8 0
+# layer 1300231 2
+# alpha 1300231 0 0
+# mask 1300231 off
+# brightness 1300231 0 0
+;;魔獣化八咫鏡
+# body 1500331
+# pos 1500331 3
+# scale 1500331 0.8 0
+# layer 1500331 2
+# alpha 1500331 0 0
+# mask 1500331 off
+# brightness 1500331 0 0
+;;-----------------------------------------
+;;霧
+# imageset 2 "kiri_03"
+# imagescale 2 2.5 0
+# imagealpha 2 0.5 0
+# imagepos 2 0 0
+# imagelayer 2 4
+;;-----------------------------------------
+;;第1話　タイトル：異形の浸食
+;;//背景：下町
+;;//霧演出
+# move 3501711 2 0
+# face 3501711 "angry"
+# alpha 3501711 1 0
+# mask 3501711 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 210 4 0
+# face 210 "sad"
+# alpha 210 1 0
+# mask 210 on
+# voice 350171 "grimoire_ge_0010"
+@グリモワール
+ふざけんじゃないわよ！
+
+;;//グリモワールがカミトを叩く
+# se "SE_9620"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 210 "surprise"
+# textboxarrow 0 3
+# voice 9936 "kamito_0026"
+@カミト
+うわぁっ！
+…あ、あれっ？
+グリモワール…？
+
+# textboxarrow 0 1
+@グリモワール
+しっかりしなさい！
+この霧のせいで幻覚を見てたのよっ
+
+# alpha 3501711 0 0.5
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0001"
+@アスカロン
+意識が戻って良かったです！
+マスター、急いでここから
+離れましょう
+
+# face 210 "normal"
+# textboxarrow 0 3
+@カミト
+う、うんっ
+兄貴は…？
+
+# alpha 3102311 0 0.5
+# move 3501711 2 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 1
+# voice 350171 "grimoire_ge_0027"
+@グリモワール
+そこでまだ呆けてるわよ！
+そんな奴、放っておいて――
+
+;;//カミトがヴァングに駆け寄る
+# se "SE_5575"
+# textwindow "close"
+# rightout 210 0.5
+# waitandnext 0.5
+
+# alpha 210 0 0
+# waitandnext 0.2
+
+# se "SE_0648"
+# sedelay "SE_11618" 0.5
+# alpha 3501711 0 0.5
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+兄貴！
+兄貴、しっかりしてよっ
+
+# alpha 210 0 0.5
+# move 3201911 3 0
+# face 3201911 "sad"
+# alpha 3201911 1 0.5
+# mask 3201911 off
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_0015"
+@シユウ
+うがあああぁぁ…
+シユウがどれだけよんでも
+こたえてくれないぞ…
+
+# se "SE_0792"
+# alpha 3201911 0 0.5
+# move 99100131 1 0
+# alpha 99100131 1 0.5
+# mask 99100131 on
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 on
+# textboxarrow 0 2
+# move 99100132 5 0
+# alpha 99100132 1 0.5
+# mask 99100132 on
+# textboxarrow 0 0
+@魔獣
+ガアアアアアアアア！
+
+# alpha 99100131 0 0.5
+# alpha 910013 0 0.5
+# alpha 99100132 0 0.5
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+@アスカロン
+また化け物が集まってきました！
+マスター、早くっ
+
+# face 210 "sad"
+# textboxarrow 0 3
+# voice 9936 "kamito_0015"
+@カミト
+で、でも…
+どうしよう…
+
+# alpha 3102311 0 0.5
+# move 3501711 2 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 1
+@グリモワール
+何でもいいから、
+早く決めなさい！
+
+# se "SE_0648"
+# sedelay "SE_11618" 0.5
+# textboxarrow 0 3
+# voice 9936 "kamito_0018"
+@カミト
+どうしよう…
+僕にはわからないよ…
+兄貴！…ヴァン兄っ！
+
+# alpha 3501711 0 0.5
+# move 211 2 0
+# face 211 "angry"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+# voice 9935 "vang_0009"
+@ヴァング
+！？
+…その呼び方はやめろって
+言っただろうが！
+
+# face 211 "irregular"
+# textboxarrow 0 1
+@ヴァング
+あん？
+ここは…オレは何してたんだ？
+
+# alpha 210 0 0.5
+# move 3201911 4 0
+# face 3201911 "happy"
+# alpha 3201911 1 0.5
+# mask 3201911 on
+# textboxarrow 0 3
+# voice 320191 "chihyu_a_0021"
+@シユウ
+やった！
+ますた～がめをさましたぞ！
+
+# textboxarrow 0 3
+# voice 320191 "chihyu_a_0004"
+@シユウ
+カミトはすごいな！
+シユウにできないことを
+やってのけたぞ！
+
+# textboxarrow 0 1
+# voice 9935 "vang_0039"
+@ヴァング
+そうか…オレは…
+ちっ…
+
+# face 211 "angry"
+# textboxarrow 0 1
+@ヴァング
+カミト！
+走れ！
+ひとまず引き上げだっ
+
+# alpha 211 0 0.5
+# alpha 3201911 0 0.5
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# voice 9936 "kamito_0003"
+@カミト
+うん！
+
+;;//カミトが走っていく
+;;//逆サイドから魔獣現れる
+# se "SE_5575"
+# textwindow "close"
+# leftout 210 0.5
+# waitandnext 0.5
+
+# se "SE_0792"
+# alpha 210 0 0
+# move 910013 2 0
+# alpha 910013 1 0
+# mask 910013 on
+# move 99100131 4 0
+# alpha 99100131 1 0
+# mask 99100131 on
+# rightin 910013 0.5
+# rightin 99100131 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 0
+# textwindow "normal"
+@魔獣
+ガアアアアアアアア！
+
+# alpha 910013 0 0.5
+# alpha 99100131 0 0.5
+# move 211 2 0
+# face 211 "angry"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+# move 3201911 4 0
+# face 3201911 "normal"
+# alpha 3201911 1 0.5
+# mask 3201911 on
+# voice 9935 "vang_0009"
+@ヴァング
+邪魔なんだよ、お前ら！
+シユウ、いくぜ！
+
+# se "SE_5206"
+# face 3201911 "angry"
+# textboxarrow 0 3
+# voice 320191 "chihyu_a_0029"
+@シユウ
+うがあああぁぁ！
+みんな、たたきつぶしてやる！
+
+# alpha 211 0 0.5
+# alpha 3201911 0 0.5
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+兄貴っ？
+
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# move 210 4 0.5
+# mask 210 on
+@アスカロン
+マスター、早くこちらに！
+
+# se "SE_0793"
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 off
+# textboxarrow 0 2
+@魔獣
+ガアアアアアアアア！
+
+# alpha 910013 0 0.5
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+@グリモワール
+急がないと、また囲まれるわよ！
+
+;;//キラーメイルのシルエット出現（トライデント・ミョルニル・八咫鏡）
+# textwindow "close"
+# alpha 3501711 0 0.5
+# move 1200111 1 0
+# face 1200111 "normal"
+# alpha 1200111 1 0.5
+# mask 1200111 on
+# move 1500331 3 0
+# face 1500331 "normal"
+# alpha 1500331 1 0.5
+# mask 1500331 off
+# move 1300231 5 0
+# face 1300231 "normal"
+# alpha 1300231 1 0.5
+# mask 1300231 on
+# waitandnext 1.5

@@ -1,0 +1,330 @@
+;;-----------------------------------------
+;;悪魔サイド3話1_0
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm166" "BgmPJZero001" 0
+;;-----------------------------------------
+;;アスモデウス
+# body 960021
+# pos 960021 1
+# scale 960021 0.8 0
+# layer 960021 2
+# alpha 960021 0 0
+;;ベルゼブブ
+# body 960022
+# pos 960022 3
+# scale 960022 0.8 0
+# layer 960022 4
+# mask 960022 off
+# alpha 960022 0 0
+;;パンドラ
+# body 306
+# pos 306 2
+# scale 306 0.8 0
+# layer 306 2
+# mask 306 off
+# alpha 306 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "mov2_3_overlay"
+# imagealpha 1 0 0
+# imagescale 1 1.2 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;タイトル：“希望”の帰還
+;;背景：黒
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# voice 8035 "beelzebub_0020"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@？？？
+希望？
+キャキャキャキャキャ♪
+
+@？？？
+希望はね
+お兄ちゃん、お姉ちゃん達が
+とっても美味しくなるための…
+
+@？？？
+素敵な調味料なんだよ
+
+@？？？
+希望を抱いてる人間達は
+どんなに危ないことだって
+やれちゃうの！
+
+@？？？
+ベルは、そんなお兄ちゃん、
+お姉ちゃん達を
+みんな、みーんな食べてあげるんだ
+
+@？？？
+キャキャキャ！
+一生懸命な人間達って
+とっても美味しいんだよ
+
+# voice 8035 "beelzebub_0022"
+@？？？
+だからベルは…
+え？何？
+ベルの名前？
+
+@？？？
+そんなことも知らないの？
+ベルはベルゼブブ
+七魔王の一人“暴食”のベルゼブブ
+
+# textboxarrow 0 0
+@ベルゼブブ
+ベルは一生懸命な人間達が、
+お兄ちゃん、お姉ちゃん達のことが
+とっても――
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：地上世界（廃墟）
+# background "collapsecity"
+# bgm "stop"
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1.5
+
+# face 960022 "normal"
+# alpha 960022 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+@ベルゼブブ
+…………
+
+# voice 8035 "beelzebub_0028"
+# textboxarrow 0 2
+@ベルゼブブ
+うーん…
+やっぱり吐き出しちゃお…！
+
+;;ベルゼブブがパンドラを吐き出す
+# se "SE_4732"
+# move 960022 4 1
+# fadeout "red" 1
+# textboxarrow 0 0
+# waitandnext 1
+
+# face 306 "sad"
+# alpha 306 1 0
+# mask 960022 on
+# textwindow "close"
+# fadein "red" 1
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@パンドラ
+あうっ…
+
+# bgm "bgm005" 0
+# textboxarrow 0 3
+@ベルゼブブ
+あれ？
+まだ生きてたんだ
+
+# textboxarrow 0 1
+@パンドラ
+ううっ…私は…
+
+# textboxarrow 0 3
+@ベルゼブブ
+あー、やっとお腹の調子が
+良くなってきた
+もーっ…
+
+# textboxarrow 0 3
+@ベルゼブブ
+お姉ちゃんみたいに空っぽなの
+全然、美味しくない！
+
+# textboxarrow 0 3
+@ベルゼブブ
+お姉ちゃんって本当に
+自分の意思がないんだね
+スカスカで不味かったよ
+
+# textboxarrow 0 1
+@パンドラ
+…………
+
+# textboxarrow 0 3
+@ベルゼブブ
+ベルはね
+強い意思を持つ人間が大好物なのっ
+だから…
+
+# textboxarrow 0 3
+@ベルゼブブ
+お姉ちゃんみたいに中身空っぽで
+不味いのはいらない！
+食べる価値がないよ
+
+# voice 8035 "beelzebub_0004"
+# face 960022 "happy"
+# textboxarrow 0 3
+@ベルゼブブ
+アスモに負わされた傷は致命傷だけど
+念のためにベルがトドメを刺して
+あげるね
+
+;;血しぶき演出
+# se "SE_6202"
+# fadein "red" 0.5
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# move 960022 3 0.2
+# move 306 1 0.3
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# imagealpha 1 0 0.5
+# face 306 "surprise"
+# textboxarrow 0 1
+@パンドラ
+カハッ…！
+
+# voice 8035 "beelzebub_0020"
+# move 960022 4 0.5
+# textboxarrow 0 3
+@ベルゼブブ
+キャキャキャキャキャ！
+不味いお姉ちゃんはここで
+野垂れ死ぬのがお似合いだよ
+
+# textboxarrow 0 3
+@ベルゼブブ
+じゃあね、バイバイ♪
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：地上世界
+# background "ground_surface_break"
+# mask 960022 off
+# alpha 960022 0 0
+# alpha 306 0 0
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 8035 "beelzebub_0005"
+# move 960022 3 0.5
+# face 960022 "happy"
+# alpha 960022 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ベルゼブブ
+キャキャ！
+これでまた、たくさん人間を
+食べちゃおっと
+
+# bgm "stop"
+# face 960022 "normal"
+# textboxarrow 0 2
+@ベルゼブブ
+…あれ？
+
+;;空から光が差し込む
+# envbody 1001 3 0
+# effectpattern 1001 2 0
+# effectstart 1001
+# bgmfile "bgm150" "BgmPJZero001" 0
+# textboxarrow 0 0
+# waitandnext 1
+
+# move 960022 4 0.5
+# textboxarrow 0 3
+@ベルゼブブ
+空から光が差してきてる…
+あれ、何？
+
+# textboxarrow 0 3
+@ベルゼブブ
+すごく気持ちが昂ぶる…
+アスモっ
+アスモ、来て！
+
+# move 960021 2 0.5
+# face 960021 "sad"
+# alpha 960021 1 0.3
+# textboxarrow 0 1
+@アスモデウス
+何なのよぉ、ベルゼブブ…様
+私だって忙しいんだからね
+
+# textboxarrow 0 3
+@ベルゼブブ
+ねぇ、あの光って何？
+調べてきて
+
+# voice 8034 "asmodeus_0022"
+# face 960021 "surprise"
+# textboxarrow 0 1
+@アスモデウス
+光ぃ？
+…光の中に何かいるわね
+何なのよ、あれ
+
+# voice 8035 "beelzebub_0004"
+# face 960022 "happy"
+# textboxarrow 0 3
+@ベルゼブブ
+キャキャ！
+きっと美味しいものだよ
+そんな予感がするのっ
+
+# voice 8034 "asmodeus_0032"
+# face 960021 "usual"
+# textboxarrow 0 1
+@アスモデウス
+美味しいものって…
+いいわ
+ちょっと見てくるわね
+
+;;アスモデウスが立ち去る
+# se "SE_0719"
+# move 960021 1 0.5
+# alpha 960021 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# voice 8035 "beelzebub_0005"
+# textwindow "nomal"
+# textboxarrow 0 3
+@ベルゼブブ
+楽しみだなぁ
+このまま人間を蹂躙しても
+美味しくないもんね
+
+# move 960022 3 0.5
+# textboxarrow 0 2
+@ベルゼブブ
+もっともっと
+美味しくなって欲しいから…
+いっぱい抗ってみせてね♪
+
+# fadeout "black" 1
+# waitandnext 1

@@ -1,0 +1,311 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第９章 章タイトル：「雄弁な守人―プレッジ―」
+;;第2話－５　タイトル：為すべきこと
+;;2_5_3
+;;スクリプト最後の背景：中心部
+;;-----------------------------------------
+# script "lisp"
+# background "in_city"
+# bgm "stop"
+;;-----------------------------------------
+;;シタ
+# body 3201611
+# pos 3201611 3
+# scale 3201611 0.8 0
+# layer 3201611 2
+# alpha 3201611 0 0
+# mask 3201611 off
+;;ミトゥム
+# body 3200511
+# pos 3200511 3
+# scale 3200511 0.8 0
+# layer 3200511 2
+# alpha 3200511 0 0
+# mask 3200511 off
+;;バルムンク
+# body 3100911
+# pos 3100911 3
+# scale 3100911 0.8 0
+# layer 3100911 2
+# alpha 3100911 0 0
+# mask 3100911 off
+;;グラム
+# body 3100811
+# pos 3100811 3
+# scale 3100811 0.8 0
+# layer 3100811 2
+# alpha 3100811 0 0
+# mask 3100811 off
+;;ヴァナルガンド・聖鎖・サリエル 大罪ver.
+# body 5601111
+# pos 5601111 3
+# scale 5601111 0.8 0
+# layer 5601111 2
+# alpha 5601111 0 0
+# mask 5601111 off
+;;アフロディーテ・D. plug・アスモデウス 大罪ver.
+# body 5401311
+# pos 5401311 3
+# scale 5401311 0.8 0
+# layer 5401311 2
+# alpha 5401311 0 0
+# mask 5401311 off
+;;エンクウ
+# body 227
+# pos 227 3
+# scale 227 0.8 0
+# layer 227 2
+# alpha 227 0 0
+# mask 227 off
+;;クレイ
+# body 228
+# pos 228 3
+# scale 228 0.8 0
+# layer 228 2
+# alpha 228 0 0
+# mask 228 off
+;;ムラマサ・獣刻・ヤマタノオロチ 大罪ver.
+# body 5102511
+# pos 5102511 3
+# scale 5102511 0.8 0
+# layer 5102511 2
+# alpha 5102511 0 0
+# mask 5102511 off
+;;ティファレト
+# body 171
+# pos 171 3
+# scale 171 0.8 0
+# layer 171 2
+# alpha 171 0 0
+# mask 171 off
+;;ツカサ
+# body 241
+# pos 241 3
+# scale 241 0.8 0
+# layer 241 2
+# alpha 241 0 0
+# mask 241 off
+;;-----------------------------------------
+;;//背景：中心部
+# se "SE_0973"
+# textwindow "close"
+# waitandnext 0.5
+
+# voice 9929 "tsukasa_0004"
+# move 241 3 0
+# face 241 "happy"
+# alpha 241 1 0.5
+# mask 241 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ツカサ
+到着だ
+みんな無事で良かった
+
+# alpha 241 0 0.5
+# move 227 3 0
+# face 227 "usual"
+# alpha 227 1 0.5
+# mask 227 off
+# textboxarrow 0 2
+@エンクウ
+では、急ぎティファレトを
+ミカエルの下に
+
+# alpha 227 0 0.5
+# move 171 3 0
+# face 171 "normal"
+# alpha 171 1 0.5
+# mask 171 off
+# textboxarrow 0 2
+@ティファレト
+よろしくお願いします
+
+# move 171 2 0.5
+# mask 171 on
+# move 241 4 0
+# face 241 "normal"
+# alpha 241 1 0.5
+# mask 241 on
+# textboxarrow 0 3
+@ツカサ
+ああ、僕についてきて
+…おかしいな？
+
+# alpha 171 0 0.5
+# move 228 2 0
+# face 228 "irregular"
+# alpha 228 1 0.5
+# mask 228 on
+# textboxarrow 0 1
+@クレイ
+どうしたんだ？
+早く行かないと…
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# voice 9929 "tsukasa_0048"
+# textboxarrow 0 3
+@ツカサ
+迎えが来ていない…
+アフロディーテ！
+
+# voice 340131 "aphrodite_a_0004"
+# alpha 228 0 0.5
+# alpha 241 0 0.5
+# move 5401311 3 0
+# face 5401311 "usual"
+# alpha 5401311 1 0.5
+# mask 5401311 off
+# textboxarrow 0 2
+@アフロディーテ
+ふふっ
+隠れていないで出てきなさいな
+美しくありませんよ！
+
+;;//アフロディーテが矢を放つ
+# se "SE_4301"
+# waitandnext 0.5
+
+# voice 310081 "guramu_t_battle_0001"
+# alpha 5401311 0 0.5
+# move 3100811 3 0
+# face 3100811 "angry"
+# alpha 3100811 1 0.5
+# mask 3100811 off
+# textboxarrow 0 2
+@グラム
+はっ！
+
+;;//グラムが矢を斬る
+# se "SE_4000"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+@グラム
+無粋な真似をしているのは君達の方だ
+大人しく縛につけ！
+
+# voice 310091 "barumunku_t_0015"
+# move 3100811 2 0.5
+# mask 3100811 on
+# move 3100911 4 0
+# face 3100911 "sad"
+# alpha 3100911 1 0.5
+# mask 3100911 on
+# textboxarrow 0 3
+@バルムンク
+ああ、グラム…
+さっきの矢は私を狙っていたわ
+何て恐ろしいのっ
+
+# textboxarrow 0 1
+@グラム
+大丈夫だよ、バルムンク
+私がいる限り、君には指一本とて
+触れさせはしない！
+
+# voice 310091 "barumunku_t_0021"
+# face 3100911 "happy"
+# textboxarrow 0 3
+@バルムンク
+素敵っ！
+私の王子様っ♪
+
+# voice 9930 "clay_0023"
+# alpha 3100811 0 0.5
+# alpha 3100911 0 0.5
+# move 228 2 0
+# face 228 "irregular"
+# alpha 228 1 0.5
+# mask 228 on
+# textboxarrow 0 1
+# move 5601111 4 0
+# face 5601111 "usual"
+# alpha 5601111 1 0.5
+# mask 5601111 on
+@クレイ
+何だ、あのキル姫達は…？
+
+# face 5601111 "normal"
+# textboxarrow 0 3
+@ヴァナルガンド
+マスターさん、伏せて下さい！
+
+# voice 320161 "shita_t_0029"
+# alpha 228 0 0.5
+# alpha 5601111 0 0.5
+# move 3201611 2 0
+# face 3201611 "angry"
+# alpha 3201611 1 0.5
+# mask 3201611 on
+# textboxarrow 0 1
+# move 5102511 4 0
+# face 5102511 "normal"
+# alpha 5102511 1 0.5
+# mask 5102511 on
+@シタ
+はああああっ！
+
+# se "SE_4100"
+# waitandnext 0.5
+
+;;//シタの攻撃をムラマサが受ける
+# se "SE_9086"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 310251 "muramasa_ge_battle_0002"
+# face 5102511 "angry"
+# textboxarrow 0 3
+@ムラマサ
+えいっ！
+…いきなり何をするんですかっ？
+
+# textboxarrow 0 1
+@シタ
+決まっています
+契約違反を犯した者達を
+断罪するんですよ
+
+# voice 320051 "mitwumu_t_unit_0008"
+# alpha 3201611 0 0.5
+# alpha 5102511 0 0.5
+# move 3200511 3 0
+# face 3200511 "angry"
+# alpha 3200511 1 0.5
+# mask 3200511 off
+# textboxarrow 0 2
+@ミトゥム
+迷える者達に導きの歌を
+ただし、悪魔の力を持つ者に
+授ける歌などありません！
+
+# alpha 3200511 0 0.5
+# move 3201611 2 0
+# face 3201611 "usual"
+# alpha 3201611 1 0.5
+# mask 3201611 on
+# move 241 4 0
+# face 241 "normal"
+# alpha 241 1 0.5
+# mask 241 on
+# textboxarrow 0 3
+@ツカサ
+ふぅん…
+このメンツ、北と西の命令って
+とこかな
+
+# voice 320161 "shita_t_0003"
+# textboxarrow 0 1
+@シタ
+その通りです、
+南を治める奏官さん
+
+# textboxarrow 0 1
+@シタ
+あなたには、重大な裏切りの容疑が
+かけられていますよ

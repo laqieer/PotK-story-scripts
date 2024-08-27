@@ -1,0 +1,802 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第５章
+;;第1話　タイトル：中心部防衛戦
+;;5_1_2
+;;スクリプト最後の背景：ユグドラシルの麓
+;;-----------------------------------------
+# script "lisp"
+# background "command_logo_tree"
+# bgmfile "bgm424" "BgmIntegralNoahCommand" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;巨大死霊
+# body 5810301
+# pos 5810301 3
+# scale 5810301 0.8 0
+# layer 5810301 2
+# alpha 5810301 0 0
+# mask 5810301 off
+;;神令フォルカス
+# body 5301811
+# pos 5301811 3
+# scale 5301811 0.8 0
+# layer 5301811 2
+# alpha 5301811 0 0
+# mask 5301811 off
+;;神令ヒョウハ
+# body 5402011
+# pos 5402011 3
+# scale 5402011 0.8 0
+# layer 5402011 2
+# alpha 5402011 0 0
+# mask 5402011 off
+;;幻獣ピナーカ
+# body 3400211
+# pos 3400211 3
+# scale 3400211 0.8 0
+# layer 3400211 2
+# alpha 3400211 0 0
+# mask 3400211 off
+;;-----------------------------------------
+;;第1話　タイトル：中心部防衛戦
+;;//背景：ユグドラシルの麓
+# voice 540201 "hyoha_c_unit_0009"
+# move 5402011 3 0
+# face 5402011 "angry"
+# alpha 5402011 1 0
+# mask 5402011 off
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+この命、燃やし尽くす！
+
+;;//ヒョウハが二人を攻撃する
+# se "SE_4301"
+# waitandnext 0.5
+
+# textwindow "close"
+# alpha 5402011 0 0.5
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 3501711 4 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# waitandnext 0.6
+
+# se "SE_4815"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 310231 "ascalon_a_battle_0006"
+# textboxarrow 0 1
+# textwindow "normal"
+@アスカロン
+あうっ…
+
+# voice 350171 "grimoire_ge_0037"
+# textboxarrow 0 3
+@グリモワール
+くっ…
+何なのよ、あいつ…！
+
+# textboxarrow 0 3
+@グリモワール
+弓使いなのに、どんどん前に出てきて
+攻撃するなんて！
+あんな戦い方、あり得ない…！
+
+# voice 310231 "ascalon_a_unit_1006"
+# textboxarrow 0 1
+@アスカロン
+勇気があるんですね
+…羨ましい
+
+;;//アスカロンがヒョウハに剣を向ける
+# se "SE_5205"
+# waitandnext 0.5
+
+# voice 540201 "hyoha_c_0005"
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# move 5402011 3 0
+# face 5402011 "normal"
+# alpha 5402011 1 0.5
+# mask 5402011 off
+# textboxarrow 0 2
+@ヒョウハ
+へへっ
+あんたらも、これで終わりじゃ
+ないよな！
+
+;;//連射攻撃SE
+# se "SE_0841"
+# waitandnext 0.5
+
+# voice 310231 "ascalon_a_0024"
+# alpha 5402011 0 0.5
+# move 3102311 3 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+@アスカロン
+キャッ…
+ものすごい連射ですっ
+
+;;カミト（独白）
+# alpha 3102311 0 0.5
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 0
+# textwindow "moya"
+@カミト
+このままだと二人が危ない…！
+何かっ…僕にできることはっ
+
+# voice 540201 "hyoha_c_battle_0003"
+# alpha 210 0 0.5
+# move 5402011 2 0
+# face 5402011 "angry"
+# alpha 5402011 1 0.5
+# mask 5402011 on
+# textboxarrow 0 1
+# move 3501711 4 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textwindow "normal"
+@ヒョウハ
+どうだっ！
+
+# se "SE_5255"
+# waitandnext 0.5
+
+;;//ヒョウハがグリモワールを突き飛ばす
+# se "SE_0656"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 350171 "grimoire_ge_0010"
+# face 3501711 "angry"
+# textboxarrow 0 3
+@グリモワール
+ちょっと…！
+殴りかかってくるなんて
+無茶苦茶でしょ！
+
+# face 5402011 "normal"
+# textboxarrow 0 1
+@ヒョウハ
+頭固いなあ！
+弓兵が前に出ちゃいけないなんて
+誰が決めたんだよ！？
+
+# textboxarrow 0 1
+@ヒョウハ
+あたしは突っ込むぞ！
+至近距離で強烈なのを叩き込んでやる
+そういうのも燃えるだろ！！
+
+# voice 310231 "ascalon_a_battle_0003"
+# alpha 5402011 0 0.5
+# alpha 3501711 0 0.5
+# move 3102311 3 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+@アスカロン
+そこです！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+;;//ヒョウハがアスカロンの攻撃を受け止める
+# textwindow "close"
+# alpha 3102311 0 0.5
+# waitandnext 0.5
+
+# move 5402011 2 0
+# face 5402011 "angry"
+# alpha 5402011 1 0.5
+# mask 5402011 on
+# move 3102311 4 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# waitandnext 0.6
+
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+# textwindow "normal"
+@ヒョウハ
+おおっと！
+…あたしに剣先向けるなよな！
+
+;;//ヒョウハがアスカロンを蹴飛ばす
+# se "SE_4602"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_9146"
+# voice 310231 "ascalon_a_battle_0006"
+# textboxarrow 0 3
+@アスカロン
+あうっ…
+まだです！
+
+;;//アスカロンが間合いを詰める
+# se "SE_5255"
+# textwindow "close"
+# move 3102311 3 0.2
+# waitandnext 0.2
+
+# voice 540201 "hyoha_c_0005"
+# face 5402011 "normal"
+# textboxarrow 0 1
+# textwindow "normal"
+@ヒョウハ
+ははっ！
+あんたもなかなか熱いな！
+
+# voice 310231 "ascalon_a_0034"
+# textboxarrow 0 2
+@アスカロン
+いいえ…
+私はあなたを、
+凍てつかせます！
+
+;;//二人が戦いながら離れていく
+# textwindow "close"
+# alpha 3102311 0 0.5
+# alpha 5402011 0 0.5
+# waitandnext 0.5
+
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+アスカロン達が離れていく！
+グリモワール、僕達もっ
+
+# voice 350171 "grimoire_ge_0022"
+# alpha 210 0 0.5
+# move 3501711 3 0
+# face 3501711 "surprise"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+@グリモワール
+分かってるわよ！
+今度こそ…えっ！？
+
+;;//巨大死霊が現れる
+# se "SE_0854"
+# alpha 3501711 0 0.5
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# textboxarrow 0 2
+@？？？
+ＪＹＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ
+ＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ！！
+
+# voice 9936 "kamito_0017"
+# alpha 5810301 0 0.5
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+そんなっ…！
+まだ化け物が残ってただなんて…
+
+;;//巨大死霊がグリモワールを攻撃する
+# textwindow "close"
+# alpha 210 0 0.5
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# waitandnext 0.6
+
+# se "SE_6992"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 350171 "grimoire_ge_battle_0006"
+# textboxarrow 0 2
+# textwindow "normal"
+@グリモワール
+ガハッ…！
+こいつっ…
+
+# alpha 3501711 0 0.5
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+グリモワール、しっかり！
+
+# se "SE_0865"
+# alpha 210 0 0.5
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# textboxarrow 0 2
+@？？？
+ＪＹＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ
+ＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ！！
+
+# se "SE_0864"
+# sedelay "SE_0864" 0.8
+# waitandnext 0.5
+
+# textwindow "close"
+# alpha 5810301 0 0.5
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+くそっ…
+こっちに…来るなぁっ！
+
+# alpha 210 0 0.5
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+@グリモワール
+バカ…！
+キミは早く…逃げなさいっ…
+
+# voice 9936 "kamito_0065"
+# alpha 3501711 0 0.5
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+ダメだ！
+逃げるなら一緒に…
+
+# se "SE_0854"
+# alpha 210 0 0.5
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# textboxarrow 0 2
+@？？？
+ＪＹＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ
+ＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ！！
+
+;;//巨大死霊がカミトに近づく
+# se "SE_0864"
+# sedelay "SE_0864" 0.8
+# waitandnext 0.5
+
+# voice 9936 "kamito_0054"
+# alpha 5810301 0 0.5
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+このっ…近づくなぁぁぁっ！
+
+;;//画面フラッシュ
+# bgm "stop"
+# se "SE_9149"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 9936 "kamito_0023"
+# face 210 "surprise"
+# textboxarrow 0 2
+@カミト
+えっ…？
+
+;;//暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "red_corridor"
+# alpha 210 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//背景：赤い廊下
+;;カミト（立ち絵無し）（独白）
+# bgmfile "bgm170" "BgmPJZero_EV001" 0
+# textboxarrow 0 0
+# textwindow "normal"
+@カミト
+あれ…？
+ここは…
+
+# serif 0
+# textwindow "close"
+# serif 1
+@研究員
+いい加減にして下さい！
+こんな子供までっ…
+
+# serif 1
+@所長
+仕方ないだろうっ
+私達に手段を選んでいる余裕は
+もうないんだ…！
+
+# serif 1
+@研究員
+ですが…！
+アンやドゥーエの悲劇を
+お忘れですかっ？
+
+# serif 1
+@所長
+トレスはあと一歩だった…
+キャトルだって…
+
+# serif 1
+@研究員
+シンコは…死にましたよ…
+
+# serif 1
+@所長
+分かっている！
+分かっているんだっ…！
+
+# serif 1
+@所長
+しかし…！
+もはやヴァリン博士はいない…
+私達がやるしかないんだ！
+
+# serif 1
+@所長
+恨むなら恨め…
+ろくな死に方ができんことくらい
+覚悟しておる
+
+# serif 1
+@研究員
+…………
+
+# serif 1
+@所長
+さあ、おいでオクト
+大丈夫
+怖くないからね
+
+;;カミト（立ち絵なし）
+# voice 9936 "kamito_0066"
+# textboxarrow 0 0
+# textwindow "normal"
+@カミト
+イヤだ…
+
+;;カミト（立ち絵無し）
+# textboxarrow 0 0
+@カミト
+イヤだ…行きたくない…
+そっちに行ったら…
+僕はっ…
+
+;;//血しぶき演出
+# se "SE_9015"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fadein "red" 0.5
+# waitandnext 0.5
+
+;;//暗転
+# bgm "stop"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "command_logo_tree"
+# move 210 2 0
+# face 210 "surprise"
+# alpha 210 1 0
+# mask 210 on
+# move 3501711 4 0
+# face 3501711 "normal"
+# alpha 3501711 1 0
+# mask 3501711 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//背景：ユグドラシルの麓
+# bgmfile "bgm421_1" "BgmIntegralNoahEvent002" 0
+# voice 9936 "kamito_0026"
+# textboxarrow 0 1
+# textwindow "normal"
+@カミト
+わああああっ！
+あれ…？
+
+# face 3501711 "angry"
+# textboxarrow 0 3
+@グリモワール
+やっと目が覚めたのね！
+まったく、無茶するんじゃないわよ！
+
+# textboxarrow 0 3
+@グリモワール
+その義手に変な力があるからって
+戦えるわけないでしょ！
+
+# voice 9936 "kamito_0002"
+# face 210 "normal"
+# textboxarrow 0 1
+@カミト
+あ…僕は…
+あの化け物に触ったの…？
+
+# voice 350171 "grimoire_ge_0003"
+# textboxarrow 0 3
+@グリモワール
+そうよ！
+何でか一瞬光って、相手が少し
+ひるんだ隙に離れたのっ
+
+# face 3501711 "normal"
+# textboxarrow 0 3
+@グリモワール
+だけど…
+
+# se "SE_0854"
+# alpha 210 0 0.5
+# alpha 3501711 0 0.5
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# textboxarrow 0 2
+@？？？
+ＪＹＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ
+ＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ！！
+
+# alpha 5810301 0 0.5
+# move 210 2 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+# move 3501711 4 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+@グリモワール
+あっけなく追いつかれたわね…
+いいわよ
+死者の怒りで焼き尽くしてあげる！
+
+# face 210 "angry"
+# textboxarrow 0 1
+@カミト
+ぼ…僕だって！
+
+# textboxarrow 0 3
+@グリモワール
+キミがどうにかできる
+相手じゃないでしょ！
+
+# voice 9936 "kamito_0015"
+# textboxarrow 0 1
+@カミト
+でもっ…！
+
+# se "SE_0865"
+# alpha 210 0 0.5
+# alpha 3501711 0 0.5
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# textboxarrow 0 2
+@？？？
+ＪＹＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ
+ＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ！！
+
+;;//巨大死霊がグリモワールを攻撃する
+# textwindow "close"
+# alpha 5810301 0 0.5
+# move 3501711 3 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# waitandnext 0.6
+
+# se "SE_6992"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 350171 "grimoire_ge_battle_0007"
+# textboxarrow 0 2
+# textwindow "normal"
+@グリモワール
+この程度っ…
+
+;;カミト（独白）
+# alpha 3501711 0 0.5
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 0
+# textwindow "moya"
+@カミト
+グリモワール、
+かなり辛そうだな…
+
+;;カミト（独白）
+# face 210 "irregular"
+# textboxarrow 0 0
+@カミト
+僕は…何もできないのかっ…？
+
+;;カミト（独白）
+# textboxarrow 0 0
+@カミト
+奏官として、何か…！
+
+# se "SE_0854"
+# alpha 210 0 0.5
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# textboxarrow 0 2
+# textwindow "normal"
+@？？？
+ＪＹＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ
+ＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ！！
+
+# textwindow "close"
+# alpha 5810301 0 0.5
+# move 3501711 3 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# waitandnext 0.6
+
+# se "SE_6992"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 350171 "grimoire_ge_battle_0006"
+# face 3501711 "angry"
+# textboxarrow 0 2
+# textwindow "normal"
+@グリモワール
+ぐぅっ…！
+やったわねっ…
+
+# alpha 3501711 0 0.5
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+グリモワール…！
+
+;;カミト（独白）
+# move 210 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+@カミト
+まずい…
+グリモワール一人じゃ
+耐えきれないよ…！
+
+;;カミト（独白）
+# face 210 "normal"
+# textboxarrow 0 0
+@カミト
+くそっ…
+何でっ…
+何で僕はっ…
+
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+見ていることしかできないんだ！？
+何で…こんなに無力なんだよ…！
+
+# face 210 "angry"
+# textboxarrow 0 2
+@カミト
+ちくしょおおおおおおおお…！！
+
+;;//無数の矢が降り注ぐ
+# se "SE_11545"
+# sedelay "SE_11554" 0.8
+# waitandnext 1.2
+
+# se "SE_0866"
+# alpha 210 0 0.5
+# alpha 5810301 1 0.5
+# textboxarrow 0 2
+# textwindow "normal"
+@？？？
+ＪＹＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ
+ＡＡＡＡＡＡＡＡＡＡＡＡＡＡ…！？
+
+# voice 9936 "kamito_0023"
+# alpha 5810301 0 0.5
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+えっ…？
+矢が降ってきた！？
+一体、誰がっ…
+
+;;//幻獣ピナーカが現れる
+# voice 340021 "pinaka_ge_0029"
+# alpha 210 0 0.5
+# move 3400211 3 0
+# face 3400211 "angry"
+# alpha 3400211 1 0.5
+# mask 3400211 off
+# textboxarrow 0 2
+@？？？
+うおぉぉぉぉ！
+これがオイラの思いの全てだ！

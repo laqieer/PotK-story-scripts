@@ -1,0 +1,415 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー11章
+;;第1話　タイトル：完全な生命
+;;1-2-10
+;;スクリプト最後の背景：深奥
+;;-----------------------------------------
+# script "lisp"
+# background "profound"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス（ジョブチェンジ後）
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# layer 172 2
+# alpha 172 0 0
+# mask 172 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 2
+# alpha 139 0 0
+# mask 139 off
+;;ギル
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# layer 137 2
+# alpha 137 0 0
+# mask 137 off
+;;レーヴァテイン
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# layer 3100211 2
+# alpha 3100211 0 0
+# mask 3100211 off
+;;ムー
+# body 161
+# pos 161 3
+# scale 161 0.6 0
+# layer 161 3
+# alpha 161 0 0
+# mask 161 off
+;;カリス
+# body 3602511
+# pos 3602511 3
+# scale 3602511 0.8 0
+# layer 3602511 2
+# alpha 3602511 0 0
+# mask 3602511 off
+;;ソロモン
+# body 3503111
+# pos 3503111 3
+# scale 3503111 0.8 0
+# layer 3503111 2
+# alpha 3503111 0 0
+# mask 3503111 off
+;;ヘレナ
+# body 3302811
+# pos 3302811 3
+# scale 3302811 0.8 0
+# layer 3302811 2
+# alpha 3302811 0 0
+# mask 3302811 off
+;;トレイセーマ兵
+# body 3830001
+# pos 3830001 3
+# scale 3830001 0.8 0
+# layer 3830001 2
+# alpha 3830001 0 0
+# mask 3830001 off
+;;トレイセーマ兵（クローン1）
+# entry 938300011 3830001
+# pos 938300011 3
+# scale 938300011 0.8 0
+# layer 938300011 2
+# alpha 938300011 0 0
+# mask 938300011 off
+;;ケイオスリオン兵
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# layer 3820001 2
+# alpha 3820001 0 0
+# mask 3820001 off
+;;ケイオスリオン兵（クローン1）
+# entry 938200011 3820001
+# pos 938200011 3
+# scale 938200011 0.8 0
+# layer 938200011 2
+# alpha 938200011 0 0
+# mask 938200011 off
+;;-----------------------------------------
+;;//背景：深奥
+# move 3830001 2 0
+# alpha 3830001 1 0
+# mask 3830001 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 938300011 4 0
+# alpha 938300011 1 0
+# mask 938300011 on
+@トレイセーマ兵
+前進だ！悪魔人など
+蹴散らして突き進め！！
+
+# alpha 3830001 0 0.5
+# alpha 938300011 0 0.5
+# move 3820001 2 0
+# alpha 3820001 1 0.5
+# mask 3820001 on
+# textboxarrow 0 1
+# move 938200011 4 0
+# alpha 938200011 1 0.5
+# mask 938200011 on
+@ケイオスリオン兵
+幻獣人如きに後れを取るな！
+ここから先には一歩も進ません！！
+
+;;//ケイオスリオン兵とトレイセーマ兵がぶつかる
+# textwindow "close"
+# alpha 3820001 0 0.5
+# alpha 938200011 0 0.5
+# waitandnext 0.5
+
+# se "SE_0757"
+# move 3830001 2 0
+# alpha 3830001 1 0
+# mask 3830001 on
+# move 3820001 4 0
+# alpha 3820001 1 0
+# mask 3820001 on
+# leftin 3830001 0.2
+# rightin 3820001 0.2
+# waitandnext 0.2
+
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 1
+
+# voice 1038 "almace_battle_0005"
+# alpha 3830001 0 0.5
+# alpha 3820001 0 0.5
+# move 172 2 0
+# face 172 "sad"
+# alpha 172 1 0.5
+# mask 172 on
+# textboxarrow 0 1
+# move 139 4 0
+# face 139 "worry"
+# alpha 139 1 0.5
+# mask 139 on
+# textwindow "normal"
+@アルマス
+なんとか門を越えることができたと
+思ったら、ケイオスリオン軍が
+待ち伏せしてるなんてっ
+
+# voice 9967 "titania_0042"
+# textboxarrow 0 3
+@ティターニア
+さすがにフェイルノートは
+後続のこともきちんと
+考えていたようですね
+
+# face 172 "angry"
+# textboxarrow 0 1
+@アルマス
+本当、嫌味なくらい
+そつがないんだからっ
+
+# voice 9969 "gill_0001"
+# alpha 139 0 0.5
+# move 137 4 0
+# face 137 "normal"
+# alpha 137 1 0.5
+# mask 137 on
+# textboxarrow 0 3
+@ギル
+でも、何でトレイセーマ軍は
+押し切れないんだ？
+
+# textboxarrow 0 3
+@ギル
+数でいったら
+トレイセーマ軍の方が
+圧倒的に多いぜ
+
+# textboxarrow 0 3
+@ギル
+ここに残ってるケイオスリオン軍は
+本隊じゃなくて一部隊だけだろ？
+
+# face 172 "normal"
+# textboxarrow 0 1
+@アルマス
+それはっ…
+多分、気合いの差よ！
+
+# voice 310021 "revatein_ge_0027"
+# alpha 137 0 0.5
+# move 3100211 4 0
+# face 3100211 "normal"
+# alpha 3100211 1 0.5
+# mask 3100211 on
+# textboxarrow 0 3
+@レーヴァテイン
+はぁ…
+そんなわけないでしょ
+
+# voice 1038 "almace_0009"
+# face 172 "angry"
+# textboxarrow 0 1
+@アルマス
+な、何よっ？
+あなたは理由が分かるって
+いうの！？
+
+# voice 5031 "solomon_t_0032"
+# alpha 3100211 0 0.5
+# move 3503111 4 0
+# face 3503111 "normal"
+# alpha 3503111 1 0.5
+# mask 3503111 on
+# textboxarrow 0 3
+@ソロモン
+簡単なことよ
+ケイオスリオン軍が
+布陣している場所をよく見て
+
+# textboxarrow 0 3
+@ソロモン
+フェイルノートが破壊した門を
+抜けてすぐのところに陣取ってるの
+つまり…
+
+# voice 9967 "titania_0006"
+# alpha 172 0 0.5
+# move 139 2 0
+# face 139 "normal"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 1
+@ティターニア
+トレイセーマ軍は数の優位を
+十分に活かすことが
+できないんですね！
+
+# voice 5031 "solomon_t_0006"
+# face 3503111 "happy"
+# textboxarrow 0 3
+@ソロモン
+その通りよ
+
+# textboxarrow 0 3
+@ソロモン
+どれだけ大軍でも
+門を一度に抜けられる数は
+制限されるわ
+
+# textboxarrow 0 3
+@ソロモン
+ケイオスリオン軍は門を抜けてきた
+敵とだけ戦えば良いの
+これなら互角以上に渡り合える
+
+# voice 3028 "herena_a_0004"
+# alpha 139 0 0.5
+# move 3302811 2 0
+# face 3302811 "normal"
+# alpha 3302811 1 0.5
+# mask 3302811 on
+# textboxarrow 0 1
+@ヘレナ
+ふふっ…
+それでも少しずつトレイセーマが
+押し込んでるみたいだけどね
+
+# alpha 3503111 0 0.5
+# move 3100211 4 0
+# face 3100211 "normal"
+# alpha 3100211 1 0.5
+# mask 3100211 on
+# textboxarrow 0 3
+@レーヴァテイン
+均衡が崩れるのは時間の問題だけど…
+私達もここで手をこまねいては
+いられない…
+
+# voice 6025 "chalice_t_0053"
+# alpha 3302811 0 0.5
+# move 3602511 2 0
+# face 3602511 "normal"
+# alpha 3602511 1 0.5
+# mask 3602511 on
+# textboxarrow 0 1
+@カリス
+行くの、レーヴァ？
+
+# voice 9953 "mwu_0003"
+# move 161 4 0
+# alpha 161 1 0.5
+# mask 161 on
+# textboxarrow 0 3
+@ムー
+もちろんだろ！
+ケイオスリオンもトレイセーマも
+俺様が蹴散らして――
+
+# voice 310021 "revatein_ge_0084"
+# se "SE_0694"
+# face 3100211 "angry"
+# textboxarrow 0 3
+@レーヴァテイン
+黙って
+
+# textboxarrow 0 3
+@ムー
+ムギュギュギュッ…
+
+# voice 9967 "titania_0042"
+# alpha 3602511 0 0.5
+# alpha 3100211 0 0.5
+# alpha 161 0 0.5
+# move 172 2 0
+# face 172 "normal"
+# alpha 172 1 0.5
+# mask 172 on
+# move 139 4 0
+# face 139 "worry"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 3
+@ティターニア
+あの戦いの中に割り込むのは
+得策ではありませんね
+上手くやり過ごせれば良いのですが…
+
+# voice 1038 "almace_0045"
+# face 172 "angry"
+# textboxarrow 0 1
+@アルマス
+ティニ、弱気なこと言わないで！
+私が道を切り拓いてみせるからっ
+この剣先に――
+
+# voice 310021 "revatein_ge_0074"
+# alpha 139 0 0.5
+# move 3100211 4 0
+# face 3100211 "normal"
+# alpha 3100211 1 0.5
+# mask 3100211 on
+# textboxarrow 0 3
+@レーヴァテイン
+アルマス、聞いて
+
+# voice 1038 "almace_0022"
+# face 172 "surprise"
+# textboxarrow 0 1
+@アルマス
+えっ…？
+何よ…レーヴァテイン…
+
+# voice 310021 "revatein_ge_0013"
+# textboxarrow 0 3
+@レーヴァテイン
+悔しいけど…私達は本調子じゃない…
+それに、戦力は温存したいの
+本番は…この先にあるはずだから
+
+# voice 1038 "almace_0013"
+# face 172 "normal"
+# textboxarrow 0 1
+@アルマス
+…分かったわ
+でも、だったらどうするのよ？
+
+# voice 9969 "gill_0002"
+# alpha 3100211 0 0.5
+# move 137 4 0
+# face 137 "normal"
+# alpha 137 1 0.5
+# mask 137 on
+# textboxarrow 0 3
+@ギル
+あのさあ…
+話の途中で悪いんだけど
+
+# voice 1038 "almace_0056"
+# face 172 "surprise"
+# textboxarrow 0 1
+@アルマス
+何よ、ギル？
+まさか、名案があるとか言わないでよ
+
+# voice 9969 "gill_0023"
+# face 137 "surprise"
+# textboxarrow 0 3
+@ギル
+俺に対する信用なさ過ぎじゃね！？
+…ってか、こっちにまた精霊が
+いるんだけど
+
+# alpha 172 0 0.5
+# alpha 137 0 0.5
+# move 139 3 0
+# face 139 "normal"
+# alpha 139 1 0.5
+# mask 139 off
+# textboxarrow 0 2
+@ティターニア
+これはガンバンテインの精霊ですねっ
+もしかすると…

@@ -1,0 +1,622 @@
+;;-----------------------------------------
+;;海上編13-1
+;;-----------------------------------------
+# script "lisp"
+# background "sea_beach_day"
+# bgmfile "bgm386_387" "BgmSeaEventBattle005" 0
+;;-----------------------------------------
+;;フェイルノート
+# body 2401921
+# pos 2401921 3
+# scale 2401921 0.8 0
+# layer 2401921 3
+# mask 2401921 off
+# alpha 2401921 0 0
+;;ティルフィング
+# body 2101411
+# pos 2101411 3
+# scale 2101411 0.8 0
+# layer 2101411 3
+# mask 2101411 off
+# alpha 2101411 0 0
+;;アルマス
+# body 2103811
+# pos 2103811 4
+# scale 2103811 0.8 0
+# layer 2103811 4
+# alpha 2103811 0 0
+;;盤古
+# body 2202211
+# pos 2202211 2
+# scale 2202211 0.8 0
+# layer 2202211 3
+# alpha 2202211 0 0
+;;イージス
+# body 22000111
+# pos 22000111 3
+# scale 22000111 0.8 0
+# layer 22000111 3
+# mask 22000111 off
+# alpha 22000111 0 0
+;;異族
+# body 2811004
+# pos 2811004 3
+# scale 2811004 0.8 0
+# layer 2811004 3
+# mask 2811004 off
+# alpha 2811004 0 0
+;;グランテピエ
+# body 2303411
+# pos 2303411 4
+# scale 2303411 0.8 0
+# layer 2303411 3
+# mask 2303411 off
+# alpha 2303411 0 0
+;;ムー
+# body 161
+# pos 161 2
+# scale 161 0.8 0
+# layer 161 5
+# mask 161 off
+# alpha 161 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imagescale 0 2 0
+# imageset 1 "e170701_map"
+# imagealpha 1 0 0
+# imagelayer 1 2
+# imageset 2 "kiri_02"
+# imagescale 2 1 0
+# imagealpha 2 0 0
+# imagelayer 2 3
+# imageset 3 "kiri_02"
+# imagescale 3 1.5 0
+# imagealpha 3 0 0
+# imagelayer 3 4
+# imageset 4 "kiri_02"
+# imagescale 4 2 0
+# imagealpha 4 0 0
+# imagelayer 4 5
+# imageset 5 "kiri_02"
+# imagescale 5 1.2 0
+# imagealpha 5 0 0
+# imagelayer 5 5
+# imageset 6 "bg_white"
+# imagealpha 6 1 0
+# imagepos 6 0 0
+# imagelayer 6 5
+# imagescale 6 3 0
+;;-----------------------------------------
+;;【EP1】修理完了
+;;背景：ラグーナ島全景
+# fadein "black" 1
+# textwindow "close"
+# waitandnext 1.3
+
+# imagealpha 6 0 1
+# imagealpha 2 1 0
+# imagepos 2 -150 -100
+# imagealpha 3 1 0
+# imagepos 3 80 240
+# imagealpha 4 1 0
+# imagepos 4 100 20
+# imagealpha 5 1 0
+# imagepos 5 -300 50
+# imagealpha 1 1 0
+# imagepos 1 0 10
+# waitandnext 1.4
+
+# imagemoveto 2 -300 -100 1
+# imagealpha 2 0 1
+# imagemoveto 3 100 240 1
+# imagealpha 3 0 1
+# imagemoveto 4 200 20 1
+# imagealpha 4 0 1
+# imagemoveto 5 -350 50 1
+# imagealpha 5 0 1
+# imagescale 1 1.1 1
+# waitandnext 1.3
+
+# textflame 0 0
+# textwindow "nomal"
+@
+青い海に浮かぶ常夏の島、
+ラグーナ島
+
+# textflame 0 0
+@
+その島ではキル姫達が
+外敵から島を守る使命を持ち
+日々戦い続ける
+
+# imagealpha 1 0 1
+# waitandnext 1.2
+
+# alpha 2101411 1 0.5
+# textflame 0 0
+@
+マスターとティルフィングは
+マスターとキル姫が結ぶ
+特殊な誓約があるという話を耳にした
+
+# textflame 0 0
+@
+その誓約を結んでみたいという
+ティルフィングに、マスターは
+やってみようとこたえる
+
+# alpha 2101411 0 0.5
+# alpha 2103811 1 0.5
+# alpha 2202211 1 0.5
+# textflame 0 0
+@
+アルマスや盤古、イージスも加わり
+誓約に詳しいフェイルノートに
+会いに行くことになった
+
+# move 2103811 5 0.5
+# move 2202211 1 0.5
+# alpha 2103811 0 0.5
+# alpha 2202211 0 0.5
+# alpha 22000111 1 0.5
+# waitandnext 1
+
+# move 22000111 2 0.5
+# alpha 22000111 0 0.5
+# waitandnext 1
+
+# alpha 2401921 1 0.5
+# textflame 0 0
+@
+フェイルノートは誓約に必要な
+『誓詞印紙』との交換条件に
+宝の眠る洞窟への道を求める
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# background "sea_cave"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 2401921 "sad"
+# textflame 0 0
+# textwindow "nomal"
+@
+盤古の活躍によってフェイルノートは
+探し求めた宝、デバイスを手にするが
+壊れていて使い物にならない
+
+# textflame 0 0
+@
+デバイスを修理してもらうため、
+マスター達はグランテピエを探す
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# background "sea_beach_day"
+# alpha 2401921 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 2303411 1 0.5
+# alpha 161 1 0.5
+# textflame 0 0
+# textwindow "nomal"
+@
+そしてグランテピエと相棒のムーを
+探し出し、壊れたデバイスを
+修理してもらうことになったのだが…
+
+# fadeout "black" 1
+# waitandnext 1.5
+
+;;背景：ビーチ（ラグーナ島）・昼
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1.5
+
+# textflame 1 1
+# textwindow "nomal"
+# voice 530341 "grandepieu_di_0002"
+@グランテピエ
+ムー、ここの部品も取り替える？
+ちょっと錆びてるみたいだし…
+
+# textflame 1 1
+# voice 9953 "mwu_0032"
+@ムー
+そうだなぁ…
+そのあたりはグラに任せた！
+適当にやっといてくれ
+
+# textflame 1 1
+@ムー
+俺はこっちの電気系統の方を
+やっておくから
+
+# textflame 1 1
+# voice 530341 "grandepieu_di_0003"
+@グランテピエ
+うん、わかった
+任せておいて
+
+# textflame 0 0
+@
+グランテピエとムーは慎重に、
+しかし慣れた手つきで
+テキパキと修理を進めていく
+
+# textflame 1 1
+# voice 9953 "mwu_0001"
+@ムー
+なあ、マスター
+このデバイスってやつは
+どこで手に入れたんだ？
+
+# textflame 0 0
+@
+フェイルノートが洞窟で見つけたんだ
+彼女は使い方も知っていたようだけど
+と、マスターはこたえる
+
+# textflame 1 1
+# voice 9953 "mwu_0040"
+@ムー
+あのお嬢ちゃんか…
+なあなあ、修理が終わったら
+これはどこに届けるんだ？
+
+# textflame 0 0
+@
+フェイルノートが待ってるから
+離れ小島まで行くよ
+と、マスター
+
+# textflame 1 1
+@ムー
+グラ、俺達も一緒に行こうぜ
+デバイスの説明もしたいしな！
+
+# textflame 1 1
+# face 2303411 "usual"
+# voice 530341 "grandepieu_di_0028"
+@グランテピエ
+私は構わないけど…いいのかな？
+
+# move 2202211 1 0
+# textflame 0 0
+@
+デバイスの説明が聞けるんなら
+フェイルノートは喜ぶと思うよ
+と、マスター
+
+# alpha 161 0 0.3
+# move 2202211 2 0.5
+# alpha 2202211 1 0.3
+# textflame 1 1
+# face 2202211 "normal"
+# voice 2022 "banko_0003"
+@盤古
+グランテピエが行くなら…
+我も…行く
+
+# textflame 1 1
+@グランテピエ
+大勢で押しかけたら
+フェイルノートに迷惑かなって…
+君はどう思う？
+
+# move 2101411 5 0
+# textflame 0 0
+@
+みんな一緒だと
+にぎやかで楽しいと思うけど
+と、マスターはのんきにこたえる
+
+# move 2202211 1 0.5
+# alpha 2202211 0 0.3
+# move 2101411 4 0.8
+# alpha 2101411 1 0.3
+# move 2303411 2 0.5
+# textflame 1 1
+# voice 1014 "tyrufing_0008"
+@ティルフィング
+個人的な用件にみなさんを
+巻き込んだのは私ですから…
+もし怒られたら、私が謝ります
+
+# textflame 1 1
+@グランテピエ
+個人的な用件って？
+
+# textflame 1 1
+# voice 1014 "tyrufing_0003"
+@ティルフィング
+私がマスターと特別な契約をしたくて
+情報を探していたら、
+アルマスさん達が助けてくれたんです
+
+# move 2103811 5 0
+# textflame 1 1
+@グランテピエ
+特別な契約？
+カシウス達と同じ誓約のこと、かな？
+
+# move 2103811 4 0.5
+# alpha 2103811 1 0.3
+# alpha 2101411 0 0.3
+# textflame 1 1
+# face 2103811 "sad"
+# voice 1038 "almace_0028"
+@アルマス
+ティファレトとフェイルノートにも
+聞いたんだけど、
+それとはちょっと違うみたいなの
+
+# move 22000111 5 0
+# alpha 2103811 0 0.3
+# alpha 2101411 1 0.3
+# textflame 1 1
+@ティルフィング
+島に伝承として伝わっている
+キル姫とマスターとで結ぶ
+特別な誓約です
+
+# move 22000111 4 0.5
+# alpha 22000111 1 0.3
+# alpha 2101411 0 0.3
+# textflame 1 1
+# face 22000111 "usual"
+# voice 5200011 "aegis_c_0003"
+@イージス
+私はその特別な誓約とやらに
+キル姫として興味をひかれたんだ
+アルマスもそうだろう？
+
+# alpha 22000111 0 0.3
+# alpha 2103811 1 0.3
+# textflame 1 1
+# face 2103811 "angry"
+# voice 1038 "almace_0042"
+@アルマス
+い、いまはデバイスの話でしょ！
+お姉ちゃん、
+あとどれくらいで直りそう？
+
+# textflame 1 1
+# voice 530341 "grandepieu_di_0003"
+@グランテピエ
+…そうだね
+修理はもう終わり
+あとはムーが組み立てるだけ、かな
+
+# alpha 2303411 0 0.3
+# alpha 2103811 0 0.3
+# move 161 3 0
+# alpha 161 1 0.3
+# textflame 1 1
+# voice 9953 "mwu_0004"
+@ムー
+…っと、これでよし！
+グラ、動作確認するぞ！
+
+# alpha 2303411 1 0.3
+# alpha 2103811 1 0.3
+# alpha 161 0 0.3
+# textflame 1 1
+# face 2103811 "normal"
+# face 2303411 "normal"
+# voice 530341 "grandepieu_di_0004"
+@グランテピエ
+そうだね
+…じゃ、アルマス
+ちょっとこれ持っててくれるかな
+
+# textflame 1 1
+# face 2103811 "surprise"
+@アルマス
+ん？
+デバイス？
+別にいいけど
+
+# textflame 1 1
+# voice 530341 "grandepieu_di_0028"
+@グランテピエ
+えっと…
+アルマス……だよ、っと
+
+# textflame 0 0
+@
+グランテピエが何かを呟きながら
+デバイスを指で軽く叩いている
+
+# se "SE_1074"
+# textflame 1 1
+@グランテピエ
+送信、と
+どう、アルマス？
+ちょっと画面見てみて
+
+# se "SE_1073"
+# textflame 1 1
+# voice 1038 "almace_0041"
+@アルマス
+画面…？
+あっ！すごい！
+文字が出てきた！
+
+# textflame 1 1
+# face 2103811 "angry"
+@アルマス
+って、お姉ちゃん！
+なんなのよ、この文章！
+
+# textflame 1 1
+# face 2103811 "sad"
+@アルマス
+わかってるけど
+改めて文字で伝えられると
+恥ずかしいっていうかっ…！
+
+# textflame 1 1
+# voice 530341 "grandepieu_di_0003"
+@グランテピエ
+うん、成功みたいだね
+私からの可愛い妹への気持ち、だよ
+
+# textflame 1 1
+@グランテピエ
+それで、アルマス…
+お姉ちゃんに相談したいこと、ない？
+
+# se "SE_1074"
+# textflame 0 0
+@
+グランテピエが再び画面を
+指でタッチしている
+# waitandnext 0.2
+
+# se "SE_1073"
+
+# textflame 1 1
+@アルマス
+うう…
+お姉ちゃんには全部お見通しなのね…
+
+# textflame 1 1
+# voice 530341 "grandepieu_di_0004"
+@グランテピエ
+ふふっ
+あとでゆっくり聞かせてね
+
+# textflame 1 1
+@アルマス
+う、うん
+
+# textflame 1 1
+# face 2103811 "usual"
+# voice 1038 "almace_0039"
+@アルマス
+でも、すごいわね
+これがあれば、離れてても
+意思疎通ができるってわけね
+
+# alpha 2303411 0 0.3
+# alpha 2103811 0 0.3
+# alpha 161 1 0.3
+# textflame 1 1
+# voice 9953 "mwu_0005"
+@ムー
+ふっふっふ！
+これの何が凄いかって
+文字だけじゃなくて物まで送れ…
+
+# alpha 161 0 0.3
+# move 2103811 3 0
+# mask 2103811 off
+# alpha 2103811 1 0.3
+# textflame 1 1
+# face 2103811 "angry"
+@アルマス
+よーし！これで直ったわね
+さっそくフェイルノートに
+絶・届けましょ！
+
+# alpha 161 1 0.3
+# alpha 2103811 0 0.3
+# textflame 1 1
+@ムー
+……
+
+# alpha 161 0 0.3
+# move 2101411 4 0
+# layer 2101411 2
+# mask 2101411 off
+# alpha 2101411 1 0.3
+# move 2202211 2 0
+# layer 2202211 3
+# mask 2202211 on
+# alpha 2202211 1 0.3
+# textflame 1 1
+# voice 1014 "tyrufing_0002"
+@ティルフィング
+また海を渡ることになりますが
+盤古さんは大丈夫ですか？
+
+# textflame 1 1
+# face 2202211 "surprise"
+# voice 2022 "banko_0013"
+@盤古
+ぬ…
+
+# alpha 2202211 0 0.3
+# move 2303411 2 0
+# layer 2303411 3
+# mask 2303411 on
+# alpha 2303411 1 0.3
+# textflame 1 1
+# face 2303411 "usual"
+# voice 530341 "grandepieu_di_0030"
+@グランテピエ
+盤古は私が見てるから、大丈夫
+ありがとう、ティルフィング
+…いい子だね
+
+# textflame 1 1
+# face 2101411 "sad"
+@ティルフィング
+いえ、そんなことは…
+あ！
+みなさん、気をつけてください！
+
+# alpha 2303411 0 0.3
+# alpha 2101411 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 2811004 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+@異族
+ググ…ギギギ…
+
+# alpha 2811004 0 0.3
+# move 2103811 4 0
+# layer 2103811 4
+# mask 2103811 on
+# alpha 2103811 1 0.3
+# move 22000111 2 0
+# layer 22000111 3
+# mask 22000111 off
+# alpha 22000111 1 0.3
+# textflame 1 1
+# voice 1038 "almace_0009"
+@アルマス
+もう、また異族なの？
+なんで海を渡ろうとすると
+現れるのよ！？
+
+# textflame 1 1
+@イージス
+こればかりは、
+言っても始まらないだろう
+我々がやるべきことは一つだ
+
+# fadeout "black" 0.5
+# waitandnext 0.5

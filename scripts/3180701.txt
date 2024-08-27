@@ -1,0 +1,220 @@
+# script "lisp"
+# background "road"
+;;結界出現演出
+# flush "white" 0.1 1
+# bgm "stop"
+# se "SE_0621"
+# fillrect "blue" 1.0 0 0.3
+# shakeloop 1
+# textwindow "close"
+# waitandnext 2
+
+# bgm "bgm031" 0
+# fillrect "blue" 1.0 0.3 0
+# textwindow "nomal"
+;;画面揺れ止める
+# shakestop
+;;さやか準備
+# body 102011
+# pos 102011 5
+;;杏子準備
+# body 301511
+# pos 301511 1
+;;制服ティル準備
+# body 101441
+# pos 101441 3
+# scale 101441 0.9 0
+# layer 101441 4
+;;さやか台詞
+# serif 0
+# textboxarrow 0 3
+# chara 102011
+# face 102011 "angry"
+# face 301511 "angry"
+# voice 9941 "fok_collabo2_0177_sayaka"
+@美樹さやか
+まどか！
+この結界！
+
+# body 401111
+# pos 401111 5
+# alpha 401111 0 0
+# serif 1
+# textboxarrow 1 1
+# chara 301511
+# voice 9941 "fok_collabo2_0178_kyoko"
+@佐倉杏子
+こいつは強力だよ
+
+# se "SE_0644"
+# waitandnext 0.3
+
+# serif 0
+# textboxarrow 0 2
+# chara 101441
+# face 101441 "sad"
+# voice 9941 "fok_collabo2_0179_tyrufing"
+@ティルフィング
+う…っ！
+
+;;さやか退場
+# alpha 102011 0 0.5
+;;まどか準備
+# alpha 401111 1 0.5
+;;まどか台詞
+# serif 1
+# textboxarrow 1 3
+# chara 401111
+# face 401111 "cry"
+# voice 9941 "fok_collabo2_0180_madoka"
+@鹿目まどか
+どうしたの？
+ティルちゃん！
+
+# serif 0
+# textboxarrow 0 1
+# move 102011 1 0
+# chara 301511
+# voice 9941 "fok_collabo2_0181_kyoko"
+@佐倉杏子
+大丈夫かよ？
+
+;;杏子退場
+# alpha 301511 0 0.5
+;;さやか登場
+# alpha 102011 1 0.5
+# serif 1
+# textboxarrow 1 1
+# chara 102011
+# face 102011 "sad1"
+# voice 9941 "fok_collabo2_0182_sayaka"
+@美樹さやか
+ティルちゃん？
+
+# body 101411
+# pos 101411 4
+# scale 101411 0.9 0
+# layer 101411 4
+# alpha 101411 0 0
+# face 101411 "mad"
+# serif 0
+# textboxarrow 0 2
+# chara 101441
+# face 101441 "angry1"
+# voice 9941 "fok_collabo2_0183_tyrufing"
+@ティルフィング
+…これは、キラーズ
+
+# textboxarrow 1 0
+# textboxarrow 0 1
+# leftout 102011 0.5
+# leftout 401111 0.5
+# move 101441 2 0.5
+# waitandnext 0.5
+
+;;ティルフィングのイミテーションが現れる。
+;;画面揺らす
+# shakeloop 0
+;;イミティルをゆっくり浮かび上がらせる
+;;# brightness 101411 0.2 0
+# alpha 101411 1 0.5
+
+;;画面揺れ止める
+# shakestop
+;;イミティル消す
+# rightout 101411 0.5
+;;全員だす
+# move 101441 5 0.5
+# pos 401111 3
+# mask 401111 on
+# leftin 401111 0.5
+# pos 301511 1
+# mask 301511 on
+# alpha 301511 1 0
+# leftin 301511 0.5
+# serif 1
+# textboxarrow 1 2
+# face 401111 "surprise"
+# chara 401111
+# voice 9941 "fok_collabo2_0184_madoka"
+@鹿目まどか
+なに、これ…
+
+# serif 0
+# textboxarrow 0 1
+# chara 301511
+# face 301511 "surprise"
+# voice 9941 "fok_collabo2_0185_kyoko"
+@佐倉杏子
+あれは…
+
+;;杏子退場
+# alpha 301511 0 0.5
+;;さやか登場
+# pos 102011 1
+# alpha 102011 1 0.5
+# layer 401111 1
+# serif 1
+# textboxarrow 1 1
+# chara 102011
+# face 102011 "sad2"
+# voice 9941 "fok_collabo2_0186_sayaka"
+@美樹さやか
+ティル、ちゃん…？
+
+# serif 0
+# textboxarrow 0 2
+# face 401111 "sad"
+# chara 401111
+# voice 9941 "fok_collabo2_0187_madoka"
+@鹿目まどか
+なんで…ティルちゃんが二人いるの？
+
+# serif 1
+# textboxarrow 1 3
+# chara 101441
+# voice 9941 "fok_collabo2_0188_tyrufing"
+@ティルフィング
+くっ…さ、下がってください
+私が…けりをつけます
+
+# serif 0
+# textboxarrow 0 2
+# chara 401111
+# voice 9941 "fok_collabo2_0189_madoka"
+@鹿目まどか
+でも…
+
+# serif 1
+;;QB準備
+# body 8
+# mask 8 off
+# pos 8 3
+# alpha 8 0 0
+# textboxarrow 1 3
+# chara 101441
+# voice 9941 "fok_collabo2_0190_tyrufing"
+# face 101441 "angry1"
+@ティルフィング
+あれはもう一人の私
+私のイミテーションです！
+
+#se "SE_5205"
+;;全員消す
+# alpha 102011 0 0.5
+# alpha 401111 0 0.5
+# alpha 101441 0 0.5
+# textboxarrow 0 0
+# textboxarrow 1 0
+# waitandnext 0.5
+
+# bgm "stop"
+;;QB出す
+# alpha 8 1 0.5
+# serif 0
+# textboxarrow 0 2
+# chara 8
+# voice 9941 "fok_collabo2_0191_kyube"
+@キュゥべえ
+さぁ、いよいよ始まるよ
+“淘汰”のときが

@@ -1,0 +1,323 @@
+;;-----------------------------------------
+;;SEA3章_12_1
+;;-----------------------------------------
+# script "lisp"
+# background "corridor_night"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 1
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;七支刀
+# body 5105111
+# pos 5105111 2
+# scale 5105111 0.8 0
+# layer 5105111 4
+# alpha 5105111 0 0
+;;パラシュ
+# body 6200411
+# pos 6200411 3
+# scale 6200411 0.8 0
+# layer 6200411 2
+# mask 6200411 off
+# alpha 6200411 0 0
+;;イシューリエル
+# body 6301411
+# pos 6301411 3
+# scale 6301411 0.8 0
+# layer 6301411 4
+# mask 6301411 off
+# alpha 6301411 0 0
+;;ghost
+# body 302
+# pos 302 5
+# scale 302 0.8 0
+# layer 302 1
+# mask 302 off
+# alpha 302 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：廊下（夜）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# face 6200411 "sad"
+# alpha 6200411 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@パラシュ
+…………
+
+# move 6200411 4 0.5
+# move 270 2 0.5
+# face 270 "angry"
+# alpha 270 1 0.3
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# textboxarrow 0 1
+@ミーミル
+パラシュさん！
+イシューリエルさんはどちらに？
+
+# textboxarrow 0 3
+@パラシュ
+見失った…
+気配を探ろうにも、
+こう余計なものが多いとね…
+
+# voice 1051 "shichishito_0015"
+# alpha 270 0 0.3
+# face 5105111 "sad"
+# alpha 5105111 1 0.3
+# textboxarrow 0 1
+@七支刀
+至るところに呪術の気配があります
+こんなに集まってきてるのは、
+やっぱり不自然ですよ
+
+# face 6200411 "usual"
+# textboxarrow 0 3
+@パラシュ
+町の心霊現象騒ぎは、本当に
+ここが「原因」なのかもしれない
+
+# textboxarrow 0 3
+@パラシュ
+とにかく、
+イシューリエルと合流しよう
+
+;;暗転
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+# se "bgm602_rhythm_on"
+# move 6200411 3 0
+# mask 6200411 off
+# alpha 6200411 0 0
+# alpha 5105111 0 0
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# face 6200411 "sad"
+# alpha 6200411 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@パラシュ
+おかしいな…
+この道、さっきも通ったような…
+
+# voice 9917 "mimir_navikan_0001"
+# alpha 6200411 0 0.3
+# face 270 "normal"
+# alpha 270 1 0.3
+# face 6504011 "usual"
+# alpha 6504011 1 0.3
+# textboxarrow 0 1
+@ミーミル
+随分、長いこと歩いております
+マスター様、お疲れでは
+ありませんか？
+
+# voice 650401 "manannan_ura_0004"
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+あ！
+面白そうな物があるよっ
+
+# voice 1051 "shichishito_0025"
+# alpha 270 0 0.3
+# alpha 6504011 0 0.3
+# move 6200411 2 0
+# layer 6200411 2
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# move 5105111 4 0
+# layer 5105111 4
+# mask 5105111 on
+# face 5105111 "surprise"
+# alpha 5105111 1 0.3
+# textboxarrow 0 3
+@七支刀
+きゃっ…！
+廊下の先に誰か、人影が…
+
+# textboxarrow 0 1
+@パラシュ
+複数いるね
+…ん？あれは
+
+# move 6200411 3 0.5
+# alpha 5105111 0 0.3
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# voice 2004 "parashu_0004"
+# face 6200411 "happy"
+# layer 5105111 2
+# mask 5105111 off
+# se "bgm602_basic_on_1"
+# textboxarrow 0 2
+@パラシュ
+何だ
+ただの鏡だよ
+
+# alpha 6200411 0 0.3
+# face 270 "normal"
+# alpha 270 1 0.3
+# face 5105111 "sad"
+# alpha 5105111 1 0.3
+# textboxarrow 0 1
+@ミーミル
+廊下の突き当たりに、
+どうしてこんなに大きな鏡が
+設置してあるのでしょう？
+
+# voice 1051 "shichishito_0015"
+# textboxarrow 0 3
+@七支刀
+鏡…ひょっとして、
+これも廃病院にある
+噂の一つでは…
+
+# face 6200411 "sad"
+# alpha 6200411 1 0.3
+# alpha 270 0 0.3
+# alpha 5105111 0 0.3
+# textboxarrow 0 2
+@パラシュ
+ふむ…
+可能性はあるね
+どんな噂かは分からないけど…
+
+;;幽霊が画面を通り過ぎる
+# se "SE_11585"
+#setnextbgmblock 1
+# move 302 1 1.5
+# alpha 302 0.4 0.7
+# waitandnext 0.7
+
+# alpha 302 0 0.7
+# waitandnext 0.7
+
+# voice 2004 "parashu_0024"
+# face 6200411 "normal"
+# textboxarrow 0 2
+@パラシュ
+ん？
+今、後ろに…誰もいないか…
+
+;;パラシュの後ろに幽霊が現れる
+# se "SE_11585"
+# move 302 5 0
+# alpha 302 0.4 1
+# waitandnext 1
+
+# textboxarrow 0 2
+@パラシュ
+…………
+
+;;幽霊が大きくなる
+# se "SE_12456"
+# scale 302 0.9 1
+# alpha 302 0.6 1
+# waitandnext 1
+
+# textboxarrow 0 2
+@パラシュ
+…………
+
+;;幽霊が更に大きくなる
+# se "SE_11862"
+# scale 302 1 1
+# alpha 302 0.8 1
+# waitandnext 1
+
+# textboxarrow 0 2
+@パラシュ
+…………
+
+#setnextbgmblock 2
+# serif 1
+@イシューリエル
+パラシュ、後ろですわ！
+
+# serif 0
+# voice 2004 "parashu_0022"
+# face 6200411 "surprise"
+# textboxarrow 0 2
+@パラシュ
+えっ？
+
+# alpha 302 1 1
+# move 6200411 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "toge"
+# textboxarrow 0 0
+@悪霊
+オオオオオオオオオオ！
+
+# voice 1051 "shichishito_0025"
+# alpha 302 0 0.3
+# alpha 6200411 0 0.3
+# move 5105111 2 0
+# layer 5105111 2
+# mask 5105111 off
+# face 5105111 "surprise"
+# alpha 5105111 1 0.3
+# move 6504011 4 0
+# layer 6504011 4
+# mask 6504011 on
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@七支刀
+鏡の中からおっきな幽霊様が…！
+
+# voice 650401 "manannan_ura_0005"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+出た、出た～！
+
+# voice 2004 "parashu_battle_0005"
+# move 6200411 3 0
+# face 6200411 "angry"
+# alpha 6200411 1 0.3
+# alpha 6504011 0 0.3
+# alpha 5105111 0 0.3
+# textboxarrow 0 2
+@パラシュ
+ボクの背後を狙うなんて、
+志の低い攻撃なんかに
+負けたりしないよ！
+
+;;バトル
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 6200411 0 0
+# waitandnext 0.2

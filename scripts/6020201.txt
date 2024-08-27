@@ -1,0 +1,229 @@
+;;第２話タイトル：粛清対象
+;;視点：マスター
+;;ボス：ラース、ラスト
+;;バトルマップ：平原
+;;戦闘前
+;;【指定】bgm005
+;;黒奏官登場
+# script "lisp"
+# background "forest"
+# bgm "bgm005" 0
+# body 400131
+# pos 400131 1
+# scale 400131 0.8 0
+# body 100111
+# pos 100111 3
+# scale 100111 0.8 0
+# body 41
+# pos 41 3
+# mask 41 off
+# scale 41 0.8 0
+# alpha 400131 0 0
+# alpha 100111 0 0
+# textflame 1 1
+# textboxarrow 0 2
+# chara 41
+# face 41 "smile"
+@？？？
+異族討伐、ご苦労
+
+# textflame 0 0
+@
+話しかけてきた、怪しい男に
+怪訝さを覚える
+マスター一行
+
+;;アルテミス、マサムネ登場
+# textflame 1 1
+# textboxarrow 0 1
+# move 41 5 0.4
+# mask 41 on
+# leftin 100111 0.4
+# leftin 400131 0.5
+# alpha 100111 1 0
+# alpha 400131 1 0
+# chara 400131
+# voice 4001 "arutemisu_0001"
+# face 100111 "nutual"
+# face 400131 "nutual"
+@アルテミス
+マスター、下がってください
+
+# textboxarrow 0 2
+# chara 100111
+# voice 1001 "masamune_0009"
+@マサムネ
+そなた、何者だ
+
+# textboxarrow 0 3
+# chara 41
+# face 41 "normal"
+@？？？
+あまり自分では言いたくはないが
+"ラグナロク教会の暗部"…
+そういえばわかってもらえるか？
+
+# textflame 0 0
+@
+"ラグナロク教会の暗部"
+というワードと
+黒ずくめの衣装――
+
+# textflame 0 0
+@
+まさか黒奏官…？
+とつぶやくマスター
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 400131
+# voice 4001 "arutemisu_unit_1007"
+# face 400131 "surprise"
+@アルテミス
+…！
+噂程度ですが
+聞いたことがあります
+
+# textboxarrow 0 1
+# chara 400131
+# face 400131 "nutual"
+@アルテミス
+ラグナロク教会に
+危害を及ぼすものを粛清する、
+
+# textboxarrow 0 1
+# chara 400131
+@アルテミス
+黒奏官と呼ばれる
+暗躍部隊が存在すると…
+
+# textflame 0 0
+@
+噂の対象が
+目の前に現れたことに
+動揺し始めるキル姫達
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 100111
+# voice 1001 "masamune_0024"
+@マサムネ
+だが、その黒奏官とやらが
+なぜ拙者達の前に…
+
+# textboxarrow 0 3
+# chara 41
+@黒奏官
+分不相応な記憶を
+持つお前たちを粛清しにきた…
+それだけだ
+
+# textboxarrow 0 2
+# chara 100111
+@マサムネ
+分不相応な記憶…？
+いったいなんの話だ
+
+# textboxarrow 0 3
+# chara 41
+# face 41 "smile"
+@黒奏官
+知る必要はない
+お前らはここで
+粛清されるのだからな
+
+# textboxarrow 0 1
+# chara 400131
+# voice 4001 "arutemisu_0022"
+# face 400131 "surprise"
+@アルテミス
+なっ…！？
+
+# textboxarrow 0 3
+# chara 41
+# face 41 "normal"
+@黒奏官
+と、いうわけだ
+この２人のマスターである
+お前に問う
+
+# textboxarrow 0 3
+# chara 41
+@黒奏官
+この２人をこちらに渡せ
+
+# select "できるわけないだろう！" "select_label_01" "なにを考えてるんだ！" "select_label_02" "断ると言ったら…？" "select_label_03"
+この２人をこちらに渡せ
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 41
+@黒奏官
+そうか、ならば仕方ない
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 41
+@黒奏官
+…残念だ
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 41
+@黒奏官
+その答えは
+あまり利口とは言えないな…
+
+# label "select_label_end"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 41
+@黒奏官
+では、現時点をもって、
+お前も粛清対象とする
+
+;;マサムネ、アルテミス消す
+# textboxarrow 0 0
+# move 41 3 0.5
+# body 100161
+# pos 100161 1
+# scale 100161 0.8 0
+# body 400151
+# pos 400151 5
+# scale 400151 0.8 0
+# alpha 400151 0 0
+# alpha 100161 0 0
+# alpha 400131 0 0.3
+# alpha 100111 0 0.3
+# layer 41 3
+# layer 100161 2
+# layer 400151 1
+# waitandnext 1
+
+;;ラース表示
+# fadein "black" 1
+# alpha 100161 1 0.5
+# textboxarrow 0 2
+# chara 41
+@黒奏官
+”ラース”…
+
+;;ラスト表示
+# fadein "black" 1
+# alpha 400151 1 0.5
+# textboxarrow 0 2
+# chara 41
+@黒奏官
+”ラスト”…
+
+# textboxarrow 0 2
+# chara 41
+# face 41 "smile"
+@黒奏官
+行け！

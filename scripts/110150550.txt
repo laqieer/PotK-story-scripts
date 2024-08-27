@@ -1,0 +1,299 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー15章
+;;第5話　タイトル：絶望世界から
+;;5_5_10
+;;背景：室内
+;;-----------------------------------------
+# script "lisp"
+# background "church_room"
+# bgmfile "bgm323" "BgmLostRagnarokCommand" 0
+;;-----------------------------------------
+;;エルキュール(コマンド)
+# body 3202519
+# pos 3202519 3
+# scale 3202519 0.8 0
+# layer 3202519 3
+# alpha 3202519 0 0
+;;ミネルヴァ(コマンド)
+# body 3302519
+# pos 3302519 3
+# scale 3302519 0.8 0
+# layer 3302519 3
+# alpha 3302519 0 0
+;;ダモクレス(コマンド)
+# body 3103519
+# pos 3103519 3
+# scale 3103519 0.8 0
+# layer 3103519 3
+# alpha 3103519 0 0
+;;ミストルティン
+# body 3600611
+# pos 3600611 3
+# scale 3600611 0.8 0
+# layer 3600611 3
+# alpha 3600611 0 0
+;;-----------------------------------------
+# move 3202519 2 0
+# alpha 3202519 1 0
+# move 3600611 4 0
+# alpha 3600611 1 0
+# face 3600611 "angry"
+# voice 360061 "misutoru_ge_battle_0003"
+# textwindow "nomal"
+# textboxarrow 0 3
+@ミストルティン
+マスター様に害をなすつもりですか…
+それなら、死になさい！
+
+# voice 320251 "hercule_c_unit_0005"
+# textboxarrow 0 1
+@エルキュール
+私は信念に従い、突き進むだけ！
+
+# se "SE_4601"
+# move 3202519 3 0.2
+# textboxarrow 0 0
+# fadein "white" 0.5
+# waitandnext 0.3
+
+# voice 360061 "misutoru_ge_0037"
+# textboxarrow 0 2
+@ミストルティン
+ぐっ…！
+
+;;ミストルティンが画面から外れる
+# rightout 3600611 0.3
+# mask 3202519 off
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 3600611 0 0
+# serif 1
+# textwindow "nomal"
+@とある奏官
+クソッ…
+教会のキル姫がここまで強引に
+攻めてくるとはっ
+
+# serif 1
+@とある奏官
+分かりました
+和平の提案に応じましょう
+ただし、それは他の奏官達が皆――
+
+# voice 320251 "hercule_c_0007"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@エルキュール
+その必要はありません
+あなた達は皆、その存在を消し去ら
+なければならないのですから
+
+;;斬撃音
+;;血しぶき演出
+# se "SE_4830"
+# fadein "red" 0.5
+# waitandnext 0.5
+
+# serif 1
+@とある奏官
+ガハアッ…
+そんな…キル姫が奏官を…
+殺すなど…
+
+# se "SE_3001"
+# move 3202519 2 0.5
+# mask 3202519 on
+# alpha 3202519 1 0.5
+# move 3600611 4 0
+# mask 3600611 on
+# alpha 3600611 1 0.5
+# face 3600611 "angry"
+# voice 360061 "misutoru_ge_battle_0008"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+@ミストルティン
+マスター様ぁぁぁっ…！！
+こんなこと、あっていいはずが…
+
+# textboxarrow 0 3
+@ミストルティン
+よくもマスター様を…
+死になさい！
+
+# voice 320251 "hercule_c_0017"
+# textboxarrow 0 1
+@エルキュール
+マスターへの依存、独占欲、
+激しい思い…
+
+# textboxarrow 0 1
+@エルキュール
+そういった感情は不要です
+バイブスに穢された憐れなキル姫
+
+# textboxarrow 0 1
+@エルキュール
+あなたも消し去ります
+
+# se "SE_4830"
+;;エルキュールがミストルティンを斬る
+# textboxarrow 0 0
+# move 3202519 3 0.2
+# fadein "red" 0.3
+# waitandnext 0.3
+
+# voice 360061 "misutoru_ge_0017"
+# textboxarrow 0 3
+@ミストルティン
+いやっ…嫌です…こんな、ところで…
+
+# voice 320251 "hercule_c_0007"
+# textboxarrow 0 2
+@エルキュール
+あなた達に関しては、
+ピサールの言う通りですね
+
+# textboxarrow 0 2
+@エルキュール
+死をもって救済します！
+
+;;斬撃音
+# se "SE_4830"
+;;暗転
+# fadein "red" 0.5
+# waitandnext 0.5
+
+# fadeout "black" 1
+# waitandnext 0.8
+
+# textwindow "close"
+# alpha 3202519 0 0
+# alpha 3600611 0 0
+;;背景：町
+# background "town"
+# bgmfile "bgm325" "BgmLostRagnarokCommand" 0
+# waitandnext 0.7
+
+# fadein "black" 1
+# waitandnext 1
+
+# move 3202519 2 0
+# alpha 3202519 1 0.5
+# move 3302519 4 0
+# alpha 3302519 1 0.5
+# voice 330251 "minerva_c_0007"
+# textwindow "nomal"
+# textboxarrow 0 3
+;;ミネルヴァ（神令・オーディン）
+@ミネルヴァ
+この町も静かになりました
+私の計算通り
+完全勝利です
+
+# voice 320251 "hercule_c_0032"
+# textboxarrow 0 1
+@エルキュール
+喜んでいる暇なんてありません
+早く先に進まなくては
+
+# voice 330251 "minerva_c_0003"
+# textboxarrow 0 3
+@ミネルヴァ
+バイブス所持者を見つけ出すのも
+難しくなってきましたね
+
+# textboxarrow 0 3
+@ミネルヴァ
+もちろん、逃がしはしませんけれど
+ねぇ、ニケ？
+
+# alpha 3202519 0 0.5
+# move 3103519 1 0
+# alpha 3103519 1 0.5
+# voice 310351 "damocles_c_0005"
+# textboxarrow 0 1
+@ダモクレス
+クレス様、
+今日もたくさん愛してあげたよ
+
+# textboxarrow 0 1
+@ダモクレス
+他人と争いたがる人達は、
+一人残らずクレス様が
+愛してあげるんだっ
+
+# alpha 3302519 0 0.5
+# alpha 3103519 0 0.5
+# move 3202519 3 0
+# mask 3202519 off
+# alpha 3202519 1 0.5
+# textboxarrow 0 2
+@エルキュール
+やっと…戦いが、争いが、
+この世界からなくなりますね
+
+# textboxarrow 0 2
+@エルキュール
+世界の救済まであと少し
+私は決して歩みを止めません
+
+# textboxarrow 0 2
+@エルキュール
+この世界からバイブスを、共鳴を、
+完全に消し去ります！
+
+# textboxarrow 0 2
+@エルキュール
+みんなが笑って暮らせる世界のために
+そのためにはこの身が朽ち果てても
+構いません
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textboxarrow 0 2
+@エルキュール
+どこまでも、突き進みます！
+
+;;背景：黒
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# imagealpha 0 1 1
+# imagepos 0 0 30
+# waitandnext 0.8
+
+# background "bg_black"
+# waitandnext 0.7
+
+# imagealpha 0 0 1
+# imagepos 0 0 30
+# waitandnext 1
+
+# textwindow "nomal"
+# voice 320251 "hercule_c_0024"
+# textboxarrow 0 2
+@エルキュール
+“彼女”が言っていた通り、
+とても過酷な道でした――
+
+# textboxarrow 0 2
+@エルキュール
+でも、やっと長い長いトンネルを
+抜けて光を見出したんです――
+
+# textboxarrow 0 2
+@エルキュール
+みんなの希望になる
+そのためには――
+
+# textboxarrow 0 2
+@エルキュール
+感情も何も必要ない
+ただ、信念に従うだけなんです！

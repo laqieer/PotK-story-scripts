@@ -1,0 +1,373 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１６章 章タイトル「・中心部決戦―エクリプス―」
+;;第2話―１１　タイトル：前夜
+;;2_11_3
+;;スクリプト最後の背景：中心部（夜）：in_city_night
+;;-----------------------------------------
+# script "lisp"
+# background "in_city_night"
+# bgmfile "bgm447_1" "BgmNeoRagnarok" 0
+;;-----------------------------------------
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 2
+# alpha 5101431 0 0
+# mask 5101431 off
+;;レーヴァテイン・擬彩
+# body 5100231
+# pos 5100231 3
+# scale 5100231 0.8 0
+# layer 5100231 2
+# alpha 5100231 0 0
+# mask 5100231 off
+;;テュルソス・D. plug・フォルネウス
+# body 3600311
+# pos 3600311 3
+# scale 3600311 0.8 0
+# layer 3600311 2
+# alpha 3600311 0 0
+# mask 3600311 off
+;;フォルカス・神令・ヘル
+# body 5301811
+# pos 5301811 3
+# scale 5301811 0.8 0
+# layer 5301811 2
+# alpha 5301811 0 0
+# mask 5301811 off
+;;グリモワール・獣刻・ニーズヘッグ 大罪ver.
+# body 5501711
+# pos 5501711 3
+# scale 5501711 0.8 0
+# layer 5501711 2
+# alpha 5501711 0 0
+# mask 5501711 off
+;;アスカロン・D. plug・レヴィアタン 大罪ver.
+# body 5102311
+# pos 5102311 3
+# scale 5102311 0.8 0
+# layer 5102311 2
+# alpha 5102311 0 0
+# mask 5102311 off
+;;リサナウト・誓約・クロノス
+# body 5203011
+# pos 5203011 3
+# scale 5203011 0.8 0
+# layer 5203011 2
+# alpha 5203011 0 0
+# mask 5203011 off
+;;-----------------------------------------
+;;//剣戟音
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_9084"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# serif 1
+@？？？
+ガ…………
+
+;;//魔獣化キラーメイルが皆、倒れる
+# se "SE_3001"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# move 5101431 3 0
+# face 5101431 "surprise"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 510143 "tyrufing_iz_0024"
+@ティルフィング
+何が、起きたんですか…？
+
+# alpha 5101431 0 0.5
+# move 5501711 2 0
+# face 5501711 "surprise"
+# alpha 5501711 1 0.5
+# mask 5501711 on
+# textboxarrow 0 1
+# move 5102311 4 0
+# face 5102311 "surprise"
+# alpha 5102311 1 0.5
+# mask 5102311 on
+# voice 350171 "grimoire_ge_0025"
+@グリモワール
+嘘でしょ…！
+キラーメイル達が一瞬で…しかも…
+
+# textboxarrow 0 3
+@アスカロン
+皆さん、身動きを封じられて、
+昏倒しています
+どうやって…？
+
+# face 5102311 "usual"
+# textboxarrow 0 3
+@アスカロン
+私達があんなに苦戦してたのに、
+たった一人で制してみせるなんて…
+その力、羨ましいっ
+
+;;フォルカス（独白）
+# alpha 5501711 0 0.5
+# alpha 5102311 0 0.5
+# move 5301811 3 0
+# face 5301811 "surprise"
+# alpha 5301811 1 0.5
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 5301811 off
+@フォルカス
+…周囲に群れていた魔獣達も
+姿が見当たりません
+あれだけの数を、まさか一人で？
+
+;;フォルカス（独白）
+# face 5301811 "angry"
+# textboxarrow 0 0
+@フォルカス
+どういうことですか？
+リサナウトの力はここまで強く
+なかったはず…
+
+# alpha 5301811 0 0.5
+# move 5203011 3 0
+# face 5203011 "normal"
+# alpha 5203011 1 0.5
+# mask 5203011 off
+# textboxarrow 0 2
+# textwindow "normal"
+@リサナウト
+確定事象は覆らない
+そう、それだけのことよ
+
+# bgm "stop"
+# face 5203011 "happy1"
+# textboxarrow 0 2
+# voice 520301 "risanautr_ca_0004"
+@リサナウト
+ふぅ…
+それじゃ、行きましょ
+ティルフィング
+
+# move 5203011 2 0.5
+# mask 5203011 on
+# move 5101431 4 0
+# face 5101431 "surprise"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# textboxarrow 0 3
+# voice 510143 "tyrufing_iz_0022"
+@ティルフィング
+えっ？
+あ、あのっ――
+
+;;//リサナウトとティルフィングが消える
+# se "SE_5373"
+# textwindow "close"
+# alpha 5203011 0 0.5
+# alpha 5101431 0 0.5
+# waitandnext 0.5
+
+# move 5501711 2 0
+# face 5501711 "usual"
+# alpha 5501711 1 0.5
+# mask 5501711 on
+# move 5102311 4 0
+# face 5102311 "surprise"
+# alpha 5102311 1 0.5
+# mask 5102311 on
+# textboxarrow 0 3
+# textwindow "normal"
+@アスカロン
+あれっ…？
+リサナウトが…ティルフィングさんも
+いなくなりましたっ
+
+# face 5501711 "normal"
+# textboxarrow 0 1
+@グリモワール
+ああ、もうっ
+苛々させるわね、あいつ…！
+
+;;フォルカス（独白）
+# alpha 5501711 0 0.5
+# alpha 5102311 0 0.5
+# move 5301811 3 0
+# face 5301811 "normal"
+# alpha 5301811 1 0.5
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 5301811 off
+@フォルカス
+あの力…
+脅威になり得ますね
+
+;;//フォルカスが立ち去る
+# se "SE_0740"
+# textwindow "close"
+# alpha 5301811 0 0.5
+# waitandnext 0.5
+
+# move 5501711 2 0
+# face 5501711 "usual"
+# alpha 5501711 1 0.5
+# mask 5501711 on
+# move 5102311 4 0
+# face 5102311 "sad"
+# alpha 5102311 1 0.5
+# mask 5102311 on
+# textboxarrow 0 3
+# textwindow "normal"
+@アスカロン
+あ、フォルカス…！
+また、何も話せませんでした…
+
+# textboxarrow 0 1
+# voice 350171 "grimoire_ge_0007"
+@グリモワール
+今回は仕方ないわ
+それより、早くマスターを
+見つけないと…！
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 5501711 0 0
+# alpha 5102311 0 0
+# move 5101431 3 0
+# face 5101431 "surprise"
+# alpha 5101431 1 0
+# mask 5101431 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm409" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+えっ…？
+ここは…
+
+# alpha 5101431 0 0.5
+# move 5203011 2 0
+# face 5203011 "normal"
+# alpha 5203011 1 0.5
+# mask 5203011 on
+# textboxarrow 0 1
+# move 3600311 4 0
+# face 3600311 "angry"
+# alpha 3600311 1 0.5
+# mask 3600311 on
+# voice 520301 "risanautr_ca_0002"
+@リサナウト
+カミトの容態はどう？
+
+# face 3600311 "normal"
+# textboxarrow 0 3
+@テュルソス
+蘇生は成功したよ
+意識はまだ戻ってないけどね
+
+# face 5203011 "happy1"
+# textboxarrow 0 1
+# voice 520301 "risanautr_ca_0032"
+@リサナウト
+じゃ、今のうちにやっちゃいましょ
+ティルフィング、ほら！
+
+# alpha 5203011 0 0.5
+# alpha 3600311 0 0.5
+# move 5101431 3 0
+# face 5101431 "sad"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+@ティルフィング
+カミト…
+何が起きたんですか？
+
+# move 5101431 2 0.5
+# mask 5101431 on
+# move 5100231 4 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+# textboxarrow 0 3
+@レーヴァテイン
+ティル…！
+側を離れて、ごめん…
+
+# face 5101431 "happy"
+# textboxarrow 0 1
+# voice 510143 "tyrufing_iz_0004"
+@ティルフィング
+レーヴァテイン
+アナタが無事で良かった
+…そこに寝ているのは
+
+# face 5100231 "happy"
+# textboxarrow 0 3
+@レーヴァテイン
+うん…兄さん…
+カミトが…助けてくれたんだ
+
+# face 5101431 "normal"
+# textboxarrow 0 1
+# voice 510143 "tyrufing_iz_0040"
+@ティルフィング
+カミトが…
+ああ、そういうことだったんですね
+
+# alpha 5101431 0 0.5
+# alpha 5100231 0 0.5
+# move 5203011 3 0
+# face 5203011 "sad"
+# alpha 5203011 1 0.5
+# mask 5203011 off
+# textboxarrow 0 2
+# voice 520301 "risanautr_ca_0028"
+@リサナウト
+でも、彼が頑張りすぎたせいで義手が
+壊れちゃったのよね
+
+# textboxarrow 0 2
+@リサナウト
+ディスラプターを取り出すことは
+できそうだけど…
+
+# alpha 5203011 0 0.5
+# move 5101431 3 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+# voice 510143 "tyrufing_iz_0003"
+@ティルフィング
+私が受け継ぎます
+そして、アスカロン達が戦っている
+キラーメイルも助けます
+
+# alpha 5101431 0 0.5
+# move 5203011 3 0
+# face 5203011 "happy1"
+# alpha 5203011 1 0.5
+# mask 5203011 off
+# textboxarrow 0 2
+# voice 520301 "risanautr_ca_0036"
+@リサナウト
+お願いね
+私は少し、用事があるから

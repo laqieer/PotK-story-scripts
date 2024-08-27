@@ -1,0 +1,487 @@
+;;-----------------------------------------
+;;押忍！3_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "stop"
+;;-----------------------------------------
+;;デュリン
+# body 62
+# pos 62 3
+# scale 62 0.8 0
+# layer 62 5
+# mask 62 off
+# alpha 62 0 0
+# body 0
+# alpha 0 0 0
+;;ティルフィング（はじ）
+# body 6101411
+# pos 6101411 2
+# scale 6101411 0.8 0
+# layer 6101411 2
+# mask 6101411 off
+# alpha 6101411 0 0
+;;フライクーゲル服
+# body 346
+# pos 346 4
+# scale 346 0.8 0
+# layer 346 2
+# mask 346 off
+# alpha 346 0 0
+;;スラーンド服
+# body 348
+# pos 348 2
+# scale 348 0.8 0
+# layer 348 4
+# alpha 348 0 0
+;;フェイルノート服
+# body 347
+# pos 347 2
+# scale 347 0.8 0
+# layer 347 2
+# mask 347 off
+# alpha 347 0 0
+;;異族
+# body 349
+# pos 349 2
+# scale 349 0.8 0
+# layer 349 3
+# mask 349 off
+# alpha 349 0 0
+# reversal 349 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;背景：街中
+# textwindow "close"
+# waitandnext 0.2
+
+;;背景：平原
+# background "plain"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_0618"
+# serif 1
+# textflame 1 1
+@異族たち
+キィアーッシャ～
+
+# bgm "bgm003" 0
+# alpha 62 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@デュリン
+はいおつかれ～
+
+# alpha 62 0 0.3
+# alpha 346 1 0.3
+# alpha 348 1 0.3
+# textboxarrow 0 3
+@フライクーゲル
+ふぅ…意外とはーどだったね
+そろそろカロリーが必要だよ
+
+# textboxarrow 0 1
+@スラーンド
+あんなにさけんだり、はしったり…
+
+# alpha 346 0 0.3
+# alpha 348 0 0.3
+# alpha 347 1 0.3
+# move 62 4 0
+# alpha 62 1 0.3
+# textboxarrow 0 1
+@フェイルノート
+意識して動くと
+戦闘が一番のトレーニングに
+なるっていうのは理に適ってるわ…
+
+# textboxarrow 0 1
+@フェイルノート
+上半身が重い…
+
+# face 62 "occur"
+# textboxarrow 0 3
+@デュリン
+特訓はまだ始まったばかりよ
+これからイベント当日まで
+みっちりとしごいてあげるわ！
+
+# alpha 347 0 0.3
+# alpha 62 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# move 6101411 3 0
+# voice 610141 "tyrufing_7th_0028"
+# face 6101411 "surprise"
+# alpha 6101411 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ティルフィング
+…………何か忘れているような
+
+;;演出：時間経過の暗転
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+;;背景：黒
+# background "bg_black"
+# alpha 6101411 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1.5
+# waitandnext 1.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+そうして訪れたイベント当日――
+
+;;演出：時間経過の暗転
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+;;背景：控室
+# background "masamune_room"
+# textwindow "close"
+# waitandnext 0.5
+
+# move 349 1 0
+# layer 349 3
+# mask 349 on
+# move 62 3 0
+# layer 62 5
+# mask 62 off
+# move 347 5 0
+# layer 347 2
+# mask 347 off
+# fadein "black" 1.5
+# waitandnext 1.5
+
+# voice 9999 "durin_0015"
+# alpha 349 1 0.3
+# face 62 "worry"
+# alpha 62 1 0.3
+# alpha 347 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@デュリン
+アタシとしたことが…！
+
+# se "SE_0829"
+# textboxarrow 0 1
+@異族
+キキィ？
+
+# textboxarrow 0 3
+@フェイルノート
+どうしたのよ
+イベント当日に
+団長がしょぼくれた顔しないでよ
+
+# voice 9999 "durin_0009"
+# face 62 "angry"
+# textboxarrow 0 2
+@デュリン
+これがしょぼくれずに
+いられるかって話よ！
+
+# alpha 349 0 0.3
+# alpha 62 0 0.3
+# alpha 347 0 0.3
+# move 348 3 0
+# mask 348 off
+# alpha 348 1 0.3
+# textboxarrow 0 2
+@スラーンド
+でも…オウエンダンの
+はっぴょうのひなんだから
+もっとどーんってしてないと！
+
+# voice 9999 "durin_0027"
+# alpha 348 0 0.3
+# face 62 "worry"
+# alpha 62 1 0.3
+# textboxarrow 0 2
+@デュリン
+…心配かけて悪かったわ
+でも、もっとつらい思いを
+させてしまう話になるわ
+
+;;wait　2秒くらい
+# textflame 0 0
+@
+・・・
+# waitandnext 2
+
+# bgm "bgm004" 0
+# face 62 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@デュリン
+イベントの為に
+特訓するのに夢中で
+イベント自体の宣伝を忘れていたのよ
+
+# alpha 62 0 0.3
+# move 347 3 0
+# mask 347 off
+# alpha 347 1 0.3
+# textboxarrow 0 2
+@フェイルノート
+え、それって…
+
+# alpha 347 0 0.3
+# move 62 4 0
+# alpha 62 1 0.3
+# move 346 2 0
+# layer 346 2
+# mask 346 off
+# alpha 346 1 0.3
+# textboxarrow 0 3
+@デュリン
+宣伝してない場所に
+人が集まる訳ないって話よ…
+
+# textboxarrow 0 1
+@フライクーゲル
+おー…
+どんうぉりぃ団長…
+
+# voice 9999 "durin_0042"
+# textboxarrow 0 3
+@デュリン
+ありがとう…
+でも、ダメダメなアタシは
+どうにもならないわね
+
+# move 6101411 1 0
+# layer 6101411 2
+# mask 6101411 off
+# textboxarrow 0 3
+@デュリン
+自分達のことすら宣伝できない
+アタシにファンキルを盛り上げる
+ことなんてできる訳がないわよね…
+
+;;演出：ティルフィングin
+# se "SE_0719"
+# alpha 346 0 0.3
+# move 6101411 2 0.5
+# alpha 6101411 1 0.3
+# textboxarrow 0 1
+@ティルフィング
+デュリン、
+どうしたのそんな暗い顔して？
+
+# textboxarrow 0 1
+@ティルフィング
+もうイベントの時間でしょ？
+早く支度しないと…
+
+# voice 9999 "durin_0015"
+# textboxarrow 0 3
+@デュリン
+ティルフィング…
+もういいのよ、アタシは失敗したのよ
+
+# textboxarrow 0 1
+@ティルフィング
+…もしかして、宣伝のこと？
+
+# face 62 "worry"
+# textboxarrow 0 3
+@デュリン
+なんだ、わかってるじゃない
+
+# bgm "stop"
+# voice 610141 "tyrufing_7th_0004"
+# face 6101411 "usual"
+# textboxarrow 0 1
+@ティルフィング
+ふふ、私もそのことに気付いたけど
+それ以上に気付いたことがあったの
+
+# textboxarrow 0 3
+@デュリン
+それ以上に？
+一体何の話――
+
+;;会場の歓声
+;;wait 3秒くらい
+# se "SE_6252"
+# textwindow "close"
+# waitandnext 3
+
+# textflame 0 0
+# textwindow "nomal"
+@
+デュリンの言葉を
+途中でかき消すように
+多くの人々の声が響いてくる
+
+# bgm "bgm035" 0
+# voice 9999 "durin_0019"
+# face 62 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@デュリン
+え…？
+
+# alpha 62 0 0.3
+# alpha 6101411 0 0.3
+# move 346 4 0
+# alpha 346 1 0.3
+# move 349 2 0
+# layer 349 4
+# mask 349 on
+# alpha 349 1 0.3
+# textboxarrow 0 3
+@フライクーゲル
+わお…人がいっぱいじゃないか
+ばっと、人だけじゃない
+キル姫に、異族もめにぃ！
+
+# textboxarrow 0 1
+@異族
+キャアアアアア！
+
+# alpha 346 0 0.3
+# alpha 349 0 0.3
+# move 348 2 0
+# layer 348 4
+# mask 348 on
+# alpha 348 1 0.3
+# move 347 4 0
+# layer 347 2
+# mask 347 off
+# alpha 347 1 0.3
+# textboxarrow 0 1
+@スラーンド
+え、でも
+せんでんしてなかったんだよね？
+
+# textboxarrow 0 3
+@フェイルノート
+わかったわ
+ティルフィングがやったのね！
+
+# alpha 348 0 0.3
+# alpha 347 0 0.3
+# face 62 "sad"
+# alpha 62 1 0.3
+# voice 610141 "tyrufing_7th_0034"
+# alpha 6101411 1 0.3
+# textboxarrow 0 1
+@ティルフィング
+いいえ、私は何もしてません
+
+# textboxarrow 0 3
+@デュリン
+それじゃどうして…
+
+# textboxarrow 0 1
+@ティルフィング
+いろんな世界を渡り歩いて
+頑張ろうとしていたデュリンの姿を
+見かけた人達がいたんです
+
+# textboxarrow 0 1
+@ティルフィング
+そしてその思いは
+みんなの願いとなって
+この場所に引き寄せられたんです
+
+# textboxarrow 0 3
+@デュリン
+引き寄せられた…
+って、そんなことあるの？
+
+# voice 610141 "tyrufing_7th_0005"
+# face 6101411 "happy"
+# textboxarrow 0 1
+@ティルフィング
+今さらよ、デュリン
+どんな嘘でも、今日だけは本当だから
+
+# face 6101411 "usual"
+# textboxarrow 0 1
+@ティルフィング
+応援団の役目は、ちゃんと果たせてるわ
+
+# voice 9999 "durin_0042"
+# face 62 "worry"
+# textboxarrow 0 3
+@デュリン
+も、元々は自分の為だったから
+ちょっぴり罪悪感
+
+# textboxarrow 0 1
+@ティルフィング
+でも、デュリンの中にあった
+熱心な思いは嘘じゃない
+
+# textboxarrow 0 3
+@デュリン
+ファンキルを盛り上げたい…
+そう、その思いは――
+
+# voice 9999 "durin_0004"
+# move 6101411 1 0.5
+# alpha 6101411 0 0.3
+# face 62 "usual"
+# move 62 3 0.5
+# textboxarrow 0 2
+@デュリン
+ふふっ
+ここで言うにはもったいないわね
+ちゃんとステージの上で伝えないと！
+
+# face 62 "angry"
+# textboxarrow 0 2
+@デュリン
+行くわよ！
+ファンキル応援団の本気、見せるわよ
+
+# textboxarrow 0 0
+@団員たち
+おー！
+
+;;演出：明転
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 4
+# fadeout "white" 1
+# waitandnext 1
+
+;;背景：白
+# background "bg_white"
+# alpha 62 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "white" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+@
+こうしてファンキル応援団による
+スペシャルイベント…
+いや、ライブは幕を開けたのだった！
+
+# fadeout "black" 2
+# waitandnext 2

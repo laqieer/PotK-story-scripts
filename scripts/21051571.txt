@@ -1,0 +1,224 @@
+;;-----------------------------------------
+;;ファンキル　2020ウェディングイベントシナリオ
+;;Will you marry us?
+;;【EP.6】花嫁の証は誰の手に？
+;;EP6_1
+;;スクリプト最後の背景：ハルモニア市街地
+;;-----------------------------------------
+# script "lisp"
+# background "400_angel_town_daytime"
+# bgmfile "bgm334_335" "BgmWedding001" 0
+;;-----------------------------------------
+;;ムー
+# body 161
+# pos 161 3
+# scale 161 0.6 0
+# layer 161 3
+# alpha 161 0 0
+# mask 161 off
+;;ソロモンウェディング
+# body 3503131
+# pos 3503131 3
+# scale 3503131 0.8 0
+# layer 3503131 2
+# alpha 3503131 0 0
+# mask 3503131 off
+;;カシウス・獣刻・ウロボロス　ウェディングver.
+# body 3303131
+# pos 3303131 3
+# scale 3303131 0.8 0
+# layer 3303131 3
+# alpha 3303131 0 0
+# mask 3303131 off
+;;レーヴァテイン・獣刻・バハムート ウェディングver.
+# body 3100221
+# pos 3100221 3
+# scale 3100221 0.8 0
+# layer 3100221 2
+# alpha 3100221 0 0
+# mask 3100221 off
+;;ハルモニア兵
+# body 3810001
+# pos 3810001 3
+# scale 3810001 0.8 0
+# layer 3810001 2
+# alpha 3810001 0 0
+# mask 3810001 off
+;;-----------------------------------------
+;;【EP.6】花嫁の証は誰の手に？
+;;//背景：ハルモニア市街地
+# voice 310021 "revatein_ge_0071"
+# move 3100221 3 0
+# face 3100221 "angry"
+# alpha 3100221 1 0
+# mask 3100221 off
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+待ちなさい、ムー！
+指輪を渡して！
+
+# emotionbody 1001 10 161 -60 180
+# effectpattern 1001 4 3
+# effectstart 1001
+# voice 9953 "mwu_0004"
+# alpha 3100221 0 0.5
+# move 161 3 0
+# alpha 161 1 0.5
+# mask 161 off
+# textboxarrow 0 2
+@ムー
+ははは！　そう簡単に
+つかまってたまるかよっ
+
+# effectskip 1001
+# voice 3031 "cassius_ge_battle_0005"
+# alpha 161 0 0.5
+# move 3303131 2 0
+# face 3303131 "angry"
+# alpha 3303131 1 0.5
+# mask 3303131 on
+# textboxarrow 0 1
+# move 3503131 4 0
+# face 3503131 "usual"
+# alpha 3503131 1 0.5
+# mask 3503131 on
+@カシウス
+…気をつけて、二人とも
+いたるところに罠があるわ
+
+# face 3503131 "angry"
+# textboxarrow 0 3
+@ソロモン
+最適解は…このルートね！
+もうひっかからない！
+
+# voice 9953 "mwu_0021"
+# alpha 3303131 0 0.5
+# alpha 3503131 0 0.5
+# move 161 3 0
+# alpha 161 1 0.5
+# mask 161 off
+# textboxarrow 0 2
+@ムー
+やるじゃねぇか…
+だがいつまで
+その余裕がもつかな！
+
+# textboxarrow 0 2
+@ムー
+この先には俺が仕込んだ
+特製の罠があるんだっ
+お前らに避けられるか！
+
+;;//演出：画面揺れ
+;;//ＳＥ：ガサガサッ！（ムーが網にかかる音）
+# se "SE_0877"
+# shake 0 0.5
+# waitandnext 0.5
+
+# emotionbody 1002 1 161 10 220
+# effectpattern 1002 2 0
+# effectstart 1002
+# textboxarrow 0 2
+@ムー
+なぁあああああああっ！？
+
+# textboxarrow 0 2
+@ムー
+し、しまったぁっ！！
+自分でかかっちまったぁっ！
+
+# alpha 161 0 0.5
+# move 3100221 1 0
+# face 3100221 "usual"
+# alpha 3100221 1 0.5
+# mask 3100221 on
+# textboxarrow 0 1
+# move 3303131 3 0
+# face 3303131 "usual"
+# alpha 3303131 1 0.5
+# mask 3303131 on
+# move 3503131 5 0
+# face 3503131 "usual"
+# alpha 3503131 1 0.5
+# mask 3503131 on
+@レーヴァテイン
+…なにやってるのよ
+
+# textboxarrow 0 3
+@ソロモン
+網で引き揚げられて、
+魚みたいになってるわね…
+
+# voice 3031 "cassius_ge_0028"
+# textboxarrow 0 2
+@カシウス
+…料理しても、
+あまり美味しくなさそう
+
+# alpha 3100221 0 0.5
+# alpha 3303131 0 0.5
+# alpha 3503131 0 0.5
+# move 161 3 0
+# alpha 161 1 0.5
+# mask 161 off
+# textboxarrow 0 2
+@ムー
+た、助けてくれーっ！！
+レヴァ、頼むっ！
+
+# voice 310021 "revatein_ge_0027"
+# alpha 161 0 0.5
+# move 3100221 3 0
+# face 3100221 "sad"
+# alpha 3100221 1 0.5
+# mask 3100221 off
+# textboxarrow 0 2
+@レーヴァテイン
+はぁ、めんど…
+ちょっと待ってて、
+いま助けるから
+
+;;//ＳＥ：ザッザッザッ…（兵たちの足音）
+# se "SE_0777"
+# waitandnext 0.5
+
+# alpha 3100221 0 0.5
+# move 3810001 3 0
+# alpha 3810001 1 0.5
+# mask 3810001 off
+# textboxarrow 0 2
+@ハルモニア兵
+全軍！
+奴らを包囲しなさい！
+
+# emotionbody 1003 1 3503131 10 310
+# effectpattern 1003 2 0
+# effectstart 1003
+# voice 5031 "solomon_t_0023"
+# alpha 3810001 0 0.5
+# move 3503131 3 0
+# face 3503131 "surprise"
+# alpha 3503131 1 0.5
+# mask 3503131 off
+# textboxarrow 0 2
+@ソロモン
+っ！？
+まずいわ、兵に囲まれた！
+
+# alpha 3503131 0 0.5
+# move 3100221 3 0
+# face 3100221 "usual"
+# alpha 3100221 1 0.5
+# mask 3100221 off
+# textboxarrow 0 2
+@レーヴァテイン
+ホント騒がしい連中ね…
+まあ、私たちも大概か
+
+# face 3100221 "angry"
+# textboxarrow 0 2
+@レーヴァテイン
+勝負は一時中断…
+行こう、二人とも！

@@ -1,0 +1,586 @@
+;;-----------------------------------------
+;;SEAイベント不可欠彩度レルム3_4_ED
+;;-----------------------------------------
+# script "lisp"
+# background "in_city_collapse"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 3
+# scale 6504011 0.8 0
+# layer 6504011 3
+# mask 6504011 off
+# alpha 6504011 0 0
+;;パンドラ
+# body 62001111
+# pos 62001111 3
+# scale 62001111 0.8 0
+# layer 62001111 3
+# mask 62001111 off
+# alpha 62001111 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 3
+# scale 6603811 0.8 0
+# layer 6603811 3
+# mask 6603811 off
+# alpha 6603811 0 0
+;;SEAフェイルノート
+# body 6401911
+# pos 6401911 3
+# scale 6401911 0.8 0
+# layer 6401911 3
+# mask 6401911 off
+# alpha 6401911 0 0
+;;天上編タスラム
+# body 502011
+# pos 502011 3
+# scale 502011 0.8 0
+# layer 502011 3
+# mask 502011 off
+# alpha 502011 0 0
+;;SEAダモクレス
+# body 6103521
+# pos 6103521 3
+# scale 6103521 0.8 0
+# layer 6103521 3
+# mask 6103521 off
+# alpha 6103521 0 0
+;;天上編プタハ
+# body 601411
+# pos 601411 3
+# scale 601411 0.8 0
+# layer 601411 3
+# mask 601411 off
+# alpha 601411 0 0
+;;天上編フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.8 0
+# layer 502711 3
+# mask 502711 off
+# alpha 502711 0 0
+;;SEAフライシュッツ
+# body 6502721
+# pos 6502721 3
+# scale 6502721 0.8 0
+# layer 6502721 3
+# mask 6502721 off
+# alpha 6502721 0 0
+;;天上編グリダヴォル
+# body 600811
+# pos 600811 3
+# scale 600811 0.8 0
+# layer 600811 3
+# mask 600811 off
+# alpha 600811 0 0
+;;敵
+# body 3880001
+# pos 3880001 3
+# scale 3880001 0.8 0
+# layer 3880001 3
+# mask 3880001 off
+# alpha 3880001 0 0
+# entry 3889991 3880001
+# pos 3889991 3
+# scale 3889991 0.8 0
+# layer 3889991 3
+# mask 3889991 off
+# alpha 3889991 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：カコルフェの街（昼）
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+;;演出：パンドラ、マクリルの立ち絵表示
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+# se "bgm601_guitaron"
+# move 62001111 4 0
+# layer 62001111 2
+# alpha 62001111 1 0.3
+# move 6603811 2 0
+# layer 6603811 4
+# mask 6603811 on
+# alpha 6603811 1 0.3
+# textflame 0 0
+# textwindow "nomal"
+@
+『裏側』の調査を終え
+街を発つこととなった
+マクリルとパンドラ
+
+;;演出：フェイルノート、タスラム立ち絵表示
+# alpha 62001111 0 0.3
+# alpha 6603811 0 0.3
+# move 6401911 4 0
+# layer 6401911 2
+# alpha 6401911 1 0.3
+# move 502011 2 0
+# layer 502011 4
+# mask 502011 on
+# alpha 502011 1 0.3
+# textflame 0 0
+@
+約束通りフェイルノートと
+タスラムが「肉を食う会」を
+盛大に執り行うことに
+
+;;演出：ダモクレス、プタハ、フライシュッツ、グリダヴォル立ち絵表示
+# alpha 6401911 0 0.3
+# alpha 502011 0 0.3
+# move 6103521 2 0
+# layer 6103521 2
+# alpha 6103521 1 0.3
+# move 601411 4 0
+# layer 601411 4
+# mask 601411 on
+# alpha 601411 1 0.3
+# textflame 0 0
+@
+貴賓マクリルの申し出で
+ダモクレス、プタハ
+
+# alpha 6103521 0 0.3
+# alpha 601411 0 0.3
+# move 6502721 4 0
+# layer 6502721 2
+# alpha 6502721 1 0.3
+# move 600811 2 0
+# layer 600811 4
+# mask 600811 on
+# alpha 600811 1 0.3
+# textflame 0 0
+@
+それにフライシュッツと
+グリダヴォルも招待された
+
+# voice 540191 "failnaught_ca_0006"
+# alpha 6502721 0 0.3
+# alpha 600811 0 0.3
+# face 6401911 "happy"
+# alpha 6401911 1 0.3
+# alpha 502011 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@フェイルノート
+みんな、お疲れ様
+こうして「揺らぎ」が収まったのも
+全て、みんなのおかげよ
+
+# voice 5020 "tasuramu_0005"
+# textflame 1 1
+# textboxarrow 0 1
+@タスラム
+固い話はなしでいいだろ！
+それより、そっちの肉もくれ！
+
+# voice 6008 "guridavoru_0005"
+# alpha 6401911 0 0.3
+# alpha 502011 0 0.3
+# alpha 6502721 1 0.3
+# alpha 600811 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+はい、どーぞ！
+まだまだあるから、たくさん食べてね！
+
+# face 6502721 "shy"
+# voice 5027 "freischotz_0005"
+# textflame 1 1
+# textboxarrow 0 3
+@フライシュッツ
+やっぱりみんなで食べると美味しいね～
+
+# alpha 6502721 0 0.3
+# alpha 600811 0 0.3
+# face 6103521 "happy"
+# alpha 6103521 1 0.3
+# alpha 601411 1 0.3
+# voice 1035 "damocles_0021"
+# textflame 1 1
+# textboxarrow 0 1
+@ダモクレス
+それも愛の力だね！
+
+# voice 6014 "ptah_0021"
+# textflame 1 1
+# textboxarrow 0 3
+@プタハ
+ふふふ、慌てず食べるのだぞ
+
+;;演出：時間経過の暗転
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+;;背景：黒
+# background "plain"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# alpha 6103521 0 0
+# alpha 601411 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# se "bgm601_windon"
+# fadein "black" 1.5
+# waitandnext 1.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+楽しい時間は過ぎるのが早いもの
+あっという間にふたりが発つ時間に
+なってしまったのだった…
+
+;;背景：平原
+# imagealpha 0 0 1
+# waitandnext 1
+
+;;演出：マクリル、パンドラ立ち絵表示
+#setnextbgmblock 1
+# alpha 62001111 1 0.3
+# face 6603811 "usual"
+# alpha 6603811 1 0.3
+# textflame 0 0
+@
+ふたりは街を離れ
+ミーミル達の元へと向かっていた
+
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+…大変だったけれど
+美しいものをたくさん見たと思うわ
+
+# face 6603811 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+…街のこと？
+
+# se "bgm601_celloon"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+街も…人や、キル姫の心も
+みんな美しいと思ったわ
+
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+マクリルはどうだった？
+
+# face 6603811 "usual"
+# voice 660381 "maclir_ura_0028"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+…はじめは怖かった
+
+# se "bgm601_glockenon"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+でも、みんなも怖いと
+思ってることがあるんだってわかった
+
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+悩んで、辛い思いをして…
+他者との関わりに怯えて…
+私と、一緒だった
+
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+私だけかと思って怖かったこと…
+私がダメなんだと思って怖かったこと
+
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+でも、みんな同じだった
+
+# face 62001111 "happy"
+# voice 6200111 "pandora_0032"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+そうね
+そしてみんな、変わった
+
+# face 6603811 "normal"
+# voice 660381 "maclir_ura_0003"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+うん、私も変われたらいいな
+って思った
+
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+マナナンみたいに…
+これは最初から思ってたけど
+よりそう思うようになった
+
+# voice 6200111 "pandora_0005"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+ふふ、もう大丈夫だと思うけどね
+
+# face 6603811 "usual"
+# voice 660381 "maclir_ura_0022"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+え？
+
+# face 62001111 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+まぁ、きっといつかわかるわ
+
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+…美しいものを見ただけじゃなくて
+私もたくさんのことを考えたわ
+
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+美しい世界にはいろいろな
+営みがあって、思いがあって
+辛いこと悲しいこと苦しいこともある
+
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+でも、そんな気持ちを
+跳ね除けるくらいの強い思いが
+あって…それで世界は美しく輝く
+
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+…キラキラ？
+
+# voice 6200111 "pandora_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+ええ、そう
+それはまるで最後に残った
+希望の輝きのようで――
+
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+いえ、それ以上の輝き
+世界にはまだまだ知らない一面が
+あるって痛感したわ
+
+# face 6603811 "shy"
+# voice 660381 "maclir_ura_0028"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+…パンドラの話は難しいよ？
+
+# face 62001111 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+マナナンとマクリルが揃った時
+ほどじゃないと思うわよ？
+
+# face 6603811 "happy"
+# face 62001111 "happy"
+# textflame 0 0
+@
+そう言って笑い合うふたり
+
+# textflame 0 0
+@
+ふたり自身も、ふたりの関係も
+行きとはちょっぴり変わっている
+
+;;もやもやフレーム
+# move 62001111 4 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@パンドラ
+自覚できるほどに…ね
+
+;;もやもやフレーム
+@パンドラ
+こうやって誰かと関わって影響して
+それを積み重ねて行って…
+私も何か変われるのかしら
+
+# face 62001111 "normal"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@パンドラ
+…それが、私が私で
+この世界に存在できたことの
+意味になっていくのかしらね
+
+# face 6603811 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+？
+
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+この世界に積極的に
+関わってみようかなって思ったのよ
+
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+世界は、面白いよ楽しいよ
+
+# face 62001111 "happy"
+# voice 6200111 "pandora_0005"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+ふふっ
+マナナンみたいなことを言うのね
+
+# face 6603811 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+ほんと！？
+
+;;演出：以下のマナナン、セリフのみ
+# serif 1
+@？？？
+おーい！
+
+# voice 6200111 "pandora_0021"
+# serif 0
+# textboxarrow 0 3
+@パンドラ
+噂をすれば
+
+# voice 660381 "maclir_ura_0021"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@マクリル
+マナナン！
+
+;;演出：マナナン、ミーミル立ち絵表示
+# move 6504011 5 0
+# alpha 62001111 0 0.3
+# alpha 6603811 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;マナナンは合流する時に走ってきそう
+# se "SE_0876"
+# move 6504011 4 0.3
+# layer 6504011 2
+# alpha 6504011 1 0.3
+# waitandnext 0.5
+
+# face 6504011 "happy"
+# voice 650401 "manannan_ura_0005"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+おかえりただいまマクリル
+どうだった、楽しかった！？
+
+# voice 660381 "maclir_ura_0005"
+# alpha 6603811 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+ただいまおかえりマナナン
+どこから話そう楽しかったこと！
+
+# alpha 6504011 0 0.3
+# alpha 6603811 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;ミーミルはゆっくり歩いてきそう
+# voice 9917 "mimir_navikan_0004"
+# se "SE_0719"
+# face 270 "happy"
+# alpha 270 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+ふふふ
+調査は大変だったはずなのに
+とっても楽しそうですね
+
+# face 270 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+これはしっかりとお話を聞いて
+日記に書き留めないといけませんね！
+
+# face 270 "happy"
+# voice 9917 "mimir_navikan_0002"
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+できれば…パンドラさんも一緒に
+
+# voice 6200111 "pandora_0020"
+# move 270 2 0.5
+# alpha 62001111 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+それは…悪くないわね
+それじゃあお言葉に甘えて
+
+# alpha 270 0 0.3
+# alpha 62001111 0 0.3
+# textflame 0 0
+@
+それぞれが得たモノは違えど
+自分自身と世界の新たな可能性を
+その胸に抱き、ふたりは歩み始める
+
+# textflame 0 0
+@
+この、美しい世界の未来へと
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# fadeout "black" 5
+# waitandnext 5

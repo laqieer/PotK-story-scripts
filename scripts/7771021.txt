@@ -1,0 +1,774 @@
+;;【EP2】戦闘前
+# script "lisp"
+# background "town"
+# bgm "bgm002" 0
+# body 102321
+# pos 102321 2
+# scale 102321 0.8 0
+# body 501731
+# pos 501731 4
+# scale 501731 0.8 0
+# layer 501731 3
+# textflame 1 1
+# textboxarrow 0 1
+# face 102321 "angry"
+# face 501731 "usual"
+# chara 102321
+@アスカロン
+…この間の作戦で逃げていった異族？
+確かにいました…
+あれを私達が倒すんですね！
+
+# textboxarrow 0 1
+# voice 1023 "ascalon_0022"
+# face 102321 "surprise"
+# chara 102321
+@アスカロン
+…えっ？
+マスターさん、
+断るつもりなんですか…？
+
+# textflame 0 0
+@
+セブンスキラーズと名づけられた
+７人のキラープリンセス達…
+
+# textflame 0 0
+@
+彼女達に早速、
+教会から異族討伐の指令が下る
+
+# textflame 0 0
+@
+それは先日、
+ファーストキラーズが取り逃がした、
+１体の異族であった
+
+# textflame 0 0
+@
+たった１体ではあるが強力で、
+以前の掃討作戦から
+逃げおおせる知恵も併せ持っている
+
+# alpha 301821 0 0
+# body 301821
+# pos 301821 2
+# scale 301821 0.8 0
+# textflame 0 0
+@
+そのため、マスターは彼女達、
+セブンスキラーズには荷が重いと考え
+別の隊に任せるべきと思案していた…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 501731
+# face 501731 "normal"
+@グリモワール
+…でぇ？それってつまり、
+ワタシじゃその強い異族に
+勝てないって言いたいわけぇ？
+
+# alpha 102321 0 0.5
+# alpha 301821 1 0.5
+# textboxarrow 0 1
+# voice 3018 "forcas_0002"
+# chara 301821
+@フォルカス
+…マスター、これは教会からの
+指示なのでしょう？
+
+# alpha 102521 0 0
+# alpha 401321 0 0
+# body 102521
+# pos 102521 1
+# scale 102521 0.8 0
+# body 401321
+# pos 401321 5
+# scale 401321 0.8 0
+# textboxarrow 0 1
+# face 301821 "sad"
+# chara 301821
+@フォルカス
+それなのに、戦いもせずに
+勝てないと判断して
+戦うことを拒むなんて…
+
+# select "あの敵と戦うには今はまだ早い" "select_label_01" "誰に頼むかは裁量の範囲だから" "select_label_02"
+それなのに、戦いもせずに
+勝てないと判断して
+戦うことを拒むなんて…
+
+# alpha 301821 0 0.3
+# alpha 501731 0 0.3
+# alpha 102521 1 0.5
+# alpha 401321 1 0.5
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 1
+# face 102521 "sad"
+# chara 102521
+@ムラマサ
+それはやっぱり…
+拙者達が実力不足であるからと…
+そういうことなんですね
+
+# alpha 301821 0 0.3
+# alpha 501731 0 0.3
+# alpha 401321 1 0.5
+# alpha 102521 1 0.5
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 401321
+@アフロディーテ
+あら…マスターは
+わたし達の力量をしっかりと
+量ってくれているのですね
+
+# label "select_label_end"
+# pos 501731 3
+# alpha 501731 1 0.5
+# textboxarrow 0 2
+# face 501731 "angry"
+# chara 501731
+@グリモワール
+でぇ？…ワタシのこと、
+侮ってもらっては困るんだから！
+
+# textboxarrow 0 2
+# face 501731 "usual"
+# chara 501731
+@グリモワール
+…フライクーゲルなんかより
+ワタシの方が上だってこと、
+そいつで証明するんだから…
+
+;;グリモワール立ち絵消去
+# se "SE_5575"
+# textboxarrow 0 0
+# alpha 501731 0 0.5
+# waitandnext 0.6
+# face 401321 "surprise"
+
+# textflame 0 0
+@
+マスターが慌ててグリモワールに
+待つよう呼びかけるが、彼女は
+従うことなく立ち去ってしまう
+
+# textflame 0 0
+@
+そしてそれは、
+グリモワール１人だけに
+留まることはなかった…
+
+# alpha 102521 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1025 "muramasa_0002"
+# face 102521 "sad"
+# chara 102521
+@ムラマサ
+せ、拙者だって、
+早く姉上に認められたい…！
+
+;;ムラマサ立ち絵消去
+# se "SE_5575"
+# textboxarrow 0 0
+# move 301821 1 0
+# alpha 102521 0 0.5
+# waitandnext 0.6
+
+# alpha 301821 1 0.3
+# textboxarrow 0 1
+# face 301821 "angry"
+# chara 301821
+@フォルカス
+…確かに、しっかりと自分の強さを
+先に示すことができなければ、
+放つ言葉も軽くなってしまいます
+
+;;フォルカス立ち絵消去
+# se "SE_5575"
+# textboxarrow 0 0
+# alpha 301821 0 0.5
+# move 102321 1 0
+# waitandnext 0.6
+
+# alpha 102321 1 0.5
+# textboxarrow 0 1
+# voice 1023 "ascalon_0023"
+# face 102321 "surprise"
+# chara 102321
+@アスカロン
+えーっ、みんなどこへ行くんですか！
+待ってください！
+
+;;アスカロン立ち絵消去
+# se "SE_5575"
+# textboxarrow 0 0
+# alpha 102321 0 0.5
+# waitandnext 0.6
+
+# alpha 601121 0 0
+# body 601121
+# pos 601121 1
+# scale 601121 0.8 0
+# textflame 0 0
+@
+こうして、
+マスターの制止にも応じることなく、
+更に何人もが飛び出してしまった…
+
+# alpha 601121 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 601121 "surprise"
+# chara 601121
+@ヴァナルガンド
+そんな～、残ったのは…
+わたしとアフロディーテさん…
+…あれ？シユウさんは…？
+
+# textboxarrow 0 3
+# voice 4013 "aphrodite_0002"
+# face 401321 "normal"
+# chara 401321
+@アフロディーテ
+いつの間にかいなくなってましたわね
+…それより、マスターさん、
+どうしましょうか？
+
+# textboxarrow 0 3
+# chara 401321
+@アフロディーテ
+わたしは、ファーストキラーズの
+皆さんに、連れ戻してもらうよう
+頼むのが堅実だと思います
+
+# textflame 0 0
+@
+しかし、マスターは
+ファーストキラーズが全員、
+別の任務で出払っていると告げる
+
+# emotionbody 5806 9 601121 -60 230
+# effectpattern 5806 6 0
+# effectstart 5806
+# textflame 1 1
+# textboxarrow 0 1
+# face 601121 "normal"
+# chara 601121
+@ヴァナルガンド
+そ、それなら…
+皆さんが強い異族に出会う前に
+連れ戻しに行きませんか…？
+
+# effectskip 5806
+# textboxarrow 0 1
+# face 601121 "angry"
+# chara 601121
+@ヴァナルガンド
+マスターさんが勝てないと言うなら
+やっぱり勝てないと思いますし…
+戦いになる前に止めないと…！
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textflame 0 0
+@
+マスターとアフロディーテは
+ヴァナルガンドの提案に頷き、
+先行する仲間達の後を追った…
+
+;;――場面転換――
+# move 301821 4 0
+# move 102321 2 0
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# alpha 102321 1 0.5
+# alpha 301821 1 0.5
+# alpha 401321 0 0
+# alpha 601121 0 0
+# face 301821 "normal"
+# background "town"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 102321
+@アスカロン
+…フォルカス、待って！
+私もいっしょに行きたいから…
+それとも、邪魔かな…？
+
+# textboxarrow 0 3
+# voice 3018 "forcas_0004"
+# face 301821 "happy"
+# chara 301821
+@フォルカス
+いや、そんなことはないよ
+…特に、アスカロンとは最初から
+縁があったし…
+
+# emotionbody 5200 3 102321 10 260
+# effectpattern 5200 1 3
+# effectstart 5200
+# textboxarrow 0 1
+# voice 1023 "ascalon_0004"
+# face 102321 "happy"
+# chara 102321
+@アスカロン
+ふふふっ、そうだよね！
+あの時、フォルカスに出会って…
+
+# effectskip 5200
+# textboxarrow 0 1
+# face 102321 "normal"
+# chara 102321
+@アスカロン
+そして、あの人達に出会えたから
+今、私達はこうしているんだもの――
+
+;;――場面転換――
+# imageset 1 "bg_white"
+# imagealpha 1 0 0
+# imagescale 1 10 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fillrect "white" 2.3 0 1
+# waitandnext 2.7
+
+# bgm "bgm003" 0
+# imagepos 1 0 0
+# imagealpha 1 1 0
+# alpha 102321 0 0
+# alpha 301821 0 0
+# fillrect "white" 1 1 0
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+それは、
+二人が教会に保護される前の話…
+
+# textflame 0 0
+@
+森の中、１人の少女が、
+途方にくれていた――
+
+# background "forest"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# face 301821 "normal"
+# pos 301821 3
+# alpha 301821 1 0
+# mask 301821 off
+# imagealpha 1 0 1
+# waitandnext 1.1
+
+# emotionbody 5700 8 301821 -80 265
+# effectpattern 5700 1 0
+# effectstart 5700
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3018 "forcas_0019"
+# chara 301821
+@フォルカス
+…やっぱり、こんな場所、知らない…
+ここって、どこなんだろう…？
+
+# effectskip 5700
+# textboxarrow 0 2
+# face 301821 "normal"
+# chara 301821
+@フォルカス
+しかも…こんな、槍なんか持って…
+どうして…！
+
+;;//ＳＥ：槍を振るう音
+# se "SE_4101"
+# fadein "white" 1
+# waitandnext 1.1
+
+# emotionbody 6022 11 102321 -90 225
+# effectpattern 6022 2 0
+# effectstart 6022
+# move 301821 5 0.5
+# mask 301821 on
+# alpha 102321 1 0.7
+# face 301821 "surprise"
+# textboxarrow 0 1
+# voice 1023 "ascalon_0023"
+# face 102321 "surprise"
+# chara 102321
+@アスカロン
+ふええっ！？
+
+# emotionbody 5805 9 301821 60 230
+# effectpattern 5805 5 0
+# effectstart 5805
+# effectskip 6022
+# textboxarrow 0 3
+# voice 3018 "forcas_0031"
+# face 301821 "normal"
+# chara 301821
+@フォルカス
+あ、驚かせてごめんなさい
+あなたは…
+
+# effectskip 5805
+# textboxarrow 0 1
+# face 102321 "sad"
+# chara 102321
+@アスカロン
+えぇっと、アスカロンです…
+
+# textboxarrow 0 3
+# face 301821 "normal"
+# chara 301821
+@フォルカス
+そう…私はフォルカス
+よろしく
+
+# textboxarrow 0 1
+# voice 1023 "ascalon_0004"
+# face 102321 "happy"
+# chara 102321
+@アスカロン
+こちらこそ、よろしく！
+…よかった～、人に会えた！
+あの、ここってどこか、わかりますか？
+
+# textboxarrow 0 1
+# voice 1023 "ascalon_0028"
+# face 102321 "surprise"
+# chara 102321
+@アスカロン
+気がついたらこの近くにいて、
+でも、まったく覚えがないんです
+
+# textboxarrow 0 1
+# face 102321 "sad"
+# chara 102321
+@アスカロン
+それどころか私、なにを
+していたのかもわからないですし、
+お腹もすいちゃって…
+
+# textboxarrow 0 1
+# face 102321 "sad"
+# chara 102321
+@アスカロン
+…それになぜか、
+武器を持ってました…
+
+# textboxarrow 0 3
+# voice 3018 "forcas_0002"
+# face 301821 "surprise"
+# chara 301821
+@フォルカス
+…武器なら、私も持っています
+…ほら、これですけど…
+
+# textboxarrow 0 1
+# face 102321 "surprise"
+# chara 102321
+@アスカロン
+ほんとだ！
+だったら、仲間だね♪よかったら
+これから一緒に行動しない？
+
+# textboxarrow 0 3
+# voice 3018 "forcas_0003"
+# face 301821 "normal"
+# chara 301821
+@フォルカス
+そうですね…私も同じ境遇の方が
+一緒にいてくれると
+心強いように思います
+
+# textboxarrow 0 1
+# voice 1023 "ascalon_0004"
+# face 102321 "sad"
+# chara 102321
+@アスカロン
+よかった～！…けど、
+なんか言い方が堅苦しいような…
+
+# textboxarrow 0 1
+# face 102321 "normal"
+# chara 102321
+@アスカロン
+なんて言うかもっとこう、
+自然な感じ…で？
+
+# textboxarrow 0 3
+# face 301821 "surprise"
+# chara 301821
+@フォルカス
+うん…
+えっと、アスカロンさん…？
+
+# textboxarrow 0 1
+# face 102321 "angry"
+# chara 102321
+@アスカロン
+せっかくだから呼び捨てで！
+今から敬語もなくて大丈夫です！
+
+# textboxarrow 0 3
+# voice 3018 "forcas_0004"
+# face 301821 "happy"
+# chara 301821
+@フォルカス
+…ふふっ、わかった
+よろしくね、アスカロン
+
+# textboxarrow 0 1
+# voice 1023 "ascalon_0005"
+# face 102321 "happy"
+# chara 102321
+@アスカロン
+こちらこそよろしくお願いします！
+で、これからどうしよう…
+
+# textboxarrow 0 0
+# emotionbody 5844 9 102321 -60 200
+# effectpattern 5844 1 0
+# effectstart 5844
+# se "SE_0671"
+# face 102321 "shy"
+# face 301821 "surprise"
+;;//SE：お腹がなる音
+;;//アスカロン、照れ
+
+# effectskip 5844
+# textboxarrow 0 3
+# face 301821 "normal"
+# chara 301821
+@フォルカス
+…まずは食べるものを
+なんとかしないといけないみたいね
+
+# textboxarrow 0 1
+# voice 1023 "ascalon_0042"
+# face 102321 "shy"
+# chara 102321
+@アスカロン
+ううっ、恥ずかしい～…
+…近くに町がないか、探してみる？
+
+;;//SE：ガサガサという音
+# emotionbody 5110 1 102321 10 310
+# effectpattern 5110 1 0
+# effectstart 5110
+# emotionbody 5211 1 301821 10 310
+# effectpattern 5211 1 0
+# effectstart 5211
+# se "SE_5584"
+# face 301821 "angry"
+# face 102321 "surprise"
+# waitandnext 0.5
+
+# effectskip 5110
+# effectskip 5211
+# alpha 300111 0 0
+# body 300111
+# pos 300111 1
+# scale 300111 0.8 0
+# textboxarrow 0 3
+# voice 3018 "forcas_0022"
+# chara 301821
+@フォルカス
+何者っ！？
+
+;;//ロンギヌス登場
+# alpha 300111 1 0.5
+# move 102321 3 0.5
+# move 301821 5 0.5
+# face 300111 "surprise"
+# waitandnext 0.5
+
+;;//驚く
+# emotionbody 6101 11 300111 100 190
+# effectpattern 6101 1 0
+# effectstart 6101
+# textboxarrow 0 1
+# voice 3001 "ronginusu_0022"
+# chara 300111
+@ロンギヌス
+ひゃっ…！
+
+# effectskip 6101
+# textboxarrow 0 3
+# face 301821 "normal"
+# chara 301821
+@フォルカス
+あ、驚かせてごめんなさい
+あなたは…
+
+# alpha 24 0 0
+# body 24
+# pos 24 5
+# scale 24 0.8 0
+# alpha 101411 0 0
+# body 101411
+# pos 101411 5
+# textboxarrow 0 1
+# face 300111 "normal"
+# chara 300111
+@ロンギヌス
+えっと…
+ロンギヌスと申します
+
+;;//ティルフィング登場
+# alpha 102321 0 0.3
+# alpha 301821 0 0.3
+# alpha 24 1 0.8
+# textflame 1 1
+# textboxarrow 0 3
+# face 24 "sad"
+# chara 300111
+@ティルフィング
+私はティルフィング
+…すみません、こちらこそ
+驚かせるつもりはなかったのですが
+
+# textflame 0 0
+@
+ロンギヌスとティルフィングに続き、
+マスターも姿を現し、
+二人の少女達に自己紹介を行う
+
+# move 102321 3 0
+# textflame 0 0
+@
+そして、彼女達に、その名が
+アスカロンとフォルカスであるかと
+尋ねた
+
+# alpha 102321 1 0.5
+# layer 102321 3
+# layer 24 2
+# layer 300111 1
+# move 24 5 0.5
+# move 300111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1023 "ascalon_0022"
+# face 102321 "surprise"
+# chara 102321
+@アスカロン
+どうして
+私達の名前を知っているんですか！？
+
+# textboxarrow 0 3
+# face 24 "normal"
+# chara 24
+@ティルフィング
+教会からの情報のおかげです
+…その教会より、あなた達を保護して
+ほしいと頼まれて、やってきました
+
+# textboxarrow 0 1
+# voice 3001 "ronginusu_0002"
+# face 300111 "normal"
+# chara 300111
+@ロンギヌス
+…あなた達は今、
+どのマスターにも
+仕えていない状態なんです
+
+# textboxarrow 0 1
+# face 300111 "sad"
+# chara 300111
+@ロンギヌス
+そのままでいるのは…
+キラープリンセスにとっては
+よくないことだから…
+
+# textboxarrow 0 2
+# voice 1023 "ascalon_0028"
+# face 102321 "sad"
+# chara 102321
+@アスカロン
+私がキラープリンセス…？
+…あれ？なんかキラープリンセスって
+呼ばれるの、しっくりくるような…
+
+# bgm "stop" 0.5
+# emotionbody 5201 1 102321 10 275
+# effectpattern 5201 2 0
+# effectstart 5201
+# alpha 810004 0 0
+# body 810004
+# pos 810004 3
+# mask 810004 off
+# scale 810004 0.8 0
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0022"
+# face 24 "mad2"
+# face 300111 "angry"
+# face 102321 "surprise"
+# chara 24
+@ティルフィング
+…！！
+伏せて！
+
+;;//SE攻撃空振り音
+;;//異族登場
+# bgm "bgm023" 0.5
+# se "SE_5232"
+# effectskip 5201
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# sedelay "SE_5232" 0.3
+# fadein "white" 1
+# alpha 24 0 0.3
+# alpha 300111 0 0.3
+# alpha 102321 0 0.3
+# rightin 810004 0.5
+# alpha 810004 1 0
+# waitandnext 1
+
+# alpha 24 1 0.5
+# alpha 300111 1 0.5
+# alpha 102321 1 0.5
+# alpha 810004 0 0.3
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 24 "angry"
+# face 102321 "angry"
+# chara 24
+@ティルフィング
+話はあと！
+囲まれてるわ！
+
+# textboxarrow 0 1
+# chara 300111
+@ロンギヌス
+異族…！！
+…二人は援護をお願いします…！

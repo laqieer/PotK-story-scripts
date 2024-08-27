@@ -1,0 +1,568 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第20章 章タイトル：ワールドサルベイション
+;;第1話―１１　タイトル：全てを賭けて
+;;11_1
+;;スクリプト最後の背景：宇宙（ラストバトル空間）
+;;-----------------------------------------
+# script "lisp"
+# background "in_perspective"
+# bgmfile "bgm422_423" "BgmIntegralNoahBattle004" 0
+;;-----------------------------------------
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 2
+# alpha 5401721 0 0
+# mask 5401721 off
+;;擬装フライシュッツ
+# body 5502721
+# pos 5502721 3
+# scale 5502721 0.8 0
+# layer 5502721 2
+# alpha 5502721 0 0
+# mask 5502721 off
+;;擬装ダモクレス
+# body 5103521
+# pos 5103521 3
+# scale 5103521 0.8 0
+# layer 5103521 2
+# alpha 5103521 0 0
+# mask 5103521 off
+;;擬装エルキュール
+# body 5202521
+# pos 5202521 3
+# scale 5202521 0.8 0
+# layer 5202521 2
+# alpha 5202521 0 0
+# mask 5202521 off
+;;グラーシーザ・擬装・ウォーリアー
+# body 5302621
+# pos 5302621 3
+# scale 5302621 0.8 0
+# layer 5302621 2
+# alpha 5302621 0 0
+# mask 5302621 off
+;;ミネルヴァ・擬装・アーチャー
+# body 5302521
+# pos 5302521 3
+# scale 5302521 0.8 0
+# layer 5302521 2
+# alpha 5302521 0 0
+# mask 5302521 off
+;;ネス・擬装・ランサー
+# body 5602021
+# pos 5602021 3
+# scale 5602021 0.8 0
+# layer 5602021 2
+# alpha 5602021 0 0
+# mask 5602021 off
+;;ラグナロク・擬装・ガンナー
+# body 5103621
+# pos 5103621 3
+# scale 5103621 0.8 0
+# layer 5103621 2
+# alpha 5103621 0 0
+# mask 5103621 off
+;;魔獣
+# body 806158
+# pos 806158 3
+# scale 806158 0.8 0
+# layer 806158 3
+# alpha 806158 0 0
+# mask 806158 off
+;;魔獣1
+# entry 98061581 806158
+# pos 98061581 3
+# scale 98061581 0.8 0
+# layer 98061581 2
+# alpha 98061581 0 0
+# mask 98061581 off
+;;魔獣2
+# entry 98061582 806158
+# pos 98061582 3
+# scale 98061582 0.8 0
+# layer 98061582 2
+# alpha 98061582 0 0
+# mask 98061582 off
+;;魔獣（フライデビル）
+# body 806157
+# pos 806157 3
+# scale 806157 0.8 0
+# layer 806157 3
+# alpha 806157 0 0
+# mask 806157 off
+;;魔獣（フライデビル1）
+# entry 98061571 806157
+# pos 98061571 3
+# scale 98061571 0.8 0
+# layer 98061571 2
+# alpha 98061571 0 0
+# mask 98061571 off
+;;魔獣（フライデビル2）
+# entry 98061572 806157
+# pos 98061572 3
+# scale 98061572 0.8 0
+# layer 98061572 2
+# alpha 98061572 0 0
+# mask 98061572 off
+;;-----------------------------------------
+;;---------------------------------------------
+;;■スイハ
+;;立ち絵：スイハ・擬装・セイバー
+;;■グラーシーザ
+;;立ち絵：グラーシーザ・擬装・ウォーリアー
+;;■ミネルヴァ
+;;立ち絵：ミネルヴァ・擬装・アーチャー
+;;■フライシュッツ
+;;立ち絵：フライシュッツ・擬装・ランサー
+;;■ネス
+;;立ち絵：ラグナロク・擬装・ランサー
+;;■ダモクレス
+;;立ち絵：ダモクレス・擬装・プリースト
+;;■エルキュール
+;;立ち絵：エルキュール・擬装・セイバー
+;;■ラグナロク
+;;立ち絵：ラグナロク・擬装・ガンナー
+;;
+;;■マサムネ
+;;立ち絵：マサムネ・擬彩
+;;■パラシュ
+;;立ち絵：パラシュ・擬彩
+;;■ティルフィング
+;;立ち絵：ティルフィング・擬彩
+;;■フライクーゲル
+;;立ち絵：フライクーゲル・擬彩
+;;■レーヴァテイン
+;;立ち絵：レーヴァテイン・擬彩
+;;■ロンギヌス
+;;立ち絵：ロンギヌス・擬彩
+;;■ムラマサ
+;;立ち絵：ムラマサ・獣刻・ヤマタノオロチ（大罪ver.）
+;;■魔獣
+;;立ち絵：新規魔獣
+;;スケルトン、フライデビルなど種類多くお願いいたします
+;;--------------------------------------------
+;;背景：宇宙（ラストバトル空間）
+# se "SE_0792"
+# move 98061581 1 0
+# alpha 98061581 1 0
+# mask 98061581 on
+# move 806158 3 0
+# alpha 806158 1 0
+# mask 806158 on
+# move 98061582 5 0
+# alpha 98061582 1 0
+# mask 98061582 on
+# textflame 1 1
+# textboxarrow 0 0
+@魔獣
+ガアアアアアアアア！
+
+;;魔獣の群れが現れる
+# se "SE_0887"
+# waitandnext 0.5
+
+# voice 4017 "suiha_im_0029"
+# alpha 98061581 0 0.5
+# alpha 806158 0 0.5
+# alpha 98061582 0 0.5
+# move 5401721 3 0
+# face 5401721 "angry"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 2
+@スイハ
+はああああっ！
+# se "SE_9021"
+
+;;スイハが先陣を切る
+;;スイハ（独白）
+# move 5401721 3 0
+# mask 5401721 off
+# textboxarrow 0 0
+# textwindow "moya"
+@スイハ
+私はスイハ
+鏑矢として戦いの始まりを告げ、
+この剣をもって先陣に立つ！
+
+;;スイハ（独白）
+# textboxarrow 0 0
+@スイハ
+仲間のためなら、この剣は決して
+折れない不屈の刃となる
+
+# se "SE_5205"
+# voice 4017 "suiha_im2_unit_0005"
+# textboxarrow 0 2
+# textwindow "normal"
+@スイハ
+この剣で、皆の道を切り拓く！
+
+# textwindow "close"
+# alpha 5401721 0 0.5
+# move 98061581 1 0
+# alpha 98061581 1 0.5
+# mask 98061581 on
+# move 806158 3 0
+# alpha 806158 1 0.5
+# mask 806158 on
+# move 98061582 5 0
+# alpha 98061582 1 0.5
+# mask 98061582 on
+# waitandnext 0.6
+
+;;斬撃演出
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 -200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 2000 1 0 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 3000 1 200 0 0
+# effectstart 3000
+# waitandnext 0.5
+
+# se "SE_0794"
+# textboxarrow 0 0
+# textwindow "normal"
+@魔獣
+ガアアアア…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 98061581 0 0.5
+# alpha 806158 0 0.5
+# alpha 98061582 0 0.5
+# waitandnext 0.5
+
+# voice 3026 "grayside_0006"
+# move 5302621 3 0
+# face 5302621 "happy"
+# alpha 5302621 1 0.5
+# mask 5302621 off
+# textboxarrow 0 2
+# textwindow "normal"
+@グラーシーザ
+うむ
+それはちょうじょう
+
+# voice 3026 "grayside_im_0046"
+# face 5302621 "normal"
+# textboxarrow 0 2
+@グラーシーザ
+スイハ、おまえのせいぎ
+みせてもらったぞ！
+
+# textboxarrow 0 2
+@グラーシーザ
+さあ、すすめ
+ラグナロク！
+
+# voice 3026 "grayside_im_unit_0008"
+# textboxarrow 0 2
+@グラーシーザ
+しんげきをじゃまするものたちよ
+せいぎのてっつい、
+うけてみるがいいっ！
+
+# textwindow "close"
+# alpha 5302621 0 0.5
+# move 98061571 1 0
+# alpha 98061571 1 0.5
+# mask 98061571 on
+# move 806157 3 0
+# alpha 806157 1 0.5
+# mask 806157 on
+# move 98061572 5 0
+# alpha 98061572 1 0.5
+# mask 98061572 on
+# waitandnext 0.6
+
+;;打撃演出
+# se "SE_11996"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_0794"
+# textboxarrow 0 0
+# textwindow "normal"
+@魔獣
+ガアアアアアア…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 98061571 0 0.5
+# alpha 806157 0 0.5
+# alpha 98061572 0 0.5
+# waitandnext 0.5
+
+# voice 3025 "minerva_im_0044"
+# move 5103621 2 0
+# face 5103621 "normal"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# move 5302521 4 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 on
+# textboxarrow 0 3
+# textwindow "normal"
+@ミネルヴァ
+ラグナロク、決して振り返らず
+前だけを見て進んで下さい
+
+# face 5103621 "surprise"
+# textboxarrow 0 1
+@ラグナロク
+皆っ…！
+
+# textboxarrow 0 3
+@ミネルヴァ
+七つの光は、
+いつも御旗とともにあります！
+
+# voice 5027 "freischotz_0004"
+# alpha 5103621 0 0.5
+# alpha 5302521 0 0.5
+# move 5502721 3 0
+# face 5502721 "happy"
+# alpha 5502721 1 0.5
+# mask 5502721 off
+# textboxarrow 0 2
+@フライシュッツ
+大丈夫っ
+お姉ちゃんが守ってあげるからね！
+
+# face 5502721 "angry"
+# textboxarrow 0 2
+@フライシュッツ
+想いの一閃、いっくよ～！
+
+# se "SE_9469"
+# waitandnext 0.2
+
+# textwindow "close"
+# leftout 5502721 0.5
+# waitandnext 0.5
+
+# alpha 5502721 0 0
+# move 5602021 3 0
+# face 5602021 "normal"
+# alpha 5602021 1 0.5
+# mask 5602021 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ネス
+色々ありましたけれど、
+わたしは皆さんに支えられて
+ここまで来ました
+
+# face 5602021 "angry"
+# textboxarrow 0 2
+@ネス
+だから、勝利という真実に導き
+ましょう…常識を越えた力、
+お見せします
+
+# se "SE_12074"
+# textwindow "close"
+# rightout 5602021 0.5
+# waitandnext 0.5
+
+# alpha 5602021 0 0
+# move 806158 3 0
+# alpha 806158 1 0.5
+# mask 806158 on
+# waitandnext 0.5
+
+# move 5602021 1 0
+# face 5602021 "angry"
+# alpha 5602021 1 0
+# mask 5602021 on
+# move 5502721 5 0
+# face 5502721 "angry"
+# alpha 5502721 1 0
+# mask 5502721 on
+# leftin 5602021 0.3
+# rightin 5502721 0.3
+# waitandnext 0.3
+
+;;フライシュッツとネスが魔獣を突き飛ばす
+# se "SE_9066"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.6
+
+# alpha 5602021 0 0.5
+# alpha 806158 0 0.5
+# alpha 5502721 0 0.5
+# move 5103621 3 0
+# face 5103621 "angry"
+# alpha 5103621 1 0.5
+# mask 5103621 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+皆、ありがとう！
+必ず“終焉”を止めて世界を
+救ってみせるから
+
+;;ラグナロクが走っていく
+# se "SE_5575"
+# textwindow "close"
+# rightout 5103621 0.5
+# waitandnext 0.5
+
+# alpha 5103621 0 0
+# move 806158 4 0
+# alpha 806158 1 0.5
+# mask 806158 on
+# waitandnext 0.3
+
+# move 5103621 2 0
+# face 5103621 "normal"
+# alpha 5103621 1 0
+# mask 5103621 on
+# leftin 5103621 0.5
+# waitandnext 0.5
+
+# se "SE_0793"
+# textboxarrow 0 3
+# textwindow "normal"
+@魔獣
+ガアアアアアアアア！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+# voice 1036 "ragnarok_0037"
+# face 5103621 "angry"
+# textboxarrow 0 1
+@ラグナロク
+くっ…
+私達の進撃を止めないで！
+
+;;斬撃演出
+# se "SE_4815"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 4000 1 -200 0 0
+# effectstart 4000
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@ラグナロク
+多少の傷は、気にしていられない！
+
+# se "SE_4781"
+# voice 1035 "damocles_0004"
+# alpha 5103621 0 0.5
+# alpha 806158 0 0.5
+# move 5103521 3 0
+# face 5103521 "happy"
+# alpha 5103521 1 0.5
+# mask 5103521 off
+# textboxarrow 0 2
+@ダモクレス
+大丈夫だよ！
+クレスがみんな癒すからねっ
+
+# alpha 5103521 0 0.5
+# move 5103621 3 0
+# face 5103621 "angry"
+# alpha 5103621 1 0.5
+# mask 5103621 off
+# textboxarrow 0 2
+@ラグナロク
+ダモクレス、こんな前線にまで
+出てきたら危険よっ
+
+# alpha 5103621 0 0.5
+# move 5103521 3 0
+# face 5103521 "angry"
+# alpha 5103521 1 0.5
+# mask 5103521 off
+# textboxarrow 0 2
+@ダモクレス
+クレスのことは心配しないでっ
+ラグナロクに、たくさんの愛を
+届けるよ！
+
+# se "SE_0792"
+# alpha 5103521 0 0.5
+# move 98061581 1 0
+# alpha 98061581 1 0.5
+# mask 98061581 on
+# move 806158 3 0
+# alpha 806158 1 0.5
+# mask 806158 on
+# move 98061582 5 0
+# alpha 98061582 1 0.5
+# mask 98061582 on
+# textboxarrow 0 0
+@魔獣
+ガアアアアアアアアア！
+
+;;魔獣の群れが現れる
+# se "SE_0887"
+# waitandnext 0.5
+
+# voice 1036 "ragnarok_0015"
+# alpha 98061581 0 0.5
+# alpha 806158 0 0.5
+# alpha 98061582 0 0.5
+# move 5103621 3 0
+# face 5103621 "normal"
+# alpha 5103621 1 0.5
+# mask 5103621 off
+# textboxarrow 0 2
+@ラグナロク
+まだ、こんなにっ…
+
+# voice 2025 "hercule_im_unit_0005"
+# alpha 5103621 0 0.5
+# move 5202521 3 0
+# face 5202521 "angry"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# textboxarrow 0 2
+@エルキュール
+刃に光を、刃に希望を！
+
+;;斬撃演出
+# se "SE_11925"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+@エルキュール
+恐れることも立ち止まることも
+必要ありません
+私達が希望なんですからっ
+
+# voice 2025 "hercule_im_unit_0008"
+# textboxarrow 0 2
+@エルキュール
+希望を力に換えて！
+全ての災厄を刈り獲ります！
+
+# textboxarrow 0 2
+@エルキュール
+ラグナロク、
+希望の御旗を掲げて、
+どこまでも進んで下さい！

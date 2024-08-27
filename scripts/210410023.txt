@@ -1,0 +1,186 @@
+;;-----------------------------------------
+;;ファントムオブキル　ハロウィンイベント2018
+;;【EP.1】準備をしよう！
+;;【EP1】戦闘後
+;;スクリプト最後の背景：トレイセーマ奴隷区
+;;-----------------------------------------
+# script "lisp"
+# background "201_slum"
+# bgm "stop"
+;;-----------------------------------------
+;;ハロウィンモラルタ
+# body 3104071
+# pos 3104071 3
+# scale 3104071 0.8 0
+# alpha 3104071 0 0
+;;ハロウィンベガルタ
+# body 3104171
+# pos 3104171 3
+# scale 3104171 0.8 0
+# alpha 3104171 0 0
+;;トレイセーマ兵A
+# body 3830001
+# pos 3830001 3
+# scale 3830001 0.8 0
+# alpha 3830001 0 0
+;;トレイセーマ兵B
+# entry 938300018 3830001
+# pos 938300018 1
+# scale 938300018 0.8 0
+# alpha 938300018 0 0
+;;-----------------------------------------
+# se "SE_4815"
+# move 3830001 2 0
+# face 3830001 "normal"
+# alpha 3830001 1 0
+# mask 3830001 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 938300018 4 0
+# face 938300018 "normal"
+# alpha 938300018 1 0
+# mask 938300018 on
+@トレイセーマ兵A
+クソッ、なんだコイツらは！
+退却するぞ！
+
+# se "SE_5575"
+;;//演出：トレイセーマ兵out
+# alpha 3830001 0 0.5
+# alpha 938300018 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 0 0
+;;モノローグ
+@
+退却するトレイセーマ兵達を横目に
+急いでここから出ようと
+二人に視線を送ると―
+
+# bgmfile "bgm071" "BgmHalloween001" 0
+;;//劇の幕
+# textwindow "close"
+# fadeout "black" 0.1
+# imageset 0 "st_thickcurtain_left"
+# imagealpha 0 0 0 
+# imageset 1 "st_thickcurtain_right"
+# imagealpha 1 0 0 
+# imageset 2 "st_thickcurtain_top"
+# imagealpha 2 0 0 
+# frameout 0 0.5
+# waitandnext 0.1
+
+# imagepos 0 -180 0
+# imagepos 1 180 0
+# imagepos 2 0 450
+# imagealpha 1 1 0
+# imagealpha 0 1 0
+# imagealpha 2 1 0
+# move 3104071 2 0
+# face 3104071 "normal"
+# alpha 3104071 1 0
+# move 3104171 4 0
+# face 3104171 "happy"
+# alpha 3104171 1 0
+# mask 3104171 on
+# waitandnext 0.2
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 0
+# voice 1040 "morallta_0003"
+@モラルタ
+あたしら、不思議な仕立て屋
+
+# voice 1041 "beagallta_0020"
+@ベガルタ
+私たち、奇妙な裁縫師
+
+@モラルタ
+こっちの布を縫い合わせ
+
+@ベガルタ
+生地の色を染め直す
+
+@モラ&ベガ
+チクチク針を動かして、
+一夜で衣装の出来上がり♪
+
+;;//幕を外す
+;;//双子、ハロウィン衣装にチェンジ
+# textwindow "close"
+# imagemoveto 0 -540 0 2
+# imagemoveto 1 540 0 2
+# waitandnext 2
+
+# emotionbody 1000 3 3104071 -50 200
+# emotionbody 2000 3 3104171 50 200
+# effectpattern 1000 1 11
+# effectpattern 2000 1 11
+# effectstart 1000
+# effectstart 2000
+# imagealpha 1 0 0
+# imagealpha 0 0 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 0
+@モラ＆ベガ
+じゃじゃ～ん！
+
+# face 3104071 "angry"
+# textboxarrow 0 1
+@モラルタ
+がおー！
+赤ずきんだよ
+
+# voice 1041 "beagallta_0023"
+# face 3104171 "normal"
+# textboxarrow 0 3
+@ベガルタ
+きゃっ！
+狼だよ、ぐすん
+
+# textflame 0 0
+@
+気づけば、いつの間にか
+二人がハロウィンの衣装に
+身を包んでいた
+
+@
+どうやって作ったの？
+と尋ねるマスター
+
+# face 3104071 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@モラルタ
+あいつら、いいもの持ってたから！
+やっつけて、私が貰ったの！
+
+# face 3104171 "happy"
+# textboxarrow 0 3
+@ベガルタ
+落としていったものも
+たくさんあったから
+使わせてもらっちゃった…
+
+# textflame 0 0
+@
+どこか違和感の残る言葉が
+返ってくる
+
+@
+聞き返そうかとした
+マスターだったが…
+
+# se "SE_0719"
+;;//ＳＥ：人の足音
+@
+騒ぎを聞きつけた人々に気づき、
+急いでその場を
+後にすることにした…

@@ -1,0 +1,435 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１１章 章タイトル「問いかける幻獣―ダイアローグ―」
+;;第2話－４　タイトル：対話のために
+;;2_4_1
+;;スクリプト最後の背景：地底・室内
+;;-----------------------------------------
+# script "lisp"
+# background "in_underground_world_room"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;マサムネ・獣刻・ヨルムンガンド
+# body 3100111
+# pos 3100111 3
+# scale 3100111 0.8 0
+# layer 3100111 2
+# alpha 3100111 0 0
+# mask 3100111 off
+;;ヴァジュラ・獣刻・ラクシュミー
+# body 3500511
+# pos 3500511 3
+# scale 3500511 0.8 0
+# layer 3500511 2
+# alpha 3500511 0 0
+# mask 3500511 off
+;;デュランダル（キラーメイル）
+# body 1100341
+# pos 1100341 3
+# scale 1100341 0.8 0
+# layer 1100341 2
+# alpha 1100341 0 0
+# mask 1100341 off
+;;天沼矛（キラーメイル）
+# body 1300431
+# pos 1300431 3
+# scale 1300431 0.8 0
+# layer 1300431 3
+# alpha 1300431 0 0
+# mask 1300431 off
+;;魔獣
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# layer 910013 2
+# alpha 910013 0 0
+# mask 910013 off
+;;魔獣1
+# entry 99100131 910013
+# pos 99100131 3
+# scale 99100131 0.8 0
+# layer 99100131 2
+# alpha 99100131 0 0
+# mask 99100131 off
+;;魔獣2
+# entry 99100132 910013
+# pos 99100132 3
+# scale 99100132 0.8 0
+# layer 99100132 2
+# alpha 99100132 0 0
+# mask 99100132 off
+;;-----------------------------------------
+;;第2話－４　タイトル：対話のために
+;;//背景：地底・室内
+# move 1100341 2 0
+# face 1100341 "normal"
+# alpha 1100341 1 0
+# mask 1100341 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 1300431 4 0
+# face 1300431 "normal"
+# alpha 1300431 1 0
+# mask 1300431 on
+@デュランダル
+見えたぞ
+あれがカシウスとウロボロスの
+結界だ
+
+# textboxarrow 0 3
+@天沼矛
+オレ達が力を合わせれば、きっと
+破ることができます！
+一気に突っ込みましょう！
+
+# voice 11003 "durandalm_0007"
+# face 1100341 "smile_1"
+# textboxarrow 0 1
+@デュランダル
+いいだろう
+聖剣デュランダルの真価を
+示してみせる
+
+;;//二人が結界に突っ込む
+# se "SE_9092"
+# textwindow "close"
+# leftout 1100341 0.5
+# waitandnext 0.6
+
+# se "SE_9092"
+# alpha 1100341 0 0
+# leftout 1300431 0.5
+# waitandnext 0.5
+
+# alpha 1300431 0 0
+# waitandnext 0.2
+
+# voice 11003 "durandalm_battle_0005"
+# move 1100341 2 0
+# face 1100341 "normal"
+# alpha 1100341 1 0.5
+# mask 1100341 on
+# textboxarrow 0 1
+# move 1300431 4 0
+# face 1300431 "trouble"
+# alpha 1300431 1 0.5
+# mask 1300431 on
+# textwindow "normal"
+@デュランダル
+くっ…！
+
+# voice 13004 "amenonubokom_battle_0006"
+# textboxarrow 0 3
+@天沼矛
+ぐあっ…！
+
+;;//二人とも弾かれる
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 1300431 "normal_1"
+# textboxarrow 0 3
+@天沼矛
+これは…思っていたより強力ですね
+でも、諦めません！
+
+# textboxarrow 0 1
+@デュランダル
+このくらいで退いては私の騎士道に
+反する
+勝負はここからだ
+
+;;//二人が結界に攻撃を繰り返す
+# se "SE_4000"
+# sedelay "SE_3006" 0.5
+# waitandnext 0.5
+
+# voice 13004 "amenonubokom_0004"
+# face 1300431 "normal"
+# textboxarrow 0 3
+@天沼矛
+ハハッ！
+とても頑丈ですね…
+
+# voice 11003 "durandalm_0028"
+# face 1100341 "trouble"
+# textboxarrow 0 1
+@デュランダル
+ただ闇雲に突っ込んでも
+効果は薄そうだな
+
+# move 1100341 1 0.5
+# move 1300431 3 0.5
+# move 3100111 5 0
+# face 3100111 "angry"
+# alpha 3100111 1 0.5
+# mask 3100111 on
+# textboxarrow 0 3
+@マサムネ
+拙者も助太刀致そう
+結界を破りたいのは、
+こちらも同じ故
+
+# face 1100341 "disgust_1"
+# textboxarrow 0 1
+@デュランダル
+淑女に助けを乞うのは私の騎士道に
+反するな…
+
+# textboxarrow 0 3
+@マサムネ
+女だからと侮らないでもらおう
+我が世界蛇の毒牙は決してそなた達に
+劣るものではない
+
+# face 1300431 "trouble"
+# textboxarrow 0 2
+@天沼矛
+すみません
+デュランダルは君を侮っている
+わけではないんです
+
+# textboxarrow 0 2
+@天沼矛
+ただ、オレ達は皆が笑顔で暮らせる
+世界を求めてキラーメイルになり
+ました
+
+# textboxarrow 0 2
+@天沼矛
+それなのに、君達にも戦いを強いる
+結果になっている…
+それが心苦しいんです
+
+# face 1100341 "normal"
+# textboxarrow 0 1
+@デュランダル
+君が剣を取ることなく生きていける
+世界…そのために私が剣を取る
+
+# voice 310011 "masamune_ge_0030"
+# face 3100111 "normal"
+# textboxarrow 0 3
+@マサムネ
+気遣いには感謝しよう
+だが、今は共闘すべきときだ
+
+# voice 350051 "vajura_ge_0004"
+# alpha 1100341 0 0.5
+# alpha 1300431 0 0.5
+# move 3500511 2 0
+# face 3500511 "usual"
+# alpha 3500511 1 0.5
+# mask 3500511 on
+# textboxarrow 0 1
+# move 3100111 4 0.5
+@ヴァジュラ
+うんうん
+いいこというな！
+
+# se "SE_8004"
+# face 3100111 "angry"
+# textboxarrow 0 3
+@マサムネ
+ヴァジュラ！
+…いいだろう
+そなたは拙者が相手をする
+
+# bgmfile "bgm405" "BgmIntegralNoahEvent003" 0
+# face 3500511 "angry"
+# textboxarrow 0 1
+@ヴァジュラ
+待ちなって！
+結界を破りたいんだろ？
+あたしも手伝ってやるよ
+
+# voice 310011 "masamune_ge_0022"
+# face 3100111 "surprise"
+# textboxarrow 0 3
+@マサムネ
+何を言っている？
+そなたはカシウス殿に頼まれて
+ここを守っていたのだろう？
+
+# face 3500511 "usual"
+# textboxarrow 0 1
+@ヴァジュラ
+それはそうなんだけど～
+キミ達を見てたら、ひょっとしてと
+思ってな
+
+# textboxarrow 0 1
+@ヴァジュラ
+カシウスは邪魔すんなって言ってた
+けど、キミ達は「邪魔」どころか
+あいつを助けてくれるのかも
+
+# voice 350051 "vajura_ge_0005"
+# face 3500511 "happy"
+# textboxarrow 0 1
+@ヴァジュラ
+それに、カミトが命がけで助けた
+その二人、なかなか良さそうだから♪
+
+# voice 310011 "masamune_ge_0009"
+# face 3100111 "angry"
+# textboxarrow 0 3
+@マサムネ
+そのような理由で…
+呆れてものが言えん
+
+# face 3500511 "usual"
+# textboxarrow 0 1
+@ヴァジュラ
+まあ、ちょっと聞きなって
+カシウスと会ったのは
+けっこう前のことでね…
+
+# textboxarrow 0 1
+@ヴァジュラ
+そのときのあいつは…
+空っぽだったんだよ
+あたしのせいでもあるんだけど…
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 3500511 0 0
+# alpha 3100111 0 0
+# move 3100111 3 0
+# face 3100111 "sad"
+# alpha 3100111 1 0
+# mask 3100111 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 310011 "masamune_ge_0015"
+# textboxarrow 0 2
+# textwindow "normal"
+@マサムネ
+そのようなことが…
+
+# voice 11003 "durandalm_0040"
+# alpha 3100111 0 0.5
+# move 1100341 2 0
+# face 1100341 "smile_1"
+# alpha 1100341 1 0.5
+# mask 1100341 on
+# textboxarrow 0 1
+# move 1300431 4 0
+# face 1300431 "normal"
+# alpha 1300431 1 0.5
+# mask 1300431 on
+@デュランダル
+なるほど
+やはり私達の出番だったようだ
+
+# voice 13004 "amenonubokom_0032"
+# textboxarrow 0 3
+@天沼矛
+そうですね！
+笑っていられる世界を作りたくて
+キラーメイルになることを選んだ
+
+# textboxarrow 0 3
+@天沼矛
+そんなオレ達だからこそ、
+彼女にしてあげられることが
+きっとあります
+
+# voice 350051 "vajura_ge_0033"
+# alpha 1100341 0 0.5
+# alpha 1300431 0 0.5
+# move 3500511 3 0
+# face 3500511 "normal"
+# alpha 3500511 1 0.5
+# mask 3500511 off
+# textboxarrow 0 2
+@ヴァジュラ
+よっしゃ！
+結界破りは、あたしに任せな！
+どんな困難もあたしの豪運の前に跪く
+
+# alpha 3500511 0 0.5
+# move 1100341 2 0
+# face 1100341 "normal"
+# alpha 1100341 1 0.5
+# mask 1100341 on
+# textboxarrow 0 1
+# move 1300431 4 0
+# face 1300431 "normal"
+# alpha 1300431 1 0.5
+# mask 1300431 on
+@デュランダル
+運か…
+そのような曖昧なものに
+委ねるつもりはないが
+
+# textboxarrow 0 3
+@天沼矛
+ここで意地を張っても
+失礼なだけですね
+
+# alpha 1100341 0 0.5
+# alpha 1300431 0 0.5
+# move 3500511 2 0
+# face 3500511 "usual"
+# alpha 3500511 1 0.5
+# mask 3500511 on
+# textboxarrow 0 1
+# move 3100111 4 0
+# face 3100111 "normal"
+# alpha 3100111 1 0.5
+# mask 3100111 on
+@ヴァジュラ
+そうこなくっちゃな！
+派手にぶちかますぞ
+
+# face 3100111 "angry"
+# textboxarrow 0 3
+@マサムネ
+…心得た
+今は結界破りに集中するとしよう
+
+# se "SE_0792"
+# alpha 3500511 0 0.5
+# alpha 3100111 0 0.5
+# move 99100131 1 0
+# alpha 99100131 1 0.5
+# mask 99100131 on
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 on
+# move 99100132 5 0
+# alpha 99100132 1 0.5
+# mask 99100132 on
+# textboxarrow 0 0
+@魔獣
+ギイイイイイイイイイ！！
+
+# alpha 99100131 0 0.5
+# alpha 910013 0 0.5
+# alpha 99100132 0 0.5
+# move 1100341 2 0
+# face 1100341 "normal"
+# alpha 1100341 1 0.5
+# mask 1100341 on
+# move 1300431 4 0
+# face 1300431 "trouble"
+# alpha 1300431 1 0.5
+# mask 1300431 on
+# textboxarrow 0 3
+@天沼矛
+さっきの残党ですか？
+こちらに集まってきますね
+
+# textboxarrow 0 1
+@デュランダル
+大した障害ではない
+蹴散らし、結界を破る！

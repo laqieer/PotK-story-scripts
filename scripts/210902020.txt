@@ -1,0 +1,604 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第９章 章タイトル：「雄弁な守人―プレッジ―」
+;;第2話－２　タイトル：為すべきこと
+;;2_2_0
+;;スクリプト最後の背景：荒廃した町
+;;-----------------------------------------
+# script "lisp"
+# background "ground_surface_break"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;テュルソス・D. plug・フォルネウス
+# body 3600311
+# pos 3600311 3
+# scale 3600311 0.8 0
+# layer 3600311 2
+# alpha 3600311 0 0
+# mask 3600311 off
+;;ヴァナルガンド・聖鎖・サリエル 大罪ver.
+# body 5601111
+# pos 5601111 3
+# scale 5601111 0.8 0
+# layer 5601111 2
+# alpha 5601111 0 0
+# mask 5601111 off
+;;アフロディーテ・D. plug・アスモデウス 大罪ver.
+# body 5401311
+# pos 5401311 3
+# scale 5401311 0.8 0
+# layer 5401311 4
+# alpha 5401311 0 0
+# mask 5401311 off
+;;エンクウ
+# body 227
+# pos 227 3
+# scale 227 0.8 0
+# layer 227 2
+# alpha 227 0 0
+# mask 227 off
+;;クレイ
+# body 228
+# pos 228 3
+# scale 228 0.8 0
+# layer 228 3
+# alpha 228 0 0
+# mask 228 off
+;;ツカサ
+# body 229
+# pos 229 3
+# scale 229 0.8 0
+# layer 229 2
+# alpha 229 0 0
+# mask 229 off
+;;ムラマサ・獣刻・ヤマタノオロチ 大罪ver.
+# body 5102511
+# pos 5102511 3
+# scale 5102511 0.8 0
+# layer 5102511 2
+# alpha 5102511 0 0
+# mask 5102511 off
+;;ツカサ
+# body 241
+# pos 241 3
+# scale 241 0.8 0
+# layer 241 2
+# alpha 241 0 0
+# mask 241 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第2話－２　タイトル：為すべきこと
+;;//背景：荒廃した町
+# voice 360031 "tyurusosu_a_0027"
+# move 227 2 0
+# face 227 "usual"
+# alpha 227 1 0
+# mask 227 on
+# move 3600311 4 0
+# face 3600311 "sad"
+# alpha 3600311 1 0
+# mask 3600311 on
+# textflame 1 1
+# textboxarrow 0 3
+@テュルソス
+とりつく島もなかったわね
+
+# voice 9931 "enkuu_0017"
+# face 227 "sad"
+# textboxarrow 0 1
+@エンクウ
+せめて、拙僧にも手伝えることは
+ないかと聞いてみたが…
+
+# alpha 3600311 0 0.5
+# move 5102511 4 0
+# face 5102511 "sad"
+# alpha 5102511 1 0.5
+# mask 5102511 on
+# textboxarrow 0 3
+@ムラマサ
+「あなた達の力など必要ない」の
+一点張りでした…
+
+# alpha 227 0 0.5
+# alpha 5102511 0 0.5
+# move 229 3 0
+# alpha 229 1 0.5
+# mask 229 off
+# textboxarrow 0 2
+@ツカサ
+…………
+
+;;//ツカサがそっと立ち去る
+# se "SE_5200"
+# textwindow "close"
+# alpha 229 0 0.5
+# waitandnext 0.5
+
+# move 227 2 0
+# face 227 "usual"
+# alpha 227 1 0.5
+# mask 227 on
+# move 228 4 0
+# face 228 "irregular"
+# alpha 228 1 0.5
+# mask 228 on
+# textboxarrow 0 3
+# textwindow "normal"
+@クレイ
+…………！
+
+# textboxarrow 0 1
+@エンクウ
+致し方ない
+出直すこととしよう
+
+;;//クレイが立ち去る
+# se "SE_0719"
+# textwindow "close"
+# alpha 228 0 0.5
+# waitandnext 0.5
+
+# voice 360031 "tyurusosu_a_0031"
+# move 3600311 4 0
+# face 3600311 "normal"
+# alpha 3600311 1 0.5
+# mask 3600311 on
+# textboxarrow 0 3
+# textwindow "normal"
+@テュルソス
+わざわざ来てもらったのに
+悪いわね
+お詫びに一杯奢るわ
+
+# voice 9931 "enkuu_0023"
+# face 227 "normal"
+# textboxarrow 0 1
+@エンクウ
+いや、拙僧は…
+むっ？
+クレイ殿は何処に？
+
+# alpha 3600311 0 0.5
+# move 5102511 4 0
+# face 5102511 "surprise"
+# alpha 5102511 1 0.5
+# mask 5102511 on
+# textboxarrow 0 3
+@ムラマサ
+いつの間にか拙者達だけに
+なっています…！
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 227 0 0
+# alpha 5102511 0 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# se "SE_0740"
+# move 229 3 0
+# alpha 229 1 0.5
+# mask 229 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ツカサ
+…………
+
+# se "SE_5575"
+# textwindow "close"
+# leftout 229 0.5
+# waitandnext 0.5
+
+# voice 9930 "clay_0013"
+# alpha 229 0 0
+# move 228 3 0
+# face 228 "angry"
+# alpha 228 1 0.5
+# mask 228 off
+# textboxarrow 0 2
+# textwindow "normal"
+@クレイ
+待ってくれ、ツカサ！
+どこに行くつもりだっ？
+
+# alpha 228 0 0.5
+# move 229 3 0
+# alpha 229 1 0.5
+# mask 229 off
+# textboxarrow 0 2
+@ツカサ
+…………！
+
+# alpha 229 0 0.5
+# move 5601111 2 0
+# face 5601111 "usual"
+# alpha 5601111 1 0.5
+# mask 5601111 on
+# move 5401311 4 0
+# face 5401311 "usual"
+# alpha 5401311 1 0.5
+# mask 5401311 on
+# textboxarrow 0 3
+@アフロディーテ
+あらぁ…
+尾行だなんて、美しくありませんわね
+
+# voice 360111 "vanargand_t_0013"
+# face 5601111 "normal"
+# textboxarrow 0 1
+@ヴァナルガンド
+失礼なことを言わないで下さい
+マスターさんはツカサさんの身を
+案じているんですっ
+
+# face 5601111 "usual"
+# textboxarrow 0 1
+@ヴァナルガンド
+私達に黙って、一体、どちらへ？
+
+# textboxarrow 0 3
+@アフロディーテ
+マスターは気まぐれなの
+わたしがついているから、
+心配しなくても大丈夫ですよ
+
+# voice 9930 "clay_0051"
+# alpha 5601111 0 0.5
+# alpha 5401311 0 0.5
+# move 228 2 0
+# face 228 "irregular"
+# alpha 228 1 0.5
+# mask 228 on
+# textboxarrow 0 1
+# move 229 4 0
+# alpha 229 1 0.5
+# mask 229 on
+@クレイ
+なあ、ツカサ
+君がフラッといなくなるのは
+今までだって何度かあった
+
+# textboxarrow 0 1
+@クレイ
+エンクウは達観しているから、
+とやかく言うことはない
+だから私もそうしてきた…
+
+# textboxarrow 0 1
+@クレイ
+でも、状況は悪くなっていく
+単独行動は危険だ
+
+# textboxarrow 0 1
+@クレイ
+もし、君自身に何かやらなければ
+ならないことがあるのなら、
+私達にも話してくれないかっ
+
+# textboxarrow 0 1
+@クレイ
+きっと君の力になれる
+一人で抱え込まないで欲しい
+私達は仲間だろうっ？
+
+;;//クレイがツカサに迫る
+# se "SE_0719"
+# textwindow "close"
+# move 228 3 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# textwindow "normal"
+@ツカサ
+…………
+
+;;//アフロディーテが二人の間に入る
+# se "SE_5200"
+# textwindow "close"
+# move 228 1 0.5
+# move 5401311 3 0
+# face 5401311 "angry"
+# alpha 5401311 1 0.5
+# mask 5401311 on
+# move 229 5 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+@アフロディーテ
+情熱的なアプローチには愛を感じます
+けれど、あまりマスターに近づかない
+でいただけます？
+
+# textboxarrow 0 1
+@クレイ
+おっと…済まない
+私は、ただ…
+
+# voice 9929 "tsukasa_0047"
+# textboxarrow 0 3
+@ツカサ
+アフロディーテ、
+僕は大丈夫だから
+
+# face 5401311 "surprise"
+# textboxarrow 0 2
+@アフロディーテ
+あら、マスター…
+
+;;//アフロディーテが下がり、ツカサがフードを取る
+# textwindow "close"
+# alpha 5401311 0 0.5
+# waitandnext 0.5
+
+# move 228 2 0.5
+# move 229 4 0.5
+# waitandnext 0.5
+
+# se "SE_5200"
+# alpha 229 0 0.5
+# move 241 4 0
+# face 241 "normal"
+# alpha 241 1 0.5
+# mask 241 on
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# textwindow "normal"
+@ツカサ
+これ以上、クレイとエンクウに
+素性を隠すのは良くないよね
+
+# textboxarrow 0 3
+@ツカサ
+僕も気を張りすぎていたのかも
+二人は信頼できるって
+分かってたはずなのに
+
+# face 228 "surprise"
+# textboxarrow 0 1
+@クレイ
+ツカサ…！？
+君、もしかして…
+
+# voice 9929 "tsukasa_0003"
+# textboxarrow 0 3
+@ツカサ
+女だよ
+それが何か？
+
+# voice 9930 "clay_0036"
+# face 228 "irregular"
+# textboxarrow 0 1
+@クレイ
+いや…済まない
+ちょっと驚いただけなんだ
+
+# textboxarrow 0 3
+@ツカサ
+驚きついでにもう一つ
+僕は中心部を治める四大奏官の
+一人で、南地区を治めている
+
+# textboxarrow 0 3
+@ツカサ
+先日、アルマス達を迎えに来た
+シェキナーは僕のキル姫だ
+
+# face 228 "surprise"
+# textboxarrow 0 1
+@クレイ
+何だって！？
+それは…さすがに…
+
+# textboxarrow 0 3
+@ツカサ
+受け入れ難いかな？
+でも、事実だよ
+それから…
+
+# textboxarrow 0 3
+@ツカサ
+君の予想通り、僕はここで
+やることがあるんだ
+
+# textboxarrow 0 3
+@ツカサ
+エンクウに「ネオ・ラグナロク」と
+組むことを提案したのは、そのため
+でもあった
+
+# textboxarrow 0 3
+@ツカサ
+僕はここに匿われている一人の
+キル姫に用があるんだよ
+
+# voice 9930 "clay_0026"
+# face 228 "irregular"
+# textboxarrow 0 1
+@クレイ
+ここのキル姫に…？
+それじゃ、まさか今から…
+
+# textboxarrow 0 3
+@ツカサ
+中に忍び込むつもりでいた
+見つかったら信者やここのキル姫に
+追われるだろうから
+
+# textboxarrow 0 3
+@ツカサ
+僕とアフロディーテだけで
+やるつもりだったんだよ
+
+# textboxarrow 0 3
+@ツカサ
+これでいいかな？
+それじゃ、僕達はこれで
+
+# voice 9930 "clay_0013"
+# face 228 "angry"
+# textboxarrow 0 1
+@クレイ
+待った！
+待ってくれ！
+
+# textboxarrow 0 3
+@ツカサ
+何かな？
+これ以上、聞きたいことなんて――
+
+# textboxarrow 0 1
+@クレイ
+そんな話を聞いたら、尚のこと
+君を一人で…いや二人かな？
+とにかくっ
+
+# textboxarrow 0 1
+@クレイ
+放ってはおけない！
+私も一緒にいくよ
+
+# voice 9929 "tsukasa_0023"
+# textboxarrow 0 3
+@ツカサ
+えっ、何で？
+君まで危険なことをする必要は
+ないんだ
+
+# textboxarrow 0 3
+@ツカサ
+これは、あくまで僕のやるべき
+ことであって――
+
+# face 228 "irregular"
+# textboxarrow 0 1
+@クレイ
+君のやるべきことなら、
+私達が為すべきことだ
+何故なら
+
+# bgm "stop"
+# voice 9931 "enkuu_0049"
+# move 227 1 0
+# face 227 "usual"
+# alpha 227 1 0.5
+# mask 227 on
+# textboxarrow 0 1
+# move 228 3 0.5
+# move 241 5 0.5
+@エンクウ
+拙僧達は仲間だから、であろう？
+クレイ殿
+
+# face 228 "surprise"
+# textboxarrow 0 2
+@クレイ
+エンクウっ？
+
+# bgmfile "bgm405" "BgmIntegralNoahEvent003" 0
+# textboxarrow 0 1
+@エンクウ
+二人ともどこに行ったかと探して
+みれば、何やら訳ありの様子
+
+# voice 9931 "enkuu_0051"
+# textboxarrow 0 1
+@エンクウ
+ツカサ殿、拙僧にも加勢させて
+もらえぬかな？
+
+# textboxarrow 0 1
+@エンクウ
+そなたが拙僧達をどのように見て
+おるのかは知らぬが、拙僧は
+そなたを仲間だと思っておる
+
+# textboxarrow 0 1
+@エンクウ
+仲間のために加勢する
+それは至極、当然のことだ
+
+# face 228 "irregular"
+# textboxarrow 0 2
+@クレイ
+どうだろう、ツカサ？
+
+# textboxarrow 0 3
+@ツカサ
+…………
+
+# voice 340131 "aphrodite_a_0005"
+# alpha 227 0 0.5
+# alpha 228 0 0.5
+# alpha 241 0 0.5
+# move 5401311 3 0
+# face 5401311 "happy"
+# alpha 5401311 1 0.5
+# mask 5401311 off
+# textboxarrow 0 2
+@アフロディーテ
+うふふふっ♪
+愛を感じますわねぇ、マスター
+
+# alpha 5401311 0 0.5
+# move 227 1 0
+# face 227 "usual"
+# alpha 227 1 0.5
+# mask 227 on
+# move 228 3 0
+# face 228 "irregular"
+# alpha 228 1 0.5
+# mask 228 on
+# move 241 5 0
+# face 241 "normal"
+# alpha 241 1 0.5
+# mask 241 on
+# textboxarrow 0 3
+@ツカサ
+アフロディーテは黙ってて
+…僕だって、君達を仲間だと
+思ってるよ
+
+# textboxarrow 0 3
+@ツカサ
+だからこそ、余計な荷を負わせたく
+なかったのに…本当にいいんだね？
+
+# textboxarrow 0 3
+@ツカサ
+手伝うって言ったんだから、
+最後までつき合ってもらうよっ
+
+# voice 9931 "enkuu_0004"
+# face 227 "happy"
+# textboxarrow 0 1
+@エンクウ
+それこそ本望
+
+# voice 9930 "clay_0004"
+# face 228 "normal"
+# textboxarrow 0 2
+@クレイ
+好きなだけ頼って欲しい
+
+# textboxarrow 0 3
+@ツカサ
+それなら、一緒についてきて
+「ネオ・ラグナロク」に潜入して
+見つけ出すんだ
+
+# textboxarrow 0 3
+@ツカサ
+キル姫、ティファレトを

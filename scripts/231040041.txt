@@ -1,0 +1,353 @@
+;;2019 イースターイベント シナリオ
+;;【エピソード4】すれ違うふたり
+;;背景：森（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;シユウ
+# body 3201921
+# pos 3201921 3
+# scale 3201921 0.8 0
+# alpha 3201921 0 0
+# mask 3201921 off
+;;ヴァナルガンド
+# body 3601121
+# pos 3601121 3
+# scale 3601121 0.8 0
+# alpha 3601121 1 0
+# mask 3601121 off
+;;トレイセーマ隊長
+# body 3830007
+# pos 3830007 3
+# scale 3830007 0.8 0
+# alpha 3830007 0 0
+# mask 3830007 off
+;;-----------------------------------------
+# emotionbody 1008 2 3601121 -100 120
+# effectpattern 1008 1 0
+# effectstart 1008
+# textflame 1 1
+# textboxarrow 0 2
+# voice 360111 "vanargand_t_0022"
+# face 3601121 "surprise"
+@ヴァナルガンド
+え？
+私がシユウの保護者、ですか？
+
+# textflame 0 0
+@
+さっきのヴァナルガンドは、
+シユウの保護者に見えたんだ
+と、マスターは感じたままを伝える
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 360111 "vanargand_t_0028"
+# face 3601121 "sad"
+@ヴァナルガンド
+私はただ、自分勝手な
+行動を見過ごせないだけです～
+
+# textboxarrow 0 2
+@ヴァナルガンド
+ハルモニアでは、命令に従って
+国の斬ル姫を監視し、ときには
+罰を与える立場でもありました…
+
+# textboxarrow 0 2
+@ヴァナルガンド
+ケイオスリオンにいたシユウには、
+私のような存在は邪魔でしょうね～
+
+# textflame 0 0
+@
+でも、転んだシユウの世話をしたり、
+優しく諭したりで、やさしいお姉さん
+みたいだけど、とマスターがいうと…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3601121 "surprise"
+@ヴァナルガンド
+あの時は、シユウが勢いよく
+転んだので、思わず手が出たんです
+土まみれのまま、放っておけません～
+
+# textboxarrow 0 2
+# voice 360111 "vanargand_t_0004"
+# face 3601121 "normal"
+@ヴァナルガンド
+それと、優しく説明する方法は、
+マスターさんから学びました
+ちゃんと話を聞いてもらいたくて…
+
+# textboxarrow 0 2
+# voice 360111 "vanargand_t_0005"
+# face 3601121 "smile"
+@ヴァナルガンド
+ふふっ…
+ですが、もし本当に私が姉だったら、
+シユウはいい迷惑でしょうね～
+
+;;//演出：場面転換
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.2
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+# alpha 3601121 0 0
+# alpha 3201921 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# emotionbody 1002 3 3201921 110 130
+# effectpattern 1002 1 0
+# effectstart 1002
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_0004"
+# face 3201921 "happy"
+@シユウ
+これもそれも、うまそうだな！
+よし、ぜんぶもっていこう！
+
+# se "SE_0683"
+# sedelay "SE_0683" 0.5
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_0033"
+@シユウ
+これだけあれば、
+マスターも、ヴァナルガンドも、
+きっとよろこぶぞ！
+
+# se "SE_0719"
+# textflame 0 0
+@
+マスターたちに食べさせようと、
+お菓子を皿いっぱいに乗せたシユウが
+二人の待つテーブルへと向かう
+
+# textflame 0 0
+@
+そして、マスターとヴァナルガンドが
+楽しそうにしている光景が目に入った
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# emotionbody 1005 8 3201921 120 140
+# effectpattern 1005 1 0
+# effectstart 1005
+# textflame 1 1
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_0015"
+# face 3201921 "sad"
+@シユウ
+うっ…シユウがいなくても…
+たのしそうだな…せっかく
+ふたりのぶんも、とってきたのに…
+
+# effectskip 1005
+# emotionbody 1004 6 3201921 50 140
+# effectpattern 1004 1 0
+# effectstart 1004
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_0010"
+# face 3201921 "angry"
+@シユウ
+…うがああぁあ！
+なんだか、おもしろくないぞ！
+シユウだけで、ぜんぶたべてやる！
+
+# se "SE_11144"
+# sedelay "SE_11144" 0.5
+# textboxarrow 0 2
+@シユウ
+うぐっ、このやきがしは、
+やけにむねにつかえるな…
+なんだか、はらもくるしいぞ？
+
+# emotionbody 1014 8 3201921 120 140
+# effectpattern 1014 1 0
+# effectstart 1014
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_0028"
+# face 3201921 "sad"
+@シユウ
+へんだな…さっきまで
+おいしくて、たのしかったのに…
+シユウがおかしくなったのか…？
+
+;;//演出：場面転換
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.2
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# effectskip 1014
+# alpha 3201921 0 0
+# alpha 3601121 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 360111 "vanargand_t_0028"
+# face 3601121 "sad"
+@ヴァナルガンド
+マスターさん、
+シユウ、遅くないですか？
+心配なので探してきます～
+
+# textboxarrow 0 2
+# face 3601121 "normal"
+@ヴァナルガンド
+マスターさんは、シユウが
+戻ってきた時のために、
+ここにいてあげてくださいね～
+
+;;//演出：場面転換
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.2
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# se "SE_0719"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+ヴァナルガンドはシユウを探すうちに
+気がつけば会場の外れまで来ていた
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 360111 "vanargand_t_0027"
+# face 3601121 "surprise"
+@ヴァナルガンド
+あら～、会場から出てしまいました
+本当に、どこにいったのかしら～？
+
+# textwindow "toge"
+# textboxarrow 0 0
+@シユウ
+ほんとうに、おまえらしつこいな！
+こんどこそ、たいらげてやるぞ！
+
+# emotionbody 1007 1 3601121 60 240
+# effectpattern 1007 1 0
+# effectstart 1007
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 360111 "vanargand_t_0022"
+@ヴァナルガンド
+いまのは、シユウの声？
+茂みの向こう、でしょうか～
+
+# textflame 0 0
+@
+ヴァナルガンドが茂みの向こうを
+のぞくと、シユウがトレイセーマの
+兵士に囲まれていた
+
+# emotionbody 1015 1 3601121 60 240
+# effectpattern 1015 1 0
+# effectstart 1015
+# textflame 1 1
+# textboxarrow 0 2
+# voice 360111 "vanargand_t_0013"
+# face 3601121 "angry"
+@ヴァナルガンド
+シユウ！？
+私も加勢します！
+
+# emotionbody 1000 1 3201921 30 210
+# effectpattern 1000 1 0
+# effectstart 1000
+# alpha 3601121 0 0.5
+# alpha 3201921 1 0.5
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_0022"
+# face 3201921 "surprise"
+@シユウ
+ヴァナルガンド！？
+
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_0009"
+# face 3201921 "angry"
+@シユウ
+…ここに、なにしにきた？
+たすけは、むようだ！
+こんなやつら、ひとりでやれる！
+
+# alpha 3201921 0 0.5
+# textflame 0 0
+@
+そこに、ヴァナルガンドもシユウも
+なかなか戻ってこないため、
+探しに出たマスターが通りかかる
+
+# textflame 0 0
+@
+シユウとヴァナルガンドを見つけ、
+よかった、ここにいたんだね
+と、駆け寄ろうとすると…
+
+# move 3601121 4 0
+# move 3201921 2 0
+# alpha 3830007 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@トレイセーマ隊長
+あ！
+お前もこいつらの仲間だな！
+この弱そうなヤツから狙うぞ！
+
+# emotionbody 1016 6 3201921 50 140
+# effectpattern 1016 1 0
+# effectstart 1016
+# alpha 3830007 0 0.5
+# mask 3601121 on
+# mask 3201921 on
+# alpha 3601121 1 0.5
+# alpha 3201921 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 320191 "chihyu_a_0010"
+@シユウ
+うがあああぁぁ！
+シユウのまえで、マスターに
+てをだすとは、いいどきょうだ！
+
+# textboxarrow 0 3
+@ヴァナルガンド
+マスター、はやくこちらへ！
+私たちが必ずお守りします！

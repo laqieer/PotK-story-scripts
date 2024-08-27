@@ -1,0 +1,361 @@
+;;-----------------------------------------
+;;SEA2章_15
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "bgm002" 0
+;;-----------------------------------------
+;;リットゥ（剣無し）
+# body 285
+# pos 285 2
+# scale 285 0.8 0
+# layer 285 2
+# mask 285 off
+# alpha 285 0 0
+;;ハイス少年
+# body 291
+# pos 291 4
+# scale 291 0.8 0
+# layer 291 4
+# mask 291 off
+# alpha 291 0 0
+;;盗賊
+# body 45
+# pos 45 3
+# scale 45 0.8 0
+# layer 45 3
+# mask 45 off
+# alpha 45 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 4
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagescale 1 1.5 0
+# imagelayer 1 3
+;;-----------------------------------------
+;;背景：都心部
+# textwindow "close"
+# waitandnext 0.2
+
+;;リットゥの回想
+# background "imperial_city"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# imagealpha 1 0.5 0
+# imagepos 1 0 0
+# waitandnext 0.3
+
+# imagealpha 0 0 1
+# waitandnext 1
+
+# face 285 "normal"
+# face 291 "normal"
+# alpha 285 1 0.5
+# alpha 291 1 0.5
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@ハイス
+送ってくれてありがとう
+ここからは一人で大丈夫だよ
+
+# voice 1005 "ritto_0003"
+# textboxarrow 0 1
+@リットゥ
+うむ
+では、私は屋敷に戻る
+
+# textboxarrow 0 3
+@ハイス
+リットゥ！
+姉さんのこと、よろしくね
+
+# textboxarrow 0 1
+@リットゥ
+無論だ
+フランは私が必ず守る
+
+# textboxarrow 0 3
+@ハイス
+じゃあ、僕が帰ってくるまで
+任せたからね
+
+# voice 1005 "ritto_0033"
+# textboxarrow 0 1
+@リットゥ
+安心しろ
+私達キル姫はお前達と
+異なる時の流れで生きている
+
+# textboxarrow 0 1
+@リットゥ
+たとえ何年、何十年、何百年
+経とうとも守り続ける！
+
+# face 291 "happy"
+# textboxarrow 0 3
+@ハイス
+リットゥはすごいな！
+約束だよっ
+
+# face 285 "happy"
+# textboxarrow 0 1
+@リットゥ
+ああ
+約束だ、ハイス
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：平原
+# background "plain"
+# bgm "stop"
+# move 285 3 0
+# face 285 "normal"
+# alpha 291 0 0
+# waitandnext 0.2
+
+# se "SE_0944"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@リットゥ
+ふぅ…
+ジーゲルの町まで、あと少しか
+
+# voice 1005 "ritto_0023"
+# face 285 "surprise"
+# textboxarrow 0 2
+@リットゥ
+むっ？
+あの黒煙は何だ…！？
+まさかっ
+
+;;リットゥが走っていく
+# se "SE_5575"
+# move 285 5 0.5
+# alpha 285 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：廃墟（炎上）
+# background "201_border"
+# bgm "bgm031" 0
+# move 285 1 0
+# waitandnext 0.2
+
+;;炎上演出
+# subfillrect 0 "red" 0 0 0.3
+# envbody 1000 7 0
+# effectstart 1000
+# se "SE_0753"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 285 3 0.5
+# face 285 "surprise"
+# alpha 285 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@リットゥ
+こ…これは…
+
+# face 285 "angry"
+# textboxarrow 0 2
+@リットゥ
+フラン…
+フラン！フラン！
+どこだっ？
+
+# move 285 4 0.5
+# alpha 285 0 0.3
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@盗賊達
+やった！
+これで…酷い暮らしとも
+オサラバだあ！
+
+# serif 1
+@盗賊達
+三日ぶりの食い物だ
+ハハハ…美味ぇや
+
+# face 45 "angry"
+# alpha 45 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@盗賊
+おい！
+さっさと引き上げるぞ
+長居してたら…
+
+# voice 1005 "ritto_0009"
+# move 45 4 0.5
+# move 285 2 0
+# face 285 "angry"
+# alpha 285 1 0.3
+# textboxarrow 0 1
+@リットゥ
+お前達…
+ここで何をしている！？
+
+# textboxarrow 0 3
+@盗賊
+ひぃっ…！
+出やがったな…
+
+# serif 1
+# textwindow "nomal"
+@盗賊達
+くそっ
+逃げろ…！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@リットゥ
+逃がしはしない！
+
+# bgm "stop"
+# se "SE_4602"
+# fadein "red" 0.5
+# waitandnext 0.5
+
+# se "SE_5288"
+# move 45 5 0.5
+# textboxarrow 0 3
+@盗賊
+ぐああっ…
+ちくしょう…またあんたに
+会うなんて…
+
+# face 285 "surprise"
+# textboxarrow 0 1
+@リットゥ
+何だと？
+…お前、まさかっ
+
+# bgm "bgm004" 0
+# move 45 4 0.5
+# textboxarrow 0 3
+@盗賊
+ハハッ…
+俺のことを覚えていたのかい？
+そうだよ…
+
+# textboxarrow 0 3
+@盗賊
+あんたに村を追い出された
+罪人だよっ
+
+# textboxarrow 0 3
+@盗賊
+村から追放され、俺が今まで
+どんな目に遭ってきたか…
+
+# face 285 "angry"
+# textboxarrow 0 1
+@リットゥ
+それはお前に課せられた罰だ
+罪を犯す言い訳にするな
+
+# textboxarrow 0 3
+@盗賊
+そうだな…
+あんたは正しいよ
+清く正しいキル姫様だ…
+
+# textboxarrow 0 3
+@盗賊
+俺達は皆、どっかで罪を犯して
+追い出され、居場所を無くした
+罪人どもさ
+
+# textboxarrow 0 3
+@盗賊
+でもなぁ…
+償いたいって気持ちもあったんだ
+それなのに…
+
+# textboxarrow 0 3
+@盗賊
+その機会も
+あんたは奪ったんだろうがっ…！
+
+# textboxarrow 0 3
+@盗賊
+そういや、あんた
+何で、こんなところにいるんだ？
+あの村はどうした？
+
+# textboxarrow 0 3
+@盗賊
+ひょっとして、
+あんたも追い出されたのか？
+
+# face 285 "surprise"
+# textboxarrow 0 1
+@リットゥ
+…………！
+
+# textboxarrow 0 3
+@盗賊
+ざまあみろ！
+あんただって同じだ
+どこにも居場所なんてない
+
+# textboxarrow 0 3
+@盗賊
+あんたの言う「聖域」なんか
+この世に存在しないんだよ…！
+永遠に彷徨い続けてろ！
+
+# face 285 "angry"
+# textboxarrow 0 1
+@リットゥ
+黙れ！！
+
+;;打撃音
+# se "SE_4602"
+# fadein "red" 0.5
+# move 285 3 0.3
+# move 45 5 0.5
+# alpha 45 0 0.3
+# textboxarrow 0 0
+# waitandnext 1
+
+# textboxarrow 0 2
+@リットゥ
+盗賊ども…
+誰一人、逃がしはしない
+全員、罰を受けろ
+
+# fadeout "black" 1
+# waitandnext 1

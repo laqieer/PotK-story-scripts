@@ -1,0 +1,357 @@
+;;-----------------------------------------
+;;3_2_6_1
+;;-----------------------------------------
+# script "lisp"
+# background "wild"
+# bgmfile "bgm421_1" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 5
+# mask 210 off
+# alpha 210 0 0
+;;アスカロン
+# body 3102311
+# pos 3102311 2
+# scale 3102311 0.8 0
+# alpha 3102311 0 0
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# mask 3501711 off
+# alpha 3501711 0 0
+;;スケルトン
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# mask 910013 off
+# alpha 910013 0 0
+;;-----------------------------------------
+;;暗転
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;霧
+# imageset 1 "kiri_03"
+# imagescale 1 2.5 0
+# imagealpha 1 0 0
+# imagelayer 1 4
+# imageset 2 "kiri_03"
+# imagescale 2 2 0
+# imagealpha 2 0 0
+# imagelayer 2 3
+;;-----------------------------------------
+# textwindow "close"
+# waitandnext 0.2
+
+# imagealpha 1 1 0
+# imagepos 1 -70 170
+# imagealpha 2 1 0
+# imagepos 2 50 -100
+# fadein "black" 1
+# waitandnext 1.5
+
+;;霧演出
+# imageleftout 1 7
+# imagerightout 2 7
+# imagealpha 1 0 1
+# imagealpha 2 0 1
+# waitandnext 1
+
+;;カミトが走っている
+# se "SE_0850"
+# alpha 210 1 0.5
+# waitandnext 0.7
+
+# move 210 3 0
+# textwindow "moya"
+# textflame 1 1
+# textboxarrow 0 0
+# face 210 "sad"
+# voice 9936 "kamito_0040"
+@カミト
+逃げなきゃ…！
+逃げなきゃ逃げなきゃ逃げなきゃ…！
+あんなの勝てっこない…！
+
+# voice 9936 "kamito_0027"
+@カミト
+ヴァン兄…フォルカス…
+僕には無理だよっ
+僕は…
+
+;;カミトが転ぶ
+# se "SE_0852"
+# shake 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# sestop "SE_0850"
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 9936 "kamito_0039"
+@カミト
+いたっ
+
+# move 210 4 0.5
+# mask 210 on
+# alpha 3102311 1 0.5
+# textboxarrow 0 1
+# face 3102311 "angry"
+@アスカロン
+マスター！
+大丈夫ですかっ？
+
+# textboxarrow 0 3
+# voice 9936 "kamito_0016"
+@カミト
+だ、大丈夫…
+それより…逃げよう…
+逃げ…うううっ…
+
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# alpha 3501711 1 0.5
+# textboxarrow 0 2
+# face 3501711 "normal"
+# voice 350171 "grimoire_ge_0007"
+@グリモワール
+…とりあえず、あの化け物からは
+逃げられたみたいよ
+ほら、さっさと立ちなさい！
+
+# move 3501711 4 0.5
+# mask 3501711 on
+# move 210 2 0
+# alpha 210 1 0.5
+# textboxarrow 0 1
+# voice 9936 "kamito_0033"
+@カミト
+ごめん…
+ごめん…僕は…
+
+# textboxarrow 0 3
+@グリモワール
+…萎れてる暇があったら
+歩きなさい
+
+# textboxarrow 0 3
+# face 3501711 "angry"
+@グリモワール
+いつまた、あの化け物が現れるか
+分からないんだから！
+
+# textboxarrow 0 1
+@カミト
+う、うん…
+
+# textboxarrow 0 3
+# face 3501711 "normal"
+@グリモワール
+それから…
+さっきの判断は良かったと思うわよ
+
+# textboxarrow 0 3
+@グリモワール
+逃げるって決断、
+素早くできてたじゃないの
+
+# move 3501711 5 0.5
+# move 210 3 0.5
+# move 3102311 1 0
+# alpha 3102311 1 0.5
+# textboxarrow 0 1
+# face 3102311 "happy"
+# voice 310231 "ascalon_a_0006"
+@アスカロン
+やったぁ！
+グリモワールが褒めてますよ、
+マスター
+
+# textboxarrow 0 3
+# face 3501711 "shy"
+# voice 350171 "grimoire_ge_0042"
+@グリモワール
+ちょっと
+そんなんじゃないわよ！
+こ、こっちを見るな！
+
+# textboxarrow 0 3
+# face 3501711 "normal"
+# voice 350171 "grimoire_ge_0002"
+@グリモワール
+…キミはもっと自信持って良いのよ
+ちゃんと自分で決断できるんだから
+
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0004"
+@アスカロン
+ふふっ
+みんな、マスターのことを
+信頼しているんです…羨ましい
+
+# textboxarrow 0 1
+# face 3102311 "normal"
+@アスカロン
+あ、そのっ
+私もマスターを
+信頼していますからっ
+
+# textboxarrow 0 2
+# face 210 "normal"
+# voice 9936 "kamito_0032"
+@カミト
+あ、ありがとう…二人とも…
+
+# move 210 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+# face 210 "sad"
+@カミト
+しっかりしなきゃ…
+これからどうするのか…
+自分で決めなきゃっ…
+
+# voice 9936 "kamito_0014"
+@カミト
+でも…僕には分からないよっ…
+
+;;音声っぽい機械音を入れる
+# se "SE_0853"
+# textwindow "close"
+# waitandnext 2
+
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 210 "surprise"
+# voice 9936 "kamito_0023"
+@カミト
+えっ…？
+今のは…
+
+# textboxarrow 0 3
+# face 3102311 "surprise"
+# face 3501711 "surprise"
+# voice 350171 "grimoire_ge_0022"
+@グリモワール
+どうしたのよ？
+
+# textboxarrow 0 2
+@カミト
+ああ、うん…
+
+;;ふらふら歩くカミトの後を二人がついていく
+# textwindow "close"
+# alpha 210 0 0.8
+# se "SE_5000"
+# waitandnext 1
+
+# alpha 3501711 0 0.5
+# alpha 3102311 0 0.5
+# se "SE_5001"
+# waitandnext 1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# alpha 210 1 0
+# face 210 "normal"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@カミト
+…………
+
+# alpha 3501711 1 0.5
+# alpha 3102311 1 0.5
+# textboxarrow 0 3
+# face 3102311 "normal"
+# face 3501711 "angry"
+# voice 350171 "grimoire_ge_0009"
+@グリモワール
+ちょっと、マスター
+あてどなく彷徨ってても
+意味ないわよ！
+
+# textboxarrow 0 3
+@グリモワール
+いい加減、目的地を決めなさい！
+
+# textboxarrow 0 2
+# voice 9936 "kamito_0030"
+@カミト
+うん…
+多分、こっちなんだ…
+
+# textboxarrow 0 3
+# face 3501711 "surprise"
+# voice 350171 "grimoire_ge_0022"
+@グリモワール
+えっ？
+こっちって…どこか目的地を
+決めてたの！？
+
+# textboxarrow 0 2
+# face 210 "sad"
+# voice 9936 "kamito_0033"
+@カミト
+ごめん…
+何となく、なんだけど…
+
+# textboxarrow 0 1
+@アスカロン
+随分、町から離れましたね
+人の気配がありません
+
+# textboxarrow 0 3
+# face 3501711 "normal"
+# voice 350171 "grimoire_ge_0003"
+@グリモワール
+時々、廃墟を見かけるくらいね
+昔は人が住んでたのかしら？
+
+# bgmfile "bgm417_418" "BgmIntegralNoahBattle003" 0
+# alpha 210 0 0.5
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# textwindow "close"
+# waitandnext 0.8
+
+# alpha 910013 1 0.5
+# waitandnext 0.8
+
+;;魔獣が現れる
+# se "SE_0792"
+# textwindow "nomal"
+# textboxarrow 0 0
+@魔獣
+グイイイイイイイイイ！
+
+# alpha 910013 0 0.5
+# move 3102311 2 0
+# alpha 3102311 1 0.5
+# move 3501711 4 0
+# alpha 3501711 1 0.5
+# textboxarrow 0 3
+# face 3501711 "angry"
+# face 3102311 "angry"
+# voice 350171 "grimoire_ge_0037"
+@グリモワール
+こんなところにまで
+化け物が潜んでるなんて！
+
+# se "SE_5205"
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0029"
+@アスカロン
+嫉妬の氷で凍てつかせます！

@@ -1,0 +1,906 @@
+;;●２-１０＜戦闘終了後＞　背景：祭壇
+;;※ラファエルとリベリオンのバトル
+# script "lisp"
+# background "altar"
+# bgm "bgm031" 0
+# body 101411
+# pos 101411 3
+# scale 101411 0.8 0
+# alpha 101411 0 0
+# body 75
+# pos 75 5
+# scale 75 0.8 0
+# layer 75 1
+# body 960031
+# pos 960031 1
+# scale 960031 0.8 0
+# voice 9979 "rebellion_0029"
+# textflame 1 1
+# face 75 "angry"
+# textboxarrow 0 3
+@リベリオン
+ハァァァァッ！！！！
+
+;;※リベリオンの猛攻…だが、光の壁がその攻撃を阻む
+# textboxarrow 0 2
+# se "SE_9080"
+# move 75 3 0.3
+# waitandnext 0.5
+
+# se "SE_4711"
+# fadein "white" 0.5
+# shake 0 0.5
+# textboxarrow 0 2
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# face 75 "irregular"
+# voice 9979 "rebellion_0026"
+@リベリオン
+クソッ！
+近付くことも、
+ままならねぇか…
+
+# textboxarrow 0 1
+# voice 9975 "raphael_0004"
+@ラファエル
+『…どうしました？』
+
+# voice 9975 "raphael_0008"
+@ラファエル
+『人類のしぶとさを
+見せつけるのでは
+なかったのですか？』
+
+;;※フッと手をかざすラファエル
+# body 24
+# pos 24 5
+# scale 24 0.8 0
+# alpha 24 0 0
+# face 75 "surprise"
+# textboxarrow 0 2
+# voice 9979 "rebellion_0024"
+@リベリオン
+！？
+しまった！
+
+;;※光の衝撃波を放つラファエル。だが回り込んだティルフィングが、その攻撃を受け止める
+# se "SE_5716"
+# fadeout "white" 1
+# waitandnext 1
+
+# shake 0 0.5
+# sedelay "SE_4601" 0.6
+# rightin 24 0.3
+# alpha 24 1 0
+# face 24 "mad2"
+# fadein "white" 0.5
+# se "SE_4833"
+# waitandnext 1
+
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0015"
+@ティルフィング
+グ…
+だ、大丈夫ですか、
+リベリオンさん！？
+
+# face 75 "irregular"
+# textboxarrow 0 2
+@リベリオン
+チッ…
+来るなって言ったろうが？
+
+# face 24 "angry"
+# textboxarrow 0 3
+@ティルフィング
+イヤです！
+
+@ティルフィング
+これは、
+この世界の人々を解放するための
+闘いでもある…
+
+# face 24 "mad2"
+@ティルフィング
+ただ見ているなんてこと、
+できません！！
+
+# face 75 "sad"
+# textboxarrow 0 2
+# voice 9979 "rebellion_0009"
+@リベリオン
+ったく…
+仕方ねぇヤツだな…
+
+# serif 1
+@？？？
+…アナタが出しゃばるのなら、
+私も止めざるを得ないわ
+
+# body 101471
+# pos 101471 4
+# scale 101471 0.8 0
+# alpha 101471 0 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 3
+# face 24 "surprise"
+# voice 1014 "tyrufing_0022"
+@ティルフィング
+え…！？
+
+;;※フッとティルフィングの背後に現れ、その首筋を斬りつけにかかるグリード。咄嗟にガードするティルフィング
+# subfillrect 1 "black" 0.5 0 1
+# serif 0
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_4000"
+# effectbody 700 5 0 0
+# effectpattern 700 1 1
+# effectstart 700
+# waitandnext 0.4
+
+# se "SE_4601"
+# effectbody 701 1 0 0
+# effectstart 701
+# waitandnext 0.3
+
+# pos 24 2
+# face 24 "angry"
+# face 101471 "angry"
+# alpha 75 0 0
+# alpha 960031 0 0
+# alpha 101471 1 0
+# alpha 24 1 0.5
+# subfillrect 1 "black" 0.2 1 0
+# shake 0 0.5
+# move 24 1 0.3
+# move 101471 5 0.3
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0015"
+@ティルフィング
+…クッ！！！
+いつの間に…！？
+
+# imageset 0 "bg_black"
+# imagealpha 0 0 0
+# entry 1014799 101471
+# alpha 1014799 0 0
+# scale 1014799 1.4 0
+# pos 1014799 5
+# layer 1014799 4
+# brightness 1014799 0.6 0
+# textboxarrow 0 3
+# voice 10147 "tyrufing_k_0007"
+@グリード
+…これで、
+すべてが終わる！
+
+# imagescale 0 2 0
+# imagepos 0 0 0
+# voice 10147 "tyrufing_k_0029"
+@グリード
+安心して、
+逝きなさい…！
+
+;;※黒いオーラを身体から発するグリード
+# shake 0 0.5
+# imagealpha 0 0.8 0
+# alpha 1014799 1 0
+# se "SE_9156"
+# waitandnext 0.01
+
+# scale 1014799 0.8 1.2
+# alpha 1014799 0 1.2
+# imagealpha 0 0 1.2
+# waitandnext 1.2
+
+# face 24 "sad"
+# textboxarrow 0 1
+@ティルフィング
+マ、マズい！！
+
+# bgm "stop"
+# waitandnext 0.5
+
+# face 75 "angry"
+# alpha 75 1 0.5
+# textboxarrow 0 2
+# voice 9979 "rebellion_0004"
+@リベリオン
+…ようやく、
+役者が揃ったな
+
+# entry 751 75
+# pos 751 3
+# scale 751 1.4 0
+# brightness 751 0.6 0
+# alpha 751 0 0.5
+# face 24 "surprise"
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0022"
+@ティルフィング
+え…？
+
+# bgmfile "bgm154" "BgmPJZero001" 0
+# textwindow "toge"
+# textsize 31
+# textboxarrow 0 2
+# face 75 "angry"
+@リベリオン
+“獣血解放”！！！！
+
+;;※ドンッと激しいオーラを発するリベリオン
+# shake 0 0.5
+# imagealpha 0 0.8 0
+# alpha 751 1 0
+# se "SE_9156"
+# waitandnext 0.01
+
+# scale 751 0.8 1.2
+# alpha 751 0 1.2
+# imagealpha 0 0 1.2
+# waitandnext 1.2
+
+# face 101471 "surprise"
+# textwindow "nomal"
+# textsize 24
+# textboxarrow 0 3
+# voice 10147 "tyrufing_k_0022"
+@グリード
+！？
+
+@グリード
+こ、この波動…
+まさか、私達と同じ力を…！？
+
+# serif 0
+# textwindow "close"
+# se "SE_5207"
+# effectbody 703 5 100 0
+# effectstart 703
+# waitandnext 0.4
+
+# se "SE_9020"
+# effectbody 704 1 100 0
+# effectstart 704
+# waitandnext 0.3
+
+# shake 0 0.5
+# serif 0
+# face 101471 "sad"
+# textwindow "nomal"
+# textboxarrow 0 3
+@グリード
+…ガッ！！！！
+;;※一閃…ガードするグリードを、力任せに叩き付けるリベリオン
+
+# alpha 101471 0 0.5
+# move 75 5 0.2
+# textboxarrow 0 1
+@ティルフィング
+リ、リベリオンさん…！？
+
+# imageset 2 "bg_white"
+# imagealpha 2 0 0
+# imagelayer 2 3
+# imageset 3 "bg_white"
+# imagealpha 3 0 0
+# imagelayer 3 4
+# textboxarrow 0 3
+@リベリオン
+…悪い
+…タガが外れちまう前に、
+一気にケリをつけてくる
+
+# imagepos 2 0 30
+# imagepos 3 0 30
+# pos 960031 1
+# voice 9979 "rebellion_0066"
+@リベリオン
+ティルフィング…
+“運命の子”よ…
+後のことは任せたぞ！！！
+
+;;※ドンッと凄まじいスピードでラファエルの目の前に迫るリベリオン
+# layer 75 21
+# alpha 24 0 0.5
+# alpha 960031 1 0.5
+# textboxarrow 0 1
+# voice 9975 "raphael_0015"
+@ラファエル
+『！？』
+
+;;※咄嗟に光のバリアを張るラファエル。リベリオンの刃を受け止め、ギャリンと火花が散る
+# move 75 4 0.2
+# waitandnext 0.2
+
+# se "SE_5205"
+# sedelay "SE_9118" 0.3
+# sedelay "SE_9127" 0.6
+# imagescale 2 0.3 0.5
+# imagealpha 2 0.6 0.5
+# imagescale 3 0.5 0.5
+# imagealpha 3 0.3 0.5
+# waitandnext 0.9
+
+# shake 0 0.5
+# se "SE_5234"
+# waitandnext 0.5
+
+# face 960031 "worry"
+# voice 9975 "raphael_0018"
+@ラファエル
+『なんとおぞましき力…！』
+
+# face 960031 "angry"
+@ラファエル
+『それが、
+アナタ達の秘めた力なのですね…！』
+
+# face 75 "irregular"
+# textboxarrow 0 3
+# voice 9979 "rebellion_0037"
+@リベリオン
+…グ…ググ！
+ナ…ナメるなよ…
+
+# face 960031 "surprise"
+# textboxarrow 0 1
+# voice 9975 "raphael_0009"
+@ラファエル
+『…？』
+
+# textboxarrow 0 3
+@リベリオン
+す、すべてが…
+お前達の手の上にあると、
+思うなよ…！！
+
+;;※ググ…とラファエルのバリアに食い込んでゆく、リベリオンの剣
+# serif 0
+# textwindow "close"
+# fadein "red" 0.5
+# imagealpha 2 0 0.3
+# se "SE_9063"
+# shake 0 0.5
+# waitandnext 0.5
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 9975 "raphael_0017"
+@ラファエル
+『！？
+わ、私の防御を…！？
+まさか…！？』
+
+# face 960031 "worry"
+# face 75 "angry"
+# textboxarrow 0 3
+# voice 9979 "rebellion_0029"
+@リベリオン
+…ウォォォォッ！！！！
+
+;;※ズバッと、ラファエルの防御を切り裂くリベリオン
+# serif 0
+# textwindow "close"
+# fadein "red" 0.5
+# imagealpha 3 0 0.3
+# se "SE_9182"
+# shake 0 0.5
+# move 75 3 0.3
+# waitandnext 0.5
+
+# pos 24 5
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@ラファエル
+『！！！』
+
+# layer 75 2
+# face 24 "mad2"
+# alpha 24 1 0.5
+# textboxarrow 0 3
+@ティルフィング
+リベリオンさん！！
+
+# textboxarrow 0 2
+@リベリオン
+俺達は…
+俺達、人類は…
+お前らの駒じゃねぇ！！！
+
+# body 4
+# pos 4 5
+# scale 4 0.8 0
+# alpha 4 0 0
+# voice 9979 "rebellion_0029"
+@リベリオン
+…くたばりやがれ！！！！
+
+;;※リベリオン、全身全霊の一撃…ズバッと切り裂かれる、ラファエルの身体
+# serif 0
+# textwindow "close"
+# subfillrect 1 "black" 0.5 0 1
+# waitandnext 0.5
+
+# se "SE_4815"
+# effectbody 705 1 0 0
+# effectstart 705
+# waitandnext 0.3
+
+# alpha 24 0 0
+# bgm "stop"
+# subfillrect 1 "black" 0.2 1 0
+# serif 0
+# shake 0 0.5
+# textwindow "nomal"
+# face 960031 "surprise"
+# textboxarrow 0 1
+# voice 9975 "raphael_battle_0007"
+@ラファエル
+『！！！！』
+
+# textboxarrow 0 3
+# face 4 "happy"
+# alpha 4 1 0.5
+@トト
+や、やった！！
+
+# face 960031 "worry"
+# textboxarrow 0 1
+@ラファエル
+『…ま…まさか…
+人類が、これほどまでの力…を…』
+;;※激しい光を放ち、薄れてゆくラファエルの身体
+
+# face 75 "irregular"
+# textboxarrow 0 2
+# voice 9979 "rebellion_0022"
+@リベリオン
+…お前の敗因は
+…人類を格下に見ていた、
+その傲慢さだ
+
+;;※ドンッとひときわ激しい光を放ち、消失するラファエル
+# se "SE_9131"
+# fadein "white" 0.5
+# waitandnext 1
+
+# se "SE_5588"
+# alpha 960031 0 1
+# waitandnext 1
+
+# face 75 "sad"
+@リベリオン
+…あ、危ねぇ
+せ、制限時間ギリギリだ…ぜ…
+
+;;※フッと脱力し、落ちてくるリベリオン。咄嗟に受け止めるティルフィング
+# se "SE_0547"
+# waitandnext 1
+
+# se "SE_5568"
+# body 41
+# pos 41 1
+# scale 41 0.8 0
+# alpha 41 0 0
+# alpha 4 0 0.5
+# alpha 24 1 0.5
+# face 24 "sad"
+# voice 1014 "tyrufing_0015"
+# textboxarrow 0 3
+@ティルフィング
+リ、リベリオンさん！
+しっかり！！
+
+# body 0
+# pos 0 2
+# scale 0 0.8 0
+# alpha 0 0 0
+# layer 0 3
+# alpha 41 1 0.5
+# voice 9983 "kokusohkan_0022"
+# textboxarrow 0 1
+@黒奏官
+…クッ！
+;;※駆け去ってゆく黒奏官
+
+# se "SE_5575"
+# leftout 41 0.5
+# waitandnext 0.5
+
+# alpha 0 1 0.5
+# face 0 "angry"
+# textboxarrow 0 1
+# voice 9999 "durin_0022"
+@デュリン
+！！
+黒奏官が！！
+
+# textboxarrow 0 2
+@リベリオン
+だ、大丈夫…
+
+@リベリオン
+ラ、ラファエルを倒したことで…
+未来への道は拓かれたはずだ…
+
+;;※徐々に薄れてゆく、リベリオンの身体
+# bgm "bgm101" 0
+# envbody 1701 8 0
+# effectpattern 1701 1 0
+# effectstart 1701
+# pos 4 1
+# alpha 75 0.7 0.5
+# waitandnext 0.5
+
+# face 24 "surprise"
+# textboxarrow 0 3
+@ティルフィング
+リ、リベリオンさん…！？
+
+# face 4 "sad"
+# alpha 4 1 0.5
+@トト
+お、おじさん…
+行っちゃうの…？
+
+# textboxarrow 0 2
+# voice 9979 "rebellion_0004"
+@リベリオン
+ま、まぁな…
+
+@リベリオン
+悪いが、ボウズ…
+逃げた黒奏官の始末は…
+頼んだぜ…
+
+# face 4 "angry"
+# textboxarrow 0 1
+# voice 9998 "toto_0003"
+@トト
+！！
+う、うん！
+
+# textboxarrow 0 2
+# voice 9979 "rebellion_0022"
+@リベリオン
+だ、だが…
+油断はするなよ…
+
+@リベリオン
+アイツには、
+なにか裏が…ある…
+
+# face 24 "sad"
+# textboxarrow 0 3
+@ティルフィング
+裏…？
+
+# textboxarrow 0 2
+@リベリオン
+ア、アイツの声に…
+やはり、聞き覚えがある…
+
+@リベリオン
+も、もしかすると…
+地上世界の人間かもしれない…
+
+# textboxarrow 0 1
+@デュリン
+地上世界の人間…！？
+黒奏官が…！？
+
+# textboxarrow 0 2
+@リベリオン
+だ、断定はできない…
+俺も、向こうで探ってみる…
+
+@リベリオン
+ともかく…
+お前達も…いずれ、
+地上世界に向かうことになる…
+
+@リベリオン
+その時は…向こうに行き着いた
+キラープリンセス達のことを…
+よろしく頼むぜ…
+
+# face 0 "serious2"
+# textboxarrow 0 1
+@デュリン
+頼むぜって…
+アンタは？
+
+# textboxarrow 0 2
+@リベリオン
+お、お前らが来る頃には…
+俺はおそらく、
+地上にはいない
+
+# face 4 "sad"
+# face 24 "surprise"
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0022"
+@ティルフィング
+え…？
+どういうことですか…？
+
+# textboxarrow 0 2
+@リベリオン
+げ、元老院の裏手の墓場に…
+俺の墓があった…
+
+# face 24 "sad"
+@リベリオン
+どうやら俺は…
+再び、はるか大昔へと
+旅に出るらしい…
+
+# voice 9979 "rebellion_0015"
+@リベリオン
+…グッ！
+;;※ブンとリベリオンの身体がブレ、さらにその身体が薄まってゆく
+
+# se "SE_4835"
+# alpha 75 0.5 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@トト
+お、おじさん！！
+
+# textboxarrow 0 2
+@リベリオン
+…さ、最初に、
+この世界を訪れた時…
+
+@リベリオン
+俺はフレンネルの助言を受け、
+ラグナロク教会を設立した…
+
+@リベリオン
+…あの時は慌ただしくて、
+考えることも無かったが…
+
+# voice 9979 "rebellion_0004"
+@リベリオン
+今になって思えば、
+その助言はあまりに
+でき過ぎている…
+
+# face 0 "sad"
+# textboxarrow 0 1
+# voice 9999 "durin_0022"
+@デュリン
+！！
+まさか…！？
+
+# textboxarrow 0 2
+# voice 9979 "rebellion_0003"
+@リベリオン
+ああ…
+
+@リベリオン
+俺はさらなる昔に遡り…
+フレンネル家の始祖である
+エルライトに、助言をしていたんだ…
+
+@リベリオン
+いずれ到来するキラープリンセスを
+保護しろ、と…
+
+@リベリオン
+俺が来たなら、
+教会組織を設立するよう
+仕向けろと…
+
+# voice 9979 "rebellion_0008"
+@リベリオン
+どうやらそこで、
+俺は力尽きるらしい…
+
+# textboxarrow 0 3
+@ティルフィング
+そんな…
+
+# textboxarrow 0 2
+# voice 9979 "rebellion_0004"
+@リベリオン
+ふふ、
+嘆くことじゃない…
+
+@リベリオン
+人類の未来を考えれば、
+喜ばしいことだ…
+
+@リベリオン
+なんせ、こうして…
+未来への道を
+切り拓けたんだからな…
+
+# voice 9979 "rebellion_0022"
+@リベリオン
+…うぐっ！
+
+;;※身体がブレるリベリオン、その身体に光を帯び始める
+@リベリオン
+…さ、さぁ
+…そろそろ、お別れの時間だ
+
+# textboxarrow 0 1
+@デュリン
+ごめんね…
+
+# textboxarrow 0 2
+@リベリオン
+…？
+…ど…どうして、謝る…？
+
+# textboxarrow 0 1
+@デュリン
+アンタは、
+地上の私が立てた計画の中で
+果ててゆく…
+
+@デュリン
+アンタ自身に、
+なにも救いの手を
+差し伸べられなくて…
+
+# textboxarrow 0 2
+# voice 9979 "rebellion_0004"
+@リベリオン
+バカ言うな…
+
+@リベリオン
+最高だぜ…
+俺の駆け抜けた道が、
+世の人々に希望をもたらすんだ…
+
+@リベリオン
+…０％からでも、
+希望を生み出せることが
+実証できた人生…イカしてるだろ？
+
+# textboxarrow 0 3
+@ティルフィング
+リベリオンさん…
+
+;;※リベリオンの身体が光を放つ
+# textboxarrow 0 2
+@リベリオン
+…た…頼んだぜ…
+人類の未来を…
+
+@リベリオン
+…じゃあ…な…
+
+;;※まばゆい光を放ち、消失するリベリオン
+# se "SE_9103"
+# fadein "white" 0.5
+# alpha 75 0 1
+# waitandnext 0.5
+
+# effectskip 1701
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0015"
+@ティルフィング
+！！
+
+# face 4 "sad"
+# textboxarrow 0 1
+@トト
+おじ…さん…
+
+# select "お前の想い…確かに、託されたぞ…" "select_label_01" "彼女達を…必ず送り届けてみせる" "select_label_01"
+おじ…さん…
+
+# label "select_label_01"
+# face 0 "serious2"
+# textboxarrow 0 1
+@デュリン
+…アイツとの約束を果たすためにも、
+まずはこの世界のゴタゴタを
+片付けないと
+
+# move 24 3 0.5
+# face 24 "angry"
+# textboxarrow 0 2
+@ティルフィング
+…ええ
+早く、ノーブル教授達の元へ
+向かいましょう
+
+# face 4 "angry"
+# textboxarrow 0 1
+# voice 9998 "toto_0023"
+@トト
+え…？
+
+@トト
+ティルフィング…
+お母さんの元には…？
+
+# textboxarrow 0 2
+@ティルフィング
+…ううん、後にする
+すべてが落ち着いてから、
+ゆっくりと…
+
+# textboxarrow 0 1
+# voice 9998 "toto_0051"
+@トト
+…？
+どうしたの、ティルフィング…？
+
+# bgmfile "bgm188" "BgmStory007" 0
+# waitandnext 0.5
+
+# face 24 "surprise"
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0022"
+@ティルフィング
+…なに…あの音？
+
+# textboxarrow 0 1
+@トト
+え…？
+
+# pos 101471 5
+# textboxarrow 0 1
+@デュリン
+…！？
+…讃美歌！？
+
+# face 101471 "angry"
+# se "SE_5776"
+# alpha 101471 1 0.5
+# textboxarrow 0 3
+;;※フッとティルフィングの背後に姿を現すグリード
+# voice 10147 "tyrufing_k_0007"
+@グリード
+…さようなら
+
+# textboxarrow 0 2
+@ティルフィング
+！？
+
+;;;;※ズバッとティルフィングの背中を切り裂くグリード。次の瞬間、影絵のようにティルフィングの背から噴き出す血飛沫（第1章ＯＰムービーのように）
+# serif 0
+# textwindow "close"
+# subfillrect 1 "black" 0.5 0 1
+# waitandnext 0.5
+
+# se "SE_4824"
+# effectbody 707 1 0 0
+# effectpattern 707 1 1
+# effectstart 707
+# waitandnext 0.3
+
+# subfillrect 1 "black" 0.2 1 0
+# serif 0
+# textwindow "nomal"
+# face 24 "sad"
+# textboxarrow 0 2
+@ティルフィング
+！！！！！
+
+# fadein "red" 0.5
+# se "SE_9016"
+# alpha 24 0 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+# voice 9998 "toto_0049"
+@トト
+ティルフィング！！！
+;;※迫る讃美歌とともに、降り注ぎ始める光の筋

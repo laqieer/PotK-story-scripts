@@ -1,0 +1,515 @@
+;;-----------------------------------------
+;;SEA3章_11
+;;-----------------------------------------
+# script "lisp"
+# background "corridor_night"
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;七支刀
+# body 5105111
+# pos 5105111 4
+# scale 5105111 0.8 0
+# layer 5105111 2
+# mask 5105111 off
+# alpha 5105111 0 0
+;;パラシュ
+# body 6200411
+# pos 6200411 2
+# scale 6200411 0.8 0
+# layer 6200411 4
+# alpha 6200411 0 0
+;;イシューリエル
+# body 6301411
+# pos 6301411 3
+# scale 6301411 0.8 0
+# layer 6301411 4
+# mask 6301411 off
+# alpha 6301411 0 0
+;;ghost
+# body 302
+# pos 302 5
+# scale 302 0.8 0
+# layer 302 1
+# mask 302 off
+# alpha 302 0 0
+;;mob
+# body 910013
+# pos 910013 4
+# scale 910013 0.8 0
+# layer 910013 3
+# mask 910013 off
+# alpha 910013 0 0
+# brightness 910013 0 0
+# entry 910099 910013
+# pos 910099 2
+# scale 910099 0.8 0
+# layer 910099 2
+# mask 910099 off
+# alpha 910099 0 0
+# brightness 910099 0 0
+# reversal 910099 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：廊下（夜）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# sedelay "bgm602_basic_on" 2
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@イシューリエル
+暴けば暴くほど深くなる廃病院の闇
+…恐ろしいですわね
+
+# alpha 6301411 0 0.3
+# alpha 5105111 1 0.3
+# face 6200411 "sad"
+# alpha 6200411 1 0.3
+# face 5105111 "normal"
+# textboxarrow 0 1
+@パラシュ
+ボクはどちらかというと、
+君のその勢いの方が怖いよ
+
+# textboxarrow 0 3
+@七支刀
+で、でも…
+イシューリエル様の言うことにも
+一理ありますからっ
+
+# face 6200411 "usual"
+# textboxarrow 0 1
+@パラシュ
+君は本当に八方美人だね
+
+# voice 1051 "shichishito_0004"
+# face 5105111 "happy"
+# textboxarrow 0 3
+@七支刀
+わたくし、
+誰にだって良いところはあると
+信じているんです
+
+# textboxarrow 0 1
+@パラシュ
+フン
+そういうところが…
+
+;;幽霊が画面を通り過ぎる
+# se "SE_11585"
+#setnextbgmblock 1
+# move 302 1 1.5
+# alpha 302 0.4 0.7
+# waitandnext 0.7
+
+# alpha 302 0 0.7
+# waitandnext 0.7
+
+# voice 2004 "parashu_0024"
+# face 6200411 "sad"
+# textboxarrow 0 1
+@パラシュ
+今、何か…
+気のせいかな？
+
+# move 6301411 4 0
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# alpha 5105111 0 0.3
+# textboxarrow 0 3
+@イシューリエル
+シッ！
+パラシュ、お静かに
+
+# textboxarrow 0 3
+@イシューリエル
+あちらの部屋から
+話し声が聞こえてきますわ
+
+# face 6200411 "normal"
+# textboxarrow 0 1
+@パラシュ
+部屋？
+…確かに話し声がする
+本当に誰かいるみたいだね
+
+# voice 3014 "ithuriel_0040"
+# face 6301411 "usual"
+# textboxarrow 0 3
+@イシューリエル
+なるほど
+恐らく、証拠を隠滅しようと
+やって来た病院関係者ですわ
+
+# textboxarrow 0 3
+@イシューリエル
+捕まえて、洗いざらい吐かせますわよ
+ついていらっしゃいませ！
+
+;;イシューリエルが走り出す
+# se "SE_5575"
+# move 6301411 3 0.5
+# scale 6301411 0.7 0.5
+# alpha 6301411 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：病室
+# background "infirmary_night"
+# scale 6301411 0.8 0
+# alpha 6200411 0 0
+# waitandnext 0.2
+
+# se "bgm602_rhythm_on"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# layer 910013 1
+# alpha 910013 1 0.7
+# layer 910099 2
+# alpha 910099 1 0.7
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@人体模型
+ああ…！
+ま、待った
+
+# textboxarrow 0 3
+@骨格標本
+いやいや、待ったなしやろ
+王手や、王手
+
+# move 6301411 5 0
+# layer 6301411 3
+# mask 6301411 on
+# textboxarrow 0 1
+@人体模型
+ぐぬぬぬぬ…
+
+# move 910013 3 0.4
+# move 910099 1 0.4
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# se "SE_0613"
+# textboxarrow 0 3
+@イシューリエル
+御用ですわ！
+
+# textboxarrow 0 2
+@骨格標本
+ひやあああっ…！
+
+# textboxarrow 0 1
+@人体模型
+何だ、何だっ？
+
+# voice 1051 "shichishito_0025"
+# alpha 6301411 0 0.3
+# move 5105111 5 0
+# layer 5105111 3
+# mask 5105111 on
+# face 5105111 "surprise"
+# alpha 5105111 1 0.3
+# textboxarrow 0 3
+@七支刀
+きゃああああ…！
+人体模型と骨格標本が将棋を
+指しています…
+
+# textboxarrow 0 2
+@骨格標本
+ちょっと、お嬢ちゃん達
+驚かせんといて
+心臓止まるかと思ったで
+
+# textboxarrow 0 1
+@人体模型
+お前、心臓ないやろ
+
+# textboxarrow 0 2
+@骨格標本
+あ、そやった
+ちょっとお前の貸して
+
+# textboxarrow 0 1
+@人体模型
+仕方ないなー
+…って、やれるかボケェ！
+
+# alpha 910013 0 0.3
+# alpha 910099 0 0.3
+# alpha 5105111 0 0.3
+# move 6200411 3 0
+# mask 6200411 off
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# textboxarrow 0 2
+@パラシュ
+今度は随分と陽気な幽霊が出たね
+
+# voice 1051 "shichishito_0028"
+# alpha 6200411 0 0.3
+# move 5105111 3 0
+# mask 5105111 off
+# face 5105111 "sad"
+# alpha 5105111 1 0.3
+# textboxarrow 0 2
+@七支刀
+幽霊といいますか、
+怪異といいますか…
+
+# alpha 5105111 0 0.3
+# move 270 2 0
+# alpha 270 1 0.3
+# face 270 "normal"
+# move 6301411 4 0
+# mask 6301411 off
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# textboxarrow 0 3
+@イシューリエル
+あなた達、ここで何をしてましたの？
+
+# voice 9917 "mimir_navikan_0023"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+すごいです、イシューリエル様
+躊躇なく話しかけました
+
+# alpha 6301411 0 0.3
+# alpha 270 0 0.3
+# move 910013 4 0
+# layer 910013 4
+# mask 910013 on
+# alpha 910013 1 0.5
+# move 910099 2 0
+# alpha 910099 1 0.5
+# textboxarrow 0 1
+@人体模型
+何って、将棋やけど…
+
+# textboxarrow 0 3
+@骨格標本
+お嬢ちゃん達こそ、
+こんなところに何の用や？
+
+# move 910013 3 0.5
+# move 910099 1 0.5
+# move 6301411 5 0
+# mask 6301411 on
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# textboxarrow 0 3
+@イシューリエル
+正直に答えた方が身のためですわよ
+あなた達、この病院の関係者
+ですわね！
+
+# textboxarrow 0 2
+@骨格標本
+まあ、関係者いうたら
+関係者になるわな
+
+# textboxarrow 0 1
+@人体模型
+病院、潰れたときに捨て置かれた
+哀れな人形やけど
+
+# voice 3014 "ithuriel_0040"
+# face 6301411 "usual"
+# textboxarrow 0 3
+@イシューリエル
+なるほど
+つまり、
+罪を認めるということですわねっ
+
+# textboxarrow 0 0
+@人体模型＆骨格標本
+何やて！？
+
+# face 6301411 "normal"
+# textboxarrow 0 3
+@イシューリエル
+あなた達が
+病院の不祥事を隠蔽するため
+
+# textboxarrow 0 3
+@イシューリエル
+夜な夜な画策していたことは
+全てお見通しですわ！
+
+# textboxarrow 0 3
+@イシューリエル
+さあ、大人しく縛につきなさい
+
+# textboxarrow 0 2
+@骨格標本
+おいおい…
+このお嬢ちゃん、頭大丈夫か？
+
+# textboxarrow 0 1
+@人体模型
+美少女に縛られる…
+悪くないやん
+
+# textboxarrow 0 2
+@骨格標本
+お嬢ちゃん、こいつの首、
+きつーく縛ったって
+
+# textboxarrow 0 1
+@人体模型
+そんなことされたら心臓止まるわ！
+…あ、初めから止まっとった
+
+# alpha 6301411 0 0.3
+# move 6200411 5 0
+# mask 6200411 on
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# textboxarrow 0 3
+@パラシュ
+君達、ちょっといいかな
+
+# textboxarrow 0 1
+@人体模型
+あれ？
+今の面白くなかった？
+渾身の人体模型ジョークなんやけど
+
+# textboxarrow 0 2
+@骨格標本
+心臓ネタを二回やってもうたのが
+良うなかったんやないか？
+
+# textboxarrow 0 3
+@パラシュ
+そんなことより、この廃病院には
+君達のような心霊現象が
+数多く集まっているよね？
+
+# textboxarrow 0 2
+@骨格標本
+ああ、近頃増えたな～
+前は俺ら二人だけやったのに
+
+# textboxarrow 0 3
+@パラシュ
+最近になって増えた？
+それって、二週間前――
+
+# layer 6301411 2
+# mask 6301411 off
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# alpha 6200411 0 0.3
+# textboxarrow 0 3
+@イシューリエル
+パラシュ！
+そのような質問はナンセンスですわ
+
+# textboxarrow 0 3
+@イシューリエル
+何故なら、この二体は
+遠隔操作されている
+ドローンに過ぎませんから
+
+# textboxarrow 0 3
+@イシューリエル
+この二体を縛り上げて、
+操作している者達のところに
+案内させます！
+
+# textboxarrow 0 2
+@骨格標本
+おいおい、この嬢ちゃん
+目がマジやぞ
+
+# textboxarrow 0 1
+@人体模型
+そうだな
+興奮するなっ
+
+# textboxarrow 0 2
+@骨格標本
+アホ！
+お前の嗜好につきおうてられるかっ
+俺は逃げる！…いや
+
+# textboxarrow 0 2
+@骨格標本
+ドロンさせてもらいます
+ドローンだけに
+
+# textboxarrow 0 1
+@人体模型
+上手くないわ！
+俺らドローンちゃうやろ
+とにかく逃げるで！
+
+# se "SE_5575"
+# sedelay "SE_5575" 0.2
+# alpha 910013 0 0.5
+# alpha 910099 0 0.4
+# textwindow "close"
+# waitandnext 0.5
+
+# face 6301411 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 3
+@イシューリエル
+あ！
+お待ちなさいっ
+
+;;イシューリエルが二体を追う
+# se "SE_5575"
+# move 6301411 3 0.5
+# alpha 6301411 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# move 6200411 3 0
+# mask 6200411 off
+# face 6200411 "angry"
+# alpha 6200411 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@パラシュ
+待つんだ、イシューリエル！
+
+;;パラシュも走り去る
+# se "SE_5575"
+# move 6200411 2 0.5
+# alpha 6200411 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# fadeout "black" 1
+# waitandnext 1

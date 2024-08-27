@@ -1,0 +1,160 @@
+;;第１話　タイトル：トレイセーマ潜入
+;;//背景：平原
+# script "lisp"
+# background "101_plain_daytime"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;アルマス
+# body 3103811
+# pos 3103811 3
+# scale 3103811 0.8 0
+;;ギル
+# body 137
+# pos 137 1
+# scale 137 0.8 0
+# face 137 "usual"
+;;ティターニア
+# body 139
+# pos 139 5
+# scale 139 0.8 0
+# face 139 "sad"
+;;トレイセーマ兵
+# body 3830001
+# pos 3830001 3
+# scale 3830001 0.8 0
+# alpha 3830001 0 0
+;;トレイセーマ兵その２
+# entry 98300019 3830001
+# pos 98300019 1
+# scale 98300019 0.8 0
+# alpha 98300019 0 0
+;;トレイセーマ兵その３
+# entry 88300018 3830001
+# pos 88300018 5
+# scale 88300018 0.8 0
+# alpha 88300018 0 0
+# reversal 88300018 0
+# reversal 98300019 0
+# reversal 3830001 0
+;;トレイセーマ隊長
+# body 3830007
+# pos 3830007 3
+# scale 3830007 0.8 0
+# alpha 3830007 0 0
+# mask 3830007 off
+# layer 3103811 5
+# layer 137 1
+# layer 139 3
+# layer 3830001 2
+# layer 88300018 3
+# layer 98300019 4
+# layer 3830007 1
+# mask 139 off
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textflame 1 1
+# textboxarrow 0 1
+# chara 137
+@ギル
+見つけた！
+トレイセーマ軍の本隊だっ
+よーし、やってやるぜ！
+
+# face 3103811 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+@アルマス
+ギルは下がってて
+私が一気に切り込んでナディアを
+助け出してみせる！
+
+# face 137 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 139
+# voice 9967 "titania_navi_1012"
+@ティターニア
+アルマス
+急いては事をし損じると言いますよ
+まず相手の様子をよく観察して――
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+# voice 1038 "almace_0052"
+@アルマス
+待っててナディア！
+
+;;//アルマスが飛び出す
+# se "SE_9092"
+# face 139 "surprise"
+# rightout 3103811 0.5
+# alpha 3103811 0 0.3
+# textflame 1 1
+# textboxarrow 0 3
+# chara 139
+# voice 9967 "titania_0041"
+@ティターニア
+ああ、もうあの子はっ…！
+
+;;//アルマスがトレイセーマ兵に斬りかかる
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# alpha 139 0 0
+# alpha 137 0 0
+# alpha 3830001 1 0
+# move 3103811 2 0
+# waitandnext 0.6
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# leftin 3103811 0.3
+# alpha 3103811 1 0.3
+# waitandnext 0.3
+
+# se "SE_4830"
+# fadein "white" 0.5
+# alpha 3830001 0 0.5
+# shake 0 0.5
+# serif 0
+# textwindow "normal" 
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3103811
+# voice 1038 "almace_battle_0003"
+@アルマス
+てぇあ！
+
+# alpha 3103811 0 0.5
+# alpha 3830007 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3830007
+# voice 383000 "cryptid_0029"
+@トレイセーマ兵隊長
+敵襲！敵襲だー！！
+防御陣を組め！
+
+;;//トレイセーマ兵が横に並ぶ
+# serif 0
+# textwindow "close"
+# alpha 3830007 0 0.6
+# waitandnext 0.1
+
+# alpha 98300019 1 0.5
+# alpha 3830001 1 0.5
+# alpha 88300018 1 0.5
+# leftin 98300019 0.5
+# rightin 3830001 0.5
+# rightin 88300018 0.5
+# waitandnext 1
+

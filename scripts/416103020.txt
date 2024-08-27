@@ -1,0 +1,394 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;インテグラルキラーズサイドストーリー
+;;第3話―２　タイトル：不可欠な痛み
+;;3_2_0
+;;スクリプト最後の背景：ユグドラシルの寝室
+;;-----------------------------------------
+# script "lisp"
+# background "aerial_shoot"
+# bgmfile "bgm438" "BgmIntegralNoahEvent005" 0
+;;-----------------------------------------
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 2
+# alpha 24 0 0
+# mask 24 off
+;;レーヴァテイン
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# layer 100221 2
+# alpha 100221 0 0
+# mask 100221 off
+;;マサムネ
+# body 100111
+# pos 100111 3
+# scale 100111 0.8 0
+# layer 100111 2
+# alpha 100111 0 0
+# mask 100111 off
+;;アルテミス
+# body 400131
+# pos 400131 3
+# scale 400131 0.8 0
+# layer 400131 2
+# alpha 400131 0 0
+# mask 400131 off
+;;フライクーゲル
+# body 500211
+# pos 500211 3
+# scale 500211 0.8 0
+# layer 500211 2
+# alpha 500211 0 0
+# mask 500211 off
+;;ユグドラシル
+# body 242
+# pos 242 3
+# scale 242 0.8 0
+# layer 242 2
+# alpha 242 0 0
+# mask 242 off
+;;-----------------------------------------
+;;第3話―２　タイトル：不可欠な痛み
+;;//背景：天上世界遠景
+;;ユグドラシル（立ち絵なし）
+# textflame 1 1
+# textboxarrow 0 0
+@ユグドラシル
+私は世界樹として世界を支え、
+循環を司り、全てを見守ってきたの
+
+# textboxarrow 0 0
+@ユグドラシル
+そこに「意思」と呼べるものは
+なかった
+あくまで自然の摂理だったから
+
+# textboxarrow 0 0
+@ユグドラシル
+でも、あるとき「興味」を抱いて
+しまった…私を通って地上から
+天上世界に至った者達…キル姫
+
+# textboxarrow 0 0
+@ユグドラシル
+きっかけは、ティルフィング
+あなただったけれど
+
+# textboxarrow 0 0
+@ユグドラシル
+あなた達が何を為そうとしているのか
+すぐ側で知りたくなった
+
+# textboxarrow 0 0
+@ユグドラシル
+そんな「思い」が私から離れて
+天上世界に「奏官」として顕現した
+それが、そこにいるあなたよ
+
+# textboxarrow 0 0
+@ユグドラシル
+あなたはティルフィングと出会い、
+ともに旅をすることでキル姫という
+存在に触れ続けてきた
+
+# textboxarrow 0 0
+@ユグドラシル
+キル姫のことを知りたい
+そんな「意思」こそがあなたの正体
+
+;;//背景：ユグドラシルの寝室
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "yggdrasill_bedroom_light"
+# move 24 3 0
+# face 24 "normal"
+# alpha 24 1 0
+# mask 24 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+マスターが、ユグドラシルから
+生まれた「意思」…
+
+# textboxarrow 0 2
+@ティルフィング
+本当なんですか？
+
+;;//選択肢
+;;
+;;A本当だ
+;;B（頷く）
+# select "本当だ" "select_label_01" "（頷く）" "select_label_01"
+本当なんですか？
+
+;;AB共通
+# label "select_label_01"
+# textboxarrow 0 2
+@ティルフィング
+驚きました
+でも、そんなに気にならないと
+いうか…
+
+# textboxarrow 0 2
+@ティルフィング
+マスターがどのような方でも、
+私の気持ちは変わりませんから
+
+# voice 1002 "revatein_0028"
+# alpha 24 0 0.5
+# move 100221 3 0
+# face 100221 "normal"
+# alpha 100221 1 0.5
+# mask 100221 off
+# textboxarrow 0 2
+@レーヴァテイン
+まあ…それはそうだよね…
+ところでさぁ…
+何でさっき…苦しそうにしてたの？
+
+;;//選択肢
+;;
+;;Aそれについてなんだが…
+# select "それについてなんだが…" "select_label_02"
+まあ…それはそうだよね…
+ところでさぁ…
+何でさっき…苦しそうにしてたの？
+
+;;//暗転挟む
+# label "select_label_02"
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 100221 0 0
+# move 24 3 0
+# face 24 "surprise"
+# alpha 24 1 0
+# mask 24 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 1014 "tyrufing_0024"
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+ユグドラシルが衰弱している…！？
+そんな…
+
+# alpha 24 0 0.5
+# move 242 3 0
+# face 242 "normal"
+# alpha 242 1 0.5
+# mask 242 off
+# textboxarrow 0 2
+@ユグドラシル
+あなたには隠せないわね
+ええ…私は少しずつ衰えているの
+このままでは…
+
+# textboxarrow 0 2
+@ユグドラシル
+私は枯れて、世界は“終焉”を
+迎える
+
+# textboxarrow 0 2
+@ユグドラシル
+愛しい子らを、もうしばらく
+守ってあげたかったのだけれど…
+
+# move 24 2 0
+# face 24 "sad"
+# alpha 24 1 0.5
+# mask 24 on
+# textboxarrow 0 1
+# move 242 4 0.5
+# mask 242 on
+@ティルフィング
+どうして衰弱しているんですかっ？
+何か私達にできることは
+
+# textboxarrow 0 3
+@ユグドラシル
+これは自然の摂理なの…
+ごめんなさい…
+
+# alpha 24 0 0.5
+# move 100111 2 0
+# face 100111 "nutual"
+# alpha 100111 1 0.5
+# mask 100111 on
+# textboxarrow 0 1
+@マサムネ
+そのような言葉で片付けられるもの
+ではあるまい
+原因を突き止めねば
+
+;;//選択肢
+;;
+;;A原因は分かっている…
+# select "原因は分かっている…" "select_label_03"
+そのような言葉で片付けられるもの
+ではあるまい
+原因を突き止めねば
+
+# label "select_label_03"
+# alpha 100111 0 0.5
+# move 24 2 0
+# face 24 "angry"
+# alpha 24 1 0.5
+# mask 24 on
+# textboxarrow 0 1
+@ティルフィング
+教えて下さい、マスター！
+
+# textboxarrow 0 3
+@ユグドラシル
+待って
+あなたの口から言わせるのは
+心苦しいわ…私が話します
+
+# textboxarrow 0 3
+@ユグドラシル
+私の衰弱の原因は…天上世界と
+地上世界、両方で続いている戦いなの
+
+# alpha 24 0 0.5
+# alpha 242 0 0.5
+# move 500211 3 0
+# face 500211 "surprise"
+# alpha 500211 1 0.5
+# mask 500211 off
+# textboxarrow 0 2
+@フライクーゲル
+オウッ…
+
+# alpha 500211 0 0.5
+# move 24 2 0
+# face 24 "sad"
+# alpha 24 1 0.5
+# mask 24 on
+# move 242 4 0
+# face 242 "normal"
+# alpha 242 1 0.5
+# mask 242 on
+# textboxarrow 0 3
+@ユグドラシル
+戦いが広がれば広がるほど、
+私は衰弱してしまう…
+
+# voice 1014 "tyrufing_0015"
+# textboxarrow 0 1
+@ティルフィング
+私達のせいで、ユグドラシルが…
+
+# textboxarrow 0 3
+@ユグドラシル
+あなた達のせいではないわ
+そんなふうに考えなくていいの
+
+# alpha 24 0 0.5
+# move 400131 2 0
+# face 400131 "nutual"
+# alpha 400131 1 0.5
+# mask 400131 on
+# textboxarrow 0 1
+@アルテミス
+ですが、原因はそこなのでしょう
+天上世界でも地上世界でもキル姫同士
+の戦いは終わる気配がありません
+
+# alpha 400131 0 0.5
+# move 24 2 0
+# face 24 "sad"
+# alpha 24 1 0.5
+# mask 24 on
+# textboxarrow 0 1
+@ティルフィング
+やっぱり…早くお母さんを目覚め
+させないとっ
+
+# textboxarrow 0 3
+@ユグドラシル
+平和の女神エイレーネですか…
+彼女にも辛い思いをさせてしまい
+ました…
+
+# face 24 "surprise"
+# textboxarrow 0 1
+@ティルフィング
+そうです！
+お母さんを目覚めさせる方法を
+知りませんかっ？
+
+# face 24 "sad"
+# textboxarrow 0 1
+@ティルフィング
+どうして封印されたままなのか、
+その理由だけでも…
+
+# textboxarrow 0 3
+@ユグドラシル
+それは…言葉で伝えるより
+その目で見てきた方が良いでしょう
+
+# voice 4001 "arutemisu_0013"
+# alpha 24 0 0.5
+# move 400131 2 0
+# face 400131 "sad"
+# alpha 400131 1 0.5
+# mask 400131 on
+# textboxarrow 0 1
+@アルテミス
+見てこいと言われても、
+過去を知る術は私達にはありません
+
+# textboxarrow 0 3
+@ユグドラシル
+私には世界創世から今までの
+全ての記録が残されています
+
+# textboxarrow 0 3
+@ユグドラシル
+これからあなた達を過去へと
+送りましょう
+記録を遡り、真実を知って
+
+# textboxarrow 0 3
+@ユグドラシル
+その後どうするのか
+それはあなた達の意思に委ねます
+
+# alpha 400131 0 0.5
+# move 24 2 0
+# face 24 "normal"
+# alpha 24 1 0.5
+# mask 24 on
+# textboxarrow 0 1
+@ティルフィング
+ありがとうございます
+世界の終焉を回避する方法を
+見つけてきます
+
+# textboxarrow 0 3
+@ユグドラシル
+気負わなくていいの
+ただ、その目で見て、耳で聞いて、
+真実に触れてきて
+
+# textboxarrow 0 3
+@ユグドラシル
+もう一人の「私」
+愛しい子らをお願いね

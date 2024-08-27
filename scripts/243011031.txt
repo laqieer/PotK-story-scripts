@@ -1,0 +1,591 @@
+;;-----------------------------------------
+;;ファントムオブキル　この素晴らしい世界に祝福を！コラボ2019水着　シナリオ前半
+;;【EP.3】
+;;3_1
+;;スクリプト最後の背景：ビーチ
+;;-----------------------------------------
+# script "lisp"
+# background "sea_beach_day"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 2
+# alpha 0 0 0
+# mask 0 off
+;;アクア
+# body 2601711
+# pos 2601711 3
+# scale 2601711 0.8 0
+# layer 2601711 2
+# alpha 2601711 0 0
+# mask 2601711 off
+;;ダクネス
+# body 2103411
+# pos 2103411 3
+# scale 2103411 0.8 0
+# layer 2103411 2
+# alpha 2103411 0 0
+# mask 2103411 off
+;;水着ティルフィング
+# body 2101411
+# pos 2101411 3
+# scale 2101411 0.8 0
+# layer 2101411 2
+# alpha 2101411 0 0
+# mask 2101411 off
+;;めぐみん
+# body 2502511
+# pos 2502511 3
+# scale 2502511 0.8 0
+# layer 2502511 2
+# alpha 2502511 0 0
+# mask 2502511 off
+;;ゆんゆん
+# body 2502611
+# pos 2502611 3
+# scale 2502611 0.8 0
+# layer 2502611 2
+# alpha 2502611 0 0
+# mask 2502611 off
+;;ベルディア
+# body 809411
+# pos 809411 3
+# scale 809411 1.4 0
+# layer 809411 2
+# alpha 809411 0 0
+# mask 809411 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;【EP.3】
+;;//背景：海の家
+;;//モノローグ
+# textflame 0 0
+@
+手掛かりがありそうな場所を
+めぐみんが吹き飛ばしてしまい
+何も調査ができなかった一同
+
+;;//モノローグ
+@
+倒すだけでは何も解決していない
+と、マスターは落ち込んでいた
+
+# emotionbody 1000 10 2601711 -70 200
+# effectpattern 1000 4 3
+# effectstart 1000
+# move 2601711 3 0
+# face 2601711 "normal"
+# alpha 2601711 1 0.5
+# mask 2601711 off
+# textflame 1 1
+# textboxarrow 0 2
+@アクア
+まっ、落ち込んだって
+何も始まらないじゃないのよ～！
+ほら、マスターも飲んで飲んで！
+
+;;//モノローグ
+# effectskip 1000
+# textflame 0 0
+@
+シュワシュワ片手に絡んでくる
+陽気なアクアの勧めを断り
+考え事を続けるマスター
+
+# alpha 2601711 0 0.5
+# move 2502511 3 0
+# face 2502511 "sad"
+# alpha 2502511 1 0.5
+# mask 2502511 off
+# textflame 1 1
+# textboxarrow 0 2
+@めぐみん
+すみません…爆裂魔法を使うには
+絶好の機会だったもので
+つい力が入ってしまいました…
+
+# emotionbody 1001 2 0 30 200
+# effectpattern 1001 1 1
+# effectstart 1001
+# alpha 2502511 0 0.5
+# move 0 2 0
+# face 0 "normal"
+# alpha 0 1 0.5
+# mask 0 on
+# textboxarrow 0 1
+# move 2601711 4 0
+# face 2601711 "normal"
+# alpha 2601711 1 0.5
+# mask 2601711 on
+@デュリン
+っていうか
+シュワシュワ飲んでるけど
+アクアのどこにそんなお金が？
+
+# se "SE_6504"
+# emotionbody 1002 3 2601711 10 290
+# effectpattern 1002 1 3
+# effectstart 1002
+# voice 6017 "akua_0046"
+# face 2601711 "smile"
+# textboxarrow 0 3
+@アクア
+それは～もちろんさっきの報酬！
+今月分の借金さえ返したら
+あとのお金は私のものよ！
+
+;;//モノローグ
+# textflame 0 0
+@
+アクアが借金地獄から
+抜け出せない理由が察せられる
+
+# alpha 0 0 0.5
+# alpha 2601711 0 0.5
+# move 2502511 2 0
+# face 2502511 "normal"
+# alpha 2502511 1 0.5
+# mask 2502511 on
+# move 2101411 4 0
+# face 2101411 "sad"
+# alpha 2101411 1 0.5
+# mask 2101411 on
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+調査は振り出し…ですね
+けど、やはり異常事態ということが
+わかりましたね
+
+# textboxarrow 0 1
+@めぐみん
+あの量は自然に現れたとは
+言い難いものがありましたからね
+
+;;//演出：ダクネスin
+# se "SE_0719"
+# alpha 2502511 0 0.5
+# alpha 2101411 0 0.5
+# move 2103411 3 0
+# face 2103411 "normal"
+# alpha 2103411 1 0.5
+# mask 2103411 off
+# textboxarrow 0 2
+@ダクネス
+異族とカエルについて
+妙な噂を聞いたのだが…
+
+# emotionbody 1003 1 2101411 10 310
+# effectpattern 1003 1 0
+# effectstart 1003
+# voice 1014 "tyrufing_0004"
+# alpha 2103411 0 0.5
+# move 2502511 2 0
+# face 2502511 "normal"
+# alpha 2502511 1 0.5
+# mask 2502511 on
+# move 2101411 4 0
+# face 2101411 "normal"
+# alpha 2101411 1 0.5
+# mask 2101411 on
+# textboxarrow 0 3
+@ティルフィング
+ダクネスさん！
+聞き込みをしてくださって
+いたのですね！
+
+# textboxarrow 0 1
+@めぐみん
+で、その噂とは一体？
+
+# alpha 2502511 0 0.5
+# alpha 2101411 0 0.5
+# move 2103411 3 0
+# face 2103411 "normal"
+# alpha 2103411 1 0.5
+# mask 2103411 off
+# textboxarrow 0 2
+@ダクネス
+どうやらここから少し離れた場所に
+強い魔力を持つ者が現れたらしい
+
+# textboxarrow 0 2
+@ダクネス
+その者を中心に異族とカエルが
+集ってきているという話なのだが…
+
+# face 2103411 "sad"
+# textboxarrow 0 2
+@ダクネス
+凄まじい数の異族やカエルに
+取り囲まれたとしたら
+一体どんな目に遭うのだろうか…
+
+# textboxarrow 0 2
+@ダクネス
+カエルに飲まれ
+身動きがとれないところに
+異族が襲ってきたら…ああ！
+
+;;//モノローグ
+# textflame 0 0
+@
+話の途中で突然恍惚の表情を
+浮かべるダクネスに驚くマスター
+よく見るとその手にはシュワシュワが
+
+# emotionbody 1004 10 2601711 -70 200
+# effectpattern 1004 4 3
+# effectstart 1004
+# voice 6017 "akua_0047"
+# alpha 2103411 0 0.5
+# move 2601711 3 0
+# face 2601711 "normal"
+# alpha 2601711 1 0.5
+# mask 2601711 off
+# textflame 1 1
+# textboxarrow 0 2
+@アクア
+あっははは！
+そいつ、異族とかカエルとか集めて
+何しようっていうのよ～！
+
+;;//モノローグ
+# effectskip 1004
+# textflame 0 0
+@
+おまけに陽気さを増した
+アクアがマスターにしだれかかる
+…話が続かない
+
+# alpha 2601711 0 0.5
+# move 2502611 3 0
+# face 2502611 "usual"
+# alpha 2502611 1 0.5
+# mask 2502611 off
+# textflame 1 1
+# textboxarrow 0 2
+@ゆんゆん
+お困りのようですね、マスター
+
+# move 2502611 2 0.5
+# mask 2502611 on
+# move 2502511 4 0
+# face 2502511 "angry"
+# alpha 2502511 1 0.5
+# mask 2502511 on
+# textboxarrow 0 3
+@めぐみん
+いたんですか、ゆんゆん
+盗み聞きとは感心しませんね
+
+# textboxarrow 0 1
+@ゆんゆん
+最初から話に参加してたよ！？
+喋るタイミングがわからなくて
+ずっと黙ってたけど…
+
+# textboxarrow 0 1
+@ゆんゆん
+私は真面目に聞き込みしてきたし
+マスターが組むなら
+私のほうがいいんじゃないとか…
+
+# voice 1014 "tyrufing_0004"
+# alpha 2502511 0 0.5
+# move 2101411 4 0
+# face 2101411 "normal"
+# alpha 2101411 1 0.5
+# mask 2101411 on
+# textboxarrow 0 3
+@ティルフィング
+ゆんゆんさんも
+調べてきてくださったんですね！
+
+# voice 5026 "yunyun_0003"
+# face 2502611 "normal"
+# textboxarrow 0 1
+@ゆんゆん
+は、はい！
+調べてきたというか
+人が話してたのを聞いたというか…
+
+# textboxarrow 0 1
+@ゆんゆん
+その、強い魔力を持つ者のもとへ
+集った異族とカエルが周辺で
+問題を起こし始めてるらしくて…
+
+# textboxarrow 0 1
+@ゆんゆん
+その中心となった者を倒せば
+この異常事態は解決できるのでは
+…という話になっているのですが
+
+# alpha 2101411 0 0.5
+# move 0 4 0
+# face 0 "normal"
+# alpha 0 1 0.5
+# mask 0 on
+# textboxarrow 0 3
+@デュリン
+大量の異族とカエル
+それに強い魔力を持つ者を倒せる
+だけの力を持つ者がいないのね
+
+# textboxarrow 0 1
+@ゆんゆん
+…そういうことみたいです
+細々としたクエストもありますし
+受けてくれる人がいないようです
+
+# alpha 0 0 0.5
+# move 2101411 4 0
+# face 2101411 "normal"
+# alpha 2101411 1 0.5
+# mask 2101411 on
+# textboxarrow 0 3
+@ティルフィング
+けれど、そこまでわかったなら
+もう解決したようなものですね！
+
+;;//モノローグ
+# textflame 0 0
+@
+ティルフィングに同意するマスター
+自分達なら、きっとその原因を
+倒せるだけの力がある！
+
+# face 2502611 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@ゆんゆん
+そこでですね
+先ほどの話の続きですが
+一緒に組むなら私なんていかが…
+
+# bgm "stop"
+# serif 1
+@
+きゃああああああああ！
+
+;;//モノローグ
+# bgm "bgm031" 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+@
+ゆんゆんが何かを言いかけたその時
+海の家の外から悲鳴が聞こえてくる
+
+# emotionbody 1005 1 2101411 10 310
+# effectpattern 1005 2 0
+# effectstart 1005
+# voice 1014 "tyrufing_0023"
+# face 2101411 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+何事でしょう！？
+
+# emotionbody 1006 2 2601711 10 290
+# effectpattern 1006 1 1
+# effectstart 1006
+# voice 6017 "akua_0064"
+# alpha 2502611 0 0.5
+# alpha 2101411 0 0.5
+# move 2103411 2 0
+# face 2103411 "angry"
+# alpha 2103411 1 0.5
+# mask 2103411 on
+# move 2601711 4 0
+# face 2601711 "normal"
+# alpha 2601711 1 0.5
+# mask 2601711 on
+# textboxarrow 0 3
+@アクア
+え、どしたの
+宴会芸でも始めた？
+私も負けないわよ～！
+
+# textboxarrow 0 1
+@ダクネス
+悲鳴のようだな
+待て！
+やるなら私を攻めるんだ！
+
+;;//モノローグ
+# se "SE_5575"
+# alpha 2103411 0 0.5
+# textflame 0 0
+@
+悲鳴がした方向に走り出す
+ダクネス
+
+# alpha 2601711 0 0.5
+# move 2502611 2 0
+# face 2502611 "sad"
+# alpha 2502611 1 0.5
+# mask 2502611 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 2502511 4 0
+# face 2502511 "normal"
+# alpha 2502511 1 0.5
+# mask 2502511 on
+@ゆんゆん
+私、話の途中なんですけど！
+
+# textboxarrow 0 3
+@めぐみん
+ある意味心強い仲間達ですね…
+
+;;//演出：移動の暗転
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 2502611 0 0
+# alpha 2502511 0 0
+# move 2101411 3 0
+# face 2101411 "angry"
+# alpha 2101411 1 0
+# mask 2101411 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;//背景：ビーチ
+# bgmfile "bgm351_352" "BgmKScollabo002" 0
+# emotionbody 1007 1 2101411 10 310
+# effectpattern 1007 1 0
+# effectstart 1007
+# voice 1014 "tyrufing_0024"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+あ、あれは…！
+
+# alpha 2101411 0 0.5
+# move 809411 3 0
+# alpha 809411 1 0.5
+# mask 809411 off
+# textboxarrow 0 2
+@ベルディア
+知らぬ土地に来たというのに
+閉じこもってばかりいては
+退屈だと外に出てみれば…
+
+# voice 8094 "verdia_0004"
+# textboxarrow 0 2
+@ベルディア
+こんなところで
+お前達と相見えるとはな！
+
+# emotionbody 1008 2 2601711 10 290
+# effectpattern 1008 1 1
+# effectstart 1008
+# voice 6017 "akua_0065"
+# alpha 809411 0 0.5
+# move 2103411 2 0
+# face 2103411 "angry"
+# alpha 2103411 1 0.5
+# mask 2103411 on
+# move 2601711 4 0
+# face 2601711 "sad"
+# alpha 2601711 1 0.5
+# mask 2601711 on
+# textboxarrow 0 3
+@アクア
+ん～？
+あ、あれ、あれれ～？
+
+# voice 1034 "dakunesu_0026"
+# textboxarrow 0 1
+@ダクネス
+何かと思えばデュラハン！
+貴様もここに来ていたとは！
+
+# voice 1014 "tyrufing_0002"
+# alpha 2103411 0 0.5
+# alpha 2601711 0 0.5
+# move 2101411 3 0
+# face 2101411 "normal"
+# alpha 2101411 1 0.5
+# mask 2101411 off
+# textboxarrow 0 2
+@ティルフィング
+お知り合い…ですか？
+もしかしてお仲間、とか？
+
+# alpha 2101411 0 0.5
+# move 809411 3 0
+# alpha 809411 1 0.5
+# mask 809411 off
+# textboxarrow 0 2
+@ベルディア
+そんなわけあるか！敵同士だ！
+そいつらと一緒にするな！
+
+# alpha 809411 0 0.5
+# move 2502511 2 0
+# face 2502511 "normal"
+# alpha 2502511 1 0.5
+# mask 2502511 on
+# move 2101411 4 0
+# face 2101411 "normal"
+# alpha 2101411 1 0.5
+# mask 2101411 on
+# textboxarrow 0 3
+@ティルフィング
+えっと、ああおっしゃってますが
+そうなんですか？
+
+# voice 250251 "megumin_0028"
+# textboxarrow 0 1
+@めぐみん
+まぁ、一応そうですね
+仲間になったことはないですね
+
+# voice 8094 "verdia_0009"
+# alpha 2502511 0 0.5
+# alpha 2101411 0 0.5
+# move 809411 3 0
+# alpha 809411 1 0.5
+# mask 809411 off
+# textboxarrow 0 2
+@ベルディア
+俺を前にして相変わらずの態度…
+馬鹿にされるのは辛抱ならん！
+
+# textboxarrow 0 2
+@ベルディア
+この世界に来て得た力を持って
+お前達を葬り去ってやる！
+
+# textboxarrow 0 2
+@ベルディア
+異族どもよ、かかれ！
+
+# emotionbody 1009 1 2101411 10 310
+# effectpattern 1009 1 0
+# effectstart 1009
+# alpha 809411 0 0.5
+# move 2101411 3 0
+# face 2101411 "angry"
+# alpha 2101411 1 0.5
+# mask 2101411 off
+# textboxarrow 0 2
+@ティルフィング
+マスター、来ます！

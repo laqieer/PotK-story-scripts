@@ -1,0 +1,592 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第19章 章タイトル：ワールドサルベイション
+;;第1話―９　タイトル：救済を謳う鎖
+;;9_0
+;;スクリプト最後の背景：地底世界（室内・鎖の繭あり）
+;;-----------------------------------------
+# script "lisp"
+# background "in_underground_world"
+# bgmfile "bgm485_488_1" "BgmIntegralNoahBattle008" 0
+;;-----------------------------------------
+;;異族化パラシュ
+# body 5200431
+# pos 5200431 3
+# scale 5200431 0.8 0
+# layer 5200431 2
+# alpha 5200431 0 0
+# mask 5200431 off
+;;擬装エルキュール
+# body 5202521
+# pos 5202521 3
+# scale 5202521 0.8 0
+# layer 5202521 2
+# alpha 5202521 0 0
+# mask 5202521 off
+;;グラーシーザ・擬装・ウォーリアー
+# body 5302621
+# pos 5302621 3
+# scale 5302621 0.8 0
+# layer 5302621 2
+# alpha 5302621 0 0
+# mask 5302621 off
+;;フォルカス・神令・ヘル
+# body 5301811
+# pos 5301811 3
+# scale 5301811 0.8 0
+# layer 5301811 2
+# alpha 5301811 0 0
+# mask 5301811 off
+;;ヒョウハ・神令・テュール
+# body 5402011
+# pos 5402011 3
+# scale 5402011 0.8 0
+# layer 5402011 2
+# alpha 5402011 0 0
+# mask 5402011 off
+;;グリモワール・獣刻・ニーズヘッグ 大罪ver.
+# body 5501711
+# pos 5501711 3
+# scale 5501711 0.8 0
+# layer 5501711 2
+# alpha 5501711 0 0
+# mask 5501711 off
+;;ラグナロク・擬装・ガンナー
+# body 5103621
+# pos 5103621 3
+# scale 5103621 0.8 0
+# layer 5103621 2
+# alpha 5103621 0 0
+# mask 5103621 off
+;;アルマス・誓約・ティターニア
+# body 5103811
+# pos 5103811 3
+# scale 5103811 0.8 0
+# layer 5103811 2
+# alpha 5103811 0 0
+# mask 5103811 off
+;;フリズスキャールヴ
+# body 52000411
+# pos 52000411 3
+# scale 52000411 0.8 0
+# layer 52000411 2
+# alpha 52000411 0 0
+# mask 52000411 off
+;;ギャラルホルン
+# body 52000311
+# pos 52000311 3
+# scale 52000311 0.8 0
+# layer 52000311 3
+# alpha 52000311 0 0
+# mask 52000311 off
+;;グレイプニル
+# body 52000511
+# pos 52000511 3
+# scale 52000511 0.8 0
+# layer 52000511 2
+# alpha 52000511 0 0
+# mask 52000511 off
+;;-----------------------------------------
+# imageset 0 "gleipnir_kusari01"
+# imagealpha 0 0 0
+# imagescale 0 2 0
+# imagelayer 0 1
+# imageset 1 "gleipnir_kusari02"
+# imagealpha 1 0 0
+# imagescale 1 2 0
+# imagelayer 1 1
+;;-----------------------------------------
+;;//背景：地底世界（屋外）
+;;//切り替わらければwaitなりを入れる
+# voice 520043 "parashu_iz_0037"
+# move 5202521 2 0
+# face 5202521 "sad"
+# alpha 5202521 1 0
+# mask 5202521 on
+# move 5200431 4 0
+# face 5200431 "sad"
+# alpha 5200431 1 0
+# mask 5200431 on
+# textflame 1 1
+# textboxarrow 0 3
+@パラシュ
+この程度の鎖で…ボクの理想は…
+くっ…
+そんなはずが…
+# waitandnext 0.2
+
+# se "bgm488_switch"
+
+# voice 2025 "hercule_battle_0005"
+# textboxarrow 0 1
+@エルキュール
+希望は…決して潰えません…
+潰え…
+
+# voice 350171 "grimoire_ge_0017"
+# alpha 5202521 0 0.5
+# alpha 5200431 0 0.5
+# move 5501711 2 0
+# face 5501711 "sad"
+# alpha 5501711 1 0.5
+# mask 5501711 on
+# textboxarrow 0 1
+# move 5302621 4 0
+# face 5302621 "sad"
+# alpha 5302621 1 0.5
+# mask 5302621 on
+@グリモワール
+どうして…？
+怒りの炎が…ワタシの怒りが…
+
+# voice 3026 "grayside_0015"
+# textboxarrow 0 3
+@グラーシーザ
+せいぎのほのおが…
+しずまって…しまう…
+
+# voice 540201 "hyoha_c_battle_0006"
+# alpha 5501711 0 0.5
+# alpha 5302621 0 0.5
+# move 5402011 3 0
+# face 5402011 "sad"
+# alpha 5402011 1 0.5
+# mask 5402011 off
+# textboxarrow 0 2
+@ヒョウハ
+燃え上がらない…
+どうなってんだよ…
+
+# alpha 5402011 0 0.5
+# move 5103621 3 0
+# face 5103621 "sad"
+# alpha 5103621 1 0.5
+# mask 5103621 off
+# textboxarrow 0 2
+@ラグナロク
+皆、しっかりして…
+あと少しだからっ
+
+;;# voice 5200051 "gleipnir_0015"
+# alpha 5103621 0 0.5
+# move 52000511 3 0
+# face 52000511 "sad"
+# alpha 52000511 1 0.5
+# mask 52000511 off
+# textboxarrow 0 2
+@グレイプニル
+なんとおいたわしい…
+抗うことは無意味
+戦うことは無価値でございます
+
+# face 52000511 "normal"
+# textboxarrow 0 2
+@グレイプニル
+どうぞ、安らかに
+
+;;//グレイプニルが立ち去る
+# se "SE_0740"
+# alpha 52000511 0 0.5
+# move 5103621 3 0
+# face 5103621 "angry"
+# alpha 5103621 1 0.5
+# mask 5103621 off
+# textboxarrow 0 2
+@ラグナロク
+待ちなさい…！
+何としても追いつく…
+手遅れになる前にっ
+
+;;//地底世界（室内・鎖の繭なし）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_underground_world_room"
+# alpha 5103621 0 0
+# move 52000511 3 0
+# face 52000511 "normal"
+# alpha 52000511 1 0
+# mask 52000511 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@グレイプニル
+…………
+
+;;//ラグナロクが追いつく
+# se "SE_0740"
+# voice 1036 "ragnarok_0022"
+# move 5103621 2 0
+# face 5103621 "surprise"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# textboxarrow 0 1
+# move 52000511 4 0.5
+# mask 52000511 on
+@ラグナロク
+グレイプニル…！
+私達の進撃は止められ…えっ？
+
+# alpha 5103621 0 0.5
+# alpha 52000511 0 0.5
+# move 5103811 3 0
+# face 5103811 "sad"
+# alpha 5103811 1 0.5
+# mask 5103811 off
+# textboxarrow 0 2
+@アルマス
+…………
+
+;;//アルマスが繭に包まれる
+;;//鎖演出の後、アルマスの立ち絵を消す形に
+# se "SE_6133"
+# imagealpha 0 1 1
+# imagepos 0 0 -30
+# imagealpha 1 1 1
+# imagepos 1 0 -10
+# waitandnext 2
+
+# textwindow "close"
+# alpha 5103811 0 0.5
+# imagealpha 0 0 0.5
+# imagealpha 1 0 0.5
+# waitandnext 0.5
+
+# move 5301811 3 0
+# face 5301811 "sad"
+# alpha 5301811 1 0.5
+# mask 5301811 off
+# textboxarrow 0 2
+# textwindow "normal"
+@フォルカス
+…………
+
+;;//フォルカスが繭に包まれる
+;;//鎖演出の後、フォルカスの立ち絵を消す形に
+# se "SE_6133"
+# imagealpha 0 1 1
+# imagepos 0 0 -30
+# imagealpha 1 1 1
+# imagepos 1 0 -10
+# waitandnext 2
+
+# textwindow "close"
+# alpha 5301811 0 0.5
+# imagealpha 0 0 0.5
+# imagealpha 1 0 0.5
+# waitandnext 0.5
+
+# move 5103621 2 0
+# face 5103621 "surprise"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# textboxarrow 0 1
+# move 52000511 4 0
+# face 52000511 "normal"
+# alpha 52000511 1 0.5
+# mask 52000511 on
+# textwindow "normal"
+@ラグナロク
+アルマス…！
+フォルカス…！
+みんな…！
+
+;;# voice 5200051 "gleipnir_0041"
+# textboxarrow 0 3
+@グレイプニル
+ああ…素晴らしいですっ
+ようやく眠りについていただけ
+ました
+
+# textboxarrow 0 3
+@グレイプニル
+主様が救済をもたらすまで、
+ゆっくりお休み下さい
+
+# voice 1036 "ragnarok_0015"
+# face 5103621 "sad"
+# textboxarrow 0 1
+@ラグナロク
+そうは…させない…
+ううっ…
+
+;;//ラグナロクが倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 5103621 0 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# textwindow "normal"
+@グレイプニル
+ああっ…
+そのように無理をしては
+いけませんよ
+
+;;//鎖の音
+# se "SE_6136"
+# waitandnext 0.5
+
+;;//グレイプニルがラグナロクに寄り添う
+# textwindow "close"
+# move 52000511 3 0.5
+# mask 52000511 off
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+@グレイプニル
+苦しみ、もがきながらも前に進む…
+そんな辛い生は、もうじき終わりを
+迎えるのでございます
+
+# textboxarrow 0 2
+@グレイプニル
+あなた様も皆様と同じように、
+こちらの揺りかごで最期の刻まで
+おやすみなさい
+
+# alpha 52000511 0 0.5
+# move 5103621 3 0
+# face 5103621 "sad"
+# alpha 5103621 1 0.5
+# mask 5103621 off
+# textboxarrow 0 2
+@ラグナロク
+私は…まだ…
+
+;;//ラグナロクが繭に包まれる
+;;//鎖演出の後、ラグナロクの立ち絵を消す形に
+# se "SE_6133"
+# imagealpha 0 1 1
+# imagepos 0 0 -30
+# imagealpha 1 1 1
+# imagepos 1 0 -10
+# waitandnext 2
+
+# textwindow "close"
+# alpha 5103621 0 0.5
+# imagealpha 0 0 0.5
+# imagealpha 1 0 0.5
+# waitandnext 0.5
+
+# bgm "stop"
+# move 52000511 3 0
+# face 52000511 "normal"
+# alpha 52000511 1 0.5
+# mask 52000511 off
+# textboxarrow 0 2
+# textwindow "normal"
+@グレイプニル
+もういいのでございます
+
+;;//背景：地底世界（室内・鎖の繭あり）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_underground_room_cocoon"
+# alpha 52000511 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm457" "BgmIntegralNoahEvent008" 0
+# move 52000411 1 0
+# face 52000411 "usual"
+# alpha 52000411 1 0.5
+# mask 52000411 on
+# move 52000311 3 0
+# face 52000311 "usual"
+# alpha 52000311 1 0.5
+# mask 52000311 on
+# move 52000511 5 0
+# face 52000511 "happy"
+# alpha 52000511 1 0.5
+# mask 52000511 on
+# textboxarrow 0 3
+# textwindow "normal"
+@グレイプニル
+やりましたっ
+こちらにいらした全ての方々に
+眠っていただけました
+
+# face 52000411 "happy"
+# textboxarrow 0 1
+@フリズスキャールヴ
+大した手際じゃな
+
+# face 52000311 "normal"
+# textboxarrow 0 2
+@ギャラルホルン
+この一つ一つにおねーさん達が
+眠ってるの？
+
+;;# voice 5200051 "gleipnir_0043"
+;;# voicedelay 5200051 "gleipnir_0046" 1.8
+# face 52000511 "normal"
+# textboxarrow 0 3
+@グレイプニル
+ギャラルホルンさん
+フリズスキャールヴさん
+こんにちは
+
+# voice 5200031 "gjallarhorn_0039"
+# face 52000311 "happy"
+# textboxarrow 0 2
+@ギャラルホルン
+こんにちは、グレイ
+アナタ一人でみんな眠らせるなんて
+すごいわね
+
+# face 52000411 "usual"
+# textboxarrow 0 1
+@フリズスキャールヴ
+地底全体に張り巡らせた、この鎖…
+ただ縛るだけではないようじゃな
+
+;;# voice 5200051 "gleipnir_0032"
+# textboxarrow 0 3
+@グレイプニル
+はい
+鎖を通して皆様の思いが伝わって
+まいりますので…
+
+# textboxarrow 0 3
+@グレイプニル
+反対に私からも皆様に、思いを
+伝えさせていただきました
+
+# textboxarrow 0 3
+@グレイプニル
+何をしても、全て水泡に帰す…
+如何なる行動も無駄なのだという
+事実を
+
+# voice 5200041 "hlidskjalf_0039"
+# textboxarrow 0 1
+@フリズスキャールヴ
+ふむ…
+全て無駄とな…
+
+# textboxarrow 0 3
+@グレイプニル
+そうなのでございます
+希望を胸に困難に立ち向かい、
+難局に挑んだ方々…
+
+# textboxarrow 0 3
+@グレイプニル
+その多くが敗れ、倒れ、死して
+まいりました…
+何も変えられないままに
+
+# textboxarrow 0 3
+@グレイプニル
+私は知っているのです
+抗うことの無意味さを
+希望を抱くことの虚しさを…
+
+# textboxarrow 0 3
+@グレイプニル
+何もせず、流されるままに
+死という救いに身を任せる
+それだけで良いのでございます
+
+# face 52000311 "usual"
+# textboxarrow 0 2
+@ギャラルホルン
+ふーん
+グレイは徹底してるわね
+
+# textboxarrow 0 1
+@フリズスキャールヴ
+そなたの絶望こそ、最も深く暗い
+ものであるようじゃな…
+
+# textboxarrow 0 1
+@フリズスキャールヴ
+この巨大な罠に墜ちた者は、
+じわじわと「物事を為す意思」を
+奪われていく
+
+# textboxarrow 0 1
+@フリズスキャールヴ
+やがて体が重くなり、頭の働きが
+鈍くなり、心が動かなくなる
+
+# textboxarrow 0 1
+@フリズスキャールヴ
+そこまで来れば、もう手遅れじゃ
+あとは繭に包まれ眠りに落ちるのみ
+
+# voice 5200041 "hlidskjalf_0041"
+# face 52000411 "happy"
+# textboxarrow 0 1
+@フリズスキャールヴ
+これで死の君を邪魔する不届き者達は
+いなくなった
+やるではないか
+
+;;# voice 5200051 "gleipnir_0023"
+# face 52000511 "happy"
+# textboxarrow 0 3
+@グレイプニル
+まあっ
+お褒めいただき光栄です
+
+# voice 5200031 "gjallarhorn_0002"
+# face 52000311 "normal"
+# textboxarrow 0 2
+@ギャラルホルン
+ねぇ
+この繭って幾つあるのかしら？
+
+# face 52000511 "normal"
+# textboxarrow 0 3
+@グレイプニル
+先程、こちらに来られた方々が
+３３人でございます
+
+# textboxarrow 0 3
+@グレイプニル
+キル姫が３２人にユグドラシル様の
+気配を感じる方がお一人…
+皆様、おやすみいただきました
+
+# textboxarrow 0 3
+@グレイプニル
+先におやすみいただいたお三方を
+含めて、３６個の揺りかごが
+ございます
+
+# voice 5200031 "gjallarhorn_0021"
+# face 52000311 "happy"
+# textboxarrow 0 2
+@ギャラルホルン
+わあああっ！
+素敵ね
+
+# face 52000411 "surprise"
+# textboxarrow 0 1
+@フリズスキャールヴ
+３６とは大したものじゃ
+…ん？
+
+# face 52000511 "surprise"
+# textboxarrow 0 3
+@グレイプニル
+いかがなさいました？
+
+# face 52000411 "usual"
+# textboxarrow 0 1
+@フリズスキャールヴ
+いや…
+些末なことじゃ
+気にせずとも良い

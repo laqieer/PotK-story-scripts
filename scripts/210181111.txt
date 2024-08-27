@@ -1,0 +1,535 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第18章 章タイトル：×××アポカリプス
+;;第1話―１１　タイトル：絆を胸に
+;;11_1
+;;スクリプト最後の背景：中心部（崩壊・昼）
+;;-----------------------------------------
+# script "lisp"
+# background "in_city_collapse"
+# bgm "stop"
+;;-----------------------------------------
+;;ヴァナルガンド・聖鎖・サリエル 大罪ver.
+# body 5601111
+# pos 5601111 3
+# scale 5601111 0.8 0
+# layer 5601111 2
+# alpha 5601111 0 0
+# mask 5601111 off
+;;アフロディーテ・D. plug・アスモデウス 大罪ver.
+# body 5401311
+# pos 5401311 3
+# scale 5401311 0.8 0
+# layer 5401311 2
+# alpha 5401311 0 0
+# mask 5401311 off
+;;マサムネ・獣刻・ヨルムンガンド
+# body 3100111
+# pos 3100111 3
+# scale 3100111 0.8 0
+# layer 3100111 2
+# alpha 3100111 0 0
+# mask 3100111 off
+;;ムラマサ・獣刻・ヤマタノオロチ 大罪ver.
+# body 5102511
+# pos 5102511 3
+# scale 5102511 0.8 0
+# layer 5102511 2
+# alpha 5102511 0 0
+# mask 5102511 off
+;;シユウ・D. plug・ベルゼブブ 大罪ver.
+# body 5201911
+# pos 5201911 3
+# scale 5201911 0.8 0
+# layer 5201911 2
+# alpha 5201911 0 0
+# mask 5201911 off
+;;フォルカス・神令・ヘル
+# body 5301811
+# pos 5301811 3
+# scale 5301811 0.8 0
+# layer 5301811 2
+# alpha 5301811 0 0
+# mask 5301811 off
+;;イチイバル・神令・オーディン
+# body 5402211
+# pos 5402211 3
+# scale 5402211 0.8 0
+# layer 5402211 2
+# alpha 5402211 0 0
+# mask 5402211 off
+;;ロジェスティラ・神令・スクルド
+# body 5503711
+# pos 5503711 3
+# scale 5503711 0.8 0
+# layer 5503711 2
+# alpha 5503711 0 0
+# mask 5503711 off
+;;如意金箍棒・神令・フリッグ
+# body 5203111
+# pos 5203111 3
+# scale 5203111 0.8 0
+# layer 5203111 2
+# alpha 5203111 0 0
+# mask 5203111 off
+;;グリモワール・獣刻・ニーズヘッグ 大罪ver.
+# body 5501711
+# pos 5501711 3
+# scale 5501711 0.8 0
+# layer 5501711 2
+# alpha 5501711 0 0
+# mask 5501711 off
+;;アスカロン・D. plug・レヴィアタン 大罪ver.
+# body 5102311
+# pos 5102311 3
+# scale 5102311 0.8 0
+# layer 5102311 2
+# alpha 5102311 0 0
+# mask 5102311 off
+;;フリズスキャールヴ
+# body 52000411
+# pos 52000411 3
+# scale 52000411 0.8 0
+# layer 52000411 2
+# alpha 52000411 0 0
+# mask 52000411 off
+;;魔獣
+# body 806158
+# pos 806158 3
+# scale 806158 0.8 0
+# layer 806158 2
+# alpha 806158 0 0
+# mask 806158 off
+;;-----------------------------------------
+;;---------------------------------------------
+;;■フリズスキャールヴ
+;;//立ち絵：フリズスキャールヴ
+;;■フォルカス
+;;//立ち絵：フォルカス・神令・ヘル
+;;■如意金箍棒
+;;//立ち絵：如意金箍棒・神令・フリッグ
+;;■イチイバル
+;;//立ち絵：イチイバル・神令・オーディン
+;;■ロジェスティラ
+;;//立ち絵：ロジェスティラ・神令・スクルド
+;;■カミト
+;;//立ち絵：カミト（義手破壊差分）
+;;■アスカロン
+;;//立ち絵：アスカロン・D. plug・レヴィアタン（大罪ver.）
+;;■グリモワール
+;;//立ち絵：グリモワール・獣刻・ニーズヘッグ（大罪ver.）
+;;■シユウ
+;;//立ち絵：シユウ・D. plug・ベルゼブブ（大罪ver.）
+;;■ヴァナルガンド
+;;//立ち絵：ヴァナルガンド・聖鎖・サリエル（大罪ver.）
+;;■アフロディーテ
+;;//立ち絵：アフロディーテ・D. plug・アスモデウス（大罪ver.）
+;;■ムラマサ
+;;//立ち絵：ムラマサ・獣刻・ヤマタノオロチ（大罪ver.）
+;;■マサムネ
+;;//立ち絵：マサムネ・獣刻・ヨルムンガンド
+;;■魔獣
+;;//立ち絵：終焉側の新規エネミー（魔獣）
+;;--------------------------------------------
+;;//背景：中心部（崩壊・昼）
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_5575"
+# voice 310231 "ascalon_a_0022"
+# move 5102311 3 0
+# face 5102311 "surprise"
+# alpha 5102311 1 0.5
+# mask 5102311 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@アスカロン
+フォルカス！
+一緒にフリズスキャールヴを…
+えっ？
+
+# bgmfile "bgm485" "BgmIntegralNoahBattle008" 0
+;;# voice 5200041 "hlidskjalf_unit_0008"
+# alpha 5102311 0 0.5
+# move 52000411 2 0
+# face 52000411 "usual"
+# alpha 52000411 1 0.5
+# mask 52000411 on
+# textboxarrow 0 1
+# move 5301811 4 0
+# face 5301811 "normal"
+# alpha 5301811 1 0.5
+# mask 5301811 on
+@フリズスキャールヴ
+さて、覚悟はよいか？
+
+;;//フリズスキャールヴがフォルカスを倒す
+;;//フリズスキャールヴの攻撃方法は蹴りの想定です。
+# se "SE_0715"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 530181 "forcas_c_battle_0008"
+# face 5301811 "angry"
+# textboxarrow 0 3
+@フォルカス
+ガハァッ…！？
+
+# voice 520311 "nyoikinkobou_c_0015"
+# alpha 5301811 0 0.5
+# move 5203111 4 0
+# face 5203111 "sad"
+# alpha 5203111 1 0.5
+# mask 5203111 on
+# textboxarrow 0 3
+@如意金箍棒
+フォルカスちゃん…！
+ダメ…まだ、だよっ…
+
+# face 52000411 "angry"
+# textboxarrow 0 1
+@フリズスキャールヴ
+何じゃ
+まだ立てるとは、大したものじゃな
+では…
+
+;;# voice 5200041 "hlidskjalf_unit_0009"
+# textboxarrow 0 1
+@フリズスキャールヴ
+地に伏すがよい
+
+;;//フリズスキャールヴが如意金箍棒を倒す
+# se "SE_0715"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 550371 "logistille_c_0017"
+# alpha 52000411 0 0.5
+# alpha 5203111 0 0.5
+# move 5503711 3 0
+# face 5503711 "sad"
+# alpha 5503711 1 0.5
+# mask 5503711 off
+# textboxarrow 0 2
+@ロジェスティラ
+あううっ…
+皆さん、そんな…
+
+# alpha 5503711 0 0.5
+# move 52000411 3 0
+# face 52000411 "usual"
+# alpha 52000411 1 0.5
+# mask 52000411 off
+# textboxarrow 0 2
+@フリズスキャールヴ
+安心せよ
+死んではおらぬ
+それは「死の君」がもたらすものじゃ
+
+# textboxarrow 0 2
+@フリズスキャールヴ
+そなたも抗うことなく受け入れよ
+じきに訪れる
+全ての解放と救済を
+
+# voice 550371 "logistille_c_0015"
+# alpha 52000411 0 0.5
+# move 5503711 3 0
+# face 5503711 "sad"
+# alpha 5503711 1 0.5
+# mask 5503711 off
+# textboxarrow 0 2
+@ロジェスティラ
+ううっ…
+わたしは…
+
+# voice 540221 "ichiibal_c_0047"
+# alpha 5503711 0 0.5
+# move 5402211 3 0
+# face 5402211 "sad"
+# alpha 5402211 1 0.5
+# mask 5402211 off
+# textboxarrow 0 2
+@イチイバル
+ロジェ…逃げて…
+今のままじゃ…彼女には…
+キミだけでも…
+
+# alpha 5402211 0 0.5
+# move 5503711 3 0
+# face 5503711 "angry"
+# alpha 5503711 1 0.5
+# mask 5503711 off
+# textboxarrow 0 2
+@ロジェスティラ
+イチイバルさん…！
+い…イヤですっ
+
+# sedelay "SE_5575" 1.5
+# textboxarrow 0 2
+@ロジェスティラ
+イチイバルさんを、皆さんを置いて
+逃げるなんて…できません！
+や…やああああっ！
+
+;;# voice 5200041 "hlidskjalf_0019"
+# alpha 5503711 0 0.5
+# move 52000411 3 0
+# face 52000411 "angry"
+# alpha 52000411 1 0.5
+# mask 52000411 off
+# textboxarrow 0 2
+@フリズスキャールヴ
+ふぅ…聞き分けのない子じゃ
+では、そなたもしばし眠って――
+
+# bgm "stop"
+# se "SE_4000"
+# voice 310231 "ascalon_a_battle_0001"
+# alpha 52000411 0 0.5
+# move 5501711 2 0
+# face 5501711 "normal"
+# alpha 5501711 1 0.5
+# mask 5501711 on
+# move 5102311 4 0
+# face 5102311 "normal"
+# alpha 5102311 1 0.5
+# mask 5102311 on
+# textboxarrow 0 3
+@アスカロン
+たぁっ！
+
+# voice 350171 "grimoire_ge_battle_0003"
+# textboxarrow 0 1
+@グリモワール
+灼かれなさい！
+
+# se "SE_4820"
+# waitandnext 0.5
+
+# se "SE_4100"
+# voice 320191 "chihyu_a_0029"
+# alpha 5501711 0 0.5
+# alpha 5102311 0 0.5
+# move 5201911 3 0
+# face 5201911 "angry"
+# alpha 5201911 1 0.5
+# mask 5201911 off
+# textboxarrow 0 2
+@シユウ
+うがあああ！
+
+# voice 550371 "logistille_c_0022"
+# alpha 5201911 0 0.5
+# move 5503711 3 0
+# face 5503711 "surprise"
+# alpha 5503711 1 0.5
+# mask 5503711 off
+# textboxarrow 0 2
+@ロジェスティラ
+えっ…？
+
+;;# voice 5200041 "hlidskjalf_0023"
+# alpha 5503711 0 0.5
+# move 52000411 3 0
+# face 52000411 "surprise"
+# alpha 52000411 1 0.5
+# mask 52000411 off
+# textboxarrow 0 2
+@フリズスキャールヴ
+なっ…！？
+
+# bgmfile "bgm426_427" "BgmIntegralNoahSeventh" 0
+# voice 360111 "vanargand_t_0009"
+# alpha 52000411 0 0.5
+# move 5601111 2 0
+# face 5601111 "normal"
+# alpha 5601111 1 0.5
+# mask 5601111 on
+# textboxarrow 0 1
+# move 5102511 4 0
+# face 5102511 "angry"
+# alpha 5102511 1 0.5
+# mask 5102511 on
+@ヴァナルガンド
+やらせはしませんよ、
+フリズスキャールヴ！
+
+# se "SE_8004"
+# voice 310251 "muramasa_ge_battle_0001"
+# textboxarrow 0 3
+@ムラマサ
+そなたの陰謀、ここで断ち切ります！
+
+# voice 550371 "logistille_c_0002"
+# alpha 5601111 0 0.5
+# alpha 5102511 0 0.5
+# move 5503711 3 0
+# face 5503711 "surprise"
+# alpha 5503711 1 0.5
+# mask 5503711 off
+# textboxarrow 0 2
+@ロジェスティラ
+あれっ？
+あのあのっ…
+どうして、あなた達が…？
+
+# se "SE_8000"
+# voice 310011 "masamune_ge_battle_0001"
+# alpha 5503711 0 0.5
+# move 3100111 2 0
+# face 3100111 "angry"
+# alpha 3100111 1 0.5
+# mask 3100111 on
+# textboxarrow 0 1
+# move 5401311 4 0
+# face 5401311 "usual"
+# alpha 5401311 1 0.5
+# mask 5401311 on
+@マサムネ
+義によって助太刀致す
+
+# voice 340131 "aphrodite_a_0005"
+# face 5401311 "happy"
+# textboxarrow 0 3
+@アフロディーテ
+うふふふふっ♪
+これこそ正に愛ですわぁ
+
+# alpha 3100111 0 0.5
+# alpha 5401311 0 0.5
+# move 52000411 3 0
+# face 52000411 "usual"
+# alpha 52000411 1 0.5
+# mask 52000411 off
+# textboxarrow 0 2
+@フリズスキャールヴ
+聞き分けのない子が多くて困る
+わらわは争いなど好まぬというのに
+
+# alpha 52000411 0 0.5
+# move 5501711 2 0
+# face 5501711 "usual"
+# alpha 5501711 1 0.5
+# mask 5501711 on
+# move 5102311 4 0
+# face 5102311 "normal"
+# alpha 5102311 1 0.5
+# mask 5102311 on
+# textboxarrow 0 3
+@アスカロン
+“終焉”に与しているあなたを
+放っておくことはできません
+討たせていただきます！
+
+# face 5501711 "normal"
+# textboxarrow 0 1
+@グリモワール
+あと、妙に偉そうなのがイラッと
+するのよ！
+
+# alpha 5501711 0 0.5
+# alpha 5102311 0 0.5
+# move 5401311 3 0
+# face 5401311 "usual"
+# alpha 5401311 1 0.5
+# mask 5401311 off
+# textboxarrow 0 2
+@アフロディーテ
+ああ！
+その美しさ、私とどちらが上かしら？
+
+;;# voice 5200041 "hlidskjalf_0039"
+# alpha 5401311 0 0.5
+# move 52000411 3 0
+# face 52000411 "usual"
+# alpha 52000411 1 0.5
+# mask 52000411 off
+# textboxarrow 0 2
+@フリズスキャールヴ
+ふむ
+そのつもりはないのだが、
+偉そうに見えるのじゃな
+
+# textboxarrow 0 2
+@フリズスキャールヴ
+その点は改めるとしよう
+美しさについては、
+それほど重要であるか？
+
+# textboxarrow 0 2
+@フリズスキャールヴ
+確かにわらわは美しいが、
+誰かと美を競う理由もない
+
+# textboxarrow 0 2
+@フリズスキャールヴ
+「死の君」はあらゆる者を平等に
+救済して下さるぞ
+
+# voice 350171 "grimoire_ge_0002"
+# alpha 52000411 0 0.5
+# move 5501711 2 0
+# face 5501711 "normal"
+# alpha 5501711 1 0.5
+# mask 5501711 on
+# textboxarrow 0 1
+# move 5102311 4 0
+# face 5102311 "usual"
+# alpha 5102311 1 0.5
+# mask 5102311 on
+@グリモワール
+ちょっと！
+そういうところが偉そうって
+言ってるのよ！
+
+# voice 310231 "ascalon_a_unit_1006"
+# face 5102311 "sad"
+# textboxarrow 0 3
+@アスカロン
+堂々としていて…羨ましいっ
+
+# alpha 5501711 0 0.5
+# alpha 5102311 0 0.5
+# move 5401311 3 0
+# face 5401311 "angry"
+# alpha 5401311 1 0.5
+# mask 5401311 off
+# textboxarrow 0 2
+@アフロディーテ
+美に執着しないなんて、
+考えられませんわぁ！
+
+# voice 320191 "chihyu_a_0029"
+# alpha 5401311 0 0.5
+# move 5201911 3 0
+# face 5201911 "angry"
+# alpha 5201911 1 0.5
+# mask 5201911 off
+# textboxarrow 0 2
+@シユウ
+うがあああ！
+シユウがたたきつぶす！
+
+;;# voice 5200041 "hlidskjalf_unit_0005"
+# alpha 5201911 0 0.5
+# move 52000411 3 0
+# face 52000411 "angry"
+# alpha 52000411 1 0.5
+# mask 52000411 off
+# textboxarrow 0 2
+@フリズスキャールヴ
+懲りぬ者達じゃ
+わらわが出るまでもなかろう
+
+# se "SE_0793"
+# alpha 52000411 0 0.5
+# move 806158 3 0
+# alpha 806158 1 0.5
+# mask 806158 off
+# textboxarrow 0 2
+@魔獣
+ガアアアアアアアアア！

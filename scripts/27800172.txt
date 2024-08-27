@@ -1,0 +1,133 @@
+;;【指定】BgmSeaEvent bgm226
+;;//暗転挟む
+;;//背景：ビーチ（夜）
+# script "lisp"
+# background "sea_beach_night"
+# bgmfile "bgm229" "BgmSeaEvent" 0
+# body 2301811
+# pos 2301811 2 0
+# scale 2301811 0.8 0
+# body 2102611
+# pos 2102611 4 0
+# scale 2102611 0.8 0
+# body 2501711
+# pos 2501711 4 0
+# scale 2501711 0.8 0
+# alpha 2501711 0 0
+# textflame 1 1
+# face 2102611 "sad"
+@カラドボルグ
+王国軍は退いたようね
+一時はどうなることかと思ったわ
+
+@フォルカス
+…………
+
+# face 2102611 "angry"
+# voice 1026 "caladbolg_0034"
+@カラドボルグ
+う～ん、ダメ！無理！
+フォルカス、しっかり反省しなさい
+
+# face 2102611 "normal"
+@カラドボルグ
+それからグリモワールに
+お礼を言ってね
+
+# voice 3018 "forcas_0013"
+@フォルカス
+はい…
+
+;;【指定】SE_5004　0.5秒後SE_5005　更に0.5秒後SE_5004
+;;//カラドボルグが立ち去る
+# se "SE_5004"
+# sedelay "SE_5005" 0.5
+# sedelay "SE_5004" 1
+# alpha 2102611 0 1.2
+# waitandnext 2
+
+# alpha 2501711 1 0.5
+# voice 5017 "grimoire_0027"
+# face 2501711 "angry"
+@グリモワール
+…別にお礼とか良いわよ
+フォルカスが一人で飛び出すのは
+いつものことだし！
+
+# face 2301811 "usual"
+@フォルカス
+ううん…
+グリモワールは私の背中を守るって
+言ってくれたのに…
+
+# voice 3018 "forcas_0027"
+@フォルカス
+私…なにやってるんだろう…
+
+# voice 5017 "grimoire_0013"
+@グリモワール
+む～っ…
+元気出しなさいよ！
+そんなんで皇帝になれるの！？
+
+@フォルカス
+…皇帝…そうよね
+
+# emotionbody 5831 9 2501711 60 170
+# effectpattern 5831 1 0
+# effectstart 5831
+# face 2501711 "sad"
+@グリモワール
+あ…ごめん
+
+# face 2301811 "angry"
+@フォルカス
+ううん
+…私、確かめないといけない
+覚悟を決めるためにも
+
+@フォルカス
+明日、もう一度陛下のところに
+行ってくる
+
+;;【指定】bgm004
+;;//背景：プール（昼）
+# fadeout "black" 2
+# waitandnext 2.5
+
+# alpha 2501711 0 0
+# move 2301811 2 0
+# waitandnext 0.1
+# background "sea_beach_day"
+# face 2301811 "usual"
+
+# body 2102811
+# pos 2102811 4 0
+# scale 2102811 0.8 0
+# alpha 2102811 0 0
+# fadein "black" 0.5
+# bgm "bgm004" 0
+@フォルカス
+失礼します
+
+# alpha 2102811 1 0.5
+# voice 1028 "dainsleif_0004"
+@ダーインスレイヴ
+やあ、フォルカス
+今日も、お見舞いに
+来てくれるなんて嬉しいね
+
+# voice 3018 "forcas_0002"
+@フォルカス
+ダーインスレイヴ様、
+お尋ねしたいことがあります
+
+# voice 1028 "dainsleif_0003"
+# face 2102811 "usual"
+@ダーインスレイヴ
+ちょうど良かった
+わたしもおぬしに
+会わせたい人がいるんだよ
+
+# fadeout "black" 3
+# waitandnext 3.5

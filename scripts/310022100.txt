@@ -1,0 +1,328 @@
+;;-----------------------------------------
+;;SEA2章_10
+;;-----------------------------------------
+# script "lisp"
+# background "201_border"
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 5
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;シェキナー
+# body 6400711
+# pos 6400711 4
+# scale 6400711 0.8 0
+# layer 6400711 2
+# mask 6400711 off
+# alpha 6400711 0 0
+;;リットゥ
+# body 6100511
+# pos 6100511 2
+# scale 6100511 0.8 0
+# layer 6100511 1
+# mask 6100511 off
+# alpha 6100511 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "SEA6100511"
+# imagealpha 1 0 0
+# imagelayer 1 3
+;;-----------------------------------------
+;;背景：廃墟（夜）
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# se "SE_6170"
+# sedelay "bgm602_basic_on" 2
+# sedelay "bgm602_rhythm_on" 2
+# sedelay "bgm602_tension_on" 2
+# face 270 "normal"
+# face 6400711 "normal"
+# alpha 270 1 0.5
+# alpha 6400711 1 0.5
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@シェキナー
+お二人とも、
+ようやく気づいたようですね
+
+#setnextbgmblock 1
+# voice 9917 "mimir_navikan_0031"
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+シェキナーさん
+すみません…
+
+# textboxarrow 0 1
+@ミーミル
+おかしくなっているのは、
+リットゥさんの方だと仰っていたのは
+こういうことだったのですね
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+ですが、どうしてリットゥさんは
+私達に幻覚を見せていたのでしょう…
+
+# face 6400711 "usual"
+# textboxarrow 0 3
+@シェキナー
+その理由なら、そちらに
+
+# textboxarrow 0 3
+@シェキナー
+幻覚が解けたのなら、ここからでも
+見えるでしょう？
+廃墟となった屋敷跡の中心…
+
+# textboxarrow 0 3
+@シェキナー
+あそこに突き立てられた、
+リットゥの剣が
+
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+あっ！
+
+# textboxarrow 0 1
+@ミーミル
+昨夜、リットゥさんが
+お持ちでなかった炎の剣
+どうして、あんなところに？
+
+# textboxarrow 0 3
+@シェキナー
+理由を説明している暇はありません
+今は可能な限り、迅速に
+
+# sestop "SE_6170"
+# textboxarrow 0 3
+@シェキナー
+あの剣を盗みます！
+
+;;シェキナーが飛び出す
+# se "SE_9021"
+# move 6400711 5 0.3
+# alpha 6400711 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 270 0 0.5
+# waitandnext 1
+
+;;リットゥが立ちふさがる
+# se "SE_5200"
+# move 6100511 3 0.5
+# face 6100511 "normal"
+# alpha 6100511 1 0.3
+# waitandnext 1
+
+;;リットゥシナリオカット
+# fadein "white" 1
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# frameout 0 0
+# alpha 6100511 0 0
+#setnextbgmblock 2
+# se "SE_5205"
+# textwindow "close"
+# waitandnext 1
+
+# se "SE_4820"
+# voice 1005 "ritto_0010"
+# textwindow "nomal"
+# textboxarrow 0 0
+@リットゥ
+それ以上、近づくことは許さん！
+
+# serif 1
+# textwindow "nomal"
+@ミーミル
+リットゥさん…！
+
+# voice 650401 "manannan_ura_0021"
+# serif 1
+@マナナン
+わ～っ！
+すごい熱気だね♪
+
+# serif 0
+@リットゥ
+ここは聖域だ
+ここでは戒律が全て
+誰であろうと従ってもらう
+
+# serif 1
+@シェキナー
+そう…貴方のその力で、理すら
+歪めてしまったのですね
+
+# serif 1
+@シェキナー
+何てことを…
+リットゥ、もう終わりにしましょう
+
+# serif 0
+@リットゥ
+黙れ！
+私は守る…
+何があっても守り抜く！
+
+# serif 1
+# textwindow "close"
+# move 6100511 2 0
+# layer 6100511 2
+# mask 6100511 off
+# move 6400711 4 0
+# layer 6400711 3
+# mask 6400711 on
+# serif 0
+@リットゥ
+この聖域は誰にも侵させはしない！
+
+# imagealpha 1 0 1
+# framein 0 1
+# face 6100511 "angry"
+# face 6400711 "angry"
+# alpha 6100511 1 0.5
+# alpha 6400711 1 0.5
+# textboxarrow 0 3
+@シェキナー
+リットゥ！
+いい加減にしなさい！
+貴方だって気づいているでしょう
+
+# textboxarrow 0 3
+@シェキナー
+貴方の力が、この屋敷にだけ
+働いているのであれば…
+見過ごすこともできました
+
+# textboxarrow 0 3
+@シェキナー
+ですが、すでに影響は
+屋敷だけでなく
+この町全体にまで及んでいます
+
+# textboxarrow 0 3
+@シェキナー
+貴方の強い思いが
+「揺らぎ」の影響を受けて
+肥大化しているんです
+
+# textboxarrow 0 3
+@シェキナー
+関係のない人々まで巻き込むのは、
+貴方の本意ではないでしょうっ？
+
+# voice 4007 "shekina_0026"
+# textboxarrow 0 3
+@シェキナー
+もう、やめて下さい
+お願いですから…
+
+# face 6100511 "normal"
+# textboxarrow 0 1
+@リットゥ
+シェキナー…
+
+# textboxarrow 0 1
+@リットゥ
+私は過ちを犯した
+聖域の守護者たる私が…
+
+# face 6100511 "angry"
+# textboxarrow 0 1
+@リットゥ
+この罪は贖おうにも贖いきれず
+いずれ断罪されることだろう
+しかし！
+
+# textboxarrow 0 1
+@リットゥ
+退くわけにはいかない
+たとえこれが過ちであろうとも
+
+# textboxarrow 0 1
+@リットゥ
+私は必ず守り抜くと決めたのだ！！
+
+# textboxarrow 0 1
+@リットゥ
+怪盗シェキナー！
+お前はアレを「特別な宝石」と
+言ったな
+
+# voice 1005 "ritto_0040"
+# face 6100511 "normal"
+# textboxarrow 0 1
+@リットゥ
+なるほど
+燃えさかる炎の剣
+その輝きを宝石に見立てたか
+
+# textboxarrow 0 1
+@リットゥ
+あの炎は私の中で燃えさかる
+心の炎そのものだ
+
+# textboxarrow 0 1
+@リットゥ
+決して消えることなく、
+いつまでも燃え続ける！
+…フランのために
+
+# face 6100511 "angry"
+# textboxarrow 0 1
+@リットゥ
+この覚悟、
+盗めるものなら盗んでみろ！
+
+# voice 4007 "shekina_0013"
+# face 6400711 "sad"
+# textboxarrow 0 3
+@シェキナー
+…話し合いで解決することは
+できないようですね
+
+# face 6400711 "usual"
+# textboxarrow 0 3
+@シェキナー
+分かりました
+それなら私も計画通りに動くまでです
+
+# bgm "bgm102" 0
+# face 6400711 "normal"
+# textboxarrow 0 3
+@シェキナー
+私は怪盗シェキナー
+月夜に輝く真紅の高貴なる蝶
+“エレガントバタフライ”
+
+# textboxarrow 0 3
+@シェキナー
+今宵、貴方の大切なもの…
+華麗に盗んで差し上げます！
+
+# fadeout "black" 1
+# waitandnext 1

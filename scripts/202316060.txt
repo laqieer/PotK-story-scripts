@@ -1,0 +1,628 @@
+;;-----------------------------------------
+;;SEA_6_0
+;;-----------------------------------------
+# script "lisp"
+# background "in_city_evening"
+# bgm "stop"
+;;-----------------------------------------
+;;異族
+# body 810004
+# pos 810004 2
+# scale 810004 0.8 0
+# layer 810004 2
+# mask 810004 off
+# alpha 810004 0 0
+# entry 810005 810004
+# pos 810005 4
+# scale 810005 0.8 0
+# layer 810005 4
+# mask 810005 off
+# alpha 810005 0 0
+;;ルーン
+# body 300531
+# pos 300531 2
+# scale 300531 0.8 0
+# layer 300531 2
+# mask 300531 off
+# alpha 300531 0 0
+;;フラガラッハ
+# body 101011
+# pos 101011 4
+# scale 101011 0.8 0
+# layer 101011 4
+# alpha 101011 0 0
+# body 3101011
+# pos 3101011 2
+# scale 3101011 0.8 0
+# layer 3101011 2
+# mask 3101011 off
+# alpha 3101011 0 0
+;;アルテミス
+# body 400131
+# pos 400131 2
+# scale 400131 0.8 0
+# layer 400131 4
+# alpha 400131 0 0
+;;アポロン
+# body 400331
+# pos 400331 4
+# scale 400331 0.8 0
+# layer 400331 2
+# mask 400331 off
+# alpha 400331 0 0
+# body 3400311
+# pos 3400311 4
+# scale 3400311 0.8 0
+# layer 3400311 4
+# alpha 3400311 0 0
+;;マサムネ
+# body 100111
+# pos 100111 3
+# scale 100111 0.8 0
+# layer 100111 3
+# mask 100111 off
+# alpha 100111 0 0
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 2
+# scale 6603811 0.8 0
+# layer 6603811 4
+# alpha 6603811 0 0
+;;SEAイシューリエル
+# body 6301411
+# pos 6301411 3
+# scale 6301411 0.8 0
+# layer 6301411 3
+# mask 6301411 off
+# alpha 6301411 0 0
+;;メギド
+# body 500611
+# pos 500611 3
+# scale 500611 0.8 0
+# layer 500611 3
+# mask 500611 off
+# alpha 500611 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 4
+# imageset 1 "noise_03"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：中心部：in_city_evening
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+;;異族の群れが現れる
+# bgm "bgm005" 0
+# se "SE_0617"
+# alpha 810004 1 0.5
+# alpha 810005 1 0.5
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 0
+@異族
+ガアアアアアアアアアアア！
+
+# alpha 810004 0 0.5
+# alpha 810005 0 0.5
+# voice 3005 "roon_0029"
+# alpha 300531 1 0.3
+# alpha 101011 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ルーン
+死にたい奴からかかってこい
+あたいにもっと血を見せろやぁ！
+
+# voice 1010 "furagaraha_0004"
+# textflame 1 1
+# textboxarrow 0 3
+@フラガラッハ
+ふふっ
+わたしの美しさに見惚れていなさい
+その間に終わりますわ
+
+;;ルーンとフラガラッハが異族を斬る
+# move 300531 1 0.3
+# alpha 300531 0 0.3
+# move 101011 5 0.3
+# alpha 101011 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# voice 4001 "arutemisu_0029"
+# face 400131 "angry"
+# alpha 400131 1 0.3
+# alpha 400331 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@アルテミス
+そこっ！
+
+# voice 4003 "aporon_0029"
+# textflame 1 1
+# textboxarrow 0 3
+@アポロン
+お姉ちゃんはボクが守る！
+
+;;アルテミスとアポロンが異族を射る
+# alpha 400131 0 0.3
+# alpha 400331 0 0.3
+# se "SE_4301"
+# sedelay "SE_6973" 0.3
+# textwindow "close"
+# waitandnext 1
+
+# move 810004 3 0
+# alpha 810004 1 0.5
+# waitandnext 1
+
+# se "SE_6971"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@異族
+ガアアアアアアアアア…
+
+;;異族が倒れる
+# se "SE_3001"
+# alpha 810004 0 1
+# textwindow "close"
+# waitandnext 1.5
+
+# voice 4001 "arutemisu_0015"
+# face 400131 "sad"
+# move 400131 3 0
+# layer 400131 3
+# mask 400131 off
+# alpha 400131 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@アルテミス
+次から次へと…
+やはり討伐が間に合っていません
+
+# move 300531 5 0
+# textflame 1 1
+# textboxarrow 0 2
+@アルテミス
+大元を絶たなければ
+収まりそうにありませんね
+しかし…
+
+;;フラガラッハの攻撃をルーンが止める
+# se "SE_5220"
+# move 101011 1 0
+# layer 101011 1
+# mask 101011 on
+# face 101011 "normal"
+# alpha 101011 1 1
+# textboxarrow 0 0
+# waitandnext 1.5
+
+# se "SE_4000"
+# face 400131 "surprise"
+# move 400131 5 0.5
+# move 300531 3 0.3
+# layer 300531 5
+# mask 300531 on
+# alpha 300531 1 0.3
+# waitandnext 0.3
+
+# se "SE_4601"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 4001 "arutemisu_0022"
+# textflame 1 1
+# textboxarrow 0 3
+@アルテミス
+えっ…！？
+
+# voice 3005 "roon_0011"
+# textflame 1 1
+# textboxarrow 0 2
+@ルーン
+おっとぉ！
+何のつもりよ、フラガラッハ
+
+# face 300531 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@ルーン
+あたいじゃないんだから、
+お前が血に飢えるとかおかしいだろ！
+
+;;ルーンがフラガラッハを突き飛ばす
+# se "SE_0846"
+# scale 101011 0.75 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@フラガラッハ
+…………
+
+# voice 4001 "arutemisu_0023"
+# textflame 1 1
+# textboxarrow 0 3
+@アルテミス
+どういうことですか…！？
+フラガラッハが私を襲った？
+
+# voice 3005 "roon_0009"
+# textflame 1 1
+# textboxarrow 0 2
+@ルーン
+別に共食いやってもいいけど
+血を見たいなら周りに異族が
+いくらでもいるでしょ
+
+# face 300531 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ルーン
+何で仲間を狙うかのかしら、ねぇ！
+
+# scale 101011 0.8 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@フラガラッハ
+ふふっ…ふふふふふ
+もちろん…神の国が復活するからよ
+
+# voice 3005 "roon_0023"
+# face 300531 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@ルーン
+何だって？
+
+# voice 4001 "arutemisu_0012"
+# face 400131 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@アルテミス
+ふたりともやめなさい！
+今はそれどころじゃ…
+
+;;アルテミスが咄嗟に矢を躱す
+# alpha 101011 0 0.3
+# alpha 300531 0 0.3
+# se "SE_12407"
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_5527"
+# move 400131 3 0.5
+# waitandnext 1
+
+# layer 400131 2
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@アルテミス
+…アポロン？
+今のは、冗談では済みませんよ
+
+# move 400131 2 0.5
+# move 400331 4 0
+# layer 400331 4
+# mask 400331 on
+# voice 4003 "aporon_0004"
+# alpha 400331 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@アポロン
+…………ふふっ
+安心して、お姉ちゃん
+
+# textflame 1 1
+# textboxarrow 0 3
+@アポロン
+神の国が復活すれば、
+み～んな幸せになれるんだよ
+
+# face 400131 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@アルテミス
+アポロン…！
+そんなっ…
+
+# alpha 400331 0 0.3
+# move 300531 4 0
+# layer 300531 4
+# mask 300531 on
+# alpha 300531 1 0.3
+# voice 3005 "roon_0019"
+# face 300531 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@ルーン
+おいおい
+ふたりとも脳みそ沸いちゃったの？
+だったら…ぶった切ってあげる！
+
+# face 400131 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@アルテミス
+やめなさい！
+…やめて！
+逃げましょう、ルーン…
+
+# face 300531 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@ルーン
+はぁっ！？
+あたいはまだ血を…って引っ張るな！
+
+;;アルテミスがルーンを引っ張って逃げる
+# se "SE_5575"
+# move 400131 3 0.5
+# scale 400131 0.77 0.5
+# alpha 400131 0 0.3
+# move 300531 3 0.6
+# scale 300531 0.77 0.6
+# alpha 300531 0 0.3
+# textwindow "close"
+# waitandnext 1.5
+
+# move 101011 2 0
+# layer 101011 2
+# mask 101011 off
+# alpha 101011 1 0.3
+# move 400331 4 0
+# layer 400331 4
+# mask 400331 on
+# alpha 400331 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@フラガラッハ
+…………
+
+# textflame 1 1
+# textboxarrow 0 3
+@アポロン
+…………
+
+;;フラガラッハとアポロンが一瞬、聖鎖バージョンに
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# alpha 101011 0.5 0
+# alpha 400331 0.5 0
+# imagealpha 1 0.5 0
+# imagepos 1 0 0
+# waitandnext 0.5
+
+# alpha 3101011 1 0
+# alpha 3400311 1 0
+# imagealpha 1 0 0
+# waitandnext 1
+
+# alpha 3101011 0 0
+# alpha 3400311 0 0
+# alpha 101011 1 0
+# alpha 400331 1 0
+# imagealpha 1 0.5 0
+# imagepos 1 0 0
+# waitandnext 0.5
+
+# imagealpha 1 0 0
+# waitandnext 1
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：下町（夜）：in_downtown_night
+# background "in_downtown_night"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# alpha 101011 0 0
+# alpha 400331 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# move 100111 2 0
+# layer 100111 4
+# mask 100111 on
+# voice 1001 "masamune_0019"
+# face 100111 "angry"
+# alpha 100111 1 0.3
+# move 400131 4 0
+# scale 400131 0.8 0
+# layer 400131 2
+# mask 400131 off
+# alpha 400131 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@マサムネ
+何たることだ…！
+シェキナーだけでなくフラガラッハや
+アポロンまで…
+
+# textflame 1 1
+# textboxarrow 0 3
+@アルテミス
+他にも急に裏切ったキル姫が数名…
+何が起きているの…？
+
+# alpha 100111 0 0.3
+# alpha 400131 0 0.3
+# move 270 3 0
+# mask 270 off
+# face 270 "sad"
+# voice 9917 "mimir_navikan_0027"
+# alpha 270 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+大変なことになってまいりました
+マスター様…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+トーキョーの町全体にキル姫を
+惑わす何らかの力が働いていると
+いうことでしょうか…
+
+# alpha 270 0 0.3
+# voice 650401 "manannan_ura_0028"
+# face 6504011 "sad"
+# alpha 6504011 1 0.3
+# face 6603811 "usual"
+# alpha 6603811 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@マナナン
+でも、「揺らぎ」の気配は
+全くないんだよねー
+
+# voice 660381 "maclir_ura_0028"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+私達の知らない力…怖いよ…
+
+# alpha 6504011 0 0.3
+# alpha 6603811 0 0.3
+# move 6301411 3 0
+# mask 6301411 off
+# voice 3014 "ithuriel_0028"
+# alpha 6301411 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@イシューリエル
+…アルテミスやルーンのように
+町に入っても何事もなく戻って
+くることができたキル姫もいますわ
+
+# textflame 1 1
+# textboxarrow 0 2
+@イシューリエル
+町全体に何らかの力が働いていると
+しても、影響を受けるキル姫には
+条件がありそうですわね
+
+# voice 3014 "ithuriel_0019"
+# face 6301411 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@イシューリエル
+それを見抜くことができれば…
+ああーっ！わたくしのトゥルースが！
+
+# alpha 6301411 0 0.3
+# move 100111 3 0
+# layer 100111 2
+# mask 100111 off
+# voice 1001 "masamune_0003"
+# face 100111 "nutual"
+# alpha 100111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@マサムネ
+異族はトーキョー内に
+閉じ込めておきたい
+しかし、このままでは…
+
+;;メギドがやってくる
+# se "SE_0719"
+# alpha 100111 0 0.3
+# move 500611 4 0
+# layer 500611 2
+# mask 500611 off
+# voice 5006 "megido_0001"
+# alpha 500611 1 0.3
+# move 270 2 0
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+こちらにいたのね、マスター
+
+# voice 9917 "mimir_navikan_0002"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+メギドさん
+マスター様にご用なのですか？
+
+# face 500611 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+ええ
+少し相談したいことがあって
+
+# alpha 270 0 0.3
+# move 100111 2 0
+# layer 100111 4
+# mask 100111 on
+# voice 1001 "masamune_0002"
+# face 100111 "angry"
+# alpha 100111 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+メギド
+悪いが今はそれどころではない
+そなたも聞いておろう
+
+# voice 5006 "megido_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+ここに異族が涌いて大変なのよね
+でも、こちらだって大変なのよ
+とても重大な事件が起きたの
+
+# alpha 100111 0 0.3
+# alpha 270 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+トーキョーの事件に匹敵する
+重大事なのですかっ？
+どのようなことが…
+
+# bgm "stop"
+# face 500611 "amazed"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+大変なのよ…
+ロンギヌスが…ロンギヌスが
+いなくなってしまったの…！！
+
+# fadeout "black" 2
+# waitandnext 2

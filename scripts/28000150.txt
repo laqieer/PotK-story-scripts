@@ -1,0 +1,228 @@
+;;第15幕　タイトル：英雄のいない島
+;;【指定】bgm005
+;;//背景：ジャングル
+# script "lisp"
+# background "sea_jungle_day"
+# bgm "bgm005" 0
+# body 2101411
+# pos 2101411 4
+# scale 2101411 0.8 0
+# body 2102511
+# pos 2102511 2
+# scale 2102511 0.8 0
+# layer 2101411 1
+# layer 2102511 2
+# face 2101411 "sad"
+# face 2102511 "sad"
+# textflame 1 1
+# setname "ティルフィング" 2
+おかしいですね…
+遺跡の扉が閉じています…
+
+# voice 1025 "muramasa_0028"
+# setname "ムラマサ" 3
+姉様達が中に入ったからでしょうか？
+内側から鍵をかけているのかも…
+
+# body 2300211
+# pos 2300211 3
+# scale 2300211 0.8 0
+# alpha 2300211 0 0
+# layer 2300211 3
+# voice 1014 "tyrufing_0028"
+# setname "ティルフィング" 2
+困りましたね…
+
+;;【指定】SE_4100
+;;【指定】SE_5223
+# se "SE_4100"
+# se "SE_5223"
+# alpha 2300211 1 0.5
+# move 2101411 5 0.5
+# move 2102511 1 0.5
+# face 2300211 "smile"
+# setname "トライデント" 3
+だったら壊しちゃえば
+良いんじゃないかな～？
+ほら、この辺をどーんと突けば！
+
+# emotionbody 1125 1 2102511 20 280
+# effectpattern 1125 2 0
+# effectstart 1125
+# body 2301811
+# pos 2301811 1
+# scale 2301811 0.8 0
+# alpha 2301811 0 0
+# body 2102311
+# pos 2102311 5
+# scale 2102311 0.8 0
+# alpha 2102311 0 0
+# layer 2301811 1
+# layer 2102311 2
+# setname "ムラマサ" 3
+トライデント！？
+そんな強引に――
+
+;;【指定】SE_0637
+;;【指定】SE_9366
+;;//画面揺れ
+;;//水が噴き出す
+# effectskip 1025
+# textwindow "close"
+# se "SE_0637"
+# se "SE_9366"
+# shake 1 0.5
+# waitandnext 1.5
+
+# face 2301811 "sad"
+# alpha 2102511 0 0.5
+# alpha 2301811 1 0.5
+# textwindow "normal"
+# voice 3018 "forcas_0022"
+# setname "フォルカス" 2
+地面から水が！？
+どこを突いているんですかっ？
+
+# emotionbody 1223 1 2102311 20 280
+# effectpattern 1223 1 0
+# effectstart 1223
+# face 2102311 "sad"
+# alpha 2101411 0 0.5
+# alpha 2102311 1 0.5
+# voice 1023 "ascalon_kyara_1004"
+# setname "アスカロン" 1
+あ！扉が歪んで隙間が…
+きゃあああああっ…！
+
+;;【指定】SE_9377
+# effectskip 1223
+# face 2300211 "sad"
+# se "SE_9377"
+# voice 3002 "toraidento_kyara_1012"
+# setname "トライデント" 3
+ぅわお！トライデント、
+またやっちゃった！？
+みんな、もうしわけぇ～…！
+
+;;//暗転挟む
+# fadeout "black" 1.5
+# waitandnext 2
+
+# alpha 2300211 0 0
+# alpha 2102311 0 0
+# alpha 2101411 1 0
+# alpha 2102511 1 0
+# pos 2101411 5
+# pos 2301811 3
+# pos 2102511 1
+# layer 2101411 2
+# layer 2102511 3
+# layer 2301811 1
+# background "006_jail"
+# waitandnext 0.1
+
+# fadein "black" 1
+# textflame 1 1
+# setname "ティルフィング" 2
+皆さん、大丈夫ですか？
+
+# setname "フォルカス" 2
+酷い目に遭ったけど、
+なんとか中には
+入れたみたいですね…
+
+# layer 2102311 4
+# setname "ムラマサ" 3
+拙者の仲間が粗相を致し、
+まことに申し訳ないっ
+
+# alpha 2101411 0 0.5
+# alpha 2102311 1 0.5
+# voice 1023 "ascalon_kyara_1004"
+# setname "アスカロン" 1
+あ！
+向こうに誰か倒れていますっ
+
+# setname "フォルカス" 2
+一、二…七人いますね
+
+# body 2200411
+# pos 2200411 1
+# scale 2200411 0.8 0
+# alpha 2200411 0 0
+# body 2100111
+# pos 2100111 5
+# scale 2100111 0.8 0
+# alpha 2100111 0 0
+# body 2601411
+# pos 2601411 3
+# scale 2601411 0.8 0
+# alpha 2601411 0 0
+# face 2601411 "sad"
+# face 2100111 "sad"
+# layer 2601411 1
+# layer 2200411 3
+# layer 2100111 2
+# setname "ムラマサ" 3
+姉様！
+
+# alpha 2102311 0 0.5
+# alpha 2101411 1 0.5
+# setname "ティルフィング" 2
+やはり皆、
+ここに来ていたんですね
+
+# eye 2200411 "close"
+# alpha 2301811 0 0.5
+# alpha 2101411 0 0.5
+# alpha 2102511 0 0.5
+# alpha 2200411 1 0.5
+# alpha 2100111 1 0.5
+# alpha 2601411 1 0.5
+# voice 2004 "parashu_0037"
+# setname "パラシュ" 2
+ううう…
+ボクは一体…？
+
+# setname "プタハ" 3
+我は…
+まだ生きておるのか…？
+
+# layer 2101411 4
+# pos 2101411 3
+# voice 1001 "masamune_battle_0005"
+# setname "マサムネ" 3
+不覚っ…まさか、
+ここで倒れることになろうとは…！
+なにがいけなかったというのだっ？
+
+# face 2101411 "angry"
+# layer 2102311 2
+# layer 2102511 3
+# layer 2301811 1
+# alpha 2101411 1 0.5
+# alpha 2200411 0 0.5
+# alpha 2100111 0 0.5
+# alpha 2601411 0 0.5
+# setname "ティルフィング" 2
+彼女達は私に任せて、
+三人は勝負を
+
+# face 2102311 "angry"
+# alpha 2101411 0 0.5
+# alpha 2102311 1 0.5
+# alpha 2301811 1 0.5
+# alpha 2102511 1 0.5
+# voice 1023 "ascalon_0032"
+# setname "アスカロン" 1
+はい！
+
+# face 2301811 "angry"
+# setname "フォルカス" 2
+これで、今度こそ本当に、
+決着をつけます！
+
+# face 2102511 "angry"
+# setname "ムラマサ" 3
+いざ、尋常に勝負！
+;;//バトル

@@ -1,0 +1,302 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;インテグラルキラーズサイドストーリー
+;;第1話―１０　タイトル：平和への決意
+;;1_10_1
+;;スクリプト最後の背景：町（town）
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 3
+# alpha 24 0 0
+# mask 24 off
+;;ロンギヌス
+# body 300111
+# pos 300111 3
+# scale 300111 0.8 0
+# layer 300111 2
+# alpha 300111 0 0
+# mask 300111 off
+;;マサムネ
+# body 100111
+# pos 100111 3
+# scale 100111 0.8 0
+# layer 100111 2
+# alpha 100111 0 0
+# mask 100111 off
+;;パラシュ
+# body 200411
+# pos 200411 3
+# scale 200411 0.8 0
+# layer 200411 2
+# alpha 200411 0 0
+# mask 200411 off
+;;-----------------------------------------
+;;第1話―１０　タイトル：平和への決意
+;;//背景：平原
+;;//ティルフィングとロンギヌスとマサムネが歩いている
+# se "SE_0963"
+# textwindow "close"
+# move 100111 1 0
+# face 100111 "nutual"
+# alpha 100111 1 0
+# mask 100111 on
+# move 24 3 0
+# face 24 "normal"
+# alpha 24 1 0
+# mask 24 on
+# move 300111 5 0
+# face 300111 "normal"
+# alpha 300111 1 0
+# mask 300111 on
+# waitandnext 0.5
+
+# face 300111 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@ロンギヌス
+…………
+
+# voice 3001 "ronginusu_0002"
+# textboxarrow 0 3
+@ロンギヌス
+あの…
+本当に一緒に行くんですか？
+
+# textboxarrow 0 1
+@マサムネ
+旅は道連れ　世は情け
+ロンギヌスは拙者が同行することに
+反対か？
+
+# textboxarrow 0 3
+@ロンギヌス
+ええと…
+そうではないんですけど…
+その…怖くて…
+
+# textboxarrow 0 1
+@マサムネ
+怖い？
+そなたが拙者を？
+解せぬな
+
+# textboxarrow 0 1
+@マサムネ
+そなたからは並々ならぬ力量を感じる
+少なからぬ淘汰を為してきたはずだ
+
+# face 300111 "normal"
+# textboxarrow 0 3
+@ロンギヌス
+あ…それは…
+
+# textboxarrow 0 1
+@マサムネ
+如何した？
+
+# textboxarrow 0 2
+@ティルフィング
+マサムネ
+そのくらいにしていただけませんか
+
+# face 100111 "sad"
+# textboxarrow 0 1
+@マサムネ
+ふむ
+いささか不躾であったか…
+
+# textboxarrow 0 3
+@ロンギヌス
+いえ…ごめんなさい…
+
+# face 100111 "nutual"
+# textboxarrow 0 1
+@マサムネ
+何故、そなたが謝る？
+
+# textboxarrow 0 3
+@ロンギヌス
+ごめんなさい…
+
+# voice 1001 "masamune_0028"
+# textboxarrow 0 1
+@マサムネ
+むう…
+
+;;//背景：町（town）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "town"
+# sestop "SE_0963"
+# alpha 100111 0 0
+# alpha 24 0 0
+# alpha 300111 0 0
+# move 24 3 0
+# face 24 "normal"
+# alpha 24 1 0
+# mask 24 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 1014 "tyrufing_0001"
+# bgm "stop"
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+マスター
+今夜はこの町で泊まりましょう
+
+# alpha 24 0 0.5
+# move 100111 3 0
+# face 100111 "normal"
+# alpha 100111 1 0.5
+# mask 100111 off
+# textboxarrow 0 2
+@マサムネ
+この辺りでは一番大きな町だ
+ギルドに所属しているキル姫も
+多いだろう
+
+# textboxarrow 0 2
+@マサムネ
+淘汰が為されるやもしれぬ
+
+# bgm "bgm031" 0
+# textwindow "close"
+# alpha 100111 0 0.5
+# serif 1
+@兵士１
+そこの一行
+待ちなさい
+
+# serif 1
+@兵士２
+見慣れないキル姫だな
+奏官はお前か？
+
+# serif 1
+@兵士３
+どこのギルドに所属している？
+答えろ！
+
+;;//選択肢
+;;
+;;Aどこにも…
+;;Bラグナロク教会かな？
+;;Cうるさい！
+# select "どこにも…" "select_label_01" "ラグナロク教会かな？" "select_label_02" "うるさい！" "select_label_03"
+どこのギルドに所属している？
+答えろ！
+
+;;A
+# label "select_label_01"
+# labeljump "select_label_end"
+# textwindow "close"
+# serif 1
+@兵士１
+怪しい奴め！
+身柄を拘束する！
+
+;;B
+# label "select_label_02"
+# labeljump "select_label_end"
+# textwindow "close"
+# serif 1
+@兵士２
+教会所属の奏官だと！
+身柄を拘束する！
+
+;;C
+# label "select_label_03"
+# labeljump "select_label_end"
+# textwindow "close"
+# serif 1
+@兵士３
+何だ、その態度は！
+身柄を拘束する！
+
+# voice 1014 "tyrufing_0012"
+# label "select_label_end"
+# move 24 3 0
+# face 24 "angry"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+やめて下さい！
+マスターには指一本触れさせません
+
+# serif 1
+@兵士１
+ぐっ…
+キル姫が人間に剣を向ける気か！
+キルオーダーに反するぞっ
+
+# serif 1
+@兵士２
+おい、相手はマスター持ちの
+キル姫だ
+そんなの通用しないだろ…
+
+# serif 1
+@兵士１
+チッ…
+分が悪いか…
+
+# alpha 24 0 0.5
+# move 200411 3 0
+# face 200411 "usual"
+# alpha 200411 1 0.5
+# mask 200411 off
+# textboxarrow 0 2
+@パラシュ
+何を騒いでいるんだい？
+
+# serif 1
+@兵士１
+パラシュ様！
+怪しい輩がいたので捕らえようと
+したら抵抗されまして…
+
+# face 200411 "normal"
+# textboxarrow 0 2
+@パラシュ
+君達…
+ああ、いいよ
+ボクがやる
+
+# voice 2004 "parashu_unit_1005"
+# se "SE_5206"
+# face 200411 "angry02"
+# textboxarrow 0 2
+@パラシュ
+抵抗しても構わないよ
+三人まとめて叩き潰す！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# se "SE_10585"
+# alpha 200411 0 0.5
+# move 100111 3 0
+# face 100111 "nutual"
+# alpha 100111 1 0.5
+# mask 100111 off
+# textboxarrow 0 2
+@マサムネ
+ほう…
+強者との戦いは拙者を磨く絶好機だ
+参る！

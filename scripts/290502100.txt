@@ -1,0 +1,693 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第５章
+;;第2話　タイトル：世界樹攻略戦
+;;5_2_10
+;;スクリプト最後の背景：ユグドラシルの麓
+;;-----------------------------------------
+# script "lisp"
+# background "command_logo_tree"
+# bgmfile "bgm424" "BgmIntegralNoahCommand" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;魔獣
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# layer 910013 2
+# alpha 910013 0 0
+# mask 910013 off
+;;魔獣1
+# entry 99100131 910013
+# pos 99100131 3
+# scale 99100131 0.8 0
+# layer 99100131 2
+# alpha 99100131 0 0
+# mask 99100131 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 3
+# alpha 210 0 0
+# mask 210 off
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 2
+# alpha 3201911 0 0
+# mask 3201911 off
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;神令ヒョウハ
+# body 5402011
+# pos 5402011 3
+# scale 5402011 0.8 0
+# layer 5402011 2
+# alpha 5402011 0 0
+# mask 5402011 off
+;;ロジェスティラ
+# body 5503711
+# pos 5503711 3
+# scale 5503711 0.8 0
+# layer 5503711 2
+# alpha 5503711 0 0
+# mask 5503711 off
+;;ゴーレム
+# body 900012
+# pos 900012 3
+# scale 900012 0.8 0
+# layer 900012 2
+# alpha 900012 0 0
+# mask 900012 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第2話　タイトル：世界樹攻略戦
+;;//背景：ユグドラシルの麓
+# voice 540201 "hyoha_c_0005"
+# move 5402011 2 0
+# face 5402011 "happy"
+# alpha 5402011 1 0
+# mask 5402011 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0
+# mask 210 on
+@ヒョウハ
+へへっ、どんなもんだ！
+あんた達にはもう
+勝ち目はないぞっ！
+
+# face 210 "irregular"
+# textboxarrow 0 3
+@カミト
+僕は…
+僕は諦めない！
+
+# textboxarrow 0 3
+@カミト
+こんなところで諦めて
+たまるかっ
+
+# textboxarrow 0 3
+@カミト
+勝ち目がないなら、
+作り出してみせるよ
+
+# textboxarrow 0 3
+@カミト
+壁があるなら、
+押し通ってやる
+
+# face 210 "angry"
+# textboxarrow 0 3
+@カミト
+行かなきゃいけないところが、
+会わなきゃいけない相手がいるんだ！
+
+# voice 9936 "kamito_0055"
+# textboxarrow 0 3
+@カミト
+僕は…何が何でも、
+この先に進む！！
+
+# voice 540201 "hyoha_c_0041"
+# face 5402011 "normal"
+# textboxarrow 0 1
+@ヒョウハ
+ははっ！
+あんた、最高だな！
+
+# voice 320191 "chihyu_a_0029"
+# alpha 5402011 0 0.5
+# alpha 210 0 0.5
+# move 3201911 3 0
+# face 3201911 "angry"
+# alpha 3201911 1 0.5
+# mask 3201911 off
+# textboxarrow 0 2
+@シユウ
+うがあああぁぁ！
+つぎからつぎへと、
+うぞうむぞうがわいてくる…！
+
+# sedelay "SE_9092" 0.2
+# textwindow "close"
+# waitandnext 0.2
+
+# leftout 3201911 0.3
+# waitandnext 0.3
+
+;;//シユウの突進をヒョウハが躱す
+# alpha 3201911 0 0
+# move 5402011 2 0
+# face 5402011 "normal"
+# alpha 5402011 1 0.5
+# mask 5402011 on
+# waitandnext 0.5
+
+# move 3201911 2 0
+# face 3201911 "angry"
+# alpha 3201911 1 0
+# mask 3201911 on
+# rightin 3201911 0.3
+# waitandnext 0.2
+
+# se "SE_5204"
+# alpha 5402011 0 0.5
+# waitandnext 1
+
+# alpha 3201911 0 0.5
+# move 5402011 3 0
+# face 5402011 "normal"
+# alpha 5402011 1 0.5
+# mask 5402011 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ヒョウハ
+おっと！
+あんたもまだ動けたのかよ！
+
+# textboxarrow 0 2
+@ヒョウハ
+ロジェの計算じゃ、
+とっくにエネルギー切れだろ
+まだ燃え上がれんのか？
+
+# voice 320191 "chihyu_a_0029"
+# move 5402011 2 0.5
+# mask 5402011 on
+# move 3201911 4 0
+# face 3201911 "normal"
+# alpha 3201911 1 0.5
+# mask 3201911 on
+# textboxarrow 0 3
+@シユウ
+うがあああぁぁ！
+シユウは、すべてをくらう！！
+
+# voice 540201 "hyoha_c_0039"
+# textboxarrow 0 1
+@ヒョウハ
+へぇ
+こいつ…大気中のマナを食らって
+んのか？
+
+# textboxarrow 0 1
+@ヒョウハ
+超爆・燃え上がってんな！
+そんじゃ白黒はっきり――
+
+;;//炎演出
+# textwindow "close"
+# alpha 5402011 0 0.5
+# alpha 3201911 0 0.5
+# waitandnext 0.5
+
+# se "SE_4820"
+# bgm "stop"
+# envbody 1000 7 14
+# effectstart 1000
+# waitandnext 1
+
+# effectskip 1000
+# voice 540201 "hyoha_c_0022"
+# move 5402011 3 0
+# face 5402011 "surprise"
+# alpha 5402011 1 0.5
+# mask 5402011 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ヒョウハ
+へっ…？
+
+# bgmfile "bgm291_292" "BgmLostRagnarokSideStory" 0
+# effectstart 1000
+# voice 350171 "grimoire_ge_0027"
+# alpha 5402011 0 0.5
+# move 3501711 3 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+@グリモワール
+まったく…
+戦う力もないくせに強がってるん
+じゃないわよ
+
+# effectskip 1000
+# alpha 3501711 0 0.5
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+グリモワール！？
+
+# effectstart 1000
+# alpha 210 0 0.5
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+@グリモワール
+キミが諦めてないのに、
+ワタシが動けないなんて…
+そんなの絶対、認めない
+
+# textboxarrow 0 2
+@グリモワール
+ワタシは怒り
+死者の怒りの具現よ
+
+# textboxarrow 0 2
+@グリモワール
+マスターを傷つける者は…
+全て灼き尽くしてやるわ！
+
+# effectskip 1000
+# voice 540201 "hyoha_c_0037"
+# alpha 3501711 0 0.5
+# move 5402011 3 0
+# face 5402011 "surprise"
+# alpha 5402011 1 0.5
+# mask 5402011 off
+# textboxarrow 0 2
+@ヒョウハ
+なっ…
+ロジェが魔術を封じたはずなのに
+何で炎を出せてんだっ？
+
+# effectstart 1000
+# alpha 5402011 0 0.5
+# move 3501711 3 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+@グリモワール
+魔術を無効化？
+対魔術だか何だか知らないけど…
+
+# voice 350171 "grimoire_ge_0007"
+# face 3501711 "angry"
+# textboxarrow 0 2
+@グリモワール
+その程度で消せるほど、
+ワタシの怒りはぬるくないのよ！！
+
+# move 210 2 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 1
+# move 3501711 4 0.5
+# mask 3501711 on
+@カミト
+だ、大丈夫っ？
+無理してるんじゃ…
+
+# voice 350171 "grimoire_ge_0001"
+# face 3501711 "normal"
+# textboxarrow 0 3
+@グリモワール
+心配は無用よ、マスター
+あの子もね…
+
+# voice 9936 "kamito_0024"
+# face 210 "surprise"
+# textboxarrow 0 1
+@カミト
+あっ！
+
+;;//凍りつく音があれば
+# se "SE_10127"
+# waitandnext 0.5
+
+# effectskip 1000
+# voice 540201 "hyoha_c_0023"
+# alpha 210 0 0.5
+# alpha 3501711 0 0.5
+# move 5402011 3 0
+# face 5402011 "surprise"
+# alpha 5402011 1 0.5
+# mask 5402011 off
+# textboxarrow 0 2
+@ヒョウハ
+うわぁっ！
+今度は地面が凍りついたぞっ
+ってことは…
+
+# alpha 5402011 0 0.5
+# move 3102311 3 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+@アスカロン
+たとえ幾度、砕けようと…
+私の中に氷は生まれます
+決して尽きることなく
+
+# voice 310231 "ascalon_a_unit_1006"
+# textboxarrow 0 2
+@アスカロン
+ヒョウハ、あなたは強いですね
+…羨ましい
+…羨ましい！
+
+# alpha 3102311 0 0.5
+# move 210 3 0
+# face 210 "happy"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+アスカロン！
+
+# alpha 210 0 0.5
+# move 3102311 3 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+@アスカロン
+そんなあなたを前にしても、
+諦めないマスター…
+ああ！その信念が羨ましい！
+
+# textboxarrow 0 2
+@アスカロン
+グリモワールも立ち上がって…
+燃えさかる闘志が羨ましい！
+
+# textboxarrow 0 2
+@アスカロン
+羨ましい！
+羨ましい！
+羨ましい！
+
+# textboxarrow 0 2
+@アスカロン
+この嫉妬が…
+嫉妬の氷が私を突き動かすんです
+
+# textboxarrow 0 2
+@アスカロン
+あなたより強くなって、
+蹴落としたいって！
+
+# textboxarrow 0 2
+@アスカロン
+マスターのために…
+最強になりたいって！！
+
+# voice 540201 "hyoha_c_0021"
+# alpha 3102311 0 0.5
+# move 5402011 3 0
+# face 5402011 "normal"
+# alpha 5402011 1 0.5
+# mask 5402011 off
+# textboxarrow 0 2
+@ヒョウハ
+おおっ！
+あんたら、本当に最高だな！
+
+# voice 9936 "kamito_0064"
+# alpha 5402011 0 0.5
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+アスカロンも立ち上がってくれた
+…僕達はこんなところで終わらない
+必ず、フォルカスのところに！
+
+# move 211 2 0
+# face 211 "angry"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+# move 210 4 0.5
+# mask 210 on
+@ヴァング
+行けぇぇっ！
+カミトぉぉっ！
+
+# textboxarrow 0 3
+# face 210 "surprise"
+@カミト
+兄貴っ？
+
+# voice 9935 "vang_0035"
+# textboxarrow 0 1
+@ヴァング
+そいつは俺達に任せて突っ走れ！
+
+# voice 540201 "hyoha_c_0027"
+# alpha 211 0 0.5
+# alpha 210 0 0.5
+# move 5402011 3 0
+# face 5402011 "angry"
+# alpha 5402011 1 0.5
+# mask 5402011 off
+# textboxarrow 0 2
+@ヒョウハ
+ふぅ…
+そんなことさせるわけないだろ！
+
+# voice 320191 "chihyu_a_0010"
+# alpha 5402011 0 0.5
+# move 3201911 3 0
+# face 3201911 "angry"
+# alpha 3201911 1 0.5
+# mask 3201911 off
+# textboxarrow 0 2
+@シユウ
+うがあああぁぁ！
+おろかものめっ
+
+;;//ヒョウハにシユウが突っ込む
+# sedelay "SE_9092" 0.2
+# textwindow "close"
+# waitandnext 0.2
+
+# leftout 3201911 0.3
+# waitandnext 0.3
+
+# alpha 3201911 0 0
+# move 211 3 0
+# face 211 "angry"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ヴァング
+カミトぉっ！
+押してダメなら…
+
+# alpha 211 0 0.5
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+押し通す！！
+
+;;//カミトとアスカロンとグリモワールが走り抜ける
+# se "SE_5575"
+# textwindow "close"
+# leftout 210 0.5
+# waitandnext 0.5
+
+# alpha 210 0 0
+# move 3102311 3 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# waitandnext 0.6
+
+# se "SE_5575"
+# leftout 3102311 0.5
+# waitandnext 0.5
+
+# alpha 3102311 0 0
+# move 3501711 3 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# waitandnext 0.6
+
+# se "SE_5575"
+# leftout 3501711 0.5
+# waitandnext 0.5
+
+# voice 540201 "hyoha_c_0038"
+# alpha 3501711 0 0
+# move 5402011 3 0
+# face 5402011 "angry"
+# alpha 5402011 1 0.5
+# mask 5402011 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ヒョウハ
+あ、おいっ…？
+くっそぉっ…！
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 5402011 0 0
+# move 3102311 1 0
+# face 3102311 "normal"
+# alpha 3102311 1 0
+# mask 3102311 on
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0
+# mask 210 on
+# move 3501711 5 0
+# face 3501711 "normal"
+# alpha 3501711 1 0
+# mask 3501711 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+あのロジェスティラってキル姫を
+何とかしないと、突破は難しいよ！
+
+# voice 350171 "grimoire_ge_0033"
+# face 3501711 "angry"
+# textboxarrow 0 3
+@グリモワール
+ワタシがやるわ！
+魔術において、どちらが上なのか
+思い知らせてやる！
+
+# voice 310231 "ascalon_a_battle_0001"
+# face 3102311 "angry"
+# textboxarrow 0 1
+@アスカロン
+私も手伝います！
+魔術に対抗する力を持ってるなんて
+…羨ましいですから！
+
+# textboxarrow 0 3
+@グリモワール
+嫉妬を取り繕うこともしないのね！
+ワタシもこの怒り…
+もう我慢しない！
+
+# voice 550371 "logistille_c_0023"
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# alpha 3501711 0 0.5
+# move 5503711 3 0
+# face 5503711 "surprise"
+# alpha 5503711 1 0.5
+# mask 5503711 off
+# textboxarrow 0 2
+@ロジェスティラ
+あわわっ…
+力を封じたはずなのに、
+二人ともすごい…素敵…
+
+# voice 550371 "logistille_c_unit_0008"
+# face 5503711 "angry"
+# textboxarrow 0 2
+@ロジェスティラ
+あっ、そうではなくなくっ…
+我が呼び声に応えたまえ…
+
+# alpha 5503711 0 0.5
+# move 900012 3 0
+# alpha 900012 1 0.5
+# mask 900012 off
+# textboxarrow 0 2
+@ゴーレム
+ムウウウウウウウウウ！
+
+;;//魔獣の群れが次々に現れる
+# se "SE_5613"
+# sedelay "SE_5620" 0.8
+# textwindow "close"
+# alpha 900012 0 0.5
+# move 910013 2 0
+# alpha 910013 1 0.5
+# mask 910013 on
+# waitandnext 0.8
+
+# move 99100131 4 0
+# alpha 99100131 1 0.5
+# mask 99100131 on
+# waitandnext 1.2
+
+# alpha 910013 0 0.5
+# alpha 99100131 0 0.5
+# move 3102311 1 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 2
+# move 3501711 5 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textwindow "normal"
+@カミト
+どれだけ化け物を召喚しても、
+みんな押し通すぞ！
+
+# voice 310231 "ascalon_a_0032"
+# textboxarrow 0 1
+@アスカロン
+はい！
+全て凍てつかせます！
+
+# voice 350171 "grimoire_ge_battle_0001"
+# face 3501711 "angry"
+# textboxarrow 0 3
+@グリモワール
+全部、灼き尽くすわ！

@@ -1,0 +1,209 @@
+;;-----------------------------------------
+;;ダンまち1_6_1
+;;-----------------------------------------
+# script "lisp"
+# background "201_slum"
+# bgmfile "bgm361_362" "BgmDanmachi" 0
+;;-----------------------------------------
+;;アルマス
+# body 138
+# pos 138 3
+# scale 138 0.8 0
+# layer 138 3
+# alpha 138 0 0
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 1
+# mask 139 off
+# alpha 139 0 0
+;;ヘスティア
+# body 3603111
+# pos 3603111 3
+# scale 3603111 0.8 0
+# layer 3603111 5
+# alpha 3603111 0 0
+;;リュー
+# body 3104511
+# pos 3104511 3
+# scale 3104511 0.8 0
+# layer 3104511 3
+# alpha 3104511 0 0
+;;アイズ
+# body 3104411
+# pos 3104411 3
+# scale 3104411 0.8 0
+# layer 3104411 3
+# alpha 3104411 0 0
+;;ベル
+# body 216
+# pos 216 3
+# scale 216 0.8 0
+# layer 216 5
+# mask 216 off
+# alpha 216 0 0
+;;リリルカ
+# body 3402111
+# pos 3402111 3
+# scale 3402111 0.8 0
+# layer 3402111 3
+# alpha 3402111 0 0
+;;春姫
+# body 3503611
+# pos 3503611 3
+# scale 3503611 0.8 0
+# layer 3503611 3
+# alpha 3503611 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;背景：奴隷区（夜）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+兵士達が捕らえたと言っていた巨人
+それはヘスティア達の世界で
+ゴライアスと呼ばれる怪物だった
+
+# textflame 0 0
+@
+捕らえることはできても
+抑えることができた訳ではなく
+暴れはじめてしまったようだ
+
+# move 138 2 0
+# alpha 138 1 0.5
+# move 216 4 0
+# alpha 216 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 216 "sad"
+# face 138 "worry"
+# voice 1038 "almace_0026"
+@アルマス
+自分達の国に影響が出ないように
+奴隷区付近に隔離してたのね
+卑怯な考え方するわね、まったく
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9932 "bell_0025"
+@ベル
+このまま暴れさせたら
+被害が広まる一方だ…
+
+# textflame 0 0
+@
+無関係の人を巻き込んでいる
+この状況を放置なんてできない
+とマスター
+
+# alpha 138 0 0.5
+# alpha 216 0 0.5
+# move 3603111 3 0
+# alpha 3603111 1 0.5
+# move 3402111 5 0
+# alpha 3402111 1 0.5
+# move 3503611 1 0
+# alpha 3503611 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3402111 "angry"
+# face 3603111 "angry"
+# voice 360311 "hestia_0033"
+@ヘスティア
+もちろん放っておけないよ
+あれはボク達の世界の
+問題でもあるしね
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 340211 "lilliluka_0003"
+@リリルカ
+それに、ゴライアスが
+この異常事態の原因かもしれませんし
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3503611 "angry"
+# voice 350361 "haruhime_0032"
+@春姫
+兵士達もわたくしとともに
+あのゴライアスを捕らえることが
+何かの鍵になると言っていました
+
+# alpha 3503611 0 0.5
+# alpha 3402111 0 0.5
+# alpha 3603111 0 0.5
+# move 3104411 2 0
+# alpha 3104411 1 0.5
+# move 3104511 4 0
+# alpha 3104511 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104411 "angry"
+# face 3104511 "angry"
+# voice 310451 "ryu_0032"
+@リュー
+最優先事項は
+ゴライアスの討伐、ですね
+
+# textflame 1 1
+# textboxarrow 0 1
+@アイズ
+ゴライアスに呼ばれたのか
+モンスター達もここに
+紛れ込んでる、気を付けて
+
+# textflame 0 0
+@
+アイズが周りを警戒し始めたのと
+時を同じくして家の壁が崩れ
+ミノタウロスが姿を現す
+
+# se "SE_6510"
+# emotionbody 1000 6 138 60 250
+# effectpattern 1000 2 1
+# effectstart 1000
+# alpha 3104411 0 0.5
+# alpha 3104511 0 0.5
+# alpha 138 1 0.5
+# move 3603111 4 0
+# alpha 3603111 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 3603111 "angry"
+# face 138 "angry"
+# voice 1038 "almace_0027"
+@アルマス
+ああもう！
+厄介だけどコイツらも倒しながら
+進むしかないわね！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 360311 "hestia_battle_0004"
+@ヘスティア
+アルマス達とみんなの連携は
+今までの戦闘で、もうばっちりだ
+後は各自全力でやっていくよ！
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# effectskip 1000
+# alpha 138 0 0
+# alpha 3603111 0 0
+# background "bg_black"
+# waitandnext 0.2

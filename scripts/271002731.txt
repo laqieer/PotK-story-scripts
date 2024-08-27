@@ -1,0 +1,719 @@
+;;-----------------------------------------
+;;ファントムオブキル　Ｒｅ：ゼロから始める異世界生活　シナリオ
+;;エピソードタイトル：
+;;【EP.3】決戦前夜 バトル前
+;;スクリプト最後の背景：plain
+;;-----------------------------------------
+# script "lisp"
+# background "imperial_city"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス
+# body 3103811
+# pos 3103811 3
+# scale 3103811 0.8 0
+# layer 3103811 3
+# alpha 3103811 0 0
+# mask 3103811 off
+# face 3103811 "normal"
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 3
+# alpha 139 0 0
+# mask 139 off
+# face 139 "normal"
+;;ギル
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# layer 137 3
+# alpha 137 0 0
+# mask 137 off
+# face 137 "normal"
+;;ラム
+# body 3503311
+# pos 3503311 3
+# scale 3503311 0.8 0
+# layer 3503311 3
+# alpha 3503311 0 0
+# mask 3503311 off
+# face 3503311 "normal"
+;;レム
+# body 3202911
+# pos 3202911 3
+# scale 3202911 0.8 0
+# layer 3202911 3
+# alpha 3202911 0 0
+# mask 3202911 off
+# face 3202911 "normal"
+;;白鯨
+# body 3808711
+# pos 3808711 3
+# scale 3808711 1.3 0
+# layer 3808711 3
+# alpha 3808711 0 0
+# mask 3808711 off
+# face 3808711 "normal"
+;;-----------------------------------------
+;;【EP3】
+;;背景：街中など
+# move 3103811 3 0
+# face 3103811 "normal"
+# alpha 3103811 1 0
+# mask 3103811 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1038 "almace_0028"
+@アルマス
+ギルはこのあたりで
+準備するって言ってたはずだけど…
+あ、あそこ
+
+# alpha 3103811 0 0.5
+# move 3503311 2 0
+# face 3503311 "angry"
+# alpha 3503311 1 0.5
+# mask 3503311 on
+# textboxarrow 0 1
+# move 3202911 4 0
+# face 3202911 "usual"
+# alpha 3202911 1 0.5
+# mask 3202911 on
+# voice 5033 "ramu_0003"
+@ラム
+あら、マスター様じゃないの
+魔女教徒はどうしたの？
+まさか手に負えずに逃げ帰ってきた？
+
+# face 3202911 "surprise"
+# textboxarrow 0 3
+# voice 2029 "remu_0017"
+@レム
+そんな…
+スバルくんとエミリア様は！？
+
+# textboxarrow 0 3
+@レム
+まさか、お二人に
+何かあったんじゃ…！
+
+;;モノローグ
+# textflame 0 0
+@
+謂れなき疑いに慌てて
+状況を説明するマスター
+
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+# face 3503311 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5033 "ramu_0005"
+@ラム
+そんなに焦らなくても冗談よ
+マスター様達のことは
+それなりに信用しているわ
+
+# face 3202911 "normal"
+# textboxarrow 0 3
+# voice 2029 "remu_0003"
+@レム
+それに、スバルくんがついていて
+窮地に追いやられるなんて
+考えられません
+
+# alpha 3503311 0 0.5
+# alpha 3202911 0 0.5
+# move 3103811 2 0
+# face 3103811 "normal"
+# alpha 3103811 1 0.5
+# mask 3103811 on
+# move 137 4 0
+# face 137 "usual"
+# alpha 137 1 0.5
+# mask 137 on
+# textboxarrow 0 3
+# voice 9969 "gill_0001"
+@ギル
+おお、アルマス達もこっち来たのか
+ってことは、あっちは終わったのか？
+
+# textboxarrow 0 1
+# voice 1038 "almace_0003"
+@アルマス
+後始末はあるみたいだけどね
+ふたりの手伝いに行ってくれって
+そう言われたから来たのよ
+
+# alpha 3103811 0 0.5
+# alpha 137 0 0.5
+# move 3503311 2 0
+# face 3503311 "normal"
+# alpha 3503311 1 0.5
+# mask 3503311 on
+# textboxarrow 0 1
+# move 3202911 4 0
+# face 3202911 "normal"
+# alpha 3202911 1 0.5
+# mask 3202911 on
+# voice 5033 "ramu_0039"
+@ラム
+バルスとマスター様との
+信頼の差が現れた結果ね
+さ、お喋りはこのぐらいにしましょう
+
+# textboxarrow 0 3
+# voice 2029 "remu_0032"
+@レム
+そうですね、姉様
+それではマスター様も一緒に
+手伝っていただけますか？
+
+;;モノローグ
+# textflame 0 0
+@
+もちろん、とマスター
+
+;;演出：時間経過の暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 3503311 2 0
+# face 3503311 "normal"
+# alpha 3503311 1 0
+# mask 3503311 on
+# move 3202911 4 0
+# face 3202911 "normal"
+# alpha 3202911 1 0
+# mask 3202911 on
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 3
+# voice 2029 "remu_0004"
+@レム
+そこでスバルくんが…
+
+# textboxarrow 0 1
+# voice 5033 "ramu_0004"
+@ラム
+バルスならこう言うでしょうね…
+
+;;モノローグ
+# textflame 0 0
+@
+スバルの話ばかりするラムとレム
+マスターはそんなふたりを
+不思議そうにみつめる
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 2029 "remu_0022"
+@レム
+どうかしましたか、マスター様？
+…ふふ、スバルくんもよくそうして
+ボーっとしてるときがあるんですよ
+
+# alpha 3503311 0 0.5
+# alpha 3202911 0 0.5
+# move 137 3 0
+# face 137 "normal"
+# alpha 137 1 0.5
+# mask 137 off
+# textboxarrow 0 2
+# voice 9969 "gill_0002"
+@ギル
+代わりに俺が考えてること言うよ…
+このふたり、スバルの話しすぎだよな
+そんなにスバルと仲いいのか？
+
+# alpha 137 0 0.5
+# move 3503311 2 0
+# face 3503311 "surprise"
+# alpha 3503311 1 0.5
+# mask 3503311 on
+# textboxarrow 0 1
+# move 3202911 4 0
+# face 3202911 "sad"
+# alpha 3202911 1 0.5
+# mask 3202911 on
+# voice 5033 "ramu_0028"
+@ラム
+仲がいいのではなく
+ラム達が使用人の下っ端の
+面倒を見てるだけで…レム？
+
+# textboxarrow 0 3
+# voice 2029 "remu_0007"
+@レム
+…………
+
+# alpha 3503311 0 0.5
+# move 137 2 0
+# face 137 "normal"
+# alpha 137 1 0.5
+# mask 137 on
+# textboxarrow 0 1
+# voice 9969 "gill_0014"
+@ギル
+うん？
+急に黙ってどうしたんだ？
+
+# face 3202911 "usual"
+# textboxarrow 0 3
+# voice 2029 "remu_0042"
+@レム
+す、すみません
+えっと、次に必要なものは…
+あ、レムは先に行きますね！
+
+# se "SE_0719"
+# textwindow "close"
+# alpha 3202911 0 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# alpha 137 0 0.5
+# textflame 0 0
+# textwindow "normal"
+@
+不自然な言動とともにレムは
+先に行ってしまい、その場には
+ラムとマスター達が残された
+
+# move 3103811 2 0
+# face 3103811 "normal"
+# alpha 3103811 1 0.5
+# mask 3103811 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 137 4 0
+# face 137 "normal"
+# alpha 137 1 0.5
+# mask 137 on
+# voice 1038 "almace_0055"
+@アルマス
+ギルが変なことしたんじゃないの？
+
+# face 137 "surprise"
+# textboxarrow 0 3
+# voice 9969 "gill_0023"
+@ギル
+ええっ！
+なんもしてないぜ！？
+
+# alpha 137 0 0.5
+# move 3503311 4 0
+# face 3503311 "sad"
+# alpha 3503311 1 0.5
+# mask 3503311 on
+# textboxarrow 0 3
+# voice 5033 "ramu_0004"
+@ラム
+…レムはきっと
+大事なものが増えたのだと思うわ
+
+# textboxarrow 0 3
+@ラム
+あの日から、ラム達の大事なものは
+お互いと、ロズワール様だけ
+そう思っていたけど…
+
+# face 3103811 "surprise"
+# textboxarrow 0 1
+@アルマス
+ロズワール？
+
+;;モノローグ
+# textflame 0 0
+@
+誰のことだろう、と問うアルマス
+だが、ラムは言及されることを
+拒んでいるようだった
+
+# se "SE_0719"
+# face 3503311 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5033 "ramu_0027"
+@ラム
+…さぁ、レムを追いかけましょう
+準備はまだ終わっていないのだから
+
+# face 3103811 "normal"
+# textboxarrow 0 1
+# voice 1038 "almace_0028"
+@アルマス
+…ふたりにも、いろいろあるのね
+
+;;演出：時間経過と移動の暗転
+;;背景：拠点・夜
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain_night"
+# alpha 3103811 0 0
+# alpha 3503311 0 0
+# move 3103811 2 0
+# face 3103811 "angry"
+# alpha 3103811 1 0
+# mask 3103811 on
+# move 139 4 0
+# face 139 "normal"
+# alpha 139 1 0
+# mask 139 on
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 1
+# voice 1038 "almace_0002"
+@アルマス
+準備が整ったんだから
+すぐに仕掛けたほうがいいわ！
+白鯨って危険なんでしょ！？
+
+# textboxarrow 0 3
+# voice 9967 "titania_0020"
+@ティターニア
+不明点の多い相手に対し
+夜襲をしかけるのは自滅行為ですよ
+
+# face 139 "worry"
+# textboxarrow 0 3
+# voice 9967 "titania_0041"
+@ティターニア
+そう何度も説明されたはずです
+まったく、考えなしなんだから…
+
+;;モノローグ
+# alpha 3103811 0 0.5
+# alpha 139 0 0.5
+# textflame 0 0
+@
+準備を終えた頃には
+日が暮れてしまっていた
+
+;;モノローグ
+@
+スバル達が戻ってないこともあり
+白鯨との決戦は
+翌日に持ち越されたのだ
+
+# move 3103811 3 0
+# face 3103811 "angry"
+# alpha 3103811 1 0.5
+# mask 3103811 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1038 "almace_0007"
+@アルマス
+あーもう！
+ティニは小言ばっかだし
+絶不満！
+
+# move 3103811 2 0.5
+# mask 3103811 on
+# move 3202911 4 0
+# face 3202911 "usual"
+# alpha 3202911 1 0.5
+# mask 3202911 on
+# textboxarrow 0 3
+@レム
+…ああ、マスター様達も
+起きていらっしゃったのですね…
+実は、レムも眠れなくて
+
+# face 3103811 "normal"
+# textboxarrow 0 1
+# voice 1038 "almace_0028"
+@アルマス
+いや私は眠れないっていうか…
+それより、レムはどうして？
+あ、スバル達のことが心配？
+
+# face 3202911 "sad"
+# textboxarrow 0 3
+# voice 2029 "remu_0019"
+@レム
+…いえ、スバルくんなら大丈夫です
+それに、エミリア様も一緒ですし
+
+# bgmfile "bgm290" "BgmLostRagnarokEvent" 0
+# textboxarrow 0 3
+@レム
+…………
+
+# face 3202911 "usual"
+# textboxarrow 0 3
+# voice 2029 "remu_0002"
+@レム
+昼に、スバルくんの話が出てから
+レムはずっと考えていました
+
+# textboxarrow 0 3
+@レム
+スバルくんは、
+なんだか不思議な人です
+
+# textboxarrow 0 3
+# voice 2029 "remu_0004"
+@レム
+レムは頭が悪いので、
+最初はスバルくんを
+わかってあげられませんでしたが…
+
+# textboxarrow 0 3
+@レム
+でも…だからこそ
+いまはとても信頼しています
+
+# face 3202911 "sad"
+# textboxarrow 0 3
+# voice 2029 "remu_0007"
+@レム
+だけど、マスター様は
+なんだかもうスバルくんを信頼
+なさっていて、変な気持ちです
+
+# face 3202911 "usual"
+# textboxarrow 0 3
+@レム
+でも、それもわかる気がします
+マスター様とスバルくんは
+どこか似ている気がしますから
+
+# textboxarrow 0 3
+@レム
+きっと…誰かのために頑張れる
+そんなところが、
+とても似ているんです
+
+# face 3202911 "shy"
+# textboxarrow 0 3
+# voice 2029 "remu_0003"
+@レム
+だから、レムはスバルくんと同じく
+マスター様も信頼しようと思います
+
+# face 3202911 "happy"
+# textboxarrow 0 3
+# voice 2029 "remu_0004"
+@レム
+ふふ、何を言っているんだって
+感じですよね…けど
+それがレムの気持ち、決意表明です
+
+# face 3202911 "normal"
+# textboxarrow 0 3
+@レム
+あ、えっと、すみません！
+レムはもう戻りますね
+…それでは
+
+;;演出：レムout
+# se "SE_0719"
+# textwindow "close"
+# alpha 3202911 0 0.5
+# waitandnext 0.5
+
+# move 3103811 3 0.5
+# mask 3103811 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 1038 "almace_0002"
+@アルマス
+…レムもいろんなこと
+考えてるのね、マスター
+
+;;モノローグ
+# alpha 3103811 0 0.5
+# textflame 0 0
+@
+レムの決意表明…それを聞いたのは
+マスター達だけではない
+だが、マスターはそれに触れなかった
+
+;;演出：チラリとラムが見える
+# bgm "stop"
+# textwindow "close"
+# move 3503311 3 0
+# face 3503311 "normal"
+# alpha 3503311 1 0.5
+# mask 3503311 off
+# waitandnext 1
+
+;;演出：時間経過の暗転
+;;背景：白鯨が浮かんでいそうな丘など
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# alpha 3503311 0 0
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+しかし、朝になっても
+スバル達は戻って来なかった
+
+# bgmfile "bgm318_319" "BgmReZerocollobo" 0
+# move 3103811 3 0
+# face 3103811 "angry"
+# alpha 3103811 1 0.5
+# mask 3103811 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1038 "almace_0045"
+@アルマス
+もう待てないわ
+行くわよ！
+文句ないわよね、ティニ？
+
+# textboxarrow 0 2
+# voice 1038 "almace_0007"
+@アルマス
+このまま何もせずにいるなんて
+絶我慢できないわ！
+
+# alpha 3103811 0 0.5
+# move 139 3 0
+# face 139 "surprise"
+# alpha 139 1 0.5
+# mask 139 off
+# textboxarrow 0 2
+# voice 9967 "titania_0065"
+@ティターニア
+え、ちょっとアルマス！？
+…もうっ、仕方ありませんね！
+
+;;モノローグ
+# shake 1 1
+# fadein "red" 0.3
+# se "SE_9075"
+# alpha 139 0 0.5
+# textflame 0 0
+@
+白鯨との決戦…
+開始の合図のごとく
+爆発音がとどろく
+
+# move 137 3 0
+# face 137 "usual"
+# alpha 137 1 0.5
+# mask 137 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9969 "gill_0007"
+@ギル
+仕入れた火薬をあんだけ使ったんだ！
+白鯨がいくらでかいからって
+ひとたまりもないはずだぜ！
+
+;;演出：すーっと横切る鯨
+# textwindow "close"
+# alpha 137 0 0.5
+# waitandnext 0.5
+
+# move 3808711 3 0
+# alpha 3808711 1 0.5
+# mask 3808711 off
+# shake 1 1
+# waitandnext 1
+
+# se "SE_7019"
+# rightout 3808711 0.5
+# waitandnext 1
+
+# alpha 3808711 0 0.5
+# move 137 3 0
+# face 137 "surprise"
+# alpha 137 1 0.5
+# mask 137 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9969 "gill_0026"
+@ギル
+な、なんだよ！
+ほとんど無傷って…
+本当に化け物じゃねぇか！
+
+# alpha 137 0 0.5
+# move 3503311 2 0
+# face 3503311 "normal"
+# alpha 3503311 1 0.5
+# mask 3503311 on
+# move 3202911 4 0
+# face 3202911 "angry"
+# alpha 3202911 1 0.5
+# mask 3202911 on
+# textboxarrow 0 3
+# voice 2029 "remu_battle_0007"
+@レム
+あの火薬はこちらが戦いやすい
+地形へ白鯨を誘導するためのもの
+元より倒せると思っていません
+
+# face 3503311 "angry"
+# textboxarrow 0 1
+# voice 5033 "ramu_0007"
+@ラム
+あれで片がつくなら
+天災なんて言ったりしないわ
+従って、これは想定内よ
+
+# alpha 3503311 0 0.5
+# alpha 3202911 0 0.5
+# move 3103811 3 0
+# face 3103811 "angry"
+# alpha 3103811 1 0.5
+# mask 3103811 off
+# textboxarrow 0 2
+# voice 1038 "almace_0003"
+@アルマス
+まったくその通りだわ！
+ははっ、絶楽しくなってきた！
+トドメを刺すのは私よ！
+
+# textboxarrow 0 2
+# voice 1038 "almace_0001"
+@アルマス
+いくわよ、マスター
+ラムとレムもいけるわね！？
+
+# alpha 3103811 0 0.5
+# move 3503311 2 0
+# face 3503311 "angry"
+# alpha 3503311 1 0.5
+# mask 3503311 on
+# textboxarrow 0 1
+# move 3202911 4 0
+# face 3202911 "normal"
+# alpha 3202911 1 0.5
+# mask 3202911 on
+# voice 5033 "ramu_0032"
+@ラム
+もちろんよ
+準備は万全かしら、レム
+
+# textboxarrow 0 3
+# voice 2029 "remu_0032"
+@レム
+ええ、行きましょう姉様
+準備はいつだって、万端です！

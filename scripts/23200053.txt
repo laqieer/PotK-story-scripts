@@ -1,0 +1,198 @@
+;;-----------------------------------------
+;;【EP4】3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "stop"
+;;-----------------------------------------
+;;イージス
+# body 52000111
+# pos 52000111 3
+# scale 52000111 0.8 0
+# layer 52000111 2
+# mask 52000111 off
+# alpha 52000111 0 0
+;;フラガラッハ
+# body 3101011
+# pos 3101011 3
+# scale 3101011 0.8 0
+# layer 3101011 3
+# mask 3101011 off
+# alpha 3101011 0 0
+;;ルーン
+# body 3300511
+# pos 3300511 3
+# scale 3300511 0.8 0
+# layer 3300511 4
+# mask 3300511 off
+# alpha 3300511 0 0
+;;魔獣
+# body 910019
+# pos 910019 3
+# scale 910019 0.8 0
+# layer 910019 3
+# mask 910019 off
+# alpha 910019 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：平原
+# textwindow "close"
+# fadein "black" 0.2
+# waitandnext 0.2
+
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# alpha 910019 1 0
+# background "004_wildland"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.6
+
+# fadein "white" 0.5
+# waitandnext 0.6
+
+;;演出：魔獣が消える
+# se "SE_9061"
+# alpha 910019 0 1
+# waitandnext 1
+
+# alpha 52000111 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 52000111 "surprise"
+@イージス
+ふぅ、終わったか…
+
+# alpha 52000111 0 0.5
+# alpha 3101011 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3101011 "angry"
+@フラガラッハ
+イージス、こちらへ！
+
+;;演出：暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# move 52000111 2 0
+# mask 52000111 on
+# alpha 52000111 1 0
+# move 3101011 4 0
+# mask 3101011 on
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 5200011 "aegis_c_0039"
+@イージス
+これが鍛え直された私の盾
+…あまり変わりがないようだけど？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3101011 "normal"
+# voice 310101 "furagaraha_t_0004"
+@フラガラッハ
+見た目に変わりはありません
+しかし、その性能は…
+
+# alpha 52000111 0 0.5
+# alpha 3101011 0 0.5
+# alpha 3300511 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3300511 "surprise"
+# voice 330051 "roon_ge_0022"
+@ルーン
+何だ？
+魔獣を倒しても
+消えなかった毒が消えたぞ？
+
+# alpha 52000111 1 0.5
+# alpha 3101011 1 0.5
+# alpha 3300511 0 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@フラガラッハ
+この通り、
+邪を祓う力が宿ったのです
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 52000111 "happy"
+# voice 5200011 "aegis_c_0004"
+@イージス
+これであの魔物を…
+助かった、ルーン
+感謝する
+
+# textflame 1 1
+# textboxarrow 0 3
+@フラガラッハ
+それでは行きましょう
+二人ならきっと倒せます
+
+# alpha 52000111 0 0.5
+# alpha 3101011 0 0.5
+# alpha 3300511 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3300511 "angry"
+# voice 330051 "roon_ge_0002"
+@ルーン
+何さらっと私を置いて行こうと
+しているんだ？
+
+# textflame 1 1
+# textboxarrow 0 2
+@ルーン
+さっき戦えなくて
+…私はイラついてんだ
+
+# move 3101011 4 0
+# alpha 3101011 1 0.5
+# move 3300511 2 0.5
+# mask 3300511 on
+# textflame 1 1
+# textboxarrow 0 3
+# face 3101011 "surprise"
+@フラガラッハ
+まぁ！
+あなたの役目はもう終わりですのに
+
+# textflame 1 1
+# textboxarrow 0 1
+@ルーン
+コイツの始末も
+しなくちゃなんねぇしなぁ！
+
+# alpha 3101011 0 0.5
+# alpha 3300511 0 0.5
+# move 52000111 3 0
+# mask 52000111 off
+# alpha 52000111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 52000111 "sad"
+@イージス
+え、えぇと…
+とりあえず移動しよう！
+
+# fadeout "black" 1
+# waitandnext 1.2

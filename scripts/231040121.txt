@@ -1,0 +1,617 @@
+;;-----------------------------------------
+;;イースター2022【EP1】追憶のエッグハント
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm327" "BgmEaster001" 0
+;;-----------------------------------------
+;;フライシュッツ
+# body 6502711
+# pos 6502711 2
+# scale 6502711 0.8 0
+# layer 6502711 3
+# mask 6502711 off
+# alpha 6502711 0 0
+;;フリズスキャールヴ
+# body 62000411
+# pos 62000411 4
+# scale 62000411 0.8 0
+# layer 62000411 3
+# mask 62000411 off
+# alpha 62000411 0 0
+;;-----------------------------------------
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagescale 1 1.2 0
+# imagelayer 1 1
+;;-----------------------------------------
+;;背景：平原or森
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# move 6502711 3 0.5
+# alpha 6502711 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@フライシュッツ
+どこなの～？
+卵さ～～～ん
+
+# move 6502711 4 0.5
+# alpha 6502711 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# face 62000411 "usual"
+# voice 5200041 "hlidskjalf_0027"
+# move 62000411 3 0.5
+# alpha 62000411 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@フリズスキャールヴ
+この広大な場所に、
+たった１０個しか
+隠されておらぬのじゃ
+
+# textboxarrow 0 2
+@フリズスキャールヴ
+すぐに見つけろという方が
+無理な話じゃ
+
+# move 62000411 2 0.5
+# alpha 62000411 0 0.3
+# textflame 0 0
+@
+彼女の言う通り、
+エッグハント開始から１時間
+
+# move 6502711 2 0
+# layer 6502711 2
+# move 62000411 4 0
+# layer 62000411 4
+# mask 62000411 on
+# textflame 0 0
+@
+卵は、いまだ一つも
+発見されていない
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# voice 5027 "freischotz_0028"
+# alpha 6502711 1 0.3
+# alpha 62000411 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@フライシュッツ
+ふぅ、日も高くなってきたね
+少し休憩しよっか
+
+# emotionbody 2000 6 62000411 30 200
+# effectpattern 2000 1 0
+# effectstart 2000
+# face 62000411 "angry"
+# voice 5200041 "hlidskjalf_0013"
+# textboxarrow 0 3
+@フリズスキャールヴ
+なにを言っておる？
+そんなことでは、
+いつまで経っても……
+
+# face 6502711 "sad"
+# voice 5027 "freischotz_0011"
+# textboxarrow 0 1
+@フライシュッツ
+フリズスちゃん、
+根の詰め過ぎは逆効果だよ
+
+# emotionbody 2001 8 62000411 -90 230
+# effectpattern 2001 1 0
+# effectstart 2001
+# textboxarrow 0 3
+@フリズスキャールヴ
+じゃが……
+
+# face 6502711 "normal"
+# textboxarrow 0 1
+@フライシュッツ
+少し……話そうよ
+久しぶりの再会なんだしさ
+
+# effectskip 2001
+# textboxarrow 0 3
+@フリズスキャールヴ
+………
+
+# face 62000411 "usual"
+# textflame 0 0
+@
+その場に腰掛ける２人
+
+# voice 5027 "freischotz_0002"
+# bgm "bgm003" 0
+# textflame 1 1
+# textboxarrow 0 1
+@フライシュッツ
+ねぇ、どうしてだと思う？
+どうして……
+今年だったのかな？
+
+# face 62000411 "surprise"
+# voice 5200041 "hlidskjalf_0022"
+# textboxarrow 0 3
+@フリズスキャールヴ
+どうして……とは？
+
+# textboxarrow 0 1
+@フライシュッツ
+あれから何度も
+イースターはあったのに……
+
+# textboxarrow 0 1
+@フライシュッツ
+どうして、あの子は、
+今年を指定してきたんだろう
+
+# face 62000411 "sad"
+# voice 5200041 "hlidskjalf_0028"
+# textboxarrow 0 3
+@フリズスキャールヴ
+……わからぬ
+
+# textboxarrow 0 3
+@フリズスキャールヴ
+なぜ……
+
+# textboxarrow 0 3
+@フリズスキャールヴ
+そのような遺言を残したのか……
+
+# bgm "stop"
+# alpha 6502711 0 0.3
+# alpha 62000411 0 0.3
+# textflame 0 0
+@
+時はさかのぼる
+
+;;暗転
+# se "SE_0742"
+# fadeout "white" 1
+# waitandnext 1
+
+;;背景：教会
+# background "006_church"
+# imagealpha 1 0.8 0
+# imagepos 1 0 0
+# move 6502711 1 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "white" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+@
+そこはフリズスキャールヴと、
+フライシュッツが過ごした
+田舎町の孤児院――
+
+# voice 5027 "freischotz_0028"
+# bgm "bgm002" 0
+# se "SE_0671"
+# move 6502711 2 0.7
+# alpha 6502711 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@フライシュッツ
+ねぇ～、フリズスちゃーん、
+朝ごはんはできてる～？
+あたし、お腹すいちゃった～
+
+# emotionbody 2003 6 62000411 30 200
+# effectpattern 2003 1 0
+# effectstart 2003
+# face 62000411 "angry"
+# voice 5200041 "hlidskjalf_0009"
+# alpha 62000411 1 0.3
+# textboxarrow 0 3
+@フリズスキャールヴ
+シュッツよ、
+こんな時間に起きてきて、
+なにを言っておる
+
+# textboxarrow 0 3
+@フリズスキャールヴ
+そもそも今日の朝食当番は、
+そなたであろうが
+
+# voice 5200041 "hlidskjalf_0027"
+# textboxarrow 0 3
+@フリズスキャールヴ
+なぜ、わらわが
+作らなければならぬのじゃ
+
+# emotionbody 1000 10 6502711 90 230
+# effectpattern 1000 1 0
+# effectstart 1000
+# face 6502711 "shy"
+# voice 5027 "freischotz_0004"
+# textboxarrow 0 1
+@フライシュッツ
+あれ？そうだっけ～
+あははは
+
+# textflame 0 0
+@
+あっけらかんと笑うフライシュッツ
+
+# textflame 0 0
+@
+その明るい笑い声につられて、
+朝食を食べていた子供達が
+一斉に笑い出す
+
+# face 62000411 "normal"
+# voice 5200041 "hlidskjalf_0002"
+# textflame 1 1
+# textboxarrow 0 3
+@フリズスキャールヴ
+ほら、おぬしらも
+笑ってないで、しっかり食べよ
+おかわりなら、たくさんあるからの
+
+# textflame 0 0
+@
+フリズスキャールヴは、物静かだが
+美人でカッコイイお姉さんとして、
+子供達から慕われていた
+
+# face 6502711 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@フライシュッツ
+みんな～、一緒に食べよ～
+
+# textflame 0 0
+@
+フライシュッツは
+陽気で優しいお姉さんとして、
+他の子供達から慕われていた
+
+# alpha 6502711 0 0.3
+# alpha 62000411 0 0.3
+# textflame 0 0
+@
+その中でも、特に
+２人を慕っている女の子がいた
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textflame 1 1
+# textwindow "nomal"
+@エマ
+シュッツちゃん、こっち！こっち！
+エマと一緒に食べよう
+
+# face 6502711 "shy"
+# voice 5027 "freischotz_0021"
+# move 6502711 3 0
+# alpha 6502711 1 0.3
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@フライシュッツ
+わぁ～、エマちゃん、やさしい～！
+
+# serif 1
+@エマ
+今日のメニューには
+シュッツちゃんの好物の
+ウインナーもあるよ
+
+# serif 1
+@エマ
+はい、エマの分、１本あげる♪
+
+# emotionbody 1001 4 6502711 0 230
+# effectpattern 1001 1 0
+# effectstart 1001
+# face 6502711 "happy"
+# voice 5027 "freischotz_0030"
+# serif 0
+@フライシュッツ
+いいの～～～！？
+やったあ～！
+
+# face 62000411 "usual"
+# move 6502711 2 0.5
+# alpha 62000411 1 0.3
+# serif 0
+# textboxarrow 0 3
+@フリズスキャールヴ
+これ、エマ
+
+# serif 1
+@エマ
+あ、フリズスちゃん
+
+# serif 0
+# textboxarrow 0 3
+@フリズスキャールヴ
+しっかり食べぬと、大きくなれぬぞ
+
+# face 62000411 "angry"
+# voice 5200041 "hlidskjalf_0011"
+# serif 0
+# textboxarrow 0 3
+@フリズスキャールヴ
+シュッツも、なにを本気で
+もらおうとしとるのじゃ
+
+# face 6502711 "sad"
+# serif 1
+@エマ
+え～～～～～～
+
+# serif 0
+# textboxarrow 0 1
+@フライシュッツ
+え～～～～～～
+
+# emotionbody 2004 8 62000411 -90 230
+# effectpattern 2004 1 0
+# effectstart 2004
+# voice 5200041 "hlidskjalf_0008"
+# serif 0
+# textboxarrow 0 3
+@フリズスキャールヴ
+え～～～、ではない
+
+# effectskip 1002
+# serif 1
+@エマ
+わかったよ～
+じゃあ、ちゃんと食べるから
+
+# serif 1
+@エマ
+朝食が終わったら、
+エマと一緒に
+お池に遊びに行ってくれる？
+
+# effectskip 2004
+# face 6502711 "happy"
+# voice 5027 "freischotz_0005"
+# serif 0
+# textboxarrow 0 1
+@フライシュッツ
+いいね～、そうしよう！
+
+# serif 1
+@エマ
+フリズスちゃんは？
+
+# face 62000411 "normal"
+# voice 5200041 "hlidskjalf_0004"
+# serif 0
+# textboxarrow 0 3
+@フリズスキャールヴ
+よかろう、
+ちゃんと残さず食べたらな
+
+# serif 1
+@エマ
+やった～～～～～！！
+
+;;暗転
+# se "SE_11762"
+# fadeout "white" 1
+# waitandnext 1
+
+;;戻る
+# background "plain"
+# bgm "bgm003" 0
+# imagealpha 1 0 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.5
+
+# face 6502711 "sad"
+# face 62000411 "sad"
+# fadein "white" 1
+# waitandnext 1
+
+# voice 5027 "freischotz_0004"
+# textwindow "nomal"
+# textboxarrow 0 1
+@フライシュッツ
+懐かしいね……
+いつもあたし達２人の
+あとをついてきてさ
+
+# textboxarrow 0 3
+@フリズスキャールヴ
+………
+
+# textboxarrow 0 1
+@フライシュッツ
+イースターも毎年、
+一緒に行ってたよね
+
+# voice 5200041 "hlidskjalf_0003"
+# textboxarrow 0 3
+@フリズスキャールヴ
+あぁ……
+
+# face 6502711 "normal"
+# voice 5027 "freischotz_0002"
+# textboxarrow 0 1
+@フライシュッツ
+フリズスちゃん、覚えてる？
+ある年のイースターでさ
+
+# textboxarrow 0 1
+@フライシュッツ
+今日みたいに、
+エッグハントのイベントに参加して、
+卵を見つけた時……
+
+;;フラッシュ回想
+# se "SE_0742"
+;;背景：森
+# background "forest"
+# imagealpha 1 0.8 0
+# imagepos 1 0 0
+# alpha 6502711 0 0
+# alpha 62000411 0 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1.5
+
+# serif 1
+# textwindow "nomal"
+@エマ
+すごい、すごーーーい！！
+本当に卵を見つけちゃうなんて……
+
+# serif 1
+@エマ
+フリズスちゃん！シュッツちゃん！
+エマ、すごくうれしい！！
+
+# serif 1
+@エマ
+最高のプレゼントだよ！！
+本当にありがとう！！
+
+;;戻る
+# se "SE_11762"
+# background "plain"
+# imagealpha 1 0 0
+# face 6502711 "normal"
+# alpha 6502711 1 0
+# face 62000411 "usual"
+# alpha 62000411 1 0
+# serif 1
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1.5
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@フライシュッツ
+エマちゃん、
+すっごく喜んでくれたよね
+
+# voice 5200041 "hlidskjalf_0019"
+# textboxarrow 0 3
+@フリズスキャールヴ
+………あぁ
+
+# face 6502711 "sad"
+# textboxarrow 0 1
+@フライシュッツ
+でも結局……
+その年のイースターが
+最後になっちゃったんだよね……
+
+# textboxarrow 0 3
+@フリズスキャールヴ
+………
+
+# textboxarrow 0 1
+@フライシュッツ
+あれからも、
+イースターはあったのに……
+なんで今年だったんだろうね
+
+# textboxarrow 0 3
+@フリズスキャールヴ
+………
+
+# face 6502711 "surprise"
+# voice 5027 "freischotz_0022"
+# textboxarrow 0 1
+@フライシュッツ
+どうしたの、フリズスちゃん？
+
+# textboxarrow 0 1
+@フライシュッツ
+もしかして、
+なにか心当たりがあるの？
+
+# face 62000411 "sad"
+# textboxarrow 0 3
+@フリズスキャールヴ
+……いや
+
+# textboxarrow 0 3
+@フリズスキャールヴ
+あれ以来、ずっと考えておるが……
+答えは見つからぬ
+
+# face 6502711 "sad"
+# voice 5027 "freischotz_0027"
+# textboxarrow 0 1
+@フライシュッツ
+……そっか
+
+# face 62000411 "usual"
+# voice 5200041 "hlidskjalf_0002"
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# textboxarrow 0 3
+@フリズスキャールヴ
+それよりも……
+そろそろ再開せぬか
+
+# emotionbody 1003 2 6502711 0 230
+# effectpattern 1003 1 0
+# effectstart 1003
+# face 6502711 "surprise"
+# textboxarrow 0 1
+@フライシュッツ
+……え？
+
+# textboxarrow 0 3
+@フリズスキャールヴ
+もう随分と休んでしまった
+
+# face 6502711 "normal"
+# textboxarrow 0 1
+@フライシュッツ
+……そうだね
+
+# textboxarrow 0 1
+@フライシュッツ
+再開しよっか！
+
+# se "SE_10131"
+# move 6502711 1 0.5
+# alpha 6502711 0 0.3
+# move 62000411 5 0.5
+# alpha 62000411 0 0.3
+# textflame 0 0
+@
+立ち上がり、
+再び卵を探し始める２人
+
+# move 62000411 3 0
+# mask 62000411 off
+# alpha 62000411 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@フリズスキャールヴ
+…………
+
+# textflame 0 0
+@
+しかし、
+フリズスキャールヴの顔は
+ずっと深刻なままだった
+
+# fadeout "black" 1
+# waitandnext 1

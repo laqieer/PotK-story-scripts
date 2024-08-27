@@ -1,0 +1,455 @@
+;;-----------------------------------------
+;;SEA夏1_13_0
+;;-----------------------------------------
+# script "lisp"
+# background "SEAsummer_fes_day"
+# bgm "bgm003" 0
+;;-----------------------------------------
+;;浴衣ミーミル
+# body 318
+# pos 318 2
+# scale 318 0.8 0
+# layer 318 5
+# mask 318 off
+# alpha 318 1 0
+# face 318 "sad"
+;;浴衣マナナン
+# body 6504021
+# pos 6504021 4
+# scale 6504021 0.8 0
+# layer 6504021 3
+# mask 6504021 off
+# alpha 6504021 1 0
+# face 6504021 "surprise"
+;;マクリル（シルエット）
+# body 6603811
+# pos 6603811 5
+# scale 6603811 0.5 0
+# layer 6603811 1
+# mask 6603811 off
+# alpha 6603811 0 0
+# brightness 6603811 0 0
+;;浴衣ティルフィング
+# body 6101421
+# pos 6101421 1
+# scale 6101421 0.6 0
+# layer 6101421 1
+# mask 6101421 off
+# alpha 6101421 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：夏祭り会場（昼）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# voice 9917 "mimir_n_0030"
+# se "SE_6216"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+マスター様
+とても不可解な現象が
+起きているようでございます
+
+# textboxarrow 0 1
+@ミーミル
+全ての屋台の味が短時間のうちに
+変化してしまうなんて
+何が起きたのでしょう…？
+
+# voice 650401 "manannan_ura_0028"
+# textboxarrow 0 3
+@マナナン
+不思議だよね～
+
+;;選択肢
+# select "小腹が空いたな" "select_label_01" "不思議じゃないよ" "select_label_02"
+全ての屋台の味が短時間のうちに
+変化してしまうなんて
+何が起きたのでしょう…？
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 318 "surprise"
+# voice 9917 "mimir_navikan_0022"
+# textboxarrow 0 1
+@ミーミル
+マスター様？
+ええと、でしたら…
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 6504021 "usual"
+# textboxarrow 0 3
+@マナナン
+本当！？
+教えてくれるなら、
+これあげるよ
+
+# label "select_label_end"
+# face 6504021 "usual"
+# textboxarrow 0 3
+@マナナン
+はい！
+さっき買ってきた、たこ焼き
+
+;;選択肢
+# select "みんなで食べよう" "select_label_03" "二人も、どうぞ" "select_label_03"
+はい！
+さっき買ってきた、たこ焼き
+
+# label "select_label_03"
+# face 318 "happy"
+# voice 9917 "mimir_navikan_0003"
+# textboxarrow 0 1
+@ミーミル
+それでは、お言葉に甘えて
+一ついただきます
+
+# bgm "stop"
+# face 6504021 "surprise"
+# voice 650401 "manannan_ura_0022"
+# textboxarrow 0 3
+@マナナン
+私も～
+…あれっ？
+
+# voice 9917 "mimir_navikan_0004"
+# textboxarrow 0 1
+@ミーミル
+…先程と同じく、美味しいですね
+
+# bgmfile "bgm601_yukata_block" "BgmSecretlyEverAfter001" 0
+# sedelay "bgm601_yukata_on" 1
+# voice 650401 "manannan_ura_0034"
+# textboxarrow 0 3
+@マナナン
+ううん、違うよ～
+こっちの方が美味しいよ！
+
+# face 318 "surprise"
+# voice 9917 "mimir_navikan_0023"
+# textboxarrow 0 1
+@ミーミル
+ええっ？
+私には違いが分かりません…
+
+;;選択肢
+# select "今とさっきの違いは…" "select_label_04" "ミーミルとマナナンの違いは…" "select_label_05"
+私には違いが分かりません…
+
+# label "select_label_04"
+# labeljump "select_label_end2"
+# textboxarrow 0 3
+@マナナン
+あ！
+美味しかったときは、
+二人と一緒だったんだ
+
+# label "select_label_05"
+# labeljump "select_label_end2"
+# textboxarrow 0 1
+@ミーミル
+私は皆さんと一緒でしたけれど、
+マナナンさんは
+一人のときがありました！
+
+;;一瞬、マナナンの隣にマクリルのシルエットが並ぶ
+# label "select_label_end2"
+# move 6603811 3 1
+# scale 6603811 0.65 1
+# alpha 6603811 1 1
+# textboxarrow 0 0
+# waitandnext 1
+
+;;出会わずにすれ違うイメージ
+#setnextbgmblock 1
+# move 6603811 1 1
+# scale 6603811 0.5 1
+# alpha 6603811 0 1
+# serif 1
+@？？？
+あっ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# face 6504021 "normal"
+# voice 650401 "manannan_ura_0040"
+# textboxarrow 0 3
+@マナナン
+そっか～
+二人と一緒だったから
+美味しく感じたんだね！
+
+# textboxarrow 0 1
+@ミーミル
+そのようなことが…
+
+# face 318 "sad"
+# textboxarrow 0 1
+@ミーミル
+ですが、それでは、「一番」を
+見つけるにはどうすれば…
+
+# face 6504021 "happy"
+# voice 650401 "manannan_ura_0005"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+私は、このたこ焼きが
+一番美味しいよ
+
+# textboxarrow 0 1
+@ミーミル
+マナナンさん
+それは大げさでは…
+
+# face 6504021 "usual"
+# textboxarrow 0 3
+@マナナン
+大げさじゃないよ～
+それに、ちょっと分かったかも
+
+# textboxarrow 0 3
+@マナナン
+今日、ここに来ていつもより
+調子いいな～って思ってたけど
+それって…
+
+# textboxarrow 0 3
+@マナナン
+近くに「相棒」が
+いるからなんじゃないかな～
+
+# face 318 "surprise"
+# voice 9917 "mimir_navikan_0022"
+# textboxarrow 0 1
+@ミーミル
+えっ？
+何か感じるのですか
+
+# voice 650401 "manannan_ura_0003"
+# textboxarrow 0 3
+@マナナン
+何となくね～
+だから調子が良かったんだよ
+
+# face 318 "angry"
+# textboxarrow 0 1
+@ミーミル
+では、その方を探した方が
+良いのではっ
+
+# face 6504021 "sad"
+# voice 650401 "manannan_ura_0028"
+# textboxarrow 0 3
+@マナナン
+うーん…
+どこにいるか、
+はっきりしないんだよね
+
+# textboxarrow 0 3
+@マナナン
+人とかキル姫とか多すぎて…
+気のせいかもしれないし…
+
+# face 6504021 "usual"
+# textboxarrow 0 3
+@マナナン
+それに、ティルフィングから
+頼まれごともされてたから、
+今はいいかな～って
+
+# face 318 "surprise"
+# textboxarrow 0 1
+@ミーミル
+マナナンさん…
+
+# face 6504021 "normal"
+# voice 650401 "manannan_ura_0002"
+# textboxarrow 0 3
+@マナナン
+それより、「一番」の話！
+やっぱり一人ぼっちでいるのは
+苦手なんだ、私
+
+# face 6504021 "usual"
+# textboxarrow 0 3
+@マナナン
+今はミーミルとマスターと一緒に
+いるのが楽しくて、喜劇的に
+愉快なことばかりだから
+
+# textboxarrow 0 3
+@マナナン
+美味しいものも、二人と一緒なのが
+一番美味しいんだよ！
+
+# face 318 "happy"
+# voice 9917 "mimir_navikan_0004"
+# textboxarrow 0 1
+@ミーミル
+マナナンさん
+それは、とても嬉しく思います
+
+# face 6504021 "happy"
+# voice 650401 "manannan_ura_0005"
+# textboxarrow 0 3
+@マナナン
+アハハ！
+このたこ焼きはたくさん売ってる
+たこ焼きかもしれないけど
+
+# textboxarrow 0 3
+@マナナン
+私にとって特別な、
+一番のたこ焼きなんだっ
+
+# textboxarrow 0 1
+@ミーミル
+マナナンさんにとって
+一番のたこ焼き…なるほど
+
+;;画面端にティルフィングが現れる
+# alpha 6504021 0 0.3
+# alpha 318 0 0.3
+# face 6101421 "usual"
+# alpha 6101421 1 0.3
+# textboxarrow 0 0
+# waitandnext 0.3
+
+# textboxarrow 0 1
+@ティルフィング
+…………
+
+# alpha 6101421 0 0.3
+# face 6504021 "surprise"
+# face 318 "surprise"
+# alpha 6504021 1 0.3
+# alpha 318 1 0.3
+# voice 9917 "mimir_navikan_0022"
+# textboxarrow 0 1
+@ミーミル
+えっ？
+ティルフィング様…！？
+
+;;ティルフィングが姿を消す
+# textwindow "close"
+# alpha 6504021 0 0.3
+# alpha 318 0 0.3
+# alpha 6101421 1 0.3
+# waitandnext 1
+
+# move 6101421 2 0.5
+# alpha 6101421 0 0.3
+# waitandnext 0.5
+
+# alpha 6504021 1 0.3
+# alpha 318 1 0.3
+# textboxarrow 0 1
+# textwindow "normal"
+@ミーミル
+ティルフィング様、
+お待ち下さいっ
+
+;;ミーミルが走っていく
+# se "SE_5575"
+# move 318 3 0.3
+# scale 318 0.7 0.5
+# alpha 318 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# move 318 1 0
+# alpha 318 0 0
+# alpha 6504021 0 0
+# waitandnext 0.2
+
+# face 318 "sad"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 9917 "mimir_navikan_0027"
+# move 318 2 0.5
+# scale 318 0.8 0.5
+# alpha 318 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+ああ…
+見失ってしまいました
+
+# alpha 6504021 1 0.3
+# textboxarrow 0 3
+@マナナン
+ティルフィング、まだ
+かくれんぼしてるの？
+
+# textboxarrow 0 1
+@ミーミル
+ティルフィング様…
+一体、どうしてこのようなことを…
+
+# voice 650401 "manannan_ura_0022"
+# textboxarrow 0 3
+@マナナン
+あれ？
+ミーミルの帯に何か挟まってるよ
+
+# face 318 "surprise"
+# voice 9917 "mimir_navikan_0023"
+# textboxarrow 0 1
+@ミーミル
+なんと
+いつの間に…
+この紙片はもしや…
+
+# se "SE_0857"
+# textboxarrow 0 1
+@ミーミル
+「世界を見渡す庭から
+最高の形を作りあげて」と
+書かれてあります
+
+# face 6504021 "usual"
+# voice 650401 "manannan_ura_0003"
+# textboxarrow 0 3
+@マナナン
+二人とも頑張ってね～
+私はもう少しここにいるよ
+
+# textboxarrow 0 3
+@マナナン
+ひょっとしたら「相棒」と
+会えるかもしれないから
+
+# face 318 "happy"
+# voice 9917 "mimir_navikan_0003"
+# textboxarrow 0 1
+@ミーミル
+分かりました
+では、また後ほど
+
+# voice 9917 "mimir_n_0019"
+# textboxarrow 0 1
+@ミーミル
+マスター様、参りましょう
+次の場所へ
+
+# fadeout "black" 2
+# waitandnext 2

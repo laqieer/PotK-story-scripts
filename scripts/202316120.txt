@@ -1,0 +1,737 @@
+;;-----------------------------------------
+;;SEA_12_0
+;;-----------------------------------------
+# script "lisp"
+# background "altar"
+# bgm "stop"
+;;-----------------------------------------
+;;マサムネ
+# body 100111
+# pos 100111 2
+# scale 100111 0.8 0
+# layer 100111 4
+# alpha 100111 0 0
+;;アルテミス
+# body 400131
+# pos 400131 4
+# scale 400131 0.8 0
+# layer 400131 2
+# mask 400131 off
+# alpha 400131 0 0
+;;レーヴァテイン
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# layer 100221 3
+# mask 100221 off
+# alpha 100221 0 0
+;;SEA与一
+# body 6400511
+# pos 6400511 3
+# scale 6400511 0.8 0
+# layer 6400511 3
+# mask 6400511 off
+# alpha 6400511 0 0
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;原点ティルフィング
+# body 6101411
+# pos 6101411 3
+# scale 6101411 0.8 0
+# layer 6101411 3
+# mask 6101411 off
+# alpha 6101411 0 0
+;;ウルズ
+# body 6604211
+# pos 6604211 3
+# scale 6604211 0.8 0
+# layer 6604211 3
+# mask 6604211 off
+# alpha 6604211 0 0
+;;パンドラ
+# body 62001111
+# pos 62001111 3
+# scale 62001111 0.8 0
+# layer 62001111 3
+# mask 62001111 off
+# alpha 62001111 0 0
+;;SEAベルフェゴール
+# body 62000911
+# pos 62000911 3
+# scale 62000911 0.8 0
+# layer 62000911 3
+# mask 62000911 off
+# alpha 62000911 0 0
+;;SEAアスモデウス
+# body 6603911
+# pos 6603911 3
+# scale 6603911 0.8 0
+# layer 6603911 3
+# mask 6603911 off
+# alpha 6603911 0 0
+;;SEAベルゼブブ
+# body 6402511
+# pos 6402511 3
+# scale 6402511 0.8 0
+# layer 6402511 3
+# alpha 6402511 0 0
+;;ロンギヌス聖鎖
+# body 3300111
+# pos 3300111 3
+# scale 3300111 0.8 0
+# layer 3300111 3
+# mask 3300111 off
+# alpha 3300111 0 0
+;;フラガラッハ聖鎖
+# body 3101011
+# pos 3101011 3
+# scale 3101011 0.8 0
+# layer 3101011 3
+# mask 3101011 off
+# alpha 3101011 0 0
+;;ブラフマーストラ聖鎖
+# body 3500411
+# pos 3500411 3
+# scale 3500411 0.8 0
+# layer 3500411 3
+# mask 3500411 off
+# alpha 3500411 0 0
+;;天沼矛聖鎖
+# body 3300411
+# pos 3300411 3
+# scale 3300411 0.8 0
+# layer 3300411 3
+# mask 3300411 off
+# alpha 3300411 0 0
+;;フライクーゲル聖鎖
+# body 3500211
+# pos 3500211 3
+# scale 3500211 0.8 0
+# layer 3500211 3
+# mask 3500211 off
+# alpha 3500211 0 0
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 3
+# mask 103611 off
+# alpha 103611 0 0
+# brightness 103611 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 4
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagescale 1 1.3 0
+# imagelayer 1 5
+# imageset 2 "bg_white"
+# imagealpha 2 0 0
+# imagescale 2 1.3 0
+# imagelayer 2 5
+;;-----------------------------------------
+;;背景：祭壇：altar
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+# voice 1001 "masamune_0003"
+# face 100111 "angry"
+# alpha 100111 1 0.3
+# alpha 400131 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@マサムネ
+何とか辿り着いたな
+さて、ここで元凶が見つかれば
+良いのだが…
+
+# textflame 1 1
+# textboxarrow 0 3
+@アルテミス
+皆、警戒を怠らないように
+行きましょう！
+
+;;皆が飛び出す
+# se "SE_5575"
+# sedelay "SE_5575" 0.2
+# move 100111 1 0.5
+# alpha 100111 0 0.3
+# move 400131 5 0.5
+# alpha 400131 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# voice 4005 "yoichi_0002"
+# face 6400511 "surprise"
+# alpha 6400511 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@与一
+あ！誰かいます！
+あれは…
+
+;;天使ロンギヌス登場
+# alpha 6400511 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# se "SE_0719"
+# alpha 3300111 1 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ロンギヌス
+…………
+
+# alpha 3300111 0 0.5
+# move 100111 2 0
+# alpha 100111 1 0.3
+# move 400131 4 0
+# alpha 400131 1 0.3
+# face 400131 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+ロンギヌス！
+…見た目も雰囲気も異なっておるな
+
+# textflame 1 1
+# textboxarrow 0 3
+@アルテミス
+あれが聖鎖による支配ですか？
+
+# alpha 100111 0 0.3
+# alpha 400131 0 0.3
+# move 270 3 0
+# face 270 "angry"
+# alpha 270 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+きっとそうです！
+ティルフィング様からお聞きしました
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+魔王のお三方が警告していかれた
+とのことですっ
+
+;;回想
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# fadeout "white" 2
+# waitandnext 2
+
+;;背景：ユグドラシル：yggdrasill_interior
+# background "yggdrasill_interior"
+# bgmfile "bgm166" "BgmPJZero001" 0
+# imagealpha 1 0.5 0
+# imagepos 1 0 0
+# alpha 270 0 0
+# textwindow "close"
+# fadein "white" 2
+# waitandnext 2
+
+# voice 660391 "asmodeus_sea_0004"
+# alpha 6603911 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@アスモデウス
+特別に教えてあげる
+アンタ達の大切なお仲間がね
+天使に取り憑かれるわよ
+
+# alpha 6603911 0 0.3
+# face 6101411 "surprise"
+# voice 610141 "tyrufing_7th_0022"
+# alpha 6101411 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+天使に、取り憑かれる？
+意味がよく分かりません…
+
+# alpha 6101411 0 0.3
+# voice 640251 "beelzebub_sea_0002"
+# face 6402511 "happy"
+# alpha 6402511 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ベルゼブブ
+キャキャキャキャキャ♪
+ベル達がこの世界に顕現できたのって
+な～んでだ？
+
+# voice 6200111 "pandora_0028"
+# alpha 6402511 0 0.3
+# move 62001111 4 0
+# layer 62001111 2
+# face 62001111 "surprise"
+# alpha 62001111 1 0.3
+# move 6604211 2 0
+# layer 6604211 4
+# mask 6604211 on
+# face 6604211 "surprise"
+# alpha 6604211 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+それは…私が箱を開けたからでは
+ないの？
+
+# textflame 1 1
+# textboxarrow 0 1
+@ウルズ
+まあ！
+パンドラさん、そのようなことを…
+
+# voice 640251 "beelzebub_sea_0034"
+# alpha 62001111 0 0.3
+# alpha 6604211 0 0.3
+# face 6402511 "angry"
+# alpha 6402511 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ベルゼブブ
+ブブーッ！
+あのときも言ったでしょ～
+それは本質じゃないの
+
+# voice 6200111 "pandora_0040"
+# alpha 6402511 0 0.3
+# move 62001111 3 0
+# alpha 62001111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@パンドラ
+なるほど
+完全に理解したわ
+
+# face 62001111 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@パンドラ
+私が開けなくても、
+誰かが箱を開ければ、あなた達は
+顕現したということね
+
+# alpha 62001111 0 0.3
+# move 62000911 2 0
+# layer 62000911 4
+# mask 62000911 on
+# voice 5200091 "belphegor_sea_0004"
+# face 62000911 "happy"
+# alpha 62000911 1 0.3
+# move 6101411 4 0
+# layer 6101411 2
+# face 6101411 "angry"
+# alpha 6101411 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@ベルフェゴール
+パンドラ…あなたって本当に
+愚かねぇ
+可愛いわぁ
+
+# voice 610141 "tyrufing_7th_0009"
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+アナタ達が顕現したのには、
+二つの段階があるはずです
+
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+一つは存在を維持するための力
+これは人々の欲望ですね
+欲望は失われることがないから…
+
+# alpha 62000911 0 0.3
+# alpha 6101411 0 0.3
+# voice 640251 "beelzebub_sea_0032"
+# face 6402511 "shy"
+# alpha 6402511 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ベルゼブブ
+ティルフィング、せいか～い！
+欲望が高まれば高まるほど、
+ベル達は強くなれるんだよ～
+
+# alpha 6402511 0 0.3
+# alpha 6603911 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@アスモデウス
+それじゃ、あと一つは？
+
+# alpha 6603911 0 0.3
+# alpha 62000911 1 0.3
+# alpha 6101411 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+絆や縁、といったものです
+アナタ達のことを誰かが覚えて
+いること…それが最低条件のはず
+
+# voice 5200091 "belphegor_sea_0007"
+# textflame 1 1
+# textboxarrow 0 1
+@ベルフェゴール
+だいせいか～い
+美しい木偶は頭も切れるのねぇ
+
+# alpha 62000911 0 0.3
+# alpha 6101411 0 0.3
+# move 6603911 2 0
+# layer 6603911 2
+# face 6603911 "happy"
+# alpha 6603911 1 0.3
+# move 6402511 4 0
+# layer 6402511 4
+# mask 6402511 on
+# face 6402511 "happy"
+# alpha 6402511 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@アスモデウス
+私達のことはパンドラが覚えていた
+だから顕現できたの
+
+# textflame 1 1
+# textboxarrow 0 3
+@ベルゼブブ
+そういえばティルフィングも
+似たような経験してるよね～
+キャキャキャキャキャ♪
+
+# alpha 6603911 0 0.3
+# alpha 6402511 0 0.3
+# move 6101411 3 0
+# mask 6101411 off
+# face 6101411 "surprise"
+# alpha 6101411 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+記憶…強い繋がり…
+存在を維持するための力…
+まさか…！
+
+# alpha 6101411 0 0.3
+# move 6603911 2 0
+# layer 6603911 2
+# face 6603911 "sad"
+# alpha 6603911 1 0.3
+# move 6604211 4 0
+# layer 6604211 4
+# mask 6604211 on
+# face 6604211 "happy"
+# voice 660421 "urthr_0007"
+# alpha 6604211 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@ウルズ
+つまり、この儚げ美少女ウルズも
+ティルフィング様との強い絆が
+あったから顕現したのですね
+
+# voice 660391 "asmodeus_sea_0013"
+# textflame 1 1
+# textboxarrow 0 1
+@アスモデウス
+そこの小さいのは黙ってなさい
+弄ぶには幼すぎるわ
+
+# voice 660421 "urthr_0023"
+# face 6604211 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@ウルズ
+な、何てことをっ…
+やはり禍々しい者達は
+浄化しなければなりませんっ
+
+# alpha 6603911 0 0.3
+# alpha 6604211 0 0.3
+# move 62000911 2 0
+# layer 62000911 4
+# mask 62000911 on
+# face 62000911 "normal"
+# alpha 62000911 1 0.3
+# move 6101411 4 0
+# layer 6101411 2
+# face 6101411 "angry"
+# alpha 6101411 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+落ち着いて、ウルズ
+
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+…アナタ達魔王が
+人々の欲望によって
+強化されるのであれば
+
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+天使もまた、人々の理性や
+信仰心によって力を増す
+そういうことですね
+
+# voice 5200091 "belphegor_sea_0042"
+# face 62000911 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@ベルフェゴール
+いいわねぇ
+少し前、とても嫌な気配…
+天使の気配を感じたのよぉ
+
+# textflame 1 1
+# textboxarrow 0 1
+@ベルフェゴール
+誰かさんが熱心に祈りでも
+捧げたんじゃないかしらぁ
+あとは…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ベルフェゴール
+私達みたいにぃ、強い縁を持つ者が
+いればぁ…天使が顕現するかもねぇ
+気をつけた方が良いわよぉ
+
+# alpha 62000911 0 0.3
+# alpha 6101411 0 0.3
+# voice 640251 "beelzebub_sea_0005"
+# move 6402511 3 0
+# mask 6402511 off
+# alpha 6402511 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ベルゼブブ
+天使がお姉ちゃん達の味方とは
+限らないもんね
+キャキャキャキャキャ♪
+
+# alpha 6402511 0 0.3
+# move 6101411 3 0
+# mask 6101411 off
+# voice 610141 "tyrufing_7th_0032"
+# alpha 6101411 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+…警告、ありがとうございます
+
+;;回想終了
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# fadeout "white" 2
+# waitandnext 2
+
+;;背景：祭壇：altar
+# background "altar"
+# imagealpha 1 0 0
+# alpha 6101411 0 0
+# textwindow "close"
+# fadein "white" 2
+# waitandnext 2
+
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# move 100111 2 0
+# alpha 100111 1 0.3
+# move 400131 4 0
+# alpha 400131 1 0.3
+# face 400131 "angry"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@マサムネ
+ロンギヌス！
+拙者の声が聞こえるか！？
+
+# textflame 1 1
+# textboxarrow 0 3
+@アルテミス
+天使に意識を
+乗っ取られないでください！
+気持ちをしっかり持って！
+
+# alpha 100111 0 0.3
+# alpha 400131 0 0.3
+# alpha 3300111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+…………
+
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+…神の国が復活します
+
+# voice 330011 "ronginusu_t_0004"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+それにより、全て救われるんです
+全て…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+邪魔をしないで下さい
+私の信仰は決して揺らぎません
+
+;;ロンギヌスが光り輝く
+# se "SE_0624"
+# alpha 3300111 0 1
+# imagealpha 2 1 1
+# imagepos 2 0 0
+# textwindow "close"
+# waitandnext 2
+
+# background "bg_white"
+# imagealpha 2 0 1
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@マサムネ
+ぬぅっ…
+何だ、この光は！？
+
+;;背景：白
+;;立ち絵：ラグナロクの薄い黒シルエット表示（前よりは濃くなる）
+;;SE：旗がなびく音（もしくは心音）
+# se "SE_6272"
+# fadein "white" 1
+# textwindow "close"
+# waitandnext 1
+
+# se "SE_6266"
+# alpha 103611 0.7 1
+# waitandnext 2
+
+;;背景：祭壇（altar）に戻る
+# se "SE_6273"
+# fadein "white" 1
+# background "altar"
+# face 270 "angry"
+# move 270 3 0
+# alpha 103611 0 0
+# waitandnext 2
+
+# alpha 270 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+…………！？
+
+# move 270 3 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@ミーミル
+また…！
+今のは、はっきり感じました
+私の中で、確かに旗がっ
+
+# alpha 270 0 0.3
+# move 400131 2 0
+# layer 400131 2
+# mask 400131 off
+# alpha 400131 1 0.3
+# move 100221 4 0
+# layer 100221 4
+# mask 100221 on
+# face 100221 "angry"
+# alpha 100221 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@アルテミス
+…いけません！
+皆、周りをっ
+
+# voice 1002 "revatein_0037"
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+チッ…
+これ、まずったかも
+
+# alpha 400131 0 0.3
+# alpha 100221 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;天使フラガラッハ、天使ブラフマーストラ、天使天沼矛、天使フライクーゲルが現れる
+# move 3101011 4 0
+# layer 3101011 4
+# mask 3101011 on
+# alpha 3101011 1 0.5
+# move 3500411 2 0
+# layer 3500411 2
+# mask 3500411 off
+# alpha 3500411 1 0.5
+# waitandnext 1.5
+
+# alpha 3101011 0 0.5
+# alpha 3500411 0 0.5
+# move 3300411 4 0
+# layer 3300411 4
+# mask 3300411 on
+# alpha 3300411 1 0.5
+# move 3500211 2 0
+# layer 3500211 2
+# mask 3500211 off
+# alpha 3500211 1 0.5
+# waitandnext 1.5
+
+# alpha 3300411 0 0.5
+# alpha 3500211 0 0.5
+# waitandnext 1
+
+# voice 4005 "yoichi_0015"
+# move 6400511 3 0
+# mask 6400511 off
+# face 6400511 "sad"
+# alpha 6400511 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@与一
+囲まれてしまいました…！
+
+# alpha 6400511 0 0.5
+# move 3300111 3 0
+# mask 3300111 off
+# alpha 3300111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+神の国の復活を妨げる者達に
+裁きを！
+
+# fadeout "black" 2
+# waitandnext 2

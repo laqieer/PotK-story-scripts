@@ -1,0 +1,582 @@
+;;-----------------------------------------
+;;ハロウィン1_1
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm453_1" "BgmIntegralNoahEvent006" 0
+;;-----------------------------------------
+;;オルフェウス
+# body 5603211
+# pos 5603211 3
+# scale 5603211 0.8 0
+# layer 5603211 3
+# mask 5603211 off
+# alpha 5603211 0 0
+;;hw
+# body 5603221
+# pos 5603221 3
+# scale 5603221 0.8 0
+# layer 5603221 3
+# mask 5603221 off
+# alpha 5603221 0 0
+;;ミュルグレス
+# body 5104611
+# pos 5104611 3
+# scale 5104611 0.8 0
+# layer 5104611 3
+# mask 5104611 off
+# alpha 5104611 0 0
+;;hw
+# body 5104621
+# pos 5104621 3
+# scale 5104621 0.8 0
+# layer 5104621 3
+# mask 5104621 off
+# alpha 5104621 0 0
+;;リュディ
+# body 243
+# pos 243 4
+# scale 243 0.8 0
+# layer 243 3
+# mask 243 off
+# alpha 243 0 0
+;;hw
+# body 266
+# pos 266 3
+# scale 266 0.8 0
+# layer 266 3
+# mask 266 off
+# alpha 266 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagelayer 1 1
+# imagescale 1 1.2 0
+# imageset 2 "e211013_logo"
+# imagealpha 2 0 0
+# imagelayer 2 1
+;;-----------------------------------------
+;;【EP.1】その音は彼方より
+;;背景：黒
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1.5
+
+# alpha 5603221 1 0.3
+# face 5603221 "sad"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+@オルフェウス
+これは遠い日々の中で見た夢？
+それとも叶うはずのなかった
+あたしの願望？
+
+@オルフェウス
+ううん、違う
+これは偽物なんかじゃない
+
+# move 5603221 2 0.3
+# alpha 5603221 0 0.3
+# waitandnext 0.5
+
+# alpha 5104621 1 0.3
+# face 5104621 "sad"
+# waitandnext 0.5
+
+@オルフェウス
+確かに存在したんだ
+情熱を帯びた魂の旋律が
+
+# move 5104621 4 0.3
+# alpha 5104621 0 0.3
+# waitandnext 0.5
+
+# alpha 266 1 0.3
+# waitandnext 0.5
+
+@オルフェウス
+ここではない、
+どこかの世界で
+その旋律は奏でられたんだ――
+
+# fadeout "black" 1
+# textwindow "close"
+# waitandnext 1
+
+;;背景：丘の上（平原などのイメージです）
+# background "highland"
+# bgm "stop"
+# alpha 266 0 0
+# fadein "black" 1
+# waitandnext 1
+
+;;ＳＥ：ザッ…ザッ…（リュディが平原を歩く音）
+# se "SE_0719"
+# move 243 3 1
+# alpha 243 1 1
+# waitandnext 1.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@リュディ
+ふー…
+よしっ
+
+# se "SE_0987"
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+@リュディ
+～♪
+～～…
+～～～♪
+
+# textflame 1 1
+# textboxarrow 0 2
+@リュディ
+おっけ、準備完了！
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 243 "happy"
+@リュディ
+そんじゃ…
+演っちゃいますか
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 243 "normal"
+@リュディ
+～～～♪
+
+;;演出：暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：ミュルグレスの屋敷の部屋
+# background "400_angel_castle_room"
+# bgmfile "bgm453_1" "BgmIntegralNoahEvent006" 0
+# alpha 243 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# alpha 5104611 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 5104611 "surprise"
+# voice 510461 "murgleys_c_0022"
+@ミュルグレス
+あ…
+
+# textflame 0 0
+@
+その音は―
+
+# textflame 0 0
+@
+どこか遠くから
+風に乗ってやってきた
+
+# textflame 0 0
+@
+誰のとも知らない
+曲名もわからない音楽
+
+# textflame 0 0
+@
+無造作に鳴るギターと
+はっきり聞き取れない言葉
+
+# textflame 0 0
+@
+取るに足らない音楽…
+そのはずなのに
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5104611 "sad"
+# voice 510461 "murgleys_c_0015"
+@ミュルグレス
+…どうして？
+
+# textflame 0 0
+@
+どうして、こんなにも…
+羨望を感じてしまうのだろう？
+
+;;演出：暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：街
+# background "in_downtown"
+# bgmfile "bgm453_1" "BgmIntegralNoahEvent006" 0
+# alpha 5104611 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# alpha 5603211 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 5603211 "surprise"
+@オルフェウス
+…！？
+
+# textflame 0 0
+@
+その音は―
+
+# textflame 0 0
+@
+はるか遠くから
+あたしを射止めにやってきた
+
+# textflame 1 1
+# textboxarrow 0 2
+@オルフェウス
+あっ…
+
+# textflame 0 0
+@
+喉が鳴る
+無意識のうちに、汗が出る
+
+# textflame 0 0
+@
+こんなにも乾いた街なのに
+胸が熱くほとばしりはじめる
+
+# textflame 0 0
+@
+いてもたっても
+いられなくなって…
+あたしは
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5603211 "angry"
+@オルフェウス
+――！
+
+# move 5603211 1 0.3
+# alpha 5603211 0 0.2
+# textwindow "close"
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+@
+その熱のありかへと
+駆けて行った
+
+;;演出：暗転
+# fadeout "black" 1
+# waitandnext 1
+
+# background "highland"
+# se "bgm453_filteroff"
+# alpha 5603211 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# alpha 243 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@リュディ
+…ふうっ
+
+# textflame 1 1
+# textboxarrow 0 2
+@リュディ
+うん！
+今日も調子いいじゃん♪
+
+# background "400_angel_castle_room"
+# bgm "stop"
+# fadein "white" 1
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# alpha 243 0 0
+# textwindow "close"
+
+# imagealpha 2 0 1
+# waitandnext 1
+
+# alpha 5104611 1 0.3
+# face 5104611 "normal"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 510461 "murgleys_c_0004"
+@ミュルグレス
+…それでは
+私は失礼いたしますわ
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス
+お父様とごゆっくり
+お話しなさってくださいませ
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス
+ええ、ごきげんよう…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5104611 "surprise"
+@ミュルグレス
+…ふうっ
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5104611 "angry"
+@ミュルグレス
+くぅ～～～っ…
+もうっ！うざったいっ！！
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス
+なぁによあの成金！
+私は聖人君主ですよ～
+みたいな顔しちゃってさ？
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス
+裏で汚い取引してるの
+ミュルは知ってるんだから！
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス
+あんなうさんくさいのと
+関わるなんて…
+お父様もお父様よ！もうっ！
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5104611 "sad"
+# voice 510461 "murgleys_c_0027"
+@ミュルグレス
+はあ～…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス
+なぁんて、今さらよね…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス
+貴族なんて、みーんなそうよ
+今までたくさんの貴族と
+会ったけど、全員そうだったわね
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス
+ミュルと同じくらいの
+女の子にも会ったけど
+いつかはそうなるのよね
+
+;;演出：暗転
+# se "SE_0742"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 5104611 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "white" 0.5
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@ミュルグレス
+ねえおとうさま！
+いつも来てるあのひと、だぁれ？
+
+@ミュルグレス
+…えらいひと？
+ふーん…そうなんだ
+
+@ミュルグレス
+でもでも！
+ミュル聞いたよ？
+
+@ミュルグレス
+あのひとワルモノなんだよ！
+りょーみん？のひとたちに
+ひどいことしてるって…！
+
+@ミュルグレス
+…う…
+は、はい…
+
+@ミュルグレス
+ごめんなさい、おとうさま
+へんなこと言って…
+
+@ミュルグレス
+うん…ミュル、
+ちゃんと『良い子』でいるね？
+
+;;演出：暗転
+# se "SE_11762"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# imagealpha 1 0 0
+# alpha 5104611 1 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "white" 0.5
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミュルグレス
+…そうよ
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス
+この世界は
+損得勘定がすべて
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス
+利益になるなら
+どんな行為もいとわない
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス
+貴族の汚さなんて
+いまさらわめいても
+どうしようもない…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5104611 "angry"
+# voice 510461 "murgleys_c_0027"
+@ミュルグレス
+はぁ～っ…
+つまんないつまんない！
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5104611 "normal"
+# voice 510461 "murgleys_c_0004"
+@ミュルグレス
+いっそ家出でもしようかな？
+そしたらミュルだって自由に…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5104611 "sad"
+@ミュルグレス
+って、貴族に生まれた時点で
+ミュルに自由なんて
+ないのよね――
+
+# bgmfile "bgm453_1" "BgmIntegralNoahEvent006" 0
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5104611 "surprise"
+@ミュルグレス
+…っ！
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス
+この音…たしか前にも…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス
+まったく…誰が弾いてるの？
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5104611 "shy"
+# voice 510461 "murgleys_c_0039"
+@ミュルグレス
+でも、まぁ
+悪くはないかも…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5104611 "normal"
+@ミュルグレス
+ふ～ん♪
+ふんふんふ～ん…ふ～ん…♪
+
+# bgm "stop"
+# se "SE_6154"
+# shake 0 1
+# textwindow "close"
+# waitandnext 1.5
+
+# face 5104611 "angry"
+# textflame 0 0
+# textwindow "nomal"
+@
+そのとき、奏でられていた旋律に
+ノイズのような不協和音が混ざった
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 510461 "murgleys_c_0024"
+@ミュルグレス
+ぎゃっ！？
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 510461 "murgleys_c_0009"
+@ミュルグレス
+な、なによ今の…！
+どこの誰よっ！？
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス
+こんな下手くそな
+ギター弾いてるやつは～っ！！
+
+# fadeout "black" 0.5
+# waitandnext 0.5

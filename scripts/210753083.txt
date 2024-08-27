@@ -1,0 +1,560 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;コマンドキラーズサイドストーリー前編シナリオ
+;;第3話　タイトル：欺く者
+;;3_8_3
+;;スクリプト最後の背景：村（ゴーストタウン）
+;;-----------------------------------------
+# script "lisp"
+# background "ghost_town"
+# bgm "bgm035" 0
+;;-----------------------------------------
+;;ヒョウハ
+# body 231
+# pos 231 3
+# scale 231 0.8 0
+# layer 231 2
+# alpha 231 0 0
+# mask 231 off
+;;神令ヒョウハ（ボイス用）
+# body 5402011
+# alpha 5402011 0 0
+;;アダマス
+# body 101221
+# pos 101221 3
+# scale 101221 0.8 0
+# layer 101221 2
+# alpha 101221 0 0
+# mask 101221 off
+;;ハルパー
+# body 202011
+# pos 202011 3
+# scale 202011 0.8 0
+# layer 202011 2
+# alpha 202011 0 0
+# mask 202011 off
+;;如意金箍棒
+# body 232
+# pos 232 3
+# scale 232 0.8 0
+# layer 232 2
+# alpha 232 0 0
+# mask 232 off
+;;如意金箍棒・神令・フリッグ（ボイス用）
+# body 5203111
+# alpha 5203111 0 0
+;;ヤグルシ
+# body 201711
+# pos 201711 3
+# scale 201711 0.8 0
+# layer 201711 2
+# alpha 201711 0 0
+# mask 201711 off
+;;アイムール
+# body 200221
+# pos 200221 3
+# scale 200221 0.8 0
+# layer 200221 2
+# alpha 200221 0 0
+# mask 200221 off
+;;カドケウス
+# body 600431
+# pos 600431 3
+# scale 600431 0.8 0
+# layer 600431 2
+# alpha 600431 0 0
+# mask 600431 off
+;;ケーリュケイオン
+# body 600531
+# pos 600531 3
+# scale 600531 0.8 0
+# layer 600531 2
+# alpha 600531 0 0
+# mask 600531 off
+;;ナーゲルリング
+# body 100621
+# pos 100621 3
+# scale 100621 0.8 0
+# layer 100621 2
+# alpha 100621 0 0
+# mask 100621 off
+;;-----------------------------------------
+# move 101221 2 0
+# face 101221 "angry"
+# alpha 101221 1 0
+# mask 101221 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 202011 4 0
+# face 202011 "sad"
+# alpha 202011 1 0
+# mask 202011 on
+@アダマス
+…ったく
+何なのよっ
+
+# voice 2020 "harpe_0019"
+# textboxarrow 0 3
+@ハルパー
+はぁ…
+何だか…やってられませんね…
+
+# alpha 101221 0 0.5
+# alpha 202011 0 0.5
+# move 201711 2 0
+# face 201711 "sad"
+# alpha 201711 1 0.5
+# mask 201711 on
+# textboxarrow 0 1
+# move 200221 4 0
+# face 200221 "normal"
+# alpha 200221 1 0.5
+# mask 200221 on
+@ヤグルシ
+お姉ちゃん…
+もうやめよう…
+
+# voice 2002 "aimuru_0015"
+# face 200221 "sad"
+# textboxarrow 0 3
+@アイムール
+これ以上の戦闘継続は…
+無意味…なのですか？
+
+# alpha 201711 0 0.5
+# alpha 200221 0 0.5
+# move 232 3 0
+# face 232 "normal"
+# alpha 232 1 0.5
+# mask 232 off
+# textboxarrow 0 2
+@如意金箍棒
+戦うことそのものを否定はしない
+でも、この争いは何の価値も
+生み出しはしないわ
+
+# textboxarrow 0 2
+@如意金箍棒
+それでも、まだ戦うというのなら、
+気が済むまで受けましょう
+
+# textboxarrow 0 2
+@如意金箍棒
+それがワタシ
+重りでありお守りである
+如意金箍棒なのだから
+
+# voice 1006 "nageruring_0039"
+# alpha 232 0 0.5
+# move 100621 3 0
+# face 100621 "usual"
+# alpha 100621 1 0.5
+# mask 100621 off
+# textboxarrow 0 2
+@ナーゲルリング
+皆さんの戦意を挫いてしまいました
+信じられませんね…
+
+# textwindow "close"
+# alpha 100621 0 0.5
+# waitandnext 0.5
+
+;;//兵士達がやってくる
+# se "SE_5575"
+# serif 1
+@カドケウスのマスター
+そこまで！
+そこまでだ！
+
+# serif 1
+@ケーリュケイオンのマスター
+戦いをやめてくれ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 6004 "kadokeusu_0001"
+# move 600431 3 0
+# face 600431 "normal"
+# alpha 600431 1 0.5
+# mask 600431 off
+# textboxarrow 0 2
+# textwindow "normal"
+@カドケウス
+あ！
+マスター♪
+
+# voice 6005 "keryukeion_0004"
+# alpha 600431 0 0.5
+# move 600531 3 0
+# face 600531 "smile"
+# alpha 600531 1 0.5
+# mask 600531 off
+# textboxarrow 0 2
+@ケーリュケイオン
+私に会いたくて追っかけてきたん
+だね～♪
+しょうがないな～
+
+# textwindow "close"
+# alpha 600531 0 0.5
+# serif 1
+@祀官
+今度は何でしょうか…
+またブラオとマロニの合同軍で
+
+# serif 1
+@カドケウスのマスター
+あなたは祀官だな
+村長に伝えてくれ
+
+# serif 1
+@ケーリュケイオンのマスター
+ブラオもマロニも、もう二度と
+村に手を出さない
+
+# serif 1
+@ケーリュケイオンのマスター
+そして、ブラオとマロニは休戦のうえ
+これからは町周辺に現れる異族討伐
+のため、共闘関係を結ぶことにした
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 520311 "nyoikinkobou_c_0022"
+# move 232 3 0
+# face 232 "surprise"
+# alpha 232 1 0.5
+# mask 232 off
+# textboxarrow 0 2
+# textwindow "normal"
+@如意金箍棒
+え
+
+# serif 1
+@ケーリュケイオンのマスター
+そこで、この村周辺の警備にも
+二つの町のキル姫と兵達を派遣に
+当たらせることとなっている
+
+# serif 1
+@祀官
+それは有難いですが、どうして急に…
+
+# serif 1
+@ケーリュケイオンのマスター
+先日、二つの町の近くに現れた異族
+との戦闘において、異族への対処は
+我らの共通の課題となったのだ
+
+# serif 1
+@ケーリュケイオンのマスター
+二つの町だけではない
+他の町でも目撃情報が出たと聞く
+この村にも以前出没したと伺った
+
+# serif 1
+@祀官
+はぁ…
+
+# serif 1
+@カドケウスのマスター
+それから…先日の戦いで村が被った
+損害を賠償したい
+
+# serif 1
+@ケーリュケイオンのマスター
+全てというわけにはいかないが、
+可能な限り、支払おう
+派遣した者にも復興を手伝わせよう
+
+# serif 1
+@祀官
+それは助かりますが…
+一体、何がどうなっているのです？
+
+# serif 1
+@カドケウスのマスター
+こちらからは以上だ
+それでは、皆、引き上げるぞ！
+
+# serif 1
+@ケーリュケイオンのマスター
+これは全てギルマスのご判断だ！
+皆、従うように！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 232 "normal"
+# textboxarrow 0 2
+@如意金箍棒
+…………
+
+# voice 1012 "adamasu_0010"
+# alpha 232 0 0.5
+# move 101221 2 0
+# face 101221 "angry"
+# alpha 101221 1 0.5
+# mask 101221 on
+# textboxarrow 0 1
+# move 202011 4 0
+# face 202011 "normal"
+# alpha 202011 1 0.5
+# mask 202011 on
+@アダマス
+はぁっ！？
+何なのよ、それっ…
+
+# face 202011 "surprise"
+# textboxarrow 0 3
+@ハルパー
+これは帰って、マスターに
+たっぷりお話しを伺わないと
+いけませんね…あら？
+
+# face 202011 "normal"
+# textboxarrow 0 3
+@ハルパー
+もうこんな時間ですか…
+そろそろ宵闇に星が輝く
+頃ですわね…
+
+# textboxarrow 0 3
+@ハルパー
+このところ戦いばかりでしたし
+たまには、ゆったりとした
+時間を過ごしたいものですわ…
+
+# voice 1012 "adamasu_0007"
+# face 101221 "normal"
+# textboxarrow 0 1
+@アダマス
+あんたも大概ロマンチストね
+星なんかより、ダイヤモンドの方が
+よほど派手でいいじゃない
+
+# voice 2020 "harpe_0027"
+# face 202011 "sad"
+# textboxarrow 0 3
+@ハルパー
+まあ、人の呟きを盗み聞きだなんて
+マナーがなっていないですね
+初めから期待はしていないですけれど
+
+# face 101221 "angry"
+# textboxarrow 0 1
+@アダマス
+はあ？
+その減らず口ふさいであげるわよ？
+
+# voice 2020 "harpe_0004"
+# face 202011 "normal"
+# textboxarrow 0 3
+@ハルパー
+やれるものでしたら、
+かまいませんけど？
+
+# alpha 101221 0 0.5
+# alpha 202011 0 0.5
+# move 201711 2 0
+# face 201711 "usual"
+# alpha 201711 1 0.5
+# mask 201711 on
+# move 200221 4 0
+# face 200221 "normal"
+# alpha 200221 1 0.5
+# mask 200221 on
+# textboxarrow 0 3
+@アイムール
+アイムール、帰還します
+…ヤグルシも気をつけて
+
+# voice 2017 "yagurushi_0003"
+# face 201711 "normal"
+# textboxarrow 0 1
+@ヤグルシ
+うん、お姉ちゃん！
+またねっ
+
+# voice 2002 "aimuru_0003"
+# textboxarrow 0 3
+@アイムール
+はい、また…
+
+# voice 6004 "kadokeusu_0003"
+# alpha 201711 0 0.5
+# alpha 200221 0 0.5
+# move 600531 2 0
+# face 600531 "normal"
+# alpha 600531 1 0.5
+# mask 600531 on
+# move 600431 4 0
+# face 600431 "normal"
+# alpha 600431 1 0.5
+# mask 600431 on
+# textboxarrow 0 3
+@カドケウス
+これって二つの町が争いを
+やめたってこと？
+たまにはやるね～、マスター
+
+# voice 6005 "keryukeion_0005"
+# textboxarrow 0 1
+@ケーリュケイオン
+これでやっと快適なベッドで
+眠れるよ～
+
+# alpha 600531 0 0.5
+# alpha 600431 0 0.5
+# move 100621 3 0
+# face 100621 "usual"
+# alpha 100621 1 0.5
+# mask 100621 off
+# textboxarrow 0 2
+@ナーゲルリング
+町の方々が引き上げていきます…
+何だったのでしょう？
+
+# serif 1
+@祀官
+いずれにしても、村は救われた
+あなた達のお陰ですよ
+
+# alpha 100621 0 0.5
+# move 232 3 0
+# face 232 "usual"
+# alpha 232 1 0.5
+# mask 232 off
+# textboxarrow 0 2
+@如意金箍棒
+いえ…ワタシは約束を守っただけなの
+きっと解決してくれたのは、彼女よ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# move 231 2 0
+# face 231 "normal"
+# alpha 231 1 0.5
+# mask 231 on
+# textboxarrow 0 1
+# move 232 4 0.5
+# mask 232 on
+@ヒョウハ
+あー、参った…
+お！ただいま、ニョイ子さん
+
+# voice 520311 "nyoikinkobou_c_0005"
+# face 232 "happy"
+# textboxarrow 0 3
+@如意金箍棒
+お帰りなさい、ヒョウハちゃん
+
+# voice 540201 "hyoha_c_0031"
+# face 231 "sad"
+# textboxarrow 0 1
+@ヒョウハ
+ごめん！
+黒幕、逃がしちまった…
+
+# face 232 "usual"
+# textboxarrow 0 3
+@如意金箍棒
+そうなの…
+でも、いいわよ
+ワタシ達と「同じ」だったんでしょ？
+
+# voice 540201 "hyoha_c_0003"
+# face 231 "irregular"
+# textboxarrow 0 1
+@ヒョウハ
+ああ、間違いない
+
+# textboxarrow 0 3
+@如意金箍棒
+だったら、またすぐに会えるわ
+きっと
+
+# bgmfile "bgm429" "BgmIntegralNoahCommand" 0
+# textboxarrow 0 3
+@如意金箍棒
+それよりも
+ワタシはあなたに
+お礼を言わないといけないわ
+
+# voice 520311 "nyoikinkobou_c_0030"
+# face 232 "happy"
+# textboxarrow 0 3
+@如意金箍棒
+やり遂げてくれて、
+本当にありがとう
+ヒョウハちゃん
+
+# face 231 "surprise"
+# textboxarrow 0 1
+@ヒョウハ
+ええっ、急にどうしたんだっ！
+むしろ、お礼を言いたいのは
+こっちなんだけど…！
+
+# voice 520311 "nyoikinkobou_c_0034"
+# face 232 "usual"
+# textboxarrow 0 3
+@如意金箍棒
+いいえ、あなたのおかげで
+ワタシは変われたの
+だから、ありがとうでいいのよ
+
+# textboxarrow 0 3
+@如意金箍棒
+ワタシはね、ヒョウハちゃん
+ワタシが何をしたところで
+世界は変わらないと思っていたの
+
+# textboxarrow 0 3
+@如意金箍棒
+だけどね、今回のことで
+ワタシにも何かを変える力が
+あったと知ることができたわ
+
+# textboxarrow 0 3
+@如意金箍棒
+望まない争いを無くしたい
+そして、いつの日か
+世界に平和が訪れるように
+
+# textboxarrow 0 3
+@如意金箍棒
+祈るのではなく、ワタシ自身の手で
+少しでも何かが変わる可能性が
+あるのなら…挑戦する価値はある
+
+# textboxarrow 0 3
+@如意金箍棒
+それをあなたが教えてくれたのよ
+
+# voice 540201 "hyoha_c_0004"
+# face 231 "normal"
+# textboxarrow 0 1
+@ヒョウハ
+そっか…役に立てたんなら、
+あたしも嬉しいよ！
+
+# voice 520311 "nyoikinkobou_c_0003"
+# textboxarrow 0 3
+@如意金箍棒
+ええ
+そこでお願いがあるの
+
+# face 231 "surprise"
+# textboxarrow 0 1
+@ヒョウハ
+お願い？
+
+# textboxarrow 0 3
+@如意金箍棒
+ユグドラシルへ向かうのでしょ？
+ワタシもあなたの旅に
+ついていってもいいかしら

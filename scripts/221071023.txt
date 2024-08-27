@@ -1,0 +1,214 @@
+;;-----------------------------------------
+;;【2_3】サンタ・クロノスがやってくる
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm449" "BgmChristmas003" 0
+;;-----------------------------------------
+;;シタ
+# body 3201621
+# pos 3201621 1
+# scale 3201621 0.8 0
+# layer 3201621 3
+# alpha 3201621 0 0
+;;シェキナー
+# body 3400721
+# pos 3400721 5
+# scale 3400721 0.8 0
+# layer 3400721 3
+# alpha 3400721 0 0
+;;リサナウト
+# body 3203021
+# pos 3203021 3
+# scale 3203021 0.8 0
+# layer 3203021 4
+# alpha 3203021 0 0
+;;アイムール
+# body 200251
+# pos 200251 3
+# scale 200251 0.8 0
+# layer 200251 3
+# mask 200251 off
+# alpha 200251 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "bg_endroll"
+# imagealpha 1 0 0
+# imagelayer 1 1
+;;-----------------------------------------
+# textwindow "close"
+# waitandnext 0.2
+
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# background "town_night_snow"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 3201621 1 0.5
+# alpha 3400721 1 0.5
+# alpha 3203021 1 0.5
+# face 3201621 "angry"
+# face 3400721 "angry"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 3203021 "sad"
+# voice 2030 "risanautr_l_0016"
+@リサナウト
+私のプレゼントが～っ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 340071 "shekina_t_0013"
+@シェキナー
+これは回収しましょう
+首謀者の正体に
+繋がるかもしれません
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 320161 "shita_t_0003"
+@シタ
+ですね！
+あとで中身を確かめないと！
+
+# textflame 1 1
+# textboxarrow 0 3
+@シェキナー
+…それで？
+あなたも首謀者のことは
+ご存じないのですね？
+
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+え、ええ…
+私はこの町の住人じゃないから、
+詳しいことは知らないわ
+
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+サンタの衣装と
+プレゼントをもらう時に、
+一度会っただけよ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3400721 "sad"
+# voice 340071 "shekina_t_0028"
+@シェキナー
+そうですか…仕方ありません、
+次を探すとしましょう
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+そろそろイベントも
+終わっちゃいます！
+早く首謀者を捕まえましょう！
+
+# textflame 0 0
+@
+そんなに気合を入れなくても
+いいんじゃないかな…、と
+マスターが言うが2人には届かない
+
+;;ＳＥ：コツ、コツ…（シェキナーとシタの足音）
+# se "SE_0740"
+# alpha 3201621 0 0.5
+# alpha 3400721 0 0.5
+# textwindow "close"
+# mask 3203021 off
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 2030 "risanautr_l_0014"
+@リサナウト
+ち、ちょっと！？
+そんなにいっぱい持って
+いかなくてもいいじゃない！
+
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+返してよ～！
+私のプレゼント～！！
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# bgm "stop"
+# alpha 3203021 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# brightness 200251 0.1 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+# face 200251 "normal"
+@？？？
+………
+
+;;ＳＥ：ジャラジャラ…（鎖の音）
+# se "SE_5347"
+# alpha 200251 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 2
+@？？？
+なるほど…
+どうやら噂は
+本当だったようですね
+
+# textflame 1 1
+# textboxarrow 0 2
+@？？？
+サンタ・キャッチを
+中止させようとする敵…
+間違いありません
+
+# textflame 1 1
+# textboxarrow 0 2
+@？？？
+今宵のイベントを
+大いに楽しんでいる
+みんなのためにも
+
+# brightness 200251 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 2
+@アイムール
+奴らはこの私が―
+駆逐者アイムールが
+殲滅せねば…
+
+;;ＳＥ：ジャラジャラ…（鎖の音）
+# se "SE_5347"
+# textwindow "close"
+# alpha 200251 0 0.5
+# waitandnext 0.5
+
+# fadeout "black" 1
+# waitandnext 1

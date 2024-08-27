@@ -1,0 +1,390 @@
+# script "lisp"
+# background "sea_jungle_day"
+# bgm "bgm005" 0
+# body 2300611
+# pos 2300611 4
+# scale 2300611 0.8 0
+# body 2400211
+# pos 2400211 2
+# scale 2400211 0.8 0
+# face 2300611 "sad"
+# face 2400211 "usual"
+# textflame 1 1
+# setname "トリシューラ" 2
+ちぃっ…！？あたいが…
+返り討ちに遭うなんて…
+ふざけんじゃないよ！
+
+# face 2400211 "smile"
+# voice 4002 "pinaka_unit_0006"
+# setname "ピナーカ" 1
+楽しかったぜ！
+ま、オイラの足元にも
+及ばなかったけどな！
+
+;;トリシューラが倒れる
+# alpha 2300611 0 0.5
+# se "SE_3001"
+# waitandnext 1
+
+# body 2200611
+# pos 2200611 1
+# scale 2200611 0.8 0
+# alpha 2200611 0 0
+# body 2300711
+# pos 2300711 3
+# scale 2300711 0.8 0
+# alpha 2300711 0 0
+# body 2500711
+# pos 2500711 5
+# scale 2500711 0.8 0
+# alpha 2500711 0 0
+# face 2200611 "sad"
+# face 2500711 "sad"
+# face 2300711 "angry"
+# fadeout "black" 1
+# waitandnext 1
+
+# delete 2400211
+# delete 2300611
+# alpha 2300711 1 0
+# alpha 2500711 1 0
+# alpha 2200611 1 0
+# layer 2300711 1
+# fadein "black" 0.5
+# voice 2006 "daguda_unit_1011"
+# setname "ダグダ" 2
+ダグダ…もうダメみたい…
+もう動けない～…
+
+# voice 5007 "buryunaku_unit_1011"
+# setname "ブリューナク" 2
+損害大
+戦線維持に支障あり…
+強くなったな、ゲイボルグ
+
+# voice 3007 "gaiborugu_unit_0008"
+# setname "ゲイボルグ" 3
+…全て貴様から教わったことだ
+この魔槍に貫けぬものなし
+
+;;ダグダ、ブリューナク倒れる
+# se "SE_3001"
+# alpha 2500711 0 0.5
+# alpha 2200611 0 0.5
+# waitandnext 1
+
+# body 2501711
+# pos 2501711 4
+# scale 2501711 0.8 0
+# alpha 2501711 0 0
+# body 2301811
+# pos 2301811 2
+# scale 2301811 0.8 0
+# alpha 2301811 0 0
+# delete 2500711
+# delete 2200611
+# face 2301811 "usual"
+# fadeout "black" 1
+# waitandnext 1
+
+# alpha 2501711 1 0
+# alpha 2300711 0 0
+# alpha 2301811 1 0
+# fadein "black" 0.5
+# setname "グリモワール" 2
+ブリューナク隊も
+みんなやられたみたい…
+あとはワタシだけね…
+
+# delete 2300711
+# face 2301811 "sad"
+# voice 3018 "forcas_0018"
+# setname "フォルカス" 2
+えっ…？
+冗談でしょ、グリモワール
+やめて！！
+
+# face 2501711 "smile"
+# setname "グリモワール" 2
+大丈夫よ！
+ワタシ、こう見えて強いんだから
+
+# face 2501711 "normal"
+# setname "グリモワール" 2
+キミの方こそ
+ちゃんと帝都まで
+逃げ切りなさいよね！
+
+;;グリモワールが走り去る
+# se "SE_5602"
+# rightout 2501711 0.5
+# alpha 2501711 0 0.5
+# waitandnext 1
+
+# delete 2501711
+# face 2301811 "angry"
+# setname "フォルカス" 2
+…………！
+
+;;フォルカス、逆方向に走り去る
+# se "SE_5602"
+# leftout 2301811 0.5
+# alpha 2301811 0 0.5
+# waitandnext 1
+
+;;背景：ビーチ
+# fadeout "black" 2
+# face 2301811 "usual"
+# waitandnext 2
+
+# body 2100311
+# pos 2100311 2
+# scale 2100311 0.8 0
+# alpha 2100311 0 0
+# move 2301811 3 0
+# alpha 2301811 1 0
+# face 2100311 "angry"
+# background "sea_beach_day"
+# fadein "black" 1
+# setname "フォルカス" 2
+あと少しで…
+国境を越えられる！
+そうすれば――
+
+# body 2100611
+# pos 2100611 2
+# scale 2100611 0.8 0
+# alpha 2100611 0 0
+# body 2301011
+# pos 2301011 4
+# scale 2301011 0.8 0
+# alpha 2301011 0 0
+# move 2301811 4 0.2
+# face 2100611 "usual"
+# leftin 2100311 0.5
+# alpha 2100311 1 0.3
+# setname "デュランダル" 3
+追いつきましたわ！
+皇帝さん、尋常に勝負ですわ！
+
+# alpha 2301011 1 0.5
+# alpha 2100611 1 0.5
+# alpha 2100311 0 0.5
+# alpha 2301811 0 0.5
+# setname "ナーゲルリング" 3
+相手は一人
+私の出番はなさそうですね
+
+# setname "ロンゴミアント" 3
+“誠心騎士団”の名に恥じぬよう
+一騎打ちで仕留めましょう
+
+# body 2400711
+# pos 2400711 3
+# scale 2400711 0.8 0
+# alpha 2400711 0 0
+# body 2501611
+# pos 2501611 1
+# scale 2501611 0.8 0
+# alpha 2501611 0 0
+# body 2502111
+# pos 2502111 5
+# scale 2502111 0.8 0
+# alpha 2502111 0 0
+# body 2100511
+# pos 2100511 2
+# scale 2100511 0.8 0
+# alpha 2100511 0 0
+# move 2301811 3 0
+# alpha 2301011 0 0.5
+# alpha 2100611 0 0.5
+# alpha 2100311 0 0.5
+# alpha 2301811 1 0.5
+# face 2301811 "sad"
+# face 2400711 "angry"
+# face 2501611 "angry"
+# face 2100511 "angry"
+# bgm "stop"
+# setname "フォルカス" 2
+あと少しだっていうのにっ…
+
+# delete 2100611
+# delete 2301011
+# alpha 2400711 1 0.5
+# alpha 2501611 1 0.5
+# alpha 2502111 1 0.5
+# alpha 2301811 0 0.5
+# layer 2400711 1
+# bgmfile "bgm236" "BgmSeaEventBattle" 0
+# voice 4007 "shekina_0036"
+# setname "シェキナー" 2
+セファー、フラベルム、
+一斉射撃を！
+リットゥ、陛下をお願いします
+
+# se "SE_5701"
+# fadein "white" 0.3
+# shake 0 0.3
+# waitandnext 0.3
+
+# se "SE_5701"
+# fadein "white" 0.3
+# shake 0 0.3
+# waitandnext 0.4
+
+# se "SE_5701"
+# fadein "white" 0.3
+# shake 0 0.3
+# waitandnext 0.3
+
+# setname "フラベルム" 2
+騎士を気取る野蛮な者達よ、
+わたくしの前から早々に消えなさい
+
+# face 2100311 "sad"
+# setname "セファー" 2
+もう安心ですよ、陛下
+わたくしはここからの逆転方法を
+なんでも知っています！まずは――
+
+# move 2100311 4 0
+# alpha 2400711 0 0.5
+# alpha 2501611 0 0.5
+# alpha 2502111 0 0.5
+# alpha 2100511 1 0.5
+# alpha 2100311 1 0.5
+# sedelay "SE_5648" 0.4
+# setname "リットゥ" 2
+お前達、ジャングル連合の者だな
+ここから先は一歩も通さん
+
+# face 2301811 "smile"
+# setname "デュランダル" 3
+新手が出てまいりましたわ！
+これでは砦に近づけませんわね…
+
+# emotionbody 5000 1 2301811 10 260
+# effectpattern 5000 1 0
+# effectstart 5000
+# alpha 2100511 0 0.5
+# alpha 2100311 0 0.5
+# alpha 2301811 1 0.5
+# setname "フォルカス" 2
+間に合った…！
+カドケウスが
+上手くやってくれたのね
+
+# eye 2301811 "close"
+# delete 2400711
+# delete 2502111
+# delete 2501611
+# delete 2100511
+# delete 2100311
+# setname "フォルカス" 2
+あの密書が罠だったのなら、
+シェキナー隊をこちらの加勢に
+向かわせても問題ない
+
+# eye 2301811 "normal"
+# body 2600111
+# pos 2600111 4
+# scale 2600111 0.8 0
+# alpha 2600111 0 0
+# face 2600111 "sad"
+# setname "フォルカス" 2
+際どいところで
+読みが当たって良かった…
+
+# move 2301811 2 0.5
+# alpha 2600111 1 0.5
+# setname "アスクレピオス" 2
+まったく！
+ひどいありさまね
+さっさとこっちに来なさい！
+
+# face 2301811 "sad"
+# setname "フォルカス" 2
+アスクレピオス！？
+
+# face 2301811 "usual"
+# setname "フォルカス" 2
+あなたは帝都で
+ダーインスレイヴ様の
+看病をなさっていたのでは…
+
+# emotionbody 5501 6 2600111 50 250
+# effectpattern 5501 2 1
+# effectstart 5501
+# body 2102811
+# pos 2102811 3
+# scale 2102811 0.8 0
+# alpha 2102811 0 0
+# face 2600111 "angry"
+# face 2102811 "sad"
+# setname "アスクレピオス" 2
+ええ、そうよ！
+それなのに、このバカがっ
+
+# effectskip 5501
+# move 2301811 1 0.5
+# move 2600111 5 0.5
+# alpha 2102811 1 0.5
+# layer 2102811 1
+# setname "ダーインスレイヴ" 2
+もう歩くくらいはできると
+何度も言っているだろう
+
+# face 2102811 "usual"
+# setname "ダーインスレイヴ" 2
+それにわたしは
+皇帝陛下の足手まといには
+なりたくないのでね
+
+# face 2301811 "sad"
+# setname "フォルカス" 2
+ダーインスレイヴ様まで！？
+
+# body 2600511
+# pos 2600511 5
+# scale 2600511 0.8 0
+# alpha 2600511 0 0
+# face 2600511 "smile"
+# setname "ダーインスレイヴ" 2
+わたしの独断で帝都を放棄してきたよ
+“穏健派”の皆を連れて、
+おぬしを加勢しに来た
+
+# alpha 2600511 1 0.5
+# alpha 2600111 0 0.5
+# setname "ケーリュケイオン" 2
+私が連絡に走ったんだ～
+これは貸しにしといてあげるね♪
+
+# face 2102811 "sad"
+# setname "ダーインスレイヴ" 2
+ずいぶん、
+手ひどくやられたようだな
+
+# eye 2301811 "close"
+# voice 3018 "forcas_0017"
+# setname "フォルカス" 2
+全て…私の責任です…
+
+# face 2102811 "usual"
+# setname "ダーインスレイヴ" 2
+顔を上げよ、フォルカス
+わたしに謝ることはない
+
+# setname "ダーインスレイヴ" 2
+それより皇帝としての
+務めを果たすのだ
+これからいかにする？
+
+# face 2301811 "angry"
+# eye 2301811 "normal"
+# voice 3018 "forcas_0003"
+# setname "フォルカス" 2
+はい
+…大損害を受けた今こそ、
+反転攻勢に移るときです

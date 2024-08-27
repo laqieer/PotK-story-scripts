@@ -1,0 +1,894 @@
+;;-----------------------------------------
+;;【EP2バトル前】
+;;背景：グライヒハイト外観
+;;
+;;※グライヒハイトを指定していますが、
+;;開幕でケイオスリオンについて言及しているので
+;;背景はシナリオにあわせてあります。
+;;-----------------------------------------
+# script "lisp"
+# background "devil_world"
+# bgm "bgm005" 0
+;;アスカロン
+# body 3102311
+# pos 3102311 2
+# scale 3102311 0.8 0
+# alpha 3102311 0 0
+;;# face 3102311 "surprise"
+;;フェイルノート
+# body 167
+# pos 167 4
+# scale 167 0.8 0
+# alpha 167 0 0
+# mask 167 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# alpha 3501711 1 0
+# mask 3501711 off
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# mask 3201911 off
+# alpha 3201911 0 0
+# brightness 3201911 0 0
+;;トレイセーマ兵
+# body 3830001
+# pos 3830001 3
+# scale 3830001 0.8 0
+# alpha 3830001 0 0
+# mask 3830001 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;シユウの斧
+# effectbody 1000 5 0 0
+;;火の粉
+# envbody 1001 6 0
+# effectpattern 1001 1 0
+;;炎エフェクト
+# envbody 1002 7 14
+# effectpattern 1000 1 14
+;;-----------------------------------------
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0009"
+@グリモワール
+とんだ番狂わせね
+
+# textflame 0 0
+@
+グリモワールはケイオスリオン王都を
+遠巻きに眺めながら
+入る情報に耳を傾けている
+
+# textflame 1 1
+@グリモワール
+さすがは「鍵」
+本気で理想郷を目指すつもりかしら
+
+# alpha 3501711 0 0.5
+# alpha 3830001 1 0.5
+@トレイセーマ兵
+そのようで…
+
+# alpha 3830001 0 0.5
+# alpha 3501711 1 0.5
+@グリモワール
+斬ル姫でもないのに出しゃばって…
+悪魔の味方をして…
+ワタシまで差し置いて…
+
+# voice 350171 "grimoire_ge_0010"
+# face 3501711 "angry"
+@グリモワール
+あー
+………イライラするわ…っ！
+
+# se "SE_5643"
+# shake 0 0.6
+# subfillrect 1 "red" 0.6 0.4 0
+# effectstart 1001
+# textflame 0 0
+@
+グリモワールは歯を噛み締める
+
+# alpha 3501711 0 0.5
+# alpha 3830001 1 0.5
+# textflame 1 1
+@トレイセーマ兵
+み、みんな、さがってくれ…！
+もうこれ以上
+グリモワールに近づけん…！
+
+# se "SE_5838"
+# shake 0 0.6
+# subfillrect 1 "red" 0.6 0.4 0
+# effectskip 1001
+# effectstart 1002
+# alpha 3830001 0 0.5
+# alpha 3501711 1 0.5
+# textflame 0 0
+@
+グリモワールの憤りに比例して
+彼女を纏う炎の勢いは一層強まり
+たまらず周囲の味方兵士が後ずさる
+
+@
+その炎の尾は、ジリジリと
+ケイオスリオン国土の下を這い
+雲の上を忍び、静かに燃え拡がる
+
+# face 3501711 "normal"
+# textflame 1 1
+@グリモワール
+だけどすぐに終わるから
+
+# face 3501711 "happy"
+# voice 350171 "grimoire_ge_0005"
+@グリモワール
+…気づいた時には、後の祭り
+
+# face 3501711 "normal"
+# textflame 0 0
+@
+再び魔導書に目を落とすグリモワール
+
+# textflame 1 1
+@グリモワール
+それにしても
+
+# face 3501711 "sad"
+@グリモワール
+………焦れるわね
+
+;;背景：ケイオスリオン宿場
+;;201_roomで代用
+# textwindow "close"
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.7
+# waitandnext 0.7
+
+# effectskip 1002
+# background "201_room"
+# bgm "bgm004" 0
+# alpha 3501711 0 0
+# alpha 3102311  1 0
+# alpha 167 1 0
+# waitandnext 0.1
+
+# imagealpha 0 0 0.7
+# imagerightout 0 0.7
+# waitandnext 0.5
+
+# textwindow "normal"
+# textboxarrow 0 3
+@フェイルノート
+───焦ってるのよ
+
+# face 3102311 "surprise"
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_battle_0005"
+@アスカロン
+だ、だれがっ！？
+
+# textboxarrow 0 3
+@フェイルノート
+アナタ
+
+# face 3102311 "angry"
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0010"
+@アスカロン
+私は冷静ですっ！
+
+# voice 4019 "failnaught_a_0004"
+# face 167 "smile"
+# textboxarrow 0 3
+@フェイルノート
+氷がどうこうと言ってたクセに
+ちっともよ
+
+# face 3102311 "sad"
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0015"
+@アスカロン
+むぅ…！　ううっ！
+
+# face 167 "normal"
+# textboxarrow 0 3
+@フェイルノート
+…敗けたクセに
+
+# textflame 0 0
+@
+そう、アスカロンは敗けたのだ
+
+@
+王都の宿場にて
+アスカロンは
+敗者の苦汁を舐めていた
+
+# voice 4019 "failnaught_a_0005"
+# face 167 "smile"
+# textflame 1 1
+@フェイルノート
+おかげで私達の陣営は
+総武会本戦のトーナメント枠に
+納まることが出来た
+
+@フェイルノート
+お礼でも言われたい？
+ザコ姫さん？
+
+# textboxarrow 0 1
+@アスカロン
+うっ、ううっ…！
+斬ル姫ですっ…！
+
+# face 167 "normal"
+# textboxarrow 0 3
+@フェイルノート
+そういえば他の３人の斬ル姫陣営は
+残りのトーナメント枠に
+無事残ったらしいじゃない
+
+# voice 4019 "failnaught_a_0007"
+# face 167 "smile"
+@フェイルノート
+あれええっ、アナタはっ？
+イキってたクセにっ？
+どうしたのっかなぁぁっ？
+
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0017"
+@アスカロン
+うううう………ッ！
+
+# textflame 0 0
+@
+勝者こそ正義
+この国の習わし
+アスカロンは返す言葉もない
+
+# face 3102311 "angry"
+# textflame 1 1
+@アスカロン
+私は、あなたの駒になるつもりは
+ありませんから…！
+
+# voice 4019 "failnaught_a_0009"
+# face 167 "normal"
+# textboxarrow 0 3
+@フェイルノート
+あなたという駒を拾ったのは私よ？
+
+# face 3102311 "normal"
+# textboxarrow 0 1
+@アスカロン
+フェイルノート
+あなたの得体が知れません…！
+
+# textboxarrow 0 3
+@フェイルノート
+言ったじゃない
+
+@フェイルノート
+私はファントムと呼ばれる存在
+理想郷への「鍵」として
+大陸中から狙われている悲劇の少女
+
+# textboxarrow 0 1
+@アスカロン
+それは知っています！
+私だって王直属の“カルマキラーズ”
+「鍵」の話くらいは…！
+
+# voice 4019 "failnaught_a_0021"
+# face 167 "smile"
+# textboxarrow 0 3
+@フェイルノート
+あっ、ごめんなさいっ
+トーナメントに残ってないから
+そんなことさえ忘れていたわっ
+
+# voice 310231 "ascalon_a_0015"
+# face 3102311 "sad"
+# textboxarrow 0 1
+@アスカロン
+ううううッ！
+
+# face 3102311 "angry"
+@アスカロン
+…
+…あなたのその力が
+妬ましい…！
+
+# face 167 "normal"
+# textboxarrow 0 3
+@フェイルノート
+だから、従わない？
+
+# face 3102311 "normal"
+# textboxarrow 0 1
+@アスカロン
+…
+
+# textboxarrow 0 3
+@フェイルノート
+じゃあ、なぜあなたは来たの？
+
+@フェイルノート
+明日の総武会本戦トーナメント
+私の陣営に加わり
+戦いたいとあなたが言ったのよ？
+
+@フェイルノート
+私が無理強いしたつもりはないけど
+
+# textflame 0 0
+@
+フェイルノートの視線は
+アスカロンの覚悟を
+試しているように見えた
+
+@
+アスカロンは渋々、口を開く
+
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+…あくまで
+私自身の望みを叶える為です
+
+# textboxarrow 0 3
+@フェイルノート
+教えてくれる？
+
+# textboxarrow 0 1
+@アスカロン
+………
+
+@アスカロン
+───ジャイアント・キリング
+
+# face 167 "smile"
+# textboxarrow 0 3
+@フェイルノート
+…ヘェ…！？
+
+# textflame 0 0
+@
+フェイルノートの瞳が輝く
+
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+ケイオスリオンの国民は皆例外なく
+ルシファー様によって
+“闘争心”を埋め込まれています
+
+# face 167 "normal"
+# textboxarrow 0 3
+@フェイルノート
+支配者にのみ与えられた特権
+世界を捻じ曲げる強大な力
+国民の思想を歪ませ導く…
+
+@フェイルノート
+霊装支配-ギアハック-によって
+
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0007"
+@アスカロン
+…知っているんですね
+
+# voice 4019 "failnaught_a_0003"
+# textboxarrow 0 3
+@フェイルノート
+口を挟んでごめんなさい
+今はあなたの手番だったわ
+
+# textboxarrow 0 1
+@アスカロン
+…その“闘争心”に突き動かされ
+民は互いに争い続ける。終わりなく
+それがこの国の歴史
+
+@アスカロン
+私は
+平和の礎を作りたいのです
+
+# textboxarrow 0 3
+@フェイルノート
+国を歪める支配者ルシファー
+その巨悪-ジャイアント-を
+倒したいと
+
+# textboxarrow 0 1
+@アスカロン
+…はい
+
+# voice 4019 "failnaught_a_0039"
+# face 167 "smile"
+# textboxarrow 0 3
+@フェイルノート
+ご立派ぁ
+敗け越しのクセに
+
+# face 3102311  "angry"
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0038"
+@アスカロン
+ううっ、ううぅぅっ！
+
+# textboxarrow 0 3
+@フェイルノート
+「世界を平和に」なんて
+随分な理想家、夢想家なのね
+
+# face 3102311  "normal"
+# textboxarrow 0 1
+@アスカロン
+………これは
+聖人ぶる為じゃありません
+
+@アスカロン
+私の為、です
+
+# voice 4019 "failnaught_a_0041"
+# textboxarrow 0 3
+@フェイルノート
+ますますご立派
+
+# textboxarrow 0 1
+@アスカロン
+私のキラーズ「アスカロン」は
+怪力を振るう代償として
+呪いが込められています…
+
+# textboxarrow 0 3
+# face 167 "normal"
+@フェイルノート
+巨人化…サイクロプスの呪い
+
+# face 3102311  "surprise"
+# textboxarrow 0 1
+@アスカロン
+…どこまで知って…？
+
+# textboxarrow 0 3
+@フェイルノート
+敵を知り己を知れば、ね
+
+# textboxarrow 0 1
+@アスカロン
+…
+
+# textboxarrow 0 3
+@フェイルノート
+さ、あなたの手番
+
+# face 3102311  "sad"
+# textboxarrow 0 1
+@アスカロン
+…怪力を振るえば、その分だけ
+巨人化の呪いが
+膨らむのがわかるんです
+
+@アスカロン
+戦場での昂ぶり、恐れ、痛み
+私が闘いの中で感じる全てが
+巨人の餌として貪られている感覚…
+
+@アスカロン
+いずれこの身体も内側から食い破られ
+巨人に取って代わられる…
+力が、意識が、私が奪われる…
+
+# textboxarrow 0 3
+@フェイルノート
+…
+
+# face 3102311  "normal"
+# textboxarrow 0 1
+@アスカロン
+でも、それは戦いさえなければ
+この国に闘争さえなくなれば
+恐れる必要もなくなるはずです
+
+@アスカロン
+平和が訪れることで
+私が巨人と化さなくてもよくなる…
+
+@アスカロン
+巨人の力を
+飼い殺すことが出来るはず
+
+# textboxarrow 0 3
+@フェイルノート
+まさしく
+“ジャイアント・キリング”ね
+
+# textflame 0 0
+@
+アスカロンは無言で頷く
+
+# voice 4019 "failnaught_a_0007"
+# face 167 "smile"
+# textflame 1 1
+@フェイルノート
+私にバカにされ続けてまで
+踏みとどまろうとは
+見上げた覚悟ね
+
+# textboxarrow 0 1
+@アスカロン
+先の闘い、私達以外の陣営の動きが
+統率され過ぎていました
+誰かが糸を引いていたとしか
+
+@アスカロン
+闘争が支配するこの地で
+競争相手を全て懐柔し
+配下に加える手腕とその計略
+
+# face 167 "normal"
+# serif 0
+# move 167 4 0
+# textwindow "moya"
+# textboxarrow 0 0
+@フェイルノート
+この子を利用すれば、あるいは
+
+# textflame 0 0
+@
+それまでヘラヘラと
+アスカロンを罵倒していた少女から
+笑みが消える
+
+# voice 4019 "failnaught_a_0002"
+# textflame 1 1
+# textwindow "nomal"
+# serif 0
+# textboxarrow 0 3
+@フェイルノート
+私の駒になるつもりはない
+自分の為に望みを叶えたい
+私を利用したうえで？
+
+# face 167 "angry"
+@フェイルノート
+…舐められたものね
+
+# face 3102311 "surprise"
+# voice 310231 "ascalon_a_0031"
+# textboxarrow 0 1
+@アスカロン
+そ、そんなつもりでは…
+
+# face 167 "normal"
+# textboxarrow 0 3
+@フェイルノート
+この闘いにルールなんてない
+「闘争心が尽きるまで」
+…だそうじゃない
+
+@フェイルノート
+ならば敗けても
+闘う意思のある者は歓迎する
+共に総武会を登りつめるつもり
+
+@フェイルノート
+ただし
+
+@フェイルノート
+…私の駒となって
+闘う意思のある者は
+
+# face 3102311 "normal"
+# textboxarrow 0 1
+@アスカロン
+………
+
+# textboxarrow 0 3
+@フェイルノート
+あなたは焦っている
+
+@フェイルノート
+一体何に？
+
+;;演出：暗転（場面転換）
+;;背景：ケイオスリオン王都・夜
+# textwindow "close"
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.7
+# waitandnext 0.7
+
+# background "300_devil_night02"
+# pos 3102311 3
+# mask 3102311 off
+# face 3102311 "sad"
+# alpha 167 0 0
+# waitandnext 0.1
+
+# imagealpha 0 0 0.7
+# imagerightout 0 0.7
+# waitandnext 0.7
+
+# textwindow "normal"
+# textboxarrow 0 2
+@アスカロン
+………最後の大会だから
+
+@アスカロン
+なのに…
+
+# textflame 0 0
+@
+フェイルノート陣営の宿地から離れ
+独り、夜風に当たるアスカロン
+
+@
+アスカロンは
+きつく閉じた上着の腹部を
+ぎゅっと押さえる
+
+# textflame 1 1
+@アスカロン
+…焦っている。私
+
+# textflame 0 0
+@
+アスカロンが抱く巨人の呪いは年々
+彼女の精神を、身体を蝕み続けている
+
+@
+更にその呪いは、彼女と繋がれている
+大悪魔レヴィアタンの力と
+いつしか結びついた
+
+@
+レヴィアタンが司るは“嫉妬”
+
+@
+魔から力を得た呪いの巨人は
+彼女の心体を妬み、羨み
+得ようとしている
+
+# face 3102311 "normal"
+# textflame 1 1
+@アスカロン
+…次の大会までは、保てない
+
+@アスカロン
+今大会までの数年間、鍛錬を重ねた
+フェイルノートの駒になんて
+ならなくても、私は…
+
+@アスカロン
+…
+
+# face 3102311 "sad"
+# voice 310231 "ascalon_a_0026"
+@アスカロン
+私…また、妬んでる
+
+@アスカロン
+素直に、力を借りればいいのに
+
+@アスカロン
+………冷たいんだ。私
+
+# textflame 0 0
+# bgm "stop" 
+@
+突如、頭上に感じる気配
+
+# face 3102311 "angry"
+# textflame 1 1
+@アスカロン
+ッ！？
+
+# se "SE_5200"
+# alpha 3102311 0 0.2
+# textflame 0 0
+@
+アスカロンは咄嗟に身を引く
+
+;;演出・SE：斧が振り下ろされる効果、音、打撃音
+# textwindow "close"
+# se "SE_9018"
+# fadein "red" 0.3
+# shake 0 0.3
+# effectstart 1000
+# waitandnext 0.3
+
+# se "SE_9171"
+# shake 0 0.4
+# waitandnext 0.4
+
+# bgmfile "bgm295_296" "BgmLostRagnarokBattle003" 0
+# textwindow "normal"
+@
+つい先程まで彼女がいた場所に
+大斧が振り下ろされる
+石畳が無残に砕かれ、弾け飛ぶ
+
+# alpha 3201911 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_0029"
+# textwindow "toge"
+;;※シユウ
+@？？？
+うがあああぁぁ！
+
+# textflame 0 0
+@
+大斧が引きずられ
+その奥の闇から姿を現したのは…
+
+# alpha 3201911 0 0.5
+# face 3102311  "surprise"
+# alpha 3102311  1 0.5
+# textflame 1 1
+# voice 310231 "ascalon_a_0022"
+# textwindow "normal"
+@アスカロン
+………シユウ…！？
+
+# alpha 3102311 0 0.5
+# alpha 3201911 1 0.5
+# brightness 3201911 1 0
+# textflame 0 0
+@
+シユウ D.plug ベルゼブブ
+
+# face 3201911 "happy"
+# textflame 1 1
+@シユウ
+くされえんってやつだな！
+アスカロン！
+
+# alpha 3201911 0 0.5
+# face 3102311 "normal"
+# mask 3102311 on
+# alpha 3102311 1 0.5
+@アスカロン
+い、今の状況
+腐れ縁とは違うような…？
+
+# pos 3201911 4
+# mask 3201911 on
+# alpha 3201911 1 0
+# face 3201911 "angry"
+# rightin 3201911 0.4
+# face 3102311 "surprise"
+# move 3102311  2 0.4
+# textboxarrow 0 3
+# voice 320191 "chihyu_a_0010"
+@シユウ
+うがああああっ！
+
+# face 3102311 "sad"
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0038"
+@アスカロン
+ひゃっ、ひゃあああっ！？
+すみませんーっ！
+揚げ足取ってすみませんーっ！
+
+# textflame 0 0
+@
+シユウが雄たけびを上げるたび
+周囲の空気がビリビリと震える
+
+# face 3201911 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@シユウ
+ふふふ！
+あしたのしょうぶ
+つけにきてやったぞ！
+
+# textflame 0 0
+@
+明日の勝負
+つまり、総武会トーナメント
+
+@
+そう、フェイルノート陣営は明日
+シユウ陣営と闘うことになるのだ
+
+# face 3102311 "normal"
+# textflame 1 1
+# voice 320191 "chihyu_a_0004"
+@シユウ
+こんどのたいかいも！
+シユウがかちぬく！
+シユウがかちぬくんだ！
+
+# textflame 0 0
+@
+シユウ陣営は昨年の覇者である
+
+@
+当然、ルシファーには及ばなかったが
+今大会でも優勝最有力候補である
+
+# face 3102311  "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+…トーナメント戦前に
+斬ル姫を潰してしまおうと…！？
+暗殺でもしようと…！？
+
+# face 3102311 "surprise"
+# textboxarrow 0 3
+# voice 320191 "chihyu_a_0005"
+@シユウ
+にくをもらった！
+
+# face 3102311  "angry"
+# textboxarrow 0 1
+@アスカロン
+肉で釣られたんですね！？
+陣営内の誰かに！
+
+# textboxarrow 0 3
+@シユウ
+おいしかった！
+
+# textboxarrow 0 1
+@アスカロン
+よ、よかったですね！
+
+# face 3201911 "angry"
+# textboxarrow 0 3
+# voice 320191 "chihyu_a_0029"
+@シユウ
+うがあああああっ！！
+
+# textflame 0 0
+@
+シユウは大斧を振り上げ
+再び吼える
+
+@
+王都全域に渡って響く咆哮
+もはや暗殺でもなんでもない
+
+@
+しかしこの国では
+闘争こそすべきこと
+
+@
+こういった行動はむしろ
+是とされる
+
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+ルール無用なんですね…！
+
+@アスカロン
+その思い切りが、羨ましい…ッ！
+
+# textboxarrow 0 3
+# voice 320191 "chihyu_a_battle_0004"
+@シユウ
+いっくぞおおぉぉ！！
+
+# textboxarrow 0 1
+@アスカロン
+敗けない…！
+敗けられない…！！

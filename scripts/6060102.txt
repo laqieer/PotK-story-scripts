@@ -1,0 +1,428 @@
+;;【EP1】崇敬歓待～先手～戦闘後
+;;//背景：森
+# script "lisp"
+# background "forest"
+# bgm "bgm005" 0
+# body 41
+# pos 41 3
+# scale 41 0.8 0
+# mask 41 off
+# body 500261
+# pos 500261 2
+# scale 500261 0.8 0
+# alpha 500261 0 0
+# body 300181
+# pos 300181 4
+# alpha 300181 0 0
+# scale 300181 0.8 0
+# textflame 1 1
+# textboxarrow 0 2
+# chara 41
+@黒奏官
+…ずいぶん、
+派手にやられたようだな
+
+# alpha 41 0 0.5
+# alpha 500261 1 0.5
+# alpha 300181 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 300181
+# voice 30018 "ronginusu_k_0031"
+@エンヴィ
+すみません…
+マスター…
+
+# textboxarrow 0 1
+# chara 500261
+# voice 50026 "furaikugeru_k_0013"
+@プライド
+アンビリィバボォだよ、マスター！
+わたしが…こんなベァッドな
+気分にさせられるなんてっ…
+
+# alpha 41 1 0.5
+# alpha 500261 0 0.5
+# alpha 300181 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 41
+@黒奏官
+まさか復活してしまうとは…
+初見でアレの相手は
+分が悪かっただろう
+
+# textboxarrow 0 2
+# chara 41
+@黒奏官
+ご苦労
+下がって休んでいろ
+
+# alpha 41 0 0.5
+# alpha 500261 1 0.5
+# alpha 300181 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 500261
+@プライド
+リベンジするデス！
+マスター、今度こそあいつらを
+キルするから――
+
+# alpha 41 1 0.5
+# alpha 500261 0 0.5
+# alpha 300181 0 0.5
+# textboxarrow 0 2
+# chara 41
+@黒奏官
+分かっている
+そう、焦るな
+
+# alpha 41 0 0.5
+# alpha 500261 1 0.5
+# alpha 300181 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 500261
+# voice 50026 "furaikugeru_k_0013"
+@プライド
+ソォリー…
+
+# textboxarrow 0 3
+# chara 300181
+@エンヴィ
+し、失礼いたします…
+
+;;//プライドとエンヴィが下がる
+# se "SE_0719"
+# body 100161
+# pos 100161 2
+# scale 100161 0.8 0
+# alpha 100161 0 0
+# body 400151
+# pos 400151 4
+# scale 400151 0.8 0
+# alpha 400151 0 0
+# alpha 500261 0 0.5
+# alpha 300181 0 0.5
+# textboxarrow 0 0
+# waitandnext 1
+;;//ラースとラストがやって来る
+
+# alpha 400151 1 0.5
+# alpha 100161 1 0.5
+# textboxarrow 0 1
+# chara 100161
+# voice 10016 "masamune_k_0001"
+@ラース
+お呼びでしょうか、主君
+
+# textboxarrow 0 3
+# chara 400151
+@ラスト
+エンヴィとプライドは
+任務に失敗したようですね
+
+# alpha 41 1 0.5
+# alpha 400151 0 0.5
+# alpha 100161 0 0.5
+# textboxarrow 0 2
+# chara 41
+@黒奏官
+起きなくて良い奇跡が起こって
+しまったようだ
+早急に手を打つ必要がある
+
+# textboxarrow 0 2
+# chara 41
+@黒奏官
+ラース、ラスト
+今から指定する地に向かい、
+全てを破壊してこい
+
+# textboxarrow 0 2
+# chara 41
+@黒奏官
+いいか“全て”だ
+一つ残らず消し去ってこい
+
+# alpha 41 0 0.5
+# alpha 400151 1 0.5
+# alpha 100161 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 100161
+# voice 10016 "masamune_k_0033"
+@ラース
+君命、しかと承りました！
+
+# textboxarrow 0 3
+# chara 400151
+# voice 40015 "arutemisu_k_0033"
+@ラスト
+お任せ下さい
+奇跡は二度も起きません
+
+;;//ラースとラストが立ち去る
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# alpha 400151 0 0.5
+# alpha 100161 0 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+# alpha 41 1 0.5
+# textboxarrow 0 2
+# chara 41
+@黒奏官
+さすがに“奴ら”が
+目覚めるのはまずいな…
+なんとしても食い止めねば
+
+# fadeout "black" 2
+# waitandnext 3
+;;//暗転
+
+;;――場面転換――
+# bgm "stop"
+# fadein "black" 0.5
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 41 0 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+# se "SE_9169"
+@古文書
+――ラグナロクの下に案内して
+もらえることになった私達は、
+途中、ある村に立ち寄った
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@古文書
+――そこで私達は、村人から
+大変な歓待を受けた
+
+;;//背景：村
+# body 502711
+# pos 502711 4
+# scale 502711 0.8 0
+# body 302511
+# pos 302511 2
+# scale 302511 0.8 0
+# body 75
+# pos 75 3
+# mask 75 off
+# scale 75 0.8 0
+# alpha 75 0 0
+# alpha 302511 0 0
+# alpha 502711 0 0
+# se "SE_4779"
+# imageset 1 "bg_white"
+# imagealpha 1 0 0
+# imagescale 1 10 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fillrect "white" 2.3 0 1
+# waitandnext 2.7
+
+# imagepos 1 0 0
+# imagealpha 1 1 0
+# fillrect "white" 1 1 0
+# waitandnext 0.1
+
+# alpha 302511 1 0.5
+# alpha 502711 1 0.5
+# background "foot_mountain_village"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# imagealpha 0 0 1
+# imagealpha 1 0 1
+# waitandnext 1.1
+
+# bgm "bgm002" 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+@村長
+ようこそお出で下さいました！
+ミネルヴァ様、フライシュッツ様
+お連れの方も、ようこそ
+
+# serif 1
+@村人１
+どうぞ、こちらへ
+すぐにお食事をお持ちいたしますので
+くつろいでいてください
+
+# serif 1
+@村の子ども達
+おっぱいお姉ちゃんだ！
+ちっちゃい姉ちゃんもいるぞーっ
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 502711
+# voice 5027 "freischotz_0005"
+@フライシュッツ
+うふふふふっ！
+みんな元気だった～？
+再会のハグしよ～♪
+
+# textboxarrow 0 1
+# chara 302511
+# voice 3025 "minerva_0004"
+@ミネルヴァ
+私達に気遣いは
+無用だと言っているのですが…
+ありがたいことですね
+
+# textflame 0 0
+@フレンネル
+すごいな…
+村を挙げての歓待じゃないか
+
+# alpha 302511 0 0.5
+# alpha 502711 0 0.5
+# alpha 75 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 75
+# voice 9979 "rebellion_0004"
+@リベリオン
+こいつらが大人気ってのは
+本当だったんだな
+
+# serif 1
+@村人２
+そこのアンタ！
+大人気だなんて言い方は
+キラープリンセス様に失礼だろっ
+
+# serif 1
+@村人３
+キラープリンセス様は
+私達を異族から守ってくださる
+英雄なんですよ！
+
+# serif 1
+@村人４
+崇め敬うのが当然じゃないか！
+口の利き方に気をつけろっ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 75
+@リベリオン
+おいおい…
+この人気ぶりは異常だぞ
+
+# textflame 0 0
+@フレンネル
+それだけ、彼女達が皆の希望に
+なっているということだ
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 75
+@リベリオン
+まあ、確かに実力は相当なもんだ
+あいつらが“こっち”に来てくれたら
+かなり助かるんだがな…
+
+# textflame 1 1
+# textboxarrow 0 0
+@村長
+さあさあ、お連れの方もどうぞ！
+キラープリンセス様のご来訪に
+乾杯いたしましょう
+
+;;//背景：村（夜）
+# bgm "stop"
+# fadeout "black" 3
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 3
+
+# bgm "bgm011" 0
+# background "foot_mountain_village_night"
+# fadein "black" 2
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 75
+@リベリオン
+おい！
+起きろ、フレンネルっ
+
+# textflame 0 0
+@フレンネル
+どうした、こんな夜更けに…？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 75
+@リベリオン
+遠くで火の手が上がってやがる！
+あの方角にはなにがあるんだ！？
+
+# textflame 0 0
+@フレンネル
+あっちは…確か町があったはずだ！
+異族の襲撃か！？
+急いで彼女達を起こそうっ
+
+# alpha 302511 1 0.5
+# alpha 502711 1 0.5
+# alpha 75 0 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 302511
+# voice 3025 "minerva_0027"
+@ミネルヴァ
+もう起きています
+ほら、行きますよフライシュッツ
+
+# textboxarrow 0 3
+# chara 502711
+@フライシュッツ
+ん～…？
+お肉美味し～♪
+
+# textboxarrow 0 1
+# chara 302511
+@ミネルヴァ
+寝ぼけて
+私に噛みつかないでください！
+
+# alpha 302511 0 0.5
+# alpha 502711 0 0.5
+# alpha 75 1 0.5
+# textboxarrow 0 2
+# chara 75
+# voice 9979 "rebellion_0026"
+@リベリオン
+ったく、大丈夫かよ！？

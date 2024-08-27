@@ -1,0 +1,720 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１３章 章タイトル「ラルゴカタストロフィ―攪乱―」
+;;第2話－１２　タイトル：暴走の真実
+;;2_12_0
+;;スクリプト最後の背景：マサムネ城内
+;;-----------------------------------------
+# script "lisp"
+# background "masamune_arena"
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 2
+# alpha 5401721 0 0
+# mask 5401721 off
+;;擬装フライシュッツzxv
+# body 5502721
+# pos 5502721 3
+# scale 5502721 0.8 0
+# layer 5502721 3
+# alpha 5502721 0 0
+# mask 5502721 off
+;;擬装エルキュール
+# body 5202521
+# pos 5202521 3
+# scale 5202521 0.8 0
+# layer 5202521 2
+# alpha 5202521 0 0
+# mask 5202521 off
+;;ミネルヴァ・擬装・アーチャー
+# body 5302521
+# pos 5302521 3
+# scale 5302521 0.8 0
+# layer 5302521 2
+# alpha 5302521 0 0
+# mask 5302521 off
+;;天沼矛
+# body 300431
+# pos 300431 3
+# scale 300431 0.8 0
+# layer 300431 2
+# alpha 300431 0 0
+# mask 300431 off
+;;八咫鏡
+# body 500331
+# pos 500331 3
+# scale 500331 0.8 0
+# layer 500331 2
+# alpha 500331 0 0
+# mask 500331 off
+;;草薙剣
+# body 100441
+# pos 100441 3
+# scale 100441 0.8 0
+# layer 100441 2
+# alpha 100441 0 0
+# mask 100441 off
+;;カリス・聖鎖・アザゼル
+# body 5602511
+# pos 5602511 3
+# scale 5602511 0.8 0
+# layer 5602511 2
+# alpha 5602511 0 0
+# mask 5602511 off
+;;ヘレナ・D. plug・ロキ
+# body 5302811
+# pos 5302811 3
+# scale 5302811 0.8 0
+# layer 5302811 2
+# alpha 5302811 0 0
+# mask 5302811 off
+;;雑賀
+# body 502411
+# pos 502411 3
+# scale 502411 0.8 0
+# layer 502411 2
+# alpha 502411 0 0
+# mask 502411 off
+;;-----------------------------------------
+;;第2話－１２　タイトル：暴走の真実
+;;//背景：マサムネ城内
+;;//画面揺れ
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_0999"
+# shake 0 1
+# waitandnext 1
+
+# move 5302811 3 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ヘレナ
+逃げ道は確保してあるよ
+焦ることはない
+
+# alpha 5302811 0 0.5
+# move 5401721 2 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# mask 5401721 on
+# move 5502721 4 0
+# face 5502721 "angry"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+# textboxarrow 0 3
+@フライシュッツ
+待って～！
+下の階にいる雑賀ちゃん達も
+助けないとっ
+
+# face 5401721 "angry"
+# textboxarrow 0 1
+@スイハ
+私がいきます！
+
+# alpha 5502721 0 0.5
+# move 5302811 4 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 3
+@ヘレナ
+ああ、大丈夫
+そっちも織り込み済みだ
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 5401721 0 0
+# alpha 5302811 0 0
+# move 100441 3 0
+# face 100441 "sad"
+# alpha 100441 1 0
+# mask 100441 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 1004 "kusanagi_0028"
+# textboxarrow 0 2
+# textwindow "normal"
+@草薙剣
+ううっ…
+余は…こんなところで何をして
+おったのじゃ…？
+
+# voice 5003 "yatanokagami_0028"
+# alpha 100441 0 0.5
+# move 500331 3 0
+# face 500331 "sad"
+# alpha 500331 1 0.5
+# mask 500331 off
+# textboxarrow 0 2
+@八咫鏡
+むぅ…
+マサムネ達と戦っておったはず
+じゃが…
+
+# voice 3004 "amenonuboko_kyara_5001"
+# alpha 500331 0 0.5
+# move 300431 3 0
+# face 300431 "surprise"
+# alpha 300431 1 0.5
+# mask 300431 off
+# textboxarrow 0 2
+@天沼矛
+あら～？
+皆さんも物思いに耽っておられたの
+ですか～？
+
+# voice 5024 "saika_0028"
+# alpha 300431 0 0.5
+# move 502411 3 0
+# face 502411 "sad"
+# alpha 502411 1 0.5
+# mask 502411 off
+# textboxarrow 0 2
+@雑賀
+…うち、何で脇腹に怪我してるんす
+かね？
+
+# alpha 502411 0 0.5
+# move 100441 2 0
+# face 100441 "sad"
+# alpha 100441 1 0.5
+# mask 100441 on
+# move 5502721 4 0
+# face 5502721 "happy"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+# textboxarrow 0 3
+@フライシュッツ
+みんな目が覚めたんだね～っ
+はぐだよ、はぐ～！
+
+;;//フライシュッツが飛びついてくる
+# se "SE_0648"
+# textwindow "close"
+# move 5502721 3 0.2
+# waitandnext 0.2
+
+# face 100441 "worry"
+# textboxarrow 0 1
+# textwindow "normal"
+@草薙剣
+ぬおおっ…！
+じゃから、そのおっきいのを
+押しつけるでないわっ
+
+# alpha 5502721 0 0.5
+# alpha 100441 0 0.5
+# move 5401721 2 0
+# face 5401721 "angry"
+# alpha 5401721 1 0.5
+# mask 5401721 on
+# textboxarrow 0 1
+# move 5302811 4 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+@スイハ
+皆さん、話は後です
+急いでここから出ましょう
+
+# voice 530281 "herena_di_0004"
+# face 5302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+道案内はヘレナに任せてくれ
+信じられないかもしれないけどな
+…ふふっ
+
+# alpha 5401721 0 0.5
+# move 502411 2 0
+# face 502411 "angry"
+# alpha 502411 1 0.5
+# mask 502411 on
+# textboxarrow 0 1
+@雑賀
+よく分からないっすけど、
+やばそうなのは分かるんで、
+案内よろしくっす！
+
+# alpha 502411 0 0.5
+# alpha 5302811 0 0.5
+# move 300431 2 0
+# face 300431 "normal"
+# alpha 300431 1 0.5
+# mask 300431 on
+# move 500331 4 0
+# face 500331 "angry"
+# alpha 500331 1 0.5
+# mask 500331 on
+# textboxarrow 0 3
+@八咫鏡
+天沼矛！
+ボーッとしとらんで行くぞ！
+わらわの手を握れっ
+
+# textboxarrow 0 1
+@天沼矛
+はい、大丈夫ですよ～
+怖くありませんからね～
+
+# textboxarrow 0 3
+@八咫鏡
+お主のために言っとるんじゃ！
+まったく…
+
+# textwindow "close"
+# alpha 300431 0 0.5
+# alpha 500331 0 0.5
+# waitandnext 0.5
+
+;;//画面揺れ
+# se "SE_0999"
+;;//崩壊音
+# se "SE_0637"
+# shake 0 2.4
+# waitandnext 1
+
+;;//背景：マサムネ城
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "masamune_castle"
+# move 502411 2 0
+# face 502411 "normal"
+# alpha 502411 1 0
+# mask 502411 on
+# move 5302811 4 0
+# face 5302811 "usual"
+# alpha 5302811 1 0
+# mask 5302811 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "stop"
+# textboxarrow 0 1
+# textwindow "normal"
+@雑賀
+何とか外に出れたっすね…
+一体、どうなってんすか？
+
+# face 5302811 "surprise"
+# textboxarrow 0 3
+@ヘレナ
+ヘレナが城を壊したんだ
+このくらい造作もないことだが…
+おや？
+
+# se "SE_0992"
+# textwindow "close"
+# alpha 502411 0 0.5
+# alpha 5302811 0 0.5
+# waitandnext 1
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# voice 5027 "freischotz_0024"
+# move 5502721 3 0
+# face 5502721 "surprise"
+# alpha 5502721 1 0.5
+# mask 5502721 off
+# textboxarrow 0 2
+# textwindow "normal"
+@フライシュッツ
+キャアッ！
+お城から…
+黒い柱が飛び出てきたよー…
+
+# voice 530281 "herena_di_0015"
+# alpha 5502721 0 0.5
+# move 5401721 2 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# mask 5401721 on
+# move 5302811 4 0
+# face 5302811 "sad"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 3
+@ヘレナ
+これはヘレナも予想してなかったな…
+
+# textboxarrow 0 1
+@スイハ
+城が…完全に崩壊していきます…
+
+# serif 1
+@住民達
+うわああああ…！？
+助けてくれぇっ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 5401721 0 0.5
+# alpha 5302811 0 0.5
+# move 502411 3 0
+# face 502411 "angry"
+# alpha 502411 1 0.5
+# mask 502411 off
+# textboxarrow 0 2
+@雑賀
+皆さん、パニックに陥りそうっす
+避難誘導した方が良さそうっすね
+
+# alpha 502411 0 0.5
+# move 100441 3 0
+# face 100441 "angry"
+# alpha 100441 1 0.5
+# mask 100441 off
+# textboxarrow 0 2
+@草薙剣
+急ぎ、マスターと合流するのじゃ！
+
+;;//背景：町（２章で使用していたキトゥリス市街地の背景）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "006_town"
+# alpha 100441 0 0
+# move 5401721 2 0
+# face 5401721 "normal"
+# alpha 5401721 1 0
+# mask 5401721 on
+# move 5502721 4 0
+# face 5502721 "normal"
+# alpha 5502721 1 0
+# mask 5502721 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 1
+# textwindow "normal"
+@スイハ
+マサムネ城が跡形もなくなって
+しまって…代わりに黒い柱が…
+
+# face 5502721 "sad"
+# textboxarrow 0 3
+@フライシュッツ
+マサムネちゃん…
+パラシュちゃん…
+
+;;スイハ（独白）
+# voice 4017 "suiha_im_0046"
+# move 5401721 2 0
+# face 5401721 "sad"
+# textboxarrow 0 0
+# textwindow "moya"
+@スイハ
+フライシュッツ、お二人のことが
+気掛かりなんだろうな…
+声を掛けた方がいいかな…
+
+;;スイハ（独白）
+# face 5401721 "happy"
+# textboxarrow 0 0
+@スイハ
+よし！
+何か励ましの言葉をっ
+
+# voice 4017 "suiha_0002"
+# face 5401721 "normal"
+# textboxarrow 0 1
+# textwindow "normal"
+@スイハ
+あの…フライシュッツ…
+
+;;//ミネルヴァが現れる
+# se "SE_5575"
+# alpha 5401721 0 0.5
+# alpha 5502721 0 0.5
+# move 5302521 3 0
+# face 5302521 "usual"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+フライシュッツ！
+スイハ！
+
+# move 5302521 2 0.5
+# mask 5302521 on
+# move 5502721 4 0
+# face 5502721 "sad"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+# textboxarrow 0 3
+@フライシュッツ
+ミネルヴァちゃん！？
+ミネルヴァちゃ～ん！
+
+;;//フライシュッツがミネルヴァに飛びつく
+# se "SE_0648"
+# textwindow "close"
+# move 5502721 3 0.2
+# waitandnext 0.6
+
+# alpha 5502721 0 0.5
+# alpha 5302521 0 0.5
+# move 5401721 3 0
+# face 5401721 "sad"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 2
+# textwindow "normal"
+@スイハ
+ああっ…
+
+# voice 3025 "minerva_0002"
+# alpha 5401721 0 0.5
+# move 5302521 2 0
+# face 5302521 "usual"
+# alpha 5302521 1 0.5
+# mask 5302521 on
+# textboxarrow 0 1
+# move 5502721 4 0
+# face 5502721 "sad"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+@ミネルヴァ
+どうしたんですか、フライシュッツ？
+落ち込んでいるようですけど…
+
+# textboxarrow 0 3
+@フライシュッツ
+ううっ…実はねー…
+
+# alpha 5302521 0 0.5
+# alpha 5502721 0 0.5
+# move 5602511 2 0
+# face 5602511 "normal"
+# alpha 5602511 1 0.5
+# mask 5602511 on
+# textboxarrow 0 1
+# move 5302811 4 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+@カリス
+あ！ヘレナだ！
+久し振りだね～っ
+
+# textboxarrow 0 3
+@ヘレナ
+カリスか…
+こんなところでどうしたんだ？
+
+# voice 560251 "chalice_di_0042"
+# face 5602511 "happy"
+# textboxarrow 0 1
+@カリス
+えへへっ
+みんなをグラ姉のところに案内
+してるんだ
+
+# voice 530281 "herena_di_0039"
+# face 5302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+テピ姉さんのところに？
+なるほど…そういう手もあるか
+
+# voice 2025 "hercule_0002"
+# alpha 5602511 0 0.5
+# alpha 5302811 0 0.5
+# move 5202521 2 0
+# face 5202521 "normal"
+# alpha 5202521 1 0.5
+# mask 5202521 on
+# textboxarrow 0 1
+# move 5401721 4 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# mask 5401721 on
+@エルキュール
+スイハ、お疲れ様です！
+マサムネとパラシュはどちらにっ？
+
+# face 5401721 "sad"
+# textboxarrow 0 3
+@スイハ
+逃がしてしまいました…
+
+# face 5202521 "happy"
+# textboxarrow 0 1
+@エルキュール
+そうですか…
+大丈夫ですよ、スイハ！
+
+# textboxarrow 0 1
+@エルキュール
+私達もロンギヌスとレーヴァテインを
+追っているところですから
+
+# face 5401721 "normal"
+# textboxarrow 0 3
+@スイハ
+そ、そう…
+
+# alpha 5202521 0 0.5
+# alpha 5401721 0 0.5
+# move 5302521 2 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 on
+# textboxarrow 0 1
+# move 5502721 4 0
+# face 5502721 "normal"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+@ミネルヴァ
+恐らく彼女達はアルテミスのいる地に
+集まるつもりでしょう
+
+# textboxarrow 0 1
+@ミネルヴァ
+そこで決着をつけなければ
+なりません
+
+# face 5502721 "sad"
+# textboxarrow 0 3
+@フライシュッツ
+でもね、ミネルヴァちゃん…
+
+# textboxarrow 0 1
+@ミネルヴァ
+ええ、分かっています
+カリスからある程度、聞きました
+
+# textboxarrow 0 1
+@ミネルヴァ
+迂闊に戦えば、私達も
+インテグラルキラーズも“終焉”に
+暴走させられるようですね
+
+# textboxarrow 0 1
+@ミネルヴァ
+ですので、別の方法を模索しながら
+移動してきたんですけれど…
+
+;;//bgm463_464_block
+# alpha 5302521 0 0.5
+# alpha 5502721 0 0.5
+# move 5401721 2 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# mask 5401721 on
+# move 5302811 4 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 3
+@ヘレナ
+ヘレナに名案がある
+
+# voice 4017 "suiha_0022"
+# face 5401721 "surprise"
+# textboxarrow 0 1
+@スイハ
+名案ですか…？
+
+# voice 560251 "chalice_di_0041"
+# alpha 5401721 0 0.5
+# move 5602511 2 0
+# face 5602511 "happy"
+# alpha 5602511 1 0.5
+# mask 5602511 on
+# textboxarrow 0 1
+@カリス
+ヘレナ、すご～い！
+どんなのっ？
+
+# face 5302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+テピ姉さんと会ってもらう
+インテグラルキラーズとの
+決着の地で
+
+# alpha 5602511 0 0.5
+# alpha 5302811 0 0.5
+# move 5401721 3 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 2
+@スイハ
+決着の地…
+
+# alpha 5401721 0 0.5
+# move 5202521 3 0
+# face 5202521 "normal"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# textboxarrow 0 2
+@エルキュール
+分かりました！
+皆さん、行きましょう！
+
+# alpha 5202521 0 0.5
+# move 5302521 3 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+テピ姉さん…
+それは、グラ姉と
+同一人物なのでしょうか？
+
+# voice 560251 "chalice_di_0003"
+# alpha 5302521 0 0.5
+# move 5602511 2 0
+# face 5602511 "normal"
+# alpha 5602511 1 0.5
+# mask 5602511 on
+# textboxarrow 0 1
+# move 5302811 4 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+@カリス
+そうだよ！
+言ってなかったっけ？
+
+#setnextbgmblock 2
+# textboxarrow 0 3
+@ヘレナ
+グラ姉もテピ姉さんも愛称だ
+本名は…
+
+# textboxarrow 0 1
+@カリス
+グランテピエっていうんだよ！
+わたし達、ディスラプターズの
+リーダーなんだ！

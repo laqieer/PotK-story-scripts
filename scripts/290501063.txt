@@ -1,0 +1,358 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第５章
+;;第1話　タイトル：中心部防衛戦
+;;5_1_6_3
+;;スクリプト最後の背景：市街地（夕方）
+;;-----------------------------------------
+# script "lisp"
+# background "in_city_evening"
+# bgmfile "bgm419" "BgmIntegralNoahBattle003" 0
+;;-----------------------------------------
+;;巨大死霊
+# body 5810301
+# pos 5810301 3
+# scale 5810301 0.8 0
+# layer 5810301 2
+# alpha 5810301 0 0
+# mask 5810301 off
+;;シタ
+# body 3201611
+# pos 3201611 3
+# scale 3201611 0.8 0
+# layer 3201611 2
+# alpha 3201611 0 0
+# mask 3201611 off
+;;ミトゥム
+# body 3200511
+# pos 3200511 3
+# scale 3200511 0.8 0
+# layer 3200511 2
+# alpha 3200511 0 0
+# mask 3200511 off
+;;バルムンク
+# body 3100911
+# pos 3100911 3
+# scale 3100911 0.8 0
+# layer 3100911 2
+# alpha 3100911 0 0
+# mask 3100911 off
+;;グラム
+# body 3100811
+# pos 3100811 3
+# scale 3100811 0.8 0
+# layer 3100811 2
+# alpha 3100811 0 0
+# mask 3100811 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;？？？（シタ）
+# move 3201611 3 0
+# face 3201611 "usual"
+# alpha 3201611 1 0
+# mask 3201611 off
+# textflame 1 1
+# textboxarrow 0 2
+@？？？
+ミトゥムちゃん、
+そちらに行きましたよ
+
+# voice 320051 "mitwumu_t_0033"
+# alpha 3201611 0 0.5
+# move 3200511 3 0
+# face 3200511 "angry"
+# alpha 3200511 1 0.5
+# mask 3200511 off
+# textboxarrow 0 2
+@ミトゥム
+任せろ、シタ姉ちゃん！
+…じゃなくて、お任せ下さい
+
+# voice 320051 "mitwumu_t_unit_0008"
+# textboxarrow 0 2
+@ミトゥム
+迷える者に導きの歌を！
+
+;;//ミトゥムが巨大死霊を斬る
+# textwindow "close"
+# alpha 3200511 0 0.5
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# waitandnext 0.6
+
+# se "SE_4601"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_0866"
+# textboxarrow 0 2
+# textwindow "normal"
+@？？？
+ＧＹＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ
+ＡＡＡＡＡＡＡＡＡＡＡ…
+
+# voice 320161 "shita_t_0003"
+# alpha 5810301 0 0.5
+# move 3201611 3 0
+# face 3201611 "usual"
+# alpha 3201611 1 0.5
+# mask 3201611 off
+# textboxarrow 0 2
+@シタ
+はい
+よく出来ましたね
+それでは、わたしが…
+
+# voice 320161 "shita_t_battle_0004"
+# textboxarrow 0 2
+@シタ
+契約の下、断罪します！
+
+;;//シタが巨大死霊を斬る
+# textwindow "close"
+# alpha 3201611 0 0.5
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# waitandnext 0.6
+
+# se "SE_4601"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_0867"
+# textboxarrow 0 2
+# textwindow "nomal"
+@？？？
+ＧＹＡＡＡＡＡＡＡＡＡＡＡ…
+
+;;//巨大死霊が消える
+# se "SE_5215"
+# textwindow "close"
+# alpha 5810301 0 1
+# waitandnext 1
+
+# voice 320051 "mitwumu_t_0041"
+# move 3200511 2 0
+# face 3200511 "normal"
+# alpha 3200511 1 0.5
+# mask 3200511 on
+# textboxarrow 0 1
+# move 3201611 4 0
+# face 3201611 "usual"
+# alpha 3201611 1 0.5
+# mask 3201611 on
+# textwindow "normal"
+@ミトゥム
+やったぜ、シタ姉ちゃん！
+…あ、いえっ
+さすがです、シタお姉様
+
+# voice 320161 "shita_t_0004"
+# face 3201611 "happy"
+# textboxarrow 0 3
+@シタ
+ミトゥムちゃんも
+きちんと言われた通りに動いて
+くれましたね♪
+
+# voice 320051 "mitwumu_t_0005"
+# face 3200511 "happy"
+# textboxarrow 0 1
+@ミトゥム
+えへへっ♪
+お褒めいただき、感謝します
+
+# face 3201611 "angry"
+# textboxarrow 0 3
+@シタ
+さあ、次に行きますよ
+災いは全て叩き潰します
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 3200511 0 0
+# alpha 3201611 0 0
+# move 5810301 3 0
+# alpha 5810301 1 0
+# mask 5810301 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# se "SE_0854"
+# textboxarrow 0 2
+# textwindow "normal"
+@？？？
+ＧＹＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ
+ＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ！！
+
+# alpha 5810301 0 0.5
+# move 3100811 2 0
+# face 3100811 "normal"
+# alpha 3100811 1 0.5
+# mask 3100811 on
+# textboxarrow 0 1
+# move 3100911 4 0
+# face 3100911 "sad"
+# alpha 3100911 1 0.5
+# mask 3100911 on
+@？？？
+ご覧、バルムンク
+何て醜悪な怪物だろう
+
+# voice 310091 "barumunku_t_0026"
+# textboxarrow 0 3
+@バルムンク
+本当ね、グラム
+とても恐ろしいわ…
+
+# textboxarrow 0 1
+@グラム
+安心して
+私が君を守るからね
+
+# voice 310091 "barumunku_t_0004"
+# face 3100911 "normal"
+# textboxarrow 0 3
+@バルムンク
+嬉しいわ、グラム！
+でも…私だって、あなたの力に
+なりたいのっ
+
+# voice 310081 "guramu_t_0003"
+# face 3100811 "shy"
+# textboxarrow 0 1
+@グラム
+ああ、美しきバルムンク
+君のたおやかな手を血で汚すわけには
+いかないよっ
+
+# face 3100911 "shy"
+# textboxarrow 0 3
+@バルムンク
+ああ、気高きグラム
+あなたの優しさに溺れてしまいそう
+
+# se "SE_0865"
+# alpha 3100811 0 0.5
+# alpha 3100911 0 0.5
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# textboxarrow 0 2
+@？？？
+ＧＹＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ
+ＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ！！
+
+# alpha 5810301 0 0.5
+# move 3100811 2 0
+# face 3100811 "sad"
+# alpha 3100811 1 0.5
+# mask 3100811 on
+# textboxarrow 0 1
+# move 3100911 4 0
+# face 3100911 "sad"
+# alpha 3100911 1 0.5
+# mask 3100911 on
+@グラム
+…騒がしいな
+
+# textboxarrow 0 3
+@バルムンク
+騒がしいわね…
+
+# face 3100911 "angry"
+# textboxarrow 0 3
+@バルムンク
+私とグラムの会話を邪魔するなんて…
+摘み取るしかないわね
+
+# voice 310081 "guramu_t_0032"
+# face 3100811 "angry"
+# textboxarrow 0 1
+@グラム
+同感だ
+君の心の平穏は私が守るよ！
+
+# se "SE_0854"
+# alpha 3100811 0 0.5
+# alpha 3100911 0 0.5
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# textboxarrow 0 2
+@？？？
+ＧＹＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ
+ＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ！！
+
+# alpha 5810301 0 0.5
+# move 3100811 2 0
+# face 3100811 "angry"
+# alpha 3100811 1 0.5
+# mask 3100811 on
+# move 3100911 4 0
+# face 3100911 "angry"
+# alpha 3100911 1 0.5
+# mask 3100911 on
+# textboxarrow 0 0
+@グラム＆バルムンク
+静かにしてもらおうか！
+静かにしなさい！
+
+;;//二人が巨大死霊を斬る
+# textwindow "close"
+# alpha 3100811 0 0.5
+# alpha 3100911 0 0.5
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# waitandnext 0.6
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# se "SE_0867"
+# sedelay "SE_5215" 0.8
+# textboxarrow 0 2
+# textwindow "normal"
+@？？？
+ＧＹＡＡＡＡＡＡＡＡＡＡＡ…
+
+# voice 310091 "barumunku_t_0022"
+# alpha 5810301 0 0.5
+# move 3100811 2 0
+# face 3100811 "normal"
+# alpha 3100811 1 0.5
+# mask 3100811 on
+# move 3100911 4 0
+# face 3100911 "surprise"
+# alpha 3100911 1 0.5
+# mask 3100911 on
+# textboxarrow 0 3
+@バルムンク
+あら、この程度？
+獣と大差がないわね
+
+# face 3100811 "angry"
+# textboxarrow 0 1
+@グラム
+何人たりとも私達の町を穢させは
+しない！
+人々の営みに平穏あれ！

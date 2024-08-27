@@ -1,0 +1,415 @@
+;;-----------------------------------------
+;;SEA_7_0
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown_night"
+# bgm "stop"
+;;-----------------------------------------
+;;マサムネ
+# body 100111
+# pos 100111 2
+# scale 100111 0.8 0
+# layer 100111 4
+# alpha 100111 0 0
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 1 0
+# face 270 "surprise"
+;;マナナン
+# body 6504011
+# pos 6504011 3
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 3
+# scale 6603811 0.8 0
+# layer 6603811 3
+# mask 6603811 off
+# alpha 6603811 0 0
+;;メギド
+# body 500611
+# pos 500611 4
+# scale 500611 0.8 0
+# layer 500611 2
+# mask 500611 off
+# face 500611 "amazed"
+# alpha 500611 1 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 4
+;;-----------------------------------------
+;;背景：下町（夜）：in_downtown_night
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+# bgm "bgm003" 0
+# voice 9917 "mimir_navikan_0023"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+ロンギヌスさんがいなくなった…
+
+# voice 5006 "megido_0015"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+そうなの！
+行方不明なのよ！
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+私も懸命に探し回ったけれど
+どこにもいなくて…
+
+# alpha 270 0 0.3
+# voice 1001 "masamune_0028"
+# face 100111 "unhappy"
+# alpha 100111 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+ふむ…
+気持ちは分かるが、
+そこまでの大事とは――
+
+# voice 5006 "megido_0009"
+# face 500611 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+何ですって！？
+貴方、おしおきが必要ね
+
+;;メギドがマサムネに迫る
+# move 100111 1 1.2
+# move 500611 3 1
+# textboxarrow 0 0
+# waitandnext 1.5
+
+;;選択肢
+# select "少し落ち着いて" "select_label_01" "話を聞くから" "select_label_02"
+何ですって！？
+貴方、おしおきが必要ね
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# move 100111 2 1
+# voice 5006 "megido_0031"
+# face 500611 "sad"
+# move 500611 4 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+あら、ごめんなさい
+私としたことが…
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# move 100111 2 1
+# face 500611 "sad"
+# move 500611 4 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+マスターは理解が早くて助かるわね
+
+# label "select_label_end"
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# voice 9917 "mimir_navikan_0002"
+# alpha 270 1 0.3
+# alpha 100111 0 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+ロンギヌスさんがいなくなる前、
+何か変わったことはありません
+でしたか？
+
+# bgmfile "bgm409" "BgmIntegralNoahEvent" 0
+# voice 5006 "megido_0028"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+変わったことねぇ…
+強いて言うなら、カシウスが造った
+学園に行ったことかしら
+
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+カシウスさんの学園！
+私達も伺いましたっ
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+そこで何か調べ物をしていたのよ
+図書館で何冊も本を読んで
+随分、真剣な様子だったわね…
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+こんなことになるのなら、
+何を調べていたのか
+聞いておけば良かったわ
+
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+ロンギヌスさんは学園で行方が
+分からなくなったのですか？
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+いいえ、違う
+学園での調べ物を終えた後、
+いつもの教会に帰ったのよ
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+そこで「九日間、祈りを捧げる」と
+言い出したの
+
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+九日間ですかっ？
+とても長いお祈りですね…
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+ロンギヌスの信仰心が
+本物であることの証左よ
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+あの方は聖槍…穢れを知らぬ
+崇高なる存在…
+
+# alpha 270 0 0.3
+# alpha 100111 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+メギドのロンギヌス信奉は
+少々行きすぎていると思うがな
+
+# face 500611 "mad"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+お黙りなさい！
+焼き尽くしますよ
+
+# alpha 270 1 0.3
+# alpha 100111 0 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+あ、あのっ
+ロンギヌスさんは九日間、教会に
+籠もっておられたのですか？
+
+# face 500611 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+…私が確認できたのは、十日目の朝
+様子を見に行ったとき
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+教会のどこにもロンギヌスの姿が
+なかったということだけよ
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+でも、ロンギヌスが教会に籠もって
+から誰ひとり出入りしていないのは
+間違いないわ
+
+# face 500611 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+私がずっと外で見守っていたから！
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# alpha 270 0 0.3
+# alpha 500611 0 0.3
+# voice 650401 "manannan_ura_0040"
+# alpha 6504011 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@マナナン
+あ！それ聞いたことあるよ！
+確かストーカ――
+
+;;ミーミルが慌てて止める
+# move 6504011 4 0.3
+# leftin 270 0.5
+# face 270 "angry"
+# alpha 270 1 0
+# voice 9917 "mimir_navikan_0012"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+マナナンさん、
+それ以上はいけません！
+
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+# alpha 6504011 0 0.3
+# alpha 270 0 0.3
+# voice 660381 "maclir_ura_0004"
+# face 6603811 "shy"
+# alpha 6603811 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@マクリル
+ずっと側にいてあげたんだね…
+羨ましいなぁ
+
+# alpha 6603811 0 0.3
+# move 500611 3 0
+# mask 500611 off
+# voice 5006 "megido_0001"
+# alpha 500611 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@メギド
+マスター！
+ロンギヌスの捜索を手伝って
+もちろん手伝うわよね？
+
+;;メギドが迫る
+# scale 500611 1 1
+# textboxarrow 0 0
+# waitandnext 1.5
+
+;;選択肢
+# select "お、おうっ" "select_label_03" "善処します…" "select_label_03"
+マスター！
+ロンギヌスの捜索を手伝って
+もちろん手伝うわよね？
+
+# label "select_label_03"
+# scale 500611 0.8 0.5
+# voice 5006 "megido_0003"
+# textflame 1 1
+# textboxarrow 0 2
+@メギド
+そう…それでいいのよ
+では、何をすればいいかしら？
+
+;;選択肢
+# select "情報が必要だね" "select_label_04" "学園が気になるな" "select_label_04" "ロンギヌスの調べ物…" "select_label_04"
+そう…それでいいのよ
+では、何をすればいいかしら？
+
+# label "select_label_04"
+# move 500611 4 0.5
+# alpha 270 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+やはり学園でロンギヌスさんが
+何を調べていたのか知る必要が
+あると存じます
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+なるほど…
+では、学園にいきましょう
+マスター
+
+# alpha 270 0 0.3
+# voice 1001 "masamune_0011"
+# face 100111 "angry"
+# alpha 100111 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+待て！
+マスターはここで指揮を執って
+もらわなくては困る
+
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+ロンギヌスのことも心配だろうが、
+トーキョーの現状も憂慮すべき
+一大事なのだ
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+あんな害虫…私が一匹残らず
+焼き尽くしてあげるわ
+
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+事はそんなに簡単ではない
+何故か異族側についてしまう
+キル姫もいて…
+
+;;マサムネとメギドが言い合う
+# alpha 100111 0 0.3
+# alpha 500611 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# move 270 3 0
+# face 270 "sad"
+# alpha 270 1 0.3
+# voice 9917 "mimir_navikan_0027"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+困りました…
+マスター様にはここにいて
+もらわなければなりません
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+ですが、ロンギヌスさんのことも
+心配ですし…
+
+;;選択肢
+# select "ミーミルに頼みたい" "select_label_05"
+ですが、ロンギヌスさんのことも
+心配ですし…
+
+# label "select_label_05"
+# bgm "stop"
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+えっ？
+私にですか…
+
+# fadeout "black" 2
+# waitandnext 2

@@ -1,0 +1,939 @@
+;;●3_1戦闘後
+# script "lisp"
+# background "altar"
+# bgmfile "bgm037" "BgmStory004" 0
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# body 101471
+# pos 101471 1
+# scale 101471 0.8 0
+# body 4
+# pos 4 5
+# scale 4 0.8 0
+# layer 4 2
+# layer 24 4
+;;ティルフィングボイス用
+# body 101411
+# alpha 101411 0 0
+# face 24 "angry"
+# face 4 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+こ、この世界を消させはしない！
+私が…アナタ達を止めてみせる！
+
+# face 101471 "sad"
+# textboxarrow 0 1
+# voice 10147 "tyrufing_k_0009"
+@グリード
+…止める？
+私にさえ手も足も出ないアナタが、
+どうやって？
+
+# face 4 "angry"
+# textboxarrow 0 3
+@トト
+…うがっ！！！
+
+;;※グリードに、ドンッと体当たりするトト
+# se "SE_0656"
+# serif 0
+# textwindow "close"
+# move 4 1 0.3
+# waitandnext 0.2
+
+# se "SE_4602"
+# shake 0 0.5
+# alpha 101471 0 0.3
+# alpha 4 0 0.5
+# waitandnext 1.0
+# voice 9998 "toto_0031"
+
+# serif 0
+# textwindow "normal"
+# move 101471 1 0
+# move 4 3 0
+# alpha 24 0 0.5
+# alpha 101471 1 0.5
+# alpha 4 1 0.5
+# face 101471 "angry"
+# textboxarrow 0 1
+@グリード
+！！
+子供…
+どういうつもり？
+
+# textboxarrow 0 2
+@トト
+ボ、ボクだって…
+見ているだけじゃない！！
+闘えるんだ！！
+
+# body 0
+# pos 0 5
+# scale 0 0.8 0
+# alpha 0 0 0
+# face 0 "usual"
+# face 101471 "surprise"
+# textboxarrow 0 1
+# voice 10147 "tyrufing_k_0007"
+@グリード
+闘う？
+しがみつくことしかできない
+アナタに、なにが…
+
+# alpha 0 1 0.5
+# textboxarrow 0 3
+@デュリン
+…いいえ
+立派な闘い方だわ
+やるじゃない、トト…
+
+# textboxarrow 0 1
+@グリード
+…？
+なにを言っているの、
+アナタ達は…？
+
+# textboxarrow 0 3
+@デュリン
+ただ攻撃するだけが、闘いじゃない
+ほんの一瞬、目をそらさせる…
+
+# textboxarrow 0 3
+@デュリン
+それも十分意味のある、
+闘い方だって言ってるのよ
+
+# textboxarrow 0 1
+# voice 10147 "tyrufing_k_0022"
+@グリード
+目を…？
+
+;;※ふと、倒れていたティルフィングの姿が消えていることに気付くグリード
+# body 41
+# pos 41 3
+# scale 41 0.8 0
+# alpha 41 0 0
+# body 960031
+# pos 960031 3
+# scale 960031 0.8 0
+# alpha 960031 0 0
+# mask 960031 off
+# face 101471 "angry"
+# textboxarrow 0 1
+# voice 10147 "tyrufing_k_0024"
+@グリード
+！？
+しまった！！
+
+;;※ラファエルに向かい、一直線に飛び出しているティルフィング
+# se "SE_9092"
+# alpha 24 1 0.5
+# alpha 101471 0 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# mask 24 off
+# face 101471 "sad"
+# textboxarrow 0 2
+@ティルフィング
+ありがとう、トト！
+アナタが作ってくれたチャンス、
+絶対に無駄にはしないっ！
+
+# mask 41 off
+# alpha 24 0 0.5
+# alpha 41 1 0.5
+# textboxarrow 0 2
+@黒奏官
+ラファエル様！！！
+
+# alpha 960031 1 0.5
+# alpha 41 0 0.5
+# textboxarrow 0 2
+# voice 9975 "raphael_0006"
+@ラファエル
+『私の元へ辿り着くために…
+なるほど…知恵を使いましたね』
+
+;;※グッと剣を握るティルフィング
+# se "SE_8000"
+# alpha 960031 0 0.5
+# alpha 24 1 0.5
+# textboxarrow 0 2
+@ティルフィング
+みんなの想いを…
+この世界のすべての人々の想いを…
+この一撃に込める！！！
+
+# bgm "stop"
+# se "SE_5226"
+# imageset 0 "bg_white"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# serif 0
+# textwindow "toge"
+# textsize 30
+# face 24 "mad2"
+# textboxarrow 0 0
+# voice 1014 "tyrufing_0029"
+@ティルフィング
+ハァァァッ！！！！
+
+;;※ありったけの力を注いだ一撃を放つティルフィング。凄まじい閃光が、あたりを包む
+# se "SE_5730"
+# imagealpha 0 1 0.5
+# mask 24 off
+# imagepos 0 0 30
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "toge"
+# textsize 30
+# textboxarrow 1 0
+@トト
+ティルフィング！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textsize 24
+# pos 24 2
+# pos 960031 4
+# mask 960031 on
+# alpha 960031 1 0
+# face 24 "surprise"
+# textboxarrow 0 0
+# voice 1014 "tyrufing_0015"
+@ティルフィング
+！？
+
+;;※見えてくる情景…柔らかに微笑み、ティルフィングの剣を片手で止めているラファエル
+# bgm "bgm031" 0
+# imagealpha 0 0 1
+# textboxarrow 0 3
+@ラファエル
+『その傷ついた身体で、ここまでの
+感情の昂ぶりを見せるとは…
+見事です』
+
+# textboxarrow 0 3
+@ラファエル
+『アナタのような存在が
+現れたことは…この箱庭が生み出した
+成果と言えましょう』
+
+# textboxarrow 0 1
+@ティルフィング
+！！！
+
+# face 24 "sad"
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0024"
+@ティルフィング
+わ、私の…
+渾身の一撃さえも！！
+
+;;※スーッとティルフィングの腹部に手を当てるラファエル
+# se "SE_5210"
+# move 960031 3 0.5
+# textboxarrow 0 2
+# voice 9975 "raphael_0041"
+@ラファエル
+『アナタのことは、
+記憶にとどめておきましょう
+…お別れです』
+
+# textboxarrow 0 1
+@ティルフィング
+！？
+
+;;※ドンッと凄まじい光の衝撃波が、ティルフィングの腹部を貫通する
+# se "SE_9098"
+# serif 0
+# textwindow "toge"
+# fadein "white" 0.3
+# leftout 24 0.3
+# alpha 24 0 0.3
+# shake 0 0.3
+# textboxarrow 0 0
+# voice 1014 "tyrufing_0037"
+@ティルフィング
+！！！
+
+# serif 0
+# textwindow "normal"
+# alpha 960031 0 0.5
+# alpha 101471 1 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# face 101471 "normal"
+# face 0 "worry"
+# face 41 "normal"
+# textboxarrow 0 2
+# voice 9998 "toto_0049"
+@トト
+ティルフィング！！！
+
+# alpha 101471 0 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# alpha 41 1 0.5
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0007"
+@黒奏官
+…フン
+大天使様の手を煩わせるとは…
+
+# move 24 3 0
+# alpha 41 0 0.5
+# alpha 24 1 0.5
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0038"
+@ティルフィング
+ガッ！！
+カハッ！！
+
+# alpha 24 0 0.5
+# alpha 101471 1 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 3
+@デュリン
+ティルフィング！！
+
+# alpha 24 1 0.5
+# alpha 101471 0 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# face 24 "sad2"
+# textboxarrow 0 2
+@ティルフィング
+…ご…ごめん
+…みん…な…
+
+;;※ドンと地面に叩き付けられるティルフィング
+# textboxarrow 0 0
+# se "SE_3001"
+# alpha 24 0 0.5
+# shake 0 0.5
+# waitandnext 1.5
+
+# alpha 101471 1 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# face 4 "sad"
+# face 0 "sad"
+# textboxarrow 0 2
+@トト
+！！
+ティル…フィング！！！
+
+# alpha 101471 0 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# alpha 41 1 0.5
+# textboxarrow 0 2
+@黒奏官
+申し訳ありません、ラファエル様
+後の者は、我々が
+…グリード
+
+;;※デュリンとトトに向き直るグリード
+# se "SE_5205"
+# alpha 101471 1 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# alpha 41 0 0.5
+# face 0 "worry"
+# textboxarrow 0 3
+@デュリン
+…そ、そんな！
+ようやく、ここまで辿り着いたのに！
+
+# face 0 "angry"
+# mask 960031 off
+# textboxarrow 0 3
+@デュリン
+アンタひとりを倒せば、
+すべてが終わるというのに！！
+
+# bgm "stop"
+# alpha 101471 0 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# alpha 960031 1 0.5
+# textboxarrow 0 2
+# voice 9975 "raphael_0004"
+@ラファエル
+『…それは、間違いです』
+
+# face 0 "worry"
+# alpha 101471 1 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# alpha 960031 0 0.5
+# textboxarrow 0 3
+@デュリン
+え…？
+
+;;※あたりに讃美歌が聞こえ始める
+# bgmfile "bgm188" "BgmStory007" 0
+# textboxarrow 0 3
+@デュリン
+！？
+な、なんなの…！？
+また、讃美歌が！！
+
+# alpha 101471 0 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# alpha 960031 1 0.5
+# textboxarrow 0 2
+@ラファエル
+『この世界すべてを
+初期化するのです…』
+
+;;ミカエル仮
+# body 960030
+# pos 960030 2
+# scale 960030 0.8 0
+# alpha 960030 0 0
+# body 960029
+# pos 960029 4
+# scale 960029 0.8 0
+# alpha 960029 0 0
+# body 960023
+# pos 960023 3
+# scale 960023 0.8 0
+# alpha 960023 0 0
+# textboxarrow 0 2
+@ラファエル
+『私一人では、さすがに
+骨が折れるというもの』
+
+;;※降り注ぐ光とともに、二人の大天使の姿が見えてくる。その後ろには無数のカミノツカイ
+# se "SE_9000"
+# alpha 101471 1 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# alpha 960031 0 0.5
+# face 4 "angry"
+# textboxarrow 0 2
+@トト
+だ、大天使がまた…！？
+カミノツカイも、あんなに！！
+
+# entry 7969623 960023
+# pos 7969623 5
+# scale 7969623 0.8 0
+# alpha 7969623 0 0
+# entry 8969623 960023
+# pos 8969623 1
+# scale 8969623 0.8 0
+# alpha 8969623 0 0
+# textboxarrow 0 2
+# voice 9998 "toto_0015"
+@トト
+そ、そんなっ！！
+
+# layer 960023 3
+# layer 7969623 2
+# layer 8969623 1
+# layer 960030 5
+# layer 960029 4
+# alpha 101471 0 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# alpha 960031 1 0.5
+# textboxarrow 0 2
+# voice 9975 "raphael_0047"
+@ラファエル
+『…さぁ、始めましょう
+…ミカエル、ガブリエル…』
+
+;;※空を覆いつくすほどのカミノツカイを従え、降臨するミカエルとガブリエル
+# serif 0
+# textwindow "close"
+# alpha 960031 0 0.5
+# alpha 960023 1 0.5
+# alpha 7969623 1 0.5
+# alpha 8969623 1 0.5
+# waitandnext 1.5
+
+# brightness 960023 0.5 0.5
+# brightness 7969623 0.5 0.5
+# brightness 8969623 0.5 0.5
+# alpha 960030 1 0.5
+# alpha 960029 1 0.5
+# waitandnext 1.5
+
+# bgmfile "bgm189" "BgmStory007" 0
+# serif 0
+# textwindow "normal"
+# alpha 101471 1 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# alpha 960023 0 0.5
+# alpha 7969623 0 0.5
+# alpha 8969623 0 0.5
+# alpha 960030 0 0.5
+# alpha 960029 0 0.5
+# textboxarrow 0 2
+@トト
+だ、大天使がまた…！？
+
+;;※大音量の讃美歌とともに降臨する、ミカエルとガブリエル
+# alpha 101471 0 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# alpha 960030 1 0.5
+# alpha 960029 1 0.5
+# mask 41 on
+# textboxarrow 0 3
+@ミカエル
+『…時が来たようですね、ラファエル
+…私は、よからぬ意志に侵された、
+この世界の人類を…』
+
+# textboxarrow 0 1
+@ガブリエル
+『…私は
+キラープリンセスという名の、
+悪しき異物を…』
+
+# brightness 960023 1 0
+# brightness 7969623 1 0
+# brightness 8969623 1 0
+# alpha 960030 0 0.5
+# alpha 960029 0 0.5
+# alpha 960031 1 0.5
+# textboxarrow 0 2
+@ラファエル
+『…ゆきなさい、
+我らのしもべ達よ！』
+
+;;※ブワッと各地へ飛んでゆく、無数のカミノツカイ達
+# se "SE_5241"
+# serif 0
+# textwindow "close"
+# alpha 960031 0 0.5
+# alpha 960023 1 0.5
+# alpha 7969623 1 0.5
+# alpha 8969623 1 0.5
+# waitandnext 1
+
+# se "SE_5221"
+# alpha 960023 0 0.5
+# alpha 7969623 0 0.5
+# alpha 8969623 0 0.5
+# waitandnext 1.5
+
+# serif 0
+# textwindow "normal"
+# alpha 101471 1 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 2
+# voice 9998 "toto_0027"
+@トト
+う、うわっ！
+カミノツカイ達が！
+
+# alpha 101471 0 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# alpha 960031 1 0.5
+# textboxarrow 0 2
+# voice 9975 "raphael_0005"
+@ラファエル
+『さぁ、始めましょう…
+ミカエル、ガブリエル』
+
+;;※その光景を見て、へたり込むデュリン
+# alpha 101471 1 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# alpha 960031 0 0.5
+# face 0 "sad"
+# textboxarrow 0 3
+@デュリン
+…も、もう…ダメだ…
+これで、すべてが…
+
+# serif 1
+# textboxarrow 1 0
+@？？？
+…なんだ、これは！？
+
+# body 42
+# pos 42 3
+# scale 42 0.8 0
+# alpha 42 0 0
+# pos 41 4
+# serif 0
+# face 0 "worry"
+# face 42 "surprise"
+# textboxarrow 0 3
+@デュリン
+え…？
+
+;;※振り返るデュリン。空中庭園の入り口で、呆然と上空を見つめているティバルトの姿
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# alpha 101471 0 0.5
+# alpha 42 1 0.5
+# textboxarrow 0 2
+# voice 9980 "tybalt_0023"
+@ティバルト
+こ、この光景は…
+これは…
+夢なのか！？
+
+# alpha 41 1 0.5
+# move 42 2 0.5
+# textboxarrow 0 3
+# voice 9983 "kokusohkan_0039"
+@黒奏官
+…ほう、これはこれは、
+ティバルト団長
+
+# textboxarrow 0 1
+@ティバルト
+な、なんなんだ、これは…！？
+いったい、なにがどうなっている！？
+
+# textboxarrow 0 3
+# voice 9983 "kokusohkan_0007"
+@黒奏官
+お控えなさい…
+大天使様の御前ですぞ？
+
+# textboxarrow 0 1
+# voice 9980 "tybalt_0022"
+@ティバルト
+！？
+大天使だと…！？
+
+# face 41 "smile"
+# textboxarrow 0 3
+@黒奏官
+ラファエル様…
+彼は英雄と称され、
+民に慕われる人物…
+
+# textboxarrow 0 3
+@黒奏官
+新たなる箱庭に選ばれし、
+選民の権利を有する人材かと
+
+# alpha 42 0 0.5
+# alpha 41 0 0.5
+# alpha 960031 1 0.5
+# textboxarrow 0 2
+# voice 9975 "raphael_0021"
+@ラファエル
+『ほう…』
+
+# alpha 42 1 0.5
+# alpha 41 1 0.5
+# alpha 960031 0 0.5
+# textboxarrow 0 1
+@ティバルト
+あ、新たなる箱庭！？
+なんの話だ！？
+
+# alpha 42 0 0.5
+# alpha 41 0 0.5
+# alpha 0 1 0.5
+# alpha 4 1 0.5
+# alpha 101471 1 0.5
+# face 0 "serious"
+# face 4 "normal"
+# textboxarrow 0 3
+@デュリン
+ティ、ティバルト団長！
+
+# textboxarrow 0 3
+@デュリン
+神々はこの世界を一掃し、
+新たな世界を
+築こうとしているんです！
+
+# textboxarrow 0 3
+@デュリン
+この世界のすべてが今、
+滅ぼされようとしているの！！
+
+# alpha 101471 0 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# alpha 42 1 0.5
+# alpha 41 1 0.5
+# textboxarrow 0 1
+@ティバルト
+！？
+バカな…神々が、
+そのようなことをなさるはずが…
+
+# alpha 42 0 0.5
+# alpha 41 0 0.5
+# alpha 960031 1 0.5
+# textboxarrow 0 2
+@ラファエル
+『…いいえ、事実です。
+この天上世界は、異世界に侵され…』
+
+# textboxarrow 0 2
+# voice 9975 "raphael_0003"
+@ラファエル
+『その世界と
+融合しようとしているのです』
+
+# textboxarrow 0 2
+@ラファエル
+『それは“神魔契約”に反する行為に
+ほかならない…』
+
+# textboxarrow 0 2
+@ラファエル
+『この状況を食い止めるには、
+この世を初期化せざるを
+得ないのです』
+
+# alpha 42 1 0.5
+# alpha 41 1 0.5
+# alpha 960031 0 0.5
+# textboxarrow 0 1
+@ティバルト
+まさか…！？
+この世を、終わらせると
+いうのですか！？
+
+# alpha 42 0 0.5
+# alpha 41 0 0.5
+# alpha 960031 1 0.5
+# textboxarrow 0 2
+@ラファエル
+『いいえ、再生させるのです
+そこには選ばれし者だけを
+連れてゆきます』
+
+# textboxarrow 0 2
+# voice 9975 "raphael_0032"
+@ラファエル
+『…世の民の人望を
+集める者と聞きました
+アナタも、その対象となりましょう』
+
+# alpha 42 1 0.5
+# alpha 41 1 0.5
+# alpha 960031 0 0.5
+# textboxarrow 0 1
+@ティバルト
+なっ！？
+
+# textboxarrow 0 3
+@黒奏官
+急な話だ、動揺されるのも
+無理からぬこと…
+よくお考えください
+
+# face 0 "serious2"
+# face 101471 "normal"
+# face 41 "normal"
+# textboxarrow 0 3
+@黒奏官
+…グリード、ヤツらを
+
+# alpha 42 0 0.5
+# alpha 41 0 0.5
+# alpha 101471 1 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 1
+# voice 10147 "tyrufing_k_0003"
+@グリード
+はい
+
+;;※デュリンとトトに迫るグリード
+# se "SE_0719"
+# move 4 4 0.5
+# move 101471 2 0.5
+# face 4 "sad"
+# face 0 "sad"
+# textboxarrow 0 3
+# voice 9998 "toto_0026"
+@トト
+う、うぁっ！
+
+# se "SE_4000"
+# face 42 "angry"
+# layer 42 4
+# pos 41 3
+# pos 42 3
+# textboxarrow 0 1
+@グリード
+安心なさい…
+痛みを感じる間もなく、
+逝かせてあげるわ！
+
+;;※ギャリンと飛び散る火花…ティバルトが、グリードの剣を弾き返している
+# bgm "stop"
+# fadein "white" 0.3
+# se "SE_5234"
+# alpha 42 1 0
+# move 101471 1 0.3
+# face 101471 "surprise"
+# textboxarrow 0 1
+# voice 10147 "tyrufing_k_0024"
+@グリード
+！！
+
+# bgm "bgm031" 0
+# alpha 41 1 0.5
+# alpha 42 0 0.5
+# alpha 101471 0 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0009"
+@黒奏官
+…ティバルト団長
+…これは、どういうことですかな？
+
+# alpha 41 0 0.5
+# alpha 42 1 0.5
+# alpha 101471 1 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# face 4 "normal"
+# face 42 "normal"
+# face 101471 "normal"
+# textboxarrow 0 2
+@ティバルト
+…正直、なにがどうなっているのか、
+よくわからない
+
+# textboxarrow 0 2
+@ティバルト
+だが…
+
+;;※グッと黒奏官達を睨みつけるティバルト
+# face 42 "angry"
+# textboxarrow 0 2
+# voice 9980 "tybalt_0011"
+@ティバルト
+無抵抗な者を斬りつけるのは…
+違うだろ？
+
+# face 0 "happy"
+# textboxarrow 0 3
+@デュリン
+ティ、ティバルト団長！！
+
+# face 42 "normal"
+# textboxarrow 0 2
+@ティバルト
+…この場から離れるぞ
+
+# textboxarrow 0 3
+# voice 9998 "toto_0023"
+@トト
+えっ？
+
+;;※一閃…あたりに土煙を上げるティバルト
+# serif 0
+# textwindow "close"
+# se "SE_9121"
+# sedelay "SE_5613" 0.2
+# fadein "white" 0.5
+# alpha 42 0 0
+# alpha 4 0 0
+# alpha 0 0 0
+# face 101471 "surprise"
+# waitandnext 1.5
+
+# serif 0
+# textwindow "normal"
+# alpha 41 1 0.5
+# alpha 101471 0 0.5
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0022"
+@黒奏官
+クッ！？
+
+;;※瀕死のティルフィングを抱きかかえるティバルト
+# move 24 3 0
+# move 42 5 0
+# alpha 24 1 0.5
+# alpha 42 1 0.5
+# alpha 41 0 0.5
+# waitandnext 0.1
+
+# move 42 4 0.5
+# textboxarrow 0 2
+@ティバルト
+俺は、この目で正義を見極めたい…
+しばし、おいとまさせてもらう
+
+;;※駆け去るティバルト
+# se "SE_5575"
+# textboxarrow 0 0
+# alpha 24 0 0.5
+# alpha 42 0 0.5
+# alpha 101471 0 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# waitandnext 1.5
+
+# alpha 41 1 0.5
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0026"
+@黒奏官
+チッ！
+グリード！
+
+# layer 960031 5
+# move 101471 2 0
+# move 41 4 0.5
+# alpha  101471 1 0.5
+# face 101471 "normal"
+# textboxarrow 0 1
+# voice 10147 "tyrufing_k_0003"
+@グリード
+…はい
+
+;;※駆け出そうとするグリード。　
+# alpha 41 0 0.5
+# alpha 101471 0 0.5
+# alpha 960031 1 0.5
+# textboxarrow 0 2
+# voice 9975 "raphael_0002"
+@ラファエル
+『…お待ちなさい
+まだ、あの者との
+話が済んでおりません』
+
+# alpha 41 1 0.5
+# alpha 101471 1 0.5
+# alpha 960031 0 0.5
+# face 41 "normal"
+# textboxarrow 0 3
+@黒奏官
+…ヤツらを率いる
+マスターのことですな？
+承知しております…
+
+# textboxarrow 0 3
+@黒奏官
+あの者だけは、拘束して参りましょう
+…しかし、何者なのですか、
+あの男は？

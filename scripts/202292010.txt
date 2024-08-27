@@ -1,0 +1,326 @@
+;;-----------------------------------------
+;;SEA4章_1
+;;-----------------------------------------
+# script "lisp"
+# background "diary"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 5
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;-----------------------------------------
+;;紙
+# imageset 0 "SEA_diary_bg"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imagescale 0 1.2 0
+;;1枚め
+# imageset 1 "SEA_diary_401"
+# imagealpha 1 0 0
+# imagescale 1 1 0
+# imagelayer 1 3
+;;-----------------------------------------
+;;日記演出
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_6165"
+# face 270 "normal"
+# alpha 270 1 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+旅の記録三百四十五日――
+
+;;ミーミル消す
+;;テキストウィンドウを外す
+# alpha 270 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;フレームを外す
+# frameout 0 1
+# waitandnext 1
+
+;;紙を表示
+# imagealpha 0 1 1
+# imagepos 0 0 0
+# waitandnext 1
+
+;;1枚目を表示
+# se "SE_6175"
+# imagealpha 1 1 2
+# imagepos 1 0 -1000
+# waitandnext 1
+
+;;1枚目を上に
+# imagemoveto 1 0 900 20
+# waitandnext 18
+
+;;1枚目を消す
+# imagealpha 1 0 2
+# waitandnext 2
+
+;;紙を消す
+# se "SE_6167"
+# imagealpha 0 0 1
+# waitandnext 1
+
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# sestop "SE_6175"
+# framein 0 0
+;;背景：平原
+# background "plain"
+# bgm "stop"
+# se "SE_6170"
+# fadein "black" 1.5
+# waitandnext 1.5
+
+# move 6504011 3 0.5
+# alpha 6504011 1 0.5
+# waitandnext 1
+
+# voice 650401 "manannan_ura_0005"
+# textwindow "nomal"
+# textboxarrow 0 2
+@マナナン
+ミーミル、マスター
+早く早く～っ
+
+# move 6504011 1 0.5
+# alpha 6504011 0 0.5
+# textwindow "close"
+# waitandnext 1.5
+
+# bgm "bgm002" 0
+# move 6504011 5 0
+# move 270 3 0
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+マナナンさんは
+いつも元気ですね
+
+# voice 9917 "mimir_navikan_0001"
+# textboxarrow 0 2
+@ミーミル
+マスター様はお疲れでは
+ありませんか？
+
+;;選択肢
+# select "大丈夫" "select_label_01" "ミーミルは？" "select_label_02"
+マスター様はお疲れでは
+ありませんか？
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 270 "happy"
+# voice 9917 "mimir_navikan_0004"
+# textboxarrow 0 2
+@ミーミル
+安心致しました
+お疲れのときはいつでも
+仰って下さい
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 270 "happy"
+# voice 9917 "mimir_navikan_0030"
+# textboxarrow 0 2
+@ミーミル
+お気遣いありがとうございます
+私は大丈夫です
+
+# label "select_label_end"
+# move 270 2 0.5
+# move 6504011 4 0.5
+# face 6504011 "surprise"
+# alpha 6504011 1 0.3
+# voice 650401 "manannan_ura_0002"
+# textboxarrow 0 3
+@マナナン
+ねぇねぇ
+
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+どうしました？
+
+# textboxarrow 0 3
+@マナナン
+ずーっと人の列が続いてるよ
+何の行列かな？
+
+# textboxarrow 0 1
+@ミーミル
+本当ですね
+皆さん、同じ方向に進んでおられます
+あちらの方角には…
+
+# textboxarrow 0 1
+@ミーミル
+ヴィモールという町があります
+皆さん、そちらへ？
+
+# face 6504011 "normal"
+# voice 650401 "manannan_ura_0040"
+# textboxarrow 0 3
+@マナナン
+お祭りがあるのかな！？
+だったら愉快そう！
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+ヴィモールの町は
+「天職の見つかる町」として
+有名だそうです
+
+# textboxarrow 0 1
+@ミーミル
+天職省という役所がありまして
+そちらで「未来視の巫女」という
+方が未来を見て下さるとか
+
+# voice 650401 "manannan_ura_0039"
+# face 6504011 "happy"
+# textboxarrow 0 3
+@マナナン
+未来が見えるの！？
+すごいね！
+
+# textboxarrow 0 1
+@ミーミル
+占いのようなものではないかと
+推測致しますが…
+
+;;ミーミルのペンダントが点滅する
+# bgm "stop"
+# se "SE_6191"
+# face 270 "surprise"
+# face 6504011 "surprise"
+# textwindow "close"
+# effectbody 100 51 -140 35 0
+# effectstart 100
+# waitandnext 1.5
+
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+あ！
+ティルフィングからの連絡だねっ
+
+# voice 9917 "mimir_navikan_0049"
+# textboxarrow 0 1
+@ミーミル
+そのようでございます
+ティルフィング様っ？
+
+# serif 1
+@ティルフィング
+ミーミル、マスター、マナナン、
+急いで向かって欲しいところが
+あります
+
+# face 270 "angry"
+# voice 9917 "mimir_navikan_0003"
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+はい
+どちらに向かえば？
+
+# serif 1
+@ティルフィング
+アナタ達がいるところの近く
+ヴィモールという町です
+そこで強い「揺らぎ」を感じました
+
+# serif 1
+@ティルフィング
+いつもより強大なものを感じます
+気をつけて向かって下さい
+
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+お任せ下さい
+マスター様の補佐を
+完璧に務めてみせます
+
+# face 6504011 "usual"
+# voice 650401 "manannan_ura_0003"
+# serif 0
+# textboxarrow 0 3
+@マナナン
+この人達と同じところに行けば
+良いんだね
+迷わなくてよさそう！
+
+# serif 1
+@ティルフィング
+くれぐれも気をつけて下さいね
+もし、何か――
+
+;;通信が切れる
+# se "SE_0845"
+# se "SE_6191_stop"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 2
+
+# face 6504011 "surprise"
+# face 270 "surprise"
+# textwindow "nomal"
+# voice 9917 "mimir_navikan_0055"
+# textboxarrow 0 1
+@ミーミル
+ティルフィング様…！？
+
+# textboxarrow 0 1
+@ミーミル
+通信が切れてしまいました…
+
+# face 270 "sad"
+# voice 9917 "mimir_navikan_0027"
+# textboxarrow 0 1
+@ミーミル
+マスター様、如何致しましょう？
+
+;;選択肢
+# select "町に向かおう" "select_label_03" "すでに「揺らぎ」が？" "select_label_03"
+通信が切れてしまいました…
+マスター様、如何致しましょう？
+
+# label "select_label_03"
+# face 270 "angry"
+# voice 9917 "mimir_navikan_0033"
+# textboxarrow 0 1
+@ミーミル
+事は一刻を争うのかもしれませんね
+では、気をつけて参りましょう
+ヴィモールの町へ
+
+# fadeout "black" 1
+# waitandnext 1

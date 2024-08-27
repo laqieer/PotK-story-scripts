@@ -1,0 +1,553 @@
+;;-----------------------------------------
+;;■□■新海上編第2回シナリオ□■□
+;;【OP】
+;;【第1幕】戦闘前
+;;スクリプト最後の背景：ビーチ
+;;-----------------------------------------
+# script "lisp"
+# fadein "white" 1
+# background "mov2_1"
+# bgmfile "bgm224" "BgmSeaEvent" 0
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;島背景（一枚絵）
+# imageset 1 "e170701_map"
+# imagealpha 1 0 0
+;;op演出用一枚絵
+# imageset 2 "mov2_2"
+# imagescale 2 1.15 0
+# imagealpha 2 0 0
+;;op演出用一枚絵
+# imageset 3 "bg_white"
+# imagealpha 3 1 0
+# imagescale 3 2.5 0
+;;op演出用ロゴ一枚絵
+# imageset 4 "e170701_logo"
+# imagealpha 4 0 0
+;;
+;;フライシュッツ（水着）
+# body 2502711
+# pos 2502711 3
+# scale 2502711 0.8 0
+# layer 2502711 2
+# mask 2502711 off
+# alpha 2502711 1 0
+;;水着ミネルヴァ
+# body 2302511
+# pos 2302511 3
+# scale 2302511 0.8 0
+# mask 2302511 off
+# alpha 2302511 0 0
+# face 2302511 "angry"
+;;水着ラスト（アルテミス）
+# body 2400121
+# pos 2400121 5
+# scale 2400121 0.8 0
+# alpha 2400121 0 0
+# face 2400121 "normal"
+;;水着グラトニー（パラシュ）
+# body 2200421
+# pos 2200421 3
+# scale 2200421 0.8 0
+# alpha 2200421 0 0
+# face 2200421 "normal"
+;;水着グリード（ティルフィング）
+# body 2101421
+# pos 2101421 1
+# scale 2101421 0.8 0
+# alpha 2101421 0 0
+# face 2101421 "usual"
+# textwindow "close"
+# waitandnext 0.1
+
+;;//背景：島全景
+# imagealpha 2 1 0.5
+# imagepos 2 0 -590
+# waitandnext 0.5
+
+# se "SE_0050"
+# imagealpha 3 0 0
+# imagemoveto 2 0 -50 0.8
+# waitandnext 0.8
+
+# imagealpha 2 0 0.8
+# imagealpha 1 1 0.3
+# imagepos 1 0 15
+# textwindow "nomal"
+# textflame 0 0
+@
+青い海に浮かぶ常夏の島
+ラグーナ島―
+
+@
+ここではキラープリンセスたちと
+マスターが平和な日々を
+過ごしていた
+
+@
+しかし、神々の命を受けた
+ブラックキラーズの
+グリードとグラトニーが島を襲来
+
+@
+彼女たちは島を支配するため、
+鍵となるマスターを拉致してしまう
+
+@
+そんなマスターを助けるべく
+封印を解かれたエンシェントキラーズ
+フライシュッツが現れるが…
+
+@
+いないはずの異族が現れ、
+ラグーナ島にさらなる波乱が
+巻き起こる
+
+@
+なんとか異族は退治できたものの、
+マスターはグリードとグラトニーに
+連れ去られてしまった
+
+@
+一方その頃、
+次なるエンシェントキラーズが
+静かに復活を遂げていた―
+
+# textwindow "close"
+# fadeout "black" 1.5
+# waitandnext 2
+
+# imagealpha 0 0 0
+# imagealpha 1 0 0
+# imagealpha 2 0 0
+# imagealpha 3 0 0
+# imagealpha 4 0 0
+# background "sea_jungle_day"
+# waitandnext 0.1
+
+# fadein "black" 2
+# waitandnext 2
+
+;;【第1幕】踏査のエンシェント
+;;◆背景：//背景：密林（昼）---------------------
+# bgmfile "bgm230" "BgmSeaEvent" 0
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 2
+# face 2502711 "usual"
+@フライシュッツ
+うーん…
+想定外のことが起きてるとしたら
+どうすればいいのかな〜？
+
+@フライシュッツ
+マスターくんもいないし
+おねーちゃん、寂しいなぁ…
+
+# face 2502711 "sad"
+# voice 5027 "freischotz_0022"
+@フライシュッツ
+…ん、あれ？
+この気配は、もしかして…
+
+;;//演出：移動
+# se "SE_5785"
+# rightout 2502711 1
+# textwindow "close"
+# waitandnext 1
+
+# alpha 2502711 0 0
+# waitandnext 0.1
+
+;;//画面白フラッシュ
+;;//ミネルヴァ復活
+# se "SE_5548"
+# fadeout "white" 0.4
+# waitandnext 0.6
+
+# fadein "white" 0.4
+# waitandnext 0.6
+
+# textwindow "normal"
+# alpha 2302511 1 0.5
+@ミネルヴァ
+ふぅ…
+どうやらバイブスを持つ者が
+この島で目覚めたようですね
+
+# voice 3025 "minerva_0037"
+@ミネルヴァ
+それと…
+この気配は…！
+
+@フライシュッツ
+ミネルヴァちゃ〜〜ん！！
+
+;;//演出：抱きつき効果音
+# se "SE_0646"
+# alpha 2502711 1 0
+# face 2502711 "sad"
+# pos 2502711 3
+# leftin 2502711 0.3
+# textwindow "close"
+# waitandnext 0.2
+
+# shake 0 0.3
+# move 2302511 4 0.2
+# face 2302511 "sad"
+# move 2502711 2 0.2
+# waitandnext 0.2
+
+# mask 2502711 on
+# mask 2302511 on
+# textwindow "normal"
+# textboxarrow 0 3
+# voice 3025 "minerva_battle_0008"
+@ミネルヴァ
+きゃあっ！
+
+# textboxarrow 0 1
+@フライシュッツ
+ひとりで寂しかったよ〜！
+ミネルヴァちゃんがいないから、
+おねーちゃん大変だったんだよ〜!?
+
+# face 2302511 "angry"
+# voice 3025 "minerva_0038"
+# textboxarrow 0 3
+@ミネルヴァ
+フライシュッツ…
+息が…苦しいです…
+
+# face 2502711 "happy"
+# voice 5027 "freischotz_0031"
+# textboxarrow 0 1
+@フライシュッツ
+ごめんなさーい！
+だって、嬉しくって〜！
+
+# face 2502711 "usual"
+# voice 5027 "freischotz_0014"
+@フライシュッツ
+もう、ミネルヴァちゃん、
+どうして一緒に復活して
+くれなかったの〜？
+
+@フライシュッツ
+おねーちゃんひとりで
+がんばったんだからね！
+
+@フライシュッツ
+怖い顔をしたグリードちゃんと
+グラトニーちゃんと、戦ったんだよー
+
+# face 2302511 "sad"
+# voice 3025 "minerva_0022"
+# textboxarrow 0 3
+@ミネルヴァ
+グリードとグラトニー？
+“強欲”と“暴食”ですか…
+
+# textboxarrow 0 1
+@フライシュッツ
+うん、そう！
+それで、そのふたりがマスターくんを
+どこかに連れて行っちゃったの
+
+# voice 3025 "minerva_0028"
+# textboxarrow 0 3
+@ミネルヴァ
+彼女たちはバイブスを持つ
+マスターを連れ去って
+どうするつもりなのでしょうか？
+
+# textboxarrow 0 1
+@フライシュッツ
+えーっと…
+ふたりはマスターくんを支配するって
+だから、おねーちゃん教えてあげたの！
+
+@フライシュッツ
+マスターくんの気持ちを
+向けさせれば良いんだよって！
+
+# face 2302511 "angry"
+# voice 3025 "minerva_0009"
+# textboxarrow 0 3
+@ミネルヴァ
+なっ!?　
+
+# voice 3025 "minerva_0010"
+@ミネルヴァ
+マスターを支配するのが目的だと
+分かっているのに、
+なぜ教えたのですか！？
+
+# face 2502711 "sad"
+# voice 5027 "freischotz_0016"
+# textboxarrow 0 1
+@フライシュッツ
+ふえ～んっ！
+ミネルヴァちゃんが怒ってる～！
+
+# face 2302511 "sad"
+# textflame 0 0
+@
+目に涙を浮かべるフライシュッツに
+ミネルヴァは困惑してしまう
+
+# textflame 1 1
+# textboxarrow 0 3
+@ミネルヴァ
+お、怒ってませんから…
+ですが、どうして
+ブラックキラーズにアドバイスを？
+
+# face 2502711 "sad"
+# textboxarrow 0 1
+@フライシュッツ
+だ、だって～…
+グリードちゃんもグラトニーちゃんも
+マスターくんと仲良くなりたいって…
+
+# textboxarrow 0 3
+@ミネルヴァ
+は、はあ…
+それはもう終ったのでいいです
+他になにかありましたか？
+
+# face 2502711 "normal"
+# textboxarrow 0 1
+@フライシュッツ
+あと、マスターくんの作戦でね、
+みんなで一緒に
+大きな異族もやっつけたんだ〜
+
+# textboxarrow 0 3
+@ミネルヴァ
+この島に異族が…？
+
+# face 2502711 "usual"
+# textboxarrow 0 1
+@フライシュッツ
+そうなの、異族がたくさん出るの！
+どうしてかなぁ…？
+結界もあるはずなのに…
+
+# face 2302511 "angry"
+# voice 3025 "minerva_0040"
+# textboxarrow 0 3
+@ミネルヴァ
+…なるほど、情報を整理しましょう
+
+@ミネルヴァ
+いまは異族の目的、
+そして異族発生の原因を探ることが、
+最優先です
+
+@ミネルヴァ
+マスターは連れ去られてはいますが
+命の危険はなさそうですね
+探せば、すぐに会えるでしょう
+
+@ミネルヴァ
+彼女たちと話し合いができるなら、
+共闘は可能かもしれません
+
+@ミネルヴァ
+まずは島の調査からですね…
+被害が拡大せぬよう、急がなくては！
+
+#leftout 2302511 0.5
+# textwindow "close"
+# waitandnext 1
+
+# alpha 2302511 0 0
+# waitandnext 0.1
+
+# textwindow "normal"
+# face 2502711 "sad"
+# textboxarrow 0 1
+@フライシュッツ
+あ、ミネルヴァちゃん！
+おねーちゃんを置いて行かないでよ〜！
+
+#leftout 2502711 0.5
+# textwindow "close"
+# waitandnext 1
+
+# alpha 2502711 0 0
+# waitandnext 0.1
+
+# textflame 0 0
+# textwindow "normal"
+@
+走り去るミネルヴァの背中を
+フライシュッツが
+慌てて追いかけていった…
+
+;;//演出：場面転換
+;;//背景：ビーチ
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+;;水着グリード（ティルフィング）
+# alpha 2101421 1 0
+;;水着グラトニー（パラシュ）
+# alpha 2200421 1 0
+;;水着ラスト（アルテミス）
+# pos 2400121 5
+# alpha 2400121 1 0
+# bgmfile "bgm166" "BgmPJZero001" 0
+;;◆背景：//背景：ビーチ---------------------
+# background "sea_beach_day"
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 3
+# voice 40015 "arutemisu_k_0039"
+@ラスト
+ここがラグーナ島ですか
+
+# textflame 0 0
+@
+結界を抜け、現れたラストを
+出迎えたのは、グリードとグラトニー
+そしてマスターだった
+
+# textflame 1 1
+# textboxarrow 0 2
+@グラトニー
+やっと来たね、ラスト
+遅かったじゃないか
+
+# textboxarrow 0 1
+@グリード
+無事にたどりつけたようね
+ラスト、ここまで
+何もありませんでしたか？
+
+# face 2400121 "sad"
+# voice 40015 "arutemisu_k_0003"
+# textboxarrow 0 3
+@ラスト
+はい？
+ええ、まぁ…
+
+# face 2400121 "normal"
+@ラスト
+…ひとつ確認させてください
+あなた、本物のグリードですよね？
+
+# textflame 0 0
+@
+グリードの態度をいぶかしみ、
+ラストはそんなことを尋ねた
+
+# voice 10147 "tyrufing_k_0013"
+# textflame 1 1
+# textboxarrow 0 1
+@グリード
+当たり前でしょう
+少し会わなかっただけで
+もう私のことを忘れたのですか？
+
+# face 2400121 "usual"
+# voice 40015 "arutemisu_k_0034"
+# textboxarrow 0 3
+@ラスト
+いえ、少し印象が違ったものですから…
+きっと気のせいですね
+
+# face 2400121 "normal"
+@ラスト
+さて、私たちの手中には
+すでにマスターがあるのですから
+いますぐ島の支配を始めましょうか
+
+# voice 10147 "tyrufing_k_0028"
+# textboxarrow 0 1
+@グリード
+少し待って、
+そう簡単にはいかないのです
+
+# textboxarrow 0 2
+@グラトニー
+バイブスを支配するためには、
+マスターの心を掴まないと
+いけないらしいのさ
+
+# face 2400121 "angry"
+# voice 40015 "arutemisu_k_0010"
+# textboxarrow 0 3
+@ラスト
+何を馬鹿な…
+脅してでも奪い取ればいいのでは？
+
+# textflame 0 0
+@
+そういってラストはマスターを睨む
+
+# se "SE_0735"
+# textflame 1 1
+# face 2400121 "sad"
+# voice 40015 "arutemisu_k_0037"
+@ラスト
+くっ…
+これは…この感覚は…？
+胸が苦しい…
+
+# textflame 0 0
+@
+その時、
+今まで感じたことのない感覚に
+胸を押さえるラスト
+
+@
+それが落ち着くと、
+彼女はさらに鋭い視線で
+マスターを睨んだ
+
+# textflame 1 1
+# face 2400121 "angry"
+# voice 40015 "arutemisu_k_0001"
+@ラスト
+マスター…これはあなたの仕業？
+ふふ…色欲を呼び覚ます、危険な人…
+私の弓で射抜いてさしあげましょう！
+
+# face 2101421 "angry"
+# voice 10147 "tyrufing_k_0012"
+# textboxarrow 0 1
+@グリード
+ラスト、やめなさい！
+ラスト！！
+
+# voice 20047 "parashu_k_0012"
+# textboxarrow 0 2
+@グラトニー
+ダメだね
+ボクらの話なんて
+まったく聞こえてないみたいだよ？
+
+# face 2101421 "usual"
+# voice 10147 "tyrufing_k_0019"
+# textboxarrow 0 1
+@グリード
+はあ…
+仕方ないですね
+いきますよ、グラトニー
+
+# voice 20047 "parashu_k_0040"
+# textboxarrow 0 2
+@グラトニー
+いいよ
+そろそろなにか食べたいと
+思ってたんだ！

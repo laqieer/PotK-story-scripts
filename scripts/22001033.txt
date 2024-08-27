@@ -1,0 +1,164 @@
+;;-----------------------------------------
+;;【ファントムオブキル_まどかコラボ】イベントシナリオ前編　修正稿
+;;【EP2】戦闘後
+;;EP2
+;;スクリプト最後の背景：平原など
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm055" "BgmMMcollabo001" 0
+;;-----------------------------------------
+;;アルマス
+# body 3103811
+# pos 3103811 3
+# scale 3103811 0.8 0
+# layer 3103811 2
+# alpha 3103811 0 0
+# mask 3103811 off
+;;まどか
+# body 3401111
+# pos 3401111 3
+# scale 3401111 0.8 0
+# layer 3401111 2
+# alpha 3401111 0 0
+# mask 3401111 off
+;;マミ
+# body 3501411
+# pos 3501411 3
+# scale 3501411 0.8 0
+# layer 3501411 2
+# alpha 3501411 0 0
+# mask 3501411 off
+# brightness 3501411 0 0
+;;さやか
+# body 3102011
+# pos 3102011 3
+# scale 3102011 0.8 0
+# layer 3102011 2
+# alpha 3102011 0 0
+# mask 3102011 off
+;;ほむら
+# body 3501311
+# pos 3501311 3
+# scale 3501311 0.8 0
+# layer 3501311 2
+# alpha 3501311 0 0
+# mask 3501311 off
+# brightness 3501311 0 0
+;;杏子
+# body 3301511
+# pos 3301511 3
+# scale 3301511 0.8 0
+# layer 3301511 2
+# alpha 3301511 0 0
+# mask 3301511 off
+;;-----------------------------------------
+# voice 4011 "madoka_0015"
+# move 3301511 2 0
+# face 3301511 "angry"
+# alpha 3301511 1 0
+# mask 3301511 on
+# move 3401111 4 0
+# face 3401111 "sad"
+# alpha 3401111 1 0
+# mask 3401111 on
+# textflame 1 1
+# textboxarrow 0 3
+@まどか
+か、数が多すぎるよ…っ！
+
+# voice 3015 "kyoko_battle_0006"
+# textboxarrow 0 1
+@杏子
+この人数でも
+太刀打ちできないとか
+どんだけいるんだこいつら！
+
+# voice 1038 "almace_battle_0005"
+# alpha 3301511 0 0.5
+# alpha 3401111 0 0.5
+# move 3103811 3 0
+# face 3103811 "angry"
+# alpha 3103811 1 0.5
+# mask 3103811 off
+# textboxarrow 0 2
+@アルマス
+三国の兵士が束になると
+とんでもないことになるってことね
+
+# emotionbody 1001 6 3102011 50 250
+# effectpattern 1001 1 1
+# effectstart 1001
+# voice 1020 "sayaka_battle_0005"
+# alpha 3103811 0 0.5
+# move 3102011 2 0
+# face 3102011 "angry"
+# alpha 3102011 1 0.5
+# mask 3102011 on
+# textboxarrow 0 1
+# move 3401111 4 0
+# face 3401111 "angry"
+# alpha 3401111 1 0.5
+# mask 3401111 on
+@さやか
+のん気に話してる
+場合じゃないって！
+
+# emotionbody 1002 9 3401111 30 260
+# effectpattern 1002 5 0
+# effectstart 1002
+# voice 4011 "madoka_0037"
+# textboxarrow 0 3
+@まどか
+わたし達だけじゃ
+もう限界…ほむらちゃんっ！
+
+;;モノローグ
+# effectskip 1002
+# textflame 0 0
+@
+絶体絶命…
+マスター達がそう思ったその時…
+
+;;演出：画面揺れや爆発のエフェクトなど
+# se "SE_11586"
+# bgmfile "bgm075" "BgmMMcollabo002" 0
+# textwindow "close"
+# shake 0 1
+# waitandnext 1
+
+;;モノローグ
+# alpha 3102011 0 0.5
+# alpha 3401111 0 0.5
+# textwindow "normal"
+@
+前触れのない
+突然の爆風が敵兵達を吹き飛ばす
+
+;;？？？（ほむら）（セリフのみ）
+# voice 5013 "homura_0004"
+# move 3501411 2 0
+# face 3501411 "normal"
+# alpha 3501411 1 0.5
+# mask 3501411 on
+# move 3501311 4 0
+# face 3501311 "normal"
+# alpha 3501311 1 0.5
+# mask 3501311 on
+# textflame 1 1
+# textboxarrow 0 3
+@？？？
+まどか、無事だったのね
+よかったわ
+
+;;？？？（マミ）（セリフのみ）
+# voice 5014 "mami_0004"
+# textboxarrow 0 1
+@？？？
+…みんなも無事だったみたいよ？
+
+;;モノローグ
+# textflame 0 0
+@
+爆発が起こした煙の中から
+二人組のシルエットが見えた…

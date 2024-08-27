@@ -1,0 +1,262 @@
+;;-----------------------------------------
+;;ファンキル お正月イベン2019　シナリオ
+;;【タイトル】
+;;振袖に降る雪
+;;【EP.2_1】振袖スナイパー
+;;//背景：野外（可能であればトレイセーマ）
+;;-----------------------------------------
+# script "lisp"
+# background "beast_world_town1"
+# bgm "bgm002" 0
+;;-----------------------------------------
+;;アバリス透明
+# body 3401011
+# alpha 3401011 0 0
+;;振袖アバリス
+# body 3401021
+# pos 3401021 3
+# scale 3401021 0.8 0
+# alpha 3401021 1 0
+# layer 3401021 15
+# mask 3401021 off
+;;enemy
+# body 3830001
+# pos 3830001 3
+# scale 3830001 0.8 0
+# alpha 3830001 0 0
+# layer 3830001 15
+# mask 3830001 off
+;;-----------------------------------------
+# envbody 9999 2 0
+# effectpattern 9999 1 0
+# effectstart 9999
+# face 3401021 "normal"
+# voice 340101 "abaris_a_0039"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+トレイセーマの新年は、
+なんだかのどかな雰囲気ですね…
+
+# textflame 0 0
+@
+マスターとアバリスは、
+トレイセーマの集落を訪れていた
+アバリスの意見では…
+
+;;//演出：回想
+;;//背景：野外
+# se "SE_0742"
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagelayer 1 1
+# imagescale 1 1.3 0
+# fadeout "white" 1
+# textwindow "close"
+# waitandnext 1.5
+
+# background "300_devil_daytime02"
+# imagealpha 1 1 0
+# imagepos 1 0 30
+# fadein "white" 1
+# waitandnext 1
+
+# textwindow "nomal"
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0002"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+ケイオスリオンは
+知り合いがいるかもしれませんから
+避けたいです
+
+# voice 340101 "abaris_a_0028"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+ハルモニアは…ちょっと苦手なので、
+トレイセーマがいいかな、と…
+
+;;//演出：回想おわり
+;;//背景：野外（可能であればトレイセーマ）
+# fadeout "white" 1
+# textwindow "close"
+# face 3401021 "normal"
+# waitandnext 1.5
+
+# background "beast_world_town1"
+# fadein "white" 1
+# imagealpha 1 0 0
+# imagerightout 1 0
+# textwindow "nomal"
+# textflame 0 0
+@
+と、いうことだった
+
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+こちらの集落では、住民同士で
+挨拶を交わすことが新年の習わしの
+ようですね…
+
+# textflame 0 0
+@
+しかし、かなり目立つはずの
+アバリスを見ても特になにも言わず、
+淡々と会釈をして通り過ぎていく
+
+# emotionbody 1000 9 3401021 -120 240
+# effectpattern 1000 4 0
+# effectstart 1000
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0002"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+あの…マスター
+私を見ても、誰も
+なにも言わないんですけど…
+
+# effectskip 1000
+# voice 340101 "abaris_a_0015"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+やっぱり、私の存在感が薄いから、
+振袖ぐらいじゃダメなんですよ…
+
+# textflame 0 0
+@
+そういって落ち込むアバリスを、
+マスターはそんなはずはない、と
+言って励ます
+
+# textflame 0 0
+@
+どうして誰も注目しないのかな、と
+不思議に思っていると、どこからか
+二人を呼ぶ声が聞こえた
+
+# face 3401021 "surprise"
+# voice 340101 "abaris_a_0022"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+あ…マスター、あちらの物陰から
+おじいさんが手招きしています…
+いってみますか？
+
+# textflame 0 0
+@
+二人を呼び寄せると、おじいさんは
+小さな声でトレイセーマについて
+教えてくれた
+
+# voice 340101 "abaris_a_0040"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+…つまり、
+平等であることに徹底していて、
+
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+見た目の違いについて
+発言しないことが
+決まっている、と…
+
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0028"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+もし、その場面を兵士に見つかれば
+捕まってしまうため、私の振袖にも
+なにも言わないのですね…
+
+# textflame 0 0
+@
+視線は感じたのに、
+誰もなにも言わない理由がわかり、
+マスターもアバリスも納得した
+
+# textflame 0 0
+@
+おじいさんは、さらに声をひそめ、
+ここだけの話だが、と神妙な顔をする
+マスターとアバリスが気構えると…
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textflame 1 1
+# textwindow "nomal"
+@おじいさん
+こんな綺麗なお嬢さんは初めて見た、
+人生で一番の眼福だ
+
+# face 3401021 "shy"
+# voice 340101 "abaris_a_0024"
+# chara 3401021
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+ええ！
+は、恥ずかしいです…
+あ…ありがとうございます…
+
+# serif 1
+@おじいさん
+だが、その格好では兵士に捕まる、
+早くここを出た方がいい
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+@
+その忠告を受けて、
+二人は早々に集落を出ることにした
+
+# face 3401021 "usual"
+# voice 340101 "abaris_a_0003"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+では、おじいさんも気をつけて…
+
+# bgmfile "bgm177_178" "BgmGakuen001" 0
+# alpha 3830001 1 0.5
+# alpha 3401021 0 0.5
+@トレイセーマ兵
+おい！イミテーションどもが、
+物陰でなにをこそこそ企んでいる！？
+まとめて連行するぞ！
+
+# alpha 3830001 0 0.5
+# alpha 3401021 1 0.5
+# face 3401021 "angry"
+# voice 340101 "abaris_a_battle_0005"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+くっ…見つかってしまいましたか
+おじいさんは隠れてください！
+ここは私が…！

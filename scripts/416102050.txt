@@ -1,0 +1,536 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;インテグラルキラーズサイドストーリー
+;;第2話―５　タイトル：淘汰の果て
+;;2_5_0
+;;スクリプト最後の背景：ユグドラシル（地上）
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "stop"
+;;-----------------------------------------
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 2
+# alpha 24 0 0
+# mask 24 off
+;;ロンギヌス
+# body 300111
+# pos 300111 3
+# scale 300111 0.8 0
+# layer 300111 2
+# alpha 300111 0 0
+# mask 300111 off
+;;マサムネ（神7）
+# body 100111
+# pos 100111 3
+# scale 100111 0.8 0
+# layer 100111 2
+# alpha 100111 0 0
+# mask 100111 off
+;;パラシュ（神7）
+# body 200411
+# pos 200411 3
+# scale 200411 0.8 0
+# layer 200411 2
+# alpha 200411 0 0
+# mask 200411 off
+;;レーヴァテイン
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# layer 100221 2
+# alpha 100221 0 0
+# mask 100221 off
+;;アルテミス
+# body 400131
+# pos 400131 3
+# scale 400131 0.8 0
+# layer 400131 2
+# alpha 400131 0 0
+# mask 400131 off
+;;ゼロ
+# body 23
+# pos 23 3
+# scale 23 0.8 0
+# layer 23 2
+# alpha 23 0 0
+# mask 23 off
+;;-----------------------------------------
+;;第2話―５　タイトル：淘汰の果て
+;;//天上世界から地上世界に降りる演出
+# se "SE_0055"
+# textwindow "close"
+# fadeout "black" 0
+# waitandnext 1.2
+
+# background "in_yggdrasill2"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//ユグドラシル（天上）背景を一瞬映す　※反転世界ナシver.
+# se "SE_0644"
+# waitandnext 0.5
+
+# serif 1
+@？？？
+………………に……
+
+;;//選択肢
+# select "また、だ…" "select_label_01"
+………………に……
+
+;;Aまた、だ…
+;;
+;;A
+# label "select_label_01"
+# move 24 3 0
+# face 24 "normal"
+# alpha 24 1 0.5
+# mask 24 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+マスター？
+どうかされましたか？
+以前も同じようなことが…
+
+# textboxarrow 0 2
+@ティルフィング
+もうすぐ地上です
+途中で苦しくなったら
+私に掴まってくださいね
+
+;;//背景：ユグドラシル（地上）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_underwild"
+# move 24 3 0
+# face 24 "normal"
+# alpha 24 1 0
+# mask 24 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# voice 1014 "tyrufing_0028"
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+久し振りの地上ですけれど、
+随分、雰囲気が変わっていますね…
+
+# alpha 24 0 0.5
+# move 100221 3 0
+# face 100221 "sad"
+# alpha 100221 1 0.5
+# mask 100221 off
+# textboxarrow 0 2
+@レーヴァテイン
+あれからかなりの時間が経ってるよね
+…兄さん
+
+# alpha 100221 0 0.5
+# move 24 3 0
+# face 24 "surprise"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+まず、特務機関ラグナロクに
+向かいましょうか
+ヴァリン博士が…あ！？
+
+;;//レーヴァテインが走り去る
+# alpha 24 0 0.5
+# textwindow "close"
+# move 100221 3 0
+# face 100221 "normal"
+# alpha 100221 1 0.5
+# mask 100221 off
+# waitandnext 0.6
+
+# se "SE_5575"
+# leftout 100221 0.5
+# waitandnext 0.5
+
+# alpha 100221 0 0
+# move 400131 3 0
+# face 400131 "angry"
+# alpha 400131 1 0.5
+# mask 400131 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アルテミス
+レーヴァテイン、
+勝手な行動は控えて下さい！
+
+# voice 1002 "revatein_0015"
+# alpha 400131 0 0.5
+# move 100221 3 0
+# face 100221 "sad"
+# alpha 100221 1 0.5
+# mask 100221 off
+# textboxarrow 0 2
+@レーヴァテイン
+兄さん…まだ、いるよね…？
+
+# se "SE_5575"
+# textwindow "close"
+# leftout 100221 0.5
+# waitandnext 0.5
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_yggdrasill_up"
+# alpha 100221 0 0
+# move 100221 3 0
+# face 100221 "normal"
+# alpha 100221 1 0
+# mask 100221 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@レーヴァテイン
+兄さん！
+
+;;//ティルフィングが追いつく
+# se "SE_5575"
+# move 24 2 0
+# face 24 "surprise"
+# alpha 24 1 0.5
+# mask 24 on
+# textboxarrow 0 1
+# move 100221 4 0.5
+# mask 100221 on
+@ティルフィング
+急にどうしたんですか、
+レーヴァテイン？
+ここは…？
+
+# face 100221 "sad"
+# textboxarrow 0 3
+@レーヴァテイン
+約束したの…
+ここで待ってるって…
+ここで…
+
+# textboxarrow 0 3
+@レーヴァテイン
+私が…兄さんを殺すための…
+神器を持ってくるまで、
+待ってるって…
+
+# face 24 "sad"
+# textboxarrow 0 1
+@ティルフィング
+ここにゼロが…？
+でも、誰も…
+
+;;ロンギヌス（声だけ）
+# bgm "stop"
+# voice 3001 "ronginusu_battle_0008"
+# serif 1
+@ロンギヌス
+きゃああああっ…！
+
+;;マサムネ（声だけ）
+# serif 1
+@マサムネ
+ぬうっ
+何やつだ！？
+
+;;？？？（声だけ）
+# serif 1
+@？？？
+ガアアアアアアアアアアア！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 100221 "surprise"
+# textboxarrow 0 3
+@レーヴァテイン
+今の叫び声…そんなっ
+
+;;//レーヴァテインが駆け出す
+# se "SE_5575"
+# textwindow "close"
+# alpha 100221 0 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm150_151" "BgmPJZero001" 0
+# alpha 24 0 0.5
+# move 23 3 0
+# face 23 "BeastMode_1"
+# alpha 23 1 0.5
+# mask 23 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ゼロ
+ガアアアアアアアア！
+…くそっ
+お前ら…早く逃げろ…！
+
+# voice 11002 "laevateinm_0026"
+# textboxarrow 0 2
+@ゼロ
+もう…ほとんど制御できなく…
+なっちまってんだ…
+
+;;//レーヴァテインが駆けてくる
+# se "SE_5575"
+# move 23 2 0.5
+# mask 23 on
+# move 100221 4 0
+# face 100221 "surprise"
+# alpha 100221 1 0.5
+# mask 100221 on
+# textboxarrow 0 3
+@レーヴァテイン
+兄さん！
+
+# face 23 "angry_1"
+# textboxarrow 0 1
+@ゼロ
+あ？
+…誰だ、お前？
+
+# textboxarrow 0 3
+@レーヴァテイン
+アマネだよ…
+ねぇ、しっかりして…！
+
+# textboxarrow 0 1
+@ゼロ
+アマネ…？
+悪いな…記憶があまり残ってねぇんだ
+
+# face 23 "sad"
+# textboxarrow 0 1
+@ゼロ
+何か…大事なことがあったはず…
+なんだがな…
+
+# alpha 23 0 0.5
+# alpha 100221 0 0.5
+# move 24 3 0
+# face 24 "angry"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+レーヴァテイン！
+ゼロは…あっ
+
+# alpha 24 0 0.5
+# move 23 2 0
+# face 23 "normal"
+# alpha 23 1 0.5
+# mask 23 on
+# move 100221 4 0
+# face 100221 "sad"
+# alpha 100221 1 0.5
+# mask 100221 on
+# textboxarrow 0 3
+@レーヴァテイン
+魔獣化が進んでる…
+私のことも思い出せないみたい…
+
+# textboxarrow 0 1
+@ゼロ
+待て…
+レーヴァテインだと…？
+ああ、そうか…ようやくか…
+
+# face 100221 "happy"
+# textboxarrow 0 3
+@レーヴァテイン
+兄さん、思い出したのっ？
+そうだよ…私…
+
+# voice 11002 "laevateinm_0004"
+# face 23 "smile_1"
+# textboxarrow 0 1
+@ゼロ
+約束を果たしに来てくれたんだな、
+レーヴァテイン
+嬉しいぜ…
+
+# face 100221 "sad"
+# textboxarrow 0 3
+@レーヴァテイン
+あ…
+
+# face 23 "normal"
+# textboxarrow 0 1
+@ゼロ
+お前に殺してもらうために…
+必死で自分を抑えてきたんだ…
+ギリギリ間に合ったな…
+
+# face 23 "angry_2"
+# textboxarrow 0 1
+@ゼロ
+さあ…！
+お前の神器で…俺を殺してくれっ
+完全に魔獣化する前に…！
+
+# face 23 "normal"
+# textboxarrow 0 1
+@ゼロ
+レーヴァテイン…理由は忘れちまった
+が…俺はお前に殺されるのを…
+望んでたんだ
+
+# textboxarrow 0 1
+@ゼロ
+せっかく地上を…悪魔の手から
+取り戻したんだから…復興の邪魔を
+したくはない…
+
+# face 23 "BeastMode_1"
+# textboxarrow 0 1
+@ゼロ
+ひと思いに…
+ガアアアアアアアア！
+
+# voice 1002 "revatein_0018"
+# face 100221 "surprise"
+# textboxarrow 0 3
+@レーヴァテイン
+兄さん…！
+もう…私のことも…
+
+# textboxarrow 0 1
+@ゼロ
+アアアアアアアアアアアアア！
+早くしろぉっ…！
+早く殺せぇぇぇっ！
+
+# face 100221 "sad"
+# textboxarrow 0 3
+@レーヴァテイン
+…………
+
+# voice 1001 "masamune_0024"
+# alpha 23 0 0.5
+# alpha 100221 0 0.5
+# move 200411 2 0
+# face 200411 "normal"
+# alpha 200411 1 0.5
+# mask 200411 on
+# move 100111 4 0
+# face 100111 "nutual"
+# alpha 100111 1 0.5
+# mask 100111 on
+# textboxarrow 0 3
+@マサムネ
+レーヴァテイン…
+ここは拙者が
+
+# textboxarrow 0 1
+@パラシュ
+ダメだよ、マサムネ
+これは彼女の問題だ
+
+# alpha 200411 0 0.5
+# alpha 100111 0 0.5
+# move 300111 3 0
+# face 300111 "normal"
+# alpha 300111 1 0.5
+# mask 300111 off
+# textboxarrow 0 2
+@ロンギヌス
+あ、あのっ…
+助けることはできないんですか？
+確か研究をしてるって…
+
+# alpha 300111 0 0.5
+# move 400131 2 0
+# face 400131 "nutual"
+# alpha 400131 1 0.5
+# mask 400131 on
+# move 24 4 0
+# face 24 "normal"
+# alpha 24 1 0.5
+# mask 24 on
+# textboxarrow 0 3
+@ティルフィング
+今からでもラグナロク機関に
+向かえば、ヴァリンがきっと！
+
+# textboxarrow 0 1
+@アルテミス
+ラグナロク機関は
+ここの近くなのですか？
+
+# face 24 "sad"
+# textboxarrow 0 3
+@ティルフィング
+いえ…徒歩だと数日はかかるところに
+あります…
+
+# face 400131 "sad"
+# textboxarrow 0 1
+@アルテミス
+それでは、とても間に合いそうに
+ありませんよ…
+
+# voice 1014 "tyrufing_0037"
+# textboxarrow 0 3
+@ティルフィング
+でも…きっと助ける方法が…
+
+# alpha 400131 0 0.5
+# alpha 24 0 0.5
+# move 100221 3 0
+# face 100221 "sad"
+# alpha 100221 1 0.5
+# mask 100221 off
+# textboxarrow 0 2
+@レーヴァテイン
+いいよ…
+覚悟はできてたんだから…
+
+# alpha 100221 0 0.5
+# move 24 3 0
+# face 24 "surprise"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+レーヴァテイン…！
+
+# alpha 24 0 0.5
+# move 100221 3 0
+# face 100221 "sad"
+# alpha 100221 1 0.5
+# mask 100221 off
+# textboxarrow 0 2
+@レーヴァテイン
+神器は手に入れられなかったけど…
+淘汰を終えて、私はあの頃より
+強くなった
+
+# se "SE_5205"
+# textboxarrow 0 2
+@レーヴァテイン
+安心して、兄さん…
+今から私が…殺してあげるからね

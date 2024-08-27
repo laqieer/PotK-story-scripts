@@ -1,0 +1,442 @@
+;;----------------------------------------------
+;;100302031
+;;第2話　タイトル：不可思議な戦場
+;;2-3-1
+;;----------------------------------------------
+# script "lisp"
+# background "300_devil_daytime03"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;アルマス
+# body 3103811
+# pos 3103811 2
+# scale 3103811 0.8 0
+# layer 3103811 3
+# alpha 3103811 0 0
+# mask 3103811 on
+;;ギル
+# body 137
+# pos 137 2
+# scale 137 0.8 0
+# layer 137 2
+# alpha 137 0 0
+# mask 137 on
+;;ティターニア
+# body 139
+# pos 139 4
+# scale 139 0.8 0
+# layer 139 5
+# alpha 139 0 0
+# mask 139 on
+;;アロンダイト
+# body 3100711
+# pos 3100711 4
+# scale 3100711 0.8 0
+# layer 3100711 2
+# alpha 3100711 0 0
+# mask 3100711 on
+;;ケイオスリオン兵
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# layer 3820001 2
+# alpha 3820001 0 0
+# mask 3820001 on
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;炎エフェクト
+# envbody 1000 6 0
+# effectpattern 1000 1 0
+# textwindow "close"
+# waitandnext 0.1
+
+;;◆背景：ケイオスリオン国境昼------------------------------------------------------
+;;倒れているので、立ち絵は出さない
+# effectstart 1000
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@ケイオスリオン兵
+ぐおお…
+
+# textwindow "top_close"
+# alpha 3103811 1 0.5
+# alpha 139 1 0.5
+# waitandnext 0.5
+
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103811 "surprise"
+# face 139 "surprise"
+# voice 1038 "almace_0022"
+# chara 3103811
+@アルマス
+たくさんのケイオスリオン兵が
+倒れてる…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 139 "worry"
+# voice 9967 "titania_0057"
+# chara 139
+@ティターニア
+これは…かなり激しい戦闘が行われた
+ようですね…
+
+# alpha 3103811 0 0.5
+# alpha 139 0 0.5
+# alpha 137 1 0.5
+# face 137 "normal"
+# alpha 3100711 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100711 "angry"
+# voice 310071 "arondaito_ge_0028"
+# chara 3100711
+@アロンダイト
+ですが、敵兵の姿が見当たりません
+倒れているのは全てケイオスリオン兵
+のようです
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 137 "surprise"
+# voice 9969 "gill_0009"
+# chara 137
+@ギル
+で、でもっ、これってチャンスなん
+じゃねえか！？
+今のうちに行こうぜ！
+
+# alpha 137 0 0.5
+# alpha 3100711 0 0.5
+# pos 3103811 3
+# mask 3103811 on
+# alpha 3103811 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103811 "sad"
+# voice 1038 "almace_battle_0005"
+# chara 3103811
+@アルマス
+そうね…
+
+;;選択肢-----------------------------------------------------
+# select "放っておいて良いのか？" "select_label_end" "彼らを助けよう" "select_label_end" "見捨てるのは…" "select_label_end"
+そうね…
+
+;;合流-------------------------------------------------------
+# label "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103811 "normal"
+# voice 1038 "almace_0042"
+# chara 3103811
+@アルマス
+マスターに言われなくても分かってる
+いくらケイオスリオン兵でも
+負傷者は救助しないと
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+@アルマス
+私達は人類の復権を目指しているん
+だから、差別なんかしないわよっ
+
+# textwindow "close"
+# move 3103811 2 0.5
+# pos 3100711 4
+# alpha 3100711 1 0.5
+# face 3100711 "normal"
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100711 "surprise"
+# voice 310071 "arondaito_ge_0022"
+# chara 3100711
+@アロンダイト
+…このかたがたを助けるのですか？
+敵になるかもしれないのに
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103811 "angry"
+# voice 1038 "almace_0009"
+# chara 3103811
+@アルマス
+そんなの今はいいでしょ！
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100711 "normal"
+# voice 310071 "arondaito_ge_0032"
+# chara 3100711
+@アロンダイト
+そう、ですね…
+失礼致しました
+私もお手伝いさせて下さい
+
+# alpha 3100711 0 0.5
+# alpha 3103811 0 0.5
+# pos 137 2
+# alpha 137 1 0.5
+# pos 139 4
+# face 139 "normal"
+# alpha 139 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 137 "sad"
+# voice 9969 "gill_0029"
+# chara 137
+@ギル
+ええーっ…
+なんでこいつらを…ったく
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 139 "surprise"
+# voice 9967 "titania_0003"
+# chara 139
+@ティターニア
+大丈夫ですかっ？
+…あら？
+
+# alpha 139 0 0.5
+# alpha 137 0 0.5
+# pos 3103811 3
+# alpha 3103811 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103811 "surprise"
+# voice 1038 "almace_0028"
+# chara 3103811
+@アルマス
+これって…応急処置はしてあるわね
+もしかして私達がやることは
+特にないの？
+
+# brightness 3103811 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@ケイオスリオン兵
+ぐうう…
+
+# alpha 3103811 0 0.5
+# pos 139 3
+# alpha 139 1 0.5
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 139 "worry"
+# voice 9967 "titania_0063"
+# chara 139
+@ティターニア
+傷口は塞がっているようですけど
+まだ動ける状態ではないのでしょう
+
+# alpha 139 0 0.5
+# alpha 3103811 1 0.5
+# brightness 3103811 1.0 0
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103811 "normal"
+# voice 1038 "almace_0003"
+# chara 3103811
+@アルマス
+じゃあ、せめてゆっくり休める
+ところに運んだ方が良いわね
+
+# textwindow "top_close"
+# textwindow "bottom_close"
+# move 3103811 4 0.5
+# pos 137 2
+# alpha 137 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 137 "surprise"
+# voice 9969 "gill_0023"
+# chara 137
+@ギル
+いや、無茶だって！
+人数が多すぎるよっ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3103811 "angry"
+# voice 1038 "almace_0055"
+# chara 3103811
+@アルマス
+口を動かす暇があったら
+手を動かしなさい
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 137 "sad"
+# voice 9969 "gill_0026"
+# chara 137
+@ギル
+マジかよぉ…
+
+# alpha 3103811 0 0.5
+# alpha 137 0 0.5
+# pos 3100711 3
+# mask 3100711 off
+# alpha 3100711 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100711 "happy"
+# voice 310071 "arondaito_ge_0007"
+# chara 3100711
+@アロンダイト
+…………
+
+;;◆背景：ケイオスリオン国境夜------------------------------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# effectskip 1000
+# alpha 3100711 0 0
+# face 3100711 "normal"
+# face 3103811 "normal"
+# background "300_devil_night03"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# pos 3103811 3
+# mask 3103811 off
+# alpha 3103811 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1038 "almace_0027"
+# chara 3103811
+@アルマス
+息のある兵士達はひとまず運び
+終えたわね
+
+# alpha 3103811 0 0.5
+# pos 139 4
+# face 139 "sad"
+# alpha 139 1 0.5
+# pos 137 2
+# alpha 137 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 137 "sad"
+# voice 9969 "gill_0025"
+# chara 137
+@ギル
+疲れたぁっ…！
+こんなことしてる場合じゃないんじゃ
+ねえのかよっ…？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 139 "worry"
+# voice 9967 "titania_0004"
+# chara 139
+@ティターニア
+そうですね
+そろそろここを離れましょう
+
+# textwindow "close"
+# alpha 139 0 0.5
+# alpha 137 0 0.5
+# waitandnext 0.5
+
+;;ここで意識が回復するので、以降ケイオス兵も立ち絵出す
+# alpha 3820001 1 0.5
+# waitandnext 0.5
+
+# se "SE_0648"
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 382000 "demon_0024"
+# chara 3820001
+@ケイオスリオン兵
+ううっ…あんた達、何者だ…？
+
+# textwindow "close"
+# move 3820001 4 0.5
+# pos 3103811 2
+# mask 3103811 on
+# alpha 3103811 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103811 "happy1"
+# voice 1038 "almace_0004"
+# chara 3103811
+@アルマス
+意識が戻ったみたいね
+私はアルマス！ロストラグナロクに
+終焉をもたらす者よ！
+
+# alpha 3103811 0 0.5
+# alpha 3820001 0 0.5
+# pos 139 3
+# alpha 139 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 139 "worry"
+# voice 9967 "titania_0041"
+# chara 139
+@ティターニア
+また堂々と名乗って…
+
+# alpha 139 0 0.5
+# alpha 3820001 1 0.5
+# pos 3100711 2
+# mask 3100711 on
+# alpha 3100711 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100711 "normal"
+# voice 310071 "arondaito_ge_0004"
+# chara 3100711
+@アロンダイト
+ふふっ
+アロンダイト・獣刻・ユニコーンです
+傷の具合は――
+
+# shake 0 0.6
+# face 3100711 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 382000 "demon_0025"
+# chara 3820001
+@ケイオスリオン兵
+獣刻！？
+あんた…トレイセーマの斬ル姫…
+うぎゃあああ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3820001
+@ケイオスリオン兵
+た、助けてくれぇ…！
+あんた達の力はよく分かった
+なんでも言うこと聞くから…！

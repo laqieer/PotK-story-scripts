@@ -1,0 +1,944 @@
+;;-----------------------------------------
+;;414021051
+;;業果の斬ル姫【EP5】バトル前
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm293" "BgmLostRagnarokSideStory" 0
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 4
+# mask 3102311 off
+# alpha 3102311 1 0
+# brightness 3102311 0.5 0
+;;フェイルノート
+# body 167
+# pos 167 3
+# scale 167 0.8 0
+# layer 167 2
+# mask 167 off
+# alpha 167 0 0
+# brightness 167 0.5 0
+;;シユウ
+# body 3201911
+# pos 3201911 1
+# scale 3201911 0.8 0
+# layer 3201911 3
+# mask 3201911 on
+# alpha 3201911 0 0
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# mask 3501711 off
+# alpha 3501711 0 0
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;回想フィルター
+# imageset 2 "bg_white_circle"
+# imagealpha 2 0 0
+;;炎エフェクト
+# envbody 1000 7 14
+# effectpattern 1000 1 14
+# envbody 1001 7 14
+# effectpattern 1001 1 14
+# envbody 1002 7 14
+# effectpattern 1002 1 14
+;;火の粉
+# envbody 1500 6 14
+# effectpattern 1500 1 0
+;;剣閃（アスカロン）
+# effectbody 2000 3 0 0 7
+# waitandnext 0.1
+
+;;◆背景：黒バック（アスカ）-------------------------------
+# imagepos 2 0 0
+# imagelayer 2 1
+# imagescale 2 1.2 0
+# imagealpha 2 1 0
+# textflame 0 1
+# textboxarrow 0 0
+# chara 3102311
+@アスカロン
+嫉妬する私は惨めだと
+
+# textflame 0 1
+# textboxarrow 0 0
+# chara 3102311
+@アスカロン
+そう、思っていて
+
+# textflame 0 1
+# textboxarrow 0 0
+# chara 3102311
+@アスカロン
+羨み、妬むことなんて
+なかったらいいのに
+
+# textflame 0 1
+# textboxarrow 0 0
+# chara 3102311
+@アスカロン
+強くなれば
+誰よりも
+
+# textflame 0 1
+# textboxarrow 0 0
+# chara 3102311
+@アスカロン
+蹴落とし
+高みに立てば
+
+# textflame 0 1
+# textboxarrow 0 0
+# chara 3102311
+@アスカロン
+そうした冷たい感情が
+浮かんでは
+
+# textflame 0 1
+# textboxarrow 0 0
+# chara 3102311
+@アスカロン
+それすら空しく思えて
+
+# alpha 3102311 0 0.5
+# textflame 0 1
+# textboxarrow 0 0
+# chara 3102311
+@アスカロン
+…
+
+;;◆背景：黒バック（フェイ）-------------------------------
+# alpha 167 1 0.5
+# textflame 0 1
+# textboxarrow 0 0
+# chara 3102311
+@アスカロン
+だけど、あなたは…
+
+# textflame 0 1
+# textboxarrow 0 0
+# chara 3102311
+@アスカロン
+罵倒してばかりだったけど
+図星だった
+私の弱さを当て続けた
+
+# textflame 0 1
+# textboxarrow 0 0
+# chara 3102311
+@アスカロン
+嫉妬の氷こそ
+私の力だと
+
+# textflame 0 1
+# textboxarrow 0 0
+# chara 3102311
+@アスカロン
+巨人の呪いにまで
+期待を込めて
+
+# textflame 0 1
+# textboxarrow 0 0
+# chara 3102311
+@アスカロン
+それが全て私なんだと
+そう、見てくれた
+
+# textflame 0 1
+# textboxarrow 0 0
+# chara 3102311
+@アスカロン
+それを含めて
+強さなのだと
+
+# textflame 0 1
+# textboxarrow 0 0
+# chara 3102311
+@アスカロン
+私の歩む道を
+築いてくれた
+
+# alpha 167 0 0.5
+# textflame 0 1
+# textboxarrow 0 0
+# chara 3102311
+@アスカロン
+だから───
+
+# bgm "stop"
+# se "SE_0020"
+# imagealpha 2 0 0.1
+# fadein "white" 0.6
+# textflame 1 1
+# textboxarrow 0 0
+# voice 310231 "ascalon_a_battle_0001"
+# chara 3102311
+@アスカロン
+───だから次は、私の手番
+
+;;◆背景：ケイオスリオン街中夜-----------------------------
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# fadeout "black" 1.0
+# textwindow "close"
+# waitandnext 1.0
+
+# brightness 3102311 1.0 0
+# brightness 167 1.0 0
+# alpha 3501711 1 0
+# face 3501711 "happy"
+# background "300_devil_night02"
+# effectstart 1000
+# se "SE_5643"
+# waitandnext 0.5
+
+# se "SE_0753"
+# fadein "black" 1.0
+# waitandnext 1.0
+
+# textwindow "normal"
+# textflame 0 0
+@
+舞い上がった炎は
+瞬く間に赤き壁となり
+アスカロン達の姿を飲み込んだ
+
+# textflame 0 0
+@
+燃え盛る炎を前に
+憤怒と歓喜がないまぜになった
+笑い声をあげるグリモワール
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0020"
+# chara 3501711
+@グリモワール
+あ～はははっー！！
+
+# bgm "stop"
+# se "SE_0020"
+# shake 0 0.6
+# face 3501711 "normal"
+# subfillrect 1 "blue" 0.6 0.4 0
+# textflame 0 0
+@
+だが、その炎に
+水が、氷が差される
+
+# brightness 3501711 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+# chara 3102311
+@アスカロン
+…あなたでは
+嫉妬のレヴィアタンが渦巻く私に
+傷一つ付けられませんよ
+
+# brightness 3501711 1.0 0.3
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "angry"
+# chara 3501711
+@グリモワール
+…は？
+
+# bgmfile "bgm291_292" "BgmLostRagnarokSideStory" 0
+# brightness 3501711 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+# chara 3102311
+@アスカロン
+火傷一つ、ですかね
+
+# sestop "SE_0753"
+# textwindow "top_close"
+# textwindow "bottom_close"
+# alpha 3501711 0 0.5
+# waitandnext 0.5
+
+;;演出・SE：炎が晴れ、中からアスカロン達が姿を現す
+# brightness 3501711 1.0 0
+# se "SE_9121"
+# voice 310231 "ascalon_a_battle_0002"
+# effectstart 2000
+# waitandnext 0.6
+
+# se "SE_5523"
+# shake 1 1.2
+# fadeout "white" 1.0
+# waitandnext 1.0
+
+# effectskip 1000
+# effectstart 1500
+# pos 3102311 1
+# mask 3102311 on
+# alpha 3102311 1 0
+# face 3102311 "normal"
+# pos 3201911 5
+# mask 3201911 on
+# alpha 3201911 1 0
+# face 3201911 "usual"
+# pos 167 3
+# mask 167 on
+# alpha 167 1 0
+# face 167 "normal"
+# waitandnext 0.5
+
+# se "SE_4838"
+# shake 0 1.0
+# fadein "white" 1.0
+# waitandnext 1.3
+
+# textwindow "normal"
+# textflame 0 0
+@
+渦巻いていた炎が斬り裂かれ
+中からアスカロン達が姿を現す
+
+# textflame 0 0
+@
+確かに
+先程、グリモワールが放った炎は
+アスカロン達の姿を飲み込んだ
+
+# textflame 0 0
+@
+その、姿のみを
+
+# alpha 3102311 0 0.5
+# alpha 3201911 0 0.5
+# alpha 167 0 0.5
+# brightness 3501711 1.0 0
+# alpha 3501711 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "normal"
+# voice 350171 "grimoire_ge_0007"
+# chara 3501711
+@グリモワール
+はんッ！
+
+# textflame 0 0
+@
+鼻で笑うグリモワール
+
+# textflame 0 0
+@
+炎が晴れると
+そこでは透き通った無数の氷柱が
+アスカロン達を守っていた
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "angry"
+# voice 350171 "grimoire_ge_0009"
+# chara 3501711
+@グリモワール
+…だから、なぁに
+
+# textwindow "close"
+# alpha 3501711 0 0.5
+# waitandnext 0.5
+
+# pos 3501711 4
+# mask 3501711 on
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# pos 3102311 2
+# mask 3102311 on
+# alpha 3102311 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "normal"
+# voice 310231 "ascalon_a_0013"
+# chara 3102311
+@アスカロン
+だから…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "sad"
+# chara 3102311
+@アスカロン
+…羨ましいんです
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3501711 "surprise"
+# voice 350171 "grimoire_ge_0022"
+# chara 3501711
+@グリモワール
+えぇ？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "normal"
+# chara 3102311
+@アスカロン
+その魔法、すごいです
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "normal"
+# chara 3102311
+@アスカロン
+町を飲み込むその魔法
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "happy"
+# chara 3102311
+@アスカロン
+…妬ましいですねぇ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3501711 "normal"
+# chara 3501711
+@グリモワール
+………でぇ？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "normal"
+# voice 310231 "ascalon_a_0003"
+# chara 3102311
+@アスカロン
+だからこそ………負けはしない
+
+;;演出・SE：周辺に無数の氷柱が乱立する
+# se "SE_5924"
+# shake 0 0.6
+# subfillrect 1 "blue" 0.6 0.4 0
+# face 3501711 "surprise"
+# effectskip 1500
+# textflame 0 0
+@
+瞬間、無数の氷柱が王都に乱立し
+建物を、人を、飲み込む
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_battle_0005"
+# chara 3501711
+@グリモワール
+な、なによ、これ
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3501711
+@グリモワール
+ワタシの炎が
+氷に、かき消されて…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "angry"
+# voice 310231 "ascalon_a_0009"
+# chara 3102311
+@アスカロン
+都中、逃げ回っていた時に
+そこかしこに魔力を込めた氷の欠片を
+置いてまわりました
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3102311
+@アスカロン
+シユウに闘いを任せている間に
+力の回復に努めました
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3501711 "angry"
+# voice 350171 "grimoire_ge_0010"
+# chara 3501711
+@グリモワール
+こ、こんな芸当
+誰の入れ知恵かしらッ！？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "normal"
+# chara 3102311
+@アスカロン
+『王都を囲む炎で描いた極大魔法陣』
+『発動までの長期詠唱』
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3501711 "surprise"
+# chara 3501711
+@グリモワール
+…！？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "angry"
+# voice 310231 "ascalon_a_0004"
+# chara 3102311
+@アスカロン
+全部、あなたから聞きました
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3102311
+@アスカロン
+妬ましくって、真似を
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3501711
+@グリモワール
+なっ、なっ、なッ………！！
+
+# alpha 3102311 0 0.5
+# pos 167 2
+# mask 167 on
+# alpha 167 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 167 "normal"
+# chara 167
+@フェイルノート
+ぷぷぷ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3501711 "angry"
+# voice 350171 "grimoire_ge_battle_0006"
+# chara 3501711
+@グリモワール
+何よッ！？
+
+# voice 4019 "failnaught_a_0021"
+# textflame 1 1
+# textboxarrow 0 1
+# face 167 "smile"
+# chara 167
+@フェイルノート
+魔法で演説までぶって
+ご立派ぁ
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 167
+@フェイルノート
+あなた、怒りの具現なんだっけ？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3501711 "normal"
+# chara 3501711
+@グリモワール
+だからぁッ…？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 167 "normal"
+# chara 167
+@フェイルノート
+怒りで
+饒舌になったのねぇ？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3501711 "surprise"
+# voice 350171 "grimoire_ge_0025"
+# chara 3501711
+@グリモワール
+………ッ！！
+
+;;◆背景：ケイオスリオン街中夜（結界側）-------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# alpha 3501711 0 0
+# alpha 167 0 0
+# background "300_devil_night01"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.8
+
+;;演出・SE：極大魔法陣が砕け散る
+# se "SE_9063"
+# subfillrect 1 "white" 0.2 0.5 0
+# waitandnext 0.3
+
+# se "SE_9063"
+# subfillrect 1 "white" 0.2 0.7 0
+# waitandnext 0.6
+
+# se "SE_9175"
+# shake 1 0.6
+# fadein "white" 0.6
+# waitandnext 0.9
+
+# textwindow "normal"
+# textflame 0 0
+@
+王都を囲っていた
+極大魔法陣が砕け散る
+
+# textflame 0 0
+@
+グリモワールの炎で描いた魔法陣が
+都中に渦巻いたアスカロンの氷に
+乱され、瓦解することとなった
+
+;;◆背景：ケイオスリオン街中夜-----------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# pos 3501711 3
+# mask 3501711 off
+# alpha 3501711 1 0.5
+# face 3501711 "surprise"
+# background "300_devil_night02"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0038"
+# chara 3501711
+@グリモワール
+…あ、あぁ、ああぁぁ…
+
+# textflame 0 0
+@
+あれだけ手間暇かけた魔術を砕かれ
+グリモワールは一瞬だけではあるが
+呆然としてしまう
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "normal"
+# chara 3501711
+@グリモワール
+…ワタシの
+ワタシの怒りに触れたわねぇぇ…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "angry"
+# voice 350171 "grimoire_ge_0029"
+# chara 3501711
+@グリモワール
+触れちゃイケないところにッ
+触れたわねぇぇぇぇッッ！？
+
+# se "SE_5223"
+# shake 0 0.6
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 2
+# chara 3501711
+@グリモワール
+邪龍のっ
+逆鱗にィィィィッ！！
+
+;;演出・SE：グリモワールの周囲から炎が勢いよく吹き出る
+# textwindow "normal"
+# se "SE_5838"
+# shake 0 0.6
+# effectstart 1001
+# subfillrect 1 "red" 0.6 0.4 0
+# textflame 0 0
+@
+グリモワールはまさに
+怒髪天を突くといった勢いで
+纏っていた炎を解放する
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "normal"
+# voice 350171 "grimoire_ge_battle_0008"
+# chara 3501711
+@グリモワール
+報いを受けさせてやる…っ！
+
+# subfillrect 1 "red" 0.6 0.4 0
+# se "SE_9096"
+# shake 0 0.5
+# textwindow "toge"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "angry"
+# chara 3501711
+@グリモワール
+憤怒の炎よっ！
+もっと燃え上がりなさいッッ！！
+
+;;◆背景：黒バック-----------------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# alpha 3501711 0 0
+# effectskip 1001
+# background "bg_black"
+# waitandnext 0.1
+
+# imagealpha 0 0 0.1
+# imagerightout 0 0.1
+# waitandnext 0.1
+
+# textwindow "normal"
+# textflame 0 0
+@
+放射された火炎の銃弾は
+王都の壁に、道に、天に乱れ撃たれ
+もはや暴走とも言える程に燃え上がる
+
+# textflame 0 0
+@
+炎が糸をひくように
+巨大な邪龍がうごめくように
+
+# textflame 0 0
+@
+ここは地獄か、冥界か
+
+;;◆背景：ケイオスリオン街中夜-----------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.1
+# textwindow "close"
+# waitandnext 0.1
+
+# pos 3102311 3
+# mask 3102311 on
+# face 3102311 "normal"
+# alpha 3102311 1 0
+# background "300_devil_night02"
+# effectstart 1002
+# waitandnext 0.1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 310231 "ascalon_a_0002"
+# chara 3102311
+@アスカロン
+立てますか
+地獄の皇帝、蠅の王
+
+# textwindow "close"
+# move 3102311 2 0.5
+# pos 3201911 4
+# mask 3201911 on
+# alpha 3201911 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3201911 "normal"
+# voice 320191 "chihyu_a_0003"
+# chara 3201911
+@シユウ
+…くるしゅうない！
+
+# textflame 0 0
+@
+そんな惨状の中
+アスカロンはシユウの手を引く
+
+# textflame 0 0
+@
+幻獣人の兵士たちが包囲し
+炎と氷が渦巻く戦場
+
+# textflame 0 0
+@
+アスカロンとシユウが並び立つ
+
+# textflame 0 0
+@
+それはチェス盤上で
+隣り合う姫と王の駒のように
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3201911 "happy"
+# voice 320191 "chihyu_a_0004"
+# chara 3201911
+@シユウ
+まだシユウはあそぶぞ
+アスカロンもついてこれるか…！？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "angry"
+# voice 310231 "ascalon_a_0032"
+# chara 3102311
+@アスカロン
+アスカロン・D. plug・レヴィアタン
+は砕けません
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "normal"
+# chara 3102311
+@アスカロン
+炎で氷は砕けませんから
+
+# se "SE_5643"
+# shake 0 0.6
+# subfillrect 1 "red" 0.6 0.4 0
+# alpha 3102311 0 0.5
+# alpha 3201911 0 0.5
+# alpha 3501711 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "angry"
+# voice 350171 "grimoire_ge_battle_0003"
+# chara 3501711
+@グリモワール
+融かし尽くしてあげるって
+言ってるのよォッ！
+
+# alpha 3501711 0 0.5
+# pos 3201911 4
+# maks 3201911 on
+# face 3201911 "normal"
+# alpha 3201911 1 0.5
+# pos 3102311 2
+# maks 3102311 on
+# alpha 3102311 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "normal"
+# chara 3102311
+@アスカロン
+あなたの熱を得てもなお
+私の氷は強堅です
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3102311
+@アスカロン
+嫉妬は
+あなたを欲する力
+欲した上で超える意思
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3102311
+@アスカロン
+あなたの力を私が得る
+
+# face 3201911 "usual"
+# textwindow "toge"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "angry"
+# voice 310231 "ascalon_a_battle_0002"
+# chara 3102311
+@アスカロン
+その力は王が為に！
+
+# textwindow "close"
+# move 3102311 1 0.5
+# move 3201911 5 0.5
+# pos 167 3
+# mask 167 on
+# layer 167 5
+# alpha 167 1 0.5
+# waitandnext 0.5
+
+# se "SE_0648"
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 167 "angry"
+# chara 167
+@フェイルノート
+さぁ？
+駒を進めましょうか
+
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 1
+# face 3102311 "angry"
+# voice 310231 "ascalon_a_battle_0001"
+# chara 3102311
+@アスカロン
+王と、姫のお通りだ！
+
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 3
+# face 3201911 "angry"
+# voice 320191 "chihyu_a_0029"
+# chara 3201911
+@シユウ
+みちをあけろ！
+
+# textwindow "close"
+# alpha 167 0 0.5
+# alpha 3102311 0 0.5
+# alpha 3201911 0 0.5
+# waitandnext 0.5
+
+# pos 3102311 3
+# mask 3102311 off
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3102311 "normal"
+# chara 3102311
+@アスカロン
+沈むのならば道連れに！
+王への道の礎となれ！
+
+# se "SE_4762"
+# shake 0 0.6
+# fadein "white" 0.6
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 2
+# face 3102311 "angry"
+# voice 310231 "ascalon_a_0029"
+# chara 3102311
+@アスカロン
+これが
+私が築く
+王の道です！

@@ -1,0 +1,304 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１３章 章タイトル「ラルゴカタストロフィ―攪乱―」
+;;第2話－９　タイトル：暴走の真実
+;;2_9_1
+;;スクリプト最後の背景：マサムネ城内
+;;-----------------------------------------
+# script "lisp"
+# background "masamune_arena"
+# bgmfile "bgm415" "BgmIntegralNoahBattle002" 0
+;;-----------------------------------------
+;;異族化マサムネ
+# body 5100131
+# pos 5100131 3
+# scale 5100131 0.8 0
+# layer 5100131 2
+# alpha 5100131 0 0
+# mask 5100131 off
+;;異族化パラシュ
+# body 5200431
+# pos 5200431 3
+# scale 5200431 0.8 0
+# layer 5200431 2
+# alpha 5200431 0 0
+# mask 5200431 off
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 2
+# alpha 5401721 0 0
+# mask 5401721 off
+;;擬装フライシュッツ
+# body 5502721
+# pos 5502721 3
+# scale 5502721 0.8 0
+# layer 5502721 2
+# alpha 5502721 0 0
+# mask 5502721 off
+;;-----------------------------------------
+# se "SE_11742"
+# voice 510013 "masamune_iz_unit_0008"
+# move 5401721 2 0
+# face 5401721 "angry"
+# alpha 5401721 1 0
+# mask 5401721 on
+# move 5100131 4 0
+# face 5100131 "angry"
+# alpha 5100131 1 0
+# mask 5100131 on
+# textflame 1 1
+# textboxarrow 0 3
+@マサムネ
+猛き魂の色、その目に焼きつけよ
+
+# se "SE_11711"
+# textboxarrow 0 1
+@スイハ
+大地を貫く、剣の雨よ！
+
+;;//スイハとマサムネが激突して離れる
+# se "SE_9084"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 510013 "masamune_iz_battle_0006"
+# textboxarrow 0 3
+@マサムネ
+ぬぅっ…！
+
+# voice 4017 "suiha_battle_0005"
+# textboxarrow 0 1
+@スイハ
+くぅっ…！
+
+# face 5100131 "normal"
+# textboxarrow 0 3
+@マサムネ
+その剣筋…敵ながら天晴れだ！
+そなた、正しく武士となったか
+
+# face 5401721 "normal"
+# textboxarrow 0 1
+@スイハ
+私はあなたのような生粋の武士では
+ありません
+だから、私の剣技を磨きました
+
+# voice 510013 "masamune_iz_0039"
+# face 5100131 "happy"
+# textboxarrow 0 3
+@マサムネ
+ほう…
+その意気や良し！
+
+# textboxarrow 0 3
+@マサムネ
+弓兵であったが故の剣術ならば、
+それはそなたにしか扱えぬもの…
+見事な修練だ
+
+;;スイハ（独白）
+# move 5401721 2 0
+# textboxarrow 0 0
+# textwindow "moya"
+@スイハ
+褒められてはいるけれど…
+あと一歩が届かない
+
+;;スイハ（独白）
+# textboxarrow 0 0
+@スイハ
+やはり強い…！
+私の全てを賭けて挑まないと
+勝機はない
+
+;;スイハ（独白）
+# textboxarrow 0 0
+@スイハ
+この命を燃やし尽くしても、
+マサムネを倒す！
+
+# face 5401721 "angry"
+# textboxarrow 0 1
+# textwindow "normal"
+@スイハ
+次で決めます
+
+# face 5100131 "normal"
+# textboxarrow 0 3
+@マサムネ
+その言葉、そのままお返ししよう
+
+# alpha 5401721 0 0.5
+# alpha 5100131 0 0.5
+# move 5200431 3 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 off
+# textboxarrow 0 2
+@パラシュ
+…………
+
+# alpha 5200431 0 0.5
+# move 5401721 2 0
+# face 5401721 "angry"
+# alpha 5401721 1 0.5
+# mask 5401721 on
+# textboxarrow 0 1
+# move 5100131 4 0
+# face 5100131 "angry"
+# alpha 5100131 1 0.5
+# mask 5100131 on
+@スイハ
+この心、貫く
+
+# se "SE_8000"
+# voice 510013 "masamune_iz_unit_0009"
+# textboxarrow 0 3
+@マサムネ
+泡沫の夢と散れ
+
+# bgm "stop"
+# se "SE_5255"
+# alpha 5401721 0 0.5
+# alpha 5100131 0 0.5
+# move 5502721 3 0
+# face 5502721 "angry"
+# alpha 5502721 1 0.5
+# mask 5502721 off
+# textboxarrow 0 2
+@フライシュッツ
+スイハちゃん！
+マサムネちゃん！
+ダメーっ！
+
+# move 5200431 2 0
+# face 5200431 "angry"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+# textboxarrow 0 1
+# move 5502721 4 0.5
+# mask 5502721 on
+@パラシュ
+二人の邪魔をするな！
+
+;;//フライシュッツをパラシュが止める
+# se "SE_4816"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 4017 "suiha_0022"
+# alpha 5200431 0 0.5
+# alpha 5502721 0 0.5
+# move 5401721 2 0
+# face 5401721 "surprise"
+# alpha 5401721 1 0.5
+# mask 5401721 on
+# textboxarrow 0 1
+# move 5100131 4 0
+# face 5100131 "normal"
+# alpha 5100131 1 0.5
+# mask 5100131 on
+@スイハ
+フライシュッツ！？
+
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+# face 5100131 "angry"
+# textboxarrow 0 3
+@マサムネ
+間の悪いことだな…
+興が削がれたぞ
+
+# alpha 5401721 0 0.5
+# alpha 5100131 0 0.5
+# move 5200431 2 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+# textboxarrow 0 1
+# move 5502721 4 0
+# face 5502721 "angry"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+@パラシュ
+彼女の相手はボクがするよ
+
+# textboxarrow 0 3
+@フライシュッツ
+パラシュちゃんも聞いて！
+あたし達は戦っちゃダメなの
+
+# voice 520043 "parashu_iz_0007"
+# face 5200431 "angry"
+# textboxarrow 0 1
+@パラシュ
+何を今更
+ボク達の理想は異なっている
+
+# textboxarrow 0 3
+@フライシュッツ
+そうかもしれないけど…
+このままだと、みんな“終焉”に
+飲み込まれちゃうよっ
+
+# face 5200431 "normal"
+# textboxarrow 0 1
+@パラシュ
+“終焉”の影響が出ているのは
+知ってるよ
+だからこそボク達は急いでいるんだ
+
+# textboxarrow 0 3
+@フライシュッツ
+それだけじゃないの
+あたし達自身にも“終焉”の影響が
+出始めてるんだから～っ
+
+# voice 4017 "suiha_im_0046"
+# alpha 5200431 0 0.5
+# alpha 5502721 0 0.5
+# move 5401721 3 0
+# face 5401721 "angry"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 2
+@スイハ
+フライシュッツ、
+それはどういうことですかっ？
+
+# voice 5027 "freischotz_0036"
+# alpha 5401721 0 0.5
+# move 5200431 2 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+# move 5502721 4 0
+# face 5502721 "angry"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+# textboxarrow 0 3
+@フライシュッツ
+お願い
+おねーちゃんの話を聞いて～っ
+
+# face 5200431 "angry"
+# textboxarrow 0 1
+@パラシュ
+君ねぇ…
+
+# voice 510013 "masamune_iz_0007"
+# alpha 5200431 0 0.5
+# alpha 5502721 0 0.5
+# move 5100131 3 0
+# face 5100131 "angry"
+# alpha 5100131 1 0.5
+# mask 5100131 off
+# textboxarrow 0 2
+@マサムネ
+ふんっ！
+集中が切れてしまった
+仕切り直しだ

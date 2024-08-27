@@ -1,0 +1,269 @@
+;;【第3話　タイトル：幻獣の切望】
+;;戦闘後
+;;背景：地底
+;;-----------------------------------------
+# script "lisp"
+# background "underground_world_1"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス(ジョブチェンジ後)
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# alpha 172 1 0
+# mask 172 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# alpha 139 0 0
+# mask 139 off
+;;ガ・ボー
+# body 3302111
+# pos 3302111 4
+# scale 3302111 0.8 0
+# alpha 3302111 0 0
+;;モラルタ
+# body 3104011
+# pos 3104011 4
+# scale 3104011 0.8 0
+# alpha 3104011 0 0
+;;ベガルタ
+# body 3104111
+# pos 3104111 2
+# scale 3104111 0.8 0
+# alpha 3104111 0 0
+;;-----------------------------------------
+# face 172 "angry"
+# voice 1038 "almace_battle_0002"
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+せいっ！
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+
+# serif 1
+# textboxarrow 0 0
+@魔獣
+ギイイイ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+# voice 1038 "almace_0007"
+@アルマス
+ここらの魔物は倒せたわね
+ティニ、逃げ道はあるっ？
+
+# alpha 172 0 0.5
+# alpha 139 1 0.5
+# face 139 "normal"
+# voice 9967 "titania_0004"
+@ティターニア
+はい！
+こちらから包囲を抜けられます
+急いで下さい
+
+# mask 172 on
+# alpha 172 1 0.5
+# alpha 139 0 0.5
+# face 172 "angry"
+@アルマス
+分かった
+そこの斬ル姫、こっちよ！
+
+# move 172 2 0.5
+# alpha 3302111 1 0.5
+# textboxarrow 0 3
+# face 3302111 "normal"
+# voice 330211 "gaebuide_ge_0028"
+@ガ・ボー
+あなたは…姉様ですか？
+
+# textboxarrow 0 1
+# voice 1038 "almace_0007"
+@アルマス
+何、言ってるの？
+とにかく早く来て！
+
+;;アルマスがガ・ボーの腕を取って走る
+# textwindow "close"
+# move 172 3 0.3
+# waitandnext 0.3
+
+# se "SE_5575"
+# sedelay "SE_5575" 0.5
+# leftout 172 0.5
+# leftout 3302111 0.5
+# waitandnext 0.5
+
+# move 3302111 3 0
+# alpha 3302111 0 0
+# move 172 3 0
+# alpha 172 0 0
+# waitandnext 0.5
+
+# mask 3302111 off
+# alpha 3302111 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 3302111 "happy"
+# voice 330211 "gaebuide_ge_0004"
+@ガ・ボー
+ボーを導いてくれる人…
+姉様ですねっ
+
+# mask 172 off
+# alpha 172 1 0.5
+# alpha 3302111 0 0.5
+# face 172 "angry"
+# voice 1038 "almace_0035"
+@アルマス
+違うわよ！
+何だか変な斬ル姫が出てきたわね…
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# alpha 172 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# alpha 3104011 1 0.5
+# alpha 3104111 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 3104011 "normal"
+# voice 1040 "morallta_0002"
+@モラルタ
+ヘイヘイヘーイ！
+カモンベイベー
+こっちだぜ、アルマスぅっ！
+
+# textboxarrow 0 1
+# face 3104111 "normal"
+# voice 1041 "beagallta_0027"
+@ベガルタ
+ここまで来れば大丈夫…
+大丈夫…だよね？
+本当に？
+
+# move 172 2 0
+# mask 172 on
+# alpha 172 1 0.5
+# move 3302111 4 0
+# mask 3302111 on
+# alpha 3302111 1 0.5
+# alpha 3104011 0 0.5
+# alpha 3104111 0 0.5
+# face 172 "normal"
+# voice 1038 "almace_0027"
+@アルマス
+ふう…危なかったわ
+ちょっと、あなた
+何であんな無茶を――
+
+# move 3302111 3 0.5
+# textboxarrow 0 2
+# voice 330211 "gaebuide_ge_0020"
+@ガ・ボー
+その翼…やっぱり姉様ですね？
+
+# shake 0 0.5
+# textboxarrow 0 1
+# face 172 "angry"
+# voice 1038 "almace_0010"
+@アルマス
+どこ触ってるのよっ？
+私はあなたの姉じゃないってば
+
+# move 3302111 4 0.5
+# textboxarrow 0 3
+# face 3302111 "sad"
+# voice 330211 "gaebuide_ge_0022"
+@ガ・ボー
+違うのですか…
+ボーは残念です…
+
+# alpha 172 0 0.5
+# move 139 2 0
+# mask 139 on
+# alpha 139 1 0.5
+# textboxarrow 0 1
+# face 139 "worry"
+# voice 9967 "titania_0003"
+@ティターニア
+お姉さんと
+はぐれてしまったのですか？
+
+# textboxarrow 0 3
+# voice 330211 "gaebuide_ge_0032"
+@ガ・ボー
+ボーは姉様を探しています…
+あなたは姉様ですか？
+
+# textboxarrow 0 1
+# face 139 "surprise"
+# voice 9967 "titania_0041"
+@ティターニア
+違いますよ…
+
+# textboxarrow 0 3
+# voice 330211 "gaebuide_ge_0028"
+@ガ・ボー
+では、あなたが姉様ですか？
+
+# alpha 172 1 0.5
+# alpha 139 0 0.5
+# textboxarrow 0 1
+# face 172 "sad"
+# voice 1038 "almace_0028"
+@アルマス
+だから違うってば…
+ううっ…助けない方が良かったかも
+
+# alpha 172 0 0.5
+# alpha 139 1 0.5
+# face 139 "worry"
+# voice 9967 "titania_0003"
+@ティターニア
+あの…ボーさん？
+軍に戻らなくて良いのですか？
+
+# textboxarrow 0 3
+# face 3302111 "surprise"
+# voice 330211 "gaebuide_ge_0009"
+@ガ・ボー
+軍…？
+そこに姉様がいるのですか？
+
+# alpha 172 1 0.5
+# alpha 139 0 0.5
+# textboxarrow 0 1
+# face 172 "angry"
+# voice 1038 "almace_battle_0006"
+@アルマス
+マスター、ティニ、こうなったら…
+逃げるわよ！
+
+# se "SE_5575"
+# alpha 172 0 0.5
+# alpha 139 1 0.5
+# face 139 "sad"
+# voice 9967 "titania_0042"
+@ティターニア
+さすがに関わっている場合では
+ありませんね

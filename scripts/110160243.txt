@@ -1,0 +1,121 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー16章
+;;第2話　タイトル：不完全なる者達よ
+;;2_4_3
+;;スクリプト最後の背景：ラグナロクの間
+;;-----------------------------------------
+# script "lisp"
+# background "abyss_room"
+# bgmfile "bgm323" "BgmLostRagnarokCommand" 0
+;;-----------------------------------------
+;;ティファレト
+# body 3503211
+# pos 3503211 3
+# scale 3503211 0.8 0
+# layer 3503211 2
+# alpha 3503211 0 0
+# mask 3503211 off
+;;フェイルノート
+# body 3401911
+# pos 3401911 3
+# scale 3401911 0.8 0
+# layer 3401911 2
+# alpha 3401911 0 0
+# mask 3401911 off
+;;魔獣
+# body 3850001
+# pos 3850001 3
+# scale 3850001 0.8 0
+# layer 3850001 2
+# alpha 3850001 0 0
+# mask 3850001 off
+;;魔獣（クローン1）
+# entry 938500011 3850001
+# pos 938500011 3
+# scale 938500011 0.8 0
+# layer 938500011 2
+# alpha 938500011 0 0
+# mask 938500011 off
+;;魔獣（クローン2）
+# entry 938500012 3850001
+# pos 938500012 3
+# scale 938500012 0.8 0
+# layer 938500012 2
+# alpha 938500012 0 0
+# mask 938500012 off
+;;神令ラグナロク（仮面）
+# body 3103619
+# pos 3103619 3
+# scale 3103619 0.8 0
+# layer 3103619 2
+# alpha 3103619 0 0
+# mask 3103619 off
+;;-----------------------------------------
+# voice 4019 "failnaught_a_battle_0004"
+# move 3401911 3 0
+# face 3401911 "angry"
+# alpha 3401911 1 0
+# mask 3401911 off
+# textboxarrow 0 2
+@フェイルノート
+どれだけ雑魚を呼び出そうとも
+全て消し去ってあげる！
+
+# se "SE_9071"
+# waitandnext 0.5
+
+# voice 5032 "tiphereth_t_unit_0008"
+# alpha 3401911 0 0.5
+# move 3503211 3 0
+# face 3503211 "angry"
+# alpha 3503211 1 0.5
+# mask 3503211 off
+# textboxarrow 0 2
+@ティファレト
+天秤よ、罪の裁定をっ！
+
+# se "SE_6721"
+# waitandnext 0.5
+
+# textwindow "close"
+# alpha 3503211 0 0.5
+# move 938500011 1 0
+# alpha 938500011 1 0.5
+# mask 938500011 on
+# move 3850001 3 0
+# alpha 3850001 1 0.5
+# mask 3850001 on
+# move 938500012 5 0
+# alpha 938500012 1 0.5
+# mask 938500012 on
+# waitandnext 0.8
+
+# se "SE_6722"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;//魔獣達が倒される
+# se "SE_7025"
+# textboxarrow 0 0
+# textwindow "normal"
+@魔獣達
+グギャアアアアアアア…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 938500011 0 0.5
+# alpha 3850001 0 0.5
+# alpha 938500012 0 0.5
+# waitandnext 0.5
+
+# voice 310361 "ragnarok_c_0005"
+# move 3103619 3 0
+# face 3103619 "normal"
+# alpha 3103619 1 0.5
+# mask 3103619 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+ふふっ
+それなら、これはどう？

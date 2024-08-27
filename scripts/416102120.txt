@@ -1,0 +1,543 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;インテグラルキラーズサイドストーリー
+;;第2話―１２　タイトル：淘汰の果て
+;;2_12_0
+;;スクリプト最後の背景：廃墟（夕）（ghost_town_evening）
+;;-----------------------------------------
+# script "lisp"
+# background "ghost_town"
+# bgm "bgm021" 0
+;;-----------------------------------------
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 3
+# alpha 24 0 0
+# mask 24 off
+;;ティルフィング（別）
+# entry 9241 24
+# pos 9241 3
+# scale 9241 0.8 0
+# layer 9241 2
+# alpha 9241 0 0
+# mask 9241 off
+# brightness 9241 0.8 0
+;;ロンギヌス
+# body 300111
+# pos 300111 3
+# scale 300111 0.8 0
+# layer 300111 2
+# alpha 300111 0 0
+# mask 300111 off
+;;マサムネ（神7）
+# body 100111
+# pos 100111 3
+# scale 100111 0.8 0
+# layer 100111 2
+# alpha 100111 0 0
+# mask 100111 off
+;;パラシュ（神7）
+# body 200411
+# pos 200411 3
+# scale 200411 0.8 0
+# layer 200411 2
+# alpha 200411 0 0
+# mask 200411 off
+;;レーヴァテイン
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# layer 100221 2
+# alpha 100221 0 0
+# mask 100221 off
+;;アルテミス
+# body 400131
+# pos 400131 3
+# scale 400131 0.8 0
+# layer 400131 2
+# alpha 400131 0 0
+# mask 400131 off
+;;フライクーゲル
+# body 500211
+# pos 500211 3
+# scale 500211 0.8 0
+# layer 500211 2
+# alpha 500211 0 0
+# mask 500211 off
+;;エイレーネ
+# body 132
+# pos 132 3
+# scale 132 0.8 0
+# layer 132 2
+# alpha 132 0 0
+# mask 132 off
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;第2話―１２　タイトル：淘汰の果て
+;;//背景：廃墟
+# move 9241 2 0
+# face 9241 "angry"
+# alpha 9241 1 0
+# mask 9241 on
+# move 24 4 0
+# face 24 "mad2"
+# alpha 24 1 0
+# mask 24 on
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+はああああああああ！
+
+;;//ティルフィングが相手を斬る
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 -200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# voice 1014 "tyrufing_movie_0023"
+# textboxarrow 0 3
+@ティルフィング
+アナタの意思は私が担う
+汚れなき声を心に刻め
+
+;;//ティルフィング（別）が倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 9241 0 0.5
+# waitandnext 0.5
+
+# voice 1014 "tyrufing_movie_0025"
+# face 24 "angry"
+# textboxarrow 0 3
+# textwindow "normal"
+@ティルフィング
+我が同胞の叫び
+この魂の礎とならん
+
+;;//ティルフィング（別）光演出
+# se "SE_9148"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# move 9241 2 0
+# face 9241 "sad"
+# alpha 9241 1 0.5
+# mask 9241 on
+# face 24 "normal"
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;ティルフィング（別）
+# textboxarrow 0 1
+# textwindow "normal"
+@ティルフィング
+ああ…
+私はここまでなんですね…
+あとは――
+
+;;//ティルフィング（別）が消える
+# bgm "stop"
+# se "SE_9103"
+# textwindow "close"
+# alpha 9241 0 1
+# waitandnext 1
+
+# move 24 3 0.5
+# mask 24 off
+# waitandnext 0.5
+
+# bgm "bgm031" 0
+# face 24 "sad2"
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+やりました、マスター！
+私…あっ…？
+あああああああああああああああ！？
+
+# move 24 2 0.5
+# move 100221 4 0
+# face 100221 "surprise"
+# alpha 100221 1 0.5
+# mask 100221 on
+# textboxarrow 0 3
+@レーヴァテイン
+ティル！？
+
+# textboxarrow 0 1
+@ティルフィング
+あああああああああああ…！
+
+;;//ティルフィングが倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 24 0 0.5
+# waitandnext 0.5
+
+# face 100221 "angry"
+# textboxarrow 0 3
+# textwindow "normal"
+@レーヴァテイン
+ティル！
+しっかりして、ティル…！
+
+# alpha 100221 0 0.5
+# move 500211 3 0
+# face 500211 "sad"
+# alpha 500211 1 0.5
+# mask 500211 off
+# textboxarrow 0 2
+@フライクーゲル
+オゥ…
+急いでパラソルを呼んでくるよ！
+
+# alpha 500211 0 0.5
+# move 24 3 0
+# face 24 "sad"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+その必要はありません…
+
+;;//選択肢
+;;
+;;A大丈夫？
+;;B動いたらダメだ
+# select "大丈夫？" "select_label_01" "動いたらダメだ" "select_label_02"
+その必要はありません…
+
+;;A
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 24 "normal"
+# textboxarrow 0 2
+@ティルフィング
+はい…
+少し衝撃が強くて
+
+;;B
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 24 "normal"
+# textboxarrow 0 2
+@ティルフィング
+平気です…
+少し衝撃が強かっただけで
+
+;;//フラッシュバック
+;;//背景：室内
+# label "select_label_end"
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "201_room"
+# alpha 24 0 0
+# move 132 3 0
+# face 132 "normal"
+# alpha 132 1 0
+# mask 132 off
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@エイレーネ
+ナディア…
+愛しい我が子
+あなたのためなら――
+
+;;//フラッシュバック
+;;//背景：廃墟
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "ghost_town"
+# alpha 132 0 0
+# move 24 3 0
+# face 24 "normal"
+# alpha 24 1 0
+# mask 24 off
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+マスター…
+全ての記憶を取り戻しました
+私…オリジナルになれたんですね
+
+;;//暗転挟む
+;;//背景：廃墟（夕）（ghost_town_evening）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "ghost_town_evening"
+# alpha 24 0 0
+# move 24 3 0
+# face 24 "normal"
+# alpha 24 1 0
+# mask 24 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm003" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+…以上が私の生い立ちです
+
+# voice 1002 "revatein_0028"
+# alpha 24 0 0.5
+# move 100111 2 0
+# face 100111 "nutual"
+# alpha 100111 1 0.5
+# mask 100111 on
+# move 100221 4 0
+# face 100221 "normal"
+# alpha 100221 1 0.5
+# mask 100221 on
+# textboxarrow 0 3
+@レーヴァテイン
+ティルが人間と女神エイレーネの
+子どもだったなんて…
+
+# textboxarrow 0 1
+@マサムネ
+「運命の子」として教会が注目して
+いたのも頷ける
+
+# alpha 100111 0 0.5
+# alpha 100221 0 0.5
+# move 200411 2 0
+# face 200411 "normal"
+# alpha 200411 1 0.5
+# mask 200411 on
+# move 300111 4 0
+# face 300111 "normal"
+# alpha 300111 1 0.5
+# mask 300111 on
+# textboxarrow 0 3
+@ロンギヌス
+お母さんが平和の女神なら、
+ティルフィングにもその力が
+宿っていると思いますっ
+
+# textboxarrow 0 1
+@パラシュ
+君の理想…平和な世界への道が
+具体的になってきたね
+
+# alpha 200411 0 0.5
+# alpha 300111 0 0.5
+# move 400131 3 0
+# face 400131 "nutual"
+# alpha 400131 1 0.5
+# mask 400131 off
+# textboxarrow 0 2
+@アルテミス
+では、女神エイレーネの下に
+急ぎましょう
+
+# textboxarrow 0 2
+@アルテミス
+お母さんの声、聞こえることを
+私も願っています
+
+# voice 1014 "tyrufing_1057"
+# alpha 400131 0 0.5
+# move 24 3 0
+# face 24 "normal"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+みんな、ありがとう
+いきましょう、マスター
+
+# alpha 24 0 0.5
+# move 500211 3 0
+# face 500211 "normal"
+# alpha 500211 1 0.5
+# mask 500211 off
+# textboxarrow 0 2
+@フライクーゲル
+ウェイト！
+
+# alpha 500211 0 0.5
+# move 400131 3 0
+# face 400131 "nutual"
+# alpha 400131 1 0.5
+# mask 400131 off
+# textboxarrow 0 2
+@アルテミス
+フライクーゲル、まだ何か？
+
+# alpha 400131 0 0.5
+# move 500211 2 0
+# face 500211 "normal"
+# alpha 500211 1 0.5
+# mask 500211 on
+# textboxarrow 0 1
+# move 24 4 0
+# face 24 "normal"
+# alpha 24 1 0.5
+# mask 24 on
+@フライクーゲル
+オリジナルになって、
+ティルフィングはヘアピィ？
+
+# textboxarrow 0 3
+@ティルフィング
+これを幸せというのか…
+よく分かりませんけれど
+自分自身になれた気がします
+
+# textboxarrow 0 3
+@ティルフィング
+曖昧だったものがはっきりして、
+世界が…前より美しく見えます
+
+# textboxarrow 0 1
+@フライクーゲル
+オーケー…
+その顔は、ベリィクールで
+ヘアピィに見えるよ
+
+# voice 5002 "furaikugeru_0003"
+# textboxarrow 0 1
+@フライクーゲル
+きみは、身近な人達を大切にしたいと
+思ってる？
+
+# textboxarrow 0 1
+@フライクーゲル
+きみについていったら…
+マスターをヘアピィにするヒントが
+見つかるかな？
+
+# textboxarrow 0 3
+@ティルフィング
+…断言はできませんけれど、
+私は皆さんをヘアピィにしたいと
+願っています
+
+# textboxarrow 0 3
+@ティルフィング
+身近な人というのでしたら、
+その…マスターのことを大切に…
+
+# bgm "bgm035" 0
+# face 500211 "happy"
+# textboxarrow 0 1
+@フライクーゲル
+アイシー
+それなら…わたしも一緒に行くよ
+
+# voice 1014 "tyrufing_0022"
+# face 24 "surprise"
+# textboxarrow 0 3
+@ティルフィング
+えっ？
+いいんですか？
+アナタにもマスターがいるのでは…
+
+# face 500211 "sad"
+# textboxarrow 0 1
+@フライクーゲル
+イエス…
+寂しいけど、マスターはわたしが
+いなくても大丈夫
+
+# face 500211 "normal"
+# textboxarrow 0 1
+@フライクーゲル
+わたしはマスターのお仕事を
+手伝えないけど、パラソルが
+側にいてくれるから
+
+# textboxarrow 0 1
+@フライクーゲル
+それに、マスターをヘアピィにする
+方法を見つけたら、すぐに帰るよ
+
+# voice 5002 "furaikugeru_0028"
+# face 500211 "sad"
+# textboxarrow 0 1
+@フライクーゲル
+このままじゃダメなんだ…
+マスターがサァッドな気持ちを
+抱いたままになるから
+
+# face 500211 "shy"
+# textboxarrow 0 1
+@フライクーゲル
+いいよね、ティルフィング？
+プリ～ズ
+
+;;//フライクーゲルがティルフィングに抱きつく
+# se "SE_5200"
+# textwindow "close"
+# move 500211 3 0.2
+# waitandnext 0.2
+
+# face 24 "happy2"
+# textboxarrow 0 3
+# textwindow "normal"
+@ティルフィング
+私は構いませんよ
+
+# voice 5002 "furaikugeru_0030"
+# face 500211 "happy"
+# textboxarrow 0 2
+@フライクーゲル
+センキュ～♪
+しばらくの間、よろしくね
+
+# alpha 500211 0 0.5
+# alpha 24 0 0.5
+# move 100111 3 0
+# face 100111 "nutual"
+# alpha 100111 1 0.5
+# mask 100111 off
+# textboxarrow 0 2
+@マサムネ
+やれやれ…
+調子の良いキル姫だ
+
+# alpha 100111 0 0.5
+# move 24 3 0
+# face 24 "normal"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+それでは、行きましょう
+お母さん…女神エイレーネの下へ

@@ -1,0 +1,537 @@
+;;-----------------------------------------
+;;SEA5章_25-3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm214_02" "BgmAncientKillers001" 0
+;;-----------------------------------------
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 4
+# alpha 6504011 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 2
+# scale 6603811 0.8 0
+# layer 6603811 2
+# alpha 6603811 0 0
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;スイハfeat
+# body 6401711
+# pos 6401711 4
+# scale 6401711 0.8 0
+# layer 6401711 3
+# mask 6401711 off
+# alpha 6401711 0 0
+;;ミネルヴァ
+# body 302511
+# pos 302511 2
+# scale 302511 0.8 0
+# layer 302511 2
+# alpha 302511 0 0
+;;ネス
+# body 602011
+# pos 602011 3
+# scale 602011 0.8 0
+# layer 602011 3
+# mask 602011 off
+# alpha 602011 0 0
+;;フライシュッツ
+# body 502711
+# pos 502711 2
+# scale 502711 0.8 0
+# layer 502711 2
+# alpha 502711 0 0
+;;グラーシーザ
+# body 302611
+# pos 302611 4
+# scale 302611 0.8 0
+# layer 302611 4
+# alpha 302611 0 0
+;;ダモクレス
+# body 103511
+# pos 103511 3
+# scale 103511 0.8 0
+# layer 103511 3
+# mask 103511 off
+# alpha 103511 0 0
+;;エルキュール
+# body 202511
+# pos 202511 2
+# scale 202511 0.8 0
+# layer 202511 4
+# alpha 202511 0 0
+;;神令ラグナロクシルエット
+# body 3103611
+# pos 3103611 4
+# scale 3103611 0.8 0
+# layer 3103611 1
+# mask 3103611 off
+# alpha 3103611 0 0
+# brightness 3103611 0 0
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 3
+# mask 103611 off
+# alpha 103611 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "bg_crack1"
+# imagealpha 1 0 0
+# imagelayer 1 5
+# imageset 2 "bg_crack2"
+# imagealpha 2 0 0
+# imagescale 2 1 0
+# imagelayer 2 5
+;;-----------------------------------------
+;;背景：町（夜）
+# textwindow "close"
+# waitandnext 0.2
+
+# background "town_night_2"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# face 202511 "angry"
+# alpha 202511 1 0
+# alpha 3103611 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 2025 "hercule_battle_0001"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@エルキュール
+そこですっ！
+
+;;エルキュールが神令ラグナロクに迫る
+# se "SE_4100"
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# move 3103611 5 0.3
+# textboxarrow 0 3
+@？？？？？
+…………！
+
+# textboxarrow 0 1
+@エルキュール
+今です、ミーミル！
+
+# move 202511 1 0.3
+# alpha 202511 0 0.3
+# voice 9917 "mimir_navikan_0003"
+# face 270 "angry"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ミーミル
+はい！
+―――――さん！
+
+;;ミーミルが神令ラグナロクに抱きつく
+# bgm "stop"
+# se "SE_0648"
+# move 270 4 0.5
+# textboxarrow 0 3
+@？？？？？
+…………！？
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 3
+@ミーミル
+私の話を…ええっ！？
+
+;;画面フラッシュ
+# fadein "white" 2
+# background "bg_white"
+# alpha 270 0 0
+# alpha 3103611 0 0
+# textwindow "close"
+# waitandnext 2
+
+;;真っ白な中にラグナロク（通常）が現れる
+# face 103611 "normal"
+# alpha 103611 1 1
+# waitandnext 2
+
+;;背景：町（夜）：town_night_2
+# fadein "white" 2
+# background "town_night_2"
+# bgmfile "bgm602_1" "BgmSecretlyEverAfter002" 0
+# alpha 103611 0 0
+# move 270 1 0
+# face 270 "surprise"
+# alpha 270 1 0
+# move 202511 3 0
+# layer 202511 3
+# mask 202511 on
+# face 202511 "angry"
+# alpha 202511 1 0
+# move 3103611 5 0
+# alpha 3103611 1 0
+# waitandnext 2
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+今のは…
+―――――さん？
+でも、見た目が…
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+見たことのない姿のはずなのに、
+私は、あの―――――さんを
+知っています
+
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+ああ、そうだったんですね
+私は…
+
+# textboxarrow 0 3
+@？？？？？
+…………！！
+
+;;神令ラグナロクがエルキュールを突き飛ばす
+# se "SE_4602"
+# shake 0 0.2
+# move 3103611 4 0.2
+# voice 2025 "hercule_0037"
+# face 202511 "sad"
+# textboxarrow 0 2
+@エルキュール
+あうっ…！
+
+# move 202511 2 0.2
+# alpha 202511 0 0.2
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+エルキュールさん…！
+
+# voice 9917 "mimir_navikan_0024"
+# move 3103611 3 0.3
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+きゃっ…
+
+# textboxarrow 0 2
+@？？？？？
+…………
+
+;;神令ラグナロクがミーミルを連れて画面外へ
+# leftout 3103611 0.3
+# leftout 270 0.3
+# textwindow "close"
+# waitandnext 1
+
+# alpha 3103611 0 0
+# alpha 270 0 0
+# face 302511 "surprise"
+# alpha 302511 1 0.3
+# move 202511 4 0
+# face 202511 "surprise"
+# alpha 202511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミネルヴァ
+“彼女”がミーミルを
+包み込んでしまいました
+
+# textboxarrow 0 3
+@エルキュール
+ミーミル！
+
+;;エルキュールが追う
+# move 202511 3 0.3
+# alpha 202511 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+# alpha 302511 0 0
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+;;背景にひび割れ表示
+# imagealpha 2 1 1
+# imagepos 2 0 0
+# waitandnext 2
+
+# imagealpha 2 0 1
+# move 270 2 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# move 3103611 4 0
+# alpha 3103611 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@？？？？？
+…………
+
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+―――――さん？
+もしかして「裏側」に戻ろうと…
+
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+マナナンさん！
+マクリルさん！
+
+# textboxarrow 0 1
+@ミーミル
+「穴」を閉じる準備をお願いします！
+―――――さんが「裏側」に入ったら
+「穴」を閉じて下さい！
+
+# move 270 1 0.5
+# move 3103611 2 0.5
+# scale 3103611 0.78 0
+# layer 3103611 3
+# move 202511 5 0
+# layer 202511 4
+# mask 202511 on
+# face 202511 "surprise"
+# voice 2025 "hercule_0022"
+# alpha 202511 1 0.3
+# textboxarrow 0 3
+@エルキュール
+何を言ってるんですか！
+そんなことしたらミーミルまでっ
+
+# voice 9917 "mimir_navikan_0003"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+私は大丈夫です
+これが、本来の役割だったんですから
+
+# face 202511 "angry"
+# textboxarrow 0 3
+@エルキュール
+手を伸ばして下さい！
+今なら、まだっ
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+さようなら、皆さん
+マスター様…
+ティルフィング様…
+
+# textboxarrow 0 2
+@？？？？？
+…………
+
+;;神令ラグナロクとミーミルが「穴」に入る
+# imagealpha 2 1 0.5
+# imagepos 2 -150 0
+# scale 270 0.7 0.5
+# alpha 270 0 0.3
+# scale 3103611 0.7 0.5
+# alpha 3103611 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;選択肢
+# select "ミーミル…！" "select_label_01" "ミーミル…？" "select_label_01"
+…………
+
+# label "select_label_01"
+# imagealpha 2 0 0.5
+# alpha 202511 0 0.3
+# face 6504011 "usual"
+# alpha 6504011 1 0.3
+# face 6603811 "normal"
+# alpha 6603811 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+“彼女”が「裏側」に戻ったね～
+
+# textboxarrow 0 1
+@マクリル
+ミーミルも連れていっちゃったよ…
+
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+今なら「穴」は閉じられる
+
+# face 6603811 "usual"
+# textboxarrow 0 1
+@マクリル
+今なら「穴」を閉じられる
+
+# face 6504011 "happy"
+# face 6603811 "happy"
+# textboxarrow 0 0
+@マナナン＆マクリル
+ミーミルの願いを叶えるよ
+それが私達の役割だもの
+
+# move 6504011 5 0.5
+# alpha 6504011 0 0.3
+# move 6603811 1 0.5
+# alpha 6603811 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# imagealpha 2 1 1
+# imagepos 2 0 0
+# waitandnext 2
+
+;;広がっていた裂け目が閉じていく
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# se "SE_8139"
+# imagealpha 2 0 1
+# imagealpha 1 1 1
+# imagepos 1 0 0
+# waitandnext 2
+
+# serif 1
+@エルキュール
+そんなっ…
+
+;;フラッシュ
+# se "SE_13657"
+# fadein "white" 2
+;;穴が完全に塞がる
+# imagealpha 1 0 2
+# serif 1
+# textwindow "close"
+# waitandnext 3
+
+;;夜が明けて背景を「town_2」に
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 0.5
+
+# background "town_2"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 302511 "sad"
+# alpha 302511 1 0.3
+# face 6401711 "usual"
+# alpha 6401711 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミネルヴァ
+「穴」が塞がりました…
+
+# textboxarrow 0 3
+@スイハ
+残っていた魔獣も霧散していきます
+
+# alpha 302511 0 0.3
+# alpha 6401711 0 0.3
+# voice 3026 "grayside_0028"
+# face 502711 "sad"
+# alpha 502711 1 0.3
+# face 302611 "sad"
+# alpha 302611 1 0.3
+# textboxarrow 0 3
+@グラーシーザ
+町へのひがいは
+これいじょう、ひろがるまい
+しかし…
+
+# textboxarrow 0 1
+@フライシュッツ
+ミーミルちゃんが「裏側」に
+連れていかれちゃったよー…
+
+# alpha 502711 0 0.3
+# alpha 302611 0 0.3
+# move 202511 3 0
+# mask 202511 off
+# face 202511 "sad"
+# voice 2025 "hercule_0031"
+# alpha 202511 1 0.3
+# textboxarrow 0 2
+@エルキュール
+ミーミル…
+ごめんなさい…
+結局、私は…
+
+;;選択肢
+# select "まだだ" "select_label_02" "まだ終わっていない" "select_label_02"
+ミーミル…
+ごめんなさい…
+結局、私は…
+
+# label "select_label_02"
+# bgm "bgm035" 0
+# face 202511 "surprise"
+# voice 2025 "hercule_0022"
+# textboxarrow 0 2
+@エルキュール
+マスター…？
+でも、「裏側」への道は
+閉ざされてしまっています…
+
+;;選択肢
+# select "今なら繋がるはず" "select_label_03"
+マスター…？
+でも、「裏側」への道は
+閉ざされてしまっています…
+
+# label "select_label_03"
+# alpha 202511 0 0.3
+# move 302511 3 0
+# mask 302511 off
+# face 302511 "surprise"
+# alpha 302511 1 0.3
+# textboxarrow 0 2
+@ミネルヴァ
+あ！もしかして
+今までは「揺らぎ」の影響が
+強すぎて通信ができずにいましたが…
+
+# textboxarrow 0 2
+@ミネルヴァ
+「穴」が塞がって「揺らぎ」の
+影響がなくなった今ならっ
+
+;;選択肢
+# select "ティルフィング！" "select_label_04"
+「穴」が塞がって「揺らぎ」の
+影響がなくなった今ならっ
+
+# label "select_label_04"
+# textwindow "close"
+;;画面フラッシュ
+# fadeout "white" 2
+# waitandnext 2

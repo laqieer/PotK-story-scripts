@@ -1,0 +1,433 @@
+;;-----------------------------------------
+;;ファンキル2019ウェディングイベントシナリオ
+;;タイトル：契約と計画のブライダル
+;;-----------------------------------------
+;;【EP.2_1】完璧な計画？
+;;-----------------------------------------
+# script "lisp"
+# background "400_angel_town_daytime"
+# bgmfile "bgm334" "BgmWedding001" 0
+;;-----------------------------------------
+;;ソロモン
+# body 3503111
+# pos 3503111 4
+# scale 3503111 0.8 0
+# layer 3503111 3
+# alpha 3503111 0 0
+;;ソロモンウェディング
+# body 3503131
+# pos 3503131 3
+# scale 3503131 0.8 0
+# layer 3503131 3
+# alpha 3503131 0 0
+;;グラウ
+# body 164
+# pos 164 2
+# scale 164 0.6 0
+# layer 164 3
+# alpha 164 0 0
+# mask 164 off
+;;ロンギヌス
+# body 3300111
+# pos 3300111 2
+# scale 3300111 0.8 0
+# layer 3300111 3
+# alpha 3300111 0 0
+;;ロンギヌスウェディング
+# body 3300121
+# pos 3300121 3
+# scale 3300121 0.8 0
+# layer 3300121 3
+# alpha 3300121 0 0
+;;ハルモニア兵
+# body 3810001
+# pos 3810001 3
+# scale 3810001 0.8 0
+# layer 3810001 3
+# alpha 3810001 0 0
+# mask 3810001 off
+# entry 3810003 3810001
+# pos 3810003 2
+# scale 3810003 0.8 0
+# layer 3810003 3
+# alpha 3810003 0 0
+# entry 3810002 3810001
+# reversal 3810002 0
+# pos 3810002 4
+# scale 3810002 0.8 0
+# layer 3810002 3
+# alpha 3810002 0 0
+;;-----------------------------------------
+;;モノローグ
+# textflame 0 0
+# textwindow "nomal"
+@
+ブライダルイベントに湧く
+ハルモニアの街で、マスターは
+痛いほど視線を感じていた
+
+;;モノローグ
+# textflame 0 0
+@
+美しい二人の花嫁を
+連れているのはどんな人物かと
+だれもが興味津々なのだ
+
+;;モノローグ
+# textflame 0 0
+@
+注目に耐えかねたマスターは、
+次はどこにいくの？早くいこう
+と、ソロモンに話しかける
+
+# alpha 3503131 1 0.5
+# mask 3503131 off
+# face 3503131 "sad"
+# voice 5031 "solomon_t_0028"
+# textflame 1 1
+# textboxarrow 0 2
+@ソロモン
+どこに行くかは、まだ言えないの…
+私を信じて、ついてきてくれる？
+
+;;モノローグ
+# textflame 0 0
+@
+マスターは、ソロモンに頷きながら、
+わかった、なんだかドキドキするね
+と、笑う
+
+# face 3503131 "happy"
+# voice 5031 "solomon_t_0004"
+# textflame 1 1
+# textboxarrow 0 2
+@ソロモン
+ふふっ…
+
+;;モノローグ
+# textflame 0 0
+@
+そんな二人のやりとりを見ながら、
+ロンギヌスも満足気に微笑む
+
+# alpha 3503131 0 0.5
+# alpha 3300121 1 0.5
+;;できればもやもやフレームで
+# face 3300121 "normal"
+# voice 330011 "ronginusu_t_0004"
+# move 3300121 3 0
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 3300121 off
+@ロンギヌス
+よかった…順調そうですね
+…こうして見ていると、
+なにも問題がないように見えますが…
+
+# imageset 0 "bg_white_circle"
+# imagealpha 0 0 0
+# imagescale 0 1.4 0
+# imagelayer 0 1
+;;モノローグ
+# textflame 0 0
+@
+そう、心の中でつぶやくと同時に
+ロンギヌスは、計画実行の前に
+ソロモンから明かされた話を思い出す
+
+;;演出：回想シーン開始（以下、通常Ver）
+# se "SE_0742"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "plain"
+# alpha 3300121 0 0
+# alpha 3503111 1 0
+# alpha 3300111 1 0
+# face 3503111 "sad"
+# face 3300111 "normal"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "white" 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@ソロモン
+私のプランは完璧なのに
+マスターは採用してくれないのよ
+
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+それで、私はマスターに
+信頼されていないと思ったの
+
+# textflame 1 1
+# textboxarrow 0 1
+@ロンギヌス
+ちなみに、その計画というのは
+どういったものなのでしょうか？
+
+# face 3503111 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+ただの買い出し計画書よ？
+効率を重視して綿密に計算した、
+分刻みの完璧なスケジュールのね
+
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+マスターは苦笑いしたあと、
+効率を下げて、時間に余裕をもたせた
+計画に変更しようと言ったの
+
+# face 3503111 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+私の計画は完璧なのに
+マスターに採用されなかった…
+それは信頼が足りないからなのよ
+
+;;演出：回想シーン終了（以下、ウェディングVer）
+# fadeout "white" 1
+# waitandnext 1
+
+# background "400_angel_town_daytime"
+# alpha 3300121 1 0
+# alpha 3503111 0 0
+# alpha 3300111 0 0
+# face 3300121 "usual"
+# imagealpha 0 0 0
+# imagepos 0 0 30
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "white" 1
+# waitandnext 1
+
+;;できればもやもやフレームで
+# voice 330011 "ronginusu_t_0028"
+# move 3300121 3 0
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 3300121 off
+@ロンギヌス
+おそらくマスターは、
+細かすぎるソロモンの計画に戸惑って
+苦笑いをしただけでしょう
+
+;;できればもやもやフレームで
+# move 3300121 3 0
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 3300111 off
+@ロンギヌス
+今、目の前にいる二人の間には
+はっきりと信頼関係を感じます
+
+;;できればもやもやフレームで
+# move 3300121 3 0
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 3300111 off
+@ロンギヌス
+疑うことなくソロモンについていく
+これこそが信頼されている証です
+
+# alpha 3300121 0 0.5
+# move 3503131 4 0
+# alpha 3503131 1 0.5
+# mask 3503131 on
+# alpha 164 1 0.5
+# face 3503131 "usual"
+# voice 5031 "solomon_t_0002"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@ソロモン
+そろそろ出発するわよ
+グラウ、道案内をお願いね
+
+# voice 9950 "glau_0033"
+# textflame 1 1
+# textboxarrow 0 1
+@グラウ
+承知しました
+ルート検索を開始します
+
+# alpha 3503131 0 0.5
+# alpha 164 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# alpha 3810001 1 1
+# waitandnext 2
+
+# alpha 3810001 0 1
+# waitandnext 1
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# alpha 3503131 1 0.5
+# alpha 164 1 0.5
+# voice 9950 "glau_0013"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@グラウ
+…ソロモン、問題発生です
+進行方向に兵を発見しました
+
+;;モノローグ
+# textflame 0 0
+@
+今日はやけに兵が多いね
+と、マスターがいうと、
+グラウが答える
+
+# voice 9950 "glau_0003"
+# textflame 1 1
+# textboxarrow 0 1
+@グラウ
+本日のブライダルイベントを
+警備するため、多数の兵が
+出動したようです
+
+# textflame 1 1
+# textboxarrow 0 1
+@グラウ
+イベントに乗じて騒ぎを起こす
+不審者を探しているのかもしれません
+
+# emotionbody 1000 1 3300121 10 260
+# effectpattern 1000 1 0
+# effectstart 1000
+# alpha 3503131 0 0.5
+# alpha 164 0 0.5
+# alpha 3300121 1 0.5
+# face 3300121 "surprise"
+# voice 330011 "ronginusu_t_0002"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+あ、兵がこちらに気づいたようです
+マスターを見て、なにか言っています
+
+# alpha 3300121 0 0.5
+# alpha 3810001 1 0.5
+;;モノローグ
+# textflame 0 0
+@
+天使人でないマスターが綺麗な花嫁を
+連れているのが気に入らないようで、
+兵はマスターをジロジロと睨む
+
+# alpha 3810001 0 0.5
+# move 3300121 2 0
+# alpha 3300121 1 0.5
+# mask 3300121 on
+# face 3300121 "usual"
+# alpha 3503131 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+私たちでマスターを隠しながら、
+なるべく静かに通り過ぎるわよ
+
+;;モノローグ
+# textflame 0 0
+@
+できるだけ目立たないように
+兵の前を通り過ぎようとした
+マスターたちだったが…
+
+# alpha 3300121 0 0.5
+# alpha 3503131 0 0.5
+# alpha 3810001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ハルモニア兵長
+止まりなさい！
+私の目はごまかせませんよ！
+
+# alpha 3810001 0 0.5
+# alpha 3810003 1 0.5
+# alpha 3810002 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@ハルモニア兵
+花嫁を二人も連れ歩くなど汚らわしい
+誇り高きハルモニアの民に
+あるまじき行為です…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ハルモニア兵
+怪しいですね…侵入者なのでは？
+捕縛して、しかるべき処罰を…
+
+;;モノローグ
+# se "SE_0648"
+# textflame 0 0
+@
+ハルモニア兵はそういって
+マスターの腕をつかみ、
+連行しようと強く引っ張る
+
+# emotionbody 1001 6 3503131 -50 260
+# effectpattern 1001 1 1
+# effectstart 1001
+# alpha 3810003 0 0.5
+# alpha 3810002 0 0.5
+# alpha 3300121 1 0.5
+# alpha 3503131 1 0.5
+# face 3300121 "surprise"
+# face 3503131 "angry"
+# voice 5031 "solomon_t_0011"
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+今すぐ、その手を放して
+花嫁と一緒にいるだけで
+捕縛だなんて理不尽すぎるわ
+
+# voice 330011 "ronginusu_t_0027"
+# textflame 1 1
+# textboxarrow 0 1
+@ロンギヌス
+ソロモン…
+彼らがおとなしく従うような
+相手ではないとわかっていますよね？
+
+;;モノローグ
+# se "SE_5207"
+# textflame 0 0
+@
+そういうと、ロンギヌスは
+武器を出して構えた
+ソロモンも同じく戦闘態勢をとる
+
+# alpha 3300121 0 0.5
+# alpha 3503131 0 0.5
+# alpha 3810001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ハルモニア兵長
+……っ！
+なんと、武器を所持しているとは…
+やはり侵入者でしたか
+
+@ハルモニア兵長
+全員まとめて粛清します
+さぁ、ここで罪を償いなさい！

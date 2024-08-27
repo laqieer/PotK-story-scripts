@@ -1,0 +1,166 @@
+;;//戦闘終了
+;;//背景alc_ch1_pub
+;;指定　bgm002
+# script "lisp"
+# background "alc_ch1_pub"
+# bgm "bgm002" 0
+# body 0
+# pos 0 5
+# scale 0 0.8 0
+# face 0 "usual2"
+# body 601711
+# pos 601711 3
+# scale 601711 0.8 0
+# face 601711 "usual"
+# body 101411
+# pos 101411 3
+# alpha 101411 0 0
+# body 24
+# pos 24 1
+# scale 24 0.8 0
+# layer 24 2
+# layer 601711 1
+# textflame 1 1
+# textboxarrow 0 1
+# chara 101411
+# voice 1014 "tyrufing_0041"
+# face 24 "happy"
+@ティルフィング
+…このキャベツという野菜、
+おいしいですね！
+
+# textboxarrow 0 1
+# chara 101411
+# face 24 "normal"
+@ティルフィング
+シャキシャキとした
+食感がいいですし、甘みもあって…
+
+# emotionbody 5200 3 601711 50 260
+# effectpattern 5200 1 3
+# effectstart 5200
+# textboxarrow 0 2
+# chara 601711
+# voice 6017 "akua_0021"
+# face 601711 "irregular"
+@アクア
+…ふっふーん♪
+どうやらキャベツは大人気のようね！
+
+# effectskip 5200
+# jump 0
+# textboxarrow 0 3
+# chara 0
+# face 0 "angry"
+@デュリン
+アンタがえらそうにすることじゃ
+ないでしょ！
+…キャベツのおいしさは認めるけど
+
+# body 502521
+# pos 502521 3
+# scale 502521 0.8 0
+# alpha 502521 0 0
+# body 103421
+# pos 103421 1
+# scale 103421 0.8 0
+# alpha 103421 0 0
+# textboxarrow 0 3
+# chara 0
+# face 0 "serious"
+# voice 9999 "durin_0002"
+@デュリン
+それで、アンタ達全員、
+アクアの仲間？
+これで全員そろったの？
+
+# alpha 601711 0 0.3
+# alpha 502521 1 0.5
+# alpha 24 0 0.3
+# alpha 103421 1 0.5
+# face 103421 "usual"
+# textboxarrow 0 2
+# chara 502521
+# face 502521 "usual1"
+@めぐみん
+…いえ、１人足りません
+ま、運だけはいい人なので
+心配はしていませんが
+
+# textboxarrow 0 1
+# chara 103421
+# voice 1034 "dakunesu_0003"
+@ダクネス
+そうだな、運だけはいいから
+まぁ無事ではいるだろう
+
+# select "信じてるんだな" "select_label_01" "そんなに運がいいのか" "select_label_02" "早く会ってみたいな" "select_label_03"
+そうだな、運だけはいいから
+まぁ無事ではいるだろう
+
+;;回答（どれを選んでも）
+# label "select_label_01"
+# labeljump "select_label_end"
+# alpha 601711 1 0.5
+# alpha 502521 0 0.3
+# textboxarrow 0 2
+# chara 601711
+# face 601711 "usual"
+@アクア
+どうかしら、会ってみると思ったより
+貧相でがっかりするかもしれないわよ？
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# alpha 601711 1 0.5
+# alpha 502521 0 0.3
+# textboxarrow 0 2
+# chara 601711
+# face 601711 "usual"
+@アクア
+どうかしら、会ってみると思ったより
+貧相でがっかりするかもしれないわよ？
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# alpha 601711 1 0.5
+# alpha 502521 0 0.3
+# textboxarrow 0 2
+# chara 601711
+# face 601711 "usual"
+@アクア
+どうかしら、会ってみると思ったより
+貧相でがっかりするかもしれないわよ？
+
+# label "select_label_end"
+# emotionbody 6101 11 601711 110 230
+# effectpattern 6101 1 0
+# effectstart 6101
+# textboxarrow 0 2
+# chara 601711
+# voice 6017 "akua_0022"
+# face 601711 "surprise"
+@アクア
+…って、あれ？
+…ねぇ、私、気づいたんだけど
+カズマがいない理由
+
+# effectskip 6101
+# textboxarrow 0 2
+# chara 601711
+# face 601711 "angry"
+@アクア
+この状況で運がいいってことは、
+元の世界でのうのうと
+してるんじゃないの？
+
+# textboxarrow 0 1
+# chara 103421
+# face 103421 "sad"
+@ダクネス
+…そうかもしれんな…
+
+;;//暗転
+;;//第７話終了
+# fadeout "black" 2
+# waitandnext 2.1

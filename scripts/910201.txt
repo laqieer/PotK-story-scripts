@@ -1,0 +1,1237 @@
+;;●１－３＜戦闘画面＞　背景：グランエクスペリ
+;;※グリードと対峙しているティルフィング。明らかに疲弊した表情を浮かべている
+# script "lisp"
+# background "imperial_city"
+# bgmfile "bgm164" "BgmPJZero001" 0
+# body 24
+# pos 24 2
+# scale 24 0.8 0
+# body 101471
+# pos 101471 4
+# scale 101471 0.8 0
+# body 0
+# pos 0 2
+# scale 0 0.8 0
+# alpha 0 0 0
+# body 4
+# pos 4 4
+# scale 4 0.8 0
+# alpha 4 0 0
+# layer 0 5
+# layer 24 3
+# layer 101471 1
+;;ティルフィングボイス用
+# body 101411
+# alpha 101411 0 0
+# face 24 "sad"
+# face 0 "serious2"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0038"
+@ティルフィング
+ハァ…ハァ…
+な、なんなの、
+アナタ…
+
+# textboxarrow 0 3
+# voice 10147 "tyrufing_k_0005"
+@グリード
+…言ったはずよ
+…アナタ達がこの世で出会う、
+最後のキラープリンセスだって
+
+# textboxarrow 0 3
+# voice 10147 "tyrufing_k_0007"
+@グリード
+…安心して、逝きなさい
+
+# se "SE_5205"
+# face 24 "mad2"
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0037"
+@ティルフィング
+…クッ！
+…ハァァァッ！！！
+;;※猛然とかかってゆくティルフィング
+
+# se "SE_4100"
+# sedelay "SE_4000" 0.3
+# textboxarrow 0 0
+# move 24 4 0.2
+# waitandnext 0.1
+
+# alpha 101471 0 0.1
+# waitandnext 0.1
+
+# move 101471 3 0
+# waitandnext 0.03
+
+# alpha 101471 1 0.2
+# move 101471 2 0.2
+# waitandnext 1
+
+# alpha 24 0 0.5
+# alpha 101471 0 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 3
+# voice 9998 "toto_0025"
+@トト
+だ、大丈夫かな、
+ティルフィング…
+攻撃が当たらないみたいだけど…
+
+# body 75
+# pos 75 4
+# scale 75 0.8 0
+# alpha 75 0 0
+# body 41
+# pos 41 2
+# scale 41 0.8 0
+# alpha 41 0 0
+# face 0 "worry"
+# face 75 "irregular"
+# textboxarrow 0 1
+@デュリン
+うん…
+;;※リベリオンの身体が、再びブレる
+
+# serif 0
+# textwindow "close"
+# alpha 75 1 0.5
+# alpha 41 1 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# waitandnext 0.5
+
+# entry 751 75
+# pos 751 4
+# scale 751 0.8 0
+# waitandnext 0.1
+
+# se "SE_4835"
+# shake 0 0.5
+# fadein "white" 0.5
+# scale 751 2 0.5
+# alpha 751 0 1
+# layer 751 4
+# waitandnext 1
+
+# serif 0
+# textwindow "normal"
+# alpha 751 0 0.5
+# textboxarrow 0 3
+# voice 9979 "rebellion_0026"
+@リベリオン
+…グッ！
+…チッ…じ、時間がない
+
+# face 75 "normal"
+# textboxarrow 0 3
+# voice 9979 "rebellion_0001"
+@リベリオン
+おい、大天使はどこにいる…？
+
+# textboxarrow 0 1
+# voice 9983 "kokusohkan_0003"
+@黒奏官
+大天使…？
+なんの話だ？
+
+# face 75 "sad"
+# textboxarrow 0 3
+# voice 9979 "rebellion_0004"
+@リベリオン
+見え透いた芝居はよせ
+
+# face 75 "normal"
+# textboxarrow 0 3
+@リベリオン
+お前の背後にいるのは、王政府…
+いや…政府を操り、
+この世界を箱庭化している神々だ
+
+# textboxarrow 0 3
+# voice 9979 "rebellion_0001"
+@リベリオン
+…お前が動き回ってるっってことは、
+俺の存在も
+既にバレちまってるってことだろ？
+
+# textboxarrow 0 3
+# voice 9979 "rebellion_0004"
+@リベリオン
+…ヤツらは、
+どう出るつもりだ？
+
+# textboxarrow 0 1
+# voice 9983 "kokusohkan_0004"
+@黒奏官
+…邪推にもほどがあるな
+私は教皇様に仕える身…
+
+# textboxarrow 0 3
+# voice 9979 "rebellion_0042"
+@リベリオン
+その教皇が吐いたんだよ
+すべてはお前の指示だとな
+
+# body 128
+# pos 128 1
+# scale 128 0.8 0
+# alpha 128 0 0
+# textboxarrow 0 1
+@黒奏官
+…………
+
+# alpha 128 1 0.5
+# move 41 3 0.5
+# move 75 5 0.5
+# textboxarrow 0 1
+@ノーブル
+ま、待てっ…
+
+# textboxarrow 0 1
+@ノーブル
+教皇様が、
+裏切り者だったということか…！？
+
+# face 75 "sad"
+# textboxarrow 0 3
+# voice 9979 "rebellion_0003"
+@リベリオン
+ああ、
+そもそも怪しいとは
+思っていたがな…
+
+# body 28
+# pos 28 3
+# scale 28 0.8 0
+# alpha 28 0 0
+# layer 28 2
+# layer 41 1
+# layer 75 4
+# face 75 "normal"
+# face 28 "surprise"
+# textboxarrow 0 3
+# voice 9979 "rebellion_0004"
+@リベリオン
+レン…
+お前の父親が遺した伝言が、
+確信させてくれたんだよ
+
+# alpha 41 0 0.5
+# alpha 75 0 0.5
+# alpha 128 0 0.5
+# alpha 28 1 0.5
+# textboxarrow 0 2
+@レン
+！！
+“人々の希望の頂は、
+　既に神々の手に侵されている”…
+
+# move 28 4 0.5
+# move 128 2 0
+# alpha 128 1 0.5
+# textboxarrow 0 1
+@ノーブル
+！？
+なんだね、
+その言葉は…！？
+
+# face 28 "normal"
+# textboxarrow 0 3
+@レン
+父さんが遺してくれた、
+最後のプレゼント…
+
+# textboxarrow 0 3
+# voice 9984 "ren_0003"
+@レン
+このハンチングの内側に、
+そのメッセージが
+忍ばせてあったんです
+
+# pos 75 4
+# pos 41 2
+# layer 75 2
+# textboxarrow 0 3
+@レン
+“終わりなき夜”に現れる使者…
+リベリオンに伝えて欲しいと
+
+# alpha 28 0 0.5
+# alpha 128 0 0.5
+# alpha 75 1 0.5
+# alpha 41 1 0.5
+# textboxarrow 0 1
+# voice 9983 "kokusohkan_0027"
+@黒奏官
+君がその男に伝えようとしていたのは
+その言葉か…
+
+# textboxarrow 0 1
+@黒奏官
+…なるほど、お前の父が
+大事そうにそのハンチングを
+抱えていたのは、そのため…
+
+# textboxarrow 0 1
+# voice 9983 "kokusohkan_0003"
+@黒奏官
+まったく、迂闊だったな
+
+# textboxarrow 0 3
+# voice 9979 "rebellion_0003"
+@リベリオン
+すべて、調べがついているんだ…
+面倒なやり取りは、
+抜きにしようぜ？
+
+# textboxarrow 0 1
+# voice 9983 "kokusohkan_0020"
+@黒奏官
+…フン…教皇め
+我が身可愛さに、
+ペラペラと漏らしおったか…
+
+# face 41 "normal"
+# textboxarrow 0 1
+@黒奏官
+もう少し、役に立つと
+思っていたが
+
+# face 75 "smile"
+# textboxarrow 0 3
+# voice 9979 "rebellion_0042"
+@リベリオン
+無理だな…
+あの男に、それほどの器量はない
+帰って、説教してやりな
+
+# face 41 "smile"
+# textboxarrow 0 1
+# voice 9983 "kokusohkan_0007"
+@黒奏官
+それこそ、無理な話だ
+
+# face 24 "angry"
+# textboxarrow 0 1
+# voice 9983 "kokusohkan_0001"
+@黒奏官
+…そうだな、グリード？
+;;※ティルフィングと対峙しているグリードが、事もなさげに口を開く
+
+# alpha 75 0 0.5
+# alpha 41 0 0.5
+# alpha 24 1 0.5
+# alpha 101471 1 0.5
+# textboxarrow 0 1
+# voice 10147 "tyrufing_k_0003"
+@グリード
+はい
+既に、教皇の処理は
+完了しております
+
+# move 0 3 0
+# alpha 0 1 0.5
+# alpha 24 0 0.5
+# alpha 101471 0 0.5
+# textboxarrow 0 2
+@デュリン
+な…！？
+なんですって…！？
+
+# move 0 2 0.5
+# move 41 4 0
+# alpha 41 1 0.5
+# textboxarrow 0 3
+# voice 9983 "kokusohkan_0008"
+@黒奏官
+消息を絶ったフレンネル大公を
+おびき出す…
+それが、あの男の最大の務め
+
+# textboxarrow 0 3
+@黒奏官
+大公の拘束が果たされた段階で、
+ヤツの役目は終わっている
+
+# textboxarrow 0 3
+# voice 9983 "kokusohkan_0005"
+@黒奏官
+…安心しろ
+お前達の組織の長は、
+すぐにまた見繕ってやる
+
+# face 0 "angry"
+# textboxarrow 0 1
+@デュリン
+ふ、ふざけないでっ！！
+
+# textboxarrow 0 1
+@デュリン
+これが…
+アタシ達が信じ続けていた、
+教会組織の全貌だというの…！？
+
+# textboxarrow 0 1
+@デュリン
+そこで必死に生きている人間達を、
+なんだと思ってるのよ！！！
+
+# face 41 "normal"
+# face 0 "serious2"
+# textboxarrow 0 3
+@黒奏官
+勘違いするな
+ラグナロク教会の存在には、
+敬意を払っている…
+
+# pos 4 4
+# pos 128 2
+# face 4 "angry"
+# face 41 "smile"
+# textboxarrow 0 3
+# voice 9983 "kokusohkan_0007"
+@黒奏官
+この世界を彩る“駒”としてな
+
+# alpha 41 0 0.5
+# alpha 0 0 0.5
+# alpha 4 1 0.5
+# alpha 128 1 0.5
+# textboxarrow 0 3
+# voice 9998 "toto_0015"
+@トト
+お前っ…
+
+# textboxarrow 0 1
+@ノーブル
+！！
+
+# face 24 "angry"
+# textboxarrow 0 1
+@ノーブル
+やはり、お前は…
+この世界を箱庭として見る、
+神々の手の内にある者っ…
+
+# alpha 24 1 0.5
+# alpha 101471 1 0.5
+# alpha 4 0 0.5
+# alpha 128 0 0.5
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0038"
+@ティルフィング
+ハァ…ハァ…
+アナタ達は間違っているっ…
+人間は駒なんかじゃないのよ！
+
+# entry 101477 101471
+# pos 101477 2
+# scale 101477 0.8 0
+# alpha 101477 0 0
+# textboxarrow 0 1
+# voice 10147 "tyrufing_k_0005"
+@グリード
+…だったら
+その剣で、アナタの正義を
+証明してみせるといい
+;;※グリードの身体から、黒いオーラが滲み出す
+
+# alpha 101477 1 0
+# waitandnext 0.1
+
+# se "SE_5770"
+# scale 101477 1.5 0.5
+# alpha 101477 0 1
+# layer 101477 4
+# shake 0 1
+# waitandnext 1
+
+# face 101471 "angry"
+# textboxarrow 0 1
+# voice 10147 "tyrufing_k_0020"
+@グリード
+アナタを相手に…
+ウチの者達が、ずいぶんと辛酸を
+舐めさせられたみたいね
+
+# pos 75 5
+# pos 4 3
+# pos 0 1
+# layer 4 1
+# face 4 "smile01"
+# face 75 "normal"
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0037"
+@ティルフィング
+！！
+
+# effectskip 1000
+# alpha 24 0 0.5
+# alpha 101471 0 0.5
+# alpha 75 1 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 2
+@トト
+だ、大丈夫だよ、
+ティルフィング！
+
+# textboxarrow 0 2
+@トト
+他の黒いヤツらも
+打ち負かしてきたんだから…
+絶対に負けはしないよ！！
+
+# face 75 "irregular"
+# textboxarrow 0 3
+# voice 9979 "rebellion_0015"
+@リベリオン
+…いや
+…やめさせた方が
+いいかもしれねぇな
+
+# face 0 "worry"
+# face 4 "normal"
+# textboxarrow 0 1
+@デュリン
+え…？
+
+# textboxarrow 0 3
+# voice 9979 "rebellion_0026"
+@リベリオン
+格が違い過ぎる…
+アイツは…
+これまでのヤツらとは、別格だ
+
+# face 0 "angry"
+# face 24 "mad2"
+# textboxarrow 0 1
+@デュリン
+！！
+ティルフィング、
+待って…！
+
+# se "SE_5205"
+# alpha 24 1 0.5
+# alpha 101471 1 0.5
+# alpha 75 0 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0029"
+@ティルフィング
+クッ…
+…ハァァァッ！！！
+
+;;※猛然とグリードへかかってゆくティルフィング
+# bgmfile "bgm037" "BgmStory004" 0
+# se "SE_4000"
+# textboxarrow 0 0
+# move 24 1 0.2
+# waitandnext 0.1
+
+# alpha 101471 0 0.1
+# waitandnext 0.1
+
+# move 101471 2 0
+# waitandnext 0.03
+
+# alpha 101471 1 0.2
+# move 101471 3 0.2
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@ティルフィング
+人間は、
+駒なんかじゃない…！
+
+# move 24 2 0.2
+# waitandnext 0.2
+
+# se "SE_9086"
+# fadein "white" 0.3
+# move 101471 4 0.3
+# shake 0 0.3
+# textboxarrow 0 1
+@ティルフィング
+その想い上がった考えを…
+絶対に正してみせる！
+
+# face 0 "serious2"
+# face 4 "smile01"
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0029"
+@ティルフィング
+…ハァァァァーッ！！！
+;;※凄まじい勢いで攻撃を放つティルフィング
+
+# textboxarrow 0 0
+# move 24 3 0.1
+# waitandnext 0.1
+
+# se "SE_9037"
+# fadein "white" 0.2
+# move 101471 5 0.2
+# shake 0 0.3
+# waitandnext 1.0
+
+# alpha 24 0 0.5
+# alpha 101471 0 0.5
+# alpha 75 1 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 2
+# voice 9998 "toto_0007"
+@トト
+す、すごいっ…
+やっぱりすごいよ、
+ティルフィングは！
+
+# face 0 "worry"
+# face 101471 "normal"
+# textboxarrow 0 1
+@デュリン
+…いえ
+;;※ティルフィングの猛攻を、静かな表情で受け止めているグリード
+
+# se "SE_4601"
+# sedelay "SE_3006" 0.5
+# alpha 24 1 0.5
+# alpha 101471 1 0.5
+# alpha 75 0 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# textboxarrow 0 3
+@グリード
+…もう一度、言うわ
+
+# move 101471 3 0.2
+# waitandnext 0.1
+
+# se "SE_9086"
+# fadein "white" 0.2
+# move 24 1 0.2
+# shake 0 0.2
+# textboxarrow 0 2
+# voice 10147 "tyrufing_k_0005"
+@グリード
+その剣で、
+アナタの正義を
+証明してみせなさい
+
+# face 24 "angry"
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0037"
+@ティルフィング
+！！
+…クッ…これで決めるわ
+
+;;文字大きく
+# bgm "stop"
+# face 24 "mad2"
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# serif 0
+# textsize 30
+# textwindow "toge"
+# textalign "center"
+# textboxarrow 0 0
+@ティルフィング
+　
+“ショックトゥキル”！！！！
+;;※必殺技を繰り出すティルフィング。逃げもせず、もろに技を喰らうグリード
+
+# move 24 3 0.1
+# textboxarrow 0 0
+# waitandnext 0.1
+
+# se "SE_8002"
+# fadein "white" 0.2
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# effectbody 2000 1 0 0
+# effectstart 2000
+# shake 1 1
+# waitandnext 0.2
+
+# move 24 5 0.2
+# imagealpha 0 0 0.2
+# waitandnext 1.0
+
+# effectskip 2000
+# serif 0
+# textsize 24
+# textwindow "normal"
+# alpha 24 0 0.5
+# alpha 101471 0 0.5
+# alpha 75 1 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 2
+@トト
+やった！！！
+
+# alpha 24 1 0.5
+# alpha 101471 1 0.5
+# alpha 75 0 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# face 24 "surprise"
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0024"
+@ティルフィング
+…！？
+;;※舞い上がった土煙が晴れてゆくと、そこに悠然と立つグリードの姿
+
+# bgmfile "bgm162" "BgmPJZero001" 0
+# face 101471 "sad"
+# textboxarrow 0 2
+# voice 10147 "tyrufing_k_0027"
+@グリード
+…それで終わりなの？
+
+# face 24 "sad"
+# textboxarrow 0 3
+@ティルフィング
+！！！
+
+# face 101471 "normal"
+# textboxarrow 0 2
+@グリード
+だったら、次は私の番…
+
+# se "SE_5205"
+# se "SE_9014"
+# face 75 "angry"
+# face 4 "sad"
+# face 101471 "angry"
+# textboxarrow 0 2
+@グリード
+ウチの者達が受けた仕打ち…
+その身体に、
+すべて返してあげるわ
+;;※スゥッと攻撃態勢に入るグリード
+
+# alpha 24 0 0.5
+# alpha 101471 0 0.5
+# alpha 75 1 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 3
+# voice 9979 "rebellion_0015"
+@リベリオン
+マズいっ！！
+;;※駆け出すリベリオン
+
+# textboxarrow 0 0
+# se "SE_5575" 
+# alpha 75 0 0.5
+# waitandnext 1.0
+
+# alpha 24 1 0.5
+# alpha 101471 1 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# textboxarrow 0 2
+# voice 10147 "tyrufing_k_0029"
+@グリード
+犯した罪を背負い、
+逝きなさいっ…
+
+# face 4 "angry"
+# layer 75 4
+# pos 4 4
+# pos 0 2
+# pos 41 3
+# textboxarrow 0 3
+@ティルフィング
+う…うぁっ…
+
+# alpha 24 0 0.5
+# alpha 101471 0 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 3
+# voice 9998 "toto_0049"
+@トト
+ティルフィング…！！！
+;;※グリードが技を放つ寸前。あたりに響き渡る声
+
+# bgm "stop"
+# alpha 41 1 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# face 41 "normal"
+# textboxarrow 0 2
+@黒奏官
+…よせ！！！
+
+# alpha 24 1 0.5
+# alpha 101471 1 0.5
+# alpha 41 0 0.5
+# face 101471 "surprise"
+# textboxarrow 0 2
+# voice 10147 "tyrufing_k_0023"
+@グリード
+！！
+;;※ビタリと動きを止めるグリード
+
+# alpha 24 0 0.5
+# alpha 101471 0 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# face 0 "normal"
+# textboxarrow 0 1
+@デュリン
+え…？
+
+# bgmfile "bgm164" "BgmPJZero001" 0
+# alpha 41 1 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0004"
+@黒奏官
+…処するは、招かれざる客のみ
+…そう申したはずだぞ
+
+# alpha 24 1 0.5
+# alpha 101471 1 0.5
+# alpha 41 0 0.5
+# face 101471 "sad"
+# textboxarrow 0 2
+# voice 10147 "tyrufing_k_0023"
+@グリード
+！！
+…申し訳ございません
+;;※ティルフィングを庇うように立ちはだかるリベリオン
+
+# se "SE_5575"
+# textboxarrow 0 0
+# move 75 3 0
+# alpha 75 1 0.5
+# move 101471 1 0.5
+# face 75 "irregular"
+# waitandnext 1.0
+
+# textboxarrow 0 3
+@ティルフィング
+リ、リベリオンさんっ…
+
+# alpha 24 0 0.5
+# alpha 101471 0 0.5
+# alpha 75 0 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 1
+@デュリン
+止めた…？
+…リベリオンを、
+巻き込まないために…？
+
+# move 75 4 0
+# move 41 2 0
+# alpha 41 1 0.5
+# alpha 75 1 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# textboxarrow 0 3
+# voice 9979 "rebellion_0026"
+@リベリオン
+チッ
+なぜ、俺に手をかけようとしない…？
+
+# textboxarrow 0 1
+# voice 9983 "kokusohkan_0001"
+@黒奏官
+…大天使様への謁見を望む
+…そう申していたな？
+
+# face 75 "normal"
+# textboxarrow 0 3
+# voice 9979 "rebellion_0003"
+@リベリオン
+ここまで大ごとになっちまったら、
+コソコソ隠れたところで
+意味がない
+
+# textboxarrow 0 3
+@リベリオン
+俺達人類に干渉せぬよう、
+直接話をつける
+
+# textboxarrow 0 1
+# voice 9983 "kokusohkan_0013"
+@黒奏官
+…そのような申し出に、
+神々が乗るとでも？
+
+# textboxarrow 0 3
+# voice 9979 "rebellion_0042"
+@リベリオン
+乗らなけりゃ、
+闘って勝ち取るまでのこと
+
+# pos 0 1
+# face 0 "worry"
+# face 75 "sad"
+# textboxarrow 0 3
+@リベリオン
+どの道…
+人類が生き延びる道は、
+そこにしかないんだ
+
+# alpha 0 1 0.5
+# move 41 3 0.5
+# move 75 5 0.5
+# textboxarrow 0 1
+@デュリン
+か、神々と闘うっての…！？
+そんな、無茶な！？
+
+# pos 28 1
+# face 75 "normal"
+# face 28 "surprise"
+# textboxarrow 0 3
+@リベリオン
+俺達の世界じゃ、
+悪魔と闘ってるんだ
+たいして変わりはねぇよ
+
+# alpha 28 1 0.5
+# alpha 0 0 0.5
+# textboxarrow 0 1
+# voice 9984 "ren_0027"
+@レン
+か、変わりないって…
+
+# pos 101471 2
+# pos 24 4
+# face 101471 "surprise"
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0020"
+@黒奏官
+フン…
+…ゆくぞ、グリード
+
+# alpha 101471 1 0.5
+# alpha 24 1 0.5
+# alpha 75 0 0.5
+# alpha 28 0 0.5
+# alpha 41 0 0.5
+# textboxarrow 0 1
+# voice 10147 "tyrufing_k_0022"
+@グリード
+は…？
+
+# move 75 4 0
+# move 41 2 0
+# alpha 24 0 0.5
+# alpha 101471 0 0.5
+# alpha 75 1 0.5
+# alpha 41 1 0.5
+# face 75 "surprise"
+# textboxarrow 0 3
+# voice 9979 "rebellion_0014"
+@リベリオン
+…？
+…どういうつもりだ？
+
+# face 41 "smile"
+# textboxarrow 0 1
+# voice 9983 "kokusohkan_0004"
+@黒奏官
+大天使様への謁見を望むのなら、
+そのお膝元まで
+辿り着くがいい
+
+# textboxarrow 0 1
+@黒奏官
+神々の門戸は、
+万人に開かれている
+
+# face 75 "normal"
+# textboxarrow 0 3
+# voice 9979 "rebellion_0004"
+@リベリオン
+…俺を、
+試そうってのか？
+
+# textboxarrow 0 1
+@黒奏官
+大天使様は、
+お前に興味がおありのようだ
+
+# face 41 "normal"
+# face 101471 "normal"
+# face 24 "surprise"
+# textboxarrow 0 1
+# voice 9983 "kokusohkan_0003"
+@黒奏官
+…そして…そこの男にも
+
+# alpha 24 1 0.5
+# alpha 101471 1 0.5
+# alpha 75 0 0.5
+# alpha 28 0 0.5
+# alpha 41 0 0.5
+# textboxarrow 0 3
+@ティルフィング
+…！？
+…マスター…！？
+;;※主人公に、一同の視線が注がれる
+
+# move 41 3 0
+# move 24 5 0.5
+# move 101471 1 0.5
+# alpha 41 1 0.5
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0013"
+@黒奏官
+…どうにも奇妙な存在だ
+何者なのだ、お前は…？
+
+# select "お、俺…！？" "select_label_01" "な、何者って…どういう意味だ…！？" "select_label_02"
+…どうにも奇妙な存在だ
+何者なのだ、お前は…？
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0027"
+@黒奏官
+…記憶のないお前に問うても、
+意味を為さぬか
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0027"
+@黒奏官
+…記憶のないお前に問うても、
+意味を為さぬか
+
+# label "select_label_end"
+# face 24 "angry"
+# textboxarrow 0 2
+@黒奏官
+ともあれ…
+すべては、大天使様の元まで
+辿り着けたらの話だ
+
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0001"
+@黒奏官
+…ゆくぞ
+
+# textboxarrow 0 1
+# voice 10147 "tyrufing_k_0032"
+@グリード
+はっ…
+;;※去ってゆく黒奏官とグリード
+
+# textboxarrow 0 0
+# se "SE_0740"
+# alpha 41 0 0.5
+# alpha 101471 0 0.5
+# waitandnext 1.5
+
+# bgm "bgm005" 0
+# layer 75 2
+# move 24 4 0.5
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0037"
+@ティルフィング
+クッ…
+
+# face 75 "angry"
+# move 24 5 0.5
+# move 75 3 0
+# alpha 75 1 0.5
+# textboxarrow 0 2
+# voice 9979 "rebellion_0011"
+@リベリオン
+待て！
+追うな！
+
+# face 75 "normal"
+# face 0 "serious2"
+# face 24 "sad"
+# textboxarrow 0 3
+@ティルフィング
+で、でも…
+
+# move 0 1 0
+# alpha 0 1 0.5
+# textboxarrow 0 1
+@デュリン
+今、追ったところで、
+同じことになる…
+
+# textboxarrow 0 1
+@デュリン
+一度、
+態勢を立て直した方がいい
+
+# textboxarrow 0 1
+@デュリン
+大丈夫、
+雪辱を晴らす機会は
+必ずあるわ
+
+# face 4 "sad"
+# textboxarrow 0 3
+@ティルフィング
+…………
+
+# alpha 75 0 0.5
+# alpha 0 0 0.5
+# alpha 24 0 0.5
+# alpha 4 1 0.5
+# alpha 128 1 0.5
+# textboxarrow 0 3
+# voice 9998 "toto_0053"
+@トト
+…ティルフィング
+
+# textboxarrow 0 1
+@ノーブル
+そう、
+落ち込むこともない
+
+# face 28 "worry"
+# textboxarrow 0 1
+@ノーブル
+ひとつ、
+大きな収穫がある
+
+# move 128 1 0.5
+# move 4 5 0.5
+# move 28 3 0
+# alpha 28 1 0.5
+# face 4 "normal"
+# textboxarrow 0 2
+# voice 9984 "ren_0022"
+@レン
+収穫…？
+
+# textboxarrow 0 1
+@ノーブル
+ヤツは口を滑らせた…
+気付かなかったか？
+
+# textboxarrow 0 1
+@ノーブル
+“大公の拘束が果たされた段階で、
+　ヤツの役目は終わっている”
+
+# textboxarrow 0 1
+@ノーブル
+…確かに、
+あの男はそう言っていた
+
+# textboxarrow 0 1
+@ノーブル
+フレンネル大公の
+“始末”ではなく、
+“拘束”とな…
+
+# face 28 "surprise"
+# textboxarrow 0 2
+@レン
+！！
+つまり…
+
+# body 6
+# pos 6 5
+# scale 6 0.8 0
+# alpha 6 0 0
+# body 40
+# pos 40 3
+# scale 40 0.8 0
+# alpha 40 0 0
+# face 40 "irregular"
+# textboxarrow 0 1
+@ノーブル
+うむ…
+フレンネル大公は、
+やはり生きておられる！
+;;※そこへ駆けてくるディーンとエドガー
+
+# textboxarrow 0 0
+# alpha 28 0 0.5
+# alpha 128 0 0.5
+# alpha 4 0 0.5
+# waitandnext 0.5
+
+# se "SE_5575"
+# alpha 6 1 0.3
+# alpha 40 1 0.3
+# rightin 6 0.5
+# rightin 40 0.5
+# textboxarrow 0 2
+# voice 9982 "edgar_0002"
+@エドガー
+おい！
+お前ら、大丈夫か！？
+
+# move 0 1 0
+# alpha 0 1 0.5
+# face 0 "angry"
+# textboxarrow 0 1
+@デュリン
+ディーン！エドガー！
+…黒いマサムネは？
+
+# face 0 "serious2"
+# face 40 "normal"
+# textboxarrow 0 2
+@エドガー
+わからない…
+突然、攻撃をやめて
+姿を消したんだ
+
+# face 6 "angry"
+# textboxarrow 0 3
+# voice 9997 "deen_0001"
+@ディーン
+それより、
+えらい数のキラープリンセス達が
+やってくる！
+
+# face 4 "angry"
+# face 24 "angry"
+# textboxarrow 0 3
+@ディーン
+気を抜くな！
+
+# move 4 1 0
+# alpha 0 0 0.5
+# alpha 4 1 0.5
+# textboxarrow 0 1
+# voice 9998 "toto_0049"
+@トト
+ティルフィング！
+
+# move 24 3 0
+# alpha 4 0 0.5
+# alpha 6 0 0.5
+# alpha 40 0 0.5
+# alpha 24 1 0.5
+# textboxarrow 0 2
+@ティルフィング
+…うん
+落ち込んでなんていられない…
+
+# face 24 "mad2"
+# textboxarrow 0 2
+@ティルフィング
+みんな、
+下がって！！

@@ -1,0 +1,477 @@
+;;-----------------------------------------
+;;SEA夏1_12_0
+;;-----------------------------------------
+# script "lisp"
+# background "SEAsummer_fes_day"
+# bgmfile "bgm605_606" "BgmSecretlyEverAfter003" 0
+;;-----------------------------------------
+;;浴衣ミーミル
+# body 318
+# pos 318 2
+# scale 318 0.8 0
+# layer 318 5
+# mask 318 off
+# alpha 318 1 0
+;;浴衣マナナン
+# body 6504021
+# pos 6504021 4
+# scale 6504021 0.8 0
+# layer 6504021 3
+# mask 6504021 off
+# alpha 6504021 1 0
+;;マクリル（シルエット）
+# body 6603811
+# pos 6603811 3
+# scale 6603811 0.8 0
+# layer 6603811 3
+# mask 6603811 off
+# alpha 6603811 0 0
+# brightness 6603811 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagescale 1 1.3 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：夏祭り会場（昼）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# voice 9917 "mimir_navikan_0004"
+# face 318 "happy"
+# face 6504021 "usual"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+チョコバナナ
+シンプルな組み合わせですが、
+奥深い味わいです
+
+# voice 650401 "manannan_ura_0005"
+# face 6504021 "happy"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+わたあめだって
+雲みた～い♪
+
+# textboxarrow 0 1
+@ミーミル
+ベビーカステラは
+優しい甘さですね
+
+# face 6504021 "surprise"
+# textboxarrow 0 3
+@マナナン
+んん～？
+ラムネの瓶に入ってる玉は何なの？
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 9917 "mimir_navikan_0019"
+# face 318 "sad"
+# face 6504021 "usual"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+ふぅ…
+少し苦しくなってまいりました…
+
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+マスター様は如何ですか？
+
+;;選択肢
+# select "お腹いっぱい" "select_label_01" "まだまだいける" "select_label_02"
+少し苦しくなってまいりました…
+マスター様は如何ですか？
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textboxarrow 0 1
+@ミーミル
+どうぞ、お休みになっていて下さい
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# voice 9917 "mimir_navikan_0036"
+# textboxarrow 0 1
+@ミーミル
+ご無理はなさらないよう
+お願い致します
+
+# label "select_label_end"
+# face 6504021 "surprise"
+# textboxarrow 0 3
+@マナナン
+あれ～？
+二人とも、どうしたの？
+
+# face 6504021 "normal"
+# textboxarrow 0 3
+@マナナン
+はい！
+串カツとビッグウインナーと
+ホットドッグ！
+
+# voice 9917 "mimir_navikan_0004"
+# face 318 "happy"
+# textboxarrow 0 1
+@ミーミル
+マナナンさん
+元気ですね…
+
+# voice 650401 "manannan_ura_0005"
+# face 6504021 "happy"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+何だか今日は調子が良いんだ～
+
+# textboxarrow 0 3
+@マナナン
+まだまだ屋台はあるよ！
+どんどん食べて「一番」を
+見つけようよ！
+
+# voice 9917 "mimir_navikan_0003"
+# textboxarrow 0 1
+@ミーミル
+は、はい…
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1.5
+
+# face 318 "normal"
+# face 6504021 "usual"
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+何とか全ての屋台を周り終えました…
+
+# face 6504021 "happy"
+# textboxarrow 0 3
+@マナナン
+美味しかったね～っ♪
+
+# face 6504021 "usual"
+# textboxarrow 0 3
+@マナナン
+それで、何するんだったっけ？
+
+# textboxarrow 0 1
+@ミーミル
+一旦、牛提灯を…
+あ、あそこに…
+
+# face 6504021 "happy"
+# textboxarrow 0 3
+@マナナン
+牛の形した提灯だ
+面白いね！
+
+# face 6504021 "usual"
+# textboxarrow 0 3
+@マナナン
+近くにベンチもあるよ
+二人とも座ったら？
+
+# voice 9917 "mimir_navikan_0001"
+# face 318 "happy"
+# textboxarrow 0 1
+@ミーミル
+マスター様、どうぞ
+私も…お言葉に甘えて
+座らせていただきます
+
+# voice 9917 "mimir_navikan_0019"
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+ふぅ…
+では、気を取り直して
+
+# textboxarrow 0 1
+@ミーミル
+今まで食べた中から、
+「一番」を見つけます
+
+# voice 9917 "mimir_navikan_0001"
+# textboxarrow 0 1
+@ミーミル
+マスター様
+どれが一番美味しかったですか？
+
+;;選択肢
+# select "覚えてない…" "select_label_03" "分からない…" "select_label_03" "お腹いっぱい…" "select_label_03"
+マスター様
+どれが一番美味しかったですか？
+
+# label "select_label_03"
+# face 318 "sad"
+# textboxarrow 0 1
+@ミーミル
+ああっ…
+実は私もです…
+
+# textboxarrow 0 1
+@ミーミル
+食べ過ぎて、何が何だか
+分からなくなってしまいました…
+
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+マナナンさんは
+どれが「一番」でしたか？
+
+# face 6504021 "surprise"
+# textboxarrow 0 3
+@マナナン
+分かんない！
+
+# voice 9917 "mimir_navikan_0027"
+# face 318 "sad"
+# textboxarrow 0 1
+@ミーミル
+そうですか…
+困りました…
+
+# face 6504021 "usual"
+# textboxarrow 0 3
+@マナナン
+じゃ、ちょっと行ってくる！
+
+;;画面外
+# se "SE_5575"
+# se "SE_9430"
+# rightout 6504021 0.8
+# textwindow "close"
+# waitandnext 1
+
+# voice 9917 "mimir_navikan_0060"
+# face 318 "surprise"
+# move 6504021 5 0
+# alpha 6504021 0 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+マナナンさん、どちらへ！？
+
+# move 6504021 4 0.5
+# face 6504021 "usual"
+# alpha 6504021 1 0.3
+# textboxarrow 0 3
+@マナナン
+もう一度、全部の屋台を
+回ってくるよ！
+
+# se "SE_5575"
+# voice 9917 "mimir_navikan_0022"
+# move 6504021 5 0.3
+# scale 6504021 0.7 0.5
+# alpha 6504021 0 0.3
+# textboxarrow 0 1
+@ミーミル
+ええっ？
+マナナンさん、まだ
+食べ足りないのですか…
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+# bgm "stop"
+# move 318 3 0
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_6216"
+# fadein "black" 1
+# waitandnext 1
+
+# voice 9917 "mimir_navikan_0004"
+# face 318 "happy"
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+ようやく落ち着いてきました
+これなら少しくらいは
+食べられそうです
+
+# face 318 "surprise"
+# textboxarrow 0 2
+@ミーミル
+マナナンさんと合流して…あっ
+
+;;マナナンが帰ってくる
+# se "SE_0740"
+# voice 650401 "manannan_ura_0028"
+# move 318 2 0.5
+# move 6504021 4 0.8
+# scale 6504021 0.8 0.8
+# face 6504021 "sad"
+# alpha 6504021 1 0.3
+# textboxarrow 0 3
+@マナナン
+うーん…
+
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+お帰りなさい、マナナンさん
+…どうされました？
+
+# textboxarrow 0 3
+@マナナン
+何だか変だよ…
+
+# textboxarrow 0 1
+@ミーミル
+何があったのか、
+お話しいただけませんか？
+
+# textboxarrow 0 3
+@マナナン
+あんまり美味しくないんだ…
+
+# voice 9917 "mimir_navikan_0022"
+# face 318 "surprise"
+# textboxarrow 0 1
+@ミーミル
+えっ…？
+
+;;回想シーン
+# se "SE_0742"
+# fadeout "white" 1
+# waitandnext 1
+
+# bgm "bgm003" 0
+# imagealpha 1 0.7 0
+# imagepos 1 0 0
+# move 6504021 3 0
+# alpha 318 0 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+# voice 650401 "manannan_ura_0005"
+# face 6504021 "happy"
+# textwindow "nomal"
+# textboxarrow 0 2
+@マナナン
+アハハハ！
+さっき食べたたこ焼きだ～
+中にたこが入ってるんだよね
+
+# face 6504021 "usual"
+# textboxarrow 0 2
+@マナナン
+…………
+
+# face 6504021 "surprise"
+# textboxarrow 0 2
+@マナナン
+そうだ！
+かき氷のシロップはどれが
+美味しいのか比べないと
+
+# face 6504021 "usual"
+# textboxarrow 0 2
+@マナナン
+…………
+
+;;一瞬、マクリルのシルエット（幻覚）が並ぶ
+# alpha 6504021 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 6603811 0.5 0.5
+# waitandnext 0.5
+
+# alpha 6603811 0 0.5
+# waitandnext 0.5
+
+# face 6504021 "sad"
+# alpha 6504021 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@マナナン
+ねぇねぇ
+このチョコバナナ…
+
+# textboxarrow 0 2
+@マナナン
+…………
+
+# voice 650401 "manannan_ura_0028"
+# textboxarrow 0 2
+@マナナン
+うーん…
+さっきと味が違う…
+
+;;回想終了
+# se "SE_11762"
+# fadeout "white" 1
+# waitandnext 1
+
+# imagealpha 1 0 0
+# move 6504021 4 0
+# face 6504021 "sad"
+# face 318 "normal"
+# alpha 318 1 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+さっき二人と一緒に食べたのと
+同じもののはずなのに…
+何で味が変わっちゃったんだろう？
+
+# textboxarrow 0 1
+@ミーミル
+それは…
+別のお店のものだったのでは？
+
+# textboxarrow 0 1
+@ミーミル
+もしくは、気温の変化で味の感じ方が
+変わったのかもしれません
+
+# face 6504021 "surprise"
+# textboxarrow 0 3
+@マナナン
+お店は同じだよ…
+だって全部回ったから
+
+# voice 650401 "manannan_ura_0002"
+# textboxarrow 0 3
+@マナナン
+ねぇねぇ
+変だよね？
+
+# fadeout "black" 1
+# waitandnext 1

@@ -1,0 +1,519 @@
+;;-----------------------------------------
+;;SEA1章_14
+;;-----------------------------------------
+# script "lisp"
+# background "beast_world_underground"
+# bgm "stop"
+;;-----------------------------------------
+;;ゼロ
+# body 23
+# pos 23 2
+# scale 23 0.8 0
+# layer 23 2
+# mask 23 off
+# alpha 23 1 0
+# body 1100211
+# alpha 1100211 0 0
+;;ミーミル
+# body 270
+# pos 270 4
+# scale 270 0.8 0
+# layer 270 3
+# mask 270 off
+# alpha 270 1 0
+;;レーヴァテイン
+# body 41002002
+# pos 41002002 3
+# scale 41002002 0.7 0
+# layer 41002002 5
+# mask 41002002 off
+# alpha 41002002 0 0
+;;レーヴァテイン
+# body 100221
+# pos 100221 4
+# scale 100221 0.8 0
+# layer 100221 5
+# alpha 100221 0 0
+;;与一
+# body 6400511
+# pos 6400511 3
+# scale 6400511 0.8 0
+# layer 6400511 4
+# mask 6400511 off
+# alpha 6400511 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagescale 1 1.2 0
+# imagelayer 1 1
+;;-----------------------------------------
+;;背景：地下室
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# voice 11002 "laevateinm_0037"
+# face 23 "angry_1"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ゼロ
+どうなってやがる！？
+この門、ビクともしねぇぞ…！
+
+# voice 9917 "mimir_navikan_0028"
+# face 270 "normal"
+# textboxarrow 0 3
+@ミーミル
+今までの八つの門と
+何か違うのでしょうか？
+
+;;選択肢
+# select "最後の門だから" "select_label_01" "門を観察しよう" "select_label_02"
+今までの八つの門と
+何か違うのでしょうか？
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# voice 9917 "mimir_navikan_0003"
+# textboxarrow 0 3
+@ミーミル
+そうです
+何か違いがあってしかるべきです
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# voice 9917 "mimir_navikan_0003"
+# face 270 "happy"
+# textboxarrow 0 3
+@ミーミル
+確かに、観察することは大切ですね
+
+# label "select_label_end"
+# sedelay "bgm602_basic_on" 1
+# sedelay "bgm602_rhythm_on_1" 1
+# voice 9917 "mimir_navikan_0001"
+# face 270 "surprise"
+# textboxarrow 0 3
+@ミーミル
+あ！マスター様
+門の中央に窪みがあります
+これは…
+
+# voice 11002 "laevateinm_0028"
+# face 23 "normal"
+# textboxarrow 0 1
+@ゼロ
+妙な形の窪みだな？
+この輪郭…鶏か？
+
+# face 270 "normal"
+# textboxarrow 0 3
+@ミーミル
+鶏の形をした何かを嵌め込めば
+良いのでしょうか？
+
+# alpha 23 0 0.3
+# alpha 270 0 0.3
+# face 6400511 "surprise"
+# alpha 6400511 1 0.3
+# textboxarrow 0 2
+@与一
+えっ…
+
+;;回想シーン
+# se "SE_0742"
+# se "bgm602_basic_on_1"
+# fadein "white" 1
+# background "006_town2"
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# textwindow "close"
+# waitandnext 1
+
+# serif 1
+# textwindow "nomal"
+@？？？
+持っているだけで…いいから
+絶対に…使わないで
+
+;;回想終了
+# se "SE_11762"
+# se "bgm602_basic_on"
+# fadein "white" 1
+# background "beast_world_underground"
+# imagealpha 1 0 0
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# voice 9917 "mimir_navikan_0022"
+# move 270 3 0
+# face 270 "surprise"
+# alpha 270 1 0.3
+# alpha 6400511 0 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+与一さん？
+あ、そのブローチは…
+
+# alpha 270 0 0.3
+# alpha 41002002 1 0.3
+# textboxarrow 0 2
+@レーヴァテイン
+…………
+
+# voice 11002 "laevateinm_0009"
+#setnextbgmblock 1
+# alpha 41002002 0 0.3
+# move 23 2 0
+# layer 23 3
+# mask 23 off
+# face 23 "angry_1"
+# alpha 23 1 0.3
+# move 6400511 4 0
+# layer 6400511 4
+# mask 6400511 on
+# face 6400511 "surprise"
+# alpha 6400511 1 0.3
+# textboxarrow 0 1
+@ゼロ
+与一、それだ！
+それを貸せ！
+
+# face 6400511 "sad"
+# textboxarrow 0 3
+@与一
+…ダメです
+これは、ダメなんですっ
+
+# textboxarrow 0 1
+@ゼロ
+何、言ってんだ！？
+形も大きさもピッタリだぞ
+それに間違いない！
+
+# face 23 "angry_2"
+# textboxarrow 0 1
+@ゼロ
+もう時間がないんだ！
+さっさと渡してくれっ
+
+# textboxarrow 0 3
+@与一
+あ…あの…でも…
+ごめんなさい…！
+
+;;与一が逃げ出す
+# se "bgm602_tension_on_1"
+# move 6400511 5 0.3
+# alpha 6400511 0 0.3
+# se "SE_5575"
+# textwindow "close"
+# waitandnext 0.5
+
+# serif 1
+# textwindow "nomal"
+@与一
+これはダメなんです…！
+絶対に、使っちゃいけないって…
+約束なんです…！
+
+# voice 11002 "laevateinm_0010"
+# move 6400511 3 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@ゼロ
+待ちやがれ！
+
+;;ゼロが与一を追う
+# move 23 3 0.5
+# alpha 23 0 0.3
+# se "SE_6215"
+# textwindow "close"
+# waitandnext 1.8
+
+# voice 4005 "yoichi_0015"
+# se "bgm602_tension_on"
+# move 23 1 0
+# move 6400511 4 0.3
+# face 6400511 "sad"
+# alpha 6400511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@与一
+ううっ…
+来ないで下さい…
+来たら…射抜きます…！
+
+# move 23 2 0.5
+# face 23 "angry_1"
+# alpha 23 1 0.3
+# textboxarrow 0 1
+@ゼロ
+やってみろ！
+その代わり、殺す気で射ろよ
+
+# se "SE_4300"
+# textboxarrow 0 1
+@ゼロ
+アマネの命がかかってるんだ
+俺は死ぬまで止まらねぇ
+いや、死んでも止まらねぇぞ！
+
+# voice 4005 "yoichi_0024"
+# textboxarrow 0 3
+@与一
+ひぃっ…やあ…！
+
+;;与一の矢が逸れる
+# se "SE_4301"
+# face 23 "angry_2"
+# textboxarrow 0 1
+@ゼロ
+どうした、与一！？
+こんな近距離で外してんじゃねぇ！
+
+# move 23 3 0.3
+# se "SE_9021"
+# textboxarrow 0 0
+# waitandnext 0.3
+
+;;ゼロが与一に当て身を食らわせる
+# fadein "white" 0.3
+# se "SE_4602"
+# move 6400511 5 0.3
+# waitandnext 0.3
+
+# voice 4005 "yoichi_battle_0006"
+# textboxarrow 0 3
+@与一
+あうっ…
+
+# voice 11002 "laevateinm_0007"
+# face 23 "normal"
+# textboxarrow 0 2
+@ゼロ
+しばらく寝てろ
+…ブローチ、借りるぞ
+
+# textboxarrow 0 3
+@与一
+それは…ダメなんで、す…
+
+;;与一が倒れる
+# alpha 6400511 0 0.3
+# se "SE_3001"
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 23 0 0.3
+# alpha 41002002 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@レーヴァテイン
+ううぅ…兄さん…
+
+;;レーヴァテインが消えかける
+# scale 41002002 0.6 1
+# alpha 41002002 0.8 1
+# se "SE_8139"
+# waitandnext 1
+
+# move 41002002 4 0.5
+# move 270 2 0
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ミーミル
+ゼロさん、
+レーヴァテインさんが…！
+
+# alpha 270 0 0.3
+# alpha 41002002 0 0.3
+# face 23 "angry_1"
+# alpha 23 1 0.3
+# textboxarrow 0 2
+@ゼロ
+くそっ…！
+頼む、間に合ってくれ！
+
+# se "SE_11600"
+# face 23 "angry_2"
+# textboxarrow 0 2
+@ゼロ
+よし、ブローチが嵌ったぞ！
+開けえええええええええええ！！
+
+;;最後の扉が開く白フラッシュ
+# bgm "stop"
+# fadeout "white" 1
+# se "SE_0762"
+# waitandnext 1
+
+# alpha 23 0 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+# face 270 "happy"
+# alpha 270 1 0.3
+# alpha 41002002 1 0.3
+# textboxarrow 0 1
+# textwindow "normal"
+@ミーミル
+門が開いていきます！
+
+# textboxarrow 0 3
+@レーヴァテイン
+ううっ…あ…
+
+;;レーヴァテインの姿が元に戻る
+# se "SE_11465"
+# alpha 41002002 0 2
+# face 100221 "sad"
+# alpha 100221 1 2
+# textwindow "close"
+# waitandnext 2.5
+
+# voice 9917 "mimir_navikan_0023"
+# face 270 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+レーヴァテインさんのお姿がっ
+
+# move 23 1 0
+# textboxarrow 0 3
+@レーヴァテイン
+…………
+
+# move 270 1 0.5
+# alpha 270 0 0.3
+# move 23 2 0.5
+# face 23 "angry_1"
+# alpha 23 1 0.3
+# textboxarrow 0 1
+@ゼロ
+アマネ！
+大丈夫かっ？
+もう苦しくないかっ？
+
+# voice 1002 "revatein_0030"
+# face 100221 "normal"
+# textboxarrow 0 3
+@レーヴァテイン
+うん…
+ありがとう、兄さん
+みんなも…
+
+# voice 11002 "laevateinm_0004"
+# face 23 "smile_1"
+# textboxarrow 0 1
+@ゼロ
+ああ、良かった
+ったく、世話焼かせやがって
+
+# voice 1002 "revatein_0028"
+# se "SE_6197_2"
+# face 100221 "sad"
+# textboxarrow 0 3
+@レーヴァテイン
+ごめんなさい…
+もっと早く…相談しておけば
+良かった
+
+# voice 11002 "laevateinm_0022"
+# face 23 "normal"
+# textboxarrow 0 1
+@ゼロ
+アマネ？
+
+# textboxarrow 0 3
+@レーヴァテイン
+…思い出したの
+全て…思い出した…
+ごめんなさい…
+
+# voice 11002 "laevateinm_0002"
+# face 23 "surprise"
+# textboxarrow 0 1
+@ゼロ
+どうした、アマネ？
+…おい！？
+
+# voice 9917 "mimir_navikan_0046"
+# alpha 23 0 0.3
+# alpha 100221 0 0.3
+# move 270 3 0
+# face 270 "angry"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+マスター様！
+レーヴァテインさんから
+離れて下さい
+
+# textboxarrow 0 2
+@ミーミル
+何か…とてつもなく強い
+マナの奔流を感じます
+
+# voice 1002 "revatein_0017"
+# alpha 270 0 0.3
+# move 100221 3 0
+# mask 100221 off
+# face 100221 "sad"
+# alpha 100221 1 0.3
+# textboxarrow 0 2
+@レーヴァテイン
+ああ、やっぱり…
+そうなるんだ
+
+;;炎が上がる演出あれば
+# fadein "white" 1
+# se "SE_6197_stop"
+# se "SE_12091"
+# envbody 1003 7 0
+# effectstart 1003
+# waitandnext 2
+
+# alpha 100221 0 0.3
+# move 23 2 0
+# layer 23 3
+# face 23 "surprise"
+# alpha 23 1 0.3
+# move 270 4 0
+# layer 270 4
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ゼロ
+なっ…！？
+
+# voice 9917 "mimir_navikan_0024"
+# textboxarrow 0 3
+@ミーミル
+レーヴァテインさんの体から
+炎が…？
+
+# face 100221 "sad"
+# alpha 100221 1 0.3
+# alpha 23 0 0.3
+# alpha 270 0 0.3
+# textboxarrow 0 2
+@レーヴァテイン
+ううっ…
+うああああああああああ！
+
+# fadeout "black" 0.5
+# waitandnext 0.5

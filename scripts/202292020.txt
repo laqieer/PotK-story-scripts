@@ -1,0 +1,426 @@
+;;-----------------------------------------
+;;SEA4章_2
+;;-----------------------------------------
+# script "lisp"
+# background "in_city"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 1 0
+;;マナナン
+# body 6504011
+# pos 6504011 5
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 1 0
+# face 6504011 "usual"
+;;観客
+# body 2
+# pos 2 2
+# scale 2 0.8 0
+# layer 2 3
+# mask 2 off
+# alpha 2 0 0
+# brightness 2 0 0
+# body 3
+# pos 3 4
+# scale 3 0.8 0
+# layer 3 3
+# mask 3 off
+# alpha 3 0 0
+# brightness 3 0 0
+;;オルフェウス
+# body 5603211
+# pos 5603211 3
+# scale 5603211 0.8 0
+# layer 5603211 3
+# mask 5603211 off
+# alpha 5603211 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：町
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se SE_6216"
+# textflame 1 1
+# textwindow "nomal"
+# voice 9917 "mimir_navikan_0001"
+# textboxarrow 0 1
+@ミーミル
+マスター様
+こちらがヴィモールの町です
+
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+人がたくさんいらっしゃいますね
+…皆さん、天職省に
+向かっておられるのでしょうか？
+
+# textboxarrow 0 1
+@ミーミル
+よく見ると人の流れが二つに
+分かれているような…
+
+# voice 650401 "manannan_ura_0002"
+# textboxarrow 0 3
+@マナナン
+ねぇねぇ
+あっちに人が集まってるよ
+何かあるのかな？
+
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+マスター、ミーミル
+見に行こうよ！
+
+# face 270 "angry"
+# voice 9917 "mimir_navikan_0011"
+# textboxarrow 0 1
+@ミーミル
+マナナンさん
+興味本位で動いては
+効率の良い調査ができません
+
+;;選択肢
+# select "楽しそう" "select_label_01" "行ってみよう" "select_label_01"
+マスター、ミーミル
+見に行こうよ！
+
+# label "select_label_01"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+マスター様まで…
+分かりました
+
+# textboxarrow 0 1
+@ミーミル
+「揺らぎ」について
+何か分かるかもしれませんので
+
+# voice 650401 "manannan_ura_0006"
+# face 6504011 "happy"
+# textboxarrow 0 3
+@マナナン
+やったね！
+喜劇的なことが
+起きてるといいな～っ
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "sea_landmark_day"
+# se "SE_0902"
+# alpha 270 0 0
+# alpha 6504011 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 2 1 0.5
+# alpha 3 1 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 0
+@観客達
+ワイワイ…ガヤガヤ…
+
+# bgm "bgm002" 0
+# move 2 1 0.5
+# alpha 2 0 0.5
+# move 3 5 0.5
+# alpha 3 0 0.5
+# alpha 270 1 0.3
+# alpha 6504011 1 0.3
+# voice 650401 "manannan_ura_0005"
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+あはははっ！
+人がいっぱいだね
+
+# textboxarrow 0 1
+@ミーミル
+あちらの舞台を囲むように
+人が集まっています
+何か行われるのでしょうか？
+
+# se "SE_0970"
+# serif 1
+@オルフェウスのファン１
+あれっ？
+君達、オルフェウスちゃんのこと
+知らないの？
+
+# serif 1
+@オルフェウスのファン２
+いやいや、そんなわけないだろ
+世界的に有名な超絶天才歌姫
+オルフェウスちゃんだぜ
+
+# serif 1
+@オルフェウスのファン３
+「音楽で世界を平和に」って世界中を
+飛び回ってる彼女を知らない奴なんて
+この世にいないでしょ
+
+# serif 0
+# voice 9917 "mimir_navikan_0003"
+# textboxarrow 0 1
+@ミーミル
+オルフェウスさんですか
+はい、存じております
+お目にかかったことはありませんが…
+
+# se "SE_0971"
+# serif 1
+@オルフェウスのファン１
+ってことは、これが初ライブ！？
+楽しんでいってくれよな！
+
+# serif 1
+@オルフェウスのファン２
+彼女の歌を聴けば、
+みんな幸せな気持ちになれるんだ
+最高だぜ！
+
+# serif 1
+@オルフェウスのファン３
+おっと
+それどころじゃないぞ
+早く良い席押さえないと！
+
+# se "SE_0799"
+# serif 1
+@ファン達
+急げ、急げ！
+
+# face 6504011 "surprise"
+# voice 650401 "manannan_ura_0022"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+あれ～？
+こんなに人がいっぱいなのに、
+押しのけて前の方に行っちゃったね
+
+# voice 9917 "mimir_navikan_0040"
+# textboxarrow 0 1
+@ミーミル
+なるほど
+こちらはオルフェウスさんの
+ライブ会場だったのですね
+
+# voice 650401 "manannan_ura_0002"
+# textboxarrow 0 3
+@マナナン
+ねぇねぇ
+オルフェウスってキル姫なの？
+
+# face 270 "normal"
+# voice 9917 "mimir_navikan_0003"
+# textboxarrow 0 1
+@ミーミル
+はい
+先程の方も言ってましたが
+
+# textboxarrow 0 1
+@ミーミル
+音楽で世界を平和にしたいと願い、
+日々、ライブ活動をなさっている
+キル姫です
+
+# face 6504011 "usual"
+# textboxarrow 0 3
+@マナナン
+ふーん
+どんな歌を歌うんだろ
+楽しみだねっ♪
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# se "SE_0902"
+# serif 1
+@観客達
+ザワザワ…ザワザワ…
+
+# face 270 "surprise"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+おや？
+前の方が騒がしいようです
+何かあったのでしょうか？
+
+# face 6504011 "normal"
+# voice 650401 "manannan_ura_0021"
+# textboxarrow 0 3
+@マナナン
+ライブが始まったのっ？
+私も、もっと前で見てみたいな！
+
+;;マナナンが走り出す
+# se "SE_5575"
+# se "SE_9430"
+# move 6504011 3 0.5
+# alpha 6504011 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# face 270 "angry"
+# textwindow "nomal"
+# voice 9917 "mimir_navikan_0012"
+# textboxarrow 0 1
+@ミーミル
+あ！
+マナナンさん、いけません
+割り込みはマナー違反ですよっ
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：ライブ会場
+# background "sea_concert"
+# bgm "bgm005" 0
+# sestop SE_6216"
+# move 6504011 4 0
+# alpha 270 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_6201_2"
+# serif 1
+@オルフェウスのファン達
+てめえ！
+ここは俺達が先に
+席を取っていたんだよっ
+
+# serif 1
+@オルフェウスのファン達
+ふざけんな！
+先に取ってたのは俺達の方だ！
+
+# face 270 "surprise"
+# face 6504011 "happy"
+# alpha 270 1 0.3
+# alpha 6504011 1 0.3
+# voice 650401 "manannan_ura_0005"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+何か言い合いをしてるよ
+あれがライブ？
+
+# serif 0
+# voice 9917 "mimir_navikan_0034"
+# textboxarrow 0 1
+@ミーミル
+いいえ
+あれは言い争いです
+何があったのでしょう…
+
+# serif 1
+@オルフェウスのファン達
+てめえらが失せろ！
+
+# serif 1
+@オルフェウスのファン達
+失せるのはそっちだ！
+
+# face 270 "sad"
+# serif 0
+# voice 9917 "mimir_navikan_0028"
+# textboxarrow 0 1
+@ミーミル
+ああっ…
+マスター様、お止めした方が
+よろしいのでしょうか…？
+
+;;画面が真っ暗になる
+# background "bg_black"
+# sestop "SE_6201_2"
+# bgm "stop"
+# alpha 270 0 0
+# alpha 6504011 0 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 1
+
+# voice 9917 "mimir_navikan_0024"
+# textwindow "nomal"
+# textboxarrow 0 0
+@ミーミル
+きゃっ…？
+
+# voice 560321 "orpheus_c_0004"
+# serif 1
+@？？？
+みんなー！
+お待たせええええええ！！
+
+;;背景：ライブ会場
+# background "sea_concert"
+# fadein "white" 2
+# alpha 5603211 1 0
+# se "SE_13865"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# waitandnext 4
+
+# face 5603211 "happy"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@オルフェウス
+悲しんでる人も、怒ってる人も、
+悩んでる人も、困ってる人も、
+とりま…
+
+# voice 560321 "orpheus_c_0020"
+# textboxarrow 0 2
+@オルフェウス
+あたしの歌を聞けーっ！！
+
+# fadeout "black" 1
+# waitandnext 1

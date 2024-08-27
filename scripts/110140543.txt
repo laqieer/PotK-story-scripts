@@ -1,0 +1,301 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー14章
+;;第5話　タイトル：この世界の命運を
+;;5-4-3
+;;背景：ティルヘルム
+;;-----------------------------------------
+# script "lisp"
+# background "fairy_world"
+# bgmfile "bgm266" "BgmLostRagnarokBattle001" 0
+;;-----------------------------------------
+;;ティルフィング
+# body 3101411
+# pos 3101411 3
+# scale 3101411 0.8 0
+# layer 3101411 3
+# alpha 3101411 0 0
+;;オベロン
+# body 135
+# pos 135 3
+# scale 135 0.8 0
+# layer 135 3
+# alpha 135 0 0
+;;ギル
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# layer 137 3
+# alpha 137 0 0
+;;グラーシーザ
+# body 3302619
+# pos 3302619 3
+# scale 3302619 0.8 0
+# layer 3302619 3
+# alpha 3302619 0 0
+;;ダモクレス
+# body 3103519
+# pos 3103519 3
+# scale 3103519 0.8 0
+# layer 3103519 3
+# alpha 3103519 0 0
+;;エルキュール
+# body 3202519
+# pos 3202519 3
+# scale 3202519 0.8 0
+# layer 3202519 3
+# alpha 3202519 0 0
+;;スイハ
+# body 3401719
+# pos 3401719 3
+# scale 3401719 0.8 0
+# layer 3401719 3
+# alpha 3401719 1 0
+;;アルマス
+# body 3103811
+# pos 3103811 3
+# scale 3103811 0.8 0
+# layer 3103811 3
+# alpha 3103811 0 0
+# mask 3103811 off
+# entry 201 3103811 523
+# pos 201 3
+# scale 201 0.8 0
+# layer 201 3
+# alpha 201 0 0
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 3
+# alpha 3201911 0 0
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 3
+# alpha 139 0 0
+;;フライシュッツ
+# body 3502719
+# pos 3502719 3
+# scale 3502719 0.8 0
+# layer 3502719 3
+# alpha 3502719 0 0
+;;ダモクレス
+# body 3103519
+# pos 3103519 3
+# scale 3103519 0.8 0
+# layer 3103519 3
+# alpha 3103519 0 0
+;;-----------------------------------------
+# se "SE_4830"
+# mask 3401719 off
+# face 3401719 "angry"
+# voice 340171 "suiha_c_battle_0005"
+# textboxarrow 0 2
+@スイハ
+くっ…
+
+# alpha 3401719 0 0.5
+# move 3502719 3 0
+# mask 3502719 off
+# alpha 3502719 1 0.5
+# voice 350271 "freischotz_c_battle_0006"
+# textboxarrow 0 2
+@フライシュッツ
+あうっ…
+
+# alpha 3502719 0 0.5
+# move 3103519 3 0
+# mask 3103519 off
+# alpha 3103519 1 0.5
+# voice 310351 "damocles_c_battle_0008"
+# textboxarrow 0 2
+@ダモクレス
+いったぁい…！
+
+# alpha 3103519 0 0.5
+# move 3302619 3 0
+# mask 3302619 off
+# alpha 3302619 1 0.5
+# voice 330261 "grayside_c_battle_0007"
+# textboxarrow 0 2
+@グラーシーザ
+正義の執行をうけいれぬとは、
+おまえこそ悪そのもの！
+
+# alpha 3302619 0 0.5
+# move 201 3 0
+# mask 201 off
+# alpha 201 1 0.5
+# face 201 "normal"
+# voice 1038 "almace_0028"
+# textboxarrow 0 2
+@アルマス
+なんか、聞く耳持ってないような…
+自分の世界に
+閉じこもってるってこと？
+
+# textboxarrow 0 2
+@アルマス
+あの仮面のせい…？
+それとも何か別の…
+
+# move 201 2 0.5
+# mask 201 on
+# move 3202519 4 0
+# mask 3202519 on
+# alpha 3202519 1 0.5
+# voice 320251 "hercule_c_unit_0013"
+# textboxarrow 0 3
+@エルキュール
+この命に代えても、
+あなたを断罪します！
+
+# face 201 "angry"
+# voice 1038 "almace_0009"
+# textboxarrow 0 1
+@アルマス
+なにそれっ！？
+自分なんて
+どうでもいいって言うの！？
+
+# textboxarrow 0 3
+@エルキュール
+それが何ですか？
+世界を救済するためなら、
+何も恐れはしません
+
+# textboxarrow 0 3
+@エルキュール
+それが私の信念です！
+
+;;エルキュールがアルマスを突き飛ばす
+# se "SE_4818"
+# textboxarrow 0 0
+# move 3202519 3 0.3
+# move 201 1 0.3
+# waitandnext 1.5
+
+# move 3202519 4 0.5
+# move 201 2 0.5
+# face 201 "sad"
+# voice 1038 "almace_0007"
+# textboxarrow 0 1
+@アルマス
+そう…
+私がやらなきゃいけないこと…
+少し分かってきたわ
+
+# voice 320251 "hercule_c_battle_0001"
+# textboxarrow 0 3
+@エルキュール
+今度こそ、打ち砕きます！
+
+;;鐘の音がする
+# se "SE_0778"
+# bgm "stop"
+# textwindow "close"
+# alpha 201 0 0.5
+# alpha 3202519 0 0.5
+# waitandnext 2
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# textwindow "nomal"
+# move 137 2 0
+# alpha 137 1 0.5
+# face 137 "surprise"
+# move 139 4 0
+# alpha 139 1 0.5
+# face 139 "surprise"
+# voice 9969 "gill_0026"
+# textboxarrow 0 1
+@ギル
+な…何だっ…？
+また何か起きんのかよっ…
+
+# voice 9967 "titania_0035"
+# textboxarrow 0 3
+@ティターニア
+「大穴」の方から聞こえてきますね…
+
+# alpha 137 0 0.5
+# alpha 139 0 0.5
+# move 3401719 4 0
+# mask 3401719 on
+# alpha 3401719 1 0.5
+# face 3401719 "surprise"
+# move 3502719 2 0
+# mask 3502719 on
+# alpha 3502719 1 0.5
+# voice 340171 "suiha_c_0022"
+# textboxarrow 0 3
+@スイハ
+こんなときに「集合」の鐘？
+どうして…
+
+# voice 350271 "freischotz_c_0028"
+# textboxarrow 0 1
+@フライシュッツ
+あ～ん…
+呼ばれてるよ～
+どうする～？
+
+# alpha 3401719 0 0.5
+# alpha 3502719 0 0.5
+# move 3103519 3 0
+# mask 3103519 on
+# alpha 3103519 1 0.5
+# move 3302619 5 0
+# mask 3302619 on
+# alpha 3302619 1 0.5
+# move 3202519 1 0
+# mask 3202519 on
+# alpha 3202519 1 0.5
+# voice 310351 "damocles_c_0027"
+# textboxarrow 0 2
+@ダモクレス
+全然、愛し足りないけど、
+“彼女”が呼んでるなら
+戻るしかないな
+
+# voice 330261 "grayside_c_0009"
+# textboxarrow 0 3
+@グラーシーザ
+正義の執行をとちゅうでやめるなど
+くちおしい…
+
+# voice 320251 "hercule_c_0038"
+# textboxarrow 0 1
+@エルキュール
+私の信念、次に会ったときこそ
+あなたに刻みつけてあげます！
+
+;;スイハ達が立ち去る
+# se "SE_9021"
+# sedelay "SE_9021" 0.3
+# sedelay "SE_9021" 0.4
+# sedelay "SE_9021" 0.6
+# alpha 3103519 0 0.5
+# alpha 3302619 0 0.5
+# alpha 3202519 0 0.5
+# waitandnext 0.5
+
+# move 137 3 0
+# mask 137 off
+# alpha 137 1 0.5
+# face 137 "usual"
+# voice 9969 "gill_0006"
+# textboxarrow 0 2
+@ギル
+あいつら、逃げていくぜ！
+やった！
+
+# alpha 137 0 0.5
+# move 201 3 0
+# mask 201 off
+# alpha 201 1 0.5
+# face 201 "normal"
+# textboxarrow 0 2
+@アルマス
+“彼女”が呼んでる？
+それって、一体…？

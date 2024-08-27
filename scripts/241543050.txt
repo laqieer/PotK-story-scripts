@@ -1,0 +1,580 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;セブンスサイドストーリー後編
+;;第1話　タイトル：七人の反逆者（１－５）
+;;1_5_0
+;;スクリプト最後の背景：平原
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm435" "BgmIntegralNoahBattle005" 0
+;;-----------------------------------------
+;;ヴァナルガンド
+# body 3601111
+# pos 3601111 3
+# scale 3601111 0.8 0
+# layer 3601111 2
+# alpha 3601111 0 0
+# mask 3601111 off
+;;アフロディーテ
+# body 3401311
+# pos 3401311 3
+# scale 3401311 0.8 0
+# layer 3401311 2
+# alpha 3401311 0 0
+# mask 3401311 off
+;;ムラマサ
+# body 3102511
+# pos 3102511 3
+# scale 3102511 0.8 0
+# layer 3102511 2
+# alpha 3102511 0 0
+# mask 3102511 off
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;シタ
+# body 3201611
+# pos 3201611 3
+# scale 3201611 0.8 0
+# layer 3201611 2
+# alpha 3201611 0 0
+# mask 3201611 off
+;;ハルパー
+# body 3202011
+# pos 3202011 3
+# scale 3202011 0.8 0
+# layer 3202011 2
+# alpha 3202011 0 0
+# mask 3202011 off
+;;-----------------------------------------
+;;第1話　タイトル：七人の反逆者（１－５）
+;;//背景：平原
+# voice 310231 "ascalon_a_battle_0004"
+# move 3102311 3 0
+# face 3102311 "angry"
+# alpha 3102311 1 0
+# mask 3102311 off
+# textflame 1 1
+# textboxarrow 0 2
+@アスカロン
+たああああ！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+# voice 320161 "shita_t_battle_0004"
+# alpha 3102311 0 0.5
+# move 3201611 3 0
+# face 3201611 "angry"
+# alpha 3201611 1 0.5
+# mask 3201611 off
+# textboxarrow 0 2
+@シタ
+処断します！
+
+# se "SE_4100"
+# waitandnext 0.5
+
+;;//アスカロンとシタが切り結ぶ
+# textwindow "close"
+# alpha 3201611 0 0.5
+# waitandnext 0.5
+
+# move 3201611 2 0
+# face 3201611 "angry"
+# alpha 3201611 1 0
+# mask 3201611 on
+# move 3102311 4 0
+# face 3102311 "angry"
+# alpha 3102311 1 0
+# mask 3102311 on
+# leftin 3201611 0.3
+# rightin 3102311 0.3
+# waitandnext 0.3
+
+# se "SE_9086"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 320161 "shita_t_0004"
+# face 3201611 "usual"
+# textboxarrow 0 1
+# textwindow "normal"
+@シタ
+ふふっ
+お一人で頑張っていますけど、
+いつまで保つでしょうね？
+
+;;アスカロン（独白）
+# voice 310231 "ascalon_a_0028"
+# move 3102311 4 0
+# face 3102311 "normal"
+# textboxarrow 0 0
+# textwindow "moya"
+@アスカロン
+包囲からは抜け出せましたけど、
+バラバラになってしまいました…
+
+;;アスカロン（独白）
+# textboxarrow 0 0
+@アスカロン
+皆さん、無事でしょうか…
+
+# serif 1
+@シタのマスター
+ケイオスリオンのキル姫にいつまで
+手こずっている！
+さっさと始末しろ！
+
+# voice 320161 "shita_t_0003"
+# face 3201611 "angry"
+# textboxarrow 0 1
+# textwindow "normal"
+@シタ
+はい、マスター
+必ず贖罪させます
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 3
+@アスカロン
+くっ…
+
+;;//ヴァナルガンドが現れる
+# voice 360111 "vanargand_t_0013"
+# alpha 3201611 0 0.5
+# alpha 3102311 0 0.5
+# move 3601111 3 0
+# face 3601111 "usual"
+# alpha 3601111 1 0.5
+# mask 3601111 off
+# textboxarrow 0 2
+@ヴァナルガンド
+シタ！
+私はここですっ
+
+# alpha 3601111 0 0.5
+# move 3201611 2 0
+# face 3201611 "usual"
+# alpha 3201611 1 0.5
+# mask 3201611 on
+# move 3102311 4 0
+# face 3102311 "surprise"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 3
+@アスカロン
+ヴァナルガンド！？
+無事だったんですね
+
+# voice 320161 "shita_t_0019"
+# textboxarrow 0 1
+@シタ
+あら、ヴァナルガンド
+自ら贖罪しに来てくれたんですか？
+
+# alpha 3201611 0 0.5
+# alpha 3102311 0 0.5
+# move 3601111 3 0
+# face 3601111 "usual"
+# alpha 3601111 1 0.5
+# mask 3601111 off
+# textboxarrow 0 2
+@ヴァナルガンド
+あなたの狙いは私とフォルカス
+でしょう？
+
+# textboxarrow 0 2
+@ヴァナルガンド
+悪魔憑きのキル姫と遊んでないで
+きちんと務めを果たしては
+いかがですか
+
+# voice 320161 "shita_t_0027"
+# alpha 3601111 0 0.5
+# move 3201611 2 0
+# face 3201611 "usual"
+# alpha 3201611 1 0.5
+# mask 3201611 on
+# textboxarrow 0 1
+# move 3102311 4 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+@シタ
+あらあら…
+わたしを挑発するなんて
+
+# serif 1
+@シタのマスター
+シタ！
+教皇様のご命令は絶対だ
+ヴァナルガンドを優先させろっ
+
+# face 3201611 "normal"
+# textboxarrow 0 1
+@シタ
+…マスターがそう仰るのなら
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 3102311 "angry"
+# textboxarrow 0 3
+@アスカロン
+待って下さい！
+私との勝負が――
+
+# face 3201611 "angry"
+# textboxarrow 0 1
+@シタ
+嫌ですね…
+叩き潰しますよ！
+
+;;//シタがアスカロンを弾く
+# se "SE_8023"
+# waitandnext 0.2
+
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 310231 "ascalon_a_0025"
+# face 3102311 "sad"
+# textboxarrow 0 3
+@アスカロン
+きゃあっ…！
+
+# serif 1
+@シタのマスター
+いくぞ、シタ！
+本国から増援も向かっている
+
+# voice 320161 "shita_t_0003"
+# textboxarrow 0 1
+@シタ
+はい、マスター
+契約は絶対ですから
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 3201611 0 0.5
+# alpha 3102311 0 0.5
+# move 3601111 3 0
+# face 3601111 "angry"
+# alpha 3601111 1 0.5
+# mask 3601111 off
+# textboxarrow 0 2
+@ヴァナルガンド
+こちらですよ
+私に贖罪させたいのなら、
+追って来て下さい！
+
+;;//ヴァナルガンドが立ち去る
+# se "SE_0719"
+# textwindow "close"
+# rightout 3601111 0.5
+# waitandnext 0.5
+
+# voice 320161 "shita_t_0004"
+# alpha 3601111 0 0
+# move 3201611 3 0
+# face 3201611 "usual"
+# alpha 3201611 1 0.5
+# mask 3201611 off
+# textboxarrow 0 2
+# textwindow "normal"
+@シタ
+ふふっ♪
+どこに逃げるつもりですか？
+
+;;//シタが立ち去る
+# se "SE_0719"
+# textwindow "close"
+# rightout 3201611 0.5
+# waitandnext 0.5
+
+# voice 310231 "ascalon_a_battle_0008"
+# alpha 3201611 0 0
+# move 3102311 3 0
+# face 3102311 "sad"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アスカロン
+つぅっ…
+
+# face 3102311 "normal"
+# textboxarrow 0 2
+@アスカロン
+互角だと思っていたのに…
+シタのマスターが命じた途端、
+力に差が出ました…
+
+# textboxarrow 0 2
+@アスカロン
+あれが共鳴の力…
+悔しいっ…！
+羨ましい…妬ましい…！
+
+# face 3102311 "angry"
+# textboxarrow 0 2
+@アスカロン
+…いえ、今はそれよりも
+ヴァナルガンドを追わないと！
+
+# textboxarrow 0 2
+@アスカロン
+二人で戦えば、きっとシタにだって
+勝てるはずですっ
+
+;;//アフロディーテが現れる
+# voice 340131 "aphrodite_a_0004"
+# move 3102311 2 0.5
+# mask 3102311 on
+# move 3401311 4 0
+# face 3401311 "usual"
+# alpha 3401311 1 0.5
+# mask 3401311 on
+# textboxarrow 0 3
+@アフロディーテ
+あらぁ
+こんなところにいたんですね、
+アスカロン
+
+# face 3102311 "surprise"
+# textboxarrow 0 1
+@アスカロン
+アフロディーテ！
+無事で良かった…
+フォルカス達はっ？
+
+# voice 340131 "aphrodite_a_0015"
+# face 3401311 "sad"
+# textboxarrow 0 3
+@アフロディーテ
+それが、はぐれてしまいまして…
+先程、ヴァナルガンドは見かけたの
+ですけれど…
+
+# face 3102311 "angry"
+# textboxarrow 0 1
+@アスカロン
+私もです！
+シタを挑発して、あっちの方に！
+
+# face 3401311 "usual"
+# textboxarrow 0 3
+@アフロディーテ
+あら？
+わたしはエロースを煽っている
+ところを見ましたよ
+
+# textboxarrow 0 3
+@アフロディーテ
+わたしと戦っているところに
+姿を現して…
+
+# face 3401311 "sad"
+# textboxarrow 0 3
+@アフロディーテ
+せっかく狂おしいほどの愛を
+感じていたところでしたのに、
+エロースのマスターが命じるから…
+
+# textboxarrow 0 3
+@アフロディーテ
+エロースはヴァナルガンドを追って
+いってしまいました
+
+# voice 310231 "ascalon_a_0018"
+# face 3102311 "surprise"
+# textboxarrow 0 1
+@アスカロン
+そんなっ…！
+だったら今、ヴァナルガンドは
+一人で二人のキル姫と…
+
+# face 3102311 "angry"
+# textboxarrow 0 1
+@アスカロン
+急ぎましょう、アフロディーテ！
+
+# voice 340131 "aphrodite_a_0005"
+# face 3401311 "happy"
+# textboxarrow 0 3
+@アフロディーテ
+うふふっ♪
+美しいものが見られそうですね
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 3102311 0 0
+# alpha 3401311 0 0
+# move 3102511 2 0
+# face 3102511 "angry"
+# alpha 3102511 1 0
+# mask 3102511 on
+# move 3202011 4 0
+# face 3202011 "usual"
+# alpha 3202011 1 0
+# mask 3202011 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 1
+# textwindow "normal"
+@ムラマサ
+待たれよ！
+拙者との勝負はついていません！
+
+# voice 320201 "harpe_t_0031"
+# face 3202011 "sad"
+# textboxarrow 0 3
+@ハルパー
+ごめんねぇ
+マスターのお守りもしないと
+いけないのよぉ
+
+# serif 1
+@ハルパーのマスター
+ハルパー！
+余計なことを言ってないで
+急げ！
+
+# serif 1
+@ハルパーのマスター
+ヴァナルガンドを見失うぞ！
+
+# voice 320201 "harpe_t_0003"
+# face 3202011 "usual"
+# textboxarrow 0 3
+@ハルパー
+はぁい
+今、行くわよぉ
+
+;;//ハルパーが立ち去る
+# se "SE_0719"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# alpha 3202011 0 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+# textwindow "normal"
+@ムラマサ
+あっ…！
+拙者のことなど二の次ですかっ
+
+;;ムラマサ（独白）
+# voice 310251 "muramasa_ge_0015"
+# move 3102511 2 0
+# face 3102511 "sad"
+# textboxarrow 0 0
+# textwindow "moya"
+@ムラマサ
+私は脅威と思われていないのですね…
+
+;;//アスカロン達がやって来る
+# voice 310231 "ascalon_a_0004"
+# move 3102311 4 0
+# face 3102311 "happy"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 3
+# textwindow "normal"
+@アスカロン
+ムラマサ！
+良かった
+合流できましたっ
+
+# face 3102511 "surprise"
+# textboxarrow 0 1
+@ムラマサ
+アスカロンにアフロディーテ…
+
+# voice 340131 "aphrodite_a_0019"
+# alpha 3102311 0 0.5
+# move 3401311 4 0
+# face 3401311 "sad"
+# alpha 3401311 1 0.5
+# mask 3401311 on
+# textboxarrow 0 3
+@アフロディーテ
+随分と萎れていますね
+せっかくの美しさが台無しですわ…
+
+# face 3102511 "normal"
+# textboxarrow 0 1
+@ムラマサ
+せ、拙者は美しくなどっ…
+
+# alpha 3401311 0 0.5
+# move 3102311 4 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 3
+@アスカロン
+ごめんなさい！
+ゆっくりお話ししてる時間は
+ないんですっ
+
+# textboxarrow 0 3
+@アスカロン
+急いでヴァナルガンドを見つけないと
+いけなくて！
+
+# face 3102511 "angry"
+# textboxarrow 0 1
+@ムラマサ
+ヴァナルガンド！？
+…でしたら、先程、あちらにっ
+
+# voice 310231 "ascalon_a_0030"
+# face 3102311 "happy"
+# textboxarrow 0 3
+@アスカロン
+本当ですかっ？
+ありがとうございます！
+
+# face 3102511 "normal"
+# textboxarrow 0 1
+@ムラマサ
+それからハルパーも彼女を追って
+いきました
+
+# textboxarrow 0 1
+@ムラマサ
+拙者とハルパーが戦っているところに
+ヴァナルガンドが現れて…
+
+# face 3102311 "normal"
+# textboxarrow 0 3
+@アスカロン
+ああ…やっぱり…！
+
+;;アスカロン（独白）
+# move 3102311 4 0
+# textboxarrow 0 0
+# textwindow "moya"
+@アスカロン
+ヴァナルガンド…
+あなたは自ら囮役になって
+私達を逃がそうとしてるんですね

@@ -1,0 +1,960 @@
+;;-----------------------------------------
+;;【ファントムオブキル】軍団線導入シナリオ　暴走ロンゴミアント
+;;【EP2】
+;;スクリプト最後の背景：街中（夜）
+;;背景：街中
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;ロンゴミアント
+# body 301031
+# pos 301031 3
+# scale 301031 0.8 0
+# layer 301031 2
+# alpha 301031 0 0
+# mask 301031 off
+;;ロンゴミアント・暴走
+# body 5301011
+# pos 5301011 3
+# scale 5301011 0.8 0
+# layer 5301011 2
+# alpha 5301011 0 0
+# mask 5301011 off
+;;-----------------------------------------
+;;【EP2】
+;;背景：街中
+# move 301031 3 0
+# face 301031 "happy"
+# alpha 301031 1 0
+# mask 301031 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3010 "rhongomiant_0005"
+@ロンゴミアント
+今日も街は穏やかで賑やか…
+活気づいていますね、マスター
+
+# textboxarrow 0 2
+@ロンゴミアント
+近頃は大規模任務の用意で
+他の奏官も見かけますが
+それもまた安全の証ですね
+
+;;モノローグ
+# textflame 0 0
+@
+嬉しそうに街を見るロンゴミアント
+マスターと共に任務中…の寄り道だ
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3010 "rhongomiant_0032"
+@ロンゴミアント
+何の変哲もない日常風景を見るたび
+この光景を守り続けることが
+使命なのだと、感じるんです
+
+;;モノローグ
+# textflame 0 0
+@
+マスターも同意する
+先代…父親が守ってきたモノ
+それを自分も守るのだと強く思うと
+
+# face 301031 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンゴミアント
+先代と言えば…
+今日もまた屋敷を抜け出して
+どこかへ行ってるみたいですよ？
+
+# textboxarrow 0 2
+@ロンゴミアント
+それもお供のキル姫も連れずに…
+もう、自分のお歳を考えてほしいです
+
+;;モノローグ
+# textflame 0 0
+@
+昔から自分が守った街を見るのが
+好きな人だったから…
+とマスターは先代を語る
+
+# face 301031 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3010 "rhongomiant_0005"
+@ロンゴミアント
+…そうですね
+ふふ、懐かしいです
+私も昔はよくご一緒しましたから
+
+;;モノローグ
+# textflame 0 0
+@
+そろそろ任務に戻らないとね
+と促すマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3010 "rhongomiant_0032"
+@ロンゴミアント
+はい！
+では参りましょう、マスター
+
+;;演出：暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "town_evening"
+# alpha 301031 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;背景：街中（夕方があれば）
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+ロンゴミアントの活躍により
+任務は無事に終了した
+
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+# move 301031 3 0
+# face 301031 "normal"
+# alpha 301031 1 0.5
+# mask 301031 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3010 "rhongomiant_0022"
+@ロンゴミアント
+おじ様！
+どうしたのですか？
+
+;;モノローグ
+# textflame 0 0
+@
+任務後、
+街の商店の主に声を掛けられた
+マスターとロンゴミアント
+
+# face 301031 "mad"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3010 "rhongomiant_0033"
+@ロンゴミアント
+そう、ですか
+街の外れの林に…わかりました
+
+;;モノローグ
+# textflame 0 0
+@
+主の話は、街の近くの林に
+何かが潜んでいるように感じるので
+調べてほしいというものだった
+
+# face 301031 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3010 "rhongomiant_0004"
+@ロンゴミアント
+いえ、お安い御用です
+街の皆さんが平穏に暮らせるのなら
+それが一番ですから
+
+;;モノローグ
+# textflame 0 0
+@
+それじゃあ頼んだよ
+と言い残しそそくさと去っていく主
+
+# face 301031 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンゴミアント
+どうしたんでしょう
+何か急いでいるようでしたが…
+
+;;モノローグ
+# textflame 0 0
+@
+もう夕暮れだからね
+店のことが気になるのかも
+とマスター
+
+# face 301031 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3010 "rhongomiant_0005"
+@ロンゴミアント
+…そうですね
+さて、我々も急ぎましょう
+辺りが暗くなると危険ですし
+
+# textboxarrow 0 2
+@ロンゴミアント
+マスターの身は
+私が必ずお守りいたしますので
+決して離れないでくださいね
+
+;;演出：暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# alpha 301031 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;背景：黒
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+街外れの林を調べるマスター達
+だが、これといった異変はない
+
+;;モノローグ
+@
+道中遭遇した異族に
+少々苦戦しつつも何もなかったと
+調査を終え帰還することに…
+
+;;背景：街中（夜があれば）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "town_night"
+# move 301031 3 0
+# face 301031 "happy"
+# alpha 301031 1 0
+# mask 301031 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm404" "BgmIntegralNoahEvent003" 0
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ロンゴミアント
+ひとまずは何もありませんでしたが
+異族がいたということは
+引き続き警戒が必要ですね
+
+# textboxarrow 0 2
+@ロンゴミアント
+今日はもう遅いですし
+おじ様への報告は明日にして
+屋敷へ戻りましょう、マスター
+
+;;モノローグ
+# textflame 0 0
+@
+そうだね、今日は疲れたよ
+とマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3010 "rhongomiant_0004"
+@ロンゴミアント
+ふふ、そうですね
+無理をしてお身体に障るといけません
+今日はもうゆっくり休みましょう
+
+;;モノローグ
+# textflame 0 0
+@
+また明日からもよろしくね
+と、マスターはロンゴミアントに
+微笑む
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3010 "rhongomiant_0032"
+@ロンゴミアント
+もちろんです
+私はいつまでもマスターのおそばに
+
+;;演出：暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "201_room"
+# alpha 301031 0 0
+# move 301031 3 0
+# face 301031 "normal"
+# alpha 301031 1 0
+# mask 301031 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;背景：室内
+# textboxarrow 0 2
+# textwindow "normal"
+@ロンゴミアント
+…屋敷が妙に静かですね
+先代ももうお休みに
+なられているんでしょうか？
+
+;;モノローグ
+# textflame 0 0
+@
+そうかもしれない
+自分達も静かに動こう
+とマスター
+
+# face 301031 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3010 "rhongomiant_0004"
+@ロンゴミアント
+そうですね
+ふふ、屋敷で静かに…なんて
+何か悪いことをしているみたいです
+
+# textboxarrow 0 2
+@ロンゴミアント
+マスターもそう思いませんか…
+
+# bgm "stop"
+# face 301031 "mad"
+# textboxarrow 0 2
+@ロンゴミアント
+っ……！？
+危ないっ…！！
+
+;;SE:ゴッと殴られるような音
+# se "SE_0657"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 301031 "normal"
+# textboxarrow 0 2
+@ロンゴミアント
+マスター！？
+あ、あなた達は！？
+
+;;モノローグ
+# alpha 301031 0 0.5
+# textflame 0 0
+@
+突然の衝撃と痛み
+
+;;モノローグ
+@
+薄れ行く意識の中で
+マスターが見たのは
+哀し気なロンゴミアントの顔だった
+
+;;演出：暗転
+;;背景：黒
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textwindow "normal"
+@
+鈍い痛みに意識を支配されながら
+目覚めるマスター
+
+;;背景：室内
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "201_room"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textwindow "normal"
+@
+ぼやけた視界に入ったのは
+尊敬する父親と愛する母親
+…だった物
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# move 301031 3 0
+# face 301031 "sad"
+# alpha 301031 1 0.5
+# mask 301031 off
+# textflame 1 1
+# textboxarrow 0 2
+@ロンゴミアント
+マスター！
+
+;;モノローグ
+# textflame 0 0
+@
+苦しそうに声を上げるロンゴミアント
+
+;;モノローグ
+@
+ロンゴミアントは
+家に仕える奏官達のキル姫に
+取り押さえられていた
+
+# face 301031 "mad"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンゴミアント
+この者達…この者達は！
+裏切ったのです…
+マスターと、この家のすべてを！
+
+;;モノローグ
+# textflame 0 0
+@
+部屋には仲間のはずの奏官
+そして見慣れぬ奏官の姿もあった
+
+;;モノローグ
+@
+その中でもリーダー格の男が
+マスターに対し何かを言っている
+だが、その耳には届かない
+
+# textflame 1 1
+# textboxarrow 0 2
+@ロンゴミアント
+マスター、気をたしかに！
+私がついていますから！
+
+;;モノローグ
+# textflame 0 0
+@
+ロンゴミアントの声だけが届く
+けれど、どうしたらいいのだろう
+マスターの思考は閉ざされる
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3010 "rhongomiant_battle_0005"
+@ロンゴミアント
+マスター…
+くっ、あなた達！
+キル姫としての誇りはないの！
+
+;;モノローグ
+# textflame 0 0
+@
+ロンゴミアントは自分を
+取り押さえているキル姫達に吼える
+
+;;モノローグ
+@
+無駄だ、と男が言う
+道具であるキル姫に誇りなんてない
+
+# face 301031 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3010 "rhongomiant_0013"
+@ロンゴミアント
+そんな…
+
+;;モノローグ
+# textflame 0 0
+@
+これだけの領地がありながら
+キル姫を甘やかすからこうなる
+と笑う男
+
+;;モノローグ
+@
+その男に対し、マスターの家に
+仕えていた奏官達がすり寄る
+
+;;モノローグ
+@
+この地があれば
+自分達にたしかな地位が
+与えられるのか、と
+
+;;モノローグ
+@
+それはここからの頑張り次第だな
+それにはまず…
+邪魔なこいつらを消してからだ
+
+;;モノローグ
+@
+そう言って、
+男はマスターとロンゴミアントを
+交互に睨みつける
+
+# face 301031 "mad"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3010 "rhongomiant_0029"
+@ロンゴミアント
+先代に奥様達…マスターまでも
+そんなことはさせない…っ！
+
+;;モノローグ
+# textflame 0 0
+@
+ロンゴミアントは怒りに任せ
+自身を抑えるキル姫ごと腕を振り
+その拘束を掃う
+
+# textflame 1 1
+# textboxarrow 0 2
+@ロンゴミアント
+マスター！
+
+;;モノローグ
+# textflame 0 0
+@
+無理やり拘束を解いたせいで
+腕が傷だらけのロンゴミアント
+
+;;モノローグ
+@
+そのロンゴミアントを止めろ
+と男が叫ぶ
+
+;;モノローグ
+@
+戸惑いながらも
+始めてしまったことを完遂する為
+奏官達はキル姫を差し向ける
+
+# face 301031 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3010 "rhongomiant_0019"
+@ロンゴミアント
+なんで、どうして…
+
+# textboxarrow 0 2
+@ロンゴミアント
+あなた達も間接的ではあれど
+先代や私のマスターの優しさに
+触れたはず…
+
+;;モノローグ
+# textflame 0 0
+@
+キル姫達は答える
+自分のマスターが望んだから、と
+
+# textflame 1 1
+# textboxarrow 0 2
+@ロンゴミアント
+…………っ！
+
+# face 301031 "mad"
+# textboxarrow 0 2
+@ロンゴミアント
+ならば…やるしか、ないのですね
+
+# textboxarrow 0 2
+# voice 3010 "rhongomiant_battle_0004"
+@ロンゴミアント
+やあああああああっ！！！
+
+# se "SE_4200"
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+@
+ロンゴミアントは
+キル姫達を圧倒する
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3010 "rhongomiant_battle_0008"
+@ロンゴミアント
+くぁっ！
+
+;;モノローグ
+# textflame 0 0
+@
+だが、狭い室内で
+多勢に無勢…勝ち目はなかった
+
+;;できればもやもやフレームで
+# move 301031 3 0
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 301031 off
+@ロンゴミアント
+私の勝利条件は勝つことではなく
+マスターを救い出し
+この場を切り抜けること…
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ロンゴミアント
+マスター、今そちらに！
+
+# bgm "stop"
+# face 301031 "normal"
+# textboxarrow 0 2
+@ロンゴミアント
+―――─ぁ
+
+;;モノローグ
+# textflame 0 0
+@
+キル姫との戦闘に気を取られた
+ロンゴミアントはマスターから
+目を離していた
+
+;;モノローグ
+@
+そのロンゴミアントが
+次に見たマスターの姿
+
+# textflame 1 1
+# textboxarrow 0 2
+@ロンゴミアント
+マスター…
+
+;;モノローグ
+# textflame 0 0
+@
+男のキル姫の剣が
+マスターの体に突き刺さっている
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3010 "rhongomiant_0016"
+@ロンゴミアント
+あ、あぁ、あああああ…
+
+;;演出：暗転
+;;背景：黒
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# alpha 301031 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+# textflame 0 0
+# textwindow "normal"
+@
+脈々と受け継がれてきた
+マスター達との繋がりが消えていく
+
+;;モノローグ
+@
+ロンゴミアントの心は
+怒りに代わり哀しみで満ちていく
+
+;;モノローグ
+@
+哀しみという名の感情が
+ロンゴミアントの瞳から零れ落ちる
+
+;;モノローグ
+@
+ああ、零れ落ちる、零れ落ちる
+
+;;モノローグ
+@
+哀しみは枯れることのない泉のよう
+濁流のような苦しみが
+ロンゴミアントのすべてを押し流す
+
+;;背景：室内
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "201_room"
+# move 301031 3 0
+# face 301031 "sad"
+# alpha 301031 1 0
+# mask 301031 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 3010 "rhongomiant_0016"
+@ロンゴミアント
+オアアアアアアアアアアアア！
+
+;;モノローグ
+# textflame 0 0
+@
+ロンゴミアントの哀しみが溢れ
+零れるたび、その哀しみの雫が
+命の灯を消していく
+
+;;モノローグ
+@
+自身の守りたい世界が壊された哀しみ
+
+;;モノローグ
+@
+その哀しみという感情の昂りは
+ロンゴミアントを暴走させる
+
+;;演出：暗転
+;;背景：青（哀しみの青というイメージにできればと思います）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "201_room"
+# subfillrect 0 "blue" 0 0 0.3
+# move 301031 3 0
+# face 301031 "sad"
+# alpha 301031 1 0
+# mask 301031 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textwindow "normal"
+@
+だが、その時
+ロンゴミアントに声が届く
+哀しみに果てはない、と
+
+# bgmfile "bgm467" "BgmIntegralNoahBoso" 0
+# serif 1
+@？？？
+……終わらせ……力
+世界を……
+
+# face 301031 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンゴミアント
+…何？
+
+# serif 1
+@？？？
+世界……終わ……力――
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+@ロンゴミアント
+果てがないのなら
+すべてを壊してしまえばいい…
+
+# face 301031 "worry"
+# textboxarrow 0 2
+@ロンゴミアント
+その通り、ですね
+
+;;モノローグ
+# textflame 0 0
+@
+マスターの笑顔が裏をよぎる
+これからもそばにいると誓った
+マスターの笑顔が
+
+# face 301031 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンゴミアント
+ですが…
+もう、見ることは
+叶わないのですね…
+
+# textboxarrow 0 2
+@ロンゴミアント
+それなら、私は受け入れます…
+私利私欲に満ちたこの哀しき世界
+そのすべてを消せる力を
+
+# serif 1
+@？？？
+――――っ！
+
+;;モノローグ
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+@
+哀しみで満ちたロンゴミアントに
+ノイズのような痛みが響く
+
+;;モノローグ
+@
+マスターとの間に感じたバイブス
+それとは真逆だが、強大な力
+
+;;モノローグ
+@
+哀しみは濃く、歪んだ憎悪へと
+姿を変え、ロンゴミアントを飲み込む
+
+;;背景：室内
+;;演出：ロンゴミアント立ち絵表示
+;;演出：黒い霧を纏う演出
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "201_room"
+# subfillrect 0 "blue" 0 0.3 0
+# alpha 301031 0 0
+# emotionbody 1000 15 5301011 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5301011 3 0
+# face 5301011 "angry"
+# alpha 5301011 1 0
+# mask 5301011 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 530101 "rhongomiant_bo_b_unit_0009"
+@ロンゴミアント
+キエロ、キエロ…
+ゼンブキエロォォォ！！！
+
+;;演出：暗転
+;;背景：黒
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# effectskip 1000
+# alpha 5301011 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+ロンゴミアントは
+すべてを消し去る
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "town_night"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;背景：街中（夜）
+;;モノローグ
+# bgmfile "bgm457" "BgmIntegralNoahEvent008" 0
+# textwindow "normal"
+@
+かつて守った街に降り
+丁寧にひとつずつ消していく
+
+# move 5301011 3 0
+# face 5301011 "angry"
+# alpha 5301011 1 0.5
+# mask 5301011 off
+# textflame 1 1
+# textboxarrow 0 2
+@ロンゴミアント
+あの奏官達が命乞いにと
+言っていましたから
+
+# textboxarrow 0 2
+@ロンゴミアント
+あなた達も協力したのでしょう？
+
+;;モノローグ
+# textflame 0 0
+@
+商店の主に槍を突き立て
+またひとつ命の灯を消す
+
+# face 5301011 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンゴミアント
+私は暴走してしまったはず…
+それなのに…
+
+# textboxarrow 0 2
+# voice 530101 "rhongomiant_bo_0004"
+@ロンゴミアント
+まぁ、どうでもいいですけれど
+
+;;モノローグ
+# textflame 0 0
+@
+哀しみで世界のすべてを
+綺麗に洗い流してしまえるのなら
+この身体がどうなろうと構わない
+
+# face 5301011 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンゴミアント
+泣く誰かさえ
+この世界からいなくなる…
+そんな日が来ますように
+
+# textboxarrow 0 2
+# voice 530101 "rhongomiant_bo_0006"
+@ロンゴミアント
+私はその為にこの槍を捧げましょう
+
+;;モノローグ
+# textflame 0 0
+@
+世界の終焉を告げる鐘の音がひとつ
+ロンゴミアントが目醒めた瞬間だった

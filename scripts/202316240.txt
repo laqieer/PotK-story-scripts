@@ -1,0 +1,450 @@
+;;-----------------------------------------
+;;SEA_24_0
+;;-----------------------------------------
+# script "lisp"
+# background "diary"
+# bgm "stop"
+;;-----------------------------------------
+;;ウルズ
+# body 6604211
+# pos 6604211 1
+# scale 6604211 0.8 0
+# layer 6604211 2
+# mask 6604211 off
+# alpha 6604211 0 0
+;;9thティルフィング
+# body 6101441
+# pos 6101441 3
+# scale 6101441 0.8 0
+# layer 6101441 3
+# mask 6101441 off
+# alpha 6101441 0 0
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 4
+# alpha 6504011 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 2
+# scale 6603811 0.8 0
+# layer 6603811 2
+# mask 6603811 off
+# alpha 6603811 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 4
+;;日記閉じる
+# imageset 2 "diary_close"
+# imagealpha 2 0 0
+# imagescale 2 1 0
+# imagelayer 2 5
+;;紙
+# imageset 4 "SEA_diary_bg"
+# imagealpha 4 0 0
+# imagelayer 4 1
+# imagescale 4 1.2 0
+;;1枚め
+# imageset 5 "SEA_diary_603"
+# imagealpha 5 0 0
+# imagescale 5 1 0
+# imagelayer 5 3
+;;2枚め
+# imageset 6 "SEA_diary_604"
+# imagealpha 6 0 0
+# imagescale 6 1 0
+# imagelayer 6 3
+;;3枚め
+# imageset 7 "SEA_diary_605"
+# imagealpha 7 0 0
+# imagescale 7 1 0
+# imagelayer 7 3
+;;ぬい
+# imageset 8 "SEA_Dulyn_Nui"
+# imagealpha 8 0 0
+# imagescale 8 0.8 0
+# imagelayer 8 5
+;;-----------------------------------------
+;;背景：日記帳
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+# se "SE_6175"
+# face 270 "normal"
+# alpha 270 1 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm601" "BgmSecretlyEverAfter001" 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+旅の記録七百三十日――
+
+;;ミーミル消す
+;;テキストウィンドウを外す
+# alpha 270 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;フレームを外す
+# frameout 0 1
+# waitandnext 1
+
+;;紙を表示
+# imagealpha 4 1 1
+# imagepos 4 0 0
+# waitandnext 1
+
+;;1枚目を表示
+# se "SE_6175"
+# imagealpha 5 1 2
+# imagepos 5 0 -900
+# waitandnext 1
+
+;;1枚目を上に
+# imagemoveto 5 0 800 25
+# waitandnext 22
+
+;;1枚目を消す
+# imagealpha 5 0 2
+# waitandnext 2
+
+;;2枚目を表示
+# se "SE_6166"
+# imagealpha 6 1 2
+# imagepos 6 0 -900
+# waitandnext 1
+
+;;2枚目を上に
+# imagemoveto 6 0 800 25
+# waitandnext 22
+
+;;2枚目を消す
+# imagealpha 6 0 2
+# waitandnext 2
+
+;;3枚目を表示
+# se "SE_6166"
+# imagealpha 7 1 2
+# imagepos 7 0 -900
+# waitandnext 1
+
+;;3枚め枚目を真ん中で止め
+# imagemoveto 7 0 400 20
+# waitandnext 22
+
+;;3枚め枚目と紙を消す
+# sestop "SE_6175"
+# imagemoveto 7 150 400 3
+# imagealpha 7 0 2
+# waitandnext 2
+
+# imagealpha 4 0 2
+# waitandnext 2
+
+;;日記帳を閉じる
+# se "SE_6167"
+# imagealpha 2 1 2
+# imagepos 2 0 0
+# waitandnext 4
+
+;;暗転
+# fadeout "black" 2
+# waitandnext 2
+
+;;背景：ユグドラシル：yggdrasill_interior
+# background "yggdrasill_interior"
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# imagealpha 2 0 0
+# framein 0 0
+# waitandnext 1
+
+# bgm "bgm000" 0
+# fadein "black" 2
+# waitandnext 2
+
+# voice 660421 "urthr_sea_0048"
+# move 270 5 0
+# move 6604211 3 0.5
+# alpha 6604211 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ウルズ
+ミーミル、そろそろ出立の時間ですよ
+姉である私についてきてください
+
+# voice 9917 "mimir_navikan_0003"
+# move 6604211 2 0.6
+# move 270 4 0.5
+# face 270 "angry"
+# alpha 270 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@ミーミル
+もうそんな時間なんですね
+姉である私がご挨拶をしなければっ
+
+;;二人が押し合いながら歩いていく
+# se "SE_0719"
+# move 6604211 1 1
+# face 6604211 "angry"
+# move 270 3 1
+# scale 6604211 0.7 1
+# scale 270 0.7 1
+# textwindow "close"
+# waitandnext 1
+
+# move 6604211 4 1.5
+# move 270 5 1.5
+# scale 6604211 0.5 1.5
+# scale 270 0.5 1.5
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+;;背景：ユグドラシルのふもと：in_yggdrasill_up
+# background "in_yggdrasill_up"
+# move 6604211 2 0
+# move 270 4 0
+# alpha 6604211 0 0
+# alpha 270 0 0
+# scale 6604211 0.8 0
+# scale 270 0.8 0
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+# alpha 6604211 1 0.3
+# face 6604211 "normal"
+# alpha 270 1 0.3
+# face 270 "happy"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@ミーミル
+いってらっしゃいませ
+ティルフィング様
+
+# voice 660421 "urthr_0004"
+# textflame 1 1
+# textboxarrow 0 1
+@ウルズ
+留守は私達がしっかり守ります
+
+# alpha 6604211 0 0.3
+# alpha 270 0 0.3
+# voice 650401 "manannan_ura_0004"
+# alpha 6504011 1 0.3
+# alpha 6603811 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@マナナン
+私達もいるよ～！
+
+# voice 660381 "maclir_ura_0015"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+みんないるから大丈夫だよね…？
+
+# alpha 6504011 0 0.3
+# alpha 6603811 0 0.3
+# voice 610141 "tyrufing_7th_0004"
+# alpha 6101441 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+ふふっ
+頼りにしていますよ
+それでは…
+
+# face 6101441 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+いってきます
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：平原：plain
+# background "plain"
+# alpha 6101441 0 0
+# waitandnext 0.2
+
+# se "SE_6241"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 4
+
+# sestop "SE_6241"
+# face 6101441 "normal"
+# alpha 6101441 1 0.3
+# voice 610141 "tyrufing_7th_0001"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ティルフィング
+マスター！
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+久し振りの旅なので、
+これも作ってみたんです
+
+;;ティルフィングが小さなデュリンのぬいぐるみを見せる
+# alpha 6101441 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# imagealpha 8 1 1
+# imagepos 8 0 0
+# waitandnext 2.5
+
+;;選択肢
+# select "デュリンのぬいぐるみ！" "select_label_01" "妖精のぬいぐるみ？" "select_label_02"
+久し振りの旅なので、
+これも作ってみたんです
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# imagealpha 8 0 1
+# face 6101441 "happy"
+# alpha 6101441 1 0.3
+# voice 610141 "tyrufing_7th_0003"
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+はい！
+あの頃を少しだけ再現してみたくて
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# imagealpha 8 0 1
+# face 6101441 "surprise"
+# alpha 6101441 1 0.3
+# voice 610141 "tyrufing_7th_0004"
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+マスター！
+妖精じゃないって怒られますよ
+
+# label "select_label_end"
+# face 6101441 "normal"
+# alpha 6101441 1 0.3
+# voice 610141 "tyrufing_7th_0004"
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+ふふっ
+ごめんなさい
+少し浮かれているのかもしれません
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+マスター
+これからもよろしくお願いします
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 4
+;;メインビジュアル読み込み
+# imageset 0 "SEA_Main3_0"
+# imagealpha 0 0 0
+# imagescale 0 0.8 0
+# imagelayer 0 3
+# imageset 1 "SEA_Main3_1"
+# imagealpha 1 0 0
+# imagescale 1 0.8 0
+# imagelayer 1 4
+# imageset 2 "SEA_Main3_2"
+# imagealpha 2 0 0
+# imagescale 2 0.8 0
+# imagelayer 2 4
+# imageset 3 "SEA_Main3_3"
+# imagealpha 3 0 0
+# imagescale 3 0.8 0
+# imagelayer 3 4
+# imageset 4 "SEA_Main3_4"
+# imagealpha 4 0 0
+# imagescale 4 0.8 0
+# imagelayer 4 4
+# imageset 5 "SEA_Main3_5"
+# imagealpha 5 0 0
+# imagescale 5 0.8 0
+# imagelayer 5 4
+# imageset 6 "SEA_Main4"
+# imagealpha 6 0 0
+# imagescale 6 0.8 0
+# imagelayer 6 5
+# imageset 7 "bg_black"
+# imagealpha 7 0 0
+# imagescale 7 2 0
+# imagelayer 7 1
+;;暗転挟む
+# fadeout "black" 4
+# waitandnext 6
+
+# bgmfile "bgm600" "BgmSecretlyEverAfter001" 0
+;;メインビジュアル表示
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# imagealpha 7 1 0
+# imagepos 7 0 0
+# frameout 0 0
+# buttonsout 0 0
+# textwindow "close"
+# fadein "black" 4
+
+# imagealpha 1 1 2
+# imagepos 1 0 0
+# waitandnext 2
+
+# imagealpha 2 1 1
+# imagepos 2 0 0
+# waitandnext 1
+
+# imagealpha 3 1 1
+# imagepos 3 0 0
+# waitandnext 1
+
+# imagealpha 4 1 2
+# imagepos 4 0 0
+# waitandnext 2
+
+# imagealpha 5 1 3
+# imagepos 5 0 0
+
+# imagealpha 1 0 2
+# imagealpha 2 0 2
+# imagealpha 3 0 2
+# imagealpha 4 0 2
+# imagealpha 5 0 2
+# imagemoveto 1 -200 0 2
+# imagemoveto 2 150 0 2
+# imagemoveto 3 -150 0 2
+# imagemoveto 4 50 0 2
+# imagemoveto 5 -25 0 2
+# waitandnext 4
+
+# imagealpha 6 1 3
+# imagepos 6 0 0
+
+# fadeout "black" 5
+# waitandnext 5

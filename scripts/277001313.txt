@@ -1,0 +1,903 @@
+;;-----------------------------------------
+;;■□■新・海上編9月中旬シナリオ■□■
+;;《第六回》
+;;【第5幕】久遠のパラディーゾ 戦闘後
+;;【ED】
+;;スクリプト最後の背景：島全景
+;;-----------------------------------------
+# script "lisp"
+# background "sea_jungle_day"
+# bgmfile "bgm311" "BgmSeaEventBattle002" 0
+;;------------------------------------------
+;;グラーシーザ
+# body 2302611
+# pos 2302611 3
+# scale 2302611 0.8 0
+# layer 2302611 4
+# alpha 2302611 0 0
+# mask 2302611 on
+# face 2302611 "normal"
+;;スロウス（レーヴァテイン）
+# body 2100221
+# pos 2100221 3
+# scale 2100221 0.8 0
+# layer 2100221 4
+# alpha 2100221 0 0
+# mask 2100221 on
+# face 2100221 "normal"
+;;ラグナロク
+# body 2103611
+# pos 2103611 3
+# scale 2103611 0.8 0
+# layer 2103611 4
+# alpha 2103611 0 0
+# mask 2103611 on
+# face 2103611 "normal"
+;;エンヴィ（ロンギヌス）
+# body 2300121
+# pos 2300121 3
+# scale 2300121 0.8 0
+# layer 2300121 4
+# alpha 2300121 0 0
+# mask 2300121 on
+# face 2300121 "normal"
+;;水着ミネルヴァ
+# body 2302511
+# pos 2302511 3
+# scale 2302511 0.8 0
+# layer 2302511 4
+# mask 2302511 on
+# alpha 2302511 0 0
+# face 2302511 "normal"
+;;フライシュッツ（水着）
+# body 2502711
+# pos 2502711 3
+# scale 2502711 0.8 0
+# layer 2502711 4
+# mask 2502711 on
+# alpha 2502711 0 0
+# face 2502711 "normal"
+;;水着ダモクレス
+# body 2103511
+# pos 2103511 3
+# scale 2103511 0.8 0
+# layer 2103511 4
+# alpha 2103511 0 0
+# mask 2103511 on
+# face 2103511 "normal"
+;;ネス
+# body 2602011
+# pos 2602011 3
+# scale 2602011 0.8 0
+# layer 2602011 4
+# alpha 2602011 0 0
+# mask 2602011 on
+# face 2602011 "normal"
+;;エルキュール
+# body 2202511
+# pos 2202511 3
+# scale 2202511 0.8 0
+# layer 2202511 4
+# alpha 2202511 0 0
+# mask 2202511 on
+# face 2202511 "normal"
+;;水着グリード（ティルフィング）
+# body 2101421
+# pos 2101421 3
+# scale 2101421 0.8 0
+# layer 2101421 4
+# alpha 2101421 0 0
+# mask 2101421 on
+# face 2101421 "normal"
+;;水着グラトニー（パラシュ）
+# body 2200421
+# pos 2200421 3
+# scale 2200421 0.8 0
+# layer 2200421 4
+# alpha 2200421 0 0
+# mask 2200421 on
+# face 2200421 "normal"
+;;水着ラスト（アルテミス）
+# body 2400121
+# pos 2400121 3
+# scale 2400121 0.8 0
+# layer 2400121 4
+# alpha 2400121 0 0
+# mask 2400121 on
+# face 2400121 "normal"
+;;ラース（マサムネ）
+# body 2100121
+# pos 2100121 3
+# scale 2100121 0.8 0
+# layer 2100121 4
+# alpha 2100121 0 0
+# mask 2100121 on
+# face 2100121 "normal"
+;;プライド（フライクーゲル）
+# body 2500221
+# pos 2500221 3
+# scale 2500221 0.8 0
+# layer 2500221 4
+# alpha 2500221 0 0
+# mask 2500221 on
+# face 2500221 "normal"
+;;スイハ
+# body 2401711
+# pos 2401711 3
+# scale 2401711 0.8 0
+# layer 2401711 4
+# alpha 2401711 0 0
+# mask 2401711 on
+# face 2401711 "normal"
+;;島背景（一枚絵）
+# imageset 1 "e170701_map"
+# imagealpha 1 0 0
+;;--------------------------------------
+;;//背景：密林（昼）
+# textflame 0 0
+;;ナレーション
+@
+15人全員が一丸となって
+異族を粉砕したあと、
+マスターに異変が起きた
+
+;;演出：白フラッシュ
+# se "SE_9173"
+# fadeout "white" 0.4
+# textwindow "close"
+# waitandnext 0.6
+
+# face 2101421 "sad"
+# alpha 2101421 1 0
+# mask 2101421 off
+# waitandnext 0.1
+
+# fadein "white" 0.4
+# waitandnext 0.6
+
+# textflame 1 1
+# textwindow "normal"
+# voice 10147 "tyrufing_k_0023"
+@グリード
+マスター！？
+
+# voice 6020 "ness_0022"
+# alpha 2101421 0 0.5
+# face 2602011 "sad"
+# alpha 2602011 1 0.5
+# mask 2602011 off
+@ネス
+これはっ…！？
+バイブスの輝き？
+でも、こんなにも強く…
+
+# voice 20047 "parashu_k_0004"
+# alpha 2602011 0 0.5
+# face 2200421 "shy"
+# alpha 2200421 1 0.5
+# mask 2200421 off
+@グラトニー
+…あぁ、マスターに
+包まれている
+そんな気がするね
+
+# alpha 2200421 0 0.5
+# textflame 0 0
+@
+マスターから発せられる
+バイブスの輝き、
+それがゆっくりと広がっていく
+
+# voice 3026 "grayside_0039"
+# face 2302611 "surprise"
+# alpha 2302611 1 0.5
+# mask 2302611 off
+# textflame 1 1
+@グラーシーザ
+これがバイブスの力か！
+すさまじいな
+
+# alpha 2302611 0 0.5
+# textflame 0 0
+@
+バイブスに触れた結界が、
+形を取り戻していく
+
+@
+そして、その輝きが収まる頃には
+結界の歪みは修復されていた
+
+# voice 1036 "ragnarok_0002"
+# move 2103611 2 0
+# face 2103611 "usual"
+# alpha 2103611 1 0.5
+# mask 2103611 on
+# move 2302511 4 0
+# face 2302511 "normal"
+# alpha 2302511 1 0.5
+# mask 2302511 on
+# textflame 1 1
+@ラグナロク
+私達、やり遂げたの…？
+
+# voice 3025 "minerva_0003"
+# face 2302511 "smile"
+@ミネルヴァ
+…はい！
+
+;;//演出：場面転換
+;;//背景：ビーチ
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# background "sea_beach_day"
+# alpha 2103611 0 0
+# alpha 2302511 0 0
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "normal"
+# bgm "stop"
+@
+結界を塞いだあと、マスターは
+意識を失い、ビーチへと運ばれていた
+
+@
+目を覚ますと、全員がマスターを
+心配そうに覗き込んでいた
+
+# voice 1036 "ragnarok_0004"
+# bgmfile "bgm227" "BgmSeaEvent" 0
+# move 2103611 3 0
+# face 2103611 "smile"
+# alpha 2103611 1 0.5
+# mask 2103611 off
+# textflame 1 1
+@ラグナロク
+マスター…！
+よかった！
+
+# voice 10147 "tyrufing_k_0019"
+# alpha 2103611 0 0.5
+# face 2101421 "usual"
+# alpha 2101421 1 0.5
+# mask 2101421 off
+@グリード
+まったく、心配しましたよ
+
+# voice 3025 "minerva_0001"
+# alpha 2101421 0 0.5
+# move 2302511 3 0
+# face 2302511 "sad"
+# mask 2302511 off
+# alpha 2302511 1 0.5
+@ミネルヴァ
+マスター、お加減はどうですか？
+おそらく、急激な力の流れに触れて、
+一時的に貧血のようになったのだと…
+
+# textflame 0 0
+@
+ミネルヴァはそういうが、
+目覚めはすっきりしていて、
+体の調子も悪くなかった
+
+# voice 3026 "grayside_0006"
+# alpha 2302511 0 0.5
+# face 2302611 "usual"
+# alpha 2302611 1 0.5
+# mask 2302611 off
+# textflame 1 1
+@グラーシーザ
+それはちょうじょう！
+よくがんばったな！
+
+# alpha 2302611 0 0.5
+# face 2200421 "shy"
+# alpha 2200421 1 0.5
+# mask 2200421 off
+@グラトニー
+ボク達も、なんだか
+すっきりした気持ちなのだよ
+
+# voice 40015 "arutemisu_k_0032"
+# alpha 2200421 0 0.5
+# move 2100221 2 0
+# face 2100221 "usual"
+# alpha 2100221 1 0.5
+# mask 2100221 on
+# move 2400121 4 0
+# face 2400121 "normal"
+# alpha 2400121 1 0.5
+# mask 2400121 on
+@ラスト
+島の結界が完璧になったことで、
+神々の干渉が消えたようです
+
+# voice 10028 "revatein_k_0004"
+# face 2100221 "smile"
+@スロウス
+つまり、もう命令はないってこと…
+
+# textflame 0 0
+@
+そうか、それはよかった、と
+マスターは微笑む
+
+# voice 6020 "ness_0002"
+# alpha 2100221 0 0.5
+# alpha 2400121 0 0.5
+# face 2602011 "usual"
+# alpha 2602011 1 0.5
+# textflame 1 1
+@ネス
+それでは、もうあなた達が
+マスターを巡って
+争うこともないのですね？
+
+# voice 50026 "furaikugeru_k_0031"
+# alpha 2602011 0 0.5
+# move 2300121 2 0
+# face 2300121 "usual"
+# alpha 2300121 1 0.5
+# mask 2300121 on
+# move 2500221 4 0
+# face 2500221 "usual"
+# alpha 2500221 1 0.5
+# mask 2500221 on
+@プライド
+ソーリー！
+それとこれとは別の話デス！
+
+# voice 30018 "ronginusu_k_0003"
+# face 2300121 "angry"
+@エンヴィ
+今度こそ、私もマスターと
+二人きりで過ごしたいです！
+
+# voice 3026 "grayside_0040"
+# alpha 2300121 0 0.5
+# alpha 2500221 0 0.5
+# face 2302611 "normal"
+# alpha 2302611 1 0.5
+@グラーシーザ
+なるほどなるほど…
+しかし、あたしたちも
+だまってはいないぞ？
+
+# voice 5027 "freischotz_0005"
+# alpha 2302611 0 0.5
+# face 2502711 "happy"
+# alpha 2502711 1 0.5
+# mask 2502711 off
+@フライシュッツ
+なになに〜？
+なんか楽しそう〜！？
+
+# voice 1035 "damocles_0004"
+# alpha 2502711 0 0.5
+# face 2103511 "normal"
+# alpha 2103511 1 0.5
+# mask 2103511 off
+@ダモクレス
+マスターもみんなも、
+クレスは愛してるよ！
+
+# alpha 2103511 0 0.5
+# face 2103611 "usual"
+# alpha 2103611 1 0.5
+# mask 2103611 off
+@ラグナロク
+それじゃ、ここからは個人戦ね！
+
+# voice 10147 "tyrufing_k_0001"
+# alpha 2103611 0 0.5
+# face 2101421 "usual"
+# alpha 2101421 1 0.5
+@グリード
+さぁ、マスター…
+最初のデートに誰を選ぶのか、
+聞かせてください！
+
+# alpha 2101421 0 0.5
+# textflame 0 0
+@
+15人全員がマスターに迫る…
+マスターの選択は果たして…？
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# fadein "black" 1
+# waitandnext 1
+
+;;-----------------------------------------
+;;【ED】
+;;-----------------------------------------
+;;//背景：ビーチ（昼）
+# se "SE_5580"
+# textflame 0 0
+# textwindow "normal"
+;;ナレーション
+@
+マスター争奪戦はひとまず置いて、
+キル姫たちは久々の休暇を
+楽しむことにした
+
+# voice 3026 "grayside_0009"
+# move 2100221 2 0
+# face 2100221 "usual"
+# alpha 2100221 1 0.5
+# mask 2100221 on
+# move 2302611 4 0
+# face 2302611 "angry"
+# alpha 2302611 1 0.5
+# mask 2302611 on
+# textflame 1 1
+@グラーシーザ
+ほら、スロウス！
+だらだらしていないで、
+いっしょにビーチバレーをするぞ！
+
+# voice 10028 "revatein_k_0011"
+@スロウス
+やだ、めんどくさい…
+
+# voice 1036 "ragnarok_0002"
+# alpha 2100221 0 0.5
+# alpha 2302611 0 0.5
+# move 2300121 2 0
+# face 2300121 "usual"
+# alpha 2300121 1 0.5
+# mask 2300121 on
+# move 2103611 4 0
+# face 2103611 "normal"
+# alpha 2103611 1 0.5
+# mask 2103611 on
+@ラグナロク
+私達は、ビーチフラッグスの
+続きをしようよ！
+メンバーも揃ってるし…
+
+# voice 30018 "ronginusu_k_0034"
+# face 2300121 "normal"
+@エンヴィ
+えっ！
+私は遠慮します…
+また下敷きにされたら…
+
+# voice 3025 "minerva_0011"
+# alpha 2103611 0 0.5
+# move 2302511 4 0
+# face 2302511 "normal"
+# alpha 2302511 1 0.5
+# mask 2302511 on
+@ミネルヴァ
+苦手だからと避けていては
+進展がありません、
+克服するチャンスと考えましょう！
+
+;;//場面転換
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# alpha 2300121 0 0
+# alpha 2302511 0 0
+# face 2502711 "happy"
+# alpha 2502711 1 0
+# mask 2502711 off
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "normal"
+# voice 5027 "freischotz_0002"
+@フライシュッツ
+ねぇねぇ、マスターくん！
+おねーちゃん、がんばったよね？
+だからハグさせて〜！
+
+# voice 1035 "damocles_0005"
+# alpha 2502711 0 0.5
+# face 2103511 "happy"
+# alpha 2103511 1 0.5
+# mask 2103511 off
+@ダモクレス
+クレスは、マスターと木登りしたい！
+あははははは！
+
+# voice 6020 "ness_0009"
+# alpha 2103511 0 0.5
+# face 2602011 "angry"
+# alpha 2602011 1 0.5
+# mask 2602011 on
+@ネス
+二人とも、過剰なスキンシップは
+節制して…
+
+# move 2602011 2 0.5
+# move 2302511 4 0.5
+# face 2302511 "normal"
+# alpha 2302511 1 0.5
+# mask 2302511 on
+@ミネルヴァ
+ネス…
+今日だけは許してあげてください
+
+# voice 6020 "ness_0003"
+# face 2602011 "usual"
+@ネス
+そうですね…
+でも、今日だけですよ！
+
+# voice 3025 "minerva_0004"
+# face 2302511 "smile"
+@ミネルヴァ
+ふふ…そうですね
+
+;;//場面転換
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# alpha 2602011 0 0
+# alpha 2302511 0 0
+# face 2202511 "normal"
+# alpha 2202511 1 0
+# mask 2202511 off
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "normal"
+@エルキュール
+やはり希望はありました！
+マスターは、私の希望の星です！
+
+# voice 2025 "hercule_0004"
+# face 2202511 "smile"
+@エルキュール
+ええ、マスターには勇気と、
+不屈の精神も備わっていました！
+すばらしいです！
+
+;;//場面転換
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# alpha 2202511 0 0
+# face 2101421 "usual"
+# alpha 2101421 1 0
+# mask 2101421 off
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "normal"
+# voice 10147 "tyrufing_k_0013"
+@グリード
+私はマスターとデートの続きを
+したいのですけど…
+
+# voice 20047 "parashu_k_0012"
+# alpha 2101421 0 0.5
+# face 2200421 "angry"
+# alpha 2200421 1 0.5
+# mask 2200421 off
+@グラトニー
+ボクにだって、ミネルヴァ監修の
+デートプランがあるんだ！
+ほら、マスターから離れろ！
+
+# voice 5027 "freischotz_0035"
+# alpha 2200421 0 0.5
+# face 2502711 "sad"
+# alpha 2502711 1 0.5
+@フライシュッツ
+えー？どうして〜？
+やだもーん！
+
+;;//SE：抱きつく音
+# se "SE_0646"
+# waitandnext 0.5
+
+# voice 1035 "damocles_0004"
+# alpha 2502711 0 0.5
+# face 2103511 "normal"
+# alpha 2103511 1 0.5
+# mask 2103511 off
+@ダモクレス
+えへっ！
+マスター、愛してるよー！
+
+;;//SE：抱きつく音
+# se "SE_0646"
+# waitandnext 0.5
+
+# voice 40015 "arutemisu_k_0027"
+# alpha 2103511 0 0.5
+# move 2100121 2 0
+# face 2100121 "normal"
+# alpha 2100121 1 0.5
+# mask 2100121 on
+# move 2400121 4 0
+# face 2400121 "usual"
+# alpha 2400121 1 0.5
+# mask 2400121 on
+@ラスト
+はぁ…
+あの二人には話が通じませんからね
+
+# voice 210012 "masamune_k_0003"
+# face 2100121 "sad"
+@ラース
+うむ、かなり手強い相手だ…
+グリードとグラトニーでも
+手に負えぬであろうな…
+
+# alpha 2100121 0 0.5
+# alpha 2400121 0 0.5
+# move 2500221 3 0
+# face 2500221 "angry"
+# alpha 2500221 1 0.5
+# mask 2500221 off
+@プライド
+ホワーイ？
+あのフライシュッツの顔を見てると…
+なんだか、いじめたくなるデス！
+
+# voice 5027 "freischotz_0022"
+# alpha 2500221 0 0.5
+# face 2502711 "normal"
+# alpha 2502711 1 0.5
+# mask 2502711 off
+@フライシュッツ
+あれ？マスターくん、寝ちゃった…？
+じゃ、プライドちゃん、
+一緒に遊ぼうよ〜！
+
+;;//抱きつき効果音
+# se "SE_0646"
+# waitandnext 0.5
+
+# voice 50026 "furaikugeru_k_0012"
+# alpha 2502711 0 0.5
+# face 2500221 "angry"
+# alpha 2500221 1 0.5
+@プライド
+ストーップ！
+追いかけるのはわたしなの！
+離れなさいよ！
+
+# se "SE_9430"
+# voice 1035 "damocles_0006"
+# alpha 2500221 0 0.5
+# face 2103511 "happy"
+# alpha 2103511 1 0.5
+@ダモクレス
+あー！追いかけっこ？
+いいなー、クレスもやるー！
+あははは！
+
+# alpha 2103511 0 0.5
+# textflame 0 0
+;;ナレーション
+@
+木陰で眠るマスターの耳に、
+キル姫達の笑い声が聞こえる…
+
+@
+この幸せな時間が永遠に続くことを
+マスターは願ってやまなかった
+
+;;場面転換
+;;
+;;背景：島全景
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# imagealpha 1 1 0
+# imagepos 1 0 15
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "normal"
+# bgmfile "bgm224" "BgmSeaEvent" 0
+;;ナレーション
+@
+いつかの時間軸、どこかの世界線で…
+
+@
+青い海に浮かぶ常夏の島がある
+
+@
+その名はラグーナ島
+
+@
+マスターとキル姫達が
+平和な日々を過ごす、幸せな場所だ…
+
+# voice 5027 "freischotz_0001"
+# face 2502711 "normal"
+# alpha 2502711 1 0.5
+# mask 2502711 off
+# textflame 1 1
+@フライシュッツ
+マスターく～ん！
+ほら、早く～！
+みんな、待ってるよ～
+
+# voice 210012 "masamune_k_0001"
+# alpha 2502711 0 0.5
+# move 2100121 3 0
+# face 2100121 "angry"
+# alpha 2100121 1 0.5
+# mask 2100121 off
+@ラース
+主君！
+今日も海の幸を獲ってきております
+夕食はご期待くだされ
+
+# voice 30018 "ronginusu_k_0028"
+# alpha 2100121 0 0.5
+# move 2300121 3 0
+# face 2300121 "normal"
+# alpha 2300121 1 0.5
+# mask 2300121 off
+@エンヴィ
+あ、その…
+一緒に泳ぎ…
+いえ…なんでもないです
+
+# voice 6020 "ness_0004"
+# alpha 2300121 0 0.5
+# move 2602011 3 0
+# face 2602011 "smile"
+# alpha 2602011 1 0.5
+# mask 2602011 off
+@ネス
+お兄ちゃん、
+砂でお城を作りましょう！
+
+# voice 3026 "grayside_0005"
+# alpha 2602011 0 0.5
+# move 2302611 3 0
+# face 2302611 "smile"
+# alpha 2302611 1 0.5
+# mask 2302611 off
+@グラーシーザ
+この島がぶじでよかった
+うれいがなくなったのだから
+これで楽しくすごせるな！
+
+# voice 4017 "suiha_0004"
+# alpha 2302611 0 0.5
+# face 2401711 "smile"
+# alpha 2401711 1 0.5
+# mask 2401711 off
+@スイハ
+そうですね…
+あの大騒ぎが噓のよう
+
+;;モヤモヤ
+# face 2401711 "normal"
+# move 2401711 3 0
+# textwindow "moya"
+@スイハ
+マスターをお誘いしても
+断られないでしょうか…
+
+# voice 50026 "furaikugeru_k_0026"
+# alpha 2401711 0 0.5
+# face 2500221 "angry"
+# alpha 2500221 1 0.5
+# mask 2500221 off
+# textwindow "normal"
+@プライド
+マスター！
+他の子を見るなんて、
+ノーだよっ！
+
+# voice 20047 "parashu_k_0001"
+# alpha 2500221 0 0.5
+# face 2200421 "shy"
+# alpha 2200421 1 0.5
+# mask 2200421 off
+@グラトニー
+ほら、マスター
+キミのために、
+花火を準備したんだ
+
+# voice 3025 "minerva_0005"
+# alpha 2200421 0 0.5
+# move 2302511 3 0
+# face 2302511 "smile"
+# alpha 2302511 1 0.5
+# mask 2302511 off
+@ミネルヴァ
+ふふっ…マスター
+これからも忙しくなりますよ？
+
+# voice 40015 "arutemisu_k_0001"
+# alpha 2302511 0 0.5
+# move 2400121 3 0
+# face 2400121 "smile"
+# alpha 2400121 1 0.5
+# mask 2400121 off
+@ラスト
+もうすぐ夜です
+私の傍を離れないように
+
+# voice 2025 "hercule_0020"
+# alpha 2400121 0 0.5
+# face 2202511 "smile"
+# alpha 2202511 1 0.5
+# mask 2202511 off
+@エルキュール
+これが“希望”の先にあるもの…
+みんなの笑顔がとっても素敵です！
+
+# voice 1035 "damocles_0004"
+# alpha 2202511 0 0.5
+# face 2103511 "happy"
+# alpha 2103511 1 0.5
+# mask 2103511 off
+@ダモクレス
+みんな愛で溢れてるね～！
+もちろんクレスもマスターのこと、
+愛してるよ～！
+
+# voice 10028 "revatein_k_0004"
+# alpha 2103511 0 0.5
+# move 2100221 3 0
+# face 2100221 "smile"
+# alpha 2100221 1 0.5
+# mask 2100221 off
+@スロウス
+めんどくさいけど…
+こういうの、悪くないね…
+
+# voice 1036 "ragnarok_0004"
+# alpha 2100221 0 0.5
+# move 2103611 3 0
+# face 2103611 "smile"
+# alpha 2103611 1 0.5
+# mask 2103611 off
+@ラグナロク
+さあ、マスター
+今度は私とビーチフラッグスを
+しましょう
+
+# voice 10147 "tyrufing_k_0007"
+# alpha 2103611 0 0.5
+# face 2101421 "usual"
+# alpha 2101421 1 0.5
+# mask 2101421 off
+@グリード
+これからは、一切容赦はしません
+必ず私のものにしてみせますから
+覚悟してくださいね
+
+# alpha 2101421 0 0.5
+# textflame 0 0
+@
+島を救った“英雄無き英雄譚”は、
+海に夕日が沈むように
+静かにその幕を下ろしていった…

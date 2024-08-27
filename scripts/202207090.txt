@@ -1,0 +1,434 @@
+;;-----------------------------------------
+;;SEA夏1_9_0
+;;-----------------------------------------
+# script "lisp"
+# background "SEAsummer_town4"
+# bgm "bgm002" 0
+;;-----------------------------------------
+;;浴衣ミーミル
+# body 318
+# pos 318 2
+# scale 318 0.8 0
+# layer 318 5
+# mask 318 off
+# alpha 318 1 0
+;;浴衣ミネルヴァ（風鈴）
+# body 319
+# pos 319 4
+# scale 319 0.8 0
+# layer 319 3
+# mask 319 off
+# alpha 319 1 0
+;;浴衣ミネルヴァ
+# body 6302511
+# pos 6302511 4
+# scale 6302511 0.8 0
+# layer 6302511 3
+# mask 6302511 off
+# alpha 6302511 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：夏の街道（シノビナトリミング）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_9277"
+# voice 9917 "mimir_navikan_0004"
+# face 318 "happy"
+# face 319 "usual"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+こちらの風鈴、
+とても涼やかな音色でございます
+
+# textboxarrow 0 3
+@ミネルヴァ
+これも綺麗な音色がします
+それに絵柄も可愛い
+
+# face 319 "normal"
+# textboxarrow 0 3
+@ミネルヴァ
+ほら、ニケ
+花柄が繊細なタッチで
+描かれていますよ
+
+# textboxarrow 0 1
+@ミーミル
+ミネルヴァさんとニケさんは
+とても仲が良いのですね
+
+# voice 3025 "minerva_0003"
+# face 319 "usual"
+# textboxarrow 0 3
+@ミネルヴァ
+はい
+この子とはいつも一緒なんです
+
+# face 319 "sad"
+# textboxarrow 0 3
+@ミネルヴァ
+…それより、
+音を聞き分けないといけません
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# face 318 "sad"
+# textboxarrow 0 1
+@ミーミル
+そうなのですが…
+
+;;選択肢
+# select "どれも違う" "select_label_01" "よく分からない" "select_label_02"
+音を聞き分けないといけません
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textboxarrow 0 1
+@ミーミル
+私も、全ての風鈴が異なる音色をして
+いるように聞こえます
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textboxarrow 0 1
+@ミーミル
+実は私も…
+全て異なる音色に聞こえてしまって…
+
+# label "select_label_end"
+# se "bgm602_basic_on"
+# textboxarrow 0 3
+@ミネルヴァ
+そうですね…
+違いは僅かなものだったり
+するのですけれど…
+
+# voice 3025 "minerva_0028"
+# textboxarrow 0 3
+@ミネルヴァ
+一つとして同じ音色のものは
+ありません
+困りました…
+
+# textboxarrow 0 3
+@ミネルヴァ
+何か考え違いをしているのかも…
+
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+どなたか、風鈴に詳しい方と
+お話ししてみるのは如何でしょう？
+
+# textboxarrow 0 3
+@ミネルヴァ
+すみません…
+もう少し考えてみます
+
+# face 318 "sad"
+# textboxarrow 0 1
+@ミーミル
+あ…
+差し出がましいことを
+言ってしまいました…
+
+# textboxarrow 0 3
+@ミネルヴァ
+音色ではなく、色？絵柄？短冊？
+いえ…全てバラバラです…
+
+# textboxarrow 0 3
+@ミネルヴァ
+唯一つしかない風鈴なんて…
+
+# serif 1
+@ニケ
+…………
+
+;;ニケが飛んでいく
+# se "SE_5339"
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 3025 "minerva_0022"
+# face 319 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 3
+@ミネルヴァ
+…えっ？
+ニケ！？
+どこに行くんですかっ？
+
+# textboxarrow 0 3
+@ミネルヴァ
+待って下さい、ニケ…！
+
+;;ミネルヴァが追いかける
+# se "SE_5575"
+# move 319 5 0.5
+# alpha 319 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# face 318 "angry"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+あ、ミネルヴァさんっ
+マスター様、私達も…！
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+#setnextbgmblock 1
+# move 319 4 0
+# alpha 318 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 319 "sad"
+# alpha 319 1 0.3
+# face 318 "sad"
+# alpha 318 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+ニケさんを見失ってしまいました…
+
+# textboxarrow 0 3
+@ミネルヴァ
+どうして、ニケ…
+
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+手分けして捜してみるのは
+如何でしょう？
+私とマスター様はあちらに――
+
+# voice 3025 "minerva_0034"
+# face 319 "usual"
+# textboxarrow 0 3
+@ミネルヴァ
+いえ
+ご心配には及びません
+あの子はきっと大丈夫です
+
+# textboxarrow 0 3
+@ミネルヴァ
+それより風鈴を調べることに
+専念しないと…
+
+;;選択肢
+# select "無理しなくていい" "select_label_03" "もっと頼って欲しい" "select_label_04"
+それより風鈴を調べることに
+専念しないと…
+
+# label "select_label_03"
+# labeljump "select_label_end2"
+# face 319 "sad"
+# textboxarrow 0 3
+@ミネルヴァ
+無理なんて、私は…
+
+# label "select_label_04"
+# labeljump "select_label_end2"
+# face 319 "sad"
+# textboxarrow 0 3
+@ミネルヴァ
+マスターやミーミルにご迷惑を
+おかけするわけには…
+
+# label "select_label_end2"
+# textboxarrow 0 1
+@ミーミル
+ミネルヴァさん
+お気遣いは大変嬉しいのですが
+
+# textboxarrow 0 1
+@ミーミル
+私達もニケさんのことが心配です
+一緒に探したく存じます
+
+# voice 3025 "minerva_0015"
+# textboxarrow 0 3
+@ミネルヴァ
+ミーミル…ううっ…
+
+# face 319 "usual"
+# textboxarrow 0 3
+@ミネルヴァ
+こんなことではいけませんね
+私がしっかりしないと
+
+# textboxarrow 0 3
+@ミネルヴァ
+すみません
+少しの間、力を貸していただけ
+ますか？
+
+# voice 9917 "mimir_navikan_0003"
+# face 318 "happy"
+# textboxarrow 0 1
+@ミーミル
+はい
+もちろんでございます
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 0.5
+
+# alpha 319 0 0
+# alpha 318 0 0
+# textwindow "close"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# serif 1
+@見物客
+フクロウ？
+うーん…
+見てないなぁ…
+
+# serif 1
+@見物客
+見たような…
+見てないような…
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 0.5
+
+# alpha 319 0 0
+# alpha 318 0 0
+# serif 1
+# textwindow "close"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# serif 1
+@風鈴屋の店主
+風鈴なら、あっちの方にもたくさん
+あるよ
+フクロウ？知らないねぇ
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 0.5
+
+# serif 1
+# textwindow "close"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 319 "sad"
+# alpha 319 1 0.3
+# face 318 "sad"
+# alpha 318 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@ミネルヴァ
+…………
+
+# textboxarrow 0 1
+@ミーミル
+…………
+
+# textboxarrow 0 1
+@ミーミル
+なかなか目撃情報を得られません…
+
+# textboxarrow 0 3
+@ミネルヴァ
+ニケ…
+
+# voice 9917 "mimir_navikan_0002"
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+諦めずに参りましょうっ
+あの、お尋ねしたいことが…
+
+# serif 1
+@見物客A
+フクロウは見てないなぁ…
+
+# serif 1
+@見物客B
+知らないねぇ…
+
+# serif 0
+# textboxarrow 0 3
+@ミネルヴァ
+…………
+
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+あのっ
+フクロウを見ませんでしたか？
+
+# serif 1
+@見物客C
+いや、見てないな…
+
+# serif 1
+@子ども
+あ！
+さっき、あっちで見たよ
+丸いフクロウでしょ？
+
+# serif 0
+# face 319 "surprise"
+# textboxarrow 0 3
+@ミネルヴァ
+…………！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 9917 "mimir_navikan_0030"
+# textwindow "nomal"
+# face 318 "happy"
+# textboxarrow 0 1
+@ミーミル
+本当でございますかっ？
+ありがとうございます
+
+;;ミネルヴァが走り去る
+# se "SE_5575"
+# move 319 5 0.3
+# alpha 319 0 0.3
+# face 318 "surprise"
+# textboxarrow 0 1
+@ミーミル
+ミネルヴァさん
+有益な情報が…あっ！
+
+# textboxarrow 0 1
+@ミーミル
+…脇目もふらず
+走っていかれました
+
+# fadeout "black" 1
+# waitandnext 1

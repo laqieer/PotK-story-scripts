@@ -1,0 +1,121 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;インテグラルキラーズサイドストーリー
+;;第1話―８　タイトル：平和への決意
+;;1_8_1
+;;スクリプト最後の背景：平原
+;;-----------------------------------------
+# script "lisp"
+# background "006_church"
+# bgm "bgm021_022" 0
+;;-----------------------------------------
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 2
+# alpha 24 0 0
+# mask 24 off
+;;ティルフィング（イミテーション）
+# entry 9241 24
+# pos 9241 3
+# scale 9241 0.8 0
+# layer 9241 2
+# alpha 9241 0 0
+# mask 9241 off
+# brightness 9241 0.8 0
+;;-----------------------------------------
+;;第1話―８　タイトル：平和への決意
+;;//背景：教会
+# move 24 2 0
+# face 24 "normal"
+# alpha 24 1 0
+# mask 24 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 9241 4 0
+# face 9241 "normal"
+# alpha 9241 1 0
+# mask 9241 on
+@ティルフィング
+こんにちは
+
+;;ティルフィング（別）
+# textboxarrow 0 3
+@ティルフィング
+ようこそ
+ここでは戦い難いので、こちらに
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# alpha 24 0 0
+# alpha 9241 0 0
+# move 24 3 0
+# face 24 "sad"
+# alpha 24 1 0
+# mask 24 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//背景：平原
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+教会の裏手？
+…墓地のようですね、マスター
+
+# textboxarrow 0 2
+@ティルフィング
+淘汰を行うのに適切な場所とは
+思えないのですけれど…
+
+;;ティルフィング（別）
+# move 24 2 0.5
+# mask 24 on
+# move 9241 4 0
+# face 9241 "normal"
+# alpha 9241 1 0.5
+# mask 9241 on
+# textboxarrow 0 3
+@ティルフィング
+さあ、始めましょう
+私達の淘汰を
+
+# voice 1014 "tyrufing_0001"
+# face 24 "normal"
+# textboxarrow 0 1
+@ティルフィング
+マスター、
+少しの間、待っていて下さいね
+
+;;//選択肢
+;;A信じている
+;;B頑張れ！
+# select "信じている" "select_label_01" "頑張れ！" "select_label_02"
+マスター、
+少しの間、待っていて下さいね
+
+;;A
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 24 "angry"
+# textboxarrow 0 1
+@ティルフィング
+その信頼に必ず応えてみせます
+
+;;B
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 24 "happy"
+# textboxarrow 0 1
+@ティルフィング
+はい！
+ありがとうございます
+
+# label "select_label_end"
+# waitandnext 0.5

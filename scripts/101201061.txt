@@ -1,0 +1,316 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー12章
+;;第1話　タイトル：神令、発動
+;;1_6_1
+;;スクリプト最後の背景：地底
+;;-----------------------------------------
+# script "lisp"
+# background "underground_world_3"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス（ジョブチェンジ後）
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# layer 172 2
+# alpha 172 0 0
+# mask 172 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 2
+# alpha 139 0 0
+# mask 139 off
+;;ヴァナルガンド
+# body 3601111
+# pos 3601111 3
+# scale 3601111 0.8 0
+# layer 3601111 2
+# alpha 3601111 0 0
+# mask 3601111 off
+;;フォルカス
+# body 3301811
+# pos 3301811 3
+# scale 3301811 0.8 0
+# layer 3301811 2
+# alpha 3301811 0 0
+# mask 3301811 off
+;;ロンギヌス
+# body 3300111
+# pos 3300111 3
+# scale 3300111 0.8 0
+# layer 3300111 2
+# alpha 3300111 0 0
+# mask 3300111 off
+;;フライクーゲル
+# body 3500211
+# pos 3500211 3
+# scale 3500211 0.8 0
+# layer 3500211 2
+# alpha 3500211 0 0
+# mask 3500211 off
+;;-----------------------------------------
+;;//背景：地底
+# move 172 3 0
+# face 172 "normal"
+# alpha 172 1 0
+# mask 172 off
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+もう少しでビフレストね
+何だか逃げ足ばかり速いみたいで
+嫌なんだけど…
+
+;;//選択肢
+;;
+;;Ａ三十六計逃げるに如かず
+;;Ｂ今は仕方ない…
+;;Ｃアルマスは可愛いよ
+# select "三十六計逃げるに如かず" "select_label_01" "今は仕方ない…" "select_label_02" "アルマスは可愛いよ" "select_label_03"
+もう少しでビフレストね
+何だか逃げ足ばかり速いみたいで
+嫌なんだけど…
+
+;;Ａ
+# label "select_label_01"
+# labeljump "select_label_end"
+# voice 1038 "almace_0022"
+# face 172 "surprise"
+# textboxarrow 0 2
+@アルマス
+三十六計？
+まあ、速いに越したことはないの
+かもね…
+
+;;Ｂ
+# label "select_label_02"
+# labeljump "select_label_end"
+# voice 1038 "almace_0003"
+# face 172 "angry"
+# textboxarrow 0 2
+@アルマス
+分かってるわよ…
+早くみんなと合流しないとっ
+
+;;Ｃ
+# label "select_label_03"
+# labeljump "select_label_end"
+# voice 1038 "almace_0009"
+# face 172 "angry"
+# textboxarrow 0 2
+@アルマス
+はぁっ？
+急に何、言ってるのよ
+バカ！
+
+# label "select_label_end"
+# move 172 2 0.5
+# mask 172 on
+# move 139 4 0
+# face 139 "normal"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 3
+@ティターニア
+地上への道程は長いですよ
+気を抜かず急ぎましょう！
+
+# voice 1038 "almace_0002"
+# face 172 "normal"
+# textboxarrow 0 1
+@アルマス
+ねえ、ティニ
+あの斬ル姫、何者なのかしら？
+
+# voice 9967 "titania_0042"
+# face 139 "worry"
+# textboxarrow 0 3
+@ティターニア
+私にも分かりません…
+ただ、「神」が生み出した斬ル姫では
+ないと思います
+
+# textboxarrow 0 1
+@アルマス
+どうして、そう思うの？
+
+# textboxarrow 0 3
+@ティターニア
+説明が難しいのですけれど…
+何か…違ったのです
+存在そのものが
+
+# textboxarrow 0 1
+@アルマス
+存在そのものが違うって…
+斬ル姫じゃないってこと？
+
+# textboxarrow 0 3
+@ティターニア
+そうではないのです…
+彼女は…この世界の存在では
+ないのかもしれない
+
+# textboxarrow 0 3
+@ティターニア
+そういう「違い」です
+
+# face 172 "surprise"
+# textboxarrow 0 1
+@アルマス
+まさか、別世界からやって来たって
+言いたいの！？
+そんなことって…
+
+# textboxarrow 0 3
+@ティターニア
+もちろん私も突拍子のない考えだと
+思っているのですけれど…
+
+# textboxarrow 0 3
+@ティターニア
+この世界の存在とは何かが根本的に
+違う…そんな気配を彼女から
+感じたのは確かです
+
+# voice 1038 "almace_0028"
+# face 172 "sad"
+# textboxarrow 0 1
+@アルマス
+何だかよく分からないわね…
+
+# voice 9967 "titania_0035"
+# face 139 "surprise"
+# textboxarrow 0 3
+@ティターニア
+アルマス！
+背後から強い気配が複数…
+迫ってきます！
+
+# face 172 "normal"
+# textboxarrow 0 1
+@アルマス
+さすがに地上まで追いつかれず
+逃げ切るのは無理だったみたいね
+
+# face 172 "angry"
+# textboxarrow 0 1
+@アルマス
+ティニ、ここで迎え撃つわよ！
+
+# textboxarrow 0 3
+@ティターニア
+そんなっ…
+無茶ですよ、アルマス
+
+# textboxarrow 0 1
+@アルマス
+だからって逃げ切れる相手でも
+ないんでしょ
+だったら！
+
+;;//フライクーゲルの攻撃をアルマスが弾く
+# se "SE_5543"
+# sedelay "SE_3006" 0.6
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.8
+
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# voice 350021 "furaikugeru_t_0039"
+# alpha 172 0 0.5
+# alpha 139 0 0.5
+# move 3500211 3 0
+# face 3500211 "normal"
+# alpha 3500211 1 0.5
+# mask 3500211 off
+# textboxarrow 0 2
+@フライクーゲル
+ワォッ！
+わたしのバレットを弾くなんて
+ソーナィス！ハッハァ！
+
+# move 3500211 2 0.5
+# mask 3500211 on
+# move 3301811 4 0
+# face 3301811 "angry"
+# alpha 3301811 1 0.5
+# mask 3301811 on
+# textboxarrow 0 3
+@フォルカス
+フライクーゲル、
+遊びではないのですよ
+
+# voice 350021 "furaikugeru_t_0031"
+# face 3500211 "usual"
+# textboxarrow 0 1
+@フライクーゲル
+ソーリー
+それじゃ、コンヴィクション！
+罪深き者達を断罪する！
+
+# voice 330011 "ronginusu_t_0029"
+# alpha 3500211 0 0.5
+# alpha 3301811 0 0.5
+# move 3300111 3 0
+# face 3300111 "angry"
+# alpha 3300111 1 0.5
+# mask 3300111 off
+# textboxarrow 0 2
+@ロンギヌス
+苦しみの元凶、バイブス所持者に
+永遠の眠りと救済を
+
+# alpha 3300111 0 0.5
+# move 3601111 3 0
+# face 3601111 "normal"
+# alpha 3601111 1 0.5
+# mask 3601111 off
+# textboxarrow 0 2
+@ヴァナルガンド
+三人とも焦らないように
+慎重に動きましょう
+
+# alpha 3601111 0 0.5
+# move 3500211 2 0
+# face 3500211 "usual"
+# alpha 3500211 1 0.5
+# mask 3500211 on
+# move 3301811 4 0
+# face 3301811 "normal"
+# alpha 3301811 1 0.5
+# mask 3301811 on
+# textboxarrow 0 3
+@フォルカス
+心配は無用よ、ヴァナルガンド
+相手の斬ル姫はたった一人
+
+# voice 350021 "furaikugeru_t_0004"
+# face 3500211 "normal"
+# textboxarrow 0 1
+@フライクーゲル
+ヨハンの頁から消えてもらうよ
+アルマス
+それから、きみ
+
+# voice 330181 "forcas_t_0029"
+# face 3301811 "angry"
+# textboxarrow 0 3
+@フォルカス
+バイブスという原罪を
+今ここで償いなさい！
+
+# voice 1038 "almace_0007"
+# alpha 3500211 0 0.5
+# alpha 3301811 0 0.5
+# move 172 3 0
+# face 172 "angry"
+# alpha 172 1 0.5
+# mask 172 off
+# textboxarrow 0 2
+@アルマス
+勝手なことばかり言って…
+マスターは絶対に守り抜いて
+みせるんだから！

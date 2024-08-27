@@ -1,0 +1,926 @@
+;;10章1_1戦闘前　背景：泉のほとり
+;;※6話、ラストのリピートから。
+# script "lisp"
+# fadeout "black" 0
+# background "fountain"
+# bgm "bgm004" 0
+# imageset 3 "m2_kil5"
+# imagealpha 3 0 0
+# imagelayer 3 4
+# imagescale 3 1.5 0
+# imageset 1 "mov2_3_overlay"
+# imagealpha 1 0 0
+# imagelayer 1 2
+# body 24
+# pos 24 2
+# scale 24 0.8 0
+# alpha 24 0 0
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# alpha 0 0 0
+# body 134
+# pos 134 3
+# alpha 134 0 0
+# scale 134 1.2 0
+# layer 0 5
+# body 133
+# pos 133 3
+# scale 133 0.8 0
+# alpha 133 0 0 
+# face 24 "sad"
+# face 0 "worry"
+;;ティルフィングボイス用
+# body 101411
+# alpha 101411 0 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# imagealpha 3 1 0
+# imagepos 3 0 0
+# alpha 134 1 0
+# waitandnext 0.1
+
+# fadein "black" 1
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 2
+# voice 9998 "toto_0025"
+@トト
+…あ、あの天使達に
+教えてやってよね…
+
+# serif 1
+# textboxarrow 1 2
+@トト
+せ、世界の片隅に生きるボクだって…
+勇気を出せば、誰かを守ることが
+できるんだって…
+
+# serif 1
+# textboxarrow 1 2
+@トト
+ただ消されるだけの…
+た、ただの駒なんかじゃ…
+ないん…だって…
+
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0025"
+@ティルフィング
+トト！！
+
+;;※ティルフィングが叫んだ瞬間、背を向けた向こう側で、バッと大量に血しぶきが舞う
+# se "SE_9016"
+# move 0 3 0
+# imagescale 1 1.3 0
+# imagealpha 1 0.5 0.2
+# imagepos 1 0 30
+# serif 0
+# textboxarrow 0 2
+@ティルフィング
+！！！
+…ト…ト
+
+;;※慌てて飛んでくるデュリン
+# se "SE_3001"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# imagealpha 1 0 0.5
+# imagealpha 3 0 0.5
+# alpha 134 0 0.5
+# alpha 0 1 0.3
+# rightin 0 0.5
+# face 0 "worry"
+# waitandnext 0.5
+
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 2
+@デュリン
+ト、トト！
+しっかり！！
+
+# scale 134 0.8 0
+# face 0 "cry"
+# textboxarrow 0 2
+@デュリン
+…トト！
+…トト！！
+
+;;※倒れ伏すトト。地面には大量の血が広がる
+# move 24 3 0
+# alpha 0 0 0.5
+# alpha 24 1 0.5
+# textboxarrow 0 2
+@ティルフィング
+…ど、どうして！？
+どうして、トトが
+犠牲にならなければいけないの！？
+
+;;※轟く、ティルフィングの悲鳴。その叫びに呼応するように、エイレーネの瞳に光が宿る
+# face 24 "sad2"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "toge"
+# textsize 30
+# textboxarrow 1 0
+@ティルフィング
+イヤァァァァァァァァーッ！！！
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# textsize 24
+# move 133 3 0
+# alpha 24 0 0.5
+# alpha 133 1 0.5
+# mask 133 off
+# waitandnext 1.5
+
+# fadein "white" 0.5
+# bgm "stop"
+# se "SE_9000"
+# face 133 "irregular"
+# body 100161
+# pos 100161 3
+# scale 100161 0.8 0
+# alpha 100161 0 0
+# mask 100161 off
+# face 100161 "irregular"
+# waitandnext 2
+
+# alpha 100161 1 0.5
+# alpha 133 0 0.5
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 2
+@ラース
+！！
+なんだ…？
+
+# face 0 "worry"
+# move 24 2 0
+# move 134 4 0
+# alpha 24 1 0.5
+# alpha 134 1 0.5
+# alpha 100161 0 0.5
+# textboxarrow 0 3
+# voice 9998 "toto_0025"
+@トト
+…う
+
+# face 24 "sad"
+# alpha 0 1 0.5
+# textboxarrow 0 2
+@デュリン
+！！
+トト！！
+
+# textboxarrow 0 3
+@トト
+と、届いたんだ…
+僕らの…
+声が…
+
+# face 0 "sad"
+# textboxarrow 0 2
+# voice 9999 "durin_0024"
+@デュリン
+え…？
+
+;;※エイレーネの石像が光を帯び始める。
+# se "SE_9169"
+# face 0 "angry"
+# body 132
+# pos 132 3
+# scale 132 0.8 0
+# alpha 132 0 0
+# mask 132 off
+# textboxarrow 0 2
+@デュリン
+あれは…！？
+
+;;※石像を包む光が、徐々に人型になり、エイレーネの輪郭が浮かび上がる。
+# bgm "bgm000" 0
+# face 24 "surprise"
+# textboxarrow 0 1
+@ティルフィング
+…お、お母…さん？
+
+# serif 0
+# textwindow "close"
+# alpha 0 0 0.5
+# alpha 24 0 0.5
+# alpha 134 0 0.5
+# alpha 133 1 0.5
+# waitandnext 1.5
+
+# fadein "white" 1.5
+# alpha 133 0 0
+# alpha 132 1 0
+# face 132 "usual"
+# waitandnext 2
+
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 9976 "eirene_0067"
+@エイレーネ
+『…おかえりなさい
+我が愛しき娘よ…』
+
+# move 24 3 0
+# alpha 24 1 0.5
+# alpha 132 0 0.5
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0022"
+@ティルフィング
+！！！
+
+;;※雲の切れ間から射し込む光が、エイレーネの石像を照らし出す。
+# se "SE_9148"
+# alpha 24 0 0.5
+# alpha 132 1 0.5
+# face 132 "normal"
+# textboxarrow 0 2
+@エイレーネ
+『…辛い旅路を経てきたのですね』
+
+# imageset 4 "st160801-001"
+# imagealpha 4 0 0
+# imagelayer 4 5
+# face 132 "usual"
+# textboxarrow 0 2
+# voice 9976 "eirene_0005"
+@エイレーネ
+『よくぞ、戻ってきてくれました…
+…こんなにも嬉しいことは
+ありません』
+
+;;※その口元が、愛おしそうに微笑む。
+# imagepos 4 0 0
+# face 24 "sad"
+# alpha 24 1 0.5
+# alpha 132 0 0.5
+# textboxarrow 0 2
+@ティルフィング
+！！
+
+;;※ティルフィングの脳裏をよぎるフラッシュ…呼び起こされる記憶。穏やかに微笑む女性の影…（7章５－８で見た光景と同一）。
+# serif 0
+# textwindow "close"
+# se "SE_5746"
+# fadein "white" 0.5
+# imagealpha 4 1 0
+# waitandnext 1.5
+
+# serif 0
+# textwindow "normal"
+# fadein "white" 0.5
+# imagealpha 4 0 0
+# face 24 "sad2"
+# textboxarrow 0 2
+@ティルフィング
+！！
+お母さん！！！
+
+# fadeout "black" 1.5
+# waitandnext 2
+
+# bgmfile "bgm189" "BgmStory007" 0
+# background "imperial_city"
+# alpha 24 0 0
+# body 28
+# pos 28 1
+# scale 28 0.8 0
+# alpha 28 0 0
+# body 6
+# pos 6 5
+# scale 6 0.8 0
+# alpha 6 0 0
+# body 40
+# pos 40 3
+# scale 40 0.8 0
+# alpha 40 0 0
+# body 128
+# pos 128 4
+# scale 128 0.8 0
+# alpha 128 0 0
+# body 129
+# pos 129 2
+# scale 129 0.8 0
+# alpha 129 0 0
+# layer 128 1
+# layer 129 2
+# layer 28 4
+# layer 6 3
+# face 28 "surprise"
+# face 128 "surprise"
+# face 129 "surprise"
+# face 6 "angry"
+# face 40 "irregular"
+# waitandnext 0.3
+
+;;【１話】『過去との再会』背景：王都
+;;※王都広場…カミノツカイにより放たれる光の玉。激しい爆発に見舞われる王都。
+# fadein "black" 1
+# textflame 0 0 
+@
+王都広場付近
+
+# se "SE_5620"
+# serif 0
+# textwindow "close"
+# shake 1 1.0
+# waitandnext 1.5
+
+# alpha 28 1 0.5
+# alpha 6 1 0.5
+# alpha 40 1 0.5
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9984 "ren_0024"
+@レン
+う、うわっ！！
+
+# alpha 28 0 0.5
+# alpha 6 0 0.5
+# alpha 40 0 0.5
+# alpha 128 1 0.5
+# alpha 129 1 0.5
+# textboxarrow 0 3
+@ノーブル
+な、なんということを！！
+
+# body 960029
+# pos 960029 3
+# scale 960029 0.8 0
+# alpha 960029 0 0
+# mask 960029 off
+# layer 960029 4
+# textboxarrow 0 1
+@フレンネル
+あの火柱…
+まさか、大聖堂も…
+
+# alpha 960029 1 0.5
+# alpha 128 0 0.5
+# alpha 129 0 0.5
+# textboxarrow 0 2
+@ミカエル
+『…あの大聖堂に巣食う者達は、
+異世界との融合を促す存在…
+第一に殲滅しなければなりません』
+
+# face 28 "trouble"
+# textboxarrow 0 2
+# voice 9972 "michael_0005"
+@ミカエル
+『ガブリエルが既に着手しています…
+間もなく、完了することでしょう』
+
+# alpha 960029 0 0.5
+# alpha 28 1 0.5
+# alpha 6 1 0.5
+# alpha 40 1 0.5
+# textboxarrow 0 1
+@レン
+キ、キラープリンセス達を…
+こんな短時間で！？
+
+# body 10
+# pos 10 3
+# scale 10 0.8 0
+# alpha 10 0 0
+# face 6 "sad"
+# face 10 "angry"
+# textboxarrow 0 3
+# voice 9997 "deen_0020"
+@ディーン
+こ、こんなヤツらを…
+俺達は、相手にしなくちゃ
+ならねぇってのかよ！？
+
+;;※そこへ駆けてくる王立軍兵士。
+# serif 0
+# textwindow "close"
+# alpha 28 0 0.5
+# alpha 6 0 0.5
+# alpha 40 0 0.5
+# waitandnext 0.5
+
+# se "SE_5575"
+# alpha 10 1 0.3
+# rightin 10 0.5
+# waitandnext 0.5
+
+# serif 1
+# textwindow "normal"
+# textsize 24
+# textboxarrow 1 2
+@兵士
+報告が入った！
+
+# face 6 "angry"
+# face 28 "surprise"
+# serif 1
+# textboxarrow 1 2
+@兵士
+王政府も、壊滅寸前の状況とのこと！
+こちらへの救援は絶望的だ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# alpha 28 1 0.5
+# alpha 6 1 0.5
+# alpha 40 1 0.5
+# alpha 10 0 0.5
+# textboxarrow 0 1
+@レン
+じゃあ、本当に国王陛下も！？
+
+# face 28 "trouble"
+# textboxarrow 0 1
+@レン
+神々は…
+本当に、この世界を
+消し去るつもりなの！？
+
+# alpha 960029 1 0.5
+# alpha 28 0 0.5
+# alpha 6 0 0.5
+# alpha 40 0 0.5
+# textboxarrow 0 2
+# voice 9972 "michael_0003"
+@ミカエル
+『その後、新たなる世界が
+構築されるのです…』
+
+# body 2
+# pos 2 2
+# scale 2 0.8 0
+# alpha 2 0 0
+# body 3
+# pos 3 4
+# scale 3 0.8 0
+# alpha 3 0 0
+# face 2 "sad"
+# face 3 "sad"
+# textboxarrow 0 2
+@ミカエル
+『これは…
+言わば、再生です』
+
+# alpha 960029 0 0.5
+# alpha 2 1 0.5
+# alpha 3 1 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 1
+@市民Ａ
+ダ、ダメだっ…
+もう終わりだ！！
+
+# face 6 "sad"
+# face 28 "surprise"
+# serif 1
+# textboxarrow 1 3
+@市民Ｂ
+お、俺達人類は…
+ここで滅亡するんだっ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# alpha 28 1 0.5
+# alpha 6 1 0.5
+# alpha 40 1 0.5
+# alpha 2 0 0.5
+# alpha 3 0 0.5
+# textboxarrow 0 1
+# voice 9984 "ren_0019"
+@レン
+そんなっ！
+
+# face 28 "cry"
+# textboxarrow 0 1
+@レン
+やっと、
+世に真実を明かせたのに！
+
+# face 129 "normal"
+# mask 129 off
+# textboxarrow 0 1
+@レン
+世の人々が、
+立ち上がろうとしているのに！
+
+# bgm "stop"
+# move 129 3 0
+# alpha 28 0 0.5
+# alpha 6 0 0.5
+# alpha 40 0 0.5
+# alpha 129 1 0.5
+# textboxarrow 0 2
+@フレンネル
+…違う！！
+
+# move 40 2 0
+# move 6 3 0
+# move 128 5 0
+# alpha 28 1 0.5
+# alpha 6 1 0.5
+# alpha 128 1 0.5
+# alpha 129 0 0.5
+# face 28 "trouble"
+# face 6 "normal"
+# face 40 "normal"
+# textboxarrow 0 0
+@一同
+！？
+
+# alpha 28 0 0.5
+# alpha 6 0 0.5
+# alpha 128 0 0.5
+# alpha 129 1 0.5
+# textboxarrow 0 2
+@フレンネル
+それは、
+神々が描いた絵空事…
+
+# face 128 "normal"
+# textboxarrow 0 2
+@フレンネル
+我々人類が
+導いた結末ではない！！
+
+# alpha 28 1 0.5
+# alpha 6 1 0.5
+# alpha 128 1 0.5
+# alpha 129 0 0.5
+# textboxarrow 0 1
+@レン
+フ、フレンネル大公…？
+
+# bgm "bgm010" 0
+# alpha 28 0 0.5
+# alpha 6 0 0.5
+# alpha 128 0 0.5
+# alpha 129 1 0.5
+# textboxarrow 0 2
+@フレンネル
+この世界の創造主は、
+確かに神々かもしれん
+
+# textboxarrow 0 2
+@フレンネル
+だが、この世界の歴史を
+紡いできたのは…
+
+# face 128 "angry"
+# textboxarrow 0 2
+@フレンネル
+この世界を築き上げてきたのは…
+誰あろう、我ら人類だ！！！
+
+# alpha 28 1 0.5
+# alpha 6 1 0.5
+# alpha 128 1 0.5
+# alpha 129 0 0.5
+# textboxarrow 0 3
+@ノーブル
+！！
+
+# alpha 28 0 0.5
+# alpha 6 0 0.5
+# alpha 128 0 0.5
+# alpha 129 1 0.5
+# textboxarrow 0 2
+@フレンネル
+神々との決別が明確化した以上、
+もはや彼らの意志に
+追従する必要はない！
+
+# textboxarrow 0 2
+@フレンネル
+我ら人類の意志で、
+未来を選択し…
+
+# textboxarrow 0 2
+@フレンネル
+我ら人類の手で、
+この世界の歴史を紡ぐのだ！！
+
+# face 2 "smile"
+# face 3 "smile"
+# textboxarrow 0 2
+@フレンネル
+神々に隷属していた人類は…
+今、ここに死んだのだ！！
+
+# alpha 129 0 0.5
+# alpha 2 1 0.5
+# alpha 3 1 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@市民達
+お、おお…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# alpha 129 1 0.5
+# alpha 2 0 0.5
+# alpha 3 0 0.5
+# textboxarrow 0 2
+@フレンネル
+どんな苦境が待ち受けていようと、
+立ち上がってみせよ！
+
+# textboxarrow 0 2
+@フレンネル
+どんな死の危険に晒されようと、
+生き延びてみせよ！
+
+# textboxarrow 0 2
+@フレンネル
+人類は、
+倒れれば倒れるほど
+強くなる…
+
+# textboxarrow 0 2
+@フレンネル
+そのことを
+忘れてはならん！！
+
+;;※宣言するように、ミカエルに目を向けるフレンネル。
+# textboxarrow 0 2
+@フレンネル
+我々は、
+今ここに立ち上がる！！
+
+# face 2 "angry"
+# face 3 "angry"
+# textboxarrow 0 2
+@フレンネル
+新たなる人類の歴史が…
+今ここに、産声を上げるのだ！！
+
+# se "SE_0607"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "toge"
+# textsize 30
+# alpha 129 0 0.5
+# alpha 2 1 0.5
+# alpha 3 1 0.5
+# textboxarrow 1 0
+@市民達
+…ウォォォォォォォーッ！！！
+
+;;※自らを鼓舞するように、湧き上がる人々。
+# serif 1
+# textwindow "close"
+# textsize 24
+# serif 0
+# textwindow "normal"
+# textsize 24
+# move 28 2 0
+# move 128 4 0
+# alpha 28 1 0.5
+# alpha 128 1 0.5
+# alpha 2 0 0.5
+# alpha 3 0 0.5
+# face 28 "surprise"
+# textboxarrow 0 1
+# voice 9984 "ren_0021"
+@レン
+す、すごい！
+
+# face 128 "normal"
+# textboxarrow 0 3
+@ノーブル
+まったく…
+なんという御方だ！
+
+# alpha 28 0 0.5
+# alpha 128 0 0.5
+# alpha 960029 1 0.5
+# textboxarrow 0 2
+@ミカエル
+『つまり…
+最後まで、我々に
+抗するということですね？』
+
+# alpha 960029 0 0.5
+# alpha 129 1 0.5
+# textboxarrow 0 2
+@フレンネル
+我々人類は、
+神々の支配からの脱却を
+宣言する！
+
+# textboxarrow 0 2
+@フレンネル
+アナタ達が描いた絵空事を、
+我々は受け入れん！
+
+# alpha 960029 1 0.5
+# alpha 129 0 0.5
+# textboxarrow 0 2
+# voice 9972 "michael_0007"
+@ミカエル
+『…人類とは、
+まったく不可解ですね』
+
+# body 100221
+# pos 100221 5
+# scale 100221 0.8 0
+# alpha 100221 0 0
+# textboxarrow 0 2
+@ミカエル
+『…結果は見えているというのに』
+
+# move 6 3 0
+# alpha 960029 0 0.5
+# alpha 100221 1 0.5
+# alpha 6 1 0.5
+# face 6 "angry"
+# textboxarrow 0 2
+@ディーン
+…態勢を立て直す！！
+
+# textboxarrow 0 2
+# voice 9997 "deen_0033"
+@ディーン
+レーヴァテイン！
+連携して当たれ！
+
+# textboxarrow 0 2
+@ディーン
+単独での戦闘は、
+できる限り避けろ！
+
+# move 28 1 0
+# alpha 28 1 0.5
+# textboxarrow 0 1
+@レン
+ディーン！？
+
+# face 6 "normal"
+# textboxarrow 0 2
+@ディーン
+…ただ消されるのを
+待つなんて、
+性に合わねぇ…
+
+# face 6 "angry"
+# textboxarrow 0 2
+# voice 9997 "deen_0007"
+@ディーン
+乗ったぜ、
+フレンネル大公！
+
+# body 200111
+# pos 200111 1
+# scale 200111 0.8 0
+# alpha 200111 0 0
+# body 400711
+# pos 400711 5
+# scale 400711 0.8 0
+# alpha 400711 0 0
+# layer 40 2
+# textboxarrow 0 2
+@ディーン
+…急いで陣形を組め！
+市民に手を触れさせるな！！
+
+# move 40 3 0
+# alpha 40 1 0.5
+# alpha 100221 0 0.5
+# alpha 28 0 0.5
+# alpha 6 0 0.5
+# alpha 200111 1 0.5
+# alpha 400711 1 0.5
+# textboxarrow 0 2
+# voice 9982 "edgar_0037"
+@エドガー
+！！
+
+# face 40 "irregular"
+# textboxarrow 0 2
+@エドガー
+シェキナー！
+ミョルニル！
+打って出る必要はない！
+
+# face 128 "angry"
+# face 28 "angry"
+# textboxarrow 0 2
+@エドガー
+迎撃に専念しろ！
+最後の最後まで、
+人々の守護に徹するんだ！！
+
+# move 28 2 0
+# alpha 40 0 0.5
+# alpha 200111 0 0.5
+# alpha 400711 0 0.5
+# alpha 28 1 0.5
+# alpha 128 1 0.5
+# textboxarrow 0 1
+# voice 9984 "ren_0046"
+@レン
+アンタ達！！
+
+# textboxarrow 0 3
+@ノーブル
+うぬ！
+
+# textboxarrow 0 3
+@ノーブル
+王立軍の者達よ！
+一般市民の守護を！
+
+# layer 10 4
+# textboxarrow 0 3
+@ノーブル
+女、子供を優先に…
+急ぐのだ！
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "normal"
+# alpha 10 1 0.5
+# alpha 28 0 0.5
+# alpha 128 0 0.5
+# textboxarrow 1 2
+@兵士
+は、はい！
+
+# serif 1
+# textwindow "normal"
+# alpha 10 0 0.5
+# alpha 2 1 0.5
+# alpha 3 1 0.5
+# textboxarrow 1 1
+@市民Ａ
+お、俺達もっ…
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 3
+@市民Ｂ
+ああ！
+ありったけの武器をかき集めろ！
+むざむざ、消されてたまるか！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# alpha 10 0 0.5
+# alpha 2 0 0.5
+# alpha 3 0 0.5
+# alpha 960029 1 0.5
+# textboxarrow 0 2
+# voice 9972 "michael_0013"
+@ミカエル
+『…消えかけていた希望の灯火が！』
+
+# textboxarrow 0 2
+@ミカエル
+『 …すべては無意味であると、
+思い知らせなければ
+ならぬようですね』
+
+# alpha 960029 0 0.5
+# alpha 129 1 0.5
+# textboxarrow 0 2
+@フレンネル
+なんとしても生き延びるぞ！
+最後にこの地に立つのは、
+我々人類だ！！
+

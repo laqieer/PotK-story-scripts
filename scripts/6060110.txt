@@ -1,0 +1,321 @@
+;;//背景：平原
+# script "lisp"
+# bgmfile "bgm154" "BgmPJZero001" 0
+# background "plain"
+# body 75
+# pos 75 5
+# scale 75 0.8 0
+# body 960030
+# pos 960030 1
+# scale 960030 0.8 0
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9979 "rebellion_0029"
+# face 75 "angry"
+# face 103611 "angry"
+@リベリオン
+いくぞ神とやら！
+ウオオオオオオオオオオオ！！
+
+# textboxarrow 0 0
+# move 75 3 0.3
+# waitandnext 0.6
+
+# textboxarrow 0 1
+# voice 9971 "gabriel_0005"
+@ガブリエル
+これは不思議なものを
+見ることになりましたね
+ですが…
+
+;;//ガブリエルの攻撃でリベリオンが弾かれる
+# se "SE_5234"
+# move 960030 2 0.5
+# fadein "red" 0.5
+# move 75 5 0.3
+# waitandnext 1
+# face 75 "irregular"
+
+# move 960030 1 0.5
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# alpha 103611 0 0
+# layer 103611 4
+# layer 960030 2
+# layer 75 3
+# se "SE_9146"
+# textboxarrow 0 3
+# voice 9979 "rebellion_battle_0006"
+@リベリオン
+ガハッ…！
+やっぱ神ってのは、
+伊達じゃねえな
+
+# alpha 103611 1 0.5
+# textboxarrow 0 2
+# voice 1036 "ragnarok_unit_0009"
+@ラグナロク
+でも、十分よ
+白き意志は、誰にも砕けはしない！
+
+# textboxarrow 0 1
+@ガブリエル
+甘いですよ
+
+# textboxarrow 0 3
+# face 75 "angry"
+@リベリオン
+お前の相手は俺だ！
+はぁああああああああ！
+
+;;//ラグナロクとリベリオンが連携して攻撃する
+# se "SE_5762"
+# effectbody 1234 1 -200 0
+# effectstart 1234
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# effectskip 1234
+# textboxarrow 0 1
+@ガブリエル
+…しつこいですね
+こちらも少し本気でいきます
+消滅なさい！！
+
+# se "SE_0632"
+# fadeout "black" 1
+# waitandnext 1
+# face 75 "irregular"
+# face 103611 "surprise"
+
+# fadein "white" 0.5
+# textboxarrow 0 3
+# voice 9979 "rebellion_0015"
+# face 75 "angry"
+@リベリオン
+来るぞ！
+
+# textboxarrow 0 2
+# face 103611 "angry"
+@ラグナロク
+分かってるわ
+
+;;//画面フラッシュ
+# se "SE_9172"
+# bgm "stop"
+# fadeout "white" 3
+# waitandnext 4
+
+# fadein "white" 0.5
+# move 960030 3 0
+# mask 960030 off
+# alpha 103611 0 0
+# alpha 75 0 0
+# textboxarrow 0 2
+@ガブリエル
+…爆風に紛れて逃げましたか
+まあ、いいでしょう
+知りたいことは分かりました
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# se "SE_0540"
+# alpha 960030 0 0.5
+# textboxarrow 0 0
+@ガブリエル
+次に会ったときこそ
+“終わり”にいたしましょう
+
+;;――場面転換――
+;;【村】
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# move 103611 2 0
+# move 75 4 0
+# body 502711
+# pos 502711 4
+# scale 502711 0.8 0
+# body 103511
+# pos 103511 2
+# scale 103511 0.8 0
+# body 401711
+# pos 401711 4
+# scale 401711 0.8 0
+# body 302511
+# pos 302511 2
+# scale 302511 0.8 0
+# alpha 302511 0 0
+# alpha 401711 0 0
+# alpha 502711 0 0
+# alpha 103511 0 0
+# bgmfile "bgm214_03" "BgmAncientKillers001" 0
+# background "004_outland"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@フレンネル
+みんな！二人が戻ってきたぞ！
+
+# alpha 502711 1 0.5
+# alpha 103511 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5027 "freischotz_0024"
+# face 502711 "surprise"
+# face 103511 "usual"
+@フライシュッツ
+良かった～♪
+きゃっ…酷い怪我…
+お姉ちゃん、心配だよぉ
+
+# textboxarrow 0 1
+# voice 1035 "damocles_0005"
+@ダモクレス
+あはは
+心配しても死ぬときは死ぬよ～
+
+# textboxarrow 0 1
+# voice 1035 "damocles_kyara_1006"
+# face 103511 "happy"
+@ダモクレス
+でも、愛があれば問題ない！
+クレス、救急箱もってくるね☆
+
+# alpha 502711 0 0.5
+# alpha 103511 0 0.5
+# alpha 401711 1 0.5
+# alpha 302511 1 0.5
+# textboxarrow 0 3
+# voice 4017 "suiha_0002"
+@スイハ
+救急箱ならもって来ています
+
+# textboxarrow 0 1
+# voice 3025 "minerva_0004"
+@ミネルヴァ
+さすがスイハですね
+すぐに手当を
+
+# alpha 401711 0 0.5
+# alpha 302511 0 0.5
+# alpha 103611 1 0.5
+# alpha 75 1 0.5
+# textboxarrow 0 1
+# face 103611 "usual"
+# face 75 "normal"
+@ラグナロク
+この傷は…革命のための道標よ…
+心配しなくて良いわ
+
+# textboxarrow 0 3
+# voice 9979 "rebellion_0020"
+# face 75 "smile"
+@リベリオン
+…ちょっとだけ手こずったぜ
+
+# textflame 0 0
+@フレンネル
+なにがちょっとだ！
+戻ってきてくれて…本当に良かった…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 75 "surprise"
+@リベリオン
+泣いてんのか…？
+なんで…お前が泣く
+
+# textflame 0 0
+@フレンネル
+私は…私の不甲斐なさが悔しいんだっ
+戦うことを君達に任せきっていた
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9979 "rebellion_0008"
+# face 75 "sad"
+@リベリオン
+仕方ねぇだろ…
+お前は…戦う術を持たねえんだから
+
+# textflame 0 0
+@フレンネル
+いや、私にも戦うことはできるんだ
+私にしかできないやり方で
+
+# textflame 0 0
+@フレンネル
+ラグナロク…敵の強大さは
+身をもって知ったはずだ
+倒すためには準備が必要なんだよ
+
+# textflame 0 0
+@フレンネル
+頼む！
+私達と手を組んでくれっ
+未来の勝利のために！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 103611 "shy"
+@ラグナロク
+…リベリオン
+いちおう、礼を言っておくわ…
+あなた達と組むのもありかもね
+
+# textboxarrow 0 3
+# voice 9979 "rebellion_0020"
+# face 75 "smile"
+# face 103611 "normal"
+@リベリオン
+へっ…
+そういうところもアイツに似て
+やがんな…
+
+# textflame 0 0
+@フレンネル
+ありがとう、ラグナロク！
+ここから反撃の狼煙を上げるぞっ
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# fadeout "black" 2
+# waitandnext 3
+;;//暗転
+
+;;――場面転換――
+# bgm "stop"
+# fadein "black" 0.5
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+# se "SE_9169"
+@古文書
+――神々を騙し、
+キラープリンセスの
+組織を作り上げる
+
+@古文書
+私はフレンネル家の《使命》を
+全うすべく全力で動き出した――

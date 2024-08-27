@@ -1,0 +1,406 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第７章 章タイトル：「夢追い人―デザイア―」
+;;第2話　タイトル：縁
+;;7_2_8
+;;スクリプト最後の背景：病院
+;;-----------------------------------------
+# script "lisp"
+# background "201_room"
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;ヴァナルガンド
+# body 3601111
+# pos 3601111 3
+# scale 3601111 0.8 0
+# layer 3601111 2
+# alpha 3601111 0 0
+# mask 3601111 off
+;;アフロディーテ
+# body 3401311
+# pos 3401311 3
+# scale 3401311 0.8 0
+# layer 3401311 2
+# alpha 3401311 0 0
+# mask 3401311 off
+;;エンクウ
+# body 227
+# pos 227 3
+# scale 227 0.8 0
+# layer 227 2
+# alpha 227 0 0
+# mask 227 off
+;;クレイ
+# body 228
+# pos 228 3
+# scale 228 0.8 0
+# layer 228 2
+# alpha 228 0 0
+# mask 228 off
+;;ツカサ
+# body 229
+# pos 229 3
+# scale 229 0.8 0
+# layer 229 2
+# alpha 229 0 0
+# mask 229 off
+;;-----------------------------------------
+;;//背景：室内
+# move 229 2 0
+# alpha 229 1 0
+# mask 229 on
+# move 228 4 0
+# face 228 "irregular"
+# alpha 228 1 0
+# mask 228 on
+# textflame 1 1
+# textboxarrow 0 3
+@クレイ
+…………
+
+# textboxarrow 0 1
+@ツカサ
+…………
+
+# voice 9931 "enkuu_0033"
+# alpha 229 0 0.5
+# alpha 228 0 0.5
+# move 227 3 0
+# face 227 "sad"
+# alpha 227 1 0.5
+# mask 227 off
+# textboxarrow 0 2
+@エンクウ
+すまぬ
+クレイ殿、ツカサ殿
+
+# textboxarrow 0 2
+@エンクウ
+拙僧の目指す「天下統一」は、
+そなた達の考えているものとは
+異なるのやもしれぬ
+
+# face 227 "usual"
+# textboxarrow 0 2
+@エンクウ
+拙僧は、戦うことなく皆がまとまり
+争いのない世界に至る
+そんな「天下統一」を望んでおる
+
+# voice 9931 "enkuu_0030"
+# textboxarrow 0 2
+@エンクウ
+此度の「ネオ・ラグナロク」との
+取り引き…果たして拙僧の望みと
+合致するのか…
+
+# textboxarrow 0 2
+@エンクウ
+いまだ、見出せずにおるのだ
+
+# move 227 2 0.5
+# mask 227 on
+# move 228 4 0
+# face 228 "irregular"
+# alpha 228 1 0.5
+# mask 228 on
+# textboxarrow 0 3
+@クレイ
+…エンクウの事情は、分かったよ
+
+# voice 9930 "clay_0051"
+# textboxarrow 0 3
+@クレイ
+ツカサ…君はどうなんだ？
+たまには話をしてくれても…あれ？
+
+# face 228 "surprise"
+# textboxarrow 0 3
+@クレイ
+ツカサっ？
+さっきまで、そこにいたのに…
+
+# voice 340131 "aphrodite_a_0004"
+# alpha 227 0 0.5
+# alpha 228 0 0.5
+# move 3401311 3 0
+# face 3401311 "usual"
+# alpha 3401311 1 0.5
+# mask 3401311 off
+# textboxarrow 0 2
+@アフロディーテ
+マスターは一人で考えたいことが
+あるみたいよ
+それじゃあね
+
+;;//アフロディーテが立ち去る
+# se "SE_0740"
+# textwindow "close"
+# alpha 3401311 0 0.5
+# waitandnext 0.5
+
+# voice 9930 "clay_0029"
+# move 227 2 0
+# face 227 "usual"
+# alpha 227 1 0.5
+# mask 227 on
+# move 228 4 0
+# face 228 "normal"
+# alpha 228 1 0.5
+# mask 228 on
+# textboxarrow 0 3
+# textwindow "normal"
+@クレイ
+相変わらず、
+あいつはマイペースだな
+
+# face 228 "irregular"
+# textboxarrow 0 3
+@クレイ
+…私も、少し一人で考えたい
+
+# voice 9931 "enkuu_0003"
+# textboxarrow 0 1
+@エンクウ
+うむ…
+つまらぬ昔語りにつき合わせて
+すまなかった
+
+;;//背景：病院
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "hospitalroom"
+# alpha 227 0 0.5
+# alpha 228 0 0.5
+# move 228 3 0
+# face 228 "irregular"
+# alpha 228 1 0
+# mask 228 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@クレイ
+ここもすっかり閑散としているな…
+
+# voice 360111 "vanargand_t_0013"
+# move 3601111 2 0
+# face 3601111 "angry"
+# alpha 3601111 1 0.5
+# mask 3601111 on
+# textboxarrow 0 1
+# move 228 4 0.5
+# mask 228 on
+@ヴァナルガンド
+マスターさん！
+いつ襲われるか分からないのに、
+家に帰りたいだなんてっ…
+
+# voice 9930 "clay_0033"
+# face 228 "normal"
+# textboxarrow 0 3
+@クレイ
+ごめん…
+でも、やっぱりここが一番
+落ち着くんだ
+
+# face 228 "irregular"
+# textboxarrow 0 3
+@クレイ
+…………
+
+# textboxarrow 0 3
+@クレイ
+少し前まで、この診療所は
+憩いの場になってたのにな…
+
+# voice 360111 "vanargand_t_0004"
+# face 3601111 "happy"
+# textboxarrow 0 1
+@ヴァナルガンド
+ふふっ
+毎日、大忙しでしたね
+
+# textboxarrow 0 1
+@ヴァナルガンド
+マスターさんが診療だけでなく、
+悩み相談みたいなことまで
+するからですよ
+
+# textboxarrow 0 1
+@ヴァナルガンド
+怪我や病気をした人はもちろん
+ただお喋りをしに来る人達もいて…
+楽しかったです
+
+# voice 9930 "clay_0003"
+# face 228 "normal"
+# textboxarrow 0 3
+@クレイ
+ああ、楽しかった…
+忙しくて大変だったけど、
+充実してたんだ…
+
+# textboxarrow 0 3
+@クレイ
+あれが…私の求めていた…
+夢にとても近い空間だったんだよ
+
+# face 3601111 "normal"
+# textboxarrow 0 1
+@ヴァナルガンド
+マスター…
+
+# bgmfile "bgm273" "BgmLostRagnarokEvent" 0
+# voice 9930 "clay_0047"
+# face 228 "irregular"
+# textboxarrow 0 3
+@クレイ
+ヴァナルガンド…
+私はどうすればいい？
+何が正しい選択なんだ？
+
+# textboxarrow 0 3
+@クレイ
+あんなに楽しい空間だったはずなのに
+コマンドキラーズの登場で、
+あっけなく瓦解した…
+
+# textboxarrow 0 3
+@クレイ
+ここには誰も寄りつかなくなった
+今も、怪我や病気で苦しんでいる人は
+いるはずなのにっ…
+
+# face 228 "angry"
+# textboxarrow 0 3
+@クレイ
+「奏官」というだけで…
+恐れられる…忌み嫌われる…
+命を狙われる…何故だっ？
+
+# textboxarrow 0 3
+@クレイ
+私は…君と一緒に…
+人々の役に立ちたいと…
+病気の人を救いたいと…
+
+# textboxarrow 0 3
+@クレイ
+そうやって生きてきただけなのに…！
+
+# textboxarrow 0 1
+@ヴァナルガンド
+マスターさん
+マスターさんのお気持ちは、
+私がちゃんと分かっていますから
+
+# face 228 "irregular"
+# textboxarrow 0 3
+@クレイ
+…エンクウの話は、衝撃だったよ
+私には、あんな深い動機はない
+
+# textboxarrow 0 3
+@クレイ
+セブンスキラーズのことを
+エンクウから聞いて、より大きなこと
+ができるのではないかと…
+
+# textboxarrow 0 3
+@クレイ
+より多くの人々を助ける医療が
+行えるのではないかと、そのくらいの
+気持ちで仲間に加わったんだ
+
+# textboxarrow 0 3
+@クレイ
+だから…何が正しいのか分からない
+正しい選択肢はどれなのか…
+
+# textboxarrow 0 3
+@クレイ
+私はどうすべきなのか…
+分からないんだよっ
+
+# face 228 "sad"
+# textboxarrow 0 3
+@クレイ
+ああ…！
+こんなことならバイブスなんて
+なければ良かったっ
+
+# textboxarrow 0 3
+@クレイ
+「奏官」でなければ、
+今でも私は医者として…
+
+# face 3601111 "sad"
+# textboxarrow 0 1
+@ヴァナルガンド
+マスターさん…
+それは…悲しいです…
+
+# face 228 "irregular"
+# textboxarrow 0 3
+@クレイ
+ヴァナルガンド？
+
+# face 3601111 "normal"
+# textboxarrow 0 1
+@ヴァナルガンド
+私は…マスターさんがどうすべき
+なのか…何が正しいのか…
+分かりません
+
+# textboxarrow 0 1
+@ヴァナルガンド
+でも…私はマスターさんと出会えて
+良かったと思っています
+
+# textboxarrow 0 1
+@ヴァナルガンド
+キル姫である私が、戦うこと以外でも
+人々の役に立てるのだと、
+マスターさんが教えて下さいました
+
+# textboxarrow 0 1
+@ヴァナルガンド
+だから…バイブスなんてなければ
+良かったなんて…悲しいです…
+
+# voice 9930 "clay_0033"
+# face 228 "sad"
+# textboxarrow 0 3
+@クレイ
+あ…ごめん…
+ごめんよ、ヴァナルガンド…
+そんなつもりじゃなかったんだ…
+
+# textboxarrow 0 3
+@クレイ
+ごめん…
+分からないんだよ…
+分からなくなったんだ…
+
+# textboxarrow 0 3
+@クレイ
+テュルソスの話を聞いたときには、
+あの提案に乗るのが正しいと思った
+
+# textboxarrow 0 3
+@クレイ
+それなのに…
+考えれば考えるほど、
+分からなくなるんだ…
+
+# textboxarrow 0 3
+@クレイ
+私は…どうすべきなんだ…？
+正しい選択肢は、どれなんだっ…

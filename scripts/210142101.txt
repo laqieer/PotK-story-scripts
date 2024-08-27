@@ -1,0 +1,645 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１４章 章タイトル「ラルゴカタストロフィ―激突―」
+;;第2話－１０　タイトル：決着の刻
+;;2_10_1
+;;スクリプト最後の背景：平原（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;異族化フライクーゲル
+# body 5500231
+# pos 5500231 3
+# scale 5500231 0.8 0
+# layer 5500231 2
+# alpha 5500231 0 0
+# mask 5500231 off
+;;アルテミス
+# body 5400131
+# pos 5400131 3
+# scale 5400131 0.8 0
+# layer 5400131 2
+# alpha 5400131 0 0
+# mask 5400131 off
+;;花異族
+# body 5809801
+# pos 5809801 3
+# scale 5809801 0.8 0
+# layer 5809801 2
+# alpha 5809801 0 0
+# mask 5809801 off
+;;花異族（クローン1）
+# entry 958098011 5809801
+# pos 958098011 3
+# scale 958098011 0.8 0
+# layer 958098011 2
+# alpha 958098011 0 0
+# mask 958098011 off
+;;花異族（クローン2）
+# entry 958098012 5809801
+# pos 958098012 3
+# scale 958098012 0.8 0
+# layer 958098012 2
+# alpha 958098012 0 0
+# mask 958098012 off
+;;ロンギヌス・擬彩
+# body 5300131
+# pos 5300131 3
+# scale 5300131 0.8 0
+# layer 5300131 2
+# alpha 5300131 0 0
+# mask 5300131 off
+;;異族化マサムネ
+# body 5100131
+# pos 5100131 3
+# scale 5100131 0.8 0
+# layer 5100131 2
+# alpha 5100131 0 0
+# mask 5100131 off
+;;異族化パラシュ
+# body 5200431
+# pos 5200431 3
+# scale 5200431 0.8 0
+# layer 5200431 2
+# alpha 5200431 0 0
+# mask 5200431 off
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 2
+# alpha 5401721 0 0
+# mask 5401721 off
+;;レーヴァテイン・擬彩
+# body 5100231
+# pos 5100231 3
+# scale 5100231 0.8 0
+# layer 5100231 2
+# alpha 5100231 0 0
+# mask 5100231 off
+;;擬装フライシュッツ
+# body 5502721
+# pos 5502721 3
+# scale 5502721 0.8 0
+# layer 5502721 2
+# alpha 5502721 0 0
+# mask 5502721 off
+;;擬装ダモクレス
+# body 5103521
+# pos 5103521 3
+# scale 5103521 0.8 0
+# layer 5103521 2
+# alpha 5103521 0 0
+# mask 5103521 off
+;;擬装エルキュール
+# body 5202521
+# pos 5202521 3
+# scale 5202521 0.8 0
+# layer 5202521 2
+# alpha 5202521 0 0
+# mask 5202521 off
+;;グラーシーザ・擬装・ウォーリアー
+# body 5302621
+# pos 5302621 3
+# scale 5302621 0.8 0
+# layer 5302621 2
+# alpha 5302621 0 0
+# mask 5302621 off
+;;ミネルヴァ・擬装・アーチャー
+# body 5302521
+# pos 5302521 3
+# scale 5302521 0.8 0
+# layer 5302521 2
+# alpha 5302521 0 0
+# mask 5302521 off
+;;ネス・擬装・ランサー
+# body 5602021
+# pos 5602021 3
+# scale 5602021 0.8 0
+# layer 5602021 2
+# alpha 5602021 0 0
+# mask 5602021 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;第2話－１０　タイトル：決着の刻
+;;//背景：平原（昼）
+;;//エンシェント達が揃っている
+# move 5302521 2 0
+# face 5302521 "normal"
+# alpha 5302521 1 0
+# mask 5302521 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 5502721 4 0
+# face 5502721 "normal"
+# alpha 5502721 1 0
+# mask 5502721 on
+@ミネルヴァ
+フライシュッツ、大丈夫ですか？
+
+# textboxarrow 0 3
+@フライシュッツ
+うん…
+ちゃんと話し合って出した結論だもん
+おねーちゃん頑張るよ
+
+# textboxarrow 0 3
+@フライシュッツ
+誰も失いたくないから
+
+;;//回想シーン
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "201_room"
+# alpha 5302521 0 0
+# alpha 5502721 0 0
+# move 5302521 3 0
+# face 5302521 "normal"
+# alpha 5302521 1 0
+# mask 5302521 off
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：室内
+# textboxarrow 0 2
+# textwindow "normal"
+@ミネルヴァ
+インテグラルキラーズと
+決着をつけます
+
+# voice 3026 "grayside_0033"
+# alpha 5302521 0 0.5
+# move 5302621 2 0
+# face 5302621 "normal"
+# alpha 5302621 1 0.5
+# mask 5302621 on
+# textboxarrow 0 1
+# move 5602021 4 0
+# face 5602021 "normal"
+# alpha 5602021 1 0.5
+# mask 5602021 on
+@グラーシーザ
+たがいのせいぎをぶつけあうのだな
+いいだろう！
+
+# textboxarrow 0 3
+@ネス
+でも…戦ったら暴走してしまう
+危険があります…
+
+# alpha 5302621 0 0.5
+# move 5103521 2 0
+# face 5103521 "normal"
+# alpha 5103521 1 0.5
+# mask 5103521 on
+# textboxarrow 0 1
+@ダモクレス
+そのときはクレスが癒しちゃうから
+大丈夫！
+
+# alpha 5602021 0 0.5
+# move 5401721 4 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# mask 5401721 on
+# textboxarrow 0 3
+@スイハ
+ええと…
+そのときはグランテピエ達がいるので
+
+# alpha 5103521 0 0.5
+# move 5202521 2 0
+# face 5202521 "normal"
+# alpha 5202521 1 0.5
+# mask 5202521 on
+# textboxarrow 0 1
+@エルキュール
+それは頼もしいですね
+私も暴走を打ち破って希望になって
+みせます！
+
+# voice 5027 "freischotz_0015"
+# alpha 5202521 0 0.5
+# alpha 5401721 0 0.5
+# move 5302521 2 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 on
+# move 5502721 4 0
+# face 5502721 "sad"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+# textboxarrow 0 3
+@フライシュッツ
+ううっ…
+ダメだよ、ミネルヴァちゃん
+いくらヘレナちゃん達がいるからって
+
+# textboxarrow 0 3
+@フライシュッツ
+戦うこと自体が“終焉”の力を
+強めちゃうかもしれないんだよ
+
+# textboxarrow 0 1
+@ミネルヴァ
+だからこそです、フライシュッツ
+このまま私達とインテグラルキラーズ
+が争い続けていても
+
+# textboxarrow 0 1
+@ミネルヴァ
+“終焉”にとって有利になるだけ
+それなら、次の一戦で決めます
+
+# textboxarrow 0 1
+@ミネルヴァ
+彼女達の思いについて、仮説では
+ありますが私達は知りました
+
+# textboxarrow 0 1
+@ミネルヴァ
+その思いに、私達は命がけで
+向き合わなくてはならないんです
+
+# textboxarrow 0 3
+@フライシュッツ
+それは…
+
+# textboxarrow 0 1
+@ミネルヴァ
+納得していただくのは難しいと
+私も理解しています
+もしあなたがイヤなのならば…
+
+# face 5502721 "angry"
+# textboxarrow 0 3
+@フライシュッツ
+ううん
+あたしも戦うよ！
+大切なみんなを守りたいから
+
+# face 5502721 "happy"
+# textboxarrow 0 3
+@フライシュッツ
+その代わり、次で決めようね
+
+# voice 3025 "minerva_0003"
+# textboxarrow 0 1
+@ミネルヴァ
+はい
+皆さん、この一戦に掛けましょう
+
+;;//回想終了
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "plain"
+# alpha 5302521 0 0
+# alpha 5502721 0 0
+# move 5202521 3 0
+# face 5202521 "angry"
+# alpha 5202521 1 0
+# mask 5202521 off
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：平原（昼）
+# bgmfile "bgm439_440" "BgmIntegralNoahBattle006" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@エルキュール
+来ました！
+インテグラルキラーズです
+
+;;//インテグラルキラーズがやって来る
+# alpha 5202521 0 0.5
+# move 5302521 3 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+やはり、彼女達も同じ思いのよう
+ですね
+
+# se "SE_0830"
+# alpha 5302521 0 0.5
+# move 958098011 1 0
+# alpha 958098011 1 0.5
+# mask 958098011 on
+# move 5809801 3 0
+# alpha 5809801 1 0.5
+# mask 5809801 on
+# move 958098012 5 0
+# alpha 958098012 1 0.5
+# mask 958098012 on
+# textboxarrow 0 0
+@異族
+イイイイイイイイイ！
+
+;;//異族の群れが現れる
+# alpha 958098011 0 0.5
+# alpha 5809801 0 0.5
+# alpha 958098012 0 0.5
+# move 5302521 2 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 on
+# move 5401721 4 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# mask 5401721 on
+# textboxarrow 0 3
+@スイハ
+異族の群れを率いています
+
+# textboxarrow 0 1
+@ミネルヴァ
+それは想定済みです
+皆さん、作戦通りに――
+
+# se "SE_8000"
+# alpha 5302521 0 0.5
+# alpha 5401721 0 0.5
+# move 5100231 3 0
+# face 5100231 "angry"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+うっとうしい…
+さっさと消えて！
+
+;;//レーヴァテインが神器で攻撃する
+# se "SE_9084"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 6020 "ness_0025"
+# alpha 5100231 0 0.5
+# move 5602021 3 0
+# face 5602021 "surprise"
+# alpha 5602021 1 0.5
+# mask 5602021 off
+# textboxarrow 0 2
+@ネス
+きゃあっ…！
+いきなり神器を抜くなんて…
+
+# alpha 5602021 0 0.5
+# move 5202521 3 0
+# face 5202521 "angry"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# textboxarrow 0 2
+@エルキュール
+安心して下さい！
+私が受け止めてみせます！
+
+# voice 2025 "hercule_im_0029"
+# textboxarrow 0 2
+@エルキュール
+希望を力に変えて！
+
+;;//エルキュールがレーヴァテインの攻撃を凌ぐ
+# se "SE_9017"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 510023 "revatein_iz_0014"
+# alpha 5202521 0 0.5
+# move 5100231 3 0
+# face 5100231 "angry"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+また、あなた…？
+めんどくさい
+
+# alpha 5100231 0 0.5
+# move 5202521 3 0
+# face 5202521 "angry"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# textboxarrow 0 2
+@エルキュール
+決着をつけましょう！
+世界の希望となるために！
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 5202521 0 0
+# move 5401721 2 0
+# face 5401721 "normal"
+# alpha 5401721 1 0
+# mask 5401721 on
+# move 5100131 4 0
+# face 5100131 "angry"
+# alpha 5100131 1 0
+# mask 5100131 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# se "SE_11742"
+# textboxarrow 0 3
+# textwindow "normal"
+@マサムネ
+スイハ、かかってこい！
+いつぞやの続きをしようではないか
+
+# voice 4017 "suiha_0032"
+# face 5401721 "angry"
+# textboxarrow 0 1
+@スイハ
+望むところです
+手加減はしません
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 5401721 0 0
+# alpha 5100131 0 0
+# move 5200431 2 0
+# face 5200431 "normal"
+# alpha 5200431 1 0
+# mask 5200431 on
+# move 5502721 4 0
+# face 5502721 "angry"
+# alpha 5502721 1 0
+# mask 5502721 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 520043 "parashu_iz_0007"
+# textboxarrow 0 1
+# textwindow "normal"
+@パラシュ
+甘いことを言っていた君が
+ボクの前に立って何ができるって
+いうんだい？
+
+# textboxarrow 0 3
+@フライシュッツ
+みんなを守るためなら
+あたしはこの一戦に全てを込めるよ！
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 5200431 0 0
+# alpha 5502721 0 0
+# move 5400131 2 0
+# face 5400131 "normal"
+# alpha 5400131 1 0
+# mask 5400131 on
+# move 5302521 4 0
+# face 5302521 "normal"
+# alpha 5302521 1 0
+# mask 5302521 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 540013 "arutemisu_iz_0007"
+# textboxarrow 0 1
+# textwindow "normal"
+@アルテミス
+ラグナロクがいない今、あなたを
+討てばまとめる者がいなくなりますね
+
+# textboxarrow 0 3
+@ミネルヴァ
+買いかぶりですよ
+そちらこそ、あなたを討てば
+まとまりを失うのでは？
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 5400131 0 0
+# alpha 5302521 0 0
+# move 5500231 2 0
+# face 5500231 "normal"
+# alpha 5500231 1 0
+# mask 5500231 on
+# move 5602021 4 0
+# face 5602021 "normal"
+# alpha 5602021 1 0
+# mask 5602021 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 550023 "furaikugeru_iz_0002"
+# textboxarrow 0 1
+# textwindow "normal"
+@フライクーゲル
+ヘ～イ！
+ヘアピィでホットなバトルに
+しようね
+
+# voice 6020 "ness_unit_0009"
+# face 5602021 "angry"
+# textboxarrow 0 3
+@ネス
+規律正しくあるべきですが、
+力の節制はしません！
+全力でいきます！
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 5500231 0 0
+# alpha 5602021 0 0
+# move 5300131 2 0
+# face 5300131 "normal"
+# alpha 5300131 1 0
+# mask 5300131 on
+# move 5302621 4 0
+# face 5302621 "normal"
+# alpha 5302621 1 0
+# mask 5302621 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 3
+# textwindow "normal"
+@グラーシーザ
+たがいのせいぎがぶつかるのならば
+とことんまでしんねんをたたきつける
+のみだ！さあ、かかってこい！
+
+# textboxarrow 0 1
+@ロンギヌス
+あなたの正義に対する信念もまた
+愛と呼べるのでしょう
+でも、私は…
+
+# se "SE_5207"
+# face 5300131 "angry"
+# textboxarrow 0 1
+@ロンギヌス
+槍を取り、あなたを討ちます！
+
+# voice 1035 "damocles_battle_0004"
+# alpha 5300131 0 0.5
+# alpha 5302621 0 0.5
+# move 5103521 3 0
+# face 5103521 "angry"
+# alpha 5103521 1 0.5
+# mask 5103521 off
+# textboxarrow 0 2
+@ダモクレス
+愛ならクレスも負けないよ！
+思い切り戦って、思い切り癒し
+ちゃうからね

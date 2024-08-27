@@ -1,0 +1,277 @@
+;;-----------------------------------------
+;;3_2_12_3
+;;-----------------------------------------
+# script "lisp"
+# background "201_border"
+# bgmfile "bgm154" "BgmPJZero001" 0
+;;-----------------------------------------
+;;カミト
+# body 210
+# pos 210 4
+# scale 210 0.8 0
+# layer 210 5
+# mask 210 off
+# alpha 210 0 0
+;;アスカロン
+# body 3102311
+# pos 3102311 2
+# scale 3102311 0.8 0
+# alpha 3102311 1 0
+;;グリモワール
+# body 3501711
+# pos 3501711 4
+# scale 3501711 0.8 0
+# alpha 3501711 1 0
+;;巨大デーモン
+# body 5810301
+# pos 5810301 3
+# scale 5810301 0.8 0
+# mask 5810301 off
+# alpha 5810301 0 0
+;;魔獣化マサムネ
+# body 1100111
+# pos 1100111 2
+# scale 1100111 0.8 0
+# layer 1100111 4
+# alpha 1100111 0 0
+;;-----------------------------------------
+;;暗転
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;霧
+# imageset 1 "kiri_03"
+# imagescale 1 2.5 0
+# imagealpha 1 0 0
+# imagelayer 1 4
+# imageset 2 "kiri_03"
+# imagescale 2 2 0
+# imagealpha 2 0 0
+# imagelayer 2 3
+;;-----------------------------------------
+# face 3102311 "angry"
+# face 3501711 "angry"
+# voice 310231 "ascalon_a_unit_0008"
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+レヴィアタンの力、
+味わってみますか？
+
+# voice 350171 "grimoire_ge_unit_0009"
+# textboxarrow 0 3
+@グリモワール
+報いを受けるがいいわっ！
+
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# alpha 5810301 1 0.5
+# textwindow "toge"
+# textboxarrow 0 0
+# se "SE_0867"
+@？？？
+GYAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAA
+AAAAAAAAAAAAA…
+
+;;巨大死霊が崩れ落ちて消え去る
+# alpha 5810301 0 1
+# se "SE_5215"
+# textwindow "close"
+# waitandnext 1.5
+
+# alpha 1100111 1 0.5
+# alpha 210 1 0.5
+# face 210 "happy"
+# voice 9936 "kamito_0004"
+# textwindow "nomal"
+# textboxarrow 0 3
+@カミト
+やった！
+あの巨大な化け物を…倒した！！
+
+# voice 11001 "masamunem_0019"
+# textboxarrow 0 1
+@マサムネ
+ふぅ…
+刀の腕は錆びてなかったようだな
+
+# alpha 1100111 0 0.5
+# alpha 210 0 0.5
+# alpha 3102311 1 0.5
+# alpha 3501711 1 0.5
+# face 3501711 "angry"
+# voice 350171 "grimoire_ge_unit_0006"
+# textboxarrow 0 3
+@グリモワール
+これぐらいじゃワタシの怒りは
+治まらないわっ
+
+# voice 310231 "ascalon_a_0027"
+# textboxarrow 0 1
+@アスカロン
+とても強かったですね！
+はぁ…羨ましい
+
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# move 210 3 0
+# alpha 210 1 0.5
+# textboxarrow 0 2
+@カミト
+みんな！
+良かった…
+
+# alpha 3501711 1 0.5
+# move 210 2 0.5
+# face 3501711 "angry"
+# voice 350171 "grimoire_ge_0010"
+# textboxarrow 0 3
+@グリモワール
+全然良くないわよ！
+
+# face 210 "surprise"
+# voice 9936 "kamito_0023"
+# textboxarrow 0 1
+@カミト
+えっ？
+
+# textboxarrow 0 3
+@グリモワール
+思い出したわ…
+キラーメイル…
+あいつは旧世代の遺物よ！
+
+# alpha 3501711 0 0.5
+# alpha 210 0 0.5
+# move 1100111 3 0
+# mask 1100111 off
+# alpha 1100111 1 0.5
+# face 1100111 "sad"
+# voice 11001 "masamunem_0009"
+# textboxarrow 0 2
+@マサムネ
+旧世代とはひどいな
+意識をなくしていた間に
+かなりの年月が経っていそうだが…
+
+# move 1100111 2 0.5
+# mask 1100111 on
+# move 210 4 0
+# alpha 210 1 0.5
+# face 210 "normal"
+# voice 9936 "kamito_0001"
+# textboxarrow 0 3
+@カミト
+あの…
+ヴァリンという名前に
+心当たりはある？
+
+# face 1100111 "angry"
+# voice 11001 "masamunem_0023"
+# textboxarrow 0 1
+@マサムネ
+博士のことを知っているのか！？
+
+# textboxarrow 0 3
+@カミト
+博士だったんだ…
+さっきの部屋に戻れば、
+もっと詳しいことが分かると思う
+
+# face 1100111 "normal"
+# voice 11001 "masamunem_0033"
+# textboxarrow 0 1
+@マサムネ
+よし！
+すぐに――
+
+# alpha 1100111 0 0.5
+# alpha 210 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# bgm "stop"
+;;地響き
+# se "SE_5613"
+;;画面揺れ
+# shake 1 2
+# waitandnext 2.5
+
+;;巨大な咆哮
+# se "SE_0854"
+# bgmfile "bgm420" "BgmIntegralNoahBattle003" 0
+# move 210 3 0
+# alpha 210 1 0.5
+# move 3102311 1 0
+# alpha 3102311 1 0.5
+# move 3501711 5 0
+# alpha 3501711 1 0.5
+# face 210 "surprise"
+# face 3102311 "surprise"
+# face 3501711 "angry"
+# voice 350171 "grimoire_ge_0014"
+# textwindow "nomal"
+# textboxarrow 0 3
+@グリモワール
+今度は何なのよ！？
+いい加減にしなさい！
+
+# voice 310231 "ascalon_a_0018"
+# textboxarrow 0 1
+@アスカロン
+そんな…
+そんなことって…
+
+# voice 9936 "kamito_0024"
+# textboxarrow 0 2
+@カミト
+霧の向こうに何か見える？
+なっ！
+まさか…
+
+# alpha 210 0 0.5
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;霧演出
+# imagealpha 1 1 1
+# imagepos 1 -70 170
+# imagealpha 2 1 1
+# imagepos 2 50 -100
+# waitandnext 1
+
+;;巨大死霊が何体も現れる
+# move 5810301 4 0
+# scale 5810301 0.6 0
+# alpha 5810301 1 0.8
+# imagealpha 1 0.5 1
+# imagerightout 2 7
+# imagealpha 2 0 1
+# waitandnext 1
+
+# alpha 5810301 0 0.7
+# waitandnext 0.9
+
+# move 5810301 2 0
+# scale 5810301 1 0
+# alpha 5810301 1 1
+# waitandnext 1.2
+
+# alpha 5810301 0 1
+# waitandnext 1.2
+
+# move 5810301 3 0
+# scale 5810301 0.8 0
+# alpha 5810301 1 0.6
+# waitandnext 0.8
+
+# textwindow "toge"
+# textboxarrow 0 0
+# se "SE_0868"
+@？？？
+RYAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAA
+AAAAAAAAAAAAA！！

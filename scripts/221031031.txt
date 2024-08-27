@@ -1,0 +1,571 @@
+;;-----------------------------------------
+;;■□■エイプリルフールイベント「ゲバルト伯爵×でんぱ」編シナリオ（調整稿）_20190225■□■
+;;イベントタイトル「オッティモ・オブ・キル」
+;;【EP3】
+;;スクリプト最後の背景：黒
+;;-----------------------------------------
+# script "lisp"
+# background "300_devil_daytime01"
+# bgmfile "bgm295" "BgmLostRagnarokBattle003" 0
+;;-----------------------------------------
+;;ゲバルト伯爵
+# body 160
+# pos 160 3
+# scale 160 0.8 0
+# layer 160 2
+# alpha 160 0 0
+# mask 160 off
+;;でんぱ
+# body 3101811
+# pos 3101811 3
+# scale 3101811 0.8 0
+# layer 3101811 2
+# alpha 3101811 0 0
+# mask 3101811 off
+;;今泉P
+# body 150
+# pos 150 3
+# scale 150 0.8 0
+# layer 150 2
+# alpha 150 0 0
+# mask 150 off
+;;ケイオスリオン兵
+# body 3820001
+# pos 3820001 1
+# scale 3820001 0.8 0
+# layer 3820001 2
+# alpha 3820001 1 0
+# mask 3820001 off
+;;ケイオスリオン兵（クローン1）
+# entry 938200011 3820001
+# pos 938200011 3
+# scale 938200011 0.8 0
+# layer 938200011 2
+# alpha 938200011 1 0
+# mask 938200011 off
+;;ケイオスリオン兵（クローン2）
+# entry 938200012 3820001
+# pos 938200012 5
+# scale 938200012 0.8 0
+# layer 938200012 2
+# alpha 938200012 1 0
+# mask 938200012 off
+;;-----------------------------------------
+;;//背景：ゲバルト伯爵の屋敷
+;;//演出：悪魔人の兵士達が力なく倒れる
+# textwindow "close"
+# waitandnext 1
+
+# se "SE_3001"
+# alpha 3820001 0 0.5
+# alpha 938200011 0 0.5
+# alpha 938200012 0 0.5
+# waitandnext 0.5
+
+# se "SE_6504"
+# voice 310181 "pok_aprilfool_0083_denparley"
+# emotionbody 1000 3 3101811 10 290
+# effectpattern 1000 3 3
+# effectstart 1000
+# move 3101811 3 0
+# face 3101811 "normal"
+# alpha 3101811 1 0.5
+# mask 3101811 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@でんぱ
+みんなぁ～、
+応援ありがとぉ～☆
+
+# voice 310181 "pok_aprilfool_0084_Gewalt"
+# effectskip 1000
+# alpha 3101811 0 0.5
+# move 160 3 0
+# face 160 "normal"
+# alpha 160 1 0.5
+# mask 160 off
+# textboxarrow 0 2
+@ゲバルト伯爵
+…………
+;;//感動でﾌﾟﾙﾌﾟﾙ震えてるイメージ
+
+# move 160 2 0.5
+# mask 160 on
+# move 3101811 4 0
+# face 3101811 "normal"
+# alpha 3101811 1 0.5
+# mask 3101811 on
+# textboxarrow 0 3
+# voice 310181 "pok_aprilfool_0085_denparley"
+@でんぱ
+どう、おってぃもさん！
+ぱーるんのライブ、見ててくれた？
+
+# voice 310181 "pok_aprilfool_0086_Gewalt"
+# textboxarrow 0 1
+@ゲバルト伯爵
+お…
+おぉ…
+
+# voice 310181 "pok_aprilfool_0087_denparley"
+# textboxarrow 0 3
+@でんぱ
+ご、ごめんね？
+でも、急に襲って来るんだもん…
+だから歌の力で…
+
+# voice 310181 "pok_aprilfool_0088_Gewalt"
+# bgm "stop"
+# face 160 "angry"
+# textboxarrow 0 1
+@ゲバルト伯爵
+エクセレントォオッティモオォォ！！
+
+# voice 310181 "pok_aprilfool_0089_denparley"
+# emotionbody 1001 1 3101811 10 310
+# effectpattern 1001 1 0
+# effectstart 1001
+# face 3101811 "surprise"
+# textboxarrow 0 3
+@でんぱ
+ひゃああぁっ！
+な、なに、ビックリしたぁ～！？
+
+# voice 310181 "pok_aprilfool_0090_Gewalt"
+# bgmfile "bgm275" "BgmLostRagnarokEvent" 0
+# face 160 "normal"
+# textboxarrow 0 1
+@ゲバルト伯爵
+なんと…
+なんと美しい…
+
+# voice 310181 "pok_aprilfool_0091_Gewalt"
+# textboxarrow 0 1
+@ゲバルト伯爵
+今まで聴いた歌は、
+すべて偽物だったとは…
+
+# voice 310181 "pok_aprilfool_0092_denparley"
+# textboxarrow 0 3
+@でんぱ
+げ、ゲバルト…伯爵、さん？
+
+# voice 310181 "pok_aprilfool_0093_Gewalt"
+# face 160 "angry"
+# textboxarrow 0 1
+@ゲバルト伯爵
+ノン、
+ノンノンノンッ！！
+
+# face 3101811 "sad"
+# voice 310181 "pok_aprilfool_0094_denparley"
+# textboxarrow 0 3
+@でんぱ
+ひぃっ！？
+;;//ゲバルトの迫力に引いてる感じで
+
+# voice 310181 "pok_aprilfool_0095_Gewalt"
+# face 160 "normal"
+# textboxarrow 0 1
+@ゲバルト伯爵
+おってぃも、と呼んでくれて
+構わない
+
+# voice 310181 "pok_aprilfool_0096_denparley"
+# face 3101811 "surprise"
+# textboxarrow 0 3
+@でんぱ
+お、おってぃもさん？
+
+# voice 310181 "pok_aprilfool_0097_Gewalt"
+# face 160 "angry"
+# textboxarrow 0 1
+@ゲバルト伯爵
+グラッティエ！
+なんと、なんと美しい声の調べ！
+
+# voice 310181 "pok_aprilfool_0098_Gewalt"
+# textboxarrow 0 1
+@ゲバルト伯爵
+きみこそ、まさに真の歌姫、
+この穢れた地上に現れし奇跡！
+
+# voice 310181 "pok_aprilfool_0099_denparley"
+# face 3101811 "shy"
+# textboxarrow 0 3
+@でんぱ
+ふ、ふみゃぁ～
+そ、そうかな…
+;;//照れ
+
+# voice 310181 "pok_aprilfool_0100_Gewalt"
+# textboxarrow 0 1
+@ゲバルト伯爵
+きみのような至上の姫こそ、
+私の隣に立つに相応しいッ！
+
+# voice 310181 "pok_aprilfool_0101_Gewalt"
+# face 160 "normal"
+# textboxarrow 0 1
+@ゲバルト伯爵
+そんな君が
+私を「おってぃも」と呼ぶのなら
+喜んでその名を名乗ろう…
+
+# voice 310181 "pok_aprilfool_0102_Gewalt"
+;;//ゲバルト伯爵
+# textboxarrow 0 1
+@おってぃも
+どうか、先ほどまでの無礼、
+許してほしい…
+
+# voice 310181 "pok_aprilfool_0103_denparley"
+# face 3101811 "sad"
+# textboxarrow 0 3
+@でんぱ
+ぱーるんも…
+その、急にやって来ちゃって
+ごめんなさい…おってぃもさん
+;;//文言調整
+
+# voice 310181 "pok_aprilfool_0104_Gewalt"
+;;//ゲバルト伯爵
+# face 160 "angry"
+# textboxarrow 0 1
+@おってぃも
+おお、おおっ！
+なんと…心が広い…
+
+# voice 310181 "pok_aprilfool_0105_Gewalt"
+;;//ゲバルト伯爵
+# textboxarrow 0 1
+@おってぃも
+これぞまさに、穢れ無き光（アイドル）！
+;;//「穢れ無き光」＝アイドルと読んでください
+
+# voice 310181 "pok_aprilfool_0106_denparley"
+# face 3101811 "normal"
+# textboxarrow 0 3
+@でんぱ
+大げさだよぉ～
+でも、ぱーるんの歌を褒めてくれて
+ありがとう！おってぃもさん！
+
+# voice 310181 "pok_aprilfool_0107_Gewalt"
+;;//ゲバルト伯爵
+# face 160 "normal"
+# textboxarrow 0 1
+@おってぃも
+なに、美しいものは美しいと
+言わねば、私の格に関わる
+
+# voice 310181 "pok_aprilfool_0108_Gewalt"
+;;//ゲバルト伯爵
+# textboxarrow 0 1
+@おってぃも
+しかし…
+私の覇道はここで潰えるとは…
+
+# voice 310181 "pok_aprilfool_0109_Gewalt"
+;;//ゲバルト伯爵
+# textboxarrow 0 1
+@おってぃも
+だが…私の心は歌姫と会えた感動で
+震えているっ…
+
+# voice 310181 "pok_aprilfool_0110_Gewalt"
+;;//ゲバルト伯爵
+# textboxarrow 0 1
+@おってぃも
+至上の歌姫が
+ファンキルの主役に立つ…
+その喜びが体を震わせている！
+
+# voice 310181 "pok_aprilfool_0111_denparley"
+# face 3101811 "normal"
+# textboxarrow 0 3
+@でんぱ
+……あのね、
+おってぃもさん
+
+# voice 310181 "pok_aprilfool_0112_Gewalt"
+;;//ゲバルト伯爵
+# textboxarrow 0 1
+@おってぃも
+なにかな、至上の歌姫よ
+
+# voice 310181 "pok_aprilfool_0113_denparley"
+# textboxarrow 0 3
+@でんぱ
+よかったら、
+私からプロデューサーに
+掛け合ってみようか？
+
+# voice 310181 "pok_aprilfool_0114_Gewalt"
+;;//ゲバルト伯爵
+# face 160 "angry"
+# textboxarrow 0 1
+@おってぃも
+なにっ…？
+
+# voice 310181 "pok_aprilfool_0115_Gewalt"
+;;//ゲバルト伯爵
+# face 160 "normal"
+# textboxarrow 0 1
+@おってぃも
+いや、いや…
+そもそもプロデューサーとは
+何者だ？
+
+# voice 310181 "pok_aprilfool_0116_denparley"
+# textboxarrow 0 3
+@でんぱ
+えっとね？
+この世界を作ってる一番偉い人だよ☆
+
+# voice 310181 "pok_aprilfool_0117_Gewalt"
+;;//ゲバルト伯爵
+# emotionbody 1002 1 160 120 310
+# effectpattern 1002 1 0
+# effectstart 1002
+# face 160 "angry"
+# textboxarrow 0 1
+@おってぃも
+オッティモ！
+まさか、神であったとは…！
+
+# voice 310181 "pok_aprilfool_0118_denparley"
+# face 3101811 "smile"
+# textboxarrow 0 3
+@でんぱ
+その人に頼めば大丈夫！
+ワタシとおってぃもさんが
+お願いすれば、ピカッと解決だよ
+
+# voice 310181 "pok_aprilfool_0119_denparley"
+# face 3101811 "normal"
+# textboxarrow 0 3
+@でんぱ
+一緒にファンキルを盛り上げよう！
+
+# voice 310181 "pok_aprilfool_0120_Gewalt"
+;;//ゲバルト伯爵
+# face 160 "angry"
+# textboxarrow 0 1
+@おってぃも
+至上の歌姫よ
+感謝しよう！
+
+# voice 310181 "pok_aprilfool_0121_denparley"
+# emotionbody 1003 10 3101811 -70 200
+# effectpattern 1003 4 3
+# effectstart 1003
+# face 3101811 "smile"
+# textboxarrow 0 3
+@でんぱ
+あははっ！
+おってぃもさん喜びすぎだよ
+
+# voice 310181 "pok_aprilfool_0122_Gewalt"
+;;//ゲバルト伯爵
+# effectskip 1003
+# face 160 "normal"
+# textboxarrow 0 1
+@おってぃも
+しかし、なにから始めるべきか…
+巧妙かつ大胆な策が必要だ
+
+# voice 310181 "pok_aprilfool_0123_Gewalt"
+;;//ゲバルト伯爵
+# textboxarrow 0 1
+@おってぃも
+多くのマスターの目に留まり、
+そして、誰もが私の存在に
+気づくような…
+
+# voice 310181 "pok_aprilfool_0124_Gewalt"
+;;//ゲバルト伯爵
+# textboxarrow 0 1
+@おってぃも
+閃光のような輝きが必要だ…
+
+# voice 310181 "pok_aprilfool_0125_denparley"
+# face 3101811 "normal"
+# textboxarrow 0 3
+@でんぱ
+むむむ～
+じゃあイベントクリアでゲットできる
+スタンプなんてどうかな☆
+
+# voice 310181 "pok_aprilfool_0126_Gewalt"
+;;//ゲバルト伯爵
+# textboxarrow 0 1
+@おってぃも
+スタンプ…
+
+# voice 310181 "pok_aprilfool_0127_denparley"
+# face 3101811 "normal"
+# textboxarrow 0 3
+@でんぱ
+そうっ！
+それなら、たっくさんの人が
+使えるよ
+
+# voice 310181 "pok_aprilfool_0128_denparley"
+# se "SE_6504"
+# emotionbody 1004 3 3101811 10 290
+# effectpattern 1004 1 3
+# effectstart 1004
+# face 3101811 "smile"
+# textboxarrow 0 3
+@でんぱ
+おってぃもさんのスタンプを
+使うたびに、みんなこのイベントを
+思い出すよ☆
+
+# voice 310181 "pok_aprilfool_0129_denparley"
+# face 3101811 "normal"
+# textboxarrow 0 3
+@でんぱ
+それに、おってぃもさんの姿が
+どんどん浸透していけば、
+もっともっと人気が出るはず！
+
+# voice 310181 "pok_aprilfool_0130_Gewalt"
+;;//ゲバルト伯爵
+# face 160 "angry"
+# textboxarrow 0 1
+@おってぃも
+おお…おお！
+なんという神算鬼謀っ
+
+# voice 310181 "pok_aprilfool_0131_denparley"
+# face 3101811 "shy"
+# textboxarrow 0 3
+@でんぱ
+ふみゃ～
+あ、ありがとう…
+
+# voice 310181 "pok_aprilfool_0132_Gewalt"
+;;//ゲバルト伯爵
+# textboxarrow 0 1
+@おってぃも
+ならば至上の歌姫よ！
+君はなによりも
+求められなければいけない！
+
+# voice 310181 "pok_aprilfool_0133_denparley"
+# face 3101811 "surprise"
+# textboxarrow 0 3
+@でんぱ
+求められる…？
+それってどういうこと？
+
+# voice 310181 "pok_aprilfool_0135_Gewalt"
+;;//ゲバルト伯爵
+# textboxarrow 0 1
+@おってぃも
+このイベントがより盛り上がり、
+綺羅星のように輝く時！
+その時、至上の歌姫が舞い降りるのだ
+
+# voice 310181 "pok_aprilfool_0136_denparley"
+# emotionbody 1005 10 3101811 -70 200
+# effectpattern 1005 4 3
+# effectstart 1005
+# face 3101811 "smile"
+# textboxarrow 0 3
+@でんぱ
+わぁ～い♪
+なんだか、すっごく面白そう！
+
+# voice 310181 "pok_aprilfool_0137_denparley"
+# effectskip 1005
+# face 3101811 "normal"
+# textboxarrow 0 3
+@でんぱ
+ぱーるん、頑張るねっ☆
+
+# voice 310181 "pok_aprilfool_0138_Gewalt"
+;;//ゲバルト伯爵
+# face 160 "normal"
+# textboxarrow 0 1
+@おってぃも
+ともにこの世界を
+盛り上げようではないか
+
+# voice 310181 "pok_aprilfool_0139_denparley"
+# se "SE_6504"
+# emotionbody 1006 3 3101811 10 290
+# effectpattern 1006 1 3
+# effectstart 1006
+# face 3101811 "smile"
+# textboxarrow 0 3
+@でんぱ
+うん！
+それじゃあ、れっつご～☆
+
+# voice 310181 "pok_aprilfool_0140_0141"
+# textboxarrow 0 0
+@おってぃも&でんぱ
+「オッティモ・オブ・キル」開幕！
+
+# bgm "stop"
+;;//画面暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 160 0 0
+# alpha 3101811 0 0
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//時間経過演出
+;;//背景：ケイオスリオン
+;;//今泉Pが姿を現す
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# bgmfile "bgm326" "BgmApril2019" 0
+# move 150 3 0
+# face 150 "normal"
+# alpha 150 1 0.5
+# mask 150 off
+# textboxarrow 0 2
+# textwindow "normal"
+@今泉P
+これで、約束は果たせたかな…？
+;;//文言追加
+
+;;//画面暗転
+# fadeout "black" 1.5
+# waitandnext 1.6
+
+# effectskip 1201
+# effectskip 1801
+# bgm "stop"
+# waitandnext 0.1
+
+# se "SE_5594"
+# fadein "black" 0.3
+# imagealpha 0 1 0
+# imagescale 0 10 0
+# imagepos 0 0 0 
+# textsize 24
+# textflame 0 0
+# textalign "center"
+;;ナレーション
+@
+「ファンキルジャック」をプレイして
+
+# textalign "center"
+# se "SE_5594"
+;;ナレーション
+@
+オッティモスタンプと
+でんぱ・音繋・ミューズを
+ゲットしよう！

@@ -1,0 +1,557 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;インテグラルキラーズサイドストーリー
+;;第2話―９　タイトル：淘汰の果て
+;;2_9_0
+;;スクリプト最後の背景：村
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgm "bgm021" 0
+;;-----------------------------------------
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 3
+# alpha 24 0 0
+# mask 24 off
+;;ティルフィング（別）
+# entry 9241 24
+# pos 9241 3
+# scale 9241 0.8 0
+# layer 9241 2
+# alpha 9241 0 0
+# mask 9241 off
+# brightness 9241 0.8 0
+;;ロンギヌス
+# body 300111
+# pos 300111 3
+# scale 300111 0.8 0
+# layer 300111 2
+# alpha 300111 0 0
+# mask 300111 off
+;;マサムネ（神7）
+# body 100111
+# pos 100111 3
+# scale 100111 0.8 0
+# layer 100111 2
+# alpha 100111 0 0
+# mask 100111 off
+;;パラシュ（神7）
+# body 200411
+# pos 200411 3
+# scale 200411 0.8 0
+# layer 200411 2
+# alpha 200411 0 0
+# mask 200411 off
+;;レーヴァテイン
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# layer 100221 2
+# alpha 100221 0 0
+# mask 100221 off
+;;アルテミス
+# body 400131
+# pos 400131 3
+# scale 400131 0.8 0
+# layer 400131 2
+# alpha 400131 0 0
+# mask 400131 off
+;;フライクーゲル
+# body 500211
+# pos 500211 3
+# scale 500211 0.8 0
+# layer 500211 2
+# alpha 500211 0 0
+# mask 500211 off
+;;パラケルスス
+# body 101311
+# pos 101311 3
+# scale 101311 0.8 0
+# layer 101311 2
+# alpha 101311 0 0
+# mask 101311 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第2話―９　タイトル：淘汰の果て
+;;//背景：平原
+# voice 1014 "tyrufing_battle_0001"
+# move 24 2 0
+# face 24 "angry"
+# alpha 24 1 0
+# mask 24 on
+# textboxarrow 0 1
+# move 9241 4 0
+# face 9241 "angry"
+# alpha 9241 1 0
+# mask 9241 on
+# textflame 1 1
+@ティルフィング
+はあああああ！
+
+;;ティルフィング（別）
+# textboxarrow 0 3
+@ティルフィング
+やあああああ！
+
+;;//ティルフィングが相手を斬る
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@ティルフィング
+安心して眠りなさい
+
+# se "SE_4000"
+# waitandnext 0.5
+
+;;//ティルフィング（別）が倒れる
+# se "SE_3001"
+# waitandnext 0.5
+
+;;ティルフィング（別）
+# face 9241 "sad"
+# textboxarrow 0 3
+@ティルフィング
+ああ…私は…
+
+;;//ティルフィング（別）光演出
+# se "SE_9148"
+# bgm "stop"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# alpha 9241 0 0
+# move 24 3 0
+# face 24 "normal"
+# alpha 24 1 0
+# mask 24 off
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# bgm "bgm005" 0
+# voice 1014 "tyrufing_0001"
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+マスター
+お待たせしました
+
+# move 24 2 0.5
+# mask 24 on
+# move 100221 4 0
+# face 100221 "normal"
+# alpha 100221 1 0.5
+# mask 100221 on
+# textboxarrow 0 3
+@レーヴァテイン
+やるね…ティル
+これで、あと残り何人だっけ？
+
+;;//選択肢
+;;
+;;A一人だ
+# select "一人だ" "select_label_01"
+やるね…ティル
+これで、あと残り何人だっけ？
+
+;;A
+# label "select_label_01"
+# textboxarrow 0 1
+@ティルフィング
+あと一人で、
+私はオリジナルになれる…
+
+# voice 1001 "masamune_0004"
+# alpha 24 0 0.5
+# alpha 100221 0 0.5
+# move 200411 2 0
+# face 200411 "normal"
+# alpha 200411 1 0.5
+# mask 200411 on
+# move 100111 4 0
+# face 100111 "nutual"
+# alpha 100111 1 0.5
+# mask 100111 on
+# textboxarrow 0 3
+@マサムネ
+見事なものだ
+長き間、淘汰を続けてきた甲斐が
+あったな
+
+# textboxarrow 0 1
+@パラシュ
+ボクもまだその高みには至れていない
+最後の一人、気を引き締めて臨むん
+だね
+
+# voice 3001 "ronginusu_0002"
+# alpha 200411 0 0.5
+# alpha 100111 0 0.5
+# move 24 2 0
+# face 24 "normal"
+# alpha 24 1 0.5
+# mask 24 on
+# move 300111 4 0
+# face 300111 "normal"
+# alpha 300111 1 0.5
+# mask 300111 on
+# textboxarrow 0 3
+@ロンギヌス
+あの…怪我してますよ
+治療しないと…
+
+# textboxarrow 0 1
+@ティルフィング
+このくらい平気です
+しばらくすれば治りますので
+
+# alpha 300111 0 0.5
+# move 400131 4 0
+# face 400131 "nutual"
+# alpha 400131 1 0.5
+# mask 400131 on
+# textboxarrow 0 3
+@アルテミス
+そういうときに限って危機が
+訪れるものです
+油断してはいけません
+
+# textboxarrow 0 3
+@アルテミス
+近くに村があります
+そこで治療を
+
+# voice 1014 "tyrufing_0003"
+# textboxarrow 0 1
+@ティルフィング
+は…はい
+
+;;//背景：村（１章でパラケルススとヘルマンがいた村背景）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "005_Windmill"
+# alpha 24 0 0
+# alpha 400131 0 0
+# move 400131 3 0
+# face 400131 "nutual"
+# alpha 400131 1 0
+# mask 400131 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm002" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@アルテミス
+病院はどこでしょう？
+この辺りに…
+
+;;//フライクーゲルが駆けてくる
+# se "SE_5575"
+# move 500211 2 0
+# face 500211 "normal"
+# alpha 500211 1 0.5
+# mask 500211 on
+# textboxarrow 0 1
+# move 400131 4 0.5
+# mask 400131 on
+@フライクーゲル
+ヘ～イ！
+ちょっと通してね～っ
+
+# textboxarrow 0 3
+@アルテミス
+あら…
+キル姫ですか
+
+# voice 5002 "furaikugeru_0022"
+# face 500211 "happy"
+# textboxarrow 0 1
+@フライクーゲル
+ワオ！
+こんなにたくさんのキル姫がここに
+来るなんて珍しいね
+
+# voice 5002 "furaikugeru_kyara_1001"
+# textboxarrow 0 1
+@フライクーゲル
+みんな、ヘアピィしてる～？
+…ヘイ！そこのきみっ
+
+# alpha 400131 0 0.5
+# move 24 4 0
+# face 24 "normal"
+# alpha 24 1 0.5
+# mask 24 on
+# textboxarrow 0 3
+@ティルフィング
+私ですか？
+
+# textboxarrow 0 1
+@フライクーゲル
+怪我してるね
+オーケー！
+カモォ～ン
+
+# voice 1014 "tyrufing_0022"
+# face 24 "surprise"
+# textboxarrow 0 3
+@ティルフィング
+えっ？
+ちょ…ちょっと待って下さい…
+
+# move 500211 1 0.5
+# move 24 3 0.5
+# move 400131 5 0
+# face 400131 "angry"
+# alpha 400131 1 0.5
+# textboxarrow 0 3
+@アルテミス
+不躾ですね
+ティルフィングをどこに連れていく
+つもりですかっ？
+
+# face 500211 "normal"
+# textboxarrow 0 1
+@フライクーゲル
+もちろん、マスターのところだよ
+マスターが…ああ、うーん…
+パラソルが治療してくれるよ！
+
+# face 400131 "nutual"
+# textboxarrow 0 3
+@アルテミス
+パラソル？
+言っている意味が分かりません
+
+# voice 5002 "furaikugeru_battle_0004"
+# face 500211 "happy"
+# textboxarrow 0 1
+@フライクーゲル
+来れば分かるよ
+レッツゴー！
+
+# textboxarrow 0 2
+@ティルフィング
+ええっ…
+マスター…
+
+;;//背景：室内
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "201_room"
+# alpha 500211 0 0
+# alpha 24 0 0
+# alpha 400131 0 0
+# move 101311 3 0
+# face 101311 "angry"
+# alpha 101311 1 0
+# mask 101311 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 1013 "paracelsus_0007"
+# textboxarrow 0 2
+# textwindow "normal"
+@パラケルスス
+フン！
+ただの打ち身と切り傷じゃないか
+つまらない症例だな
+
+# face 101311 "normal"
+# textboxarrow 0 2
+@パラケルスス
+怪我人とみたら誰彼構わず連れて
+きて…キル姫は三日前にも診たぞ
+
+# voice 5002 "furaikugeru_0022"
+# move 500211 2 0
+# face 500211 "happy"
+# alpha 500211 1 0.5
+# mask 500211 on
+# textboxarrow 0 1
+# move 101311 4 0.5
+# mask 101311 on
+@フライクーゲル
+ワオ！
+パラソルにはイージーな治療だった
+んだね
+
+# textboxarrow 0 1
+@フライクーゲル
+ベリィグッド！
+これでティルフィングも
+ヘアピィだねっ
+
+# alpha 500211 0 0.5
+# alpha 101311 0 0.5
+# move 24 3 0
+# face 24 "normal"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+ありがとうございます
+…でも、珍しいですね
+病院を営んでいるキル姫なんて
+
+# alpha 24 0 0.5
+# move 500211 2 0
+# face 500211 "happy"
+# alpha 500211 1 0.5
+# mask 500211 on
+# move 101311 4 0
+# face 101311 "normal"
+# alpha 101311 1 0.5
+# mask 101311 on
+# textboxarrow 0 3
+@パラケルスス
+ここは私の診療所じゃない
+マスターのものだ
+私は代わりに診ているだけだよ
+
+# voice 5002 "furaikugeru_0005"
+# textboxarrow 0 1
+@フライクーゲル
+パラソルはみんなをヘアピィに
+できるエクセレンツなキル姫だね♪
+
+# face 101311 "angry"
+# textboxarrow 0 3
+@パラケルスス
+何度言ったら分かるんだ
+私はパラケルススだ
+パラソルではない！
+
+# face 101311 "sad"
+# textboxarrow 0 3
+@パラケルスス
+マスターも君も何も学習しないな…
+
+# voice 5002 "furaikugeru_0032"
+# textboxarrow 0 1
+@フライクーゲル
+オーケー！
+パラソルは照れ屋さんなところも
+ベリィキュ～ト♪
+
+# face 101311 "angry"
+# textboxarrow 0 3
+@パラケルスス
+私の話を聞け！
+
+;;//背景：村
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "005_Windmill"
+# alpha 500211 0 0
+# alpha 101311 0 0
+# move 24 2 0
+# face 24 "happy2"
+# alpha 24 1 0
+# mask 24 on
+# move 400131 4 0
+# face 400131 "nutual"
+# alpha 400131 1 0
+# mask 400131 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 1014 "tyrufing_0004"
+# textboxarrow 0 1
+# textwindow "normal"
+@ティルフィング
+ふふっ
+楽しい方達でしたね、マスター
+
+# textboxarrow 0 3
+@アルテミス
+騒がしいの間違いでは？
+パラケルススは大変そうでしたよ
+
+;;//マサムネがやって来る
+# se "SE_0719"
+# bgm "bgm005" 0
+# alpha 24 0 0.5
+# alpha 400131 0 0.5
+# move 200411 2 0
+# face 200411 "normal"
+# alpha 200411 1 0.5
+# move 100111 4 0
+# face 100111 "nutual"
+# alpha 100111 1 0.5
+# mask 100111 on
+# textboxarrow 0 3
+@マサムネ
+朗報だぞ、ティルフィング
+
+# face 200411 "normal"
+# textboxarrow 0 1
+@パラシュ
+君が治療を受けている間、
+聞き込みをしてたんだ
+近くにいるようだよ
+
+# textboxarrow 0 3
+@マサムネ
+ティルフィング…
+そなたと雌雄を決すべき、
+最後のイミテーションが
+
+# alpha 200411 0 0.5
+# alpha 100111 0 0.5
+# move 24 3 0
+# face 24 "surprise"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+本当ですかっ？
+ついに…
+
+;;//画面スライド
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 24 0 0
+# move 500211 3 0
+# face 500211 "normal"
+# alpha 500211 1 0
+# mask 500211 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+@フライクーゲル
+…………

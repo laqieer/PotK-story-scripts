@@ -1,0 +1,423 @@
+;;-----------------------------------------
+;;340061201
+;;幻獣梓弓　キャラシナリオ【EP1】
+;;-----------------------------------------
+# script "lisp"
+# background "101_plain_daytime"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# textwindow "close"
+;;梓弓
+# body 3400611
+# pos 3400611 3
+# scale 3400611 0.8 0
+# layer 3400611 1
+# mask 3400611 off
+;;トレインセーマ
+# body 3830001
+# pos 3830001 3
+# scale 3830001 0.8 0
+# layer 3830001 1
+# mask 3830001 off
+# alpha 3830001 0 0
+;;暗転背景
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;森エフェクト
+# envbody 1001 3 0
+# effectpattern 1001 1 0
+;;戦場エフェクト
+# envbody 1000 6 0
+# effectpattern 1000 1 0
+# waitandnext 0.1
+
+# effectstart 1000
+# textwindow "nomal"
+;;◆荒野１------------------------------------------
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400611 "angry"
+# voice 340061 "azusa_ge_battle_0002"
+# chara 3400611
+@梓弓
+わたくしの瞳に囚われ、
+動けぬ哀れな的よ！
+
+;;飛矢
+# textwindow "close"
+# se "SE_5704"
+# alpha 3400611 0 0.5
+# rightout 3400611 0.5
+# alpha 3830001 1 0
+# leftin 3830001 0.5
+# waitandnext 0.5
+
+;;ダメージ
+# textwindow "close"
+# se "SE_4759"
+# shake 0 0.6
+# fadein "white" 0.6
+# effectbody 2001 28 10 145 2
+# effectstart 2001
+# waitandnext 0.6
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 383000 "cryptid_0038"
+# chara 3830001
+@トレイセーマ兵
+ぎ、あ…
+
+;;SE：敵が倒れる音
+# textwindow "close"
+# se "SE_3001"
+# alpha 3830001 0 0.5
+# waitandnext 0.8
+
+# pos 3400611 3
+# alpha 3400611 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400611 "normal"
+# voice 340061 "azusa_ge_0004"
+# chara 3400611
+@梓弓
+鳴弦の音を聞きたい方は
+いらっしゃいますか？
+
+# textflame 0 0
+@
+戦場の最前線に立つ彼女は、
+最近マスターの隊に加わった梓弓
+
+# textflame 0 0
+@
+かつてトレイセーマにいた、
+メデューサを獣刻された斬ル姫だ
+
+# textflame 0 0
+@
+彼女の持つ、メデューサの邪眼
+それに囚われ動けなくなった兵を
+容赦なく射抜く彼女の目は冷たく鋭い
+
+# textflame 0 0
+@
+しかし―
+
+;;◆荒野２------------------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# face 3400611 "normal"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;SE：斬撃
+# textwindow "close"
+# se "SE_5707"
+# subfillrect 1 "red" 0.5 0.8 0
+# effectbody 2000 4 10 0 5
+# effectstart 2000
+# shake 0 0.6
+# face 3400611 "sad"
+# waitandnext 0.5
+
+# face 3400611 "angry"
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 340061 "azusa_ge_0038"
+# chara 3400611
+@梓弓
+くっ…！
+この、くらいなさいっ！
+
+# textwindow "close"
+# se "SE_4759"
+# shake 1 0.2
+# fadein "white" 0.5
+# waitandnext 0.8
+
+# textwindow "normal"
+# textflame 0 0
+@
+弓を扱う彼女が最前線に立つ
+そのせいで、常に傷が絶えない
+
+# textflame 0 0
+@
+どうしてあんなに、
+自分を省みないんだろう…
+
+;;◆荒野３----------------------------------------
+;;時間経過１　梓弓消去
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# face 3400611 "normal"
+# alpha 3400611 0 0
+# effectskip 1000
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 0 0
+@
+心配するマスターをよそに
+梓弓を初めとした隊の斬ル姫達が
+あたりの敵を一掃する
+
+# textwindow "close"
+# alpha 3400611 1 0.5
+# waitandnext 0.8
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400611 "sad"
+# voice 340061 "azusa_ge_0037"
+# chara 3400611
+@梓弓
+…っ
+失礼します…
+
+;;梓弓退場
+# textwindow "close"
+# leftout 3400611 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 0 0
+@
+苦痛に顔をゆがめる梓弓だが、
+戦闘が終わった途端、
+足早に戦場を離れてしまう
+
+# textflame 0 0
+@
+そんな彼女を見ていると、
+放っておけない
+マスターはそんな風に思った
+
+;;◆森----------------------------------------------
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 1.0
+# textwindow "bottom_close"
+# textwindow "top_close"
+# fadeout "black" 1.0
+# waitandnext 1.0
+
+# effectstart 1001
+# pos 3400611 3
+# face 3400611 "normal"
+# alpha 3400611 0 0
+# background "forest"
+# waitandnext 0.5
+
+# fadein "black" 1.0
+# waitandnext 1.0
+
+# textwindow "normal"
+# textflame 0 0
+@
+しばらくして、梓弓がよくいるという
+森にやって来たマスター
+
+;;立ち絵はなしで
+# serif 1
+# textboxarrow 1 0
+# voice 340061 "azusa_ge_0005"
+# chara 3400611
+@梓弓
+ふふっ…ふふふふっ…
+
+# serif 0
+# textflame 0 0
+@
+深い森の中、
+かすかに聞こえる彼女の声を頼りに
+マスターは奥に進んでいく
+
+# textflame 0 0
+@
+すると―
+
+;;梓弓登場
+# textwindow "top_close"
+# textwindow "bottom_close"
+# alpha 3400611 1 0.5
+# waitandnext 0.8
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400611 "happy"
+# voice 340061 "azusa_ge_0020"
+# chara 3400611
+@梓弓
+さあ…本日の吉凶は…
+いかがでしょうか…？
+
+# textflame 0 0
+@
+どこか陰のある笑みを浮かべた
+梓弓が手の中で
+なにかを熱心に転がしていた
+
+# textflame 0 0
+@
+あ、梓弓…？
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400611 "shy"
+# voice 340061 "azusa_ge_0022"
+# chara 3400611
+@梓弓
+あ、ああ…マスターでしたか…
+どうかなさいましたか？
+
+# textflame 0 0
+@
+声を掛けた途端、
+先ほどまでの暗い気配が
+霧散する
+
+# textflame 0 0
+@
+なにをしているのかと思って
+声を掛けたんだ
+なんだかすごく熱心だったし…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400611 "normal"
+# voice 340061 "azusa_ge_0003"
+# chara 3400611
+@梓弓
+ああ、これは占いです
+こちらで吉凶を占います
+
+# textflame 0 0
+@
+そうして手を開いて
+見せてくれたのは…
+白い骨だった
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3400611
+@梓弓
+蛇の骨です
+骨を使った占いというのは
+昔からあるのですが…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400611 "happy"
+# voice 340061 "azusa_ge_0004"
+# chara 3400611
+@梓弓
+せっかくですし、
+あなた様の吉凶を
+占ってみませんか？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3400611
+@梓弓
+ちょっとした指針には
+なると思います
+
+# textflame 0 0
+@
+梓弓の言葉を聞いて、
+頷くマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400611 "usual"
+# voice 340061 "azusa_ge_0028"
+# chara 3400611
+@梓弓
+では…
+我が蛇よ…
+我が主の進路を示せ
+
+# textflame 0 0
+@
+どこか物々しい雰囲気が
+広がる
+
+# textflame 0 0
+@
+彼女の醸し出す空気に
+飲まれそうになる
+その瞬間―
+
+;;SE：割れる音
+# textwindow "close"
+# se "SE_0538"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400611 "surprise"
+# voice 340061 "azusa_ge_0024"
+# chara 3400611
+@梓弓
+え？
+これは…
+
+# textflame 0 0
+@
+乾いた音が辺りに響く
+見れば、彼女の持つ骨の一つが
+二つに割れていた
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400611 "usual"
+# voice 340061 "azusa_ge_0001"
+# chara 3400611
+@梓弓
+マスター、
+この数日間お気をつけ下さい
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3400611
+@梓弓
+大きな災いの予兆です
+気を付けていて損はありません
+
+# textflame 0 0
+@
+梓弓の迫力に押され、
+マスターは小さく頷いた
+
+# textflame 0 0
+@
+なにもなければ
+いいんだけど…
+
+# textflame 0 0
+@
+一抹の不安が、
+マスターの脳裏をよぎった

@@ -1,0 +1,528 @@
+;;●10章1_3戦闘前　背景：泉のほとり
+;;【指定】bgm035
+;;【指定】SE_4000 　0.2秒後　SE_4830
+;;※カミノツカイと対等に渡り合っているティルフィング。
+# script "lisp"
+# background "fountain"
+# bgm "bgm035" 0
+# body 24
+# pos 24 1
+# scale 24 0.8 0
+# body 960023
+# pos 960023 3
+# scale 960023 0.8 0
+# body 0
+# pos 0 1
+# scale 0 0.8 0
+# alpha 0 0 0
+# body 4
+# pos 4 3
+# scale 4 0.8 0
+# alpha 4 0 0
+# body 132
+# pos 132 5
+# scale 132 0.8 0
+# alpha 132 0 0
+;;ティルフィングボイス用
+# body 101411
+# alpha 101411 0 0
+# face 24 "mad2"
+# face 4 "smile01"
+# face 0 "usual"
+# layer 0 5
+# layer 24 4
+# face 132 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+…クッ！
+…ウァァァァァーッ！！！
+
+# serif 0
+# textwindow "close"
+# fadein "white" 0.3
+# se "SE_4000"
+# sedelay "SE_4830" 0.2
+# move 24 3 0.2
+# waitandnext 0.15
+
+# shake 0 0.5
+# move 960023 5 0.5
+# waitandnext 1.5
+
+# alpha 24 0 0.5
+# alpha 960023 0 0.5
+# alpha 0 1 0.5
+# alpha 4 1 0.5
+# alpha 132 1 0.5
+# serif 0
+# textwindow "normal"
+# voice 9998 "toto_0044"
+# textboxarrow 0 2
+@トト
+す、すごいや、
+ティルフィング…！！
+
+# textboxarrow 0 1
+@デュリン
+あ、あのカミノツカイと…
+対等に渡り合ってる…！！
+
+# voice 9976 "eirene_0039"
+# face 4 "smile02"
+# textboxarrow 0 3
+@エイレーネ
+『なんと美しい光景なのでしょう…』
+
+# face 0 "usual2"
+# textboxarrow 0 1
+@デュリン
+え…？
+
+# face 132 "normal"
+# textboxarrow 0 3
+@エイレーネ
+『人が人を思いやる…そのココロが
+結びつき、絶望に彩られた世界に
+希望を生み出した…』
+
+# face 132 "usual"
+# textboxarrow 0 3
+@エイレーネ
+『人類が持つ、この力こそ…
+なによりも尊ぶべき光であると、
+私は思うのです』
+
+# face 0 "usual"
+# textboxarrow 0 1
+@デュリン
+…はい
+
+;;※ふと、主人公にまっすぐに目を向けるエイレーネ。
+# textboxarrow 0 3
+@エイレーネ
+『この光景…
+アナタの目には、
+どのように映っているのですか…？』
+
+# select "え…？" "select_label_01" "俺の目に…？" "select_label_01"
+『この光景…
+アナタの目には、
+どのように映っているのですか…？』
+
+# label "select_label_01"
+# textboxarrow 0 3
+@エイレーネ
+『世界をまたぐ者への興味から、
+アナタはこの世に生まれ出でた…』
+
+# textboxarrow 0 3
+@エイレーネ
+『ですが…
+その者への興味だけならば、
+とうに飽き足りているはず…』
+
+# textboxarrow 0 3
+@エイレーネ
+『アナタは…
+思いもよらぬ行動を取る人類に
+関心を抱いているのでしょう…』
+
+# textboxarrow 0 3
+@エイレーネ
+『私と同じように…』
+
+;;※ザワッと葉を揺らすユグドラシルがカットイン。
+# se "SE_0742"
+# serif 0
+# textwindow "close"
+# fadein "white" 0.5
+# background "mypage_heaven"
+# alpha 132 0 0
+# alpha 0 0 0
+# alpha 4 0 0
+# waitandnext 1.5
+
+# serif 0
+# textwindow "normal"
+# background "fountain"
+# fadein "white" 0.5
+# alpha 132 1 0
+# alpha 0 1 0
+# alpha 4 1 0
+# select "は…！？" "select_label_02" "俺が…人類に関心を…！？" "select_label_02"
+『私と同じように…』
+
+# label "select_label_02"
+# face 132 "normal"
+# textboxarrow 0 3
+@エイレーネ
+『神…悪魔…そして、人類…』
+
+# textboxarrow 0 3
+@エイレーネ
+『そのすべてに公平で
+在り続けたアナタが、
+なにに興味の目を向けてゆくのか…』
+
+# face 132 "usual"
+# voice 9976 "eirene_0004"
+# textboxarrow 0 3
+@エイレーネ
+『とても楽しみですね…』
+
+;;【指定】BGM　停止
+# bgm "stop"
+# textboxarrow 0 3
+@エイレーネ
+『しかし…
+どうして、
+なにもなさらないのですか？』
+
+# face 4 "normal"
+# voice 9998 "toto_0023"
+# textboxarrow 0 2
+@トト
+え…？
+
+# textboxarrow 0 3
+@エイレーネ
+『私を消すつもりならば、
+労せずに済ますことが
+できるはずでしょう…』
+
+# body 100161
+# pos 100161 3
+# scale 100161 0.8 0
+# alpha 100161 0 0
+# mask 100161 off
+# face 0 "angry"
+# textboxarrow 0 1
+@デュリン
+！？
+
+;;【指定】SE_5200
+;;※ハッと振り向くデュリン、トト。
+;;【指定】BgmPJZero001 bgm166
+# serif 0
+# textwindow "close"
+# alpha 0 0 0.5
+# alpha 4 0 0.5
+# alpha 132 0 0.5
+# waitandnext 1
+
+# se "SE_5200"
+# bgmfile "bgm166" "BgmPJZero001" 0
+# alpha 100161 1 0.5
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 2
+@ラース
+…………
+
+# alpha 100161 0 0.5
+# alpha 0 1 0.5
+# alpha 4 1 0.5
+# alpha 132 1 0.5
+# face 4 "angry"
+# textboxarrow 0 1
+@デュリン
+アンタ…！？
+マサムネに
+統合されたんじゃ…！？
+
+# alpha 100161 1 0.5
+# alpha 0 0 0.5
+# alpha 4 0 0.5
+# alpha 132 0 0.5
+# textboxarrow 0 2
+@ラース
+…拙者の身体には、
+魔の血が混在している
+
+# textboxarrow 0 2
+@ラース
+マサムネの記憶が
+多少流入しようとも…
+
+# textboxarrow 0 2
+@ラース
+その血が、
+この身の統合を
+妨いだのであろう
+
+# body 41
+# pos 41 3
+# scale 41 0.8 0
+# alpha 41 0 0
+# alpha 100161 0 0.5
+# alpha 0 1 0.5
+# alpha 4 1 0.5
+# alpha 132 1 0.5
+# face 41 "angry"
+# textboxarrow 0 1
+@デュリン
+…クッ！
+マズい！！
+
+;;※その時…倒れ伏していた黒奏官が目覚める。
+# alpha 41 1 0.5
+# alpha 0 0 0.5
+# alpha 4 0 0.5
+# alpha 132 0 0.5
+# voice 9983 "kokusohkan_0037"
+# textboxarrow 0 2
+@黒奏官
+…う…うぐっ…
+
+# alpha 41 0 0.5
+# alpha 0 1 0.5
+# alpha 4 1 0.5
+# alpha 132 1 0.5
+# voice 9998 "toto_0039"
+# textboxarrow 0 2
+@トト
+！！
+アイツ！
+
+# alpha 100161 1 0.5
+# alpha 0 0 0.5
+# alpha 4 0 0.5
+# alpha 132 0 0.5
+# face 100161 "surprise"
+# textboxarrow 0 2
+@ラース
+黒奏官様！！
+
+# alpha 41 1 0.5
+# alpha 100161 0 0.5
+# textboxarrow 0 2
+@黒奏官
+わ…私は…
+グッ…！！
+
+# select "…お前も、記憶を…？" "select_label_03" "…お前も…地上世界から来たのか？" "select_label_03"
+わ…私は…
+グッ…！！
+
+# label "select_label_03"
+# voice 9983 "kokusohkan_0026"
+# face 0 "worry"
+# textboxarrow 0 2
+@黒奏官
+こ、これが…私の記憶だと…！？
+…バカな！！
+
+# move 0 2 0
+# move 41 4 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 1
+@デュリン
+！！
+アンタ…その声…
+
+# move 0 3 0.5
+# move 41 5 0.5
+# move 4 1 0
+# alpha 4 1 0.5
+# face 4 "normal"
+# textboxarrow 0 1
+@トト
+え…？
+
+# textboxarrow 0 2
+@デュリン
+どこかで聞いたことが…
+
+# textboxarrow 0 2
+@デュリン
+これは…
+“地上”の記憶…？
+
+# textboxarrow 0 3
+@黒奏官
+！！
+お前は…ヴァリンなのか…？
+
+# face 0 "angry"
+# textboxarrow 0 2
+@デュリン
+！！
+アンタ…なに者なの！？
+
+# textboxarrow 0 1
+@トト
+ヴァリン…？
+
+# textboxarrow 0 2
+@デュリン
+私の“地上世界”での名前よ！！
+
+# textboxarrow 0 2
+@デュリン
+つまり、コイツは…
+私と地上世界で
+知り合っているということ…！！
+
+# voice 9983 "kokusohkan_0037"
+# textboxarrow 0 3
+@黒奏官
+…クッ！
+なにをバカな！！
+こんな記憶を肯定するわけには…
+
+# mask 100161 on
+# layer 100161 2
+# face 100161 "angry"
+# textboxarrow 0 2
+@デュリン
+ちょっと…待ちなさい！
+
+;;【指定】SE_8000
+;;※フッとデュリンの前に立ちはだかるラース。
+# se "SE_8000"
+# alpha 100161 1 0.3
+# alpha 4 0 0.3
+# move 0 1 0.3
+# textboxarrow 0 2
+@ラース
+それ以上、
+黒奏官様を混乱させるなら…
+即座に斬り捨てる
+
+# face 0 "worry"
+# face 100161 "normal"
+# textboxarrow 0 1
+@デュリン
+！！
+
+# face 41 "normal"
+# textboxarrow 0 3
+@黒奏官
+そうだ…
+それでいい…
+
+# textboxarrow 0 1
+@デュリン
+え…？
+
+# face 41 "angry"
+# textboxarrow 0 3
+@黒奏官
+目の前にある、
+この世界こそが現実！
+
+# textboxarrow 0 3
+@黒奏官
+あの絶対的な力を持つ大天使様が、
+我らの主君であることに
+疑いはない！
+
+# textboxarrow 0 1
+@デュリン
+な、なにを言ってるのよ…！？
+
+# face 0 "angry"
+# textboxarrow 0 1
+@デュリン
+アンタ、
+垣間見た記憶を
+封じるつもり！？
+
+# textboxarrow 0 3
+@黒奏官
+すべては、
+エイレーネが見せた幻覚に
+過ぎん…！
+
+# textboxarrow 0 3
+@黒奏官
+ラースよ…
+我らをかどわかす、
+その女神を討て！！！
+
+# face 24 "angry"
+# face 4 "angry"
+# face 100161 "angry"
+# textboxarrow 0 2
+@ラース
+ハッ！！
+
+;;【指定】SE_9092
+;;※ドンッとエイレーネに向け駆け出すラース。
+# serif 0
+# textwindow "close"
+# se "SE_9092"
+# alpha 100161 0 0.5
+# waitandnext 1.5
+
+# mask 100161 off
+# move 4 3 0
+# alpha 0 0 0.5
+# alpha 41 0 0.5
+# alpha 4 1 0.5
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 2
+@トト
+エイレーネ様！
+逃げて…！
+
+# alpha 4 0 0.5
+# alpha 100161 1 0.5
+# textboxarrow 0 2
+@ラース
+…ウォォォォーッ！！！
+
+;;【指定】SE_5234
+;;※ギャリンと飛び散る火花。
+# serif 0
+# textwindow "close"
+# alpha 100161 0 0.5
+# alpha 132 1 0.5
+# waitandnext 1
+
+# mask 100161 on
+# move 100161 1 0
+# waitandnext 0.1
+
+# move 100161 3 0.2
+# alpha 100161 1 0.1
+# waitandnext 0.15
+
+# se "SE_5234"
+# fadein "white" 0.3
+# alpha 24 1 0
+# move 100161 1 0.3
+# shake 0 0.5
+# face 100161 "surprise"
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 1
+@ラース
+！？
+
+;;※エイレーネを守るように立つティルフィング。
+# textboxarrow 0 2
+@ティルフィング
+…よすのよ
+現実を受け止めなければ、
+未来は拓けない
+
+# textboxarrow 0 2
+@ティルフィング
+本当の使命を思い出すのよ…
+“マサムネ”
+
+;;【指定】SE_8000 0.5秒後　SE_9118
+;;※ティルフィングに向かい、駆け出すラース。
+# fadein "white" 0.5
+# move 100161 2 0.2
+# se "SE_8000"
+# sedelay "SE_9118" 0.5
+# face 100161 "angry"
+# textboxarrow 0 1
+@ラース
+！！
+くだらぬことを…！！
+

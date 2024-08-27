@@ -1,0 +1,190 @@
+;;-----------------------------------------
+;;神令グラーシーザ_キャラクエ_シナリオ
+;;【EP3】
+;;スクリプト最後の背景：plain
+;;背景：plain
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;神令グラーシーザ
+# body 3302611
+# pos 3302611 3
+# scale 3302611 0.8 0
+# layer 3302611 2
+# alpha 3302611 0 0
+# mask 3302611 off
+;;-----------------------------------------
+;;グラーシーザ一枚絵
+# imageset 0 "c3302611"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;【EP3】
+;;背景：草原（昼）
+# voice 330261 "grayside_c_unit_0012"
+# move 3302611 3 0
+# face 3302611 "normal"
+# alpha 3302611 1 0
+# mask 3302611 off
+# textflame 1 1
+# textboxarrow 0 2
+@グラーシーザ
+まかせたぞ、子分！
+
+;;モノローグ
+# textflame 0 0
+@
+あれ以来、グラーシーザはマスターに
+戦いの指揮を任せるようになった
+…子分として
+
+# textflame 1 1
+# textboxarrow 0 2
+@グラーシーザ
+あたしの目にくるいはない！
+
+# voice 330261 "grayside_c_0005"
+# face 3302611 "smile"
+# textboxarrow 0 2
+@グラーシーザ
+あたしがまかせた子分にしたがえば
+れんせんれんしょう！
+
+;;モノローグ
+# textflame 0 0
+@
+溢れ出る正義心により
+まだ他の斬ル姫との衝突も
+絶えることはないが…
+
+;;モノローグ
+@
+マスターに隊を任せ切り
+戦場では敵陣を逡巡なく貫く彼女は
+徐々に皆からも受け入れられ始めた
+
+# voice 330261 "grayside_c_0004"
+# face 3302611 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@グラーシーザ
+だれかの頼みをきいてやる
+というのも…いいものだな
+
+# textboxarrow 0 2
+@グラーシーザ
+あたし以外の正義は
+すべて悪だとおもってきたが…
+
+# textboxarrow 0 2
+@グラーシーザ
+おまえは…
+あたしの正義の、味方をしてくれた
+
+;;選択肢
+;;@
+;;A　きみが味方になってくれたからだよ
+;;B　みんな、味方になってくれるよ
+;;C　間違われちゃ困るからね
+# select "きみが味方になってくれたからだよ" "select_label_01" "みんな、味方になってくれるよ" "select_label_02" "間違われちゃ困るからね" "select_label_03"
+おまえは…
+あたしの正義の、味方をしてくれた
+
+;;アンサー
+;;A
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 3302611 "shy"
+@グラーシーザ
+そんなつもりはなかったがな！
+今は…そのつもりだ
+
+;;B
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 3302611 "shy"
+@グラーシーザ
+その判断を下すのはあたしだ
+でも、そうだと、うれしい
+
+;;C
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 3302611 "shy"
+@グラーシーザ
+まちがいはしない
+マスターが味方なら
+
+# label "select_label_end"
+# voice 330261 "grayside_c_0041"
+# textflame 1 1
+# textboxarrow 0 2
+@グラーシーザ
+これは
+ちょうじょうだ
+
+;;モノローグ
+# textflame 0 0
+@
+バイブスを通して
+グラーシーザの正義が
+マスターの正義と繋がる感覚
+
+;;モノローグ
+# se "SE_0602"
+@
+それは彼女の新スキル
+黄昏『断罪の執行者』
+誕生の瞬間でもあった
+
+;;モノローグ
+@
+恥ずかしそうに
+帽子を目深にかぶるグラーシーザ
+
+# face 3302611 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@グラーシーザ
+次はなにがのぞみだ？
+なんでもかなえてみせるぞっ
+
+# textboxarrow 0 2
+@グラーシーザ
+あたしにできぬことなどない
+どんとまかせるのだ
+
+# textboxarrow 0 2
+@グラーシーザ
+意見はないな、子分？
+
+;;モノローグ
+# textflame 0 0
+@
+どうやらマスターは
+彼女の子分として
+無期懲役らしい
+
+;;◆一枚絵指定
+;;★６(イラストは同じ)
+;;「きさまは正しくはないが、悪でもない。
+;; ゆえに、《しっこうゆうよ》だ。
+;; あたしにしたがうとちかうならば、
+;; 正義の名のもとに、きさまをみちびいてやってもいい」
+;;ホワイトアウト
+# textflame 0 0
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# fadein "white" 3
+# buttonsout 0 0
+# textwindow "close"
+# voice 330261 "grayside_c_kyara_0025"
+
+# frameout 0 1
+
+# waitandnext 0.8
+
+# fadeout "black" 1.5
+# waitandnext 1.5

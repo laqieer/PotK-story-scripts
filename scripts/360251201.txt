@@ -1,0 +1,302 @@
+;;-----------------------------------------
+;;36025121
+;;カリス　キャラシナリオ【EP1】
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+;;カリス
+# body 3602511
+# pos 3602511 3
+# scale 3602511 0.8 0
+# layer 3602511 2
+# alpha 3602511 0 0
+# mask 3602511 off
+;;キプル
+# body 163
+# pos 163 3
+# scale 163 0.6 0
+# layer 163 3
+# mask 163 off
+# alpha 163 0 0
+;;ケイオス兵
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# layer 3820001 1
+# mask 3820001 off
+# reversal 3820001 0
+# alpha 3820001 0 0
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;木漏れ日エフェクト１
+# envbody 1000 3 0
+# effectpattern 1000 1 0
+;;木漏れ日エフェクト２
+# envbody 1001 3 0
+# effectpattern 1001 1 0
+# waitandnext 0.1
+
+;;◆背景：森
+# effectstart 1000
+# textflame 0 0
+@
+いつもは静かな森の中
+しかし今日は―
+
+;;カリス登場
+# textwindow "close"
+# alpha 3602511 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0021"
+# chara 3602511
+@カリス
+やっほぃ、みんなー！
+ご飯の準備できたよ～！
+
+# textflame 0 0
+@
+最近マスターの隊に加わった
+カリスの明るい声が響いていた
+
+# textwindow "close"
+# alpha 3602511 0 0.5
+# waitandnext 0.5
+
+;;キプル登場
+# alpha 163 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9951 "kipuru_0002"
+# chara 163
+@キプル
+カ、カリスゥ…
+どうして急にご飯を作るなんて
+言い出したんです？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 163
+@キプル
+戦闘が
+終わったばかりですよ
+
+# textwindow "close"
+# move 163 4 0.5
+# alpha 3602511 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3602511 "shy"
+# voice 6025 "chalice_t_0005"
+# chara 3602511
+@カリス
+そうした方がいい気がするの！
+なんとなくだけど
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9951 "kipuru_0026"
+# chara 163
+@キプル
+カリスの無茶のせいで、
+後で謝らないといけなくなるのは
+キプルなのですが…
+
+# textflame 0 0
+@
+カリスの無茶に
+付き合わされることの多いキプルは
+その言葉にため息をついた
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9951 "kipuru_0055"
+# chara 163
+@キプル
+そ、それよりカリス…
+あの方は
+どうするおつもりですか？
+
+;;◆ケイオス兵
+;;場面転換
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+;;ここは木漏れ日エフェクトなし
+# effectskip 1000
+# face 3602511 "normal"
+# alpha 163 0 0
+# alpha 3602511 0 0
+# alpha 3820001 1 0
+# brightness 3820001 0.6 0
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 382000 "demon_0028"
+# chara 3820001
+@ケイオスリオン兵
+…ぐぅぅっ
+
+# textflame 0 0
+@
+キプルの示す先には、
+苦痛に体を震わせる
+ケイオスリオン兵の姿があった
+
+;;◆カリスとキプル
+;;場面転換
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# effectstart 1001
+# alpha 3820001 0 0
+# alpha 163 1 0
+# alpha 3602511 1 0
+# face 3602511 "shy"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3602511 "happy"
+# voice 6025 "chalice_t_0003"
+# chara 3602511
+@カリス
+もちろん
+治療してあげるつもりだよ？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9951 "kipuru_0022"
+# chara 163
+@キプル
+いけません、カリス！
+彼は敵なのですよっ
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3602511 "angry"
+# voice 6025 "chalice_t_0034"
+# chara 3602511
+@カリス
+でもあの人も
+人間だもん
+
+# textwindow "toge"
+# textflame 1 1
+# textboxarrow 0 0
+# voice 9951 "kipuru_0054"
+# chara 163
+@キプル
+今治療すれば他の斬ル姫にも
+迷惑がかかるではないですか
+
+# textwindow "normal"
+# textflame 0 0
+@
+言い争う二人に気付き、
+マスターが駆け寄ってきた
+
+# face 3602511 "normal"
+# textflame 0 0
+@
+どうしたの？
+と尋ねるマスターに
+キプルは頭を下げる
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9951 "kipuru_0031"
+# chara 163
+@キプル
+申し訳ありません、マスター
+カリスが彼を助けると
+言い出して…
+
+# textflame 0 0
+@
+その言葉に、
+マスターは目を白黒させた
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3602511 "happy"
+# voice 6025 "chalice_t_0004"
+# chara 3602511
+@カリス
+人を助けたいって思ったら
+敵だとかそういうのが
+どうでも良くなっちゃって
+
+# textflame 0 0
+@
+人懐っこい笑みを
+浮かべるカリスに
+マスターは口を閉ざす
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9951 "kipuru_0009"
+# chara 163
+@キプル
+だからといって、
+こんなことを続けていては、
+どうなるか分かりません
+
+# textflame 0 0
+@
+二人の言い分に
+マスターは腕を組んで悩む
+
+# textflame 0 0
+@
+僕には上手く表現できないけど…
+カリスにはなにかが足りてないと思う
+
+# textflame 0 0
+@
+たぶん、それが一番分かるのは、
+隣にいるキプルだと思う
+と、マスターは告げた
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9951 "kipuru_0027"
+# chara 163
+@キプル
+…………
+頑張ってみます
+
+# textflame 0 0
+@
+マスターの言葉に
+なにか思うことがあったのか、
+キプルは少し考えて、頷いた

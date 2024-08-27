@@ -1,0 +1,288 @@
+;;-----------------------------------------
+;;暴走3_3
+;;-----------------------------------------
+# script "lisp"
+# background "in_underwild"
+# bgmfile "bgm467" "BgmIntegralNoahBoso" 0
+;;-----------------------------------------
+;;グラ
+# body 5303411
+# pos 5303411 5
+# scale 5303411 0.8 0
+# layer 5303411 4
+# alpha 5303411 0 0
+;;ムー
+# body 161
+# pos 161 3
+# scale 161 0.6 0
+# layer 161 5
+# mask 161 off
+# alpha 161 0 0
+;;リサ
+# body 3203011
+# pos 3203011 1
+# scale 3203011 0.8 0
+# layer 3203011 3
+# alpha 3203011 0 0
+;;モブ
+# body 101111
+# pos 101111 3
+# scale 101111 0.8 0
+# layer 101111 3
+# mask 101111 off
+# brightness 101111 0 0
+# alpha 101111 1 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：インテグラルノア編地上
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 1
+
+;;演出：モブ暴走キル姫表示
+# emotionbody 1000 15 101111 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# waitandnext 1.5
+
+;;演出：攻撃エフェクト
+# se "SE_4000"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# effectskip 1000
+# alpha 101111 0 0.5
+# alpha 5303411 1 0.5
+# alpha 161 1 0.5
+# alpha 3203011 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 5303411 "angry"
+@グランテピエ
+きゃっ！
+どうして…
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9953 "mwu_0011"
+@ムー
+だめだ、全然止まらねぇ！
+
+# textflame 1 1
+# textboxarrow 0 3
+@グランテピエ
+さっきは上手くいったのに…
+お願い、止まって…っ！
+
+;;演出：モブ暴走キル姫表示
+# alpha 101111 1 0.5
+# alpha 5303411 0 0.5
+# alpha 161 0 0.5
+# alpha 3203011 0 0.5
+# textwindow "close"
+# emotionbody 1001 15 101111 0 0
+# effectpattern 1001 1 0
+# waitandnext 0.5
+
+# effectstart 1001
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@暴走したキル姫
+………
+
+# alpha 101111 0 0.5
+# alpha 5303411 1 0.5
+# alpha 161 1 0.5
+# alpha 3203011 1 0.5
+# face 3203011 "angry"
+# textwindow "close"
+# effectskip 1001
+# waitandnext 0.5
+
+;;できればもやもやフレームで
+# move 3203011 1 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@リサナウト
+グラの呼びかけで動きが止まった？
+暴走したキル姫に声が届くの…？
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@グランテピエ
+お願い、ムー！
+
+# emotionbody 1002 15 101111 0 0
+# effectpattern 1002 1 0
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9953 "mwu_0032"
+@ムー
+おうよ！
+
+# alpha 101111 1 0.5
+# alpha 5303411 0 0.5
+# alpha 161 0 0.5
+# alpha 3203011 0 0.5
+# textwindow "close"
+# effectstart 1002
+# waitandnext 0.5
+
+;;演出：明転
+# se "SE_0994"
+# fadeout "white" 0.5
+# bgm "stop"
+# waitandnext 0.5
+
+;;演出：モブ暴走キル姫のエフェクトが消える
+# effectskip 1002
+# fadein "white" 0.5
+# waitandnext 1
+
+# alpha 101111 0 0.5
+# alpha 5303411 1 0.5
+# alpha 161 1 0.5
+# alpha 3203011 1 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 2030 "risanautr_l_0039"
+@リサナウト
+これがオートアバターの力…
+
+# textflame 1 1
+# textboxarrow 0 3
+@グランテピエ
+暴走しちゃった子のことも
+止めることができる！
+…かもしれないの
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3203011 "usual"
+@リサナウト
+そこは断言しなさいよ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5303411 "sad"
+@グランテピエ
+うーん、だって絶対のぜーったいに
+止まってくれる訳じゃないし…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3203011 "happy"
+@リサナウト
+久しぶりに聞いたわね、それ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5303411 "normal"
+@グランテピエ
+あははっ
+…ねぇ、次に話せるのはいつだろうね
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3203011 "normal"
+@リサナウト
+わからないわ
+でも、きっとそう遠くない未来
+
+# textflame 1 1
+# textboxarrow 0 1
+@リサナウト
+…これは予言ではない
+確定事象の報告に過ぎないのよ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5303411 "happy"
+@グランテピエ
+わぁ、かっこいいねリサ
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3203011 "sad"
+# voice 2030 "risanautr_l_0028"
+@リサナウト
+そういう反応されると
+締まらないわね
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3203011 "normal"
+@リサナウト
+まぁいいわ！
+とりあえずアルマスのことは
+私に任せて頂戴
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 2030 "risanautr_l_kyara_2001"
+@リサナウト
+そうね
+おおびゅねに乗ったつもりで…
+
+# textflame 1 1
+# textboxarrow 0 3
+@グランテピエ
+久しぶりに聞いたわ！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3203011 "shy"
+# voice 2030 "risanautr_l_kyara_3001"
+@リサナウト
+…い、言っておくけど
+噛んだのはわざとよ
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9953 "mwu_0028"
+@ムー
+…わざと噛む必要があるのか？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3203011 "angry"
+# voice 2030 "risanautr_l_0013"
+@リサナウト
+うるさい！
+とにかく、あとは頼んだわよ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5303411 "normal"
+@グランテピエ
+…うん、お願いね
+アルマスを見つけてあげて
+きっと、泣いてるかもしれないから
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3203011 "happy"
+# voice 2030 "risanautr_l_0032"
+@リサナウト
+わかったわ
+…頑張ってね、グラ
+
+# textflame 1 1
+# textboxarrow 0 3
+@グランテピエ
+ありがとう、リサ
+
+# fadeout "black" 1.5
+# waitandnext 1.5

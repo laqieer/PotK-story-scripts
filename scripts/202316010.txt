@@ -1,0 +1,769 @@
+;;-----------------------------------------
+;;SEA_1_0_祈り、黄昏、アナタとともに…
+;;-----------------------------------------
+# script "lisp"
+# background "sea_church"
+# bgm "stop"
+;;-----------------------------------------
+;;ロンギヌス
+# body 300111
+# pos 300111 3
+# scale 300111 0.8 0
+# layer 300111 3
+# mask 300111 off
+# alpha 300111 0 0
+;;メギド
+# body 500611
+# pos 500611 3
+# scale 500611 0.8 0
+# layer 500611 3
+# mask 500611 off
+# alpha 500611 0 0
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 3
+# scale 6504011 0.8 0
+# layer 6504011 3
+# mask 6504011 off
+# alpha 6504011 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 3
+# scale 6603811 0.8 0
+# layer 6603811 3
+# mask 6603811 off
+# alpha 6603811 0 0
+;;盤古
+# body 5202211
+# pos 5202211 3
+# scale 5202211 0.8 0
+# layer 5202211 3
+# mask 5202211 off
+# alpha 5202211 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;紙
+# imageset 1 "SEA_diary_bg"
+# imagealpha 1 0 0
+# imagelayer 1 1
+# imagescale 1 1.2 0
+;;1枚め
+# imageset 2 "SEA_diary_601"
+# imagealpha 2 0 0
+# imagescale 2 1 0
+# imagelayer 2 3
+;;1枚め
+# imageset 3 "SEA_diary_602"
+# imagealpha 3 0 0
+# imagescale 3 1 0
+# imagelayer 3 3
+;;-----------------------------------------
+;;背景：教会：sea_church
+# textwindow "close"
+# fadein "black" 3
+# waitandnext 3
+
+;;ロンギヌスが祈りを捧げている
+# bgmfile "bgm409" "BgmIntegralNoahEvent" 0
+# alpha 300111 1 1
+# waitandnext 1
+
+# face 300111 "sad"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ロンギヌス
+…………
+
+# voice 3001 "ronginusu_0027"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+ああ…
+忘れたまま生きてきたことを
+お許しください
+
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+私は…知りました
+思い出しました…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+自分自身の罪深さを…
+犯してしまった過ちのことを…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+それなのに…過ちを正してくれた
+方に恩返しできないままなんて…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+報われてほしいんです
+皆さんに幸せになってもらいたい
+もちろん、彼女にも…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+どうか…
+
+;;画面が一瞬、光り輝く
+# se "SE_6263"
+# fadein "white" 1
+# face 300111 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+…………！？
+
+# voice 3001 "ronginusu_0022"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+今の声は、もしかして…
+
+;;更に画面が光り輝く
+# se "SE_6264"
+# fadein "white" 2
+# textboxarrow 0 0
+# waitandnext 2
+
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+ああっ
+お願いします、どうか――
+
+;;画面が強く光り輝く
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# se "SE_6259"
+# fadeout "white" 3
+# waitandnext 3
+
+;;全てが光に包まれて画面真っ白に
+# background "bg_white"
+# alpha 300111 0 0
+# textwindow "close"
+# fadein "white" 3
+# waitandnext 4
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：村：004_outland
+# background "004_outland"
+# bgm "bgm003" 0
+# textwindow "close"
+# waitandnext 0.5
+
+# move 500611 4 0
+# fadein "black" 1
+# waitandnext 1
+
+;;メギドが歩いてくる
+# se "SE_0719"
+# move 500611 3 0.5
+# alpha 500611 1 0.3
+# voice 5006 "megido_0028"
+# face 500611 "sad"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@メギド
+ロンギヌスが教会に籠もってから
+九日経ったわ…
+
+# textflame 1 1
+# textboxarrow 0 2
+@メギド
+今朝で十日目…
+様子を見ても良い頃よね
+
+;;メギドが歩き去る
+# se "SE_0719"
+# move 500611 2 0.5
+# alpha 500611 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：教会：sea_church
+# background "sea_church"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 5006 "megido_0022"
+# move 500611 3 0
+# alpha 500611 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@メギド
+ロンギヌス、大丈夫？
+お祈りに集中しすぎて
+貴方の体が…あら？
+
+;;メギドが教会内を歩き回る
+# se "SE_0719"
+# move 500611 1 1
+# textboxarrow 0 0
+# waitandnext 1.5
+
+# se "SE_0719"
+# move 500611 3 1
+# waitandnext 1
+
+# face 500611 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@メギド
+ロンギヌス？
+ロンギヌス！
+どこにいるの！？
+
+# move 500611 5 1
+# textboxarrow 0 0
+# waitandnext 1.5
+
+# move 500611 3 1
+# waitandnext 1
+
+# face 500611 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@メギド
+…………
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# voice 5006 "megido_0024"
+# textflame 1 1
+# textboxarrow 0 2
+@メギド
+そんな…
+どこにも見当たらない
+
+# textflame 1 1
+# textboxarrow 0 2
+@メギド
+九日間、教会で祈りを捧げ続けると
+言っていたのに…
+
+# textflame 1 1
+# textboxarrow 0 2
+@メギド
+どこにいってしまったの？
+
+# fadeout "black" 3
+# waitandnext 3
+
+;;日記演出
+# alpha 500611 0 0
+# background "diary"
+# textwindow "close"
+# fadein "black" 3
+# waitandnext 3
+
+;;日記が開く演出
+# se "SE_6165"
+# alpha 270 1 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+旅の記録七百二十三日――
+
+;;ミーミル消す
+;;テキストウィンドウを外す
+# bgmfile "bgm601" "BgmSecretlyEverAfter001" 0
+# alpha 270 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;フレームを外す
+# frameout 0 1
+# waitandnext 1
+
+;;紙を表示
+# imagealpha 1 1 1
+# imagepos 1 0 0
+# waitandnext 1
+
+;;1枚目を表示
+# se "SE_6175"
+# imagealpha 2 1 2
+# imagepos 2 0 -900
+# waitandnext 1
+
+;;1枚目を上に
+# imagemoveto 2 0 650 17
+# waitandnext 16
+
+;;1枚目を消す
+# imagealpha 2 0 1
+# waitandnext 1
+
+;;2枚目を表示
+# se "SE_6166"
+# imagealpha 3 1 1
+# imagepos 3 0 -900
+# waitandnext 1
+
+;;2枚目を上に
+# imagemoveto 3 0 550 17
+# waitandnext 16
+
+;;2枚目を消す
+# imagealpha 3 0 2
+# waitandnext 2
+
+;;紙を消す
+# se "SE_6167"
+# imagealpha 1 0 1
+# waitandnext 1
+
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# sestop "SE_6175"
+# framein 0 0
+;;背景：図書館：jukebox
+# background "jukebox"
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# fadein "black" 1.5
+# waitandnext 1.5
+
+;;ミーミルが歩いてくる
+# se "SE_0719"
+# move 270 3 0.5
+# face 270 "surprise"
+# alpha 270 1 0.5
+# waitandnext 1
+
+# bgm "bgm002" 0
+# voice 9917 "mimir_navikan_0021"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+これは…とても立派な図書館ですね
+マスター様、ご覧下さい
+
+;;選択肢
+# select "本がたくさんある" "select_label_01" "カシウスの功績だね" "select_label_02" "迷いそう…" "select_label_03"
+これは…とても立派な図書館ですね
+マスター様、ご覧下さい
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+こちらの書物は誰でも読むことが
+できるそうです
+すごいですね
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# voice 9917 "mimir_navikan_0003"
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+はい！
+カシウスさんはご自身の理想を
+形にすることができたようです
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# voice 9917 "mimir_navikan_0003"
+# face 270 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+サポートならミーミルにお任せ下さい
+
+# label "select_label_end"
+# alpha 270 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+;;マナナンがマクリルを引っ張って走り抜ける
+# se "SE_5575"
+# leftin 6504011 1
+# move 6504011 4 0
+# layer 6504011 4
+# mask 6504011 on
+# voice 650401 "manannan_ura_0005"
+# alpha 6504011 1 0.3
+# leftin 6603811 1
+# move 6603811 2 0
+# layer 6603811 2
+# alpha 6603811 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+広くて静かで楽しいね♪
+
+# voice 660381 "maclir_ura_0015"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+ううう…
+本だらけで薄暗くて怖いよ
+
+# rightout 6504011 1
+# rightout 6603811 1
+# textwindow "close"
+# waitandnext 1.5
+
+# voice 9917 "mimir_navikan_0011"
+# face 270 "angry"
+# alpha 270 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+おふたりとも、図書館ではお静かに
+走ってはいけません
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+ああっ…
+行ってしまいました
+
+# voice 9917 "mimir_navikan_0001"
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+マスター様
+おふたりを連れ戻してまいりますので
+少しお待ちください
+
+;;選択肢
+# select "一緒にいこう" "select_label_04"
+マスター様
+おふたりを連れ戻してまいりますので
+少しお待ちください
+
+# label "select_label_04"
+# voice 9917 "mimir_navikan_0003"
+# face 270 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+はい
+それでは一緒に
+
+;;暗転挟む
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+# voice 9917 "mimir_navikan_0027"
+# face 270 "sad"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+マナナンさんとマクリルさんは
+どちらに行かれたのでしょう？
+本棚が並んでいて視界が悪いですね…
+
+# face 270 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+…あちらにいらっしゃるのは？
+
+;;盤古が現れる
+# move 270 2 0.5
+# move 5202211 4 0
+# layer 5202211 2
+# alpha 5202211 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@盤古
+…………
+
+# voice 9917 "mimir_navikan_0002"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+もしかして盤古さんでは？
+
+# voice 2022 "banko_0023"
+# face 5202211 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@盤古
+えぇ！？
+誰…？どうして、我のことを…？
+
+# face 270 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+突然、失礼致しました
+私はミーミル
+マスター様の専属補佐官です
+
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+盤古さんのことはユグドラシルの
+記録で存じ上げておりました
+こちらで何を？
+
+# voice 2022 "banko_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@盤古
+ここ…居心地いいから…
+
+# voice 9917 "mimir_navikan_0040"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+なるほど
+確かに過ごしやすい環境です
+
+# voice 2022 "banko_0004"
+# face 5202211 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@盤古
+うふふ
+そ、そうだろ…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+私、ユグドラシルで多くの記録を
+読ませていただいていたので、
+親近感も湧きますね
+
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+珍しい本もありそうです
+とても興味があるのですが…
+ところで、こちらに――
+
+# textflame 1 1
+# textboxarrow 0 3
+@盤古
+きょ、興味があるのならっ
+そなたに面白いものを――
+
+# face 5202211 "shy"
+# textflame 1 1
+# textboxarrow 0 3
+@盤古
+…………
+
+# face 270 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+あ！失礼致しました
+言葉が重なってしまいましたね
+盤古さんから、どうぞ
+
+# voice 2022 "banko_0015"
+# face 5202211 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@盤古
+うぅっ…
+
+# textflame 1 1
+# textboxarrow 0 3
+@盤古
+…………ん？リク、カイ、クウ、
+もう少し…頑張れ…？
+えっと…
+
+# voice 2022 "banko_0029"
+# face 5202211 "shy"
+# textflame 1 1
+# textboxarrow 0 3
+@盤古
+よし！
+興味があるのなら…
+
+# textflame 1 1
+# textboxarrow 0 3
+@盤古
+わ、我がそなた達に…とっておきの
+本を…見せてやろう
+
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+あ、ええと…
+
+;;選択肢
+# select "それは楽しみだね" "select_label_05"
+あ、ええと…
+
+# label "select_label_05"
+# voice 2022 "banko_0004"
+# face 5202211 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@盤古
+うふふ
+つ、ついてきて…
+
+;;暗転挟む
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# bgm "bgm003" 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@盤古
+ここ…普通の人は…入れないんだ
+と、特別に我が…案内してやろう
+ふふっ
+
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+随分、奥まった場所に来ましたけれど
+こちらにある本は…
+
+# textflame 1 1
+# textboxarrow 0 3
+@盤古
+「虚構神書」…「創世神書」…それと
+「喪失原典」
+全部…歴史書、みたいなもの…だ
+
+# face 270 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+ですが、こちらに載っている年表は
+私の知っているものとは
+異なっているようにお見受け致します
+
+# face 5202211 "shy"
+# textflame 1 1
+# textboxarrow 0 3
+@盤古
+そ、それは…この世界とは――
+
+;;ミーミルのペンダントが光る
+# bgm "stop"
+# se "SE_6191"
+# textwindow "close"
+# effectbody 100 51 -140 35 0
+# effectstart 100
+# face 270 "surprise"
+# textboxarrow 0 0
+# waitandnext 3
+
+;;盤古が驚いて後ずさる
+# se "SE_6191_stop"
+# voice 2022 "banko_0025"
+# face 5202211 "angry"
+# move 5202211 5 0.2
+# scale 5202211 0.75 0.2
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@盤古
+キャー！
+
+# voice 9917 "mimir_navikan_0031"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+盤古さん、驚かせてしまって
+すみません
+
+# face 270 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+マスター様、ティルフィング様からの
+ご連絡のようです
+
+# serif 1
+@ティルフィング
+聞こえますか、ミーミル？
+
+# voice 9917 "mimir_navikan_0049"
+# alpha 5202211 0 0.3
+# move 270 3 0.5
+# serif 0
+# textboxarrow 0 2
+@ミーミル
+はい、ティルフィング様
+どうされたのでしょう？
+
+# bgm "bgm005" 0
+# serif 1
+@ティルフィング
+実は…異族が現れたんです
+
+;;選択肢
+# select "異族！？" "select_label_06"
+実は…異族が現れたんです
+
+# label "select_label_06"
+# serif 1
+@ティルフィング
+信じられないかもしれませんが…
+急いで異族の出現した町、
+トーキョーに向かって下さい！
+
+# fadeout "black" 2
+# waitandnext 2

@@ -1,0 +1,130 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;インテグラルキラーズサイドストーリー
+;;第3話―５　タイトル：不可欠な痛み
+;;3_5_1
+;;スクリプト最後の背景：町（town）
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgm "bgm023_024" 0
+;;-----------------------------------------
+;;ティルフィング（別）
+# entry 9241 24
+# pos 9241 3
+# scale 9241 0.8 0
+# layer 9241 2
+# alpha 9241 0 0
+# mask 9241 off
+# brightness 9241 0.8 0
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 2
+# alpha 0 0 0
+# mask 0 off
+;;-----------------------------------------
+;;第3話―５　タイトル：不可欠な痛み
+;;//背景：町（town）
+# textwindow "close"
+# serif 1
+@キラープリンセス達
+はぁっ！
+
+;;//キル姫が人を斬る
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# serif 1
+@住民１
+ギャアアアアッ…！
+
+# serif 1
+@住民２
+助けて…！
+誰かっ…！
+
+;;ティルフィング（別）
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 1014 "tyrufing_0037"
+# move 9241 2 0
+# face 9241 "angry"
+# alpha 9241 1 0.5
+# mask 9241 on
+# textboxarrow 0 1
+# move 0 4 0
+# face 0 "serious2"
+# alpha 0 1 0.5
+# mask 0 on
+# textwindow "normal"
+@ティルフィング
+何てこと…！
+早く止めないとっ
+
+# face 0 "serious"
+# textboxarrow 0 3
+@デュリン
+バカ言わないで！
+アンタ一人でどうにかできる人数じゃ
+ないでしょ
+
+# face 0 "serious2"
+# textboxarrow 0 3
+@デュリン
+悔しいけど、逃げるしかないわ…
+
+;;ティルフィング（別）
+# face 9241 "mad2"
+# textboxarrow 0 1
+@ティルフィング
+そんな…
+そんなの…イヤよっ
+
+;;ティルフィング（別）
+# textboxarrow 0 1
+@ティルフィング
+希望の見えない世界だからこそ、
+抗わないといけないの！
+
+# face 0 "sad"
+# textboxarrow 0 3
+@デュリン
+気持ちは分かるけどっ
+
+;;ティルフィング（別）
+# face 9241 "sad"
+# textboxarrow 0 1
+@ティルフィング
+せめて…ほんの少しでも時間稼ぎに
+なれば…
+
+;;//選択肢
+;;
+;;A行こう、ティルフィング
+;;B君なら守れる
+# select "行こう、ティルフィング" "select_label_01" "君なら守れる" "select_label_01"
+せめて…ほんの少しでも時間稼ぎに
+なれば…
+
+;;AB共通
+;;ティルフィング（別）
+# label "select_label_01"
+# face 9241 "angry"
+# textboxarrow 0 1
+@ティルフィング
+マスター！
+はいっ
+行きます！
+
+# face 0 "serious"
+# textboxarrow 0 3
+@デュリン
+ええー！？
+ちょっと…無茶よ…！

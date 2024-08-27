@@ -1,0 +1,323 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１２章 章タイトル「ラルゴカタストロフィ―暴走―」
+;;第2話－１２　タイトル：暴走の契機
+;;2_12_1
+;;スクリプト最後の背景：泉
+;;-----------------------------------------
+# script "lisp"
+# background "fountain"
+# bgmfile "bgm463_464_block" "BgmIntegralNoahDisrupters" 0
+;;-----------------------------------------
+;;フラベルム
+# body 501611
+# pos 501611 3
+# scale 501611 0.8 0
+# layer 501611 2
+# alpha 501611 0 0
+# mask 501611 off
+# brightness 501611 0.8 0
+;;セファー
+# body 502111
+# pos 502111 3
+# scale 502111 0.8 0
+# layer 502111 2
+# alpha 502111 0 0
+# mask 502111 off
+# brightness 502111 0.8 0
+;;カリス・聖鎖・アザゼル
+# body 5602511
+# pos 5602511 3
+# scale 5602511 0.8 0
+# layer 5602511 2
+# alpha 5602511 0 0
+# mask 5602511 off
+;;キプル
+# body 163
+# pos 163 3
+# scale 163 0.6 0
+# layer 163 2
+# alpha 163 0 0
+# mask 163 off
+;;-----------------------------------------
+;;シナリオカット一枚絵
+# imageset 0 "integral_12"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;第2話－１２　タイトル：暴走の契機
+;;//背景：泉
+# emotionbody 1000 15 501611 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# emotionbody 2000 15 502111 0 0
+# effectpattern 2000 1 0
+# effectstart 2000
+# move 501611 2 0
+# face 501611 "angry"
+# alpha 501611 1 0
+# mask 501611 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 502111 4 0
+# face 502111 "angry"
+# alpha 502111 1 0
+# mask 502111 on
+@フラベルム
+アアアアアアアアア！
+
+# textboxarrow 0 3
+@セファー
+アアアアアアアアア！
+
+# effectskip 1000
+# effectskip 2000
+# voice 560251 "chalice_di_0011"
+# alpha 501611 0 0.5
+# alpha 502111 0 0.5
+# move 5602511 2 0
+# face 5602511 "angry"
+# alpha 5602511 1 0.5
+# mask 5602511 on
+# textboxarrow 0 1
+# move 163 4 0
+# alpha 163 1 0.5
+# mask 163 on
+@カリス
+二人ともダメだよっ
+
+# voice 9951 "kipuru_0054"
+# textboxarrow 0 3
+@キプル
+カリス！
+近づき過ぎるのは危ないですっ
+
+# effectstart 1000
+# alpha 5602511 0 0.5
+# alpha 163 0 0.5
+# move 501611 3 0
+# face 501611 "angry"
+# alpha 501611 1 0.5
+# mask 501611 off
+# textboxarrow 0 2
+@フラベルム
+アアアアアアアアア！
+
+# se "SE_4400"
+# sedelay "SE_4400" 0.6
+# sedelay "SE_4400" 1.2
+# waitandnext 1.4
+
+;;//フラベルムの攻撃をカリスが躱す
+# effectskip 1000
+# textwindow "close"
+# alpha 501611 0 0.5
+# move 5602511 3 0
+# face 5602511 "angry"
+# alpha 5602511 1 0.5
+# mask 5602511 off
+# waitandnext 0.5
+
+# se "SE_5204"
+# leftout 5602511 0.5
+# waitandnext 0.5
+
+# alpha 5602511 0 0
+# waitandnext 0.2
+
+# voice 560251 "chalice_di_0024"
+# move 5602511 2 0
+# face 5602511 "surprise"
+# alpha 5602511 1 0.5
+# mask 5602511 on
+# textboxarrow 0 1
+# move 163 4 0
+# alpha 163 1 0.5
+# mask 163 on
+# textwindow "normal"
+@カリス
+きゃっ…！
+わたしの声、聞こえてないのかなあ…
+
+# face 5602511 "sad"
+# textboxarrow 0 1
+@カリス
+まず声を届かせないといけないはず
+なんだけど…
+
+# textboxarrow 0 3
+@キプル
+やっぱり、ミネルヴァさんにも
+手伝ってもらいましょう…
+一人では無理ですよ…
+
+# face 5602511 "normal"
+# textboxarrow 0 1
+@カリス
+でも、ミネルヴァだって
+レーヴァテインの相手をしてくれてる
+んだよっ
+
+# textboxarrow 0 1
+@カリス
+わたしが音を上げたら…
+フラベルムとセファーを助けられ
+ないよっ
+
+# textboxarrow 0 3
+@キプル
+そんなこと言って…
+無理をしてまた倒れたら…
+
+# effectstart 2000
+# alpha 5602511 0 0.5
+# alpha 163 0 0.5
+# move 502111 3 0
+# face 502111 "angry"
+# alpha 502111 1 0.5
+# mask 502111 off
+# textboxarrow 0 2
+@セファー
+アアアアアアアアアアア！
+
+# se "SE_4400"
+# waitandnext 0.5
+
+;;//セファーの攻撃をカリスが躱す
+# effectskip 2000
+# textwindow "close"
+# alpha 502111 0 0.5
+# move 5602511 3 0
+# face 5602511 "angry"
+# alpha 5602511 1 0.5
+# mask 5602511 off
+# waitandnext 0.5
+
+# se "SE_5204"
+# leftout 5602511 0.5
+# waitandnext 0.5
+
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# alpha 5602511 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+#setnextbgmblock 2
+# voice 560251 "chalice_di_0003"
+# textboxarrow 0 0
+# textwindow "normal"
+@カリス
+うん…
+それでも、わたしがやるんだ
+やりたいんだ
+
+# textboxarrow 0 0
+@カリス
+みんなを癒す
+ずっとわたしがやりたかったこと…
+
+# textboxarrow 0 0
+@カリス
+キプルとグラ姉のお陰で、
+それがちゃんとできるように
+なったんだから
+
+# textboxarrow 0 0
+@カリス
+みんなが、無理だって下を向いちゃう
+ときこそ、カリスちゃんが
+ミラクルを起こすときだよね！
+
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# imagealpha 0 0 0
+# move 5602511 2 0
+# face 5602511 "normal"
+# alpha 5602511 1 0
+# mask 5602511 on
+# move 163 4 0
+# alpha 163 1 0
+# mask 163 on
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 9951 "kipuru_0027"
+# textboxarrow 0 3
+# textwindow "normal"
+@キプル
+はぁー…
+キプルキプルキプルキプル…
+
+# face 5602511 "surprise"
+# textboxarrow 0 1
+@カリス
+どうしたの、キプル？
+
+# textboxarrow 0 3
+@キプル
+…一生懸命、考えてみました
+カリスがどうすれば、あの二人の
+暴走を止められるのか
+
+# voice 9951 "kipuru_0052"
+# textboxarrow 0 3
+@キプル
+カリス、キプルはカリスを信じます
+カリスもキプルを信じて
+動いて下さいっ
+
+# face 5602511 "normal"
+# textboxarrow 0 1
+@カリス
+もちろん！
+何か良い考えが浮かんだの？
+
+# voice 9951 "kipuru_0032"
+# textboxarrow 0 3
+@キプル
+はい
+キプルを、囮にして下さいっ
+
+# voice 560251 "chalice_di_0012"
+# face 5602511 "surprise"
+# textboxarrow 0 1
+@カリス
+なんでっ！？
+そんなのやめて！
+
+# voice 9951 "kipuru_0036"
+# textboxarrow 0 3
+@キプル
+お願いします
+そうすれば暴走しているお二人の
+動きを誘導できるんです
+
+# textboxarrow 0 3
+@キプル
+キプルは、カリスを信じています
+きっと、キプルも含めて、
+みんな助けてくれると
+
+# voice 560251 "chalice_di_0040"
+# face 5602511 "normal"
+# textboxarrow 0 1
+@カリス
+あっ！なるほど～
+キプル、すっごいね！
+
+# voice 560251 "chalice_di_0033"
+# textboxarrow 0 1
+@カリス
+任せて！
+わたしとキプルで
+ミラクルを起こしちゃおう！

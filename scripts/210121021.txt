@@ -1,0 +1,360 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１２章 章タイトル「ラルゴカタストロフィ―暴走―」
+;;第1話－２　タイトル：癒しのキル姫
+;;1_2_1
+;;スクリプト最後の背景：平原
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;ダーインスレイヴ
+# body 102811
+# pos 102811 3
+# scale 102811 0.8 0
+# layer 102811 2
+# alpha 102811 0 0
+# mask 102811 off
+;;花異族
+# body 5809801
+# pos 5809801 3
+# scale 5809801 0.8 0
+# layer 5809801 2
+# alpha 5809801 0 0
+# mask 5809801 off
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 2
+# alpha 5401721 0 0
+# mask 5401721 off
+;;擬装フライシュッツ
+# body 5502721
+# pos 5502721 3
+# scale 5502721 0.8 0
+# layer 5502721 2
+# alpha 5502721 0 0
+# mask 5502721 off
+;;擬装ダモクレス
+# body 5103521
+# pos 5103521 3
+# scale 5103521 0.8 0
+# layer 5103521 2
+# alpha 5103521 0 0
+# mask 5103521 off
+;;擬装エルキュール
+# body 5202521
+# pos 5202521 3
+# scale 5202521 0.8 0
+# layer 5202521 2
+# alpha 5202521 0 0
+# mask 5202521 off
+;;グラーシーザ・擬装・ウォーリアー
+# body 5302621
+# pos 5302621 3
+# scale 5302621 0.8 0
+# layer 5302621 2
+# alpha 5302621 0 0
+# mask 5302621 off
+;;ミネルヴァ・擬装・アーチャー
+# body 5302521
+# pos 5302521 3
+# scale 5302521 0.8 0
+# layer 5302521 2
+# alpha 5302521 0 0
+# mask 5302521 off
+;;ネス・擬装・ランサー
+# body 5602021
+# pos 5602021 3
+# scale 5602021 0.8 0
+# layer 5602021 2
+# alpha 5602021 0 0
+# mask 5602021 off
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;第1話－２　タイトル：癒しのキル姫
+;;//背景：平原
+;;//エルキュール走っていく？
+# textwindow "close"
+# waitandnext 0.2
+
+# se "SE_0876"
+# waitandnext 0.5
+
+# voice 3025 "minerva_im_0045"
+# move 5302521 3 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ミネルヴァ
+待って下さい、エルキュール
+一人で先走ると危ないですよ
+
+# alpha 5302521 0 0.5
+# move 5202521 3 0
+# face 5202521 "normal"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# textboxarrow 0 2
+@エルキュール
+でも、急がないと皆さんの希望に
+なれませんから！
+
+# textboxarrow 0 2
+@エルキュール
+インテグラルキラーズと、
+今度こそ決着をつけてみせます！
+
+# alpha 5202521 0 0.5
+# move 5302521 3 0
+# face 5302521 "sad"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+予想はしていましたけれど…
+少し逸っていますね
+
+# textboxarrow 0 2
+@ミネルヴァ
+他の組は上手くやれている
+でしょうか？
+
+;;//回想シーン
+;;//背景：ユグドラシル
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "in_yggdrasill"
+# alpha 5302521 0 0
+# move 5302521 3 0
+# face 5302521 "usual"
+# alpha 5302521 1 0
+# mask 5302521 off
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ミネルヴァ
+インテグラルキラーズの出現状況を
+鑑みて、私達は三組に分かれて
+行動します
+
+# textboxarrow 0 2
+@ミネルヴァ
+誰かが地上に降りる前で助かりました
+ディスラプターについては、
+一旦、後回しにしましょう
+
+# textboxarrow 0 2
+@ミネルヴァ
+組み分けは、私とエルキュール
+フライシュッツとスイハ、
+ダモクレスとグラーシーザにネス
+
+# textboxarrow 0 2
+@ミネルヴァ
+それぞれインテグラルキラーズが
+現れた地に向かって下さい
+
+# voice 5027 "freischotz_im_0046"
+# alpha 5302521 0 0.5
+# move 5401721 2 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# mask 5401721 on
+# move 5502721 4 0
+# face 5502721 "normal"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+# textboxarrow 0 3
+@フライシュッツ
+スイハちゃん、よろしくね～
+
+# voice 4017 "suiha_0002"
+# textboxarrow 0 1
+@スイハ
+あの…ユグドラシルの守りは？
+
+# alpha 5401721 0 0.5
+# alpha 5502721 0 0.5
+# move 5302521 3 0
+# face 5302521 "usual"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+それは、ダーインスレイヴ達に
+任せようと思います
+
+# voice 1028 "dainsleif_0003"
+# alpha 5302521 0 0.5
+# move 102811 3 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 off
+# textboxarrow 0 2
+@ダーインスレイヴ
+ああ、心得た
+グングニルやヴォータン達も
+力になってくれるだろう
+
+# textboxarrow 0 2
+@ダーインスレイヴ
+後顧の憂いなく戦いに臨んでくれ
+
+# voice 1035 "damocles_0004"
+# alpha 102811 0 0.5
+# move 5103521 3 0
+# face 5103521 "happy"
+# alpha 5103521 1 0.5
+# mask 5103521 off
+# textboxarrow 0 2
+@ダモクレス
+グラーシーザもネスも
+クレスがちゃんと癒してあげる
+からねっ
+
+# voice 3026 "grayside_0006"
+# alpha 5103521 0 0.5
+# move 5302621 2 0
+# face 5302621 "normal"
+# alpha 5302621 1 0.5
+# mask 5302621 on
+# textboxarrow 0 1
+# move 5602021 4 0
+# face 5602021 "normal"
+# alpha 5602021 1 0.5
+# mask 5602021 on
+@グラーシーザ
+それはちょうじょう！
+
+# voice 6020 "ness_0009"
+# face 5602021 "angry"
+# textboxarrow 0 3
+@ネス
+むー…
+二人とも規律正しく行動して
+下さい
+
+# alpha 5302621 0 0.5
+# alpha 5602021 0 0.5
+# move 5202521 3 0
+# face 5202521 "normal"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# textboxarrow 0 2
+@エルキュール
+話がまとまったのなら、
+すぐに出発しましょう！
+人々の希望のために
+
+;;//回想終了
+;;//背景：平原
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "plain"
+# alpha 5202521 0 0
+# move 5302521 2 0
+# face 5302521 "usual"
+# alpha 5302521 1 0
+# mask 5302521 on
+# move 5202521 4 0
+# face 5202521 "normal"
+# alpha 5202521 1 0.5
+# mask 5202521 on
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# voice 3025 "minerva_im_0045"
+# textboxarrow 0 1
+# textwindow "normal"
+@ミネルヴァ
+エルキュール、町に向かう途中で
+寄りたいところがあります
+ついてきて下さい
+
+# voice 2025 "hercule_0022"
+# face 5202521 "surprise"
+# textboxarrow 0 3
+@エルキュール
+どこに行くんですかっ？
+それよりも皆さんを守らないとっ
+
+# textboxarrow 0 1
+@ミネルヴァ
+すぐに済みますので
+ラグナロクも気にしていましたし
+
+# face 5202521 "normal"
+# textboxarrow 0 3
+@エルキュール
+それなら、少しだけ…
+
+# textboxarrow 0 1
+@ミネルヴァ
+ああ、見えてきました
+あの泉です
+あそこに…
+
+# textboxarrow 0 1
+@ミネルヴァ
+ティルフィングの母、
+女神エイレーネがいらっしゃいます
+
+# textboxarrow 0 1
+@ミネルヴァ
+遥か昔に封印され、石像のままでは
+ありますが…
+
+# textboxarrow 0 3
+@エルキュール
+泉に石像があるのか、
+確認しておくんですねっ
+急ぎましょう！
+
+# bgmfile "bgm413_414" "BgmIntegralNoahBattle001" 0
+# se "SE_0830"
+# alpha 5302521 0 0.5
+# alpha 5202521 0 0.5
+# move 5809801 3 0
+# alpha 5809801 1 0.5
+# mask 5809801 off
+# textboxarrow 0 2
+@異族
+イイイイイイイイイ！
+
+# alpha 5809801 0 0.5
+# move 5202521 3 0
+# face 5202521 "surprise"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# textboxarrow 0 2
+@エルキュール
+異族！？
+もしかして近くに、
+インテグラルキラーズがっ？

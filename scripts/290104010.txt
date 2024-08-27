@@ -1,0 +1,437 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;２章１話　「エデンクライシス―覚醒―」
+;;第4話　タイトル：風雲！マサムネ城
+;;4_10
+;;スクリプト最後の背景：マサムネ城（夜）
+;;-----------------------------------------
+# script "lisp"
+# background "masamune_arena"
+# bgmfile "bgm415" "BgmIntegralNoahBattle002" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.8 0
+# layer 502711 2
+# alpha 502711 0 0
+# mask 502711 off
+;;ダモクレス
+# body 103511
+# pos 103511 3
+# scale 103511 0.8 0
+# layer 103511 2
+# alpha 103511 0 0
+# mask 103511 off
+;;ネス
+# body 602011
+# pos 602011 3
+# scale 602011 0.8 0
+# layer 602011 2
+# alpha 602011 0 0
+# mask 602011 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;ハリー
+# body 208
+# pos 208 3
+# scale 208 0.8 0
+# layer 208 2
+# alpha 208 0 0
+# mask 208 off
+;;ダーインスレイヴ
+# body 102811
+# pos 102811 3
+# scale 102811 0.8 0
+# layer 102811 2
+# alpha 102811 0 0
+# mask 102811 off
+;;蜻蛉切
+# body 302411
+# pos 302411 3
+# scale 302411 0.8 0
+# layer 302411 3
+# alpha 302411 0 0
+# mask 302411 off
+;;司会
+# body 11
+# pos 11 3
+# scale 11 0.8 0
+# layer 11 2
+# alpha 11 0 0
+# mask 11 off
+;;-----------------------------------------
+;;第4話　タイトル：風雲！マサムネ城
+;;//背景：闘技場
+# move 11 3 0
+# face 11 "normal"
+# alpha 11 1 0
+# mask 11 off
+# textflame 1 1
+# textboxarrow 0 2
+@司会
+これで本日の試合は全て終了
+致しました！
+
+# textboxarrow 0 2
+@司会
+明日、準決勝と決勝を行います！
+紳士淑女の皆様、是非、ご観戦に
+いらして下さい！
+
+# textboxarrow 0 2
+@司会
+それでは、また明日！
+司会及び実況は…
+
+# textboxarrow 0 2
+@司会
+臨場感・イズ・命！
+クルーン・アルルカンでした
+
+;;//背景：マサムネ城（夜）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "masamune_castle"
+# alpha 11 0 0
+# move 103511 2 0
+# face 103511 "happy"
+# alpha 103511 1 0
+# mask 103511 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0
+# mask 196 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 1035 "damocles_0004"
+@ダモクレス
+明日が楽しみだな～♪
+アルマス、頑張ってね！
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0042"
+@アルマス
+あ…うん
+そうね…
+
+# alpha 103511 0 0.5
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0002"
+@ラグナロク
+アルマス、少しいい？
+
+# textboxarrow 0 3
+@アルマス
+何…？
+
+# alpha 103611 0 0.5
+# alpha 196 0 0.5
+# move 102811 2 0
+# face 102811 "happy"
+# alpha 102811 1 0.5
+# mask 102811 on
+# textboxarrow 0 1
+# move 208 4 0
+# alpha 208 1 0.5
+# mask 208 on
+# voice 1028 "dainsleif_0004"
+@ダーインスレイヴ
+さて、子猫ちゃん達を宿まで
+エスコートしようじゃないか
+なあ、ハリー？
+
+# face 208 "surprise"
+# textboxarrow 0 3
+# voice 9938 "harry_0034"
+@ハリー
+えっ…
+そ、そうだねっ
+行こうか、ダーイン
+
+# alpha 208 0 0.5
+# move 602011 4 0
+# face 602011 "normal"
+# alpha 602011 1 0.5
+# mask 602011 on
+# textboxarrow 0 3
+@ネス
+いえ、お気遣いなく
+私達はラグナロクと一緒に――
+
+# textboxarrow 0 1
+# voice 1028 "dainsleif_0003"
+@ダーインスレイヴ
+夜道を一人で歩かせるわけには
+いかないな
+さあ、姫様方
+
+;;//ダーインスレイヴが強引に押していく
+# se "SE_0740"
+# textwindow "close"
+# rightout 102811 1
+# waitandnext 0.2
+
+# rightout 602011 0.8
+# waitandnext 0.8
+
+# alpha 102811 0 0
+# alpha 602011 0 0
+# waitandnext 0.2
+
+# move 102811 2 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 on
+# move 502711 4 0
+# face 502711 "surprise"
+# alpha 502711 1 0.5
+# mask 502711 on
+# textboxarrow 0 3
+# textwindow "normal"
+@フライシュッツ
+待って～
+ラグナロクちゃんとアルマスちゃんが
+置いてけぼりになっちゃう～…
+
+;;//フライシュッツも押される
+# se "SE_0740"
+# textwindow "close"
+# rightout 102811 1
+# waitandnext 0.2
+
+# rightout 502711 0.8
+# waitandnext 0.8
+
+# alpha 102811 0 0
+# alpha 502711 0 0
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textwindow "normal"
+# voice 1036 "ragnarok_0003"
+@ラグナロク
+ダーインスレイヴが気を遣って
+くれたようね
+
+# bgmfile "bgm409" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0003"
+@アルマス
+…………何を言いたいのかは
+だいたい予想できてる
+試合のことよね？
+
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0028"
+@ラグナロク
+あのとき、あなたの姿が一瞬だけど
+インテグラルキラーズの姿に
+戻ったの
+
+# textboxarrow 0 1
+@ラグナロク
+バイブスで抑えられていたはずなのに
+それが揺らいだ…
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0022"
+@アルマス
+でも、適合するキル姫が増えるほど
+私の中のバイブスは安定するはずよね
+どうなってるの？
+
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0032"
+@ラグナロク
+そう…
+そこが気になってる
+
+# textboxarrow 0 1
+@ラグナロク
+意識を失ったって言っていたけれど
+その直前まで何を考えていたの？
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0035"
+@アルマス
+何って…
+絶・勝ちたいって思ってたわ
+ただ、ダーインスレイヴの一撃で…
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+絶・最悪…って思ったとき、
+どこか遠くから声がして…
+そう！声がしたのよっ
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+「変わらぬ思い」…
+「咲き誇れ」…
+そんな台詞だったと思う…
+
+# textboxarrow 0 3
+@アルマス
+その声が聞こえたところで、
+意識が飛んだの
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0042"
+@アルマス
+…インテグラルキラーズだったときの
+記憶が、一瞬だけバイブスを凌駕した
+ってこと？
+
+# textboxarrow 0 1
+@ラグナロク
+危機的状況で普段より強い力を
+発揮することはあるけれど…
+
+# textboxarrow 0 1
+@ラグナロク
+明日、もし蜻蛉切との試合中にも
+同じことが起きたら…
+
+# textboxarrow 0 3
+@アルマス
+どうなるか…分からないわね…
+
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# move 103611 1 0.5
+# move 302411 3 0
+# face 302411 "normal"
+# alpha 302411 1 0.5
+# mask 302411 on
+# textboxarrow 0 2
+# move 196 5 0.5
+@蜻蛉切
+あら？
+そこにいるのはラグナロクと
+アルマスね
+
+# face 103611 "usual"
+# textboxarrow 0 1
+@ラグナロク
+蜻蛉切…
+
+# textboxarrow 0 2
+# voice 3024 "tonbokiri_0004"
+@蜻蛉切
+ダーインスレイヴを退けるなんて
+そなた、見込みがありそうね
+明日は良い試合にしましょう
+
+# face 196 "happy"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0048"
+@アルマス
+そうね
+よろしく
+
+# textboxarrow 0 2
+# voice 3024 "tonbokiri_0009"
+@蜻蛉切
+なぁに？
+覇気がないわねっ
+そんなことでは私に――
+
+;;//心音演出
+# se "SE_0644"
+# waitandnext 0.5
+
+# face 302411 "surprise"
+# textboxarrow 0 2
+# voice 3024 "tonbokiri_0023"
+@蜻蛉切
+えっ…あれっ…？
+
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+どうしたの？
+
+# face 302411 "angry"
+# textboxarrow 0 2
+@蜻蛉切
+な…何でもないわよっ
+別に、そなたを見て急に胸が
+高鳴ったりとか…
+
+# textboxarrow 0 2
+@蜻蛉切
+そんなこと、
+全然ないんだからね！
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0035"
+@アルマス
+胸が高鳴る？
+
+# face 103611 "surprise"
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0022"
+@ラグナロク
+蜻蛉切、それって――
+
+# textboxarrow 0 2
+# voice 3024 "tonbokiri_0007"
+@蜻蛉切
+何でもないわよ！
+明日、首を洗って待ってなさい！
+勝つのは私よっ
+
+;;//蜻蛉切が走り去る
+# se "SE_5575"
+# textwindow "close"
+# alpha 302411 0 0.5
+# waitandnext 0.5
+
+# move 103611 2 0.5
+# move 196 4 0.5
+# waitandnext 0.5
+
+# face 196 "normal"
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 9943 "almace_navikan_0001"
+@アルマス
+何だったの、今の？
+
+# face 103611 "normal"
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0003"
+@ラグナロク
+恐らく蜻蛉切は…

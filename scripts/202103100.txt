@@ -1,0 +1,443 @@
+;;-----------------------------------------
+;;SEA5章_10
+;;-----------------------------------------
+# script "lisp"
+# background "town_night_3"
+# bgm "bgm029" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;ミネルヴァ
+# body 302511
+# pos 302511 4
+# scale 302511 0.8 0
+# layer 302511 4
+# alpha 302511 0 0
+;;フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.8 0
+# layer 502711 4
+# mask 502711 off
+# alpha 502711 0 0
+;;ダモクレス
+# body 103511
+# pos 103511 2
+# scale 103511 0.8 0
+# layer 103511 3
+# alpha 103511 0 0
+;;グラーシーザ
+# body 302611
+# pos 302611 4
+# scale 302611 0.8 0
+# layer 302611 4
+# alpha 302611 0 0
+;;ネス
+# body 602011
+# pos 602011 2
+# scale 602011 0.8 0
+# layer 602011 3
+# alpha 602011 0 0
+;;神令エルキュール
+# body 3202511
+# pos 3202511 1
+# scale 3202511 0.8 0
+# layer 3202511 3
+# alpha 3202511 0 0
+# body 202511
+# alpha 202511 0 0
+;;神令スイハ
+# body 3401711
+# pos 3401711 5
+# scale 3401711 0.8 0
+# layer 3401711 2
+# mask 3401711 off
+# alpha 3401711 0 0
+# body 401711
+# alpha 401711 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：町（夜）（トリミング）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# face 270 "angry"
+# alpha 270 1 0.3
+# face 302511 "angry"
+# alpha 302511 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+…それで、急ぎ助けを呼ぼうと
+走っていたところ、皆さんと運良く
+お会いできたんです
+
+# voice 3025 "minerva_0023"
+# textboxarrow 0 3
+@ミネルヴァ
+町中に魔獣が！？
+急いで対処しなくてはなりません
+
+# textboxarrow 0 1
+@ミーミル
+皆さんと合流できて助かりました
+早くしないとスイハさんがっ
+
+# alpha 270 0 0.3
+# alpha 302511 0 0.3
+# voice 5027 "freischotz_battle_0003"
+# face 502711 "angry"
+# alpha 502711 1 0.3
+# textboxarrow 0 2
+@フライシュッツ
+うん！
+おねーちゃん、がんばるよ～っ
+
+;;エンシェント達が走っていく
+# se "SE_5575"
+# scale 502711 0.75 0.5
+# alpha 502711 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# scale 502711 0.8 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# voice 650401 "manannan_ura_0028"
+# face 6504011 "sad"
+# alpha 6504011 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+うーん…
+
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+あ、マナナンさん
+すみません…マクリルさんは…
+
+# voice 650401 "manannan_ura_0003"
+# face 6504011 "usual"
+# textboxarrow 0 3
+@マナナン
+この近くにいるんでしょ？
+それで十分だよ！
+
+# textboxarrow 0 3
+@マナナン
+ミーミルが戻ってきたし、
+私は“相棒”を探しに行ってくるね
+
+;;マナナンが飛び出していく
+# se "SE_5575"
+# move 6504011 3 0.5
+# scale 6504011 0.75 0.5
+# alpha 6504011 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# face 270 "angry"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+マナナンさん
+お気をつけて！
+
+# move 270 3 0.5
+# voice 9917 "mimir_navikan_0001"
+# face 270 "normal"
+# textboxarrow 0 2
+@ミーミル
+マスター様、
+私達はいかが致しましょう？
+
+;;選択肢
+# select "ミーミルの話を聞きたい" "select_label_01" "スイハ達が気になる" "select_label_02"
+マスター様、
+私達はいかが致しましょう？
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# voice 9917 "mimir_navikan_0003"
+# textboxarrow 0 2
+@ミーミル
+分かりました
+ですが、スイハさんのことも
+心配ですので、道すがら…
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textboxarrow 0 2 
+@ミーミル
+では、道すがら
+私の話を聞いていただけますか？
+
+# label "select_label_end"
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：町（夜）：town_night_2
+# background "town_night_2"
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 4
+# alpha 270 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_0794"
+# serif 1
+@魔獣
+ガアアアアア…
+
+# move 3401711 4 0.5
+# face 3401711 "angry"
+# alpha 3401711 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+@スイハ
+これで終わりです
+
+# move 3202511 2 0.5
+# face 3202511 "normal"
+# alpha 3202511 1 0.3
+# textboxarrow 0 1
+@エルキュール
+そちらも片付いたみたいですね
+町に被害がなくて良かった
+
+# bgm "bgm005" 0
+# voice 4017 "suiha_0030"
+# face 3401711 "happy"
+# textboxarrow 0 3
+@スイハ
+ありがとうございます
+しかし、いつの間に
+帰っていたんですか？
+
+# face 3202511 "usual"
+# textboxarrow 0 1
+@エルキュール
+少し確かめたいことがあったので
+地下にいました
+
+# textboxarrow 0 1
+@エルキュール
+地盤が緩んでいるみたいです
+それで、どこかが崩落して
+抜け道ができたんです
+
+# face 3401711 "normal"
+# textboxarrow 0 3
+@スイハ
+そこから魔獣が出ていった…
+そういうことですか
+
+# face 3202511 "sad"
+# textboxarrow 0 1
+@エルキュール
+でも、こっちにまで
+魔獣が出ていたなんて
+気づいていませんでした
+
+# voice 2025 "hercule_0031"
+# textboxarrow 0 1
+@エルキュール
+ごめんなさい…
+
+# textboxarrow 0 3
+@スイハ
+いえ、ここに現れた魔獣は
+急にできた空間の裂け目から
+現れたものです
+
+# face 3202511 "usual"
+# textboxarrow 0 1
+@エルキュール
+そうですか…
+あまり時間をかけるのは
+良くないみたいですね
+
+# textboxarrow 0 1
+@エルキュール
+急いでミーミルを…
+
+# voice 4017 "suiha_0031"
+# face 3401711 "sad"
+# textboxarrow 0 3
+@スイハ
+そのことなのですが…
+すみません
+魔獣と戦っている間に逃げたようです
+
+# face 3202511 "normal"
+# textboxarrow 0 1
+@エルキュール
+大丈夫ですよ
+私が何とかしてみせます！
+
+# face 3401711 "normal"
+# textboxarrow 0 3
+@スイハ
+エルキュール…
+
+# face 3202511 "usual"
+# textboxarrow 0 1
+@エルキュール
+そういえば、マクリルも
+出ていったみたいですね
+
+# textboxarrow 0 3
+@スイハ
+…彼女は何者なんですか？
+
+# face 3202511 "normal"
+# textboxarrow 0 1
+@エルキュール
+“相棒”を探しているそうです
+一人は怖いと言うので、
+一緒にいることにしました
+
+# face 3202511 "usual"
+# textboxarrow 0 1
+@エルキュール
+でも、出ていったということは
+“相棒”が見つかったのかも
+しれませんね！
+
+# textboxarrow 0 3
+@スイハ
+…………
+
+# voice 4017 "suiha_0002"
+# textboxarrow 0 3
+@スイハ
+エルキュール、これからどうします？
+
+# face 3202511 "normal"
+# textboxarrow 0 1
+@エルキュール
+もちろん、改めて
+ミーミルを確保します
+そして…
+
+# alpha 3401711 0 0.3
+# alpha 3202511 0 0.3
+# move 502711 2 0
+# mask 502711 on
+# face 502711 "angry"
+# alpha 502711 1 0.3
+# layer 302611 3
+# face 302611 "sad"
+# alpha 302611 1 0.3
+# textboxarrow 0 1
+@フライシュッツ
+見つけたよ～！
+
+# voice 3026 "grayside_0028"
+# textboxarrow 0 3
+@グラーシーザ
+むぅ…
+すでにせいぎはしっこうされおえて
+いるようだ
+
+# alpha 502711 0 0.3
+# alpha 302611 0 0.3
+# move 103511 4 0
+# layer 103511 2
+# face 103511 "usual"
+# alpha 103511 1 0.3
+# face 602011 "normal"
+# alpha 602011 1 0.3
+# textboxarrow 0 3
+@ダモクレス
+あ！エルキュールもいる！
+みんな揃ったね～
+
+# voice 6020 "ness_0011"
+# face 602011 "angry"
+# textboxarrow 0 1
+@ネス
+スイハもエルキュールも
+迷惑をかけてはいけませんよ！
+
+# alpha 103511 0 0.3
+# alpha 602011 0 0.3
+# face 3401711 "normal"
+# alpha 3401711 1 0.3
+# face 3202511 "usual"
+# alpha 3202511 1 0.3
+# textboxarrow 0 3
+@スイハ
+見つかってしまいました
+
+# textboxarrow 0 1
+@エルキュール
+仕方ありません
+きっと私が尾行されたんです
+
+# voice 2025 "hercule_0024"
+# face 3202511 "sad"
+# textboxarrow 0 1
+@エルキュール
+こういうところでも、
+私は完璧ではないんですね…
+
+# textboxarrow 0 3
+@スイハ
+…………
+
+# face 3202511 "usual"
+# textboxarrow 0 1
+@エルキュール
+きっとミネルヴァの策ですよ
+彼女は私と違って頭が良いですから
+
+# alpha 3401711 0 0.3
+# alpha 3202511 0 0.3
+# move 302511 3 0
+# mask 302511 off
+# face 302511 "happy"
+# voice 3025 "minerva_0030"
+# alpha 302511 1 0.3
+# textboxarrow 0 2
+@ミネルヴァ
+褒めてくれてありがとうございます
+お察しの通り、ニケにあなたを
+尾行してもらいました
+
+# face 302511 "normal"
+# textboxarrow 0 2
+@ミネルヴァ
+スイハ、エルキュール
+話をしましょう
+“彼女”について
+
+# fadeout "black" 1
+# waitandnext 1

@@ -1,0 +1,369 @@
+;;----------------------------------------------
+;;100212011
+;;第2-1話戦闘前　タイトル：イノセント・ヒーラー
+;;----------------------------------------------
+# script "lisp"
+# background "devil_world"
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+# textwindow "close"
+;;ムー
+# body 161
+# pos 161 2
+# scale 161 0.6 0
+# layer 161 5
+# mask 161 off
+# alpha 161 0 0
+;;レーヴァ
+# body 3100211
+# pos 3100211 1
+# scale 3100211 0.8 0
+# layer 3100211 3
+# mask 3100211 on
+# alpha 3100211 0 0
+;;ヘレナ
+# body 3302811
+# pos 3302811 4
+# scale 3302811 0.8 0
+# layer 3302811 2
+# alpha 3302811 0 0
+;;ニール
+# body 162
+# pos 162 5
+# scale 162 0.6 0
+# layer 162 5
+# mask 162 off
+# alpha 162 0 0
+;;カリス
+# body 3602511
+# pos 3602511 3
+# scale 3602511 0.8 0
+# layer 3602511 2
+# mask 3602511 on
+;;キプル
+# body 163
+# pos 163 3
+# scale 163 0.6 0
+# layer 163 3
+# mask 163 off
+# alpha 163 0 0
+;;ケイオス兵
+# body 3820001
+# pos 3820001 4
+# scale 3820001 0.8 0
+# layer 3820001 1
+# mask 3820001 on
+# alpha 3820001 0 0
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;黒バック
+# imageset 1 "bg_black"
+# imagepos 1 0 0
+# imagelayer 1 1
+# imageleftin 1 0
+# imagealpha 1 0 0
+;;◆背景：ケイオスリオン-----------------------------------------
+# face 3100211 "normal"
+# face 3302811 "normal"
+# waitandnext 0.1
+
+;;回復フラッシュ
+# se "SE_4781"
+# subfillrect 1 "green" 0.8 0 0.4
+# waitandnext 1.3
+
+# subfillrect 1 "green" 1.0 0.4 0
+# waitandnext 1.2
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3602511 "happy"
+# voice 6025 "chalice_t_0006"
+# chara 3602511
+@カリス
+これで大丈夫だよ！
+負傷してる悪魔人兵士さんを
+治療しちゃうなんて…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3602511
+@カリス
+カリスちゃん、マジ天使！
+さ、次は誰かなーっ？
+
+# textwindow "close"
+# move 3602511 2 0.5
+# alpha 3820001 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 382000 "demon_0028"
+# chara 3820001
+@ケイオスリオン兵
+ううう…
+どうして…
+俺達を助けてくれるんだ…？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3602511 "normal"
+# voice 6025 "chalice_t_0004"
+# chara 3602511
+@カリス
+う～ん…
+なんとなく、かな？
+あ、まだ喋らない方が良いよ～
+
+;;レーヴァ登場
+# textwindow "close"
+# alpha 3820001 0 0.5
+# alpha 3602511 0 0.5
+# waitandnext 0.5
+
+# pos 3100211 3
+# pos 161 4
+# alpha 161 1 0.5
+# alpha 3100211 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 310021 "revatein_ge_0053"
+# chara 3100211
+@レーヴァテイン
+カリス、戻るわよ
+
+;;カリスとレーヴァ合流
+# textwindow "close"
+# move 3100211 4 0.5
+# move 161 5 0.5
+# pos 3602511 2
+# alpha 3602511 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3602511 "sad"
+# voice 6025 "chalice_t_0054"
+# chara 3602511
+@カリス
+レーヴァ、もうちょっと待って！
+まだ兵士さん達の
+治療が終わってないから！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0027"
+# chara 161
+@ムー
+いやいや、そいつら俺達の敵だろ
+むしろなんで治療してんだって
+話だからよ
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 161
+@ムー
+また襲ってこられたら困んだろ？
+放っといて早く行くぜ！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3602511 "angry"
+# voice 6025 "chalice_t_0011"
+# chara 3602511
+@カリス
+やだ！
+わたしはみんなを救ってみせるって
+決めたんだから、例外はないのっ
+
+# move 3602511 3 0.3
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3602511
+@カリス
+レーヴァも、わたしのミラクルを
+楽しみにしてくれてるでしょっ？
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0036"
+# chara 3602511
+@カリス
+だからもう少し待って！
+すぐだから、すぐ！
+
+# move 3602511 2 0.5
+# textwindow "normal"
+# textsize 24
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0028"
+# chara 161
+@ムー
+そんな迫ってくんなって…
+テンション高過ぎなんだよっ
+こっちも困るってもんだ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100211 "sad"
+# voice 310021 "revatein_ge_0032"
+# chara 3100211
+@レーヴァテイン
+はぁ…、おっけ
+気が済むまでやればいいわ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3602511 "normal"
+# chara 161
+@ムー
+いいのかよ、レヴァ！？
+
+;;キプル登場（初出なので中央）
+# textwindow "close"
+# alpha 163 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9951 "kipuru_0031"
+# chara 163
+@キプル
+ううっ…、すみません
+カリスがまたご迷惑をおかけして…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 163
+@キプル
+治療が終わり次第、
+すぐに連れていきますので、
+どうか…どうかっ…！
+
+# textflame 1 3
+# textboxarrow 0 1
+# face 3602511 "happy"
+# voice 6025 "chalice_t_0029"
+# chara 3602511
+@カリス
+ほら、キプル
+次はこっちだよー！
+
+;;カリスが走り去る
+# se "SE_5575"
+# leftout 3602511 0.5
+# textflame 1 3
+# textboxarrow 0 2
+# chara 163
+@キプル
+ああ！お待ちなさい、カリス！
+謝っている最中だというのにっ…
+
+;;キプル退場
+# textwindow "close"
+# se "SE_4747"
+# leftout 163 0.6
+# waitandnext 0.6
+
+;;◆レーヴァとムー-----------------------------------------------
+# textwindow "close"
+# face 3100211 "normal"
+# alpha 163 0 0
+# alpha 3602511 0 0
+# move 161 4 0.5
+# move 3100211 3 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0007"
+# chara 161
+@ムー
+ったく…忙しない奴らだぜ
+キプルも謝るくらいならもう少し
+カリスを説得して欲しいもんだ
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 161
+@ムー
+あいつ、謝罪が
+体に染みついてんじゃねえか
+ってくらい謝るからなあ
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 161
+@ムー
+突っ走りがちの
+カリスに振り回されてばっか
+って感じだぜ
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 310021 "revatein_ge_0069"
+# chara 3100211
+@レーヴァテイン
+戻るわよ、ムー
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 161
+@ムー
+あいつら本当に放っとくのか？
+あの分だと治療だけで日が暮れるぜ
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100211 "sad"
+# chara 3100211
+@レーヴァテイン
+あれは彼女の本質…
+だからどうしようもないわ…
+めんどくさい…
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0039"
+# chara 161
+@ムー
+レヴァも大人になったねぇ
+それとも諦めてんのか？
+あの救済大好き娘のこと
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 161
+@ムー
+なにを言っても無差別に助けるのを
+止める気なさそうだしなっ
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100211 "normal"
+# voice 310021 "revatein_ge_0013"
+# chara 3100211
+@レーヴァテイン
+はぁ…
+私が焚きつけたところも
+あるから…あのとき
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0005"
+# chara 161
+@ムー
+ははは！
+まあ、ありゃまさにミラクルだった
+からなあ

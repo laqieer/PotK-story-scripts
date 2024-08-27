@@ -1,0 +1,825 @@
+;;-----------------------------------------
+;;「スライム倒して３００年、知らないうちにレベルMAXになってました」コラボイベントシナリオ
+;;【EP3_1】
+;;スクリプト最後の背景：平原・朝
+;;背景：平原・朝
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgm "stop"
+;;-----------------------------------------
+;;アズサ
+# body 5105211
+# pos 5105211 3
+# scale 5105211 0.8 0
+# layer 5105211 3
+# alpha 5105211 0 0
+# mask 5105211 off
+;;ライカ
+# body 52001011
+# pos 52001011 3
+# scale 52001011 0.8 0
+# layer 52001011 2
+# alpha 52001011 0 0
+# mask 52001011 off
+;;ハルカラ
+# body 5604011
+# pos 5604011 3
+# scale 5604011 0.8 0
+# layer 5604011 3
+# alpha 5604011 0 0
+# mask 5604011 off
+;;ミストルティン
+# body 600621
+# pos 600621 3
+# scale 600621 0.8 0
+# layer 600621 2
+# alpha 600621 0 0
+# mask 600621 off
+;;ヴォータン
+# body 301711
+# pos 301711 3
+# scale 301711 0.8 0
+# layer 301711 2
+# alpha 301711 0 0
+# mask 301711 off
+;;-----------------------------------------
+# imageset 0 "e220513_logo_only"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;【EP3】
+;;背景：平原・朝
+# fadein "black" 1
+# textwindow "close"
+# waitandnext 1
+
+# voice 6006 "misutoru_battle_0002"
+# move 600621 3 0
+# face 600621 "surprise"
+# alpha 600621 1 0.5
+# mask 600621 off
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミストルティン
+やあっ！
+
+# se "SE_4500"
+# waitandnext 0.5
+
+# se "SE_4762"
+# se "SE_0794"
+# fadein "white" 0.5
+# serif 1
+@魔獣
+ウオオオオオオオ！？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 600621 "happy"
+# textboxarrow 0 2
+@ミストルティン
+や、やった…！
+
+# bgmfile "bgm603" "BgmSlime300" 0
+# alpha 600621 0 0.5
+# move 5105211 2 0
+# face 5105211 "happy"
+# alpha 5105211 1 0.5
+# mask 5105211 on
+# textboxarrow 0 1
+# move 52001011 4 0
+# face 52001011 "happy"
+# alpha 52001011 1 0.5
+# mask 52001011 on
+@アズサ
+おめでとう、ミストルティン
+大分手際が良くなってきたね
+
+# voice 5200101 "raika_0039"
+# textboxarrow 0 3
+@ライカ
+たった数日でここまで…
+さすがです
+
+# alpha 5105211 0 0.5
+# alpha 52001011 0 0.5
+# move 5604011 2 0
+# face 5604011 "normal"
+# alpha 5604011 1 0.5
+# mask 5604011 on
+# textboxarrow 0 1
+# move 600621 4 0
+# face 600621 "normal"
+# alpha 600621 1 0.5
+# mask 600621 on
+@ハルカラ
+いいなぁ～お師匠様に褒められて
+わたしも褒められたいです～
+
+# voice 6006 "misutoru_0005"
+# face 600621 "happy"
+# textboxarrow 0 3
+@ミストルティン
+えへへ…それ程でも…
+
+# alpha 5604011 0 0.5
+# alpha 600621 0 0.5
+# move 52001011 3 0
+# face 52001011 "happy"
+# alpha 52001011 1 0.5
+# mask 52001011 off
+# textboxarrow 0 2
+@ライカ
+お茶の用意が出来ました
+さあ、ミストルティンさんも
+こちらへどうぞ
+
+# alpha 52001011 0 0.5
+# move 600621 3 0
+# face 600621 "happy"
+# alpha 600621 1 0.5
+# mask 600621 off
+# textboxarrow 0 2
+@ミストルティン
+わぁ…ありがとうございます
+
+;;背景：家の中・朝
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "201_room"
+# alpha 600621 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+アズサ達がこちらに
+転移してから数日が経ち…
+
+;;モノローグ
+@
+既に日課となった魔獣退治を
+繰り返しながら、一行は
+スローライフを満喫していた
+
+# move 5604011 1 0
+# face 5604011 "normal"
+# alpha 5604011 1 0.5
+# mask 5604011 on
+# move 5105211 3 0
+# face 5105211 "normal"
+# alpha 5105211 1 0.5
+# mask 5105211 on
+# textflame 1 1
+# textboxarrow 0 2
+# move 52001011 5 0
+# face 52001011 "happy"
+# alpha 52001011 1 0.5
+# mask 52001011 on
+@アズサ
+さて…こっちにきて
+もう何日か経っちゃったし…
+そろそろ帰る方法を探さないとね
+
+# textboxarrow 0 1
+@ハルカラ
+そうですねぇ～…
+でも、こっちもこっちで
+居心地が良くて～…
+
+# textboxarrow 0 3
+@ライカ
+それは否定しませんが
+皆さんが心配しますよ
+
+# alpha 5604011 0 0.5
+# alpha 5105211 0 0.5
+# alpha 52001011 0 0.5
+# move 600621 3 0
+# face 600621 "normal"
+# alpha 600621 1 0.5
+# mask 600621 off
+# textboxarrow 0 2
+@ミストルティン
+あっ、あの…
+私も今日から知り合いに聞いて
+何か情報を得られればと…
+
+# voice 510521 "azusa_0030"
+# move 5105211 2 0
+# face 5105211 "normal"
+# alpha 5105211 1 0.5
+# mask 5105211 on
+# textboxarrow 0 1
+# move 600621 4 0.5
+# mask 600621 on
+@アズサ
+手伝ってくれるの！？
+ありがとう、ミストルティン！
+
+# face 600621 "shy"
+# textboxarrow 0 3
+@ミストルティン
+そ…そんな…
+私もお役に立てればと…
+立たないかもしれませんが…
+
+# face 5105211 "happy"
+# textboxarrow 0 1
+@アズサ
+気持ちだけでも十分だよ～！
+よ～し、みんなで頑張ろう！
+
+;;演出：画面揺れ
+# bgm "stop"
+# se "SE_0831"
+# shake 0 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+@
+と、アズサが腕を掲げた瞬間
+家の玄関が激しくノックされる
+
+# alpha 5105211 0 0.5
+# alpha 600621 0 0.5
+# move 5604011 2 0
+# face 5604011 "normal"
+# alpha 5604011 1 0.5
+# mask 5604011 on
+# textflame 1 1
+# move 52001011 4 0
+# face 52001011 "surprise"
+# alpha 52001011 1 0.5
+# mask 52001011 on
+# textboxarrow 0 3
+@ライカ
+誰でしょう…？
+
+# textboxarrow 0 1
+@ハルカラ
+ミストルティンさんの
+お知り合いですか～？
+
+# alpha 5604011 0 0.5
+# alpha 52001011 0 0.5
+# move 600621 3 0
+# face 600621 "worry"
+# alpha 600621 1 0.5
+# mask 600621 off
+# textboxarrow 0 2
+@ミストルティン
+だ、誰にもこの家のことは
+伝えていないのですが…
+
+# voice 6006 "misutoru_0009"
+# face 600621 "normal"
+# textboxarrow 0 2
+@ミストルティン
+あの…どちら様…？
+
+# bgm "bgm005" 0
+# voice 3017 "wotan_0007"
+# move 600621 2 0.5
+# mask 600621 on
+# move 301711 4 0
+# face 301711 "worry"
+# alpha 301711 1 0.5
+# mask 301711 on
+# textboxarrow 0 3
+@ヴォータン
+ふん…何をしているかと思えば…
+こんなところに家を買って
+引きこもっていたとはな
+
+# voice 6006 "misutoru_0023"
+# face 600621 "surprise"
+# textboxarrow 0 1
+@ミストルティン
+ヴォータンさん…！？
+
+;;モノローグ
+# textflame 0 0
+@
+扉を開けた先に立っていたのは、
+ミストルティンと同じ
+キル姫のヴォータンだった
+
+# face 301711 "usual"
+# textflame 1 1
+# textboxarrow 0 3
+@ヴォータン
+この辺りに居た魔獣を、
+誰かが倒したおかげで
+近くの村が平和になったと噂でな
+
+# textboxarrow 0 3
+@ヴォータン
+まさか行方を眩ませた
+お前の仕業だったとは…
+
+# face 600621 "normal"
+# textboxarrow 0 1
+@ミストルティン
+べ、別にいいじゃないですか…
+私はもう戦いはこりごりです
+ここで静かに暮らしたい…
+
+# face 301711 "worry"
+# textboxarrow 0 3
+@ヴォータン
+まったく…
+私達はマスターのために
+全力で、果てるまで戦い続ける！
+
+# textboxarrow 0 3
+@ヴォータン
+それこそが至上の生活だろうに…
+静かに暮らすとは…
+
+# voice 6006 "misutoru_0013"
+# face 600621 "worry"
+# textboxarrow 0 1
+@ミストルティン
+それは…そうですけど…
+
+;;モノローグ
+# textflame 0 0
+@
+ヴォータンに圧され、
+もごもごと口を動かす
+ミストルティン
+
+;;モノローグ
+@
+そこにアズサが割って入る
+
+# voice 510521 "azusa_0002"
+# alpha 600621 0 0.5
+# move 5105211 2 0
+# face 5105211 "normal"
+# alpha 5105211 1 0.5
+# mask 5105211 on
+# textflame 1 1
+# textboxarrow 0 1
+@アズサ
+ねえちょっと
+ヴォータンちゃんだっけ？
+
+# face 301711 "usual"
+# textboxarrow 0 3
+@ヴォータン
+何だ？　人間？
+ちゃん、じゃない！
+私はヴォータン様だ！
+
+# textboxarrow 0 1
+@アズサ
+じゃあ、ヴォータン
+事情は私達も知らないけど…
+
+# textboxarrow 0 1
+@アズサ
+ミストルティンは今全力で
+スローライフを満喫しているの
+それを邪魔するのは良くないよ
+
+# textboxarrow 0 1
+@アズサ
+ううん、良くないっていうか
+…最悪だね
+
+# voice 3017 "wotan_0010"
+# face 301711 "angry"
+# textboxarrow 0 3
+@ヴォータン
+なんだと！？
+人間が私に意見すると言うのか！？
+後、ヴォータン様だ！　様を付けろ！
+
+# voice 560401 "harukara_0026"
+# alpha 5105211 0 0.5
+# alpha 301711 0 0.5
+# move 5604011 2 0
+# face 5604011 "sad"
+# alpha 5604011 1 0.5
+# mask 5604011 on
+# textboxarrow 0 1
+# move 52001011 4 0
+# face 52001011 "angry"
+# alpha 52001011 1 0.5
+# mask 52001011 on
+@ハルカラ
+ヴォータンさん…
+ミストルティンさんに
+それ以上絡むのはちょっと…
+
+# textboxarrow 0 3
+@ライカ
+これ以上ミストルティンさんの
+邪魔をするのであればお帰り下さい
+
+# alpha 5604011 0 0.5
+# alpha 52001011 0 0.5
+# move 301711 3 0
+# face 301711 "angry"
+# alpha 301711 1 0.5
+# mask 301711 off
+# textboxarrow 0 2
+@ヴォータン
+な、なんだなんだ揃いもそろって！
+私はヴォータン様だぞ！
+鍛え抜かれた神の槍だ！
+
+# alpha 301711 0 0.5
+# move 5105211 3 0
+# face 5105211 "sad"
+# alpha 5105211 1 0.5
+# mask 5105211 off
+# textboxarrow 0 2
+@アズサ
+ヴォータン…
+オーディンの別名だっけ
+
+# textboxarrow 0 2
+@アズサ
+ミストルティンもそうだけど、
+キル姫ってそういう由来なのか…
+
+# voice 5200101 "raika_0022"
+# move 5105211 2 0.5
+# mask 5105211 on
+# move 52001011 4 0.5
+# face 52001011 "surprise"
+# alpha 52001011 1 0.5
+# mask 52001011 on
+# textboxarrow 0 3
+@ライカ
+知っているのですか？
+アズサ様！？
+
+# voice 510521 "azusa_0022"
+# face 5105211 "surprise"
+# textboxarrow 0 1
+@アズサ
+えっ？　ああ～いやぁ～
+昔チョットね…
+
+# voice 3017 "wotan_0022"
+# alpha 52001011 0 0.5
+# move 301711 4 0
+# face 301711 "angry"
+# alpha 301711 1 0.5
+# mask 301711 on
+# textboxarrow 0 3
+@ヴォータン
+なっ！？
+知った風な口を聞くな！
+
+# face 301711 "usual"
+# textboxarrow 0 3
+@ヴォータン
+そうだ
+お前、私と勝負しろ
+
+# textboxarrow 0 3
+@ヴォータン
+お師匠様と呼ばれるとは
+さぞ強いのだろう
+このヴォータン様と勝負だ！
+
+# bgm "stop"
+# textboxarrow 0 1
+@アズサ
+えっ、嫌だけど
+
+# face 301711 "angry"
+# textboxarrow 0 3
+@ヴォータン
+もしお前が勝てば、
+私はお前の言うことを聞く
+私が勝てば…っておい！
+
+# bgm "bgm005" 0
+# textboxarrow 0 3
+@ヴォータン
+嫌ってなんだ！　嫌って！
+せっかくこのヴォータン様が
+お前を試してやろうとだな…！
+
+# face 5105211 "normal"
+# textboxarrow 0 1
+@アズサ
+今日の日課は終わったの
+私、残業はしないって決めてるから
+
+# voice 3017 "wotan_0022"
+# face 301711 "surprise"
+# textboxarrow 0 3
+@ヴォータン
+なあっ！？
+
+# face 301711 "angry"
+# textboxarrow 0 3
+@ヴォータン
+むぅぅぅ～～…
+
+;;モノローグ
+# textflame 0 0
+@
+アズサの言葉に
+頬を膨らませるヴォータン
+
+;;モノローグ
+# se "SE_0740"
+@
+やがて何を思ったのか、
+ミストルティンの家に
+つかつかと入り込んで来る
+
+# voice 3017 "wotan_0002"
+# face 301711 "worry"
+# textflame 1 1
+# textboxarrow 0 3
+@ヴォータン
+おい、そこ借りるぞ
+ミストルティン
+
+# voice 6006 "misutoru_0023"
+# alpha 5105211 0 0.5
+# move 600621 2 0
+# face 600621 "surprise"
+# alpha 600621 1 0.5
+# mask 600621 on
+# textboxarrow 0 1
+@ミストルティン
+え、な、何を…？
+
+# face 301711 "usual"
+# textboxarrow 0 3
+@ヴォータン
+その人間が勝負を受けるまで
+私はここから帰らない
+
+# textboxarrow 0 1
+@ミストルティン
+ええ～…？
+
+# face 301711 "normal"
+# textboxarrow 0 3
+@ヴォータン
+ふふふ、お前達の全力の
+スローライフとやらを私が
+ここで邪魔をしてやろう
+
+# voice 3017 "wotan_0005"
+# textboxarrow 0 3
+@ヴォータン
+はははは！　どーだ！？
+ヴォータン様の恐ろしさを
+思い知ったか！
+
+# textboxarrow 0 1
+@ミストルティン
+そんなぁ～！　
+帰って下さい～！
+
+# alpha 600621 0 0.5
+# alpha 301711 0 0.5
+# move 5105211 3 0
+# face 5105211 "sad"
+# alpha 5105211 1 0.5
+# mask 5105211 off
+# textboxarrow 0 2
+@アズサ
+あちゃ…
+
+# voice 6006 "misutoru_0015"
+# alpha 5105211 0 0.5
+# move 600621 3 0
+# face 600621 "sad"
+# alpha 600621 1 0.5
+# mask 600621 off
+# textboxarrow 0 2
+@ミストルティン
+うぅ、私は静かに
+暮らしたいだけなのに…
+
+# voice 5200101 "raika_0026"
+# alpha 600621 0 0.5
+# move 5604011 1 0
+# face 5604011 "sad"
+# alpha 5604011 1 0.5
+# mask 5604011 on
+# move 5105211 3 0
+# face 5105211 "sad"
+# alpha 5105211 1 0.5
+# mask 5105211 on
+# move 52001011 5 0
+# face 52001011 "sad"
+# alpha 52001011 1 0.5
+# mask 52001011 on
+# textboxarrow 0 3
+@ライカ
+アズサ様…このままではちょっと…
+
+# textboxarrow 0 1
+@ハルカラ
+わたし達もミストルティンさんに
+お世話になってる身ですから…
+
+# voice 510521 "azusa_0032"
+# textboxarrow 0 2
+@アズサ
+…仕方ないね
+
+;;モノローグ
+# alpha 5604011 0 0.5
+# alpha 5105211 0 0.5
+# alpha 52001011 0 0.5
+# textflame 0 0
+@
+ため息をついたアズサは、
+床に大の字で寝転がる
+ヴォータンの元へ歩み寄る
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# move 5105211 2 0
+# face 5105211 "normal"
+# alpha 5105211 1 0.5
+# mask 5105211 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 301711 4 0
+# face 301711 "usual"
+# alpha 301711 1 0.5
+# mask 301711 on
+@アズサ
+分かったよ、ヴォータン
+勝負しよう
+
+# face 301711 "angry"
+# textboxarrow 0 3
+@ヴォータン
+だからヴォータン様だ！
+
+# face 301711 "normal"
+# textboxarrow 0 3
+@ヴォータン
+とは言え…
+やる気になったのなら
+私としては本望だ！
+
+;;背景：平原・朝
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# alpha 5105211 0 0
+# alpha 301711 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# bgm "bgm007_011" 0
+# textflame 0 0
+# textwindow "normal"
+@
+家から少し離れた平原で
+アズサとヴォータンが対峙する
+
+# move 5105211 2 0
+# face 5105211 "normal"
+# alpha 5105211 1 0.5
+# mask 5105211 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 301711 4 0
+# face 301711 "usual"
+# alpha 301711 1 0.5
+# mask 301711 on
+@アズサ
+本当にいいの？
+
+# face 301711 "normal"
+# textboxarrow 0 3
+@ヴォータン
+ただの人間には荷が重いだろ？
+ハンデをやるから
+まとめてかかってこい
+
+# textboxarrow 0 1
+@アズサ
+そういうことなら、
+遠慮無く行くけど…
+
+# alpha 5105211 0 0.5
+# alpha 301711 0 0.5
+# move 5604011 2 0
+# face 5604011 "normal"
+# alpha 5604011 1 0.5
+# mask 5604011 on
+# textboxarrow 0 1
+# move 52001011 4 0
+# face 52001011 "happy"
+# alpha 52001011 1 0.5
+# mask 52001011 on
+@ハルカラ
+お師匠様～～～！
+準備出来ました～！
+
+# voice 5200101 "raika_0004"
+# textboxarrow 0 3
+@ライカ
+アズサ様！　頑張りましょう！
+
+# voice 6006 "misutoru_0036"
+# alpha 5604011 0 0.5
+# alpha 52001011 0 0.5
+# move 600621 3 0
+# face 600621 "normal"
+# alpha 600621 1 0.5
+# mask 600621 off
+# textboxarrow 0 2
+@ミストルティン
+よ、よろしくお願いします！
+
+# alpha 600621 0 0.5
+# move 5105211 2 0
+# face 5105211 "normal"
+# alpha 5105211 1 0.5
+# mask 5105211 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 301711 4 0
+# face 301711 "usual"
+# alpha 301711 1 0.5
+# mask 301711 on
+@アズサ
+みんなもケガしないようにね
+
+# voice 3017 "wotan_0007"
+# face 301711 "normal"
+# textboxarrow 0 3
+@ヴォータン
+ふん…余裕の態度だな
+どこまで持つか見物だが
+
+# textboxarrow 0 3
+@ヴォータン
+さっきも言ったとおり
+お前達が勝てば私はお前の
+言うことを何でも聞いてやる
+
+# textboxarrow 0 3
+@ヴォータン
+つまりお前の配下に下ってやる
+…と言うことだ
+
+# face 301711 "angry"
+# textboxarrow 0 3
+@ヴォータン
+だが、お前達が負けた場合は…！
+
+# voice 510521 "azusa_0004"
+# face 5105211 "happy"
+# textboxarrow 0 1
+@アズサ
+いいよ、聞かなくても
+私達が勝つから
+
+# textboxarrow 0 3
+@ヴォータン
+ぬ…！
+
+# se "SE_5207"
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+@
+アズサに挑発され、
+槍を構えるヴォータン
+
+# voice 3017 "wotan_battle_0004"
+# textflame 1 1
+# textboxarrow 0 3
+@ヴォータン
+よーし！
+いくぞ～！
+
+# fadeout "black" 1
+# waitandnext 1

@@ -1,0 +1,368 @@
+;;-----------------------------------------
+;;サイコパス「監視官の絆」1_1
+;;-----------------------------------------
+# script "lisp"
+# background "wild"
+# bgmfile "bgm049_050" "BgmPPcollabo001" 0
+;;-----------------------------------------
+;;tsunemori
+# body 501011
+# pos 501011 3
+# scale 501011 0.8 0
+# layer 501011 3
+# mask 501011 off
+# alpha 501011 0 0
+;;kunizuka
+# body 501111
+# pos 501111 4
+# scale 501111 0.8 0
+# layer 501111 3
+# mask 501111 off
+# alpha 501111 0 0
+;;shimotsuki
+# body 501211
+# pos 501211 2
+# scale 501211 0.8 0
+# layer 501211 3
+# mask 501211 off
+# alpha 501211 0 0
+;;izoku
+# body 810004
+# pos 810004 4
+# scale 810004 0.8 0
+# layer 810004 4
+# mask 810004 off
+# alpha 810004 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "e210913_logo"
+# imagealpha 1 0 0
+# imagelayer 1 1
+;;-----------------------------------------
+;;【EP1】孤高の執行官
+;;背景：荒野（昼）
+# textwindow "close"
+# fadein "black" 1.5
+# waitandnext 2
+
+# alpha 501011 1 0.5
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 501011 "normal"
+# voice 5010 "akane_0029"
+@常守朱
+標的を確認しました！
+全員、配置についてください！
+
+# alpha 501011 0 0.5
+# se "SE_5575"
+# textwindow "close"
+# waitandnext 1
+
+# move 501111 3 0.5
+# alpha 501111 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 5011 "yayoi_0032"
+@六合塚弥生
+私は右へ！
+霜月監視官は左からお願いします！
+
+# move 501111 2 0.5
+# alpha 501111 0 0.3
+# se "SE_5575"
+# move 501211 3 0.5
+# alpha 501211 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5012 "mika_0029"
+@霜月美佳
+ええ、わかったわ！
+
+# move 501211 4 0.5
+# alpha 501211 0 0.3
+# se "SE_5575"
+# textwindow "close"
+# waitandnext 0.8
+
+# textflame 0 0
+# textwindow "nomal"
+@
+常守朱（つねもりあかね）
+六合塚弥生（くにづかやよい）
+霜月美佳（しもつきみか）…
+
+# textflame 0 0
+@
+この三人は、とあるきっかけで
+異世界から迷い込んだという
+
+# textflame 0 0
+@
+当初は異族やキル姫の存在に
+戸惑っていたが、それなりに
+こちらの世界にも慣れてきたようだ
+
+# textflame 0 0
+@
+以前の戦いで、朱達は
+ティルフィング達と協力して
+新種の異族を生み出す存在を倒した
+
+# textflame 0 0
+@
+あれ以来、新種の異族が群れで現れる
+ことはなくなったのだが、各地に
+散った残党が未だに人々を襲っていた
+
+# alpha 501011 1 0.3
+# se "SE_5208"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5010 "akane_unit_0008"
+@常守朱
+執行します…！
+
+# move 501011 2 0.5
+# alpha 810004 1 1
+# textboxarrow 0 0
+# waitandnext 1
+
+# fadein "white" 0.5
+# se "SE_4400"
+# waitandnext 0.5
+
+;;異族倒れる
+# move 810004 5 0.5
+# alpha 810004 0 0.5
+# se "SE_3001"
+# waitandnext 1
+
+# move 501011 3 0.5
+# textflame 0 0
+@
+新種の異族にはキル姫の武器では
+攻撃が通じないため、
+朱達に協力してもらって対処していた
+
+# move 501011 4 0.5
+# alpha 501011 0 0.3
+# textflame 0 0
+@
+そんなある日、三つの場所で
+新種の異族が現れたと報告が入る
+
+# textflame 0 0
+@
+マスターと朱達は三班に分かれて、
+それぞれ対処することにしたのだった
+
+# bgm "stop"
+# fadeout "black" 1
+# waitandnext 1
+
+# background "bg_black"
+# imagealpha 0 1 0
+# imagescale 0 2 0
+# imagepos 0 0 0
+# frameout 0 0
+# buttonsout 0 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "black" 0.5
+# effectbody 2004 49 0 0
+# effectstart 2004
+# se "SE_6144"
+# waitandnext 3.2
+
+# background "bg_black"
+
+# fadeout "black" 2
+# effectbody 2005 50 0 0
+# effectstart 2005
+# se "SE_0996"
+# waitandnext 2
+
+# effectskip 2004
+# effectskip 2005
+# imagealpha 0 0 0
+;;背景：森（可能であれば）
+# background "forest"
+# bgm "bgm005" 00
+# envbody 1000 8 0
+# effectstart 1000
+# waitandnext 0.2
+
+# effectskip 1000
+# framein 0 1
+# buttonsin 0 1
+# imagescale 0 1 0
+# fadein "black" 1.5
+# waitandnext 2
+
+# textflame 0 0
+# textwindow "nomal"
+@
+マスターは、森のなかを軽やかに進む
+黒スーツの背中を追いかけていた
+
+# textflame 0 0
+@
+マスターがもたついて
+距離が開きそうになると、
+彼女はさりげなく速度をゆるめた
+
+# textflame 0 0
+@
+ふと、先を行く彼女が立ち止まる
+静かにこちらを振り返り、
+マスターの表情を確認した
+
+# move 501111 3 0.5
+# alpha 501111 1 0.3
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5011 "yayoi_0002"
+@六合塚弥生
+間もなく報告のあった場所に
+到着しますが…準備はいいですか？
+
+# textflame 0 0
+@
+少し息を整える時間をもらえるかな
+と、マスターは木にもたれて休む
+
+# textflame 1 1
+# textboxarrow 0 2
+@六合塚弥生
+…あなたはなぜ、
+私と一緒にきたのですか？
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 501111 "amazed"
+@六合塚弥生
+いつも常守監視官と一緒なので、
+今回もそうだと思っていたのですけど
+
+# textflame 0 0
+@
+だからだよ
+と、マスターはこたえる
+
+# textflame 1 1
+# textboxarrow 0 2
+@六合塚弥生
+…どういうことですか？
+
+# textflame 0 0
+@
+朱は話しやすいし、最近は自分や
+キル姫を頼ってくれるようになった
+と、マスターは話す
+
+# textflame 0 0
+@
+でも、弥生はいつもひとりで戦ったり
+誰かのサポート的な役割を
+任せたりすることも多いから…
+
+# textflame 0 0
+@
+弥生に負担をかけてないか、無理を
+させているんじゃないかと心配で…
+と、マスターは続ける
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 501111 "normal"
+# voice 5011 "yayoi_0028"
+@六合塚弥生
+それがどうして、
+私と一緒にくる理由になるのですか？
+
+# textflame 0 0
+@
+つまり、もう少し自分を頼ってくれて
+いいんだって君に伝えたかったんだ
+と、マスター
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 501111 "amazed"
+@六合塚弥生
+頼っていいと言われても…
+あなた、戦えないじゃないですか
+
+# textflame 0 0
+@
+反論できず
+言葉につまるマスターを見て、
+弥生は短くため息をつく
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 501111 "sad"
+# voice 5011 "yayoi_0027"
+@六合塚弥生
+はぁ…
+そんなことで…
+
+# textflame 0 0
+@
+戦えなくてもできることはあるよ
+と、マスターは弥生に食い下がる
+
+# textflame 1 1
+# textboxarrow 0 2
+@六合塚弥生
+例えば？
+
+# textflame 0 0
+@
+た、例えば…
+と言ったきり、なにも思い浮かばず
+マスターは再び言葉につまる
+
+# textflame 1 1
+# textboxarrow 0 2
+@六合塚弥生
+私のことはお気になさらず
+これまでと同じように、
+頼らずやっていけますので
+
+# bgm "stop"
+# sedelay "SE_4400" 1
+# textflame 0 0
+@
+でも…
+と、マスターが言いかけた時、
+突然、弥生が銃を構える
+
+# bgmfile "bgm049_050" "BgmPPcollabo001" 0
+# textflame 1 1
+# textboxarrow 0 2
+# face 501111 "angry"
+# voice 5011 "yayoi_0007"
+@六合塚弥生
+おしゃべりが過ぎたようですね
+多数の異族が接近…
+いえ、すでに囲まれています
+
+# textflame 1 1
+# textboxarrow 0 2
+@六合塚弥生
+あなたは私の後ろに！
+余計なことはしないでくださいね
+
+# fadeout "black" 0.5
+# waitandnext 0.5

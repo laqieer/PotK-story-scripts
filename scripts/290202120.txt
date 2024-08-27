@@ -1,0 +1,828 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;２章２話　「エデンクライシス―覚醒―」
+;;第5話　タイトル：愚者の進行
+;;5_12
+;;スクリプト最後の背景：王都（炎上）
+;;-----------------------------------------
+# script "lisp"
+# background "imperial_city_destroyed"
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;ミネルヴァ
+# body 302511
+# pos 302511 3
+# scale 302511 0.8 0
+# layer 302511 2
+# alpha 302511 0 0
+# mask 302511 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;蜻蛉切
+# body 302411
+# pos 302411 3
+# scale 302411 0.8 0
+# layer 302411 2
+# alpha 302411 0 0
+# mask 302411 off
+;;エクスカリバー
+# body 101111
+# pos 101111 3
+# scale 101111 0.8 0
+# layer 101111 2
+# alpha 101111 0 0
+# mask 101111 off
+;;アロンダイト
+# body 100711
+# pos 100711 3
+# scale 100711 0.8 0
+# layer 100711 2
+# alpha 100711 0 0
+# mask 100711 off
+;;ルーン
+# body 300531
+# pos 300531 3
+# scale 300531 0.8 0
+# layer 300531 2
+# alpha 300531 0 0
+# mask 300531 off
+;;ロンゴミアント
+# body 301021
+# pos 301021 3
+# scale 301021 0.8 0
+# layer 301021 3
+# alpha 301021 0 0
+# mask 301021 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;第5話　タイトル：愚者の行進
+;;//背景：王都（炎上）
+;;//建物が崩れ落ちる音
+# se "SE_0753"
+# se "SE_0637"
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0
+# mask 196 off
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+みんな走って！
+建物が崩れるわっ
+
+# alpha 196 0 0.5
+# move 302511 2 0
+# face 302511 "normal"
+# alpha 302511 1 0.5
+# mask 302511 on
+# move 103611 4 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 3
+@ラグナロク
+間一髪だった…
+何とか外に出られたわね
+
+# face 302511 "angry"
+# textboxarrow 0 1
+# voice 3025 "minerva_0024"
+@ミネルヴァ
+皆さん、見て下さいっ
+町が…燃えています…
+
+# alpha 103611 0 0.5
+# move 196 4 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0035"
+@アルマス
+ええっ！？
+何でそんなことに…
+まさか異族がっ？
+
+# alpha 302511 0 0.5
+# move 101111 2 0
+# face 101111 "normal"
+# alpha 101111 1 0.5
+# mask 101111 on
+# textboxarrow 0 1
+# voice 1011 "excalibur_0034"
+@エクスカリバー
+いえ…
+あれも恐らく蜂起した人々の
+行いでしょう
+
+# face 196 "angry"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0016"
+@アルマス
+そんなわけないわよ！
+彼らの狙いはモニカだったんだから！
+
+# textboxarrow 0 1
+# voice 1011 "excalibur_0003"
+@エクスカリバー
+そうですね…けれど、
+私達のマスターを討つという
+大義名分から外れてしまったのです…
+
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+そんなっ…
+
+;;//蜻蛉切が走ってくる
+# se "SE_5575"
+# alpha 101111 0 0.5
+# alpha 196 0 0.5
+# move 302411 3 0
+# face 302411 "happy"
+# alpha 302411 1 0.5
+# mask 302411 off
+# textboxarrow 0 2
+@蜻蛉切
+殿！
+無事だったのねっ…良かった
+
+# move 302411 2 0.5
+# face 302411 "normal"
+# alpha 302411 1 0.5
+# mask 302411 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+蜻蛉切、何で町が燃えてるの！？
+他の奏官達はどこに行ったのよっ？
+
+# face 302411 "angry"
+# textboxarrow 0 1
+@蜻蛉切
+私にも分からないわよ！
+ここから火の手が上がって
+しばらくしたら…
+
+# textboxarrow 0 1
+@蜻蛉切
+急に仲間割れみたくなっちゃって…
+それぞれ勝手にどこか行っちゃったん
+だからっ
+
+# face 302411 "surprise"
+# textboxarrow 0 1
+# voice 3024 "tonbokiri_0002"
+@蜻蛉切
+あ！それよりルーンはっ？
+あの後、逃げられたのよ…
+こっちに向かったはずなんだけど
+
+# face 196 "surprise"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0035"
+@アルマス
+ルーン？
+見てないけど…
+
+# alpha 302411 0 0.5
+# alpha 196 0 0.5
+# move 101111 1 0
+# face 101111 "normal"
+# alpha 101111 1 0.5
+# mask 101111 on
+# move 301021 3 0
+# face 301021 "mad"
+# alpha 301021 1 0.5
+# mask 301021 on
+# textboxarrow 0 2
+# move 100711 5 0
+# face 100711 "normal"
+# alpha 100711 1 0.5
+# mask 100711 on
+@ロンゴミアント
+…………
+
+# face 301021 "angry"
+# textboxarrow 0 2
+@ロンゴミアント
+エクスカリバー、アロンダイト、
+急いでここを離れましょう
+
+# textboxarrow 0 2
+@ロンゴミアント
+早く、マスターを安全なところまで
+運ばないと
+
+# textboxarrow 0 3
+# voice 1007 "Arondaito_0003"
+@アロンダイト
+私はそれで構いませんけれど、
+良いのですか？
+
+# textboxarrow 0 3
+@アロンダイト
+蜻蛉切の話だと、
+ルーンは近くにいるようです
+彼女と合流してからでも
+
+# face 101111 "angry"
+# textboxarrow 0 1
+@エクスカリバー
+いえ…
+行きましょう
+
+# textboxarrow 0 1
+@エクスカリバー
+ラグナロク、アルマス、
+私達はこれで
+
+# textboxarrow 0 1
+@エクスカリバー
+進む道は違いますけれど、
+あなた達の未来にも幸運が
+ありますように
+
+;;//エクスカリバー達が立ち去る
+# se "SE_0740"
+# textwindow "close"
+# alpha 101111 0 0.5
+# alpha 301021 0 0.5
+# alpha 100711 0 0.5
+# waitandnext 0.5
+
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+あ、ちょっと！
+
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 196 4 0.5
+# mask 196 on
+# voice 1036 "ragnarok_0002"
+@ラグナロク
+行かせてあげて
+もう、彼女達と戦う意味はないわ
+
+# alpha 103611 0 0.5
+# move 302511 2 0
+# face 302511 "angry"
+# alpha 302511 1 0.5
+# mask 302511 on
+# textboxarrow 0 1
+@ミネルヴァ
+急いでスイハ達と合流しましょう
+状況を整理し直さないといけません
+
+# face 196 "normal"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0048"
+@アルマス
+分かった
+私達は私達のやることを
+やらないとねっ
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# sestop "SE_0753"
+# bgm "stop"
+# alpha 302511 0 0
+# alpha 196 0 0
+# move 101111 1 0
+# face 101111 "normal"
+# alpha 101111 1 0
+# mask 101111 on
+# move 301021 3 0
+# face 301021 "normal"
+# alpha 301021 1 0
+# mask 301021 on
+# move 100711 5 0
+# face 100711 "normal"
+# alpha 100711 1 0
+# mask 100711 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 1007 "Arondaito_0002"
+@アロンダイト
+どうしたのですか、二人とも？
+らしくありませんね
+ルーンを放っておくなんて…
+
+# textboxarrow 0 1
+# voice 1011 "excalibur_0028"
+@エクスカリバー
+それは…
+
+# textboxarrow 0 2
+@ロンゴミアント
+聞いて下さい、アロンダイト
+先程、私達が邸宅を
+守っていたときのことです…
+
+;;//背景：教皇の間
+;;//演出：回想
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "pope_room"
+# alpha 101111 0 0
+# alpha 301021 0 0
+# alpha 100711 0 0
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# serif 1
+@奏官３
+くそっ…
+このままじゃ勝てない
+火を放て！！
+
+# serif 1
+@住人達
+おおおおおおおおお！！
+
+# se "SE_5231"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+;;//炎上演出
+# se "SE_0753"
+# envbody 1000 7 0
+# effectstart 1000
+# waitandnext 0.5
+
+# move 101111 3 0
+# face 101111 "angry"
+# alpha 101111 1 0.5
+# mask 101111 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 1011 "excalibur_0037"
+@エクスカリバー
+何ということを…！
+この家ごと私達を焼き殺そうと
+いうのですかっ？
+
+# serif 1
+@奏官１
+逃げられると思うなよ！
+ここはとっくの昔に包囲して
+あるんだ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 101111 0 0.5
+# move 301021 3 0
+# face 301021 "angry"
+# alpha 301021 1 0.5
+# mask 301021 off
+# textboxarrow 0 2
+# voice 3010 "rhongomiant_battle_0005"
+@ロンゴミアント
+急いでマスターを避難させないと…
+「選定の間」にっ
+
+# alpha 301021 0 0.5
+# move 101111 3 0
+# face 101111 "angry"
+# alpha 101111 1 0.5
+# mask 101111 off
+# textboxarrow 0 2
+@エクスカリバー
+待ちなさい、ロンゴミアント！
+
+# serif 1
+@奏官２
+よし！
+守りが崩れたぞっ
+一気に攻め立てろ！！
+
+# serif 1
+@キル姫達
+やああああああ！！
+
+# se "SE_0810"
+# waitandnext 0.5
+
+;;//エクスカリバーがキル姫達と切り結ぶ
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;//ロンゴミアントがキル姫達と切り結ぶ
+# sedelay "SE_8023" 0.6
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# alpha 101111 0 0.5
+# move 301021 3 0
+# face 301021 "angry"
+# alpha 301021 1 0.5
+# mask 301021 off
+# waitandnext 0.8
+
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 3010 "rhongomiant_0013"
+@ロンゴミアント
+これでは…
+マスターのところに
+行けませんっ…
+
+# alpha 301021 0 0.5
+# move 101111 3 0
+# face 101111 "angry"
+# alpha 101111 1 0.5
+# mask 101111 off
+# textboxarrow 0 2
+@エクスカリバー
+私は今度こそマスターを
+お守りすると…誓ったのに…
+
+# serif 1
+@奏官達
+いいぞ！
+押してるぞ！
+そのまま潰せぇっ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+# voice 1011 "excalibur_0037"
+@エクスカリバー
+くぅぅっ…
+
+# alpha 101111 0 0.5
+# move 301021 3 0
+# face 301021 "sad"
+# alpha 301021 1 0.5
+# mask 301021 off
+# textboxarrow 0 2
+# voice 3010 "rhongomiant_0037"
+@ロンゴミアント
+あうっ…
+
+;;//斬撃演出
+# bgm "stop"
+# sestop "SE_0810"
+# textwindow "close"
+# alpha 301021 0 0.5
+# waitandnext 0.5
+
+# se "SE_0754"
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 2000 1 0 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+# serif 1
+@キル姫達
+キャアアアアア！？
+
+# se "SE_3001"
+# waitandnext 0.5
+
+# serif 1
+@奏官達
+何！？
+背後から…だとっ…？
+
+# bgmfile "bgm403" "BgmIntegralNoahEvent" 0
+# serif 1
+# textwindow "close"
+# serif 0
+# move 300531 3 0
+# face 300531 "normal"
+# alpha 300531 1 0.5
+# mask 300531 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 3005 "roon_0027"
+@ルーン
+やれやれ…
+まともにやり合っても勝てない
+からって火を放つなんて
+
+# textboxarrow 0 2
+@ルーン
+クソムシどもらしい、
+薄汚いやり口だねえ！
+
+# alpha 300531 0 0.5
+# move 301021 3 0
+# face 301021 "angry"
+# alpha 301021 1 0.5
+# mask 301021 off
+# textboxarrow 0 2
+# voice 3010 "rhongomiant_0022"
+@ロンゴミアント
+ルーン！
+あなた、大丈夫なんですか…？
+ひどい怪我をしています
+
+# alpha 301021 0 0.5
+# move 300531 3 0
+# face 300531 "normal"
+# alpha 300531 1 0.5
+# mask 300531 off
+# textboxarrow 0 2
+# voice 3005 "roon_0004"
+@ルーン
+ああん？
+こんなの…掠り傷だよ！
+
+# textboxarrow 0 2
+@ルーン
+そんなことより…
+マスターを避難させなきゃ
+いけないんだろ
+
+# textboxarrow 0 2
+@ルーン
+ここは…あたいに任せな！
+たっぷり血の匂いを味わえそうで
+ウズウズしてんだ！
+
+# alpha 300531 0 0.5
+# move 101111 3 0
+# face 101111 "normal"
+# alpha 101111 1 0.5
+# mask 101111 off
+# textboxarrow 0 2
+@エクスカリバー
+ですが、その傷では…
+
+# alpha 101111 0 0.5
+# move 300531 3 0
+# face 300531 "mad"
+# alpha 300531 1 0.5
+# mask 300531 off
+# textboxarrow 0 2
+# voice 3005 "roon_0013"
+@ルーン
+うるせぇんだよ、お前！
+その舌、ねじ切るぞ
+
+# alpha 300531 0 0.5
+# move 101111 3 0
+# face 101111 "normal"
+# alpha 101111 1 0.5
+# mask 101111 off
+# textboxarrow 0 2
+@エクスカリバー
+…では、お任せしますよ
+
+;;//エクスカリバーが立ち去る
+# se "SE_0740"
+# textwindow "close"
+# alpha 101111 0 0.5
+# waitandnext 0.5
+
+# move 300531 2 0
+# face 300531 "normal"
+# alpha 300531 1 0.5
+# mask 300531 on
+# move 301021 4 0
+# face 301021 "angry"
+# alpha 301021 1 0.5
+# mask 301021 on
+# textboxarrow 0 3
+# textwindow "normal"
+@ロンゴミアント
+ルーン！
+私も残りますっ
+二人で協力すれば――
+
+# textboxarrow 0 1
+# voice 3005 "roon_0009"
+@ルーン
+おい、ロンゴミアント
+
+# textboxarrow 0 3
+# voice 3010 "rhongomiant_0032"
+@ロンゴミアント
+はい…
+
+# textboxarrow 0 1
+@ルーン
+お前みたいなグズは
+お呼びじゃないんだよ！
+さっさとマスターんとこに行きな！
+
+# textboxarrow 0 3
+# voice 3010 "rhongomiant_0011"
+@ロンゴミアント
+…そんな憎まれ口、
+私には通じませんよ
+
+# textboxarrow 0 3
+@ロンゴミアント
+私とあなたのキラーズは近しいから
+分かるんです
+どんなに罵詈雑言を並べても
+
+# textboxarrow 0 3
+@ロンゴミアント
+あなたの中にはマスターを、
+仲間を思う優しさがあります
+
+# textboxarrow 0 3
+@ロンゴミアント
+ここであなたを犠牲には
+できません！
+
+# textboxarrow 0 1
+# voice 3005 "roon_0013"
+@ルーン
+チッ…！
+見かけによらず我が強い奴ね
+
+# textboxarrow 0 1
+@ルーン
+だったら、私もちょっとだけ
+真面目に返すわよ
+
+;;ロンゴミアント（独白）
+# move 301021 4 0
+# face 301021 "normal"
+# textboxarrow 0 0
+# textwindow "moya"
+@ロンゴミアント
+私…？
+それに、ルーンの雰囲気が変わった…
+
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 3005 "roon_0004"
+@ルーン
+それぞれ役割があるってことだよ
+うちの連中はお上品なのばかりだから
+
+# textboxarrow 0 1
+@ルーン
+私みたいなのがいないと、
+何をするにも欠伸が出るほど
+のろまでしょぉ？
+
+# face 300531 "happy"
+# textboxarrow 0 1
+@ルーン
+それに、私はねぇ
+血の匂いが大好きなのよ
+戦うのが大好き♪
+
+# face 300531 "normal"
+# textboxarrow 0 1
+@ルーン
+だからぁ
+これは役得♪
+誰が犠牲になんかなるかよ！
+
+# textboxarrow 0 1
+@ルーン
+余計な心配してる暇があったら
+しっかりマスターを守ってろ！
+
+# textboxarrow 0 1
+@ルーン
+あのグズなエクスカリバーや
+堅物のアロンダイトに
+マスターを守らせていいのぉ？
+
+# face 301021 "sad"
+# textboxarrow 0 3
+# voice 3010 "rhongomiant_0013"
+@ロンゴミアント
+そ、それはっ…
+でも、その傷では…
+
+# face 300531 "mad"
+# textboxarrow 0 1
+@ルーン
+さっさと行けって言ってんだろうが！
+お前もまとめて餌食にしたって
+いいんだぜ！！
+
+# serif 1
+@奏官達
+何だか言い争っているうちに、
+今度こそやっちまえ！
+
+# serif 1
+@キル姫達
+せやああああああああ！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 300531 "happy"
+# textboxarrow 0 1
+# voice 3005 "roon_0005"
+@ルーン
+アハハハハハハハハハ！
+あたいをたっぷり楽しませろよぉ
+
+;;//背景：王都（炎上）
+;;演出：回想終わり
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "imperial_city_destroyed"
+# effectskip 1000
+# alpha 300531 0 0
+# alpha 301021 0 0
+# move 101111 1 0
+# alpha 101111 1 0
+# mask 101111 on
+# move 301021 3 0
+# face 301021 "normal"
+# alpha 301021 1 0
+# mask 301021 on
+# move 100711 5 0
+# face 100711 "normal"
+# alpha 100711 1 0
+# mask 100711 on
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# se "SE_11762"
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ロンゴミアント
+…私は、マスターの下に走りました
+ルーン一人を残して
+
+# textboxarrow 0 3
+@アロンダイト
+そうだったんですね…
+それでは、ルーンはもう…
+
+# face 101111 "angry"
+# textboxarrow 0 1
+@エクスカリバー
+…急ぎましょう
+彼女の思いを無駄にしないためにも

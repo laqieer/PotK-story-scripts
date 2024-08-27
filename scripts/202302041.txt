@@ -1,0 +1,928 @@
+;;-----------------------------------------
+;;SEAイベント不可欠彩度レルム1_3_1
+;;-----------------------------------------
+# script "lisp"
+# background "in_city_collapse_night"
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+;;-----------------------------------------
+;;パンドラ
+# body 62001111
+# pos 62001111 4
+# scale 62001111 0.8 0
+# layer 62001111 2
+# mask 62001111 off
+# face 62001111 "angry"
+# alpha 62001111 1 0
+;;マクリル
+# body 6603811
+# pos 6603811 2
+# scale 6603811 0.8 0
+# layer 6603811 4
+# face 6603811 "usual"
+# alpha 6603811 1 0
+;;フェイルノート
+# body 5401911
+# pos 5401911 3
+# scale 5401911 0.8 0
+# layer 5401911 2
+# mask 5401911 off
+# alpha 5401911 0 0
+;;SEAフェイルノート
+# body 6401911
+# pos 6401911 3
+# scale 6401911 0.8 0
+# layer 6401911 3
+# mask 6401911 off
+# alpha 6401911 0 0
+;;天上編タスラム
+# body 502011
+# pos 502011 2
+# scale 502011 0.8 0
+# layer 502011 4
+# alpha 502011 0 0
+;;魔獣
+# body 3870001
+# pos 3870001 4
+# scale 3870001 0.8 0
+# layer 3870001 5
+# alpha 3870001 0 0
+# entry 3870099 3870001
+# pos 3870099 4
+# scale 3870099 0.8 0
+# layer 3870099 5
+# alpha 3870099 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;背景：崩壊したカコルフェの街中：夜
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+# se "bgm602_rhythm_on"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@マクリル
+「裏側」ううん、もっと…
+「揺らぎ」の気配が濃くなった…
+
+# voice 6200111 "pandora_0018"
+# textboxarrow 0 3
+@パンドラ
+こんな時に…
+
+# alpha 6603811 0 0.3
+# alpha 502011 1 0.3
+# face 502011 "mad"
+# textboxarrow 0 1
+@タスラム
+「裏側」…「揺らぎ」？
+この事態を引き起こしたものか？
+
+# textboxarrow 0 3
+@パンドラ
+まだ可能性、だけど無関係じゃないわ
+
+# face 502011 "normal"
+# textboxarrow 0 1
+@タスラム
+なら大変だな！
+それは一体どこなんだ？
+
+# voice 660381 "maclir_ura_0015"
+# move 62001111 5 0.5
+# alpha 62001111 0 0
+# move 502011 1 0.5
+# alpha 502011 0 0.3
+# move 6603811 3 0
+# mask 6603811 off
+# face 6603811 "normal"
+# alpha 6603811 1 0.3
+# textboxarrow 0 2
+@マクリル
+あ、あの…
+
+# se "bgm602_basic_on_1"
+# alpha 6603811 0 0.3
+# textflame 0 0
+@
+マクリルはおずおずと
+ひとりのキル姫を指さす
+
+# voice 540191 "failnaught_ca_0013"
+# face 5401911 "sad"
+# alpha 5401911 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@フェイルノート
+私…なのね
+
+# voice 6200111 "pandora_0022"
+# move 5401911 2 0.5
+# move 62001111 4 0.5
+# layer 62001111 4
+# mask 62001111 on
+# face 62001111 "normal"
+# alpha 62001111 1 0.3
+# textboxarrow 0 3
+@パンドラ
+驚かないのね
+
+# voice 540191 "failnaught_ca_0007"
+# face 5401911 "normal"
+# textboxarrow 0 1
+@フェイルノート
+…私の願い、が原因なら
+何も驚くことはないわ
+
+# textboxarrow 0 1
+@フェイルノート
+お前達が話していた「裏側」や
+「揺らぎ」のことを考えると…
+
+# textboxarrow 0 1
+@フェイルノート
+私の願いが「揺らぎ」を
+引き起こすのも当然よね
+
+# voice 660381 "maclir_ura_0003"
+# alpha 5401911 0 0.3
+# move 6603811 2 0
+# layer 6603811 2
+# mask 6603811 off
+# alpha 6603811 1 0.3
+# textboxarrow 0 1
+@マクリル
+魔獣が引き寄せられていたの…
+タワーだけじゃなくて、
+あなたも、だった
+
+# textboxarrow 0 3
+@パンドラ
+すでに気付いていたというの？
+
+# voice 660381 "maclir_ura_0031"
+# face 6603811 "angry"
+# textboxarrow 0 1
+@マクリル
+えと…言うタイミングがなくて…
+
+# alpha 6603811 0 0.3
+# alpha 62001111 0 0.3
+# move 5401911 3 0
+# mask 5401911 off
+# alpha 5401911 1 0.3
+# textboxarrow 0 2
+@フェイルノート
+対象が近くにいた者なら
+言い出せないのも無理はないわよ
+
+# voice 6200111 "pandora_0039"
+# alpha 5401911 0 0.3
+# move 62001111 3 0
+# mask 62001111 off
+# alpha 62001111 1 0.3
+# textboxarrow 0 2
+@パンドラ
+…そういうものなのね
+
+#setnextbgmblock 1
+# se "bgm602_tension_on"
+# alpha 62001111 0 0.3
+# move 6603811 3 0
+# mask 6603811 off
+# face 6603811 "normal"
+# alpha 6603811 1 0.3
+# textboxarrow 0 2
+@マクリル
+フェイルノート、あなたの願いは…
+あなたの「揺らぎ」は自分の力を
+この世界で行使できること？
+
+# voice 540191 "failnaught_ca_0028"
+# alpha 6603811 0 0.3
+# layer 5401911 2
+# face 5401911 "sad"
+# alpha 5401911 1 0.3
+# textboxarrow 0 2
+@フェイルノート
+…そうなのかもしれないわね
+私はこの世界でずっと自分の力の
+使い途を考えていたわ
+
+# textboxarrow 0 2
+@フェイルノート
+私の力がなくとも
+この世界は統治されている
+
+# textboxarrow 0 2
+@フェイルノート
+なら、私は何の為に
+この力…ルシファーを宿し
+この世界に存在しているの？ 
+
+# textboxarrow 0 2
+@フェイルノート
+国の王ではないとしても、
+世界を救う使命がないとしても
+
+# textboxarrow 0 2
+@フェイルノート
+せめて今回のような事態で
+力を使って誰かを守ることが
+できたのなら、意味はあったと…
+
+# textboxarrow 0 2
+@フェイルノート
+私はここに居ていいのだと
+そう、思えるのに…
+
+# move 5401911 4 0.5
+# move 6603811 2 0
+# layer 6603811 4
+# mask 6603811 on
+# face 6603811 "usual"
+# alpha 6603811 1 0.3
+# textboxarrow 0 1
+@マクリル
+…あなたは、自分の意味を知らない？
+
+# face 5401911 "angry"
+# textboxarrow 0 3
+@フェイルノート
+だから、意味のあった自分を
+思ってしまうものなんでしょ？
+
+# textboxarrow 0 1
+@マクリル
+――私だけじゃ、ないんだ…
+
+# alpha 5401911 0 0.3
+# move 62001111 4 0
+# layer 62001111 2
+# mask 62001111 off
+# face 62001111 "surprise"
+# alpha 62001111 1 0.3
+# textboxarrow 0 3
+@パンドラ
+マクリル？
+
+# voice 540191 "failnaught_ca_0002"
+# alpha 6603811 0 0.3
+# alpha 62001111 0 0.3
+# move 5401911 3 0
+# layer 5401911 2
+# mask 5401911 off
+# face 5401911 "normal"
+# alpha 5401911 1 0.3
+# textboxarrow 0 2
+@フェイルノート
+ねぇ、タスラム
+あなたはどうしてそんな風に
+折れずに、在ることができるの…？
+
+# voice 5020 "tasuramu_0020"
+# move 5401911 2 0.5
+# move 502011 4 0
+# layer 502011 4
+# mask 502011 on
+# alpha 502011 1 0.3
+# textboxarrow 0 3
+@タスラム
+ふっふっふ、それはだな…
+
+# bgm "stop"
+# face 502011 "smile"
+# textboxarrow 0 3
+@タスラム
+もっと肉を食えば
+おまえにもできるようになるぞ！
+
+# face 5401911 "surprise"
+# textboxarrow 0 1
+@フェイルノート
+…………
+
+# voice 540191 "failnaught_ca_0008"
+# textboxarrow 0 1
+@フェイルノート
+ふ、ふふ、ふふふふふ…
+
+# voice 540191 "failnaught_ca_0013"
+# face 5401911 "sad"
+# textboxarrow 0 1
+@フェイルノート
+…はぁ、そうよね
+ええ、それはそうよ
+
+# bgmfile "bgm293" "BgmLostRagnarokSideStory" 0
+# textboxarrow 0 1
+@フェイルノート
+私が私の価値を見出せないなら
+誰にとっても、この世界にとっても
+私という存在は価値がないのよ
+
+# voice 6200111 "pandora_0002"
+# alpha 502011 0 0.3
+# move 62001111 4 0
+# layer 62001111 4
+# mask 62001111 on
+# alpha 62001111 1 0.3
+# textboxarrow 0 3
+@パンドラ
+…戦わないと、
+その力を行使しないと
+あなたの価値はないの？
+
+# textboxarrow 0 3
+@パンドラ
+矢を命中させられないのなら
+フェイルノートとして価値がないの？
+
+# voice 540191 "failnaught_ca_0033"
+# face 5401911 "angry"
+# textboxarrow 0 1
+@フェイルノート
+そうよ！
+
+# textboxarrow 0 1
+@フェイルノート
+だってそうでしょう…
+私というキル姫が、キラーズが
+そういうものだと刻まれているのよ？
+
+# voice 6200111 "pandora_0032"
+# face 62001111 "normal"
+# textboxarrow 0 3
+@パンドラ
+そうね、そもそも私達は
+戦う為に生み出された存在だものね
+
+# textboxarrow 0 3
+@パンドラ
+…けれど、この世界には
+かつての悪魔のように明確な敵や
+絶望が広がっていない
+
+# face 62001111 "sad"
+# textboxarrow 0 3
+@パンドラ
+私も、あの時みたいに
+戦うことを求められない
+
+# textboxarrow 0 3
+@パンドラ
+…あなたの話で言うと
+私達キル姫全員、価値のない存在ね
+
+# face 5401911 "sad"
+# textboxarrow 0 1
+@フェイルノート
+そ、そこまでは言ってないわよ！
+
+# textboxarrow 0 1
+@フェイルノート
+私が私に価値が無いと
+言っているだけなんだから
+
+# face 62001111 "normal"
+# textboxarrow 0 3
+@パンドラ
+でもね
+
+# textboxarrow 0 1
+@フェイルノート
+…？
+
+# textboxarrow 0 3
+@パンドラ
+新しいこの世界で目覚めた私は…
+
+# textboxarrow 0 3
+@パンドラ
+私の“価値”ではなく
+私の“意思”で世界を見てみよう
+って、思ったのよ
+
+# face 5401911 "surprise"
+# textboxarrow 0 1
+@フェイルノート
+“価値”ではなく、“意志”
+
+# voice 660381 "maclir_ura_0002"
+# alpha 5401911 0 0.3
+# move 6603811 2 0
+# layer 6603811 2
+# mask 6603811 off
+# alpha 6603811 1 0.3
+# textboxarrow 0 1
+@マクリル
+…パンドラも
+世界を識る旅をしているの？
+
+# textboxarrow 0 3
+@パンドラ
+そういうことになるのかしら？
+
+# textboxarrow 0 3
+@パンドラ
+私はこの世界のことを
+全く知らなかったわ
+空が青いことも初めて知ったの
+
+# textboxarrow 0 3
+@パンドラ
+だから、もっと知りたいと思ったの
+この世界のあらゆることを、
+この世界で生きる人々の意思を…
+
+# face 62001111 "surprise"
+# textboxarrow 0 3
+@パンドラ
+あなたのこともよ、フェイルノート
+ねえ、あなたはどうして戦うの？
+それはあなたがキル姫だから？
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# alpha 6603811 0 0.3
+# alpha 62001111 0 0.3
+# move 5401911 3 0
+# mask 5401911 off
+# alpha 5401911 1 0.3
+# textboxarrow 0 2
+@フェイルノート
+私の意思……
+
+# face 5401911 "sad"
+# textboxarrow 0 2
+@フェイルノート
+…………
+
+# voice 5020 "tasuramu_0002"
+# alpha 5401911 0 0.3
+# move 502011 3 0
+# mask 502011 off
+# face 502011 "angry"
+# alpha 502011 1 0.3
+# textboxarrow 0 2
+@タスラム
+話もいいけどさ
+そろそろ動き出さないと
+また魔獣が押し寄せてくるぞ
+
+# voice 540191 "failnaught_ca_0013"
+# alpha 502011 0 0.3
+# alpha 5401911 1 0.3
+# textboxarrow 0 2
+@フェイルノート
+…………はぁ
+
+# bgmfile "bgm291" "BgmLostRagnarokSideStory" 0
+# face 5401911 "angry"
+# textboxarrow 0 2
+@フェイルノート
+本っ当に無駄ね
+
+# textboxarrow 0 2
+@フェイルノート
+無駄の無駄の無駄無駄よ
+
+# textboxarrow 0 2
+@フェイルノート
+やっぱり私が無駄なのよ！
+
+# alpha 5401911 0 0.3
+# move 6603811 3 0
+# mask 6603811 off
+# alpha 6603811 1 0.3
+# textboxarrow 0 2
+@マクリル
+…フェイルノート？
+
+# voice 540191 "failnaught_ca_0007"
+# alpha 6603811 0 0.3
+# face 5401911 "normal"
+# alpha 5401911 1 0.3
+# textboxarrow 0 2
+@フェイルノート
+パンドラのおかげで目が覚めたわ
+礼を言っておくわね
+
+# textboxarrow 0 2
+@フェイルノート
+私は今の世界に対して
+私の在り方を、存在意義を
+見出せずにいたんじゃないわ
+
+# textboxarrow 0 2
+@フェイルノート
+自分の在り方を決めつけていたから
+この世界に合わなくなっていたのね
+
+# face 5401911 "sad"
+# textboxarrow 0 2
+@フェイルノート
+私が私に思っていた“価値”に
+見合わない存在になっていたと
+そう思っていた…
+
+# textboxarrow 0 2
+@フェイルノート
+そこに、私がどうしたいかの
+“意志”が欠如していたなんて…
+王たる力を持つ者として失格ね
+
+# face 5401911 "angry"
+# textboxarrow 0 2
+@フェイルノート
+それに…何よりも
+無駄のない弓にあるまじき
+余計な思考に囚われていたわ！
+
+# voice 660381 "maclir_ura_0022"
+# alpha 5401911 0 0.3
+# face 6603811 "surprise"
+# alpha 6603811 1 0.3
+# textboxarrow 0 2
+@マクリル
+「揺らぎ」が、散っていく…
+
+# face 6603811 "happy"
+# textboxarrow 0 2
+@マクリル
+ううん、フェイルノートが
+「揺るぎない」存在になったんだ…！
+
+# alpha 6603811 0 0.3
+# move 5401911 2 0
+# layer 5401911 2
+# mask 5401911 off
+# alpha 5401911 1 0.3
+# move 502011 4 0
+# layer 502011 4
+# mask 502011 on
+# face 502011 "normal"
+# alpha 502011 1 0.3
+# textboxarrow 0 1
+@フェイルノート
+タスラム、力を貸して
+魔獣の掃討に当たるわ！
+
+# voice 5020 "tasuramu_0033"
+# face 502011 "happy"
+# textboxarrow 0 3
+@タスラム
+おうよ！
+やってやるぜ！
+
+# alpha 502011 0 0.3
+# move 62001111 4 0
+# layer 62001111 4
+# mask 62001111 on
+# face 62001111 "normal"
+# alpha 62001111 1 0.3
+# textboxarrow 0 3
+@パンドラ
+フェイルノート
+
+# face 5401911 "normal"
+# textboxarrow 0 1
+@フェイルノート
+何かしら、パンドラ
+
+# textboxarrow 0 3
+@パンドラ
+やれる？
+
+# voice 540191 "failnaught_ca_0003"
+# face 5401911 "angry"
+# textboxarrow 0 1
+@フェイルノート
+ええ、私の矢は
+“必ず当たる”もの
+
+# alpha 5401911 0 0.3
+# alpha 62001111 0 0.3
+# move 6603811 2 0
+# layer 6603811 2
+# mask 6603811 off
+# alpha 6603811 1 0.3
+# face 502011 "normal"
+# alpha 502011 1 0.3
+# textboxarrow 0 3
+@タスラム
+さっきまでうろちょろしてた魔獣は
+みんなタワーのほうに向かってるな
+
+# voice 660381 "maclir_ura_0041"
+# textboxarrow 0 1
+@マクリル
+引き寄せられるところが
+変わったからだ…すごい…
+
+# alpha 6603811 0 0.3
+# alpha 5401911 1 0.3
+# textboxarrow 0 1
+@フェイルノート
+タスラムは魔獣を追って
+
+# face 502011 "happy"
+# textboxarrow 0 3
+@タスラム
+任せろ！
+
+;;演出：駆けて行くタスラム
+# se "SE_5575"
+# move 502011 5 0.3
+# alpha 502011 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# move 5401911 3 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+@フェイルノート
+パンドラとマクリルは
+タスラムの動きを見つつ
+タワー側に回り込んで
+
+# voice 660381 "maclir_ura_0003"
+# alpha 5401911 0 0.3
+# move 6603811 2 0
+# layer 6603811 2
+# mask 6603811 off
+# alpha 6603811 1 0.3
+# alpha 62001111 1 0.3
+# textboxarrow 0 1
+@マクリル
+…うん！
+
+# textboxarrow 0 3
+@パンドラ
+フェイルノートは？
+
+# alpha 6603811 0 0.3
+# alpha 62001111 0 0.3
+# face 5401911 "normal"
+# alpha 5401911 1 0.3
+# textboxarrow 0 2
+@フェイルノート
+私はここにいるわ
+
+# textboxarrow 0 2
+@フェイルノート
+だって、私が動くだなんて
+無駄なことしなくていいもの
+
+# face 5401911 "angry"
+# textboxarrow 0 2
+@フェイルノート
+さぁ、行って！
+
+;;演出：動き始めるパンドラとマクリル
+# se "SE_5575"
+# sedelay "SE_5575" 0.2
+# textboxarrow 0 2
+@フェイルノート
+さっきまでは魔獣達に
+おちょくられていたみたいだけど
+今は――
+
+# se "SE_5200"
+# move 5401911 2 1
+# textboxarrow 0 0
+# waitandnext 2
+
+# se "SE_5243"
+# textflame 0 0
+@
+魔獣達は
+弓を向けられた訳でもないのに
+フェイルノートから逃げて行く
+
+# voice 540191 "failnaught_ca_0007"
+# face 5401911 "normal"
+# move 5401911 3 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@フェイルノート
+“当たる”のが怖いのかしら？
+それとも、“王”たる私が怖いの？
+
+# face 5401911 "angry"
+# textboxarrow 0 2
+@フェイルノート
+…まぁ、どちらでもいいわ
+だって、そんなの無駄だもの
+
+;;演出：場面転換の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 5401911 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 5020 "tasuramu_battle_0001"
+# move 502011 2 0
+# layer 502011 2
+# mask 502011 off
+# face 502011 "mad"
+# alpha 502011 1 0.3
+# alpha 3870001 1 0.3
+# se "SE_4400"
+# textwindow "nomal"
+# textboxarrow 0 1
+@タスラム
+はぁ！
+
+# se "SE_4824"
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# move 502011 3 0.3
+# move 3870001 5 0.4
+# textboxarrow 0 0
+# waitandnext 1
+
+;;演出：倒される魔獣
+# se "SE_2019"
+# alpha 3870001 0 1
+# textwindow "close"
+# waitandnext 1.5
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@タスラム
+なんだ、急に魔獣達の動きが悪く…
+なったんじゃないな？
+
+# textboxarrow 0 2
+@タスラム
+あたしの進む先に魔獣がいる
+…くらいの不思議な感覚だ
+
+;;演出：場面転換の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 502011 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 6200111 "pandora_battle_0002"
+# face 6603811 "usual"
+# alpha 6603811 1 0.3
+# face 62001111 "angry"
+# alpha 62001111 1 0.3
+# se "SE_8623"
+# textwindow "nomal"
+# textboxarrow 0 3
+@パンドラ
+えいっ！
+
+# fadein "white" 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+# voice 660381 "maclir_ura_battle_0002"
+# se "SE_8581"
+# textboxarrow 0 1
+@マクリル
+…やっ！
+
+# fadein "white" 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+# alpha 6603811 0 0.3
+# alpha 62001111 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# move 3870001 2 0
+# layer 3870001 2
+# mask 3870001 off
+# alpha 3870001 1 0.5
+# move 3870099 4 0
+# layer 3870099 4
+# alpha 3870099 1 0.5
+# waitandnext 1
+
+# se "SE_8627"
+# effectbody 1001 30 0 0 0
+# effectstart 1001
+# scale 3870001 0.7 0.3
+# scale 3870099 0.73 0.2
+# waitandnext 1
+
+;;演出：それぞれが魔獣を倒す
+# se "SE_2019"
+# alpha 3870001 0 0.5
+# alpha 3870099 0 0.5
+# waitandnext 1.5
+
+# alpha 6603811 1 0.3
+# face 62001111 "surprise"
+# alpha 62001111 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@パンドラ
+フェイルノートが
+指示を出し始めてから
+魔獣の逃げ道が塞がれてるみたい
+
+# voice 660381 "maclir_ura_0021"
+# face 6603811 "happy"
+# textboxarrow 0 1
+@マクリル
+…すごいね！
+ほんのちょっとのことで
+こんなにも違うんだ！
+
+;;演出：場面転換の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 6603811 0 0
+# alpha 62001111 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 5401911 "normal"
+# alpha 5401911 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@フェイルノート
+心ってなんて単純で…
+それでいて中々融通が利かないものね
+
+# textflame 0 0
+@
+ふふ、と自嘲気味に笑う
+フェイルノートの視界に
+タスラム達が撃ち漏らした魔獣が映る
+
+# textflame 1 1
+# textboxarrow 0 2
+@フェイルノート
+私はフェイルノート――無駄のない弓
+
+# face 5401911 "angry"
+# textboxarrow 0 2
+@フェイルノート
+それは即ち、
+射る必要がなければ
+矢を放たないということでもあるわ
+
+# alpha 5401911 0 0.3
+# textflame 0 0
+@
+では何故、今は矢を番えるのか
+
+;;演出：フェイルノートの立ち絵が変化
+# effectbody 1002 51 0 0 0
+# effectstart 1002
+# fadeout "white" 2
+# waitandnext 2
+
+# alpha 6401911 1 0
+# fadein "white" 2
+# waitandnext 3
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@フェイルノート
+それは――“当たる”からよ
+
+;;バトル
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 6401911 0 0
+# waitandnext 0.2

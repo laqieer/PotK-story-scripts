@@ -1,0 +1,255 @@
+;;第4話（4-3）　タイトル：
+;;//背景：地底
+;;-----------------------------------------
+# script "lisp"
+# background "underground_world_3"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;@ティターニア
+# body 139
+# pos 139 5
+# scale 139 0.8 0
+# alpha 139 1 0
+;;@アルマス
+# body 172
+# pos 172 1
+# scale 172 0.8 0
+# alpha 172 1 0
+;;@ギル
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# alpha 137 1 0
+;;@モラルタ
+# body 3104011
+# pos 3104011 4
+# scale 3104011 0.8 0
+# alpha 3104011 0 0
+;;@ベガルタ
+# body 3104111
+# pos 3104111 2
+# scale 3104111 0.8 0
+# alpha 3104111 0 0
+;;@ムラマサ
+# body 3102511
+# pos 3102511 3
+# scale 3102511 0.8 0
+# alpha 3102511 0 0
+# face 139 "surprise"
+# voice 9967 "titania_0042"
+# textboxarrow 0 3
+@ティターニア
+これは…随分と細い道ですね
+
+# textboxarrow 0 1
+# face 172 "normal"
+# voice 1038 "almace_0040"
+@アルマス
+こんな隙間、
+普通は気づかないわよね
+
+# textboxarrow 0 3
+@ティターニア
+気づいたとしても
+大軍では進むことが
+できないでしょう
+
+# textboxarrow 0 2
+# face 137 "usual"
+# voice 9969 "gill_0007"
+@ギル
+少数精鋭の俺達に
+うってつけの道ってことだよな！
+
+# textboxarrow 0 3
+# face 139 "normal"
+@ティターニア
+どうやら精霊の後を追って
+正解だったようですね
+もちろん油断は禁物ですけれど
+
+# textboxarrow 0 1
+# voice 1038 "almace_0003"
+@アルマス
+この道を進んでいけば
+トレイセーマ軍を
+追い抜くことができそうね
+
+# textboxarrow 0 2
+# face 137 "surprise"
+# voice 9969 "gill_0023"
+@ギル
+そう上手いこといくのか？
+さすがに俺も楽観できねえぜ…
+
+# textboxarrow 0 1
+# face 172 "angry"
+# voice 1038 "almace_0007"
+@アルマス
+いいから黙ってついて来なさいよ
+
+# textboxarrow 0 3
+# alpha 139 0 0.5
+# alpha 172 0 0.5
+# alpha 137 0 0.5
+# alpha 3104011 1 0.5
+# alpha 3104111 1 0.5
+# face 3104011 "normal"
+# voice 1040 "morallta_0002"
+@モラルタ
+狭いね、ベガ
+手を繋ごう
+
+# textboxarrow 0 1
+# face 3104111 "normal"
+# voice 1041 "beagallta_0003"
+@ベガルタ
+暗いね、モラ
+手を繋ごう
+
+# textboxarrow 0 3
+# alpha 139 1 0.5
+# alpha 172 1 0.5
+# face 137 "normal"
+# alpha 137 1 0.5
+# alpha 3104011 0 0.5
+# alpha 3104111 0 0.5
+# face 139 "surprise"
+@ティターニア
+確かに視界が悪くなってきました
+皆さん、はぐれないよう
+気をつけて下さいね
+
+# se "SE_0774"
+# face 137 "surprise"
+# textboxarrow 0 2
+@ギル
+一本道みたいだし、大丈夫だろ？
+うおっとと…
+
+# textboxarrow 0 1
+;;//ギルが転びかける
+# face 172 "normal"
+# voice 1038 "almace_0042"
+@アルマス
+言ってる側から…
+マスターも気をつけてよっ
+
+# select "アルマス、手を繋ごう" "select_label_01" "大丈夫だよ" "select_label_02" "アルマスは優しいね" "select_label_03"
+@アルマス
+言ってる側から…
+マスターも気をつけてよっ
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 172 "shy"
+# voice 1038 "almace_0022"
+@アルマス
+ええっ？
+…いいけど…勘違いしないでよね！
+安全のためなんだからっ
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 172 "angry"
+# voice 1038 "almace_0009"
+@アルマス
+その発言が危なっかしいのよ！
+まったく…世話が焼けるんだからっ
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 172 "shy"
+# voice 1038 "almace_0022"
+@アルマス
+こんなところでマスターに
+怪我されたら困るから言っただけよ！
+優しいとか…そういうんじゃないのっ
+
+# textboxarrow 0 3
+# label "select_label_end"
+# face 139 "normal"
+# voice 9967 "titania_0006"
+@ティターニア
+素直じゃありませんね、この子は
+
+# textboxarrow 0 1
+# face 172 "angry"
+# voice 1038 "almace_0045"
+@アルマス
+ティニ！
+何か言った！？
+
+# textboxarrow 0 3
+# face 139 "sad"
+@ティターニア
+いえいえ何も…
+
+# face 139 "surprise"
+@ティターニア
+静かにして下さい！
+強い気配を感じますっ
+
+# textboxarrow 0 1
+# face 172 "angry"
+# voice 1038 "almace_battle_0005"
+@アルマス
+また魔物っ？
+それとも…
+
+# textboxarrow 0 3
+# voice 9967 "titania_0042"
+@ティターニア
+この気配は…
+斬ル姫です
+近づいてきますね
+
+# textboxarrow 0 2
+# face 137 "normal"
+# voice 9969 "gill_0023"
+@ギル
+あれ？
+一本道だと思ってたのに
+こっちに分かれ道が――
+
+# serif 1
+@？？？
+何者ですか！？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 137 "surprise"
+# voice 9969 "gill_0026"
+@ギル
+うひぃぃぃっ…！
+
+# textboxarrow 0 1
+@アルマス
+ギル、下がって！
+
+# textboxarrow 0 2
+# alpha 139 0 0.5
+# alpha 172 0 0.5
+# alpha 137 0 0.5
+# alpha 3102511 1 0.5
+# mask 3102511 off
+# face 3102511 "surprise"
+# voice 310251 "muramasa_ge_0022"
+# chara 3102511
+@ムラマサ
+曲者！
+…そなたはっ？
+
+# textboxarrow 0 1
+# alpha 139 1 0.5
+# alpha 172 1 0.5
+# alpha 137 1 0.5
+# alpha 3102511 0 0.5
+# face 172 "surprise"
+# voice 1038 "almace_0022"
+@アルマス
+ムラマサ！？
+何でこんなところに…

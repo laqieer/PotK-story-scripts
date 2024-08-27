@@ -1,0 +1,333 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第５章
+;;第2話　タイトル：世界樹攻略戦
+;;5_2_1_1
+;;スクリプト最後の背景：都市部（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "parchment_map03"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;異族化アルマス（ナレーションのボイス用）
+# body 5103831
+# alpha 5103831 0 0
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 3
+# alpha 210 0 0
+# mask 210 off
+;;マサムネ(キラーメイル)
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# layer 1100111 2
+# alpha 1100111 0 0
+# mask 1100111 off
+;;神令ヒョウハ
+# body 5402011
+# pos 5402011 3
+# scale 5402011 0.8 0
+# layer 5402011 2
+# alpha 5402011 0 0
+# mask 5402011 off
+;;シタ
+# body 3201611
+# pos 3201611 3
+# scale 3201611 0.8 0
+# layer 3201611 2
+# alpha 3201611 0 0
+# mask 3201611 off
+;;ミトゥム
+# body 3200511
+# pos 3200511 3
+# scale 3200511 0.8 0
+# layer 3200511 2
+# alpha 3200511 0 0
+# mask 3200511 off
+;;バルムンク
+# body 3100911
+# pos 3100911 3
+# scale 3100911 0.8 0
+# layer 3100911 2
+# alpha 3100911 0 0
+# mask 3100911 off
+;;グラム
+# body 3100811
+# pos 3100811 3
+# scale 3100811 0.8 0
+# layer 3100811 2
+# alpha 3100811 0 0
+# mask 3100811 off
+;;魔獣化アルテミス
+# body 1400131
+# pos 1400131 3
+# scale 1400131 0.8 0
+# layer 1400131 2
+# alpha 1400131 0 0
+# mask 1400131 off
+# brightness 1400131 0.5 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第2話　タイトル：世界樹攻略戦
+;;//背景：新地上世界遠景
+;;ナレーション
+# voice 9924 "IntegralNoah_Narration_5_2_0001"
+# textflame 0 0
+@
+ユグドラシルの麓で、
+兄貴分であるヴァングとの再会を
+果たしたカミト
+
+;;ナレーション
+# voice 9924 "IntegralNoah_Narration_5_2_0002"
+@
+一旦、ユグドラシルから撤退した
+彼らは中心部を治める奏官達と
+話をする
+
+;;ナレーション
+# voice 9924 "IntegralNoah_Narration_5_2_0003"
+@
+コマンドキラーズに対抗するため
+共闘を提案するヴァング
+
+;;ナレーション
+# voice 9924 "IntegralNoah_Narration_5_2_0004"
+@
+独立心の強い彼らしくないと
+カミトは戸惑うが、そこには
+ヴァングの気遣いがあった
+
+;;ナレーション
+# voice 9924 "IntegralNoah_Narration_5_2_0005"
+@
+背中を押され、カミトはフォルカスと
+もう一度会うことを決意する
+
+;;ナレーション
+# voice 9924 "IntegralNoah_Narration_5_2_0006"
+@
+だが、そんな彼らの下に新たな
+脅威がもたらされた
+
+;;ナレーション
+# voice 9924 "IntegralNoah_Narration_5_2_0007"
+@
+中心部に、魔獣化したキラーメイルが
+二体、現れたのだ
+
+;;ナレーション
+# voice 9924 "IntegralNoah_Narration_5_2_0008"
+@
+魔獣化していながら、連携して戦う
+彼らにカミト達は苦戦を強いられる
+
+;;ナレーション
+# voice 9924 "IntegralNoah_Narration_5_2_0009"
+@
+さらにコマンドキラーズの一人、
+ヒョウハまでもが襲来した
+
+;;ナレーション
+# voice 9924 "IntegralNoah_Narration_5_2_0010"
+@
+運命の輪は回り続ける――
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_city"
+# move 5402011 3 0
+# face 5402011 "normal"
+# alpha 5402011 1 0
+# mask 5402011 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//背景：都市部（昼）
+# bgmfile "bgm424" "BgmIntegralNoahCommand" 0
+# voice 540201 "hyoha_c_0029"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ヒョウハ
+よっしゃああああああああああ！！
+超爆・燃え上がっていくぞぉぉぉっ！
+
+# voice 310091 "barumunku_t_0015"
+# alpha 5402011 0 0.5
+# move 3100811 2 0
+# face 3100811 "normal"
+# alpha 3100811 1 0.5
+# mask 3100811 on
+# move 3100911 4 0
+# face 3100911 "sad"
+# alpha 3100911 1 0.5
+# mask 3100911 on
+# textboxarrow 0 3
+@バルムンク
+ああ…！
+恐ろしいわ、グラムっ
+
+# textboxarrow 0 1
+@グラム
+あれがマスターの言っていた
+コマンドキラーズ…
+ヒョウハだね
+
+# voice 310081 "guramu_t_0007"
+# face 3100811 "angry"
+# textboxarrow 0 1
+@グラム
+いいだろう
+この町の人々のため、
+マスターのため
+
+# textboxarrow 0 1
+@グラム
+何よりバルムンクのため
+私が君を討つ！
+
+# voice 320161 "shita_t_0009"
+# alpha 3100911 0 0.5
+# move 3201611 4 0
+# face 3201611 "angry"
+# alpha 3201611 1 0.5
+# mask 3201611 on
+# textboxarrow 0 3
+@シタ
+断罪に私情を挟むのは感心しませんね
+この地区の守護はあくまでわたし達の
+役目です
+
+# voice 320051 "mitwumu_t_0036"
+# alpha 3201611 0 0.5
+# move 3200511 4 0
+# face 3200511 "angry"
+# alpha 3200511 1 0.5
+# mask 3200511 on
+# textboxarrow 0 3
+@ミトゥム
+シタお姉様の言う通りです
+グラムとバルムンクは魔獣の方を
+お願いします！
+
+# voice 310081 "guramu_t_0009"
+# textboxarrow 0 1
+@グラム
+どうしてだい？
+私は君達のために…
+
+;;//画面スライド
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 3100811 0 0
+# alpha 3200511 0 0
+# move 3102311 1 0
+# face 3102311 "normal"
+# alpha 3102311 1 0
+# mask 3102311 on
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0
+# mask 210 on
+# move 3501711 5 0
+# face 3501711 "normal"
+# alpha 3501711 1 0
+# mask 3501711 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgmfile "bgm162_163" "BgmPJZero001" 0
+# voice 9936 "kamito_0020"
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+ああっ…
+何で仲間同士でもめてるんだよっ
+
+# voice 350171 "grimoire_ge_0026"
+# face 3501711 "angry"
+# textboxarrow 0 3
+@グリモワール
+苛々させるわね！
+マスター、ワタシ達でヒョウハを
+倒すわよ！
+
+# voice 310231 "ascalon_a_0029"
+# face 3102311 "angry"
+# textboxarrow 0 1
+@アスカロン
+そうです！
+この身に代えても倒してみせます！
+
+# voice 9936 "kamito_0057"
+# face 210 "irregular"
+# textboxarrow 0 2
+@カミト
+待って！
+先にキラーメイルを解放しよう
+
+# textboxarrow 0 2
+@カミト
+彼らが意識を取り戻せば、
+マサムネ達みたく力を貸して
+くれるかもしれないしっ
+
+# voice 9936 "kamito_0023"
+# face 210 "surprise"
+# textboxarrow 0 2
+@カミト
+僕達は…あれ！？
+そういえばアポロン達はっ？
+
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# alpha 3501711 0 0.5
+# move 1400131 3 0
+# face 1400131 "angry"
+# alpha 1400131 1 0.5
+# mask 1400131 off
+# textboxarrow 0 2
+@アルテミス
+グウウウウウウウウウ！
+
+# voice 11001 "masamunem_0037"
+# alpha 1400131 0 0.5
+# move 1100111 3 0
+# face 1100111 "angry"
+# alpha 1100111 1 0.5
+# mask 1100111 off
+# textboxarrow 0 2
+@マサムネ
+チッ！
+後ろだ！！

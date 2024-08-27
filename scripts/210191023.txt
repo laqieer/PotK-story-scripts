@@ -1,0 +1,313 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第19章 章タイトル：ワールドサルベイション
+;;第1話―２　タイトル：救済を謳う鎖
+;;2_3
+;;スクリプト最後の背景：ユグドラシル内部
+;;-----------------------------------------
+# script "lisp"
+# background "yggdrasill_interior"
+# bgmfile "bgm437" "BgmIntegralNoahEvent005" 0
+;;-----------------------------------------
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 2
+# alpha 5101431 0 0
+# mask 5101431 off
+;;擬装フライシュッツ
+# body 5502721
+# pos 5502721 3
+# scale 5502721 0.8 0
+# layer 5502721 2
+# alpha 5502721 0 0
+# mask 5502721 off
+;;擬装エルキュール
+# body 5202521
+# pos 5202521 3
+# scale 5202521 0.8 0
+# layer 5202521 2
+# alpha 5202521 0 0
+# mask 5202521 off
+;;フォルカス・神令・ヘル
+# body 5301811
+# pos 5301811 3
+# scale 5301811 0.8 0
+# layer 5301811 2
+# alpha 5301811 0 0
+# mask 5301811 off
+;;グリモワール・獣刻・ニーズヘッグ 大罪ver.
+# body 5501711
+# pos 5501711 3
+# scale 5501711 0.8 0
+# layer 5501711 2
+# alpha 5501711 0 0
+# mask 5501711 off
+;;アスカロン・D. plug・レヴィアタン 大罪ver.
+# body 5102311
+# pos 5102311 3
+# scale 5102311 0.8 0
+# layer 5102311 2
+# alpha 5102311 0 0
+# mask 5102311 off
+;;ラグナロク・擬装・ガンナー
+# body 5103621
+# pos 5103621 3
+# scale 5103621 0.8 0
+# layer 5103621 2
+# alpha 5103621 0 0
+# mask 5103621 off
+;;アルマス・誓約・ティターニア
+# body 5103811
+# pos 5103811 3
+# scale 5103811 0.8 0
+# layer 5103811 2
+# alpha 5103811 0 0
+# mask 5103811 off
+;;魔獣
+# body 806158
+# pos 806158 3
+# scale 806158 0.8 0
+# layer 806158 3
+# alpha 806158 0 0
+# mask 806158 off
+;;魔獣1
+# entry 98061581 806158
+# pos 98061581 3
+# scale 98061581 0.8 0
+# layer 98061581 2
+# alpha 98061581 0 0
+# mask 98061581 off
+;;魔獣2
+# entry 98061582 806158
+# pos 98061582 3
+# scale 98061582 0.8 0
+# layer 98061582 2
+# alpha 98061582 0 0
+# mask 98061582 off
+;;-----------------------------------------
+# imageset 0 "gleipnir_kusari03"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imagescale 0 1.5 0
+# imageset 1 "gleipnir_kusari04"
+# imagealpha 1 0 0
+# imagelayer 1 1
+# imagescale 1 1.3 0
+;;-----------------------------------------
+# voice 510381 "almace_ca_battle_0002"
+# move 806158 2 0
+# alpha 806158 1 0
+# mask 806158 on
+# move 5103811 4 0
+# face 5103811 "angry"
+# alpha 5103811 1 0
+# mask 5103811 on
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+せいっ！
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 -200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# se "SE_0794"
+# textboxarrow 0 1
+@魔獣
+ガアアアアアアア…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 806158 0 0.5
+# waitandnext 0.8
+
+;;//魔獣の群れが現れる
+# se "SE_0779"
+# alpha 5103811 0 0.5
+# move 98061581 1 0
+# alpha 98061581 1 0.5
+# mask 98061581 on
+# move 806158 3 0
+# alpha 806158 1 0.5
+# mask 806158 on
+# move 98061582 5 0
+# alpha 98061582 1 0.5
+# mask 98061582 on
+# waitandnext 0.5
+
+# se "SE_0792"
+# textboxarrow 0 0
+# textwindow "normal"
+@魔獣
+ガアアアアアアアアアアア！
+
+# voice 510381 "almace_ca_0023"
+# alpha 98061581 0 0.5
+# alpha 806158 0 0.5
+# alpha 98061582 0 0.5
+# move 5301811 2 0
+# face 5301811 "normal"
+# alpha 5301811 1 0.5
+# mask 5301811 on
+# move 5103811 4 0
+# face 5103811 "surprise"
+# alpha 5103811 1 0.5
+# mask 5103811 on
+# textboxarrow 0 3
+@アルマス
+何なの、こいつら…！？
+全然、減らないんだけどっ
+
+# face 5301811 "angry"
+# textboxarrow 0 1
+@フォルカス
+地上でフリズスキャールヴの周りに
+いた魔獣と同じ気配がします
+恐らく彼女の仕業でしょう
+
+# voice 1036 "ragnarok_0037"
+# alpha 5301811 0 0.5
+# alpha 5103811 0 0.5
+# move 5103621 3 0
+# face 5103621 "normal"
+# alpha 5103621 1 0.5
+# mask 5103621 off
+# textboxarrow 0 2
+@ラグナロク
+マナが濃いユグドラシル内でなら
+いくらでも呼び出せるということ？
+キリがないわっ
+
+# alpha 5103621 0 0.5
+# move 5101431 3 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+@ティルフィング
+皆さん、一点突破で切り抜けましょう
+それから…
+
+;;//鎖演出
+;;//鎖が絡まる音があれば
+# imagealpha 0 1 1
+# imagepos 0 0 0
+# imagealpha 1 1 1
+# imagepos 1 0 0
+# se "SE_6133"
+# waitandnext 1
+
+# voice 510143 "tyrufing_iz_0009"
+# face 5101431 "surprise"
+# textboxarrow 0 2
+@ティルフィング
+えっ…！？
+これは…鎖っ？
+
+# voice 530181 "forcas_c_0022"
+# alpha 5101431 0 0.5
+# move 5301811 3 0
+# face 5301811 "surprise"
+# alpha 5301811 1 0.5
+# mask 5301811 off
+# textboxarrow 0 2
+@フォルカス
+しまった…！
+魔獣に気を取られて…
+
+# voice 350171 "grimoire_ge_battle_0003"
+# alpha 5301811 0 0.5
+# move 5501711 3 0
+# face 5501711 "normal"
+# alpha 5501711 1 0.5
+# mask 5501711 off
+# textboxarrow 0 2
+@グリモワール
+ああ、もうっ
+油断しないって言ったばかりなのに…
+灼き尽くしなさい！
+
+;;//炎演出
+# se "SE_4820"
+# envbody 2000 7 0
+# effectstart 2000
+# fadein "white" 0.5
+# waitandnext 1
+
+# effectskip 2000
+# voice 310231 "ascalon_a_battle_0007"
+# alpha 5501711 0 0.5
+# move 5102311 3 0
+# face 5102311 "normal"
+# alpha 5102311 1 0.5
+# mask 5102311 off
+# textboxarrow 0 2
+@アスカロン
+くうっ…
+負けません！
+
+# voice 2025 "hercule_0003"
+# alpha 5102311 0 0.5
+# move 5202521 3 0
+# face 5202521 "angry"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# textboxarrow 0 2
+@エルキュール
+そうです！
+私達は、希望なんですからっ
+
+# face 5202521 "surprise"
+# textboxarrow 0 2
+@エルキュール
+こんな鎖に縛られたりは…
+きゃあああああっ？
+
+;;//エルキュールが落ちる
+# se "SE_5626"
+# textwindow "close"
+# alpha 5202521 0 0.5
+# waitandnext 0.5
+
+# voice 5027 "freischotz_0024"
+# move 5502721 3 0
+# face 5502721 "surprise"
+# alpha 5502721 1 0.5
+# mask 5502721 off
+# textboxarrow 0 2
+# textwindow "normal"
+@フライシュッツ
+エルキュールちゃん…！？
+
+# alpha 5502721 0 0.5
+# move 5103811 3 0
+# face 5103811 "sad"
+# alpha 5103811 1 0.5
+# mask 5103811 off
+# textboxarrow 0 2
+@アルマス
+この鎖…私達を地面の下に…
+
+;;//背景：黒
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# imagealpha 0 0 0
+# imagealpha 1 0 0
+# alpha 5103811 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 0
+# textwindow "normal"
+@全員
+きゃああああああああ…！

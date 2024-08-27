@@ -1,0 +1,405 @@
+;;-----------------------------------------
+;;SEA夏2_9_0
+;;-----------------------------------------
+# script "lisp"
+# background "SEAsummer_fes_night"
+# bgm "stop"
+;;-----------------------------------------
+;;浴衣カシウス
+# body 6303111
+# pos 6303111 5
+# scale 6303111 0.8 0
+# layer 6303111 4
+# alpha 6303111 0 0
+;;浴衣マクリル
+# body 6603821
+# pos 6603821 3
+# scale 6603821 0.8 0
+# layer 6603821 2
+# mask 6603821 off
+# alpha 6603821 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "SEA6603821"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：夏祭り会場（夜）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+;;花火が上がっている
+# se "SE_6211"
+# se "SE_0605"
+# waitandnext 1.8
+
+# fadein "white" 2
+# envbody 1001 3 0
+# effectpattern 1001 2 0
+# effectstart 1001
+# waitandnext 2
+
+# voice 660381 "maclir_ura_0015"
+# face 6603821 "sad"
+# alpha 6603821 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@マクリル
+うぅっ…
+何なの、この大きな音…！？
+怖いっ…
+
+# textboxarrow 0 2
+@マクリル
+やっと暗くなったと思ったのに、
+空が急に明るくなって…
+
+# textboxarrow 0 2
+@マクリル
+怖い…怖いよっ…！
+助けて…
+
+;;マクリルが走り去る
+# se "SE_5575"
+# move 6603821 4 0.5
+# alpha 6603821 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "sea_palmbeach_night"
+# effectskip 1001
+# sestop "SE_6211"
+# waitandnext 0.2
+
+# move 6603821 2 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 6603821 3 0.5
+# face 6603821 "happy"
+# alpha 6603821 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@マクリル
+ここなら、あまり大きな音は
+してこないかな…
+
+# textboxarrow 0 2
+@マクリル
+…………
+
+# face 6603821 "usual"
+# textboxarrow 0 2
+@マクリル
+…あの光はなんだろう？
+綺麗だけど、怖いよ
+
+# textboxarrow 0 2
+@マクリル
+「相棒」の気配も
+遠ざかったような気がする…
+
+# face 6303111 "normal"
+# alpha 6303111 1 0.3
+# textboxarrow 0 3
+@カシウス
+ここにいたの
+
+# voice 660381 "maclir_ura_0024"
+# move 6603821 2 0.2
+# face 6603821 "surprise"
+# textboxarrow 0 1
+@マクリル
+ひぃっ…！？
+
+# face 6603821 "usual"
+# move 6303111 4 0.5
+# textboxarrow 0 1
+@マクリル
+あ…あなたは、カシウス…
+
+# voice 660381 "maclir_ura_0002"
+# textboxarrow 0 1
+@マクリル
+カシウス、あの光は何…？
+何で大きな音がするの…？
+
+# bgmfile "bgm612" "BgmSecretlyEverAfter003" 0
+# voice 530311 "cassius_ca_0004"
+# textboxarrow 0 3
+@カシウス
+あれは闇夜に打ち上げられる
+大輪の花
+
+# textboxarrow 0 3
+@カシウス
+球状に花開く炎の煌めきよ
+
+# voice 660381 "maclir_ura_0015"
+# face 6603821 "sad"
+# textboxarrow 0 1
+@マクリル
+炎…
+こっちに降ってきたりしない？
+
+# textboxarrow 0 3
+@カシウス
+安心して
+遥か高く打ち上げられた炎は
+刹那の輝きとともに消えるの
+
+# textboxarrow 0 3
+@カシウス
+その煌めきは一瞬
+でも、心には永遠に
+留めることができる
+
+# face 6603821 "usual"
+# textboxarrow 0 1
+@マクリル
+あの光は、私には強すぎるよ…
+
+# voice 530311 "cassius_ca_0032"
+# face 6303111 "usual"
+# textboxarrow 0 3
+@カシウス
+そう…
+こちらに来て
+
+# voice 660381 "maclir_ura_0022"
+# face 6603821 "surprise"
+# textboxarrow 0 1
+@マクリル
+えっ…
+
+# voice 530311 "cassius_ca_0031"
+# textboxarrow 0 3
+@カシウス
+気に障ったならごめんなさい
+あなたを安心させたくて
+
+# face 6603821 "usual"
+# textboxarrow 0 1
+@マクリル
+…カシウスが言うなら
+
+;;二人揃って移動する
+# move 6303111 3 0.5
+# scale 6303111 0.7 0.5
+# alpha 6303111 0 0.5
+# waitandnext 0.3
+
+# move 6603821 3 0.5
+# scale 6603821 0.7 0.5
+# alpha 6603821 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# move 6303111 4 0
+# scale 6303111 0.8 0
+# face 6603821 "happy"
+# alpha 6303111 1 0
+# move 6603821 2 0
+# scale 6603821 0.8 0
+# face 6603821 "usual"
+# alpha 6603821 1 0
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@マクリル
+ここなら音もそんなにしない
+あの光も小さくなった
+
+# textboxarrow 0 1
+@マクリル
+私には、このくらいで丁度いい…
+
+# face 6303111 "normal"
+# textboxarrow 0 3
+@カシウス
+それなら、これをあげる
+
+# face 6603821 "surprise"
+# textboxarrow 0 1
+@マクリル
+このよじれた細い紐は何？
+
+# textboxarrow 0 3
+@カシウス
+見ていて
+先端に火を点けると…
+
+;;線香花火が光る
+# se "SE_0978"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# envbody 1002 8 0
+# effectstart 1002
+# textboxarrow 0 0
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 6603821 "happy"
+# textboxarrow 0 1
+@マクリル
+先端が小さく光って弾けだした…
+
+# textboxarrow 0 3
+@カシウス
+どう？
+これは、怖い？
+
+# textboxarrow 0 1
+@マクリル
+ううん
+何だか優しい光…
+ホッとする
+
+# voice 530311 "cassius_ca_0004"
+# textboxarrow 0 3
+@カシウス
+良かった…
+あなたの花火にも火を点けるね
+
+# voice 660381 "maclir_ura_0003"
+# face 6603821 "normal"
+# textboxarrow 0 1
+@マクリル
+うん
+わぁっ
+
+;;マクリルの線香花火が光る
+# se "SE_6125"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+;;マクリルシナリオカット表示
+#setnextbgmblock 1
+# fadein "white" 1
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# frameout 0 0
+# alpha 6303111 0 0
+# alpha 6603821 0 0
+# textwindow "close"
+# waitandnext 2
+
+# textwindow "nomal"
+# textboxarrow 0 0
+@マクリル
+大きな音もしない
+この光は心地よい
+
+# voice 660381 "maclir_ura_0030"
+# textboxarrow 0 0
+@マクリル
+カシウス、ありがとう
+
+# serif 1
+@カシウス
+いいの
+相棒は見つからなかった？
+
+# se "SE_6125_volumedown"
+# voice 660381 "maclir_ura_0003"
+# serif 0
+# textboxarrow 0 0
+@マクリル
+うん…
+近くにいるような気がしたのになぁ
+
+# alpha 6303111 1 0
+# alpha 6603821 1 0
+# textboxarrow 0 0
+@マクリル
+このまま会えないのかなぁ…
+
+;;シナリオカット削除
+# imagealpha 1 0 1
+# framein 0 1
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# se "SE_6125_stop"
+# face 6603821 "surprise"
+# face 6303111 "usual"
+# textboxarrow 0 1
+@マクリル
+…あっ
+光の玉が、落ちちゃった
+
+# face 6603821 "usual"
+# textboxarrow 0 1
+@マクリル
+小さくて脆くて儚い…
+私みたい…
+
+# face 6303111 "normal"
+# textboxarrow 0 3
+@カシウス
+大丈夫
+万物は移ろい、近づいては離れて
+離れては近づくの
+
+# textboxarrow 0 3
+@カシウス
+そうして旅路の果て
+出会うときが訪れるわ
+
+# textboxarrow 0 1
+@マクリル
+こんな小さな光でも…
+ちゃんと届くのかな？
+
+# textboxarrow 0 3
+@カシウス
+届くわ
+あなたと私が出会ったように
+
+# textboxarrow 0 3
+@カシウス
+小さく儚い光でも
+それを求めている存在が必ずいる
+
+# face 6603821 "happy"
+# textboxarrow 0 1
+@マクリル
+そうだよね…
+たくさんの人達の中でも、いつか
+
+# textboxarrow 0 1
+@マクリル
+私に気づいてくれる「相棒」と
+巡り会えるよね
+
+# textboxarrow 0 1
+@マクリル
+早く会いたいなぁ
+
+# fadeout "black" 1
+# waitandnext 1

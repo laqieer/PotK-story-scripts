@@ -1,0 +1,768 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;２章３話　「エデンクライシス―覚醒―」
+;;第6話　タイトル：もう一度出会うために
+;;6_8_3
+;;スクリプト最後の背景：ユグドラシル
+;;-----------------------------------------
+# script "lisp"
+# background "underwild"
+# bgmfile "bgm214" "BgmAncientKillers001" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 3
+# alpha 196 0 0
+# mask 196 off
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 2
+# alpha 5101431 0 0
+# mask 5101431 off
+;;エルキュール
+# body 202511
+# pos 202511 3
+# scale 202511 0.8 0
+# layer 202511 2
+# alpha 202511 0 0
+# mask 202511 off
+;;グラーシーザ
+# body 302611
+# pos 302611 3
+# scale 302611 0.8 0
+# layer 302611 2
+# alpha 302611 0 0
+# mask 302611 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;ハリー
+# body 208
+# pos 208 3
+# scale 208 0.8 0
+# layer 208 2
+# alpha 208 0 0
+# mask 208 off
+;;ダーインスレイヴ
+# body 102811
+# pos 102811 3
+# scale 102811 0.8 0
+# layer 102811 2
+# alpha 102811 0 0
+# mask 102811 off
+;;レーヴァテイン・擬彩
+# body 198
+# pos 198 3
+# scale 198 0.8 0
+# layer 198 2
+# alpha 198 0 0
+# mask 198 off
+;;グングニル
+# body 300831
+# pos 300831 3
+# scale 300831 0.8 0
+# layer 300831 2
+# alpha 300831 0 0
+# mask 300831 off
+;;ヴォータン
+# body 301711
+# pos 301711 3
+# scale 301711 0.8 0
+# layer 301711 2
+# alpha 301711 0 0
+# mask 301711 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+# move 302611 2 0
+# face 302611 "normal"
+# alpha 302611 1 0
+# mask 302611 on
+# move 300831 4 0
+# face 300831 "angry"
+# alpha 300831 1 0
+# mask 300831 on
+# textflame 1 1
+# textboxarrow 0 3
+# voice 3008 "gunguniru_unit_0009"
+@グングニル
+神の一撃、受けてみよ！
+
+# se "SE_4200"
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@グラーシーザ
+せいぎのなのもとに！
+
+# se "SE_4200"
+# waitandnext 0.5
+
+;;//グングニルとグラーシーザがレーヴァテインを攻める
+# textwindow "close"
+# alpha 302611 0 0.5
+# alpha 300831 0 0.5
+# move 198 3 0
+# alpha 198 1 0.5
+# mask 198 off
+# waitandnext 0.6
+
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 510023 "revatein_iz_0037"
+@レーヴァテイン
+くぅっ…
+ほんと、めんどくさい…
+
+# se "SE_5206"
+# alpha 198 0 0.5
+# move 202511 2 0
+# face 202511 "angry"
+# alpha 202511 1 0.5
+# mask 202511 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+@エルキュール
+戦いを終わらせます！
+
+# textboxarrow 0 3
+@アルマス
+倒れなさい！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+;;//エルキュールとアルマスがティルフィングを攻撃する
+# face 202511 "normal"
+# textboxarrow 0 1
+# voice 2025 "hercule_0004"
+@エルキュール
+今日の私はとても調子が良いですよ！
+これこそ希望のなせる業ですねっ
+
+# alpha 202511 0 0.5
+# alpha 196 0 0.5
+# move 5101431 3 0
+# face 5101431 "sad"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+# voice 510143 "tyrufing_iz_0018"
+@ティルフィング
+ああ…ユグドラシルが…
+アルマス…アナタのバイブスは
+もっと早く排除すべきでした…
+
+;;//ティルフィングが下がって画面から一度消える
+# se "SE_9021"
+# textwindow "close"
+# alpha 5101431 0 0.5
+# waitandnext 0.6
+
+;;//画面スライドしてティルフィングを映す
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# move 5101431 3 0
+# face 5101431 "normal"
+# alpha 5101431 1 0
+# mask 5101431 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# se "SE_11632"
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+純潔なる花よ
+暗き世界に、調和の彩りを
+
+# alpha 5101431 0 0.5
+# move 103611 3 0
+# face 103611 "angry"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# voice 1036 "ragnarok_0022"
+@ラグナロク
+あの力っ…！
+いけない！
+強大な一撃が来るわっ
+
+# textwindow "close"
+# alpha 103611 0 0.5
+# move 5101431 2 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# waitandnext 0.8
+
+# se "SE_9021"
+# move 301711 4 0
+# face 301711 "angry"
+# alpha 301711 1 0
+# mask 301711 on
+# rightin 301711 0.3
+# waitandnext 0.3
+
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 3017 "wotan_0007"
+@ヴォータン
+そのような傲慢、私が許すとでも
+思ったのか？
+
+;;//ヴォータンが飛び込んできてティルフィングを刺す
+# se "SE_4200"
+# waitandnext 0.5
+
+# se "SE_4815"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 5101431 "surprise"
+# textboxarrow 0 1
+# voice 510143 "tyrufing_iz_0022"
+@ティルフィング
+あっ…？
+
+;;//画面スライド
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 5101431 0 0
+# alpha 301711 0 0
+# move 102811 3 0
+# face 102811 "happy"
+# alpha 102811 1 0
+# mask 102811 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ダーインスレイヴ
+ヴォータンの攻撃が入った！
+ハリー、今だ！
+
+# alpha 102811 0 0.5
+# move 208 3 0
+# alpha 208 1 0.5
+# mask 208 off
+# face 208 "angry"
+# textboxarrow 0 2
+# voice 9938 "harry_0031"
+@ハリー
+今度は…絶対に足を止めないっ
+
+;;//ハリーが駆け出す
+# se "SE_5575"
+# textwindow "close"
+# leftout 208 0.5
+# waitandnext 0.5
+
+;;//画面スライド
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 208 0 0
+# move 300831 2 0
+# face 300831 "angry"
+# alpha 300831 1 0
+# mask 300831 on
+# move 198 4 0
+# alpha 198 1 0
+# mask 198 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;//グングニルとレーヴァテインが切り結んでいる
+# bgmfile "bgm411" "BgmIntegralNoahBattle001" 0
+# se "SE_9017"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# textwindow "normal"
+@レーヴァテイン
+ティル…！？
+…言ったよね
+家族に手を出したら…
+
+# textboxarrow 0 3
+@レーヴァテイン
+楽には死なせないって
+
+# face 300831 "surprise"
+# textboxarrow 0 1
+# voice 3008 "gunguniru_0022"
+@グングニル
+んっ…！？
+
+;;//レーヴァテインがグングニルを突き飛ばす
+# se "SE_8023"
+# textwindow "close"
+# waitandnext 0.2
+
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 1
+
+;;//グングニル、一旦、画面外に
+# se "SE_9021"
+# leftout 300831 0.5
+# waitandnext 0.5
+
+# alpha 300831 0 0
+# alpha 198 0 0.5
+# move 301711 3 0
+# face 301711 "worry"
+# alpha 301711 1 0.5
+# mask 301711 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 3017 "wotan_0022"
+@ヴォータン
+ぬっ？
+
+# se "SE_11633"
+# alpha 301711 0 0.5
+# move 198 3 0
+# alpha 198 1 0.5
+# mask 198 off
+# textboxarrow 0 2
+# voice 510023 "revatein_iz_0029"
+@レーヴァテイン
+はああああーーーっ！
+
+# alpha 198 0 0.5
+# move 300831 3 0
+# face 300831 "angry"
+# alpha 300831 1 0.5
+# mask 300831 off
+# textboxarrow 0 2
+# voice 3008 "gunguniru_0009"
+@グングニル
+何だ、この力はっ？
+まさか…まだ秘めた力を――
+
+# alpha 300831 0 0.5
+# move 198 3 0
+# alpha 198 1 0.5
+# mask 198 off
+# textboxarrow 0 2
+@レーヴァテイン
+うっとうしい
+
+;;//レーヴァテインがヴォータンとグングニルを斬る
+# se "SE_10588"
+# textwindow "close"
+# alpha 198 0 0.5
+# move 301711 2 0
+# alpha 301711 1 0.5
+# mask 301711 on
+# move 300831 4 0
+# face 300831 "angry"
+# alpha 300831 1 0.5
+# mask 300831 on
+# waitandnext 0.8
+
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 3008 "gunguniru_0038"
+@グングニル
+くぅぅっ…！
+
+# face 301711 "cry"
+# textboxarrow 0 1
+# voice 3017 "wotan_0038"
+@ヴォータン
+なんということだ…
+
+;;//レーヴァテインがハリーに迫る
+# textwindow "close"
+# alpha 301711 0 0.5
+# alpha 300831 0 0.5
+# waitandnext 0.5
+
+# se "SE_9092"
+# move 198 3 0
+# alpha 198 1 0
+# mask 198 off
+# rightin 198 0.3
+# waitandnext 0.3
+
+# textboxarrow 0 2
+# textwindow "normal"
+@レーヴァテイン
+その子も、容赦しない…
+
+# alpha 198 0 0.5
+# move 208 3 0
+# alpha 208 1 0.5
+# mask 208 off
+# textboxarrow 0 2
+@ハリー
+僕は…止まらないよ！
+
+# alpha 208 0 0.5
+# move 102811 3 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 off
+# textboxarrow 0 2
+@ダーインスレイヴ
+それで良い！
+ハリーには指一本触れさせぬっ
+
+# textwindow "close"
+# alpha 102811 0 0.5
+# waitandnext 0.5
+
+;;//ダーインスレイヴが立ちふさがる
+# move 102811 2 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 on
+# waitandnext 0.5
+
+# se "SE_9021"
+# move 198 4 0
+# alpha 198 1 0
+# mask 198 on
+# rightin 198 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 510023 "revatein_iz_0019"
+@レーヴァテイン
+邪魔だから…どいて
+
+;;//二人が切り結ぶ
+# se "SE_9017"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;//画面スライド
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 102811 0 0
+# alpha 198 0 0
+# move 5101431 2 0
+# face 5101431 "normal"
+# alpha 5101431 1 0
+# mask 5101431 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0
+# mask 196 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+ラグナロク、走って！
+
+# textboxarrow 0 1
+@ティルフィング
+純潔なる彩りよ…
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0043"
+@アルマス
+やああああああ！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+;;//アルマスとティルフィングが切り結ぶ
+# se "SE_5773"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;//ラグナロクが二人の脇を抜けて走る
+# textwindow "close"
+# alpha 5101431 0 0.5
+# alpha 196 0 0.5
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 off
+# waitandnext 0.8
+
+# se "SE_5575"
+# rightout 103611 0.5
+# waitandnext 1
+
+# alpha 103611 0 0
+# waitandnext 0.2
+
+# move 103611 3 0
+# face 103611 "angry"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+ユグドラシルを…奪還する！
+
+;;//画面スライド
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 103611 0 0
+# move 208 3 0
+# alpha 208 1 0
+# mask 208 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ハリー
+あと一歩で届く！
+
+;;//ハリーがユグドラシルの幹に手を伸ばす
+;;
+;;//斬撃音
+;;//血しぶき演出
+# se "SE_4830"
+# shake 0 0.5
+# fadein "red" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# voice 9938 "harry_0040"
+@ハリー
+あああああああああっ…！？
+
+;;//ハリーが倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 208 0 0.5
+# waitandnext 0.5
+
+# move 103611 3 0
+# face 103611 "surprise"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 1036 "ragnarok_0023"
+@ラグナロク
+そんなっ…！
+ハリーが片足を斬られた…
+
+# alpha 103611 0 0.5
+# move 198 3 0
+# alpha 198 1 0.5
+# mask 198 off
+# textboxarrow 0 2
+@レーヴァテイン
+ティルフィングの守ってるものに
+触れないで…！
+
+# alpha 198 0 0.5
+# move 103611 3 0
+# face 103611 "surprise"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# voice 1036 "ragnarok_0037"
+@ラグナロク
+レーヴァテイン、いつの間に…！？
+ダーインスレイヴですら、
+彼女を足止めできなかったの…
+
+;;//レーヴァテインがハリーに近づいていく
+# textwindow "close"
+# alpha 103611 0 0.5
+# move 208 2 0
+# alpha 208 1 0.5
+# mask 208 on
+# waitandnext 0.5
+
+# se "SE_0719"
+# move 198 4 0
+# alpha 198 1 0
+# mask 198 on
+# rightin 198 1.2
+# waitandnext 2
+
+# alpha 208 0 0.5
+# alpha 198 0 0.5
+# move 102811 3 0
+# face 102811 "surprise"
+# alpha 102811 1 0.5
+# mask 102811 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ダーインスレイヴ
+ハリー…！
+
+# alpha 102811 0 0.5
+# move 208 2 0
+# alpha 208 1 0.5
+# mask 208 on
+# textboxarrow 0 1
+# move 198 4 0
+# alpha 198 1 0.5
+# mask 198 on
+# voice 9938 "harry_0016"
+@ハリー
+平気だよ、ダーイン…
+絶対に…止まらないって決めたんだ！
+わあああああああああっ！！
+
+;;//ハリーが立ち上がってレーヴァテインの脇を抜ける
+;;//ハリーがユグドラシルに抱きつく
+# se "SE_5255"
+# textwindow "close"
+# leftout 208 0.5
+# waitandnext 0.5
+
+# alpha 208 0 0
+# textboxarrow 0 3
+# textwindow "nomal"
+@レーヴァテイン
+チッ…！
+
+# alpha 198 0 0.5
+# move 103611 3 0
+# face 103611 "surprise"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+ハリーが、ユグドラシルに触れた！
+これで…何が起きるのっ…？
+
+# alpha 103611 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+ラグナロク！
+後ろっ
+
+;;//ティルフィングがラグナロクに迫る
+# alpha 196 0 0.5
+# textwindow "close"
+# move 103611 4 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# waitandnext 0.6
+
+# se "SE_9469"
+# move 5101431 2 0
+# face 5101431 "normal"
+# alpha 5101431 1 0
+# mask 5101431 on
+# leftin 5101431 0.5
+# waitandnext 0.5
+
+# face 103611 "angry"
+# textboxarrow 0 3
+# textwindow "normal"
+@ラグナロク
+しまった…！
+
+# face 5101431 "angry"
+# textboxarrow 0 1
+# voice 510143 "tyrufing_iz_0011"
+@ティルフィング
+それ以上は、いけません！
+
+;;//斬撃
+;;//血しぶき演出
+# se "SE_5743"
+# shake 0 0.5
+# fadein "red" 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0
+# mask 196 on
+# waitandnext 0.5
+
+;;//アルマスがラグナロクを庇う
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0054"
+@アルマス
+がはぁっ…
+
+# se "SE_3001"
+# alpha 196 0 0.5
+# waitandnext 0.5
+
+# face 103611 "surprise"
+# textboxarrow 0 3
+@ラグナロク
+アルマス…！
+
+# face 5101431 "normal"
+# textboxarrow 0 1
+@ティルフィング
+今度こそ散らせます
+純潔なる彩りよ――
+
+;;//画面灰色に
+# bgm "stop"
+# se "SE_11462"
+# subfillrect 0 "black" 0.5 0 0.4
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# voice 1036 "ragnarok_0022"
+@ラグナロク
+えっ…？

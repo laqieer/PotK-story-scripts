@@ -1,0 +1,418 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー13章
+;;第4話　タイトル：響き渡る音色
+;;4_1
+;;スクリプト最後の背景：地底
+;;-----------------------------------------
+# script "lisp"
+# background "underground_world_1"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス（ジョブチェンジ後）
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# layer 172 2
+# alpha 172 0 0
+# mask 172 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 2
+# alpha 139 0 0
+# mask 139 off
+;;モラルタ
+# body 3104011
+# pos 3104011 3
+# scale 3104011 0.8 0
+# layer 3104011 2
+# alpha 3104011 0 0
+# mask 3104011 off
+;;ベガルタ
+# body 3104111
+# pos 3104111 3
+# scale 3104111 0.8 0
+# layer 3104111 2
+# alpha 3104111 0 0
+# mask 3104111 off
+;;ガンバンテイン
+# body 3600211
+# pos 3600211 3
+# scale 3600211 0.8 0
+# layer 3600211 2
+# alpha 3600211 0 0
+# mask 3600211 off
+;;マサムネ
+# body 3100111
+# pos 3100111 3
+# scale 3100111 0.8 0
+# layer 3100111 2
+# alpha 3100111 0 0
+# mask 3100111 off
+;;与一
+# body 3400511
+# pos 3400511 3
+# scale 3400511 0.8 0
+# layer 3400511 2
+# alpha 3400511 0 0
+# mask 3400511 off
+;;-----------------------------------------
+;;//背景：地底
+# move 172 2 0
+# face 172 "normal"
+# alpha 172 1 0
+# mask 172 on
+# move 139 4 0
+# face 139 "normal"
+# alpha 139 1 0
+# mask 139 on
+# textboxarrow 0 3
+@ティターニア
+マサムネの機転で、
+何とか切り抜けられましたね
+
+# voice 1038 "almace_0003"
+# textboxarrow 0 1
+@アルマス
+それにしても、よくイシューリエルの
+隙を突くことができたわね
+どうやったの？
+
+# voice 310011 "masamune_ge_0028"
+# alpha 139 0 0.5
+# move 3100111 4 0
+# face 3100111 "normal"
+# alpha 3100111 1 0.5
+# mask 3100111 on
+# textboxarrow 0 3
+@マサムネ
+うむ…
+あの者の噂はトレイセーマにまで
+届いておったのだ
+
+# face 3100111 "angry"
+# textboxarrow 0 3
+@マサムネ
+曰く、「主人殺しのイシューリエル」
+
+# textboxarrow 0 1
+@アルマス
+主人殺しって…穏やかじゃないわね
+
+# voice 360021 "ganbantein_a_0026"
+# alpha 172 0 0.5
+# alpha 3100111 0 0.5
+# move 3600211 3 0
+# face 3600211 "sad"
+# alpha 3600211 1 0.5
+# mask 3600211 off
+# textboxarrow 0 2
+@ガンバンテイン
+あー…イシューリエルって
+猜疑心強くなってるんだよねー
+そー・はーど
+
+# textboxarrow 0 2
+@ガンバンテイン
+自分の主人に清廉潔白さを求めて、
+ちょっとでも嘘吐いたりすると
+すごく怒るんだー
+
+# voice 360021 "ganbantein_a_0009"
+# face 3600211 "angry"
+# textboxarrow 0 2
+@ガンバンテイン
+で、襲い掛かって殺しちゃう
+だから、フェイルノートのところに
+来るまで…
+
+# textboxarrow 0 2
+@ガンバンテイン
+何度も主人を変えてるんだよー
+あんびりぃばぼー
+
+# alpha 3600211 0 0.5
+# move 172 2 0
+# face 172 "normal"
+# alpha 172 1 0.5
+# mask 172 on
+# move 3100111 4 0
+# face 3100111 "normal"
+# alpha 3100111 1 0.5
+# mask 3100111 on
+# textboxarrow 0 3
+@マサムネ
+その噂を知っておったから、
+あの者の猜疑心を煽ってみたのだ
+
+# textboxarrow 0 3
+@マサムネ
+上手くいってくれて助かった…
+しかし、二度は通じぬだろう
+
+# textboxarrow 0 1
+@アルマス
+エクスカリバーって斬ル姫も
+言動は変だったけど、
+かなり強かったわ
+
+# textboxarrow 0 1
+@アルマス
+また戦うことになる前に、
+ビフレストに着いて――
+
+# voice 9967 "titania_0064"
+# alpha 172 0 0.5
+# alpha 3100111 0 0.5
+# move 139 3 0
+# face 139 "surprise"
+# alpha 139 1 0.5
+# mask 139 off
+# textboxarrow 0 2
+@ティターニア
+アルマス、危ない！
+
+;;//矢が飛んでくる
+;;//アルマスに当たる前にティターニアが割り込む
+# textwindow "close"
+# alpha 139 0 0.5
+# waitandnext 0.5
+
+# se "SE_0623"
+# effectbody 1000 31 0 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# move 172 2 0
+# face 172 "normal"
+# alpha 172 1 0.5
+# mask 172 on
+# waitandnext 0.5
+
+# move 139 3 0
+# face 139 "worry"
+# alpha 139 1 0
+# mask 139 on
+# rightin 139 0.5
+# waitandnext 0.5
+
+# se "SE_4817"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 9967 "titania_0054"
+# face 139 "surprise"
+# textboxarrow 0 2
+# textwindow "normal"
+@ティターニア
+キャアアアア…！
+
+# move 139 4 0.5
+# face 172 "angry"
+# textboxarrow 0 1
+@アルマス
+ティニ！？
+大丈夫っ…？
+
+# face 139 "worry"
+# textboxarrow 0 3
+@ティターニア
+平気です…
+それより、気をつけて…
+
+# voice 310011 "masamune_ge_0022"
+# alpha 172 0 0.5
+# alpha 139 0 0.5
+# move 3100111 3 0
+# face 3100111 "angry"
+# alpha 3100111 1 0.5
+# mask 3100111 off
+# textboxarrow 0 2
+@マサムネ
+バカなっ…？
+どこから矢を射てきたのだ
+
+# voice 1040 "morallta_0028"
+# alpha 3100111 0 0.5
+# move 3104111 2 0
+# face 3104111 "normal"
+# alpha 3104111 1 0.5
+# mask 3104111 on
+# move 3104011 4 0
+# face 3104011 "sad"
+# alpha 3104011 1 0.5
+# mask 3104011 on
+# textboxarrow 0 3
+@モラルタ
+この辺りに隠れられるところなんて
+ないと思うけど…
+
+# face 3104111 "surprise"
+# textboxarrow 0 1
+@ベガルタ
+…ねえ、モラ
+あっちの岩場に誰か――
+
+;;//矢が飛んできてモラルタを射る
+# textwindow "close"
+# alpha 3104111 0 0.5
+# alpha 3104011 0 0.5
+# waitandnext 0.5
+
+# se "SE_0623"
+# effectbody 2000 31 0 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+# move 3104111 2 0
+# face 3104111 "surprise"
+# alpha 3104111 1 0.5
+# mask 3104111 on
+# move 3104011 4 0
+# face 3104011 "angry"
+# alpha 3104011 1 0.5
+# mask 3104011 on
+# waitandnext 0.5
+
+# se "SE_4817"
+# shake 0 0.5
+# fadein "white" 0.5
+# voice 1040 "morallta_battle_0005"
+# textboxarrow 0 3
+# textwindow "normal"
+@モラルタ
+うぐっ…
+
+# textwindow "close"
+# se "SE_3001"
+# alpha 3104011 0 0.5
+# waitandnext 0.5
+
+# voice 1041 "beagallta_0025"
+# face 3104111 "usual"
+# textboxarrow 0 1
+# textwindow "normal"
+@ベガルタ
+イヤアアア…！？
+モラ！
+モラぁっ…！
+
+# voice 1038 "almace_0001"
+# alpha 3104111 0 0.5
+# move 172 3 0
+# face 172 "angry"
+# alpha 172 1 0.5
+# mask 172 off
+# textboxarrow 0 2
+@アルマス
+マスター、早く隠れて！
+…って、隠れられる場所が
+どこにもないじゃない！
+
+# alpha 172 0 0.5
+# move 3100111 3 0
+# face 3100111 "angry"
+# alpha 3100111 1 0.5
+# mask 3100111 off
+# textboxarrow 0 2
+@マサムネ
+走れ！
+あの岩陰まで入れば――
+
+;;//矢がマサムネに刺さる
+# se "SE_0623"
+# sedelay "SE_4817" 0.7
+# waitandnext 0.7
+
+# voice 310011 "masamune_ge_0037"
+# shake 0 0.5
+# fadein "white" 0.5
+# textboxarrow 0 2
+@マサムネ
+ぬうっ…？
+足を…的確にっ…
+
+# voice 360021 "ganbantein_a_0023"
+# alpha 3100111 0 0.5
+# move 3600211 3 0
+# face 3600211 "surprise"
+# alpha 3600211 1 0.5
+# mask 3600211 off
+# textboxarrow 0 2
+@ガンバンテイン
+あんな離れたところから…
+精霊達もあそこまでは
+飛ばしてないよー…
+
+;;//矢が飛んでくる
+# textwindow "close"
+# alpha 3600211 0 0.5
+# waitandnext 0.5
+
+# se "SE_0623"
+# effectbody 3000 31 0 0 0
+# effectstart 3000
+# waitandnext 0.5
+
+# voice 1038 "almace_battle_0005"
+# move 172 3 0
+# face 172 "angry"
+# alpha 172 1 0.5
+# mask 172 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+くっ…
+ティニ、しっかりして！
+早く手当てしないとっ…
+
+# face 172 "sad"
+# textboxarrow 0 2
+@アルマス
+どうしようっ…
+どうしたらっ…
+
+# alpha 172 0 0.5
+# move 3104111 3 0
+# face 3104111 "usual"
+# alpha 3104111 1 0.5
+# mask 3104111 off
+# textboxarrow 0 2
+@ベガルタ
+モラ！モラ！
+どうしよう…どうしようっ…
+
+# alpha 3104111 0 0.5
+# move 3100111 3 0
+# face 3100111 "angry"
+# alpha 3100111 1 0.5
+# mask 3100111 off
+# textboxarrow 0 2
+@マサムネ
+ぬぅぅっ…
+この程度で拙者を止めることなど――
+
+;;//矢がマサムネに刺さる
+# se "SE_0623"
+# sedelay "SE_4817" 0.7
+# waitandnext 0.7
+
+# voice 310011 "masamune_ge_battle_0008"
+# shake 0 0.5
+# fadein "white" 0.5
+# textboxarrow 0 2
+@マサムネ
+ぐぁぁぁぁっ…！
+また足に…この手練れぶり…
+もしやっ？
+
+;;//与一が画面端に現れる
+# textwindow "close"
+# alpha 3100111 0 0.5
+# move 3400511 4 0
+# face 3400511 "usual"
+# alpha 3400511 1 0.5
+# mask 3400511 on
+# waitandnext 2

@@ -1,0 +1,161 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー11章
+;;第3話　タイトル：錯綜
+;;3-5-3
+;;スクリプト最後の背景：深奥
+;;-----------------------------------------
+# script "lisp"
+# background "profound"
+# bgmfile "bgm320" "BgmLostRagnarokBattle006" 0
+;;-----------------------------------------
+;;アルマス（ジョブチェンジ後）
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# layer 172 2
+# alpha 172 0 0
+# mask 172 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 2
+# alpha 139 0 0
+# mask 139 off
+;;アフロディーテ
+# body 3401311
+# pos 3401311 3
+# scale 3401311 0.8 0
+# layer 3401311 2
+# alpha 3401311 0 0
+# mask 3401311 off
+;;ケイオスリオン兵
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# layer 3820001 2
+# alpha 3820001 0 0
+# mask 3820001 off
+;;-----------------------------------------
+# move 172 2 0
+# face 172 "angry"
+# alpha 172 1 0
+# mask 172 on
+# move 3820001 4 0
+# alpha 3820001 1 0
+# mask 3820001 on
+# se "SE_4000"
+# voice 1038 "almace_battle_0002"
+# textboxarrow 0 1
+# textwindow "normal"
+@アルマス
+せいっ！
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 3000 1 200 0 0
+# effectstart 3000
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@ケイオスリオン兵
+ぐはぁっ…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 3820001 0 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+# textwindow "normal"
+@アルマス
+ここに「神」がいるのね！
+レーヴァテインは…
+
+# move 139 4 0
+# face 139 "surprise"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 3
+@ティターニア
+あちらでパラシュと戦っています
+
+# face 172 "normal"
+# textboxarrow 0 1
+@アルマス
+だったら加勢に…
+あ、でも…
+
+# voice 1038 "almace_0001"
+# textboxarrow 0 1
+@アルマス
+「神」のところに
+乗り込むのもアリかも
+マスター、どう思うっ？
+
+;;//選択肢
+;;Ａ「神」のところに行こう
+;;Ｂ今がチャンスだ！
+;;Ｃレーヴァテインなら大丈夫だろう
+# select "「神」のところに行こう" "select_label_01" "今がチャンスだ！" "select_label_01" "レーヴァテインなら大丈夫だろう" "select_label_01"
+「神」のところに
+乗り込むのもアリかも
+マスター、どう思うっ？
+
+;;ＡＢＣ共通
+# label "select_label_01"
+# face 172 "angry"
+# textboxarrow 0 1
+@アルマス
+それじゃ、このまま突っ込むわよ！
+ティニも良い？
+
+# voice 9967 "titania_0004"
+# face 139 "normal"
+# textboxarrow 0 3
+@ティターニア
+マスターが賛成するのなら
+構いませんよっ
+
+# textboxarrow 0 1
+@アルマス
+何かモヤッとする答えね…
+まあ、いいわ！
+フェイルノート、待ってなさいよ！
+
+;;//矢が飛んでくる
+# textwindow "close"
+# alpha 172 0 0.5
+# alpha 139 0 0.5
+# waitandnext 0.5
+
+# se "SE_4301"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 4000 31 0 0 0
+# effectstart 4000
+# waitandnext 0.5
+
+# voice 1038 "almace_battle_0006"
+# move 172 3 0
+# face 172 "angry"
+# alpha 172 1 0.5
+# mask 172 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+危ない！
+…さすがに護衛がパラシュ一人って
+わけないか
+
+# voice 340131 "aphrodite_a_0005"
+# alpha 172 0 0.5
+# move 3401311 3 0
+# face 3401311 "normal"
+# alpha 3401311 1 0.5
+# mask 3401311 off
+# textboxarrow 0 2
+@アフロディーテ
+その真っ直ぐな瞳、美しいですわ
+是非、私の矢で射抜かせて下さいな

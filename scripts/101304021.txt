@@ -1,0 +1,381 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー13章
+;;第4話　タイトル：響き渡る音色
+;;4_2_1
+;;スクリプト最後の背景：地底
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス（ジョブチェンジ後）
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# layer 172 2
+# alpha 172 0 0
+# mask 172 off
+;;ベガルタ
+# body 3104111
+# pos 3104111 3
+# scale 3104111 0.8 0
+# layer 3104111 2
+# alpha 3104111 0 0
+# mask 3104111 off
+;;カシウス
+# body 3303111
+# pos 3303111 3
+# scale 3303111 0.8 0
+# layer 3303111 2
+# alpha 3303111 0 0
+# mask 3303111 off
+;;ガンバンテイン
+# body 3600211
+# pos 3600211 3
+# scale 3600211 0.8 0
+# layer 3600211 2
+# alpha 3600211 0 0
+# mask 3600211 off
+;;マサムネ
+# body 3100111
+# pos 3100111 3
+# scale 3100111 0.8 0
+# layer 3100111 2
+# alpha 3100111 0 0
+# mask 3100111 off
+;;与一
+# body 3400511
+# pos 3400511 3
+# scale 3400511 0.8 0
+# layer 3400511 2
+# alpha 3400511 0 0
+# mask 3400511 off
+;;カドケウス
+# body 3600411
+# pos 3600411 3
+# scale 3600411 0.8 0
+# layer 3600411 2
+# alpha 3600411 0 0
+# mask 3600411 off
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;//背景：地底
+;;//回想シーン
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "underground_world_1"
+# move 3600411 2 0
+# face 3600411 "normal"
+# alpha 3600411 1 0
+# mask 3600411 on
+# move 3400511 4 0
+# face 3400511 "usual"
+# alpha 3400511 1 0
+# mask 3400511 on
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# voice 360041 "kadokeusu_ge_0004"
+# textflame 1 1
+# textboxarrow 0 1
+# textwindow "normal"
+@カドケウス
+私が情報を集めて、あんたに送るから
+それを活かして確実に作戦を
+遂行するんだよっ
+
+# face 3600411 "angry"
+# textboxarrow 0 1
+@カドケウス
+カシウス様のご期待を裏切ったら
+許さないからね！
+
+# voice 340051 "yoichi_ge_0003"
+# textboxarrow 0 3
+@与一
+はい
+必ずご期待に応えてみせますっ
+
+# voice 3031 "cassius_ge_0004"
+# alpha 3600411 0 0.5
+# move 3303111 2 0
+# face 3303111 "normal"
+# alpha 3303111 1 0.5
+# mask 3303111 on
+# textboxarrow 0 1
+@カシウス
+与一…他者からの信頼以上に自分への
+信頼こそが、あなた自身を支える
+軸となるわ
+
+# textboxarrow 0 3
+@与一
+…与一は、自分のことなど
+どうでもいいんです
+必ずカシウス様のお役に立ちます
+
+;;//回想終了
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# alpha 3303111 0 0.5
+# alpha 3400511 0 0.5
+# move 3400511 3 0
+# face 3400511 "usual"
+# alpha 3400511 1 0.5
+# mask 3400511 off
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@与一
+そうです…
+どんな困難な任務でも、与一は
+成し遂げなくてはなりません
+
+# face 3400511 "sad"
+# textboxarrow 0 2
+@与一
+そうしないと…与一は誰からも
+信頼してもらえません…
+こんな与一なんて、誰もっ…
+
+# face 3400511 "usual"
+# textboxarrow 0 2
+@与一
+だから、やります
+どれだけ卑怯と罵られようと…
+どれだけ汚いと蔑まれようと…
+
+# textboxarrow 0 2
+@与一
+識別系統Ａ・○三
+与一・獣刻・グライアイ
+託された信頼に、応えてみせます！
+
+;;//与一が弓矢を放つ
+# se "SE_4300"
+# sedelay "SE_4301" 0.7
+# textwindow "close"
+# alpha 3400511 0 0.5
+# waitandnext 0.7
+
+# effectbody 1000 31 0 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+;;与一（独白）
+# move 3400511 3 0
+# face 3400511 "usual"
+# textboxarrow 0 0
+# textwindow "moya"
+# alpha 3400511 1 0.5
+# mask 3400511 off
+@与一
+まず、ガンバンテインの索敵範囲外
+から妖精ティターニアを射ます
+ただし、狙うのはアルマス
+
+;;与一（独白）
+# textboxarrow 0 0
+@与一
+妖精の予知能力で攻撃を予見した
+ティターニアがアルマスを庇って
+怪我を負うはずですっ
+
+;;//与一が矢を放つ
+# textwindow "close"
+# alpha 3400511 0 0.5
+# waitandnext 0.5
+
+# se "SE_4301"
+# effectbody 2000 31 0 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+;;与一（独白）
+# move 3400511 3 0
+# face 3400511 "usual"
+# textboxarrow 0 0
+# textwindow "moya"
+# alpha 3400511 1 0.5
+# mask 3400511 off
+@与一
+次に双子…どちらか一方を射れば
+もう一方が冷静さを失います
+特にベガルタの方が脆いから…
+
+;;与一（独白）
+# textboxarrow 0 0
+@与一
+モラルタを射抜きます！
+
+;;与一（独白）
+# textboxarrow 0 0
+@与一
+アルマスとベガルタが混乱すれば
+冷静沈着なマサムネにも焦りが生じる
+そこを狙って足を…！
+
+;;//与一が矢を放つ
+;;//さらに移動する
+# textwindow "close"
+# alpha 3400511 0 0.5
+# waitandnext 0.5
+
+# se "SE_4301"
+# effectbody 3000 31 0 0 0
+# effectstart 3000
+# waitandnext 0.5
+
+;;与一（独白）
+# se "SE_5575"
+# move 3400511 3 0
+# face 3400511 "usual"
+# textboxarrow 0 0
+# textwindow "moya"
+# alpha 3400511 1 0.5
+# mask 3400511 off
+@与一
+ガンバンテインの索敵範囲外を常に
+移動しながら、相手の手足を射抜いて
+動きを止めますっ
+
+;;//与一が矢を放つ
+;;//移動する
+# textwindow "close"
+# alpha 3400511 0 0.5
+# waitandnext 0.5
+
+# se "SE_4301"
+# effectbody 4000 31 0 0 0
+# effectstart 4000
+# waitandnext 0.5
+
+;;与一（独白）
+# se "SE_5575"
+# move 3400511 3 0
+# face 3400511 "usual"
+# textboxarrow 0 0
+# textwindow "moya"
+# alpha 3400511 1 0.5
+# mask 3400511 off
+@与一
+ここまでは順調…でも、
+ここからが大変なはずです
+きっと、アルマスが…
+
+;;//画面スライド
+# se "SE_0054"
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 3400511 0 0
+# move 172 3 0
+# face 172 "angry"
+# alpha 172 1 0
+# mask 172 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgmfile "bgm313_314" "BgmLostRagnarokBattle005" 0
+# se "SE_5205"
+# voice 1038 "almace_0029"
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+どこからでも射てきなさい！
+全部、切り払ってやるから
+
+# voice 310011 "masamune_ge_battle_0001"
+# alpha 172 0 0.5
+# move 3100111 3 0
+# face 3100111 "angry"
+# alpha 3100111 1 0.5
+# mask 3100111 off
+# textboxarrow 0 2
+@マサムネ
+主君は拙者が身を挺して盾となる！
+アルマス、存分に戦え！
+
+# alpha 3100111 0 0.5
+# move 3104111 3 0
+# face 3104111 "usual"
+# alpha 3104111 1 0.5
+# mask 3104111 off
+# textboxarrow 0 2
+@ベガルタ
+私もっ…私もモラと一緒に
+マスターとティターニアを
+守ってるからっ
+
+;;//画面スライド
+# se "SE_0054"
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 3104111 0 0
+# textboxarrow 0 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;与一（独白）
+# move 3400511 3 0
+# face 3400511 "usual"
+# textwindow "moya"
+# alpha 3400511 1 0
+# mask 3400511 off
+@与一
+ああ、やっぱり…
+アルマスが機動力と射程の長さを
+活かして突っ込んできます
+
+# voice 340051 "yoichi_ge_0029"
+# textboxarrow 0 2
+# textwindow "normal"
+@与一
+だったら…
+与一に届く前に射抜くだけです！
+いきますっ！
+
+# voice 1038 "almace_battle_0003"
+# alpha 3400511 0 0.5
+# move 172 3 0
+# face 172 "angry"
+# alpha 172 1 0.5
+# mask 172 off
+# textboxarrow 0 2
+@アルマス
+見つけた！
+せやあああああ！

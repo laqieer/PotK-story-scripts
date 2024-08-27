@@ -1,0 +1,168 @@
+;;カドケウス　海上編シナリオ
+;;■EP1
+;;背景：砂浜（昼）
+# script "lisp"
+# background "sea_beach_day"
+# bgmfile "bgm227" "BgmSeaEvent" 0
+# body 2600411
+# pos 2600411 3
+# mask 2600411 off
+# textboxarrow 0 2
+# chara 2600411
+# alpha 2600411 0 0
+# textflame 0 0
+@
+マスターはカドケウスに呼び出され
+海に来ていた
+
+# textflame 0 0
+@
+待ち合わせ場所に近づくと
+急に足元がぐらついて…
+
+;;一時暗転で落とし穴に落ちた感じを出す
+;;背景：砂浜（昼）戻す
+# shake 1 0.5
+# waitandnext 1
+
+# fadeout "black" 1.5
+# waitandnext 2
+# se "SE_9347"
+
+# voice 6004 "kadokeusu_0005"
+# fadein "black" 1
+# alpha 2600411 1 1
+# textflame 1 1
+@カドケウス
+アハハ！ひっかかったー！
+落とし穴、大成功―♪
+
+;;場面的におかしくなければ、暗転から砂浜に戻るのはここでもいいです
+# textflame 0 0
+@
+ひょこっと
+カドケウスが顔を出し
+大笑いしている
+
+# textflame 0 0
+@
+マスターは穴から這い上がりながら
+イタズラのために呼び出すのは
+止めてほしい、と声をかけた
+
+# face 2600411 "smile"
+# textflame 1 1
+@カドケウス
+だってマスターにイタズラするの
+すっごく楽しいんだもん
+
+# textflame 1 1
+@カドケウス
+でもしばらくの間
+イタズラは我慢するから
+これくらいいいでしょ？
+
+# textflame 0 0
+@
+しばらくというのが引っかかり
+どういうこと？とマスターは聞く
+
+# eye 2600411 "close"
+# textflame 1 1
+@カドケウス
+言葉のとおり
+イタズラはしないってことだよ
+
+# eye 2600411 "normal"
+# face 2600411 "smile"
+# textflame 1 1
+@カドケウス
+今日はマスターと
+ラブラブなデートをするって
+決めたからね！
+
+# textflame 1 1
+@カドケウス
+ほら、この水着
+大人っぽいでしょ？
+ドキドキしちゃわない？
+
+# select "ドキドキはしないけど、かわいいよ" "select_label_01" "あはは…そうだね、ドキドキするかも" "select_label_02" "え、うーん…。でも、かわいいよ" "select_label_03"
+ほら、この水着
+大人っぽいでしょ？
+ドキドキしちゃわない？
+
+# voice 6004 "kadokeusu_0013"
+# face 2600411 "sad"
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@カドケウス
+えー、ドキドキしないの！？
+
+# face 2600411 "angry"
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@カドケウス
+なにそれ！思ってないでしょ！
+
+# voice 3014 "kadokeusu_0009"
+# face 2600411 "sad"
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@カドケウス
+ちょっと、「でも」ってなに！？
+
+# voice 6004 "kadokeusu_kyara_1013"
+# face 2600411 "angry"
+# label "select_label_end"
+# textflame 1 1
+@カドケウス
+もう、また子供扱いして！
+
+;;どさぁっとSE
+# shake 1 0.5
+# waitandnext 1
+
+# se "SE_9347"
+# fadeout "black" 1.5
+# waitandnext 2
+
+;;一時暗転で落とし穴に落ちた感じを出す
+;;背景：砂浜（昼）戻す
+# fadein "black" 0.5
+# textflame 0 0
+@
+ドン、と突き飛ばされたマスターは
+よろめいた先にあった落とし穴に
+落ちてしまう
+
+# textflame 0 0
+@
+イタズラはしないはずだったんじゃ
+とマスター
+
+# voice 6004 "kadokeusu_kyara_1012"
+# face 2600411 "smile"
+# textflame 1 1
+@カドケウス
+アハハ！その落とし穴は
+最初から仕掛けていたものだし
+カウントされないよ
+
+# textflame 1 1
+@カドケウス
+ほら行くよマスター！
+今日は私がたっぷり
+エスコートしてあげる♪
+
+# textflame 0 0
+@
+マスターは不安に思いながら
+カドケウスの手を取って
+穴から這い上がるのだった

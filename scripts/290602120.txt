@@ -1,0 +1,680 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第６章 章タイトル：アナザー・コンフリクト―交錯―
+;;第2話　タイトル：相容れぬもの
+;;2_2_12
+;;スクリプト最後の背景：ユグドラシル
+;;-----------------------------------------
+# script "lisp"
+# background "004_outland"
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;グラーシーザ
+# body 302611
+# pos 302611 3
+# scale 302611 0.8 0
+# layer 302611 2
+# alpha 302611 0 0
+# mask 302611 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;ブリューナク
+# body 500721
+# pos 500721 3
+# scale 500721 0.8 0
+# layer 500721 2
+# alpha 500721 0 0
+# mask 500721 off
+;;フラガラッハ
+# body 101011
+# pos 101011 3
+# scale 101011 0.8 0
+# layer 101011 2
+# alpha 101011 0 0
+# mask 101011 off
+;;ゲイボルグ
+# body 300711
+# pos 300711 3
+# scale 300711 0.8 0
+# layer 300711 2
+# alpha 300711 0 0
+# mask 300711 off
+;;ハリー（カミト）
+# body 208
+# pos 208 3
+# scale 208 0.8 0
+# layer 208 3
+# alpha 208 0 0
+# mask 208 off
+;;ダーインスレイヴ
+# body 102811
+# pos 102811 3
+# scale 102811 0.8 0
+# layer 102811 2
+# alpha 102811 0 0
+# mask 102811 off
+;;アロンダイト
+# body 100711
+# pos 100711 3
+# scale 100711 0.8 0
+# layer 100711 2
+# alpha 100711 0 0
+# mask 100711 off
+;;ルーン
+# body 300531
+# pos 300531 3
+# scale 300531 0.8 0
+# layer 300531 2
+# alpha 300531 0 0
+# mask 300531 off
+;;ロンゴミアント
+# body 301021
+# pos 301021 3
+# scale 301021 0.8 0
+# layer 301021 2
+# alpha 301021 0 0
+# mask 301021 off
+;;モニカ
+# body 209
+# pos 209 3
+# scale 209 0.8 0
+# layer 209 2
+# alpha 209 0 0
+# mask 209 off
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 2
+# alpha 5401721 0 0
+# mask 5401721 off
+;;パラケルスス
+# body 101311
+# pos 101311 3
+# scale 101311 0.8 0
+# layer 101311 2
+# alpha 101311 0 0
+# mask 101311 off
+;;ミョルニル
+# body 200111
+# pos 200111 3
+# scale 200111 0.8 0
+# layer 200111 2
+# alpha 200111 0 0
+# mask 200111 off
+;;-----------------------------------------
+;;第2話　タイトル：相容れぬもの
+;;//背景：村
+;;ナレーション
+# textflame 0 0
+@
+フォルカスとロンギヌスの戦いから
+数日後――
+
+# textflame 1 1
+# move 102811 2 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 on
+# move 208 4 0
+# alpha 208 1 0.5
+# mask 208 on
+# textboxarrow 0 3
+@カミト
+フォルカスの目撃情報を追って
+ここまで来たけど…
+
+# face 102811 "surprise"
+# textboxarrow 0 1
+@ダーインスレイヴ
+かなり端の方まで来てしまったな
+この辺りは傷跡も深そうだ…
+おや？
+
+# voice 2001 "myuruniru_battle_0004"
+# alpha 102811 0 0.5
+# alpha 208 0 0.5
+# move 200111 3 0
+# face 200111 "happy"
+# alpha 200111 1 0.5
+# mask 200111 off
+# textboxarrow 0 2
+@ミョルニル
+ぺったんこだよ～！
+
+;;//地響き
+# se "SE_5223"
+# waitandnext 0.5
+
+# serif 1
+@住人達
+おおおおお！
+さすが、ミョルニル！
+
+# voice 3026 "grayside_0028"
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 200111 0 0.5
+# move 102811 1 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 on
+# move 208 3 0
+# face 208 "normal"
+# alpha 208 1 0.5
+# mask 208 off
+# move 302611 5 0
+# face 302611 "normal"
+# alpha 302611 1 0.5
+# mask 302611 on
+# textboxarrow 0 3
+@グラーシーザ
+うーんと…
+ミョルニルがじめんをたたいて
+おるが、なにをやっているのだ？
+
+# textboxarrow 0 2
+@カミト
+みんなも喜んでるみたいだし…
+害虫駆除とか？
+
+# textboxarrow 0 1
+@ダーインスレイヴ
+そういえば、この道…
+
+# voice 3026 "grayside_0002"
+# textboxarrow 0 3
+@グラーシーザ
+おい、ミョルニル！
+なんでじめんをたたいているんだっ？
+
+# voice 2001 "myuruniru_0022"
+# alpha 102811 0 0.5
+# alpha 208 0 0.5
+# alpha 302611 0 0.5
+# move 200111 3 0
+# face 200111 "normal"
+# alpha 200111 1 0.5
+# mask 200111 off
+# textboxarrow 0 2
+@ミョルニル
+わっ？
+グラーシーザだ～！
+マスタ！グラーシーザがいるよ～！
+
+# serif 1
+@奏官
+あんたも無事だったんだな！
+教会が消し飛んだって聞いたときは
+心配したぞっ
+
+# serif 1
+@奏官
+…そっちにいるのは、奏官かい？
+
+# alpha 200111 0 0.5
+# move 102811 2 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 on
+# move 208 4 0
+# alpha 208 1 0.5
+# mask 208 on
+# textboxarrow 0 3
+@カミト
+あ…はい…
+
+# textboxarrow 0 1
+@ダーインスレイヴ
+故あって三人で旅をしている
+ときに、おぬしらは何をしているの
+かな？
+
+# serif 1
+@奏官
+ああ、これは道の整備だよ
+あちこちでこぼこになってたから
+ミョルニルに叩かせてたんだ
+
+# voice 2001 "myuruniru_0006"
+# alpha 102811 0 0.5
+# alpha 208 0 0.5
+# move 200111 3 0
+# face 200111 "happy"
+# alpha 200111 1 0.5
+# mask 200111 off
+# textboxarrow 0 2
+@ミョルニル
+どんなでこぼこもぺったんこだよ～！
+えっへん！
+
+# serif 1
+@奏官
+派手な戦闘は得意じゃないんでね
+地味だけど、けっこう喜ばれてるから
+コツコツやってるんだ
+
+# serif 1
+@住人達
+本当に助かってるぜ！
+あんただって立派な奏官だよ！
+
+# serif 1
+@住人達
+戦うばかりがキル姫じゃないってな！
+
+# voice 9938 "harry_0043"
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 200111 0 0.5
+# move 102811 1 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 on
+# move 208 3 0
+# alpha 208 1 0.5
+# mask 208 on
+# textboxarrow 0 2
+# move 302611 5 0
+# face 302611 "normal"
+# alpha 302611 1 0.5
+# mask 302611 on
+@カミト
+そっか…
+確かにこういうのも大事だよな
+
+# voice 3026 "grayside_0006"
+# face 302611 "happy"
+# textboxarrow 0 3
+@グラーシーザ
+それはちょうじょう！
+これもまた、せいぎなのだな…
+
+# textboxarrow 0 2
+@カミト
+グラーシーザ、どうしたの？
+
+# face 302611 "normal"
+# textboxarrow 0 3
+@グラーシーザ
+あたしのせいぎは、ぞんがい、
+せまくるしいものだったのかも
+しれない
+
+# textboxarrow 0 3
+@グラーシーザ
+ひとりよがりではなく、
+みなのためのせいぎをみいださねば
+ならないんだ！
+
+# voice 9938 "harry_0034"
+# textboxarrow 0 2
+@カミト
+あ、うん…
+
+# textboxarrow 0 1
+@ダーインスレイヴ
+カミト、今はそっとしておこう
+それより、フォルカスのことだ
+
+# serif 1
+@奏官
+フォルカス！？
+あんた今、フォルカスって言ったか？
+
+# textboxarrow 0 2
+@カミト
+はい！
+僕達は彼女を追ってきたんです
+何か知ってますかっ？
+
+# serif 1
+@奏官
+それなら、あいつに聞くといい
+
+;;//背景：教会の一室
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "church_room"
+# alpha 102811 0 0
+# alpha 208 0 0
+# alpha 302611 0 0
+# move 209 2 0
+# face 209 "normal"
+# alpha 209 1 0
+# mask 209 on
+# move 208 4 0
+# alpha 208 1 0
+# mask 208 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 1
+# textwindow "normal"
+@モニカ
+…ということ
+フォルカスなら、
+とっくに地上に降りてると思うよ
+
+# textboxarrow 0 3
+@カミト
+そうですか…
+
+# textboxarrow 0 1
+@モニカ
+まあ、そんなに落ち込まないでっ
+きっとまた会えるよ！
+
+# textboxarrow 0 3
+@カミト
+はい…
+
+;;//ルーンがやって来る
+# se "SE_0740"
+# textwindow "close"
+# alpha 209 0 0.5
+# alpha 208 0 0.5
+# move 300531 3 0
+# face 300531 "normal"
+# alpha 300531 1 0.5
+# mask 300531 off
+# waitandnext 0.5
+
+# voice 3005 "roon_0001"
+# textboxarrow 0 2
+# textwindow "normal"
+@ルーン
+マスター！
+いつまで私をこんなところに
+入れておくつもりよ！？
+
+# textboxarrow 0 2
+@ルーン
+もう完治してるって言ってるでしょ
+早く誰かと戦わせろよぉ！
+
+# voice 1013 "paracelsus_0011"
+# move 101311 2 0
+# face 101311 "angry"
+# alpha 101311 1 0.5
+# mask 101311 on
+# textboxarrow 0 1
+# move 300531 4 0.5
+# mask 300531 on
+@パラケルスス
+患者が勝手に出ていくことは
+わたくしが許さない！
+君にはまだ休息が必要だ
+
+# face 300531 "mad"
+# textboxarrow 0 3
+@ルーン
+私はもう治ったって言ってる
+でしょ？お前の耳は飾りかよ！？
+
+# voice 1013 "paracelsus_0007"
+# textboxarrow 0 1
+@パラケルスス
+君の意見など聞いていない
+医者の指示に従え
+
+# voice 1007 "Arondaito_0014"
+# alpha 101311 0 0.5
+# move 100711 2 0
+# face 100711 "normal"
+# alpha 100711 1 0.5
+# mask 100711 on
+# textboxarrow 0 1
+@アロンダイト
+まったく、野蛮ですね…
+マスターにご迷惑をかけないで
+下さい
+
+# alpha 100711 0 0.5
+# move 301021 2 0
+# face 301021 "normal"
+# alpha 301021 1 0.5
+# mask 301021 on
+# textboxarrow 0 1
+@ロンゴミアント
+ルーン、ベッドに戻りましょう
+
+# alpha 301021 0 0.5
+# alpha 300531 0 0.5
+# move 102811 2 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 on
+# textboxarrow 0 1
+# move 208 4 0
+# alpha 208 1 0.5
+# mask 208 on
+@ダーインスレイヴ
+やれやれ…
+困った子猫ちゃんがいたものだ
+
+# textboxarrow 0 3
+@カミト
+ダーインスレイヴ…
+ちょっと“海”まで行ってみたいん
+だけど…
+
+# alpha 102811 0 0.5
+# move 209 2 0
+# face 209 "normal"
+# alpha 209 1 0.5
+# mask 209 on
+# textboxarrow 0 1
+@モニカ
+お！出かけるのっ？
+あたしもつき合うよっ
+ルーンくんはちゃんと寝ててね～
+
+;;//背景：海
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "coast"
+# alpha 209 0 0
+# alpha 208 0 0
+# move 208 3 0
+# alpha 208 1 0
+# mask 208 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm409" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+…………
+
+# textboxarrow 0 2
+@カミト
+…やっぱりダメだ
+これ以上、先に進めない
+
+# move 102811 2 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 on
+# textboxarrow 0 1
+# move 208 4 0.5
+# mask 208 on
+@ダーインスレイヴ
+どうやらハリーの体では、
+地上に降りられないようだな
+
+# textboxarrow 0 3
+@カミト
+自分の体に戻るしかないけど、
+何であのとき…
+
+# voice 9937 "monica_0018"
+# alpha 102811 0 0.5
+# move 209 2 0
+# face 209 "sad"
+# alpha 209 1 0.5
+# mask 209 on
+# textboxarrow 0 1
+@モニカ
+ねえ…カミトくん、だっけ
+こんなこと言うのは、
+悪いんだけど…
+
+# textboxarrow 0 3
+@カミト
+何ですか？
+
+# textboxarrow 0 1
+@モニカ
+あたしが思うに…
+君が地上に戻れないのは…その…
+
+# textboxarrow 0 1
+@モニカ
+磔にされたっていう君の体が…
+もう…死んでるからじゃないかな…？
+
+# voice 9938 "harry_0023"
+# textboxarrow 0 3
+@カミト
+えっ…？
+僕は、もう…
+
+;;//背景：新天上世界遠景
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "parchment_map02"
+# alpha 209 0 0
+# alpha 208 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;ナレーション
+# textflame 0 0
+# textwindow "normal"
+@
+同じ頃、ユグドラシルにて――
+
+;;//背景：ユグドラシル
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_yggdrasill"
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0
+# mask 103611 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm405" "BgmIntegralNoahEvent003" 0
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+ようやく好機が訪れた
+コマンドキラーズの気配はないわ
+みんな、準備はいい？
+
+# voice 9943 "almace_navikan_0004"
+# alpha 103611 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+もちろん！
+いつでも行けるわ！
+
+# alpha 196 0 0.5
+# move 5401721 3 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 2
+@スイハ
+問題ありません
+
+# alpha 5401721 0 0.5
+# move 500721 3 0
+# face 500721 "normal"
+# alpha 500721 1 0.5
+# mask 500721 off
+# textboxarrow 0 2
+@ブリューナク
+全て整っている
+
+# voice 1010 "furagaraha_0004"
+# alpha 500721 0 0.5
+# move 101011 3 0
+# face 101011 "normal"
+# alpha 101011 1 0.5
+# mask 101011 off
+# textboxarrow 0 2
+@フラガラッハ
+ふふふ
+私の美貌には一点の曇りもないわ！
+
+# alpha 101011 0 0.5
+# move 300711 3 0
+# face 300711 "normal"
+# alpha 300711 1 0.5
+# mask 300711 off
+# textboxarrow 0 2
+@ゲイボルグ
+今こそ地上へと旅立つときだ
+
+# voice 1036 "ragnarok_0036"
+# alpha 300711 0 0.5
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+@ラグナロク
+アルマス、頼むわね
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+任せて
+さあ、地上世界に乗り込むわよ！
+この剣先に続けーっ！

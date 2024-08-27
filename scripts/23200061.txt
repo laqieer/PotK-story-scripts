@@ -1,0 +1,292 @@
+;;-----------------------------------------
+;;【EP5】1
+;;-----------------------------------------
+# script "lisp"
+# background "bog"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;イージス
+# body 52000111
+# pos 52000111 3
+# scale 52000111 0.8 0
+# layer 52000111 2
+# mask 52000111 off
+# alpha 52000111 0 0
+;;フラガラッハ
+# body 3101011
+# pos 3101011 4
+# scale 3101011 0.8 0
+# layer 3101011 3
+# alpha 3101011 0 0
+;;ルーン
+# body 3300511
+# pos 3300511 2
+# scale 3300511 0.8 0
+# layer 3300511 4
+# alpha 3300511 0 0
+;;魔物
+# body 808412
+# pos 808412 3
+# scale 808412 0.8 0
+# layer 808412 4
+# mask 808412 off
+# alpha 808412 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "kiri_03"
+# imagealpha 1 0 0
+# imagescale 1 2 0
+# imagelayer 1 2
+;;-----------------------------------------
+;;背景：命の木の実のある場所（森っぽいところ？）
+;;演出：魔物を一度表示し、そのあとイージス達を表示
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1.5
+
+# alpha 808412 1 1
+# waitandnext 2
+
+# alpha 808412 0 0.5
+# alpha 52000111 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 52000111 "surprise"
+# voice 5200011 "aegis_c_0028"
+@イージス
+まさか移動していないとはな…
+
+# alpha 52000111 0 0.5
+# alpha 3101011 1 0.5
+# alpha 3300511 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 3101011 "angry"
+@フラガラッハ
+命の木の実の成る地は
+生命力あふれる場所でもあります
+
+# textflame 1 1
+# textboxarrow 0 3
+@フラガラッハ
+その特性を利用し、
+あれはさらなる力を
+蓄えているのでしょう
+
+# textflame 1 1
+# textboxarrow 0 3
+@フラガラッハ
+一度追い払った私達なぞ
+意に介していないのでしょう
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3300511 "normal"
+# voice 330051 "roon_ge_0007"
+@ルーン
+はっ、眉間に皺寄せて
+美しいお顔が台無しじゃねぇの？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310101 "furagaraha_t_0007"
+@フラガラッハ
+あなたに美しいと言われるのは
+皮肉であることくらいわかりますが
+僻んでいることもわかりますよ
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3300511 "angry"
+# voice 330051 "roon_ge_0009"
+@ルーン
+ああ！？
+別にお前の顔なんざ興味ねぇよ！
+アイツより先に血祭にしてやろうか！
+
+# alpha 52000111 1 0.5
+# alpha 3101011 0 0.5
+# alpha 3300511 0 0.5
+;;できればもやもやフレームで
+# move 52000111 3 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+# face 52000111 "sad"
+@イージス
+癖のある仲間との交流は
+練習したけど、殺し合いしそうな
+仲間との交流は想定してないよ…
+
+;;できればもやもやフレームで
+@イージス
+だが、あの魔物を前にして
+軽口を叩ける貴様らの実力は
+私も認めるところだ
+
+;;できればもやもやフレームで
+@イージス
+…だからこそ、ふたりが
+キル姫であることを惜しく思う
+
+;;できればもやもやフレームで
+@イージス
+だって、私の…
+コマンドキラーズの使命は――
+
+# alpha 52000111 0 0.5
+# alpha 3101011 1 0.5
+# alpha 3300511 1 0.5
+# bgm "stop"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ルーン
+ちっ、気付かれた！
+
+# alpha 52000111 1 0.5
+# face 52000111 "angry"
+# alpha 3101011 0 0.5
+# alpha 3300511 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# move 808412 4 0
+# alpha 808412 1 0.3
+# rightin 808412 0.3
+# waitandnext 0.3
+
+;;演出：魔物の攻撃をイージスが防ぐ
+# se "SE_12603"
+# mask 808412 on
+# move 52000111 2 0.3
+# mask 52000111 on
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm424_425" "BgmIntegralNoahCommand" 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 52000111 "surprise"
+@イージス
+あれ…
+こんなに軽い攻撃だったっけ…
+
+# alpha 808412 0 0.5
+# alpha 52000111 0 0.5
+# alpha 3101011 1 0.5
+# alpha 3300511 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 3101011 "happy"
+# voice 310101 "furagaraha_t_0004"
+@フラガラッハ
+真なる力を解放した盾の効果は
+間違いなく発揮されているようですね
+
+# move 52000111 3 0
+# mask 52000111 off
+# alpha 52000111 1 0.5
+# alpha 3101011 0 0.5
+# alpha 3300511 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 52000111 "angry"
+# voice 5200011 "aegis_c_0028"
+@イージス
+そうか…ならば！
+
+# alpha 52000111 0 0.5
+# se "SE_5575"
+# textwindow "close"
+# waitandnext 0.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+単身、魔物へ駆けていくイージス
+
+# alpha 52000111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 52000111 "happy"
+# voice 5200011 "aegis_c_0007"
+@イージス
+はは、攻撃してみろ！
+すべて防ぎ、貴様のその邪悪な力も
+すべて祓ってやる！
+
+# se "SE_12619"
+# textflame 1 1
+# textboxarrow 0 2
+@イージス
+防御こそ、最大の攻撃だ！
+
+# alpha 52000111 0 0.5
+# alpha 3101011 1 0.5
+# face 3101011 "angry"
+# alpha 3300511 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 330051 "roon_ge_battle_0005"
+@ルーン
+抜け駆けは許さんぞ！
+…っと、なんだコイツら
+
+# textflame 1 1
+# textboxarrow 0 3
+@フラガラッハ
+力を溜め込んだ魔物が
+生み出した魔獣のようですね
+
+# textflame 1 1
+# textboxarrow 0 3
+@フラガラッハ
+魔獣に話し合いは無用
+美しさも通じない
+ならば排除するしかありませんね
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3300511 "sad"
+# voice 330051 "roon_ge_0027"
+@ルーン
+ちっ
+せっかく大物がいるってのに
+結局魔獣狩りかよ
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3300511 "angry"
+# voice 330051 "roon_ge_0002"
+@ルーン
+負けたら承知しねぇぞ、イージス！
+
+# textflame 1 1
+# textboxarrow 0 3
+@フラガラッハ
+今のあなたなら打ち勝てます！
+
+# alpha 52000111 1 0.5
+# alpha 3101011 0 0.5
+# alpha 3300511 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5200011 "aegis_c_0033"
+@イージス
+ああ、そちらも任せたぞ！
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 52000111 0 0
+# background "bg_black"
+# waitandnext 0.5

@@ -1,0 +1,392 @@
+;;-----------------------------------------
+;;SEA2章_5_1
+;;-----------------------------------------
+# script "lisp"
+# background "sea_room"
+# bgm "bgm102" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;カドケウス
+# body 600431
+# pos 600431 1
+# scale 600431 0.8 0
+# layer 600431 2
+# mask 600431 off
+# alpha 600431 0 0
+;;ケーリュケイオン
+# body 600531
+# pos 600531 5
+# scale 600531 0.8 0
+# layer 600531 4
+# alpha 600531 0 0
+;;リットゥ（剣無し）
+# body 285
+# pos 285 2
+# scale 285 0.8 0
+# layer 285 3
+# mask 285 off
+# alpha 285 0 0
+;;リットゥ
+# body 6100511
+# pos 6100511 2
+# scale 6100511 0.8 0
+# layer 6100511 3
+# mask 6100511 off
+# alpha 6100511 0 0
+;;シェキナー
+# body 6400711
+# pos 6400711 3
+# scale 6400711 0.8 0
+# layer 6400711 3
+# mask 6400711 off
+# alpha 6400711 0 0
+# brightness 6400711 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;シェキナーのシナリオカット
+# imageset 1 "SEA6400711"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：屋敷（夜）
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+;;カドケウスが現れる
+# se "SE_0648"
+# voice 6004 "kadokeusu_0004"
+# move 600431 2 0.5
+# face 600431 "normal"
+# alpha 600431 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@カドケウス
+闇夜を照らす満月よりも
+
+;;ケーリュケイオンが現れる
+# se "SE_10131"
+# voice 6005 "keryukeion_0004"
+# move 600531 4 0.5
+# face 600531 "normal"
+# alpha 600531 1 0.3
+# textboxarrow 0 3
+@ケーリュケイオン
+夜空に瞬く星々よりも
+
+# move 600431 1 0.5
+# alpha 600431 0 0.3
+# move 600531 5 0.5
+# alpha 600531 0 0.3
+;;シェキナーが現れる
+# se "SE_11585"
+# face 6400711 "normal"
+# alpha 6400711 1 0.5
+# textboxarrow 0 2
+@？？？
+美しく輝き舞い踊る、
+真紅の高貴なる蝶
+“エレガントバタフライ”！
+
+;;シェキナーのシナリオカット
+# se "SE_0613"
+# fadein "white" 1
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# frameout 0 0
+# alpha 6400711 0 0
+# textwindow "close"
+# waitandnext 1
+
+# brightness 6400711 1 0
+# textwindow "nomal"
+# textboxarrow 0 0
+@シェキナー
+怪盗シェキナー
+参上しました
+
+@シェキナー
+今宵、貴方の大切なもの
+いただきます
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@カドケウス
+いぇーい！
+
+# serif 1
+@ケーリュケイオン
+やんや、やんや！
+
+# move 270 2 0
+# move 285 4 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+@リットゥ
+…………
+
+@ミーミル
+…………
+
+;;選択肢
+# select "…………" "select_label_01" "派手な登場！" "select_label_02"
+怪盗シェキナー
+参上しました
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# voice 4007 "shekina_0004"
+# textboxarrow 0 0
+@シェキナー
+ふふっ
+私の登場が完璧過ぎて、
+声も出ないようですね
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# voice 4007 "shekina_0005"
+# textboxarrow 0 0
+@シェキナー
+そうでしょう
+私に相応しい演出を施してみました
+
+# label "select_label_end"
+# voice 9917 "mimir_navikan_0001"
+# imagealpha 1 0 1
+# framein 0 1
+# face 270 "normal"
+# face 285 "normal"
+# alpha 270 1 0.3
+# alpha 285 1 0.3
+# textboxarrow 0 1
+@ミーミル
+…マスター様
+まだ信じられないのですが、
+あちらのキル姫は
+
+# textboxarrow 0 3
+@リットゥ
+シェキナーに間違いないな
+
+# move 270 1 0.5
+# alpha 270 0 0.3
+# move 285 5 0.5
+# alpha 285 0 0.3
+# face 6400711 "normal"
+# alpha 6400711 1 0.3
+# textboxarrow 0 2
+@シェキナー
+貴方達、お間違えなきよう
+私は怪盗シェキナーです
+
+# textboxarrow 0 2
+@シェキナー
+こちらのお屋敷から「特別な宝石」を
+華麗に奪い去ってみせます
+
+# alpha 6400711 0 0.3
+# move 600431 2 0.5
+# face 600431 "normal"
+# alpha 600431 1 0.3
+# move 600531 4 0.5
+# face 600531 "normal"
+# alpha 600531 1 0.3
+# textboxarrow 0 1
+@カドケウス
+よっ！
+大怪盗！
+
+# textboxarrow 0 3
+@ケーリュケイオン
+今夜も輝いてるね！
+
+# alpha 600431 0 0.3
+# alpha 600531 0 0.3
+# move 270 2 0
+# face 270 "sad"
+# alpha 270 1 0.3
+# move 285 4 0
+# face 285 "normal"
+# alpha 285 1 0.3
+# textboxarrow 0 1
+@ミーミル
+ええと…
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# move 270 1 0.5
+# alpha 270 0 0.3
+# move 285 3 0.5
+# textboxarrow 0 2
+@リットゥ
+…………お前達
+
+# voice 1005 "ritto_0012"
+# face 285 "angry"
+# move 6400711 5 0
+# layer 6400711 5
+# mask 6400711 on
+# textsize 28
+# textwindow "toge"
+# textboxarrow 0 2
+@リットゥ
+いい加減にしろ！！
+
+# move 285 2 0.5
+# move 6400711 4 0.5
+# face 6400711 "surprise"
+# alpha 6400711 1 0.3
+# textsize 24
+# textwindow "nomal"
+# textboxarrow 0 3
+@シェキナー
+あら？
+
+# bgm "bgm005" 0
+# voice 1005 "ritto_0009"
+# textboxarrow 0 1
+@リットゥ
+シェキナー…
+何をしている
+
+# textboxarrow 0 1
+@リットゥ
+派手好きという一面はあったが、
+お前は規律を重んじ
+自分を厳しく戒める奴だった
+
+# textboxarrow 0 1
+@リットゥ
+私は、そんなお前に
+敬意を抱いていたというのに…
+見損なったぞ！
+
+# voice 4007 "shekina_0027"
+# face 6400711 "sad"
+# textboxarrow 0 3
+@シェキナー
+はぁ…
+貴方がそれを言うのですか…
+
+# textboxarrow 0 1
+@リットゥ
+言い訳など不要だ
+お前の性根はここで叩き直してやる
+
+# face 6400711 "usual"
+# textboxarrow 0 3
+@シェキナー
+貴方にそれができますか？
+ご自慢の剣も持たずに
+
+# alpha 285 0 0.3
+# alpha 6400711 0 0.3
+# move 270 3 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+そういえば…
+リットゥさんはご自身の剣を
+持っておりません
+
+# alpha 270 0 0.3
+# face 285 "normal"
+# face 6400711 "usual"
+# alpha 285 1 0.3
+# alpha 6400711 1 0.3
+# textboxarrow 0 1
+@リットゥ
+私が剣を持っていない？
+シェキナー、お前の目は節穴か？
+剣ならここにある
+
+;;リットゥ剣有り
+# se "SE_4715"
+# envbody 1001 7 1
+# effectstart 1001
+# fadein "red" 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+# fadeout "white" 1
+# waitandnext 1
+
+# alpha 285 0 0
+# move 6100511 2 0
+# alpha 6100511 1 0
+# effectskip 1001
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 2
+
+# voice 9917 "mimir_navikan_0023"
+# alpha 6400711 0 0.3
+# alpha 6100511 0 0.3
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+リットゥさんの右手から炎がっ
+
+# alpha 270 0 0.3
+# face 600431 "normal"
+# face 600531 "normal"
+# alpha 600431 1 0.3
+# alpha 600531 1 0.3
+# textboxarrow 0 1
+@カドケウス
+わぁお！
+炎が剣の形になったよ
+
+# voice 6005 "keryukeion_0039"
+# textboxarrow 0 3
+@ケーリュケイオン
+炎による剣の具現化か
+興味深いねぇ
+
+# alpha 600431 0 0.3
+# alpha 600531 0 0.3
+# face 6100511 "angry"
+# face 6400711 "usual"
+# alpha 6100511 1 0.3
+# alpha 6400711 1 0.3
+# se "SE_5205"
+# textboxarrow 0 1
+@リットゥ
+過ちを正してやるのも友人の努めだ
+私の心の炎で、お前の悪心を
+斬り払ってやろう！
+
+# textboxarrow 0 3
+@シェキナー
+貴方にそれができますか？
+
+# textboxarrow 0 1
+@リットゥ
+答えるまでもない！
+
+;;バトル
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 6400711 0 0
+# alpha 6100511 0 0
+# waitandnext 0.2

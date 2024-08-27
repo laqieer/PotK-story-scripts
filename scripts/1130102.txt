@@ -1,0 +1,163 @@
+;;-----------------------------------------
+;;■□■１－３改修案■□■
+;;整形済み
+;;【１－３－１（バトル後）】
+;;スクリプト最後の背景：highland
+;;-----------------------------------------
+# script "lisp"
+# background "highland"
+# bgm "bgm021" 0
+;;----------------------------------------------------------
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 2
+# alpha 24 0 0
+# mask 24 off
+# face 24 "normal"
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 2
+# alpha 0 0 0
+# mask 0 off
+# face 0 "normal"
+;;ティルフィング（イミテーション）
+# entry 999 24
+# pos 999 3
+# scale 999 0.8 0
+# layer 999 2
+# alpha 999 0 0
+# mask 999 off
+# face 999 "normal"
+;;-----------------------------------------
+;;背景:highland
+# se "SE_5205"
+# se "SE_0604"
+# move 24 2 0
+# face 24 "angry"
+# alpha 24 1 0
+# mask 24 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 999 4 0
+# face 999 "angry"
+# alpha 999 1 0
+# mask 999 on
+@ティルフィング
+アナタの意志は…私が担う…
+汚れなき声を心に刻め！
+
+# effectbody 1000 1 160 0 0
+# effectstart 1000
+# fadein "red " 0.5
+# shake 0 0.5
+# se "SE_4830"
+# alpha 999 0 2.5
+# waitandnext 2.5
+
+# textboxarrow 0 1
+@ティルフィング
+我が同胞の叫び…
+この魂の礎とならん
+
+# bgm "stop"
+# face 24 "sad"
+# move 0 4 0
+# face 0 "sad"
+# alpha 0 1 0.5
+# mask 0 on
+# textboxarrow 0 3
+@デュリン
+ティルフィング！
+…アナタは…アタシ達の知ってる
+ティルフィング…よね？
+
+# textboxarrow 0 1
+@ティルフィング
+ハァ、ハァ…
+なに言ってるのデュリン
+…見て分からないの？
+
+# bgm "bgm003" 0
+# face 0 "normal"
+# textboxarrow 0 3
+@デュリン
+良かった！！
+もう…“イミテーション”なんだから
+見て分かるわけないでしょ！
+
+# voice 1014 "tyrufing_0046"
+# face 24 "normal"
+# textboxarrow 0 1
+@ティルフィング
+ふふ…心配してくれて
+ありがとう、デュリン
+
+# textboxarrow 0 1
+@ティルフィング
+本物か偽物かもわからない私を…
+数多にいる私…その中から…
+
+# textboxarrow 0 1
+@ティルフィング
+この私を相棒に選んでくれて、
+本当に感謝しているわ…
+
+# textboxarrow 0 3
+@デュリン
+ティルフィング…
+
+;;《選択肢》
+;;本物も偽物もない。君は君だろ…？
+;;君が、正真正銘のティルフィングだ
+# select "本物も偽物もない。君は君だろ…？" "select_label_01" "君が、正真正銘のティルフィングだ" "select_label_01"
+ティルフィング…
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# voice 1014 "tyrufing_0001"
+# face 24 "happy2"
+# textboxarrow 0 1
+@ティルフィング
+…マスター！
+ありがとうございます
+
+# label "select_label_end"
+# voice 9999 "durin_0046"
+# face 0 "usual"
+# textboxarrow 0 3
+@デュリン
+ふふ…ティルフィング、
+アンタ感動して泣いてるの？
+
+# face 24 "shy"
+# textboxarrow 0 1
+@ティルフィング
+な、泣いてなんていません！
+
+# face 0 "normal"
+# textboxarrow 0 3
+@デュリン
+“淘汰”は殺し合いに見えるけど…
+彼女たちにとって、
+存在を統合する聖なる儀式なの
+
+# textboxarrow 0 3
+@デュリン
+敢えて言うなら…
+淘汰の果てに残った最後の一人が、
+オリジナルといえる存在になるの
+
+# face 24 "normal"
+# textboxarrow 0 1
+@ティルフィング
+…オリジナルに近づけば、
+記憶が蘇ると言われている
+
+# textboxarrow 0 1
+@ティルフィング
+…私は…私の中に沈んだ
+記憶を取り戻したいんです！

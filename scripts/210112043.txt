@@ -1,0 +1,143 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１１章 章タイトル「問いかける幻獣―ダイアローグ―」
+;;第2話－４　タイトル：対話のために
+;;2_4_3
+;;スクリプト最後の背景：地底・室内
+;;-----------------------------------------
+# script "lisp"
+# background "in_underground_world_room"
+# bgmfile "bgm154" "BgmPJZero001" 0
+;;-----------------------------------------
+;;マサムネ・獣刻・ヨルムンガンド
+# body 3100111
+# pos 3100111 3
+# scale 3100111 0.8 0
+# layer 3100111 2
+# alpha 3100111 0 0
+# mask 3100111 off
+;;ヴァジュラ・獣刻・ラクシュミー
+# body 3500511
+# pos 3500511 3
+# scale 3500511 0.8 0
+# layer 3500511 2
+# alpha 3500511 0 0
+# mask 3500511 off
+;;デュランダル（キラーメイル）
+# body 1100341
+# pos 1100341 3
+# scale 1100341 0.8 0
+# layer 1100341 2
+# alpha 1100341 0 0
+# mask 1100341 off
+;;天沼矛（キラーメイル）
+# body 1300431
+# pos 1300431 3
+# scale 1300431 0.8 0
+# layer 1300431 3
+# alpha 1300431 0 0
+# mask 1300431 off
+;;カシウス
+# body 166
+# pos 166 3
+# scale 166 0.8 0
+# layer 166 2
+# alpha 166 0 0
+# mask 166 off
+;;カシウス（誓約）ボイス用
+# body 5303111
+# alpha 5303111 0 0
+;;-----------------------------------------
+# voice 350051 "vajura_ge_battle_0004"
+# move 3500511 2 0
+# face 3500511 "angry"
+# alpha 3500511 1 0
+# mask 3500511 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 3100111 4 0
+# face 3100111 "angry"
+# alpha 3100111 1 0
+# mask 3100111 on
+@ヴァジュラ
+おりゃあああああ！
+
+# voice 310011 "masamune_ge_battle_0001"
+# textboxarrow 0 3
+@マサムネ
+はあああああ！
+
+# se "SE_5205"
+# voice 11003 "durandalm_0029"
+# alpha 3500511 0 0.5
+# alpha 3100111 0 0.5
+# move 1100341 2 0
+# face 1100341 "normal"
+# alpha 1100341 1 0.5
+# mask 1100341 on
+# textboxarrow 0 1
+# move 1300431 4 0
+# face 1300431 "normal_1"
+# alpha 1300431 1 0.5
+# mask 1300431 on
+@デュランダル
+聖剣の名にかけて！
+
+# se "SE_9149"
+# voice 13004 "amenonubokom_battle_0001"
+# textboxarrow 0 3
+@天沼矛
+届いて下さい！
+オレ達の思い！
+
+# se "SE_4200"
+# waitandnext 0.5
+
+;;//結界にヒビが入る
+# textwindow "close"
+# alpha 1100341 0 0.5
+# alpha 1300431 0 0.5
+# waitandnext 0.5
+
+# se "SE_3006"
+# sedelay "SE_9484" 0.6
+# sedelay "SE_9896" 1
+# fadein "white" 0.5
+# waitandnext 1
+
+# voice 530311 "cassius_ca_0023"
+# move 166 3 0
+# face 166 "surprise"
+# alpha 166 1 0.5
+# mask 166 off
+# textboxarrow 0 2
+# textwindow "normal"
+@カシウス
+…………！？
+
+;;カシウス（独白）
+# move 166 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 166 off
+@カシウス
+今の衝撃は…何？
+
+# alpha 166 0 0.5
+# move 1100341 2 0
+# face 1100341 "normal"
+# alpha 1100341 1 0.5
+# mask 1100341 on
+# move 1300431 4 0
+# face 1300431 "normal_1"
+# alpha 1300431 1 0.5
+# mask 1300431 on
+# textboxarrow 0 3
+# textwindow "normal"
+@天沼矛
+届いて下さい、この一撃！
+
+# textboxarrow 0 1
+@デュランダル
+私達がキラーメイルになってでも
+守りたかったもののために！

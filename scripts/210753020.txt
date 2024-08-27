@@ -1,0 +1,619 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;コマンドキラーズサイドストーリー前編シナリオ
+;;第3話　タイトル：欺く者
+;;3_2
+;;スクリプト最後の背景：村（ゴーストタウン）
+;;-----------------------------------------
+# script "lisp"
+# background "ghost_town"
+# bgm "bgm002" 0
+;;-----------------------------------------
+;;ヒョウハ
+# body 231
+# pos 231 3
+# scale 231 0.8 0
+# layer 231 2
+# alpha 231 0 0
+# mask 231 off
+;;神令ヒョウハ（ボイス用）
+# body 5402011
+# alpha 5402011 0 0
+;;如意金箍棒
+# body 232
+# pos 232 3
+# scale 232 0.8 0
+# layer 232 2
+# alpha 232 0 0
+# mask 232 off
+;;如意金箍棒・神令・フリッグ（ボイス用）
+# body 5203111
+# alpha 5203111 0 0
+;;カドケウス
+# body 600431
+# pos 600431 3
+# scale 600431 0.8 0
+# layer 600431 2
+# alpha 600431 0 0
+# mask 600431 off
+;;ケーリュケイオン
+# body 600531
+# pos 600531 3
+# scale 600531 0.8 0
+# layer 600531 2
+# alpha 600531 0 0
+# mask 600531 off
+;;ナーゲルリング
+# body 100621
+# pos 100621 3
+# scale 100621 0.8 0
+# layer 100621 2
+# alpha 100621 0 0
+# mask 100621 off
+;;-----------------------------------------
+;;第3話　タイトル：欺く者
+;;//背景：村（ゴーストタウン）
+# voice 540201 "hyoha_c_0027"
+# move 231 3 0
+# face 231 "normal"
+# alpha 231 1 0
+# mask 231 off
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+ふう…
+ここまで来れば、大丈夫だろ
+
+# move 231 2 0.5
+# mask 231 on
+# move 600431 4 0
+# face 600431 "sad"
+# alpha 600431 1 0.5
+# mask 600431 on
+# textboxarrow 0 3
+@カドケウス
+えっと～…
+あんたはヒョウハ…だよね？
+
+# textboxarrow 0 3
+@カドケウス
+何で一緒にいるんだっけ～…
+ちょっと記憶が曖昧かも…
+
+# face 231 "surprise"
+# textboxarrow 0 1
+@ヒョウハ
+お！
+ずっと一緒にいると、夜が明けても
+そのくらいは覚えてるんだな
+
+# face 231 "irregular"
+# textboxarrow 0 1
+@ヒョウハ
+でも、忘れていってるのは
+止めようがないか…
+そんじゃ、早めに
+
+# face 231 "normal"
+# textboxarrow 0 1
+@ヒョウハ
+あたしはヒョウハだ
+あんた、自分がブラオの町から
+逃げてきたのは覚えてるか？
+
+# face 600431 "usual"
+# textboxarrow 0 3
+@カドケウス
+それは覚えてるよ
+ケーリュケイオンと合流しようと
+思って…
+
+# face 600431 "sad"
+# textboxarrow 0 3
+@カドケウス
+あれ？
+誰か…利用できそうなキル姫がいた
+から連れてこようと思ってたような…
+
+;;ヒョウハ（独白）
+# move 231 2 0
+# face 231 "irregular"
+# textboxarrow 0 0
+# textwindow "moya"
+@ヒョウハ
+なるほど…
+やっぱ、あたしのことを利用する
+つもりだったんだな
+
+# face 231 "normal"
+# textboxarrow 0 1
+# textwindow "normal"
+@ヒョウハ
+まあ、細かいことは気にすんな！
+あたしは…
+
+# textboxarrow 0 1
+@ヒョウハ
+たまたま通りがかって、
+たまたま一緒に逃げただけだ
+
+# textboxarrow 0 3
+@カドケウス
+いや、そんな偶然ないでしょ
+…それにしても、おっかしいな～
+
+# textboxarrow 0 3
+@カドケウス
+てっきり、あたし達を追ってくると
+思ってたのに誰も追ってこないし…
+
+# textboxarrow 0 3
+@カドケウス
+おまけに夜明け前のすごい崩壊音
+あれ…どっちかの町の壁が崩れた音
+だと思うんだよね～
+
+# textboxarrow 0 3
+@カドケウス
+何が起きたんだろ？
+早くケーリュケイオンと合流して
+作戦練らないと…
+
+;;ヒョウハ（独白）
+# voice 540201 "hyoha_c_0019"
+# move 231 2 0
+# face 231 "sad"
+# textboxarrow 0 0
+# textwindow "moya"
+@ヒョウハ
+ニョイ子さんとは夜のうちに再会
+できなかったな…
+
+;;ヒョウハ（独白）
+# textboxarrow 0 0
+@ヒョウハ
+情報交換したかったけど、
+向こうはあたしのこと忘れてるだろう
+から無理か…
+
+# face 231 "normal"
+# textboxarrow 0 1
+# textwindow "normal"
+@ヒョウハ
+…ま、しょうがない
+切り替えていこう
+
+;;//ケーリュケイオンと如意金箍棒がやってくる
+# se "SE_5575"
+# textwindow "close"
+# alpha 231 0 0.5
+# alpha 600431 0 0.5
+# move 232 2 0
+# face 232 "normal"
+# alpha 232 1 0.5
+# mask 232 on
+# move 600531 4 0
+# face 600531 "normal"
+# alpha 600531 1 0.5
+# mask 600531 on
+# waitandnext 0.5
+
+# face 600531 "surprise"
+# textboxarrow 0 3
+# textwindow "normal"
+@ケーリュケイオン
+カドケウス！
+
+# alpha 232 0 0.5
+# alpha 600531 0 0.5
+# move 600431 3 0
+# face 600431 "normal"
+# alpha 600431 1 0.5
+# mask 600431 off
+# textboxarrow 0 2
+@カドケウス
+ケーリュケイオン！
+合流できたね～
+
+# alpha 600431 0 0.5
+# move 231 2 0
+# face 231 "surprise"
+# alpha 231 1 0.5
+# mask 231 on
+# textboxarrow 0 1
+# move 232 4 0
+# face 232 "normal"
+# alpha 232 1 0.5
+# mask 232 on
+@ヒョウハ
+お！ニョイ子さん
+…っと、しまった
+
+# face 232 "surprise"
+# textboxarrow 0 3
+@如意金箍棒
+ヒョウハちゃん！
+…って、いけないわ
+まずビコウに行ってもらって…
+
+# bgm "stop"
+# voice 540201 "hyoha_c_0022"
+# voice 520311 "nyoikinkobou_c_0022"
+# textboxarrow 0 0
+@ヒョウハ＆如意金箍棒
+えっ？
+
+# textboxarrow 0 3
+@ビコウ
+ウキー？
+
+# bgmfile "bgm429" "BgmIntegralNoahCommand" 0
+# voice 520311 "nyoikinkobou_c_0002"
+# face 232 "normal"
+# textboxarrow 0 3
+@如意金箍棒
+ヒョウハちゃん、
+もしかしてワタシのことを
+覚えているの？
+
+# face 231 "irregular"
+# textboxarrow 0 1
+@ヒョウハ
+ニョイ子さん、
+あたしのこと覚えてる？
+
+# textboxarrow 0 3
+@如意金箍棒
+ええと…ビコウは分かるわよね？
+
+# voice 540201 "hyoha_c_0003"
+# face 231 "normal"
+# textboxarrow 0 1
+@ヒョウハ
+ニョイ子さんの弟子だろ
+昨日、紹介してもらったから
+
+# face 232 "surprise"
+# textboxarrow 0 3
+@如意金箍棒
+昨日のことを覚えてるなんて！
+どうしてっ？
+
+# voice 540201 "hyoha_c_0002"
+# face 231 "irregular"
+# textboxarrow 0 1
+@ヒョウハ
+それはこっちの台詞なんだけど…
+なあ、ニョイ子さん
+実はさ…
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 231 2 0
+# face 231 "normal"
+# alpha 231 1 0
+# mask 231 on
+# move 232 4 0
+# face 232 "normal"
+# alpha 232 1 0
+# mask 232 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 3
+# textwindow "normal"
+@如意金箍棒
+そうだったのね
+ワタシと同じ呪いにかかってる
+キル姫がいただなんて…
+
+# voice 540201 "hyoha_c_0004"
+# face 231 "happy"
+# textboxarrow 0 1
+@ヒョウハ
+でも、同じ呪いを受けてる者同士は
+呪いが効かないみたいだなっ
+何か嬉しいよ！
+
+# voice 520311 "nyoikinkobou_c_0004"
+# face 232 "happy"
+# textboxarrow 0 3
+@如意金箍棒
+ワタシもよ、ヒョウハちゃん♪
+
+# face 232 "usual"
+# textboxarrow 0 3
+@如意金箍棒
+そうだわ…
+それなら昨日異族が町へ向かったのは
+ヒョウハちゃんがいたからなのね
+
+# face 231 "surprise"
+# textboxarrow 0 1
+@ヒョウハ
+え…？
+もしかして、ニョイ子さんも
+異族に狙われる体質なのか？
+
+# voice 520311 "nyoikinkobou_c_0003"
+# face 232 "normal"
+# textboxarrow 0 3
+@如意金箍棒
+ええ…
+だから、町から離れた場所で
+一人で異族と戦っていたの
+
+;;如意金箍棒（独白）
+# move 232 4 0
+# textboxarrow 0 0
+# textwindow "moya"
+@如意金箍棒
+誰にも気付かれないように
+人と関わらず、ただひっそりと
+
+;;如意金箍棒（独白）
+# textboxarrow 0 0
+@如意金箍棒
+この諦めにも似た感覚は
+誰にも理解されない
+そう思っていたのに
+
+# face 231 "normal"
+# textboxarrow 0 1
+# textwindow "normal"
+@ヒョウハ
+そっか…あたしと一緒だな！
+あたしもそんな感じだったんだ
+
+# textboxarrow 0 1
+@ヒョウハ
+呪いのせいだから仕方ないって
+割り切ってたけど、
+本当はちょっとしんどかったんだ
+
+# textboxarrow 0 1
+@ヒョウハ
+だけど、今はもう違う！
+呪いと向き合うって決めたから
+そのために旅をしてるんだ！
+
+# textboxarrow 0 3
+@如意金箍棒
+そうだったの…
+
+# textboxarrow 0 3
+@如意金箍棒
+同じ呪いを受けている人がいるなら
+呪いを解く手がかりも何か
+あるのかもしれないわね
+
+# voice 540201 "hyoha_c_0040"
+# face 231 "happy"
+# textboxarrow 0 1
+@ヒョウハ
+確かにそうだな！
+なんか希望が見えてきたよ！
+ニョイ子さんに会えてよかった！
+
+# voice 520311 "nyoikinkobou_c_0003"
+# face 232 "usual"
+# textboxarrow 0 3
+@如意金箍棒
+ええ、本当に
+あなたと出会えたから
+ワタシも――
+
+;;//カドケウスとケーリュケイオンがやってくる
+# se "SE_0719"
+# bgm "bgm002" 0
+# textwindow "close"
+# alpha 231 0 0.5
+# alpha 232 0 0.5
+# move 600531 2 0
+# face 600531 "normal"
+# alpha 600531 1 0.5
+# mask 600531 on
+# move 600431 4 0
+# face 600431 "usual"
+# alpha 600431 1 0.5
+# mask 600431 on
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# textwindow "normal"
+@カドケウス
+ね～、ちょっといいかな？
+そこのキル姫さん達
+
+# textboxarrow 0 1
+@ケーリュケイオン
+そっちがヒョウハで、そっちが…
+如意金箍棒…だったよね？
+
+# alpha 600531 0 0.5
+# alpha 600431 0 0.5
+# move 231 2 0
+# face 231 "irregular"
+# alpha 231 1 0.5
+# mask 231 on
+# move 232 4 0
+# face 232 "normal"
+# alpha 232 1 0.5
+# mask 232 on
+# textboxarrow 0 3
+@如意金箍棒
+そうよ
+かなり記憶があやふやになってる
+みたいね
+
+# textboxarrow 0 1
+@ヒョウハ
+あんた達、あたしらを利用しようと
+思って町から連れ出したんだけど、
+そのことも忘れてるんだろ？
+
+# voice 6004 "kadokeusu_0028"
+# alpha 231 0 0.5
+# alpha 232 0 0.5
+# move 600531 2 0
+# face 600531 "normal"
+# alpha 600531 1 0.5
+# mask 600531 on
+# move 600431 4 0
+# face 600431 "sad"
+# alpha 600431 1 0.5
+# mask 600431 on
+# textboxarrow 0 3
+@カドケウス
+ふ～ん…
+誰かを利用しようと考えてたのは
+覚えてるんだけど…
+
+# textboxarrow 0 1
+@ケーリュケイオン
+そっか～
+あなた達をね～
+
+# alpha 600531 0 0.5
+# alpha 600431 0 0.5
+# move 231 2 0
+# face 231 "normal"
+# alpha 231 1 0.5
+# mask 231 on
+# textboxarrow 0 1
+# move 232 4 0
+# face 232 "normal"
+# alpha 232 1 0.5
+# mask 232 on
+@ヒョウハ
+とりあえず、話を聞くよ
+二つの町の争いを止めたいんだろ？
+
+# face 232 "usual"
+# textboxarrow 0 3
+@如意金箍棒
+ワタシもお手伝いするわ
+そういう約束だったものね
+
+# alpha 231 0 0.5
+# alpha 232 0 0.5
+# move 600531 2 0
+# face 600531 "angry"
+# alpha 600531 1 0.5
+# mask 600531 on
+# textboxarrow 0 1
+# move 600431 4 0
+# face 600431 "usual"
+# alpha 600431 1 0.5
+# mask 600431 on
+@ケーリュケイオン
+何かちょっと怖いな～…
+どうする、カドケウス？
+
+# textboxarrow 0 3
+@カドケウス
+怖いよね、ケーリュケイオン
+でも…見るからにお人好しそうだから
+いけるんじゃない？
+
+# alpha 600531 0 0.5
+# alpha 600431 0 0.5
+# move 231 3 0
+# face 231 "irregular"
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+@ヒョウハ
+聞こえてるぞ…
+
+# voice 6004 "kadokeusu_0005"
+# alpha 231 0 0.5
+# move 600531 2 0
+# face 600531 "normal"
+# alpha 600531 1 0.5
+# mask 600531 on
+# move 600431 4 0
+# face 600431 "normal"
+# alpha 600431 1 0.5
+# mask 600431 on
+# textboxarrow 0 3
+@カドケウス
+あはは～
+それじゃ、話を聞いて…あ！
+
+# face 600531 "angry"
+# textboxarrow 0 1
+@ケーリュケイオン
+カドケウス、隠れた方が良いかも
+
+# face 600431 "usual"
+# textboxarrow 0 3
+@カドケウス
+だね～
+
+;;//カドケウスとケーリュケイオンが立ち去る
+# se "SE_0719"
+# textwindow "close"
+# alpha 600531 0 0.5
+# alpha 600431 0 0.5
+# waitandnext 0.5
+
+# bgm "stop"
+# move 231 3 0
+# face 231 "angry"
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ヒョウハ
+あ、おい！
+どこ行くんだよっ？
+
+# bgm "bgm005" 0
+# move 231 2 0.5
+# mask 231 on
+# move 100621 4 0
+# face 100621 "usual"
+# alpha 100621 1 0.5
+# mask 100621 on
+# textboxarrow 0 3
+@？？？
+誰ですか？
+
+# face 231 "surprise"
+# textboxarrow 0 1
+@ヒョウハ
+ん？
+村人…いや、キル姫か
+
+# textboxarrow 0 3
+@？？？
+この村に何の用ですか？
+それ以上、近づかないで下さい
+近づいたら敵と見なしますよ
+
+# voice 540201 "hyoha_c_0032"
+# face 231 "irregular"
+# textboxarrow 0 1
+@ヒョウハ
+分かった
+敵意はないよ
+たまたま通りがかっただけなんだ
+
+# face 231 "normal"
+# textboxarrow 0 1
+@ヒョウハ
+あたしはヒョウハ
+あんたは？
+
+# voice 1006 "nageruring_0004"
+# face 100621 "happy"
+# textboxarrow 0 3
+@ナーゲルリング
+私はナーゲルリングです
+どうぞよろしくお願いしますね

@@ -1,0 +1,197 @@
+;;【EP3】
+;;//背景　砂浜（リゾート）
+# script "lisp"
+# background "sea_beach_day"
+# bgmfile "bgm227" "BgmSeaEvent" 0
+# body 2200611
+# pos 2200611 3
+# mask 2200611 off
+# textboxarrow 0 2
+# chara 2200611
+# alpha 2200611 0 0
+# textflame 0 0
+@
+お粥を食べ終えたあとも、
+ダグダの様子はずっと変だった
+
+# voice 2006 "daguda_unit_1006"
+# face 2200611 "sad"
+# alpha 2200611 1 1
+# textflame 1 1
+@ダグダ
+…ねえ、マスター。キミは
+ダグダのことどう思ってる？
+
+# textflame 0 0
+@
+真剣な表情に、
+マスターも返事をためらう
+
+# textflame 0 0
+@
+――その時。
+
+# serif 1
+@男の声
+だ、誰かー！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+突然の声に振り向くと、
+バナナボートに振り落とされた
+子供が沖でおぼれていた！
+
+# textflame 0 0
+@
+マスターとダグダが共に駆け出す。
+しかし…距離が遠すぎる
+
+# face 2200611 "sad"
+# textflame 1 1
+@ダグダ
+（うう…太ったからなの？
+速く動けない…！）
+
+# face 2200611 "angry"
+# textflame 1 1
+@ダグダ
+（このままじゃ、あの子を
+助けられない。こんなダグダなんて、
+マスターも呆れるに決まってる…！）
+
+# select "ダグダ、子供を頼む！" "select_label_01" "子供を助けられるのは君だけだ！" "select_label_02" "君の力を見せてくれ！" "select_label_03"
+（このままじゃ、あの子を
+助けられない。こんなダグダなんて、
+マスターも呆れるに決まってる…！）
+
+# face 2200611 "sad"
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ダグダ
+―えっ、マスター！？
+
+# face 2200611 "sad"
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ダグダ
+…！？ダグダ…だけ？
+
+# face 2200611 "sad"
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ダグダ
+ダグダの…力…？
+
+# voice 2006 "daguda_0006"
+# face 2200611 "smile"
+# label "select_label_end"
+# textflame 1 1
+@ダグダ
+そっか！閃いたよ！
+泳いで間に合わないなら―
+
+# textflame 1 1
+@ダグダ
+海の方を、
+たたき割っちゃうんだから！
+
+# textflame 0 0
+@
+ダグダが叫んだ瞬間
+空から巨大な棍棒が
+振ってきて――
+
+# face 2200611 "angry"
+# se "SE_0602"
+# textflame 0 0
+@
+行くよ、新技！
+『爆流インパクト』！
+
+;;//演出　フラッシュ
+# fadein "white" 0.5
+# textflame 0 0
+@
+海面に落下した棍棒は
+海を真っ二つに叩き割って
+子供へと続く道をつくった！
+
+# textflame 0 0
+@
+それはまさしく
+彼女が新スキルに
+目覚めた瞬間だった
+
+# textflame 0 0
+@
+ダグダは海を割ってつくった道を
+駆け抜けると、見事子供を抱えて
+助け出したのだった
+
+;;//暗転（時間経過）
+;;//背景　砂浜（リゾート、夕方）
+# fadeout "black" 1.5
+# waitandnext 2
+
+# fadein "black" 1
+# background "sea_beach_evening"
+# textflame 0 0
+@
+その日の夕方―
+
+# voice 2006 "daguda_0001"
+# face 2200611 "normal"
+# textflame 1 1
+@ダグダ
+あ、マスター。
+…明日の予定？
+どうしてそんなこと聞くの？
+
+# textflame 0 0
+@
+マスターは、
+一日二人きりで過ごすっていう
+約束を守れなかったからと言う
+
+# voice 2006 "daguda_0004"
+# face 2200611 "smile"
+# textflame 1 1
+@ダグダ
+ふふっ、約束はもういいよ。
+ダグダ、欲しいものは
+もうちゃんともらったもん
+
+# textflame 1 1
+@ダグダ
+…そんなことよりマスター
+ダグダ、今日はいっぱい
+動いて疲れちゃったなぁ
+
+# imageset 0 "c2200611"
+# imagealpha 0 0 0
+# textflame 1 1
+@ダグダ
+だからマスターさえ
+よければだけど…また、
+ダグダのこと、おんぶしてくれる？
+
+;;@ダグダ
+;;マスターのためなら
+;;がんばってもいいかな
+# voice 2006 "daguda_kyara_1028"
+# frameout 0 0.5
+# buttonsout 0 0.5
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# fadein "white" 3
+# textwindow "close"

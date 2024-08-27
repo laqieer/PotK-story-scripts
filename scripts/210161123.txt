@@ -1,0 +1,198 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１６章 章タイトル「・中心部決戦―エクリプス―」
+;;第1話―１２　タイトル：妖精の国
+;;1_12_3
+;;スクリプト最後の背景：中心部（夜）：in_city_night
+;;-----------------------------------------
+# script "lisp"
+# background "in_city_night"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;ヴァリン
+# body 18
+# pos 18 3
+# scale 18 0.8 0
+# layer 18 2
+# alpha 18 0 0
+# mask 18 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;ゼロ
+# body 23
+# pos 23 3
+# scale 23 0.8 0
+# layer 23 2
+# alpha 23 0 0
+# mask 23 off
+# brightness 23 0.5 0
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0
+# mask 210 off
+# textflame 1 1
+# textboxarrow 0 2
+@カミト
+アスカロン！
+グリモワール！
+…二人ともどこ行ったんだろ？
+
+# textboxarrow 0 2
+@カミト
+早く合流して…
+合流して…
+
+;;カミト（独白）
+# voice 9936 "kamito_0030"
+# move 210 3 0
+# face 210 "normal"
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 210 off
+@カミト
+合流して…僕はどうするんだ？
+二人には絶対、止められるに
+決まってる
+
+;;カミト（独白）
+# face 210 "surprise"
+# textboxarrow 0 0
+@カミト
+そうなったらキラーメイル達は…
+ティルフィング…彼女だったら…
+ん？ティルフィング…？
+
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+…………
+
+;;//回想シーン
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "in_ragnarok_institution"
+# alpha 210 0 0.5
+# move 18 3 0
+# face 18 "normal"
+# alpha 18 1 0
+# mask 18 off
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：ラグナロク機関：in_ragnarok_institution
+# bgm "stop"
+# textboxarrow 0 2
+# textwindow "normal"
+@ヴァリン
+ありがとう
+その力を受け取ってくれたのね
+
+# textboxarrow 0 2
+@ヴァリン
+それは…私の贖罪みたいなものよ
+生きている間に完成して良かった
+
+# textboxarrow 0 2
+@ヴァリン
+私の代わりに彼らを、
+解放してあげて
+
+# voice 9993 "valyn_0036"
+# textboxarrow 0 2
+@ヴァリン
+お願いね
+ティルフィング！
+
+;;//回想終了
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "in_city_night"
+# alpha 18 0 0
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0
+# mask 210 off
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：中心部（夜）：in_city_night
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+ああ、そうだ…！
+あのとき…よく聞き取れなかった
+名前は、きっと…
+
+# face 210 "irregular"
+# textboxarrow 0 2
+@カミト
+ヴァリン博士は…
+インテグラルノア計画の構想を持って
+いたんだろうけど
+
+# textboxarrow 0 2
+@カミト
+それ以上に、ディスラプターを
+キラーメイルのために開発したんだ
+
+# textboxarrow 0 2
+@カミト
+だったら、ティルフィングも
+僕のようにキラーメイル達を！
+
+;;//魔獣化ゼロが現れる
+;;？？？（ゼロ）
+# bgmfile "bgm160" "BgmPJZero001" 0
+# alpha 210 0 0.5
+# move 23 3 0
+# face 23 "BeastMode_1"
+# alpha 23 1 0.5
+# mask 23 off
+# textboxarrow 0 2
+@？？？
+ガアアアアアアアアアアアアアア！！
+
+# voice 9936 "kamito_0023"
+# alpha 23 0 0.5
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+えっ…
+あれは…！
+
+# alpha 210 0 0.5
+# move 23 3 0
+# face 23 "BeastMode_1"
+# alpha 23 1 0.5
+# mask 23 off
+# textboxarrow 0 2
+@？？？
+ガアアアアアアアアアアアアアア！！

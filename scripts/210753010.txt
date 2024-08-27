@@ -1,0 +1,416 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;コマンドキラーズサイドストーリー前編シナリオ
+;;第3話　タイトル：欺く者
+;;3_1
+;;スクリプト最後の背景：町
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgmfile "bgm429" "BgmIntegralNoahCommand" 0
+;;-----------------------------------------
+;;ナーゲルリング
+# body 100621
+# pos 100621 3
+# scale 100621 0.8 0
+# layer 100621 2
+# alpha 100621 0 0
+# mask 100621 off
+;;ミュルグレス
+# body 230
+# pos 230 3
+# scale 230 0.8 0
+# layer 230 2
+# alpha 230 0 0
+# mask 230 off
+;;ミュルグレス・神令・トール（ボイス用）
+# body 5104611
+# alpha 5104611 0 0
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;第3話　タイトル：欺く者
+;;//背景：町
+# textflame 1 1
+# textboxarrow 0 0
+@？？？
+この剣は死を招き寄せる
+
+# textboxarrow 0 0
+@？？？
+知略、謀略、奸計、奇策
+自分のためなら裏切りだって
+厭わない
+
+# textboxarrow 0 0
+@？？？
+騙される前に騙して
+切られる前に八つ裂きにするの
+これは、そういう剣
+
+# textboxarrow 0 0
+@？？？
+だから生き存えてこられたのよ
+だって、みんな嘘ばかりだもの
+
+# textboxarrow 0 0
+@？？？
+キル姫としての使命？
+世界を救え？
+
+# textboxarrow 0 0
+@？？？
+そんな意味もわからない使命感が
+記憶によぎることはあったけど
+誰かのためなんて、バカみたい
+
+# textboxarrow 0 0
+@？？？
+信じてもらえたことがないのに
+信じることができる？
+
+# textboxarrow 0 0
+@？？？
+愛してもらえたことがないのに
+愛することができるの？
+
+# textboxarrow 0 0
+@？？？
+つまんない自己欺瞞はやめて
+自分の損得で生きようよ
+
+# textboxarrow 0 0
+@？？？
+それがミュルの――
+
+;;//回想シーン
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "005_Wilderness"
+# move 100621 3 0
+# face 100621 "usual"
+# alpha 100621 1 0
+# mask 100621 off
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：村
+# bgm "bgm002" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@ナーゲルリング
+私はナーゲルリングです
+どうぞよろしくお願いしますね
+
+;;//ミュルグレス視点想定なのでミュルグレスの立ち絵無しで
+# voice 510461 "murgleys_c_0001"
+# textboxarrow 0 0
+@？？？
+アンタ、ここで何してるの？
+
+# textboxarrow 0 2
+@ナーゲルリング
+私はマスターと一緒に
+この教会で子供達の面倒を見て
+いるんですよ
+
+# textboxarrow 0 2
+@ナーゲルリング
+マスターは祀官なんです
+教会本部との橋渡し役でして
+
+# voice 510461 "murgleys_c_0003"
+# textboxarrow 0 0
+@？？？
+ふーん…
+大変そうだね～
+
+# textboxarrow 0 0
+@？？？
+本当はアンタ、面倒だな～とか
+思ってるんでしょ？
+
+# textboxarrow 0 0
+@？？？
+こんなところで自分に子供達の
+面倒見させて…本当は自分のこと
+大切に思ってないんじゃ～…とか
+
+# face 100621 "worry"
+# textboxarrow 0 2
+@ナーゲルリング
+そんなことはありませんよ
+そんなことは…
+
+# textboxarrow 0 2
+@ナーゲルリング
+ちょっとくらいしか
+思ったことはありません
+
+# textboxarrow 0 2
+@ナーゲルリング
+マスターは私をどんなふうに
+扱うおつもりなのか、
+気にしてませんよ…ちょっとしか…
+
+# textboxarrow 0 0
+@？？？
+それって気にしてるよね～
+ナーゲルリング、
+かわいそ～っ
+
+# textboxarrow 0 0
+@？？？
+そんなマスター、
+先に裏切っちゃえば？
+
+# face 100621 "usual"
+# textboxarrow 0 2
+@ナーゲルリング
+そうですね
+そういう心の準備は、しています
+
+# face 100621 "worry"
+# textboxarrow 0 2
+@ナーゲルリング
+いえ！
+マスターを疑ってるわけじゃ
+ないんですよ
+
+# textboxarrow 0 2
+@ナーゲルリング
+あくまで心の準備です！
+
+# textboxarrow 0 0
+@？？？
+…………
+
+# serif 1
+@子供達
+ナーゲ！
+遊ぼーっ！
+
+# serif 1
+@子供達
+あれー？
+この子、誰ーっ？
+
+# serif 1
+@子供達
+きれいな服着てるー！
+貴族だ、貴族ーっ
+お姫様だーっ
+
+;;？？？（独白）
+;;立ち絵なしのためテキストウィンドウはそのまま。
+# serif 1
+# textwindow "close"
+# textboxarrow 0 0
+# serif 0
+@？？？
+何なの、この子供達
+
+;;？？？（独白）
+# voice 510461 "murgleys_c_0004"
+# textboxarrow 0 0
+@？？？
+そうだ
+ちょっと“遊んで”あげよっと
+
+# face 100621 "usual"
+# textboxarrow 0 2
+@ナーゲルリング
+こちらは――――――ですよ
+皆さん、お行儀良くして
+下さいね
+
+# textboxarrow 0 0
+@？？？
+気を遣わなくていいわよ
+せっかくだから、一緒に遊んで
+あげるわねっ
+
+# serif 1
+@子供達
+ほんとーっ？
+やったーっ！！
+
+;;//背景：村（夜）
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "005_Wilderness_Night"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm003" 0
+# move 100621 3 0
+# face 100621 "usual"
+# alpha 100621 1 0.5
+# mask 100621 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ナーゲルリング
+今日はありがとうございました
+マスターが忙しくて、私だけだと
+手が回らなくて…
+
+# textboxarrow 0 0
+@？？？
+お礼なんていらないわ
+じゃ、またね
+
+# voice 1006 "nageruring_0003"
+# face 100621 "happy"
+# textboxarrow 0 2
+@ナーゲルリング
+はい
+また～
+
+;;//背景：村
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "005_Wilderness"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm002" 0
+# move 100621 3 0
+# face 100621 "happy"
+# alpha 100621 1 0.5
+# mask 100621 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ナーゲルリング
+私はナーゲルリングです
+どうぞよろしくお願いしますね
+
+# voice 510461 "murgleys_c_0001"
+# textboxarrow 0 0
+@？？？
+アンタ、ここで何してるの？
+
+# face 100621 "usual"
+# textboxarrow 0 2
+@ナーゲルリング
+私はマスターと一緒に
+この教会で子供達の面倒を見て
+いるんですよ
+
+# textboxarrow 0 2
+@ナーゲルリング
+マスターは祀官なんです
+教会本部との橋渡し役でして
+
+# voice 510461 "murgleys_c_0003"
+# textboxarrow 0 0
+@？？？
+ふーん…
+大変そうだね～
+
+# textboxarrow 0 0
+@？？？
+子供達のお守り、手伝って
+あげようか？
+
+# voice 1006 "nageruring_0030"
+# face 100621 "happy"
+# textboxarrow 0 2
+@ナーゲルリング
+それは助かります♪
+でも…
+
+# textboxarrow 0 0
+@？？？
+なぁに？
+
+# face 100621 "usual"
+# textboxarrow 0 2
+@ナーゲルリング
+いえ…あなたのこと、
+疑ったりしてませんよ…
+ちょっとしか
+
+# textboxarrow 0 0
+@？？？
+疑うなんてひどいな～
+騙すようなキル姫に見える？
+
+# voice 1006 "nageruring_0031"
+# textboxarrow 0 2
+@ナーゲルリング
+そうですよね…
+すみません…
+
+;;？？？（独白）
+# voice 510461 "murgleys_c_0004"
+# textboxarrow 0 0
+@？？？
+ふふっ
+やっぱり…猜疑心が強いんだ
+
+;;？？？（独白）
+# textboxarrow 0 0
+@？？？
+これから毎日通って、
+少しずつその歪みを広げていって
+あげるね
+
+;;？？？（独白）
+# textboxarrow 0 0
+@？？？
+アンタの本心がさらけ出されたら、
+祀官やってるマスターを、
+どうしちゃうんだろうね？
+
+;;？？？（独白）
+# textboxarrow 0 0
+@？？？
+楽しみだなあ
+
+;;//回想終了
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "town"
+# alpha 100621 0 0
+# move 230 3 0
+# face 230 "normal"
+# alpha 230 1 0
+# mask 230 off
+# brightness 230 0 0
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：町
+;;//ミュルグレスのシルエットを出す
+# textboxarrow 0 2
+# textwindow "normal"
+@？？？
+…………バカみたい

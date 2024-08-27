@@ -1,0 +1,401 @@
+;;-----------------------------------------
+;;SEA2章_6
+;;-----------------------------------------
+# script "lisp"
+# background "sea_room"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 1 0
+;;クライノート
+# body 283
+# pos 283 1
+# scale 283 0.8 0
+# layer 283 2
+# mask 283 off
+# alpha 283 0 0
+;;フラン
+# body 284
+# pos 284 4
+# scale 284 0.8 0
+# layer 284 4
+# mask 284 off
+# alpha 284 0 0
+# reversal 284 0
+;;リットゥ
+# body 6100511
+# pos 6100511 2
+# scale 6100511 0.8 0
+# layer 6100511 2
+# mask 6100511 off
+# alpha 6100511 0 0
+;;シェキナー
+# body 6400711
+# pos 6400711 4
+# scale 6400711 0.8 0
+# layer 6400711 4
+# mask 6400711 off
+# alpha 6400711 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：屋敷（夜）
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# face 270 "normal"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+三人とも、あっという間に
+立ち去りました…
+
+# alpha 270 0 0.3
+# face 6100511 "happy"
+# face 284 "normal"
+# alpha 6100511 1 0.3
+# alpha 284 1 0.3
+# textboxarrow 0 1
+@リットゥ
+フラン、もう大丈夫だ
+怖がることなど何もない
+
+# textboxarrow 0 3
+@フラン
+リットゥ…
+本当？もう…怖い人はいない？
+
+# voice 1005 "ritto_0003"
+# textboxarrow 0 1
+@リットゥ
+もちろんだ
+私が追い払った
+だから安心していい
+
+;;クライノート氏がやって来る
+# se "SE_5575"
+# alpha 6100511 0 0.3
+# move 283 2 0.5
+# face 283 "normal"
+# alpha 283 1 0.3
+# textboxarrow 0 1
+@クライノート
+フラン！大丈夫かいっ？
+
+# face 284 "happy"
+# textboxarrow 0 3
+@フラン
+お父さま！
+リットゥが守ってくれたの
+
+# textboxarrow 0 1
+@クライノート
+そうか
+良かった…
+本当に良かった…
+
+# alpha 283 0 0.3
+# alpha 284 0 0.3
+# face 270 "sad"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+…………
+
+;;選択肢
+# select "どうかした？" "select_label_01"
+…………
+
+# label "select_label_01"
+# voice 9917 "mimir_navikan_0034"
+# face 270 "normal"
+# textboxarrow 0 2
+@ミーミル
+あ、いえ…
+少し余計なことを考えてしまいました
+
+# textboxarrow 0 2
+@ミーミル
+シェキナーさんを追い返したので
+心配しなくても良いと思うのですが…
+
+# textboxarrow 0 2
+@ミーミル
+皆さん、「特別な宝石」について
+気にされていないように
+お見受けしたもので
+
+# face 270 "surprise"
+# textboxarrow 0 2
+@ミーミル
+あっ
+それよりシェキナーさん達を
+追わないといけませんね
+
+# face 270 "angry"
+# textboxarrow 0 2
+@ミーミル
+急いで追いかけましょう
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;町（夜）
+# background "town_night_2"
+# bgm "stop"
+# se "SE_6211"
+# alpha 270 0 0
+# waitandnext 0.2
+
+# move 270 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 6400711 "normal"
+# alpha 6400711 1 0.4
+# waitandnext 0.5
+
+# move 270 2 0.4
+# face 270 "angry"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+シェキナーさん
+お待ち下さい！
+
+# face 6400711 "surprise"
+# textboxarrow 0 3
+@シェキナー
+あら？
+貴方達、よく私を
+見つけることができましたね
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+それは、その…
+
+;;選択肢
+# select "すごく派手だから" "select_label_02" "すごく輝いてるから" "select_label_02"
+貴方達、よく私を
+見つけることができましたね
+
+# label "select_label_02"
+# voice 4007 "shekina_0004"
+# face 6400711 "shy"
+# textboxarrow 0 3
+@シェキナー
+まあっ♪
+それでしたら仕方ないですね
+
+# textboxarrow 0 3
+@シェキナー
+私の輝きは、
+隠しようがありませんから
+
+# face 6400711 "normal"
+# textboxarrow 0 3
+@シェキナー
+それで、私に何かご用ですか？
+
+# sestop "SE_6211"
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+シェキナーさん
+落ち着いて聞いて下さい
+
+# textboxarrow 0 1
+@ミーミル
+恐らくアナタは「揺らぎ」に
+囚われているのです
+
+# voice 4007 "shekina_0022"
+# face 6400711 "surprise"
+# textboxarrow 0 3
+@シェキナー
+「揺らぎ」？
+私が揺らいでいると？
+
+# voice 9917 "mimir_navikan_0003"
+# textboxarrow 0 1
+@ミーミル
+はい
+アナタが怪盗になってしまったのも
+きっとその影響です
+
+;;暗転
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+# se "bgm602_basic_on"
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# voice 4007 "shekina_0040"
+# face 270 "normal"
+# face 6400711 "normal"
+# textwindow "nomal"
+# textboxarrow 0 3
+@シェキナー
+なるほど
+それで貴方達は各地のキル姫に
+注意を促しているんですね
+
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+シェキナーさん
+自分自身の中にある強い感情に
+負けないで下さい
+
+# textboxarrow 0 1
+@ミーミル
+「揺らぎ」を自覚して
+打ち勝とうとすれば、必ず
+「揺らぎ」は収まります
+
+# voice 4007 "shekina_0004"
+# textboxarrow 0 3
+@シェキナー
+とても面白い話でした
+あれは「揺らぎ」の影響によるもの
+だったのですね
+
+# voice 9917 "mimir_navikan_0004"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+ご理解いただけたようで
+安心致しました
+では…
+
+# se "bgm602_rhythm_on"
+#setnextbgmblock 1
+# voice 4007 "shekina_0013"
+# face 6400711 "sad"
+# textboxarrow 0 3
+@シェキナー
+残念ですが、「揺らぎ」の影響を
+受けているのは私ではありません
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+えっ？
+
+# voice 4007 "shekina_0028"
+# face 6400711 "usual"
+# textboxarrow 0 3
+@シェキナー
+どうやら貴方達も
+囚われているようですね
+急がないと…
+
+# voice 9917 "mimir_navikan_0002"
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+あの、シェキナーさん
+アナタは「揺らぎ」の影響で
+怪盗になってしまったのでは…？
+
+# textboxarrow 0 3
+@シェキナー
+いいえ、違います
+おかしくなっているのは
+リットゥの方です
+
+# textboxarrow 0 3
+@シェキナー
+先程の「揺らぎ」のお話、
+リットゥにしてあげてください
+
+# face 6400711 "sad"
+# textboxarrow 0 3
+@シェキナー
+それでも、彼女は認めようと
+しないでしょうけれど
+本当に頭が固いんだから…
+
+# textboxarrow 0 3
+@シェキナー
+このようなこと、私だって本当は
+したくないのです…
+
+#setnextbgmblock 2
+# textboxarrow 0 3
+@シェキナー
+確かに輝く物は好きですけれど、
+盗んだ物は後でこっそり
+お返ししていますし…
+
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+シェキナーさん？
+
+# face 6400711 "normal"
+# textboxarrow 0 3
+@シェキナー
+それでは、私はこれで
+もうじき夜が明けます
+
+;;シェキナーが立ち去る
+# se "SE_0740"
+# move 6400711 5 0.5
+# scale 6400711 0.7 0.5
+# alpha 6400711 0 0.4
+# textwindow "close"
+# waitandnext 0.5
+
+# move 270 3 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+ああっ、シェキナーさん！
+
+# voice 9917 "mimir_navikan_0001"
+# face 270 "sad"
+# textboxarrow 0 2
+@ミーミル
+マスター様、
+どういうことなのでしょう…
+
+# textboxarrow 0 2
+@ミーミル
+怪盗になってしまった
+シェキナーさんではなく、お屋敷を
+守っているリットゥさんこそが…
+
+# textboxarrow 0 2
+@ミーミル
+「揺らぎ」の影響を受けているとは
+
+# textboxarrow 0 2
+@ミーミル
+シェキナーさんの発言を
+信じても良いのでしょうか？
+
+# fadeout "black" 1
+# waitandnext 1

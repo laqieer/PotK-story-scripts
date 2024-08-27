@@ -1,0 +1,680 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第2話　タイトル：雷霆の絆
+;;2_6
+;;スクリプト最後の背景：町（夜）
+;;-----------------------------------------
+# script "lisp"
+# background "006_church"
+# bgm "stop"
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.8 0
+# layer 502711 2
+# alpha 502711 0 0
+# mask 502711 off
+;;ダモクレス
+# body 103511
+# pos 103511 3
+# scale 103511 0.8 0
+# layer 103511 2
+# alpha 103511 0 0
+# mask 103511 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;テュルソス
+# body 600321
+# pos 600321 3
+# scale 600321 0.8 0
+# layer 600321 2
+# alpha 600321 0 0
+# mask 600321 off
+;;ブリューナク
+# body 500721
+# pos 500721 3
+# scale 500721 0.8 0
+# layer 500721 1
+# alpha 500721 0 0
+# mask 500721 off
+;;フラガラッハ
+# body 101011
+# pos 101011 3
+# scale 101011 0.8 0
+# layer 101011 2
+# alpha 101011 0 0
+# mask 101011 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第2話　タイトル：雷霆の絆
+;;//背景：教会
+# se "SE_0648"
+# move 103511 3 0
+# face 103511 "surprise"
+# alpha 103511 1 0
+# mask 103511 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1035 "damocles_battle_0002"
+@ダモクレス
+わーっ！
+
+;;//ダモクレスが上から逆さまに現れる
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+# textwindow "close"
+# alpha 103511 0 0.5
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# waitandnext 0.8
+
+# move 103511 2 0
+# face 103511 "surprise"
+# alpha 103511 1 0
+# mask 103511 on
+# leftin 103511 0.3
+# waitandnext 0.3
+
+# face 196 "angry"
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 9943 "almace_navikan_0036"
+@アルマス
+ちょっと！
+いきなり何よっ？
+
+# face 103511 "happy"
+# textboxarrow 0 1
+# voice 1035 "damocles_0005"
+@ダモクレス
+あはははっ！
+びっくりした？
+ねえ、びっくりした？
+
+# alpha 196 0 0.5
+# move 103611 4 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 3
+# voice 1036 "ragnarok_0027"
+@ラグナロク
+ダモクレス…
+色々と見えてるわよ
+
+# face 103511 "usual"
+# textboxarrow 0 1
+# voice 1035 "damocles_0028"
+@ダモクレス
+クレスは気にしないのにな～
+愛さえあれば問題ない！
+
+# alpha 103511 0 0.5
+# alpha 103611 0 0.5
+# move 502711 3 0
+# face 502711 "normal"
+# alpha 502711 1 0.5
+# mask 502711 off
+# textboxarrow 0 2
+# voice 5027 "freischotz_0002"
+@フライシュッツ
+ラグナロクちゃん、アルマスちゃん
+お話し終わった～？
+
+# alpha 502711 0 0.5
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# voice 1036 "ragnarok_0003"
+@ラグナロク
+ひとまずは、ね…
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0003"
+@アルマス
+協力してアルテミスと戦うことに
+なったけど、アポロンは本当に
+外されるの？
+
+# alpha 103611 0 0.5
+# move 600321 2 0
+# face 600321 "sad"
+# alpha 600321 1 0.5
+# mask 600321 on
+# textboxarrow 0 1
+# voice 6003 "tyurusosu_0028"
+@テュルソス
+あー、やっぱりそういうことに
+なっちゃったかー…
+
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+あなた、
+ケラウノス達と一緒にいた…
+
+# face 600321 "normal"
+# textboxarrow 0 1
+# voice 6003 "tyurusosu_0002"
+@テュルソス
+テュルソスよ
+さっきはありがとねっ
+
+# textboxarrow 0 1
+@テュルソス
+一緒に戦うことになった
+みたいだし、
+仲良くやりましょ！
+
+# textboxarrow 0 1
+# voice 6003 "tyurusosu_0004"
+@テュルソス
+とりあえず、町を案内してあげる！
+ついて来て！
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+もう夜よ
+ラグナロクもあまり
+無理させられないし…
+
+# textboxarrow 0 1
+@テュルソス
+カレットの町は夜が楽しいのよ
+アルマスだけでも、どう？
+
+# alpha 600321 0 0.5
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+@ラグナロク
+アルマス、私は大丈夫よ
+ダモクレスと会ってから、
+また調子が良くなってるの
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0004"
+@アルマス
+パラケルススの言う通りみたいね
+あなたがいいなら…
+
+# alpha 103611 0 0.5
+# alpha 196 0 0.5
+# move 600321 3 0
+# face 600321 "normal"
+# alpha 600321 1 0.5
+# mask 600321 off
+# textboxarrow 0 2
+# voice 6003 "tyurusosu_0032"
+@テュルソス
+決まりだね！
+みんな私についといで！
+
+# alpha 600321 0 0.5
+# move 103511 3 0
+# face 103511 "happy"
+# alpha 103511 1 0.5
+# mask 103511 off
+# textboxarrow 0 2
+# voice 1035 "damocles_0021"
+@ダモクレス
+やった～！
+夜のお出かけだ～っ
+
+;;//背景：町（夜）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "town_night"
+# alpha 103511 0 0
+# move 502711 3 0
+# face 502711 "happy"
+# alpha 502711 1 0
+# mask 502711 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 5027 "freischotz_0006"
+@フライシュッツ
+わ～っ
+夜なのにお店がいっぱい出てて
+賑やかね～♪
+
+# alpha 502711 0 0.5
+# move 600321 3 0
+# face 600321 "normal"
+# alpha 600321 1 0.5
+# mask 600321 off
+# textboxarrow 0 2
+# voice 6003 "tyurusosu_0004"
+@テュルソス
+これが喧噪と享楽の町、
+カレット！
+楽しく親睦を深めましょっ
+
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 600321 4 0.5
+# mask 600321 on
+# voice 1036 "ragnarok_0028"
+@ラグナロク
+あなたの親睦の深め方って…
+
+# face 600321 "happy"
+# textboxarrow 0 3
+@テュルソス
+もちろん酒宴よ！
+このテュルソスの酒が飲めないなんて
+野暮なことは言わないわよね～？
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "town_night"
+# alpha 103611 0 0
+# alpha 600321 0 0
+# move 600321 2 0
+# face 600321 "normal"
+# alpha 600321 1 0
+# mask 600321 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0
+# mask 196 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 9943 "almace_navikan_0055"
+@アルマス
+どこもかしこもお祭り騒ぎね
+いつも、こうなの？
+
+# textboxarrow 0 1
+@テュルソス
+楽しいでしょ！
+ほらほら～！
+杯が空いてるよ？
+
+# face 600321 "happy"
+# textboxarrow 0 1
+@テュルソス
+食べものもあるから、
+好きに食べてね～♪
+
+# face 196 "happy"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0006"
+@アルマス
+あ！チョコがある
+これ好きなのよねっ
+
+# textboxarrow 0 1
+@テュルソス
+チョコってワインに合うわよね～
+
+# face 196 "normal"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0001"
+@アルマス
+ねえ…町の案内って言いながら、
+宴会してるだけよね？
+こんなことしてて良いの？
+
+# textboxarrow 0 3
+@アルマス
+今だってアルテミスは
+この町の人達を連れ去ってるかも
+しれないのに
+
+# face 600321 "normal"
+# textboxarrow 0 1
+@テュルソス
+意外と真面目だね～
+でも、休むときはとことんくつろぐ
+ってのが私のモットーなの！
+
+# textboxarrow 0 1
+@テュルソス
+気を張ってばかりいると、
+いざというとき
+力を発揮できなくなるわよっ
+
+# textboxarrow 0 1
+@テュルソス
+アルテミスといえば、
+“偽りなき清淑”だっけ
+
+# textboxarrow 0 1
+@テュルソス
+清く正しく生きてる人達を
+選んでるっていうけど、そんな
+生き方、簡単じゃないわよ
+
+# textboxarrow 0 1
+@テュルソス
+誰だって多かれ少なかれ他人に
+迷惑かけて生きてるんだから
+それに気づくか気づかないかってだけ
+
+# textboxarrow 0 1
+# voice 6003 "tyurusosu_0028"
+@テュルソス
+まあ、私なんかお酒がないと生きて
+いけないキル姫だし、アルテミス
+基準だと一発アウトよね～
+
+# alpha 600321 0 0.5
+# alpha 196 0 0.5
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+ケラウノスもデュカキス大奏官も
+似たようなこと言っていたわね
+
+# move 103611 2 0.5
+# mask 103611 on
+# move 600321 4 0
+# face 600321 "sad"
+# alpha 600321 1 0.5
+# mask 600321 on
+# textboxarrow 0 3
+# voice 6003 "tyurusosu_0027"
+@テュルソス
+似たもの同士が集まってるのよ
+だから、余計ややこしいのかもね…
+
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0002"
+@ラグナロク
+ねえ
+アルテミスは元々、
+あなた達のところにいたの？
+
+# face 600321 "normal"
+# textboxarrow 0 3
+@テュルソス
+ん？
+ひょっとしてアポロンのこと
+気にしてくれてる？
+
+# textboxarrow 0 3
+@テュルソス
+アルテミスはうちの部隊には
+いなかったよ
+
+# textboxarrow 0 3
+@テュルソス
+でも、キル姫だからね
+キラーズの影響は
+もろに受けちゃうのよ
+
+# textboxarrow 0 1
+@ラグナロク
+それでアポロンはアルテミスと
+戦えずにいるのね…
+
+# alpha 103611 0 0.5
+# alpha 600321 0 0.5
+# move 500721 2 0
+# face 500721 "normal"
+# alpha 500721 1 0.5
+# mask 500721 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 1
+# voice 5007 "buryunaku_0002"
+@ブリューナク
+アルマス、少しいいか？
+
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+何？
+もしかしてアルテミスが――
+
+# textboxarrow 0 1
+@ブリューナク
+お前の腕に触れることを
+許可して欲しい
+
+# textboxarrow 0 3
+@アルマス
+私の腕？
+いいけど…
+
+# se "SE_10131"
+# move 500721 3 0.5
+# face 500721 "happy"
+# textboxarrow 0 2
+# voice 5007 "buryunaku_0030"
+@ブリューナク
+感謝する
+…うむ、いいな
+
+# face 196 "surprise"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0035"
+@アルマス
+えっ…？
+何…？
+
+# textboxarrow 0 2
+@ブリューナク
+実にいい
+すらりとしていて、
+程よく引き締まった良い腕だ
+
+# face 196 "angry"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0015"
+@アルマス
+何なのっ？
+どんな酔い方してるのよっ？
+
+# alpha 500721 0 0.5
+# move 101011 2 0
+# face 101011 "normal"
+# alpha 101011 1 0.5
+# mask 101011 on
+# textboxarrow 0 1
+# voice 1010 "furagaraha_0004"
+@フラガラッハ
+ふふふっ
+ごめんなさいね、マスター
+ブリューナクは腕フェチなの
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0042"
+@アルマス
+その情報、知りたくなかったわ…！
+
+# alpha 101011 0 0.5
+# alpha 196 0 0.5
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# move 500721 4 0
+# face 500721 "normal"
+# alpha 500721 1 0.5
+# mask 500721 on
+# textboxarrow 0 3
+# voice 5007 "buryunaku_0005"
+@ブリューナク
+ラグナロク、お前の腕も…いいな
+少しだけ…
+
+# face 103611 "surprise"
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0022"
+@ラグナロク
+ええっ…
+
+# alpha 103611 0 0.5
+# alpha 500721 0 0.5
+# move 101011 2 0
+# face 101011 "normal"
+# alpha 101011 1 0.5
+# mask 101011 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+誰かブリューナクを止めて！
+
+# textboxarrow 0 1
+# voice 1010 "furagaraha_0033"
+@フラガラッハ
+任せて、マスター
+少し夜風に当たって
+彼女の酔いを覚ましてくるわ
+
+;;//フラガラッハがブリューナクを連れていく
+# se "SE_0740"
+# textwindow "close"
+# alpha 101011 0 0.5
+# waitandnext 1
+
+# alpha 196 0 0.5
+# move 101011 2 0
+# face 101011 "normal"
+# alpha 101011 1 0.5
+# mask 101011 on
+# move 500721 4 0
+# face 500721 "normal"
+# alpha 500721 1 0.5
+# mask 500721 on
+# waitandnext 0.8
+
+# leftout 101011 0.5
+# leftout 500721 0.5
+# waitandnext 0.5
+
+# alpha 101011 0 0.5
+# alpha 500721 0 0.5
+# move 196 3 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9943 "almace_navikan_0041"
+@アルマス
+ブリューナクの思いがけない一面を
+見せられた…
+
+# alpha 196 0 0.5
+# move 600321 3 0
+# face 600321 "happy"
+# alpha 600321 1 0.5
+# mask 600321 off
+# textboxarrow 0 2
+# voice 6003 "tyurusosu_0005"
+@テュルソス
+きゃははは！
+お酒は本性を
+さらけ出してくれるからねぇ
+
+# alpha 600321 0 0.5
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+それにしても――
+
+;;//画面揺れ
+# se "SE_5223"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# shake 0 1
+# waitandnext 1
+
+# alpha 103611 0 0.5
+# move 103511 3 0
+# face 103511 "normal"
+# alpha 103511 1 0.5
+# mask 103511 off
+# textboxarrow 0 2
+# voice 1035 "damocles_0002"
+@ダモクレス
+あ～っ！
+空に光が飛んでいったよ！
+
+# se "SE_0833"
+# alpha 103511 0 0.5
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# move 196 4 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0035"
+@アルマス
+反転したユグドラシルが…
+淡く光った…！？
+
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0003"
+@ラグナロク
+以前、ブリューナクが
+言っていた通りね
+ということは…
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+あの光のふもとに
+まだアルテミスがいるかもっ

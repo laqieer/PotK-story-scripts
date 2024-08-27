@@ -1,0 +1,194 @@
+;;【ＥＰ２】
+# script "lisp"
+# background "sea_jungle_day"
+# bgmfile "bgm230" "BgmSeaEvent" 0
+# body 2301011
+# pos 2301011 3
+# mask 2301011 off
+# scale 2301011 0.8 0
+# alpha 2301011 0 0
+# face 2301011 "angry"
+# textflame 0 0
+# textboxarrow 0 2
+@
+ジャングルに潜む異族たちの
+妨害を乗り越えながら
+ロンゴミアントたちは進んでいた
+
+# face 2301011 "normal"
+# alpha 2301011 1 0.5
+# textflame 1 1
+# voice 3010 "rhongomiant_0001"
+@ロンゴミアント
+マスター、ガイドブックによれば
+薬草が群生している地点は
+もう少し行った先だそうです
+
+# face 2301011 "sad"
+# textflame 1 1
+# voice 3010 "rhongomiant_0022"
+@ロンゴミアント
+…あれ？マスター？
+なんだか髪の毛が急に
+ふさふさしていませんか？
+
+;;モノローグ
+# textflame 0 0
+@
+ロンゴミアントはさっきから
+近くのシダ植物に話しかけている
+
+# textflame 1 1
+# voice 3010 "rhongomiant_0023"
+@ロンゴミアント
+あ、あれ？
+マスターがそちらにもいる？
+どうして…って、はわわっ！
+
+;;モノローグ
+# textflame 0 0
+@
+振り返った拍子に派手に転び
+マスターに体を預ける
+
+;;モノローグ
+# textflame 0 0
+@
+問題ないように振舞っているが
+熱による不調は
+確実に進行しているらしかった
+
+# select "今からでも戻って休んでいた方が…" "select_label_01" "危ないから、しっかり手を繋ごう" "select_label_02" "ひたいに手を当てて熱を計る" "select_label_03"
+問題ないように振舞っているが
+熱による不調は
+確実に進行しているらしかった
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンゴミアント
+ご心配には及びません！
+ここまで来たんですからっ！
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンゴミアント
+ひゃっ！だ、だめです！
+今、汗がひどいですから、その…
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ロンゴミアント
+きゃっ！
+よけい熱が出てしまいそうです…
+
+# label "select_label_end"
+# face 2301011 "normal"
+# textflame 1 1
+# voice 3010 "rhongomiant_0031"
+@ロンゴミアント
+あはは、すみません…
+ちょ、ちょっとそこの小川で
+休憩して来ますねっ！
+
+;;モノローグ
+# alpha 2301011 0 0.5
+# textflame 0 0
+@
+ロンゴミアントは慌てた様子で
+その場から離れていく
+
+# face 2301011 "sad"
+;;モノローグ
+# textflame 0 0
+@
+心配になったマスターが後を追うと
+彼女は木陰でうなだれていた
+
+# alpha 2301011 1 0.5
+# textflame 1 1
+# voice 3010 "rhongomiant_0015"
+@ロンゴミアント
+はぁ…
+私ったら、なにやってるんだろう…
+
+# textflame 1 1
+@ロンゴミアント
+マスターを守らないといけないのに
+マスターの足を引っ張ってばかり…
+
+# textflame 1 1
+@ロンゴミアント
+やっぱり今は
+おとなしく休むべきなのかな…
+
+# face 2301011 "angry"
+# textflame 1 1
+@ロンゴミアント
+ううん、違うよ
+マスターにもしもの事があったら
+この熱よりも苦しいもの！
+
+# face 2301011 "sad"
+# textflame 1 1
+# voice 3010 "rhongomiant_0022"
+@ロンゴミアント
+だから私はこれからも…
+って、マスター！？
+いつからそこにいたのですか！
+
+# face 2301011 "smile"
+# textflame 1 1
+@ロンゴミアント
+し、心配には及びませんよ！
+私はこの通り…
+
+;;モノローグ
+# se "SE_0655"
+# alpha 2301011 0 0.5
+# textflame 0 0
+@
+胸を張ろうとしたロンゴミアントが
+足を滑らせて川に落ちる
+大きく水しぶきが舞った
+
+;;もやもやメッセージウィンドウ
+# alpha 2301011 1 0.5
+# face 2301011 "sad"
+# move 2301011 3 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "moya"
+# textboxarrow 1 0
+# voice 3010 "rhongomiant_0015"
+@ロンゴミアント
+うう…
+やはりこれは熱病に違いないようです
+
+;;もやもやメッセージウィンドウ
+# move 2301011 3 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "moya"
+# textboxarrow 1 0
+@ロンゴミアント
+はやく薬草を手に入れないと
+マスターに迷惑をかけっぱなしです…
+
+# face 2301011 "angry"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+@ロンゴミアント
+はっ！これは異族の気配…！
+こんな時に…
+マスター、下がっていてください

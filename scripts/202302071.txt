@@ -1,0 +1,276 @@
+;;-----------------------------------------
+;;SEAイベント不可欠彩度レルム2_3_1
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "stop"
+;;-----------------------------------------
+;;パンドラ
+# body 62001111
+# pos 62001111 5
+# scale 62001111 0.8 0
+# layer 62001111 2
+# mask 62001111 off
+# alpha 62001111 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 3
+# scale 6603811 0.8 0
+# layer 6603811 2
+# mask 6603811 off
+# alpha 6603811 0 0
+;;天上編ダモクレス
+# body 103511
+# pos 103511 3
+# scale 103511 0.8 0
+# layer 103511 2
+# mask 103511 off
+# alpha 103511 0 0
+;;天上編プタハ
+# body 601411
+# pos 601411 1
+# scale 601411 0.8 0
+# layer 601411 4
+# alpha 601411 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：明かりの消えた通路
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# sedelay "bgm602_rhythm_on" 1
+# move 62001111 4 0.5
+# alpha 62001111 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@パンドラ
+…こっちね
+
+# textflame 0 0
+@
+かろうじて足元が見える程度の
+薄暗い道や階段を進む一行
+
+# move 601411 2 0.5
+# alpha 601411 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@プタハ
+よし、皆気をつけて続くんだ
+
+# textflame 0 0
+@
+パンドラを先頭に続いてマクリル
+人々を誘導するプタハに
+殿をダモクレスという布陣での脱出行
+
+# voice 6014 "ptah_0028"
+# face 601411 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@プタハ
+それにしても、調査があるのに
+脱出を手伝ってもらってよいのか？
+
+# voice 6200111 "pandora_0003"
+# textboxarrow 0 3
+@パンドラ
+『裏側』の気配はあそこで
+途絶えてたとマクリルは言うし…
+
+# textboxarrow 0 3
+@パンドラ
+私達も手伝ったほうが
+どうにかなると思ったのよ
+
+# voice 660381 "maclir_ura_0028"
+# alpha 62001111 0 0.3
+# alpha 601411 0 0.3
+# alpha 6603811 1 0.3
+# se "bgm602_basic_on_1"
+# textboxarrow 0 2
+@マクリル
+途絶えてたっていうか…
+
+# move 601411 4 0
+# face 601411 "normal"
+# alpha 601411 1 0.3
+# move 6603811 2 0.5
+# textboxarrow 0 3
+@プタハ
+いずれにせよ
+こちらとしては助かる話だ
+引き続きよろしく頼む
+
+# voice 660381 "maclir_ura_0003"
+# face 6603811 "usual"
+# textboxarrow 0 1
+@マクリル
+うん…でも本当に大丈夫かなぁ
+
+# textboxarrow 0 3
+@プタハ
+我にパンドラ、ダモクレスに
+そなたもいるのであれば
+滅多なことにはならぬであろう？
+
+# alpha 601411 0 0.3
+# alpha 62001111 1 0.3
+# textboxarrow 0 3
+@パンドラ
+そう、大丈夫よマクリル
+
+#setnextbgmblock 1
+# textboxarrow 0 1
+@マクリル
+えっと、そうじゃなくて
+『裏側』の気配が濃くて
+いつ『揺らぎ』が起きるか…
+
+# face 62001111 "surprise"
+# se "bgm602_tension_on"
+# textboxarrow 0 3
+@パンドラ
+降りる時は
+そうでもなかったはずよね？
+不安定な状況が続いたせいかしら
+
+# face 6603811 "angry"
+# textboxarrow 0 1
+@マクリル
+わからない…
+
+# face 601411 "sad"
+# alpha 601411 1 0.3
+# alpha 62001111 0 0.3
+# textboxarrow 0 3
+@プタハ
+しかし、今『揺らぎ』が起きて
+魔獣が溢れ出してくるのは厄介だ
+
+# face 6603811 "usual"
+# textboxarrow 0 1
+@マクリル
+…………
+
+# alpha 601411 0 0.3
+# face 62001111 "angry"
+# alpha 62001111 1 0.3
+# textboxarrow 0 3
+@パンドラ
+でも、どうしようもないわ
+とにかく進みましょう
+
+# alpha 62001111 0 0.3
+# alpha 6603811 0 0.3
+# face 103511 "sad"
+# alpha 103511 1 0.3
+# textboxarrow 0 2
+@ダモクレス
+…………
+
+# textflame 0 0
+@
+集団の最後尾でパンドラ達の
+会話を遠目に見つめるダモクレスは
+どこか上の空という雰囲気だった…
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：崩壊したカコルフェタワー内部
+# background "006_jail"
+# alpha 103511 0 0
+# waitandnext 0.2
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 6014 "ptah_0006"
+# move 601411 3 0
+# mask 601411 off
+# face 601411 "surprise"
+# alpha 601411 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@プタハ
+開けたところに出た…
+次のフロアに着いたのか
+
+# alpha 601411 0 0.3
+# face 62001111 "normal"
+# layer 62001111 2
+# mask 62001111 off
+# alpha 62001111 1 0.3
+# face 6603811 "normal"
+# layer 6603811 4
+# mask 6603811 on
+# alpha 6603811 1 0.3
+# textboxarrow 0 3
+@パンドラ
+ここにも逃げ遅れた人達がいたはず…
+
+# voice 660381 "maclir_ura_0024"
+# textboxarrow 0 1
+@マクリル
+あ、あそこ…っ！
+
+# alpha 62001111 0 0.3
+# alpha 6603811 0 0.3
+;;魔獣の鳴き声
+# se "SE_0779"
+# textflame 0 0
+@
+あたりを見渡していたマクリルの
+視線の先にはパンドラの言う人々と
+少数ではあるが魔獣の姿があった
+
+# voice 6014 "ptah_battle_0005"
+# move 601411 2 0
+# mask 601411 on
+# layer 601411 4
+# face 601411 "mad"
+# alpha 601411 1 0.3
+# face 62001111 "angry"
+# alpha 62001111 1 0.3
+# bgm "bgm022" 0
+# textflame 1 1
+# textboxarrow 0 1
+@プタハ
+まずい…っ！
+
+# textboxarrow 0 3
+@パンドラ
+私達が来たんだから
+もう大丈夫よ！
+
+# alpha 601411 0 0.3
+# alpha 62001111 0 0.3
+# alpha 103511 1 0.3
+# textboxarrow 0 2
+@ダモクレス
+う、うん！
+
+;;バトル
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 103511 0 0
+# waitandnext 0.2

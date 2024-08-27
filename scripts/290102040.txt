@@ -1,0 +1,592 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第2話　タイトル：雷霆の絆
+;;2_4
+;;スクリプト最後の背景：町
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;アスクレピオス
+# body 600131
+# pos 600131 3
+# scale 600131 0.8 0
+# layer 600131 2
+# alpha 600131 0 0
+# mask 600131 off
+;;アルテミス
+# body 5400131
+# pos 5400131 3
+# scale 5400131 0.8 0
+# layer 5400131 2
+# alpha 5400131 0 0
+# mask 5400131 off
+;;ケラウノス
+# body 500131
+# pos 500131 3
+# scale 500131 0.8 0
+# layer 500131 2
+# alpha 500131 0 0
+# mask 500131 off
+;;アポロン
+# body 400331
+# pos 400331 3
+# scale 400331 0.8 0
+# layer 400331 2
+# alpha 400331 0 0
+# mask 400331 off
+;;テュルソス
+# body 600321
+# pos 600321 3
+# scale 600321 0.8 0
+# layer 600321 2
+# alpha 600321 0 0
+# mask 600321 off
+;;ブリューナク
+# body 500721
+# pos 500721 3
+# scale 500721 0.8 0
+# layer 500721 2
+# alpha 500721 0 0
+# mask 500721 off
+;;フラガラッハ
+# body 101011
+# pos 101011 3
+# scale 101011 0.8 0
+# layer 101011 2
+# alpha 101011 0 0
+# mask 101011 off
+;;-----------------------------------------
+;;第2話　タイトル：雷霆の絆
+;;//背景：町
+# voice 540013 "arutemisu_iz_0027"
+# move 5400131 2 0
+# face 5400131 "normal"
+# alpha 5400131 1 0
+# mask 5400131 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 500131 4 0
+# face 500131 "normal"
+# alpha 500131 1 0
+# mask 500131 on
+@アルテミス
+抵抗は無意味だというのに、
+あなた達もしつこいですね
+
+# voice 5001 "keraunosu_0007"
+# textboxarrow 0 3
+@ケラウノス
+無意味かどうかはやってみないと
+分からないと思うな～
+
+# textboxarrow 0 3
+@ケラウノス
+それに君って美人だから
+私も追いかけたくなるんだよね～っ
+
+# face 5400131 "angry"
+# textboxarrow 0 1
+@アルテミス
+風紀を乱す発言は許しません
+やはり、あなたは射抜きます
+
+# voice 5001 "keraunosu_0005"
+# face 500131 "happy"
+# textboxarrow 0 3
+@ケラウノス
+あはははっ！
+冷たい視線も可愛いな～♪
+
+# textboxarrow 0 1
+@アルテミス
+恥を知りなさい！
+
+;;//アルテミスの攻撃をケラウノスが避ける
+# se "SE_4301"
+# sedelay "SE_5204" 0.6
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# move 500131 5 0.1
+# face 500131 "normal"
+# waitandnext 0.5
+
+# voice 9943 "almace_navikan_0035"
+# alpha 5400131 0 0.5
+# alpha 500131 0 0.5
+# move 600131 2 0
+# face 600131 "normal"
+# alpha 600131 1 0.5
+# mask 600131 on
+# move 196 4 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+またキル姫っ？
+彼女は…
+
+# textboxarrow 0 1
+@アスクレピオス
+ケラウノスよ
+マスターに部隊を任されてる
+うちのリーダー…一応ね
+
+# alpha 600131 0 0.5
+# alpha 196 0 0.5
+# move 500131 3 0
+# face 500131 "happy"
+# alpha 500131 1 0.5
+# mask 500131 off
+# textboxarrow 0 2
+@ケラウノス
+あ！
+アスクレピオスだ！
+お帰り～っ
+
+# face 500131 "normal"
+# textboxarrow 0 2
+@ケラウノス
+丁度いいところに帰ってきてくれたね
+…って、そっちにいる美人のお姉さん
+達は誰っ？紹介してよ～っ
+
+# voice 6001 "asukurepiosu_0010"
+# alpha 500131 0 0.5
+# move 600131 3 0
+# face 600131 "angry"
+# alpha 600131 1 0.5
+# mask 600131 off
+# textboxarrow 0 2
+@アスクレピオス
+バカなこと言ってないで
+戦闘に集中しなさい！
+
+# alpha 600131 0 0.5
+# move 5400131 3 0
+# face 5400131 "angry"
+# alpha 5400131 1 0.5
+# mask 5400131 off
+# textboxarrow 0 2
+@アルテミス
+お仲間の言う通りですよ
+
+;;//アルテミスが矢を射る
+# se "SE_4301"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;//画面端にアポロン
+# alpha 5400131 0 0.5
+# move 400331 4 0
+# face 400331 "amazed"
+# alpha 400331 1 0.5
+# mask 400331 on
+# textboxarrow 0 3
+@アポロン
+…………
+
+# alpha 400331 0 0.5
+# move 500131 3 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 off
+# textboxarrow 0 2
+@ケラウノス
+おっとと…
+アポロンは、やっぱり無理か…
+テュルソス！
+
+# voice 6003 "tyurusosu_0032"
+# alpha 500131 0 0.5
+# move 600321 3 0
+# face 600321 "normal"
+# alpha 600321 1 0.5
+# mask 600321 off
+# textboxarrow 0 2
+@テュルソス
+準備はできてるわよ！
+私の力、見せてあげる！
+
+# se "SE_4500"
+# waitandnext 0.5
+
+# se "SE_5204"
+# alpha 600321 0 0.5
+# move 5400131 3 0
+# face 5400131 "angry"
+# alpha 5400131 1 0.5
+# mask 5400131 off
+# textboxarrow 0 2
+@アルテミス
+罠ですか
+浅はかですねっ
+
+# se "SE_4301"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 6003 "tyurusosu_0023"
+# alpha 5400131 0 0.5
+# move 600321 3 0
+# face 600321 "sad"
+# alpha 600321 1 0.5
+# mask 600321 off
+# textboxarrow 0 2
+@テュルソス
+嘘ぉっ？
+こっちの攻撃を避けながら
+反撃してくるなんてっ…
+
+# alpha 600321 0 0.5
+# move 500131 3 0
+# face 500131 "sad"
+# alpha 500131 1 0.5
+# mask 500131 off
+# textboxarrow 0 2
+@ケラウノス
+うーん…
+決定力に欠けるなあ
+
+# alpha 500131 0 0.5
+# move 600131 3 0
+# face 600131 "normal"
+# alpha 600131 1 0.5
+# mask 600131 off
+# textboxarrow 0 2
+@アスクレピオス
+アポロン…
+やっぱり、あの子…
+
+# voice 1036 "ragnarok_0037"
+# alpha 600131 0 0.5
+# move 103611 3 0
+# face 103611 "usual"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+…？
+
+# alpha 103611 0 0.5
+# move 500721 2 0
+# face 500721 "normal"
+# alpha 500721 1 0.5
+# mask 500721 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+ブリューナク、お願い！
+
+# se "SE_5208"
+# voice 5007 "buryunaku_0032"
+# textboxarrow 0 1
+@ブリューナク
+了解した
+ブリューナク、標的を撃滅する
+
+# se "SE_4400"
+# waitandnext 0.5
+
+# voice 5001 "keraunosu_0004"
+# alpha 500721 0 0.5
+# alpha 196 0 0.5
+# move 500131 3 0
+# face 500131 "happy"
+# alpha 500131 1 0.5
+# mask 500131 off
+# textboxarrow 0 2
+@ケラウノス
+わわっ！
+すっごい美人が増えたね～♪
+
+# se "SE_5204"
+# alpha 500131 0 0.5
+# move 5400131 3 0
+# face 5400131 "normal"
+# alpha 5400131 1 0.5
+# mask 5400131 off
+# textboxarrow 0 2
+@アルテミス
+魔弾ですか
+大した問題ではありません
+
+# alpha 5400131 0 0.5
+# move 500721 3 0
+# face 500721 "normal"
+# alpha 500721 1 0.5
+# mask 500721 off
+# textboxarrow 0 2
+@ブリューナク
+計算を上回る回避行動を確認
+再計算を行い、プランＢに移行する
+
+# alpha 500721 0 0.5
+# move 5400131 3 0
+# face 5400131 "normal"
+# alpha 5400131 1 0.5
+# mask 5400131 off
+# textboxarrow 0 2
+@アルテミス
+何をしようとも無意味です
+
+# voice 1010 "furagaraha_0004"
+# move 5400131 2 0.5
+# mask 5400131 on
+# move 101011 4 0
+# face 101011 "normal"
+# alpha 101011 1 0.5
+# mask 101011 on
+# textboxarrow 0 3
+@フラガラッハ
+ふふっ
+そんなこと言わないで
+私の刃を味わってね
+
+# voice 540013 "arutemisu_iz_0039"
+# textboxarrow 0 1
+@アルテミス
+ほう…
+いつの間に？
+
+;;//アルテミスが離れる
+# se "SE_9021"
+# textwindow "close"
+# leftout 5400131 0.5
+# waitandnext 0.5
+
+# alpha 5400131 0 0
+# face 101011 "sad"
+# textboxarrow 0 3
+# textwindow "normal"
+@フラガラッハ
+あら、残念…
+
+# voice 5001 "keraunosu_0020"
+# alpha 101011 0 0.5
+# move 500131 3 0
+# face 500131 "happy"
+# alpha 500131 1 0.5
+# mask 500131 off
+# textboxarrow 0 2
+@ケラウノス
+やりぃ～！
+あっちの子も美人だ！
+
+# move 600321 2 0
+# face 600321 "normal"
+# alpha 600321 1 0.5
+# mask 600321 on
+# textboxarrow 0 1
+# move 500131 4 0.5
+# mask 500131 on
+@テュルソス
+君、そればっかりだね…
+
+# alpha 600321 0 0.5
+# alpha 500131 0 0.5
+# move 5400131 3 0
+# face 5400131 "angry"
+# alpha 5400131 1 0.5
+# mask 5400131 off
+# textboxarrow 0 2
+@アルテミス
+これでは町に被害が出るばかりです
+一旦、出直しましょう
+
+;;//アルテミスが去っていく
+# se "SE_9021"
+# textwindow "close"
+# leftout 5400131 0.5
+# waitandnext 0.5
+
+# alpha 5400131 0 0
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+あ！
+あいつ逃げるわよっ
+
+# voice 5001 "keraunosu_0004"
+# move 500131 2 0
+# face 500131 "happy"
+# alpha 500131 1 0.5
+# mask 500131 on
+# textboxarrow 0 1
+# move 196 4 0.5
+# mask 196 on
+@ケラウノス
+おおっと～
+追いかけるのはやめておこうよ
+可愛い子ちゃん♪
+
+# voice 9943 "almace_navikan_0015"
+# textboxarrow 0 3
+@アルマス
+何よ、あなたっ？
+
+# face 500131 "normal"
+# textboxarrow 0 1
+@ケラウノス
+私はケラウノス
+それより、下手な追撃は返り討ちに
+遭う危険性が高いよ
+
+# textboxarrow 0 1
+@ケラウノス
+ここは彼女を追い払えただけで
+良しとしよう
+
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+そうなの…？
+
+# alpha 500131 0 0.5
+# alpha 196 0 0.5
+# move 600321 3 0
+# face 600321 "angry"
+# alpha 600321 1 0.5
+# mask 600321 off
+# textboxarrow 0 2
+@テュルソス
+アポロン！
+行っちゃダメ！
+
+# voice 9943 "almace_navikan_0035"
+# alpha 600321 0 0.5
+# move 500131 2 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 on
+# move 196 4 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+えっ？
+
+# face 500131 "amazed"
+# textboxarrow 0 1
+@ケラウノス
+あちゃ～…
+ここで動いちゃうか…
+
+;;//アポロンがアルテミスに迫る
+# textwindow "close"
+# alpha 500131 0 0.5
+# alpha 196 0 0.5
+# move 5400131 2 0
+# face 5400131 "normal"
+# alpha 5400131 1 0.5
+# mask 5400131 on
+# waitandnext 0.8
+
+# se "SE_5575"
+# move 400331 4 0
+# face 400331 "normal"
+# alpha 400331 1 0
+# mask 400331 on
+# rightin 400331 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# textwindow "normal"
+@アポロン
+お姉ちゃん…！
+
+# voice 540013 "arutemisu_iz_0022"
+# face 5400131 "surprise"
+# textboxarrow 0 1
+@アルテミス
+追ってくるのは…
+アポロンですか
+
+# textboxarrow 0 3
+@アポロン
+お姉ちゃん！
+ボクっ…
+
+# face 5400131 "angry"
+# textboxarrow 0 1
+@アルテミス
+戻りなさい、アポロン…！
+
+;;//アルテミスがアポロンを射る
+# se "SE_4301"
+# waitandnext 0.5
+
+# se "SE_4815"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 4003 "aporon_0037"
+# face 400331 "sad"
+# textboxarrow 0 3
+@アポロン
+あぐっ…？
+お姉…ちゃん…
+
+;;//アポロンが倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 400331 0 0.5
+# waitandnext 1
+
+# alpha 5400131 0 0.5
+# move 600321 3 0
+# face 600321 "angry"
+# alpha 600321 1 0.5
+# mask 600321 off
+# textboxarrow 0 2
+# textwindow "normal"
+@テュルソス
+アポロン！！
+急がないとっ…
+
+# voice 9943 "almace_navikan_0032"
+# alpha 600321 0 0.5
+# move 500131 2 0
+# face 500131 "amazed"
+# alpha 500131 1 0.5
+# mask 500131 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+何で無防備に突っ込んでんのよ、
+あいつ！
+
+# voice 5001 "keraunosu_0013"
+# textboxarrow 0 1
+@ケラウノス
+あ～あ…
+やっちゃったね～

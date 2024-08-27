@@ -1,0 +1,266 @@
+;;【EP2】戦闘後
+# script "lisp"
+# background "forest"
+# bgm "bgm003" 0
+# voice 3018 "forcas_0039"
+# alpha 24 0 0
+# alpha 102321 0 0
+# body 301821
+# pos 301821 4
+# scale 301821 0.8 0
+# body 300111
+# pos 300111 2
+# scale 300111 0.8 0
+# body 24
+# pos 24 4
+# scale 24 0.8 0
+# body 101411
+# pos 101411 4
+# alpha 101411 0 0
+# body 102321
+# pos 102321 2
+# scale 102321 0.8 0
+# textflame 1 1
+# textboxarrow 0 3
+# face 301821 "surprise"
+# chara 301821
+@フォルカス
+…ロンギヌスさんって…強いんですね
+
+# textboxarrow 0 1
+# voice 3001 "ronginusu_0015"
+# face 300111 "shy"
+# chara 300111
+@ロンギヌス
+いえ、私なんて…まだまだです
+私よりも強い人は
+たくさんいますから…
+
+;;//モヤモヤ吹き出し
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# serif 1
+# textwindow "moya"
+# textboxarrow 1 0
+# face 301821 "normal"
+# chara 301821
+@フォルカス
+…この言葉が正しいかどうかは
+わからないけど、少なくとも
+今の私はこの人の力に遠く及ばない…
+
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# background "forest"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# alpha 300111 0 0
+# alpha 301821 0 0
+# alpha 24 1 0
+# alpha 102321 1 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.6
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 24 "normal"
+# chara 24
+@ティルフィング
+…ふぅ
+おつかれさま
+
+# textboxarrow 0 1
+# voice 1023 "ascalon_0021"
+# chara 24
+@アスカロン
+…ティルフィングさんの戦ってる姿、
+すごくカッコよかったです！
+
+# emotionbody 6001 11 24 85 260
+# effectpattern 6001 1 0
+# effectstart 6001
+# textboxarrow 0 1
+# voice 1023 "ascalon_0029"
+# face 24 "surprise"
+# face 102321 "angry"
+# chara 24
+@アスカロン
+決めた！
+私、ティルフィングさんみたいに
+なれるようがんばります！
+
+# effectskip 6001
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0008"
+# face 24 "shy"
+# chara 24
+@ティルフィング
+そ、そう…？目標とするのなら、
+もっと素晴らしい姫が
+他にもいるとは思いますが…
+
+# select "二人とも一緒に来てくれる？" "select_label_01" "いい先輩達だろう？" "select_label_02"
+そ、そう…？目標とするのなら、
+もっと素晴らしい姫が
+他にもいるとは思いますが…
+
+# alpha 24 0 0.3
+# alpha 301821 1 0.5
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 1
+# face 102321 "happy"
+# chara 102321
+@アスカロン
+もちろんです！
+
+# alpha 24 0 0.3
+# alpha 301821 1 0.5
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 3
+# face 301821 "sad"
+# chara 301821
+@フォルカス
+…そこまではまだ
+なんとも言えません
+
+# label "select_label_end"
+# textboxarrow 0 1
+# face 102321 "angry"
+# chara 102321
+@アスカロン
+マスター、
+これからよろしくお願いします！
+
+;;//SE：お腹がなる音
+;;//アスカロン、照れ
+# emotionbody 5844 9 102321 -60 200
+# effectpattern 5844 1 0
+# effectstart 5844
+# face 102321 "shy"
+# se "SE_0671"
+# waitandnext 1
+
+# effectskip 5844
+# voice 1023 "ascalon_0042"
+# chara 102321
+@アスカロン
+…と、とりあえずご飯、
+食べさせて下さい…！
+
+;;//アスカロンとフォルカスの回想終了
+;;//画面フェードアウト
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fadeout "white" 2.3
+# waitandnext 2.7
+
+# fadein "white" 1
+# background "town"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# face 102321 "normal"
+# face 301821 "happy"
+# waitandnext 1.1
+
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 301821
+@フォルカス
+…ふふっ、教会についた途端、
+アスカロンってば出されたパンに
+かぶりついちゃって…
+
+# emotionbody 5806 9 102321 -60 165
+# effectpattern 5806 6 0
+# effectstart 5806
+# textboxarrow 0 1
+# voice 1023 "ascalon_0009"
+# face 102321 "shy"
+# chara 102321
+@アスカロン
+そ、そのことは忘れてください！
+
+# effectskip 5806
+# textboxarrow 0 1
+# face 102321 "angry"
+# chara 102321
+@アスカロン
+…そんなことより、任務のことです！
+
+# textboxarrow 0 1
+# voice 1023 "ascalon_0015"
+# chara 102321
+# face 102321 "sad"
+@アスカロン
+自分達が逃しちゃった異族ですから、
+ティルフィングさん達、
+きっと気にしてると思うんです
+
+# textboxarrow 0 1
+# face 102321 "normal"
+# chara 102321
+@アスカロン
+だから、私達が倒してしまえば
+安心するだろうし、
+ほめてくれたりもするかも…
+
+# textboxarrow 0 3
+# chara 301821
+# face 301821 "normal"
+@フォルカス
+…そうかもしれないね
+
+# textboxarrow 0 1
+# face 102321 "angry"
+# chara 102321
+@アスカロン
+でしょ！？
+だから私、頑張りたいんです！
+
+;;//モヤモヤ吹き出し
+# serif 1
+# textwindow "moya"
+# textboxarrow 1 0
+# face 301821 "sad"
+# chara 301821
+@フォルカス
+…私は、ロンギヌスに対して
+アスカロンのように
+憧れたりはしていないけど…
+
+# serif 1
+# chara 301821
+@フォルカス
+認めてほしいという思いは
+きっと私にもあるのだろう
+
+# serif 1
+# chara 301821
+@フォルカス
+ロンギヌスと対等に
+ものが言えるようになるためには…

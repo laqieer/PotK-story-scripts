@@ -1,0 +1,242 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー12章
+;;タイトル：因果、転輪
+;;5-4-3
+;;背景：地底
+;;-----------------------------------------
+# script "lisp"
+# background "underground_world_3"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス
+# body 172
+# pos 172 2
+# scale 172 0.8 0
+# alpha 172 1 0
+;;ティターニア
+# body 139
+# pos 139 4
+# scale 139 0.8 0
+# alpha 139 1 0
+;;マサムネ
+# body 3100111
+# pos 3100111 4
+# scale 3100111 0.8 0
+# alpha 3100111 0 0
+;;ロンギヌス
+# body 3300111
+# pos 3300111 2
+# scale 3300111 0.8 0
+# alpha 3300111 0 0
+;;スイハ
+# body 3401719
+# pos 3401719 3
+# scale 3401719 0.8 0
+# alpha 3401719 0 0
+# mask 3401719 off
+;;カシウス
+# body 3303111
+# pos 3303111 4
+# scale 3303111 0.8 0
+# alpha 3303111 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+# alpha 172 1 0
+# alpha 139 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 172 "angry"
+# voice 1038 "almace_0015"
+@アルマス
+くっ…まだ…まだよっ…
+私はまだ…戦える…！
+
+# textboxarrow 0 3
+# face 139 "surprise"
+# voice 9967 "titania_0035"
+@ティターニア
+アルマス…
+
+# textboxarrow 0 1
+@アルマス
+ティニ…こんな状況…今までだって
+何度もあったでしょ…
+
+# textboxarrow 0 1
+@アルマス
+ここから…絶・逆転するんだから…
+安心…して…
+
+# alpha 172 0 0.5
+# alpha 139 0 0.5
+# alpha 3401719 1 0.5
+# textboxarrow 0 2
+# face 3401719 "normal"
+# voice 340171 "suiha_c_0007"
+@スイハ
+憐れですね
+あなたが頼りにしている者達は
+皆、倒れましたよ
+
+# alpha 3401719 0 0.5
+# alpha 3100111 1 0.5
+# alpha 3300111 1 0.5
+# textboxarrow 0 3
+# face 3100111 "sad"
+# voice 310011 "masamune_ge_0037"
+@マサムネ
+主君…アルマス殿…
+すまぬ…
+
+# textboxarrow 0 1
+# face 3300111 "sad"
+# voice 330111 "ronginusu_t_0038"
+@ロンギヌス
+私はただ…居場所が欲しかった…
+だけなのに…
+
+# alpha 3100111 0 0.5
+# alpha 3300111 0 0.5
+# alpha 172 1 0.5
+# alpha 139 1 0.5
+# textboxarrow 0 1
+# voice 1038 "almace_0038"
+@アルマス
+そう…
+だけど…私はまだ立ってる…
+マスターだって…いる！
+
+# textboxarrow 0 1
+@アルマス
+今の私が絶・好調――
+
+;;スイハの矢がアルマスに刺さる
+# se "SE_4815"
+# fadein "red" 1
+# waitandnext 0.7
+
+# textboxarrow 0 3
+@ティターニア
+アルマス…！？
+
+# textboxarrow 0 1
+# voice 1038 "almace_battle_0008"
+@アルマス
+あ…カハッ…！
+
+# se "SE_5288"
+# alpha 172 0 0.5
+# waitandnext 0.5
+
+# alpha 139 0 0.5
+# alpha 3401719 1 0.5
+# face 3401719 "angry"
+# textboxarrow 0 2
+@スイハ
+先程、言いましたよ
+滅びの時だと
+さようなら
+
+# alpha 3401719 0 0.5
+# move 172 3 0
+# mask 172 off
+# alpha 172 1 0.5
+# textboxarrow 0 2
+# voice 1038 "almace_battle_0007"
+@アルマス
+まだ…まだよぉっ…！
+
+# alpha 172 0 0.5
+# alpha 3401719 1 0.5
+# textboxarrow 0 2
+# voice 340171 "suiha_c_0027"
+@スイハ
+しぶといですね
+では、次で本当に最後です
+
+;;スイハが矢を放つ
+# bgm "stop"
+# se "SE_9018"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;カシウスが防御する
+# alpha 3401719 0 0.5
+# alpha 172 1 0.5
+# waitandnext 0.5
+
+# se "SE_3006"
+# mask 172 on
+# mask 3303111 on
+# alpha 3303111 1 0
+# rightin 3303111 0.3
+# fadein "white" 0.3
+# waitandnext 0.7
+
+# move 172 2 0.5
+# textboxarrow 0 1
+# face 172 "surprise"
+@アルマス
+…………！？
+
+# bgmfile "bgm279" "BgmLostRagnarokBattle002" 0
+# textboxarrow 0 3
+# face 3303111 "normal"
+# voice 3031 "cassius_ge_0037"
+@カシウス
+時の巡りを越えて
+邂逅するための儀式に
+想像を絶する困難を要したの
+
+# textboxarrow 0 3
+# face 3303111 "angry"
+@カシウス
+機を逸しかけたこと
+わたし自身の胸も傷んでいることを
+伝えておきたい
+
+# textboxarrow 0 1
+# face 172 "surprise"
+# voice 1038 "almace_0022"
+@アルマス
+えっと…
+それって…遅刻したことを…
+謝ってるの…？
+
+# textboxarrow 0 3
+# face 3303111 "sad"
+# voice 3031 "cassius_ge_0028"
+@カシウス
+否定する材料を
+わたしは持ち合わせていない
+
+# textboxarrow 0 1
+# face 172 "sad"
+@アルマス
+だから…回りくどいんだってば…
+
+# alpha 172 0 0.5
+# alpha 3303111 0 0.5
+# alpha 3401719 1 0.5
+# textboxarrow 0 2
+# face 3401719 "surprise"
+# voice 340171 "suiha_c_0022"
+@スイハ
+どういうことですか？
+掌握は完全に遂行されたはずなのに
+
+# alpha 3401719 0 0.5
+# move 3303111 3 0
+# mask 3303111 off
+# alpha 3303111 1 0.5
+# textboxarrow 0 2
+# face 3303111 "angry"
+# voice 3031 "cassius_ge_0003"
+@カシウス
+輪廻の縁を掴むことができた僥倖、
+この時に全て賭けるわ

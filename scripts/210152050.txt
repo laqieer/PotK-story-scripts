@@ -1,0 +1,587 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１５章 章タイトル「クリティカルフェイズ―連携―」
+;;第2話―５　タイトル：終焉を望む者
+;;2_5_0
+;;スクリプト最後の背景：室内
+;;-----------------------------------------
+# script "lisp"
+# background "church_room"
+# bgm "stop"
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;ラグナロク・擬装・ガンナー
+# body 5103621
+# pos 5103621 3
+# scale 5103621 0.8 0
+# layer 5103621 2
+# alpha 5103621 0 0
+# mask 5103621 off
+;;グランテピエ・獣刻・バハムート
+# body 5303411
+# pos 5303411 3
+# scale 5303411 0.8 0
+# layer 5303411 3
+# alpha 5303411 0 0
+# mask 5303411 off
+;;アルテミス
+# body 5400131
+# pos 5400131 3
+# scale 5400131 0.8 0
+# layer 5400131 2
+# alpha 5400131 0 0
+# mask 5400131 off
+;;ムー
+# body 161
+# pos 161 3
+# scale 161 0.6 0
+# layer 161 4
+# alpha 161 0 0
+# mask 161 off
+;;キプル
+# body 163
+# pos 163 3
+# scale 163 0.6 0
+# layer 163 4
+# alpha 163 0 0
+# mask 163 off
+;;ヴァリン
+# body 18
+# pos 18 3
+# scale 18 0.8 0
+# layer 18 2
+# alpha 18 0 0
+# mask 18 off
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;第2話―５　タイトル：終焉を望む者
+;;//背景：室内：church_room
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0
+# mask 196 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0022"
+@アルマス
+う…んん……ハッ！
+
+# face 196 "sad" 0 2
+# textboxarrow 0 2
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 2
+@アルマス
+あれ？
+私…今まで何を…
+
+# move 5303411 4 0
+# face 5303411 "happy"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# move 196 2 0.5
+# mask 196 on
+# textboxarrow 0 3
+# voice 530341 "grandepieu_di_0004"
+@グランテピエ
+アルマス！
+目が覚めたんだね
+良かった
+
+# face 196 "surprise"
+# textboxarrow 0 1
+# voice 9943 "almace_navikan_0035"
+@アルマス
+えっ？
+ちょっと…あなた誰？
+
+# face 5303411 "surprise"
+# textboxarrow 0 3
+# voice 530341 "grandepieu_di_0022"
+@グランテピエ
+あ…あれ…？
+お姉ちゃんだよ
+忘れちゃったの、かな…
+
+# alpha 196 0 0.5
+# alpha 5303411 0 0.5
+# move 161 3 0
+# alpha 161 1 0.5
+# textboxarrow 0 2
+@ムー
+随分、長いこと会ってなかった
+みてぇだし、仕方ないんじゃねぇか
+
+# alpha 161 0 0.5
+# move 196 2 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# move 5303411 4 0
+# face 5303411 "sad"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# textboxarrow 0 3
+@グランテピエ
+でも…
+
+# textboxarrow 0 1
+@アルマス
+お姉ちゃん？
+私に姉なんて…
+
+# voice 530341 "grandepieu_di_0015"
+# textboxarrow 0 3
+@グランテピエ
+ううっ…ごめんね…
+長い間、一人にしちゃったから…
+
+# textboxarrow 0 3
+@グランテピエ
+たとえ、この身が滅んでも
+守ってみせるって誓ったのに…
+絶対のぜーったいに…
+
+# face 196 "sad"
+# textboxarrow 0 1
+@アルマス
+絶対…？
+
+;;//荒廃した街中の背景を一瞬映す（地上編背景devastated_city_night）
+# textwindow "close"
+# se "SE_0742"
+# fadeout "white" 1.0
+# waitandnext 1.0
+
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# alpha 196 0 0
+# alpha 5303411 0 0
+# background "devastated_city_night"
+# waitandnext 0.2
+
+# fadein "white" 1.0
+# waitandnext 1.5
+
+;;//ティルヘルムの背景を一瞬映す（fairy_world）
+# se "SE_0742"
+# fadeout "white" 1.0
+# waitandnext 1.0
+
+# background "fairy_world"
+# waitandnext 0.2
+
+# fadein "white" 1.0
+# waitandnext 1.5
+
+;;//地下施設の背景を一瞬映す（bifrost）
+# se "SE_0742"
+# fadeout "white" 1.0
+# waitandnext 1.0
+
+# background "bifrost"
+# waitandnext 0.2
+
+# fadein "white" 1.0
+# waitandnext 1.5
+
+;;//背景：ラグナロク機関（in_ragnarok_institution）
+;;//ヴァリン、グランテピエを映す
+# se "SE_0742"
+# fadeout "white" 1.0
+# waitandnext 1.0
+
+# background "in_ragnarok_institution"
+# move 5303411 2 0
+# face 5303411 "normal"
+# alpha 5303411 1 0
+# mask 5303411 on
+# move 18 4 0
+# face 18 "normal"
+# alpha 18 1 0
+# mask 18 on
+# waitandnext 0.2
+
+# fadein "white" 1.0
+# waitandnext 1
+
+# textwindow "normal"
+@グランテピエ
+…ちゃんと帰ってくるから
+絶対のぜーったいに、ね
+
+# serif 1
+# textboxarrow 0 0
+@アルマス
+ぜっ、たい…？
+
+# serif 0
+# face 5303411 "happy"
+# textboxarrow 0 1
+# voice 530341 "grandepieu_di_0003"
+@グランテピエ
+うん
+ぜーったい！
+
+# serif 1
+# textboxarrow 0 0
+@アルマス
+ぜーったい！
+ぜつ、ぜったいだよ…
+お姉ちゃん！
+
+;;//背景：室内：church_room
+# se "SE_11762"
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# imagealpha 0 0 0
+# background "church_room"
+# alpha 18 0 0
+# move 196 2 0
+# face 196 "surprise"
+# alpha 196 1 0
+# mask 196 on
+# move 5303411 4 0
+# face 5303411 "normal"
+# alpha 5303411 1 0
+# mask 5303411 on
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textwindow "normal"
+# face 196 "surprise"
+# serif 0
+# textboxarrow 0 1
+# voice 9943 "almace_navikan_1038"
+@アルマス
+あ…ああああっ！
+
+# face 5303411 "surprise"
+# textboxarrow 0 3
+# voice 530341 "grandepieu_di_0045"
+@グランテピエ
+どうしたの、アルマスっ？
+大丈夫！？
+
+# face 196 "sad"
+# textboxarrow 0 1
+@アルマス
+お姉ちゃん…
+そうだ、お姉ちゃん…
+お姉ちゃん！
+
+# face 196 "happy"
+# textboxarrow 0 1
+@アルマス
+思い出した！
+私の…お姉ちゃんっ
+
+# face 5303411 "happy"
+# textboxarrow 0 3
+# voice 530341 "grandepieu_di_0005"
+@グランテピエ
+そうだよっ
+アルマス、会いたかった
+
+# face 5303411 "normal"
+# textboxarrow 0 3
+@グランテピエ
+もう寂しい思いはさせないからね
+ずーっと一緒だよ
+絶対のぜーったいに、ね
+
+;;//グランテピエがアルマスを抱きしめる
+# textwindow "close"
+# se "SE_10131"
+# move 5303411 3 0.2
+# face 5303411 "happy"
+# face 196 "surprise"
+# waitandnext 0.3
+# shake 0 0.1
+# waitandnext 0.5
+
+# face 196 "sad"
+# textwindow "normal"
+# textboxarrow 0 1
+@アルマス
+お姉ちゃん…苦しい…
+
+# alpha 196 0 0.5
+# alpha 5303411 0 0.5
+# move 161 3 0
+# alpha 161 1 0.5
+# textboxarrow 0 2
+@ムー
+やれやれ
+良かったな、グラ
+
+# alpha 161 0 0.5
+# move 196 2 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# move 5303411 4 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# textboxarrow 0 1
+@アルマス
+…って、あなた何？
+空飛ぶトカゲ？
+
+# shake 0 0.1
+# move 161 4 0
+# alpha 161 1 0.5
+# move 161 3 0.3
+# textboxarrow 0 2
+@ムー
+違ぇよ！
+俺様は史上最大にして最強の幻獣
+バハムート様だ！
+
+# textboxarrow 0 3
+# face 5303411 "happy"
+# textboxarrow 0 3
+# voice 530341 "grandepieu_di_0004"
+@グランテピエ
+ムーは頼りになる相棒なんだよ
+
+# face 196 "normal"
+# textboxarrow 0 1
+# voice 9943 "almace_navikan_0055"
+@アルマス
+へー…
+あ！そんなことより…
+
+# textboxarrow 0 2
+@ムー
+そんなことって言うな！
+だいたい、嬢ちゃん達の暴走を解く
+ためにグラがどれだけ――
+
+# face 5303411 "normal"
+# textboxarrow 0 3
+@グランテピエ
+それはいいよ
+アルマス、どうしたの？
+
+# face 196 "angry"
+# textboxarrow 0 1
+@アルマス
+ラグナロクとティルフィングは！？
+私と一緒に"終焉"に飲み込まれて
+しまったはずだけど…
+
+# textboxarrow 0 3
+@グランテピエ
+ああ、それなら
+
+;;//ラグナロクが入ってくる
+# alpha 5303411 0 0.5
+# alpha 196 0 0.5
+# alpha 161 0 0.5
+# se "SE_0740"
+# move 5103621 3 0
+# face 5103621 "happy"
+# alpha 5103621 1 0.5
+# mask 5103621 off
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 1036 "ragnarok_im_0050"
+@ラグナロク
+アルマス！
+目が覚めたのねっ
+
+# move 5103621 2 0.5
+# mask 5103621 on
+# move 5400131 4 0
+# face 5400131 "normal"
+# alpha 5400131 1 0.5
+# mask 5400131 on
+# textboxarrow 0 3
+@アルテミス
+なかなか意識が戻らないので
+少し心配していました
+
+# alpha 5103621 0 0.5
+# alpha 5400131 0 0.5
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0036"
+@アルマス
+ラグナロク！
+…と、アルテミス！？
+
+# alpha 196 0 0.5
+# move 5103621 2 0
+# face 5103621 "normal"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# move 5400131 4 0
+# face 5400131 "normal"
+# alpha 5400131 1 0.5
+# mask 5400131 on
+# textboxarrow 0 1
+@ラグナロク
+驚くのも無理はないわ
+私もさっき事情を聞いて驚いたもの
+
+# textboxarrow 0 1
+@ラグナロク
+安心して、アルマス
+インテグラルキラーズも
+私達の仲間になってくれた
+
+# face 5103621 "happy"
+# textboxarrow 0 1
+@ラグナロク
+もちろんティルフィングもね
+
+# alpha 5103621 0 0.5
+# alpha 5400131 0 0.5
+# move 196 2 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# move 5303411 4 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# textboxarrow 0 1
+@アルマス
+えええっ！？
+急展開過ぎてついていけない…
+
+# textboxarrow 0 3
+# voice 530341 "grandepieu_di_0008"
+@グランテピエ
+あ、はは…
+仕方ないよね
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 5303411 0 0
+# face 196 "sad"
+# move 196 3 0
+# mask 196 on
+# bgmfile "bgm409" "BgmIntegralNoahEvent" 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0047"
+@アルマス
+…そっか
+私達、暴走してたんだ
+ごめん…
+
+# textboxarrow 0 2
+@アルマス
+その間に、お姉ちゃん達は
+エンシェントとインテグラルの
+仲を取り持ってくれたんだね
+
+# alpha 196 0 0.5
+# move 5103621 2 0
+# face 5103621 "happy"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# move 5400131 4 0
+# face 5400131 "normal"
+# alpha 5400131 1 0.5
+# mask 5400131 on
+# textboxarrow 0 1
+@ラグナロク
+互いに連携して私達の暴走を
+解いてくれた
+本当に感謝するわ
+
+# textboxarrow 0 3
+@アルテミス
+暴走を解いたのは
+ディスラプターズです
+
+# alpha 5103621 0 0.5
+# alpha 5400131 0 0.5
+# move 5303411 3 0
+# face 5303411 "happy"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# textboxarrow 0 2
+# voice 530341 "grandepieu_di_0003"
+@グランテピエ
+みんなの協力あってのことだよ
+それに他のキル姫達も加勢して
+くれたんだ
+
+# alpha 5303411 0 0.5
+# move 5400131 3 0
+# face 5400131 "normal"
+# alpha 5400131 1 0.5
+# mask 5400131 off
+# textboxarrow 0 2
+# voice 540013 "arutemisu_iz_0001"
+@アルテミス
+アルマスも目を覚ましたので、
+改めて今後について話し合いましょう
+ティルフィング達を呼んできます
+
+# alpha 5400131 0 0.5
+# move 5103621 2 0
+# face 5103621 "normal"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+だったら、まず私に話をさせて
+もらっていい？
+
+@アルマス
+急いで伝えておかないといけない
+ことがあるの
+
+# textboxarrow 0 1
+# face 5103621 "surprise"
+@ラグナロク
+もしかして、記憶が戻ったの？
+
+# textboxarrow 0 3
+# face 196 "sad"
+@アルマス
+うん…
+私がヴァリン博士から託された
+インテグラルノア計画のこと
+
+# face 196 "normal"
+@アルマス
+それから、私がインテグラル
+キラーズになった経緯も

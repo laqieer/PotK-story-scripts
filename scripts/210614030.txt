@@ -1,0 +1,1056 @@
+;;-----------------------------------------
+;;【ファントムオブキル】暴走クエストシナリオ後半
+;;【EP8】
+;;スクリプト最後の背景：インテグラルノア編地上
+;;背景：インテグラルノア編地上
+;;-----------------------------------------
+# script "lisp"
+# background "in_underwild"
+# bgmfile "bgm463_462" "BgmIntegralNoahDisrupters" 0
+;;-----------------------------------------
+;;カリス・聖鎖・アザゼル
+# body 5602511
+# pos 5602511 3
+# scale 5602511 0.8 0
+# layer 5602511 2
+# alpha 5602511 0 0
+# mask 5602511 off
+;;キプル
+# body 163
+# pos 163 3
+# scale 163 0.6 0
+# layer 163 2
+# alpha 163 0 0
+# mask 163 off
+;;ヘレナ
+# body 5302811
+# pos 5302811 3
+# scale 5302811 0.8 0
+# layer 5302811 2
+# alpha 5302811 0 0
+# mask 5302811 off
+;;ニール
+# body 162
+# pos 162 3
+# scale 162 0.8 0
+# layer 162 3
+# alpha 162 0 0
+# mask 162 off
+;;ソロモン
+# body 5503111
+# pos 5503111 3
+# scale 5503111 0.8 0
+# layer 5503111 2
+# alpha 5503111 0 0
+# mask 5503111 off
+;;グラウ
+# body 164
+# pos 164 3
+# scale 164 0.6 0
+# layer 164 2
+# alpha 164 0 0
+# mask 164 off
+;;グランテピエ・獣刻・バハムート
+# body 5303411
+# pos 5303411 3
+# scale 5303411 0.8 0
+# layer 5303411 2
+# alpha 5303411 0 0
+# mask 5303411 off
+;;ムー
+# body 161
+# pos 161 3
+# scale 161 0.6 0
+# layer 161 3
+# alpha 161 0 0
+# mask 161 off
+;;オティヌス・暴走
+# body 5400811
+# pos 5400811 3
+# scale 5400811 0.8 0
+# layer 5400811 2
+# alpha 5400811 0 0
+# mask 5400811 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;【EP8】
+;;EP8はオティヌスの３Dを出さない仕様のため、バトルは無しでお願いします
+;;背景：インテグラルノア編地上（ケイオスリオンっぽいところがあれば……）
+# move 5503111 2 0
+# face 5503111 "normal"
+# alpha 5503111 1 0
+# mask 5503111 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 5303411 4 0
+# face 5303411 "normal"
+# alpha 5303411 1 0
+# mask 5303411 on
+# voice 550311 "solomon_di_0028"
+@ソロモン
+終焉、世界線の移動…
+理解の範疇を超えることばかり…
+
+# textboxarrow 0 3
+@グランテピエ
+でも、きっと目的は同じ
+この世界を救いたいの
+
+# textboxarrow 0 1
+@ソロモン
+その言葉に嘘はない
+そう信じています
+
+# textboxarrow 0 1
+@ソロモン
+それに嘘ならオートアバターなんて
+渡さずに私を倒すことも
+できたはずですから
+
+# textboxarrow 0 3
+@グランテピエ
+そんなことしないよ
+ソロモンは大切な仲間だから、ね
+
+# textboxarrow 0 1
+# voice 550311 "solomon_di_0011"
+@ソロモン
+ま、まだ私達は
+出会ったばかりで、その、
+仲間だとか、そういうのは――
+
+# textboxarrow 0 1
+@ソロモン
+彼女の話を全て信じるには
+情報が足りないわ
+もっと確実な証拠がないと
+
+# se "bgm462_switch_1"
+# alpha 5503111 0 0.5
+# alpha 5303411 0 0.5
+# move 5602511 3 0
+# face 5602511 "normal"
+# alpha 5602511 1 0.5
+# mask 5602511 off
+# textboxarrow 0 2
+# voice 560251 "chalice_di_0009"
+@カリス
+もー、ソロモンってば
+難しく考えすぎー！
+
+# textboxarrow 0 2
+@カリス
+カリスちゃんはグラ姉を信じるよ！
+ソロモンだって暴走が起きて
+おかしいって言ってたじゃん！
+
+# face 5602511 "happy"
+# textboxarrow 0 2
+@カリス
+それに、グラ姉が困ってるなら
+カリスちゃんは手伝いたい！
+グラ姉はカリスちゃんの救世主だもん
+
+# alpha 5602511 0 0.5
+# move 5503111 3 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 off
+# textboxarrow 0 2
+# voice 550311 "solomon_di_0050"
+@ソロモン
+カリス…
+
+# alpha 5503111 0 0.5
+# move 5602511 2 0
+# face 5602511 "normal"
+# alpha 5602511 1 0.5
+# mask 5602511 on
+# textboxarrow 0 1
+# move 164 4 0
+# alpha 164 1 0.5
+# mask 164 on
+# voice 560251 "chalice_di_0007"
+@カリス
+あ、グラウおかえり！
+
+# textboxarrow 0 3
+# voice 9950 "glau_0031"
+@グラウ
+周囲の走査を完了
+複数のキル姫は確認できますが
+目標は確認できません
+
+# alpha 5602511 0 0.5
+# alpha 164 0 0.5
+# move 5503111 2 0
+# face 5503111 "happy"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# textboxarrow 0 1
+# move 5303411 4 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# voice 550311 "solomon_di_0030"
+@ソロモン
+ありがとうグラウ
+
+# face 5503111 "normal"
+# textboxarrow 0 1
+@ソロモン
+その、もうひとりのキル姫は
+本当に旧ケイオスリオン領に
+いるのかしら
+
+# face 5303411 "happy"
+# textboxarrow 0 3
+@グランテピエ
+私がふたりと出会ったのも
+旧ハルモニアに行ってみた結果だし
+きっと彼女にも会えるはずだよ
+
+# textboxarrow 0 1
+# voice 550311 "solomon_di_0019"
+@ソロモン
+そんな不確かな…
+
+# face 5303411 "normal"
+# textboxarrow 0 3
+@グランテピエ
+でも、まずは可能性があるところに
+行ってみなくちゃ
+
+# textboxarrow 0 3
+@グランテピエ
+ソロモン、あなたとカリス
+ふたりが一緒なら危ないことも
+少ないだろうし、ね？
+
+# alpha 5503111 0 0.5
+# move 5602511 2 0
+# face 5602511 "normal"
+# alpha 5602511 1 0.5
+# mask 5602511 on
+# textboxarrow 0 1
+# voice 560251 "chalice_di_0005"
+@カリス
+グラ姉とソロモンが怪我しても
+カリスちゃんの天使パワーで
+直してあげるもん！
+
+# face 5303411 "happy"
+# textboxarrow 0 3
+@グランテピエ
+ふふ、ありがとうカリス
+
+# face 5303411 "normal"
+# textboxarrow 0 3
+@グランテピエ
+それに、いざという時は
+私がふたりのことを守るよ
+
+# textboxarrow 0 3
+@グランテピエ
+絶対のぜーったいに、ね
+
+# alpha 5602511 0 0.5
+# move 5503111 2 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# textboxarrow 0 1
+# voice 550311 "solomon_di_0017"
+@ソロモン
+グランテピエがそこまで言うなら…
+
+# alpha 5503111 0 0.5
+# move 161 2 0
+# face 161 "normal"
+# alpha 161 1 0.5
+# mask 161 on
+# textboxarrow 0 1
+# voice 9953 "mwu_0007"
+@ムー
+ソロモンもあと少しで陥落だな
+
+# textboxarrow 0 3
+@グランテピエ
+ムー、そんな言い方はだめだよ
+ソロモンは私達を心配してくれる
+いい子なだけなんだから
+
+# se "bgm463_switch_1"
+# textboxarrow 0 1
+# voice 9953 "mwu_0009"
+@ムー
+へいへい…ん？
+なぁ、さっきのスキャンじゃ
+この辺に異常はなかったんだよな？
+
+# alpha 161 0 0.5
+# alpha 5303411 0 0.5
+# move 164 2 0
+# alpha 164 1 0.5
+# mask 164 on
+# textboxarrow 0 1
+# move 5503111 4 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+@グラウ
+…………
+
+# textboxarrow 0 3
+# voice 550311 "solomon_di_0002"
+@ソロモン
+キル姫の探索以外もしていたわよね？
+
+# textboxarrow 0 1
+# voice 9950 "glau_0032"
+@グラウ
+もちろんです
+しかし、これと言った異常は
+見受けられませんでした
+
+# alpha 5503111 0 0.5
+# move 161 4 0
+# alpha 161 1 0.5
+# mask 161 on
+# textboxarrow 0 3
+# voice 9953 "mwu_0023"
+@ムー
+おい、なんで俺には答えねぇんだ！
+って、それどころじゃねぇ
+
+# textboxarrow 0 3
+# voice 9953 "mwu_0017"
+@ムー
+グラ、またアイツ…
+アロンダイトか、それと同じ
+ヤツがいるかもしれねぇ
+
+;;演出：画面揺れなど
+# se "SE_5215"
+# textwindow "close"
+# shake 0 0.5
+# waitandnext 0.5
+
+# alpha 164 0 0.5
+# alpha 161 0 0.5
+# move 5602511 3 0
+# face 5602511 "surprise"
+# alpha 5602511 1 0.5
+# mask 5602511 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 560251 "chalice_di_0024"
+@カリス
+すごっ、地震！？
+
+# alpha 5602511 0 0.5
+# move 161 2 0
+# alpha 161 1 0.5
+# mask 161 on
+# textboxarrow 0 1
+# move 5303411 4 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# voice 9953 "mwu_0037"
+@ムー
+やっぱりな
+向こうで土煙が見えたんだが
+高速でこっちに近づいてやがる
+
+# textboxarrow 0 3
+@グランテピエ
+グラウのスキャンの後、
+それに範囲外だったから
+発見できなかったんだね
+
+# alpha 161 0 0.5
+# alpha 5303411 0 0.5
+# move 164 2 0
+# alpha 164 1 0.5
+# mask 164 on
+# move 5503111 4 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# textboxarrow 0 3
+# voice 550311 "solomon_di_0043"
+@ソロモン
+グラウ、
+あの土煙の方角をメインに
+スキャンをお願いできる？
+
+# textboxarrow 0 1
+# voice 9950 "glau_0014"
+@グラウ
+走査完了
+こちらへ向けて
+高速で飛来する物体有り
+
+# alpha 164 0 0.5
+# alpha 5503111 0 0.5
+# move 5602511 2 0
+# face 5602511 "normal"
+# alpha 5602511 1 0.5
+# mask 5602511 on
+# textboxarrow 0 1
+# move 163 4 0
+# alpha 163 1 0.5
+# mask 163 on
+# voice 560251 "chalice_di_0004"
+@カリス
+あれだね！
+よーし、キャッチできるかな？
+
+# textboxarrow 0 3
+# voice 9951 "kipuru_0023"
+@キプル
+敵かもしれないんですよ！？
+
+# textboxarrow 0 1
+# voice 560251 "chalice_di_0035"
+@カリス
+でも怪我したら痛いもん！
+
+# textwindow "close"
+# alpha 5602511 0 0.5
+# alpha 163 0 0.5
+# waitandnext 0.5
+
+;;演出：飛び込んでくるヘレナ
+# se "SE_11619"
+# move 5302811 3 0
+# face 5302811 "normal"
+# alpha 5302811 1 0
+# mask 5302811 off
+# rightin 5302811 0.5
+# waitandnext 0.5
+
+;;演出：画面揺れなど
+# se "SE_11764"
+# shake 0 0.5
+# waitandnext 0.5
+
+;;？？？（ヘレナ）
+# face 5302811 "sad"
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 530281 "herena_di_0015"
+@？？？
+けほっ、けほっ…
+人払いしたつもりが自分から
+移動してしまうなんてな…
+
+;;？？？（ヘレナ）
+# textboxarrow 0 2
+@？？？
+少し足を動かそうとしただけなのに…
+
+# move 5602511 2 0
+# face 5602511 "surprise"
+# alpha 5602511 1 0.5
+# mask 5602511 on
+# textboxarrow 0 1
+# move 5302811 4 0.5
+# mask 5302811 on
+# voice 560251 "chalice_di_0022"
+@カリス
+だ、大丈夫？
+すごい勢いで転んでたけど…
+
+;;？？？（ヘレナ）
+# face 5302811 "usual"
+# textboxarrow 0 3
+# voice 530281 "herena_di_0039"
+@？？？
+ん、ああ、誰かいたんだね
+ヘレナはアナタ達を襲うために
+ここまで来たんだ
+
+;;？？？（ヘレナ）
+# face 5302811 "normal"
+# textboxarrow 0 3
+# voice 530281 "herena_di_0007"
+@？？？
+ほらほら、逃げたほうがいいよ
+…くふっ
+
+# alpha 5602511 0 0.5
+# alpha 5302811 0 0.5
+# move 161 2 0
+# alpha 161 1 0.5
+# mask 161 on
+# move 5303411 4 0
+# face 5303411 "happy"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# textboxarrow 0 3
+@グランテピエ
+ヘレナ！
+ほら、やっぱり会えた！
+
+# textboxarrow 0 1
+# voice 9953 "mwu_0023"
+@ムー
+グラのラッキーはとんでもねぇな
+そもそもが不幸だったことの
+揺り戻しか？
+
+# alpha 161 0 0.5
+# alpha 5303411 0 0.5
+# move 5302811 3 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 off
+# textboxarrow 0 2
+# voice 530281 "herena_di_0028"
+@ヘレナ
+…知り合いだったかな？
+覚えはないけど、ヘレナは今
+暴走しているから、話は通じないよ
+
+# alpha 5302811 0 0.5
+# move 5503111 3 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 off
+# textboxarrow 0 2
+@ソロモン
+その割にお喋りなような…
+
+# alpha 5503111 0 0.5
+# move 5302811 3 0
+# face 5302811 "normal"
+# alpha 5302811 1 0.5
+# mask 5302811 off
+# textboxarrow 0 2
+# voice 530281 "herena_di_0007"
+@ヘレナ
+今はちょっと落ち着いてるだけだ
+暴走にもいろいろあるんだよ
+…くふっ
+
+# move 5302811 2 0.5
+# mask 5302811 on
+# move 5303411 4 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# textboxarrow 0 3
+@グランテピエ
+…ヘレナ、あなたは暴走していない
+
+# face 5302811 "angry"
+# textboxarrow 0 1
+# voice 530281 "herena_di_0013"
+@ヘレナ
+…む
+
+# textboxarrow 0 3
+@グランテピエ
+あなたに霊装支配された
+ロキの力が制御できずに
+苦しんでいるだけ…
+
+# face 5302811 "usual"
+# textboxarrow 0 1
+@ヘレナ
+だとしたらどうだって言うんだい？
+制御できない大きな力は
+周囲を傷つける
+
+# textboxarrow 0 1
+# voice 530281 "herena_di_0028"
+@ヘレナ
+それがどう暴走と違うって言える？
+アナタ達も次の瞬間にはヘレナが…
+
+# textboxarrow 0 3
+@グランテピエ
+君はそんなことしないよ
+でしょ？
+
+# textboxarrow 0 1
+# voice 530281 "herena_di_0013"
+@ヘレナ
+初対面のアナタに
+ヘレナの何がわかるって
+言うんだ？
+
+# textboxarrow 0 3
+@グランテピエ
+わからないよ
+でも、そう信じたいから、かな
+
+# face 5302811 "angry"
+# textboxarrow 0 1
+# voice 530281 "herena_di_0037"
+@ヘレナ
+いいから！
+早く逃げてって言ってるんだ！
+
+# textboxarrow 0 3
+@グランテピエ
+大丈夫、怯えないで
+あなたの力は制御できる
+
+# textboxarrow 0 1
+@ヘレナ
+そんなこと――
+
+;;？？？（オティヌス）
+# bgm "stop"
+# alpha 5302811 0 0.5
+# alpha 5303411 0 0.5
+# move 5400811 3 0
+# face 5400811 "normal"
+# alpha 5400811 1 0.5
+# mask 5400811 off
+# textboxarrow 0 2
+@？？？
+そんなことやめて？
+
+# alpha 5400811 0 0.5
+# move 5303411 3 0
+# face 5303411 "surprise"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# textboxarrow 0 2
+@グランテピエ
+…っ！？
+
+# bgmfile "bgm467" "BgmIntegralNoahBoso" 0
+;;？？？（オティヌス）
+# alpha 5303411 0 0.5
+# move 5400811 3 0
+# face 5400811 "happy"
+# alpha 5400811 1 0.5
+# mask 5400811 off
+# textboxarrow 0 2
+# voice 540081 "otyinusu_bo_0006"
+@？？？
+あはははっ♪
+びっくりした？
+びっくりしたよね？
+
+# alpha 5400811 0 0.5
+# move 161 2 0
+# alpha 161 1 0.5
+# mask 161 on
+# textboxarrow 0 1
+# move 5303411 4 0
+# face 5303411 "angry"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# voice 9953 "mwu_0037"
+@ムー
+グラ、コイツは…
+
+# textboxarrow 0 3
+@グランテピエ
+うん、たぶん…同じ
+普通のキル姫じゃない！
+
+# alpha 161 0 0.5
+# alpha 5303411 0 0.5
+# move 5400811 3 0
+# face 5400811 "normal"
+# alpha 5400811 1 0.5
+# mask 5400811 off
+# textboxarrow 0 2
+# voice 540081 "otyinusu_bo_0007"
+@オティヌス
+どうせもう呼べなくなっちゃうし、
+名前教えといてアゲルねっ！
+あたしはオティヌス
+
+# textboxarrow 0 2
+@オティヌス
+そこのキル姫はさー
+そのまま放っておいたらきっと
+この世に絶望してくれる…
+
+# textboxarrow 0 2
+# voice 540081 "otyinusu_bo_0005"
+@オティヌス
+あたし達と同じく
+終焉を受け入れてくれるはずなの
+
+# alpha 5400811 0 0.5
+# move 5303411 3 0
+# face 5303411 "surprise"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# textboxarrow 0 2
+@グランテピエ
+終焉…っ！
+
+# alpha 5303411 0 0.5
+# move 5400811 3 0
+# face 5400811 "normal"
+# alpha 5400811 1 0.5
+# mask 5400811 off
+# textboxarrow 0 2
+@オティヌス
+だからさ、余計な手出ししないで？
+
+;;演出：オティヌスの攻撃、そしてそれを防ぐソロモン
+# se "SE_4301"
+# waitandnext 0.5
+
+# textwindow "close"
+# alpha 5400811 0 0.5
+# move 5503111 3 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 off
+# waitandnext 0.6
+
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 5503111 "angry"
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 550311 "solomon_di_0037"
+@ソロモン
+くっ！
+
+# move 5503111 2 0.5
+# mask 5503111 on
+# move 5303411 4 0
+# face 5303411 "angry"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# textboxarrow 0 3
+@グランテピエ
+ソロモン！
+
+# face 5503111 "normal"
+# textboxarrow 0 1
+@ソロモン
+終焉…これが私達の敵なんですね
+
+# alpha 5303411 0 0.5
+# move 161 4 0
+# alpha 161 1 0.5
+# mask 161 on
+# textboxarrow 0 3
+# voice 9953 "mwu_0037"
+@ムー
+ああ、少なくともコイツらは
+終焉と関係があるはずだ！
+
+# textboxarrow 0 1
+# voice 550311 "solomon_di_0033"
+@ソロモン
+…わかりました
+グランテピエ、貴方はヘレナを
+私はこちらを抑えます
+
+# alpha 5503111 0 0.5
+# alpha 161 0 0.5
+# move 5602511 3 0
+# face 5602511 "normal"
+# alpha 5602511 1 0.5
+# mask 5602511 off
+# textboxarrow 0 2
+# voice 560251 "chalice_di_0033"
+@カリス
+ソロモン、わたしも手伝う！
+
+;;できればもやもやフレームで
+# alpha 5602511 0 0.5
+# move 5302811 2 0
+# face 5302811 "angry"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# move 5303411 4 0
+# face 5303411 "angry"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# move 5302811 2 0
+# textboxarrow 0 0
+# textwindow "moya"
+@ヘレナ
+ダメだ！
+やっぱり力が上手く制御できない
+このままじゃ…
+
+# textboxarrow 0 3
+# textwindow "normal"
+@グランテピエ
+ヘレナ！
+あなたは私が助ける…
+だから待っていて！
+
+# alpha 5302811 0 0.5
+# alpha 5303411 0 0.5
+# move 5400811 3 0
+# face 5400811 "normal"
+# alpha 5400811 1 0.5
+# mask 5400811 off
+# textboxarrow 0 2
+@オティヌス
+ふーん、ずいぶん余裕あるね
+そういうのあんま嬉しくないなー！
+
+# face 5400811 "happy"
+# textboxarrow 0 2
+# voice 540081 "otyinusu_bo_b_0029"
+@オティヌス
+だかラ…アハハッ！
+コワレテ！ワタシヲ！
+ヨロコバセテ！！！
+
+# textboxarrow 0 2
+# voice 540081 "otyinusu_bo_0006"
+@オティヌス
+アハハハハハハハハハハハハハハハ
+ハハハハハハハハハハハハハハハハ
+ハハハハハハハハハハハハハハハハ
+
+# textboxarrow 0 2
+# voice 540081 "otyinusu_bo_b_battle_0004"
+@オティヌス
+モット！モット！モット！
+コワシテコワシテコワシテアゲル！
+
+# alpha 5400811 0 0.5
+# move 5602511 2 0
+# face 5602511 "angry"
+# alpha 5602511 1 0.5
+# mask 5602511 on
+# move 5503111 4 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# textboxarrow 0 3
+# voice 550311 "solomon_di_0037"
+@ソロモン
+どうして…
+どんどん力が強く…
+
+# textboxarrow 0 1
+@カリス
+ソロモンと一緒でも
+抑えられない…っ！
+
+# face 5503111 "angry"
+# textboxarrow 0 3
+@ソロモン
+グランテピエ、お願い…っ！
+
+;;演出：暗転
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 5602511 0 0
+# alpha 5503111 0 0
+# move 5302811 2 0
+# face 5302811 "sad"
+# alpha 5302811 1 0
+# mask 5302811 on
+# move 5303411 4 0
+# face 5303411 "normal"
+# alpha 5303411 1 0
+# mask 5303411 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 530281 "herena_di_0015"
+@ヘレナ
+はぁ、はぁ…
+わかっただろう？
+ヘレナを止めるのは無理なんだ
+
+# textboxarrow 0 3
+@グランテピエ
+そんなことはないよ
+もう少しだから…
+
+# face 5302811 "angry"
+# textboxarrow 0 1
+# voice 530281 "herena_di_battle_0005"
+@ヘレナ
+でも！
+その前にロキの力がアナタを…
+
+;;？？？（ニール）
+# bgmfile "bgm464_1" "BgmIntegralNoahDisrupters" 0
+# move 5302811 1 0.5
+# move 162 3 0
+# alpha 162 1 0.5
+# mask 162 on
+# textboxarrow 0 2
+# move 5303411 5 0.5
+# voice 9952 "nir_0005"
+@？？？
+アタチがいれば
+そんなこと気にしなくていいわ
+
+# face 5302811 "surprise"
+# textboxarrow 0 1
+# voice 530281 "herena_di_0022"
+@ヘレナ
+あれ、ロキの力が静まった…？
+
+# textboxarrow 0 3
+@グランテピエ
+ヘレナ、この子は
+あなたの力を制御するために
+目覚めてくれたの
+
+# textboxarrow 0 2
+# voice 9952 "nir_0033"
+@ニール
+アタチのことはニールと呼んで
+ヘレナ、アナタを助けてあげるわ！
+
+# face 5302811 "usual"
+# textboxarrow 0 1
+@ヘレナ
+力が制御できたなら…
+
+# textboxarrow 0 3
+@グランテピエ
+ねぇヘレナ
+手を貸してくれる？
+
+# face 5302811 "normal"
+# textboxarrow 0 1
+@ヘレナ
+ちょうど力を試してみたいと
+思っていたところだ
+
+# textboxarrow 0 1
+# voice 530281 "herena_di_0007"
+@ヘレナ
+巻き込んでしまっても、
+文句は言わないでくれ…くふっ
+
+# textboxarrow 0 3
+@グランテピエ
+ありがとう、ヘレナ！
+さあ、一緒に行こう！
+
+;;演出：暗転
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 5302811 0 0
+# alpha 162 0 0
+# alpha 5303411 0 0
+# move 5503111 3 0
+# face 5503111 "normal"
+# alpha 5503111 1 0
+# mask 5503111 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ソロモン
+間に合ったみたいね
+
+# alpha 5503111 0 0.5
+# move 5400811 3 0
+# face 5400811 "surprise"
+# alpha 5400811 1 0.5
+# mask 5400811 off
+# textboxarrow 0 2
+# voice 540081 "otyinusu_bo_0022"
+@オティヌス
+！？
+
+# se "SE_12852"
+# move 5400811 2 0.5
+# mask 5400811 on
+# move 5302811 4 0
+# face 5302811 "angry"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 3
+# voice 530281 "herena_di_0029"
+@ヘレナ
+そこだぁっ！
+
+# se "SE_12853"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 5400811 "angry"
+# textboxarrow 0 1
+# voice 540081 "otyinusu_bo_b_battle_0008"
+@オティヌス
+クッ！
+
+# textboxarrow 0 1
+@オティヌス
+…そういう感じで
+曝け出すのとか、やんなくていいから
+
+# textboxarrow 0 1
+# voice 540081 "otyinusu_bo_0019"
+@オティヌス
+はぁ、面白くない
+
+;;演出：オティヌスout
+# se "SE_9021"
+# textwindow "close"
+# alpha 5400811 0 0.5
+# waitandnext 0.8
+
+# alpha 5302811 0 0.5
+# move 5602511 3 0
+# face 5602511 "surprise"
+# alpha 5602511 1 0.5
+# mask 5602511 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 560251 "chalice_di_0024"
+@カリス
+あっ、逃げた！
+
+# alpha 5602511 0 0.5
+# move 5503111 3 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 off
+# textboxarrow 0 2
+# voice 550311 "solomon_di_0051"
+@ソロモン
+深追いは危険よ、カリス
+今はそれよりも…
+
+# alpha 5503111 0 0.5
+# move 5302811 3 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 off
+# textboxarrow 0 2
+# voice 530281 "herena_di_0004"
+@ヘレナ
+はは、お疲れ様…

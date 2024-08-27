@@ -1,0 +1,300 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー13章
+;;第4話　タイトル：響き渡る音色
+;;4_4_3
+;;スクリプト最後の背景：ビフレスト
+;;-----------------------------------------
+# script "lisp"
+# background "bifrost"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス
+# body 3103811
+# pos 3103811 3
+# scale 3103811 0.8 0
+# layer 3103811 2
+# alpha 3103811 0 0
+# mask 3103811 off
+;;アルマス（ジョブチェンジ後）
+# body 172
+# pos 172 2
+# scale 172 0.8 0
+# layer 172 2
+# alpha 172 1 0
+# mask 172 off
+;;ティターニア
+# body 139
+# pos 139 4
+# scale 139 0.8 0
+# layer 139 2
+# alpha 139 1 0
+# mask 139 off
+;;アビス・アルマス
+# body 3840001
+# pos 3840001 3
+# scale 3840001 0.8 0
+# layer 3840001 2
+# alpha 3840001 0 0
+# mask 3840001 off
+;;-----------------------------------------
+# face 172 "surprise"
+# mask 172 on
+# mask 139 on
+# voice 1038 "almace_0022"
+# textflame 1 1
+# textboxarrow 0 1
+# textwindow "normal"
+@アルマス
+ここよ！
+ここに私たちの…えっ？
+
+# voice 9967 "titania_0066"
+# face 139 "worry"
+# textboxarrow 0 3
+@ティターニア
+アルマス…「宝物」は…？
+
+# face 172 "angry"
+# textboxarrow 0 1
+@アルマス
+そんなはずないっ
+確かに四人でここに仕舞ったのよ
+「神」にだってバレてないはず
+
+# textboxarrow 0 1
+@アルマス
+それなのに…どうして何も残って
+ないの！？
+
+# voice 9967 "titania_0042"
+# textboxarrow 0 3
+@ティターニア
+…もしかして、
+先程のフェイルノートの言葉は
+嘘だったのでしょうか
+
+# textboxarrow 0 3
+@ティターニア
+本当はすでに「宝物」は奪っていて
+わざとあのようなことを…
+
+;;//爆発音
+;;//画面揺れ
+# se "SE_9096"
+# shake 0 0.5
+# waitandnext 0.5
+
+# voice 1038 "almace_0023"
+# face 172 "surprise"
+# textboxarrow 0 1
+@アルマス
+爆発っ？
+ここも破壊するつもりなの！？
+
+# face 139 "surprise"
+# textboxarrow 0 3
+@ティターニア
+アルマス、急いで脱出しましょう
+恐らく、これがフェイルノートの
+狙いです！
+
+# face 172 "angry"
+# textboxarrow 0 1
+@アルマス
+私たちに希望を持たせておいて、
+ここで生き埋めにするつもり？
+やってくれるじゃない、あいつ…
+
+# textboxarrow 0 3
+@ティターニア
+まだ間に合うはずです！
+こちらにっ…キャア！？
+
+;;//画面揺れ
+# se "SE_5215"
+# shake 0 0.5
+# waitandnext 0.5
+
+# face 172 "sad"
+# textboxarrow 0 1
+@アルマス
+この爆発がフェイルノートの
+仕掛けなら、きっと脱出口なんて
+残ってないわ…
+
+# voice 1038 "almace_0031"
+# textboxarrow 0 1
+@アルマス
+ごめんなさい、マスター…
+迂闊だった…
+「宝物」なんかに執着したせいで…
+
+;;//選択肢
+;;
+;;Ａ「宝物」は大切だよ
+;;Ｂまだ希望はある
+;;Ｃアルマスを信じている
+# select "「宝物」は大切だよ" "select_label_01" "まだ希望はある" "select_label_01" "アルマスを信じている" "select_label_01"
+ごめんなさい、マスター…
+迂闊だった…
+「宝物」なんかに執着したせいで…
+
+;;ＡＢＣ共通
+# label "select_label_01"
+# face 172 "normal"
+# textboxarrow 0 1
+@アルマス
+マスター…
+そう言ってくれるのは嬉しいんだけど
+もう「宝物」は奪われて…
+
+# face 172 "surprise"
+# textboxarrow 0 1
+@アルマス
+…奪われて？
+本当に？
+
+# textboxarrow 0 3
+@ティターニア
+アルマス、今はここから脱出する
+方法を考えるべきですっ
+「宝物」については後で――
+
+# face 172 "normal"
+# textboxarrow 0 1
+@アルマス
+待って、ティニ
+今なら…今の“私”なら…
+思い出せるかもしれない
+
+# textboxarrow 0 1
+@アルマス
+フェイルノートたちも知らない、
+ビフレストでの出来事を
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 172 0 0
+# alpha 139 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm263" "BgmLostRagnarok001" 0
+# serif 1
+@？？？
+とうとう君一人になってしまったね
+アルマス
+
+# serif 1
+@？？？
+ここも閉鎖することにしたよ
+実験は十分だ
+深奥で理想社会を実現させる
+
+# serif 1
+@？？？
+そして、いずれやって来る地上の
+者達に植え付けた「種」を芽吹かせ
+地上でも理想社会を実現するよ
+
+# serif 1
+@？？？
+君はどうするね？
+あいにくと地上には出られないが
+地底でなら好きにして構わないよ
+
+;;アルマス（これはアビス・アルマス）
+# move 3840001 3 0
+# alpha 3840001 1 0.5
+# mask 3840001 off
+# textboxarrow 0 2
+# serif 0
+# textwindow "normal"
+@アルマス
+私は…ここで待つわ
+裏切り者の“私”を…
+
+# serif 1
+@？？？
+そうかい
+では、さようなら
+
+;;//暗転挟む
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 3840001 0 0
+# move 3103811 3 0
+# face 3103811 "sad"
+# alpha 3103811 1 0
+# mask 3103811 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+…とうとうビフレストにも
+私以外、誰もいなくなった
+
+# textboxarrow 0 2
+@アルマス
+…裏切り者は、いつ地底に来るのかな
+それまで、何をしていよう
+
+# face 3103811 "normal"
+# textboxarrow 0 2
+@アルマス
+…そういえば、アレはどこに
+隠したんだったっけ？
+
+# textboxarrow 0 2
+@アルマス
+酷い実験続きで忘れてたけど、
+四人で隠した「宝物」があったわね
+久し振りに見てみようかな
+
+# face 3103811 "happy1"
+# textboxarrow 0 2
+@アルマス
+…そうだ
+ついでに隠し場所も変えてやろう
+もし裏切り者が私を無視して
+
+# voice 1038 "almace_0004"
+# textboxarrow 0 2
+@アルマス
+あの三人との思い出を
+見つけようとしても
+見つけられないように、ふふっ
+
+# textboxarrow 0 2
+@アルマス
+あの三人だって地上で
+楽しくやってるんだろうし、
+そのくらいのイタズラ、良いよね
+
+# face 3103811 "shy1"
+# textboxarrow 0 2
+@アルマス
+ああ、あった
+これだ…さてと、どこに隠そうかな？
+なるべく見つけ難いところ…
+
+# face 3103811 "happy1"
+# textboxarrow 0 2
+@アルマス
+いっそのこと、隠し通路に
+隠し部屋なんかも作って…うん
+少し面白くなってきた

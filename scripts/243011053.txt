@@ -1,0 +1,274 @@
+;;-----------------------------------------
+;;ファントムオブキル　この素晴らしい世界に祝福を！コラボ2019水着　シナリオ前半
+;;【EP.5】
+;;5_3
+;;スクリプト最後の背景：海の家
+;;-----------------------------------------
+# script "lisp"
+# background "sea_beach_day"
+# bgmfile "bgm208" "BgmKScollabo001" 0
+;;-----------------------------------------
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 2
+# alpha 0 0 0
+# mask 0 off
+;;アクア
+# body 2601711
+# pos 2601711 3
+# scale 2601711 0.8 0
+# layer 2601711 2
+# alpha 2601711 0 0
+# mask 2601711 off
+;;ダクネス
+# body 2103411
+# pos 2103411 3
+# scale 2103411 0.8 0
+# layer 2103411 2
+# alpha 2103411 0 0
+# mask 2103411 off
+;;水着ティルフィング
+# body 2101411
+# pos 2101411 3
+# scale 2101411 0.8 0
+# layer 2101411 2
+# alpha 2101411 0 0
+# mask 2101411 off
+;;めぐみん
+# body 2502511
+# pos 2502511 3
+# scale 2502511 0.8 0
+# layer 2502511 2
+# alpha 2502511 0 0
+# mask 2502511 off
+;;ゆんゆん
+# body 2502611
+# pos 2502611 3
+# scale 2502611 0.8 0
+# layer 2502611 2
+# alpha 2502611 0 0
+# mask 2502611 off
+;;ウィズ
+# body 2601811
+# pos 2601811 3
+# scale 2601811 0.8 0
+# layer 2601811 2
+# alpha 2601811 0 0
+# mask 2601811 off
+;;-----------------------------------------
+;;背景の暗転
+# imageset 2 "bg_black"
+# imagelayer 2 3
+# imagealpha 2 0 0
+;;-----------------------------------------
+;;//背景：海の家
+# se "SE_6504"
+# emotionbody 1000 3 2601711 10 280
+# effectpattern 1000 1 3
+# effectstart 1000
+# voice 6017 "akua_0046"
+# move 2601711 3 0
+# face 2601711 "normal"
+# alpha 2601711 1 0
+# mask 2601711 off
+# textflame 1 1
+# textboxarrow 0 2
+@アクア
+今日は気分がいいから特別よ？
+そーれ、花鳥風月～！
+
+;;//モノローグ
+# alpha 2601711 0 0.5
+# textflame 0 0
+@
+無事ジャイアント・トードを
+倒したアクア達はその功績を
+評価され、多額の報酬を得ていた
+
+;;//モノローグ
+@
+そのお祝いとして開かれた
+宴会で、それぞれが思い思いに
+過ごしていた
+
+# voice 5026 "yunyun_0004"
+# move 2502611 3 0
+# face 2502611 "usual"
+# alpha 2502611 1 0.5
+# mask 2502611 off
+# textflame 1 1
+# textboxarrow 0 2
+@ゆんゆん
+めぐみんの爆裂魔法より
+小回りの利く私のほうが優秀だと
+この戦いで証明されてる
+
+# move 2502611 2 0.5
+# mask 2502611 on
+# move 2502511 4 0
+# face 2502511 "angry"
+# alpha 2502511 1 0.5
+# mask 2502511 on
+# textboxarrow 0 3
+@めぐみん
+なにやら勝ち誇っているようですが
+ちまちま動き回るのは私の
+性に合わないというだけですからね
+
+# emotionbody 1001 6 2502611 50 250
+# effectpattern 1001 1 0
+# effectstart 1001
+# face 2502611 "angry"
+# textboxarrow 0 1
+@ゆんゆん
+なんと言おうと今日は私の勝ちよ…っ！
+
+# emotionbody 1002 8 2502511 80 250
+# effectpattern 1002 1 0
+# effectstart 1002
+# voice 5025 "megumin_0027"
+# face 2502511 "worry"
+# textboxarrow 0 3
+@めぐみん
+はぁ、…どうでもいいですけど
+
+# effectskip 1002
+# emotionbody 1003 9 2601811 -50 220
+# effectpattern 1003 6 0
+# effectstart 1003
+# se "SE_9088"
+# voice 6018 "wizu_battle_0006"
+# alpha 2502611 0 0.5
+# alpha 2502511 0 0.5
+# move 2601811 3 0
+# face 2601811 "sad"
+# alpha 2601811 1 0.5
+# mask 2601811 off
+# textboxarrow 0 2
+@ウィズ
+あ、アクア様！
+水が、水が私にかかってます！
+浄化されちゃいます～！
+
+# effectskip 1003
+# alpha 2601811 0 0.5
+# move 2103411 3 0
+# face 2103411 "normal"
+# alpha 2103411 1 0.5
+# mask 2103411 off
+# textboxarrow 0 2
+@ダクネス
+そうだ、いかんぞアクア
+やるなら景気よくその水流で
+私を吹き飛ばして…あああああああ！
+
+# se "SE_9275"
+# waitandnext 0.5
+
+;;//モノローグ
+# alpha 2103411 0 0.5
+# textflame 0 0
+@
+アクアの魔法で呼び出された
+水に飲まれ、ダクネスが流れていく
+
+# voice 1014 "tyrufing_0015"
+# move 2601711 2 0
+# face 2601711 "usual"
+# alpha 2601711 1 0.5
+# mask 2601711 on
+# move 2101411 4 0
+# face 2101411 "angry"
+# alpha 2101411 1 0.5
+# mask 2101411 on
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+アクアさん、とめてください！
+ダクネスさんがもうあんなに遠く…
+
+# voice 6017 "akua_0064"
+# face 2601711 "normal"
+# textboxarrow 0 1
+@アクア
+え、もっと？
+ティルは欲しがりさんね～
+
+# voice 9999 "durin_0005"
+# alpha 2601711 0 0.5
+# alpha 2101411 0 0.5
+# move 0 3 0
+# face 0 "usual"
+# alpha 0 1 0.5
+# mask 0 off
+# textboxarrow 0 2
+@デュリン
+ふふふ
+アクア達といると退屈しないわ
+ねえ、マスター
+
+;;//モノローグ
+# textflame 0 0
+@
+にぎやかで頼もしい仲間がいるのは
+とても喜ばしいことなのだが
+ほどほどにしてほしい、とマスター
+
+;;//モノローグ
+@
+それでも、大変なことがあっても
+こうして笑って過ごせる時間は
+とてもかけがえのないものだ
+
+# voice 1014 "tyrufing_0001"
+# alpha 0 0 0.5
+# move 2101411 3 0
+# face 2101411 "angry"
+# alpha 2101411 1 0.5
+# mask 2101411 off
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+マスター、私ダクネスさんを
+助けてきます！
+
+;;ダクネス（セリフのみ）
+# serif 1
+@ダクネス
+私は大丈夫だあああああ
+もっと、もっとやってくれ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 2101411 0 0.5
+# move 2601711 3 0
+# face 2601711 "normal"
+# alpha 2601711 1 0.5
+# mask 2601711 off
+# textboxarrow 0 2
+@アクア
+ダクネスまでおかわり希望なのかしら？
+もう、みんな欲張りね～
+
+;;//モノローグ
+# imagepos 2 0 0
+# imagealpha 2 1 0.5
+# alpha 2601711 0 0.5
+# textflame 0 0
+@
+アクア達の騒がしさに
+マスターも胸に残る違和感を忘れ
+夜が更けていくのだった…
+
+@
+つづく！
+
+# se "SE_0700"
+# bgm "stop"
+# effectbody 1004 21 0 0
+# effectstart 1004
+# textwindow "close"
+# waitandnext 2

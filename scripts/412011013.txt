@@ -1,0 +1,348 @@
+;;1話戦闘後
+;;//背景：森
+;;//異族の群れが現れる
+# script "lisp"
+# background "forest"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# body 135
+# pos 135 3
+# scale 135 0.8 0
+# mask 135 off
+# alpha 135 0 0
+# body 3103811
+# pos 3103811 3
+# scale 3103811 0.8 0
+# mask 3103811 off
+# face 3103811 "sad"
+# face 135 "surprise"
+# imageset 4 "bg_black"
+# imagealpha 4 0 0
+# imagelayer 4 5
+# imagescale 4 2 0
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# se "SE_0617"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 1 0
+@異族
+グルルルル…！
+グアアアアアアアアアア！！
+
+# imagepos 4 0 30
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+@？？？
+…………
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# face 135 "surprise"
+# alpha 135 1 0
+# alpha 3103811 0 0
+# waitandnext 0.1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "normal" 
+# textflame 1 1
+# textboxarrow 0 2
+# chara 135
+# voice 9970 "oberon_0024"
+@オベロン
+なんたる！？
+異形の者達が
+人間を襲っておるではないか！
+
+# face 135 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 135
+# voice 9970 "oberon_0028"
+@オベロン
+ええい、やめぬか！
+
+;;//オベロンが異族を倒す
+;;//魔法攻撃の演出で
+# serif 0
+# textwindow "close"
+# se "SE_9173"
+# fadein "white" 0.5
+# waitandnext 1
+
+# se "SE_0618"
+# se "SE_3001"
+# serif 1
+# textwindow "normal"
+# shake 0 0.5
+# textboxarrow 1 0
+@異族
+グギャアアア…
+
+# bgmfile "bgm273" "BgmLostRagnarokEvent" 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# mask 3103811 on
+# textflame 1 1
+# textboxarrow 0 2
+# chara 135
+@オベロン
+大丈夫か、娘よ
+そちらのご婦人は…なんという…
+手遅れであったか…
+
+# alpha 135 0 0.5
+# alpha 3103811 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+@？？？
+…………
+
+# mask 135 on
+# move 135 5 0
+# face 135 "surprise"
+# waitandnext 0.1
+
+# alpha 135 1 0.5
+# move 135 4 0.5
+# move 3103811 2 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 135
+@オベロン
+気をしっかり持つのだ！
+そなた、名はなんと申す！？
+なぜ、ここにおるのだ！？
+
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+オベロン！
+その子はきっと目の前で…
+今はそっとしておきましょう
+
+# face 135 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 135
+# voice 9970 "oberon_0033"
+@オベロン
+すまぬ…
+わしも少し動揺しておった…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 135
+@オベロン
+ティターニア、この子を頼む
+わしは、ご婦人の遺体を… 
+
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+分かりました
+この子を連れて先に
+ティルヘルムへ戻りますね
+
+;;//背景：黒
+# bgm "stop"
+# imagealpha 4 1 0.5
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+結界のすぐ外で異形達に襲われた
+女性と女の子――
+
+# background "black"
+# alpha 3103811 0 0
+# alpha 135 0 0
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+思えば、あの子にとって
+あまりに残酷な出会いでした――
+
+;;//背景：城内
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+# background "mamon_room"
+# imagealpha 4 0 0
+# alpha 135 1 0
+# pos 135 3
+# mask 135 off
+# mask 3103811 off
+# pos 3103811 3
+# waitandnext 0.6
+
+# fadein "black" 1
+# textflame 1 1
+# textboxarrow 0 2
+# chara 135
+@オベロン
+ティターニア、
+あの娘の様子はどうだ？
+
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+今は部屋で休ませています
+ところでオベロン、あの子…
+気づきましたか？
+
+# face 135 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 135
+@オベロン
+無論だ…
+あの娘にはキラーズが宿っておる
+なぜかは分からぬが
+
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+先に言っておきますけれど、
+尋問しようなどと
+考えないでくださいね
+
+# face 135 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 135
+# voice 9970 "oberon_0003"
+@オベロン
+分かっておる
+今、あの娘に必要なのは
+安心して眠れる場所であろう
+
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+ええ、そうです
+話ができるようになるまで、
+しばらく私が面倒を見ます
+
+;;//暗転挟む
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# alpha 135 0 0
+# alpha 3103811 1 0
+# background "church_room"
+# waitandnext 0.6
+
+# fadein "black" 1
+# textflame 0 0
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+@？？？
+…………
+
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+大変でしたね…
+今は辛くて苦しいでしょうけれど、
+大丈夫ですよ
+
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+私がついていますからね
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+@？？？
+…………
+
+# serif 0
+# textflame 0 0
+# textboxarrow 0 0
+# textwindow "moya"
+;;//モヤモヤ吹き出し
+@ティターニア
+なんて冷たい目…
+心を閉ざしてなにも
+感じないようにしているのですね
+
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+ご飯を持ってきましたよ
+一緒に食べませんか？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+@？？？
+…………
+
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+それでは、ここに置いておきますね
+少しで良いのでお腹に入れて下さい…
+
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+…あの、一つだけ良いでしょうか
+アナタのお名前を
+教えていただけませんか？
+
+# face 3103811 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+# voice 1038 "almace_prolo_1006"
+@？？？
+…………
+
+# face 3103811 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+# voice 1038 "almace_prolo_2006"
+@？？？
+アルマス…
+
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+アルマス…！
+それがアナタのお名前なのですね
+ありがとう
+
+# serif 0
+# textflame 0 0
+# textboxarrow 0 0
+# textwindow "moya"
+;;//モヤモヤ吹き出し
+@ティターニア
+アルマス…
+必ずアナタの笑顔を
+取り戻してあげますからね

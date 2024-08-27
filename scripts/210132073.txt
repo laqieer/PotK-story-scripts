@@ -1,0 +1,343 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１３章 章タイトル「ラルゴカタストロフィ―攪乱―」
+;;第2話－７　タイトル：暴走の真実
+;;2_7_3
+;;スクリプト最後の背景：マサムネ城内
+;;-----------------------------------------
+# script "lisp"
+# background "masamune_arena"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;擬装フライシュッツ
+# body 5502721
+# pos 5502721 3
+# scale 5502721 0.8 0
+# layer 5502721 2
+# alpha 5502721 0 0
+# mask 5502721 off
+;;天沼矛
+# body 300431
+# pos 300431 3
+# scale 300431 0.8 0
+# layer 300431 2
+# alpha 300431 0 0
+# mask 300431 off
+# brightness 300431 0.8 0
+;;八咫鏡
+# body 500331
+# pos 500331 3
+# scale 500331 0.8 0
+# layer 500331 2
+# alpha 500331 0 0
+# mask 500331 off
+# brightness 500331 0.8 0
+;;草薙剣
+# body 100441
+# pos 100441 3
+# scale 100441 0.8 0
+# layer 100441 2
+# alpha 100441 0 0
+# mask 100441 off
+# brightness 100441 0.8 0
+;;ヘレナ・D. plug・ロキ
+# body 5302811
+# pos 5302811 3
+# scale 5302811 0.8 0
+# layer 5302811 2
+# alpha 5302811 0 0
+# mask 5302811 off
+;;ニール
+# body 162
+# pos 162 3
+# scale 162 0.8 0
+# layer 162 2
+# alpha 162 0 0
+# mask 162 off
+;;雑賀
+# body 502411
+# pos 502411 3
+# scale 502411 0.8 0
+# layer 502411 3
+# alpha 502411 0 0
+# mask 502411 off
+# brightness 502411 0.8 0
+;;-----------------------------------------
+;;//ヘレナが草薙剣と八咫鏡に力を打ち込む
+# textwindow "close"
+# emotionbody 1000 15 500331 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# emotionbody 2000 15 100441 0 0
+# effectpattern 2000 1 0
+# effectstart 2000
+# move 500331 2 0
+# face 500331 "angry"
+# alpha 500331 1 0
+# mask 500331 on
+# move 100441 4 0
+# face 100441 "angry"
+# alpha 100441 1 0
+# mask 100441 on
+# waitandnext 0.5
+
+# se "SE_0994"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@草薙剣
+アアアアアアアアアアああ…
+
+# se "SE_0994"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@八咫鏡
+アアアアアアアアあああ…
+
+;;//草薙剣と八咫鏡の暴走が収まる
+# effectskip 1000
+# effectskip 2000
+# textwindow "close"
+# brightness 500331 1 0.5
+# brightness 100441 1 0.5
+# waitandnext 1
+
+# alpha 500331 0 0.5
+# alpha 100441 0 0.5
+# move 5302811 2 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 1
+# move 162 4 0
+# alpha 162 1 0.5
+# mask 162 on
+# textwindow "normal"
+@ヘレナ
+これで二人…！
+ふぅ…
+
+# textboxarrow 0 3
+@ニール
+あら？
+疲れてきたの？
+
+# voice 530281 "herena_di_0007"
+# face 5302811 "normal"
+# textboxarrow 0 1
+@ヘレナ
+ヘレナはか弱い女の子だからな
+…くふっ
+
+# voice 9952 "nir_0007"
+# textboxarrow 0 3
+@ニール
+まだまだ元気そうね
+次は雑賀よっ
+
+# emotionbody 3000 15 502411 0 0
+# effectpattern 3000 1 0
+# effectstart 3000
+# alpha 5302811 0 0.5
+# alpha 162 0 0.5
+# move 502411 3 0
+# face 502411 "angry"
+# alpha 502411 1 0.5
+# mask 502411 off
+# textboxarrow 0 2
+@雑賀
+アアアアアアアアア！
+
+;;//ヘレナが雑賀に接近する
+# se "SE_9021"
+# voice 530281 "herena_di_0007"
+# move 502411 2 0.5
+# mask 502411 on
+# move 5302811 4 0
+# face 5302811 "normal"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 3
+@ヘレナ
+そのままじっとしているんだ
+優しくするからな…くふっ
+
+# textboxarrow 0 1
+@雑賀
+アアアアアアアアアア！
+
+# effectskip 3000
+# alpha 502411 0 0.5
+# alpha 5302811 0 0.5
+# move 162 3 0
+# alpha 162 1 0.5
+# mask 162 off
+# textboxarrow 0 2
+@ニール
+ヘレナ！？
+離れてっ…
+
+# effectstart 3000
+# alpha 162 0 0.5
+# move 502411 2 0
+# face 502411 "angry"
+# alpha 502411 1 0.5
+# mask 502411 on
+# move 5302811 4 0
+# face 5302811 "surprise"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 3
+@ヘレナ
+ん？
+
+;;//天沼矛が突っ込んでくる
+# bgm "stop"
+# se "SE_9021"
+# textwindow "close"
+# emotionbody 4000 15 300431 0 0
+# effectpattern 4000 1 0
+# effectstart 4000
+# move 300431 1 0
+# face 300431 "normal"
+# alpha 300431 1 0.5
+# mask 300431 on
+# move 502411 3 0.5
+# move 5302811 5 0.5
+# waitandnext 0.5
+
+;;//ヘレナと雑賀をまとめて貫く
+# se "SE_4817"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+# textwindow "normal"
+@天沼矛
+アアアアアアアアアアア！！
+
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+# voice 530281 "herena_di_0017"
+# textboxarrow 0 3
+@ヘレナ
+何だって…！？
+そうか…しまったな…
+
+# face 5302811 "sad"
+# textboxarrow 0 3
+@ヘレナ
+雑賀…アナタは暴走していても
+集団の勝利を優先したのか…
+自分を犠牲にして…
+
+# effectskip 3000
+# effectskip 4000
+# voice 9952 "nir_0044"
+# alpha 300431 0 0.5
+# alpha 502411 0 0.5
+# alpha 5302811 0 0.5
+# move 162 3 0
+# alpha 162 1 0.5
+# mask 162 off
+# textboxarrow 0 2
+@ニール
+ヘレナ！
+しっかりして…
+
+# effectstart 3000
+# alpha 162 0 0.5
+# move 502411 2 0
+# face 502411 "angry"
+# alpha 502411 1 0.5
+# mask 502411 on
+# move 5302811 4 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 3
+@ヘレナ
+平気だ…
+このくらい大した傷じゃない…
+
+# textboxarrow 0 1
+@雑賀
+アアアアアアア…！
+
+;;//雑賀がヘレナを撃つ
+# se "SE_4400"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 530281 "herena_di_0038"
+# face 5302811 "sad"
+# textboxarrow 0 3
+@ヘレナ
+あうっ…！
+
+# voice 530281 "herena_di_0004"
+# textboxarrow 0 3
+@ヘレナ
+何て執念だ…
+これは…ピンチかもな…ふふっ
+
+# textboxarrow 0 1
+@雑賀
+アアアアアアアアア！
+
+# effectskip 3000
+# effectstart 4000
+# alpha 502411 0 0.5
+# alpha 5302811 0 0.5
+# move 300431 3 0
+# face 300431 "normal"
+# alpha 300431 1 0.5
+# mask 300431 off
+# textboxarrow 0 2
+@天沼矛
+アアアアアアアアアア！
+
+# effectskip 4000
+# alpha 300431 0 0.5
+# move 5302811 3 0
+# face 5302811 "angry"
+# alpha 5302811 1 0.5
+# mask 5302811 off
+# textboxarrow 0 2
+@ヘレナ
+まだだ…！
+ヘレナは…アナタ達を…！
+
+;;//天沼矛がヘレナに突っ込む
+# textwindow "close"
+# effectstart 4000
+# alpha 5302811 0 0.5
+# move 300431 3 0
+# face 300431 "normal"
+# alpha 300431 1 0.5
+# mask 300431 off
+# waitandnext 0.5
+
+# se "SE_9021"
+# rightout 300431 0.5
+# waitandnext 0.5
+
+;;//フライシュッツが割り込む
+# bgm "stop"
+# se "SE_9021"
+# effectskip 4000
+# voice 5027 "freischotz_battle_0001"
+# alpha 300431 0 0
+# move 5502721 3 0
+# face 5502721 "angry"
+# alpha 5502721 1 0.5
+# mask 5502721 off
+# textboxarrow 0 2
+# textwindow "normal"
+@フライシュッツ
+えーい！！

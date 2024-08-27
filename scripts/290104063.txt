@@ -1,0 +1,376 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;２章１話　「エデンクライシス―覚醒―」
+;;第4話　タイトル：風雲！マサムネ城
+;;4_6_3
+;;スクリプト最後の背景：闘技場
+;;-----------------------------------------
+# script "lisp"
+# background "masamune_arena"
+# bgmfile "bgm415" "BgmIntegralNoahBattle002" 0
+;;-----------------------------------------
+;;異族化アルマス
+# body 5103831
+# pos 5103831 3
+# scale 5103831 0.8 0
+# layer 5103831 2
+# alpha 5103831 0 0
+# mask 5103831 off
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;ネス
+# body 602011
+# pos 602011 3
+# scale 602011 0.8 0
+# layer 602011 2
+# alpha 602011 0 0
+# mask 602011 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;ダーインスレイヴ
+# body 102811
+# pos 102811 3
+# scale 102811 0.8 0
+# layer 102811 2
+# alpha 102811 0 0
+# mask 102811 off
+;;司会
+# body 11
+# pos 11 3
+# scale 11 0.8 0
+# layer 11 2
+# alpha 11 0 0
+# mask 11 off
+;;-----------------------------------------
+# se "SE_3006"
+# sedelay "SE_3006" 0.5
+# move 102811 2 0
+# face 102811 "normal"
+# alpha 102811 1 0
+# mask 102811 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0
+# mask 196 on
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0054"
+@アルマス
+くっ…
+強いわね…
+
+# face 102811 "happy"
+# textboxarrow 0 1
+# voice 1028 "dainsleif_0004"
+@ダーインスレイヴ
+おぬしも大したものだ
+わたしの剣をこれほど受け続けるとは
+
+# textboxarrow 0 1
+@ダーインスレイヴ
+だが、そろそろ終わりにしよう
+おぬしも限界だろう？
+
+# alpha 102811 0 0.5
+# alpha 196 0 0.5
+# move 11 3 0
+# face 11 "angry"
+# alpha 11 1 0.5
+# mask 11 off
+# textboxarrow 0 2
+@司会
+おおーっと！
+ここでダーインスレイヴの
+決着宣言だぁっ！
+
+# textboxarrow 0 2
+@司会
+消耗が激しいアルマスに対し、
+ダーインスレイヴはほぼ無傷！
+これは決まりかっ？
+
+# se "SE_5205"
+# alpha 11 0 0.5
+# move 102811 2 0
+# face 102811 "happy"
+# alpha 102811 1 0.5
+# mask 102811 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 1
+# voice 1028 "dainsleif_battle_0001"
+@ダーインスレイヴ
+次の一太刀で終わらせよう
+
+# face 196 "angry"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0011"
+@アルマス
+それは…こっちの台詞よ！
+
+;;//アルマスが斬りかかる
+# se "SE_4000"
+# waitandnext 0.5
+
+# face 102811 "normal"
+# textboxarrow 0 1
+@ダーインスレイヴ
+甘い！
+
+;;//ダーインスレイヴがアルマスを斬る
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0053"
+@アルマス
+カハッ…
+
+# serif 1
+@司会
+ああーっ！
+ダーインスレイヴの一撃が、
+完全に決まったあああ！！
+
+# serif 1
+@女性達
+キャ～～～！
+ダーインスレイヴ様～っ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 102811 0 0.5
+# alpha 196 0 0.5
+# move 103611 3 0
+# face 103611 "angry"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+アルマス…！
+
+;;//心音演出
+# bgm "stop"
+# se "SE_0644"
+# waitandnext 0.5
+
+# face 103611 "surprise"
+# textboxarrow 0 2
+# voice 1036 "ragnarok_0022"
+@ラグナロク
+えっ…？
+
+# alpha 103611 0 0.5
+# move 196 3 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+…………
+
+;;//アルマスの姿が一瞬、インテグラルに
+# se "SE_0845"
+# bgmfile "bgm410_1" "BgmIntegralNoahBattle001" 0
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 196 0 1
+# move 5103831 3 0
+# face 5103831 "normal"
+# alpha 5103831 1 1
+# mask 5103831 off
+# waitandnext 1.4
+
+# alpha 5103831 0 1
+# move 196 3 0
+# face 196 "normal"
+# alpha 196 1 1
+# mask 196 off
+# waitandnext 1.4
+
+# alpha 196 0 0.5
+# move 103611 3 0
+# face 103611 "surprise"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 1036 "ragnarok_0038"
+@ラグナロク
+あぐぅっ…？
+
+# move 103611 2 0.5
+# mask 103611 on
+# move 602011 4 0
+# face 602011 "angry"
+# alpha 602011 1 0.5
+# mask 602011 on
+# textboxarrow 0 3
+# voice 6020 "ness_0022"
+@ネス
+どうしました、ラグナロクっ？
+大丈夫ですかっ？
+
+# face 103611 "normal"
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0032"
+@ラグナロク
+平気よ…
+それより、アルマスが…今…
+
+# alpha 103611 0 0.5
+# alpha 602011 0 0.5
+# move 102811 3 0
+# face 102811 "surprise"
+# alpha 102811 1 0.5
+# mask 102811 off
+# textboxarrow 0 2
+# voice 1028 "dainsleif_0022"
+@ダーインスレイヴ
+何か妙な気配が…
+なにっ…
+
+# move 102811 2 0.5
+# mask 102811 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+…………
+
+# se "bgm410_1_volumeup"
+# se "SE_10096"
+# textboxarrow 0 3
+# voice 510383 "almace_iz_unit_0005"
+@アルマス
+…その穢れた魂、
+私が散らしてあげる
+
+;;//アルマスがダーインスレイヴを斬る
+# se "SE_4000"
+# waitandnext 0.5
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 2000 1 -200 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+# face 102811 "angry"
+# textboxarrow 0 1
+# voice 1028 "dainsleif_0010"
+@ダーインスレイヴ
+ちっ！
+何が起きた…！？
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+ああっ…
+あああああああああああああ…！！
+
+;;//アルマスがダーインスレイヴを弾き飛ばす
+# se "SE_9084"
+# fadein "white" 0.5
+# move 102811 1 0.1
+# waitandnext 0.5
+
+# face 102811 "surprise"
+# textboxarrow 0 1
+# voice 1028 "dainsleif_0025"
+@ダーインスレイヴ
+うそだ！？
+この力っ…
+先程とは別人…
+
+# textboxarrow 0 3
+@アルマス
+命の芽を摘んで――　　　
+
+# bgm "stop"
+# alpha 102811 0 0.5
+# alpha 196 0 0.5
+# move 103611 3 0
+# face 103611 "angry"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# voice 1036 "ragnarok_0011"
+@ラグナロク
+ダメよ、アルマス！！
+
+# alpha 103611 0 0.5
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0035"
+@アルマス
+…………ラグナロク？
+あれっ…？
+私…
+
+# bgmfile "bgm415" "BgmIntegralNoahBattle002" 0
+# alpha 196 0 0.5
+# move 102811 3 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 off
+# textboxarrow 0 2
+# voice 1028 "dainsleif_0022"
+@ダーインスレイヴ
+動きが止まった…
+この隙に…いや
+
+# textboxarrow 0 2
+@ダーインスレイヴ
+降参だ！
+あの一撃で終わらせられなかった
+わたしの負けだ
+
+# serif 1
+@観客達
+ええええええええええええ…！？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 102811 0 0.5
+# move 11 3 0
+# face 11 "angry"
+# alpha 11 1 0.5
+# mask 11 off
+# textboxarrow 0 2
+@司会
+これはどういうことだー！？
+ダーインスレイヴ、まさかの
+降参宣言ーっ
+
+# face 11 "normal"
+# textboxarrow 0 2
+@司会
+勝ったのは、アルマス！
+アルマス・イズ・準決勝にコマを
+進めました！！

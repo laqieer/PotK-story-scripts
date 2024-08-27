@@ -1,0 +1,225 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１４章 章タイトル「ラルゴカタストロフィ―激突―」
+;;第1話－７　タイトル：終焉の理を破る者
+;;1_7_1
+;;スクリプト最後の背景：町
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgmfile "bgm463_462" "BgmIntegralNoahDisrupters" 0
+;;-----------------------------------------
+;;テュルソス
+# body 600321
+# pos 600321 3
+# scale 600321 0.8 0
+# layer 600321 2
+# alpha 600321 0 0
+# mask 600321 off
+# brightness 600321 0.8 0
+;;ネス・擬装・ランサー
+# body 5602021
+# pos 5602021 3
+# scale 5602021 0.8 0
+# layer 5602021 2
+# alpha 5602021 0 0
+# mask 5602021 off
+;;トリシューラ
+# body 300611
+# pos 300611 3
+# scale 300611 0.8 0
+# layer 300611 2
+# alpha 300611 0 0
+# mask 300611 off
+# brightness 300611 0.8 0
+;;トライデント
+# body 300231
+# pos 300231 3
+# scale 300231 0.8 0
+# layer 300231 2
+# alpha 300231 0 0
+# mask 300231 off
+# brightness 300231 0.8 0
+;;ソロモン
+# body 5503111
+# pos 5503111 3
+# scale 5503111 0.8 0
+# layer 5503111 2
+# alpha 5503111 0 0
+# mask 5503111 off
+;;グラウ
+# body 164
+# pos 164 3
+# scale 164 0.6 0
+# layer 164 2
+# alpha 164 0 0
+# mask 164 off
+;;-----------------------------------------
+;;第1話－７　タイトル：終焉の理を破る者
+;;//背景：町
+# emotionbody 1000 15 600321 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 600321 3 0
+# face 600321 "angry"
+# alpha 600321 1 0
+# mask 600321 off
+# textflame 1 1
+# textboxarrow 0 2
+@テュルソス
+アアアアアアアアアアアア！
+
+# effectskip 1000
+# alpha 600321 0 0.5
+# move 5602021 3 0
+# face 5602021 "angry"
+# alpha 5602021 1 0.5
+# mask 5602021 off
+# textboxarrow 0 2
+@ネス
+落ち着いて下さい、
+テュルソスさん
+
+# alpha 5602021 0 0.5
+# move 5503111 3 0
+# face 5503111 "angry"
+# alpha 5503111 1 0.5
+# mask 5503111 off
+# textboxarrow 0 2
+@ソロモン
+テュルソス、私の声を聞いて！
+
+;;//暴走を解く演出
+;;//テュルソスから黒い霧演出が消える
+# se "SE_0994"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# effectstart 1000
+# alpha 5503111 0 0.5
+# move 600321 3 0
+# face 600321 "angry"
+# alpha 600321 1 0.5
+# mask 600321 off
+# textboxarrow 0 2
+@テュルソス
+アアアアアアアあああ…
+
+# effectskip 1000
+# textwindow "close"
+# brightness 600321 1 0.5
+# waitandnext 1
+
+# voice 6020 "ness_0041"
+# alpha 600321 0 0.5
+# move 5602021 3 0
+# face 5602021 "angry"
+# alpha 5602021 1 0.5
+# mask 5602021 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ネス
+すごい…
+本当に暴走が解けました
+こんなことができるなんて…
+
+# voice 550311 "solomon_di_0043"
+# alpha 5602021 0 0.5
+# move 164 2 0
+# alpha 164 1 0.5
+# mask 164 on
+# move 5503111 4 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# textboxarrow 0 3
+@ソロモン
+グラウ、トリシューラはどこ？
+彼女の暴走を解けば任務完了よ
+
+# textboxarrow 0 3
+@ソロモン
+それから、さっき感知した新たな
+個体についても確認しておかないと
+いけないわ
+
+# se "SE_0775"
+# voice 9950 "glau_0045"
+# textboxarrow 0 1
+@グラウ
+ソロモン…暴走の反応が増えました
+南西の方角から接近してきます
+
+# voice 550311 "solomon_di_0023"
+# face 5503111 "surprise"
+# textboxarrow 0 3
+@ソロモン
+何ですって！？
+
+# emotionbody 2000 15 300231 0 0
+# effectpattern 2000 1 0
+# effectstart 2000
+# alpha 164 0 0.5
+# alpha 5503111 0 0.5
+# move 300231 3 0
+# face 300231 "angry"
+# alpha 300231 1 0.5
+# mask 300231 off
+# textboxarrow 0 2
+@トライデント
+アアアアアアアアアアアアアア！！
+
+# effectskip 2000
+# voice 6020 "ness_0022"
+# alpha 300231 0 0.5
+# move 5602021 3 0
+# face 5602021 "surprise"
+# alpha 5602021 1 0.5
+# mask 5602021 off
+# textboxarrow 0 2
+@ネス
+トライデントさん！？
+あうう…何で…どうしてっ…
+
+# alpha 5602021 0 0.5
+# move 5503111 3 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 off
+# textboxarrow 0 2
+@ソロモン
+安心して、ネス
+こういう状況も想定済みよ
+
+# emotionbody 3000 15 300611 0 0
+# effectpattern 3000 1 0
+# effectstart 3000
+# alpha 5503111 0 0.5
+# move 300611 3 0
+# face 300611 "angry"
+# alpha 300611 1 0.5
+# mask 300611 off
+# textboxarrow 0 2
+@トリシューラ
+アアアアアアアアアアア！！
+
+# effectskip 3000
+# alpha 300611 0 0.5
+# move 164 2 0
+# alpha 164 1 0.5
+# mask 164 on
+# textboxarrow 0 1
+# move 5503111 4 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+@グラウ
+北東からトリシューラも接近
+このままでは挟み撃ちに遭います
+
+# face 5503111 "angry"
+# textboxarrow 0 3
+@ソロモン
+むむっ…
+一旦、受け流すしかないわね
+体勢を整えてから暴走を解きましょう

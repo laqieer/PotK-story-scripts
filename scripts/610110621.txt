@@ -1,0 +1,481 @@
+;;-----------------------------------------
+;;ファンキル学園
+;;2_1
+;;-----------------------------------------
+# script "lisp"
+# bgm "bgm002" 0
+# background "Schoolyard_daytime"
+;;-----------------------------------------
+;;ティルフィング
+# body 101491
+# pos 101491 3
+# scale 101491 0.8 0
+# layer 101491 3
+# mask 101491 off
+# alpha 101491 0 0
+;;ダグダ
+# body 200651
+# pos 200651 3
+# scale 200651 0.8 0
+# layer 200651 3
+# mask 200651 off
+# alpha 200651 0 0
+;;フライクーゲル
+# body 126
+# pos 126 3
+# scale 126 0.8 0
+# layer 126 3
+# mask 126 off
+# alpha 126 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;【EP.2】ひとりでに動く像の怪
+;;背景：校庭（昼）
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2.5
+
+# alpha 200651 1 0.5
+# waitandnext 0.5
+
+;;ＳＥ：ピピーッ（ダグダが笛を吹く音）
+# se "SE_0739"
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 2
+# face 200651 "normal"
+@ダグダ
+はぁーい、みんな～
+残り時間あと半分だよ～
+
+# textflame 1 1
+# textboxarrow 0 2
+@ダグダ
+最後までがんばって
+走りきるように！
+ちゃんと見てるからね～
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 2006 "daguda_0003"
+@ダグダ
+ふぅ…
+やっぱりいいねぇ、ランニングは
+
+# textflame 1 1
+# textboxarrow 0 2
+@ダグダ
+ただこうやって、
+ぐでーってしながら
+見守るだけでいいんだもん
+
+# se "SE_6505"
+# emotionbody 1000 3 200651 10 210
+# effectpattern 1000 2 3
+# effectstart 1000
+# textflame 1 1
+# textboxarrow 0 2
+# face 200651 "happy"
+# voice 2006 "daguda_0020"
+@ダグダ
+はぁ～、楽ちん楽ちん…♪
+
+# effectskip 1000
+;;ＳＥ：タッタッタッ（ティルフィングが走ってくる音）
+# se "SE_0876"
+# bgm "stop"
+# textwindow "close"
+# alpha 101491 1 0.5
+# alpha 200651 0 0.5
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 101491 "angry"
+@ティルフィング
+ダグダ先生っ！
+
+# se "SE_6502"
+# emotionbody 1001 2 200651 10 260
+# effectpattern 1001 1 1
+# effectstart 1001
+# move 101491 2 0.5
+# mask 101491 on
+# move 200651 4 0
+# mask 200651 on
+# alpha 200651 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 200651 "usual"
+@ダグダ
+ん～？
+どうかしたの？
+
+# bgm "bgm005" 0
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0025"
+@ティルフィング
+あ、あのっ！
+実は、銅像の様子がおかしくて…
+
+# textflame 1 1
+# textboxarrow 0 3
+@ダグダ
+銅像って、マスターの？
+落書きでもされてた？
+
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+違うんです！
+その、自分でも
+信じられないのですが…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 101491 "sad"
+# voice 1014 "tyrufing_0015"
+@ティルフィング
+…私、見たんです！
+マスターの像が、
+ひとりでに動くところを！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ダグダ
+…………
+
+# se "SE_6521"
+# emotionbody 1002 10 200651 -50 230
+# effectpattern 1002 4 0
+# effectstart 1002
+# textflame 1 1
+# textboxarrow 0 3
+# face 200651 "happy"
+# voice 2006 "daguda_0005"
+@ダグダ
+…あっはっはっはっ！！
+なにそれ～、おっかし～っ！！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 2006 "daguda_0004"
+@ダグダ
+君、そんな冗談言うタイプだっけ？
+先生ツボっちゃった、あははっ♪
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 101491 "angry"
+@ティルフィング
+ち、違いますっ！
+本当のことなんですっ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 2006 "daguda_0007"
+@ダグダ
+またまたぁ～
+銅像が勝手に動くなんて
+あるわけないじゃーん！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 101491 "sad"
+# voice 1014 "tyrufing_0025"
+@ティルフィング
+ううっ…
+そ、それは私も
+わかってます、でも…！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+お願いします、先生っ！
+一緒に来ていただけませんか！？
+
+# effectskip 1002
+# textflame 1 1
+# textboxarrow 0 3
+# face 200651 "sad"
+# voice 2006 "daguda_0028"
+@ダグダ
+うーん…そこまで必死に
+頼まれちゃうとな～
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 200651 "normal"
+# voice 2006 "daguda_0032"
+@ダグダ
+わかったよ、見に行こっか
+きっと気のせいだと思うけどね～
+
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+…っ！
+ありがとうございます！
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 200651 0 0
+# alpha 101491 0 0
+;;背景：校門
+# background "schoolgate_daytime"
+# bgmfile "bgm373" "BgmGakuen005" 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 200651 1 0.5
+# alpha 101491 1 0.5
+# face 101491 "surprise"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 200651 "surprise"
+@ダグダ
+…………
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0023"
+@ティルフィング
+な、なんで…？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 2006 "daguda_0023"
+@ダグダ
+…う～ん
+これはさすがのダグダ先生も
+びっくりだなぁー
+
+# textflame 1 1
+# textboxarrow 0 3
+@ダグダ
+銅像が動いてるどころか
+跡形もなく消えてるだなんて
+思いもしなかったよ…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+ダ、ダグダ先生…
+これっていったい？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 200651 "normal"
+# voice 2006 "daguda_0008"
+@ダグダ
+あはは、わかんないや～
+何が起きてるんだろうね？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ダグダ
+銅像が勝手に動いたかと思えば、
+今度は急にいなくなるなんて…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 200651 "usual"
+@ダグダ
+こんなのまるで
+怪談話みたいじゃない？
+この学園、呪われてるのかもね
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 101491 "sad"
+# voice 1014 "tyrufing_0024"
+@ティルフィング
+っ…！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 200651 "normal"
+# voice 2006 "daguda_0028"
+@ダグダ
+ははっ、冗談冗談～
+…とも言い切れないよねぇ
+
+;;ＳＥ：ざわざわざわ…（集まってきた生徒たちのガヤ）
+# se "SE_0902"
+# textboxarrow 0 0
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 200651 "usual"
+@ダグダ
+あらら、
+みんな集まってきちゃった…
+
+# textflame 1 1
+# textboxarrow 0 3
+@ダグダ
+騒ぎにならないように
+追い返さないと
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 2006 "daguda_0002"
+@ダグダ
+ダメだよ～、サボっちゃ！
+今はランニング中でしょ？
+さっ、早く行った行った！
+
+# se "SE_6502"
+# emotionbody 1003 2 200651 10 260
+# effectpattern 1003 1 1
+# effectstart 1003
+# textflame 1 1
+# textboxarrow 0 3
+@ダグダ
+…うん？
+
+# alpha 200651 0 0.5
+# alpha 101491 0 0.5
+# alpha 126 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 126 "sad"
+@フライクーゲル
+…………
+
+# move 126 2 0.5
+# mask 126 on
+# alpha 200651 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@ダグダ
+どしたの、キミ？
+そんな不安そうな顔して
+
+# se "SE_6500"
+# emotionbody 1004 1 126 10 290
+# effectpattern 1004 1 0
+# effectstart 1004
+# textflame 1 1
+# textboxarrow 0 1
+# face 126 "surprise"
+# voice 5002 "furaikugeru_0024"
+@フライクーゲル
+…えっ？
+オ、オゥッ！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 126 "sad"
+@フライクーゲル
+イッツナッシング！
+なんでもないよ、あはは…☆
+
+# textflame 1 1
+# textboxarrow 0 3
+@ダグダ
+ふぅ～ん？
+なんだか怖がってるように
+見えるんだけどなぁ
+
+# textflame 1 1
+# textboxarrow 0 3
+@ダグダ
+もしかして、
+動く銅像を見た…
+とか？
+
+# se "SE_6517"
+# emotionbody 1005 9 126 -40 170
+# effectpattern 1005 6 0
+# effectstart 1005
+# textflame 1 1
+# textboxarrow 0 1
+# face 126 "surprise"
+# voice 5002 "furaikugeru_0023"
+@フライクーゲル
+ホ、ホワァット！？
+そんなことは…！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 200651 "happy"
+# voice 2006 "daguda_0004"
+@ダグダ
+あはは、わかったわかった～
+キミも早く戻って！
+
+# textflame 1 1
+# textboxarrow 0 1
+@フライクーゲル
+オ、オーケー…！
+
+# effectskip 1005
+;;ＳＥ：タッタッタッ（フライクーゲルが去る音）
+# se "SE_5575"
+# alpha 126 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+# alpha 101491 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ティルフィング
+ダグダ先生、
+これからどうすれば…？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 200651 "usual"
+# voice 2006 "daguda_0028"
+@ダグダ
+うーん…
+このまま放っとくわけには
+いかないよね～
+
+# textflame 1 1
+# textboxarrow 0 3
+@ダグダ
+これ以上生徒のみんなを
+不安にさせたくないし…
+
+# textflame 1 1
+# textboxarrow 0 3
+@ダグダ
+よし決めた！
+理事長に報告しに行こう
+
+# textflame 1 1
+# textboxarrow 0 3
+@ダグダ
+キミも一緒に来てくれる？
+第一発見者として、
+話を聞かせてくれると嬉しいな
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0003"
+@ティルフィング
+はい、もちろんです…！
+
+# fadeout "black" 1
+# waitandnext 1.2

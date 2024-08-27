@@ -1,0 +1,241 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー10章
+;;第3話（3-2-1）　タイトル：
+;;3-2-1
+;;スクリプト最後の背景：地底
+;;-----------------------------------------
+# script "lisp"
+# background "underground_world_1"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス（ジョブチェンジ後）
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# layer 172 2
+# alpha 172 0 0
+# mask 172 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 2
+# alpha 139 0 0
+# mask 139 off
+;;ギル
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# layer 137 2
+# alpha 137 0 0
+# mask 137 off
+;;ミョルニル
+# body 3200111
+# pos 3200111 3
+# scale 3200111 0.8 0
+# layer 3200111 2
+# alpha 3200111 0 0
+# mask 3200111 off
+;;天沼矛
+# body 3300411
+# pos 3300411 3
+# scale 3300411 0.8 0
+# layer 3300411 2
+# alpha 3300411 0 0
+# mask 3300411 off
+;;魔獣
+# body 3860001
+# pos 3860001 3
+# scale 3860001 0.8 0
+# layer 3860001 2
+# alpha 3860001 0 0
+# mask 3860001 off
+;;-----------------------------------------
+;;//背景：地底
+# voice 1038 "almace_0044"
+# move 172 2 0
+# face 172 "surprise"
+# alpha 172 1 0
+# mask 172 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 139 4 0
+# face 139 "surprise"
+# alpha 139 1 0
+# mask 139 on
+@アルマス
+ティニ！
+あれってトレイセーマ軍よねっ？
+
+# textboxarrow 0 3
+@ティターニア
+ハルモニア軍に迫っています
+もし戦闘になれば…
+
+# voice 1038 "almace_battle_0005"
+# face 172 "angry"
+# textboxarrow 0 1
+@アルマス
+くっ…
+急いで戻りましょう！
+
+;;//選択肢
+;;Ａ待つんだ
+;;Ｂ様子を見よう
+;;Ｃ落ち着け
+# select "待つんだ" "select_label_01" "様子を見よう" "select_label_01" "落ち着け" "select_label_01"
+くっ…
+急いで戻りましょう！
+
+;;ＡＢＣ共通
+# label "select_label_01"
+# face 172 "normal"
+# textboxarrow 0 1
+@アルマス
+何でよ、マスターっ？
+呑気にしてたら取り返しのつかない
+ことになるかもしれないのよっ
+
+# voice 9967 "titania_0063"
+# face 139 "normal"
+# textboxarrow 0 3
+@ティターニア
+アルマス、
+私もマスターの意見に賛成です
+よく見て下さい
+
+# voice 9969 "gill_0001"
+# alpha 172 0 0.5
+# move 137 2 0
+# face 137 "normal"
+# alpha 137 1 0.5
+# mask 137 on
+# textboxarrow 0 1
+@ギル
+ハルモニア軍の方は
+守りを固めてるみたいだぜ
+
+# textboxarrow 0 3
+@ティターニア
+トレイセーマ軍も
+相手を刺激しないよう
+少し迂回して進んでいます
+
+# textboxarrow 0 3
+@ティターニア
+恐らく戦闘を
+避けるつもりなのでしょう
+
+# textboxarrow 0 1
+@ギル
+ハルモニア軍なんて眼中にねぇんだろ
+ケイオスリオン軍が先に
+行っちまってるしな
+
+# face 139 "worry"
+# textboxarrow 0 3
+@ティターニア
+賢明な判断だと思います
+それにしても、あれだけの大軍が
+粛々と進んでいるだなんて…
+
+# voice 1038 "almace_0002"
+# alpha 137 0 0.5
+# move 172 2 0
+# face 172 "normal"
+# alpha 172 1 0.5
+# mask 172 on
+# textboxarrow 0 1
+@アルマス
+私達が見たときと雰囲気が
+違ってるわね…
+何か変化があったの？
+
+# face 139 "normal"
+# textboxarrow 0 3
+@ティターニア
+私達も急いだ方が良さそうですね
+
+# alpha 172 0 0.5
+# alpha 139 0 0.5
+# move 3200111 2 0
+# face 3200111 "sad"
+# alpha 3200111 1 0.5
+# mask 3200111 on
+# textboxarrow 0 1
+# move 3300411 4 0
+# face 3300411 "normal"
+# alpha 3300411 1 0.5
+# mask 3300411 on
+@ミョルニル
+…………
+
+# voice 330041 "amenonuboko_t_0028"
+# face 3300411 "surprise"
+# textboxarrow 0 3
+@天沼矛
+あら～？
+ミョルニルさん、
+何だかそわそわしてますね～？
+
+# voice 320011 "myuruniru_ge_0015"
+# textboxarrow 0 1
+@ミョルニル
+ん…うん…
+なんだか…こわいかんじがしたの…
+
+# voice 1038 "almace_0022"
+# alpha 3300411 0 0.5
+# move 172 4 0
+# face 172 "surprise"
+# alpha 172 1 0.5
+# mask 172 on
+# textboxarrow 0 3
+@アルマス
+まさか…また危険な斬ル姫が
+トレイセーマ軍に加わったとか
+言わないでよっ
+
+# face 3200111 "normal"
+# textboxarrow 0 1
+@ミョルニル
+…あのね…こわいんだけど…
+いやじゃないの…でも…こわいの…
+これって、たぶん…
+
+# face 172 "normal"
+# textboxarrow 0 3
+@アルマス
+多分、何…？
+
+# voice 9969 "gill_0027"
+# alpha 3200111 0 0.5
+# alpha 172 0 0.5
+# move 137 3 0
+# face 137 "surprise"
+# alpha 137 1 0.5
+# mask 137 off
+# textboxarrow 0 2
+@ギル
+うわあああ！？
+魔物だぁぁぁっ…！
+
+;;//魔獣が現れる
+# bgmfile "bgm313_314" "BgmLostRagnarokBattle005" 0
+# alpha 137 0 0.5
+# move 3860001 3 0
+# alpha 3860001 1 0.5
+# mask 3860001 off
+# textboxarrow 0 2
+@魔獣
+ギイイイイイイイ！
+
+# voice 1038 "almace_battle_0006"
+# alpha 3860001 0 0.5
+# move 172 3 0
+# face 172 "angry"
+# alpha 172 1 0.5
+# mask 172 off
+# textboxarrow 0 2
+@アルマス
+こんなときにっ…

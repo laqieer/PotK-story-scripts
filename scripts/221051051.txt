@@ -1,0 +1,336 @@
+;;-----------------------------------------
+;;ファントム オブ キル
+;;2019ハロウィン：イベントシナリオ
+;;「笑顔をくれなきゃ悪戯しちゃうぞ？」
+;;【EP4】
+;;スクリプト最後の背景：町中（夜）
+;;-----------------------------------------
+# script "lisp"
+# background "004_outland_enening"
+# bgmfile "bgm273" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;ハロウィンマサムネ
+# body 3100121
+# pos 3100121 3
+# scale 3100121 0.8 0
+# layer 3100121 2
+# alpha 3100121 0 0
+# mask 3100121 off
+;;ハロウィンアロンダイト
+# body 3100721
+# pos 3100721 3
+# scale 3100721 0.8 0
+# layer 3100721 2
+# alpha 3100721 0 0
+# mask 3100721 off
+;;トレイセーマ隊長
+# body 3830007
+# pos 3830007 3
+# scale 3830007 0.8 0
+# layer 3830007 2
+# alpha 3830007 0 0
+# mask 3830007 off
+;;-----------------------------------------
+;;【EP4】
+;;マサムネとアロンダイトの立ち絵は最初から表示させておいてください
+;;背景：「町中（夕方）」のイメージでお願いします
+# emotionbody 1001 8 3100121 80 250
+# effectpattern 1001 1 0
+# effectstart 1001
+# voice 310011 "masamune_ge_0015"
+# move 3100121 2 0
+# face 3100121 "sad"
+# alpha 3100121 1 0
+# mask 3100121 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 3100721 4 0
+# face 3100721 "sad"
+# alpha 3100721 1 0
+# mask 3100721 on
+@マサムネ
+なぜだ…
+なぜ拙者の笑顔で
+憑依が解けないのだ…
+
+# emotionbody 1002 8 3100721 80 250
+# effectpattern 1002 1 0
+# effectstart 1002
+# voice 310071 "arondaito_ge_0013"
+# textboxarrow 0 3
+@アロンダイト
+…私の笑顔は
+人を安心させられないのですか…
+
+# effectskip 1001
+# effectskip 1002
+# textboxarrow 0 1
+@ジャック
+ぼ、僕のせいで
+お嬢ちゃんたちを
+惑わせちゃったかな…
+
+# textboxarrow 0 3
+@アロンダイト
+ユニコーンは私に貞淑さをくれました
+他人に対して笑顔を向けられる
+そうなったと、思っていたのに…
+
+# textboxarrow 0 1
+@マサムネ
+世界蛇の毒が
+拙者から感情を奪ったのか…？
+
+;;モノローグ
+# textflame 0 0
+@
+笑顔を作るどころではなく
+自己嫌悪に陥ってしまったふたりに
+マスターも頭を抱える
+
+;;マサムネのグラフィックを左右にゆっくりと揺らしてください。
+# emotionbody 1003 8 3100121 80 280
+# effectpattern 1003 1 0
+# effectstart 1003
+# textflame 1 1
+@ジャック
+真面目な子たちだねぇ
+不器用というか、なんというか
+
+;;モノローグ
+# effectskip 1003
+# textflame 0 0
+@
+それが彼女たちのいいところでも
+あるのだが、今は状況が状況だ
+マスターは助言を送ろうとするも…
+
+# voice 310011 "masamune_ge_0001"
+# face 3100121 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+いや、主君
+これは拙者らの問題ゆえ
+
+# voice 310071 "arondaito_ge_0003"
+# face 3100721 "angry"
+# textboxarrow 0 3
+@アロンダイト
+ええ、私たちの力で
+やらせてください！
+
+;;モノローグ
+# textflame 0 0
+@
+と、頑なな態度をとられてしまう
+これは
+少し時間を置く必要がありそうだ
+
+;;モノローグ
+# bgmfile "bgm069" "BgmHalloween001" 0
+@
+その間に
+マスターはジャックに尋ねる
+
+;;モノローグ
+@
+ルタバガもジャックと同じ
+ハロウィンの妖精のはず
+
+@
+それなのに、なぜ
+ハロウィンを
+恐怖で包もうとするのだろう、と
+
+# textflame 1 1
+# textboxarrow 0 1
+@ジャック
+ハロウィンは
+悪霊を祓うお祭りでもあるんだけど
+
+# textboxarrow 0 1
+@ジャック
+ルタバガは
+みんなが騒ぐばかりで
+悪霊を祓うことを忘れてる
+
+@ジャック
+本当に悪霊がやってきたとき
+人はそれを祓えなくなってしまう
+って心配してる
+
+@ジャック
+だから町を恐怖で包んで
+悪霊を祓うことの重要性を
+再認識させたいんだって
+
+@ジャック
+…みんなが
+家に閉じこもっちゃったら
+お祭りにならないのにね
+
+;;背景：「町中（夜）」のイメージでお願いします
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "101_city_night3"
+# move 3100121 2 0
+# face 3100121 "usual"
+# mask 3100121 on
+# move 3100721 4 0
+# face 3100721 "angry"
+# mask 3100721 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+二人は町の片隅で
+笑顔を作る練習をしている
+
+;;モノローグ
+@
+ここはマスターとして
+そろそろ彼女たちに然るべき言葉を
+送ってあげるべきだ…
+
+;;選択肢：
+;;A：アロンダイト、にっこりして
+;;B：マサムネ、口角を上げるんだよ
+;;C：二人の笑顔が好きだよ
+# select "アロンダイト、にっこりして" "select_label_01" "マサムネ、口角を上げるんだよ" "select_label_02" "二人の笑顔が好きだよ" "select_label_03"
+ここはマスターとして
+そろそろ彼女たちに然るべき言葉を
+送ってあげるべきだ…
+
+;;アンサー：
+;;A：
+# label "select_label_01"
+# labeljump "select_label_end"
+# voice 310071 "arondaito_ge_0033"
+# face 3100721 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+にっこりですね！
+任せてくださいマスター
+…こ、こうですか？ 
+
+;;B：
+# label "select_label_02"
+# labeljump "select_label_end"
+# voice 310011 "masamune_ge_0040"
+# face 3100121 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+口角を…？
+なるほど、さすが主君
+的確な助言、感謝いたす！
+
+;;C：
+;;モノローグ
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 0 0
+@
+笑顔が好き
+ふたりはその言葉をしかと受け止め
+そして…
+
+;;アロンダイト・ハロウィンver.の立ち絵を怒（気合入れ）の表情で表示。
+;;マサムネ・ハロウィンver.の立ち絵を怒（気合入れ）の表情で表示。
+;;モノローグ
+# label "select_label_end"
+# face 3100121 "angry"
+# face 3100721 "angry"
+# textflame 0 0
+@
+はぁっ！
+という掛け声一閃
+ふたりは気合を入れた表情を作り出す
+
+;;モノローグ
+@
+なるほど、これは怖い
+と、マスターも納得したが
+口には出さずに心の中にとどめる
+
+# face 3100121 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@ジャック
+たはは…
+ん？　あそこにいるのって…
+
+;;ルタバガ（幻獣エネミー分隊長のグラフィックでお願いします）を登場させてください
+# bgmfile "bgm071_072" "BgmHalloween001" 0
+# textwindow "close"
+# alpha 3100121 0 0.5
+# alpha 3100721 0 0.5
+# move 3830007 3 0
+# alpha 3830007 1 0.5
+# mask 3830007 off
+# waitandnext 1.4
+
+;;マサムネのグラフィックを小さく何度かジャンプさせてください。
+# alpha 3830007 0 0.5
+# move 3100121 3 0
+# face 3100121 "usual"
+# alpha 3100121 1 0.5
+# mask 3100121 off
+# waitandnext 0.5
+
+# jump 3100121
+# waitandnext 0.5
+
+# jump 3100121
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ジャック
+あいつだ！
+あいつがルタバガだ！
+
+# textboxarrow 0 2
+@ジャック
+憲兵の隊長の装備に取り憑いて
+いるんだ！
+
+# textboxarrow 0 2
+@ジャック
+あいつをこらしめれば
+きっと
+しもべたちも逃げていくよ！ 
+
+# voice 310011 "masamune_ge_0007"
+# face 3100121 "angry"
+# textboxarrow 0 2
+@マサムネ
+彼奴を討てばよいのだな？
+ふっ、笑顔を作るより遥かに容易い
+
+# move 3100121 2 0.5
+# mask 3100121 on
+# move 3100721 4 0
+# face 3100721 "angry"
+# alpha 3100721 1 0.5
+# mask 3100721 on
+# textboxarrow 0 3
+@アロンダイト
+その通りです、マサムネ
+ともに鍛錬を積んだ私たちの技
+見せてあげましょう！
+
+# textboxarrow 0 1
+@ジャック
+ルタバガは強敵だよ
+ふたりとも
+油断しないでね！

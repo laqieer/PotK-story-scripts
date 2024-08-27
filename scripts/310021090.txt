@@ -1,0 +1,474 @@
+;;-----------------------------------------
+;;SEA1章_9
+;;-----------------------------------------
+# script "lisp"
+# background "006_town"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 3
+# mask 270 off
+# alpha 270 1 0
+;;レーヴァテイン
+# body 41002002
+# pos 41002002 4
+# scale 41002002 0.75 0
+# layer 41002002 5
+# mask 41002002 off
+# alpha 41002002 0 0
+;;衛兵
+# body 12
+# pos 12 5
+# scale 12 0.8 0
+# layer 12 5
+# mask 12 off
+# alpha 12 1 0
+# entry 9912 12
+# pos 9912 4
+# scale 9912 0.8 0
+# layer 9912 4
+# mask 9912 off
+# alpha 9912 1 0
+;;市長
+# body 277
+# pos 277 3
+# scale 277 0.8 0
+# layer 277 3
+# mask 277 off
+# alpha 277 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：町
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# face 270 "normal"
+# face 9912 "normal"
+# face 12 "angry"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@衛兵１
+ダメだ！
+市長には会わせられない
+帰れ、帰れ！
+
+# voice 9917 "mimir_navikan_0036"
+# textboxarrow 0 1
+@ミーミル
+そこを何とか…
+レーヴァテインさんのことで
+お話があるとお伝え頂くだけでも…
+
+# face 9912 "angry"
+# textboxarrow 0 3
+@衛兵２
+ただでさえ町中が騒ぎに
+なっているのに
+
+# textboxarrow 0 3
+@衛兵２
+お前達のような
+得体の知れない連中を
+市長に会わせられるか！
+
+# voice 9917 "mimir_navikan_0015"
+# alpha 12 0 0.3
+# alpha 9912 0 0.3
+# move 270 3 0.5
+# face 270 "sad"
+# textboxarrow 0 2
+@ミーミル
+ううっ…
+申し訳ございません、マスター様
+私の力不足でございます…
+
+# textboxarrow 0 2
+@ミーミル
+何か、別の手を考えなくては
+なりませんね
+
+# move 270 2 0.5
+# alpha 41002002 1 0.3
+# textboxarrow 0 3
+@レーヴァテイン
+ねえ…
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+レーヴァテインさんっ？
+どうして、このようなところに
+危ないですよ
+
+# textboxarrow 0 3
+@レーヴァテイン
+はぁ…
+私がいれば…市長に会えるでしょ
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+それは、確かに…
+でも、よろしいのですか？
+
+# textboxarrow 0 3
+@レーヴァテイン
+…気が変わらないうちに
+行動した方が…良いよ
+
+;;選択肢
+# select "ありがとう" "select_label_01" "助かるよ" "select_label_01"
+私がいれば…市長に会えるでしょ
+
+# label "select_label_01"
+# textboxarrow 0 3
+@レーヴァテイン
+…抱えていってね
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：市長の部屋
+# background "mayor_room"
+# alpha 270 0 0
+# alpha 41002002 0 0
+# waitandnext 0.2
+
+# move 277 4 0
+# move 41002002 2 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 277 "happy"
+# alpha 277 1 0.3
+# alpha 41002002 1 0.3
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 3
+@市長
+レーヴァテイン様！
+よくぞ、お戻りにっ
+
+# textboxarrow 0 1
+@レーヴァテイン
+近づかないで
+
+# face 277 "normal"
+# textboxarrow 0 3
+@市長
+失礼致しました！
+
+# textboxarrow 0 3
+@市長
+おや？
+そちらの二人は見ない顔だが、
+何者だ？
+
+# voice 9917 "mimir_navikan_0004"
+# alpha 41002002 0 0.3
+# face 270 "happy"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ミーミル
+初めまして、レガル市長さん
+私、ミーミルと申します
+
+# textboxarrow 0 1
+@ミーミル
+こちらにいらっしゃるマスター様の
+専属補佐官でございます
+
+# textboxarrow 0 1
+@ミーミル
+私達は世界の「揺らぎ」を
+修復するため、
+旅をしております
+
+# face 277 "angry"
+# textboxarrow 0 3
+@市長
+世界の揺らぎ、だと？
+
+# voice 9917 "mimir_navikan_0003"
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+はい
+その「揺らぎ」にキル姫の皆さんが
+影響を受けると…
+
+# textboxarrow 0 1
+@ミーミル
+良くないことが起きるようなのです
+
+# textboxarrow 0 1
+@ミーミル
+ご覧下さい、市長さん
+レーヴァテインさんがこんなに幼く
+しかも小さくなっています
+
+# textboxarrow 0 1
+@ミーミル
+これは町の門を全て閉ざしたからだと
+私達は推測しているのですが
+
+# voice 9917 "mimir_navikan_0013"
+# textboxarrow 0 1
+@ミーミル
+どうして町の門を
+全て閉ざされたのでしょう？
+理由をお聞かせいただきたいのです
+
+# face 277 "sad"
+# textboxarrow 0 3
+@市長
+フン！
+町の騒ぎの元凶は君達か
+何と浅はかな…
+
+# face 277 "angry"
+# textboxarrow 0 3
+@市長
+君達は大きな勘違いをしている
+町の門を全て閉ざすよう命じたのは
+他でもない
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# textboxarrow 0 3
+@市長
+レーヴァテイン様ご自身だ
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+えっ…？
+
+# alpha 41002002 1 0.3
+# alpha 270 0 0.3
+# textboxarrow 0 1
+@レーヴァテイン
+…………
+
+# se "bgm602_basic_on"
+# textboxarrow 0 3
+@市長
+私はレガルの市長として、
+レーヴァテイン様のご命令に
+従ったまでのこと
+
+# face 277 "sad"
+# textboxarrow 0 3
+@市長
+確かにレーヴァテイン様のお姿が
+幼いものになってしまったのは
+驚いたが…
+
+# textboxarrow 0 3
+@市長
+「何が起きても驚かないでね」と
+事前に言われていたので、
+そういうものなのだろうと受け取った
+
+# face 277 "normal"
+# textboxarrow 0 3
+@市長
+レーヴァテイン様
+そこの愚かな二人に
+説明してやって下さい
+
+# textboxarrow 0 1
+@レーヴァテイン
+…覚えてない
+
+# face 277 "sad"
+# textboxarrow 0 3
+@市長
+ぬう…
+我らの保護を拒んだのは、
+そのせいでしたか
+
+# voice 9917 "mimir_navikan_0002"
+# alpha 41002002 0 0.3
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ミーミル
+あの…
+申し訳ないのですが、
+にわかには信じられないお話です
+
+# textboxarrow 0 1
+@ミーミル
+そもそも、レーヴァテインさんは
+市長さんに命令できる
+立場の方なのですか？
+
+# face 277 "angry"
+# textboxarrow 0 3
+@市長
+君達
+そんなことも知らんのかね
+
+# textboxarrow 0 3
+@市長
+この町は
+「レーヴァテインに守られた町」
+なんだよ
+
+# textboxarrow 0 3
+@市長
+私はもちろん、歴代の市長は皆、
+レーヴァテイン様を崇めている
+
+# textboxarrow 0 3
+@市長
+市長に代々受け継がれている
+「レガルの掟」という本にも…
+
+# textboxarrow 0 3
+@市長
+レーヴァテイン様のお言葉は絶対だ
+と記してあるんだ
+
+# voice 9917 "mimir_navikan_0023"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+何と！？
+マスター様、意外な事実です
+
+# alpha 41002002 1 0.3
+# alpha 270 0 0.3
+# textboxarrow 0 1
+@レーヴァテイン
+何それ…初耳だし
+普通にイヤなんだけど
+
+# textboxarrow 0 3
+@市長
+だからレーヴァテイン様が
+門を閉ざせと言えば閉ざすし
+
+# textboxarrow 0 3
+@市長
+幼くなってしまわれたのなら、
+即座に保護する
+レガル市長として当然のことだ
+
+# textboxarrow 0 3
+@市長
+邪魔をしているのは
+君達の方なんだよっ
+
+# alpha 41002002 0 0.3
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ミーミル
+えっと…
+
+# face 277 "normal"
+# textboxarrow 0 3
+@市長
+さあ、レーヴァテイン様
+こちらに
+
+# alpha 41002002 1 0.3
+# alpha 270 0 0.3
+# textboxarrow 0 1
+@レーヴァテイン
+は？
+…ちょっと、その本見せて
+
+# textboxarrow 0 3
+@市長
+「レガルの掟」ですか？
+どうぞ、どうぞ
+
+# textboxarrow 0 1
+@レーヴァテイン
+…読んで
+
+#setnextbgmblock 1
+# alpha 41002002 0 0.3
+# alpha 277 0 0.3
+# move 270 3 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+では、私が
+…この町が出来たときから
+記してあるようですね
+
+# alpha 41002002 1 0.3
+# face 277 "happy"
+# alpha 277 1 0.3
+# alpha 270 0 0.3
+# textboxarrow 0 3
+@市長
+その通りだ！
+この町が「要塞都市レガル」となった
+きっかけともいえる災厄…
+
+# textboxarrow 0 3
+@市長
+「炎の巨人」襲来のときから
+綴られているんだからね！
+
+# textboxarrow 0 1
+@レーヴァテイン
+市長…うるさい
+
+# textboxarrow 0 3
+@市長
+レガルという町の名も、
+レーヴァテイン様が名づけたと
+いえるのだよ！
+
+# alpha 41002002 0 0.3
+# alpha 277 0 0.3
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+ええと…
+何頁のお話でしょう？
+…あ、これですね
+
+# alpha 270 0 0.3
+# move 277 3 0
+# face 277 "normal"
+# alpha 277 1 0.3
+# textboxarrow 0 2
+@市長
+炎の巨人を斬り伏せた後、
+町の中心に立って
+
+# textboxarrow 0 2
+@市長
+レーヴァテイン様は
+一言、こう仰ったのだ
+
+# textboxarrow 0 2
+@市長
+「レーギャルン」と
+
+# fadeout "black" 0.5
+# waitandnext 0.5

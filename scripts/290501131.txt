@@ -1,0 +1,332 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第５章
+;;第1話　タイトル：中心部防衛戦
+;;5_1_13_1
+;;スクリプト最後の背景：都市部（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "mamon_room"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;シタ
+# body 3201611
+# pos 3201611 3
+# scale 3201611 0.8 0
+# layer 3201611 2
+# alpha 3201611 0 0
+# mask 3201611 off
+;;ミトゥム
+# body 3200511
+# pos 3200511 3
+# scale 3200511 0.8 0
+# layer 3200511 2
+# alpha 3200511 0 0
+# mask 3200511 off
+;;ゴウバラ
+# body 220
+# pos 220 3
+# scale 220 0.8 0
+# layer 220 3
+# alpha 220 0 0
+# mask 220 off
+;;魔獣化アルテミス
+# body 1400131
+# pos 1400131 3
+# scale 1400131 0.8 0
+# layer 1400131 2
+# alpha 1400131 0 0
+# mask 1400131 off
+# brightness 1400131 0.5 0
+;;魔獣化アポロン
+# body 1400331
+# pos 1400331 3
+# scale 1400331 0.8 0
+# layer 1400331 2
+# alpha 1400331 0 0
+# mask 1400331 off
+# brightness 1400331 0.5 0
+;;-----------------------------------------
+;;第1話　タイトル：中心部防衛戦
+;;//背景：上層階
+# voice 9935 "vang_0001"
+# move 211 1 0
+# face 211 "irregular"
+# alpha 211 1 0
+# mask 211 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 220 3 0
+# face 220 "normal"
+# alpha 220 1 0
+# mask 220 on
+# move 210 5 0
+# face 210 "irregular"
+# alpha 210 1 0
+# mask 210 on
+@ヴァング
+朝っぱらから呼び出しとは
+どういうつもりだ？
+
+# voice 9936 "kamito_0001"
+# textboxarrow 0 3
+@カミト
+緊急の用件だって聞きましたけど…
+
+# voice 9933 "goubara_0003"
+# textboxarrow 0 2
+@ゴウバラ
+うむ…
+先程、西から連絡を受けた
+人型の魔獣が現れたそうだ
+
+# voice 9935 "vang_0023"
+# textboxarrow 0 1
+@ヴァング
+人型の魔獣？
+そんなもん前から現れてただろうが
+
+# textboxarrow 0 2
+@ゴウバラ
+いや、今回の魔獣は骸骨のような
+姿ではなく、完全なる人間の男性を
+模しているらしい
+
+# textboxarrow 0 2
+@ゴウバラ
+しかも他の魔獣より手強いそうだ
+討伐に時間がかかる故、君達には
+しばし待って欲しいと
+
+# voice 9936 "kamito_0051"
+# face 210 "angry"
+# textboxarrow 0 3
+@カミト
+兄貴っ…！
+それって…
+
+# textboxarrow 0 1
+@ヴァング
+黙ってろ
+…そうかい
+何だったら手を貸すぜ
+
+# textboxarrow 0 2
+@ゴウバラ
+それには及ばん
+すでに北のキル姫が加勢に行っている
+じきに片付くだろう
+
+# textboxarrow 0 2
+@ゴウバラ
+君達は先に準備をしておいてくれ
+儂からは以上だ
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 211 0 0
+# alpha 220 0 0
+# alpha 210 0 0
+# move 211 2 0
+# face 211 "irregular"
+# alpha 211 1 0
+# mask 211 on
+# move 210 4 0
+# face 210 "irregular"
+# alpha 210 1 0
+# mask 210 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 9936 "kamito_0051"
+# textboxarrow 0 3
+# textwindow "normal"
+@カミト
+…………兄貴っ
+
+# voice 9935 "vang_0003"
+# textboxarrow 0 1
+@ヴァング
+分かってる
+キラーメイルなんだろ？
+こっちは俺に任せろ
+
+# face 211 "normal"
+# textboxarrow 0 1
+@ヴァング
+さっさとケリつけて
+帰ってこいよ
+
+# voice 9936 "kamito_0003"
+# face 210 "happy"
+# textboxarrow 0 3
+@カミト
+ありがとう！
+すぐに戻るからっ
+
+;;//カミトが走り去る
+# se "SE_5575"
+# textwindow "close"
+# alpha 210 0 0.5
+# waitandnext 0.5
+
+# move 211 3 0.5
+# mask 211 off
+# waitandnext 0.5
+
+# voice 9935 "vang_0029"
+# face 211 "sad"
+# textboxarrow 0 2
+# textwindow "normal"
+@ヴァング
+やれやれだぜ…
+何でこんなタイミングで…
+
+# face 211 "irregular"
+# textboxarrow 0 2
+@ヴァング
+こんなタイミング？
+まさか…
+
+;;//背景：都市部（昼）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_city"
+# alpha 211 0 0
+# move 1400131 3 0
+# face 1400131 "angry"
+# alpha 1400131 1 0
+# mask 1400131 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm162_163" "BgmPJZero001" 0
+;;？？？（魔獣化アルテミス）
+# textboxarrow 0 2
+# textwindow "normal"
+@？？？
+グウウウウウウウウウウ！
+
+;;？？？（魔獣化アポロン）
+# alpha 1400131 0 0.5
+# move 1400331 3 0
+# face 1400331 "angry_1"
+# alpha 1400331 1 0.5
+# mask 1400331 off
+# textboxarrow 0 2
+@？？？
+ガアアアアアアアアアアア！
+
+# voice 320161 "shita_t_battle_0004"
+# alpha 1400331 0 0.5
+# move 3200511 2 0
+# face 3200511 "angry"
+# alpha 3200511 1 0.5
+# mask 3200511 on
+# move 3201611 4 0
+# face 3201611 "angry"
+# alpha 3201611 1 0.5
+# mask 3201611 on
+# textboxarrow 0 3
+@シタ
+処断しますっ！
+
+# se "SE_4100"
+# waitandnext 0.5
+
+# voice 320051 "mitwumu_t_battle_0001"
+# textboxarrow 0 1
+@ミトゥム
+えいっ！
+
+# se "SE_4100"
+# waitandnext 0.5
+
+;;//キラーメイルが二人の攻撃を避ける
+# textwindow "close"
+# alpha 3200511 0 0.5
+# alpha 3201611 0 0.5
+# move 1400131 3 0
+# face 1400131 "angry"
+# alpha 1400131 1 0.5
+# mask 1400131 off
+# waitandnext 0.6
+
+# se "SE_5204"
+# rightout 1400131 0.5
+# waitandnext 0.5
+
+# alpha 1400131 0 0
+# move 1400331 3 0
+# alpha 1400331 1 0.5
+# mask 1400331 off
+# waitandnext 0.6
+
+# se "SE_5204"
+# leftout 1400331 0.5
+# waitandnext 0.5
+
+# voice 320051 "mitwumu_t_0013"
+# alpha 1400331 0 0
+# move 3200511 2 0
+# face 3200511 "sad"
+# alpha 3200511 1 0.5
+# mask 3200511 on
+# textboxarrow 0 1
+# move 3201611 4 0
+# face 3201611 "usual"
+# alpha 3201611 1 0.5
+# mask 3201611 on
+# textwindow "normal"
+@ミトゥム
+むぅぅ～…
+さっきから間合いを外されて
+ばかりですね…
+
+# textboxarrow 0 3
+@シタ
+弓を自在に扱う魔獣…
+珍しい存在ですけれど、
+対応は可能ですよ
+
+# textboxarrow 0 3
+@シタ
+ミトゥムちゃん
+この地を守ることがマスターとの
+契約です
+
+# face 3201611 "normal"
+# textboxarrow 0 3
+@シタ
+わたし達で災いを全て叩き潰し
+ましょう
+
+# voice 320051 "mitwumu_t_0033"
+# face 3200511 "angry"
+# textboxarrow 0 1
+@ミトゥム
+任せてください
+容赦なく打ち砕きます！

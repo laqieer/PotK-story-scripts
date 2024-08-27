@@ -1,0 +1,471 @@
+;;-----------------------------------------
+;;SEA5章_3
+;;-----------------------------------------
+# script "lisp"
+# background "town_3"
+# bgm "stop"
+;;-----------------------------------------
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;ミネルヴァ
+# body 302511
+# pos 302511 2
+# scale 302511 0.8 0
+# layer 302511 4
+# alpha 302511 0 0
+;;フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.7 0
+# layer 502711 3
+# mask 502711 off
+# alpha 502711 0 0
+;;ダモクレス
+# body 103511
+# pos 103511 2
+# scale 103511 0.8 0
+# layer 103511 2
+# mask 103511 off
+# alpha 103511 0 0
+;;グラーシーザ
+# body 302611
+# pos 302611 4
+# scale 302611 0.8 0
+# layer 302611 4
+# alpha 302611 0 0
+;;ネス
+# body 602011
+# pos 602011 2
+# scale 602011 0.8 0
+# layer 602011 4
+# alpha 602011 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：ラグナロク教会のある町
+# textwindow "close"
+# fadein "black" 3
+# waitandnext 4
+
+;;選択肢
+# select "…………！" "select_label_01" "ここは…？" "select_label_01"
+……
+
+# label "select_label_01"
+# bgm "bgm002" 0
+# voice 650401 "manannan_ura_0001"
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+あ！
+マスター、目が覚めたんだ！
+
+# textboxarrow 0 1
+@ミネルヴァ
+おはようございます
+解毒剤は問題なく効いたようですね
+
+# voice 3025 "minerva_0001"
+# textboxarrow 0 1
+@ミネルヴァ
+お久しぶりです、マスター
+
+;;フライシュッツがマスターに抱きつく
+# move 6504011 5 0.3
+# alpha 6504011 0 0.3
+# move 302511 1 0.3
+# alpha 302511 0 0.3
+# scale 502711 0.85 0.3
+# voice 5027 "freischotz_0005"
+# face 502711 "normal"
+# alpha 502711 1 0.3
+# se "SE_0648"
+# shake 0 1
+# textboxarrow 0 2
+@フライシュッツ
+マスターくん
+おねーちゃん、心配したよ～っ
+
+# move 502711 4 0.5
+# scale 502711 0.8 0.5
+# move 302511 2 0.5
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# textboxarrow 0 1
+@ミネルヴァ
+フライシュッツ、
+マスターが苦しそうにしてますから
+
+# voice 5027 "freischotz_0022"
+# face 502711 "surprise"
+# textboxarrow 0 3
+@フライシュッツ
+あれっ？
+まだ毒が抜けてなかったの？
+
+# face 302511 "sad"
+# textboxarrow 0 1
+@ミネルヴァ
+そうではなくてですね…
+
+# alpha 502711 0 0.3
+# alpha 302511 0 0.3
+# voice 1035 "damocles_0004"
+# face 103511 "usual"
+# alpha 103511 1 0.3
+# face 302611 "normal"
+# alpha 302611 1 0.3
+# textboxarrow 0 1
+@ダモクレス
+死ぬときは死ぬからね
+でも、死ななくて良かった！
+
+# voice 3026 "grayside_0006"
+# textboxarrow 0 3
+@グラーシーザ
+うむ
+それはちょうじょう
+
+# alpha 103511 0 0.3
+# alpha 302611 0 0.3
+# voice 6020 "ness_0011"
+# face 602011 "angry"
+# alpha 602011 1 0.3
+# face 502711 "normal"
+# alpha 502711 1 0.3
+# textboxarrow 0 1
+@ネス
+マスターに抱きつくのは
+規律違反ですっ
+すぐに離れて下さいっ
+
+# face 502711 "sad"
+# textboxarrow 0 3
+@フライシュッツ
+そんなこと言わないで～…
+おねーちゃん、寂しいよ～
+
+;;フライシュッツがネスに抱きつく
+# se "SE_0648"
+# move 502711 3 0.5
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# voice 6020 "ness_0042"
+# face 602011 "worry"
+# textboxarrow 0 1
+@ネス
+あううっ…
+せ、節制が足りていません…！
+
+# voice 650401 "manannan_ura_0005"
+# alpha 602011 0 0.3
+# alpha 502711 0 0.3
+# move 6504011 4 0
+# face 6504011 "happy"
+# alpha 6504011 1 0.3
+# move 302511 2 0
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+面白いキル姫達だよね～
+マスターの知り合いなんでしょ？
+
+# face 6504011 "usual"
+# textboxarrow 0 3
+@マナナン
+あの後、改めて治療してくれて、
+ここまで運んできてくれたんだよ
+
+;;選択肢
+# select "ありがとう…" "select_label_02" "ミーミルは？" "select_label_03"
+あの後、改めて治療してくれて、
+ここまで運んできてくれたんだよ
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# bgm "bgm005" 0
+# voice 3025 "minerva_0034"
+# textboxarrow 0 1
+@ミネルヴァ
+いえ…
+私達も一足遅かったので
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# bgm "bgm005" 0
+# voice 650401 "manannan_ura_0003"
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+変な弓のキル姫についていっちゃった
+
+# label "select_label_end"
+# voice 650401 "manannan_ura_0002"
+# face 6504011 "angry"
+# textboxarrow 0 3
+@マナナン
+ねぇねぇ！
+早くミーミルを助けに行こうよ！
+あのキル姫、絶対変だよ！
+
+# textboxarrow 0 1
+@ミネルヴァ
+心配なのは分かりますが、
+落ち着いて下さい
+まずは情報を整理しましょう
+
+# textboxarrow 0 1
+@ミネルヴァ
+マスター
+傷が完全には癒えていないところ
+申し訳ないのですが…
+
+# textboxarrow 0 1
+@ミネルヴァ
+私達の話を聞いていただけませんか
+
+;;選択肢
+# select "もちろん" "select_label_04"
+私達の話を聞いていただけませんか
+
+# label "select_label_04"
+# voice 3025 "minerva_0003"
+# textboxarrow 0 1
+@ミネルヴァ
+ありがとうございます
+…とはいえ、私達にも分からないこと
+だらけなのですけれど
+
+# alpha 6504011 0 0.3
+# alpha 302511 0 0.3
+# move 502711 4 0
+# mask 502711 on
+# face 502711 "sad"
+# alpha 502711 1 0.3
+# voice 5027 "freischotz_0028"
+# move 103511 2 0
+# mask 103511 on
+# face 103511 "usual"
+# alpha 103511 1 0.3
+# textboxarrow 0 3
+@フライシュッツ
+もう急展開過ぎて、おねーちゃん
+ついていけてないよ～っ
+
+# voice 1035 "damocles_0028"
+# textboxarrow 0 1
+@ダモクレス
+スイハもエルキュールも
+どうしちゃったんだろうね？
+
+# alpha 502711 0 0.3
+# alpha 103511 0 0.3
+# voice 3026 "grayside_0028"
+# move 302611 4 0
+# mask 302611 on
+# face 302611 "normal"
+# alpha 302611 1 0.3
+# move 602011 2 0
+# face 602011 "normal"
+# mask 602011 on
+# alpha 602011 1 0.3
+# textboxarrow 0 3
+@グラーシーザ
+まあ、まて
+マスターにげんじょうを
+せつめいせねばなるまい
+
+# voice 6020 "ness_0032"
+# textboxarrow 0 1
+@ネス
+そうです
+何事も規律正しく、
+順序立てて行いましょう
+
+# alpha 302611 0 0.3
+# alpha 602011 0 0.3
+# move 302511 3 0
+# mask 302511 off
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# textboxarrow 0 2
+@ミネルヴァ
+マスター
+ここにいる五人とエルキュール、
+スイハを含めた七人は…
+
+# textboxarrow 0 2
+@ミネルヴァ
+世界の平和を守るため、各自、
+世界中を旅して回っているのですが
+
+# textboxarrow 0 2
+@ミネルヴァ
+年に数回、こちらの教会に集まって
+近況報告などを行っているんです
+
+# voice 5027 "freischotz_0004"
+# alpha 302511 0 0.3
+# move 502711 3 0
+# mask 502711 off
+# face 502711 "normal"
+# alpha 502711 1 0.3
+# textboxarrow 0 2
+@フライシュッツ
+たまにはみんなの顔を見ないと
+寂しいもんねっ
+
+# face 502711 "happy"
+# textboxarrow 0 2
+@フライシュッツ
+あ！あたしは毎日だって
+みんなに会いたいと思ってるよ～
+
+# voice 1035 "damocles_0005"
+# alpha 502711 0 0.3
+# face 103511 "happy"
+# alpha 103511 1 0.3
+# face 302611 "normal"
+# alpha 302611 1 0.3
+# textboxarrow 0 1
+@ダモクレス
+クレスもだよ！
+みんなのこと愛してるっ
+
+# voice 3026 "grayside_0005"
+# face 302611 "happy"
+# textboxarrow 0 3
+@グラーシーザ
+ハッハッハ！
+フライシュッツもダモクレスも
+あまえたがりだな
+
+# alpha 103511 0 0.3
+# alpha 302611 0 0.3
+# face 302511 "sad"
+# alpha 302511 1 0.3
+# textboxarrow 0 2
+@ミネルヴァ
+…このような感じなのですけれど、
+今回はイレギュラーなことが
+起きました
+
+# textboxarrow 0 2
+@ミネルヴァ
+今まで一度も欠席することのなかった
+エルキュールが
+姿を見せなかったんです
+
+# alpha 302511 0 0.3
+# voice 6020 "ness_0028"
+# move 502711 4 0
+# mask 502711 on
+# face 502711 "normal"
+# alpha 502711 1 0.3
+# face 602011 "normal"
+# alpha 602011 1 0.3
+# textboxarrow 0 1
+@ネス
+たまに都合が悪くて
+来られない人もいたんですけど、
+彼女は毎回必ず来ていました
+
+# textboxarrow 0 3
+@フライシュッツ
+いっつも一番に
+町まで戻ってきてたから、
+あたしも驚いたよー
+
+# alpha 502711 0 0.3
+# alpha 602011 0 0.3
+# move 302511 2 0
+# mask 302511 on
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# face 302611 "normal"
+# alpha 302611 1 0.3
+# textboxarrow 0 1
+@ミネルヴァ
+ただ、町で彼女を見かけたという
+話も聞いていたんです
+
+# textboxarrow 0 3
+@グラーシーザ
+スイハがエルキュールを見かけたと
+いっていたな
+
+# face 302511 "sad"
+# textboxarrow 0 1
+@ミネルヴァ
+何かあったのかもしれないと思い、
+探すことにしたのですが…
+
+# textboxarrow 0 1
+@ミネルヴァ
+真っ先に飛び出していったスイハも
+行方知れずになってしまいました
+
+# alpha 302511 0 0.3
+# alpha 302611 0 0.3
+# voice 650401 "manannan_ura_0002"
+# move 6504011 3 0
+# mask 6504011 off
+# face 6504011 "usual"
+# alpha 6504011 1 0.3
+# textboxarrow 0 2
+@マナナン
+さっき聞いたんだけど、
+ミーミルを連れていったキル姫、
+スイハっていうんでしょ？
+
+# alpha 6504011 0 0.3
+# move 302511 3 0
+# mask 302511 off
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# textboxarrow 0 2
+@ミネルヴァ
+マナナンから聞いた姿には少々
+違和感がありますけれど、
+間違いありませんよね？
+
+;;選択肢
+# select "間違いない" "select_label_05" "彼女はスイハだ" "select_label_05"
+マナナンから聞いた姿には少々
+違和感がありますけれど、
+間違いありませんよね？
+
+# label "select_label_05"
+# voice 3025 "minerva_0028"
+# face 302511 "sad"
+# textboxarrow 0 2
+@ミネルヴァ
+やっぱり…
+
+# textboxarrow 0 2
+@ミネルヴァ
+スイハとエルキュール
+二人に良くないことが起きて
+いるのではと考えています
+
+# voice 3025 "minerva_0002"
+# textboxarrow 0 2
+@ミネルヴァ
+マスターは何かご存じですか？
+
+# fadeout "black" 1
+# waitandnext 1

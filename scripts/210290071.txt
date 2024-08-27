@@ -1,0 +1,399 @@
+;;2018エイプリルイベント_07《三国》戦闘前
+# script "lisp"
+# background "sea_jungle_day"
+# bgmfile "bgm238" "BgmSeaEventBattle" 0
+;;ムラマサ
+# body 41025001
+# pos 41025001 3
+# scale 41025001 0.8 0
+# alpha 41025001 0 0
+;;シャルウル
+# body 42007001
+# pos 42007001 3
+# scale 42007001 0.8 0
+# alpha 42007001 0 0
+;;フォルカス
+# body 43018001
+# pos 43018001 3
+# scale 43018001 0.8 0
+# alpha 43018001 0 0
+;;カラドボルグ
+# body 41026001
+# pos 41026001 4
+# scale 41026001 0.8 0
+# alpha 41026001 0 0
+;;ケラウノス
+# body 45001001
+# pos 45001001 3
+# scale 45001001 0.8 0
+# alpha 45001001 0 0
+;;アスカロン
+# body 41023001
+# pos 41023001 2
+# scale 41023001 0.8 0
+# alpha 41023001 0 0
+;;マサムネ
+# body 41001001
+# pos 41001001 4
+# scale 41001001 0.8 0
+# alpha 41001001 0 0
+;;メギド
+# body 45006001
+# pos 45006001 4
+# scale 45006001 0.8 0
+# alpha 45006001 0 0
+;;シストルム
+# body 46013001
+# pos 46013001 3
+# scale 46013001 0.8 0
+# alpha 46013001 0 0
+;;ティルフィング
+# body 41014095
+# pos 41014095 3
+# scale 41014095 0.8 0
+# alpha 41014095 0 0
+;;パラシュ
+# body 42004001
+# pos 42004001 5
+# scale 42004001 0.8 0
+# alpha 42004001 0 0
+# mask 41025001 off
+# mask 42007001 off
+# layer 43018001 5
+# layer 41023001 4
+# layer 41025001 3
+# layer 46013001 5
+# layer 41014095 1
+# layer 45006001 2
+# imageset 0 "bg_black"
+# imagelayer 0 1
+# imagealpha 0 0 0
+# imagescale 0 2 0
+# textflame 0 0
+@
+ふくよか連合の一角、
+盟主の拠点にて―
+
+# imagepos 0 0 0
+# alpha 41025001 1 0.5
+# textflame 0 0
+@
+三国会談を行うべく
+マサムネを王国への使者とする
+ムラマサ
+
+# textflame 0 0
+@
+共存の道を進むふくよか連合
+しかし、ダイナマイト帝国の進軍が
+始まる
+
+# textflame 1 1
+# textboxarrow 0 2
+@ムラマサ
+ただちに国境の守りを固めて下さい
+ただし、こちらから討って出ないよう
+
+# alpha 41025001 0 0.5
+# alpha 42007001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 2007 "sharuuru_0032"
+@シャルウル
+承知しました
+
+;;//早送り演出
+;;//背景：ジャングル
+# se "SE_0748"
+# se "bgm238_speedup"
+# serif 0
+# textwindow "close"
+# envbody 1000 19 0
+# effectstart 1000
+# imagealpha 0 1 0.3
+# waitandnext 0.3
+
+# alpha 42007001 0 0
+# alpha 43018001 1 0
+# waitandnext 0.1
+
+# se "SE_0749"
+# se "bgm238_default"
+# imagealpha 0 0 0.3
+# waitandnext 0.3
+
+# bgmfile "bgm236" "BgmSeaEventBattle" 0
+# effectskip 1000
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+一方、連合へ攻め入ろうと考えていた
+フォルカスは
+ムラマサからの書状に混乱していた
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3018 "forcas_0028"
+@フォルカス
+会合ですか…
+そうですね
+受けましょう
+
+# alpha 42004001 1 0.5
+# move 42004001 4 0.5
+# move 43018001 2 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 2004 "parashu_0011"
+@パラシュ
+ボクは反対だよ、陛下
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+…あなたの気持ちも分かるけれど、
+話し合いの余地は―
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 2004 "parashu_0037"
+@パラシュ
+そんな悠長なことを言っていたら
+…そうだ…この島は滅ぶんだよ！
+
+# se "SE_0751"
+# rightout 42004001 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 3018 "forcas_0023"
+@フォルカス
+パラシュッ！？
+
+# textflame 0 0
+@
+正気を失ったかのように
+走り去るパラシュ
+
+# alpha 41026001 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@カラドボルグ
+大変よ、陛下！
+パラシュが隊を率いて突撃をっ！
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 3018 "forcas_0009"
+@フォルカス
+仕方ありませんっ…！
+このまま攻撃を仕掛けます！
+
+;;//早送り演出
+;;//背景：プール
+# se "SE_0748"
+# se "bgm236_speedup"
+# serif 0
+# textwindow "close"
+# envbody 1001 19 0
+# effectstart 1001
+# imagealpha 0 1 0.3
+# waitandnext 0.3
+
+# background "sea_resort_day"
+# alpha 41026001 0 0
+# alpha 43018001 0 0
+# waitandnext 0.6
+
+# se "SE_0749"
+# se "bgm236_default"
+# imagealpha 0 0 0.3
+# waitandnext 0.3
+
+# bgmfile "bgm234" "BgmSeaEventBattle" 0
+# effectskip 1001
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+一方のぽっちゃり王国にも
+連合からの使者がやってくる
+
+# mask 45001001 off
+# alpha 45001001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5001 "keraunosu_0002"
+@ケラウノス
+盛り上がってるとこごめんね～
+連合からの使者が来たよ～？
+
+# alpha 45001001 0 0.5
+# alpha 41023001 1 0.5
+# alpha 41001001 1 0.5
+# textflame 0 0
+@
+ケラウノスに連れられてきた
+連合の使者マサムネは、
+連合との同盟を打診する
+
+# textflame 0 0
+@
+対価は連合の食料
+
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+…わかりました
+そのかわり
+一つだけ約束してください
+
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+帝国への攻め方は
+私達が決めます
+
+# textflame 1 1
+# textboxarrow 0 3
+@マサムネ
+…それは当然のこと
+一切口を挟まぬ
+
+;;//マサムネ退場
+# se "SE_0751"
+# serif 0
+# textwindow "close"
+# move 41001001 5 0.5
+# alpha 41001001 0 0.5
+# waitandnext 1.5
+
+# alpha 45006001 1 0.5
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5006 "megido_0028"
+@メギド
+よろしいのですか、陛下
+マサムネにはなにか企みが
+ありそうですわ
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1023 "ascalon_0003"
+@アスカロン
+はい…なので、
+急いで呼んできて欲しい方が…
+
+# mask 46013001 off
+# alpha 45006001 0 0.5
+# alpha 41023001 0 0.5
+# alpha 46013001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6013 "sistrum_0005"
+@シストルム
+ボクがお役に立てると
+思うのにゃ！
+
+# alpha 45006001 1 0.5
+# alpha 41023001 1 0.5
+# alpha 46013001 0 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1023 "ascalon_0023"
+@アスカロン
+シストルム！？
+どうして本棚の隙間に？
+
+# mask 46013001 on
+# alpha 46013001 1 0.5
+# move 45006001 5 0.5
+# move 41023001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6013 "sistrum_0003"
+@シストルム
+ご主人様はなんでも
+お見通しなのにゃ
+
+;;//早送り演出
+;;//ここはフォントを変えて
+# textflame 0 0
+@
+※早送りの範囲が広いですが、
+バグではありません
+# se "SE_0748"
+# se "bgm234_speedup"
+# envbody 1002 19 0
+# effectstart 1002
+# imagealpha 0 1 0.3
+# waitandnext 0.3
+
+# background "006_jail"
+# alpha 45006001 0 0
+# alpha 41023001 0 0
+# alpha 46013001 0 0
+# alpha 43018001 1 0
+# move 43018001 3 0
+# move 41023001 5 0
+# move 41025001 1 0
+# waitandnext 0.6
+
+# imagealpha 0 0 0.3
+# waitandnext 0.3
+
+# se "SE_0749"
+# se "bgm234_default"
+# alpha 41025001 1 0.2
+# alpha 41023001 1 0.2
+# leftin 41025001 0.2
+# rightin 41023001 0.2
+# waitandnext 0.2
+
+# bgm "bgm029" 0
+# mask 41014095 off
+# effectskip 1002
+# textflame 0 0
+@
+三国入り乱れての戦闘が続き、
+ついに決着の時が訪れる
+
+# alpha 43018001 0 0.5
+# alpha 41025001 0 0.5
+# alpha 41023001 0 0.5
+# alpha 41014095 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+三国統一を果たし頂点に立った者は
+島のために生贄になります
+それでも良いですね？
+
+# alpha 43018001 1 0.5
+# alpha 41025001 1 0.5
+# alpha 41023001 1 0.5
+# alpha 41014095 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3018 "forcas_0032"
+@フォルカス
+覚悟は出来ています
+私が食べられなくても
+皆がお腹いっぱいになれば！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ムラマサ
+食料のために命を掛ける…
+武士として誉れに思います
+
+;;//バトル
+;;//フォルカス視点で、ムラマサ、アスカロンが敵
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+私が生贄になって
+皆に食料をっ！
+

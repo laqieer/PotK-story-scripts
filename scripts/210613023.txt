@@ -1,0 +1,251 @@
+;;-----------------------------------------
+;;暴走2_3
+;;-----------------------------------------
+# script "lisp"
+# background "in_underwild"
+# bgmfile "bgm467" "BgmIntegralNoahBoso" 0
+;;-----------------------------------------
+;;グラ
+# body 5303411
+# pos 5303411 4
+# scale 5303411 0.8 0
+# layer 5303411 3
+# mask 5303411 off
+# alpha 5303411 0 0
+;;ムー
+# body 161
+# pos 161 2
+# scale 161 0.6 0
+# layer 161 4
+# mask 161 off
+# alpha 161 0 0
+;;ロンゴミ
+# body 5301011
+# pos 5301011 3
+# scale 5301011 0.8 0
+# layer 5301011 3
+# mask 5301011 off
+# alpha 5301011 1 0
+;;モブ
+# body 500611
+# pos 500611 2
+# scale 500611 0.8 0
+# layer 500611 2
+# mask 500611 on
+# brightness 500611 0 0
+# alpha 500611 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：インテグラルノア編地上
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@？？？
+…………うう
+
+;;演出：暴走ロンゴミアントout
+# se "SE_9021"
+# alpha 5301011 0 1
+# textwindow "close"
+# waitandnext 1
+
+;;演出：暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# emotionbody 1000 15 500611 0 0
+# effectpattern 1000 1 0
+# alpha 5303411 1 0
+# face 5303411 "angry"
+# alpha 500611 1 0
+# waitandnext 0.2
+
+# effectstart 1000
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;演出：攻撃エフェクト
+# se "SE_4000"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;演出：モブ暴走キル姫表示
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@グランテピエ
+待って！
+お願い、止まって…っ！
+
+# textflame 1 1
+# textboxarrow 0 3
+@グランテピエ
+くっ、お願い…
+
+;;できればトゲトゲフレームで
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 3
+@グランテピエ
+お願いだから！
+私の話を聞いて！
+
+;;演出：モブ暴走キル姫表示
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@暴走したキル姫
+………
+
+# effectskip 1000
+# alpha 500611 0 0.5
+# alpha 161 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0022"
+@ムー
+攻撃が止まった…？
+
+# textflame 1 1
+# textboxarrow 0 3
+@グランテピエ
+ムー、力を貸して！
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0003"
+@ムー
+お、俺様の出番なんだな！
+わかんねぇが手を貸すぜ、グラ！
+
+;;できればもやもやフレームで
+# move 5303411 4 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@グランテピエ
+研究所にあった資料の通りなら
+オートアバターのキラーズを
+制御する力は…
+
+;;演出：明転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# emotionbody 1001 15 500611 0 0
+# effectpattern 1001 1 0
+# alpha 500611 1 0
+# alpha 161 0 0
+# waitandnext 0.2
+
+# effectstart 1001
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;演出：グランテピエ、暴走キル姫に攻撃
+# se "SE_4200"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@グランテピエ
+これでどう！？
+
+;;演出：明転
+# se "SE_0994"
+# fadeout "white" 0.5
+# bgm "stop"
+# waitandnext 0.5
+
+;;演出：モブ暴走キル姫のエフェクトが消える
+# effectskip 1001
+# fadein "white" 0.5
+# waitandnext 1
+
+# alpha 500611 0 0.5
+# alpha 161 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0028"
+@ムー
+暴走が止まった、のか？
+
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+# textflame 1 1
+# textboxarrow 0 3
+@グランテピエ
+やっぱりムーなら、止められるんだ
+キル姫の持つキラーズを安定させる
+オートアバターの力なら…
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0039"
+@ムー
+これが俺様の力ってわけか…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5303411 "happy"
+@グランテピエ
+うんうん、ムーは偉いね～！
+偉い偉い！
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0004"
+@ムー
+へっ、俺様にかかれば
+こんなもんよ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5303411 "sad"
+@グランテピエ
+…でも、みんなを助けられた
+訳じゃない、よね
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0032"
+@ムー
+どっか行っちまったのもいたしな
+
+# textflame 1 1
+# textboxarrow 0 3
+@グランテピエ
+うん、そのキル姫のことも
+暴走したキル姫が同じ場所に
+たくさんいた理由も気になる…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ムー
+その理由がわかるかもしれない
+ラグナロク機関はもうすぐだぜ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5303411 "angry"
+@グランテピエ
+うん、行こう…ムー！
+
+# fadeout "black" 1.5
+# waitandnext 1.5

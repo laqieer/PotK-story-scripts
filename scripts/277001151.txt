@@ -1,0 +1,446 @@
+;;-----------------------------------------
+;;■□■新・海上編8月月初シナリオ_20180720■□■
+;;【第4幕】旗影のエンシェント 戦闘前
+;;スクリプト最後の背景：ビーチ
+;;-----------------------------------------
+# script "lisp"
+# background "sea_beach_day"
+# bgmfile "bgm227_story" "BgmSeaEvent" 0
+;;水着ラスト（アルテミス）
+# body 2400121
+# pos 2400121 5
+# scale 2400121 0.8 0
+# layer 2400121 2
+# alpha 2400121 0 0
+# mask 2400121 on
+# face 2400121 "normal"
+;;エンヴィ（ロンギヌス）
+# body 2300121
+# pos 2300121 1
+# scale 2300121 0.8 0
+# layer 2300121 2
+# alpha 2300121 0 0
+# mask 2300121 on
+# face 2300121 "normal"
+;;ラグナロク
+# body 2103611
+# pos 2103611 3
+# scale 2103611 0.8 0
+# layer 2103611 2
+# alpha 2103611 0 0
+# mask 2103611 on
+# face 2103611 "normal"
+;;スイハ
+# body 2401711
+# pos 2401711 3
+# scale 2401711 0.8 0
+# layer 2401711 2
+# alpha 2401711 0 0
+# mask 2401711 on
+# face 2401711 "normal"
+;;水着ミネルヴァ
+# body 2302511
+# pos 2302511 2
+# scale 2302511 0.8 0
+# layer 2302511 2
+# mask 2302511 on
+# alpha 2302511 0 0
+# face 2302511 "normal"
+;;水着グリード（ティルフィング）
+# body 2101421
+# pos 2101421 3
+# scale 2101421 0.8 0
+# layer 2101421 3
+# alpha 2101421 0 0
+# mask 2101421 on
+# face 2101421 "normal"
+;;水着グラトニー（パラシュ）
+# body 2200421
+# pos 2200421 5
+# scale 2200421 0.8 0
+# layer 2200421 2
+# alpha 2200421 0 0
+# mask 2200421 on
+# face 2200421 "normal"
+;;フライシュッツ（水着）
+# body 2502711
+# pos 2502711 2
+# scale 2502711 0.8 0
+# layer 2502711 1
+# mask 2502711 on
+# alpha 2502711 0 0
+# face 2502711 "normal"
+;;カーテンフェード
+# imageset 1 "black"
+# imagescale 1 1.2 0
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;//背景：ビーチ---------------------
+# textflame 0 0
+;;ナレーション
+@
+対決が終わり、
+戻ってきたスイハは
+深々と頭を下げた
+
+# face 2401711 "usual"
+# alpha 2401711 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 4017 "suiha_0031"
+@スイハ
+申し訳ありません…
+負けてしまいました
+あと少しだったのに…
+
+# move 2401711 4 0.5
+# alpha 2502711 1 0.5
+# textboxarrow 0 1
+# voice 5027 "freischotz_0004"
+@フライシュッツ
+スイハちゃんはがんばったよ〜！
+おねーちゃんがはぐしてあげる！
+だから元気出して、ね？
+
+# alpha 2502711 0 0.5
+# alpha 2302511 1 0.5
+@ミネルヴァ
+フライシュッツの言う通りです、
+あなたは全力を尽くしました！
+落ち込むことはありません！
+
+# textboxarrow 0 3
+@スイハ
+でも、これで1勝1敗です
+次で勝たないと厳しくなって
+しまいました…
+
+# alpha 2302511 0 0.5
+# alpha 2401711 0 0.5
+# alpha 2103611 1 0.5
+# mask 2103611 off
+# textboxarrow 0 2
+@ラグナロク
+スイハ、心配しないで！
+次は私が出るんだから、
+きっと勝ってみせる！
+
+# alpha 2103611 0 0.5
+# move 2302511 3 0
+# face 2302511 "angry"
+# alpha 2302511 1 0.5
+# mask 2302511 off
+@ミネルヴァ
+向こうも勝負を決めるため、
+おそらくグリードが出てくるでしょう
+
+@ミネルヴァ
+手強い相手ですが、
+頑張ってください
+
+# alpha 2302511 0 0.5
+# move 2502711 3 0
+# alpha 2502711 1 0.5
+# mask 2502711 off
+@フライシュッツ
+ラグナロクちゃん、頑張れー！
+
+# alpha 2502711 0 0.5
+# move 2401711 3 0
+# face 2401711 "usual"
+# alpha 2401711 1 0.5
+# mask 2401711 off
+# voice 4017 "suiha_0036"
+@スイハ
+きっとあなたなら、我々を
+勝利に導いてくれると信じています
+
+# alpha 2401711 0 0.5
+# alpha 2103611 1 0.5
+# voice 1036 "ragnarok_0030"
+@ラグナロク
+みんな、ありがとう！
+
+;;//演出：場面転換（背景そのまま）
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 2103611 0 0
+# face 2101421 "usual"
+# alpha 2101421 1 0
+# alpha 2200421 1 0
+# face 2300121 "usual"
+# alpha 2300121 1 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 10147 "tyrufing_k_0013"
+@グリード
+3回戦は、あのラグナロクが
+出てくるのでしょうね
+
+# textboxarrow 0 3
+@グラトニー
+きっと、そうなるだろうさ、
+あちらのリーダーだからね
+
+# face 2300121 "normal"
+# textboxarrow 0 1
+@エンヴィ
+では、こちらもリーダーを
+出すべきなのでしょうか…？
+
+# textboxarrow 0 2
+@グリード
+いいでしょう
+早くこの茶番を
+終わらせるとしましょう
+
+# voice 10147 "tyrufing_k_0007"
+@グリード
+試合の勝利も、チームの勝利も
+私がすべて奪い取ります！
+
+# bgmfile "bgm236_237" "BgmSeaEventBattle" 0
+# alpha 2101421 0 0.5
+# alpha 2200421 0 0.5
+# alpha 2300121 0 0.5
+# alpha 2302511 1 0.5
+@ミネルヴァ
+3回戦は私が審判をつとめます！
+両選手、スタートラインへどうぞ！
+
+# alpha 2302511 0 0.5
+# face 2103611 "angry"
+# move 2103611 2 0
+# alpha 2103611 1 0.5
+# mask 2103611 on
+# face 2101421 "angry"
+# move 2101421 4 0
+# alpha 2101421 1 0.5
+# textflame 0 0
+@
+ラグナロクとグリードが
+スタートラインに並び、
+視線で火花を散らす
+
+# alpha 2103611 0 0.5
+# alpha 2101421 0 0.5
+# face 2302511 "normal"
+# alpha 2302511 1 0.5
+# textflame 1 1
+# voice 3025 "minerva_0001"
+@ミネルヴァ
+ちなみに、マスターは
+どちらを応援するんですか？
+
+# textflame 0 0
+@
+突然の質問に焦るマスターに
+全員の視線が集まる
+
+@
+その視線に負け、マスターは
+どちらも頑張ってほしい…と
+無難な返事を返すのだった
+
+# alpha 2302511 0 0.5
+# move 2101421 3 0
+# face 2101421 "usual"
+# alpha 2101421 1 0.5
+# mask 2101421 off
+# textflame 1 1
+# voice 10147 "tyrufing_k_0009"
+@グリード
+は？
+アナタ、それで許されると
+思ってるんですか？
+
+# alpha 2101421 0 0.5
+# move 2103611 3 0
+# face 2103611 "usual"
+# alpha 2103611 1 0.5
+# mask 2103611 off
+# voice 1036 "ragnarok_0007"
+;;ラグナロク（嘲笑）
+@ラグナロク
+ふっ…
+優柔不断だね…
+
+# face 2103611 "angry"
+@ラグナロク
+それでも、私はこの試練に打ち勝つ！
+白き意志は、誰にも砕けはしない！
+
+# alpha 2103611 0 0.5
+# face 2302511 "angry"
+# alpha 2302511 1 0.5
+@ミネルヴァ
+それでは、開始します！
+
+;;//SE：ホイッスル
+# se "SE_0739"
+# waitandnext 1
+
+# alpha 2302511 0 0.5
+# face 2101421 "angry"
+# alpha 2101421 1 0.5
+# se "SE_9092"
+@グリード
+はっ！！
+
+# textwindow "close"
+# leftout 2101421 0.5
+# waitandnext 0.5
+
+# alpha 2101421 0 0
+# waitandnext 0.1
+
+# textwindow "normal"
+# textflame 1 1
+# alpha 2103611 1 0.5
+@ラグナロク
+たぁ！
+
+# textwindow "close"
+# leftout 2103611 0.5
+# waitandnext 0.5
+
+# alpha 2103611 0 0
+# waitandnext 0.1
+
+# textwindow "normal"
+# textflame 0 0
+@
+両者はほぼ同時にスタートし、
+砂浜を猛烈な勢いで駆け抜ける
+
+# face 2401711 "angry"
+# alpha 2401711 1 0.5
+# textflame 1 1
+@スイハ
+ラグナロク！
+がんばってください！
+
+# alpha 2401711 0 0.5
+# face 2300121 "angry"
+# move 2300121 3 0
+# alpha 2300121 1 0.5
+# mask 2300121 off
+@エンヴィ
+グリード！
+勝ってください！
+
+# alpha 2300121 0 0.5
+# move 2103611 2 0
+# alpha 2103611 1 0.5
+# mask 2103611 on
+# move 2101421 4 0
+# alpha 2101421 1 0.5
+# mask 2101421 on
+# textboxarrow 0 3
+# voice 10147 "tyrufing_k_0029"
+@グリード
+はあああああ！
+
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0029"
+@ラグナロク
+はぁあああああ！
+
+# alpha 2103611 0 0.5
+# alpha 2101421 0 0.5
+# textflame 0 0
+@
+ほぼ同時にフラッグへと飛びついた
+ふたりの手がぶつかり、
+フラッグはその勢いで宙に舞う
+
+# move 2101421 3 0
+# alpha 2101421 1 0.5
+# mask 2101421 off
+# textflame 1 1
+# textboxarrow 0 2
+@グリード
+強奪してあげるわ！
+
+# alpha 2101421 0 0.5
+# mask 2103611 off
+# move 2103611 3 0
+# alpha 2103611 1 0.5
+@ラグナロク
+皆の力を…今！
+
+# se "SE_9021"
+# alpha 2103611 0 0.5
+# textflame 0 0
+@
+ふたりはフラッグを取ろうと
+懸命に手を伸ばす
+
+@
+しかし、そのフラッグを
+手にしたのは突然現れた異族だった
+
+# se "SE_0618"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "toge"
+@異族
+グギャアアアア！
+
+# face 2103611 "sad"
+# alpha 2103611 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# voice 1036 "ragnarok_0023"
+@ラグナロク
+異族！
+いつの間に！？
+
+;;//異族追加
+# alpha 2103611 0 0.5
+# face 2101421 "usual"
+# alpha 2101421 1 0.5
+# voice 10147 "tyrufing_k_0020"
+@グリード
+海からも、続々と現れていますね
+…ふふっ
+いいことを思いつきました
+
+@グリード
+ビーチフラッグスなど正直退屈でした
+ここで、異族を多く倒した方が
+勝ちにしましょう
+
+# alpha 2101421 0 0.5
+# face 2103611 "angry"
+# alpha 2103611 1 0.5
+@ラグナロク
+私はゲームを完遂したいのだけど
+…今は、この異族を倒すことが先決ね
+
+# voice 1036 "ragnarok_0033"
+@ラグナロク
+わかったわ、今をもって
+「ビーチフラッグ大会」は
+「異族討伐大会」に変更！
+
+@ラグナロク
+異族たちよ、かかってきなさい！
+
+# alpha 2103611 0 0.5
+# alpha 2101421 1 0.5
+@グリード
+私がすべてを奪う！
+絶対に負けません！

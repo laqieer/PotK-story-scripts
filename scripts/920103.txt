@@ -1,0 +1,392 @@
+;;●２－３＜戦闘画面＞　背景：黒バック、大聖堂or建物内
+;;※元老院…暗闇に浮かび上がる王政府上層部の人間達
+# script "lisp"
+# fadeout "black" 0
+# imageset 0 "006_hall"
+# imagelayer 0 0
+# imagealpha 0 0 0
+# body 101411
+# pos 101411 3
+# scale 101411 0.8 0
+# alpha 101411 0 0
+# bgm "bgm005" 0
+# waitandnext 0.3
+
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "black" 0.5
+# textflame 1 1
+@王政府上層部３
+な、なんだ、今の音は…！？
+まさか、ヤツらがっ…
+
+@王政府上層部２
+クッ…
+かような事態に至るまで、
+意を表さぬとは！
+
+@王政府上層部２
+神々はいったい、
+なにを考えておられる！？
+
+@王政府上層部３
+！！
+慎まれよ、
+言葉が過ぎますぞ！
+
+@王政府上層部２
+この身も危ういというのに、
+なにを怖れることがあろう！？
+
+@王政府上層部２
+これでは、
+ただの駒…
+
+@王政府上層部２
+いいように弄ばれて
+終わるだけではないか！！
+
+@王政府上層部３
+！？
+どちらへ行かれるのです…！？
+
+@王政府上層部２
+決まっておろう、
+祭壇だ！
+
+@王政府上層部２
+ここにいても、
+ヤツらの餌食になるだけだ！
+
+@王政府上層部３
+お待ちください！
+
+@王政府上層部３
+必ずや、神々は
+手を差し伸べてくださるはず…
+我らの前に、その御姿を…
+
+;;※突如、耳をつんざくような激しい破壊音が響き渡る
+# bgm "stop"
+# se "SE_9059"
+# shake 0 0.5
+@王政府上層部２・３
+！？
+
+;;※壁がガラガラと崩れ、差し込んでくる外の光。眩しげに手をかざす王政府上層部２と３
+# se "SE_0670"
+# waitandnext 0.5
+
+@王政府上層部２
+う、うぬ…！？
+か、壁が…
+崩れた…！？
+
+# body 75
+# pos 75 3
+# scale 75 0.8 0
+# alpha 75 0 0
+# layer 75 20
+@王政府上層部３
+…誰だ！？
+;;※光の中に現れる影…リベリオン
+
+# bgmfile "bgm150" "BgmPJZero001" 0
+# waitandnext 0.5
+
+# alpha 75 1 0.5
+# face 75 "smile"
+# voice 9979 "rebellion_0004"
+# textboxarrow 0 2
+@リベリオン
+悪いな…
+先に辿り着いたのは、
+神々じゃなく“悪魔”だ
+
+# serif 1
+@王政府上層部２
+！？
+…ま…まさか
+…お前が！？
+
+# body 24
+# pos 24 5
+# scale 24 0.8 0
+# alpha 24 0 0
+# layer 24 21
+# body 4
+# pos 4 1
+# scale 4 0.8 0
+# alpha 4 0 0
+# layer 4 22
+# body 0
+# pos 0 2
+# layer 0 23
+# scale 0 0.8 0
+# alpha 0 0 0
+# serif 1
+@王政府上層部３
+リ、リベリオン…！？
+;;※リベリオンの背後から姿を現すティルフィング・デュリン・トト
+
+# alpha 24 1 0.5
+# alpha 0 1 0.5
+# alpha 4 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# face 24 "angry"
+# textboxarrow 0 3
+@ティルフィング
+…フレンネル大公が、
+拘束されていると伺いました
+
+@ティルフィング
+その牢獄はどちらですか？
+
+# serif 1
+@王政府上層部３
+フ、フレンネル大公…？
+
+# serif 1
+@王政府上層部３
+…なにを言っている
+…大公は、屋敷の火事で
+亡くなられたではないか
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+# voice 9979 "rebellion_0026"
+# face 75 "sad"
+@リベリオン
+ったく…
+そんなんで、
+誰が口を割るんだよ
+
+# face 24 "surprise"
+# voice 1014 "tyrufing_0022"
+# textboxarrow 0 3
+@ティルフィング
+え…？
+;;※ブォンと剣を出現させ、ズバッと王政府上層部３の首筋に当てるリベリオン
+
+# face 75 "angry"
+# se "SE_5706"
+# waitandnext 1
+
+# se "SE_5206"
+# fadein "red" 0.5
+# shake 0 0.5
+# waitandnext 0.5
+
+# serif 1
+@王政府上層部３
+ヒィッ！！？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+# voice 9979 "rebellion_0014"
+# face 24 "angry"
+# face 75 "irregular"
+@リベリオン
+言え…
+フレンネルはどこだ？
+
+@リベリオン
+言わねば、
+その頭が消し飛ぶことになる
+
+# serif 1
+@王政府上層部３
+！！！
+ま、待て！
+わ、私はなにもっ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+# face 75 "sad"
+@リベリオン
+そうか…
+ならば、隣のヤツに
+訊くとしよう…
+
+# se "SE_5205"
+# face 75 "angry"
+@リベリオン
+じゃあな
+;;※剣を掲げるリベリオン
+
+# serif 1
+@王政府上層部３
+ヒ、ヒィッ！！！
+
+# serif 1
+@王政府上層部２
+さ、最上階だっ…
+最上階の塔に幽閉しておる！
+
+# serif 1
+@王政府上層部３
+な…！？
+
+# serif 1
+@王政府上層部２
+この状況で、
+なにを守る必要がある！
+
+# serif 1
+@王政府上層部２
+…なんでも話して聞かせよう！
+だから…命だけは！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+# face 75 "smile"
+@リベリオン
+…素直で助かるぜ
+…ティルフィング
+
+# textboxarrow 0 3
+# face 24 "surprise"
+@ティルフィング
+え…？
+あ…えっと…
+
+# textboxarrow 0 1
+# face 0 "occur"
+@デュリン
+アンタが呑まれてどうすんのよ
+
+# face 24 "angry"
+# face 0 "serious"
+@デュリン
+…国王陛下は？
+ルトゥーカ8世は、
+今どこにいるの？
+
+# serif 1
+@王政府上層部２
+それは…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 75 "angry"
+# textboxarrow 0 2
+@リベリオン
+…祭壇に行くと言っていたな？
+そこに、国王もいるのか？
+
+# serif 1
+@王政府上層部２
+…グッ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+# voice 9979 "rebellion_0009"
+# face 75 "irregular"
+@リベリオン
+…いらぬ時間を食い、
+少々苛立ってるんだ。
+
+# se "SE_5205"
+@リベリオン
+言わぬなら、
+他のヤツに訊く
+;;※再び、剣を掲げるリベリオン
+
+# serif 1
+@王政府上層部２
+わ、わかった！
+その通りだ！
+国王は今、祭壇におる！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 1
+@デュリン
+…どこなの？
+その祭壇って？
+
+# serif 1
+@王政府上層部２
+こ、この建物の裏手…
+空中庭園だ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+# voice 9979 "rebellion_0027"
+# face 75 "normal"
+@リベリオン
+…そうか
+協力に感謝する…
+邪魔したな
+
+@リベリオン
+…行くぞ
+
+# textboxarrow 0 3
+# face 24 "mad2"
+@ティルフィング
+は、はい！
+
+;;※去ってゆく一行
+# se "SE_0740"
+# alpha 75 0 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# alpha 24 0 0.5
+# waitandnext 0.1
+
+# bgm "bgm005" 0
+# textboxarrow 0 0
+@王政府上層部３
+クッ…
+な、なんということを！
+
+@王政府上層部３
+牢の所在のみならず、
+祭壇までも！！
+
+@王政府上層部２
+命を奪われて、
+いったいなにができようか？
+
+@王政府上層部２
+どの道、
+あの悪魔を止められるのは、
+神々をおいて他にはおらん
+
+@王政府上層部２
+…結局は同じことだ
+
+@王政府上層部３
+しかし…
+
+@王政府上層部２
+隠し通路でゆけば、
+ワシらのほうが早く着く
+
+@王政府上層部２
+あの男が来ることを報告し、
+我らも神々の庇護の下に
+納まればよい
+
+@王政府上層部２
+さぁ…
+祭壇へと参じようぞ！

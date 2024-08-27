@@ -1,0 +1,478 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第５章
+;;第2話　タイトル：世界樹攻略戦
+;;5_2_7
+;;スクリプト最後の背景：都市部（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "in_city"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 3
+# alpha 210 0 0
+# mask 210 off
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 2
+# alpha 3201911 0 0
+# mask 3201911 off
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;神令ヒョウハ
+# body 5402011
+# pos 5402011 3
+# scale 5402011 0.8 0
+# layer 5402011 2
+# alpha 5402011 0 0
+# mask 5402011 off
+;;幻獣ピナーカ
+# body 3400211
+# pos 3400211 3
+# scale 3400211 0.8 0
+# layer 3400211 2
+# alpha 3400211 0 0
+# mask 3400211 off
+;;シタ
+# body 3201611
+# pos 3201611 3
+# scale 3201611 0.8 0
+# layer 3201611 2
+# alpha 3201611 0 0
+# mask 3201611 off
+;;グラム
+# body 3100811
+# pos 3100811 3
+# scale 3100811 0.8 0
+# layer 3100811 2
+# alpha 3100811 0 0
+# mask 3100811 off
+;;シェキナー
+# body 3400711
+# pos 3400711 3
+# scale 3400711 0.8 0
+# layer 3400711 2
+# alpha 3400711 0 0
+# mask 3400711 off
+;;エロース
+# body 3400411
+# pos 3400411 3
+# scale 3400411 0.8 0
+# layer 3400411 2
+# alpha 3400411 0 0
+# mask 3400411 off
+;;フライデビル
+# body 920014
+# pos 920014 3
+# scale 920014 0.8 0
+# layer 920014 2
+# alpha 920014 0 0
+# mask 920014 off
+;;フライデビル（クローン1）
+# entry 99200141 920014
+# pos 99200141 3
+# scale 99200141 0.8 0
+# layer 99200141 2
+# alpha 99200141 0 0
+# mask 99200141 off
+;;フライデビル（クローン2）
+# entry 99200142 920014
+# pos 99200142 3
+# scale 99200142 0.8 0
+# layer 99200142 2
+# alpha 99200142 0 0
+# mask 99200142 off
+;;-----------------------------------------
+;;第2話　タイトル：世界樹攻略戦
+;;//背景：都市部（昼）
+# se "SE_0886"
+# move 3102311 1 0
+# face 3102311 "normal"
+# alpha 3102311 1 0
+# mask 3102311 on
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0
+# mask 210 on
+# textflame 1 1
+# textboxarrow 0 2
+# move 3501711 5 0
+# face 3501711 "normal"
+# alpha 3501711 1 0
+# mask 3501711 on
+@カミト
+兄貴っ…みんなっ…無事でいて！
+
+# voice 310231 "ascalon_a_0001"
+# textboxarrow 0 1
+@アスカロン
+マスター、腕は大丈夫ですかっ？
+また痛みが出たりは…
+
+# voice 350171 "grimoire_ge_0002"
+# face 3501711 "angry"
+# textboxarrow 0 3
+@グリモワール
+そうよ！
+いつも少し経ってから痛み出すでしょ
+気をつけておきなさいよ！
+
+# voice 9936 "kamito_0003"
+# textboxarrow 0 2
+@カミト
+うん…
+でも、今は早く兄貴と合流して…
+
+;;//ヒョウハが画面を通り過ぎる
+# sestop "SE_0886"
+# textwindow "close"
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# alpha 3501711 0 0.5
+# waitandnext 0.5
+
+# move 5402011 1 0
+# face 5402011 "normal"
+# alpha 5402011 1 0.5
+# mask 5402011 on
+# waitandnext 0.6
+
+# se "SE_9021"
+# rightout 5402011 0.6
+# waitandnext 0.6
+
+# voice 9936 "kamito_0023"
+# alpha 5402011 0 0
+# move 210 2 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 1
+# move 3501711 4 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textwindow "normal"
+@カミト
+今のは、ヒョウハ！？
+
+# textboxarrow 0 3
+@グリモワール
+ヒョウハに続いて魔獣達が逃げて
+いくわよっ
+
+;;//フライデビルの群れが飛んでいく
+# textwindow "close"
+# alpha 210 0 0.5
+# alpha 3501711 0 0.5
+# move 99200141 1 0
+# alpha 99200141 1 0.5
+# mask 99200141 on
+# move 920014 3 0
+# alpha 920014 1 0.5
+# mask 920014 on
+# move 99200142 5 0
+# alpha 99200142 1 0.5
+# mask 99200142 on
+# waitandnext 0.6
+
+# se "SE_5204"
+# leftout 99200141 0.3
+# waitandnext 0.3
+
+# se "SE_5204"
+# leftout 920014 0.4
+# waitandnext 0.3
+
+# se "SE_5204"
+# leftout 99200142 0.5
+# waitandnext 0.5
+
+# se "SE_5575"
+# voice 340021 "pinaka_ge_0001"
+# alpha 99200141 0 0
+# alpha 920014 0 0
+# alpha 99200142 0 0
+# move 3400211 3 0
+# face 3400211 "angry"
+# alpha 3400211 1 0.5
+# mask 3400211 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ピナーカ
+待ちやがれ！
+まだ分かり合ってねぇだろ！
+
+# move 3400211 2 0.5
+# mask 3400211 on
+# move 210 4 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+@カミト
+ピナーカ！
+
+# voice 340021 "pinaka_ge_0006"
+# face 3400211 "usual"
+# textboxarrow 0 1
+@ピナーカ
+おっ！
+戻ってきたんだな、アンタ達
+
+# voice 340021 "pinaka_ge_0004"
+# face 3400211 "normal"
+# textboxarrow 0 1
+@ピナーカ
+こっちも一騒動あったけど、
+オイラがガツンとやってやったぜ！
+
+# voice 9935 "vang_0048"
+# alpha 3400211 0 0.5
+# move 211 2 0
+# face 211 "usual"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+@ヴァング
+よぉ、カミト
+そっちはどうだった？
+
+# face 210 "happy"
+# textboxarrow 0 3
+@カミト
+何とかなったよ…
+マサムネに後は任せてきた
+
+# voice 9936 "kamito_0033"
+# face 210 "normal"
+# textboxarrow 0 3
+@カミト
+ごめん、兄貴…
+実はミトゥム達にキラーメイルのこと
+話したんだ…
+
+# face 211 "normal"
+# textboxarrow 0 1
+@ヴァング
+そうか
+まあ、それならそれで、
+上手いことやるしかねぇな
+
+# face 211 "irregular"
+# textboxarrow 0 1
+@ヴァング
+それよりも、すぐ動けるか！？
+一気に反転攻勢をかけるぞ！
+
+# face 211 "normal"
+# textboxarrow 0 1
+@ヴァング
+コマンドキラーズ討伐作戦
+開始だぜ！
+
+# voice 9936 "kamito_0023"
+# face 210 "surprise"
+# textboxarrow 0 3
+@カミト
+今からっ？
+拠点を襲われたんじゃなかったの！？
+
+# voice 340021 "pinaka_ge_0007"
+# alpha 211 0 0.5
+# move 3400211 2 0
+# face 3400211 "normal"
+# alpha 3400211 1 0.5
+# mask 3400211 on
+# textboxarrow 0 1
+@ピナーカ
+オイラ達で追い払ったんだよ！
+さすがにここの守りは堅かったな！
+
+# voice 340071 "shekina_t_unit_0010"
+# alpha 210 0 0.5
+# move 3400711 4 0
+# face 3400711 "usual"
+# alpha 3400711 1 0.5
+# mask 3400711 on
+# textboxarrow 0 3
+@シェキナー
+当然です
+守護とは、守りきってこそ
+なのですから
+
+# voice 340041 "erosu_t_0004"
+# alpha 3400211 0 0.5
+# move 3400411 2 0
+# face 3400411 "normal"
+# alpha 3400411 1 0.5
+# mask 3400411 on
+# textboxarrow 0 1
+@エロース
+数は多かったですけど～
+エロース達の愛は無敵ですよね～
+
+# alpha 3400411 0 0.5
+# move 211 2 0
+# face 211 "normal"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+@ヴァング
+蝙蝠みたいな化け物が群がってきたが
+片っ端から撃ち落としてやがった
+大した腕だぜ
+
+# textboxarrow 0 3
+@シェキナー
+作戦の概要は把握しています
+貴方達が先陣を切るのですよね？
+
+# voice 9935 "vang_0003"
+# face 211 "usual"
+# textboxarrow 0 1
+@ヴァング
+ああ、そうだ
+シユウ、ちゃんと飯食ったか？
+
+# voice 320191 "chihyu_a_0029"
+# alpha 3400711 0 0.5
+# move 3201911 4 0
+# face 3201911 "normal"
+# alpha 3201911 1 0.5
+# mask 3201911 on
+# textboxarrow 0 3
+@シユウ
+うがあああぁぁ！
+はらごしらえはばんぜんだぞ！
+
+# voice 9936 "kamito_0002"
+# alpha 211 0 0.5
+# alpha 3201911 0 0.5
+# move 3102311 1 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 2
+# move 3501711 5 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+@カミト
+アスカロンとグリモワールは
+大丈夫？
+
+# voice 310231 "ascalon_a_0032"
+# face 3102311 "angry"
+# textboxarrow 0 1
+@アスカロン
+はい！
+さっきは私、あまり活躍できません
+でしたから…次こそはっ
+
+# voice 350171 "grimoire_ge_0028"
+# face 3501711 "angry"
+# textboxarrow 0 3
+@グリモワール
+むしろキミの方が心配よっ
+
+# voice 9935 "vang_0004"
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# alpha 3501711 0 0.5
+# move 211 3 0
+# face 211 "normal"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+@ヴァング
+かははっ！
+そっちも問題なさそうだな
+
+# alpha 211 0 0.5
+# move 3400711 3 0
+# face 3400711 "usual"
+# alpha 3400711 1 0.5
+# mask 3400711 off
+# textboxarrow 0 2
+@シェキナー
+援護は任せて下さい
+ペルーン達とも合流しますので
+
+# alpha 3400711 0 0.5
+# move 3201611 3 0
+# face 3201611 "usual"
+# alpha 3201611 1 0.5
+# mask 3201611 off
+# textboxarrow 0 2
+@シタ
+私達もマスターに報告したら、
+すぐに向かいます
+
+# alpha 3201611 0 0.5
+# move 3100811 3 0
+# face 3100811 "normal"
+# alpha 3100811 1 0.5
+# mask 3100811 off
+# textboxarrow 0 2
+@グラム
+私達は町の守護に残るが、
+君達の武運を祈っているよ
+
+# voice 9935 "vang_0006"
+# alpha 3100811 0 0.5
+# move 211 2 0
+# face 211 "normal"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+# move 210 4 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+@ヴァング
+おっしゃぁ！
+気合い入れていくぜ、カミト！
+
+# voice 9936 "kamito_0003"
+# textboxarrow 0 3
+@カミト
+うん！
+いこう、ユグドラシルへっ
+
+;;カミト（独白）
+# move 210 4 0
+# textboxarrow 0 0
+# textwindow "moya"
+@カミト
+今度こそ、フォルカスと話を
+するんだっ

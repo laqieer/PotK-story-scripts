@@ -1,0 +1,214 @@
+;;５－５＜戦闘画面＞
+;;パレストの町…異族に襲われ、逃げ惑う人々
+# script "lisp"
+# background "006_town2_TotalEclipse"
+# bgm "bgm008" 0
+# body 810004
+# pos 810004 3
+# mask 810004 off
+# scale 810004 0.8 0
+# textflame 1 1
+# textboxarrow 0 2
+# chara 810004
+@異族
+グギャ…！
+グギャギャギャ…！
+
+# serif 1
+# textboxarrow 1 0
+@子供
+…えーん…！
+…ヒック…ヒック…うあーん…！！
+
+# serif 1
+# textboxarrow 1 0
+@母親
+ダ、ダメ…！やめて！！
+お願い、その子だけは…！！
+
+# serif 0
+# textboxarrow 0 2
+# chara 810004
+@異族
+グギャ…！グガギャギャ…！！
+
+# serif 1
+# textboxarrow 1 0
+@母親
+どうして…！？
+どうして、こんなことに…！？
+
+# serif 1
+# textboxarrow 1 0
+@母親
+神様…どうか、ご慈悲を…！！
+この命を差し出しますから…
+どうか、その子だけは…！！
+
+# serif 0
+# textboxarrow 0 2
+# chara 810004
+@異族
+グギャギャギャギャギャーッ！！！！
+
+# serif 1
+# textboxarrow 1 0
+# body 42
+# pos 42 3
+# mask 42 off
+# scale 42 0.8 0
+# alpha 42 0 0
+@母親
+イ…イヤーッ！！！！
+
+;;ティバルト
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 0
+@？？？
+…容易に、命など差し出すな
+…お前が死んだら、
+誰がその子を守るんだ？
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 0
+# imageset 2 "mov2_3_sword"
+# imageset 3 "mov2_3_overlay"
+# imagealpha 2 0 0
+# imagealpha 3 0 0
+# imagepos 2 0 0
+# imagepos 3 0 0
+# imagelayer 2 3
+# imagelayer 3 2
+@母親
+え…？
+
+;;ガッ、と異族の頭部を貫く刃
+# se "SE_4815"
+# imagepos 2 0 0
+# imagepos 3 0 0
+# imagealpha 2 1 0
+# imagealpha 3 1 0
+# fadein "red" 1.2
+
+;;崩れ落ちる異族
+# se "SE_3001"
+# serif 0
+# textboxarrow 0 0
+# alpha 810004 0 2
+# imageleftout 2 0
+# imagealpha 3 0 2
+# chara 810004
+@異族
+グ…！…グ…ギ…ガ…
+
+# serif 1
+# textboxarrow 1 0
+@母親
+ヒ…ヒィッ…！！
+
+;;金髪の美しい将校・ティバルトが姿を現わす
+;;ティバルト
+# serif 0
+# textboxarrow 0 2
+# alpha 42 1 0.5
+# chara 42
+@？？？
+神ではないが…少なくとも、
+俺には悲痛なる叫びが届いた
+決して希望を棄てるな
+
+# serif 1
+# textboxarrow 1 0
+@母親
+ア、アナタは…“英雄”
+ティバルト団長！？あ、あの…
+な、なんて言ったらいいか…！
+
+# serif 0
+# textboxarrow 0 2
+# chara 42
+@ティバルト
+礼などいい…
+早く、子供を抱き上げてやれ
+
+# serif 1
+# textboxarrow 1 0
+# body 12
+# pos 12 3
+# scale 12 0.8 0
+# entry 99 12
+# body 99
+# pos 99 5
+# scale 99 0.8 0
+# alpha 12 0 0
+# alpha 99 0 0
+@母親
+は、はい…！
+…ありがとうございます！！
+
+# serif 0
+# textboxarrow 0 1
+# move 42 1 0.5
+# rightin 12 0.5
+# rightin 99 0.5
+# alpha 12 1 0
+# alpha 99 1 0
+# chara 42
+@ティバルト
+…これより、我が第１師団が
+異族どもを完全に駆逐する！！
+
+# serif 0
+# textboxarrow 0 1
+# chara 42
+@ティバルト
+不安に思うことはない…
+希望を胸に耐えるんだ！！！
+
+# serif 0
+# textboxarrow 0 1
+# chara 42
+@ティバルト
+…いいか、お前たち？
+３０分でケリをつける…
+ただの一匹も取り逃がすな。…行け！
+
+# serif 1
+# textboxarrow 1 0
+# face 12 "angry"
+# face 99 "angry"
+@兵士
+ハッ…！
+
+;;一斉に散ってゆく第1師団の兵士たち。空を見上げるティバルト
+# leftout 12 0.5
+# leftout 99 0.5
+# alpha 12 0 0.5
+# alpha 99 0 0.5
+
+# serif 0
+# textboxarrow 0 2
+# move 42 2 0.5
+# chara 42
+@ティバルト
+漆黒に塗りつぶされた太陽か…
+まったく、嫌な空だ
+
+;;そこへ駆けてくる兵士
+# serif 1
+# textboxarrow 1 3
+# pos 12 4
+# rightin 12 0.5
+# alpha 12 1 0.5
+# chara 12
+@兵士
+ティバルト団長！！
+本部から、伝令が入りました！！
+
+# serif 0
+# textboxarrow 0 1
+# chara 42
+@ティバルト
+…本部から…？

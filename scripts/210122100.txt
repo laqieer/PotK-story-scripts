@@ -1,0 +1,497 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１２章 章タイトル「ラルゴカタストロフィ―暴走―」
+;;第2話－１０　タイトル：暴走の契機
+;;2_10_0
+;;スクリプト最後の背景：泉
+;;-----------------------------------------
+# script "lisp"
+# background "fountain"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;ロンギヌス・擬彩
+# body 5300131
+# pos 5300131 3
+# scale 5300131 0.8 0
+# layer 5300131 2
+# alpha 5300131 0 0
+# mask 5300131 off
+;;擬装エルキュール
+# body 5202521
+# pos 5202521 3
+# scale 5202521 0.8 0
+# layer 5202521 2
+# alpha 5202521 0 0
+# mask 5202521 off
+;;フラベルム
+# body 501611
+# pos 501611 3
+# scale 501611 0.8 0
+# layer 501611 2
+# alpha 501611 0 0
+# mask 501611 off
+# brightness 501611 0.8 0
+;;セファー
+# body 502111
+# pos 502111 3
+# scale 502111 0.8 0
+# layer 502111 2
+# alpha 502111 0 0
+# mask 502111 off
+# brightness 502111 0.8 0
+;;カリス・聖鎖・アザゼル
+# body 5602511
+# pos 5602511 3
+# scale 5602511 0.8 0
+# layer 5602511 2
+# alpha 5602511 0 0
+# mask 5602511 off
+;;キプル
+# body 163
+# pos 163 3
+# scale 163 0.6 0
+# layer 163 3
+# alpha 163 0 0
+# mask 163 off
+;;-----------------------------------------
+;;第2話－１０　タイトル：暴走の契機
+;;//背景：泉
+# move 5602511 3 0
+# face 5602511 "sad"
+# alpha 5602511 1 0
+# mask 5602511 off
+# textflame 1 1
+# textboxarrow 0 2
+@カリス
+ミネルヴァ達がレーヴァテインを
+引きつけてくれてる間に、
+エルキュールとロンギヌスを…
+
+# voice 560251 "chalice_di_0037"
+# textboxarrow 0 2
+@カリス
+あうっ…
+
+;;//カリスがよろめく
+# se "SE_5200"
+# waitandnext 0.5
+
+# move 5602511 2 0.5
+# mask 5602511 on
+# move 163 4 0
+# alpha 163 1 0.5
+# mask 163 on
+# textboxarrow 0 3
+@キプル
+カリス…！
+傷口が開いてますよっ…
+やっぱり無茶だったんです…
+
+# voice 560251 "chalice_di_0013"
+# face 5602511 "angry"
+# textboxarrow 0 1
+@カリス
+むぅ～っ
+そんなことないよ…！
+
+# face 5602511 "normal"
+# textboxarrow 0 1
+@カリス
+カリスちゃんは…
+本当の天使になるんだからっ
+
+# textboxarrow 0 1
+@カリス
+そして…ミラクルを起こすんだっ
+
+;;//カリスがエルキュールに近づく
+# se "SE_5000"
+# sedelay "SE_5001" 0.8
+# textwindow "close"
+# waitandnext 0.8
+
+# textboxarrow 0 1
+# textwindow "normal"
+@カリス
+大丈夫だよ…
+絶対に…癒してみせるからね
+
+# voice 9951 "kipuru_0055"
+# textboxarrow 0 3
+@キプル
+カリスっ…
+
+;;//キプルがカリスにくっつく
+# textwindow "close"
+# move 163 3 0.2
+# waitandnext 0.2
+
+# voice 560251 "chalice_di_0042"
+# face 5602511 "happy"
+# textboxarrow 0 1
+# textwindow "normal"
+@カリス
+えへへっ
+大丈夫だよ、キプル…
+だって…
+
+# textboxarrow 0 1
+@カリス
+今、わたしには
+キプルがいてくれるんだから！
+
+;;//カリスがエルキュールを治癒する
+# se "SE_4781"
+# fadein "green" 0.5
+# waitandnext 0.5
+
+# voice 2025 "hercule_0015"
+# alpha 163 0 0.5
+# alpha 5602511 0 0.5
+# move 5202521 3 0
+# face 5202521 "sad"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# textboxarrow 0 2
+@エルキュール
+ううっ…
+
+# alpha 5202521 0 0.5
+# move 5602511 2 0
+# face 5602511 "normal"
+# alpha 5602511 1 0.5
+# mask 5602511 on
+# move 163 4 0
+# alpha 163 1 0.5
+# mask 163 on
+# textboxarrow 0 3
+@キプル
+エルキュールさんの呼吸が安定して
+きました
+やりましたよ、カリス！
+
+# voice 560251 "chalice_di_0003"
+# textboxarrow 0 1
+@カリス
+うん…そうだねっ…
+次はロンギヌスを…
+
+;;//カリスが倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 5602511 0 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# textwindow "normal"
+@キプル
+カリス！？
+しっかりしてください、カリス…！
+
+# textboxarrow 0 3
+@キプル
+キプルキプルキプルキプルキプル…
+
+;;//背景：黒
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# alpha 163 0 0
+# move 5602511 3 0
+# face 5602511 "surprise"
+# alpha 5602511 1 0
+# mask 5602511 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@カリス
+…………あれ？
+おかしいな…
+体が動かない…
+
+# voice 560251 "chalice_di_0018"
+# face 5602511 "sad"
+# textboxarrow 0 2
+@カリス
+そんな…そんなのイヤだよ…
+これじゃ、誰も助けられない…
+
+# textboxarrow 0 2
+@カリス
+ずっと…ずっと願ってたの…
+みんなを癒せるようになりたいって…
+みんなを助けたいって…
+
+# textboxarrow 0 2
+@カリス
+グラ姉とキプルのお陰で、
+やっと…みんなを癒せる存在に
+なれたと…思ったのに…
+
+# textboxarrow 0 2
+@カリス
+わたし…こんなんじゃミラクルを…
+
+# voice 9951 "kipuru_0015"
+# move 5602511 2 0.5
+# mask 5602511 on
+# move 163 4 0
+# alpha 163 1 0.5
+# mask 163 on
+# textboxarrow 0 3
+@キプル
+カリス…
+カリス…うううううっ…
+
+# face 5602511 "surprise"
+# textboxarrow 0 1
+@カリス
+あれ…？
+キプルが泣いてる…？
+キプルが…
+
+# voice 9951 "kipuru_0055"
+# textboxarrow 0 3
+@キプル
+カリス…カリス…
+あなたは優しすぎるんです…
+自分のことは二の次にしてばかりで…
+
+# textboxarrow 0 3
+@キプル
+その分、キプルがあなたに無理を
+させないよう頑張らないと
+いけなかったのに…それなのに…
+
+# textboxarrow 0 3
+@キプル
+人々を癒すことができて、嬉しそうな
+あなたを見ていたら…
+強く止めることができませんでした…
+
+# textboxarrow 0 3
+@キプル
+キプルはカリスがやりたいことを
+全力でサポートします…だけど、
+一番は…
+
+# textboxarrow 0 3
+@キプル
+カリスに笑顔でいて欲しかったのに！
+
+# voice 560251 "chalice_di_0044"
+# face 5602511 "sad"
+# textboxarrow 0 1
+@カリス
+キプル…
+
+# textboxarrow 0 3
+@キプル
+かくなる上は、キプルが腹を切って
+お詫び致しますー！！
+
+# bgm "stop"
+# face 5602511 "angry"
+# textboxarrow 0 1
+@カリス
+それはダメーーーー！
+
+;;//背景：泉
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "fountain"
+# move 5602511 2 0
+# face 5602511 "angry"
+# alpha 5602511 1 0
+# mask 5602511 on
+# move 163 4 0
+# alpha 163 1 0
+# mask 163 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm462" "BgmIntegralNoahDisrupters" 0
+# textboxarrow 0 1
+# textwindow "normal"
+@カリス
+キプル！
+そんなのちっとも嬉しくないよ！
+
+# voice 9951 "kipuru_0023"
+# textboxarrow 0 3
+@キプル
+しょええええええ！？
+カリスが蘇りました…！
+
+# voice 560251 "chalice_di_0042"
+# face 5602511 "happy"
+# textboxarrow 0 1
+@カリス
+カリスちゃん、死んでないし
+それよりも…えへへっ♪
+
+# voice 560251 "chalice_di_0030"
+# textboxarrow 0 1
+@カリス
+ありがと、キプル！
+そんなふうに思ってくれてたんだね
+何だか元気が湧いてきたよっ
+
+# textboxarrow 0 3
+@キプル
+でも、傷の具合が…
+無理をしたら…
+
+# face 5602511 "normal"
+# textboxarrow 0 1
+@カリス
+大丈夫！
+ちゃんと力を操れれば、
+無理しなくてもいけるよ
+
+# voice 560251 "chalice_di_0043"
+# textboxarrow 0 1
+@カリス
+キプル、力を貸してね
+一緒にミラクルを起こそう！
+
+# voice 9951 "kipuru_0029"
+# textboxarrow 0 3
+@キプル
+カリス…
+分かりました
+では、いきますよー！
+
+# voice 560251 "chalice_di_0029"
+# textboxarrow 0 1
+@カリス
+ロンギヌスを絶対に助けるんだ！
+この力で…
+いっけー！
+
+;;//カリスがロンギヌスを癒す
+# se "SE_4781"
+# fadein "green" 0.5
+# waitandnext 0.5
+
+# voice 530013 "ronginusu_iz_0015"
+# alpha 5602511 0 0.5
+# alpha 163 0 0.5
+# move 5300131 3 0
+# face 5300131 "sad"
+# alpha 5300131 1 0.5
+# mask 5300131 off
+# textboxarrow 0 2
+@ロンギヌス
+う…ううっ…
+
+# voice 9951 "kipuru_0006"
+# alpha 5300131 0 0.5
+# move 5602511 2 0
+# face 5602511 "normal"
+# alpha 5602511 1 0.5
+# mask 5602511 on
+# move 163 4 0
+# alpha 163 1 0.5
+# mask 163 on
+# textboxarrow 0 3
+@キプル
+やりました、カリス！
+ロンギヌスが息を吹き返しましたっ
+
+# se "SE_10527"
+# voice 560251 "chalice_di_kyara_1007"
+# face 5602511 "happy"
+# textboxarrow 0 1
+@カリス
+やっほい！
+カリスちゃん、マジ天使♪
+
+# textboxarrow 0 3
+@キプル
+エルキュールさんもロンギヌスさんも
+意識を取り戻すまで、
+もう少しかかりそうですね
+
+# voice 560251 "chalice_di_0003"
+# face 5602511 "normal"
+# textboxarrow 0 1
+@カリス
+うん
+今のうちにみんなに知らせて
+戦いを止めようっ
+
+# textboxarrow 0 3
+@キプル
+無理は禁物です！
+
+# textboxarrow 0 1
+@カリス
+大丈夫だよっ
+わたしは――
+
+# bgm "stop"
+# emotionbody 1000 15 501611 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# emotionbody 2000 15 502111 0 0
+# effectpattern 2000 1 0
+# effectstart 2000
+# alpha 5602511 0 0.5
+# alpha 163 0 0.5
+# move 501611 2 0
+# face 501611 "angry"
+# alpha 501611 1 0.5
+# mask 501611 on
+# textboxarrow 0 1
+# move 502111 4 0
+# face 502111 "angry"
+# alpha 502111 1 0.5
+# mask 502111 on
+@フラベルム
+ああああああああああ！！
+
+# textboxarrow 0 3
+@セファー
+わたくしは…わたくしはああああああ
+あああああああああああああああ！！
+
+# voice 560251 "chalice_di_0024"
+# effectskip 1000
+# effectskip 2000
+# alpha 501611 0 0.5
+# alpha 502111 0 0.5
+# move 5602511 2 0
+# face 5602511 "surprise"
+# alpha 5602511 1 0.5
+# mask 5602511 on
+# textboxarrow 0 1
+# move 163 4 0
+# alpha 163 1 0.5
+# mask 163 on
+@カリス
+ひゃあ！
+今の声、何…？
+
+# textboxarrow 0 3
+@キプル
+カリス！
+フラベルムとセファーが…
+あれはもしかして…
+
+# face 5602511 "angry"
+# textboxarrow 0 1
+@カリス
+いけない…！
+二人が…暴走しちゃってるっ…

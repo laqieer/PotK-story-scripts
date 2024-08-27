@@ -1,0 +1,753 @@
+;;-----------------------------------------
+;;ウェディングイベント1_1
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgmfile "bgm334" "BgmWedding001" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# mask 196 off
+# alpha 196 0 0
+;;グラーシーザ
+# body 302611
+# pos 302611 3
+# scale 302611 0.8 0
+# layer 302611 2
+# mask 302611 off
+# alpha 302611 0 0
+;;グランテピエ・獣刻・バハムート
+# body 5303411
+# pos 5303411 3
+# scale 5303411 0.8 0
+# layer 5303411 2
+# mask 5303411 off
+# alpha 5303411 0 0
+;;アルマス（ウェディング）
+# body 6103811
+# pos 6103811 3
+# scale 6103811 0.8 0
+# layer 6103811 2
+# mask 6103811 off
+# alpha 6103811 0 0
+;;グラーシーザ（ウェディング）
+# body 6302611
+# pos 6302611 3
+# scale 6302611 0.8 0
+# layer 6302611 2
+# mask 6302611 off
+# alpha 6302611 0 0
+;;-----------------------------------------
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+# imageset 2 "e220618_logo"
+# imagealpha 2 0 0
+# imagelayer 2 5
+;;-----------------------------------------
+;;グラーシーザの妄想
+;;背景：森　forest
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_6117"
+# envbody 1001 1 0
+# effectpattern 1001 1 0
+# effectstart 1001
+# face 6103811 "usual"
+# alpha 6103811 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@アルマス
+雨…こんなにも空は澄んでいるのに
+
+;;モノローグ
+# textflame 0 0
+@
+純白のドレスに身を包むアルマスは
+雨露に煌めく紫陽花を優しくなでる
+
+# voice 1038 "almace_0004"
+# face 6103811 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+ふふ、天泣なんて言葉があるけど
+この涙はきっと喜びの――
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# sestop "SE_6117"
+# serif 1
+@？？？
+ストップストーップ！
+
+;;グラーシーザの妄想終わり
+;;演出：暗転
+;;背景：街中　town
+;;演出：アルマス通常立ち絵
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# effectskip 1001
+# background "town"
+# alpha 6103811 0 0
+# move 302611 2 0
+# face 302611 "normal"
+# alpha 302611 1 0
+# mask 302611 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0
+# mask 196 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# emotionbody 1000 6 196 50 250
+# effectpattern 1000 1 1
+# effectstart 1000
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+ちょっと、今の何よ
+
+;;演出：グラーシーザ通常立ち絵
+# bgm "bgm002" 0
+# face 302611 "sad"
+# textboxarrow 0 1
+@グラーシーザ
+むぅ、ここからがいいところなんだぞ
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+まったく、グラーシーザが
+ウェディングプランナーになった
+っていうから話を聞いてたけど…
+
+# textboxarrow 0 3
+@アルマス
+今のはプランじゃなくて
+ただの妄想ってやつでしょ
+
+# face 302611 "normal"
+# textboxarrow 0 1
+@グラーシーザ
+しかし、会場のせつえいや
+タイムテーブルの話をしても
+つまらないと言うだろう？
+
+# textboxarrow 0 3
+@アルマス
+それはそうかもだけど…
+もっと、こう、あるじゃない
+
+# textboxarrow 0 3
+@アルマス
+それに、そんな妄想なら
+モデルは私じゃなくて
+自分にしたらいいじゃない
+
+# textboxarrow 0 1
+@グラーシーザ
+ためしにプランを言ってみろと
+いったのはおまえじゃないか
+
+# face 302611 "irregular"
+# textboxarrow 0 1
+@グラーシーザ
+しかし…ふむ、いちりあるな
+あたしでプランを立てるとなると…
+
+;;演出：暗転
+;;背景：晴れた丘　plain
+;;演出：グラーシーザウェディング立ち絵
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# alpha 302611 0 0
+# alpha 196 0 0
+# move 6302611 3 0
+# face 6302611 "normal"
+# mask 6302611 off
+# alpha 6302611 1 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm334_1" "BgmWedding001" 0
+# se "SE_6504"
+# emotionbody 2000 3 6302611 10 290
+# effectpattern 2000 1 3
+# effectstart 2000
+# voice 3026 "grayside_0005"
+# textboxarrow 0 2
+# textwindow "normal"
+@グラーシーザ
+うむ！
+ハレの日にふさわしい
+きもちのいい天気だな！
+
+;;モノローグ
+# textflame 0 0
+@
+純白のドレスに身を包んだ
+グラーシーザはその美しい髪と
+同じくらい眩しく輝く陽光を受け…
+
+;;演出：以下のアルマス立ち絵なし
+# bgm "stop"
+# serif 1
+@アルマス
+ちょっと！
+なんで人の時は雨で
+自分の時は晴れなのよ！
+
+;;演出：暗転
+;;背景：街中　town
+;;演出：アルマス、グラーシーザ通常立ち絵
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "town"
+# alpha 6302611 0 0
+# move 302611 2 0
+# face 302611 "normal"
+# alpha 302611 1 0
+# mask 302611 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0
+# mask 196 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm002" 0
+# textflame 1 1
+# textboxarrow 0 1
+# textwindow "normal"
+@グラーシーザ
+それはそういうプランだからだ！
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+プランって…
+天気までどうこうできる訳ないでしょ
+
+# textboxarrow 0 1
+@グラーシーザ
+しかしだな
+シチュエーションというものは
+そういうものだからな
+
+# voice 9943 "almace_navikan_0041"
+# face 196 "sad"
+# textboxarrow 0 3
+@アルマス
+そんなの…はぁ
+何言っても無駄ね
+
+# face 302611 "irregular"
+# textboxarrow 0 1
+@グラーシーザ
+む、そんなことはないぞ！
+ようぼうを聞くのはよいプランを
+作るうえで大事なことだからな
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+…そう
+それなら私に提示したプランには
+最大のミスがあるわ
+
+# voice 3026 "grayside_0039"
+# face 302611 "normal"
+# textboxarrow 0 1
+@グラーシーザ
+ほう！
+それはちゃんと聞いておかないとな
+
+# textboxarrow 0 3
+@アルマス
+私はね…
+
+# bgm "stop"
+# emotionbody 3000 6 196 50 250
+# effectpattern 3000 1 1
+# effectstart 3000
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+雨なんて大っ嫌いなのよ！
+
+;;タイトル演出
+# se "SE_5565"
+# frameout 0 0
+# fadein "white" 2
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# textwindow "close"
+
+# fadeout "white" 1.5
+# waitandnext 2
+
+;;3秒くらい街中で雨ふらす
+# se "SE_6117"
+# effectstart 1001
+# background "town"
+# alpha 302611 0 0
+# alpha 196 0 0
+# imagealpha 2 0 0
+# framein 0 0
+# fadein "white" 1.5
+# waitandnext 1.5
+
+;;【EP1】
+# waitandnext 3
+
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# effectskip 1001
+# se "SE_6117_filter"
+# background "201_room"
+# move 196 3 0
+# face 196 "sad"
+# mask 196 off
+# alpha 196 1 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;背景：室内　201_room
+;;演出：アルマス通常立ち絵
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+…………
+
+# bgm "bgm004" 0
+# voice 9943 "almace_navikan_0041"
+# textboxarrow 0 2
+@アルマス
+…はぁ、今日も雨
+雨雨雨雨雨、雨ばーーーっか
+
+# textboxarrow 0 2
+@アルマス
+雨なんて…嫌い
+
+;;モノローグ
+# textflame 0 0
+@
+そう言うとアルマスは
+大きく息を吐き出す
+
+;;できればもやもやフレームで
+# move 196 3 0
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+@アルマス
+わかってるわよ
+不機嫌になったって
+何も解決しないことくらい
+
+;;できればもやもやフレームで
+# textboxarrow 0 0
+@アルマス
+なのに…
+
+;;演出：暗転
+;;背景：室内　201_room
+;;演出：回想のイメージ
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# sestop "SE_6117"
+# background "201_room"
+# alpha 196 0 0
+# move 5303411 2 0
+# face 5303411 "normal"
+# alpha 5303411 1 0
+# mask 5303411 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0
+# mask 196 on
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 1
+# textwindow "normal"
+@グランテピエ
+それじゃ…
+行ってくる、ね？
+
+# face 196 "happy"
+# textboxarrow 0 3
+@アルマス
+はいはい、早く行ってきなって
+
+# voice 530341 "grandepieu_di_0044"
+# face 5303411 "sad"
+# textboxarrow 0 1
+@グランテピエ
+アルマス…
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+私のことはいいから
+忙しいんでしょ、いつもみたいに
+
+# voice 530341 "grandepieu_di_0003"
+# face 5303411 "normal"
+# textboxarrow 0 1
+@グランテピエ
+うん…みんなを助けないと
+でも、ぜーったいに帰ってくるからね
+
+# face 196 "shy"
+# textboxarrow 0 3
+@アルマス
+はぁ、だからそういうのもいいって
+私だって子供じゃないんだし
+いろいろわかってるって
+
+# textboxarrow 0 1
+@グランテピエ
+…うん、そうだね
+じゃあ、いってきます
+
+# se "SE_11862"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "201_room"
+# alpha 5303411 0 0
+# alpha 196 0 0
+# move 196 3 0
+# face 196 "angry"
+# mask 196 off
+# alpha 196 1 0
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# se "SE_6117"
+# se "SE_6117_filter"
+# fadein "white" 1
+# waitandnext 1
+
+;;背景：室内　201_room
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+あーーーもう！
+私の態度ぜーんぶ子供みたいじゃない
+
+# voice 9943 "almace_navikan_0026"
+# face 196 "sad"
+# textboxarrow 0 2
+@アルマス
+…お姉ちゃんは
+この世界の為に活躍してるって
+ちゃんとわかってるはずなのに…
+
+# textboxarrow 0 2
+@アルマス
+笑顔でお姉ちゃんを
+見送ってあげられない…
+
+# textboxarrow 0 2
+@アルマス
+…こんな自分も、嫌い
+
+;;モノローグ
+# textflame 0 0
+@
+連日続いた雨は梅雨時という
+季節の枠を超えた災害となって
+各地に被害をもたらしていた
+
+;;モノローグ
+@
+常日頃、世界の秩序を守る為
+仲間と共に活動するグランテピエは
+この非常事態においても活動を開始
+
+;;モノローグ
+@
+それは妹であるアルマスとの
+予定を変更した上でのものだった
+
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+そんなのいつものことじゃない
+なんでこんな気持ちになるのよ…
+
+;;モノローグ
+# textflame 0 0
+@
+そう呟き
+アルマスは窓の外を眺める
+
+;;モノローグ
+@
+雨雲に陽の光を遮られた薄暗い世界
+それはアルマスの心の在り様を
+映し出しているようだった
+
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+…寂しい
+
+# face 196 "angry"
+# textboxarrow 0 2
+@アルマス
+そうそう、寂しいだけよ
+たまにはそんなこともあるわよね！
+
+# textboxarrow 0 2
+@アルマス
+天気が悪くて気分が上がらないし
+珍しくそんなこと思っただけよ
+
+;;モノローグ
+# textflame 0 0
+@
+自身を納得させるように
+力強く言葉を発するアルマス
+
+;;モノローグ
+# sestop "SE_6117"
+@
+しかし、空は一転して
+晴れ間をのぞかせた
+
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+…何よ！
+雨のせいにもできないじゃない！
+
+# face 196 "sad"
+# textboxarrow 0 2
+@アルマス
+だからといって晴れても
+お姉ちゃんが今すぐ帰ってくる
+って話でもないし…
+
+# voice 9943 "almace_navikan_0041"
+# textboxarrow 0 2
+@アルマス
+はぁ、せっかく晴れてきたのに
+ひとりで文句ばっか言ってても
+惨めな気持ちになるばかりよね
+
+# face 196 "normal"
+# textboxarrow 0 2
+@アルマス
+…よし、出掛けよ
+
+;;演出：移動の暗転
+;;背景：街中　town
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "town"
+# move 196 3 0
+# face 196 "normal"
+# mask 196 off
+# alpha 196 1 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm002" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+ここは比較的
+水の被害が少なかったのね
+
+;;モノローグ
+# textflame 0 0
+@
+アルマスはグランテピエと共に
+出掛ける予定だった街へ訪れていた
+
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+お姉ちゃんは私に
+見せたいものがある
+って言ってたけど…
+
+;;モノローグ
+# textflame 0 0
+@
+アルマスが辺りを見回すと
+人だかりができている場所が
+いくつかあるようだった
+
+# face 196 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+人が集まってるってことは
+そこが目的だったのかも？
+
+;;モノローグ
+# textflame 0 0
+@
+アルマスが人の集まりに
+近寄ってみると、そこには…
+
+;;演出：結婚式の新郎新婦が眩しく感じたというイメージの明転を一度
+# fadein "white" 1
+# waitandnext 1
+
+# bgmfile "bgm334" "BgmWedding001" 0
+# voice 9943 "almace_navikan_0034"
+# face 196 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+わぁ…
+
+;;モノローグ
+# textflame 0 0
+@
+アルマスは眼前の幸福に満ちた
+その光景に目を奪われる
+
+# emotionbody 4000 2 196 10 290
+# effectpattern 4000 1 1
+# effectstart 4000
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+これって…結婚式？
+
+;;演出：？？？時のグラーシーザ立ち絵なし
+;;？？？（グラーシーザ）
+# serif 1
+@？？？
+そうだ、とてもきれいだろう！
+
+# emotionbody 5000 1 196 10 310
+# effectpattern 5000 2 0
+# effectstart 5000
+# textboxarrow 0 2
+@アルマス
+ええ、それに幸せそう…
+って、あなたは！？
+
+;;演出：グラーシーザ通常立ち絵
+# serif 1
+# textwindow "close"
+# serif 0
+# move 302611 2 0
+# face 302611 "normal"
+# alpha 302611 1 0.5
+# mask 302611 on
+# textboxarrow 0 1
+# move 196 4 0.5
+# mask 196 on
+@グラーシーザ
+よう、アルマス！
+こんなところできぐうだな！
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+グラーシーザこそ
+どうしてこの街に？
+
+# face 302611 "irregular"
+# textboxarrow 0 1
+@グラーシーザ
+あたしはこのまちで
+ウェディングプランナーをしている
+だからここにいるんだ
+
+# voice 9943 "almace_navikan_0035"
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+ウェディングプランナー…
+それじゃあこの式もグラーシーザが？
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# face 302611 "normal"
+# textboxarrow 0 1
+@グラーシーザ
+そうだ！
+あたしがプランニングした！
+と、言いたいところなのだが…
+
+# emotionbody 6000 2 196 10 290
+# effectpattern 6000 1 1
+# effectstart 6000
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+どうしたの？
+歯切れが悪いなんて
+グラーシーザらしくないじゃない
+
+# voice 3026 "grayside_0028"
+# face 302611 "sad"
+# textboxarrow 0 1
+@グラーシーザ
+今日しきをあげているうちの
+なんくみかはさいしょ
+あたしにいらいが来ていた
+
+# textboxarrow 0 1
+@グラーシーザ
+しかし、あたしには
+あのものたちをおくりだす
+しかくがなかったのだ
+
+# fadeout "black" 1
+# waitandnext 1

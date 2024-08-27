@@ -1,0 +1,476 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第４章 タイトル：「世界樹の子―インベイション―」
+;;第2話　タイトル：絶望の到来
+;;4_2_3_3
+;;スクリプト最後の背景：道路
+;;-----------------------------------------
+# script "lisp"
+# background "in_cityroad"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;魔獣化ミョルニル
+# body 1200111
+# pos 1200111 3
+# scale 1200111 0.8 0
+# layer 1200111 2
+# alpha 1200111 0 0
+# mask 1200111 off
+# brightness 1200111 0.5 0
+;;マサムネ(キラーメイル)
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# layer 1100111 2
+# alpha 1100111 0 0
+# mask 1100111 off
+;;ブリューナク・D. plug・バルバトス
+# body 3500711
+# pos 3500711 3
+# scale 3500711 0.8 0
+# layer 3500711 2
+# alpha 3500711 0 0
+# mask 3500711 off
+;;ピサール
+# body 3302011
+# pos 3302011 3
+# scale 3302011 0.8 0
+# layer 3302011 2
+# alpha 3302011 0 0
+# mask 3302011 off
+;;蜻蛉切・聖鎖・インドラ
+# body 3302411
+# pos 3302411 3
+# scale 3302411 0.8 0
+# layer 3302411 3
+# alpha 3302411 0 0
+# mask 3302411 off
+;;ペルーン・聖鎖・マスティマ
+# body 3200811
+# pos 3200811 3
+# scale 3200811 0.8 0
+# layer 3200811 2
+# alpha 3200811 0 0
+# mask 3200811 off
+;;-----------------------------------------
+# se "SE_0810"
+# move 3501711 2 0
+# face 3501711 "angry"
+# alpha 3501711 1 0
+# mask 3501711 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 3302411 4 0
+# face 3302411 "angry"
+# alpha 3302411 1 0
+# mask 3302411 on
+# voice 350171 "grimoire_ge_battle_0003"
+@グリモワール
+くらいなさいっ！
+
+# se "SE_4400"
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# voice 330241 "tonbokiri_t_battle_0004"
+@蜻蛉切
+おりゃあっ！
+
+# se "SE_4200"
+# waitandnext 0.5
+
+# alpha 3501711 0 0.5
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_battle_0004"
+@アスカロン
+えいっ！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+;;//グリモワール達が戦う
+# sestop "SE_0810"
+# alpha 3102311 0 0.5
+# alpha 3302411 0 0.5
+# move 210 3 0
+# face 210 "sad"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# voice 9936 "kamito_0018"
+@カミト
+どうしよう…
+襲われた理由が分からないから
+止めようもないよっ
+
+# move 210 2 0.5
+# mask 210 on
+# move 3302011 4 0
+# face 3302011 "usual"
+# alpha 3302011 1 0.5
+# mask 3302011 on
+# textboxarrow 0 3
+# voice 330201 "pisear_t_0028"
+@ピサール
+あ～
+あの二人は無理～…
+
+# face 210 "surprise"
+# textboxarrow 0 1
+# voice 9936 "kamito_0023"
+@カミト
+ピサールっ
+何か知ってるの！？
+
+# face 3302011 "normal"
+# textboxarrow 0 3
+@ピサール
+あっちの斧の子がペルーンで、
+槍の方が蜻蛉切ね～
+
+# face 210 "irregular"
+# textboxarrow 0 1
+@カミト
+う、うん…
+
+# textboxarrow 0 3
+@ピサール
+どっちも全然、人の話聞かないから～
+説得なんて無理よ～
+
+# textboxarrow 0 3
+@ピサール
+ペルーンは正義感が強すぎて
+苦手～
+
+# textboxarrow 0 3
+@ピサール
+蜻蛉切は、喧嘩を見つけたら
+勝手に割り込んできて、
+騒ぎを大きくするのよね～
+
+# textboxarrow 0 3
+@ピサール
+関わらない方がいいと思うな～
+
+# textboxarrow 0 1
+# voice 9936 "kamito_0024"
+@カミト
+もうすでに関わってるんだけど！
+
+# alpha 210 0 0.5
+# alpha 3302011 0 0.5
+# move 3200811 3 0
+# face 3200811 "surprise"
+# alpha 3200811 1 0.5
+# mask 3200811 off
+# textboxarrow 0 2
+# voice 320081 "perun_t_0022"
+@ペルーン
+あれ～っ？
+堕落した声が聞こえるよ！
+
+# face 3200811 "normal"
+# textboxarrow 0 2
+# voice 320081 "perun_t_0004"
+@ペルーン
+そこにいるのは、ピサールだね！
+怠けるのは悪だよ！
+ビシビシ指導してあげる！
+
+# alpha 3200811 0 0.5
+# move 3302011 3 0
+# face 3302011 "surprise"
+# alpha 3302011 1 0.5
+# mask 3302011 off
+# textboxarrow 0 2
+# voice 330201 "pisear_t_0002"
+@ピサール
+ちょっと～
+余計なお世話なんだけど～っ
+
+;;//ペルーンがピサールに襲い掛かる
+# textwindow "close"
+# alpha 3302011 0 0.5
+# move 3200811 3 0
+# face 3200811 "angry"
+# alpha 3200811 1 0.5
+# waitandnext 0.6
+
+# se "SE_9021"
+# leftout 3200811 0.5
+# waitandnext 0.5
+
+# alpha 3200811 0 0
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+危ない、ピサール！
+
+;;//カミトがピサールを庇う
+# se "SE_5200"
+# textwindow "close"
+# rightout 210 0.5
+# waitandnext 0.5
+
+# alpha 210 0 0
+# move 3302011 3 0
+# face 3302011 "usual"
+# alpha 3302011 1 0.5
+# mask 3302011 on
+# waitandnext 0.5
+
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0
+# mask 210 on
+# leftin 210 0.5
+# waitandnext 0.4
+
+# move 3302011 4 0.1
+# waitandnext 0.6
+
+# alpha 210 0 0.5
+# alpha 3302011 0 0.5
+# move 3200811 3 0
+# face 3200811 "angry"
+# alpha 3200811 1 0.5
+# mask 3200811 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ペルーン
+悪を庇う者もまた悪だよ！
+
+# alpha 3200811 0 0.5
+# move 3102311 3 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+# voice 310231 "ascalon_a_battle_0003"
+@アスカロン
+やらせません！
+
+;;//カミトをアスカロンが守る
+# textwindow "close"
+# alpha 3102311 0 0.5
+# move 210 4 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+# waitandnext 0.5
+
+# se "SE_9037"
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0
+# mask 3102311 on
+# leftin 3102311 0.5
+# waitandnext 1
+
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# move 3200811 3 0
+# face 3200811 "angry"
+# alpha 3200811 1 0.5
+# mask 3200811 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 320081 "perun_t_0028"
+@ペルーン
+うーん…
+キミもビシビシ指導しないと
+いけないみたいだね！
+
+# se "SE_5257"
+# move 3200811 2 0.5
+# mask 3200811 on
+# move 3500711 4 0
+# face 3500711 "normal"
+# alpha 3500711 1 0.5
+# mask 3500711 on
+# textboxarrow 0 3
+# voice 350071 "buryunaku_a_battle_0002"
+@ブリューナク
+そこまでだ
+
+;;//ブリューナクがペルーンの背中に銃をつきつける
+# se "SE_5208"
+# textboxarrow 0 3
+@ブリューナク
+この距離なら外しはしないぞ
+お前の背中を撃ち抜くことなど
+造作もない
+
+# face 3200811 "normal"
+# textboxarrow 0 1
+# voice 320081 "perun_t_0041"
+@ペルーン
+すごーい！
+あたしの背後を取るなんてっ
+
+# face 3200811 "angry"
+# textboxarrow 0 1
+@ペルーン
+だけど！
+自分の命惜しさにマスターからの
+命令を放棄するのは悪だよ！
+
+# textboxarrow 0 1
+@ペルーン
+あたしは悪に屈しない！
+キミ達みんなビシッと指導する
+からね！
+
+# face 3500711 "happy"
+# textboxarrow 0 3
+# voice 350071 "buryunaku_a_0028"
+@ブリューナク
+ふむ…
+この状況でも己の信念を貫くか…
+ロマンがあるな
+
+# alpha 3200811 0 0.5
+# alpha 3500711 0 0.5
+# move 3302011 3 0
+# face 3302011 "normal"
+# alpha 3302011 1 0.5
+# mask 3302011 off
+# textboxarrow 0 2
+# voice 330201 "pisear_t_0009"
+@ピサール
+感心してないで、
+早くやっつけてよ～っ
+
+# alpha 3302011 0 0.5
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# voice 9936 "kamito_0057"
+@カミト
+待って！
+僕達は戦うつもり――
+
+# alpha 210 0 0.5
+# move 3302411 3 0
+# face 3302411 "angry"
+# alpha 3302411 1 0.5
+# mask 3302411 off
+# textboxarrow 0 2
+# voice 330241 "tonbokiri_t_unit_0009"
+@蜻蛉切
+貫け！！
+
+;;//蜻蛉切がペルーンとブリューナクの間に割り込む
+# textwindow "close"
+# alpha 3302411 0 0.5
+# move 3200811 2 0
+# face 3200811 "angry"
+# alpha 3200811 1 0.5
+# mask 3200811 on
+# move 3500711 4 0
+# face 3500711 "normal"
+# alpha 3500711 1 0.5
+# mask 3500711 on
+# waitandnext 0.5
+
+# se "SE_4200"
+# move 3302411 3 0
+# face 3302411 "angry"
+# alpha 3302411 1 0
+# mask 3302411 on
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.3
+
+# move 3200811 1 0.1
+# move 3500711 5 0.1
+# waitandnext 0.2
+
+# face 3500711 "angry"
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 350071 "buryunaku_a_battle_0005"
+@ブリューナク
+くっ…
+
+# textboxarrow 0 2
+# voice 330241 "tonbokiri_t_0007"
+@蜻蛉切
+まだまだ派手さが足りないわよ！
+そなた達の本気、
+私に見せなさい！
+
+# alpha 3200811 0 0.5
+# alpha 3302411 0 0.5
+# alpha 3500711 0 0.5
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0007"
+@グリモワール
+言ってくれるじゃないの！
+もう耐えるつもりなんて――
+
+# alpha 3501711 0 0.5
+# move 1100111 3 0
+# face 1100111 "angry"
+# alpha 1100111 1 0.5
+# mask 1100111 off
+# textboxarrow 0 2
+# voice 11001 "masamunem_battle_0005"
+@マサムネ
+まずい！
+奴が追いついてきたぞ！
+
+# alpha 1100111 0 0.5
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# voice 9936 "kamito_0024"
+@カミト
+ええっ！？
+
+# alpha 210 0 0.5
+# move 1200111 3 0
+# face 1200111 "angry_1"
+# alpha 1200111 1 0.5
+# mask 1200111 off
+# textboxarrow 0 2
+@？？？
+ガアアアアアアアアアアアアアア！！

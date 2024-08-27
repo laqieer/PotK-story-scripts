@@ -1,0 +1,317 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー16章
+;;第3話　タイトル：世界の黄昏
+;;3_4
+;;スクリプト最後の背景：大穴
+;;-----------------------------------------
+# script "lisp"
+# background "101_hole"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;ムラマサ
+# body 3102511
+# pos 3102511 3
+# scale 3102511 0.8 0
+# layer 3102511 2
+# alpha 3102511 0 0
+# mask 3102511 off
+;;ダグダ
+# body 3200611
+# pos 3200611 3
+# scale 3200611 0.8 0
+# layer 3200611 2
+# alpha 3200611 0 0
+# mask 3200611 off
+;;タスラム
+# body 3502011
+# pos 3502011 3
+# scale 3502011 0.8 0
+# layer 3502011 2
+# alpha 3502011 0 0
+# mask 3502011 off
+;;-----------------------------------------
+;;//背景：大穴
+# move 3102511 3 0
+# face 3102511 "normal"
+# alpha 3102511 1 0
+# mask 3102511 off
+# textflame 1 1
+# textboxarrow 0 2
+@ムラマサ
+すっかり静かになりました
+少し前まで、最前線であったのに…
+
+# textboxarrow 0 2
+@ムラマサ
+姉様は今もティルヘルムに
+いるのでしょうか
+
+# face 3102511 "sad"
+# textboxarrow 0 2
+@ムラマサ
+…………
+
+# textboxarrow 0 2
+@ムラマサ
+おかしい…
+やはり、私はどうかしています…
+こんなに…こんなにっ…
+
+# face 3102511 "angry"
+# textboxarrow 0 2
+@ムラマサ
+こんなに姉様のことを考えてしまう
+だなんて…！
+
+# voice 310251 "muramasa_ge_0015"
+# face 3102511 "sad"
+# textboxarrow 0 2
+@ムラマサ
+姉様がどのように生きようと、
+私には関係のないこと
+そのように一時は割り切れたのに…
+
+# textboxarrow 0 2
+@ムラマサ
+胸の奥が、疼くのですっ
+この刀を手にするたび…
+姉様のことを思い出してしまうっ
+
+# textboxarrow 0 2
+@ムラマサ
+私は…壊れてしまったのですか…？
+
+;;//ダグダがやってくる
+# textwindow "close"
+# se "SE_0719"
+# alpha 3102511 0 0.5
+# move 3200611 3 0
+# face 3200611 "normal"
+# alpha 3200611 1 0.5
+# mask 3200611 off
+# waitandnext 0.5
+
+# face 3200611 "surprise"
+# textboxarrow 0 2
+# textwindow "normal"
+@ダグダ
+あれぇ？
+そこにいるのってムラマサ？
+何でこんなとこにいるのぉ？
+
+# voice 310251 "muramasa_ge_0022"
+# move 3102511 2 0
+# face 3102511 "surprise"
+# alpha 3102511 1 0.5
+# mask 3102511 on
+# textboxarrow 0 1
+# move 3200611 4 0.5
+# mask 3200611 on
+@ムラマサ
+ダグダっ…
+そなたこそ何故、このような場所に
+いるのです？
+
+# face 3102511 "angry"
+# textboxarrow 0 1
+@ムラマサ
+勝手な外出は禁じられていますよ！
+
+# voice 320061 "daguda_ge_0013"
+# face 3200611 "sad"
+# textboxarrow 0 3
+@ダグダ
+アルテミスみたいなこと言わないでよ
+ダグダは、他人と一緒にいない方が
+良いから
+
+# face 3102511 "normal"
+# textboxarrow 0 1
+@ムラマサ
+それで人気の無くなった
+こちらに？
+
+# voice 320061 "daguda_ge_0032"
+# face 3200611 "normal"
+# textboxarrow 0 3
+@ダグダ
+うんっ
+でも、それもどうでもいい気がして
+きたんだぁ
+
+# textboxarrow 0 3
+@ダグダ
+別にダグダが他人に気を遣うこと
+なんてないよねぇ
+この力はダグダのせいじゃないしぃ
+
+# textboxarrow 0 3
+@ダグダ
+だから、そろそろ帰ろうかなぁって
+思ってたところぉ
+
+# textboxarrow 0 1
+@ムラマサ
+そうですか
+では、拙者も帰還しましょう
+
+# face 3200611 "usual"
+# textboxarrow 0 3
+@ダグダ
+あ、こっちからの方が近道だよぉ
+
+# textwindow "close"
+# se "SE_0719"
+# alpha 3200611 0 0.5
+# waitandnext 1
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 3102511 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;ムラマサ（独白）
+# move 3102511 3 0
+# face 3102511 "sad"
+# alpha 3102511 1 0.5
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 3102511 off
+@ムラマサ
+あまりに強大な力を制御できず、
+トレイセーマの人々を傷つけて
+しまったダグダ…
+
+;;ムラマサ（独白）
+@ムラマサ
+そのことをずっと気に病んでいた
+彼女ですら、他者に関心を失って
+いるというのに、私は…
+
+;;//ムラマサがタスラムにぶつかる
+# textwindow "close"
+# alpha 3102511 0 0.5
+# move 3502011 3 0
+# face 3502011 "normal"
+# alpha 3502011 1 0.5
+# mask 3502011 on
+# waitandnext 0.5
+
+# move 3102511 2 0
+# face 3102511 "sad"
+# alpha 3102511 1 0
+# mask 3102511 on
+# leftin 3102511 1
+# waitandnext 1
+
+# se "SE_0648"
+# move 3502011 4 0.1
+# face 3502011 "surprise"
+# waitandnext 0.2
+
+# voice 350201 "tasuramu_ge_0023"
+# textboxarrow 0 3
+# textwindow "normal"
+@タスラム
+うおっ！
+いきなり何すんだよっ
+
+# voice 310251 "muramasa_ge_0031"
+# face 3102511 "normal"
+# textboxarrow 0 1
+@ムラマサ
+ごめんなさい…
+そなたは、タスラム
+このようなところで何を？
+
+# voice 350201 "tasuramu_ge_0042"
+# face 3502011 "angry"
+# textboxarrow 0 3
+@タスラム
+うるさいなぁ…
+あたしはここでサボるのに
+忙しいんだ
+
+# voice 350201 "tasuramu_ge_0009"
+# textboxarrow 0 3
+@タスラム
+さっさと、どっかいけ！
+
+# face 3102511 "surprise"
+# textboxarrow 0 1
+@ムラマサ
+もしや…
+そなたの近くにいると不幸になって
+しまうという迷信を気にして…
+
+# face 3502011 "normal"
+# textboxarrow 0 3
+@タスラム
+あー…
+そんなこと考えてたときもあった
+かもなー…
+
+# face 3502011 "angry"
+# textboxarrow 0 3
+@タスラム
+でも、今は本気でサボるために
+ここにいるんだ！
+そこんとこ、勘違いすんなよっ
+
+# face 3102511 "normal"
+# textboxarrow 0 1
+@ムラマサ
+う、うむっ…
+
+;;ムラマサ（独白）
+# move 3102511 2 0
+# face 3102511 "sad"
+# textboxarrow 0 0
+# textwindow "moya"
+@ムラマサ
+他者を不幸にするかもと怯えていた
+タスラムすら他者を気にしていない…
+それなのに、私は…
+
+;;妖精（立ち絵無し）
+# alpha 3102511 0 0.5
+# alpha 3502011 0 0.5
+# textboxarrow 0 0
+# textwindow "normal"
+@妖精
+…………
+
+# move 3102511 3 0
+# face 3102511 "angry"
+# alpha 3102511 1 0.5
+# mask 3102511 off
+# textboxarrow 0 2
+@ムラマサ
+むっ！？
+曲者！
+
+# serif 1
+# se "SE_5338"
+@妖精
+ひゃああああっ…！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 3102511 "normal"
+# textboxarrow 0 2
+@ムラマサ
+逃がしたか…
+あの後ろ姿は妖精？
+
+# textboxarrow 0 2
+@ムラマサ
+間者など放って
+ティルヘルムの王は
+何をしているのでしょう？

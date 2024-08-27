@@ -1,0 +1,473 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;２章３話　「エデンクライシス―覚醒―」
+;;第6話　タイトル：もう一度出会うために
+;;6_1_1
+;;スクリプト最後の背景：ユグドラシル
+;;-----------------------------------------
+# script "lisp"
+# background "parchment_map02"
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;異族化アルマス（ナレーションのボイス用）
+# body 5103831
+# alpha 5103831 0 0
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;グラーシーザ
+# body 302611
+# pos 302611 3
+# scale 302611 0.8 0
+# layer 302611 2
+# alpha 302611 0 0
+# mask 302611 off
+;;フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.8 0
+# layer 502711 2
+# alpha 502711 0 0
+# mask 502711 off
+;;ミネルヴァ
+# body 302511
+# pos 302511 3
+# scale 302511 0.8 0
+# layer 302511 2
+# alpha 302511 0 0
+# mask 302511 off
+;;スイハ
+# body 401711
+# pos 401711 3
+# scale 401711 0.8 0
+# layer 401711 2
+# alpha 401711 0 0
+# mask 401711 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 1
+# alpha 103611 0 0
+# mask 103611 off
+;;ブリューナク
+# body 500721
+# pos 500721 3
+# scale 500721 0.8 0
+# layer 500721 1
+# alpha 500721 0 0
+# mask 500721 off
+;;レーヴァテイン・擬彩
+# body 198
+# pos 198 3
+# scale 198 0.8 0
+# layer 198 2
+# alpha 198 0 0
+# mask 198 off
+;;-----------------------------------------
+;;残り時間一枚絵
+# imageset 0 "integral_02_03"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第6話　タイトル：もう一度出会うために
+;;//背景：新天上世界遠景
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_3_0001"
+# textflame 0 0
+@
+ユグドラシル直近の町にまで
+辿り着いたアルマス達
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_3_0002"
+@
+しかし、ラグナロク教会の勢力下に
+あった町は、モニカ・ワーズワース
+という中奏官に支配されていた
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_3_0003"
+@
+彼女はロンギヌスの代わりに選定を
+行い、アルマス達も牢獄に入れる
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_3_0004"
+@
+ミネルヴァの助けによって脱獄した
+アルマス達は町の奏官達とともに
+モニカ打倒に動く
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_3_0005"
+@
+相手の隙を突き、ロンギヌスと
+対峙するラグナロク
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_3_0006"
+@
+だが、そこで明かされた真実は
+意外なものだった
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_3_0007"
+@
+モニカは失墜し、ロンギヌスは
+町を去る
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_3_0008"
+@
+そして蜂起した人々は
+半ば暴徒と化してしまった
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_3_0009"
+@
+戸惑うアルマス達の下に
+ダーインスレイヴの伝言が
+もたらされる
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_3_0010"
+@
+ユグドラシルに急ぐよう求める
+内容に切迫したものを感じ取った
+アルマス達は
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_3_0011"
+@
+一路、ユグドラシルを目指す
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_3_0012"
+@
+天上世界崩壊まで、
+残り――
+
+# bgm "stop"
+# se "SE_0828"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# fadein "white" 0.5
+# textwindow "close"
+
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# imagealpha 0 0 0
+# move 302511 1 0
+# alpha 302511 1 0
+# mask 302511 on
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0
+# mask 103611 on
+# move 196 5 0
+# face 196 "angry"
+# alpha 196 1 0
+# mask 196 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//背景：ユグドラシル
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+ふもとは近いわ！
+あと一息よっ
+
+# textboxarrow 0 2
+# voice 1036 "ragnarok_0011"
+@ラグナロク
+油断しないで
+恐らく誰かがユグドラシルを
+守っているはずよ
+
+# face 302511 "angry"
+# textboxarrow 0 1
+# voice 3025 "minerva_0003"
+@ミネルヴァ
+私も同意見です
+ここからニケに斥候を――
+
+# alpha 103611 0 0.5
+# move 500721 3 0
+# face 500721 "normal"
+# alpha 500721 1 0.5
+# mask 500721 on
+# textboxarrow 0 2
+# voice 5007 "buryunaku_0002"
+@ブリューナク
+ユグドラシルを守っているのは
+レーヴァテイン一人だ
+
+# face 302511 "surprise"
+# textboxarrow 0 1
+# voice 3025 "minerva_0023"
+@ミネルヴァ
+わっ？
+何ですか、いきなり…
+
+# face 196 "happy"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0044"
+@アルマス
+斥候に行ってくれたのよ
+ありがとう、ブリューナク
+
+# textboxarrow 0 2
+# voice 5007 "buryunaku_0003"
+@ブリューナク
+他に敵影は発見できなかったが
+近づけば異族が出てくることは
+間違いないだろう
+
+# textboxarrow 0 2
+@ブリューナク
+ブリューナクは作戦会議の必要性を
+主張する
+
+# face 196 "normal"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0004"
+@アルマス
+そうね
+闇雲に突っ込んでも――
+
+;;//グラーシーザが通り抜ける
+# sedelay "SE_9092" 1
+# textwindow "close"
+# alpha 302511 0 0.5
+# alpha 500721 0 0.5
+# alpha 196 0 0.5
+# move 302611 5 0
+# face 302611 "normal"
+# alpha 302611 1 0.5
+# mask 302611 on
+# waitandnext 1
+
+# leftout 302611 0.5
+# waitandnext 0.5
+
+# alpha 302611 0 0
+# waitandnext 0.2
+
+# move 302611 3 0
+# face 302611 "normal"
+# alpha 302611 1 0.5
+# mask 302611 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 3026 "grayside_battle_0004"
+@グラーシーザ
+いっくぞぉ！！
+
+# alpha 302611 0 0.5
+# move 103611 3 0
+# face 103611 "surprise"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# voice 1036 "ragnarok_0022"
+@ラグナロク
+えっ…？
+今のって…
+
+# alpha 103611 0 0.5
+# move 302611 2 0
+# face 302611 "normal"
+# alpha 302611 1 0.5
+# mask 302611 on
+# textboxarrow 0 1
+# move 198 4 0
+# alpha 198 1 0.5
+# mask 198 on
+# voice 3026 "grayside_battle_0001"
+@グラーシーザ
+レーヴァテイン！
+きょうこそせいぎをしめしてやる！
+
+# textboxarrow 0 3
+# voice 510023 "revatein_iz_0028"
+@レーヴァテイン
+また来たの…
+いい加減、やめてくれない…
+
+# textwindow "close"
+# fadein "white" 0.5
+# move 302611 3 0.2
+# move 198 5 0.2
+# waitandnext 1
+
+# se "SE_3006"
+# move 302611 2 0.2
+# move 198 4 0.2
+# fadein "red" 0.8
+# face 302611 "angry"
+# mask 302611 on
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 3026 "grayside_0038"
+@グラーシーザ
+うぐぅっ…！
+あたしのせいぎがとどかぬとは
+
+# textboxarrow 0 3
+# voice 510023 "revatein_iz_0019"
+@レーヴァテイン
+はぁ…
+いくらやっても無駄だよ…
+
+# textboxarrow 0 3
+@レーヴァテイン
+ここはティルフィングに
+頼まれてるからね…
+絶対に奪わせたりしない
+
+# textboxarrow 0 1
+@グラーシーザ
+ぬう…
+おまえにもしんねんがあるのだな
+それはちょうじょう！
+
+# textboxarrow 0 1
+@グラーシーザ
+だが！
+あたしもせいぎをつらぬくと
+きめているのだっ
+
+# textboxarrow 0 1
+@グラーシーザ
+ちっていったラグナロクたちの
+ためにも、あたしがせいぎの
+なのもとにせいばいする！
+
+# textboxarrow 0 3
+# voice 510023 "revatein_iz_0007"
+@レーヴァテイン
+やれっていうなら、やるけど…
+
+;;//レーヴァテインがグラーシーザに迫る
+# se "SE_9021"
+# textwindow "close"
+# move 198 3 0.2
+# waitandnext 0.2
+
+# textboxarrow 0 2
+# textwindow "normal"
+@レーヴァテイン
+うっとうしい…
+
+# alpha 198 0 0.5
+# alpha 302611 0 0.5
+# move 401711 3 0
+# face 401711 "angry"
+# alpha 401711 1 0.5
+# mask 401711 off
+# textboxarrow 0 2
+# voice 4017 "suiha_battle_0004"
+@スイハ
+射抜きます！
+
+# se "SE_4301"
+# waitandnext 0.5
+
+;;//スイハの矢をレーヴァテインが避ける
+# textwindow "close"
+# alpha 401711 0 0.5
+# move 302611 2 0
+# face 302611 "angry"
+# alpha 302611 1 0.5
+# mask 302611 on
+# move 198 3 0
+# alpha 198 1 0.5
+# mask 198 off
+# waitandnext 0.8
+
+# se "SE_5204"
+# move 198 4 0.1
+# waitandnext 0.2
+
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 510023 "revatein_iz_battle_0004"
+@レーヴァテイン
+仲間…？
+面倒くさいなあ…
+
+# alpha 302611 0 0.5
+# alpha 198 0 0.5
+# move 502711 3 0
+# face 502711 "normal"
+# alpha 502711 1 0.5
+# mask 502711 off
+# textboxarrow 0 2
+# voice 5027 "freischotz_0002"
+@フライシュッツ
+グラーシーザちゃん、
+こっち、こっち～！
+
+# alpha 502711 0 0.5
+# move 302611 3 0
+# face 302611 "surprise"
+# alpha 302611 1 0.5
+# mask 302611 off
+# textboxarrow 0 2
+# voice 3026 "grayside_0022"
+@グラーシーザ
+えぇっ？
+フライシュッツ、いきていたのか
+
+# alpha 302611 0 0.5
+# move 103611 3 0
+# face 103611 "angry"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+ここは退いて！
+異族が出てくる前にっ
+
+# alpha 103611 0 0.5
+# move 302611 3 0
+# face 302611 "surprise"
+# alpha 302611 1 0.5
+# mask 302611 off
+# textboxarrow 0 2
+@グラーシーザ
+ラグナロクまでっ
+うむ、ではひくとしよう
+
+;;//グラーシーザが退く
+# se "SE_9021"
+# textwindow "close"
+# alpha 302611 0 0.5
+# waitandnext 0.5
+
+# move 198 3 0
+# alpha 198 1 0.5
+# mask 198 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 510023 "revatein_iz_0039"
+@レーヴァテイン
+ふぅん…
+ここまで来たんだ…

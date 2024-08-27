@@ -1,0 +1,365 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;２章１話　「エデンクライシス―覚醒―」
+;;第4話　タイトル：風雲！マサムネ城
+;;4_8_3
+;;スクリプト最後の背景：闘技場
+;;-----------------------------------------
+# script "lisp"
+# background "masamune_arena"
+# bgmfile "bgm415" "BgmIntegralNoahBattle002" 0
+;;-----------------------------------------
+;;フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.8 0
+# layer 502711 2
+# alpha 502711 0 0
+# mask 502711 off
+;;ネス
+# body 602011
+# pos 602011 3
+# scale 602011 0.8 0
+# layer 602011 2
+# alpha 602011 0 0
+# mask 602011 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;ダーインスレイヴ
+# body 102811
+# pos 102811 3
+# scale 102811 0.8 0
+# layer 102811 2
+# alpha 102811 0 0
+# mask 102811 off
+;;マサムネ
+# body 197
+# pos 197 3
+# scale 197 0.8 0
+# layer 197 2
+# alpha 197 0 0
+# mask 197 off
+;;方天画戟
+# body 300331
+# pos 300331 3
+# scale 300331 0.8 0
+# layer 300331 2
+# alpha 300331 0 0
+# mask 300331 off
+;;青龍偃月刀
+# body 300911
+# pos 300911 3
+# scale 300911 0.8 0
+# layer 300911 2
+# alpha 300911 0 0
+# mask 300911 off
+;;司会
+# body 11
+# pos 11 3
+# scale 11 0.8 0
+# layer 11 2
+# alpha 11 0 0
+# mask 11 off
+;;-----------------------------------------
+;;//二人が切り結ぶ
+# se "SE_9017"
+# textwindow "close"
+# move 300911 2 0
+# face 300911 "angry"
+# alpha 300911 1 0
+# mask 300911 on
+# move 300331 4 0
+# face 300331 "mad"
+# alpha 300331 1 0
+# mask 300331 on
+# leftin 300911 0.3
+# rightin 300331 0.3
+# waitandnext 0.3
+
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 300911 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+# face 300331 "normal"
+# textwindow "normal"
+# voice 3009 "seiryu_unit_0008"
+@青龍偃月刀
+我…一騎当千なり！
+
+# se "SE_4200"
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# voice 3003 "hotengageki_0004"
+@方天画戟
+ハッ！やってくれるね！
+そうこないと…
+燃えてきたよ！
+
+# face 300331 "mad"
+# textboxarrow 0 3
+# voice 3003 "hotengageki_unit_0009"
+@方天画戟
+塵芥が
+オレの矛の前に霧消しろ！
+
+# se "SE_4200"
+# waitandnext 0.5
+
+# se "SE_0810"
+# alpha 300911 0 0.5
+# alpha 300331 0 0.5
+# move 11 3 0
+# face 11 "angry"
+# alpha 11 1 0.5
+# mask 11 off
+# textboxarrow 0 2
+@司会
+こ…これは凄まじい斬り合いに
+なりました！
+どちらも一歩も引かないぞっ
+
+# alpha 11 0 0.5
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# voice 1036 "ragnarok_0041"
+@ラグナロク
+二人の気迫が炎のように全身を
+包んでいるわ
+ここまで熱気が届きそう
+
+# alpha 103611 0 0.5
+# move 102811 3 0
+# face 102811 "happy"
+# alpha 102811 1 0.5
+# mask 102811 off
+# textboxarrow 0 2
+# voice 1028 "dainsleif_0006"
+@ダーインスレイヴ
+ラグナロクは詩人だね
+あの二人、ライバルと言っても
+良い関係だからかな
+
+# textboxarrow 0 2
+@ダーインスレイヴ
+一合ごとに空気が震えるよ
+さて、どちらに軍配が上がるか…
+
+# alpha 102811 0 0.5
+# move 300911 2 0
+# face 300911 "normal"
+# alpha 300911 1 0.5
+# mask 300911 on
+# move 300331 4 0
+# face 300331 "normal"
+# alpha 300331 1 0.5
+# mask 300331 on
+# textboxarrow 0 3
+# voice 3003 "hotengageki_0007"
+@方天画戟
+ふん…
+主君のいないお前じゃ、
+その辺が限界だろうな
+
+# face 300911 "angry"
+# textboxarrow 0 1
+# voice 3009 "seiryu_0022"
+@青龍偃月刀
+…それはどういう意味ですか？
+
+# face 300331 "mad"
+# textboxarrow 0 3
+@方天画戟
+言葉通りの意味だよ！
+この勝負、オレがもらった！！
+いくぜぇぇぇっ！
+
+# sestop "SE_0810"
+# waitandnext 0.2
+
+# se "SE_4202"
+# sedelay "SE_5769" 0.5
+# waitandnext 0.5
+
+# face 300911 "surprise"
+# textboxarrow 0 1
+# voice 3009 "seiryu_0023"
+@青龍偃月刀
+そのような大振りの攻撃など…
+なっ…！？
+
+# alpha 300911 0 0.5
+# alpha 300331 0 0.5
+# move 11 3 0
+# face 11 "angry"
+# alpha 11 1 0.5
+# mask 11 off
+# textboxarrow 0 2
+@司会
+ああーっ！？
+方天画戟、観客まで巻き込む
+大技を繰り出すつもりだー！！
+
+# textboxarrow 0 2
+@司会
+これを青龍偃月刀が避けてしまえば
+観客に被害が及ぶぞーっ
+
+# alpha 11 0 0.5
+# move 103611 2 0
+# face 103611 "angry"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 102811 4 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 on
+# voice 1036 "ragnarok_0023"
+@ラグナロク
+何てこと…！
+急いで止めないとっ
+
+# textboxarrow 0 3
+# voice 1028 "dainsleif_0035"
+@ダーインスレイヴ
+ここからでは間に合わないよ
+…それが狙いか
+
+# alpha 103611 0 0.5
+# alpha 102811 0 0.5
+# move 300911 2 0
+# face 300911 "angry"
+# alpha 300911 1 0.5
+# mask 300911 on
+# textboxarrow 0 1
+# move 300331 4 0
+# face 300331 "normal"
+# alpha 300331 1 0.5
+# mask 300331 on
+# voice 3009 "seiryu_0038"
+@青龍偃月刀
+致し方なし！
+
+# textboxarrow 0 3
+@方天画戟
+ふん…
+お前ならそうするよなあ！
+
+# se "SE_9084"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+# voice 3009 "seiryu_0037"
+@青龍偃月刀
+ぐはぁっ…！
+
+;;//青龍偃月刀が倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 300911 0 0.5
+# waitandnext 0.5
+
+# move 300331 3 0.5
+# mask 300331 off
+# waitandnext 0.5
+
+# face 300331 "normal"
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 3003 "hotengageki_0004"
+@方天画戟
+だから、まだるっこしいって
+言っただろ？
+オレの勝ちだ！
+
+# serif 1
+@司会
+決着！
+決着です！
+勝ったのは方天画戟！！
+
+# serif 1
+@司会
+方天画戟・イズ・準決勝進出です！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 300331 0 0.5
+# move 602011 3 0
+# face 602011 "angry"
+# alpha 602011 1 0.5
+# mask 602011 off
+# textboxarrow 0 2
+# voice 6020 "ness_0014"
+@ネス
+あれは規律違反です！
+反則です！
+
+# alpha 602011 0 0.5
+# move 502711 3 0
+# face 502711 "sad"
+# alpha 502711 1 0.5
+# mask 502711 off
+# textboxarrow 0 2
+@フライシュッツ
+青龍偃月刀ちゃん、
+お客さんを庇って攻撃を受けちゃった
+んだね～…
+
+# alpha 502711 0 0.5
+# move 300331 3 0
+# face 300331 "normal"
+# alpha 300331 1 0.5
+# mask 300331 off
+# textboxarrow 0 2
+# voice 3003 "hotengageki_0005"
+@方天画戟
+はっはっは！
+人徳や教養じゃ最強には
+届かないってことだよ！
+
+# textboxarrow 0 2
+# voice 3003 "hotengageki_0033"
+@方天画戟
+安心しな！
+マサムネはオレが倒して
+天下を獲ってやる！
+
+# se "SE_8020"
+# move 197 2 0
+# face 197 "normal"
+# alpha 197 1 0.5
+# mask 197 on
+# textboxarrow 0 1
+# move 300331 4 0.5
+# alpha 300331 1 0.5
+# mask 300331 on
+# voice 510013 "masamune_iz_0007"
+@マサムネ
+大した自信だな
+
+# face 300331 "amazed"
+# textboxarrow 0 3
+# voice 3003 "hotengageki_0024"
+@方天画戟
+うおわっ！
+
+# serif 1
+@司会
+ああっと！
+ここでマサムネの乱入かーっ？

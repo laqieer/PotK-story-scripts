@@ -1,0 +1,309 @@
+;;-----------------------------------------
+;;SEA_18_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;ブラフマーストラ聖鎖
+# body 3500411
+# pos 3500411 4
+# scale 3500411 0.8 0
+# layer 3500411 2
+# mask 3500411 off
+# alpha 3500411 0 0
+# body 500421
+# pos 500421 3
+# scale 500421 0.8 0
+# layer 500421 3
+# mask 500421 off
+# alpha 500421 0 0
+;;ヴァジュラ
+# body 500531
+# pos 500531 2
+# scale 500531 0.8 0
+# layer 500531 4
+# alpha 500531 0 0
+;;トリシューラ
+# body 300611
+# pos 300611 2
+# scale 300611 0.8 0
+# layer 300611 4
+# alpha 300611 0 0
+;;パラシュ
+# body 200411
+# pos 200411 2
+# scale 200411 0.8 0
+# layer 200411 4
+# alpha 200411 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 4
+;;-----------------------------------------
+;;背景：中心部：in_city
+# textwindow "close"
+# waitandnext 0.2
+
+# background "in_city"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 500531 "angry"
+# alpha 500531 1 0.3
+# face 3500411 "angry"
+# alpha 3500411 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ヴァジュラ
+そらっ！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ブラフマーストラ
+おっと…
+
+# voice 5005 "vajura_0010"
+# textflame 1 1
+# textboxarrow 0 1
+@ヴァジュラ
+ブラフマーストラ！
+目を覚ましな！
+キミらしくないよ
+
+# alpha 500531 0 0.3
+# alpha 200411 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@パラシュ
+導きたがりの君が路頭に迷って
+どうするんだい？
+
+# voice 350041 "burafumasutora_t_0027"
+# textflame 1 1
+# textboxarrow 0 3
+@ブラフマーストラ
+アンタ達、さっきから
+変なことばかり言って…
+アタシらしいって何～？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ブラフマーストラ
+そういうのいいから
+全部、委ねちゃいなって～
+
+# move 200411 1 0.5
+# alpha 200411 0 0.3
+# voice 3006 "torisyula_0029"
+# leftin 300611 0.5
+# face 300611 "angry"
+# alpha 300611 1 0
+# textflame 1 1
+# textboxarrow 0 1
+@トリシューラ
+おおおおらあああああああ！！
+
+;;トリシューラが容赦なく切り込む
+# se "SE_4200"
+# fadein "white" 0.5
+# move 3500411 5 0.2
+# waitandnext 1
+
+# voice 350041 "burafumasutora_t_battle_0008"
+# face 3500411 "surprise"
+# move 3500411 4 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@ブラフマーストラ
+危なっ…！？
+アンタだけ殺気マシマシだね～
+暴れちゃう系？
+
+# face 300611 "amazed"
+# textflame 1 1
+# textboxarrow 0 1
+@トリシューラ
+正直、あたいはあんたを元に戻すとか
+ぬるいことはどうでもいいんだよ！
+それより…
+
+# face 300611 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@トリシューラ
+良い機会だ！
+どっちが上か、はっきりさせようや！
+
+# alpha 300611 0 0.3
+# alpha 3500411 0 0.3
+# move 500531 4 0
+# layer 500531 2
+# mask 500531 off
+# face 500531 "sad"
+# voice 5005 "vajura_0027"
+# alpha 500531 1 0.3
+# move 200411 2 0
+# alpha 200411 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァジュラ
+あちゃー…
+トリシューラの変なスイッチ
+入っちゃったなぁ
+
+# textflame 1 1
+# textboxarrow 0 1
+@パラシュ
+でも、それでいい
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァジュラ
+…かもね
+
+# alpha 500531 0 0.3
+# alpha 200411 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# alpha 300611 1 0.3
+# face 3500411 "angry"
+# alpha 3500411 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@トリシューラ
+おらあああああああああ！！
+
+;;トリシューラが猛攻をしかける
+# se "SE_4203"
+# sedelay "SE_4202" 0.3
+# sedelay "SE_4200" 0.8
+# fadein "white" 1.5
+# move 300611 3 0.2
+# move 3500411 5 0.3
+# textboxarrow 0 0
+# waitandnext 2
+
+# voice 350041 "burafumasutora_t_0007"
+# move 300611 2 1.2
+# move 3500411 4 1
+# textflame 1 1
+# textboxarrow 0 3
+@ブラフマーストラ
+アンタは本当、乱暴者で好戦的で…
+でも、どこまでも真っ直ぐで
+純粋な奴だよ…
+
+# face 3500411 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@ブラフマーストラ
+そんなアンタのこと、アタシは
+けっこう…けっこう？
+あれ～？何か変だね…
+
+# voice 3006 "torisyula_0014"
+# move 300611 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@トリシューラ
+ごちゃごちゃ言ってんじゃないよ！
+あたいと喧嘩しろ、
+ブラフマーストラぁぁぁっ！
+
+# voice 350041 "burafumasutora_t_0029"
+# face 3500411 "angry"
+# move 3500411 5 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@ブラフマーストラ
+アンタ…アンタ、本当に…
+懲りない系～！？
+トリシューラぁぁぁっ！
+
+;;二人が激突する
+# se "SE_6792"
+# sedelay "SE_4913" 1
+# move 300611 2 0.2
+# move 3500411 4 0.2
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# effectbody 1001 2 0 0 0
+# effectstart 1001
+# textwindow "close"
+# waitandnext 2
+
+;;一瞬、画面が光に包まれる
+# se "SE_6259"
+# fadeout "white" 1
+# waitandnext 1
+
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+;;ブラフマーストラの姿が天使から天上編に変わる
+# move 500421 4 0
+# layer 500421 2
+# alpha 500421 1 0.3
+# face 500421 "sad"
+# alpha 3500411 0 0.3
+# waitandnext 2
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# voice 5004 "burafumasutora_0022"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@ブラフマーストラ
+…あれ？
+アタシ、今まで…何してたっけ？
+ヤダ、記憶喪失系～？
+
+# alpha 300611 0 0.3
+# alpha 500421 0 0.3
+# move 500531 3 0
+# mask 500531 off
+# face 500531 "usual"
+# alpha 500531 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ヴァジュラ
+ブラフマーストラ！
+天使の呪縛から解放されたんだね
+お手柄だよ、トリシューラ
+
+# voice 3006 "torisyula_0013"
+# alpha 500531 0 0.3
+# move 300611 2 0
+# layer 300611 2
+# mask 300611 off
+# face 300611 "amazed"
+# alpha 300611 1 0.3
+# move 200411 4 0
+# layer 200411 4
+# mask 200411 on
+# alpha 200411 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@トリシューラ
+うるさいね！
+そんなことより続きをやらせろ！
+
+# voice 2004 "parashu_0027"
+# face 200411 "shy"
+# textflame 1 1
+# textboxarrow 0 3
+@パラシュ
+それは余所でやってほしいな…
+
+# fadeout "black" 2
+# waitandnext 2

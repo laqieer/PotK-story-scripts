@@ -1,0 +1,234 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;コマンドキラーズサイドストーリー後編
+;;第5話　タイトル：奏でる者
+;;5_3_1
+;;スクリプト最後の背景：町（夜）
+;;-----------------------------------------
+# script "lisp"
+# background "town_night"
+# bgm "stop"
+;;-----------------------------------------
+;;ロジェスティラ
+# body 235
+# pos 235 3
+# scale 235 0.8 0
+# layer 235 2
+# alpha 235 0 0
+# mask 235 off
+;;ロジェスティラ・神令・スクルド（ボイス用）
+# body 5503711
+# alpha 5503711 0 0
+;;イチイバル
+# body 233
+# pos 233 3
+# scale 233 0.8 0
+# layer 233 3
+# alpha 233 0 0
+# mask 233 off
+;;イチイバル・神令・オーディン（ボイス用）
+# body 5402211
+# alpha 5402211 0 0
+;;シストルム
+# body 601311
+# pos 601311 3
+# scale 601311 0.8 0
+# layer 601311 2
+# alpha 601311 0 0
+# mask 601311 off
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 2
+# alpha 810004 0 0
+# mask 810004 off
+;;異族1
+# entry 98100041 810004
+# pos 98100041 3
+# scale 98100041 0.8 0
+# layer 98100041 2
+# alpha 98100041 0 0
+# mask 98100041 off
+;;異族2
+# entry 98100042 810004
+# pos 98100042 3
+# scale 98100042 0.8 0
+# layer 98100042 2
+# alpha 98100042 0 0
+# mask 98100042 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第5話　タイトル：奏でる者
+;;//背景：町（夜）
+;;//町に奇妙な笛の音が流れる
+# textwindow "close"
+# se "SE_0906"
+# waitandnext 0.5
+
+# serif 1
+@町の人々
+…………
+
+# bgm "bgm005" 0
+# serif 1
+@町の人々
+ああ…
+行かなきゃ…
+行かなきゃ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 6013 "sistrum_0023"
+# move 601311 1 0
+# face 601311 "surprise"
+# alpha 601311 1 0.5
+# mask 601311 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 233 3 0
+# face 233 "usual"
+# alpha 233 1 0.5
+# mask 233 on
+# move 235 5 0
+# face 235 "normal"
+# alpha 235 1 0.5
+# mask 235 on
+# textwindow "normal"
+@シストルム
+にゃにゃ！？
+町の人達が、家から出てきて
+どこかに歩いていくのにゃ
+
+# textboxarrow 0 2
+@イチイバル
+夜警の甲斐があったね
+耳障りな笛の音が原因だろう
+後を追うよ
+
+# textboxarrow 0 3
+@ロジェスティラ
+この笛の音…
+強い魔力を感じます
+気をつけて下さい、皆さん
+
+# voice 6013 "sistrum_0033"
+# face 601311 "normal"
+# textboxarrow 0 1
+@シストルム
+わかったにゃ！
+忍び足は得意なのにゃ～
+
+# face 601311 "angry"
+# textboxarrow 0 1
+@シストルム
+でも、こんなことなら
+マスターにも知らせておくべき
+だったにゃ～…
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 601311 0 0
+# alpha 233 0 0
+# alpha 235 0 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# serif 1
+@町の人々
+ああ…急がなきゃ…
+
+# voice 540221 "ichiibal_c_0028"
+# serif 1
+# textwindow "close"
+# serif 0
+# move 601311 2 0
+# face 601311 "angry"
+# alpha 601311 1 0.5
+# mask 601311 on
+# move 233 4 0
+# alpha 233 1 0.5
+# mask 233 on
+# textboxarrow 0 3
+# textwindow "normal"
+@イチイバル
+ふむ…
+このままだと町から出るね
+どこに行くのだろう？
+
+# voice 6013 "sistrum_0023"
+# face 601311 "surprise"
+# textboxarrow 0 1
+@シストルム
+にゃ！？
+まずいにゃっ
+門の近くに…
+
+# se "SE_0617"
+# alpha 601311 0 0.5
+# alpha 233 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# textboxarrow 0 2
+@異族
+ガアアアアアアアアア！
+
+# voice 550371 "logistille_c_0037"
+# alpha 810004 0 0.5
+# move 601311 1 0
+# face 601311 "angry"
+# alpha 601311 1 0.5
+# mask 601311 on
+# move 233 3 0
+# face 233 "irregular"
+# alpha 233 1 0.5
+# mask 233 on
+# move 235 5 0
+# face 235 "sad"
+# alpha 235 1 0.5
+# mask 235 on
+# textboxarrow 0 3
+@ロジェスティラ
+あうあうっ…
+皆さんが食べられてしまいます…！
+
+# textboxarrow 0 2
+@イチイバル
+いや、通り過ぎるのを見張っている
+だけのようだよ
+とはいえ…
+
+# textboxarrow 0 1
+@シストルム
+ボク達まで見逃したりは
+しないみたいなのにゃー
+
+;;//異族の群れが現れる
+# se "SE_0617"
+# alpha 601311 0 0.5
+# alpha 233 0 0.5
+# alpha 235 0 0.5
+# move 98100041 1 0
+# alpha 98100041 1 0.5
+# mask 98100041 on
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 on
+# move 98100042 5 0
+# alpha 98100042 1 0.5
+# mask 98100042 on
+# textboxarrow 0 0
+@異族
+ガアアアアアアアアアア！

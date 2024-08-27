@@ -1,0 +1,190 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー10章
+;;第0話　タイトル：プロローグ
+;;00_OP
+;;スクリプト最後の背景：紙芝居のような舞台
+;;-----------------------------------------
+# script "lisp"
+# background "underground_world"
+# bgmfile "bgm263" "BgmLostRagnarok001" 0
+;;-----------------------------------------
+;;モラルタ
+# body 3104011
+# pos 3104011 3
+# scale 3104011 0.8 0
+# layer 3104011 2
+# alpha 3104011 0 0
+# mask 3104011 off
+;;ベガルタ
+# body 3104111
+# pos 3104111 3
+# scale 3104111 0.8 0
+# layer 3104111 3
+# alpha 3104111 0 0
+# mask 3104111 off
+;;-----------------------------------------
+;;//背景：紙芝居のような舞台
+# textwindow "close"
+# fadeout "black" 0.1
+# imageset 0 "st_thickcurtain_left"
+# imagealpha 0 0 0
+# imageset 1 "st_thickcurtain_right"
+# imagealpha 1 0 0
+# imageset 2 "st_thickcurtain_top"
+# imagealpha 2 0 0
+# frameout 0 0.5
+# waitandnext 0.1
+
+# imagepos 0 -180 0
+# imagepos 1 180 0
+# imagepos 2 0 450
+# imagealpha 1 1 0
+# imagealpha 0 1 0
+# imagealpha 2 1 0
+# waitandnext 0.2
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# imagemoveto 0 -540 0 2
+# imagemoveto 1 540 0 2
+# waitandnext 2
+
+# imagealpha 1 0 0
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;//背景：紙芝居のような舞台
+# voice 1040 "morallta_kyara_1001"
+# move 3104111 2 0
+# face 3104111 "normal"
+# alpha 3104111 1 0.5
+# mask 3104111 on
+# move 3104011 4 0
+# face 3104011 "normal"
+# alpha 3104011 1 0.5
+# mask 3104011 on
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@モラルタ
+ねえねえ知ってる？
+ねえ知ってる？
+こんな喜劇をねえ知ってる？
+
+# voice 1041 "beagallta_kyara_1001"
+# textboxarrow 0 1
+@ベガルタ
+ねえねえ知ってる？
+ねえ知ってる？
+こんな悲劇をねえ知ってる？
+
+# voice 1040 "morallta_0029"
+# face 3104011 "happy"
+# textboxarrow 0 3
+@モラルタ
+まだまだ続くよ競走だ
+ひたすらスタコラ競走だ！
+
+# voice 1041 "beagallta_0004"
+# face 3104111 "happy"
+# textboxarrow 0 1
+@ベガルタ
+まだまだ遠いよゴールまで
+あれあれ待て待てゴールまで
+
+# face 3104011 "normal"
+# textboxarrow 0 3
+@モラルタ
+いやー…
+君はここらでギブアップした方が
+良いんじゃないかな？
+
+# face 3104111 "normal"
+# textboxarrow 0 1
+@ベガルタ
+うーん…
+君はそろそろドクターストップ
+かかるんじゃないかね？
+
+# voice 1040 "morallta_0009"
+# face 3104011 "angry"
+# textboxarrow 0 3
+@モラルタ
+僕は君のためを思って
+言っているんだよ！
+
+# voice 1041 "beagallta_0010"
+# face 3104111 "angry"
+# textboxarrow 0 1
+@ベガルタ
+私は君のためを思って
+言っているのに！
+
+# face 3104011 "happy"
+# textboxarrow 0 3
+@モラルタ
+それじゃあ一緒に走るのを
+やめよう！
+
+# face 3104111 "happy"
+# textboxarrow 0 1
+@ベガルタ
+それじゃあ一緒に
+ここで休もう！
+
+# face 3104111 "normal"
+# face 3104011 "normal"
+# textboxarrow 0 0
+@モラルタ＆ベガルタ
+せーの…
+
+# textboxarrow 0 0
+@モラルタ＆ベガルタ
+それーっ！
+
+;;//モラルタとベガルタが走り去る
+# se "SE_0773"
+# sedelay "SE_0773" 0.3
+# textwindow "close"
+# leftout 3104111 0.5
+# leftout 3104011 0.5
+# waitandnext 0.5
+
+# alpha 3104111 0 0
+# alpha 3104011 0 0
+# waitandnext 0.1
+
+# move 3104111 2 0
+# face 3104111 "normal"
+# alpha 3104111 1 0.5
+# mask 3104111 on
+# move 3104011 4 0
+# face 3104011 "happy"
+# alpha 3104011 1 0.5
+# mask 3104011 on
+# textboxarrow 0 3
+# textwindow "normal"
+@モラルタ
+走り出したら止まらない
+地獄の底まで一直線
+
+# face 3104111 "happy"
+# textboxarrow 0 1
+@ベガルタ
+走り出したら止まれない
+破滅の縁までひとっ飛び
+
+# voice 1040 "morallta_0004"
+# voice 1041 "beagallta_0005"
+# textboxarrow 0 0
+@モラルタ＆ベガルタ
+ああ、愉快愉快♪
+
+# voice 1040 "morallta_kyara_1001"
+# voice 1041 "beagallta_kyara_1001"
+# face 3104011 "normal"
+# textboxarrow 0 0
+@モラルタ＆ベガルタ
+ねえねえ知ってる？
+ねえ知ってる？
+こんなお話、ねえ知ってる？

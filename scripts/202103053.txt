@@ -1,0 +1,527 @@
+;;-----------------------------------------
+;;SEA5章_5-3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "bgm023" 0
+;;-----------------------------------------
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 3
+# alpha 6504011 0 0
+;;ミネルヴァ
+# body 302511
+# pos 302511 2
+# scale 302511 0.8 0
+# layer 302511 4
+# alpha 302511 0 0
+;;フライシュッツ
+# body 502711
+# pos 502711 4
+# scale 502711 0.8 0
+# layer 502711 4
+# alpha 502711 0 0
+;;ダモクレス
+# body 103511
+# pos 103511 2
+# scale 103511 0.8 0
+# layer 103511 3
+# alpha 103511 0 0
+;;グラーシーザ
+# body 302611
+# pos 302611 4
+# scale 302611 0.8 0
+# layer 302611 4
+# alpha 302611 0 0
+;;ネス
+# body 602011
+# pos 602011 2
+# scale 602011 0.8 0
+# layer 602011 3
+# alpha 602011 0 0
+;;神令エルキュール
+# body 3202511
+# pos 3202511 3
+# scale 3202511 0.75 0
+# layer 3202511 3
+# mask 3202511 off
+# alpha 3202511 0 0
+# body 202511
+# alpha 202511 0 0
+;;enemy
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# layer 910013 3
+# mask 910013 off
+# alpha 910013 0 0
+# body 920014
+# pos 920014 2
+# scale 920014 0.8 0
+# layer 920014 4
+# mask 920014 off
+# alpha 920014 0 0
+# reversal 920014 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+# textwindow "close"
+# waitandnext 0.2
+
+# background "wild"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# alpha 910013 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_0794"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@魔獣
+ガアアアアアアア…
+
+# se "SE_3001"
+# scale 910013 0.7 1
+# alpha 910013 0 1
+# textwindow "close"
+# waitandnext 1.5
+
+;;魔獣が倒れるが、すぐ魔獣が現れる
+# move 920014 3 0.5
+# alpha 920014 1 0.5
+# se "SE_0792"
+# textwindow "toge"
+# textboxarrow 0 2
+@魔獣
+ガアアアアア！
+
+# alpha 920014 0 0.5
+# face 6504011 "usual"
+# alpha 6504011 1 0.3
+# voice 3025 "minerva_0037"
+# face 302511 "angry"
+# alpha 302511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミネルヴァ
+分かってはいましたが、
+数が多いですね
+
+# voice 650401 "manannan_ura_0005"
+# face 6504011 "happy"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+倒しても倒しても現れるよ
+どこから来てるんだろ？
+
+# face 302511 "sad"
+# textboxarrow 0 1
+@ミネルヴァ
+そういえば…
+この魔獣達はどこから？
+
+# face 6504011 "usual"
+# textboxarrow 0 3
+@マナナン
+近くにヒビ割れは見当たらないのに
+不思議だね～
+
+# voice 3025 "minerva_0022"
+# face 302511 "surprise"
+# textboxarrow 0 1
+@ミネルヴァ
+ヒビ割れ？
+それは――
+
+# move 6504011 5 0.5
+# alpha 6504011 0 0.3
+# move 302511 5 0.5
+# alpha 302511 0 0.3
+# scale 3202511 0.8 0.5
+# face 3202511 "angry"
+# alpha 3202511 1 0.3
+# voice 2025 "hercule_0029"
+# se "SE_4100"
+# textboxarrow 0 2
+@エルキュール
+はあああああああ！
+
+# move 3202511 4 0.5
+# move 920014 2 0
+# mask 920014 on
+# alpha 920014 1 0.5
+# textwindow "close"
+# waitandnext 1
+
+;;エルキュールが魔獣達を斬る
+# se "SE_4816"
+# fadein "white" 1
+# move 3202511 3 0.2
+# move 920014 1 0.3
+# waitandnext 1
+
+# se "SE_0794"
+# textwindow "nomal"
+# textboxarrow 0 1
+@魔獣
+ガアアアアア…
+
+;;魔獣達が次々に倒れていく
+# se "SE_3001"
+# alpha 920014 0 0.8
+# textwindow "close"
+# waitandnext 1
+
+# alpha 3202511 0 0.3
+# voice 5027 "freischotz_0022"
+# face 502711 "surprise"
+# alpha 502711 1 0.3
+# face 103511 "usual"
+# alpha 103511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@フライシュッツ
+あ！
+あれって、エルキュールちゃん！？
+
+# face 103511 "happy"
+# textboxarrow 0 1
+@ダモクレス
+本当だ！
+お～い、エルキュール！
+
+# alpha 502711 0 0.3
+# alpha 103511 0 0.3
+# face 302611 "sad"
+# alpha 302611 1 0.3
+# voice 6020 "ness_0011"
+# face 602011 "angry"
+# alpha 602011 1 0.3
+# textboxarrow 0 1
+@ネス
+ダモクレス、戦闘中ですよっ
+
+# voice 3026 "grayside_0034"
+# textboxarrow 0 3
+@グラーシーザ
+むう…
+いつもとふんいきがちがうようだが
+
+# alpha 302611 0 0.3
+# alpha 602011 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# move 3202511 4 0
+# face 3202511 "angry"
+# alpha 3202511 1 0.3
+# move 920014 2 0
+# alpha 920014 1 0.5
+# se "SE_4100"
+# textwindow "nomal"
+# textboxarrow 0 3
+@エルキュール
+あなた達は還って下さい！
+
+;;エルキュールが魔獣を斬る
+# se "SE_8006"
+# textwindow "close"
+# fadein "white" 1
+# move 3202511 3 0.2
+# move 920014 1 0.3
+# waitandnext 1
+
+# bgm "stop"
+# se "SE_0794"
+# textwindow "nomal"
+# textboxarrow 0 1
+@魔獣
+ガアアアアアアア…
+
+# se "SE_3001"
+# alpha 920014 0 0.8
+# textwindow "close"
+# waitandnext 1
+
+# alpha 3202511 0 0.3
+# move 302511 3 0
+# mask 302511 off
+# face 302511 "surprise"
+# alpha 302511 1 0.3
+# textboxarrow 0 2
+# textwindow "normal"
+@ミネルヴァ
+凄まじい威力ですね…
+残っていた魔獣を
+一掃してしまいました
+
+# move 103511 1 0
+# alpha 302511 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;ダモクレスがエルキュールに駆け寄る
+# se "SE_5575"
+# move 103511 2 0.3
+# face 103511 "usual"
+# alpha 103511 1 0.3
+# move 3202511 4 0
+# mask 3202511 on
+# face 3202511 "angry"
+# alpha 3202511 1 0.3
+# textboxarrow 0 1
+# textwindow "normal"
+@ダモクレス
+エルキュール！
+ひさしぶり～っ
+
+# voice 1035 "damocles_0002"
+# textboxarrow 0 1
+@ダモクレス
+今までどこにいたの？
+クレス達、探してたんだよっ
+
+# bgm "bgm004" 0
+# face 3202511 "surprise"
+# textboxarrow 0 3
+@エルキュール
+…ダモクレス
+それに皆さんも
+
+# alpha 103511 0 0.3
+# alpha 3202511 0 0.3
+# move 302611 2 0
+# face 302611 "normal"
+# alpha 302611 1 0.3
+# move 502711 4 0
+# face 502711 "normal"
+# voice 3026 "grayside_0028"
+# alpha 502711 1 0.3
+# textboxarrow 0 1
+@グラーシーザ
+すこし見ないあいだに、
+ふんいきがかわったようだな
+なにかあったのか？
+
+# textboxarrow 0 3
+@フライシュッツ
+おねーちゃん心配してたんだよ…
+スイハちゃんは一緒じゃないの？
+
+# alpha 302611 0 0.3
+# alpha 502711 0 0.3
+# move 602011 2 0
+# face 602011 "normal"
+# alpha 602011 1 0.3
+# face 3202511 "usual"
+# alpha 3202511 1 0.3
+# textboxarrow 0 1
+@ネス
+集まりに欠席するのなら、
+きちんと連絡をすべきですよ
+
+# textboxarrow 0 3
+@エルキュール
+…………
+
+# alpha 602011 0 0.3
+# move 302511 2 0
+# layer 302511 2
+# mask 302511 on
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# textboxarrow 0 1
+@ミネルヴァ
+エルキュール
+何かあったんですよね？
+聞かせてくれませんか
+
+# textboxarrow 0 1
+@ミネルヴァ
+私達は仲間です
+きっと力になれますから
+
+# voice 2025 "hercule_0024"
+# face 3202511 "sad"
+# textboxarrow 0 3
+@エルキュール
+力に…
+そうですか…
+やっぱり、私は希望になれていません
+
+# voice 3025 "minerva_0022"
+# face 302511 "surprise"
+# textboxarrow 0 1
+@ミネルヴァ
+えっ？
+
+# voice 2025 "hercule_0031"
+# textboxarrow 0 3
+@エルキュール
+私が真の希望になれていないから、
+みんな心配してるんですよね…
+ごめんなさい…
+
+# textboxarrow 0 1
+@ミネルヴァ
+エルキュール
+何を言っているんですか？
+
+# face 3202511 "usual"
+# textboxarrow 0 3
+@エルキュール
+…………“彼女”を
+
+# face 3202511 "angry"
+# textboxarrow 0 3
+@エルキュール
+私は“彼女”を取り戻します
+絶対に！
+
+# textboxarrow 0 1
+@ミネルヴァ
+“彼女”とは…？
+
+# textboxarrow 0 3
+@エルキュール
+…そうです
+あなた達は覚えていない
+思い出すこともできない
+
+# textboxarrow 0 3
+@エルキュール
+私も“彼女”のことは“彼女”としか
+口にできません
+大切な存在なのに…！
+
+# textboxarrow 0 3
+@エルキュール
+それが普通だって…
+理解しています
+でも、だからこそ
+
+# textboxarrow 0 3
+@エルキュール
+私は抗います
+抗って抗って抗って…
+“彼女”を取り戻すんです！
+
+# textboxarrow 0 3
+@エルキュール
+“彼女”だけが忘れられて…
+それでいいはずがないんです
+
+# textboxarrow 0 3
+@エルキュール
+“彼女”こそが
+希望の御旗だったんですから！
+
+# textboxarrow 0 1
+@ミネルヴァ
+…………！？
+
+# alpha 302511 0 0.3
+# alpha 3202511 0 0.3
+# face 302611 "sad"
+# alpha 302611 1 0.3
+# face 502711 "surprise"
+# alpha 502711 1 0.3
+# textboxarrow 0 3
+@フライシュッツ
+希望の御旗…？
+
+# textboxarrow 0 1
+@グラーシーザ
+“かのじょ”…
+
+# alpha 302611 0 0.3
+# alpha 502711 0 0.3
+# move 602011 4 0
+# layer 602011 3
+# face 602011 "angry"
+# alpha 602011 1 0.3
+# move 103511 2 0.3
+# layer 103511 2
+# voice 1035 "damocles_0022"
+# face 103511 "normal"
+# alpha 103511 1 0.3
+# textboxarrow 0 1
+@ダモクレス
+忘れてること…？
+
+# textboxarrow 0 3
+@ネス
+…あ、あのっ
+もっとちゃんと順序立てて
+話して下さい
+
+# textboxarrow 0 3
+@ネス
+エルキュールの言っていることは…
+分かりにくいですっ
+それなのに…
+
+# voice 6020 "ness_0014"
+# textboxarrow 0 3
+@ネス
+胸の奥の方がザワザワして…
+気持ち悪いんですっ
+こんなの…理不尽ですっ
+
+# alpha 602011 0 0.3
+# alpha 103511 0 0.3
+# move 3202511 3 0
+# mask 3202511 off
+# face 3202511 "usual"
+# alpha 3202511 1 0.3
+# textboxarrow 0 2
+@エルキュール
+きっと、あなた達も思い出します
+たとえ思い出さなくても…
+
+# textboxarrow 0 2
+@エルキュール
+私に任せて下さい
+私は希望に…真の希望になるんです
+そのために…
+
+;;エルキュールが立ち去る
+# se "SE_0719"
+# move 3202511 5 1
+# alpha 3202511 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+# move 6504011 4 0
+# mask 6504011 on
+# face 6504011 "usual"
+# alpha 6504011 1 0.3
+# face 302511 "surprise"
+# alpha 302511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミネルヴァ
+あっ…エルキュール！？
+
+# textboxarrow 0 3
+@マナナン
+行っちゃったね
+
+# alpha 6504011 0 0.3
+# alpha 302511 0 0.3
+# textboxarrow 0 0
+@エンシェント達
+…………
+
+# fadeout "black" 1
+# waitandnext 1

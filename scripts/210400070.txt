@@ -1,0 +1,256 @@
+;;-----------------------------------------
+;;210400070
+;;【ED】
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "bgm003" 0
+;;シェキナー
+# body 400771
+# pos 400771 3
+# scale 400771 0.8 0
+# layer 400771 2
+# mask 400771 off
+# alpha 400771 0 0
+;;スイハ
+# body 401721
+# pos 401721 3
+# scale 401721 0.8 0
+# layer 401721 1
+# mask 401721 on
+# alpha 401721 0 0
+# face 401721 "usual"
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;◆背景：黒バック--------------------------------------
+# textflame 0 0
+@
+新天地で暮らすふたりから
+届いた手紙を読むマスター
+
+# textflame 0 0
+@
+ふたりだけでささやかな
+結婚式を挙げたあと、
+幸せに暮らしている、と書かれている
+
+;;◆背景：街--------------------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.1
+# textwindow "close"
+# waitandnext 0.1
+
+# background "town"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;演出：シェキナーin
+# se "SE_5575"
+# alpha 400771 1 0
+# rightin 400771 0.7
+# waitandnext 0.7
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "shy"
+# voice 4007 "shekina_0001"
+# chara 400771
+@シェキナー
+マスター！ほら見てください！
+このドレス、キラキラしてて
+かわいくないですか〜？
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "happy"
+# chara 400771
+@シェキナー
+ほら、スイハもはやくはやく！
+スイハの花嫁衣装も、
+本当にキレイなんですよ〜！
+
+;;演出：スイハin
+# alpha 400771 0 0.5
+# alpha 401721 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 401721 "shy"
+# voice 4017 "suiha_0015"
+# chara 401721
+@スイハ
+シェキナー…
+わたくし、恥ずかしいです…
+
+# textwindow "close"
+# move 401721 2 0.5
+# pos 400771 4
+# mask 400771 on
+# alpha 400771 1 0.5
+# face 400771 "normal"
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 400771 "sad"
+# chara 400771
+@シェキナー
+だって、あの結婚式では慌ただしくて
+マスターにちゃんとドレスを
+見てもらえなかったから…
+
+# face 401721 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+# face 400771 "happy"
+# voice 4007 "shekina_0004"
+# chara 400771
+@シェキナー
+今日はしっかり見てもらって
+感想をじっくり聞きたいって、
+ふたりで話したじゃないですか！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 401721 "shy"
+# voice 4017 "suiha_0024"
+# chara 401721
+@スイハ
+あ…あ、いや…
+あの…マスター、それは、その…
+
+# textflame 0 0
+@
+いわれてみればそうだった、
+ちゃんと見たかったんだよ、と
+マスターがこたえる
+
+# face 401721 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 400771 "normal"
+# voice 4007 "shekina_0006"
+# chara 400771
+@シェキナー
+そうですよね！
+ほらほら、どうですか？
+
+# textflame 0 0
+@
+うん、ふたりともすごくきれいで、
+こんなに可憐な花嫁は見たことがない
+とマスター
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 400771 "happy"
+# voice 4007 "shekina_0005"
+# chara 400771
+@シェキナー
+うんうん♪
+素晴らしい感想だと思います！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 401721 "shy"
+# voice 4017 "suiha_0005"
+# chara 401721
+@スイハ
+…ありがとうございます
+（たとえお世辞だとしても、嬉しい…）
+
+# textflame 0 0
+@
+お世辞じゃなくて、素直な感想だよ、
+本当に綺麗でびっくりした、と
+続けるマスター
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 401721 "surprise"
+# voice 4017 "suiha_0022"
+# chara 401721
+@スイハ
+えっ！
+（心の声が聞こえてしまった！？）
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 400771 "normal"
+# voice 4007 "shekina_0013"
+# chara 400771
+@シェキナー
+スイハ？
+どうかしました？
+
+# textflame 0 0
+@
+なにか変なこと言ったかな、と
+首をかしげるマスター
+
+# face 400771 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 401721 "shy"
+# chara 401721
+@スイハ
+…いいえ、なんでもありません
+（聞こえてない…よね？）
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 401721 "normal"
+# voice 4017 "suiha_0020"
+# chara 401721
+@スイハ
+…おほん
+そうそう、シェキナーのドレスは
+飾りの宝石も美しいんですよね
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 400771 "happy"
+# voice 4007 "shekina_0020"
+# chara 400771
+@シェキナー
+そうなんです！
+このドレスはこの宝石が
+ポイントなんです！
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 400771
+@シェキナー
+それに、この部分には
+特別なレースがあしらわれていて…
+
+;;◆背景：空--------------------------------------------
+# textwindow "close"
+# fadeout "black" 0.8
+# waitandnext 0.8
+
+# alpha 400771 0 0
+# alpha 401721 0 0
+# background "mov2_1"
+# waitandnext 0.5
+
+# fadein "black" 0.8
+# waitandnext 1.0
+
+# textwindow "normal"
+# textflame 0 0
+@
+シェキナーの熱がこめられた
+ドレスの説明を聞きながら
+微笑む、スイハとマスター
+
+# textflame 0 0
+@
+6月の花嫁達に幸多からんことを…

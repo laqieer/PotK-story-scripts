@@ -1,0 +1,279 @@
+;;-----------------------------------------
+;;SEA5章_30
+;;-----------------------------------------
+# script "lisp"
+# background "diary"
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 3
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 1
+# scale 6603811 0.8 0
+# layer 6603811 4
+# alpha 6603811 0 0
+;;8thティルフィング
+# body 6101431
+# pos 6101431 3
+# scale 6101431 0.8 0
+# layer 6101431 3
+# mask 6101431 off
+# alpha 6101431 0 0
+;;-----------------------------------------
+;;メインビジュアル
+# imageset 0 "SEA_Main2"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;日記閉じる
+# imageset 2 "diary_close"
+# imagealpha 2 0 0
+# imagescale 2 1 0
+# imagelayer 2 5
+;;紙
+# imageset 4 "SEA_diary_bg"
+# imagealpha 4 0 0
+# imagelayer 4 1
+# imagescale 4 1.2 0
+;;1枚め
+# imageset 5 "SEA_diary_503"
+# imagealpha 5 0 0
+# imagescale 5 1 0
+# imagelayer 5 3
+;;2枚め
+# imageset 6 "SEA_diary_504"
+# imagealpha 6 0 0
+# imagescale 6 1 0
+# imagelayer 6 3
+;;3枚め
+# imageset 7 "SEA_diary_505"
+# imagealpha 7 0 0
+# imagescale 7 1 0
+# imagelayer 7 3
+;;4枚め
+# imageset 8 "SEA_diary_506"
+# imagealpha 8 0 0
+# imagescale 8 1 0
+# imagelayer 8 3
+;;-----------------------------------------
+;;背景：日記帳
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# sedelay "bgm601_windon" 2
+# se "SE_6165"
+# face 270 "normal"
+# alpha 270 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+旅の記録三百六十五日――
+
+;;ミーミル消す
+;;テキストウィンドウを外す
+# alpha 270 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;フレームを外す
+# frameout 0 1
+# waitandnext 1
+
+;;紙を表示
+#setnextbgmblock 1
+# se "bgm601_celloon"
+# se "bgm601_guitaron"
+# se "bgm601_glockenon"
+# imagealpha 4 1 1
+# imagepos 4 0 0
+# waitandnext 1
+
+;;1枚目を表示
+# se "SE_6175"
+# imagealpha 5 1 2
+# imagepos 5 0 -900
+# waitandnext 1
+
+;;1枚目を上に
+# imagemoveto 5 0 700 25
+# waitandnext 22
+
+;;1枚目を消す
+# imagealpha 5 0 2
+# waitandnext 2
+
+;;2枚目を表示
+# se "SE_6166"
+# imagealpha 6 1 2
+# imagepos 6 0 -900
+# waitandnext 1
+
+;;2枚目を上に
+# imagemoveto 6 0 700 25
+# waitandnext 22
+
+;;2枚目を消す
+# imagealpha 6 0 2
+# waitandnext 2
+
+;;3枚目を表示
+# se "SE_6166"
+# imagealpha 7 1 2
+# imagepos 7 0 -900
+# waitandnext 1
+
+;;3枚目を上に
+# imagemoveto 7 0 700 25
+# waitandnext 22
+
+;;3枚目を消す
+# imagealpha 7 0 2
+# waitandnext 2
+
+;;4枚目を表示
+# se "SE_6166"
+# imagealpha 8 1 2
+# imagepos 8 0 -800
+# waitandnext 1
+
+;;4枚目を真ん中で止め
+# imagemoveto 8 0 -200 10
+# waitandnext 12
+
+;;4枚目と紙を消す
+# sestop "SE_6175"
+# imagemoveto 8 400 -200 3
+# imagealpha 8 0 2
+# waitandnext 2
+
+# imagealpha 4 0 2
+# waitandnext 2
+
+;;日記帳を閉じる
+# se "SE_6167"
+# imagealpha 2 1 2
+# imagepos 2 0 0
+# waitandnext 4
+
+;;暗転
+# fadeout "black" 2
+# waitandnext 2
+
+;;背景：ユグドラシル付近：plain_evening
+# background "plain_evening"
+# bgm "stop"
+# imagealpha 2 0 0
+# framein 0 0
+# waitandnext 1
+
+;;2～3秒背景のみ
+# se "SE_0791"
+# fadein "black" 2
+# waitandnext 5
+
+# voice 650401 "manannan_ura_0050"
+# move 6504011 4 0.6
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+お～い！
+ミーミル、早く～っ
+
+# voice 660381 "maclir_ura_0019"
+# move 6603811 2 0.4
+# face 6603811 "normal"
+# alpha 6603811 1 0.3
+# textboxarrow 0 1
+@マクリル
+ユグドラシル…近くで見ると
+大きすぎるよ…怖い…
+
+# bgmfile "bgm600" "BgmSecretlyEverAfter001" 0
+# move 6504011 5 0.5
+# alpha 6504011 0 0.5
+# move 6603811 3 0.6
+# alpha 6603811 0 0.5
+# voice 9917 "mimir_navikan_0011"
+# move 270 1 0
+# face 270 "angry"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ミーミル
+お待ち下さい、マナナンさん！
+マクリルさん！
+マスター様！
+
+;;ミーミルが歩いていく
+# se "SE_5000"
+# sedelay "SE_5001" 0.6
+# sedelay "SE_5000" 1.2
+# sedelay "SE_5001" 1.8
+# move 270 3 1.8
+# face 270 "normal"
+# textwindow "close"
+# waitandnext 1.8
+
+;;徐々に速度が上がっていく
+# sedelay "SE_5000" 0.4
+# sedelay "SE_5001" 0.8
+# face 270 "surprise"
+# move 270 4 0.8
+# waitandnext 0.8
+
+# sedelay "SE_5000" 0.3
+# sedelay "SE_5001" 0.6
+# sedelay "SE_5000" 0.9
+# sedelay "SE_5001" 1.2
+# sedelay "SE_5000" 1.5
+# move 270 5 0.3
+# alpha 270 0 0.6
+;;暗転挟む
+# fadeout "black" 1.6
+# waitandnext 1.6
+
+# imagealpha 0 1 0
+# imagepos 0 100 0
+# frameout 0 0
+# buttonsout 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+;;８周年メインビジュアル表示
+# fadein "white" 1
+# waitandnext 3
+
+;;一枚絵動かしたりなんだりで曲聞かせる間を作る
+# imagemoveto 0 40 0 5
+# waitandnext 9
+
+# voice 610141 "tyrufing_7th_0004"
+# textwindow "nomal"
+# textboxarrow 0 0
+@ティルフィング
+お帰りなさい、ミーミル
+
+# voice 9917 "mimir_navikan_0050"
+@ミーミル
+ただいま戻りました
+ティルフィング様！
+
+# fadeout "black" 5
+# waitandnext 5

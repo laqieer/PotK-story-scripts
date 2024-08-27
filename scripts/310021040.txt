@@ -1,0 +1,620 @@
+;;-----------------------------------------
+;;SEA1章_4
+;;-----------------------------------------
+# script "lisp"
+# background "006_jail"
+# bgm "bgm031" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 3
+# mask 6504011 off
+# alpha 6504011 0 0
+;;ゼロ
+# body 23
+# pos 23 2
+# scale 23 0.8 0
+# layer 23 3
+# alpha 23 1 0
+# body 1100211
+# alpha 1100211 0 0
+;;レーヴァテイン
+# body 41002002
+# pos 41002002 3
+# scale 41002002 0.8 0
+# layer 41002002 4
+# mask 41002002 off
+# alpha 41002002 0 0
+;;蜻蛉切
+# body 302411
+# pos 302411 4
+# scale 302411 0.8 0
+# layer 302411 2
+# mask 302411 off
+# alpha 302411 1 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：地下室
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# voice 11002 "laevateinm_0002"
+# face 23 "angry_1"
+# face 302411 "normal"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ゼロ
+おい蜻蛉切！
+お前、何を知ってる！？
+
+# textboxarrow 0 3
+@蜻蛉切
+私だって驚いてるのよ！
+あと、気になってたんだけど…
+
+# textboxarrow 0 3
+@蜻蛉切
+そっちにいる、
+見慣れない人達は誰っ？
+
+# textboxarrow 0 3
+@蜻蛉切
+…確か、そなたは
+ティルフィングのマスターよね？
+あとの二人は…
+
+# alpha 23 0 0.3
+# alpha 302411 0 0.3
+# face 270 "normal"
+# face 6504011 "usual"
+# alpha 270 1 0.3
+# alpha 6504011 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+ご挨拶が遅くなり失礼致しました
+私、ミーミルと申します
+
+# textboxarrow 0 1
+@ミーミル
+こちらにいらっしゃるマスター様の
+専属補佐官でございます
+
+# voice 650401 "manannan_ura_0004"
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+私のことはマナナンって呼んで！
+
+# face 23 "normal"
+# face 302411 "normal"
+# alpha 23 1 0.3
+# alpha 302411 1 0.3
+# alpha 270 0 0.3
+# alpha 6504011 0 0.3
+# textboxarrow 0 1
+@ゼロ
+こいつらのことは信頼していい
+ティルフィングが寄越した奴らだ
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# move 270 1 0
+# textboxarrow 0 3
+@蜻蛉切
+ふむ
+私も不躾だったわね
+我が名は蜻蛉切よ
+
+# voice 9917 "mimir_navikan_0002"
+# move 23 1 0.5
+# alpha 23 0 0.3
+# move 270 2 0.5
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ミーミル
+蜻蛉切さん
+先程、仰っていた変な噂というのは
+どういったものなのでしょう？
+
+# textboxarrow 0 1
+@ミーミル
+レーヴァテインさんが幼い姿に
+なっていることと関係があるのなら、
+お聞かせいただきたいのです
+
+# voice 3024 "tonbokiri_0004"
+# face 302411 "happy"
+# textboxarrow 0 3
+@蜻蛉切
+ふふっ
+そなたは礼儀を心得ているようね
+
+# face 302411 "normal"
+# textboxarrow 0 3
+@蜻蛉切
+いいわ
+ついて来なさい
+
+;;蜻蛉切が歩き出す
+# scale 302411 0.7 0.5
+# se "SE_5006"
+# sedelay "SE_5007" 0.5
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# voice 11002 "laevateinm_0002"
+# move 23 2 0.5
+# mask 23 off
+# face 23 "normal"
+# alpha 23 1 0.3
+# alpha 270 0 0.3
+# textboxarrow 0 1
+@ゼロ
+おい、どこにいく！？
+
+# textboxarrow 0 3
+@蜻蛉切
+仲間のところよ
+私も噂について詳しいことは
+知らないの
+
+# textboxarrow 0 3
+@蜻蛉切
+もっと詳しく聞きたいなら、
+そこで聞いた方が良いわ
+案内してあげる
+
+;;蜻蛉切が立ち去る
+# move 302411 5 0.5
+# scale 302411 0.6 0.5
+# alpha 302411 0 0.3
+# se "SE_0740"
+# textwindow "close"
+# waitandnext 0.7
+
+# voice 11002 "laevateinm_0013"
+# face 23 "angry_1"
+# move 23 3 0.5
+# textboxarrow 0 2
+# textwindow "nomal"
+@ゼロ
+チッ…
+いくぞ、お前ら
+
+;;ゼロが立ち去る
+# move 23 4 0.5
+# scale 23 0.6 0.5
+# alpha 23 0 0.3
+# se "SE_0874"
+# textwindow "close"
+# waitandnext 1
+
+;;レーヴァテインの姿が少し縮んでいる
+# alpha 41002002 1 0.5
+# se "SE_7330"
+# waitandnext 1
+
+;;選択肢
+# select "…………？" "select_label_01" "（少し軽くなったような）" "select_label_01"
+………
+
+# label "select_label_01"
+# textwindow "nomal"
+# textboxarrow 0 2
+@レーヴァテイン
+…何？
+
+# voice 9917 "mimir_navikan_0001"
+# alpha 41002002 0 0.3
+# move 270 3 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+マスター様、私達も参りましょう
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：町（夜）
+# background "town_night"
+# bgm "bgm005" 0
+# alpha 270 0 0
+# alpha 41002002 1 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# serif 1
+# textwindow "nomal"
+@住民達
+あああああ…！？
+レーヴァテイン様が、幼いお姿に…
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@レーヴァテイン
+じろじろ見ないで…
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@住民達
+噂は本当だったんだ…
+
+# serif 1
+@住民１
+だから言っただろ！
+俺は見たんだって
+
+# alpha 41002002 0 0.5
+# move 23 2 0
+# scale 23 0.8 0
+# mask 23 on
+# face 23 "normal"
+# alpha 23 1 0.3
+# move 302411 4 0
+# scale 302411 0.8 0
+# face 302411 "normal"
+# alpha 302411 1 0.3
+# waitandnext 0.5
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 11002 "laevateinm_0022"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ゼロ
+何だ、こいつら？
+こんな夜中に集まって
+
+# serif 0
+# textboxarrow 0 3
+@蜻蛉切
+この人達は、市長の横暴から
+レガルを解放するために
+集まってるのよ
+
+# serif 1
+@住民２
+おお、ゼロ！
+あんたも来てくれたのかっ
+
+# serif 1
+@住民３
+手伝ってくれ！
+門が閉ざされて、交易が
+全くできなくなってるんだ…
+
+# serif 1
+@住民４
+薬が届かなくて
+困っている人達も大勢いる
+仕事ができない人も…
+
+# move 270 1 0
+# serif 1
+@住民５
+急に町を封鎖するなんて
+無茶苦茶なんだよ…！
+このままだとレガルはオシマイだっ
+
+# move 23 1 0.5
+# alpha 23 0 0.3
+# move 270 2 0.5
+# face 270 "normal"
+# alpha 270 1 0.3
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+町の外にいた方々もそうでしたが、
+やはり皆様
+困っておられるのですね
+
+# serif 0
+# textboxarrow 0 3
+@蜻蛉切
+私達はレガルを解放するため、
+門を開ける計画を立てているの
+
+# move 23 2 0.5
+# face 23 "normal"
+# alpha 23 1 0.3
+# move 270 1 0.5
+# alpha 270 0 0.3
+# serif 0
+# textboxarrow 0 1
+@ゼロ
+それは分かった
+で、噂についてなんだが
+
+# serif 0
+# textboxarrow 0 3
+@蜻蛉切
+そうね
+現場を見た人がいたんだっけ？
+
+# serif 1
+@住民１
+俺だよ！
+何度も言っただろ！
+市役所で見たんだ！
+
+# serif 1
+@住民１
+市長が門を全て閉じるよう命じて、
+閉ざされた途端、レーヴァテイン様の
+体が縮んだんだって
+
+# serif 1
+@住民達
+幼い姿のレーヴァテイン様を
+見かけたって噂も
+聞いてはいたんだが…
+
+# serif 0
+# textboxarrow 0 1
+@ゼロ
+町の門を閉ざしたせいで、
+アマネはこうなったってことか！？
+
+# serif 1
+@住民１
+そ、そうとしか考えられないだろ…
+市長に話を聞こうとしても、
+衛兵に追い返されてしまうし…
+
+# serif 0
+# voice 11002 "laevateinm_battle_0005"
+# face 23 "angry_1"
+# textboxarrow 0 1
+@ゼロ
+市長の野郎！
+どういうつもりだ！？
+
+;;レーヴァテインが縮んでいる
+# se "SE_7330"
+# alpha 23 0 0.3
+# alpha 302411 0 0.3
+# scale 41002002 0.75 0
+# alpha 41002002 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@レーヴァテイン
+…………
+
+# bgm "bgm031" 0
+;;選択肢
+# select "縮んでる！？" "select_label_02" "軽くなってる！？" "select_label_02"
+…………
+
+# label "select_label_02"
+# move 41002002 4 0.5
+# move 270 2 0.5
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ミーミル
+マスター様？
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+えっ…？
+レーヴァテインさんが、先程より
+小さくなっておられるような…
+
+# move 23 1 0
+# textboxarrow 0 3
+@レーヴァテイン
+…あー
+やっぱ…気のせいじゃないよね…
+
+# move 23 2 0.5
+# face 23 "surprise"
+# alpha 23 1 0.3
+# move 270 1 0.5
+# alpha 270 0 0.3
+# textboxarrow 0 1
+@ゼロ
+アマネ…！
+どうなってんだ…！？
+
+# textboxarrow 0 3
+@レーヴァテイン
+うーん…
+分かんないけど…
+ちょっと…ヤバイかも？
+
+# face 23 "angry_1"
+# move 302411 5 0
+# textboxarrow 0 1
+@ゼロ
+ちょっとどころじゃねぇぞ！
+まさか、このまま門を
+閉ざし続けていたら…
+
+# move 41002002 5 0.5
+# alpha 41002002 0 0.3
+# move 302411 4 0.5
+# face 302411 "normal"
+# alpha 302411 1 0.3
+# textboxarrow 0 3
+@蜻蛉切
+確証はないけれど、
+まずいことになりそうね
+もう悠長にしてはいられない
+
+# alpha 23 0 0.3
+# alpha 302411 0 0.3
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@住民達
+まさか、レーヴァテイン様が
+小さくなり続けて…
+消えてしまう…？
+
+# bgm "bgm035" 0
+# serif 1
+@住民達
+そんなのはダメだ！
+レーヴァテイン様を
+お助けするんだ！
+
+# serif 1
+@住民達
+ここレガルは、
+かつてレーヴァテイン様に
+守っていただいた町
+
+# serif 1
+@住民達
+だったら、今度は
+我々がレーヴァテイン様の窮地に
+立ち上がるときだぞ！
+
+# se "SE_6212"
+# serif 1
+# textwindow "toge"
+@住民達
+おおおおおおおおおおおお！！
+
+# voice 650401 "manannan_ura_0005"
+# move 270 2 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# move 6504011 4 0
+# face 6504011 "happy"
+# alpha 6504011 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+みんな、喜劇的に元気だね～っ
+
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+一気に火が点いたようです
+
+# alpha 6504011 0 0.3
+# move 302411 4 0
+# face 302411 "normal"
+# alpha 302411 1 0.3
+# textboxarrow 0 3
+@蜻蛉切
+士気が高いのは良いことよ
+元々、町を解放するために
+門を開ける予定だったんだから
+
+# textboxarrow 0 3
+@蜻蛉切
+ゼロ
+私達の利害は一致している
+そなたも手伝いなさい
+
+# alpha 270 0 0.3
+# move 23 2 0
+# face 23 "angry_1"
+# alpha 23 1 0.3
+# textboxarrow 0 1
+@ゼロ
+言われなくても
+やるに決まってるだろうが！
+八つの門、全部開けてやる！
+
+# textboxarrow 0 3
+@蜻蛉切
+その意気や良し
+でも、戦力が足りてないわね…
+
+# textboxarrow 0 3
+@蜻蛉切
+ゼロはここで皆と計画を立てていて
+私はもう一人、
+キル姫を連れてくるわ
+
+# voice 11002 "laevateinm_0033"
+# face 23 "normal"
+# textboxarrow 0 1
+@ゼロ
+ああ、あいつか
+分かった
+そっちは任せる
+
+# move 23 1 0.5
+# alpha 23 0 0.3
+# move 302411 5 0.5
+# alpha 302411 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# move 41002002 3 0
+# alpha 41002002 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@レーヴァテイン
+…ねえ
+
+;;選択肢
+# select "蜻蛉切についていく？" "select_label_03" "眠くなった？" "select_label_04"
+…ねえ
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# textboxarrow 0 2
+@レーヴァテイン
+うん…よろしく
+
+# label "select_label_04"
+# labeljump "select_label_end"
+# textboxarrow 0 2
+@レーヴァテイン
+そうじゃなくて…
+蜻蛉切に…ついていって
+
+# label "select_label_end"
+# alpha 41002002 0 0.3
+# move 302411 3 0
+# face 302411 "normal"
+# alpha 302411 1 0.3
+# textboxarrow 0 2
+@蜻蛉切
+そなた達もついて来たいの？
+構わないけど、
+私から離れないようにしなさいね
+
+# fadeout "black" 0.5
+# waitandnext 0.5

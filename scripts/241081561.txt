@@ -1,0 +1,404 @@
+;;-----------------------------------------
+;;まどマギイベント6-1
+;;-----------------------------------------
+# script "lisp"
+# bgm "stop"
+# background "sea_palmbeach_day"
+;;-----------------------------------------
+;;アルマス
+# body 2103811
+# pos 2103811 3
+# scale 2103811 0.8 0
+# layer 2103811 3
+# mask 2103811 off
+# alpha 2103811 0 0
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 4
+# mask 139 off
+# alpha 139 0 0
+;;まどか
+# body 2401111
+# pos 2401111 3
+# scale 2401111 0.8 0
+# layer 2401111 3
+# mask 2401111 off
+# alpha 2401111 0 0
+;;マミ
+# body 2501411
+# pos 2501411 3
+# scale 2501411 0.8 0
+# layer 2501411 3
+# mask 2501411 off
+# alpha 2501411 0 0
+;;からまろ
+# body 805121
+# pos 805121 3
+# scale 805121 0.8 0
+# layer 805121 4
+# mask 805121 off
+# alpha 805121 0 0
+;;ほむら
+# body 2501311
+# pos 2501311 3
+# scale 2501311 0.8 0
+# layer 2501311 3
+# mask 2501311 off
+# alpha 2501311 0 0
+;;杏子
+# body 2301511
+# pos 2301511 3
+# scale 2301511 0.8 0
+# layer 2301511 3
+# mask 2301511 off
+# alpha 2301511 0 0
+;;さやか
+# body 2102011
+# pos 2102011 3
+# scale 2102011 0.8 0
+# layer 2102011 3
+# mask 2102011 off
+# alpha 2102011 0 0
+;;異族
+# body 2811004
+# pos 2811004 2
+# scale 2811004 0.7 0
+# layer 2811004 4
+# mask 2811004 on
+# alpha 2811004 0 0
+;;異族（クローン）
+# entry 928110041 2811004
+# pos 928110041 4
+# scale 928110041 0.7 0
+# layer 928110041 4
+# mask 928110041 on
+# alpha 928110041 0 0
+;;クラーケン
+# body 805088
+# pos 805088 3
+# scale 805088 0.8 0
+# layer 805088 3
+# mask 805088 off
+# alpha 805088 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;背景：海辺
+# fadein "black" 1
+# textwindow "close"
+# waitandnext 1
+
+# alpha 2103811 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 2103811 "surprise"
+# voice 1038 "almace_0022"
+@アルマス
+何、あれ…
+
+# textflame 0 0
+@
+沖でゆらゆらと動いていた
+巨大な影が動きのスピードを上げ
+ズゴゴゴ、と砂浜へと向かってくる
+
+;;演出：クラーケンin
+# bgmfile "bgm380_381" "BgmSeaEventBattle004" 0
+# alpha 2103811 0 0.5
+# alpha 805088 1 1
+# waitandnext 1.5
+
+# se "SE_0932"
+;;謎の影（クラーケン）
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 2
+@？？？
+ギュイイイイッ！
+
+# alpha 805088 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# emotionbody 1000 1 2301511 0 280
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 2501411 2 0
+# mask 2501411 on
+# face 2501411 "normal"
+# alpha 2501411 1 0.5
+# move 2301511 4 0
+# mask 2301511 on
+# alpha 2301511 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 2301511 "usual"
+# voice 3015 "kyoko_0022"
+@杏子
+でっけーイカ！
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5014 "mami_0022"
+@マミ
+まるでクラーケンね！？
+
+# alpha 2301511 0 0.5
+# alpha 2501411 0 0.5
+# move 2102011 2 0
+# mask 2102011 on
+# face 2102011 "angry"
+# alpha 2102011 1 0.5
+# move 2401111 4 0
+# mask 2401111 on
+# alpha 2401111 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 2401111 "sad"
+# voice 4011 "madoka_0028"
+@まどか
+あれ、でも、なんだか…
+
+# emotionbody 2000 1 2102011 10 260
+# effectpattern 2000 1 0
+# effectstart 2000
+# textflame 1 1
+# textboxarrow 0 1
+@さやか
+どうしたのまどか！
+立ち止まってたら危ないよ！
+
+# textflame 1 1
+# textboxarrow 0 3
+@まどか
+なんだか、あのクラーケン？が、
+からまろに似てる気がして…
+
+# alpha 2102011 0 0.5
+# alpha 2401111 0 0.5
+# move 139 2 0
+# mask 139 on
+# face 139 "normal"
+# alpha 139 1 0.5
+# move 2103811 4 0
+# mask 2103811 on
+# alpha 2103811 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 2103811 "usual"
+@アルマス
+似てるって言うには
+サイズが全然違うけど！？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 139 "surprise"
+# voice 9967 "titania_0003"
+@ティターニア
+あ、でも見てください
+模様とかが少し似ているような…
+
+# textflame 0 0
+@
+もしかして、とマスターは
+ひとつの仮定に辿り着く
+
+# alpha 139 0 0.5
+# alpha 2103811 0 0.5
+# move 2501311 2 0
+# mask 2501311 on
+# face 2501311 "normal"
+# alpha 2501311 1 0.5
+# alpha 2401111 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 2401111 "normal"
+@まどか
+もしかして、からまろは
+あの大きなクラーケン…
+親とはぐれた迷子だったのかも
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 2501311 "angry"
+# voice 5013 "homura_0028"
+@ほむら
+…それにしては
+からまろの様子がおかしいわ
+
+# alpha 2501311 0 0.5
+# alpha 2401111 0 0.5
+# move 2102011 4 0
+# mask 2102011 on
+# face 2102011 "angry"
+# alpha 2102011 1 0.5
+# move 805121 2 0
+# mask 805121 on
+# alpha 805121 1 0.5
+# se "SE_0928"
+# textflame 1 1
+# textboxarrow 0 1
+@からまろ
+キュ、キュゥウ…
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1020 "sayaka_0028"
+@さやか
+急におっきいのが来たら
+怯えちゃっても仕方ないよ！
+
+# alpha 2102011 0 0.5
+# alpha 805121 0 0.5
+# alpha 805088 1 0.8
+# textflame 0 0
+@
+まどか達が話している最中も
+クラーケンは砂浜を蹂躙していく
+
+# textflame 0 0
+@
+住民達は避難したようだが
+さっきまで遊んでいた場所は
+めちゃくちゃにされてしまっている
+
+# se "SE_0932"
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 2
+@クラーケン
+ギュッ、ギュイイ！！！
+
+# se "SE_7283"
+# fadein "red" 0.5
+# waitandnext 0.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+クラーケンの触手に当たり
+スイカ割り用のスイカが弾ける
+
+# alpha 805088 0 0.5
+# move 2501311 3 0
+# mask 2501311 off
+# alpha 2501311 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 2501311 "angry"
+# voice 5013 "homura_battle_0001"
+@ほむら
+酷い暴れようね…はっ！
+
+# fadein "black" 0.5
+# textflame 0 0
+@
+クラーケンは
+ほむらに目掛け墨を吐く
+
+# move 2501311 2 0.5
+# mask 2501311 on
+# move 2401111 4 0
+# mask 2401111 on
+# alpha 2401111 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 2401111 "sad"
+@まどか
+ほむらちゃん！
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5013 "homura_0033"
+@ほむら
+大丈夫よ、平気
+飛び道具もあるとなると危険ね
+
+# alpha 2401111 0 0.5
+# alpha 2501311 0 0.5
+# alpha 805088 1 0.8
+# textflame 1 1
+# textboxarrow 0 2
+@クラーケン
+ギュギュギュギュ！
+
+# emotionbody 3000 1 2102011 10 260
+# effectpattern 3000 2 0
+# effectstart 3000
+# alpha 805088 0 0.5
+# move 2102011 4 0
+# mask 2102011 on
+# alpha 2102011 1 0.5
+# move 2501411 2 0
+# mask 2501411 on
+# face 2501411 "angry"
+# alpha 2501411 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 2102011 "angry"
+# voice 1020 "sayaka_0024"
+@さやか
+きゃあっ！？
+
+# textflame 0 0
+@
+クラーケンは
+砂を撒き散らし、姿を隠す
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5014 "mami_battle_0005"
+@マミ
+これじゃ狙いがつかない…
+
+# alpha 2102011 0 0.5
+# alpha 2501411 0 0.5
+# alpha 2811004 1 0.5
+# alpha 928110041 1 0.5
+# se "SE_0617"
+# textflame 1 1
+# textboxarrow 0 0
+@異族
+グギャアッ！
+
+# textflame 0 0
+@
+まどか達とクラーケンの戦闘に
+引き寄せられたのか、異族達が現れる
+
+# alpha 2811004 0 0.5
+# alpha 928110041 0 0.5
+# move 2401111 4 0
+# mask 2401111 on
+# face 2401111 "angry"
+# alpha 2401111 1 0.5
+# move 2103811 2 0
+# mask 2103811 on
+# alpha 2103811 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 2103811 "angry"
+@アルマス
+何をするにしても
+全部大人しくさせなきゃ
+どうしようもなさそうね
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 4011 "madoka_0036"
+@まどか
+うん、みんなお願い！
+からまろを守りながら
+なんとか切り抜けよう！

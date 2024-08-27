@@ -1,0 +1,154 @@
+;;-----------------------------------------
+;;第2話　タイトル：城内突入【2－2戦闘後】
+;;//背景：ラグナロク王国
+;;スクリプトID:100402021
+;;スクリプト最後の背景:201_border
+;;-----------------------------------------
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# script "lisp"
+# background "201_border"
+;;アルマス
+# body 3103811
+# pos 3103811 2
+# scale 3103811 0.8 0
+# alpha 3103811 0 0
+# mask 3103811 off
+# face 3103811 "angry"
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# alpha 139 0 0
+# layer 139 3
+# face 139 "worry"
+;;アロンダイト
+# body 3100711
+# pos 3100711 3
+# scale 3100711 0.8 0
+# alpha 3100711 0 0
+# mask 3100711 off
+# face 3100711 "angry"
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# alpha 3201911 1 0
+# mask 3201911 off
+;;◆背景：ラグナロク王国-------------------------
+# textflame 1 1
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_0029"
+@シユウ
+よし、おまえ！
+シユウとたたかえ！
+たいくつしてたんだー
+
+# alpha 3201911 0 0.5
+# alpha 139 1 0.5
+# voice 9967 "titania_0039"
+@ティターニア
+凄まじい殺気です…
+ひょっとして彼女は…
+
+# alpha 139 0 0.5
+# alpha 3100711 1 0.5
+@アロンダイト
+ケイオスリオンの斬ル姫、
+カルマキラーズのシユウです
+かなり危険な相手ですよ
+
+# alpha 3100711 0 0.5
+# move 139 4 0
+# alpha 139 1 0.5
+# alpha 3103811 1 0.5
+# textboxarrow 0 1
+# voice 1038 "almace_0007"
+@アルマス
+相手にとって絶！不足無し
+
+# face 139 "sad"
+# textboxarrow 0 3
+@ティターニア
+いけませんアルマスっ…
+恐らく今のあなたでは――
+
+# bgm "stop"
+# textboxarrow 0 1
+@アルマス
+あいつの…レーヴァテインの
+威圧感に比べたら大したことないわ
+
+# face 139 "worry"
+# textboxarrow 0 3
+@ティターニア
+アルマス…？
+
+# bgmfile "bgm266_267" "BgmLostRagnarokBattle001" 0
+# face 3103811 "worry"
+# textboxarrow 0 1
+@アルマス
+…私はあいつより
+強くならないといけない
+いつか戦わないといけなくなるから
+
+# face 3103811 "angry"
+# voice 1038 "almace_0029"
+@アルマス
+だから…
+ここで退くわけにはいかないの！
+
+# alpha 139 0 0.5
+# alpha 3103811 0 0.5
+# alpha 3201911 1 0.5
+# face 3201911 "angry"
+# textboxarrow 0 2
+@シユウ
+いいぞ、いいぞ！
+シユウは分かるぞ、おまえはつよいな
+ワクワクしてくるぞ！
+
+# alpha 3201911 0 0.5
+# move 139 3 0
+# alpha 139 1 0.5
+# textboxarrow 0 2
+# voice 9967 "titania_0015"
+@ティターニア
+マスター…！
+あの子を止めて下さいっ
+
+;;選択肢
+;;選択肢･違う分岐
+# select "アルマス頑張れ！" "select_label_01" "アルマス待つんだ！" "select_label_02" "…………" "select_label_03"
+マスター…！
+あの子を止めて下さいっ
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# alpha 139 0 0.5
+# alpha 3103811 1 0.5
+# face 3103811 "shy"
+@アルマス
+急に何よっ？
+…ありがと
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# alpha 139 0 0.5
+# alpha 3103811 1 0.5
+@アルマス
+悪いけど、私は止まらない！
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 139 "sad"
+@ティターニア
+何か言って下さい…
+
+# label "select_label_end"
+# alpha 3103811 0 0.5
+# alpha 139 0 0.5
+# alpha 3201911 1 0.5
+# face 3201911"happy"
+# voice 320191 "chihyu_a_0005"
+@シユウ
+それじゃいくぞー！

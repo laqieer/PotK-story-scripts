@@ -1,0 +1,372 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー13章
+;;第5話　タイトル：地上の守り手
+;;5_6_1
+;;背景：ティルヘルム
+;;-----------------------------------------
+# script "lisp"
+# background "fairy_world"
+# bgmfile "bgm323" "BgmLostRagnarokCommand" 0
+;;-----------------------------------------
+;;レーヴァテイン
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# alpha 3100211 0 0
+# layer 3100211 1
+;;ムー
+# body 161
+# pos 161 4
+# scale 161 0.6 0
+# alpha 161 0 0
+# layer 161 5
+;;カリス
+# body 3602511
+# pos 3602511 3
+# scale 3602511 0.8 0
+# alpha 3602511 1 0
+# layer 3602511 1
+;;キプル
+# body 163
+# pos 163 3
+# scale 163 0.6 0
+# alpha 163 0 0
+;;ソロモン
+# body 3503111
+# pos 3503111 3
+# scale 3503111 0.8 0
+# alpha 3503111 0 0
+;;ヘレナ
+# body 3302811
+# pos 3302811 2
+# scale 3302811 0.8 0
+# alpha 3302811 0 0
+# layer 3302811 4
+;;ダモクレス
+# body 3103519
+# pos 3103519 3
+# scale 3103519 0.8 0
+# alpha 3103519 0 0
+;;フライシュッツ
+# body 3502719
+# pos 3502719 3
+# scale 3502719 0.8 0
+# alpha 3502719 0 0
+;;パラシュ
+# body 3200411
+# pos 3200411 2
+# scale 3200411 0.8 0
+# alpha 3200411 0 0
+;;グリダヴォル
+# body 3600811
+# pos 3600811 4
+# scale 3600811 0.8 0
+# alpha 3600811 0 0
+;;フォルカス
+# body 3301811
+# pos 3301811 4
+# scale 3301811 0.8 0
+# alpha 3301811 0 0
+;;ミトゥム
+# body 3200511
+# pos 3200511 2
+# scale 3200511 0.8 0
+# alpha 3200511 0 0
+;;ムラマサ
+# body 3102511
+# pos 3102511 4
+# scale 3102511 0.8 0
+# alpha 3102511 0 0
+;;シャルウル
+# body 3200711
+# pos 3200711 2
+# scale 3200711 0.8 0
+# alpha 3200711 0 0
+;;-----------------------------------------
+# se "SE_5575"
+# mask 3602511 off
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3602511 "angry"
+# voice 6025 "chalice_t_0045"
+@カリス
+ヘレナ、大丈夫っ？
+カリスちゃんがすぐに
+治療するからねっ
+
+# mask 3602511 on
+# move 3602511 4 0.5
+# alpha 3302811 1 0.5
+# textboxarrow 0 1
+# face 3302811 "sad"
+# voice 3028 "herena_a_0015"
+@ヘレナ
+ううっ…カリス、気持ちは嬉しいけど
+ちょっと邪魔だな
+
+;;ヘレナがカリスを押しのける
+# se "SE_0648"
+# move 3302811 3 0.5
+# move 3602511 5 0.5
+# textboxarrow 0 0
+# waitandnext 0.6
+
+# textboxarrow 0 3
+# face 3602511 "surprise"
+;;# voice 6025 "chalice_t_00"
+@カリス
+ヘレナ！？
+
+# alpha 3302811 0 0.5
+# alpha 3602511 0 0.5
+# mask 3502719 off
+# alpha 3502719 1 0.5
+# textboxarrow 0 2
+;;# face 3502719 ""
+# voice 350271 "freischotz_c_0004"
+@フライシュッツ
+わかってたよ、そこに来るのは
+
+;;フライシュッツがヘレナを撃つ
+# se "SE_11090"
+# alpha 3502719 0 0.5
+# mask 3302811 off
+# move 3302811 3 0
+# alpha 3302811 1 0.5
+# fadein "red" 0.5
+# waitandnext 0.5
+
+# se "SE_10391"
+# textboxarrow 0 2
+# face 3302811 "angry"
+# voice 3028 "herena_a_0038"
+@ヘレナ
+ぐはっ…
+
+# move 3602511 3 0
+# alpha 3302811 0 0.5
+# alpha 3502719 1 0.5
+# textboxarrow 0 2
+;;# face 3502719 ""
+# voice 350271 "freischotz_c_unit_0008"
+@フライシュッツ
+黄金の輝き、見せてあげちゃう！
+
+# se "SE_11090"
+# mask 3502719 on
+# move 3502719 5 0.3
+# alpha 3602511 1 0
+# leftin 3602511 0.3
+# textboxarrow 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.3
+# waitandnext 0.5
+
+# move 3602511 2 0.3
+# move 3502719 4 0.3
+# waitandnext 0.3
+
+# textboxarrow 0 1
+# face 3602511 "angry"
+# voice 6025 "chalice_t_0012"
+@カリス
+やめて！
+
+# textboxarrow 0 3
+;;# face 3502719 ""
+# voice 350271 "freischotz_c_0009"
+@フライシュッツ
+もうっ！
+あと少しだったのに～…
+
+# textboxarrow 0 3
+;;# face 3502719 ""
+;;# voice 350271 "freischotz_c_00"
+@フライシュッツ
+わたしの邪魔するんだったら～
+死に方を選ばせてあげる
+お姉さん、優しいでしょ？
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.2
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.8
+
+# alpha 3502719 0 0
+# alpha 3602511 0 0
+# mask 3100211 off
+# alpha 3100211 1 0
+# alpha 161 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100211 "surprise"
+# voice 310021 "revatein_ge_0002"
+@レーヴァテイン
+どうなってるの…
+
+# textboxarrow 0 3
+# voice 9953 "mwu_0037"
+@ムー
+こいつら、三人とも自分勝手に
+動いてるだけだってのに…
+異常な強さじゃねぇか…！
+
+# alpha 3100211 0 0.5
+# alpha 161 0 0.5
+# mask 3503111 off
+# alpha 3503111 1 0.5
+# textboxarrow 0 2
+# face 3503111 "normal"
+# voice 5031 "solomon_t_0013"
+@ソロモン
+それだけではないわ…
+レーヴァ、周りを見て
+
+# alpha 3503111 0 0.5
+# alpha 3100211 1 0.5
+# alpha 161 1 0.5
+# textboxarrow 0 2
+# face 3100211 "surprise"
+# voice 310021 "revatein_ge_0022"
+@レーヴァテイン
+！？
+
+# se "SE_5207"
+# alpha 3100211 0 0.5
+# alpha 161 0 0.5
+# alpha 3301811 1 0.5
+# alpha 3200511 1 0.5
+# textboxarrow 0 3
+# face 3301811 "normal"
+# voice 330181 "forcas_t_0027"
+@フォルカス
+ようやく地上に帰ってこられたと
+思えば、またあなた達ですか
+
+# se "SE_5206"
+# alpha 3301811 0 0.5
+# alpha 3200511 0 0.5
+# alpha 3200411 1 0.5
+# alpha 3600811 1 0.5
+# textboxarrow 0 1
+# face 3200411 "normal"
+# voice 320041 "parashu_a_0004"
+@パラシュ
+地底から戻った兵はイミテーション
+狩りに回した…ディスラプターズ
+狩りはボク達の役目だね
+
+# se "SE_8004"
+# alpha 3200411 0 0.5
+# alpha 3600811 0 0.5
+# alpha 3102511 1 0.5
+# alpha 3200711 1 0.5
+# textboxarrow 0 3
+# face 3102511 "angry"
+# voice 310251 "muramasa_ge_battle_0001"
+@ムラマサ
+お覚悟を！
+
+# alpha 3102511 0 0.5
+# alpha 3200711 0 0.5
+# mask 3100211 on
+# move 3100211 2 0
+# alpha 3100211 1 0.5
+# mask 3503111 on
+# move 3503111 4 0
+# face 3503111 "normal"
+# alpha 3503111 1 0.5
+# textboxarrow 0 1
+# face 3100211 "normal"
+# voice 310021 "revatein_ge_0028"
+@レーヴァテイン
+彼女達も…
+地上に出てきてしまったのね…
+
+# textboxarrow 0 3
+;;# face 3503111 ""
+;;# voice 5031 "solomon_t_00"
+@ソロモン
+これは、多勢に無勢です…
+
+# alpha 3100211 0 0.5
+# alpha 3503111 0 0.5
+# mask 3302811 on
+# move 3302811 2 0
+# alpha 3302811 1 0.5
+# mask 3602511 on
+# move 3602511 4 0
+# face 3602511 "normal"
+# alpha 3602511 1 0.5
+# textboxarrow 0 1
+# face 3302811 "normal"
+# voice 3028 "herena_a_0004"
+@ヘレナ
+でも…逃げ道すらないな…
+すでに包囲されている…
+ふふっ
+
+# textboxarrow 0 3
+;;# face 3602511 ""
+;;# voice 6025 "chalice_t_00"
+@カリス
+カリスちゃんがミラクル…
+起こさないとっ
+
+# alpha 163 1 0.5
+# move 3302811 1 0.5
+# move 3602511 5 0.5
+# textboxarrow 0 2
+# voice 9951 "kipuru_0052"
+@キプル
+カリス、あなただって
+怪我してるんですっ…
+無茶をしないで下さい！
+
+# bgm "stop"
+# alpha 3302811 0 0.5
+# alpha 3602511 0 0.5
+# alpha 163 0 0.5
+# mask 3100211 off
+# move 3100211 3 0
+# alpha 3100211 1 0.5
+# alpha 161 1 0.5
+# textboxarrow 0 2
+# face 3100211 "normal"
+;;# voice 310021 "revatein_ge_00"
+@レーヴァテイン
+この程度で…負ける私達じゃない
+
+# bgmfile "bgm301_302" "BgmLostRagnarokDisrupters" 0
+# textboxarrow 0 3
+# voice 9953 "mwu_0082"
+@ムー
+レヴァ！
+そうだな！
+俺様の本気をぶちかましてやるぜ！
+
+# textboxarrow 0 2
+;;# face 3100211 ""
+;;# voice 310021 "revatein_ge_00"
+@レーヴァテイン
+ええ…お願いね、ムー
+
+# textboxarrow 0 2
+# face 3100211 "angry"
+;;# voice 310021 "revatein_ge_00"
+@レーヴァテイン
+理を破る者《ディスラプターズ》…
+あなた達が名づけた通称の通り
+理を破って全員倒してあげる…！

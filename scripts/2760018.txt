@@ -1,0 +1,208 @@
+;;▼9話戦闘後
+;;//背景　荒野_黄昏（wild_evening）
+;;指定　BgmKScollabo001 bgm208
+# script "lisp"
+# background "wild_evening"
+# bgmfile "bgm208" "BgmKScollabo001" 0
+# body 0
+# pos 0 5
+# scale 0 0.8 0
+# body 24
+# pos 24 1
+# scale 24 0.8 0
+# alpha 24 0 0
+# body 103421
+# pos 103421 1
+# scale 103421 0.8 0
+# face 103421 "usual"
+# body 502521
+# pos 502521 3
+# scale 502521 0.8 0
+# face 502521 "usual2"
+# body 502611
+# pos 502611 3
+# alpha 502611 0 0
+# body 106
+# pos 106 1
+# scale 106 0.8 0
+# alpha 106 0 0
+# body 101411
+# pos 101411 1
+# alpha 101411 0 0
+# layer 502521 2
+# layer 103421 1
+# textflame 1 1
+# textboxarrow 0 3
+# chara 0
+# face 0 "serious"
+@デュリン
+…ちょっと気になったんだけど
+アンタ達、カズマのこと、
+心配はしてないの？
+
+# textboxarrow 0 1
+# chara 103421
+@ダクネス
+…まったく心配じゃないかと
+言われるとそんなことはないが
+まぁ、無事だろう
+
+# textboxarrow 0 2
+# chara 502511
+# face 502521 "usual1"
+@めぐみん
+私も同じですね
+その点については、自信があります
+…運だけはいい人ですから
+
+# emotionbody 5000 1 106 0 290
+# effectpattern 5000 2 0
+# effectstart 5000
+# body 601711
+# pos 601711 3
+# scale 601711 0.8 0
+# alpha 601711 0 0
+# alpha 103421 0 0.3
+# alpha 106 1 0.5
+# textboxarrow 0 1
+# chara 502611
+# face 106 "surprise"
+@ゆんゆん
+運だけって、
+カズマさん本当に大丈夫なの！？
+
+# effectskip 5000
+# emotionbody 5200 3 601711 50 260
+# effectpattern 5200 1 3
+# effectstart 5200
+# alpha 502521 0 0.3
+# alpha 601711 1 0.5
+# textboxarrow 0 2
+# chara 601711
+@アクア
+悪運が強いってとこは
+確かにあるかもしれないわね
+女神の加護もあるし、大丈夫大丈夫！
+
+# effectskip 5200
+# body 601811
+# pos 601811 3
+# alpha 601811 0 0
+# body 107
+# pos 107 5
+# scale 107 0.8 0
+# alpha 107 0 0
+# alpha 106 0 0.3
+# alpha 24 1 0.5
+# layer 24 2
+# layer 601711 1
+# textboxarrow 0 1
+# chara 101411
+# face 24 "happy"
+@ティルフィング
+信じているのですね…
+…それって、
+すばらしいことだと思います！
+
+# emotionbody 5805 9 107 70 210
+# effectpattern 5805 5 0
+# effectstart 5805
+# rightin 107 0.5
+# alpha 107 1 0
+# alpha 0 0 0.3
+# textboxarrow 0 3
+# chara 601811
+# face 107 "sad"
+@ウィズ
+…あ、話の途中ですみません
+少し時間をいただけますか？
+
+# effectskip 5805
+# select "戦いの準備？" "select_label_01" "急がないと…" "select_label_02" "離れようか？" "select_label_03"
+…あ、話の途中ですみません
+少し時間をいただけますか？
+
+;;回答（どれを選んでも）
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 24 "normal"
+# face 601711 "usual"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 601811
+@ウィズ
+すぐに終わりますし
+危険なことでもありませんから…
+この辺りは周囲に民家もないですし…
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 24 "normal"
+# face 601711 "usual"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 601811
+@ウィズ
+すぐに終わりますし
+危険なことでもありませんから…
+この辺りは周囲に民家もないですし…
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 24 "normal"
+# face 601711 "usual"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 601811
+@ウィズ
+すぐに終わりますし
+危険なことでもありませんから…
+この辺りは周囲に民家もないですし…
+
+# label "select_label_end"
+# envbody 1701 8 0
+# effectpattern 1701 1 8
+# effectstart 1701
+# textboxarrow 0 3
+# chara 601811
+# face 107 "usual"
+@ウィズ
+…………
+
+# effectskip 1701
+# textboxarrow 0 3
+# chara 601811
+# voice 6018 "wizu_0003"
+# face 107 "happy"
+@ウィズ
+…はい、終わりました！
+ありがとうございます
+
+# emotionbody 5100 2 0 30 185
+# effectpattern 5100 1 1
+# effectstart 5100
+# pos 0 3
+# alpha 0 1 0.5
+# alpha 601711 0 0.3
+# layer 0 2
+# layer 107 1
+# textboxarrow 0 2
+# chara 0
+# face 0 "serious"
+@デュリン
+今、なにしてたの？
+…まぁ、いいけど
+
+# textboxarrow 0 2
+# chara 0
+# voice 9999 "durin_0004"
+# face 0 "usual"
+@デュリン
+じゃあ、行きましょうか
+せっかく行き先がわかったのに
+間に合わなかった…じゃ意味ないわ！
+
+;;//暗転
+;;//第９話終了
+# fadeout "black" 2
+# waitandnext 2.1

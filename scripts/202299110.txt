@@ -1,0 +1,358 @@
+;;-----------------------------------------
+;;SEA夏2_11_0
+;;-----------------------------------------
+# script "lisp"
+# background "sea_fireworks"
+# bgmfile "bgm601_yukata_block" "BgmSecretlyEverAfter001" 0
+;;-----------------------------------------
+;;浴衣ミーミル
+# body 318
+# pos 318 3
+# scale 318 0.8 0
+# layer 318 5
+# mask 318 off
+# alpha 318 0 0
+;;浴衣ティルフィング
+# body 6101421
+# pos 6101421 3
+# scale 6101421 0.8 0
+# layer 6101421 2
+# mask 6101421 off
+# alpha 6101421 1 0
+;;浴衣マナナン
+# body 6504021
+# pos 6504021 5
+# scale 6504021 0.8 0
+# layer 6504021 3
+# alpha 6504021 0 0
+;;浴衣如意金箍棒
+# body 6203111
+# pos 6203111 4
+# scale 6203111 0.8 0
+# layer 6203111 3
+# alpha 6203111 0 0
+;;浴衣ミネルヴァ
+# body 6302511
+# pos 6302511 3
+# scale 6302511 0.7 0
+# layer 6302511 4
+# alpha 6302511 0 0
+;;浴衣七支刀
+# body 6105111
+# pos 6105111 3
+# scale 6105111 0.8 0
+# layer 6105111 2
+# mask 6105111 off
+# alpha 6105111 0 0
+;;-----------------------------------------
+;;シナリオカット
+# imageset 1 "SEAsummer_001"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;日記閉じる
+# imageset 2 "diary_close"
+# imagealpha 2 0 0
+# imagescale 2 1 0
+# imagelayer 2 5
+;;紙
+# imageset 4 "SEA_diary_bg"
+# imagealpha 4 0 0
+# imagelayer 4 1
+# imagescale 4 1.2 0
+;;1枚め
+# imageset 5 "SEAsummer_diary_201"
+# imagealpha 5 0 0
+# imagescale 5 1 0
+# imagelayer 5 3
+;;2枚め
+# imageset 6 "SEAsummer_diary_202"
+# imagealpha 6 0 0
+# imagescale 6 1 0
+# imagelayer 6 3
+;;3枚め
+# imageset 7 "SEAsummer_diary_203"
+# imagealpha 7 0 0
+# imagescale 7 1 0
+# imagelayer 7 3
+;;4枚め
+# imageset 8 "SEAsummer_diary_204"
+# imagealpha 8 0 0
+# imagescale 8 1 0
+# imagelayer 8 3
+;;-----------------------------------------
+;;背景：花火が上がっている
+# sedelay "bgm601_yukata_on" 1
+# textwindow "close"
+# fadein "black" 1
+# face 6101421 "usual"
+# waitandnext 1
+
+# voice 610141 "tyrufing_7th_0002"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ティルフィング
+もう一つの理由…
+お気づきですか？
+
+;;選択肢
+# select "もちろん！" "select_label_01" "分からない…" "select_label_02"
+もう一つの理由…
+お気づきですか？
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 6101421 "shy"
+# textboxarrow 0 2
+@ティルフィング
+そ、そうですかっ
+何だか、恥ずかしいです…
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# voice 610141 "tyrufing_7th_0004"
+# face 6101421 "normal"
+# textboxarrow 0 2
+@ティルフィング
+仕方のないマスターですね
+ふふっ
+
+;;ティルフィングシナリオカット表示
+# se "SE_0605"
+# fadeout "white" 1.8
+# waitandnext 1.8
+
+# label "select_label_end"
+# fadein "white" 2
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# frameout 0 0
+# alpha 6101421 0 0
+# textwindow "close"
+# waitandnext 2
+
+# textwindow "nomal"
+# textboxarrow 0 0
+@ティルフィング
+ミーミルのことも、
+「揺らぎ」のことも
+ありましたが…
+
+@ティルフィング
+本当は…私もたまにはマスターと
+お会いして、お話ししたかったんです
+
+@ティルフィング
+そのために浴衣も髪飾りも
+用意したんですから
+
+@ティルフィング
+朝、マスターに褒めていただいて
+嬉しかったです
+
+# voice 610141 "tyrufing_7th_0001"
+@ティルフィング
+マスター
+これからも――
+
+;;シナリオカット削除
+# imagealpha 1 0 1
+# framein 0 1
+# textwindow "close"
+# waitandnext 1
+
+;;皆が迫ってくる
+# voice 9917 "mimir_navikan_0058"
+# face 318 "angry"
+# alpha 318 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+マナナンさん、おやめ下さい…！
+
+# voice 650401 "manannan_ura_0005"
+# move 318 2 0.5
+# move 6504021 4 0.5
+# face 6504021 "happy"
+# alpha 6504021 1 0.3
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+私も夜空に打ち上がりたいっ
+喜劇的に愉快だと思うよっ
+
+# voice 3025 "minerva_0012"
+# move 318 1 0.5
+# move 6504021 5 0.5
+# scale 6302511 0.8 0.5
+# face 6302511 "angry"
+# alpha 6302511 1 0.3
+# textboxarrow 0 2
+@ミネルヴァ
+いくらキル姫でも無茶が過ぎます！
+
+# alpha 318 0 0.3
+# alpha 6504021 0 0.3
+# alpha 6302511 0 0.3
+# face 6105111 "normal"
+# alpha 6105111 1 0.3
+# textboxarrow 0 2
+@七支刀
+でも、それがマナナンさんの願いなら
+何か良い方法がないか、わたくし、
+精一杯考えてみます！
+
+# move 6105111 2 0.5
+# face 6203111 "normal"
+# alpha 6203111 1 0.3
+# textboxarrow 0 3
+@如意金箍棒
+あらあら…
+はしゃぐのもほどほどにね
+
+# alpha 6105111 0 0.3
+# alpha 6203111 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# face 6101421 "usual"
+# alpha 6101421 1 0.3
+# waitandnext 0.5
+
+# voice 9917 "mimir_navikan_0016"
+# move 318 2 0.3
+# face 318 "surprise"
+# alpha 318 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+ああっ…
+ティルフィング様、
+申し訳ございません…！
+
+;;ミーミルがティルフィングにぶつかる
+# se "SE_6239"
+# shake 0 0.5
+# move 6101421 4 0.3
+# textboxarrow 0 0
+# waitandnext 1
+
+# voice 610141 "tyrufing_7th_0025"
+# face 6101421 "surprise"
+# textboxarrow 0 3
+@ティルフィング
+きゃっ…
+
+;;ティルフィングとミーミルがマスターにぶつかる
+# se "SE_6239"
+# shake 1 0.5
+# scale 318 1.1 0.3
+# scale 6101421 1.1 0.3
+# textboxarrow 0 0
+# waitandnext 1.5
+
+# voice 610141 "tyrufing_7th_0031"
+# face 6101421 "sad"
+# textboxarrow 0 3
+@ティルフィング
+ごめんなさい、マスター
+
+# voice 9917 "mimir_navikan_0048"
+# textboxarrow 0 1
+@ミーミル
+お怪我はありませんか、
+マスター様っ
+
+;;花火が上がっている暗転
+# se "SE_0605"
+# fadeout "white" 1.5
+# waitandnext 1.8
+
+;;背景：日記帳
+# background "diary"
+# alpha 318 0 0
+# alpha 6101421 0 0
+# textwindow "close"
+# waitandnext 2.2
+
+;;フレーム・テキストウィンドウを外す
+#setnextbgmblock 1
+# frameout 0 0
+# se "SE_6165"
+# fadein "white" 1
+# waitandnext 2
+
+;;紙を表示
+# imagealpha 4 0.7 1
+# imagepos 4 0 0
+# waitandnext 1
+
+;;1枚目を表示
+# se "SE_6175"
+# imagealpha 5 1 2
+# imagepos 5 0 -900
+# waitandnext 1
+
+;;1枚目を上に
+# imagemoveto 5 0 700 25
+# waitandnext 22
+
+;;1枚目を消す
+# imagealpha 5 0 2
+# waitandnext 2
+
+;;2枚目を表示
+# se "SE_6166"
+# imagealpha 6 1 2
+# imagepos 6 0 -800
+# waitandnext 1
+
+;;2枚目を上に
+# imagemoveto 6 0 700 25
+# waitandnext 22
+
+;;2枚目を消す
+# imagealpha 6 0 2
+# waitandnext 2
+
+;;3枚目を表示
+# se "SE_6166"
+# imagealpha 7 1 2
+# imagepos 7 0 -800
+# waitandnext 1
+
+;;3枚目を上に
+# imagemoveto 7 0 700 26
+# waitandnext 23
+
+;;3枚目を消す
+# imagealpha 7 0 2
+# waitandnext 2
+
+;;4枚目を表示
+# se "SE_6166"
+# imagealpha 8 1 2
+# imagepos 8 0 -700
+# waitandnext 1
+
+;;4枚目を真ん中で止め
+# imagemoveto 8 0 0 15
+# waitandnext 17
+
+;;4枚目と紙を消す
+# sestop "SE_6175"
+# imagemoveto 8 400 0 3
+# imagealpha 8 0 2
+# waitandnext 2
+
+# imagealpha 4 0 2
+# waitandnext 2
+
+;;日記帳を閉じる
+# se "SE_6167"
+# imagealpha 2 1 2
+# imagepos 2 0 0
+# waitandnext 4
+
+# fadeout "black" 2
+# waitandnext 2

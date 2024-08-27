@@ -1,0 +1,768 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第５章
+;;第1話　タイトル：中心部防衛戦
+;;5_1_8
+;;スクリプト最後の背景：綺麗な室内
+;;-----------------------------------------
+# script "lisp"
+# background "006_church"
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 2
+# alpha 3201911 0 0
+# mask 3201911 off
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;ミョルニル(キラーメイル)
+# body 1200111
+# pos 1200111 3
+# scale 1200111 0.8 0
+# layer 1200111 2
+# alpha 1200111 0 0
+# mask 1200111 off
+;;マサムネ(キラーメイル)
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# layer 1100111 2
+# alpha 1100111 0 0
+# mask 1100111 off
+;;アスクレピオス(キラーメイル)
+# body 1600111
+# pos 1600111 3
+# scale 1600111 0.8 0
+# layer 1600111 2
+# alpha 1600111 0 0
+# mask 1600111 off
+;;ペルーン・聖鎖・マスティマ
+# body 3200811
+# pos 3200811 3
+# scale 3200811 0.8 0
+# layer 3200811 2
+# alpha 3200811 0 0
+# mask 3200811 off
+;;神令フォルカス
+# body 5301811
+# pos 5301811 3
+# scale 5301811 0.8 0
+# layer 5301811 2
+# alpha 5301811 0 0
+# mask 5301811 off
+;;幻獣ピナーカ
+# body 3400211
+# pos 3400211 3
+# scale 3400211 0.8 0
+# layer 3400211 2
+# alpha 3400211 0 0
+# mask 3400211 off
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;霧
+# imageset 2 "kiri_03"
+# imagescale 2 2.5 0
+# imagealpha 2 0 0
+# imagepos 2 0 0
+# imagelayer 2 4
+;;-----------------------------------------
+;;第1話　タイトル：中心部防衛戦
+;;//背景：綺麗な室内
+# move 3200811 3 0
+# face 3200811 "normal"
+# alpha 3200811 1 0
+# mask 3200811 off
+# textflame 1 1
+# textboxarrow 0 2
+@ペルーン
+ここで少し待ってるんだよ！
+変なことしたらビシビシ指導する
+からね！
+
+;;//ペルーンが立ち去る
+# se "SE_0740"
+# textwindow "close"
+# alpha 3200811 0 0.5
+# waitandnext 0.5
+
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# move 1600111 4 0
+# face 1600111 "normal"
+# alpha 1600111 1 0.5
+# mask 1600111 on
+# textboxarrow 0 3
+# textwindow "normal"
+@アスクレピオス
+予定とはちょっと違ったけれど
+ここのトップに会えるようだね
+
+# voice 11001 "masamunem_0002"
+# textboxarrow 0 1
+@マサムネ
+あんなに煽らなくても
+良かったんじゃないか？
+
+# voice 16001 "asklepiosm_0007"
+# textboxarrow 0 3
+@アスクレピオス
+交渉術だよ
+それよりも…
+
+# voice 9935 "vang_0048"
+# alpha 1100111 0 0.5
+# move 211 2 0
+# face 211 "normal"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+@ヴァング
+色々と聞きたいことがあるんだろ？
+カミト、今のうちに情報交換と
+いこうぜ
+
+# textboxarrow 0 3
+@アスクレピオス
+話が早くて助かるよ
+ヴァング、だっけ？
+僕達のことは？
+
+# voice 9935 "vang_0003"
+# face 211 "usual"
+# textboxarrow 0 1
+@ヴァング
+カミトから聞いてる
+まさか、あのとき襲ってきた魔獣達が
+キラーメイルだったとはな
+
+# voice 9936 "kamito_0002"
+# alpha 1600111 0 0.5
+# move 210 4 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+@カミト
+兄貴は、今までどうしてたのっ？
+
+# face 211 "angry"
+# textboxarrow 0 1
+@ヴァング
+俺は…くそっ！
+
+# voice 9936 "kamito_0023"
+# face 210 "surprise"
+# textboxarrow 0 3
+@カミト
+兄貴？
+
+# voice 9935 "vang_0033"
+# face 211 "irregular"
+# textboxarrow 0 1
+@ヴァング
+わりぃ…
+思い出したら腹が立ってきやがった
+
+# textboxarrow 0 1
+@ヴァング
+お前を逃がした後、
+結局、シユウを連れて
+逃げるしかなかったんだ…
+
+# face 210 "normal"
+# textboxarrow 0 3
+@カミト
+それは仕方ないよ…
+逃げてくれて本当に良かった
+
+# textboxarrow 0 1
+@ヴァング
+ったく…
+そういや、そこのお前に危うく
+殺されかけたぜ
+
+# voice 12001 "mjolnirm_0031"
+# alpha 210 0 0.5
+# move 1200111 4 0
+# face 1200111 "normal"
+# alpha 1200111 1 0.5
+# mask 1200111 on
+# textboxarrow 0 3
+@ミョルニル
+それは…悪かったな
+
+# voice 11001 "masamunem_0031"
+# alpha 1200111 0 0.5
+# move 1100111 4 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 3
+@マサムネ
+すまない
+分かって欲しいんだが、
+俺達は魔獣化していた間…
+
+# voice 9935 "vang_0003"
+# face 211 "normal"
+# textboxarrow 0 1
+@ヴァング
+ああ、そりゃ別にいいんだ
+恨んでねえよ
+
+# face 211 "sad"
+# textboxarrow 0 1
+@ヴァング
+しばらくシユウと適当な建物に
+隠れてたんだが、こいつが腹減った
+ってうるさくてなぁ…
+
+# alpha 1100111 0 0.5
+# move 3201911 4 0
+# face 3201911 "normal"
+# alpha 3201911 1 0.5
+# mask 3201911 on
+# textboxarrow 0 3
+@シユウ
+ふっ？
+ふぁんふ、ひふふほほんはは？
+
+# voice 350171 "grimoire_ge_0010"
+# alpha 211 0 0.5
+# move 3501711 2 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 1
+@グリモワール
+食べながら喋るんじゃないわよ！
+キミは食事に集中してなさい
+
+# textboxarrow 0 3
+@シユウ
+ふぁふぁっふぁ
+
+# textboxarrow 0 1
+@グリモワール
+灼かれたいの…？
+
+# voice 9936 "kamito_0008"
+# alpha 3201911 0 0.5
+# move 210 4 0
+# face 210 "happy"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+@カミト
+あ、はは…
+そんなに怒らないで
+
+# alpha 3501711 0 0.5
+# move 211 2 0
+# face 211 "irregular"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+@ヴァング
+で、カミトとも合流しねぇと
+いけなかったから家に向かったんだ
+
+# voice 9936 "kamito_0023"
+# face 210 "surprise"
+# textboxarrow 0 3
+@カミト
+あれ？
+でも、兄貴は帰ってなかったよね…
+
+# voice 9935 "vang_0003"
+# textboxarrow 0 1
+@ヴァング
+ああ、そうだ
+途中であのばかでかい化け物が
+現れやがってな
+
+# textboxarrow 0 1
+@ヴァング
+シユウを抱えて逃げ回ってるうちに
+都市部の方に来ちまった
+
+# textboxarrow 0 1
+@ヴァング
+そこでシユウに飯食わせながら
+幾らか情報を集めていたんだ
+そのときにピナーカと出会った
+
+# voice 340021 "pinaka_ge_0004"
+# alpha 210 0 0.5
+# move 3400211 4 0
+# face 3400211 "normal"
+# alpha 3400211 1 0.5
+# mask 3400211 on
+# textboxarrow 0 3
+@ピナーカ
+シユウと語り合って、オイラ達は
+心から分かり合えたんだよ！
+
+# voice 9935 "vang_0045"
+# face 211 "normal"
+# textboxarrow 0 1
+@ヴァング
+あんな感じでついてきやがった
+
+# alpha 3400211 0 0.5
+# move 210 4 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+@カミト
+そっか…
+でも、何でユグドラシルまで？
+
+# face 211 "irregular"
+# textboxarrow 0 1
+@ヴァング
+それがよぉ…
+オルフェって奏官がキル姫を
+使って接触してきたんだ
+
+# face 210 "surprise"
+# textboxarrow 0 3
+@カミト
+オルフェさん！？
+
+# textboxarrow 0 1
+@ヴァング
+カミトがユグドラシルに
+向かったって聞いてな
+半信半疑だったが…
+
+# face 211 "usual"
+# textboxarrow 0 1
+@ヴァング
+上手いこと中心部に入って
+ユグドラシルに向かってみたら、
+本当に会えたってわけだ
+
+# voice 9936 "kamito_0004"
+# face 210 "happy"
+# textboxarrow 0 3
+@カミト
+オルフェさんのお陰で兄貴と
+合流できたんだねっ
+あれ？そういえば…
+
+# voice 310231 "ascalon_a_0028"
+# alpha 211 0 0.5
+# alpha 210 0 0.5
+# move 3102311 2 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# move 3501711 4 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+@アスカロン
+ピサールがいませんね？
+
+# voice 350171 "grimoire_ge_0028"
+# textboxarrow 0 3
+@グリモワール
+ブリューナクとデュランダルも
+いないわよ
+どこに行ったの？
+
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 1
+# move 1600111 4 0
+# face 1600111 "normal"
+# alpha 1600111 1 0.5
+# mask 1600111 on
+@マサムネ
+ブリューナクとデュランダルなら、
+魔獣を捜して外をうろうろしている
+みたいだが…
+
+# textboxarrow 0 3
+@アスクレピオス
+ピサールはいつの間にか姿を消して
+いたね…ふむ…
+
+;;カミト（独白）
+# voice 9936 "kamito_0030"
+# alpha 1100111 0 0.5
+# alpha 1600111 0 0.5
+# move 211 2 0
+# face 211 "usual"
+# alpha 211 1 0.5
+# mask 211 on
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 0
+# textwindow "moya"
+@カミト
+オルフェさんに報告に戻ったのかな？
+何だか違和感があるけど…
+
+# voice 9935 "vang_0048"
+# face 211 "normal"
+# textboxarrow 0 1
+# textwindow "normal"
+@ヴァング
+俺の方はこんなもんだ
+で、カミト…
+お前の方だが
+
+# face 210 "irregular"
+# textboxarrow 0 3
+@カミト
+こっちに来るまでの間に話した
+通りだよ
+
+# textboxarrow 0 3
+@カミト
+ラグナロク機関のことも、
+キラーメイルのことも、
+兄貴にしか話してない
+
+# textboxarrow 0 3
+@カミト
+ここの奏官達に話すべきかな？
+
+# face 211 "irregular"
+# textboxarrow 0 1
+@ヴァング
+…どうだろうな
+その「ディスラプター」も含め
+すぐには信じられねぇ話だ
+
+# voice 9936 "kamito_0003"
+# textboxarrow 0 3
+@カミト
+うん…
+だから今まで黙ってたんだけど…
+
+# bgmfile "bgm409" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 1
+@ヴァング
+それより、もっと重要なことが
+あるだろ
+
+# voice 9936 "kamito_0023"
+# face 210 "surprise"
+# textboxarrow 0 3
+@カミト
+えっ…？
+あ…
+
+# face 210 "normal"
+# textboxarrow 0 3
+@カミト
+フォルカスのこと…だよね…
+
+# textboxarrow 0 1
+@ヴァング
+お前、ユグドラシルで会ったっていう
+フォルカスが…
+
+# textboxarrow 0 1
+@ヴァング
+本当に人違い…っつうか
+キル姫違いだったと思ってんのか？
+
+# voice 9936 "kamito_0036"
+# face 210 "sad"
+# textboxarrow 0 3
+@カミト
+それは…
+
+# voice 9935 "vang_0048"
+# textboxarrow 0 1
+@ヴァング
+カミト
+お前のバイブスはどう感じたんだ？
+
+# textboxarrow 0 1
+@ヴァング
+フォルカスと会ったとき、
+どう感じたんだよ！
+それが一番大事だろうが！
+
+# face 210 "normal"
+# textboxarrow 0 3
+@カミト
+僕は…
+
+;;//回想シーン
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.8
+
+# background "command_logo_tree"
+# imagealpha 2 0.5 0
+# alpha 211 0 0
+# alpha 210 0 0
+# move 5301811 3 0
+# face 5301811 "normal"
+# alpha 5301811 1 0
+# mask 5301811 off
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：ユグドラシルの麓
+# textboxarrow 0 2
+# textwindow "normal"
+@フォルカス
+共鳴無き世界へ誘うは、常闇の腕
+世界を支えし大いなる大樹の神徒、
+フォルカス・神令・ヘル
+
+# textboxarrow 0 2
+@フォルカス
+ここに顕現しました
+
+# alpha 5301811 0 0.5
+# move 210 3 0
+# face 210 "happy"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+フォルカス！
+
+;;//回想終了
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "006_church"
+# alpha 210 0 0
+# move 211 2 0
+# face 211 "irregular"
+# alpha 211 1 0
+# mask 211 on
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0
+# mask 210 on
+# imagealpha 2 0 0
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：綺麗な室内
+# textboxarrow 0 3
+# textwindow "normal"
+@カミト
+僕は…フォルカスだと思った
+僕のバイブスとキラーズが適合した
+あのフォルカスだって
+
+# voice 9936 "kamito_0015"
+# textboxarrow 0 3
+@カミト
+でも…
+
+# bgm "stop"
+# face 211 "angry"
+# textboxarrow 0 1
+@ヴァング
+でも、じゃねえ！
+
+# voice 9936 "kamito_0024"
+# face 210 "surprise"
+# textboxarrow 0 3
+@カミト
+！？
+
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 1
+@ヴァング
+その直感で十分だ
+もう一度、フォルカスと会って
+ちゃんと話をしろ！
+
+# voice 9936 "kamito_0051"
+# textboxarrow 0 3
+@カミト
+兄貴…
+
+# voice 9936 "kamito_0003"
+# face 210 "irregular"
+# textboxarrow 0 3
+@カミト
+うん
+そうだね
+やっぱり納得できないよ
+
+# textboxarrow 0 3
+@カミト
+もう一度、ユグドラシルに向かって
+フォルカスと話したい
+
+# voice 9935 "vang_0021"
+# face 211 "normal"
+# textboxarrow 0 1
+@ヴァング
+そうだ
+その意気だぜ！
+
+# face 211 "irregular"
+# textboxarrow 0 1
+@ヴァング
+となると…
+あのヒョウハってキル姫を
+どうにかしねえとなあ
+
+# textboxarrow 0 3
+@カミト
+ヒョウハだけじゃないよ…
+どこかに去っていった五人も
+いるんだ
+
+# voice 9936 "kamito_0018"
+# textboxarrow 0 3
+@カミト
+姿はよく見えなかったけど、
+五人ともヒョウハのようなキル姫
+だとしたら…
+
+# voice 9935 "vang_0014"
+# face 211 "surprise"
+# textboxarrow 0 1
+@ヴァング
+おいおい
+そりゃ、とんでもねぇ厄介ごとだな
+あと五人もいるのか
+
+# face 211 "irregular"
+# textboxarrow 0 1
+@ヴァング
+そいつらが戻ってきたら厄介だぜ
+そうなる前にかたつけねぇと――
+
+# bgm "stop"
+# alpha 211 0 0.5
+# alpha 210 0 0.5
+# move 1600111 3 0
+# face 1600111 "normal"
+# alpha 1600111 1 0.5
+# mask 1600111 off
+# textboxarrow 0 2
+@アスクレピオス
+静かに
+…ようやくお呼びのようだよ
+
+;;//ペルーンが入ってくる
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+# se "SE_0740"
+# textwindow "close"
+# alpha 1600111 0 0.5
+# move 3200811 3 0
+# face 3200811 "normal"
+# alpha 3200811 1 0.5
+# mask 3200811 off
+# waitandnext 0.5
+
+# voice 320081 "perun_t_0001"
+# textboxarrow 0 2
+# textwindow "normal"
+@ペルーン
+大人しくしてたっ？
+マスターがキミ達と会ってくれるから
+あたしについてきて！
+
+# textboxarrow 0 2
+@ペルーン
+ただし、そこの奏官二人だけだよ
+他はここで待機しててねっ
+
+# voice 9935 "vang_0034"
+# alpha 3200811 0 0.5
+# move 211 2 0
+# face 211 "normal"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+# move 210 4 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+@ヴァング
+おう
+そんじゃ、行こうぜカミト
+
+# voice 9936 "kamito_0003"
+# textboxarrow 0 3
+@カミト
+うん、兄貴
+
+# voice 310231 "ascalon_a_0001"
+# alpha 211 0 0.5
+# move 3102311 2 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+@アスカロン
+気をつけて下さいね
+マスター
+
+# face 210 "happy"
+# textboxarrow 0 3
+@カミト
+大丈夫
+話をしてくるだけだから

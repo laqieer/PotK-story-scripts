@@ -1,0 +1,888 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第3話　タイトル：理想に殉じる者達よ
+;;3_12_3
+;;スクリプト最後の背景：地下水路
+;;-----------------------------------------
+# script "lisp"
+# background "underground_waterway"
+# bgmfile "bgm411" "BgmIntegralNoahBattle001" 0
+;;-----------------------------------------
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 2
+# alpha 5101431 0 0
+# mask 5101431 off
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;ダモクレス
+# body 103511
+# pos 103511 3
+# scale 103511 0.8 0
+# layer 103511 2
+# alpha 103511 0 0
+# mask 103511 off
+;;ネス
+# body 602011
+# pos 602011 3
+# scale 602011 0.8 0
+# layer 602011 2
+# alpha 602011 0 0
+# mask 602011 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;ケラウノス
+# body 500131
+# pos 500131 3
+# scale 500131 0.8 0
+# layer 500131 3
+# alpha 500131 0 0
+# mask 500131 off
+;;アポロン
+# body 400331
+# pos 400331 3
+# scale 400331 0.8 0
+# layer 400331 2
+# alpha 400331 0 0
+# mask 400331 off
+;;テュルソス
+# body 600321
+# pos 600321 3
+# scale 600321 0.8 0
+# layer 600321 2
+# alpha 600321 0 0
+# mask 600321 off
+;;ブリューナク
+# body 500721
+# pos 500721 3
+# scale 500721 0.8 0
+# layer 500721 2
+# alpha 500721 0 0
+# mask 500721 off
+;;パラシュ・擬彩
+# body 199
+# pos 199 3
+# scale 199 0.8 0
+# layer 199 2
+# alpha 199 0 0
+# mask 199 off
+;;ブラフマーストラ
+# body 500421
+# pos 500421 3
+# scale 500421 0.8 0
+# layer 500421 2
+# alpha 500421 0 0
+# mask 500421 off
+;;ヴァジュラ
+# body 500531
+# pos 500531 3
+# scale 500531 0.8 0
+# layer 500531 3
+# alpha 500531 0 0
+# mask 500531 off
+;;プタハ
+# body 601411
+# pos 601411 3
+# scale 601411 0.8 0
+# layer 601411 2
+# alpha 601411 0 0
+# mask 601411 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+# se "SE_4000"
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+せいっ！
+
+# se "SE_4830"
+# alpha 196 0 0.5
+# move 103511 3 0
+# face 103511 "angry"
+# alpha 103511 1 0.5
+# mask 103511 off
+# textboxarrow 0 2
+# voice 1035 "damocles_battle_0002"
+@ダモクレス
+うりゃーっ
+
+# alpha 103511 0 0.5
+# move 400331 3 0
+# face 400331 "angry"
+# alpha 400331 1 0.5
+# mask 400331 off
+# textboxarrow 0 2
+# voice 4003 "aporon_0013"
+@アポロン
+このこの～っ！
+どんだけ出てくるんだよ！
+
+# alpha 400331 0 0.5
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# voice 1036 "ragnarok_battle_0005"
+@ラグナロク
+キリがないわ…
+このままだと
+
+# alpha 103611 0 0.5
+# move 199 3 0
+# face 199 "angry"
+# alpha 199 1 0.5
+# mask 199 off
+# textboxarrow 0 2
+# voice 520043 "parashu_iz_0007"
+@パラシュ
+もう遅い…
+ボクが全てを散らせる！
+
+;;//パラシュが斧を振り下ろす
+# se "SE_4100"
+# waitandnext 0.5
+
+# alpha 199 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+やらせるもんですかぁぁっ！
+
+# se "SE_9021"
+# textwindow "close"
+# leftout 196 0.5
+# waitandnext 0.5
+
+;;//アルマスがパラシュを止める
+# alpha 196 0 0
+# move 199 2 0
+# face 199 "normal"
+# alpha 199 1 0.5
+# mask 199 on
+# waitandnext 0.8
+
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0
+# mask 196 on
+# rightin 196 0.3
+# waitandnext 0.3
+
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 520043 "parashu_iz_0039"
+@パラシュ
+大した執念だね
+それだけは認めてあげるよ
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0011"
+@アルマス
+それはどうも…！
+ついでに天上世界の破壊も
+やめてくれない？
+
+# textboxarrow 0 1
+@パラシュ
+ありえないかな
+“潰えぬ理想”を持つ者だけが
+新世界に至るんだ
+
+# textboxarrow 0 3
+@アルマス
+みんながみんな、
+あなたみたく理想を追求してる
+わけじゃないでしょっ
+
+# textboxarrow 0 1
+# voice 520043 "parashu_iz_0027"
+@パラシュ
+だからダメなんだよ
+理想郷を実現できるのは
+自分の中に法を持つ者だけだ
+
+# textboxarrow 0 1
+@パラシュ
+他者と比べることのない
+自分だけの絶対的な理想
+それが本物の法だよ
+
+# textboxarrow 0 1
+@パラシュ
+それが無い者は等しく新世界の
+礎になるべきだね
+
+# alpha 196 0 0.5
+# move 602011 4 0
+# face 602011 "angry"
+# alpha 602011 1 0.5
+# mask 602011 on
+# textboxarrow 0 3
+# voice 6020 "ness_0034"
+@ネス
+そんなことはありません！
+法とは、規律とは、みんなが
+幸せになるためにあるんです！
+
+# textboxarrow 0 3
+@ネス
+みんなで決めて、みんなで守って
+いくから価値があるんですよ！
+
+# textboxarrow 0 1
+# voice 520043 "parashu_iz_0007"
+@パラシュ
+欺瞞だね
+「みんな」なんてものは存在しない
+
+# textboxarrow 0 1
+@パラシュ
+結局は誰かが作ったものに
+盲目的に従っているだけだよ
+
+# textboxarrow 0 1
+@パラシュ
+そんな者達が「法」を失ったら
+どうなった？
+
+# textboxarrow 0 1
+@パラシュ
+自分を律することのできない者達は
+何をした？自分で考えない者達は
+どこに逃げた？
+
+# textboxarrow 0 1
+@パラシュ
+キミ達が守ろうとしているものは
+本当に価値があるものなのかい？
+
+# face 602011 "sad"
+# textboxarrow 0 3
+# voice 6020 "ness_0015"
+@ネス
+ううっ…
+
+# alpha 199 0 0.5
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0002"
+@ラグナロク
+落ち込まないで、ネス
+彼女の言っていることだって
+極論よ
+
+# textboxarrow 0 1
+@ラグナロク
+価値があるかどうかなんて、
+誰か一人の基準で決めて良い
+ことじゃない
+
+# alpha 103611 0 0.5
+# alpha 602011 0 0.5
+# move 199 2 0
+# face 199 "normal"
+# alpha 199 1 0.5
+# mask 199 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0004"
+@アルマス
+そうよ！
+そもそも…価値がないと守っちゃ
+いけないっていうの！？
+
+;;//アルマスがパラシュを突き飛ばす
+# se "SE_4601"
+# textwindow "close"
+# move 196 3 0.2
+# waitandnext 0.2
+
+# move 199 1 0.1
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# move 199 2 0.5
+# move 196 4 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+無駄でも無価値でも、
+存在してたって良いじゃない！
+
+# textboxarrow 0 3
+@アルマス
+パラシュ、あなたは絶・止めて――
+
+# textwindow "close"
+# alpha 199 0 0.5
+# alpha 196 0 0.5
+# waitandnext 0.5
+
+;;//ブラフマーストラが突っ込んでくる
+# se "SE_9021"
+# move 500421 3 0
+# face 500421 "normal"
+# alpha 500421 1 0
+# mask 500421 off
+# rightin 500421 0.5
+# waitandnext 0.5
+
+# face 500421 "happy"
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 5004 "burafumasutora_0020"
+@ブラフマーストラ
+ど派手にいっちゃうよ～！！
+
+# se "SE_4909"
+# waitandnext 0.5
+
+;;//爆発音
+;;//ここから炎上演出あれば
+# se "SE_5593"
+# sedelay "SE_4820" 0.8
+# sedelay "SE_0753" 1.5
+# envbody 1000 7 0
+# effectstart 1000
+# waitandnext 0.5
+
+# alpha 500421 0 0.5
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0035"
+@アルマス
+ええっ…！？
+何なの、今のっ…
+
+# alpha 196 0 0.5
+# move 500131 2 0
+# face 500131 "amazed"
+# alpha 500131 1 0.5
+# mask 500131 on
+# textboxarrow 0 1
+# move 602011 4 0
+# face 602011 "worry"
+# alpha 602011 1 0.5
+# mask 602011 on
+# voice 5001 "keraunosu_0022"
+@ケラウノス
+ブラフマーストラの突撃で
+辺り一面火の海だよ
+これはまずいな～…
+
+# textboxarrow 0 3
+@ネス
+水蒸気が上がって…
+周りがよく見えませんっ
+
+# alpha 500131 0 0.5
+# alpha 602011 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+地下水路なんだから、水なら
+たくさんあるでしょっ
+すぐに火を消せないのっ？
+
+# move 500721 2 0
+# face 500721 "normal"
+# alpha 500721 1 0.5
+# mask 500721 on
+# textboxarrow 0 1
+# move 196 4 0.5
+# mask 196 on
+# voice 5007 "buryunaku_0003"
+@ブリューナク
+すでに試行済みだ
+この炎は神性を宿している
+ただの水では消火不能
+
+# alpha 500721 0 0.5
+# move 103611 2 0
+# face 103611 "sad"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# voice 1036 "ragnarok_battle_0006"
+@ラグナロク
+ブラフマーストラの力ねっ
+これじゃ近づくことすらできない…
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0054"
+@アルマス
+どうすればいいのよっ…！
+
+# alpha 103611 0 0.5
+# alpha 196 0 0.5
+# move 600321 3 0
+# face 600321 "sad"
+# alpha 600321 1 0.5
+# mask 600321 off
+# textboxarrow 0 2
+# voice 6003 "tyurusosu_0031"
+@テュルソス
+あちゃ～…間に合わなかったか
+ごめんね
+
+# textboxarrow 0 2
+@テュルソス
+観念して色々話してくれたから、
+油断してたよ…
+
+# alpha 600321 0 0.5
+# move 400331 3 0
+# face 400331 "angry"
+# alpha 400331 1 0.5
+# mask 400331 off
+# textboxarrow 0 2
+# voice 4003 "aporon_0009"
+@アポロン
+も～っ
+しっかり見張っててよね～！
+
+;;//画面揺れ
+;;//地響き
+# se "SE_5223"
+# shake 0 1
+# waitandnext 1
+
+# alpha 400331 0 0.5
+# move 103611 1 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# move 500131 3 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 on
+# move 196 5 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0036"
+@アルマス
+わっ…！
+この揺れ…まさかっ？
+
+# face 103611 "usual"
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0022"
+@ラグナロク
+パラシュが地盤の要を砕いた？
+でも、その割には小さな揺れね
+
+# textboxarrow 0 2
+# voice 5001 "keraunosu_0003"
+@ケラウノス
+ブラフマーストラの突撃が
+原因じゃないかな～
+
+# textboxarrow 0 2
+@ケラウノス
+あれで地盤にヒビが入ったのかもね
+これは撤退するしかないか～
+
+# textboxarrow 0 3
+@アルマス
+そんなっ…
+
+# face 103611 "normal"
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0003"
+@ラグナロク
+今は人々の避難を優先させましょう
+
+# face 196 "sad"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0026"
+@アルマス
+あと一歩だったのに…
+
+# alpha 103611 0 0.5
+# alpha 500131 0 0.5
+# alpha 196 0 0.5
+# move 602011 3 0
+# face 602011 "angry"
+# alpha 602011 1 0.5
+# mask 602011 off
+# textboxarrow 0 2
+@ネス
+皆さん！
+慌てず騒がず落ち着いて
+迅速に行動しましょう
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "underground_waterway"
+;;# sestop "SE_0753"
+# alpha 602011 0 0
+# move 199 2 0
+# face 199 "normal"
+# alpha 199 1 0
+# mask 199 on
+# move 500421 4 0
+# face 500421 "normal"
+# alpha 500421 1 0
+# mask 500421 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 520043 "parashu_iz_0013"
+@パラシュ
+ブラフマーストラ…
+どういうつもりかな？
+
+# face 500421 "sad"
+# textboxarrow 0 3
+# voice 5004 "burafumasutora_0037"
+@ブラフマーストラ
+あ痛たたた…
+何とか間に合ったね～
+
+# face 500421 "amazed"
+# textboxarrow 0 3
+# voice 5004 "burafumasutora_0024"
+@ブラフマーストラ
+あれ～？
+ヴァジュラってば…重傷系？
+
+# alpha 199 0 0.5
+# move 500531 2 0
+# face 500531 "angry"
+# alpha 500531 1 0.5
+# mask 500531 on
+# textboxarrow 0 1
+# voice 5005 "vajura_0008"
+@ヴァジュラ
+突撃をしかけてきたキミに…
+言われたくないね
+
+# alpha 500531 0 0.5
+# move 199 2 0
+# face 199 "angry"
+# alpha 199 1 0.5
+# mask 199 on
+# textboxarrow 0 1
+# voice 520043 "parashu_iz_0009"
+@パラシュ
+ボクの邪魔をするようなら…
+容赦しないよ
+
+# face 500421 "normal"
+# textboxarrow 0 3
+# voice 5004 "burafumasutora_0003"
+@ブラフマーストラ
+邪魔なんかしないよ～
+アタシだけ除け者にされるのは…
+勘弁って感じなだけ～
+
+# alpha 199 0 0.5
+# move 500531 2 0
+# face 500531 "sad"
+# alpha 500531 1 0.5
+# mask 500531 on
+# textboxarrow 0 1
+@ヴァジュラ
+キミもボロボロだね…
+無茶なことするから…
+
+# textboxarrow 0 3
+@ブラフマーストラ
+派手だったでしょ～？
+やっぱ…目立たないとね～
+
+;;//地響き
+# se "SE_5223"
+# se "SE_11575"
+# waitandnext 0.5
+
+# alpha 500531 0 0.5
+# move 199 2 0
+# face 199 "normal"
+# alpha 199 1 0.5
+# mask 199 on
+# textboxarrow 0 1
+# voice 520043 "parashu_iz_0007"
+@パラシュ
+どうやら…君の突撃で地盤にヒビが
+入ったみたいだ…
+手間が省けたよ
+
+# textboxarrow 0 3
+# voice 5004 "burafumasutora_0031"
+@ブラフマーストラ
+ごめん！
+パラシュの美味しいところ…
+アタシがもってっちゃった～？
+
+# textboxarrow 0 1
+# voice 520043 "parashu_iz_0032"
+@パラシュ
+構わないよ
+完全に崩壊させるには…
+まだ足りないからね
+
+# imageset 1 "integral_01"
+# imagealpha 1 0 0
+# imagelayer 1 6
+# face 199 "angry"
+# textboxarrow 0 1
+@パラシュ
+ボクが完全に…砕く！
+
+;;//パラシュが斧を振り上げる
+# se "SE_4101"
+# fadein "white" 0.5
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# background "bg_black"
+# waitandnext 1.2
+
+# alpha 500421 0 0
+# move 199 3 0
+# mask 199 off
+# textboxarrow 0 0
+# voice 5005 "vajura_0004"
+@ヴァジュラ
+いいねえ！
+最後に派手なのを…一つ頼むよ
+
+# voice 5004 "burafumasutora_0005"
+@ブラフマーストラ
+あっはは！
+アタシ達…新世界の礎になる系
+だよね～？
+
+@パラシュ
+怖じ気づいたのかい？
+
+# voice 5004 "burafumasutora_0028"
+@ブラフマーストラ
+それはないな～
+破壊の後には再生があるから
+
+@ブラフマーストラ
+輪廻転生しても…
+アタシ達、一蓮托生でしょ～？
+
+# voice 5005 "vajura_0005"
+@ヴァジュラ
+来世でも…キミとの腐れ縁が続くの？
+ハハハハ！
+それは…退屈しなそうだ
+
+@パラシュ
+…来世でも、
+ボクは理想を追い求め続けるよ
+
+@パラシュ
+君達も理想を追うのであれば、
+どこかで巡り会えるかもね
+
+# voice 5004 "burafumasutora_0005"
+@ブラフマーストラ
+あっはは！
+そのときはアタシがちゃ～んと
+導いてあげるよ！
+
+# voice 5005 "vajura_0003"
+@ヴァジュラ
+そのときは…一杯飲もうや
+
+# voice 520043 "parashu_iz_0007"
+@パラシュ
+考えておくよ
+
+;;//パラシュが斧を振り下ろす
+# se "SE_4100"
+# bgm "stop"
+# waitandnext 0.5
+
+# background "underground_waterway"
+# textwindow "close"
+;;//剣戟音
+;;//ティルフィングがパラシュを止める
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 1
+# imagealpha 1 0 0
+# waitandnext 0.5
+
+# textwindow "nomal"
+# face 199 "surprise"
+# textboxarrow 0 1
+# voice 520043 "parashu_iz_0022"
+@パラシュ
+！？
+
+# bgmfile "bgm409" "BgmIntegralNoahEvent" 0
+# alpha 199 0 0.5
+# move 5101431 3 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+# voice 510143 "tyrufing_iz_0027"
+@ティルフィング
+やはり、戻ってきて正解でした
+
+# move 5101431 2 0.5
+# mask 5101431 on
+# move 199 4 0
+# face 199 "angry"
+# alpha 199 1 0.5
+# mask 199 on
+# textboxarrow 0 3
+@パラシュ
+ティルフィング…！
+どうして邪魔をするんだ！？
+ボクは理想を――
+
+# face 5101431 "angry"
+# textboxarrow 0 1
+# voice 510143 "tyrufing_iz_0011"
+@ティルフィング
+いけません
+“擬彩されし不可逆世界”
+《インテグラルノア》完遂のために
+
+# textboxarrow 0 1
+@ティルフィング
+アナタをここで失うわけには
+いかないんです
+
+# textboxarrow 0 3
+@パラシュ
+だけどっ…
+
+;;//地響き
+# se "SE_5223"
+# se "SE_11575"
+# waitandnext 0.5
+
+# face 5101431 "normal"
+# textboxarrow 0 1
+# voice 510143 "tyrufing_iz_0003"
+@ティルフィング
+もう十分です
+じきにここの地盤は崩れます
+
+# textboxarrow 0 1
+@ティルフィング
+この地での選定は終わりました
+いきましょう
+
+# alpha 5101431 0 0.5
+# alpha 199 0 0.5
+# move 500531 2 0
+# face 500531 "angry"
+# alpha 500531 1 0.5
+# mask 500531 on
+# textboxarrow 0 1
+# move 500421 4 0
+# face 500421 "normal"
+# alpha 500421 1 0.5
+# mask 500421 on
+@ヴァジュラ
+ちょっと待ちなよ…！
+せっかく…良い雰囲気だったってのに
+
+# textboxarrow 0 3
+# voice 5004 "burafumasutora_0007"
+@ブラフマーストラ
+横から…かっ攫ってく系～？
+
+# alpha 500531 0 0.5
+# alpha 500421 0 0.5
+# move 5101431 2 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# textboxarrow 0 1
+# move 199 4 0
+# face 199 "normal"
+# alpha 199 1 0.5
+# mask 199 on
+@ティルフィング
+アナタ達には…
+ここで散っていただきます
+
+# textboxarrow 0 3
+# voice 520043 "parashu_iz_0009"
+@パラシュ
+ティルフィング
+それは…ボクの役目だ
+
+# textboxarrow 0 1
+@ティルフィング
+パラシュ…
+
+# se "SE_5206"
+# face 199 "angry"
+# textboxarrow 0 3
+@パラシュ
+二人は、ボクが散らせる…！
+
+# alpha 5101431 0 0.5
+# move 601411 2 0
+# face 601411 "mad"
+# alpha 601411 1 0.5
+# mask 601411 on
+# textboxarrow 0 1
+# voice 6014 "ptah_0011"
+@プタハ
+ならん
+ならんぞ、パラシュ

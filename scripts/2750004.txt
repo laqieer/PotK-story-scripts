@@ -1,0 +1,877 @@
+;;第３話
+;;//背景野原
+# script "lisp"
+# background "plain"
+# bgm "bgm002" 0
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# body 95
+# pos 95 5
+# scale 95 0.8 0
+# body 103211
+# pos 103211 1
+# alpha 103211 0 0
+# body 103311
+# pos 103311 1
+# scale 103311 0.8 0
+# body 601611
+# pos 601611 3
+# scale 601611 0.8 0
+# alpha 601611 0 0
+# layer 24 4
+# layer 103311 1
+# layer 95 2
+# layer 601611 3
+# face 95 "usual"
+# face 24 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 103311
+# voice 1033 "chloe_battle_0001"
+@クロエ
+せいっ！
+…シェイナが言っていたように
+モンスターが増えてきましたね
+
+# emotionbody 5801 9 95 50 250
+# effectpattern 5801 1 0
+# effectstart 5801
+# textboxarrow 0 3
+# voice 1032 "sakura_0027"
+# chara 103211
+# face 95 "irregular2"
+@サクラ
+もう疲れた～…
+少し休憩にしようよ～
+
+# effectskip 5801
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0032"
+# face 24 "normal"
+# chara 101411
+@ティルフィング
+そうですね
+もうじき日も暮れますから
+野営できそうなところを探しましょう
+
+;;//背景森（夜）無いのと野営から、plain_night
+# serif 0
+# textwindow "close"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 1
+
+# imagerightout 0 0.5
+# bgm "bgm003" 0
+# background "plain_night"
+# face 95 "usual"
+# face 103311 "usual"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# voicedelay 1014 "tyrufing_0031" 1
+# chara 101411
+# face 24 "sad"
+@ティルフィング
+皆さん、すみません…
+私達の世界の都合に
+つき合わせてしまって…
+
+# textboxarrow 0 3
+# voice 1032 "sakura_0013"
+# chara 103211
+# face 95 "smile"
+@サクラ
+気にしなくていいってば～
+世の中、持ちつ持たれつじゃん
+
+# textboxarrow 0 1
+# chara 103311
+# face 103311 "smile2"
+@クロエ
+サクラさんの言う通りです
+私達は今や運命を共にする
+盟友なのですから
+
+# textboxarrow 0 3
+# voice 1032 "sakura_0001"
+# chara 103211
+# face 95 "normal"
+# face 103311 "usual"
+@サクラ
+…ねえ
+ずっと気になってたんだけど
+
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0003"
+# chara 101411
+# face 24 "normal"
+@ティルフィング
+なんでしょう？
+
+# textboxarrow 0 3
+# chara 103211
+@サクラ
+ティルもクロエもよそよそしくない？
+私のことはサクラでいいってば
+さん付けとかゾワッとするじゃん
+
+# textboxarrow 0 1
+# chara 103311
+@クロエ
+ですが、親しき仲にも礼儀ありと
+申しますし
+
+# emotionbody 5904 10 95 -80 250
+# effectpattern 5904 4 0
+# effectstart 5904
+# textboxarrow 0 3
+# chara 103211
+# face 95 "happy"
+@サクラ
+はい！今からさん付け禁止～
+レナもだからね！
+一人だけ関係なさそうな顔しないでよ
+
+# effectskip 5904
+# select "分かったよ、サクラ" "select_label_01" "仲良くしよう、レナ" "select_label_02"
+はい！今からさん付け禁止～
+レナもだからね！
+一人だけ関係なさそうな顔しないでよ
+
+# label "select_label_01"
+# labeljump "select_label_end1"
+# textboxarrow 0 3
+# chara 103211
+# face 95 "surprise"
+@サクラ
+わわっ？なんで
+%(userName)sが
+真っ先に答えるのよ！
+
+# label "select_label_02"
+# labeljump "select_label_end1"
+# alpha 24 0 0.3
+# alpha 601611 1 0.5
+# textboxarrow 0 2
+# chara 601611
+@レナ
+…%(userName)s
+馴れ馴れしい
+
+# label "select_label_end1"
+# alpha 24 1 0.5
+# alpha 601611 0 0.3
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0005"
+# chara 101411
+# face 24 "happy2"
+@ティルフィング
+フフフ
+%(userName)s
+さんも…
+
+# chara 101411
+@ティルフィング
+あ、いえ
+%(userName)sも
+仲間ですから
+
+# textboxarrow 0 3
+# voice 1032 "sakura_0002"
+# chara 103211
+# face 95 "happy"
+@サクラ
+そうだ！
+明日はみんなで遊ぼうよ！
+
+# textboxarrow 0 3
+# chara 103211
+# face 95 "normal"
+@サクラ
+せっかくの異世界なのに
+物の怪みたいなのと戦って
+ばかりじゃ楽しくないじゃん！
+
+# textboxarrow 0 1
+# voice 1033 "chloe_0028"
+# chara 103311
+# face 103311 "surprise2"
+@クロエ
+親睦会ですか？
+そのようなことをしていて
+良いのでしょうか…
+
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0004"
+# chara 101411
+# face 24 "normal"
+@ティルフィング
+一日くらいなら
+サクラの言う通り、
+楽しい思い出も欲しいですし
+
+# textboxarrow 0 1
+# voice 1033 "chloe_0032"
+# chara 103311
+# face 103311 "smile1"
+@クロエ
+ティルが良いのなら
+私も賛成です
+
+# alpha 24 0 0.3
+# alpha 601611 1 0.5
+# textboxarrow 0 2
+# voice 6016 "rena_0007"
+# chara 601611
+@レナ
+…好きにすれば
+
+# textboxarrow 0 3
+# voice 1032 "sakura_0006"
+# chara 103211
+# face 95 "happy"
+@サクラ
+決まりね！
+よ～し！
+明日は遊ぶぞ～っ！
+
+;;//背景街（昼）
+# serif 0
+# textwindow "close"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 1
+
+# imagerightout 0 0.5
+# bgm "bgm002" 0
+# background "town"
+# alpha 24 1 0
+# alpha 601611 0 0
+# face 103311 "usual"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+# voice 1032 "sakura_0021"
+# chara 103211
+@サクラ
+わ！見て見て！
+これ可愛い～っ
+けっこう可愛い小物あるじゃん！
+
+# textboxarrow 0 1
+# chara 103311
+# face 103311 "surprise1"
+@クロエ
+珍しい色の石ですね
+工芸品の加工技術が…
+
+# textboxarrow 0 2
+# chara 101411
+# face 24 "happy2"
+@ティルフィング
+レナ、じっとしてて
+この服、似合うかも
+
+# alpha 24 0 0.3
+# alpha 601611 1 0.5
+# textboxarrow 0 2
+# voice 6016 "rena_0008"
+# chara 601611
+# face 601611 "shy"
+@レナ
+そうかな…
+
+# textboxarrow 0 3
+# voice 1032 "sakura_0004"
+# chara 103211
+# face 95 "smile"
+@サクラ
+いいじゃん！
+可愛いじゃん！
+
+# textboxarrow 0 2
+# chara 601611
+@レナ
+別にっ…どうでもいいし…
+
+# emotionbody 6001 11 103311 50 270
+# effectpattern 6001 1 0
+# effectstart 6001
+# textboxarrow 0 1
+# voice 1033 "chloe_0021"
+# chara 103311
+# face 103311 "surprise2"
+@クロエ
+はっ！
+これは…アンティークグラス
+
+# effectskip 6001
+# alpha 24 1 0.5
+# alpha 601611 0 0.3
+# textboxarrow 0 2
+# chara 101411
+# face 24 "surprise"
+@ティルフィング
+クロエはガラス工芸品に興味が
+あるんですか？
+
+# textboxarrow 0 1
+# voice 1033 "chloe_kyara_0027"
+# chara 103311
+# face 103311 "surprise1"
+@クロエ
+あ、そのっ…
+ヴェテル様に戴いたもののことを
+思い出していただけでっ…
+
+# emotionbody 5100 2 95 10 290
+# effectpattern 5100 1 1
+# effectstart 5100
+# textboxarrow 0 3
+# chara 103211
+# face 95 "surprise"
+@サクラ
+べてる？
+誰？
+
+;;//暗転挟んで背景野原（夕）一枚絵指定と合わないので昼に
+# effectskip 5100
+# serif 0
+# textwindow "close"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 1
+
+# imagerightout 0 0.5
+# move 95 3 0
+# move 103311 5 0
+# move 24 1 0
+# move 601611 5 0
+# alpha 103311 0 0
+# alpha 601611 1 0
+# layer 103311 1
+# layer 24 2
+# layer 95 3
+# layer 601611 4
+# face 24 "normal"
+# face 601611 "normal"
+# background "plain"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 1032 "sakura_0005"
+# chara 103211
+# face 95 "happy"
+@サクラ
+いや～面白かったね～っ
+けっこう見る物あったじゃん！
+
+# textboxarrow 0 2
+# voice 1032 "sakura_0031"
+# chara 103211
+# face 95 "smile"
+@サクラ
+来たばっかのとき、
+パッとしないとか言って
+ゴメンね、ティル！
+
+# textboxarrow 0 1
+# chara 101411
+# face 24 "happy"
+@ティルフィング
+楽しんでもらえて良かった
+レナはどうでした？
+
+# textboxarrow 0 3
+# voice 6016 "rena_0007"
+# chara 601611
+@レナ
+…まあまあ、かな
+
+# textboxarrow 0 2
+# voice 1032 "sakura_0011"
+# chara 103211
+# face 95 "worry"
+@サクラ
+ちょっと～
+レナも楽しんでたじゃん！
+素直じゃないなー
+
+# textboxarrow 0 3
+# alpha 601611 0 0.3
+# alpha 103311 1 0.5
+# voice 1033 "chloe_0028"
+# chara 103311
+# face 103311 "smile1"
+@クロエ
+なにか今日の記念になるものが
+欲しいですね
+
+# select "写真を撮ろう" "select_label_03" "記念写真を撮ろう" "select_label_04"
+なにか今日の記念になるものが
+欲しいですね
+
+# label "select_label_03"
+# labeljump "select_label_end2"
+# textboxarrow 0 2
+# chara 103211
+# face 103311 "usual"
+# face 24 "normal"
+# face 95 "surprise"
+@サクラ
+アンタ、写真撮れるの！？
+ってか、あれってどうやって
+撮ってんの？
+
+# label "select_label_04"
+# labeljump "select_label_end2"
+# textboxarrow 0 1
+# chara 101411
+# face 24 "normal"
+# face 103311 "usual"
+# face 95 "usual"
+@ティルフィング
+それは…
+どのようなものなのでしょう？
+
+# label "select_label_end2"
+# textflame 0 0
+# face 95 "surprise"
+# face 24 "surprise"
+# face 103311 "surprise1"
+@
+四人にスマホのカメラ機能について
+簡単に説明する
+
+# textflame 0 0
+@
+仕組みは理解できなかったようだが
+皆、写真を撮ることには賛同して
+くれた
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0036"
+# chara 101411
+# face 24 "happy"
+# face 95 "smile"
+# face 103311 "usual"
+@ティルフィング
+レナ、どうぞ真ん中に
+%(userName)s、
+よろしくお願いします
+
+# pos 601611 3
+# alpha 95 0 0.3
+# alpha 601611 1 0.5
+# select "シャッターボタンを押す" "select_label_05"
+レナ、どうぞ真ん中に
+%(userName)s、
+よろしくお願いします
+
+# label "select_label_05"
+# labeljump "select_label_end3"
+# serif 0
+# textwindow "close"
+# fadein "white" 1
+# face 103311 "smile1"
+# se "SE_9256"
+# waitandnext 2
+
+# label "select_label_end3"
+# alpha 95 1 0.5
+# alpha 601611 0 0.3
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 1032 "sakura_0021"
+# chara 103211
+# face 95 "happy"
+@サクラ
+どう？どう？見せて！
+うわ、すっごい！ばっちりじゃん！
+
+# textboxarrow 0 2
+# chara 103211
+# face 95 "smile"
+@サクラ
+%(userName)s
+やるね～
+
+# textboxarrow 0 3
+# chara 103311
+# face 103311 "surprise2"
+@クロエ
+スロウスシュタインの技術でも
+こんなに美しく撮れないのでは
+ないでしょうか…
+
+# textboxarrow 0 1
+# chara 101411
+# face 24 "happy2"
+@ティルフィング
+みんなきれいに写ってますね
+あ…レナも笑ってる
+
+# textboxarrow 0 2
+# voice 1032 "sakura_0022"
+# chara 103211
+# face 95 "happy"
+@サクラ
+マジで！？
+ほんとだ～っ
+レナ～！
+
+# alpha 95 0 0.3
+# alpha 601611 1 0.5
+# textboxarrow 0 2
+# voice 6016 "rena_0009"
+# chara 601611
+# face 601611 "angry"
+@レナ
+ちがっ…
+それ、違うから！
+そういうんじゃないから！
+
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0005"
+# chara 101411
+# face 24 "happy"
+@ティルフィング
+フフフ
+恥ずかしがらなくても良いんですよ
+レナの笑顔、とても可愛いです
+
+# textboxarrow 0 2
+# chara 601611
+# face 601611 "shy"
+@レナ
+もう！
+知らないっ…
+
+;;//時間経過背景森（夜）無いので、plain_night
+# serif 0
+# textwindow "close"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 1
+
+# imagerightout 0 0.5
+# bgm "bgm003" 0
+# background "plain_night"
+# alpha 24 0 0
+# alpha 103311 0 0
+# mask 601611 off
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 601611
+# face 601611 "normal"
+@レナ
+…………
+
+# textboxarrow 0 2
+# voice 6016 "rena_0022"
+# chara 601611
+# face 601611 "surprise"
+@レナ
+！？
+
+# textboxarrow 0 2
+# chara 601611
+# face 601611 "normal"
+@レナ
+なんだ
+%(userName)sか…
+アナタも眠れないの？
+
+# textboxarrow 0 2
+# voice 6016 "rena_0004"
+# chara 601611
+# face 601611 "smile"
+@レナ
+私は星を見てたの…
+…気持ちが落ち着くから…
+
+# textboxarrow 0 2
+# chara 601611
+# face 601611 "angry"
+@レナ
+別に、寂しがってなんかないから！
+勘違いしないでよね…
+
+# textboxarrow 0 2
+# voice 6016 "rena_0032"
+# chara 601611
+# face 601611 "normal"
+@レナ
+…異族っていうのが集まってるのと、
+“鍵”があるのって同じところだと
+思う
+
+# textboxarrow 0 2
+# chara 601611
+@レナ
+そこに辿り着いたら…なにが起きる
+んだろう…
+
+# textboxarrow 0 2
+# voice 6016 "rena_0027"
+# chara 601611
+# face 601611 "angry"
+@レナ
+…怖がってるわけじゃないってば
+なんでそんなふうに思うわけ？
+
+# textboxarrow 0 2
+# voice 6016 "rena_0002"
+# chara 601611
+# face 601611 "sad"
+@レナ
+ねえ…私のこと…
+覚えていてね…
+
+# textboxarrow 0 2
+# chara 601611
+# face 601611 "angry"
+@レナ
+違う！ウソ！
+今のなしだからっ…
+もう寝る！
+
+# fadeout "black" 2
+# waitandnext 2
+
+# background "town"
+# waitandnext 0.1
+
+;;//背景街（昼）
+# fadein "black" 1
+# bgm "bgm002" 0
+# alpha 601611 0 0
+# mask 601611 on
+# textflame 0 0
+@
+異族が集まりつつあるという地を
+目指す一行
+
+@
+それはレナが指し示す“鍵”の地と
+同じ方角だった
+
+# body 202411
+# pos 202411 3
+# scale 202411 0.8 0
+# mask 202411 off
+# alpha 202411 0 0
+@
+目的地付近の街に立ち寄った一行は
+そこで想像を絶する光景に出くわす
+
+# alpha 202411 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 2024 "rosa_0010"
+# chara 202411
+# face 202411 "angry1"
+@？？？
+首を切られたいの、豚さん？
+早く私に貢ぎ物を差し出しなさい
+
+# serif 1
+# textboxarrow 1 0
+@住民男性１
+はい！ローザ様！
+これをお受け取り下さい！
+
+# serif 1
+# textboxarrow 1 0
+@住民男性２
+私は今朝、産みたての卵をお持ち
+致しました！どうかお召し上がり
+下さい！
+
+# serif 1
+# textboxarrow 1 0
+@住民男性３
+お、俺はなにも持ってきてません！
+どうかお仕置きをお願い致します！
+
+# textboxarrow 0 2
+# voice 2024 "rosa_0027"
+# chara 202411
+# face 202411 "sad"
+@ローザ
+まったく…この豚さん達には困った
+ものだわ
+
+# emotionbody 5200 3 202411 0 280
+# effectpattern 5200 1 3
+# effectstart 5200
+# textboxarrow 0 2
+# chara 202411
+# face 202411 "shy"
+@ローザ
+私がきちんと躾けて
+あげないといけないわね
+
+# effectskip 5200
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# pos 95 5
+# pos 24 3
+# pos 103311 1
+# alpha 95 1 0.5
+# alpha 202411 0 0.3
+# alpha 103311 1 0.5
+# alpha 24 1 0.5
+# face 103311 "surprise2"
+# face 24 "normal"
+# textboxarrow 0 3
+# voice 1032 "sakura_0024"
+# chara 103211
+# face 95 "worry"
+@サクラ
+…なに、あれ？
+
+# textboxarrow 0 1
+# chara 103311
+@クロエ
+落ち着くのよ、クロエっ…
+世の中には様々な趣味の人がいて
+みんな違ってみんな良いの！
+
+# textboxarrow 0 2
+# chara 101411
+# face 24 "surprise"
+@ティルフィング
+人々に崇敬されるキラープリンセス…
+珍しい存在ですね
+
+# alpha 24 0 0.3
+# alpha 601611 1 0.5
+# textboxarrow 0 2
+# chara 601611
+# face 601611 "surprise"
+@レナ
+ティル…そんな冷静に言うこと？
+
+# alpha 601611 0 0.3
+# alpha 95 0 0.3
+# alpha 103311 0 0.3
+# alpha 202411 1 0.5
+# textboxarrow 0 2
+# voice 2024 "rosa_0009"
+# chara 202411
+# face 202411 "angry1"
+@ローザ
+そこの貴方達、
+私に対する不躾な視線はなにかしら？
+首を切られたいの？
+
+# alpha 601611 1 0.5
+# alpha 95 1 0.5
+# alpha 103311 1 0.5
+# alpha 202411 0 0.3
+# face 103311 "usual"
+# face 601611 "normal"
+# textboxarrow 0 3
+# voice 1032 "sakura_0019"
+# chara 103211
+# face 95 "usual"
+@サクラ
+別に人の趣味を
+とやかく言うつもりはないけど…
+
+# emotionbody 5811 9 95 50 250
+# effectpattern 5811 1 0
+# effectstart 5811
+# textboxarrow 0 3
+# chara 103211
+# face 95 "worry"
+@サクラ
+なんで四つん這いになってる人の
+背中に座ってんの？
+
+# effectskip 5811
+# alpha 601611 0 0.3
+# alpha 95 0 0.3
+# alpha 103311 0 0.3
+# alpha 202411 1 0.5
+# textboxarrow 0 2
+# voice 2024 "rosa_0005"
+# chara 202411
+# face 202411 "shy"
+@ローザ
+それはもちろん、そうして欲しいって
+この豚さんが言うからよ
+この私の椅子になれて喜んでいるわ
+
+# alpha 601611 1 0.5
+# alpha 95 1 0.5
+# alpha 103311 1 0.5
+# alpha 202411 0 0.3
+# textboxarrow 0 2
+# voice 6016 "rena_0002"
+# chara 601611
+# face 601611 "angry"
+@レナ
+…ねえ
+多分、この人関わっちゃいけない
+類の人だよ
+
+# textboxarrow 0 2
+# chara 601611
+@レナ
+早く先に行こう
+
+# alpha 24 1 0.5
+# alpha 601611 0 0.3
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0003"
+# chara 101411
+# face 24 "normal"
+@ティルフィング
+そうですね…
+早く異族の――
+
+# bgm "bgm011" 0
+# face 24 "angry"
+# serif 1
+# textboxarrow 1 0
+@住民女性
+だ、誰かぁっ…！
+助けて！異族がぁぁぁっ…！
+
+# textboxarrow 0 1
+# chara 103311
+# face 103311 "normal"
+@クロエ
+またですか！
+急ぎましょう、ティル！
+サクラ！
+
+# alpha 24 0 0.3
+# alpha 95 0 0.3
+# alpha 103311 0 0.3
+# alpha 202411 1 0.5
+# textboxarrow 0 2
+# voice 2024 "rosa_0004"
+# chara 202411
+# face 202411 "angry1"
+@ローザ
+クスッ…
+また出たの
+赤と黒の妙技で殲滅するわ！

@@ -1,0 +1,494 @@
+;;-----------------------------------------
+;;【PUNK】ロストラグナロク_サイドストーリー5章
+;;【EP5バトル後】
+;;スクリプト最後の背景：白
+;;-----------------------------------------
+# script "lisp"
+# background "400_angel_town_night"
+# bgmfile "bgm291" "BgmLostRagnarokSideStory" 0
+;;フライクーゲル
+# body 3500211
+# pos 3500211 3
+# scale 3500211 0.8 0
+# layer 3500211 2
+# alpha 3500211 0 0
+# mask 3500211 on
+# face 3500211 "normal"
+;;ティファレト
+# body 171
+# pos 171 3
+# scale 171 0.8 0
+# layer 171 2
+# alpha 171 0 0
+# mask 171 on
+# face 171 "normal"
+;;ロンギヌス
+# body 3300111
+# pos 3300111 3
+# scale 3300111 0.8 0
+# layer 3300111 2
+# alpha 3300111 0 0
+# mask 3300111 on
+# face 3300111 "normal"
+;;フォルカス
+# body 3301811
+# pos 3301811 3
+# scale 3301811 0.8 0
+# layer 3301811 2
+# alpha 3301811 0 0
+# mask 3301811 on
+# face 3301811 "normal"
+;;ヴァナルガンド
+# body 3601111
+# pos 3601111 3
+# scale 3601111 0.8 0
+# layer 3601111 2
+# alpha 3601111 0 0
+# mask 3601111 on
+# face 3601111 "normal"
+;;ミカエル
+# body 3810008
+# pos 3810008 3
+# scale 3810008 0.8 0
+# layer 3810008 2
+# alpha 3810008 1 0
+# mask 3810008 off
+# face 3810008 "normal"
+;;-----------------------------------------
+# textflame 1 1
+# textboxarrow 0 2
+@ミカエル
+…！？
+
+# voice 330181 "forcas_t_0029"
+# alpha 3810008 0 0.5
+# face 3301811 "angry"
+# alpha 3301811 1 0.5
+# mask 3301811 off
+@フォルカス
+はあああぁぁぁっっ！！！
+
+;;演出・SE：フォルカスがミカエルに斬りかかる
+# se "SE_5231"
+# waitandnext 2
+
+# se "SE_9086"
+# shake 0 0.5
+# voice 8056 "new_michael_0015"
+# alpha 3301811 0 0.5
+# alpha 3810008 1 0.5
+@ミカエル
+クゥゥッ！？！？
+
+;;モノローグ
+# textflame 0 0
+@
+飛び出したフォルカスの槍が
+ミカエルを押す
+
+# voice 360111 "vanargand_t_0029"
+# alpha 3810008 0 0.5
+# face 3601111 "angry"
+# alpha 3601111 1 0.5
+# mask 3601111 off
+# textflame 1 1
+@ヴァナルガンド
+援護します…！！
+とどめを！！！
+
+# voice 330011 "ronginusu_t_0036"
+# alpha 3601111 0 0.5
+# face 3300111 "normal"
+# alpha 3300111 1 0.5
+# mask 3300111 off
+@ロンギヌス
+頼みましたよ
+
+;;演出・SE：ミカエルに氷の矢が降り、ロンギヌスがミカエルを斬りつける
+# se "SE_9897"
+# waitandnext 1.2
+
+# se "SE_9083"
+# textflame 0 0
+;;モノローグ
+@
+ヴァナルガンドの氷の矢が
+ミカエルを襲い
+その隙にロンギヌスが突き上げる
+
+# alpha 3300111 0 0.5
+# alpha 3810008 1 0.5
+# shake 0 0.5
+# textflame 1 1
+@ミカエル
+ガアアァアァァッ！？
+
+;;演出・SE：吹き飛ばされるミカエル
+# textwindow "close"
+# se "SE_5765"
+# fadein "white" 0.5
+# shake 0 0.5
+# waitandnext 2
+
+# alpha 3810008 0 0.5
+# face 3500211 "angry"
+# mask 3500211 off
+# alpha 3500211 1 0.5
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+───祈りな
+
+# alpha 3500211 0 0.5
+# alpha 3810008 1 0.5
+@ミカエル
+…ッ！？
+
+;;モノローグ
+# textflame 0 0
+@
+揺らがぬ銃口が
+ミカエルを狙い…
+
+# voice 350021 "furaikugeru_t_0004"
+# alpha 3810008 0 0.5
+# face 3500211 "normal"
+# alpha 3500211 1 0.5
+# textflame 1 1
+@フライクーゲル
+叶わぬ願いだけどね
+
+;;演出・SE：フライクーゲルの銃弾がミカエルを貫く
+# se "SE_10742"
+# waitandnext 1
+
+# alpha 3500211 0 0.5
+# alpha 3810008 1 0.5
+# textflame 0 0
+;;モノローグ
+@
+放たれた全弾がミカエルを貫く
+
+# shake 0 0.5
+# textflame 1 1
+@ミカエル
+グッ！？アアッ！？アアアアッッ！？！？
+
+# alpha 3810008 0 0.5
+# face 3301811 "angry"
+# alpha 3301811 1 0.5
+@フォルカス
+───祈れ
+
+;;演出：フォルカスが炎のオーラを纏っている
+# textwindow "close"
+# se "SE_4820"
+# envbody 2000 7 0
+# effectstart 2000
+# waitandnext 1
+
+# textwindow "normal"
+# textflame 0 0
+;;モノローグ
+@
+セイントキラーズの猛攻に
+踏みとどまるミカエルだが…
+
+# textflame 1 1
+@フォルカス
+聖なる願いなら
+聞き届けられよう
+
+;;モノローグ
+# textflame 0 0
+@
+視えぬ足元に
+神なる炎が燃えていた
+
+# voice 330181 "forcas_t_0029"
+# se "SE_9092"
+# textflame 1 1
+@フォルカス
+はああああああああぁぁぁッ！！！
+
+;;演出・SE：フォルカスが炎を纏い、ミカエルを貫く
+# se "SE_8013"
+# waitandnext 0.8
+
+# se "SE_9084"
+# waitandnext 2
+
+# voice 8056 "new_michael_0038"
+# alpha 3301811 0 0.5
+# effectskip 2000
+# alpha 3810008 1 0.5
+@ミカエル
+──────！？！？
+
+;;演出・SE：ミカエル、倒れる
+# textwindow "close"
+# se "SE_5215"
+# shake 0 0.5
+# alpha 3810008 0 0.5
+# waitandnext 0.5
+
+# face 3301811 "angry"
+# alpha 3301811 1 0.5
+# textwindow "normal"
+@フォルカス
+はぁっ、はぁっ、はぁっ、はぁっ…！
+
+# alpha 3301811 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+フォルカスに貫かれたミカエルは
+翼を散らせながら
+その場に倒れる
+
+# voice 8056 "new_michael_battle_0007"
+# move 3810008 2 0
+# alpha 3810008 1 0.5
+# mask 3810008 on
+# move 3301811 4 0
+# face 3301811 "normal"
+# alpha 3301811 1 0.5
+# mask 3301811 on
+# textflame 1 1
+# textboxarrow 0 1
+@ミカエル
+な、なんということ………ッ
+なぜ、私が…こんな…っ！？！？
+
+# textboxarrow 0 3
+@フォルカス
+…知らないのですか？
+
+# voice 8056 "new_michael_0022"
+# textboxarrow 0 1
+@ミカエル
+なにを………！？
+
+# textboxarrow 0 3
+@フォルカス
+『正義は勝つ』
+
+# textboxarrow 0 1
+@ミカエル
+………ッ！！
+
+# alpha 3810008 0 0.5
+# alpha 3301811 0 0.5
+# face 3300111 "normal"
+# alpha 3300111 1 0.5
+# textboxarrow 0 2
+@ロンギヌス
+真理ですね
+
+# alpha 3300111 0 0.5
+# move 3810008 3 0
+# alpha 3810008 1 0.5
+# mask 3810008 off
+@ミカエル
+…
+
+@ミカエル
+…これは
+神の望んだ結果ではない
+
+# alpha 3810008 0 0.5
+# face 3601111 "normal"
+# alpha 3601111 1 0.5
+@ヴァナルガンド
+神の望んだ結果…？
+
+# alpha 3601111 0 0.5
+# alpha 3810008 1 0.5
+@ミカエル
+私は…自らの責務を果たせなかった
+
+@ミカエル
+貴方達も然り
+
+@ミカエル
+神に背く者にこそ
+最後の審判が下される
+
+@ミカエル
+いずれ。その時は来る
+
+@ミカエル
+いずれ。間も無く
+全ては白紙に戻る
+
+@ミカエル
+全ては徒労。全ては…
+
+@ミカエル
+全ては………
+
+@ミカエル
+───救われぬ、終焉
+
+# bgm "stop"
+# alpha 3810008 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+ミカエルが口を閉じると…
+
+;;モノローグ
+@
+辺りには静寂が訪れる
+
+;;モノローグ
+@
+ミカエルの予言めいた不吉な言葉
+それが焼き付く
+
+;;モノローグ
+@
+しかし、静寂を終わらせるのは
+やはりいつも…
+
+# bgmfile "bgm293" "BgmLostRagnarokSideStory" 0
+# voice 350021 "furaikugeru_t_0003"
+# face 3500211 "normal"
+# alpha 3500211 1 0.5
+# textflame 1 1
+@フライクーゲル
+…ノーサンキューだね
+
+;;モノローグ
+# textflame 0 0
+@
+フライクーゲルの自由だ
+
+# alpha 3500211 0 0.5
+;;モノローグ
+@
+彼女はティファレトを抱え
+ミカエルに近づく
+
+# face 3601111 "surprise"
+# alpha 3601111 1 0.5
+# textflame 1 1
+@ヴァナルガンド
+ティファレト…？
+
+# face 171 "sad"
+# alpha 3601111 0 0.5
+# alpha 171 1 0.5
+# mask 171 off
+# voice 5032 "tiphereth_t_0015"
+@ティファレト
+ぁ…ぁ、ぁ…
+
+# voice 330181 "forcas_t_0022"
+# alpha 171 0 0.5
+# move 3301811 3 0
+# face 3301811 "surprise"
+# alpha 3301811 1 0.5
+# mask 3301811 off
+@フォルカス
+主………ッ！？
+
+# alpha 3301811 0 0.5
+# alpha 171 1 0.5
+# voice 5032 "tiphereth_t_0024"
+@ティファレト
+………ぅぁぅ
+
+;;モノローグ
+# textflame 0 0
+@
+反応のないティファレト
+
+# voice 330011 "ronginusu_t_0018"
+# alpha 171 0 0.5
+# face 3300111 "sad"
+# alpha 3300111 1 0.5
+# textflame 1 1
+@ロンギヌス
+私達に全ての力を与えた代償…
+
+# alpha 3300111 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+ティファレトはもはや虫の息
+耳も聞こえず、声も出ず
+
+# alpha 3300111 0 0.5
+# face 3500211 "normal"
+# alpha 3500211 1 0.5
+# textflame 1 1
+@フライクーゲル
+だけど…
+最後の願いが残ってる、だろ？
+
+# alpha 3500211 0 0.5
+# face 3300111 "normal"
+# alpha 3300111 1 0.5
+@ロンギヌス
+…ミカエルの、ギアハック
+
+# alpha 3300111 0 0.5
+# face 3301811 "normal"
+# alpha 3301811 1 0.5
+@フォルカス
+今度は私達が、救う番か
+
+# alpha 3301811 0 0.5
+# alpha 171 1 0.5
+# textflame 0 0
+;;モノローグ
+@
+セイントキラーズ達は
+ティファレトを抱え
+ミカエルに寄り添わせる
+
+;;演出・SE：ティファレトの体が輝きだす
+# se "SE_9169"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# fadein "white" 1
+# waitandnext 1
+
+# textwindow "normal"
+# textflame 0 0
+;;モノローグ
+@
+ティファレトの体が輝き
+ミカエルの影と
+同化していく
+
+;;演出：ホワイトアウト
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "bg_white"
+# alpha 171 0 0
+# face 3500211 "usual"
+# alpha 3500211 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# textwindow "normal"
+# textflame 1 1
+@フライクーゲル
+…
+
+@フライクーゲル
+………ティファレト
+
+# voice 350021 "furaikugeru_t_0002"
+# face 3500211 "normal"
+@フライクーゲル
+ウェイクアップ

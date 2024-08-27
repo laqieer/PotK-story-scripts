@@ -1,0 +1,408 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー14章
+;;第1話　タイトル：それぞれの決意
+;;1_1_10
+;;スクリプト最後の背景：地底
+;;-----------------------------------------
+# script "lisp"
+# background "underground_world_1"
+# bgmfile "bgm264" "BgmLostRagnarokBattle001" 0
+;;-----------------------------------------
+;;アルマス（ジョブチェンジ後）
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# layer 172 2
+# alpha 172 0 0
+# mask 172 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 2
+# alpha 139 0 0
+# mask 139 off
+;;ティファレト
+# body 3503211
+# pos 3503211 3
+# scale 3503211 0.8 0
+# layer 3503211 2
+# alpha 3503211 0 0
+# mask 3503211 off
+;;フェイルノート
+# body 3401911
+# pos 3401911 3
+# scale 3401911 0.8 0
+# layer 3401911 2
+# alpha 3401911 0 0
+# mask 3401911 off
+;;カシウス
+# body 3303111
+# pos 3303111 3
+# scale 3303111 0.8 0
+# layer 3303111 2
+# alpha 3303111 0 0
+# mask 3303111 off
+;;-----------------------------------------
+;;角笛一枚絵
+# imageset 4 "st190301_1"
+# imagelayer 4 1
+# imagealpha 4 0 0
+# waitandnext 0.2
+;;-----------------------------------------
+
+;;//背景：地底
+# imagealpha 4 1 0
+# imagepos 4 0 0
+# textflame 1 1
+# textboxarrow 0 0
+@アルマス
+これが「私達の宝物」…
+私達の思い出を記録した装置
+そして…
+
+# textboxarrow 0 0
+@アルマス
+叛逆の始まりを告げる
+角笛の音色よ！
+
+;;//角笛の音色が鳴り響く
+# se "SE_0784"
+# shake 0 1
+# fadeout "black" 1
+# textwindow "close"
+# waitandnext 1
+
+# imagealpha 4 0 0
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 4019 "failnaught_a_0038"
+# move 3401911 3 0
+# face 3401911 "angry"
+# alpha 3401911 1 0.5
+# mask 3401911 off
+# textboxarrow 0 2
+# textwindow "normal"
+@フェイルノート
+うあああああああああっ…！？
+
+# voice 5032 "tiphereth_t_0038"
+# alpha 3401911 0 0.5
+# move 3503211 3 0
+# face 3503211 "angry"
+# alpha 3503211 1 0.5
+# mask 3503211 off
+# textboxarrow 0 2
+@ティファレト
+何ですか…この記憶はっ…
+くああああああああ…！！
+
+# voice 3031 "cassius_ge_0038"
+# alpha 3503211 0 0.5
+# move 3303111 3 0
+# face 3303111 "angry"
+# alpha 3303111 1 0.5
+# mask 3303111 off
+# textboxarrow 0 2
+@カシウス
+過去からの声が…
+今、輪廻の理が繋がる…！
+
+;;//画面フラッシュ
+# se "SE_5651"
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# alpha 3303111 0 0
+# move 172 2 0
+# face 172 "normal"
+# alpha 172 1 0
+# mask 172 on
+# move 139 4 0
+# face 139 "normal"
+# alpha 139 1 0
+# mask 139 on
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+# textwindow "normal"
+@アルマス
+どうっ？
+三人の様子は…
+
+# face 139 "surprise"
+# textboxarrow 0 3
+@ティターニア
+効果はあったようです！
+あ！三人とも倒れてしまいましたっ
+
+# face 172 "angry"
+# textboxarrow 0 1
+@アルマス
+行くわよ、ティニ！
+マスター！
+
+# voice 5032 "tiphereth_t_0028"
+# alpha 172 0 0.5
+# alpha 139 0 0.5
+# move 3503211 3 0
+# face 3503211 "sad"
+# alpha 3503211 1 0.5
+# mask 3503211 off
+# textboxarrow 0 2
+@ティファレト
+ううっ…
+
+# alpha 3503211 0 0.5
+# move 172 2 0
+# face 172 "normal"
+# alpha 172 1 0.5
+# mask 172 on
+# textboxarrow 0 1
+# move 139 4 0
+# face 139 "surprise"
+# alpha 139 1 0.5
+# mask 139 on
+@アルマス
+ティファレトの意識が戻りそうね
+さっきのでキラーズが活性化して
+いればいいんだけど
+
+# voice 9967 "titania_0042"
+# face 139 "worry"
+# textboxarrow 0 3
+@ティターニア
+スイハは“神令”と呼んでいました
+けれど、霊装支配と同じように
+破れるものなのでしょうか…？
+
+# textboxarrow 0 1
+@アルマス
+分からないけど、霊装支配から
+脱した斬ル姫達は平気だったでしょ
+可能性はあると思う
+
+# voice 1038 "almace_0001"
+# face 172 "angry"
+# textboxarrow 0 1
+@アルマス
+マスター、頼むわよ
+
+;;//選択肢
+;;Ａ起きろ、ティファレト！
+;;Ｂ目覚めるんだっ
+;;Ｃ自分を取り戻せ
+# select "起きろ、ティファレト！" "select_label_01" "目覚めるんだっ" "select_label_01" "自分を取り戻せ" "select_label_01"
+マスター、頼むわよ
+
+;;ＡＢＣ共通
+# label "select_label_01"
+# voice 5032 "tiphereth_t_0022"
+# alpha 172 0 0.5
+# alpha 139 0 0.5
+# move 3503211 3 0
+# face 3503211 "surprise"
+# alpha 3503211 1 0.5
+# mask 3503211 off
+# textboxarrow 0 2
+@ティファレト
+ううっ…なっ！？
+この感覚…私は今まで…
+何ということをっ…
+
+# alpha 3503211 0 0.5
+# move 172 3 0
+# face 172 "surprise"
+# alpha 172 1 0.5
+# mask 172 off
+# textboxarrow 0 2
+@アルマス
+やったの？
+成功したのっ？
+
+# alpha 172 0 0.5
+# move 3401911 3 0
+# face 3401911 "sad"
+# alpha 3401911 1 0.5
+# mask 3401911 off
+# textboxarrow 0 2
+@フェイルノート
+ううっ…
+
+# alpha 3401911 0 0.5
+# move 3303111 3 0
+# face 3303111 "sad"
+# alpha 3303111 1 0.5
+# mask 3303111 off
+# textboxarrow 0 2
+@カシウス
+ああ…
+
+# alpha 3303111 0 0.5
+# move 139 3 0
+# face 139 "normal"
+# alpha 139 1 0.5
+# mask 139 off
+# textboxarrow 0 2
+@ティターニア
+フェイルノートとカシウスも
+目を覚ましたようです
+マスター、彼女達にもっ
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 139 0 0
+# move 3503211 3 0
+# face 3503211 "sad"
+# alpha 3503211 1 0
+# mask 3503211 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@ティファレト
+我が主よ
+これまでの非礼をお許し下さい
+私は何と罪深いことを…
+
+# voice 4019 "failnaught_a_0007"
+# alpha 3503211 0 0.5
+# move 3401911 3 0
+# face 3401911 "happy"
+# alpha 3401911 1 0.5
+# mask 3401911 off
+# textboxarrow 0 2
+@フェイルノート
+フン！
+今回ばかりは負けを認めてあげる
+ありがたく思いなさい、マスター
+
+# voice 3031 "cassius_ge_0001"
+# alpha 3401911 0 0.5
+# move 3303111 3 0
+# face 3303111 "normal"
+# alpha 3303111 1 0.5
+# mask 3303111 off
+# textboxarrow 0 2
+@カシウス
+ついに運命の邂逅を果たした
+御館様…あなたとわたしは
+これから唇歯輔車となるの
+
+# voice 9967 "titania_0006"
+# alpha 3303111 0 0.5
+# move 172 2 0
+# face 172 "normal"
+# alpha 172 1 0.5
+# mask 172 on
+# move 139 4 0
+# face 139 "normal"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 3
+@ティターニア
+やりましたね、アルマス！
+三人を“神令”から解放することに
+成功しましたよっ
+
+# voice 1038 "almace_0003"
+# face 172 "sad"
+# textboxarrow 0 1
+@アルマス
+それはいいんだけど…
+三人ともマスターと距離詰めすぎ
+よね？
+
+# textboxarrow 0 1
+@アルマス
+マスターのバイブスと繋がったから？
+急に態度、変えすぎよっ
+
+# alpha 139 0 0.5
+# move 3401911 4 0
+# face 3401911 "happy"
+# alpha 3401911 1 0.5
+# mask 3401911 on
+# textboxarrow 0 3
+@フェイルノート
+君子は豹変するものなの
+それに、マスターは最も優れた
+斬ル姫とともにあるべきよ
+
+# face 172 "normal"
+# textboxarrow 0 1
+@アルマス
+私が助けてあげたってこと、
+忘れてないでしょうね！？
+
+# voice 4019 "failnaught_a_0009"
+# face 3401911 "normal"
+# textboxarrow 0 3
+@フェイルノート
+その角笛を見つけていれば、
+きっと私が吹いていたわ…
+
+# voice 1038 "almace_0009"
+# face 172 "angry"
+# textboxarrow 0 1
+@アルマス
+ビフレストもろとも
+潰そうとしたじゃないのっ
+
+# voice 5032 "tiphereth_t_0012"
+# alpha 172 0 0.5
+# alpha 3401911 0 0.5
+# move 3503211 3 0
+# face 3503211 "angry"
+# alpha 3503211 1 0.5
+# mask 3503211 off
+# textboxarrow 0 2
+@ティファレト
+二人とも、主の御前ですよ
+慎んで下さい
+
+# voice 3031 "cassius_ge_0001"
+# alpha 3503211 0 0.5
+# move 3303111 3 0
+# face 3303111 "normal"
+# alpha 3303111 1 0.5
+# mask 3303111 off
+# textboxarrow 0 2
+@カシウス
+御館様、地底の暗闇より地上の
+光の下で古からの縁を確かめる刻よ
+
+# alpha 3303111 0 0.5
+# move 172 2 0
+# face 172 "normal"
+# alpha 172 1 0.5
+# mask 172 on
+# move 139 4 0
+# face 139 "normal"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 3
+@ティターニア
+地上に急いだ方が良いということ
+でしょうか…
+アルマス、行きますよ！
+
+# face 172 "angry"
+# textboxarrow 0 1
+@アルマス
+ああ、もう！
+後できっちり話をつけてやるわ！

@@ -1,0 +1,532 @@
+;;-----------------------------------------
+;;SEA夏2_8_0
+;;-----------------------------------------
+# script "lisp"
+# background "SEAsummer_indoor"
+# bgm "bgm002" 0
+;;-----------------------------------------
+;;浴衣ミーミル
+# body 318
+# pos 318 2
+# scale 318 0.8 0
+# layer 318 5
+# mask 318 off
+# alpha 318 0 0
+;;浴衣如意金箍棒
+# body 6203111
+# pos 6203111 5
+# scale 6203111 0.8 0
+# layer 6203111 3
+# mask 6203111 off
+# alpha 6203111 0 0
+;;浴衣ティルフィング
+# body 6101421
+# pos 6101421 3
+# scale 6101421 0.8 0
+# layer 6101421 2
+# mask 6101421 off
+# alpha 6101421 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "SEA6203111"
+# imagealpha 1 0 0
+# imagelayer 1 5
+# imageset 2 "e220706_logo"
+# imagealpha 2 0 0
+# imagelayer 2 5
+;;-----------------------------------------
+;;背景：温泉街（シノビナトリミング） 
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# move 318 3 0.5
+# face 318 "normal"
+# alpha 318 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+また、こちらに戻ってまいりました
+
+# textboxarrow 0 2
+@ミーミル
+七支刀さんは大切なことと
+仰ってましたが、
+ニョイ子さんはどちらに…
+
+# move 318 2 0.5
+# move 6203111 4 0.5
+# face 6203111 "surprise"
+# alpha 6203111 1 0.3
+# textboxarrow 0 3
+@如意金箍棒
+あれ？
+二人ともどうしたの？
+何か忘れ物？
+
+# textboxarrow 0 1
+@ミーミル
+ニョイ子さん
+実は…
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# face 318 "normal"
+# face 6203111 "normal"
+# textwindow "nomal"
+# textboxarrow 0 3
+@如意金箍棒
+そっか…
+でも、ここにティルフィングちゃんは
+いないよ
+
+# face 318 "sad"
+# textboxarrow 0 1
+@ミーミル
+そうですか…
+どういうことなのでしょう…？
+
+;;選択肢
+# select "紙片が気になる" "select_label_01" "七支刀が気になる" "select_label_02"
+ここにティルフィングちゃんは
+いないよ
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# se "bgm602_basic_on"
+# textboxarrow 0 3
+@如意金箍棒
+ティルフィングちゃんが
+渡していった五枚の紙だよね
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# se "bgm602_basic_on"
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+七支刀さんは頭を使うよう
+助言して下さいました
+
+# label "select_label_end"
+# face 318 "surprise"
+# textboxarrow 0 1
+@ミーミル
+あ！
+もしかして…
+
+# move 318 1 0.5
+# textboxarrow 0 0
+# waitandnext 0.8
+
+# move 318 2 0.5
+# waitandnext 0.5
+
+# voice 520311 "nyoikinkobou_c_0022"
+# face 6203111 "surprise"
+# textboxarrow 0 3
+@如意金箍棒
+ミーミルちゃん
+ティルフィングちゃんの指示が
+書いてある紙を並べてどうしたの？
+
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+「頭」を使うんです
+つまり、頭文字…文章の一文字目を
+渡していただいた順番に
+
+# face 6203111 "normal"
+# textboxarrow 0 3
+@如意金箍棒
+最初はワタシのところだから
+「御霊の池」の「御」かな？
+
+# textboxarrow 0 1
+@ミーミル
+次がミネルヴァさんのところなので
+「防護柵」の「防」…その次が
+「牛提灯」の「牛」…
+
+# face 318 "sad"
+# textboxarrow 0 1
+@ミーミル
+それから「世界」の「世」
+最後が「イチョウ」の「イ」です
+うーん…
+
+# textboxarrow 0 3
+@如意金箍棒
+最後だけカタカナなんだね
+全部、揃えてくれればいいのに
+
+# face 318 "happy"
+#setnextbgmblock 1
+# textboxarrow 0 1
+@ミーミル
+そうです！
+全てカタカナにすれば一文字目は
+「ゴ」「ボ」「ウ」「セ」「イ」
+
+# voice 9917 "mimir_navikan_0022"
+# face 318 "surprise"
+# textboxarrow 0 1
+@ミーミル
+五芒星っ？
+
+# face 6203111 "surprise"
+# textboxarrow 0 3
+@如意金箍棒
+ん？
+そういえば、この地図…
+
+# textboxarrow 0 3
+@如意金箍棒
+ワタシとミーミルちゃん、お師様が
+一緒にスイカを手に入れたのは
+ここだよね
+
+# textboxarrow 0 1
+@ミーミル
+他の皆さんとティルフィング様の
+ご指示を成し遂げたのは…
+ああ！
+
+# textboxarrow 0 3
+@如意金箍棒
+ワタシ達五人のキル姫がいた場所を
+頂点にして二人が歩いた軌跡を
+順番に繋ぐと…五芒星になるよ
+
+# textboxarrow 0 1
+@ミーミル
+七支刀さんは呪術に詳しいので
+すぐに気づいたのですね
+
+# textboxarrow 0 1
+@ミーミル
+私達は今日、ニョイ子さんの位置から
+始まって、ミネルヴァさん、
+マナナンさん、カシウスさん…
+
+# textboxarrow 0 1
+@ミーミル
+七支刀さん、そしてニョイ子さんの
+ところに戻ることで五芒星を描いて
+いたんですっ
+
+# face 6203111 "normal"
+# textboxarrow 0 3
+@如意金箍棒
+そうなると、ティルフィングちゃんの
+いるところは…
+
+;;選択肢
+# select "五芒星の中心だ！" "select_label_03" "真ん中しかない！" "select_label_03"
+ティルフィングちゃんの
+いるところは…
+
+# label "select_label_03"
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# voice 9917 "mimir_navikan_0003"
+# face 318 "angry"
+# textboxarrow 0 1
+@ミーミル
+はい、マスター様！
+こちらに向かいましょう
+
+# voice 9917 "mimir_navikan_0004"
+# face 318 "happy"
+# textboxarrow 0 1
+@ミーミル
+あ、その前に…
+ニョイ子さんも短冊をどうぞ
+
+# voice 520311 "nyoikinkobou_c_0030"
+# face 6203111 "happy"
+# textboxarrow 0 3
+@如意金箍棒
+あら、ありがとう
+どんな願い事を書こうかな
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：丘の上夜（シノビナトリミング）
+# background "SEAsummer_plain_night"
+# alpha 318 0 0
+# alpha 6203111 0 0
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 318 3 0.5
+# face 318 "normal"
+# alpha 318 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+地図上ですと、五芒星の中心は
+こちらになります
+
+# textboxarrow 0 2
+@ミーミル
+ティルフィング様は、どちらにっ？
+
+# face 318 "surprise"
+# textboxarrow 0 2
+@ミーミル
+あ…
+
+;;ミーミルがそわそわする
+# face 318 "shy"
+# waitandnext 1
+
+;;画面真っ暗に
+# imagealpha 0 1 0.5
+# imagepos 0 0 0
+# textwindow "close"
+# waitandnext 1
+
+# move 318 2 0
+# alpha 318 0 0
+# face 6101421 "usual"
+# alpha 6101421 1 0
+# textwindow "nomal"
+# textboxarrow 0 0
+@？？？
+誰だか、分かりますか？
+
+;;選択肢
+# select "ティルフィングだ" "select_label_04" "ティルティルだ" "select_label_05"
+誰だか、分かりますか？
+
+# label "select_label_04"
+# labeljump "select_label_end2"
+# bgmfile "bgm612" "BgmSecretlyEverAfter003" 0
+# voice 610141 "tyrufing_7th_0004"
+# textboxarrow 0 0
+@ティルフィング
+正解です
+ふふっ
+
+# label "select_label_05"
+# labeljump "select_label_end2"
+# bgmfile "bgm612" "BgmSecretlyEverAfter003" 0
+# voice 610141 "tyrufing_7th_0004"
+# textboxarrow 0 0
+@ティルフィング
+えっ？
+マスター
+何ですか、それ…ふふっ
+
+# label "select_label_end2"
+# imagealpha 0 0 1
+# waitandnext 1.5
+
+# face 318 "happy"
+# alpha 318 1 0.3
+# move 6101421 4 0.5
+# textboxarrow 0 1
+@ミーミル
+ティルフィング様！
+やっとお会いできました
+
+# voice 610141 "tyrufing_7th_0030"
+# textboxarrow 0 3
+@ティルフィング
+二人とも、私を見つけてくれて
+ありがとうございます
+
+# textboxarrow 0 3
+@ティルフィング
+ミーミル
+かくれんぼはどうでしたか？
+
+# textboxarrow 0 1
+@ミーミル
+初めは戸惑うことばかりでしたが、
+マスター様と皆さんのお陰で
+何とかここまで来られました
+
+# textboxarrow 0 1
+@ミーミル
+ティルフィング様
+このかくれんぼには、
+呪術的な仕掛けがあったのですね
+
+# voice 610141 "tyrufing_7th_0003"
+# textboxarrow 0 3
+@ティルフィング
+はい
+すでに気づいている通り、
+二人には五人のキル姫を巡りながら
+
+# textboxarrow 0 3
+@ティルフィング
+夏祭り会場に五芒星を描いて
+もらいました
+ある儀式のために
+
+# textboxarrow 0 3
+@ティルフィング
+そして、ミーミル
+アナタはとても大切な役割を
+担っていたんですよ
+
+# voice 9917 "mimir_navikan_0022"
+# face 318 "surprise"
+# textboxarrow 0 1
+@ミーミル
+私がですかっ？
+
+# textboxarrow 0 3
+@ティルフィング
+ええ
+アナタに任せて本当に良かった
+
+# textboxarrow 0 3
+@ティルフィング
+この儀式は、強い感情を抱き
+「揺らぎ」つつあるキル姫と
+縁を繋いで…
+
+# textboxarrow 0 3
+@ティルフィング
+その心に寄り添い、
+絆を結ぶことが
+最も重要な鍵となっていました
+
+# textboxarrow 0 3
+@ティルフィング
+アナタが皆さんの気持ちに寄り添い、
+ともに行動してくれたお陰で儀式は
+完成したんですよ
+
+# voice 9917 "mimir_navikan_0042"
+# face 318 "shy"
+# textboxarrow 0 1
+@ミーミル
+恐縮です…
+それで、どのような儀式を
+為さったのですか？
+
+# textboxarrow 0 3
+@ティルフィング
+この地域全体を安定させて
+「揺らぎ」をなくす儀式です
+
+# voice 9917 "mimir_navikan_0023"
+# face 318 "surprise"
+# textboxarrow 0 1
+@ミーミル
+なんと
+そのような大がかりな儀式を
+さすがでございますっ
+
+# textboxarrow 0 3
+@ティルフィング
+皆さんの協力あってのことです
+マスターとミーミルはもちろん
+
+# textboxarrow 0 3
+@ティルフィング
+この近くで暮らしているキル姫に
+声を掛けて、儀式を
+手伝っていただきました
+
+# voice 610141 "tyrufing_7th_0030"
+# face 6101421 "normal"
+# textboxarrow 0 3
+@ティルフィング
+お陰で地域一帯の「揺らぎ」を
+鎮めることができました
+ありがとうございます
+
+# voice 9917 "mimir_navikan_0004"
+# face 318 "happy"
+# textboxarrow 0 1
+@ミーミル
+ティルフィング様の
+お役に立てたのなら、
+この上ない喜びでございます
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# face 6101421 "usual"
+# textboxarrow 0 3
+@ティルフィング
+そろそろ始まるみたいですね
+
+# face 318 "surprise"
+# textboxarrow 0 1
+@ミーミル
+まだ何かあるのですか？
+
+# textboxarrow 0 3
+@ティルフィング
+夏祭りの最後を飾る――
+
+;;花火が上がる
+# se "SE_0605"
+# textboxarrow 0 0
+# waitandnext 1.8
+
+;;背景：花火
+# frameout 0 0
+# fadein "white" 3
+# background "sea_fireworks"
+# alpha 318 0 0
+# alpha 6101421 0 0
+# textwindow "close"
+# waitandnext 4
+
+# framein 0 1
+# alpha 318 1 0.3
+# alpha 6101421 1 0.3
+# waitandnext 1
+
+# voice 9917 "mimir_navikan_0024"
+# face 318 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+ひゃっ…？
+
+# textboxarrow 0 3
+@ティルフィング
+打ち上げ花火です
+
+# fadein "white" 1
+# alpha 318 0 0
+# alpha 6101421 0 0
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# textwindow "close"
+# waitandnext 3
+
+# textflame 0 0
+# textwindow "nomal"
+@
+エンディングへ続く
+
+# fadeout "black" 1
+# waitandnext 1

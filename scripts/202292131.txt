@@ -1,0 +1,662 @@
+;;-----------------------------------------
+;;SEA4章_13
+;;-----------------------------------------
+# script "lisp"
+# background "town_2"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 3
+# scale 6504011 0.8 0
+# layer 6504011 3
+# mask 6504011 off
+# alpha 6504011 0 0
+;;オルフェウス
+# body 5603211
+# pos 5603211 4
+# scale 5603211 0.8 0
+# layer 5603211 2
+# mask 5603211 off
+# alpha 5603211 0 0
+;;イージス
+# body 52000111
+# pos 52000111 2
+# scale 52000111 0.8 0
+# layer 52000111 4
+# alpha 52000111 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 1
+# scale 6603811 0.8 0
+# layer 6603811 3
+# mask 6603811 off
+# alpha 6603811 0 0
+;;天上編ネス
+# body 602011
+# pos 602011 5
+# scale 602011 0.8 0
+# layer 602011 2
+# mask 602011 off
+# alpha 602011 0 0
+;;天上編エルキュール
+# body 202511
+# pos 202511 5
+# scale 202511 0.8 0
+# layer 202511 4
+# alpha 202511 0 0
+;;住民
+# body 2
+# pos 2 4
+# scale 2 0.8 0
+# layer 2 2
+# alpha 2 0 0
+# body 3
+# pos 3 2
+# scale 3 0.8 0
+# layer 3 4
+# alpha 3 0 0
+;;イチイバル
+# body 5402211
+# pos 5402211 5
+# scale 5402211 0.8 0
+# layer 5402211 2
+# mask 5402211 off
+# alpha 5402211 0 0
+;;ヒョウハ
+# body 5402011
+# pos 5402011 4
+# scale 5402011 0.8 0
+# layer 5402011 3
+# mask 5402011 off
+# alpha 5402011 0 0
+;;ミュルグレス
+# body 5104611
+# pos 5104611 2
+# scale 5104611 0.8 0
+# layer 5104611 5
+# alpha 5104611 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：ラグナロク教会がある町：town_2
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+@
+同じ頃
+ラグナロク教会のある町にて――
+
+;;マクリルが歩いてくる
+# se "SE_0740"
+# move 6603811 2 0.5
+# alpha 6603811 1 0.3
+# waitandnext 0.5
+
+# bgm "bgm002" 0
+# voice 6603811 "maclir_ura_0028"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+ロジェスティラからもらった
+地図の通りに来たけど…
+この町だよね…？
+
+# textboxarrow 0 1
+@マクリル
+これから…どうしよう…
+本当に相棒はいるのかな…？
+
+# voice 6603811 "maclir_ura_0022"
+# move 6603811 3 0.5
+# textboxarrow 0 2
+@マクリル
+…………えっ？
+あそこにいるのって
+
+;;マクリルが走っていく
+# se "SE_5575"
+# move 6603811 4 0.3
+# alpha 6603811 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 0.7
+
+;;ネスがいる
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 6603811 1 0
+# layer 6603811 4
+# mask 6603811 on
+# alpha 602011 1 0.3
+# waitandnext 0.5
+
+;;マクリルが駆け寄ってくる
+# se "SE_5575"
+# move 6603811 2 0.3
+# alpha 6603811 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@マクリル
+ロジェスティラ！
+何でここに…あれ？
+
+# voice 6020 "ness_0024"
+# face 602011 "worry"
+# textboxarrow 0 3
+@ネス
+ひゃっ…！
+どなたですかっ？
+
+# voice 6603811 "maclir_ura_0023"
+# textboxarrow 0 1
+@マクリル
+ご…ごめんなさいっ…！
+人違いでしたっ…
+
+;;マクリルが急いで立ち去る
+# se "SE_0740"
+# move 6603811 1 0.3
+# alpha 6603811 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# voice 6020 "ness_0022"
+# face 602011 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 3
+@ネス
+びっくりしました
+何だったんでしょう…？
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# move 6603811 2 0
+# alpha 602011 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 6603811 "maclir_ura_0015"
+# move 6603811 3 0.5
+# layer 6603811 2
+# mask 6603811 off
+# alpha 6603811 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@マクリル
+ううっ…
+やっちゃった…
+やっぱり知らないところは怖いよ…
+
+;;エルキュールがやってくる
+# se "SE_0740"
+# voice 2025 "hercule_0002"
+# move 6603811 2 0.5
+# move 202511 4 0.3
+# alpha 202511 1 0.3
+# textboxarrow 0 3
+@エルキュール
+そこのあなた！
+何かお困りですねっ？
+是非、お手伝いさせて下さい！
+
+# voice 6603811 "maclir_ura_0024"
+# textboxarrow 0 1
+@マクリル
+ひゃぁぁぁぁ…！？
+何っ…？怖いっ…
+
+# textboxarrow 0 3
+@エルキュール
+怖がらなくても大丈夫ですよ！
+私があなたの希望になってみせます！
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：町：in_city
+# background "in_city"
+# bgm "bgm005" 0
+# alpha 6603811 0 0
+# alpha 202511 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+@
+再び、ヴィモールの町にて――
+
+# alpha 5603211 1 0.3
+# face 5603211 "angry"
+# alpha 52000111 1 0.3
+# face 52000111 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+見つけたぞ！
+ロジェスティラ達は
+あの建物の中だ！
+
+# voice 560321 "orpheus_c_0022"
+# face 5603211 "surprise"
+# textboxarrow 0 3
+@オルフェウス
+何で分かるし？
+
+# face 52000111 "normal"
+# textboxarrow 0 1
+@イージス
+私は「死」の気配を感じ取れると
+言っただろう
+
+# face 52000111 "angry"
+# textboxarrow 0 1
+@イージス
+その気配を辿れば
+ロジェスティラの居場所は明らかだ！
+
+# voice 560321 "orpheus_c_0040"
+# face 5603211 "usual"
+# textboxarrow 0 3
+@オルフェウス
+なるほどね～♪
+
+# alpha 5603211 0 0.3
+# alpha 52000111 0 0.3
+# face 270 "surprise"
+# alpha 270 1 0.3
+# voice 9917 "mimir_navikan_0002"
+# textboxarrow 0 2
+@ミーミル
+オルフェウスさん、
+急に歌い出して、どうされました？
+
+# alpha 5603211 1 0.3
+# face 52000111 "normal"
+# alpha 52000111 1 0.3
+# alpha 270 0 0.3
+# textboxarrow 0 3
+@オルフェウス
+そ、マ？あたし歌ってた？
+まあ、いいっしょ！
+歌はあたしの命だし！
+
+# textboxarrow 0 3
+@オルフェウス
+イッチーさん達にも聞かせなきゃ
+だから、喉を温めてんの
+
+# face 52000111 "surprise"
+# textboxarrow 0 1
+@イージス
+貴様の歌で全て治まるとは
+思えないんだが…
+
+# voice 560321 "orpheus_c_0009"
+# face 5603211 "angry"
+# textboxarrow 0 3
+@オルフェウス
+は？音楽に不可能はないしっ
+ロジェっちを起こすのだって…
+あっ！
+
+;;オルフェウスが走っていく
+# se "SE_5575"
+# move 5603211 3 0.3
+# scale 5603211 0.75 0.5
+# alpha 5603211 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# alpha 52000111 0 0.3
+# alpha 270 1 0.3
+# voice 9917 "mimir_navikan_0022"
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+オルフェウスさん！？
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# alpha 270 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 2 "angry"
+# alpha 2 1 0.3
+# face 3 "angry"
+# alpha 3 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@住民１
+やんのか、てめえ！？
+
+# textboxarrow 0 1
+@住民２
+やってやるぞ、コラ！
+
+;;オルフェウスが割り込む
+# move 2 5 0.3
+# move 3 1 0.3
+# scale 5603211 0.8 0.3
+# layer 5603211 4
+# mask 5603211 on
+# alpha 5603211 1 0.3
+# textboxarrow 0 2
+@オルフェウス
+争うのはやめて、あたしの歌を
+一緒に聞くっしょ！
+
+# face 5603211 "usual"
+# textboxarrow 0 2
+@オルフェウス
+～～～♪～～～♪
+
+# face 2 "sad"
+# textboxarrow 0 3
+@住民１
+な、何だ…！？
+あああっ
+
+# face 3 "smile"
+# textboxarrow 0 1
+@住民２
+そうだよな…
+俺達、きっとわかり合えるよ
+
+# face 2 "normal"
+# textboxarrow 0 3
+@住民１
+うん
+仲良くしよう
+
+# voice 560321 "orpheus_c_0004"
+# face 5603211 "happy"
+# textboxarrow 0 2
+@オルフェウス
+うんうん
+やっぱ、音楽って最高っしょ！
+
+# alpha 2 0 0.3
+# alpha 3 0 0.3
+# alpha 5603211 0 0.3
+# move 270 2 0
+# alpha 270 1 0.3
+# move 6504011 4 0
+# alpha 6504011 1 0.3
+# textboxarrow 0 1
+@ミーミル
+あっという間に、
+ケンカしていた方々を
+仲直りさせてしまいました…
+
+# voice 650401 "manannan_ura_0005"
+# face 6504011 "happy"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+歌を聞くだけで仲良くなるなんて
+愉快だねっ
+
+# alpha 270 0 0.3
+# alpha 6504011 0 0.3
+# mask 5603211 off
+# face 5603211 "angry"
+# alpha 5603211 1 0.3
+# textboxarrow 0 2
+@オルフェウス
+…あっちでも、
+もめてる人達がいるし
+歌を聞いてもらわないとっ
+
+# voice 52000111 "aegis_c_0011"
+# alpha 5603211 0 0.3
+# move 52000111 3 0
+# mask 52000111 off
+# face 52000111 "angry"
+# alpha 52000111 1 0.3
+# textboxarrow 0 2
+@イージス
+待て、オルフェウス！
+私達はそれどころではない…
+
+# alpha 5603211 1 0.3
+# alpha 52000111 0 0.3
+# textboxarrow 0 2
+@オルフェウス
+関係ないっしょ！
+
+;;オルフェウスが走り去る
+# se "SE_5575"
+# move 5603211 1 0.5
+# scale 5603211 0.7 0.5
+# alpha 5603211 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# voice 52000111 "aegis_c_0022"
+# alpha 52000111 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@イージス
+何をしている！？
+見境がなくなっているのか…？
+
+# alpha 52000111 0 0.3
+# move 270 3 0
+# alpha 270 1 0.3
+# face 270 "sad"
+# voice 9917 "mimir_navikan_0001"
+# textboxarrow 0 2
+@ミーミル
+マスター様…
+「揺らぎ」の影響が
+大きくなっているのでしょうか
+
+# textboxarrow 0 2
+@ミーミル
+皆さんを
+仲直りさせているだけですので、
+お止めするのも…
+
+;;イチイバルが現れる
+# voice 540221 "ichiibal_c_0021"
+# move 270 2 0.5
+# move 5402211 4 0.5
+# alpha 5402211 1 0.3
+# textboxarrow 0 3
+@イチイバル
+そうだよ
+今は、どんどん力を使うべきだ
+キランッ☆
+
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+あ！
+イチイバルさん
+
+# voice 52000111 "aegis_c_0009"
+# alpha 270 0 0.3
+# alpha 5402211 0 0.3
+# alpha 52000111 1 0.3
+# textboxarrow 0 2
+@イージス
+貴様！
+そちらから来るとは良い度胸だ
+
+# textboxarrow 0 2
+@イージス
+ロジェスティラを返してもらうぞ
+彼女は危機的な状況なんだ
+そして、私達も！
+
+# alpha 270 1 0.3
+# alpha 5402211 1 0.3
+# alpha 52000111 0 0.3
+# textboxarrow 0 1
+@ミーミル
+聞いて下さい、イチイバルさん
+このままだと皆さんも世界も――
+
+# textboxarrow 0 3
+@イチイバル
+分かってるよ
+だからボクが来たんだ
+ちゃんと解決するから見ててよ
+
+# alpha 270 0 0.3
+# alpha 5402211 0 0.3
+# alpha 52000111 1 0.3
+# textboxarrow 0 2
+@イージス
+何！？
+どういうことか、聞かせてもらおう
+
+# voice 540221 "ichiibal_c_0004"
+# alpha 52000111 0 0.3
+# move 5402211 3 0
+# mask 5402211 off
+# alpha 5402211 1 0.3
+# bgm "stop"
+# textboxarrow 0 2
+@イチイバル
+百聞は一見にしかず、だよ
+
+# voice 540201 "hyoha_c_1027"
+# alpha 5402211 0 0.3
+# alpha 5402011 1 0.3
+# alpha 5104611 1 0.3
+# bgm "bgm023_024" 0
+# se "SE_4300"
+# textboxarrow 0 3
+@ヒョウハ
+超爆・燃え上がっていくぞぉぉぉ！
+
+# se "SE_4301"
+# waitandnext 1
+
+# se "SE_8115"
+# textboxarrow 0 1
+@ミュルグレス
+報酬分は働いてあげる
+
+# voice 52000111 "aegis_c_battle_0005"
+# scale 5402011 0.9 0.5
+# alpha 5402011 0 0.3
+# scale 5104611 0.9 0.5
+# alpha 5104611 0 0.3
+# alpha 52000111 1 0.3
+# textboxarrow 0 2
+@イージス
+ぬおっ！？
+
+;;２人の攻撃をイージスが受ける
+# se "SE_3006"
+# fadein "white" 1
+# scale 52000111 0.77 0.2
+# mask 52000111 on
+# move 5402011 5 0.2
+# scale 5402011 0.8 0.3
+# alpha 5402011 1 0.2
+# move 5104611 1 0.2
+# scale 5104611 0.8 0.3
+# alpha 5104611 1 0.2
+# textboxarrow 0 0
+# waitandnext 1.5
+
+# textboxarrow 0 2
+@イージス
+いきなり何をする！？
+
+# alpha 52000111 0 0.3
+# alpha 5402011 0 0.3
+# alpha 5104611 0 0.3
+# move 5402211 4 0
+# alpha 5402211 1 0.3
+# face 270 "angry"
+# alpha 270 1 0.3
+# textboxarrow 0 3
+@イチイバル
+もちろん、オルオルとロジェを
+助ける計画を実行するんだよ
+
+# voice 9917 "mimir_navikan_0011"
+# textboxarrow 0 1
+@ミーミル
+あの…
+マスター様を攻撃する理由が
+分かりませんっ
+
+# voice 540221 "ichiibal_c_0042"
+# face 5402211 "shy"
+# textboxarrow 0 3
+@イチイバル
+大丈夫
+死んだりしないから…多分
+テヘッ☆
+
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+そんなっ…
+
+# voice 650401 "manannan_ura_0004"
+# alpha 5402211 0 0.3
+# alpha 270 0 0.3
+# move 6504011 3 0
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# textboxarrow 0 2
+@マナナン
+ふーん…
+喜劇的に愉快そうだね！
+私も混ぜてよっ
+
+;;バトル
+;;エネミー：神令イチイバル、神令ヒョウハ、神令ミュルグレス
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 6504011 0 0
+# waitandnext 0.2

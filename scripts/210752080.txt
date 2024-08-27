@@ -1,0 +1,768 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;コマンドキラーズサイドストーリー前編シナリオ
+;;第2話　タイトル：見守る者
+;;2_8
+;;スクリプト最後の背景：平原（夜）
+;;-----------------------------------------
+# script "lisp"
+# background "town_night"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;アダマス
+# body 101221
+# pos 101221 3
+# scale 101221 0.8 0
+# layer 101221 2
+# alpha 101221 0 0
+# mask 101221 off
+;;ハルパー
+# body 202011
+# pos 202011 3
+# scale 202011 0.8 0
+# layer 202011 2
+# alpha 202011 0 0
+# mask 202011 off
+;;如意金箍棒
+# body 232
+# pos 232 3
+# scale 232 0.8 0
+# layer 232 2
+# alpha 232 0 0
+# mask 232 off
+;;如意金箍棒・神令・フリッグ（ボイス用）
+# body 5203111
+# alpha 5203111 0 0
+;;ヤグルシ
+# body 201711
+# pos 201711 3
+# scale 201711 0.8 0
+# layer 201711 2
+# alpha 201711 0 0
+# mask 201711 off
+;;アイムール
+# body 200221
+# pos 200221 3
+# scale 200221 0.8 0
+# layer 200221 2
+# alpha 200221 0 0
+# mask 200221 off
+;;ケーリュケイオン
+# body 600531
+# pos 600531 3
+# scale 600531 0.8 0
+# layer 600531 2
+# alpha 600531 0 0
+# mask 600531 off
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 2
+# alpha 810004 0 0
+# mask 810004 off
+;;-----------------------------------------
+;;第2話　タイトル：見守る者
+;;//背景：町（夜）
+# voice 2020 "harpe_0019"
+# move 202011 3 0
+# face 202011 "sad"
+# alpha 202011 1 0
+# mask 202011 off
+# textflame 1 1
+# textboxarrow 0 2
+@ハルパー
+イヤだわ
+こんなときに…
+
+# serif 1
+@奏官
+いや、これは好機だぞ
+
+# serif 1
+@奏官
+ヤグルシに、この町への忠誠を
+見せてもらえるだろう
+きっとな
+
+# voice 2020 "harpe_0021"
+# face 202011 "normal"
+# textboxarrow 0 2
+@ハルパー
+まあっ
+マスターも意地が悪いんですね
+
+# serif 1
+@奏官
+おい、ヤグルシ
+直ちに出陣して…アイムールを
+討ち取ってこい
+
+# serif 1
+@奏官
+そうしたら、お前達の処刑は
+取り消してやる
+
+# alpha 202011 0 0.5
+# move 201711 3 0
+# face 201711 "sad"
+# alpha 201711 1 0.5
+# mask 201711 off
+# textboxarrow 0 2
+@ヤグルシ
+そんなっ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# move 201711 2 0.5
+# mask 201711 on
+# move 202011 4 0
+# face 202011 "normal"
+# alpha 202011 1 0.5
+# mask 202011 on
+# textboxarrow 0 3
+@ハルパー
+安心してください、ヤグルシ
+私がきちんと見ていてあげますからね
+
+# serif 1
+@奏官
+自分のマスターのためだ
+当然、やれるよな？
+
+# textboxarrow 0 1
+@ヤグルシ
+ヤグは…ヤグはっ…
+
+# sedelay "SE_4602" 1
+# serif 1
+@ヤグルシのマスター
+ヤグルシ、答えなくて良い！
+お前は…グッ…！
+
+# textboxarrow 0 3
+@ハルパー
+お喋りな人は嫌いですよ
+
+# textwindow "close"
+# alpha 201711 0 0.5
+# alpha 202011 0 0.5
+# serif 1
+@奏官
+出陣だ！
+今夜をブラオの町の命日にしてやれ！
+
+# se "SE_0607"
+# serif 1
+@兵士達
+おおおおおおおおおお！！
+
+# serif 1
+@群衆
+うおおおおおおおおおお！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# move 232 3 0
+# face 232 "sad"
+# alpha 232 1 0.5
+# mask 232 off
+# textboxarrow 0 2
+# textwindow "normal"
+@如意金箍棒
+…………
+
+# voice 6005 "keryukeion_0026"
+# alpha 232 0 0.5
+# move 600531 3 0
+# face 600531 "angry"
+# alpha 600531 1 0.5
+# mask 600531 off
+# textboxarrow 0 2
+@ケーリュケイオン
+うわ～…
+かなりまずいことになったよ～
+カドケウス、何してんの～…
+
+# textboxarrow 0 2
+@ケーリュケイオン
+急いで連絡を――
+
+# bgm "stop"
+# move 232 2 0
+# face 232 "angry"
+# alpha 232 1 0.5
+# mask 232 on
+# move 600531 4 0.5
+# mask 600531 on
+# textboxarrow 0 1
+@如意金箍棒
+お待ちなさい
+
+# bgm "bgm031" 0
+# voice 6005 "keryukeion_0022"
+# face 600531 "surprise"
+# textboxarrow 0 3
+@ケーリュケイオン
+わわっ？
+…お姉さん、雰囲気違うよ
+
+# textboxarrow 0 3
+@ケーリュケイオン
+もしかして…怒ってる？
+
+# face 232 "normal"
+# textboxarrow 0 1
+@如意金箍棒
+ケーリュケイオン
+お願いがあるの
+
+# face 600531 "normal"
+# textboxarrow 0 3
+@ケーリュケイオン
+それって…
+ヤグルシのマスター絡みかな～？
+
+# voice 520311 "nyoikinkobou_c_0036"
+# textboxarrow 0 1
+@如意金箍棒
+お願いね
+
+# face 600531 "angry"
+# textboxarrow 0 3
+@ケーリュケイオン
+ええと…私、対価のないお願いは
+受けない主義なんだけど…
+
+# face 232 "angry"
+# textboxarrow 0 1
+@如意金箍棒
+ケーリュケイオンちゃん
+
+# voice 6005 "keryukeion_0024"
+# face 600531 "surprise"
+# textboxarrow 0 3
+@ケーリュケイオン
+ひぇっ…
+
+# face 600531 "normal"
+# textboxarrow 0 3
+@ケーリュケイオン
+そ…そうだ！
+私もあなたに頼みたいことあったし
+それで相殺ってことでっ
+
+# textboxarrow 0 3
+@ケーリュケイオン
+ヤグルシのマスターは私に任せてよ
+ちゃんと安全なところに逃がすから
+
+# textboxarrow 0 3
+@ケーリュケイオン
+で、あなたは…？
+
+# face 232 "normal"
+# textboxarrow 0 1
+@如意金箍棒
+決まってるわ
+
+# textboxarrow 0 1
+@ビコウ
+ウキキーッ！
+
+# textboxarrow 0 1
+@如意金箍棒
+いきましょう、ビコウ
+
+;;//背景：平原（夜）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain_night"
+# alpha 232 0 0
+# alpha 600531 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm023" 0
+# serif 1
+@ブラオの兵士達
+裏切り者のカドケウスはマロニの
+町に逃げ込んだに違いない！
+
+# serif 1
+@ブラオの兵士達
+まとめて皆殺しだあああ！！
+
+# serif 1
+@マロニの兵士達
+ブラオの連中なんぞ返り討ちに
+してくれる！
+
+# serif 1
+@マロニの兵士達
+一人たりとも生かして帰すなああ！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# move 200221 3 0
+# face 200221 "normal"
+# alpha 200221 1 0.5
+# mask 200221 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アイムール
+目標を発見…
+殲滅を実行します
+
+# alpha 200221 0 0.5
+# move 201711 3 0
+# face 201711 "sad"
+# alpha 201711 1 0.5
+# mask 201711 off
+# textboxarrow 0 2
+@ヤグルシ
+お姉ちゃん…！
+
+# textboxarrow 0 2
+@ヤグルシ
+ヤグ…やらないとっ…
+マスターが…！
+
+# voice 2017 "yagurushi_0037"
+# textboxarrow 0 2
+@ヤグルシ
+ううぅっ…でも…
+
+# move 201711 2 0.5
+# mask 201711 on
+# move 202011 4 0
+# face 202011 "normal"
+# alpha 202011 1 0.5
+# mask 202011 on
+# textboxarrow 0 3
+@ハルパー
+どうしたんですか、ヤグルシ？
+敵は目の前ですよ
+
+# textboxarrow 0 3
+@ハルパー
+マスターを助けるのでは
+なかったのですか？
+
+# textboxarrow 0 1
+@ヤグルシ
+ヤグは…ヤグはっ…！
+
+# alpha 202011 0 0.5
+# move 200221 4 0
+# face 200221 "normal"
+# alpha 200221 1 0.5
+# mask 200221 on
+# textboxarrow 0 3
+@アイムール
+ヤグルシ…
+戦闘に感情は不要です
+
+# face 200221 "angry2"
+# textboxarrow 0 3
+@アイムール
+私達はキル姫
+戦闘を…躊躇してはなりません
+
+# face 201711 "cry"
+# textboxarrow 0 1
+@ヤグルシ
+アイムールお姉ちゃん…！
+ヤグはっ…
+
+# bgm "stop"
+# alpha 201711 0 0.5
+# alpha 200221 0 0.5
+# move 232 3 0
+# face 232 "normal"
+# alpha 232 1 0.5
+# mask 232 off
+# textboxarrow 0 2
+@如意金箍棒
+そこまでよ
+
+;;//如意金箍棒がアイムールとヤグルシを止める
+# alpha 232 0 0.5
+# move 201711 2 0
+# face 201711 "surprise"
+# alpha 201711 1 0.5
+# mask 201711 on
+# textboxarrow 0 1
+# move 200221 4 0
+# face 200221 "angry2"
+# alpha 200221 1 0.5
+# mask 200221 on
+@ヤグルシ
+ひゃあっ？
+
+# textboxarrow 0 3
+@アイムール
+新たな障害を確認
+殲滅対象と認識します
+
+# voice 2020 "harpe_0027"
+# alpha 201711 0 0.5
+# alpha 200221 0 0.5
+# move 202011 3 0
+# face 202011 "sad"
+# alpha 202011 1 0.5
+# mask 202011 off
+# textboxarrow 0 2
+@ハルパー
+イヤね
+せっかくイイところだったのに…
+
+# alpha 202011 0 0.5
+# move 201711 3 0
+# face 201711 "surprise"
+# alpha 201711 1 0.5
+# mask 201711 off
+# textboxarrow 0 2
+@ヤグルシ
+どうして…どうして、
+ヤグを止めてくれたの…？
+
+# bgmfile "bgm429" "BgmIntegralNoahCommand" 0
+# alpha 201711 0 0.5
+# move 232 3 0
+# face 232 "usual"
+# alpha 232 1 0.5
+# mask 232 off
+# textboxarrow 0 2
+@如意金箍棒
+…どうしてかしらね
+あの子の言葉を借りるなら
+
+# textboxarrow 0 2
+@如意金箍棒
+何もしないで後悔するなら、
+動いて後悔した方がずっといい
+そう思ったからかしら
+
+# face 232 "normal"
+# textboxarrow 0 2
+@如意金箍棒
+ワタシの神器、如意金箍棒は元々、
+武器ではないの
+
+# voice 2017 "yagurushi_0017"
+# alpha 232 0 0.5
+# move 201711 3 0
+# face 201711 "surprise"
+# alpha 201711 1 0.5
+# mask 201711 off
+# textboxarrow 0 2
+@ヤグルシ
+えっ…？
+
+# alpha 201711 0 0.5
+# move 232 3 0
+# face 232 "normal"
+# alpha 232 1 0.5
+# mask 232 off
+# textboxarrow 0 2
+@如意金箍棒
+だからかしらね
+キル姫なのに、戦うことに疑問を
+抱いてきたわ
+
+# textboxarrow 0 2
+@如意金箍棒
+もちろん戦いを止めるためにも
+力が必要なのは承知しているの
+
+# face 232 "sad"
+# textboxarrow 0 2
+@如意金箍棒
+それでも、望まぬ戦いに無理やり
+参加させられるキル姫を見るのは
+心が痛むわ
+
+# textboxarrow 0 2
+@如意金箍棒
+そんな悲劇は…そんな不幸は…
+この世から消えて無くなればいい
+
+# textboxarrow 0 2
+@如意金箍棒
+ずっとそう思っていたの
+そう…ただ、思っていただけ
+
+# serif 1
+@双方の奏官
+ごちゃごちゃと何を言っている！？
+あのキル姫を殺せーっ！！
+
+# serif 1
+@双方の兵士達
+おおおおおおおおおお！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 232 "normal"
+# textboxarrow 0 2
+@如意金箍棒
+ワタシ一人が何かしたところで
+何も変わらないかもしれない
+それはわかっているわ
+
+# textboxarrow 0 2
+@如意金箍棒
+だけどね、なぜだかそれでも
+少しの可能性にかけてみたく
+なったのよ
+
+# textboxarrow 0 2
+@如意金箍棒
+だから、ワタシは――
+
+# bgm "stop"
+# face 232 "angry"
+# textboxarrow 0 2
+# textwindow "normal"
+@如意金箍棒
+粉砕するわ
+
+;;//如意金箍棒が伸びる
+# se "SE_5739"
+# bgm "bgm014" 0
+# waitandnext 0.5
+
+# voice 2020 "harpe_0023"
+# alpha 232 0 0.5
+# move 202011 3 0
+# face 202011 "surprise"
+# alpha 202011 1 0.5
+# mask 202011 off
+# textboxarrow 0 2
+@ハルパー
+ええっ…！？
+何なの、あの武具？
+ものすごい勢いで伸びていくわ…
+
+# alpha 202011 0 0.5
+# move 232 3 0
+# face 232 "angry"
+# alpha 232 1 0.5
+# mask 232 off
+# textboxarrow 0 2
+@如意金箍棒
+この棒は三十三天に達する
+
+# textboxarrow 0 2
+@如意金箍棒
+圧倒的な長さと、
+圧倒的な重さで
+あなた達の「壁」を打ち砕くわ！
+
+# textboxarrow 0 2
+@如意金箍棒
+せぇぇぇぇぇぇい！！
+
+# textboxarrow 0 2
+@ビコウ
+ウッキー！！
+
+;;//突風音
+# se "SE_5772"
+# se "SE_8014"
+# waitandnext 0.5
+
+# serif 1
+@双方の兵士達
+うわああああああああっ…！
+棒がっ…巨大な棒があああっ…！？
+
+# serif 1
+@双方の奏官
+何が起きて…ひええええ！？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 232 0 0.5
+# move 202011 3 0
+# face 202011 "surprise"
+# alpha 202011 1 0.5
+# mask 202011 off
+# textboxarrow 0 2
+@ハルパー
+この勢い…まさかっ？
+
+;;//如意金箍棒が二つの町の壁を粉砕する
+# se "SE_11586"
+# sedelay "SE_8015" 0.8
+# waitandnext 0.5
+
+# voice 2017 "yagurushi_0023"
+# alpha 202011 0 0.5
+# move 201711 2 0
+# face 201711 "surprise"
+# alpha 201711 1 0.5
+# mask 201711 on
+# textboxarrow 0 1
+# move 200221 4 0
+# face 200221 "angry2"
+# alpha 200221 1 0.5
+# mask 200221 on
+@ヤグルシ
+ひゃああああっ…！
+壁がっ…町を囲んでる壁が…
+
+# textboxarrow 0 3
+@アイムール
+二つの町の壁が粉砕されるのを確認…
+対象の脅威認定を引き上げます
+
+# serif 1
+@双方の兵士達
+あああああ…
+化け物だあああっ…！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 201711 0 0.5
+# alpha 200221 0 0.5
+# move 232 3 0
+# face 232 "angry"
+# alpha 232 1 0.5
+# mask 232 off
+# textboxarrow 0 2
+@如意金箍棒
+ブラオの町の皆さんも、
+マロニの町の皆さんも、
+少し頭を冷やして
+
+# textboxarrow 0 2
+@如意金箍棒
+あなた達に必要なのは、
+「壁」を取り払った話し合いだと
+ワタシは思うの
+
+# voice 520311 "nyoikinkobou_c_0004"
+# face 232 "normal"
+# textboxarrow 0 2
+@如意金箍棒
+これで随分と、すっきりしたわね
+無為な戦いは終わりにしましょう
+
+# serif 1
+@双方の兵士達
+…………
+
+# serif 1
+@双方の奏官
+…………
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 232 "angry"
+# textboxarrow 0 2
+@如意金箍棒
+それに、どうやら今は
+それどころではないみたい
+
+# se "SE_0617"
+# alpha 232 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# textboxarrow 0 2
+@異族
+ギャアアアアアアアアアア
+
+# alpha 810004 0 0.5
+# move 101221 2 0
+# face 101221 "surprise"
+# alpha 101221 1 0.5
+# mask 101221 on
+# move 202011 4 0
+# face 202011 "surprise"
+# alpha 202011 1 0.5
+# mask 202011 on
+# textboxarrow 0 1
+@アダマス
+なっ…異族じゃない…！？
+
+# textboxarrow 0 3
+@ハルパー
+珍しいですわね
+久しく見かけていませんでしたのに
+
+# alpha 101221 0 0.5
+# alpha 202011 0 0.5
+# move 201711 2 0
+# face 201711 "surprise"
+# alpha 201711 1 0.5
+# mask 201711 on
+# move 200221 4 0
+# face 200221 "angry2"
+# alpha 200221 1 0.5
+# mask 200221 on
+# textboxarrow 0 3
+@アイムール
+町へ向かう戦力とこちらへ向かう戦力
+二つの戦力を感知しました
+…殲滅の許可を
+
+# textboxarrow 0 1
+@ヤグルシ
+どうしようっ…
+あっちからもたくさんやってくるよ…！
+
+;;如意金箍棒（独白）
+# voice 520311 "nyoikinkobou_c_0031"
+# alpha 201711 0 0.5
+# alpha 200221 0 0.5
+# move 232 3 0
+# face 232 "normal"
+# alpha 232 1 0.5
+# mask 232 off
+# textboxarrow 0 0
+# textwindow "moya"
+@如意金箍棒
+ごめんなさい…
+きっとワタシを目指しているのね…
+でも、だとしたらもう一つは…
+
+# serif 1
+@マロニの奏官
+なんて数だ…化け物めっ！
+どこから湧いて出てきやがった…！
+
+# serif 1
+@ブラオの奏官
+このままだと町が危ないぞ…！
+
+;;如意金箍棒（独白）
+# textboxarrow 0 0
+@如意金箍棒
+二つの町の壁なき今、
+やるべきことは一つね
+
+# se "SE_0757"
+# serif 1
+@マロニの奏官
+総員、目前の異族に対処しろ！
+絶対に町への侵入を許すなよ！
+
+# serif 1
+@ブラオの奏官
+ブラオの本気を見せてやれ！
+マロニに後れをとるな！
+異族から我らの町を守るのだ！

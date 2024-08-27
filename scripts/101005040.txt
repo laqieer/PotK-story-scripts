@@ -1,0 +1,425 @@
+;;第5話（5-4）　タイトル：
+;;//背景：地底
+# script "lisp"
+# background "underground_world_3"
+# bgmfile "bgm313_314" "BgmLostRagnarokBattle005" 0
+;;@ケイオスリオン兵1
+# body 3820001
+# pos 3820001 2
+# scale 3820001 0.8 0
+# alpha 3820001 1 0
+;;@ケイオスリオン兵1
+# entry 12345 3820001
+# pos 12345 4
+# scale 12345 0.8 0
+# alpha 12345 1 0
+;;@パラシュ
+# body 3200411
+# pos 3200411 3
+# scale 3200411 0.8 0
+# alpha 3200411 0 0
+;;@シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# alpha 3201911 0 0
+;;@カシウス
+# body 3303111
+# pos 3303111 3
+# scale 3303111 0.8 0
+# alpha 3303111 0 0
+;;@アフロディーテ
+# body 3401311
+# pos 3401311 3
+# scale 3401311 0.8 0
+# alpha 3401311 0 0
+;;@アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# alpha 3102311 0 0
+;;@フェイルノート
+# body 3401911
+# pos 3401911 3
+# scale 3401911 0.8 0
+# alpha 3401911 0 0
+# chara 3820001
+# textboxarrow 0 1
+@ケイオスリオン兵
+ギャアアアア…！
+
+# textboxarrow 0 3
+# chara 3820001
+@ケイオスリオン兵
+何だ、あの斬ル姫は…！？
+強すぎるぞっ…
+
+# alpha 3820001 0 0.5
+# alpha 12345 0 0.5
+# alpha 3200411 1 0.5
+# mask 3200411 off
+# textboxarrow 0 2
+# face 3200411 "normal"
+# voice 320041 "parashu_a_0002"
+# chara 3200411
+@パラシュ
+何を騒いでいるんだい？
+皇帝の指示通り、敵を狭い道に
+おびき寄せて…何だって！？
+
+;;//カシウスがパラシュを弾き飛ばす
+# se "SE_5234"
+# textboxarrow 0 0
+# shake 1 0.5
+# fadein "white" 0.3
+# move 3200411 4 0.3
+# mask 3200411 on
+# mask 3303111 on
+# alpha 3303111 1 0
+# leftin 3303111 0.3
+# waitandnext 1
+
+# textboxarrow 0 3
+# move 3303111 3 0.5
+# face 3200411 "angry"
+# voice 320041 "parashu_a_battle_0008"
+# chara 3200411
+@パラシュ
+うあぁっ…
+このボクが…
+でも、理想は負けない…
+
+# se "SE_5206"
+# alpha 3200411 0 0.5
+# alpha 3201911 1 0.5
+# alpha 3303111 0 0.5
+# mask 3201911 off
+# waitandnext 0.5
+
+# face 3201911 "normal"
+# voice 320191 "chihyu_a_0010"
+# chara 3201911
+# textboxarrow 0 2
+@シユウ
+うがあああぁぁ！
+おまえ、つよいな！
+シユウとたたかえ！
+
+# move 3303111 3 0
+# alpha 3303111 1 0.5
+# alpha 3201911 0 0.5
+# mask 3303111 off
+# face 3303111 "normal"
+# voice 3031 "cassius_ge_0002"
+# chara 3303111
+@カシウス
+純粋な暴虐は吹き荒れる嵐のようね
+それでも…理のうちに存在している
+
+# textboxarrow 0 0
+# alpha 3303111 0 1
+# alpha 3201911 1 1
+# waitandnext 1.5
+
+;;//カシウスがシユウを打ち倒す
+# mask 3201911 on
+# mask 3303111 on
+# shake 1 0.5
+# se "SE_9086"
+# fadein "white" 0.3
+# move 3201911 4 0.3
+# alpha 3303111 1 0
+# leftin 3303111 0.3
+# face 3201911 "surprise"
+# voicedelay 320191 "chihyu_a_0038" 0.5
+# chara 3201911
+# textboxarrow 0 3
+@シユウ
+うがぁっ…
+
+# alpha 3303111 0 0.5
+# alpha 3201911 0 0.5
+# alpha 3401311 1 0.5
+# mask 3401311 off
+# face 3401311 "normal"
+# voice 340131 "aphrodite_a_0023"
+# chara 3401311
+# textboxarrow 0 2
+@アフロディーテ
+驚きました
+圧倒的な輝きと美しさ！
+狂おしいほどの愛を感じます！
+
+# sedelay "SE_9086" 0.5
+# mask 3303111 off
+;;# face 3401311 ""
+# voice 340131 "aphrodite_a_0004"
+# chara 3401311
+@アフロディーテ
+その姿を迸る血で
+真っ赤に染め上げて差し上げますわ！
+
+# alpha 3303111 1 0.5
+# alpha 3401311 0 0.5
+# face 3303111 "normal"
+# voice 3031 "cassius_ge_0004"
+# chara 3303111
+@カシウス
+愛と美の探求…
+それもまた輪廻の輪に含まれた
+宿命の一つね
+
+;;//カシウスがアフロディーテを薙ぎ払う
+# alpha 3303111 0 1
+# alpha 3401311 1 1
+# textboxarrow 0 0
+# waitandnext 1.5
+
+# se "SE_9086"
+# mask 3303111 on
+# mask 3401311 on
+# shake 1 0.5
+# fadein "white" 0.3
+# move 3401311 4 0.3
+# leftin 3303111 0.3
+# alpha 3303111 1 0
+# face 3401311 "surprise"
+# voicedelay 340131 "aphrodite_a_battle_0007" 0.5
+# chara 3401311
+# textboxarrow 0 3
+@アフロディーテ
+いやぁぁぁっ…
+
+# se "SE_5205"
+# alpha 3303111 0 0.5
+# alpha 3401311 0 0.5
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# face 3102311 "angry"
+# voice 310231 "ascalon_a_battle_0001"
+# chara 3102311
+# textboxarrow 0 2
+@アスカロン
+私が、皇帝陛下をお守り致します！
+凍てつく氷の刃を味わって下さい！
+
+# mask 3303111 off
+# alpha 3303111 1 0.5
+# alpha 3102311 0 0.5
+# face 3303111 "normal"
+;;# voice 3031 ""
+# chara 3303111
+@カシウス
+憧憬と羨望は嫉妬と失望を生む…
+全ては表裏一体の理よ
+
+;;//カシウスがアスカロンを斬り伏せる
+# alpha 3303111 0 1
+# alpha 3102311 1 1
+# textboxarrow 0 0
+# waitandnext 1.5
+
+# se "SE_5234"
+# mask 3303111 on
+# mask 3102311 on
+# alpha 3303111 1 0
+# leftin 3303111 0.3
+# shake 1 0.5
+# fadein "white" 0.3
+# move 3102311 4 0.3
+# face 3102311 "surprise"
+# voicedelay 310231 "ascalon_a_0018" 0.5
+# textboxarrow 0 3
+# chara 3102311
+@アスカロン
+そんなっ…
+
+# alpha 3820001 1 0.5
+# alpha 12345 1 0.5
+# alpha 3102311 0 0.5
+# alpha 3303111 0 0.5
+# textboxarrow 0 1
+# chara 3820001
+@ケイオスリオン兵
+何だ…何なんだ…！？
+カルマキラーズが
+手も足も出ないだなんてっ…
+
+# textboxarrow 0 3
+# chara 3820001
+@ケイオスリオン兵
+フェイルノートだ！
+あれに勝てるのは皇帝陛下秘蔵の
+斬ル姫しかいない…！
+
+# textboxarrow 0 2
+# alpha 3820001 0 0.5
+# alpha 12345 0 0.5
+# alpha 3401911 1 0.5
+# mask 3401911 off
+# face 3401911 "normal"
+;;# voice 4019 ""
+# chara 3401911
+@フェイルノート
+騒々しいわね…
+深奥まであと少しだっていうのに
+
+# mask 3303111 off
+# alpha 3303111 1 0.5
+# alpha 3401911 0 0.5
+# textboxarrow 0 2
+# face 3303111 "normal"
+;;# voice 3031 ""
+# chara 3303111
+@カシウス
+見つけた…
+
+# alpha 3303111 0 0.5
+# alpha 3401911 1 0.5
+# textboxarrow 0 2
+# face 3401911 "happy"
+# voice 4019 "failnaught_a_0039"
+# chara 3401911
+@フェイルノート
+カシウス？
+ふうん…また面倒そうなのが
+来たわね
+
+# face 3401911 "angry"
+;;# voice 4019 ""
+# chara 3401911
+@フェイルノート
+いいわ
+お望み通り、
+一対一で戦ってあげる！
+
+;;//バトル
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.2
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# mask 3303111 on
+# mask 3401911 on
+# move 3303111 2 0
+# alpha 3303111 1 0
+# move 3401911 4 0
+# bgmfile "bgm313" "BgmLostRagnarokBattle005" 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 1
+
+# move 3303111 1 0.6
+# move 3401911 5 0.6
+# waitandnext 0.6
+
+# move 3303111 2 0.2
+# move 3401911 4 0.2
+# se "SE_9086"
+# fadein "white" 0.5
+# shake 0 0.5
+# waitandnext 1
+
+# serif 0
+# textwindow "nomal"
+# face 3303111 "normal"
+# face 3401911 "angry"
+# voice 4019 "failnaught_a_0007"
+# chara 3401911
+# textboxarrow 0 3
+@フェイルノート
+今更何しに来たの、カシウス！？
+お前は傍観を気取るんだと
+思っていたのだけれどっ
+
+# textboxarrow 0 1
+;;# face 3303111 ""
+;;# voice 3031 ""
+# chara 3303111
+@カシウス
+深奥を目指すのはわたし達にとって
+自明の理…あなたにもわたしにも
+刻まれた抗えぬ宿命よ
+
+# face 3401911 "angry"
+# voice 4019 "failnaught_a_0009"
+# chara 3401911
+# textboxarrow 0 3
+@フェイルノート
+宿命だとか理だとか、
+そんなものに縋るのは
+弱者のすることよ！
+
+;;# face 3401911 ""
+;;# voice 4019 ""
+# chara 3401911
+# textboxarrow 0 3
+@フェイルノート
+私は違う！
+私は自分の意思で地底を目指し、
+自分の意思で「災厄」を滅ぼすの！
+
+;;# face 3401911 ""
+;;# voice 4019 ""
+# chara 3401911
+@フェイルノート
+未来を予見してるのか何なのか
+知らないけれど、自分の意思を
+示さない者に用はないわ！
+
+# textboxarrow 0 1
+;;# face 3303111 ""
+# chara 3303111
+@カシウス
+その傲慢…
+それもまた刻まれた宿命…
+
+# voice 3031 "cassius_ge_0063"
+# textboxarrow 0 1
+@カシウス
+フェイルノート
+わたしがここに来た理由は一つ
+
+# face 3303111 "angry"
+;;# voice 3031 ""
+# chara 3303111
+@カシウス
+あなたには敗北の烙印が捺される
+明けの明星は地に落ちる
+それに…抗うためっ
+
+# textboxarrow 0 3
+# face 3401911 "happy"
+# voice 4019 "failnaught_a_0007"
+# chara 3401911
+@フェイルノート
+はぁっ？
+私が負ける…！？
+あり得ないわね！
+
+;;# face 3401911 ""
+;;# voice 4019 ""
+# chara 3401911
+@フェイルノート
+私は盤上の支配者
+全てのゲームにおいて勝利を収める
+絶対的勝者なの
+
+# textboxarrow 0 1
+# face 3303111 "normal"
+;;# voice 3031 ""
+# chara 3303111
+@カシウス
+でも…
+“観察者”の必勝法には
+勝てないよ

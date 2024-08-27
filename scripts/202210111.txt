@@ -1,0 +1,527 @@
+;;-----------------------------------------
+;;終末Hallowe'en【EP1】
+;;背景：黒
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "bgm003" 0
+;;-----------------------------------------
+;;パラシュ・D. plug・アスタロス ハロウィンver.
+# body 3200421
+# pos 3200421 3
+# scale 3200421 0.8 0
+# layer 3200421 2
+# mask 3200421 off
+# alpha 3200421 0 0
+;;ギャラルホルン
+# body 52000311
+# pos 52000311 3
+# scale 52000311 0.8 0
+# layer 52000311 2
+# mask 52000311 off
+# alpha 52000311 0 0
+;;警備隊
+# body 10
+# pos 10 3
+# scale 10 0.8 0
+# layer 10 2
+# mask 10 off
+# alpha 10 0 0
+;;ギャラルホルン（ハロウィン）
+# body 62000311
+# pos 62000311 3
+# scale 62000311 0.8 0
+# layer 62000311 2
+# mask 62000311 off
+# alpha 62000311 0 0
+;;-----------------------------------------
+# imageset 1 "e221012_logo"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textflame 0 0
+# textwindow "nomal"
+@
+『ハロウィン』
+
+;;モノローグ
+@
+それは仮装をして
+知り合いのお家を回って
+お菓子を貰う行事のこと？
+
+;;モノローグ
+@
+ぬひひひひ！
+そうね、お菓子がもらえる
+とっても素敵で嬉しいお祭りよね！
+
+;;モノローグ
+@
+うーん
+それも間違いじゃないんだけど…
+
+;;モノローグ
+@
+ハロウィンは家に
+死者が訪れると信じられていた
+ことから始まったとされているの
+
+;;背景：ハロウィンな雰囲気の夜の街 town_night
+;;演出：ギャラルホルンハロウィン衣装立ち絵表示
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "town_night"
+# move 62000311 3 0
+# face 62000311 "usual"
+# mask 62000311 off
+# alpha 62000311 1 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ギャラルホルン
+…………
+
+# textboxarrow 0 2
+@ギャラルホルン
+この町のハロウィンでは
+本当に死者と会えるとしたら…？
+
+;;演出：ハロウィン衣装のパラシュ（IN編用）in
+# se "SE_0740"
+# move 62000311 2 0.5
+# layer 62000311 2
+# move 3200421 4 0
+# layer 3200421 4
+# mask 3200421 on
+# face 3200421 "usual"
+# alpha 3200421 1 0.5
+# textboxarrow 0 3
+@パラシュ
+ギャラルホルン
+
+# face 62000311 "normal"
+# textboxarrow 0 1
+@ギャラルホルン
+あら、パラシュ
+
+# voice 5200031 "gjallarhorn_0009"
+# face 62000311 "angry"
+# textboxarrow 0 1
+@ギャラルホルン
+っていうか、私のことは
+ギャラルって呼んでって
+言ってるでしょ
+
+# face 3200421 "sad"
+# textboxarrow 0 3
+@パラシュ
+はあ…
+わかったよ、ギャラル
+
+# voice 5200031 "gjallarhorn_0003"
+# face 62000311 "normal"
+# textboxarrow 0 1
+@ギャラルホルン
+うん、それでいいわ
+…で、どうかしたのかしら？
+
+# face 3200421 "usual"
+# textboxarrow 0 3
+@パラシュ
+どうしたの、じゃないよギャラル
+警備のことで話があると
+伝えてあったはずだろう？
+
+# voice 5200031 "gjallarhorn_0031"
+# face 62000311 "usual"
+# textboxarrow 0 1
+@ギャラルホルン
+ああ、ごめんなさい
+すぐ行くわ
+
+# face 3200421 "happy"
+# textboxarrow 0 3
+@パラシュ
+頼んだよ
+…そちらの君も、
+ハロウィンを楽しんでいってくれ
+
+;;演出：パラシュout
+# se "SE_0740"
+# textwindow "close"
+# alpha 3200421 0 0.5
+# waitandnext 0.5
+
+# move 62000311 3 0.5
+# textboxarrow 0 2
+# textwindow "normal"
+@ギャラルホルン
+呼ばれちゃったわね
+
+# se "SE_6504"
+# emotionbody 1000 3 62000311 10 290
+# effectpattern 1000 1 3
+# effectstart 1000
+# voice 5200031 "gjallarhorn_0004"
+# face 62000311 "happy"
+# textboxarrow 0 2
+@ギャラルホルン
+それじゃあ、アナタも
+この町のハロウィンを楽しんでね
+
+# textboxarrow 0 2
+@ギャラルホルン
+アナタの会いたい人に
+出会えますように…ぬひひ
+
+# fadeout "black" 1
+# waitandnext 1
+
+# bgm "stop"
+# frameout 0 0
+# fadein "white" 2
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# textwindow "close"
+
+# fadeout "white" 1
+# waitandnext 1
+
+;;背景：町中（昼）
+# background "town"
+# alpha 62000311 0 0
+# imagealpha 1 0 0
+# framein 0 0
+# fadein "white" 1
+# waitandnext 1
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+空気が冷たさを増し
+冬の訪れが遠くに見え始めた頃…
+
+;;モノローグ
+@
+その町は下がっていく気温とは逆に
+静かに熱気を漂わせ、ふわふわと
+浮足立つような雰囲気に包まれていた
+
+;;演出：ギャラルホルン通常立ち絵表示
+# bgm "bgm002" 0
+# move 52000311 3 0
+# mask 52000311 off
+# face 52000311 "normal"
+# alpha 52000311 1 0.5
+# waitandnext 1
+
+# voice 5200031 "gjallarhorn_0007"
+# textflame 1 1
+# textboxarrow 0 2
+@ギャラルホルン
+ぬひひひひ、今年ももうすぐね
+
+;;モノローグ
+# textflame 0 0
+@
+『忘れられない思い出と共に
+ハロウィンを過ごそう』
+
+;;モノローグ
+@
+そんなフレーズを合言葉に
+町へは多くの観光客が訪れていた
+
+# face 52000311 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+@ギャラルホルン
+二度と会うことのできない
+別れなんてあまりにも悲しいわ
+少しくらいいいわよね？
+
+;;演出：パラシュin
+# se "SE_0740"
+# move 52000311 2 0.5
+# layer 52000311 2
+# move 3200421 4 0.5
+# layer 3200421 4
+# mask 3200421 on
+# face 3200421 "usual"
+# alpha 3200421 1 0.5
+# textboxarrow 0 3
+@パラシュ
+その少しくらい、に対する
+リスクは相当なものだけれどね
+
+# voice 5200031 "gjallarhorn_0030"
+# face 52000311 "happy"
+# textboxarrow 0 1
+@ギャラルホルン
+毎年無理を聞いてくれて
+ありがとうね、パラシュ
+
+# textboxarrow 0 3
+@パラシュ
+ハロウィンの警備はボク自身が
+やると決めたことだからね
+少々の無理は押し通すさ
+
+# textboxarrow 0 3
+@パラシュ
+人々の悲しみに手を差し伸べられる
+その力があるのだから何かしたい
+…と、ギャラルの想いは一貫していた
+
+# textboxarrow 0 3
+@パラシュ
+その理想は切実で真摯なものだった
+同じように理想を目指す
+ボクが手を貸すのは当然のことだ
+
+# face 52000311 "usual"
+# textboxarrow 0 1
+@ギャラルホルン
+上手くいったのはパラシュのおかげ
+ギャラルだけだったら手に負えない
+ことだっていっぱいあったもの
+
+# textboxarrow 0 3
+@パラシュ
+彼岸と此岸を繋げれば不具合が
+発生するのもまた当然のことだからね
+
+# face 3200421 "happy"
+# textboxarrow 0 3
+@パラシュ
+しかし、終末の笛の音の力で
+町全体を『終わり』に近づけると
+死後の世界の住人達と会えるなんて…
+
+# textboxarrow 0 3
+@パラシュ
+よくそんな方法を思いついたものだ
+と、毎度のことながら感心するよ
+
+# voice 320041 "parashu_a_0005"
+# textboxarrow 0 3
+@パラシュ
+…まぁ、正しい力の使い方とは
+言えないだろうけどね
+
+# textboxarrow 0 1
+@ギャラルホルン
+もちろん、パラシュの言うことは
+理解しているつもりよ？
+
+# textboxarrow 0 1
+@ギャラルホルン
+わずかに起こる世界の歪みで
+何が起こるかわからないもの
+
+# textboxarrow 0 1
+@ギャラルホルン
+だから、この小さな町で
+一年のうち、たった一日に
+限定して力を使っているの
+
+# face 3200421 "usual"
+# textboxarrow 0 3
+@パラシュ
+その、死者との邂逅の日を
+ハロウィンとしたのは合理的だよ
+
+# textboxarrow 0 3
+@パラシュ
+由来を考えても死者と生者の
+境界が曖昧になっているから
+バレにくいしね
+
+# voice 5200031 "gjallarhorn_0022"
+# face 52000311 "surprise"
+# textboxarrow 0 1
+@ギャラルホルン
+あら、その言い方だと
+ギャラルが悪い子みたい
+
+# voice 320041 "parashu_a_0003"
+# textboxarrow 0 3
+@パラシュ
+事実、世の理から外れる行為だ
+褒められたことではないだろう？
+
+# face 52000311 "normal"
+# textboxarrow 0 1
+@ギャラルホルン
+このハロウィンを求める人達には
+大きく悲しい別れがあったのだもの
+年に一度くらい、いいじゃない？
+
+;;モノローグ
+# textflame 0 0
+@
+ぬひひひひ
+とギャラルホルンは
+イタズラそうに笑う
+
+# voice 320041 "parashu_a_0005"
+# face 3200421 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@パラシュ
+…まったく、毎度のことながら
+君のイタズラが一番のサプライズだよ
+
+# textboxarrow 0 1
+@ギャラルホルン
+それに、このイタズラが与える
+再会の喜びはどんなお菓子よりも
+甘く、魅力的で、素敵なものよ
+
+# textboxarrow 0 1
+@ギャラルホルン
+…ギャラルには想像できないくらいね
+
+# emotionbody 2000 2 3200421 10 290
+# effectpattern 2000 1 1
+# effectstart 2000
+# voice 320041 "parashu_a_0022"
+# face 3200421 "surprise"
+# textboxarrow 0 3
+@パラシュ
+ギャラル？
+
+# bgm "stop"
+# emotionbody 3000 2 52000311 10 240
+# effectpattern 3000 1 1
+# effectstart 3000
+# face 52000311 "surprise"
+# textboxarrow 0 1
+@ギャラルホルン
+ううん、なんでもないわ
+…あれ、パラシュのところの
+警備隊さんが来ているわ？
+
+;;演出：警備隊（モブ）立ち絵表示
+# se "SE_5575"
+# textwindow "close"
+# alpha 52000311 0 0.5
+# move 10 2 0
+# face 10 "normal"
+# alpha 10 1 0.5
+# mask 10 on
+# waitandnext 2
+
+# face 3200421 "usual"
+# textboxarrow 0 3
+# textwindow "normal"
+@パラシュ
+…わかった、すぐにボクも向かうよ
+
+;;演出：警備隊（モブ）out
+# se "SE_5575"
+# textwindow "close"
+# move 10 1 0.5
+# alpha 10 0 0.3
+# waitandnext 0.5
+
+# move 52000311 2 0
+# face 52000311 "surprise"
+# alpha 52000311 1 0.5
+# textboxarrow 0 1
+# textwindow "normal"
+@ギャラルホルン
+どうしたの？
+
+# bgm "bgm005" 0
+# textboxarrow 0 3
+@パラシュ
+この町へ向かう道で
+事故があったみたいなんだ
+
+# textboxarrow 0 3
+@パラシュ
+ここのハロウィンも
+理由は表向きにならないものの
+有名にはなってきたからね
+
+# textboxarrow 0 3
+@パラシュ
+いろいろなアクシデントが起こる
+今年はその始まりが早かっただけさ
+
+# voice 5200031 "gjallarhorn_0031"
+# face 52000311 "sad"
+# textboxarrow 0 1
+@ギャラルホルン
+あ…その、ごめんなさい…
+
+# textboxarrow 0 3
+@パラシュ
+君が謝ることではないよ
+それに、こういう時の為に
+ボクが警備役を買ってでたのだから
+
+# voice 5200031 "gjallarhorn_0030"
+# face 52000311 "usual"
+# textboxarrow 0 1
+@ギャラルホルン
+ありがとう…
+アナタがいてくれて本当によかったわ
+
+# voice 320041 "parashu_a_0004"
+# face 3200421 "happy"
+# textboxarrow 0 3
+@パラシュ
+労いの言葉は最後に頼むよ
+今年のハロウィンはまだ
+始まってもいないんだからね
+
+# face 3200421 "usual"
+# textboxarrow 0 3
+@パラシュ
+では行くよ
+ギャラルも支度をしっかりね
+
+# voice 5200031 "gjallarhorn_0032"
+# face 52000311 "normal"
+# textboxarrow 0 1
+@ギャラルホルン
+ええ、徹底的に、よね
+ギャラルも頑張るわ！
+
+;;演出：パラシュout
+# se "SE_0740"
+# textwindow "close"
+# scale 3200421 0.7 1
+# alpha 3200421 0 0.5
+# waitandnext 0.5
+
+# bgm "stop"
+# move 52000311 3 0.5
+# face 52000311 "sad"
+# textboxarrow 0 2
+# textwindow "normal"
+@ギャラルホルン
+…パラシュは優しいわね
+
+# textboxarrow 0 2
+@ギャラルホルン
+なのに、ギャラルは…
+
+# fadeout "black" 1
+# waitandnext 1

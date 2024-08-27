@@ -1,0 +1,826 @@
+;;-----------------------------------------
+;;【ファントムオブキル】暴走オティヌス　軍団戦ストーリー
+;;【EP2】
+;;スクリプト最後の背景：草原
+;;背景：草原（外の風景で夜だとわかるものであればどこでも）
+;;-----------------------------------------
+# script "lisp"
+# background "plain_night"
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;オティヌス
+# body 400831
+# pos 400831 3
+# scale 400831 0.8 0
+# layer 400831 2
+# alpha 400831 0 0
+# mask 400831 off
+;;オティヌス・暴走
+# body 5400811
+# pos 5400811 3
+# scale 5400811 0.8 0
+# layer 5400811 2
+# alpha 5400811 0 0
+# mask 5400811 off
+;;-----------------------------------------
+;;【EP2】
+;;背景：草原（外の風景で夜だとわかるものであればどこでも）
+;;モノローグ
+# textflame 0 0
+@
+任務として、町長からの依頼を
+受けたマスターとオティヌス
+
+;;モノローグ
+@
+イタズラ好きだが、奏官として、
+キル姫としては有能であったふたり
+
+;;モノローグ
+@
+早々に任務を終え、
+町へ戻っているところだった
+
+# voice 4008 "otyinusu_0027"
+# move 400831 3 0
+# face 400831 "usual"
+# alpha 400831 1 0.5
+# mask 400831 off
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+それにしてもあの町長さ
+絵にかいたようなヤな奴～
+って感じじゃなかった？
+
+;;モノローグ
+# textflame 0 0
+@
+実は同じこと思ってた
+と笑うマスター
+
+# face 400831 "mad"
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+あ、やっぱり？
+あのおっきなお腹が
+みょーに威圧感あるしさぁ…
+
+# textboxarrow 0 2
+@オティヌス
+小難しい顔しながら
+あたし達にあーだこーだ言って
+その間ずーっと暖炉突っついてて
+
+# textboxarrow 0 2
+@オティヌス
+「暖炉の火は癒される～」
+とか言ってんの！
+
+# textboxarrow 0 2
+@オティヌス
+あたし、あれ見てたら
+塊で焼くお肉ってこうやって
+作るのかなーって思っちゃった
+
+;;モノローグ
+# textflame 0 0
+@
+オティヌスの想像力豊かな発言に
+思わず吹き出してしまうマスター
+
+# face 400831 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+…あの町長もあんたのイタズラで
+わっ！て驚いたあとに笑顔になれば
+良い人なのかもって思えるかも
+
+;;モノローグ
+# textflame 0 0
+@
+そうかもしれないね
+と頷くマスター
+
+;;モノローグ
+@
+町に戻ったら
+とっておきのイタズラで
+町長を楽しませるか、とマスター
+
+# voice 4008 "otyinusu_0003"
+# face 400831 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+うん、それがいいよ♪
+
+# textboxarrow 0 2
+@オティヌス
+あんたのイタズラなら
+どんな嫌な奴も最後には
+いい笑顔になってくれるはずだから…
+
+# bgm "stop"
+# face 400831 "usual"
+# textboxarrow 0 2
+@オティヌス
+って、あれ？
+なんか町のほう明るくない？
+
+;;モノローグ
+# textflame 0 0
+@
+本当だ、とマスター
+町の方角が明るく
+そして逃げ出てくる人達が見える
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# face 400831 "worry2"
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+…火事だ！
+
+;;モノローグ
+# se "SE_5575"
+# textflame 0 0
+@
+行くぞ！
+マスターが
+町へ向けて駆け出す
+
+# face 400831 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+うん！
+
+;;モノローグ
+# textflame 0 0
+@
+すぐにマスターの後を追う
+オティヌス
+
+# se "SE_5575"
+# textwindow "close"
+# alpha 400831 0 0.5
+# waitandnext 0.5
+
+;;演出：暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 400831 3 0
+# face 400831 "worry2"
+# alpha 400831 1 0
+# mask 400831 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_0753"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@オティヌス
+マスター！町の中には
+まだ逃げ遅れた人達が
+いるんだって…助けないと！
+
+;;モノローグ
+# alpha 400831 0 0.5
+# textflame 0 0
+@
+急ごう、とマスターとオティヌスは
+燃え盛る街の中へ入っていく
+
+;;演出：暗転
+;;背景：草原（夜）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain_night"
+# sestop "SE_0753"
+# effectskip 1000
+# move 400831 3 0
+# face 400831 "usual"
+# alpha 400831 1 0
+# mask 400831 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# voice 4008 "otyinusu_0001"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@オティヌス
+…マスター、町の人達は
+みんな無事だったって
+
+# textboxarrow 0 2
+@オティヌス
+はぁぁぁよかったぁぁぁ！
+
+# textboxarrow 0 2
+@オティヌス
+一時はどうなるかと思ったけど
+あたし達が間に合ってよかったね！
+
+# face 400831 "mad"
+# textboxarrow 0 2
+@オティヌス
+あたし達ふたりだけで
+みんな助けられちゃうなんて
+驚き、だよね！
+
+;;モノローグ
+# textflame 0 0
+@
+まあ、俺達のイタズラの方が
+もっと驚かせられるけどな
+と、にやりと笑うマスター
+
+# voice 4008 "otyinusu_0005"
+# face 400831 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+あはは
+そうだね
+
+;;モノローグ
+# textflame 0 0
+@
+ススだらけの顔で
+よかった、よかったと喜び合う
+マスターとオティヌス
+
+;;モノローグ
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+# alpha 400831 0 0.5
+@
+そんなふたりを見知らぬ奏官
+そしてそのキル姫達が取り囲む
+
+;;モノローグ
+@
+「こ、こいつらがやったんだ！」
+とマスター達を指差し叫んだのは
+町長だった
+
+;;演出：暗転
+;;背景：黒
+;;演出：オティヌス立ち絵なし
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textwindow "normal"
+@
+マスターとオティヌスは
+町で起きた火災の容疑者として
+町長が呼んだ奏官達に拘束された
+
+;;モノローグ
+@
+火災によって帰る家を失った町人達
+その観衆の前で取り調べを受ける
+マスターとオティヌスだった
+
+;;背景：草原（昼）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# move 400831 3 0
+# face 400831 "worry"
+# alpha 400831 1 0
+# mask 400831 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 4008 "otyinusu_0010"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@オティヌス
+だから！
+マスターは何もしてないって
+言ってるでしょ！
+
+# textboxarrow 0 2
+@オティヌス
+それどころか
+火事の最中に身を投げうってまで
+みんなのことを助けたのに…
+
+;;モノローグ
+# textflame 0 0
+@
+だが、君とそのマスターは
+常日頃イタズラを繰り返していた
+と確認するように述べる奏官
+
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+それは…そうだけど
+
+;;モノローグ
+# textflame 0 0
+@
+町の人々はまだ町に来て日の浅い
+マスター達に対する認識は
+その程度だったことに違いはない
+
+;;モノローグ
+@
+「あの火もイタズラだ！」
+そのやり取りを見ていた誰かが言う
+
+;;モノローグ
+@
+「世界中の人達を驚かせたい」
+そう言っていたマスターの言葉を
+聞いていた者もいた
+
+;;モノローグ
+@
+その言葉は悪しきように取られ
+「こいつらのせいだ」
+という声が大きくなっていく
+
+# face 400831 "worry2"
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+そんな、そんなことしないよ！
+だって、マスターはみんなの驚く顔
+それと笑った顔が見たいんだから！
+
+;;モノローグ
+# textflame 0 0
+@
+悲劇を作り、それを救い出せば
+感謝もされ、笑顔が見られるもの
+また誰かが言う
+
+;;モノローグ
+@
+「だから流れ者は嫌なんだ」
+町長が言う
+
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+あんた…っ！
+
+;;モノローグ
+# textflame 0 0
+@
+オティヌスに睨みつけられ
+町長はスッと目を逸らす
+
+;;モノローグ
+@
+奏官達の話によれば、
+町長の家が一番の被害だったという
+
+;;モノローグ
+@
+直前に任務を依頼されていたことも
+マスター達にとっては不利に働く
+判断材料となっているようだ
+
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+でも、それであたし達は
+町の外で依頼をこなしてた
+その時は町にいなかったんだ！
+
+;;モノローグ
+# textflame 0 0
+@
+それなのに、いの一番に
+火事の中の町へ駆けつけられたのは
+どうしてだ、と奏官が問う
+
+# face 400831 "worry"
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+それは任務が終わったからで…
+
+;;モノローグ
+# textflame 0 0
+@
+「そんな簡単には終わらん！」
+目を逸らしたまま町長が言う
+
+# face 400831 "worry2"
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+だからそれは――
+
+;;モノローグ
+# alpha 400831 0 0.5
+# textflame 0 0
+@
+オティヌスの言葉は
+町民達の怒声によって遮られる
+
+;;モノローグ
+@
+「お前達のせいだ」
+「お前達の仕業だ」
+「罪を償え」「罪を償え」
+
+;;モノローグ
+@
+町民達の膨れ上がった感情の矛先は
+すべてマスター達へと向けられる
+
+;;モノローグ
+@
+マスター達の声は
+もう誰にも届かない
+ただ、ひとつの言葉を除いて
+
+;;モノローグ
+@
+「オティヌスは関係ない、
+俺がやった」
+そう言い放つマスター
+
+;;モノローグ
+@
+そして、マスターは最後に
+オティヌスに笑顔を見せた
+
+;;モノローグ
+@
+イタズラが失敗した時に見せる
+悲しい、笑顔だった
+
+;;モノローグ
+@
+飛び出した町人のひとりに刺され
+マスターの口から血が吹き出す
+そこからは一瞬だった
+
+;;演出：暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 400831 3 0
+# face 400831 "worry"
+# alpha 400831 1 0
+# mask 400831 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@オティヌス
+…………
+
+;;モノローグ
+# textflame 0 0
+@
+マスター達を拘束していた
+奏官とキル姫達は激昂した
+町民達を必死に抑えている
+
+;;モノローグ
+@
+奏官達もマスターひとりの
+責任だとしてオティヌスからは
+一時的に目を離していた
+
+# face 400831 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+マスター…ねぇ、マスター？
+あんた、聞いてるの？ねぇ？
+
+;;モノローグ
+# textflame 0 0
+@
+マスターが頷くことは、もうない
+
+# face 400831 "worry"
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+マスター…
+そのイタズラ、驚きだよ…
+
+;;モノローグ
+# textflame 0 0
+@
+マスターが笑うことは、もうない
+
+# face 400831 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+あは、あはは
+
+;;モノローグ
+# textflame 0 0
+@
+マスターとの繋がりは、もうない
+
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+あははははははハハハハハ！！！
+
+;;モノローグ
+# textflame 0 0
+@
+オティヌスの中で何かが弾けた
+
+;;モノローグ
+@
+弾けたそれはキラキラと舞い
+オティヌスの心の中を
+埋め尽くしていく
+
+# face 400831 "worry"
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+…違う
+埋め尽くしていくんじゃない
+
+# textboxarrow 0 2
+@オティヌス
+あたし、失ったんだ
+
+;;演出：暗転
+;;背景：黒
+;;演出：オティヌス立ち絵表示
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# move 400831 3 0
+# face 400831 "mad"
+# alpha 400831 1 0
+# mask 400831 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+気が付けば
+否、気が付く間もなく
+オティヌスはすべてを消していた
+
+;;できればトゲトゲフレームで
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "toge"
+@オティヌス
+アハハハハハハハハハ！！！
+
+;;モノローグ
+# textflame 0 0
+@
+オティヌスは、暴走した
+
+;;演出：暗転
+;;背景：草原
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# move 400831 3 0
+# face 400831 "mad"
+# alpha 400831 1 0
+# mask 400831 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@オティヌス
+アハ、アハハハハ
+
+;;モノローグ
+# textflame 0 0
+@
+一目散に逃げ出した町長を捕らえ
+オティヌスはトドメを刺す
+
+;;モノローグ
+@
+本当は自分の火の不始末だった
+ただの肉塊となった『それ』は
+そんなことを言っていた気がした
+
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+ハハ、ハハハハ
+
+;;モノローグ
+# textflame 0 0
+@
+オティヌスにはもう関係なかった
+もう、自分がなかったから
+
+;;モノローグ
+# bgm "stop"
+@
+だが、その時に何かが
+オティヌスに響いた
+
+# bgmfile "bgm467" "BgmIntegralNoahBoso" 0
+# serif 1
+@？？？
+世界を…………力が――
+
+;;モノローグ
+# textflame 0 0
+@
+その何かが
+オティヌスをこの世界に引き留める
+
+# serif 1
+@？？？
+――を、壊す……
+……………………？
+
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+あは…？
+
+;;モノローグ
+# textflame 0 0
+@
+その何かの問いかけに
+オティヌスはあることを思いつく
+
+;;モノローグ
+@
+それは、とても壮大な『イタズラ』
+
+# face 400831 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+それがあれば…できる？
+
+# serif 1
+@？？？
+…………………………
+
+;;モノローグ
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+@
+オティヌスの中でまた
+キラキラしたものが舞う
+
+;;モノローグ
+@
+それはマスターと過ごした
+楽しかった日々のようで
+キラキラ、キラキラとしていた
+
+;;モノローグ
+@
+あの人の笑顔を見るのが嬉しかった
+あの子達の笑顔を見るのが嬉しかった
+
+;;モノローグ
+@
+マスターの笑顔を見るのが嬉しかった
+
+;;モノローグ
+@
+何もかもを失ったオティヌス
+その心に再び湧き出たものは
+『喜び』だった
+
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+ねぇ、その力をちょうだい
+あたしならできる
+世界中の人達をあっと言わせてみせる
+
+# textboxarrow 0 2
+@オティヌス
+この世界を終わらせたら
+みんな驚くでしょ？
+
+# textboxarrow 0 2
+@オティヌス
+マスターも、喜んでくれるでしょ？
+
+# serif 1
+@？？？
+――――っ！
+
+;;モノローグ
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+@
+オティヌスの身体に
+想像を絶するほどの力が流れ込む
+
+;;モノローグ
+@
+これなら、できる
+オティヌスは確信する
+
+# face 400831 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@オティヌス
+イタズラが上手くいって
+誰かの驚く顔が見られれば
+それは喜ばしいことだよね
+
+# face 400831 "worry"
+# textboxarrow 0 2
+@オティヌス
+この喜びだけが…
+あたしとマスターの繋がり…
+
+;;演出：オティヌス立ち絵、暴走verへ変化
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# alpha 400831 0 0
+# move 5400811 3 0
+# face 5400811 "normal"
+# alpha 5400811 1 0
+# mask 5400811 off
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@オティヌス
+世界中のみんなが驚くその日まで
+あたしの弩と矢を貸してあげる
+
+# voice 540081 "otyinusu_bo_0006"
+# face 5400811 "happy"
+# textboxarrow 0 2
+@オティヌス
+アハハハハハハハ♪
+
+;;モノローグ
+# textflame 0 0
+@
+世界の終焉を告げる鐘の音がひとつ
+オティヌスが目醒めた瞬間だった

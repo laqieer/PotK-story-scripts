@@ -1,0 +1,633 @@
+;;-----------------------------------------
+;;海上編2-1
+;;-----------------------------------------
+# script "lisp"
+# background "sea_floor_beach_day"
+# bgmfile "bgm374" "BgmSeaEventBattle004" 0
+;;-----------------------------------------
+;;にょい
+# body 2203111
+# pos 2203111 3
+# scale 2203111 0.8 0
+# layer 2203111 3
+# mask 2203111 off
+# alpha 2203111 0 0
+;;ふぉる
+# body 2301821
+# pos 2301821 3
+# scale 2301821 0.8 0
+# layer 2301821 3
+# mask 2301821 off
+# alpha 2301821 0 0
+;;てぃる
+# body 2101441
+# pos 2101441 3
+# scale 2101441 0.8 0
+# layer 2101441 3
+# mask 2101441 off
+# alpha 2101441 0 0
+;;そろもん
+# body 2503121
+# pos 2503121 3
+# scale 2503121 0.8 0
+# layer 2503121 3
+# mask 2503121 off
+# alpha 2503121 0 0
+;;かしうす
+# body 2303121
+# pos 2303121 3
+# scale 2303121 0.8 0
+# layer 2303121 3
+# mask 2303121 off
+# alpha 2303121 0 0
+;;れーヴぁ
+# body 2100241
+# pos 2100241 3
+# scale 2100241 0.8 0
+# layer 2100241 3
+# mask 2100241 off
+# alpha 2100241 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;背景：砂浜
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# alpha 2100241 1 0.5
+# face 2100241 "angry"
+# waitandnext 0.5
+
+# textwindow "nomal"
+# voice 210024 "revatein_lo_0029"
+@レーヴァテイン
+はっ！
+
+# serif 1
+# textwindow "nomal"
+@異族
+グッ…
+
+;;演出：異族倒れる
+# se "SE_3001"
+# waitandnext 0.5
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# alpha 2100241 0 0.5
+# alpha 2301821 1 0.5
+# face 2301821 "usual"
+# voice 530181 "forcas_c_0039"
+@フォルカス
+やはり、あなたも強いのですね
+
+# move 2100241 2 0
+# mask 2100241 on
+# alpha 2100241 1 0.5
+# move 2301821 4 0.5
+# mask 2301821 on
+# face 2100241 "angry"
+# voice 210024 "revatein_lo_0003"
+@レーヴァテイン
+…ん
+
+@フォルカス
+挨拶が遅れました、
+私はフォルカスといいます
+
+# face 2100241 "normal"
+@レーヴァテイン
+…もうひとりの子も、つよいよ
+
+@フォルカス
+だから、あなたは
+心配していないのですね？
+
+@レーヴァテイン
+うん…
+
+@フォルカス
+ですが、帰りが遅いようですし、
+なにかあったのかもしれません
+
+# voice 530181 "forcas_c_0002"
+@フォルカス
+私たちと一緒に、
+お友だちを探しませんか？
+
+# voice 210024 "revatein_lo_0033"
+@レーヴァテイン
+うん…
+いく…
+
+# alpha 2301821 0 0.5
+# move 2203111 4 0
+# mask 2203111 on
+# alpha 2203111 1 0.5
+# face 2203111 "usual"
+# voice 520311 "nyoikinkobou_c_0003"
+@如意金箍棒
+ワタシたちはちょっと先に行って、
+まわりを調べておくね
+みんなは、ゆっくりでいいよ？
+
+@如意金箍棒
+異族が出たら、大声で呼んで？
+すぐにかけつけるからね
+
+# voice 210024 "revatein_lo_0032"
+@レーヴァテイン
+…わかった
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 2203111 0 0
+# alpha 2100241 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 2203111 2 0
+# alpha 2203111 1 0.5
+# alpha 2301821 1 0.5
+# textwindow "nomal"
+# face 2203111 "normal"
+# voice 530181 "forcas_c_0028"
+@フォルカス
+どうやら、このあたりで
+地割れがあったようですね
+これが、地震と土煙の正体ですか
+
+# voice 520311 "nyoikinkobou_c_0040"
+@如意金箍棒
+この洞窟の入り口が、
+地面から出てきたみたいだね
+
+@如意金箍棒
+ほら、岩とか木とか、
+たくさん倒れちゃってるもの
+
+# voice 530181 "forcas_c_0003"
+@フォルカス
+そのようですね
+ん？これは…
+子どもの足あと、ですか？
+
+@如意金箍棒
+フォルカスちゃん、
+この足あと、洞窟に続いてるよ？
+なかに入っちゃったんだよ、きっと！
+
+# face 2301821 "sad"
+@フォルカス
+危険な洞窟でなければ、
+よいのですが…
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 2203111 0 0
+# alpha 2301821 0 0
+# bgmfile "bgm376" "BgmSeaEventBattle004" 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 2100241 1 0.5
+# move 2503121 4 0
+# mask 2503121 on
+# alpha 2503121 1 0.5
+# textwindow "nomal"
+# face 2503121 "usual"
+# face 2100241 "surprise"
+# voice 210024 "revatein_lo_kyara_1001"
+@レーヴァテイン
+ふわぁ…
+
+@ソロモン
+ねえ、レーヴァテイン…
+はんぶんねながら
+あるくのはきけんよ
+
+# face 2100241 "normal"
+# voice 210024 "revatein_lo_0003"
+@レーヴァテイン
+へいき…
+いつもあるくときはこうだから
+
+@ソロモン
+でも、いまはきけんな
+いぞくもでるから
+ゆだんできないわ
+
+# alpha 2503121 0 0.5
+# move 2101441 4 0
+# mask 2101441 on
+# alpha 2101441 1 0.5
+# face 2101441 "sad"
+# voice 210144 "tyrufing_lo_0036"
+@ティルフィング
+レーヴァテイン…
+私からもおねがいします
+ちゃんと目をひらいてもらえますか？
+
+# voice 210024 "revatein_lo_0032"
+@レーヴァテイン
+…うん、わかった
+ちゃんとあるく…
+
+# alpha 2100241 0 0.5
+# textwindow "close"
+# se "SE_5575"
+# waitandnext 0.5
+
+# textwindow "nomal"
+# move 2503121 2 0
+# alpha 2503121 1 0.5
+# face 2503121 "surprise"
+# voice 250312 "solomon_lo_0023"
+@ソロモン
+あ、ちょっと、まって！
+ああ…はしっていっちゃった
+
+# face 2503121 "sad"
+# voice 250312 "solomon_lo_0027"
+@ソロモン
+ねえ、ティルフィング
+あの子、私がいってもきかないのに、
+どうしてあなたのいうことはきくの？
+
+# face 2101441 "usual"
+# voice 210144 "tyrufing_lo_0003"
+@ティルフィング
+りゆうは、わかりませんが…
+となりにいると、どこか
+なつかしい気持ちになるのです
+
+@ティルフィング
+もしかしたら、かのじょも
+そうなのかもしれませんね
+
+@ソロモン
+ふぅん…
+
+;;モヤモヤ吹き出しで
+# move 2503121 2 0
+# textwindow "moya"
+@ソロモン
+私には、
+なにもかんじないのかな…
+
+# textwindow "nomal"
+# face 2101441 "sad"
+# voice 210144 "tyrufing_lo_0002"
+@ティルフィング
+あの…どうかしましたか？
+
+# face 2503121 "usual"
+@ソロモン
+…なんでもない！
+はやくおいかけよう！
+
+# face 2101441 "surprise"
+@ティルフィング
+あ、はい…
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 2503121 0 0
+# alpha 2101441 0 0
+# bgmfile "bgm376" "BgmSeaEventBattle004" 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 2503121 1 0.5
+# move 2301821 4 0
+# mask 2301821 on
+# alpha 2301821 1 0.5
+# textwindow "nomal"
+# face 2503121 "surprise"
+# voice 250312 "solomon_lo_0002"
+@ソロモン
+フォルカス、ニョイ子！
+レーヴァテインのともだち、
+みつかった？
+
+@フォルカス
+いいえ、それが…
+
+# alpha 2503121 0 0.5
+# alpha 2301821 0 0.5
+# alpha 2100241 1 0.5
+# move 2203111 4 0
+# mask 2203111 on
+# alpha 2203111 1 0.5
+# face 2203111 "usual"
+# face 2100241 "angry"
+# voice 210024 "revatein_lo_0007"
+@レーヴァテイン
+…おそい
+
+# voice 520311 "nyoikinkobou_c_0004"
+@如意金箍棒
+レーヴァテインちゃんが
+一等賞だったね？
+
+@レーヴァテイン
+ティルフィングが、
+いそげって…
+
+# alpha 2203111 0 0.5
+# alpha 2101441 1 0.5
+# face 2101441 "sad"
+# voice 210144 "tyrufing_lo_0031"
+@ティルフィング
+す、すみません！
+はしれって言ったわけじゃ
+ないんですが…
+
+# alpha 2100241 0 0.5
+# alpha 2503121 1 0.5
+# face 2503121 "usual"
+@ソロモン
+それで、その子はどこへ？
+
+# alpha 2101441 0 0.5
+# alpha 2301821 1 0.5
+# voice 530181 "forcas_c_0003"
+@フォルカス
+どうやら、この洞窟に
+入ってしまったようなのです
+ですから、私たちで探しに行こうと…
+
+# alpha 2503121 0 0.5
+# move 2203111 2 0
+# alpha 2203111 1 0.5
+# voice 520311 "nyoikinkobou_c_0043"
+@如意金箍棒
+ねえ、フォルカスちゃん…
+ワタシが探してくるよ
+フォルカスちゃんは、ここで待ってて
+
+@如意金箍棒
+フォルカスちゃんになにかあったら、
+あの子たちに叱られちゃう
+
+@フォルカス
+それは如意金箍棒も同じでは？
+あなたに何かあれば困ります…
+あの子たちや…私だって
+
+@如意金箍棒
+フォルカスちゃんには
+ここで異族達が来ないかを
+見ててもらいたいの
+
+@如意金箍棒
+中で囲まれたら
+少し厄介でしょ？
+
+# voice 530181 "forcas_c_0009"
+@フォルカス
+…ですが
+
+# alpha 2301821 0 0.5
+# move 2100241 4 0
+# alpha 2100241 1 0.5
+# face 2100241 "normal"
+# voice 210024 "revatein_lo_0002"
+@レーヴァテイン
+じゃあ、私もいく
+つよいから、へーき…
+
+# face 2203111 "normal"
+# voice 520311 "nyoikinkobou_c_0022"
+@如意金箍棒
+え？
+
+# alpha 2100241 0 0.5
+# alpha 2101441 1 0.5
+# face 2101441 "angry"
+@ティルフィング
+私もいきます！
+その…しんぱいなので
+
+@如意金箍棒
+ええ？ティルフィングちゃんまで…
+ありがとう…
+でも…危ないから無理かな
+
+# face 2203111 "sad"
+@如意金箍棒
+だよね、フォルカスちゃん
+
+# alpha 2203111 0 0.5
+# alpha 2101441 0 0.5
+# move 2100241 3 0
+# mask 2100241 off
+# alpha 2100241 1 0.5
+# face 2100241 "angry"
+@レーヴァテイン
+……
+
+# alpha 2100241 0 0.5
+# move 2101441 3 0
+# mask 2101441 off
+# alpha 2101441 1 0.5
+@ティルフィング
+……
+
+# alpha 2101441 0 0.5
+# move 2301821 3 0
+# mask 2301821 off
+# alpha 2301821 1 0.5
+# face 2301821 "usual"
+@フォルカス
+……
+レーヴァテイン、ティルフィング…
+私が止めても、行くつもりですね？
+
+# alpha 2301821 0 0.5
+# move 2100241 2 0
+# mask 2100241 on
+# alpha 2100241 1 0.5
+# move 2101441 4 0
+# mask 2101441 on
+# alpha 2101441 1 0.5
+# voice 210024 "revatein_lo_0003"
+@レーヴァテイン
+うん
+
+# face 2101441 "sad"
+# voice 210144 "tyrufing_lo_0015"
+@ティルフィング
+すみません…
+
+# bgmfile "bgm374_375" "BgmSeaEventBattle004" 0
+# alpha 2100241 0 0.5
+# alpha 2101441 0 0.5
+# alpha 2301821 1 0.5
+# voice 530181 "forcas_c_0027"
+@フォルカス
+…はぁ…仕方ありませんね
+ふたりとも、如意金箍棒の指示に
+従って、安全第一でお願いします
+
+# alpha 2301821 0 0.5
+# alpha 2100241 1 0.5
+# alpha 2101441 1 0.5
+@レーヴァテイン
+…ん
+
+# face 2101441 "angry"
+# voice 210144 "tyrufing_lo_0032"
+@ティルフィング
+はい、わかりました！
+
+# alpha 2100241 0 0.5
+# alpha 2101441 0 0.5
+# move 2203111 3 0
+# mask 2203111 off
+# alpha 2203111 1 0.5
+# face 2203111 "normal"
+# voice 520311 "nyoikinkobou_c_0022"
+@如意金箍棒
+え？フォルカスちゃん？
+
+# alpha 2203111 0 0.5
+# alpha 2301821 1 0.5
+# voice 530181 "forcas_c_0050"
+@フォルカス
+如意金箍棒、ふたりをお願いします
+…ですから、無理は禁物ですよ？
+
+# alpha 2301821 0 0.5
+# move 2203111 2 0
+# mask 2203111 on
+# alpha 2203111 1 0.5
+# move 2503121 4 0
+# mask 2503121 on
+# alpha 2503121 1 0.5
+# face 2203111 "usual"
+# voice 520311 "nyoikinkobou_c_0033"
+@如意金箍棒
+フォルカスちゃん…
+わかった、任せてね
+
+# face 2503121 "surprise"
+@ソロモン
+みんな、きをつけるのよ！
+私はここで、
+フォルカスをまもってるから！
+
+# face 2203111 "happy"
+# voice 520311 "nyoikinkobou_c_0004"
+@如意金箍棒
+ふふふ
+お願いね、ソロモンちゃん
+
+;;演出：如意金箍棒、レーヴァテイン、ティルフィング out
+# alpha 2203111 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# move 2503121 3 0.5
+# mask 2503121 off
+# textwindow "nomal"
+# face 2503121 "usual"
+@ソロモン
+ねえ、フォルカス…
+ニョイ子たちは
+だいじょうぶよね？
+
+# alpha 2503121 0 0.5
+# move 2301821 3 0.5
+# mask 2301821 off
+# alpha 2301821 1 0.5
+# voice 530181 "forcas_c_0003"
+@フォルカス
+如意金箍棒がいますから
+それよりも…
+
+# face 2301821 "angry"
+# voice 530181 "forcas_c_battle_0001"
+@フォルカス
+はっ！
+
+# fadein "white" 0.5
+# se "SE_4200"
+# waitandnext 0.5
+
+# serif 1
+# textwindow "nomal"
+@異族
+グギャッ！
+
+# serif 1
+# textwindow "close"
+# se "SE_3001"
+# waitandnext 0.5
+
+# serif 0
+@フォルカス
+こちらを片付けてしまいましょう
+
+# move 2301821 4 0.5
+# mask 2301821 on
+# move 2503121 2 0
+# mask 2503121 on
+# alpha 2503121 1 0.5
+# face 2503121 "sad"
+# voice 250312 "solomon_lo_0027"
+@ソロモン
+はぁ…また、いぞくなの？
+このしま、やっぱりおかしいわ
+
+@フォルカス
+ええ、調査するべきことが
+たくさんありそうですね…
+
+@フォルカス
+ですが、今は眼前の敵を
+倒すことに集中しましょう！
+
+# face 2503121 "usual"
+# voice 250312 "solomon_lo_0032"
+@ソロモン
+ええ、そうね！

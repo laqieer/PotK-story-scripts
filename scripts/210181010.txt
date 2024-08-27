@@ -1,0 +1,476 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第18章 章タイトル：×××アポカリプス
+;;第1話―１　タイトル：絆を胸に
+;;1_0
+;;スクリプト最後の背景：地上ユグドラシル（コマンドマーク無し差分）
+;;-----------------------------------------
+# script "lisp"
+# background "parchment_map03"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;異族化アルマス（ナレーションのボイス用）
+# body 5103831
+# alpha 5103831 0 0
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 2
+# alpha 5101431 0 0
+# mask 5101431 off
+;;レーヴァテイン・擬彩
+# body 5100231
+# pos 5100231 3
+# scale 5100231 0.8 0
+# layer 5100231 2
+# alpha 5100231 0 0
+# mask 5100231 off
+;;グランテピエ・獣刻・バハムート
+# body 5303411
+# pos 5303411 3
+# scale 5303411 0.8 0
+# layer 5303411 2
+# alpha 5303411 0 0
+# mask 5303411 off
+;;アルマス・誓約・ティターニア
+# body 5103811
+# pos 5103811 3
+# scale 5103811 0.8 0
+# layer 5103811 3
+# alpha 5103811 0 0
+# mask 5103811 off
+;;フリズスキャールヴ
+# body 52000411
+# pos 52000411 3
+# scale 52000411 0.8 0
+# layer 52000411 2
+# alpha 52000411 0 0
+# mask 52000411 off
+;;-----------------------------------------
+;;---------------------------------------------
+;;■アルマス
+;;//立ち絵：アルマス・誓約・ティターニア
+;;■グランテピエ
+;;//立ち絵：グランテピエ・獣刻・バハムート
+;;■ティルフィング
+;;//立ち絵：ティルフィング・擬彩
+;;■レーヴァテイン
+;;//立ち絵：レーヴァテイン・擬彩
+;;■？？？（フリズスキャールヴ）、フリズスキャールヴ
+;;//立ち絵：フリズスキャールヴ
+;;()内表記はスクリプト作成時削除でお願いします
+;;--------------------------------------------
+;;//背景：地上世界遠景：地上世界ナレーションマップ
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_1_0001"
+# textflame 0 0
+@
+ティルヘルムにてアルマスは
+ついに自身のキラーズを完全に
+解放させる
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_1_0002"
+@
+さらにティターニアと誓約し、
+その協力を得ることもできた
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_1_0003"
+@
+一方、中心部ではコマンドキラーズと
+の戦いが激化していた
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_1_0004"
+@
+互いの思いがぶつかり合う中、
+中心部に戻ったアルマスは
+ティルフィングと合流する
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_1_0005"
+@
+ラグナロクと意識を繋げた
+アルマスは彼女にバイブスを返し、
+インテグラルノア計画の準備を整えた
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_1_0006"
+@
+ハリーの導きにより、計画の
+最終プロセスが起動する
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_1_0007"
+@
+ラグナロク、ティルフィング、
+アルマスの思いが繋がり…
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_1_0008"
+@
+新たな力、“絆の繋ぎ手”
+《テイルリンカー》が生まれた
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_1_0009"
+@
+“絆の繋ぎ手”を使い、
+アルマスは皆の思念を繋いでいく
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_1_0010"
+@
+ようやく互いの思いを伝え合えるかに
+思えた、そのとき
+
+;;ナレーション
+# bgmfile "bgm457" "BgmIntegralNoahEvent008" 0
+# voice 510383 "IntegralNoah_Narration_18_1_0011"
+@
+角笛が鳴り響き、
+大地は大きく震え、
+繋がりが断ち切られてしまった
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_1_0012"
+@
+運命が織り上げられていく――
+
+;;//背景：地上ユグドラシル（コマンドマーク無し差分）
+;;//画面揺れ
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_yggdrasill_up"
+# move 5103811 3 0
+# face 5103811 "angry"
+# alpha 5103811 1 0
+# mask 5103811 off
+# shakeloop 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_0638"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+何かが近づいてきてる…！
+どこっ？
+どこから来るのっ？
+
+;;グランテピエ（独白）
+# alpha 5103811 0 0.5
+# move 5303411 3 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 5303411 off
+@グランテピエ
+近くにいるのは…コマンドキラーズと
+セブンスキラーズのみんな…
+それにリサ、だよね
+
+;;グランテピエ（独白）
+# voice 530341 "grandepieu_di_0015"
+# face 5303411 "sad"
+# textboxarrow 0 0
+@グランテピエ
+誰も動いていないみたい
+だったら…うっ…
+この嫌な感覚…
+
+# textboxarrow 0 2
+# textwindow "normal"
+@グランテピエ
+この気配は、多分…
+
+# alpha 5303411 0 0.5
+# move 5101431 3 0
+# face 5101431 "angry"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+@ティルフィング
+…ユグドラシルです
+あの中からっ
+
+;;//フリズスキャールヴが現れる
+;;//画面揺れ終わり
+;;？？？（フリズスキャールヴ）
+# shakestop
+# se "bgm457_filteroff3"
+# alpha 5101431 0 0.5
+# move 52000411 3 0
+# face 52000411 "usual"
+# alpha 52000411 1 0.5
+# mask 52000411 off
+# textboxarrow 0 2
+@？？？
+…………
+
+# alpha 52000411 0 0.5
+# move 5101431 1 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# move 5103811 3 0
+# face 5103811 "normal"
+# alpha 5103811 1 0.5
+# mask 5103811 on
+# move 5100231 5 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+# textboxarrow 0 3
+@レーヴァテイン
+揺れが収まった…
+
+# face 5103811 "surprise"
+# textboxarrow 0 2
+@アルマス
+ユグドラシルから誰か出てきたわよ！
+彼女…誰？
+
+# textboxarrow 0 1
+@ティルフィング
+見覚えの無い方ですね
+でも“終焉”の気配を感じます
+
+# voice 510143 "tyrufing_iz_0001"
+# face 5101431 "angry"
+# textboxarrow 0 1
+@ティルフィング
+アナタは誰ですか？
+どうして、ここに？
+
+;;？？？（フリズスキャールヴ）
+;;# voice 5200041 "hlidskjalf_0022"
+# alpha 5101431 0 0.5
+# alpha 5103811 0 0.5
+# alpha 5100231 0 0.5
+# move 52000411 3 0
+# face 52000411 "surprise"
+# alpha 52000411 1 0.5
+# mask 52000411 off
+# textboxarrow 0 2
+@？？？
+…おや？
+ひょっとして、わらわに問うて
+おるのか
+
+# alpha 52000411 0 0.5
+# move 5103811 3 0
+# face 5103811 "angry"
+# alpha 5103811 1 0.5
+# mask 5103811 off
+# textboxarrow 0 2
+@アルマス
+どう考えても、そうでしょ！
+私はアルマスよ！
+あなたも名乗って
+
+;;？？？（フリズスキャールヴ）
+;;# voice 5200041 "hlidskjalf_0039"
+# alpha 5103811 0 0.5
+# move 52000411 3 0
+# face 52000411 "usual"
+# alpha 52000411 1 0.5
+# mask 52000411 off
+# textboxarrow 0 2
+@？？？
+ふむ
+わらわの名を知りたいのじゃな
+承知した
+
+# textboxarrow 0 2
+@フリズスキャールヴ
+わらわの名はフリズスキャールヴ
+呼びにくいのなら、好きに呼ぶとよい
+
+# alpha 52000411 0 0.5
+# move 5103811 3 0
+# face 5103811 "normal"
+# alpha 5103811 1 0.5
+# mask 5103811 off
+# textboxarrow 0 2
+@アルマス
+何だか、独特の間があるわね…
+
+# alpha 5103811 0 0.5
+# move 52000411 2 0
+# face 52000411 "usual"
+# alpha 52000411 1 0.5
+# mask 52000411 on
+# move 5101431 4 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# textboxarrow 0 3
+@ティルフィング
+私はティルフィングです
+フリズスキャールヴ、アナタは
+“終焉”と関わりのある方ですか？
+
+;;# voice 5200041 "hlidskjalf_0003"
+# textboxarrow 0 1
+@フリズスキャールヴ
+ああ
+そうじゃ
+
+# voice 510381 "almace_ca_0022"
+# alpha 52000411 0 0.5
+# alpha 5101431 0 0.5
+# move 5103811 2 0
+# face 5103811 "surprise"
+# alpha 5103811 1 0.5
+# mask 5103811 on
+# textboxarrow 0 1
+# move 5100231 4 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+@アルマス
+えっ…！？
+即答したっ
+
+# face 5100231 "angry"
+# textboxarrow 0 3
+@レーヴァテイン
+私達を前にして…随分、余裕がある
+みたい…偉そうだね…
+
+# alpha 5103811 0 0.5
+# alpha 5100231 0 0.5
+# move 52000411 2 0
+# face 52000411 "usual"
+# alpha 52000411 1 0.5
+# mask 52000411 on
+# move 5101431 4 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# textboxarrow 0 3
+@ティルフィング
+では、フリズスキャールヴ
+アナタはここに何をしに
+来たのですか？
+
+;;# voice 5200041 "hlidskjalf_0028"
+# textboxarrow 0 1
+@フリズスキャールヴ
+何をしに来た…か
+さて…強いて言うなら、
+見届けに、かのう
+
+# face 5101431 "surprise"
+# textboxarrow 0 3
+@ティルフィング
+見届けに？
+何を見届けるというのです？
+
+;;# voice 5200041 "hlidskjalf_0005"
+# face 52000411 "happy"
+# textboxarrow 0 1
+@フリズスキャールヴ
+ふふっ
+それは自明であろう
+“終焉”の到来をじゃ
+
+# alpha 5101431 0 0.5
+# move 5103811 4 0
+# face 5103811 "normal"
+# alpha 5103811 1 0.5
+# mask 5103811 on
+# textboxarrow 0 3
+@アルマス
+“終焉”の到来…！？
+あなた、“終焉”の手下なのねっ
+
+;;# voice 5200041 "hlidskjalf_0013"
+# face 52000411 "angry"
+# textboxarrow 0 1
+@フリズスキャールヴ
+なんじゃと…？
+わらわを手下呼ばわりとは
+不愉快じゃ
+
+# face 52000411 "usual"
+# textboxarrow 0 1
+@フリズスキャールヴ
+…しかし、「死の君」が絶対で
+あるのもまた然りか
+
+;;# voice 5200041 "hlidskjalf_0033"
+# textboxarrow 0 1
+@フリズスキャールヴ
+アルマスとやら
+構わぬ
+続けて良いぞ
+
+# face 5103811 "angry"
+# textboxarrow 0 3
+@アルマス
+何なの、その上から目線！
+
+# textboxarrow 0 1
+@フリズスキャールヴ
+そうか…
+気に障ったのなら、気をつけよう
+
+# voice 510381 "almace_ca_0022"
+# face 5103811 "surprise"
+# textboxarrow 0 3
+@アルマス
+えっ…
+ひょっとして天然なの？
+
+# voice 530341 "grandepieu_di_0008"
+# alpha 52000411 0 0.5
+# alpha 5103811 0 0.5
+# move 5303411 3 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# textboxarrow 0 2
+@グランテピエ
+あ、はは…
+達観してるみたいだね
+
+# alpha 5303411 0 0.5
+# move 52000411 2 0
+# face 52000411 "usual"
+# alpha 52000411 1 0.5
+# mask 52000411 on
+# move 5101431 4 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# textboxarrow 0 3
+@ティルフィング
+フリズスキャールヴ
+先程、“終焉”の到来を見届けると
+言いましたね
+
+# textboxarrow 0 3
+@ティルフィング
+アナタは“終焉”に抗おうとは
+思わないのですかっ？
+
+;;# voice 5200041 "hlidskjalf_0028"
+# textboxarrow 0 1
+@フリズスキャールヴ
+さて…
+不可解なことを尋ねるのじゃな
+
+# textboxarrow 0 1
+@フリズスキャールヴ
+死は安息、破滅は救済じゃ
+そう受け入れよ

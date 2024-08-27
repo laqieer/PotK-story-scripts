@@ -1,0 +1,726 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１６章 章タイトル「・中心部決戦―エクリプス―」
+;;第2話―２　タイトル：前夜
+;;2_2_0
+;;スクリプト最後の背景：地下研究施設：bifrost
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "stop"
+;;-----------------------------------------
+;;リサナウト・針枷・クロノス
+# body 3203011
+# pos 3203011 3
+# scale 3203011 0.8 0
+# layer 3203011 2
+# alpha 3203011 0 0
+# mask 3203011 off
+# brightness 3203011 0.7 0
+;;グランテピエ・獣刻・バハムート
+# body 5303411
+# pos 5303411 3
+# scale 5303411 0.8 0
+# layer 5303411 2
+# alpha 5303411 0 0
+# mask 5303411 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;第2話―２　タイトル：前夜
+;;//以下、リサナウトがクロノスの力で、過去のシーンを俯瞰して見ているシチュエーションなのですが、
+;;//過去のグランテピエ、リサナウトと、それを俯瞰して見ている現在リサナウト（針枷）が登場します。
+;;//誰が過去の人物かわかるように、現在のリサナウト（針枷）以外は色味を薄くするなど、
+;;//わかりやすく表示いただけますと幸いです。
+;;//背景：黒
+;;//時計の音
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# se "SE_6112"
+# waitandnext 1
+
+# se "SE_6112"
+# waitandnext 1
+
+# se "SE_6112"
+# waitandnext 1
+
+;;//鐘が鳴る
+# se "SE_6113"
+# waitandnext 2
+
+;;//背景：ビフレスト：bifrost
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bifrost"
+# move 3203011 3 0
+# face 3203011 "surprise"
+# alpha 3203011 1 0
+# mask 3203011 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@リサナウト
+…あら？
+いつの間にこんなところに…
+クロノスの力かしら？
+
+# face 3203011 "normal"
+# textboxarrow 0 2
+# voice 2030 "risanautr_l_0003"
+@リサナウト
+そうね
+クロノスに会うのなら、
+あのとき、あの場所が相応しいわよね
+
+# textboxarrow 0 2
+@リサナウト
+あそこにいるのは…
+あの頃の私ね
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 3203011 0 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# serif 1
+@研究者１
+おい、リサナウト
+新しい実験体が来た
+施設内を案内してやれ
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+# textwindow "normal"
+@リサナウト
+新しい実験体？
+また子どもを掠ってきたの…
+悪趣味ね
+
+# serif 1
+@研究者１
+うるさい！
+我々は崇高な目的のために
+実験を続けているんだ！
+
+# serif 1
+@研究者１
+実験体のくせに…
+大人しく我々の言うことに
+従っていろ！
+
+;;リサナウト（立ち絵無し）
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 0
+@リサナウト
+あら、行っちゃった…
+実験結果が芳しくないから
+苛々してるのかしら？
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+それで、あなたが新しいキル姫？
+災難だったわね
+
+;;？？？（グランテピエ）
+# move 5303411 3 0
+# face 5303411 "sad"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# textboxarrow 0 2
+@？？？
+私は、いいの
+妹さえ守れれば…
+
+# textboxarrow 0 0
+;;リサナウト（立ち絵無し）
+@リサナウト
+ふぅん
+妹がいるんだ…
+あなた、名前は？
+
+# face 5303411 "normal"
+# textboxarrow 0 2
+# voice 530341 "grandepieu_di_0003"
+@グランテピエ
+…グランテピエ
+キル姫、グランテピエよ
+
+# textboxarrow 0 0
+;;リサナウト（立ち絵無し）
+@リサナウト
+よろしくね、グランテピエ
+私はリサナウト
+
+;;//リサナウトが現れる
+;;//下の台詞のリサは、現在から過去を俯瞰して見ているリサなので立ち絵ありです。
+;;リサナウト（針枷リサナウト立ち絵あり・現在）
+# alpha 5303411 0 0.5
+# move 3203011 3 0
+# face 3203011 "normal"
+# alpha 3203011 1 0.5
+# mask 3203011 off
+# textboxarrow 0 2
+# voice 2030 "risanautr_l_0004"
+@リサナウト
+そうそう…初めて会ったときの
+グラはこんな感じだったわね
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 3203011 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;; ？？？ （立ち絵無し）
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+# textboxarrow 0 0
+# textwindow "normal"
+@？？？
+リサ姉、お馬さんやって！
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+ええ、またっ？
+仕方ないわね
+私は暴れ馬だから気をつけなさい！
+
+# move 5303411 3 0
+# face 5303411 "angry"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# textboxarrow 0 2
+# voice 530341 "grandepieu_di_0014"
+@グランテピエ
+またリサに迷惑かけて
+ルネ、
+めっ、だよ！
+
+;;ルネ（立ち絵無し）
+# textboxarrow 0 0
+@ルネ
+ううっ…ぐすん…
+だってお姉ちゃん、
+すぐいなくなるし…
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+いいのよ、グラ
+私、子どもの相手は得意なのっ
+感性が合うのよね
+
+# face 5303411 "normal"
+# textboxarrow 0 2
+# voice 530341 "grandepieu_di_0008"
+@グランテピエ
+あ、はは…
+それって同じ精神年齢ってこと
+なんじゃ…
+
+;;リサナウト（立ち絵無し）
+# alpha 5303411 0 0.5
+# textboxarrow 0 0
+@リサナウト
+ほぉら、いくわよ～！
+ヒヒヒヒヒ～ン！
+
+;;ルネ（立ち絵無し）
+# textboxarrow 0 0
+@ルネ
+アハハハハ！
+リサ姉、跳ねすぎっ
+
+;;//リサナウトが現れる
+;;//下の台詞のリサは、現在から過去を俯瞰して見ているリサなので立ち絵ありです。
+;;リサナウト（針枷リサナウト立ち絵あり）
+# move 3203011 3 0
+# face 3203011 "normal"
+# alpha 3203011 1 0.5
+# mask 3203011 off
+# textboxarrow 0 2
+@リサナウト
+この頃のアルマスは可愛かったわね
+どうにかして、この記憶を見せて
+あげられないかしら…
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 3203011 0 0
+# move 5303411 3 0
+# face 5303411 "normal"
+# alpha 5303411 1 0
+# mask 5303411 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm273" "BgmLostRagnarokEvent" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@グランテピエ
+リサ…
+妹をお願い、ね
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+今日の実験、そんなに危ないの？
+グラ、無理は禁物よ
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+危なくなったら、無理やり壁を
+ぶち破って逃げればいいわ
+
+# textboxarrow 0 2
+@グランテピエ
+リサは相変わらず大雑把だね…
+大丈夫…私はどうなってもいいの
+妹さえ無事でいてくれれば
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+あの子にはあなたがいないとダメよ
+自分が生き残ることを考えて
+
+# face 5303411 "happy"
+# textboxarrow 0 2
+# voice 530341 "grandepieu_di_0030"
+@グランテピエ
+ありがとう、リサ
+行ってくるね
+
+;;//リサナウトが現れる
+;;//これは過去を俯瞰して見ている現在のリサナウトです。
+;;リサナウト（針枷リサナウト立ち絵あり・現在）
+# alpha 5303411 0 0.5
+# move 3203011 3 0
+# face 3203011 "sad"
+# alpha 3203011 1 0.5
+# mask 3203011 off
+@リサナウト
+あの日…全てが変わった
+グラも、私も、そしてあの子達も…
+
+# textwindow "close"
+# alpha 3203011 0 0.5
+# waitandnext 0.5
+
+;;//爆発音
+;;//画面揺れ
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# se "SE_9096"
+# shake 0 0.5
+# waitandnext 0.5
+
+;;//警告音
+;;//画面赤明滅
+# se "SE_6109"
+# waitandnext 0.5
+
+# fadein "red" 0.5
+# waitandnext 1.2
+
+# fadein "red" 0.5
+# waitandnext 1.2
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+# textwindow "normal"
+@リサナウト
+何が起きたの…！？
+これ、本格的にまずいわね…
+
+;;ルネ（立ち絵無し）
+# textboxarrow 0 0
+@ルネ
+うわあああん…！
+お姉ちゃん…お姉ちゃぁん…
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+大丈夫よ
+グラは私が見つけ出してくるから
+先に安全な所に移動しようね
+
+;;リサナウト（独白）
+# textboxarrow 0 0
+@リサナウト
+恐らく爆発が起きたのは実験棟…
+グラ、無事でいてよ…！
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# sestop "SE_6109"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+# textwindow "normal"
+@リサナウト
+妹ちゃんは避難させたし、あの子達も
+上手く逃げたみたいだから、あとは…
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+ここね…
+やっぱり出入り口が塞がってる
+こういうときは…
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+力任せに打ち破るしかないわよね！
+おりゃあああああああ！！
+
+;;//打撃音
+# se "SE_4602"
+# se "SE_11996"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+痛っ…
+さすがに固いわね…！
+でもっ…
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+打ち破る！
+グラ、待っててね！！
+
+;;//何度か打撃音の後、崩壊音
+# se "SE_4602"
+# se "SE_11996"
+# fadein "white" 0.5
+# sedelay "SE_4602" 1
+# sedelay "SE_11575" 1.8
+# waitandnext 1
+
+# fadein "white" 0.5
+# waitandnext 0.8
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+やった！
+これで…あっ…！？
+
+;;//爆発音
+# se "SE_5620"
+# waitandnext 0.5
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+あぐっ…カハッ…！
+失敗したわね…
+どっかのガス管を壊しちゃったかな…
+
+;;リサナウト（立ち絵無し）
+# se "SE_9013"
+# textboxarrow 0 0
+@リサナウト
+何、これ…？
+脇腹に刺さってる…
+あ…血が…
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+あはは…
+強引過ぎたかな…
+あと少しだったのに…
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+あの壁の向こう…
+実験室に…グラが…
+
+;;//回想シーン
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;ルネ（立ち絵無し）
+# bgmfile "bgm273" "BgmLostRagnarokEvent" 0
+# textboxarrow 0 0
+# textwindow "normal"
+@ルネ
+うわあああん…！
+お姉ちゃん…お姉ちゃぁん…
+
+;;//回想終了
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+# textwindow "normal"
+@リサナウト
+まだよ…
+ここで諦めたら…
+あの子が一人に…
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+絶対…絶対に、グラを助けて…
+妹ちゃんのところにっ
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+ううあああああああああああ…！！
+
+;;//鮮血演出
+# se "SE_9015"
+# shake 0 0.5
+# fadein "red" 0.5
+# waitandnext 0.5
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+あああああ…！
+まだよ…まだ動ける…
+まだやれる…！
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+私のキラーズは…巨人がふるった…
+破壊力抜群の斧なんだからぁ…！
+
+;;//打撃音
+# se "SE_4602"
+# se "SE_11996"
+# waitandnext 0.5
+
+;;//鮮血演出
+# se "SE_9013"
+# shake 0 0.5
+# fadein "red" 0.5
+# waitandnext 0.5
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+あ…カハッ…
+まだ…あと少しで…
+
+;;//時空の揺らぎ演出あれば
+# se "SE_6114"
+# waitandnext 0.5
+
+# serif 1
+@？？？
+…………
+
+;;リサナウト（立ち絵無し）
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 0
+@リサナウト
+え…？
+誰…何て…言ったの…？
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+ううん…
+どうでもいいわ…
+私は…死んでもグラをっ
+
+;;//リサナウトが倒れる
+# se "SE_3001"
+# textwindow "close"
+# waitandnext 0.5
+
+;;//背景：黒
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+# textwindow "normal"
+@リサナウト
+これは…さすがにまずいわね…
+何も見えなくなっちゃった
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+これじゃ…壊さないといけない壁が
+どっちか分からない…じゃない
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+動け…動け…私っ…
+うああああああああああ…！
+
+;;//画面白フラッシュ
+# bgm "stop"
+# se "SE_9139"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;リサナウト（立ち絵無し）
+# textboxarrow 0 0
+@リサナウト
+えっ…？
+
+;;//時計の音
+# se "SE_6112"
+# waitandnext 1
+
+# se "SE_6112"
+# waitandnext 1
+
+# se "SE_6112"
+# waitandnext 1
+
+;;//鐘が鳴る
+# se "SE_6113"
+# waitandnext 1.5
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bifrost"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//背景：地下研究施設：bifrost
+;;//画面赤明滅
+# fadein "red" 0.5
+# waitandnext 1.2
+
+# fadein "red" 0.5
+# waitandnext 1.2
+
+# brightness 3203011 1 0
+# waitandnext 0.2
+
+;;//以降から、過去でクロノスを針枷した後なので立ち絵ありです。
+;;リサナウト（針枷リサナウト立ち絵あり・過去）
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# move 3203011 3 0
+# face 3203011 "sad"
+# alpha 3203011 1 0.5
+# mask 3203011 off
+# textboxarrow 0 2
+# textwindow "normal"
+@リサナウト
+…………
+
+# face 3203011 "surprise"
+# textboxarrow 0 2
+# voice 2030 "risanautr_l_0022"
+@リサナウト
+何が起きたの？
+あれっ？
+お腹の傷が治ってる…
+
+# face 3203011 "usual"
+# textboxarrow 0 2
+@リサナウト
+というか、どこも怪我してないわ
+この力、もしかして…
+
+# face 3203011 "surprise"
+# textboxarrow 0 2
+@リサナウト
+あ！そんなことより、
+グラを助け出さないと！
+
+# face 3203011 "angry"
+# textboxarrow 0 2
+# voice 2030 "risanautr_l_0029"
+@リサナウト
+とりゃああああああ！
+
+;;//壁を破壊する音
+# se "SE_2055"
+# waitandnext 2

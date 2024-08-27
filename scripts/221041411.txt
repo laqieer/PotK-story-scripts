@@ -1,0 +1,276 @@
+;;-----------------------------------------
+;;ファンキル　バレンタインイベント　シナリオ
+;;【タイトル案】
+;;悪戯姫の甘い嘘
+;;【EP.1_1】秘密と嘘と
+;;背景：荒野
+;;-----------------------------------------
+# background "wild"
+# bgmfile "bgm203_204" "BgmGakuen004" 0
+;;-----------------------------------------
+;;ヘレナ
+# body 3302821
+# pos 3302821 3
+# scale 3302821 0.8 0
+# alpha 3302821 1 0
+# mask 3302821 off
+;;ニール
+# body 162
+# pos 162 4
+# scale 162 0.6 0
+# alpha 162 0 0
+# layer 162 4
+;;オティヌス
+# body 3400821
+# pos 3400821 3
+# scale 3400821 0.8 0
+# alpha 3400821 0 0
+# mask 3400821 off
+;;ケイオスリオン兵
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# alpha 3820001 0 0
+;;-----------------------------------------
+# face 3302821 "happy"
+;;# voice 3028 ""
+# chara 3302821
+# textboxarrow 0 2
+@ヘレナ
+やあ、オティヌス
+準備はできたな？
+
+# alpha 3302821 0 0.5
+# alpha 3400821 1 0.5
+# face 3400821 "usual"
+# voice 340081 "otyinusu_a_0003"
+# chara 3400821
+@オティヌス
+ああ、もちろんさ
+さてと、ショウを始めるとしよう
+
+# textboxarrow 0 3
+# alpha 3302821 1 0.5
+# alpha 3400821 0 0.5
+# alpha 162 1 0.5
+# voice 9952 "nir_0004"
+# chara 162
+@ニール
+作戦その1、
+マスターを連れ出すってやつね
+
+# textboxarrow 0 1
+# move 3400821 2 0
+# move 3302821 4 0.5
+# alpha 3400821 1 0.5
+# mask 3302821 on
+# mask 3400821 on
+# alpha 162 0 0.5
+# voice 340081 "otyinusu_a_0004"
+# chara 3400821
+@オティヌス
+そうだよ…
+あたし達でマスターを
+みんなから隠してしまうのさ
+
+# emotionbody 1000 10 3302821 -50 200
+# effectpattern 1000 4 0
+# effectstart 1000
+# textboxarrow 0 3
+# voice 3028 "herena_a_0004"
+# chara 3302821
+@ヘレナ
+みんながチョコレートを渡そうと
+先輩を探しても、どこにもいない…
+…ふふっ、みんな困るだろうな
+
+# effectskip 1000
+# se "SE_0719"
+# textflame 0 0
+@
+オティヌスとヘレナは、
+上機嫌でマスターの元へと向かった
+
+;;//演出：場所移動
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# textflame 1 1
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 340081 "otyinusu_a_0001"
+# chara 3400821
+@オティヌス
+マスター、ちょっといいかい？
+大事な話があるんだけど…
+
+# textboxarrow 0 3
+# voice 3028 "herena_a_0004"
+# chara 3302821
+@ヘレナ
+ヘレナ達、先輩に相談があるんだ
+…くふっ
+
+# textflame 0 0
+@
+オティヌスとヘレナに
+呼び止められたマスターは、
+びっくりして振り向いた
+
+# textflame 0 0
+@
+オティヌスとヘレナがマスターに
+相談なんて、初めてだったからだ
+衣装が違うことも、気になった
+
+# textboxarrow 0 1
+# textflame 1 1
+# face 3400821 "sad"
+;;# voice 340081 ""
+# chara 3400821
+@オティヌス
+あたし達、ケイオスリオンに
+大事なものをおいてきてしまってね…
+
+# textboxarrow 0 3
+# voice 3028 "herena_a_0004"
+# chara 3302821
+@ヘレナ
+それを取りに行きたいんだ、
+先輩も一緒に来てくれるだろう？
+とても大事なものなんだよ…くふっ
+
+# textboxarrow 0 1
+;;# voice 340081 ""
+# chara 3400821
+@オティヌス
+ああ、すごくね…
+もし誰かに先に見つかっていたら
+と思うと、心配でならないよ…！
+
+# textboxarrow 0 3
+# face 3302821 "sad"
+;;# voice 3028 ""
+# chara 3302821
+@ヘレナ
+そうだな…
+だからお願いだよ、先輩
+
+# textflame 0 0
+@
+マスターは二人の話を
+まったく疑わず、
+一緒に行くことに同意する
+
+# textflame 0 0
+@
+あっさり信じたマスターを連れて、
+オティヌスとヘレナは
+ケイオスリオンに向けて出発した
+
+;;演出：場所移動
+;;背景：ケイオスリオン、国境付近
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# background "300_devil_daytime03"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+# textflame 1 1
+# face 3302821 "normal"
+# face 3400821 "usual"
+;;# voice 340081 ""
+# chara 3400821
+@オティヌス
+さてと…ここまでは順調だが、
+国境を越えるとなると
+それなりの作戦を立てないとね
+
+# textboxarrow 0 3
+# voice 3028 "herena_a_0003"
+# chara 3302821
+@ヘレナ
+この近くに、ヘレナが使っていた
+隠し通路がある…
+簡単にケイオスリオンに入れるぞ
+
+# textboxarrow 0 3
+;;# voice 3028 ""
+# chara 3302821
+@ヘレナ
+…ほら、あそこだ
+
+# textflame 0 0
+@
+それじゃ行こうか、とマスターが
+隠し通路に向かって歩き始めると…
+
+# textboxarrow 0 2
+# textflame 1 1
+# alpha 3820001 1 0.5
+# alpha 3302821 0 0.5
+# alpha 3400821 0 0.5
+# mask 3820001 off
+@ケイオスリオン兵
+止まれ！
+ここでなにをしている！
+
+# textboxarrow 0 3
+# alpha 3820001 0 0.5
+# alpha 3302821 1 0.5
+# alpha 3400821 1 0.5
+# face 3302821 "sad"
+# voice 3028 "herena_a_0015"
+# chara 3302821
+@ヘレナ
+…この周辺は警備が厳しいんだ
+隠し通路までは慎重に進もう
+と、言うつもりだったんだけどな…
+
+# textboxarrow 0 3
+# face 3302821 "normal"
+# voice 3028 "herena_a_0004"
+# chara 3302821
+@ヘレナ
+…くふっ
+
+# textboxarrow 0 1
+# face 3400821 "surprise"
+;;# voice 340081 ""
+# chara 3400821
+@オティヌス
+おっと、マスターが
+捕まってしまいそうだね
+この状況では、やるしかないか
+
+# textboxarrow 0 3
+# voice 3028 "herena_a_0004"
+# chara 3302821
+@ヘレナ
+はぁ、ヘレナは平和主義なのにな…
+…くふっ

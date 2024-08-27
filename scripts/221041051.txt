@@ -1,0 +1,469 @@
+;;-----------------------------------------
+;;【ファンキル　クリスマスイベント2018　FB修正版2018.11.26
+;;【EP4】舞い降りた天使
+;;4_1
+;;スクリプト最後の背景：ハルモニア擬人区（可能であれば夜）
+;;-----------------------------------------
+# script "lisp"
+# background "town_night_snow"
+# bgm "bgm032" 0
+;;-----------------------------------------
+;;カリス（クリスマス用のボイスを鳴らすための呼び出し）
+# body 3602511
+# alpha 3602511 0 0
+;;フォルカス（クリスマス用のボイスを鳴らすための呼び出し）
+# body 3301811
+# alpha 3301811 0 0
+;;カリス（クリスマス）
+# body 3602521
+# pos 3602521 3
+# scale 3602521 0.8 0
+# layer 3602521 2
+# alpha 3602521 0 0
+# mask 3602521 off
+;;フォルカス（クリスマス）
+# body 3301821
+# pos 3301821 3
+# scale 3301821 0.8 0
+# layer 3301821 2
+# alpha 3301821 0 0
+# mask 3301821 off
+;;キプル
+# body 163
+# pos 163 3
+# scale 163 0.6 0
+# layer 163 2
+# alpha 163 0 0
+# mask 163 off
+;;ハルモニア兵
+# body 3810001
+# pos 3810001 3
+# scale 3810001 0.8 0
+# layer 3810001 2
+# alpha 3810001 0 0
+# mask 3810001 off
+;;-----------------------------------------
+;;【EP4】舞い降りた天使
+;;//背景：ハルモニア擬人区（可能であれば夜）
+# move 3602521 2 0
+# face 3602521 "normal"
+# alpha 3602521 1 0
+# mask 3602521 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 163 4 0
+# alpha 163 1 0
+# mask 163 on
+# voice 6025 "chalice_t_0002"
+@カリス
+だいぶ寒くなってきたね、キプル…
+でも、フォルカスがくれたこの服、
+すごくあったかいんだ～
+
+# textboxarrow 0 3
+# voice 9951 "kipuru_0004"
+@キプル
+フォルカス様は、
+以前より雰囲気が
+柔らかくなりましたよね…
+
+# se "SE_6504"
+# emotionbody 1000 3 3602521 10 290
+# effectpattern 1000 1 3
+# effectstart 1000
+# face 3602521 "happy"
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0033"
+@カリス
+そうだね～！
+今日はいつもと違う格好だから、
+特にそう感じるのかも！
+
+# se "SE_6500"
+# emotionbody 1001 1 3602521 10 310
+# effectpattern 1001 1 0
+# effectstart 1001
+# face 3602521 "normal"
+# textboxarrow 0 1
+@カリス
+…あ！あそこ！
+男の子がお祈りしてる！
+なにを願っているのか聞いてみよう！
+
+# se "SE_5575"
+# textwindow "close"
+# leftout 3602521 0.5
+# waitandnext 0.5
+
+# alpha 3602521 0 0
+# textboxarrow 0 3
+# voice 9951 "kipuru_unit_0007"
+# textwindow "normal"
+@キプル
+あああ！待ちなさい、カリス！
+キプルを背中に隠してください！
+
+;;//演出：場所移動
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 163 0 0
+# move 3602521 3 0
+# face 3602521 "normal"
+# alpha 3602521 1 0
+# mask 3602521 off
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 6025 "chalice_t_0002"
+@カリス
+ねぇ、君！
+なにをお願いしていたの？
+わたしに教えてくれない？
+
+# textflame 0 0
+;;モノローグ
+@
+カリスを追いかけてきたフォルカスと
+マスターは、男の子と話している
+カリスを見つけて、近づいていく
+
+;;モノローグ
+@
+カリスに話しかけられた少年は驚いた
+様子だったが、カリスの笑顔に警戒を
+解き、願いの内容を教えてくれた
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0040"
+@カリス
+…おばあさんの病気を治してほしい？
+それならカリスちゃんにおまかせ！
+わたしが治してあげる！
+
+# se "SE_6504"
+# emotionbody 1002 3 3602521 10 290
+# effectpattern 1002 1 3
+# effectstart 1002
+# face 3602521 "happy"
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0004"
+@カリス
+そうと決まれば、
+はやく君の家に行こう！
+ほら、急いで急いで！
+
+# move 3602521 2 0.5
+# mask 3602521 on
+# move 3301821 4 0
+# face 3301821 "angry"
+# alpha 3301821 1 0.5
+# mask 3301821 on
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0002"
+@フォルカス
+カリス…そんなに大声ではしゃぐと、
+ハルモニア兵に見つかります
+もう少し静かにできませんか？
+
+# face 3602521 "normal"
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0032"
+@カリス
+おっけい！静かにする！
+わかったよ～！
+
+# alpha 3602521 0 0.5
+# alpha 3301821 0 0.5
+# move 3810001 3 0
+# alpha 3810001 1 0.5
+# mask 3810001 off
+# textboxarrow 0 2
+@ハルモニア兵
+そこ！なにを騒いでいるのですか！
+
+# textflame 0 0
+;;モノローグ
+@
+ハルモニア兵に目をつけられ、
+マスターはどうするべきか悩んで、
+フォルカスの顔を見た
+
+# alpha 3810001 0 0.5
+# move 3301821 3 0
+# face 3301821 "angry"
+# alpha 3301821 1 0.5
+# mask 3301821 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 330181 "forcas_t_0032"
+@フォルカス
+…了解しました
+私に任せてください
+
+# se "SE_0740"
+# alpha 3301821 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+フォルカスはそう言うと、
+一人でハルモニア兵に
+向かっていった
+
+# move 3810001 2 0
+# alpha 3810001 1 0.5
+# mask 3810001 on
+# move 3301821 4 0
+# face 3301821 "smile"
+# alpha 3301821 1 0.5
+# mask 3301821 on
+# textflame 1 1
+# textboxarrow 0 3
+;;フォルカス（笑顔）
+# voice 330181 "forcas_t_0031"
+@フォルカス
+すみません、
+妹が失礼いたしました…
+
+# textflame 1 1
+# textboxarrow 0 3
+;;フォルカス（笑顔）
+@フォルカス
+私が叱っておきますので、
+今回だけは…
+お許しいただけませんか？
+
+# textboxarrow 0 1
+@ハルモニア兵
+う…うう…美しい
+
+# textflame 0 0
+;;モノローグ
+@
+フォルカスに笑顔を向けられた兵は
+混乱していた様子だったが、
+しばらくして職務を思い出したらしい
+
+# textflame 1 1
+# textboxarrow 0 1
+@ハルモニア兵
+…ごほんっ！今回は姉妹愛に免じて
+慈悲を与えます！
+次はありませんよ、いいですね？
+
+# textboxarrow 0 3
+;;フォルカス（笑顔）
+# voice 330181 "forcas_t_0003"
+@フォルカス
+はい、ありがとうございます
+
+# se "SE_0740"
+# alpha 3810001 0 0.5
+# alpha 3301821 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+ハルモニア兵の尋問をうまく回避し、
+フォルカスはマスター達の
+いる場所へ戻ってきた
+
+# move 3301821 3 0
+# face 3301821 "angry"
+# alpha 3301821 1 0.5
+# mask 3301821 off
+# textflame 1 1
+# textboxarrow 0 2
+;;フォルカス（通常の表情）
+# voice 330181 "forcas_t_0001"
+@フォルカス
+マスター、任務完了いたしました
+
+# textflame 0 0
+;;モノローグ
+@
+フォルカスのおかげで助かったよ
+と、マスターはお礼をいう
+
+# se "SE_6504"
+# emotionbody 1003 3 3602521 10 290
+# effectpattern 1003 1 3
+# effectstart 1003
+# move 3602521 2 0
+# face 3602521 "normal"
+# alpha 3602521 1 0.5
+# mask 3602521 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 3301821 4 0.5
+# mask 3301821 on
+# voice 6025 "chalice_t_0030"
+@カリス
+フォルカス、ありがと！
+
+# face 3301821 "shy"
+# textboxarrow 0 3
+;;フォルカス（照れ）
+# voice 330181 "forcas_t_0004"
+@フォルカス
+私は任務を果たすために、
+最適な行動をしただけです…
+さあ、早く彼の家に向かいましょう
+
+;;//演出：場所移動
+# se "SE_0740"
+# alpha 3602521 0 0.5
+# alpha 3301821 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+目的の家に着くまでのあいだ、
+マスター達は少年の話を聞いていた
+
+# move 3602521 3 0
+# face 3602521 "sad"
+# alpha 3602521 1 0.5
+# mask 3602521 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0019"
+@カリス
+そっかー…
+おばあさんは病気になって長いんだ、
+もっと早く会えたらよかったのに…
+
+# alpha 3602521 0 0.5
+# move 3301821 3 0
+# face 3301821 "usual"
+# alpha 3301821 1 0.5
+# mask 3301821 off
+# textboxarrow 0 2
+# voice 330181 "forcas_t_0004"
+@フォルカス
+大きくなって、
+ご家族を助けたいというのは、
+立派な志ですね
+
+# alpha 3301821 0 0.5
+# move 3602521 3 0
+# face 3602521 "normal"
+# alpha 3602521 1 0.5
+# mask 3602521 off
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0039"
+@カリス
+君の子供が生まれるまで長生きして、
+おばあさんに名前をつけてもらう
+約束をしてるんだ？
+
+# se "SE_6504"
+# emotionbody 1004 10 3602521 -70 200
+# effectpattern 1004 4 3
+# effectstart 1004
+# face 3602521 "happy"
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0003"
+@カリス
+その約束、守ってもらわなくちゃ！
+カリスちゃんのミラクル、
+どーんと期待しちゃっていいからね！
+
+# effectskip 1004
+# textflame 0 0
+;;モノローグ
+@
+少年は大喜びして飛び回り、
+カリスも一緒になってはしゃぎだす
+
+# effectskip 1004
+# alpha 3602521 0 0.5
+# move 3301821 3 0
+# face 3301821 "smile"
+# alpha 3301821 1 0.5
+# mask 3301821 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 330181 "forcas_t_0002"
+@フォルカス
+あの少年は、深く悩んでいたのですね
+今の子供らしい明るさこそ、
+本来のあるべき姿なのでしょう
+
+# textflame 0 0
+;;モノローグ
+@
+フォルカスは慈愛に満ちた微笑みで
+少年とカリスを見ている
+
+;;モノローグ
+@
+マスターはフォルカスの微笑みに
+魅入られ、顔が赤くなってくのを
+感じた
+
+# alpha 3301821 0 0.5
+# move 3602521 3 0
+# face 3602521 "normal"
+# alpha 3602521 1 0.5
+# mask 3602521 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0004"
+@カリス
+あー！
+マスターさん、フォルカスを見て
+顔が赤くなったよー？
+
+# textflame 0 0
+;;モノローグ
+@
+カリス、また兵士に見つかるから
+大人しく、とマスターが言っても、
+聞く耳を持たずにはしゃぎ続ける
+
+# alpha 3602521 0 0.5
+# move 3301821 3 0
+# face 3301821 "angry"
+# alpha 3301821 1 0.5
+# mask 3301821 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 330181 "forcas_t_0001"
+@フォルカス
+マスター…
+残念ながら、兵に見つかったようです
+
+# alpha 3301821 0 0.5
+# move 3810001 3 0
+# alpha 3810001 1 0.5
+# mask 3810001 off
+# textboxarrow 0 2
+@ハルモニア兵
+そこで騒いでいるのは誰ですか！
+
+# alpha 3810001 0 0.5
+# move 3602521 2 0
+# face 3602521 "normal"
+# alpha 3602521 1 0.5
+# mask 3602521 on
+# move 3301821 4 0
+# face 3301821 "angry"
+# alpha 3301821 1 0.5
+# mask 3301821 on
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0007"
+@フォルカス
+…ですが、ここなら戦えます
+マスターは、少年をお願いします！
+カリス、行きますよ！
+
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0029"
+@カリス
+おっけい！

@@ -1,0 +1,368 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;コマンドキラーズサイドストーリー後編
+;;第4話　タイトル：尽くす者
+;;4_1
+;;スクリプト最後の背景：室内
+;;-----------------------------------------
+# script "lisp"
+# background "foot_mountain_village"
+# bgmfile "bgm429" "BgmIntegralNoahCommand" 0
+;;-----------------------------------------
+;;ロジェスティラ
+# body 235
+# pos 235 3
+# scale 235 0.8 0
+# layer 235 2
+# alpha 235 0 0
+# mask 235 off
+;;ロジェスティラ・神令・スクルド（ボイス用）
+# body 5503711
+# alpha 5503711 0 0
+;;ゴーレム
+# body 236
+# pos 236 3
+# scale 236 0.8 0
+# layer 236 2
+# alpha 236 0 0
+# mask 236 off
+;;-----------------------------------------
+;;第4話　タイトル：尽くす者
+;;//背景：村
+# textflame 1 1
+# textboxarrow 0 0
+@？？？
+むかしむかし、あるところに
+恥ずかしがり屋のキル姫がいました
+
+@？？？
+彼女は人の役に立ちたいと思って
+いましたが、人前に出るのは
+苦手でした
+
+@？？？
+そこで家に引きこもり、
+魔術や魔道具の研究に勤しんで
+いました
+
+@？？？
+自分の研究が誰かの役に立つことを
+願って…
+
+@？？？
+たまに出かけることもありましたが
+村の人々に話しかけられても
+上手く応えることができません
+
+@？？？
+自分なんかが話をするのは
+畏れ多いと思ってしまうからです
+
+@？？？
+つい逃げていってしまう彼女を、
+村の人々は…
+
+@？？？
+「恥ずかしがり屋の魔女」と呼んで
+優しく見守ってくれました
+
+@？？？
+そんな村の人々の暮らしを、
+遠くからそっと眺めるのが
+彼女の日課でもありました
+
+@？？？
+このままずっと、穏やかで静かな
+日々が続きますように
+
+@？？？
+誰も傷つかない、優しい世界で
+ありますように
+
+@？？？
+恥ずかしがり屋のキル姫は、
+そう願い続けていたのです
+
+@？？？
+そんな、ある日
+彼女は“運命”と出会いました――
+
+;;//背景：村（夜）
+;;
+;;//ゴーレム（サイズ小さくするのは可能？）が歩いていく
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "foot_mountain_village_night"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm003" 0
+# se "SE_0904"
+# move 236 3 0
+# alpha 236 1 0
+# mask 236 off
+# rightin 236 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ゴーレム
+…………
+
+# serif 1
+@雑貨屋
+あら！
+あんた魔女さんとこの
+…これを持ってきてくれたの？
+
+# serif 1
+@雑貨屋
+まあ！
+こんなにたくさんの薬を
+いつも悪いわねぇ
+
+# serif 1
+@雑貨屋
+こっちは魔除けのお守りだね
+お陰で猟での事故が減ったって
+みんな喜んでるよっ
+
+# serif 1
+@雑貨屋
+本当にありがとうねぇ
+
+# textboxarrow 0 2
+@ゴーレム
+…………
+
+# serif 1
+@雑貨屋
+ちゃんと会ってお礼を言いたいん
+だけど…魔女さんは恥ずかしがり屋
+だものねぇ
+
+# serif 1
+@雑貨屋
+ああ、そうだ！
+これを持っていっておくれ
+村のみんなから、せめてものお礼だよ
+
+# serif 1
+@雑貨屋
+それじゃあね
+あんたも気をつけてお帰り！
+
+# textboxarrow 0 2
+@ゴーレム
+…………
+
+;;//ゴーレムが歩いていく
+# se "SE_0904"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# leftout 236 1
+# waitandnext 1
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 236 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//ゴーレムが歩いてくる
+# bgm "bgm002" 0
+# se "SE_0904"
+# move 236 4 0
+# alpha 236 1 0
+# mask 236 on
+# rightin 236 0.8
+# waitandnext 1
+
+# move 235 2 0
+# face 235 "happy"
+# alpha 235 1 0.5
+# mask 235 on
+# textboxarrow 0 1
+# textwindow "normal"
+@？？？
+ゴーちゃん、
+お帰りなさいっ
+ちゃんとお遣いしてくれましたね
+
+# textboxarrow 0 3
+@ゴーレム
+…………
+
+# voice 550371 "logistille_c_0022"
+# face 235 "surprise"
+# textboxarrow 0 1
+@？？？
+えっ？
+こんなにお礼をっ
+あうううっ…
+
+# face 235 "normal"
+# textboxarrow 0 1
+@？？？
+わたしなんかに…
+申し訳ないです…
+
+# textboxarrow 0 3
+@ゴーレム
+…………
+
+# face 235 "surprise"
+# textboxarrow 0 1
+@？？？
+ええっ？
+会ってお礼を…！？
+む…無理ですぅ…
+
+# face 235 "happy"
+# textboxarrow 0 1
+@？？？
+早く中に入って下さい
+今日のお仕事は終わりですっ
+
+;;//背景：室内
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "201_room"
+# alpha 235 0 0
+# alpha 236 0 0
+# move 235 3 0
+# face 235 "happy"
+# alpha 235 1 0
+# mask 235 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 550371 "logistille_c_0004"
+# textboxarrow 0 2
+# textwindow "normal"
+@？？？
+…今日も一日、穏やかでした
+村の皆さんも仲良さそうです♪
+
+# face 235 "surprise"
+# textboxarrow 0 2
+@？？？
+明日も穏やかな一日でありますように
+…あ、そうでした！
+
+# face 235 "happy"
+# textboxarrow 0 2
+@？？？
+この前、手に入れた研究書…
+気になる箇所があったんです
+
+# textboxarrow 0 2
+@？？？
+今夜はこれを読みながら
+休みましょう
+
+# face 235 "normal"
+# textboxarrow 0 2
+@？？？
+ふむふむ…
+毒や麻痺を操る異族ですか…
+怖いですね
+
+# textboxarrow 0 2
+@？？？
+人に化ける異族まで…
+そんなの…どうすれば…
+
+# textboxarrow 0 2
+@？？？
+異族だと見破る魔術や魔道具…
+そういうものも必要になるの
+でしょうか…？
+
+# face 235 "happy"
+# textboxarrow 0 2
+@？？？
+今のうちに研究しておくのも
+良さそうですね
+
+# voice 550371 "logistille_c_0005"
+# textboxarrow 0 2
+@？？？
+そういうのは、わたし、
+ロジェスティラの得意分野ですからっ
+
+# textboxarrow 0 2
+@ロジェスティラ
+…………
+
+# alpha 235 0 0.5
+# move 236 3 0
+# alpha 236 1 0.5
+# mask 236 off
+# textboxarrow 0 2
+@ゴーレム
+…………
+
+# voice 550371 "logistille_c_0023"
+# move 235 2 0
+# face 235 "surprise"
+# alpha 235 1 0.5
+# mask 235 on
+# textboxarrow 0 1
+# move 236 4 0.5
+# mask 236 on
+@ロジェスティラ
+はううっ…！
+ゴーちゃん、いたんですか…
+
+# voice 550371 "logistille_c_0035"
+# face 235 "sad"
+# textboxarrow 0 1
+@ロジェスティラ
+得意分野なんて言ってごめんなさい
+偉そうにしてしまいましたっ…
+
+# textboxarrow 0 1
+@ロジェスティラ
+わたしなんか…
+全然、大したことありませんっ
+
+# textboxarrow 0 3
+@ゴーレム
+…………
+
+# face 235 "normal"
+# textboxarrow 0 1
+@ロジェスティラ
+そ、そんなっ
+ゴーちゃんは優しいですね
+
+;;ロジェスティラ（独白）
+# move 235 2 0
+# textboxarrow 0 0
+# textwindow "moya"
+@ロジェスティラ
+異族かぁ…
+もし村に現れたりしたら…
+わたし、戦えるのかなぁ…
+
+;;ロジェスティラ（独白）
+# textboxarrow 0 0
+@ロジェスティラ
+この村が、世界が、
+ずっと穏やかでありますように…

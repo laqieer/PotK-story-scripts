@@ -1,0 +1,1044 @@
+;;-----------------------------------------
+;;SEAイベント異聞不可分フォーハング2_3
+;;-----------------------------------------
+# script "lisp"
+# background "004_wildland"
+# bgmfile "bgm424" "BgmIntegralNoahCommand" 0
+;;-----------------------------------------
+;;INヒョウハ
+# body 5402011
+# pos 5402011 2
+# scale 5402011 0.8 0
+# layer 5402011 4
+# alpha 5402011 0 0
+# entry 5402099 5402011
+# pos 5402099 3
+# scale 5402099 0.8 0
+# layer 5402099 3
+# mask 5402099 off
+# alpha 5402099 0 0
+;;SEAヒョウハ
+# body 6402011
+# pos 6402011 3
+# scale 6402011 0.8 0
+# layer 6402011 3
+# mask 6402011 off
+# alpha 6402011 0 0
+;;mobスイハ
+# body 231
+# pos 231 3
+# scale 231 0.8 0
+# layer 231 4
+# mask 231 off
+# alpha 231 0 0
+;;天上編スイハ
+# body 401711
+# pos 401711 5
+# scale 401711 0.8 0
+# layer 401711 2
+# mask 401711 off
+# alpha 401711 0 0
+;;神令スイハ
+# body 3401711
+# pos 3401711 4
+# scale 3401711 0.8 0
+# layer 3401711 2
+# mask 3401711 off
+# alpha 3401711 0 0
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 3
+# mask 5401721 off
+# alpha 5401721 0 0
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;マナナン＆マクリル
+# body 6504011
+# pos 6504011 5
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+# body 6603811
+# pos 6603811 1
+# scale 6603811 0.8 0
+# layer 6603811 4
+# alpha 6603811 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "SEA6402011"
+# imagealpha 1 0 0
+# imagescale 1 1 0
+# imagelayer 1 5
+# imageset 3 "bg_white_circle"
+# imagealpha 3 0 0
+# imagescale 3 1.5 0
+# imagelayer 3 5
+;;-----------------------------------------
+;;背景：荒野（舞台上）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+;;演出：神令前スイハ(？？？)とmobヒョウハ(幻)の攻防
+# face 231 "angry"
+# alpha 231 1 0.3
+# se "SE_4300"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ヒョウハ？
+はぁぁぁぁ！！！
+
+# se "SE_4301"
+# fadein "white" 0.5
+# move 231 2 0.3
+# textwindow "close"
+# waitandnext 1
+
+# se "SE_5200"
+# move 401711 4 0.3
+# face 401711 "angry"
+# alpha 401711 1 0.3
+# waitandnext 0.5
+
+# se "SE_4303"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@？？？
+せいっ！
+
+;;背景：黒
+# se "SE_4302"
+# fadein "white" 0.5
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# alpha 231 0 0
+# alpha 401711 0 0
+# textwindow "close"
+# waitandnext 2
+
+;;セリフのみ
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@ヒョウハ
+…………
+
+# textflame 0 0
+@
+ヒョウハの目の前の舞台で
+弓矢が飛び交う
+
+# textflame 0 0
+@
+それはあってなかった可能性
+滑稽で幼稚な喧嘩のようなもの
+
+;;背景：荒野（舞台上）
+# imagealpha 0 0 1
+# alpha 231 1 0
+# alpha 401711 1 0
+# waitandnext 1
+
+;;演出：スイハが神令に変わる
+# alpha 401711 0 1
+# alpha 3401711 1 1
+# waitandnext 1.5
+
+;;（スイハ）
+# se "SE_4303"
+# textflame 1 1
+# textboxarrow 0 3
+@？？？
+そこです
+
+# se "SE_4302"
+# move 3401711 5 0.3
+# waitandnext 1
+
+;;演出：スイハの矢を防ぐヒョウハ？
+# se "SE_4601"
+# fadein "white" 0.5
+# move 231 1 0.5
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 1
+@ヒョウハ？
+はっ、ならこっちもだ！
+
+;;演出：ヒョウハの姿も神令に変わる
+# alpha 231 0 0.2
+# face 5402011 "angry"
+# alpha 5402011 1 0.2
+# fadein "white" 0.5
+# waitandnext 1.5
+
+# textflame 1 1
+# textboxarrow 0 1
+@ヒョウハ？
+白黒つけてやるよ！
+
+;;背景：黒
+# imagealpha 0 1 0.5
+# imagepos 0 0 0
+# textflame 0 0
+@
+だが、そのふたりの戦いは
+まるで遊戯のように
+型のように
+
+# background "bg_black"
+# alpha 3401711 0 0
+# face 5402011 "sad"
+# move 5402011 3 0
+# mask 5402011 off
+# alpha 5402011 1 0.3
+# textflame 0 0
+@
+決まった動きを
+壊れたように繰り返す
+
+# imagealpha 0 0 0.3
+# voice 540201 "hyoha_c_0015"
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+白黒なんてつく訳ないじゃんか
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+あたしとあいつは同格なんだ
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+でも…
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：ユグドラシル内部
+# background "yggdrasill_interior"
+# imagealpha 3 0.8 0
+# imagepos 3 0 0
+# alpha 5402011 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+;;演出：擬装スイハ立ち絵表示
+# alpha 5401721 1 0.5
+# waitandnext 1
+
+;;（スイハ）
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@？？？
+あなたが白黒をつけるべきなのは、
+私です
+
+# textflame 1 1
+# textboxarrow 0 2
+@？？？
+あなたが望むなら、
+ここで戦っても構いません
+白黒はっきりさせましょう
+
+;;暗転
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 2
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：黒
+# background "bg_black"
+# imagealpha 3 0 0
+# alpha 5401721 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# sedelay "bgm602_basic_on" 1
+# sedelay "bgm602_rhythm_on" 1
+# fadein "black" 1
+# waitandnext 1
+
+# alpha 5402011 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ヒョウハ
+剣を持ってまで仲間の為に
+戦おうとしたスイハ…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+けど、この時は
+戦おうとして言った訳じゃない？
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：ユグドラシル内部
+# background "yggdrasill_interior"
+# imagealpha 3 0.8 0
+# imagepos 3 0 0
+# alpha 5402011 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# face 5402011 "normal"
+# alpha 5402011 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ヒョウハ？
+あんた、超爆・熱いな！
+
+# face 5402011 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ？
+ごめん…
+あたし、あんたが羨ましくて
+本当は…憧れてたんだ
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ？
+あんたの強さ、よく知ってるんだよ
+長いこと見てきたから
+でも、あんたは知らないだろ？
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ？
+あたしばっか意識して、
+何か不公平だなって…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ？
+勝手にライバル視してた
+だけなんだよ…
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：黒
+# background "bg_black"
+# imagealpha 3 0 0
+# alpha 5402011 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# alpha 5402011 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ヒョウハ
+わかった気になって
+あいつの返答も聞かないで…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+あいつはどんな気持ちでいたんだ？
+
+;;演出：明転
+;;回想SEA編5章第1話-16
+;;背景：地下空洞：101_cave
+# background "101_cave"
+# se "SE_0742"
+#setnextbgmblock 1
+# fadein "white" 2
+# imagealpha 3 0.8 0
+# imagepos 3 0 0
+# alpha 5402011 0 0
+# textwindow "close"
+# waitandnext 3
+
+;;スイハ：神令スイハ立ち絵
+# face 270 "sad"
+# alpha 270 1 0.3
+# move 3401711 4 0
+# mask 3401711 on
+# face 3401711 "normal"
+# alpha 3401711 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+スイハさん
+アナタが抱いている強い思いは…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+「悩んでいる仲間の力に
+なれなかった後悔」だったんですね
+
+# voice 4017 "suiha_0022"
+# face 3401711 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@スイハ
+…な、何を言っているんですか！？
+私はエルキュールと同じように
+“彼女”を取り戻すため――
+
+# voice 9917 "mimir_navikan_0034"
+# face 270 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+いいえ
+アナタは「エルキュールの願いを
+叶えたい」と強く願ったんです
+
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+たった一人
+悪役になるつもりで
+
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+それが…
+
+# voice 4017 "suiha_0015"
+# face 3401711 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@スイハ
+やめて…止めて下さい…！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+アナタなりの償いだったんですね
+
+;;回想ここまで
+# background "bg_black"
+# se "SE_11762"
+# fadein "white" 1
+# imagealpha 3 0 0
+# alpha 270 0 0
+# alpha 3401711 0 0
+# face 5402011 "angry"
+# alpha 5402011 1 0
+# textwindow "close"
+# waitandnext 2
+
+# voice 540201 "hyoha_c_0038"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ヒョウハ
+あぁくそっ！
+ミーミルはなんでわかってやれたんだ
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+白黒つけようなんて言って
+向かい合って戦って…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+一緒に働く同僚になったって
+あいつのこと全然わかんないのに！
+
+# textflame 0 0
+@
+わからない、考えられない
+考えたことがなかったことが、わかる
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+あたしが何をしたって――
+
+# textflame 0 0
+@
+ヒョウハの感情が
+大きく「揺らぐ」
+
+# textflame 0 0
+@
+その「揺らぎ」は
+世界に辿り着く前に
+舞台上の役者に伝播する
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：ユグドラシル内部
+# background "yggdrasill_interior"
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 2
+# alpha 5402011 0 0
+# waitandnext 1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 1
+
+# se "SE_4824"
+# fadein "red" 1
+# waitandnext 1.5
+
+;;（セリフのみ）
+# serif 1
+# textflame 1 1
+@？？？
+あ、れ？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+# textwindow "nomal"
+@
+「矢」が「ヒョウハ」に届く
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textflame 1 1
+# textwindow "nomal"
+@？？？
+あ、れ…？
+だって、今の武器は…
+
+;;演出：ヒョウハ立ち絵表示
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+# alpha 5402011 1 0.3
+# waitandnext 1
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+# textwindow "nomal"
+@
+ヒョウハの前に立っていたのは
+弓を構えたヒョウハの姿だった
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textflame 1 1
+# textwindow "nomal"
+@？？？
+違う、違う
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+# textwindow "nomal"
+@
+受けた矢に差し伸べるその手
+今にも崩れそうな膝
+
+# textflame 0 0
+@
+ヒョウハの視界に映った自らの手足
+それはずっと遠くから見ていたから
+よく知っているスイハのものだった
+
+;;演出：スイハの立ち絵表示
+# move 5402011 2 0.5
+# layer 5402011 2
+# face 5401721 "sad"
+# move 5401721 4 0
+# layer 5401721 4
+# mask 5401721 on
+# alpha 5401721 1 0.5
+# waitandnext 1
+
+;;（スイハの見た目をしたヒョウハ）
+# textflame 1 1
+# textboxarrow 0 3
+@ヒョウハ？
+スイ、ハ…
+
+;;（ヒョウハの見た目をしたスイハ）
+# textflame 1 1
+# textboxarrow 0 1
+@スイハ？
+白黒、つきましたね
+
+# textflame 0 0
+@
+これは選ばれなかった者が
+選ばれた可能性――
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textflame 1 1
+# textwindow "nomal"
+@ヒョウハ
+待てよ…
+
+# alpha 5402011 0 0.3
+# alpha 5401721 0 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+# textwindow "nomal"
+@
+そう、その可能性に…
+この舞台の脚本に異を唱えられるは
+たったひとりの観客のみ
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：黒
+# background "bg_black"
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+;;演出：ヒョウハ立ち絵表示
+# move 5402011 3 0
+# mask 5402011 off
+# alpha 5402011 1 0.3
+# face 5402011 "sad"
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ヒョウハ
+あたし、何もしてないじゃんか
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+…「裏側」に来て、
+ずっとスイハを追ってたのは
+おかしいとは思ってたけどさ
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+要はあたしが
+「選ばれた可能性」
+をずっと抱えてたって言いたいのか
+
+# face 5402011 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+ずっと、あたしが
+スイハみたいになってた
+可能性を見せてたってのか！
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 2
+# textflame 0 0
+@
+ヒョウハは怒る
+
+# textflame 0 0
+@
+ヒョウハは憤る
+
+# bgmfile "bgm405" "BgmIntegralNoahEvent003" 0
+# voice 540201 "hyoha_c_0010"
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+大きなお世話だってんだよ！
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+だってそれ、全部あたしじゃねぇか！
+
+# textflame 0 0
+@
+複雑なことはよくわからない
+けれど、ひとつは確実だ
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+今ここにはあたししかいない
+スイハはここにいないんだ！
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+なら、それは可能性でも
+なんでもないじゃないか
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+あたしの勝手な妄想じゃないか！
+
+# textflame 0 0
+@
+ヒョウハは、そう解釈した
+だからこれは、そういう物語だ
+
+# voice 540201 "hyoha_c_0015"
+# face 5402011 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+畜生、そういうことかよ
+ここまで言われて気づくなんて…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+あたしが何かしたんじゃない
+あたしはずっと何もしてなかった
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+その挙句、あたしの想像を
+「裏側」のスイハ、いやあたしか？
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+なんにしたってあいつの形の幻に
+押し付けてあたしは何を呑気に
+観客気取りだなんてしてるんだ
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+あいつ、はっきり物言わないし
+訳わかんないとこあるけど…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+あいつにはあいつの物語があるし
+あいつの想いがある――
+
+# voice 540201 "hyoha_c_0007"
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+…ははっ、そこは「裏側」が
+見せてくれたおかげで気付けたよ
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+ここまで見てきたのは
+スイハはこうだって勝手な妄想
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+でも、あいつにはあいつの
+覚悟があったんだ
+それは本当のことのはずだ
+
+# face 5402011 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+あたしはそれが知りたい
+…本人の口から、ちゃんと！
+
+;;演出：明転
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+;;背景：白
+# background "bg_white"
+# alpha 5402011 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# brightness 5402099 0 0
+# brightness 5401721 0 0
+# textflame 0 0
+# textwindow "nomal"
+@
+舞台上から声がする
+
+;;演出：スイハ？とヒョウハ？のシルエット
+# move 5402099 1 0
+# mask 5402099 off
+# face 5402099 "angry"
+# alpha 5402099 1 0.5
+# move 5401721 5 0
+# mask 5401721 off
+# alpha 5401721 1 0.5
+# textflame 1 1
+# textboxarrow 0 0
+@？？？＆？？？
+まだ決着はついてないよ？
+
+# voice 540201 "hyoha_c_0007"
+# layer 5402011 5
+# alpha 5402011 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+はっ、白黒なんてつく訳ないだろ
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+それはあたしとあいつが
+同格だからじゃない
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+上か下か、白か黒かじゃない
+あいつはあいつで
+あたしはあたしだからだ！
+
+;;演出：スイハ？とヒョウハ？のシルエット消滅
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 2
+# se "SE_5508"
+# alpha 5402099 0 1
+# alpha 5401721 0 1
+# waitandnext 2
+
+# textflame 0 0
+@
+舞台上の役者が消えて行く
+いや、そこは初めから誰もいない舞台
+
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+# voice 540201 "hyoha_c_0028"
+# face 5402011 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+あたしはずっと
+自分が選ばれなかったことを
+劣っていると思ってた…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+それを飲み込んで、あたしだけの…
+あたしがあたしでいる意味を
+見つけたと思っていた
+
+# se "bgm601_windon"
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+あ、フォルカス達のこととか
+見つけた大事なものは悪くないんだ
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+でも、それを見つけた自分は
+劣っていないって思い込もうと
+していたのは大間違いだった
+
+# textflame 0 0
+@
+こんなお粗末な可能性を
+引き付けてしまうほどにな
+とヒョウハは笑う
+
+# voice 540201 "hyoha_c_0027"
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+はぁ、あたしはとにかく
+あいつと向き合わないとな
+
+#setnextbgmblock 1
+# se "bgm601_celloon"
+# se "bgm601_guitaron"
+# se "bgm601_glockenon"
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+そん時にまた「揺らぐ」なら
+もう一度ここに来ればいいさ
+
+# textflame 0 0
+@
+それは考えなしの行動か？
+未来の「可能性」に期待を込めた
+ただの愚か者の行動か
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+考えなしな癖に臆病なだけだ
+
+# face 5402011 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+だから、力を貸してくれテュール！
+あたしに勇気をくれ…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+いや、違う…違うな
+それじゃダメなんだ
+
+;;ヒョウハシナリオカット表示
+# frameout 0 0
+# fadein "white" 1
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 5402011 0 0
+# textwindow "close"
+# waitandnext 2
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@ヒョウハ
+いつもうじうじしてるあいつにも
+あんたの考えなしなとこを
+思い出させるくらいの…
+
+# textflame 1 1
+# textboxarrow 0 0
+@ヒョウハ
+何を言われようともへこたれない
+不屈の勇気ってヤツは
+自分の中から絞り出すものだ！
+
+# textflame 0 0
+@
+答えの出ない心の問いに
+答えを出さないという答えを
+ヒョウハは堂々と出した
+
+# textflame 0 0
+@
+テュールに頼らず、
+自分自身の意思で
+
+# textflame 0 0
+@
+その考えなしの向こう見ずな意思は
+かの軍神をも黙らせ、
+そして――従わせる
+
+;;演出：暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;シナリオカット削除
+# imagealpha 1 0 0
+# framein 0 0
+# face 6402011 "normal"
+# alpha 6402011 1 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 2
+
+# textflame 0 0
+# textwindow "nomal"
+@
+ヒョウハはもう、揺るがない
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# fadeout "white" 2
+# waitandnext 2
+
+;;背景：ユグドラシル内部
+# background "yggdrasill_interior"
+# alpha 6402011 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "white" 2
+# waitandnext 3
+
+# bgmfile "bgm263" "BgmLostRagnarok001" 0
+# move 6504011 4 0.5
+# alpha 6504011 1 0.3
+# face 6603811 "happy"
+# move 6603811 2 0.5
+# alpha 6603811 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@マナナン＆マクリル
+幕を閉じよう終わらせよう
+裏と表、どちらがどちらでも
+幕を閉じたらもう終わり
+
+# textflame 1 1
+# textboxarrow 0 3
+@マナナン
+裏は願いを叶えられない？
+
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+表は願いを告げられない？
+
+# textflame 1 1
+# textboxarrow 0 0
+@マナナン＆マクリル
+さぁさぁ始めよう
+物語の続きはあなたの胸に
+
+# voice 650401 "manannan_ura_0005"
+# voice 660381 "maclir_ura_0005"
+# textflame 1 1
+# textboxarrow 0 0
+@マナナン＆マクリル
+それではまた次の舞台で
+お会いしましょうごきげんよう
+
+# fadeout "black" 2
+# waitandnext 2

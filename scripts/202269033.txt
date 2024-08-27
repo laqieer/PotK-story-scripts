@@ -1,0 +1,258 @@
+;;-----------------------------------------
+;;悪魔サイド2話3_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm150" "BgmPJZero001" 0
+;;-----------------------------------------
+;;マサムネ
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# layer 1100111 2
+# mask 1100111 off
+# alpha 1100111 0 0
+;;天沼矛
+# body 1300431
+# pos 1300431 3
+# scale 1300431 0.8 0
+# layer 1300431 2
+# mask 1300431 off
+# alpha 1300431 0 0
+;;魔獣
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# layer 910013 5
+# mask 910013 off
+# alpha 910013 0 0
+;;パンドラ
+# body 306
+# pos 306 3
+# scale 306 0.8 0
+# layer 306 2
+# mask 306 off
+# alpha 306 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：地上世界
+# textwindow "close"
+# waitandnext 0.2
+
+# background "collapsecity"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# alpha 910013 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "toge"
+# se "SE_0792"
+# textboxarrow 0 2
+@魔獣
+ガアアアアアアアア！
+
+# serif 1
+# textwindow "nomal"
+@人々
+キャアアアアアア…！
+誰かっ…誰か助けてぇ…！
+
+# alpha 910013 0 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.5
+
+# move 910013 5 0
+# mask 910013 on
+# face 1100111 "angry"
+# alpha 1100111 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@マサムネ
+あそこだ…！
+魔獣ども、それ以上、人々に…
+
+;;魔獣が立ちふさがる
+# move 1100111 2 0.5
+# move 910013 4 0.5
+# alpha 910013 1 0.3
+# se "SE_0793"
+# textboxarrow 0 3
+@魔獣達
+ガアアアアアアアアアアア！
+
+# voice 13004 "amenonubokom_0029"
+# alpha 1100111 0 0.3
+# alpha 910013 0 0.3
+# face 1300431 "normal_1"
+# alpha 1300431 1 0.3
+# se "SE_4200"
+# textboxarrow 0 2
+@天沼矛
+そこを通してもらいます！
+はぁっ！
+
+# move 1300431 2 0.5
+# alpha 910013 1 0.3
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# se "SE_4817"
+# fadein "white" 0.5
+# move 1300431 3 0.2
+# move 910013 5 0.2
+# waitandnext 0.5
+
+;;魔獣が倒れるがすぐに補充される
+# se "SE_3001"
+# alpha 910013 0 0.3
+# waitandnext 0.5
+
+# serif 1
+@人々
+助けてぇ…！
+
+# move 1300431 2 0.5
+# move 910013 4 0.5
+# alpha 910013 1 0.3
+# se "SE_0792"
+# serif 0
+# textboxarrow 0 3
+@魔獣
+ガアアアアアアアアア！
+
+# voice 13004 "amenonubokom_0015"
+# face 1300431 "trouble"
+# textboxarrow 0 1
+@天沼矛
+ううっ…
+このままでは、間に合わない
+
+# voice 11001 "masamunem_battle_0007"
+# alpha 1300431 0 0.3
+# alpha 910013 0 0.3
+# eye 1100111 "mad"
+# move 1100111 3 0
+# layer 1100111 2
+# alpha 1100111 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "toge"
+# textboxarrow 0 2
+@マサムネ
+ううっ…うおおおオオオオオ！！
+
+# move 1100111 2 0.5
+# face 1300431 "normal_1"
+# move 1300431 4 0
+# layer 1300431 4
+# mask 1300431 on
+# alpha 1300431 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@天沼矛
+マサムネ、いけない！
+それ以上、獣血を解放しては…
+
+;;魔弾が魔獣達を討つ
+# bgm "stop"
+# move 1100111 1 0.5
+# alpha 1100111 0 0.3
+# move 1300431 5 0.5
+# alpha 1300431 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# move 910013 3 0
+# mask 910013 off
+# alpha 910013 1 0.5
+# waitandnext 0.5
+
+# effectbody 1000 28 0 0 0
+# effectstart 1000
+# waitandnext 1
+
+# se "SE_0794"
+# textwindow "nomal"
+# textboxarrow 0 2
+@魔獣達
+ガアアアアアア…！？
+
+# alpha 910013 0 0.5
+# move 1300431 3 0
+# mask 1300431 off
+# alpha 1300431 1 0.3
+# textboxarrow 0 2
+@天沼矛
+えっ…？
+
+# alpha 910013 1 0.5
+# alpha 1300431 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+;;魔弾が魔獣達を討つ
+# effectbody 1001 28 0 0 0
+# effectstart 1001
+# waitandnext 1
+
+# se "SE_0794"
+# textwindow "nomal"
+# textboxarrow 0 2
+@魔獣達
+ガアアアアアアア…
+
+;;魔獣が全滅する
+# se "SE_3001"
+# scale 910013 0.75 1
+# alpha 910013 0 1
+# textwindow "close"
+# waitandnext 1
+
+# face 1300431 "trouble"
+# alpha 1300431 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@天沼矛
+まさか…あんなに大量にいた
+魔獣の群れを、あっという間に…
+
+# serif 1
+@人々
+助かったのか…？
+今の攻撃は、一体、誰が…
+
+# alpha 1300431 0 0.3
+# alpha 306 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.5
+
+# face 306 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 2
+@パンドラ
+ええと…
+これで良かったのかしら？
+
+# textboxarrow 0 2
+@パンドラ
+教えてもらった通り、
+キラープリンセスとして戦って
+みたのだけれど
+
+# fadeout "black" 1
+# waitandnext 1

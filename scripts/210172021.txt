@@ -1,0 +1,272 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第17章 章タイトル「到来せし繋ぎ手―エクスプレス―」
+;;第2話―２　タイトル：繋がる力
+;;2_1
+;;スクリプト最後の背景：森：forest
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgm "stop"
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;魔獣（フライデビル）
+# body 920014
+# pos 920014 3
+# scale 920014 0.8 0
+# layer 920014 3
+# alpha 920014 0 0
+# mask 920014 off
+;;魔獣（フライデビル）（クローン1）
+# entry 99200141 920014
+# pos 99200141 3
+# scale 99200141 0.8 0
+# layer 99200141 2
+# alpha 99200141 0 0
+# mask 99200141 off
+;;魔獣（フライデビル）（クローン2）
+# entry 99200142 920014
+# pos 99200142 3
+# scale 99200142 0.8 0
+# layer 99200142 2
+# alpha 99200142 0 0
+# mask 99200142 off
+;;-----------------------------------------
+;;--------------------------------------------
+;;■アルマス
+;;//立ち絵：マスターアルマス
+;;■ピスカ
+;;//立ち絵なし
+;;■ティターニア
+;;//立ち絵：ロスラグ編妖精ティターニア
+;;--------------------------------------------
+;;//背景：森：forest
+# se "SE_0791"
+# voice 9943 "almace_navikan_0035"
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0
+# mask 196 off
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+…あれっ？
+何で森の中にいるの？
+
+# textboxarrow 0 2
+@アルマス
+ティターニア？
+お姉ちゃん？
+誰もいない…
+
+# face 196 "normal"
+# textboxarrow 0 2
+@アルマス
+おかしいわね
+とりあえず、ティルヘルムに
+戻らないと…
+
+# face 196 "surprise"
+# textboxarrow 0 2
+@アルマス
+…って、どうやって見つければ
+良いのよ！
+
+# textboxarrow 0 2
+@アルマス
+…………
+
+# face 196 "normal"
+# textboxarrow 0 2
+@アルマス
+仕方ない…
+適当に歩いていれば何か感じるかも
+しれないし
+
+# se "SE_0719"
+# textwindow "close"
+# leftout 196 1
+# waitandnext 1
+
+;;//暗転挟む
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 196 0 0
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0
+# mask 196 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+ん？
+あそこにいるのは…
+人…じゃないわね
+
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+# serif 1
+@？？？
+おや？
+ひょっとしてルネ？
+久し振りだね
+
+# face 196 "happy"
+# textboxarrow 0 2
+@アルマス
+ピスカ！？
+うわ、懐かしい
+元気だった？
+
+# textboxarrow 0 2
+@アルマス
+妖精に会えて良かったわ
+で、ピスカはここで何してるの？
+
+# serif 1
+@ピスカ
+あー…
+ちょっとね…
+
+# textboxarrow 0 2
+@アルマス
+ふーん…
+さては、また悪戯してオベロン様から
+逃げてるんでしょ
+
+# textboxarrow 0 2
+@アルマス
+ピスカって本当、懲りないわよね
+
+# serif 1
+@ピスカ
+ルネだってオイラと一緒に悪戯した
+ことあるだろっ
+
+# face 196 "normal"
+# textboxarrow 0 2
+@アルマス
+子どもの頃の話はいいのよ…
+それより、お願いがあるの
+
+# textboxarrow 0 2
+@アルマス
+さっきまでティターニアと話して
+たんだけど、急に幻想結界の外に
+出てしまったみたいで…
+
+# textboxarrow 0 2
+@アルマス
+悪いけど、ティルヘルムまで
+案内してくれない？
+
+# serif 1
+@ピスカ
+ふふん
+オイラに案内を頼んでいいのかい？
+悪戯するかもよ～
+
+# voice 9943 "almace_navikan_0006"
+# face 196 "happy"
+# textboxarrow 0 2
+@アルマス
+ふふっ
+ピスカは変わってないわね
+何だかホッとした
+
+# serif 1
+@ピスカ
+そんな顔されると調子狂うなぁ…
+しょうがない
+ついておいでよ
+
+# voice 9943 "almace_navikan_0044"
+# textboxarrow 0 2
+@アルマス
+ありがと、ピスカ
+
+;;アルマス（独白）
+# serif 1
+# textwindow "close"
+# serif 0
+# move 196 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 196 off
+@アルマス
+外に出てる妖精と会えて良かった
+これでティルヘルムに…
+
+;;//魔獣が現れる
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# se "SE_0792"
+# alpha 196 0 0.5
+# move 920014 3 0
+# alpha 920014 1 0.5
+# mask 920014 off
+# textboxarrow 0 2
+# textwindow "normal"
+@魔獣
+ガアアアアアアアアア！
+
+# serif 1
+@ピスカ
+うひゃあ！？
+何でこんなところに魔物がっ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 920014 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+ピスカ、こっちに！
+私に任せてっ
+
+;;//魔獣が数体現れる
+# textwindow "close"
+# alpha 196 0 0.5
+# move 99200141 1 0
+# alpha 99200141 1 0.5
+# mask 99200141 on
+# move 920014 3 0
+# alpha 920014 1 0.5
+# mask 920014 on
+# move 99200142 5 0
+# alpha 99200142 1 0.5
+# mask 99200142 on
+# waitandnext 1.4
+
+# alpha 99200141 0 0.5
+# alpha 920014 0 0.5
+# alpha 99200142 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# serif 1
+@ピスカ
+ルネ！
+向こうからもっ…
+
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+囲まれた…
+けっこう数が多いわね
+絶・気合い入れていくわよ！

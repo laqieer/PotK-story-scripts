@@ -1,0 +1,629 @@
+;;-----------------------------------------
+;;冬イベント雪下の騎士流離譚2_0
+;;-----------------------------------------
+# script "lisp"
+# background "masamune_room"
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;SEAアロンダイト
+# body 6100711
+# pos 6100711 3
+# scale 6100711 0.8 0
+# layer 6100711 2
+# mask 6100711 off
+# alpha 6100711 0 0
+;;シタ
+# body 201621
+# pos 201621 3
+# scale 201621 0.8 0
+# layer 201621 4
+# mask 201621 off
+# alpha 201621 0 0
+;;ミトゥム
+# body 200531
+# pos 200531 2
+# scale 200531 0.7 0
+# layer 200531 3
+# mask 200531 off
+# alpha 200531 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：室内（シタの部屋）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# face 201621 "surprise"
+# alpha 201621 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@シタ
+あの森は慣れた者でも
+雪が降ってたり夜になったりすると
+迷って抜けられないことがあるんです
+
+# textflame 1 1
+# textboxarrow 0 2
+@シタ
+わたしはここに住んで長いですし
+よく通るので問題ないのですが
+ほんっとうに危ないところなんですよ
+
+# voice 2016 "shita_0028"
+# face 201621 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@シタ
+偶然、わたしが、
+あなたが付けた目印を
+見つけたからよかったものの
+
+# voice 2016 "shita_0013"
+# face 201621 "worry"
+# textflame 1 1
+# textboxarrow 0 2
+@シタ
+あのままだったら
+死んでても
+おかしくなかったんですからね！
+
+# voice 1007 "Arondaito_0008"
+# alpha 201621 0 0.3
+# face 6100711 "sad"
+# alpha 6100711 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+は、はい…ごめんなさい
+
+# textflame 0 0
+@
+アロンダイトは目覚めてから
+しばらくシタのお説教を受けていた
+
+;;もやもやフレーム
+# move 6100711 3 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@アロンダイト
+なんでしょう…
+優しい口調なのに気圧される…
+
+# voice 2016 "shita_0034"
+# move 201621 2 0
+# mask 201621 on
+# face 201621 "surprise"
+# alpha 201621 1 0.3
+# move 6100711 4 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@シタ
+それにしても…
+あんなところで
+何をしていたんですか？
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+ちゃんと支度はしていたようですし
+山を越えるつもりだったんですか？
+
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+それは…
+簡潔に行ってしまえば
+そういうことになりますね
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+じ～…
+
+# voice 1007 "Arondaito_0022"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+あ、あの、はい…
+理由もお話しします
+
+;;演出：時間経過の暗転
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 2
+# fadeout "black" 1
+# waitandnext 1
+
+# face 201621 "sad"
+# face 6100711 "usual"
+# textwindow "close"
+# waitandnext 0.5
+
+# bgm "bgm003" 0
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@アロンダイト
+――以上です
+
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+エクスカリバー風に言えば
+私は私の聖杯を見つける
+道中だったということになりますね
+
+# voice 2016 "shita_0017"
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+そうですか…
+暴走の…
+
+# textflame 0 0
+@
+アロンダイトはシタに対し
+エクスカリバーに伝えたことを
+同じように話したのだった
+
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+一ヶ所に留まっていると
+どうしても暴走の可能性が
+高くなってきてしまうのです
+
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+これまでも各地を転々として
+事なきを得てきていましたので
+今回も同じように、と
+
+# face 6100711 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+山を越えるほどの距離があれば
+と思っていたのですが、こうして
+迷惑をかける結果になってしまって…
+
+# voice 2016 "shita_0004"
+# face 201621 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+アロンダイトさんは優しいんですね
+
+# voice 1007 "Arondaito_0022"
+# face 6100711 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+え？
+
+# voice 1007 "Arondaito_0031"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+あ、すみません
+ちょっと、意外だったもので…
+
+# face 6100711 "usual"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+暴走してしまうかもという
+可能性を持つ私はそんな評価を
+受けるような存在ではありませんよ
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+でも、その可能性に気付いて
+そばにいる誰かを守ろうと
+行動しているということですよね
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+それに、暴走というのは
+キル姫であれば多かれ少なかれ
+可能性は持っている訳ですし
+
+# face 6100711 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+そう言われてしまうと
+返す言葉もないのですが…
+
+# voice 2016 "shita_0006"
+# face 201621 "smile"
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+それと自分だけの聖杯を探す旅
+なんて、とても素敵な響きですよね！
+
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+それはたぶんそういう意味じゃ…
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+わたしはそう思ったんですっ！
+ふふ、その意味を知ることも含めて
+聖杯探索の旅なのかもしれませんね！
+
+# voice 1007 "Arondaito_0008"
+# face 6100711 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+は、はぁ…そうですね？
+
+;;もやもやフレーム
+# move 6100711 4 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@アロンダイト
+話が思った方向に行かない…
+
+# voice 2016 "shita_0028"
+# face 201621 "worry"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@シタ
+うーん、聖杯探索…
+新しい場所、仕事…あ、そうだ！
+
+# face 201621 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+アロンダイトさんは
+新しいお仕事も探しているんですよね
+
+# voice 1007 "Arondaito_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+ええ、まぁ…移り住むのであれば
+その土地で仕事も探そうかと
+
+# face 201621 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+ですよね！それなら
+わたしのお手伝いを、お仕事として
+請け負っていただけませんか？
+
+# face 6100711 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+…いや、それは――
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+山を越えた先で新しい住居と
+新しい仕事を探して過ごす
+そのつもりだったなら…
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+この、山の麓の村々を巡るお仕事は
+条件としてもなかなか近しいかと！
+
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+命を救っていただいた
+恩はありますがこれ以上ご迷惑は――
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+雪山に慣れることになりますから
+また前兆を感じたらその時にパっと
+山越えしちゃえばいいんですよっ
+
+# voice 1007 "Arondaito_0008"
+# face 6100711 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+…そう、ですね？
+
+# voice 2016 "shita_0020"
+# face 201621 "smile"
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+よかった！
+それじゃあよろしくお願いしますね
+
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+はい…お願いします
+
+# textflame 0 0
+@
+急な展開に困惑するアロンダイト
+対照的にシタはとても楽しそうだ
+
+# face 201621 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+お仕事の内容は――
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+あ、そろそろミトゥムちゃん…
+ええと、妹が来ますので一緒に
+行動して覚えてくださいね！
+
+# face 6100711 "usual"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+…わかりました
+
+;;ミトゥム
+# bgm "stop"
+# serif 1
+@？？？
+姉ちゃんそろそろ行こうぜー
+
+# serif 0
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+噂をすれば、ですね
+
+;;演出：ミトゥムin
+# bgm "bgm002" 0
+# move 201621 1 0.5
+# alpha 201621 0 0.3
+# move 6100711 5 0.5
+# alpha 6100711 0 0.3
+# scale 200531 0.8 0.5
+# alpha 200531 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 1
+
+# voice 2005 "mitwumu_0002"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミトゥム
+お、目ぇ覚めたんだな！
+ミトゥムだ、よろしくな
+
+# move 200531 2 0.5
+# move 6100711 4 0.5
+# layer 6100711 4
+# mask 6100711 on
+# alpha 6100711 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+アロンダイトです
+ご迷惑をおかけしてしまって…
+
+# face 200531 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@ミトゥム
+迷惑だぁ？
+んなもんこれっぽっちもねーよ
+姉ちゃんに礼を言ったならよし、だ
+
+# face 6100711 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+礼…あっ
+
+# voice 2005 "mitwumu_0022"
+# textflame 1 1
+# textboxarrow 0 1
+@ミトゥム
+なんだぁ！？
+助けてもらっといてそれはねぇだろ！
+
+# voice 1007 "Arondaito_0031"
+# face 6100711 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+す、すみません
+話をしていたら言うタイミングが…
+
+# face 6100711 "usual"
+# move 201621 2 0.5
+# layer 201621 2
+# mask 201621 off
+# alpha 201621 1 0.3
+# move 200531 1 0.5
+# alpha 200531 0 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+シタ、遅くなってしまいましたが
+この度は命を救っていただき
+ありがとうございました
+
+# face 6100711 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+この恩義に報いるには…あっ
+
+# voice 2016 "shita_0004"
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+ふふふ、いえいえ
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+改めて、
+これからよろしくお願いしますね
+アロンダイトさん
+
+# face 6100711 "usual"
+# move 200531 5 0
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+…はい、こちらこそ
+よろしくお願いいたします、シタ
+
+# voice 2005 "mitwumu_0003"
+# move 6100711 5 0.5
+# alpha 6100711 0 0.3
+# move 200531 4 0.5
+# layer 200531 4
+# mask 200531 on
+# alpha 200531 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@ミトゥム
+うんうん、礼は大事だな
+…って、何をよろしくなんだ？
+
+# voice 2016 "shita_0013"
+# face 201621 "worry"
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+ミトゥムちゃん、礼の話をするなら
+お食事の時は必ずいただきます
+って言うんですよ
+
+# voice 2005 "mitwumu_0028"
+# face 200531 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@ミトゥム
+腹減ってるときは仕方ないじゃん
+…じゃなくて！
+
+# face 200531 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@ミトゥム
+よろしくってなんの話だ！？
+
+# face 201621 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+あ、そうそうアロンダイトさんに
+これからわたし達の仕事を
+手伝ってもらおうかと思って！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ミトゥム
+何だって…？
+
+# voice 1007 "Arondaito_0022"
+# alpha 201621 0 0.3
+# alpha 200531 0 0.3
+# move 6100711 3 0
+# layer 6100711 2
+# mask 6100711 off
+# face 6100711 "sad"
+# alpha 6100711 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+め、迷惑でしたか…？
+
+# move 6100711 4 0.3
+# move 200531 2 0
+# layer 200531 4
+# mask 200531 on
+# alpha 200531 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@ミトゥム
+何言ってんだお前！
+
+;;大声
+# se "SE_5620"
+# shake 1 2
+# face 200531 "happy"
+;;できればトゲトゲフレームで
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 1
+# textsize 30
+@ミトゥム
+大助かりだよ！！！
+
+# voice 1007 "Arondaito_0023"
+# face 6100711 "surprise"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# textsize 24
+@アロンダイト
+す、すみませ…あれ？
+いいんですか？
+
+# voice 2005 "mitwumu_0005"
+# textflame 1 1
+# textboxarrow 0 1
+@ミトゥム
+もちろんだ！
+いつも姉ちゃんとふたりだけで
+大忙しだったんだよ！
+
+# voice 1007 "Arondaito_0008"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+それはよかったです…
+
+# alpha 6100711 0 0.3
+# alpha 200531 0 0.3
+# move 201621 3 0
+# mask 201621 off
+# alpha 201621 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@シタ
+うふふっ
+
+# textflame 0 0
+@
+シタ、ミトゥム姉妹のノリに
+圧倒され続けるアロンダイトだった
+
+# fadeout "black" 1
+# waitandnext 1

@@ -1,0 +1,711 @@
+;;-----------------------------------------
+;;【ファントムオブキル】シンフォギアコラボ_イベントシナリオ前半
+;;【3話】
+;;スクリプト最後の背景：街中
+;;背景：森（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;ラブリュス
+# body 200331
+# pos 200331 3
+# scale 200331 0.8 0
+# layer 200331 2
+# alpha 200331 0 0
+# mask 200331 off
+;;立花 響
+# body 5303511
+# pos 5303511 3
+# scale 5303511 0.8 0
+# layer 5303511 2
+# alpha 5303511 0 0
+# mask 5303511 off
+;;小日向 未来
+# body 5603711
+# pos 5603711 3
+# scale 5603711 0.8 0
+# layer 5603711 2
+# alpha 5603711 0 0
+# mask 5603711 off
+;;異族 戦型種カルマノイズ
+# body 806142
+# pos 806142 3
+# scale 806142 0.8 0
+# layer 806142 2
+# alpha 806142 0 0
+# mask 806142 off
+;;-----------------------------------------
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;【3話】
+;;//背景：次々に入れ替える形であちこち情報収集をしている様を表現したいと思います。
+;;//演出：剣戟演出
+;;//演出：画面揺らし
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 530351 "tachibanahibiki_0029"
+# move 5303511 3 0
+# face 5303511 "angry"
+# alpha 5303511 1 0.5
+# mask 5303511 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@立花響
+ハアアッ！！
+
+# alpha 5303511 0 0.5
+# move 806142 3 0
+# alpha 806142 1 0.5
+# mask 806142 off
+# waitandnext 0.6
+
+# se "SE_7428"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+@異族
+ギャアアアッ！！
+
+;;//演出：画面揺らし
+;;//演出：異族フェードアウト
+# textwindow "close"
+# alpha 806142 0 0.5
+# waitandnext 0.5
+
+# move 200331 3 0
+# face 200331 "happy"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ラブリュス
+ふっふ～ん♪
+今日も華麗に討伐、討伐ぅ～♪
+
+# alpha 200331 0 0.5
+# move 5603711 2 0
+# face 5603711 "sad"
+# alpha 5603711 1 0.5
+# mask 5603711 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+@小日向未来
+それにしても
+カルマノイズ化した異族が
+増えてきた気がします…
+
+# voice 9943 "almace_navikan_0042"
+# textboxarrow 0 3
+@アルマス
+このままだと
+あの異族に滅ぼされる
+町が出てくるかも
+
+# alpha 5603711 0 0.5
+# move 200331 2 0
+# face 200331 "angry1"
+# alpha 200331 1 0.5
+# mask 200331 on
+# textboxarrow 0 1
+@ラブリュス
+ええ～
+そんなのだめだよぉ～
+ライブ会場、減っちゃう
+
+# voice 530351 "tachibanahibiki_0017"
+# alpha 200331 0 0.5
+# alpha 196 0 0.5
+# move 5603711 2 0
+# face 5603711 "usual"
+# alpha 5603711 1 0.5
+# mask 5603711 on
+# move 5303511 4 0
+# face 5303511 "sad"
+# alpha 5303511 1 0.5
+# mask 5303511 on
+# textboxarrow 0 3
+@立花響
+悔しい…
+わたしにもっと力があったら
+よかったのにな…
+
+# textboxarrow 0 1
+@小日向未来
+響は頑張ってるよ
+わたしなんかより
+ずっと強いもの
+
+# face 5303511 "happy"
+# textboxarrow 0 3
+@立花響
+ん、ありがと、未来
+早く世界蛇の使う通路
+見つけなくっちゃねッ！
+
+# voice 560371 "miku_0026"
+# face 5603711 "sad"
+# textboxarrow 0 1
+@小日向未来
+うん、そうだね…
+でも、世界蛇に勝てるのかな
+
+# bgm "stop"
+# alpha 5303511 0 0.5
+# move 200331 4 0
+# face 200331 "normal"
+# alpha 200331 1 0.5
+# mask 200331 on
+# textboxarrow 0 3
+@ラブリュス
+なに難しい顔してるの？
+未来ちゃん♪
+
+# voice 560371 "miku_0024"
+# face 5603711 "surprise"
+# textboxarrow 0 1
+@小日向未来
+ひえッ！
+び、びっくりしました…
+
+# bgmfile "bgm474" "BgmSymphogearXD" 0
+# face 200331 "happy"
+# textboxarrow 0 3
+@ラブリュス
+だって怖い顔してるんだもん♪
+そんな顔してないで笑って笑って～？
+
+# voice 2003 "loveryus_0006"
+# textboxarrow 0 3
+@ラブリュス
+そ～だ♪
+落ち込んでるときは、
+歌を歌うのもいいよねぇ～♪
+
+# alpha 5603711 0 0.5
+# alpha 200331 0 0.5
+# move 5303511 3 0
+# face 5303511 "happy"
+# alpha 5303511 1 0.5
+# mask 5303511 off
+# textboxarrow 0 2
+@立花響
+歌ッ！いいかもッ！
+そうだよ、歌を歌えば
+気分も晴れるんじゃないッ！？
+
+# alpha 5303511 0 0.5
+# move 196 3 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+ああ、そういえば…
+あなた達がやって来る時、
+綺麗な歌声が聞こえたわね
+
+# alpha 196 0 0.5
+# move 5603711 2 0
+# face 5603711 "surprise"
+# alpha 5603711 1 0.5
+# mask 5603711 on
+# textboxarrow 0 1
+# move 5303511 4 0
+# face 5303511 "normal"
+# alpha 5303511 1 0.5
+# mask 5303511 on
+@小日向未来
+あっ、それはッ…！
+
+# textboxarrow 0 3
+@立花響
+それは、わたし達が歌う歌かな
+
+# alpha 5603711 0 0.5
+# alpha 5303511 0 0.5
+# move 200331 3 0
+# face 200331 "happy"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textboxarrow 0 2
+@ラブリュス
+へえ～♪
+歌、好きなのっ？
+
+# alpha 200331 0 0.5
+# move 5303511 3 0
+# face 5303511 "normal"
+# alpha 5303511 1 0.5
+# mask 5303511 off
+# textboxarrow 0 2
+@立花響
+好きなだけじゃなくて…
+わたし達が纏うシンフォギアに
+必要不可欠というか
+
+# textboxarrow 0 2
+@立花響
+戦うときに、感情や思いを乗せて
+歌うことでギアのポテンシャルが
+上がるんだって
+
+# voice 9943 "almace_navikan_0055"
+# alpha 5303511 0 0.5
+# move 196 3 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+へえ～
+戦いながら…歌うの？
+
+# alpha 196 0 0.5
+# move 5303511 3 0
+# face 5303511 "normal"
+# alpha 5303511 1 0.5
+# mask 5303511 off
+# textboxarrow 0 2
+@立花響
+装者の感情をギアに共振させるのが
+そもそもの目的なんだけど…
+
+# face 5303511 "sad"
+# textboxarrow 0 2
+@立花響
+中には絶唱っていう奥義があって
+最大出力を出せる代わりに身体が
+ボロボロになっちゃう歌もあって…
+
+# voice 2003 "loveryus_0023"
+# alpha 5303511 0 0.5
+# move 200331 3 0
+# face 200331 "surprise"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textboxarrow 0 2
+@ラブリュス
+え、なにそれコワイ！
+
+;;モノローグ
+# alpha 200331 0 0.5
+# textflame 0 0
+@
+響とアルマスの話を聞きながら
+未来は苦しそうに唇を噛んでいた
+
+# move 5603711 2 0
+# face 5603711 "sad"
+# alpha 5603711 1 0.5
+# mask 5603711 on
+# move 200331 4 0
+# face 200331 "usual2"
+# alpha 200331 1 0.5
+# mask 200331 on
+# textflame 1 1
+# textboxarrow 0 3
+@ラブリュス
+あれれ、どうしたのぉ？
+不安があるなら、ラブリュスちゃんが
+聞いてあげるよ～？
+
+# voice 560371 "miku_0031"
+# textboxarrow 0 1
+@小日向未来
+…ごめんなさい、ちょっと
+
+# face 200331 "angry1"
+# textboxarrow 0 3
+@ラブリュス
+もぉ～
+わたしに謝る必要なんてないのに～
+
+# textboxarrow 0 1
+@小日向未来
+………
+あの、ラブリュスさんは…
+戦うのが嫌になったり、しませんか？
+
+# voice 2003 "loveryus_0028"
+# face 200331 "normal"
+# textboxarrow 0 3
+@ラブリュス
+ん～？どうかなあ～
+可愛い格好して、ライブして
+楽しかったらとりあえず満足だけど
+
+# textboxarrow 0 3
+@ラブリュス
+あんまり深く考えないかも～
+
+# textboxarrow 0 1
+@小日向未来
+そう、ですか…
+
+# textboxarrow 0 3
+@ラブリュス
+ま～ね、できたら戦いたくはないよね
+だってせっかくセットした髪が
+乱れちゃうしさ～！
+
+# face 200331 "sad"
+# textboxarrow 0 3
+@ラブリュス
+おしゃれな服がズタボロに
+なっちゃうのも嫌だし～
+
+# textboxarrow 0 1
+@小日向未来
+…はぁ
+
+# voice 2003 "loveryus_0004"
+# face 200331 "happy"
+# textboxarrow 0 3
+@ラブリュス
+でもね～人から感謝されるのは
+けっこー好き♪
+
+# textboxarrow 0 3
+@ラブリュス
+だから、人助けできる力があるのは
+悪くないかなって思ってるんだよ～
+ふふっ♪
+
+# face 5603711 "normal"
+# textboxarrow 0 1
+@小日向未来
+人助けできる力…そっか
+
+# textboxarrow 0 1
+@小日向未来
+…たしかに、そうかもしれません
+周りに比べてわたしは
+まだまだ力不足ですけど
+
+# textboxarrow 0 1
+@小日向未来
+今、自分がしたいこと、
+できることを
+すればいいだけなのかも…
+
+;;モノローグ
+# textflame 0 0
+@
+未来が厳しい顔で拳を握る
+そんな未来の眉間に寄った皺を
+ラブリュスがつんつんとつついた
+
+# voice 560371 "miku_0024"
+# face 5603711 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@小日向未来
+ひゃっッ！？
+
+# face 200331 "normal"
+# textboxarrow 0 3
+@ラブリュス
+ふふっ、こわ～い顔っ
+悩んでばっかりじゃ可愛くな～い！
+
+# voice 560371 "miku_0023"
+# textboxarrow 0 1
+@小日向未来
+えっ、ええッ！？
+
+# face 200331 "happy"
+# textboxarrow 0 3
+@ラブリュス
+暇だし～気晴らしに
+歌でも歌っちゃおうかな～♪
+
+# alpha 5603711 0 0.5
+# alpha 200331 0 0.5
+# move 5303511 3 0
+# face 5303511 "happy"
+# alpha 5303511 1 0.5
+# mask 5303511 off
+# textboxarrow 0 2
+@立花響
+ラブリュスさんの歌ッ！？
+聞きたいッ！聞きたいッ！
+
+# alpha 5303511 0 0.5
+# voice 9943 "almace_navikan_0005"
+# move 196 3 0
+# face 196 "happy"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+うん、私も聞きたい
+
+# alpha 196 0 0.5
+# move 200331 3 0
+# face 200331 "normal"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textboxarrow 0 2
+@ラブリュス
+本当はもっと大勢の
+ファンの前で
+歌いたいんだけどなー
+
+# voice 530351 "tachibanahibiki_0004"
+# move 200331 2 0.5
+# mask 200331 on
+# move 5303511 4 0
+# face 5303511 "happy"
+# alpha 5303511 1 0.5
+# mask 5303511 on
+# textboxarrow 0 3
+@立花響
+あははッ！
+なら、みんなで歌うとかッ！
+
+# face 200331 "happy"
+# textboxarrow 0 1
+# face 5303511 "happy"
+@ラブリュス
+みんなで、か…
+うん、面白そう！
+
+# textboxarrow 0 1
+@ラブリュス
+ほら、未来！
+あなたも一緒に歌うのよ！
+
+# alpha 200331 0 0.5
+# alpha 5303511 0 0.5
+# move 5603711 3 0
+# face 5603711 "surprise"
+# alpha 5603711 1 0.5
+# mask 5603711 off
+# textboxarrow 0 2
+@小日向未来
+わ、わたしッ…！？
+
+;;モノローグ
+# alpha 5603711 0 0.5
+# textflame 0 0
+@
+次の集落へ向かう道すがら
+道中は常に歌と笑い声が
+絶えなかった
+
+;;//演出：時間経過
+;;//背景：道の途中（街道沿いのようなイメージです）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "stop"
+# se "SE_0719"
+# move 5303511 2 0
+# face 5303511 "normal"
+# alpha 5303511 1 0.5
+# mask 5303511 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+さてと…地図上だと
+次の街がそろそろ見えてくる
+はずなんだけど…
+
+# textboxarrow 0 1
+@立花響
+あっ、あれじゃないかなッ！
+遠くに建物が…
+
+# face 5303511 "surprise"
+# textboxarrow 0 1
+@立花響
+…あれ？　土埃が、見える？
+
+# alpha 5303511 0 0.5
+# alpha 196 0 0.5
+# move 5603711 3 0
+# face 5603711 "usual"
+# alpha 5603711 1 0.5
+# mask 5603711 off
+# textboxarrow 0 2
+@小日向未来
+お祭りか何かあるのかな？
+ああ、ほら誰かが、
+こっちに向かって…
+
+;;モノローグ
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# textflame 0 0
+@
+遥か道の向こう、
+こちらへ走ってきていた馬車が横転し
+鋭い人の悲鳴が聞こえてきた
+
+# serif 1
+@村人
+ギャアアア！
+た、助けてっ…！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 560371 "miku_battle_0005"
+# face 5603711 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@小日向未来
+ひッ…！
+み、見てッ！
+馬車の向こうッ…！
+
+# alpha 5603711 0 0.5
+# move 200331 2 0
+# face 200331 "angry2"
+# alpha 200331 1 0.5
+# mask 200331 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+あれは、異族だわ…！
+
+# textboxarrow 0 1
+@ラブリュス
+しかも、もうカルマノイズを
+喰っちゃってるヤツだしっ…！
+
+# alpha 200331 0 0.5
+# move 5303511 2 0
+# face 5303511 "surprise"
+# alpha 5303511 1 0.5
+# mask 5303511 on
+# textboxarrow 0 1
+@立花響
+あっちの空を見てッ！
+街から煙が上がってるッ！
+
+# textboxarrow 0 3
+@アルマス
+街が襲撃されているみたい
+急ぐわよ！
+
+;;//演出：場面転換
+;;//背景：街中　
+;;カーテンフェード
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "006_town"
+# alpha 5303511 0 0
+# alpha 196 0 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+不穏な空気に、一同は急ぎ
+街に駆け付けた。
+
+# voice 530351 "tachibanahibiki_0009"
+# move 5303511 3 0
+# face 5303511 "angry"
+# alpha 5303511 1 0.5
+# mask 5303511 off
+# textflame 1 1
+# textboxarrow 0 2
+@立花響
+こ、これはッ…！
+なんてひどいッ！
+
+# alpha 5303511 0 0.5
+# move 200331 3 0
+# face 200331 "angry2"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textboxarrow 0 2
+@ラブリュス
+うわぁっ、なによこの異族の数！
+こんなに街を荒らされて
+ラブリュスちゃんも許せないかも
+
+# voice 560371 "miku_0017"
+# alpha 200331 0 0.5
+# move 5603711 2 0
+# face 5603711 "sad"
+# alpha 5603711 1 0.5
+# mask 5603711 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+@小日向未来
+街中が、変異した異族だらけ…
+ど、どれだけの数がいるの…？
+
+# textboxarrow 0 3
+@アルマス
+…どれだけいようと、
+見ないふりはできないっ…！
+
+# alpha 5603711 0 0.5
+# alpha 196 0 0.5
+# move 5303511 3 0
+# face 5303511 "normal"
+# alpha 5303511 1 0.5
+# mask 5303511 off
+# textboxarrow 0 2
+@立花響
+うん…そうだよねッ！
+
+;;モノローグ
+# alpha 5303511 0 0.5
+# textflame 0 0
+@
+キル姫達が火の手の上がる街を駆ける
+ひしめく異族を前に臆することなく
+響と未来は静かに歌い始めた

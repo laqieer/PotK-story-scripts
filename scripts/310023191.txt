@@ -1,0 +1,615 @@
+;;-----------------------------------------
+;;SEA3章_19_1
+;;-----------------------------------------
+# script "lisp"
+# background "infirmary"
+# bgm "bgm004" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 1
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;七支刀
+# body 5105111
+# pos 5105111 3
+# scale 5105111 0.8 0
+# layer 5105111 3
+# mask 5105111 off
+# alpha 5105111 0 0
+;;パラシュ
+# body 6200411
+# pos 6200411 4
+# scale 6200411 0.8 0
+# layer 6200411 2
+# mask 6200411 off
+# alpha 6200411 0 0
+;;否定派イシューリエル
+# body 6301411
+# pos 6301411 4
+# scale 6301411 0.5 0
+# layer 6301411 2
+# mask 6301411 off
+# alpha 6301411 0 0
+;;肯定派イシューリエル（にせ）
+# entry 6301499 6301411 
+# pos 6301499 2
+# scale 6301499 0.5 0
+# layer 6301499 4
+# alpha 6301499 0 0
+# brightness 6301499 0.8 0
+;;ghost
+# body 302
+# pos 302 3
+# scale 302 0.8 0
+# layer 302 1
+# mask 302 off
+# alpha 302 0 0
+# entry 900099 302
+# pos 900099 2
+# scale 900099 0.8 0
+# layer 900099 1
+# mask 900099 off
+# alpha 900099 0 0
+# reversal 900099 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：診察室
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# serif 1
+# textflame 1 1
+@医者
+残念ですが、余命は…
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 0
+@とある患者１
+そうですか…
+私は、何のために生まれて
+きたんでしょう…？
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# serif 1
+@見舞い人
+元気になったら、またバリバリ
+仕事すれば良いんだよ
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 0
+@とある患者２
+ああ…治ったらな…
+まだ、やりたいことが
+たくさんあるんだ…
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 0
+@とある患者３
+もう一度、旅行に行きたかったな…
+
+# serif 1
+@友人
+行けるよ！
+絶対、元気になるって…
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：診察室（夜）
+# background "infirmary_night"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 0
+@とある患者４
+何もできないまま、
+僕は死ぬのかな…
+
+# textboxarrow 0 0
+@とある患者４
+どうして、生まれてきたんだろう…？
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：廊下（夜）
+# background "corridor_night"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 5105111 "sad"
+# alpha 5105111 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@七支刀
+…………
+
+# textboxarrow 0 2
+@七支刀
+感じます
+たくさんの思いを…
+この病院で亡くなった方々の…
+
+# textboxarrow 0 2
+@七支刀
+未練…無念…疑問…悲嘆…苦悩…
+そして…諦め…
+
+# textboxarrow 0 2
+@七支刀
+ここにわだかまっていたのは、
+呪術の痕跡ではなくて、
+もっと混沌とした…
+
+# textboxarrow 0 2
+@七支刀
+願い、だったんですね
+
+;;七支刀が歩いていく
+# se "SE_0740"
+# move 5105111 2 0.5
+# alpha 5105111 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：町
+# background "in_downtown"
+# fadein "black" 1
+# waitandnext 1
+
+# alpha 302 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 0
+@幽霊
+ああ、あいつ
+元気にしてるんだなあ
+手伝えることはないかな？
+
+# se "SE_11585"
+# move 302 2 0.5
+# alpha 302 0 0.5
+# serif 1
+@町人１
+うわあっ！？
+今、何か通り過ぎたような…
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 900099 3 0.5
+# alpha 900099 1 0.5
+# textboxarrow 0 0
+# textwindow "normal"
+@幽霊
+おいおい
+いつまで化粧してるんだ
+早く家を出ないと遅刻するぞ
+
+# serif 1
+@町人２
+きゃっ…！
+鏡に…何か映ってた…
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 900099 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 302 3 0
+# alpha 302 1 0.5
+# textboxarrow 0 0
+# textwindow "normal"
+@幽霊
+ふぅ…
+井戸の掃除って手間がかかるから
+誰もやらないよね
+
+# serif 1
+@町人３
+ぎゃああああ…！？
+井戸から髪の長い女が…
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 302 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;画面揺れ
+# shake 0 0.5
+# se "SE_0936"
+# se "SE_12257"
+# waitandnext 0.5
+
+# move 302 4 0
+# alpha 302 1 0.5
+# textboxarrow 0 0
+# textwindow "normal"
+@幽霊達
+なあ、何かやらせてくれよ
+
+# se "SE_0989"
+# sedelay "SE_12620" 0.3
+# move 900099 2 0
+# layer 900099 2
+# alpha 900099 1 0.5
+# textboxarrow 0 0
+@幽霊達
+もう死んじゃったけど、
+自分がここにいたって証を、
+残していきたいんだっ
+
+# se "SE_6194"
+# serif 1
+@町の人々
+うわぁっ！？
+何だ、何だっ？
+
+# serif 1
+@町の人々
+物が勝手に…動き出したぞ！？
+
+# serif 1
+@町の人々
+きゃああああ…！
+また、心霊現象よっ
+
+# sestop "SE_6194"
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 0
+@幽霊達
+うぅっ、また失敗した…
+物を運ぼうとしても上手くいかない
+
+# textboxarrow 0 0
+@幽霊達
+死んだ後も役立たずか…
+自分はどうして生まれて…
+何で死んだんだろう…？
+
+# textboxarrow 0 0
+@幽霊達
+僕の人生には…
+何の価値もなかったのかな…
+
+# bgm "stop"
+# serif 1
+@七支刀
+そんなことは、ありません！
+
+;;背景：中庭（夜）
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fadein "white" 1
+# background "courtyard_night"
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+# alpha 302 0 0
+# alpha 900099 0 0
+# waitandnext 1.5
+
+# move 5105111 3 0
+# face 5105111 "normal"
+# alpha 5105111 1 0.3
+# textboxarrow 0 2
+# textwindow "normal"
+@七支刀
+あなたが生まれてきたことには
+価値があります
+大切な意味があります
+
+# textboxarrow 0 2
+@七支刀
+誰も認めなくても、
+わたくしが断言致しますっ
+
+# textboxarrow 0 2
+@七支刀
+たとえ短い間でも
+何もできなかったとしても
+志半ばでも…
+
+# textboxarrow 0 2
+@七支刀
+あなたが生きていた
+それだけでかけがえのない
+価値があったんです
+
+# textboxarrow 0 2
+@七支刀
+だから、大丈夫ですよ
+安心して下さい
+
+# textboxarrow 0 2
+@七支刀
+あなたのやってきたこと
+やれなかったこと
+その人生全てを…
+
+# textboxarrow 0 2
+@七支刀
+わたくしは、大切に思います
+
+;;画面フラッシュ
+# se "bgm601_windon"
+# fadeout "white" 0.5
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# fadein "white" 0.5
+# move 900099 2 0
+# layer 900099 5
+# scale 900099 1.2 0
+# alpha 900099 1 0.5
+# move 5105111 4 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@？？？
+…………
+
+# textboxarrow 0 1
+@？？？
+モウ、イイノ…？
+
+# textboxarrow 0 1
+@？？？
+モウ、何モシナクテイイノ？
+休ンデイイノ？
+
+# textboxarrow 0 1
+@？？？
+僕達ノ私達ノ人生ニ…
+価値ハアッタノ？
+
+# voice 1051 "shichishito_0003"
+# face 5105111 "happy"
+# textboxarrow 0 3
+@七支刀
+はい
+もちろんです
+
+# textboxarrow 0 1
+@？？？
+ソウカ…
+ソレナラ、良カッタ
+
+# textboxarrow 0 1
+@？？？
+アア…良カッタ…
+
+;;巨大幽霊が小さくなって
+# scale 900099 0.5 2
+# alpha 900099 0.3 2
+# waitandnext 2
+
+;;消える
+# fadein "white" 2
+#setnextbgmblock 1
+# alpha 900099 0 0
+# textwindow "close"
+# waitandnext 2
+
+# voice 2004 "parashu_0024"
+# alpha 5105111 0 0.3
+# face 270 "surprise"
+# alpha 270 1 0.3
+# face 6200411 "sad"
+# alpha 6200411 1 0.3
+# textboxarrow 0 3
+# textwindow "normal"
+@パラシュ
+…………信じられない
+
+# voice 9917 "mimir_navikan_0023"
+# textboxarrow 0 1
+@ミーミル
+巨大幽霊が
+消えてしまいましたっ
+
+# move 5105111 3 0
+# face 5105111 "normal"
+# alpha 5105111 1 0.3
+# alpha 6200411 0 0.3
+# alpha 270 0 0.3
+# textboxarrow 0 2
+@七支刀
+…………
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# textboxarrow 0 2
+@七支刀
+ゆっくり休んで下さい
+そして、また新たな生を
+
+# alpha 5105111 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+;;イシューリエル二人が落ちてくる
+# se "SE_9226"
+# shake 0 0.5
+# scale 6301411 1 0.5
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# waitandnext 0.5
+
+# se "SE_9347"
+# shake 1 0.5
+# scale 6301499 1 0.5
+# scale 6301411 0.8 0.5
+# face 6301499 "normal"
+# alpha 6301499 1 0.3
+# waitandnext 0.5
+
+# scale 6301499 0.8 0.5
+# textwindow "nomal"
+# textboxarrow 0 0
+@イシューリエルたち
+ぎゃふん！
+
+# alpha 6301411 0 0.3
+# alpha 6301499 0 0.3
+# move 6200411 2 0
+# layer 6200411 4
+# mask 6200411 on
+# alpha 6200411 1 0.3
+# face 6200411 "usual"
+# move 5105111 4 0
+# layer 5105111 2
+# face 5105111 "surprise"
+# alpha 5105111 1 0.3
+# textboxarrow 0 3
+@七支刀
+ああっ
+イシューリエル様、大丈夫ですかっ？
+
+# textboxarrow 0 1
+@パラシュ
+巨大幽霊からは解放されたようだけど
+まだ二人に分かれたままなのかい？
+
+# face 6301499 "normal"
+# alpha 6301499 1 0.3
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# alpha 5105111 0 0.3
+# alpha 6200411 0 0.3
+# textboxarrow 0 0
+@イシューリエルたち
+心配には及びませんわ
+
+# textboxarrow 0 0
+@イシューリエルたち
+決着は、わたくし自身で
+つけてみせます！
+
+# alpha 6301411 0 0.3
+# alpha 6301499 0 0.3
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# face 5105111 "sad"
+# alpha 5105111 1 0.3
+# textboxarrow 0 3
+@七支刀
+お二人とも、仲良く…
+
+# textboxarrow 0 1
+@パラシュ
+下がるんだ、七支刀
+これはケジメだよ
+イシューリエルなりのね
+
+# face 6301499 "normal"
+# alpha 6301499 1 0.3
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# alpha 5105111 0 0.3
+# alpha 6200411 0 0.3
+# textboxarrow 0 0
+@イシューリエルたち
+わたくし、
+ようやく理解できました
+ですから…これで終わりです！
+
+;;バトル
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 6301411 0 0
+# alpha 6301499 0 0
+# textwindow "close"
+# waitandnext 0.5

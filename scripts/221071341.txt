@@ -1,0 +1,806 @@
+;;-----------------------------------------
+;;正月【EP.4】災厄の再来
+;;-----------------------------------------
+# script "lisp"
+# background "sea_stream_evening"
+# bgm "stop"
+;;-----------------------------------------
+;;フォルカス（天上編Ver）
+# body 301821
+# pos 301821 3
+# scale 301821 0.8 0
+# layer 301821 3
+# alpha 301821 0 0
+# mask 301821 off
+;;ソロモン（ロストラグナロク編Ver）
+# body 3503111
+# pos 3503111 3
+# scale 3503111 0.8 0
+# layer 3503111 2
+# alpha 3503111 0 0
+# mask 3503111 off
+;;ソロモン（ボイス用）
+# body 503111
+# alpha 503111 0 0
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;【EP.4】
+;;背景：山（海上編背景）　sea_stream_evening
+;;ト書き：以下、ソロモンの心の声のイメージです
+;;モヤモヤ吹き出しで
+# se "SE_9377"
+# sedelay "SE_6188" 1
+# move 3503111 3 0
+# face 3503111 "normal"
+# alpha 3503111 1 0
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 3503111 off
+@ソロモン
+大丈夫
+水量は増えてるけど
+流れはまだ激しくない
+
+;;モヤモヤ吹き出しで
+# textboxarrow 0 0
+@ソロモン
+これならそのまま
+調査できそうね
+
+;;モノローグ
+# textflame 0 0
+@
+そのまま潜っていくソロモン
+
+;;モヤモヤ吹き出しで
+# textflame 1 1
+# textboxarrow 0 0
+@ソロモン
+思ったよりも深い…
+呼吸には気をつけないと
+
+;;モヤモヤ吹き出しで
+# textboxarrow 0 0
+@ソロモン
+過去のデータから考えて
+あと１分程度は息を止められる
+
+;;モヤモヤ吹き出しで
+# textboxarrow 0 0
+@ソロモン
+戻る時間も確保しつつ
+ギリギリまで水底に近づく
+
+;;モヤモヤ吹き出しで
+# textboxarrow 0 0
+@ソロモン
+きっとどこかに
+赤い水の原因があるはず…
+
+# emotionbody 1000 1 3503111 10 310
+# effectpattern 1000 1 0
+# effectstart 1000
+# textboxarrow 0 2
+# textwindow "normal"
+@ソロモン
+…！
+
+;;モヤモヤ吹き出しで
+# move 3503111 3 0
+# face 3503111 "angry"
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 3503111 off
+@ソロモン
+見つけた…！！
+これは…巨大な鐘！
+
+;;モヤモヤ吹き出しで
+# face 3503111 "normal"
+# textboxarrow 0 0
+@ソロモン
+ずいぶん古い…
+全面が真っ赤に錆びてる…
+
+;;モヤモヤ吹き出しで
+# textboxarrow 0 0
+@ソロモン
+山の上にあったっていう
+大きな鐘…
+滝つぼに落ちてたのね
+
+;;モヤモヤ吹き出しで
+# textboxarrow 0 0
+@ソロモン
+きっと前日の嵐で
+土台が崩れた…
+というところかしら
+
+;;モヤモヤ吹き出しで
+# textboxarrow 0 0
+@ソロモン
+赤色の原因は
+この錆で間違いないわ
+予測していた通り！
+
+;;モヤモヤ吹き出しで
+# textboxarrow 0 0
+@ソロモン
+心配してるだろうから
+戻ってフォルカスに
+知らせなくちゃ…！
+
+;;演出：画面揺れ
+# se "SE_6189"
+# shake 0 0.5
+# waitandnext 0.5
+
+;;モヤモヤ吹き出しで
+# bgm "bgm031" 0
+# emotionbody 2000 1 3503111 10 310
+# effectpattern 2000 2 0
+# effectstart 2000
+# voice 50311 "solomon_0023"
+# face 3503111 "surprise"
+# textboxarrow 0 0
+@ソロモン
+っ！？
+な、なにこれ！？
+水流が変わって…！
+
+;;モヤモヤ吹き出しで
+# face 3503111 "angry"
+# textboxarrow 0 0
+@ソロモン
+まずいっ、飲み込まれる…！！
+
+;;演出：画面揺れ
+# se "SE_6189"
+# sedelay "SE_9377" 1
+# shake 0 1
+# waitandnext 1
+
+;;ト書き：以下、１セリフのみ通常のセリフイメージです
+# face 3503111 "surprise"
+# textboxarrow 0 2
+# textwindow "normal"
+@ソロモン
+～～～～っ！！
+
+;;暗転（時間経過）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# sestop "SE_6188"
+# background "forest"
+# envbody 1001 1 0
+# effectpattern 1001 2 0
+# effectstart 1001
+# alpha 3503111 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;演出：画面揺れ
+# se "SE_9366"
+# shake 0 1
+# waitandnext 1
+
+# move 301821 3 0
+# face 301821 "angry"
+# alpha 301821 1 0.5
+# mask 301821 off
+# textboxarrow 0 2
+# textwindow "normal"
+@フォルカス
+ソロモン！
+ソロモーン！
+
+# voice 3018 "forcas_0018"
+# textboxarrow 0 2
+# face 301821 "surprise"
+@フォルカス
+そんな…このままじゃ
+ソロモンが危ない！
+
+# textboxarrow 0 2
+@フォルカス
+どうしよう…どうすれば…！？
+
+# face 301821 "normal"
+# textboxarrow 0 2
+@フォルカス
+私を助けてくれた鐘は
+もうない…
+
+# textboxarrow 0 2
+@フォルカス
+鐘が消えてから
+私は神様に頼るようになった
+
+# textboxarrow 0 2
+@フォルカス
+また、神様に頼るしか
+祈るしかない…
+
+# voice 3018 "forcas_0036"
+# face 301821 "angry"
+# textboxarrow 0 2
+@フォルカス
+神様
+お願いします
+
+# textboxarrow 0 2
+@フォルカス
+もしいらっしゃるのなら、
+ソロモンを助けてください！
+
+# textboxarrow 0 2
+@フォルカス
+ソロモンは私達のためを
+思ってやってくれているのです
+
+;;モノローグ
+# textflame 0 0
+@
+しかし、辺りは静寂に
+包まれたままであった
+
+# voice 3018 "forcas_0017"
+# face 301821 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@フォルカス
+私は…私を救ってくれた
+あの鐘のようにはなれない…
+
+# textboxarrow 0 2
+@フォルカス
+私は誰も救えないの？
+
+# textboxarrow 0 2
+@フォルカス
+私はあの鐘に救ってもらった
+だから、私も誰かを救いたくて
+巫女になったのに…
+
+;;回想
+;;暗転
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# effectskip 1001
+# background "forest"
+# alpha 301821 0 0
+# move 3503111 3 0
+# face 3503111 "happy"
+# alpha 3503111 1 0
+# mask 3503111 off
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ソロモン
+待っててね、フォルカス
+神の祟りなんかじゃない証拠を
+必ず見つけてくるから！！
+
+;;回想終わり
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# effectstart 1001
+# background "forest"
+# alpha 3503111 0 0
+# move 301821 3 0
+# face 301821 "angry"
+# alpha 301821 1 0
+# mask 301821 off
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# bgm "stop"
+# textwindow "normal"
+# face 301821 "normal"
+# textboxarrow 0 2
+@フォルカス
+そう…
+私は今まで祈るだけだった
+
+# textboxarrow 0 2
+@フォルカス
+鐘のようにはできなかったから、
+だから祈った
+
+# textboxarrow 0 2
+@フォルカス
+祈って…叶わなくて…
+諦めるだけだった…
+
+# face 301821 "angry"
+# textboxarrow 0 2
+@フォルカス
+祈るだけじゃ変わらない
+
+# textboxarrow 0 2
+@フォルカス
+ソロモンのように
+自分自身で変えないと
+何も変わらないんだ
+
+# voice 3018 "forcas_battle_0005"
+# textboxarrow 0 2
+@フォルカス
+今助けます、ソロモン…！
+
+# se "SE_0655"
+# textwindow "close"
+# alpha 301821 0 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+水へと飛び込み
+潜っていくフォルカス
+
+;;暗転（時間経過）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# effectskip 1001
+# background "sea_stream_evening"
+# move 301821 3 0
+# face 301821 "normal"
+# alpha 301821 1 0
+# mask 301821 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モヤモヤ吹き出しで
+# se "SE_9377"
+# se "SE_6188"
+# move 301821 3 0
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 301821 off
+@フォルカス
+水流が激しい…
+こんな中で溺れたら、
+もうどうにも…
+
+;;モヤモヤ吹き出しで
+# face 301821 "angry"
+# textboxarrow 0 0
+@フォルカス
+お願い、ソロモン
+無事でいてください…！
+
+# alpha 301821 0 0.5
+# move 3503111 3 0
+# face 3503111 "sad"
+# alpha 3503111 1 0.5
+# mask 3503111 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ソロモン
+…………
+
+# emotionbody 3000 1 301821 10 310
+# effectpattern 3000 1 0
+# effectstart 3000
+# alpha 3503111 0 0.5
+# move 301821 3 0
+# face 301821 "surprise"
+# alpha 301821 1 0.5
+# mask 301821 off
+# textboxarrow 0 2
+@フォルカス
+っ！！
+
+;;モヤモヤ吹き出しで
+# move 301821 3 0
+# face 301821 "angry"
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 301821 off
+@フォルカス
+ソロモン…ソロモンっ！！
+
+;;モヤモヤ吹き出しで
+# textboxarrow 0 0
+@フォルカス
+意識を失ってる…
+でもまだ脈はある！
+
+;;モヤモヤ吹き出しで
+# face 301821 "sad"
+# textboxarrow 0 0
+@フォルカス
+すぐに引き上げないと…
+でもこの水流じゃ無理…
+
+;;モヤモヤ吹き出しで
+# bgm "bgm004" 0
+# textboxarrow 0 0
+@フォルカス
+…そう
+私はずっとこうして
+諦めてきた
+
+;;モヤモヤ吹き出しで
+# textboxarrow 0 0
+@フォルカス
+神様が決めたことなら
+仕方ないと
+何事も受け入れてきた
+
+;;モヤモヤ吹き出しで
+# textboxarrow 0 0
+@フォルカス
+もし、ソロモンのように
+行動をしていれば
+何か変わっていたのかしら？
+
+# face 301821 "normal"
+# textboxarrow 0 0
+@フォルカス
+…違う
+ソロモンはこれからを
+変えようとしていた
+
+;;モヤモヤ吹き出しで
+# textboxarrow 0 0
+@フォルカス
+ソロモンは
+私や町の人達のために
+行動してくれた
+
+;;モヤモヤ吹き出しで
+# bgm "bgm035" 0
+# textboxarrow 0 0
+# face 301821 "angry"
+@フォルカス
+今度は私の番！
+
+;;モノローグ
+# textflame 0 0
+@
+フォルカスが
+ソロモンの身体を抱える
+そして、流れに身を任せる
+
+;;モヤモヤ吹き出しで
+# face 301821 "normal"
+# textflame 1 1
+# textboxarrow 0 0
+@フォルカス
+大丈夫
+流れに逆らわず…
+
+# sestop "SE_6188"
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 4
+# face 301821 "angry"
+# textboxarrow 0 2
+# textwindow "normal"
+@フォルカス
+今だ！
+
+;;モノローグ
+# textflame 0 0
+@
+岩場を見つけたフォルカスは
+手を伸ばし、岩を掴む
+
+;;モノローグ
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 4
+@
+そして、なんとか
+水流から脱出することに
+成功する
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "forest_totaleclipse"
+# envbody 1002 1 0
+# effectpattern 1002 3 0
+# effectstart 1002
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 3018 "forcas_0027"
+# se "SE_6183"
+# se "SE_6185"
+# face 301821 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@フォルカス
+はあ、はあ、はあ…
+助かった…
+
+# voice 50311 "solomon_0028"
+# move 301821 2 0.5
+# alpha 301821 1 0.5
+# mask 301821 on
+# move 3503111 4 0
+# face 3503111 "sad"
+# alpha 3503111 1 0.5
+# mask 3503111 on
+# textboxarrow 0 3
+@ソロモン
+う、ううん…
+
+# face 301821 "angry"
+# textboxarrow 0 1
+@フォルカス
+ソロモン！
+大丈夫ですか、ソロモン！
+
+# voice 50311 "solomon_0022"
+# face 3503111 "surprise"
+# textboxarrow 0 3
+@ソロモン
+フォルカス…？
+
+# se "SE_6504"
+# emotionbody 4000 3 301821 10 290
+# effectpattern 4000 1 3
+# effectstart 4000
+# face 301821 "happy"
+# textboxarrow 0 1
+@フォルカス
+目を覚ましてくれましたね
+よかったです
+
+# voice 50311 "solomon_0030"
+# face 3503111 "happy"
+# textboxarrow 0 3
+@ソロモン
+ありがとう
+助けるつもりが
+助けられちゃったわね
+
+# face 301821 "normal"
+# textboxarrow 0 1
+@フォルカス
+いえ、お礼を言うのは
+私の方です
+
+# textboxarrow 0 1
+@フォルカス
+本当なら私が町のために
+行動するべきだった…
+
+# textboxarrow 0 1
+@フォルカス
+あなたのおかげで、
+そう気づくことができました
+
+# textboxarrow 0 3
+@ソロモン
+そう…
+
+# se "SE_6181"
+# face 301821 "sad"
+# textboxarrow 0 1
+@フォルカス
+それより、本格的に
+嵐が酷くなってきました
+
+# voice 50311 "solomon_0032"
+# face 3503111 "normal"
+# textboxarrow 0 3
+@ソロモン
+そうね
+祟りと呼ばれた嵐と
+同じ規模だわ
+
+# face 301821 "normal"
+# textboxarrow 0 1
+@フォルカス
+ここは危ないです
+避難しましょう
+
+# textboxarrow 0 3
+@ソロモン
+そうね…
+
+;;モノローグ
+# bgm "bgm031" 0
+# se "SE_6182"
+# textflame 0 0
+@
+そのとき、大きな古木が
+強風で倒されて二人に向かって
+迫ってくる
+
+# emotionbody 5000 1 3503111 10 310
+# effectpattern 5000 1 0
+# effectstart 5000
+# voice 50311 "solomon_0025"
+# face 3503111 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+っ！
+
+# se "SE_5200"
+# face 301821 "surprise"
+# textboxarrow 0 1
+@フォルカス
+ソロモン、危ない！
+
+;;モノローグ
+# textflame 0 0
+@
+間一髪で古木を避ける二人
+しかし――
+
+# face 3503111 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+帰り道が塞がれたわ
+このままだと町に戻れない
+
+# face 301821 "normal"
+# textboxarrow 0 1
+@フォルカス
+ソロモン、迂回しましょう
+時間はかかりますが、
+町に戻って避難を呼びかけましょう
+
+# textboxarrow 0 3
+@ソロモン
+…フォルカス
+う、うん
+そうね
+
+;;モノローグ
+# textflame 0 0
+@
+だが、流れてくる水の量が増し
+岸への道が飲み込まれてしまう
+
+# face 3503111 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+…ここまで災難が続くと
+神の祟りはあるんじゃないかって
+思えてくるわ
+
+# voice 3018 "forcas_0011"
+# face 301821 "angry"
+# textboxarrow 0 1
+@フォルカス
+諦めてはいけません
+何か…何か方法は…？
+
+;;モノローグ
+# se "SE_5823"
+# textflame 0 0
+@
+そのとき、巨大な物が
+轟音を立ててソロモン達の元へ
+転がってくる
+
+# emotionbody 6000 2 3503111 10 290
+# effectpattern 6000 1 1
+# effectstart 6000
+# face 3503111 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+これは…沈んでいた鐘？
+
+# face 301821 "normal"
+# textboxarrow 0 1
+@フォルカス
+…厄を払う聖なる鐘
+
+# textboxarrow 0 3
+@ソロモン
+こんな鐘を叩いて、
+この嵐が止めば苦労しないわよね
+
+# face 301821 "angry"
+# textboxarrow 0 1
+@フォルカス
+ソロモン、叩きましょう！
+
+# voice 50311 "solomon_0022"
+# face 3503111 "surprise"
+# textboxarrow 0 3
+@ソロモン
+え？
+でも、そんなことしても…
+
+# voice 3018 "forcas_0036"
+# textboxarrow 0 1
+@フォルカス
+お願いします！
+この鐘を叩いて音を出すのを
+手伝ってください
+
+# face 3503111 "normal"
+# textboxarrow 0 3
+@ソロモン
+…なにか考えがあるわけね
+わかったわ
+
+;;モノローグ
+# se "SE_6180"
+# alpha 301821 0 0.5
+# alpha 3503111 0 0.5
+# textflame 0 0
+@
+二人が交互に鐘を打つ
+
+;;モノローグ
+@
+その鐘の音は嵐の騒音に
+消されることなく、
+どこまでも響き渡る
+
+# move 301821 3 0
+# face 301821 "angry"
+# alpha 301821 1 0.5
+# mask 301821 off
+# textflame 1 1
+# textboxarrow 0 2
+@フォルカス
+お願い…届いて！
+
+;;モノローグ
+# se "SE_6180_stop"
+# textflame 0 0
+@
+そのとき、突如、
+鐘にヒビが入り始める
+
+# voice 3018 "forcas_0022"
+# face 301821 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@フォルカス
+え？
+
+;;モノローグ
+# textflame 0 0
+@
+そして、鐘が割れて
+崩れ果ててしまうのだった
+
+# fadeout "black" 0.5
+# waitandnext 0.5

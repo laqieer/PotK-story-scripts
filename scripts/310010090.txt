@@ -1,0 +1,656 @@
+;;-----------------------------------------
+;;SEA_プロローグ_9_0
+;;-----------------------------------------
+# script "lisp"
+# background "foot_mountain_village_night"
+# bgm "bgm009_013" 0
+;;-----------------------------------------
+;;ミーミル（仮当てアルマス）
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 3
+# mask 270 off
+# alpha 270 0 0
+;;マナナン（仮当てニクス）
+# body 6504011
+# pos 6504011 3
+# scale 6504011 0.8 0
+# layer 6504011 3
+# mask 6504011 off
+# alpha 6504011 0 0
+;;村人
+# body 3
+# pos 3 3
+# scale 3 0.8 0
+# layer 3 3
+# mask 3 off
+# alpha 3 0 0
+;;女の子
+# body 141
+# pos 141 3
+# scale 141 0.8 0
+# layer 141 3
+# mask 141 off
+# alpha 141 0 0
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 3
+# mask 810004 off
+# alpha 810004 0 0
+# entry 810098 810004
+# pos 810098 3
+# scale 810098 0.8 0
+# layer 810098 3
+# mask 810098 off
+# reversal 810098 0
+# alpha 810098 0 0
+# entry 810099 810004
+# pos 810099 3
+# scale 810099 0.8 0
+# layer 810099 4
+# mask 810099 off
+# reversal 810099 0
+# alpha 810099 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 2
+# imageset 1 "SEA6504011"
+# imagealpha 1 0 0
+# imagelayer 1 3
+# imageset 2 "mov2_3_overlay"
+# imagescale 2 1.2 0
+# imagealpha 2 0 0
+# imagelayer 2 5
+;;-----------------------------------------
+;;背景：村（夜）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# move 810099 3 0.5
+# alpha 810099 1 0.5
+# waitandnext 0.5
+
+# se "SE_11764"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@異族
+ガアアアア…
+
+# se "SE_4400"
+# se "SE_8570"
+# fadein "white" 1
+# alpha 810099 0 0
+;;シナリオカット：マナナンユニット絵
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# frameout 0 0
+# textwindow "close"
+# waitandnext 1.5
+
+# voice 650401 "manannan_ura_0005"
+# textwindow "nomal"
+# textboxarrow 0 0
+@マナナン
+あははははっ！
+その目に焼き付けてあげる！
+
+# se "SE_0617"
+# textwindow "toge"
+@異族
+ガアアアアアア！
+
+# textwindow "nomal"
+@マナナン
+ほらほら、どんどんおいでよ！
+もっと、もっと！
+
+@マナナン
+もっともっともっともっと！
+
+# se "SE_4400"
+# se "SE_8570"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_8572"
+# se "SE_0669"
+@異族
+ガアアアア…
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@ミーミル
+なんと
+たったお一人で、あれだけの数の
+異族を圧倒しておられます
+
+# serif 1
+@ミーミル
+あのお姿、あのお力、
+森でお会いしたときも
+感じておりましたが…
+
+# serif 1
+@ミーミル
+やはり、あの方はキル姫…
+でも、おかしいです
+
+# serif 1
+@ミーミル
+あのようなキル姫は、
+キル姫の一覧に
+記録されておりません
+
+# se "SE_9016"
+# bgm "stop"
+# fadein "red" 1
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# waitandnext 1.5
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "toge"
+@異族
+ガアアアアア！
+
+# fadeout "black" 1
+# waitandnext 1
+
+;;シナリオカットここまで
+# imagealpha 1 0 0
+# imagealpha 2 0 0
+# textwindow "close"
+# framein 0 0
+# waitandnext 0.2
+
+# move 6504011 4 0
+# alpha 6504011 1 0
+# move 810099 2 0
+# alpha 810099 1 0
+# fadein "black" 1
+# waitandnext 1
+
+# fadein "red" 0.5
+# move 810099 3 0.2
+# waitandnext 0.5
+
+# voice 650401 "manannan_ura_0022"
+# face 6504011 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+あれ？
+
+# se "SE_0799"
+# move 810004 5 0
+# layer 810004 1
+# alpha 810004 1 0.3
+# textboxarrow 0 0
+# waitandnext 0.3
+
+# move 810098 1 0
+# layer 810098 5
+# alpha 810098 1 0.3
+# waitandnext 0.3
+
+# se "SE_9016"
+# fadein "red" 1
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# waitandnext 1.5
+
+# voice 650401 "manannan_ura_0028"
+# face 6504011 "sad"
+# imagealpha 2 0 1
+# textboxarrow 0 3
+@マナナン
+うーん…
+やっぱりか…
+
+# alpha 6504011 0 0.3
+# alpha 810004 0 0.3
+# alpha 810098 0 0.3
+# alpha 810099 0 0.3
+# textwindow "close"
+# waitandnext 0.8
+
+# face 270 "sad"
+# face 141 "worry"
+# move 141 4 0
+# alpha 141 1 0.3
+# move 270 2 0
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@女の子
+あ…あのおねえちゃん…
+血が…いっぱい出てるよ…
+
+# textboxarrow 0 1
+@ミーミル
+さすがに、お一人では
+対処しきれなかったのでしょう…
+どうすれば…
+
+# bgm "bgm031" 0
+# alpha 141 0 0.3
+# alpha 270 0 0.3
+# move 6504011 3 0
+# alpha 6504011 1 0.3
+# textboxarrow 0 2
+@マナナン
+…全然痛くない
+
+@マナナン
+君達もダメ…
+残念だな～
+
+# face 6504011 "angry"
+# se "SE_5208"
+@マナナン
+私に痛いって
+感じさせてくれないのなら、
+いなくなってよ！
+
+# move 6504011 2 0.3
+# alpha 6504011 0 0.3
+# textwindow "close"
+# waitandnext 0.3
+
+# move 810099 3 0
+# alpha 810099 1 0.5
+# waitandnext 0.5
+
+# se "SE_8569"
+# fadein "white" 0.5
+# effectbody 101 28 0 0 0
+# effectstart 101
+# waitandnext 0.8
+
+# se "SE_0669"
+# textwindow "nomal"
+# textboxarrow 0 0
+@異族
+ガアアアア…！？
+
+# alpha 810099 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# voice 9917 "mimir_navikan_0023"
+# face 270 "surprise"
+# move 270 3 0
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+何と…
+マナナンさん、
+まだ戦えるのですか…
+
+# face 6504011 "sad"
+# se "SE_8572"
+# bgm "stop"
+# move 270 2 0.5
+# move 6504011 4 0
+# alpha 6504011 1 0.3
+# textboxarrow 0 3
+@マナナン
+あれ？
+もう終わっちゃったの
+そっか…
+
+# voice 650401 "manannan_ura_0007"
+# face 6504011 "usual"
+# se "SE_5200"
+# sedelay "SE_10131" 0.8
+@マナナン
+ご観覧、ありがとうございました！
+なんちゃって♪
+
+# textboxarrow 0 1
+@ミーミル
+結局、お一人で全ての異族を
+倒してしまわれました…
+
+# se "SE_6177"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 6504011 "surprise"
+# textboxarrow 0 3
+@マナナン
+あれ？
+変なのがボロボロになって
+消えていっちゃう…変なの！
+
+# face 6504011 "normal"
+# bgm "bgm005" 0
+@マナナン
+あ！
+君達、また会ったね～
+こんばんは
+
+@マナナン
+ん～？
+小さな女の子が一人増えてるな
+
+# move 270 1 0.5
+# alpha 270 0 0.3
+# move 141 2 0
+# alpha 141 1 0.3
+# textboxarrow 0 1
+@女の子
+あ…あの…
+助けてくれてありがとう
+
+@女の子
+血がいっぱい出てるよ
+いたくないの…？
+
+# voice 650401 "manannan_ura_0003"
+# textboxarrow 0 3
+@マナナン
+ちっとも！
+あの変なのだったら痛いって感じ
+させてくれるかな～って期待したのに
+
+# face 6504011 "happy"
+@マナナン
+噛ませ損だったな～
+なんちゃって♪
+
+# face 270 "angry"
+# move 270 2 0.5
+# alpha 270 1 0.3
+# move 141 1 0
+# alpha 141 0 0.3
+# textboxarrow 0 1
+@ミーミル
+そんなことより早く手当てを
+致しましょう
+
+# face 6504011 "surprise"
+# textboxarrow 0 3
+@マナナン
+傷はそのうち塞がるから
+平気だってば
+
+@マナナン
+それより、さっきの変な奴ら
+ここにはもういないのかな？
+
+# face 6504011 "usual"
+@マナナン
+もっと、もっと試してみないと…
+今度は私の腕ごと――
+
+# bgm "stop"
+# move 270 1 0.5
+# move 6504011 5 0.5
+# move 141 3 0
+# layer 141 5
+# alpha 141 1 0.3
+# textboxarrow 0 2
+@女の子
+ダメだよ！
+
+# face 6504011 "surprise"
+# textboxarrow 0 3
+@マナナン
+ん？
+
+# bgm "bgm004" 0
+# textboxarrow 0 2
+@女の子
+そんなことしたら、おねえちゃん
+死んじゃうよ…！
+だから、ダメなんだよ…！
+
+# textboxarrow 0 1
+@ミーミル
+こちらの方が仰る通りです
+マナナンさん
+ご自身を大切になさって下さい
+
+# voice 650401 "manannan_ura_0028"
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+うーん…
+何で？
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+えっ…？
+
+# textboxarrow 0 3
+@マナナン
+何で大切にしないといけないの？
+さっきから言ってるでしょ
+
+@マナナン
+私、痛いって感覚がないんだ
+それに、ほら…
+
+# face 6504011 "usual"
+@マナナン
+傷も、もうほとんど塞がってるよ
+だから気にしなくていいんだって
+
+@マナナン
+もっと…もっともっともっと
+深い傷を負ったら
+痛いって感じるかな？
+
+@マナナン
+生きてるって
+感じられるのかな…
+
+# face 6504011 "normal"
+@マナナン
+それを試したいんだ
+ねぇ試してよ
+君達、私を傷つけてみて
+
+# face 6504011 "angry"
+@マナナン
+私に痛いって感じさせてよ！
+ここにいるって、思わせてよ！
+
+# textboxarrow 0 2
+@女の子
+おねえちゃん…
+こわい…
+
+# face 270 "angry"
+# move 3 4 0
+# textboxarrow 0 1
+@ミーミル
+マナナンさん
+おやめ下さい
+
+# bgm "bgm031" 0
+# se "SE_0902"
+# alpha 270 0 0.3
+# alpha 6504011 0 0.3
+# alpha 141 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# move 3 3 0.5
+# alpha 3 1 0.3
+# face 3 "angry"
+# textwindow "nomal"
+# textboxarrow 0 2
+@村人
+おい、あんた達！
+大丈夫かっ？
+
+# serif 1
+# textwindow "nomal"
+@村人達
+あの化け物どもは…
+どこに消えたんだ？
+
+# serif 0
+@村人
+あ、あいつは…！
+森で会ったキル姫じゃないかっ…！
+
+# serif 1
+@村人達
+何だって！？
+それじゃ…この騒ぎもあいつが…！
+
+# face 6504011 "normal"
+# alpha 3 0 0.3
+# move 6504011 3 0
+# alpha 6504011 1 0.3
+# serif 0
+# textboxarrow 0 2
+@マナナン
+あれ？
+みんな怖い顔して私を見て、
+どうしたの？
+
+# serif 1
+@村人達
+あんた達、早くこっちへ！
+そいつから離れるんだ！
+
+# face 270 "sad"
+# alpha 6504011 0 0.3
+# move 270 2 0
+# alpha 270 1 0.3
+# move 141 4 0
+# alpha 141 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+これは…
+皆さん、マナナンさんが異族を
+連れてきたと考えているようです
+
+# textboxarrow 0 3
+@女の子
+ちがうよっ
+おねえちゃんは――
+
+# serif 1
+# textwindow "nomal"
+@母親
+ああ！
+無事だったのね
+良かった…
+
+# se "SE_10131"
+# serif 0
+@女の子
+おかあさんっ？
+
+# serif 1
+@母親
+早くこっちに！
+もう大丈夫だからねっ
+
+# se "SE_0719"
+# move 141 5 0.5
+# alpha 141 0 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.5
+
+# move 270 3 0.5
+# waitandnext 0.5
+
+# se "SE_0764"
+# serif 1
+# textwindow "nomal"
+@村人達
+くそっ
+出ていけ！
+化け物の同類め！
+
+# se "SE_12407"
+# shake 0 0.5
+# waitandnext 0.5
+
+# face 270 "surprise"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+あっ…
+皆さん、おやめ下さい
+
+# face 270 "sad"
+# serif 0
+@ミーミル
+マスター様に石が当たったら
+大変です
+
+# serif 1
+@村人達
+そいつを庇うつもりか！？
+さては、あんたらも…
+
+# se "SE_0764"
+# serif 1
+@村人達
+どうせ余所者だ
+やっちまえ！
+
+# se "SE_12407"
+# serif 0
+@ミーミル
+そんな…
+
+# alpha 270 0 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.8
+
+# move 6504011 3 0
+# alpha 6504011 1 0.5
+# waitandnext 0.5
+
+# se "SE_6164"
+# fadein "red" 0.5
+# shake 0 0.5
+# waitandnext 0.8
+
+# voice 650401 "manannan_ura_b_0029"
+# face 6504011 "happy"
+# textwindow "nomal"
+# textboxarrow 0 2
+@マナナン
+ふふっ
+ふふふ…あははははは！
+
+# face 6504011 "normal"
+@マナナン
+これなら…
+痛いって感じられるかな？
+
+# fadeout "black" 1
+# waitandnext 1

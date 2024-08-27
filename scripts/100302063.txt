@@ -1,0 +1,305 @@
+;;----------------------------------------------
+;;100302063
+;;第2話　タイトル：不可思議な戦場
+;;2-6-3
+;;----------------------------------------------
+# script "lisp"
+# background "201_slum"
+# bgmfile "bgm295" "BgmLostRagnarokBattle003" 0
+;;アルマス
+# body 3103811
+# pos 3103811 2
+# scale 3103811 0.8 0
+# layer 3103811 3
+# alpha 3103811 0 0
+# mask 3103811 on
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 5
+# alpha 139 0 0
+# mask 139 on
+;;アロンダイト
+# body 3100711
+# pos 3100711 3
+# scale 3100711 0.8 0
+# layer 3100711 1
+# alpha 3100711 1 0
+# mask 3100711 off
+;;オティヌス
+# body 3400811
+# pos 3400811 3
+# scale 3400811 0.8 0
+# layer 3400811 2
+# alpha 3400811 0 0
+# mask 3400811 on
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;剣閃（アロン）
+# effectbody 1000 1 0 0 5
+;;剣閃（アルマ）
+# effectbody 1001 3 150 0 7
+;;◆背景：奴隷区----------------------------------------------------
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100711 "angry"
+# voice 310071 "arondaito_ge_0029"
+# chara 3100711
+@アロンダイト
+私がお相手致します！
+
+# textwindow "close"
+# se "SE_5575"
+# rightout 3100711 0.4
+# waitandnext 0.4
+
+# voice 310071 "arondaito_ge_battle_0002"
+# alpha 3400811 1 0.5
+# pos 3100711 2
+# mask 3100711 on
+# face 3400811 "surprise"
+# leftin 3100711 0.5
+# waitandnext 0.5
+
+# se "SE_5704"
+# effectstart 1000
+# move 3400811 4 0.3
+# shake 0 0.6
+# fadein "white" 0.6
+# waitandnext 0.6
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3400811 "normal"
+# voice 340081 "otyinusu_a_0004"
+# chara 3400811
+@オティヌス
+おっと、危ない危ない
+あなたはトレイセーマの斬ル姫だな
+キレイなユニコーンを連れているね
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100711 "surprise"
+# voice 310071 "arondaito_ge_0009"
+# chara 3100711
+@アロンダイト
+何を言って…ユニコーン！？
+私の隣にユニコーンがいます
+こんなことがっ！？
+
+# alpha 3100711 0 0.5
+# alpha 3103811 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103811 "surprise"
+# voice 1038 "almace_0019"
+# chara 3103811
+@アルマス
+なんなのよ、これっ…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3400811 "happy"
+# voice 340081 "otyinusu_a_0005"
+# chara 3400811
+@オティヌス
+ふふっ
+みんな驚いているね
+まだまだショウはこれからだ！
+
+# alpha 3103811 0 0.5
+# alpha 3400811 0 0.5
+# alpha 139 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 139 "surprise"
+# voice 9967 "titania_0054"
+# chara 139
+@ティターニア
+いけない！
+アルマス、惑わされないで下さい！
+これはきっと――
+
+# alpha 139 0 0.5
+# alpha 3103811 1 0.5
+# alpha 3400811 1 0.5
+# face 3103811 "irregular"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3400811 "angry"
+# voice 340081 "otyinusu_a_0003"
+# chara 3400811
+@オティヌス
+惑って、狂って、死んでくれる？
+
+# textwindow "toge"
+# move 3103811 2 0
+# textflame 1 1
+# textboxarrow 0 0
+# face 3103811 "worry"
+# voice 1038 "almace_battle_0008"
+# chara 3103811
+@アルマス
+あああああああああああ！？
+
+;;選択肢-----------------------------------------------------
+# select "パラソルで突け！" "select_label_end" "迷わず踏み込め！" "select_label_end" "アルマス！" "select_label_end"
+あああああああああああ！？
+
+;;合流-------------------------------------------------------
+# label "select_label_end"
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103811 "sad"
+# voice 1038 "almace_battle_0007"
+# chara 3103811
+@アルマス
+うぅっ…言われなくても、
+分かってるってばぁぁっ！
+
+;;アルマスが攻撃する
+# se "SE_5762"
+# voice 1038 "almace_0029"
+# face 3103811 "angry"
+# face 3400811 "surprise"
+# textwindow "close"
+# move 3103811 4 0.3
+# effectstart 1001
+# waitandnext 0.3
+
+# se "SE_4759"
+# shake 0 0.6
+# face 3400811 "angry"
+# rightout 3400811 0.3
+# fadein "white" 0.3
+# waitandnext 0.3
+
+# alpha 3103811 0 0.3
+# alpha 3400811 0 0.3
+# waitandnext 0.3
+
+# pos 3400811 3
+# mask 3400811 off
+# alpha 3400811 1 0
+# leftin 3400811 0.3
+# face 3400811 "angry"
+# waitandnext 0.3
+
+# se "SE_2019"
+# shake 0 0.6
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400811 "sad"
+# voice 340081 "otyinusu_a_0037"
+# chara 3400811
+@オティヌス
+う、くぅっ…
+あたしの「手品」を破るなんて
+意外とやるねぇ
+
+# alpha 3400811 0 0.5
+# pos 3103811 3
+# mask 3103811 off
+# alpha 3103811 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103811 "worry"
+# voice 1038 "almace_battle_0005"
+# chara 3103811
+@アルマス
+ハアッ…ハアッ…
+私の剣、ちゃんと握ってる
+さっきのは幻術だったのね
+
+# alpha 3103811 0 0.5
+# pos 3100711 2
+# mask 3103811 off
+# alpha 3100711 1 0.5
+# pos 3400811 4
+# mask 3400811 on
+# alpha 3400811 1 0.5
+# face 3400811 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100711 "angry"
+# voice 310071 "arondaito_ge_0013"
+# chara 3100711
+@アロンダイト
+ユニコーンも消えてしまいました…
+私の心を弄ぶだなんてっ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3400811 "normal"
+# voice 340081 "otyinusu_a_0027"
+# chara 3400811
+@オティヌス
+言っただろう？
+これはショウだよ
+楽しい楽しい手品のショウだ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3400811 "sad"
+# chara 3400811
+@オティヌス
+でも、今回はタネがばれてしまった
+からここまでだね
+楽しんでもらえたかな？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3400811 "happy"
+# voice 340081 "otyinusu_a_0020"
+# chara 3400811
+@オティヌス
+それじゃ、バイバーイ！
+
+# se "SE_5205"
+# alpha 3100711 0 0.5
+# pos 3103811 2
+# alpha 3103811 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103811 "angry"
+# voice 1038 "almace_battle_0001"
+# chara 3103811
+@アルマス
+逃がさない！
+
+# textwindow "close"
+# move 3103811 3 0.2
+# se "SE_9166"
+# fadeout "white" 0.1
+# waitandnext 0.1
+
+# alpha 3400811 0 0
+# fadein "white" 0.3
+# waitandnext 0.3
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103811 "surprise"
+# voice 1038 "almace_0022"
+# chara 3103811
+@アルマス
+…消えたっ？
+
+# alpha 3103811 0 0.5
+# pos 139 3
+# alpha 139 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 139 "normal"
+# voice 9967 "titania_0014"
+# chara 139
+@ティターニア
+不思議な斬ル姫でしたね…

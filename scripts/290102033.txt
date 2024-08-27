@@ -1,0 +1,104 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第2話　タイトル：雷霆の絆
+;;2_3_3
+;;スクリプト最後の背景：町
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;ダモクレス
+# body 103511
+# pos 103511 2
+# scale 103511 0.8 0
+# layer 103511 2
+# alpha 103511 1 0
+# mask 103511 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;アルテミス
+# body 5400131
+# pos 5400131 4
+# scale 5400131 0.8 0
+# layer 5400131 2
+# alpha 5400131 1 0
+# mask 5400131 off
+;;ケラウノス
+# body 500131
+# pos 500131 3
+# scale 500131 0.8 0
+# layer 500131 2
+# alpha 500131 0 0
+# mask 500131 off
+;;-----------------------------------------
+# voice 1035 "damocles_0004"
+# face 103511 "usual"
+# mask 103511 on
+# mask 5400131 on
+# textboxarrow 0 1
+@ダモクレス
+クレスは、はれんちじゃないよ！
+この方が楽なだけだよ！
+別に見えても問題ないよね♪
+
+# voice 540013 "arutemisu_iz_0011"
+# face 5400131 "angry"
+# textboxarrow 0 3
+@アルテミス
+その考え方がふしだらなのです！
+
+;;//アルテミスがダモクレスを射る
+# textwindow "close"
+# se "SE_4301"
+# waitandnext 0.5
+
+;;//ダモクレスが避ける
+# se "SE_5204"
+# move 103511 1 0.1
+# waitandnext 0.2
+
+# voice 1035 "damocles_0023"
+# face 103511 "surprise"
+# textboxarrow 0 1
+# textwindow "normal"
+@ダモクレス
+うっそー！？
+なんだか動きやすくなったよ！
+ラグナロクがいるからかなっ♪
+
+# move 103611 3 0
+# face 103611 "normal"
+# layer 103611 1
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 2
+# move 5400131 5 0.5
+@ラグナロク
+私というよりアルマスがいるからね
+ダモクレスも適合しているのよ
+
+# textboxarrow 0 3
+@アルテミス
+…バイブスの影響ですか
+良くありませんね
+
+;;？？？（ケラウノス）
+# voice 5001 "keraunosu_0002"
+# alpha 103511 0 0.5
+# alpha 103611 0 0.5
+# alpha 5400131 0 0.5
+# move 500131 3 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 off
+# textboxarrow 0 2
+@？？？
+は～い、お嬢さん
+私達のことを無視するなんて
+寂しいな～

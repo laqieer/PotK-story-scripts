@@ -1,0 +1,567 @@
+;;-----------------------------------------
+;;【ファントムオブキル】ALCコラボ_イベントシナリオ前編
+;;【EP.2】
+;;スクリプト最後の背景：荒野（昼）
+;;背景：荒野（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "wild"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;青龍偃月刀・聖鎖・ザドキエル
+# body 3300911
+# pos 3300911 3
+# scale 3300911 0.8 0
+# layer 3300911 2
+# alpha 3300911 0 0
+# mask 3300911 off
+;;セツナ ダークファントムver.
+# body 268
+# pos 268 3
+# scale 268 0.8 0
+# layer 268 3
+# alpha 268 0 0
+# mask 268 off
+;;セツナ ダークファントムver.（ボイス用）
+# body 103921
+# alpha 103921 0 0
+;;魔獣
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# layer 910013 3
+# alpha 910013 0 0
+# mask 910013 off
+;;魔獣1
+# entry 99100131 910013
+# pos 99100131 3
+# scale 99100131 0.8 0
+# layer 99100131 2
+# alpha 99100131 0 0
+# mask 99100131 off
+;;魔獣2
+# entry 99100132 910013
+# pos 99100132 3
+# scale 99100132 0.8 0
+# layer 99100132 2
+# alpha 99100132 0 0
+# mask 99100132 off
+;;-----------------------------------------
+;;【EP.2】異界の剣士
+;;背景：荒野（昼）
+# se "SE_4000"
+# sedelay "SE_4001" 1.2
+# move 910013 2 0
+# alpha 910013 1 0
+# mask 910013 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0
+# mask 196 on
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+やあっ！
+たあっ！
+
+# se "SE_4815"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 -200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+;;魔獣倒れる
+# se "SE_0794"
+# sedelay "SE_3001" 0.8
+# waitandnext 0.8
+
+# textwindow "close"
+# alpha 910013 0 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+ハァハァ…
+手負いとはいえ、
+なかなか手強かったわね
+
+# voice 330091 "seiryu_t_0002"
+# move 3300911 2 0
+# face 3300911 "normal"
+# alpha 3300911 1 0.5
+# mask 3300911 on
+# textboxarrow 0 1
+@青龍偃月刀
+ちょっとよろしいですか？
+今の戦いには無駄な動きが
+多かったかと…
+
+# textboxarrow 0 3
+@アルマス
+ちょ、ちょっと待って！
+それはあとでゆっくり聞くわ
+早く剣士の子を探さないと！
+
+# face 3300911 "angry"
+# textboxarrow 0 1
+@青龍偃月刀
+おっと、そうでしたね
+
+;;？？？（セツナ：ダークファントム、以下セツナ）：声だけ）
+# bgm "stop"
+# serif 1
+# voice 10392 "setsuna_d_0029"
+@？？？
+はあああぁぁっ！
+
+;;魔獣、鳴く
+# se "SE_0793"
+# waitandnext 0.5
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 3
+@アルマス
+この声…
+あっちの方向ね！
+急ぎましょ！
+
+# voice 330091 "seiryu_t_0032"
+# textboxarrow 0 1
+@青龍偃月刀
+はい！
+
+;;場面転換
+;;背景：荒野（昼）
+# se "SE_5575"
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "wild"
+# alpha 3300911 0 0
+# alpha 196 0 0
+# move 268 3 0
+# face 268 "suffering"
+# alpha 268 1 0
+# mask 268 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;？？？（セツナ）
+# bgmfile "bgm417_418" "BgmIntegralNoahBattle003" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@？？？
+…………
+
+;;魔獣の群れに囲まれるセツナ
+;;魔獣、鳴く
+# se "SE_0793"
+# textwindow "close"
+# alpha 268 0 0.5
+# move 99100131 1 0
+# alpha 99100131 1 0.5
+# mask 99100131 on
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 on
+# move 99100132 5 0
+# alpha 99100132 1 0.5
+# mask 99100132 on
+# waitandnext 1.2
+
+# alpha 99100131 0 0.5
+# alpha 910013 0 0.5
+# alpha 99100132 0 0.5
+# move 3300911 2 0
+# face 3300911 "normal"
+# alpha 3300911 1 0.5
+# mask 3300911 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+1人で相手するには数が多すぎる…
+青龍偃月刀は群れの背後へ回って！
+彼女を援護するわよ！
+
+# voice 330091 "seiryu_t_0033"
+# face 3300911 "angry"
+# textboxarrow 0 1
+@青龍偃月刀
+はい！
+お任せをっ！
+
+;;魔獣、鳴く
+# se "SE_0793"
+# waitandnext 0.5
+
+;;？？？（セツナ）
+# voice 10392 "setsuna_d_battle_0006"
+# alpha 3300911 0 0.5
+# alpha 196 0 0.5
+# move 268 3 0
+# face 268 "angry"
+# alpha 268 1 0.5
+# mask 268 off
+# textboxarrow 0 2
+@？？？
+くっ…
+
+# move 268 2 0.5
+# mask 268 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+助太刀するわ！
+やあっ！
+
+;;？？？（セツナ）
+# voice 10392 "setsuna_d_0023"
+# face 268 "angry"
+# textboxarrow 0 1
+@？？？
+なっ…
+
+;;魔獣、倒れる
+;;魔獣、鳴く
+# textwindow "close"
+# alpha 268 0 0.5
+# alpha 196 0 0.5
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 off
+# waitandnext 0.6
+
+# se "SE_4815"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 2000 1 0 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+# se "SE_3001"
+# alpha 910013 0 0.5
+# waitandnext 0.5
+
+# se "SE_0794"
+# move 910013 2 0
+# alpha 910013 1 0.5
+# mask 910013 on
+# move 99100131 4 0
+# alpha 99100131 1 0.5
+# mask 99100131 on
+# waitandnext 1.2
+
+# se "SE_4200"
+# sedelay "SE_4200" 1
+# voice 330091 "seiryu_t_battle_0003"
+# alpha 910013 0 0.5
+# alpha 99100131 0 0.5
+# move 3300911 3 0
+# face 3300911 "angry"
+# alpha 3300911 1 0.5
+# mask 3300911 off
+# textboxarrow 0 2
+# textwindow "normal"
+@青龍偃月刀
+せいっ！
+はあっ！
+
+;;魔獣、続々と倒れる
+;;魔獣の群れを殲滅
+# textwindow "close"
+# alpha 3300911 0 0.5
+# move 910013 2 0
+# alpha 910013 1 0.5
+# mask 910013 on
+# move 99100131 4 0
+# alpha 99100131 1 0.5
+# mask 99100131 on
+# waitandnext 0.6
+
+# se "SE_4817"
+# sedelay "SE_3001" 0.8
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.8
+
+# alpha 910013 0 0.5
+# alpha 99100131 0 0.5
+# waitandnext 0.5
+
+;;？？？（セツナ）
+# bgm "stop"
+# move 3300911 1 0
+# face 3300911 "normal"
+# alpha 3300911 1 0.5
+# mask 3300911 on
+# move 268 3 0
+# face 268 "normal"
+# alpha 268 1 0.5
+# mask 268 on
+# textboxarrow 0 2
+# move 196 5 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textwindow "normal"
+@？？？
+…………
+
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+# voice 9943 "almace_navikan_0001"
+# textboxarrow 0 3
+@アルマス
+あんなにたくさんの魔獣を相手に
+1人で立ち向かうなんて…
+さすがに無謀なんじゃない？
+
+;;？？？（セツナ）
+# textboxarrow 0 2
+@？？？
+…………
+
+# face 196 "happy"
+# textboxarrow 0 3
+@アルマス
+私はアルマス
+こっちは青龍偃月刀よ
+あなたの名前、教えてくれる？
+
+# textboxarrow 0 2
+@セツナ
+…セツナ
+
+# textboxarrow 0 3
+@アルマス
+ね、セツナは街で噂になってたわよ
+すごい剣士だって！
+
+# voice 10392 "setsuna_d_0003"
+# textboxarrow 0 2
+@セツナ
+そう…
+この世界のことは
+よく知らないから…
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+あなた、別の世界から来たの？
+じゃあキル姫じゃないのね…
+それならマスターもいないのよね？
+
+# voice 10392 "setsuna_d_0022"
+# textboxarrow 0 2
+@セツナ
+キル姫？
+マスター？
+それは、どういう存在？
+
+# voice 9943 "almace_navikan_0042"
+# face 196 "sad"
+# textboxarrow 0 3
+@アルマス
+存在って…
+うーん…
+改めてそう聞かれると難しいわね
+
+# textboxarrow 0 1
+@青龍偃月刀
+キル姫は共鳴、もしくは適合する
+奏官、いわゆるマスターと
+主従関係を結びます
+
+# textboxarrow 0 1
+@青龍偃月刀
+その後はマスターの守護を
+最優先の任務としながら、
+マスターの命令に従って戦う存在です
+
+# textboxarrow 0 2
+@セツナ
+命令されて、戦う存在…
+
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# voice 9943 "almace_navikan_0001"
+# face 196 "happy"
+# textboxarrow 0 3
+@アルマス
+ねえ、セツナ
+もし、行く場所がないなら
+私達と一緒に来ない？
+
+# textboxarrow 0 3
+@アルマス
+この世界を救うために、
+あなたの力を貸してほしいの！
+
+# textboxarrow 0 2
+@セツナ
+…………
+
+# face 3300911 "angry"
+# textboxarrow 0 1
+@青龍偃月刀
+お待ちください
+キル姫ではない異界の少女に
+いきなり世界のために戦えとは…
+
+# textboxarrow 0 1
+@青龍偃月刀
+その不躾な態度は
+いかがなものでしょうか？
+
+# textboxarrow 0 1
+@青龍偃月刀
+元の世界に帰る方法を探すとか、
+彼女には彼女の事情もあるでしょう
+
+# textboxarrow 0 1
+@青龍偃月刀
+貴方はマスターなのですから
+思慮深さも必要ですよ
+
+# voice 9943 "almace_navikan_0046"
+# face 196 "sad"
+# textboxarrow 0 3
+@アルマス
+そっか…
+ごめんなさい、セツナ
+
+# textboxarrow 0 3
+@アルマス
+あなたはとても強そうだし、
+なんだか寂しそうだったから
+つい先走っちゃって…
+
+# bgm "stop"
+# face 268 "suffering"
+# textboxarrow 0 2
+@セツナ
+…ましい
+
+# voice 9943 "almace_navikan_0035"
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+え？
+
+;;モノローグ
+# se "SE_8000"
+# textflame 0 0
+@
+その瞬間、セツナが刀に手をかけた
+
+;;セツナが刀を抜く音
+# se "SE_10585"
+# waitandnext 0.5
+
+;;モノローグ
+@
+そして、目にも止まらぬ速さで
+アルマスに斬りかかる
+
+# voice 10392 "setsuna_d_battle_0001"
+# face 268 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@セツナ
+はあっ！
+
+;;刀のぶつかる音
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 1
+@青龍偃月刀
+アルマス！
+無事ですか？
+
+# textboxarrow 0 3
+@アルマス
+う、うん…
+でも、どうして…急に？
+
+# face 268 "suffering"
+# textboxarrow 0 2
+@セツナ
+貴様のその態度…
+自分の言葉が受け入れられると
+決めつけた無邪気な態度も…
+
+# textboxarrow 0 2
+@セツナ
+また、それを当たり前のように
+口に出せる浅はかな真っ直ぐさも
+…羨ましくて、妬ましい
+
+# textboxarrow 0 2
+@セツナ
+私にはこの世界のことなど関係ない
+ましてや戦う理由もない
+
+# textboxarrow 0 2
+@セツナ
+奏官の命令には従わないし、
+奏官という存在も目障り…
+だから、壊すッ！
+
+;;モノローグ
+# textflame 0 0
+@
+セツナはそう言うと、アルマスに
+憎しみのこもった視線を向けて
+再び刀に手をかける
+
+# face 196 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+セツナ！
+話を聞いて！
+私はそんなつもりじゃ…
+
+# face 268 "angry"
+# textboxarrow 0 2
+@セツナ
+うるさいッ！
+
+# voice 330091 "seiryu_t_0026"
+# textboxarrow 0 1
+@青龍偃月刀
+…これ以上の対話は難しそうですね
+どうしますか？
+
+# textboxarrow 0 3
+@アルマス
+私もここで倒れるわけには
+いかないし…
+とにかく、なんとかしなくちゃ！
+
+# textboxarrow 0 2
+@セツナ
+私の剣…喰らうがいい！

@@ -1,0 +1,507 @@
+;;-----------------------------------------
+;;SEA_8_1
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown_night"
+# bgm "stop"
+;;-----------------------------------------
+;;異族
+# body 810004
+# pos 810004 2
+# scale 810004 0.8 0
+# layer 810004 2
+# mask 810004 off
+# alpha 810004 0 0
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 1 0
+# face 270 "surprise"
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 2
+# scale 6603811 0.8 0
+# layer 6603811 4
+# alpha 6603811 0 0
+;;マサムネ
+# body 100111
+# pos 100111 4
+# scale 100111 0.8 0
+# layer 100111 2
+# mask 100111 off
+# alpha 100111 0 0
+;;メギド
+# body 500611
+# pos 500611 3
+# scale 500611 0.8 0
+# layer 500611 3
+# mask 500611 off
+# alpha 500611 0 0
+;;アルテミス
+# body 400131
+# pos 400131 3
+# scale 400131 0.8 0
+# layer 400131 3
+# mask 400131 off
+# alpha 400131 0 0
+;;青龍偃月刀
+# body 300911
+# pos 300911 3
+# scale 300911 0.8 0
+# layer 300911 3
+# mask 300911 off
+# alpha 300911 0 0
+;;ブラフマーストラ
+# body 500421
+# pos 500421 3
+# scale 500421 0.8 0
+# layer 500421 3
+# mask 500421 off
+# alpha 500421 0 0
+;;ヴァジュラ
+# body 500531
+# pos 500531 3
+# scale 500531 0.8 0
+# layer 500531 3
+# mask 500531 off
+# alpha 500531 0 0
+;;トリシューラ
+# body 300611
+# pos 300611 3
+# scale 300611 0.8 0
+# layer 300611 3
+# mask 300611 off
+# alpha 300611 0 0
+;;ルーン
+# body 300531
+# pos 300531 3
+# scale 300531 0.8 0
+# layer 300531 3
+# mask 300531 off
+# alpha 300531 0 0
+;;天沼矛
+# body 300431
+# pos 300431 3
+# scale 300431 0.8 0
+# layer 300431 3
+# mask 300431 off
+# alpha 300431 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 4
+;;-----------------------------------------
+;;背景：下町（夜）：in_downtown_night
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+# bgmfile "bgm293" "BgmLostRagnarokSideStory" 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+マスター様と離れて、
+私が学園に…
+
+# voice 9917 "mimir_navikan_0034"
+# face 270 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+いえ！
+ミーミルはマスター様の
+専属補佐官でございます
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+マスター様をお守りするため、
+お側を離れるわけにはまいりません
+
+;;選択肢
+# select "そこを何とか…" "select_label_01" "ミーミルにしか頼めないんだ" "select_label_02" "自分は大丈夫！" "select_label_03"
+マスター様をお守りするため、
+お側を離れるわけにはまいりません
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# voice 9917 "mimir_navikan_0048"
+# face 270 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+…！？
+マスター様、頭をお上げくださいっ
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# voice 9917 "mimir_navikan_0045"
+# face 270 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+マスター様に信頼していただけるのは
+とても嬉しいのですが…
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# voice 9917 "mimir_navikan_0047"
+# face 270 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+…何の根拠もなく仰っていませんか？
+
+# label "select_label_end"
+# move 270 2 0.5
+# face 270 "surprise"
+# voice 1001 "masamune_0002"
+# face 100111 "nutual"
+# alpha 100111 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@マサムネ
+ミーミル
+主君は拙者が必ずお守り致す
+行ってくれぬか？
+
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+マサムネさん…
+
+;;選択肢
+# select "ミーミル、頼む！" "select_label_04"
+ミーミル
+主君は拙者が必ずお守り致す
+行ってくれぬか？
+
+# label "select_label_04"
+# bgm "stop"
+# voice 9917 "mimir_navikan_0003"
+# face 270 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+…………分かりました
+少しの間、マスター様のお側を
+離れさせていただきます
+
+# bgmfile "bgm405" "BgmIntegralNoahEvent003" 0
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+マサムネさん、皆さん、
+私がいない間、マスター様を
+お願い致します！
+
+# textflame 1 1
+# textboxarrow 0 3
+@マサムネ
+この身に代えても守ると誓おう
+
+# alpha 270 0 0.3
+# alpha 100111 0 0.3
+# face 500611 "angry"
+# alpha 500611 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@メギド
+貴方が帰ってくる頃には、
+害虫駆除は終わっているわ
+
+;;選択肢
+# select "マナナンとマクリルも頼む" "select_label_05"
+貴方が帰ってくる頃には、
+害虫駆除は終わっているわ
+
+# label "select_label_05"
+# alpha 500611 0 0.3
+# voice 650401 "manannan_ura_0005"
+# face 6504011 "happy"
+# alpha 6504011 1 0.3
+# face 6603811 "happy"
+# alpha 6603811 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+ミーミルと一緒にお出かけだね
+楽しそう♪
+
+# voice 660381 "maclir_ura_0003"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+三人一緒なら怖くない…
+
+# alpha 6504011 0 0.3
+# alpha 6603811 0 0.3
+# move 270 3 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+それでは、マスター様
+行ってまいります
+
+;;暗転
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+;;背景：中心部：in_city
+# background "in_city"
+# alpha 270 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# bgm "bgm031" 0
+# fadein "black" 1.5
+# waitandnext 1.5
+
+;;異族がうろうろしている
+# alpha 810004 1 1
+# waitandnext 1
+
+# move 810004 4 1
+# alpha 810004 0 1
+# waitandnext 1
+
+# move 810004 5 0
+# alpha 810004 1 1
+# waitandnext 1
+
+# move 810004 3 1
+# waitandnext 1
+
+# se "SE_0618"
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 0
+@異族
+ガアアアアアアアアア！
+
+# move 810004 1 1
+# alpha 810004 0 1
+# textwindow "close"
+# waitandnext 2
+
+# move 100111 2 0
+# layer 100111 4
+# mask 100111 on
+# voice 1001 "masamune_0028"
+# face 100111 "angry"
+# alpha 100111 1 0.3
+# move 400131 4 0
+# layer 400131 2
+# alpha 400131 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@マサムネ
+昨日より数が増えている…
+このままでは数日中に町から
+溢れ出すであろう
+
+# voice 4001 "arutemisu_0013"
+# textflame 1 1
+# textboxarrow 0 3
+@アルテミス
+原因が判明するまで、
+今はとにかく数を減らすしか
+ないんですね…
+
+# face 100111 "unhappy"
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+…アルテミス
+アポロンのことが心配なのは
+分かるが、集中してくれ
+
+# textflame 1 1
+# textboxarrow 0 3
+@アルテミス
+大丈夫です
+心配はいりません
+
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+…………
+
+# alpha 100111 0 0.3
+# alpha 400131 0 0.3
+# voice 3009 "seiryu_0002"
+# alpha 300911 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@青龍偃月刀
+アルテミス
+貴方の自制心には敬意を表します
+それでも…
+
+# textflame 1 1
+# textboxarrow 0 2
+@青龍偃月刀
+辛いときは仲間を頼っても
+いいのですよ
+
+# alpha 300911 0 0.3
+# move 500421 2 0
+# layer 500421 2
+# voice 5004 "burafumasutora_0002"
+# alpha 500421 1 0.3
+# move 500531 4 0
+# layer 500531 4
+# mask 500531 on
+# alpha 500531 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@ブラフマーストラ
+なになに？悩んでる系？
+だったらアタシらに任せて
+休んでていいよ
+
+# textflame 1 1
+# textboxarrow 0 1
+@ブラフマーストラ
+こっちで良い感じにやっとくから～♪
+
+# voice 5005 "vajura_0033"
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァジュラ
+そうそう
+キミの不安も何もかも、
+どーんと解決してあげるよ！
+
+# alpha 500421 0 0.3
+# alpha 500531 0 0.3
+# move 400131 3 0
+# mask 400131 off
+# alpha 400131 1 0.3
+# face 400131 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@アルテミス
+皆さん…
+
+# voice 3006 "torisyula_0007"
+# alpha 400131 0 0.3
+# move 300611 2 0
+# layer 300611 2
+# alpha 300611 1 0.3
+# move 300531 4 0
+# layer 300531 4
+# mask 300531 on
+# alpha 300531 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@トリシューラ
+はっ！
+あんたができないなら、
+あたいがやるまでさ
+
+# voice 3005 "roon_0007"
+# textflame 1 1
+# textboxarrow 0 3
+@ルーン
+そういうこと
+役立たずは引っ込んでなさい
+
+# voice 4001 "arutemisu_0030"
+# alpha 300611 0 0.3
+# alpha 300531 0 0.3
+# alpha 400131 1 0.3
+# face 400131 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@アルテミス
+…お気遣いありがとうございます
+少し気が楽になりました
+
+# textflame 1 1
+# textboxarrow 0 2
+@アルテミス
+あと、暴走しないよう
+気をつけて下さいね
+特にルーンとトリシューラは
+
+# voice 3006 "torisyula_0027"
+# alpha 400131 0 0.3
+# face 300611 "sad"
+# alpha 300611 1 0.3
+# move 100111 4 0
+# layer 100111 4
+# mask 100111 on
+# face 100111 "normal"
+# alpha 100111 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@トリシューラ
+何だよ、信用ないなぁ
+手っ取り早く片付けてやるよ！
+
+# voice 1001 "masamune_0036"
+# face 100111 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@マサムネ
+では、作戦通りに行くぞ
+決して深追いするな！
+
+# serif 1
+@キル姫達
+おおーーーーーっ！！
+
+# alpha 300611 0 0.3
+# alpha 100111 0 0.3
+# voice 3004 "amenonuboko_0023"
+# face 300431 "surprise"
+# alpha 300431 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+@天沼矛
+…あらぁ？
+考えごとをしていたら、
+出発することになってましたぁ
+
+# face 300431 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@天沼矛
+わたしも頑張りますよぉ
+
+;;皆が走っていく
+# se "SE_5575"
+# alpha 300431 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;バトル
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# waitandnext 0.2

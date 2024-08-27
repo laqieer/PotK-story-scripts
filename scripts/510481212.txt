@@ -1,0 +1,290 @@
+;;-----------------------------------------
+;;■忍野忍　キャラクエ
+;;【EP２】
+;;スクリプト最後の背景：公園（昼）
+;;背景：黒背景
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "stop"
+;;-----------------------------------------
+;;忍野 忍
+# body 5104811
+# pos 5104811 3
+# scale 5104811 0.8 0
+# layer 5104811 2
+# mask 5104811 off
+# alpha 5104811 0 0
+;;阿良々木 暦
+# body 240
+# pos 240 3
+# scale 240 0.8 0
+# layer 240 2
+# mask 240 off
+# alpha 240 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;一枚絵
+# imageset 0 "c5104811"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;【EP２】
+;;アニメ２期９話『まよいキョンシー 其ノ參』より
+;;キャラクエエピソードタイトル：たまやー
+;;//黒背景
+# move 5104811 2 0
+# alpha 5104811 1 0
+# mask 5104811 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 240 4 0
+# face 240 "normal"
+# alpha 240 1 0
+# mask 240 on
+# face 5104811 "sad"
+# voice 510481 "shinobu_0001"
+@忍
+どうした？
+お前様
+
+# textboxarrow 0 3
+@阿良々木
+いや……えっと
+一つ試したいことができた
+
+;;モノローグ
+# textflame 0 0
+@
+僕が手を伸ばした先にあったのは、
+花火セットだった
+
+;;//場面転換
+;;//黒背景はここまで
+;;//背景：公園（昼）
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# se "SE_0964"
+# face 5104811 "angry"
+# background "sea_park_day"
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textflame 1 1
+# textboxarrow 0 1
+# textwindow "normal"
+@忍
+そんなものを打ち上げて
+どうするのじゃ？
+
+# textboxarrow 0 1
+@忍
+まあ、日本の夏の終わりを
+飾るには、いい趣向かもしれぬが――
+
+# textboxarrow 0 3
+@阿良々木
+いや、そりゃお前とふたりきりで
+花火を楽しむってのも、
+すげー乙じゃああるんだけれどな
+
+# textboxarrow 0 3
+@阿良々木
+一見滅びたと思える
+この世界ではあるが、
+ひょっとしたら誰か、
+
+# textboxarrow 0 3
+@阿良々木
+万一だけれど、
+生き残ってる奴が
+いるかもしれないだろう？
+
+# textboxarrow 0 3
+@阿良々木
+何て言うか……、夜になれば
+現れる大量のゾンビに怯えて、
+隠れ住んでいる奴が
+
+# textboxarrow 0 1
+@忍
+ふむ……
+
+# sestop "SE_0964"
+;;阿良々木（Ｍ）
+# move 240 4 0
+# textboxarrow 0 0
+# textwindow "moya"
+@阿良々木
+せめて、少しでも遠くまで、
+花火の光が届くように、
+
+;;阿良々木（Ｍ）
+# textboxarrow 0 0
+@阿良々木
+曇りの日を待ってから
+花火を打ち上げようと
+僕らは決めた
+
+;;//場面転換
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# bgm "bgm003" 0
+# alpha 5104811 0 0
+# alpha 240 0 0
+# waitandnext 0.2
+
+# se "SE_0605"
+# sedelay "SE_12249" 0.8
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+光輪は見事に花開いた
+
+# face 5104811 "normal"
+# move 5104811 2 0
+# alpha 5104811 1 0.5
+# mask 5104811 on
+# move 240 4 0
+# face 240 "happy"
+# alpha 240 1 0.5
+# mask 240 on
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@阿良々木
+たまやー
+
+# textboxarrow 0 1
+# voice 510481 "shinobu_kyara_0026"
+@忍
+かぎやー
+
+# textboxarrow 0 3
+@阿良々木
+――さて、これでしばらく、
+夜になるまで待ってみるか
+
+# textboxarrow 0 1
+# voice 510481 "shinobu_battle_0003"
+@忍
+うむ
+
+# face 240 "normal"
+# textboxarrow 0 3
+@阿良々木
+まあ、あくまでも
+変な期待はしないようには
+しておこう
+
+# textflame 1 1
+# textboxarrow 0 3
+@阿良々木
+本当に万が一、
+誰かが難を逃れて
+生きて潜んでいたところで、
+
+# textboxarrow 0 3
+@阿良々木
+こんな花火に釣られて
+出てきてくれるとも
+思えないしな
+
+# textboxarrow 0 3
+@阿良々木
+人類が吸血鬼の手で
+滅ぼされてしまったんだ、
+罠かと思うのが普通だろう
+
+# textflame 1 1
+# textboxarrow 0 3
+@阿良々木
+それに――
+
+# textboxarrow 0 1
+# face 5104811 "angry"
+# voice 510481 "shinobu_battle_0001"
+@忍
+こら
+
+# se "SE_5014"
+# waitandnext 0.5
+
+# se "SE_0605"
+;;モノローグ
+# textflame 0 0
+@
+足を踏まれた
+ぐりぐりと
+
+;;モノローグ
+@
+忍に
+
+# face 240 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@阿良々木
+ぐああああああああああああっ！
+
+# textboxarrow 0 1
+@忍
+そんな大声で悲鳴をあげるほど
+痛いわけがなかろう……
+
+# textboxarrow 0 1
+@忍
+過度の期待を持つのはよくないが、
+かといって過度に悲観的に
+なっては、何もできまい
+
+# textboxarrow 0 1
+@忍
+無駄だ無駄だと思いながら
+待ち続けるくらいじゃったら、
+
+# textboxarrow 0 1
+@忍
+おびき寄せられて
+のこのこ出てきた
+生き残りの人間と、
+
+# se "SE_0978"
+# textboxarrow 0 1
+@忍
+上手にコミュニケーションを
+取る方法でも考えておけ
+相手は女子中学生とは限らんぞ
+
+# face 240 "normal"
+# textboxarrow 0 3
+@阿良々木
+そうだな
+
+# textflame 0 0
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# fadein "white" 3
+# buttonsout 0 0
+# textwindow "close"
+
+# frameout 0 1
+
+# waitandnext 0.8
+
+# fadeout "black" 1.5
+# waitandnext 1.5

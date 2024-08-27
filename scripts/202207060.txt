@@ -1,0 +1,182 @@
+;;-----------------------------------------
+;;SEA夏1_6_0
+;;-----------------------------------------
+# script "lisp"
+# background "SEAsummer_pond"
+# bgmfile "bgm601_yukata_block" "BgmSecretlyEverAfter001" 0
+;;-----------------------------------------
+;;浴衣ミーミル
+# body 318
+# pos 318 2
+# scale 318 0.8 0
+# layer 318 5
+# mask 318 off
+# alpha 318 1 0
+;;浴衣如意金箍棒
+# body 6203111
+# pos 6203111 4
+# scale 6203111 0.8 0
+# layer 6203111 3
+# mask 6203111 off
+# alpha 6203111 1 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "SEA6203111"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：春の沼地（シノビナトリミング）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# sedelay "bgm601_yukata_on" 1.5
+# voice 9917 "mimir_navikan_0004"
+# face 318 "happy"
+# face 6203111 "normal"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+一時はどうなることかと思いましたが
+ビコウさんが助かって何よりです
+
+# voice 520311 "nyoikinkobou_c_0027"
+# textboxarrow 0 3
+@如意金箍棒
+ふぅ…
+集中したから体が熱くなっちゃった
+
+;;如意金箍棒シナリオカット
+#setnextbgmblock 1
+# fadein "white" 1
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# frameout 0 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 0
+@如意金箍棒
+スイカを切ったから、
+お師様とミーミルちゃんも
+こっちにおいで
+
+@如意金箍棒
+たらいに水を張ったんだ
+気持ち良いよ
+
+# serif 1
+# voice 9917 "mimir_navikan_0030"
+@ミーミル
+ありがとうございます
+それにしても、お見事でした
+如意金箍棒さん
+
+# serif 0
+# voice 520311 "nyoikinkobou_c_0030"
+@如意金箍棒
+ミーミルちゃんも手伝ってくれて
+ありがとう
+
+# se "SE_0899"
+# serif 1
+@ビコウ
+キキー！
+
+# serif 0
+@如意金箍棒
+ビコウはちゃんと反省してね
+
+;;シナリオカット削除
+# se "SE_6239"
+# imagealpha 1 0 1
+# framein 0 1
+# waitandnext 1
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 9917 "mimir_navikan_0002"
+# face 318 "normal"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+あの…そちらのスイカは…
+
+# face 6203111 "happy"
+# textboxarrow 0 3
+@如意金箍棒
+あ、これはね
+水風船釣り屋の店主さんが
+くれたんだ
+
+# face 6203111 "sad"
+# textboxarrow 0 3
+@如意金箍棒
+お礼だって言ってたんだけど、
+ワタシ、お礼を言われるようなこと
+したかなぁ？
+
+# textboxarrow 0 1
+@ミーミル
+そういえば、あれから
+水風船釣り屋がとても
+賑わっていたように見えました
+
+# textboxarrow 0 1
+@ミーミル
+如意金箍棒さんが一生懸命
+釣っておられたときも
+見物されている方々がたくさんいて…
+
+# textboxarrow 0 1
+@ミーミル
+一体、どういうことなのでしょう？
+
+;;選択肢
+# select "揺れてたから…" "select_label_01" "弾んでたから…" "select_label_01"
+水風船釣り屋がとても
+賑わっていたように見えました
+一体、どういうことなのでしょう？
+
+# label "select_label_01"
+# se "SE_6240"
+# face 318 "surprise"
+# textboxarrow 0 1
+@ミーミル
+水風船、
+そんなに動いておりましたか？
+
+# voice 520311 "nyoikinkobou_c_0030"
+# face 6203111 "happy"
+# textboxarrow 0 3
+@如意金箍棒
+二人とも、今日はありがとう
+…少し、ふっきれたかも
+
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+何か悩み事が？
+
+# voice 520311 "nyoikinkobou_c_0003"
+# face 6203111 "normal"
+# textboxarrow 0 3
+@如意金箍棒
+うん…
+お師様は、覚えてるよね？
+
+# textboxarrow 0 3
+@如意金箍棒
+ワタシ達は前にね…
+とても大きな決断をしたの
+
+# fadeout "black" 1
+# waitandnext 1

@@ -1,0 +1,663 @@
+;;2_3_1背景：王都（可能ならば裏路地っぽいところ）
+# script "lisp"
+# background "imperial_city"
+# bgmfile "bgm166" "BgmPJZero001" 0
+# body 128
+# pos 128 2
+# scale 128 0.8 0
+# body 4
+# pos 4 4
+# scale 4 0.8 0
+# face 4 "angry"
+# textboxarrow 0 1
+@ノーブル
+さぁ、表通りに出るぞ…！
+もう一踏ん張りだ…！
+
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# alpha 24 0 0
+# face 24 "angry"
+# textboxarrow 0 3
+@トト
+ティルフィング、もう少しだよ！
+頑張って！！
+
+;;※背後からのキラープリンセス達の攻撃を、必死に凌いでいるティルフィング。
+# se "SE_3006"
+# alpha 128 0 0.5
+# alpha 4 0 0.5
+# alpha 24 1 0.5
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0037"
+@ティルフィング
+クッ…！
+
+# body 6
+# pos 6 4
+# scale 6 0.8 0
+# alpha 6 0 0
+# alpha 24 0 0.5
+# move 128 2 0
+# alpha 128 1 0.5
+# leftin 128 0.5
+# face 6 "angry"
+# face 128 "angry"
+# textboxarrow 0 1
+@ノーブル
+…！？
+…う、うぉっ…！！
+
+;;※不意に立ち止まるノーブル。
+# body 200471
+# pos 200471 3
+# scale 200471 0.8 0
+# alpha 200471 0 0
+# mask 200471 off
+# alpha 6 1 0.5
+# shake 0 0.5
+# face 200471 "sad"
+# textboxarrow 0 3
+# voice 9997 "deen_0041"
+@ディーン
+イテッ…！教授！
+いきなり止まるんじゃ…え！？
+
+;;※一同の前に姿を現すパラシュ。ダメージが癒えていないのが見て取れる。
+# se "SE_5776"
+# layer 200471 4
+# alpha 200471 1 0
+# alpha 128 0 0
+# alpha 6 0 0
+# fadein "black" 0.5
+# body 40
+# pos 40 4
+# scale 40 0.8 0
+# alpha 40 0 0
+# textboxarrow 0 2
+@パラシュ
+…ま、また…会ったね…
+
+# alpha 24 1 0.5
+# move 24 2 0
+# alpha 40 1 0.5
+# alpha 200471 0 0.5
+# face 24 "surprise"
+# face 40 "irregular"
+# alpha 128 0 0.5
+# textboxarrow 0 1
+@ティルフィング
+パラシュ…！？
+
+# face 24 "sad"
+# textboxarrow 0 3
+@エドガー
+マズい…！
+挟まれた…！？
+
+# alpha 24 0 0.5
+# alpha 40 0 0.5
+# alpha 6 1 0.5
+# alpha 128 1 0.5
+# face 6 "sad"
+# mask 200471 on
+# textboxarrow 0 3
+@ディーン
+それ以上に…マズいぜ！
+黒奏官の
+キラープリンセスが二人も…！
+
+# body 100161
+# pos 100161 4
+# scale 100161 0.8 0
+# alpha 100161 0 0
+# alpha 128 0 0.5
+# alpha 6 0 0.5
+# alpha 200471 1 0.5
+# face 100161 "usual"
+# textboxarrow 0 2
+# voice 20047 "parashu_k_0001"
+@パラシュ
+…マスター
+
+# alpha 100161 1 0.5
+# move 200471 2 0.5
+# textboxarrow 0 3
+@ラース
+…パラシュ…生きていたか…
+
+# body 41
+# pos 41 3
+# scale 41 0.8 0
+# alpha 41 0 0
+# face 200471 "usual"
+# textboxarrow 0 1
+@グラトニー
+そ、その呼び名はよしてくれ…
+ボクにも…“グラトニー”という
+コードネームがあるんだ…
+
+;;（※以降、パラシュの名称をグラトニーに変更します。※グラトニー…gluttony“暴食”）
+# alpha 41 1 0.5
+# move 200471 1 0.5
+# move 100161 5 0.5
+# layer 41 4
+# layer 200471 3
+# textboxarrow 0 2
+@黒奏官
+…任務遂行にしくじったようだが、
+幸運だな…挽回のチャンスだぞ？
+
+# face 200471 "surprise"
+# textboxarrow 0 1
+@グラトニー
+え…？
+
+# textboxarrow 0 2
+@黒奏官
+この者らに後れを取ったのだろう…
+失態を挽回したいのなら、結果で示せ
+
+# face 6 "angry"
+# face 200471 "usual"
+# voice 20047 "parashu_k_0022"
+# textboxarrow 0 1
+@グラトニー
+…！
+
+# alpha 200471 0 0.5
+# alpha 100161 0 0.5
+# alpha 41 0 0.5
+# alpha 24 1 0.5
+# alpha 6 1 0.5
+# alpha 40 1 0.5
+# move 24 3 0
+# move 40 1 0
+# move 6 5 0
+# layer 6 1
+# layer 24 3
+# textboxarrow 0 2
+@ティルフィング
+マズい…！
+手負いとはいえ、マサムネと
+同時にかかってこられたら…！
+
+# textboxarrow 0 3
+@ディーン
+エドガー、来るぞ…！
+気を抜くな…！
+
+# face 41 "smile"
+# textboxarrow 0 1
+@エドガー
+わかってる！
+
+# alpha 200471 1 0.5
+# alpha 100161 1 0.5
+# alpha 41 1 0.5
+# alpha 24 0 0.5
+# alpha 6 0 0.5
+# alpha 40 0 0.5
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0004"
+@黒奏官
+クク…
+
+@黒奏官
+どこまで耐えられるものか、
+見ものだな？
+さぁ、お前達…
+
+;;※沈黙していたグラトニーが、不意に口を開く。
+# bgm "stop"
+# face 200471 "sad"
+# textboxarrow 0 1
+@グラトニー
+…ボクは
+なんなのでしょう…？
+
+# face 41 "normal"
+# textboxarrow 0 2
+@黒奏官
+…なに？
+
+# bgmfile "bgm197" "Bgm3Tcollabo002" 0
+# textboxarrow 0 1
+@グラトニー
+う、伺いたいんです…
+マスターにとって…
+ボクという存在は、なんなのか…
+
+# textboxarrow 0 2
+@黒奏官
+…なにを言い出した？
+くだらん問答は、後にしろ
+
+# face 200471 "usual"
+# textboxarrow 0 1
+@グラトニー
+ボ、ボクにとっては
+大事なことなんです…！
+
+@グラトニー
+教えてください…
+マスターにとって、ボクはいったい…
+
+# textboxarrow 0 2
+@黒奏官
+…道具だ
+
+# face 200471 "surprise"
+# textboxarrow 0 1
+@グラトニー
+…え？
+
+# textboxarrow 0 2
+@黒奏官
+任務遂行のための、ただの道具だ…
+それ以上でも、以下でもない
+…これで満足か？
+
+# textboxarrow 0 3
+@ラース
+…………
+
+# body 0
+# pos 0 2
+# scale 0 0.8 0
+# alpha 0 0 0
+# face 0 "sad"
+# face 24 "surprise"
+# face 200471 "sad"
+# textboxarrow 0 1
+@グラトニー
+ち、違います！
+表向きの話ではなく…
+ボクは、マスターの心の内を…！
+
+# alpha 200471 0 0.5
+# alpha 100161 0 0.5
+# alpha 41 0 0.5
+# alpha 24 1 0.5
+# move 24 4 0
+# alpha 0 1 0.5
+# textboxarrow 0 3
+@ティルフィング
+パラシュ…？
+
+# textboxarrow 0 1
+@デュリン
+彼女…揺れているの…？
+
+# alpha 200471 1 0.5
+# alpha 100161 1 0.5
+# alpha 41 1 0.5
+# alpha 24 0 0.5
+# alpha 0 0 0.5
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0007"
+@黒奏官
+…フン。どうやら、
+反乱分子どもに感化されたようだ…
+ラース、始末しろ
+
+# face 24 "angry"
+# face 200471 "surprise"
+# face 100161 "sad"
+# textboxarrow 0 1
+# voice 20047 "parashu_k_0024"
+@グラトニー
+…！
+
+;;●２－１０＜戦闘画面＞背景：王都（可能ならば裏路地っぽいところ）
+# alpha 24 1 0.5
+# alpha 41 0 0.5
+# alpha 200471 0 0.5
+# alpha 100161 0 0.5
+# move 24 3 0
+# layer 24 4
+# textboxarrow 0 2
+@ティルフィング
+いけない…！
+ダメよ、そんなことをしては…！
+
+# alpha 200471 1 0.5
+# alpha 100161 1 0.5
+# alpha 24 0 0.5
+# alpha 41 1 0.5
+# textboxarrow 0 3
+@ラース
+…………
+
+# textboxarrow 0 2
+@黒奏官
+…なにをしている？
+聞こえなかったのか、ラース？
+
+# alpha 41 0 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+;;※刀を握り、立つラース…その表情からは、感情が読み取れない。
+# se "SE_5205"
+# move 100161 4 0.5
+# move 200471 2 0.5
+# face 200471 "usual"
+# face 100161 "usual"
+# textboxarrow 0 3
+@ラース
+我々は、あくまで駒…
+
+@ラース
+仲間意識や情などは、任務遂行に
+支障をきたす害悪でしかない
+常々、言い聞かせたはずだ
+
+# face 200471 "sad"
+# textboxarrow 0 1
+@グラトニー
+ラ、ラース…
+お前はなんのために…
+この世に生を受けて来たんだ…？
+
+# face 100161 "surprise"
+# textboxarrow 0 3
+@ラース
+…なに？
+
+# face 100161 "usual"
+# textboxarrow 0 1
+@グラトニー
+うぐ…！
+…ボ、ボク達が信じてきた教えは、
+間違っている…！
+
+# face 200471 "angry"
+@グラトニー
+ボクらは、駒なんかじゃない…！
+ただ任務をこなし、棄てられるだけの
+存在なんかじゃないんだ…！
+
+# face 200471 "usual"
+@グラトニー
+きっとマスターだって、
+心の奥底では…
+
+# textboxarrow 0 3
+@ラース
+…おぬしまで、
+そのような戯れ言を申すとはな
+
+# face 100161 "angry"
+@ラース
+ともに戦地を駆けた同士よ…
+そなたの最期は、
+拙者が看取ってくれる
+
+# face 200471 "angry"
+# textboxarrow 0 1
+# voice 20047 "parashu_k_0037"
+@グラトニー
+クッ…！
+め、目を覚ませ…ラース！！！
+
+# bgm "stop"
+# face 24 "mad2"
+# face 100161 "usual"
+# textboxarrow 0 3
+@ラース
+黙れ…！
+
+;;※ドンっと駆け出すラース。…が、ティルフィングがその行く手を阻む。
+# fadein "white" 0.5
+# se "SE_9086"
+# alpha 24 1 0.5
+# move 200471 1 0.5
+# move 100161 5 0.5
+# textboxarrow 0 2
+@ティルフィング
+待って！
+
+# bgmfile "bgm164" "BgmPJZero001" 0
+# face 200471 "usual"
+# face 100161 "angry"
+# textboxarrow 0 3
+@ラース
+貴様…！
+そこをどけ…邪魔をするなら、
+貴様から斬り伏せるぞ…！
+
+# face 24 "angry"
+# textboxarrow 0 2
+@ティルフィング
+堕ちてはいけない…！
+アナタは逃げずに
+真実と向き合うべきよ…！
+
+# textboxarrow 0 3
+# voice 10016 "masamune_k_0010"
+@ラース
+拙者が逃げているだと…？
+…笑止！！
+
+;;※ティルフィングに斬りつけるラース。その刃を受け止めるティルフィング。
+# fadein "red" 0.5
+# shake 1 0.5
+# se "SE_9086"
+# waitandnext 1
+
+# alpha 24 0 0.5
+# alpha 100161 0 0.5
+# alpha 200471 0 0.5
+# alpha 41 1 0.5
+# textboxarrow 0 2
+@黒奏官
+まったく、なにをあぐねている…
+壊れた駒などに用はない…
+さっさと始末をつけんか！
+
+# move 41 2 0.5
+# move 4 4 0
+# alpha 4 1 0.5
+# textboxarrow 0 3
+@トト
+待ってよ…。駒…？道具…？
+…どういう意味だよ、それ…？
+
+# face 0 "serious"
+# textboxarrow 0 1
+@黒奏官
+…？
+なんだ、小僧…？
+
+# move 41 1 0.5
+# move 4 3 0.5
+# move 0 5 0
+# alpha 0 1 0.5
+# rightin 0 0.5
+# textboxarrow 0 3
+@デュリン
+ちょ、ちょっと…！トト！！
+
+# face 0 "serious2"
+# textboxarrow 0 2
+@トト
+そのキラープリンセス達は、
+一緒に旅する仲間なんだろ！？
+
+# face 4 "sad"
+@トト
+みんな、命令に答えようと
+必死に闘ってる…
+
+# face 4 "angry"
+@トト
+そんな仲間を、
+どうしてそんな風に思えるんだよ！？
+
+# face 41 "smile"
+# textboxarrow 0 1
+# voice 9983 "kokusohkan_0004"
+@黒奏官
+仲間…？クク…
+
+# face 41 "normal"
+@黒奏官
+今一度言うが、
+この者達は任務遂行のための道具…
+それ以上の価値などない
+
+# textboxarrow 0 2
+@トト
+ウソだよ！
+ともに旅していれば、
+情が通うのは当たり前だろ！
+
+# textboxarrow 0 1
+@黒奏官
+くだらんな…
+
+@黒奏官
+ヤツらは役に立たねば
+別の者に取って代わられるだけの
+ただの駒だ
+
+# face 200471 "sad"
+# face 100161 "usual"
+@黒奏官
+そんな使い捨ての道具に…
+どうして、情が寄せられようか？
+
+# alpha 41 0 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# alpha 200471 1 0.5
+# alpha 100161 1 0.5
+# alpha 24 1 0.5
+# textboxarrow 0 3
+@ラース
+…！
+
+# textboxarrow 0 1
+# voice 20047 "parashu_k_0019"
+@グラトニー
+そんな…！
+
+# alpha 41 1 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# alpha 200471 0 0.5
+# alpha 100161 0 0.5
+# alpha 24 0 0.5
+# textboxarrow 0 1
+@黒奏官
+こやつらだけではない
+お前も…かくいう私も、
+皆ただの駒に過ぎん
+
+# textboxarrow 0 2
+@トト
+え…？
+
+# textboxarrow 0 1
+@黒奏官
+大いなる力の前では…
+皆、非力な駒でしかないのだ
+…お前には、理解出来んだろうがな
+
+# textboxarrow 0 2
+@トト
+そんな…！
+なに言ってるんだよ！
+僕達は、駒なんかじゃ…！
+
+# body 400131
+# pos 400131 3
+# scale 400131 0.8 0
+# alpha 400131 0 0
+# face 400131 "nutual"
+# textboxarrow 0 1
+@黒奏官
+…話が過ぎたな
+さぁ…ここで始末をつけよう
+
+# body 200731
+# pos 200731 5
+# scale 200731 0.8 0
+# alpha 200731 0 0
+# body 101111
+# pos 101111 1
+# scale 101111 0.8 0
+# alpha 101111 0 0
+# alpha 41 0 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# alpha 400131 1 0.5
+# textboxarrow 0 2
+# layer 200731 4
+# voice 4001 "arutemisu_0003"
+@アルテミス
+…はい
+
+;;※アルテミスとともに現れるおびただしい数のキラープリンセス達。
+# se "SE_5586"
+# alpha 101111 1 0.5
+# alpha 200731 1 0.5
+# waitandnext 1.5
+
+# alpha 101111 0 0.5
+# alpha 200731 0 0.5
+# alpha 24 1 0.5
+# alpha 400131 0 0.5
+# move 24 4 0
+# alpha 0 1 0.5
+# move 0 2 0
+# face 24 "surprise"
+# face 0 "worry"
+# textboxarrow 0 3
+@ティルフィング
+王都部隊…！？
+
+# textboxarrow 0 1
+# voice 9999 "durin_0022"
+@デュリン
+！！
+な、なに…！？
+
+# face 400131 "angry"
+@デュリン
+この、おびただしい数の
+キラープリンセス達は…！？
+
+# move 24 5 0.5
+# move 0 1 0.5
+# move 6 3 0
+# alpha 6 1 0.5
+# textboxarrow 0 2
+@ディーン
+ヤベェ…！囲まれてるぞ！？
+
+;;※王都部隊のアルテミスが声を上げる。
+# alpha 101111 1 0.5
+# alpha 200731 1 0.5
+# alpha 400131 1 0.5
+# layer 400131 4
+# alpha 6 0 0.5
+# alpha 0 0 0.5
+# textboxarrow 0 2
+# alpha 24 0 0.5
+@アルテミス
+…かかれーっ！！！
+
+# alpha 101111 0 0.5
+# alpha 200731 0 0.5
+# alpha 400131 0 0.5
+# alpha 24 1 0.5
+# face 24 "mad2"
+# textboxarrow 0 2
+# move 24 3 0
+@ティルフィング
+マズい…！
+みんな、耐えて！！
+

@@ -1,0 +1,264 @@
+;;-----------------------------------------
+;;【ファントムオブキル_まどマギコラボ】イベントシナリオ後編　修正稿
+;;【EP6】
+;;6-3
+;;スクリプト最後の背景：平原など
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm075" "BgmMMcollabo002" 0
+;;-----------------------------------------
+;;アルマス
+# body 3103811
+# pos 3103811 3
+# scale 3103811 0.8 0
+# layer 3103811 2
+# alpha 3103811 0 0
+# mask 3103811 off
+;;まどか
+# body 3401111
+# pos 3401111 3
+# scale 3401111 0.8 0
+# layer 3401111 2
+# alpha 3401111 0 0
+# mask 3401111 off
+;;マミ
+# body 3501411
+# pos 3501411 3
+# scale 3501411 0.8 0
+# layer 3501411 2
+# alpha 3501411 0 0
+# mask 3501411 off
+;;さやか
+# body 3102011
+# pos 3102011 3
+# scale 3102011 0.8 0
+# layer 3102011 1
+# alpha 3102011 0 0
+# mask 3102011 off
+;;杏子
+# body 3301511
+# pos 3301511 3
+# scale 3301511 0.8 0
+# layer 3301511 2
+# alpha 3301511 0 0
+# mask 3301511 off
+;;ほむら
+# body 3501311
+# pos 3501311 3
+# scale 3501311 0.8 0
+# layer 3501311 2
+# alpha 3501311 0 0
+# mask 3501311 off
+;;薔薇園の魔女
+# body 809611
+# pos 809611 3
+# scale 809611 0.8 0
+# layer 809611 2
+# alpha 809611 0 0
+# mask 809611 off
+;;-----------------------------------------
+;;背景：平原など
+;;演出：倒される魔女
+# se "SE_7034"
+# sedelay "SE_5393" 0.6
+# textwindow "close"
+# move 809611 3 0
+# alpha 809611 1 0
+# mask 809611 off
+# waitandnext 0.5
+
+;;モノローグ
+# alpha 809611 0 1
+# textflame 0 0
+# textwindow "normal"
+@
+魔女は薔薇を散らし消えていく
+
+# voice 1038 "almace_0002"
+# move 3103811 2 0
+# face 3103811 "surprise"
+# alpha 3103811 1 0.5
+# mask 3103811 on
+# textboxarrow 0 1
+# move 3401111 4 0
+# face 3401111 "normal"
+# alpha 3401111 1 0.5
+# mask 3401111 on
+# textflame 1 1
+@アルマス
+やった…のよね？
+
+# se "SE_6504"
+# emotionbody 1001 3 3401111 10 260
+# effectpattern 1001 1 3
+# effectstart 1001
+# voice 4011 "madoka_0003"
+# face 3401111 "happy"
+# textboxarrow 0 3
+@まどか
+うん！
+私達、勝ったんだよ！
+
+# face 3103811 "normal"
+# textboxarrow 0 1
+@アルマス
+マスターも無事だし…
+私達の完全勝利ね！
+
+# voice 5013 "homura_0004"
+# alpha 3103811 0 0.5
+# alpha 3401111 0 0.5
+# move 3501311 3 0
+# face 3501311 "usual"
+# alpha 3501311 1 0.5
+# mask 3501311 off
+# textboxarrow 0 2
+@ほむら
+…この感じ、魔女の結界が
+消えて行っているようね
+
+# emotionbody 1002 2 3102011 10 290
+# effectpattern 1002 1 1
+# effectstart 1002
+# voice 1020 "sayaka_0022"
+# alpha 3501311 0 0.5
+# move 3501411 2 0
+# face 3501411 "usual"
+# alpha 3501411 1 0.5
+# mask 3501411 on
+# move 3102011 4 0
+# face 3102011 "surprise"
+# alpha 3102011 1 0.5
+# mask 3102011 on
+# textboxarrow 0 3
+@さやか
+あれ、向こうに何かある…
+椅子とテーブル？
+
+# textboxarrow 0 1
+@マミ
+それに、ティーポットとカップ
+お茶会でも開いてたのかしら？
+
+# voice 3015 "kyoko_0004"
+# alpha 3102011 0 0.5
+# move 3301511 4 0
+# face 3301511 "usual"
+# alpha 3301511 1 0.5
+# mask 3301511 on
+# textboxarrow 0 3
+@杏子
+迷惑なお茶会があったもんだ
+巻き込まれなくて助かったな
+
+# voice 1020 "sayaka_0027"
+# alpha 3501411 0 0.5
+# move 3102011 2 0
+# face 3102011 "sad"
+# alpha 3102011 1 0.5
+# mask 3102011 on
+# textboxarrow 0 1
+@さやか
+ある意味めちゃくちゃ
+巻き込まれてたけどね…
+
+# emotionbody 1003 10 3401111 -80 180
+# effectpattern 1003 4 3
+# effectstart 1003
+# voice 4011 "madoka_0005"
+# alpha 3301511 0 0.5
+# move 3401111 4 0
+# face 3401111 "normal"
+# alpha 3401111 1 0.5
+# mask 3401111 on
+# textboxarrow 0 3
+@まどか
+あはは…ちょっと大変だったね
+
+# effectskip 1003
+# alpha 3102011 0 0.5
+# move 3501311 2 0
+# face 3501311 "usual"
+# alpha 3501311 1 0.5
+# mask 3501311 on
+# textboxarrow 0 1
+@ほむら
+魔女が消えた今では
+そんなこと考えるだけ無駄よ
+
+# alpha 3501311 0 0.5
+# move 3501411 2 0
+# face 3501411 "usual"
+# alpha 3501411 1 0.5
+# mask 3501411 on
+# textboxarrow 0 1
+@マミ
+魔女が何してるかなんて
+私達にわかる訳ないわ
+
+# voice 4011 "madoka_0028"
+# face 3401111 "sad"
+# textboxarrow 0 3
+@まどか
+そう…だよね
+でも、なんだか…
+
+# alpha 3501411 0 0.5
+# move 3102011 2 0
+# face 3102011 "angry"
+# alpha 3102011 1 0.5
+# mask 3102011 on
+# textboxarrow 0 1
+@さやか
+まどか、そんな終わったことを
+気にしてないで私達は
+元の目的を果たさなきゃ！
+
+# face 3401111 "angry"
+# textboxarrow 0 3
+@まどか
+あ、そうだよね！
+
+# alpha 3102011 0 0.5
+# move 3103811 2 0
+# face 3103811 "normal"
+# alpha 3103811 1 0.5
+# mask 3103811 on
+# textboxarrow 0 1
+@アルマス
+何したいかは知らないけど
+操られてた兵士が目を覚ましたら
+また面倒なことになるわよ？
+
+# alpha 3401111 0 0.5
+# move 3301511 4 0
+# face 3301511 "angry"
+# alpha 3301511 1 0.5
+# mask 3301511 on
+# textboxarrow 0 3
+@杏子
+全員ぶっ飛ばしてもいいけど
+それはそれで骨が折れるしな
+
+# voice 5014 "mami_0011"
+# alpha 3103811 0 0.5
+# move 3501411 2 0
+# face 3501411 "angry"
+# alpha 3501411 1 0.5
+# mask 3501411 on
+# textboxarrow 0 1
+@マミ
+物騒なこと言わないの
+ほら、行きましょう？
+
+# voice 4011 "madoka_0003"
+# alpha 3301511 0 0.5
+# move 3401111 4 0
+# face 3401111 "normal"
+# alpha 3401111 1 0.5
+# mask 3401111 on
+# textboxarrow 0 3
+@まどか
+うん
+じゃあ、マスターまたあとで！

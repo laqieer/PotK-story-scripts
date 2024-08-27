@@ -1,0 +1,431 @@
+;;-----------------------------------------
+;;【ファントムオブキル】暴走クエストシナリオ後半
+;;【ED】
+;;スクリプト最後の背景：インテグラルノア編地上
+;;背景：黒
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm409" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;カリス・聖鎖・アザゼル
+# body 5602511
+# pos 5602511 3
+# scale 5602511 0.8 0
+# layer 5602511 2
+# alpha 5602511 0 0
+# mask 5602511 off
+;;ヘレナ
+# body 5302811
+# pos 5302811 3
+# scale 5302811 0.8 0
+# layer 5302811 2
+# alpha 5302811 0 0
+# mask 5302811 off
+;;ソロモン
+# body 5503111
+# pos 5503111 3
+# scale 5503111 0.8 0
+# layer 5503111 3
+# alpha 5503111 0 0
+# mask 5503111 off
+;;グランテピエ・獣刻・バハムート
+# body 5303411
+# pos 5303411 3
+# scale 5303411 0.8 0
+# layer 5303411 2
+# alpha 5303411 0 0
+# mask 5303411 off
+;;ムー
+# body 161
+# pos 161 3
+# scale 161 0.6 0
+# layer 161 2
+# alpha 161 0 0
+# mask 161 off
+;;-----------------------------------------
+;;シナリオカット一枚絵
+# imageset 0 "integral_side03"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;【ED】
+;;背景：黒
+;;モノローグ（グランテピエ）
+# move 5303411 3 0
+# face 5303411 "sad"
+# alpha 5303411 1 0
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 5303411 off
+@グランテピエ
+結局は、何もわかってない
+
+;;モノローグ（グランテピエ）
+# textboxarrow 0 0
+@グランテピエ
+何もできてすらいないのかもしれない
+
+;;モノローグ（グランテピエ）
+# textboxarrow 0 0
+@グランテピエ
+終焉を止めるには
+結局どうしたらいいのだろう
+
+;;モノローグ（グランテピエ）
+# textboxarrow 0 0
+@グランテピエ
+妹…あの子が幸せに暮らせる
+世界を取り戻すには…
+
+# face 5303411 "normal"
+# textboxarrow 0 2
+# textwindow "normal"
+@グランテピエ
+でも、可能性の種は蒔いた、かな
+
+;;モノローグ（グランテピエ）
+# move 5303411 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 5303411 off
+@グランテピエ
+それに、もっと知る必要がある
+
+;;モノローグ（グランテピエ）
+# textboxarrow 0 0
+@グランテピエ
+終焉について
+今のこの世界について
+そして…
+
+# textboxarrow 0 2
+# textwindow "normal"
+@グランテピエ
+新しい、家族について
+
+;;演出：明転
+;;背景：インテグラルノア編地上
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1.2
+
+# background "in_underwild"
+# alpha 5303411 0 0
+# move 5602511 1 0
+# face 5602511 "normal"
+# alpha 5602511 1 0
+# mask 5602511 on
+# move 5503111 3 0
+# face 5503111 "normal"
+# alpha 5503111 1 0
+# mask 5503111 on
+# move 5302811 5 0
+# face 5302811 "usual"
+# alpha 5302811 1 0
+# mask 5302811 on
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# bgmfile "bgm463_464_block" "BgmIntegralNoahDisrupters" 0
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 550311 "solomon_di_0017"
+@ソロモン
+であれば、暴走は終焉と関係が？
+
+# textboxarrow 0 3
+# voice 530281 "herena_di_0028"
+@ヘレナ
+アロンダイトとかはそうだけど
+他がどうかはわからないね？
+
+# face 5602511 "sad"
+# textboxarrow 0 1
+# voice 560251 "chalice_di_0028"
+@カリス
+うーん、難しいことはわかんない…
+
+# face 5302811 "normal"
+# textboxarrow 0 3
+# voice 530281 "herena_di_0007"
+@ヘレナ
+実はヘレナ達も終焉に
+関係しているのかも…くふっ
+
+# face 5503111 "surprise"
+# textboxarrow 0 2
+# voice 550311 "solomon_di_0022"
+@ソロモン
+えっ！
+
+# face 5602511 "normal"
+# textboxarrow 0 1
+# voice 560251 "chalice_di_0022"
+@カリス
+ヘレナは関係ないって～
+
+# face 5503111 "angry"
+# textboxarrow 0 2
+# voice 550311 "solomon_di_0012"
+@ソロモン
+そ、そうよね
+わかりづらい冗談はやめて！
+
+# alpha 5602511 0 0.5
+# alpha 5503111 0 0.5
+# alpha 5302811 0 0.5
+# move 161 2 0
+# alpha 161 1 0.5
+# mask 161 on
+# textboxarrow 0 1
+# move 5303411 4 0
+# face 5303411 "sad"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# voice 9953 "mwu_0027"
+@ムー
+見事にバラバラだな
+
+# textboxarrow 0 3
+@グランテピエ
+…………
+
+# textboxarrow 0 1
+@ムー
+どうした、グラ
+
+# textboxarrow 0 3
+@グランテピエ
+冷静に考えるとね、
+この状況って絶望的、かな
+
+# textboxarrow 0 3
+@グランテピエ
+絶対のぜーったいに無理だって
+思っちゃう自分がいるの
+
+# face 5303411 "normal"
+# textboxarrow 0 3
+@グランテピエ
+でも、ひとりじゃないって
+希望に満ち溢れてるなって思うの
+
+# textboxarrow 0 3
+@グランテピエ
+だから、これからもずっと…
+終焉を打ち破る日が来るまで
+一緒に戦ってほしい、かな
+
+# se "bgm462_switch_3"
+# alpha 161 0 0.5
+# alpha 5303411 0 0.5
+# move 5602511 1 0
+# face 5602511 "normal"
+# alpha 5602511 1 0.5
+# mask 5602511 on
+# move 5503111 3 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# move 5302811 5 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 3
+# voice 530281 "herena_di_0004"
+@ヘレナ
+テピ姉さんは
+変なところで甘え下手だよね
+
+# textboxarrow 0 1
+# voice 560251 "chalice_di_0005"
+@カリス
+お姉ちゃんだって
+甘えてもいいんだよ、グラ姉
+
+# face 5503111 "happy"
+# textboxarrow 0 2
+# voice 550311 "solomon_di_0005"
+@ソロモン
+そもそも、家族だと言い出したのは
+グランお姉様じゃありませんか
+
+# textboxarrow 0 2
+@ソロモン
+改めて言われなくても
+お付き合いしますよ
+
+# textboxarrow 0 1
+# voice 560251 "chalice_di_0009"
+@カリス
+もー、ソロモン
+家族なら敬語はいらないよ！
+
+# alpha 5602511 0 0.5
+# alpha 5503111 0 0.5
+# alpha 5302811 0 0.5
+# move 5303411 3 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# textboxarrow 0 2
+@グランテピエ
+みんな…
+
+# move 5302811 2 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 1
+# move 5303411 4 0.5
+# mask 5303411 on
+# voice 530281 "herena_di_0032"
+@ヘレナ
+神をも超えるヘレナの力
+テピ姉さんのためになら
+つかってあげてもいいぞ
+
+# face 5303411 "happy"
+# textboxarrow 0 3
+@グランテピエ
+ふふ…
+みんな、お願いね
+
+# textboxarrow 0 3
+@グランテピエ
+暴走してる子達も
+止めてあげたいし！
+
+# alpha 5302811 0 0.5
+# move 5602511 2 0
+# face 5602511 "normal"
+# alpha 5602511 1 0.5
+# mask 5602511 on
+# textboxarrow 0 1
+# voice 560251 "chalice_di_0026"
+@カリス
+それはたくさんいるかも…
+
+# alpha 5602511 0 0.5
+# alpha 5303411 0 0.5
+# move 5503111 3 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 off
+# textboxarrow 0 2
+# voice 550311 "solomon_di_0028"
+@ソロモン
+アロンダイト達が
+増やしている可能性も…
+
+# alpha 5503111 0 0.5
+# move 5302811 3 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 off
+# textboxarrow 0 2
+# voice 530281 "herena_di_0002"
+@ヘレナ
+そういえば、上の世界に
+行くって言ってたけど
+天上世界のことだよね？
+
+# alpha 5302811 0 0.5
+# move 5503111 2 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# move 5303411 4 0
+# face 5303411 "sad"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# textboxarrow 0 3
+@グランテピエ
+天上世界で暴走のキル姫を
+増やされたら大変だよね
+
+# textboxarrow 0 1
+# voice 550311 "solomon_di_0003"
+@ソロモン
+すぐに向かうべきだわ
+天上世界に
+
+# alpha 5503111 0 0.5
+# move 5602511 2 0
+# face 5602511 "happy"
+# alpha 5602511 1 0.5
+# mask 5602511 on
+# textboxarrow 0 1
+# voice 560251 "chalice_di_0006"
+@カリス
+天上世界もカリスちゃんの
+ミラクルで救っちゃうよ！
+
+# face 5303411 "normal"
+# textboxarrow 0 3
+@グランテピエ
+うん、みんなで
+天上世界に行こう！
+
+# textboxarrow 0 3
+@グランテピエ
+もう1人
+迎えに行きたい子もいるしね
+
+# alpha 5602511 0 0.5
+# move 161 2 0
+# alpha 161 1 0.5
+# mask 161 on
+# textboxarrow 0 1
+# voice 9953 "mwu_0003"
+@ムー
+ああ、あいつか
+迎えに行くって約束したもんな
+
+# textboxarrow 0 3
+@グランテピエ
+うん、やっぱりひとりぼっちは
+寂しいと思うし
+この世界の状態も確かめられたし
+
+;;モノローグ（グランテピエ）
+# move 5303411 4 0
+# textboxarrow 0 0
+# textwindow "moya"
+@グランテピエ
+すべての物事には終わりがある
+終焉を迎える…それが、理
+
+# textboxarrow 0 3
+# textwindow "normal"
+@グランテピエ
+でも…
+
+;;シナリオカット表示
+#setnextbgmblock 2
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# alpha 161 0 0
+# alpha 5303411 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 0
+# textwindow "normal"
+@グランテピエ
+私達はその理を打ち破る
+『ディスラプターズ』
+
+# textboxarrow 0 0
+@グランテピエ
+終焉を止めてみせる
+絶対のぜーったいに、ね

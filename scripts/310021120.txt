@@ -1,0 +1,518 @@
+;;-----------------------------------------
+;;SEA1章_12
+;;-----------------------------------------
+# script "lisp"
+# background "mayor_room"
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+;;-----------------------------------------
+;;ゼロ
+# body 23
+# pos 23 2
+# scale 23 0.8 0
+# layer 23 2
+# mask 23 off
+# alpha 23 0 0
+# body 1100211
+# alpha 1100211 0 0
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 3
+# mask 270 off
+# alpha 270 0 0
+;;レーヴァテイン
+# body 41002002
+# pos 41002002 1
+# scale 41002002 0.7 0
+# layer 41002002 5
+# mask 41002002 off
+# alpha 41002002 0 0
+;;市長
+# body 277
+# pos 277 4
+# scale 277 0.8 0
+# layer 277 3
+# mask 277 off
+# alpha 277 0 0
+;;与一
+# body 6400511
+# pos 6400511 3
+# scale 6400511 0.8 0
+# layer 6400511 4
+# mask 6400511 off
+# alpha 6400511 0 0
+;;蜻蛉切
+# body 302411
+# pos 302411 5
+# scale 302411 0.8 0
+# layer 302411 2
+# mask 302411 off
+# alpha 302411 0 0
+;;グングニル
+# body 300841
+# pos 300841 3
+# scale 300841 0.8 0
+# layer 300841 2
+# mask 300841 off
+# alpha 300841 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagescale 1 1.2 0
+# imagelayer 1 1
+;;-----------------------------------------
+;;背景：市長の部屋
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+#setnextbgmblock 1
+# face 23 "angry_2"
+# face 277 "angry"
+# alpha 23 1 0.5
+# alpha 277 1 0.5
+# waitandnext 1
+
+# sedelay "bgm602_basic_on" 1
+# sedelay "bgm602_rhythm_on_1" 1
+# sedelay "bgm602_tension_on" 1
+# voice 11002 "laevateinm_0009"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ゼロ
+くそっ！
+そういう絡繰りか…
+おい市長！
+
+# textboxarrow 0 3
+@市長
+知らない…！
+九つ目の門なんて私は知らない
+本当だ、信じてくれ…！
+
+# voice 11002 "laevateinm_0013"
+# face 23 "angry_1"
+# textboxarrow 0 1
+@ゼロ
+チッ…
+グングニルは知ってやがったな
+
+# textboxarrow 0 1
+@ゼロ
+道理であっさり退いたわけだ
+あいつは「最後の門番」として
+今頃、最後の門を守っている
+
+# textboxarrow 0 1
+@ゼロ
+上等だ
+絶対に見つけ出してやるぞ！
+
+;;ゼロが飛び出す
+# move 23 1 0.5
+# alpha 23 0 0.3
+# se "SE_6215"
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 277 0 0.3
+# face 270 "normal"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+ゼロさん、無闇に探しても…
+ああ、行ってしまわれました
+
+# voice 9917 "mimir_navikan_0001"
+# textboxarrow 0 2
+@ミーミル
+マスター様、私達は――
+
+;;蜻蛉切が入ってくる
+# se "bgm602_tension_on_1"
+# se "bgm602_rhythm_on_1"
+# move 270 2 0.5
+# move 302411 4 0.5
+# face 302411 "normal"
+# alpha 302411 1 0.3
+# se "SE_5575"
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@蜻蛉切
+皆、無事なの！？
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+蜻蛉切さん
+どうしてこちらに？
+
+# textboxarrow 0 3
+@蜻蛉切
+町の外にいた人達が集まって
+北門を押さえてくれたから、
+動けるようになったのよ
+
+# textboxarrow 0 3
+@蜻蛉切
+…って、そなた達に言っても
+何のことか分からないわよね
+それよりもっ
+
+# textboxarrow 0 3
+@蜻蛉切
+ゼロが凄い顔して
+飛び出していったんだけど
+今、どういう状況なの？
+
+# textboxarrow 0 3
+@蜻蛉切
+レーヴァテインは…
+
+# move 270 1 0.5
+# alpha 270 0 0.3
+# move 41002002 2 0.5
+# alpha 41002002 1 0.3
+# textboxarrow 0 1
+@レーヴァテイン
+…………
+
+# voice 3024 "tonbokiri_0023"
+# face 302411 "surprise"
+# textboxarrow 0 3
+@蜻蛉切
+小さいままじゃない！
+それに、苦しそうよ…
+
+# move 270 2 0.5
+# face 270 "normal"
+# alpha 270 1 0.3
+# move 41002002 1 0.5
+# alpha 41002002 0 0.3
+# textboxarrow 0 1
+@ミーミル
+蜻蛉切さん、実は…
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# face 270 "normal"
+# face 302411 "sad"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 3024 "tonbokiri_0040"
+# textwindow "nomal"
+# textboxarrow 0 3
+@蜻蛉切
+それでゼロが飛び出していったのね
+九つ目の門なんて言われても…
+
+# textboxarrow 0 3
+@蜻蛉切
+困ったわね
+私、この町に
+そこまで長く住んでいないのよ
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+えっ？
+そうだったんですか
+私、長く住んでおられるものとばかり
+
+# face 302411 "normal"
+# textboxarrow 0 3
+@蜻蛉切
+与一達よりずっと後よ
+この町が要塞都市になってから
+訪れたんだもの
+
+# voice 3024 "tonbokiri_0004"
+# face 302411 "happy"
+# textboxarrow 0 3
+@蜻蛉切
+それまではあちこち
+転々としてたんだけど、
+おでんが美味しいからついつい…
+
+# face 302411 "normal"
+# textboxarrow 0 3
+@蜻蛉切
+いや、そんなことどうでもいいわ！
+とにかく、あまり詳しくないからっ
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+それは、失礼致しました…
+
+# textboxarrow 0 1
+@ミーミル
+初めてお会いしたとき、ゼロさんが
+知らなかった場所もご存知だったので
+詳しいものとばかり
+
+# face 302411 "surprise"
+# textboxarrow 0 3
+@蜻蛉切
+ゼロが知らなかった場所？
+何のこと？
+
+# textboxarrow 0 1
+@ミーミル
+町の中心にあるオブジェの中です
+あそこが空洞になっていると
+ゼロさんはご存知なくて
+
+# se "bgm602_tension_on"
+# face 302411 "normal"
+# textboxarrow 0 3
+@蜻蛉切
+ああ
+あそこは私も偶然見つけたの
+
+# textboxarrow 0 3
+@蜻蛉切
+随分前に、グングニルが
+中に入っていくのを見かけたのよ
+それで、中に入れるんだって知ったわ
+
+# voice 9917 "mimir_navikan_0023"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+グングニルさんがっ？
+
+# voice 9917 "mimir_navikan_0001"
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+マスター様、もしかして…
+
+# textboxarrow 0 3
+@蜻蛉切
+あ！そうよ
+あのオブジェの中、
+詳しく調べてみた方が良さそうね
+
+# textboxarrow 0 3
+@蜻蛉切
+そなた達はゼロと合流してから
+オブジェに向かいなさい
+
+# textboxarrow 0 1
+@ミーミル
+蜻蛉切さんはどちらに？
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# textboxarrow 0 3
+@蜻蛉切
+私は、ちょっと活を入れてくるわ
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：町
+# background "006_town"
+# se "SE_6193"
+# alpha 270 0 0
+# alpha 302411 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 6400511 "sad"
+# alpha 6400511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@与一
+はぁ…
+
+# textboxarrow 0 2
+@与一
+みんな遅いな…
+レーヴァテインさん、
+元の姿に戻れたのかな…？
+
+# textboxarrow 0 2
+@与一
+与一はいつまで、
+この門を押さえていれば
+いいんだろう…
+
+;;回想シーン
+# fadeout "white" 0.5
+# se "SE_0742"
+# waitandnext 0.5
+
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 6400511 0 0
+# textwindow "close"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 300841 "angry"
+# alpha 300841 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@グングニル
+ならば、そなたは門が閉じぬよう、
+ここで押さえておく役くらいが
+お似合いだ
+
+;;回想終了
+# fadeout "white" 0.5
+# se "SE_11762"
+# waitandnext 0.5
+
+# imagealpha 1 0 0
+# alpha 300841 0 0
+# textwindow "close"
+# fadein "white" 0.5
+# waitandnext 1
+
+# voice 4005 "yoichi_0015"
+# move 302411 5 0
+# layer 302411 4
+# mask 302411 on
+# layer 6400511 2
+# face 6400511 "sad"
+# alpha 6400511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@与一
+あうぅ…
+
+# move 302411 4 0.5
+# face 302411 "normal"
+# alpha 302411 1 0.3
+# move 6400511 2 0.5
+# textboxarrow 0 3
+@蜻蛉切
+情けない顔をしているわね、与一
+
+# bgm "bgm005" 0
+# face 6400511 "surprise"
+# textboxarrow 0 1
+@与一
+蜻蛉切さん！？
+北門は大丈夫なんですかっ？
+
+# textboxarrow 0 1
+@与一
+あっ
+レーヴァテインさんが元に戻ったから
+門を押さえている必要が――
+
+# textboxarrow 0 3
+@蜻蛉切
+残念だけど、レーヴァテインは
+小さいままよ
+
+# face 6400511 "sad"
+# textboxarrow 0 1
+@与一
+そ、そうですか…
+八つの門を全て開けたのに…
+
+# textboxarrow 0 3
+@蜻蛉切
+もう一つ、あるらしいのよ
+九つ目の門が
+
+# face 6400511 "surprise"
+# textboxarrow 0 1
+@与一
+えええええ…！？
+そんなの、ずるいですよぉ…
+
+# textboxarrow 0 3
+@蜻蛉切
+…その様子だと、
+本当に何も知らなかったのね
+
+# face 6400511 "sad"
+# textboxarrow 0 1
+@与一
+知りませんよぉ…
+与一が何を知ってると
+思っていたんですかっ
+
+# textboxarrow 0 3
+@蜻蛉切
+与一
+そなた、この町に長く
+住んでいるわよね
+
+# textboxarrow 0 1
+@与一
+は、はい…
+
+# textboxarrow 0 3
+@蜻蛉切
+そして、レーヴァテインに対し
+思うところがあるわね
+
+# voice 4005 "yoichi_0024"
+# face 6400511 "shy"
+# textboxarrow 0 1
+@与一
+はぅ！
+それは…何と言いますか…
+その…はい
+
+# textboxarrow 0 3
+@蜻蛉切
+ふぅ…
+与一、これは私のお節介なんだけど
+
+# textboxarrow 0 3
+@蜻蛉切
+そなたが望むなら、ここの門を
+押さえる役目を代わってあげる
+
+# textboxarrow 0 3
+@蜻蛉切
+グングニルは恐らく町の中心にある
+オブジェの中にいるわ
+きっと、そこに最後の門がある
+
+# textboxarrow 0 3
+@蜻蛉切
+レーヴァテインを助ける役目
+そなたが為すべきではないの？
+
+# textboxarrow 0 3
+@蜻蛉切
+どうする、与一
+
+# face 6400511 "sad"
+# textboxarrow 0 1
+@与一
+与一は…
+
+# fadeout "black" 0.5
+# waitandnext 0.5

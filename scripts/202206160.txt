@@ -1,0 +1,541 @@
+;;-----------------------------------------
+;;ウェディングイベント6_0
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgm "stop"
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# mask 196 off
+# alpha 196 0 0
+;;グランテピエ・獣刻・バハムート
+# body 5303411
+# pos 5303411 3
+# scale 5303411 0.8 0
+# layer 5303411 2
+# mask 5303411 off
+# alpha 5303411 0 0
+;;グラーシーザ feat. 笑顔の花は雨上がりの後に
+# body 6302611
+# pos 6302611 3
+# scale 6302611 0.8 0
+# layer 6302611 2
+# mask 6302611 off
+# alpha 6302611 0 0
+;;-----------------------------------------
+;;ウェディンググラーシーザシナリオカット
+# imageset 2 "SEA6302611"
+# imagelayer 2 3
+# imagealpha 2 0 0
+;;-----------------------------------------
+;;背景：街中
+# se "SE_6117"
+# envbody 1001 1 0
+# effectpattern 1001 1 0
+# effectstart 1001
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textflame 0 0
+# textwindow "nomal"
+@
+雨降る中、青い髪の少女がふたり
+紫陽花が咲き誇る街に現れる
+
+;;演出：アルマス、グランテピエ立ち絵表示
+# bgm "bgm002" 0
+# move 5303411 2 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+@グランテピエ
+そうなんだアルマスは
+前にこの街に来たことがあるんだね
+
+# voice 9943 "almace_navikan_0048"
+# face 196 "happy"
+# textboxarrow 0 3
+@アルマス
+そうよ、お姉ちゃんに振られて
+遊びに来て…アルバイトしてたの
+
+# voice 530341 "grandepieu_di_0014"
+# face 5303411 "sad"
+# textboxarrow 0 1
+@グランテピエ
+もう、あの時のことは
+ごめんなさいって言ったのに～
+
+# voice 9943 "almace_navikan_0006"
+# textboxarrow 0 3
+@アルマス
+ふふ、ちょっとイジワル
+
+# face 5303411 "normal"
+# textboxarrow 0 1
+@グランテピエ
+私も来たことがあってね
+あの時の前にも大雨で水害があって…
+
+# textboxarrow 0 1
+@グランテピエ
+その時に紫陽花を見つけて
+街に持っていったら有名になったの
+
+# voice 530341 "grandepieu_di_0004"
+# face 5303411 "happy"
+# textboxarrow 0 1
+@グランテピエ
+森の中でみつけたんだけど…
+ふふ、懐かしいなぁ
+
+# voice 9943 "almace_navikan_0035"
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+え、それって…
+
+;;？？？（グラーシーザ立ち絵無し）
+# serif 1
+@？？？
+おーい！
+
+;;モノローグ
+# bgm "stop"
+# sestop "SE_6117"
+# serif 1
+# textwindow "close"
+# serif 0
+# effectskip 1001
+# alpha 5303411 0 0.5
+# alpha 196 0 0.5
+# textflame 0 0
+@
+元気な声がふたりに届く
+それと同時に雲が割れ、
+辺りに陽が差していく
+
+;;演出：明転
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;演出：グラーシーザシナリオカット
+# bgmfile "bgm334" "BgmWedding001" 0
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "normal"
+@グラーシーザ
+げんきにしてたかアルマス！
+
+# voice 9943 "almace_navikan_0036"
+# textboxarrow 0 0
+@アルマス
+グラーシーザ！
+私は私でいろいろあったけど…って
+そのドレス何！？結婚！？
+
+# voice 3026 "grayside_0005"
+# textboxarrow 0 0
+@グラーシーザ
+ふふふ、どうだ
+あたしのデザインしたドレスは
+なかなかのものだろう！
+
+# textboxarrow 0 0
+@アルマス
+デザインは素敵だけど…
+
+# textboxarrow 0 0
+@グラーシーザ
+これはプランニングの
+ためのしちゃくだ！
+
+# textboxarrow 0 0
+@アルマス
+あなたが着てどうするのよ！
+
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# background "town"
+# move 6302611 3 0
+# face 6302611 "happy"
+# mask 6302611 off
+# alpha 6302611 1 0
+# imagealpha 2 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;背景：街中
+;;演出：グラーシーザのみWD立ち絵
+# textboxarrow 0 2
+# textwindow "normal"
+@グラーシーザ
+ふふん
+あたしじしんがこうこくとうだからな
+
+# voice 9943 "almace_navikan_0006"
+# alpha 6302611 0 0.5
+# move 5303411 2 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# move 196 4 0
+# face 196 "happy"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+聞いたわよ、斬新なアイデアの
+ウェディングプランナーがいるって
+やっぱりグラーシーザだったのね
+
+# textboxarrow 0 1
+@グランテピエ
+ウェディングドレスを着てる
+ウェディングプランナーさんは…
+たしかに斬新、かな
+
+# alpha 5303411 0 0.5
+# alpha 196 0 0.5
+# move 6302611 3 0
+# face 6302611 "normal"
+# mask 6302611 off
+# alpha 6302611 1 0.5
+# textboxarrow 0 2
+@グラーシーザ
+グランテピエと一緒ということは…
+そうか、よかったなアルマス
+
+# emotionbody 1000 2 5303411 10 290
+# effectpattern 1000 1 1
+# effectstart 1000
+# alpha 6302611 0 0.5
+# move 5303411 2 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+@グランテピエ
+何が良かったのかな？
+
+# textboxarrow 0 3
+@アルマス
+別に、お姉ちゃんには関係ないわ
+
+# voice 3026 "grayside_0004"
+# alpha 5303411 0 0.5
+# move 6302611 2 0
+# face 6302611 "normal"
+# alpha 6302611 1 0.5
+# mask 6302611 on
+# textboxarrow 0 1
+@グラーシーザ
+ふふ、そこはかわらずか
+
+# emotionbody 2000 6 196 50 250
+# effectpattern 2000 1 1
+# effectstart 2000
+# voice 9943 "almace_navikan_0019"
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+もう！
+グラーシーザはだまってて！
+
+# serif 1
+@女性
+アルマスさん…？
+
+# face 196 "happy"
+# textboxarrow 0 3
+@アルマス
+あなたは…
+
+;;モノローグ
+# textflame 0 0
+@
+かつてアルマスがアルバイトで
+プランを担当した新郎新婦…
+
+# textflame 1 1
+# textboxarrow 0 1
+@グラーシーザ
+ああ、子も生まれた
+
+# serif 1
+@女性
+アルマスさんの名前をもらって
+アル、と名付けたんです
+
+# serif 1
+@男性
+あの後、式にもいらっしゃらなくて
+でも俺達の気持ちを伝えていきたい
+ってこの子の名前にしたんです
+
+# face 196 "sad"
+# textboxarrow 0 3
+@アルマス
+あの時はごめんなさい
+私もするべきことを見つけて…
+
+# serif 1
+@男性
+わかります、俺もあの出来事で
+街の紫陽花を復興しようって思って
+紫陽花農家になったんです
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 1
+@グラーシーザ
+デオンのようにうでのいい
+あじさいしょくにんといったところだ
+
+# face 196 "happy"
+# textboxarrow 0 3
+@アルマス
+そうなんだ…
+
+# alpha 6302611 0 0.5
+# move 5303411 2 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# textboxarrow 0 1
+@グランテピエ
+アルマスの思いが種になって
+この街に芽吹いたんだね
+
+# textboxarrow 0 3
+@アルマス
+そう言われると恥ずかしいけど…
+でも、すごく嬉しいわね
+
+;;モノローグ
+# textflame 0 0
+@
+雨上がりの晴れ渡った空の下
+笑顔が花開く
+
+;;できればもやもやフレームで
+# move 196 4 0
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+@アルマス
+うん、もう寂しくなんかない
+
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+やっぱり私、雨も好きかも！
+
+# alpha 5303411 0 0.5
+# alpha 196 0 0.5
+# move 6302611 3 0
+# face 6302611 "normal"
+# mask 6302611 off
+# alpha 6302611 1 0.5
+# textboxarrow 0 2
+@グラーシーザ
+雨ふって、地かたまるだな！
+
+# emotionbody 3000 2 5303411 10 290
+# effectpattern 3000 1 1
+# effectstart 3000
+# alpha 6302611 0 0.5
+# move 5303411 2 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "happy"
+# alpha 196 1 0.5
+# mask 196 on
+@グランテピエ
+どういうこと、かな？
+
+# textboxarrow 0 3
+@アルマス
+お姉ちゃんには内緒！
+
+;;モノローグ
+# textflame 0 0
+@
+グランテピエに対し
+まだまだ素直になれない
+アルマスだった
+
+;;余韻のため3秒くらいの画面フェード
+;;演出：暗転
+;;背景：黒
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# fadeout "black" 3
+# waitandnext 3
+
+# textwindow "close"
+# background "bg_black"
+# alpha 5303411 0 0
+# alpha 196 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textwindow "normal"
+@
+～こぼれ話～
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "town"
+# move 5303411 2 0
+# face 5303411 "normal"
+# alpha 5303411 1 0
+# mask 5303411 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0
+# mask 196 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;背景：街中
+# bgm "bgm003" 0
+# voice 9943 "almace_navikan_0001"
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+そういえばさ
+お姉ちゃんはどうして私と
+この街に来たかったの？
+
+# voice 530341 "grandepieu_di_0004"
+# face 5303411 "happy"
+# textboxarrow 0 1
+@グランテピエ
+紫陽花の青がね、アルマスに似て
+すごく綺麗だな～って思ったの
+それを一緒に見たいなって、ね
+
+# face 196 "shy"
+# textboxarrow 0 3
+@アルマス
+恥ず！
+面と向かって言われるの
+絶・恥ずかしいんだけど！
+
+# face 5303411 "normal"
+# textboxarrow 0 1
+@グランテピエ
+そんなことないよ？
+
+# textboxarrow 0 1
+@グランテピエ
+それに、紫陽花の花言葉は…
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+浮気？冷淡？無常？
+辛抱強い愛は私に合わないわよ？
+
+# textboxarrow 0 1
+@グランテピエ
+ううん
+家族団らん、かな
+
+# textboxarrow 0 1
+@グランテピエ
+紫陽花のお花…本当は『がく』ね
+あの青が寄り添ってるのが
+由来らしいんだけど…
+
+# textboxarrow 0 1
+@グランテピエ
+お姉ちゃんとアルマスみたい、かな
+って思って…
+
+# voice 9943 "almace_navikan_0026"
+# face 196 "sad"
+# textboxarrow 0 3
+@アルマス
+うぅ…
+
+# textboxarrow 0 1
+@グランテピエ
+それに、集まる真の藍と書いて
+『あづさあい』が紫陽花の語源
+って説もあって…
+
+# textboxarrow 0 1
+@グランテピエ
+それも私達みたいだなって
+…アルマスはそう思わない、かな？
+
+;;できればもやもやフレームで
+# move 196 4 0
+# textboxarrow 0 0
+# textwindow "moya"
+@アルマス
+…思うわよ
+
+# emotionbody 4000 2 5303411 10 290
+# effectpattern 4000 1 1
+# effectstart 4000
+# face 5303411 "surprise"
+# textboxarrow 0 1
+# textwindow "normal"
+@グランテピエ
+？
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+なんでもないわよ！
+
+;;モノローグ
+# textflame 0 0
+@
+アルマスが素直になるのは
+はてさて、いつの日か
+
+# fadeout "black" 2
+# waitandnext 2

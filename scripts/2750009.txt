@@ -1,0 +1,436 @@
+;;【PUNK】真エンド
+;;//背景白
+;;//真理の扉が浮かんでいる
+# script "lisp"
+# background "dimensions"
+# bgm "bgm004" 0
+# imageset 0 "bg_white"
+# imagescale 0 10 0
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# imageset 1 "e170201_5"
+# imagescale 1 0.75 0
+# imagealpha 1 0 0
+# body 103211
+# pos 103211 1
+# alpha 103211 0 0
+# body 601211
+# pos 601211 1
+# scale 601211 0.8 0
+# mask 601211 off
+# layer 601211 4
+# alpha 601211 0 0
+# textwindow "close"
+# waitandnext 1.2
+
+# se "SE_4779"
+# fadein "white" 2
+# imagealpha 1 1 1
+# imagepos 1 0 0
+# alpha 601211 1 1
+# waitandnext 2.5
+
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 6012 "uroboros_0021"
+# chara 601211
+# face 601211 "surprise"
+@ウロボロス
+ほう
+人間の身でありながら、
+ここに辿り着いたか
+
+# voice 6012 "uroboros_kyara_1001"
+# chara 601211
+# face 601211 "smile"
+@ウロボロス
+また会うたな
+我はウロボロス
+運命の見届け人じゃ
+
+# chara 601211
+# face 601211 "normal"
+@ウロボロス
+ここまで来た、うぬの意志の
+強さは認めてやろう
+願いはなんじゃ？
+
+# select "レナを助けたい" "select_label_01" "全てを守りたい" "select_label_02"
+ここまで来た、うぬの意志の
+強さは認めてやろう
+願いはなんじゃ？
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textboxarrow 0 1
+# chara 601211
+# face 601211 "amazed"
+@ウロボロス
+やはりそれか…
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textboxarrow 0 1
+# chara 601211
+# face 601211 "surprise"
+@ウロボロス
+随分と大きく出たのう
+
+# label "select_label_end"
+# serif 0
+# textwindow "nomal"
+# voice 6012 "uroboros_0003"
+# chara 601211
+# face 601211 "normal"
+@ウロボロス
+そうじゃな
+今のうぬならこの扉を開くことも
+できよう
+
+# chara 601211
+@ウロボロス
+行って、せいぜいあがいて
+みるが良い
+その願いを叶えるために
+
+# voice 6012 "uroboros_0007"
+# chara 601211
+# face 601211 "smile"
+@ウロボロス
+餞別じゃ
+一つ良いことを教えてやる
+
+# chara 601211
+# face 601211 "normal"
+@ウロボロス
+この先にあるのは、うぬが旅した
+三つの世界が一時的に重なっておる
+世界じゃ
+
+# chara 601211
+@ウロボロス
+そこでなら、うぬの大それた願いも
+叶えることができるやもしれん
+
+# body 24
+# pos 24 1
+# scale 24 0.8 0
+# body 95
+# pos 95 5
+# scale 95 0.8 0
+# body 103311
+# pos 103311 1
+# scale 103311 0.8 0
+# body 601611
+# pos 601611 5
+# scale 601611 0.8 0
+# alpha 24 0 0
+# alpha 95 0 0
+# alpha 103311 0 0
+# alpha 601611 0 0
+# chara 601211
+# voice 6012 "uroboros_0004"
+# face 601211 "smile"
+@ウロボロス
+ゆめゆめ忘れるでないぞ
+では、行くが良い！
+
+# bgm "stop"
+# se "SE_4779"
+# fadeout "white" 2
+# waitandnext 3
+
+;;//扉が開く演出
+;;//背景次元の狭間
+;;出だし、各アプリで上手く繋がるように調整お願いします。
+;;ファンキル版
+# imagealpha 1 0 0
+# imagealpha 0 0 0
+# alpha 601211 0 0
+# alpha 601611 1 0
+# alpha 24 1 0
+# textflame 1 1
+# textboxarrow 0 3
+# bgmfile "bgm193" "Bgm3Tcollabo002" 1.5
+# fadein "white" 0.5
+# chara 601611
+# face 601611 "angry"
+# face 24 "sad"
+@レナ
+お願い…私を斬って！
+
+# select "レナ！望みを捨てるなっ" "select_label_03" "レナ！助かる方法はあるっ" "select_label_04"
+お願い…私を斬って！
+
+# label "select_label_03"
+# labeljump "select_label_end2"
+# textboxarrow 0 3
+# chara 601611
+# face 601611 "sad"
+@レナ
+%(userName)s
+…そんなの…辛いだけだよ
+
+# label "select_label_04"
+# labeljump "select_label_end2"
+# textboxarrow 0 3
+# chara 601611
+# face 601611 "sad"
+@レナ
+%(userName)s
+…そんなの…あるわけない
+
+# label "select_label_end2"
+# textboxarrow 0 1
+# chara 101411
+# face 24 "mad2"
+@ティルフィング
+%(userName)s
+下がって！…私がやります！
+
+;;//大きな揺れ
+# se "SE_0637"
+# textboxarrow 0 1
+# shakeloop 1
+# chara 101411
+# face 24 "surprise"
+@ティルフィング
+えっ…？空間が歪んで――
+
+# bgm "stop"
+# textboxarrow 0 3
+# chara 601611
+@レナ
+どうして…私はもう…終わりに――
+
+;;ファンキル版ここまで
+;;レイヴナー体内のもう一段深いところに落ちています。ここでティル、クロエ、サクラ以外とは別れることに。
+;;//暗転
+;;//背景次元の狭間（セピア調にできれば）
+# se "SE_5670"
+# fadeout "white" 2
+# waitandnext 3
+
+# shakestop
+# background "dimensions-sepia"
+# waitandnext 0.1
+
+;;//レナ
+# bgmfile "bgm197" "Bgm3Tcollabo002" 0
+# mask 601611 off
+# alpha 24 0 0
+# move 601611 3 0
+# fadein "white" 0.5
+# textboxarrow 0 2
+# chara 601611
+# face 601611 "normal"
+@？？？
+私が自我を持つようになったのは
+いつのことだったろう…
+
+# textboxarrow 0 2
+# chara 601611
+@？？？
+ほんの数日前のような気もするし
+遙か昔のことのようにも思う…
+
+# textboxarrow 0 2
+# chara 601611
+@？？？
+どっちにしろ、私は一人だった
+一人きりだった
+
+# textboxarrow 0 2
+# chara 601611
+@？？？
+たった一人でここにいた
+それが当たり前だったし寂しいという
+感情すら知らなかった
+
+# textboxarrow 0 2
+# chara 601611
+# face 601611 "sad"
+@？？？
+でも…あるとき小さな穴が開いた
+針の穴のように小さな小さな穴…
+
+# textboxarrow 0 2
+# chara 601611
+@？？？
+そんな小さな穴だったのに、私は
+そこから“外”を覗いてしまったんだ
+
+# textboxarrow 0 2
+# chara 601611
+@？？？
+“外”ではたくさんの人達が楽しそう
+に暮らしていた
+
+# textboxarrow 0 2
+# chara 601611
+@？？？
+色んな人がいて色んな繋がりがあった
+それを見ているうちに私の胸にも
+ポッカリ穴が開いてしまった
+
+# textboxarrow 0 2
+# chara 601611
+@？？？
+私は初めて“寂しい”と感じた
+“孤独”を知った
+だから願ってしまった
+
+# textboxarrow 0 2
+# chara 601611
+@？？？
+誰かと繋がりたいって
+
+# textboxarrow 0 2
+# chara 601611
+@？？？
+それが決して許されないことだとも
+知らずに――
+
+# fadeout "black" 2
+# imageset 2 "black"
+# imagescale 2 10 0
+# imagealpha 2 0 0
+# imagepos 2 0 0
+# waitandnext 2
+
+;;//背景黒
+# fadein "black" 0.5
+# imagealpha 2 1 0
+# move 24 3 0
+# alpha 95 1 0
+# alpha 103311 1 0
+# alpha 24 1 0
+# alpha 601611 0 0
+# layer 24 6
+# layer 95 5
+# layer 103311 4
+# face 24 "sad"
+# face 103311 "surprise2"
+# textboxarrow 0 3
+# chara 103211
+# face 95 "surprise"
+@サクラ
+あれーっ？
+せっかくハオウマルの召喚に成功した
+のに、どこ行っちゃったの！？
+
+# textboxarrow 0 3
+# voice 1032 "sakura_0013"
+# chara 103211
+# face 95 "angry"
+@サクラ
+あの不良もちっこい子も
+いなくなってるし…
+どうなってんのよー！
+
+# textboxarrow 0 1
+# chara 103311
+@クロエ
+サクラ！ティルフィングも！
+元に戻ったんですね！
+でも…ここはどこなんでしょう…？
+
+# textboxarrow 0 2
+# chara 101411
+@ティルフィング
+レナの…さらに深いところまで飲み
+込まれたようです…
+
+# textboxarrow 0 2
+# chara 101411
+@ティルフィング
+%(userName)s
+どうしてあんなことを？
+
+# select "これまでのことを話す" "select_label_05" "ウロボロスとの話を伝える" "select_label_06"
+%(userName)s
+どうしてあんなことを？
+
+# label "select_label_05"
+# labeljump "select_label_end3"
+# textboxarrow 0 2
+# face 103311 "usual"
+# chara 101411
+# face 24 "surprise"
+@ティルフィング
+そんなことが…
+
+# label "select_label_06"
+# labeljump "select_label_end3"
+# textboxarrow 0 3
+# face 103311 "usual"
+# chara 103211
+# face 95 "surprise"
+@サクラ
+あの、ちっこいの
+そんなすごい力持ってたの！？
+
+# label "select_label_end3"
+# textboxarrow 0 1
+# chara 103311
+@クロエ
+にわかには信じがたい話ですけれど…
+この状況がそもそも信じがたいもの
+ですし…
+
+# textboxarrow 0 1
+# chara 103311
+@クロエ
+貴方の話を信じるしかなさそうですね
+
+# textboxarrow 0 2
+# chara 101411
+# face 24 "angry"
+@ティルフィング
+それで…レナを助けるにはどうしたら
+良いんですかっ？
+
+;;大きな揺れ
+# se "SE_0637"
+# shake 1 2
+# textwindow "close"
+# face 24 "surprise"
+# face 95 "surprise"
+# face 103311 "surprise2"
+# waitandnext 2.5
+
+# fadein "black" 0.5
+# bgmfile "bgm195" "Bgm3Tcollabo002" 0
+# alpha 24 0 0
+# alpha 95 0 0
+# alpha 103311 0 0
+# layer 601611 4
+# alpha 601611 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+# chara 601611
+# face 601611 "mad"
+@レナ
+コンナトコロニイタ
+早ク終ワリニシヨウヨ…
+
+# textboxarrow 0 2
+# chara 601611
+@レナ
+アナタ達ガ殺シテクレナイナラ…
+私ガ、アナタ達ヲ殺スカラ！
+
+# alpha 24 1 0.5
+# alpha 95 1 0.5
+# alpha 103311 1 0.5
+# alpha 601611 0 0.3
+# face 24 "angry"
+# face 95 "usual"
+# textboxarrow 0 1
+# voice 1033 "chloe_battle_0006"
+# chara 103311
+# face 103311 "irregular"
+@クロエ
+いけない！
+ここは応戦するしかありませんっ

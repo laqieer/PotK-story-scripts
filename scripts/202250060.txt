@@ -1,0 +1,764 @@
+;;-----------------------------------------
+;;「スライム倒して３００年、知らないうちにレベルMAXになってました」コラボイベントシナリオ
+;;【ED】
+;;スクリプト最後の背景：森の中・朝
+;;背景：黒
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "stop"
+;;-----------------------------------------
+;;ティルフィング feat. はじまりの花に囲まれて
+# body 6101411
+# pos 6101411 3
+# scale 6101411 0.8 0
+# layer 6101411 2
+# alpha 6101411 0 0
+# mask 6101411 off
+;;アズサ
+# body 5105211
+# pos 5105211 3
+# scale 5105211 0.8 0
+# layer 5105211 3
+# alpha 5105211 0 0
+# mask 5105211 off
+;;ライカ
+# body 52001011
+# pos 52001011 3
+# scale 52001011 0.8 0
+# layer 52001011 2
+# alpha 52001011 0 0
+# mask 52001011 off
+;;ハルカラ
+# body 5604011
+# pos 5604011 3
+# scale 5604011 0.8 0
+# layer 5604011 2
+# alpha 5604011 0 0
+# mask 5604011 off
+;;ミストルティン
+# body 600621
+# pos 600621 3
+# scale 600621 0.8 0
+# layer 600621 2
+# alpha 600621 0 0
+# mask 600621 off
+;;ヴォータン
+# body 301711
+# pos 301711 3
+# scale 301711 0.8 0
+# layer 301711 2
+# alpha 301711 0 0
+# mask 301711 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;【ED】
+;;背景：黒
+# fadein "black" 1
+# textwindow "close"
+# waitandnext 1
+
+;;モノローグ
+# textflame 0 0
+# textwindow "nomal"
+@
+こうしてスローライフの日々は過ぎ…
+ついに別れの日がやってきた
+
+;;背景：平原・朝
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;演出：画面揺れ
+# shake 0 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# textwindow "normal"
+@
+転移装置の試作機を
+天にかざすアズサ
+
+# se "SE_9173"
+# se "SE_6230"
+# waitandnext 0.5
+
+;;モノローグ
+@
+すると、こちらの世界に
+やってきた時と同じように
+空中に穴が浮かび上がる
+
+# bgm "bgm003" 0
+# move 5604011 1 0
+# face 5604011 "normal"
+# alpha 5604011 1 0.5
+# mask 5604011 on
+# move 5105211 3 0
+# face 5105211 "normal"
+# alpha 5105211 1 0.5
+# mask 5105211 on
+# textflame 1 1
+# textboxarrow 0 2
+# move 52001011 5 0
+# face 52001011 "happy"
+# alpha 52001011 1 0.5
+# mask 52001011 on
+@アズサ
+それじゃあ…
+そろそろ行くね
+
+# textboxarrow 0 3
+@ライカ
+みなさん、お世話になりました
+
+# face 5604011 "happy"
+# textboxarrow 0 1
+@ハルカラ
+ミストルティンさん！
+ほんっとーにありがとう～！！
+
+;;モノローグ
+# textflame 0 0
+@
+そんな３人の姿を見つめる
+ミストルティンとヴォータン
+
+;;モノローグ
+@
+二人の瞳には、
+大粒の涙が浮かんでいた
+
+# voice 6006 "misutoru_0015"
+# alpha 5604011 0 0.5
+# alpha 5105211 0 0.5
+# alpha 52001011 0 0.5
+# move 600621 2 0
+# face 600621 "sad"
+# alpha 600621 1 0.5
+# mask 600621 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 301711 4 0
+# face 301711 "cry"
+# alpha 301711 1 0.5
+# mask 301711 on
+@ミストルティン
+す、すみません…
+泣かないって…決めてたのに
+
+# voice 3017 "wotan_0016"
+# textboxarrow 0 3
+@ヴォータン
+うっ…ううっ…！
+バカ、やめろミストルティン
+私まで…！　うわあああんっ！
+
+# move 600621 1 0.5
+# move 5105211 3 0
+# face 5105211 "normal"
+# alpha 5105211 1 0.5
+# mask 5105211 on
+# textboxarrow 0 2
+# move 301711 5 0.5
+@アズサ
+二人とも…
+
+;;モノローグ
+# textflame 0 0
+@
+声をあげて泣き出した二人の
+元にアズサはゆっくりと近づき、
+その頭を優しく撫でる
+
+;;モノローグ
+# se "SE_11618"
+@
+そして、二人をぎゅっと抱きしめた
+
+# textflame 1 1
+# textboxarrow 0 2
+@アズサ
+いつか二人も、
+私達の世界に遊びに来てね
+
+# voice 6006 "misutoru_0028"
+# face 600621 "worry"
+# textboxarrow 0 1
+@ミストルティン
+でも…そんな日が来るか…
+
+# textboxarrow 0 2
+@アズサ
+大丈夫、私は何年でも待つから
+
+# voice 510521 "azusa_0004"
+# face 5105211 "happy"
+# textboxarrow 0 2
+@アズサ
+だって、私は不老不死なんだから
+いつまでも待ってるよ
+
+# face 600621 "happy"
+# textboxarrow 0 1
+@ミストルティン
+はい…！
+
+;;モノローグ
+# face 301711 "usual"
+# textflame 0 0
+@
+笑顔で頷くアズサに、
+二人も頷いて応じる
+
+# face 5105211 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@アズサ
+じゃあね…
+ミストルティン、ヴォータン
+いつか、また会う日まで…
+
+# alpha 600621 0 0.5
+# alpha 5105211 0 0.5
+# alpha 301711 0 0.5
+# move 5604011 2 0
+# face 5604011 "normal"
+# alpha 5604011 1 0.5
+# mask 5604011 on
+# move 52001011 4 0
+# face 52001011 "happy"
+# alpha 52001011 1 0.5
+# mask 52001011 on
+# textboxarrow 0 3
+@ライカ
+約束ですよ
+
+# textboxarrow 0 1
+@ハルカラ
+風邪引いたり、
+飲み過ぎないように
+体には気をつけて下さいね～
+
+# alpha 5604011 0 0.5
+# alpha 52001011 0 0.5
+# move 301711 3 0
+# face 301711 "normal"
+# alpha 301711 1 0.5
+# mask 301711 off
+# textboxarrow 0 2
+@ヴォータン
+ああ…！
+お前達も元気でな！
+
+;;モノローグ
+# alpha 301711 0 0.5
+# textflame 0 0
+@
+見守るミストルティンと
+ヴォータンの目の前で、
+３人が穴に飲み込まれてく
+
+# se "SE_7334"
+# textwindow "close"
+# waitandnext 0.5
+
+;;演出：画面揺れ
+# bgm "stop"
+# sestop "SE_6230"
+# shake 0 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# textwindow "normal"
+@
+それは一瞬の出来事だった
+まるで最初から何も
+無かったかのように…
+
+;;モノローグ
+@
+アズサ達も、穴も消え…
+アイテムだけがぽつんと
+残されていた
+
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "forest"
+# move 5604011 1 0
+# face 5604011 "surprise"
+# alpha 5604011 1 0
+# mask 5604011 on
+# move 5105211 3 0
+# face 5105211 "surprise"
+# alpha 5105211 1 0
+# mask 5105211 on
+# move 52001011 5 0
+# face 52001011 "surprise"
+# alpha 52001011 1 0
+# mask 52001011 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;演出：場面転換
+;;背景：森の中・朝
+# se "SE_6196"
+# voice 510521 "azusa_0024"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@アズサ
+わっ！？
+
+# textboxarrow 0 3
+@ライカ
+ここは…
+いつもの森ですね
+
+# face 5604011 "happy"
+# textboxarrow 0 1
+@ハルカラ
+良かった～帰ってきたんですね！
+わたし達～！
+
+# face 5105211 "normal"
+# textboxarrow 0 2
+@アズサ
+出発した時は夜だったけど、
+もうすっかり朝になってるね…
+
+# face 52001011 "happy"
+# textboxarrow 0 3
+@ライカ
+でもハルカラさんが残した
+キノコが落ちています
+
+# textboxarrow 0 2
+@アズサ
+じゃあ本当に少ししか
+時間が経ってないんだ…
+
+# face 5604011 "normal"
+# textboxarrow 0 1
+@ハルカラ
+あれだけ長い時間を過ごしたのに
+なんだか不思議な気分ですね…
+
+# face 5105211 "happy"
+# textboxarrow 0 2
+@アズサ
+でも…楽しい時間だったね
+
+# textboxarrow 0 3
+@ライカ
+ええ…本当に
+
+# voice 560401 "harukara_0019"
+# face 5604011 "sad"
+# textboxarrow 0 1
+@ハルカラ
+あぁ～…どうしましょう～
+わたし、早くみなさんに
+会いたくなってきました
+
+# face 5105211 "normal"
+# textboxarrow 0 2
+@アズサ
+ファルファとシャルシャに
+心配かけちゃったからね…
+早く帰ってあげないと…
+
+# textboxarrow 0 3
+@ライカ
+ええ…
+
+;;モノローグ
+# se "SE_0719"
+# alpha 5604011 0 0.5
+# alpha 5105211 0 0.5
+# alpha 52001011 0 0.5
+# textflame 0 0
+@
+そして、いつもの家へ
+向かって歩き出す３人
+
+;;モノローグ
+# se "SE_5200"
+@
+その途中、ふとアズサは振り返り
+転移の穴があった場所を見つめる
+
+# move 5105211 3 0
+# face 5105211 "normal"
+# alpha 5105211 1 0.5
+# mask 5105211 off
+# textflame 1 1
+# textboxarrow 0 2
+@アズサ
+ミストルティン…
+ヴォータン…
+
+# textboxarrow 0 2
+@アズサ
+またいつかどこかで…
+絶対会おうね
+
+;;演出：場面転換
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# sestop "SE_6196"
+# background "bg_black"
+# alpha 5105211 0 0
+# move 6101411 3 0
+# face 6101411 "usual"
+# alpha 6101411 1 0
+# mask 6101411 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;背景：黒
+# bgm "bgm003" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+どうやら、今回の揺らぎは
+収まったようですね…
+
+# textboxarrow 0 2
+@ティルフィング
+多くの魔獣があの場所に
+呼び寄せられたのは、
+異世界と繋がった影響でしたが
+
+# textboxarrow 0 2
+@ティルフィング
+研究者がエネルギー源として
+目をつけた魔獣は…
+
+# textboxarrow 0 2
+@ティルフィング
+もしかすると、
+キル姫の感情の揺らぎで
+生まれた魔獣かもしれません
+
+# textboxarrow 0 2
+@ティルフィング
+今回の出来事は
+ミストルティンにとって、
+いい影響を及ぼしました
+
+# voice 610141 "tyrufing_7th_0004"
+# textboxarrow 0 2
+@ティルフィング
+彼女が少しでも自信を持ち
+前を向くことができたのであれば
+とても、喜ばしいことです
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "201_room"
+# alpha 6101411 0 0
+# move 600621 3 0
+# face 600621 "happy"
+# alpha 600621 1 0
+# mask 600621 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//演出：場面転換
+;;//背景：家の中・朝
+# bgm "bgm002" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@ミストルティン
+ふんふんふ～ん♪
+
+# move 600621 2 0.5
+# mask 600621 on
+# move 301711 4 0
+# face 301711 "normal"
+# alpha 301711 1 0.5
+# mask 301711 on
+# textboxarrow 0 3
+@ヴォータン
+お～い、邪魔するぞ～！
+
+# face 301711 "usual"
+# textboxarrow 0 3
+@ヴォータン
+なんだ、ずいぶんご機嫌じゃないか
+
+# textboxarrow 0 1
+@ミストルティン
+はい、あれから魔獣もすっかり
+姿を見せなくなって…
+
+# voice 6006 "misutoru_0005"
+# textboxarrow 0 1
+@ミストルティン
+私にとって理想の
+スローライフが実践出来て
+本当に嬉しいんですから
+
+# textboxarrow 0 3
+@ヴォータン
+なるほどな…
+
+# textboxarrow 0 3
+@ヴォータン
+もしかすると、お前の
+戦いに対する恐れと
+この家を買ったことも
+
+# textboxarrow 0 3
+@ヴォータン
+今回の事件と無関係では
+なかったのかもしれないな
+
+# face 600621 "normal"
+# textboxarrow 0 1
+@ミストルティン
+私の…ですか？
+
+# textboxarrow 0 3
+@ヴォータン
+そうだ
+
+# textboxarrow 0 3
+@ヴォータン
+お前、最初は戦いを拒んで
+隠居しようとしていただろ？
+
+# textboxarrow 0 3
+@ヴォータン
+だが今はそうじゃない
+心の底からこの生活を楽しんでいる
+
+# textboxarrow 0 3
+@ヴォータン
+お前がここに来て
+アズサ達と出会い、魔獣を倒して
+自信を得ることができたのも
+
+# textboxarrow 0 3
+@ヴォータン
+魔獣がいなくなったのも
+全てはただの偶然では
+なかったかもしれないぞ
+
+# textboxarrow 0 3
+@ヴォータン
+お前が選び、お前が戦い
+お前が掴み取った結果だ
+
+# textboxarrow 0 1
+@ミストルティン
+ヴォータンさん…
+
+# voice 3017 "wotan_0022"
+# face 301711 "surprise"
+# textboxarrow 0 3
+@ヴォータン
+な、なんだ…？
+
+# textboxarrow 0 1
+@ミストルティン
+いえ、ヴォータンさんが
+私に対してそんな言葉を
+投げかけてくれるなんて…
+
+# face 301711 "angry"
+# textboxarrow 0 3
+@ヴォータン
+し、失礼な！
+私だって今回の一件で
+お前を見直したんだ！
+
+# textboxarrow 0 3
+@ヴォータン
+戦いばかり考えていた私だが、
+こういう時間を過ごすのも
+悪くないと思ってな！
+
+# voice 6006 "misutoru_0005"
+# face 600621 "happy"
+# textboxarrow 0 1
+@ミストルティン
+ふふ、すっかり
+ヴォータンさんも
+気に入ってくれたんですね
+
+# textboxarrow 0 1
+@ミストルティン
+私…この世界で
+アズサさん達のような
+スローライフを実践したいんです
+
+# textboxarrow 0 1
+@ミストルティン
+みんなそうできれば、きっと
+この世界ももっと楽しく平和に
+なるから…
+
+;;モノローグ
+# textflame 0 0
+@
+そう言って、笑顔を
+浮かべるミストルティン
+
+# face 301711 "usual"
+# textflame 1 1
+# textboxarrow 0 3
+@ヴォータン
+お前も言うように
+なったじゃないか
+
+# face 301711 "normal"
+# textboxarrow 0 3
+@ヴォータン
+ま、ヴォータン様も手伝ってやる
+
+;;モノローグ
+# alpha 600621 0 0.5
+# alpha 301711 0 0.5
+# textflame 0 0
+@
+二人は笑い合いながら、
+お茶の準備を始めていく
+
+;;モノローグ
+@
+こうして…
+今日も平穏な一日が始まる
+
+;;演出：場面転換
+# bgm "stop"
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "forest"
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;演出：画面揺れ
+# se "SE_9347"
+# shake 0 0.5
+# waitandnext 0.5
+
+;;背景：森の中・朝
+# se "SE_6196"
+# voice 510521 "azusa_0024"
+# move 5604011 1 0
+# face 5604011 "surprise"
+# alpha 5604011 1 0.5
+# mask 5604011 on
+# move 5105211 3 0
+# face 5105211 "surprise"
+# alpha 5105211 1 0.5
+# mask 5105211 on
+# textflame 1 1
+# textboxarrow 0 2
+# move 52001011 5 0
+# face 52001011 "surprise"
+# alpha 52001011 1 0.5
+# mask 52001011 on
+# textwindow "normal"
+@アズサ
+わっ！？
+
+# textboxarrow 0 3
+@ライカ
+アズサ様！？
+
+# textboxarrow 0 1
+@ハルカラ
+あれあれあれ～？
+
+# voice 510521 "azusa_0028"
+# face 5105211 "sad"
+# textboxarrow 0 2
+@アズサ
+ライカ？　ハルカラ？
+おかしいな、私さっきまで
+家の中にいたはず…
+
+# voice 5200101 "raika_0009"
+# face 52001011 "angry"
+# textboxarrow 0 3
+@ライカ
+アズサ様、あれ！
+
+;;モノローグ
+# bgmfile "bgm603_1" "BgmSlime300" 0
+# alpha 5604011 0 0.5
+# alpha 5105211 0 0.5
+# alpha 52001011 0 0.5
+# textflame 0 0
+@
+ライカが指し示した方向には、
+見覚えのある奇妙な生き物の
+形をした謎のアイテムが…
+
+# move 5105211 3 0
+# face 5105211 "surprise"
+# alpha 5105211 1 0.5
+# mask 5105211 off
+# textflame 1 1
+# textboxarrow 0 2
+@アズサ
+あ、あのアイテムは…！
+
+# alpha 5105211 0 0.5
+# move 5604011 3 0
+# face 5604011 "surprise"
+# alpha 5604011 1 0.5
+# mask 5604011 off
+# textboxarrow 0 2
+@ハルカラ
+お師匠様、この森って…！
+
+# voice 510521 "azusa_0019"
+# alpha 5604011 0 0.5
+# move 5105211 3 0
+# face 5105211 "sad"
+# alpha 5105211 1 0.5
+# mask 5105211 off
+# textboxarrow 0 2
+@アズサ
+も、もしかして私達…
+
+# textboxarrow 0 2
+@アズサ
+また、転移してきちゃった？
+
+# fadeout "black" 3
+# waitandnext 3

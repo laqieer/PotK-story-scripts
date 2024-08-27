@@ -1,0 +1,349 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;インテグラルキラーズサイドストーリー
+;;第3話―５　タイトル：不可欠な痛み
+;;3_5_3
+;;スクリプト最後の背景：室内
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgm "stop"
+;;-----------------------------------------
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 2
+# alpha 24 0 0
+# mask 24 off
+;;ティルフィング（別）
+# entry 9241 24
+# pos 9241 3
+# scale 9241 0.8 0
+# layer 9241 2
+# alpha 9241 0 0
+# mask 9241 off
+# brightness 9241 0.8 0
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 2
+# alpha 0 0 0
+# mask 0 off
+;;-----------------------------------------
+;;ティルフィング（別）
+# voice 1014 "tyrufing_0029"
+# move 9241 3 0
+# face 9241 "mad2"
+# alpha 9241 1 0
+# mask 9241 off
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+やあああああ！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+;;//ティルフィングがキル姫を斬る
+# se "SE_4830"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 1014 "tyrufing_0037"
+# face 9241 "angry"
+# textboxarrow 0 2
+@ティルフィング
+ハァッ…ハァッ…
+…処理、完了
+やりました…マスター…
+
+;;//ティルフィングが倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 9241 0 0.5
+# waitandnext 0.5
+
+# voice 9999 "durin_0076"
+# move 0 3 0
+# face 0 "serious"
+# alpha 0 1 0.5
+# mask 0 off
+# textboxarrow 0 2
+# textwindow "normal"
+@デュリン
+ティル！
+ちょっとアンタ、何ボーッとしてん
+のよ！早くティルを抱えなさいっ
+
+# textboxarrow 0 2
+@デュリン
+急いで治療しないといけないわ…
+
+;;//背景：室内
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "201_room"
+# move 0 3 0
+# face 0 "serious2"
+# alpha 0 1 0
+# mask 0 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm003" 0
+# voice 9999 "durin_0027"
+# textboxarrow 0 2
+# textwindow "normal"
+@デュリン
+本当に、たまたま、偶然、運良く、
+勝てたから良かったけど…
+
+# face 0 "serious"
+# textboxarrow 0 2
+@デュリン
+何て無謀な指揮してんのよ！
+アンタ、この子のマスターって
+自覚あるの！？
+
+# textboxarrow 0 2
+@デュリン
+キラープリンセスは「脅威」だとか
+「悪魔」だとか言われて恐れられて
+いるけれど…
+
+# textboxarrow 0 2
+@デュリン
+マスターのアンタだけは大切に
+守ってあげないとダメでしょ！
+
+;;ティルフィング（別）
+# move 9241 2 0
+# face 9241 "sad"
+# alpha 9241 1 0.5
+# mask 9241 on
+# textboxarrow 0 1
+# move 0 4 0.5
+# mask 0 on
+@ティルフィング
+デュリン、私は大丈夫だから…
+
+# face 0 "usual"
+# textboxarrow 0 3
+@デュリン
+ティル！
+目が覚めたのねっ
+どこか痛むところはないっ？
+
+;;ティルフィング（別）
+# face 9241 "normal"
+# textboxarrow 0 1
+@ティルフィング
+本当に大丈夫よ…
+だから、怒らないで
+
+;;ティルフィング（別）
+# textboxarrow 0 1
+@ティルフィング
+マスターは、私がやりたいことを
+やらせてくれたんだから…
+
+# face 0 "serious2"
+# textboxarrow 0 3
+@デュリン
+でも…！
+
+;;ティルフィング（別）
+# voice 1014 "tyrufing_0001"
+# textboxarrow 0 1
+@ティルフィング
+マスター…
+私の荷物から…
+
+;;//選択肢
+;;
+;;Aチョコだね
+# select "チョコだね" "select_label_01"
+マスター…
+私の荷物から…
+
+;;A
+# label "select_label_01"
+# face 9241 "surprise"
+# textboxarrow 0 1
+@ティルフィング
+そうです…
+どうして分かったんですか？
+
+# face 0 "normal"
+# textboxarrow 0 3
+@デュリン
+そんなのには騙されない…むぐっ？
+
+# voice 9999 "durin_0021"
+# face 0 "happy"
+# textboxarrow 0 3
+@デュリン
+はわ～♪
+これは美味しいやつね～っ
+
+# voice 1014 "tyrufing_0005"
+# face 9241 "happy"
+# textboxarrow 0 1
+@ティルフィング
+ふふっ
+やっぱりデュリンにはこれが一番
+ですね
+
+# face 0 "sad"
+# textboxarrow 0 3
+@デュリン
+はぁ…
+調子狂うわねぇ…
+
+# face 0 "normal"
+# textboxarrow 0 3
+@デュリン
+ティル、アンタは寝てなさい
+その間にこいつと話をしておくから
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 9241 0 0
+# alpha 0 0 0
+# move 0 3 0
+# face 0 "normal"
+# alpha 0 1 0.5
+# mask 0 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@デュリン
+…というわけで、この天上世界は
+キラープリンセスによって滅ぼされ
+ようとしてるの
+
+# textboxarrow 0 2
+@デュリン
+アンタの言う「ラグナロク教会」
+なんて存在しないわ
+
+# face 0 "usual2"
+# textboxarrow 0 2
+@デュリン
+もし、そんな教会があってキラー
+プリンセスを制御できていたなら
+もっと平和だったでしょうね
+
+# textboxarrow 0 2
+@デュリン
+キラープリンセスが人を襲わない世界
+…そこでならティルも幸せになれた
+のかも
+
+# textboxarrow 0 2
+@デュリン
+アンタが別世界の存在だっていうのは
+信じてあげなくもないわ
+
+# textboxarrow 0 2
+@デュリン
+それでも、お願い
+ティルのマスターでいてあげて
+
+# textboxarrow 0 2
+@デュリン
+この子はたった一人で戦ってきたの
+滅びゆく世界を守るために
+
+# textboxarrow 0 2
+@デュリン
+さっきのティルはいつもよりずっと
+強かったわ…
+
+# face 0 "normal"
+# textboxarrow 0 2
+@デュリン
+アンタがティルの力を高めているのは
+間違いない
+だから、お願いよ！
+
+# textboxarrow 0 2
+@デュリン
+ティルを見捨てないで！
+一緒に戦ってあげて！
+
+;;//選択肢
+;;
+;;A…………
+;;Bそれは…
+# select "…………" "select_label_02" "それは…" "select_label_02"
+ティルを見捨てないで！
+一緒に戦ってあげて！
+
+;;AB共通
+;;//ティルフィングが現れる
+# label "select_label_02"
+# bgm "stop"
+# voice 1014 "tyrufing_0001"
+# move 24 2 0
+# face 24 "happy2"
+# alpha 24 1 0.5
+# mask 24 on
+# textboxarrow 0 1
+# move 0 4 0.5
+# mask 0 on
+@ティルフィング
+マスター！
+やっと見つけました
+
+# face 0 "usual2"
+# textboxarrow 0 3
+@デュリン
+…どうしたの？
+急に目を見開いて
+そっちに何かある？
+
+# face 24 "happy"
+# textboxarrow 0 1
+@ティルフィング
+あ！
+デュリン！？
+懐かしい…
+
+;;//ティルフィングがデュリンに触れようとするがすり抜ける
+# se "SE_12405"
+# waitandnext 0.5
+
+# bgm "bgm005" 0
+# voice 1014 "tyrufing_0022"
+# face 24 "surprise"
+# textboxarrow 0 1
+@ティルフィング
+えっ…？
+どうして…デュリンに触れられない…
+
+# voice 9999 "durin_0002"
+# face 0 "serious"
+# textboxarrow 0 3
+@デュリン
+ちょっと、どうしたのよ！？
+何もないところをボーッと
+見つめないで！怖いでしょ！
+
+# textboxarrow 0 1
+@ティルフィング
+マスター…
+どうなっているんでしょう…？

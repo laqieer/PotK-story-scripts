@@ -1,0 +1,465 @@
+;;-----------------------------------------
+;;鎌倉6_0
+;;-----------------------------------------
+# script "lisp"
+# background "seahouse"
+# bgm "bgm002" 0
+;;-----------------------------------------
+;;鎌倉ヘレナ
+# body 6302811
+# pos 6302811 5
+# scale 6302811 0.8 0
+# layer 6302811 4
+# alpha 6302811 1 0
+;;鎌倉ニール
+# body 323
+# pos 323 3
+# scale 323 0.8 0
+# layer 323 5
+# mask 323 off
+# alpha 323 1 0
+;;鎌倉リサナウト
+# body 6203011
+# pos 6203011 1
+# scale 6203011 0.8 0
+# layer 6203011 3
+# alpha 6203011 1 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 2 "SEA6302811"
+# imagealpha 2 0 0
+# imagelayer 2 5
+;;-----------------------------------------
+;;背景：町：seahouse
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# face 6203011 "usual"
+# face 6302811 "normal"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@リサナウト
+ふぅ…
+たくさん歩いたわね
+少し休憩しましょうか
+
+# textboxarrow 0 1
+@リサナウト
+せっかくだし
+綺麗な海を眺められる場所が
+いいわね
+
+# voice 530281 "herena_di_0039"
+# textboxarrow 0 3
+@ヘレナ
+ふぅん
+このカフェはのんびりできそうだ
+
+# voice 9952 "nir_0032"
+# textboxarrow 0 2
+@ニール
+飲み物を注文したいわね
+
+# voice 530281 "herena_di_0002"
+# textboxarrow 0 3
+@ヘレナ
+このドリンクなんかいいんじゃないか
+４色あるみたいだぞ
+
+# textboxarrow 0 2
+@ニール
+リサナウトは
+まだ決まらないみたいだし
+先に頼んじゃいましょ
+
+;;ドリンクが運ばれてくる
+;;ヘレナシナリオカット
+# se "SE_13815"
+# fadein "white" 1
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# frameout 0 0
+# textwindow "close"
+# waitandnext 1
+
+# voice 530281 "herena_di_0021"
+# alpha 6302811 0 0
+# alpha 323 0 0
+# alpha 6203011 0 0
+# textwindow "nomal"
+# textboxarrow 0 0
+@ヘレナ
+なかなか美味しいな
+
+@ニール
+アタチにも一口ちょうだい！
+
+# serif 1
+@リサナウト
+それよ！
+
+# serif 0
+@ヘレナ
+今度は何だ…
+
+;;シナリオカット削除
+# imagealpha 2 0 1
+# framein 0 1
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 1
+
+# move 6203011 3 0
+# mask 6203011 off
+# face 6203011 "normal"
+# alpha 6203011 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@リサナウト
+感じるわ！
+「強い力の残滓」…
+このドリンクからビシビシ感じるのっ
+
+# textboxarrow 0 2
+@リサナウト
+爽やかな青に
+アイスが乗ってるのもいいわね
+いや、こっちの紫…あるいは緑…
+
+# textboxarrow 0 2
+@リサナウト
+レモンが乗ってる黄色のドリンクも…
+悩ましいわっ
+
+# voice 530281 "herena_di_0003"
+# alpha 6203011 0 0.3
+# move 6302811 3 0
+# mask 6302811 off
+# face 6302811 "normal"
+# alpha 6302811 1 0.3
+# textboxarrow 0 2
+@ヘレナ
+好きなだけ悩むといいよ
+ヘレナはのんびりさせてもらう
+
+# voice 520301 "risanautr_ca_0003"
+# alpha 6302811 0 0.3
+# face 6203011 "usual"
+# alpha 6203011 1 0.3
+# textboxarrow 0 2
+@リサナウト
+そうね
+この世界は平和みたいだから
+
+# alpha 6203011 0 0.3
+# move 323 2 0
+# alpha 323 1 0.3
+# move 6302811 4 0
+# mask 6302811 on
+# face 6302811 "sad"
+# alpha 6302811 1 0.3
+# textboxarrow 0 3
+@ヘレナ
+…………
+
+# textboxarrow 0 1
+@ニール
+…………
+
+# voice 530281 "herena_di_0043"
+# textboxarrow 0 3
+@ヘレナ
+…なぁ、ニール
+実は気になってたことが――
+
+# voice 520301 "risanautr_ca_0040"
+# face 6203011 "normal"
+# alpha 6203011 1 0.3
+# alpha 323 0 0.3
+# alpha 6302811 0 0.3
+# textboxarrow 0 2
+@リサナウト
+なるほど！
+このドリンクから感じ取れる
+マナが何なのか分かったわ
+
+# textboxarrow 0 2
+@リサナウト
+これはティファレト達の記録ねっ
+
+# voice 530281 "herena_di_0022"
+# move 6203011 2 0.5
+# move 6302811 4 0
+# face 6302811 "surprise"
+# alpha 6302811 1 0.3
+# textboxarrow 0 3
+@ヘレナ
+ティファレト？
+あの…３人組のことか
+
+# voice 520301 "risanautr_ca_0032"
+# face 6203011 "usual"
+# textboxarrow 0 1
+@リサナウト
+アルマスを入れて４人よ
+ティファレト、カシウス、
+フェイルノート
+
+# textboxarrow 0 1
+@リサナウト
+それぞれ強力な
+天使、悪魔、幻獣と誓約したキル姫…
+
+# textboxarrow 0 1
+@リサナウト
+でも、このドリンクから感じるのは
+別の次元のもの
+
+# textboxarrow 0 1
+@リサナウト
+誓約の気配も他のところで感じたから
+この地には、時の異なる様々な記憶が
+残っているのかもしれないわね
+
+# voice 530281 "herena_di_0028"
+# face 6302811 "sad"
+# textboxarrow 0 3
+@ヘレナ
+何だかややこしいな…
+彼女達が以前、
+ここに来たっていうのか？
+
+# voice 520301 "risanautr_ca_0028"
+# textboxarrow 0 1
+@リサナウト
+さあ、そこまでは…
+いずれにしても強い繋がりのある
+何かがあったのよ
+
+# face 6302811 "happy"
+# textboxarrow 0 3
+@ヘレナ
+なるほどね
+どんなことがあったのかヘレナは
+興味があるなぁ…くふっ
+
+# textboxarrow 0 1
+@リサナウト
+彼女達は、お互いにとって
+必要だったから誓約したのよ
+
+# face 6302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+…………
+
+# textboxarrow 0 1
+@リサナウト
+繋がりを求めて懸命に行動した
+その結果、唯一無二の関係を
+築くことができたの
+
+# face 6203011 "normal"
+# textboxarrow 0 1
+@リサナウト
+そんな思いが、
+ここにマナとして残ってくれていた
+おかげで…
+
+# textboxarrow 0 1
+@リサナウト
+装置を修理することができたわ
+
+# move 323 3 0
+# alpha 323 1 0.3
+# move 6203011 1 0.5
+# move 6302811 5 0.5
+# textboxarrow 0 2
+@ニール
+…装置、修理できたのね
+
+# textboxarrow 0 3
+@ヘレナ
+…ティファレト達に感謝だな
+
+# face 6203011 "usual"
+# textboxarrow 0 1
+@リサナウト
+彼女達だけじゃないわ
+ここに集まっていた
+「強い力の残滓」にはもっと多くの…
+
+# textboxarrow 0 1
+@リサナウト
+キル姫と繋がる
+バイブスの気配も感じたもの
+
+# face 6302811 "surprise"
+# textboxarrow 0 3
+@ヘレナ
+奏官だっけ？
+その人達もいたっていうのか？
+想像もつかないな
+
+# textboxarrow 0 1
+@リサナウト
+キル姫と絆を結んだ人達が
+この世界にもいるのよっ
+
+# textboxarrow 0 1
+@リサナウト
+その人達の強い思いが
+力の残滓を生み出してくれた…
+そう！正に約束の地ねっ
+
+# voice 9952 "nir_0027"
+# textboxarrow 0 2
+@ニール
+「約束の地」設定を
+無理やり補強してきたわよ
+
+# voice 530281 "herena_di_0002"
+# face 6302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+それより装置が直ったのなら
+早く起動させて戻ろう
+もう十分、休んだよ
+
+# textboxarrow 0 1
+@リサナウト
+そうね
+じゃあ、あなたが起動して
+
+# face 6302811 "happy"
+# textboxarrow 0 3
+@ヘレナ
+おや、ヘレナにやらせてくれるのか
+余計なことをしてしまうかも
+しれないぞ…くふっ
+
+# voice 520301 "risanautr_ca_0004"
+# face 6203011 "normal"
+# textboxarrow 0 1
+@リサナウト
+ええ
+あなたの自由に、どうぞ
+
+# voice 9952 "nir_0028"
+# textboxarrow 0 2
+@ニール
+何だか怪しいわねぇ
+ヘレナを騙そうとしても
+無駄なんだからっ
+
+# face 6203011 "usual"
+# textboxarrow 0 1
+@リサナウト
+騙すつもりなんかないわよ
+私、謀略とか苦手なの
+
+# voice 530281 "herena_di_0039"
+# face 6302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+ふーん…
+まあ、いいや
+それじゃ、遠慮無く
+
+# textboxarrow 0 3
+@ヘレナ
+ここをタップするんだよね
+
+# se "SE_12406"
+# textboxarrow 0 0
+# waitandnext 1.5
+
+# textboxarrow 0 3
+@ヘレナ
+…………
+
+# textboxarrow 0 2
+@ニール
+…………
+
+# textboxarrow 0 1
+@リサナウト
+…………
+
+# voice 530281 "herena_di_0028"
+# face 6302811 "sad"
+# textboxarrow 0 3
+@ヘレナ
+…何も起きないぞ
+本当に修理できてるのか？
+
+# voice 9952 "nir_0002"
+# textboxarrow 0 2
+@ニール
+こんなところでポンコツ出されても
+困るわよ、リサナウト
+
+# textboxarrow 0 1
+@リサナウト
+修理はできてるわよ
+間違いなく
+
+# voice 520301 "risanautr_ca_0028"
+# textboxarrow 0 1
+@リサナウト
+もし起動しないのだとしたら、
+そうね…
+
+# textboxarrow 0 1
+@リサナウト
+エネルギー…マナが足りないのかも
+しれないわね
+
+# textboxarrow 0 3
+@ヘレナ
+はぁ…
+ようするに、このカマクランドを
+もっと満喫しろってことだな
+
+# textboxarrow 0 2
+@ニール
+いいじゃない、ヘレナ
+観光しながらマナを――
+
+;;ニールが薄くなったり濃くなったりする
+# bgm "stop"
+# se "SE_13075"
+# alpha 323 0.8 0.2
+# textboxarrow 0 0
+# waitandnext 0.2
+
+# alpha 323 1 0.2
+# waitandnext 0.2
+
+# alpha 323 0.4 0.3
+# waitandnext 0.3
+
+# alpha 323 1 0.3
+# waitandnext 0.3
+
+# voice 530281 "herena_di_0022"
+# face 6302811 "surprise"
+# textboxarrow 0 3
+@ヘレナ
+ニール？
+
+# voice 9952 "nir_0023"
+# textboxarrow 0 2
+@ニール
+ひゃっ…！
+今の…アタチ…
+何が起きたのよっ？
+
+# fadeout "black" 1
+# waitandnext 1

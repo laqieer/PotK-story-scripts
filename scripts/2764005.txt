@@ -1,0 +1,276 @@
+;;-----------------------------------------
+;;【このすばEP3･戦闘前】
+;;スクリプトID:2345678901234567
+;;スクリプト最後の背景：sea_beach_day
+;;背景：ビーチ
+;;-----------------------------------------
+# script "lisp"
+# bgmfile "bgm208" "BgmKScollabo001" 0
+# background "sea_beach_day"
+;;海上編ティルフィング
+# body 2101411
+# pos 2101411 4
+# scale 2101411 0.8 0
+# alpha 2101411 0 0
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# alpha 0 0 0
+# layer 0 3
+# mask 0 off
+;;水着アスクレピオス
+# body 2600111
+# pos 2600111 3
+# scale 2600111 0.8 0
+# alpha 2600111 0 0
+# mask 2600111 off
+;;水着シタ
+# body 2201611
+# pos 2201611 2
+# scale 2201611 0.8 0
+# alpha 2201611 0 0
+;;水着めぐみん
+# body 2502511
+# pos 2502511 2
+# scale 2502511 0.8 0
+# alpha 2502511 0 0
+;;水着ダクネス
+# body 2103411
+# pos 2103411 4
+# scale 2103411 0.8 0
+# alpha 2103411 0 0
+# layer 2103411 4
+# face 2103411 "shy"
+;;◆背景：ビーチ（昼）---------------------
+# textflame 0 0
+# textboxarrow 0 2
+@
+討伐クエストのため
+さらなる異族の姿を探し
+ビーチを移動するマスター達
+
+@
+「…僕達の護衛を？どうして？」
+アスクレピオスにたずねるマスター
+
+# alpha 2600111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6001 "asukurepiosu_0003"
+@アスクレピオス
+実は“海の家”による討伐クエストを
+順調に進めているパーティーが
+少ないみたいで…だから護衛に…
+
+# emotionbody 1001 1 2600111 0 300
+# effectpattern 1001 1 0
+# effectstart 1001
+@アスクレピオス
+あ！勘違いしないでよマスター
+これって巡回警備のついでだし
+クエストの円滑な進行のためだから
+
+# alpha 2600111 0 0.5
+# alpha 2201611 1 0.5
+# alpha 2101411 1 0.5
+# textboxarrow 0 1
+# voice 2016 "shita_0004"
+@シタ
+ふーん…だったらわたしも
+異族の監視のついでに
+マスターのお供をしますね
+
+# emotionbody 1002 2 2101411 0 300
+# effectpattern 1002 1 0
+# effectstart 1002
+# voice 1014 "tyrufing_0003"
+# textboxarrow 0 3
+@ティルフィング
+これって私達のことを
+気遣ってもらっている…
+ということでしょうか？
+
+# emotionbody 1003 8 0 0 220
+# effectpattern 1003 1 0
+# effectstart 1003
+# alpha 2201611 0 0.5
+# alpha 2101411 0 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 2
+# voice 9999 "durin_0027"
+@デュリン
+いいえ
+アタシ達きっと
+危険集団だと思われてるのよ
+
+# effectskip 1003
+# alpha 0 0 0.5
+# alpha 2600111 1 0.5
+# move 2600111 2 0
+# mask 2600111 on
+# alpha 2103411 1 0.5
+# textboxarrow 0 3
+# voice 1034 "dakunesu_0003"
+@ダクネス
+なあ、アスクレピオス
+次なる敵に出会う前に
+そろそろ私を全回復してくれないか
+
+# face 2600111 "angry"
+# textboxarrow 0 1
+# voice 6001 "asukurepiosu_0007"
+@アスクレピオス
+いやよ
+
+# emotionbody 1004 4 2103411 0 260
+# effectpattern 1004 1 0
+# effectstart 1004
+# textboxarrow 0 3
+@ダクネス
+はうぅ！
+その冷たい目と
+即断すぎる断り方…
+
+# bgm "stop"
+# alpha 2103411 0 0.5
+# move 2201611 4 0
+# alpha 2201611 1 0.5
+# face 2201611 "angry"
+# textboxarrow 0 3
+@シタ
+しっ！静かに…
+向こうにあらたな異族の
+集団を発見しました
+
+# textflame 0 0
+@
+異族の群れが
+ひと気のないビーチの一角に
+溜まって、ざわざわと揺れている
+
+# bgm "bgm023_024" 0
+# textflame 1 1
+# textboxarrow 0 1
+@アスクレピオス
+こんなところに
+異族が集まってるなんて
+
+# alpha 2600111 0 0.5
+# alpha 2502511 1 0.5
+# face 2502511 "angry"
+@めぐみん
+ああっ、あんなにたくさんの敵
+爆裂魔法でまとめて一掃したい…
+そして、一気にレベルを…うぅ
+
+# face 2201611 "sad"
+# textboxarrow 0 3
+# voice 2016 "shita_0012"
+@シタ
+めぐみん
+無理はいけませんよ
+
+# alpha 2201611 0 0.5
+# alpha 2502511 0 0.5
+# alpha 2101411 1 0.5
+# move 2101411 5 0
+# alpha 0 1 0.5
+# alpha 2103411 1 0.5
+# move 2103411 1 0
+# face 2103411 "angry"
+# face 2101411 "sad"
+# face 0 "serious2"
+# textboxarrow 0 1
+@ダクネス
+だいたい爆裂魔法は一日一回しか
+使えないではないか
+ここは私に任せろ！
+
+# emotionbody 1005 2 2101411 0 260
+# effectpattern 1005 1 0
+# effectstart 1005
+# textboxarrow 0 3
+@ティルフィング
+あれ…皆さん
+あの異族達、少し様子が
+おかしくないですか？
+
+# textboxarrow 0 2
+@デュリン
+…ほんとだ
+なにか不自然…
+見える？マスター？
+
+# textflame 0 0
+@
+異族はなにかを取り囲むように
+輪になってうごめいていた…
+その中心には…
+
+;;//ジャイアントトードの姿みせる？
+# se "SE_0706"
+@
+「カエルだ…！」
+マスターも目を凝らし、
+異族の中にいるそれに気づいた
+
+# emotionbody 1006 2 2600111 0 300
+# effectpattern 1006 1 0
+# effectstart 1006
+# alpha 2101411 0 0.5
+# alpha 0 0 0.5
+# alpha 2103411 0 0.5
+# move 2600111 3 0
+# alpha 2600111 1 0.5
+# mask 2600111 off
+# textflame 1 1
+# textboxarrow 0 2
+@アスクレピオス
+カエル？この島の浜辺には
+いるはずもない生き物だわ
+しかもあんなに大きな…どうして？
+
+# alpha 2600111 0 0.5
+# alpha 2502511 1 0.5
+# move 2502511 2 0
+# face 2502511 "worry"
+# alpha 2103411 1 0.5
+# move 2103411 4 0
+# face 2103411 "sad"
+# textboxarrow 0 1
+# voice 5025 "megumin_0026"
+@めぐみん
+あれ
+どこかで見たようなカエルですね
+
+# textboxarrow 0 3
+@ダクネス
+ああ、どこかで見たような
+カエルだな
+
+# face 2502511 "angry"
+# face 2103411 "angry"
+# textflame 0 0
+@
+すると、異族とカエル（？）は
+いきなり、一斉にマスターのほうに
+振り向いた…！
+
+# emotionbody 1007 1 2502511 0 260
+# effectpattern 1007 2 0
+# effectstart 1007
+# textflame 1 1
+# textboxarrow 0 1
+@めぐみん
+な、なんと…！？
+
+# emotionbody 1008 4 2103411 0 300
+# effectpattern 1008 1 0
+# effectstart 1008
+# face 2103411 "shy"
+# textboxarrow 0 3
+@ダクネス
+いいぞ！来い！
+カエルのぬるぬるにまみれるなど
+…どんなご褒美だ！

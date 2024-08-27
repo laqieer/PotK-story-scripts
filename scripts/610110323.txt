@@ -1,0 +1,473 @@
+;;-----------------------------------------
+;;第１話「急襲」戦闘後
+;;-----------------------------------------
+# script "lisp"
+# bgmfile "bgm185" "BgmGakuen003" 0
+# background "classroom02_afternoon"
+;;-----------------------------------------
+;;アイムール
+# body 37
+# pos 37 3
+# scale 37 0.8 0
+# layer 37 3
+# alpha 37 0 0
+# body 200211
+# pos 200211 3
+# scale 200211 0.8 0
+# layer 200211 3
+# alpha 200211 0 0
+;;ヤグルシ
+# body 31
+# pos 31 3
+# scale 31 0.8 0
+# layer 31 3
+# alpha 31 0 0
+# body 201711
+# pos 201711 3
+# scale 201711 0.8 0
+# layer 201711 3
+# alpha 201711 0 0
+;;レーヴァ
+# body 61
+# pos 61 3
+# scale 61 0.8 0
+# layer 61 3
+# alpha 61 0 0
+# mask 61 off
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# layer 100221 3
+# alpha 100221 0 0
+;;トリシューラ
+# body 300641
+# pos 300641 3
+# scale 300641 0.8 0
+# layer 300641 3
+# alpha 300641 0 0
+# mask 300641 off
+# body 300611
+# pos 300611 3
+# scale 300611 0.8 0
+# layer 300611 3
+# alpha 300611 0 0
+;;ティルフィング
+# body 101491
+# pos 101491 3
+# scale 101491 0.8 0
+# layer 101491 3
+# alpha 101491 1 0
+# mask 101491 off
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 3
+# alpha 810004 0 0
+# mask 810004 off
+;;-----------------------------------------
+# face 101491 "angry"
+# subfillrect 0 "black" 0 0 0.5
+# textflame 0 0
+@
+ティルフィングたちは
+ひたすら異族と戦った
+
+# textflame 0 0
+@
+しかし――
+異族の波は途切れず、
+マスターに迫る
+
+# voice 1014 "tyrufing_0037"
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+これ以上は巻き込めない！
+私が抑えますから、
+皆さんは逃げてくださ――！
+
+# bgm "stop"
+# alpha 101491 0 0.5
+;;レーヴァテインの立ち絵は表示せず
+# voice 1002 "revatein_0013"
+# textflame 1 1
+# textboxarrow 0 0
+@？？？
+はぁ…
+おとなしく眠ってなさい
+
+# textwindow "close"
+# alpha 810004 1 0.5
+# waitandnext 0.7
+
+;;攻撃エフェクト
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# se "SE_4830"
+# waitandnext 0.7
+
+;;レーヴァテインの攻撃で異族が吹き飛ぶ
+# se "SE_0618"
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 0
+@異族
+グギャ……！
+
+# textwindow "close"
+# alpha 810004 0 0.5
+# se "SE_3001"
+# waitandnext 1
+
+;;レーヴァテインの立ち絵を表示
+# alpha 61 1 0.5
+# waitandnext 0.7
+
+# textwindow "nomal"
+# face 61 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+これでこっちは片付いた
+……ホントめんどい
+
+;;ホワイトフラッシュ
+# subfillrect 0 "black" 0 0 0
+# fadein "white" 0.5
+# se "SE_11324"
+# waitandnext 0.8
+
+# textflame 0 0
+@
+歪んだ景色が元に戻ってゆく
+見慣れたラグ女の校舎に
+帰還した一行の前には――
+
+# bgm "bgm005" 0
+# textflame 0 0
+@
+気怠そうな表情で
+気を失った生徒たちを見下ろす
+レーヴァテインが立っていた
+
+# textflame 0 0
+@
+彼女は聖ユグ陸上部のエース
+しかし、マイペースな性格ゆえ
+校内では孤高の存在だ
+
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+マスター…だっけ
+何ジロジロ見てんの？
+
+;;トリシューラを表示
+# move 61 4 0.5
+# move 300641 2 0
+# alpha 300641 1 0
+# mask 300641 on
+# leftin 300641 0.5
+# se "SE_5575"
+# textboxarrow 0 0
+# waitandnext 0.6
+
+# face 300641 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@トリシューラ
+おい！レーヴァテイン！
+そっちは落ち着いたか！？
+
+# emotionbody 1001 8 61 80 250
+# effectpattern 1001 1 0
+# effectstart 1001
+# face 61 "sad"
+# voice 1002 "revatein_0013"
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+はぁ…来るのが遅い
+とっくに終ったし
+
+# effectskip 1001
+# emotionbody 1002 6 300641 50 250
+# effectpattern 1002 1 1
+# effectstart 1002
+# voice 3006 "torisyula_0009"
+# face 300641 "angry1"
+# textflame 1 1
+# textboxarrow 0 1
+@トリシューラ
+ケッ、相変わらず
+愛想のねぇ後輩だこと
+
+# face 300641 "normal"
+# voice 3006 "torisyula_0003"
+# textflame 1 1
+# textboxarrow 0 1
+@トリシューラ
+で、そっちの四人は平気か？
+マスターに、
+恋したくなってねぇか？
+
+# alpha 61 0 0.5
+# move 37 4 0
+# alpha 37 1 0.5
+# voice 2002 "aimuru_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@アイムール
+単純な疲労はありますが、
+負傷はありません
+好意の有無は…その…
+
+# face 37 "smile"
+# voice 2002 "aimuru_0042"
+# textflame 1 1
+# textboxarrow 0 3
+@アイムール
+私はマスターに好意的…です
+むしろそれ以上にも…ごほん！
+失礼、話を戻しましょう
+
+# face 37 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@アイムール
+有無はさておき、
+さっきの子たちのような、
+暴力的な行為は絶対しません
+
+# voice 3006 "torisyula_0020"
+# face 300641 "usual2"
+# textflame 1 1
+# textboxarrow 0 1
+@トリシューラ
+なら良かった
+いや～さっきから急に
+学校中の生徒が暴れだしてよ
+
+# textflame 1 1
+# textboxarrow 0 1
+@トリシューラ
+んで、止めに入ったら
+なんか変な場所に飛ばされて
+バケモノと戦う羽目になって
+
+# textflame 1 1
+# textboxarrow 0 1
+@トリシューラ
+最初はビビったけど、
+シメたら戻れてさ
+暴れてたヤツは失神してた
+
+# textflame 1 1
+# textboxarrow 0 1
+@トリシューラ
+でも、そいつが目を覚ましたら
+またバケモンになるんだ
+キリがねぇぜ
+
+# textflame 0 0
+@マスター
+君も黒い霧や異族が
+見えているのか？
+
+# face 300641 "angry1"
+# voice 3006 "torisyula_0003"
+# textflame 1 1
+# textboxarrow 0 1
+@トリシューラ
+おう、この黒い霧、
+やっぱバケモンと関係が――
+
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@恋に狂った生徒たち
+うおぉぉぉぉ！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# voice 3006 "torisyula_0027"
+# face 300641 "angry2"
+# textflame 1 1
+# textboxarrow 0 1
+@トリシューラ
+…上の階だな
+また暴れてやがる
+とにかく止めに行かねぇと
+
+# textflame 0 0
+@マスター
+了解だ
+それにしても、
+こんな大騒ぎは初めてだ
+
+# alpha 37 0 0.5
+# alpha 300641 0 0.5
+# move 101491 2 0
+# alpha 101491 1 0.5
+# alpha 61 1 0.5
+# face 101491 "normal"
+# voice 1014 "tyrufing_0003"
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+ええ、
+あの人に…
+デュリンに報告しないと
+
+# face 61 "normal"
+# voice 1002 "revatein_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+理事長に報告ね…
+それもいいんじゃない
+マスターと…誰だっけ？
+
+# face 101491 "surprise"
+# voice 1014 "tyrufing_0022"
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+私ですか？
+
+# voice 1002 "revatein_0028"
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+前にどっかで会ったような
+気もするけど…
+名前…聞いてたっけ？
+
+# face 101491 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+ティルフィングと言います
+
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+マスターと同じ、
+デュリン理事長の下で動く、
+特待生です
+
+# voice 1002 "revatein_0040"
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+ふぅん…特待生ね
+理事長の秘蔵っ子は
+マスターだけじゃないんだ
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+霧の件といい…あの理事長、
+まだ色々と隠してそうね
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+…気が変わった
+マスター、私も一緒に行くから
+理事長のところ
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+隠し事されてもめんどいし、
+直接、話を聞いて、
+さっさと終わらせる
+
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+暴れている連中は…
+トリシューラ、黙らせといて
+
+# move 300641 3 0
+# mask 300641 off
+# face 300641 "angry1"
+# alpha 300641 1 0.5
+# alpha 101491 0 0.5
+# alpha 61 0 0.5
+# voice 3006 "torisyula_0009"
+# textflame 1 1
+# textboxarrow 0 2
+@トリシューラ
+人にモノを頼む態度を学べ
+…ま、いいけどさ
+暴れる方が性にあってるし
+
+;;トリシューラ退場
+# textwindow "close"
+# se "SE_0740"
+# alpha 300641 0 0.7
+# waitandnext 1
+
+# move 37 2 0
+# alpha 37 1 0.5
+# move 31 4 0
+# alpha 31 1 0.5
+# textwindow "nomal"
+# voice 2002 "aimuru_0003"
+# textflame 1 1
+# textboxarrow 0 1
+@アイムール
+私とヤグルシも、
+校内の鎮圧に当たりましょう
+行きますよ、ヤグルシ
+
+# se "SE_6504"
+# emotionbody 1003 3 31 10 290
+# effectpattern 1003 1 3
+# effectstart 1003
+# face 31 "happy"
+# voice 2017 "yagurushi_0033"
+# textflame 1 1
+# textboxarrow 0 3
+@ヤグルシ
+了解～♪
+ヤグのカッコいいとこ、
+お姉ちゃんに見せてあげる！
+
+;;アイムール、ヤグルシ退場
+# alpha 37 0 0.5
+# alpha 31 0 0.5
+# se "SE_0740"
+# textwindow "close"
+# waitandnext 1
+
+# textwindow "nomal"
+# move 101491 3 0
+# alpha 101491 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+では、私たちも行動開始です！
+
+# alpha 101491 0 0.5
+# textflame 0 0
+@
+ティルフィングに導かれ、
+理事長であるデュリンのもとへ
+向かうマスター
+
+# textflame 0 0
+@
+しかし、マスターは
+ある疑念を抱いていた
+
+# textflame 0 0
+@
+同行を申し出たレーヴァテイン
+そして、宣戦布告してきた
+MAIに対しても…

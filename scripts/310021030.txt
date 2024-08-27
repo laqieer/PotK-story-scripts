@@ -1,0 +1,701 @@
+;;-----------------------------------------
+;;SEA1章_3
+;;-----------------------------------------
+# script "lisp"
+# background "town_night"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.7 0
+# layer 270 4
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 3
+# scale 6504011 0.7 0
+# layer 6504011 3
+# mask 6504011 off
+# alpha 6504011 0 0
+;;ゼロ
+# body 23
+# pos 23 3
+# scale 23 0.7 0
+# layer 23 2
+# mask 23 off
+# alpha 23 0 0
+# body 1100211
+# alpha 1100211 0 0
+;;レーヴァテイン
+# body 41002002
+# pos 41002002 3
+# scale 41002002 0.6 0
+# layer 41002002 4
+# mask 41002002 off
+# alpha 41002002 0 0
+# brightness 41002002 0 0
+;;蜻蛉切
+# body 302411
+# pos 302411 3
+# scale 302411 0.8 0
+# layer 302411 3
+# mask 302411 off
+# alpha 302411 0 0
+# brightness 302411 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：町（夜）
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# serif 1
+# textwindow "nomal"
+@ゼロ
+はっ！
+
+;;ゼロが上から飛び降りてくる
+# scale 23 0.8 0.2
+# face 23 "normal"
+# alpha 23 1 0.3
+# se "SE_5257"
+# waitandnext 1
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@ゼロ
+…よし
+お前らも降りてきていいぞ
+
+# alpha 23 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# scale 6504011 0.8 0.2
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# se "SE_5257"
+# waitandnext 0.5
+
+# move 6504011 4 0.4
+# waitandnext 0.7
+
+# scale 270 0.8 0.2
+# face 270 "normal"
+# alpha 270 1 0.3
+# se "SE_5257"
+# waitandnext 0.5
+
+# voice 650401 "manannan_ura_0004"
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+ふふっ
+壁の上からの眺め、
+喜劇的に楽しかったね
+
+# face 6504011 "usual"
+# textboxarrow 0 3
+@マナナン
+町の真ん中に変なオブジェが
+建ってたけど、あれ何だろう？
+
+# voice 9917 "mimir_navikan_0056"
+# textboxarrow 0 1
+@ミーミル
+マナナンさん、お静かに
+
+# voice 9917 "mimir_navikan_0001"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+マスター様、ゆっくりで良いので
+慎重に降りてきて下さいね
+
+# alpha 6504011 0 0.3
+# alpha 270 0 0.3
+# face 23 "normal"
+# alpha 23 1 0.3
+# textboxarrow 0 2
+@ゼロ
+全員、降りたな？
+ひとまず俺達の家に――
+
+# serif 1
+# textwindow "nomal"
+@衛兵
+待てーっ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 11002 "laevateinm_0024"
+# face 23 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 2
+@ゼロ
+何っ？
+もう気づかれたのか？
+
+# voice 9917 "mimir_navikan_0034"
+# move 23 4 0.5
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ミーミル
+いえ…
+今の声は門の方からでは
+ありませんでした
+
+# serif 1
+# textwindow "nomal"
+@衛兵
+逃げても無駄だ！
+大人しく捕まってくれ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 270 "sad"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+…声が近づいてきます
+
+# face 23 "normal"
+# textboxarrow 0 3
+@ゼロ
+どこかに隠れた方がいいな
+こっちだ
+
+;;ゼロが走っていく
+# move 23 5 0.5
+# alpha 23 0 0.3
+# se "SE_6215"
+# textwindow "close"
+# waitandnext 0.8
+
+# voice 650401 "manannan_ura_0004"
+# face 6504011 "happy"
+# alpha 6504011 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+ふふっ
+今度はかくれんぼ？
+喜劇的に愉快だね♪
+
+# voice 9917 "mimir_navikan_0001"
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+マスター様、お急ぎ下さい
+
+# voice 9917 "mimir_navikan_0048"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+マスター様？
+
+# bgm "stop"
+# move 270 1 0.5
+# alpha 270 0 0.3
+# move 6504011 5 0.5
+# alpha 6504011 0 0.3
+# textwindow "close"
+# waitandnext 0.8
+
+;;物が落下してくる音があれば
+# se "SE_9226"
+;;レーヴァテインが空から降ってくる
+# scale 41002002 0.9 0.5
+# alpha 41002002 1 0.5
+# waitandnext 0.5
+
+;;マスターがレーヴァテインを抱き留める
+# se "SE_9347"
+# se "SE_0648"
+# shake 0 0.5
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@？？？
+…………
+
+;;選択肢
+# select "空から女の子が！" "select_label_01"
+…………
+
+# label "select_label_01"
+# voice 9917 "mimir_navikan_0022"
+# move 41002002 4 0.5
+# move 270 2 0.5
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ミーミル
+えっ？
+あ、あのっ
+とりあえず、こちらへ
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# brightness 41002002 1 0
+# alpha 41002002 0 0
+# alpha 270 0 0
+# waitandnext 0.2
+
+# move 23 2 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 11002 "laevateinm_0002"
+# move 23 3 0.5
+# face 23 "angry_1"
+# alpha 23 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ゼロ
+おい、何してた！？
+足を引っ張るようなら…
+
+# move 23 2 0.5
+# alpha 23 0 0.3
+# move 41002002 3 0.5
+# alpha 41002002 1 0.3
+# textboxarrow 0 2
+@？？？
+…………
+
+# move 41002002 4 0.5
+# alpha 41002002 0 0.3
+# move 23 3 0.5
+# face 23 "normal"
+# alpha 23 1 0.3
+# textboxarrow 0 2
+@ゼロ
+…………
+
+# move 41002002 5 0
+# textboxarrow 0 2
+@ゼロ
+%(userName)s…
+お前が抱きかかえているのは…
+いや、まさか…
+
+# move 41002002 4 0.5
+# alpha 41002002 1 0.3
+# move 23 2 0.5
+# textboxarrow 0 3
+@？？？
+…兄さん
+お帰り…
+
+# voice 11002 "laevateinm_0023"
+# face 23 "surprise"
+# move 270 5 0
+# bgm "bgm006" 0
+# textwindow "toge"
+# textboxarrow 0 1
+# textsize 28
+@ゼロ
+アマネええええええ！？
+
+# alpha 41002002 0 0.3
+# move 270 4 0.5
+# face 270 "normal"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+# textsize 24
+@ミーミル
+ゼロさん、お静かにっ
+衛兵の皆さんに気づかれてしまいます
+
+# move 6504011 5 0
+# textboxarrow 0 1
+@ゼロ
+いや待てどうなってんだ？
+何がどうなってやがるっ？
+何でアマネが幼くなってるんだ！？
+
+# move 270 5 0.5
+# alpha 270 0 0.3
+# move 6504011 4 0.5
+# face 6504011 "usual"
+# alpha 6504011 1 0.3
+# textboxarrow 0 3
+@マナナン
+なになに？
+ゼロはこの子のこと、
+知ってるの？
+
+# face 23 "normal"
+# textboxarrow 0 1
+@ゼロ
+知ってるも何も、こいつは俺の妹だ
+アマネ…キル姫としての名前は、
+レーヴァテイン
+
+# voice 9917 "mimir_navikan_0023"
+# move 41002002 5 0
+# move 270 4 0.5
+# face 270 "surprise"
+# alpha 270 1 0.3
+# move 6504011 5 0.5
+# alpha 6504011 0 0.3
+# textboxarrow 0 3
+@ミーミル
+レーヴァテインさん？
+ですが、記録で見た姿より随分と
+幼いような…
+
+# face 23 "angry_1"
+# move 270 5 0.5
+# alpha 270 0 0.3
+# move 41002002 4 0.5
+# alpha 41002002 1 0.3
+# textboxarrow 0 1
+@ゼロ
+そうだ！
+一体、何があった、アマネ！？
+
+# textboxarrow 0 3
+@レーヴァテイン
+…兄さん、うるさい
+
+# face 23 "surprise"
+# textboxarrow 0 1
+@ゼロ
+アマネええええ…！
+
+# bgm "stop"
+# serif 1
+# textwindow "nomal"
+@衛兵
+向こうで声がしたぞ！
+
+# bgm "bgm005" 0
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 11002 "laevateinm_0013"
+# face 23 "angry_1"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ゼロ
+チッ
+気づかれちまった…
+
+# textboxarrow 0 3
+@レーヴァテイン
+兄さんのせい…
+
+# voice 11002 "laevateinm_0015"
+# textboxarrow 0 1
+@ゼロ
+くっ…悪かったな！
+お前ら、家まで走るぞ！
+
+# textboxarrow 0 3
+@レーヴァテイン
+それはダメ…
+
+# face 23 "normal"
+# textboxarrow 0 1
+@ゼロ
+何でだっ？
+
+# textboxarrow 0 3
+@レーヴァテイン
+私達の家は…見張られてる…
+
+# face 23 "angry_1"
+# textboxarrow 0 1
+@ゼロ
+くそっ
+だったら、どこに…
+
+# move 270 1 0
+# textboxarrow 0 3
+@レーヴァテイン
+いいところがあるの…
+案内する…
+
+# alpha 23 0 0.3
+# move 270 2 0.5
+# face 270 "happy"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ミーミル
+助かります
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# voice 9917 "mimir_navikan_0002"
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+あの…ところで、レーヴァテインさん
+そろそろマスター様の腕から
+降りていただけると…
+
+# textboxarrow 0 3
+@レーヴァテイン
+…………
+
+# textboxarrow 0 1
+@ミーミル
+あ、あの…
+
+# textboxarrow 0 3
+@レーヴァテイン
+…こっち
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# bgm "bgm005" 0
+# alpha 41002002 0 0
+# alpha 270 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 650401 "manannan_ura_0005"
+# move 23 2 0
+# face 23 "normal"
+# alpha 23 1 0.3
+# move 6504011 4 0
+# face 6504011 "happy"
+# alpha 6504011 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+壁の上で見た変なオブジェだ
+
+# textboxarrow 0 1
+@ゼロ
+こいつは「炎の巨人」騒動の後で
+建てられた記念碑だろ
+これが何だっていうんだ？
+
+# alpha 23 0 0.3
+# alpha 6504011 0 0.3
+# move 41002002 3 0
+# alpha 41002002 1 0.3
+# textboxarrow 0 2
+@レーヴァテイン
+ここ…
+開くから
+
+;;暗転
+# se "SE_0918"
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+;;背景：地下室
+# background "006_jail"
+# alpha 41002002 0 0
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# move 270 3 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+なるほど
+記念碑の中は
+空洞になっているのですね
+
+# alpha 270 0 0.3
+# move 23 2 0
+# face 23 "normal"
+# alpha 23 1 0.3
+# move 41002002 4 0
+# alpha 41002002 1 0.3
+# textboxarrow 0 1
+@ゼロ
+長年、この町に住んでるが
+これは知らなかったぞ
+アマネ、何で知ってた？
+
+# textboxarrow 0 3
+@レーヴァテイン
+…………何で知ってたんだろ？
+
+# voice 11002 "laevateinm_0002"
+# textboxarrow 0 1
+@ゼロ
+おい…
+
+;;選択肢
+# select "これからどうする？" "select_label_02"
+記念碑の中は
+空洞になっている
+
+# label "select_label_02"
+# textboxarrow 0 1
+@ゼロ
+まずはアマネから
+話を聞くしかないだろっ
+何でこんなことに…
+
+# textboxarrow 0 3
+@レーヴァテイン
+…さぁ
+覚えてない…
+
+# textboxarrow 0 1
+@ゼロ
+覚えてないって、お前…
+
+# voice 9917 "mimir_navikan_0002"
+# face 270 "normal"
+# alpha 270 1 0.3
+# alpha 23 0 0.3
+# alpha 41002002 0 0.3
+# textboxarrow 0 2
+@ミーミル
+あの…どうして衛兵さん達から
+逃げておられたのですか？
+
+# alpha 270 0 0.3
+# face 23 "normal"
+# alpha 23 1 0.3
+# alpha 41002002 1 0.3
+# textboxarrow 0 3
+@レーヴァテイン
+部屋に…閉じ込めようとするから
+私…そういうのイヤなんだよね
+放っといて…欲しい
+
+# face 23 "angry_1"
+# textboxarrow 0 1
+@ゼロ
+やはり市長か！
+何を企んでやがる…
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@？？？
+そなた達、ここで何をしているの！？
+
+;;蜻蛉切が現れる
+# move 23 1 0.5
+# alpha 23 0 0.3
+# move 41002002 5 0.5
+# alpha 41002002 0 0.3
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# layer 302411 2
+# face 302411 "normal"
+# alpha 302411 1 0.3
+# waitandnext 0.5
+
+# brightness 302411 1 0.5
+# waitandnext 0.5
+
+# voice 11002 "laevateinm_0022"
+# move 23 2 0.5
+# layer 23 3
+# mask 23 on
+# face 23 "surprise"
+# alpha 23 1 0.3
+# move 302411 4 0.5
+# textboxarrow 0 1
+# textwindow "nomal"
+@ゼロ
+蜻蛉切っ？
+…お前こそ、何でここにいる？
+
+# textboxarrow 0 3
+@蜻蛉切
+相変わらず、無礼な輩ね…
+でも、ちょうどいいわ
+レーヴァテインを知らない？
+
+# face 23 "normal"
+# textboxarrow 0 1
+@ゼロ
+…何でアマネを捜している？
+市長の命令か？
+
+# voice 3024 "tonbokiri_0009"
+# textboxarrow 0 3
+@蜻蛉切
+何で、そうなるの？
+彼女が姿を消したからよ
+皆、心配しているの
+
+# textboxarrow 0 3
+@蜻蛉切
+あちこち捜し回ったけど
+見つからなくて…
+ダメ元でここにも来てみたのよ
+
+# alpha 302411 0 0.3
+# alpha 23 0 0.3
+# move 41002002 3 0
+# layer 41002002 5
+# alpha 41002002 1 0.5
+# textboxarrow 0 0
+@蜻蛉切
+変な噂も流れてるし、
+早く見つけて…
+
+# bgm "stop"
+# voice 3024 "tonbokiri_0023"
+# move 302411 5 0
+# face 302411 "surprise"
+# alpha 302411 1 0.3
+# move 23 1 0
+# face 23 "normal"
+# alpha 23 1 0.3
+# textboxarrow 0 3
+@蜻蛉切
+え？
+その子…まさか…
+
+# voice 11002 "laevateinm_0032"
+# textboxarrow 0 1
+@ゼロ
+ああ
+見た目は小さくなってるが、
+アマネだ
+
+# textboxarrow 0 3
+@蜻蛉切
+えええええ！？
+噂は本当だったの…
+
+# fadeout "black" 0.5
+# waitandnext 0.5

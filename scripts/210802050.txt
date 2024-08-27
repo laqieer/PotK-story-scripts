@@ -1,0 +1,931 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第８章 章タイトル：「ビギニング・オブ・ジ・エンド」
+;;第2話－５　タイトル：黄昏の魔弾
+;;2_5_0
+;;スクリプト最後の背景：牢獄
+;;-----------------------------------------
+# script "lisp"
+# background "ground_surface_break"
+# bgmfile "bgm403" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;フェイルノート
+# body 167
+# pos 167 3
+# scale 167 0.8 0
+# layer 167 2
+# alpha 167 0 0
+# mask 167 off
+;;ティファレト
+# body 171
+# pos 171 3
+# scale 171 0.8 0
+# layer 171 2
+# alpha 171 0 0
+# mask 171 off
+;;リサナウト
+# body 3203011
+# pos 3203011 3
+# scale 3203011 0.8 0
+# layer 3203011 2
+# alpha 3203011 0 0
+# mask 3203011 off
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;レシェフ
+# body 3201311
+# pos 3201311 3
+# scale 3201311 0.8 0
+# layer 3201311 2
+# alpha 3201311 0 0
+# mask 3201311 off
+;;マサムネ(キラーメイル)
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# layer 1100111 2
+# alpha 1100111 0 0
+# mask 1100111 off
+;;テュルソス・D. plug・フォルネウス
+# body 3600311
+# pos 3600311 3
+# scale 3600311 0.8 0
+# layer 3600311 2
+# alpha 3600311 0 0
+# mask 3600311 off
+;;ヴァナルガンド・聖鎖・サリエル 大罪ver.
+# body 5601111
+# pos 5601111 3
+# scale 5601111 0.8 0
+# layer 5601111 2
+# alpha 5601111 0 0
+# mask 5601111 off
+;;アフロディーテ・D. plug・アスモデウス 大罪ver.
+# body 5401311
+# pos 5401311 3
+# scale 5401311 0.8 0
+# layer 5401311 2
+# alpha 5401311 0 0
+# mask 5401311 off
+;;エンクウ
+# body 227
+# pos 227 3
+# scale 227 0.8 0
+# layer 227 2
+# alpha 227 0 0
+# mask 227 off
+;;クレイ
+# body 228
+# pos 228 3
+# scale 228 0.8 0
+# layer 228 2
+# alpha 228 0 0
+# mask 228 off
+;;ツカサ
+# body 229
+# pos 229 3
+# scale 229 0.8 0
+# layer 229 2
+# alpha 229 0 0
+# mask 229 off
+;;マサムネ・獣刻・ヨルムンガンド
+# body 3100111
+# pos 3100111 3
+# scale 3100111 0.8 0
+# layer 3100111 2
+# alpha 3100111 0 0
+# mask 3100111 off
+;;ムラマサ・獣刻・ヤマタノオロチ 大罪ver.
+# body 5102511
+# pos 5102511 3
+# scale 5102511 0.8 0
+# layer 5102511 2
+# alpha 5102511 0 0
+# mask 5102511 off
+;;シユウ・D. plug・ベルゼブブ 大罪ver.
+# body 5201911
+# pos 5201911 3
+# scale 5201911 0.8 0
+# layer 5201911 2
+# alpha 5201911 0 0
+# mask 5201911 off
+;;グリモワール・獣刻・ニーズヘッグ 大罪ver.
+# body 5501711
+# pos 5501711 3
+# scale 5501711 0.8 0
+# layer 5501711 2
+# alpha 5501711 0 0
+# mask 5501711 off
+;;アスカロン・D. plug・レヴィアタン 大罪ver.
+# body 5102311
+# pos 5102311 3
+# scale 5102311 0.8 0
+# layer 5102311 2
+# alpha 5102311 0 0
+# mask 5102311 off
+;;-----------------------------------------
+;;第2話－５　タイトル：黄昏の魔弾
+;;//背景：荒廃した街
+# move 3203011 2 0
+# face 3203011 "normal"
+# alpha 3203011 1 0
+# mask 3203011 on
+# move 5102311 4 0
+# face 5102311 "normal"
+# alpha 5102311 1 0
+# mask 5102311 on
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+あなたが「ネオ・ラグナロク」を
+作ったんですかっ？
+
+# textboxarrow 0 1
+@リサナウト
+そうよ！
+キル姫のキル姫によるキル姫のための
+楽園を――
+
+# bgm "stop"
+# voice 9935 "vang_0047"
+# alpha 3203011 0 0.5
+# alpha 5102311 0 0.5
+# move 5201911 2 0
+# face 5201911 "normal"
+# alpha 5201911 1 0.5
+# mask 5201911 on
+# move 211 4 0
+# face 211 "angry"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 3
+@ヴァング
+シユウ、やれ！！
+
+# voice 320191 "chihyu_a_0029"
+# face 5201911 "angry"
+# textboxarrow 0 1
+@シユウ
+うがあああぁぁ！
+
+;;//シユウがリサナウトを攻撃
+# se "SE_4100"
+# waitandnext 0.5
+
+;;//リサナウトが避ける
+# alpha 5201911 0 0.5
+# alpha 211 0 0.5
+# move 3203011 3 0
+# face 3203011 "usual"
+# alpha 3203011 1 0.5
+# mask 3203011 off
+# waitandnext 0.6
+
+# se "SE_5204"
+# textwindow "close"
+# leftout 3203011 0.5
+# waitandnext 1
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# voice 2030 "risanautr_l_0023"
+# alpha 3203011 0 0
+# move 3203011 3 0
+# face 3203011 "surprise"
+# alpha 3203011 1 0.5
+# mask 3203011 off
+# textboxarrow 0 2
+# textwindow "normal"
+@リサナウト
+ええっ？
+いきなり何するのよっ…
+
+# alpha 3203011 0 0.5
+# move 211 3 0
+# face 211 "angry"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+@ヴァング
+うるせぇ！
+てめえのせいで、俺達奏官が
+どんな目に遭ったと思ってんだ！
+
+# alpha 211 0 0.5
+# move 227 2 0
+# face 227 "angry"
+# alpha 227 1 0.5
+# mask 227 on
+# textboxarrow 0 1
+# move 228 4 0
+# face 228 "irregular"
+# alpha 228 1 0.5
+# mask 228 on
+@エンクウ
+テュルソス殿らに恩義はあるが、
+「ネオ・ラグナロク」の無体は
+目に余るものがある
+
+# face 228 "angry"
+# textboxarrow 0 3
+@クレイ
+創始者が出てきてくれたんだ
+ここできっちり片をつけようじゃ
+ないか！
+
+# voice 310251 "muramasa_ge_0001"
+# alpha 227 0 0.5
+# alpha 228 0 0.5
+# move 5601111 2 0
+# face 5601111 "usual"
+# alpha 5601111 1 0.5
+# mask 5601111 on
+# move 5102511 4 0
+# face 5102511 "angry"
+# alpha 5102511 1 0.5
+# mask 5102511 on
+# textboxarrow 0 3
+@ムラマサ
+主君、拙者はいつでも構いません
+
+# voice 360111 "vanargand_t_0009"
+# face 5601111 "normal"
+# textboxarrow 0 1
+@ヴァナルガンド
+私もまだまだいけますよ！
+
+# voice 2030 "risanautr_l_0022"
+# alpha 5601111 0 0.5
+# alpha 5102511 0 0.5
+# move 3203011 3 0
+# face 3203011 "surprise"
+# alpha 3203011 1 0.5
+# mask 3203011 off
+# textboxarrow 0 2
+@リサナウト
+あれ…？
+私、何でこんなに嫌われてるの？
+
+# se "SE_0607"
+# serif 1
+@信者達
+教祖様だ！
+教祖様がお帰りになったぞ！
+
+# serif 1
+@祭祀長
+おお、教祖リサナウト様！
+どうか我々をお導き下さい！
+
+# serif 1
+@信者達
+教団の危機に駆けつけてくれたんだ！
+教祖様、万歳！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 3203011 0 0.5
+# move 211 3 0
+# face 211 "irregular"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+@ヴァング
+何だ、こいつら…
+あっという間に戻ってきやがった
+
+# voice 9931 "enkuu_0017"
+# alpha 211 0 0.5
+# move 227 3 0
+# face 227 "angry"
+# alpha 227 1 0.5
+# mask 227 off
+# textboxarrow 0 2
+@エンクウ
+むう…
+やりにくい者達だ…
+
+# voice 2030 "risanautr_l_0002"
+# alpha 227 0 0.5
+# move 3203011 3 0
+# face 3203011 "usual"
+# alpha 3203011 1 0.5
+# mask 3203011 off
+# textboxarrow 0 2
+@リサナウト
+ねえ、祭祀長さん
+私がいない間、何かあったの？
+すごく反感買ってるみたいなんだけど
+
+# serif 1
+@祭祀長
+何も問題はありません、教祖様
+あなたのお言葉通り、奏官の支配から
+キル姫様を助け出しておりました！
+
+# serif 1
+@信者達
+罪深き奏官達に死を！
+
+# voice 2030 "risanautr_l_0022"
+# face 3203011 "surprise"
+# textboxarrow 0 2
+@リサナウト
+えっ…何それ、怖い…
+私、そんなこと言ってないけど…
+
+# textboxarrow 0 2
+@リサナウト
+「私が帰ってくるまでに、マスターの
+いないキル姫をできるだけたくさん
+集めておいてね」って頼んだだけよ
+
+# serif 1
+@祭祀長
+はい！
+つまりキル姫様に奏官など不要と
+いうことですよねっ？
+
+# serif 1
+@祭祀長
+キル姫様のため、奏官どもを誅して
+まいりました！
+
+# serif 1
+@信者達
+奏官に死を！！
+
+# bgm "stop"
+# serif 1
+# textwindow "close"
+# serif 0
+# face 3203011 "usual"
+# textboxarrow 0 2
+@リサナウト
+…………
+
+;;//リサナウトの姿が消える
+# se "SE_5374"
+# textwindow "close"
+# move 3203011 5 0.2
+# alpha 3203011 0 0.1
+# waitandnext 0.2
+
+# move 211 3 0
+# face 211 "surprise"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ヴァング
+何っ！？
+あいつ、逃げやがったぞ
+
+# voice 9930 "clay_0048"
+# alpha 211 0 0.5
+# move 228 2 0
+# face 228 "angry"
+# alpha 228 1 0.5
+# mask 228 on
+# textboxarrow 0 1
+# move 5601111 4 0
+# face 5601111 "usual"
+# alpha 5601111 1 0.5
+# mask 5601111 on
+@クレイ
+あそこだ！
+ヴァナルガンド、頼むっ
+
+# face 5601111 "normal"
+# textboxarrow 0 3
+@ヴァナルガンド
+私の邪眼からは逃れられません！
+
+# alpha 228 0 0.5
+# alpha 5601111 0 0.5
+# move 5501711 2 0
+# face 5501711 "normal"
+# alpha 5501711 1 0.5
+# mask 5501711 on
+# textboxarrow 0 1
+# move 5102311 4 0
+# face 5102311 "normal"
+# alpha 5102311 1 0.5
+# mask 5102311 on
+@グリモワール
+取り押さえるわよ、アスカロン！
+
+# voice 310231 "ascalon_a_0032"
+# textboxarrow 0 3
+@アスカロン
+はい！
+“次元跳躍”！
+
+;;//アスカロンが消えて、リサナウトを捕らえる
+# se "SE_2104"
+# sedelay "SE_2106" 0.8
+# textwindow "close"
+# move 5102311 2 0.2
+# alpha 5102311 0 0.1
+# waitandnext 0.5
+
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# voice 2030 "risanautr_l_0025"
+# alpha 5501711 0 0.5
+# move 3203011 3 0
+# face 3203011 "angry"
+# alpha 3203011 1 0.5
+# mask 3203011 off
+# textboxarrow 0 2
+# textwindow "normal"
+@リサナウト
+いやあああっ…！
+違うのよっ…
+これは誤解なのっ…！
+
+# alpha 3203011 0 0.5
+# move 227 3 0
+# face 227 "angry"
+# alpha 227 1 0.5
+# mask 227 off
+# textboxarrow 0 2
+@エンクウ
+誤解で命を狙われては堪らぬ
+改心していただこう
+
+# voice 350171 "grimoire_ge_0007"
+# alpha 227 0 0.5
+# move 5501711 3 0
+# face 5501711 "usual"
+# alpha 5501711 1 0.5
+# mask 5501711 off
+# textboxarrow 0 2
+@グリモワール
+バカは死ななきゃ治らないって
+いうわ
+
+# voice 340131 "aphrodite_a_0005"
+# alpha 5501711 0 0.5
+# move 5401311 3 0
+# face 5401311 "happy"
+# alpha 5401311 1 0.5
+# mask 5401311 off
+# textboxarrow 0 2
+@アフロディーテ
+あらぁ♪
+どんなお仕置きをするのかしら
+
+;;//アルマスが走ってくる
+# se "SE_5575"
+# voice 9943 "almace_navikan_0047"
+# alpha 5401311 0 0.5
+# move 196 3 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+みんな無事！？
+外に出るの手間取っちゃって、
+ごめん…
+
+# face 196 "surprise"
+# textboxarrow 0 2
+@アルマス
+何やってるの？
+
+# alpha 196 0 0.5
+# move 5102311 2 0
+# face 5102311 "normal"
+# alpha 5102311 1 0.5
+# mask 5102311 on
+# textboxarrow 0 1
+# move 5102511 4 0
+# face 5102511 "angry"
+# alpha 5102511 1 0.5
+# mask 5102511 on
+@アスカロン
+「ネオ・ラグナロク」を作った
+キル姫を捕らえました！
+
+# textboxarrow 0 3
+@ムラマサ
+今から首魁の首級をあげる
+ところですっ
+
+# voice 2030 "risanautr_l_0016"
+# alpha 5102311 0 0.5
+# alpha 5102511 0 0.5
+# move 3203011 3 0
+# face 3203011 "sad"
+# alpha 3203011 1 0.5
+# mask 3203011 off
+# textboxarrow 0 2
+@リサナウト
+誤解だって言ってるのに…
+
+;;//テュルソスがやって来る
+# se "SE_0740"
+# voice 360031 "tyurusosu_a_0002"
+# alpha 3203011 0 0.5
+# move 3600311 3 0
+# face 3600311 "normal"
+# alpha 3600311 1 0.5
+# mask 3600311 off
+# textboxarrow 0 2
+@テュルソス
+まあまあ
+そのくらいにしてあげてよ
+
+# voice 320131 "reshef_ge_0036"
+# alpha 3600311 0 0.5
+# move 3201311 3 0
+# face 3201311 "happy"
+# alpha 3201311 1 0.5
+# mask 3201311 off
+# textboxarrow 0 2
+@レシェフ
+あたし達にとっては、
+恩人なんだからさ
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 3201311 0 0
+# move 3203011 3 0
+# face 3203011 "angry"
+# alpha 3203011 1 0
+# mask 3203011 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@リサナウト
+…というわけで、あなた達全員、
+マイナス１００００ポイントよ！
+
+# se "SE_0902"
+# serif 1
+@信者達
+そ…そんなぁっ…
+
+# serif 1
+@祭祀長
+どうか…どうかお許し下さい、
+教祖様…！
+
+# serif 1
+@信者達
+一気にポイントがマイナスに
+転落だぁぁっ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 3203011 0 0.5
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+何のポイントよ…？
+
+# alpha 196 0 0.5
+# move 227 2 0
+# face 227 "usual"
+# alpha 227 1 0.5
+# mask 227 on
+# textboxarrow 0 1
+# move 3600311 4 0
+# face 3600311 "angry"
+# alpha 3600311 1 0.5
+# mask 3600311 on
+@エンクウ
+此度はテュルソス殿の顔を立てて
+手打ちにしたが…
+
+# textboxarrow 0 3
+@テュルソス
+分かってる
+もう「ネオ・ラグナロク」は
+あなた達を襲ったりしないわ
+
+# textboxarrow 0 3
+@テュルソス
+聞いた話だと、けっこう長いこと
+リサナウトはここにいなかった
+みたいね
+
+# textboxarrow 0 3
+@テュルソス
+時間が経つにつれて、最初の言葉が
+曲解されていくのはよくあることよ
+
+;;//リサナウトが歩いてくる
+# se "SE_0740"
+# alpha 227 0 0.5
+# alpha 3600311 0 0.5
+# move 3203011 3 0
+# face 3203011 "normal"
+# alpha 3203011 1 0.5
+# mask 3203011 off
+# textboxarrow 0 2
+@リサナウト
+禍福はあざなえる縄の如しという
+言葉を知ってる？
+
+# textboxarrow 0 2
+@リサナウト
+きっと、これからあなた達には
+良いことがあるわよ！
+
+# move 3203011 2 0.5
+# mask 3203011 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+無理やり誤魔化そうとしてない？
+
+# face 3203011 "usual"
+# textboxarrow 0 1
+@リサナウト
+とんでもない
+これは確定事象なの
+
+# face 3203011 "normal"
+# textboxarrow 0 1
+@リサナウト
+とりあえず、拠点を守ってくれた
+お礼に一晩ゆっくりしていって
+
+# textboxarrow 0 3
+@アルマス
+気持ちだけ受け取っておくわ
+私達、急いでるの
+
+# voice 9935 "vang_0003"
+# alpha 3203011 0 0.5
+# alpha 196 0 0.5
+# move 211 3 0
+# face 211 "usual"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+@ヴァング
+ああ…けっこう時間食っちまったが
+これで気兼ねなくユグドラシルに
+迎えるぜ
+
+;;//ツカサが姿を現す
+# alpha 211 0 0.5
+# move 229 3 0
+# alpha 229 1 0.5
+# mask 229 off
+# textboxarrow 0 2
+@ツカサ
+…………
+
+# voice 9931 "enkuu_0022"
+# move 227 2 0
+# face 227 "usual"
+# alpha 227 1 0.5
+# mask 227 on
+# textboxarrow 0 1
+# move 229 4 0.5
+# mask 229 on
+@エンクウ
+おお、ツカサ殿
+今までどちらにおられた？
+
+# voice 340131 "aphrodite_a_0001"
+# alpha 227 0 0.5
+# move 5401311 2 0
+# face 5401311 "usual"
+# alpha 5401311 1 0.5
+# mask 5401311 on
+# textboxarrow 0 1
+@アフロディーテ
+マスター！
+わたしの活躍を見て下さらない
+なんて…いけない人
+
+# alpha 5401311 0 0.5
+# alpha 229 0 0.5
+# move 1100111 3 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 off
+# textboxarrow 0 2
+@マサムネ
+これで全員揃ったな
+そろそろ行こう
+
+# alpha 1100111 0 0.5
+# move 3203011 2 0
+# face 3203011 "sad"
+# alpha 3203011 1 0.5
+# mask 3203011 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+@リサナウト
+ゆっくりしていけばいいのに…
+
+# textboxarrow 0 3
+@アルマス
+急いでるって言ったでしょ
+…あなたがキル姫を集めて何を
+しようとしてるのか知らないけど
+
+# textboxarrow 0 3
+@アルマス
+世界は今――
+
+# bgm "stop"
+# face 3203011 "usual"
+# textboxarrow 0 1
+@リサナウト
+“終焉”に向かおうとしているのよ
+…って言いたいのよね？
+
+# voice 9943 "almace_navikan_0035"
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+えっ…！？
+
+# face 3203011 "normal"
+# textboxarrow 0 1
+@リサナウト
+また会いましょう、アルマス
+そのときが来たら
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+…………
+
+;;//背景：牢獄
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "006_jail"
+# alpha 3203011 0 0
+# alpha 196 0 0
+# move 3203011 2 0
+# face 3203011 "usual"
+# alpha 3203011 1 0
+# mask 3203011 on
+# move 171 4 0
+# face 171 "normal"
+# alpha 171 1 0
+# mask 171 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm293" "BgmLostRagnarokSideStory" 0
+# textboxarrow 0 3
+# textwindow "normal"
+@ティファレト
+…帰ったのですね、リサナウト
+
+# voice 2030 "risanautr_l_0003"
+# textboxarrow 0 1
+@リサナウト
+ただいま…
+なかなか上手くいかないものね
+
+# face 171 "surprise"
+# textboxarrow 0 3
+@ティファレト
+捜している方々は見つからなかった
+んですか？
+
+# textboxarrow 0 1
+@リサナウト
+そっちは上々よ
+でも、まさか「ネオ・ラグナロク」が
+おかしな方向に進んでたなんて…
+
+# voice 2030 "risanautr_l_0028"
+# face 3203011 "sad"
+# textboxarrow 0 1
+@リサナウト
+うーん…
+あと一人なんだけど、
+間に合うかしら？
+
+;;//フェイルノート（霊装支配前）とマサムネ（霊装支配ヴァージョン）が現れる
+;;マサムネ（霊装支配ヨルムンガンドver.）
+# alpha 3203011 0 0.5
+# alpha 171 0 0.5
+# move 167 2 0
+# face 167 "normal"
+# alpha 167 1 0.5
+# mask 167 on
+# move 3100111 4 0
+# face 3100111 "normal"
+# alpha 3100111 1 0.5
+# mask 3100111 on
+# textboxarrow 0 3
+@マサムネ
+何としても間に合わせる
+そのために拙者を引き入れたので
+あろう？
+
+# voice 4019 "failnaught_a_0009"
+# face 167 "angry"
+# textboxarrow 0 1
+@フェイルノート
+何よ、ここ？
+こんなところが拠点なの？
+薄暗いわねっ
+
+# alpha 167 0 0.5
+# move 3203011 2 0
+# face 3203011 "normal"
+# alpha 3203011 1 0.5
+# mask 3203011 on
+# textboxarrow 0 1
+@リサナウト
+マサムネ、お帰りなさい
+ちゃんと連れてきてくれたのね
+
+# voice 310011 "masamune_ge_0003"
+# textboxarrow 0 3
+@マサムネ
+そなたが駆けつけるまでもなく
+助勢があったと聞いたが、
+その者達は何処に？
+
+# textboxarrow 0 1
+@リサナウト
+あなたが来る前に旅立ったわ
+待っていれば、再会できたのにね
+
+# face 3100111 "surprise"
+# textboxarrow 0 3
+@マサムネ
+何のことだ？
+
+# face 3203011 "usual"
+# textboxarrow 0 1
+@リサナウト
+ううん、何でもない
+さてと…フェイルノート
+こないだも話したけど
+
+# voice 4019 "failnaught_a_0003"
+# alpha 3100111 0 0.5
+# move 167 4 0
+# face 167 "normal"
+# alpha 167 1 0.5
+# mask 167 on
+# textboxarrow 0 3
+@フェイルノート
+ええ、分かってるわよ
+さっさと連れてきなさい
+
+# face 167 "angry"
+# textboxarrow 0 3
+@フェイルノート
+この世界のために…
+私が、ルシファーを使役して
+みせるわ！
+
+# alpha 3203011 0 0.5
+# alpha 167 0 0.5
+# move 171 3 0
+# face 171 "angry"
+# alpha 171 1 0.5
+# mask 171 off
+# textboxarrow 0 2
+@ティファレト
+私も…ミカエルを受け入れて
+みせますっ

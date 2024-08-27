@@ -1,0 +1,316 @@
+;;----------------------------------------------
+;;100302053
+;;第2話　タイトル：不可思議な戦場
+;;2-5-3
+;;----------------------------------------------
+# script "lisp"
+# background "201_slum"
+# bgm "bgm003" 0
+;;アルマス
+# body 3103811
+# pos 3103811 2
+# scale 3103811 0.8 0
+# layer 3103811 4
+# alpha 3103811 1 0
+# mask 3103811 on
+;;ギル
+# body 137
+# pos 137 2
+# scale 137 0.8 0
+# layer 137 1
+# alpha 137 0 0
+# mask 137 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 5
+# alpha 139 0 0
+# mask 139 on
+;;アロンダイト
+# body 3100711
+# pos 3100711 4
+# scale 3100711 0.8 0
+# layer 3100711 2
+# alpha 3100711 1 0
+# mask 3100711 on
+;;オティヌス
+# body 3400811
+# pos 3400811 3
+# scale 3400811 0.8 0
+# layer 3400811 3
+# alpha 3400811 0 0
+# mask 3400811 on
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;◆背景：奴隷区------------------------------------------------------------
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310071 "arondaito_ge_0002"
+# chara 3100711
+@アロンダイト
+この領地における奴隷区はこの一画
+ですね
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103811 "normal"
+# voice 1038 "almace_0039"
+# chara 3103811
+@アルマス
+雑然としてるけど、割と落ち着いてる
+みたいね
+誰か話が聞けそうな人は…
+
+# alpha 3100711 0 0.5
+# alpha 3103811 0 0.5
+# alpha 139 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 139 "normal"
+# voice 9967 "titania_0006"
+# chara 139
+@ティターニア
+あら？猫が寄ってきます
+
+# textwindow "close"
+# move 139 4 0.5
+# mask 137 on
+# alpha 137 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 137 "usual"
+# voice 9969 "gill_0005"
+# chara 137
+@ギル
+へーっ
+可愛いな！
+へへっ、こっちに来たぞ
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 137 "normal"
+# chara 137
+@ギル
+飼い猫じゃなさそうだけど、
+人を怖がらないなあ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 139 "worry"
+# voice 9967 "titania_0042"
+# chara 139
+@ティターニア
+…ギル、その猫を離して下さい
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 137 "usual"
+# voice 9969 "gill_0021"
+# chara 137
+@ギル
+どした？
+ティターニアも抱きたいのか？
+その体じゃ無理かっ
+
+# textwindow "close"
+# move 139 5 0.5
+# move 137 1 0.5
+# pos 3103811 3
+# alpha 3103811 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103811 "happy1"
+# voice 1038 "almace_0042"
+# chara 3103811
+@アルマス
+ティニ、羨ましいなら素直に
+そう言ったら？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 139 "sad"
+# voice 9967 "titania_0065"
+# chara 139
+@ティターニア
+アルマスまで！
+その猫から魔力を感じるんですっ
+嫌な予感が――
+
+;;猫が人間に変わる
+# bgm "stop"
+# textwindow "close"
+# brightness 3103811 0.6 0.3
+# brightness 137 0.6 0.3
+# brightness 139 0.6 0.3
+# face 137 "surprise"
+# face 139 "surprise"
+# face 3103811 "surprise"
+# se "SE_5776"
+# shake 0 0.6
+# fadein "white" 0.6
+# waitandnext 0.6
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@男
+うわあああ！？
+…や、やっと戻れた
+
+# serif 0
+# textwindow "normal"
+# brightness 3103811 1.0 0.3
+# brightness 137 1.0 0.3
+# brightness 139 1.0 0.3
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9969 "gill_0026"
+# chara 137
+@ギル
+ぎええええ…！
+猫がっ…猫がオッサンになった！？
+
+# brightness 137 0.6 0.3
+# brightness 139 0.6 0.3
+# brightness 3103811 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@女
+助かった…怖かった…
+
+# brightness 3103811 1.0 0.3
+# brightness 139 1.0 0.3
+# brightness 137 1.0 0.3
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103811 "worry"
+# voice 1038 "almace_0027"
+# chara 3103811
+@アルマス
+こっちは女の子になったわ
+何がどうなってるの？
+
+;;◆オティヌス--------------------------------------------------------------
+# bgmfile "bgm295_296" "BgmLostRagnarokBattle003" 0
+# textwindow "top_close"
+# textwindow "bottom_close"
+# alpha 3103811 0 0.5
+# alpha 139 0 0.5
+# alpha 137 0 0.5
+# waitandnext 0.5
+
+;;オティヌス
+# se "SE_0719"
+# alpha 3400811 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 340081 "otyinusu_a_0020"
+# chara 3400811
+@？？？
+んふふっ
+素敵な表情をありがとう！
+ショウは楽しんでもらえたかな？
+
+# textwindow "close"
+# move 3400811 4 0.5
+# pos 3100711 2
+# mask 3100711 on
+# alpha 3100711 1 0.5
+# face 3100711 "surprise"
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310071 "arondaito_ge_0009"
+# chara 3100711
+@アロンダイト
+斬ル姫！？
+いつの間にそこに…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3400811 "happy"
+# voice 340081 "otyinusu_a_0003"
+# chara 3400811
+@オティヌス
+あたしはオティヌス
+しがない手品師だよ
+
+# brightness 3400811 0.6 0.3
+# brightness 3100711 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@男
+も、もう勘弁して下さいっ…
+俺達はあんたの玩具じゃないんだ…！
+
+# brightness 3400811 1.0 0.3
+# brightness 3100711 1.0 0.3
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3400811 "sad"
+# voice 340081 "otyinusu_a_0019"
+# chara 3400811
+@オティヌス
+そんな寂しいこと言わないでよ
+あたしはあなた達に楽しい楽しい
+手品を披露してるだけなのに
+
+;;アルマスが人々を守る
+# textwindow "top_close"
+# textwindow "bottom_close"
+# alpha 3400811 0 0.5
+# alpha 3100711 0 0.5
+# waitandnext 0.5
+
+# pos 3103811 3
+# alpha 3103811 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# se "SE_5527"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103811 "angry"
+# voice 1038 "almace_0009"
+# chara 3103811
+@アルマス
+それ以上、近づかないで
+
+# textwindow "close"
+# move 3103811 2 0.5
+# pos 3400811 4
+# mask 3400811 on
+# alpha 3400811 1 0.5
+# face 3400811 "normal"
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3400811 "happy"
+# voice 340081 "otyinusu_a_0005"
+# chara 3400811
+@オティヌス
+あれ－？
+今度はあなたが遊んでくれるのかな？

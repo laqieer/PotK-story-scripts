@@ -1,0 +1,316 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第６章 章タイトル：アナザー・コンフリクト―交錯―
+;;第2話　タイトル：相容れぬもの
+;;6_2_9_1
+;;スクリプト最後の背景：村
+;;-----------------------------------------
+# script "lisp"
+# background "004_outland"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;エクスカリバー
+# body 101111
+# pos 101111 3
+# scale 101111 0.8 0
+# layer 101111 2
+# alpha 101111 0 0
+# mask 101111 off
+;;アロンダイト
+# body 100711
+# pos 100711 3
+# scale 100711 0.8 0
+# layer 100711 2
+# alpha 100711 0 0
+# mask 100711 off
+;;ルーン
+# body 300531
+# pos 300531 3
+# scale 300531 0.8 0
+# layer 300531 2
+# alpha 300531 0 0
+# mask 300531 off
+;;ロンゴミアント
+# body 301021
+# pos 301021 3
+# scale 301021 0.8 0
+# layer 301021 2
+# alpha 301021 0 0
+# mask 301021 off
+;;モニカ
+# body 209
+# pos 209 3
+# scale 209 0.8 0
+# layer 209 2
+# alpha 209 0 0
+# mask 209 off
+;;神令フォルカス
+# body 5301811
+# pos 5301811 3
+# scale 5301811 0.8 0
+# layer 5301811 2
+# alpha 5301811 0 0
+# mask 5301811 off
+;;ミョルニル
+# body 200111
+# pos 200111 3
+# scale 200111 0.8 0
+# layer 200111 2
+# alpha 200111 0 0
+# mask 200111 off
+;;-----------------------------------------
+;;第2話　タイトル：相容れぬもの
+;;//背景：村
+# voice 2001 "myuruniru_0010"
+# move 5301811 2 0
+# face 5301811 "normal"
+# alpha 5301811 1 0
+# mask 5301811 on
+# move 200111 4 0
+# face 200111 "angry"
+# alpha 200111 1 0
+# mask 200111 on
+# textflame 1 1
+# textboxarrow 0 3
+@ミョルニル
+こらこらこらー！
+マスタを怪我させるなんて…
+ぺったんこにするからね～！
+
+# serif 1
+@奏官
+気をつけろ、ミョルニル…
+そのフォルカス、何か違うっ…
+
+# voice 530181 "forcas_c_0028"
+# serif 1
+# textwindow "close"
+# serif 0
+# face 5301811 "sad"
+# textboxarrow 0 1
+@フォルカス
+仕留め損ねましたか
+苦しませたくはないので
+一撃で終わらせたかったのですが
+
+# voice 2001 "myuruniru_0011"
+# textboxarrow 0 3
+@ミョルニル
+むーん
+いきなり襲ってくるなんて
+ダメだよ！
+
+# textboxarrow 0 3
+@ミョルニル
+そんな悪いフォルカスは、
+ぺったんこにしちゃうんだからね～！
+
+# voice 530181 "forcas_c_0027"
+# face 5301811 "angry"
+# textboxarrow 0 1
+@フォルカス
+はぁ…仕方ありません
+先にあなたを還しましょう
+バイブスは、その後で
+
+# se "SE_5206"
+# voice 2001 "myuruniru_unit_0013"
+# textboxarrow 0 3
+@ミョルニル
+ヘビーな一撃、
+ドシンといくよ～っ
+
+# se "SE_5207"
+# voice 530181 "forcas_c_unit_0010"
+# textboxarrow 0 1
+@フォルカス
+この槍に貫かれること、
+それを光栄に思いなさい
+
+;;//フォルカスとミョルニルが交叉する
+# se "SE_9086"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 2001 "myuruniru_0037"
+# face 200111 "sad"
+# textboxarrow 0 3
+@ミョルニル
+いたい～…
+何で私がビリビリってしてるの…？
+
+# voice 530181 "forcas_c_0019"
+# face 5301811 "normal"
+# textboxarrow 0 1
+@フォルカス
+この程度ですか…
+では、トドメを
+
+# serif 1
+@奏官
+ミョルニル、避けろ…！
+
+# voice 2001 "myuruniru_0025"
+# serif 1
+# textwindow "close"
+# serif 0
+# face 200111 "normal"
+# textboxarrow 0 3
+@ミョルニル
+な、なななな！？
+
+# voice 3005 "roon_0029"
+# alpha 200111 0 0.5
+# move 300531 4 0
+# face 300531 "normal"
+# alpha 300531 1 0.5
+# mask 300531 on
+# textboxarrow 0 3
+@ルーン
+オラアアアアアアアア！！
+
+;;//ルーンが割り込む
+# se "SE_4200"
+# waitandnext 0.5
+
+# voice 530181 "forcas_c_0022"
+# face 5301811 "surprise"
+# textboxarrow 0 1
+@フォルカス
+新たなキル姫ですか…あら？
+
+# alpha 300531 0 0.5
+# move 209 4 0
+# face 209 "irregular"
+# alpha 209 1 0.5
+# mask 209 on
+# textboxarrow 0 3
+@モニカ
+何があったのか知らないけど、
+そのくらいにしておこうよ
+
+# voice 9937 "monica_0001"
+# textboxarrow 0 3
+@モニカ
+君、フォルカスだよね？
+何だか雰囲気違うけど…
+
+# face 5301811 "normal"
+# textboxarrow 0 1
+@フォルカス
+もう一人、現れましたね
+
+# alpha 5301811 0 0.5
+# alpha 209 0 0.5
+# move 101111 2 0
+# face 101111 "angry"
+# alpha 101111 1 0.5
+# mask 101111 on
+# move 301021 4 0
+# face 301021 "angry"
+# alpha 301021 1 0.5
+# mask 301021 on
+# textboxarrow 0 0
+@エクスカリバー＆ロンゴミアント
+マスター！
+
+# se "SE_5200"
+# waitandnext 0.5
+
+;;//二人がフォルカスの攻撃を止める
+# se "SE_9017"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# alpha 101111 0 0.5
+# alpha 301021 0 0.5
+# move 209 3 0
+# face 209 "surprise"
+# alpha 209 1 0.5
+# mask 209 off
+# textboxarrow 0 2
+@モニカ
+わわっ？
+いきなり何！？
+
+# voice 1011 "excalibur_battle_0005"
+# alpha 209 0 0.5
+# move 101111 2 0
+# face 101111 "angry"
+# alpha 101111 1 0.5
+# mask 101111 on
+# textboxarrow 0 1
+# move 301021 4 0
+# face 301021 "angry"
+# alpha 301021 1 0.5
+# mask 301021 on
+@エクスカリバー
+何の真似ですか、フォルカス？
+私のマスターに斬りかかるとは
+
+# voice 3010 "rhongomiant_0014"
+# textboxarrow 0 3
+@ロンゴミアント
+返答次第では…いえ、どのような
+理由があろうとも許しませんっ
+
+# voice 3005 "roon_0007"
+# alpha 101111 0 0.5
+# alpha 301021 0 0.5
+# move 100711 2 0
+# face 100711 "normal"
+# alpha 100711 1 0.5
+# mask 100711 on
+# move 300531 4 0
+# face 300531 "normal"
+# alpha 300531 1 0.5
+# mask 300531 on
+# textboxarrow 0 3
+@ルーン
+そういうことよ！
+たっぷり血の匂いを嗅がせて
+もらうからねぇ
+
+# face 100711 "angry"
+# textboxarrow 0 1
+@アロンダイト
+周りの皆さんは離れて下さい！
+彼女は私達が制します
+
+# voice 9937 "monica_0030"
+# alpha 100711 0 0.5
+# alpha 300531 0 0.5
+# move 5301811 2 0
+# face 5301811 "normal"
+# alpha 5301811 1 0.5
+# mask 5301811 on
+# move 209 4 0
+# face 209 "sad"
+# alpha 209 1 0.5
+# mask 209 on
+# textboxarrow 0 3
+@モニカ
+みんな血の気が多いなあ…
+動きを封じるくらいでいいからね
+
+# voice 530181 "forcas_c_0005"
+# face 5301811 "happy"
+# textboxarrow 0 1
+@フォルカス
+さらにキル姫が四人…
+ふふふっ
+私も侮られたものですね
+
+# bgmfile "bgm424_425" "BgmIntegralNoahCommand" 0
+# face 5301811 "angry"
+# textboxarrow 0 1
+@フォルカス
+では、まとめてユグドラシルの
+御許に還します！
+
+# voice 9937 "monica_0023"
+# face 209 "surprise"
+# textboxarrow 0 3
+@モニカ
+えっ…？

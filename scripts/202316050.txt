@@ -1,0 +1,497 @@
+;;-----------------------------------------
+;;SEA_5_0
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown_evening"
+# bgm "stop"
+;;-----------------------------------------
+;;マサムネ
+# body 100111
+# pos 100111 2
+# scale 100111 0.8 0
+# layer 100111 2
+# mask 100111 off
+# alpha 100111 0 0
+;;アルテミス
+# body 400131
+# pos 400131 4
+# scale 400131 0.8 0
+# layer 400131 4
+# alpha 400131 0 0
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 0 0
+;;パラシュ
+# body 200411
+# pos 200411 2
+# scale 200411 0.8 0
+# layer 200411 4
+# alpha 200411 0 0
+;;SEAリットゥ
+# body 6100511
+# pos 6100511 4
+# scale 6100511 0.8 0
+# layer 6100511 2
+# mask 6100511 off
+# alpha 6100511 0 0
+;;SEAイシューリエル
+# body 6301411
+# pos 6301411 4
+# scale 6301411 0.8 0
+# layer 6301411 4
+# alpha 6301411 0 0
+;;七支刀
+# body 5105111
+# pos 5105111 2
+# scale 5105111 0.8 0
+# layer 5105111 2
+# mask 5105111 off
+# alpha 5105111 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 4
+;;-----------------------------------------
+;;背景：下町（夕）in_downtown_evening
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+# bgm "bgm003" 0
+# voice 1001 "masamune_0028"
+# alpha 100111 1 0.3
+# face 400131 "sad"
+# alpha 400131 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@マサムネ
+トーキョーからの避難は完了したが
+異族は増える一方だ
+
+# voice 4001 "arutemisu_0028"
+# textflame 1 1
+# textboxarrow 0 3
+@アルテミス
+定期的に討伐チームを編成して
+対応させていますけれど、
+キリがありませんね
+
+# voice 9917 "mimir_navikan_0002"
+# alpha 100111 0 0.3
+# alpha 400131 0 0.3
+# face 270 "sad"
+# alpha 270 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+イシューリエルさん達は
+大丈夫でしょうか…
+
+# alpha 100111 1 0.3
+# face 400131 "normal"
+# alpha 400131 1 0.3
+# alpha 270 0 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+パラシュやシェキナーがいるのなら
+無理はせず戻ってくると思うが…
+
+# textflame 1 1
+# textboxarrow 0 3
+@アルテミス
+次の討伐チームにイシューリエル達の
+ことも伝えておきましょう
+
+;;アルテミスが立ち去る
+# se "SE_0719"
+# move 400131 5 0.5
+# alpha 400131 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# face 100111 "unhappy"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@マサムネ
+さて、これからどう動くべきか…
+
+# serif 1
+@アルテミス
+大変です、マスター…！
+
+;;アルテミスが走って戻ってくる
+# alpha 100111 0 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 1
+
+# se "SE_5575"
+# move 270 2 0
+# layer 270 4
+# face 270 "surprise"
+# alpha 270 1 0.3
+# move 400131 4 0.3
+# layer 400131 2
+# mask 400131 off
+# face 400131 "angry"
+# alpha 400131 1 0.3
+# waitandnext 1
+
+# voice 9917 "mimir_navikan_0022"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+どうされたのですか、アルテミスさん
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# textflame 1 1
+# textboxarrow 0 3
+@アルテミス
+イシューリエル達が戻ってきました…
+酷い怪我を負っています
+
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+ええっ…！？
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 270 0 0
+# alpha 400131 0 0
+# waitandnext 0.2
+
+# bgm "bgm005" 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 2004 "parashu_0024"
+# face 200411 "angry01"
+# alpha 200411 1 0.3
+# face 6100511 "angry"
+# alpha 6100511 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@パラシュ
+ううっ…
+ボクとしたことが…不覚だよ
+
+# voice 1005 "ritto_0037"
+# textflame 1 1
+# textboxarrow 0 3
+@リットゥ
+あいつ…何の真似だ！
+くっ…
+
+;;ミーミルがやってくる
+# se "SE_5575"
+# alpha 200411 0 0.3
+# alpha 6100511 0 0.3
+# face 270 "angry"
+# move 270 3 0
+# alpha 270 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+皆さん…！
+急いで治療をっ
+
+# alpha 270 0 0.3
+# alpha 200411 1 0.3
+# alpha 6100511 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@パラシュ
+平気だ
+応急処置は済ませてある
+それより…
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# textflame 1 1
+# textboxarrow 0 3
+@リットゥ
+急いで伝えなければ
+ならないことがある…！
+シェキナーが…裏切った！
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# alpha 200411 0 0.3
+# alpha 6100511 0 0.3
+# move 100111 4 0
+# voice 1001 "masamune_0022"
+# face 100111 "angry"
+# alpha 100111 1 0.3
+# move 270 2 0
+# alpha 270 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@マサムネ
+何だと！？
+そんな馬鹿な…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+…何があったのか、
+お話しいただけますか？
+
+# alpha 100111 0 0.3
+# alpha 270 0 0.3
+# alpha 200411 1 0.3
+# voice 1005 "ritto_0013"
+# alpha 6100511 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@リットゥ
+何があったか、だと！？
+私の方が知りたいくらいだ！
+
+# face 200411 "angry02"
+# textflame 1 1
+# textboxarrow 0 1
+@パラシュ
+いきなり背後から射られたんだよ
+あんなやり方…彼女らしくない…
+
+;;イシューリエルが七支刀に支えられて歩いてくる
+# se "SE_0719"
+# move 200411 1 0.5
+# alpha 200411 0 0.3
+# move 6100511 5 0.5
+# alpha 6100511 0 0.3
+# move 6301411 4 0
+# alpha 6301411 1 0.3
+# move 5105111 3 0
+# face 5105111 "sad"
+# alpha 5105111 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@イシューリエル
+もう少し詳しく
+話して差し上げますわ
+
+# move 5105111 2 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@七支刀
+イシューリエルさん…
+まだ動かない方がいいですよ
+
+# voice 3014 "ithuriel_battle_0005"
+# face 6301411 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@イシューリエル
+どんな状態だろうと真相を解明する
+それがわたくしのトゥルースですの！
+…あ痛たたた
+
+;;選択肢
+# select "無理しないで" "select_label_01" "休んでからにしよう" "select_label_01"
+どんな状態だろうと真相を解明する
+それがわたくしのトゥルースですの！
+…あ痛たたた
+
+# label "select_label_01"
+# textflame 1 1
+# textboxarrow 0 3
+@イシューリエル
+お気遣いなく…
+情報は鮮度が命ですわ
+
+# face 6301411 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@イシューリエル
+シェキナーは…町に入ってしばらくは
+特におかしな様子はありませんでした
+
+# textflame 1 1
+# textboxarrow 0 3
+@イシューリエル
+ただ…
+町の中心に建つビルに
+近づいていくうち
+
+# textflame 1 1
+# textboxarrow 0 3
+@イシューリエル
+どこかボーッとした顔に
+なる瞬間が幾度かありました
+
+# face 6301411 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@イシューリエル
+わたくし、何度か呼びかけましたわ
+その度、「大丈夫です」と返す
+ばかりで…
+
+# textflame 1 1
+# textboxarrow 0 3
+@イシューリエル
+何度目かの異族との戦いを終えた後、
+皆が彼女に背を向けた瞬間…
+射られたのですわ
+
+# alpha 5105111 0 0.3
+# move 200411 2 0
+# layer 200411 2
+# mask 200411 off
+# alpha 200411 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@パラシュ
+不意を突かれたのもあって…
+彼女から逃げることしかできなかった
+悔しいよ
+
+# face 6301411 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@イシューリエル
+パラシュも先程言ってましたけれど、
+相手の背中を狙うなんてシェキナーの
+することとは思えませんわ
+
+# textflame 1 1
+# textboxarrow 0 3
+@イシューリエル
+まだ推論の域を出ませんけれど、
+何者かがシェキナーを操ったのでは
+ないかと、わたくし考えております
+
+# alpha 200411 0 0.3
+# alpha 6301411 0 0.3
+# move 6100511 4 0
+# layer 6100511 2
+# mask 6100511 off
+# face 6100511 "normal"
+# voice 1005 "ritto_0028"
+# alpha 6100511 1 0.3
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@リットゥ
+だが、あのとき私達の近くに
+不審な者はいなかった…！
+
+# face 6100511 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@リットゥ
+シェキナー自身も隙の無いキル姫だ
+一体、どうやって操った！？
+
+# voice 9917 "mimir_navikan_0028"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+とても不可解でございますね…
+
+# alpha 6100511 0 0.3
+# alpha 270 0 0.3
+# move 5105111 3 0
+# layer 5105111 2
+# mask 5105111 off
+# voice 1051 "shichishito_0002"
+# face 5105111 "surprise"
+# alpha 5105111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@七支刀
+あの…わたくしからもいいですか？
+
+# textflame 1 1
+# textboxarrow 0 2
+@七支刀
+トーキョーなんですけど…
+町全体に何らかの力が働いている
+感じがするんです
+
+# move 5105111 4 0.5
+# move 200411 2 0
+# layer 200411 4
+# mask 200411 on
+# voice 2004 "parashu_0022"
+# face 200411 "angry01"
+# alpha 200411 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@パラシュ
+何らか…？
+もう少し具体的に言えないのかな？
+
+# voice 1051 "shichishito_0031"
+# face 5105111 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@七支刀
+ごめんなさい…！
+あの…その…
+
+# voice 2004 "parashu_0031"
+# face 200411 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@パラシュ
+…ごめん
+別に怒ってないから
+落ち着いて話してほしい
+
+# voice 1051 "shichishito_0028"
+# face 5105111 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@七支刀
+は、はい！
+えっと…良くない感じじゃないんです
+むしろ、神聖なものを感じます
+
+# alpha 200411 0 0.3
+# alpha 5105111 0 0.3
+# move 100111 2 0
+# layer 100111 4
+# mask 100111 on
+# voice 1001 "masamune_0028"
+# face 100111 "unhappy"
+# alpha 100111 1 0.3
+# move 6301411 4 0
+# layer 6301411 2
+# mask 6301411 off
+# face 6301411 "sad"
+# alpha 6301411 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+神聖なもの？
+益々分からんな…
+
+# voice 3014 "ithuriel_0028"
+# textflame 1 1
+# textboxarrow 0 3
+@イシューリエル
+この一件…
+シェキナーだけで
+終わるといいのですけど…
+
+# fadeout "black" 2
+# waitandnext 2

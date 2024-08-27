@@ -1,0 +1,578 @@
+;;-----------------------------------------
+;;SEA1章_5
+;;-----------------------------------------
+# script "lisp"
+# background "sea_town_night"
+# bgm "bgm029_030" 0
+;;-----------------------------------------
+;;与一
+# body 6400511
+# pos 6400511 3
+# scale 6400511 0.8 0
+# layer 6400511 5
+# mask 6400511 off
+# alpha 6400511 0 0
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 3
+# mask 6504011 off
+# alpha 6504011 0 0
+;;レーヴァテイン（現）
+# body 41002002
+# pos 41002002 3
+# scale 41002002 0.75 0
+# layer 41002002 4
+# mask 41002002 off
+# alpha 41002002 0 0
+;;レーヴァテイン（回想）
+# body 100221
+# pos 100221 5
+# scale 100221 0.7 0
+# layer 100221 4
+# mask 100221 off
+# alpha 100221 0 0
+;;蜻蛉切
+# body 302411
+# pos 302411 3
+# scale 302411 0.8 0
+# layer 302411 2
+# mask 302411 off
+# alpha 302411 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：町（夜）
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+;;炎上演出
+# fadein "red" 1
+# envbody 1001 7 0
+# effectstart 1001
+# se "SE_0753"
+# shake 0 0.5
+# subfillrect 0 "red" 0.2 0 0.4
+# waitandnext 1.5
+
+# serif 1
+# textwindow "nomal"
+@住民１
+炎が広がっていく…
+このままじゃ、町がっ…！
+
+# serif 1
+@住民２
+誰か、助けてくれぇ…！！
+
+# face 6400511 "sad"
+# alpha 6400511 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@与一
+ああ…やっぱり与一は…
+ダメダメです…
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "toge"
+@？？？
+ガアアアアアアアアアアアア！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@与一
+与一が、射抜けなかったせいで…
+
+;;レーヴァテインが歩いてくる
+# move 6400511 2 0.5
+# move 100221 4 0.5
+# scale 100221 0.8 0.5
+# face 100221 "sad"
+# alpha 100221 1 0.5
+# se "SE_0740"
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@レーヴァテイン
+はぁ…
+めんどくさいなぁ
+
+# face 6400511 "surprise"
+# textboxarrow 0 1
+@与一
+レーヴァテインさん…
+
+# shake 0 1
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "toge"
+@？？？
+ガアアアアアアアアア！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 6400511 "normal"
+# textwindow "nomal"
+# textboxarrow 0 1
+@与一
+あ…危ないです…！
+
+# se "SE_5205"
+# face 100221 "normal"
+# textboxarrow 0 3
+@レーヴァテイン
+あなたは…とっとと、消えて…
+
+# se "SE_4000"
+# alpha 6400511 0 0.3
+# move 100221 3 0.5
+# textboxarrow 0 0
+# waitandnext 0.5
+
+;;雷演出あれば
+# fadein "white" 2
+# scale 100221 0.9 0.2
+# se "SE_12082"
+# effectskip 1001
+# waitandnext 0.2
+
+# scale 100221 0.8 0.5
+# waitandnext 1.8
+
+# sestop "SE_0753"
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@？？？
+ガアアアアアアアアアア…
+
+# voice 4005 "yoichi_0039"
+# face 6400511 "surprise"
+# alpha 6400511 1 0.3
+# move 100221 4 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@与一
+炎の巨人が…消えました…
+すごい…
+
+# face 6400511 "usual"
+# textboxarrow 0 1
+@与一
+すごいです…
+レーヴァテインさん
+
+# textsize 20
+# face 100221 "sad"
+# textboxarrow 0 3
+@レーヴァテイン
+はぁ…
+……たな
+このままだと…
+
+# textsize 24
+# face 6400511 "surprise"
+# textboxarrow 0 1
+@与一
+え…？
+
+;;レーヴァテインが立ち去る
+# move 100221 5 0.5
+# scale 100221 0.6 1
+# alpha 100221 0 0.5
+# se "SE_0740"
+# waitandnext 0.7
+
+# move 6400511 3 0.5
+# textboxarrow 0 2
+@与一
+あ、レーヴァテインさん…
+レーヴァテインさん…！
+どちらにっ…
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：室内
+# background "201_room"
+# subfillrect 0 "red" 0 0.4 0
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# alpha 6400511 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 0
+@与一
+…待って下さい！
+与一は…あわああぁっ…！？
+
+;;与一がベッドから転げ落ちる
+# imagealpha 0 0.3 0.5
+# se "SE_0648"
+# waitandnext 0.7
+
+# se "SE_0683"
+# waitandnext 0.3
+
+# fadein "white" 0.4
+# se "SE_9347"
+# se "SE_0846"
+# shake 0 2
+# textwindow "close"
+# waitandnext 2
+
+;;瞬き
+# imagealpha 0 0.7 1
+# waitandnext 1
+
+# imagealpha 0 0.9 0.7
+# imagepos 0 0 0
+# waitandnext 1.2
+
+# imagealpha 0 0 1
+# waitandnext 1
+
+# bgm "bgm003" 0
+# face 6400511 "surprise"
+# alpha 6400511 1 1
+# waitandnext 1.5
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@与一
+あれ…？
+夢…だったんですね…
+あのときの…夢…
+
+# voice 4005 "yoichi_0015"
+# face 6400511 "sad"
+# textboxarrow 0 2
+@与一
+ううっ…
+与一は何もできませんでした…
+何も…
+
+# face 6400511 "normal"
+# textboxarrow 0 2
+@与一
+…いけません！
+落ち込んでばかりいても、
+強くなれませんからっ
+
+# textboxarrow 0 2
+@与一
+こんなときこそ、これを
+
+# se "SE_11618"
+# move 6400511 2 0.5
+# scale 6400511 0.75 0.6
+# textboxarrow 0 0
+# waitandnext 1
+
+# move 6400511 3 0.5
+# scale 6400511 0.8 0.4
+# waitandnext 0.7
+
+# face 6400511 "happy"
+# textboxarrow 0 2
+@与一
+わあっ！
+いつ見ても綺麗です
+金色の鶏型ブローチ
+
+# face 6400511 "usual"
+# textboxarrow 0 2
+@与一
+与一は、このブローチに誓ったんです
+鍛錬を続けて、きっといつか…
+
+;;蜻蛉切が飛び込んでくる
+# bgm "stop"
+# move 6400511 2 0.5
+# layer 6400511 3
+# move 302411 5 0
+# layer 302411 4
+# mask 302411 on
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# se "SE_6119"
+# shake 0 0.4
+# waitandnext 0.3
+
+# se "SE_5575"
+# move 302411 4 0.3
+# face 302411 "angry"
+# alpha 302411 1 0.3
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@蜻蛉切
+与一！
+一大事よ！
+
+# face 6400511 "sad"
+# textboxarrow 0 1
+@与一
+ひゃあああっ…！
+ごめんなさいごめんなさい…
+
+# face 302411 "normal"
+# textboxarrow 0 3
+@蜻蛉切
+私よ、与一
+何でそなたが謝ってるの？
+
+# move 270 5 0
+# layer 270 4
+# face 6400511 "surprise"
+# textboxarrow 0 1
+@与一
+あ、蜻蛉切さん
+…と、どなたですか？
+
+# bgm "bgm002" 0
+# se "SE_11618"
+# move 302411 5 0.3
+# alpha 302411 0 0.3
+# move 270 4 0.3
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 3
+@ミーミル
+夜分遅くに失礼致します
+私、ミーミルと申します
+
+# textboxarrow 0 3
+@ミーミル
+こちらにいらっしゃるマスター様の
+専属補佐官を務めております
+
+# voice 4005 "yoichi_0030"
+# face 6400511 "usual"
+# move 6504011 5 0
+# se "SE_5200"
+# textboxarrow 0 1
+@与一
+あ、ご丁寧に
+ありがとうございます
+与一です
+
+# voice 650401 "manannan_ura_0002"
+# move 41002002 5 0
+# move 270 5 0.3
+# alpha 270 0 0.3
+# move 6504011 4 0.3
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# textboxarrow 0 3
+@マナナン
+ねえねえ
+私はマナナンって呼んで！
+
+# face 6400511 "surprise"
+# textboxarrow 0 1
+@与一
+は、はい…
+あの、えっと…あれ？
+
+# move 6504011 5 0.3
+# alpha 6504011 0 0.3
+# move 41002002 4 0.3
+# alpha 41002002 1 0.3
+# textboxarrow 0 3
+@レーヴァテイン
+…………
+
+# textboxarrow 0 1
+@与一
+レーヴァテインさんっ？
+どうして、そんなに小さく…
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# move 41002002 5 0.3
+# alpha 41002002 0 0.3
+# move 302411 4 0.3
+# face 302411 "normal"
+# alpha 302411 1 0.3
+# textboxarrow 0 3
+@蜻蛉切
+説明は後よ
+そなたに
+手伝ってもらいたいことがあるの
+
+# textboxarrow 0 1
+@与一
+ええと…
+何でしょう？
+
+# bgm "bgm005" 0
+# textboxarrow 0 3
+@蜻蛉切
+閉ざされた門を全て開いて、
+この町を解放するのよ！
+
+# textboxarrow 0 1
+@与一
+閉ざされた…
+門って、閉じてたんですか？
+
+# face 302411 "surprise"
+# textboxarrow 0 3
+@蜻蛉切
+そこからっ？
+そなた、鍛錬ばかりしていて
+周りのことを気にしなさ過ぎよ
+
+# voice 4005 "yoichi_0031"
+# face 6400511 "sad"
+# textboxarrow 0 1
+@与一
+ごめんなさい…
+
+# face 302411 "normal"
+# textboxarrow 0 3
+@蜻蛉切
+まあ、いいわ
+すぐに支度して
+
+# voice 4005 "yoichi_0034"
+# textboxarrow 0 1
+@与一
+いや、あのー…
+確かに毎日鍛錬してますけど、
+与一には荷が重いというか…
+
+# voice 3024 "tonbokiri_0009"
+# face 302411 "angry"
+# textboxarrow 0 3
+@蜻蛉切
+つべこべ言わない！
+この町の、それと
+レーヴァテインの危機なのよ！
+
+# move 41002002 3 0
+# layer 41002002 5
+# face 6400511 "surprise"
+# textboxarrow 0 1
+@与一
+レーヴァテインさんの…！？
+
+# alpha 41002002 1 0.3
+# move 302411 5 0.3
+# move 6400511 1 0.3
+# textboxarrow 0 2
+@レーヴァテイン
+まぁ…ちょっとヤバイかもね
+
+# face 302411 "normal"
+# textboxarrow 0 3
+@蜻蛉切
+そんなわけだから――
+
+# bgm "bgm010" 0
+# voice 4005 "yoichi_0032"
+# alpha 41002002 0 0.3
+# move 302411 4 0.3
+# move 6400511 2 0.3
+# face 6400511 "normal"
+# textboxarrow 0 1
+@与一
+やります！
+やらせていただきます！
+
+# face 302411 "surprise"
+# textboxarrow 0 3
+@蜻蛉切
+そ、そう……そなた、
+レーヴァテインのことになると
+気合い入るわよね
+
+# voice 650401 "manannan_ura_0005"
+# move 41002002 4 0
+# move 270 2 0
+# move 302411 5 0.3
+# alpha 302411 0 0.3
+# move 6504011 4 0.3
+# face 6504011 "happy"
+# alpha 6504011 1 0.3
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+仲間が増えたよっ
+
+# alpha 6504011 0 0.3
+# alpha 6400511 0 0.3
+# alpha 41002002 1 0.3
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 3
+@レーヴァテイン
+…………
+
+# voice 9917 "mimir_navikan_0004"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+与一さん、レーヴァテインさんの
+危機だと聞いた途端、
+やる気になって下さいました
+
+# textboxarrow 0 1
+@ミーミル
+お二人は仲が良いのですか？
+
+# textboxarrow 0 3
+@レーヴァテイン
+…別に
+
+# move 302411 3 0
+# mask 302411 off
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+あ、すみません…
+
+# alpha 41002002 0 0.3
+# alpha 270 0 0.3
+# face 302411 "normal"
+# alpha 302411 1 0.3
+# textboxarrow 0 2
+@蜻蛉切
+それじゃ、戻るわよ！
+
+# fadeout "black" 0.5
+# waitandnext 0.5

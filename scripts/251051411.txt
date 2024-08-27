@@ -1,0 +1,428 @@
+;;-----------------------------------------
+;;エイプリル1_1
+;;-----------------------------------------
+# script "lisp"
+# background "bifrost"
+# bgmfile "bgm164" "BgmPJZero001" 0
+;;-----------------------------------------
+;;スイハ
+# body 401711
+# pos 401711 3
+# scale 401711 0.8 0
+# layer 401711 3
+# mask 401711 off
+# alpha 401711 0 0
+# body 44017002
+# pos 44017002 3
+# scale 44017002 0.8 0
+# layer 44017002 3
+# mask 44017002 off
+# alpha 44017002 0 0
+;;ロンギヌス
+# body 300111
+# pos 300111 3
+# scale 300111 0.8 0
+# layer 300111 3
+# mask 300111 off
+# alpha 300111 0 0
+;;ミョルニル
+# body 200111
+# pos 200111 3
+# scale 200111 0.8 0
+# layer 200111 3
+# mask 200111 off
+# alpha 200111 0 0
+;;異族
+# body 810004
+# pos 810004 1
+# scale 810004 0.8 0
+# layer 810004 5
+# mask 810004 off
+# alpha 810004 0 0
+# brightness 810004 0.7 0
+# reversal 810004 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "e220414_logo"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：洋館の地下ビフレスト社研究所の薄暗い廊下
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_0850"
+;;演出：キャラ立ち絵無し
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@？？？
+はぁ、はぁ、はぁ…っ
+
+# textflame 0 0
+@
+薄暗い、長い長い廊下をひた走る
+鈍く響くは地を蹴るブーツの音
+そして――
+
+# sestop "SE_0850"
+# se "SE_6217"
+# serif 0
+# textwindow "close"
+# serif 1
+# textflame 1 1
+# textwindow "nomal"
+@？？？
+グゥゥゥアアアア…
+
+# se "SE_6218"
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+# textwindow "nomal"
+@
+“何か”の発する音
+“何か”の這いずる音
+“何か”が迫りくる気配
+
+# textflame 1 1
+@？？？
+くっ…でも、絶対に諦めない！
+
+# textflame 0 0
+@
+意志は揺るがない
+しかし、現実は意志とは無関係に
+襲い来るものだと彼女は知る
+
+;;文字大きく
+# textflame 1 1
+# textsize 30
+@？？？
+きゃああああああ！
+
+;;暗転挟む
+# se "SE_0850"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textflame 0 0
+# textwindow "nomal"
+# textsize 24
+@
+どのくらい走っただろうか
+今、自分達はどこにいるのだろうか
+
+# textflame 0 0
+@
+頭に入れたマップと
+歩数から計算した現在地を
+照らし合わせても答えは出なかった
+
+;;演出：スイハ新衣装
+# alpha 44017002 1 1
+# waitandnext 1
+
+# sestop "SE_0850"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 4017 "suiha_0028"
+@スイハ
+地下もこんなに広いなんて…
+
+# se "SE_0648"
+# textflame 0 0
+@
+「あ…っ！」
+足がもつれ、よろけてしまう
+
+# face 44017002 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+マスター！
+
+# textflame 0 0
+@
+「はは、もうダメだね…」
+力なく、つぶやく
+
+# face 44017002 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+そんな…ダメじゃありません！
+一緒にここまで来たじゃないですか！
+
+# textflame 0 0
+@
+「でも、もうここまでだ…」
+そう言って肩に当てていた手をどける
+
+# se "SE_6219"
+# voice 4017 "suiha_0022"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+その傷…っ！
+
+# textflame 0 0
+@
+「さっき、やられたみたいだ」
+そして告げる、自分を置いていけ、と
+
+# face 44017002 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+そんな、そんなの…
+私にはできません…
+
+# textflame 0 0
+@
+立ち止まったふたりに
+容赦なく現実は襲い来る
+
+# se "SE_6217"
+;;演出：ゾンビ異族
+# move 44017002 4 0.5
+# move 810004 2 0.5
+# alpha 810004 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 1
+@？？？
+グォォォォ…
+
+# face 44017002 "angry"
+# voice 4017 "suiha_0037"
+# textflame 1 1
+# textboxarrow 0 3
+@スイハ
+もう、ここまで…
+マスター、私が支えます
+走りましょう！
+
+# bgm "stop"
+# se "SE_4817"
+# fadein "white" 0.5
+# move 44017002 3 0.3
+# move 810004 1 0.5
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# se "SE_6220"
+# textflame 1 1
+# textboxarrow 0 1
+@？？？
+グゥアッ！
+
+;;演出：ゾンビ異族out
+# alpha 810004 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+蹴散らされる謎の異族
+その後ろには、何者かの姿があった
+
+# face 44017002 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+えっ…
+
+@スイハ
+あ、あなたは――
+
+;;演出：暗転
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+;;タイトル演出
+# background "bg_black"
+# frameout 0 0
+# buttonsout 0 0
+# textwindow "close"
+# alpha 44017002 0 0
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# se "SE_6221"
+# imagealpha 1 1 2
+# imagepos 1 0 0
+
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+;;背景：黒（ブリーフィングのイメージ）
+# framein 0 0
+# buttonsin 0 0
+# imagealpha 1 0 0
+# fadein "black" 2
+# waitandnext 2
+
+# se "SE_12776"
+# textflame 0 0
+# textwindow "nomal"
+@
+ザザ――我々はこれよ…ザ――
+…フレス…社の、洋館――
+ザザザ――――プツッ
+
+# se "SE_12775"
+# bgm "bgm005" 0
+;;演出：黒のまま各キャラ立ち絵表示
+# voice 3001 "ronginusu_0003"
+# alpha 300111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+…ここで先遣隊からの
+通信は途切れています
+
+@ロンギヌス
+我々のミッションは先遣隊との合流
+ならびに『ラグーナシティ』の
+調査続行となっております
+
+@ロンギヌス
+音声は不鮮明ではありますが
+恐らく、かの街を本拠地とする
+ビフレスト社が関わって――
+
+# voice 2001 "myuruniru_0005"
+# alpha 300111 0 0.5
+# alpha 200111 1 0.5
+@ミョルニル
+何があったか知らないけどぉ
+ミョルニルちゃん達がパパっと調べて
+帰ってくればいいって話でしょ～？
+
+# voice 3001 "ronginusu_0028"
+# alpha 300111 1 0.5
+# alpha 200111 0 0.5
+@ロンギヌス
+そ、それはそうなんですけど
+そんなに簡単な話じゃなくて…
+
+@ロンギヌス
+正体不明の存在との会敵もあったと
+先ほどの通信にはありましたし…
+
+@ロンギヌス
+いずれにしても現地の調査は
+難航するものと思われます
+
+# face 300111 "angry"
+# voice 3001 "ronginusu_0002"
+@ロンギヌス
+装備が支給されていますので
+各員、確認を怠りませんように
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：森
+# background "forest"
+# bgm "stop"
+# se "SE_6196"
+# alpha 300111 0 0
+# alpha 200111 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 4017 "suiha_0008"
+# face 401711 "sad"
+# alpha 401711 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@スイハ
+は、はは…
+ブリーフィングも結局は
+現地のことなんて何もわからない…
+
+@スイハ
+なのに、こんな装備しか
+支給されないなんて…
+
+@スイハ
+木の弓でどこまで
+戦えるのか…
+
+# se "SE_6226"
+# subfillrect 1 "black" 0.2 0 0.7
+# textflame 0 0
+# textalign "center"
+@
+　
+『木の弓』を入手した
+
+# subfillrect 1 "black" 0.2 0.7 0
+# bgm "stop"
+# se "SE_6196_stop"
+# se "SE_0746"
+# textflame 0 0
+@
+ガサッ
+
+# face 401711 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+誰っ！？
+
+# bgmfile "bgm164_165" "BgmPJZero001" 0
+# se "SE_6217"
+# move 401711 4 0.5
+# move 810004 2 0.5
+# alpha 810004 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@？？？
+グ…アァァァ…………
+
+# face 401711 "sad"
+# voice 4017 "suiha_0013"
+# textflame 1 1
+# textboxarrow 0 3
+@スイハ
+ああ、こんな森の奥まで…
+
+@スイハ
+ラグーナシティに
+安全なところなんて、もうないのね
+
+;;バトル
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 401711 0 0
+# alpha 810004 0 0
+# waitandnext 0.2

@@ -1,0 +1,417 @@
+;;-----------------------------------------
+;;ファンキル　学園イベント（2021年3月）シナリオ
+;;【EP.2】自由への挑戦
+;;スクリプト最後の背景：教室_文化祭(昼)
+;;背景：教室_文化祭(昼)
+;;-----------------------------------------
+# script "lisp"
+# background "classroom01_culturefestival_daytime"
+# bgmfile "bgm183_184" "BgmGakuen003" 0
+;;-----------------------------------------
+;;制服エクスカリバー
+# body 34
+# pos 34 3
+# scale 34 0.8 0
+# layer 34 2
+# alpha 34 0 0
+# mask 34 off
+;;リサナウト 制服ver.
+# body 203011
+# pos 203011 3
+# scale 203011 0.8 0
+# layer 203011 2
+# alpha 203011 0 0
+# mask 203011 off
+;;ナーゲルリング メイドver.
+# body 76
+# pos 76 3
+# scale 76 0.8 0
+# layer 76 2
+# alpha 76 0 0
+# mask 76 off
+;;シェキナー メイド服ver.
+# body 400761
+# pos 400761 3
+# scale 400761 0.8 0
+# layer 400761 2
+# alpha 400761 0 0
+# mask 400761 off
+;;-----------------------------------------
+;;【EP.2】自由への挑戦
+;;//背景：教室_文化祭(昼)
+;;//ト書き：以下、４話EDの再現シーン。
+# move 76 3 0
+# face 76 "normal"
+# alpha 76 1 0
+# mask 76 off
+# textflame 1 1
+# textboxarrow 0 2
+@ナーゲルリング
+おかえりなさいませ、ご主人様！
+どうぞこちらのテーブルへ！
+
+# emotionbody 1000 10 400761 80 230
+# effectpattern 1000 3 3
+# effectstart 1000
+# alpha 76 0 0.5
+# move 400761 3 0
+# face 400761 "happy"
+# alpha 400761 1 0.5
+# mask 400761 off
+# textboxarrow 0 2
+@シェキナー
+オーダー頂きました！
+メイドのハニカミ☆カツレツ
+二人前でお願いします！
+
+;;//再現はここまで
+;;
+;;//ＳＥ：パシャ、パシャ（シャッター音）
+# se "SE_12805"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# effectskip 1000
+# voice 2030 "risanautr_l_0005"
+# alpha 400761 0 0.5
+# move 203011 3 0
+# face 203011 "happy"
+# alpha 203011 1 0.5
+# mask 203011 off
+# textboxarrow 0 2
+@リサナウト
+ふふふ……メイド姿の学園生達！
+これは最高のアルバムになるわ～！
+
+# textflame 0 0
+@マスター
+……
+
+# emotionbody 2000 2 203011 10 290
+# effectpattern 2000 1 1
+# effectstart 2000
+# face 203011 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+あら、どうしたの？
+そんなにぶるぶる震えて……
+トイレならあっちよ？
+
+# textflame 0 0
+@マスター
+違うよ！！
+
+;;モノローグ
+@
+周りの生徒に聞こえないよう、
+顔を近づけてこそこそ喋る
+
+# face 203011 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+あぁ、そういうこと？
+たしかに、こうして
+タイムトラベルをしている以上……
+
+# textboxarrow 0 2
+@リサナウト
+過去の自分と出会う可能性は
+大いにあるわ
+
+# textboxarrow 0 2
+@リサナウト
+もし出会ってしまったら、
+きっと大変なことに
+なるでしょうね～
+
+;;モノローグ
+# textflame 0 0
+@
+あっけらかんと話すリサナウトに、
+マスターはますます怯えだす
+
+# voice 2030 "risanautr_l_0004"
+# face 203011 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+ふふっ、大丈夫よ！
+学園は広いんだから、
+そうそう出会ったりしないってば
+
+# textboxarrow 0 2
+@リサナウト
+それより今は
+この状況を楽しまないと！
+ほら、何か頼んだら？
+
+;;モノローグ
+# textflame 0 0
+@
+リサナウトに押し切られ、
+しぶしぶメニュー表を
+眺めていると……
+
+# move 203011 2 0.5
+# mask 203011 on
+# move 34 4 0
+# face 34 "normal"
+# alpha 34 1 0.5
+# mask 34 on
+# textflame 1 1
+# textboxarrow 0 3
+@エクスカリバー
+失礼……こちらのお席、
+ご一緒してもよろしいですか？
+
+# emotionbody 3000 1 203011 10 310
+# effectpattern 3000 1 0
+# effectstart 3000
+# face 203011 "surprise"
+# textboxarrow 0 1
+@リサナウト
+ん、どうぞ！
+……ってあなた、
+聖ユグの生徒会長さんじゃない！
+
+# voice 1011 "excalibur_0004"
+# face 34 "happy"
+# textboxarrow 0 3
+@エクスカリバー
+ふふ、ごきげんよう
+
+# face 203011 "normal"
+# textboxarrow 0 1
+@リサナウト
+ごきげんよう
+こうしてこのメイド喫茶の
+立役者に出会えるなんてラッキーだわ
+
+# textboxarrow 0 3
+@エクスカリバー
+ふふ……
+そう言っていただけて光栄です
+
+# face 34 "normal"
+# textboxarrow 0 3
+@エクスカリバー
+けれど、私自身は
+大したことはしていません
+
+# textboxarrow 0 3
+@エクスカリバー
+生徒のみなさんやマスターの
+尽力があったからこそ……
+
+# textboxarrow 0 3
+@エクスカリバー
+ずっと掲げてきた
+挑戦という目標を、
+こうして達成できました
+
+# textboxarrow 0 3
+@エクスカリバー
+本当に……心の底から、
+みなさんに感謝を
+伝えたい気分です
+
+;;//ＳＥ：パシャッ！（シャッター音）
+# se "SE_12805"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# emotionbody 4000 2 34 0 290
+# effectpattern 4000 1 1
+# effectstart 4000
+# voice 1011 "excalibur_0023"
+# face 34 "surpurise"
+# textboxarrow 0 3
+@エクスカリバー
+えっ？
+あ、あの……
+
+# voice 2030 "risanautr_l_0031"
+# face 203011 "happy"
+# textboxarrow 0 1
+@リサナウト
+あぁ、ごめんなさい！
+すっごくいい顔だったから
+つい撮ってしまったわ
+
+# textboxarrow 0 1
+@リサナウト
+きっと卒業アルバムにも
+ぴったりな１枚よ
+期待していてね！
+
+# voice 1011 "excalibur_0040"
+# face 34 "normal"
+# textboxarrow 0 3
+@エクスカリバー
+そ、卒業アルバム……
+なるほど、係の方だったのですね
+
+# face 34 "shy"
+# textboxarrow 0 3
+@エクスカリバー
+うう……なんだか途端に
+恥ずかしくなってきました
+変な顔、していませんでしたか？
+
+# se "SE_6504"
+# emotionbody 5000 3 203011 10 290
+# effectpattern 5000 1 3
+# effectstart 5000
+# textboxarrow 0 1
+@リサナウト
+大丈夫よ♪
+とっても素敵な笑顔だったわ！
+
+# voice 1011 "excalibur_0030"
+# face 34 "happy"
+# textboxarrow 0 3
+@エクスカリバー
+そうですか……
+ふふ、ありがとうございます
+
+# textboxarrow 0 3
+@エクスカリバー
+アルバムの完成、
+楽しみに待っていますね
+
+# textboxarrow 0 1
+@リサナウト
+ええ、期待していてね！
+
+;;モノローグ
+# textflame 0 0
+@
+リサナウト達の間に
+しばし穏やかな空気が流れる
+
+;;モノローグ
+# alpha 203011 0 0.5
+# alpha 34 0 0.5
+@
+その直後――
+
+# emotionbody 6000 2 34 0 290
+# effectpattern 6000 1 1
+# effectstart 6000
+# move 34 3 0
+# face 34 "surpurise"
+# alpha 34 1 0.5
+# mask 34 off
+# textflame 1 1
+# textboxarrow 0 2
+@エクスカリバー
+……あら？
+何やら廊下が賑やかですね
+
+# textboxarrow 0 2
+@エクスカリバー
+この声は……マスターの声？
+
+# textboxarrow 0 2
+@エクスカリバー
+あら……？
+でもマスターは目の前に
+あ、あらら……？
+
+# textflame 0 0
+@マスター
+あ、まずい
+
+;;モノローグ
+@
+一瞬でマスターの背筋が凍る
+
+# emotionbody 7000 10 203011 60 235
+# effectpattern 7000 3 3
+# effectstart 7000
+# alpha 34 0 0.5
+# move 203011 3 0
+# face 203011 "happy"
+# alpha 203011 1 0.5
+# mask 203011 off
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+ごちそうさまでしたーっ！！
+
+;;モノローグ
+# effectskip 7000
+# textflame 0 0
+@
+そんなマスターの手を
+無理やりひっつかみ、
+立ち上がるリサナウト
+
+;;モノローグ
+@
+そしてそのまま―
+開いた窓の向こう側めがけて
+走りはじめた！
+
+# emotionbody 8000 1 34 10 310
+# effectpattern 8000 2 0
+# effectstart 8000
+# voice 1011 "excalibur_0023"
+# alpha 203011 0 0.5
+# move 34 3 0
+# face 34 "surpurise"
+# alpha 34 1 0.5
+# mask 34 off
+# textflame 1 1
+# textboxarrow 0 2
+@エクスカリバー
+えっ！？
+あっ、あのっ……！！
+
+# alpha 34 0 0.5
+# move 203011 3 0
+# face 203011 "normal"
+# alpha 203011 1 0.5
+# mask 203011 off
+# textboxarrow 0 2
+@リサナウト
+マスター！
+手を離さないでねっ！
+
+;;//ＳＥ：タンッ！（窓枠を蹴り、飛び上がる音）
+# se "SE_9162"
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+@
+窓枠を蹴り、勢いのまま
+空中に浮かぶリサナウト
+
+;;//ＳＥ：パシャッ！（カメラのシャッター音）
+# bgm "stop"
+# se "SE_12798"
+# sedelay "SE_12802" 0.8
+;;//演出：画面フラッシュ
+;;//ト書き：上記、時間遡行の演出です。
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# alpha 203011 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textwindow "normal"
+@
+悲鳴を上げるマスターをよそに……
+リサナウトは空中で
+カメラのシャッターを切った

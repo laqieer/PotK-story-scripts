@@ -1,0 +1,277 @@
+;;-----------------------------------------
+;;エイプリル4_1
+;;-----------------------------------------
+# script "lisp"
+# background "201_center"
+# bgm "bgm035" 0
+;;-----------------------------------------
+;;スイハ
+# body 401711
+# alpha 401711 0 0
+# body 44017002
+# pos 44017002 4
+# scale 44017002 0.8 0
+# layer 44017002 4
+# alpha 44017002 0 0
+;;ロンギヌス
+# body 300111
+# pos 300111 3
+# scale 300111 0.8 0
+# layer 300111 2
+# mask 300111 off
+# alpha 300111 0 0
+;;ブラフマーストラゾンビ
+# body 900027
+# pos 900027 3
+# scale 900027 0.8 0
+# layer 900027 4
+# mask 900027 off
+# alpha 900027 0 0
+;;シェキナーゾンビ
+# body 900026
+# pos 900026 1
+# scale 900026 0.8 0
+# layer 900026 4
+# alpha 900026 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：洋館の中
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+@
+絶望に染まった視界に差した一筋の光
+
+# face 300111 "angry"
+# alpha 300111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ロンギヌス
+マスターはきっと地下です！
+地下へ向かうエレベーターに
+乗ってください、スイハ！
+
+# face 44017002 "surprise"
+# voice 4017 "suiha_0022"
+# move 300111 2 0.5
+# alpha 44017002 1 0.3
+# textboxarrow 0 3
+@スイハ
+地下、エレベーター！？
+こんな洋館にそんなものが！？
+
+# textboxarrow 0 1
+@ロンギヌス
+ここは私に任せて
+預かったマップを頼りに先へ！
+
+# face 44017002 "sad"
+# textboxarrow 0 3
+@スイハ
+どうしてみんな、私を…
+
+# textboxarrow 0 1
+@ロンギヌス
+マスターが待ってるから、ですよ
+
+# face 44017002 "angry"
+# textboxarrow 0 3
+@スイハ
+それはみんなのことだって！
+
+# textboxarrow 0 1
+@ロンギヌス
+行ってください！
+必ず追いかけますから、ね？
+
+;;文字赤く
+# alpha 300111 0 0.3
+# alpha 44017002 0 0.3
+# alpha 900027 1 0.3
+# textboxarrow 0 2
+@ブラフマーストラ
+[8b0000]アガアアアアアア！[-]
+
+# alpha 300111 1 0.3
+# face 44017002 "sad"
+# alpha 44017002 1 0.3
+# alpha 900027 0 0.3
+# textboxarrow 0 1
+@ロンギヌス
+ブラフマーストラも
+こう言ってますし、なんて…
+
+# voice 4017 "suiha_0015"
+# textboxarrow 0 3
+@スイハ
+うぅ…
+
+;;演出：スイハout
+# se "SE_5575"
+# move 44017002 5 0.5
+# alpha 44017002 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# textwindow "nomal"
+# textboxarrow 0 1
+@ロンギヌス
+それで、いいんですよ
+
+# move 300111 3 1
+# brightness 300111 0.5 1
+# textboxarrow 0 0
+# waitandnext 1.5
+
+# face 300111 "mad"
+# voice 3001 "ronginusu_0004"
+# textboxarrow 0 2
+@ロンギヌス
+それで…
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_0850"
+# alpha 300111 0 0
+# move 44017002 3 0
+# layer 44017002 2
+# mask 44017002 off
+# alpha 44017002 1 0
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 4017 "suiha_0037"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@スイハ
+う、うぅ…
+
+# textflame 0 0
+@
+ずっと走っている気がする
+ここはこんなにも大きな建物だったか
+
+# textflame 0 0
+@
+だが、マップに間違いはない
+ここを進むしかない
+
+# textflame 0 0
+@
+メモから得られた情報は
+あまりにも重要なもので
+蜘蛛の糸のように細い、希望だった
+
+# face 44017002 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+私が辿り着ければ…
+みんなが助かるかも…
+
+# textflame 0 0
+@
+『抑制薬』
+一種の暴走状態…ゾンビ化
+それを抑える為の薬がある
+
+# textflame 0 0
+@
+地上に見える洋館は
+地下に広がる研究所へ入る為の『鍵』
+
+# face 44017002 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+鍵はブラフマーストラ達が開けた…
+そして、ひとりだけ
+先に送ることができた…っ！
+
+# textboxarrow 0 2
+@スイハ
+マスター、マスターがいる！
+この先にマスターが！
+
+# sestop "SE_0850"
+# textflame 0 0
+@
+そして辿り着く
+マップの空白地帯に
+
+# face 44017002 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+この図面を作った者にすら
+知らされていなかったこの洋館の
+本当の姿…
+
+# textflame 0 0
+@
+地下へ向かうエレベーター
+その戸は開かれていた
+しかし、『カゴ』はなかった
+
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+マスターは先に行けたんだ…
+私も行けば、きっと会える！
+
+# bgmfile "bgm162_163" "BgmPJZero001" 0
+;;文字赤く（シェキナー）
+# serif 1
+# textwindow "nomal"
+@？？？
+[8b0000]ガアアアア！！！[-]
+
+# face 44017002 "angry"
+# serif 0
+# textboxarrow 0 2
+@スイハ
+はっ！
+
+;;文字赤く
+# move 44017002 4 0.4
+# move 900026 2 0.5
+# alpha 900026 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@シェキナー
+[8b0000]グォォォォォォオ！[-]
+
+# textboxarrow 0 3
+@スイハ
+シェキナーぁぁぁ！！！
+
+;;バトル
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 44017002 0 0
+# alpha 900026 0 0
+# waitandnext 0.2

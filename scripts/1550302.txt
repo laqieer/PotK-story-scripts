@@ -1,0 +1,211 @@
+;;---------------------------------------
+;;1550302
+;;4/4　吹き出しの位置調整
+;; 　　後半、ティルとデュリンの２人会話が続くので、無言のトトを消去。
+;; 　　それに伴い、ティルとデュリンの位置をリセット+デュリンのセリフを上に出す形に変更(おかしかったら戻します)
+;; 　　最後、ティルフィングの退場処理を追加
+;; 　　ティルフィングのスケールを0.8に設定
+;;---------------------------------------
+# script "lisp"
+# body 101411
+# pos 101411 1
+# body 0
+# pos 0 3
+# body 4
+# pos 4 5
+# scale 101411 0.8 0
+# scale 0 0.8 0
+# scale 4 0.8 0
+# layer 0 1
+# serif 0
+# textboxarrow 0 2
+# voice 9999 "durin_0002"
+# face 0 "angry"
+# chara 0
+@デュリン
+ちょっと…なに怒ってんのよ、トト？
+
+# serif 1
+# textboxarrow 1 3
+# face 4 "angry"
+# chara 4
+@トト
+別に…
+
+# serif 0
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0028"
+# face 101411 "sad"
+# chara 101411
+@ティルフィング
+どうしたの…？
+
+# serif 0
+# textboxarrow 0 2
+# voice 9999 "durin_0027"
+# face 0 "occur"
+# chara 0
+@デュリン
+なんか、急にムスッとし始めたのよ
+ったく…ガキの考えることは、
+ホントわかんないわ
+
+# serif 1
+# textboxarrow 1 3
+# face 4 "angry"
+# chara 4
+# voice 9998 "toto_0010"
+@トト
+怒ってなんかないって！！
+警備兵をどうするか、
+一生懸命考えてるんだってば！
+
+# face 101411 "surprised"
+# serif 0
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0022"
+# chara 101411
+@ティルフィング
+トトも考えてるの！？
+
+# serif 1
+# textboxarrow 1 3
+# voice 9998 "toto_0009"
+# chara 4
+@トト
+なに…？
+僕が考えちゃ、おかしいわけ！？
+
+# serif 0
+# textboxarrow 0 1
+# face 101411 "sad"
+# chara 101411
+@ティルフィング
+う、ううん…そういうわけじゃ…
+
+# serif 0
+# textboxarrow 0 2
+# voice 9999 "durin_0027"
+# face 0 "occur"
+# chara 0
+@デュリン
+…さっきから、
+ずっとこんな状態なのよ
+
+# serif 1
+# textboxarrow 1 3
+# voice 9998 "toto_0014"
+# face 4 "sad"
+# chara 4
+@トト
+ディーンには頼るクセに…
+なんで僕が考えたらおかしいんだよ…
+
+# serif 0
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0022"
+# face 101411 "surprised"
+# chara 101411
+@ティルフィング
+え…？
+
+# serif 1
+# textboxarrow 1 3
+# voice 9998 "toto_0039"
+# chara 4
+@トト
+ディーンがいなくたって、僕がいる！
+僕だって…
+みんなの力になれるんだってば！
+
+# serif 0
+# textboxarrow 0 2
+# voice 9999 "durin_0040"
+# face 0 "normal"
+# chara 0
+@デュリン
+なるほど…
+ディーンに対抗してるわけだ
+
+# serif 0
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0036"
+# face 101411 "smile"
+# chara 101411
+@ティルフィング
+トト……うん、その通りだわ！
+頼りにしてるわよ、トト！
+
+# serif 1
+# textboxarrow 1 3
+# voice 9998 "toto_0003"
+# face 4 "smile01"
+# chara 4
+@トト
+あ…！
+う、うんっ！！
+
+# textwindow "top_close"
+# textwindow "bottom_close"
+# alpha 101411 0 0.5
+# alpha 0 0 0.5
+# alpha 4 0 0.5
+# waitandnext 0.5
+
+# move 0 4 0
+# move 101411 2 0
+# alpha 101411 1.0 0.5
+# alpha 0 1.0 0.5
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0046"
+# chara 101411
+@ティルフィング
+ふふ…
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 3
+# voice 9999 "durin_0009"
+# face 0 "angry"
+# chara 0
+@デュリン
+…ふふ、じゃないわよ
+
+# serif 0
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0022"
+# face 101411 "surprised"
+# chara 101411
+@ティルフィング
+え…？
+
+# serif 1
+# textboxarrow 1 3
+# voice 9999 "durin_0014"
+# chara 0
+@デュリン
+頼りにしてる…？
+なに言ってんのよ…
+アンタも、少しは考えなさいよ？
+
+# serif 0
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0001"
+# chara 101411
+@ティルフィング
+あ…！
+マスター、異族です！
+行きます！！
+
+# se "SE_5575"
+# leftout 101411 0.5
+# textwindow "bottom_close"
+# serif 1
+# textboxarrow 1 3
+# voice 9999 "durin_0052"
+# chara 0
+@デュリン
+ちょっと、待ちなさい！
+コラーッ！！

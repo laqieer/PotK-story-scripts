@@ -1,0 +1,513 @@
+;;2018エイプリルイベント_06『皆を導く者』戦闘前
+;;//背景：ジャングル
+# script "lisp"
+# background "sea_jungle_day"
+# bgmfile "bgm230_story" "BgmSeaEvent" 0
+;;テュルソス
+# body 46003001
+# pos 46003001 1
+# scale 46003001 0.8 0
+;;タスラム
+# body 45020001
+# pos 45020001 5
+# scale 45020001 0.8 0
+;;ゲイボルグ
+# body 43007001
+# pos 43007001 3
+# scale 43007001 0.8 0
+# alpha 43007001 0 0
+;;ムラマサ
+# body 41025001
+# pos 41025001 3
+# scale 41025001 0.8 0
+;;シャルウル
+# body 42007001
+# pos 42007001 3
+# scale 42007001 0.8 0
+# alpha 42007001 0 0
+;;フライクーゲル
+# body 45002001
+# pos 45002001 4
+# scale 45002001 0.8 0
+# alpha 45002001 0 0
+;;レーヴァテイン
+# body 41002001
+# pos 41002001 2
+# scale 41002001 0.8 0
+# alpha 41002001 0 0
+;;マサムネ
+# body 41001001
+# pos 41001001 4
+# scale 41001001 0.8 0
+# alpha 41001001 0 0
+;;アポロン
+# body 44003001
+# pos 44003001 2
+# scale 44003001 0.8 0
+# alpha 44003001 0 0
+;;青龍偃月刀
+# body 43009001
+# pos 43009001 2
+# scale 43009001 0.8 0
+# alpha 43009001 0 0
+;;ヴォータン
+# body 43017001
+# pos 43017001 4
+# scale 43017001 0.8 0
+# alpha 43017001 0 0
+;;アイムール
+# body 42002001
+# pos 42002001 5
+# scale 42002001 0.8 0
+# alpha 42002001 0 0
+;;スラーンド
+# body 42012001
+# pos 42012001 2
+# scale 42012001 0.8 0
+# alpha 42012001 0 0
+;;レシェフ
+# body 42013001
+# pos 42013001 4
+# scale 42013001 0.8 0
+# alpha 42013001 0 0
+;;シャルウル
+# body 42007001
+# pos 42007001 5
+# scale 42007001 0.8 0
+# alpha 42007001 0 0
+;;プタハ
+# body 46014001
+# pos 46014001 4
+# scale 46014001 0.8 0
+# alpha 46014001 0 0
+;;ワズラ
+# body 42011001
+# pos 42011001 3
+# scale 42011001 0.8 0
+# alpha 42011001 0 0
+;;アロンダイト
+# body 41007001
+# pos 41007001 2
+# scale 41007001 0.8 0
+# alpha 41007001 0 0
+;;ナーゲルリング
+# body 41006001
+# pos 41006001 4
+# scale 41006001 0.8 0
+# alpha 41006001 0 0
+# layer 41025001 5
+# layer 46003001 4
+# layer 45020001 3
+# layer 41002001 1
+# layer 45002001 2
+# layer 41001001 1
+# layer 44003001 2
+# layer 42012001 3
+# layer 43009001 4
+# layer 42012001 1
+# layer 42013001 2
+# layer 42011001 5
+# imageset 0 "bg_black"
+# imagelayer 0 1
+# imagealpha 0 0 0
+# imagescale 0 2 0
+# textflame 1 1
+# textboxarrow 0 1
+@テュルソス
+ほらほら～！
+杯が空いてるよ？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5020 "tasuramu_0006"
+@タスラム
+盟主はやっぱ
+ニンニクマシマシだよな！
+ほら、どんどん食え！
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1025 "muramasa_0002"
+@ムラマサ
+…ゲイボルグ
+お二人を止めて下さい
+
+# mask 43007001 off
+# alpha 41025001 0 0.5
+# alpha 45020001 0 0.5
+# alpha 46003001 0 0.5
+# alpha 43007001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3007 "gaiborugu_0034"
+@ゲイボルグ
+その程度の飯ハラ、
+ご自身で対応しなさい
+
+# imagepos 0 0 0
+# alpha 41025001 1 0.5
+# alpha 43007001 0 0.5
+# textflame 0 0
+@
+宴会組のハラスメントに耐えつつ、
+仲間と合流したムラマサ
+遺跡について共有する
+
+;;//早送り演出
+# serif 0
+# textwindow "close"
+# se "SE_0748"
+# se "bgm230_story_speedup"
+# envbody 1000 19 0
+# effectstart 1000
+# alpha 41025001 0 0.2
+# waitandnext 0.3
+
+# alpha 41002001 1 0.2
+# alpha 45002001 1 0.2
+# waitandnext 0.2
+
+# se "SE_0750"
+# alpha 41025001 1 0.3
+# jump 41025001
+# clash 41002001
+# clash 45002001
+# alpha 41002001 0 0.3
+# alpha 45002001 0 0.3
+# waitandnext 0.3
+
+# se "SE_0749"
+# se "bgm230_story_default"
+# effectskip 1000
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+そこに乱入してきた
+レーヴァテインとフライクーゲルを
+正気に戻したのもつかの間
+
+# alpha 42007001 1 0.5
+# move 42007001 4 0.5
+# move 41025001 2 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 2007 "sharuuru_0024"
+@シャルウル
+ムラマサ様！
+マサムネ様の行方がっ…
+あぁっ…お茶がっ…！？
+
+# textflame 0 0
+@
+シャルウルが、
+マサムネ発見の報せを告げる
+
+;;//早送り演出
+;;//背景：ジャングル
+# se "SE_0748"
+# se "bgm230_story_speedup"
+# serif 0
+# textwindow "close"
+# envbody 1001 19 0
+# effectstart 1001
+# imagealpha 0 1 0.3
+# waitandnext 0.3
+
+# alpha 41025001 0 0
+# alpha 42007001 0 0
+# alpha 41001001 1 0
+# alpha 44003001 1 0
+# waitandnext 0.1
+
+# se "SE_0749"
+# se "bgm230_story_default"
+# imagealpha 0 0 0.3
+# waitandnext 0.3
+
+# bgmfile "bgm238_239" "BgmSeaEventBattle" 0
+# effectskip 1001
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@マサムネ
+…拙者は、
+食わねばならん！
+
+# textflame 1 1
+# textboxarrow 0 1
+@アポロン
+ちょっときつい、かも？
+熊（お姉ちゃん）！もっと頑張って！
+
+# alpha 41001001 0 0.5
+# alpha 44003001 0 0.5
+# alpha 43009001 1 0.5
+# alpha 43017001 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 3009 "seiryu_0038"
+@青龍偃月刀
+お金が切れて
+馬も動かなくなりましたし
+ここは一旦退きましょう
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 3017 "wotan_0014"
+@ヴォータン
+バカを言うな！
+この程度の相手に退くなどっ…！？
+くっ、パネルが外れないだと…！？
+
+;;//早送り演出
+;;//背景：ジャングル
+# serif 0
+# textwindow "close"
+# se "SE_0748"
+# se "bgm238_239_speedup"
+# envbody 1002 19 0
+# effectstart 1002
+# imagealpha 0 1 0.3
+# waitandnext 0.3
+
+# alpha 43009001 0 0
+# alpha 43017001 0 0
+# waitandnext 0.1
+
+# imagealpha 0 0 0.3
+# waitandnext 0.3
+
+# se "SE_0749"
+# se "bgm238_239_default"
+# effectskip 1002
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+なんとかマサムネを捕らえ、
+一安心の面々だが、
+
+# alpha 42012001 1 0.5
+# alpha 42013001 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 2012 "srand_0029"
+@スラーンド
+うぉら～！
+あたしの魅力を味わいなさい
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 2013 "reshef_0029"
+@レシェフ
+あたしの空中殺法を
+見せてあげる！
+
+# textflame 0 0
+@
+“満腹結社”のメンバーに
+襲撃を受けてしまう
+
+# move 41025001 3 0
+# alpha 42012001 0 0.5
+# alpha 42013001 0 0.5
+# alpha 41025001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1025 "muramasa_0023"
+@ムラマサ
+何者！？
+
+# alpha 42002001 1 0.5
+# move 42002001 4 0.5
+# move 41025001 2 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 2002 "aimuru_0033"
+@アイムール
+遅刻者アイムール
+護衛します
+
+;;//早送り演出
+;;//背景：ジャングル
+# se "SE_0748"
+# se "bgm238_239_speedup"
+# serif 0
+# textwindow "close"
+# envbody 1003 19 0
+# effectstart 1003
+# imagealpha 0 1 0.3
+# waitandnext 0.3
+
+# alpha 42002001 0 0
+# alpha 41025001 0 0
+# alpha 46014001 1 0
+# alpha 41025001 1 0
+# waitandnext 0.1
+
+# imagealpha 0 0 0.3
+# waitandnext 0.3
+
+# se "SE_0749"
+# se "bgm238_239_default"
+# effectskip 1003
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+敵を撃退したものの、
+結社の真意を知るべく
+“満腹結社”頭首プタハと相対した
+
+# textflame 1 1
+# textboxarrow 0 3
+@プタハ
+よく来てくれた盟主殿
+せっかくの機会だ
+夕餉を食べていかれないか？
+
+# textflame 1 1
+# textboxarrow 0 1
+@ムラマサ
+っ…そ、そんなことより
+拙者の命を狙う、
+その理由をお聞きしたい
+
+;;//早送り演出
+# se "SE_0748"
+# se "bgm238_239_speedup"
+# envbody 1004 19 0
+# effectstart 1004
+# waitandnext 0.2
+
+# alpha 46014001 0 0.2
+# mask 42011001 off
+# move 42012001 3 0
+# move 42013001 5 0
+# move 41025001 1 0.2
+# alpha 42012001 1 0.2
+# alpha 42013001 1 0.2
+# waitandnext 0.2
+# effectskip 1004
+
+# se "SE_0749"
+# se "bgm238_239_default"
+# textflame 0 0
+@
+二人の話し合いは平行線に終わり、
+ついに結社はムラマサに
+攻撃を仕掛ける
+
+# se "SE_0750"
+# shake 0 0.5
+# alpha 41025001 0 0.5
+# alpha 42012001 0 0.5
+# alpha 42013001 0 0.5
+# alpha 42011001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ワズラ
+世界を押しつぶす
+ワズラの大質量攻撃、
+受けなさい
+
+;;//早送り演出
+# se "SE_0748"
+# se "bgm238_239_speedup"
+# serif 0
+# textwindow "close"
+# envbody 1005 19 0
+# effectstart 1005
+# imagealpha 0 1 0.3
+# waitandnext 0.3
+
+# alpha 42011001 0 0
+# alpha 41007001 1 0
+# alpha 41006001 1 0
+# waitandnext 0.1
+
+# imagealpha 0 0 0.3
+# waitandnext 0.3
+
+# se "SE_0749"
+# se "bgm238_239_default"
+# effectskip 1005
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1007 "Arondaito_0019"
+@アロンダイト
+う…これは夢よ…
+そうよ、これは幻に違いないわ
+ならば、目の前に立つ者は斬ります
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1006 "nageruring_0002"
+@ナーゲルリング
+ひとまず私とネズミ達の後ろに
+隠れててもらえますか？
+
+# textflame 0 0
+@
+追っ手を軽々と打ち倒す
+アロンダイトに助けられたムラマサは
+仲間と合流を果たす
+
+;;//早送り演出
+# se "SE_0748"
+# se "bgm238_239_speedup"
+# serif 0
+# textwindow "close"
+# envbody 1006 19 0
+# effectstart 1006
+# imagealpha 0 1 0.3
+# waitandnext 0.3
+
+# alpha 41006001 0 0
+# alpha 41007001 0 0
+# alpha 41001001 1 0
+# alpha 41025001 1 0
+# move 41025001 2 0
+# move 41001001 4 0
+# waitandnext 0.1
+
+# imagealpha 0 0 0.3
+# waitandnext 0.3
+
+# se "SE_0749"
+# se "bgm238_239_default"
+# effectskip 1006
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@マサムネ
+もぐっ…
+やはり握り飯は美味いな
+
+# textflame 0 0
+@
+そこで待っていたのは、
+元気な姿を見せるマサムネ
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1001 "masamune_0039"
+@マサムネ
+ムラマサ、見ないうちに
+大きくなったな
+さて、これからいかにする？
+
+;;//バトル
+;;//敵はプタハ、ブラフマーストラ、ワズラ、レシェフ
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1025 "muramasa_0032"
+@ムラマサ
+はい！
+今一度、プタハと相対し、
+その真意を問いただします！

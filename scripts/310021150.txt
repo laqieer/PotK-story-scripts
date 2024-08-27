@@ -1,0 +1,401 @@
+;;-----------------------------------------
+;;SEA1章_15
+;;-----------------------------------------
+# script "lisp"
+# background "beast_world_underground"
+# bgm "bgm029_030" 0
+;;-----------------------------------------
+;;ゼロ
+# body 23
+# pos 23 3
+# scale 23 0.8 0
+# layer 23 2
+# mask 23 off
+# alpha 23 0 0
+# body 1100211
+# alpha 1100211 0 0
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 3
+# mask 270 off
+# alpha 270 0 0
+;;レーヴァテイン
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# layer 100221 5
+# mask 100221 off
+# alpha 100221 1 0
+;;与一
+# body 6400511
+# pos 6400511 4
+# scale 6400511 0.8 0
+# layer 6400511 2
+# mask 6400511 off
+# alpha 6400511 0 0
+;;グングニル
+# body 300841
+# pos 300841 5
+# scale 300841 0.8 0
+# layer 300841 1
+# mask 300841 off
+# alpha 300841 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：地下室
+# textwindow "close"
+# subfillrect 0 "red" 0 0 0.4
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# se "SE_4820"
+# face 100221 "sad"
+# textwindow "nomal"
+# textboxarrow 0 2
+@レーヴァテイン
+あああああああああああああ！
+
+# alpha 100221 0 0.3
+# face 23 "angry_2"
+# alpha 23 1 0.3
+# textboxarrow 0 2
+@ゼロ
+アマネ！
+
+# voice 1002 "revatein_0038"
+# face 100221 "angry"
+# alpha 100221 1 0.3
+# alpha 23 0 0.3
+# textboxarrow 0 2
+@レーヴァテイン
+ダメ…！
+…近づいたら、兄さんまで…
+灼いてしまう
+
+# textboxarrow 0 2
+@レーヴァテイン
+みんな…離れて…！
+ここから…逃げてぇ…！
+
+# face 100221 "sad"
+# textboxarrow 0 2
+@レーヴァテイン
+あああああああああああああああ！！
+
+;;レーヴァテインが走り去る
+# move 100221 1 0.5
+# alpha 100221 0 0.3
+# se "SE_5575"
+# textwindow "close"
+# waitandnext 0.5
+
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+レーヴァテインさん…！
+外に出ていかれてしまいました
+
+# alpha 270 0 0.3
+# face 23 "angry_1"
+# alpha 23 1 0.3
+# textboxarrow 0 2
+@ゼロ
+アマネ！
+
+;;ゼロが走り去る
+# move 23 4 0.5
+# alpha 23 0 0.3
+# se "SE_6215"
+# textwindow "close"
+# waitandnext 0.5
+
+# voice 9917 "mimir_navikan_0045"
+# bgm "bgm005" 0
+# face 270 "sad"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+マスター様…
+私達は
+間違えてしまったのでしょうか…
+
+# textboxarrow 0 2
+@ミーミル
+門を開けば、レーヴァテインさんを
+助けることができると
+考えておりましたのに…
+
+;;選択肢
+# select "しっかりしろ" "select_label_01" "落ち込んでる場合じゃない" "select_label_01"
+マスター様…
+私達は
+間違えてしまったのでしょうか…
+
+# label "select_label_01"
+# voice 9917 "mimir_navikan_0031"
+# face 270 "angry"
+# textboxarrow 0 2
+@ミーミル
+は、はいっ
+申し訳ございません
+
+# textboxarrow 0 2
+@ミーミル
+改めて、善後策を講じます
+私達もレーヴァテインさんを――
+
+# voice 4005 "yoichi_0028"
+# move 270 2 0.5
+# face 6400511 "sad"
+# alpha 6400511 1 0.3
+# textboxarrow 0 3
+@与一
+ううーん…
+
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+あっ
+与一さん…
+
+# textboxarrow 0 3
+@与一
+ダメなんです…
+そのブローチは…
+約束だから…
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+約束…
+そういえば、先程も
+そのようなことを…
+
+;;選択肢
+# select "誰との約束？" "select_label_02" "どんな約束？" "select_label_02"
+ダメなんです…
+そのブローチは…
+約束だから…
+
+# label "select_label_02"
+# voice 4005 "yoichi_0015"
+# textboxarrow 0 3
+@与一
+ふえっ？
+あ、与一は…
+約束を守れなかったんですね…
+
+# voice 4005 "yoichi_0034"
+# textboxarrow 0 3
+@与一
+ううっ…
+ごめんなさい…
+与一には荷が重すぎました…
+
+# textboxarrow 0 3
+@与一
+やっぱり、あのときちゃんと
+お断りしておけば良かったんです
+
+# voice 9917 "mimir_navikan_0002"
+# textboxarrow 0 1
+@ミーミル
+与一さん
+あのときとは？
+
+# textboxarrow 0 1
+@ミーミル
+良ければ、
+お聞かせ願えませんでしょうか
+
+# voice 4005 "yoichi_0028"
+# bgm "bgm004" 0
+# textboxarrow 0 3
+@与一
+あの…ええと…
+実は与一もあまり良く分かって
+いなかったんです
+
+# textboxarrow 0 3
+@与一
+もうずっと前のことになるんですけど
+ある日、レーヴァテインさんが
+与一のところにやって来て…
+
+# textboxarrow 0 3
+@与一
+あのブローチを、渡してきたんです
+
+# voice 9917 "mimir_navikan_0003"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+最後の門を開くために使った、
+鶏のブローチですね
+
+# textboxarrow 0 3
+@与一
+そのときは、レーヴァテインさん
+何も言わなくて…ただ、
+ブローチを持っていて欲しいって
+
+# textboxarrow 0 3
+@与一
+与一も初めは断ったんですよ
+レーヴァテインさんの持ち物を
+お預かりするなんて畏れ多いですし
+
+# textboxarrow 0 3
+@与一
+与一は…上手くやれませんから…
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+与一さん…
+
+# textboxarrow 0 3
+@与一
+それなのに、レーヴァテインさん
+けっこう強引で
+
+# textboxarrow 0 3
+@与一
+結局、お預かりすることになりました
+それで、そのときに…
+
+# textboxarrow 0 3
+@与一
+「これは絶対に使わないで」って
+言われて
+
+# textboxarrow 0 3
+@与一
+今日まで何のことか、
+さっぱり分からないままでした
+
+# textboxarrow 0 3
+@与一
+でも、さっき
+門の窪みがブローチと
+同じ形をしてるって分かって…
+
+# textboxarrow 0 3
+@与一
+門を開けないとレーヴァテインさんが
+消えてしまうかもしれない…
+でも、約束だったから…
+
+# voice 4005 "yoichi_0038"
+# textboxarrow 0 3
+@与一
+ううっ…
+やっぱり与一は、ダメダメです…
+
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+レーヴァテインさんが与一さんに
+あらかじめブローチを渡していた…
+
+# textboxarrow 0 1
+@ミーミル
+どうしてレーヴァテインさんは
+そのようなことを？
+もう少し情報が欲しいところです
+
+;;グングニルがやって来る
+# bgm "stop"
+# se "SE_0740"
+# alpha 270 0 0.3
+# alpha 6400511 0 0.3
+# move 300841 4 1
+# face 300841 "sad"
+# alpha 300841 1 0.3
+# textwindow "close"
+# waitandnext 1
+
+# voice 3008 "gunguniru_0013"
+# textwindow "nomal"
+# textboxarrow 0 3
+@グングニル
+最後の門は、開かれたのだな…
+
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ミーミル
+グングニルさん
+もう動いても大丈夫なのですか？
+
+# voice 3008 "gunguniru_0002"
+# textboxarrow 0 3
+@グングニル
+万全とは言えぬがな…
+さて、どうしたものか…
+
+# voice 9917 "mimir_navikan_0002"
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+アナタは何が起きているのか、
+ご存知なのですよね？
+教えていただけませんか？
+
+# bgm "bgm005" 0
+# textboxarrow 0 3
+@グングニル
+ふぅ…
+あの愚か者の覚悟に
+つき合ってやったが
+
+# textboxarrow 0 3
+@グングニル
+義理は十分、果たしたであろう
+
+# face 300841 "usual"
+# textboxarrow 0 3
+@グングニル
+それに、事ここに至っては
+そなた達にも
+手伝ってもらわねばならぬ
+
+# textboxarrow 0 3
+@グングニル
+あまり悠長にしてはおれぬが、
+話してやろう
+
+# textboxarrow 0 3
+@グングニル
+事の発端は、
+この町が要塞都市となる前…
+
+# textboxarrow 0 3
+@グングニル
+「炎の巨人」が
+襲来したときまで遡る
+
+# alpha 270 0 0.3
+# move 6400511 2 0
+# mask 6400511 on
+# face 6400511 "surprise"
+# alpha 6400511 1 0.3
+# textboxarrow 0 1
+@与一
+あ…
+
+# textboxarrow 0 3
+@グングニル
+与一よ
+そなたも、よく覚えておろう？
+
+# fadeout "black" 0.5
+# waitandnext 0.5

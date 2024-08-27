@@ -1,0 +1,359 @@
+;;-----------------------------------------
+;;【PUNK】ロストラグナロク_サイドストーリー5章
+;;【EP3バトル後】
+;;スクリプト最後の背景：大聖堂・謁見の間
+;;-----------------------------------------
+# script "lisp"
+# background "400_angel_town_night"
+# bgmfile "bgm293" "BgmLostRagnarokSideStory" 0
+;;フライクーゲル
+# body 3500211
+# pos 3500211 3
+# scale 3500211 0.8 0
+# layer 3500211 2
+# alpha 3500211 0 0
+# mask 3500211 on
+# face 3500211 "normal"
+;;ティファレト
+# body 171
+# pos 171 3
+# scale 171 0.8 0
+# layer 171 2
+# alpha 171 0 0
+# mask 171 on
+# face 171 "normal"
+;;ロンギヌス
+# body 3300111
+# pos 3300111 3
+# scale 3300111 0.8 0
+# layer 3300111 2
+# alpha 3300111 0 0
+# mask 3300111 on
+# face 3300111 "normal"
+;;フォルカス
+# body 3301811
+# pos 3301811 3
+# scale 3301811 0.8 0
+# layer 3301811 2
+# alpha 3301811 1 0
+# mask 3301811 on
+# face 3301811 "normal"
+;;ヴァナルガンド
+# body 3601111
+# pos 3601111 3
+# scale 3601111 0.8 0
+# layer 3601111 2
+# alpha 3601111 0 0
+# mask 3601111 on
+# face 3601111 "normal"
+;;ミカエル
+# body 3810008
+# pos 3810008 3
+# scale 3810008 0.8 0
+# layer 3810008 2
+# alpha 3810008 0 0
+# mask 3810008 off
+# face 3810008 "normal"
+;;【EP3バトル後】
+;;----------------------------------------------------------
+# mask 3301811 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 330181 "forcas_t_0028"
+@フォルカス
+あなたが、焚きつけたんだ
+
+;;モノローグ
+# textflame 0 0
+@
+神殿を形作るように辺りを包んでいた
+フォルカスの炎は
+戦いの決着とともに消え…
+
+;;モノローグ
+@
+そこにはフォルカスと…
+
+# alpha 3301811 0 0.5
+# face 3601111 "usual"
+# alpha 3601111 1 0.5
+;;モノローグ
+@
+その槍に貫かれた
+ヴァナルガンドがいた
+
+# face 3601111 "angry"
+# textflame 1 1
+# voice 360111 "vanargand_t_battle_0006"
+@ヴァナルガンド
+グッ…ガフッ………ッッ！！
+
+# move 3601111 2 0.5
+# move 3301811 4 0
+# face 3301811 "normal"
+# alpha 3301811 1 0.5
+# mask 3301811 on
+# textboxarrow 0 3
+@フォルカス
+ヴァナルガンド…
+
+# textboxarrow 0 1
+@ヴァナルガンド
+主様の為に…！
+えほっ！ゲホッッ！！
+あなたを………ッッ！！
+
+;;モノローグ
+# textflame 0 0
+@
+フォルカスの槍が深く刺さり
+ヴァナルガンドは声を発する度に
+吐血する
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0002"
+@フォルカス
+………あなたが
+癒してくれたんだ
+
+@フォルカス
+迷った道を、正してくれた
+傷口を、塞いでくれた
+
+@フォルカス
+優しかったあなたを
+救いたい………
+
+;;演出・SE：槍を抜く音。フォルカスが槍を抜き、ヴァナルガンドから離れる
+# textwindow "close"
+# se "SE_4732"
+# waitandnext 0.5
+
+# rightout 3301811 1
+# waitandnext 1
+
+# alpha 3301811 0 0
+# move 3601111 3 0.5
+# textwindow "normal"
+# textboxarrow 0 2
+@ヴァナルガンド
+あぐっ………ッ！！
+ゲホゲホゲホッッ！！！
+
+# alpha 3601111 0 0.5
+# face 3301811 "happy"
+# move 3301811 3 0
+# alpha 3301811 1 0.5
+# mask 3301811 off
+@フォルカス
+消えはしない…
+消しはしない…
+
+@フォルカス
+そう、信じている
+
+;;演出・SE：フォルカスが倒れる
+# textwindow "close"
+# se "SE_3001"
+# alpha 3301811 0 0.5
+# waitandnext 0.8
+
+;;背景：黒（場面転換）
+# fadeout "black" 0.8
+# waitandnext 0.8
+
+# background "bg_black"
+# waitandnext 0.1
+
+# fadein "black" 0.8
+# waitandnext 0.8
+
+# textwindow "normal"
+# textflame 0 0
+;;モノローグ
+@
+フォルカスは今際のヴァナルガンドに
+微笑みかけると
+そのまま倒れ込み………
+
+# bgm "stop"
+;;モノローグ
+@
+事切れた
+
+;;演出：少しの間、静寂
+;;演出・SE：重い扉が開く音
+;;背景：大聖堂・謁見の間
+# textwindow "close"
+# fadeout "black" 0.8
+# waitandnext 0.8
+
+# se "SE_0637"
+# waitandnext 4
+
+# background "400_angel_pope_room"
+# waitandnext 0.1
+
+# fadein "black" 0.8
+# waitandnext 0.8
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# textwindow "normal"
+# textflame 0 0
+;;モノローグ
+@
+ハルモニア大聖堂・謁見の間
+
+# face 171 "sad"
+# alpha 171 1 0.5
+# mask 171 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5032 "tiphereth_t_0024"
+@ティファレト
+………ここが
+
+# alpha 171 0 0.5
+# face 3300111 "normal"
+# alpha 3300111 1 0.5
+# mask 3300111 off
+# voice 330011 "ronginusu_t_0003"
+@ロンギヌス
+謁見の間です
+ミカエルが私達に
+天使の力を与えた…
+
+@ロンギヌス
+全てが始まった場所
+
+# se "SE_10131"
+# alpha 3300111 0 0.5
+# move 3500211 2 0
+# face 3500211 "usual"
+# alpha 3500211 1 0.5
+# move 171 4 0
+# face 171 "sad"
+# alpha 171 1 0.5
+# mask 171 on
+# textflame 0 0
+;;モノローグ
+@
+フライクーゲルはティファレトを
+戦いの巻き添えにならぬよう
+背から物陰に下ろす
+
+# face 171 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@ティファレト
+…ありがとう、ございます
+
+;;モノローグ
+# textflame 0 0
+@
+ティファレトの
+力無い手足を優しく整えながら
+ウィンクを投げるフライクーゲル
+
+# face 3500211 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 350021 "furaikugeru_t_0004"
+@フライクーゲル
+すぐに終わるさ
+
+@フライクーゲル
+そうしたら始めよう
+きみの理想を
+
+@フライクーゲル
+───マイ・アダム
+
+# textboxarrow 0 3
+# voice 5032 "tiphereth_t_0033"
+@ティファレト
+…はいっ…！
+
+;;（※ミカエル）
+# bgm "stop"
+# serif 1
+# brightness 3500211 0.5 0.2
+# brightness 171 0.5 0.2
+@？？？
+哀れな、迷い子達
+
+# serif 0
+# brightness 3500211 1 0.2
+# brightness 171 1 0.2
+# face 3500211 "surprise"
+# face 171 "surprise"
+# voice 5032 "tiphereth_t_0022"
+@ティファレト
+！！
+
+# serif 1
+# brightness 3500211 0.5 0.2
+# brightness 171 0.5 0.2
+@？？？
+背信の娘達よ
+
+;;SE：鐘の音
+# se "SE_0736"
+# bgmfile "bgm188" "BgmStory007" 0
+# alpha 3500211 0 0.5
+# alpha 171 0 0.5
+# brightness 3500211 1 0
+# brightness 171 1 0
+;;モノローグ
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+@
+遠くから鐘の音が鳴り響く
+
+;;モノローグ
+@
+高き天井まで届く
+透き通った声
+
+;;モノローグ
+@
+大理石の床に一つの影が伸びる
+
+# alpha 3810008 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ミカエル
+貴方たちを
+大天使ミカエルの名をもって
+迎え入れよう
+
+# alpha 3810008 0 0.5
+# move 3500211 3 0
+# face 3500211 "angry"
+# alpha 3500211 1 0.5
+# mask 3500211 off
+# textboxarrow 0 2
+@フライクーゲル
+…ミカエル………ッ！
+
+;;モノローグ
+# textflame 0 0
+@
+謁見の間の最奥に…
+
+;;モノローグ
+@
+大天使ミカエルが座していた
+
+# alpha 3500211 0 0.5
+# alpha 3810008 1 0.5
+# textflame 1 1
+# voice 8056 "new_michael_0005"
+@ミカエル
+ようこそ
+
+@ミカエル
+───真理を示そう

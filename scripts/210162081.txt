@@ -1,0 +1,638 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１６章 章タイトル「・中心部決戦―エクリプス―」
+;;第2話―８　タイトル：前夜
+;;2_8_1
+;;スクリプト最後の背景：中心部（夜）：in_city_night
+;;-----------------------------------------
+# script "lisp"
+# background "in_city_night"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 2
+# alpha 5101431 0 0
+# mask 5101431 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;魔獣化八咫鏡
+# body 1500331
+# pos 1500331 3
+# scale 1500331 0.8 0
+# layer 1500331 2
+# alpha 1500331 0 0
+# mask 1500331 off
+# brightness 1500331 0.5 0
+;;スラーンド
+# body 3201211
+# pos 3201211 3
+# scale 3201211 0.8 0
+# layer 3201211 3
+# alpha 3201211 0 0
+# mask 3201211 off
+;;ジーベン
+# body 212
+# pos 212 3
+# scale 212 0.8 0
+# layer 212 3
+# alpha 212 0 0
+# mask 212 off
+;;レーヴァテイン・擬彩
+# body 5100231
+# pos 5100231 3
+# scale 5100231 0.8 0
+# layer 5100231 2
+# alpha 5100231 0 0
+# mask 5100231 off
+;;アルテミス（♂）
+# body 1400131
+# pos 1400131 3
+# scale 1400131 0.8 0
+# layer 1400131 2
+# alpha 1400131 0 0
+# mask 1400131 off
+;;ヴァナルガンド・聖鎖・サリエル 大罪ver.
+# body 5601111
+# pos 5601111 3
+# scale 5601111 0.8 0
+# layer 5601111 2
+# alpha 5601111 0 0
+# mask 5601111 off
+;;ムラマサ・獣刻・ヤマタノオロチ 大罪ver.
+# body 5102511
+# pos 5102511 3
+# scale 5102511 0.8 0
+# layer 5102511 2
+# alpha 5102511 0 0
+# mask 5102511 off
+;;ゼロ
+# body 23
+# pos 23 3
+# scale 23 0.8 0
+# layer 23 2
+# alpha 23 0 0
+# mask 23 off
+# brightness 23 0.5 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;第2話―８　タイトル：前夜
+;;//背景：中心部（夜）：in_city_night
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# move 210 2 0
+# face 210 "normal"
+# alpha 210 1 0
+# mask 210 on
+# move 212 4 0
+# face 212 "angry"
+# alpha 212 1 0
+# mask 212 on
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9934 "sieben_0039"
+@ジーベン
+逃げるぞ！
+あんなのにつき合ってられるか！
+
+# face 210 "angry"
+# textboxarrow 0 1
+# voice 9936 "kamito_0057"
+@カミト
+待って！
+スラーンドに僕を援護させて
+欲しいんだ
+
+# textboxarrow 0 3
+# voice 9934 "sieben_0009"
+@ジーベン
+はぁ！？
+頭沸いてんのか、脳みそ間欠泉野郎！
+
+# textboxarrow 0 3
+@ジーベン
+お前、もうディスラプターは
+使うなって言われてるんだろっ？
+あいつは放っておけ！
+
+# alpha 212 0 0.5
+# move 3201211 4 0
+# face 3201211 "sad"
+# alpha 3201211 1 0.5
+# mask 3201211 on
+# textboxarrow 0 3
+# voice 320121 "srand_ge_0008"
+@スラーンド
+それに…今のあたしじゃ足止めすら
+できそうにないなぁ
+あはは…
+
+# alpha 3201211 0 0.5
+# move 212 4 0
+# face 212 "usual"
+# alpha 212 1 0.5
+# mask 212 on
+# textboxarrow 0 3
+# voice 9934 "sieben_0003"
+@ジーベン
+そういうことだ！
+ティルフィングは確かヴァング達と
+一緒にいた
+
+# textboxarrow 0 3
+@ジーベン
+お前はさっさとそいつを
+彼女に渡せ！
+ほら、行くぞ！
+
+# face 210 "normal"
+# textboxarrow 0 1
+@カミト
+う、うん…
+
+;;//カミト達が走り去る
+# se "SE_5575"
+# textwindow "close"
+# alpha 210 0 0.5
+# alpha 212 0 0.5
+# waitandnext 0.5
+
+;;？？？（ゼロ）
+# move 23 3 0
+# face 23 "BeastMode_1"
+# alpha 23 1 0.5
+# mask 23 off
+# textboxarrow 0 2
+# textwindow "normal"
+@？？？
+ガアアアアアアアアア！
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 23 0 0
+# move 5101431 2 0
+# face 5101431 "angry"
+# alpha 5101431 1 0
+# mask 5101431 on
+# move 1500331 4 0
+# face 1500331 "angry_1"
+# alpha 1500331 1 0
+# mask 1500331 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgmfile "bgm162" "BgmPJZero001" 0
+# textboxarrow 0 1
+# textwindow "normal"
+@ティルフィング
+せいっ！
+
+# se "SE_4715"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+;;？？？（八咫鏡♂）
+# textboxarrow 0 3
+@？？？
+オオオオオオオオオ…！
+
+# textboxarrow 0 1
+@ティルフィング
+これだけ攻撃しても倒れないなんて…
+
+# alpha 5101431 0 0.5
+# alpha 1500331 0 0.5
+# move 5601111 2 0
+# face 5601111 "usual"
+# alpha 5601111 1 0.5
+# mask 5601111 on
+# move 5102511 4 0
+# face 5102511 "normal"
+# alpha 5102511 1 0.5
+# mask 5102511 on
+# textboxarrow 0 3
+@ムラマサ
+拙者の刀でもなかなか傷を負わせられ
+ませぬ…
+
+# textboxarrow 0 1
+@ヴァナルガンド
+岩のようですね…
+
+# alpha 5601111 0 0.5
+# alpha 5102511 0 0.5
+# move 5101431 3 0
+# face 5101431 "angry"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+@ティルフィング
+それでも、
+悪しき魂は散らせてみせます
+
+;;//回想シーン（１話―１１回想）
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "in_city"
+# alpha 5101431 0 0
+# move 1400131 3 0
+# face 1400131 "angry"
+# alpha 1400131 1 0
+# mask 1400131 off
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：中心部：in_city
+;;アルテミス（♂）
+# textboxarrow 0 2
+# textwindow "normal"
+@アルテミス
+終焉に抗うというのは賛成だ
+だけど、まだ助けられていない
+仲間を見捨てることになるなら…
+
+;;アルテミス（♂）
+# textboxarrow 0 2
+@アルテミス
+今、お前にディスラプターを
+渡すわけにはいかない
+
+;;//回想終了
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "in_city_night"
+# alpha 1400131 0 0
+# move 5101431 2 0
+# face 5101431 "surprise"
+# alpha 5101431 1 0
+# mask 5101431 on
+# move 1500331 4 0
+# face 1500331 "angry_1"
+# alpha 1500331 1 0
+# mask 1500331 on
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：中心部（夜）：in_city_night
+# textboxarrow 0 1
+# textwindow "normal"
+@ティルフィング
+あ…
+
+;;？？？（八咫鏡♂）
+# textboxarrow 0 3
+@？？？
+オオオオオオオオオオオオ！
+
+;;//魔獣化八咫鏡がティルフィングを弾き飛ばす
+# se "SE_9066"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 5101431 "sad"
+# textboxarrow 0 1
+@ティルフィング
+くぅっ…
+私は…彼らを…
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 5101431 0 0
+# alpha 1500331 0 0
+# move 210 1 0
+# face 210 "normal"
+# alpha 210 1 0
+# mask 210 on
+# move 212 3 0
+# face 212 "sad"
+# alpha 212 1 0
+# mask 212 on
+# move 3201211 5 0
+# face 3201211 "normal"
+# alpha 3201211 1 0
+# mask 3201211 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# se "SE_0886"
+# textboxarrow 0 1
+# textwindow "normal"
+@カミト
+ハァッ…ハァッ…
+
+# textboxarrow 0 2
+# voice 9934 "sieben_0039"
+@ジーベン
+くそっ…
+俺達とキラーメイルじゃ体力差が
+あり過ぎるな…
+
+# face 3201211 "angry"
+# textboxarrow 0 3
+@スラーンド
+マスター、あたしが時間を稼ぐよ
+あの魔獣に偉大なる強さを
+見せてやろう！
+
+# face 3201211 "happy"
+# textboxarrow 0 3
+# voice 320121 "srand_ge_0004"
+@スラーンド
+…な～んてね♪
+ほら、二人とも急いでっ
+
+# face 210 "angry"
+# textboxarrow 0 1
+# voice 9936 "kamito_0065"
+@カミト
+無茶だよ！
+スラーンドも傷が癒えてないんだろっ
+一人で残ったら…
+
+# textboxarrow 0 3
+# voice 320121 "srand_ge_0033"
+@スラーンド
+大丈夫だって！
+あなたも早くディスラプターを
+ティルフィングに届けなきゃっ
+
+# sestop "SE_0886"
+# textboxarrow 0 3
+@スラーンド
+じゃあね、マスター！
+
+# se "SE_9146"
+# textwindow "close"
+# alpha 3201211 0 0.5
+# waitandnext 0.5
+
+# face 212 "angry"
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9934 "sieben_0010"
+@ジーベン
+なっ…
+スラーンド！
+勝手なことをするなっ
+
+;;？？？（ゼロ）
+# alpha 210 0 0.5
+# alpha 212 0 0.5
+# move 23 3 0
+# face 23 "BeastMode_1"
+# alpha 23 1 0.5
+# mask 23 off
+# textboxarrow 0 2
+@？？？
+ガアアアアアアアアアアア！
+
+# se "SE_5206"
+# move 23 2 0.5
+# mask 23 on
+# move 3201211 4 0
+# face 3201211 "normal"
+# alpha 3201211 1 0.5
+# mask 3201211 on
+# textboxarrow 0 3
+@スラーンド
+止まりな、魔獣
+あたしはスラーンド・獣刻・セト
+
+# face 3201211 "angry"
+# textboxarrow 0 3
+# voice 320121 "srand_ge_battle_0003"
+@スラーンド
+あたしが守りたい者のために、
+お前を倒す！
+
+# alpha 23 0 0.5
+# alpha 3201211 0 0.5
+# move 210 2 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+# move 212 4 0
+# face 212 "angry"
+# alpha 212 1 0.5
+# mask 212 on
+# textboxarrow 0 3
+# voice 9934 "sieben_0028"
+@ジーベン
+くそっ…！
+カミト、先に行け！
+俺はここに残る
+
+# face 210 "angry"
+# textboxarrow 0 1
+@カミト
+だったら、僕だって！
+
+# textboxarrow 0 3
+@ジーベン
+この甘ちゃん自殺志願者が！
+何のためにスラーンドが残ったと
+思ってるんだ！？
+
+# face 210 "irregular"
+# textboxarrow 0 1
+@カミト
+それを言うなら、ジーベンがここに
+残るのもおかしいよ！
+彼女は君の盾になったんだ！
+
+# face 212 "sad"
+# textboxarrow 0 3
+@ジーベン
+ぐっ…
+俺は、あいつのマスターとして…
+
+# face 210 "angry"
+# textboxarrow 0 1
+@カミト
+…僕はやれる
+スラーンドが注意を引きつけて
+くれてる間に、この…
+
+# textboxarrow 0 1
+@カミト
+ディスラプターでキラーメイルを
+助けるよ！
+
+# textboxarrow 0 3
+@ジーベン
+だからそれは――
+
+# alpha 210 0 0.5
+# alpha 212 0 0.5
+# move 3201211 3 0
+# face 3201211 "angry"
+# alpha 3201211 1 0.5
+# mask 3201211 off
+# textboxarrow 0 2
+# voice 320121 "srand_ge_0038"
+@スラーンド
+ぐはぁっ…！
+
+;;//スラーンドが吹っ飛ぶ
+# se "SE_9027"
+# textwindow "close"
+# rightout 3201211 0.5
+# waitandnext 0.5
+
+# alpha 3201211 0 0
+# move 212 3 0
+# face 212 "surprise"
+# alpha 212 1 0.5
+# mask 212 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ジーベン
+スラーンド…！
+
+# alpha 212 0 0.5
+# move 3201211 3 0
+# face 3201211 "sad"
+# alpha 3201211 1 0.5
+# mask 3201211 off
+# textboxarrow 0 2
+# voice 320121 "srand_ge_0015"
+@スラーンド
+あれ…マスター…
+何でまだ…いるの…？
+早く…逃げ…
+
+# alpha 3201211 0 0.5
+# move 212 3 0
+# face 212 "angry"
+# alpha 212 1 0.5
+# mask 212 off
+# textboxarrow 0 2
+# voice 9934 "sieben_0010"
+@ジーベン
+クソがぁ…！
+このまま死なせてたまるかぁっ
+
+;;//ジーベンが飛び出す
+# se "SE_5575"
+# textwindow "close"
+# leftout 212 0.5
+# waitandnext 0.5
+
+# bgm "stop"
+# alpha 212 0 0
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9936 "kamito_0024"
+@カミト
+ジーベン！
+
+;;？？？（ゼロ）
+# se "SE_12400"
+# alpha 210 0 0.5
+# move 23 3 0
+# face 23 "BeastMode_1"
+# alpha 23 1 0.5
+# mask 23 off
+# textboxarrow 0 2
+@？？？
+ガアアアアアアアアアアア！
+
+# textwindow "close"
+# alpha 23 0 0.5
+# waitandnext 0.5
+
+;;//ジーベンを追い越してレーヴァテインが現れる
+# move 212 3 0
+# face 212 "angry"
+# alpha 212 1 0
+# mask 212 off
+# rightin 212 1.2
+# waitandnext 0.2
+
+# se "SE_9021"
+# move 5100231 3 0
+# face 5100231 "normal"
+# alpha 5100231 1 0
+# mask 5100231 off
+# rightin 5100231 0.4
+# leftout 212 1.2
+# waitandnext 0.3
+
+# leftout 5100231 0.4
+# waitandnext 1
+
+# alpha 212 0 0
+# alpha 5100231 0 0
+# move 23 2 0
+# face 23 "BeastMode_1"
+# alpha 23 1 0.5
+# mask 23 on
+# waitandnext 0.5
+
+;;//レーヴァテインが魔獣化ゼロを止める
+# move 5100231 4 0
+# face 5100231 "normal"
+# alpha 5100231 1 0
+# mask 5100231 on
+# rightin 5100231 0.4
+# waitandnext 0.4
+
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# textwindow "normal"
+@レーヴァテイン
+兄さん！

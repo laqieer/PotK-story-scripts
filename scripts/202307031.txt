@@ -1,0 +1,969 @@
+;;-----------------------------------------
+;;2023夏2_1
+;;-----------------------------------------
+# script "lisp"
+# background "SEAsummer_fountain"
+# bgm "stop"
+;;-----------------------------------------
+;;原点ティルフィング
+# body 6101411
+# pos 6101411 3
+# scale 6101411 0.8 0
+# layer 6101411 3
+# mask 6101411 off
+# alpha 6101411 0 0
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;水着
+# body 357
+# pos 357 3
+# scale 357 0.8 0
+# layer 357 5
+# mask 357 off
+# alpha 357 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 3
+# scale 6504011 0.8 0
+# layer 6504011 3
+# mask 6504011 off
+# alpha 6504011 0 0
+;;水着
+# body 358
+# pos 358 3
+# scale 358 0.8 0
+# layer 358 3
+# mask 358 off
+# alpha 358 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 3
+# scale 6603811 0.8 0
+# layer 6603811 3
+# mask 6603811 off
+# alpha 6603811 0 0
+;;水着
+# body 359
+# pos 359 3
+# scale 359 0.8 0
+# layer 359 3
+# mask 359 off
+# alpha 359 0 0
+;;パンドラ
+# body 62001111
+# pos 62001111 3
+# scale 62001111 0.8 0
+# layer 62001111 3
+# mask 62001111 off
+# alpha 62001111 0 0
+;;水着
+# body 62001121
+# pos 62001121 3
+# scale 62001121 0.8 0
+# layer 62001121 3
+# mask 62001121 off
+# alpha 62001121 0 0
+;;フラベルム天上編
+# body 501611
+# pos 501611 3
+# scale 501611 0.8 0
+# layer 501611 3
+# mask 501611 off
+# alpha 501611 0 0
+;;水着
+# body 6501611
+# pos 6501611 3
+# scale 6501611 0.8 0
+# layer 6501611 3
+# mask 6501611 off
+# alpha 6501611 0 0
+;;ウルズ
+# body 6604211
+# pos 6604211 3
+# scale 6604211 0.8 0
+# layer 6604211 3
+# mask 6604211 off
+# alpha 6604211 0 0
+;;魔獣
+# body 900011
+# pos 900011 3
+# scale 900011 0.8 0
+# layer 900011 3
+# mask 900011 off
+# alpha 900011 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+# imageset 2 "SEA6501611"
+# imagealpha 2 0 0
+# imagescale 2 1 0
+# imagelayer 2 5
+;;-----------------------------------------
+;;背景：ユグドラシル付近、泉背景
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+;;演出：以下のパンドラセリフのみ
+# serif 1
+# textflame 1 1
+@？？？
+完全に理解したわ
+私に任せなさい
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+言葉としては頼もしいはずなのに
+どうしてか不穏さを漂わせる
+一言と共に現れたのは…
+
+;;演出：パンドラ立ち絵表示
+# bgm "bgm003" 0
+# layer 62001111 2
+# alpha 62001111 1 0.5
+# waitandnext 1
+
+# move 62001111 4 0.5
+# move 6603811 2 0.5
+# layer 6603811 4
+# mask 6603811 on
+# face 6603811 "happy"
+# alpha 6603811 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+パンドラ……っ！
+
+# voice 6200111 "pandora_0003"
+# face 62001111 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+そう、私よマクリル
+元気にしてた？
+
+# alpha 6603811 0 0.3
+# move 270 2 0
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+パンドラさん
+どうしてこちらに？
+
+# face 62001111 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+ユグドラシルに異変が起きた…
+いえ、正しくは美しい泉が現れた
+と聞いて駆け付けたのよ
+
+# alpha 270 0 0.3
+# alpha 62001111 0 0.3
+# move 6604211 2 0
+# layer 6604211 2
+# voice 660421 "urthr_0005"
+# alpha 6604211 1 0.3
+# move 6504011 4 0
+# layer 6504011 4
+# mask 6504011 on
+# alpha 6504011 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@ウルズ
+ふふん
+
+# voice 650401 "manannan_ura_0028"
+# textflame 1 1
+# textboxarrow 0 3
+@マナナン
+自慢げだけど
+ウルズのことじゃないよ？
+
+# face 6604211 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@ウルズ
+泉を褒められるのは
+私が褒められたと同義です
+
+# alpha 6604211 0 0.3
+# alpha 6504011 0 0.3
+# textflame 0 0
+@
+ところで、任せてって
+何か案でもあるの？
+とパンドラに問うマスター
+
+# bgm "stop"
+# move 62001111 3 0
+# face 62001111 "normal"
+# alpha 62001111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@パンドラ
+せっかく世界樹ユグドラシルと
+そのそばに美しい泉があるのだから
+やるべきことといえばひとつでしょ？
+
+# bgmfile "bgm255" "BgmSeaDate" 0
+# face 62001111 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@パンドラ
+ここをリゾート地にするのよ
+
+# textflame 0 0
+@
+先の話をどこから聞いていたのか
+もしくは何も聞いていなかったのか
+
+# textflame 0 0
+@
+何も理解できていないような
+パンドラの提案に呆然とするマスター
+
+# alpha 62001111 0 0.3
+# alpha 270 1 0.3
+# move 6603811 4 0
+# layer 6603811 2
+# mask 6603811 off
+# face 6603811 "usual"
+# voice 9917 "mimir_navikan_0003"
+# alpha 6603811 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+…泉に満ちるマナの自浄作用が
+追い付かず穢れが溜まっているなら
+外部からの力で補えばいい、ですか
+
+# textflame 1 1
+# textboxarrow 0 3
+@マクリル
+ミーミル、どうしたの…？
+驚いた顔してるけど…
+
+# voice 9917 "mimir_navikan_0034"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+いえ、パンドラさんはさすがだな
+と思いまして…
+
+# move 270 3 0.5
+# alpha 6603811 0 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+泉を浄化するマナが足りないなら
+私達キル姫が持つキラーズを
+補助、もしくは代用にすればいい…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+その為にキル姫を集め
+泉に触れてもらうのであれば
+リゾートという仕組みを利用する
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+さらに、キラーズは強い想いで
+活性化するので、楽しい思い出を
+生み出すにもリゾートは最適
+
+# voice 9917 "mimir_navikan_0039"
+# face 270 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+キル姫の皆さんは楽しく
+泉は浄化される、一石二鳥
+これはまさに妙案というものです！
+
+# textflame 0 0
+@
+興奮気味にパンドラを褒めるミーミル
+
+# alpha 270 0 0.3
+# voice 6200111 "pandora_0004"
+# face 62001111 "happy"
+# alpha 62001111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@パンドラ
+ふっ
+
+# textflame 0 0
+@
+ミーミルの言ったことを
+本当に考えていたのか不明だが
+褒められドヤ顔のパンドラ
+
+# textflame 0 0
+@
+マスターはそんな素っ頓狂な話を
+泉の管理人であるウルズが許さない
+だろうと恐る恐る反応を見る
+
+# alpha 62001111 0 0.3
+# move 6604211 3 0
+# mask 6604211 off
+# face 6604211 "normal"
+# alpha 6604211 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ウルズ
+…私の手間が省けました
+ミーミル、妹であるアナタの説明を
+ここは褒めておきましょう
+
+# textflame 0 0
+@
+自分が姉であるアピールを入れつつ
+ウルズはリゾート化に賛成の意を示す
+
+# alpha 6604211 0 0.3
+# move 62001111 4 0
+# layer 62001111 2
+# alpha 62001111 1 0.3
+# move 6101411 2 0
+# layer 6101411 4
+# mask 6101411 on
+# face 6101411 "surprise"
+# alpha 6101411 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+決まりね
+
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+…………
+
+# alpha 62001111 0 0.3
+# alpha 6101411 0 0.3
+# textflame 0 0
+@
+ティルフィングまでもが
+異議を唱えることなく
+一同の意向は決定され…
+
+# textflame 0 0
+@
+驚きのあまり何も言えない
+マスターをよそにウルズの泉
+リゾート化計画は始動する――
+
+# bgm "stop"
+;;（フラベルム）
+# voice 5016 "Flabellum_0011"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@？？？
+そんな不埒なことが
+許される訳ないでしょう？
+
+# move 62001111 3 0
+# face 62001111 "angry"
+# alpha 62001111 1 0.3
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+@パンドラ
+何奴…っ！
+
+;;演出：フラベルム立ち絵表示
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+# alpha 62001111 0 0.3
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# face 501611 "angry"
+# layer 501611 2
+# alpha 501611 1 0.3
+# waitandnext 1
+
+# voice 5016 "Flabellum_0019"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@フラベルム
+何奴、じゃありませんよ
+
+# textflame 1 1
+# textboxarrow 0 2
+@フラベルム
+とんでもないことを
+しでかそうとしてる者が
+言うことではないのでは
+
+# textflame 0 0
+@
+待ったをかけたのはキル姫フラベルム
+
+# textflame 1 1
+# textboxarrow 0 2
+@フラベルム
+ユグドラシルの異変を聞きつけ
+調査に訪れてみればとんでもない
+話になっているし一体どういうこと？
+
+# textflame 1 1
+# textboxarrow 0 2
+@フラベルム
+キル姫の暴走…現象としてではなく
+性格による横暴を引き留めること
+くらいはあなたにもできたはずですが
+
+# textflame 0 0
+@
+リゾート化への異議から
+マスターへの苦言へといつの間にか
+矛先が変わるフラベルムだった
+
+# voice 6200111 "pandora_0027"
+# move 501611 2 0.5
+# move 62001111 4 0
+# layer 62001111 4
+# mask 62001111 on
+# alpha 62001111 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+要は盗み聞きをした挙句
+私達の邪魔をしようという訳ね？
+
+# face 501611 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+どう理解したらそうなるのですか？ 
+盗み聞きではなくあなた達が
+大騒ぎしていたから聞こえただけ
+
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+神聖なユグドラシルを…
+そしてそこに現れた神聖な泉を
+リゾートにしようなんて言語道断
+
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+誰だって止めるはずの話です
+
+# face 501611 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+…まぁ、止めもせず
+話を聞いていただけの
+頼りない方もいるようですが
+
+# textflame 0 0
+@
+フラベルムの言葉の
+鋭い棘がぐさぐさとマスターに刺さる
+
+# face 501611 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+…ただ、泉の浄化に関して
+キラーズを利用するという案は
+たしかに理にかなっています
+
+# voice 6200111 "pandora_0022"
+# face 62001111 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+なんだ、意外と話がわかるのね
+なら邪魔をする必要はないはずよ
+
+# face 501611 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+あなた達のような
+行き当たりばったりな連中が
+それを運営しようというのが問題です
+
+# face 501611 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+計画に反対なのではなく
+わたくしの下での秩序ある運営が
+必要だと提言しているのです
+
+# alpha 501611 0 0.3
+# move 6603811 2 0
+# layer 6603811 2
+# mask 6603811 off
+# alpha 6603811 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+あ…
+パンドラに任せたら野営の食糧が
+足りなくなったことがあった…
+
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+たしかにその時は
+空腹でおかしくなりそうだったけど
+最終的にはなんとかなったわ
+
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+ひもじい思いはもうやだ…
+
+# alpha 6603811 0 0.3
+# alpha 501611 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+…そこまで計画性がないんですか
+
+# face 62001111 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+けれど私はここにいるわ！
+
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+それは生存バイアスなだけです
+堂々としないでください
+
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+とにかく！この計画は
+わたくしがすべて監督します
+いいですね、そこのふたりも
+
+# alpha 501611 0 0.3
+# alpha 62001111 0 0.3
+# move 270 2 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# move 6604211 4 0
+# layer 6604211 2
+# mask 6604211 off
+# face 6604211 "angry"
+# alpha 6604211 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+は、はい！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ウルズ
+アナタが私を敬うが故に
+そのような高圧的な態度に
+出てしまっていることは許しましょう
+
+# alpha 270 0 0.3
+# move 501611 2 0
+# layer 501611 4
+# mask 501611 on
+# alpha 501611 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+わたくしの保護対象は泉であって
+あなたに敬意を示している
+訳ではありませんけどね
+
+# voice 660421 "urthr_battle_0006"
+# textflame 1 1
+# textboxarrow 0 3
+@ウルズ
+くっ…
+ここはアナタに任せるのが安泰
+であればこのくらい耐えられます…
+
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+そちらもいいですね
+
+# voice 650401 "manannan_ura_0032"
+# alpha 501611 0 0.3
+# alpha 6604211 0 0.3
+# move 6504011 4 0
+# layer 6504011 2
+# mask 6504011 off
+# face 6504011 "happy"
+# alpha 6504011 1 0.3
+# move 6603811 2 0
+# layer 6603811 4
+# mask 6603811 on
+# alpha 6603811 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@マナナン
+面白くなるならいいよー！
+
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+恐くないなら…いいよ？
+
+# alpha 6504011 0 0.3
+# alpha 6603811 0 0.3
+# voice 6200111 "pandora_0039"
+# move 501611 2 0
+# layer 501611 4
+# mask 501611 on
+# alpha 501611 1 0.3
+# move 62001111 4 0
+# layer 62001111 2
+# mask 62001111 off
+# alpha 62001111 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+…賛成多数ならば従うしかないわね
+けれど、これだけは譲れないわ
+
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+そうね…
+マスターさんとティルフィングは
+ここで待ってて
+
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+行くわよ！
+
+# voice 5016 "Flabellum_0023"
+# face 501611 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+ちょ、ちょっと！？
+
+;;演出：パンドラに連れていかれる一行
+# se "SE_0719"
+# move 501611 3 0.6
+# alpha 501611 0 0.3
+# move 62001111 5 0.5
+# alpha 62001111 0 0.3
+# textflame 0 0
+@
+有無を言わせぬパンドラに
+引きずられていくミーミル達
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# move 6101411 3 0
+# mask 6101411 off
+# alpha 6101411 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+…………
+
+# textflame 0 0
+@
+そんな状況にあっても相変わらず
+上の空なティルフィングに対し
+マスターはいい機会だと話し掛ける
+
+# bgmfile "bgm409" "BgmIntegralNoahEvent" 0
+# voice 610141 "tyrufing_7th_0003"
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+気になること、ですか？
+もちろん、この状況は気がかりな
+ことしかないのですが…
+
+# face 6101411 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+ユグドラシルの意志を感じ取れる
+そう言うウルズの言葉に何か
+違和感のようなものがありまして…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+嘘を言っている訳ではないと
+思うのですが、何かが違うような…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+根拠のないことを言うのは
+いいことではありませんから…
+
+# textflame 0 0
+@
+ティルフィングの考えに
+納得したマスター
+
+# textflame 0 0
+@
+いずれにせよ泉に起きた異変は事実
+ならばそれを解決すれば違和感の
+正体もわかるはず、とマスター
+
+# voice 610141 "tyrufing_7th_0032"
+# face 6101411 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+はい…そうですね！
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+それに、ウルズは
+ミーミルも仲良くしてるようですし
+悪い子じゃないのは間違いありません
+
+# textflame 0 0
+@
+仲良くしてるかなー？
+と疑問のマスター
+
+# bgm "stop"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@マナナン
+大変だー！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+マナナンの叫びにマスターと
+ティルフィングは顔を見合わせ
+すぐさま走り出す
+
+;;演出：場面転換の暗転
+# se "SE_5575"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# alpha 6101411 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+マスター達が慌てて
+駆けつけるとそこには――
+
+;;演出：マナナン、マクリル、ミーミル、パンドラ、フラベルムの水着立ち絵表示
+# move 62001121 2 0
+# layer 62001121 2
+# alpha 62001121 1 1
+# move 6501611 4 0
+# layer 6501611 4
+# mask 6501611 on
+# alpha 6501611 1 1
+# textwindow "close"
+# waitandnext 2
+
+# alpha 62001121 0 0.5
+# alpha 6501611 0 0.5
+# move 358 4 0
+# layer 358 2
+# alpha 358 1 1
+# move 359 2 0
+# layer 359 4
+# mask 359 on
+# alpha 359 1 1
+# waitandnext 2
+
+# alpha 358 0 0.5
+# alpha 359 0 0.5
+# alpha 357 1 1
+# waitandnext 2
+
+;;選択肢
+# select "その衣装は…！" "select_label_01"
+！
+
+# label "select_label_01"
+# face 357 "shy"
+# voice 9917 "mimir_navikan_0011"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+ち、違います！
+今の問題はそこではありません！
+
+# alpha 357 0 0.3
+# textflame 0 0
+@
+ミーミルに怒られ
+マスターが改めて周囲を見ると…
+
+;;演出：魔獣立ち絵表示
+# se "SE_0792"
+# alpha 900011 1 0.5
+# textwindow "close"
+# waitandnext 1.5
+
+;;フラベルム声だけ
+# bgm "bgm013" 0
+# serif 1
+# textflame 1 1
+@フラベルム
+そのいやらしくて下品な目でも
+あの魔獣が見えるんですね
+事態は理解できましたか？
+
+;;フラベルムシナリオカット表示
+# frameout 0 0
+# fadein "white" 1
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# alpha 900011 0 0
+# serif 1
+# textwindow "close"
+# waitandnext 3
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@フラベルム
+どうやら泉の周辺にだけ
+魔獣が集まっているようですね
+
+# textflame 1 1
+# textboxarrow 0 0
+@フラベルム
+近くの町に被害が出ることまでは
+考えなくても良さそうです
+
+;;シナリオカット削除
+# imagealpha 2 0 1
+# framein 0 1
+# textwindow "close"
+# waitandnext 2
+
+# voice 5016 "Flabellum_0012"
+# face 6501611 "angry"
+# move 6501611 3 0
+# mask 6501611 off
+# alpha 6501611 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@フラベルム
+…わたくしではなく
+魔獣に注視してください
+状況は理解できているのですか？
+
+# alpha 6501611 0 0.3
+# alpha 357 1 0.3
+# face 357 "sad"
+# voice 9917 "mimir_navikan_0003"
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+パンドラさんの指示で
+この衣装に着替えたところに
+魔獣が現れまして…
+
+# alpha 357 0 0.3
+# face 358 "angry"
+# alpha 358 1 0.3
+# face 359 "usual"
+# alpha 359 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@マナナン
+魔獣がいたら
+リゾートなんて作れない！
+
+# voice 660381 "maclir_ura_0028"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+安全管理はリゾートの最重要事項…
+
+# alpha 358 0 0.3
+# alpha 359 0 0.3
+# move 62001121 3 0
+# face 62001121 "happy"
+# voice 6200111 "pandora_0001"
+# alpha 62001121 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@パンドラ
+という訳よ
+マスターさん、準備はできてる？
+
+# voice 6200111 "pandora_0004"
+# textflame 1 1
+# textboxarrow 0 2
+@パンドラ
+夏だ、水着だ！
+魔獣狩りだ！
+…ということね、ふふ
+
+# textflame 0 0
+@
+パンドラのドヤ顔に
+一抹の不安を感じながら
+ひとまず戦闘に備えるマスターだった
+
+;;バトル
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 62001121 0 0
+# waitandnext 0.2

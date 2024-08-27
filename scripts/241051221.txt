@@ -1,0 +1,556 @@
+;;-----------------------------------------
+;;じょうずにできるかな？ 
+;;背景：廊下
+;;-----------------------------------------
+# script "lisp"
+# background "corridor_daytime"
+# bgmfile "bgm371_2" "BgmApril2020" 0
+;;-----------------------------------------
+;;drn
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 5
+# mask 0 off
+# alpha 0 0 0
+;;wzr
+# body 223
+# pos 223 3
+# scale 223 0.8 0
+# layer 223 5
+# mask 223 off
+# alpha 223 0 0
+# body 201111
+# alpha 201111 0 0
+;;enji
+# body 45005002
+# pos 45005002 2
+# scale 45005002 0.8 0
+# layer 45005002 3
+# alpha 45005002 0 0
+# body 46003002
+# pos 46003002 4
+# scale 46003002 0.8 0
+# layer 46003002 4
+# alpha 46003002 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 2 "bg_white"
+# imagealpha 2 0 0
+# imagelayer 2 1
+;;-----------------------------------------
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+@
+じょうずにできるかな？ 
+
+# emotionbody 1001 9 45005002 80 100
+# effectpattern 1001 5 0
+# effectstart 1001
+# alpha 45005002 1 0.5
+# alpha 46003002 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5005 "vajura_0028"
+@ヴァジュラ
+ううう～…
+お、重い…っ！
+
+# effectskip 1001
+# textflame 1 1
+# textboxarrow 0 3
+@テュルソス
+だいじょうぶー？
+そんなおっきいの
+よく持てるね～
+
+# textflame 1 1
+# textboxarrow 0 1
+@ヴァジュラ
+んぬぬ…へーきだっ！
+あたしにかかれば
+このくらい、らくしょーだし！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 6003 "tyurusosu_0007"
+@テュルソス
+そ～お？
+ま、むりしすぎて
+たおれないようにね
+
+# emotionbody 1002 1 45005002 40 200
+# effectpattern 1002 2 0
+# effectstart 1002
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5005 "vajura_0022"
+@ヴァジュラ
+よゆ～よゆ～…っ！
+…って、うわぁあぁっ！？
+
+;;演出：画面揺れ
+# alpha 45005002 0 0.5
+# alpha 46003002 0 0.5
+# textwindow "close"
+# shake 0 1
+# se "SE_0798"
+# se "SE_4756"
+# waitandnext 1.5
+
+# emotionbody 1003 1 223 10 310
+# effectpattern 1003 2 0
+# effectstart 1003
+# alpha 223 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 2011 "Wazra_0022"
+@ワズラ
+―わっ！？
+な、なんです、今の揺れは？
+
+# alpha 223 0 0.5
+# move 45005002 3 0
+# mask 45005002 off
+# alpha 45005002 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ヴァジュラ
+う～っ…ぐぬぬぬっ！
+も、持ち上がらねぇ～っ！！
+
+# emotionbody 1004 2 223 10 290
+# effectpattern 1004 1 1
+# effectstart 1004
+# move 223 1 0
+# mask 223 on
+# alpha 223 1 0.5
+# move 45005002 5 0.5
+# mask 45005002 on
+# move 46003002 3 0
+# mask 46003002 on
+# alpha 46003002 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@ワズラ
+え？
+子ども…？
+
+# textflame 1 1
+# textboxarrow 0 1
+@ワズラ
+何をしているんです、
+こんなところで
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6003 "tyurusosu_0004"
+@テュルソス
+んー？
+私たちはね～、
+ジュースをさがしてるの
+
+# textflame 1 1
+# textboxarrow 0 1
+@ワズラ
+ジュース？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5005 "vajura_0003"
+@ヴァジュラ
+そうだっ！
+おやつにくれるっていうから
+たのしみにしてたのに…
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァジュラ
+いつまでたっても
+もらえねえから、
+じぶんでさがしにきたんだぜ！
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 2011 "Wazra_0039"
+@ワズラ
+なるほど…
+詳しい事情はわかりませんが
+
+# textflame 1 1
+# textboxarrow 0 1
+@ワズラ
+こんな小さい子との
+約束を破るだなんて、
+見過ごすわけにはいきませんね…
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 2011 "Wazra_0033"
+@ワズラ
+わかりました！
+私がなんとかしましょう！
+
+# se "SE_6504"
+# emotionbody 1005 3 45005002 40 200
+# effectpattern 1005 1 3
+# effectstart 1005
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァジュラ
+ほんとっ？
+やったー！
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 2011 "Wazra_0005"
+@ワズラ
+ふふふっ
+とは言ったものの…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ワズラ
+そうだ、理事長なら
+きっとなんとか
+してくれるかも…
+
+;;演出：場面転換
+;;背景：廊下（理事長室前）
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 223 0 0
+# alpha 45005002 0 0
+# alpha 46003002 0 0
+# background "stairs_day"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 223 1 0.5
+# alpha 45005002 1 0.5
+# alpha 46003002 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 2011 "Wazra_0003"
+@ワズラ
+はい、着きましたよ
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァジュラ
+ここにジュースあるの？
+
+# textflame 1 1
+# textboxarrow 0 1
+@ワズラ
+ええ、きっと
+
+# move 223 3 0.5
+# mask 223 off
+# alpha 45005002 0 0.5
+# alpha 46003002 0 0.5
+;;ＳＥ：ノックの音
+# se "SE_0679"
+# textflame 1 1
+# textboxarrow 0 2
+@ワズラ
+デュリン理事長！
+いらっしゃいますか？
+
+# textboxarrow 0 2
+# voice 2011 "Wazra_0028"
+@ワズラ
+…返事がありませんね
+ご不在でしょうか
+
+# se "SE_5209"
+# serif 1
+# textwindow "nomal"
+@ヴァジュラ
+よ～い～…しょっと！
+ふうっ、せっとかんりょー！
+
+# emotionbody 1006 2 223 10 290
+# effectpattern 1006 1 1
+# effectstart 1006
+# serif 0
+# textboxarrow 0 2
+@ワズラ
+え？
+
+# move 223 2 0.5
+# mask 223 on
+# move 46003002 4 0.5
+# alpha 46003002 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# voice 6003 "tyurusosu_0007"
+@テュルソス
+おねえちゃん、
+そこいたらあぶないよ？
+
+# emotionbody 1007 1 223 10 310
+# effectpattern 1007 2 0
+# effectstart 1007
+# serif 0
+# textflame 1 1
+# textboxarrow 0 1
+# voice 2011 "Wazra_0023"
+@ワズラ
+ちょ…ちょちょちょちょ、
+待ってくださいっ！！
+大砲で何する気ですか！？
+
+# alpha 223 0 0.5
+# alpha 46003002 0 0.5
+# move 45005002 3 0.5
+# mask 45005002 off
+# alpha 45005002 1 0.5
+# serif 0
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5005 "vajura_0020"
+@ヴァジュラ
+いっくぞー！
+３、２、１―
+
+# alpha 45005002 0 0.5
+# textwindow "close"
+;;ＳＥ：大砲の音
+# shake 0 0.5
+# se "SE_4401"
+# waitandnext 0.5
+
+;;演出：画面揺れ
+# fadein "white" 1
+# shake 1 1
+# se "SE_5215"
+# waitandnext 2
+
+;;声だけ（立ち絵は表示しない形でお願いします）
+# serif 1
+# textflame 1 1
+# textwindow "toge"
+@デュリン
+ぎゃあああーーーー！
+
+# se "SE_6504"
+# emotionbody 1008 3 46003002 10 200
+# effectpattern 1008 1 3
+# effectstart 1008
+# move 45005002 2 0
+# mask 45005002 on
+# alpha 45005002 1 0.5
+# move 46003002 4 0
+# mask 46003002 on
+# alpha 46003002 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# voice 6003 "tyurusosu_0021"
+@テュルソス
+おおっ、おみごと～っ♪
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5005 "vajura_0002"
+@ヴァジュラ
+よーし、ドアあいたぜ！
+はいろはいろー！
+
+# alpha 45005002 0 0.5
+# alpha 46003002 0 0.5
+# se "SE_5575"
+# sedelay "SE_5575" 0.1
+# textwindow "close"
+# waitandnext 0.5
+
+# move 223 3 0
+# mask 223 off
+# alpha 223 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ワズラ
+…………
+
+;;演出：場面転換
+;;背景：理事長室
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "presidentroom"
+# alpha 223 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# serif 1
+# textflame 1 1
+# textwindow "nomal"
+@デュリン
+……
+
+# alpha 45005002 1 0.5
+# alpha 46003002 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ヴァジュラ
+あっ！ねてるひとがいるー！
+
+# alpha 223 1 0.5
+# alpha 45005002 0 0.5
+# alpha 46003002 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ワズラ
+き、きっと今の衝撃で
+気絶したのだと思います
+
+# alpha 223 0 0.5
+# alpha 45005002 1 0.5
+# alpha 46003002 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@ヴァジュラ
+ふーん
+
+# textflame 1 1
+# textboxarrow 0 3
+@テュルソス
+みてみて、この棚タナ
+なんか、紙はってあるよ
+
+# alpha 223 1 0.5
+# alpha 45005002 0 0.5
+# alpha 46003002 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 2011 "Wazra_0028"
+@ワズラ
+「理事長専用！開けるな！」
+って書いてありますね
+
+# se "SE_0676"
+# emotionbody 1009 10 46003002 -60 140
+# effectpattern 1009 4 3
+# effectstart 1009
+# alpha 223 0 0.5
+# alpha 45005002 1 0.5
+# alpha 46003002 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@テュルソス
+へー
+あっ、中にジュースが
+たくさん入ってるよ～！
+
+# emotionbody 1010 10 45005002 100 140
+# effectpattern 1010 3 3
+# effectstart 1010
+# textflame 1 1
+# textboxarrow 0 1
+@ヴァジュラ
+えっ！？ほんとだー！
+おかしもたくさんあるじゃん！
+
+# effectskip 1009
+# effectskip 1010
+# textflame 1 1
+# textboxarrow 0 1
+@ヴァジュラ
+なーんだ、おやつって
+ここに置いてあったのかー！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ヴァジュラ
+いっぱいあるし、
+みんなのぶんも
+持っていこーぜ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 6003 "tyurusosu_0032"
+@テュルソス
+きっと、みんな
+よろこぶよ！
+
+# alpha 223 1 0.5
+# alpha 45005002 0 0.5
+# alpha 46003002 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ワズラ
+……
+
+# alpha 223 0 0.5
+# alpha 45005002 1 0.5
+# alpha 46003002 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5005 "vajura_0004"
+@ヴァジュラ
+えへへ…
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 6003 "tyurusosu_0004"
+@テュルソス
+じょうずに
+
+# se "SE_0673"
+# textflame 1 1
+# textboxarrow 0 0
+@ヴァジュラ
+（強奪）できたよ！
+
+# alpha 223 1 0.5
+# alpha 45005002 0 0.5
+# alpha 46003002 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 2011 "Wazra_0008"
+@ワズラ
+そ、そうですね…
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 223 0 0
+# background "bg_black"
+# waitandnext 0.2

@@ -1,0 +1,211 @@
+;;-----------------------------------------
+;;【EP3_3】
+;;【PK】神令スイハ_キャラクエ_シナリオ_190121
+;;背景：草原
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;スイハ
+# body 3401711
+# pos 3401711 3
+# scale 3401711 0.8 0
+# alpha 3401711 1 0
+# mask 3401711 off
+;;-----------------------------------------
+;;一枚絵
+# imageset 1 "c3401711"
+# imagealpha 1 0 0
+# imagelayer 1 1
+;;-----------------------------------------
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401711 "sad"
+# voice 340171 "suiha_c_0028"
+@スイハ
+“孤高”でいることこそ
+勇気だと思っていた
+
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+それを望んでいた
+今も、気持ちはそれほど変わらない
+
+# textflame 0 0
+@
+あれから数日
+マスターと共に食事を取るスイハ
+もう、あからさまな拒否は無い
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401711 "normal"
+@スイハ
+（食事も
+独りで取るに越したことはない）
+
+# textflame 0 0
+@
+…あからさまな拒否は、ない
+
+# textflame 0 0
+@
+ひ、独りになりたいなら
+断ってくれてもいいんだよ…？
+マスターは席から立ち上がる
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 340171 "suiha_c_0003"
+@スイハ
+だけど、あなたも独り
+
+# textflame 0 0
+@
+スイハはマスターを
+制止させるように声をかける
+
+;;選択肢
+# select "独りじゃないよ。スイハもいるし" "select_label_01" "まあ女の子ばっかりだしね" "select_label_02" "孤高に見える？" "select_label_03"
+@
+だけど、あなたも独り
+
+;;アンサー
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401711 "shy"
+# voice 340171 "suiha_c_0024"
+@スイハ
+そ、そういう話をしているのではない
+
+;;アンサー
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401711 "angry"
+# voice 340171 "suiha_c_0007"
+@スイハ
+…いいご身分だ
+
+;;アンサー
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401711 "normal"
+# voice 340171 "suiha_c_0007"
+@スイハ
+そうは見えないが
+
+# label "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401711 "normal"
+@スイハ
+…私はあなたを
+“バイブスを持つ、ただ独りの存在”
+として認識した
+
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+そのあなたが、こうまでの力を持つ
+見定める必要があると、思う
+
+# textflame 0 0
+@
+静かに、マスターを見据えるスイハ
+
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+………独り同士、その答えを
+
+# textflame 0 0
+@
+バイブスが共鳴するのがわかる
+
+# se "SE_0602"
+# textflame 0 0
+@
+それは彼女の新スキル
+黄昏『孤高の勇士』
+誕生の瞬間でもあった
+
+# textflame 0 0
+@
+スイハはマスターに
+心を許し切ったわけではなさそうだが
+その繋がりは以前よりも強く感じる
+
+# textflame 0 0
+@
+マスターと共にいることで
+自身の力の活かし方を
+少しずつ学ぼうとしているようだ
+
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+私という矢さえあればいい
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401711 "shy"
+# voice 340171 "suiha_c_0001"
+@スイハ
+マスター、あなたには
+（私ひとりがいれば）
+
+# textflame 0 0
+@
+そして再度
+スイハの前に立ってしまった
+マスターは…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401711 "normal"
+@スイハ
+あと
+泣いてたことは
+秘密にして
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401711 "happy"
+# voice 340171 "suiha_c_0005"
+@スイハ
+（…ふたりだけの秘密に）
+
+# textflame 0 0
+@
+見事、彼女の微笑に
+射抜かれた
+
+;;◆一枚絵指定
+;;EP2バトル後と同様
+;;一枚絵ボイス
+;;★６（一枚絵同じ）
+;;スイハ
+;;「孤高でなくなったとしても、私の力は変わらない。
+;;　私という矢があれば、問題ない。
+;;　マスターにそう思ってもらえるよう、尽力する」
+;;suiha_c_kyara_0028
+# textwindow "close"
+# fadein "white" 3
+# buttonsout 0 0
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 3401711 0 0
+# voice 340171 "suiha_c_kyara_0028"
+
+# frameout 0 1
+
+# fadeout "black" 1.5
+# waitandnext 1.5

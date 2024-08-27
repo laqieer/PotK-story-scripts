@@ -1,0 +1,692 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;インテグラルキラーズサイドストーリー
+;;第3話―３　タイトル：不可欠な痛み
+;;3_3_0
+;;スクリプト最後の背景：荒野
+;;-----------------------------------------
+# script "lisp"
+# background "yggdrasill_bedroom_light"
+# bgmfile "bgm437" "BgmIntegralNoahEvent005" 0
+;;-----------------------------------------
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 2
+# alpha 24 0 0
+# mask 24 off
+;;ロンギヌス
+# body 300111
+# pos 300111 3
+# scale 300111 0.8 0
+# layer 300111 2
+# alpha 300111 0 0
+# mask 300111 off
+;;マサムネ
+# body 100111
+# pos 100111 3
+# scale 100111 0.8 0
+# layer 100111 2
+# alpha 100111 0 0
+# mask 100111 off
+;;パラシュ
+# body 200411
+# pos 200411 3
+# scale 200411 0.8 0
+# layer 200411 2
+# alpha 200411 0 0
+# mask 200411 off
+;;アルテミス
+# body 400131
+# pos 400131 3
+# scale 400131 0.8 0
+# layer 400131 2
+# alpha 400131 0 0
+# mask 400131 off
+;;フライクーゲル
+# body 500211
+# pos 500211 3
+# scale 500211 0.8 0
+# layer 500211 2
+# alpha 500211 0 0
+# mask 500211 off
+;;エイレーネ
+# body 132
+# pos 132 3
+# scale 132 0.8 0
+# layer 132 2
+# alpha 132 0 0
+# mask 132 off
+;;ルシファー
+# body 960028
+# pos 960028 3
+# scale 960028 0.8 0
+# layer 960028 2
+# alpha 960028 0 0
+# mask 960028 off
+;;ミカエル
+# body 960029
+# pos 960029 3
+# scale 960029 0.8 0
+# layer 960029 2
+# alpha 960029 0 0
+# mask 960029 off
+;;-----------------------------------------
+;;黒い霧
+# imageset 3 "kiri_04"
+# imagescale 3 2.5 0
+# imagealpha 3 0 0
+# imagepos 3 0 0
+# imagelayer 3 4
+;;-----------------------------------------
+;;第3話―３　タイトル：不可欠な痛み
+;;//背景：ユグドラシル内部
+# voice 4001 "arutemisu_0003"
+# move 400131 3 0
+# face 400131 "nutual"
+# alpha 400131 1 0
+# mask 400131 off
+# textflame 1 1
+# textboxarrow 0 2
+@アルテミス
+記録を遡るといっても、いつの時代の
+何を見れば良いのでしょう
+
+# move 300111 2 0
+# face 300111 "normal"
+# alpha 300111 1 0.5
+# mask 300111 on
+# textboxarrow 0 1
+# move 400131 4 0.5
+# mask 400131 on
+@ロンギヌス
+女神エイレーネに関わる事柄が
+いいのでは…
+
+# voice 1014 "tyrufing_0001"
+# alpha 300111 0 0.5
+# alpha 400131 0 0.5
+# move 24 3 0
+# face 24 "normal"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+マスターはどうお考えですか？
+
+;;//選択肢
+;;
+;;A神魔大戦の頃かな
+;;Bエイレーネが眠りに就いたのは…
+# select "神魔大戦の頃かな" "select_label_01" "エイレーネが眠りに就いたのは…" "select_label_02"
+マスターはどうお考えですか？
+
+;;A
+# label "select_label_01"
+# labeljump "select_label_end"
+# textboxarrow 0 2
+@ティルフィング
+そうですね
+どうして戦いが始まったのか
+知っておきたいです
+
+;;B
+# label "select_label_02"
+# labeljump "select_label_end"
+# textboxarrow 0 2
+@ティルフィング
+女神エイレーネが眠ったことで
+神魔大戦が始まったと伝えられて
+います
+
+;;//暗転挟む
+# label "select_label_end"
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "wild"
+# move 24 3 0
+# face 24 "normal"
+# alpha 24 1 0
+# mask 24 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+そろそろ神魔大戦が始まったと
+される時代ですけれど…
+
+# alpha 24 0 0.5
+# move 200411 3 0
+# face 200411 "normal"
+# alpha 200411 1 0.5
+# mask 200411 off
+# textboxarrow 0 2
+@パラシュ
+おや？
+あそこにいるのは…
+
+;;//天使と悪魔が現れる
+;;//背景は１１章の神魔大戦時の背景でお願いいたします。荒野だったかと
+# alpha 200411 0 0.5
+# voice 9972 "michael_0040"
+# move 960029 2 0
+# alpha 960029 1 0.5
+# mask 960029 on
+# textboxarrow 0 1
+# move 960028 4 0
+# alpha 960028 1 0.5
+# mask 960028 on
+@ミカエル
+…では、ユグドラシルの寿命が
+尽きる刻については同じ意見なの
+ですね
+
+;;ルシファー（地上編）
+# voice 8032 "lucifer_0032"
+# textboxarrow 0 3
+@ルシファー
+そのようだな
+矮小なる者達の尺度では遥か先の
+話であるが…
+
+;;ミカエル（天上編）
+# textboxarrow 0 1
+@ミカエル
+私達にとっては喫緊の問題です
+今から対策を講じておかねば
+
+# textboxarrow 0 3
+@ルシファー
+対策だと？
+そんなもの…世界の滅びにすら
+耐えうる種を生み出せば良いだけだ
+
+# voice 9972 "michael_0034"
+# textboxarrow 0 1
+@ミカエル
+何と乱暴なことを
+世界そのものを存えさせるべきです
+
+# textboxarrow 0 1
+@ミカエル
+徹底的な管理を行い、完全な調和の
+取れた世界を作り上げましょう
+
+# voice 8032 "lucifer_0007"
+# textboxarrow 0 3
+@ルシファー
+ハッ！
+貴様らはいつもそれだ
+管理だの節制だのくだらぬ
+
+# textboxarrow 0 3
+@ルシファー
+あらゆる困難に打ち勝つものが
+生き延びれば良い
+あらゆる種を食らい合わせろ
+
+# alpha 960029 0 0.5
+# alpha 960028 0 0.5
+# move 24 3 0
+# face 24 "sad"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+天使と悪魔が論争をしています…
+すでにユグドラシルの寿命は
+見えていたのですね
+
+# alpha 24 0 0.5
+# move 400131 3 0
+# face 400131 "sad"
+# alpha 400131 1 0.5
+# mask 400131 off
+# textboxarrow 0 2
+@アルテミス
+どちらも極論のように感じますが…
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 400131 0 0
+# move 100111 3 0
+# face 100111 "nutual"
+# alpha 100111 1 0
+# mask 100111 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@マサムネ
+天使と悪魔の論争はいつまで経っても
+終わらぬな
+どちらも殺気立っておる
+
+# alpha 100111 0 0.5
+# move 500211 3 0
+# face 500211 "normal"
+# alpha 500211 1 0.5
+# mask 500211 off
+# textboxarrow 0 2
+@フライクーゲル
+ヘ～イ！
+あそこにいるの、エイレーネじゃ
+ないかな？
+
+# voice 1014 "tyrufing_0022"
+# alpha 500211 0 0.5
+# move 24 3 0
+# face 24 "surprise"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+えっ？
+
+# alpha 24 0 0.5
+# move 132 3 0
+# face 132 "sad"
+# alpha 132 1 0.5
+# mask 132 off
+# textboxarrow 0 2
+@エイレーネ
+ああ…
+天使達も悪魔達も心が昂ぶって
+います…
+
+# textboxarrow 0 2
+@エイレーネ
+これ以上、論争が熱を帯びれば…
+お願い…どうか心を穏やかに…
+平和な刻を失わないで…
+
+# textboxarrow 0 2
+@エイレーネ
+ううっ…
+くっ…
+
+# alpha 132 0 0.5
+# move 24 2 0
+# face 24 "sad"
+# alpha 24 1 0.5
+# mask 24 on
+# textboxarrow 0 1
+# move 400131 4 0
+# face 400131 "nutual"
+# alpha 400131 1 0.5
+# mask 400131 on
+@ティルフィング
+お母さん…！
+すごく苦しそう…
+
+# face 400131 "sad"
+# textboxarrow 0 3
+@アルテミス
+きっとエイレーネがいるから
+戦いに発展していないんです
+その分、彼女への負担が…
+
+# textboxarrow 0 1
+@ティルフィング
+お母さん…
+これ以上、無理をしたら…
+
+# textwindow "close"
+# alpha 24 0 0.5
+# alpha 400131 0 0.5
+# move 132 3 0
+# face 132 "sad"
+# alpha 132 1 0.5
+# mask 132 off
+# waitandnext 1
+
+;;//エイレーネの側に“終焉”（シルエット等で）が近づく
+;;//まだシルエットはありませんので、黒い霧演出でお願いいたします
+# bgmfile "bgm457" "BgmIntegralNoahEvent008" 0
+# imagealpha 3 0.8 1
+# imagepos 3 0 0
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@エイレーネ
+えっ…？
+この力は…ダメよっ
+私は…平和な刻を…
+
+;;//エイレーネが倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 132 0 0.5
+# waitandnext 0.5
+
+# imagealpha 3 0 0.5
+# move 24 3 0
+# face 24 "surprise"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+お母さん！？
+
+# alpha 24 0 0.5
+# move 300111 3 0
+# face 300111 "normal"
+# alpha 300111 1 0.5
+# mask 300111 off
+# textboxarrow 0 2
+@ロンギヌス
+眠りに就いたみたいです
+側に影のようなものが…
+
+# voice 8032 "lucifer_0027"
+# alpha 300111 0 0.5
+# move 960029 2 0
+# alpha 960029 1 0.5
+# mask 960029 on
+# move 960028 4 0
+# alpha 960028 1 0.5
+# mask 960028 on
+# textboxarrow 0 3
+@ルシファー
+話にならん！
+もはや論争にも飽いた
+力尽くといこう
+
+# voice 9972 "michael_0007"
+# textboxarrow 0 1
+@ミカエル
+まったくもって下品ですね
+ならば聖戦をもって臨みます
+
+# serif 1
+@天使達
+おおおおおおおおおお！
+
+# serif 1
+@悪魔達
+オオオオオオオオオオ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 960029 0 0.5
+# alpha 960028 0 0.5
+# move 100111 3 0
+# face 100111 "unhappy"
+# alpha 100111 1 0.5
+# mask 100111 off
+# textboxarrow 0 2
+@マサムネ
+何と…
+本当に女神エイレーネが眠りに落ちた
+途端、戦いが始まったのか…
+
+# alpha 100111 0 0.5
+# move 24 3 0
+# face 24 "sad"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+どうして急に眠りに落ちてしまったん
+でしょう…？
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 24 0 0
+# move 400131 3 0
+# face 400131 "nutual"
+# alpha 400131 1 0
+# mask 400131 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm437" "BgmIntegralNoahEvent005" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@アルテミス
+長い戦いが続きましたが…
+ついに女神エイレーネが目覚めて
+神魔契約が結ばれます
+
+# voice 2004 "parashu_0028"
+# alpha 400131 0 0.5
+# move 200411 3 0
+# face 200411 "normal"
+# alpha 200411 1 0.5
+# mask 200411 off
+# textboxarrow 0 2
+@パラシュ
+ん？
+神々の一柱が斧を持ち出したね
+
+# alpha 200411 0 0.5
+# move 24 3 0
+# face 24 "surprise"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+あの斧…以前、泉で見かけたものです
+
+# textwindow "close"
+# alpha 24 0 0.5
+# serif 1
+@？？？
+この盤古（ばんこ）をもって
+世界を天上と地上に分断する！
+
+# serif 1
+@？？？
+これより天上世界は神々が
+地上は悪魔が支配するものとする
+
+;;//世界が切り分けられる
+# se "SE_9152"
+# sedelay "SE_0638" 1
+# fadein "white" 0.5
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# move 24 3 0
+# face 24 "surprise"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+世界が二つに分かれて…天上世界が
+世界樹の幹の上部に上がっていきます
+
+# face 24 "sad"
+# textboxarrow 0 2
+@ティルフィング
+ここから天上世界では神々の
+「箱庭実験」が始まり、
+地上世界では悪魔の支配が始まる…
+
+# alpha 24 0 0.5
+# move 100111 3 0
+# face 100111 "nutual"
+# alpha 100111 1 0.5
+# mask 100111 off
+# textboxarrow 0 2
+@マサムネ
+悪魔の支配は単純なようだ
+より強い種が覇権を握る
+それだけだな
+
+# alpha 100111 0 0.5
+# move 300111 2 0
+# face 300111 "normal"
+# alpha 300111 1 0.5
+# mask 300111 on
+# move 200411 4 0
+# face 200411 "normal"
+# alpha 200411 1 0.5
+# mask 200411 on
+# textboxarrow 0 3
+@パラシュ
+そうやって滅びに抗える種を
+生み出そうと考えていたようだね
+
+# textboxarrow 0 1
+@ロンギヌス
+では、天上世界の神々は…？
+
+# voice 1001 "masamune_0024"
+# alpha 300111 0 0.5
+# alpha 200411 0 0.5
+# move 24 2 0
+# face 24 "sad"
+# alpha 24 1 0.5
+# mask 24 on
+# move 100111 4 0
+# face 100111 "angry"
+# alpha 100111 1 0.5
+# mask 100111 on
+# textboxarrow 0 3
+@マサムネ
+むっ？
+何だ、あれは…
+天上世界が無数に分岐していく…
+
+# textboxarrow 0 1
+@ティルフィング
+様々な可能性に世界線が枝分かれして
+いきますね
+これは…
+
+# voice 4001 "arutemisu_0039"
+# alpha 100111 0 0.5
+# move 400131 4 0
+# face 400131 "nutual"
+# alpha 400131 1 0.5
+# mask 400131 on
+# textboxarrow 0 3
+@アルテミス
+どうやら、無数の可能性を検証して
+永続できる世界の構築を目指した
+ようです
+
+# textboxarrow 0 1
+@ティルフィング
+これが神々による壮大な
+「箱庭実験」…
+
+# alpha 400131 0 0.5
+# move 500211 4 0
+# face 500211 "happy"
+# alpha 500211 1 0.5
+# mask 500211 on
+# textboxarrow 0 3
+@フライクーゲル
+でも、箱庭の管理をしていた天使を
+ラグナロク達が倒したんだよね
+
+# textboxarrow 0 3
+@フライクーゲル
+お陰で天上世界の人々は自由になって
+ヘアピィになったはずだよ
+
+# textboxarrow 0 1
+@ティルフィング
+そのはずなんですけど…
+
+# face 24 "surprise"
+# textboxarrow 0 1
+@ティルフィング
+…………そういえば
+
+# textboxarrow 0 1
+@ティルフィング
+「箱庭実験」において「失敗」と
+判断された可能性はどうなって
+しまったのでしょう？
+
+# voice 5002 "furaikugeru_0028"
+# face 500211 "sad"
+# textboxarrow 0 3
+@フライクーゲル
+うーん…
+消えちゃったとか？
+
+# alpha 24 0 0.5
+# alpha 500211 0 0.5
+# move 100111 2 0
+# face 100111 "nutual"
+# alpha 100111 1 0.5
+# mask 100111 on
+# move 400131 4 0
+# face 400131 "nutual"
+# alpha 400131 1 0.5
+# mask 400131 on
+# textboxarrow 0 3
+@アルテミス
+神々は最善の世界だけを残していった
+はずです
+「失敗」は某大な数に上ったでしょう
+
+# voice 4001 "arutemisu_0003"
+# textboxarrow 0 3
+@アルテミス
+それらがどこにいったのか…
+確かに気になりますね
+
+# textboxarrow 0 1
+@マサムネ
+もう少し詳しく見てみなければ
+分かるまい
+幾つも枝分かれした世界線を…
+
+;;//画面揺れ
+# se "SE_0644"
+# shake 0 0.5
+# waitandnext 0.5
+
+# voice 1014 "tyrufing_0001"
+# alpha 100111 0 0.5
+# alpha 400131 0 0.5
+# move 24 3 0
+# face 24 "surprise"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+マスター？
+どこか具合が――
+
+;;//マスターが世界線の一つに落下する
+# se "SE_9149"
+# waitandnext 0.5
+
+# voice 1014 "tyrufing_movie_0022"
+# textboxarrow 0 2
+@ティルフィング
+マスター！？
+
+;;//暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2

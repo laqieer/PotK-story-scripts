@@ -1,0 +1,884 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;２章１話　「エデンクライシス―覚醒―」
+;;第4話　タイトル：風雲！マサムネ城
+;;4_3
+;;スクリプト最後の背景：関所
+;;-----------------------------------------
+# script "lisp"
+# background "005_Checkpoint"
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 3
+# alpha 196 0 0
+# mask 196 off
+;;フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.8 0
+# layer 502711 2
+# alpha 502711 0 0
+# mask 502711 off
+;;スイハ
+# body 401711
+# pos 401711 3
+# scale 401711 0.8 0
+# layer 401711 4
+# alpha 401711 0 0
+# mask 401711 off
+;;ダモクレス
+# body 103511
+# pos 103511 3
+# scale 103511 0.8 0
+# layer 103511 2
+# alpha 103511 0 0
+# mask 103511 off
+;;ネス
+# body 602011
+# pos 602011 3
+# scale 602011 0.8 0
+# layer 602011 2
+# alpha 602011 0 0
+# mask 602011 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;ブリューナク
+# body 500721
+# pos 500721 3
+# scale 500721 0.8 0
+# layer 500721 2
+# alpha 500721 0 0
+# mask 500721 off
+;;フラガラッハ
+# body 101011
+# pos 101011 3
+# scale 101011 0.8 0
+# layer 101011 2
+# alpha 101011 0 0
+# mask 101011 off
+;;ゲイボルグ
+# body 300711
+# pos 300711 3
+# scale 300711 0.8 0
+# layer 300711 2
+# alpha 300711 0 0
+# mask 300711 off
+;;マサムネ
+# body 197
+# pos 197 3
+# scale 197 0.8 0
+# layer 197 2
+# alpha 197 0 0
+# mask 197 off
+;;-----------------------------------------
+;;第4話　タイトル：風雲！マサムネ城
+;;//背景：関所
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0
+# mask 103611 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1036 "ragnarok_0039"
+@ラグナロク
+町を囲っている壁は
+以前と変わっていないのね
+門が見えてきた
+
+# alpha 103611 0 0.5
+# move 103511 2 0
+# face 103511 "sad"
+# alpha 103511 1 0.5
+# mask 103511 on
+# move 502711 4 0
+# face 502711 "normal"
+# alpha 502711 1 0.5
+# mask 502711 on
+# textboxarrow 0 3
+# voice 5027 "freischotz_0002"
+@フライシュッツ
+ダモクレスちゃん、フードを
+被って目立たなくしてね～
+
+# textboxarrow 0 1
+# voice 1035 "damocles_0013"
+@ダモクレス
+クレス、こういう格好苦手だよ…
+早く脱ぎたーい
+
+# alpha 103511 0 0.5
+# alpha 502711 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0019"
+@アルマス
+静かにしてっ
+ヘンテコな城とは早々に
+お別れするわよ！
+
+# bgm "stop"
+# move 197 2 0
+;;# face 197 "normal"
+# alpha 197 1 0.5
+# mask 197 on
+# textboxarrow 0 1
+# move 196 4 0.5
+# mask 196 on
+# voice 510013 "masamune_iz_0001"
+@マサムネ
+止まれ
+
+;;//マサムネがアルマスに斬りかかる
+;;//以下、マサムネとアルマスはくっついた状態で
+# se "SE_4000"
+# textwindow "close"
+# move 197 3 0.1
+# waitandnext 0.2
+
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm411" "BgmIntegralNoahBattle001" 0
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 9943 "almace_navikan_0053"
+@アルマス
+くっ…
+あなた…マサムネ…！
+
+# textboxarrow 0 2
+# voice 510013 "masamune_iz_0007"
+@マサムネ
+久しいな
+幾分、雰囲気が変わったか？
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0011"
+@アルマス
+元に戻っただけだと思うわよ！
+
+;;//アルマスがマサムネを押しのける
+;;//立ち絵としては、くっついていた二人が離れる
+# se "SE_8023"
+# waitandnext 0.5
+
+# se "SE_8020"
+# textwindow "close"
+# move 197 2 0.1
+# waitandnext 0.2
+
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 510013 "masamune_iz_0028"
+@マサムネ
+そうか…
+一度は同志と認めたそなただが、
+今は刃を交える者
+
+# se "SE_8004"
+# textboxarrow 0 1
+@マサムネ
+拙者も容赦はいたさぬ
+
+# alpha 196 0 0.5
+# move 103611 4 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 3
+# voice 1036 "ragnarok_0028"
+@ラグナロク
+私達はこの町を離れるつもりよ
+…不本意だけれど、あなたの選定を
+邪魔したりしない
+
+# textboxarrow 0 3
+@ラグナロク
+まして、「天上一武闘大会」を
+明日に控えている身でしょう
+
+# textboxarrow 0 3
+@ラグナロク
+こんなところで油を売っていて
+いいの？
+
+# textboxarrow 0 1
+# voice 510013 "masamune_iz_0007"
+@マサムネ
+詭弁だな
+ラグナロク、そなた達はユグドラシル
+を目指しているのだろう？
+
+# textboxarrow 0 1
+@マサムネ
+そなた達を先に進ませるのは
+拙者達にとって益にならぬ
+
+# textboxarrow 0 1
+@マサムネ
+何より、この町に足を踏み入れた者は
+等しく拙者の選定対象となる
+誰一人逃がしはせぬ
+
+# textboxarrow 0 1
+@マサムネ
+真の武士たる姿を見せ、
+新世界へ至るか
+ここで朽ち果て礎となるか
+
+# textboxarrow 0 1
+@マサムネ
+二つに一つだ
+
+# alpha 103611 0 0.5
+# move 502711 4 0
+# face 502711 "sad"
+# alpha 502711 1 0.5
+# mask 502711 on
+# textboxarrow 0 3
+# voice 5027 "freischotz_0013"
+@フライシュッツ
+え～っ…
+そんな二択、厳し過ぎるよ～
+おねーちゃん悲しいな～…
+
+;;# face 197 "angry"
+# textboxarrow 0 1
+# voice 510013 "masamune_iz_0034"
+@マサムネ
+そなた達においては二択ですらない
+キル姫は皆、等しく剪定する
+
+# textboxarrow 0 1
+@マサムネ
+抗うというのなら、
+やってみるがいい
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# se "SE_10585"
+# alpha 502711 0 0.5
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+言われなくても！
+力尽くで突破して
+やろうじゃないの！
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 197 0 0
+# move 196 3 0
+# face 196 "angry"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# fadein "red" 0.7
+# se "SE_9017"
+# mask 196 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0054"
+@アルマス
+あぐっ…
+
+# alpha 196 0 0.5
+# move 103511 3 0
+# face 103511 "sad"
+# alpha 103511 1 0.5
+# mask 103511 off
+# textboxarrow 0 2
+# voice 1035 "damocles_0028"
+@ダモクレス
+うーん…
+愛が足らなかったかな…？
+
+# alpha 103511 0 0.5
+# move 401711 3 0
+# face 401711 "sad"
+# alpha 401711 1 0.5
+# mask 401711 off
+# textboxarrow 0 2
+# voice 4017 "suiha_0024"
+@スイハ
+いや…やめて…
+
+# alpha 401711 0 0.5
+# move 197 3 0
+;;# face 197 "normal"
+# alpha 197 1 0.5
+# mask 197 off
+# textboxarrow 0 2
+# voice 510013 "masamune_iz_0027"
+@マサムネ
+この程度か
+やはり、そなた達はここで散り、
+礎となってもらう
+
+# alpha 197 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0011"
+@アルマス
+まだ…
+終わってないわよ…！
+ここからが絶・本番なんだから！
+
+# se "SE_8000"
+# alpha 196 0 0.5
+# move 197 3 0
+;;# face 197 "angry"
+# alpha 197 1 0.5
+# mask 197 off
+# textboxarrow 0 2
+# voice 510013 "masamune_iz_battle_0004"
+@マサムネ
+その意気や良し
+花と散れ！
+
+# alpha 197 0 0.5
+# move 103611 3 0
+# face 103611 "surprise"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# voice 1036 "ragnarok_battle_0005"
+@ラグナロク
+アルマス！
+
+# se "SE_9021"
+# waitandnext 0.5
+
+;;//ラグナロクがアルマスを庇う
+# textwindow "close"
+# alpha 103611 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# waitandnext 0.8
+
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0
+# mask 103611 on
+# leftin 103611 0.3
+# waitandnext 0.2
+
+# move 196 4 0.1
+# waitandnext 0.2
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 103611 "angry"
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 1036 "ragnarok_0038"
+@ラグナロク
+くぅっ…
+
+# face 196 "surprise"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0035"
+@アルマス
+ラグナロクっ…！？
+何してるのよっ
+
+# alpha 103611 0 0.5
+# alpha 196 0 0.5
+# move 197 3 0
+;;# face 197 "normal"
+# alpha 197 1 0.5
+# mask 197 off
+# textboxarrow 0 2
+# voice 510013 "masamune_iz_0039"
+@マサムネ
+ほう
+身を挺して仲間を守るか
+しかし、ラグナロク…
+
+# textboxarrow 0 2
+@マサムネ
+そなたからは以前のような
+気迫を感じられぬ
+
+# textboxarrow 0 2
+@マサムネ
+剣もまともに扱えてはおらぬようだが
+そのような体たらくで、
+拙者に挑もうというのか？
+
+# alpha 197 0 0.5
+# move 103611 3 0
+# face 103611 "sad"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+そう…
+今の私には、キル姫として戦う力は
+ないに等しい
+
+# face 103611 "normal"
+# textboxarrow 0 2
+@ラグナロク
+でも、それなら逆に訊くわ
+あなたは勝ち目がないからといって
+
+# textboxarrow 0 2
+@ラグナロク
+マスターの窮地に手をこまねいている
+ことしかしないの！？
+
+# alpha 103611 0 0.5
+# move 197 3 0
+;;# face 197 "normal"
+# alpha 197 1 0.5
+# mask 197 off
+# textboxarrow 0 2
+@マサムネ
+…………
+
+# textboxarrow 0 2
+# voice 510013 "masamune_iz_0027"
+@マサムネ
+事の仔細はあずかり知らぬが、
+そなたの忠義は確かに見せて
+もらった
+
+# textboxarrow 0 2
+@マサムネ
+今は斬らずにおこう
+選定が終わるまで拙者の城で
+過ごすがいい
+
+# bgm "stop"
+# textboxarrow 0 2
+@マサムネ
+ここからは逃げられぬ
+ゆめゆめ忘れるな
+
+;;//マサムネが立ち去る
+# se "SE_0719"
+# textwindow "close"
+# alpha 197 0 0.5
+# waitandnext 0.5
+
+# move 103611 2 0
+# face 103611 "sad"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textwindow "normal"
+# voice 1036 "ragnarok_0007"
+@ラグナロク
+情けを…かけられたわね…
+
+# face 196 "angry"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0024"
+@アルマス
+絶・最悪っ…！
+
+# alpha 103611 0 0.5
+# move 500721 2 0
+# face 500721 "normal"
+# alpha 500721 1 0.5
+# mask 500721 on
+# textboxarrow 0 1
+# voice 5007 "buryunaku_0013"
+@ブリューナク
+これは敗北ではない
+戦略的撤退だ…
+
+# bgmfile "bgm415" "BgmIntegralNoahBattle002" 0
+# textboxarrow 0 3
+@アルマス
+…やってやるわ
+
+# alpha 500721 0 0.5
+# move 103611 2 0
+# face 103611 "usual"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0022"
+@ラグナロク
+アルマス？
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0018"
+@アルマス
+絶・やってやる！
+あいつにギャフンと言わせないと
+気が収まらないっ
+
+# textboxarrow 0 3
+@アルマス
+こうなったら、「天上一武闘大会」に
+出てやろうじゃないの！
+
+# face 103611 "surprise"
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0009"
+@ラグナロク
+何を言っているの、あなたっ？
+
+# textboxarrow 0 3
+@アルマス
+スイハ！
+大会の参加受付は今日までだった
+わよねっ？
+
+# alpha 103611 0 0.5
+# move 401711 2 0
+# face 401711 "normal"
+# alpha 401711 1 0.5
+# mask 401711 on
+# textboxarrow 0 1
+@スイハ
+はい…そうですけど…
+
+# textboxarrow 0 3
+@アルマス
+受付の場所はどこ！？
+私も参加して、マサムネを
+ぶっ倒してやるんだから！
+
+# alpha 401711 0 0.5
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0002"
+@ラグナロク
+落ち着いて、アルマス
+たった今、実力の差を見せつけられた
+ばかりなのよ
+
+# textboxarrow 0 1
+@ラグナロク
+無茶が過ぎるわ
+賛成できない
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0015"
+@アルマス
+あなたがそれを言うの？
+まともに戦える力もないのに、
+マサムネの前に飛び出して…
+
+# textboxarrow 0 3
+@アルマス
+無茶なのはお互い様よ！
+
+# textboxarrow 0 3
+@アルマス
+もう二度と、あなたにっ…
+いや、何でもないわ
+
+# textboxarrow 0 3
+@アルマス
+とにかく私は武闘大会に参加する！
+今は私がマスターなんだから、
+命令に従って！
+
+# face 103611 "sad"
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0027"
+@ラグナロク
+アルマス…
+仕方ないわね…
+
+# alpha 103611 0 0.5
+# alpha 196 0 0.5
+# move 103511 3 0
+# face 103511 "usual"
+# alpha 103511 1 0.5
+# mask 103511 off
+# textboxarrow 0 2
+# voice 1035 "damocles_0004"
+@ダモクレス
+よーしっ！
+クレスも参加するよ～っ
+
+# move 103511 2 0.5
+# mask 103511 on
+# move 602011 4 0
+# face 602011 "angry"
+# alpha 602011 1 0.5
+# mask 602011 on
+# textboxarrow 0 3
+# voice 6020 "ness_0010"
+@ネス
+ダモクレスまで何てことをっ
+危険過ぎます！規律違反です！
+
+# textboxarrow 0 1
+@ダモクレス
+愛さえあれば問題ない！
+それに、みんな死ぬときは死ぬよ
+
+# alpha 103511 0 0.5
+# alpha 602011 0 0.5
+# move 196 3 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0042"
+@アルマス
+たまに怖いくらい醒めてるわよね
+
+# move 101011 2 0
+# face 101011 "happy"
+# alpha 101011 1 0.5
+# mask 101011 on
+# textboxarrow 0 1
+# move 196 4 0.5
+# mask 196 on
+# voice 1010 "furagaraha_0004"
+@フラガラッハ
+ふふっ
+マスター、私の出番ね♪
+
+# face 196 "happy"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0006"
+@アルマス
+フラガラッハも参加してくれるの？
+
+# face 101011 "normal"
+# textboxarrow 0 1
+# voice 1010 "furagaraha_0003"
+@フラガラッハ
+もちろん
+天上一の美しさを競う大会とあっては
+私がいなければ始まらないもの
+
+# face 196 "normal"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0022"
+@アルマス
+フラガラッハ、
+何か勘違いしてるわよ…
+
+# textboxarrow 0 1
+@フラガラッハ
+だって大会なのでしょう？
+美を競う以外に、どんな大会が
+あるというの？
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+「武闘」大会って言ってるでしょ！
+
+# face 101011 "happy"
+# textboxarrow 0 1
+# voice 1010 "furagaraha_0021"
+@フラガラッハ
+まあ！
+「舞踏」大会だなんて、ステキね
+私、踊りにも自信があるわ♪
+
+# face 196 "happy"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0007"
+@アルマス
+ぷふっ…
+なかなか上手いこと言うわね
+
+# alpha 196 0 0.5
+# move 500721 4 0
+# face 500721 "normal"
+# alpha 500721 1 0.5
+# mask 500721 on
+# textboxarrow 0 3
+# voice 5007 "buryunaku_0002"
+@ブリューナク
+ブリューナクの分析によると、
+二人の間に齟齬が発生している
+至急、修正すべきだ
+
+# textboxarrow 0 3
+@ブリューナク
+フラガラッハ、
+こちらで説明しよう
+
+;;//ブリューナクがフラガラッハを連れていく
+# se "SE_0719"
+# textwindow "close"
+# alpha 101011 0 0.5
+# alpha 500721 0 0.5
+# waitandnext 0.5
+
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textwindow "normal"
+# voice 1036 "ragnarok_0002"
+@ラグナロク
+あっちは任せておくとして、
+アルマス、本当にやるのね？
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+やるわ！
+ダモクレス、二人で優勝と準優勝を
+かっ攫うわよ！
+
+# alpha 103611 0 0.5
+# move 103511 2 0
+# face 103511 "usual"
+# alpha 103511 1 0.5
+# mask 103511 on
+# textboxarrow 0 1
+# voice 1035 "damocles_0033"
+@ダモクレス
+それだー！
+クレスとアルマスでマサムネを
+ギャフンと言わせるよ～
+
+# se "SE_5256"
+# alpha 103511 0 0.5
+# move 300711 2 0
+# face 300711 "normal"
+# alpha 300711 1 0.5
+# mask 300711 on
+# textboxarrow 0 1
+# voice 3007 "gaiborugu_0001"
+@ゲイボルグ
+マスター、私はしかるべきときに
+呼んで欲しい
+
+# face 196 "surprise"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0036"
+@アルマス
+わっ！？
+急に出てきた…
+
+# face 300711 "angry"
+# textboxarrow 0 1
+@ゲイボルグ
+具体的には、決勝の舞台で
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+それ、反則だから！
+
+# face 300711 "sad"
+# textboxarrow 0 1
+# voice 3007 "gaiborugu_0028"
+@ゲイボルグ
+そうか…
+
+;;//ゲイボルグが姿を消す
+# se "SE_5257"
+# textwindow "close"
+# alpha 300711 0 0.5
+# waitandnext 0.5
+
+# face 196 "surprise"
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 9943 "almace_navikan_0035"
+@アルマス
+えっ…？
+彼女、何で出てきたの？
+
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0028"
+@ラグナロク
+実は構って欲しかったのかも
+あまり出番がないから
+
+# face 196 "normal"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0041"
+@アルマス
+面倒くさいわね…
+
+# move 103611 1 0.5
+# move 401711 3 0
+# face 401711 "normal"
+# alpha 401711 1 0.5
+# mask 401711 on
+# textboxarrow 0 2
+# move 196 5 0.5
+# voice 4017 "suiha_0002"
+@スイハ
+あの…
+
+# face 103611 "usual"
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0022"
+@ラグナロク
+どうしたの、スイハ？
+まさか、あなたも出るつもり？
+
+# textboxarrow 0 2
+@スイハ
+いえ…その…
+早くしないと、
+そろそろ受付時間が終わります
+
+# face 196 "angry"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0015"
+@アルマス
+それを早く言って！

@@ -1,0 +1,438 @@
+;;-----------------------------------------
+;;SEA2章_18_0
+;;-----------------------------------------
+# script "lisp"
+# background "courtyard_night"
+# bgmfile "bgm602_1" "BgmSecretlyEverAfter002" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 1
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;七支刀
+# body 5105111
+# pos 5105111 3
+# scale 5105111 0.8 0
+# layer 5105111 3
+# mask 5105111 off
+# alpha 5105111 0 0
+;;パラシュ
+# body 6200411
+# pos 6200411 5
+# scale 6200411 0.8 0
+# layer 6200411 2
+# mask 6200411 off
+# alpha 6200411 0 0
+;;否定派イシューリエル
+# body 6301411
+# pos 6301411 3
+# scale 6301411 0.8 0
+# layer 6301411 2
+# mask 6301411 off
+# alpha 6301411 1 0
+;;肯定派イシューリエル（にせ）
+# entry 6301499 6301411 
+# pos 6301499 1
+# scale 6301499 0.8 0
+# layer 6301499 4
+# alpha 6301499 1 0
+# brightness 6301499 0.8 0
+;;ghost
+# body 302
+# pos 302 5
+# scale 302 1.2 0
+# layer 302 1
+# mask 302 off
+# alpha 302 1 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：中庭（夜）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# face 6301499 "normal"
+# face 6301411 "normal"
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 3
+@？？？
+ワタシハ色ンナコトガ
+デキルンダヨオオオオオオ！
+
+# se "SE_12806"
+# textwindow "nomal"
+# textboxarrow 0 1
+@イシューリエル
+こんなこと…あり得ませんわぁ…！
+
+# move 6301499 5 1
+# scale 6301499 0.6 1
+# alpha 6301499 0 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+# voice 3014 "ithuriel_0009"
+# textwindow "nomal"
+# textboxarrow 0 2
+@イシューリエル
+今、目の前で起きていることを
+受け入れなさいな…！
+
+# move 302 3 0.5
+# move 6301411 3 1
+# scale 6301411 0.6 1
+# alpha 6301411 0 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+# alpha 302 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;ミーミルが走ってくる
+# se "SE_5575"
+# move 270 2 0.5
+# face 270 "sad"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+# textwindow "normal"
+@ミーミル
+そんな…イシューリエルさんが、
+巨大幽霊の中に
+取り込まれてしまいました…
+
+;;パラシュがやって来る
+# se "SE_9021"
+# voice 2004 "parashu_battle_0005"
+# move 6200411 4 0.5
+# face 6200411 "normal"
+# alpha 6200411 1 0.3
+# textboxarrow 0 3
+@パラシュ
+くっ…
+面倒なことになったね
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+パラシュさん、大丈夫ですかっ？
+
+# face 6200411 "sad"
+# textboxarrow 0 3
+@パラシュ
+このくらい掠り傷だ
+それより、あれは
+どうすればいいんだろう…
+
+# textboxarrow 0 3
+@パラシュ
+ボクが攻撃しても手応えがないのに
+相手の攻撃は通じるなんて、
+ずるいじゃないかっ
+
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+何か打開策があれば
+良いのですけれど…
+
+# alpha 270 0 0.3
+# alpha 6200411 0 0.3
+# face 5105111 "sad"
+# alpha 5105111 1 0.3
+# textboxarrow 0 2
+@七支刀
+…………
+
+# face 270 "surprise"
+# alpha 270 1 0.3
+# move 5105111 4 0.5
+# textboxarrow 0 1
+@ミーミル
+あ！七支刀さん
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+呪術に造詣の深いアナタなら、
+対処方法がお分かりになるのでは？
+
+# voice 1051 "shichishito_0015"
+# textboxarrow 0 3
+@七支刀
+わたくしは…
+その…
+
+# alpha 270 0 0.3
+# alpha 5105111 0 0.3
+# move 6200411 3 0
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# textboxarrow 0 2
+@パラシュ
+彼女に頼っても無駄だよ
+こういう荒事には向いていない
+
+# face 6200411 "angry"
+# textboxarrow 0 2
+@パラシュ
+まずは、
+取り込まれたイシューリエルを
+二人とも助け出す！
+
+;;パラシュが走っていく
+# se "SE_5575"
+# move 6200411 4 0.5
+# alpha 6200411 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# voice 1051 "shichishito_0060"
+# face 270 "normal"
+# alpha 270 1 0.3
+# face 5105111 "sad"
+# alpha 5105111 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@七支刀
+パラシュ様…
+
+# textboxarrow 0 1
+@ミーミル
+七支刀さん
+パラシュさんはきっと――
+
+# textboxarrow 0 3
+@七支刀
+はい
+分かっています
+
+# textboxarrow 0 3
+@七支刀
+時間を稼いで下さっているのですよね
+わたくしが決心して行動するまで
+
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+あ、その…
+そうだと思いますっ
+
+# face 5105111 "normal"
+# textboxarrow 0 3
+@七支刀
+やっぱり！
+わたくし、実は自信がないんです…
+飾り物の剣だから…
+
+# textboxarrow 0 3
+@七支刀
+それでも、世界中の人々が
+幸せでいられるよう
+
+# textboxarrow 0 3
+@七支刀
+出来る限りのことを
+したいと思っています
+
+# textboxarrow 0 3
+@七支刀
+パラシュ様には、
+理想と行動が釣り合っていないと
+言われてしまいましたけれど…
+
+# textboxarrow 0 3
+@七支刀
+わたくしは、わたくしなりのやり方で
+進んでいきますっ
+
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+七支刀さん
+この状況を打開する策を
+ご存知なのですね
+
+# textboxarrow 0 3
+@七支刀
+策と呼べるほどのものではありません
+ただ…
+
+# textboxarrow 0 3
+@七支刀
+やっと分かりました
+この廃病院で感じていた
+呪術の気配…
+
+# textboxarrow 0 3
+@七支刀
+ここに集まっていた
+幽霊様方の思い…
+
+# textboxarrow 0 3
+@七支刀
+それを、わたくしが！
+
+;;七支刀が走っていく
+# se "SE_5575"
+# move 5105111 3 0.5
+# scale 5105111 0.7 0.5
+# alpha 5105111 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# scale 5105111 0.8 0
+# move 270 3 0.5
+# face 270 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+七支刀さんっ？
+
+# voice 9917 "mimir_navikan_0001"
+# face 270 "normal"
+# textboxarrow 0 2
+@ミーミル
+マスター様、どうすれば…
+七支刀さんが真っ直ぐ
+巨大幽霊に突っ込んでいきました
+
+;;選択肢
+# select "信じよう" "select_label_01" "見守ろう" "select_label_01"
+マスター様、どうすれば…
+七支刀さんが真っ直ぐ
+巨大幽霊に突っ込んでいきました
+
+# label "select_label_01"
+# voice 9917 "mimir_navikan_0039"
+# face 270 "happy"
+# textboxarrow 0 2
+@ミーミル
+あ…
+マスター様は、さすがでございます
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 270 0 0
+# move 302 4 0
+# alpha 302 1 0
+# move 6200411 2 0
+# alpha 6200411 1 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;突風が吹き荒れる
+# se "SE_9051"
+# shake 0 1
+# waitandnext 1
+
+# voice 2004 "parashu_battle_0008"
+# face 6200411 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 1
+@パラシュ
+うわっ…！
+
+# textboxarrow 0 3
+@？？？
+コンナコトモデキルンダヨ！
+モットモット検証シヨウネ！
+
+# face 6200411 "sad"
+# textboxarrow 0 1
+@パラシュ
+取り込まれたイシューリエルまで
+手が届かない…
+どうすれば…
+
+# move 302 5 0.5
+# alpha 302 0 0.3
+# move 6200411 1 0.5
+# alpha 6200411 0 0.3
+# layer 5105111 3
+# face 5105111 "normal"
+# alpha 5105111 1 0.3
+# textboxarrow 0 2
+@七支刀
+巨大幽霊さまー！
+
+# move 6200411 2 0
+# layer 6200411 4
+# mask 6200411 on
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# move 5105111 4 0.5
+# textboxarrow 0 1
+@パラシュ
+七支刀？
+君、危ないから下がっているんだ
+
+# face 5105111 "angry"
+# textboxarrow 0 3
+@七支刀
+大丈夫です
+わたくし、やれます！
+
+# face 6200411 "angry"
+# textboxarrow 0 1
+@パラシュ
+やれるって、君に何が…
+危ない！？
+
+# move 6200411 1 0.3
+# alpha 6200411 0 0.3
+# move 5105111 2 1
+# move 302 4 0
+# alpha 302 1 0.5
+# textboxarrow 0 3
+@？？？
+今度ハ何ヲ見セテアゲヨウカナアア！
+
+# textboxarrow 0 1
+@七支刀
+どうぞ！
+来て下さい！
+
+;;七支刀が巨大幽霊に取り込まれる
+# se "SE_12806"
+# move 5105111 4 1
+# scale 5105111 0.6 1
+# alpha 5105111 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+# move 6200411 3 0
+# mask 6200411 off
+# face 6200411 "surprise"
+# alpha 6200411 1 0.3
+# alpha 302 0 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@パラシュ
+七支刀…！
+無防備過ぎるよ…
+
+# face 6200411 "sad"
+# textboxarrow 0 2
+@パラシュ
+結局、君は口だけだったのかい…？
+あっけなく巨大幽霊の中に
+取り込まれてしまうなんて…
+
+# fadeout "black" 1
+# waitandnext 1

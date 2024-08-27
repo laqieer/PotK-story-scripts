@@ -1,0 +1,514 @@
+;;-----------------------------------------
+;;SEA_22_0
+;;-----------------------------------------
+# script "lisp"
+# background "altar"
+# bgm "stop"
+;;-----------------------------------------
+;;ラグナロク
+# body 103611
+# pos 103611 5
+# scale 103611 0.8 0
+# layer 103611 3
+# mask 103611 off
+# alpha 103611 0 0
+;;ガブリエル
+# body 960030
+# pos 960030 1
+# scale 960030 0.8 0
+# layer 960030 2
+# alpha 960030 0 0
+;;9thティルフィング
+# body 6101441
+# pos 6101441 3
+# scale 6101441 0.8 0
+# layer 6101441 5
+# alpha 6101441 0 0
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;SEAティファレト
+# body 6503211
+# pos 6503211 3
+# scale 6503211 0.8 0
+# layer 6503211 3
+# mask 6503211 off
+# alpha 6503211 0 0
+;;SEAベルフェゴール
+# body 62000911
+# pos 62000911 3
+# scale 62000911 0.8 0
+# layer 62000911 3
+# mask 62000911 off
+# alpha 62000911 0 0
+;;SEAアスモデウス
+# body 6603911
+# pos 6603911 3
+# scale 6603911 0.8 0
+# layer 6603911 3
+# mask 6603911 off
+# alpha 6603911 0 0
+;;SEAベルゼブブ
+# body 6402511
+# pos 6402511 3
+# scale 6402511 0.8 0
+# layer 6402511 3
+# mask 6402511 off
+# alpha 6402511 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 4
+;;-----------------------------------------
+;;背景：祭壇：altar
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+# bgm "bgm035" 0
+# voice 1036 "ragnarok_0029"
+# face 103611 "angry"
+# alpha 103611 1 0.3
+# face 6101441 "angry"
+# alpha 6101441 1 0.3
+# alpha 960030 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@ラグナロク
+今、終焉の鐘が鳴る
+永久に眠れ、ガブリエル！
+
+# fadein "white" 1
+# se "SE_5773"
+# textflame 1 1
+# textboxarrow 0 1
+@ガブリエル
+ぐああああああああああ…！？
+
+;;ガブリエルがキル姫達に切り倒される
+# se "SE_3001"
+# alpha 960030 0 2
+# textwindow "close"
+# waitandnext 2.5
+
+# voice 610141 "tyrufing_7th_0007"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ティルフィング
+処理、完了…
+
+# alpha 103611 0 0.3
+# alpha 6101441 0 0.3
+# alpha 960030 0 0.3
+# face 270 "happy"
+# alpha 270 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+やりました！
+
+# alpha 270 0 0.3
+# move 103611 4 0.5
+# layer 103611 2
+# mask 103611 off
+# face 103611 "normal"
+# alpha 103611 1 0.3
+# move 960030 2 0
+# alpha 960030 0.8 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@ガブリエル
+ああ…
+あなた達はまた…
+神殺しの伝承を得るのですね…
+
+;;崩れていくガブリエルにラグナロクが近づく
+# se "SE_0719"
+# voice 1036 "ragnarok_0007"
+# textflame 1 1
+# textboxarrow 0 3
+@ラグナロク
+私達はもう傀儡でも道具でもない
+人々とともに生きていくわ
+
+# textflame 1 1
+# textboxarrow 0 3
+@ラグナロク
+そして、この御旗に誓う
+世界をより良くしていくことを
+
+# textflame 1 1
+# textboxarrow 0 3
+@ラグナロク
+あなた達の造ろうとしたものより
+ずっと素晴らしい理想郷を
+生み出してみせるわ
+
+# textflame 1 1
+# textboxarrow 0 1
+@ガブリエル
+ふっ…
+あなた達は本当に愚かです
+でも、だからこそ…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ガブリエル
+愛されたのでしょうね…
+これもまた、神の恩寵ですよ
+
+;;ガブリエルが崩れて消える
+# se "SE_9169"
+# move 960030 1 1
+# scale 960030 0.5 1
+# alpha 960030 0 1
+# textwindow "close"
+# waitandnext 2
+
+# move 6101441 1 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@ラグナロク
+…………
+
+;;ティルフィングが近づく
+# se "SE_0719"
+# move 6101441 2 0.5
+# layer 6101441 4
+# mask 6101441 on
+# face 6101441 "normal"
+# alpha 6101441 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+終わりましたね
+
+# voice 1036 "ragnarok_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@ラグナロク
+ええ
+そして、新たな始まりでもあるわ
+
+# face 6101441 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+…ガブリエルは、本当にこの世界を
+管理するために今回の事件を
+起こしたのでしょうか？
+
+# voice 1036 "ragnarok_0022"
+# face 103611 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@ラグナロク
+何か気になることがあるの？
+
+# voice 610141 "tyrufing_7th_0034"
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+いえ…
+ただ、あまりにもラグナロクの復活に
+関わる事柄ばかりでしたので
+
+# move 6101441 2 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@ティルフィング
+天使達は本当に
+ロンギヌスの願いを
+叶えるため
+
+@ティルフィング
+あえて悪役を買って出た
+というのは…考えすぎでしょうか
+
+;;暗転
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# fadeout "black" 2
+# waitandnext 2
+
+;;背景：中心部：in_city
+# background "in_city"
+# alpha 103611 0 0
+# alpha 6101441 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# bgmfile "bgm290" "BgmLostRagnarokEvent" 0
+# fadein "black" 2
+# waitandnext 2
+
+# voice 550321 "tiphereth_ca_0007"
+# face 6503211 "surprise"
+# alpha 6503211 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ティファレト
+終わったようですね
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティファレト
+ミカエル…これであなたも
+満足でしょう
+
+# alpha 6503211 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;悪魔達がやってくる
+# se "SE_0719"
+# move 62000911 1 0
+# layer 62000911 1
+# alpha 62000911 1 0.3
+# move 6603911 5 0
+# layer 6603911 3
+# mask 6603911 on
+# voice 5200091 "belphegor_sea_0022"
+# face 6603911 "surprise"
+# alpha 6603911 1 0.3
+# layer 6402511 5
+# mask 6402511 on
+# face 6402511 "happy"
+# alpha 6402511 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ベルフェゴール
+あらぁ？
+こぉんなところに可愛い木偶
+見ぃつけたぁ♪
+
+# voice 660391 "asmodeus_sea_0040"
+# textflame 1 1
+# textboxarrow 0 3
+@アスモデウス
+嫌な気配を纏ったキル姫がいると
+思えば…ミカエルを宿してるのね
+
+# voice 640251 "beelzebub_sea_0005"
+# textflame 1 1
+# textboxarrow 0 2
+@ベルゼブブ
+キャキャキャ！
+高みの見物してたの？
+ベル達もだよ～
+
+# voice 5200091 "belphegor_sea_0004"
+# face 62000911 "shy"
+# textflame 1 1
+# textboxarrow 0 1
+@ベルフェゴール
+天使どもが駆逐されていって、
+とても楽しかったわぁ♪
+
+# voice 550321 "tiphereth_ca_0007"
+# alpha 62000911 0 0.3
+# alpha 6603911 0 0.3
+# alpha 6402511 0 0.3
+# face 6503211 "angry"
+# alpha 6503211 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ティファレト
+駆逐ですか…
+あなた達にはそのようにしか
+見えなかったのでしょうね
+
+# voice 5200091 "belphegor_sea_0042"
+# face 62000911 "happy"
+# alpha 62000911 1 0.3
+# face 6603911 "normal"
+# alpha 6603911 1 0.3
+# face 6402511 "surprise"
+# alpha 6402511 1 0.3
+# alpha 6503211 0 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@ベルフェゴール
+あらあらぁ…
+自分だけ何でもお見通しって
+顔してるのねぇ
+
+# voice 660391 "asmodeus_sea_0004"
+# textflame 1 1
+# textboxarrow 0 3
+@アスモデウス
+うふっ♪
+思わず嬲り殺したくなるくらい
+可愛いわ
+
+# voice 640251 "beelzebub_sea_0008"
+# face 6402511 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ベルゼブブ
+お姉ちゃん
+ベルにも分かるように話してよ～
+
+# alpha 62000911 0 0.3
+# alpha 6603911 0 0.3
+# alpha 6402511 0 0.3
+# layer 6503211 2
+# alpha 6503211 1 0.3
+# voice 550321 "tiphereth_ca_0032"
+# textflame 1 1
+# textboxarrow 0 2
+@ティファレト
+天使達の真意について…
+私の中にいるミカエルを通じ、
+察することができました
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティファレト
+ロンギヌスの願いは、
+確かに主へと届いていたのです
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティファレト
+だからこそ、天使たるガブリエルは
+その成就のために動きました
+ただし…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティファレト
+ガブリエル自身にも思うところが
+あったんです
+特にラグナロクに対して
+
+# move 6503211 2 0.5
+# move 6603911 4 0
+# layer 6603911 4
+# mask 6603911 on
+# face 6603911 "happy"
+# alpha 6603911 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@アスモデウス
+ふふん
+仇敵だものね
+
+# textflame 1 1
+# textboxarrow 0 1
+@ティファレト
+あなた達と違い、
+天使は善性の存在ですよ
+怨恨で動きはしません
+
+# textflame 1 1
+# textboxarrow 0 1
+@ティファレト
+ラグナロク達に、そして人々に、
+この世界を任せて本当に良いのか
+自ら見定めたかったんです
+
+# textflame 1 1
+# textboxarrow 0 1
+@ティファレト
+不完全な世界でも、
+確かな希望を示すことができるのなら
+自分達の役割を終えられる
+
+# textflame 1 1
+# textboxarrow 0 1
+@ティファレト
+ガブリエルもまた、
+自らのあり方に対し
+矜持を全うしたのです
+
+# alpha 6603911 0 0.3
+# move 62000911 4 0
+# layer 62000911 4
+# mask 62000911 on
+# face 62000911 "shy"
+# voice 5200091 "belphegor_sea_0007"
+# alpha 62000911 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@ベルフェゴール
+あははははははははは♪
+堅苦しいわねぇ
+肩凝ってきちゃうわぁ
+
+# textflame 1 1
+# textboxarrow 0 3
+@ベルフェゴール
+もっと好き勝手に生きれば良いのに
+これだから天使は嫌なのよぉ…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ティファレト
+あなた達には理解できないでしょう
+
+# alpha 6503211 0 0.3
+# alpha 62000911 0 0.3
+# move 6603911 2 0
+# layer 6603911 2
+# mask 6603911 off
+# voice 660391 "asmodeus_sea_0006"
+# alpha 6603911 1 0.3
+# move 6402511 4 0
+# face 6402511 "normal"
+# alpha 6402511 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@アスモデウス
+理解したくもないわね
+ま、目障りな奴らが力を強めなくて
+良かったわ
+
+# voice 640251 "beelzebub_sea_0005"
+# face 6402511 "shy"
+# textflame 1 1
+# textboxarrow 0 3
+@ベルゼブブ
+ベル達はこれからも
+好きなようにするよ！
+キャキャキャキャキャ♪
+
+# textflame 1 1
+# textboxarrow 0 3
+@ベルゼブブ
+じゃあね、お姉ちゃん！
+
+;;悪魔達が姿を消す
+# alpha 6603911 0 0.3
+# alpha 6402511 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# face 6503211 "normal"
+# voice 550321 "tiphereth_ca_0048"
+# move 6503211 3 0
+# alpha 6503211 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ティファレト
+ミカエル…
+きっといつか、世界は
+楽園へと至ります
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティファレト
+人々と、私達の歩みによって
+
+# fadeout "black" 2
+# waitandnext 2

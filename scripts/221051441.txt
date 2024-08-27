@@ -1,0 +1,388 @@
+;;-----------------------------------------
+;;イースター3_1
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm273" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;イースターアルマス
+# body 3103821
+# pos 3103821 2
+# scale 3103821 0.8 0
+# layer 3103821 3
+# alpha 3103821 0 0
+;;イースターモラベガ
+# body 3104221
+# pos 3104221 4
+# scale 3104221 0.8 0
+# layer 3104221 3
+# alpha 3104221 0 0
+;;ケイオスリオン兵
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# layer 3820001 3
+# mask 3820001 off
+# alpha 3820001 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：平原
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# alpha 3103821 1 0.5
+# face 3103821 "usual"
+# alpha 3104221 1 0.5
+# face 3104221 "sad"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# voice 310421 "morabeaga_l_0015"
+@モラベガ
+…ごめんなさい
+マスター、アルマス…
+
+# textflame 0 0
+@
+ウサギ探しの途中…
+深刻な様子のモラベガが
+二人に謝ってくる
+
+# se "SE_6502"
+# emotionbody 1000 2 3103821 10 270
+# effectpattern 1000 1 1
+# effectstart 1000
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103821 "surprise"
+# voice 1038 "almace_0022"
+@アルマス
+な、なによっ？
+いきなりどうしたの…？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310421 "morabeaga_l_0028"
+@モラベガ
+だって…
+今日はせっかくの
+楽しいイースターなのに…
+
+# textflame 1 1
+# textboxarrow 0 3
+@モラベガ
+私たちのわがままのせいで、
+二人にたくさん
+迷惑かけちゃってるから…
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+そんな…
+
+# bgmfile "bgm290" "BgmLostRagnarokEvent" 0
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103821 "happy"
+# voice 1038 "almace_0002"
+@アルマス
+泣かないで、モラベガ！
+あなたは何も悪くない
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+それに、元々は私が
+言い出したことなんだから
+
+# textflame 1 1
+# textboxarrow 0 3
+@モラベガ
+アルマスはそう言ってくれるけど
+マスターに
+こんな迷惑かけちゃダメだよ…
+
+# textflame 0 0
+@
+マスターも、
+別に迷惑だなんて思ってないよ
+とモラベガに伝える
+
+# textflame 1 1
+# textboxarrow 0 3
+@モラベガ
+ほ、ほんと…？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1038 "almace_0004"
+@アルマス
+うん、もちろんよ！
+
+# textflame 0 0
+@
+せっかくモラベガが
+用意してくれた卵を
+見てみたいし、と
+
+# textflame 0 0
+@
+マスターが言うと
+アルマスも大きく頷く
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103821 "angry"
+# voice 1038 "almace_0003"
+@アルマス
+そうね
+他の誰にも渡さないわ！
+絶対に手に入れてみせる！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104221 "shy"
+# voice 310421 "morabeaga_l_0003"
+@モラベガ
+っ…！
+うんっ…！
+
+;;演出：場所移動
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.51
+# textwindow "close"
+# waitandnext 0.5
+
+# bgmfile "bgm327" "BgmEaster001" 0
+# alpha 3103821 0 0
+# face 3103821 "surprise"
+# alpha 3104221 0 0
+# face 3104221 "angry"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_6500"
+# emotionbody 1001 1 3104221 10 310
+# effectpattern 1001 1 0
+# effectstart 1001
+# alpha 3103821 1 0.5
+# alpha 3104221 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@モラベガ
+…二人とも！
+ウサギさん、いたよ…！
+
+# textflame 1 1
+# textboxarrow 0 3
+@モラベガ
+ほら、あそこ！
+休んでるみたい…！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103821 "angry"
+# voice 1038 "almace_0028"
+@アルマス
+卵も乗ったままね…
+恐ろしいバランス感覚だわ
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1038 "almace_0001"
+@アルマス
+どうする、マスター？
+下手に飛び出したら、
+また逃げられちゃうかも…
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1038 "almace_0032"
+@アルマス
+…ええ、そうね
+ここは慎重に、
+少しずつ近づいて――
+
+# alpha 3103821 0 0.5
+# alpha 3104221 0 0.5
+;;ＳＥ：ガサガサッ！（ケイオスリオン兵の罠が作動する音）
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# se "SE_0786"
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_4201"
+# fadein "white" 0.5
+# waitandnext 0.8
+
+# alpha 3103821 1 0.5
+# alpha 3104221 1 0.5
+# face 3104221 "surprise"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 1038 "almace_battle_0005"
+@アルマス
+っ…！？
+
+# textflame 1 1
+# textboxarrow 0 3
+@モラベガ
+あっ…ウ、ウサギさんが…！！
+
+# textflame 0 0
+@
+突然、謎の罠が作動し…
+ウサギは卵ごと
+網で捕らえられてしまった
+
+# alpha 3103821 0 0.5
+# alpha 3104221 0 0.5
+# alpha 3820001 1 0.5
+;;ＳＥ：ガサガサ…（ケイオスリオン兵が出てくる音）
+# se "SE_5602"
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+@ケイオスリオン兵
+ふう…手こずらせやがって
+やっと捕まえたぞ！
+
+# alpha 3103821 1 0.5
+# alpha 3104221 1 0.5
+# alpha 3820001 0 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+あれは…！
+
+# alpha 3103821 0 0.5
+# alpha 3104221 0 0.5
+# alpha 3820001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ケイオスリオン兵
+くくく…見事な輝きだ！
+さすがは純金で
+できているだけのことはある！
+
+# textflame 1 1
+# textboxarrow 0 2
+@ケイオスリオン兵
+さあ、早いところ
+こいつを持ち帰るぞ！
+
+;;ＳＥ：ガサガサッ！（網の中でウサギが暴れる音）
+# shake 0 0.5
+# se "SE_0648"
+# se "SE_0683"
+# sedelay "SE_0683" 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 2
+@ケイオスリオン兵
+くっ…！
+暴れるな、このっ…
+ウサギごときがっ！
+
+;;ＳＥ：ドゴッ！（ウサギを叩く音）
+# fadein "red" 0.5
+# se "SE_4602"
+
+# alpha 3103821 1 0.5
+# alpha 3104221 1 0.5
+# alpha 3820001 0 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104221 "sad"
+# voice 310421 "morabeaga_l_0037"
+@モラベガ
+あっ…！
+ひ、ひどい…！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310421 "morabeaga_l_0018"
+@モラベガ
+どうしようっ、
+早く助けに行かないと――
+
+;;ＳＥ：タッタッタッ！（アルマスが飛び出す音）
+# alpha 3103821 0 0.5
+# se "SE_5575"
+# bgmfile "bgm264_265" "BgmLostRagnarokBattle001" 0
+# waitandnext 0.8
+
+# textflame 0 0
+@
+そう思ったモラベガの視界に――
+勢いよく飛び出した
+アルマスの姿が映った
+
+# alpha 3104221 0 0.5
+# mask 3103821 off
+# alpha 3103821 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1038 "almace_0010"
+@アルマス
+やめなさいっ！
+今すぐその子を解放して！
+
+# alpha 3103821 0 0.5
+# move 3104221 3 0
+# mask 3104221 off
+# alpha 3104221 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3104221 "surprise"
+# voice 310421 "morabeaga_l_0022"
+@モラベガ
+…っ！
+アルマスっ…！！
+
+# alpha 3104221 0 0.5
+# move 3103821 2 0
+# mask 3103821 on
+# alpha 3103821 1 0.5
+# move 3820001 4 0
+# alpha 3820001 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@ケイオスリオン兵
+お、お前は…！！
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+弱いものを傷つける
+あなたたちのやり方…
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+絶・許さない！
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 3103821 0 0
+# alpha 3820001 0 0
+# background "bg_black"
+# waitandnext 0.2

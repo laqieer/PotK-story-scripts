@@ -1,0 +1,596 @@
+;;-----------------------------------------
+;;■□■新・海上編9月中旬シナリオ■□■
+;;《第六回》
+;;【第4幕】献身のエンシェント 戦闘前
+;;スクリプト最後の背景：ビーチ（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "sea_beach_day"
+# bgm "bgm031" 0
+;;------------------------------------------
+;;グラーシーザ
+# body 2302611
+# pos 2302611 3
+# scale 2302611 0.8 0
+# layer 2302611 2
+# alpha 2302611 0 0
+# mask 2302611 on
+# face 2302611 "normal"
+;;ラグナロク
+# body 2103611
+# pos 2103611 3
+# scale 2103611 0.8 0
+# layer 2103611 2
+# alpha 2103611 0 0
+# mask 2103611 on
+# face 2103611 "normal"
+;;水着ミネルヴァ
+# body 2302511
+# pos 2302511 3
+# scale 2302511 0.8 0
+# layer 2302511 2
+# mask 2302511 on
+# alpha 2302511 0 0
+# face 2302511 "normal"
+;;フライシュッツ（水着）
+# body 2502711
+# pos 2502711 3
+# scale 2502711 0.8 0
+# layer 2502711 2
+# mask 2502711 on
+# alpha 2502711 0 0
+# face 2502711 "normal"
+;;水着ダモクレス
+# body 2103511
+# pos 2103511 3
+# scale 2103511 0.8 0
+# layer 2103511 2
+# alpha 2103511 0 0
+# mask 2103511 on
+# face 2103511 "normal"
+;;ネス
+# body 2602011
+# pos 2602011 3
+# scale 2602011 0.8 0
+# layer 2602011 2
+# alpha 2602011 0 0
+# mask 2602011 on
+# face 2602011 "normal"
+;;エルキュール
+# body 2202511
+# pos 2202511 3
+# scale 2202511 0.8 0
+# layer 2202511 2
+# alpha 2202511 0 0
+# mask 2202511 on
+# face 2202511 "normal"
+;;水着グリード（ティルフィング）
+# body 2101421
+# pos 2101421 3
+# scale 2101421 0.8 0
+# layer 2101421 3
+# alpha 2101421 0 0
+# mask 2101421 on
+# face 2101421 "normal"
+;;ラース（マサムネ）
+# body 2100121
+# pos 2100121 3
+# scale 2100121 0.8 0
+# layer 2100121 2
+# alpha 2100121 0 0
+# mask 2100121 on
+# face 2100121 "normal"
+;;プライド（フライクーゲル）
+# body 2500221
+# pos 2500221 3
+# scale 2500221 0.8 0
+# layer 2500221 2
+# alpha 2500221 0 0
+# mask 2500221 on
+# face 2500221 "normal"
+;;スイハ
+# body 2401711
+# pos 2401711 3
+# scale 2401711 0.8 0
+# layer 2401711 2
+# alpha 2401711 0 0
+# mask 2401711 on
+# face 2401711 "normal"
+;;--------------------------------------
+;;//背景：ビーチ（昼）
+# face 2103611 "angry"
+# alpha 2103611 1 0
+# mask 2103611 off
+# textflame 0 0
+;;ナレーション
+@
+マスターがブラックキラーズの説得に
+成功した頃、ラグナロクは一人、
+ビーチで異族と戦っていた
+
+# se "SE_4830"
+# waitandnext 0.5
+
+# textwindow "close"
+# brightness 2103611 0.5 0.2
+# se "SE_0669"
+# serif 1
+@異族
+グギャア！
+
+;;//演出：異族倒れる
+# serif 1
+# textwindow "close"
+# se "SE_3001"
+# waitandnext 0.5
+
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# face 2103611 "sad"
+# brightness 2103611 1 0.2
+# voice 1036 "ragnarok_0037"
+@ラグナロク
+さっきよりも、異族の数が多い…
+歪みがさらに広がっているのね
+
+@ラグナロク
+この勢いで異族が増えていけば
+私たちだけでは対処できなくなる…
+急がないと…！
+
+;;//演出：場面転換
+;;//背景：プール（昼）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# background "sea_resort_day"
+# alpha 2103611 0 0
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm005" 0
+# textflame 0 0
+# textwindow "normal"
+;;ナレーション
+@
+一方、プールには
+ラグナロク以外のエンシェントが
+集まっていた
+
+@
+マスターを追ってプールに来たが、
+すでに移動した後だったため、
+一時休息を取ることにしたのだ
+
+# voice 5027 "freischotz_0022"
+# face 2502711 "sad"
+# alpha 2502711 1 0.5
+# mask 2502711 off
+# textflame 1 1
+@フライシュッツ
+あれ？
+ラグナロクちゃんは？
+
+# voice 6020 "ness_0028"
+# alpha 2502711 0 0.5
+# face 2602011 "usual"
+# alpha 2602011 1 0.5
+# mask 2602011 off
+@ネス
+さきほどまでエルキュールと
+一緒だったはずですが…？
+
+# voice 1035 "damocles_0002"
+# alpha 2602011 0 0.5
+# face 2103511 "sad"
+# alpha 2103511 1 0.5
+# mask 2103511 off
+@ダモクレス
+あれ、エルキュールじゃない？
+
+# alpha 2103511 0 0.5
+# textflame 0 0
+@
+ミネルヴァに肩を支えられながら
+エルキュールがふらふらと歩いてくる
+
+# voice 4017 "suiha_0022"
+# move 2302611 2 0
+# alpha 2302611 1 0.5
+# mask 2302611 on
+# face 2302611 "surprise"
+# move 2401711 4 0
+# face 2401711 "sad"
+# alpha 2401711 1 0.5
+# mask 2401711 on
+# textflame 1 1
+@スイハ
+…様子がおかしいですね？
+
+# voice 3026 "grayside_0015"
+@グラーシーザ
+なんだか、むなさわぎがするぞ…
+きゆうであればいいのだが…
+
+# alpha 2302611 0 0.5
+# alpha 2401711 0 0.5
+# textflame 0 0
+@
+エルキュールは
+エンシェント達の顔を見ると、
+小さな声で謝った
+
+# voice 2025 "hercule_0031"
+# face 2202511 "sad"
+# alpha 2202511 1 0.5
+# mask 2202511 off
+# textflame 1 1
+@エルキュール
+…ごめんなさい、
+ラグナロクを
+止められませんでした
+
+# voice 6020 "ness_0022"
+# alpha 2202511 0 0.5
+# face 2602011 "sad"
+# alpha 2602011 1 0.5
+# mask 2602011 off
+@ネス
+まさか…
+ラグナロクは一人で
+行ってしまったのですか？
+
+# textflame 0 0
+@
+エルキュールは、
+小さくうなずく
+
+# alpha 2602011 0 0.5
+# alpha 2502711 1 0.5
+# face 2502711 "angry"
+# textflame 1 1
+@フライシュッツ
+すぐに追いかけないと！
+はやく行こうよ！
+
+# textflame 0 0
+@
+フライシュッツの言葉に、
+エルキュールは悲しげに首を振った
+
+# voice 2025 "hercule_0015"
+# alpha 2502711 0 0.5
+# alpha 2202511 1 0.5
+# mask 2202511 off
+# face 2202511 "sad"
+# textflame 1 1
+@エルキュール
+私は、ラグナロクの説得に
+失敗したんです…
+彼女を失いたくはないのに…
+
+@エルキュール
+だからといって、
+マスターを犠牲にする方法も
+選ぶことはできませんでした…
+
+@エルキュール
+答えを持たない私に、
+ラグナロクを追いかける
+資格はありません…！
+
+# se "SE_5282"
+# alpha 2202511 0 0.5
+# textflame 0 0
+@
+そう言ってエルキュールは
+その場にへたり込んでしまう
+
+# bgm "stop"
+# alpha 2302511 1 0.5
+# face 2302511 "angry"
+# mask 2302511 off
+# textflame 1 1
+@ミネルヴァ
+エルキュール…
+その答えは、まだ誰も持っていません
+
+# bgm "bgm035" 0
+@ミネルヴァ
+でも、ここで諦めたら、
+ラグナロクを救う道は
+なくなるんです
+
+@ミネルヴァ
+きっと私にだって、
+彼女を追う資格はありません…
+でも、私はラグナロクを追います！
+
+# alpha 2302511 0 0.5
+# face 2202511 "sad"
+# alpha 2202511 1 0.5
+# mask 2202511 off
+@エルキュール
+ミネルヴァ…
+
+# alpha 2202511 0 0.5
+# alpha 2302511 1 0.5
+# face 2302511 "angry"
+# mask 2302511 off
+@ミネルヴァ
+グラーシーザが言っていました、
+落ち込むのは、後だって！
+今は、できることをしましょう！
+
+# voice 2025 "hercule_0003"
+# alpha 2302511 0 0.5
+# face 2202511 "usual"
+# alpha 2202511 1 0.5
+# mask 2202511 off
+@エルキュール
+…はい！
+
+# alpha 2202511 0 0.5
+# textflame 0 0
+@
+エンシェント達がラグナロクを
+追いかけようとした時―
+
+@
+ブラックキラーズとマスターが
+プールに降り立つ
+
+# voice 3025 "minerva_0037"
+# face 2302511 "angry"
+# alpha 2302511 1 0.5
+# mask 2302511 off
+# textflame 1 1
+@ミネルヴァ
+マスター！
+ラグナロクが…！
+
+# textflame 0 0
+@
+その切迫した表情で、
+ラグナロクがいない理由を、
+マスター達も察することができた
+
+# voice 10147 "tyrufing_k_0013"
+# alpha 2302511 0 0.5
+# face 2101421 "usual"
+# alpha 2101421 1 0.5
+# mask 2101421 on
+# textflame 1 1
+@グリード
+時間がないようですので、
+簡潔にお伝えします
+
+@グリード
+グラーシーザ、
+私達はあなたの申し出を受け入れます
+共闘して問題を解決しましょう
+
+# voice 6020 "ness_0002"
+# move 2101421 4 0.5
+# move 2602011 2 0
+# face 2602011 "usual"
+# alpha 2602011 1 0.5
+# mask 2602011 on
+@ネス
+その申し出はとても嬉しいです…
+でも、なぜですか？
+
+@グリード
+マスターが、そう望むからです
+頼むと、そう言われましたから…
+
+# voice 3026 "grayside_0036"
+# alpha 2602011 0 0.5
+# face 2302611 "usual"
+# alpha 2302611 1 0.5
+# mask 2302611 on
+@グラーシーザ
+うむ、それはちょうじょう！
+よろしくたのむ！
+
+# textflame 0 0
+@
+グラーシーザの出した手を
+グリードが握り、
+二人は固い握手を交わす
+
+# voice 5027 "freischotz_0005"
+# alpha 2302611 0 0.5
+# alpha 2101421 0 0.5
+# face 2502711 "happy"
+# alpha 2502711 1 0.5
+# mask 2502711 off
+# textflame 1 1
+@フライシュッツ
+みんなで、仲良くできるんだね！
+すごいよ、マスターくん！
+
+# textflame 0 0
+@
+マスターも嬉しくなり、
+フライシュッツと一緒になって喜ぶ
+
+# se "SE_9131"
+;;（可能であれば）
+;;//演出：白フラッシュ的なもの
+;;（バイブスでつながった感じ）
+# fadeout "white" 0.4
+# textwindow "close"
+# waitandnext 0.6
+
+# alpha 2502711 0 0
+# move 2302611 3 0
+# alpha 2302611 1 0
+# mask 2302611 off
+# face 2302611 "surprise"
+# waitandnext 0.1
+
+# fadein "white" 0.4
+# waitandnext 0.6
+
+# textflame 1 1
+# textwindow "normal"
+# bgmfile "bgm311_312" "BgmSeaEventBattle002" 0
+# voice 3026 "grayside_0022"
+@グラーシーザ
+これは…力がわいてくる！？
+
+# alpha 2302611 0 0.5
+# face 2302511 "sad"
+# alpha 2302511 1 0.5
+# mask 2302511 off
+@ミネルヴァ
+これが、バイブスの共鳴…？
+
+# voice 10147 "tyrufing_k_0023"
+# alpha 2302511 0 0.5
+# move 2101421 3 0
+# alpha 2101421 1 0.5
+# mask 2101421 off
+# face 2101421 "sad"
+@グリード
+さっきよりも、
+強く満たされていく…？
+
+# alpha 2101421 0 0.5
+# textflame 0 0
+@
+皆がマスターとの強いつながりと、
+これまでにない力の増幅を感じていた
+
+# voice 2025 "hercule_0001"
+# face 2202511 "usual"
+# alpha 2202511 1 0.5
+# mask 2202511 off
+# textflame 1 1
+@エルキュール
+マスター！
+ラグナロクを追いかけましょう！
+私は、希望が必ずあると信じます！
+
+# alpha 2202511 0 0.5
+# textflame 0 0
+@
+マスターはエルキュールにうなずくと
+全員でビーチを目指して出発した
+
+;;//演出：場面転換
+;;//背景：ビーチ（昼）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# background "sea_beach_day"
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_0618"
+# serif 1
+@異族
+グギャギャ！
+
+# voice 6020 "ness_0024"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# move 2602011 3 0
+# alpha 2602011 1 0.5
+# mask 2602011 off
+# face 2602011 "sad"
+# textflame 1 1
+@ネス
+それにしても、異族の数が
+異常に多いですね…
+
+# alpha 2602011 0 0.5
+# textflame 0 0
+@
+プールからビーチに移動する間にも、
+ひっきりなしに異族が襲ってくる
+
+# voice 10016 "masamune_k_0007"
+# face 2100121 "angry"
+# alpha 2100121 1 0.5
+# mask 2100121 off
+# textflame 1 1
+@ラース
+しかし、この程度の異族、
+拙者達の敵ではない！
+
+# textflame 0 0
+@
+大多数の異族を相手にしても、
+力が満ち溢れるキル姫達に
+少しも疲れた様子はなかった
+
+# se "SE_0617"
+# textwindow "close"
+# alpha 2100121 0 0.5
+# serif 1
+@異族
+グアアアア！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# face 2302611 "angry"
+# alpha 2302611 1 0.5
+# mask 2302611 on
+# textflame 1 1
+# voice 3026 "grayside_battle_0004"
+@グラーシーザ
+むっ…？
+あっちに強そうなやつがいるな！
+あれは、あたしにまかせろ！
+
+# textflame 0 0
+@
+異族の群れに向かう
+グラーシーザの後を、
+プライドが追いかけていく
+
+# voice 250022 "furaikugeru_k_0003"
+# move 2302611 2 0.5
+# move 2500221 4 0
+# face 2500221 "usual"
+# alpha 2500221 1 0.5
+# mask 2500221 on
+# textflame 1 1
+@プライド
+へ〜い！
+一人でいい格好させないデス！
+わたしも楽しませてよ！
+
+# voice 3026 "grayside_0034"
+# face 2302611 "surprise"
+@グラーシーザ
+おまえ、さっきの…
+どうして、あたしについてきた？
+
+# face 2500221 "angry"
+@プライド
+さっきの戦いは超ベァッドね！
+
+@プライド
+わたしの銃弾が
+どれだけのグリィフを巻き起こすか、
+見せてあげるんだから！
+
+# voice 3026 "grayside_0006"
+# face 2302611 "smile"
+@グラーシーザ
+ははは！
+それはちょうじょう！

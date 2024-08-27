@@ -1,0 +1,906 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第20章 章タイトル：ワールドサルベイション
+;;第1話―１　タイトル：エピローグ
+;;1_0
+;;スクリプト最後の背景：黒
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm410_6_block" "BgmIntegralNoahBattle001" 0
+;;-----------------------------------------
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 4
+# alpha 0 0 0
+# mask 0 off
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 2
+# alpha 5101431 0 0
+# mask 5101431 off
+;;異族化アルマス
+# body 5103831
+# pos 5103831 3
+# scale 5103831 0.8 0
+# layer 5103831 2
+# alpha 5103831 0 0
+# mask 5103831 off
+;;ヴァリン
+# body 18
+# pos 18 3
+# scale 18 0.8 0
+# layer 18 2
+# alpha 18 0 0
+# mask 18 off
+;;レーヴァテイン・擬彩
+# body 5100231
+# pos 5100231 3
+# scale 5100231 0.8 0
+# layer 5100231 2
+# alpha 5100231 0 0
+# mask 5100231 off
+;;ゼロ
+# body 23
+# pos 23 3
+# scale 23 0.8 0
+# layer 23 2
+# alpha 23 0 0
+# mask 23 off
+;;ティルフィング（天上）
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 3
+# alpha 24 0 0
+# mask 24 off
+;;-----------------------------------------
+;;インノア編プロローグシナリオカット一枚絵
+# imageset 0 "st191001_1"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;インノア編１７章シナリオカット一枚絵
+# imageset 3 "integral_17"
+# imagelayer 3 3
+# imagealpha 3 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景の暗転
+# imageset 2 "bg_black"
+# imagelayer 2 3
+# imagealpha 2 0 0
+;;-----------------------------------------
+;;---------------------------------------------
+;;■ティルフィング
+;;立ち絵なし
+;;■アルマス（擬彩）
+;;立ち絵：アルマス・擬彩
+;;■ティルフィング（擬彩）
+;;立ち絵：ティルフィング・擬彩
+;;■デュリン
+;;立ち絵：デュリン
+;;■ティルフィング（天上）
+;;立ち絵：剣_15_ティルフィング_01  
+;;■ゼロ
+;;立ち絵：ゼロ
+;;■ラグナロク（擬装）
+;;立ち絵：ラグナロク・擬装・ガンナー
+;;■アルマス（誓約）
+;;立ち絵：アルマス・誓約・ティターニア
+;;■レーヴァテイン（擬彩）
+;;立ち絵：レーヴァテイン・擬彩
+;;■？？？
+;;立ち絵なし
+;;
+;;()内表記はスクリプト作成時削除でお願いします
+;;
+;;/天上編キャラは下記のシートのIDの立ち絵となります
+;;https://docs.google.com/spreadsheets/d/1zEwq62aWPmSo51H705wPhrUrk8OoHBqpKsDTMhZmMLk/edit?pli=1#gid=56
+;;
+;;--------------------------------------------
+;;# bgmfile "bgm410_5" "BgmIntegralNoahBattle001" 0
+;;# se "bgm410_5_filter_3"
+;;# bgmfile "bgm410_6" "BgmIntegralNoahBattle001" 0
+;;以下、話者名「ティルフィング」は語り手の原点ティルフィングの想定です。
+;;彼女視点での回想のため、回想内のティルフィングは登場するものの、
+;;語り手である原点「ティルフィング」の立ち絵は表示しない形となります。
+;;背景：インノア編プロローグシナリオカット
+# textwindow "close"
+# waitandnext 0.2
+
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.2
+
+;;アルマス（擬彩）
+# voice 510383 "almace_iz_0001"
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "normal"
+@アルマス
+ここから始まるのね
+
+;;ティルフィング（擬彩）
+# voice 510143 "tyrufing_iz_0003"
+# textboxarrow 0 0
+@ティルフィング
+ええ
+完全なる透過の世界に綻びを
+
+;;背景：反転ユグドラシルのある天上世界遠景（インテグラルノア編キービジュアル）
+;;ここから語り手となるティルフィングの立ち絵なし
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# background "mirror_elysium"
+# imagealpha 0 0 0
+# move 5103831 2 0
+# face 5103831 "normal"
+# alpha 5103831 1 0
+# mask 5103831 on
+# move 5101431 4 0
+# face 5101431 "normal"
+# alpha 5101431 1 0
+# mask 5101431 on
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;アルマス（擬彩）とティルフィング（擬彩）を表示
+;;アルマス（擬彩）
+# textboxarrow 0 1
+# textflame 1 1
+# textwindow "normal"
+@アルマス
+私が行くわ
+あのくらいなら一人で剪定できる
+
+;;ティルフィング（擬彩）
+# textboxarrow 0 3
+@ティルフィング
+では、私はここで待っています
+全ては純潔なる世界のため
+
+;;アルマス（擬彩）が立ち去る
+# textwindow "close"
+# alpha 5103831 0 0.5
+# waitandnext 1
+
+;;ティルフィング（擬彩）が消える
+# alpha 5101431 0 0.5
+# waitandnext 0.5
+
+;;ティルフィング（独白）
+# textboxarrow 0 0
+# textwindow "normal"
+@ティルフィング
+あの頃の私達は、永遠の理想郷を
+創ろうと必死でした…
+
+;;ティルフィング（独白）
+# textboxarrow 0 0
+@ティルフィング
+マスターもその身を賭して
+下さって…
+
+# textboxarrow 0 0
+@ティルフィング
+マスター…
+
+;;背景：花畑：flower garden
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "flower_garden"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 0
+# textwindow "normal"
+@ティルフィング
+初めてお会いしたのは、
+冥花繁殖帯でしたよね…
+
+# textboxarrow 0 0
+@ティルフィング
+突然のことに、デュリンも
+ビックリして…
+
+;;立ち絵表示：デュリン
+# voice 9999 "durin_0010"
+# move 0 3 0
+# face 0 "normal"
+# alpha 0 1 0.5
+# mask 0 off
+# textboxarrow 0 2
+@デュリン
+あああ、なんてこと！？
+
+# textboxarrow 0 2
+@デュリン
+アタシがチョコを
+買いに行ってる間に、
+どんな劇的な展開があったのよ！
+
+;;デュリンが消える
+# textwindow "close"
+# alpha 0 0 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 0
+# textwindow "normal"
+@ティルフィング
+その後、私がついデュリンのことを
+「妖精」と言ってしまって…
+
+# textboxarrow 0 0
+@ティルフィング
+チョコで機嫌を…
+デュリン…
+
+# voice 510143 "tyrufing_iz_0015"
+# textboxarrow 0 0
+@ティルフィング
+もう一度、会いたかった
+会って、話を…
+
+;;インテグラルサイド1-4　の回想
+;;背景：街中：town
+;;立ち絵表示：デュリン、天上編ティルフィング
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "town"
+# move 24 3 0
+# face 24 "sad"
+# alpha 24 1 0
+# mask 24 on
+# move 0 4 0
+# face 0 "worry"
+# alpha 0 1 0
+# mask 0 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;ティルフィング（天上）
+# voice 1014 "tyrufing_0043"
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+また、すぐに会えるよね…？
+
+# face 0 "normal"
+# textboxarrow 0 3
+@デュリン
+…当然でしょ！
+次はお母さんと一緒に会いに
+来なさいっ
+
+;;ティルフィング（天上）
+# face 24 "sad2"
+# textboxarrow 0 2
+@ティルフィング
+うん…
+絶対…
+約束よ
+
+;;デュリンと天上編ティルフィングが消える
+# textwindow "close"
+# alpha 24 0 0.5
+# alpha 0 0 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 0
+# textwindow "normal"
+@ティルフィング
+約束…
+私は守れなかったけれど、
+デュリンは…
+
+# textboxarrow 0 0
+@ティルフィング
+ゼロ達を助けるため、
+ディスラプターを作って残して
+くれた…
+
+# textboxarrow 0 0
+@ティルフィング
+地上で一緒に戦ったキラーメイルの
+ために…
+
+;;地上編地上編ストーリー　七魔王開始前の回想
+;;背景：地上編ユグドラシル：underwild（ロスラグ２章流用のもの）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "underwild"
+# move 23 1 0
+# face 23 "angry_2"
+# alpha 23 1 0
+# mask 23 on
+# move 24 3 0
+# face 24 "sad"
+# alpha 24 1 0
+# mask 24 on
+# move 18 5 0
+# face 18 "surprise"
+# alpha 18 1 0
+# mask 18 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;立ち絵表示：ゼロ、ヴァリン、天上編ティルフィング
+# voice 11002 "laevateinm_0015"
+# textboxarrow 0 1
+# textwindow "normal"
+@ゼロ
+ティルフィング…！
+絶対に死なせねえぞっ
+
+;;ゼロ、ヴァリン、天上編ティルフィング　立ち絵削除
+# textwindow "close"
+# alpha 23 0 0.5
+# alpha 24 0 0.5
+# alpha 18 0 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 0
+# textwindow "normal"
+@ティルフィング
+ゼロ…
+アナタとも落ち着いてお話したかった
+ですね
+
+# textboxarrow 0 0
+@ティルフィング
+せめてレーヴァテイン…アマネと
+穏やかな日々を…
+
+;;背景：黒
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 0
+# textwindow "normal"
+@ティルフィング
+あれから、どのくらいの時が過ぎたの
+でしょう
+
+# textboxarrow 0 0
+@ティルフィング
+計るべき時すら失われた
+「無」の中を、私は漂い続けています
+
+# textboxarrow 0 0
+@ティルフィング
+皆との、思い出を胸に…
+
+;;背景：インノア編１７章シナリオカット
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# imagealpha 3 1 0
+# imagepos 3 0 0
+# waitandnext 0.2
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+;;ラグナロク（擬装）
+# textboxarrow 0 0
+# textwindow "normal"
+@ラグナロク
+温かなものが胸に…
+
+;;ティルフィング（擬彩）
+# textboxarrow 0 0
+@ティルフィング
+溢れてきます
+これはきっと…
+
+;;アルマス（誓約）
+# textboxarrow 0 0
+@アルマス
+私達の絆の形…
+新しい力…
+
+;;シナリオカット消える
+;;背景：白
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1.2
+
+# background "bg_white"
+# imagealpha 3 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 0
+# textwindow "normal"
+@ティルフィング
+戦いの中で…私達は絆を繋ぐことが
+できました
+
+# textboxarrow 0 0
+@ティルフィング
+初めは敵対していたラグナロクとも
+手を取り合える日が来るなんて…
+
+# textboxarrow 0 0
+@ティルフィング
+思ってもいませんでした
+ねえ、マスター
+
+;;背景：黒
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 0
+# textwindow "normal"
+@ティルフィング
+…………
+
+# textboxarrow 0 0
+@ティルフィング
+…そうでした
+もう…私一人でした…
+
+# textboxarrow 0 0
+@ティルフィング
+もう誰も…
+マスター…マスター…！！
+
+# textboxarrow 0 0
+@ティルフィング
+思い出が…皆さんとの思い出が…
+遠ざかっていくんです…！
+
+# textboxarrow 0 0
+@ティルフィング
+せめて、もう一度声を…
+あの頃の思い出を…一緒に話して…
+
+# textboxarrow 0 0
+@ティルフィング
+いえ…叶わないことだと
+分かっています…
+
+# textboxarrow 0 0
+@ティルフィング
+それに…私自身…私のことが…
+
+;;背景：泉 15章1-9　の回想
+;;立ち絵表示：擬彩レーヴァテイン（顔に影を入れる）
+;;この時点の原点ティルフィングは記憶が曖昧のため、記憶を失いつつあります。
+;;そのため、自分の顔も相手の顔もよくわからない形にしていただけますと幸いです
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "fountain"
+# move 5100231 3 0
+# face 5100231 "sad"
+# alpha 5100231 1 0
+# mask 5100231 off
+# brightness 5100231 0.2 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@レーヴァテイン
+―――…もっと私達に甘えてくれて
+良かったのに…
+
+# face 5100231 "happy"
+# textboxarrow 0 2
+@レーヴァテイン
+あのとき言ってくれたよね…
+私達…家族なんだよ
+
+# textboxarrow 0 2
+@レーヴァテイン
+兄さんがいなくなって…
+独りになった私に…―――達が
+手を差し伸べてくれた…
+
+# face 5100231 "normal"
+# textboxarrow 0 2
+@レーヴァテイン
+だから私は…
+ねえ、―――
+
+;;レーヴァテインの立ち絵が消える
+# textwindow "close"
+# alpha 5100231 0 0.5
+# waitandnext 0.5
+
+;;背景：黒
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;# bgm "stop"
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# textboxarrow 0 0
+# textwindow "normal"
+@？？？
+―――――――が命がけで話して
+くれている…それなのに…
+
+# textboxarrow 0 0
+@？？？
+大切な思い出が遠ざかっていく…
+私は…私の名前すら…
+
+# textboxarrow 0 0
+@？？？
+思い出せなくなって…
+
+# textboxarrow 0 0
+@？？？
+確かに感じるのは、手にした方舟と
+胸にしまった世界樹の種だけ…
+
+# textboxarrow 0 0
+@？？？
+消える…
+消える…
+消える…
+
+# textboxarrow 0 0
+@？？？
+私という存在が消えて、
+全ては忘却の彼方に…
+「無」に私自身も溶け込んで…
+
+# textboxarrow 0 0
+@？？？
+…………イヤッ！
+
+# textboxarrow 0 0
+@？？？
+イヤよ…
+私は消えるわけにはいかないっ
+約束を果たすため…
+
+# textboxarrow 0 0
+@？？？
+この方舟を…新たな世界に送り届ける
+ために…
+私は…！
+
+# textboxarrow 0 0
+@？？？
+…もう、誰との約束だったのかも
+思い出せない
+この方舟が何なのかも
+
+# textboxarrow 0 0
+@？？？
+それでも、この感触だけが…
+私の意思を繋ぎとめてくれている
+
+# textboxarrow 0 0
+@？？？
+忘れてはいけない…
+たとえ、私が忘れられたとしても
+
+# textboxarrow 0 0
+@？？？
+私は…新たな世界に…
+
+# textboxarrow 0 0
+@？？？
+…………
+
+# textboxarrow 0 0
+@？？？
+…………
+
+;;暗闇に光が生まれる
+;;# bgmfile "bgm410_6" "BgmIntegralNoahBattle001" 0
+;;# bgmfile "bgm410_6_block" "BgmIntegralNoahBattle001" 0
+# bgmfile "bgm410_6_block" "BgmIntegralNoahBattle001" 7
+# effectbody 1000 51 0 0 0
+# effectstart 1000
+# fadeout "white" 1
+# waitandnext 1
+
+# envbody 1001 13 0
+# effectstart 1001
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 0
+@？？？
+…………？
+
+# textboxarrow 0 0
+@？？？
+胸が温かい…
+世界樹の種が、仄かに光っているの
+
+# textboxarrow 0 0
+@？？？
+…近いのね
+新たな始まりの地が
+
+# textboxarrow 0 0
+@？？？
+ここ…
+
+# textboxarrow 0 0
+@？？？
+何もない世界に、とても小さな渦が
+一つ
+この中心に世界樹の種を…
+
+# textboxarrow 0 0
+@？？？
+すでに体という概念がなくなって
+久しいけれど、種を植えることは
+できる
+
+# textboxarrow 0 0
+@？？？
+どうか、大きく育って下さい
+新たな世界樹よ
+
+# fadein "white" 0.5
+# effectskip 1001
+# waitandnext 0.5
+
+# textboxarrow 0 0
+@？？？
+種は渦の中心に吸い込まれました
+
+# textboxarrow 0 0
+@？？？
+私はその場に留まり、
+種が芽吹くのをじっと待ちました
+
+# textboxarrow 0 0
+@？？？
+しばらく後、種は芽吹き、小さな
+双葉が顔を出しました
+
+# textboxarrow 0 0
+@？？？
+その姿を見たとき、言いようのない
+喜びが胸を満たしました
+
+# textboxarrow 0 0
+@？？？
+双葉は少しずつ成長していきます
+
+# textboxarrow 0 0
+@？？？
+背を伸ばし、若木となり、
+枝葉を伸ばしていきました
+
+# textboxarrow 0 0
+@？？？
+力強く伸び上がり、やがてたくさんの
+葉を生い茂らせた大樹となったのです
+ 
+;;背景：インテグラルノア編地上ユグドラシル（コマンドマークなし）
+;;# se "bgm410_6_filter_off"
+;;背景を徐々に出すなどなにか間がほしいです
+;;画面フラッシュまで各行にwaitいれてゆっくり読ませるとかでもいいです
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_yggdrasill_up"
+# waitandnext 0.2
+
+# fadein "black" 4
+# waitandnext 4
+
+#setnextbgmblock 1
+# textwindow "normal"
+# textboxarrow 0 0
+@？？？
+世界樹ユグドラシル…
+大樹を中心に、世界が広がって
+いきます
+
+# waitandnext 0.5
+
+# textboxarrow 0 0
+@？？？
+私はその根元に落ち着き、
+生まれたての世界を眺め続けました
+
+# waitandnext 0.5
+
+# textboxarrow 0 0
+@？？？
+産声を上げたばかりの世界は荒々しく
+時に暴れ、時に泣きました
+
+# waitandnext 0.5
+
+# textboxarrow 0 0
+@？？？
+そのたびに世界は変化し、
+より大きく広がっていったんです
+
+# waitandnext 0.5
+
+# textboxarrow 0 0
+@？？？
+やがて、世界は一定の秩序をもって
+落ち着きました
+
+# waitandnext 0.5
+
+# textboxarrow 0 0
+@？？？
+全ての生命を受け止める新たな器が、
+私の目の前に広がっています…
+
+# waitandnext 0.5
+
+# voice 510143 "tyrufing_iz_0004"
+# textboxarrow 0 0
+@？？？
+ありがとう、ユグドラシル
+素晴らしい世界を生み出してくれて
+
+# waitandnext 0.5
+
+# textboxarrow 0 0
+@？？？
+これが私の、最後の役目
+遙か遠い昔に交わした約束…
+
+# waitandnext 0.5
+
+# textboxarrow 0 0
+@？？？
+この方舟を新世界へ！
+
+;;画面フラッシュ
+;;# bgm "stop"
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# background "plain"
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;以下、背景を切り替えて世界が生まれたことを演出
+;;
+;;背景：平原：plain
+;;背景：森：forest
+;;背景：花畑：flower garden
+# waitandnext 1
+
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "forest"
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# waitandnext 1
+
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "flower_garden"
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# waitandnext 1
+
+;;背景：インテグラルノア編地上ユグドラシル（コマンドマークなし）
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 6
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_yggdrasill_up"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_0944"
+# textboxarrow 0 0
+# textwindow "normal"
+@？？？
+ああっ！
+たくさんの生命が…
+世界中に広がっていきます
+
+# textboxarrow 0 0
+@？？？
+どうか幸せな世界を、
+皆で紡いで下さい
+
+# textboxarrow 0 0
+@？？？
+また皆と話しがしたかった…
+だけど、この孤独を受け入れると
+決めたんです
+
+# textboxarrow 0 0
+@？？？
+私は皆さんを見守ることができれば、
+それだけで幸せです
+
+;;背景：黒
+# sestop "SE_0944"
+# imagepos 2 0 0
+# imagealpha 2 1 0.5
+# textboxarrow 0 0
+@？？？
+私はユグドラシルの根元から、
+地底へと降りていきました
+
+# textboxarrow 0 0
+@？？？
+誰も辿り着くことのない、
+気づかれることもない、
+静寂と孤独の地
+
+# textboxarrow 0 0
+@？？？
+そこで静かに世界を見守ることに
+したんです

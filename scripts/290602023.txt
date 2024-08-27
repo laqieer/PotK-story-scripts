@@ -1,0 +1,357 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第６章 章タイトル：アナザー・コンフリクト―交錯―
+;;第2話　タイトル：相容れぬもの
+;;6_2_2_3
+;;スクリプト最後の背景：ユグドラシル
+;;-----------------------------------------
+# script "lisp"
+# background "in_yggdrasill"
+# bgmfile "bgm411" "BgmIntegralNoahBattle001" 0
+;;-----------------------------------------
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 2
+# alpha 5101431 0 0
+# mask 5101431 off
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;ダーインスレイヴ
+# body 102811
+# pos 102811 3
+# scale 102811 0.8 0
+# layer 102811 2
+# alpha 102811 0 0
+# mask 102811 off
+;;レーヴァテイン・擬彩
+# body 5100231
+# pos 5100231 3
+# scale 5100231 0.8 0
+# layer 5100231 2
+# alpha 5100231 0 0
+# mask 5100231 off
+;;神令フォルカス
+# body 5301811
+# pos 5301811 3
+# scale 5301811 0.8 0
+# layer 5301811 2
+# alpha 5301811 0 0
+# mask 5301811 off
+;;擬装ダモクレス
+# body 5103521
+# pos 5103521 3
+# scale 5103521 0.8 0
+# layer 5103521 2
+# alpha 5103521 0 0
+# mask 5103521 off
+;;-----------------------------------------
+# voice 510143 "tyrufing_iz_battle_0002"
+# move 5101431 2 0
+# face 5101431 "angry"
+# alpha 5101431 1 0
+# mask 5101431 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 5100231 4 0
+# face 5100231 "normal"
+# alpha 5100231 1 0
+# mask 5100231 on
+@ティルフィング
+せいっ！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+# voice 510023 "revatein_iz_battle_0002"
+# face 5100231 "angry"
+# textboxarrow 0 3
+@レーヴァテイン
+そこっ！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+# se "SE_3006"
+# voice 530181 "forcas_c_0019"
+# alpha 5101431 0 0.5
+# alpha 5100231 0 0.5
+# move 5301811 3 0
+# face 5301811 "normal"
+# alpha 5301811 1 0.5
+# mask 5301811 off
+# textboxarrow 0 2
+@フォルカス
+その程度っ…
+
+# alpha 5301811 0 0.5
+# move 5101431 2 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# move 5100231 4 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+# textboxarrow 0 3
+@レーヴァテイン
+槍は戦い難いけど…
+私とティルフィングの二人でなら
+勝てそうだね…
+
+# face 5101431 "angry"
+# textboxarrow 0 1
+@ティルフィング
+油断しないで下さい
+一瞬の隙が命取りになります
+
+# voice 510023 "revatein_iz_0003"
+# textboxarrow 0 3
+@レーヴァテイン
+油断はしないよ…
+ラグナロク達に苦い思いをさせられた
+ばかりだから…
+
+# alpha 5101431 0 0.5
+# alpha 5100231 0 0.5
+# move 5301811 3 0
+# face 5301811 "normal"
+# alpha 5301811 1 0.5
+# mask 5301811 off
+# textboxarrow 0 2
+@フォルカス
+インテグラルキラーズ…
+それなりの強さのようですね
+
+# textboxarrow 0 2
+@フォルカス
+二人の力を推し量ることができた
+ということで、今日のところは
+良しとしましょう…
+
+# alpha 5301811 0 0.5
+# move 5101431 3 0
+# face 5101431 "angry"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+@ティルフィング
+退くつもりですね
+それは、させませんっ
+
+# se "SE_4000"
+# waitandnext 0.5
+
+;;//ティルフィングの攻撃をフォルカスが躱す
+# textwindow "close"
+# alpha 5101431 0 0.5
+# move 5301811 3 0
+# face 5301811 "normal"
+# alpha 5301811 1 0.5
+# mask 5301811 off
+# waitandnext 0.6
+
+# se "SE_5204"
+# leftout 5301811 0.5
+# waitandnext 0.8
+
+# alpha 5301811 0 0
+# move 5301811 3 0
+# face 5301811 "normal"
+# alpha 5301811 1 0.5
+# mask 5301811 off
+# textboxarrow 0 2
+# textwindow "normal"
+@フォルカス
+元々、下調べのつもりだったんです
+あなた達は必ず御許に還しますから
+
+# textboxarrow 0 2
+@フォルカス
+それでは、また
+
+;;//フォルカスがユグドラシルに入ろうとして弾かれる
+# se "SE_0893"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 530181 "forcas_c_0022"
+# face 5301811 "surprise"
+# textboxarrow 0 2
+@フォルカス
+えっ…！？
+
+# bgmfile "bgm403" "BgmIntegralNoahEvent" 0
+# voice 9943 "almace_navikan_0011"
+# alpha 5301811 0 0.5
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+私達をあまり甘く見ないでね
+
+# face 103611 "angry"
+# textboxarrow 0 1
+@ラグナロク
+地上への道を封鎖したわ
+コマンドキラーズ・フォルカス
+逃がしはしない！
+
+# voice 530181 "forcas_c_0028"
+# alpha 103611 0 0.5
+# alpha 196 0 0.5
+# move 5301811 3 0
+# face 5301811 "normal"
+# alpha 5301811 1 0.5
+# mask 5301811 off
+# textboxarrow 0 2
+@フォルカス
+もう回復したのですか？
+治癒役も動けないようにしておいた
+はずなのに…
+
+# voice 1035 "damocles_0004"
+# alpha 5301811 0 0.5
+# move 5103521 2 0
+# face 5103521 "happy"
+# alpha 5103521 1 0.5
+# mask 5103521 on
+# textboxarrow 0 1
+# move 102811 4 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 on
+@ダモクレス
+えへへ♪
+クレスの愛が
+みんなに伝わったんだよ～
+
+# voice 1028 "dainsleif_0004"
+# face 102811 "happy"
+# textboxarrow 0 3
+@ダーインスレイヴ
+お陰で助かった
+さあ、反撃といこう！
+
+# voice 530181 "forcas_c_0027"
+# alpha 5103521 0 0.5
+# alpha 102811 0 0.5
+# move 5301811 3 0
+# face 5301811 "angry"
+# alpha 5301811 1 0.5
+# mask 5301811 off
+# textboxarrow 0 2
+@フォルカス
+そうですか…
+はぁ…仕方ないですね…
+
+# textboxarrow 0 2
+@フォルカス
+では、こうしましょう！
+
+;;//フォルカスがアルマスに突っ込む
+# se "SE_9092"
+# textwindow "close"
+# rightout 5301811 0.5
+# waitandnext 0.5
+
+# voice 9943 "almace_navikan_0035"
+# alpha 5301811 0 0
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+かかってきなさい！
+今度は…ええっ！？
+
+;;//フォルカスがアルマスの脇を抜ける
+# se "SE_9021"
+# textwindow "close"
+# move 5301811 5 0
+# face 5301811 "normal"
+# alpha 5301811 1 0
+# mask 5301811 on
+# leftin 5301811 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# textwindow "normal"
+@フォルカス
+あなた達を見くびっていたことは
+認めます
+
+# textboxarrow 0 3
+@フォルカス
+次に会うときは、
+全力で臨みますので
+
+;;//フォルカスが走り去る
+# se "SE_5575"
+# textwindow "close"
+# rightout 5301811 0.5
+# waitandnext 0.5
+
+# alpha 5301811 0 0
+# face 196 "angry"
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+ああ…！
+待ちなさいよっ
+
+# alpha 196 0 0.5
+# move 5101431 2 0
+# face 5101431 "angry"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# textboxarrow 0 1
+# move 5100231 4 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+@ティルフィング
+レーヴァテイン、追いますよ！
+
+# voice 510023 "revatein_iz_0014"
+# face 5100231 "sad"
+# textboxarrow 0 3
+@レーヴァテイン
+はぁ…もっとめんどくさいことに
+なった…
+
+;;//ティルフィングとレーヴァテインが飛び去る
+# se "SE_9021"
+# textwindow "close"
+# leftout 5101431 0.5
+# waitandnext 0.4
+
+# se "SE_9021"
+# alpha 5101431 0 0
+# leftout 5100231 0.5
+# waitandnext 0.5
+
+# alpha 5100231 0 0
+# waitandnext 0.2

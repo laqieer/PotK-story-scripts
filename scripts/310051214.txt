@@ -1,0 +1,372 @@
+;;-----------------------------------------
+;;ファンキル　キャラクエ【悪魔リットゥ】
+;;【ＥＰ３】
+;;スクリプト最後の背景：森（昼）
+;;背景：森（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;リットゥ
+# body 3100511
+# pos 3100511 3
+# scale 3100511 0.8 0
+# layer 3100511 2
+# alpha 3100511 0 0
+# mask 3100511 off
+;;-----------------------------------------
+;;リットゥ一枚絵
+# imageset 0 "c3100511"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;【ＥＰ３】（オチ②）
+;;背景：「背景７：森（昼）」
+# move 3100511 3 0
+# face 3100511 "sad"
+# alpha 3100511 1 0
+# mask 3100511 off
+# textflame 1 1
+# textboxarrow 0 2
+@リットゥ
+この私が、なんということだ…
+罠へは警戒していたというのに…
+
+;;演出:できればここでファイル名「ritto_a_0018」のボイス再生をお願いします
+# voice 310051 "ritto_a_0018"
+# textboxarrow 0 2
+@リットゥ
+ただの木の根に
+足をすくわれてしまうだなんて！
+
+;;演出：暗転（少し長めに）
+（可能ならば暗転中に、水の音：ぴちょん、を入れてください）
+;;リットゥ立ち絵（シルエットか、なければ立ち絵なしでお願いします）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# se "SE_9138"
+# alpha 3100511 0 0
+# waitandnext 0.6
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# brightness 3100511 0 0
+# textflame 0 0
+# textwindow "normal"
+@
+転んで泥だらけになったリットゥは
+近くにあった水場で水浴びをしていた
+
+# move 3100511 3 0
+# face 3100511 "normal"
+# alpha 3100511 1 0.5
+# mask 3100511 off
+# textflame 1 1
+# textboxarrow 0 2
+@リットゥ
+木の葉のカーテンとは心許ないな
+マスター、ちゃんとそこにいるか？
+
+;;モノローグ
+# textflame 0 0
+@
+失態を犯したリットゥだったが
+機嫌は損ねていないようだ
+今日の訓練が順調だったからだろう
+
+;;モノローグ
+@
+木陰の向こうからは
+ぱちゃぱちゃと
+遊ぶような音すら鳴る
+
+# face 3100511 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@リットゥ
+ふふ、どうした、マスター
+私と一緒に水浴びでもしたいのか？
+
+;;選択肢
+;;A：はい
+;;B：いいえ
+;;C：背中を流す
+# select "はい" "select_label_01" "いいえ" "select_label_02" "背中を流す" "select_label_03"
+ふふ、どうした、マスター
+私と一緒に水浴びでもしたいのか？
+
+;;アンサー
+;;A：
+# label "select_label_01"
+# labeljump "select_label_end"
+# textboxarrow 0 2
+@リットゥ
+ククっ！素直だな
+純情な部下は好きだぞ
+
+;;B：
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 3100511 "normal"
+# textboxarrow 0 2
+@リットゥ
+なんだ、つまらんな
+
+;;C：
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 3100511 "normal"
+# textboxarrow 0 2
+@リットゥ
+ほう、殊勝な心がけの部下だ
+しかし今ではないな
+
+# label "select_label_end"
+# face 3100511 "normal"
+# textboxarrow 0 2
+@リットゥ
+…お？
+向こうに何かあるな
+マスター、ちょっと来てくれ
+
+;;演出：リットゥ登場
+;;ＳＥ：木の葉をかき分ける音「がさがさっ」（あれば）
+# se "SE_0746"
+# face 3100511 "normal"
+# brightness 3100511 1 0.2
+# textboxarrow 0 2
+@リットゥ
+なんだ、もう服を着ているのか
+とでも言いたそうな顔だな
+
+# textboxarrow 0 2
+@リットゥ
+腑抜けた面をしていないで
+さっさと来い
+
+;;演出：暗転（右から左へ）
+;;演出：リットゥの立ち絵は最初から表示させておいてください
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+リットゥが連れてきた場所は
+何もないただの広場だった
+
+# face 3100511 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@リットゥ
+どうだ、ちょうどいいスペースだろう
+
+;;モノローグ
+# textflame 0 0
+@
+自分が用意したわけでもないのに
+リットゥは得意げだ
+
+;;モノローグ
+# alpha 3100511 0 0.5
+@
+しかし、本当にほどよい広場だ
+見れば切り株の椅子まである
+一息つくにはちょうどいいだろう
+
+;;モノローグ
+@
+リットゥもそう思ったのか
+切り株にどんと腰を下ろす
+
+;;演出:できればここでファイル名「ritto_a_0032」のボイス再生をお願いします
+# voice 310051 "ritto_a_0032"
+# move 3100511 3 0
+# face 3100511 "normal"
+# alpha 3100511 1 0.5
+# mask 3100511 off
+# textflame 1 1
+# textboxarrow 0 2
+@リットゥ
+ちょうどよい場所だから…
+特訓だな
+
+# face 3100511 "angry"
+# textboxarrow 0 2
+@リットゥ
+ほら何をボサっと突っ立っている
+さっさと行かんか！
+
+;;モノローグ
+# textflame 0 0
+@
+厳しい彼女に逆らうことはできない
+マスターはリットゥの言うメニューを
+こなしていくことにした
+
+# face 3100511 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@リットゥ
+…………ふっ
+
+;;演出:できればここでファイル名「ritto_a_0027」のボイス再生をお願いします
+# voice 310051 "ritto_a_0027"
+# textboxarrow 0 2
+@リットゥ
+…本当に、甘いな、マスターは
+
+# textboxarrow 0 2
+@リットゥ
+マスターの正義は、本当に甘い
+甘いものであるからこそ
+甘えてはならないのに
+
+;;演出:できればここでファイル名「ritto_a_0001」のボイス再生をお願いします
+# voice 310051 "ritto_a_0001"
+# textboxarrow 0 2
+@リットゥ
+マスター
+お前は自分の危機も省みずに
+私を助けようとしたな
+
+# textboxarrow 0 2
+@リットゥ
+甘ったるい正義だが
+それはある意味で…
+
+;;モノローグ
+# textflame 0 0
+@
+ざっざっざ
+と、リットゥに近寄る足音
+
+# face 3100511 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@リットゥ
+って、うわ！
+マスター！
+いつの間に私の目の前に！？
+
+;;モノローグ
+# textflame 0 0
+@
+手に持った木の実を
+おずおずと差し出すマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+@リットゥ
+な、なんだその実は
+え？私に？
+
+# face 3100511 "normal"
+# textboxarrow 0 2
+@リットゥ
+特訓をこなしてると思ったら
+またそうやって私のことを気遣って…
+いや、せっかくだ、いただこう
+
+# textboxarrow 0 2
+@リットゥ
+…甘い
+
+# face 3100511 "happy"
+# textboxarrow 0 2
+@リットゥ
+ふ、ふふふ…
+甘い、甘いなぁ、マスター
+これはある意味で…甘美だよ
+
+;;演出:できればここでファイル名「ritto_a_0003」のボイス再生をお願いします
+# voice 310051 "ritto_a_0003"
+# face 3100511 "normal"
+# textboxarrow 0 2
+@リットゥ
+…いいだろう
+教え子を信じて
+力を尽くしてやるのも教官の務めだ
+
+;;モノローグ
+# textflame 0 0
+@
+何の話かわからないマスター
+しかし、彼女の顔は
+とても清々しかった
+
+;;演出:できればここでファイル名「ritto_a_0004」のボイス再生をお願いします
+# voice 310051 "ritto_a_0004"
+# face 3100511 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@リットゥ
+これからは私がついているからな
+やれやれ…だ
+仕様がないマスターめ
+
+# textboxarrow 0 2
+@リットゥ
+…まったく、もう
+
+;;モノローグ
+# textflame 0 0
+@
+森に入る前と比べれば、少しだけ
+リットゥの表情は柔らかい
+
+;;モノローグ
+# se "SE_0602"
+@
+マスターを信じるリットゥに
+魔眼『獄将の号令』が
+宿っていた
+
+;;モノローグ
+@
+かくしてマスターといえば
+そんな彼女に嘆息していた
+
+;;モノローグ
+@
+こちらこそ
+仕様がないリットゥだよ、と
+
+;;■一枚絵ボイス
+;;演出:ファイル名「ritto_a_kyara_0026」
+;;お前は、自分が思う正しいことを貫きとおせばいい。
+;;私が、それを勝利に導いてやる。
+;;頼っていいぞ。私はお前の教官なのだから。
+;;ホワイトアウト
+# textflame 0 0
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# fadein "white" 3
+# buttonsout 0 0
+# textwindow "close"
+# voice 310051 "ritto_a_kyara_0026"
+
+# frameout 0 1
+
+# waitandnext 0.8
+
+# fadeout "black" 1.5
+# waitandnext 1.5

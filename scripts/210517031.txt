@@ -1,0 +1,380 @@
+;;-----------------------------------------
+;;ファンキル　2021ウェディングイベント　シナリオ
+;;【EP.2】
+;;スクリプト最後の背景：店(昼)　 church_room
+;;背景：黒バック
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;イチイバル・神令・オーディン
+# body 5402211
+# pos 5402211 3
+# scale 5402211 0.8 0
+# layer 5402211 2
+# alpha 5402211 0 0
+# mask 5402211 off
+;;ロジェスティラ・神令・スクルド
+# body 5503711
+# pos 5503711 3
+# scale 5503711 0.8 0
+# layer 5503711 2
+# alpha 5503711 0 0
+# mask 5503711 off
+;;-----------------------------------------
+;;【EP.2】お姫様の夢
+;;//背景：黒バック
+;;モノローグ
+# textflame 0 0
+@
+ロジェスティラとイチイバルが
+ともに暮らしはじめて、
+しばらく経ったころ…
+
+;;モノローグ
+@
+ロジェスティラは夢の中で
+昔のことを思い出していた
+
+# voice 550371 "logistille_c_0019"
+# move 5503711 3 0
+# face 5503711 "usual"
+# alpha 5503711 1 0.5
+# mask 5503711 off
+# textflame 1 1
+# textboxarrow 0 2
+@ロジェスティラ
+はぁ…
+綺麗だなぁ、お姫様…
+
+;;モノローグ
+# textflame 0 0
+@
+童話のページをひとつめくっては、
+感嘆の声をもらす
+
+;;モノローグ
+@
+小さいころからずっと、
+ロジェスティラには憧れがあった
+
+# textflame 1 1
+# textboxarrow 0 2
+@ロジェスティラ
+こんなに豪華なドレス、
+村のどこにも…ううん
+街にだって売ってない
+
+# textboxarrow 0 2
+@ロジェスティラ
+見る人みんなを魅了して、
+何よりも美しくきらめく
+…そんなドレス
+
+# textboxarrow 0 2
+@ロジェスティラ
+いいなぁ…もしこれが、
+わたしの目の前にあったら―
+
+;;//演出：画面フラッシュ
+# se "SE_11465"
+# waitandnext 0.2
+
+# bgm "stop"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# emotionbody 1000 1 5503711 10 310
+# effectpattern 1000 2 0
+# effectstart 1000
+# voice 550371 "logistille_c_0024"
+# face 5503711 "surprise"
+# textboxarrow 0 2
+@ロジェスティラ
+わっ？
+ひゃあああっ！
+
+;;モノローグ
+# textflame 0 0
+@
+そんな彼女に
+目もくらむほどの光が降り注ぐ
+
+;;モノローグ
+@
+顔を上げると、
+絵本の中のドレスと
+まったく同じ…
+
+;;モノローグ
+@
+純白の豪奢なドレスが
+彼女の前に現れた
+
+# se "SE_6505"
+# emotionbody 2000 3 5503711 10 200
+# effectpattern 2000 2 3
+# effectstart 2000
+# voice 550371 "logistille_c_0021"
+# face 5503711 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@ロジェスティラ
+すごいっ、すごいっ！
+絵本から出てきたみたい…！
+
+;;モノローグ
+# se "SE_11618"
+# textflame 0 0
+@
+ドレスを手に取り、
+子どものように
+はしゃぐロジェスティラ
+
+;;モノローグ
+@
+うっとりとした笑顔で
+しばしドレスを眺めるが…
+
+# effectskip 2000
+# face 5503711 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@ロジェスティラ
+あ…
+
+;;モノローグ
+# face 5503711 "usual"
+# textflame 0 0
+@
+ある考えが胸をよぎり…
+そっと元の通りに戻す
+
+;;モノローグ
+@
+憧れだったドレスが、
+目の前にあるにもかかわらず
+
+;;モノローグ
+@
+彼女はそれを
+着ようとはしない
+なぜなら―
+
+;;//演出：場面転換
+;;//背景：店(昼)　 church_room
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "church_room"
+# alpha 5503711 0 0
+# move 5402211 3 0
+# face 5402211 "normal"
+# alpha 5402211 1 0
+# mask 5402211 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# voice 540221 "ichiibal_c_0047"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@イチイバル
+…ロジェ、ロジェ！
+
+# emotionbody 3000 1 5503711 10 310
+# effectpattern 3000 2 0
+# effectstart 3000
+# voice 550371 "logistille_c_0024"
+# move 5503711 2 0
+# face 5503711 "surprise"
+# alpha 5503711 1 0.5
+# mask 5503711 on
+# textboxarrow 0 1
+# move 5402211 4 0.5
+# mask 5402211 on
+@ロジェスティラ
+ん…ん、んん…？
+わひゃっ！？
+
+;;モノローグ
+# textflame 0 0
+@
+起き抜けの視界を、
+イチイバルの端正な顔が埋め尽くす
+
+# voice 540221 "ichiibal_c_0031"
+# textflame 1 1
+# textboxarrow 0 3
+@イチイバル
+起こしてごめんね？
+椅子の上でゆらゆらと
+舟をこいでいたから
+
+# voice 550371 "logistille_c_0035"
+# face 5503711 "sad"
+# textboxarrow 0 1
+@ロジェスティラ
+ごごごごめんなさいっ、
+ご心配をおかけして…！
+
+# textboxarrow 0 3
+@イチイバル
+ハハハ、いいんだよ
+ロジェは寝顔もかわいいね
+
+# voice 550371 "logistille_c_0015"
+# face 5503711 "shy"
+# textboxarrow 0 1
+@ロジェスティラ
+はっ…ううっ…！！
+
+# textboxarrow 0 1
+@ロジェスティラ
+イ、イチイバルさんこそっ
+今日もとっても素敵ですっ…！
+
+# voice 540221 "ichiibal_c_0004"
+# face 5402211 "angry"
+# textboxarrow 0 3
+@イチイバル
+フフッ、そうだろ？
+いまのボクは
+天才美少女仕立て屋見習い
+
+# voice 540221 "ichiibal_c_0006"
+# textboxarrow 0 3
+@イチイバル
+村一番の…いや、
+国一番の才女と謳われる日も
+そう遠くないさ、ドヤッ☆
+
+;;モノローグ
+# textflame 0 0
+@
+自信満々なイチイバルの言葉に
+つい微笑むロジェスティラ
+
+;;モノローグ
+@
+イチイバルが来てからというもの、
+ロジェスティラの日常は
+とても賑やかになっていた…
+
+;;//演出：場面転換
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 5503711 0 0
+# alpha 5402211 0 0
+# move 5503711 2 0
+# face 5503711 "happy"
+# alpha 5503711 1 0
+# mask 5503711 on
+# move 5402211 4 0
+# face 5402211 "normal"
+# alpha 5402211 1 0
+# mask 5402211 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 550371 "logistille_c_0004"
+# textflame 1 1
+# textboxarrow 0 1
+# textwindow "normal"
+@ロジェスティラ
+うんうん…
+…はい、問題ありませんっ
+さすがです！
+
+;;モノローグ
+# textflame 0 0
+@
+イチイバルが修繕した服を見て、
+ロジェスティラは満足そうに
+顔をほころばせる
+
+;;モノローグ
+@
+教えたばかりにも関わらず、
+イチイバルの腕前は見事だった
+
+# textflame 1 1
+# textboxarrow 0 3
+@イチイバル
+それはよかった
+ロジェの教え方が上手いからだね
+
+# voice 550371 "logistille_c_0034"
+# face 5503711 "shy"
+# textboxarrow 0 1
+@ロジェスティラ
+へっ？い、いえ…
+わたしは大したことは…
+
+# textboxarrow 0 3
+@イチイバル
+何を言ってるんだ
+ロジェの智慧と技術は凄まじいよ
+
+# face 5402211 "usual"
+# textboxarrow 0 3
+@イチイバル
+ロジェのように
+綺麗な服を作るには、
+まだまだ修行が足りない
+
+# voice 540221 "ichiibal_c_0021"
+# face 5402211 "shy"
+# textboxarrow 0 3
+@イチイバル
+もっとキミの下で
+才能を磨いていかないとね
+キランッ☆
+
+# voice 550371 "logistille_c_0005"
+# face 5503711 "happy"
+# textboxarrow 0 1
+@ロジェスティラ
+…ふふふっ
+
+;;モノローグ
+# textflame 0 0
+@
+自信に満ちあふれながらも、
+ロジェスティラの才能に
+敬意を払う姿
+
+;;モノローグ
+@
+イチイバルという少女の高潔さに、
+改めて憧れの念を抱く…
+
+# voice 550371 "logistille_c_0002"
+# face 5503711 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@ロジェスティラ
+…あのあのっ
+イチイバルさん！
+
+# face 5402211 "normal"
+# textboxarrow 0 3
+@イチイバル
+うん？
+さっそく次のお仕事かな
+
+# face 5503711 "angry"
+# textboxarrow 0 1
+@ロジェスティラ
+い、いえっ！
+実はイチイバルさんに、
+プレゼントしたいものがっ…！

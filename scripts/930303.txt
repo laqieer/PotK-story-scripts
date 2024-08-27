@@ -1,0 +1,487 @@
+;;●3_3＜戦闘終了後＞　背景：泉のほとり
+# script "lisp"
+# background "fountain"
+# bgmfile "bgm166" "BgmPJZero001" 0
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# body 100161
+# pos 100161 1
+# scale 100161 0.8 0
+# alpha 100161 0 0
+# body 0
+# pos 0 2
+# scale 0 0.8 0
+# alpha 0 0 0
+# body 4
+# pos 4 4
+# scale 4 0.8 0
+# alpha 4 0 0
+# layer 24 4
+# layer 0 5
+# layer 100161 2
+;;ティルフィングボイス用
+# body 101411
+# alpha 101411 0 0
+# face 24 "sad"
+# face 0 "worry"
+# face 4 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0025"
+@ティルフィング
+ハァ…ハァ…
+…うぐっ！
+
+;;※フッとティルフィングの背後に現れるラース
+# se "SE_5257"
+# alpha 100161 1 0.5
+# move 100161 2 0.5
+# textboxarrow 0 1
+# voice 10016 "masamune_k_0007"
+@ラース
+フン、手負いの身で、
+拙者を止めるだと…？
+…片腹痛いわ
+
+;;エイレーネ仮
+# body 133
+# pos 133 5
+# scale 133 0.8 0
+# alpha 133 0 0
+# layer 133 1
+# face 24 "angry"
+# textboxarrow 0 2
+@ティルフィング
+！？
+
+;;※一閃…ティルフィングを抜き胴で切り裂くラース
+# se "SE_9017"
+# fadein "white" 0.3
+# move 100161 4 0.2
+# face 24 "sad"
+# waitandnext 0.1
+
+# rightout 24 0.3
+# alpha 24 0 0.2
+# serif 0
+# textwindow "toge"
+# textboxarrow 0 0
+@ティルフィング
+ガッ！！
+
+;;※ラースに弾き飛ばされ、石像の台座に叩き付けられるティルフィング
+# serif 0
+# textwindow "close"
+# alpha 100161 0 0.5
+# alpha 133 1 0.5
+# move 24 3 0
+# face 24 "sad"
+# waitandnext 1
+
+# leftin 24 0.3
+# alpha 24 1 0.3
+# waitandnext 0.25
+
+# se "SE_4813"
+# shake 1 0.3
+# serif 0
+# textwindow "toge"
+# textboxarrow 0 0
+@ティルフィング
+ガッ！
+ガハッ！！
+
+# alpha 24 0 0.5
+# alpha 133 0 0.5
+# alpha 0 1 0.5
+# alpha 4 1 0.5
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 3
+@トト
+！！
+ティルフィング！！
+
+# face 24 "sad2"
+# alpha 24 1 0.5
+# alpha 133 1 0.5
+# alpha 0 0 0.5
+# alpha 4 0 0.5
+# textboxarrow 0 2
+@ティルフィング
+…ゴフッ！
+
+;;※バッと大量の血しぶきが舞い、力なく倒れ伏すティルフィング
+# se "SE_3001"
+# alpha 24 0 0.5
+# alpha 133 0 0.5
+# alpha 0 1 0.5
+# alpha 4 1 0.5
+# textboxarrow 0 1
+# voice 9999 "durin_0024"
+@デュリン
+！！
+ティル…フィング…
+
+# se "SE_8000"
+# move 0 4 0
+# move 100161 1 0
+# alpha 100161 1 0.5
+# alpha 24 1 0.5
+# alpha 133 1 0.5
+# alpha 0 0 0.5
+# alpha 4 0 0.5
+# textboxarrow 0 1
+@ラース
+フン…
+母と信ずるその石像とともに、
+消え果つるがよい
+
+;;※グッと構えるラース
+# alpha 0 1 0.5
+# alpha 133 0 0.5
+# alpha 24 0 0.5
+# face 0 "angry"
+# textboxarrow 0 3
+@デュリン
+ま、待ちなさい！
+そんなことを…
+大天使が許すと思うの！？
+
+# textboxarrow 0 1
+# voice 10016 "masamune_k_0009"
+@ラース
+…なに？
+
+# textboxarrow 0 3
+@デュリン
+黒奏官のその判断を、
+大天使が許すはずがない
+って言ってるのよ！
+
+# textboxarrow 0 3
+@デュリン
+今は石像にされているけど、
+エイレーネは女神！
+
+# textboxarrow 0 3
+@デュリン
+神々のしもべである天使の配下が、
+女神に手をかけるなんて…
+
+# textboxarrow 0 3
+@デュリン
+そんなことをすれば、
+立場が悪くなるのは
+大天使のほうでしょ！？
+
+# face 100161 "irregular"
+# textboxarrow 0 1
+# voice 10016 "masamune_k_0007"
+@ラース
+なにを言い出すかと思えば…
+エイレーネの動向を見た上で
+変化がなければ、この世から消し去る
+
+# textboxarrow 0 1
+@ラース
+…それは、大天使ラファエル様から
+仰せつかったことだ
+
+# face 0 "worry"
+# textboxarrow 0 3
+# voice 9999 "durin_0022"
+@デュリン
+なっ！？
+
+# face 100161 "normal"
+# textboxarrow 0 1
+@ラース
+おぬしの言う通り…
+天使の立場にある者が、神々に
+手をかけるなどあってはならぬこと
+
+# textboxarrow 0 1
+@ラース
+だが…天使のいち使用人である拙者が
+勝手に暴走したとあらば…話は別…
+ただの事故に過ぎぬ
+
+# textboxarrow 0 3
+@デュリン
+ア、アンタの勝手な暴走という
+筋書きで…ラファエルは
+神殺しをするつもりなの！？
+
+# textboxarrow 0 1
+@ラース
+どの道、エイレーネは
+死しているも同然…
+さして、問題はない
+
+# face 0 "angry"
+# textboxarrow 0 3
+# voice 9999 "durin_0052"
+@デュリン
+！！
+なんてことを！！
+
+# se "SE_8000"
+# face 100161 "irregular"
+# face 24 "sad"
+# textboxarrow 0 1
+@ラース
+さぁ…これで幕引きだ
+呪うなら、力なきおのれを
+呪うがいい
+
+;;※刀を構えるラース
+# alpha 0 0 0.5
+# alpha 24 1 0.5
+# alpha 133 1 0.5
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0038"
+@ティルフィング
+…グ…ググ…
+ガハッ！！
+
+;;※立ち上がろうとするも、再び吐血するティルフィング
+# move 4 3 0
+# alpha 4 1 0.5
+# alpha 24 0 0.5
+# alpha 133 0 0.5
+# alpha 100161 0 0.5
+# textboxarrow 0 2
+# voice 9998 "toto_0049"
+@トト
+ティルフィング！！
+
+# alpha 4 0 0.5
+# alpha 24 1 0.5
+# alpha 133 1 0.5
+# alpha 100161 1 0.5
+# textboxarrow 0 2
+@ティルフィング
+ど…どうして…
+なにも言ってくれないの…？
+もう…これで、終わりなの…？
+
+# se "SE_5233"
+# face 100161 "angry"
+# textboxarrow 0 1
+# voice 10016 "masamune_k_0029"
+@ラース
+消え果てよ！
+黒式・一紅閃ッ！！！
+
+# imageset 4 "black"
+# imagealpha 4 0 0
+# imagelayer 4 5
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0022"
+@ティルフィング
+！
+
+;;※咄嗟に目をつむるティルフィング…暗転。暗闇の中、ドンという衝撃音
+# body 134
+# pos 134 3
+# scale 134 0.8 0
+# alpha 134 0 0
+# bgm "stop"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# fadein "black" 0.3
+# se "SE_9084"
+# imagealpha 4 1 0
+# imagepos 4 0 30
+# effectbody 1000 4 0 0
+# effectpattern 1000 1 1
+# effectstart 1000
+# shake 1 1
+# waitandnext 0.5
+
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 0
+@ティルフィング
+！！
+
+# imageset 3 "m2_kil5"
+# imagealpha 3 0 0
+# imagelayer 3 4
+# effectskip 1000
+# textflame 0 0
+@
+…や、やった
+…やったよ
+
+# imagealpha 3 1 0
+# imagepos 3 0 0
+# imagescale 3 1.5 0
+# alpha 24 0 0
+# alpha 100161 0 0
+# alpha 133 0 0
+# alpha 4 0 0
+# alpha 134 1 0
+# scale 134 1.2 0
+# brightness 4 0.2 0
+# textflame 1 1
+# textboxarrow 0 0
+@ティルフィング
+…え？
+
+;;※目を開くティルフィング。その目の前に、手を広げた小さな背中が見える
+# bgm "bgm004" 0
+# imagealpha 4 0 1
+# serif 1
+# textboxarrow 1 2
+@トト
+…ず、ずっと
+守られてばかりだったから…
+
+# serif 1
+# textboxarrow 1 2
+# voice 9998 "toto_0008"
+@トト
+いつかは、ティルフィングを
+守ってみたいと思ってたんだ…
+
+# serif 0
+# textboxarrow 0 2
+@ティルフィング
+…トト？
+
+# face 4 "sad"
+# serif 1
+# textboxarrow 1 2
+@トト
+で、でも…ディーンとの約束は
+守れそうにないや…
+
+# serif 1
+# textboxarrow 1 2
+@トト
+ボ、ボクの代わりに…
+黒奏官を倒してよね…
+
+;;※トトの足元にポタポタと落ちる血に気付くティルフィング
+# se "SE_9013"
+# serif 0
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0054"
+@ティルフィング
+！？
+血！？
+
+# face 4 "angry"
+# serif 1
+# textboxarrow 1 2
+@トト
+…あ、あの天使達に
+教えてやってよね…
+
+# serif 1
+# textboxarrow 1 2
+@トト
+せ、世界の片隅に生きるボクだって…
+勇気を出せば、誰かを守ることが
+できるんだって…
+
+# imageset 1 "mov2_3_overlay"
+# imagealpha 1 0 0
+# imagelayer 1 2
+# serif 1
+# face 4 "sad"
+# textboxarrow 1 2
+@トト
+ただ消されるだけの…
+た、ただの駒なんかじゃ…
+ないん…だって…
+
+
+# serif 0
+# textboxarrow 0 2
+@ティルフィング
+トト！！
+
+;;※ティルフィングが叫んだ瞬間、背を向けた向こう側で、バッと大量に血しぶきが舞う
+# se "SE_9016"
+# move 0 3 0
+# imagealpha 1 0.5 0.2
+# imagepos 1 0 30
+# imagescale 1 1.2 0
+# serif 0
+# textboxarrow 0 2
+@ティルフィング
+！！！
+…ト…ト
+
+;;※慌てて飛んでくるデュリン
+# se "SE_3001"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# imagealpha 1 0 0.5
+# imagealpha 3 0 0.5
+# alpha 134 0 0.5
+# alpha 0 1 0.3
+# rightin 0 0.5
+# face 0 "worry"
+# waitandnext 0.5
+
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 2
+@デュリン
+ト、トト！
+しっかり！！
+
+# scale 134 0.8 0
+# brightness 134 1 0
+# face 0 "cry"
+# textboxarrow 0 2
+@デュリン
+…トト！
+…トト！！
+
+;;※倒れ伏すトト。地面には大量の血が広がる
+# move 24 3 0
+# move 4 4 0
+# alpha 0 0 0.5
+# alpha 24 1 0.5
+# textboxarrow 0 2
+@ティルフィング
+…ど、どうして！？
+どうして、トトが
+犠牲にならなければいけないの！？
+
+;;※轟く、ティルフィングの悲鳴。その叫びに呼応するように、エイレーネの瞳に光が宿る
+# face 24 "sad2"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "toge"
+# textsize 30
+# textboxarrow 1 0
+@ティルフィング
+イヤァァァァァァァァーッ！！！
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# move 133 3 0
+# alpha 24 0 0.5
+# alpha 4 0 0.5
+# alpha 133 1 0.5
+# waitandnext 1.5
+
+# fadein "white" 0.5
+# se "SE_9000"
+# face 133 "irregular"
+# waitandnext 2
+

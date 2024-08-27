@@ -1,0 +1,301 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第６章 章タイトル：アナザー・コンフリクト―交錯―
+;;第2話　タイトル：相容れぬもの
+;;6_2_11_1
+;;スクリプト最後の背景：冥花繁殖帯
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm411_412" "BgmIntegralNoahBattle001" 0
+;;-----------------------------------------
+;;花異族
+# body 5809801
+# pos 5809801 3
+# scale 5809801 0.8 0
+# layer 5809801 2
+# alpha 5809801 0 0
+# mask 5809801 off
+;;花異族（クローン1）
+# entry 958098011 5809801
+# pos 958098011 3
+# scale 958098011 0.8 0
+# layer 958098011 2
+# alpha 958098011 0 0
+# mask 958098011 off
+;;花異族（クローン2）
+# entry 958098012 5809801
+# pos 958098012 3
+# scale 958098012 0.8 0
+# layer 958098012 2
+# alpha 958098012 0 0
+# mask 958098012 off
+;;ロンギヌス・擬彩
+# body 5300131
+# pos 5300131 3
+# scale 5300131 0.8 0
+# layer 5300131 2
+# alpha 5300131 0 0
+# mask 5300131 off
+;;神令フォルカス
+# body 5301811
+# pos 5301811 3
+# scale 5301811 0.8 0
+# layer 5301811 2
+# alpha 5301811 0 0
+# mask 5301811 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第2話　タイトル：相容れぬもの
+;;//背景：平原
+# voice 530181 "forcas_c_battle_0003"
+# move 5301811 3 0
+# face 5301811 "angry"
+# alpha 5301811 1 0
+# mask 5301811 off
+# textflame 1 1
+# textboxarrow 0 2
+@フォルカス
+そこ！
+
+# se "SE_4200"
+# waitandnext 0.5
+
+# voice 530013 "ronginusu_iz_battle_0002"
+# alpha 5301811 0 0.5
+# move 5300131 3 0
+# face 5300131 "angry"
+# alpha 5300131 1 0.5
+# mask 5300131 off
+# textboxarrow 0 2
+@ロンギヌス
+ええーい！
+
+# se "SE_4200"
+# waitandnext 0.5
+
+;;//フォルカスとロンギヌスが切り結ぶ
+# textwindow "close"
+# alpha 5300131 0 0.5
+# waitandnext 0.5
+
+# se "SE_8023"
+# move 5301811 2 0
+# face 5301811 "angry"
+# alpha 5301811 1 0
+# mask 5301811 on
+# move 5300131 4 0
+# face 5300131 "angry"
+# alpha 5300131 1 0
+# mask 5300131 on
+# leftin 5301811 0.3
+# rightin 5300131 0.3
+# waitandnext 0.3
+
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 530181 "forcas_c_0040"
+# textboxarrow 0 1
+# textwindow "nomal"
+@フォルカス
+なるほど
+これがあなたの本気というわけですね
+
+# voice 530181 "forcas_c_0013"
+# textboxarrow 0 1
+@フォルカス
+それほどの力を持っていながら、
+どうして進んで戦おうとしないの
+です！？
+
+# textboxarrow 0 3
+@ロンギヌス
+私は…世界を愛に満ち溢れたものに
+したいんです…！
+
+# textboxarrow 0 3
+@ロンギヌス
+戦いなんて…無い方がいい…
+だけどっ
+
+# textboxarrow 0 3
+@ロンギヌス
+“愛”を守るためなら…戦えます！
+
+;;//異族の群れが現れる
+# se "SE_0829"
+# alpha 5301811 0 0.5
+# alpha 5300131 0 0.5
+# move 958098011 1 0
+# alpha 958098011 1 0.5
+# mask 958098011 on
+# move 5809801 3 0
+# alpha 5809801 1 0.5
+# mask 5809801 on
+# move 958098012 5 0
+# alpha 958098012 1 0.5
+# textboxarrow 0 0
+@異族
+アアアアアアアアアア！
+
+# voice 530181 "forcas_c_0007"
+# alpha 958098011 0 0.5
+# alpha 5809801 0 0.5
+# alpha 958098012 0 0.5
+# move 5301811 3 0
+# face 5301811 "angry"
+# alpha 5301811 1 0.5
+# mask 5301811 off
+# textboxarrow 0 2
+@フォルカス
+異族ですか…
+小癪な真似をっ
+
+;;//背景：冥花繁殖帯
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "flower_garden"
+# alpha 5301811 0 0
+# move 5301811 2 0
+# face 5301811 "angry"
+# alpha 5301811 1 0
+# mask 5301811 on
+# move 5809801 4 0
+# alpha 5809801 1 0
+# mask 5809801 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# se "SE_0829"
+# textboxarrow 0 3
+# textwindow "normal"
+@異族
+アアアアアアアアアア！
+
+;;//フォルカスが異族を斬る
+# voice 530181 "forcas_c_battle_0004"
+# textboxarrow 0 1
+@フォルカス
+その命、還しなさい！
+
+# se "SE_4200"
+# waitandnext 0.5
+
+# se "SE_4815"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_7031"
+# textboxarrow 0 3
+@異族
+アアアアアアア…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 5809801 0 0.5
+# waitandnext 0.5
+
+# move 5300131 4 0
+# face 5300131 "angry"
+# alpha 5300131 1 0.5
+# mask 5300131 on
+# textboxarrow 0 3
+# textwindow "normal"
+@ロンギヌス
+“海”に近づいてきました…
+ここで…終わりにしましょう
+
+# face 5301811 "normal"
+# textboxarrow 0 1
+@フォルカス
+もう異族は出さないのですか？
+あの者達もユグドラシルの糧に
+できるというのに
+
+# face 5300131 "normal"
+# textboxarrow 0 3
+@ロンギヌス
+…あなた達は、本当に何もかもを
+ユグドラシルに還すつもりなん
+ですね
+
+# textboxarrow 0 1
+@フォルカス
+それが最善だからと、
+先程も言いましたよ
+
+# textboxarrow 0 1
+@フォルカス
+バイブスもキラーズも、あるべき
+場所に還さなくてはなりません
+
+# textboxarrow 0 1
+@フォルカス
+私達は、消え去る運命なんです
+
+# textboxarrow 0 3
+@ロンギヌス
+私達が消える…
+それは…覚悟しています…
+
+# textboxarrow 0 3
+@ロンギヌス
+でも、ただ消えるだけでは世界を
+救うことはできません…
+
+# textboxarrow 0 3
+@ロンギヌス
+やがて訪れる“終焉”に…
+全て飲み込まれてしまいます…
+
+# textboxarrow 0 1
+@フォルカス
+だから、紛い物の世界を造って
+そこだけ存続させようと
+いうのですか？
+
+# face 5300131 "angry"
+# textboxarrow 0 3
+@ロンギヌス
+紛い物ではないんです…！
+“永遠の理想郷”です！
+
+# face 5301811 "angry"
+# textboxarrow 0 1
+@フォルカス
+欺瞞ですね
+これ以上、話しても無駄なようです
+
+# textboxarrow 0 1
+@フォルカス
+“終焉”など訪れません
+世界の永続のため、バイブスも
+キラーズも世界樹に還します
+
+# textboxarrow 0 1
+@フォルカス
+混沌のユグドラシルに永遠の静寂を
+
+# se "SE_5207"
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@ロンギヌス
+永遠は、選定の先にあります
+“終焉”を乗り越える理想郷のために
+
+# textboxarrow 0 3
+@ロンギヌス
+完全なる透過の世界に綻びを

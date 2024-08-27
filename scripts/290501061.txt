@@ -1,0 +1,490 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第５章
+;;第1話　タイトル：中心部防衛戦
+;;5_1_6_1
+;;スクリプト最後の背景：市街地（夕方）
+;;-----------------------------------------
+# script "lisp"
+# background "in_city_evening"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;魔獣
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# layer 910013 2
+# alpha 910013 0 0
+# mask 910013 off
+;;魔獣1
+# entry 99100131 910013
+# pos 99100131 3
+# scale 99100131 0.8 0
+# layer 99100131 2
+# alpha 99100131 0 0
+# mask 99100131 off
+;;魔獣2
+# entry 99100132 910013
+# pos 99100132 3
+# scale 99100132 0.8 0
+# layer 99100132 2
+# alpha 99100132 0 0
+# mask 99100132 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;魔獣化ミョルニル
+# body 1200111
+# pos 1200111 3
+# scale 1200111 0.8 0
+# layer 1200111 2
+# alpha 1200111 0 0
+# mask 1200111 off
+;;巨大死霊
+# body 5810301
+# pos 5810301 3
+# scale 5810301 0.8 0
+# layer 5810301 2
+# alpha 5810301 0 0
+# mask 5810301 off
+;;マサムネ(キラーメイル)
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# layer 1100111 2
+# alpha 1100111 0 0
+# mask 1100111 off
+;;デュランダル
+# body 3100311
+# pos 3100311 3
+# scale 3100311 0.8 0
+# layer 3100311 2
+# alpha 3100311 0 0
+# mask 3100311 off
+;;ブリューナク・D. plug・バルバトス
+# body 3500711
+# pos 3500711 3
+# scale 3500711 0.8 0
+# layer 3500711 2
+# alpha 3500711 0 0
+# mask 3500711 off
+;;アスクレピオス(キラーメイル)
+# body 1600111
+# pos 1600111 3
+# scale 1600111 0.8 0
+# layer 1600111 2
+# alpha 1600111 0 0
+# mask 1600111 off
+;;幻獣ピナーカ
+# body 3400211
+# pos 3400211 3
+# scale 3400211 0.8 0
+# layer 3400211 2
+# alpha 3400211 0 0
+# mask 3400211 off
+;;-----------------------------------------
+;;第1話　タイトル：中心部防衛戦
+;;//背景：市街地（夕方）
+# se "SE_0854"
+# move 5810301 3 0
+# alpha 5810301 1 0
+# mask 5810301 off
+# textflame 1 1
+# textboxarrow 0 2
+@？？？
+ＧＹＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ
+ＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ！！
+
+;;//巨大死霊の群れが歩いていく
+# se "SE_0888"
+# textwindow "close"
+# leftout 5810301 1
+# waitandnext 1
+
+# alpha 5810301 0 0
+# waitandnext 0.2
+
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# waitandnext 0.5
+
+# leftout 5810301 1
+# waitandnext 1
+
+# alpha 5810301 0 0
+# waitandnext 0.2
+
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# waitandnext 0.5
+
+# leftout 5810301 1
+# waitandnext 1
+
+# se "SE_0793"
+# alpha 5810301 0 0
+# move 99100131 1 0
+# alpha 99100131 1 0.5
+# mask 99100131 on
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 on
+# move 99100132 5 0
+# alpha 99100132 1 0.5
+# mask 99100132 on
+# textboxarrow 0 0
+# textwindow "normal"
+@魔獣
+ガアアアアアアアアアア！
+
+;;//魔獣の群れが歩いていく
+# se "SE_0887"
+# textwindow "close"
+# leftout 99100131 0.8
+# leftout 910013 0.9
+# leftout 99100132 1
+# waitandnext 1
+
+# alpha 99100131 0 0
+# alpha 910013 0 0
+# alpha 99100132 0 0
+# move 211 2 0
+# face 211 "irregular"
+# alpha 211 1 0.5
+# mask 211 on
+# move 210 4 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# textwindow "normal"
+@カミト
+ものすごい数の化け物が…
+大変だ！
+
+# voice 9935 "vang_0039"
+# textboxarrow 0 1
+@ヴァング
+ったく…
+シユウに飯食わせないと
+いけねぇってのに
+
+# voice 340021 "pinaka_ge_unit_0013"
+# alpha 210 0 0.5
+# move 3400211 4 0
+# face 3400211 "normal"
+# alpha 3400211 1 0.5
+# mask 3400211 on
+# textboxarrow 0 3
+@ピナーカ
+大丈夫だ！
+オイラに任せとけ！
+
+# textboxarrow 0 3
+@ピナーカ
+あいつらと戦って
+分かり合ってくるぜ！
+
+# alpha 211 0 0.5
+# alpha 3400211 0 0.5
+# move 1600111 3 0
+# face 1600111 "normal"
+# alpha 1600111 1 0.5
+# mask 1600111 off
+# textboxarrow 0 2
+@アスクレピオス
+おや？
+戻ってきたんだね、カミト
+無事…とは言い難いようだけど
+
+# move 210 2 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 1
+# move 1600111 4 0.5
+# mask 1600111 on
+@カミト
+アスクレピオス！
+町がっ…早く何とかしないとっ
+
+# voice 16001 "asklepiosm_0003"
+# textboxarrow 0 3
+@アスクレピオス
+ああ、分かってる
+まずは君が落ち着くべきだね
+
+# voice 9935 "vang_0048"
+# alpha 210 0 0.5
+# move 211 2 0
+# face 211 "normal"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+@ヴァング
+おい、カミト
+こいつが、さっき話してた
+キラーメイルか？
+
+# textboxarrow 0 3
+@アスクレピオス
+そういう君は奏官かな？
+
+# face 211 "usual"
+# textboxarrow 0 1
+@ヴァング
+俺はヴァングだ
+カミトが世話になったらしいな
+
+# face 1600111 "smile_1"
+# textboxarrow 0 3
+@アスクレピオス
+こちらこそ
+彼のお陰で正気に戻れたよ
+
+# voice 9936 "kamito_0010"
+# alpha 211 0 0.5
+# alpha 1600111 0 0.5
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+二人とも、呑気に自己紹介してる
+場合じゃないよ！
+
+# alpha 210 0 0.5
+# move 211 2 0
+# face 211 "irregular"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+# move 1600111 4 0
+# face 1600111 "normal"
+# alpha 1600111 1 0.5
+# mask 1600111 on
+@ヴァング
+そうだったな
+悪ぃが、お前
+何か食い物持ってねえか？
+
+# textboxarrow 0 3
+@アスクレピオス
+そこのシユウに食べさせたいんだね
+それから、アスカロンの治療が
+必要かな
+
+# voice 350171 "grimoire_ge_0036"
+# alpha 211 0 0.5
+# alpha 1600111 0 0.5
+# move 210 2 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+# move 3501711 4 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+@グリモワール
+頼むわよ！
+ワタシ達はあの化け物どもを
+焼き尽くしてくるからっ
+
+# voice 9936 "kamito_0003"
+# textboxarrow 0 1
+@カミト
+うん！
+行こう、グリモワール
+
+# alpha 210 0 0.5
+# alpha 3501711 0 0.5
+# move 1600111 3 0
+# face 1600111 "normal"
+# alpha 1600111 1 0.5
+# mask 1600111 off
+# textboxarrow 0 2
+@アスクレピオス
+まあ、そんなに急ぐ必要はないかな
+
+# textboxarrow 0 2
+@アスクレピオス
+あの巨大な化け物どもは、
+じきに片付くからね
+
+# voice 9936 "kamito_0015"
+# move 210 2 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# move 1600111 4 0.5
+# mask 1600111 on
+# textboxarrow 0 1
+@カミト
+でも、あれだけの大群を…
+
+# bgm "stop"
+# voice 16001 "asklepiosm_0007"
+# textboxarrow 0 3
+@アスクレピオス
+討伐の目処は立っているよ
+そろそろ作戦開始だ
+
+# voice 9936 "kamito_0023"
+# textboxarrow 0 1
+@カミト
+えっ？
+
+# bgmfile "bgm154_155" "BgmPJZero001" 0
+# voice 12001 "mjolnirm_battle_0004"
+# alpha 210 0 0.5
+# alpha 1600111 0 0.5
+# move 1200111 3 0
+# face 1200111 "angry_1"
+# alpha 1200111 1 0.5
+# mask 1200111 off
+# textboxarrow 0 2
+@ミョルニル
+おらあああああああ！！
+
+;;//ミョルニルが巨大死霊を攻撃する
+# textwindow "close"
+# alpha 1200111 0 0.5
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# waitandnext 0.6
+
+# se "SE_4601"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 11001 "masamunem_battle_0001"
+# alpha 5810301 0 0.5
+# move 1100111 3 0
+# face 1100111 "angry"
+# alpha 1100111 1 0.5
+# mask 1100111 off
+# textboxarrow 0 2
+# textwindow "normal"
+@マサムネ
+ここで朽ち果てろ！
+
+;;//マサムネが巨大死霊を攻撃する
+# textwindow "close"
+# alpha 1100111 0 0.5
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# waitandnext 0.6
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# voice 350071 "buryunaku_a_battle_0003"
+# alpha 5810301 0 0.5
+# move 3500711 2 0
+# face 3500711 "angry"
+# alpha 3500711 1 0.5
+# mask 3500711 on
+# textboxarrow 0 1
+# move 3100311 4 0
+# face 3100311 "normal"
+# alpha 3100311 1 0.5
+# mask 3100311 on
+# textwindow "normal"
+@ブリューナク
+そこだ！
+
+# se "SE_4400"
+# waitandnext 0.5
+
+# voice 310031 "durandaru_a_battle_0004"
+# face 3100311 "angry"
+# textboxarrow 0 3
+@デュランダル
+バッサバサのメッタメタですの♪
+
+;;//二人が巨大死霊を攻撃する
+# textwindow "close"
+# alpha 3500711 0 0.5
+# alpha 3100311 0 0.5
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# waitandnext 0.6
+
+# se "SE_10588"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 2000 1 0 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+# voice 9935 "vang_0044"
+# alpha 5810301 0 0.5
+# move 211 2 0
+# face 211 "usual"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+# move 1600111 4 0
+# face 1600111 "normal"
+# alpha 1600111 1 0.5
+# mask 1600111 on
+# textwindow "normal"
+@ヴァング
+やるじゃねえか！
+わざとデカブツどもを
+集めてたんだなっ
+
+# voice 16001 "asklepiosm_0004"
+# textboxarrow 0 3
+@アスクレピオス
+敵をまとめて叩くのは
+戦術の常道だよ
+さて、あと一押しかな
+
+# voice 9935 "vang_0006"
+# face 211 "normal"
+# textboxarrow 0 1
+@ヴァング
+そんじゃ、俺達もやってやるぜ
+行くぞ、カミト！
+
+# voice 9936 "kamito_0003"
+# alpha 1600111 0 0.5
+# move 210 4 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+@カミト
+う、うん！
+兄貴っ

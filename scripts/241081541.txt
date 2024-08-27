@@ -1,0 +1,656 @@
+;;-----------------------------------------
+;;まどマギイベント4-1
+;;-----------------------------------------
+# script "lisp"
+# bgmfile "bgm348" "BgmSeaEventBattle003" 0
+# background "bg_black"
+;;-----------------------------------------
+;;アルマス
+# body 2103811
+# pos 2103811 3
+# scale 2103811 0.8 0
+# layer 2103811 3
+# mask 2103811 off
+# alpha 2103811 0 0
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 4
+# mask 139 off
+# alpha 139 0 0
+;;まどか
+# body 2401111
+# pos 2401111 3
+# scale 2401111 0.8 0
+# layer 2401111 3
+# mask 2401111 off
+# alpha 2401111 0 0
+;;マミ
+# body 2501411
+# pos 2501411 3
+# scale 2501411 0.8 0
+# layer 2501411 3
+# mask 2501411 off
+# alpha 2501411 0 0
+;;からまろ
+# body 805121
+# pos 805121 3
+# scale 805121 0.8 0
+# layer 805121 4
+# mask 805121 off
+# alpha 805121 0 0
+;;ほむら
+# body 2501311
+# pos 2501311 3
+# scale 2501311 0.8 0
+# layer 2501311 4
+# mask 2501311 off
+# alpha 2501311 0 0
+;;杏子
+# body 2301511
+# pos 2301511 3
+# scale 2301511 0.8 0
+# layer 2301511 3
+# mask 2301511 off
+# alpha 2301511 0 0
+;;異族
+# body 2811004
+# pos 2811004 3
+# scale 2811004 0.7 0
+# layer 2811004 4
+# mask 2811004 off
+# alpha 2811004 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;背景：黒（暗転のまま）
+# fadein "black" 2
+# textwindow "close"
+# waitandnext 2
+
+# textflame 0 0
+# textwindow "nomal"
+@
+常夏の島、ラグーナ島に
+迷い込んだマスター達は
+不思議な生物と出会った
+
+# textflame 0 0
+@
+その生物に『からまろ』
+と名付けたマスター達だったが、
+島に迷い込んだ理由はわからず仕舞い
+
+# textflame 0 0
+@
+だが、真夏の陽気にあてられてか
+みんな、「なんとかなるだろう」
+とふんわり考えていたのだった…
+
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：海辺
+# bgm "stop"
+# background "sea_palmbeach_day"
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# serif 1
+# textflame 1 1
+# textwindow "toge"
+;;？？？（ほむら）
+@？？？
+まどか、危ない！！！
+
+# emotionbody 1000 1 2401111 10 220
+# effectpattern 1000 2 0
+# effectstart 1000
+# move 805121 2 0
+# mask 805121 on
+# alpha 805121 1 0.5
+# move 2401111 4 0
+# mask 2401111 on
+# alpha 2401111 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 2401111 "sad"
+# voice 4011 "madoka_battle_0008"
+@まどか
+きゃっ！？
+
+# emotionbody 2000 1 805121 10 240
+# effectpattern 2000 2 0
+# effectstart 2000
+# textflame 1 1
+# textboxarrow 0 1
+@からまろ
+キュッ！？
+
+;;演出：攻撃エフェクト
+# se "SE_12352"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# alpha 805121 0 0.5
+# alpha 2401111 0 0.5
+# textflame 0 0
+@
+突如としてまどかとからまろの
+間に降り注いだ攻撃…
+
+;;演出：ほむら水着Ver.in
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# alpha 2501311 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 2501311 "angry"
+# voice 5013 "homura_0011"
+@ほむら
+…まどか、早くソイツから離れて
+
+# textflame 0 0
+@
+現れたのはまどか達と同じく
+離れ離れになっていたほむらだった
+
+# textflame 1 1
+# textboxarrow 0 2
+@ほむら
+…………
+
+# textflame 0 0
+@
+まどかを助けるつもりで
+颯爽と登場したほむらだが…
+
+# alpha 2501311 0 0.5
+# alpha 2501411 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2501411 "normal"
+# voice 5014 "mami_0002"
+@マミ
+からまろは敵じゃないのよ、暁美さん
+
+# alpha 2501411 0 0.5
+# alpha 2501311 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2501311 "angry"
+# voice 5013 "homura_0007"
+@ほむら
+…そう
+確かに敵意は感じないけど
+危険がないとはいいきれないわ
+
+# textflame 1 1
+# textboxarrow 0 2
+@ほむら
+排除しておいたほうが
+安全じゃないかしら
+
+# alpha 2501311 0 0.5
+# alpha 805121 1 0.5
+# face 2401111 "normal"
+# alpha 2401111 1 0.5
+# se "SE_0928"
+# textflame 1 1
+# textboxarrow 0 1
+@からまろ
+キュ～
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 4011 "madoka_0002"
+@まどか
+大丈夫だよ
+からまろは悪い子じゃ
+ないから
+
+# alpha 805121 0 0.5
+# alpha 2401111 0 0.5
+# alpha 2501311 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2501311 "angry"
+# voice 5013 "homura_0032"
+@ほむら
+分かったわ
+少し様子をみることにするわ
+
+# alpha 2501311 0 0.5
+# move 139 2 0
+# mask 139 on
+# face 139 "normal"
+# alpha 139 1 0.5
+# move 2103811 4 0
+# mask 2103811 on
+# alpha 2103811 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 2103811 "usual"
+# voice 1038 "almace_0004"
+@アルマス
+ほむらは心配性ね
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9967 "titania_0003"
+@ティターニア
+とりあえず、ほむらさんの
+お話を聞いてみましょう
+
+;;演出：時間経過の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# bgmfile "bgm348_349" "BgmSeaEventBattle003" 0
+# alpha 139 0 0
+# alpha 2103811 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 2501311 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 2501311 "normal"
+@ほむら
+私が知っているのは
+異族という化け物が
+出没することだけよ
+
+# textflame 0 0
+@
+早速情報交換をする
+マスター達とほむら
+
+# textflame 0 0
+@
+知っていることはほとんど
+同じだが、海の家が他にも
+あるということがわかった
+
+# textflame 1 1
+# textboxarrow 0 2
+@ほむら
+つまり、からまろは
+異族ではないってことね
+
+# alpha 2501311 0 0.5
+# move 2103811 3 0
+# mask 2103811 off
+# alpha 2103811 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2103811 "usual"
+# voice 1038 "almace_0003"
+@アルマス
+逆に、異族に襲われてるくらいよ
+
+# emotionbody 3000 2 2401111 10 220
+# effectpattern 3000 1 1
+# effectstart 3000
+# alpha 2103811 0 0.5
+# move 2501311 2 0
+# mask 2501311 on
+# face 2501311 "normal"
+# alpha 2501311 1 0.5
+# alpha 2401111 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 2401111 "normal"
+@まどか
+ところでほむらちゃん
+手に持っているものは？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5013 "homura_0003"
+@ほむら
+これは武器よ
+
+# alpha 2501311 0 0.5
+# alpha 2401111 0 0.5
+# alpha 2501411 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2501411 "normal"
+@マミ
+武器って言っても
+ただの水鉄砲にしか
+見えないんだけど…
+
+# alpha 2501411 0 0.5
+# alpha 2501311 1 0.5
+# face 2401111 "normal"
+# alpha 2401111 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 2501311 "normal"
+@ほむら
+この島ではこれが
+一番の武器だって海の家で聞いたの
+実際に使っている人もたくさん見たわ
+
+# emotionbody 4000 2 2401111 10 220
+# effectpattern 4000 1 1
+# effectstart 4000
+# textflame 1 1
+# textboxarrow 0 3
+# face 2401111 "sad"
+# voice 4011 "madoka_0022"
+@まどか
+武器を使ってる人がたくさん？
+
+# alpha 2501311 0 0.5
+# alpha 2401111 0 0.5
+# move 2501411 2 0
+# mask 2501411 on
+# face 2501411 "normal"
+# alpha 2501411 1 0.5
+# move 2103811 4 0
+# mask 2103811 on
+# alpha 2103811 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 2103811 "usual"
+# voice 1038 "almace_0002"
+@アルマス
+…えっと、
+それって遊びで使う武器って
+意味だったんじゃないの？
+
+# textflame 0 0
+@
+たとえ遊び用だったとしても
+ほむらが放った攻撃は
+凄まじい威力だった、とマスター
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5014 "mami_0028"
+@マミ
+魔法少女としての
+力が働いているのかしら？
+
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+どっちにしろ、私達がいた
+海の家よりほむらが寄ったところ
+のほうが栄えてそうね
+
+# textflame 0 0
+@
+そこに行けば新たな手掛かりを
+得られるかもしれない
+と、マスター
+
+# alpha 2501411 0 0.5
+# alpha 2103811 0 0.5
+# move 2501311 3 0
+# mask 2501311 off
+# alpha 2501311 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2501311 "normal"
+@ほむら
+案内するわ
+こっちよ
+
+;;演出：移動の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 2501311 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 2501311 2 0
+# mask 2501311 on
+# face 2501311 "normal"
+# alpha 2501311 1 0.5
+# move 2103811 4 0
+# alpha 2103811 1 0.5
+# mask 2103811 on
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 2103811 "usual"
+@アルマス
+…人の気配ね
+それもずいぶん多い
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5013 "homura_0003"
+@ほむら
+ええ、海の家はもうすぐよ
+
+# alpha 2501311 0 0.5
+# alpha 2103811 0 0.5
+# move 805121 3 0
+# mask 805121 off
+# alpha 805121 1 0.5
+# se "SE_0928"
+# textflame 1 1
+# textboxarrow 0 2
+@からまろ
+キュ、キュッキュー！
+
+;;演出：駆けていくからまろ
+# leftout 805121 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 805121 0 0
+# face 2501411 "normal"
+# alpha 2501411 1 0.5
+# alpha 2401111 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 2401111 "angry"
+# textwindow "normal"
+@まどか
+からまろ！？
+急に飛び出したりしちゃダメだよ！
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5014 "mami_0004"
+@マミ
+ふふっ、人懐っこい子だし
+たくさん人がいるところが
+好きなのかもしれないわね
+
+# alpha 2501411 0 0.5
+# alpha 2401111 0 0.5
+# move 2501311 2 0
+# face 2501311 "normal"
+# alpha 2501311 1 0.5
+# mask 2501311 on
+# move 2103811 4 0
+# alpha 2103811 1 0.5
+# mask 2103811 on
+# textflame 1 1
+# textboxarrow 0 3
+# face 2103811 "usual"
+# voice 1038 "almace_0032"
+@アルマス
+人が集まっているなら警戒して
+そうそう異族も襲ってこないだろうし
+少しは安心ね
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 2501311 "angry"
+# voice 5013 "homura_0009"
+@ほむら
+…そうでもなさそうね
+何か様子がおかしいわ
+
+# alpha 2501311 0 0.5
+# alpha 2103811 0 0.5
+# textflame 0 0
+@
+ほむらの忠告に身構える一同
+耳を澄ますと人々の気配は
+いつの間にかなくなっていた…
+
+;;演出：次の杏子、セリフのみ
+# serif 1
+# textwindow "nomal"
+@？？？
+おわっ！
+なんだコイツ！
+
+# serif 0
+# textflame 0 0
+@
+代わりに
+聞き覚えのある声が響く
+
+;;演出：杏子水着Ver.立ち絵表示
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# move 805121 2 0
+# alpha 805121 1 0.5
+# mask 805121 on
+# move 2301511 4 0
+# mask 2301511 on
+# alpha 2301511 1 0.5
+# waitandnext 0.8
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 2301511 "sad"
+# voice 3015 "kyoko_0023"
+@杏子
+ったく、突然出てきて
+びっくりするじゃねぇか…
+って、そこにいるのマスターか？
+
+# textflame 0 0
+@
+飛び出したからまろが
+じゃれていたのは離れ離れになった
+内のひとり、杏子だった
+
+# textflame 1 1
+# textboxarrow 0 3
+@杏子
+おーいマスター
+コイツなんとかしてくれよ…
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 3015 "kyoko_0027"
+@杏子
+悪いヤツじゃないみたいだけど
+こう、ウロチョロされたら
+邪魔で仕方がないっての
+
+# alpha 805121 0 0.5
+# alpha 2301511 0 0.5
+# move 2501411 1 0
+# mask 2501411 on
+# alpha 2501411 1 0.5
+# move 2501311 3 0
+# mask 2501311 on
+# face 2501311 "angry"
+# alpha 2501311 1 0.5
+# move 2401111 5 0
+# mask 2401111 on
+# face 2401111 "angry"
+# alpha 2401111 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 2501411 "angry"
+# voice 5014 "mami_0002"
+@マミ
+あのままだと危険ね
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5013 "homura_0028"
+@ほむら
+ええ、始末するしかないわ
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 4011 "madoka_0003"
+@まどか
+そうだね、ほむらちゃん
+
+# emotionbody 5000 1 2301511 10 280
+# effectpattern 5000 2 0
+# effectstart 5000
+# alpha 2501411 0 0.5
+# alpha 2501311 0 0.5
+# alpha 2401111 0 0.5
+# move 2301511 3 0
+# mask 2301511 off
+# alpha 2301511 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2301511 "sad"
+# voice 3015 "kyoko_0022"
+@杏子
+お、オイ…いきなり物騒だな
+って、おわああっ！？
+
+# alpha 2301511 0 0.5
+# alpha 2811004 1 0.5
+# se "SE_0617"
+# textflame 1 1
+# textboxarrow 0 2
+@異族
+グギャァァァッ！
+
+# textflame 0 0
+@
+海の中に潜んでいた異族が
+杏子に襲い掛かる
+
+# alpha 2811004 0 0.5
+# move 2103811 3 0
+# mask 2103811 off
+# alpha 2103811 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2103811 "angry"
+# voice 1038 "almace_battle_0005"
+@アルマス
+先にアイツを退治しないとね！

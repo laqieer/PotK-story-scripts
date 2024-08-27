@@ -1,0 +1,456 @@
+;;-----------------------------------------
+;;ファンキル　10月学園イベント2020シナリオ
+;;【エンディング】
+;;スクリプト最後の背景：体育館
+;;背景：黒バック
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "stop"
+;;-----------------------------------------
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 2
+# alpha 0 0 0
+# mask 0 off
+;;学園ティルフィング
+# body 101491
+# pos 101491 3
+# scale 101491 0.8 0
+# layer 101491 2
+# alpha 101491 0 0
+# mask 101491 off
+;;アルマス (学園)
+# body 3103831
+# pos 3103831 3
+# scale 3103831 0.8 0
+# layer 3103831 2
+# alpha 3103831 0 0
+# mask 3103831 off
+;;ケラウノス 制服ver.
+# body 500151
+# pos 500151 3
+# scale 500151 0.8 0
+# layer 500151 2
+# alpha 500151 0 0
+# mask 500151 off
+;;-----------------------------------------
+;;【エンディング】
+;;//背景：黒バック
+;;モノローグ
+# textflame 0 0
+@
+波乱の幕開けから
+しばらく後…
+
+;;//演出：場面転換
+;;//背景：体育館
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "gymnasium"
+# move 500151 2 0
+# face 500151 "sad"
+# alpha 500151 1 0
+# mask 500151 on
+# move 3103831 4 0
+# face 3103831 "normal"
+# alpha 3103831 1 0
+# mask 3103831 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm183_story" "BgmGakuen003" 0
+# voice 5001 "keraunosu_0015"
+# textflame 1 1
+# textboxarrow 0 1
+# textwindow "normal"
+@ケラウノス
+…ううっ、アルマス～っ！！
+帰らないでよ～、寂しいよ～！
+
+# emotionbody 1001 1 3103831 10 310
+# effectpattern 1001 2 0
+# effectstart 1001
+# voice 1038 "almace_0023"
+# face 3103831 "surprise"
+# textboxarrow 0 3
+@アルマス
+うわっ！？
+んもう、そんなに
+泣くことないでしょ！
+
+# face 3103831 "normal"
+# textboxarrow 0 3
+@アルマス
+またそのうち会えるわよ
+そんなに遠い学園じゃないから
+
+# se "SE_6504"
+# emotionbody 1002 3 500151 10 290
+# effectpattern 1002 1 3
+# effectstart 1002
+# voice 5001 "keraunosu_0004"
+# face 500151 "happy"
+# textboxarrow 0 1
+@ケラウノス
+うん、そうだね…
+絶対にまた会おうね！
+
+;;モノローグ
+# textflame 0 0
+@
+花束を持ったアルマスのもとに
+仲良しの生徒達が駆け寄る
+
+;;モノローグ
+@
+視察の最終日…
+ついにアルマスが
+この学園を去る日となった
+
+# voice 5001 "keraunosu_0031"
+# face 500151 "shy"
+# textflame 1 1
+# textboxarrow 0 1
+@ケラウノス
+ごめんね、私のせいで
+いろいろ迷惑かけて…
+
+# emotionbody 1003 2 3103831 10 290
+# effectpattern 1003 1 1
+# effectstart 1003
+# textboxarrow 0 3
+@アルマス
+迷惑？
+…あぁ、噂のこと？
+
+# voice 1038 "almace_0033"
+# textboxarrow 0 3
+@アルマス
+別に構わないわ
+あなただけのせいって
+わけでもないだろうし…
+
+# voice 1038 "almace_0004"
+# face 3103831 "happy"
+# textboxarrow 0 3
+@アルマス
+それに…もうみんな、
+そんなこと覚えてないでしょ？
+
+;;モノローグ
+# textflame 0 0
+@
+そう言って、
+晴れやかな顔で
+笑いかけるアルマス
+
+;;モノローグ
+@
+デュリンに宣言した通り…
+アルマスはすっかり
+この学園に馴染み
+
+;;モノローグ
+@
+マスターとの恋の噂は、
+すっかり風化して
+しまったのだった
+
+# alpha 500151 0 0.5
+# move 101491 2 0
+# face 101491 "normal"
+# alpha 101491 1 0.5
+# mask 101491 on
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+アルマス！
+
+# face 3103831 "normal"
+# textboxarrow 0 3
+@アルマス
+あぁ、ティルフィング…
+
+# voice 1038 "almace_0030"
+# textboxarrow 0 3
+@アルマス
+いろいろとありがとね
+あなたのおかげで
+良い視察ができたわ
+
+# se "SE_6504"
+# emotionbody 1004 3 101491 10 290
+# effectpattern 1004 1 3
+# effectstart 1004
+# voice 1014 "tyrufing_0004"
+# face 101491 "happy"
+# textboxarrow 0 1
+@ティルフィング
+ふふ…
+お役に立てて良かったです
+
+# voice 9999 "durin_0007"
+# alpha 101491 0 0.5
+# move 0 2 0
+# face 0 "normal"
+# alpha 0 1 0.5
+# mask 0 on
+# textboxarrow 0 1
+@デュリン
+ふんっ！
+ティターニアに
+よろしく言っときなさいよね！
+
+# voice 1038 "almace_0003"
+# textboxarrow 0 3
+@アルマス
+わかった！
+あなたもありがとう、
+デュリン理事長
+
+# textboxarrow 0 3
+@アルマス
+ここは本当に良い学園だわ
+…できるならもう少し
+通っていたかったけど
+
+# face 0 "usual"
+# textboxarrow 0 1
+@デュリン
+まぁ…たまにだったら
+遊びに来てもいいんじゃない
+
+# textboxarrow 0 1
+@デュリン
+マスターも喜ぶだろうし
+…ねっ！
+
+;;モノローグ
+# alpha 0 0 0.5
+# alpha 3103831 0 0.5
+# textflame 0 0
+@
+近くにいたマスターを
+呼びつけるデュリン
+
+;;モノローグ
+@
+アルマスとマスターは
+しばし見つめ合い…
+小さく笑みをこぼす
+
+# voice 1038 "almace_0001"
+# move 3103831 3 0
+# face 3103831 "normal"
+# alpha 3103831 1 0.5
+# mask 3103831 off
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+ずいぶんドタバタ
+しちゃったけど…
+本当にありがと、マスター
+
+# face 3103831 "happy"
+# textboxarrow 0 2
+@アルマス
+あなたがパートナーで
+いてくれて、私…
+絶・嬉しかったわ！
+
+# bgm "stop"
+# face 3103831 "normal"
+# textboxarrow 0 2
+@アルマス
+良かったらまたいつか…
+…うん？
+
+;;//ＳＥ：ブーッ、ブーッ…（スマホのバイブ音）
+# se "SE_0956"
+# waitandnext 0.5
+
+# textboxarrow 0 2
+@アルマス
+電話…ティニからだわ
+
+# sestop "SE_0956"
+# textboxarrow 0 2
+@アルマス
+ちょっとごめん
+
+;;//ＳＥ：ピッ（電話に出る音）
+# sedelay "SE_0957" 0.5
+# waitandnext 0.7
+
+# textboxarrow 0 2
+@アルマス
+もしもし？
+どうしたの、ティニ？
+
+# voice 1038 "almace_0032"
+# textboxarrow 0 2
+@アルマス
+ええ、ついさっき
+送別会が終わったところ…
+
+# voice 1038 "almace_0009"
+# face 3103831 "surprise"
+# textboxarrow 0 2
+@アルマス
+うん、うん…
+…はぁっ！？
+
+# emotionbody 1005 1 3103831 10 310
+# effectpattern 1005 2 0
+# effectstart 1005
+# face 3103831 "angry"
+# textboxarrow 0 2
+@アルマス
+ち、ちょっと！
+どういうこと！？
+絶・聞いてないんだけどっ！
+
+# textboxarrow 0 2
+@アルマス
+…今朝決まったぁ！？
+なんでもっと早く
+言ってくれないのよ！
+
+# textboxarrow 0 2
+@アルマス
+えっ、忙しいから切る！？
+待ちなさいティニっ、
+ちょっ…！！
+
+;;//ＳＥ：ツーッ、ツーッ…（電話が切れた音）
+# se "SE_0958"
+# waitandnext 0.5
+
+# textboxarrow 0 2
+@アルマス
+…………
+
+# emotionbody 1006 2 101491 0 290
+# effectpattern 1006 1 1
+# effectstart 1006
+# move 101491 2 0
+# face 101491 "surprise"
+# alpha 101491 1 0.5
+# mask 101491 on
+# textboxarrow 0 1
+# move 3103831 4 0.5
+# mask 3103831 on
+@ティルフィング
+ど、どうしたんですか？
+何かトラブルが…？
+
+# face 3103831 "sad"
+# textboxarrow 0 3
+@アルマス
+あー、いや…
+それがその、実は…
+
+# bgm "bgm006" 0
+# textboxarrow 0 3
+@アルマス
+私の視察期間、もうしばらく
+延長することになったって…
+
+# alpha 101491 0 0.5
+# alpha 3103831 0 0.5
+# move 0 3 0
+# face 0 "serious"
+# alpha 0 1 0.5
+# mask 0 off
+# textboxarrow 0 2
+@デュリン
+えっ
+
+# alpha 0 0 0.5
+# move 3103831 3 0
+# face 3103831 "sad"
+# alpha 3103831 1 0.5
+# mask 3103831 off
+# textboxarrow 0 2
+@アルマス
+私の報告書、けっこう
+良い出来だったみたいで…
+もっと情報を集めてほしいって
+
+# textboxarrow 0 2
+@アルマス
+だからその…もうしばらく、
+ここでお世話になるみたい…
+
+;;モノローグ
+# textflame 0 0
+@
+アルマスの言葉を聞いて、
+別れを惜しんでいた生徒達が
+いっせいに盛り上がる
+
+# emotionbody 1007 6 0 60 160
+# effectpattern 1007 1 1
+# effectstart 1007
+# voice 9999 "durin_0010"
+# alpha 3103831 0 0.5
+# move 0 3 0
+# face 0 "angry"
+# alpha 0 1 0.5
+# mask 0 off
+# textflame 1 1
+# textboxarrow 0 2
+@デュリン
+ち、ちょっと待ちなさいよ！！
+そんなの聞いてないわよっ、
+もぉ～っ！！
+
+# voice 1014 "tyrufing_0005"
+# alpha 0 0 0.5
+# move 101491 3 0
+# face 101491 "happy"
+# alpha 101491 1 0.5
+# mask 101491 off
+# textboxarrow 0 2
+@ティルフィング
+ふふふ…
+こちらも手続きを
+進めないとですね！
+
+# voice 1038 "almace_0008"
+# alpha 101491 0 0.5
+# move 3103831 3 0
+# face 3103831 "happy"
+# alpha 3103831 1 0.5
+# mask 3103831 off
+# textboxarrow 0 2
+@アルマス
+あ、あはは…
+絶・ありがとう、みんな！
+
+# voice 1038 "almace_0001"
+# face 3103831 "normal"
+# textboxarrow 0 2
+@アルマス
+マスター、あなたも…
+もうしばらくよろしくね？
+
+;;モノローグ
+# textflame 0 0
+@
+アルマスとマスターは、
+みんなの輪の中で
+固く強い握手を交わす
+
+;;モノローグ
+@
+パートナーとしての
+二人の関係は、
+もうしばらく続きそうだ…

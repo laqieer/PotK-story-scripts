@@ -1,0 +1,447 @@
+;;-----------------------------------------
+;;SEA2章_2
+;;-----------------------------------------
+# script "lisp"
+# background "town_night_2"
+# bgm "bgm002" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 1 0
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 1 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：町（夜）
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# face 270 "normal"
+# face 6504011 "usual"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+すっかり日が暮れてしまいましたが、
+今日中に辿り着くことができました
+
+# voice 9917 "mimir_navikan_0001"
+# textboxarrow 0 1
+@ミーミル
+マスター様
+こちらがジーゲルの町でございます
+
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+何だか、
+のんびりした雰囲気のところだね～
+
+# voice 9917 "mimir_navikan_0004"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+気候が穏やかで
+過ごしやすいからでしょう
+
+# textboxarrow 0 1
+@ミーミル
+私の持っている情報を見る限り、
+近年、目立った事件は
+起きておりません
+
+# textboxarrow 0 1
+@ミーミル
+５０年以上、平穏が保たれている
+町のようです
+
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+ですが、ティルフィング様は
+「揺らぎ」が発生していると
+仰っておりました
+
+# textboxarrow 0 1
+@ミーミル
+何が起きるか分かりません
+警戒を怠らずに参りましょう
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# serif 1
+# textwindow "nomal"
+@町人１
+た、大変だーっ！！
+
+# serif 0
+# voice 9917 "mimir_navikan_0024"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+きゃっ
+今の声は…
+
+# serif 0
+# textboxarrow 0 3
+@マナナン
+あっちの方だね！
+喜劇的なことが起きたのかなっ？
+
+# se "SE_0902"
+# se "SE_6201"
+# serif 1
+@町人２
+出たぞー！
+怪盗だー！
+
+# serif 0
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+怪盗…？
+
+# serif 1
+@町人３
+怪盗だ！
+怪盗シェキナーだぁぁぁ！
+
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+怪盗…シェキナーさん！？
+
+# serif 0
+# voice 650401 "manannan_ura_0005"
+# face 6504011 "happy"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+喜劇的に愉快なことが
+起きてるみたいだねっ
+
+;;マナナンが走っていく
+# se "SE_5575"
+# move 6504011 3 0.7
+# scale 6504011 0.7 0.7
+# alpha 6504011 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# sestop "SE_6201"
+# bgm "bgm005" 0
+# alpha 270 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_0902"
+# serif 1
+# textwindow "nomal"
+@町人１
+何てことだ…
+家宝のダイヤモンドが盗まれた…
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 0
+@町人４
+あんたもやられちまったのか
+うちも先日、エメラルドの指輪を…
+
+# serif 1
+@町人５
+私なんか、夫に内緒で買った
+ペンダントを盗まれたのよっ
+
+# serif 0
+# textboxarrow 0 0
+@町人６
+金庫に厳重に仕舞ってあったのに…
+怪盗シェキナーには
+通用しないのかよ…！
+
+# move 270 3 0
+# face 270 "sad"
+# alpha 270 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+皆さん、嘆いておられます
+
+# voice 9917 "mimir_navikan_0002"
+# face 270 "normal"
+# textboxarrow 0 2
+@ミーミル
+あの…少しよろしいでしょうか？
+怪盗シェキナーというのは…
+
+# serif 1
+# textwindow "nomal"
+@町人達
+あんたら、旅人かい？
+荷物には気をつけた方が良いよ
+特に宝石類は
+
+# serif 1
+@町人達
+最近、とてつもない腕前の怪盗が
+現れたんだ
+
+# serif 1
+@町人達
+二人組の手下を従えて、
+夜な夜な宝石を盗んでいく
+その名も…
+
+# serif 1
+@町人達
+怪盗シェキナー！！
+
+# serif 1
+@町人達
+怪盗シェキナーに狙われたら、
+どんな宝石だって盗まれてしまうんだ
+恐ろしい怪盗だよ…
+
+# serif 1
+@町人達
+どれだけ厳重に警備していても
+無駄なのよねぇ…
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 5
+# move 6504011 5 0
+# scale 6504011 0.8 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+…………
+
+# voice 650401 "manannan_ura_0039"
+# move 6504011 4 0.5
+# face 6504011 "happy"
+# alpha 6504011 1 0.3
+# move 270 2 0.5
+# textboxarrow 0 3
+@マナナン
+すごいね！
+怪盗シェキナー、会ってみたいな♪
+
+# voice 9917 "mimir_navikan_0002"
+# textboxarrow 0 1
+@ミーミル
+あの、マスター様…
+
+;;選択肢
+# select "信じられないな" "select_label_01" "人違いでは？" "select_label_01"
+二人組の手下を従えて、
+夜な夜な宝石を盗んでいく
+その名も…怪盗シェキナー！！
+
+# label "select_label_01"
+# voice 9917 "mimir_navikan_0003"
+# textboxarrow 0 1
+@ミーミル
+はい
+私も疑問を抱いております
+
+# textboxarrow 0 1
+@ミーミル
+シェキナーさんはとても真面目な方と
+伺っておりますので
+
+# textboxarrow 0 1
+@ミーミル
+キラキラと輝く物がお好きとも
+聞き及んでおりますし、派手な
+ファッションを好まれるそうです
+
+# textboxarrow 0 1
+@ミーミル
+ですが、とても規律に厳しい方で
+他人様の物を盗むようなキル姫では
+ないと理解しております
+
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+これは、やはり…「揺らぎ」の
+影響ではないでしょうか…
+
+# textboxarrow 0 1
+@ミーミル
+「揺らぎ」によってシェキナーさんが
+暴走してしまっているのであれば、
+早くお止めしなければ
+
+# voice 650401 "manannan_ura_0004"
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+怪盗シェキナーを捕まえるのっ？
+楽しそうだね！
+
+# voice 9917 "mimir_navikan_0001"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+マスター様
+今夜は旅の疲れもあるでしょうから
+ひとまずお休みください
+
+# textboxarrow 0 1
+@ミーミル
+明日から、怪盗シェキナーについて
+情報を集めましょう
+
+;;暗転
+# fadeout "black" 0.8
+# waitandnext 0.8
+
+;;背景：町
+# background "town_2"
+# bgm "stop"
+# alpha 6504011 0 0
+# alpha 270 0 0
+# textwindow "close"
+# waitandnext 0.4
+
+# fadein "black" 0.8
+# waitandnext 0.8
+
+# voice 9917 "mimir_navikan_0001"
+# move 270 3 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+おはようございます、
+マスター様
+早速ですが――
+
+# se "SE_0902"
+# bgm "bgm005" 0
+# serif 1
+# textwindow "nomal"
+@町人１
+た、大変だー！
+
+# serif 0
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 2
+@ミーミル
+えっ？
+まさか、こんな朝から
+怪盗シェキナーさんが…
+
+# serif 1
+@町人１
+怪盗シェキナーの予告状だー！
+
+# serif 1
+@町人２
+俺も見つけたぞ！
+
+# serif 1
+@町人３
+町中に配っていったみたいだぞ
+何て大胆な怪盗なんだ…
+
+# alpha 270 0 0.3
+# move 6504011 3 0
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@マナナン
+予告状だって！
+見せてもらいに行こうよ！
+
+;;マナナンが走り出す
+# se "SE_5575"
+# se "SE_9430"
+# move 6504011 1 0.5
+# alpha 6504011 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# move 6504011 5 0
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+あっ…
+マナナンさん、お待ちください
+
+;;マナナンが戻ってくる
+# se "SE_5575"
+# move 6504011 4 0.5
+# face 6504011 "usual"
+# alpha 6504011 1 0.3
+# move 270 2 0.5
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# voice 650401 "manannan_ura_0002"
+# textboxarrow 0 3
+@マナナン
+ねえねえ
+あっちにお爺ちゃんが倒れてるよ
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+えっ？
+それは大変です
+
+;;マナナンとミーミルが走っていく
+# se "SE_6209"
+# move 6504011 3 0.7
+# alpha 6504011 0 0.5
+# textwindow "close"
+# waitandnext 0.2
+
+# move 270 1 0.5
+# alpha 270 0 0.5
+# waitandnext 0.5
+
+# fadeout "black" 1
+# waitandnext 1

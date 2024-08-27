@@ -1,0 +1,246 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー13章
+;;第5話　タイトル：地上の守り手
+;;5_5_3
+;;背景：ティルヘルム
+;;-----------------------------------------
+# script "lisp"
+# background "fairy_world"
+# bgmfile "bgm323_324" "BgmLostRagnarokCommand" 0
+;;-----------------------------------------
+;;レーヴァテイン
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# alpha 3100211 0 0
+# layer 3100211 1
+;;ムー
+# body 161
+# pos 161 4
+# scale 161 0.6 0
+# alpha 161 0 0
+# layer 161 5
+;;カリス
+# body 3602511
+# pos 3602511 3
+# scale 3602511 0.8 0
+# alpha 3602511 0 0
+;;ソロモン
+# body 3503111
+# pos 3503111 3
+# scale 3503111 0.8 0
+# alpha 3503111 0 0
+;;ヘレナ
+# body 3302811
+# pos 3302811 3
+# scale 3302811 0.8 0
+# alpha 3302811 0 0
+# layer 3302811 1
+;;ニール
+# body 162
+# pos 162 4
+# scale 162 0.6 0
+# alpha 162 0 0
+# layer 162 5
+;;フライシュッツ
+# body 3502719
+# pos 3502719 3
+# scale 3502719 0.8 0
+# alpha 3502719 0 0
+# layer 3502719 5
+;;スイハ
+# body 3401719
+# pos 3401719 3
+# scale 3401719 0.8 0
+# alpha 3401719 0 0
+;;-----------------------------------------
+# alpha 161 1 0
+# mask 3100211 off
+# face 3100211 "normal"
+# alpha 3100211 1 0
+# textboxarrow 0 3
+# voice 9953 "mwu_0037"
+@ムー
+何だか戦いづらいぜ、レヴァ…！
+こいつら連携はさっぱりなのに
+それで成立しちまってる…
+
+# textboxarrow 0 2
+;;# face 3100211 ""
+# voice 310021 "revatein_ge_0028"
+@レーヴァテイン
+仲間に当たるのも構わず矢を放つ
+スイハ…敵味方関係なく攻撃を
+受けても喜んでいる…ダモクレス
+
+# alpha 161 0 0.5
+# alpha 3100211 0 0.5
+# mask 3503111 off
+# alpha 3503111 1 0.5
+# textboxarrow 0 2
+# face 3503111 "normal"
+# voice 5031 "solomon_t_0026"
+@ソロモン
+それに、さっきから全く動こうと
+しない斬ル姫が一人いるわ
+どういうこと？
+
+# alpha 3503111 0 0.5
+# alpha 161 1 0.5
+# alpha 3100211 1 0.5
+# textboxarrow 0 2
+# face 3100211 "normal"
+;;# voice 310021 "revatein_ge_00"
+@レーヴァテイン
+彼女は…フライシュッツね
+確かに戦いを眺めているだけで
+自分は何もしようとしない…
+
+# alpha 161 0 0.5
+# alpha 3100211 0 0.5
+# mask 3302811 off
+# alpha 3302811 1 0.5
+# textboxarrow 0 2
+# face 3302811 "normal"
+;;# voice 3028 "herena_a_00"
+@ヘレナ
+考えていても仕方ない
+ヘレナは攻め続けるよ！
+
+;;ヘレナの攻撃
+# se "SE_10521"
+# textwindow "close"
+# rightout 3302811 0.3
+# waitandnext 0.3
+
+# alpha 3302811 0 0
+# mask 3401719 off
+# alpha 3401719 1 0.5
+# waitandnext 0.5
+
+;;がスイハをかする
+# mask 3401719 on
+# move 3401719 5 0.3
+# move 3302811 3 0
+# mask 3302811 on
+# alpha 3302811 1 0
+# leftin 3302811 0.3
+# waitandnext 0.2
+
+# fadein "white" 0.3
+# move 3302811 2 0.3
+# move 3401719 4 0.3
+# waitandnext 0.3
+
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3401719 "angry"
+# voice 340171 "suiha_c_battle_0005"
+@スイハ
+くっ…
+フライシュッツ！
+私を守りなさい
+
+# alpha 3302811 0 0.5
+# alpha 3401719 0 0.5
+# mask 3502719 off
+# alpha 3502719 1 0.5
+# textboxarrow 0 2
+;;# face 3502719 ""
+# voice 350271 "freischotz_c_0033"
+@フライシュッツ
+おまかせ～！
+お姉ちゃん、スイハちゃんのために
+何でもするからね～っ
+
+# alpha 3502719 0 0.5
+# mask 3302811 off
+# move 3302811 3 0
+# alpha 3302811 1 0.5
+# alpha 162 1 0.5
+# textboxarrow 0 2
+# face 3302811 "normal"
+;;# voice 3028 "herena_a_00"
+@ヘレナ
+命令されないと動かないだなんて…
+まるで人形だなっ
+
+# textboxarrow 0 3
+# voice 9952 "nir_0044"
+@ニール
+ヘレナ！
+スイハを攻撃すると見せかけて
+ダモクレスの背中を狙うわよっ
+
+# textboxarrow 0 2
+;;# face 3302811 ""
+;;# voice 3028 "herena_a_00"
+@ヘレナ
+いいね！
+レーヴァが引きつけているところに
+ヘレナの一撃を！
+
+# se "SE_10523"
+# waitandnext 0.5
+
+;;フライシュッツが身を挺して止める
+# se "SE_4815"
+# mask 3302811 on
+# move 3302811 4 0.3
+# move 162 5 0.3
+# mask 3502719 on
+# alpha 3502719 1 0
+# leftin 3502719 0.3
+# waitandnext 0.2
+
+# fadein "white" 0.3
+# waitandnext 0.5
+
+# move 3502719 2 0.3
+# waitandnext 0.3
+
+# textboxarrow 0 3
+# face 3302811 "surprise"
+# voice 3028 "herena_a_0022"
+@ヘレナ
+自分を盾にした！？
+何の真似だっ
+
+# textboxarrow 0 1
+;;# face 3502719 ""
+# voice 350271 "freischotz_c_0004"
+@フライシュッツ
+わたしはね～…スイハちゃんだけ
+じゃなくて～、コマンドキラーズの
+みんなを守るんだよ～
+
+# textboxarrow 0 1
+;;# face 3502719 ""
+;;# voice 350271 "freischotz_c_00"
+@フライシュッツ
+大切なものを奪っていく
+悪い敵からね～っ！
+
+;;フライシュッツがヘレナを攻撃する
+# se "SE_11092"
+# move 3502719 3 0.2
+# fadein "red" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# face 3302811 "angry"
+# voice 3028 "herena_a_0038"
+@ヘレナ
+あぐっ…
+
+# alpha 3502719 0 0.5
+# alpha 3302811 0 0.5
+# alpha 162 0 0.5
+# mask 3602511 off
+# alpha 3602511 2 0.5
+# textboxarrow 0 2
+# face 3602511 "angry"
+# voice 6025 "chalice_t_0046"
+@カリス
+ヘレナ！

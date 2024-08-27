@@ -1,0 +1,196 @@
+;;-----------------------------------------
+;;でんぱ3_3
+;;-----------------------------------------
+# script "lisp"
+# background "highland"
+# bgmfile "bgm403" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;nemo
+# body 5402411
+# pos 5402411 4
+# scale 5402411 0.8 0
+# layer 5402411 3
+# mask 5402411 off
+# alpha 5402411 1 0
+# face 5402411 "angry"
+;;pero
+# body 5503911
+# pos 5503911 1
+# scale 5503911 0.8 0
+# layer 5503911 4
+# alpha 5503911 0 0
+;;big izoku
+# body 810008
+# pos 810008 2
+# scale 810008 0.8 0
+# layer 810008 4
+# mask 810008 off
+# alpha 810008 1 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "mov2_1"
+# imagealpha 1 0 0
+# imagelayer 1 1
+# imagescale 1 1.1 0
+;;-----------------------------------------
+# fadein "black" 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@ねも
+今度は…
+私がぺろりんを助ける番だ！！
+
+# textflame 1 1
+# textboxarrow 0 1
+@異族
+グギィィィィィッ！！
+
+# textflame 0 0
+@
+異変を察知し、
+ねもに向かってくる異族
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 4024 "nemo_0029"
+@ねも
+くらえぇぇぇぇぇっ！！
+
+;;弓の攻撃エフェクト
+# se "SE_4301"
+# effectbody 1001 31 0 -200 0
+# effectstart 1001
+# waitandnext 0.5
+
+# se "SE_9020"
+# fadein "white" 1
+# move 810008 1 0.2
+# textflame 0 0
+@
+だが、ねもの放った光の矢が
+とてつもない威力で、
+異族を消し去るのだった
+
+;;異族倒れる
+# se "SE_3001"
+# alpha 810008 0 0.5
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5402411 "sad"
+# voice 4024 "nemo_0015"
+@ねも
+はぁ…はぁ…
+か、勝てた……
+
+# move 5402411 3 1
+# textflame 0 0
+@
+崩れ落ちそうになるねも
+
+# alpha 5503911 1 0.3
+# textflame 0 0
+@
+……の体を、ぺろりんが受け止めた
+
+# move 5503911 2 0.5
+# move 5402411 4 1
+# textflame 1 1
+# textboxarrow 0 3
+@ねも
+ぺろ…りん…
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5039 "perorin_0004"
+@ぺろりん
+ふふ…だから言ったでしょ？
+ねもちゃんは、
+もっと自信持っていいって
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5402411 "normal"
+# voice 4024 "nemo_0003"
+@ねも
+私も…言ったでしょ…？
+ぺろりんと一緒なら…
+
+# textflame 1 1
+# textboxarrow 0 3
+@ねも
+どんな苦しいことも…
+乗り越えられる気がするって
+
+# textflame 0 0
+@
+笑顔を見せ合うねもとぺろりん
+
+# textflame 0 0
+@
+２人はお互いの肩を抱きながら、
+次なる地を目指すのだった
+
+# textflame 0 0
+@
+だが、ねもの頭の中には
+あることが引っ掛かっていた
+
+;;モヤモヤ吹き出し
+# move 5402411 4 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+# face 5402411 "sad"
+@ねも
+誰なの……？
+
+;;モヤモヤ吹き出し
+@ねも
+私に手を差し伸べてくれた、
+あなたは一体……
+
+;;2人の立ち絵の消去
+# alpha 5402411 0 0.3
+# alpha 5503911 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+;;場面転換
+;;上空を見上げるイメージで上に向かって転換することは可能でしょうか。
+# imagealpha 1 1 1
+# imagepos 1 0 0
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+@
+空を見上げるねも
+
+# textflame 0 0
+@
+果たして、謎の声の主とは…
+
+# textflame 0 0
+@
+そして、
+２人の行く先に待ち受ける
+さらなる運命とは……！？
+
+# fadeout "white" 1.5
+# waitandnext 1.5
+
+# imagealpha 1 0 0
+# effectskip 1001
+# waitandnext 0.2
+
+# movieplay "denpa2021_nemo" "skip"
+# textwindow "close"
+# waitandnext 1

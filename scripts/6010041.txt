@@ -1,0 +1,886 @@
+;;【EP4】戦闘前/背景：理事長室
+# script "lisp"
+# background "presidentroom"
+# bgm "bgm005" 0
+# body 200481
+# body 100541
+# body 502021
+# alpha 200481 0 0
+# alpha 100541 0 0
+# alpha 502021 0 0
+# body 118
+# pos 118 4
+# scale 118 0.8 0
+# alpha 118 0 0
+# body 119
+# pos 119 3
+# scale 119 0.8 0
+# alpha 119 1 0
+# alpha 119 0 0
+# pos 100541 3
+# scale 100541 0.8 0
+# alpha 100541 1 0
+# alpha 100541 0 0
+# body 120
+# pos 120 3
+# scale 120 0.8 0
+# alpha 120 0 0
+# mask 120 on
+# body 300351
+# pos 300351 4
+# scale 300351 0.8 0
+# alpha 300351 0 0
+# body 111
+# pos 111 4
+# scale 111 0.8 0
+# body 0
+# pos 0 2
+# scale 0 0.8 0
+# textflame 1 1
+# textboxarrow 0 3
+# chara 119
+# voice 1014 "tyrufing_0028"
+@ティルフィング
+…「黒い霧」の発生は確認しました
+ただ、具体的にどういう異変が
+発生しているのかはわかりません
+
+# textboxarrow 0 1
+# chara 0
+# face 0 "occur"
+# voice 9999 "durin_0027"
+@デュリン
+んー、わからないことには
+解決のしようもないわけだから
+様子見かしらね～
+
+# textboxarrow 0 3
+# chara 119
+@ティルフィング
+…いえ、それではいけない気がします
+なにかしかけるべきでしょう
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textboxarrow 0 3
+# chara 119
+@ティルフィング
+恐らくは、マスターも動いている…
+そして、突破口を開いてくれると
+私は信じています…
+
+;;//場面転換
+;;//背景：中庭
+# fadeout "black" 2
+# imagealpha 0 1 2
+# imagepos 0 0 30
+# serif 0
+# textwindow "close"
+# waitandnext 2
+
+# fadein "black" 1
+# alpha 0 0 0
+# alpha 111 0 0
+# textwindow "normal"
+# textflame 0 0
+@
+―月曜日
+
+# fadeout "black" 2
+# waitandnext 2
+
+# fadein "black" 1
+# background "courtyard"
+# imagealpha 0 0 0.5
+# mask 120 off
+# textflame 1 1
+# alpha 120 1 0.5
+# textboxarrow 0 2
+# chara 120
+# voice 5020 "tasuramu_0002"
+@タスラム
+…おい、マスター！
+他の学校の昼飯のメニュー
+今週はなんだ？教えろ！
+
+# textflame 0 0
+@マスター
+わかった、ええと…
+ラグ女は豚の角煮定食みたいだね
+聖ユグは白身魚のフリッターだって
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 120
+# face 120 "sad"
+@タスラム
+んー、肉ならラグ女か…
+まぁそれでいいんだけどな！
+でも、聖ユグの方が豪華なんだよなー
+
+# textboxarrow 0 2
+# chara 120
+# face 120 "surprise"
+# voice 5020 "tasuramu_0038"
+@タスラム
+なんかもうずっと、聖ユグの
+ランチ食べてない気がするぞ！
+あそこは肉出すのやめたのか！？
+
+# textflame 0 0
+@マスター
+そんなことはないと思うけど…
+
+# textflame 0 0
+@マスター
+（でも、タスラムがこんなことを
+言い出すのも、なぜかしっくりくる
+気がする…どういうことだ…？）
+
+;;//場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# envbody 1000 5 0
+# effectpattern 1000 3 0
+# effectstart 1000
+# alpha 120 0 0
+# background "connecting_corridor_daytime"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@マスター
+学院が「黒い霧」で包まれてる…
+けど、どういうわけか
+予想通りって感じがあるんだよね…
+
+# textflame 0 0
+@マスター
+…まずは、様子を見てみないとね
+ひとまず、学院の中を見て回ろうかな
+
+;;//場面転換
+;;//背景：生徒会室（保健室の代わり／もっとよさそうなものがありましたら差し替えて下さい）
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# bgm "bgm004" 0.7
+# background "infirmary"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@マスター
+保健室…「黒い霧」のせいで
+調子の悪い子がいるなら
+ここで休んでないかな…？
+
+# emotionbody 5100 2 100541 10 250
+# effectpattern 5100 1 1
+# effectstart 5100
+# alpha 100541 1 0.5
+# mask 100541 off
+# textflame 1 1
+# textboxarrow 0 2
+# chara 100541
+@リットゥ
+おや…？
+マスターも休みにきたのか…？
+
+# textflame 0 0
+@マスター
+いや、僕は様子を見に来ただけで…
+リットゥ、具合悪いの？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 100541
+@リットゥ
+なんというか
+気持ちが沈んでしまっていて…
+とにかく眠いし…体がだるい…
+
+# emotionbody 6101 12 100541 50 120
+# effectpattern 6101 1 0
+# effectstart 6101
+# textboxarrow 0 2
+# chara 100541
+# voice 1005 "ritto_0028"
+@リットゥ
+はぁ…
+
+# textflame 0 0
+@マスター
+早く、元気になるといいね
+いつもみたいに…って
+あれ？いつもってどんなだったっけ
+
+# textflame 0 0
+@マスター
+…そうだ、風紀委員の活動
+頑張ってたんだっけか？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 100541
+# voice 1005 "ritto_0013"
+@リットゥ
+…お前はなにを言ってるんだ？
+私の仕事など
+日誌を書くことぐらい…だな
+
+# textflame 0 0
+@マスター
+…だとしたら、リットゥはどうして
+風紀委員になったの？
+やっぱり、楽ができそうだったから？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 100541
+# voice 1005 "ritto_0009"
+@リットゥ
+そんな理由があるか！
+私は、この学院が楽園となるよう
+風紀を守るために…
+
+# textboxarrow 0 2
+# chara 100541
+@リットゥ
+…あれ？
+でも、そんな必要はどこにも…？
+…ううっ…
+
+# textflame 0 0
+@マスター
+リットゥ、大丈夫！？
+
+# textflame 0 0
+@マスター
+…たぶん、リットゥは
+疲れちゃってるんだね
+休んでるとこ、邪魔してゴメン…
+
+# textflame 0 0
+@
+マスターはリットゥを休ませ
+保健室を後にした
+
+;;//場面転換
+;;//背景：廊下　昼
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imagerightin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# alpha 100541 0 0
+# background "corridor_daytime"
+# imagealpha 0 0 0.5
+# imageleftout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@マスター
+（リットゥが風紀委員になった理由…
+それと合致しない風紀委員の現状…
+「黒い霧」の影響…なんだろうな）
+
+# textflame 0 0
+@マスター
+（…風紀委員会の部屋、ここなんだ
+そうだ、リットゥがしばらく休むって
+誰かに伝えておこう）
+
+;;//場面転換
+;;//背景：生徒会室（風紀委員会室の代わり）
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# move 118 3 0
+# background "student_council_room_daytime"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+たまたま通りがかった
+風紀委員会室の扉に
+鍵はかかっていなかった
+
+# textflame 0 0
+@
+だが、リットゥのことを
+伝えるべき委員は不在のようだ
+
+# textflame 0 0
+@マスター
+あれ？あのノート…
+リットゥが言っていた日誌…かな？
+すごいことになってる…
+
+# textflame 0 0
+@
+机の上の日誌からは
+思わず目を背けたくなるほどに
+「黒い霧」があふれ出ていた
+
+# textflame 0 0
+@マスター
+なんだろう、これ…
+
+# textflame 0 0
+@
+日誌に記載されていたのは
+パラシュ、リットゥの担当者２人の
+名前と…
+
+# textflame 0 0
+@
+『本日も、聖ユグドラシル姫学院に
+発生した問題は０件』 
+という言葉
+
+# textflame 0 0
+@
+そして、金曜日には決まって
+次のように書かれている
+
+# textflame 0 0
+@
+『本日も、聖ユグドラシル姫学院に
+発生した異常は０件
+来週も、そうあることを願う』 
+
+# textflame 0 0
+@
+それがほぼ２０週間分…
+１００日近く続いている
+
+# textflame 0 0
+@マスター
+（さすがに１００日も
+日誌に書くことがなにもないって
+ないんじゃないか…？）
+
+# textflame 0 0
+@
+マスターはふと
+タスラムやリットゥとの会話で抱いた
+違和感や既視感を思い起こした
+
+# bgm "bgm031" 0.7
+# textflame 0 0
+@マスター
+（１００日…そうか！
+以前の記憶が
+おかしいんじゃなくて…）
+
+# textflame 0 0
+@マスター
+（『今』がおかしいんだ！！）
+
+# textflame 0 0
+@マスター
+（日誌で繰り返されている通りに
+月曜から金曜までが
+繰り返されているとしたら…）
+
+# textflame 0 0
+@
+金曜日に書き込まれた
+『来週も、そうあることを願う』
+という言葉通りに…
+
+# textflame 0 0
+@マスター
+（もしかして…この日誌が
+全ての元凶なんじゃないかな？
+だったらこの日誌を破れば…）
+
+# textflame 0 0
+@
+…マスターは渾身の力を込め
+日誌を真っ二つに破った
+
+;;//SE:日誌を破る音
+# fadein "white" 0.5
+# waitandnext 1
+# se "SE_0720"
+
+# textflame 0 0
+@
+しかし、破ったはずの
+日誌は手の中になく…
+
+# textflame 0 0
+@
+「黒い霧」もそのままに…
+マスターが手に取る前と同じ様子で
+机の上にあった
+
+# textflame 0 0
+@マスター
+…えっ！？
+今、確かに、破ったはずなのに！？
+
+;;//SE:ドアを開ける音
+# effectskip 5001
+# emotionbody 5001 1 118 10 250
+# effectpattern 5001 2 0
+# effectstart 5001
+# se "SE_0676"
+# alpha 118 1 0.5
+# rightin 118 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 118
+# face 118 "angry"
+# voice 2004 "parashu_0009"
+@パラシュ
+…マスター、どういうこと？
+勝手に委員会の部屋に入った挙句
+日誌を破るって…
+
+# textflame 0 0
+@マスター
+…あ、ごめん
+でも、破れなかったんだ…
+確かに、破ったはずなのに…
+
+# textflame 0 0
+@マスター
+ねぇ、パラシュ
+これって、なにかおかしくない…？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 118
+# face 118 "sad"
+@パラシュ
+…ただの日誌でないことは
+ボクもわかってるよ
+
+# textboxarrow 0 2
+# chara 118
+@パラシュ
+黒い…「霧」みたいなものが
+まとわりついているからね
+
+# textflame 0 0
+@マスター
+パラシュにも見えるの！？
+だったら…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 118
+# face 118 "normal"
+@パラシュ
+でも、そんなことは関係ない
+だって、今のままでいいじゃないか
+理想の学院のままで…
+
+# textboxarrow 0 2
+# chara 118
+@パラシュ
+異常なんてなにも起こらない
+みんなが安心して過ごせる
+平和な学院…なにか問題あるかい？
+
+# textflame 0 0
+@マスター
+…とりあえず、パラシュが
+どうしたいかはわかったよ
+
+# textflame 0 0
+@マスター
+…そうだ、一応、ここに来た本来の
+用事だけ済ませとくね
+
+# textflame 0 0
+@マスター
+リットゥ、調子が悪くて
+保健室で休んでるから
+委員会には来れないかもしれない
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 118
+# face 118 "sad"
+@パラシュ
+…わかったよ
+
+;;//場面転換
+;;//場面：廊下
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# bgm "bgm005" 0.7
+# alpha 118 0 0
+# background "corridor_daytime"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@マスター
+（…あの日誌をどうにかしなきゃ
+いけないのは間違いない…）
+
+# textflame 0 0
+@マスター
+（でも、どうやら破ったりしても
+無駄みたいだし…だったら
+日誌の中身をどうにかできないかな）
+
+# textflame 0 0
+@マスター
+（『異常は０件』なんて
+明らかにおかしいぐらいの
+イベントを起こせれば）
+
+# textflame 0 0
+@マスター
+（同じことを繰り返す状況を
+なんとかできるかもしれない！）
+
+;;//場面転換
+;;//背景：理事長室
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# effectskip 1000
+# move 0 3 0
+# alpha 0 1 0
+# background "presidentroom"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 0
+# face 0 "serious"
+@デュリン
+…その風紀委員会の日誌が
+怪しいってのはよくわかったわ
+
+# textboxarrow 0 2
+# chara 0
+@デュリン
+んで、その日誌に書かざるをえない
+大きなイベントを起こせって？
+しかも、今週中でしょー？
+
+# textflame 0 0
+@マスター
+繰り返されているのは
+月曜から金曜までなので、
+今後の予定はないのと同じなんです
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 0
+# face 0 "serious2"
+# voice 9999 "durin_0033"
+@デュリン
+はいはい、わかってるって
+ま、任せておいて！
+
+;;//場面転換
+;;//背景：中庭
+# move 300351 4 0
+# move 120 2 0
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imagerightin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# mask 120 on
+# alpha 0 0 0
+# alpha 120 1 0
+# alpha 300351 1 0
+# background "courtyard"
+# imagealpha 0 0 0.5
+# imageleftout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 300351
+# face 300351 "angry"
+# face 120 "angry"
+# voice 30035 "hotengageki_0003"
+# se "SE_6502"
+# emotionbody 1234 2 300351 10 270
+# effectpattern 1234 1 1
+# effectstart 1234
+@方天画戟
+…で、オレになんの用だよ？
+
+# textboxarrow 0 1
+# chara 120
+# voice 5020 "tasuramu_0007"
+@タスラム
+そうだ！
+でも、もらった菓子の分くらいは
+話を聞いてやる！
+
+# textflame 0 0
+@マスター
+ありがとう
+実は２人に、耳寄りな情報が
+あるんだけど…
+
+;;//場面転換
+;;//背景：理事長室
+# fadeout "black" 2
+# imagealpha 0 1 2
+# imagepos 0 0 30
+# serif 0
+# textwindow "close"
+# waitandnext 2
+
+# fadein "black" 1
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+―木曜日
+
+# fadeout "black" 2
+# waitandnext 2
+
+# imagealpha 0 0 0.5
+# fadein "black" 1
+# alpha 120 0 0
+# alpha 300351 0 0
+# move 0 2 0
+# move 111 4 0
+# background "presidentroom"
+# alpha 111 1 0.5
+# alpha 0 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 111
+# voice 1014 "tyrufing_0002"
+@ティルフィング
+件の日記ですが…
+物理的に破壊することは
+不可能と見ていいようです
+
+# textboxarrow 0 3
+# chara 111
+@ティルフィング
+風紀委員会室から移動させることも
+できませんでした
+
+# textboxarrow 0 3
+# chara 111
+@ティルフィング
+推測ですが、
+時がループしている間は
+干渉できないのではないかと…
+
+# textboxarrow 0 1
+# chara 0
+@デュリン
+そうすると、どうすれば
+ループさせないようにできるかって
+話になるわけよね
+
+# textboxarrow 0 1
+# chara 0
+# face 0 "serious"
+@デュリン
+でも、具体的なループの条件は
+わかってないのよね～
+
+# textboxarrow 0 1
+# chara 0
+@デュリン
+すぐ予想できるものとしては
+日誌を書かせない、とかあるけど
+
+# textboxarrow 0 1
+# chara 0
+# face 0 "occur"
+# voice 9999 "durin_0028"
+@デュリン
+…最悪、パラシュと
+リットゥを監禁でもしちゃう？
+
+# textboxarrow 0 3
+# chara 111
+@ティルフィング
+…それで解決できればいいですが
+どうでしょう？
+
+# textboxarrow 0 3
+# chara 111
+@ティルフィング
+日誌にあのような力を
+与えた者がいることも
+予想されますから…
+
+;;//場面転換
+;;//背景：教室　昼
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imagerightin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# envbody 2000 5 0
+# effectpattern 2000 3 0
+# effectstart 2000
+# bgm "bgm004" 0.7
+# alpha 111 0 0
+# alpha 0 0 0
+# alpha 118 1 0
+# background "classroom02_afternoon"
+# imagealpha 0 0 0.5
+# imageleftout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 118
+# face 118 "angry"
+# voice 2004 "parashu_0009"
+@パラシュ
+…君か
+ボクの邪魔をしないでくれないか？
+ヒマにしか見えないだろうけどね…
+
+# textflame 0 0
+@マスター
+ごめん
+…でも、大切な話があるんだ
+
+# textflame 0 0
+@マスター
+今、おかしいことになってるってこと
+パラシュもわかってるんだよね
+
+# textflame 0 0
+@マスター
+風紀委員会の日誌にある通り
+同じ一週間がずっと繰り返されて
+いるってことなんだけど…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 118
+# face 118 "normal"
+@パラシュ
+同じ一週間…そんなことはないよ
+ボクらは、日誌にある通り
+もっと多くの日々を積み重ねている…
+
+# textboxarrow 0 2
+# chara 118
+@パラシュ
+聖ユグドラシル姫学院の
+理想どおりの完璧な日々が…
+
+# textboxarrow 0 2
+# chara 118
+@パラシュ
+一週間だけしかなかったなんて
+そんなはずはない…
+永遠に続くはずなんだ
+
+# textflame 0 0
+@マスター
+…パラシュ、もうやめようよ
+異常のない、完璧な毎日とか言うけど
+本当にこのまま続けてもいいの？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 118
+# face 118 "angry"
+@パラシュ
+…今、ここに、ボクが夢見てきた
+理想の楽園があるんだよ？
+
+# textboxarrow 0 2
+# chara 118
+@パラシュ
+それなのに…それを壊すことなんて
+できるはずがないだろう…
+
+# body 200411
+# pos 200411 3
+# scale 200411 0.8 0
+# alpha 200411 0 0
+# mask 200411 off
+# textboxarrow 0 2
+# chara 118
+# voice 2004 "parashu_0011"
+@パラシュ
+…話はここまでだね…
+もう、ほっといてくれないか…！
+
+# fillrect "black" 1 0 0.2
+# eye 118 "angry"
+# se "SE_0677"
+# henshinbody 200 1 118 200411
+# waitandnext 2
+
+# sestop "SE_0677"
+# waitandnext 0.03
+
+# se "SE_0678"
+# shakeloop 0
+# henshin 200
+# face 200411 "angry01"
+# alpha 200411 1 0
+# waitandnext 1.3

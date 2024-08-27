@@ -1,0 +1,369 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;コマンドキラーズサイドストーリー前編シナリオ
+;;第2話　タイトル：見守る者
+;;2_3
+;;スクリプト最後の背景：平原
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;ヒョウハ
+# body 231
+# pos 231 3
+# scale 231 0.8 0
+# layer 231 2
+# alpha 231 0 0
+# mask 231 off
+;;神令ヒョウハ（ボイス用）
+# body 5402011
+# alpha 5402011 0 0
+;;如意金箍棒
+# body 232
+# pos 232 3
+# scale 232 0.8 0
+# layer 232 2
+# alpha 232 0 0
+# mask 232 off
+;;如意金箍棒・神令・フリッグ（ボイス用）
+# body 5203111
+# alpha 5203111 0 0
+;;ヤグルシ
+# body 201711
+# pos 201711 3
+# scale 201711 0.8 0
+# layer 201711 2
+# alpha 201711 0 0
+# mask 201711 off
+;;アイムール
+# body 200221
+# pos 200221 3
+# scale 200221 0.8 0
+# layer 200221 2
+# alpha 200221 0 0
+# mask 200221 off
+;;-----------------------------------------
+;;第2話　タイトル：見守る者
+;;//背景：平原
+# move 231 2 0
+# face 231 "normal"
+# alpha 231 1 0
+# mask 231 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 232 4 0
+# face 232 "usual"
+# alpha 232 1 0
+# mask 232 on
+@ヒョウハ
+あたしはヒョウハ
+ちょっと訳あって
+旅してるところだ
+
+# textboxarrow 0 3
+@如意金箍棒
+如意金箍棒よ
+長いからニョイ子って呼んで
+
+# textboxarrow 0 1
+@ヒョウハ
+そんじゃ、ニョイ子さんで
+
+# voice 520311 "nyoikinkobou_c_0005"
+# face 232 "happy"
+# textboxarrow 0 3
+@如意金箍棒
+ふふふ
+よろしくね、ヒョウハちゃん
+
+# se "SE_0899"
+# textboxarrow 0 3
+@ビコウ
+ウキーッ！
+
+# voice 520311 "nyoikinkobou_c_0031"
+# face 232 "usual"
+# textboxarrow 0 3
+@如意金箍棒
+あら、ごめんなさい
+この子はビコウ
+ワタシの弟子なのよ
+
+# voice 540201 "hyoha_c_0022"
+# face 231 "surprise"
+# textboxarrow 0 1
+@ヒョウハ
+弟子？
+この猿が？
+
+# textboxarrow 0 3
+@如意金箍棒
+とても賢い子なの
+子供っぽい悪戯をすることも
+あるけれど…
+
+# voice 540201 "hyoha_c_0039"
+# face 231 "normal"
+# textboxarrow 0 1
+@ヒョウハ
+へーっ、そうなのか
+あんた、猿なのにすごいな！
+
+# textboxarrow 0 3
+@ビコウ
+ウキキッ
+
+# face 231 "irregular"
+# textboxarrow 0 1
+@ヒョウハ
+…で、さっきの話だけど
+二つの町が争ってるって
+
+# face 232 "normal"
+# textboxarrow 0 3
+@如意金箍棒
+ええ…ここ最近
+無為な戦いが幾度も行われているの
+
+# textboxarrow 0 1
+@ヒョウハ
+それって原因は――
+
+# se "SE_0764"
+# bgm "stop"
+# serif 1
+@兵士達
+オオオオオオオオオオオオ！！
+
+# face 231 "surprise"
+# textboxarrow 0 1
+@ヒョウハ
+何だ！？
+
+# bgm "bgm031" 0
+# serif 1
+@ブラオの奏官１
+今日こそマロニの町の連中に
+思い知らせてやるぞ！
+
+# serif 1
+@マロニの奏官１
+今日こそブラオの町の連中に
+思い知らせてやる！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 1
+@ヒョウハ
+おいおい…
+両方の町から兵士が出てきたぞ
+あ！キル姫もっ
+
+# voice 520311 "nyoikinkobou_c_0027"
+# face 232 "sad"
+# textboxarrow 0 3
+@如意金箍棒
+はぁ…
+また始まったのね…
+
+# textboxarrow 0 1
+@ヒョウハ
+仲が悪そうだってのは
+分かってたけど、
+こんな大事に…ん？
+
+;;//ヤグルシが吹っ飛んでくる
+# textwindow "close"
+# alpha 231 0 0.5
+# alpha 232 0 0.5
+# waitandnext 0.5
+
+# se "SE_5732"
+# move 201711 3 0
+# face 201711 "sad"
+# alpha 201711 1 0
+# mask 201711 off
+# rightin 201711 0.5
+# waitandnext 0.5
+
+# voice 2017 "yagurushi_0016"
+# textboxarrow 0 2
+# textwindow "normal"
+@ヤグルシ
+ふええぇぇ～～！
+
+# se "SE_5000"
+# sedelay "SE_5001" 0.6
+# move 231 2 0
+# face 231 "angry"
+# alpha 231 1 0.5
+# mask 231 on
+# textboxarrow 0 1
+# move 201711 4 0.5
+# mask 201711 on
+@ヒョウハ
+おっと！
+あんた、大丈夫かっ？
+
+# textboxarrow 0 3
+@ヤグルシ
+ううっ…
+ヤグもちゃんと戦わないと…
+でもっ…
+
+# alpha 231 0 0.5
+# alpha 201711 0 0.5
+# move 200221 3 0
+# face 200221 "normal"
+# alpha 200221 1 0.5
+# mask 200221 off
+# textboxarrow 0 2
+@アイムール
+標的を確認…
+無関係なキル姫も発見しました
+
+# textboxarrow 0 2
+@アイムール
+そちらの二名はただちに戦場から
+退避することを推奨します
+
+# alpha 200221 0 0.5
+# move 231 3 0
+# face 231 "angry"
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+@ヒョウハ
+今度はアイムールかよっ
+
+# alpha 231 0 0.5
+# move 201711 2 0
+# face 201711 "sad"
+# alpha 201711 1 0.5
+# mask 201711 on
+# textboxarrow 0 1
+# move 200221 4 0
+# face 200221 "normal"
+# alpha 200221 1 0.5
+# mask 200221 on
+@ヤグルシ
+お姉ちゃん…
+
+# textboxarrow 0 3
+@アイムール
+ヤグルシ…
+武器を構えて下さい
+私はあなたと敵対しています
+
+# textboxarrow 0 1
+@ヤグルシ
+そうだけどっ…
+ヤグ、お姉ちゃんと戦うなんて
+イヤだよ～…
+
+# textboxarrow 0 3
+@アイムール
+…マスターからは殲滅の命令が
+下っています
+あなたも例外ではありません
+
+# voice 2017 "yagurushi_0037"
+# textboxarrow 0 1
+@ヤグルシ
+ううう…
+
+# alpha 201711 0 0.5
+# alpha 200221 0 0.5
+# move 232 3 0
+# face 232 "sad"
+# alpha 232 1 0.5
+# mask 232 off
+# textboxarrow 0 2
+@如意金箍棒
+…………
+
+# textboxarrow 0 2
+@ビコウ
+ウキッ！
+
+# face 232 "normal"
+# textboxarrow 0 2
+@如意金箍棒
+ビコウ…
+ワタシは…
+
+# alpha 232 0 0.5
+# move 231 3 0
+# face 231 "angry"
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+@ヒョウハ
+ちょっと待ったあああ！！
+
+# voice 2017 "yagurushi_0025"
+# alpha 231 0 0.5
+# move 201711 3 0
+# face 201711 "surprise"
+# alpha 201711 1 0.5
+# mask 201711 off
+# textboxarrow 0 2
+@ヤグルシ
+ひょえええ！？
+
+# voice 520311 "nyoikinkobou_c_0022"
+# alpha 201711 0 0.5
+# move 232 3 0
+# face 232 "surprise"
+# alpha 232 1 0.5
+# mask 232 off
+# textboxarrow 0 2
+@如意金箍棒
+えっ？
+
+# alpha 232 0 0.5
+# move 231 2 0
+# face 231 "angry"
+# alpha 231 1 0.5
+# mask 231 on
+# textboxarrow 0 1
+# move 200221 4 0
+# face 200221 "normal"
+# alpha 200221 1 0.5
+# mask 200221 on
+@ヒョウハ
+アイムール！
+あんた、ヤグルシの姉だよなっ？
+姉妹で戦うのはやめろよ！
+
+# se "SE_5206"
+# voice 2002 "aimuru_0035"
+# face 200221 "angry"
+# textboxarrow 0 3
+@アイムール
+不可能です
+敵対勢力の殲滅はマスターの
+ご命令ですので
+
+# textboxarrow 0 1
+@ヒョウハ
+何だ、それ！？
+あたしはあんたの意思を――
+
+# face 200221 "angry2"
+# textboxarrow 0 3
+@アイムール
+退避勧告に従わず、敵対勢力を援護
+する言動を確認しました
+あなたも殲滅対象と見なします
+
+;;//アイムールが攻撃をしかける
+# se "SE_4100"
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@ヒョウハ
+うおおっ？
+やってやるよ！

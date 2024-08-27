@@ -1,0 +1,385 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１６章 章タイトル「・中心部決戦―エクリプス―」
+;;第2話―５　タイトル：前夜
+;;2_5_3
+;;スクリプト最後の背景：中心部：in_city
+;;-----------------------------------------
+# script "lisp"
+# background "in_city"
+# bgm "stop"
+;;-----------------------------------------
+;;エクスカリバー
+# body 101111
+# pos 101111 3
+# scale 101111 0.8 0
+# layer 101111 2
+# alpha 101111 0 0
+# mask 101111 off
+;;アロンダイト
+# body 100711
+# pos 100711 3
+# scale 100711 0.8 0
+# layer 100711 2
+# alpha 100711 0 0
+# mask 100711 off
+;;ルーン
+# body 300531
+# pos 300531 3
+# scale 300531 0.8 0
+# layer 300531 2
+# alpha 300531 0 0
+# mask 300531 off
+;;ロンゴミアント
+# body 301021
+# pos 301021 3
+# scale 301021 0.8 0
+# layer 301021 2
+# alpha 301021 0 0
+# mask 301021 off
+;;モニカ
+# body 209
+# pos 209 3
+# scale 209 0.8 0
+# layer 209 2
+# alpha 209 0 0
+# mask 209 off
+;;魔獣
+# body 920014
+# pos 920014 3
+# scale 920014 0.8 0
+# layer 920014 2
+# alpha 920014 0 0
+# mask 920014 off
+;;イチイバル・神令・オーディン
+# body 5402211
+# pos 5402211 3
+# scale 5402211 0.8 0
+# layer 5402211 2
+# alpha 5402211 0 0
+# mask 5402211 off
+;;-----------------------------------------
+;;第2話―５　タイトル：前夜
+;;//バトル
+;;//背景：中心部：in_city
+;;//以下登場するアロンダイトは、モニカのキル姫の天上アロンダイトです。２章と同じアロンダイト立ち絵。
+;;アロンダイト（天上）
+# move 920014 2 0
+# alpha 920014 1 0
+# mask 920014 on
+# move 100711 4 0
+# face 100711 "angry"
+# alpha 100711 1 0
+# mask 100711 on
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1007 "Arondaito_battle_0001"
+@アロンダイト
+はぁっ！
+
+# se "SE_4815"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 -200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# se "SE_0794"
+# textboxarrow 0 1
+@魔獣
+ガアアアアアアア…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 920014 0 0.5
+# waitandnext 0.5
+
+# move 209 2 0
+# face 209 "normal"
+# alpha 209 1 0.5
+# mask 209 on
+# textboxarrow 0 1
+# textwindow "normal"
+@モニカ
+アロンダイト君、
+こっちは一通り片付いたから
+向こうの加勢に行くよ
+
+# face 100711 "normal"
+# textboxarrow 0 3
+@アロンダイト
+はい、マスター
+お任せ下さい
+
+;;エクスカリバー（天上）
+# se "SE_5205"
+# alpha 209 0 0.5
+# alpha 100711 0 0.5
+# move 101111 2 0
+# face 101111 "angry"
+# alpha 101111 1 0.5
+# mask 101111 on
+# textboxarrow 0 1
+# move 301021 4 0
+# face 301021 "angry"
+# alpha 301021 1 0.5
+# mask 301021 on
+@エクスカリバー
+マスター、私の後ろにっ
+
+# textboxarrow 0 3
+@ロンゴミアント
+脅威が近づいています
+
+;;//エクスカリバーとロンゴミアントがモニカを守る
+;;
+;;//イチイバルが現れる
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+# alpha 101111 0 0.5
+# alpha 301021 0 0.5
+# move 5402211 3 0
+# face 5402211 "normal"
+# alpha 5402211 1 0.5
+# mask 5402211 off
+# textboxarrow 0 2
+# voice 540221 "ichiibal_c_0002"
+@イチイバル
+そんなに警戒しなくて良いよ
+ボクはキミと話をしたいだけだから
+
+# alpha 5402211 0 0.5
+# move 209 2 0
+# face 209 "irregular"
+# alpha 209 1 0.5
+# mask 209 on
+# textboxarrow 0 1
+# move 300531 4 0
+# face 300531 "normal"
+# alpha 300531 1 0.5
+# mask 300531 on
+# voice 9937 "monica_0002"
+@モニカ
+君…コマンドキラーズの一人だよね？
+戦闘中に話をしたいって言われても
+信じられないな
+
+;;ルーン（天上）
+# textboxarrow 0 3
+@ルーン
+そういうことだよ！
+とっととあんたの血を見せなぁ！
+
+# alpha 209 0 0.5
+# alpha 300531 0 0.5
+# move 5402211 3 0
+# face 5402211 "normal"
+# alpha 5402211 1 0.5
+# mask 5402211 off
+# textboxarrow 0 2
+@イチイバル
+先日、キミ達がいた町を襲った
+奏官とキル姫だけど…
+
+# textboxarrow 0 2
+@イチイバル
+ボクがみんなユグドラシルに
+還しておいたよ
+
+# alpha 5402211 0 0.5
+# move 209 2 0
+# face 209 "surprise"
+# alpha 209 1 0.5
+# mask 209 on
+# textboxarrow 0 1
+# move 300531 4 0
+# face 300531 "normal"
+# alpha 300531 1 0.5
+# mask 300531 on
+# voice 9937 "monica_0023"
+@モニカ
+あっ…
+
+# textboxarrow 0 3
+@ルーン
+それがなんだってのよ！
+いいから、さっさと――
+
+# face 209 "irregular"
+# textboxarrow 0 1
+@モニカ
+ルーン君、待って！
+
+# alpha 209 0 0.5
+# alpha 300531 0 0.5
+# move 5402211 3 0
+# face 5402211 "normal"
+# alpha 5402211 1 0.5
+# mask 5402211 off
+# textboxarrow 0 2
+# voice 540221 "ichiibal_c_0004"
+@イチイバル
+ふふふ
+話を聞いてくれる気になったかな？
+
+# move 209 2 0
+# face 209 "irregular"
+# alpha 209 1 0.5
+# mask 209 on
+# textboxarrow 0 1
+# move 5402211 4 0.5
+# mask 5402211 on
+@モニカ
+…あたしと何の話をしたいの？
+
+# textboxarrow 0 3
+@イチイバル
+救われるべき存在と、
+救われるべきでない存在の話だよ
+
+# face 209 "surprise"
+# textboxarrow 0 1
+@モニカ
+…………！
+
+# face 5402211 "usual"
+# textboxarrow 0 3
+@イチイバル
+この世界を存続させるためには
+ユグドラシルにたくさんのマナを
+還さないといけない
+
+# textboxarrow 0 3
+@イチイバル
+そして同時に、ユグドラシルに
+負荷をかけるような争いは
+なくさないといけないんだ
+
+# textboxarrow 0 3
+@イチイバル
+ボク達はそのために戦ってる
+全てのバイブスとキラーズを
+還すために
+
+# face 5402211 "normal"
+# textboxarrow 0 3
+@イチイバル
+でも、出来ることなら
+争いを多く生む奏官やキル姫から
+還していった方が良い
+
+# textboxarrow 0 3
+@イチイバル
+そうすれば、全てを還せなくても
+ユグドラシルの寿命は
+延びるはずだからね
+
+# face 5402211 "usual"
+# textboxarrow 0 3
+@イチイバル
+最悪なのは、戦いを煽るような
+存在が幅を利かせる世の中だよ
+
+# face 209 "sad"
+# textboxarrow 0 1
+@モニカ
+…………そうだね
+
+# face 5402211 "normal"
+# textboxarrow 0 3
+# voice 540221 "ichiibal_c_0005"
+@イチイバル
+同意してくれて嬉しいよ
+そこで相談なんだけど
+
+# textboxarrow 0 3
+@イチイバル
+早めに還しておいた方が良い奏官を
+教えてくれないかな？
+
+# textboxarrow 0 3
+@イチイバル
+キミの基準でいいよ
+ボクはキミのことを信じているから
+
+# face 209 "irregular"
+# textboxarrow 0 1
+# voice 9937 "monica_0014"
+@モニカ
+私に、スパイになれって言ってるの？
+
+# textboxarrow 0 3
+# voice 540221 "ichiibal_c_0003"
+@イチイバル
+気が進まないのなら
+断ってくれて構わないよ
+
+# textboxarrow 0 3
+@イチイバル
+そのときは、無差別にマナを
+還していくだけだね
+
+# alpha 5402211 0 0.5
+# move 100711 4 0
+# face 100711 "angry"
+# alpha 100711 1 0.5
+# mask 100711 on
+# textboxarrow 0 3
+# voice 1007 "Arondaito_0001"
+@アロンダイト
+マスター
+この者の言っていることは
+不義そのものです
+
+# textboxarrow 0 3
+@アロンダイト
+決して耳を傾けてはいけません
+マスターに密偵行為を
+させようなどと…
+
+# face 209 "normal"
+# textboxarrow 0 1
+@モニカ
+うん、いいよ
+やってあげる
+
+# face 100711 "surprise"
+# textboxarrow 0 3
+# voice 1007 "Arondaito_0022"
+@アロンダイト
+マスター…！
+何てことを…
+
+# alpha 100711 0 0.5
+# move 5402211 4 0
+# face 5402211 "normal"
+# alpha 5402211 1 0.5
+# mask 5402211 on
+# textboxarrow 0 3
+# voice 540221 "ichiibal_c_0021"
+@イチイバル
+ふふふ
+ボクの気持ちが伝わったみたいで
+嬉しいな
+
+# textboxarrow 0 1
+@モニカ
+連絡方法はどうするの？
+
+# textboxarrow 0 3
+# voice 540221 "ichiibal_c_0032"
+@イチイバル
+ボクが頃合いを見て、
+また会いに来るよ
+キミは下手に動かない方が良い
+
+# textboxarrow 0 1
+# voice 9937 "monica_0034"
+@モニカ
+分かった
+話はそれだけ？
+
+# textboxarrow 0 3
+# voice 540221 "ichiibal_c_0003"
+@イチイバル
+そうだよ
+じゃ、またね

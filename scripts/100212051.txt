@@ -1,0 +1,647 @@
+;;----------------------------------------------
+;;100212051
+;;第2-5話戦闘前　タイトル：イノセント・ヒーラー
+;;----------------------------------------------
+# script "lisp"
+# background "church_room"
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+;;ムー
+# body 161
+# pos 161 2
+# scale 161 0.6 0
+# layer 161 3
+# mask 161 on
+# alpha 161 0 0
+;;レーヴァ
+# body 3100211
+# pos 3100211 1
+# scale 3100211 0.8 0
+# layer 3100211 1
+# mask 3100211 on
+# alpha 3100211 0 0
+;;ヘレナ
+# body 3302811
+# pos 3302811 4
+# scale 3302811 0.8 0
+# layer 3302811 2
+# mask 3302811 on
+# alpha 3302811 0 0
+;;ニール
+# body 162
+# pos 162 5
+# scale 162 0.6 0
+# layer 162 3
+# mask 162 on
+# alpha 162 0 0
+;;カリス
+# body 3602511
+# pos 3602511 3
+# scale 3602511 0.8 0
+# layer 3602511 2
+# mask 3602511 on
+# alpha 3602511 0 0
+;;キプル
+# body 163
+# pos 163 4
+# scale 163 0.6 0
+# layer 163 3
+# mask 163 on
+# alpha 163 0 0
+;;マリア
+# body 159
+# pos 159 2
+# scale 159 0.8 0
+# layer 159 3
+# mask 159 on
+# alpha 159 0 0
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;黒バック
+# imageset 1 "bg_black"
+# imagepos 1 0 0
+# imagelayer 1 1
+# imageleftin 1 0
+# imagealpha 1 0 0
+;;回想フィルター
+# imageset 2 "bg_white_circle"
+# textwindow "close"
+# waitandnext 0.1
+
+;;◆背景：擬人区室内（回想）
+;;回想
+# imagepos 2 0 0
+# imagelayer 2 1
+# imagescale 2 1.2 0
+# imagealpha 2 1 0
+# alpha 3602511 1 0
+# waitandnext 0.2
+
+;;回復フラッシュ
+# se "SE_4781"
+# subfillrect 1 "green" 0.8 0 0.4
+# waitandnext 1.3
+
+# subfillrect 1 "green" 1.0 0.4 0
+# waitandnext 1.2
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3602511 "happy"
+# voice 6025 "chalice_t_0005"
+# chara 3602511
+@カリス
+これで、おっけい！
+明日には元気になってるよ～
+あとはご飯食べて体力つけてねっ
+
+# brightness 3602511 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@母親
+ありがとうございます
+なんとお礼を言えば良いか…
+
+# textwindow "close"
+# brightness 3602511 1.0 0.5
+# move 3602511 4 0.5
+# alpha 159 1 0.5
+# waitandnext 0.5
+
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 159 "happy"
+# chara 159
+@マリア
+すごい！
+ママの病気が治った！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3602511 "normal"
+# voice 6025 "chalice_t_0006"
+# chara 3602511
+@カリス
+やっほい
+カリスちゃんマジ天使！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 159 "normal"
+# chara 159
+@マリア
+やっぱりカリスは
+本物の天使様だったんだね！
+天使様、ありがとう！
+
+# brightness 3602511 0.6 0.3
+# brightness 159 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@母親
+あの…言いにくいのですが、
+私どもには差し上げられる物は
+なにも…
+
+# brightness 3602511 1.0 0.3
+# brightness 159 1.0 0.3
+# serif 0
+# textflame 1 1
+# textboxarrow 0 3
+# face 3602511 "shy"
+# voice 6025 "chalice_t_0033"
+# chara 3602511
+@カリス
+そんなのいらないよ～
+わたしが好きでやってることだから
+
+# brightness 3602511 0.6 0.3
+# brightness 159 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@母親
+でしたら、せめてその汗を拭わせて
+下さい
+
+# brightness 3602511 1.0 0.3
+# brightness 159 1.0 0.3
+# serif 0
+# textflame 1 1
+# textboxarrow 0 3
+# face 3602511 "surprise"
+# voice 6025 "chalice_t_0030"
+# chara 3602511
+@カリス
+あれ？
+そんなに汗かいてたかな～
+あ、タオルありがと～
+
+# textwindow "top_close"
+# textwindow "bottom_close"
+# alpha 159 0 0.5
+# move 3602511 3 0.5
+# alpha 163 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9951 "kipuru_0034"
+# chara 163
+@キプル
+カリス、あなたやっぱり…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3602511 "normal"
+# voice 6025 "chalice_t_0021"
+# chara 3602511
+@カリス
+そうだ！
+他にも治療してあげられる人は
+いないかなっ？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3602511
+@カリス
+マジ天使なカリスちゃんが
+みんなを救っちゃうよ～！
+よし、行こうキプル！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9951 "kipuru_0054"
+# chara 163
+@キプル
+勝手なことばかりしてると
+叱られますからっ…
+あああ、カリス！
+
+# textwindow "close"
+# move 163 5 0.5
+# move 3602511 4 0.5
+# alpha 159 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 159 "worry"
+# chara 159
+@マリア
+待って、天使様！
+…また会える？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 159 "normal"
+# face 3602511 "happy"
+# voice 6025 "chalice_t_0004"
+# chara 3602511
+@カリス
+もちろん！
+そのときはまた素敵なミラクル
+見せてあげるからねっ
+
+;;◆背景：擬人区室内
+# textwindow "close"
+# fadeout "white" 1.0
+# waitandnext 1.0
+
+# alpha 163 0 0
+# alpha 3602511 0 0
+# alpha 159 0 0
+# imagealpha 2 0 0
+# alpha 3100211 1 0
+# alpha 161 1 0
+# alpha 162 1 0
+# alpha 3302811 1 0
+# waitandnext 0.5
+
+# fadein "white" 1.0
+# waitandnext 1.3
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "surprise"
+# voice 310021 "revatein_ge_0028"
+# chara 3100211
+@レーヴァテイン
+…斬ル姫がマリアの母親の病気を
+治療して去っていった
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0021"
+# chara 161
+@ムー
+良い話じゃねぇか！
+俺は感動しちまったぜ
+カリスちゃんマジ天使！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "usual"
+# voice 3028 "herena_a_0027"
+# chara 3302811
+@ヘレナ
+怪しいな、その斬ル姫
+なんの見返りも求めなかったんだろ？
+
+# brightness 161 0.6 0.3
+# brightness 162 0.6 0.3
+# brightness 3100211 0.6 0.3
+# brightness 3302811 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@母親
+はい…
+この擬人区の病人や怪我人を皆、
+治療していかれて…
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@母親
+理由を尋ねても
+「なんとなく」としか
+答えていただけませんでした
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@母親
+ただ…
+
+# brightness 161 1.0 0.3
+# brightness 162 1.0 0.3
+# brightness 3100211 1.0 0.3
+# brightness 3302811 1.0 0.3
+# serif 0
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9952 "nir_0003"
+# chara 162
+@ニール
+まだ続きがあるのね
+
+# brightness 161 0.6 0.3
+# brightness 162 0.6 0.3
+# brightness 3100211 0.6 0.3
+# brightness 3302811 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@母親
+これはマリアには言ってなかったの
+ですけれど、良い機会なので…
+実はその後で兵士の方々が来られて
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@母親
+カリス様がなさったことは決して
+口外しないように…全て忘れるように
+と厳命されて行かれたのです
+
+# brightness 161 1.0 0.3
+# brightness 162 1.0 0.3
+# brightness 3100211 1.0 0.3
+# brightness 3302811 1.0 0.3
+# serif 0
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "surprise"
+# voice 3028 "herena_a_0028"
+# chara 3302811
+@ヘレナ
+ああ、それでさっき
+あんなに焦ってたのか
+娘が斬ル姫に粛清されると思って
+
+# brightness 161 0.6 0.3
+# brightness 162 0.6 0.3
+# brightness 3100211 0.6 0.3
+# brightness 3302811 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@母親
+すみません…
+
+# textwindow "top_close"
+# textwindow "bottom_close"
+# alpha 3100211 0 0.5
+# alpha 161 0 0.5
+# alpha 162 0 0.5
+# alpha 3302811 0 0.5
+# waitandnext 0.5
+
+# brightness 161 1.0 0
+# brightness 162 1.0 0
+# brightness 3100211 1.0 0
+# brightness 3302811 1.0 0
+# pos 159 3
+# alpha 159 1 0.3
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 159 "normal"
+# chara 159
+@マリア
+でも！天使様はまた会えるって
+言ったんだよ！
+ミラクルを見せてくれるって！
+
+# brightness 159 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@母親
+もうそのことは忘れなさい！
+…私達擬人は人間様にも斬ル姫様にも
+逆らってはいけないの
+
+# textwindow "top_close"
+# textwindow "bottom_close"
+# brightness 159 1.0 0.5
+# move 159 2 0.5
+# pos 3100211 4
+# pos 161 5
+# alpha 3100211 1 0.5
+# alpha 161 1 0.5
+# face 3100211 "normal"
+# waitandnext 0.5
+
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0027"
+# chara 161
+@ムー
+…ハルモニアでも彼女達の扱いは
+変わらねぇみたいだな
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310021 "revatein_ge_0030"
+# chara 3100211
+@レーヴァテイン
+…話を聞かせてくれて、ありがとう
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0004"
+# chara 161
+@ムー
+そんじゃマリアちゃん元気でな！
+あ、そうそう
+俺はトカゲじゃなくて最強の――
+
+# pos 162 5
+# alpha 161 0 0.3
+# alpha 162 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9952 "nir_0029"
+# chara 162
+@ニール
+さあ、急ぐわよ！
+ほら、ムーも早く出なさい
+
+# alpha 162 0 0.3
+# alpha 161 1 0.3
+# shake 0 0.4
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0038"
+# chara 161
+@ムー
+おおい！
+意地でも俺に
+自己紹介させねぇつもりかよっ
+
+;;◆背景：ハルモニア
+# se "SE_2025"
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# face 3302811 "normal"
+# alpha 159 0 0
+# alpha 3100211 0 0
+# alpha 161 0 0
+# background "angel_world"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.8
+
+# pos 3302811 3
+# pos 162 4
+# alpha 3302811 1 0.3
+# alpha 162 1 0.3
+# pos 3302811 3
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3302811 "normal"
+# voice 3028 "herena_a_0004"
+# chara 3302811
+@ヘレナ
+けっこう面白い話が聞けたな
+カリスって斬ル姫、
+ヘレナは興味があるよ
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9952 "nir_0020"
+# chara 162
+@ニール
+キプルとかいう山羊型の
+オートアバターも気になるわねっ
+からかい甲斐がありそうな性格みたい
+
+# textwindow "close"
+# move 162 5 0.5
+# move 3302811 4 0.5
+# pos 3100211 1
+# pos 161 2
+# alpha 161 1 0.5
+# alpha 3100211 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0001"
+# chara 161
+@ムー
+いや、そこはどうでもいいだろっ
+レヴァ、カリスって斬ル姫、
+どう思う？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310021 "revatein_ge_0004"
+# chara 3100211
+@レーヴァテイン
+…会ってみたくはあるわ
+さすがに偶然が過ぎるもの
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "surprise"
+# voice 3028 "herena_a_0003"
+# chara 3302811
+@ヘレナ
+オートアバター持ちの
+斬ル姫がこれで三人
+確かに偶然とは思えない確率だな
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "normal"
+# chara 3302811
+@ヘレナ
+探りを入れてみようか
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9952 "nir_0039"
+# chara 162
+@ニール
+ヘレナったら、楽しそうね
+アタチもだけどっ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "sad"
+# chara 3302811
+@ヘレナ
+ハルモニアは斬ル姫の管理を
+徹底しているから、
+そう簡単には会えそうにないな…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "usual"
+# voice 3028 "herena_a_0045"
+# chara 3302811
+@ヘレナ
+どうする、レーヴァ？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "sad"
+# voice 310021 "revatein_ge_0013"
+# chara 3100211
+@レーヴァテイン
+はぁ…
+こういうことはヘレナの方が
+得意でしょ…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "normal"
+# voice 3028 "herena_a_0020"
+# chara 3302811
+@ヘレナ
+考えても良いけど、
+後で文句を言わないでくれよ
+…くふっ
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9952 "nir_0004"
+# chara 162
+@ニール
+ヘレナの計画をレーヴァテインが
+きちんと実行できるか
+疑わしいものね！
+
+# shake 0 0.6
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0010"
+# chara 161
+@ムー
+んだとぉっ？
+上等だ、やってやんぞ！
+なあ、レヴァ！？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "normal"
+# voice 310021 "revatein_ge_0032"
+# chara 3100211
+@レーヴァテイン
+はぁ…、おっけ
+あなたの計画に乗るわ
+どうすればいい？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "normal"
+# voice 3028 "herena_a_0005"
+# chara 3302811
+@ヘレナ
+ふふっ…
+なら、一騒動起こそうか

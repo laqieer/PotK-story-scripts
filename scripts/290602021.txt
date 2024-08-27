@@ -1,0 +1,361 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第６章 章タイトル：アナザー・コンフリクト―交錯―
+;;第2話　タイトル：相容れぬもの
+;;6_2_2_1
+;;スクリプト最後の背景：ユグドラシル
+;;-----------------------------------------
+# script "lisp"
+# background "in_yggdrasill"
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;ダモクレス
+# body 103511
+# pos 103511 3
+# scale 103511 0.8 0
+# layer 103511 2
+# alpha 103511 0 0
+# mask 103511 off
+;;エルキュール
+# body 202511
+# pos 202511 3
+# scale 202511 0.8 0
+# layer 202511 2
+# alpha 202511 0 0
+# mask 202511 off
+;;ネス
+# body 602011
+# pos 602011 3
+# scale 602011 0.8 0
+# layer 602011 2
+# alpha 602011 0 0
+# mask 602011 off
+;;花異族
+# body 5809801
+# pos 5809801 3
+# scale 5809801 0.8 0
+# layer 5809801 2
+# alpha 5809801 0 0
+# mask 5809801 off
+;;花異族（クローン1）
+# entry 958098011 5809801
+# pos 958098011 3
+# scale 958098011 0.8 0
+# layer 958098011 2
+# alpha 958098011 0 0
+# mask 958098011 off
+;;花異族（クローン2）
+# entry 958098012 5809801
+# pos 958098012 3
+# scale 958098012 0.8 0
+# layer 958098012 2
+# alpha 958098012 0 0
+# mask 958098012 off
+;;擬装ダモクレス
+# body 5103521
+# pos 5103521 3
+# scale 5103521 0.8 0
+# layer 5103521 2
+# alpha 5103521 0 0
+# mask 5103521 off
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;第2話　タイトル：相容れぬもの
+;;//背景：ユグドラシル
+# move 103511 3 0
+# face 103511 "normal"
+# alpha 103511 1 0
+# mask 103511 off
+# textflame 1 1
+# textboxarrow 0 2
+@ダモクレス
+エルキュールっ
+大丈夫…！？
+
+# textboxarrow 0 0
+@エルキュール
+…………
+
+# face 103511 "sad"
+# textboxarrow 0 2
+@ダモクレス
+返事してくれない…
+体も冷たくなってきてる…
+エルキュール…死ぬのかな…？
+
+# textboxarrow 0 2
+@ダモクレス
+クレスも…何だか体が重いよ…
+ああ、これって…
+
+# textboxarrow 0 2
+@ダモクレス
+いつか、みんな死ぬんだ…
+それがいつ来るか、分からないだけ…
+
+# textboxarrow 0 2
+@ダモクレス
+そうだよね…
+それはクレスも知ってるよ
+だから…
+
+# textboxarrow 0 2
+@ダモクレス
+受け入れられるって…
+思ってたんだけどな～…
+
+# voice 1035 "damocles_0015"
+# textboxarrow 0 2
+@ダモクレス
+ううっ…
+やっぱり…ヤダ…
+エルキュールが死んじゃうのヤダ～…
+
+# textboxarrow 0 2
+@ダモクレス
+みんなと、もっと一緒にいたいよ～っ
+クレスの愛で…みんなを助けたい！
+
+;;//キーンという金属音
+# se "SE_5786"
+# bgmfile "bgm422_block" "BgmIntegralNoahBattle004" 0
+# waitandnext 0.5
+
+# face 103511 "normal"
+# textboxarrow 0 2
+@ダモクレス
+あれっ？
+今、ラグナロクの声が聞こえたよ～？
+
+;;ラグナロク（声だけ）
+# serif 1
+@ラグナロク
+ダモクレス…あなたの愛の形を…
+思い描く姿を…強くイメージして…！
+
+# voice 1035 "damocles_0028"
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+@ダモクレス
+クレスの…愛の…形？
+えっと…
+
+;;//回想シーン
+;;//背景：ユグドラシル（夜）
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "in_yggdrasill_night"
+# alpha 103511 0 0
+# move 103511 2 0
+# face 103511 "usual"
+# alpha 103511 1 0
+# mask 103511 on
+# move 602011 4 0
+# face 602011 "normal"
+# alpha 602011 1 0
+# mask 602011 on
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//ネスがダモクレスを治癒する
+# se "SE_4781"
+# fadein "green" 0.5
+# waitandnext 0.5
+
+# voice 6020 "ness_0003"
+# textboxarrow 0 3
+# textwindow "normal"
+@ネス
+はい、これで治療は終わりですよ
+
+# voice 1035 "damocles_0030"
+# face 103511 "happy"
+# textboxarrow 0 1
+@ダモクレス
+ありがと～、ネス！
+クレス、痛くなくなったよ～♪
+
+;;//回想終了
+;;//背景：ユグドラシル
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "in_yggdrasill"
+# alpha 103511 0 0
+# alpha 602011 0 0
+# move 103511 3 0
+# face 103511 "usual"
+# alpha 103511 1 0
+# mask 103511 off
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# voice 1035 "damocles_0004"
+# textboxarrow 0 2
+# textwindow "normal"
+@ダモクレス
+クレスの愛の形は…
+みんなを癒す…
+ネスみたいな力だよ～！
+
+;;ラグナロク（声だけ）
+# serif 1
+@ラグナロク
+悠久の時より…紡がれし
+願いと…望みの…象徴よ…
+我が前に…あるべき姿を示せ
+
+# serif 1
+@ラグナロク
+深淵より…希う
+無限の愛に…包み込む風を
+ダモクレス…！
+
+;;//心音演出
+# se "SE_0644"
+# waitandnext 0.5
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+@ダモクレス
+クレスの胸に…
+言葉が浮かんできた
+
+# se "SE_11705"
+# sedelay "SE_11706" 0.5
+#setnextbgmblock 2
+# voice 1035 "damocles_im_0051"
+# face 103511 "angry"
+# textboxarrow 0 0
+@ラグナロク＆ダモクレス
+擬装《イミテイト》！！
+
+;;//ダモクレスが擬装バージョンに
+# se "SE_11707"
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# alpha 103511 0 0
+# move 5103521 3 0
+# face 5103521 "normal"
+# alpha 5103521 1 0
+# mask 5103521 off
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ダモクレス
+クレスはみんなを愛してる！
+生きてるときでも死んだ後でも
+どんなときでも愛があれば問題ない！
+
+# textboxarrow 0 2
+@ダモクレス
+この愛、今度は治癒の力で
+みんなに伝えるよ！
+
+# voice 1035 "damocles_im_kyara_2001"
+# textboxarrow 0 2
+@ダモクレス
+この身に解き放たれしは、
+苦境も切り裂く翠風の癒杖
+ダモクレス・擬装・プリーストだよ
+
+# voice 1035 "damocles_im_kyara_1001"
+# face 5103521 "happy"
+# textboxarrow 0 2
+@ダモクレス
+愛は、死をも包む魂の支え
+みんなは安心して愛に包まれてね♪
+七つの光は御旗とともに
+
+# voice 1035 "damocles_0029"
+# textboxarrow 0 2
+@ダモクレス
+よ～し！
+愛さえあれば怖いものなんてない！
+クレスがみんなを癒しちゃうもんね♪
+
+;;//ダモクレスがエルキュールを治癒する
+# se "SE_4781"
+# fadein "green" 0.5
+# waitandnext 0.6
+
+# alpha 5103521 0 0.5
+# move 202511 3 0
+# face 202511 "sad"
+# alpha 202511 1 0.5
+# mask 202511 off
+# textboxarrow 0 2
+@エルキュール
+ううっ…
+
+# voice 1035 "damocles_0020"
+# alpha 202511 0 0.5
+# move 5103521 3 0
+# face 5103521 "happy"
+# alpha 5103521 1 0.5
+# mask 5103521 off
+# textboxarrow 0 2
+@ダモクレス
+やった～！
+エルキュールが目を覚ました！
+
+# textboxarrow 0 2
+@ダモクレス
+みんなもどんどん助けるからね～っ
+
+;;//異族が群がってくる
+# se "SE_0829"
+# alpha 5103521 0 0.5
+# move 958098011 1 0
+# alpha 958098011 1 0.5
+# mask 958098011 on
+# move 5809801 3 0
+# alpha 5809801 1 0.5
+# mask 5809801 on
+# move 958098012 5 0
+# alpha 958098012 1 0.5
+# mask 958098012 on
+# textboxarrow 0 0
+@異族
+アアアアアアアアア！
+
+# voice 1035 "damocles_0009"
+# alpha 958098011 0 0.5
+# alpha 5809801 0 0.5
+# alpha 958098012 0 0.5
+# move 5103521 3 0
+# face 5103521 "angry"
+# alpha 5103521 1 0.5
+# mask 5103521 off
+# textboxarrow 0 2
+@ダモクレス
+む～っ
+クレスの仲間を傷つけたら、
+許さないんだから！

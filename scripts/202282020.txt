@@ -1,0 +1,565 @@
+;;-----------------------------------------
+;;鎌倉2_0
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm463_462" "BgmIntegralNoahDisrupters" 0
+;;-----------------------------------------
+;;グランテピエ
+# body 5303411
+# pos 5303411 3
+# scale 5303411 0.8 0
+# layer 5303411 3
+# mask 5303411 off
+# alpha 5303411 0 0
+;;INソロモン
+# body 5503111
+# pos 5503111 3
+# scale 5503111 0.8 0
+# layer 5503111 3
+# mask 5503111 off
+# alpha 5503111 0 0
+;;INカリス
+# body 5602511
+# pos 5602511 3
+# scale 5602511 0.8 0
+# layer 5602511 3
+# mask 5602511 off
+# alpha 5602511 0 0
+;;INヘレナ
+# body 5302811
+# pos 5302811 3
+# scale 5302811 0.8 0
+# layer 5302811 3
+# mask 5302811 off
+# alpha 5302811 0 0
+;;ニール
+# body 162
+# pos 162 3
+# scale 162 0.8 0
+# layer 162 5
+# mask 162 off
+# alpha 162 0 0
+;;INリサナウト
+# body 5203011
+# pos 5203011 1
+# scale 5203011 0.8 0
+# layer 5203011 4
+# alpha 5203011 0 0
+;;少女
+# body 159
+# pos 159 2
+# scale 159 0.8 0
+# layer 159 4
+# mask 159 off
+# alpha 159 0 0
+;;魔獣バイコーン
+# body 900011
+# pos 900011 4
+# scale 900011 0.8 0
+# layer 900011 2
+# mask 900011 off
+# alpha 900011 0 0
+;;-----------------------------------------
+;;背景：平原：plain
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_0792"
+# face 159 "normal"
+# alpha 159 1 0.3
+# alpha 900011 1 0.3
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 3
+@魔獣
+ガアアアアアアアア！
+
+# face 159 "worry"
+# textwindow "nomal"
+# textboxarrow 0 1
+@少女
+えっ…？
+キャアアアアア…！？
+
+# textboxarrow 0 1
+@少女
+やだっ…
+来ないで…怖いっ…
+
+# se "SE_0793"
+# textwindow "toge"
+# textboxarrow 0 3
+@魔獣
+ガアアアアアアアア！
+
+;;魔獣が少女に迫る
+# se SE_8003"
+# move 159 1 0.5
+# move 900011 3 0.7
+# textboxarrow 0 0
+# waitandnext 1.5
+
+# alpha 159 0 0.3
+# alpha 900011 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# move 5302811 4 0.5
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# move 162 2 0.6
+# alpha 162 1 0.5
+# waitandnext 0.5
+
+# voice 530281 "herena_di_0002"
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+おっと…
+あんなところに女の子がいるよ
+もっと加速しようか、ニール
+
+# textboxarrow 0 1
+@ニール
+え…ええ、そうね…
+
+# voice 530281 "herena_di_0004"
+# face 5302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+ふふっ
+ヘレナ達なら余裕で間に合うよ！
+
+;;ヘレナが更に加速する
+;;ニールがヘレナから離れる
+# se "SE_9466"
+# move 5302811 1 0.5
+# move 162 3 0.5
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# voice 9952 "nir_0015"
+# textboxarrow 0 2
+@ニール
+ううっ…
+
+# voice 530281 "herena_di_0022"
+# face 5302811 "surprise"
+# textboxarrow 0 1
+@ヘレナ
+ニール？
+
+# se "SE_0793"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "toge"
+@魔獣
+ガアアアアアアア！
+
+# serif 1
+# textwindow "nomal"
+@少女
+誰か…助けてーっ…！
+
+# voice 530281 "herena_di_battle_0006"
+# serif 1
+# textwindow "close"
+# serif 0
+# face 5302811 "angry"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ヘレナ
+くっ…
+
+;;ヘレナがニールを残して突っ込む
+# se "SE_9092"
+# leftout 5302811 1
+# textwindow "close"
+# waitandnext 1
+
+# alpha 162 0 0.5
+# move 5302811 5 0
+# alpha 5302811 0 0
+# waitandnext 0.5
+
+# move 159 1 0.3
+# layer 159 5
+# mask 159 off
+# face 159 "worry"
+# alpha 159 1 0.3
+# move 900011 3 0
+# layer 900011 4
+# mask 900011 on
+# alpha 900011 1 0.3
+# waitandnext 0.3
+
+# rightin 5302811 0.5
+# face 5302811 "angry"
+# alpha 5302811 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+磔にしてやろう！
+
+# se "SE_0794"
+# textboxarrow 0 2
+@魔獣
+ガアアアアア…！？
+
+;;ヘレナが魔獣に体当たりをして一緒に画面外へ
+# se "SE_4602"
+# move 5302811 3 1
+# alpha 5302811 0 0.3
+# move 900011 1 1
+# alpha 900011 0 0.3
+# shake 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@少女
+キャァッ…！
+え…何…？
+
+# voice 9952 "nir_0022"
+# alpha 159 0 0.3
+# move 162 3 0
+# alpha 162 1 0.3
+# textboxarrow 0 2
+@ニール
+ヘレナ…！？
+
+# textboxarrow 0 2
+@ニール
+ごめんなさい…
+アタチのせいで…
+
+;;暗転挟む
+# fadeout "black" 1
+# waitandnext 1
+
+# se "bgm462_switch_1"
+# move 159 2 0
+# move 5302811 4 0
+# move 5602511 4 0
+# alpha 162 0 0
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# face 159 "normal"
+# alpha 159 1 0.3
+# face 5302811 "usual"
+# alpha 5302811 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@少女
+本当にありがとうございました！
+お怪我、大丈夫ですか？
+
+# voice 530281 "herena_di_0028"
+# textboxarrow 0 3
+@ヘレナ
+だから、かすり傷だって
+こんなの怪我したうちに入らないよ
+
+# alpha 5302811 0 0.3
+# face 5602511 "normal"
+# alpha 5602511 1 0.3
+# textboxarrow 0 3
+@カリス
+ヘレナはわたしが治療するから
+大丈夫！
+あなたも怪我してない？
+
+# face 159 "happy"
+# textboxarrow 0 1
+@少女
+はい
+ありがとうございました、
+ヘレナさん、皆さん
+
+;;少女が立ち去る
+# se "SE_0719"
+# move 159 1 0.5
+# alpha 159 0 0.4
+# textwindow "close"
+# waitandnext 1
+
+# voice 550311 "solomon_di_0003"
+# alpha 5602511 0 0.3
+# move 5503111 1 0
+# layer 5503111 4
+# mask 5503111 on
+# face 5503111 "normal"
+# alpha 5503111 1 0.3
+# move 5302811 5 0
+# layer 5302811 2
+# mask 5302811 on
+# face 5302811 "usual"
+# alpha 5302811 1 0.3
+# move 162 3 0
+# layer 162 5
+# alpha 162 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ソロモン
+今度こそ魔獣の反応はなくなったわ
+念のため、グラウに
+周辺を警戒させているけれど
+
+# voice 530281 "herena_di_0003"
+# textboxarrow 0 3
+@ヘレナ
+じゃあ、ヘレナ達も
+次の調査地へ行こうか
+
+# alpha 5503111 0 0.3
+# move 5303411 1 0
+# layer 5303411 4
+# mask 5303411 on
+# face 5303411 "sad"
+# alpha 5303411 1 0.3
+# textboxarrow 0 1
+@グランテピエ
+…………
+
+# voice 530281 "herena_di_0022"
+# face 5302811 "surprise"
+# textboxarrow 0 3
+@ヘレナ
+どうしたんだい、テピ姉さん？
+
+# voice 530341 "grandepieu_di_0002"
+# se "bgm463_switch_1"
+# textboxarrow 0 1
+@グランテピエ
+ヘレナ…
+少し休んだ方がいいよ
+
+# face 5302811 "usual"
+# textboxarrow 0 3
+@ヘレナ
+急に何だい？
+傷はカリスに治してもらったから
+問題ないよ
+
+# voice 530341 "grandepieu_di_0028"
+# textboxarrow 0 1
+@グランテピエ
+そうだね…
+でも、そうじゃないの
+
+# textboxarrow 0 1
+@グランテピエ
+ヘレナが無理してるように
+見えるんだ
+お姉さん、心配だよ
+
+# textboxarrow 0 1
+@グランテピエ
+それに、ニールのことも…
+だから、ね
+
+# textboxarrow 0 2
+@ニール
+…………
+
+# voice 530281 "herena_di_0028"
+# textboxarrow 0 3
+@ヘレナ
+…テピ姉さんの言うことが
+よく分からないな
+ヘレナもニールも大丈夫だよ
+
+# textboxarrow 0 3
+@ヘレナ
+それに「揺らぎ」の調査は？
+ヘレナ達はそのためにあちこち
+飛び回っているんじゃないか
+
+# voice 530341 "grandepieu_di_0003"
+# face 5303411 "normal"
+# textboxarrow 0 1
+@グランテピエ
+それは、しばらく３人で頑張るから
+ヘレナは心配しないで休んで、ね
+
+# alpha 5303411 0 0.3
+# alpha 5302811 0 0.3
+# alpha 162 0 0.3
+# move 5503111 4 0
+# layer 5503111 4
+# mask 5503111 on
+# face 5503111 "happy"
+# alpha 5503111 1 0.3
+# move 5602511 2 0
+# layer 5602511 2
+# mask 5602511 off
+# face 5602511 "normal"
+# alpha 5602511 1 0.3
+# textboxarrow 0 3
+@ソロモン
+確かにヘレナがいなくなることで
+戦力の低下等支障は出るけれど
+カバーしてみせるわ
+
+# voice 560251 "chalice_di_0033"
+# face 5602511 "happy"
+# textboxarrow 0 1
+@カリス
+お休みは大切だよね！
+うん！あとはカリスちゃんに
+ど～んと任せてっ
+
+# voice 530281 "herena_di_0027"
+# alpha 5503111 0 0.3
+# alpha 5602511 0 0.3
+# face 5303411 "normal"
+# alpha 5303411 1 0.3
+# face 5302811 "usual"
+# alpha 5302811 1 0.3
+# alpha 162 1 0.3
+# textboxarrow 0 3
+@ヘレナ
+…仕方ないな
+じゃあ、少しだけ休みをもらうよ
+
+# voice 530341 "grandepieu_di_0003"
+# textboxarrow 0 1
+@グランテピエ
+うん
+ゆっくり休んで、
+ちゃんと治してきてほしいな
+
+# textboxarrow 0 1
+@グランテピエ
+絶対のぜーったいに
+無理はしないこと
+いい？
+
+# face 5302811 "sad"
+# textboxarrow 0 3
+@ヘレナ
+傷はもう癒えてるんだけど…
+
+# textboxarrow 0 1
+@グランテピエ
+傷だけじゃなくて
+心を休めるのも大事、だよ
+
+# textboxarrow 0 2
+@ニール
+…………
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：町：town
+# background "town"
+# bgm "bgm002" 0
+# alpha 5303411 0 0
+# move 5302811 4 0
+# mask 5302811 off
+# alpha 5302811 0 0
+# move 162 2 0
+# alpha 162 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 530281 "herena_di_0028"
+# face 5302811 "usual"
+# alpha 5302811 1 0.3
+# alpha 162 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+テピ姉さんは心配性だなあ…
+ヘレナもニールも何の問題もない
+っていうのに…
+
+# textboxarrow 0 3
+@ヘレナ
+ねぇ、ニール？
+
+# textboxarrow 0 1
+@ニール
+…………
+
+# face 5302811 "surprise"
+# textboxarrow 0 3
+@ヘレナ
+ニール…？
+
+# textboxarrow 0 1
+@ニール
+…………えっ？
+そ、そうねヘレナ！
+
+# voice 9952 "nir_0032"
+# textboxarrow 0 1
+@ニール
+せっかくのお休みだものっ
+楽しいことしましょうね！
+
+# textboxarrow 0 1
+@ニール
+町の人達をからかって遊ぶのは
+どうかしら？
+
+# voice 530281 "herena_di_0044"
+# face 5302811 "sad"
+# textboxarrow 0 3
+@ヘレナ
+ニール…
+
+# textboxarrow 0 3
+@ヘレナ
+あの…
+ヘレナがこんなこと聞くのも
+変な気がするけど、ニールは――
+
+;;突然リサナウトが現れる
+# se "SE_5374"
+# leftin 5203011 0.5
+# face 5203011 "happy1"
+# alpha 5203011 1 0.3
+# move 5302811 5 0.4
+# move 162 3 0.5
+# textboxarrow 0 1
+@リサナウト
+悩み事があるみたいね！
+
+# voice 530281 "herena_di_0023"
+# face 5302811 "surprise"
+# textboxarrow 0 3
+@ヘレナ
+はぁ！？
+何だい、唐突に
+
+# voice 520301 "risanautr_ca_0004"
+# textboxarrow 0 1
+@リサナウト
+そんなあなた達に
+ピッタリの言葉があるわ
+
+# face 5302811 "sad"
+# textboxarrow 0 3
+@ヘレナ
+他人の話を聞かない人だな…
+
+# face 5203011 "happy2"
+# textboxarrow 0 1
+@リサナウト
+すなわち…温故知新よ！
+
+# fadeout "black" 1
+# waitandnext 1

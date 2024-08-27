@@ -1,0 +1,638 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;コマンドキラーズサイドストーリー後編
+;;第6話　タイトル：集いし者
+;;6_2
+;;スクリプト最後の背景：花畑
+;;-----------------------------------------
+# script "lisp"
+# background "flower_garden"
+# bgm "bgm035" 0
+;;-----------------------------------------
+;;ヒョウハ
+# body 231
+# pos 231 3
+# scale 231 0.8 0
+# layer 231 2
+# alpha 231 0 0
+# mask 231 off
+;;ヒョウハ・神令・テュール（ボイス用）
+# body 5402011
+# alpha 5402011 0 0
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 2
+# alpha 810004 0 0
+# mask 810004 off
+;;如意金箍棒
+# body 232
+# pos 232 3
+# scale 232 0.8 0
+# layer 232 2
+# alpha 232 0 0
+# mask 232 off
+;;如意金箍棒・神令・フリッグ（ボイス用）
+# body 5203111
+# alpha 5203111 0 0
+;;ミュルグレス
+# body 230
+# pos 230 3
+# scale 230 0.8 0
+# layer 230 3
+# alpha 230 0 0
+# mask 230 off
+;;ミュルグレス・神令・トール（ボイス用）
+# body 5104611
+# alpha 5104611 0 0
+;;ロジェスティラ
+# body 235
+# pos 235 3
+# scale 235 0.8 0
+# layer 235 3
+# alpha 235 0 0
+# mask 235 off
+;;ロジェスティラ・神令・スクルド（ボイス用）
+# body 5503711
+# alpha 5503711 0 0
+;;イチイバル
+# body 233
+# pos 233 3
+# scale 233 0.8 0
+# layer 233 2
+# alpha 233 0 0
+# mask 233 off
+;;イチイバル・神令・オーディン（ボイス用）
+# body 5402211
+# alpha 5402211 0 0
+;;オルフェウス
+# body 234
+# pos 234 3
+# scale 234 0.8 0
+# layer 234 2
+# alpha 234 0 0
+# mask 234 off
+;;オルフェウス・神令・フォルセティ（ボイス用）
+# body 5603211
+# alpha 5603211 0 0
+;;-----------------------------------------
+;;第6話　タイトル：集いし者
+;;//背景：花畑
+# se "SE_0841"
+# move 231 3 0
+# face 231 "angry"
+# alpha 231 1 0
+# mask 231 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 540201 "hyoha_c_battle_0003"
+@ヒョウハ
+せいっ！
+おりゃっ！
+たぁっ！
+
+# textwindow "close"
+# alpha 231 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# waitandnext 0.6
+
+# se "SE_4817"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+@異族
+グギャアアア…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 810004 0 0.5
+# waitandnext 0.5
+
+# move 233 2 0
+# face 233 "normal"
+# alpha 233 1 0.5
+# mask 233 on
+# textboxarrow 0 1
+# move 234 4 0
+# face 234 "normal"
+# alpha 234 1 0.5
+# textwindow "normal"
+# voice 540221 "ichiibal_c_0041"
+@イチイバル
+素晴らしい弓の腕だ
+これはボクも負けていられないね
+
+# face 234 "angry"
+# textboxarrow 0 3
+@オルフェウス
+あのキル姫のお陰で異族の包囲が
+崩れてるっ
+反撃するなら、今だよ
+
+# alpha 233 0 0.5
+# alpha 234 0 0.5
+# move 235 3 0
+# face 235 "surprise"
+# alpha 235 1 0.5
+# mask 235 off
+# textboxarrow 0 2
+# voice 550371 "logistille_c_0023"
+@ロジェスティラ
+あわわわっ…
+えっと、えっと…
+
+# move 232 2 0
+# face 232 "normal"
+# alpha 232 1 0.5
+# mask 232 on
+# textboxarrow 0 1
+# move 235 4 0.5
+# mask 235 on
+# voice 520311 "nyoikinkobou_c_0004"
+@如意金箍棒
+は～い
+落ち着いてね～
+
+;;//如意金箍棒がロジェスティラを抱きしめる
+# se "SE_10131"
+# waitandnext 0.2
+
+# textwindow "close"
+# move 232 3 0.2
+# waitandnext 0.2
+
+# face 235 "shy"
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 550371 "logistille_c_0022"
+@ロジェスティラ
+はわわっ？
+温かくて、柔らかい…？
+
+# se "SE_0899"
+# textboxarrow 0 2
+@ビコウ
+ウキーッ！
+
+# textboxarrow 0 2
+# voice 520311 "nyoikinkobou_c_0003"
+@如意金箍棒
+そうね、ビコウ
+この子達を安全なところまで
+連れていきましょう
+
+# alpha 235 0 0.5
+# move 232 2 0.5
+# move 234 4 0
+# face 234 "angry"
+# alpha 234 1 0.5
+# mask 234 on
+# textboxarrow 0 3
+# voice 560321 "orpheus_c_0013"
+@オルフェウス
+またキル姫っ？
+だ…誰なんですか…！？
+
+# textboxarrow 0 1
+@如意金箍棒
+自己紹介は後にしようね
+今は急いでここを離れるわよ
+
+# textboxarrow 0 1
+@如意金箍棒
+そっちの子は怪我してるのね
+ワタシが抱えてあげる
+
+# alpha 234 0 0.5
+# move 233 4 0
+# face 233 "surprise"
+# alpha 233 1 0.5
+# mask 233 on
+# textboxarrow 0 3
+# voice 540221 "ichiibal_c_0023"
+@イチイバル
+えっ？
+おおっ…
+
+# textboxarrow 0 1
+@如意金箍棒
+ほら、急いで
+ヒョウハちゃんが異族を引きつけて
+くれてるうちに
+
+# alpha 233 0 0.5
+# move 234 4 0
+# face 234 "angry"
+# alpha 234 1 0.5
+# mask 234 on
+# textboxarrow 0 3
+@オルフェウス
+あ、はいっ
+急ごう、ロジェスティラ！
+
+# alpha 232 0 0.5
+# alpha 234 0 0.5
+# move 235 3 0
+# face 235 "normal"
+# alpha 235 1 0.5
+# mask 235 off
+# textboxarrow 0 2
+@ロジェスティラ
+あのあのっ…
+待って下さい…
+
+;;//背景：洞窟
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "101_cave"
+# alpha 235 0 0
+# move 232 2 0
+# face 232 "normal"
+# alpha 232 1 0
+# mask 232 on
+# move 234 4 0
+# face 234 "normal"
+# alpha 234 1 0
+# mask 234 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "stop"
+# textboxarrow 0 1
+# textwindow "normal"
+@如意金箍棒
+ここまで来れば大丈夫そうね
+傷は痛む？
+
+# textboxarrow 0 3
+# voice 560321 "orpheus_c_0002"
+@オルフェウス
+あたしが診るよっ
+
+# textboxarrow 0 1
+# voice 520311 "nyoikinkobou_c_0020"
+@如意金箍棒
+あなた治癒魔法が使えるのね
+良かったわ
+
+# alpha 232 0 0.5
+# alpha 234 0 0.5
+# move 235 3 0
+# face 235 "normal"
+# alpha 235 1 0.5
+# mask 235 off
+# textboxarrow 0 2
+@ロジェスティラ
+イチイバルさん…
+
+# bgm "bgm002" 0
+# face 235 "happy"
+# textboxarrow 0 2
+# voice 550371 "logistille_c_0030"
+@ロジェスティラ
+あの、えっとえっと…
+助けてくれて、
+ありがとうございます！
+
+# move 232 2 0
+# face 232 "happy"
+# alpha 232 1 0.5
+# mask 232 on
+# textboxarrow 0 1
+# move 235 4 0.5
+# mask 235 on
+# voice 520311 "nyoikinkobou_c_0005"
+@如意金箍棒
+ちゃんとお礼が言えて、良い子ね
+よしよし♪
+
+# face 235 "shy"
+# textboxarrow 0 3
+# voice 550371 "logistille_c_0024"
+@ロジェスティラ
+はううっ？
+
+# alpha 235 0 0.5
+# move 230 4 0
+# face 230 "normal"
+# alpha 230 1 0.5
+# mask 230 on
+# textboxarrow 0 3
+# voice 510461 "murgleys_c_0039"
+@ミュルグレス
+あ、戻ってきたんだ
+わざわざ助けに行くなんて
+ミュルには理解できないな～
+
+# face 232 "angry"
+# textboxarrow 0 1
+@如意金箍棒
+ミュルグレスちゃん
+
+# face 230 "angry"
+# textboxarrow 0 3
+@ミュルグレス
+ツーン…
+
+# alpha 232 0 0.5
+# alpha 230 0 0.5
+# move 231 3 0
+# face 231 "normal"
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+@ヒョウハ
+ただいまー！
+上手くいって良かったよ
+そっちの子、大丈夫そう？
+
+# move 231 2 0.5
+# mask 231 on
+# move 232 4 0
+# face 232 "normal"
+# alpha 232 1 0.5
+# mask 232 on
+# textboxarrow 0 3
+# voice 520311 "nyoikinkobou_c_0004"
+@如意金箍棒
+お疲れ様、ヒョウハちゃん
+今、彼女が診てくれてるわ
+
+# alpha 232 0 0.5
+# move 233 4 0
+# face 233 "usual"
+# alpha 233 1 0.5
+# mask 233 on
+# textboxarrow 0 3
+# voice 540221 "ichiibal_c_0030"
+@イチイバル
+迷惑をかけたね
+感謝するよ
+
+# textboxarrow 0 1
+# voice 540201 "hyoha_c_0005"
+@ヒョウハ
+気にすんなって
+あたしがやりたいからやった
+だけだよ
+
+# alpha 233 0 0.5
+# move 235 4 0
+# face 235 "happy"
+# alpha 235 1 0.5
+# mask 235 on
+# textboxarrow 0 3
+# voice 550371 "logistille_c_0041"
+@ロジェスティラ
+はわぁ～
+とっても格好良くて…素敵…
+あ！そうではなくなくっ
+
+# textboxarrow 0 3
+@ロジェスティラ
+本当に、ありがとうございました
+
+# alpha 231 0 0.5
+# move 230 2 0
+# face 230 "normal"
+# alpha 230 1 0.5
+# mask 230 on
+# textboxarrow 0 1
+# voice 510461 "murgleys_c_0039"
+@ミュルグレス
+ふ～ん
+本当に感謝してるの？
+
+# face 235 "surprise"
+# textboxarrow 0 3
+# voice 550371 "logistille_c_0022"
+@ロジェスティラ
+えっ…？
+もちろんですですっ
+
+# textboxarrow 0 1
+# voice 510461 "murgleys_c_0004"
+@ミュルグレス
+そっか～
+なら、ちゃんと恩返しして
+もらわないとね～
+
+# textboxarrow 0 1
+@ミュルグレス
+ミュル達は命の恩人なんだから、
+これっておっきい貸しだよ～♪
+
+# move 232 1 0
+# face 232 "angry"
+# alpha 232 1 0.5
+# mask 232 on
+# textboxarrow 0 1
+# move 230 3 0.5
+# move 235 5 0.5
+@如意金箍棒
+ミュルグレスちゃん
+
+# face 230 "angry"
+# textboxarrow 0 2
+# voice 510461 "murgleys_c_0013"
+@ミュルグレス
+フン…！
+二人ともお人好し過ぎて
+つまんな～い
+
+# alpha 232 0 0.5
+# move 233 1 0
+# face 233 "usual"
+# alpha 233 1 0.5
+# mask 233 on
+# textboxarrow 0 1
+# voice 540221 "ichiibal_c_0003"
+@イチイバル
+もちろん、この恩は必ず返すよ
+どんなことがあっても
+
+# face 235 "normal"
+# textboxarrow 0 3
+@ロジェスティラ
+イチイバルさん…
+
+;;イチイバル（小声）
+# textboxarrow 0 1
+@イチイバル
+安心して
+命をかけたりはしないから
+
+;;ロジェスティラ（小声）
+# textboxarrow 0 3
+# face 235 "happy"
+@ロジェスティラ
+はいっ
+
+# textboxarrow 0 2
+# voice 510461 "murgleys_c_0021"
+@ミュルグレス
+本当！？
+ミュル、聞いたからねっ
+何でもしてくれるって――
+
+# alpha 233 0 0.5
+# alpha 230 0 0.5
+# alpha 235 0 0.5
+# move 231 3 0
+# face 231 "irregular"
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+# voice 540201 "hyoha_c_0027"
+@ヒョウハ
+はいはい
+あんたはちょっと黙ってろ
+
+# face 231 "normal"
+# textboxarrow 0 2
+@ヒョウハ
+えっと、自己紹介がまだだったな
+あたしはヒョウハ
+よろしく！
+
+# alpha 231 0 0.5
+# move 232 3 0
+# face 232 "normal"
+# alpha 232 1 0.5
+# mask 232 off
+# textboxarrow 0 2
+# voice 520311 "nyoikinkobou_c_0003"
+@如意金箍棒
+如意金箍棒よ
+ニョイ子って呼んでね
+
+# textboxarrow 0 2
+@ビコウ
+ウキッ
+
+# textboxarrow 0 2
+@如意金箍棒
+この子はビコウ
+ワタシの弟子なの
+
+# alpha 232 0 0.5
+# move 230 3 0
+# face 230 "normal"
+# alpha 230 1 0.5
+# mask 230 off
+# textboxarrow 0 2
+# voice 510461 "murgleys_c_0004"
+@ミュルグレス
+ミュルはミュルグレスだよ
+アンタ達の命の恩人なんだから
+敬いなさいね
+
+# move 231 2 0
+# face 231 "irregular"
+# alpha 231 1 0.5
+# mask 231 on
+# textboxarrow 0 1
+# move 230 4 0.5
+# mask 230 on
+# voice 540201 "hyoha_c_0014"
+@ヒョウハ
+いや、あんた何もしてないだろっ
+それどころか助けに行くの
+反対してたろっ
+
+# face 230 "angry"
+# textboxarrow 0 3
+# voice 510461 "murgleys_c_0013"
+@ミュルグレス
+え～？
+ミュルがそんなひどいこと言うわけ
+ないじゃ～ん
+
+# textboxarrow 0 3
+@ミュルグレス
+ヒョウハってば、ひど～い
+
+# face 231 "angry"
+# textboxarrow 0 1
+# voice 540201 "hyoha_c_0013"
+@ヒョウハ
+こ・い・つ・は！
+
+# alpha 231 0 0.5
+# alpha 230 0 0.5
+# move 233 3 0
+# face 233 "normal"
+# alpha 233 1 0.5
+# mask 233 off
+# textboxarrow 0 2
+# voice 540221 "ichiibal_c_0004"
+@イチイバル
+ハハハ…
+ボクはイチイバル
+三人とも、助けてくれてありがとう
+
+# alpha 233 0 0.5
+# move 234 2 0
+# face 234 "normal"
+# alpha 234 1 0.5
+# mask 234 on
+# textboxarrow 0 1
+# move 235 4 0
+# face 235 "normal"
+# alpha 235 1 0.5
+# mask 235 on
+@オルフェウス
+あたしはオルフェウスよ
+それで、彼女が…
+
+# textboxarrow 0 3
+@ロジェスティラ
+…………
+
+# alpha 234 0 0.5
+# move 233 2 0
+# face 233 "surprise"
+# alpha 233 1 0.5
+# mask 233 on
+# textboxarrow 0 1
+# voice 540221 "ichiibal_c_0022"
+@イチイバル
+ロジェスティラ？
+
+# face 235 "happy"
+# textboxarrow 0 3
+# voice 550371 "logistille_c_0042"
+@ロジェスティラ
+皆さん…綺麗で…可愛くて…
+素敵…
+眺めているだけで、幸せ～♪
+
+# face 233 "usual"
+# textboxarrow 0 1
+# voice 540221 "ichiibal_c_0027"
+@イチイバル
+…彼女はロジェスティラ
+まあ、今はそっとしておいてよ
+
+# alpha 233 0 0.5
+# alpha 235 0 0.5
+# move 231 3 0
+# face 231 "irregular"
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+# voice 540201 "hyoha_c_0008"
+@ヒョウハ
+お…おうっ
+で、あんたら
+どうしてこんなところに？

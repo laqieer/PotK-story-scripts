@@ -1,0 +1,545 @@
+;;-----------------------------------------
+;;海上編OP_1-1
+;;-----------------------------------------
+# script "lisp"
+# background "bg_white"
+# bgmfile "bgm376" "BgmSeaEventBattle004" 0
+;;-----------------------------------------
+;;にょい
+# body 2203111
+# pos 2203111 3
+# scale 2203111 0.8 0
+# layer 2203111 3
+# mask 2203111 off
+# alpha 2203111 0 0
+;;ふぉる
+# body 2301821
+# pos 2301821 3
+# scale 2301821 0.8 0
+# layer 2301821 3
+# mask 2301821 off
+# alpha 2301821 0 0
+;;てぃる
+# body 2101441
+# pos 2101441 3
+# scale 2101441 0.8 0
+# layer 2101441 3
+# mask 2101441 off
+# alpha 2101441 0 0
+;;そろもん
+# body 2503121
+# pos 2503121 3
+# scale 2503121 0.8 0
+# layer 2503121 3
+# mask 2503121 off
+# alpha 2503121 0 0
+;;かしうす
+# body 2303121
+# pos 2303121 3
+# scale 2303121 0.8 0
+# layer 2303121 3
+# mask 2303121 off
+# alpha 2303121 0 0
+# brightness 2303121 0.1 0
+;;れーヴぁ
+# body 2100241
+# pos 2100241 3
+# scale 2100241 0.8 0
+# layer 2100241 3
+# mask 2100241 off
+# alpha 2100241 0 0
+# brightness 2100241 0.1 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imagescale 0 1.2 0
+# imageset 1 "e200701_map"
+# imagealpha 1 0 0
+# imageset 2 "mov2_2"
+# imagescale 2 1.15 0
+# imagealpha 2 0 0
+# imageset 3 "bg_white"
+# imagealpha 3 1 0
+# imagescale 3 2.5 0
+;;-----------------------------------------
+;;背景：ラグーナ島海底版（海上編MAP海底）
+# fadein "white" 1
+# textwindow "close"
+# waitandnext 1
+
+# imagealpha 1 1 0
+# imagepos 1 0 15
+# imagealpha 2 1 0.7
+# imagepos 2 0 -590
+# waitandnext 0.7
+
+# se "SE_0050"
+# imagealpha 3 0 0
+# imagemoveto 2 0 -50 1
+# waitandnext 0.8
+
+# imagealpha 2 0 1
+# textwindow "nomal"
+# textflame 0 0
+@
+青い海に沈む常夏の島、
+ラグーナ島
+
+@
+人の気配はなく、波の音だけが響く
+静かなこの島に
+フォルカスと如意金箍棒は立っていた
+
+@
+この場所にいる理由はわからないが、
+とりあえず島内の調査に向かう二人
+
+@
+その道中で、子供のキル姫
+ソロモンとティルフィングに出会う
+
+@
+同じような境遇に意気投合した4人は、
+ともに島の探索をすることとなった
+
+@
+探索中、爆発音と地震が発生し、
+島にはいくつかの土煙が上がる
+4人は近場の土煙を目指すことに
+
+@
+そして、その先で
+4人を待っていたものとは…
+
+# imagealpha 1 0 1
+# waitandnext 1.2
+
+# move 2303121 4 0
+# mask 2303121 on
+# alpha 2303121 1 0.5
+# move 2100241 2 0
+# mask 2100241 on
+# alpha 2100241 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+;;@？？？（幼児カシウス 以下、カシウス）
+@？？？
+…このよのすべては
+えんかんのいんし
+
+;;@？？？（カシウス）
+@？？？
+わたしは、
+さらなるしんえんをさまよう
+
+# textboxarrow 0 1
+;;@？？？（幼児レーヴァテイン 以下、レーヴァテイン）
+@？？？
+ん…
+じゃ、おやすみ…
+
+# fadeout "black" 2
+# waitandnext 2
+
+# alpha 2303121 0 0
+# alpha 2100241 0 0
+# brightness 2303121 1 0
+# brightness 2100241 1 0
+# textwindow "close"
+;;背景：砂浜
+# bgm "bgm005" 0
+# background "sea_floor_beach_day"
+# waitandnext 0.5
+
+# fadein "black" 2
+# waitandnext 2
+
+# move 2203111 2 0
+# mask 2203111 on
+# alpha 2203111 1 0.5
+# move 2301821 4 0
+# mask 2301821 on
+# alpha 2301821 1 0.5
+# face 2203111 "normal"
+# face 2301821 "angry"
+# waitandnext 0.8
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 520311 "nyoikinkobou_c_0043"
+@如意金箍棒
+…フォルカスちゃん！ あれ！
+
+# textboxarrow 0 3
+# voice 530181 "forcas_c_0022"
+@フォルカス
+あっ！
+木陰に、誰か倒れています！
+
+;;演出：場所移動
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 2203111 0 0
+# alpha 2301821 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 2100241 1 0.5
+# alpha 2301821 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# voice 530181 "forcas_c_0002"
+@フォルカス
+しっかりしてください！
+聞こえますか？
+
+# textboxarrow 0 1
+;;@？？？（レーヴァテイン）
+@？？？
+…………
+
+# textboxarrow 0 3
+@フォルカス
+反応がありません！
+異族に襲われたのでしょうか…
+如意金箍棒、早く手当を！
+
+# textboxarrow 0 1
+@？？？
+すぅ…
+
+# alpha 2100241 0 0.5
+# alpha 2203111 1 0.5
+# textboxarrow 0 1
+@如意金箍棒
+…待って、フォルカスちゃん
+ちょっと、落ち着いて？
+
+# textboxarrow 0 3
+@フォルカス
+ですが、一刻を争う状態かも！
+私はどうすれば…
+私にできることは？
+
+# bgm "stop"
+# textboxarrow 0 1
+# face 2203111 "usual"
+# voice 520311 "nyoikinkobou_c_0002"
+@如意金箍棒
+だからね、フォルカスちゃん…
+呼吸も顔色も異常なさそうだし、
+眠ってるだけじゃない？
+
+# textboxarrow 0 3
+# face 2301821 "sad"
+# voice 530181 "forcas_c_0022"
+@フォルカス
+え？
+
+# bgmfile "bgm376_377" "BgmSeaEventBattle004" 0
+# alpha 2203111 0 0.5
+# alpha 2301821 0 0.5
+# move 2100241 3 0
+# mask 2100241 off
+# alpha 2100241 1 0.5
+# textboxarrow 0 2
+# face 2100241 "angry"
+@？？？
+ん…
+うるさい…
+
+# move 2100241 2 0.5
+# mask 2100241 on
+# move 2503121 4 0
+# mask 2503121 on
+# alpha 2503121 1 0.5
+# textboxarrow 0 3
+# face 2503121 "surprise"
+@ソロモン
+あ！起きた！
+
+# textboxarrow 0 1
+@？？？
+…………
+
+# textboxarrow 0 1
+# eye 2100241 "close"
+# voice 210024 "revatein_lo_kyara_1001"
+@？？？
+ふわぁあぁ…
+…すやぁ
+
+# alpha 2503121 0 0.5
+# move 2101441 4 0
+# mask 2101441 on
+# alpha 2101441 1 0.5
+# textboxarrow 0 3
+# face 2101441 "surprise"
+# voice 210144 "tyrufing_lo_0022"
+@ティルフィング
+あ…寝てしまいました…
+
+# alpha 2101441 0 0.5
+# alpha 2100241 0 0.5
+# alpha 2203111 1 0.5
+# alpha 2301821 1 0.5
+# textboxarrow 0 3
+# face 2301821 "normal"
+# voice 530181 "forcas_c_0004"
+@フォルカス
+よかった…
+眠っているだけでしたか…
+
+# textboxarrow 0 1
+# face 2203111 "normal"
+@如意金箍棒
+また寝ちゃったけど…
+どうしよう？
+
+# textboxarrow 0 3
+@フォルカス
+疲れているのでしょう
+無理に起こすのも、
+かわいそうな気がしますが…
+
+# alpha 2203111 0 0.5
+# alpha 2301821 0 0.5
+# alpha 2101441 1 0.5
+# move 2503121 2 0
+# alpha 2503121 1 0.5
+# textboxarrow 0 1
+# face 2503121 "usual"
+# voice 250312 "solomon_lo_0034"
+@ソロモン
+そのいけんには、はんたいよ
+ほうっておいたら、ずっとおきないわ
+なぜか、そんなきがするの
+
+# textboxarrow 0 3
+# face 2101441 "sad"
+# voice 210144 "tyrufing_lo_0003"
+@ティルフィング
+そうですね
+ききたいことも、ありますし…
+
+# alpha 2101441 0 0.5
+# move 2203111 4 0
+# alpha 2203111 1 0.5
+# textboxarrow 0 3
+# face 2203111 "usual"
+# voice 520311 "nyoikinkobou_c_0028"
+@如意金箍棒
+そうだねぇ…
+わるいけど、起きてもらおうか？
+
+# textboxarrow 0 1
+# voice 250312 "solomon_lo_0002"
+@ソロモン
+じゃ、おこすわよ？
+ねえ、ちょっと…
+あなた、おきてくれない？
+
+# alpha 2203111 0 0.5
+# alpha 2503121 0 0.5
+# move 2100241 3 0
+# mask 2100241 off
+# alpha 2100241 1 0.5
+# eye 2100241 "normal"
+# textboxarrow 0 2
+@？？？
+ん…なに？
+…だれ？
+
+# move 2503121 4 0
+# alpha 2503121 1 0.5
+# move 2100241 2 0.5
+# mask 2100241 on
+# textboxarrow 0 3
+# face 2503121 "normal"
+@ソロモン
+私はソロモン
+あなた、どうして
+こんなところでねているの？
+
+# textboxarrow 0 1
+@？？？
+…かぜが、きもちいいから
+
+# textboxarrow 0 1
+# eye 2100241 "close"
+@？？？
+…すぅ
+
+# textboxarrow 0 3
+# face 2503121 "usual"
+# voice 250312 "solomon_lo_0009"
+@ソロモン
+ちょっと！
+はなしは、まだおわってないわよ！
+
+# alpha 2503121 0 0.5
+# alpha 2101441 1 0.5
+# textboxarrow 0 3
+# face 2101441 "angry"
+# voice 210144 "tyrufing_lo_0002"
+@ティルフィング
+あの、すみません！
+おはなしを、きかせてもらえませんか？
+
+# textboxarrow 0 1
+# voice 210024 "revatein_lo_0028"
+@？？？
+ん～…
+ふわぁ…
+
+# textboxarrow 0 1
+# eye 2100241 "normal"
+@？？？
+…こんどは、だれ？
+
+# textboxarrow 0 3
+# face 2101441 "usual"
+# voice 210144 "tyrufing_lo_0003"
+@ティルフィング
+私は、ティルフィングといいます
+おなまえを、きかせてもらえますか？
+
+# textboxarrow 0 1
+@レーヴァテイン
+…レーヴァテイン
+
+# textboxarrow 0 3
+# face 2101441 "surprise"
+@ティルフィング
+レーヴァテイン…
+アナタはどうして、このしまに？
+ひとりなのですか？
+
+# textboxarrow 0 1
+# voice 210024 "revatein_lo_0003"
+@レーヴァテイン
+きがついたら、このしまにいて…
+あの子とであって、いっしょにいた
+
+# textboxarrow 0 3
+@ティルフィング
+あの子？
+もうひとり、いるんですね？
+
+# textboxarrow 0 1
+@レーヴァテイン
+その子が
+玉をおいかけていったから、
+ここで、ねてた…
+
+# alpha 2101441 0 0.5
+# alpha 2301821 1 0.5
+# textboxarrow 0 3
+# face 2301821 "usual"
+# voice 530181 "forcas_c_0002"
+@フォルカス
+それで、その子はどちらへ
+向かったのでしょうか？
+
+# textboxarrow 0 1
+@レーヴァテイン
+あっち…
+もくもくしてるとこ…
+
+# textboxarrow 0 3
+# face 2301821 "angry"
+# voice 530181 "forcas_c_0028"
+@フォルカス
+まさか、土煙の方へ？
+それは心配ですね…
+早く探しに行きましょう！
+
+# alpha 2100241 0 0.5
+# move 2203111 2 0
+# alpha 2203111 1 0.5
+# textboxarrow 0 1
+# voice 520311 "nyoikinkobou_c_0032"
+@如意金箍棒
+そうだね、フォルカスちゃん！
+
+# se "SE_0617"
+# serif 1
+# textwindow "nomal"
+@異族
+グギャ！グギャギャ！
+
+# serif 0
+# textboxarrow 0 1
+# face 2203111 "sad"
+# voice 520311 "nyoikinkobou_c_0027"
+@如意金箍棒
+…はあ、またね
+こっちは急いでるのに
+
+# serif 1
+@異族
+グググ…
+
+# alpha 2301821 0 0.5
+# alpha 2203111 0 0.5
+# move 2100241 3 0
+# mask 2100241 off
+# alpha 2100241 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 2100241 "angry"
+# voice 210024 "revatein_lo_0009"
+@レーヴァテイン
+…さっきから、ひるねのじゃま
+…しつこい
+
+# alpha 2100241 0 0.5
+# move 2203111 3 0
+# mask 2203111 off
+# alpha 2203111 1 0.5
+# textboxarrow 0 2
+# face 2203111 "happy"
+# voice 520311 "nyoikinkobou_c_0039"
+@如意金箍棒
+あら！
+レーヴァテインちゃん、ワタシたち
+気が合うみたいね、フフッ
+
+# textboxarrow 0 2
+@如意金箍棒
+ワタシのことは、
+ニョイ子って呼んでね？
+
+# alpha 2203111 0 0.5
+# move 2100241 3 0
+# mask 2100241 off
+# alpha 2100241 1 0.5
+# textboxarrow 0 2
+# face 2100241 "normal"
+# voice 210024 "revatein_lo_0032"
+@レーヴァテイン
+ニョイ子…
+わかった…
+
+# alpha 2100241 0 0.5
+# move 2301821 3 0
+# mask 2301821 off
+# alpha 2301821 1 0.5
+# textboxarrow 0 2
+# face 2301821 "usual"
+@フォルカス
+みなさん、決して
+油断は禁物ですよ

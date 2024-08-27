@@ -1,0 +1,332 @@
+;;【EP4】戦闘前背景：廊下
+# script "lisp"
+# background "corridor_daytime"
+# bgm "bgm002" 0
+# body 114
+# pos 114 3
+# scale 114 0.8 0
+# mask 114 off
+# textflame 0 0
+# face 114 "angry"
+# body 100821
+# alpha 100821 0 0
+# body 300331
+# alpha 300331 0 0
+# body 400831
+# alpha 400831 0 0
+@
+――昼休み
+
+# emotionbody 500 9 114 -80 160
+# effectpattern 500 6 0
+# effectstart 500
+# alpha 114 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 4008 "otyinusu_0009"
+# chara 114
+@オティヌス
+ほら、マスター！
+急いで急いで！
+
+# effectskip 500
+# textflame 0 0
+@
+グラムの元に連れて行くと
+約束していたオティヌス
+
+# textflame 0 0
+@
+マスターの前に現れた彼女は
+慌てた様子で、マスターの手を
+ぐいぐい引っ張ってゆく
+
+# textflame 0 0
+@マスター
+待って！
+そんなに急いで
+どうしたの、オティヌス！
+
+# body 116
+# pos 116 2
+# scale 116 0.8 0
+# alpha 116 0 0
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textflame 1 1
+# textboxarrow 0 2
+# chara 114
+@オティヌス
+緊急事態なんだよ！
+すぐに本部に行って
+グラムに伝えなくちゃ…
+
+;;//SE　扉の開く音
+;;――場面転換――
+;;【//背景：教室】
+# se "SE_0676"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# emotionbody 300 1 116 100 220
+# effectpattern 300 1 0
+# effectstart 300
+# alpha 116 1 0
+# move 114 4 0
+# background "classroom02_afternoon"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# mask 114 on
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 116 "surprise"
+# chara 116
+@グラム
+おぉ、オティヌス
+そんなに急いでどうしたの？
+
+# effextskip 300
+# textboxarrow 0 3
+# chara 114
+@オティヌス
+一大事なんだよ！
+…はぁ、はぁ…
+
+# textboxarrow 0 1
+# chara 116
+@グラム
+そこまで焦るほどのことなの？
+
+# textboxarrow 0 3
+# voice 4008 "otyinusu_0003"
+# face 114 "angry"
+# chara 114
+@オティヌス
+それは、もちろん！
+あたし達、“鳳凰天”のプライドにも
+関わる大問題だよ！
+
+# bgm "stop"
+# textflame 0 0
+@マスター
+そんな大問題って…
+いったいなにが…？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1008 "guramu_0009"
+# face 116 "sad"
+# chara 116
+@グラム
+…オティヌス、聞かせてよ
+
+# textboxarrow 0 3
+# chara 114
+@オティヌス
+…わかった
+落ち着いて聞いてね
+
+# textboxarrow 0 3
+# voice 4008 "otyinusu_0015"
+# face 114 "sad"
+# chara 114
+@オティヌス
+実は、ブラフマーストラが
+今度の花見で…
+
+# textflame 0 0
+@マスター
+ゴクリ…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 114
+# face 114 "angry"
+@オティヌス
+“やきとり”を用意するって！！！
+
+# emotionbody 123 1 116 100 220
+# effectpattern 123 2 14
+# effectstart 123
+# textboxarrow 0 1
+# chara 116
+# face 116 "surprise"
+@グラム
+！？
+
+# effextskip 123
+# textflame 0 0
+@マスター
+！？
+
+;;//エモーション　ビキィッ
+# emotionbody 234 13 116 100 220
+# effectpattern 234 2 0
+# effectstart 234
+# bgmfile "bgm165" "BgmPJZero001" 0.7
+# textflame 1 1
+# textboxarrow 0 1
+# chara 116
+# face 116 "mad"
+@グラム
+あ゛あ゛！？
+あのクソが…よりにもよって
+“やきとり”だと…！？
+
+;;//エモーション　ビキィッ
+# emotionbody 345 13 116 -100 160
+# effectpattern 345 1 0
+# effectstart 345
+# textboxarrow 0 1
+# voice 1008 "guramu_0010"
+# chara 116
+@グラム
+あの野郎、今日という今日は
+ぶっ殺してやるッ！！！
+
+;;//SE　扉が乱暴に開く音
+;;//グラム、立ち絵消去
+# effectskip 234
+# effectskip 345
+# sedelay "SE_5575" 0.5
+# se "SE_0717"
+# leftout 116 0.5
+# alpha 116 0 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+# textboxarrow 0 3
+# voice 4008 "otyinusu_0009"
+# chara 114
+# face 114 "surprise"
+@オティヌス
+待ってよ、グラム！
+
+;;//オティヌス　立ち絵消去
+;;//SE　扉閉まる音
+# se "SE_0718"
+# leftout 114 0.5
+# alpha 114 0 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+# textflame 0 0
+@マスター
+ああっ！？
+グラム！オティヌス！
+
+# textflame 0 0
+@マスター
+…僕も追った方がいいのかな？
+でも、どうせ僕には
+どうしようもないしな…
+
+# textflame 0 0
+@マスター
+グラムとブラフマーストラが
+ぶつかるんじゃ、どっちも
+止めようがないんだから…
+
+# textflame 0 0
+@
+１人、“鳳凰天”の本部に
+取り残されるマスター
+すると…
+
+;;//SE　ドアが開く音
+# se "SE_0676"
+# textflame 0 0
+@マスター
+あれっ？グラムは戻らないだろうし
+…オティヌスかな？
+戻ってきてくれたんだ…
+
+# pos 300331 3
+# scale 300331 0.8 0
+# mask 300331 off
+# body 300351
+# pos 300351 3
+# scale 300351 0.8 0
+# alpha 300351 0 0
+# textflame 0 0
+@マスター
+え！？
+
+# bgmfile "bgm163" "BgmPJZero001" 0.7
+# alpha 300351 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 300351
+# face 300351 "mad"
+@方天画戟
+あ゛あ゛！？
+なんだ、テメェかよ…！
+
+# textboxarrow 0 2
+# voice 3003 "hotengageki_0009"
+# chara 300351
+@方天画戟
+おい、グラムのヤローはどこだ
+今朝の借りを返さねぇと
+腹の虫がおさまらねぇ…！！
+
+# textflame 0 0
+@マスター
+えっと、グラムは
+ちょうどさっき出ていって…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 300351
+@方天画戟
+あ゛あ゛！？
+んだよ、くそが！！
+
+# textboxarrow 0 2
+# voice 3003 "hotengageki_0007"
+# chara 300351
+# face 300351 "angry"
+@方天画戟
+ちょうど良いや…
+お前で良いから、
+ちょっと相手になれよ！！
+
+# brightness 300351 0.6 1
+# face 300351 "mad"
+# eye 300351 "mad"
+# fillrect "black" 1 0 0.2
+# waitandnext 1
+
+# se "SE_0677"
+# henshinbody 200 1 300351 300331
+# waitandnext 1.3
+
+# sestop "SE_0677"
+# waitandnext 0.03
+
+# se "SE_0678"
+# shakeloop 0
+# henshin 200
+# alpha 300331 1 0
+# waitandnext 1.3
+
+# textwindow "nomal"
+# textflame 0 0
+@マスター
+いや、無茶言わないで！？
+
+;;//もやもや吹き出し
+# textwindow "moya"
+@マスター
+っていうか、方天画戟は
+異族化しすぎじゃない！？
+何回助けてもすぐ戻るし…！

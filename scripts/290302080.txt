@@ -1,0 +1,480 @@
+;;-----------------------------------------
+;;3_2_8_0
+;;-----------------------------------------
+# script "lisp"
+# background "red_corridor"
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 3
+;;-----------------------------------------
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# mask 210 off
+# alpha 210 1 0
+;;魔獣化マサムネ
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# mask 1100111 off
+# alpha 1100111 0 0
+# brightness 1100111 0.5 0
+# face 1100111 "angry"
+;;-----------------------------------------
+;;暗転
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;背景：赤い廊下
+# face 210 "normal"
+# voice 9936 "kamito_0016"
+# textflame 1 1
+# textboxarrow 0 2
+@カミト
+…………くそっ
+
+# face 210 "sad"
+# textboxarrow 0 2
+@カミト
+くそっ…
+くそっ…
+くそぉっ…！
+
+# face 210 "angry"
+# textboxarrow 0 2
+@カミト
+ちくしょおおおおおおおおおおおおお
+おおおおおおおおおおおおおおお！！
+
+# textboxarrow 0 2
+@カミト
+僕はっ…
+弱くてっ…
+何も出来なくてっ…
+
+# textboxarrow 0 2
+@カミト
+兄貴もっ…アスカロンもっ…
+グリモワールもっ…シユウもっ…
+フォルカスもっ…みんな！
+
+# textboxarrow 0 2
+@カミト
+ちくしょおおおぉぉぉっ…！
+
+# voice 9936 "kamito_0040"
+# textboxarrow 0 2
+@カミト
+終わって堪るかっ
+僕に何が出来るかなんて
+分からないけど…！
+
+# textboxarrow 0 2
+@カミト
+こんなところで蹲ってるくらいなら
+他にやれることはいくらでも
+あるだろ！
+
+# textboxarrow 0 2
+@カミト
+考えろ…考えろ…！
+何で僕はここに来た？
+あのとき聞こえたのは何だ？
+
+# textboxarrow 0 2
+@カミト
+絶対、絶対ここには何かがあるんだ
+それを見つけ出せ！
+まだ終わってないぞ！
+
+# textboxarrow 0 2
+@カミト
+強くなるんだ…！
+ほんのちょっとでもいい！
+今だけでもいいからっ
+
+# textboxarrow 0 2
+@カミト
+前に進めよ、僕！
+
+# textboxarrow 0 2
+@カミト
+よしっ
+奥に進もう
+この建物を調べるんだ
+
+;;カミトが歩いていく
+# bgm "stop"
+# alpha 210 0 0.5
+# se "SE_0740"
+# textwindow "close"
+# waitandnext 1
+
+;;窓ガラスが割れる音
+# fadein "white" 0.2
+# se "SE_10391"
+# waitandnext 0.5
+
+;;魔獣化マサムネが現れる
+# alpha 1100111 1 0.5
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@？？？
+グウウウウウウウウ
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：ラグナロク機関
+# background "in_ragnarok_institution"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+# alpha 1100111 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 210 1 0.5
+# face 210 "surprise"
+# voice 9936 "kamito_0023"
+# textwindow "nomal"
+# textboxarrow 0 2
+@カミト
+ここは…？
+他の部屋と雰囲気が違うな
+
+# textboxarrow 0 2
+@カミト
+あれ？
+この機械、もしかして電源が
+入ってるのかな
+
+# textboxarrow 0 2
+@カミト
+こんなうち捨てられた建物で、
+どうして…
+
+# face 210 "irregular"
+# textboxarrow 0 2
+@カミト
+とりあえず、使えそうなものが
+ないか探してみよう！
+
+;;選択肢
+# select "棚を探る" "select_label_01" "机の上を調べる" "select_label_02" "窓の外を見る" "select_label_03"
+@
+とりあえず、使えそうなものが
+ないか探してみよう！
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# se "SE_0856"
+# face 210 "normal"
+# voice 9936 "kamito_0030"
+# textboxarrow 0 2
+@カミト
+ファイルがたくさん仕舞ってあるけど
+…どれも難しすぎて分からないな
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# se "SE_0857"
+# face 210 "surprise"
+# voice 9936 "kamito_0030"
+# textboxarrow 0 2
+@カミト
+雑然としたものが散らばってる
+これは…チョコの包み紙かな？
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# se "SE_5201"
+# face 210 "normal"
+# voice 9936 "kamito_0030"
+# textboxarrow 0 2
+@カミト
+霧が濃くてほとんど何も見えない
+アスカロン達、大丈夫かな
+
+# label "select_label_end"
+# face 210 "surprise"
+# textboxarrow 0 2
+@カミト
+ん？
+机の引き出しに何か入ってる
+これは…
+
+# se "SE_0686"
+# face 210 "normal"
+# textboxarrow 0 2
+@カミト
+ここの研究者が遺した記録みたいだ
+ええと、記入者は…ヴァリン？
+
+# textboxarrow 0 2
+@カミト
+知らない名前だな…
+グリモワールなら知ってるかも
+しれないけど
+
+# face 210 "surprise"
+# textboxarrow 0 2
+@カミト
+…内容は
+僕には難しすぎるものばかりだ
+あれ？ここに挟まってるのは…鍵？
+
+# se "SE_0858"
+# textboxarrow 0 2
+@カミト
+鍵だ
+セキュリティキーってやつだよな
+どこのものだろう？
+
+;;カミトが部屋をうろうろする
+# alpha 210 0 0.5
+# se "SE_0740"
+# textwindow "close"
+# waitandnext 0.5
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 210 1 0.5
+# se "SE_0740"
+# face 210 "normal"
+# textwindow "nomal"
+# textboxarrow 0 2
+@カミト
+…………
+
+# face 210 "surprise"
+# textboxarrow 0 2
+@カミト
+あった！
+これだな…
+
+# face 210 "irregular"
+# textboxarrow 0 2
+@カミト
+ヴァリンさん、ごめんなさい！
+緊急事態なんで、失礼しますっ
+
+;;カミトがセキュリティキーを回す
+# se "SE_0859"
+# textwindow "close"
+# waitandnext 0.8
+
+;;電子音
+# se "SE_0860"
+# sedelay "SE_0861" 0.3
+# waitandnext 1
+
+# serif 1
+# textwindow "nomal"
+@合成音声
+認証しました
+
+# face 210 "surprise"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@カミト
+何かが起動したみたいだ…
+
+# serif 1
+@合成音声
+私はHalf -----ng --stem
+通称―リス
+ハリ――お呼びく―――
+
+# face 210 "normal"
+# voice 9936 "kamito_0023"
+# serif 0
+# textboxarrow 0 2
+@カミト
+データが破損してるのかな？
+ところどころ聞き取れないけど…
+
+# serif 1
+@合成音声
+ただいまより―――メイル救――――
+インスト――と実装――――ついて
+説―――――
+
+# face 210 "angry"
+# voice 9936 "kamito_0059"
+# serif 0
+# textboxarrow 0 2
+@カミト
+何なんだよっ？
+しっかりしてくれ…！
+
+# serif 1
+@合成音声
+認証されたデバ イスを接続して
+インストールを開始して下さい
+
+# face 210 "surprise"
+# voice 9936 "kamito_0026"
+# serif 0
+# textboxarrow 0 2
+@カミト
+うわぁっ！
+いきなり正常に喋り出した…
+認証されたデバイスって…
+
+# serif 1
+@合成音声
+あなたの左腕に取りつけられている
+器具のことを指しています
+
+# serif 0
+# textboxarrow 0 2
+@カミト
+あ、これか
+…って、僕のことを認識してるの！？
+
+# serif 1
+@合成音声
+肯定
+私はH--- ------g s-----
+通称―――です
+
+# face 210 "sad"
+# voice 9936 "kamito_0030"
+# serif 0
+# textboxarrow 0 2
+@カミト
+肝心なところが破損してる…
+
+# face 210 "irregular"
+# voice 9936 "kamito_0001"
+# serif 0
+# textboxarrow 0 2
+@カミト
+あのっ…
+僕の義手を接続したら、
+何が起きるんだ？
+
+# serif 1
+@合成音声
+回答
+―――メイルの体―にて―殖して――
+――を除去し安定――キラ――――用
+
+# serif 1
+@合成音声
+ヴァリン―――任の最――成―――
+
+# face 210 "sad"
+# serif 0
+# textboxarrow 0 2
+@カミト
+ダメだっ
+全然、分からない…！
+
+# face 210 "normal"
+# serif 0
+# textboxarrow 0 2
+@カミト
+どうやら前もって入力されてた文言は
+破損がひどいみたいだな
+
+# face 210 "irregular"
+# serif 0
+# textboxarrow 0 2
+@カミト
+…賭けてみるか？
+ヴァリンって名前はかろうじて
+聞き取れたし…
+
+# serif 0
+# textboxarrow 0 2
+@カミト
+何か実験の成果が
+残されているのなら、あの化け物と
+戦う力になるかもしれないっ
+
+# face 210 "angry"
+# voice 9936 "kamito_0055"
+# serif 0
+# textboxarrow 0 2
+@カミト
+どうせ何もしなかったら
+オシマイなんだ
+やってやる！
+
+# se "SE_0862"
+# face 210 "normal"
+# serif 0
+# textboxarrow 0 2
+@カミト
+義手を外すのは久し振りだな
+ここに接続して…
+
+# face 210 "irregular"
+# serif 0
+# textboxarrow 0 2
+@カミト
+よしっ
+できたよ
+
+# serif 1
+@合成音声
+インストールを開始します
+しばらくお待ち下さい
+
+# face 210 "normal"
+# serif 0
+# textboxarrow 0 2
+@カミト
+ふぅ…
+この間にヴァリンさんの記録を
+もう一度読んでみようかな
+
+# sestop "SE_0861"
+# alpha 210 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.8
+
+;;扉が吹っ飛ぶ音
+# se "SE_5218"
+# se "SE_5215"
+# shake 0 1
+# waitandnext 1
+
+# alpha 1100111 1 0.5
+# se "SE_0847"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@？？？
+ガアアアアアアアアアアアア！
+
+# alpha 1100111 0 0.5
+# alpha 210 1 0.5
+# face 210 "sad"
+# voice 9936 "kamito_0025"
+# serif 0
+# textboxarrow 0 2
+@カミト
+うわぁっ！
+こんなところにまでっ…

@@ -1,0 +1,439 @@
+;;-----------------------------------------
+;;punkこのすばコラボイベント2018後編
+;;タイトル：『この常夏の島で冒険を！』
+;;EP7戦闘前
+;;スクリプト最後の背景:sea_beach_night
+;;スクリプトID:
+;;-----------------------------------------
+# script "lisp"
+# background "sea_beach_night"
+# bgm "bgm002" 0
+;;海上編ティルフィング
+# body 2101411
+# pos 2101411 4
+# scale 2101411 0.8 0
+# alpha 2101411 0 0
+# mask 2101411 off
+;;デュリン
+# body 0
+# pos 0 2
+# scale 0 0.8 0
+# alpha 0 0 0
+# layer 0 3
+# mask 0 off
+;;水着アスクレピオス
+# body 2600111
+# pos 2600111 4
+# scale 2600111 0.8 0
+# alpha 2600111 0 0
+;;水着シタ
+# body 2201611
+# pos 2201611 2
+# scale 2201611 0.8 0
+# alpha 2201611 0 0
+;;水着めぐみん
+# body 2502511
+# pos 2502511 2
+# scale 2502511 0.8 0
+# alpha 2502511 0 0
+# face 2502511 "worry"
+;;水着ダクネス
+# body 2103411
+# pos 2103411 4
+# scale 2103411 0.8 0
+# alpha 2103411 0 0
+# face 2103411 "sad"
+;;アクア（通常）
+# body 601711
+# pos 601711 3
+# scale 601711 0.8 0
+# alpha 601711 1 0
+# mask 601711 off
+# face 601711 "sad"
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;回想用
+# imageset 1 "bg_white_circle"
+# imagelayer 1 3
+# imagealpha 1 0 0
+# imagescale 1 1.2 0
+;;◆背景：ビーチ（夜）--------------------
+# textflame 0 0
+@
+“海の家”に帰還したマスター達
+既に夜となり、浜辺の空には
+星がまたたいている…
+
+# voice 6017 "akua_0057"
+# textflame 1 1
+# textboxarrow 0 2
+@アクア
+うう…粘液のねばねばが乾いて
+ごわごわしてきたわ…
+
+# alpha 601711 0 0.5
+# alpha 2201611 1 0.5
+# alpha 2600111 1 0.5
+# voice 6001 "asukurepiosu_0003"
+# textboxarrow 0 3
+@アスクレピオス
+アクア
+シャワーの準備できてるわよ
+さっさと行ってきなさい
+
+# voice 2016 "shita_0003"
+# textboxarrow 0 1
+@シタ
+あ、着替えも用意しておきます
+…ここって水着しかないですけど
+別に構いませんよね？
+
+# alpha 2201611 0 0.5
+# alpha 2600111 0 0.5
+# alpha 601711 1 0.5
+# emotionbody 1004 3 601711 0 230
+# effectpattern 1004 1 0
+# effectstart 1004 1 0
+# face 601711 "usual"
+# voice 6017 "akua_0046"
+# textboxarrow 0 2
+@アクア
+ええ大丈夫！
+じゃ、ひとっ風呂浴びてくるわね！
+
+;;アクアはける
+# alpha 601711 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# alpha 2101411 1 0.5
+# alpha 0 1 0.5
+# textwindow "normal"
+# voice 1014 "tyrufing_0002"
+# textboxarrow 0 3
+@ティルフィング
+先程、“海の家”に戻る途中
+アクアさんからうかがった
+カエルについての事情ですが…
+
+# voice 9999 "durin_0003"
+# textboxarrow 0 1
+@デュリン
+そうね、
+おさらいしておいた方が
+よさそうよね
+
+# alpha 2101411 0 0.5
+# alpha 0 0 0.5
+# alpha 2502511 1 0.5
+# alpha 2103411 1 0.5
+# voice 5025 "megumin_0009"
+# textboxarrow 0 1
+@めぐみん
+まったく、
+とんでもない話でした
+
+# voice 1034 "dakunesu_0004"
+# textboxarrow 0 3
+@ダクネス
+そうだな…
+
+;;---ここから回想風---
+# textwindow "close"
+# se "SE_0700"
+# bgm "stop"
+# effectbody 600 21 0 0
+# effectstart 600
+
+;;◆背景：密林（昼）-------------------------------
+# effectskip 600
+# background "sea_jungle_day"
+# bgmfile "bgm208" "BgmKScollabo001" 0
+# imagepos 1 0 0
+# imagealpha 1 1 0
+# alpha 2502511 0 0
+# alpha 2103411 0 0
+# alpha 601711 1 0
+# face 601711 "irregular"
+# waitandnext 0.1
+
+# textwindow "normal"
+# voice 6017 "akua_0049"
+# textboxarrow 0 2
+@アクア
+じゃあ、聞いてくれる？
+聞くも涙、語るも涙の
+私の苦労話を…
+
+# alpha 601711 0 0.5
+# move 2600111 3 0
+# alpha 2600111 1 0.5
+# mask 2600111 off
+# face 2600111 "angry"
+# voice 6001 "asukurepiosu_0009"
+@アスクレピオス
+そういうのいいから、
+早く始めてよ
+
+# alpha 2600111 0 0.5
+# alpha 601711 1 0.5
+@アクア
+はい
+
+# face 601711 "usual"
+@アクア
+私ね、この島に来てから
+みんなとはぐれて、暇だったし
+お小遣いも欲しくなって…
+
+@アクア
+それで、暇つぶしに召喚魔法でも
+使ってみようと思って
+ものは試しと、やってみたのよ
+
+# alpha 601711 0 0.5
+# move 2201611 3 0
+# alpha 2201611 1 0.5
+# mask 2201611 off
+# voice 2016 "shita_0009"
+@シタ
+召喚…魔法…ですか？
+
+# alpha 2201611 0 0.5
+# alpha 601711 1 0.5
+@アクア
+そう。こう…
+《セイクリッド・サモン・トード！》
+って感じでね
+
+# se "SE_0673"
+# face 601711 "normal"
+# voice 6017 "akua_0048"
+@アクア
+そしたら、なんと大成功！
+
+@アクア
+カエルが出るわ出るわ
+すごいことになっちゃったのよ！
+
+# alpha 601711 0 0.5
+# move 2502511 3 0
+# alpha 2502511 1 0.5
+# mask 2502511 off
+@めぐみん
+なんて迷惑なことを…
+
+;;（もやもやフキダシ）
+# alpha 2502511 0 0.5
+# alpha 0 1 0.5
+# move 0 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+@デュリン
+召喚魔法…って、アクアの能力？
+もしかして世界樹が
+なにか関わってるのかしら…？
+
+# alpha 0 0 0.5
+# alpha 2101411 1 0.5
+# mask 2101411 on
+# move 601711 2 0
+# alpha 601711 1 0.5
+# mask 601711 on
+# textwindow "normal"
+# textboxarrow 0 3
+@ティルフィング
+…さっきの異族はアクアさんを
+集中的に狙っていたみたいですが
+なぜでしょう？
+
+# face 601711 "irregular"
+# voice 6017 "akua_0045"
+# textboxarrow 0 1
+@アクア
+それはね
+きっと私がカエルの粘液まみれで
+カエルくさかったからよ
+
+@アクア
+異族はカエルがキライみたいなの
+そのせいでカエル臭い私まで
+襲われるはめになっちゃって
+
+@アクア
+でも都合のいいことに
+異族達がカエルを片っ端から
+倒してくれたおかげで…
+
+# voice 6017 "akua_0047"
+# face 601711 "happy1"
+@アクア
+新鮮なカエルのお肉が手に入ったの！
+私はお肉を拾い集めて、食材として
+ビーチの屋台に売り込みに！！
+
+# alpha 2101411 0 0.5
+# alpha 601711 0 0.5
+# alpha 2201611 1 0.5
+# face 2201611 "sad"
+# textboxarrow 0 2
+@シタ
+えっ！？
+拾ったお肉を売り込み！？
+
+# alpha 2201611 0 0.5
+# move 601711 3 0
+# alpha 601711 1 0.5
+# mask 601711 off
+# face 601711 "normal"
+@アクア
+ええ、そう！売り込みに
+行って稼ごうと、思ったんだけどー…
+
+# alpha 601711 0 0.5
+# alpha 2600111 1 0.5
+# face 2600111 "sad"
+@アスクレピオス
+…思ったんだけど？
+
+# alpha 2600111 0 0.5
+# alpha 601711 1 0.5
+# face 601711 "sad"
+# voice 6017 "akua_0057"
+@アクア
+カエルが勝手に増殖してるのよ！
+もう手がつけられないわ！
+どうしてこんなに増えてるの！？
+
+@アクア
+私の世界じゃありえない…
+そうよ、こっちの世界のマナってやつ？
+…の驚異に違いないわ！！
+
+@アクア
+だから、カエルを呼び出したのは
+た、確かに私だけれど…！大群に
+なったのは私のせいじゃないのよー！
+
+;;---ここまで回想風---
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：ビーチ（夜）
+# background "sea_beach_night"
+# bgm "bgm002" 0
+# alpha 601711 0 0
+# alpha 2101411 1 0
+# mask 2101411 off
+# face 2101411 "sad"
+# move 0 2 0
+# alpha 0 1 0
+# face 0 "occur"
+# waitandnext 0.1
+
+# imagealpha 1 0 0
+# waitandnext 0.1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# voice 1014 "tyrufing_0008"
+# textboxarrow 0 3
+@ティルフィング
+…本当に大変だったみたいですね
+
+# voice 9999 "durin_0027"
+# textboxarrow 0 1
+;;呆れ
+@デュリン
+まったく、ロクでもない話だわ…
+
+# alpha 2101411 0 0.5
+# alpha 0 0 0.5
+# move 2201611 2 0
+# alpha 2201611 1 0.5
+# mask 2201611 on
+# move 2600111 4 0
+# alpha 2600111 1 0.5
+# mask 2600111 on
+# face 2201611 "normal"
+# voice 2016 "shita_0004"
+# textboxarrow 0 1
+@シタ
+まあ、それにしても
+面白い人ですよね、
+アクアさん
+
+# voice 6001 "asukurepiosu_0028"
+# textboxarrow 0 3
+@アスクレピオス
+いや、
+面白いですむ話じゃないと思うけど…
+
+# bgm "stop" 
+# serif 0
+# textwindow "close"
+# brightness 2201611 0.5 0.2
+# brightness 2600111 0.5 0.2
+# serif 1
+# voice 6017 "akua_0058"
+@アクアの声？
+わああああっ！！
+
+# bgm "bgm031" 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# brightness 2201611 1 0.2
+# brightness 2600111 1 0.2
+# alpha 2201611 0 0.5
+# alpha 2600111 0 0.5
+# alpha 0 1 0.5
+# alpha 2103411 1 0.5
+# face 0 "angry"
+# face 2103411 "angry"
+# voice 1034 "dakunesu_0026"
+# textboxarrow 0 3
+@ダクネス
+はっ！？
+なにやら叫び聞こえたが
+異族か？
+
+# textboxarrow 0 1
+@デュリン
+待って…
+地響きと変な足音が
+こっちに迫ってきてない？
+
+# alpha 0 0 0.5
+# alpha 2103411 0 0.5
+# alpha 2201611 1 0.5
+# alpha 2600111 1 0.5
+# face 2600111 "angry"
+# face 2201611 "angry"
+# textboxarrow 0 3
+@アスクレピオス
+なっ！？そ、外を見て！！
+カエルの群れが…大群が
+“海の家”に向かってきてる！！
+
+# textboxarrow 0 1
+@シタ
+あらあらぁ？
+あのカエルたち、
+わたしに潰されたいんですかね？
+
+# voice 2016 "shita_0010"
+@シタ
+なら、望みどおりに
+してあげますよ！

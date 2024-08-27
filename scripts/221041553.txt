@@ -1,0 +1,209 @@
+;;-----------------------------------------
+;;ファンキル2019ウェディングイベントシナリオ
+;;タイトル：契約と計画のブライダル
+;;【EP.4】親愛と信頼
+;;4_3
+;;スクリプト最後の背景：004_outland
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;グラウ
+# body 164
+# pos 164 3
+# scale 164 0.6 0
+# layer 164 2
+# alpha 164 0 0
+# mask 164 off
+;;ソロモンウェディング
+# body 3503131
+# pos 3503131 3
+# scale 3503131 0.8 0
+# layer 3503131 2
+# alpha 3503131 0 0
+# mask 3503131 off
+;;ロンギヌスウェディング
+# body 3300121
+# pos 3300121 3
+# scale 3300121 0.8 0
+# layer 3300121 2
+# alpha 3300121 0 0
+# mask 3300121 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+# move 3300121 2 0
+# face 3300121 "angry"
+# alpha 3300121 1 0
+# mask 3300121 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 3503131 4 0
+# face 3503131 "usual"
+# alpha 3503131 1 0
+# mask 3503131 on
+# voice 330011 "ronginusu_t_0002"
+@ロンギヌス
+別の兵が巡回していないか、
+今度は私が見張りにいきます
+ソロモンも、少し休んでいてください
+
+# face 3503131 "happy"
+# textboxarrow 0 3
+# voice 5031 "solomon_t_0003"
+@ソロモン
+ありがとう
+それじゃあ、お願いしようかな
+
+;;演出：ロンギヌスout
+# textwindow "close"
+# alpha 3300121 0 0.5
+# waitandnext 0.5
+
+# move 3503131 3 0.5
+# face 3503131 "usual"
+# mask 3503131 off
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 5031 "solomon_t_0001"
+@ソロモン
+マスター、調子はどう？
+移動が多くて疲れたんじゃない？
+
+;;モノローグ
+# textflame 0 0
+@
+マスターは、グラウに乗ってたから
+大丈夫だよ、と答える
+
+# face 3503131 "smile"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5031 "solomon_t_0004"
+@ソロモン
+そう？それはよかったわ
+
+# face 3503131 "usual"
+# textboxarrow 0 2
+@ソロモン
+…ロンギヌスは、慣れないドレスで
+動きにくくないかしらね
+
+;;モノローグ
+# textflame 0 0
+@
+そういって、ソロモンはロンギヌスの
+いる方向を心配そうに見た
+
+;;モノローグ
+# textflame 0 0
+@
+その様子を見て、マスターは
+ふと、さっきのロンギヌスとの
+会話を思い出した
+
+;;モノローグ
+# textflame 0 0
+@
+そして、ソロモンの意見も
+聞いてみようと、ロンギヌスについて
+尋ねてみることにした
+
+# emotionbody 1000 2 3503131 10 290
+# effectpattern 1000 1 1
+# effectstart 1000
+# face 3503131 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5031 "solomon_t_0022"
+@ソロモン
+え…？
+私がロンギヌスのことを
+どう思っているのかって？
+
+# face 3503131 "usual"
+# textboxarrow 0 2
+# voice 5031 "solomon_t_0028"
+@ソロモン
+そうね…
+私たちが同じハルモニア出身だと
+いうのは、知っているよね？
+
+# textboxarrow 0 2
+@ソロモン
+その頃のちょっとした行き違いでね
+ほんの数日前まで、
+良好な関係とはいえなかったわ
+
+# face 3503131 "happy"
+# textboxarrow 0 2
+@ソロモン
+でも、いまは彼女に感謝している、
+今日のことも…
+いえ、なんでもないわ
+
+# face 3503131 "angry"
+# textboxarrow 0 2
+# voice 5031 "solomon_t_0069"
+@ソロモン
+そろそろロンギヌスが戻るころね
+グラウ、移動する準備を！
+
+;;モノローグ
+# textflame 0 0
+# alpha 3503131 0 0.5
+@
+ソロモンはごまかすように
+グラウに話しかけ、
+マスターとの会話を終えた
+
+;;モノローグ
+# textflame 0 0
+@
+マスターは、そういえばロンギヌスも
+今日がチャンスだって言ってたなぁ…
+と、一人思い出す
+
+;;モノローグ
+# textflame 0 0
+@
+そして一行は、偵察から
+戻ってきたロンギヌスに案内され
+街外れの古い教会へと辿り着いた
+
+;;演出：場面転換
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "004_outland"
+# move 3300121 3 0
+# face 3300121 "usual"
+# alpha 3300121 1 0
+# mask 3300121 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 330011 "ronginusu_t_0028"
+@ロンギヌス
+どうやらここは廃教会のようです
+
+;;モノローグ
+# textflame 0 0
+# alpha 3300121 0 0.5
+@
+ロンギヌスのいう通り、古くて大きな
+教会に、人の気配は一切感じない
+ただ静かに、そこに佇んでいた

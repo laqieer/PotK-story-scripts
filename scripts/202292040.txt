@@ -1,0 +1,350 @@
+;;-----------------------------------------
+;;SEA4章_4
+;;-----------------------------------------
+# script "lisp"
+# background "sea_landmark_evening"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 1
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 3
+# scale 6504011 0.8 0
+# layer 6504011 3
+# mask 6504011 off
+# alpha 6504011 0 0
+;;オルフェウス
+# body 5603211
+# pos 5603211 3
+# scale 5603211 0.8 0
+# layer 5603211 2
+# mask 5603211 off
+# alpha 5603211 0 0
+;;ミュルグレス
+# body 5104611
+# pos 5104611 2
+# scale 5104611 0.8 0
+# layer 5104611 4
+# alpha 5104611 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：ライブ会場
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_0902"
+# serif 1
+# textflame 1 1
+@観客達
+いやーっ
+やっぱりオルフェウスちゃんの
+ライブは最高だな！
+
+# serif 1
+@オルフェウスのファン達
+明日のライブも楽しみだぜ！
+
+;;人々が帰っていく
+# serif 1
+# textwindow "close"
+# waitandnext 2
+
+# alpha 5603211 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@オルフェウス
+ふぅっ
+今日のライブもアガった～
+…で
+
+# bgm "bgm005" 0
+# voice 560321 "orpheus_c_0013"
+# face 5603211 "angry"
+# textboxarrow 0 2
+@オルフェウス
+何で邪魔しようとしたのか
+聞かせてくれるよね、ミュルミュル？
+
+# voice 510461 "murgleys_c_0032"
+# move 5603211 4 0.5
+# alpha 5104611 1 0.3
+# textboxarrow 0 1
+@ミュルグレス
+仕方ないな～
+オルフェの頼みだから特別に
+教えてあげる
+
+# move 5104611 1 0.5
+# alpha 5104611 0 0.3
+# move 270 2 0.5
+# alpha 270 1 0.3
+# face 5603211 "surprise"
+# voice 9917 "mimir_navikan_0002"
+# textboxarrow 0 1
+@ミーミル
+あの…失礼致します
+
+# voice 560321 "orpheus_c_0022"
+# textboxarrow 0 3
+@オルフェウス
+あれ？
+ファンが凸しちゃった？
+
+# textboxarrow 0 3
+@オルフェウス
+ごめ～ん
+ここ、関係者以外は…
+ってリーダーいるし！？
+
+;;選択肢
+# select "久しぶり" "select_label_01" "久しぶり？" "select_label_01"
+ごめ～ん
+ここ、関係者以外は…
+ってリーダーいるし！？
+
+# label "select_label_01"
+# voice 560321 "orpheus_c_0004"
+# face 5603211 "usual"
+# textboxarrow 0 3
+@オルフェウス
+いつ以来だっけ？
+あたしのライブ、アガったっしょ
+
+# textboxarrow 0 3
+@オルフェウス
+もしかして、この子
+リーダーのツレ？
+なら、しょうがないな～
+
+# voice 9917 "mimir_navikan_0003"
+# textboxarrow 0 1
+@ミーミル
+私、マスター様の
+専属補佐官を務めております
+ミーミルと申します
+
+# face 5603211 "happy"
+# textboxarrow 0 3
+@オルフェウス
+ミーミル、よろ～♪
+
+# textboxarrow 0 1
+@ミーミル
+よろしくお願い致します
+それで、私達はミュルグレスさんに
+お話を伺いたく…
+
+# textboxarrow 0 3
+@オルフェウス
+そ、マ？
+あたしもっ
+ビートのシンクロやばくない？
+
+# face 270 "sad"
+# voice 9917 "mimir_navikan_0022"
+# textboxarrow 0 1
+@ミーミル
+え…あ、はい…
+
+# voice 510461 "murgleys_c_0003"
+# move 270 1 0.5
+# alpha 270 0 0.3
+# move 5104611 2 0.5
+# face 5104611 "surprise"
+# alpha 5104611 1 0.3
+# textboxarrow 0 1
+@ミュルグレス
+ふーん…
+だんちょーも来てたんだ
+まあ、いっか
+
+# face 5104611 "normal"
+# face 5603211 "usual"
+# textboxarrow 0 1
+@ミュルグレス
+ミュル達がオルフェのライブを
+邪魔した理由、聞きたいんでしょ？
+教えてあげるね～
+
+;;選択肢
+# select "随分、素直だね" "select_label_02" "カステラなしで？" "select_label_03"
+ミュル達がオルフェのライブを
+邪魔した理由、聞きたいんでしょ？
+教えてあげるね～
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textboxarrow 0 1
+@ミュルグレス
+それは…オルフェとミュルが
+ズッ友だからだよ
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# textboxarrow 0 1
+@ミュルグレス
+カステラくれるのなら、
+それも貰ってあげる！
+
+# label "select_label_end"
+# face 5603211 "angry"
+# textboxarrow 0 3
+@オルフェウス
+で？
+
+# textboxarrow 0 1
+@ミュルグレス
+イチイバルに言われたんだよね
+オルフェの力が強くなりすぎて
+良くないことになってるって
+
+# voice 560321 "orpheus_c_0018"
+# face 5603211 "surprise"
+# textboxarrow 0 3
+@オルフェウス
+あたしの力が強くなりすぎてる…？
+
+# voice 510461 "murgleys_c_0032"
+# textboxarrow 0 1
+@ミュルグレス
+そ！
+このままだとオルフェ自身も
+まずいことになっちゃうらしいよ～
+
+# textboxarrow 0 1
+@ミュルグレス
+イチイバルは
+何度も警告したって言ってたけど
+結局ライブは中止しなかったんだね
+
+# textboxarrow 0 1
+@ミュルグレス
+だからライブに割り込んで、
+強引にやめさせようとしたんだよ
+
+# voice 560321 "orpheus_c_0027"
+# face 5603211 "sad"
+# textboxarrow 0 3
+@オルフェウス
+…確かに
+「しばらくライブは控えた方が良い」
+って言われたけど
+
+# textboxarrow 0 3
+@オルフェウス
+イッチーさん、理由を聞いても
+ちっとも答えてくれないし、
+そんなの納得できないっしょ！
+
+# voice 510461 "murgleys_c_0004"
+# face 5104611 "happy"
+# textboxarrow 0 1
+@ミュルグレス
+ミュルは詳しいこと知らな～い
+文句ならイチイバルに言ってよね
+
+# move 270 2 0.5
+# alpha 270 1 0.3
+# move 5104611 1 0.5
+# alpha 5104611 0 0.3
+# voice 9917 "mimir_navikan_0002"
+# textboxarrow 0 1
+@ミーミル
+あのっ
+オルフェウスさんの力が
+強くなり過ぎているとのことですが…
+
+# textboxarrow 0 1
+@ミーミル
+オルフェウスさんは
+何か心当たりなど
+ございませんでしょうか？
+
+# voice 560321 "orpheus_c_0028"
+# textboxarrow 0 3
+@オルフェウス
+うーん…
+それなんだけどさぁ…
+あるといえば、あるんだよね…
+
+# textboxarrow 0 3
+@オルフェウス
+あたし、音楽の力で
+世界を平和にしたいって思ってて
+それで歌ってるんだけど…
+
+# textboxarrow 0 3
+@オルフェウス
+ちょっと前から、変な影響力
+出てきちゃってるな～とは
+思ってて…
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+それは
+有名になられたので
+
+# textboxarrow 0 1
+@ミーミル
+オルフェウスさんの発言が
+注目されるようになった
+ということでしょうか？
+
+# textboxarrow 0 3
+@オルフェウス
+そのくらいだったら良いんだけど…
+あたしが歌うと、みんな急に
+仲良くなるっていうか…
+
+# textboxarrow 0 3
+@オルフェウス
+さっきまで
+殴り合いのケンカしてたのに
+肩組んで笑ってたり…
+
+# textboxarrow 0 3
+@オルフェウス
+争いなんてやめて欲しいと思って
+歌ってるけど、極端過ぎじゃね？
+ってね…
+
+# textboxarrow 0 3
+@オルフェウス
+でも、悪いことじゃないっしょ？
+だから、そんなに気にしてなかった
+っていうか
+
+# face 270 "sad"
+# voice 9917 "mimir_navikan_0001"
+# textboxarrow 0 1
+@ミーミル
+それは…マスター様
+やはり「揺らぎ」の影響では
+ないでしょうか？
+
+# voice 560321 "orpheus_c_0022"
+# textboxarrow 0 3
+@オルフェウス
+「揺らぎ」？
+何それ？
+
+# face 270 "normal"
+# voice 9917 "mimir_navikan_0003"
+# textboxarrow 0 1
+@ミーミル
+私から説明させていただきます
+実は…
+
+# fadeout "black" 1
+# waitandnext 1

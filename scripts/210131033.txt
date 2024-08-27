@@ -1,0 +1,240 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１３章 章タイトル「ラルゴカタストロフィ―攪乱―」
+;;第1話－３　タイトル：眩惑のキル姫
+;;1_3_3
+;;スクリプト最後の背景：マサムネ城
+;;-----------------------------------------
+# script "lisp"
+# background "masamune_castle"
+# bgmfile "bgm415" "BgmIntegralNoahBattle002" 0
+;;-----------------------------------------
+;;花異族
+# body 5809801
+# pos 5809801 3
+# scale 5809801 0.8 0
+# layer 5809801 3
+# alpha 5809801 0 0
+# mask 5809801 off
+;;花異族（クローン1）
+# entry 958098011 5809801
+# pos 958098011 3
+# scale 958098011 0.8 0
+# layer 958098011 2
+# alpha 958098011 0 0
+# mask 958098011 off
+;;花異族（クローン2）
+# entry 958098012 5809801
+# pos 958098012 3
+# scale 958098012 0.8 0
+# layer 958098012 2
+# alpha 958098012 0 0
+# mask 958098012 off
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 2
+# alpha 5401721 0 0
+# mask 5401721 off
+;;擬装フライシュッツ
+# body 5502721
+# pos 5502721 3
+# scale 5502721 0.8 0
+# layer 5502721 2
+# alpha 5502721 0 0
+# mask 5502721 off
+;;雑賀
+# body 502411
+# pos 502411 3
+# scale 502411 0.8 0
+# layer 502411 2
+# alpha 502411 0 0
+# mask 502411 off
+;;-----------------------------------------
+# voice 5027 "freischotz_battle_0002"
+# move 5401721 2 0
+# face 5401721 "angry"
+# alpha 5401721 1 0
+# mask 5401721 on
+# move 5502721 4 0
+# face 5502721 "angry"
+# alpha 5502721 1 0
+# mask 5502721 on
+# textflame 1 1
+# textboxarrow 0 3
+@フライシュッツ
+やあっ！
+
+# se "SE_4200"
+# waitandnext 0.5
+
+# voice 4017 "suiha_battle_0001"
+# textboxarrow 0 1
+@スイハ
+はあっ！
+
+# se "SE_10585"
+# waitandnext 0.5
+
+# textwindow "close"
+# alpha 5401721 0 0.5
+# alpha 5502721 0 0.5
+# move 5809801 3 0
+# alpha 5809801 1 0.5
+# mask 5809801 off
+# waitandnext 0.6
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_7030"
+# textboxarrow 0 2
+# textwindow "normal"
+@異族
+イイイイイイイ…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 5809801 0 0.5
+# waitandnext 0.5
+
+# voice 4017 "suiha_0013"
+# move 5401721 3 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 2
+# textwindow "normal"
+@スイハ
+ふぅ…
+これで先に…
+
+;;//異族の群れが現れる
+# se "SE_0830"
+# se "SE_0887"
+# alpha 5401721 0 0.5
+# move 958098011 1 0
+# alpha 958098011 1 0.5
+# mask 958098011 on
+# move 5809801 3 0
+# alpha 5809801 1 0.5
+# mask 5809801 on
+# move 958098012 5 0
+# alpha 958098012 1 0.5
+# mask 958098012 on
+# textboxarrow 0 0
+@異族
+イイイイイイイイイイ！
+
+# voice 5027 "freischotz_0015"
+# alpha 958098011 0 0.5
+# alpha 5809801 0 0.5
+# alpha 958098012 0 0.5
+# move 5401721 2 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# mask 5401721 on
+# move 5502721 4 0
+# face 5502721 "sad"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+# textboxarrow 0 3
+@フライシュッツ
+また異族がたくさん出てきたよ…
+スイハちゃん、大丈夫？
+疲れてない？
+
+# voice 4017 "suiha_0003"
+# textboxarrow 0 1
+@スイハ
+平気です
+
+;;スイハ（独白）
+# move 5401721 2 0
+# face 5401721 "sad"
+# textboxarrow 0 0
+# textwindow "moya"
+@スイハ
+これは…キリがなさそう…
+正面突破は無謀だったのかな…
+
+;;//銃声
+# se "SE_4400"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_7030"
+# alpha 5401721 0 0.5
+# alpha 5502721 0 0.5
+# move 5809801 3 0
+# alpha 5809801 1 0.5
+# mask 5809801 off
+# textboxarrow 0 2
+# textwindow "normal"
+@異族
+イイイイイイ…
+
+;;//異族が倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 5809801 0 0.5
+# waitandnext 0.5
+
+# voice 4017 "suiha_0022"
+# move 5401721 2 0
+# face 5401721 "surprise"
+# alpha 5401721 1 0.5
+# mask 5401721 on
+# textboxarrow 0 1
+# move 5502721 4 0
+# face 5502721 "sad"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+# textwindow "normal"
+@スイハ
+今の銃弾は…！？
+
+# face 5502721 "surprise"
+# textboxarrow 0 3
+@フライシュッツ
+あ！
+スイハちゃん、あそこあそこっ
+
+# alpha 5401721 0 0.5
+# alpha 5502721 0 0.5
+# move 502411 3 0
+# face 502411 "angry"
+# alpha 502411 1 0.5
+# mask 502411 off
+# textboxarrow 0 2
+@雑賀
+お二人とも、こっちに
+うちが援護するっす
+
+# alpha 502411 0 0.5
+# move 5401721 2 0
+# face 5401721 "surprise"
+# alpha 5401721 1 0.5
+# mask 5401721 on
+# textboxarrow 0 1
+# move 5502721 4 0
+# face 5502721 "normal"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+@スイハ
+雑賀…
+どうして彼女が…？
+
+# textboxarrow 0 3
+@フライシュッツ
+スイハちゃん！
+ここは雑賀ちゃんの厚意に甘えて
+おこうよっ
+
+# face 5401721 "normal"
+# textboxarrow 0 1
+@スイハ
+そう、ですね…

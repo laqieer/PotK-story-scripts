@@ -1,0 +1,368 @@
+;;-----------------------------------------
+;;SEA夏1_4_0
+;;-----------------------------------------
+# script "lisp"
+# background "SEAsummer_town3"
+# bgm "stop"
+;;-----------------------------------------
+;;浴衣ミーミル
+# body 318
+# pos 318 3
+# scale 318 0.8 0
+# layer 318 4
+# mask 318 off
+# alpha 318 1 0
+;;浴衣如意金箍棒
+# body 6203111
+# pos 6203111 4
+# scale 6203111 0.7 0
+# layer 6203111 2
+# mask 6203111 off
+# alpha 6203111 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：公家屋敷（シノビナトリミング）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# voice 9917 "mimir_navikan_0001"
+# face 318 "normal"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+マスター様
+十分、休息できましたでしょうか？
+
+# textboxarrow 0 2
+@ミーミル
+私、そろそろマナナンさんを
+探しに行こうと存じます
+
+# face 318 "surprise"
+# textboxarrow 0 2
+@ミーミル
+お二人はこのままお祭りを…
+ティルフィング様？
+
+# voice 9917 "mimir_navikan_0055"
+# textboxarrow 0 2
+@ミーミル
+ティルフィング様…！？
+どちらにっ？
+
+# textboxarrow 0 2
+@ミーミル
+おかしいです…
+先程まで、こちらに…
+あっ！
+
+# voice 9917 "mimir_navikan_0048"
+# textboxarrow 0 2
+@ミーミル
+マスター様
+書き置きが残されております
+
+# bgm "bgm002" 0
+# face 318 "normal"
+# textboxarrow 0 2
+@ミーミル
+「マスターとミーミルへ
+せっかくのお祭りですから、
+三人で遊びましょう」
+
+# textboxarrow 0 2
+@ミーミル
+「かくれんぼ勝負です
+二人で協力して、私を見つけて
+下さいね」
+
+# textboxarrow 0 2
+@ミーミル
+「そういえば、お祭りには他の
+キル姫達も来ています」
+
+# textboxarrow 0 2
+@ミーミル
+「途中、彼女達と競い合うような
+こともあるかもしれませんね」
+
+# textboxarrow 0 2
+@ミーミル
+「御霊（ごりょう）の池にて
+たった一つのスイカを手に入れて」
+
+# face 318 "angry"
+# textboxarrow 0 2
+@ミーミル
+この筆跡は
+ティルフィング様のもので
+間違いありませんっ
+
+# face 318 "sad"
+# textboxarrow 0 2
+@ミーミル
+かくれんぼ…
+どうして急にそのようなことを？
+
+;;選択肢
+# select "楽しそうだ" "select_label_01" "絶対、見つける！" "select_label_01"
+かくれんぼ…
+どうして急にそのようなことを？
+
+# label "select_label_01"
+# face 318 "angry"
+# textboxarrow 0 2
+@ミーミル
+マスター様っ
+そ、そうですねっ
+せっかくのお祭りです
+
+# textboxarrow 0 2
+@ミーミル
+ミーミルもティルフィング様
+探索に尽力致します！
+
+# textboxarrow 0 2
+@ミーミル
+捜している間に
+マナナンさんとも
+会えるかもしれません
+
+# face 318 "surprise"
+# textboxarrow 0 2
+@ミーミル
+では、まず「御霊の池」に…
+ああっ…！？
+
+;;ミーミルがふらふらと歩いていく
+# se "SE_0740"
+# move 318 5 1
+# alpha 318 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+# fadeout "black" 1
+# waitandnext 1.5
+
+;;背景：春の沼地（シノビナトリミング）
+# background "SEAsummer_pond"
+# bgm "stop"
+# move 318 3 0
+# fadein "black" 1
+# waitandnext 1
+
+# voice 9917 "mimir_navikan_0031"
+# face 318 "sad"
+# alpha 318 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+申し訳ございません、マスター様…
+幾つもの幟がはためいていたので、
+つい…
+
+# face 318 "normal"
+# textboxarrow 0 2
+@ミーミル
+ここは庭園でしょうか？
+あちらに建物もございます
+人の姿も…
+
+;;ビコウが通り過ぎる
+# se "SE_9430"
+# se "SE_0899"
+# serif 1
+@ビコウ
+キキッ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 9917 "mimir_navikan_0024"
+# face 318 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+ひゃっ
+今のは、お猿さん？
+
+# serif 1
+# voice 520311 "nyoikinkobou_c_0011"
+@如意金箍棒
+ダメだよ、ビコウっ
+待ってーっ
+
+;;如意金箍棒が走ってくる
+# se "SE_5575"
+# move 6203111 3 0.5
+# scale 6203111 0.8 0.5
+# face 6203111 "angry"
+# alpha 6203111 1 0.3
+# move 318 1 0.5
+# scale 318 0.7 0.5
+# alpha 318 0 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.5
+
+;;マスターとぶつかる
+# se "SE_0656"
+# shake 0 1
+# waitandnext 1.5
+
+# voice 9917 "mimir_navikan_0046"
+# move 6203111 4 0.5
+# move 318 2 0
+# scale 318 0.8 0
+# face 318 "surprise"
+# alpha 318 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+マスター様…！
+
+# voice 520311 "nyoikinkobou_c_0031"
+# face 6203111 "surprise"
+# textboxarrow 0 3
+@如意金箍棒
+きゃっ…ごめんなさい
+
+;;選択肢
+# se "SE_6240"
+# select "柔らかい…" "select_label_02" "クッションが…" "select_label_02"
+きゃっ…ごめんなさい
+
+# label "select_label_02"
+# textboxarrow 0 3
+@如意金箍棒
+ん？
+何のこと？
+怪我がないのなら良かったけど
+
+# bgm "bgm002" 0
+# face 318 "happy"
+# textboxarrow 0 1
+@ミーミル
+こんにちは、如意金箍棒さん
+私、ミーミルと申します
+
+# textboxarrow 0 1
+@ミーミル
+そちらにいらっしゃるマスター様の
+専属補佐官でございます
+
+# face 6203111 "normal"
+# textboxarrow 0 3
+@如意金箍棒
+こんにちは、ミーミルちゃん
+ワタシのことはニョイ子って呼んでね
+
+# face 6203111 "happy"
+# textboxarrow 0 3
+@如意金箍棒
+その浴衣、似合ってるね
+このリボンを巻いてみるのは
+どうかな？
+
+# voice 9917 "mimir_navikan_0034"
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+あ、いえ…
+遠慮致します
+それよりも、ニョイ子さん
+
+# textboxarrow 0 1
+@ミーミル
+慌てておられたようですが、
+どうされました？
+
+# face 6203111 "sad"
+# textboxarrow 0 3
+@如意金箍棒
+それが…ビコウが急に飛び出して
+人の多いところに行っちゃったの
+
+# textboxarrow 0 3
+@如意金箍棒
+ワタシ、あまり人の多いところには
+行きたくなくて…
+
+# voice 9917 "mimir_navikan_0002"
+# textboxarrow 0 1
+@ミーミル
+あの、ビコウというのは…
+
+# face 6203111 "normal"
+# textboxarrow 0 3
+@如意金箍棒
+ビコウはワタシの弟子なんだけど、
+悪戯好きな子でね
+
+# textboxarrow 0 3
+@如意金箍棒
+見た目はこのくらいの背丈の
+お猿さんなの
+
+# textboxarrow 0 1
+@ミーミル
+では、先程、すれ違ったのが
+ビコウさんだったのですね
+
+# face 6203111 "sad"
+# textboxarrow 0 3
+@如意金箍棒
+やっぱり、こっちに来たんだね
+早く捕まえないと
+
+# face 6203111 "normal"
+# textboxarrow 0 3
+@如意金箍棒
+そんなわけだから、もう行くね
+お師様もごめんねっ
+
+;;選択肢
+# select "手伝うよ" "select_label_03" "協力する" "select_label_03"
+ビコウが急に飛び出して
+人の多いところに行っちゃったの
+早く捕まえないと
+
+# label "select_label_03"
+# face 6203111 "sad"
+# textboxarrow 0 3
+@如意金箍棒
+そんな、悪いよ…
+これはワタシの問題だから…
+
+# face 318 "angry"
+# textboxarrow 0 1
+@ミーミル
+困っている方を見過ごしたとあっては
+ティルフィング様に
+叱られてしまいます
+
+# textboxarrow 0 1
+@ミーミル
+どうか、お手伝いさせて下さい
+
+# voice 520311 "nyoikinkobou_c_0030"
+# face 6203111 "normal"
+# textboxarrow 0 3
+@如意金箍棒
+そう…？
+ありがとう、ミーミルちゃん
+お師様
+
+# textboxarrow 0 3
+@如意金箍棒
+それじゃ、一緒にビコウを捕まえよう
+
+# fadeout "black" 1
+# waitandnext 1

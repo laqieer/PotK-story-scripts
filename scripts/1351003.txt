@@ -1,0 +1,440 @@
+;;-----------------------------------------
+;;■□■３－５改修案■□■
+;;整形済み
+;;【３－５－４（バトル後）】
+;;スクリプト最後の背景：bog
+;;-----------------------------------------
+# script "lisp"
+# background "bog"
+# bgm "bgm004" 0
+;;----------------------------------------------------------
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 1
+# alpha 24 0 0
+# mask 24 off
+# face 24 "normal"
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 3
+# alpha 0 0 0
+# mask 0 off
+# face 0 "normal"
+;;ディーン
+# body 6
+# pos 6 3
+# scale 6 0.8 0
+# layer 6 1
+# alpha 6 0 0
+# mask 6 off
+# face 6 "normal"
+;;トト
+# body 4
+# pos 4 3
+# scale 4 0.8 0
+# layer 4 2
+# alpha 4 0 0
+# mask 4 off
+# face 4 "normal"
+;;暴走ロンギヌス
+# body 300111
+# pos 300111 3
+# scale 300111 0.8 0
+# layer 300111 2
+# alpha 300111 0 0
+# mask 300111 off
+# face 300111 "normal"
+;;ダグダ
+# body 200611
+# pos 200611 3
+# scale 200611 0.8 0
+# layer 200611 2
+# alpha 200611 0 0
+# mask 200611 off
+# face 200611 "normal"
+;;レーヴァテイン
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# layer 100221 1
+# alpha 100221 0 0
+# mask 100221 off
+# face 100221 "normal"
+;;-----------------------------------------
+;;背景:bog
+# move 300111 1 0
+# face 300111 "mad"
+# alpha 300111 1 0
+# mask 300111 on
+# move 100221 3 0
+# face 100221 "normal"
+# alpha 100221 1 0
+# mask 100221 on
+# move 200611 5 0
+# face 200611 "normal"
+# alpha 200611 1 0
+# mask 200611 on
+# textflame 1 1
+# textboxarrow 0 3
+@ダグダ
+さようなら、ロンギヌス…
+
+# textboxarrow 0 2
+@レーヴァテイン
+あなたの魂は…
+いつまでも私たちと共にある…
+
+# imageset 2 "mov2_3_sword"
+# imagealpha 2 0 0
+# imagelayer 2 3
+# imageset 3 "mov2_3_overlay"
+# imagealpha 3 0 0
+# imagelayer 3 2
+# waitandnext 0.1
+
+# shake 1 1
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# imagealpha 3 1 0
+# imagepos 3 0 0
+# se "SE_4815"
+# fadein "white" 1.0
+# imagealpha 2 0 1
+# imagealpha 3 0 1
+# waitandnext 1
+
+# se "SE_0634"
+# alpha 300111 0 1
+# waitandnext 2
+
+# voice 9998 "toto_0023"
+# alpha 100221 0 0.5
+# alpha 200611 0 0.5
+# move 0 1 0
+# face 0 "usual2"
+# alpha 0 1 0.5
+# mask 0 on
+# move 4 3 0
+# face 4 "angry"
+# alpha 4 1 0.5
+# mask 4 on
+# textboxarrow 0 2
+# move 6 5 0
+# face 6 "normal"
+# alpha 6 1 0.5
+# mask 6 on
+@トト
+えっ！？
+き、消えた…！？
+
+# face 0 "normal"
+# textboxarrow 0 1
+@デュリン
+肉体は消え、その武器だけが残る…
+それがキラープリンセスの最期なの
+
+# voice 9997 "deen_0010"
+# face 4 "normal"
+# face 6 "happy"
+# textboxarrow 0 3
+@ディーン
+チッ、ようやくか…
+最後まで粘りやがって
+
+# textboxarrow 0 3
+@ディーン
+時間の無駄だ、
+とっととそこらに墓標を立てんぞ
+
+# voice 9997 "deen_0050"
+# textboxarrow 0 3
+@ディーン
+…なぁ、ティルフィング
+…コイツの後釜にマジで来ねぇ？
+優遇するぜ？
+
+# voice 1014 "tyrufing_0012"
+# alpha 0 0 0.5
+# move 24 1 0
+# face 24 "angry"
+# alpha 24 1 0.5
+# mask 24 on
+# textboxarrow 0 1
+@ティルフィング
+…いい加減にしてください
+
+# textboxarrow 0 1
+@ティルフィング
+ロンギヌスは…最期の瞬間まで、
+アナタのことを
+気にかけていたんですよ…？
+
+# face 6 "angry"
+# textboxarrow 0 3
+@ディーン
+…それがなんだってんだよ？
+…うぜぇだけだっつーの
+
+# voice 1014 "tyrufing_0049"
+# textboxarrow 0 1
+@ティルフィング
+そんな！！
+彼女だって暴走したかったわけじゃ
+ないんですよ！？
+
+# textboxarrow 0 3
+@ディーン
+知るかよ…暴走したヤツが悪いんだ
+んなこと、
+いちいち気にしてられねぇよ
+
+# voice 1014 "tyrufing_0049"
+# textboxarrow 0 1
+@ティルフィング
+ひどい…っ！
+どうして彼女の想いを
+理解しようとしないんですか！？
+
+# textboxarrow 0 1
+@ティルフィング
+アナタに、
+感情は無いんですか！？
+
+# voice 9997 "deen_0049"
+# face 6 "sad"
+# textboxarrow 0 3
+@ディーン
+…うっせーな
+…辛く無いわけねぇだろっ！！！
+
+# voice 1014 "tyrufing_0022"
+# face 24 "surprise"
+# textboxarrow 0 1
+@ティルフィング
+…え…！？
+
+# voice 9997 "deen_0053"
+# textboxarrow 0 3
+@ディーン
+…黙っててくれよ、ティルフィング
+…お前ら、墓標を立てに行くぞ
+
+# se "SE_0719"
+# alpha 6 0 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+@トト
+…アイツ…泣いてた？
+
+;;時間経過
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 24 0 0
+# alpha 4 0 0
+# move 24 1 0
+# face 24 "normal"
+# alpha 24 1 0
+# mask 24 on
+# move 0 3 0
+# face 0 "usual2"
+# alpha 0 1 0
+# mask 0 on
+# move 4 5 0
+# face 4 "normal"
+# alpha 4 1 0
+# mask 4 on
+# waitandnext 0.1
+
+# bgm "bgm003" 0
+# fadein "black" 1
+# waitandnext 1
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+…ディーン隊の
+キラープリンセス達に
+話を聞いてきました
+
+# textboxarrow 0 1
+@ティルフィング
+ロンギヌスは、
+ディーンが初めて出逢った
+キラープリンセス…
+
+# textboxarrow 0 1
+@ティルフィング
+隊の中でも特別な存在だったって…
+
+# face 0 "sad"
+# textboxarrow 0 2
+@デュリン
+…情は迷いを生み、命取りになる
+王都に辿り着くまで、
+一切の情を捨てるって…
+
+# textboxarrow 0 2
+@デュリン
+ロンギヌスと約束してたらしいわね
+
+# face 24 "sad"
+# textboxarrow 0 1
+@ティルフィング
+はい…ディーンの辛さに
+気付けなかった自分が情けなくて…
+
+# face 24 "normal"
+# textboxarrow 0 1
+@ティルフィング
+それで…彼は？
+
+# textboxarrow 0 3
+@トト
+ロンギヌスのお墓の前にいるよ
+
+;;場面転換
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# alpha 24 0 0
+# alpha 0 0 0
+# alpha 4 0 0
+# move 6 3 0
+# face 6 "normal"
+# alpha 6 1 0
+# mask 6 off
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 9997 "deen_0048"
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@ディーン
+…んだよ？
+何か言いに来たのかよ、新人？
+
+# textboxarrow 0 2
+@ディーン
+…勘違いすんなよな
+俺はただ…これからの隊の編成を、
+考えてただけなんだからよ
+
+# face 6 "sad"
+# textboxarrow 0 2
+@ディーン
+…………
+
+# voice 9997 "deen_0001"
+# face 6 "normal"
+# textboxarrow 0 2
+@ディーン
+おい、新人…
+マスターに最も必要な条件…
+それがなにかわかるか？
+
+# textboxarrow 0 2
+@ディーン
+苦楽を共にしたヤツらが暴走した時…
+躊躇なく手を下せるかどうかだ
+
+# textboxarrow 0 2
+@ディーン
+もしティルフィングが暴走したら…
+お前はためらいなく、
+斬り捨てることが出来るか？
+
+;;《選択肢》
+;;情は捨てられない…それが人間だろ？
+;;苦しまないはずがない…お前と同じだ
+# select "情は捨てられない…それが人間だろ？" "select_label_01" "苦しまないはずがない…お前と同じだ" "select_label_02"
+もしティルフィングが暴走したら…
+お前はためらいなく、
+斬り捨てることが出来るか？
+
+;;《返答１》
+# label "select_label_01"
+# labeljump "select_label_end"
+# voice 9997 "deen_0010"
+# textboxarrow 0 2
+@ディーン
+チッ、わかったようなことを
+言いやがって…
+
+;;《返答２》
+# label "select_label_02"
+# labeljump "select_label_end"
+# voice 9997 "deen_0010"
+# textboxarrow 0 2
+@ディーン
+…チッ、新米のお前に、
+なにがわかるっつーんだよ？
+
+# label "select_label_end"
+# textboxarrow 0 2
+@ディーン
+ロンギヌスが聞いてたら、
+“マスター失格だ”って、
+鼻で笑われるぜ…でもよ…
+
+# textboxarrow 0 2
+@ディーン
+でもよ…そう簡単に、
+斬り捨てらんねぇよなぁ…？
+
+;;時間経過演出
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 6 0 0
+# move 24 2 0
+# face 24 "normal"
+# alpha 24 1 0
+# mask 24 on
+# move 0 4 0
+# face 0 "normal"
+# alpha 0 1 0
+# mask 0 on
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 3
+@デュリン
+…どうしたのよアンタ、
+神妙な顔して？
+
+# voice 1014 "tyrufing_0001"
+# textboxarrow 0 1
+@ティルフィング
+さっきの質問を考えてるんですね…？
+大丈夫です…マスター、
+悩むことなんてありません
+
+# voice 1014 "tyrufing_0004"
+# textboxarrow 0 1
+@ティルフィング
+彼とロンギヌスが教えてくれました…
+もし、私が暴走したら…その時は、
+迷わず消してください
+
+# voice 1014 "tyrufing_0005"
+# textboxarrow 0 1
+@ティルフィング
+マスターの手にかかれるなら…
+私は幸せですから

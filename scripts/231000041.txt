@@ -1,0 +1,253 @@
+;;-----------------------------------------
+;;リサナウト武具クエスト
+;;タイトル：アンノウン・イベント
+;;【EP4】円環の内と外
+;;背景：トレイセーマ
+;;-----------------------------------------
+# script "lisp"
+# background "beast_world"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+# body 3203011
+# pos 3203011 3
+# scale 3203011 0.8 0
+# layer 3203011 3
+# alpha 3203011 1 0
+# mask 3203011 off
+# body 3303111
+# pos 3303111 3
+# scale 3303111 0.8 0
+# layer 3303111 3
+# alpha 3303111 0 0
+# mask 3303111 off
+# body 3400111
+# pos 3400111 3
+# scale 3400111 0.8 0
+# layer 3400111 3
+# alpha 3400111 0 0
+# mask 3400111 off
+;;-----------------------------------------
+# textflame 1 1
+# textboxarrow 0 2
+# face 3203011 "smile"
+# voice 2030 "risanautr_l_0002"
+@リサナウト
+もうすぐ国境よ
+
+# textflame 0 0
+@
+彼女の言葉とともに
+うっすらとトレイセーマが
+見えてくる
+
+# textflame 0 0
+@
+トレイセーマは、
+三国でもっとも大きな国土を
+持つ国だ
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 2030 "risanautr_l_0003"
+@リサナウト
+あとはここで終わりだよ
+私の目的は
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3203011 "usual"
+@リサナウト
+ただ、今回は
+国の中に入る必要はないみたい
+
+# textflame 0 0
+@
+リサナウトはまっすぐ国境の門を
+見ながら、そんなことを言う
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 2030 "risanautr_l_0028"
+@リサナウト
+やっぱり、あの子には
+感知されるのかな
+
+# se "SE_0719"
+# textflame 0 0
+@
+ゆっくりと歩くリサナウト
+
+# textflame 0 0
+@
+彼女に続いてトレイセーマに
+近づくと、その人物が見えてきた
+
+# bgmfile "bgm293" "BgmLostRagnarokSideStory" 0
+# alpha 3203011 0 0.5
+# alpha 3303111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3303111 "normal"
+# voice 3031 "cassius_ge_0002"
+@カシウス
+円環の観測者、
+ただ見るだけでは満足できないの？
+
+# move 3303111 2 0.5
+# mask 3303111 on
+# move 3203011 4 0
+# alpha 3203011 1 0.5
+# mask 3203011 on
+# textflame 1 1
+# textboxarrow 0 3
+# face 3203011 "smile"
+# voice 2030 "risanautr_l_0004"
+@リサナウト
+ふふっ、見るだけじゃ世界は
+変えられない
+
+# textflame 1 1
+# textboxarrow 0 3
+@リサナウト
+それを私は学んだの
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 3031 "cassius_ge_0040"
+@カシウス
+だから目から逃れたのに
+再び円環に戻るのね
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3203011 "usual"
+# voice 2030 "risanautr_l_0007"
+@リサナウト
+それは違うわ
+私は円環の外よ
+
+# textflame 1 1
+# textboxarrow 0 3
+@リサナウト
+私が不確定事象になるには、
+外の視点を忘れてはならない
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3303111 "angry"
+@カシウス
+中に入れば囚われる、
+地下の手の届く範囲は
+広く、長い
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3203011 "smile"
+# voice 2030 "risanautr_l_0003"
+@リサナウト
+ええ、だから
+私は当主様と共にあるの
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3303111 "normal"
+# voice 3031 "cassius_ge_0003"
+@カシウス
+そう…ならば、
+私の言葉は不要
+あなたも自分の目を信じなさい
+
+;;カシウスの立ち絵消去
+# bgm "stop"
+# alpha 3303111 0 0.5
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# move 3203011 3 0.5
+# mask 3203011 off
+# waitandnext 0.8
+
+# textflame 0 0
+@
+カシウスが去り、
+何事もなかったことに安堵する
+マスター
+
+# alpha 3203011 0 0.5
+# textflame 0 0
+@
+しかし…
+
+# textflame 1 1
+# textboxarrow 0 0
+@？？？
+規律を乱す者には制裁が必要です
+
+;;弓が飛んでくる
+# se "SE_4301"
+# fadein "white" 0.5
+# waitandnext 0.7
+
+# alpha 3203011 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3203011 "angry"
+# voice 2030 "risanautr_l_battle_0002"
+@リサナウト
+せいっ！
+
+;;斧で打ち落とす
+# se "SE_4601"
+# fadein "white" 0.5
+# waitandnext 0.7
+
+# bgmfile "bgm279_280" "BgmLostRagnarokBattle002" 0
+# alpha 3203011 0 0.5
+# alpha 3400111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400111 "angry"
+# voice 340011 "arutemisu_ge_battle_0003"
+@アルテミス
+カシウス様が許そうとも、
+規律を乱す者を
+私は許しませんっ！
+
+# alpha 3400111 0 0.5
+# alpha 3203011 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3203011 "usual"
+# voice 2030 "risanautr_l_0028"
+@リサナウト
+別にもう用はないから
+離れるつもりよ
+
+# alpha 3203011 0 0.5
+# alpha 3400111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 340011 "arutemisu_ge_0012"
+@アルテミス
+そうは行きません
+カシウス様を見た者には
+死こそがふさわしい
+
+# alpha 3400111 0 0.5
+# alpha 3203011 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3203011 "sad"
+# voice 2030 "risanautr_l_0027"
+@リサナウト
+はぁ…当主様、
+離れていて
+
+# alpha 3203011 0 0.5
+# alpha 3400111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 340011 "arutemisu_ge_unit_0008"
+@アルテミス
+獣の数字、
+その身に刻めぇぇぇっ!!

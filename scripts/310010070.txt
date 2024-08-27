@@ -1,0 +1,364 @@
+;;-----------------------------------------
+;;SEA_プロローグ_7_0
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル（仮当てアルマス）
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 3
+# mask 270 off
+# alpha 270 0 0
+;;マナナン（仮当てニクス）
+# body 6504011
+# pos 6504011 5
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+# brightness 6504011 0.5 0
+;;村人
+# body 3
+# pos 3 5
+# scale 3 0.8 0
+# layer 3 5
+# mask 3 off
+# alpha 3 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 2
+;;-----------------------------------------
+;;背景：森
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1.5
+
+# alpha 270 1 0.3
+# waitandnext 0.8
+
+# se "SE_0944"
+# se "SE_0665"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+この近くにキル姫がいらっしゃる
+という情報はありません
+
+@ミーミル
+もうしばらくすると村があるので
+そちらで今日は宿を取りましょう
+
+# sestop "SE_0944"
+# serif 1
+# textwindow "nomal"
+@村人
+うわああああああ！？
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+@ミーミル
+今の悲鳴は…
+あ！どなたか走ってきます
+
+# bgm "bgm031" 0
+# se "SE_5575"
+# move 270 2 0.5
+# move 3 4 0.3
+# alpha 3 1 0.3
+# face 3 "angry"
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@村人
+だ…誰かっ…！
+
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+どうなさいました？
+…体中、血まみれです
+すぐに治療を
+
+# textboxarrow 0 3
+@村人
+ん？
+ああ、いや…これは俺の血じゃない
+それよりも、あっちで…
+
+# serif 1
+# textwindow "nomal"
+@？？？
+あれー？
+もう逃げなくてもいいよ
+おじさーん
+
+# se "SE_5000"
+# sedelay "SE_5001" 0.7
+# move 270 1 0.5
+# alpha 270 0 0.3
+# move 3 2 0.5
+# move 6504011 4 1
+# alpha 6504011 1 1
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 3
+@？？？
+あのイノシシ、
+どっか行っちゃったから
+
+# se "SE_9013"
+# textboxarrow 0 1
+@村人
+あんた、平気なのか…！？
+腹に牙が刺さってたんだぞ…
+
+# textboxarrow 0 3
+@？？？
+あ～、平気だって
+私、痛いって感じないんだ
+
+@？？？
+傷もそのうち塞がるから
+どうってことないよ
+それよりも…
+
+# bgm "stop"
+# se "SE_0944"
+# select "ミーミル、治療を" "select_label_01" "早く応急処置をっ" "select_label_01"
+傷もそのうち塞がるから
+どうってことないよ
+それよりも…
+
+# voice 9917 "mimir_navikan_0003"
+# label "select_label_01"
+# labeljump "select_label_end"
+# move 270 2 0.5
+# alpha 270 1 0.3
+# move 3 1 0.5
+# alpha 3 0 0.3
+# textboxarrow 0 1
+@ミーミル
+マスター様、お任せ下さい
+
+# label "select_label_end"
+# textboxarrow 0 3
+@？？？
+あれ？
+人が増えてる
+こんにちは～っ
+
+# textboxarrow 0 1
+@ミーミル
+こんにちは
+私、ミーミルと申します
+
+@ミーミル
+そちらにいらっしゃるマスター様の
+専属補佐官でございます
+
+@ミーミル
+お名前を聞かせていただいても
+よろしいでしょうか？
+
+# textboxarrow 0 3
+@？？？
+ん？
+ごめんごめん
+自己紹介がまだだったね
+
+# voice 650401 "manannan_ura_0004"
+# brightness 6504011 1 0.5
+@マナナン
+私はマナナンだよ
+…多分ね
+だから、そう呼んでよ
+
+# textboxarrow 0 1
+@ミーミル
+では、マナナンさん
+傷口をお見せ下さい
+応急処置の心得はありますので
+
+# voice 650401 "manannan_ura_0028"
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+気にしなくていいのに～
+
+# move 270 1 0.5
+# alpha 270 0 0.3
+# move 3 2 0.5
+# alpha 3 1 0.3
+# textboxarrow 0 1
+@村人
+何、言ってんだ！
+あんた、イノシシに思い切り
+体当たりされたんだぞっ
+
+@村人
+酷い怪我してるし…
+早く病院に連れていかないと
+
+# textboxarrow 0 3
+@マナナン
+さっきも言ったよね
+痛くないし、傷も放っておけば
+塞がるから
+
+# face 6504011 "normal"
+# move 3 1 0.5
+# alpha 3 0 0.3
+# move 6504011 3 0.5
+# textboxarrow 0 2
+@マナナン
+それよりも…
+
+# voice 650401 "manannan_ura_0002"
+# sestop "SE_0944"
+# bgm "bgm005" 0
+@マナナン
+ねぇねぇ知ってる？
+ねぇ知ってる？
+
+@マナナン
+私のことを、ねぇ知ってる？
+
+# voice 9917 "mimir_navikan_0034"
+# face 270 "surprise"
+# move 270 2 0.5
+# alpha 270 1 0.3
+# move 6504011 4 0.5
+# textboxarrow 0 1
+@ミーミル
+マナナンさんのことをですか？
+いえ、初対面ですので
+
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+そっか～…
+
+# textboxarrow 0 1
+@ミーミル
+マナナンさんはキル姫ですよね？
+一覧を確認すればアナタのことを
+把握することも――
+
+# voice 650401 "manannan_ura_0022"
+# face 6504011 "surprise"
+# textboxarrow 0 3
+@マナナン
+キル姫？
+それって何？
+私、人間じゃないの？
+
+# voice 9917 "mimir_navikan_0022"
+# textboxarrow 0 1
+@ミーミル
+えっ？
+
+# voice 650401 "manannan_ura_0028"
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+うーん…
+良く分からないことだらけ
+なんだよね～
+
+@マナナン
+ずっとモヤモヤしてるし…
+私って本当にここにいるのかな？
+
+# textboxarrow 0 1
+@ミーミル
+マナナンさん？
+
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+なんてね～
+…あ！あっちに何かいるっ
+
+@マナナン
+あれなら、私に痛いって
+感じさせてくれるかな？
+満たしてくれるかなっ？
+
+# se "SE_5575"
+# move 6504011 2 0.8
+# alpha 6504011 0 0.3
+# textwindow "close"
+# waitandnext 0.8
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+マナナンさんっ？
+まだ治療が…
+ああ、行ってしまわれました…
+
+# serif 1
+# textwindow "nomal"
+@マナナン
+あははははははは！
+
+# select "追おう！" "select_label_02" "関わらない方がいいな" "select_label_03"
+マナナンさんっ？
+まだ治療が…
+ああ、行ってしまわれました…
+
+# face 270 "angry"
+# label "select_label_02"
+# labeljump "select_label_end02"
+# move 270 3 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+お待ち下さい
+マスター様の安全が第一でございます
+
+# voice 9917 "mimir_navikan_0003"
+# face 270 "angry"
+# label "select_label_03"
+# labeljump "select_label_end02"
+# move 270 3 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+はい
+私もそう判断致します
+
+# label "select_label_end02"
+@ミーミル
+先程のご様子から察するに、
+あの方がキル姫であるならば
+大事にはならないはずです
+
+@ミーミル
+マスター様
+ひとまず、こちらの男性を家まで
+お送り致しましょう
+
+# fadeout "black" 1
+# waitandnext 1

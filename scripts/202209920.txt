@@ -1,0 +1,811 @@
+;;-----------------------------------------
+;;悪魔サイド4話2_0
+;;-----------------------------------------
+# script "lisp"
+# background "bg_white"
+# bgmfile "bgm170" "BgmPJZero_EV001" 0
+;;-----------------------------------------
+;;パンドラ
+# body 306
+# pos 306 3
+# scale 306 0.8 0
+# layer 306 2
+# mask 306 off
+# alpha 306 0 0
+;;パンドラ（ボイス用）
+# body 62001111
+# alpha 62001111 0 0
+;;ベルフェゴール
+# body 960017
+# pos 960017 3
+# scale 960017 0.8 0
+# layer 960017 2
+# mask 960017 off
+# alpha 960017 0 0
+;;父親
+# body 11
+# pos 11 3
+# scale 11 0.8 0
+# layer 11 2
+# mask 11 off
+# alpha 11 0 0
+# brightness 11 0 0
+;;母親
+# body 29
+# pos 29 3
+# scale 29 0.8 0
+# layer 29 2
+# mask 29 off
+# alpha 29 0 0
+# brightness 29 0 0
+;;人々
+# body 2
+# pos 2 3
+# scale 2 0.8 0
+# layer 2 3
+# mask 2 off
+# alpha 2 0 0
+;;魔獣
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# layer 910013 2
+# mask 910013 off
+# alpha 910013 0 0
+;;ダグダ（♂）
+# body 1200641
+# pos 1200641 3
+# scale 1200641 0.8 0
+# layer 1200641 3
+# mask 1200641 off
+# alpha 1200641 0 0
+;;八咫鏡（♂）
+# body 1500331
+# pos 1500331 3
+# scale 1500331 0.8 0
+# layer 1500331 2
+# mask 1500331 off
+# alpha 1500331 0 0
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+# imageset 1 "bg_white"
+# imagelayer 1 5
+# imagealpha 1 0 0
+# imagescale 1 1.2 0
+;;-----------------------------------------
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# background "underwild"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# waitandnext 0.5
+
+# se "SE_0742"
+# imagealpha 1 0 1
+# waitandnext 1
+
+;;パンドラ（立ち絵無し）
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "normal"
+@パンドラ
+私は、幼い頃からずっと大切にされて
+育ってきた…
+
+# textboxarrow 0 0
+@パンドラ
+悪魔が支配する地上世界にあって、
+何不自由なく暮らし、それに疑問を
+抱くこともないくらいに…
+
+;;背景：上層階：upper_clean_floors
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "upper_clean_floors"
+# move 11 2 0
+# alpha 11 1 0
+# mask 11 on
+# move 29 4 0
+# alpha 29 1 0
+# mask 29 on
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 1
+# textwindow "normal"
+@父親
+欲しいモノがあったら
+何でも言ってごらん
+すぐに用意してあげるからね
+
+# textboxarrow 0 3
+@母親
+何も心配しなくていいのよ
+幸せに過ごせるよう守ってあげる
+からね
+
+;;箱入り娘（幼少期）
+# serif 1
+@箱入り娘
+うん！
+ありがとう、パパ！ママ！
+
+;;暗転挟む
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 11 0 0
+# alpha 29 0 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;パンドラ（立ち絵無し）
+# textboxarrow 0 0
+# textwindow "normal"
+@パンドラ
+成長した私は、自分の境遇に
+不満を抱くようになった
+とても贅沢な不満を…
+
+# textwindow "close"
+# move 11 2 0
+# alpha 11 1 0.5
+# mask 11 on
+# move 29 4 0
+# alpha 29 1 0.5
+# mask 29 on
+# serif 1
+@箱入り娘
+ねえ、お父さま
+どうして外に出てはいけないの？
+
+# serif 1
+@箱入り娘
+私も外の世界を見てみたいわ
+お願いよ！
+
+# textboxarrow 0 1
+# textwindow "normal"
+@父親
+ダメだ
+外は危険だ
+お前が見ても楽しいものは何もないよ
+
+# textboxarrow 0 3
+@母親
+そんなことより料理をもっと覚え
+なさい
+
+;;暗転挟む
+;;背景：400_angel_castle_room
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "400_angel_castle_room"
+# alpha 11 0 0
+# alpha 29 0 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# serif 1
+@箱入り娘
+つまらないわ…
+毎日、毎日、同じことの繰り返し
+
+# serif 1
+@箱入り娘
+早く自由に外に出られるように
+ならないかしら…
+
+# serif 1
+@箱入り娘
+誰もが楽しく暮らせる世の中に
+なればいいのに
+
+# serif 1
+@箱入り娘
+みんなが幸せで希望を抱いて生きて
+いける世界…素敵よね
+
+# serif 1
+@箱入り娘
+きっと、その世界でなら退屈する
+こともないわ！
+
+;;パンドラ（立ち絵無し）
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 0
+# textwindow "normal"
+@パンドラ
+それは世間知らずで無邪気な思い
+あまりにぼんやりした願望…
+
+# textboxarrow 0 0
+@パンドラ
+そこに悪魔が…囁いたの
+
+# move 960017 3 0
+# face 960017 "normal"
+# mask 960017 off
+# alpha 960017 1 0.5
+# textboxarrow 0 2
+@ベルフェゴール
+どうしたのぉ？
+いいの？このままでいいのぉ？
+一生、こんな狭い部屋の中で
+
+# textboxarrow 0 2
+@ベルフェゴール
+箱入り娘のまま退屈に倦んで
+死んでいく
+あなたはそれでいいのぉっ？
+
+;;背景：地上世界遠景：underwild
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "underwild"
+# alpha 960017 0 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;パンドラ（立ち絵無し）
+# textboxarrow 0 0
+# textwindow "normal"
+@パンドラ
+そして私はパンドラとして
+目を覚ました
+
+# textboxarrow 0 0
+@パンドラ
+キラープリンセスとして力を得た
+私は…でも、何も変わっては
+いなかったの？
+
+# textboxarrow 0 0
+@パンドラ
+あの頃の、箱入り娘のまま…
+誰かに言われるまま戦って
+「希望」だってもてはやされて…
+
+# textboxarrow 0 0
+@パンドラ
+そこに私の…
+私自身の「意思」はあったのかしら…
+
+;;背景：地獄の門
+;;４話―１のシーン
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "hell_gate"
+# move 960017 3 0
+# face 960017 "smile"
+# mask 960017 off
+# alpha 960017 1 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 8031 "belphegor_0005"
+# textboxarrow 0 2
+# textwindow "normal"
+@ベルフェゴール
+アハハハハハハハ！
+希望を抱いてしまって、
+本当に可哀想
+
+# textboxarrow 0 2
+@ベルフェゴール
+なまじ希望を抱くから、人間は
+いつまでも傷つき、苦しみ続けるのぉ
+
+# textboxarrow 0 2
+@ベルフェゴール
+分かったでしょぉ？
+希望こそが、最悪の災厄なのぉ
+
+# textboxarrow 0 2
+@ベルフェゴール
+あなたは、それを人間達に
+まき散らす、その役割をちゃぁんと
+果たしたのよぉ
+
+;;背景：黒
+# se "SE_11762"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "bg_black"
+# alpha 960017 0 0
+# move 306 3 0
+# face 306 "sad"
+# mask 306 off
+# alpha 306 1 0
+# imagealpha 0 0 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;ここから現在に思考が戻るため、パンドラの立ち絵表示
+;;パンドラ（ここから立ち絵あり）
+# textboxarrow 0 2
+# textwindow "normal"
+@パンドラ
+やっぱり、私は空っぽだったの…？
+
+# textboxarrow 0 2
+@パンドラ
+皆さんに「希望」を…最悪の災厄を
+まき散らしただけだったの…？
+
+# textboxarrow 0 2
+@パンドラ
+私の中には…何もない…
+もう何も残されては…
+
+;;一筋の光が差す（演出あれば）
+# bgm "stop"
+;;パンドラを中心にレンズフレア
+# effectbody 1000 51 -40 35 0
+# effectstart 1000
+# waitandnext 2.8
+
+# voice 6200111 "pandora_0023"
+# face 306 "surprise"
+# textboxarrow 0 2
+@パンドラ
+…………！
+
+;;背景：地上世界：ground_surface_break
+;;２話－４のシーン
+# se "SE_0742"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "ground_surface_break"
+# move 306 2 0
+# face 306 "normal"
+# mask 306 off
+# alpha 306 1 0
+# move 2 4 0
+# face 2 "normal"
+# alpha 2 1 0
+# mask 2 on
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# bgm "bgm101" 0
+# textboxarrow 0 3
+# textwindow "normal"
+@人々
+ありがとうございます！
+ありがとうございます！
+
+# textboxarrow 0 3
+@人々
+パンドラさん、あなたは命の恩人です
+いくら感謝してもしたりないっ
+
+;;暗転挟む
+;;２話－６のシーン
+# se "SE_0742"
+# fadeout "white" 1
+# waitandnext 1
+
+# alpha 306 0 0
+# alpha 2 0 0
+# move 306 3 0
+# face 306 "angry"
+# mask 306 off
+# alpha 306 1 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# serif 1
+@人々
+うおおおおおお！
+さすがパンドラ！
+魔獣の群れを一蹴したぞ！
+
+# serif 1
+@人々
+もうパンドラさえいれば
+良いんじゃないかっ？
+
+;;暗転挟む
+;;２話－７のシーン
+# se "SE_0742"
+# serif 1
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# move 306 3 0
+# face 306 "angry"
+# alpha 306 1 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# serif 1
+@人々
+やった！
+また魔獣の群れを打ち倒したぞ！
+さすがパンドラ！
+
+# voice 6200111 "pandora_0019"
+# face 306 "normal"
+# textboxarrow 0 2
+# textwindow "normal"
+@パンドラ
+ふぅ
+皆さん嬉しそうね
+良かったわ
+
+;;背景：黒
+# se "SE_11762"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "bg_black"
+# move 306 3 0
+# face 306 "normal"
+# alpha 306 1 0
+# mask 306 off
+# imagealpha 0 0 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@パンドラ
+…………
+
+;;一筋の光が差す
+# effectbody 1000 51 -40 35 0
+# effectstart 1000
+# waitandnext 4.4
+
+;;背景：地上世界：ground_surface_break
+;;２話－５のシーン
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "ground_surface_break"
+# alpha 306 0 0
+# move 910013 3 0
+# mask 910013 off
+# alpha 910013 1 0
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@魔獣
+ガアアアアアアアアア！
+
+;;ダグダ（♂）
+# voice 12006 "dagdam_battle_0001"
+# alpha 910013 0 0.5
+# move 1200641 2 0
+# face 1200641 "angry"
+# alpha 1200641 1 0.5
+# mask 1200641 on
+# textboxarrow 0 1
+# move 1500331 4 0
+# face 1500331 "normal"
+# alpha 1500331 1 0.5
+# mask 1500331 on
+@ダグダ
+ふんっ！
+これ以上、誰も傷つけさせぬ
+
+;;八咫鏡（♂）
+# face 1500331 "angry_1"
+# textboxarrow 0 3
+@八咫鏡
+加勢するぞ
+このまま…ぬううぅぅっ！
+
+;;ダグダ（♂）
+# voice 12006 "dagdam_0009"
+# face 1200641 "surprise"
+# textboxarrow 0 1
+@ダグダ
+いかん
+魔獣化しかけている
+これでは…
+
+# voice 6200111 "pandora_battle_0003"
+# alpha 1200641 0 0.5
+# alpha 1500331 0 0.5
+# move 306 3 0
+# face 306 "angry"
+# mask 306 off
+# alpha 306 1 0.5
+# textboxarrow 0 2
+@パンドラ
+そこね
+
+# move 306 2 0.5
+# move 910013 4 0
+# layer 910013 4
+# mask 910013 on
+# alpha 910013 1 0.5
+# textboxarrow 0 0
+# waitandnext 0.5
+
+;;魔弾が魔獣達を撃ち抜く
+# effectbody 1001 28 150 0 0
+# effectstart 1001
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@魔獣
+ガアアアアア…
+
+# se "SE_3001"
+# move 910013 5 0.5
+# alpha 910013 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+;;ダグダ（♂）
+# voice 12006 "dagdam_0030"
+# alpha 910013 0 0.5
+# move 1200641 4 0
+# face 1200641 "normal"
+# alpha 1200641 1 0.5
+# mask 1200641 on
+# textboxarrow 0 3
+# textwindow "normal"
+@ダグダ
+パンドラか
+助かった
+礼を言う
+
+;;背景：黒
+# se "SE_11762"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "bg_black"
+# alpha 306 0 0
+# alpha 1200641 0 0
+# move 306 3 0
+# face 306 "sad"
+# mask 306 off
+# alpha 306 1 0
+# imagealpha 0 0 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@パンドラ
+…………
+
+# textboxarrow 0 2
+@パンドラ
+どうして…どうして皆さんの笑顔を
+思い出したのかしら…？
+
+# textboxarrow 0 2
+@パンドラ
+どうして、一緒に戦っていた
+キラーメイルの皆さんのことを
+思い出したのかしら…？
+
+# textboxarrow 0 2
+@パンドラ
+どうして…あの人達の笑顔を、
+感謝の言葉を思い出すと…
+こんなに胸が…
+
+;;一筋の光が差す
+# effectbody 1000 51 -40 35 0
+# effectstart 1000
+# waitandnext 4.4
+
+;;背景：地上世界：ground_surface_break
+;;２話－５のシーン
+# se "SE_0742"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "ground_surface_break"
+# move 306 3 0
+# face 306 "normal"
+# mask 306 off
+# alpha 306 1 0
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# voice 6200111 "pandora_0052"
+# textboxarrow 0 2
+# textwindow "normal"
+@パンドラ
+皆さん
+魔獣化するのは力を出しすぎるから
+とも聞いたわ
+
+# face 306 "sad"
+# textboxarrow 0 2
+@パンドラ
+どんどん記憶を失って自我も無くして
+いくのでしょう？
+どうして戦い続けるの？
+
+;;ダグダ（♂）
+# voice 12006 "dagdam_0003"
+# alpha 306 0 0.5
+# move 1200641 2 0
+# face 1200641 "normal"
+# alpha 1200641 1 0.5
+# mask 1200641 on
+# textboxarrow 0 1
+# move 1500331 4 0
+# face 1500331 "normal"
+# alpha 1500331 1 0.5
+# mask 1500331 on
+@ダグダ
+そうだな…
+確かに記憶は薄れ、もはや戦う動機が
+何だったのか思い出せない
+
+;;八咫鏡（♂）
+# voice 15003 "yatanokagamim_0003"
+# textboxarrow 0 3
+@八咫鏡
+我もだ
+ただ、胸の内に…残っているものが
+ある
+
+;;八咫鏡（♂）
+# textboxarrow 0 3
+@八咫鏡
+記憶を失い、自我も危うくなって尚、
+我を我たらしめている思いがある
+
+;;八咫鏡（♂）
+# face 1500331 "sad"
+# textboxarrow 0 3
+@八咫鏡
+我は救いたかった
+救おうとして、恐らく、果たせ
+なかった…故に
+
+;;八咫鏡（♂）
+# textboxarrow 0 3
+@八咫鏡
+それを果たそうとしておる
+その思いが…その意思だけが
+今の我を突き動かしておる
+
+;;ダグダ（♂）
+# textboxarrow 0 1
+@ダグダ
+俺も同じだ
+パンドラ、君にもキラープリンセスに
+なったときの思いがあるだろう？
+
+;;ダグダ（♂）
+# textboxarrow 0 1
+@ダグダ
+その意思があるから、
+俺達は戦い続けている
+戦い続けていられるんだ
+
+;;背景：黒
+# se "SE_11762"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "bg_black"
+# alpha 1200641 0 0
+# alpha 1500331 0 0
+# move 306 3 0
+# face 306 "normal"
+# mask 306 off
+# alpha 306 1 0
+# imagealpha 0 0 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@パンドラ
+私の思い…私の意思…
+
+;;パンドラの胸に光が宿る
+# se "SE_9148"
+;;レンズフレア
+# effectbody 1000 51 -40 35 0
+# effectstart 1000
+# waitandnext 1.5
+
+# textboxarrow 0 2
+@パンドラ
+あのときはよく分からなかった…
+でも、今なら…
+
+;;光が強くなっていく
+# se "SE_9103"
+# effectbody 1000 51 -40 35 0
+# effectstart 1000
+# waitandnext 2.8
+# textboxarrow 0 2
+@パンドラ
+私は…
+私自身の意思はっ――
+
+;;光が強くなり、画面真っ白に
+# se "SE_9131"
+# fadeout "white" 2
+# waitandnext 2.8

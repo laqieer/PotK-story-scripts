@@ -1,0 +1,499 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;コマンドキラーズサイドストーリー後編
+;;第4話　タイトル：尽くす者
+;;4_5
+;;スクリプト最後の背景：村（夜）
+;;-----------------------------------------
+# script "lisp"
+# background "foot_mountain_village_evening"
+# bgm "bgm031" 0
+;;-----------------------------------------
+;;ロジェスティラ
+# body 235
+# pos 235 3
+# scale 235 0.8 0
+# layer 235 2
+# alpha 235 0 0
+# mask 235 off
+;;ロジェスティラ・神令・スクルド（ボイス用）
+# body 5503711
+# alpha 5503711 0 0
+;;ゴーレム
+# body 236
+# pos 236 3
+# scale 236 0.8 0
+# layer 236 2
+# alpha 236 0 0
+# mask 236 off
+;;イチイバル
+# body 233
+# pos 233 3
+# scale 233 0.8 0
+# layer 233 2
+# alpha 233 0 0
+# mask 233 off
+;;イチイバル・神令・オーディン（ボイス用）
+# body 5402211
+# alpha 5402211 0 0
+;;リットゥ
+# body 100531
+# pos 100531 3
+# scale 100531 0.8 0
+# layer 100531 2
+# alpha 100531 0 0
+# mask 100531 off
+;;メギド
+# body 500611
+# pos 500611 3
+# scale 500611 0.8 0
+# layer 500611 2
+# alpha 500611 0 0
+# mask 500611 off
+;;-----------------------------------------
+;;第4話　タイトル：尽くす者
+;;//背景：村（夕）
+# se "SE_0764"
+# textwindow "close"
+# serif 1
+@村人達
+燃やせ、燃やせーっ！
+魔女を炙り出せーっ！
+
+# serif 1
+@村人達
+よくも俺達を騙していたな！
+くたばれ、穢れた魔女め！
+
+# move 500611 3 0
+# face 500611 "angry"
+# alpha 500611 1 0.5
+# mask 500611 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@メギド
+元凶は全て灼き尽くすのよ
+一匹でも残っていたら…
+すぐ羽虫みたいに増えるんだから
+
+# se "SE_0764"
+# serif 1
+@村人達
+うおおおおおおおおおお！！
+
+# voice 550371 "logistille_c_0017"
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 500611 0 0.5
+# move 235 3 0
+# face 235 "sad"
+# alpha 235 1 0.5
+# mask 235 off
+# textboxarrow 0 2
+@ロジェスティラ
+そんな…
+家が…
+あそこにはたくさんの…本も…
+
+;;//ロジェスティラが倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 235 0 0.5
+# waitandnext 0.5
+
+# move 233 3 0
+# face 233 "surprise"
+# alpha 233 1 0.5
+# mask 233 off
+# textboxarrow 0 2
+# textwindow "normal"
+@イチイバル
+ロジェスティラ…！？
+気を失っている…
+連れて来るべきじゃなかったね…
+
+# face 233 "irregular"
+# textboxarrow 0 2
+@イチイバル
+しかし、まずいな…
+村人達はパニックに陥っている
+
+# textboxarrow 0 2
+@イチイバル
+これを収めるためには…
+生贄が必要になるよ
+
+;;//ゴーレムがやってくる
+# se "SE_0904"
+# move 233 2 0.5
+# mask 233 on
+# move 236 4 0
+# alpha 236 1 0.5
+# mask 236 on
+# textboxarrow 0 3
+@ゴーレム
+…………
+
+# face 233 "normal"
+# textboxarrow 0 1
+@イチイバル
+ゴーちゃん！
+良かった、無事だったんだね
+
+# voice 540221 "ichiibal_c_0022"
+# face 233 "surprise"
+# textboxarrow 0 1
+@イチイバル
+おや？
+背中に背負っているのは…
+ロジェスティラの蔵書かな
+
+# voice 540221 "ichiibal_c_0005"
+# face 233 "normal"
+# textboxarrow 0 1
+@イチイバル
+ハハハ
+キミは頼りになるよ
+
+# face 233 "usual"
+# textboxarrow 0 1
+@イチイバル
+…ゴーちゃん
+ロジェスティラを頼む
+
+# textboxarrow 0 3
+@ゴーレム
+…………
+
+# face 233 "irregular"
+# textboxarrow 0 1
+@イチイバル
+ボクは…時間稼ぎをしてくるよ
+
+# textboxarrow 0 1
+@イチイバル
+あのままだときっと、
+村は崩壊してしまう
+
+# textboxarrow 0 1
+@イチイバル
+それを止めるためには、
+村人達の恐れや憎しみを一身に
+引き受ける生贄がいるんだ
+
+# face 233 "usual"
+# textboxarrow 0 1
+@イチイバル
+大丈夫だよ
+明日の日の出まで時間を稼げれば
+ボク達は動きやすくなる
+
+# textboxarrow 0 1
+@イチイバル
+皆、ボク達のことを忘れるからね
+
+# textboxarrow 0 1
+@イチイバル
+もっと詳しく調べることができれば
+ロジェスティラが必ず異族化の
+原因を突き止めてくれるはずだよ
+
+# voice 540221 "ichiibal_c_0003"
+# textboxarrow 0 1
+@イチイバル
+うん…
+ボクはそう信じている
+
+;;//気絶しているロジェスティラを出す
+# bgm "bgm004" 0
+# textboxarrow 0 0
+@ロジェスティラ
+…………
+
+# face 233 "sad"
+# textboxarrow 0 1
+@イチイバル
+不思議なものだね
+今までずっと一人でいたから…
+
+# textboxarrow 0 1
+@イチイバル
+誰かのことを信じるなんて、
+考えたこともなかった
+
+# face 233 "irregular"
+# textboxarrow 0 1
+@イチイバル
+ロジェスティラ…ボクはね
+今まで、ただ使命として世界を
+救おうとしてきたんだ
+
+# textboxarrow 0 1
+@イチイバル
+漠然とした使命感があるだけで、
+他には何もなかったんだよ
+
+# textboxarrow 0 1
+@イチイバル
+ボクはそういう存在なんだって
+思い込んで生きてきた
+
+# textboxarrow 0 1
+@イチイバル
+だから、世界を救うためなら
+ボク自身はどうなったって構わない
+ずっとそう思っていたんだ
+
+# textboxarrow 0 1
+@イチイバル
+でもね…
+
+# textboxarrow 0 1
+@イチイバル
+キミは、使命以外に何もない
+空っぽだったボクという存在に
+使命以外の意味をくれた
+
+# face 233 "usual"
+# textboxarrow 0 1
+@イチイバル
+キミと出会って、キミの優しさに
+触れて、やっと定まったんだ
+
+# textboxarrow 0 1
+@イチイバル
+ボクはこの世界を救いたい
+
+# textboxarrow 0 1
+@イチイバル
+キミがいる世界を
+キミが大切に思う人々の暮らす世界を
+
+# textboxarrow 0 1
+@イチイバル
+これは、使命なんかじゃない
+ボクの、ボク自身の意思なんだよ
+
+# textboxarrow 0 1
+@イチイバル
+そう思えるようになれたのは、
+キミのお陰だ
+
+# textboxarrow 0 1
+@イチイバル
+ロジェスティラ
+キミは自分のことを大したことない
+なんて言うけれど
+
+# textboxarrow 0 1
+@イチイバル
+キミの優しさと魔術の研鑽には、
+世界を救う力があるよ
+
+# textboxarrow 0 1
+@イチイバル
+だから、解き明かして欲しい
+それまでの時間はボクが作り出して
+みせるから
+
+# textboxarrow 0 3
+@ゴーレム
+…………
+
+# textboxarrow 0 1
+@イチイバル
+じゃあね、ロジェ
+
+;;//背景：村（夜）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "foot_mountain_village_night"
+# alpha 233 0 0
+# alpha 236 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "stop"
+# serif 1
+@奏官１
+魔女を取り逃しただと！？
+
+# voice 1005 "ritto_0031"
+# move 100531 3 0
+# face 100531 "angry"
+# alpha 100531 1 0.5
+# mask 100531 off
+# textboxarrow 0 2
+# textwindow "normal"
+@リットゥ
+すまない…
+罰は甘んじて受ける
+それが戒律だ
+
+# serif 1
+@奏官１
+それは後で良い
+今は…
+
+# se "SE_0764"
+# serif 1
+@村人達
+山狩りだ！
+魔女を炙り出せー！
+
+;;//メギドが威嚇射撃をする
+# se "SE_4400"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# bgm "bgm031" 0
+# alpha 100531 0 0.5
+# move 500611 3 0
+# face 500611 "angry"
+# alpha 500611 1 0.5
+# mask 500611 off
+# textboxarrow 0 2
+@メギド
+うるさいわよ、穢れた者達
+
+# serif 1
+@村人達
+ひぃぃぃっ…
+何をするんだ…！？
+
+# serif 1
+@村人達
+魔女の家も焼いたし、作った物も
+薬も全て焼き払った
+もう大丈夫なんだろっ？
+
+# textboxarrow 0 2
+@メギド
+何を言っているの？
+貴方達はすでに…
+
+# serif 1
+@奏官２
+魔女に汚染されている
+この村は直ちに封鎖、
+浄化しなければならないな
+
+# serif 1
+@村人達
+そんなっ…！
+俺達は人間だぞ…！
+
+;;//リットゥが剣を振る
+# se "SE_10585"
+# alpha 500611 0 0.5
+# move 100531 3 0
+# face 100531 "angry"
+# alpha 100531 1 0.5
+# mask 100531 off
+# textboxarrow 0 2
+@リットゥ
+お前達がいつ異族化するか分からぬ
+以上、誰一人村から出すわけには
+いかない
+
+# serif 1
+@村人１
+冗談じゃないぞ！
+化け物になるかもしれない奴らと
+同じところにいるなんてっ
+
+# serif 1
+@村人２
+それはこっちの台詞だ！
+そういえば、お前…
+昨日、魔女の薬を飲んだよな？
+
+# serif 1
+@村人３
+あれはただの風邪薬だよっ
+魔女の薬なんかじゃない！
+
+# serif 1
+@村人４
+それを言ったら…
+あんただって！
+
+# serif 1
+@村人５
+お前こそ！
+
+# serif 1
+@村人達
+近寄るな！
+この化け物め！
+前から怪しいと思ってたんだ！
+
+# serif 1
+@村人達
+くたばれ、化け物！
+貴様こそ！
+触るな、化け物が感染る！
+
+# serif 1
+@奏官１
+やめろ！
+やめろと言っているだろう！
+くっ…こいつら…
+
+# voice 5006 "megido_0001"
+# alpha 100531 0 0.5
+# move 500611 3 0
+# face 500611 "angry"
+# alpha 500611 1 0.5
+# mask 500611 off
+# textboxarrow 0 2
+@メギド
+マスター
+いっそのこと全て…
+
+# serif 1
+@奏官２
+やむをえないか…
+この村を丸ごと――
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 540221 "ichiibal_c_0007"
+# alpha 500611 0 0.5
+# move 233 3 0
+# face 233 "normal"
+# alpha 233 1 0.5
+# mask 233 off
+# textboxarrow 0 2
+@イチイバル
+ひどい有様だね
+滑稽だよ
+
+# move 100531 2 0
+# face 100531 "angry"
+# alpha 100531 1 0.5
+# mask 100531 on
+# textboxarrow 0 1
+# move 233 4 0.5
+# mask 233 on
+@リットゥ
+お前…！
+そちらから現れるとは良い度胸だな
+魔女！
+
+# serif 1
+@村人達
+魔女っ…！？
+
+# face 233 "usual"
+# textboxarrow 0 3
+@イチイバル
+そうだ
+ボクが魔女だよ

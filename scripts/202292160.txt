@@ -1,0 +1,469 @@
+;;-----------------------------------------
+;;SEA4章_16
+;;-----------------------------------------
+# script "lisp"
+# background "in_city"
+# bgm "bgm029" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;イージス
+# body 52000111
+# pos 52000111 3
+# scale 52000111 0.8 0
+# layer 52000111 4
+# alpha 52000111 0 0
+;;イチイバル
+# body 5402211
+# pos 5402211 3
+# scale 5402211 0.8 0
+# layer 5402211 3
+# mask 5402211 off
+# alpha 5402211 0 0
+;;ヒョウハ
+# body 5402011
+# pos 5402011 4
+# scale 5402011 0.8 0
+# layer 5402011 2
+# mask 5402011 off
+# alpha 5402011 1 0
+# face 5402011 "angry"
+;;ミュルグレス
+# body 5104611
+# pos 5104611 2
+# scale 5104611 0.8 0
+# layer 5104611 4
+# alpha 5104611 1 0
+# face 5104611 "angry"
+;;如意金箍棒
+# body 5203111
+# pos 5203111 4
+# scale 5203111 0.8 0
+# layer 5203111 2
+# mask 5203111 off
+# alpha 5203111 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：町：in_city
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヒョウハ
+ややこしいことをいつまでも…
+早く白黒はっきりさせろ！
+
+# textboxarrow 0 1
+@ミュルグレス
+もう全員ぶっ飛ばして黙らせれば
+解決するんじゃないかな？
+そうしようよ
+
+# alpha 5402011 0 0.3
+# alpha 5104611 0 0.3
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+ヒョウハさん、ミュルグレスさん、
+急にどうなさったんですか？
+
+# alpha 5402011 1 0.3
+# alpha 5104611 1 0.3
+# alpha 270 0 0.3
+# se "SE_4300"
+# textboxarrow 0 3
+@ヒョウハ
+どうもこうもないだろ…
+疼くんだよ…あたしの体が、
+戦いを求めてる！
+
+# voice 510461 "murgleys_c_0010"
+# se "SE_8115"
+# textboxarrow 0 1
+@ミュルグレス
+策略も謀略もまとめて八つ裂きに
+しちゃえばいいんだよね
+
+;;ヒョウハとミュルグレスが攻撃する
+# se "SE_4301"
+# fadein "white" 0.5
+# move 5402011 5 0.2
+# move 5104611 3 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_8116"
+# move 5402011 3 0.8
+# move 5104611 1 0.7
+# shake 0 0.5
+# waitandnext 1
+
+;;イージスが攻撃を受ける
+# move 5402011 5 0.3
+# layer 5402011 5
+# mask 5402011 on
+# move 5104611 1 0.3
+# layer 5104611 3
+# mask 5104611 on
+# face 52000111 "angry"
+# alpha 52000111 1 0.3
+# se "SE_3006"
+# fadein "white" 1
+# waitandnext 1
+
+# voice 52000111 "aegis_c_0010"
+# textwindow "nomal"
+# textboxarrow 0 2
+@イージス
+この愚か者…！
+
+# voice 520311 "nyoikinkobou_c_0017"
+# alpha 5402011 0 0.3
+# alpha 5104611 0 0.3
+# alpha 52000111 0 0.3
+# move 270 2 0
+# alpha 270 1 0.3
+# face 5203111 "sad"
+# alpha 5203111 1 0.3
+# textboxarrow 0 3
+@如意金箍棒
+大変だよ…
+二人とも神令の力が
+一気に強くなっちゃってる…
+
+# textboxarrow 0 1
+@ミーミル
+神令の力が…
+では、先程の
+オルフェウスさんのように術式でっ
+
+# alpha 270 0 0.3
+# alpha 5203111 0 0.3
+# face 5402211 "usual"
+# alpha 5402211 1 0.5
+# textboxarrow 0 2
+@イチイバル
+…………
+
+# alpha 5402211 0 0.5
+# alpha 270 1 0.3
+# face 6504011 "surprise"
+# alpha 6504011 1 0.3
+# voice 9917 "mimir_navikan_0002"
+# textboxarrow 0 1
+@ミーミル
+イチイバルさん？
+あの…聞こえていますかっ？
+
+# voice 650401 "manannan_ura_0028"
+# textboxarrow 0 3
+@マナナン
+うーん…
+目を開けたまま寝てるのかな？
+
+# voice 520311 "nyoikinkobou_c_0028"
+# alpha 5203111 1 0.3
+# alpha 6504011 0 0.3
+# textboxarrow 0 3
+@如意金箍棒
+多分、イチイバルちゃんも
+神令の力に
+呑まれちゃったんだよ…
+
+# voice 540201 "hyoha_c_0009"
+# alpha 270 0 0.3
+# alpha 5203111 0 0.3
+# move 5402011 4 0
+# alpha 5402011 1 0.3
+# move 5104611 2 0
+# mask 5104611 off
+# alpha 5104611 1 0.3
+# textboxarrow 0 3
+@ヒョウハ
+イージス！
+あたしの邪魔をするんなら、
+まず、あんたを倒す！
+
+# textboxarrow 0 1
+@ミュルグレス
+裏切り者は八つ裂きだよね～っ
+
+# voice 52000111 "aegis_c_battle_0005"
+# alpha 5402011 0 0.3
+# alpha 5104611 0 0.3
+# mask 52000111 off
+# alpha 52000111 1 0.3
+# textboxarrow 0 2
+@イージス
+くっ…
+いいだろう
+貴様らの暴走は私が受け止める！
+
+# textboxarrow 0 2
+@イージス
+如意金箍棒っ
+何か知っているのなら、ミーミル達に
+全て話してやれ！
+
+# voice 520311 "nyoikinkobou_c_0003"
+# alpha 52000111 0 0.3
+# move 5203111 3 0
+# alpha 5203111 1 0.3
+# textboxarrow 0 2
+@如意金箍棒
+う、うんっ
+イージスちゃんは大丈夫っ？
+
+# alpha 52000111 1 0.3
+# alpha 5203111 0 0.3
+# textboxarrow 0 2
+@イージス
+この程度の攻撃、
+絶対の盾である私なら防ぎきれる！
+
+# textboxarrow 0 2
+@イージス
+神令の影響も…貴様らよりは
+軽く済んでいるからな
+フォルカスには悪いが…
+
+# textboxarrow 0 2
+@イージス
+とにかく、打開策を見つけてくれ！
+頼んだぞっ
+
+# voice 520311 "nyoikinkobou_c_0030"
+# alpha 52000111 0 0.3
+# move 270 2 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# move 5203111 4 0
+# face 5203111 "normal"
+# alpha 5203111 1 0.3
+# textboxarrow 0 3
+@如意金箍棒
+ありがとう、イージスちゃん
+
+# voice 9917 "mimir_navikan_0036"
+# textboxarrow 0 1
+@ミーミル
+ありがとうございます
+しばらくの間、お願い致しますっ
+
+# alpha 270 0 0.3
+# alpha 5203111 0 0.3
+# move 6504011 3 0
+# mask 6504011 off
+# face 6504011 "sad"
+# alpha 6504011 1 0.3
+# voice 650401 "manannan_ura_0026"
+# textboxarrow 0 2
+@マナナン
+私も戦いに参加して良いんだけどな～
+
+# voice 520311 "nyoikinkobou_c_0011"
+# alpha 6504011 0 0.3
+# alpha 270 1 0.3
+# face 5203111 "sad"
+# alpha 5203111 1 0.3
+# textboxarrow 0 3
+@如意金箍棒
+ダメだよ
+戦ったら神令の力が強まっちゃう
+
+# face 270 "surprise"
+# voice 9917 "mimir_navikan_0002"
+# textboxarrow 0 1
+@ミーミル
+あの…
+ニョイ子さんは大丈夫なのですか？
+
+# voice 520311 "nyoikinkobou_c_0003"
+# face 5203111 "surprise"
+# textboxarrow 0 3
+@如意金箍棒
+ワタシ？ワタシは、おかげさまで
+「揺らぎ」の影響を乗り越えたから
+大丈夫だよ
+
+# face 5203111 "normal"
+# textboxarrow 0 3
+@如意金箍棒
+ティルフィングちゃん、
+お師様とミーミルちゃんには
+お世話になったよね
+
+# textboxarrow 0 3
+@如意金箍棒
+あのとき話を聞いてもらってから
+ワタシも自分と向き合ってみたんだ
+だから神令の力は安定しているよ
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+あっ
+以前、お会いしたときに…
+安心しました
+
+# face 5203111 "angry"
+# textboxarrow 0 3
+@如意金箍棒
+それより、聞いて
+ワタシが神令しているフリッグから
+伝わってきた情報なんだけど
+
+# textboxarrow 0 3
+@如意金箍棒
+イチイバルちゃんが発動させた術式は
+キル姫と神様を
+切り離すためのものじゃなくて…
+
+# textboxarrow 0 3
+@如意金箍棒
+より強固にして
+神様の力をキル姫に注ぎ込むための
+ものだったんだ
+
+# face 270 "surprise"
+# voice 9917 "mimir_navikan_0022"
+# textboxarrow 0 1
+@ミーミル
+ええっ？
+イチイバルさんが言っていたことと
+真逆ですっ
+
+# voice 520311 "nyoikinkobou_c_0003"
+# face 5203111 "sad"
+# textboxarrow 0 3
+@如意金箍棒
+うん…
+イチイバルちゃんが神令している
+神様はオーディン
+
+# textboxarrow 0 3
+@如意金箍棒
+魔術に長けてて、知識に貪欲
+そして策略や裏切りも行う
+神様なんだよ
+
+# textboxarrow 0 3
+@如意金箍棒
+きっと神令の影響が強くなってきた
+どこかの段階で、イチイバルちゃんも
+無自覚に騙されたんだ
+
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+あの…それでは、
+まるで神様が意図的に今の状況を
+作り出したように思われますが…
+
+# textboxarrow 0 3
+@如意金箍棒
+ちょっと違うかな…
+神様は神令の力を強めようと
+しているだけなんだよ
+
+# textboxarrow 0 3
+@如意金箍棒
+自分達の力をもっと強く世界に
+広めようとしてるの
+
+# textboxarrow 0 3
+@如意金箍棒
+オルフェウスちゃんの歌が
+「諍いを鎮める」力を
+強めていたみたいにね
+
+# textboxarrow 0 1
+@ミーミル
+それで軍神テュールや
+雷神トールを神令しているお二人は
+戦いを求めておられる…
+
+# textboxarrow 0 3
+@如意金箍棒
+イチイバルちゃんは今、
+オーディンからの膨大な知識に
+囚われてしまっていて
+
+# textboxarrow 0 3
+@如意金箍棒
+そのせいで
+身動きできなくなってるんだと思う
+
+# textboxarrow 0 1
+@ミーミル
+どうして神々はそのようなことを…
+
+# textboxarrow 0 3
+@如意金箍棒
+人々の願いを叶えるためだよ
+
+# face 270 "surprise"
+# voice 9917 "mimir_navikan_0022"
+# textboxarrow 0 1
+@ミーミル
+えっ？
+
+# textboxarrow 0 3
+@如意金箍棒
+フォルセティは
+「諍いを鎮める」神様だもの
+
+# textboxarrow 0 3
+@如意金箍棒
+それを望んでる人がいたら、
+願いを叶えようとするの
+
+# textboxarrow 0 3
+@如意金箍棒
+ワタシもフリッグを神令してるから
+何となく分かる
+とにかくみんなを守ってあげたい
+
+# textboxarrow 0 1
+@ミーミル
+フリッグは強い母性愛をお持ちの
+女神でしたね
+
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+人々の願いを叶えるために、
+神令の力をより強めようとして
+このような事態に…
+
+# textboxarrow 0 3
+@如意金箍棒
+うん…
+このままだとみんな神令の力を
+実行に移すだけの…
+
+# textboxarrow 0 3
+@如意金箍棒
+「人形」になっちゃうよ！
+
+# fadeout "black" 1
+# waitandnext 1

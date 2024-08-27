@@ -1,0 +1,978 @@
+;;Ｐ合同サミットクエストシナリオ
+;;今泉Pを新規3Dで作成する
+;;ニコ生出演陣(木村AD(さおり)、NAVE、タマさん、ウルフ、ＫＥＮ)はエネミーの姿で敵ユニットとして登場する。
+;;マップは既存ベースに開催地の神戸や関西を模したオブジェクトを作成、設置したものを使用する。
+;;２３４５６７８９０１２３４５６７
+;;黒画面
+# script "lisp"
+# background "bg_black"
+# bgm "stop"
+# textwindow "nomal"
+# body 150
+# pos 150 3
+# mask 150 off
+# scale 150 0.8 0
+# alpha 150 0 0
+# body 802601
+# pos 802601 3
+# scale 802601 0.8 0
+# alpha 802601 0 0
+# mask 802601 off
+# body 810026
+# mask 810026 off
+# pos 810026 2
+# scale 810026 0.8 0
+# alpha 810026 0 0
+# reversal 810026 0
+# mask 3820001 off
+# body 3820001
+# pos 3820001 4
+# scale 3820001 0.8 0
+# alpha 3820001 0 0
+# body 860010
+# mask 860010 off
+# pos 860010 2
+# reversal 860010 0
+# scale 860010 0.8 0
+# alpha 860010 0 0
+# body 960028
+# mask 960028 off
+# pos 960028 3
+# scale 960028 0.8 0
+# alpha 960028 0 0
+# body 810004
+# mask 810004 off
+# reversal 810004 0
+# pos 810004 3
+# scale 810004 0.8 0
+# alpha 810004 0 0
+# brightness 810004 0 0
+# textwindow "nomal"
+# textflame 0 0
+;;ピンポーンと注意を促すSE
+;;モノローグ
+# se "SE_0755"
+@
+ここから始まるシナリオには
+今回のクエストの攻略の鍵が
+書かれています
+
+;;モノローグ
+@
+茶番が含まれますので
+気に召さない場合は
+スキップして頂いて構いません
+
+;;モノローグ
+@
+また運営陣の音声が入っております
+不快に感じる方は
+予め音量をオフに設定下さい
+
+;;場面転換
+;;開発室に使える現実世界の部屋があれば
+;;なければ学園とかから取ってきて頂けると
+# textwindow "close"
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+# bgm "bgm005" 0
+# background "student_council_room_daytime"
+# waitandnext 0.5
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textflame 0 0
+;;モノローグ
+@
+ファンキル・タガタメサミットを
+目前に控えたある日…
+
+# alpha 150 1 0.5
+;;モノローグ
+# se "SE_5784"
+@
+開発室にやってきた今泉Ｐに
+衝撃が走った
+
+;;通常立ち絵、他メンバーは異族立ち絵
+# textflame 1 1
+# voice 8059 "imaizumip_0045"
+# textboxarrow 0 2
+@今泉Ｐ
+お、おい、お前ら…
+その格好はどうしたんだ…
+
+# bgm "bgm002" 0
+# alpha 150 0 0.5
+# alpha 3820001 1 0.5
+# alpha 860010 1 0.5
+# textflame 1 1
+# voice 8061 "nave_0001"
+# textboxarrow 0 3
+@ＮＡＶＥ
+あ、今泉さん
+ブエナスタルデス！
+
+# voice 8062 "tama_0001"
+# textboxarrow 0 1
+@タマさん
+こんにちは
+ちょうどいいところに
+
+# alpha 3820001 0 0.5
+# alpha 860010 0 0.5
+# alpha 960028 1 0.5
+# textflame 1 1
+# voice 8063 "wolf_0001"
+# textboxarrow 0 2
+@ウルフ
+ちわっ
+
+# alpha 960028 0 0.5
+# alpha 150 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+挨拶はいい
+その格好はどうしたと聞いているんだ
+
+# textflame 1 1
+# voice 8059 "imaizumip_0056"
+# textboxarrow 0 2
+@今泉Ｐ
+というかウルフ
+エネミー姿でも
+お前はなんか調子乗ってるな…
+
+# voice 8063 "wolf_0008"
+# alpha 960028 1 0.5
+# alpha 150 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ウルフ
+ちょ、そういうの止めて下さいよ
+
+# voice 8064 "kimura_0003"
+# move 150 4 0
+# alpha 960028 0 0.5
+# alpha 810026 1 0.5
+# alpha 150 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@木村ＡＤ
+実は今度のリアルイベントの企画を
+考えてまして…
+
+# textflame 1 1
+# textboxarrow 0 1
+@木村ＡＤ
+我々をエネミーとして
+出す方向で調整をしているんです
+
+# voice 8059 "imaizumip_0052"
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+そうか、それでその姿に
+それはわかったが…
+
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+なぜ、敵ユニットそのままなんだ？
+
+# voice 8062 "tama_0028"
+# alpha 810026 0 0.5
+# alpha 150 0 0.5
+# alpha 860010 1 0.5
+# move 860010 3 0
+# textflame 1 1
+# textboxarrow 0 2
+@タマさん
+そ、それは実は工数の都合上、
+やむを得なく…
+
+# alpha 860010 0 0.5
+# alpha 960028 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ウルフ
+そうです
+だから仕方なくウルファーに…
+
+# voice 8061 "nave_0028"
+# alpha 960028 0 0.5
+# alpha 3820001 1 0.5
+# move 3820001 3 0
+# reversal 3820001 0
+# textflame 1 1
+# textboxarrow 0 2
+@ＮＡＶＥ
+ニコ生メンバーが登場するクエスト
+確かにエネミーに名前を
+載せるだけですが…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ＮＡＶＥ
+我々はユーザーのみなさんへ
+楽しんで頂けるように
+考えてみたんです
+
+# alpha 3820001 0 0.5
+# alpha 810026 1 0.5
+# alpha 150 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+……
+
+# textflame 1 1
+# textboxarrow 0 1
+@木村ＡＤ
+今泉さん？
+
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+…………
+
+# alpha 810026 0 0.5
+# alpha 150 0 0.5
+# alpha 860010 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@タマさん
+今泉さん、
+もしかして怒られ…？
+
+# bgm "bgm010" 0
+# alpha 860010 0 0.5
+# alpha 150 1 0.5
+# move 150 3 0
+# textflame 1 1
+# voice 8059 "imaizumip_0059"
+# textboxarrow 0 2
+@今泉Ｐ
+違うぞ
+ユーザーが求めているのは
+そんなノリじゃない…
+
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+今回はリアルイベントとの連携
+だからニコ生メンバーが
+登場するのはいいとしよう
+
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+だがその企画は
+ファンキルのニコ生の雰囲気は
+出せているのか？
+
+# voice 8059 "imaizumip_0046"
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+会場の雰囲気は出せているのか？
+
+# voice 8061 "nave_0022"
+# alpha 150 0 0.5
+# alpha 3820001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ＮＡＶＥ
+ニコ生の雰囲気…
+会場の雰囲気…
+
+# alpha 150 1 0.5
+# alpha 3820001 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+そうだ
+観てる人が楽しめるもの…
+来た人が楽しんでくれるもの…
+
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+観ていない人に対しては
+次回観てみようと思うもの…
+
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+我々を知らない人たちには
+自己紹介も兼ねるような
+
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+ファンキルのニコ生を
+感じられるものにしたいんだ
+
+# move 810026 3 0
+# alpha 150 0 0.5
+# alpha 810026 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@木村ＡＤ
+今泉さん…
+
+# voice 8059 "imaizumip_0053"
+# alpha 150 1 0.5
+# alpha 810026 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+よしみんな、
+今から企画を練り直すぞ！
+
+# alpha 150 0 0.5
+# alpha 860010 1 0.5
+# voice 8062 "tama_0022"
+# textflame 1 1
+# textboxarrow 0 2
+@タマさん
+でも今泉さん、実装までの期間が…
+
+# voice 8059 "imaizumip_0049"
+# alpha 150 1 0.5
+# alpha 860010 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+大丈夫だ
+今まで自分たちがやってきたことを
+思い出すんだ
+
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+培ってきた運営力と
+生放送中にいきなり変わる報酬に
+耐えうる精神力…
+
+# voice 8059 "imaizumip_0048"
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+きっとやれるはずだ！
+
+# voice 8061 "nave_0027"
+# alpha 150 0 0.5
+# alpha 3820001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ＮＡＶＥ
+…そうですね
+
+# textflame 1 1
+# textboxarrow 0 2
+@ＮＡＶＥ
+練り直しましょう
+このまま行ったら俺たちは
+運営力の、えっと、その…
+
+# se "SE_9069"
+# voice 8061 "nave_battle_0001"
+# textflame 1 1
+# textboxarrow 0 2
+@ＮＡＶＥ
+バーン！
+
+;;時間経過
+# textwindow "close"
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+# bgm "bgm009" 0
+# alpha 3820001 0 0
+# alpha 150 1 0
+# move 150 4 0
+# move 810026 2 0
+# alpha 810026 1 0
+# waitandnext 0.2
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textflame 1 1
+# voice 8059 "imaizumip_0003"
+# textboxarrow 0 3
+@今泉Ｐ
+…会場周辺を模したバトルマップか
+よし、これでいこう
+
+# voice 8064 "kimura_0040"
+# textflame 1 1
+# textboxarrow 0 1
+@木村ＡＤ
+はい
+モニュメントにたこ焼きを配置する等
+遊び心も盛り込みました
+
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+あとはエネミー
+つまり我々の調整だな
+
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+まずはニコ生でつけたキャラ性を
+本人のエネミーに
+落とし込む必要がある
+
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+例えばＮＡＶＥはガンマン
+メキシコ仕込みの運営が売りだ
+そうだな
+
+;;ボイスnave_0042「本当は日本人です」再生
+# voice 8061 "nave_0042"
+# move 3820001 2 0
+# alpha 810026 0 0.5
+# alpha 3820001 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@ＮＡＶＥ
+はい、
+メキシコ人をやらせてもらってます
+
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+つまり銃ユニットかつ…
+
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+運営のトップとして
+どっしり構えているところと
+
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+しっかりとゲームを届ける使命を
+担っているというのを
+伝えてほしい
+
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+ＮＡＶＥが持っている
+ゲームを届ける使命感を数値化した
+射程を実装するんだ
+
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+あとメキシコっぽい
+凶悪なデュエルスキルとか
+つけるといいかもな
+
+# voice 8061 "nave_0040"
+# textflame 1 1
+# textboxarrow 0 1
+@ＮＡＶＥ
+なるほど
+全体を見渡している役目
+っていうのも見せられそうです
+
+# bgm "bgm006" 0
+# voice 8059 "imaizumip_0032"
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+それに射程内に入られて
+攻撃されるのが弱点になるから
+
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+うん
+いきなり核心を突かれたときの
+テンパり具合も再現できるしな！
+
+# voice 8061 "nave_0022"
+# textflame 1 1
+# textboxarrow 0 1
+@ＮＡＶＥ
+ちょ、そ、それは…
+
+# bgm "bgm002" 0
+# move 860010 2 0
+# alpha 3820001 0 0.5
+# alpha 860010 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+次にタマさんだけど
+新規の実装や改修を担っている点を
+出していった方がいいと思う
+
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+要するに問題点などがわかっている
+ゲームに詳しいという点を
+伝わるものにしたい
+
+# textflame 1 1
+# voice 8062 "tama_0028"
+# textboxarrow 0 1
+@タマさん
+全体に詳しい…
+ゲームだとそういうキャラが
+最後まで敵に残っていると厄介ですね
+
+# textflame 1 1
+# textboxarrow 0 1
+@タマさん
+となると
+できるだけ最初に倒しておきたい
+立ち位置のエネミー…
+
+# voice 8062 "tama_0032"
+# textflame 1 1
+# textboxarrow 0 1
+@タマさん
+回復系のユニットですかね
+
+# voice 8059 "imaizumip_0054"
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+控えめなアナウンスっぽい雰囲気で
+確実にアップデートさせていく
+その感じがすごく出ると思う！
+
+# bgm "stop"
+# alpha 810026 1 0.5
+# alpha 860010 0 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+そして木村！
+木村らしさとはなにか…
+
+# se "SE_9022"
+# voice 8064 "kimura_0028"
+# textflame 1 1
+# textboxarrow 0 1
+@木村ＡＤ
+俺らしさ…
+
+# bgm "bgm003" 0
+# textsize 23
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+そう、
+ファンキルのアートディレクターであり
+ひとたび職場を離れると…
+
+# textsize 24
+# voice 8064 "kimura_0040"
+# textflame 1 1
+# textboxarrow 0 1
+@木村ＡＤ
+そうだ、俺は良き夫…
+
+# textsize 23
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+アートと家庭を守るキャラ性を出すため
+正式にはニコ生メンバーではないが、
+もう一人、エネミーで実装する
+
+# sedelay "SE_0756" 1.5
+# textsize 24
+# voice 8064 "kimura_0043"
+;;サイヤ人化した際のＳＥ（発注済みです）
+# textflame 1 1
+# textboxarrow 0 1
+@木村ＡＤ
+それは、嫁の…
+さ、サオリンのことかああああ…
+
+# jump 810026
+# textflame 1 1
+# textboxarrow 0 1
+@木村ＡＤ
+はっ…
+さおりが近くにいると強くなるとか
+ギミックを入れれば面白いかも
+
+# textflame 1 1
+# textboxarrow 0 1
+@木村ＡＤ
+二人は一心同体…
+俺たちを引き離す者は許さない的な
+…的な？
+
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+そしてさおりは
+健気さを出すために
+か弱い感じのパラメータにしよう
+
+# voice 8064 "kimura_0042"
+# jump 810026
+# textflame 1 1
+# textboxarrow 0 1
+@木村ＡＤ
+うおぉぉぉっ
+さおり、さおりぃぃぃぃーーー！
+
+# bgm "bgm165" 0
+# mask 960028 on
+# reversal 960028 0
+# move 960028 2 0
+# alpha 810026 0 0.5
+# alpha 960028 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+そしてウルフ…
+自分が一体何者だと思う？
+
+# textflame 1 1
+# textboxarrow 0 1
+@ウルフ
+自分が何者か…
+俺は…
+
+# voice 8063 "wolf_0031"
+# textflame 1 1
+# textboxarrow 0 1
+@ウルフ
+狼を連想させる誇り高き長髪…
+内に流れる血は滾る様に熱く…
+猛き鼓動は大地を震わせる…
+
+# bgm "stop"
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+だが本当は？
+
+;;ボイスからそのまま
+;;wolf_0043
+# textflame 1 1
+# jump 960028
+# voice 8063 "wolf_0043"
+# textboxarrow 0 1
+@ウルフ
+見た目はおじさん、中身は園児
+孤独な血狼…ブラッディ・ウルフ
+
+# bgm "bgm006" 0
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+つまり出オチの位置づけだ！
+
+# voice 8063 "wolf_0015"
+# textflame 1 1
+# textboxarrow 0 1
+@ウルフ
+で、出オチ…！？
+
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+というわけで
+登場時のインパクトが凄まじいよう
+パラメータを高く設定しよう
+
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+そのルシファーの外観を生かし
+最強のエネミー…
+ウルファーとして振る舞ってくれ
+
+# textflame 1 1
+# textboxarrow 0 1
+@ウルフ
+ウルファー…
+
+;;KEN、立ち絵は黒のフィルターをかけっぱなしで
+# bgm "bgm022" 0
+# alpha 960028 0 0.5
+# alpha 150 0 0.5
+# alpha 810004 1 0.5
+# textflame 1 1
+# voice 8066 "ken_0033"
+# textboxarrow 0 2
+@？？？
+そうですよ、ウルフさん
+僕が最強のエネミーに仕上げます
+特にスキルを楽しみにしてください
+
+# alpha 810004 0 0.5
+# alpha 960028 1 0.5
+# move 960028 3 0
+# mask 960028 off
+;;ウルフ
+# textflame 1 1
+# voice 8063 "wolf_0022"
+# textboxarrow 0 2
+@ウルファー
+お前はＫＥＮ！？
+なぜここに…
+そしてその姿は…
+
+# alpha 810004 1 0.5
+# alpha 960028 0 0.5
+;;ken_0044の自己紹介のボイスを使用してください
+# voice 8066 "ken_0044"
+# textflame 1 1
+# textboxarrow 0 2
+@ＫＥＮ
+スキルの調整をと
+今泉さんに呼ばれまして
+
+# textflame 1 1
+# textboxarrow 0 2
+@ＫＥＮ
+この姿は、
+えっと、その…
+
+# move 150 3 0
+# voice 8059 "imaizumip_0045"
+# alpha 810004 0 0.5
+# alpha 150 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+おい、ウルフ
+ＫＥＮちゃんをあんまり
+いじめるんじゃない
+
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+よく来てくれたな！
+実は俺のユニットで
+相談あってな
+
+# bgm "stop"
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+今回のイベント、
+やはりメンバーだけの内輪ノリを
+払拭したいんだ
+
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+報酬はロストラグナロクユニットの
+『姫型変更チケット』
+で考えているんだが…
+
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+そうじゃなくて、
+高難易度のクエストとしても
+ちゃんと遊べるようにしたい
+
+# bgm "bgm014" 0
+# voice 8059 "imaizumip_0047"
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+だから完全に悪に見えるよう
+調整をお願いしたいんだ！
+
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+ボス…プロデューサーとして
+俺は甘んじて悪になろうと
+思っている
+
+# alpha 150 0 0.5
+# alpha 3820001 1 0.5
+# alpha 810004 1 0.5
+# move 3820001 4 0
+# move 810004 2 0
+# textflame 1 1
+# textboxarrow 0 3
+@ＮＡＶＥ
+今泉さん、そんなことを…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ＫＥＮ
+…わかりました
+凶悪な形で調整します
+
+# alpha 150 1 0.5
+# alpha 3820001 0 0.5
+# alpha 810004 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+全体攻撃やバフ効果…
+そうだな、
+弱点が毎回変わるとかいいな
+
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+せんぶり茶で
+体にすごい効果が現れたみたいな
+
+# alpha 150 0 0.5
+# alpha 3820001 1 0.5
+# move 3820001 3 0
+# textflame 1 1
+# textboxarrow 0 2
+@ＮＡＶＥ
+おお…
+見えましたね
+ではこちらで実装を進めていきます
+
+# bgm "stop"
+# alpha 150 1 0.5
+# alpha 3820001 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+いや待て…
+みんなエネミーなのに
+俺だけこの姿だと浮かないか？
+
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+なんか一人だけ真剣に
+作成された感じが…
+
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+そうだ…
+
+;;今泉Ｐ、ポンッとデブ化
+# se "SE_9347"
+# alpha 150 0 0
+# alpha 802601 1 0
+# fadein "white" 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# bgm "bgm300" 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+どうだ、これでどうだ
+過剰編でお披露目がなかった
+この姿で臨もう！
+
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+悪に徹している分、
+ちょっとくらい可愛げがないと
+問題が出てきそうだしな
+
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+よし、エネミーの方も…
+
+# effectskip 2000
+# shakestop
+# alpha 802601 0 0.5
+# alpha 810026 1 0.5
+# move 810026 3 0
+# voice 8064 "kimura_0031"
+# textflame 1 1
+# textboxarrow 0 2
+@木村Ｐ
+すみません…
+エネミーは通常です
+工数が足りません…
+
+# alpha 802601 1 0.5
+# alpha 810026 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@今泉Ｐ
+く、だったら音声だけでも…
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# bgm "022" 0
+# alpha 802601 0 0
+# move 150 4 0
+# move 810026 2 0
+# alpha 150 1 0
+# alpha 810026 1 0
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 3
+@今泉Ｐ
+まずはこのくだらない
+茶番劇に付き合って頂いて
+ありがとうございます
+
+# textflame 1 1
+# textboxarrow 0 1
+@木村ＡＤ
+ファンキルユーザーの皆さん
+シナリオ内容は茶番でしたが
+書いてある攻略の鍵は本当です
+
+# alpha 150 0 0.5
+# alpha 810026 0 0.5
+# move 3820001 4 0
+# move 860010 2 0
+# reversal 3820001 1
+# alpha 860010 1 0.5
+# alpha 3820001 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@タマさん
+鍵を手がかりに
+今回ご用意したクエストを
+是非お楽しみください
+
+# textflame 1 1
+# textboxarrow 0 3
+@ＮＡＶＥ
+ファンキルの持ち味である
+戦略性の高いクエストに
+仕上がっています
+
+# voice 8061 "nave_battle_0001"
+# textflame 1 1
+# textboxarrow 0 3
+@ＮＡＶＥ
+バーン！

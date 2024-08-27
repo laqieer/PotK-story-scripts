@@ -1,0 +1,717 @@
+;;-----------------------------------------
+;;「スライム倒して３００年、知らないうちにレベルMAXになってました」コラボイベントシナリオ
+;;【EP4】
+;;スクリプト最後の背景：家の中・昼
+;;背景：平原・朝
+;;-----------------------------------------
+# script "lisp"
+# background "bg_white"
+# bgm "stop"
+;;-----------------------------------------
+;;アズサ
+# body 5105211
+# pos 5105211 3
+# scale 5105211 0.8 0
+# layer 5105211 3
+# alpha 5105211 0 0
+# mask 5105211 off
+;;ライカ
+# body 52001011
+# pos 52001011 3
+# scale 52001011 0.8 0
+# layer 52001011 2
+# alpha 52001011 0 0
+# mask 52001011 off
+;;ハルカラ
+# body 5604011
+# pos 5604011 3
+# scale 5604011 0.8 0
+# layer 5604011 3
+# alpha 5604011 0 0
+# mask 5604011 off
+;;ミストルティン
+# body 600621
+# pos 600621 3
+# scale 600621 0.8 0
+# layer 600621 2
+# alpha 600621 0 0
+# mask 600621 off
+;;ヴォータン
+# body 301711
+# pos 301711 3
+# scale 301711 0.8 0
+# layer 301711 2
+# alpha 301711 0 0
+# mask 301711 off
+;;-----------------------------------------
+# imageset 0 "e220513_logo_only"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;【EP4】
+# fadein "black" 1
+# textwindow "close"
+# waitandnext 1.5
+
+# fadein "white" 1
+# se "SE_0738"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+
+# fadeout "black" 1
+# waitandnext 1.2
+
+;;背景：家の中・昼
+# background "201_room"
+# imagealpha 0 0 0
+# bgmfile "bgm603" "BgmSlime300" 0
+# fadein "black" 1
+# waitandnext 1.3
+
+# move 301711 3 0
+# face 301711 "usual"
+# alpha 301711 1 0.5
+# mask 301711 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ヴォータン
+なるほど、事情は分かったぞ
+
+;;モノローグ
+# textflame 0 0
+@
+ライカが差し入れたお茶を飲みながら
+ヴォータンは納得したように頷く
+
+# voice 3017 "wotan_0028"
+# face 301711 "worry"
+# textflame 1 1
+# textboxarrow 0 2
+@ヴォータン
+異世界からの転移者か…
+古の時代にはそういう
+技術があったと聞くが…
+
+# voice 5200101 "raika_0002"
+# move 301711 2 0.5
+# mask 301711 on
+# move 52001011 4 0
+# face 52001011 "surprise"
+# alpha 52001011 1 0.5
+# mask 52001011 on
+# textboxarrow 0 3
+@ライカ
+何か知っているのですか！？
+
+# textboxarrow 0 1
+@ヴォータン
+いや…もうかなり前のことだ
+さすがに私も詳しくは知らない…
+
+# face 301711 "usual"
+# textboxarrow 0 1
+@ヴォータン
+だが、怪しい物ならここにあるぞ
+
+# voice 6006 "misutoru_0023"
+# alpha 301711 0 0.5
+# alpha 52001011 0 0.5
+# move 600621 3 0
+# face 600621 "surprise"
+# alpha 600621 1 0.5
+# mask 600621 off
+# textboxarrow 0 2
+@ミストルティン
+えっ？　ここに？
+
+# alpha 600621 0 0.5
+# move 301711 3 0
+# face 301711 "worry"
+# alpha 301711 1 0.5
+# mask 301711 off
+# textboxarrow 0 2
+@ヴォータン
+…気付いていないのか？
+どう考えても、この家が怪しいだろう
+
+;;モノローグ
+# textflame 0 0
+@
+そう言って、ヴォータンは
+両手を広げてみせる
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヴォータン
+こんなへんぴな場所に一軒家…
+周りには魔獣も
+住み着いているなんて…
+
+# textboxarrow 0 2
+@ヴォータン
+以前の家主は一体
+どんな人物だったんだ？
+
+# textboxarrow 0 2
+@ヴォータン
+少なくとも
+普通の人間とは思えないぞ
+
+# alpha 301711 0 0.5
+# move 600621 3 0
+# face 600621 "normal"
+# alpha 600621 1 0.5
+# mask 600621 off
+# textboxarrow 0 2
+@ミストルティン
+た、確かに…
+
+# textboxarrow 0 2
+@ミストルティン
+曰く付きの物件とは、
+聞いていましたけど…
+
+# textboxarrow 0 2
+@ミストルティン
+家具や本も置きっぱなし
+でしたから…
+
+# alpha 600621 0 0.5
+# move 5604011 3 0
+# face 5604011 "surprise"
+# alpha 5604011 1 0.5
+# mask 5604011 off
+# textboxarrow 0 2
+@ハルカラ
+…あっ！
+
+# se "SE_0713"
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+@
+そこで何かを思いついたらしい
+ハルカラが、ポンと手を叩く
+
+# face 5604011 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@ハルカラ
+それで思い出しましたけど、
+掃除している時に変な物が
+あちこちにあった気がします
+
+# textboxarrow 0 2
+@ハルカラ
+あれ、ミストルティンさんの
+持ち物かと思ったんですけど…
+
+# move 5604011 2 0.5
+# mask 5604011 on
+# move 600621 4 0
+# face 600621 "normal"
+# alpha 600621 1 0.5
+# mask 600621 on
+# textboxarrow 0 3
+@ミストルティン
+いえ、私は最低限の荷物だけで
+ここに来たので…
+
+# alpha 5604011 0 0.5
+# alpha 600621 0 0.5
+# move 5105211 2 0
+# face 5105211 "normal"
+# alpha 5105211 1 0.5
+# mask 5105211 on
+# textboxarrow 0 1
+# move 52001011 4 0
+# face 52001011 "normal"
+# alpha 52001011 1 0.5
+# mask 52001011 on
+@アズサ
+家の中にある謎のアイテム…
+気になるね…調べてみよう
+
+# textboxarrow 0 3
+@ライカ
+ハルカラさん、ミストルティンさん
+さっそく案内していただけますか？
+
+# voice 6006 "misutoru_0003"
+# alpha 5105211 0 0.5
+# alpha 52001011 0 0.5
+# move 600621 3 0
+# face 600621 "normal"
+# alpha 600621 1 0.5
+# mask 600621 off
+# textboxarrow 0 2
+@ミストルティン
+ええ、確かまとめて物置に…
+
+;;モノローグ
+# alpha 600621 0 0.5
+# textflame 0 0
+@
+こうして一行は、以前の家主が
+置いていった品々を探ることにした
+
+;;モノローグ
+@
+そして…
+
+;;演出：画面揺れ
+# shake 0 0.5
+# waitandnext 0.5
+
+# voice 560401 "harukara_0037"
+# move 5604011 3 0
+# face 5604011 "surprise"
+# alpha 5604011 1 0.5
+# mask 5604011 off
+# textflame 1 1
+# textboxarrow 0 2
+@ハルカラ
+あいたっ！
+
+# se "SE_0846"
+# waitandnext 0.5
+
+# move 5604011 2 0.5
+# mask 5604011 on
+# move 5105211 4 0
+# face 5105211 "surprise"
+# alpha 5105211 1 0.5
+# mask 5105211 on
+# textboxarrow 0 3
+@アズサ
+わわわ…
+大丈夫？　ハルカラ？
+
+# voice 560401 "harukara_0008"
+# face 5604011 "sad"
+# textboxarrow 0 1
+@ハルカラ
+あはは…すみません…
+掃除の時、適当に
+積み上げちゃってたから…
+
+# alpha 5604011 0 0.5
+# alpha 5105211 0 0.5
+# move 52001011 3 0
+# face 52001011 "happy"
+# alpha 52001011 1 0.5
+# mask 52001011 off
+# textboxarrow 0 2
+@ライカ
+この本が落ちてきたんですね…
+
+;;モノローグ
+# se "SE_0760"
+# textflame 0 0
+@
+ハルカラの頭にぶつかった本を
+ライカが拾い上げ、パラパラと捲る
+
+# face 52001011 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ライカ
+…？　読めませんね
+
+# move 600621 2 0
+# face 600621 "normal"
+# alpha 600621 1 0.5
+# mask 600621 on
+# textboxarrow 0 1
+# move 52001011 4 0.5
+# mask 52001011 on
+@ミストルティン
+それ、きっと古代文字です…
+手書きのノートですね、これ
+
+# voice 3017 "wotan_0003"
+# alpha 600621 0 0.5
+# alpha 52001011 0 0.5
+# move 301711 3 0
+# face 301711 "usual"
+# alpha 301711 1 0.5
+# mask 301711 off
+# textboxarrow 0 2
+@ヴォータン
+うむ、研究者が自分の秘密を
+守るためにあえて古い字を使う
+ことがあると、聞いたことがある
+
+# voice 5200101 "raika_0040"
+# alpha 301711 0 0.5
+# move 600621 2 0
+# face 600621 "normal"
+# alpha 600621 1 0.5
+# mask 600621 on
+# move 52001011 4 0.5
+# face 52001011 "happy"
+# alpha 52001011 1 0.5
+# mask 52001011 on
+# textboxarrow 0 3
+@ライカ
+なるほど…読めますか
+ミストルティンさん
+
+# voice 6006 "misutoru_0003"
+# textboxarrow 0 1
+@ミストルティン
+はい、少しだけなら…
+
+;;モノローグ
+# textflame 0 0
+@
+ライカからノートを受け取り、
+ミストルティンが解読を始める
+
+;;モノローグ
+@
+そこに書かれていた内容は、
+以前の家主が研究者であったこと
+
+;;モノローグ
+@
+そしてその研究内容が、
+太古に失われた異世界へ
+渡る技術ということだった
+
+# alpha 600621 0 0.5
+# alpha 52001011 0 0.5
+# move 301711 3 0
+# face 301711 "usual"
+# alpha 301711 1 0.5
+# mask 301711 off
+# textflame 1 1
+# textboxarrow 0 2
+@ヴォータン
+つまり…この謎のアイテムが、
+研究の成果だったというわけか
+
+;;モノローグ
+# textflame 0 0
+@
+ヴォータンは、奇妙な生き物の
+形をした置物を手に取ってみる
+
+;;モノローグ
+@
+それはミストルティンが
+この家に初めて来た日に
+手に取ったアイテムであった
+
+# alpha 301711 0 0.5
+# move 5105211 2 0
+# face 5105211 "normal"
+# alpha 5105211 1 0.5
+# mask 5105211 on
+# move 600621 4 0
+# face 600621 "normal"
+# alpha 600621 1 0.5
+# mask 600621 on
+# textflame 1 1
+# textboxarrow 0 3
+@ミストルティン
+記録ではこのアイテムを
+３つ試作して…それが
+最後になっています
+
+# textboxarrow 0 1
+@アズサ
+じゃあ、このアイテムを使って
+どこか別の世界に
+行っちゃったのかも…
+
+# alpha 600621 0 0.5
+# move 301711 4 0
+# face 301711 "worry"
+# alpha 301711 1 0.5
+# mask 301711 on
+# textboxarrow 0 3
+@ヴォータン
+その可能性は
+あるかもしれないな…
+
+# textboxarrow 0 3
+@ヴォータン
+持ち主不在のまま放置されて、
+仕方なく売りに出された…
+そんなところだと思うぞ
+
+# alpha 5105211 0 0.5
+# alpha 301711 0 0.5
+# move 5604011 2 0
+# face 5604011 "normal"
+# alpha 5604011 1 0.5
+# mask 5604011 on
+# textboxarrow 0 1
+# move 52001011 4 0
+# face 52001011 "happy"
+# alpha 52001011 1 0.5
+# mask 52001011 on
+@ハルカラ
+アイテムは３つとありますけど
+ここには1つしかありませんね
+
+# textboxarrow 0 3
+@ライカ
+ですが、この１つがあれば
+元の世界に帰れるのでは…？
+
+# alpha 5604011 0 0.5
+# alpha 52001011 0 0.5
+# move 5105211 3 0
+# face 5105211 "normal"
+# alpha 5105211 1 0.5
+# mask 5105211 off
+# textboxarrow 0 2
+@アズサ
+じゃあさっそく…
+
+;;モノローグ
+# textflame 0 0
+@
+アイテムを手に取って、
+あれこれ弄ってみるアズサ
+しかし…
+
+# voice 510521 "azusa_0028"
+# face 5105211 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@アズサ
+う～ん…う～ん…
+戻れ～…戻れ～…
+
+# textboxarrow 0 2
+@アズサ
+…ダメだね
+
+# voice 6006 "misutoru_0028"
+# alpha 5105211 0 0.5
+# move 600621 2 0
+# face 600621 "normal"
+# alpha 600621 1 0.5
+# mask 600621 on
+# textboxarrow 0 1
+# move 301711 4 0
+# face 301711 "worry"
+# alpha 301711 1 0.5
+# mask 301711 on
+@ミストルティン
+壊れてしまって
+いるのでしょうか…？
+
+# textboxarrow 0 3
+@ヴォータン
+しかし作った本人がいない以上、
+自分達で直すしかあるまい
+
+# face 301711 "usual"
+# textboxarrow 0 3
+@ヴォータン
+だからアズサ…その…
+気を落とすなよ…必ず…
+
+# alpha 600621 0 0.5
+# alpha 301711 0 0.5
+# move 5604011 1 0
+# face 5604011 "normal"
+# alpha 5604011 1 0.5
+# move 5105211 3 0
+# face 5105211 "normal"
+# alpha 5105211 1 0.5
+# mask 5105211 on
+# textboxarrow 0 2
+# move 52001011 5 0
+# face 52001011 "happy"
+# alpha 52001011 1 0.5
+# mask 52001011 on
+@アズサ
+まあ、なんとかなるよ
+
+# textboxarrow 0 3
+@ライカ
+ですね
+
+# voice 560401 "harukara_0003"
+# face 5604011 "happy"
+# textboxarrow 0 1
+@ハルカラ
+お師匠様が言うなら、
+絶対に大丈夫ですよ～
+
+# alpha 5604011 0 0.5
+# alpha 5105211 0 0.5
+# alpha 52001011 0 0.5
+# move 600621 2 0
+# face 600621 "normal"
+# alpha 600621 1 0.5
+# mask 600621 on
+# textboxarrow 0 1
+# move 301711 4 0
+# face 301711 "worry"
+# alpha 301711 1 0.5
+# mask 301711 on
+@ミストルティン
+えと…不安じゃないんですか？
+
+# textboxarrow 0 3
+@ヴォータン
+このまま帰れないかも
+知れないのだぞ？
+
+# alpha 600621 0 0.5
+# alpha 301711 0 0.5
+# move 5105211 3 0
+# face 5105211 "normal"
+# alpha 5105211 1 0.5
+# mask 5105211 off
+# textboxarrow 0 2
+@アズサ
+こういうのはね、
+あんまり焦っても仕方ないの
+
+# textboxarrow 0 2
+@アズサ
+とりあえず、
+今日はここまで分かったんだから
+十分な成果だよ
+
+# voice 510521 "azusa_0004"
+# face 5105211 "happy"
+# textboxarrow 0 2
+@アズサ
+アイテムの修理については
+明日からみんなで頑張って行こう！
+
+# alpha 5105211 0 0.5
+# move 600621 2 0
+# face 600621 "surprise"
+# alpha 600621 1 0.5
+# mask 600621 on
+# textboxarrow 0 1
+# move 301711 4 0
+# face 301711 "surprise"
+# alpha 301711 1 0.5
+# mask 301711 on
+@ミストルティン
+な…なんて…
+
+# textboxarrow 0 3
+@ヴォータン
+マイペースなんだ…
+
+# voice 510521 "azusa_0005"
+# alpha 600621 0 0.5
+# alpha 301711 0 0.5
+# move 5105211 3 0
+# face 5105211 "happy"
+# alpha 5105211 1 0.5
+# mask 5105211 off
+# textboxarrow 0 2
+@アズサ
+さ、今日も
+日課の魔獣退治をしよっか
+
+;;モノローグ
+# textflame 0 0
+@
+そう言ってアズサは笑顔のまま、
+家の玄関へと向かって行く
+
+# alpha 5105211 0 0.5
+# move 600621 2 0
+# face 600621 "surprise"
+# alpha 600621 1 0.5
+# mask 600621 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 301711 4 0
+# face 301711 "surprise"
+# alpha 301711 1 0.5
+# mask 301711 on
+@ミストルティン
+い、今から行くんですか？
+
+# textboxarrow 0 3
+@ヴォータン
+別に今日ぐらい休んでも…
+
+# alpha 600621 0 0.5
+# alpha 301711 0 0.5
+# move 5105211 3 0
+# face 5105211 "normal"
+# alpha 5105211 1 0.5
+# mask 5105211 off
+# textboxarrow 0 2
+@アズサ
+いやいや、日課だからね
+さ、みんなも行くよ
+
+# alpha 5105211 0 0.5
+# move 5604011 2 0
+# face 5604011 "normal"
+# alpha 5604011 1 0.5
+# mask 5604011 on
+# move 52001011 4 0
+# face 52001011 "happy"
+# alpha 52001011 1 0.5
+# mask 52001011 on
+# textboxarrow 0 3
+@ライカ
+はい、アズサ様！
+
+# face 5604011 "happy"
+# textboxarrow 0 1
+@ハルカラ
+今日も頑張ります～！
+
+# voice 6006 "misutoru_0021"
+# alpha 5604011 0 0.5
+# alpha 52001011 0 0.5
+# move 600621 3 0
+# face 600621 "surprise"
+# alpha 600621 1 0.5
+# mask 600621 off
+# textboxarrow 0 2
+@ミストルティン
+す…凄い…
+
+;;モノローグ
+# textflame 0 0
+@
+意気揚々と出かけていく
+３人を見つめながら、
+ミストルティンが呟く
+
+# move 600621 2 0.5
+# mask 600621 on
+# move 301711 4 0
+# face 301711 "usual"
+# alpha 301711 1 0.5
+# mask 301711 on
+# textflame 1 1
+# textboxarrow 0 3
+@ヴォータン
+そうだな…
+焦らずじっくりやること…
+それが強さの秘訣かもしれん
+
+# face 301711 "normal"
+# textboxarrow 0 3
+@ヴォータン
+よし、私達も行くぞ
+ミストルティン！
+
+# face 600621 "happy"
+# textboxarrow 0 1
+@ミストルティン
+そ、そうですね…！
+
+# fadeout "black" 1
+# waitandnext 1

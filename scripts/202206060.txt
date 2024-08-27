@@ -1,0 +1,707 @@
+;;-----------------------------------------
+;;ラグナドールED
+;;-----------------------------------------
+# script "lisp"
+# background "forest_night"
+# bgmfile "bgm607_608" "BgmKai" 0
+;;-----------------------------------------
+;;ムラマサ
+# body 102511
+# pos 102511 3
+# scale 102511 0.8 0
+# layer 102511 3
+# mask 102511 off
+# alpha 102511 0 0
+;;マサムネ
+# body 100111
+# pos 100111 3
+# scale 100111 0.8 0
+# layer 100111 2
+# mask 100111 off
+# alpha 100111 0 0
+;;ぬりかべ
+# body 5203311
+# pos 5203311 3
+# scale 5203311 0.8 0
+# layer 5203311 2
+# mask 5203311 off
+# alpha 5203311 0 0
+;;滝夜叉姫
+# body 5303811
+# pos 5303811 3
+# scale 5303811 0.8 0
+# layer 5303811 2
+# mask 5303811 off
+# alpha 5303811 0 0
+;;怨霊（スケルトン）
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# layer 910013 2
+# mask 910013 off
+# alpha 910013 0 0
+;;-----------------------------------------
+;;背景の暗転
+# imageset 2 "bg_black"
+# imagelayer 2 3
+# imagealpha 2 0 0
+;;-----------------------------------------
+;;背景：夜の森
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# voice 1025 "muramasa_battle_0002"
+# move 102511 2 0
+# face 102511 "angry"
+# alpha 102511 1 0.5
+# mask 102511 on
+# move 910013 4 0
+# alpha 910013 1 0.5
+# mask 910013 on
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ムラマサ
+はああああああっ！！
+
+;;演出：画面揺れ
+# se "SE_10369"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@怨霊
+オオオオオオ！？
+
+;;モノローグ
+# textflame 0 0
+@
+ムラマサの放った渾身の一撃…
+それは怨霊の弱点に致命的な
+一撃を与えた
+
+# textflame 1 1
+# textboxarrow 0 3
+@怨霊
+オ…オオ…オオオ…
+
+;;モノローグ
+# alpha 910013 0 0.5
+# textflame 0 0
+@
+断末魔をあげながら、
+その場で崩れ落ちる怨霊
+
+# face 102511 "irregular"
+# textflame 1 1
+# textboxarrow 0 1
+@ムラマサ
+や…やった…
+
+;;モノローグ
+# textflame 0 0
+@
+ムラマサはホッとした様子で、
+その場で大きく息をする
+
+;;モノローグ
+@
+だが―
+
+# bgm "stop"
+# alpha 102511 0 0.5
+# move 5203311 3 0
+# face 5203311 "angry"
+# mask 5203311 off
+# alpha 5203311 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ぬりかべ
+ムラマサちゃん！
+
+# voice 530381 "takiyashahime_0024"
+# alpha 5203311 0 0.5
+# move 5303811 3 0
+# face 5303811 "surprise"
+# mask 5303811 off
+# alpha 5303811 1 0.5
+# textboxarrow 0 2
+@滝夜叉姫
+そやつ、まだ息が―
+
+# alpha 5303811 0 0.5
+# move 910013 3 0
+# mask 910013 off
+# alpha 910013 1 0.5
+# textboxarrow 0 2
+@怨霊
+オオ…！
+
+# voice 1025 "muramasa_0022"
+# alpha 910013 0 0.5
+# move 102511 3 0
+# face 102511 "surprise"
+# mask 102511 off
+# alpha 102511 1 0.5
+# textboxarrow 0 2
+@ムラマサ
+え…？
+
+;;モノローグ
+# se "SE_8014"
+# shake 0 0.5
+# fadein "white" 0.5
+# textflame 0 0
+@
+最後の力を振り絞り、
+ムラマサに攻撃をしかける
+怨霊
+
+# se "SE_5595"
+# waitandnext 0.5
+
+;;モヤモヤ吹き出しで
+# move 102511 3 0
+# face 102511 "irregular"
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+@ムラマサ
+ああ…また油断しちゃった…
+
+;;モヤモヤ吹き出しで
+# voice 1025 "muramasa_0019"
+# textboxarrow 0 0
+@ムラマサ
+やっぱりダメだ、拙者…
+こんな時に限って…
+
+;;モノローグ
+# textflame 0 0
+@
+絶望し、目を閉じるムラマサ
+
+;;背景：黒
+;;演出：画面揺れ
+# imagepos 2 0 0
+# imagealpha 2 1 0.5
+# waitandnext 0.5
+
+# alpha 102511 0 0
+# shake 0 0.5
+# waitandnext 0.5
+
+# serif 1
+@怨霊
+オオ…オオ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 1025 "muramasa_0022"
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "normal"
+@ムラマサ
+え…？
+
+;;モノローグ
+# textflame 0 0
+@
+しかし何時になっても
+攻撃が届くことは無かった
+
+# serif 1
+@マサムネ
+いつまで目を閉じている？
+もう終わったぞ
+
+;;モノローグ
+# serif 1
+# textwindow "close"
+# serif 0
+# move 100111 3 0
+# face 100111 "nutual"
+# mask 100111 off
+# alpha 100111 1 0
+@
+恐る恐る目を開けるムラマサ
+
+;;背景：夜の森
+# imagealpha 2 0 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# bgmfile "bgm607_1" "BgmKai" 0
+@
+するとそこには、
+マサムネの姿があった
+
+# alpha 100111 0 0.5
+# move 102511 3 0
+# face 102511 "surprise"
+# mask 102511 off
+# alpha 102511 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ムラマサ
+あ…姉上…？
+
+# voice 520331 "nurikabe_0004"
+# alpha 102511 0 0.5
+# move 5303811 2 0
+# face 5303811 "normal"
+# alpha 5303811 1 0.5
+# mask 5303811 on
+# move 5203311 4 0
+# face 5203311 "happy"
+# alpha 5203311 1 0.5
+# mask 5203311 on
+# textboxarrow 0 3
+@ぬりかべ
+良かった、ムラマサちゃん
+
+# voice 530381 "takiyashahime_0004"
+# face 5303811 "happy"
+# textboxarrow 0 1
+@滝夜叉姫
+マサムネが攻撃を防いだのじゃ
+あの一瞬で、見事なものよ
+
+# alpha 5303811 0 0.5
+# alpha 5203311 0 0.5
+# move 102511 2 0
+# face 102511 "surprise"
+# alpha 102511 1 0.5
+# mask 102511 on
+# textboxarrow 0 1
+# move 100111 4 0
+# face 100111 "nutual"
+# alpha 100111 1 0.5
+# mask 100111 on
+@ムラマサ
+姉上…！
+
+# textboxarrow 0 3
+@マサムネ
+最後まで油断をするものではない
+
+# voice 1025 "muramasa_0003"
+# face 102511 "normal"
+# textboxarrow 0 1
+@ムラマサ
+は…はい…
+
+;;モノローグ
+# textflame 0 0
+@
+いつものように厳しい言葉を
+かけてくるマサムネだが…
+
+;;モノローグ
+@
+ムラマサはその中に、
+確かに優しさがあることを
+感じていた
+
+# voice 1025 "muramasa_0030"
+# face 102511 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@ムラマサ
+ありがとうございます、
+姉上…
+
+# face 100111 "angry"
+# textboxarrow 0 3
+@マサムネ
+礼などいい。それよりも…
+
+# alpha 102511 0 0.5
+# alpha 100111 0 0.5
+# move 910013 3 0
+# mask 910013 off
+# alpha 910013 1 0.5
+# textboxarrow 0 2
+@怨霊
+オ…オオ…
+
+# voice 530381 "takiyashahime_0024"
+# alpha 910013 0 0.5
+# move 5303811 3 0
+# face 5303811 "surprise"
+# mask 5303811 off
+# alpha 5303811 1 0.5
+# textboxarrow 0 2
+@滝夜叉姫
+こやつ…なんという
+生命力じゃ…
+
+# alpha 5303811 0 0.5
+# move 100111 3 0
+# face 100111 "angry"
+# mask 100111 off
+# alpha 100111 1 0.5
+# textboxarrow 0 2
+@マサムネ
+早くトドメを刺せ
+お主の刃が確実だ
+
+# voice 1025 "muramasa_0032"
+# alpha 100111 0 0.5
+# move 102511 2 0
+# face 102511 "angry"
+# alpha 102511 1 0.5
+# mask 102511 on
+# textboxarrow 0 1
+# move 910013 4 0
+# alpha 910013 1 0.5
+# mask 910013 on
+@ムラマサ
+はいっ…！
+
+;;モノローグ
+# textflame 0 0
+@
+未だもがき続ける
+怨霊に向かって、
+最後の一撃を与えるムラマサ
+
+# bgm "stop"
+# se "SE_10369"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 2000 1 200 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 3
+@怨霊
+オオオ…
+
+;;モノローグ
+# alpha 910013 0 0.5
+# textflame 0 0
+@
+そして遂に―
+怨霊は塵となって
+消えるのだった
+
+# bgm "bgm035" 0
+# alpha 102511 0 0.5
+# move 5303811 3 0
+# face 5303811 "normal"
+# mask 5303811 off
+# alpha 5303811 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@滝夜叉姫
+うむ…さすがじゃな
+
+# textboxarrow 0 2
+@滝夜叉姫
+マサムネとムラマサ…
+どちらが欠けてもこの怨霊を
+倒すことは不可能じゃった
+
+# textboxarrow 0 2
+@滝夜叉姫
+お主たちは正に、
+ふたりでひとつの名刀じゃ！
+
+;;モノローグ
+# textflame 0 0
+@
+滝夜叉姫に賞賛され、
+顔を赤らめるマサムネとムラマサ
+
+# alpha 5303811 0 0.5
+# move 102511 2 0
+# face 102511 "smile"
+# alpha 102511 1 0.5
+# mask 102511 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 100111 4 0
+# face 100111 "unhappy"
+# alpha 100111 1 0.5
+# mask 100111 on
+@ムラマサ
+べ…別に拙者はそんな…
+
+# textboxarrow 0 3
+@マサムネ
+そ…そうだ…拙者たちは
+そのような間柄では…
+
+;;モノローグ
+# textflame 0 0
+@
+マサムネとムラマサは、
+照れくさそうに互いを見る
+
+# textflame 1 1
+# textboxarrow 0 3
+@マサムネ
+しかし、まあ…
+たまには悪くない…
+
+# textboxarrow 0 1
+@ムラマサ
+そ…そうですね…
+
+# alpha 102511 0 0.5
+# alpha 100111 0 0.5
+# move 5303811 2 0
+# face 5303811 "normal"
+# alpha 5303811 1 0.5
+# mask 5303811 on
+# move 5203311 4 0
+# face 5203311 "happy"
+# alpha 5203311 1 0.5
+# mask 5203311 on
+# textboxarrow 0 3
+@ぬりかべ
+うん…仲良し
+
+# textboxarrow 0 1
+@滝夜叉姫
+うむ、これにて一件落着じゃ！
+宴の準備をするぞ、ぬりかべ！
+
+# voice 520331 "nurikabe_0003"
+# textboxarrow 0 3
+@ぬりかべ
+はい、滝夜叉姫様…
+
+;;演出：時間経過
+;;背景：黒
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# alpha 5303811 0 0
+# alpha 5203311 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# bgm "stop"
+# textflame 0 0
+# textwindow "normal"
+@
+こうして怨霊が引き起こした
+騒動は幕を引き―
+
+;;モノローグ
+@
+数日が経った日のこと
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_downtown"
+# move 5303811 3 0
+# face 5303811 "normal"
+# mask 5303811 off
+# alpha 5303811 1 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;背景：朝の村in_downtown
+# bgm "bgm002" 0
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@滝夜叉姫
+うむ、これでよし
+
+# move 5303811 2 0.5
+# mask 5303811 on
+# move 5203311 4 0
+# face 5203311 "normal"
+# alpha 5203311 1 0.5
+# mask 5203311 on
+# textboxarrow 0 3
+@ぬりかべ
+完成したのですね？
+
+# voice 530381 "takiyashahime_0003"
+# textboxarrow 0 1
+@滝夜叉姫
+ああ…少々時間はかかったが
+わらわにかかれば余裕じゃ
+
+;;モノローグ
+# textflame 0 0
+@
+滝夜叉姫は怨霊が残した力を調べ
+元の世界に戻る術を
+手にすることが出来た
+
+# voice 530381 "takiyashahime_0004"
+# face 5303811 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@滝夜叉姫
+これでいつでも、
+こちらとあちらを自由に
+行き来することが出来る
+
+# voice 1001 "masamune_0004"
+# alpha 5303811 0 0.5
+# alpha 5203311 0 0.5
+# move 100111 3 0
+# face 100111 "happy"
+# mask 100111 off
+# alpha 100111 1 0.5
+# textboxarrow 0 2
+@マサムネ
+それは素晴らしいな…
+いつかお主の国にも
+行ってみたい物だ
+
+# bgmfile "bgm607_2" "BgmKai" 0
+# alpha 100111 0 0.5
+# move 5303811 3 0
+# face 5303811 "normal"
+# mask 5303811 off
+# alpha 5303811 1 0.5
+# textboxarrow 0 2
+@滝夜叉姫
+それでは、今から来るか？
+夜叉ノ國が心配での
+一旦帰るつもりじゃ
+
+# alpha 5303811 0 0.5
+# move 100111 3 0
+# face 100111 "nutual"
+# mask 100111 off
+# alpha 100111 1 0.5
+@ムラマサ
+一旦…？
+
+# alpha 100111 0 0.5
+# move 5303811 2 0
+# face 5303811 "normal"
+# alpha 5303811 1 0.5
+# mask 5303811 on
+# move 5203311 4 0
+# face 5203311 "normal"
+# alpha 5203311 1 0.5
+# mask 5203311 on
+# textboxarrow 0 3
+@ぬりかべ
+うん…一旦帰った後、
+すぐにこっちに戻るよ
+
+# textboxarrow 0 1
+@滝夜叉姫
+こちらの世界で学ぶことが
+多いと分かったからのう
+
+# textboxarrow 0 1
+@滝夜叉姫
+わらわたちはもう少し、
+修行をするつもりじゃ
+
+# alpha 5303811 0 0.5
+# alpha 5203311 0 0.5
+# move 100111 3 0
+# face 100111 "nutual"
+# mask 100111 off
+# alpha 100111 1 0.5
+# textboxarrow 0 2
+@マサムネ
+そうか…
+ではしばらく滞在するのだな
+
+# voice 1025 "muramasa_0004"
+# alpha 100111 0 0.5
+# move 102511 3 0
+# face 102511 "happy"
+# mask 102511 off
+# alpha 102511 1 0.5
+# textboxarrow 0 2
+@ムラマサ
+うん…この世界は広いですから、
+この村だけじゃ勿体ないです
+
+# voice 520331 "nurikabe_0005"
+# move 102511 2 0.5
+# mask 102511 on
+# move 5203311 4 0
+# face 5203311 "happy"
+# alpha 5203311 1 0.5
+# mask 5203311 on
+# textboxarrow 0 3
+@ぬりかべ
+ありがとう、ムラマサちゃん
+もう少しだけお邪魔するね
+
+# textboxarrow 0 3
+@ぬりかべ
+だから…お近づきの証に…
+
+;;モノローグ
+# textflame 0 0
+@
+そう言ってぬりかべは、
+準備していた料理を見せる
+
+# alpha 102511 0 0.5
+# move 5303811 2 0
+# face 5303811 "normal"
+# alpha 5303811 1 0.5
+# mask 5303811 on
+# textflame 1 1
+# textboxarrow 0 1
+@滝夜叉姫
+わらわたちのこれからと…
+そして人々が平和に暮らせる…
+そんな世界を祝して
+
+# textboxarrow 0 3
+@ぬりかべ
+かんぱい…だよ
+
+# voice 1001 "masamune_0006"
+# alpha 5303811 0 0.5
+# alpha 5203311 0 0.5
+# move 102511 2 0
+# face 102511 "happy"
+# alpha 102511 1 0.5
+# mask 102511 on
+# move 100111 4 0
+# face 100111 "happy"
+# alpha 100111 1 0.5
+# mask 100111 on
+# textboxarrow 0 3
+@マサムネ
+うむ…
+
+# voice 1025 "muramasa_0032"
+# textboxarrow 0 1
+@ムラマサ
+はいっ…！
+
+;;モノローグ
+# textflame 0 0
+@
+笑顔で盃を交わす４人
+新しい門出を祝うように、
+村に心地よい風が吹いていた
+
+# fadeout "black" 2.5
+# waitandnext 2.5

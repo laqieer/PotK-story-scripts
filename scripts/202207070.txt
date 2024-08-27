@@ -1,0 +1,404 @@
+;;-----------------------------------------
+;;SEA夏1_7_0
+;;-----------------------------------------
+# script "lisp"
+# background "SEAsummer_indoor"
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;浴衣ミーミル
+# body 318
+# pos 318 2
+# scale 318 0.8 0
+# layer 318 5
+# mask 318 off
+# alpha 318 1 0
+;;浴衣如意金箍棒
+# body 6203111
+# pos 6203111 4
+# scale 6203111 0.8 0
+# layer 6203111 3
+# mask 6203111 off
+# alpha 6203111 1 0
+;;店主
+# body 3
+# pos 3 3
+# scale 3 0.8 0
+# layer 3 2
+# mask 3 off
+# alpha 3 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagescale 1 1.3 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：温泉街（シノビナトリミング）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# face 318 "normal"
+# face 6203111 "sad"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@如意金箍棒
+コマンドキラーズとしての決断
+救った命と、奪ってしまった命…
+
+# textboxarrow 0 3
+@如意金箍棒
+あの決断自体を悔やんではいないけど
+今、こうして穏やかな日々を
+送っていると…
+
+# textboxarrow 0 3
+@如意金箍棒
+やっぱり、時々、思うんだ
+こんなに穏やかに過ごしてて
+良いのかなって
+
+# textboxarrow 0 3
+@如意金箍棒
+少なくともワタシの中では、
+あの決断を、なかったことには
+できないから…
+
+# face 318 "sad"
+# textboxarrow 0 1
+@ミーミル
+記録としては、存じております
+皆さんのこと…
+
+# textboxarrow 0 3
+@如意金箍棒
+そうなんだね…
+今も積極的に、世界の平和を守ろうと
+頑張ってる仲間もいるんだけど…
+
+# textboxarrow 0 3
+@如意金箍棒
+ワタシは、やっぱり大人しくして
+いた方がいいのかなって思って
+ここでのんびりしてたの…
+
+# textboxarrow 0 3
+@如意金箍棒
+なるべく人とも関わらないようにして
+それでも、ビコウを助けようとして
+橋を壊しちゃったこともあって…
+
+# textboxarrow 0 3
+@如意金箍棒
+さっきは、躊躇ってしまったの
+
+# voice 520311 "nyoikinkobou_c_0031"
+# textboxarrow 0 3
+@如意金箍棒
+ミーミルちゃんに代わってもらって
+ごめんね…
+
+# textboxarrow 0 3
+@如意金箍棒
+ビコウを助けないと
+いけなかったのに…
+
+# bgm "stop"
+# serif 1
+@ビコウ
+キキィ…
+
+;;選択肢
+# select "そういうことか、ビコウ" "select_label_01" "大丈夫だよ、ニョイ子" "select_label_01"
+ビコウを助けないと
+いけなかったのに…
+
+# label "select_label_01"
+# face 6203111 "surprise"
+# textboxarrow 0 3
+@如意金箍棒
+お師様？
+
+# bgmfile "bgm601_yukata_block" "BgmSecretlyEverAfter001" 0
+# sedelay "bgm601_yukata_on" 1.5
+# voice 9917 "mimir_navikan_0002"
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+あの…如意金箍棒さん
+ひょっとしてビコウさんは
+アナタのために悪戯をしたのでは？
+
+;;回想シーン
+# se "SE_0742"
+# fadeout "white" 1
+# waitandnext 1
+
+;;背景：春の沼地（シノビナトリミング）
+# background "SEAsummer_pond"
+# imagealpha 1 0.7 0
+# imagepos 1 0 0
+# alpha 318 0 0
+# alpha 6203111 0 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# alpha 3 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@水風船釣り屋の店主
+いやあ、さっきはありがとうね
+ニョイ子ちゃん
+これ、お礼のスイカ
+
+# textboxarrow 0 2
+@水風船釣り屋の店主
+みんなもニョイ子ちゃんと会えて
+喜んでたよ
+普段、あまり顔を見せてくれないから
+
+# textboxarrow 0 2
+@水風船釣り屋の店主
+ビコウはよく遊びに来るのになぁ
+さっきは怖がらせてゴメンよ
+
+# face 3 "smile"
+# textboxarrow 0 2
+@水風船釣り屋の店主
+じゃあ、またね
+あ、そういえばビコウの腹に
+何か巻きついてたよ
+
+;;回想終了
+# se "SE_11762"
+# fadeout "white" 1
+# waitandnext 1
+
+;;背景：温泉街（シノビナトリミング）
+# background "SEAsummer_indoor"
+#setnextbgmblock 1
+# imagealpha 1 0 0
+# alpha 3 0 0
+# face 318 "normal"
+# alpha 318 1 0
+# face 6203111 "sad"
+# alpha 6203111 1 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 3
+@如意金箍棒
+ビコウ、あなた…
+
+# se "SE_0899"
+# serif 1
+@ビコウ
+キキー！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+ニョイ子さん
+無理に人々と関わることはないと
+存じますが
+
+# textboxarrow 0 1
+@ミーミル
+無理に関わらないでいることも
+ないと思います
+
+# textboxarrow 0 1
+@ミーミル
+この世界は皆さんの意思で
+手にしたものだと
+
+# textboxarrow 0 1
+@ミーミル
+ティルフィング様から
+伺っておりますので
+
+# textboxarrow 0 3
+@如意金箍棒
+ティルフィングちゃんが…
+そう…そうね…
+
+# textboxarrow 0 3
+@如意金箍棒
+もう少し、
+自分を許しても良いのかもね
+
+# face 6203111 "normal"
+# textboxarrow 0 3
+@如意金箍棒
+そういえば、
+ビコウのお腹に巻いてあった
+この紙、何かしら？
+
+# textboxarrow 0 3
+@如意金箍棒
+「御霊の池にて
+たった一つのスイカを手に入れて」
+と書いてあるわ
+
+# face 318 "angry"
+# textboxarrow 0 1
+@ミーミル
+見せていただいてもよろしいですか？
+…これは、ティルフィング様の
+筆跡です！
+
+# textboxarrow 0 3
+@如意金箍棒
+ああ…
+ティルフィングちゃんなら少し前に
+ここに来たよ
+
+# textboxarrow 0 3
+@如意金箍棒
+そのとき確か…
+
+# textboxarrow 0 3
+@如意金箍棒
+「防護柵に沿って
+唯一つの風の音を探して」
+って伝えるように言われたの
+
+# face 6203111 "sad"
+# textboxarrow 0 3
+@如意金箍棒
+誰に伝えればいいのか尋ねても
+「すぐに分かります」としか
+言ってくれなくて…
+
+# face 6203111 "normal"
+# textboxarrow 0 3
+@如意金箍棒
+ミーミルちゃんのことだったんだね
+
+# se "SE_0899"
+# serif 1
+@ビコウ
+キキー！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 520311 "nyoikinkobou_c_0022"
+# face 6203111 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 3
+@如意金箍棒
+えっ、そうだったのビコウ
+
+# face 6203111 "normal"
+# textboxarrow 0 3
+@如意金箍棒
+この紙もティルフィングちゃんに
+渡されたものらしいわ
+
+# voice 9917 "mimir_navikan_0022"
+# face 318 "surprise"
+# textboxarrow 0 1
+@ミーミル
+えっ…？
+では、「御霊の池」というのは…
+
+# textboxarrow 0 3
+@如意金箍棒
+それは、そこの池のことだよ
+
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+では、こちらで
+「たった一つのスイカ」を
+手に入れないといけないのですねっ
+
+# voice 520311 "nyoikinkobou_c_0005"
+# face 6203111 "happy"
+# textboxarrow 0 3
+@如意金箍棒
+うふふっ
+それはもういいと思うわ
+ほら、ここに美味しいスイカがあるよ
+
+# se "SE_0899"
+# serif 1
+@ビコウ
+キキー！
+
+# se "SE_6240"
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 520311 "nyoikinkobou_c_0011"
+# face 6203111 "angry"
+# textwindow "nomal"
+# textboxarrow 0 3
+@如意金箍棒
+あっ…
+ビコウ、ダメっ
+ワタシの胸はスイカじゃないよ
+
+# textboxarrow 0 1
+@ミーミル
+そのスイカが
+「たった一つのスイカ」
+という論拠がありません…
+
+# face 6203111 "normal"
+# textboxarrow 0 3
+@如意金箍棒
+みんなの力で手に入れたスイカだよ
+ワタシにとっては世界でたった一つの
+スイカだから、大丈夫
+
+# textboxarrow 0 3
+@如意金箍棒
+あの水風船釣り屋さんも
+御霊の池近くでやってる出店だから
+問題ないと思うよ
+
+# textboxarrow 0 3
+@如意金箍棒
+それに、ミーミルちゃんはまだ
+やらなきゃいけないことが
+あるんだよね
+
+# voice 9917 "mimir_navikan_0003"
+# face 318 "angry"
+# textboxarrow 0 1
+@ミーミル
+は、はいっ
+それでは、失礼致します
+
+# voice 9917 "mimir_navikan_0001"
+# move 6203111 5 0.5
+# alpha 6203111 0 0.3
+# move 318 3 0.5
+# textboxarrow 0 2
+@ミーミル
+マスター様、ティルフィング様の
+ところへ急ぎましょう！
+
+# fadeout "black" 1
+# waitandnext 1

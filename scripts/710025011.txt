@@ -1,0 +1,333 @@
+;;■さくらコラボ_イベントシナリオ180122
+;;『;;』←これはコメントアウト記号です。冒頭にこの記号があるものはゲーム内に表示されません
+;;『＠』表示される話者名となります
+;;-------------------
+;;■OP「夢の中の出会い」
+;;□登場人物：ロンギヌス(学園)、さくら(黒シルエット)
+;;□背景　　：教室(夕or夜)か廊下(夕or夜)で使用する背景
+;;-------------------
+;;１２３４５６７８９０１２３４５６７８
+;;教室(夕or夜)か廊下(夕or夜)で第一話で使用しない背景を使用
+;;ゆっくりフェードイン
+;;中央閉じの暗転を効果を2，3回を入れて、瞬きのようか感じで
+# script "lisp"
+# background "corridor_evening"
+# bgm "bgm003" 0
+# body 147
+# pos 147 3
+# scale 147 0.8 0
+# layer 147 1
+# body 143
+# pos 143 3
+# scale 143 0.8 0
+# layer 143 2
+# alpha 143 0 0
+# brightness 143 0 0
+# mask 143 off
+;;ロンギヌスボイス用
+# body 300191
+# alpha 300191 0 0
+# subfillrect 1 "black" 0 0 1
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 4 "bg_black"
+# imagealpha 4 0 0
+# imagescale 4 2 0
+# imagelayer 4 5
+# imageset 3 "bg_black_circle"
+# imagealpha 3 1 0
+# imagescale 3 1.2 0
+# imageset 2 "bg_white_circle"
+# imagealpha 2 1 0
+# imagescale 2 1.2 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.6
+
+# subfillrect 1 "black" 1 1 0
+# imagepos 2 0 0
+# imagepos 3 0 0
+# imagepos 4 0 0
+# imagealpha 4 0 1
+# waitandnext 1.5
+
+# imagealpha 4 1 1
+# waitandnext 1
+
+# imagealpha 2 1 0
+# imagealpha 3 0 0
+# waitandnext 0.5
+
+# imagealpha 4 0 2
+# waitandnext 2
+
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 147
+# voice 3001 "ronginusu_0028"
+@ロンギヌス
+ここは…？
+
+# textflame 0 0
+@
+そこはロンギヌスにとって
+見慣れた学び舎の光景
+
+# textflame 0 0
+@
+だが、いつもとは違う
+違和感のようなものが空間に漂う
+彼女はそれに気がついた
+
+# face 147 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 147
+@ロンギヌス
+あれ…？
+でも授業はとっくに終わって
+家に帰った気が…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 147
+@ロンギヌス
+それになんだか
+視界もぼやけているような…
+
+# emotionbody 1000 2 147 20 240
+# effectpattern 1000 1 0
+# effectstart 1000
+# face 147 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 147
+@ロンギヌス
+あれ…？
+あれれ…？
+
+# face 147 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 147
+@ロンギヌス
+もしかして、これは夢…？
+
+# effectskip 1000
+# face 147 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 147
+@ロンギヌス
+え、ええ…こんなにはっきりとした
+夢なんて初めてだよ
+怖い夢だったらどうしよう…
+
+;;SE　窓ガラスが割れる音
+# emotionbody 1001 1 147 20 240
+# effectpattern 1001 2 0
+# effectstart 1001
+# se "SE_9063"
+# bgm "bgm005" 0
+# face 147 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 147
+# voice 3001 "ronginusu_0022"
+@ロンギヌス
+！？
+
+# effectskip 1001
+# face 147 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 147
+# voice 3001 "ronginusu_0015"
+@ロンギヌス
+なに、今の音
+え、行った方がいいよね
+う、うう…
+
+# face 147 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 147
+# voice 3001 "ronginusu_0009"
+@ロンギヌス
+これは夢、これは夢…
+ええいっ！
+
+;;ロンギヌス消し
+;;遠ざかっていく足音SE
+;;カーテンのトランディション
+;;背景表示
+;;第一話で戦闘が行われる背景を使用
+;;近づいてくる足音SE
+;;ロンギヌス立ち絵表示
+;;↑ガラスが割れた方に移動するようなイメージ
+;;足音SEは種類があれば、なければなくても問題ないです。
+;;SEで風が吹き込み音があったら仕様ください
+;;――場面転換――
+# se "SE_0740"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# alpha 147 0 0.5
+# waitandnext 0.5
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 1
+# waitandnext 1
+
+# face 147 "normal"
+# move 147 2 0
+# background "classroom03_daytime"
+# waitandnext 0.6
+
+# imagealpha 0 0 1
+# imagerightout 0 1
+# waitandnext 1
+
+# se "SE_9022"
+# move 147 3 0.5
+# alpha 147 1 0.5
+# waitandnext 0.5
+
+# serif 0
+# textwindow "normal" 
+# textflame 0 0
+@
+床にはガラスが散らばっていた
+割れた窓からは冷たい風が
+流れ込んでくる
+
+# face 147 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 147
+# voice 3001 "ronginusu_0019"
+@ロンギヌス
+これは、一体何が…
+誰がこんなことを…！？
+
+# textflame 0 0
+@
+と、
+そこでロンギヌスの視界に
+何かが映り込む
+
+# face 147 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 147
+# voice 3001 "ronginusu_0022"
+@ロンギヌス
+！？
+だ、誰ですか…！？
+
+# textflame 0 0
+@
+声はなんとか出せたものの
+足はすくみ動けない
+
+# face 147 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 147
+@ロンギヌス
+う、うう…
+
+;;ロンギヌス立ち絵削除
+;;ウエイト
+;;さくらの立ち絵のシルエットをゆっくり表示
+# serif 0
+# textwindow "close"
+# alpha 147 0 0.5
+# waitandnext 1.5
+
+# alpha 143 1 1
+# waitandnext 1.5
+
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 0
+# chara 147
+@ロンギヌス
+！？
+
+# textflame 1 1
+# textboxarrow 0 0
+# chara 147
+@ロンギヌス
+あ、あなたは、一体だれ…？
+
+# textflame 1 1
+# textboxarrow 0 0
+# chara 147
+@ロンギヌス
+だれ、なんです…？
+
+;;ウエイト
+;;一時暗転点滅
+# serif 0
+# textwindow "close"
+# imagealpha 4 1 0.5
+# waitandnext 0.5
+
+# serif 0
+# textwindow "normal"
+# imagealpha 3 1 0
+# imagealpha 4 0 0.5
+# textflame 1 1
+# textboxarrow 0 0
+# chara 147
+@ロンギヌス
+あ、あれ…？
+
+;;ウエイト
+;;一時暗転点滅
+# serif 0
+# textwindow "close"
+# imagealpha 4 0.5 0.5
+# waitandnext 0.5
+
+# serif 0
+# textwindow "normal"
+# imagealpha 4 0 0.5
+# textflame 1 1
+# textboxarrow 0 0
+# chara 147
+# voice 3001 "ronginusu_0028"
+@ロンギヌス
+ん、んん…
+
+;;ウエイト
+;;一時暗転点滅→完全暗転
+# serif 0
+# textwindow "close"
+# imagealpha 4 0.8 1
+# waitandnext 1
+
+# imagealpha 4 0.3 1
+# waitandnext 1.3
+
+# imagealpha 4 1 1.5
+# waitandnext 2
+
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 0
+# chara 147
+@ロンギヌス
+あなたは…
+一体だれ…？
+

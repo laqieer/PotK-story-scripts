@@ -1,0 +1,264 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１３章 章タイトル「ラルゴカタストロフィ―攪乱―」
+;;第2話－５　タイトル：暴走の真実
+;;2_5_3
+;;スクリプト最後の背景：マサムネ城内
+;;-----------------------------------------
+# script "lisp"
+# background "masamune_arena"
+# bgmfile "bgm457" "BgmIntegralNoahEvent008" 0
+;;-----------------------------------------
+;;異族化マサムネ
+# body 5100131
+# pos 5100131 3
+# scale 5100131 0.8 0
+# layer 5100131 2
+# alpha 5100131 0 0
+# mask 5100131 off
+;;異族化パラシュ
+# body 5200431
+# pos 5200431 3
+# scale 5200431 0.8 0
+# layer 5200431 2
+# alpha 5200431 0 0
+# mask 5200431 off
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 2
+# alpha 5401721 0 0
+# mask 5401721 off
+;;擬装フライシュッツ
+# body 5502721
+# pos 5502721 3
+# scale 5502721 0.8 0
+# layer 5502721 2
+# alpha 5502721 0 0
+# mask 5502721 off
+;;天沼矛
+# body 300431
+# pos 300431 3
+# scale 300431 0.8 0
+# layer 300431 2
+# alpha 300431 0 0
+# mask 300431 off
+# brightness 300431 0.8 0
+;;草薙剣
+# body 100441
+# pos 100441 3
+# scale 100441 0.8 0
+# layer 100441 2
+# alpha 100441 0 0
+# mask 100441 off
+# brightness 100441 0.8 0
+;;ヘレナ・D. plug・ロキ
+# body 5302811
+# pos 5302811 3
+# scale 5302811 0.8 0
+# layer 5302811 2
+# alpha 5302811 0 0
+# mask 5302811 off
+;;-----------------------------------------
+# se "bgm457_filteroff2"
+# emotionbody 1000 15 100441 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 100441 3 0
+# face 100441 "angry"
+# alpha 100441 1 0
+# mask 100441 off
+# textflame 1 1
+# textboxarrow 0 2
+@草薙剣
+アアアアアアアアアアア！
+
+# effectskip 1000
+# voice 510013 "masamune_iz_0013"
+# alpha 100441 0 0.5
+# move 5100131 2 0
+# face 5100131 "angry"
+# alpha 5100131 1 0.5
+# mask 5100131 on
+# textboxarrow 0 1
+# move 5200431 4 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+@マサムネ
+まったく…
+暴れ回るだけのそなたらに真の強さを
+見出せはせん…！
+
+# voice 520043 "parashu_iz_0007"
+# textboxarrow 0 3
+@パラシュ
+暴走した彼女達に興味はないけど…
+意外としぶといな…
+
+# emotionbody 2000 15 300431 0 0
+# effectpattern 2000 1 0
+# effectstart 2000
+# alpha 5100131 0 0.5
+# alpha 5200431 0 0.5
+# move 300431 2 0
+# face 300431 "normal"
+# alpha 300431 1 0.5
+# mask 300431 on
+# textboxarrow 0 1
+# move 5401721 4 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# mask 5401721 on
+@天沼矛
+アアアアアアアアアアアア！
+
+# se "SE_4200"
+# waitandnext 0.5
+
+;;//天沼矛をスイハが止める
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 5401721 "angry"
+# textboxarrow 0 3
+@スイハ
+天沼矛、止めて下さい…！
+正気を取り戻してっ
+
+;;スイハ（独白）
+# move 5401721 4 0
+# textboxarrow 0 0
+# textwindow "moya"
+@スイハ
+どうして…
+どうしてこんなことに…！
+
+# bgm "stop"
+# effectskip 2000
+# voice 5027 "freischotz_im_0029"
+# alpha 300431 0 0.5
+# alpha 5401721 0 0.5
+# move 5302811 2 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# move 5502721 4 0
+# face 5502721 "angry"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+# textboxarrow 0 3
+# textwindow "normal"
+@フライシュッツ
+とりゃ～っ！
+
+# bgmfile "bgm463" "BgmIntegralNoahDisrupters" 0
+# voice 530281 "herena_di_0007"
+# face 5302811 "normal"
+# textboxarrow 0 1
+@ヘレナ
+お楽しみのところ、失礼するよ
+…くふっ
+
+# voice 4017 "suiha_0022"
+# alpha 5302811 0 0.5
+# alpha 5502721 0 0.5
+# move 5401721 3 0
+# face 5401721 "surprise"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 2
+@スイハ
+フライシュッツ！
+ヘレナも…
+
+# move 5401721 2 0.5
+# mask 5401721 on
+# move 5502721 4 0
+# face 5502721 "happy"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+# textboxarrow 0 3
+@フライシュッツ
+スイハちゃん！
+はぐだよ、はぐ～っ♪
+
+# voice 4017 "suiha_0002"
+# face 5401721 "normal"
+# textboxarrow 0 1
+@スイハ
+あの…フライシュッツ
+それどころではないんです
+
+# face 5502721 "normal"
+# textboxarrow 0 3
+@フライシュッツ
+あ！
+そうだったねー…
+
+# voice 5027 "freischotz_0004"
+# face 5502721 "happy"
+# textboxarrow 0 3
+@フライシュッツ
+でも、大丈夫だよ！
+おねーちゃん、頑張るからね～
+
+# face 5401721 "sad"
+# textboxarrow 0 1
+@スイハ
+頑張ると言われても…
+雑賀達が暴走してしまっていて…
+
+# voice 5027 "freischotz_0031"
+# face 5502721 "normal"
+# textboxarrow 0 3
+@フライシュッツ
+そうだねー…
+もっと早く戻ってこれたら
+良かったんだけど…ごめんね…
+
+# face 5401721 "normal"
+# textboxarrow 0 1
+@スイハ
+いえ…
+無事で何よりです
+
+# voice 5027 "freischotz_0021"
+# face 5502721 "happy"
+# textboxarrow 0 3
+@フライシュッツ
+スイハちゃん、優し～♪
+あたしもスイハちゃんが無事で
+嬉しいよ～っ
+
+# face 5401721 "angry"
+# textboxarrow 0 1
+@スイハ
+ですから、フライシュッツ
+今はそれどころでは…
+
+# voice 530281 "herena_di_0004"
+# alpha 5502721 0 0.5
+# move 5302811 4 0
+# face 5302811 "normal"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 3
+@ヘレナ
+ふふっ
+仲が良いのはいいことだ
+
+# face 5302811 "usual"
+# textboxarrow 0 3
+@ヘレナ
+さてと…
+ここはヘレナに任せて欲しいな
+
+# voice 4017 "suiha_0022"
+# face 5401721 "surprise"
+# textboxarrow 0 1
+@スイハ
+あなたに…？

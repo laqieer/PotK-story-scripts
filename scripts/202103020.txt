@@ -1,0 +1,477 @@
+;;-----------------------------------------
+;;SEA5章_2
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgm "bgm029" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 1 0
+# face 270 "angry"
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 3
+# mask 6504011 off
+# alpha 6504011 1 0
+# face 6504011 "surprise"
+;;神令スイハ
+# body 3401711
+# pos 3401711 3
+# scale 3401711 0.8 0
+# layer 3401711 2
+# mask 3401711 off
+# alpha 3401711 0 0
+# body 401711
+# alpha 401711 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：平原
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# voice 650401 "manannan_ura_0023"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+わあっ！
+マスター、大丈夫？
+
+# textboxarrow 0 1
+@ミーミル
+ご安心下さい、マスター様っ
+た、直ちに治療致します
+
+# alpha 6504011 0 0.3
+# move 270 3 0.5
+# face 270 "normal"
+# se "SE_5000"
+# sedelay "SE_5001" 0.2
+# textboxarrow 0 2
+@ミーミル
+まず矢を抜いて…
+
+# se "SE_5001"
+# sedelay "SE_5001" 0.2
+# textboxarrow 0 2
+@ミーミル
+いえ、その前に包帯を…
+
+# face 270 "sad"
+# textboxarrow 0 2
+@ミーミル
+ああ、えっと…
+
+# alpha 270 0 0.3
+# move 6504011 3 0
+# face 6504011 "sad"
+# alpha 6504011 1 0.3
+# textboxarrow 0 2
+@マナナン
+あっちの方から矢が飛んできたよね
+悪い奴かなっ？暗殺かなっ？
+
+;;選択肢
+# select "落ち着いて" "select_label_01" "傷は浅いから…" "select_label_01"
+まず矢を抜いて…
+いえ、その前に包帯を…
+ああ、えっと…
+
+# label "select_label_01"
+# voice 9917 "mimir_navikan_0015"
+# face 270 "sad"
+# alpha 270 1 0.3
+# alpha 6504011 0 0.3
+# textboxarrow 0 2
+@ミーミル
+すみません…
+ミーミルがしっかりしなければ
+いけませんのに…
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+# move 270 2 0
+# face 270 "normal"
+# move 6504011 4 0
+# face 6504011 "usual"
+# alpha 6504011 1 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+…これで包帯も巻き終わりました
+あとは安静にしていれば――
+
+;;選択肢
+# select "うぅっ…" "select_label_02" "苦しい…" "select_label_02"
+あとは安静にしていれば――
+
+# label "select_label_02"
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+マスター様…！？
+
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+顔色が悪いよ…
+血が止まってないのかな？
+
+# textboxarrow 0 1
+@ミーミル
+そのようなことは…
+あっ、もしかして…
+
+# alpha 270 0 0.3
+# alpha 6504011 0 0.3
+# face 3401711 "normal"
+# alpha 3401711 1 0.5
+# textboxarrow 0 2
+@スイハ
+その矢には毒を塗っておきました
+
+# face 270 "surprise"
+# alpha 270 1 0.3
+# move 3401711 4 0.5
+# textboxarrow 0 1
+@ミーミル
+アナタは、スイハさんっ
+どうしてこのようなことを…！？
+
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+そのお姿…もしや神令の力に…
+
+# face 3401711 "surprise"
+# textboxarrow 0 3
+@スイハ
+おや？
+あなたとは初対面のはずですけれど、
+この姿を見知っているのですか？
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+えっ…？
+そういえば私、どうして
+スイハさんの姿を見て神令の力だと…
+
+# voice 4017 "suiha_0007"
+# face 3401711 "normal"
+# textboxarrow 0 3
+@スイハ
+ああ
+余計なお喋りをしている暇は
+ありませんでした
+
+# textboxarrow 0 3
+@スイハ
+早くしないと…
+毒がマスターの全身に回り、
+死に至ります
+
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+そんなっ…
+急ぎ、解毒をしなければ…
+
+# textboxarrow 0 1
+@ミーミル
+ええと、まず…ええと…
+
+# voice 4017 "suiha_0012"
+# textboxarrow 0 3
+@スイハ
+残念ですが、
+その毒は、あなたに解毒することは
+できません
+
+# textboxarrow 0 3
+@スイハ
+かといって助けを呼びに行っても、
+その間にマスターは
+命を落とすことでしょう
+
+# voice 9917 "mimir_navikan_0018"
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+そ…そのようなこと…
+あってはなりません…！
+どうすれば…
+
+# textboxarrow 0 3
+@スイハ
+…………なるほど
+直接見て、少しは感じられました
+やはり、必要なのですね
+
+# face 3401711 "angry"
+# textboxarrow 0 3
+@スイハ
+今度こそ、私は仲間のためにっ
+
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+何か、仰いましたか…？
+
+# voice 4017 "suiha_0002"
+# face 3401711 "normal"
+# textboxarrow 0 3
+@スイハ
+あなた、お名前は？
+
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+私はミーミルと申します
+マスター様の専属補佐官です！
+
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+そんなことより、マスター様がっ
+
+# voice 4017 "suiha_0003"
+# textboxarrow 0 3
+@スイハ
+ここに解毒剤があります
+これを飲ませれば
+毒はたちどころに消えます
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+えっ？
+本当ですかっ？
+どうか、それを…
+
+# textboxarrow 0 3
+@スイハ
+ミーミル
+あなたが私と一緒に来てくれるのなら
+これを差し上げましょう
+
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+私、ですか？
+そのくらいのことでしたら、
+喜んでっ
+
+# textboxarrow 0 3
+@スイハ
+少し言葉が足りませんでした
+そちらのマスターとキル姫を置いて
+一人だけでついて来て下さい
+
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+マスター様を置いて…
+そ、それは…
+
+# move 6504011 3 0
+# textboxarrow 0 3
+@スイハ
+時間はありませんよ
+早く決めないと、マスターの命は――
+
+;;マナナンが銃を撃つ
+# move 270 1 0.5
+# alpha 270 0 0.3
+# move 6504011 2 0.5
+# layer 6504011 4
+# mask 6504011 on
+# face 6504011 "angry"
+# alpha 6504011 1 0.3
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# se "SE_4400"
+# fadein "white" 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;スイハが避ける
+# se "SE_5204"
+# move 3401711 5 0.3
+# waitandnext 0.5
+
+# move 3401711 4 0.5
+# face 3401711 "angry"
+# textwindow "nomal"
+# textboxarrow 0 3
+@スイハ
+危ないですね
+危うく解毒剤を
+取り落とすところでした
+
+# alpha 6504011 0 0.3
+# alpha 3401711 0 0.3
+# move 270 3 0
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+マナナンさん…！
+
+# voice 650401 "manannan_ura_0002"
+# move 270 2 0.5
+# move 6504011 4 0
+# layer 6504011 2
+# mask 6504011 off
+# face 6504011 "usual"
+# alpha 6504011 1 0.3
+# textboxarrow 0 3
+@マナナン
+ねぇねぇ、ミーミル
+そのキル姫と話すより
+力尽くで奪った方が良いよ
+
+# textboxarrow 0 3
+@マナナン
+マスターを射たのは、そいつでしょ
+言うこと聞かなくていいと思うな～
+
+# alpha 270 0 0.3
+# alpha 6504011 0 0.3
+# move 3401711 3 0
+# face 3401711 "normal"
+# alpha 3401711 1 0.3
+# textboxarrow 0 2
+@スイハ
+そうですか…
+では、この解毒剤は
+処分するとしましょう
+
+# textboxarrow 0 2
+@スイハ
+マスターのことは残念ですが…
+
+# move 3401711 4 0.5
+# face 270 "angry"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ミーミル
+ま、待って下さい…！
+
+# face 3401711 "surprise"
+# textboxarrow 0 3
+@スイハ
+何ですか？
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+約束、守って下さいますね？
+私一人がアナタについていけば…
+
+# voice 4017 "suiha_0003"
+# face 3401711 "normal"
+# textboxarrow 0 3
+@スイハ
+はい
+この解毒剤を差し上げます
+
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+でしたら、アナタについていきます
+どうか解毒剤をお渡し下さい
+
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+マナナンさん
+マスター様のことをお願い致します
+
+# voice 650401 "manannan_ura_0028"
+# alpha 3401711 0 0.3
+# alpha 270 0 0.3
+# move 6504011 3 0
+# face 6504011 "sad"
+# alpha 6504011 1 0.3
+# textboxarrow 0 2
+@マナナン
+うーん…
+ミーミルがそう言うなら…
+
+# alpha 3401711 1 0.3
+# face 270 "normal"
+# alpha 270 1 0.3
+# face 6504011 "normal"
+# alpha 6504011 0 0.3
+# textboxarrow 0 3
+@スイハ
+では、解毒剤はここに
+ミーミル、こちらへ
+
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+マスター様
+少しの間、失礼致します
+
+;;スイハとミーミルがいなくなる
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# se "SE_0719"
+# move 3401711 3 0.5
+# scale 3401711 0.75 0.5
+# alpha 3401711 0 0.3
+# textwindow "close"
+# waitandnext 0.2
+
+# move 270 3 0.5
+# scale 270 0.75 0.5
+# alpha 270 0 0.3
+# waitandnext 0.8
+
+# voice 650401 "manannan_ura_0009"
+# face 6504011 "sad"
+# alpha 6504011 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@マナナン
+何だか愉快じゃないなー…
+とりあえず、マスターにこれを
+飲ませればいいんだよね
+
+# face 6504011 "surprise"
+# textboxarrow 0 2
+@マナナン
+飲めるかな？
+…ん？あっちから誰か来るみたい
+
+# serif 1
+@？？？
+ああっ
+どうやら、一足遅かったようです…
+
+# fadeout "black" 1
+# waitandnext 1

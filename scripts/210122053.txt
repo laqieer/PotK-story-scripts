@@ -1,0 +1,343 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１２章 章タイトル「ラルゴカタストロフィ―暴走―」
+;;第2話－５　タイトル：暴走の契機
+;;2_5_3
+;;スクリプト最後の背景：泉
+;;-----------------------------------------
+# script "lisp"
+# background "fountain"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;レーヴァテイン・擬彩
+# body 5100231
+# pos 5100231 3
+# scale 5100231 0.8 0
+# layer 5100231 2
+# alpha 5100231 0 0
+# mask 5100231 off
+;;擬装エルキュール
+# body 5202521
+# pos 5202521 3
+# scale 5202521 0.8 0
+# layer 5202521 2
+# alpha 5202521 0 0
+# mask 5202521 off
+;;ミネルヴァ・擬装・アーチャー
+# body 5302521
+# pos 5302521 3
+# scale 5302521 0.8 0
+# layer 5302521 2
+# alpha 5302521 0 0
+# mask 5302521 off
+;;-----------------------------------------
+# move 5202521 3 0
+# face 5202521 "angry"
+# alpha 5202521 1 0
+# mask 5202521 off
+# textflame 1 1
+# textboxarrow 0 2
+@エルキュール
+そこです！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+# alpha 5202521 0 0.5
+# move 5100231 3 0
+# face 5100231 "angry"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+チッ…
+
+# voice 3025 "minerva_im_0045"
+# alpha 5100231 0 0.5
+# move 5302521 3 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+エルキュール、
+左です！
+
+# voice 2025 "hercule_0003"
+# alpha 5302521 0 0.5
+# move 5202521 3 0
+# face 5202521 "angry"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# textboxarrow 0 2
+@エルキュール
+はい！
+
+;;//エルキュールが離れてミネルヴァが攻撃する
+# se "SE_5255"
+# textwindow "close"
+# rightout 5202521 0.5
+# waitandnext 0.5
+
+# se "SE_4300"
+# voice 3025 "minerva_battle_0002"
+# alpha 5202521 0 0
+# move 5302521 3 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ミネルヴァ
+せいっ！
+
+# se "SE_4301"
+# waitandnext 0.5
+
+# voice 510023 "revatein_iz_0014"
+# alpha 5302521 0 0.5
+# move 5100231 3 0
+# face 5100231 "sad"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+はぁ…
+ほんとにめんどくさい…
+
+# textboxarrow 0 2
+@レーヴァテイン
+せっかく時間稼ぎしたのに…
+あの二人がロンギヌスに攻撃する
+なんて…
+
+# alpha 5100231 0 0.5
+# move 5302521 2 0
+# face 5302521 "usual"
+# alpha 5302521 1 0.5
+# mask 5302521 on
+# textboxarrow 0 1
+# move 5202521 4 0
+# face 5202521 "normal"
+# alpha 5202521 1 0.5
+# mask 5202521 on
+@ミネルヴァ
+お陰で私達は
+あなた一人に集中できます
+形勢逆転ですね
+
+# face 5202521 "angry"
+# textboxarrow 0 3
+@エルキュール
+フラベルムにもセファーにも
+希望の灯が灯ったんです！
+
+# textboxarrow 0 3
+@エルキュール
+さあ！
+私達も皆さんの道標となりましょう
+
+# alpha 5302521 0 0.5
+# alpha 5202521 0 0.5
+# move 5100231 3 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+あっちに行きたいけど…
+振り払うのは…無理そう…
+だったら…
+
+# textboxarrow 0 2
+@レーヴァテイン
+使うしか…ないよね
+
+;;//ミネルヴァが攻撃する
+# se "SE_4301"
+# alpha 5100231 0 0.5
+# move 5302521 2 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 on
+# textboxarrow 0 1
+# move 5202521 4 0
+# face 5202521 "normal"
+# alpha 5202521 1 0.5
+# mask 5202521 on
+@ミネルヴァ
+神器を抜かせはしませんよっ
+
+# voice 2025 "hercule_0011"
+# face 5202521 "angry"
+# textboxarrow 0 3
+@エルキュール
+あれを使ったら、この泉ごと
+周りが吹き飛んでしまいますっ
+絶対、ダメです！
+
+# alpha 5302521 0 0.5
+# alpha 5202521 0 0.5
+# move 5100231 3 0
+# face 5100231 "sad"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+うるさいなぁ…
+あなた達相手に…手加減とか
+無理だし
+
+# face 5100231 "normal"
+# textboxarrow 0 2
+@レーヴァテイン
+石像が無事なら…
+
+# voice 2025 "hercule_battle_0001"
+# alpha 5100231 0 0.5
+# move 5202521 3 0
+# face 5202521 "angry"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# textboxarrow 0 2
+@エルキュール
+やあああああああ！
+
+;;//二人が切り結ぶ
+# textwindow "close"
+# alpha 5202521 0 0.5
+# waitandnext 0.5
+
+# sedelay "SE_8023" 0.1
+# move 5202521 2 0
+# face 5202521 "angry"
+# alpha 5202521 1 0
+# mask 5202521 on
+# move 5100231 4 0
+# face 5100231 "angry"
+# alpha 5100231 1 0
+# mask 5100231 on
+# leftin 5202521 0.3
+# rightin 5100231 0.3
+# waitandnext 0.3
+
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# textwindow "normal"
+@レーヴァテイン
+邪魔…！
+
+# textboxarrow 0 1
+@エルキュール
+あなたを止めます
+止めてみせます！
+
+# voice 510023 "revatein_iz_0007"
+# textboxarrow 0 3
+@レーヴァテイン
+やれるもんなら…
+やってみれば…！
+
+# alpha 5202521 0 0.5
+# alpha 5100231 0 0.5
+# move 5302521 3 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+私のことをお忘れなく！
+
+# se "SE_4301"
+# waitandnext 0.5
+
+;;//ミネルヴァの矢がレーヴァテインに刺さる
+# textwindow "close"
+# alpha 5302521 0 0.5
+# move 5202521 2 0
+# face 5202521 "normal"
+# alpha 5202521 1 0.5
+# mask 5202521 on
+# move 5100231 4 0
+# face 5100231 "angry"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+# waitandnext 0.6
+
+# se "SE_4817"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 510023 "revatein_iz_battle_0006"
+# textboxarrow 0 3
+# textwindow "normal"
+@レーヴァテイン
+ぐっ…！？
+
+# face 5202521 "angry"
+# textboxarrow 0 1
+@エルキュール
+希望の灯は、決して消えないんです！
+
+# textboxarrow 0 3
+@レーヴァテイン
+しつっこい…！
+
+;;//レーヴァテインが離れる
+# se "SE_5255"
+# textwindow "close"
+# rightout 5100231 0.5
+# waitandnext 0.5
+
+# alpha 5100231 0 0
+# waitandnext 0.2
+
+# se "SE_8000"
+# alpha 5202521 0 0.5
+# move 5100231 3 0
+# face 5100231 "angry"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+# textwindow "normal"
+@レーヴァテイン
+今度こそ…神器の一撃で…！
+
+# alpha 5100231 0 0.5
+# move 5202521 3 0
+# face 5202521 "angry"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# textboxarrow 0 2
+@エルキュール
+泉も女神様も守ってみせます！
+
+# voice 510023 "revatein_iz_0029"
+# alpha 5202521 0 0.5
+# move 5100231 3 0
+# face 5100231 "angry"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+はああああああああ…！！
+
+# voice 2025 "hercule_im_0029"
+# alpha 5100231 0 0.5
+# move 5202521 3 0
+# face 5202521 "angry"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# textboxarrow 0 2
+@エルキュール
+やあああああああああああ！！
+
+;;//画面白フラッシュ
+# se "SE_9084"
+# textwindow "close"
+# fadeout "white" 1.4
+# waitandnext 1.4

@@ -1,0 +1,687 @@
+;;----------------------------------------------
+;;414020121
+;;２章 輪廻の斬ル姫【EP2バトル前】
+;;----------------------------------------------
+# script "lisp"
+# background "101_cave"
+# bgmfile "bgm293" "BgmLostRagnarokSideStory" 0
+;;ロンギヌス
+# body 3300111
+# pos 3300111 2
+# scale 3300111 0.8 0
+# layer 3300111 2
+# mask 3300111 on
+# alpha 3300111 1 0
+;;フォルカス
+# body 3301811
+# pos 3301811 4
+# scale 3301811 0.8 0
+# layer 3301811 1
+# mask 3301811 on
+# alpha 3301811 1 0
+;;カシウス
+# body 166
+# pos 166 3
+# scale 166 0.8 0
+# layer 166 1
+# mask 166 off
+# alpha 166 0 0
+;;ムラマサ
+# body 3102511
+# pos 3102511 2
+# scale 3102511 0.8 0
+# layer 3102511 2
+# mask 3102511 on
+# alpha 3102511 0 0
+;;マサムネ
+# body 3100111
+# pos 3100111 4
+# scale 3100111 0.8 0
+# layer 3100111 1
+# mask 3100111 on
+# alpha 3100111 0 0
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;回想フィルター
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagelayer 1 2
+;;◆背景：洞の地下・不思議な空間------------------------------------
+# textflame 1 1
+# textboxarrow 0 1
+# face 3300111 "normal"
+# voice 330011 "ronginusu_t_0003"
+# chara 3300111
+@ロンギヌス
+生死を確かめるのも
+私の役割ですから
+
+# textflame 0 0
+@
+ロンギヌスは感じ取ったようだった
+遠き隣国の邂逅と、その変化を
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3300111 "sad"
+# voice 330011 "ronginusu_t_0028"
+# chara 3300111
+@ロンギヌス
+これから生きるべきなのか
+死すべきなのか
+あるいは…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3301811 "normal"
+# voice 330181 "forcas_t_0002"
+# chara 3301811
+@フォルカス
+…どこへ？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3300111 "happy"
+# voice 330011 "ronginusu_t_0004"
+# chara 3300111
+@ロンギヌス
+明日が終わる頃には
+帰ってきますよ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3301811 "angry"
+# voice 330181 "forcas_t_0022"
+# chara 3301811
+@フォルカス
+敵地へ？
+ならば私も
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3300111 "normal"
+# voice 330011 "ronginusu_t_0031"
+# chara 3300111
+@ロンギヌス
+あなたの出番はまだ先
+ラグナロク実現の為
+どうかご自愛を
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3301811 "usual"
+# voice 330181 "forcas_t_battle_0005"
+# chara 3301811
+@フォルカス
+しかし…
+
+# textwindow "close"
+# alpha 3300111 0 0.5
+# alpha 3301811 0 0.5
+# waitandnext 0.5
+
+# pos 3300111 3
+# mask 3300111 off
+# alpha 3300111 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3300111 "normal"
+# voice 330011 "ronginusu_t_0005"
+# chara 3300111
+@ロンギヌス
+この目で確かめに行くだけです
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3300111
+@ロンギヌス
+私と同じ名を持つといわれた
+もう一人の、残酷な刃の元へ
+
+;;◆背景：グライヒハイト・昼----------------------------------------
+# bgm "stop"
+# textwindow "close"
+# fadeout "black" 1.0
+# waitandnext 1.0
+
+# alpha 3300111 0 0
+# background "beast_world"
+# waitandnext 0.5
+
+# fadein "black" 1.0
+# waitandnext 1.3
+
+;;SE：アナウンス開始時の音
+# se "SE_0736"
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 0
+@都内アナウンス
+みなさま。お勤めご苦労様です
+これより“けもののじかん”です
+
+;;不快感を煽る音
+# se "SE_0626"
+# textflame 0 0
+@
+都中、至る所に設置されたマイクより
+機械的なアナウンスが流れだす
+
+# textflame 1 1
+# textboxarrow 0 0
+@都内アナウンス
+国家の敵
+みなさまの敵
+秩序の敵
+
+# textflame 1 1
+# textboxarrow 0 0
+@都内アナウンス
+現体制を壊し尽くさんとする
+破壊者を一緒に断罪しましょう
+
+# textflame 1 1
+# textboxarrow 0 0
+@都内アナウンス
+その名は
+オベロン
+
+# textflame 0 0
+@
+都中、至る所に設置されたスクリーン
+そこに、オベロンの姿が
+映し出される
+
+# textflame 0 0
+@
+不快感を煽るような音楽が
+耳をつんざかんばかりに鳴り響く
+
+# textflame 0 0
+@
+映像の中のオベロンは
+他国からの侵略受け入れ・無条件降伏
+現帝政や国民への批判を語っている
+
+# textflame 0 0
+@
+…という旨のアナウンスが流れる
+オベロン自身の言葉は
+都合の良いように切り貼り脚色され…
+
+# textflame 0 0
+@
+国民達はそれを見て憤慨する
+怒号を、ありとあらゆる罵詈雑言を
+映像に向かって飛ばし続ける
+
+# textflame 0 0
+@
+まるで、獣のように
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# textwindow "close"
+# alpha 3102511 1 0.5
+# alpha 3100111 1 0.5
+# waitandnext 0.5
+
+# sestop "SE_0626"
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "surprise"
+# voice 310251 "muramasa_ge_0002"
+# chara 3102511
+@ムラマサ
+………あれは…？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100111 "sad"
+# voice 310011 "masamune_ge_0003"
+# chara 3100111
+@マサムネ
+ああ、今のお前は知らないのだな
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100111 "normal"
+# chara 3100111
+@マサムネ
+…おかしいと思うか？
+
+# textflame 0 0
+@
+昨晩の暗殺任務の進捗を報告した帰り
+姉妹は揃って都の往来に紛れていた
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "normal"
+# voice 310251 "muramasa_ge_0003"
+# chara 3102511
+@ムラマサ
+こういった光景をおかしいと
+そう“考える”ことこそ
+禁じられているのは存じております
+
+# move 3102511 2 0
+# textwindow "moya"
+# textflame 1 1
+# textboxarrow 0 0
+# face 3102511 "sad"
+# chara 3102511
+@ムラマサ
+思想も、行動も、職も
+全ての国民生活は厳格な管理と
+監視の元で運営されている
+
+# move 3102511 2 0
+# textwindow "moya"
+# textflame 1 1
+# textboxarrow 0 0
+# chara 3102511
+@ムラマサ
+家の外も、中も
+
+# face 3102511 "normal"
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310011 "masamune_ge_0004"
+# chara 3100111
+@マサムネ
+この“けもののじかん”も
+その施策の一つだ
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3100111
+@マサムネ
+労働や日々の生活で溜まったストレス
+国民の憎しみを一挙にまとめ
+放出させる
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3100111
+@マサムネ
+もちろんその的となるのは
+国賊が相応しい
+
+# textwindow "close"
+# alpha 3102511 0 0.5
+# alpha 3100111 0 0.5
+# waitandnext 0.5
+
+;;SE：歓声
+# se "SE_0607"
+# textwindow "normal"
+# textflame 0 0
+@
+スクリーンを見ていた国民達が
+歓喜の声を上げる
+
+# textflame 0 0
+@
+映像上で憎きオベロンの姿が破壊され
+帝王ウロボロスをイメージした
+神々しい画面に切り替わる
+
+# textflame 0 0
+@
+不快感を煽るだけであったBGMは
+いつしか心安らぐ
+心地よい調べに変わっている
+
+# textflame 0 0
+@
+国民達は、支配者ウロボロスの姿に
+感銘を受け、その名をリフレインする
+涙を浮かべ、笑みを浮かべ
+
+# textwindow "close"
+# alpha 3102511 1 0.5
+# alpha 3100111 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100111 "normal"
+# voice 310011 "masamune_ge_0017"
+# chara 3100111
+@マサムネ
+しようがあるまい
+
+# textflame 0 0
+@
+マサムネは毅然とした姿勢で
+喧噪の中を通り過ぎる
+ムラマサも後をついてゆく
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100111 "sad"
+# chara 3100111
+@マサムネ
+ウロボロス様は
+難民と化していた人々を
+分け隔てなく国に受け入れた
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3100111
+@マサムネ
+爆発的に膨らんだ人口と国土は
+もはや制御が困難になりつつある
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100111 "angry"
+# chara 3100111
+@マサムネ
+その為の監視と管理
+そして我らの仕事
+オーダーキラーズの責務
+
+# move 3102511 2 0
+# textwindow "moya"
+# textflame 1 1
+# textboxarrow 0 0
+# face 3102511 "sad"
+# voice 310251 "muramasa_ge_0028"
+# chara 3102511
+@ムラマサ
+『オーダー』すなわち『秩序』…
+
+# move 3102511 2 0
+# textwindow "moya"
+# textflame 1 1
+# textboxarrow 0 0
+# chara 3102511
+@ムラマサ
+秩序を司るキラーズの役目
+それが反徒の処罰・暗殺
+国内の反乱分子の芽を摘むのだ
+
+# move 3102511 2 0
+# textwindow "moya"
+# textflame 1 1
+# textboxarrow 0 0
+# chara 3102511
+@ムラマサ
+必然であることはわかる
+でも…
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100111 "normal"
+# voice 310011 "masamune_ge_0013"
+# chara 3100111
+@マサムネ
+早急に理想郷を探し出し
+至らねばならない
+わかっているはずだ
+
+# textwindow "close"
+# alpha 3100111 0 0.5
+# alpha 3102511 0 0.5
+# waitandnext 0.5
+
+# pos 3102511 3
+# mask 3102511 off
+# alpha 3102511 1 0.5
+# waitandnext 0.5
+
+# move 3102511 3 0
+# textwindow "moya"
+# textflame 1 1
+# textboxarrow 0 0
+# face 3102511 "sad"
+# voice 310251 "muramasa_ge_0027"
+# chara 3102511
+@ムラマサ
+疑問を抱くことはなかった
+
+# move 3102511 3 0
+# textwindow "moya"
+# textflame 1 1
+# textboxarrow 0 0
+# chara 3102511
+@ムラマサ
+今までの自分であれば
+
+# textwindow "normal"
+# textflame 0 0
+@
+ただ、堅く塗り固められた考えほど
+虚を突かれると脆いのか
+
+;;◆背景：グライヒハイト裏路地（EP1の回想）-------------------------
+;;演出：回想へ
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1.0
+# waitandnext 1.0
+
+# alpha 3102511 0 0
+# alpha 166 1 0
+# imagepos 1 0 0
+# imagescale 1 1.2 0
+# imagelayer 1 5
+# imagealpha 1 1 0
+# background "201_slum"
+# waitandnext 0.5
+
+# fadein "white" 1.0
+# waitandnext 1.0
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 166 "normal"
+# chara 166
+;;# voice 3031 "cassius_ge_0002"
+@カシウス
+…あなたは今、何をしているの？
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 166 "normal"
+# chara 166
+@カシウス
+そこにあなたの考えはあるの？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 166
+@カシウス
+それが、あなたの理想なの？
+
+;;◆背景：グライヒハイト・昼----------------------------------------
+;;演出：回想から現実へ戻る
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1.0
+# waitandnext 1.0
+
+# alpha 166 0 0
+# alpha 3102511 1 0
+# face 3102511 "sad"
+# imagealpha 1 0 0
+# background "beast_world"
+# waitandnext 0.5
+
+# fadein "white" 1.0
+# waitandnext 1.3
+
+# move 3102511 3 0
+# textwindow "moya"
+# textflame 1 1
+# textboxarrow 0 0
+# chara 3102511
+@ムラマサ
+拙者が…酔っていると…？
+
+# alpha 3102511 0 0.5
+# pos 3100111 3
+# mask 3100111 off
+# alpha 3100111 1 0.5
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100111 "sad"
+# chara 3100111
+@マサムネ
+…
+
+# se "SE_5586"
+# brightness 3100111 0.6 0.3
+# face 3100111 "normal"
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@密偵
+失礼
+
+# brightness 3100111 1.0 0.3
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 310011 "masamune_ge_0007"
+# chara 3100111
+@マサムネ
+…何用か
+
+# textflame 0 0
+@
+物陰から姿を現した密偵は
+素早くマサムネの手に
+赤き紙を握らせる
+
+# face 3100111 "surprise"
+# brightness 3100111 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@密偵
+今晩だ
+手抜かりのなきよう
+
+# brightness 3100111 1.0 0.3
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100111 "normal"
+# voice 310011 "masamune_ge_0032"
+# chara 3100111
+@マサムネ
+…心得た
+
+# textflame 0 0
+@
+赤き紙はウロボロスの声
+オーダーキラーズが担う暗殺任務の
+委細が記された指令書
+
+# textwindow "top_close"
+# textwindow "bottom_close"
+# alpha 3100111 0 0.5
+# waitandnext 0.5
+
+# pos 3100111 4
+# mask 3100111 on
+# alpha 3100111 1 0.5
+# pos 3102511 2
+# mask 3102511 on
+# face 3102511 "normal"
+# alpha 3102511 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100111 "angry"
+# voice 310011 "masamune_ge_0011"
+# chara 3100111
+@マサムネ
+昨晩、逃がした魚は大きかった
+反体制側の指導者オベロン
+そしてあの少女…カシウス
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3100111
+@マサムネ
+ウロボロス様への申し開きようもない
+この任務で信頼を取り戻さねば
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "angry"
+# voice 310251 "muramasa_ge_0032"
+# chara 3102511
+@ムラマサ
+…承知しております。姉上
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100111 "normal"
+# chara 3100111
+@マサムネ
+昨日のような勝手な行動は
+勘弁してくれよ？
+
+# textflame 0 0
+@
+マサムネは、厳しい口調ながら
+ムラマサに優しく微笑む
+
+# textwindow "close"
+# alpha 3100111 0 0.5
+# alpha 3102511 0 0.5
+# waitandnext 0.5
+
+# pos 3102511 3
+# mask 3102511 off
+# alpha 3102511 1 0.5
+# face 3102511 "normal"
+# waitandnext 0.5
+
+# textflame 1 1
+# move 3102511 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+# face 3102511 "sad"
+# voice 310251 "muramasa_ge_0013"
+# chara 3102511
+@ムラマサ
+余計な事を考えるな…ムラマサ
+
+# move 3102511 3 0
+# textwindow "moya"
+# textflame 1 1
+# textboxarrow 0 0
+# chara 3102511
+@ムラマサ
+拙者は、変わったんだ
+力を得て、酔ってなどいない
+
+# move 3102511 3 0
+# textwindow "moya"
+# textflame 1 1
+# textboxarrow 0 0
+# face 3102511 "angry"
+# chara 3102511
+@ムラマサ
+そもそも拙者は
+酒の味すら知らぬ…！

@@ -1,0 +1,121 @@
+;;-----------------------------------------
+;;ツークンフトラスト2_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;イージス：新Ver立ち絵
+# body 62000111
+# pos 62000111 3
+# scale 62000111 0.8 0
+# layer 62000111 3
+# mask 62000111 off
+# alpha 62000111 0 0
+;;フォルカス：天上編立ち絵→リル姫立ち絵
+# body 301811
+# alpha 301811 0 0
+# body 43018002
+# pos 43018002 2
+# scale 43018002 0.8 0
+# layer 43018002 2
+# mask 43018002 off
+# alpha 43018002 0 0
+;;魔獣
+# body 920014
+# pos 920014 4
+# scale 920014 0.8 0
+# layer 920014 5
+# alpha 920014 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+# textwindow "close"
+# waitandnext 0.2
+
+# background "highland"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# alpha 920014 1 0
+# alpha 43018002 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@フォルカス
+やーっ！
+
+;;槍振る→ヒット→魔獣倒れる
+# se "SE_4200"
+# move 43018002 3 0.2
+# textboxarrow 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.3
+# se "SE_4846"
+# move 920014 5 0.3
+# waitandnext 1
+
+;;演出：魔獣倒される
+# se "SE_3001"
+# alpha 920014 0 1
+# waitandnext 1.5
+
+# alpha 43018002 0 0.3
+# face 62000111 "angry"
+# alpha 62000111 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@イージス
+…………
+
+# textflame 0 0
+@
+フォルカスの槍捌きの違和感を
+イージスは感じていた
+
+;;もやもや
+# move 62000111 3 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@イージス
+…あの姿じゃ限界があるだけ
+フォルカスは精一杯戦ってる
+
+# textflame 0 0
+# textwindow "nomal"
+@
+そう納得しようとしたのだが…
+
+# alpha 43018002 1 0.3
+# alpha 62000111 0 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@フォルカス
+…………くっ
+
+# voice 5200011 "aegis_c_battle_0005"
+# alpha 43018002 0 0.3
+# alpha 62000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@イージス
+フォルカス、どうした！
+
+# textflame 0 0
+@
+フォルカスは槍を地面に突き刺し
+その場から動けなくなってしまった
+
+# fadeout "black" 2
+# waitandnext 2

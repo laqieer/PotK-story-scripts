@@ -1,0 +1,1478 @@
+;;-----------------------------------------
+;;【ファントムオブキル】シンフォギアコラボ_イベントシナリオ後半
+;;【5話】
+;;スクリプト最後の背景：森：forest
+;;背景：街の中　（背景と人物を次々入れ替えて聞き取りをしている態を演出できればと思います）：006_town
+;;-----------------------------------------
+# script "lisp"
+# background "006_town"
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;ラブリュス
+# body 200331
+# pos 200331 3
+# scale 200331 0.8 0
+# layer 200331 2
+# alpha 200331 0 0
+# mask 200331 off
+;;立花 響
+# body 5303511
+# pos 5303511 3
+# scale 5303511 0.8 0
+# layer 5303511 4
+# alpha 5303511 0 0
+# mask 5303511 off
+;;小日向 未来
+# body 5603711
+# pos 5603711 3
+# scale 5603711 0.8 0
+# layer 5603711 2
+# alpha 5603711 0 0
+# mask 5603711 off
+;;雪音 クリス
+# body 5402311
+# pos 5402311 3
+# scale 5402311 0.8 0
+# layer 5402311 3
+# alpha 5402311 0 0
+# mask 5402311 off
+;;異族 戦型種カルマノイズ
+# body 806142
+# pos 806142 3
+# scale 806142 0.8 0
+# layer 806142 2
+# alpha 806142 0 0
+# mask 806142 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;黒いもや
+# imageset 3 "kiri_04"
+# imagescale 3 2.5 0
+# imagealpha 3 0 0
+# imagepos 3 0 0
+# imagelayer 3 4
+;;-----------------------------------------
+;;【5話】
+;;//背景：街の中　（背景と人物を次々入れ替えて聞き取りをしている態を演出できればと思います）：006_town
+# textwindow "close"
+# serif 1
+@村人1
+異族がどこから来たか…？
+さあ、気が付いたら街に
+あふれてたしなあ…　
+
+# serif 1
+@村人2
+そういえば、ちょっと前から森に
+入ったらダメだって話があったな
+理由？なんだったか――
+
+;;//演出：時間経過
+# serif 1
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 5303511 3 0
+# face 5303511 "normal"
+# alpha 5303511 1 0
+# mask 5303511 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 530351 "tachibanahibiki_0002"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@立花響
+ここ最近、森で何人も人が
+行方不明になってたんだってッ！
+
+# alpha 5303511 0 0.5
+# move 200331 3 0
+# face 200331 "normal"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textboxarrow 0 2
+@ラブリュス
+原因がわからなくて、立ち入り禁止に
+したのが三日前だったって話だよ～
+
+# alpha 200331 0 0.5
+# voice 560371 "miku_0026"
+# move 5603711 3 0
+# face 5603711 "usual"
+# alpha 5603711 1 0.5
+# mask 5603711 off
+# textboxarrow 0 2
+@小日向未来
+異族の目撃情報もあったらしくて
+いつもの異族と様子が違う
+って言ってた人もいたそうです…
+
+;;//演出：時間経過
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "forest"
+# alpha 5603711 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//背景：森：forest
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+そんな村人達の目撃情報を基に、
+噂の森へとやってきた一同
+目の前に広がっていたのは――
+
+;;//演出：黒いもや
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# imagealpha 3 0.8 1
+# imagepos 3 0 0
+# waitandnext 1
+
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+こ、この森は…
+
+# voice 540231 "yukinechris_0028"
+# alpha 196 0 0.5
+# move 5603711 1 0
+# face 5603711 "usual"
+# alpha 5603711 1 0.5
+# mask 5603711 on
+# move 5303511 3 0
+# face 5303511 "normal"
+# alpha 5303511 1 0.5
+# mask 5303511 on
+# move 5402311 5 0
+# face 5402311 "angry"
+# alpha 5402311 1 0.5
+# mask 5402311 off
+# textboxarrow 0 3
+@雪音クリス
+ハッ、こりゃビンゴだ
+瘴気に包まれて…見るからに
+森がヤバいことになってやがる
+
+# textboxarrow 0 1
+@小日向未来
+森全体に瘴気がたち込めて…
+ここまで濃い瘴気が溢れてる
+ってことは…
+
+# face 5303511 "angry"
+# textboxarrow 0 2
+@立花響
+うん、世界蛇がいても
+全然おかしくないね
+
+# textboxarrow 0 1
+@小日向未来
+ここの森に潜んでずっと
+カルマノイズを大量に
+生んでたのかな…？今も？
+
+# alpha 5603711 0 0.5
+# alpha 5303511 0 0.5
+# alpha 5402311 0 0.5
+# move 200331 3 0
+# face 200331 "normal"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textboxarrow 0 2
+@ラブリュス
+ん～、それはとりあえず、
+森に入ってみれば
+わかるんじゃない？
+
+# alpha 200331 0 0.5
+# move 5402311 3 0
+# face 5402311 "angry"
+# alpha 5402311 1 0.5
+# mask 5402311 off
+# textboxarrow 0 2
+@雪音クリス
+…だな
+確認しないことには始まらない
+でも――
+
+# textboxarrow 0 2
+@雪音クリス
+確認して
+ここはあたし達の手におえないと
+判断したらすぐに帰る
+
+# textboxarrow 0 2
+@雪音クリス
+S.O.N.G.に帰還したら報告を上げて
+対策のための助けを呼ぶ、
+…わかったな？
+
+# voice 2003 "loveryus_0028"
+# alpha 5402311 0 0.5
+# move 200331 3 0
+# face 200331 "surprise"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textboxarrow 0 2
+@ラブリュス
+え～、わざわざ出直すの？
+それなら、わたし達で
+やっつけちゃった方が早くない？
+
+# bgm "stop"
+# alpha 200331 0 0.5
+# move 5603711 3 0
+# face 5603711 "sad"
+# alpha 5603711 1 0.5
+# mask 5603711 off
+# textboxarrow 0 2
+@小日向未来
+それは…無理だと思う
+
+# alpha 5603711 0 0.5
+# move 196 3 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+…無理？
+どうして？
+
+;;モノローグ
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+# alpha 196 0 0.5
+# textflame 0 0
+@
+とたんに響達の顔が曇る
+しばらく口ごもった後、
+重々しい口調で説明を始めた
+
+# move 5603711 1 0
+# face 5603711 "sad"
+# alpha 5603711 1 0.5
+# mask 5603711 on
+# move 5303511 3 0
+# face 5303511 "sad"
+# alpha 5303511 1 0.5
+# mask 5303511 on
+# move 5402311 5 0
+# face 5402311 "sad"
+# alpha 5402311 1 0.5
+# mask 5402311 on
+# textflame 1 1
+# textboxarrow 0 3
+@雪音クリス
+あたし達はあいつ…世界蛇と
+やりあったことがあるんだ
+でも…
+
+# face 5303511 "sad"
+# textboxarrow 0 2
+@立花響
+わたし達、シンフォギア装者数人
+がかりでも世界蛇をどうにか
+することなんてできなかったの
+
+# voice 540231 "yukinechris_battle_0007"
+# face 5303511 "sad"
+# face 5402311 "angry"
+# textboxarrow 0 3
+@雪音クリス
+ハッ、しかも取り逃がしたそいつは
+本体でもなかった、なんて
+オチつきでなッ！
+
+# textboxarrow 0 1
+@小日向未来
+そう…そんな厄介な相手だから…
+
+# alpha 5603711 0 0.5
+# alpha 5303511 0 0.5
+# alpha 5402311 0 0.5
+# move 200331 2 0
+# face 200331 "sad"
+# alpha 200331 1 0.5
+# mask 200331 on
+# move 196 4 0
+# face 196 "sad"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+そんなやつが、いろんな世界を
+うろついてるっていうの…？
+
+# textboxarrow 0 1
+@ラブリュス
+なんか、物騒すぎるね
+そんなんじゃ、おちおちライブも
+できないよ
+
+# alpha 196 0 0.5
+# move 5402311 4 0
+# face 5402311 "surprise"
+# alpha 5402311 1 0.5
+# mask 5402311 on
+# textboxarrow 0 3
+@雪音クリス
+ライブって…
+なんか能天気で気の抜ける
+やつだな、お前…
+
+# voice 2003 "loveryus_0020"
+# face 200331 "happy"
+# textboxarrow 0 1
+@ラブリュス
+えっ、可愛くてほっとする？
+そうかな～♪
+
+# face 5402311 "angry"
+# textboxarrow 0 3
+@雪音クリス
+はぁッ！？
+そんなこと言ってねえし――
+
+# alpha 200331 0 0.5
+# alpha 5402311 0 0.5
+# bgm "stop"
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+しっ！静かに！
+…みんな、あそこを見て！
+
+;;モノローグ
+# textflame 0 0
+@
+突然アルマスが後続を手で制した
+そして、そっとその手が指さす先に
+全員が息を殺して目を向けた
+
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+# alpha 196 0 0.5
+# move 5603711 2 0
+# face 5603711 "surprise"
+# alpha 5603711 1 0.5
+# mask 5603711 on
+# textboxarrow 0 1
+# move 5402311 4 0
+# face 5402311 "angry"
+# alpha 5402311 1 0.5
+# mask 5402311 on
+# textflame 1 1
+@小日向未来
+あれは…
+瘴気が溜まってる？
+
+# textboxarrow 0 3
+@雪音クリス
+間違いないな、
+にしてもなんて濃い瘴気なんだ…
+
+# alpha 5603711 0 0.5
+# alpha 5402311 0 0.5
+# move 200331 2 0
+# face 200331 "sad"
+# alpha 200331 1 0.5
+# mask 200331 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+@ラブリュス
+うえぇ～
+あのざわざわ蠢いてるのが全部
+カルマノイズを食べた異族？
+
+# textboxarrow 0 3
+@アルマス
+カルマノイズの力を得ようと
+集まってきたのかしら？ 
+
+;;モノローグ
+# alpha 200331 0 0.5
+# alpha 196 0 0.5
+# textflame 0 0
+@
+蠢く異族が集う先、
+大きく空間がひび割れてできた
+真っ黒な穴が広がっていた
+
+# voice 530351 "tachibanahibiki_0002"
+# move 5303511 3 0
+# face 5303511 "sad"
+# alpha 5303511 1 0.5
+# mask 5303511 off
+# textflame 1 1
+# textboxarrow 0 2
+@立花響
+あれ？でもおかしいよ？
+平行世界をつなぐ穴はあるのに
+世界蛇の姿が見えない…
+
+# alpha 5303511 0 0.5
+# move 5603711 3 0
+# face 5603711 "usual"
+# alpha 5603711 1 0.5
+# mask 5603711 off
+# textboxarrow 0 2
+@小日向未来
+そういえば…
+でも世界をつなぐ通路は
+開いたままだよ？
+
+# voice 560371 "miku_0028"
+# textboxarrow 0 2
+@小日向未来
+世界蛇が姿を消すときは、
+空間のひびも閉じて
+通路も消えるものなのに…
+
+# alpha 5603711 0 0.5
+# move 5402311 3 0
+# face 5402311 "sad"
+# alpha 5402311 1 0.5
+# mask 5402311 off
+# textboxarrow 0 2
+@雪音クリス
+なぜ通路が、ひび割れがそのまま
+残ってるんだ…？
+
+# alpha 5402311 0 0.5
+# move 196 3 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+理由はわからない…でも
+あそこを見て
+
+;;モノローグ
+# alpha 196 0 0.5
+# textflame 0 0
+@
+ペキペキとひびを広げるように
+穴の淵に異族がびっしりと
+張り付いていた
+
+# move 5303511 3 0
+# face 5303511 "surprise"
+# alpha 5303511 1 0.5
+# mask 5303511 off
+# textflame 1 1
+# textboxarrow 0 2
+@立花響
+カルマノイズ化した異族が
+空間をこじ開けてるッ…！？
+
+# voice 9943 "almace_navikan_0042"
+# alpha 5303511 0 0.5
+# move 200331 2 0
+# face 200331 "usual2"
+# alpha 200331 1 0.5
+# mask 200331 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+どっちかっていうと
+空間をこじ開けているっていうより
+空間ごと食べてる感じね
+
+# face 200331 "normal"
+# textboxarrow 0 1
+@ラブリュス
+空間ごと食べてるだとしたら
+もしかしてそのまま
+他の世界と繋がったりして？
+
+# textboxarrow 0 3
+@アルマス
+可能性はゼロじゃないと
+思うわ
+
+# alpha 200331 0 0.5
+# move 5603711 1 0
+# face 5603711 "usual"
+# alpha 5603711 1 0.5
+# mask 5603711 on
+# move 5303511 3 0
+# face 5303511 "angry"
+# alpha 5303511 1 0.5
+# mask 5303511 on
+# textboxarrow 0 2
+# move 196 5 0.5
+@立花響
+あの異族が他の世界に…？
+ダメだよ、そんなの…ッ！
+
+# voice 560371 "miku_0025"
+# face 5603711 "sad"
+# textboxarrow 0 1
+@小日向未来
+あんなたくさんの異族が
+カルマノイズが
+他の世界に行ったら…
+
+# textboxarrow 0 3
+@アルマス
+別世界でも異族達に襲われる
+人達が出るわね
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+そんなの、
+見過ごすわけには
+いかない…！！
+
+# alpha 5303511 0 0.5
+# move 5402311 3 0
+# face 5402311 "angry"
+# alpha 5402311 1 0.5
+# mask 5402311 on
+# textboxarrow 0 2
+@雪音クリス
+もうこの世界だけの話じゃないな
+あのカルマノイズ…じゃなくて
+異族？を倒して――
+
+# textboxarrow 0 2
+@雪音クリス
+世界をつなぐ穴をふさぐぞッ！
+
+# face 5603711 "normal"
+# textboxarrow 0 1
+@小日向未来
+…うんッ！
+
+# face 5402311 "sad"
+# textboxarrow 0 2
+@雪音クリス
+となると、急いでここは
+S.O.N.G.に帰還しないとな
+
+# textboxarrow 0 2
+@雪音クリス
+幸い世界蛇はいなかったが
+イレギュラーなことが起きたと…
+
+;;モノローグ
+# bgm "stop"
+# se "SE_11575"
+# alpha 5603711 0 0.5
+# alpha 5402311 0 0.5
+# alpha 196 0 0.5
+# textflame 0 0
+@
+報告をしよう、と話していた
+その時、バキンと大きな音を立てて
+空間のひびが広がった
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# move 200331 2 0
+# face 200331 "surprise"
+# alpha 200331 1 0.5
+# mask 200331 on
+# move 5303511 4 0
+# face 5303511 "surprise"
+# alpha 5303511 1 0.5
+# mask 5303511 on
+# textflame 1 1
+# textboxarrow 0 3
+@立花響
+なっ…異族達がひび割れを
+強引に押し広げてる…ッ！？
+
+# textboxarrow 0 1
+@ラブリュス
+数に任せてどんどん広げてるよ
+あれじゃあ悠長にしてる暇が
+なさそうなんだけど？
+
+# alpha 200331 0 0.5
+# alpha 5303511 0 0.5
+# move 5603711 2 0
+# face 5603711 "sad"
+# alpha 5603711 1 0.5
+# mask 5603711 on
+# move 5402311 4 0
+# face 5402311 "angry"
+# alpha 5402311 1 0.5
+# mask 5402311 on
+# textboxarrow 0 3
+@雪音クリス
+チッ…ここは腹をくくるしか
+ねえか…？
+
+# textboxarrow 0 1
+@小日向未来
+でも…さっき街で戦った時より
+数が…
+
+# alpha 5603711 0 0.5
+# alpha 5402311 0 0.5
+# voice 2003 "loveryus_0005"
+# move 200331 2 0
+# face 200331 "happy"
+# alpha 200331 1 0.5
+# mask 200331 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+@ラブリュス
+あはは～、超いっぱいで
+やりがいありそう～♪
+
+# face 196 "happy"
+# textboxarrow 0 3
+@アルマス
+ははっ、やりがいありそう、ね
+軽く言ってくれるじゃない！
+
+# alpha 200331 0 0.5
+# alpha 196 0 0.5
+# move 5603711 1 0
+# face 5603711 "usual"
+# alpha 5603711 1 0.5
+# mask 5603711 on
+# move 5303511 3 0
+# face 5303511 "happy"
+# alpha 5303511 1 0.5
+# mask 5303511 on
+# textboxarrow 0 2
+# move 5402311 5 0
+# face 5402311 "normal"
+# alpha 5402311 1 0.5
+# mask 5402311 on
+@立花響
+でも、ラブリュスさんの
+その前向きな所、わたしは
+…大好きですよっ
+
+# textboxarrow 0 1
+@小日向未来
+…響
+
+# textboxarrow 0 3
+@雪音クリス
+で…？結局残る気かよ…
+オイオイ、またおっさんに
+説教されちまうぞ？
+
+# face 5303511 "shy"
+# textboxarrow 0 2
+@立花響
+あはは…だよねぇ…
+
+# bgm "stop"
+# voice 540231 "yukinechris_0003"
+# face 5402311 "angry"
+# textboxarrow 0 3
+@雪音クリス
+ああ、
+「もっとお前達は大人を頼れッ！」
+…なんつってな
+
+# bgmfile "bgm405" "BgmIntegralNoahEvent003" 0
+# voice 560371 "miku_0004"
+# face 5603711 "shy"
+# textboxarrow 0 1
+@小日向未来
+もうッ、こういう時に…
+でも…
+ふふ…少し似てるかも
+
+# face 5303511 "normal"
+# textboxarrow 0 2
+@立花響
+でもこの状況じゃ、
+仕方ないよね～
+
+# face 5402311 "normal"
+# textboxarrow 0 3
+@雪音クリス
+ああ、仕方ないな
+
+# face 5603711 "usual"
+# textboxarrow 0 1
+@小日向未来
+仕方ないね…
+みんなで怒られよっか…
+
+;;モノローグ
+# alpha 5603711 0 0.5
+# alpha 5303511 0 0.5
+# alpha 5402311 0 0.5
+# move 200331 2 0
+# face 200331 "usual2"
+# alpha 200331 1 0.5
+# mask 200331 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textflame 0 0
+@
+アルマスとラブリュスが
+顔を見合わせる
+
+# face 200331 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@ラブリュス
+それって…
+一緒に戦ってくれるのっ？
+ヤッタ～！
+
+# voice 9943 "almace_navikan_0044"
+# face 196 "happy"
+# textboxarrow 0 3
+@アルマス
+ホント、あなた達って
+絶・お人好しよね
+でも…ありがとう
+
+# alpha 200331 0 0.5
+# alpha 196 0 0.5
+# move 5402311 3 0
+# face 5402311 "normal"
+# alpha 5402311 1 0.5
+# mask 5402311 off
+# textboxarrow 0 2
+@雪音クリス
+あ～…仕方ないからなッ！
+あっ、でも…
+
+# voice 540231 "yukinechris_0035"
+# face 5402311 "angry"
+# textboxarrow 0 2
+@雪音クリス
+未来は軽々しく
+絶唱使おうとすんなよ？
+
+# move 5603711 2 0
+# face 5603711 "surprise"
+# alpha 5603711 1 0.5
+# mask 5603711 on
+# textboxarrow 0 1
+# move 5402311 4 0.5
+# mask 5402311 on
+@小日向未来
+えッ！？
+
+# textboxarrow 0 3
+@雪音クリス
+あたしが助けに来る直前、
+使おうとしてただろ？
+使おうと、したよなァ…？
+
+# textboxarrow 0 1
+@小日向未来
+な、なんのことかなっ？
+そんなことっ…
+
+# face 5603711 "sad"
+# textboxarrow 0 1
+@小日向未来
+……しようと、しました
+
+# alpha 5603711 0 0.5
+# alpha 5402311 0 0.5
+# move 200331 2 0
+# face 200331 "surprise"
+# alpha 200331 1 0.5
+# mask 200331 on
+# move 196 4 0
+# face 196 "sad"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+絶唱って…あの使うと
+体がボロボロになるっていう…？
+
+# textboxarrow 0 1
+@ラブリュス
+なんでっ！？
+なんでそんなヤバいやつ
+勝手に使おうとしたのっ！？
+
+# voice 560371 "miku_0031"
+# move 5603711 3 0
+# face 5603711 "sad"
+# alpha 5603711 1 0.5
+# mask 5603711 off
+# textboxarrow 0 2
+# alpha 200331 0 0.5
+# alpha 196 0 0.5
+@小日向未来
+ご、ごごご、ごめんなさい…
+どうしても、みんなの役に
+立ちたくて…
+
+# alpha 5603711 0 0.5
+# move 5303511 3 0
+# face 5303511 "angry"
+# alpha 5303511 1 0.5
+# mask 5303511 off
+# textboxarrow 0 2
+@立花響
+未来のバカッ、役に立つ代わりに
+自分を犠牲にするなんて
+そんなの誰が喜ぶのッ！？
+
+# alpha 5303511 0 0.5
+# move 200331 3 0
+# face 200331 "angry1"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textboxarrow 0 2
+@ラブリュス
+そうだよ、誰も喜ばないよ！ 
+
+# alpha 200331 0 0.5
+# move 5303511 3 0
+# face 5303511 "normal"
+# alpha 5303511 1 0.5
+# mask 5303511 off
+# textboxarrow 0 2
+@立花響
+そーだ、そーだッ！　
+だって未来がいてくれるだけで
+こんなに心強いもん、今だってッ！
+
+;;モノローグ
+# textflame 0 0
+@
+その場の全員が
+うなずいてみせる
+
+# alpha 5303511 0 0.5
+# move 5603711 3 0
+# face 5603711 "usual"
+# alpha 5603711 1 0.5
+# mask 5603711 off
+# textflame 1 1
+# textboxarrow 0 2
+@小日向未来
+響、みんな…
+
+# alpha 5603711 0 0.5
+# move 196 3 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+誰か一人が、じゃなくて
+ここにいるみんなが、今できる
+精いっぱいのことをすればいいのよ
+
+# textboxarrow 0 2
+@アルマス
+…みんなのために
+わたしはそう思うけど…
+それじゃダメ、かな…？
+
+# alpha 196 0 0.5
+# move 5603711 1 0
+# face 5603711 "shy"
+# alpha 5603711 1 0.5
+# mask 5603711 on
+# textboxarrow 0 1
+# move 5303511 3 0
+# face 5303511 "normal"
+# alpha 5303511 1 0.5
+# mask 5303511 on
+# move 5402311 5 0
+# face 5402311 "normal"
+# alpha 5402311 1 0.5
+# mask 5402311 on
+@小日向未来
+ううん…ダメじゃない
+ダメじゃない…
+
+# voice 540231 "yukinechris_0006"
+# textboxarrow 0 3
+@雪音クリス
+ああ、それでいい
+この際、出し惜しみなしだッ！
+
+# face 5303511 "happy"
+# textboxarrow 0 2
+@立花響
+うん、そうだね
+みんなの力をあわせてッ！
+みんなのためにッ！
+
+# alpha 5603711 0 0.5
+# alpha 5303511 0 0.5
+# alpha 5402311 0 0.5
+# move 200331 3 0
+# face 200331 "happy"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textboxarrow 0 2
+@ラブリュス
+全員で殲滅ライブだねっ♪
+えいえいお～！
+
+;;モノローグ
+# alpha 200331 0 0.5
+# textflame 0 0
+@
+アルマス達は顔を上げ正面を見据える
+そして異族によってひびの広がる
+空間へ向けて、一斉に大地を蹴った
+
+;;//演出：時間経過
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 5402311 3 0
+# face 5402311 "angry"
+# alpha 5402311 1 0
+# mask 5402311 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# voice 540231 "yukinechris_battle_0001"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@雪音クリス
+全力でぶちかますッ！
+吹っ飛べぇーーッ！！
+
+;;//演出：flash効果（一斉掃射のイメージです）
+;;//演出：画面揺らし
+# se "SE_12882"
+# waitandnext 1.5
+
+# se "SE_12885"
+# waitandnext 0.2
+
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+@雪音クリス
+チッ！撃ち漏らしたッ
+残り頼むッ！！
+
+# alpha 5402311 0 0.5
+# move 200331 3 0
+# face 200331 "normal"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textboxarrow 0 2
+@ラブリュス
+おっけ～♪
+ラブリュスちゃんに
+任せてー！
+
+# voice 2003 "loveryus_0029"
+# face 200331 "happy"
+# textboxarrow 0 2
+@ラブリュス
+そ～れぇい♪
+
+;;//演出：斬撃演出（斧を振り回すイメージです）
+# se "SE_4100"
+# waitandnext 0.5
+
+;;//演出：場面転換
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 200331 0 0
+# move 806142 2 0
+# alpha 806142 1 0
+# mask 806142 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0
+# mask 196 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 1
+# textwindow "normal"
+@異族
+シャアアッ！！
+
+# textboxarrow 0 3
+@アルマス
+逃さないっ！！
+
+;;//演出：斬撃演出
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 -200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@異族
+ギュッ、キュウウウッ！？
+
+;;//演出：異族スライドアウト
+# textwindow "close"
+# leftout 806142 0.5
+# waitandnext 0.5
+
+# alpha 806142 0 0
+# alpha 196 0 0.5
+# move 5303511 3 0
+# face 5303511 "normal"
+# alpha 5303511 1 0.5
+# mask 5303511 off
+# textboxarrow 0 2
+# textwindow "normal"
+@立花響
+わたしが相手だよッ！
+カルマノイズの…異族の…
+
+# face 5303511 "angry"
+# textboxarrow 0 2
+@立花響
+好きにはさせないッ！！
+
+# textboxarrow 0 2
+@立花響
+この拳で、ぶんなぐるッ…！！
+
+;;//演出：画面揺らし
+# se "SE_12874"
+# waitandnext 0.2
+
+# shake 0 0.5
+# waitandnext 0.5
+
+# voice 560371 "miku_0024"
+# move 5603711 2 0
+# face 5603711 "surprise"
+# alpha 5603711 1 0.5
+# mask 5603711 on
+# textboxarrow 0 1
+# move 5303511 4 0.5
+# mask 5303511 on
+@小日向未来
+きゃあッ！？
+
+# textboxarrow 0 1
+@小日向未来
+び、びっくりした…ッ！
+んもう、響ったら無茶ばっかり…
+
+# face 5303511 "shy"
+# textboxarrow 0 3
+@立花響
+え、あれ？
+たはは…ごめん
+
+# face 5603711 "usual"
+# textboxarrow 0 1
+@小日向未来
+こっちきて、手当してあげる
+ほら…これ以上怪我しないようにね
+
+# face 5303511 "happy"
+# textboxarrow 0 3
+@立花響
+うん、ありがとッ！
+でも、なんか
+お腹すいてきちゃった
+
+# voice 560371 "miku_0023"
+# face 5603711 "surprise"
+# textboxarrow 0 1
+@小日向未来
+ええっ、今ッ！？
+
+# voice 530351 "tachibanahibiki_0004"
+# textboxarrow 0 3
+@立花響
+あははっ
+全部終わったら、美味しいもの
+食べにいこうねッ！
+
+# face 5603711 "usual"
+# textboxarrow 0 1
+@小日向未来
+もうっ…響ったら
+うん、約束ね
+そのためにも今は…
+
+# alpha 5603711 0 0.5
+# alpha 5303511 0 0.5
+# move 196 3 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+個々で力を合わせるのもいいけど
+これじゃ時間がかかりすぎるわ
+
+# alpha 196 0 0.5
+# move 5303511 3 0
+# face 5303511 "normal"
+# alpha 5303511 1 0.5
+# mask 5303511 off
+# textboxarrow 0 2
+@立花響
+あッ！
+だったらさ、みんなで連携して
+全部の力を合わせたらどうかなッ！？
+
+# alpha 5303511 0 0.5
+# move 196 3 0
+# face 196 "sad"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+そんな、簡単に言うけど…
+
+;;モノローグ
+# textflame 0 0
+@
+武器をふるいながら
+アルマスの顔に困惑の色が浮かぶ
+しかし――
+
+# voice 2003 "loveryus_0041"
+# alpha 196 0 0.5
+# move 200331 3 0
+# face 200331 "surprise"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textflame 1 1
+# textboxarrow 0 2
+@ラブリュス
+ああっ、そっか！
+歌だ！
+歌って力を合わせるの！！
+
+# alpha 200331 0 0.5
+# move 5303511 3 0
+# face 5303511 "happy"
+# alpha 5303511 1 0.5
+# mask 5303511 off
+# textboxarrow 0 2
+@立花響
+うんッ、その通りッ！
+
+# voice 560371 "miku_0040"
+# alpha 5303511 0 0.5
+# move 5603711 3 0
+# face 5603711 "happy"
+# alpha 5603711 1 0.5
+# mask 5603711 off
+# textboxarrow 0 2
+@小日向未来
+歌をみんなで…
+そうね、たしかに、
+できなくもないかも…ッ！
+
+# alpha 5603711 0 0.5
+# move 200331 3 0
+# face 200331 "happy"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textboxarrow 0 2
+@ラブリュス
+でしょ？でしょっ？
+みんなで集まって～
+リズムをとって、歌を歌って～
+
+# alpha 200331 0 0.5
+# move 5402311 3 0
+# face 5402311 "angry"
+# alpha 5402311 1 0.5
+# mask 5402311 off
+# textboxarrow 0 2
+@雪音クリス
+タイミングを合わせて、
+一斉攻撃か…ッ！
+
+# alpha 5402311 0 0.5
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+えっ…でも私
+歌って言われても…
+
+# alpha 196 0 0.5
+# move 200331 3 0
+# face 200331 "happy"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textboxarrow 0 2
+@ラブリュス
+下手でもいいんだよぉ～
+みんなで声を合わせて
+心を一つにして歌うのっ！
+
+# bgm "stop"
+# alpha 200331 0 0.5
+# move 5303511 3 0
+# face 5303511 "normal"
+# alpha 5303511 1 0.5
+# mask 5303511 off
+# textboxarrow 0 2
+@立花響
+その歌声を、
+シンフォギアの力に変えてッ！
+
+;;モノローグ
+# bgmfile "bgm475_476" "BgmSymphogearXD" 0
+# alpha 5303511 0 0.5
+# textflame 0 0
+@
+少女達の歌声が空間に響きわたる
+それぞれの旋律がかさなり
+大きなハーモニーとなっていく
+
+;;モヤモヤ吹き出し
+# move 5603711 3 0
+# face 5603711 "shy"
+# alpha 5603711 1 0.5
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 5603711 off
+@小日向未来
+ああ、なんて
+気持ちいい音楽…
+
+# alpha 5603711 0 0.5
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+これを、私も歌えっていうの？
+ど…どうなっても知らないからっ！
+
+;;モノローグ
+# alpha 196 0 0.5
+# textflame 0 0
+@
+さらに別の音が加わり、
+それは大きなシンフォニーとなる
+
+;;モヤモヤ吹き出し
+# move 5603711 3 0
+# face 5603711 "normal"
+# alpha 5603711 1 0.5
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 5603711 off
+@小日向未来
+わかる、シンフォギアが共鳴してる
+これならきっと…ッ！
+
+;;モヤモヤ吹き出し
+# alpha 5603711 0 0.5
+# face 5303511 "surprise"
+# alpha 5303511 1 0.5
+# textboxarrow 0 0
+@立花響
+でもこれ…
+シンフォギアの力だけじゃない
+
+;;モヤモヤ吹き出し
+# move 5303511 3 0
+# face 5303511 "normal"
+# mask 5303511 off
+# textboxarrow 0 0
+@立花響
+これは…キル姫の、力…？
+
+# alpha 5303511 0 0.5
+# move 806142 3 0
+# alpha 806142 1 0.5
+# mask 806142 off
+# textboxarrow 0 2
+# textwindow "normal"
+@異族
+ギ…ギギ…？
+
+# alpha 806142 0 0.5
+# move 5603711 2 0
+# face 5603711 "normal"
+# alpha 5603711 1 0.5
+# mask 5603711 on
+# move 5402311 4 0
+# face 5402311 "angry"
+# alpha 5402311 1 0.5
+# mask 5402311 on
+# textboxarrow 0 3
+@雪音クリス
+今だッ！吹っ飛べッ！
+
+# textboxarrow 0 1
+@小日向未来
+響、お願いッ！
+
+# alpha 5603711 0 0.5
+# alpha 5402311 0 0.5
+# move 5303511 3 0
+# face 5303511 "angry"
+# alpha 5303511 1 0.5
+# mask 5303511 off
+# textboxarrow 0 2
+@立花響
+突き抜けろおおぉーーッ！！
+
+;;//演出：flash効果
+# se "SE_5921"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;//演出：ホワイトアウト　（爆発演出になります）
+# se "SE_9079"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1.2
+
+# alpha 5303511 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//演出：暗転
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 200331 2 0
+# face 200331 "happy"
+# alpha 200331 1 0
+# mask 200331 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0
+# mask 196 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# voice 2003 "loveryus_0039"
+# textboxarrow 0 1
+# textwindow "normal"
+@ラブリュス
+いや～なんか、すっごかったねっ
+ライブの最高の盛り上がり！？
+ってくらいこーふんしたかも！
+
+# textboxarrow 0 3
+@アルマス
+異族を焼き尽くしたとたん
+あの穴は閉じたけど…
+これで終わったの？
+
+# alpha 200331 0 0.5
+# alpha 196 0 0.5
+# move 5603711 3 0
+# face 5603711 "happy"
+# alpha 5603711 1 0.5
+# mask 5603711 off
+# textboxarrow 0 2
+@小日向未来
+きれいに閉じちゃいましたし
+たぶんもう大丈夫ですよ
+
+# alpha 5603711 0 0.5
+# move 5402311 3 0
+# face 5402311 "happy"
+# alpha 5402311 1 0.5
+# mask 5402311 off
+# textboxarrow 0 2
+@雪音クリス
+うん、世界蛇がまたこの世界に
+来ない限りは、世界をつなぐ穴が
+勝手にできたりはしねえよ
+
+# textboxarrow 0 2
+@雪音クリス
+世界蛇も、自分が生み出した
+カルマノイズを喰うようなのがいる
+世界なんかゴメンだったんじゃね？
+
+# voice 530351 "tachibanahibiki_0004"
+# imagealpha 3 0 1
+# alpha 5402311 0 0.5
+# move 5303511 3 0
+# face 5303511 "happy"
+# alpha 5303511 1 0.5
+# mask 5303511 off
+# textboxarrow 0 2
+@立花響
+あっははッ、かもね～
+あ、ほら瘴気も晴れてきたッ！
+
+;;モノローグ
+# alpha 5303511 0 0.5
+# textflame 0 0
+@
+木々の隙間から木漏れ日が差す
+淀んでいた空気は清浄なものへ
+塗り替えられていった

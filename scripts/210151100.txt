@@ -1,0 +1,632 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１５章 章タイトル「クリティカルフェイズ―連携―」
+;;第1話－１０　タイトル：新たな連携
+;;1_10_0
+;;スクリプト最後の背景：森
+;;-----------------------------------------
+# script "lisp"
+# background "fountain"
+# bgmfile "bgm479" "BgmIntegralNoahBoso002" 0
+;;-----------------------------------------
+;;擬装エルキュール
+# body 5202521
+# pos 5202521 3
+# scale 5202521 0.8 0
+# layer 5202521 2
+# alpha 5202521 0 0
+# mask 5202521 off
+;;ミネルヴァ・擬装・アーチャー
+# body 5302521
+# pos 5302521 3
+# scale 5302521 0.8 0
+# layer 5302521 2
+# alpha 5302521 0 0
+# mask 5302521 off
+;;擬装ダモクレス
+# body 5103521
+# pos 5103521 3
+# scale 5103521 0.8 0
+# layer 5103521 2
+# alpha 5103521 0 0
+# mask 5103521 off
+;;ラグナロク・擬装・ガンナー
+# body 5103621
+# pos 5103621 3
+# scale 5103621 0.8 0
+# layer 5103621 2
+# alpha 5103621 0 0
+# mask 5103621 off
+# brightness 5103621 0.8 0
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 2
+# alpha 5401721 0 0
+# mask 5401721 off
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 3
+# alpha 5101431 0 0
+# mask 5101431 off
+# brightness 5101431 0.8 0
+;;レーヴァテイン・擬彩
+# body 5100231
+# pos 5100231 3
+# scale 5100231 0.8 0
+# layer 5100231 4
+# alpha 5100231 0 0
+# mask 5100231 off
+;;ロンギヌス・擬彩
+# body 5300131
+# pos 5300131 3
+# scale 5300131 0.8 0
+# layer 5300131 2
+# alpha 5300131 0 0
+# mask 5300131 off
+;;異族化マサムネ
+# body 5100131
+# pos 5100131 3
+# scale 5100131 0.8 0
+# layer 5100131 2
+# alpha 5100131 0 0
+# mask 5100131 off
+;;異族化パラシュ
+# body 5200431
+# pos 5200431 3
+# scale 5200431 0.8 0
+# layer 5200431 2
+# alpha 5200431 0 0
+# mask 5200431 off
+;;カリス・聖鎖・アザゼル
+# body 5602511
+# pos 5602511 3
+# scale 5602511 0.8 0
+# layer 5602511 2
+# alpha 5602511 0 0
+# mask 5602511 off
+;;ヘレナ・D. plug・ロキ
+# body 5302811
+# pos 5302811 3
+# scale 5302811 0.8 0
+# layer 5302811 2
+# alpha 5302811 0 0
+# mask 5302811 off
+;;ソロモン
+# body 5503111
+# pos 5503111 3
+# scale 5503111 0.8 0
+# layer 5503111 2
+# alpha 5503111 0 0
+# mask 5503111 off
+;;キプル
+# body 163
+# pos 163 3
+# scale 163 0.6 0
+# layer 163 4
+# alpha 163 0 0
+# mask 163 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第1話―１０　タイトル：新たな連携
+;;//背景：泉：fountain
+# emotionbody 1000 15 5101431 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5101431 3 0
+# face 5101431 "angry"
+# alpha 5101431 1 0
+# mask 5101431 off
+# textwindow "toge"
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+アアアアアアアアアアアアア！！
+
+# textwindow "close"
+# se "SE_9070"
+# rightout 5101431 0.3
+# waitandnext 0.3
+
+# effectskip 1000
+# alpha 5101431 0 0
+# move 5100231 3 0
+# face 5100231 "angry"
+# alpha 5100231 1 0.5
+# textwindow "normal"
+# textboxarrow 0 2
+@レーヴァテイン
+ティル…私が受け止めるから
+
+# textwindow "close"
+# effectstart 1000
+# move 5101431 2 0
+# face 5101431 "angry"
+# alpha 5101431 1 0
+# mask 5101431 on
+# leftin 5101431 0.3
+# waitandnext 0.2
+
+# move 5100231 4 0.3
+;;//血しぶき演出
+# se "SE_4830"
+# sedelay "SE_9015" 0.5
+# shake 0 0.5
+# fadein "red" 0.5
+# waitandnext 0.5
+
+# voice 510023 "revatein_iz_battle_0006"
+# textwindow "normal"
+# face 5100231 "sad"
+# textboxarrow 0 3
+@レーヴァテイン
+うっ…
+
+# face 5101431 "surprise"
+# textboxarrow 0 1
+@ティルフィング
+アアアアア…？
+
+# effectskip 1000
+# alpha 5101431 0 0.5
+# alpha 5100231 0 0.5
+# move 5300131 3 0
+# face 5300131 "surprise"
+# alpha 5300131 1 0.5
+# mask 5300131 off
+# voice 530013 "ronginusu_iz_0024"
+# textboxarrow 0 2
+@ロンギヌス
+レーヴァテイン…！
+自分の体でティルフィングの神器を
+止めるなんてっ…
+
+# alpha 5300131 0 0.5
+# emotionbody 1000 15 5101431 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5101431 2 0
+# face 5101431 "surprise"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# move 5100231 4 0
+# face 5100231 "sad"
+# alpha 5100231 1 0.5
+# textboxarrow 0 1
+@ティルフィング
+アアア…ア…アアッ…
+
+# effectskip 1000
+# alpha 5101431 0 0.5
+# alpha 5100231 0 0.5
+# move 5300131 3 0
+# face 5300131 "angry"
+# alpha 5300131 1 0.5
+# mask 5300131 off
+# textboxarrow 0 2
+# voice 530013 "ronginusu_iz_0029"
+@ロンギヌス
+やああああああああっ！
+
+# textwindow "close"
+# se "SE_4200"
+# rightout 5300131 0.3
+# waitandnext 0.5
+
+;;//ロンギヌスがティルフィングの神器を払う
+# shake 0 0.5
+# fadein "white" 0.5
+# se "SE_9037"
+# effectbody 1001 1 0 0 0
+# effectstart 1001
+# emotionbody 1000 15 5101431 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5101431 2 0
+# face 5101431 "angry"
+# alpha 5101431 1 0
+# mask 5101431 on
+# move 5300131 5 0
+# alpha 5300131 1 0
+# mask 5300131 on
+# move 5300131 4 0.2
+# waitandnext 1.0
+
+# effectskip 1000
+# alpha 5101431 0 0.5
+# alpha 5300131 0 0.5
+# waitandnext 0.5
+
+# move 5100231 2 0
+# face 5100231 "sad"
+# alpha 5100231 1 0.5
+# move 5100231 3 0.5
+# textwindow "normal"
+# textboxarrow 0 2
+@レーヴァテイン
+ああ…カハッ…！
+
+# move 5300131 2 0
+# face 5300131 "sad"
+# alpha 5300131 1 0.5
+# move 5100231 4 0.5
+# mask 5300131 on
+# mask 5100231 on
+# textboxarrow 0 1
+@ロンギヌス
+レーヴァテイン、
+しっかりして下さい…！
+
+# alpha 5300131 0 0.5
+# alpha 5100231 0 0.5
+# move 5103521 3 0
+# face 5103521 "happy"
+# alpha 5103521 1 0.5
+# mask 5103521 off
+# textboxarrow 0 2
+@ダモクレス
+すぐにクレスが癒すよ！
+大丈夫だからねっ
+
+# alpha 5103521 0 0.5
+# emotionbody 1000 15 5101431 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5101431 3 0
+# face 5101431 "sad"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+@ティルフィング
+アアアアアアアアアアッ…
+
+# effectskip 1000
+# alpha 5101431 0 0.5
+# move 5302521 3 0
+# face 5302521 "surprise"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textwindow "moya"
+# textboxarrow 0 0
+;;ミネルヴァ（独白）
+@ミネルヴァ
+ティルフィングの様子が…
+心が揺らいでいるんですね
+きっと今なら…！
+
+# face 5302521 "normal"
+# textwindow "normal"
+# textboxarrow 0 2
+@ミネルヴァ
+ヘレナ！
+もう一度、お願いします！
+
+# alpha 5302521 0 0.5
+# move 5302811 3 0
+# face 5302811 "normal"
+# alpha 5302811 1 0.5
+# mask 5302811 off
+# textboxarrow 0 2
+@ヘレナ
+ああ…
+アナタ達に迷惑をかけてしまったな
+
+# face 5302811 "usual"
+# textboxarrow 0 2
+@ヘレナ
+今度こそ、ヘレナが決める！！
+
+# textwindow "close"
+# alpha 5302811 0 0.5
+# emotionbody 1000 15 5101431 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5101431 3 0
+# face 5101431 "angry"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# waitandnext 1.0
+
+;;//ティルフィングの暴走を解く
+# bgm "stop"
+# se "SE_0994"
+# fadein "white" 0.5
+# face 5101431 "surprise"
+# effectskip 1000
+# brightness 5101431 1 0.5
+# mask 5101431 off
+# waitandnext 1.5
+
+# face 5101431 "sad"
+# textwindow "normal"
+# textboxarrow 0 2
+@ティルフィング
+アアアアアアアアアアアアアアアアア
+アアアアアアアアアアあああっ…
+
+# textwindow "close"
+;;//ティルフィングが倒れる
+# alpha 5101431 0 0.5
+# waitandnext 0.5
+
+# shake 0 0.2
+# se "SE_3001"
+# waitandnext 0.5
+
+# move 5302811 2 0
+# face 5302811 "normal"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# move 5302521 4 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 on
+# textwindow "normal"
+# textboxarrow 0 1
+# voicedelay 530281 "herena_di_0007" 0.8
+@ヘレナ
+ふぅ…
+これで解けてなかったら、
+もうヘレナは知らないよ…くふっ
+
+# face 5302521 "happy"
+# textboxarrow 0 3
+@ミネルヴァ
+何とかなりましたね…
+
+# textwindow "close"
+# alpha 5302811 0 0.5
+# alpha 5302521 0 0.5
+# waitandnext 0.5
+
+# move 5100231 3 0
+# alpha 5100231 1 0.5
+# face 5100231 "normal"
+# mask 5100231 off
+# waitandnext 0.5
+
+# face 5100231 "happy"
+# textwindow "normal"
+# textboxarrow 0 2
+@レーヴァテイン
+ティル…良かった
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 5100231 0 0
+;;//背景：森：forest
+# background "forest"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# alpha 5302811 0 0
+# emotionbody 2000 15 5103621 0 0
+# effectpattern 2000 1 0
+# effectstart 2000
+# move 5103621 3 0
+# face 5103621 "angry"
+# alpha 5103621 1 0
+# mask 5103621 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textwindow "normal"
+# textboxarrow 0 2
+@ラグナロク
+アアアアアアアアアアア！
+
+;;//射撃音
+# textwindow "close"
+# fadein "white" 1.0
+# shake 0 1.0
+# se "SE_12462"
+# waitandnext 1.0
+
+# alpha 5103621 0 0.5
+# effectskip 2000
+# move 5503111 3 0
+# face 5503111 "sad"
+# alpha 5503111 1 0.5
+# mask 5503111 off
+# textwindow "normal"
+# textboxarrow 0 2
+@ソロモン
+何とか森の中まで誘導できたけど…
+困ったわね
+
+# alpha 5503111 0 0.5
+# move 5100131 2 0
+# face 5100131 "normal"
+# alpha 5100131 1 0.5
+# mask 5100131 on
+# move 5200431 4 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+# textboxarrow 0 1
+# voice 510013 "masamune_iz_0001"
+@マサムネ
+如何した？
+何か不都合なことが起きたのか？
+
+# textboxarrow 0 3
+@パラシュ
+多少の障害なら叩き潰せばいい
+気にすることじゃないよ
+
+# alpha 5100131 0 0.5
+# alpha 5200431 0 0.5
+# move 5202521 2 0
+# face 5202521 "happy"
+# alpha 5202521 1 0.5
+# mask 5202521 on
+# move 5401721 4 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# mask 5401721 on
+# textboxarrow 0 1
+# voice 2025 "hercule_0003"
+@エルキュール
+私達の準備は万端です
+作戦も完璧ですから、
+あとは実行あるのみですね！
+
+# face 5401721 "sad"
+# textboxarrow 0 3
+@スイハ
+…………
+
+# alpha 5202521 0 0.5
+# alpha 5401721 0 0.5
+# move 5602511 2 0
+# face 5602511 "happy"
+# alpha 5602511 1 0.5
+# mask 5602511 off
+# se "SE_10527"
+# move 5602511 3 0.3
+# textboxarrow 0 2
+# voice 560251 "chalice_di_kyara_1014"
+@カリス
+やっほい！
+怪我してもカリスちゃんが
+すぐに癒すよ～
+
+# alpha 5602511 0 0.5
+# move 5100131 3 0
+# face 5100131 "normal"
+# alpha 5100131 1 0.5
+# mask 5100131 off
+# textboxarrow 0 2
+@マサムネ
+ふむ
+やはり問題はなさそうだが…
+
+# alpha 5100131 0 0.5
+# move 5503111 2 0
+# face 5503111 "surprise"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# move 5602511 4 0
+# face 5602511 "normal"
+# alpha 5602511 1 0.5
+# mask 5602511 on
+# textboxarrow 0 1
+# voice 550311 "solomon_di_0026"
+@ソロモン
+君達、本気で言ってるの…！？
+信じられない…
+
+# face 5602511 "surprise"
+# textboxarrow 0 3
+@カリス
+ソロモン、怖い顔してどうしたの？
+お腹痛いのかな？
+
+# face 5503111 "sad"
+# textboxarrow 0 1
+@ソロモン
+違うわ…
+どちらかというと頭が痛いの
+
+# face 5602511 "happy"
+# textboxarrow 0 3
+# voice 560251 "chalice_di_event_1003"
+@カリス
+頭痛だねっ
+よ～し、わたしが治療するよ
+
+# alpha 5602511 0 0.5
+# alpha 5503111 0 0.5
+# move 163 3 0
+# alpha 163 1 0.5
+# textboxarrow 0 2
+# voice 9951 "kipuru_0055"
+@キプル
+カリス…
+ソロモンさんが言っているのは
+そういう意味では…
+
+# alpha 163 0 0.5
+# move 5200431 2 0
+# face 5200431 "angry"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+# move 5401721 4 0
+# alpha 5401721 1 0.5
+# mask 5401721 on
+# textboxarrow 0 1
+@パラシュ
+回りくどいな
+はっきり言ったらどうだい
+
+# face 5401721 "sad"
+# textboxarrow 0 3
+# voice 4017 "suiha_0002"
+@スイハ
+あの…
+
+;;スイハ（独白）
+# move 5401721 4 0
+# textwindow "moya"
+# textboxarrow 0 0
+@スイハ
+ソロモンが言いたいことは
+何となく分かるんだけど…
+
+;;スイハ（独白）
+# textboxarrow 0 0
+@スイハ
+この作戦を立てるとき、ミネルヴァや
+アルテミスにも散々指摘されたこと
+だから
+
+# alpha 5200431 0 0.5
+# alpha 5401721 0 0.5
+# move 5503111 3 0
+# face 5503111 "sad"
+# alpha 5503111 1 0.5
+# mask 5503111 off
+# textwindow "normal"
+# textboxarrow 0 2
+@ソロモン
+分かった
+それなら、はっきり言わせてもらうわ
+君達…
+
+# bgm “stop”
+# shake 0 0.5
+# voice 550311 "solomon_di_0014"
+# face 5503111 "angry"
+# textboxarrow 0 2
+@ソロモン
+どうして剣と斧だけなの！？
+ラグナロクは銃撃をしてくるのよっ
+
+# textboxarrow 0 2
+# face 5503111 "sad"
+@ソロモン
+あの射程に対抗できるのは、
+私一人だけって…作戦が破綻して
+いるでしょっ
+
+# alpha 5503111 0 0.5
+# move 5401721 3 0
+# face 5401721 "sad"
+# alpha 5401721 1 0.5
+# textwindow "moya"
+# mask 5401721 off
+# textboxarrow 0 0
+;;スイハ（独白）
+@スイハ
+ああ、やっぱり…

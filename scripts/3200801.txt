@@ -1,0 +1,218 @@
+;;背景画像"004_wildland"
+# script "lisp"
+# background "walpurgis"
+# bgmfile "bgm059" "BgmMMcollabo001" 0
+;;まどか準備
+# body 401111
+# pos 401111 3
+;;黒準備
+# imageset 1 "bg_black"
+# imagepos 1 0 0
+# imagelayer 1 6
+# imagealpha 1 0 0
+# textwindow "close"
+# se "SE_0636"
+# face 401111 "cry"
+# waitandnext 1
+
+# textwindow "nomal"
+# serif 0
+# textboxarrow 0 2
+# chara 401111
+# voice 9940 "fok_collabo3_0153_madoka"
+@鹿目まどか
+来た
+
+# se "SE_0631"
+;;フェードアウト
+# imagepos 1 0 0
+# imagealpha 1 1 1
+# waitandnext 1
+
+# alpha 401111 0 0
+;;フェードイン
+# imagepos 1 0 0
+# imagealpha 1 0 1
+;;画面ゆらす
+# shakeloop 1
+;;ワルプル準備
+# body 900022
+# mask 900022 off
+# alpha 900022 0 0
+# pos 900022 3
+# se "SE_0637"
+# textwindow "close"
+# waitandnext 1.5
+
+;;結界出現演出
+# flush "white" 0.1 1
+# se "SE_0621"
+# fillrect "blue" 1.0 0 0.3
+;;ワルプルギスの夜 IN
+# alpha 900022 1 1
+# waitandnext 1.5
+
+;;フェードアウト
+# fillrect "blue" 2 0.3 0
+# imagepos 1 0 0
+# imagealpha 1 1 1
+# waitandnext 1
+
+;;フェードイン
+# imagepos 1 0 0
+# imagealpha 1 0 1
+# body 501411
+# pos 501411 1
+# body 501311
+# pos 501311 3
+# body 0
+# pos 0 5
+# layer 0 1
+;;ワルプル消す
+# alpha 900022 0 0
+;;画面止める
+# shakestop
+# face 501411 "sad1"
+# face 501311 "amazed"
+# waitandnext 1
+
+# textwindow "nomal"
+# serif 0
+# textboxarrow 0 3
+# chara 0
+# voice 9940 "fok_collabo3_0154_durin"
+# face  0 "angry"
+@デュリン
+なによあれ！！
+あんな異族、見たことないわよ！
+
+;;ほむら台詞
+# serif 1
+# textboxarrow 1 2
+# chara 501311
+# voice 9940 "fok_collabo3_0155_homura"
+# face 501311 "angry"
+@暁美ほむら
+あれは異族じゃないわ
+
+;;マミ台詞
+# serif 0
+# textboxarrow 0 1
+# chara 501411
+# voice 9940 "fok_collabo3_0156_mami"
+# face 501411 "sad2"
+@巴マミ
+最悪で、最強の、魔女よ
+
+;;ティル準備
+# body 101411
+# pos 101411 1
+# scale 101411 0.9 0
+# layer 101411 4
+# alpha 101411 0 0
+;;デュリン台詞
+# serif 1
+# textboxarrow 1 3
+# chara 0
+# voice 9940 "fok_collabo3_0157_durin"
+# face 0 "sad"
+@デュリン
+魔女？
+
+;;マミ消す
+# alpha 501411 0 0.5
+;;ティル出す
+# alpha 101411 1 0.5
+;;ティル台詞
+# serif 0
+# textboxarrow 0 1
+# chara 101411
+# voice 9940 "fok_collabo3_0158_tyrufing"
+# face 101411 "angry"
+@ティルフィング
+ワルプルギスの夜…
+私は、あれがこの世界を
+滅ぼすのを見たんです
+
+;;フェードアウト
+# imagepos 1 0 0
+# imagealpha 1 1 1
+# waitandnext 1
+
+# textboxarrow 0 0
+# textboxarrow 1 0
+;;フェードイン
+# imagepos 1 0 0
+# imagealpha 1 0 1
+;;デュリン、ティル、ほむら、消す
+# alpha 101411 0 0
+# alpha 501311 0 0
+# alpha 0 0 0
+;;ワルプル出す
+# alpha 900022 1 0
+;;画面ゆらす
+# shakeloop 0
+# waitandnext 1
+
+;;ワルプルギスの夜、世界を崩壊させていく。(立ち絵と破壊音？)
+# se "SE_0638"
+;フラッシュ
+# flush "white" 0.2 2
+;;フェードアウト
+# imagepos 1 0 0
+# imagealpha 1 1 1
+# waitandnext 1
+
+;;フェードイン
+# imagepos 1 0 0
+# imagealpha 1 0 1
+;;ティル、ほむら、まどか出す
+# alpha 101411 1 0
+# alpha 501311 1 0
+# move 401111 5 0
+# alpha 401111 1 0
+# face 401111 "usual"
+;;ワルプル消す
+# alpha 900022 0 0
+;;画面とめる
+# shakestop
+# waitandnext 1
+
+# serif 1
+# textboxarrow 1 2
+# chara 501311
+# voice 9940 "fok_collabo3_0159_homura"
+@暁美ほむら
+行きましょう
+
+# serif 0
+# textboxarrow 0 1
+# chara 101411
+# voice 9940 "fok_collabo3_0160_tyrufing"
+@ティルフィング
+私も
+
+# serif 1
+# textboxarrow 1 3
+# chara 401111
+# voice 9940 "fok_collabo3_0161_madoka"
+@鹿目まどか
+大丈夫。魔女は魔法少女に任せて
+
+# alpha 101411 0 0.5
+# body 301511
+# pos 301511 1
+# face 301511 "angry"
+# alpha 301511 0 0
+# waitandnext 1
+
+;;杏子出す
+# alpha 301511 1 0.5
+;;杏子台詞
+# serif 0
+# textboxarrow 0 1
+# chara 301511
+# voice 9940 "fok_collabo3_0162_kyoko"
+@佐倉杏子
+うちらの世界の魔女だ
+自分のケツは、自分で拭くよ

@@ -1,0 +1,523 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第４章 タイトル：「世界樹の子―インベイション―」
+;;第1話　タイトル：ユグドラシルへ
+;;4_1_11_1
+;;スクリプト最後の背景：道路
+;;-----------------------------------------
+# script "lisp"
+# background "in_cityroad"
+# bgm "bgm102" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;魔獣化ミョルニル
+# body 1200111
+# pos 1200111 3
+# scale 1200111 0.8 0
+# layer 1200111 2
+# alpha 1200111 0 0
+# mask 1200111 off
+# brightness 1200111 0.5 0
+;;ピサール
+# body 3302011
+# pos 3302011 3
+# scale 3302011 0.8 0
+# layer 3302011 2
+# alpha 3302011 0 0
+# mask 3302011 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第1話　タイトル：ユグドラシルへ
+;;//背景：道路
+# se "SE_0882"
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0
+# mask 210 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9936 "kamito_0030"
+@カミト
+マサムネ、大丈夫かな…？
+
+# alpha 210 0 0.5
+# move 3501711 3 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0007"
+@グリモワール
+とりあえず振り切ったわね
+マサムネは…無事であることを
+祈っておきましょっ
+
+# move 3501711 2 0.5
+# mask 3501711 on
+# move 3302011 4 0
+# face 3302011 "usual"
+# alpha 3302011 1 0.5
+# mask 3302011 on
+# textboxarrow 0 3
+# voice 330201 "pisear_t_0001"
+@ピサール
+ねえ～
+ホッとしてるところ
+悪いんだけど～
+
+# face 3501711 "angry"
+# textboxarrow 0 1
+@グリモワール
+今度は何！？
+
+# textboxarrow 0 3
+@ピサール
+前にも何かいるのよね～
+
+# alpha 3501711 0 0.5
+# alpha 3302011 0 0.5
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# voice 9936 "kamito_0026"
+@カミト
+ええっ？
+…本当だ！
+道路の真ん中に立ってる
+
+;;//画面スライド
+;;//魔獣化ミョルニルが立っている
+# se "SE_0813"
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 210 0 0
+# move 1200111 3 0
+# face 1200111 "angry_1"
+# alpha 1200111 1 0
+# mask 1200111 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgmfile "bgm160_161" "BgmPJZero001" 0
+# se "SE_0847"
+# textboxarrow 0 2
+# textwindow "normal"
+@？？？
+ガアアアアアアアアア！
+
+# alpha 1200111 0 0.5
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# move 210 4 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+@アスカロン
+このままだとぶつかります！
+
+# face 210 "angry"
+# textboxarrow 0 3
+@カミト
+でもっ、避けられるだけの
+道幅もないよ！
+
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# move 3501711 2 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 1
+# move 3302011 4 0
+# face 3302011 "happy"
+# alpha 3302011 1 0.5
+# mask 3302011 on
+@グリモワール
+とりあえず止まって…
+ピサール何やってるの！？
+
+# textboxarrow 0 3
+# voice 330201 "pisear_t_0004"
+@ピサール
+ふふっ
+あんなところに立ってるなんて～
+すご～い
+
+# se "SE_0882_speedup"
+# textboxarrow 0 3
+# voice 330201 "pisear_t_0033"
+@ピサール
+きっと楽園に連れていって
+欲しいんだね～
+オッケー、オッケー
+
+# alpha 3501711 0 0.5
+# move 210 2 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 1
+# voice 9936 "kamito_0024"
+@カミト
+何で加速してるの！？
+無茶苦茶だよっ
+
+# se "SE_5226"
+# alpha 210 0 0.5
+# alpha 3302011 0 0.5
+# move 1200111 3 0
+# face 1200111 "angry_1"
+# alpha 1200111 1 0.5
+# mask 1200111 off
+# textboxarrow 0 2
+@？？？
+ゴアアアアアアアアアア！！
+
+# alpha 1200111 0 0.5
+# move 3102311 3 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+# voice 310231 "ascalon_a_0026"
+@アスカロン
+向こうの人も大きなハンマーを
+振り上げました！
+あんなので殴られたら…
+
+# move 3102311 2 0.5
+# mask 3102311 on
+# move 3501711 4 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+@グリモワール
+飛び降りるわよ！
+アスカロン、マスターをお願い！
+ワタシは防御術式を張るからっ
+
+# face 3102311 "angry"
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0032"
+@アスカロン
+はい！
+マスター、失礼しますっ
+
+# se "SE_9021"
+# textwindow "close"
+# leftout 3102311 0.5
+# waitandnext 0.8
+
+# alpha 3102311 0 0
+# alpha 3501711 0 0.5
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9936 "kamito_0026"
+@カミト
+ええっ…？
+うわあああああああああ！？
+
+# alpha 210 0 0.5
+# move 3302011 3 0
+# face 3302011 "happy"
+# alpha 3302011 1 0.5
+# mask 3302011 off
+# textboxarrow 0 2
+# voice 330201 "pisear_t_unit_0008"
+@ピサール
+ふふっ
+楽園に、いきなさい
+
+# sestop "SE_0882"
+# textwindow "close"
+# alpha 3302011 0 0.5
+# waitandnext 0.5
+
+# se "SE_11591"
+# waitandnext 0.5
+
+;;//激突音
+;;//車が爆発炎上する
+;;//炎上演出
+# se "SE_11586"
+# fadein "white" 0.5
+# envbody 1000 7 0
+# effectstart 1000
+# waitandnext 0.5
+
+# move 1200111 3 0
+# face 1200111 "angry_1"
+# alpha 1200111 1 0.5
+# mask 1200111 off
+# textboxarrow 0 2
+# textwindow "normal"
+@？？？
+ガアアアアアアア…！
+
+# effectskip 1000
+# alpha 1200111 0 0.5
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# voice 9936 "kamito_0030"
+@カミト
+本当に車ごと突っ込むなんて…
+
+# move 3102311 2 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# move 210 4 0.5
+# mask 210 on
+@アスカロン
+マスター、怪我してませんかっ？
+
+# face 210 "happy"
+# textboxarrow 0 3
+# voice 9936 "kamito_0032"
+@カミト
+あ、うん
+ありがとう
+
+# alpha 3102311 0 0.5
+# move 3501711 2 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 1
+# voice 350171 "grimoire_ge_0027"
+@グリモワール
+無事なら、さっさと立ちなさい！
+…まだ終わってないわよ
+
+# alpha 210 0 0.5
+# move 3302011 4 0
+# face 3302011 "sad"
+# alpha 3302011 1 0.5
+# mask 3302011 on
+# textboxarrow 0 3
+# voice 330201 "pisear_t_0031"
+@ピサール
+ごめ～ん
+せっかくの車、台無しに
+しちゃった～
+
+# face 3501711 "angry"
+# textboxarrow 0 1
+@グリモワール
+ピサール！
+後ろっ！
+
+# effectstart 1000
+# alpha 3501711 0 0.5
+# alpha 3302011 0 0.5
+# move 1200111 3 0
+# face 1200111 "angry_1"
+# alpha 1200111 1 0.5
+# mask 1200111 off
+# textboxarrow 0 2
+@？？？
+ガアアアアアアアアア！
+
+;;//魔獣化ミョルニルが突っ込んでくる
+# se "SE_9092"
+# textwindow "close"
+# leftout 1200111 0.5
+# waitandnext 0.5
+
+# effectskip 1000
+# alpha 1200111 0 0
+# move 3302011 3 0
+# face 3302011 "usual"
+# alpha 3302011 1 0.5
+# mask 3302011 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 330201 "pisear_t_0020"
+@ピサール
+あらぁ～
+楽園にいきそびれたのね～
+
+# se "SE_5207"
+# face 3302011 "normal"
+# textboxarrow 0 2
+@ピサール
+だったら…
+面倒だけど、ちゃんと
+送ってあげるからね～
+
+# alpha 3302011 0 0.5
+# move 1200111 3 0
+# face 1200111 "angry_1"
+# alpha 1200111 1 0.5
+# mask 1200111 off
+# textflame 1 1
+# textboxarrow 0 2
+@？？？
+ガアアアアアアアア！
+ガアアアアアアアアアア！！
+
+# se "SE_4100"
+# waitandnext 0.5
+
+# textwindow "close"
+# alpha 1200111 0 0.5
+# move 3302011 3 0
+# face 3302011 "normal"
+# alpha 3302011 1 0.5
+# mask 3302011 off
+# waitandnext 0.6
+
+# se "SE_4601"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 3302011 "sad"
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 330201 "pisear_t_battle_0008"
+@ピサール
+痛ぁい！
+
+# alpha 3302011 0 0.5
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+…………
+
+# alpha 210 0 0.5
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0009"
+@グリモワール
+マスター、前に出すぎよ！
+もっと下がって！
+
+# alpha 3501711 0 0.5
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+やっぱり間違いない…
+あいつは、あのとき襲ってきた
+キラーメイルの一人だ
+
+# alpha 210 0 0.5
+# move 3102311 3 0
+# face 3102311 "surprise"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+# voice 310231 "ascalon_a_0022"
+@アスカロン
+あ！
+本当ですっ
+それじゃ、シユウとヴァングさんは…
+
+# alpha 3102311 0 0.5
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+あいつを正気に戻したら、
+兄貴とシユウのことが分かるかも
+しれない…
+
+# face 210 "angry"
+# textboxarrow 0 2
+@カミト
+アスカロン、グリモワール、頼む！
+あいつを押さえ込んでっ
+
+# textboxarrow 0 2
+@カミト
+マサムネのときのように、
+僕が決めてみせるからっ
+
+# alpha 210 0 0.5
+# move 3102311 2 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 3501711 4 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+@グリモワール
+また無茶を言ってくれるわね！
+
+# se "SE_5205"
+# face 3102311 "angry"
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0033"
+@アスカロン
+マスターのご命令なら、
+必ず成し遂げてみせます！
+
+# face 3501711 "angry"
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0028"
+@グリモワール
+ああ、もうっ…！
+アスカロン、
+ワタシの足を引っ張るんじゃないわよ
+
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_unit_0012"
+@アスカロン
+はい！
+いきましょう、グリモワール

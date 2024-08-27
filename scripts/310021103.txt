@@ -1,0 +1,406 @@
+;;-----------------------------------------
+;;SEA1章_10_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "bgm023" 0
+;;-----------------------------------------
+;;ゼロ
+# body 23
+# pos 23 2
+# scale 23 0.8 0
+# layer 23 2
+# mask 23 off
+# alpha 23 0 0
+# body 1100211
+# alpha 1100211 0 0
+;;与一
+# body 6400511
+# pos 6400511 3
+# scale 6400511 0.8 0
+# layer 6400511 4
+# mask 6400511 off
+# alpha 6400511 0 0
+;;衛兵
+# body 12
+# pos 12 4
+# scale 12 0.8 0
+# layer 12 5
+# mask 12 off
+# alpha 12 0 0
+;;グングニル
+# body 300841
+# pos 300841 4
+# scale 300841 0.8 0
+# layer 300841 4
+# alpha 300841 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：町
+# textwindow "close"
+# waitandnext 0.2
+
+# background "006_town"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 11002 "laevateinm_battle_0001"
+# face 23 "angry_2"
+# face 300841 "angry"
+# alpha 23 1 0.3
+# alpha 300841 1 0.3
+# se "SE_4001"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ゼロ
+はぁっ！
+
+# se "SE_4200"
+# voice 3008 "gunguniru_0004"
+# textboxarrow 0 3
+@グングニル
+ふっ！
+
+;;ゼロとグングニルが切り結ぶ
+# effectbody 1000 2 0 0 0
+# effectstart 1000
+# fadein "white" 0.5
+# se "SE_9017"
+# move 23 1 0.3
+# move 300841 3 0.2
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# voice 11002 "laevateinm_battle_0005"
+# face 23 "angry_1"
+# textboxarrow 0 1
+@ゼロ
+くっ…
+
+# face 300841 "normal"
+# textboxarrow 0 2
+@グングニル
+どうした？
+腕が鈍ったか？
+
+# alpha 23 0 0.3
+# alpha 300841 0 0.3
+# face 6400511 "sad"
+# alpha 6400511 1 0.3
+# textboxarrow 0 2
+@与一
+…………
+
+# move 23 2 0
+# layer 23 4
+# mask 23 on
+# face 23 "angry_1"
+# alpha 23 1 0.3
+# move 300841 4 0
+# layer 300841 3
+# mask 300841 off
+# face 300841 "usual"
+# alpha 300841 1 0.3
+# alpha 6400511 0 0.3
+# textboxarrow 0 3
+@グングニル
+与一も如何した？
+先程から、我に矢がかすりもせぬぞ
+
+# textboxarrow 0 3
+@グングニル
+この程度の距離
+そなたには容易かろうに
+鍛錬の成果を発揮してみよ
+
+# textboxarrow 0 1
+@ゼロ
+こいつ…！
+余裕振りやがって
+
+;;ゼロとグングニルが離れる
+# move 23 1 0.4
+# move 300841 5 0.4
+# se "SE_9086"
+# sedelay "SE_9021" 0.5
+# waitandnext 0.5
+
+# move 6400511 1 0
+# layer 6400511 4
+# mask 6400511 on
+;;グングニルが扇を広げる
+# se "SE_6208"
+# face 300841 "normal"
+# textboxarrow 0 3
+@グングニル
+そうだ
+こうすれば狙いが
+定まりやすいのではないか？
+
+# alpha 23 0 0.3
+# face 6400511 "surprise"
+# alpha 6400511 1 0.3
+# textboxarrow 0 1
+@与一
+あ…！？
+扇を…
+
+# textboxarrow 0 3
+@グングニル
+我の趣味ではないが
+たまには趣向を変えるのも良かろう
+そなたの面目躍如といこうぞ
+
+# textboxarrow 0 3
+@グングニル
+見事、この扇ごと
+我を射抜いてみせよ
+
+# move 23 3 0
+# face 6400511 "sad"
+# layer 23 4
+# mask 23 off
+# textboxarrow 0 1
+@与一
+…………
+
+# alpha 300841 0 0.3
+# alpha 6400511 0 0.3
+# face 23 "angry_1"
+# alpha 23 1 0.3
+# textboxarrow 0 2
+@ゼロ
+与一、チャンスだ！
+わざわざ格好の的を用意しやがった
+
+# move 300841 4 0
+# move 6400511 2 0
+# textboxarrow 0 2
+@ゼロ
+余裕ぶってるグングニルに痛い目を
+見せてやれ！
+
+# face 6400511 "sad"
+# face 300841 "usual"
+# alpha 6400511 1 0.3
+# alpha 300841 1 0.3
+# alpha 23 0 0.3
+# se "SE_4300"
+# textboxarrow 0 1
+@与一
+与一は…
+与一はっ…！
+
+# alpha 300841 0 0.3
+# alpha 6400511 0 0.3
+# face 23 "surprise"
+# alpha 23 1 0.3
+# textboxarrow 0 2
+@ゼロ
+どうした与一！？
+おいっ？
+
+# voice 4005 "yoichi_0031"
+# face 6400511 "sad"
+# face 300841 "usual"
+# alpha 300841 1 0.3
+# alpha 6400511 1 0.3
+# alpha 23 0 0.3
+# se "SE_5200"
+# textboxarrow 0 1
+@与一
+ごめんなさい…
+
+# face 300841 "sad"
+# textboxarrow 0 3
+@グングニル
+…哀れな
+
+# textboxarrow 0 3
+@グングニル
+託された相手として
+少々期待していたのだがな
+そなたは何も変わっておらぬか
+
+# textboxarrow 0 1
+@与一
+…………
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# se "SE_0607"
+# sedelay "SE_6193" 1
+# alpha 300841 0 0.3
+# alpha 6400511 0 0.3
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@住民達
+おおおおおおおおおおおおお！
+東門二つとも制圧だあああ！
+
+# move 23 2 0
+# layer 23 4
+# mask 23 on
+# face 23 "normal"
+# alpha 23 1 0.3
+# move 300841 4 0
+# layer 300841 2
+# mask 300841 off
+# face 300841 "angry"
+# alpha 300841 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+@グングニル
+む…
+
+# bgm "bgm035" 0
+# face 23 "sad"
+# textboxarrow 0 1
+@ゼロ
+ふぅ…
+ちょっと焦ったが、
+計画は上手くいったようだな
+
+# voice 3008 "gunguniru_0039"
+# face 300841 "usual"
+# textboxarrow 0 3
+@グングニル
+なるほど
+そなたらは初めから囮か
+
+# face 23 "normal"
+# textboxarrow 0 1
+@ゼロ
+お前を俺達が相手している間に、
+町の連中で東門を攻略する
+そういう手はずだったんだよ
+
+# face 23 "angry_1"
+# textboxarrow 0 1
+@ゼロ
+これで八つの門、全て開放した！
+
+# textboxarrow 0 3
+@グングニル
+…………
+
+# textboxarrow 0 3
+@グングニル
+ゼロ
+急ぎ、レーヴァテインの様子を
+確認することだな
+
+# textboxarrow 0 1
+@ゼロ
+お前に言われるまでもない
+すぐ会いにいく
+
+# face 300841 "normal"
+# textboxarrow 0 3
+@グングニル
+それでいい
+では、我は引き上げるとしよう
+
+# face 300841 "angry"
+# move 6400511 1 0
+# layer 6400511 4
+# mask 6400511 on
+# textboxarrow 0 3
+@グングニル
+いや、その前に
+与一！
+
+# move 23 1 0.5
+# alpha 23 0 0.3
+# move 6400511 2 0.5
+# face 6400511 "sad"
+# alpha 6400511 1 0.3
+# textboxarrow 0 1
+@与一
+あ…あの…
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 7
+# textboxarrow 0 3
+@グングニル
+そなたが、
+あの頃から変わっておったのなら
+
+# textboxarrow 0 3
+@グングニル
+あるいは別の道も
+拓けるかと思ったが…
+
+# textboxarrow 0 3
+@グングニル
+結局、何も変わっておらんのだな
+
+# textboxarrow 0 1
+@与一
+…………
+
+# textboxarrow 0 3
+@グングニル
+ならば、そなたは門が閉じぬよう
+ここで押さえておく役くらいが
+お似合いだ
+
+;;グングニルが立ち去る
+# move 23 5 0
+# layer 23 2
+# mask 23 off
+# move 300841 5 0.5
+# alpha 300841 0 0.3
+# se "SE_0740"
+# textwindow "close"
+# waitandnext 0.8
+
+# move 23 4 0.5
+# face 23 "normal"
+# alpha 23 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@ゼロ
+何だ、あいつ？
+負け惜しみにしては妙な言いぐさだな
+
+# textboxarrow 0 3
+@ゼロ
+与一
+ここを任せていいか？
+俺はアマネのところに行ってくる
+
+# voice 4005 "yoichi_0032"
+# face 6400511 "angry"
+# textboxarrow 0 1
+@与一
+あ、はいっ
+お任せ下さい…
+
+;;ゼロが立ち去る
+# move 23 5 0.5
+# alpha 23 0 0.5
+# se "SE_0874"
+# textboxarrow 0 0
+# waitandnext 1
+
+# face 6400511 "sad"
+# textboxarrow 0 1
+@与一
+…………やっぱり与一は、
+ダメダメです
+
+# fadeout "black" 0.5
+# waitandnext 0.5

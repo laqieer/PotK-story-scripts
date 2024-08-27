@@ -1,0 +1,281 @@
+;;-----------------------------------------
+;;SEA2章_1
+;;-----------------------------------------
+# script "lisp"
+# background "diary"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;-----------------------------------------
+;;紙
+# imageset 0 "SEA_diary_bg"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imagescale 0 1.2 0
+;;1枚め
+# imageset 1 "SEA_diary_201"
+# imagealpha 1 0 0
+# imagescale 1 1 0
+# imagelayer 1 3
+;;-----------------------------------------
+;;日記演出
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_6165"
+# face 270 "normal"
+# alpha 270 1 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+旅の記録四十二日目――
+
+;;ミーミル消す
+;;テキストウィンドウを外す
+# alpha 270 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;フレームを外す
+# frameout 0 1
+# waitandnext 1
+
+;;紙を表示
+# imagealpha 0 1 1
+# imagepos 0 0 0
+# waitandnext 1
+
+;;1枚目を表示
+# se "SE_6175"
+# imagealpha 1 1 2
+# imagepos 1 0 -1000
+# waitandnext 1
+
+;;1枚目を上に
+# imagemoveto 1 0 900 20
+# waitandnext 18
+
+;;1枚目を消す
+# imagealpha 1 0 2
+# waitandnext 2
+
+;;紙を消す
+# se "SE_6167"
+# imagealpha 0 0 1
+# waitandnext 1
+
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# sestop "SE_6175"
+# framein 0 0
+;;背景：平原
+# background "plain"
+# se "bgm601_windon"
+# face 270 "normal"
+# face 6504011 "usual"
+# alpha 270 1 0
+# alpha 6504011 1 0
+# fadein "black" 1.5
+# waitandnext 1.5
+
+# voice 650401 "manannan_ura_0002"
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+ねえねえ
+ミーミルとマスターは友達？
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+急にどうされました？
+私とマスター様は…
+
+;;選択肢
+# select "友達だよ" "select_label_01" "友達ではないかな" "select_label_02"
+ミーミルとマスターは友達？
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+そのような
+畏れ多いことでございます…
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# voice 9917 "mimir_navikan_0032"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+そうですね
+私はマスター様に
+お仕えする身ですので
+
+# label "select_label_end"
+# voice 650401 "manannan_ura_0028"
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+うーん…
+じゃあ、私とは？
+私とミーミルは友達？
+
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+ええと…
+
+;;選択肢
+# select "友達だね" "select_label_03" "友達かなあ？" "select_label_04"
+じゃあ、私とは？
+私とミーミルは友達？
+
+# label "select_label_03"
+# labeljump "select_label_end2"
+# face 6504011 "surprise"
+# textboxarrow 0 3
+@マナナン
+そうなんだ！
+
+# label "select_label_04"
+# labeljump "select_label_end2"
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+どうなの？
+
+# label "select_label_end2"
+# voice 9917 "mimir_navikan_0001"
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+マスター様
+ここはまず、友達について
+定義づけすべきと存じます
+
+# textboxarrow 0 1
+@ミーミル
+友達…一緒に何かをする、
+気持ちの通い合っている人
+
+# textboxarrow 0 1
+@ミーミル
+一般的な定義としては、
+このようなものではないかと
+
+# textboxarrow 0 1
+@ミーミル
+これを私達の関係に当てはめれば
+良いと存じます
+
+# voice 650401 "manannan_ura_0004"
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+一緒に旅してるってところは
+オッケーだよね
+
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+気持ちが通い合ってる？
+どういうこと…？
+
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+そうですね…
+それにつきましては、
+私にも…
+
+;;ミーミルのペンダントが点滅する
+# face 270 "surprise"
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# se "SE_6191"
+# textwindow "close"
+# effectbody 100 51 -140 35 0
+# effectstart 100
+# waitandnext 1.5
+
+# face 270 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+あっ
+この光は、ティルフィング様からの
+ご連絡です
+
+# serif 1
+# textwindow "nomal"
+@ティルフィング
+聞こえますか、ミーミル？
+
+# serif 0
+# voice 9917 "mimir_navikan_0003"
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+はい、ティルフィング様
+本日はどのようなご用件でしょう？
+
+# serif 1
+@ティルフィング
+そこから半日ほど歩いたところに
+ジーゲルという町があります
+
+# serif 1
+@ティルフィング
+以前から少しおかしな感じが
+していたのですが…
+
+# serif 1
+@ティルフィング
+急激に「揺らぎ」の増大を
+感知しました
+急いで向かってください
+
+# serif 0
+# voice 9917 "mimir_navikan_0003"
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+はい
+畏まりました
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+マスター様、マナナンさん
+急いで向かいましょう
+
+# textboxarrow 0 1
+@ミーミル
+ジーゲルの町へ
+
+# fadeout "black" 1
+# waitandnext 1

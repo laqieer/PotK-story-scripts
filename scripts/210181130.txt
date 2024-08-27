@@ -1,0 +1,696 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第18章 章タイトル：×××アポカリプス
+;;第1話―１３　タイトル：絆を胸に
+;;13_0
+;;スクリプト最後の背景：地上ユグドラシル（コマンドマーク無し差分・昼）
+;;-----------------------------------------
+# script "lisp"
+# background "in_yggdrasill_up"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;フォルカス・神令・ヘル
+# body 5301811
+# pos 5301811 3
+# scale 5301811 0.8 0
+# layer 5301811 2
+# alpha 5301811 0 0
+# mask 5301811 off
+;;イチイバル・神令・オーディン
+# body 5402211
+# pos 5402211 3
+# scale 5402211 0.8 0
+# layer 5402211 2
+# alpha 5402211 0 0
+# mask 5402211 off
+;;グリモワール・獣刻・ニーズヘッグ 大罪ver.
+# body 5501711
+# pos 5501711 3
+# scale 5501711 0.8 0
+# layer 5501711 2
+# alpha 5501711 0 0
+# mask 5501711 off
+;;アスカロン・D. plug・レヴィアタン 大罪ver.
+# body 5102311
+# pos 5102311 3
+# scale 5102311 0.8 0
+# layer 5102311 3
+# alpha 5102311 0 0
+# mask 5102311 off
+;;グランテピエ・獣刻・バハムート
+# body 5303411
+# pos 5303411 3
+# scale 5303411 0.8 0
+# layer 5303411 2
+# alpha 5303411 0 0
+# mask 5303411 off
+;;ゼロ
+# body 23
+# pos 23 3
+# scale 23 0.8 0
+# layer 23 2
+# alpha 23 0 0
+# mask 23 off
+;;カミト義手破壊
+# body 257
+# pos 257 3
+# scale 257 0.8 0
+# layer 257 2
+# alpha 257 0 0
+# mask 257 off
+;;アルテミス（♂）
+# body 1400131
+# pos 1400131 3
+# scale 1400131 0.8 0
+# layer 1400131 2
+# alpha 1400131 0 0
+# mask 1400131 off
+;;アポロン（♂）
+# body 1400331
+# pos 1400331 3
+# scale 1400331 0.8 0
+# layer 1400331 2
+# alpha 1400331 0 0
+# mask 1400331 off
+;;ミョルニル（♂）
+# body 1200111
+# pos 1200111 3
+# scale 1200111 0.8 0
+# layer 1200111 2
+# alpha 1200111 0 0
+# mask 1200111 off
+;;ロンギヌス（♂）
+# body 1300111
+# pos 1300111 3
+# scale 1300111 0.8 0
+# layer 1300111 2
+# alpha 1300111 0 0
+# mask 1300111 off
+;;アスクレピオス（♂）
+# body 1600111
+# pos 1600111 3
+# scale 1600111 0.8 0
+# layer 1600111 2
+# alpha 1600111 0 0
+# mask 1600111 off
+;;アルマス・誓約・ティターニア
+# body 5103811
+# pos 5103811 3
+# scale 5103811 0.8 0
+# layer 5103811 3
+# alpha 5103811 0 0
+# mask 5103811 off
+;;フリズスキャールヴ
+# body 52000411
+# pos 52000411 3
+# scale 52000411 0.8 0
+# layer 52000411 2
+# alpha 52000411 0 0
+# mask 52000411 off
+;;魔獣
+# body 806158
+# pos 806158 3
+# scale 806158 0.8 0
+# layer 806158 2
+# alpha 806158 0 0
+# mask 806158 off
+;;-----------------------------------------
+;;---------------------------------------------
+;;■ゼロ
+;;//立ち絵：キラーメイル・ゼロ
+;;■アスクレピオス（♂）
+;;//立ち絵：キラーメイル・アスクレピオス
+;;■アルテミス（♂）
+;;//立ち絵：キラーメイル・アルテミス
+;;■アポロン（♂）
+;;//立ち絵：キラーメイル・アポロン
+;;■ロンギヌス（♂）
+;;//立ち絵：キラーメイル・ロンギヌス
+;;■ミョルニル（♂）
+;;//立ち絵：キラーメイル・ミョルニル
+;;(♂)表記はスクリプト作成時削除でお願いします
+;;■フリズスキャールヴ
+;;//立ち絵：フリズスキャールヴ
+;;■アルマス
+;;//立ち絵：アルマス・誓約・ティターニア
+;;■グランテピエ
+;;//立ち絵：グランテピエ・獣刻・バハムート
+;;■フォルカス
+;;//立ち絵：フォルカス・神令・ヘル
+;;■アスカロン
+;;//立ち絵：アスカロン・D. plug・レヴィアタン（大罪ver.）
+;;■グリモワール
+;;//立ち絵：グリモワール・獣刻・ニーズヘッグ（大罪ver.）
+;;■イチイバル
+;;//立ち絵：イチイバル・神令・オーディン
+;;■カミト
+;;//立ち絵：カミト（義手破壊差分）
+;;■魔獣
+;;//立ち絵：終焉側の新規エネミー（魔獣）
+;;--------------------------------------------
+;;//背景：地上ユグドラシル（コマンドマーク無し差分・昼）
+;;//バトル
+# voice 11002 "laevateinm_battle_0001"
+# move 23 2 0
+# face 23 "angry_2"
+# alpha 23 1 0
+# mask 23 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 806158 4 0
+# alpha 806158 1 0
+# mask 806158 on
+@ゼロ
+はぁっ！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+# se "SE_4815"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# se "SE_0794"
+# textboxarrow 0 3
+@魔獣
+グガアアアアア…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 806158 0 0.5
+# waitandnext 0.5
+
+# voice 11002 "laevateinm_0013"
+# face 23 "angry_1"
+# textboxarrow 0 1
+# textwindow "normal"
+@ゼロ
+チッ
+いつまで湧き続けるんだ、
+この魔獣どもはっ
+
+;;アスクレピオス（♂）
+# move 1600111 4 0
+# face 1600111 "normal"
+# alpha 1600111 1 0.5
+# mask 1600111 on
+# textboxarrow 0 3
+@アスクレピオス
+僕の計算だと、底なしだね
+
+;;アルテミス（♂）
+# alpha 1600111 0 0.5
+# move 1400131 4 0
+# face 1400131 "angry"
+# alpha 1400131 1 0.5
+# mask 1400131 on
+# textboxarrow 0 3
+@アルテミス
+殲滅が目的じゃない
+被害を最小限に食い止めるための
+行動だ
+
+;;アルテミス（♂）
+# textboxarrow 0 3
+@アルテミス
+愚痴を言う暇があったら
+手を動かせ
+
+;;アポロン（♂）
+# alpha 23 0 0.5
+# move 1400331 2 0
+# face 1400331 "normal"
+# alpha 1400331 1 0.5
+# mask 1400331 on
+# textboxarrow 0 1
+@アポロン
+大丈夫だ！
+筋肉は鍛えれば鍛えるほど
+強くなる
+
+;;アポロン（♂）
+# textboxarrow 0 1
+@アポロン
+さあ、一緒に走ろう！
+
+;;ロンギヌス（♂）
+# alpha 1400331 0 0.5
+# alpha 1400131 0 0.5
+# move 1300111 3 0
+# face 1300111 "normal"
+# alpha 1300111 1 0.5
+# mask 1300111 off
+# textboxarrow 0 2
+@ロンギヌス
+暑苦しい奴だ…
+
+# alpha 1300111 0 0.5
+# move 23 2 0
+# face 23 "normal"
+# alpha 23 1 0.5
+# mask 23 on
+# textboxarrow 0 1
+# move 1600111 4 0
+# face 1600111 "normal"
+# alpha 1600111 1 0.5
+# mask 1600111 on
+@ゼロ
+…町の方は大丈夫なんだろうな？
+妙なキラープリンセスのことも
+気になりやがる
+
+;;アスクレピオス（♂）
+# textboxarrow 0 3
+@アスクレピオス
+数日前に飛び去ったアレだね
+君が心配してるのはレーヴァテインの
+無事だろ？
+
+# face 23 "angry_1"
+# textboxarrow 0 1
+@ゼロ
+黙ってろ、腹黒メガネ
+
+;;ミョルニル（♂）
+# alpha 23 0 0.5
+# alpha 1600111 0 0.5
+# move 1200111 3 0
+# face 1200111 "normal"
+# alpha 1200111 1 0.5
+# mask 1200111 off
+# textboxarrow 0 2
+@ミョルニル
+…ん？
+何か来るぞ
+
+;;//フリズスキャールヴが現れる
+# se "SE_0740"
+;;# voice 5200041 "hlidskjalf_0008"
+# alpha 1200111 0 0.5
+# move 52000411 3 0
+# face 52000411 "usual"
+# alpha 52000411 1 0.5
+# mask 52000411 off
+# textboxarrow 0 2
+@フリズスキャールヴ
+やれやれ…
+そなた達も精が出ることじゃ
+
+# textboxarrow 0 2
+@フリズスキャールヴ
+わらわは戻ることにした
+迎えに行った方が良さそうな者も
+おるのでな
+
+# textboxarrow 0 2
+@フリズスキャールヴ
+「死の君」による救済がもたらされる
+まで、そうして戯れておれ
+
+;;//フリズスキャールヴが立ち去る
+# se "SE_0740"
+# textwindow "close"
+# rightout 52000411 1
+# waitandnext 1
+
+;;//ユグドラシルに入る音（サウンドメモ
+# se "SE_0809"
+# alpha 52000411 0 0
+# waitandnext 0.5
+
+# move 23 2 0
+# face 23 "angry_1"
+# alpha 23 1 0.5
+# mask 23 on
+# textboxarrow 0 1
+# move 1600111 4 0
+# face 1600111 "normal"
+# alpha 1600111 1 0.5
+# mask 1600111 on
+# textwindow "normal"
+@ゼロ
+あいつ…！
+ユグドラシルに入っていきやがった
+
+;;アスクレピオス（♂）
+# textboxarrow 0 3
+@アスクレピオス
+ふぅん…
+そうなると、次は…
+
+;;//アルマス達がやってくる
+# se "SE_5575"
+# alpha 23 0 0.5
+# alpha 1600111 0 0.5
+# move 5103811 2 0
+# face 5103811 "angry"
+# alpha 5103811 1 0.5
+# mask 5103811 on
+# textboxarrow 0 1
+# move 5303411 4 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+@アルマス
+フリズスキャールヴ！
+…あ！
+こっちにキル姫が来なかった？
+
+# move 23 1 0
+# face 23 "normal"
+# alpha 23 1 0.5
+# mask 23 on
+# textboxarrow 0 1
+# move 5103811 3 0.5
+# move 5303411 5 0.5
+@ゼロ
+何が起きてる？
+妙なキラープリンセスなら
+ユグドラシルに入っていったぞ
+
+# voice 530341 "grandepieu_di_0015"
+# face 5303411 "sad"
+# textboxarrow 0 3
+@グランテピエ
+“終焉”のところに向かったのかも
+しれないね
+
+# voice 510381 "almace_ca_0022"
+# face 5103811 "surprise"
+# textboxarrow 0 2
+@アルマス
+それって…
+ちょっとまずくない？
+
+# voice 530341 "grandepieu_di_0003"
+# face 5303411 "normal"
+# textboxarrow 0 3
+@グランテピエ
+うん
+何の対策もせずに“終焉”に近づく
+のは絶対にダメだよっ
+
+# face 5103811 "normal"
+# textboxarrow 0 2
+@アルマス
+分かってる
+だったら…
+
+# textboxarrow 0 3
+@グランテピエ
+一旦、ラグナロクと合流するのは
+どうかな？
+彼女のことも伝えた方が良いよ
+
+# face 5103811 "happy"
+# textboxarrow 0 2
+@アルマス
+それもそうね
+さすが、お姉ちゃん！
+
+# textboxarrow 0 2
+@アルマス
+天上世界に行って、もう一度、
+“絆の繋ぎ手”《テイルリンカー》を
+使うわ
+
+# face 5103811 "angry"
+# textboxarrow 0 2
+@アルマス
+そういうことだから、他のキル姫が
+来たら上手いこと伝えておいて！
+
+;;//アルマスが立ち去る
+# se "SE_0740"
+# textwindow "close"
+# alpha 5103811 0 0.5
+# waitandnext 0.5
+
+# voice 530341 "grandepieu_di_0045"
+# move 23 2 0.5
+# alpha 23 1 0.5
+# mask 23 on
+# move 5303411 4 0.5
+# face 5303411 "angry"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# textboxarrow 0 3
+# textwindow "normal"
+@グランテピエ
+アルマス！
+そういう言い方は良くないよ
+
+# voice 530341 "grandepieu_di_0031"
+# face 5303411 "sad"
+# textboxarrow 0 3
+@グランテピエ
+ごめんなさい
+お願いしてもいい、かな？
+
+# textboxarrow 0 1
+@ゼロ
+お、おう…
+
+# voice 530341 "grandepieu_di_0030"
+# face 5303411 "normal"
+# textboxarrow 0 3
+@グランテピエ
+ありがとう
+それじゃあ、ね
+
+;;//グランテピエが立ち去る
+# se "SE_0740"
+# textwindow "close"
+# alpha 5303411 0 0.5
+# waitandnext 0.5
+
+# voice 11002 "laevateinm_0028"
+# textboxarrow 0 1
+# textwindow "normal"
+@ゼロ
+何だったんだ、今のは…？
+
+;;//フォルカス達がやって来る
+# se "SE_5575"
+# voice 530181 "forcas_c_0002"
+# alpha 23 0 0.5
+# move 5301811 2 0
+# face 5301811 "angry"
+# alpha 5301811 1 0.5
+# mask 5301811 on
+# textboxarrow 0 1
+# move 5102311 4 0
+# face 5102311 "usual"
+# alpha 5102311 1 0.5
+# mask 5102311 on
+@フォルカス
+フリズスキャールヴは！？
+見慣れないキル姫を
+見ませんでしたかっ？
+
+# textboxarrow 0 3
+@アスカロン
+私達、彼女を追ってきたんです！
+アルマス達も来てるはずなんですけど
+見てませんかっ？
+
+# alpha 5301811 0 0.5
+# alpha 5102311 0 0.5
+# move 23 3 0
+# face 23 "surprise"
+# alpha 23 1 0.5
+# mask 23 off
+# textboxarrow 0 2
+@ゼロ
+今度はコマンドキラーズと
+セブンスキラーズだとっ？
+何なんだ、一体…
+
+;;アスクレピオス（♂）
+# voice 16001 "asklepiosm_0003"
+# alpha 23 0 0.5
+# move 5301811 1 0
+# face 5301811 "normal"
+# alpha 5301811 1 0.5
+# mask 5301811 on
+# move 5102311 3 0
+# face 5102311 "usual"
+# alpha 5102311 1 0.5
+# mask 5102311 on
+# move 1600111 5 0
+# face 1600111 "normal"
+# alpha 1600111 1 0.5
+# mask 1600111 on
+# textboxarrow 0 3
+@アスクレピオス
+ああ、うん
+君達の質問には僕が答えよう
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 5301811 0 0
+# alpha 5102311 0 0
+# alpha 1600111 0 0
+# move 5301811 2 0
+# face 5301811 "normal"
+# alpha 5301811 1 0
+# mask 5301811 on
+# move 5102311 4 0
+# face 5102311 "usual"
+# alpha 5102311 1 0
+# mask 5102311 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 1
+# textwindow "normal"
+@フォルカス
+では、アルマス達は天上世界に
+向かったのですね
+
+# voice 310231 "ascalon_a_0028"
+# face 5102311 "sad"
+# textboxarrow 0 3
+@アスカロン
+私達はどうすれば…
+
+# textboxarrow 0 1
+@フォルカス
+私は、フリズスキャールヴを
+追うべきだと考えます
+
+# voice 540221 "ichiibal_c_0002"
+# alpha 5102311 0 0.5
+# move 5402211 4 0
+# face 5402211 "usual"
+# alpha 5402211 1 0.5
+# mask 5402211 on
+# textboxarrow 0 3
+@イチイバル
+“終焉”に近づくのは危険だって
+キミが言ってたんじゃなかったかな？
+
+# face 5301811 "angry"
+# textboxarrow 0 1
+@フォルカス
+だからこそです
+“終焉”と接触する前に
+フリズスキャールヴを討ちます
+
+# alpha 5301811 0 0.5
+# alpha 5402211 0 0.5
+# move 5501711 3 0
+# face 5501711 "usual"
+# alpha 5501711 1 0.5
+# mask 5501711 off
+# textboxarrow 0 2
+@グリモワール
+そうね
+いい加減、後手に回るのは
+うんざりよ
+
+# textboxarrow 0 2
+@グリモワール
+そろそろ、こっちが先手を取る番だわ
+
+# alpha 5501711 0 0.5
+# move 257 3 0
+# face 257 "irregular"
+# alpha 257 1 0.5
+# mask 257 off
+# textboxarrow 0 2
+@カミト
+よし、フリズスキャールヴを追おう
+
+# move 5301811 2 0
+# face 5301811 "angry"
+# alpha 5301811 1 0.5
+# mask 5301811 on
+# textboxarrow 0 1
+# move 257 4 0.5
+# mask 257 on
+@フォルカス
+待って下さい
+マスターはここまでです
+
+# voice 9936 "kamito_0023"
+# face 257 "surprise"
+# textboxarrow 0 3
+@カミト
+えっ…
+
+# textboxarrow 0 1
+@フォルカス
+ここからは更に危険な道程になります
+キル姫でなければ耐えられない
+でしょう
+
+# face 5301811 "normal"
+# textboxarrow 0 1
+@フォルカス
+幸い、どんなに離れていても
+絆が切れることはありません
+ですから…
+
+# voice 9936 "kamito_0035"
+# face 257 "irregular"
+# textboxarrow 0 3
+@カミト
+…分かった
+足手まといにはなりたくない
+ここからみんなを支えるよ
+
+# face 257 "happy"
+# textboxarrow 0 3
+@カミト
+僕はみんなを信じてる
+“終焉”から世界を守り抜いて、
+一緒に家に帰ろう！
+
+# voice 310231 "ascalon_a_0032"
+# alpha 5301811 0 0.5
+# alpha 257 0 0.5
+# move 5501711 2 0
+# face 5501711 "usual"
+# alpha 5501711 1 0.5
+# mask 5501711 on
+# move 5102311 4 0
+# face 5102311 "happy"
+# alpha 5102311 1 0.5
+# mask 5102311 on
+# textboxarrow 0 3
+@アスカロン
+はい！
+ありがとうございます、マスター
+
+# voice 350171 "grimoire_ge_0007"
+# textboxarrow 0 1
+@グリモワール
+フンッ！
+フォルカスの言うことは素直に
+聞くのね
+
+# alpha 5501711 0 0.5
+# alpha 5102311 0 0.5
+# move 5301811 3 0
+# face 5301811 "angry"
+# alpha 5301811 1 0.5
+# mask 5301811 off
+# textboxarrow 0 2
+@フォルカス
+茶化さないで下さい
+さあ、皆さん
+いきますよ
+
+# textboxarrow 0 2
+@フォルカス
+フリズスキャールヴを追って、
+ユグドラシルの内部へ！

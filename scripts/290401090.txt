@@ -1,0 +1,636 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第４章 タイトル：「世界樹の子―インベイション―」
+;;第1話　タイトル：ユグドラシルへ
+;;4_1_9
+;;スクリプト最後の背景：倉庫
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;マサムネ(キラーメイル)
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# layer 1100111 2
+# alpha 1100111 0 0
+# mask 1100111 off
+;;ピサール
+# body 3302011
+# pos 3302011 3
+# scale 3302011 0.8 0
+# layer 3302011 2
+# alpha 3302011 0 0
+# mask 3302011 off
+;;-----------------------------------------
+;;第1話　タイトル：ユグドラシルへ
+;;//背景：下町
+# move 3302011 3 0
+# face 3302011 "usual"
+# alpha 3302011 1 0
+# mask 3302011 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 330201 "pisear_t_0009"
+@ピサール
+あ～、やっと来た～
+おそ～い
+
+# move 210 2 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 1
+# move 3302011 4 0.5
+# mask 3302011 on
+# voice 9936 "kamito_0023"
+@カミト
+ピサール？
+どうして君がここに？
+
+# face 3302011 "sad"
+# textboxarrow 0 3
+# voice 330201 "pisear_t_0028"
+@ピサール
+マスターに監視…じゃなくて
+きみ達を手伝えって命じられたの～
+面倒くさ～い…
+
+# alpha 210 0 0.5
+# move 3501711 2 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 1
+# voice 350171 "grimoire_ge_0027"
+@グリモワール
+面倒くさいのなら、
+無理につき合ってくれなくても
+いいんだけど！
+
+# face 3302011 "usual"
+# textboxarrow 0 3
+@ピサール
+わたしもそうしたいんだけどね～
+命令に従わないと、ミストルティンが
+うるさいのよ～…
+
+# textboxarrow 0 3
+# voice 330201 "pisear_t_0009"
+@ピサール
+今日だって、わたしの葡萄酒を
+全部取り上げて…ひどくな～い？
+
+# alpha 3501711 0 0.5
+# move 210 2 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 1
+# voice 9936 "kamito_0030"
+@カミト
+君も大変そうだね…
+とりあえず、よろしく頼むよ
+
+# alpha 3302011 0 0.5
+# move 1100111 4 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 3
+# voice 11001 "masamunem_0002"
+@マサムネ
+ところで、そこの建物に用があると
+聞いて来たんだが
+何があるんだ？
+
+# face 210 "normal"
+# textboxarrow 0 1
+# voice 9936 "kamito_0003"
+@カミト
+僕もオルフェさんに
+「行けば分かる」としか
+言われてないんだ…
+
+# alpha 1100111 0 0.5
+# move 3501711 4 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0028"
+@グリモワール
+それで素直に従うなんて、
+お人好し過ぎるわよ！
+
+# alpha 210 0 0.5
+# alpha 3501711 0 0.5
+# move 3302011 3 0
+# face 3302011 "usual"
+# alpha 3302011 1 0.5
+# mask 3302011 off
+# textboxarrow 0 2
+# voice 330201 "pisear_t_0032"
+@ピサール
+まあ、入れば分かるわよ
+面倒くさいんだけどね～
+
+;;//ピサールが建物に入る
+# se "SE_0740"
+# textwindow "close"
+# alpha 3302011 0 0.5
+# waitandnext 0.5
+
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+# textwindow "normal"
+# voice 310231 "ascalon_a_0026"
+@アスカロン
+マスター、私の後ろにいて下さいね！
+何が起きてもお守りしますからっ
+
+# face 210 "irregular"
+# textboxarrow 0 3
+# voice 9936 "kamito_0032"
+@カミト
+あ、ありがとう
+僕達も入ろうか
+
+;;//背景：倉庫
+# se "SE_0740"
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "006_jail"
+# alpha 3102311 0 0
+# alpha 210 0 0
+# move 3102311 2 0
+# face 3102311 "normal"
+# alpha 3102311 1 0
+# mask 3102311 on
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0
+# mask 210 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 3
+# textwindow "normal"
+@カミト
+ケホッ…ケホッ…
+ちょっと埃っぽいね
+
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0003"
+@アスカロン
+油の匂いがします
+それと鉄の匂い…
+
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# move 3501711 3 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+@グリモワール
+あちこちに白い布を被せた物が
+あるんだけど、これは何？
+
+# alpha 3501711 0 0.5
+# move 1100111 3 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 off
+# textboxarrow 0 2
+# voice 11001 "masamunem_0022"
+@マサムネ
+ひょっとして…
+
+;;//布をめくる音
+# bgm "stop"
+# se "SE_11618"
+# sedelay "SE_0648" 0.4
+# waitandnext 0.5
+
+# alpha 1100111 0 0.5
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# voice 9936 "kamito_0026"
+@カミト
+うわっ…
+埃が舞い上がって…ケホッ
+
+# alpha 210 0 0.5
+# move 1100111 3 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 off
+# textboxarrow 0 2
+# voice 11001 "masamunem_0031"
+@マサムネ
+おっと、すまない
+…なるほど
+予想通りだったな
+
+# move 1100111 2 0.5
+# mask 1100111 on
+# move 210 4 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# voice 9936 "kamito_0024"
+@カミト
+あ！
+これって…
+
+# bgm "bgm102" 0
+# textboxarrow 0 1
+# voice 11001 "masamunem_0003"
+@マサムネ
+車だ
+久し振りに見るな
+
+# face 210 "irregular"
+# textboxarrow 0 3
+# voice 9936 "kamito_0030"
+@カミト
+中心部ではそれなりに
+走ってるらしいけど、この辺りじゃ
+ほとんど見ないなぁ
+
+# face 210 "happy"
+# textboxarrow 0 3
+# voice 9936 "kamito_0042"
+@カミト
+へーっ
+中はこんなふうになってるんだ
+
+# textboxarrow 0 1
+@マサムネ
+こっちにはバイクもあるぞ
+…これなら俺でも運転できそうだな
+
+# alpha 210 0 0.5
+# move 3501711 4 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0002"
+@グリモワール
+ちょっと
+そんなことしてる場合じゃないわよ！
+ピサールはどこに行ったの！？
+
+# alpha 1100111 0 0.5
+# alpha 3501711 0 0.5
+# move 3302011 3 0
+# face 3302011 "usual"
+# alpha 3302011 1 0.5
+# mask 3302011 off
+# textboxarrow 0 2
+# voice 330201 "pisear_t_0031"
+@ピサール
+ごめ～ん
+向こうのシャッター開けるの
+手間取っちゃって～
+
+# textboxarrow 0 2
+@ピサール
+それで～
+どれに乗るか決めた～？
+
+# move 3102311 2 0
+# face 3102311 "surprise"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# move 3302011 4 0.5
+# mask 3302011 on
+# voice 310231 "ascalon_a_0022"
+@アスカロン
+乗るって…もしかして、車に乗って
+移動するんですか！？
+
+# face 3302011 "normal"
+# textboxarrow 0 3
+# voice 330201 "pisear_t_0004"
+@ピサール
+そういうこと～
+じゃないと、ユグドラシルまで
+何日かかるか分からないわよ～
+
+# alpha 3102311 0 0.5
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 1
+# voice 11001 "masamunem_0002"
+@マサムネ
+布を被せて
+長いこと放置していたようだが
+ちゃんと動くんだろうな？
+
+# face 3302011 "usual"
+# textboxarrow 0 3
+# voice 330201 "pisear_t_0028"
+@ピサール
+知らないけど～
+マスターがいけるって言ってたん
+だからいけるんでしょ～
+
+# alpha 1100111 0 0.5
+# move 210 2 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 1
+# voice 9936 "kamito_0001"
+@カミト
+あの…
+僕は車の運転、できないんだけど…
+
+# textboxarrow 0 1
+@カミト
+アスカロンもグリモワールも、
+無理だよね？
+
+# alpha 210 0 0.5
+# alpha 3302011 0 0.5
+# move 3102311 2 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 3501711 4 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+@グリモワール
+無理よ
+
+# face 3102311 "angry"
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0031"
+@アスカロン
+ごめんなさい…
+でも、マスターのご命令なら
+やってみせます！
+
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# move 1100111 3 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 off
+# textboxarrow 0 2
+@マサムネ
+やめておけ
+こんなことで死にたくない
+
+# alpha 1100111 0 0.5
+# move 3302011 3 0
+# face 3302011 "usual"
+# alpha 3302011 1 0.5
+# mask 3302011 off
+# textboxarrow 0 2
+# voice 330201 "pisear_t_0009"
+@ピサール
+も～っ
+何のためにわたしが来たと
+思ってるのよ～
+
+# face 3302011 "normal"
+# textboxarrow 0 2
+@ピサール
+運転なら、わたしができるから
+安心してね～
+
+# alpha 3302011 0 0.5
+# move 210 2 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 1
+# move 3501711 4 0
+# face 3501711 "surprise"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# voice 9936 "kamito_0023"
+@カミト
+ええっ？
+
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0040"
+@グリモワール
+意外ね…
+
+# alpha 210 0 0.5
+# move 3102311 2 0
+# face 3102311 "surprise"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+@アスカロン
+あっ…
+ミストルティンがピサールの葡萄酒を
+奪ったのって…
+
+# alpha 3501711 0 0.5
+# move 210 4 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# voice 9936 "kamito_0003"
+@カミト
+運転に支障をきたさないように
+するためだろうね
+
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# move 3302011 3 0
+# face 3302011 "normal"
+# alpha 3302011 1 0.5
+# mask 3302011 off
+# textboxarrow 0 2
+# voice 330201 "pisear_t_0001"
+@ピサール
+あっちの車なら、詰めれば五人
+乗れるわよ～
+はい、来て来て～
+
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 1
+# move 3302011 4 0.5
+# mask 3302011 on
+# voice 11001 "masamunem_0011"
+@マサムネ
+待て
+俺はこのバイクに乗る
+
+# face 3302011 "sad"
+# textboxarrow 0 3
+# voice 330201 "pisear_t_0013"
+@ピサール
+えぇ～
+わたしの運転じゃ不満なの～？
+
+# face 1100111 "sad"
+# textboxarrow 0 1
+# voice 11001 "masamunem_0019"
+@マサムネ
+そういうわけじゃないが…
+
+# face 3302011 "usual"
+# textboxarrow 0 3
+# voice 330201 "pisear_t_0002"
+@ピサール
+きみ、昨日からわたしのこと
+避けてるよね～
+何で～？
+
+# face 1100111 "normal"
+# textboxarrow 0 1
+@マサムネ
+避けているわけじゃない
+
+# textboxarrow 0 3
+# voice 330201 "pisear_t_0028"
+@ピサール
+うぅ～ん…
+絶対、避けてるよね～？
+
+;;//ピサールがマサムネに近づく
+;;//マサムネが離れる
+# se "SE_5200"
+# textwindow "close"
+# move 3302011 3 0.5
+# waitandnext 0.4
+
+# se "SE_5257"
+# move 1100111 1 0.3
+# waitandnext 0.3
+
+# face 1100111 "sad"
+# textboxarrow 0 1
+# textwindow "normal"
+@マサムネ
+避けてはいない…
+少し、苦手なだけだ
+
+# face 3302011 "surprise"
+# textboxarrow 0 2
+# voice 330201 "pisear_t_0010"
+@ピサール
+えぇ～
+何よ、それ～っ
+
+# textboxarrow 0 1
+@マサムネ
+あんたは…その…薄着過ぎないか？
+もう少し慎みをもってだな…
+
+# face 3302011 "happy"
+# textboxarrow 0 2
+# voice 330201 "pisear_t_0022"
+@ピサール
+へっ！？
+くくっ
+ヤだ、可愛い～
+
+# face 3302011 "normal"
+# textboxarrow 0 2
+# voice 330201 "pisear_t_0007"
+@ピサール
+このくらい普通だよ～
+ねぇ？
+
+# alpha 1100111 0 0.5
+# alpha 3302011 0 0.5
+# move 3102311 2 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 3501711 4 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0028"
+@グリモワール
+いや、キミはけっこう
+肌を晒してる方だと思うわよ
+
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_unit_1006"
+@アスカロン
+それだけ自分に自信があるんですね
+…羨ましい
+
+;;カミト（独白）
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 210 off
+@カミト
+こんなとき、何て言えば良いのか
+分からないよ…
+
+# alpha 210 0 0.5
+# move 1100111 3 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 off
+# textboxarrow 0 2
+# textwindow "normal"
+@マサムネ
+とにかく！
+俺はこのバイクに乗る！
+車にはあんた達四人で乗れ！

@@ -1,0 +1,385 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第４章 タイトル：「世界樹の子―インベイション―」
+;;第1話　タイトル：ユグドラシルへ
+;;4_1_5_3
+;;スクリプト最後の背景：下町（夜）
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown_night"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;マサムネ(キラーメイル)
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# layer 1100111 2
+# alpha 1100111 0 0
+# mask 1100111 off
+;;-----------------------------------------
+;;霧
+# imageset 2 "kiri_03"
+# imagescale 2 2.5 0
+# imagealpha 2 0.5 0
+# imagepos 2 0 0
+# imagelayer 2 4
+;;-----------------------------------------
+;;//背景：下町（夜）
+;;//霧演出
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0
+# mask 210 off
+# textflame 1 1
+# textboxarrow 0 2
+@カミト
+やっと帰ってこれた…
+
+# face 210 "surprise"
+# textboxarrow 0 2
+@カミト
+あ！
+屋台が…
+潰れてる…
+
+# face 210 "normal"
+# textboxarrow 0 2
+@カミト
+オジサン、無事かな…？
+
+# move 3501711 2 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 1
+# move 210 4 0.5
+# mask 210 on
+# voice 350171 "grimoire_ge_0002"
+@グリモワール
+感傷に浸ってばかりはいられないわよ
+ほら、急いで！
+
+# alpha 3501711 0 0.5
+# alpha 210 0 0.5
+# move 3102311 3 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+# voice 310231 "ascalon_a_0028"
+@アスカロン
+何だか…人気がありませんね…
+
+;;//背景：部屋
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "201_room"
+# imagealpha 2 0 0
+# alpha 3102311 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_5575"
+# sedelay "SE_0878" 0.5
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9936 "kamito_0051"
+@カミト
+兄貴っ！
+
+# face 210 "sad"
+# textboxarrow 0 2
+@カミト
+…誰もいない
+
+# alpha 210 0 0.5
+# move 3102311 2 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 3501711 4 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0028"
+@グリモワール
+書き置きとかも残されてないわね
+ワタシ達が出かけた後、
+誰も立ち寄ってないのよ
+
+# face 3102311 "sad"
+# textboxarrow 0 1
+@アスカロン
+フォルカスもヴァングさん達も
+帰ってきてないんですね…
+
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# move 210 3 0
+# face 210 "sad"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+…………
+
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 1
+# move 210 4 0.5
+# mask 210 on
+# voice 11001 "masamunem_0002"
+@マサムネ
+だからって死んだとは限らないだろ
+気を落とすな
+
+# face 210 "normal"
+# textboxarrow 0 3
+# voice 9936 "kamito_0032"
+@カミト
+あ、ありがとう…
+
+# textboxarrow 0 1
+@マサムネ
+それより、先は長いぞ
+装備を整え直したらどうだ？
+俺は少し休ませてもらう
+
+# face 210 "irregular"
+# textboxarrow 0 3
+# voice 9936 "kamito_0003"
+@カミト
+そうだね
+アスカロン、グリモワール、
+今日はここで寝よう
+
+# alpha 1100111 0 0.5
+# move 3501711 2 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 1
+# voice 350171 "grimoire_ge_0032"
+@グリモワール
+いいわ
+それならちょっと左腕を見せなさい
+
+# alpha 3501711 0 0.5
+# alpha 210 0 0.5
+# move 3102311 3 0
+# face 3102311 "happy"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+# voice 310231 "ascalon_a_0032"
+@アスカロン
+私は料理をしますね！
+何か元気が出るものを作りますっ
+
+# face 3102311 "surprise"
+# textboxarrow 0 2
+@アスカロン
+あ！
+ヨーグルト、まだ残ってたかな
+
+;;//アスカロンが立ち去る
+# se "SE_0740"
+# textwindow "close"
+# alpha 3102311 0 0.5
+# waitandnext 1
+
+;;//背景：下町（夜）
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_downtown_night"
+# move 210 3 0
+# face 210 "sad"
+# alpha 210 1 0
+# mask 210 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm409" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+…………
+
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 1
+# move 210 4 0.5
+# mask 210 on
+@マサムネ
+眠れないのか？
+
+# face 210 "normal"
+# textboxarrow 0 3
+# voice 9936 "kamito_0030"
+@カミト
+あ、マサムネ…
+色々、考えちゃって…
+
+# textboxarrow 0 1
+# voice 11001 "masamunem_0002"
+@マサムネ
+ヴァングというのは、
+あんたの兄なのか？
+
+# textboxarrow 0 3
+@カミト
+本当の兄弟じゃないよ
+でも、ずっと面倒見てくれてる
+頼れる人なんだ
+
+# textboxarrow 0 3
+@カミト
+本当は「兄貴」って呼ぶの
+恥ずかしいんだけど、
+そう呼ばないと怒るから…
+
+# textboxarrow 0 1
+# voice 11001 "masamunem_0040"
+@マサムネ
+そうか
+ヴァングも奏官なんだよな？
+
+# textboxarrow 0 3
+# voice 9936 "kamito_0003"
+@カミト
+うん
+シユウを連れてる
+
+# textboxarrow 0 1
+@マサムネ
+だったら大丈夫だろ
+あんたが頼りにしてる男なら
+きっとしぶとく生き延びてるぜ
+
+# face 1100111 "sad"
+# textboxarrow 0 1
+@マサムネ
+「兄貴」っていうのは
+そういうものだ
+弟や…妹のためなら…
+
+# face 210 "surprise"
+# textboxarrow 0 3
+# voice 9936 "kamito_0023"
+@カミト
+マサムネ？
+
+# face 1100111 "normal"
+# textboxarrow 0 1
+# voice 11001 "masamunem_0003"
+@マサムネ
+ああ、いや
+…あんた、ムラマサってキル姫に
+会ったことはあるか？
+
+# face 210 "normal"
+# textboxarrow 0 3
+# voice 9936 "kamito_0003"
+@カミト
+この前、会ったよ
+武士っぽい雰囲気の女の子だった
+
+# textboxarrow 0 1
+@マサムネ
+そうか…
+マサムネには、会ったか？
+
+# textboxarrow 0 3
+# voice 9936 "kamito_0030"
+@カミト
+キル姫のマサムネには
+会ったことないなぁ…
+
+# textboxarrow 0 3
+@カミト
+同じキラーズを持ってるってことは
+何か繋がりがあったりするの？
+
+# textboxarrow 0 1
+@マサムネ
+…いや、そうとは限らないだろ
+関係あるときもあるんだろうが
+
+# textboxarrow 0 3
+# voice 9936 "kamito_0042"
+@カミト
+そうなんだ
+
+# textboxarrow 0 1
+@マサムネ
+さてと
+俺はそろそろ寝る
+あんたも早く寝ろよ
+
+# face 210 "shy"
+# textboxarrow 0 3
+# voice 9936 "kamito_0032"
+@カミト
+うん
+ありがとう…
+
+;;//マサムネが立ち去る
+# se "SE_0719"
+# textwindow "close"
+# alpha 1100111 0 0.5
+# waitandnext 0.5
+
+# move 210 3 0.5
+# waitandnext 0.5
+
+;;カミト（独白）
+# move 210 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 210 off
+@カミト
+そうだよ
+きっと兄貴もシユウも生きてる
+
+;;カミト（独白）
+# textboxarrow 0 0
+@カミト
+フォルカスにだって、
+また会えるよ

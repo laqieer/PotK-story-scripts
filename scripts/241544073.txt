@@ -1,0 +1,587 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;セブンスサイドストーリー後編
+;;第2話　タイトル：絆を胸に（２－７）
+;;2_7_3
+;;スクリプト最後の背景：実験場
+;;-----------------------------------------
+# script "lisp"
+# background "006_jail"
+# bgmfile "bgm435_1" "BgmIntegralNoahBattle005" 0
+;;-----------------------------------------
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 2
+# alpha 3201911 0 0
+# mask 3201911 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;ヴァナルガンド
+# body 3601111
+# pos 3601111 3
+# scale 3601111 0.8 0
+# layer 3601111 2
+# alpha 3601111 0 0
+# mask 3601111 off
+;;アフロディーテ
+# body 3401311
+# pos 3401311 3
+# scale 3401311 0.8 0
+# layer 3401311 2
+# alpha 3401311 0 0
+# mask 3401311 off
+;;ムラマサ
+# body 3102511
+# pos 3102511 3
+# scale 3102511 0.8 0
+# layer 3102511 2
+# alpha 3102511 0 0
+# mask 3102511 off
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;フォルカス
+# body 3301811
+# pos 3301811 3
+# scale 3301811 0.8 0
+# layer 3301811 2
+# alpha 3301811 0 0
+# mask 3301811 off
+;;ミカエル
+# body 3810008
+# pos 3810008 3
+# scale 3810008 0.8 0
+# layer 3810008 2
+# alpha 3810008 0 0
+# mask 3810008 off
+;;-----------------------------------------
+# emotionbody 1000 14 3201911 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# voice 320191 "chihyu_a_0029"
+# move 3201911 3 0
+# face 3201911 "angry"
+# alpha 3201911 1 0
+# mask 3201911 off
+# textflame 1 1
+# textboxarrow 0 2
+@シユウ
+うがあああぁぁ！
+
+;;//斬撃
+# se "SE_4816"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# effectskip 1000
+# emotionbody 2000 14 3501711 0 0
+# effectpattern 2000 1 0
+# effectstart 2000
+# alpha 3201911 0 0.5
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+@グリモワール
+全ての結界を砕いたわ！
+今度こそ、決めなさい！！
+
+# effectskip 2000
+# emotionbody 3000 14 3401311 0 0
+# effectpattern 3000 1 0
+# effectstart 3000
+# voice 340131 "aphrodite_a_0005"
+# alpha 3501711 0 0.5
+# move 3401311 3 0
+# face 3401311 "happy"
+# alpha 3401311 1 0.5
+# mask 3401311 off
+# textboxarrow 0 2
+@アフロディーテ
+うふふっ♪
+丸裸ですねぇっ！
+
+# effectskip 3000
+# se "SE_5670"
+# alpha 3401311 0 0.5
+# move 3810008 3 0
+# alpha 3810008 1 0.5
+# mask 3810008 off
+# textboxarrow 0 2
+@ミカエル
+オオオオオオオオオオオ！！
+
+# emotionbody 4000 14 3301811 0 0
+# effectpattern 4000 1 0
+# effectstart 4000
+# alpha 3810008 0 0.5
+# move 3301811 3 0
+# face 3301811 "angry"
+# alpha 3301811 1 0.5
+# mask 3301811 off
+# textboxarrow 0 2
+@フォルカス
+気をつけて！
+ミカエルの攻撃が来ますっ
+
+# effectskip 4000
+# emotionbody 5000 14 3102311 0 0
+# effectpattern 5000 1 0
+# effectstart 5000
+# voice 310231 "ascalon_a_battle_0002"
+# alpha 3301811 0 0.5
+# move 3102311 3 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+@アスカロン
+やあああああ！
+
+;;//アスカロンがミカエルに突っ込む
+# se "SE_9092"
+# textwindow "close"
+# leftout 3102311 0.5
+# waitandnext 0.5
+
+# effectskip 5000
+# emotionbody 6000 14 3601111 0 0
+# effectpattern 6000 1 0
+# effectstart 6000
+# alpha 3102311 0 0
+# move 3601111 3 0
+# face 3601111 "angry"
+# alpha 3601111 1 0.5
+# mask 3601111 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ヴァナルガンド
+いけません、アスカロン…！
+
+# effectskip 6000
+# alpha 3601111 0 0.5
+# move 3810008 3 0
+# alpha 3810008 1 0.5
+# mask 3810008 off
+# textboxarrow 0 2
+@ミカエル
+オオオオオオオオ！！
+
+# effectstart 5000
+# voice 310231 "ascalon_a_unit_1006"
+# alpha 3810008 0 0.5
+# move 3102311 3 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+@アスカロン
+大天使の圧倒的な力…
+羨ましいっ
+羨ましいんですっ！！
+
+# textboxarrow 0 2
+@アスカロン
+やあああああああああああああ！！
+
+;;//次元跳躍でアスカロンの姿が消える
+# se "SE_2104"
+# textwindow "close"
+# effectskip 5000
+# move 3102311 1 0.3
+# alpha 3102311 0 0.1
+# waitandnext 0.5
+
+# effectstart 4000
+# voice 330181 "forcas_t_0023"
+# move 3301811 3 0
+# face 3301811 "surprise"
+# alpha 3301811 1 0.5
+# mask 3301811 off
+# textboxarrow 0 2
+# textwindow "normal"
+@フォルカス
+アスカロンの姿がっ…？
+
+;;//アスカロンの姿が現れる
+# textwindow "close"
+# effectskip 4000
+# alpha 3301811 0 0.5
+# move 3810008 2 0
+# alpha 3810008 1 0.5
+# mask 3810008 on
+# move 3102311 5 0
+# waitandnext 0.6
+
+# se "SE_2106"
+# effectstart 5000
+# move 3102311 4 0.2
+# face 3102311 "angry"
+# alpha 3102311 1 0.1
+# mask 3102311 on
+# waitandnext 0.3
+
+# voice 310231 "ascalon_a_unit_0009"
+# textboxarrow 0 3
+# textwindow "normal"
+@アスカロン
+嫉妬の氷が、あなたを終わらせます！
+
+;;//斬撃音
+# bgm "stop"
+# se "SE_5743"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1001 1 -200 0 0
+# effectstart 1001
+# waitandnext 0.5
+
+# se "SE_5670"
+# textboxarrow 0 1
+@ミカエル
+オオオオオオオオオ…！
+
+# effectskip 5000
+# alpha 3810008 0 0.5
+# alpha 3102311 0 0.5
+# move 3301811 3 0
+# face 3301811 "angry"
+# alpha 3301811 1 0.5
+# mask 3301811 off
+# textboxarrow 0 2
+@フォルカス
+ああっ…
+届きました！
+
+;;フォルカス（独白）
+# voice 330181 "forcas_t_0028"
+# move 3301811 3 0
+# face 3301811 "usual"
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 3301811 off
+@フォルカス
+今のは…
+高速でミカエルの攻撃を躱した
+わけではありませんね…
+
+;;フォルカス（独白）
+# textboxarrow 0 0
+@フォルカス
+あの瞬間、アスカロン自身が
+ここからいなくなっていた…
+そう感じました
+
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# alpha 3301811 0 0.5
+# move 3601111 2 0
+# face 3601111 "normal"
+# alpha 3601111 1 0.5
+# mask 3601111 on
+# textboxarrow 0 1
+# move 3501711 4 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textwindow "normal"
+@ヴァナルガンド
+ミカエルの暴走が収まっていきます
+やりましたね
+
+# voice 350171 "grimoire_ge_0003"
+# textboxarrow 0 3
+@グリモワール
+まあ、ワタシが本気を出せば
+こんなもんよ！
+
+# alpha 3601111 0 0.5
+# move 3102511 2 0
+# face 3102511 "angry"
+# alpha 3102511 1 0.5
+# mask 3102511 on
+# textboxarrow 0 1
+@ムラマサ
+勝って兜の緒を締めよと申します
+油断は禁物ですっ
+
+# voice 320191 "chihyu_a_0029"
+# alpha 3102511 0 0.5
+# alpha 3501711 0 0.5
+# move 3201911 2 0
+# face 3201911 "normal"
+# alpha 3201911 1 0.5
+# mask 3201911 on
+# textboxarrow 0 1
+# move 3301811 4 0
+# face 3301811 "usual"
+# alpha 3301811 1 0.5
+# mask 3301811 on
+@シユウ
+うがあああぁぁ！
+あとはウロボロスだけだな！
+
+# voice 330181 "forcas_t_0003"
+# textboxarrow 0 3
+@フォルカス
+はい
+“大罪”の力…想像を遥かに超える
+ものでした
+
+# textboxarrow 0 3
+@フォルカス
+特に、アスカロン…
+最後のアレは何だったんです？
+
+# voice 310231 "ascalon_a_0022"
+# alpha 3201911 0 0.5
+# move 3102311 2 0
+# face 3102311 "surprise"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+@アスカロン
+えっ…？
+あ、私、夢中で…
+“嫉妬”の感情が高まって…
+
+# face 3102311 "normal"
+# textboxarrow 0 1
+@アスカロン
+気づいたら、
+“跳躍”していました…
+
+# alpha 3102311 0 0.5
+# move 3102511 2 0
+# face 3102511 "normal"
+# alpha 3102511 1 0.5
+# mask 3102511 on
+# textboxarrow 0 1
+@ムラマサ
+拙者にはアスカロンの姿が消えた
+ように見えました
+
+# alpha 3301811 0 0.5
+# move 3501711 4 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+@グリモワール
+一瞬、消えて
+上空からミカエルに向かって
+突っ込んでたわよね
+
+# voice 360111 "vanargand_t_0028"
+# alpha 3102511 0 0.5
+# move 3601111 2 0
+# face 3601111 "usual"
+# alpha 3601111 1 0.5
+# mask 3601111 on
+# textboxarrow 0 1
+@ヴァナルガンド
+信じがたいですが、
+まるでこの空間そのものから
+一度いなくなったかのような…
+
+# voice 350171 "grimoire_ge_0028"
+# textboxarrow 0 3
+@グリモワール
+あれも“大罪”の力？
+それともアスカロンだけなの？
+
+# alpha 3601111 0 0.5
+# alpha 3501711 0 0.5
+# move 3301811 3 0
+# face 3301811 "usual"
+# alpha 3301811 1 0.5
+# mask 3301811 off
+# textboxarrow 0 2
+@フォルカス
+…直感ですが、アレは“大罪”の
+力でしょう
+私にも出来そうな感覚があります
+
+# alpha 3301811 0 0.5
+# move 3102311 3 0
+# face 3102311 "happy"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+@アスカロン
+すごいです！
+これなら、ウロボロスの暴走も
+止められそうですねっ
+
+# sedelay "SE_5200" 0.8
+# sedelay "SE_5006" 1.2
+# alpha 3102311 0 0.5
+# move 3601111 3 0
+# face 3601111 "sad"
+# alpha 3601111 1 0.5
+# mask 3601111 off
+# textboxarrow 0 2
+@ヴァナルガンド
+その前に皆さんの治療を…
+うっ…
+
+# move 3601111 2 0.5
+# mask 3601111 on
+# move 3401311 4 0
+# face 3401311 "sad"
+# alpha 3401311 1 0.5
+# mask 3401311 on
+# textboxarrow 0 3
+@アフロディーテ
+ヴァナルガンド？
+力を使いすぎたようですね…
+
+# face 3601111 "usual"
+# textboxarrow 0 1
+@ヴァナルガンド
+このくらい…大したことでは…
+
+# bgmfile "bgm188" "BgmStory007" 0
+# voice 8056 "new_michael_0034"
+# alpha 3601111 0 0.5
+# alpha 3401311 0 0.5
+# move 3810008 3 0
+# alpha 3810008 1 0.5
+# mask 3810008 off
+# textboxarrow 0 2
+@ミカエル
+いいえ
+あなた達の負っている怪我は
+酷いものです
+
+# textboxarrow 0 2
+@ミカエル
+どうか、この者達に祝福を
+
+;;//回復する演出
+# se "SE_4782"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 320191 "chihyu_a_0006"
+# alpha 3810008 0 0.5
+# move 3201911 3 0
+# face 3201911 "happy"
+# alpha 3201911 1 0.5
+# mask 3201911 off
+# textboxarrow 0 2
+@シユウ
+うがあああぁぁ！
+げんきがわいてきたぞっ
+
+# voice 310231 "ascalon_a_unit_1006"
+# alpha 3201911 0 0.5
+# move 3102311 3 0
+# face 3102311 "happy"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+@アスカロン
+あっという間に傷が塞がりました…
+これが大天使ミカエルの力…
+羨ましいっ
+
+# voice 330181 "forcas_t_0004"
+# alpha 3102311 0 0.5
+# move 3810008 2 0
+# alpha 3810008 1 0.5
+# mask 3810008 on
+# move 3301811 4 0
+# face 3301811 "happy"
+# alpha 3301811 1 0.5
+# mask 3301811 on
+# textboxarrow 0 3
+@フォルカス
+自身を制御できるようになったの
+ですね、ミカエル
+
+# voice 8056 "new_michael_0032"
+# textboxarrow 0 1
+@ミカエル
+面倒をかけましたね
+あなた達が来てくれて、
+助かりました
+
+# textboxarrow 0 1
+@ミカエル
+勇気ある者達に、心からの感謝を
+
+# voice 350171 "grimoire_ge_0007"
+# alpha 3301811 0 0.5
+# move 3501711 4 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+@グリモワール
+はんっ！
+ルシファーと違って殊勝な態度
+じゃない
+
+# voice 310251 "muramasa_ge_0030"
+# alpha 3501711 0 0.5
+# move 3102511 4 0
+# face 3102511 "angry"
+# alpha 3102511 1 0.5
+# mask 3102511 on
+# textboxarrow 0 3
+@ムラマサ
+傷を癒して頂き、かたじけない
+これでウロボロスとの戦いに
+万全の態勢で臨めます
+
+# alpha 3810008 0 0.5
+# alpha 3102511 0 0.5
+# move 3601111 3 0
+# face 3601111 "normal"
+# alpha 3601111 1 0.5
+# mask 3601111 off
+# textboxarrow 0 2
+@ヴァナルガンド
+あと一体、暴走を止めれば
+世界は元に戻せますね
+
+# alpha 3601111 0 0.5
+# move 3810008 3 0
+# alpha 3810008 1 0.5
+# mask 3810008 off
+# textboxarrow 0 2
+@ミカエル
+待ちなさい
+事はそれほど単純ではありませんよ
+
+# voice 310231 "ascalon_a_0022"
+# alpha 3810008 0 0.5
+# move 3102311 3 0
+# face 3102311 "surprise"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+@アスカロン
+えっ…？
+
+# alpha 3102311 0 0.5
+# move 3810008 3 0
+# alpha 3810008 1 0.5
+# mask 3810008 off
+# textboxarrow 0 2
+@ミカエル
+あなた達がウロボロスの暴走を止める
+というのなら…自身が消滅するのを
+覚悟しなければなりません

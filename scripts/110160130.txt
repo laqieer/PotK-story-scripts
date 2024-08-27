@@ -1,0 +1,311 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー16章
+;;第1話　タイトル：キラーズとバイブス
+;;1_3
+;;スクリプト最後の背景：ラグナロクの間
+;;-----------------------------------------
+# script "lisp"
+# background "abyss_room"
+# bgm "bgm000" 0
+;;-----------------------------------------
+;;ゴッドアルマス
+# entry 201 3103811 523
+# pos 201 3
+# scale 201 0.8 0
+# layer 201 2
+# alpha 201 0 0
+# mask 201 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 2
+# alpha 139 0 0
+# mask 139 off
+;;リル=ティルフィング
+# body 3101411
+# pos 3101411 3
+# scale 3101411 0.8 0
+# layer 3101411 2
+# alpha 3101411 0 0
+# mask 3101411 off
+;;レーヴァテイン
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# layer 3100211 2
+# alpha 3100211 0 0
+# mask 3100211 off
+;;神令ラグナロク（仮面）
+# body 3103619
+# pos 3103619 3
+# scale 3103619 0.8 0
+# layer 3103619 2
+# alpha 3103619 0 0
+# mask 3103619 off
+;;-----------------------------------------
+;;//背景：ラグナロクの間
+# voice 310141 "tyrufing_lo_0031"
+# move 3101411 2 0
+# face 3101411 "sad"
+# alpha 3101411 1 0
+# mask 3101411 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 201 4 0
+# face 201 "angry"
+# alpha 201 1 0
+# mask 201 on
+@ティルフィング
+ごめんなさい…
+でも、詳しいところは省かせて下さい
+
+# voice 310021 "revatein_ge_0002"
+# alpha 3101411 0 0.5
+# move 3100211 2 0
+# face 3100211 "normal"
+# alpha 3100211 1 0.5
+# mask 3100211 on
+# textboxarrow 0 1
+@レーヴァテイン
+マスターは…覚えてるわよね…？
+グリードのこと…
+
+# voice 1038 "almace_0022"
+# face 201 "surprise"
+# textboxarrow 0 3
+@アルマス
+えっ？
+そうなのっ？
+
+;;//選択肢
+;;
+;;Ａ覚えている
+;;Ｂ名前くらいなら…
+;;Ｃ知らないな
+# select "覚えている" "select_label_01" "名前くらいなら…" "select_label_02" "知らないな" "select_label_03"
+えっ？
+そうなのっ？
+
+;;Ａ
+# label "select_label_01"
+# labeljump "select_label_end"
+# alpha 3100211 0 0.5
+# move 3101411 2 0
+# face 3101411 "normal"
+# alpha 3101411 1 0.5
+# mask 3101411 on
+# textboxarrow 0 1
+@ティルフィング
+そうですよね
+天上世界最後の戦いで…
+私が“淘汰”しましたから…
+
+;;Ｂ
+# label "select_label_02"
+# labeljump "select_label_end"
+# voice 310021 "revatein_ge_0027"
+# face 3100211 "sad"
+# textboxarrow 0 1
+@レーヴァテイン
+はあ…そのくらいなの…？
+
+;;Ｃ
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 201 "angry"
+# textboxarrow 0 3
+@アルマス
+ほら！
+マスターだって知らないじゃない
+
+# label "select_label_end"
+# alpha 3101411 0 0.5
+# alpha 3100211 0 0.5
+# move 139 2 0
+# face 139 "normal"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 1
+@ティターニア
+ともかく、今はティルフィングの
+話を聞きましょう
+
+# textboxarrow 0 1
+@ティターニア
+重要なのはエンシェントキラーズに
+ついてだと思います
+
+# alpha 139 0 0.5
+# alpha 201 0 0.5
+# move 3101411 3 0
+# face 3101411 "sad"
+# alpha 3101411 1 0.5
+# mask 3101411 off
+# textboxarrow 0 2
+@ティルフィング
+私の記憶や記録とは姿が変わって
+いましたし、雰囲気も違っていたので
+断言できずにいたのですけれど…
+
+# face 3101411 "normal"
+# textboxarrow 0 2
+@ティルフィング
+先程、一対一になった相手と
+少しお話しできたんです
+それで確信しました
+
+# textboxarrow 0 2
+@ティルフィング
+あちらにいるラグナロク
+それからコマンドキラーズの皆さんは
+エンシェントキラーズです
+
+# textboxarrow 0 2
+@ティルフィング
+ラグナロク、アナタ達は天上世界で
+復活した後、どこにいたのですか？
+
+# textboxarrow 0 2
+@ティルフィング
+天上世界だけでなく、地上世界での
+戦いでもアナタ達の姿を見た覚えが
+ありません
+
+# textboxarrow 0 2
+@ティルフィング
+アナタ達が以前と姿を変えてしまった
+ことと、何か関係しているのでは
+ありませんか？
+
+# voice 310361 "ragnarok_c_0008"
+# alpha 3101411 0 0.5
+# move 3103619 3 0
+# face 3103619 "normal"
+# alpha 3103619 1 0.5
+# mask 3103619 off
+# textboxarrow 0 2
+@ラグナロク
+…おかしなことを言うのね
+
+# textboxarrow 0 2
+@ラグナロク
+やはり、こちらの世界線とでは
+何もかもが違い過ぎる
+
+# textboxarrow 0 2
+@ラグナロク
+それでも、私は揺るがない
+世界に黄昏をもたらす
+
+# move 3100211 2 0
+# face 3100211 "normal"
+# alpha 3100211 1 0.5
+# mask 3100211 on
+# textboxarrow 0 1
+# move 3103619 4 0.5
+# mask 3103619 on
+@レーヴァテイン
+ティルの質問に…答えなさいよ
+
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# textboxarrow 0 3
+@ラグナロク
+答えたくても、根本的なところが
+違っているから答えようがないわ
+
+# textboxarrow 0 3
+@ラグナロク
+私達は封印などされていない
+そもそも、神々に敗北していない
+
+# voice 310141 "tyrufing_lo_0022"
+# alpha 3100211 0 0.5
+# move 3101411 2 0
+# face 3101411 "surprise"
+# alpha 3101411 1 0.5
+# mask 3101411 on
+# textboxarrow 0 1
+@ティルフィング
+そんなっ…？
+記録によると、アナタ達はガブリエル
+との戦いに敗れて…
+
+# textboxarrow 0 3
+@ラグナロク
+ガブリエルなら一番初めに倒した
+その後、ミカエルもラファエルも全て
+
+# textboxarrow 0 1
+@ティルフィング
+ミカエルもっ…！？
+では、その後、天上世界は…
+ここは現状そのままです。
+;;今泉さんから突っ込まれたら調整します。
+;;今泉さん提出用には補足済み
+
+# textboxarrow 0 3
+@ラグナロク
+天上世界は人々の楽園になった…
+なるはずだった…
+
+# voice 310361 "ragnarok_c_0004"
+# textboxarrow 0 3
+@ラグナロク
+皮肉なものよね
+神々の支配から解放されたことで
+争いが広がったのだから
+
+# face 3101411 "normal"
+# textboxarrow 0 1
+@ティルフィング
+では、その時点で世界線が…
+詳しく聞かせていただけませんか？
+
+# voice 310361 "ragnarok_c_0007"
+# textboxarrow 0 3
+@ラグナロク
+…あまり面白い話ではないわ
+それに、中途半端に伝えたところで
+何も分かりはしない
+
+# textboxarrow 0 3
+@ラグナロク
+ほんの一部を知って、
+全てを知った気になるのは…罪よ
+
+# face 3101411 "sad"
+# textboxarrow 0 1
+@ティルフィング
+それはっ…
+
+# alpha 3101411 0 0.5
+# alpha 3103619 0 0.5
+# move 139 2 0
+# face 139 "normal"
+# alpha 139 1 0.5
+# mask 139 on
+# move 201 4 0
+# face 201 "normal"
+# alpha 201 1 0.5
+# mask 201 on
+# textboxarrow 0 3
+@アルマス
+…似たようなことを、
+別の人に言われた覚えがあるわ
+
+# voice 9967 "titania_0066"
+# face 139 "worry"
+# textboxarrow 0 1
+@ティターニア
+アルマス？
+
+# face 201 "angry"
+# textboxarrow 0 3
+@アルマス
+それでも聞かないといけないの！
+
+# textboxarrow 0 3
+@アルマス
+私は…エルキュールの絶望を、
+垣間見てしまったんだからっ

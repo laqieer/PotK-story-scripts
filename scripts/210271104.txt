@@ -1,0 +1,179 @@
+;;【EP4】
+;;//背景：プールサイド(昼)
+# script "lisp"
+# background "sea_resort_day"
+# bgmfile "bgm226" "BgmSeaEvent" 0
+# body 2102711
+# pos 2102711 3
+# mask 2102711 off
+# alpha 2102711 0 0
+# textflame 0 0
+@
+クラウ・ソラスが木切れで水上を
+駆けることに成功してから数日
+
+# textflame 0 0
+@
+クラウ・ソラスに呼び出され、
+マスターは再び
+プールへとやってきていた
+
+# alpha 2102711 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2102711
+# face 2102711 "sad"
+# voice 1027 "solais_0031"
+@クラウ・ソラス
+急に呼び出したりしてすまない
+だが、どうしても会いたかったんだ
+
+# select "なにか用だった？" "select_label_01" "なんだか緊張するね" "select_label_02" "会いたいって…？" "select_label_03"
+急に呼び出したりしてすまない
+だが、どうしても会いたかったんだ
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2102711
+# face 2102711 "normal"
+@クラウ・ソラス
+ああ、その通りだ
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2102711
+# face 2102711 "normal"
+@クラウ・ソラス
+マスターもか
+奇遇だな、私もだ
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2102711
+@クラウ・ソラス
+そ、それは、その…
+
+# label "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2102711
+# face 2102711 "angry"
+# voice 1027 "solais_0032"
+@クラウ・ソラス
+今日マスターを呼んだのは
+他でもない…
+
+@クラウ・ソラス
+マスターに見せたい技があるんだ！
+
+# face 2102711 "normal"
+# voice 1027 "solais_0003"
+@クラウ・ソラス
+あの日、あの特訓で私はマスターに
+決して諦めない心を教えてもらった
+
+# voice 1027 "solais_0036"
+@クラウ・ソラス
+その成果を見せたいんだ
+…マスター、あの時と同じように
+対岸で待っていてくれないか？
+
+# textflame 0 0
+@
+マスターは言われた通り、
+対岸へ向かう
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2102711
+# face 2102711 "angry"
+@クラウ・ソラス
+あれからさらなる修行を重ねて、
+ここまでできるようになった
+見ていてくれ
+
+# textflame 0 0
+@
+そう言ってクラウ・ソラスは身構える
+
+# textflame 0 0
+@
+だが、肝心の板が
+プールに浮かべられていない
+マスターがそれを指摘する前に…
+
+# bgm "stop"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2102711
+# voice 1027 "solais_0029"
+@クラウ・ソラス
+うおおおおおおっ！
+
+# se "SE_9140"
+# sedelay "SE_9141" 0.3
+# alpha 2102711 0 0.3
+# textboxarrow 0 0
+# waitandnext 1
+
+# bgmfile "bgm255" "BgmSeaDate" 0
+# textflame 0 0
+@
+なんとクラウ・ソラスは板なしで、
+水上を走り抜けてしまった！
+
+# fadein "white" 0.5
+# se "SE_0675"
+# alpha 2102711 1 0
+# shake 1 0.5
+# textflame 0 0
+@
+驚くマスターの胸に、
+クラウ・ソラスが再び飛び込んでくる
+
+# se "SE_0602"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2102711
+# face 2102711 "smile"
+@クラウ・ソラス
+どうだ、見ていてくれたか、マスター！
+奥義『神聖プール王国の誓い』
+開眼だ！
+
+# textflame 0 0
+@
+興奮しているのか、
+クラウ・ソラスは、
+マスターに抱きついてはしゃいでいる
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2102711
+# voice 1027 "solais_0030"
+@クラウ・ソラス
+この力を得たのもマスターのおかげだ
+これからも私とともにいてほしい
+そして私を導いてくれ！
+
+# imageset 0 "c2102711"
+# imagealpha 0 0 0
+# textflame 0 0
+@
+こちらこそ、よろしく
+マスターはそう言って微笑むのだった
+
+;;「信頼するマスターとの絆が深まるのは、慊焉とせぬ…な。え、あ…その…う、嬉しいって意味だ…う、うむ」
+# frameout 0 0.5
+# buttonsout 0 0.5
+# voice 1027 "solais_kyara_0018"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# fadein "white" 3
+# textwindow "close"

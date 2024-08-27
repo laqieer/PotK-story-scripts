@@ -1,0 +1,469 @@
+;;-----------------------------------------
+;;◆2019 海上編 8月中旬（4章）シナリオ
+;;【タイトル：パラディーゾ幻想襲来編Ⅳ】
+;;EP5_1
+;;スクリプト最後の背景：ジャングル
+;;-----------------------------------------
+# script "lisp"
+# background "sea_jungle_day"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;水着アルマス
+# body 2103811
+# pos 2103811 3
+# scale 2103811 0.8 0
+# layer 2103811 2
+# alpha 2103811 0 0
+;;水着ヘレナ
+# body 2302811
+# pos 2302811 3
+# scale 2302811 0.8 0
+# layer 2302811 2
+# alpha 2302811 0 0
+;;水着フェイルノート
+# body 2401911
+# pos 2401911 3
+# scale 2401911 0.8 0
+# layer 2401911 2
+# alpha 2401911 0 0
+;;水着ガ・ジャルグ
+# body 2303211
+# pos 2303211 3
+# scale 2303211 0.8 0
+# layer 2303211 2
+# alpha 2303211 0 0
+;;グラウ
+# body 164
+# pos 164 3
+# scale 164 0.6 0
+# layer 164 2
+# alpha 164 0 0
+# mask 164 off
+;;水着ソロモン
+# body 2503111
+# pos 2503111 3
+# scale 2503111 0.8 0
+# layer 2503111 2
+# alpha 2503111 0 0
+;;-----------------------------------------
+# textflame 0 0
+@
+アルマス達は共闘しながら
+異族を次々に倒し、
+群れを殲滅に追い込んだ
+
+# mask 2401911 off
+# alpha 2401911 1 0.5
+# textflame 0 0
+@
+フェイルノートはその様子を
+冷静に観察している
+
+;;できればもやもやフレームで
+# move 2503111 3 0
+# textflame 1 1
+# textwindow "moya"
+# face 2401911 "normal"
+# voice 4019 "failnaught_a_0007"
+@フェイルノート
+今はまだ力が足りないようだけど、
+このまま放置すれば
+どこまでの勢力になるか…
+
+# textwindow "nomal"
+# textflame 1 1
+@フェイルノート
+私の邪魔をする存在は、
+ここで確実に仕留めておくべきね…
+
+# se "SE_4300"
+# textflame 0 0
+@
+フェイルノートはそうつぶやくと、
+マスターに向かって弓を構える
+
+# alpha 2401911 0 0.5
+# textflame 0 0
+@
+そのフェイルノートの動きに
+いち早く反応したのは…
+
+# mask 2503111 off
+# alpha 2503111 1 0.5
+# face 2503111 "angry"
+# textflame 1 1
+@ソロモン
+みんな、伏せて！
+
+;;演出：ソロモンの銃の音
+# se "SE_4967"
+# fadein "white" 0.4
+# textwindow "close"
+# waitandnext 0.4
+
+# se "SE_4968"
+# shake 0 0.7
+# waitandnext 1
+
+# alpha 2503111 0 0.5
+# textflame 0 0
+# textwindow "nomal"
+@
+ソロモンの銃撃は周辺の木々を倒し、
+フェイルノートの攻撃を封じた
+
+# move 2302811 4 0
+# alpha 2302811 1 0.5
+# move 2503111 2 0
+# mask 2503111 on
+# alpha 2503111 1 0.5
+# face 2302811 "normal"
+# voice 3028 "herena_a_0054"
+# textflame 1 1
+@ヘレナ
+ソロモン！
+助かった
+
+# face 2503111 "usual"
+# voice 5031 "solomon_t_0003"
+# textflame 1 1
+@ソロモン
+目くらまし程度よ、
+長くは持たないわ
+
+# face 2503111 "angry"
+# textflame 1 1
+@ソロモン
+さあ、ここを離脱するわよ
+ほら、貴方も早く！
+
+# textflame 0 0
+@
+ソロモンはそういいながら
+マスターの手を取り、
+グラウの背中に乗せてくれた
+
+# textflame 1 1
+@ソロモン
+みんな、グラウについてきて！
+安全なルートを確保してあるから！
+
+# alpha 2302811 0 0.5
+# alpha 2503111 0 0.5
+# mask 2103811 off
+# alpha 2103811 1 0.5
+# face 2103811 "angry"
+# voice 1038 "almace_0009"
+# textflame 1 1
+@アルマス
+待って…！
+ここで逃げるなんて…！
+
+# alpha 2103811 0 0.5
+# alpha 2302811 1 0.5
+# move 2303211 2 0
+# mask 2303211 on
+# alpha 2303211 1 0.5
+# face 2302811 "angry"
+# face 2303211 "angry"
+# voice 3028 "herena_a_0011"
+# textflame 1 1
+@ヘレナ
+今のヘレナたちじゃ、
+フェイルノートには勝てない
+アルマスもわかっているだろ？
+
+# voice 330321 "gaedearg_ge_0001"
+# textflame 1 1
+@ガ・ジャルグ
+いい？これは戦略的撤退よ！
+
+# alpha 2302811 0 0.5
+# alpha 2303211 0 0.5
+# alpha 2103811 1 0.5
+# voice 1038 "almace_battle_0005"
+# textflame 1 1
+@アルマス
+くっ…
+
+# textwindow "close"
+# se "SE_5575"
+# alpha 2103811 0 0.5
+# waitandnext 0.5
+
+# textflame 0 0
+# textwindow "normal"
+@
+逃げ出すマスターの耳に
+倒れた木々の向こうにいる、
+フェイルノートの声が響く
+
+# serif 1
+@フェイルノート
+結界が必要な意味、
+それを理解することね！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+@
+その言葉の真意がわからず、
+フェイルノートを気にするマスターに
+ソロモンが声をかける
+
+# imageset 0 "black"
+# imagescale 0 1.2 0
+# imagealpha 0 0 0
+# imagelayer 0 1
+# move 2503111 3 0
+# mask 2503111 off
+# alpha 2503111 1 0.5
+# voice 5031 "solomon_t_0002"
+# textflame 1 1
+@ソロモン
+よそ見は禁物よ
+今は逃げることだけを考えて
+
+;;演出：暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# alpha 2503111 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 2103811 1 0.5
+# face 2103811 "angry"
+# textwindow "nomal"
+# textflame 1 1
+@アルマス
+はぁ…はぁ…
+なんとか…
+全員、無事みたいね…
+
+# textflame 0 0
+@
+ジャングルを駆け抜け、
+とりあえず安全な場所まで
+たどりついた
+
+# alpha 2103811 0 0.5
+# move 2302811 3 0
+# mask 2302811 off
+# alpha 2302811 1 0.5
+# face 2302811 "normal"
+# voice 3028 "herena_a_0002"
+# textflame 1 1
+@ヘレナ
+先輩…
+さっきのフェイルノートの言葉、
+どういう意味だろうね？
+
+# textflame 0 0
+@
+マスターはヘレナの質問に、
+わからない
+と、答えるしかなかった
+
+# textflame 0 0
+@
+また、自分の持つバイブスが
+ラグーナ島のキル姫にとって
+どういった存在なのか…
+
+# textflame 0 0
+@
+それを考えたこともなかった
+と、落ち込んでしまう
+
+# alpha 2302811 0 0.5
+# move 2303211 3 0
+# mask 2303211 off
+# alpha 2303211 1 0.5
+# face 2303211 "usual"
+# voice 330321 "gaedearg_ge_0007"
+# textflame 1 1
+@ガ・ジャルグ
+あら…落ち込むようなこと？
+完璧な存在である、
+このわたしだったらともかく…
+
+# face 2303211 "normal"
+# textflame 1 1
+@ガ・ジャルグ
+マスターにわからないことが
+あるなんて、当然のことじゃない？
+
+# textflame 0 0
+@
+ガ・ジャルグなりの激励なのだが
+自分の無能さを強調された気がして、
+マスターは力なく笑ってごまかす
+
+# alpha 2303211 0 0.5
+# alpha 2103811 1 0.5
+# face 2103811 "usual"
+# voice 1038 "almace_0003"
+# textflame 1 1
+@アルマス
+…言い方は気に触るけど、
+ガ・ジャルグの意見にも一理あるわ
+
+# face 2103811 "angry"
+# textflame 1 1
+@アルマス
+いくら考えたって、
+わからないものはわからないわよ！
+
+# textflame 0 0
+@
+アルマスは、マスターの背中を
+平手で強く叩き、気合いを入れる
+
+# face 2103811 "normal"
+# voice 1038 "almace_0001"
+# textflame 1 1
+@アルマス
+落ち込んだってしかたないでしょ！
+今はやれることを、
+やっていきましょ？
+
+# textflame 0 0
+@
+アルマスのおかげで、マスターは
+なんとか元気を取り戻したが、
+そこでふと気がついた
+
+# textflame 0 0
+@
+アルマスだって大変な時なのに、
+マスターを気遣い、励ましてくれた
+彼女の優しさを、改めて実感する
+
+# textflame 0 0
+@
+アルマスのためにがんばらなくては
+と、マスターは決意を新たに、
+島を廻ることを継続すると決めた
+
+# textflame 1 1
+@アルマス
+ええ、いきましょう！
+
+# alpha 2103811 0 0.5
+# move 2302811 4 0
+# mask 2302811 on
+# alpha 2302811 1 0.5
+# move 2303211 2 0
+# mask 2303211 on
+# alpha 2303211 1 0.5
+# voice 330321 "gaedearg_ge_0032"
+# textflame 1 1
+@ガ・ジャルグ
+約束だから、仕方ないわね！
+
+# voice 3028 "herena_a_0004"
+# textflame 1 1
+@ヘレナ
+ふふっ…
+ヘレナは先輩についていくよ…
+ソロモンは、どうする？
+
+# alpha 2302811 0 0.5
+# alpha 2303211 0 0.5
+# alpha 2503111 1 0.5
+# face 2503111 "usual"
+# voice 5031 "solomon_t_0032"
+# textflame 1 1
+@ソロモン
+任務が失敗した以上、
+私は帰還するのみ、よ
+
+# move 2503111 2 0.5
+# mask 2503111 on
+# alpha 2302811 1 0.5
+# textflame 1 1
+@ヘレナ
+でも、さっきは仲間の
+ヘレナだけじゃなく、
+マスターも守ったよね？
+
+# face 2302811 "happy"
+# voice 3028 "herena_a_0005"
+# textflame 1 1
+@ヘレナ
+もしかして…
+もう、つながってるんじゃない？
+
+# face 2503111 "angry"
+# textflame 1 1
+@ソロモン
+あの人と…つながる？
+どういう意味よ…
+
+# textflame 0 0
+@
+そういって不思議そうに
+マスターを見るソロモンに、
+マスターも何気なく視線を返す
+
+# bgmfile "bgm348_349" "BgmSeaEventBattle003" 0
+# se "SE_0644"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 2503111 "sad"
+# voice 5031 "solomon_t_0022"
+# textflame 1 1
+@ソロモン
+え…
+
+# textflame 1 1
+@ソロモン
+これ…この感覚はなに？
+つながるって…このこと？
+
+# textflame 1 1
+@ソロモン
+力が湧いてくるような、
+不思議な感覚ね…
+
+# textflame 0 0
+@
+その時、ジャングルのどこかで
+空間が歪み、異族の群れが出現した
+
+# alpha 2503111 0 0.5
+# alpha 2302811 0 0.5
+# alpha 164 1 0.5
+# voice 9950 "glau_0022"
+# textflame 1 1
+@グラウ
+…ソロモン！
+異族の出現を感知しました、
+多数でこちらに向かっています
+
+# alpha 164 0 0.5
+# alpha 2503111 1 0.5
+# alpha 2302811 1 0.5
+# face 2503111 "angry"
+# voice 5031 "solomon_t_0003"
+# textflame 1 1
+@ソロモン
+わかったわ、
+ここで迎え撃ちましょう！
+ヘレナ、準備はいい？
+
+# face 2302811 "normal"
+# voice 3028 "herena_a_0003"
+# textflame 1 1
+@ヘレナ
+ああ、いつでもいいぞ

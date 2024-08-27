@@ -1,0 +1,359 @@
+;;-----------------------------------------
+;;■□■神器レーヴァテイン再強化イベントシナリオ_20190610■□■
+;;【第13話】終末の剣
+;;13_3
+;;スクリプト最後の背景：丘
+;;-----------------------------------------
+# script "lisp"
+# background "highland"
+# bgm "bgm029" 0
+;;-----------------------------------------
+;;レーヴァテイン
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# layer 100221 2
+# alpha 100221 0 0
+# mask 100221 off
+;;イミテーション（覚醒レーヴァ）
+# body 100244
+# pos 100244 3
+# scale 100244 0.8 0
+# layer 100244 2
+# alpha 100244 0 0
+# mask 100244 off
+;;-----------------------------------------
+;;//バトル（VS覚醒レーヴァテイン）
+# move 100221 3 0
+# face 100221 "angry"
+# alpha 100221 1 0
+# mask 100221 off
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+くっ…このぉぉっ！！
+
+;;//切る演出
+# textwindow "close"
+# se "SE_4100"
+# effectbody 1000 3 0 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# alpha 100221 0 0.5
+# move 100244 3 0
+# alpha 100244 1 0.5
+# mask 100244 on
+# waitandnext 0.8
+
+;;//覚醒レーヴァかわす
+# se "SE_5204"
+# move 100244 2 0.1
+# waitandnext 0.2
+
+# textboxarrow 0 1
+# textwindow "normal"
+@イミテーション
+はぁ…やっぱりこんなものよね
+
+;;//覚醒レーヴァ切る演出
+# textwindow "close"
+# alpha 100244 0 0.5
+# move 100221 3 0
+# face 100221 "angry"
+# alpha 100221 1 0.5
+# mask 100221 off
+# waitandnext 0.8
+
+# se "SE_5840"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1001 1 0 0 0
+# effectstart 1001
+# waitandnext 0.5
+
+# face 100221 "surprise"
+# textboxarrow 0 2
+# textwindow "normal"
+@レーヴァテイン
+きゃあぁぁぁっ！？
+
+# alpha 100221 0 0.5
+# move 100244 3 0
+# alpha 100244 1 0.5
+# mask 100244 off
+# textboxarrow 0 2
+@イミテーション
+異族の殲滅、それは私が
+終わらせる
+
+# textboxarrow 0 2
+@イミテーション
+だから、アナタは私の糧になればいい
+私もアナタ、アナタも私―
+
+# voice 1002 "revatein_0037"
+# alpha 100244 0 0.5
+# move 100221 3 0
+# face 100221 "angry"
+# alpha 100221 1 0.5
+# mask 100221 off
+# textboxarrow 0 2
+@レーヴァテイン
+くっ…っ…
+
+# move 100244 2 0
+# alpha 100244 1 0.5
+# mask 100244 on
+# textboxarrow 0 1
+# move 100221 4 0.5
+# mask 100221 on
+@イミテーション
+ほら、やることが変わらないなら、
+どっちでもいいでしょ
+
+# voice 1002 "revatein_0015"
+# face 100221 "sad"
+# textboxarrow 0 3
+@レーヴァテイン
+そ、れは…
+
+# textboxarrow 0 1
+@イミテーション
+別にあなたがやる必要がないでしょ
+それより強い私がいるんだし
+…めんどうだけどね
+
+;;//モヤモヤ
+# move 100221 4 0
+# mask 100221 on
+# textboxarrow 0 0
+# textwindow "moya"
+@レーヴァテイン
+私じゃなくてもいい？
+本当に…でも、このモヤモヤを
+感じる必要がなくなる…？
+
+# textboxarrow 0 1
+# textwindow "normal"
+@イミテーション
+はぁ…別に私はヒマじゃない…
+さっさと終わって
+
+;;モノローグ
+# se "SE_5222"
+# textflame 0 0
+@
+大上段に振り上げられた大剣
+それがゆっくり振り下ろされていく―
+
+;;//選択肢（一個のみ）
+;;レーヴァテイン!!
+# select "レーヴァテイン!!" "select_label_01"
+大上段に振り上げられた大剣
+それがゆっくり振り下ろされていく―
+
+;;//解答
+# label "select_label_01"
+# bgm "stop"
+# voice 1002 "revatein_0029"
+# face 100221 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+っ!!
+はあぁぁぁぁっ―!!
+
+;;//つばぜり合い
+# se "SE_8023"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@イミテーション
+なに？
+
+# bgm "bgm035_036" 0
+# textboxarrow 0 3
+@レーヴァテイン
+まだ、終われない…
+私は強くなる…
+
+# textboxarrow 0 1
+@イミテーション
+だから…
+
+# textboxarrow 0 3
+@レーヴァテイン
+私が…強くなる…
+その理由が、私にはあるから…
+
+;;//モヤモヤ
+# move 100221 4 0
+# mask 100221 on
+# textboxarrow 0 0
+# textwindow "moya"
+@レーヴァテイン
+ティルフィングの隣に立つため…
+そして…マスターのため…
+
+# textboxarrow 0 3
+# textwindow "normal"
+@レーヴァテイン
+あなたが私の糧になって
+
+;;//切る演出
+# se "SE_5840"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1002 1 -200 0 0
+# effectstart 1002
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@イミテーション
+そう…なら、好きにすれば、いい…
+
+;;//覚醒レーヴァ倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 100244 0 0.5
+# waitandnext 1
+
+# move 100221 3 0.5
+# mask 100221 off
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+@レーヴァテイン
+はぁ…はぁ…っ…
+これで…私は…
+
+;;モノローグ
+# textflame 0 0
+@
+止まっていた時間が
+急激に現実へと戻っていく
+
+;;モノローグ
+@
+剣を支えにしたレーヴァテインは
+ゆっくりと息を整えていく
+
+# face 100221 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+…マスター、私強くなった…？
+
+;;モノローグ
+# textflame 0 0
+@
+その言葉に、マスターは小さく、
+しかししっかりと頷いた
+
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+そう…
+なら帰ろ…
+
+;;モノローグ
+# alpha 100221 0 0.5
+# textflame 0 0
+@
+そう言って、彼女は倒れ伏す
+イミテーションを見やる
+すると―
+
+;;//演出：フラッシュ
+# se "SE_9088"
+# fadein "white" 1
+# waitandnext 1
+
+;;モノローグ
+@
+イミテーションの体が光と共に消え、
+後には宝玉が残されていた
+
+# voice 1002 "revatein_0023"
+# move 100221 3 0
+# face 100221 "surprise"
+# alpha 100221 1 0.5
+# mask 100221 off
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+なに、これ…？
+石？
+
+;;モノローグ
+# textflame 0 0
+@
+その宝玉は、
+吸い込まれるように
+彼女の持つ神器へと収まった
+
+# voice 1002 "revatein_0013"
+# face 100221 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+はぁ…なんだかよく分からないけど…
+強くなったの、かな
+
+;;モノローグ
+# textflame 0 0
+@
+まるで溶けるように吸収されたとき、
+神器レーヴァテインから感じる力は、
+より禍々しいものに変化していた
+
+# face 100221 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+魔剣、レーヴァテイン
+これから先、ずっとあなたの障害を
+切り裂き終わらせる剣
+
+# voice 1002 "revatein_0004"
+# face 100221 "happy"
+# textboxarrow 0 2
+@レーヴァテイン
+だから、マスターは安心して
+私の背中にいればいい…ふふっ…
+
+;;モノローグ
+# textflame 0 0
+@
+どこか軽い口調で笑う彼女は、
+そっと目を細めた
+
+;;//モヤモヤ
+# move 100221 3 0
+# face 100221 "normal"
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 100221 off
+@レーヴァテイン
+なんだかよく分からないけど…
+これでティルフィングの隣に
+立てる、よね？
+
+;;//モヤモヤ
+# face 100221 "happy"
+# textboxarrow 0 0
+@レーヴァテイン
+はぁ…もしかしたら、
+ユグドラシルが私の願いを
+叶えてくれたのかも…なんてね
+
+;;モノローグ
+# textflame 0 0
+@
+彼女はふと、そんなことを
+思いながら、ユグドラシルを見上げた

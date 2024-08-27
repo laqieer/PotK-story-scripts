@@ -1,0 +1,848 @@
+;;-----------------------------------------
+;;■□■新・海上編9月中旬シナリオ■□■
+;;【OP】
+;;//背景：島全景
+;;-----------------------------------------
+# script "lisp"
+# fadein "white" 1
+# background "mov2_1"
+# bgmfile "bgm224_story" "BgmSeaEvent" 0
+;;ラグナロク
+# body 2103611
+# pos 2103611 3
+# scale 2103611 0.8 0
+# layer 2103611 2
+# alpha 2103611 0 0
+# mask 2103611 on
+;;ミネルヴァ
+# body 2302511
+# pos 2302511 3
+# scale 2302511 0.8 0
+# layer 2302511 2
+# alpha 2302511 0 0
+# mask 2302511 off
+;;エルキュール
+# body 2202511
+# pos 2202511 4
+# scale 2202511 0.8 0
+# alpha 2202511 0 0
+;;フライシュッツ
+# body 2502711
+# pos 2502711 2
+# scale 2502711 0.8 0
+# alpha 2502711 0 0
+;;スイハ
+# body 2401711
+# pos 2401711 3
+# scale 2401711 0.8 0
+# alpha 2401711 0 0
+;;ダモクレス
+# body 2103511
+# pos 2103511 3
+# scale 2103511 0.8 0
+# alpha 2103511 0 0
+# mask 2103511 off
+;;ネス
+# body 2602011
+# pos 2602011 1
+# scale 2602011 0.8 0
+# alpha 2602011 0 0
+# mask 2602011 off
+;;ラース
+# body 2100121
+# pos 2100121 1
+# scale 2100121 0.8 0
+# alpha 2100121 0 0
+# mask 2100121 off
+;;グラトニー
+# body 2200421
+# pos 2200421 1
+# scale 2200421 0.8 0
+# alpha 2200421 0 0
+# mask 2200421 off
+;;グラーシーザ
+# body 2302611
+# pos 2302611 3
+# scale 2302611 0.8 0
+# alpha 2302611 0 0
+# mask 2302611 on
+;;プライド（フライクーゲル）
+# body 2500221
+# pos 2500221 3
+# scale 2500221 0.8 0
+# alpha 2500221 0 0
+# mask 2500221 on
+;;水着グリード（ティルフィング）
+# body 2101421
+# pos 2101421 3
+# scale 2101421 0.8 0
+# alpha 2101421 0 0
+# mask 2101421 on
+;;エンヴィ（ロンギヌス）
+# body 2300121
+# pos 2300121 3
+# scale 2300121 0.8 0
+# alpha 2300121 0 0
+# mask 2300121 on
+;;
+;;-----------------------------------------
+;;島背景（一枚絵）
+# imageset 1 "e170701_map"
+# imagealpha 1 0 0
+;;op演出用一枚絵
+# imageset 2 "mov2_2"
+# imagescale 2 1.15 0
+# imagealpha 2 0 0
+;;op演出用一枚絵
+# imageset 3 "bg_white"
+# imagealpha 3 1 0
+# imagescale 3 2.5 0
+;;-----------------------------------------
+# textwindow "close"
+# waitandnext 0.1
+
+;;【OP】
+;;背景：島全景
+# imagealpha 2 1 0.5
+# imagepos 2 0 -590
+# waitandnext 0.5
+
+# se "SE_0050"
+# imagealpha 3 0 0
+# imagemoveto 2 0 -50 0.8
+# waitandnext 0.8
+
+# imagealpha 2 0 0.8
+# imagealpha 1 1 0.3
+# imagepos 1 0 15
+# textwindow "nomal"
+# textflame 0 0
+@
+青い海に浮かぶ常夏の島
+ラグーナ島―
+
+@
+いま、まさにこの島は
+重大な危機を迎えていた
+
+@
+ブラックキラーズの襲撃に端を発した
+異族の出現は序章にすぎなかった
+
+@
+結界の歪みは拡大し続け、
+島内に数多くの異族が放出されている
+
+@
+マスターかラグナロクが
+犠牲になることでしか、
+この危機を救うことはできないという
+
+@
+島の未来のために身を捧げる覚悟を
+したマスターと、その身代わりに
+なろうとするラグナロク
+
+@
+何としてもラグナロクを止めたい
+マスターだったが、言葉は届かない
+
+@
+マスターは、ラグナロクを救い、
+この島に平和を取り戻すことが
+できるのだろうか…
+
+# textwindow "close"
+# fadeout "black" 1.5
+# waitandnext 2
+
+# imagealpha 1 0 0
+# imagealpha 2 0 0
+# imagealpha 3 0 0
+;;◆背景：ビーチ-------------------------------
+# background "sea_beach_day"
+# bgm "bgm004" 0
+# waitandnext 0.1
+
+# fadein "black" 2
+# waitandnext 2
+
+# textflame 0 0
+# textwindow "normal"
+@
+マスターは、再び一人で
+海辺に立っていた
+
+# se "SE_0742"
+;;//回想
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# alpha 2103611 1 0
+# mask 2103611 off
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# textwindow "nomal"
+# textflame 1 1
+# voice 1036 "ragnarok_0003"
+# face 2103611 "angry"
+@ラグナロク
+私が結晶体になる！
+
+;;//回想ここまで
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# alpha 2103611 0 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# textwindow "nomal"
+# textflame 0 0
+@
+マスターが引き止めても、
+ラグナロクは取り合ってくれない
+
+@
+彼女の心を変える方法はないか、
+マスターが考えていると…
+
+# voice 3025 "minerva_0001"
+# alpha 2302511 1 0.5
+# textflame 1 1
+@ミネルヴァ
+マスター、一人は危険ですよ
+
+# textflame 0 0
+@
+ミネルヴァが後ろから
+近づき、声をかけてきた
+
+@
+マスターが、ごめん、と言って
+振り向くと、ミネルヴァは
+沈んだ表情を見せる
+
+# face 2302511 "sad"
+# textflame 1 1
+@ミネルヴァ
+すみません…
+私が、誰も犠牲にならない方法を
+探すことができていれば…
+
+# textflame 0 0
+@
+暗い彼女を見ていると、
+どうしても思い出してしまう
+
+# textflame 0 0
+@
+彼女が、ラグナロクが
+バイブスを持っていることを
+教えにきた時のことを…
+
+;;回想
+;;背景：ビーチ
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# face 2302511 "normal"
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# textwindow "nomal"
+# textflame 1 1
+# bgm "bgm005" 0
+@ミネルヴァ
+そもそものきっかけは、
+ビーチフラッグでの
+ラグナロクとグリードの異族退治です
+
+@ミネルヴァ
+あの時、戦っていたのは二人だけ
+異族はマスターを襲おうとも
+しませんでした
+
+@ミネルヴァ
+あの時は気付きませんでしたが、
+あれは不自然だと気付いたんです
+
+# textflame 0 0
+@
+不自然？
+首を傾げるマスターに、
+ミネルヴァはうなずく
+
+# textflame 1 1
+@ミネルヴァ
+ええ
+マスターが視認できる距離でしたが、
+異族は二人に集中していました
+
+@ミネルヴァ
+そして、その後…
+私たちは歪みを見に
+遺跡に向かったのです
+
+;;場面転換
+;;背景：ジャングル
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "sea_jungle_day"
+# alpha 2103611 1 0
+# move 2103611 2 0
+# mask 2103611 on
+# face 2103611 "usual"
+# alpha 2302511 1 0
+# move 2302511 4 0
+# mask 2302511 on
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# textwindow "nomal"
+# textflame 1 1
+@ラグナロク
+ここが歪みの中心…
+
+@ミネルヴァ
+ええ、
+ここから異族が発生するのを
+確認しています
+
+;;SE：風を切るような音
+# se "SE_9137"
+# waitandnext 0.5
+
+# face 2103611 "sad"
+@ラグナロク
+今の音は…？
+
+# face 2302511 "sad"
+@ミネルヴァ
+すみません、わかりません…
+
+# move 2302511 4 0
+# textwindow "moya"
+;;モヤモヤ
+@ミネルヴァ
+私がここを見つけたときは
+こんな反応はなかった…
+
+;;モヤモヤ
+@ミネルヴァ
+ラグナロクがここにいるから？
+ならば、なぜ結界は彼女に
+反応を…？
+
+# textwindow "normal"
+@ミネルヴァ
+…まさか？
+
+@ラグナロク
+ミネルヴァ…？
+なにかわかったの？
+
+# face 2302511 "normal"
+@ミネルヴァ
+い、いえ…
+私は周りを改めて調査してきます
+
+# face 2103611 "usual"
+@ラグナロク
+そう…
+なら、私は他の子を
+ここに呼んでくるわ
+
+@ミネルヴァ
+はい…
+お願いします
+
+;;場面転換
+;;背景：ビーチ
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "sea_beach_day"
+# alpha 2103611 0 0
+# move 2302511 3 0
+# face 2302511 "normal"
+# mask 2302511 off
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# textwindow "normal"
+# voice 3025 "minerva_0003"
+@ミネルヴァ
+その後、調査を重ね、
+ラグナロクにバイブスがあることを
+確信しました
+
+@ミネルヴァ
+なぜ彼女がバイブスを持つのか、
+その理由は私にはわかりません
+
+@ミネルヴァ
+ただ、バイブスを持つ彼女を
+結晶体にし、結界の修復を
+行うことは可能です
+
+# face 2302511 "sad"
+@ミネルヴァ
+マスター、こんな案しか
+私には出せません
+
+@ミネルヴァ
+ごめんなさい…
+ごめん、なさい…
+
+;;回想終わり
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# alpha 2302511 0 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "normal"
+@
+あの時と同じように、
+今もミネルヴァは苦しそうに
+俯いている
+
+@
+落ち込む彼女をなぐさめたいが、
+うまく言葉が出ないマスター
+
+@
+結局二人は黙り込み、気まずさを
+ごまかすように視線を海に向けた
+
+;;//場面転換
+;;//背景：密林
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# background "sea_jungle_day"
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textwindow "nomal"
+@
+その頃、ジャングルでは
+最後のエンシェントキラーズが
+目覚めの時を迎えていた
+
+;;//画面白フラッシュ
+;;//グラーシーザ復活
+# se "SE_5548"
+# fadeout "white" 0.4
+# textwindow "close"
+# waitandnext 0.6
+
+# move 2302611 3 0
+# face 2302611 "usual"
+# alpha 2302611 1 0
+# mask 2302611 off
+# waitandnext 0.1
+
+# fadein "white" 0.4
+# waitandnext 0.6
+
+# textflame 1 1
+# textwindow "normal"
+# voice 3026 "grayside_0004"
+@グラーシーザ
+ん〜？
+ほかのみんなは、
+もう起きているのか？
+
+@グラーシーザ
+のんびりしていられないぞ！
+まずはバイブスを持つ者を
+さがすとするか！
+
+;;//場面転換
+;;//背景：ビーチ
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# alpha 2302611 0 0
+# waitandnext 0.1
+# background "sea_beach_day"
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# serif 1
+@？？？
+おーい、ミネルヴァ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+ミネルヴァとマスターの耳に、
+どこからか元気のいい声が
+聞こえてきた
+
+# alpha 2302511 1 0.5
+# textflame 1 1
+@ミネルヴァ
+グラーシーザ…
+あなたも、目覚めたのですね…
+
+;;//グラーシーザ登場
+# se "SE_0719"
+# alpha 2302511 0 0.5
+# alpha 2302611 1 0.5
+@グラーシーザ
+おくれてすまなかった！
+
+@グラーシーザ
+おまえがバイブスを持つ者だな？
+あたしは“せいぎ”のグラーシーザだ！
+よろしくな！
+
+# textflame 0 0
+@
+マスターも自己紹介すると、
+グラーシーザはまじまじと
+顔を覗き込む
+
+# face 2302611 "surprise"
+# textflame 1 1
+@グラーシーザ
+ミネルヴァもマスターも、
+元気がないな？
+
+# textflame 0 0
+@
+マスターはこれまでのことを、
+グラーシーザに説明した
+
+# face 2302611 "usual"
+# textflame 1 1
+@グラーシーザ
+話はだいたいわかった！
+だが、なっとくできないことがある！
+
+@グラーシーザ
+みんなはあっちだな？
+いっしょに行くぞ！
+
+;;//演出：場所移動
+;;//背景変更なし
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# alpha 2302611 0 0
+# face 2502711 "angry"
+# alpha 2502711 1 0
+# face 2202511 "angry"
+# alpha 2202511 1 0
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textwindow "nomal"
+@フライシュッツ
+…だから、ラグナロクちゃんが
+結晶体になるのもダメなの！
+
+@エルキュール
+希望を持つと約束したはずです、
+私はこれが最善とは思えません！
+
+# alpha 2502711 0 0.5
+# alpha 2202511 0 0.5
+# move 2103611 3 0
+# mask 2103611 off
+# alpha 2103611 1 0.5
+@ラグナロク
+ありがとう、二人とも
+ただ、この決心を
+変えるつもりはない
+
+@ラグナロク
+それに…
+こういうのは変かもしれないけど…
+みんなのためになれることが嬉しいの
+
+# textflame 0 0
+@
+エンシェント達はラグナロクの、
+説得を続けているが、翻意には
+至らないようだった
+
+# alpha 2103611 0 0.5
+# alpha 2302611 1 0.5
+# textflame 1 1
+@グラーシーザ
+みんな！
+おそくなって、すまなかった！
+
+# alpha 2302611 0 0.5
+# face 2401711 "usual"
+# alpha 2401711 1 0.5
+# mask 2401711 off
+# voice 4017 "suiha_0003"
+@スイハ
+グラーシーザ…
+お待ちしていました…！
+
+# textflame 0 0
+@
+スイハをはじめ、エンシェント達は
+グラーシーザとの再会に沸き立つ
+
+# alpha 2401711 0 0.5
+# face 2302611 "smile"
+# alpha 2302611 1 0.5
+# textflame 1 1
+@グラーシーザ
+あたしも、
+みんなに会えてうれしいぞ！
+
+# face 2302611 "angry"
+@グラーシーザ
+だが、いまは火急をヨウすると
+マスターから聞いた！
+
+# alpha 2302611 0 0.5
+# move 2602011 3 0
+# face 2602011 "usual"
+# alpha 2602011 1 0.5
+# voice 6020 "ness_0003"
+@ネス
+そうなのです…
+グラーシーザも、ラグナロクと
+話をしてくれますか？
+
+# alpha 2602011 0 0.5
+# face 2302611 "usual"
+# alpha 2302611 1 0.5
+@グラーシーザ
+あたしは、ラグナロクと
+マスターに話があるんだ
+
+@グラーシーザ
+二人が島を守るために、
+かくごを決めたことは
+りっぱだと思う！
+
+@グラーシーザ
+どんな気もちで
+決心したのか予想はつくが…
+
+# textflame 0 0
+@
+そう言うと、グラーシーザは
+ラグナロクとマスターの顔を
+真剣な表情で見つめた
+
+# face 2302611 "angry"
+# textflame 1 1
+@グラーシーザ
+でもな、ことばは口にしないと
+いみがないんだ
+
+@グラーシーザ
+わかりきったことだとしても、
+ことばでつたえるべきだと思う
+
+# alpha 2302611 0 0.5
+# alpha 2602011 1 0.5
+@ネス
+そうですよ！
+二人とも勝手に決めて…
+
+# textflame 0 0
+@
+マスターはグラーシーザの助言に従い
+皆に謝り、心配をかけたくなかったと
+一人で決めた理由を説明する
+
+# alpha 2602011 0 0.5
+# move 2202511 3 0
+# face 2202511 "sad"
+# alpha 2202511 1 0.5
+# mask 2202511 off
+# voice 2025 "hercule_0001"
+# textflame 1 1
+@エルキュール
+マスター…
+
+# textflame 0 0
+@
+しかし、ラグナロクは
+沈黙を保ったままだった
+
+# alpha 2202511 0 0.5
+# face 2302511 "sad"
+# alpha 2302511 1 0.5
+# textflame 1 1
+@ミネルヴァ
+ラグナロク…
+
+# alpha 2202511 0 0.5
+# alpha 2302511 0 0.5
+# face 2302611 "usual"
+# alpha 2302611 1 0.5
+@グラーシーザ
+ラグナロクは、少し時間が
+ひつようみたいだな…
+
+@グラーシーザ
+じゃ、あたしはブラックキラーズにも
+ひとこといってくるぞ！
+
+# alpha 2302611 0 0.5
+# textflame 0 0
+@
+そういうと、グラーシーザは
+ブラックキラーズに
+向かって歩き出す
+
+@
+マスターはあわてて、
+グラーシーザを追いかけた
+
+;;//演出：場面転換
+;;//背景変更なし
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm166_167" "BgmPJZero001" 0
+# textwindow "nomal"
+@
+その頃、グリード達のもとには、
+最後のブラックキラーズが
+到着していた
+
+# face 2500221 "usual"
+# alpha 2500221 1 0.5
+# mask 2500221 off
+# textflame 1 1
+# voice 250022 "furaikugeru_k_0005"
+@プライド
+へ〜い！
+サイッコーのスイムウェアを
+選んでいたら遅くなっちゃった！
+
+@プライド
+わたしの獲物、
+まだゲットされてないでしょうね？
+
+# alpha 2500221 0 0.5
+# face 2101421 "usual"
+# alpha 2101421 1 0.5
+# mask 2101421 off
+@グリード
+ええ、残念ながら…
+
+# alpha 2101421 0 0.5
+# alpha 2500221 1 0.5
+@プライド
+ナーイス！
+それで、そのマスターはどこ？
+
+# alpha 2500221 0 0.5
+# alpha 2300121 1 0.5
+# mask 2300121 off
+@エンヴィ
+あ、噂をすれば…
+来ましたよ
+
+# alpha 2300121 0 0.5
+# textflame 0 0
+@
+マスターの心配をよそに、
+グラーシーザはブラックキラーズに
+乱入していく
+
+# alpha 2300121 0 0.5
+# face 2302611 "angry"
+# alpha 2302611 1 0.5
+# textflame 1 1
+@グラーシーザ
+おまえたちがブラックキラーズだな？
+あたしはグラーシーザだ！
+
+# alpha 2302611 0 0.5
+# move 2200421 3 0
+# alpha 2200421 1 0.5
+# voice 220042 "parashu_k_0007"
+@グラトニー
+またでかいのがきたな…
+背は小さいが、かなりのものだ…
+
+# alpha 2200421 0 0.5
+# alpha 2302611 1 0.5
+@グラーシーザ
+あたしは、おまえたちに
+きょうりょくのようせいにきた！
+
+@グラーシーザ
+あたしたちの立場はちがうが、
+島のおんけいを受けているのは
+いっしょだろう？
+
+@グラーシーザ
+三人よればもんじゅのちえ、だ！
+どうか力をかしてほしい！
+
+# alpha 2302611 0 0.5
+# alpha 2500221 1 0.5
+@プライド
+シャラップ！
+あなたの話はノーセンキューね！
+マスターはわたしのものデス！
+
+# se "SE_5208"
+# face 2500221 "angry"
+@プライド
+これ以上なにか言うなら
+わたしの銃弾で蜂の巣デス！
+
+# se "SE_5207"
+# alpha 2500221 0 0.5
+# face 2302611 "usual"
+# alpha 2302611 1 0.5
+@グラーシーザ
+いいだろう、せいぎのためなら、
+たたかいもじさない！

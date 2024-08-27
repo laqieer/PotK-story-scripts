@@ -1,0 +1,543 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第18章 章タイトル：×××アポカリプス
+;;第2話―６　タイトル：支えるために
+;;6_1
+;;スクリプト最後の背景：町：town
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgmfile "bgm467" "BgmIntegralNoahBoso" 0
+;;-----------------------------------------
+;;ハリー
+# body 208
+# pos 208 3
+# scale 208 0.8 0
+# layer 208 2
+# alpha 208 0 0
+# mask 208 off
+;;ダーインスレイヴ
+# body 102811
+# pos 102811 3
+# scale 102811 0.8 0
+# layer 102811 2
+# alpha 102811 0 0
+# mask 102811 off
+;;グングニル
+# body 300831
+# pos 300831 3
+# scale 300831 0.8 0
+# layer 300831 2
+# alpha 300831 0 0
+# mask 300831 off
+;;ヴォータン
+# body 301711
+# pos 301711 3
+# scale 301711 0.8 0
+# layer 301711 2
+# alpha 301711 0 0
+# mask 301711 off
+;;アロンダイト・暴走
+# body 5100711
+# pos 5100711 3
+# scale 5100711 0.8 0
+# layer 5100711 2
+# alpha 5100711 0 0
+# mask 5100711 off
+;;-----------------------------------------
+;;--------------------------------------------
+;;■ヴォータン
+;;//立ち絵：槍_17_ヴォータン_01
+;;■グングニル
+;;//立ち絵：槍_05_グングニル_03
+;;■ハリー
+;;//立ち絵：ハリー
+;;表情差分（angry、sad、surprise辺り使えそうです） 
+;;■ダーインスレイヴ
+;;//立ち絵：剣__ダーインスレイヴ_01
+;;■アロンダイト（暴走）
+;;//立ち絵：アロンダイト・暴走
+;;(暴走)表記はスクリプト作成時削除でお願いします
+;;■マサムネ
+;;//立ち絵：マサムネ・擬彩
+;;■パラシュ
+;;//立ち絵：パラシュ・擬彩
+;;■町人達
+;;//立ち絵なし
+;;
+;;//天上編キャラのIDは下記シートより参照しています。
+;;
+;;--------------------------------------------
+;;//背景：町：town
+# voice 3017 "wotan_0037"
+# move 301711 3 0
+# face 301711 "angry"
+# alpha 301711 1 0
+# mask 301711 off
+# textflame 1 1
+# textboxarrow 0 2
+@ヴォータン
+おのれっ…
+
+;;//ヴォータンが倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 301711 0 0.5
+# waitandnext 0.5
+
+# voice 3008 "gunguniru_0037"
+# move 300831 3 0
+# face 300831 "sad"
+# alpha 300831 1 0.5
+# mask 300831 off
+# textboxarrow 0 2
+# textwindow "normal"
+@グングニル
+この我が…
+完全にはまだ遠いか…
+
+;;//グングニルが倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 300831 0 0.5
+# waitandnext 0.5
+
+;;アロンダイト（暴走）
+# se "SE_4000"
+# voice 510071 "arondaito_bo_0009"
+# move 5100711 3 0
+# face 5100711 "angry"
+# alpha 5100711 1 0.5
+# mask 5100711 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アロンダイト
+抵抗は無駄です
+消えて下さい
+
+# serif 1
+@町人達
+ひぃぃぃぃっ…！
+
+;;アロンダイト（暴走）
+# se "SE_5205"
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+@アロンダイト
+さあ、滅びなさい
+不義にまみれた世界の住人達よ
+
+# voice 9938 "harry_0049"
+# alpha 5100711 0 0.5
+# move 208 3 0
+# face 208 "angry"
+# alpha 208 1 0.5
+# mask 208 off
+# textboxarrow 0 2
+@ハリー
+ダーイン！
+
+# voice 1028 "dainsleif_0033"
+# alpha 208 0 0.5
+# move 102811 2 0
+# face 102811 "angry"
+# alpha 102811 1 0.5
+# mask 102811 on
+# textboxarrow 0 1
+# move 5100711 4 0
+# face 5100711 "angry"
+# alpha 5100711 1 0.5
+# mask 5100711 on
+@ダーインスレイヴ
+任せよ
+
+;;//ダーインスレイヴがアロンダイトを止める
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;アロンダイト（暴走）
+# voice 510071 "arondaito_bo_0009"
+# textboxarrow 0 3
+@アロンダイト
+また邪魔者ですか
+消えて下さい
+
+# textboxarrow 0 1
+@ダーインスレイヴ
+そうはいかないな
+マスターの頼みだ
+
+;;アロンダイト（暴走）
+# face 5100711 "surprise"
+# textboxarrow 0 3
+@アロンダイト
+マスター…？
+
+# textboxarrow 0 1
+@ダーインスレイヴ
+そうだ
+わたしが剣を捧げたマスターが
+人々を守るよう仰せだ
+
+# textboxarrow 0 1
+@ダーインスレイヴ
+だから、わたしは立ち向かう
+そういうことだよ
+
+;;アロンダイト（暴走）
+# voice 510071 "arondaito_bo_0026"
+# face 5100711 "normal"
+# textboxarrow 0 3
+@アロンダイト
+マスターの頼み…
+はぁ…
+
+;;アロンダイト（暴走）
+# se "SE_5205"
+# voice 510071 "arondaito_bo_unit_0010"
+# textboxarrow 0 3
+@アロンダイト
+では、世界の終わりを始めましょう
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 102811 2 0
+# face 102811 "normal"
+# alpha 102811 1 0
+# mask 102811 on
+# move 5100711 4 0
+# face 5100711 "normal"
+# alpha 5100711 1 0
+# mask 5100711 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;アロンダイト（暴走）
+# voice 510071 "arondaito_bo_battle_0003"
+# textboxarrow 0 3
+# textwindow "normal"
+@アロンダイト
+そこ…
+
+# se "SE_4000"
+# waitandnext 0.5
+
+# se "SE_4815"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 -200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# voice 1028 "dainsleif_battle_0006"
+# face 102811 "angry"
+# textboxarrow 0 1
+@ダーインスレイヴ
+ぐぅっ！
+
+;;アロンダイト（暴走）
+# voice 510071 "arondaito_bo_0004"
+# face 5100711 "happy"
+# textboxarrow 0 3
+@アロンダイト
+その程度ですか
+無様ですね
+
+# voice 9938 "harry_0049"
+# alpha 102811 0 0.5
+# alpha 5100711 0 0.5
+# move 208 3 0
+# face 208 "surprise"
+# alpha 208 1 0.5
+# mask 208 off
+# textboxarrow 0 2
+@ハリー
+ダーイン…！
+
+# alpha 208 0 0.5
+# move 102811 2 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 on
+# textboxarrow 0 1
+# move 5100711 4 0
+# face 5100711 "normal"
+# alpha 5100711 1 0.5
+# mask 5100711 on
+@ダーインスレイヴ
+大丈夫だ、ハリー…
+わたしは…必ずおぬしを守るっ
+
+;;アロンダイト（暴走）
+# textboxarrow 0 3
+@アロンダイト
+…あれがあなたのマスターですか？
+まだ、幼い…
+
+# textboxarrow 0 1
+@ダーインスレイヴ
+幼くとも、立派に務めを果たした
+わたしの自慢のマスターだよ
+
+;;アロンダイト（暴走）
+# voice 510071 "arondaito_bo_0009"
+# textboxarrow 0 3
+@アロンダイト
+そうですか…
+では…消えて下さい
+
+;;//アロンダイトがハリーに迫る
+# se "SE_9021"
+# textwindow "close"
+# alpha 5100711 0 0.5
+# waitandnext 0.8
+
+# alpha 102811 0 0.5
+# move 208 3 0
+# face 208 "surprise"
+# alpha 208 1 0.5
+# mask 208 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ハリー
+あっ…
+
+;;//剣戟音
+# se "SE_3006"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# alpha 208 0 0.5
+# move 102811 2 0
+# face 102811 "angry"
+# alpha 102811 1 0.5
+# mask 102811 on
+# textboxarrow 0 1
+# move 5100711 4 0
+# face 5100711 "normal"
+# alpha 5100711 1 0.5
+# mask 5100711 on
+@ダーインスレイヴ
+させるものかっ
+わたしの命に代えても、
+マスターは守ってみせる…！
+
+;;アロンダイト（暴走）
+# voice 510071 "arondaito_bo_0011"
+# textboxarrow 0 3
+@アロンダイト
+無理です
+
+# se "SE_4000"
+# waitandnext 0.5
+
+;;//血しぶき演出
+# se "SE_9013"
+# se "SE_4815"
+# shake 0 0.5
+# fadein "red" 0.5
+# effectbody 2000 1 -200 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+# voice 1028 "dainsleif_battle_0007"
+# face 102811 "sad"
+# textboxarrow 0 1
+@ダーインスレイヴ
+うっ…
+
+;;アロンダイト（暴走）
+# textboxarrow 0 3
+@アロンダイト
+無駄です
+
+# se "SE_4000"
+# waitandnext 0.5
+
+;;//血しぶき演出
+# se "SE_9015"
+# se "SE_4815"
+# shake 0 0.5
+# fadein "red" 0.5
+# effectbody 3000 1 -200 0 0
+# effectstart 3000
+# waitandnext 0.5
+
+# voice 1028 "dainsleif_battle_0006"
+# face 102811 "angry"
+# textboxarrow 0 1
+@ダーインスレイヴ
+くっ！
+
+;;アロンダイト（暴走）
+# voice 510071 "arondaito_bo_0012"
+# textboxarrow 0 3
+@アロンダイト
+やめてください
+
+# se "SE_4000"
+# waitandnext 0.5
+
+;;//血しぶき演出
+# se "SE_9016"
+# se "SE_4830"
+# shake 0 0.5
+# fadein "red" 0.5
+# effectbody 4000 1 -200 0 0
+# effectstart 4000
+# waitandnext 0.5
+
+# voice 1028 "dainsleif_0038"
+# face 102811 "surprise"
+# textboxarrow 0 1
+@ダーインスレイヴ
+ガハァッ…！
+
+# voice 9938 "harry_0049"
+# alpha 102811 0 0.5
+# alpha 5100711 0 0.5
+# move 208 3 0
+# face 208 "angry"
+# alpha 208 1 0.5
+# mask 208 off
+# textboxarrow 0 2
+@ハリー
+ダーイン…！
+もういいよ…
+このままじゃ君が…
+
+;;アロンダイト（暴走）
+# alpha 208 0 0.5
+# move 102811 2 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 on
+# move 5100711 4 0
+# face 5100711 "normal"
+# alpha 5100711 1 0.5
+# mask 5100711 on
+# textboxarrow 0 3
+@アロンダイト
+その少年の言う通りです
+あなたごときが私に勝てるわけ
+ありません
+
+;;アロンダイト（暴走）
+# se "SE_5205"
+# textboxarrow 0 3
+@アロンダイト
+さあ、どいてください
+先にその少年から終わらせます
+
+# bgm "stop"
+# voice 1028 "dainsleif_0007"
+# face 102811 "happy"
+# textboxarrow 0 1
+@ダーインスレイヴ
+くくっ…
+わたしも低く見られたものだな
+
+# textboxarrow 0 1
+@ダーインスレイヴ
+ハリー、心配することはない
+おぬしはわたしが必ず守り抜く
+
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+# face 102811 "normal"
+# textboxarrow 0 1
+@ダーインスレイヴ
+どうしたアロンダイト？
+わたしにどいて欲しいのなら、
+力尽くでやるがいい
+
+# textboxarrow 0 1
+@ダーインスレイヴ
+それとも怖じ気づいたか？
+何を恐れている？
+
+# textboxarrow 0 1
+@ダーインスレイヴ
+先程から、わたしのマスターを
+随分と気にしているようではないか
+おぬしの古傷にでも触れたか？
+
+;;アロンダイト（暴走）
+# face 5100711 "surprise"
+# textboxarrow 0 3
+@アロンダイト
+…………！
+
+# face 102811 "happy"
+# textboxarrow 0 1
+@ダーインスレイヴ
+では、次はわたしが、
+おぬしに消えない傷を与えてやろう
+
+;;アロンダイト（暴走）
+# voice 510071 "arondaito_bo_0012"
+# face 5100711 "angry"
+# textboxarrow 0 3
+@アロンダイト
+やめてください
+いい加減にしてください
+うあああああ！
+
+;;//剣戟音を連続で
+# se "SE_4815"
+# sedelay "SE_4815" 0.6
+# sedelay "SE_4830"1.5
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 5000 1 -200 0 0
+# effectstart 5000
+# waitandnext 0.6
+
+# shake 0 0.5
+# effectbody 6000 1 -200 0 0
+# effectstart 6000
+# waitandnext 0.9
+
+# shake 0 0.5
+# effectbody 7000 1 -200 0 0
+# effectstart 7000
+# waitandnext 0.5
+
+;;アロンダイト（暴走）
+# textboxarrow 0 3
+@アロンダイト
+はぁっ…はぁっ…はぁっ…！
+思い上がるな…！
+
+;;アロンダイト（暴走）
+# textboxarrow 0 3
+@アロンダイト
+あなたが…あなたごときが…！
+
+;;//アロンダイトから黒い霧が溢れる
+;;アロンダイト（暴走）
+# se "SE_2131"
+# emotionbody 8000 15 5100711 0 0
+# effectpattern 8000 1 0
+# effectstart 8000
+# brightness 5100711 0.8 0.5
+# textboxarrow 0 3
+@アロンダイト
+私の為し得なかったことを、
+成し遂げようとするなあああアア！！
+
+;;アロンダイト（暴走）
+# se "SE_2132"
+# textboxarrow 0 3
+@アロンダイト
+スベテヲ…コワス！
+オマエヲ！
+セカイヲ！

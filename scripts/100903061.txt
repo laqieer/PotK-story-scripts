@@ -1,0 +1,199 @@
+;;【第3話　タイトル：幻獣の切望】
+;;戦闘前
+;;背景：地底
+;;-----------------------------------------
+# script "lisp"
+# background "underground_world_1"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス(ジョブチェンジ後)
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# alpha 172 0 0
+;;ガ・ボー
+# body 3302111
+# pos 3302111 3
+# scale 3302111 0.8 0
+# alpha 3302111 0 0
+;;モラルタ
+# body 3104011
+# pos 3104011 4
+# scale 3104011 0.8 0
+# alpha 3104011 0 0
+;;ベガルタ
+# body 3104111
+# pos 3104111 2
+# scale 3104111 0.8 0
+# alpha 3104111 0 0
+;;マサムネ
+# body 3100111
+# pos 3100111 4
+# scale 3100111 0.8 0
+# alpha 3100111 1 0
+;;ムラマサ
+# body 3102511
+# pos 3102511 2
+# scale 3102511 0.8 0
+# alpha 3102511 1 0
+;;トレイセーマ兵
+# body 3830001
+# pos 3830001 3
+# scale 3830001 0.8 0
+# alpha 3830001 0 0
+;;-----------------------------------------
+;;ムラマサとマサムネが切り結んでいる
+# face 3102511 "angry"
+# face 3100111 "angry"
+# textwindow "close"
+# effectbody 1000 1 0 0 0
+# effectbody 2000 2 0 0 0
+# move 3100111 5 1
+# move 3102511 1 1
+# waitandnext 1
+
+# se "SE_3006"
+# move 3100111 4 0.1
+# move 3102511 2 0.1
+# shake 0 1
+# effectstart 1000
+# effectstart 2000
+# waitandnext 0.5
+
+# sedelay "SE_10588" 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 310251 "muramasa_ge_0037"
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 1
+@ムラマサ
+拙者が必ず、姉様の目を
+覚まさせてご覧にいれます！
+
+# se "SE_4000"
+# effectstart 1000
+# waitandnext 0.5
+
+# voice 310011 "masamune_ge_0035"
+# textboxarrow 0 3
+@マサムネ
+いまだ目覚めておらぬのは
+そなたの方なのだっ…
+ムラマサ！拙者を信じてくれっ
+
+# se "SE_3006"
+# effectstart 2000
+# waitandnext 0.5
+
+# textwindow "close"
+# alpha 3100111 0 0.5
+# alpha 3102511 0 0.5
+# waitandnext 0.5
+
+# se "SE_5575"
+# mask 172 off
+# alpha 172 1 0.5
+# face 172 "angry"
+# textwindow "nomal"
+# textboxarrow 0 2
+@アルマス
+ちょっと、そこどいてーっ！
+
+# alpha 172 0 0.5
+# alpha 3100111 1 0.5
+# alpha 3102511 1 0.5
+# face 3100111 "surprise"
+# voice 310011 "masamune_ge_0022"
+# textboxarrow 0 3
+@マサムネ
+主君！？
+それにアルマスもっ…
+なるほど、大した胆力だな
+
+# mask 3302111 off
+# alpha 3302111 1 0.5
+# alpha 3100111 0 0.5
+# alpha 3102511 0 0.5
+# face 3302111 "angry"
+# textboxarrow 0 2
+@ガ・ボー
+逃がしませんよ…
+ボーは姉様の命令を
+必ずやり遂げてみせますっ
+
+# mask 3830001 off
+# alpha 3302111 0 0.5
+# alpha 3830001 1 0.5
+@トレイセーマ兵
+あの斬ル姫達を捕らえろ！
+俺達の陣地に堂々と入ってくるなど、
+ふざけやがって！
+
+# move 3102511 3 0
+# mask 3102511 off
+# alpha 3830001 0 0.5
+# alpha 3102511 1 0.5
+# voice 310251 "muramasa_ge_battle_0005"
+# textboxarrow 0 2
+@ムラマサ
+何ごとですかっ？
+姉様と拙者の一騎討ちを邪魔しないで
+下さいっ
+
+# move 3100111 3 0
+# mask 3100111 off
+# alpha 3100111 1 0.5
+# alpha 3102511 0 0.5
+# face 3100111 "angry"
+# voice 310011 "masamune_ge_battle_0005"
+@マサムネ
+主君、拙者の後ろにっ
+あえて火中に飛び込み混乱に
+乗じようとは機転が利いておられる！
+
+# alpha 3102511 0 0.5
+# move 3100111 4 0.5
+# mask 3100111 on
+# move 172 2 0
+# mask 172 on
+# alpha 172 1 0.5
+# textboxarrow 0 1
+@アルマス
+あ！そういうことだったのね
+マサムネ、悪いけど逃げるのを
+手伝って
+
+# textboxarrow 0 3
+# voice 310011 "masamune_ge_0032"
+@マサムネ
+承知
+理由は後ほど、お聞かせ願おう
+
+# alpha 172 0 0.5
+# alpha 3100111 0 0.5
+# alpha 3104011 1 0.5
+# alpha 3104111 1 0.5
+# face 3104011 "normal"
+# face 3104111 "happy"
+# voice 1040 "morallta_0007"
+# textboxarrow 0 3
+@モラルタ
+ほらほら、鬼さんこちら～っ
+
+# voice 1041 "beagallta_0005"
+# textboxarrow 0 1
+@ベガルタ
+手の鳴る方へ～っ
+
+# move 3100111 3 0
+# mask 3100111 off
+# alpha 3100111 1 0.5
+# alpha 3104011 0 0.5
+# alpha 3104111 0 0.5
+# textboxarrow 0 2
+@マサムネ
+あの双子が兵士達を攪乱している
+今が絶好機！
+主君、拙者から決して離れぬよう

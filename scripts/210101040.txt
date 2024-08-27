@@ -1,0 +1,729 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１０章 章タイトル「勝利を招く悪魔―フレイルティ―」
+;;第1話－４　タイトル：誓約の条件
+;;1_4_0
+;;スクリプト最後の背景：下町
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown_night"
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;エクスカリバー
+# body 101111
+# pos 101111 3
+# scale 101111 0.8 0
+# layer 101111 2
+# alpha 101111 0 0
+# mask 101111 off
+;;モニカ
+# body 209
+# pos 209 3
+# scale 209 0.8 0
+# layer 209 2
+# alpha 209 0 0
+# mask 209 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;グングニル・D. plug・アモン
+# body 3300811
+# pos 3300811 3
+# scale 3300811 0.8 0
+# layer 3300811 2
+# alpha 3300811 0 0
+# mask 3300811 off
+;;グリモワール・獣刻・ニーズヘッグ 大罪ver.
+# body 5501711
+# pos 5501711 3
+# scale 5501711 0.8 0
+# layer 5501711 2
+# alpha 5501711 0 0
+# mask 5501711 off
+;;アスカロン・D. plug・レヴィアタン 大罪ver.
+# body 5102311
+# pos 5102311 3
+# scale 5102311 0.8 0
+# layer 5102311 2
+# alpha 5102311 0 0
+# mask 5102311 off
+;;リサナウト・針枷・クロノス
+# body 3203011
+# pos 3203011 3
+# scale 3203011 0.8 0
+# layer 3203011 2
+# alpha 3203011 0 0
+# mask 3203011 off
+;;フェイルノート
+# body 167
+# pos 167 3
+# scale 167 0.8 0
+# layer 167 2
+# alpha 167 0 0
+# mask 167 off
+;;フェイルノート（誓約）ボイス用
+# body 5401911
+# alpha 5401911 0 0
+;;カラドボルグ・聖鎖・レリエル
+# body 3102611
+# pos 3102611 3
+# scale 3102611 0.8 0
+# layer 3102611 2
+# alpha 3102611 0 0
+# mask 3102611 off
+;;ダーインスレイヴ・聖鎖・マリク
+# body 3102811
+# pos 3102811 3
+# scale 3102811 0.8 0
+# layer 3102811 2
+# alpha 3102811 0 0
+# mask 3102811 off
+;;ティファレト・誓約・ミカエル
+# body 5503211
+# pos 5503211 3
+# scale 5503211 0.8 0
+# layer 5503211 2
+# alpha 5503211 0 0
+# mask 5503211 off
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;第1話－４　タイトル：誓約の条件
+;;//天上世界から地上世界に降りる演出を
+;;//背景：下町（夜）
+# move 5102311 3 0
+# face 5102311 "sad"
+# alpha 5102311 1 0
+# mask 5102311 off
+# textflame 1 1
+# textboxarrow 0 2
+@アスカロン
+…………
+
+# move 5501711 2 0
+# face 5501711 "usual"
+# alpha 5501711 1 0.5
+# mask 5501711 on
+# textboxarrow 0 1
+# move 5102311 4 0.5
+# mask 5102311 on
+@グリモワール
+アスカロン、交代の時間よ
+見張りはワタシに任せて、
+キミは休みなさい
+
+# voice 310231 "ascalon_a_0003"
+# face 5102311 "usual"
+# textboxarrow 0 3
+@アスカロン
+あ、グリモワール…
+はい…
+
+# voice 350171 "grimoire_ge_0002"
+# textboxarrow 0 1
+@グリモワール
+はぁ…
+ちょっと待ちなさい
+ひどい顔よ
+
+# textboxarrow 0 1
+@グリモワール
+ティファレトが言っていたこと
+気にしてるんでしょ
+
+# face 5102311 "sad"
+# textboxarrow 0 3
+@アスカロン
+…グリモワールは気にならないん
+ですかっ？
+このままだとマスターが…！
+
+;;//回想シーン
+;;//背景：下町
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "in_downtown_night"
+# alpha 5501711 0 0
+# alpha 5102311 0 0
+# move 5503211 2 0
+# face 5503211 "sad"
+# alpha 5503211 1 0
+# mask 5503211 on
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0
+# mask 210 on
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+;;ティファレト（誓約）
+# textboxarrow 0 1
+# textwindow "normal"
+@ティファレト
+…それは、人が使える力では
+ありません
+
+# voice 9936 "kamito_0023"
+# face 210 "surprise"
+# textboxarrow 0 3
+@カミト
+えっ？
+
+# textboxarrow 0 1
+@ティファレト
+できれば捨て去って下さい
+さもないと…
+
+# textboxarrow 0 1
+@ティファレト
+あなたは、その力に蝕まれて
+命を落とすことになります
+
+;;//回想終了
+;;//背景：下町（夜）
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "in_downtown_night"
+# alpha 5503211 0 0
+# alpha 210 0 0
+# move 5501711 2 0
+# face 5501711 "usual"
+# alpha 5501711 1 0
+# mask 5501711 on
+# move 5102311 4 0
+# face 5102311 "sad"
+# alpha 5102311 1 0
+# mask 5102311 on
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 3
+# textwindow "normal"
+@アスカロン
+ティファレトに詳しいことを
+聞いてみても、よく分からないって
+言われてしまいました…
+
+# textboxarrow 0 1
+@グリモワール
+マスターの義手…
+そこから強すぎる力を感じ取って
+助言したみたいだけど
+
+# textboxarrow 0 1
+@グリモワール
+あいつに言われるまでもなく、
+アレが危険なものだっていうのは
+ワタシ達も感じていたことでしょっ
+
+# textboxarrow 0 1
+@グリモワール
+「ディスラプター」だったわよね
+あの力を使う度、マスターはひどい
+痛みに苛まれていたわ…
+
+# face 5501711 "normal"
+# textboxarrow 0 1
+@グリモワール
+やっぱり…早めに取り除くべきよ！
+なのにマスターったら…
+
+# textboxarrow 0 3
+@アスカロン
+「まだ、この力を失うわけには
+いかない」の一点張りでしたね…
+
+# textboxarrow 0 1
+@グリモワール
+ああ、もう！
+苛々するわ…
+
+# face 5501711 "usual"
+# textboxarrow 0 1
+@グリモワール
+アスカロン…
+手遅れになる前にマスターの義手を
+何とかするわよ
+
+# voice 310231 "ascalon_a_unit_1006"
+# textboxarrow 0 3
+@アスカロン
+そうやって決断できて…羨ましいっ
+
+# face 5102311 "usual"
+# textboxarrow 0 3
+@アスカロン
+私も、マスターのために動きます！
+どうすればいいですかっ？
+
+# face 5501711 "happy"
+# textboxarrow 0 1
+@グリモワール
+そうね…
+今は寝なさい
+しっかり休むの
+
+# textboxarrow 0 1
+@グリモワール
+無理に取り除こうとしても
+マスターに余計な負担をかけるだけよ
+頃合いを見計らないと
+
+# face 5102311 "happy"
+# textboxarrow 0 3
+@アスカロン
+分かりました！
+私、しっかり休みますね
+おやすみなさい
+
+# textboxarrow 0 1
+@グリモワール
+おやすみ
+
+;;//アスカロンが立ち去る
+# se "SE_0740"
+# textwindow "close"
+# alpha 5102311 0 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm404" "BgmIntegralNoahEvent003" 0
+# face 5501711 "sad"
+# textboxarrow 0 1
+# textwindow "normal"
+@グリモワール
+はぁ…
+厄介ごとばかり増えていくわ
+まったく…
+
+# voice 310261 "caladbolg_t_0004"
+# move 3102611 4 0
+# face 3102611 "normal"
+# alpha 3102611 1 0.5
+# mask 3102611 on
+# textboxarrow 0 3
+@カラドボルグ
+ふふっ…いいわね
+仲間のために心を砕く姿…好きよ♪
+
+# face 5501711 "normal"
+# textboxarrow 0 1
+@グリモワール
+ちょっと！
+いきなり何なの…？
+
+# voice 310261 "caladbolg_t_0031"
+# face 3102611 "usual"
+# textboxarrow 0 3
+@カラドボルグ
+あら、ごめんなさい
+夜は私が輝く時間なの
+お散歩してたら、あなたを見かけて
+
+# face 3102611 "happy"
+# textboxarrow 0 3
+@カラドボルグ
+まだ幼いのにみんなのことを考えて
+いるなんて、偉いわね♪
+
+# face 5501711 "usual"
+# textboxarrow 0 1
+@グリモワール
+ワタシを子供扱いするなんて…
+灼かれたいのっ？
+
+# face 3102611 "usual"
+# textboxarrow 0 3
+@カラドボルグ
+うんうん
+背伸びしなくていいのよ
+
+# face 5501711 "normal"
+# textboxarrow 0 1
+@グリモワール
+してないわよ！
+
+# face 3102611 "normal"
+# textboxarrow 0 3
+@カラドボルグ
+そうだわ！
+グリモワールのために予言をして
+あげるわね
+
+# textboxarrow 0 1
+@グリモワール
+キミ…他人の話を聞かないタイプね…
+
+# face 3102611 "usual"
+# textboxarrow 0 3
+@カラドボルグ
+ふむふむ…
+近いうち、旧友と再会するみたい
+
+# voice 350171 "grimoire_ge_0022"
+# face 5501711 "surprise"
+# textboxarrow 0 1
+@グリモワール
+旧友…それって、まさか…？
+
+# voice 310261 "caladbolg_t_0021"
+# face 3102611 "normal"
+# textboxarrow 0 3
+@カラドボルグ
+旧友との再会…美しいわぁ！
+
+# move 5501711 2 0
+# face 5501711 "usual"
+# textboxarrow 0 0
+# textwindow "moya"
+@グリモワール
+（こいつにこれ以上聞いても
+無駄のようね…）
+
+;;//背景：下町
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_downtown"
+# alpha 5501711 0 0
+# alpha 3102611 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;ナレーション
+# bgm "stop"
+# textflame 0 0
+# textwindow "normal"
+@
+翌朝――
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# move 3102811 3 0
+# face 3102811 "usual"
+# alpha 3102811 1 0.5
+# mask 3102811 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ダーインスレイヴ
+おはよう、諸君
+さて、少々不可解なことになった
+
+;;ティファレト（誓約）
+# alpha 3102811 0 0.5
+# move 5503211 2 0
+# face 5503211 "sad"
+# alpha 5503211 1 0.5
+# mask 5503211 on
+# textboxarrow 0 1
+# move 3300811 4 0
+# face 3300811 "angry"
+# alpha 3300811 1 0.5
+# mask 3300811 on
+@ティファレト
+また、何か起きたのですか？
+
+# textboxarrow 0 3
+@グングニル
+むしろ、何も起きていないことが
+不可解というべきだろう
+
+;;フェイルノート（霊装支配前）
+# alpha 5503211 0 0.5
+# alpha 3300811 0 0.5
+# move 210 2 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+# move 167 4 0
+# face 167 "normal"
+# alpha 167 1 0.5
+# mask 167 on
+# textboxarrow 0 3
+@フェイルノート
+この町に執着していた奏官達の
+姿がたった一晩で消えたのよ
+
+# voice 9936 "kamito_0030"
+# textboxarrow 0 1
+@カミト
+ようやく諦めてくれたのかな？
+
+# voice 310281 "dainsleif_t_0034"
+# alpha 167 0 0.5
+# move 3102811 4 0
+# face 3102811 "usual"
+# alpha 3102811 1 0.5
+# mask 3102811 on
+# textboxarrow 0 3
+@ダーインスレイヴ
+それなら撤退の痕跡が見つかるはず
+なのだが…
+
+# voice 330081 "gunguniru_a_0013"
+# alpha 210 0 0.5
+# move 3300811 2 0
+# face 3300811 "angry"
+# alpha 3300811 1 0.5
+# mask 3300811 on
+# textboxarrow 0 1
+@グングニル
+それすら見つからなかった
+文字通り、彼らは急に消えたのだ
+このことをどう見る？
+
+# alpha 3300811 0 0.5
+# alpha 3102811 0 0.5
+# move 210 2 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+# move 167 4 0
+# face 167 "normal"
+# alpha 167 1 0.5
+# mask 167 on
+# textboxarrow 0 3
+@フェイルノート
+フン！
+十中八九、コマンドキラーズの
+仕業ね
+
+# textboxarrow 0 1
+@カミト
+コマンドキラーズ…
+
+# voice 9937 "monica_0014"
+# alpha 210 0 0.5
+# alpha 167 0 0.5
+# move 209 3 0
+# face 209 "irregular"
+# alpha 209 1 0.5
+# mask 209 off
+# textboxarrow 0 2
+@モニカ
+ふぅん…
+やってくれたんだ
+
+;;エクスカリバー（天上）
+# move 209 2 0.5
+# mask 209 on
+# move 101111 4 0
+# face 101111 "normal"
+# alpha 101111 1 0.5
+# mask 101111 on
+# textboxarrow 0 3
+@エクスカリバー
+マスター？
+
+# face 209 "normal"
+# textboxarrow 0 1
+@モニカ
+ううん、何でもないよ
+
+# alpha 209 0 0.5
+# alpha 101111 0 0.5
+# move 167 2 0
+# face 167 "normal"
+# alpha 167 1 0.5
+# mask 167 on
+# move 3102811 4 0
+# face 3102811 "usual"
+# alpha 3102811 1 0.5
+# mask 3102811 on
+# textboxarrow 0 3
+@ダーインスレイヴ
+わたしもフェイルノートと同意見だ
+近いうち、彼女達と戦うことに
+なりそうだな
+
+# voice 540191 "failnaught_ca_0032"
+# face 167 "smile"
+# textboxarrow 0 1
+@フェイルノート
+いいわよ…
+次も私が倒してみせるからっ
+
+;;フェイルノート（独白）
+# move 167 2 0
+# face 167 "normal"
+# textboxarrow 0 0
+# textwindow "moya"
+@フェイルノート
+コマンドキラーズ…
+彼女達を圧倒できれば、
+私は間違いなく強者といえるわっ
+
+# textboxarrow 0 3
+# textwindow "normal"
+@ダーインスレイヴ
+では、今後について――
+
+# bgm "stop"
+# alpha 167 0 0.5
+# move 3203011 2 0
+# face 3203011 "normal"
+# alpha 3203011 1 0.5
+# mask 3203011 on
+# textboxarrow 0 1
+@リサナウト
+話し合う前に、私から少し
+良いかしら？
+
+# voice 9936 "kamito_0026"
+# alpha 3102811 0 0.5
+# move 210 4 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+@カミト
+うわぁっ！？
+君、誰っ？
+いつの間にっ…？
+
+# voice 2030 "risanautr_l_0004"
+# face 3203011 "happy"
+# textboxarrow 0 1
+@リサナウト
+ふふっ
+驚かせてしまったみたいね
+
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+# alpha 210 0 0.5
+# move 5501711 4 0
+# face 5501711 "usual"
+# alpha 5501711 1 0.5
+# mask 5501711 on
+# textboxarrow 0 3
+@グリモワール
+何でちょっと嬉しそうなのよ…
+で、何しに来たの、リサナウト？
+
+;;カミト（独白）
+# alpha 3203011 0 0.5
+# alpha 5501711 0 0.5
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 210 off
+@カミト
+リサナウト…
+確か、グリモワール達が話していた
+「ネオ・ラグナロク」の創始者だよな
+
+# alpha 210 0 0.5
+# move 3203011 3 0
+# face 3203011 "normal"
+# alpha 3203011 1 0.5
+# mask 3203011 off
+# textboxarrow 0 2
+# textwindow "normal"
+@リサナウト
+私がここに何をしに来たのか…
+それはね…
+
+# move 3203011 2 0.5
+# mask 3203011 on
+# move 167 4 0
+# face 167 "normal"
+# alpha 167 1 0.5
+# mask 167 on
+# textboxarrow 0 3
+@フェイルノート
+ルシファーの居場所が分かったん
+でしょ？
+ようやくね
+
+# face 3203011 "usual"
+# textboxarrow 0 1
+@リサナウト
+…………
+
+# face 3203011 "angry"
+# textboxarrow 0 1
+@リサナウト
+…念のために言っておくけど、
+フェイルノートにそう言われるのは
+前もって分かっていたことよ！
+
+# face 167 "angry"
+# textboxarrow 0 3
+@フェイルノート
+そんなのどうでもいいから、
+早く居場所を教えなさい！
+
+# face 167 "normal"
+# textboxarrow 0 3
+@フェイルノート
+ティファレトから誓約の経緯も
+聞いてるわ
+
+# textboxarrow 0 3
+@フェイルノート
+私もすぐにルシファーと誓約を
+結んでみせるんだからっ
+
+# face 3203011 "normal"
+# textboxarrow 0 1
+@リサナウト
+それと、もう一つ
+カミトにも用事があるのよね
+
+# voice 540191 "failnaught_ca_0009"
+# face 167 "angry"
+# textboxarrow 0 3
+@フェイルノート
+私を無視するなんて、良い度胸ね…
+さっきの仕返しのつもり？
+謀殺するわよ
+
+# textboxarrow 0 1
+@リサナウト
+ちょっとユグドラシルまで…
+というか、地底世界までつき合って
+もらえないかしら
+
+# voice 9936 "kamito_0024"
+# alpha 167 0 0.5
+# move 210 4 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+@カミト
+何だって！？
+
+# alpha 210 0 0.5
+# move 5501711 4 0
+# face 5501711 "normal"
+# alpha 5501711 1 0.5
+# mask 5501711 on
+# textboxarrow 0 3
+@グリモワール
+ちょっと！
+詳しく説明しなさいよ

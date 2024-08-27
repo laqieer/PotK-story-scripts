@@ -1,0 +1,362 @@
+;;-----------------------------------------
+;;SEA1章_1
+;;-----------------------------------------
+# script "lisp"
+# background "diary"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 3
+# scale 6504011 0.8 0
+# layer 6504011 3
+# mask 6504011 off
+# alpha 6504011 0 0
+;;-----------------------------------------
+;;紙
+# imageset 0 "SEA_diary_bg"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imagescale 0 1.2 0
+;;1枚め
+# imageset 1 "SEA_diary_101"
+# imagealpha 1 0 0
+# imagescale 1 1 0
+# imagelayer 1 3
+;;-----------------------------------------
+;;日記演出
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_6165"
+# face 270 "normal"
+# alpha 270 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+旅の記録十一日目――
+
+;;ミーミル消す
+;;テキストウィンドウを外す
+# alpha 270 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;フレームを外す
+# frameout 0 1
+# waitandnext 1
+
+;;紙を表示
+# imagealpha 0 1 1
+# imagepos 0 0 0
+# waitandnext 1
+
+;;1枚目を表示
+# se "SE_6175"
+# imagealpha 1 1 2
+# imagepos 1 0 -1000
+# waitandnext 1
+
+;;1枚目を上に
+# imagemoveto 1 0 900 20
+# waitandnext 18
+
+;;1枚目を消す
+# imagealpha 1 0 2
+# waitandnext 2
+
+;;紙を消す
+# se "SE_6167"
+# imagealpha 0 0 1
+# waitandnext 1
+
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# sestop "SE_6175"
+# framein 0 0
+;;背景：平原
+# background "plain"
+# se "SE_0944"
+# fadein "black" 1.5
+# waitandnext 1.5
+
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# waitandnext 1
+
+;;銃声
+# se "SE_4400"
+# waitandnext 1
+
+# se "SE_4400"
+# waitandnext 1
+
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+# voice 650401 "manannan_ura_0028"
+# face 6504011 "sad"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@マナナン
+うーん…
+上手くできないや
+やーめたっ
+
+# voice 9917 "mimir_navikan_0057"
+# face 270 "normal"
+# alpha 270 1 0.3
+# move 6504011 4 0.5
+# textboxarrow 0 1
+@ミーミル
+マナナンさん
+まだ始めたばかりですよ
+もう少し練習してみましょう
+
+# textboxarrow 0 3
+@マナナン
+えー…
+銃の練習なんて喜劇的じゃないよ
+
+# voice 650401 "manannan_ura_0005"
+# face 6504011 "happy"
+# textboxarrow 0 3
+@マナナン
+当たるまで撃てばいいんだから、
+練習しなくても平気、平気！
+
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+それでは、
+いざというときマスター様を
+お守りできないかもしれません
+
+# textboxarrow 0 1
+@ミーミル
+それに、周りに余計な被害が
+出てしまいます
+
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+根気よく練習しましょう
+きっと上手く扱えるようになりますよ
+
+# voice 650401 "manannan_ura_0002"
+# face 6504011 "usual"
+# textboxarrow 0 3
+@マナナン
+ねえねえ
+練習ってそんなに大切なの？
+
+# voice 9917 "mimir_navikan_0003"
+# textboxarrow 0 1
+@ミーミル
+もちろんです
+毎日コツコツ積み上げることで
+ご自身の力を高めることができます
+
+# textboxarrow 0 1
+@ミーミル
+「努力は裏切らない」と
+古い格言にもございます
+
+# voice 650401 "manannan_ura_0028"
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+うーん…
+そうなのかな～？
+
+# textboxarrow 0 3
+@マナナン
+努力しなくても、
+上手くやれることってあると思う
+
+# face 6504011 "usual"
+# textboxarrow 0 3
+@マナナン
+私だって、こっちに来たときから
+銃は扱えたよ
+何で？
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+それは…才能というものでしょう
+すぐにコツを掴める方も
+中には存在致しますので
+
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+ふ～ん
+だったら才能があればいいんだね！
+
+# voice 9917 "mimir_navikan_0034"
+# textboxarrow 0 1
+@ミーミル
+そうとは限りません
+才能だけでは何事も
+成り立たないものですよ
+
+# face 6504011 "usual"
+# textboxarrow 0 3
+@マナナン
+じゃあ、努力だけでいいの？
+
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+そう言われましても…
+才能を蔑ろにすることも
+できませんから
+
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+よく分からないな…
+マスターは？
+マスターはどっちが大切だと思う？
+
+;;選択肢
+# select "才能かな" "select_label_01" "努力だよ" "select_label_02" "わからない…" "select_label_03"
+才能と努力、
+マスターはどっちが大切だと思う？
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# voice 650401 "manannan_ura_0005"
+# face 6504011 "happy"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+私と一緒だねっ♪
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# voice 9917 "mimir_navikan_0004"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+コツコツ積み上げることは
+大切でございますからね
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# voice 650401 "manannan_ura_0028"
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+うーん…
+マスターでも分からないんだ
+
+# label "select_label_end"
+# sestop "SE_0944"
+# voice 9917 "mimir_navikan_0002"
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+あの、マナナンさん
+才能と努力、どちらが大切かという
+お話はともかく、練習を――
+
+;;ミーミルのペンダントが点滅する
+# face 270 "surprise"
+# bgm "stop"
+# se "SE_6191"
+# textwindow "close"
+# effectbody 100 51 -140 35 0
+# effectstart 100
+# waitandnext 1.5
+
+# face 6504011 "surprise"
+# textboxarrow 0 3
+# textwindow "nomal"
+@マナナン
+あれ？
+ミーミルの胸が光ってる！
+
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+あっ、これは…
+ティルフィング様からのご連絡です
+
+# serif 1
+# textwindow "nomal"
+@ティルフィング
+聞こえますか、ミーミル？
+
+# serif 0
+# voice 9917 "mimir_navikan_0003"
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+はい、ティルフィング様
+どのようなご用件でしょう？
+
+# bgm "bgm005" 0
+# serif 1
+@ティルフィング
+新たな「揺らぎ」の増大を
+感知しました
+
+# serif 1
+@ティルフィング
+アナタ達のいるところから、
+それほど離れていません
+急いで向かって下さい
+
+# serif 0
+# voice 9917 "mimir_navikan_0003"
+# textboxarrow 0 1
+@ミーミル
+はい
+どちらに向かえば？
+
+# serif 1
+@ティルフィング
+そこから南西…
+すぐに町が見えてきます
+その町に
+
+# serif 0
+# textboxarrow 0 1
+@ミーミル
+南西の町…
+地図によると、こちらですね
+
+# serif 0
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+ここは、もしかして…
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@ティルフィング
+ええ
+「レーヴァテインに守られた町」
+
+# serif 1
+@ティルフィング
+要塞都市、レガルです
+
+# fadeout "black" 0.5
+# waitandnext 0.5

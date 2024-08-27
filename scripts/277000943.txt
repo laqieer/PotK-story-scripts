@@ -1,0 +1,115 @@
+;;-----------------------------------------
+;;海上編4-3
+;;-----------------------------------------
+# script "lisp"
+# background "sea_floor_room_suzaku"
+# bgmfile "bgm378" "BgmSeaEventBattle004" 0
+;;-----------------------------------------
+;;ロジェスティラ
+# body 2503711
+# pos 2503711 4
+# scale 2503711 0.8 0
+# layer 2503711 3
+# alpha 2503711 0 0
+;;オルフェウス
+# body 2603211
+# pos 2603211 2
+# scale 2603211 0.8 0
+# layer 2603211 3
+# alpha 2603211 0 0
+;;ゴーレム
+# body 900012
+# pos 900012 3
+# scale 900012 0.8 0
+# layer 900012 3
+# mask 900012 off
+# alpha 900012 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imagescale 0 1.2 0
+;;-----------------------------------------
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# alpha 2503711 1 0.5
+# face 2503711 "angry"
+# alpha 2603211 1 0.5
+# face 2603211 "angry"
+# waitandnext 0.5
+
+# voice 560321 "orpheus_c_battle_0003"
+# textwindow "nomal"
+@オルフェウス
+やあっ！
+
+# se "SE_7227"
+# fadein "white" 0.5
+# waitandnext 0.7
+
+# voice 550371 "logistille_c_battle_0004"
+@ロジェスティラ
+そこです！
+
+# se "SE_4714"
+# fadein "white" 0.5
+# waitandnext 0.7
+
+# alpha 2503711 0 0.5
+# alpha 2603211 0 0.5
+# alpha 900012 1 0.5
+@石のゴーレム
+グァ…
+
+;;演出：石のゴーレム、消滅
+# se "SE_9061"
+# alpha 900012 0 0.8
+# textwindow "close"
+# waitandnext 1
+
+;;演出：コインが落ちる音
+# se "SE_0767"
+# waitandnext 0.5
+
+# alpha 2503711 1 0.5
+# alpha 2603211 1 0.5
+# face 2503711 "normal"
+# voice 550371 "logistille_c_0048"
+# textwindow "nomal"
+@ロジェスティラ
+オルフェウスちゃん、
+コインですよっ
+やりましたぁっ！
+
+# face 2603211 "sad"
+# voice 560321 "orpheus_c_0015"
+@オルフェウス
+うぅ…
+
+# face 2503711 "sad"
+# voice 550371 "logistille_c_0022"
+@ロジェスティラ
+オルフェウスちゃん…？
+どうしました？
+
+# voice 550371 "logistille_c_0002"
+@ロジェスティラ
+あのあのっ…
+いつもみたいに、
+イェーイってしないんですか？
+
+# voice 560321 "orpheus_c_0016"
+@オルフェウス
+うぅ…
+うわーん！
+
+# face 2503711 "surprise"
+# voice 550371 "logistille_c_0023"
+@ロジェスティラ
+オルフェウスちゃん！？
+ど、どうしたんですかっ？
+
+# fadeout "black" 1
+# waitandnext 1

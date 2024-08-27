@@ -1,0 +1,592 @@
+;;-----------------------------------------
+;;SEA1章_23
+;;-----------------------------------------
+# script "lisp"
+# background "006_town"
+# bgm "bgm002" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;市長
+# body 277
+# pos 277 4
+# scale 277 0.8 0
+# layer 277 4
+# mask 277 off
+# alpha 277 0 0
+;;ゼロ
+# body 23
+# pos 23 2
+# scale 23 0.8 0
+# layer 23 2
+# mask 23 off
+# alpha 23 0 0
+# body 1100211
+# alpha 1100211 0 0
+;;与一
+# body 6400511
+# pos 6400511 3
+# scale 6400511 0.8 0
+# layer 6400511 4
+# mask 6400511 off
+# alpha 6400511 0 0
+;;レーヴァテイン
+# body 6100211
+# pos 6100211 3
+# scale 6100211 0.8 0
+# layer 6100211 3
+# mask 6100211 off
+# alpha 6100211 0 0
+;;蜻蛉切
+# body 302411
+# pos 302411 4
+# scale 302411 0.8 0
+# layer 302411 2
+# mask 302411 off
+# alpha 302411 0 0
+;;グングニル
+# body 300841
+# pos 300841 2
+# scale 300841 0.8 0
+# layer 300841 4
+# alpha 300841 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "SEA6100211"
+# imagealpha 1 0 0
+# imagelayer 1 3
+;;日記閉じる
+# imageset 2 "diary_close"
+# imagealpha 2 0 0
+# imagescale 2 1 0
+# imagelayer 2 5
+;;紙
+# imageset 4 "SEA_diary_bg"
+# imagealpha 4 0 0
+# imagelayer 4 1
+# imagescale 4 1.2 0
+;;1枚め
+# imageset 5 "SEA_diary_102"
+# imagealpha 5 0 0
+# imagescale 5 1 0
+# imagelayer 5 3
+;;2枚め
+# imageset 6 "SEA_diary_103"
+# imagealpha 6 0 0
+# imagescale 6 1 0
+# imagelayer 6 3
+;;3枚め
+# imageset 7 "SEA_diary_104"
+# imagealpha 7 0 0
+# imagescale 7 1 0
+# imagelayer 7 3
+;;-----------------------------------------
+;;背景：町
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# alpha 23 1 0.3
+# face 277 "happy"
+# alpha 277 1 0.3
+# se "SE_6193"
+# textwindow "nomal"
+# textboxarrow 0 3
+@市長
+いやーっ
+一時はどうなることかと思ったが
+一件落着だな！
+
+# face 23 "sad"
+# voice 11002 "laevateinm_0027"
+# textboxarrow 0 1
+@ゼロ
+調子の良い奴だ…
+そもそも、お前がもう少し
+「掟」についてちゃんと…
+
+# alpha 23 0 0.3
+# alpha 277 0 0.3
+# alpha 270 1 0.3
+# face 6504011 "happy"
+# alpha 6504011 1 0.3
+# textboxarrow 0 3
+# voice 650401 "manannan_ura_0007"
+@マナナン
+アハハハハ！
+最後は喜劇的に派手だったね
+
+# face 270 "happy"
+# voice 9917 "mimir_navikan_0003"
+# textboxarrow 0 1
+@ミーミル
+蓄積されていた力は霧散して、
+「揺らぎ」も収まったようです
+これで町は大丈夫でしょう
+
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+…ところで、お二人はどちらに？
+
+# voice 3008 "gunguniru_0013"
+# alpha 270 0 0.3
+# alpha 6504011 0 0.3
+# alpha 302411 1 0.3
+# face 300841 "sad"
+# alpha 300841 1 0.3
+# textboxarrow 0 1
+@グングニル
+レーヴァテインはまた昼寝であろう
+あの者はいつもそうだ…
+
+# voice 3024 "tonbokiri_0004"
+# textboxarrow 0 3
+@蜻蛉切
+与一は鍛錬でしょ
+今回のことで一皮剥けたと思うけど
+そういうところは変わらないわね
+
+# voice 9917 "mimir_navikan_0001"
+# alpha 302411 0 0.3
+# alpha 300841 0 0.3
+# move 270 3 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+なるほど
+マスター様、お二人の様子も
+確認しておきましょう
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景
+# background "006_town2"
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+# alpha 270 0 0
+# sestop "SE_6193"
+# waitandnext 0.2
+
+# se "SE_6170"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 4005 "yoichi_battle_0001"
+# alpha 6400511 1 0.3
+# se "SE_4300"
+# textwindow "nomal"
+# textboxarrow 0 2
+@与一
+はっ！
+
+# se "SE_4301"
+# fadein "white" 0.3
+# waitandnext 0.5
+
+# voice 4005 "yoichi_battle_0003"
+# se "SE_4300"
+# textboxarrow 0 2
+@与一
+やあっ！
+
+# se "SE_4301"
+# fadein "white" 1
+# waitandnext 1.5
+
+# voice 4005 "yoichi_0028"
+# textboxarrow 0 2
+@与一
+ふぅ…
+やはり、まだまだです
+毎日、稽古に励まないと
+
+;;シナリオカット
+# fadein "white" 1
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# frameout 0 0
+# alpha 6400511 0 0
+# sestop "SE_6170"
+# textwindow "close"
+# waitandnext 1
+
+# se "bgm601_windon"
+# textboxarrow 0 0
+# textwindow "normal"
+@レーヴァテイン
+はぁ…
+本当、よくやるよね
+
+# serif 1
+# textwindow "nomal"
+@与一
+はぅ！
+レーヴァテインさん…
+
+# serif 1
+@与一
+お昼寝の邪魔をしてごめんなさい！
+与一、気づいてなくて…
+すぐ場所を変えますっ
+
+# serif 0
+# textwindow "nomal"
+@レーヴァテイン
+別に…
+邪魔じゃないし
+
+# serif 1
+@与一
+えっ…？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+@レーヴァテイン
+…こういうこと言うの、
+めんどくさいんだけど
+
+@レーヴァテイン
+あなたが弓の練習してるの…
+見てるの…けっこう好きだった
+
+@レーヴァテイン
+私は…そういうのやらないし…
+本気で何かするのって…
+無意識に…避けてたから
+
+@レーヴァテイン
+自分では…絶対やらないだろうなって
+…だけど、あなたを見ていたら
+そういうの…いいなって
+
+# move 6400511 2 0
+# layer 6400511 4
+# mask 6400511 on
+# move 6100211 4 0
+# layer 6100211 2
+# mask 6100211 off
+@レーヴァテイン
+何かを本気でやってみたいって…
+そんなこと…思うようになってたの
+
+# imagealpha 1 0 1
+# framein 0 1
+# face 6400511 "shy"
+# alpha 6400511 1 0.3
+# face 6100211 "normal"
+# alpha 6100211 1 0.3
+# textboxarrow 0 1
+@与一
+えええっ…！？
+それでは、今回の事件はまさか…
+与一が原因でっ…
+
+# voice 4005 "yoichi_0015"
+# textboxarrow 0 1
+@与一
+すみませんごめんなさい怒らないで
+許して下さいごめんなさい
+与一はそんなつもりは――
+
+# face 6100211 "angry"
+# voice 1002 "revatein_0013"
+# textboxarrow 0 3
+@レーヴァテイン
+はぁ…そうじゃなくて
+ありがと
+…って言ってるの
+
+# textboxarrow 0 3
+@レーヴァテイン
+強すぎる力を持ってるんなら、
+使いこなせるように…
+練習すればいいだけだよね
+
+# face 6100211 "happy"
+# textboxarrow 0 3
+@レーヴァテイン
+私、自分自身から…逃げてたんだよ
+それに気づけたのは…あなたのお陰
+だから…感謝してるの
+
+# voice 4005 "yoichi_0024"
+# textboxarrow 0 1
+@与一
+はぅ！
+そんなそんな与一は感謝される
+ようなことは何も…
+
+# textboxarrow 0 1
+@与一
+むしろ与一の方がいつもいつも
+レーヴァテインさんには
+感謝するばかりでっ
+
+# face 6100211 "usual"
+# textboxarrow 0 3
+@レーヴァテイン
+何で？
+私の方こそ…何もしてないよ
+
+# face 6400511 "sad"
+# voice 4005 "yoichi_0002"
+# textboxarrow 0 1
+@与一
+あの…与一はレーヴァテインさんが
+羨ましかったんです
+
+# textboxarrow 0 1
+@与一
+毎日、稽古をしていなくても
+大切なときには
+ちゃんと活躍してくれる
+
+# textboxarrow 0 1
+@与一
+与一はどれだけ鍛錬しても、
+上手くいくか不安で
+仕方ありませんでした…
+
+# face 6400511 "usual"
+# textboxarrow 0 1
+@与一
+でも、レーヴァテインさんのお陰で
+吹っ切れた気がします
+
+# voice 4005 "yoichi_0032"
+# textboxarrow 0 1
+@与一
+与一は、もう自分自身から逃げません
+
+# voice 1002 "revatein_0003"
+# textboxarrow 0 3
+@レーヴァテイン
+急に…何？
+
+# textboxarrow 0 1
+@与一
+良くないことが起きてしまうかもって
+怖がって、本気で挑むことを
+躊躇うのは、もうやめます
+
+# face 6400511 "happy"
+# textboxarrow 0 1
+@与一
+扇を射ることで、この町も
+レーヴァテインさんも守れた
+そのことが、本当に嬉しかったので！
+
+# face 6100211 "angry"
+# voice 1002 "revatein_0040"
+# textboxarrow 0 3
+@レーヴァテイン
+ふーん
+
+# face 6400511 "shy"
+# voice 4005 "yoichi_0031"
+# textboxarrow 0 1
+@与一
+あうぅ…
+熱く語ってしまってごめんなさい…
+
+# face 6100211 "usual"
+# textboxarrow 0 3
+@レーヴァテイン
+…はい、これ
+
+# face 6400511 "surprise"
+# voice 4005 "yoichi_0022"
+# textboxarrow 0 1
+@与一
+何でしょう？
+…これ、ブローチですかっ？
+
+# textboxarrow 0 3
+@レーヴァテイン
+もう閉じる必要ないし…
+特に使い道ないけど…あげる
+
+# face 6400511 "happy"
+# voice 4005 "yoichi_0030"
+# textboxarrow 0 1
+@与一
+ありがとうございます！
+今度こそ、大切にお預かり致します！
+はい、必ず！
+
+# face 6100211 "angry"
+# textboxarrow 0 3
+@レーヴァテイン
+…ん
+
+# face 6400511 "surprise"
+# textboxarrow 0 1
+@与一
+えっ？
+その手は、何でしょう？
+
+# textboxarrow 0 3
+@レーヴァテイン
+貰った扇…
+壊れたから
+
+# textboxarrow 0 1
+@与一
+あ…ああっ
+そうですよね
+では、これを
+
+# face 6100211 "shy"
+# voice 1002 "revatein_0030"
+# textboxarrow 0 3
+@レーヴァテイン
+うん…
+ありがと
+
+# face 6400511 "shy"
+# textboxarrow 0 1
+@与一
+はわわっ
+そんな感謝されるほどのものでは…
+
+# face 6100211 "normal"
+# textboxarrow 0 3
+@レーヴァテイン
+じゃ、私…寝るから
+
+# voice 9917 "mimir_navikan_0004"
+# alpha 6400511 0 0.3
+# alpha 6100211 0 0.3
+# move 270 2 0
+# face 270 "happy"
+# alpha 270 1 0.3
+# move 6504011 4 0
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# textboxarrow 0 1
+@ミーミル
+どうやら、
+お二人とも大丈夫そうですね
+
+# face 270 "normal"
+# voice 9917 "mimir_navikan_0002"
+# textboxarrow 0 1
+@ミーミル
+マスター様、私達もそろそろ…
+
+# face 6504011 "surprise"
+# textboxarrow 0 3
+# voice 650401 "manannan_ura_0022"
+@マナナン
+あれ？
+もう出発するの？
+次はどんな喜劇的なことがあるかな～
+
+;;マナナンが走り出す
+# se "SE_5575"
+# move 6504011 3 0.5
+# scale 6504011 0.7 0.5
+# alpha 6504011 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：日記帳
+# background "diary"
+#setnextbgmblock 1
+# se "bgm601_guitaron"
+# alpha 270 0 0
+# waitandnext 0.5
+
+;;フレーム・テキストウィンドウを外す
+# textwindow "close"
+# frameout 0 0
+# se "SE_6165"
+# fadein "black" 1
+# waitandnext 2
+
+;;紙を表示
+# imagealpha 4 0.7 1
+# imagepos 4 0 0
+# waitandnext 1
+
+;;1枚目を表示
+# se "SE_6175"
+# imagealpha 5 1 2
+# imagepos 5 0 -1000
+# waitandnext 1
+
+;;1枚目を上に
+# imagemoveto 5 0 500 20
+# waitandnext 18
+
+;;1枚目を消す
+# imagealpha 5 0 2
+# waitandnext 2
+
+;;2枚目を表示
+# se "SE_6166"
+# imagealpha 6 1 2
+# imagepos 6 0 -1000
+# waitandnext 1
+
+;;2枚目を上に
+# imagemoveto 6 0 1000 22
+# waitandnext 19
+
+;;2枚目を消す
+# imagealpha 6 0 2
+# waitandnext 2
+
+;;3枚目を表示
+# se "SE_6166"
+# imagealpha 7 1 2
+# imagepos 7 0 -900
+# waitandnext 1
+
+;;3枚目を上に
+# imagemoveto 7 0 -250 10
+# waitandnext 11
+
+;;3枚目と紙を消す
+# sestop "SE_6175"
+# imagemoveto 7 400 -250 3
+# imagealpha 7 0 2
+# waitandnext 2
+
+# imagealpha 4 0 2
+# waitandnext 3
+
+;;日記帳を閉じる
+# se "SE_6167"
+# imagealpha 2 1 2
+# imagepos 2 0 0
+# waitandnext 4
+
+# fadeout "black" 2
+# waitandnext 2

@@ -1,0 +1,360 @@
+;;第4話（4-6）　タイトル：
+;;//背景：地底
+;;-----------------------------------------
+# script "lisp"
+# background "underground_world_3"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;@魔獣
+# body 3850001
+# pos 3850001 3
+# scale 3850001 0.8 0
+# alpha 3850001 1 0
+# mask 3850001 off
+;;@アルマス
+# body 172
+# pos 172 2
+# scale 172 0.8 0
+# alpha 172 0 0
+;;@モラルタ
+# body 3104011
+# pos 3104011 5
+# scale 3104011 0.8 0
+# alpha 3104011 0 0
+;;@ベガルタ
+# body 3104111
+# pos 3104111 1
+# scale 3104111 0.8 0
+# alpha 3104111 0 0
+;;@ティターニア
+# body 139
+# pos 139 4
+# scale 139 0.8 0
+# alpha 139 0 0
+;;@ギル
+# body 137
+# pos 137 4
+# scale 137 0.8 0
+# alpha 137 0 0
+;;@レーヴァテイン
+# body 3100211
+# pos 3100211 1
+# scale 3100211 0.8 0
+# alpha 3100211 0 0
+;;@ムー
+# body 161
+# pos 161 4
+# scale 161 0.6 0
+# alpha 161 0 0
+# layer 161 4
+;;@ケイオスリオン兵1
+# body 3820001
+# pos 3820001 4
+# scale 3820001 0.8 0
+# alpha 3820001 0 0
+;;@ケイオスリオン兵2
+# entry 12345 3820001
+# pos 12345 2
+# scale 12345 0.8 0
+# alpha 12345 0 0
+# chara 3850001
+# textboxarrow 0 2
+@魔獣
+ギイイイイイイ！
+
+# textboxarrow 0 1
+# mask 3850001 on
+# alpha 172 1 0
+# leftin 172 0.3
+# move 3850001 4 0.3
+# face 172 "angry"
+# voice 1038 "almace_battle_0002"
+@アルマス
+せいっ！
+# waitandnext 0.7
+
+# se "SE_0511"
+# fadein "red" 0.5
+
+# textboxarrow 0 3
+# chara 3850001
+@魔獣
+グガアアアアアア！
+
+# textboxarrow 0 3
+# alpha 172 0 0
+# alpha 3104011 1 0
+# rightin 3104011 0.3
+# move 3850001 2 0.3
+# face 3104011 "angry"
+# voice 1040 "morallta_battle_0004"
+@モラルタ
+とうっ！
+# waitandnext 0.7
+
+# fadein "red" 0.5
+# se "SE_4817"
+
+# textboxarrow 0 1
+# alpha 3104111 1 0
+# leftin 3104111 0.3
+# move 3850001 3 0.3
+# face 3104111 "angry"
+# voice 1041 "beagallta_battle_0003"
+@ベガルタ
+やあっ！
+# waitandnext 0.7
+
+# se "SE_4830"
+# fadein "red" 0.5
+
+# textboxarrow 0 3
+# alpha 3850001 0 0.5
+# alpha 3104011 0 0.5
+# alpha 3104111 0 0.5
+# alpha 172 1 0.5
+# alpha 139 1 0.5
+# face 139 "surprise"
+# voice 9967 "titania_0042"
+@ティターニア
+ときどき魔物が襲ってきますけれど
+順調に進んでいますね
+
+# textboxarrow 0 1
+# face 172 "normal"
+# voice 1038 "almace_0003"
+@アルマス
+こっちは人数が少ないから
+動きやすいっていうのも
+あると思うわ
+
+# voice 1038 "almace_0002"
+@アルマス
+マスターもギルも
+ちゃんとついて来てる？
+
+# textboxarrow 0 3
+# alpha 139 0 0.5
+# alpha 137 1 0.5
+# face 137 "angry"
+@ギル
+当たり前だろっ
+このくらい…どうってことねぇよ！
+
+# textboxarrow 0 1
+# voice 1038 "almace_0007"
+@アルマス
+その割に
+息が上がってるみたいだけどっ
+
+# face 172 "angry"
+@アルマス
+もう少しペース上げるわよ！
+しっかりついて来なさい！
+
+# textboxarrow 0 0
+# se "SE_5575"
+# alpha 172 0 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# voice 9969 "gill_0025"
+@ギル
+そんなっ…急ぎすぎだろっ…
+ちくしょう、やってやらぁ！
+
+;;//ギルが走っていく
+;;//暗転挟む
+# se "SE_5575"
+# textboxarrow 0 0
+# alpha 137 0 0.5
+# waitandnext 1
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# alpha 139 1 0
+# alpha 172 1 0
+# face 139 "sad"
+# voice 9967 "titania_0003"
+# textboxarrow 0 3
+@ティターニア
+この感じ…
+アルマス、もうすぐ大きな空間に
+出るようです
+
+# textboxarrow 0 1
+# face 172 "normal"
+# voice 1038 "almace_0032"
+@アルマス
+この抜け道も終わりね
+トレイセーマ軍を追い抜けてると
+良いんだけど…
+
+# textboxarrow 0 2
+# move 137 3 0
+# alpha 139 0 0.5
+# alpha 172 0 0.5
+# alpha 137 1 0.5
+# face 137 "surprise"
+# voice 9969 "gill_0039"
+@ギル
+ハァ…ハァ…
+これで追い抜いてなかったら…
+最悪だろ…
+
+# textboxarrow 0 3
+# alpha 139 1 0.5
+# alpha 172 1 0.5
+# alpha 137 0 0.5
+@ティターニア
+精霊が止まりました
+慎重に様子をうかがってから
+出ていきましょう
+
+# textboxarrow 0 1
+# face 172 "surprise"
+# voice 1038 "almace_0028"
+@アルマス
+そんなこと言われても…
+えっ！？
+
+;;//レーヴァテインが画面を横切る
+# se "SE_9021"
+# textboxarrow 0 0
+# fadein "white" 0.5
+# alpha 139 0 0
+# alpha 172 0 0
+# alpha 3100211 1 0
+# rightin 3100211 0.5
+# waitandnext 0.5
+
+# leftout 3100211 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+# alpha 139 1 0.5
+# alpha 172 1 0.5
+# alpha 3100211 0 0
+# voice 1038 "almace_0022"
+@アルマス
+レーヴァテイン！？
+
+# textboxarrow 0 3
+# face 139 "surprise"
+# voice 9967 "titania_0020"
+@ティターニア
+アルマス、不用意に出ていっては
+いけません！
+
+# textboxarrow 0 2
+# move 3100211 3 0
+# mask 3100211 off
+# alpha 139 0 0.5
+# alpha 172 0 0.5
+# alpha 3100211 1 0.5
+# alpha 161 1 0.5
+# face 3100211 "angry"
+# voice 310021 "revatein_ge_battle_0007"
+# chara 3100211
+@レーヴァテイン
+ぐぅっ…！
+
+# textboxarrow 0 3
+# voice 9953 "mwu_0015"
+# chara 161
+@ムー
+大丈夫か、レヴァ…？
+くそっ…こいつぁちっとばかり
+まずいな…
+
+# textboxarrow 0 1
+# alpha 3100211 0 0.5
+# alpha 161 0 0.5
+# alpha 3820001 1 0.5
+# alpha 12345 1 0.5
+# chara 3820001
+@ケイオスリオン兵
+追え！追え！
+ディスラプターズの親玉を
+逃がすな！
+
+# textboxarrow 0 3
+# chara 3820001
+@ケイオスリオン兵
+さすがは皇帝陛下秘蔵の斬ル姫だ！
+圧倒的ではないか！
+
+;;//ケイオスリオン兵が殺到する
+# textboxarrow 0 2
+# alpha 3100211 1 0.5
+# alpha 161 1 0.5
+# alpha 3820001 0 0.5
+# alpha 12345 0 0.5
+# face 3100211 "sad"
+# voice 310021 "revatein_ge_0027"
+# chara 3100211
+@レーヴァテイン
+はぁ…面倒くさい…
+
+# textboxarrow 0 3
+# voice 9953 "mwu_0007"
+# chara 161
+@ムー
+俺様とレヴァを包囲しようなんざ
+数億年早いっつうんだよ！
+てめえらまとめて――
+
+# textboxarrow 0 2
+# face 3100211 "angry"
+# voice 310021 "revatein_ge_0071"
+# chara 3100211
+@レーヴァテイン
+ムー、ダメ！
+
+;;//フェイルノートの矢を食らう
+# se "SE_6775"
+# textboxarrow 0 0
+# shake 1 1
+# fadein "red" 1
+# waitandnext 1
+
+# voice 310021 "revatein_ge_0037"
+# chara 3100211
+@レーヴァテイン
+つぅっ…
+
+# textboxarrow 0 3
+# voice 9953 "mwu_0037"
+# chara 161
+@ムー
+レヴァ、すまん…！
+くっそ…飛んだら弓矢の餌食かよ…
+本当に相性悪ぃな…
+
+# textboxarrow 0 1
+# alpha 3100211 0 0.5
+# alpha 161 0 0.5
+# alpha 3820001 1 0.5
+# alpha 12345 1 0.5
+# chara 3820001
+@ケイオスリオン兵
+所詮、無力な貴様らは
+ここで朽ち果てる運命だ！
+総員、かかれー！！

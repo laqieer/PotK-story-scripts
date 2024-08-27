@@ -1,0 +1,355 @@
+;;-----------------------------------------
+;;でんぱ4_3
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm405" "BgmIntegralNoahEvent003" 0
+;;-----------------------------------------
+;;nemo
+# body 5402411
+# pos 5402411 4
+# scale 5402411 0.8 0
+# layer 5402411 4
+# mask 5402411 off
+# alpha 5402411 0 0
+;;pero
+# body 5503911
+# pos 5503911 2
+# scale 5503911 0.8 0
+# layer 5503911 2
+# mask 5503911 off
+# alpha 5503911 0 0
+;;izoku
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 3
+# mask 810004 off
+# alpha 810004 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+# fadein "black" 0.5
+# textwindow "close"
+# waitandnext 1
+
+# move 5503911 3 0.3
+# alpha 5503911 1 0.3
+# face 5503911 "angry"
+# textflame 0 0
+# textwindow "nomal"
+@
+異族の大群に、
+突っ込んでいくぺろりん
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5039 "perorin_0029"
+@ぺろりん
+やぁぁぁぁっ！！
+
+;;演出：銃撃
+# se "SE_9452"
+# effectbody 1001 28 0 0 0
+# effectstart 1001
+# move 5503911 4 0.3
+# alpha 5503911 0 0.3
+# textflame 0 0
+@
+彼女が前面の敵を蹴散らすと――
+
+# move 5402411 3 0.3
+# alpha 5402411 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+# face 5402411 "angry"
+# voice 4024 "nemo_0029"
+@ねも
+いっけぇぇぇぇぇぇっ！！
+
+;;演出：矢の攻撃
+# se "SE_4301"
+# effectbody 1002 31 300 -200 0
+# effectstart 1002
+# move 5402411 2 0.3
+# alpha 5402411 0 0.3
+# textflame 0 0
+@
+ねもが援護射撃し、
+ぺろりんに襲い掛かろうとする
+敵を撃破していく
+
+# se "SE_0669"
+# alpha 810004 1 0.5
+# textflame 1 1
+# textboxarrow 0 0
+@異族
+グ……グギギギギッ！！
+
+;;異族全滅
+# alpha 810004 0 0.5
+# se "SE_3001"
+# textwindow "close"
+# waitandnext 1
+
+# move 5503911 2 0
+# alpha 5503911 1 0.3
+# move 5402411 4 0
+# mask 5402411 on
+# alpha 5402411 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 5503911 "normal"
+# voice 5039 "perorin_0004"
+@ぺろりん
+サンキュー、ねもちゃん！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ねも
+まだまだ、どんどん行くよっ！！
+
+# textflame 0 0
+@
+盤石なものになりつつある
+２人の連携技
+
+# textflame 0 0
+@
+あれだけいた異族は、
+なすすべもなく敗れ去るのだった
+
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+# textflame 1 1
+# textboxarrow 0 1
+# face 5402411 "normal"
+# face 5503911 "happy"
+# voice 5039 "perorin_0006"
+@ぺろりん
+やったぁっ！
+勝ったね、ピースっ！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ぺろりん
+私たちのコンビプレー、
+ますます冴えてきてるよね？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ねも
+うん！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 5503911 "normal"
+# voice 5039 "perorin_0002"
+@ぺろりん
+でも、不思議だよねぇ？
+なんでこうも上手くいくんだろ？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 5402411 "surprise"
+# voice 4024 "nemo_0022"
+@ねも
+……え？
+
+# textflame 1 1
+# textboxarrow 0 1
+@ぺろりん
+いくら、ねもちゃんが
+パワーアップしてるとは言え
+
+# textflame 1 1
+# textboxarrow 0 1
+@ぺろりん
+私たち、戦い始めて
+まだそんなに経ってないのに……
+
+# textflame 1 1
+# textboxarrow 0 1
+@ぺろりん
+まるで、何年も前から
+一緒に戦ってるような……
+
+# textflame 1 1
+# textboxarrow 0 3
+@ねも
+……ぺろりん
+
+# bgm "stop"
+# textflame 1 1
+# textboxarrow 0 1
+# face 5503911 "surprise"
+@ぺろりん
+あっ！そうか……！！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ねも
+もしかして、記憶が…！？
+
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# textflame 1 1
+# textboxarrow 0 1
+# face 5503911 "happy"
+# voice 5039 "perorin_0005"
+@ぺろりん
+ねもちゃんだけじゃなく、
+私もパワーアップしてるってことか！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ぺろりん
+さすが私！運動神経抜群だぁ！！
+
+;;コケるっぽい演出
+# se "SE_9347"
+# shake 0 0.5
+# move 5402411 5 0.2
+# textflame 1 1
+# textboxarrow 0 0
+# face 5402411 "angry"
+@ねも
+ズコ―――ッ！！
+
+# textflame 0 0
+@
+ズッコケるねも
+
+# move 5402411 4 0.3
+# textflame 1 1
+# textboxarrow 0 3
+# voice 4024 "nemo_0015"
+@ねも
+え～ん、
+思い出してくれたかと
+思ったのに～
+
+# textflame 1 1
+# textboxarrow 0 3
+@ねも
+また、持ち前のポジティブが
+私の望まない方向に出てるよ～
+
+# textflame 0 0
+@
+トホホなねも
+
+# bgm "stop"
+# textflame 0 0
+@
+――と、
+
+# bgmfile "bgm430" "BgmIntegralNoahEvent004" 0
+# textflame 1 1
+# textboxarrow 0 0
+# face 5503911 "surprise"
+# face 5402411 "surprise"
+@ねも・ぺろりん
+！！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ねも
+……聞こえた？
+
+# textflame 1 1
+# textboxarrow 0 1
+@ぺろりん
+うん！
+細かくは聞き取れないけど
+微かに声が……
+
+# textflame 1 1
+# textboxarrow 0 1
+@ぺろりん
+しかも……
+
+# textflame 0 0
+@
+～♪～♪～♪～
+
+# textflame 1 1
+# textboxarrow 0 1
+@ぺろりん
+……歌ってる？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ねも
+この声って、もしかして…
+
+# textflame 1 1
+# textboxarrow 0 3
+@ねも
+私たちに語り掛けてきた
+あの声かな！？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5039 "perorin_0028"
+@ぺろりん
+分かんない
+でも、行ってみようよ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 4024 "nemo_0003"
+@ねも
+うん！！
+
+;;SE：走る足音
+# se "SE_0886"
+# alpha 5503911 0 0.3
+# alpha 5402411 0 0.3
+# textflame 0 0
+@
+微かに歌声が聞こえてくる方角に
+駆けて行く２人
+
+# move 5402411 3 0.5
+# mask 5402411 off
+# alpha 5402411 1 0.3
+;;モヤモヤ吹き出し
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+# face 5402411 "angry"
+@ねも
+声の主に会えたら、きっと分かる！！
+
+;;モヤモヤ吹き出し
+@ねも
+ぺろりんの記憶の取り戻し方…
+そして、元の世界に帰れる
+手掛かりが！！
+
+# move 5402411 2 0.3
+# alpha 5402411 0 0.2
+# se "SE_9430"
+# textwindow "close"
+# waitandnext 0.5
+
+# move 5503911 3 0.5
+# alpha 5503911 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 5039 "perorin_0022"
+@ぺろりん
+は、速っ！
+待ってよ、ねもちゃ～ん
+
+# move 5503911 4 0.5
+# alpha 5503911 0 0.3
+# textflame 0 0
+@
+ねもの心は逸っていた
+
+# fadeout "black" 1
+# waitandnext 1

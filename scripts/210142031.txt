@@ -1,0 +1,354 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１４章 章タイトル「ラルゴカタストロフィ―激突―」
+;;第2話－３　タイトル：決着の刻
+;;2_3_1
+;;スクリプト最後の背景：町
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgmfile "bgm469_470" "BgmIntegralNoahBoso" 0
+;;-----------------------------------------
+;;異族化フライクーゲル
+# body 5500231
+# pos 5500231 3
+# scale 5500231 0.8 0
+# layer 5500231 2
+# alpha 5500231 0 0
+# mask 5500231 off
+;;アルテミス
+# body 5400131
+# pos 5400131 3
+# scale 5400131 0.8 0
+# layer 5400131 2
+# alpha 5400131 0 0
+# mask 5400131 off
+;;ソロモン
+# body 5503111
+# pos 5503111 3
+# scale 5503111 0.8 0
+# layer 5503111 3
+# alpha 5503111 0 0
+# mask 5503111 off
+;;グランテピエ・獣刻・バハムート
+# body 5303411
+# pos 5303411 3
+# scale 5303411 0.8 0
+# layer 5303411 2
+# alpha 5303411 0 0
+# mask 5303411 off
+;;ムー
+# body 161
+# pos 161 3
+# scale 161 0.6 0
+# layer 161 3
+# alpha 161 0 0
+# mask 161 off
+;;アロンダイト・暴走
+# body 5100711
+# pos 5100711 3
+# scale 5100711 0.8 0
+# layer 5100711 2
+# alpha 5100711 0 0
+# mask 5100711 off
+# brightness 5100711 0.8 0
+;;ロンゴミアント・暴走
+# body 5301011
+# pos 5301011 3
+# scale 5301011 0.8 0
+# layer 5301011 2
+# alpha 5301011 0 0
+# mask 5301011 off
+# brightness 5301011 0.8 0
+;;-----------------------------------------
+;;第2話－３　タイトル：決着の刻
+;;//背景：町
+# emotionbody 1000 15 5301011 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# voice 530101 "rhongomiant_bo_b_battle_0003"
+# move 5301011 3 0
+# face 5301011 "angry"
+# alpha 5301011 1 0
+# mask 5301011 off
+# textflame 1 1
+# textboxarrow 0 2
+@ロンゴミアント
+イヤア！アアアアア！
+
+;;//ロンゴミアントがフライクーゲルに突っ込む
+# se "SE_9118"
+# textwindow "close"
+# rightout 5301011 0.3
+# waitandnext 0.3
+
+# effectskip 1000
+# alpha 5301011 0 0
+# move 5500231 4 0
+# face 5500231 "angry"
+# alpha 5500231 1 0.5
+# mask 5500231 on
+# waitandnext 0.5
+
+# effectstart 1000
+# move 5301011 2 0
+# face 5301011 "angry"
+# alpha 5301011 1 0.3
+# mask 5301011 on
+# leftin 5301011 0.3
+# waitandnext 0.3
+
+# face 5500231 "surprise"
+# textboxarrow 0 3
+# textwindow "normal"
+@フライクーゲル
+ホワイ！？
+ロンゴミアントってこんなに
+スピーディだった…？
+
+# voice 530101 "rhongomiant_bo_b_battle_0004"
+# textboxarrow 0 1
+@ロンゴミアント
+アアアアッ！
+
+# se "SE_4200"
+# waitandnext 0.5
+
+;;//フライクーゲルとともにロンゴミアントが画面外へ
+# textwindow "close"
+# rightout 5500231 0.5
+# waitandnext 0.5
+
+# rightout 5301011 0.5
+# waitandnext 0.5
+
+# effectskip 1000
+# voice 540013 "arutemisu_iz_battle_0005"
+# alpha 5500231 0 0
+# alpha 5301011 0 0
+# move 5400131 3 0
+# face 5400131 "angry"
+# alpha 5400131 1 0.5
+# mask 5400131 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アルテミス
+フライクーゲル！
+くっ…迂闊に射てはフライクーゲルに
+当たってしまいます…
+
+;;//アルテミスも画面外へ
+# textwindow "close"
+# rightout 5400131 0.5
+# waitandnext 0.5
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 5400131 0 0
+# move 5500231 1 0
+# face 5500231 "sad"
+# alpha 5500231 1 0
+# mask 5500231 on
+# move 161 3 0
+# alpha 161 1 0
+# mask 161 on
+# move 5303411 5 0
+# face 5303411 "normal"
+# alpha 5303411 1 0
+# mask 5303411 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 550023 "furaikugeru_iz_0031"
+# textboxarrow 0 1
+# textwindow "normal"
+@フライクーゲル
+ソーリー…
+きみ達まで巻き込んじゃったね
+
+# textboxarrow 0 3
+@グランテピエ
+私は大丈夫、だよ
+フライクーゲルこそ怪我してない？
+
+# face 5500231 "happy"
+# textboxarrow 0 1
+@フライクーゲル
+イッツ、クール！
+心配してくれてセンキュー
+きみの名前は？
+
+# textboxarrow 0 3
+@グランテピエ
+私はグランテピエ
+こっちは相棒のムーだよ
+
+# voice 9953 "mwu_0004"
+# textboxarrow 0 2
+@ムー
+俺様が史上最大最強の幻獣
+バハムート様だ！
+よろしくな、嬢ちゃん
+
+# voice 550311 "solomon_di_0046"
+# alpha 161 0 0.5
+# move 5503111 3 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# textboxarrow 0 2
+@ソロモン
+グランお姉様、呑気に名乗っている
+場合ではないわっ
+
+# face 5500231 "normal"
+# textboxarrow 0 1
+@フライクーゲル
+ヘイ！
+グランテピエはそっちのアロンダイト
+とバトル中？
+
+# textboxarrow 0 1
+@フライクーゲル
+このままサァッドでベァッドな
+感情をまき散らされるのは
+ノーセンキューだから
+
+# textboxarrow 0 1
+@フライクーゲル
+わたしはロンゴミアントとバトル
+するよ
+オーライ？
+
+# voice 530341 "grandepieu_di_0032"
+# textboxarrow 0 3
+@グランテピエ
+オーライ、だよ
+でも無理はしないでね
+
+# voice 550023 "furaikugeru_iz_0030"
+# face 5500231 "happy"
+# textboxarrow 0 1
+@フライクーゲル
+ハハッ
+サンクス！
+
+# voice 550311 "solomon_di_0048"
+# face 5503111 "angry"
+# textboxarrow 0 2
+@ソロモン
+グランお姉様！
+
+# voice 530341 "grandepieu_di_0055"
+# textboxarrow 0 3
+@グランテピエ
+ソロモン、勝手に決めてごめんなさい
+君のことは私が必ず守るからね
+
+# face 5503111 "normal"
+# textboxarrow 0 2
+@ソロモン
+そういうことではなくてっ
+
+# face 5303411 "angry"
+# textboxarrow 0 3
+@グランテピエ
+フライクーゲル、絶対に無理は
+しないでね
+絶対のぜーったいに、だよ！
+
+# textboxarrow 0 3
+@グランテピエ
+そうしないと君も暴走してしまう
+かもしれないから
+
+# voice 550023 "furaikugeru_iz_0040"
+# face 5500231 "normal"
+# textboxarrow 0 1
+@フライクーゲル
+アイシー
+アルテミスもいるから
+ノープロブレム！
+
+# alpha 5500231 0 0.5
+# alpha 5503111 0 0.5
+# alpha 5303411 0 0.5
+# move 5400131 3 0
+# face 5400131 "angry"
+# alpha 5400131 1 0.5
+# mask 5400131 off
+# textboxarrow 0 2
+@アルテミス
+フライクーゲル、
+そこから離れなさい！
+攻撃できませんっ
+
+# voice 550023 "furaikugeru_iz_0032"
+# alpha 5400131 0 0.5
+# move 5500231 3 0
+# face 5500231 "normal"
+# alpha 5500231 1 0.5
+# mask 5500231 off
+# textboxarrow 0 2
+@フライクーゲル
+オーケー！
+
+# effectstart 1000
+# emotionbody 2000 15 5100711 0 0
+# effectpattern 2000 1 0
+# effectstart 2000
+# voice 510071 "arondaito_bo_b_0029"
+# alpha 5500231 0 0.5
+# move 5301011 2 0
+# face 5301011 "angry"
+# alpha 5301011 1 0.5
+# mask 5301011 on
+# move 5100711 4 0
+# face 5100711 "angry"
+# alpha 5100711 1 0.5
+# mask 5100711 on
+# textboxarrow 0 3
+@アロンダイト
+ガアアアアア！
+ナニモカモハカイシマス！
+オワリナサイ！
+
+# voice 530101 "rhongomiant_bo_b_battle_0003"
+# textboxarrow 0 1
+@ロンゴミアント
+イヤアアアアア！
+オワッテ！キエテェ！
+
+# effectskip 1000
+# effectskip 2000
+# alpha 5301011 0 0.5
+# alpha 5100711 0 0.5
+# move 5503111 2 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# move 5303411 4 0
+# face 5303411 "angry"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# textboxarrow 0 3
+@グランテピエ
+二人とも暴走の力を解放してるね
+彼女達の破壊衝動を発散させないと
+
+# textboxarrow 0 1
+@ソロモン
+町に被害が出ないよう誘導しつつ
+戦闘を継続させる必要があるわ
+
+# voice 530341 "grandepieu_di_0003"
+# face 5303411 "normal"
+# textboxarrow 0 3
+@グランテピエ
+うん！
+ソロモンと私でなら、きっとできるよ

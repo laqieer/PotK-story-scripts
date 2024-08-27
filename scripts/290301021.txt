@@ -1,0 +1,321 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;３章１話　タイトル「地上の脅威―リバイヴ―」
+;;第1話　タイトル：異形の浸食
+;;7_2_1
+;;スクリプト最後の背景：下町（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "in_city"
+# bgm "stop"
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 2
+# alpha 3201911 0 0
+# mask 3201911 off
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;スラーンド
+# body 3201211
+# pos 3201211 3
+# scale 3201211 0.8 0
+# layer 3201211 2
+# alpha 3201211 0 0
+# mask 3201211 off
+;;ジーベン
+# body 212
+# pos 212 3
+# scale 212 0.8 0
+# layer 212 2
+# alpha 212 0 0
+# mask 212 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第1話　タイトル：異形の浸食
+;;//背景：新地上世界遠景
+;;ナレーション
+# textflame 0 0
+@
+数日前――
+
+;;//背景：下町（昼）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_downtown"
+# move 3201911 3 0
+# face 3201911 "angry"
+# alpha 3201911 1 0
+# mask 3201911 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 320191 "chihyu_a_0029"
+@シユウ
+うがあああぁぁ！
+
+# alpha 3201911 0 0.5
+# move 3201211 3 0
+# face 3201211 "angry"
+# alpha 3201211 1 0.5
+# mask 3201211 off
+# textboxarrow 0 2
+# voice 320121 "srand_ge_battle_0003"
+@スラーンド
+くらいなぁっ！
+
+# textwindow "close"
+# alpha 3201211 0 0.5
+# waitandnext 0.5
+
+;;//シユウとスラーンドが激突する
+# move 3201911 2 0
+# face 3201911 "angry"
+# alpha 3201911 1 0
+# mask 3201911 on
+# move 3201211 4 0
+# face 3201211 "angry"
+# alpha 3201211 1 0
+# mask 3201211 on
+# leftin 3201911 0.3
+# rightin 3201211 0.3
+# waitandnext 0.3
+
+# se "SE_5234"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.8
+
+# alpha 3201911 0 0.5
+# alpha 3201211 0 0.5
+# move 211 2 0
+# face 211 "normal"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+# move 212 4 0
+# face 212 "usual"
+# alpha 212 1 0.5
+# mask 212 on
+# textwindow "normal"
+# voice 9935 "vang_0021"
+@ヴァング
+いいぜ、シユウ！
+そのまま叩き潰せぇっ！
+
+# face 212 "normal"
+# textboxarrow 0 3
+# voice 9934 "sieben_0008"
+@ジーベン
+はっ
+その程度で僕のスラーンドに勝てる
+わけないだろう
+
+# textboxarrow 0 3
+@ジーベン
+猪と香車の合いの子は
+直進しか知らないから困るね
+
+# face 211 "usual"
+# textboxarrow 0 1
+@ヴァング
+相変わらず意味の分かんねぇこと
+言ってんな、ジーベン
+
+# face 212 "angry"
+# textboxarrow 0 3
+# voice 9934 "sieben_0009"
+@ジーベン
+はぁ？
+僕の高尚な比喩表現を理解できない
+お前の方がおかしいんだ！
+
+# textboxarrow 0 3
+@ジーベン
+この周回遅れファッションリーダーめ
+
+# face 211 "angry"
+# textboxarrow 0 1
+# voice 9935 "vang_0009"
+@ヴァング
+だから、その喩えが意味分かんねぇ
+って言ってんだろうが！
+
+# textboxarrow 0 3
+# voice 9934 "sieben_0010"
+@ジーベン
+このっ！
+スラーンド！
+早くそいつを黙らせろ！
+
+# se "SE_5206"
+# alpha 211 0 0.5
+# alpha 212 0 0.5
+# move 3201211 3 0
+# face 3201211 "angry"
+# alpha 3201211 1 0.5
+# mask 3201211 off
+# textboxarrow 0 2
+# voice 320121 "srand_ge_0033"
+@スラーンド
+任せといて！
+あたしの偉大なる強さ、
+見せてやろう！
+
+# alpha 3201211 0 0.5
+# move 3201911 3 0
+# face 3201911 "angry"
+# alpha 3201911 1 0.5
+# mask 3201911 off
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_battle_0004"
+@シユウ
+うがあああぁぁ！
+シユウもほんきをだすぞ！
+
+# se "SE_9021"
+# textwindow "close"
+# rightout 3201911 0.3
+# waitandnext 0.3
+
+# alpha 3201911 0 0
+# move 3201211 4 0
+# face 3201211 "angry"
+# alpha 3201211 1 0.5
+# mask 3201211 on
+# waitandnext 0.5
+
+# move 3201911 2 0
+# face 3201911 "angry"
+# alpha 3201911 1 0
+# mask 3201911 on
+# leftin 3201911 0.3
+# waitandnext 0.3
+
+;;//シユウとスラーンドが激突する
+# se "SE_5773"
+# sedelay "SE_0810" 0.5
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.8
+
+;;//画面スライド
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 3201911 0 0
+# alpha 3201211 0 0
+# move 210 3 0
+# face 210 "happy"
+# alpha 210 1 0
+# mask 210 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9936 "kamito_0044"
+@カミト
+すごいな…どっちも…
+
+# move 210 2 0.5
+# mask 210 on
+# move 3102311 4 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 3
+# voice 310231 "ascalon_a_0011"
+@アスカロン
+マスター、あまり顔を出すと
+危険です
+周辺監視は私に任せて下さい！
+
+# face 210 "normal"
+# textboxarrow 0 1
+# voice 9936 "kamito_0033"
+@カミト
+あ、うん
+ごめん…
+
+# face 210 "shy"
+# textboxarrow 0 1
+@カミト
+でも、どっちもすごいから…
+兄貴もジーベンも、あんな近くで
+指揮してて…
+
+# face 3102311 "normal"
+# textboxarrow 0 3
+# voice 310231 "ascalon_a_0003"
+@アスカロン
+そうですね
+シユウもスラーンドもあんなに
+強いなんて羨ましい…
+
+# face 3102311 "angry"
+# textboxarrow 0 3
+@アスカロン
+あ、その、何でもないですよ！
+私もマスターのお役に立てるよう
+頑張りますっ
+
+# face 210 "normal"
+# textboxarrow 0 1
+# voice 9936 "kamito_0032"
+@カミト
+あ、ありがとう
+でも…僕には何も…
+
+# sestop "SE_0810"
+# alpha 210 0 0.5
+# alpha 3102311 0 0.5
+# move 3201911 2 0
+# face 3201911 "angry"
+# alpha 3201911 1 0.5
+# mask 3201911 on
+# textboxarrow 0 1
+# move 3201211 4 0
+# face 3201211 "angry"
+# alpha 3201211 1 0.5
+# mask 3201211 on
+# voice 320191 "chihyu_a_battle_0003"
+@シユウ
+おろかものめっ！

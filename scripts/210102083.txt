@@ -1,0 +1,538 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１０章 章タイトル「勝利を招く悪魔―フレイルティ―」
+;;第2話－８　タイトル：強くある者
+;;2_8_3
+;;スクリプト最後の背景：中心部
+;;-----------------------------------------
+# script "lisp"
+# background "in_city"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;フォルカス・神令・ヘル
+# body 5301811
+# pos 5301811 3
+# scale 5301811 0.8 0
+# layer 5301811 2
+# alpha 5301811 0 0
+# mask 5301811 off
+;;ルシファー
+# body 3820008
+# pos 3820008 3
+# scale 3820008 0.8 0
+# layer 3820008 2
+# alpha 3820008 0 0
+# mask 3820008 off
+;;グリモワール・獣刻・ニーズヘッグ 大罪ver.
+# body 5501711
+# pos 5501711 3
+# scale 5501711 0.8 0
+# layer 5501711 2
+# alpha 5501711 0 0
+# mask 5501711 off
+;;アスカロン・D. plug・レヴィアタン 大罪ver.
+# body 5102311
+# pos 5102311 3
+# scale 5102311 0.8 0
+# layer 5102311 2
+# alpha 5102311 0 0
+# mask 5102311 off
+;;フェイルノート
+# body 167
+# pos 167 3
+# scale 167 0.8 0
+# layer 167 2
+# alpha 167 0 0
+# mask 167 off
+;;フェイルノート（誓約）ボイス用
+# body 5401911
+# alpha 5401911 0 0
+;;魔獣
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# layer 910013 2
+# alpha 910013 0 0
+# mask 910013 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景の暗転
+# imageset 2 "bg_black"
+# imagelayer 2 3
+# imagealpha 2 0 0
+;;-----------------------------------------
+# voice 310231 "ascalon_a_battle_0004"
+# move 5102311 3 0
+# face 5102311 "normal"
+# alpha 5102311 1 0
+# mask 5102311 off
+# textflame 1 1
+# textboxarrow 0 2
+@アスカロン
+せいっ！
+
+# textwindow "close"
+# alpha 5102311 0 0.5
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 off
+# waitandnext 0.6
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# se "SE_0794"
+# textboxarrow 0 2
+# textwindow "normal"
+@魔獣
+ガアアアア…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 910013 0 0.5
+# waitandnext 0.5
+
+# move 5501711 2 0
+# face 5501711 "usual"
+# alpha 5501711 1 0.5
+# mask 5501711 on
+# textboxarrow 0 1
+# move 5102311 4 0
+# face 5102311 "usual"
+# alpha 5102311 1 0.5
+# mask 5102311 on
+# textwindow "normal"
+@グリモワール
+悔しいけど、フェイルノートの
+指揮は的確ね
+かなり有利に展開してるわ
+
+# face 5102311 "normal"
+# textboxarrow 0 3
+@アスカロン
+グリモワール！
+フォルカスを探しましょう！
+今度こそ、会って話を
+
+# voice 350171 "grimoire_ge_0003"
+# face 5501711 "normal"
+# textboxarrow 0 1
+@グリモワール
+そうね
+マスターの下に引きずってでも
+連れていくわ！
+
+;;//二人が走り去る
+# se "SE_5575"
+# textwindow "close"
+# alpha 5501711 0 0.5
+# alpha 5102311 0 0.5
+# waitandnext 0.5
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# move 167 3 0
+# face 167 "normal"
+# alpha 167 1 0
+# mask 167 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;フェイルノート（独白）
+# move 167 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 167 off
+@フェイルノート
+ここまでは計算通り…
+もうじき、コマンドキラーズとの
+直接対決になるわ
+
+;;フェイルノート（独白）
+# textboxarrow 0 0
+@フェイルノート
+そして、この私も…
+
+;;//フォルカスが現れる
+# move 5301811 2 0
+# face 5301811 "normal"
+# alpha 5301811 1 0.5
+# mask 5301811 on
+# textboxarrow 0 1
+# move 167 4 0.5
+# textwindow "normal"
+@フォルカス
+見つけました
+
+# textboxarrow 0 3
+@フェイルノート
+遅かったわね
+待ちわびたわよ
+
+# face 5301811 "angry"
+# textboxarrow 0 1
+@フォルカス
+…私が来ると予想していたんですか？
+
+# voice 540191 "failnaught_ca_0003"
+# face 167 "smile"
+# textboxarrow 0 3
+@フェイルノート
+もちろん
+あなたがコマンドキラーズの
+指揮官なんでしょ？
+
+# textboxarrow 0 3
+@フェイルノート
+昨日の戦いで悟ったはずよ
+私の指揮能力の高さを
+そして、この知謀に恐れを抱いた
+
+# textboxarrow 0 3
+@フェイルノート
+だから、私を直接討ちに来ると
+予想していたの
+あなたの行動はお見通しよ
+
+# face 5301811 "normal"
+# textboxarrow 0 1
+@フォルカス
+そうですか…
+では、どうしてお一人で？
+伏兵の気配を感じませんが
+
+# face 167 "normal"
+# textboxarrow 0 3
+@フェイルノート
+決まっているでしょう
+必要ないからよ
+私は強者…決して負けないわ
+
+# textboxarrow 0 3
+@フェイルノート
+一対一であなたを圧倒して、
+そのことを証明するの！
+
+# voice 530181 "forcas_c_0007"
+# textboxarrow 0 1
+@フォルカス
+愚かですね…
+それは、ただの思い上がりです
+
+# voice 540191 "failnaught_ca_0007"
+# face 167 "smile"
+# textboxarrow 0 3
+@フェイルノート
+思い上がっているのは、
+どっちかしら！？
+
+;;//無数の矢がフォルカスに飛ぶ
+# se "SE_0841"
+# waitandnext 0.5
+
+# se "SE_5200"
+# textboxarrow 0 1
+@フォルカス
+ふっ…
+
+# textboxarrow 0 3
+@フェイルノート
+それで躱したつもり？
+
+# face 5301811 "surprise"
+# textboxarrow 0 1
+@フォルカス
+！？
+
+# se "SE_9156"
+# face 167 "angry"
+# textboxarrow 0 3
+@フェイルノート
+足下をよく見なさい
+あなたはもう、そこから動けない
+
+# voice 530181 "forcas_c_0022"
+# textboxarrow 0 1
+@フォルカス
+これは…魔法陣っ？
+私を縛るつもりですか…
+あなたに魔術の素養があったなんて…
+
+# face 167 "smile"
+# textboxarrow 0 3
+@フェイルノート
+魔術というほどのものでもないわ
+それでも、あなたの足を止める
+罠くらいには使えるの
+
+# textboxarrow 0 3
+@フェイルノート
+機動力を失って、
+この攻撃が避けられるかしらね！？
+
+;;//飛んできた無数の矢をフォルカスが全て弾く
+;;//素早い無数の矢音と、それを槍で弾く音をお願いいたします
+# se "SE_0836"
+# sedelay "SE_0842" 0.5
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 530181 "forcas_c_0029"
+# face 5301811 "angry"
+# textboxarrow 0 1
+@フォルカス
+はああああああ！
+
+# voice 540191 "failnaught_ca_0039"
+# textboxarrow 0 3
+@フェイルノート
+頑張るわねっ
+でも、そこから動けない限り
+いつか力尽きる
+
+# textboxarrow 0 3
+@フェイルノート
+あなたの射程外から、
+確実に仕留めてあげるわ
+
+# face 5301811 "normal"
+# textboxarrow 0 1
+@フォルカス
+…………
+
+# bgm "stop"
+# textboxarrow 0 1
+@フォルカス
+…惜しいですね
+
+;;//フォルカスが一歩、前に出る
+# se "SE_5006"
+# waitandnext 0.5
+
+# voice 540191 "failnaught_ca_0024"
+# face 167 "angry"
+# textboxarrow 0 3
+@フェイルノート
+動いた…？
+私の罠の中で…
+
+# textboxarrow 0 1
+@フォルカス
+フェイルノート…
+
+;;//フォルカスがもう一歩、前に出る
+# se "SE_5007"
+# waitandnext 0.5
+
+# bgmfile "bgm424" "BgmIntegralNoahCommand" 0
+# face 5301811 "angry"
+# textboxarrow 0 1
+@フォルカス
+あなたの知謀と指揮能力は確かに
+脅威です
+だから討ちに来ました
+
+# textboxarrow 0 1
+@フォルカス
+ただ、あなたの戦闘力には全く
+脅威を感じません
+あなたは…弱者です
+
+# textboxarrow 0 3
+@フェイルノート
+私が、弱者ですって…！
+
+# voice 530181 "forcas_c_0003"
+# textboxarrow 0 1
+@フォルカス
+はい
+ですから…
+
+;;//フォルカスが素早く動く
+# se "SE_9021"
+# waitandnext 0.5
+
+;;//フェイルノートを斬る
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 540191 "failnaught_ca_0024"
+# textboxarrow 0 3
+@フェイルノート
+えっ…！？
+嘘…
+
+# textboxarrow 0 1
+@フォルカス
+この程度の攻撃も見切れないんです
+
+# voice 540191 "failnaught_ca_battle_0005"
+# textboxarrow 0 3
+@フェイルノート
+くっ…まだよっ…！
+
+;;//フェイルノートが攻撃する
+# se "SE_4301"
+# waitandnext 0.5
+
+;;//フォルカスが躱す
+# se "SE_5204"
+# textwindow "close"
+# leftout 5301811 0.5
+# waitandnext 0.5
+
+# alpha 5301811 0 0
+# alpha 167 0 0.5
+# move 5301811 3 0
+# face 5301811 "angry"
+# alpha 5301811 1 0.5
+# mask 5301811 off
+# textboxarrow 0 2
+# textwindow "normal"
+@フォルカス
+そんな苦し紛れの攻撃、
+私には当たりませんよ
+
+# se "SE_5207"
+# voice 530181 "forcas_c_unit_0008"
+# textboxarrow 0 2
+@フォルカス
+さあ、ユグドラシルの御許に
+還りなさい！
+
+# voice 4019 "failnaught_a_0038"
+# alpha 5301811 0 0.5
+# move 167 3 0
+# face 167 "angry"
+# alpha 167 1 0.5
+# mask 167 off
+# textboxarrow 0 2
+@フェイルノート
+くぅっ…
+
+;;フェイルノート（独白）
+# move 167 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 167 off
+@フェイルノート
+こんな…こんなはずないっ…
+私は…！
+
+;;//背景：黒
+# bgm "stop"
+# serif 1
+# layer 167 20
+# imagepos 2 0 0
+# imagealpha 2 1 0.5
+@ルシファー
+弱いのだろう？
+
+;;フェイルノート（独白）
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+# face 167 "normal"
+# textboxarrow 0 0
+@フェイルノート
+その声…ルシファー…！？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 8057 "new_lucifer_0002"
+# layer 3820008 20
+# move 167 2 0.5
+# mask 167 on
+# move 3820008 4 0
+# alpha 3820008 1 0.5
+# mask 3820008 on
+# textboxarrow 0 3
+# textwindow "normal"
+@ルシファー
+どうした、小娘？
+絶体絶命ではないか
+
+;;フェイルノート（独白）
+# voice 4019 "failnaught_a_0009"
+# move 167 2 0
+# face 167 "angry"
+# textboxarrow 0 0
+# textwindow "moya"
+@フェイルノート
+何を言っているのっ
+これから挽回するのよ…！
+
+# voice 8057 "new_lucifer_0004"
+# textboxarrow 0 3
+# textwindow "normal"
+@ルシファー
+クククッ
+認めろ…貴様の弱さを
+そうすれば死なずに済むぞ
+
+# textboxarrow 0 3
+@ルシファー
+泣いて命乞いをしろ
+何もかも捨てて逃げ出せ
+その舌先三寸で時間稼ぎをしろ
+
+# textboxarrow 0 3
+@ルシファー
+そうすれば、誰かが助けてくれる
+かもしれん
+貴様より強い誰かが
+
+;;フェイルノート（独白）
+# move 167 2 0
+# textboxarrow 0 0
+# textwindow "moya"
+@フェイルノート
+そんなこと…できるわけが…
+
+# textboxarrow 0 3
+# textwindow "normal"
+@ルシファー
+だが、死ぬよりましだ
+所詮、自分は強者でなく、弱者
+だったと認めれば良いだけ
+
+# textboxarrow 0 3
+@ルシファー
+それだけで、
+貴様は楽になれるのだぞ？
+
+# textboxarrow 0 3
+@ルシファー
+別にいいではないか
+何故、それほど“強者”に拘る
+そこにどれほどの価値があるのだ？
+
+# textboxarrow 0 3
+@ルシファー
+己の弱さを認める方が、
+余程、価値があるとは思わんか？
+
+# textboxarrow 0 3
+@ルシファー
+さあ、どうする？
+“弱者”のフェイルノートよ
+
+# textboxarrow 0 1
+@フェイルノート
+私は…私は…！

@@ -1,0 +1,256 @@
+;;第2話　タイトル：呪われた森
+;;//背景：森
+# script "lisp"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# background "forest"
+;;ギル
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# layer 137 2
+# alpha 137 0 0
+;;アルマス
+# body 3103811
+# pos 3103811 1
+# scale 3103811 0.8 0
+# layer 3103811 3
+# alpha 3103811 1 0
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 4
+# alpha 139 1 0
+;;ナディア
+# body 136
+# pos 136 5
+# scale 136 0.8 0
+# layer 136 2
+# alpha 136 1 0
+;;天沼矛
+# body 3300411
+# pos 3300411 5
+# scale 3300411 0.8 0
+# layer 3300411 1
+# alpha 3300411 0 0
+;;ケイオスリオン兵
+# body 3820001
+# pos 3820001 5
+# scale 3820001 0.8 0
+# layer 3820001 2
+# alpha 3820001 0 0
+;;-----------------------------------------
+# fadein "black" 2
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103811 "normal"
+# face 139 "normal"
+# face 136 "normal"
+# voice 1038 "almace_0043"
+@アルマス
+噂になってるのはこの辺りよね？
+ティニ、何か感じる？
+
+# voice 9967 "titania_0004"
+# textboxarrow 0 2
+@ティターニア
+強い魔力を感じます
+これは…結界に近いもののようですね
+
+# face 136 "sad"
+# textboxarrow 0 3
+# voice 9968 "nadia_0030"
+@ナディア
+中に入った者を閉じ込めてしまう…
+そういう呪いでしょうか？
+
+# voice 1038 "almace_0028"
+# face 3103811 "sad"
+# textboxarrow 0 1
+@アルマス
+境目が分からないから、
+あまり近づきすぎるのは危険だけど
+奥も調べたいし…
+
+# alpha 139 0 0.5
+# face 137 "surprise"
+# alpha 137 1 0.5
+# voice 9969 "gill_0023"
+# textboxarrow 0 2
+@ギル
+あ！
+あっちに人が倒れてるぞ！
+
+# voice 9968 "nadia_0023"
+# face 136 "surprise"
+# textboxarrow 0 3
+@ナディア
+本当ですかっ？
+急いで手当てを――
+
+# face 3103811 "normal"
+# textboxarrow 0 1
+@アルマス
+待って！
+私が様子を見に行くから
+ナディアは天沼矛の側を離れないで
+
+# voice 1038 "almace_0001"
+# se "SE_5575"
+@アルマス
+マスター、行くわよ！
+
+# se "SE_5575"
+# imageset 0 "black"
+# imagealpha 0 0 0
+# face 137 "usual"
+# imagelayer 0 1
+# textboxarrow 0 2
+@ギル
+お、俺も行くぜっ
+
+;;//暗転挟む
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# background "forest_totaleclipse"
+# move 3103811 3 0
+# face 3103811 "angry"
+# move 137 1 0
+# face 137 "normal"
+# alpha 136 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# face 3820001 "normal"
+# alpha 3820001 1 0
+# serif 0
+# textwindow "nomal"
+# voice 1038 "almace_0019"
+# textboxarrow 0 2
+@アルマス
+しっかりして！
+何があったのっ？
+
+# textboxarrow 0 3
+@ケイオスリオン兵
+あ…ああっ…
+何だ、お前達…？
+俺は…脱出できたのかっ？
+
+# face 3103811 "surprise"
+# voicedelay 1038 "almace_0022" 0.5
+# textboxarrow 0 2
+@アルマス
+意識がもうろうとしてるわね
+とりあえず、森の外まで運び出して
+…え？
+
+# voice 9969 "gill_0019"
+# face 137 "surprise"
+# textboxarrow 0 1
+@ギル
+嘘だろ…
+ナディア様から少ししか離れて
+ないはずなのにっ？
+
+# face 3103811 "angry"
+# textboxarrow 0 2
+@アルマス
+誰もいなくなってる…
+ティニ！ナディア！
+返事をして！
+
+# face 3103811 "worry"
+@アルマス
+…………
+
+# face 137 "normal"
+# textboxarrow 0 1
+@ギル
+無理っぽいぜ…
+どうする、アルマス？
+
+# textboxarrow 0 3
+@ケイオスリオン兵
+へ…へへへっ…
+やっぱりだ…やっぱりダメだった…
+俺達はみんなここで死ぬんだぁ！
+
+@ケイオスリオン兵
+エヒャヒャヒャヒャヒャヒャ…！
+
+;;//ケイオスリオン兵が走り去る
+# se "SE_5575"
+# textboxarrow 0 0
+# alpha 3820001 0 1
+# waitandnext 1
+
+# move 3103811 4 0.5
+# face 3103811 "surprise"
+# move 137 2 0.5
+# textboxarrow 0 3
+@アルマス
+バカ！
+無闇に走ったら…いなくなった！？
+
+# face 137 "surprise"
+# textboxarrow 0 1
+@ギル
+突然、姿が消えちまった…！
+アルマス、これ、本当にまずいよ…
+
+# voice 1038 "almace_0028"
+# face 3103811 "normal"
+# textboxarrow 0 3
+@アルマス
+今更、泣き言言っても仕方ないわ
+私達もこの森に囚われたみたいね
+
+@アルマス
+ナディアを残してきて良かった
+あっちにはティニと天沼矛もいるし
+
+# voice 9969 "gill_0009"
+# face 137 "sad"
+# textboxarrow 0 1
+@ギル
+でもっ…俺達はどうすりゃ
+いいんだよ！？
+
+# face 3103811 "angry"
+# textboxarrow 0 3
+@アルマス
+決まってるでしょ
+行くわよ
+
+# face 137 "normal"
+# textboxarrow 0 1
+@ギル
+もしかして、アルマス…
+脱出する方法、分かんの！？
+
+# face 3103811 "angry"
+# textboxarrow 0 3
+@アルマス
+そんなの決まってる
+この呪いをかけた張本人を
+倒せば良いのよ！
+
+@アルマス
+きっと森の奥に潜んでるわ！
+マスター！ギル！
+私にしっかりついて来なさい！
+
+# voice 9969 "gill_0020"
+# face 137 "sad"
+# textboxarrow 0 1
+@ギル
+そんなぁ…不安しかねぇよ…

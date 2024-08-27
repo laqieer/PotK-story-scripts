@@ -1,0 +1,286 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１３章 章タイトル「ラルゴカタストロフィ―攪乱―」
+;;第1話－３　タイトル：眩惑のキル姫
+;;1_3_1
+;;スクリプト最後の背景：マサムネ城
+;;-----------------------------------------
+# script "lisp"
+# background "masamune_castle"
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;花異族
+# body 5809801
+# pos 5809801 3
+# scale 5809801 0.8 0
+# layer 5809801 2
+# alpha 5809801 0 0
+# mask 5809801 off
+;;花異族（クローン1）
+# entry 958098011 5809801
+# pos 958098011 3
+# scale 958098011 0.8 0
+# layer 958098011 2
+# alpha 958098011 0 0
+# mask 958098011 off
+;;花異族（クローン2）
+# entry 958098012 5809801
+# pos 958098012 3
+# scale 958098012 0.8 0
+# layer 958098012 2
+# alpha 958098012 0 0
+# mask 958098012 off
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 2
+# alpha 5401721 0 0
+# mask 5401721 off
+;;擬装フライシュッツ
+# body 5502721
+# pos 5502721 3
+# scale 5502721 0.8 0
+# layer 5502721 3
+# alpha 5502721 0 0
+# mask 5502721 off
+;;-----------------------------------------
+;;第1話－３　タイトル：眩惑のキル姫
+;;//背景：マサムネ城
+# move 5401721 3 0
+# face 5401721 "normal"
+# alpha 5401721 1 0
+# mask 5401721 off
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+…やっと揺れが収まりました
+
+# move 5401721 2 0.5
+# mask 5401721 on
+# move 5502721 4 0
+# face 5502721 "sad"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+# textboxarrow 0 3
+@フライシュッツ
+スイハちゃ～ん
+怖かったよ～…
+
+;;//フライシュッツがスイハに抱きつく
+# se "SE_0648"
+# textwindow "close"
+# move 5502721 3 0.2
+# waitandnext 0.2
+
+# face 5502721 "normal"
+# textboxarrow 0 2
+# textwindow "normal"
+@フライシュッツ
+スイハちゃんは大丈夫だった？
+どこも怪我してない？
+
+# voice 4017 "suiha_0003"
+# textboxarrow 0 1
+@スイハ
+大丈夫です
+
+;;スイハ（独白）
+# move 5401721 2 0
+# face 5401721 "shy"
+# textboxarrow 0 0
+# textwindow "moya"
+@スイハ
+そんなに抱きつかれると…
+恥ずかしい…
+
+;;スイハ（独白）
+# textboxarrow 0 0
+@スイハ
+でも…怖がっているみたいだし、
+押しのけたら悪いよね…
+
+# textboxarrow 0 2
+# textwindow "normal"
+@フライシュッツ
+スイハちゃん、どんなときでも
+冷静だね～っ
+おねーちゃん、感心しちゃうよ～
+
+# textboxarrow 0 1
+@スイハ
+いえ、そんなことは…
+
+# face 5401721 "normal"
+# textboxarrow 0 1
+@スイハ
+それより急ぎましょう、
+フライシュッツ
+マサムネ城は目の前です
+
+# textwindow "close"
+# move 5502721 4 0.2
+# face 5502721 "surprise"
+# waitandnext 0.2
+
+# textboxarrow 0 3
+# textwindow "normal"
+@フライシュッツ
+あ、そうだったね～っ
+早くお城に入って、マサムネちゃんと
+パラシュちゃんを止めないとね
+
+# voice 5027 "freischotz_0028"
+# face 5502721 "normal"
+# textboxarrow 0 3
+@フライシュッツ
+急に出てきた、あの黒い霧とか
+黒い柱も「剪定」と関係があるの
+かな～？
+
+# face 5401721 "sad"
+# textboxarrow 0 1
+@スイハ
+どうでしょう…
+
+;;スイハ（独白）
+# move 5401721 2 0
+# textboxarrow 0 0
+# textwindow "moya"
+@スイハ
+何となく違う気がするけれど…
+確信はないから言わない方がいいよね
+
+# voice 5027 "freischotz_0004"
+# face 5502721 "happy"
+# textboxarrow 0 3
+# textwindow "normal"
+@フライシュッツ
+スイハちゃんはおねーちゃんが
+守ってあげるから安心してっ
+
+# voice 4017 "suiha_0030"
+# face 5401721 "happy"
+# textboxarrow 0 1
+@スイハ
+ありがとうございます
+…私もフライシュッツを――
+
+# textboxarrow 0 3
+@フライシュッツ
+よ～し！
+二人で力を合わせよ～っ
+
+# face 5401721 "sad"
+# textboxarrow 0 1
+@スイハ
+あ、あのっ…
+
+;;スイハ（独白）
+# move 5401721 2 0
+# alpha 5401721 1 0.5
+# mask 5401721 on
+# textboxarrow 0 0
+# textwindow "moya"
+@スイハ
+私もフライシュッツを守るから
+安心して欲しいって言いたかった
+のに…
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 5401721 0 0
+# alpha 5502721 0 0
+# move 5401721 2 0
+# face 5401721 "normal"
+# alpha 5401721 1 0
+# mask 5401721 on
+# move 5502721 4 0
+# face 5502721 "normal"
+# alpha 5502721 1 0
+# mask 5502721 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm415_416" "BgmIntegralNoahBattle002" 0
+# textboxarrow 0 3
+# textwindow "normal"
+@フライシュッツ
+お城の正門から入れそうだね～
+いつでもどうぞってことかな？
+
+# textboxarrow 0 1
+@スイハ
+自信があるんでしょう
+
+;;スイハ（独白）
+# move 5401721 2 0
+# textboxarrow 0 0
+# textwindow "moya"
+@スイハ
+ここにいるのはマサムネとパラシュ…
+どちらも武勇に秀でているのは
+もちろん精神面でも強い方々です
+
+;;スイハ（独白）
+# textboxarrow 0 0
+@スイハ
+城に誰でも入れるようにしているのも
+真っ向から戦う心づもりの表れ…
+厳しい戦いになりそう
+
+;;スイハ（独白）
+# textboxarrow 0 0
+@スイハ
+でも、必ず二人を止める！
+もう剪定なんてさせないっ
+
+# face 5502721 "happy"
+# textboxarrow 0 3
+# textwindow "normal"
+@フライシュッツ
+おじゃましま～す
+マサムネちゃん、パラシュちゃん、
+いるかな～？
+
+# se "SE_0830"
+# alpha 5401721 0 0.5
+# alpha 5502721 0 0.5
+# move 958098011 1 0
+# alpha 958098011 1 0.5
+# mask 958098011 on
+# move 5809801 3 0
+# alpha 5809801 1 0.5
+# mask 5809801 on
+# move 958098012 5 0
+# alpha 958098012 1 0.5
+# mask 958098012 on
+# textboxarrow 0 0
+@異族
+イイイイイイイイイ！
+
+# voice 5027 "freischotz_0024"
+# alpha 958098011 0 0.5
+# alpha 5809801 0 0.5
+# alpha 958098012 0 0.5
+# move 5401721 2 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# mask 5401721 on
+# move 5502721 4 0
+# face 5502721 "sad"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+# textboxarrow 0 3
+@フライシュッツ
+キャッ！
+異族がたくさん現れたよーっ…
+
+# textboxarrow 0 1
+@スイハ
+やはり簡単には通してくれませんね

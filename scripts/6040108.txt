@@ -1,0 +1,229 @@
+;;【EP4】戦闘後
+# script "lisp"
+# background "forest"
+# bgmfile "bgm162" "BgmPJZero001" 0
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# body 100221
+# pos 100221 5
+# scale 100221 0.8 0
+# body 100111
+# pos 100111 1
+# scale 100111 0.8 0
+# textflame 1 1
+# textboxarrow 0 2
+# chara 24
+# face 24 "angry"
+# face 100111 "nutual"
+# layer 24 3
+# layer 100111 2
+# layer 100221 1
+@ティルフィング
+くっ…攻撃が全く届かない…
+
+# textboxarrow 0 3
+# chara 100221
+# voice 1002 "revatein_0019"
+# face 100221 "angry"
+@レーヴァテイン
+どうなってんの…？
+こっちは三人がかりなのに…
+
+# body 300181
+# pos 300181 3
+# scale 300181 0.8 0
+# alpha 300181 0 0
+# mask 300181 off
+# alpha 100111 1 0.5
+# textboxarrow 0 1
+# chara 100111
+# voice 1001 "masamune_0017"
+# face 100111 "unhappy"
+@マサムネ
+これほど力の差があろうとはっ…
+
+# body 300111
+# pos 300111 1
+# scale 300111 0.8 0
+# alpha 300111 0 0
+# body 500211
+# pos 500211 5
+# scale 500211 0.8 0
+# alpha 500211 0 0
+# alpha 300181 1 0.5
+# alpha 24 0 0.5
+# alpha 100221 0 0.5
+# alpha 100111 0 0.5
+# textboxarrow 0 2
+# chara 300181
+# face 300181 "sad"
+@エンヴィ
+ごめんなさい…あなた達の攻撃を
+簡単に捌いてしまって…
+
+# body 200471
+# pos 200471 1
+# scale 200471 0.8 0
+# alpha 200471 0 0
+# alpha 500211 1 0.5
+# alpha 300111 1 0.5
+# alpha 300181 0 0.5
+# textboxarrow 0 3
+# chara 500211
+# voice 5002 "furaikugeru_0018"
+# face 500211 "surprise"
+@フライクーゲル
+ホワイ！
+こっちは４人がかりなんだよ！？
+こんなのアメイジィング！
+
+# move 300111 3 0.3
+# leftin 200471 0.5
+# layer 500211 1
+# layer 300111 2
+# layer 200471 3
+# alpha 200471 1 0.5
+# textboxarrow 0 2
+# chara 300111
+# voice 3001 "ronginusu_0016"
+# face 300111 "surprise"
+@ロンギヌス
+キャアアアア！
+
+# body 200411
+# pos 200411 4
+# scale 200411 0.8 0
+# alpha 200411 0 0
+# textboxarrow 0 1
+# chara 200471
+# face 200471 "surprise"
+@グラトニー
+まるで手応えがない
+こんなの平らげても
+ボクの糧にはならないな
+
+# layer 200411 1
+# alpha 200411 1 0.5
+# alpha 300111 0 0.5
+# alpha 500211 0 0.5
+# textboxarrow 0 3
+# chara 200411
+# voice 2004 "parashu_0024"
+# face 200411 "angry02"
+@パラシュ
+随分と余裕なんだね！
+
+# body 400131
+# pos 400131 5
+# scale 400131 0.8 0
+# body 300111
+# pos 300111 4
+# scale 300111 0.8 0
+# textboxarrow 0 1
+# chara 200471
+# alpha 400131 0 0
+# face 200471 "usual"
+@グラトニー
+君達とは
+目指している高みが違うからね
+
+# move 200471 2 0.3
+# se "SE_4810"
+# fadein "white" 0.5
+# waitandnext 1
+# textboxarrow 0 1
+# chara 200471
+# face 200471 "surprise"
+@グラトニー
+…おっと
+
+# move 200471 1 0.5
+# textboxarrow 0 3
+# chara 400111
+# voice 4001 "arutemisu_0037"
+# alpha 200411 0 0.5
+# alpha 400131 1 0.5
+# face 400131 "angry"
+@アルテミス
+躱された！
+…いけないっ
+
+# effectbody 100 1 100 10
+# effectstart 100
+# textboxarrow 0 0
+# move 200471 3 0.3
+# shake 0 0.3
+# fadein "red" 0.3
+# waitandnext 1
+# face 200471 "angry"
+# se "SE_9019"
+
+# effectskip 100
+# textboxarrow 0 2
+# chara 200471
+@グラトニー
+遅いよ
+弓は接近されるとオシマイ
+なんだから
+
+# textboxarrow 0 3
+# chara 400131
+# voice 4001 "arutemisu_0015"
+# face 400131 "sad"
+@アルテミス
+あぐっ…そんな…
+
+# textboxarrow 0 2
+# chara 24
+# voice 1014 "tyrufing_0049"
+# mask 24 off
+# alpha 24 1 0.5
+# alpha 400131 0 0.5
+# alpha 200471 0 0.5
+# face 24 "sad"
+@ティルフィング
+このままでは…でも、一体、
+どうしたら…？
+
+# select "武具の相性を考えるんだ！" "select_label_01" "戦っている相手をよく見ろ！" "select_label_02" "君達の持っている武具は何！？" "select_label_03"
+このままでは…でも、一体、
+どうしたら…？
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 24
+# face 24 "surprise"
+@ティルフィング
+相性…そういえば、これって…
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 24
+# face 24 "surprise"
+@ティルフィング
+相手を…あ！
+私達、いつの間にか…
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 24
+# face 24 "surprise"
+@ティルフィング
+私は剣…ロンギヌスは槍…
+パラシュは…あ！
+
+# textboxarrow 0 2
+# chara 24
+# label "select_label_end"
+# face 24 "mad2"
+@ティルフィング
+みんな！
+このままではダメ！
+マスターの指示に従って！

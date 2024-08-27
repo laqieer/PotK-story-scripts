@@ -1,0 +1,286 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１４章 章タイトル「ラルゴカタストロフィ―激突―」
+;;第1話－６　タイトル：終焉の理を破る者
+;;1_6_3
+;;スクリプト最後の背景：町
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgmfile "bgm463_462" "BgmIntegralNoahDisrupters" 0
+;;-----------------------------------------
+;;ケラウノス
+# body 500131
+# pos 500131 3
+# scale 500131 0.8 0
+# layer 500131 2
+# alpha 500131 0 0
+# mask 500131 off
+;;擬装ダモクレス
+# body 5103521
+# pos 5103521 3
+# scale 5103521 0.8 0
+# layer 5103521 2
+# alpha 5103521 0 0
+# mask 5103521 off
+;;パラケルスス
+# body 101311
+# pos 101311 3
+# scale 101311 0.8 0
+# layer 101311 2
+# alpha 101311 0 0
+# mask 101311 off
+# brightness 101311 0.8 0
+;;グラーシーザ・擬装・ウォーリアー
+# body 5302621
+# pos 5302621 3
+# scale 5302621 0.8 0
+# layer 5302621 2
+# alpha 5302621 0 0
+# mask 5302621 off
+;;ワズラ
+# body 201111
+# pos 201111 3
+# scale 201111 0.8 0
+# layer 201111 2
+# alpha 201111 0 0
+# mask 201111 off
+# brightness 201111 0.8 0
+;;トライデント
+# body 300231
+# pos 300231 3
+# scale 300231 0.8 0
+# layer 300231 2
+# alpha 300231 0 0
+# mask 300231 off
+;;ソロモン
+# body 5503111
+# pos 5503111 3
+# scale 5503111 0.8 0
+# layer 5503111 2
+# alpha 5503111 0 0
+# mask 5503111 off
+;;グラウ
+# body 164
+# pos 164 3
+# scale 164 0.6 0
+# layer 164 2
+# alpha 164 0 0
+# mask 164 off
+;;アロンダイト・暴走
+# body 5100711
+# pos 5100711 3
+# scale 5100711 0.8 0
+# layer 5100711 2
+# alpha 5100711 0 0
+# mask 5100711 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+# emotionbody 1000 15 201111 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# emotionbody 2000 15 101311 0 0
+# effectpattern 2000 1 0
+# effectstart 2000
+# move 201111 2 0
+# face 201111 "angry"
+# alpha 201111 1 0
+# mask 201111 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 101311 4 0
+# face 101311 "angry"
+# alpha 101311 1 0
+# mask 101311 on
+@ワズラ
+アアアアアアアアアアアア！
+
+# textboxarrow 0 3
+@パラケルスス
+アアアアアアアアア！
+
+;;//ワズラとパラケルススをグラーシーザと
+;;//ケラウノスが抑える
+# effectskip 1000
+# effectskip 2000
+# voice 3026 "grayside_battle_0004"
+# alpha 201111 0 0.5
+# alpha 101311 0 0.5
+# move 5302621 2 0
+# face 5302621 "normal"
+# alpha 5302621 1 0.5
+# mask 5302621 on
+# textboxarrow 0 1
+# move 500131 4 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 on
+@グラーシーザ
+せいぎのほのおでせいしてやろう！
+
+# textboxarrow 0 3
+@ケラウノス
+ちょっと大人しくしててね～っ
+
+# se "bgm462_switch_1"
+# voice 550311 "solomon_di_0043"
+# alpha 5302621 0 0.5
+# alpha 500131 0 0.5
+# move 164 2 0
+# alpha 164 1 0.5
+# mask 164 on
+# move 5503111 4 0
+# face 5503111 "angry"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# textboxarrow 0 3
+@ソロモン
+グラウ、行くわよ！
+
+# textboxarrow 0 1
+@グラウ
+出力１００％
+オールグリーンです
+
+# textboxarrow 0 3
+@ソロモン
+これが私の最適解！
+
+;;//ソロモンがワズラとパラケルススの暴走を解く
+;;//ワズラとパラケルススから黒い霧演出が消える
+# effectstart 1000
+# effectstart 2000
+# alpha 164 0 0.5
+# alpha 5503111 0 0.5
+# move 201111 2 0
+# face 201111 "angry"
+# alpha 201111 1 0.5
+# mask 201111 on
+# move 101311 4 0
+# face 101311 "angry"
+# alpha 101311 1 0.5
+# mask 101311 on
+# waitandnext 0.5
+
+# se "SE_0994"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@ワズラ
+アアアアアアあああっ…
+
+# textboxarrow 0 3
+@パラケルスス
+アアアアあううっ…
+
+# effectskip 1000
+# effectskip 2000
+# textwindow "close"
+# brightness 201111 1 0.5
+# brightness 101311 1 0.5
+# waitandnext 1
+
+# voice 550311 "solomon_di_0004"
+# alpha 201111 0 0.5
+# alpha 101311 0 0.5
+# move 164 2 0
+# alpha 164 1 0.5
+# mask 164 on
+# move 5503111 4 0
+# face 5503111 "happy"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# textboxarrow 0 3
+# textwindow "normal"
+@ソロモン
+うん
+上手くいったわ
+あとはトリシューラとテュルソスね
+
+# se "bgm463_switch_1"
+# se "SE_0775"
+# voice 9950 "glau_0045"
+# textboxarrow 0 1
+@グラウ
+ソロモン
+周囲を警戒して下さい
+新たな個体が接近しています
+
+# voice 550311 "solomon_di_0022"
+# face 5503111 "surprise"
+# textboxarrow 0 3
+@ソロモン
+新たな個体…？
+暴走しているキル姫が他にも
+いるというのっ？
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 164 0 0
+# alpha 5503111 0 0
+# move 300231 3 0
+# face 300231 "surprise"
+# alpha 300231 1 0
+# mask 300231 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgm "stop"
+# textboxarrow 0 2
+# textwindow "normal"
+@トライデント
+あれ～？
+あっちにいるのって
+アロンダイト…
+
+;;//暴走アロンダイトの姿を出す
+# bgmfile "bgm457" "BgmIntegralNoahEvent008" 0
+# textwindow "close"
+# alpha 300231 0 0.5
+# move 5100711 3 0
+# face 5100711 "normal"
+# alpha 5100711 1 0.5
+# mask 5100711 off
+# waitandnext 1.5
+
+# alpha 5100711 0 0.5
+# move 300231 3 0
+# face 300231 "surprise"
+# alpha 300231 1 0.5
+# mask 300231 off
+# textboxarrow 0 2
+# textwindow "normal"
+@トライデント
+あれ？
+あれあれ～？
+何だか私…
+
+;;//ダモクレスがやって来る
+# se "SE_5575"
+# move 5103521 2 0
+# face 5103521 "surprise"
+# alpha 5103521 1 0.5
+# mask 5103521 on
+# textboxarrow 0 1
+# move 300231 4 0.5
+# mask 300231 on
+@ダモクレス
+どうしたの、トライデント？
+胸が苦しいの？
+
+# face 300231 "usual"
+# textboxarrow 0 3
+@トライデント
+ううん…
+何でもない…よ…？

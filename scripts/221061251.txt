@@ -1,0 +1,271 @@
+;;-----------------------------------------
+;;【EP.5】奇跡の祠_1
+;;-----------------------------------------
+# script "lisp"
+# background "forest_totaleclipse"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;フライクーゲル
+# body 3500221
+# pos 3500221 3
+# scale 3500221 0.8 0
+# layer 3500221 2
+# mask 3500221 off
+# alpha 3500221 0 0
+;;ラグナロク
+# body 103621
+# pos 103621 2
+# scale 103621 0.8 0
+# layer 103621 3
+# alpha 103621 0 0
+;;アロンダイト
+# body 100741
+# pos 100741 4
+# scale 100741 0.8 0
+# layer 100741 3
+# alpha 100741 0 0
+;;カオスディアブロ
+# body 802401
+# pos 802401 3
+# scale 802401 0.8 0
+# layer 802401 3
+# mask 802401 off
+# alpha 802401 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：森(昼)
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# alpha 802401 1 1
+# waitandnext 1
+
+;;ＳＥ：グオオオオオ……！！（ボス魔獣の鳴き声、それらしいものがございましたらお願いいたします）
+# se "SE_7003"
+# shake 0 1
+# waitandnext 1
+
+# alpha 802401 0 0.5
+# waitandnext 0.5
+
+# alpha 3500221 1 0.5
+# face 3500221 "surprise"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@フライクーゲル
+マスターっ、危ないっ！！
+
+;;演出：画面揺れ
+;;ＳＥ：ズシャアッ！（ボス魔獣の攻撃音）
+# shake 0 0.5
+# se "SE_4828"
+# sedelay "SE_5639" 0.8
+# fadein "white" 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+…ふぅっ、間一髪！
+怪我はない、マスター！？
+
+# alpha 3500221 0 0.5
+# alpha 103621 1 0.5
+# alpha 100741 1 0.5
+# face 103621 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+# face 100741 "angry"
+# voice 1007 "Arondaito_0024"
+@アロンダイト
+わっ…攻撃の余波で、
+周りの木々が削り取られてます！
+なんて力…！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+この傷跡…
+さっきの地蔵についてたものと
+同じだわ！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+きっと、この森の辺りで
+ずっと暴れまわっていたのね…！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1007 "Arondaito_0003"
+@アロンダイト
+魔獣達が集まっていたのも、
+この強大な力に
+引き寄せられたからでしょう
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1007 "Arondaito_0038"
+@アロンダイト
+これ以上被害が出る前に、
+ここで食い止めないと―
+…っぐぅっ！？
+
+;;ＳＥ：ドサッ（アロンダイトが倒れる音）
+# se "SE_3001"
+# alpha 100741 0 0.5
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+アロンダイトっ！
+大丈夫！？
+
+# alpha 100741 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 100741 "sad"
+# voice 1007 "Arondaito_0031"
+@アロンダイト
+え、ええ…
+申し訳ありません…
+
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+あの者の力、でしょうか？
+全身に黒い淀みが
+のしかかってくるようなっ…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+ええ、私も感じてる…！
+今までみたいに
+簡単にはいかなそうね…
+
+# alpha 3500221 1 0.5
+# alpha 103621 0 0.5
+# alpha 100741 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3500221 "sad"
+@フライクーゲル
+ただでさえ戦闘続きで
+疲れてるっていうのに…
+でも、やるしかないよね！
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3500221 "usual"
+@フライクーゲル
+…大丈夫だよ、マスター！
+そんな不安そうにしないで！
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+マスターのことは、
+わたし達が絶対に守る！
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+あの魔獣を倒して…
+ヘァピィなエンディングを
+掴みとってみせるから…！
+
+# textflame 0 0
+@
+無理やり笑顔を作り、
+マスターに笑いかける
+フライクーゲル…
+
+# textflame 0 0
+@
+その表情を見て、
+マスターの中に
+ひとつの決意が芽生えた
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+行こう、ラグナロク！
+アロンダイト！
+
+# alpha 3500221 0 0.5
+# textflame 0 0
+@
+キル姫である三人のように、
+自分には戦う力はない…
+
+# textflame 0 0
+@
+ならばせめて、
+彼女達の無事を
+心から祈ろう…！
+
+# textflame 0 0
+@
+そんなマスターの祈りが、
+ついに天へと届き―
+
+;;演出：画面フラッシュ
+# se "SE_9150"
+# bgmfile "bgm451_452" "BgmNewYear003" 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+;;ＳＥ：グオオオオオ……！！（ボス魔獣の鳴き声、それらしいものがございましたらお願いいたします）
+# se "SE_7004"
+# alpha 802401 1 0.5
+# waitandnext 1
+
+# move 103621 1 0
+# move 100741 5 0
+# move 3500221 3 0
+# mask 3500221 on
+# alpha 802401 0 0.5
+# waitandnext 0.5
+
+# alpha 103621 1 0.5
+# alpha 100741 1 0.5
+# alpha 3500221 1 0.5
+# face 100741 "angry"
+# face 3500221 "surprise"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 350021 "furaikugeru_t_0039"
+@フライクーゲル
+わっ！？
+祠が…輝きだしたっ！？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1007 ""
+@アロンダイト
+魔獣が…苦しんでいます！
+今なら倒せるかもしれません！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+僥倖ね…！
+行きましょう、みんなっ！！
+
+# fadeout "black" 0.5
+# waitandnext 0.5

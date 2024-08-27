@@ -1,0 +1,543 @@
+;;-----------------------------------------
+;;SEA2章_13_0
+;;-----------------------------------------
+# script "lisp"
+# background "corridor_night"
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 1 0
+;;七支刀
+# body 5105111
+# pos 5105111 3
+# scale 5105111 0.8 0
+# layer 5105111 3
+# mask 5105111 off
+# alpha 5105111 0 0
+;;パラシュ
+# body 6200411
+# pos 6200411 3
+# scale 6200411 0.8 0
+# layer 6200411 2
+# mask 6200411 off
+# alpha 6200411 0 0
+;;イシューリエル
+# body 6301411
+# pos 6301411 3
+# scale 6301411 0.8 0
+# layer 6301411 3
+# mask 6301411 off
+# alpha 6301411 0 0
+;;イシューリエル
+# entry 6301499 6301411 
+# pos 6301499 1
+# scale 6301499 0.8 0
+# layer 6301499 4
+# alpha 6301499 0 0
+# brightness 6301499 0.8 0
+;;ghost
+# body 302
+# pos 302 5
+# scale 302 0.8 0
+# layer 302 1
+# mask 302 off
+# alpha 302 0 0
+# entry 900099 302
+# pos 900099 1
+# scale 900099 0.8 0
+# layer 900099 1
+# mask 900099 off
+# alpha 900099 0 0
+# reversal 900099 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "SEA6301411"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：廊下（夜）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# voice 9917 "mimir_navikan_0001"
+# face 270 "normal"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+マスター様…
+イシューリエルさんの様子が
+先程までとは違うように感じます
+
+# face 270 "sad"
+# textboxarrow 0 2
+@ミーミル
+あれほど否定しておられた
+心霊現象をこんなにあっさり
+お認めになるなんて…
+
+;;選択肢
+# select "確かに変だ" "select_label_01" "人は変わるものだよ" "select_label_02"
+マスター様…
+イシューリエルさんの様子が
+先程までとは違うように感じます
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# se "bgm602_rhythm_on"
+# face 270 "normal"
+# textboxarrow 0 2
+@ミーミル
+マスター様も同じように感じて
+おられるのですね
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# se "bgm602_rhythm_on"
+# face 270 "normal"
+# textboxarrow 0 2
+@ミーミル
+なるほど…
+そのようなものでございますか
+
+# voice 3014 "ithuriel_0009"
+# alpha 270 0 0.3
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# label "select_label_end"
+# textboxarrow 0 2
+@イシューリエル
+ちょっと、あなた達
+のんびりしている場合では
+ありませんわ！
+
+# textboxarrow 0 2
+@イシューリエル
+もっと強い心霊現象の
+気配が致します
+参りましょう！
+
+;;イシューリエルが走っていく
+# se "SE_5575"
+# move 6301411 2 0.5
+# scale 6301411 0.7 1
+# alpha 6301411 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@パラシュ
+待つんだ、イシューリエル
+
+;;パラシュも走っていく
+# se "SE_5575"
+# move 6200411 4 0.5
+# scale 6200411 0.7 1
+# alpha 6200411 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：暗い広間
+# background "201_congress"
+#setnextbgmblock 1
+# scale 6200411 0.8 0
+# scale 6301411 0.8 0
+# waitandnext 0.2
+
+# se "bgm602_basic_on"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 270 2 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# move 6200411 4 0
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+ここは…
+広くて、少し肌寒いですね
+
+# textboxarrow 0 3
+@パラシュ
+恐らく、遺体安置所じゃないかな
+こんなに広い必要があるのかは
+知らないけど
+
+# voice 1051 "shichishito_0015"
+# alpha 270 0 0.3
+# alpha 6200411 0 0.3
+# face 5105111 "sad"
+# alpha 5105111 1 0.3
+# textboxarrow 0 2
+@七支刀
+ご遺体は見当たりませんけれど、
+ここにも強い呪術の痕跡が…
+
+;;イシューリエル（本物）がやってくる
+# textwindow "close"
+# alpha 5105111 0 0.3
+# waitandnext 0.5
+
+# move 6200411 1 0
+# move 6301411 3 0
+# layer 6301411 2
+# mask 6301411 off
+# face 6301411 "usual"
+# alpha 6301411 1 0.3
+# textboxarrow 0 2
+# textwindow "normal"
+@イシューリエル
+あら、あなた達
+やっと追いついてきましたのね
+
+# move 6301411 4 0.5
+# move 6200411 2 0.5
+# layer 6200411 3
+# mask 6200411 on
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# textboxarrow 0 1
+@パラシュ
+追いついた？
+ここまで一緒に来たじゃないか
+
+# se "bgm602_tension_on"
+# face 6301411 "normal"
+# textboxarrow 0 3
+@イシューリエル
+何を仰ってますの？
+わたくし、ここには一人で来ましたわ
+
+# face 6301411 "sad"
+# textboxarrow 0 3
+@イシューリエル
+あのドローン二体を取り逃してしまい
+…悔しいですわ
+
+# face 6200411 "angry"
+# textboxarrow 0 1
+@パラシュ
+何を言ってるんだ、君は？
+さっき鏡の前で
+ボク達と合流しただろっ
+
+# face 6301411 "normal"
+# textboxarrow 0 3
+@イシューリエル
+鏡？
+ああ、噂の一つですわね
+鏡の中に引きずり込まれるなんて…
+
+# textboxarrow 0 3
+@イシューリエル
+まったく合理的ではありませんわ！
+
+# face 6200411 "surprise"
+# move 5105111 1 0
+# textboxarrow 0 1
+@パラシュ
+なっ…！？
+
+# voice 1051 "shichishito_0066"
+# move 6200411 1 0.5
+# alpha 6200411 0 0.3
+# move 5105111 2 0.5
+# layer 5105111 3
+# mask 5105111 on
+# face 5105111 "surprise"
+# alpha 5105111 1 0.3
+# textboxarrow 0 1
+@七支刀
+イシューリエル様、
+さっきと言ってることが違いますっ
+
+# textboxarrow 0 3
+@イシューリエル
+何も違っておりませんわ
+心霊現象なんて全てインチキですの！
+
+;;画面揺れ
+# se "SE_5215"
+# shake 1 1.5
+# textboxarrow 0 0
+# waitandnext 2
+
+# voice 1051 "shichishito_0025"
+# scale 302 0.6 0
+# scale 900099 0.6 0
+# textboxarrow 0 1
+@七支刀
+きゃっ…！
+
+# alpha 6301411 0 0.3
+# alpha 5105111 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+;;幽霊が画面を飛び交う
+# se "SE_11585"
+# scale 302 0.8 1
+# alpha 302 0.7 1
+# waitandnext 0.5
+
+# scale 302 0.7 0.7
+# alpha 302 0 0.7
+# scale 900099 0.8 1
+# alpha 900099 0.7 1
+# waitandnext 1
+
+# scale 900099 0.7 0.5
+# alpha 900099 0 0.5
+# waitandnext 1
+
+# voice 2004 "parashu_0024"
+# move 270 2 0
+# face 270 "surprise"
+# alpha 270 1 0.3
+# move 6200411 4 0
+# layer 6200411 2
+# mask 6200411 off
+# face 6200411 "surprise"
+# alpha 6200411 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@パラシュ
+これは…
+こんなにたくさんの幽霊、
+一体、どこからっ？
+
+# serif 1
+@？？？
+フフフ…フフフフフフフフ…
+
+# serif 0
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+どこからともなく笑い声が
+聞こえてきます
+この声、もしや…
+
+;;イシューリエルシナリオカット
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# alpha 270 0 0
+# alpha 6200411 0 0
+# move 6301411 3 0
+# layer 6301411 2
+# mask 6301411 off
+# alpha 6301411 1 0
+# fadein "white" 1
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# frameout 0 0
+# textwindow "close"
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 0
+# textwindow "normal"
+@イシューリエル
+何者ですの！？
+こんな映像で怖がらせようとしても
+無駄ですわよ！
+
+# textboxarrow 0 0
+@イシューリエル
+観念して姿を現しなさい！
+
+#setnextbgmblock 2
+# serif 1
+@？？？
+まったく…
+あなたは本当に頑固ですわね
+
+;;シナリオカット削除
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# imagealpha 1 0 1
+# framein 0 1
+# waitandnext 1.5
+
+;;イシューリエル？が現れる
+# move 6301499 2 0.5
+# face 6301499 "usual"
+# alpha 6301499 1 0.5
+# move 6301411 4 0.5
+# face 6301411 "normal"
+# waitandnext 1.5
+
+# voice 2004 "parashu_0022"
+# alpha 6301411 0 0.3
+# alpha 6301499 0 0.3
+# move 6200411 3 0
+# layer 6200411 2
+# mask 6200411 off
+# face 6200411 "surprise"
+# alpha 6200411 1 0.3
+# textboxarrow 0 2
+# textwindow "normal"
+@パラシュ
+イシューリエルがもう一人？
+
+# alpha 6200411 0 0.3
+# face 6301499 "usual"
+# alpha 6301499 1 0.3
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# textboxarrow 0 1
+@イシューリエル？
+こんばんは
+皆さん、心霊現象は存在するのだと
+理解していただけました？
+
+# textboxarrow 0 3
+@イシューリエル
+何を言ってますの！
+心霊現象なんて全てインチキですわ
+
+# face 6301499 "normal"
+# textboxarrow 0 1
+@イシューリエル？
+まだそんなことを
+言っているのですか！
+
+# se "SE_0613"
+# voice 3014 "ithuriel_0003"
+# textboxarrow 0 3
+@イシューリエル
+当然です
+それがトゥルースなのですから！
+
+# se "SE_0613"
+# textboxarrow 0 1
+@イシューリエル？
+いいえ！
+心霊現象を信じることこそ
+トゥルースなのですわ！
+
+# alpha 6301499 0 0.3
+# alpha 6301411 0 0.3
+# move 6200411 2 0
+# face 6200411 "sad"
+# alpha 6200411 1 0.3
+# move 5105111 4 0
+# face 5105111 "sad"
+# alpha 5105111 1 0.3
+# textboxarrow 0 1
+@パラシュ
+何がどうなっているんだ…？
+
+# textboxarrow 0 3
+@七支刀
+えっと、えっと…
+どちらの言い分も
+一理あると思います
+
+# face 5105111 "normal"
+# textboxarrow 0 3
+@七支刀
+ここは間を取って、
+お互いに認め合えるところは認めて
+仲良くするのはいかがでしょう？
+
+# alpha 6200411 0 0.3
+# alpha 5105111 0 0.3
+# face 6301499 "normal"
+# alpha 6301499 1 0.3
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# textboxarrow 0 0
+# textwindow "toge"
+@イシューリエルたち
+あなたは黙っていなさい！
+
+# voice 1051 "shichishito_0031"
+# face 6200411 "sad"
+# alpha 6200411 1 0.3
+# face 5105111 "sad"
+# alpha 5105111 1 0.3
+# alpha 6301411 0 0.3
+# alpha 6301499 0 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@七支刀
+ううっ…ごめんなさい…
+
+# textboxarrow 0 1
+@パラシュ
+はぁ…
+
+# voice 9917 "mimir_navikan_0001"
+# alpha 6200411 0 0.3
+# alpha 5105111 0 0.3
+# move 270 3 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+マスター様
+これは…「揺らぎ」の影響では
+ないでしょうか？
+
+# textboxarrow 0 2
+@ミーミル
+イシューリエルさんは
+「揺らぎ」の影響でお二人に…
+でも、いつからなのでしょう？
+
+;;選択肢
+# select "おーい、イシューリエル" "select_label_03" "ちょっといいかな？" "select_label_03"
+マスター様
+これは…「揺らぎ」の影響では
+ないでしょうか？
+
+# label "select_label_03"
+# alpha 270 0 0.3
+# face 6301499 "usual"
+# alpha 6301499 1 0.3
+# face 6301411 "usual"
+# alpha 6301411 1 0.3
+# textboxarrow 0 0
+@イシューリエルたち
+わたくしを呼びましたかっ？
+
+# voice 9917 "mimir_navikan_0002"
+# face 270 "normal"
+# alpha 270 1 0.3
+# alpha 6301411 0 0.3
+# alpha 6301499 0 0.3
+# textboxarrow 0 2
+@ミーミル
+あの…
+イシューリエルさんは、いつから、
+どうしてそのようなことに？
+
+# fadeout "black" 1
+# waitandnext 1

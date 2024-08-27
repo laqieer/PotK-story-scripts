@@ -1,0 +1,176 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１３章 章タイトル「ラルゴカタストロフィ―攪乱―」
+;;第2話－４　タイトル：暴走の真実
+;;2_4_3
+;;スクリプト最後の背景：マサムネ城内
+;;-----------------------------------------
+# script "lisp"
+# background "masamune_arena"
+# bgmfile "bgm457" "BgmIntegralNoahEvent008" 0
+;;-----------------------------------------
+;;異族化マサムネ
+# body 5100131
+# pos 5100131 3
+# scale 5100131 0.8 0
+# layer 5100131 2
+# alpha 5100131 0 0
+# mask 5100131 off
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 2
+# alpha 5401721 0 0
+# mask 5401721 off
+;;天沼矛
+# body 300431
+# pos 300431 3
+# scale 300431 0.8 0
+# layer 300431 2
+# alpha 300431 0 0
+# mask 300431 off
+;;八咫鏡
+# body 500331
+# pos 500331 3
+# scale 500331 0.8 0
+# layer 500331 2
+# alpha 500331 0 0
+# mask 500331 off
+;;草薙剣
+# body 100441
+# pos 100441 3
+# scale 100441 0.8 0
+# layer 100441 2
+# alpha 100441 0 0
+# mask 100441 off
+;;雑賀
+# body 502411
+# pos 502411 3
+# scale 502411 0.8 0
+# layer 502411 2
+# alpha 502411 0 0
+# mask 502411 off
+;;-----------------------------------------
+# move 100441 3 0
+# face 100441 "angry"
+# alpha 100441 1 0
+# mask 100441 off
+# textflame 1 1
+# textboxarrow 0 2
+@草薙剣
+もっとじゃ！
+余はもっと戦えるぞ！
+
+# alpha 100441 0 0.5
+# move 500331 3 0
+# face 500331 "angry"
+# alpha 500331 1 0.5
+# mask 500331 off
+# textboxarrow 0 2
+@八咫鏡
+わらわの鏡から逃れる術はない
+お主ら、死相が出ておるぞ！
+
+# alpha 500331 0 0.5
+# move 300431 3 0
+# face 300431 "normal"
+# alpha 300431 1 0.5
+# mask 300431 off
+# textboxarrow 0 2
+@天沼矛
+もっとぐるぐるしますね！
+何もかも無くなってしまうくらいに！
+
+# alpha 300431 0 0.5
+# move 502411 3 0
+# face 502411 "angry"
+# alpha 502411 1 0.5
+# mask 502411 off
+# textboxarrow 0 2
+@雑賀
+そう…これっすよ！
+戦って勝つ
+これこそがうちの本分っす！
+
+;;//四人の体に黒い霧がまとわりつく
+# textwindow "close"
+# emotionbody 1000 15 500331 0 0
+# effectpattern 1000 1 0
+# emotionbody 2000 15 100441 0 0
+# effectpattern 2000 1 0
+# emotionbody 3000 15 300431 0 0
+# effectpattern 3000 1 0
+# emotionbody 4000 15 502411 0 0
+# effectpattern 4000 1 0
+# brightness 500331 0.8 0
+# brightness 100441 0.8 0
+# brightness 300431 0.8 0
+# brightness 502411 0.8 0
+# alpha 502411 0 0.5
+# waitandnext 0.5
+
+# effectstart 1000
+# effectstart 2000
+# move 500331 2 0
+# face 500331 "angry"
+# alpha 500331 1 0.5
+# mask 500331 on
+# move 100441 4 0
+# face 100441 "angry"
+# alpha 100441 1 0.5
+# mask 100441 on
+# waitandnext 2
+
+# effectskip 1000
+# effectskip 2000
+# effectstart 3000
+# effectstart 4000
+# alpha 500331 0 0.5
+# alpha 100441 0 0.5
+# move 300431 2 0
+# face 300431 "normal"
+# alpha 300431 1 0.5
+# mask 300431 on
+# move 502411 4 0
+# face 502411 "angry"
+# alpha 502411 1 0.5
+# mask 502411 on
+# waitandnext 2
+
+# effectskip 3000
+# effectskip 4000
+# voice 4017 "suiha_0022"
+# alpha 300431 0 0.5
+# alpha 502411 0 0.5
+# move 5401721 3 0
+# face 5401721 "surprise"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 2
+# textwindow "normal"
+@スイハ
+えっ…？
+あの霧は、何ですか？
+
+# voice 510013 "masamune_iz_0013"
+# alpha 5401721 0 0.5
+# move 5100131 3 0
+# face 5100131 "angry"
+# alpha 5100131 1 0.5
+# mask 5100131 off
+# textboxarrow 0 2
+@マサムネ
+むっ…
+面妖な…
+
+# effectstart 4000
+# alpha 5100131 0 0.5
+# move 502411 3 0
+# face 502411 "angry"
+# alpha 502411 1 0.5
+# mask 502411 off
+# textboxarrow 0 2
+@雑賀
+どうしたんすか？
+うちらはまだまだ戦えるっすよぉ！

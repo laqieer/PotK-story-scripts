@@ -1,0 +1,241 @@
+;;-----------------------------------------
+;;【このすばEP4･戦闘前】
+;;スクリプトID:
+;;スクリプト最後の背景：sea_beach_day
+;;背景：プール ※無いのでリゾートで代用
+;;-----------------------------------------
+# script "lisp"
+# background "sea_resort_day"
+# bgmfile "bgm208" "BgmKScollabo001" 0
+;;海上編ティルフィング
+# body 2101411
+# pos 2101411 3
+# scale 2101411 0.8 0
+# alpha 2101411 1 0
+# mask 2101411 off
+;;デュリン
+# body 0
+# pos 0 2
+# scale 0 0.8 0
+# alpha 0 0 0
+# layer 0 3
+# mask 0 off
+;;水着アスクレピオス
+# body 2600111
+# pos 2600111 2
+# scale 2600111 0.8 0
+# alpha 2600111 0 0
+;;水着シタ
+# body 2201611
+# pos 2201611 4
+# scale 2201611 0.8 0
+# alpha 2201611 0 0
+# face 2201611 "angry"
+;;水着めぐみん
+# body 2502511
+# pos 2502511 2
+# scale 2502511 0.8 0
+# alpha 2502511 0 0
+# face 2502511 "worry"
+;;水着ダクネス
+# body 2103411
+# pos 2103411 4
+# scale 2103411 0.8 0
+# alpha 2103411 0 0
+# face 2103411 "usual"
+;;◆背景：リゾート（昼）---------------------
+# textflame 0 0
+# textboxarrow 0 2
+@
+異族の動向をうかがいつつも
+カエル討伐が
+クエストに加わった、マスター達
+
+# emotionbody 1001 1 2101411 0 300
+# effectpattern 1001 1 0
+# effectstart 1001
+# voice 1014 "tyrufing_0001"
+# textflame 1 1
+@ティルフィング
+マスター、カエルの棲息地を
+捜しましょう
+
+@ティルフィング
+“海の家”からも正式に追加依頼が
+出ましたし、シタとアスクレピオスも
+引き続き護衛についてくれるそうです
+
+# textflame 0 0
+@
+「念のためだけど…海の向こうから
+カエルがやってきてるわけでは
+ないんだよね？」とマスター
+
+# textflame 1 1
+# voice 1014 "tyrufing_0003"
+@ティルフィング
+ええ…目撃情報や噂を信じるなら
+島の奥のどこかにカエルがいっぱい
+棲んでいるところがあるはずです
+
+# textflame 0 0
+@
+「じゃあ、カエルが出る原因調査の
+ためにも、そこに向かってみようか」
+マスターはそう言い…
+
+;;//移動描写
+# se "SE_0700"
+# bgm "stop"
+# effectbody 600 21 0 0
+# effectstart 600
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 2
+
+;;◆背景：ビーチ（昼）-------------------------------
+# effectskip 600
+# background "sea_beach_day"
+# bgmfile "bgm208" "BgmKScollabo001" 0
+# alpha 2101411 0 0
+# alpha 2103411 1 0
+# alpha 2502511 1 0
+# textflame 0 0
+# textwindow "normal"
+@
+全員でラグーナ島の奥地を
+目指すことになった
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5025 "megumin_0001"
+@めぐみん
+ダクネス、あれは
+もしかすると思うのですが
+
+# textboxarrow 0 3
+# voice 1034 "dakunesu_0003"
+@ダクネス
+例のカエルのことだろう？
+そうだな、もしかすると…
+いや、間違いない
+
+# face 2502511 "normal"
+# textboxarrow 0 1
+@めぐみん
+はい、あのカエルは
+ジャイアントトードですよ
+私達の世界にいたものです
+
+# emotionbody 1002 1 2103411 0 300
+# effectpattern 1002 1 0
+# effectstart 1002
+# textboxarrow 0 3
+@ダクネス
+しかし、ジャイアントトードが
+どうしてこの島にいる？
+
+# textboxarrow 0 1
+# voice 5025 "megumin_0022"
+@めぐみん
+それは…私達がどうして
+ここにいるのか、と
+同じ問いになると思われます…
+
+# textboxarrow 0 3
+@ダクネス
+ふむ…私達と同じ原因で
+こちらに来た可能性もあるか…
+
+# textboxarrow 0 1
+# voice 5025 "megumin_0026"
+@めぐみん
+ええ
+でも、それが分からない以上
+カエルが来た理由も分かりませんね
+
+# emotionbody 1003 8 2103411 0 260
+# effectpattern 1003 1 0
+# effectstart 1003
+# textboxarrow 0 3
+@ダクネス
+そうだな…
+
+# effectskip 1003
+# face 2502511 "happy"
+# textboxarrow 0 1
+@めぐみん
+それはそうと、おいしいですよね
+ジャイアントトードのから揚げは
+
+# face 2103411 "smile"
+# textboxarrow 0 3
+# voice 1034 "dakunesu_0003"
+@ダクネス
+ああ、そういえば
+こっちに来てから食べていないな…
+
+# bgm "bgm023_024" 0
+# alpha 2103411 0 0.5
+# alpha 2502511 0 0.5
+# alpha 2201611 1 0.5
+# alpha 2600111 1 0.5
+# textboxarrow 0 3
+# voice 2016 "shita_0012"
+@シタ
+皆さんお静かに
+あそこ、異族がいます
+
+# emotionbody 1004 2 2600111 0 300
+# effectpattern 1004 1 0
+# effectstart 1004
+# textboxarrow 0 1
+@アスクレピオス
+本当だ…あら？
+なにか探してるようね
+
+# alpha 2201611 0 0.5
+# alpha 2600111 0 0.5
+# alpha 2103411 1 0.5
+# alpha 2502511 1 0.5
+# face 2103411 "usual"
+# face 2502511 "normal"
+# textboxarrow 0 3
+@ダクネス
+やはり、カエルか？
+
+# textboxarrow 0 1
+@めぐみん
+異族もカエルを
+食べるんですかね？
+
+# alpha 2103411 0 0.5
+# alpha 2502511 0 0.5
+# move 2101411 4 0
+# alpha 2101411 1 0.5
+# alpha 2600111 1 0.5
+# mask 2101411  on
+# face 2101411 "angry"
+# face 2600111 "angry"
+# voice 6001 "asukurepiosu_0028"
+# textboxarrow 0 1
+@アスクレピオス
+どうかしら…縄張りに入られて
+気が立っているだけかも
+しれないわよ…
+
+# emotionbody 1005 1 2101411 0 260
+# effectpattern 1005 1 0
+# effectstart 1005
+# textboxarrow 0 3
+@ティルフィング
+…！気をつけてください、マスター
+前方からなにかが大量に
+迫ってきます…あれは…！
+
+# textboxarrow 0 1
+@アスクレピオス
+まるで大河のように押し寄せる…
+カエルの群れだわ！！

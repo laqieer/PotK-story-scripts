@@ -1,0 +1,323 @@
+;;-----------------------------------------
+;;イースター1_1
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm327" "BgmEaster001" 0
+;;-----------------------------------------
+;;イースターアルマス
+# body 3103821
+# pos 3103821 2
+# scale 3103821 0.8 0
+# layer 3103821 3
+# alpha 3103821 0 0
+;;イースターモラベガ
+# body 3104221
+# pos 3104221 4
+# scale 3104221 0.8 0
+# layer 3104221 3
+# alpha 3104221 0 0
+;;ケイオスリオン兵
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# layer 3820001 3
+# mask 3820001 off
+# alpha 3820001 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：平原
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+@
+モラベガにお願いされ、
+彼女の隠した卵を
+探すことになったマスターたち
+
+# textflame 0 0
+@
+この広大な平原の中で、
+狙った卵を探すのは
+難しいかと思われたが…
+
+# se "SE_6515"
+# emotionbody 1000 9 3104221 10 320
+# effectpattern 1000 2 0
+# effectstart 1000
+# alpha 3103821 1 0.5
+# face 3103821 "normal"
+# alpha 3104221 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104221 "surprise"
+# voice 310421 "morabeaga_l_0001"
+@モラベガ
+あっ！
+え、えっと、マスター
+そっちには無いと思うなぁ～…？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1038 "almace_0004"
+@アルマス
+ふふふ
+マスター、そっちじゃないって
+
+# textflame 0 0
+@
+そうなの？
+と、モラベガの方を見るマスター
+
+# effectskip 1000
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104221 "happy"
+# voice 310421 "morabeaga_l_0003"
+@モラベガ
+うんっ！
+向こうの方にある気がするよ？
+なんとなくだけど…！
+
+# se "SE_6514"
+# emotionbody 1001 9 3103821 -50 180
+# effectpattern 1001 6 0
+# effectstart 1001
+# alpha 3104221 0 0.5
+# mask 3103821 off
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103821 "shy"
+# voice 1038 "almace_0008"
+@アルマス
+あ、あはは…
+
+;;↓のアルマス、小声のイメージです。
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103821 "usual"
+# voice 1038 "almace_0002"
+# textsize 20
+@アルマス
+…ねえ、マスター
+あれって明らかに
+誘導してくれてるわよね…？
+
+# effectskip 1001
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+ふふ…モラベガったら
+よっぽどマスターに
+卵を見てほしいみたいね
+
+# textflame 0 0
+# textsize 24
+@
+君も卵の装飾や隠すのを
+手伝ったんじゃないの？
+とアルマスに聞くマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+ううん
+私は少しアイディアを言っただけ
+モラベガが一人で準備したのよ
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103821 "normal"
+@アルマス
+だからちゃんと見つけてあげてね
+
+# textflame 0 0
+@
+頑張って探してみせるよ、と
+マスターが言うと
+アルマスは微笑むのだった
+
+;;演出：場所移動
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# se "SE_5575"
+# waitandnext 0.5
+
+# alpha 3103821 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_6503"
+# emotionbody 1002 2 3104221 10 290
+# effectpattern 1002 2 3
+# effectstart 1002
+# move 3103821 2 0
+# mask 3103821 on
+# alpha 3103821 1 0.5
+# move 3104221 4 0
+# mask 3104221 on
+# alpha 3104221 1 0.5
+;;ト書き：↓のモラベガ、小声のイメージです。
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# textsize 18
+# face 3104221 "sad"
+# voice 310421 "morabeaga_l_0028"
+@モラベガ
+う～んと、え～っと…
+あれ、こっちで合ってたかな…？
+
+# textflame 1 1
+# textboxarrow 0 3
+@モラベガ
+たしかこの道を
+通ったはずなんだけど…
+どうだったっけ、う～ん…？
+
+# effectskip 1002
+# textflame 1 1
+# textboxarrow 0 1
+# textsize 24
+# face 3103821 "sad"
+# voice 1038 "almace_0028"
+@アルマス
+…う～ん…
+独り言のつもりなんでしょうけど、
+こっちまで丸聞こえね…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103821 "normal"
+@アルマス
+隠した場所を忘れたのかしら…
+ま、モラベガらしくて
+微笑ましいけど
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1038 "almace_0004"
+@アルマス
+ねっ、マスター
+
+# se "SE_6502"
+# emotionbody 1003 2 3103821 10 250
+# effectpattern 1003 1 1
+# effectstart 1003
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103821 "surprise"
+# voice 1038 "almace_0001"
+@アルマス
+マスター？
+…どうかした？
+
+# se "SE_6500"
+# emotionbody 1004 1 3104221 10 310
+# effectpattern 1004 1 0
+# effectstart 1004
+# bgm "stop"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104221 "angry"
+@モラベガ
+…っ！
+近くに誰かいるよっ…！
+
+# alpha 3103821 0 0.5
+# alpha 3104221 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;ＳＥ：ザザザッ！（兵が出てくる音）
+# se "SE_5602"
+# alpha 3820001 1 0.5
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# waitandnext 0.8
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ケイオスリオン兵
+ぬっ！お前たちは…！
+
+# se "SE_6501"
+# emotionbody 1005 1 3103821 10 270
+# effectpattern 1005 2 0
+# effectstart 1005
+# move 3820001 4 0.5
+# alpha 3103821 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103821 "angry"
+# voice 1038 "almace_0022"
+@アルマス
+ケイオスリオンの兵…！？
+どうしてこんなところに！？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ケイオスリオン兵
+…ははっ、わかったぞ！
+お前らも例の物を
+狙いに来たんだろう！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ケイオスリオン兵
+どうりで斬ル姫たちが
+辺りをうろうろ
+しているわけだ…
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1038 "almace_0009"
+@アルマス
+はぁ…？
+何の話よ、私たちはただ――
+
+# textflame 1 1
+# textboxarrow 0 3
+@ケイオスリオン
+問答無用っ！
+我々の邪魔をする者は
+すべて倒す！
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1038 "almace_battle_0005"
+@アルマス
+くっ…！
+二人ともっ、来るわよ！
+
+# alpha 3103821 0 0.5
+# alpha 3820001 0 0.5
+# move 3104221 3 0
+# mask 3104221 off
+# alpha 3104221 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3104221 "sad"
+@モラベガ
+う、うんっ…！
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 3104221 0 0
+# background "bg_black"
+# waitandnext 0.2

@@ -1,0 +1,234 @@
+;;-----------------------------------------
+;;SEA3章_12_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;七支刀
+# body 5105111
+# pos 5105111 3
+# scale 5105111 0.8 0
+# layer 5105111 2
+# mask 5105111 off
+# alpha 5105111 0 0
+;;パラシュ
+# body 6200411
+# pos 6200411 2
+# scale 6200411 0.8 0
+# layer 6200411 2
+# mask 6200411 off
+# alpha 6200411 0 0
+;;イシューリエル
+# body 6301411
+# pos 6301411 4
+# scale 6301411 0.8 0
+# layer 6301411 4
+# alpha 6301411 0 0
+;;ghost
+# body 302
+# pos 302 4
+# scale 302 1 0
+# layer 302 4
+# mask 302 off
+# alpha 302 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：廊下（夜）
+# textwindow "close"
+# waitandnext 0.2
+
+# background "corridor_night"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# face 6200411 "angry"
+# alpha 6200411 1 0
+# alpha 302 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 2004 "parashu_battle_0001"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@パラシュ
+はぁっ！
+
+;;パラシュが幽霊を斬る
+# se "SE_4100"
+# fadein "white" 0.5
+# move 302 5 0.2
+# move 6200411 3 0.2
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# textboxarrow 0 0
+@悪霊
+オオオオオ…
+
+# alpha 302 0 1
+# textwindow "close"
+# waitandnext 1
+
+# voice 3014 "ithuriel_0004"
+# move 6200411 2 0.5
+# face 6301411 "usual"
+# alpha 6301411 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@イシューリエル
+よくやりました、パラシュ
+それでこそ
+超オカルトバスターズの一員ですわ
+
+# face 6200411 "usual"
+# textboxarrow 0 1
+@パラシュ
+イシューリエル
+やっと合流できた
+一人で突っ走らないで欲しいな
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# face 6301411 "normal"
+# textboxarrow 0 3
+@イシューリエル
+そんなことより、まだ他にも
+悪霊がいるかもしれませんわ
+気を抜かないように
+
+# voice 2004 "parashu_0022"
+# face 6200411 "surprise"
+# textboxarrow 0 1
+@パラシュ
+え…？
+
+# voice 9917 "mimir_navikan_0002"
+# alpha 6200411 0 0.3
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ミーミル
+イシューリエルさん、
+悪霊の存在を
+認めておられるんですか？
+
+# voice 3014 "ithuriel_0003"
+# textboxarrow 0 3
+@イシューリエル
+当然です
+心霊現象はこの世に存在致しますわ
+
+# textboxarrow 0 3
+@イシューリエル
+ちなみに、先程
+パラシュを襲った悪霊は
+鏡の中に潜んでいた心霊現象ですわ
+
+# textboxarrow 0 3
+@イシューリエル
+ここの噂によりますと…
+
+# imagealpha 0 0.4 1
+# imagepos 0 0 0
+# alpha 6301411 0 0.3
+# alpha 270 0 0.3
+# bgmfile "bgm373" "BgmGakuen005" 0
+# textflame 0 0
+# textsize 30
+@
+廃病院の噂４
+[8A0808]「鏡に映る少女」[-]
+
+# textsize 24
+@廃病院の噂
+[8A0808]あるとき、入院患者の少女が
+廊下を走っていた[-]
+
+@廃病院の噂
+[8A0808]彼女は突き当たりの壁に
+立てかけてあった鏡に気づかず
+衝突してしまう[-]
+
+@廃病院の噂
+[8A0808]割れた鏡が倒れ、少女はズタズタに
+切り裂かれて死んでしまった[-]
+
+@廃病院の噂
+[8A0808]病院側は事故を隠蔽しようと
+少女の死体を壁に塗り込め、
+そこに鏡を張りつけた[-]
+
+@廃病院の噂
+[8A0808]以来、深夜になると
+鏡に血まみれの少女が映り、[-]
+
+@廃病院の噂
+[8A0808]こちらに手招きしている
+姿が目撃されるようになった[-]
+
+@廃病院の噂
+[8A0808]うっかり近づこうものなら、
+鏡から伸び出た腕に掴まれ、鏡の中に
+引きずり込まれるという――[-]
+
+# voice 1051 "shichishito_0025"
+# imagealpha 0 0 1
+# bgm "stop"
+# face 5105111 "surprise"
+# alpha 5105111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@七支刀
+きゃああああ…！
+
+# alpha 5105111 0 0.3
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# face 6301411 "sad"
+# alpha 6301411 1 0.3
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# textboxarrow 0 3
+@イシューリエル
+少女の怨念が悪霊と化し、
+この鏡に宿っているのですわ
+何て恐ろしい…
+
+# textboxarrow 0 1
+@パラシュ
+イシューリエル、君、本気で
+そんなことを言っているのかい？
+
+# voice 3014 "ithuriel_0003"
+# face 6301411 "usual"
+# textboxarrow 0 3
+@イシューリエル
+もちろんですわ！
+この世界には様々な心霊現象が
+存在しています
+
+# se "SE_0613"
+# textboxarrow 0 3
+@イシューリエル
+目に見えないものも信じる
+それこそが、トゥルース！
+
+# face 6200411 "sad"
+# textboxarrow 0 1
+@パラシュ
+どうなっているんだ…？
+
+# fadeout "black" 1
+# waitandnext 1

@@ -1,0 +1,705 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;２章３話　「エデンクライシス―覚醒―」
+;;第6話　タイトル：もう一度出会うために
+;;6_3_3
+;;スクリプト最後の背景：ユグドラシル
+;;-----------------------------------------
+# script "lisp"
+# background "underwild"
+# bgmfile "bgm411" "BgmIntegralNoahBattle001" 0
+;;-----------------------------------------
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 2
+# alpha 5101431 0 0
+# mask 5101431 off
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;エルキュール
+# body 202511
+# pos 202511 3
+# scale 202511 0.8 0
+# layer 202511 2
+# alpha 202511 0 0
+# mask 202511 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;異族化フライクーゲル
+# body 5500231
+# pos 5500231 3
+# scale 5500231 0.8 0
+# layer 5500231 2
+# alpha 5500231 0 0
+# mask 5500231 off
+;;異族化アルテミス
+# body 5400131
+# pos 5400131 3
+# scale 5400131 0.8 0
+# layer 5400131 2
+# alpha 5400131 0 0
+# mask 5400131 off
+;;フラガラッハ
+# body 101011
+# pos 101011 3
+# scale 101011 0.8 0
+# layer 101011 2
+# alpha 101011 0 0
+# mask 101011 off
+;;ゲイボルグ
+# body 300711
+# pos 300711 1
+# scale 300711 0.8 0
+# layer 300711 2
+# alpha 300711 0 0
+# mask 300711 off
+;;ハリー
+# body 208
+# pos 208 3
+# scale 208 0.8 0
+# layer 208 2
+# alpha 208 0 0
+# mask 208 off
+;;ダーインスレイヴ
+# body 102811
+# pos 102811 3
+# scale 102811 0.8 0
+# layer 102811 2
+# alpha 102811 0 0
+# mask 102811 off
+;;花異族
+# body 5809801
+# pos 5809801 3
+# scale 5809801 0.8 0
+# layer 5809801 2
+# alpha 5809801 0 0
+# mask 5809801 off
+;;ロンギヌス・擬彩
+# body 5300131
+# pos 5300131 3
+# scale 5300131 0.8 0
+# layer 5300131 2
+# alpha 5300131 0 0
+# mask 5300131 off
+;;異族化マサムネ
+# body 5100131
+# pos 5100131 3
+# scale 5100131 0.8 0
+# layer 5100131 3
+# alpha 5100131 0 0
+# mask 5100131 off
+;;異族化パラシュ
+# body 5200431
+# pos 5200431 3
+# scale 5200431 0.8 0
+# layer 5200431 2
+# alpha 5200431 0 0
+# mask 5200431 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+# move 5101431 2 0
+# face 5101431 "normal"
+# alpha 5101431 1 0
+# mask 5101431 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+やああああ！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+# textboxarrow 0 1
+# voice 510143 "tyrufing_iz_0007"
+@ティルフィング
+どうしたんですか？
+マサムネから聞いていたほど
+剣にキレがありませんよ
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0022"
+@アルマス
+うっ…
+そ、そんなことないわよっ…
+
+# textboxarrow 0 1
+@ティルフィング
+アナタ自身の意思で、
+そのバイブスを捨ててくれれば
+良いのですけれど…
+
+# textboxarrow 0 1
+@ティルフィング
+全力を出さないと、
+私に勝てませんよ
+それでいいんですか？
+
+# textboxarrow 0 3
+@アルマス
+うるさいわねっ
+私はこれでいいのよっ
+
+# face 5101431 "sad"
+# textboxarrow 0 1
+# voice 510143 "tyrufing_iz_0027"
+@ティルフィング
+…残念です
+
+# se "SE_5205"
+# waitandnext 0.5
+
+# alpha 5101431 0 0.5
+# alpha 196 0 0.5
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+…………
+
+# alpha 103611 0 0.5
+# move 5101431 2 0
+# face 5101431 "angry"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# voice 510143 "tyrufing_iz_unit_0008"
+@ティルフィング
+純潔なる彩りよ…咲き誇れ
+
+;;//ティルフィングがアルマスを斬る
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# face 196 "angry"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0054"
+@アルマス
+あああああっ…！
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 196 0 0.5
+# waitandnext 0.8
+
+# alpha 5101431 0 0.5
+# move 103611 3 0
+# face 103611 "angry"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 1036 "ragnarok_0037"
+@ラグナロク
+アルマス…！
+くっ…何で私は…
+
+# alpha 103611 0 0.5
+# move 5101431 2 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0026"
+@アルマス
+まだ…まだよっ…
+私は絶・諦めが悪いんだから！！
+
+# textboxarrow 0 1
+# voice 510143 "tyrufing_iz_unit_0009"
+@ティルフィング
+…安心して散りゆきなさい
+
+# alpha 5101431 0 0.5
+# alpha 196 0 0.5
+# move 102811 3 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 off
+# textboxarrow 0 2
+# voice 1028 "dainsleif_0031"
+@ダーインスレイヴ
+今回は本当にすまない
+おぬし達を利用させてもらった
+
+# alpha 102811 0 0.5
+# move 5101431 2 0
+# face 5101431 "surprise"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# voice 510143 "tyrufing_iz_0024"
+@ティルフィング
+…！？
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0035"
+@アルマス
+ダーインスレイヴ…！？
+
+# alpha 5101431 0 0.5
+# alpha 196 0 0.5
+# move 102811 3 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 off
+# textboxarrow 0 2
+@ダーインスレイヴ
+さあ、ハリー
+走るんだ！
+ユグドラシルは目の前だよ
+
+;;//画面スライド
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 102811 0 0
+# move 208 3 0
+# alpha 208 1 0
+# mask 208 off
+# face 208 "angry"
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9938 "harry_0031"
+@ハリー
+わあああああああああ！
+
+# se "SE_5575"
+# textwindow "close"
+# leftout 208 0.5
+# waitandnext 0.5
+
+# se "SE_0830"
+# alpha 208 0 0.5
+# move 5809801 3 0
+# alpha 5809801 1 0.5
+# mask 5809801 off
+# textboxarrow 0 2
+# textwindow "normal"
+@異族
+イイイイイイイイイ！
+
+# move 5809801 2 0.5
+# mask 5809801 on
+# move 102811 4 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 on
+# textboxarrow 0 3
+# voice 1028 "dainsleif_battle_0001"
+@ダーインスレイヴ
+道を空けてもらおうか！
+
+;;//ダーインスレイヴが異族を斬る
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 2000 1 -200 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 5809801 0 0.5
+# waitandnext 0.5
+
+;;//画面スライド
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 102811 0 0
+# move 5101431 3 0
+# face 5101431 "surprise"
+# alpha 5101431 1 0
+# mask 5101431 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 510143 "tyrufing_iz_0022"
+@ティルフィング
+あの少年は誰…？
+どうしてユグドラシルに
+向かっているの？
+
+# alpha 5101431 0 0.5
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+ハリー…！
+あの子、異族の群れの中を…
+
+;;//画面スライド
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 196 0 0
+# move 102811 3 0
+# face 102811 "normal"
+# alpha 102811 1 0
+# mask 102811 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ダーインスレイヴ
+走り抜けろ、ハリー！
+おぬしならできる！
+
+# textboxarrow 0 2
+@ダーインスレイヴ
+おぬしはわたしが剣を捧げるに
+相応しい、勇敢なるマスター
+なのだから！
+
+# alpha 102811 0 0.5
+# move 208 3 0
+# alpha 208 1 0.5
+# mask 208 off
+# textboxarrow 0 2
+# voice 9938 "harry_0016"
+@ハリー
+僕はっ…僕はユグドラシルに
+触れて…“彼女”に――
+
+# alpha 208 0 0.5
+# move 5200431 3 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 off
+# textboxarrow 0 2
+# voice 520043 "parashu_iz_0007"
+@パラシュ
+容赦はしないよ
+
+# textwindow "close"
+# alpha 5200431 0 0.5
+# waitandnext 0.5
+
+;;//パラシュが立ちはだかる
+# se "SE_8020"
+# move 208 2 0
+# alpha 208 1 0.5
+# mask 208 on
+# textboxarrow 0 1
+# move 5200431 4 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+# textwindow "normal"
+# voice 9938 "harry_0023"
+# face 208 "surprise"
+@ハリー
+えっ…？
+
+# alpha 208 0 0.5
+# alpha 5200431 0 0.5
+# move 103611 3 0
+# face 103611 "angry"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+ハリー、避けて！！
+
+# alpha 103611 0 0.5
+# move 102811 3 0
+# face 102811 "surprise"
+# alpha 102811 1 0.5
+# mask 102811 off
+# textboxarrow 0 2
+# voice 1028 "dainsleif_0017"
+@ダーインスレイヴ
+何だとっ…！？
+
+# alpha 102811 0 0.5
+# move 208 2 0
+# alpha 208 1 0.5
+# mask 208 on
+# textboxarrow 0 1
+# move 5200431 4 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+@ハリー
+あっ…
+
+;;//パラシュがハリーを斬る
+# se "SE_4100"
+# textwindow "close"
+# waitandnext 0.5
+
+;;//ゲイボルグがハリーを庇う
+# se "SE_4601"
+# alpha 208 0 0
+# move 300711 2 0.1
+# face 300711 "normal"
+# alpha 300711 1 0.1
+# mask 300711 on
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 300711 "surprise"
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 3007 "gaiborugu_0037"
+@ゲイボルグ
+ガハッ…
+
+# face 5200431 "angry"
+# textboxarrow 0 3
+# voice 520043 "parashu_iz_0027"
+@パラシュ
+また君か…
+その身を投げ出す覚悟だけは
+認めてあげるよ
+
+# textboxarrow 0 3
+@パラシュ
+でも、それだけだ
+
+# face 300711 "angry"
+# textboxarrow 0 1
+# voice 3007 "gaiborugu_0015"
+@ゲイボルグ
+私はゲイボルグ…いかなる窮地でも
+必ず期待以上の結果をもたらす
+
+# textboxarrow 0 1
+@ゲイボルグ
+今こそ私の出る幕だ！
+この魔槍に貫けぬものなし！
+
+# face 5200431 "normal"
+# textboxarrow 0 3
+@パラシュ
+槍ではボクの斧に勝てないよ
+
+;;//パラシュがゲイボルグを斬る
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 300711 "surprise"
+# textboxarrow 0 1
+# voice 3007 "gaiborugu_0038"
+@ゲイボルグ
+アガァッ…！
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 300711 0 0.5
+# waitandnext 0.5
+
+;;//フラガラッハがパラシュに攻撃する
+# move 101011 2 0
+# face 101011 "angry"
+# alpha 101011 1 0.5
+# mask 101011 on
+# waitandnext 0.5
+
+# se "SE_9021"
+# sedelay "SE_4000" 0.6
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 1010 "furagaraha_unit_0008"
+@フラガラッハ
+消えない傷を…あげる…！
+
+# textboxarrow 0 3
+# voice 520043 "parashu_iz_0022"
+@パラシュ
+おっと…
+
+;;//パラシュが下がる
+# se "SE_5204"
+# textwindow "close"
+# move 5200431 5 0.1
+# waitandnext 0.2
+
+# face 101011 "normal"
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 1010 "furagaraha_0004"
+@フラガラッハ
+ふふっ
+私の華麗な剣技に見惚れていらして
+
+# alpha 5200431 0 0.5
+# alpha 101011 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+フラガラッハ、
+パラシュを牽制していて！
+その間にっ
+
+# alpha 101011 0 0.5
+# alpha 196 0 0.5
+# move 102811 3 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 off
+# textboxarrow 0 2
+# voice 1028 "dainsleif_0003"
+@ダーインスレイヴ
+うむ
+ハリー、仕切り直しだ！
+
+# alpha 102811 0 0.5
+# move 208 3 0
+# alpha 208 1 0.5
+# mask 208 off
+# textboxarrow 0 2
+# voice 9938 "harry_0003"
+# face 208 "angry"
+@ハリー
+うん！
+やってみせる
+
+# alpha 208 0 0.5
+# move 5101431 3 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+# voice 510143 "tyrufing_iz_0007"
+@ティルフィング
+ですから、もう手遅れだと言ったのに
+
+;;//残りのインテグラルキラーズが全員現れる
+# alpha 5101431 0 0.5
+# move 5500231 1 0
+# face 5500231 "normal"
+# alpha 5500231 1 0.5
+# mask 5500231 on
+# move 5100131 3 0
+# face 5100131 "normal"
+# alpha 5100131 1 0.5
+# mask 5100131 on
+# textboxarrow 0 2
+# move 5300131 5 0
+# face 5300131 "normal"
+# alpha 5300131 1 0.5
+# mask 5300131 on
+# voice 510013 "masamune_iz_0003"
+@マサムネ
+紙一重といったところか
+拙者達の勝ちのようだな
+
+# textboxarrow 0 1
+# voice 550023 "furaikugeru_iz_0002"
+@フライクーゲル
+へ～い！
+これで、ジ・エンド
+メイクセンス？
+
+# textboxarrow 0 3
+# voice 530013 "ronginusu_iz_0007"
+@ロンギヌス
+愛に満ち溢れた世界のために、
+どうか退いて下さい
+
+# alpha 5500231 0 0.5
+# alpha 5100131 0 0.5
+# alpha 5300131 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0054"
+@アルマス
+インテグラルキラーズが揃って
+しまうなんて…！
+
+# alpha 196 0 0.5
+# move 5400131 3 0
+# face 5400131 "normal"
+# alpha 5400131 1 0.5
+# mask 5400131 off
+# textboxarrow 0 2
+# voice 540013 "arutemisu_iz_0007"
+@アルテミス
+もう、あなた達に希望はありません
+
+# alpha 5400131 0 0.5
+# move 103611 3 0
+# face 103611 "sad"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+…………
+
+# bgm "stop"
+# alpha 103611 0 0.5
+# move 202511 3 0
+# face 202511 "angry"
+# alpha 202511 1 0.5
+# mask 202511 off
+# textboxarrow 0 2
+@エルキュール
+いいえ！
+希望はあります
+ここにあります！

@@ -1,0 +1,604 @@
+;;-----------------------------------------
+;;【ファントムオブキル_まどかコラボ】イベントシナリオ前編　修正稿
+;;【EP2】戦闘前
+;;EP2_1
+;;スクリプト最後の背景：平原など
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm055" "BgmMMcollabo001" 0
+;;-----------------------------------------
+;;アルマス
+# body 3103811
+# pos 3103811 3
+# scale 3103811 0.8 0
+# layer 3103811 2
+# alpha 3103811 0 0
+# mask 3103811 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 2
+# alpha 139 0 0
+# mask 139 off
+;;まどか
+# body 3401111
+# pos 3401111 3
+# scale 3401111 0.8 0
+# layer 3401111 2
+# alpha 3401111 0 0
+# mask 3401111 off
+;;さやか
+# body 3102011
+# pos 3102011 3
+# scale 3102011 0.8 0
+# layer 3102011 2
+# alpha 3102011 0 0
+# mask 3102011 off
+;;杏子
+# body 3301511
+# pos 3301511 3
+# scale 3301511 0.8 0
+# layer 3301511 2
+# alpha 3301511 0 0
+# mask 3301511 off
+;;ハルモニア兵
+# body 3810001
+# pos 3810001 3
+# scale 3810001 0.8 0
+# layer 3810001 2
+# alpha 3810001 0 0
+# mask 3810001 off
+;;トレイセーマ兵
+# body 3830001
+# pos 3830001 3
+# scale 3830001 0.8 0
+# layer 3830001 2
+# alpha 3830001 0 0
+# mask 3830001 off
+;;ケイオスリオン兵
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# layer 3820001 2
+# alpha 3820001 0 0
+# mask 3820001 off
+;;ケイオスリオン兵（クローン1）
+# entry 938200011 3820001
+# pos 938200011 3
+# scale 938200011 0.8 0
+# layer 938200011 2
+# alpha 938200011 0 0
+# mask 938200011 off
+;;ケイオスリオン兵（クローン2）
+# entry 938200012 3820001
+# pos 938200012 3
+# scale 938200012 0.8 0
+# layer 938200012 2
+# alpha 938200012 0 0
+# mask 938200012 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;【EP2】
+;;背景：平原など
+# se "SE_0757"
+# move 3103811 2 0
+# face 3103811 "angry"
+# alpha 3103811 1 0
+# mask 3103811 on
+# textboxarrow 0 1
+# move 3401111 4 0
+# face 3401111 "angry"
+# alpha 3401111 1 0
+# mask 3401111 on
+# textflame 1 1
+@アルマス
+やっぱり、剣の音がする！
+さやか達かもしれないわ！
+
+# textboxarrow 0 3
+@まどか
+戦ってるってことは
+あまりいい状況じゃないよね…
+早く行かないと！
+
+;;演出：移動の暗転
+# se "SE_5575"
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "plain"
+# alpha 3103811 0 0
+# alpha 3401111 0 0
+# move 938200011 1 0
+# alpha 938200011 1 0
+# mask 938200011 on
+# move 3820001 3 0
+# alpha 3820001 1 0
+# mask 3820001 on
+# move 938200012 5 0
+# alpha 938200012 1 0
+# mask 938200012 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 0
+# textwindow "normal"
+@ケイオスリオン兵
+あ、ああ…
+
+# emotionbody 1001 8 3301511 80 250
+# effectpattern 1001 1 0
+# effectstart 1001
+# voice 3015 "kyoko_0024"
+# alpha 938200011 0 0.5
+# alpha 3820001 0 0.5
+# alpha 938200012 0 0.5
+# move 3301511 3 0
+# face 3301511 "angry"
+# alpha 3301511 1 0.5
+# mask 3301511 on
+# textboxarrow 0 2
+@杏子
+なんだこいつら！
+気色悪いっての！
+
+;;演出：杏子の攻撃で倒れる兵士
+# effectskip 1001
+# textwindow "close"
+# alpha 3301511 0 0.5
+# move 938200011 1 0
+# alpha 938200011 1 0.5
+# mask 938200011 on
+# move 3820001 3 0
+# alpha 3820001 1 0.5
+# mask 3820001 on
+# move 938200012 5 0
+# alpha 938200012 1 0.5
+# mask 938200012 on
+# waitandnext 0.8
+
+# se "SE_4815"
+# sedelay "SE_3001" 0.5
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# alpha 938200011 0 0.5
+# alpha 3820001 0 0.5
+# alpha 938200012 0 0.5
+# waitandnext 0.5
+
+# voice 1020 "sayaka_battle_0005"
+# move 3102011 2 0
+# face 3102011 "angry"
+# alpha 3102011 1 0.5
+# mask 3102011 on
+# textboxarrow 0 1
+# move 3301511 4 0
+# face 3301511 "angry"
+# alpha 3301511 1 0.5
+# mask 3301511 on
+# textwindow "normal"
+@さやか
+倒しても倒しても湧いてくる…
+これじゃキリがないって！
+
+# textboxarrow 0 3
+@杏子
+そんなことわかってるっての！
+でもやらなきゃやられるだろ！
+
+;;演出：さやかに襲い掛かるハルモニア、トレイセーマ兵
+# alpha 3102011 0 0.5
+# alpha 3301511 0 0.5
+# move 3810001 2 0
+# alpha 3810001 1 0.5
+# mask 3810001 on
+# move 3830001 4 0
+# alpha 3830001 1 0.5
+# mask 3830001 on
+# textboxarrow 0 3
+@トレイセーマ兵
+うおおおおあああああ！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+# emotionbody 1002 1 3102011 10 310
+# effectpattern 1002 1 0
+# effectstart 1002
+# alpha 3810001 0 0.5
+# alpha 3830001 0 0.5
+# move 3102011 2 0
+# face 3102011 "angry"
+# alpha 3102011 1 0.5
+# mask 3102011 on
+# textboxarrow 0 1
+@さやか
+やばっ！
+
+;;演出：さやかと兵士の間にアルマスが割って入り、兵士を倒す
+# textwindow "close"
+# move 3830001 4 0
+# alpha 3830001 1 0
+# mask 3830001 on
+# reversal 3830001 0
+# rightin 3830001 0.3
+# waitandnext 0.2
+
+# se "SE_3006"
+# sedelay "SE_4830" 0.2
+# sedelay "SE_3001" 0.5
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 200 0 0
+# effectstart 1000
+# move 3103811 3 0.2
+# face 3103811 "angry"
+# alpha 3103811 1 0.2
+# mask 3103811 on
+# waitandnext 0.5
+
+# alpha 3830001 0 0.5
+# waitandnext 0.5
+
+# move 3810001 4 0
+# alpha 3810001 1 0
+# mask 3810001 on
+# reversal 3810001 0
+# rightin 3810001 0.3
+# waitandnext 0.2
+
+# se "SE_4830"
+# sedelay "SE_3001" 0.5
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 2000 1 200 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+# alpha 3810001 0 0.5
+# waitandnext 0.5
+
+# move 3103811 4 0.5
+# waitandnext 0.5
+
+# voice 1038 "almace_battle_0005"
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+絶危ないところだったわね
+
+# face 3102011 "surprise"
+# textboxarrow 0 1
+@さやか
+アルマス！
+それにまどか、マスターも！
+
+# se "SE_6504"
+# emotionbody 1003 3 3401111 10 290
+# effectpattern 1003 1 3
+# effectstart 1003
+# voice 4011 "madoka_0004"
+# alpha 3102011 0 0.5
+# alpha 3103811 0 0.5
+# move 3401111 3 0
+# face 3401111 "normal"
+# alpha 3401111 1 0.5
+# mask 3401111 off
+# textboxarrow 0 2
+@まどか
+さやかちゃん、杏子ちゃん…
+無事でよかった…
+
+# voice 3015 "kyoko_0037"
+# alpha 3401111 0 0.5
+# move 3301511 3 0
+# face 3301511 "angry"
+# alpha 3301511 1 0.5
+# mask 3301511 off
+# textboxarrow 0 2
+@杏子
+まだ敵がうようよいるぞ
+
+;;モノローグ
+# textflame 0 0
+@
+態勢を立て直すため
+一時撤退を提案するマスター
+
+# face 3301511 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@杏子
+反撃といきたいとこだけど
+マスターがそう言うなら
+しゃーないか
+
+# alpha 3301511 0 0.5
+# move 3401111 3 0
+# face 3401111 "normal"
+# alpha 3401111 1 0.5
+# mask 3401111 off
+# textboxarrow 0 2
+@まどか
+じゃあみんな
+一旦退こう…
+
+# alpha 3401111 0 0.5
+# move 3103811 3 0
+# face 3103811 "angry"
+# alpha 3103811 1 0.5
+# mask 3103811 off
+# textboxarrow 0 2
+@アルマス
+それじゃ、後ろは任せて
+まどか達は逃げ道を作って！
+
+;;演出：移動の暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# alpha 3103811 0 0
+# move 3301511 3 0
+# face 3301511 "normal"
+# alpha 3301511 1 0
+# mask 3301511 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# voice 3015 "kyoko_0027"
+# textboxarrow 0 2
+# textwindow "normal"
+@杏子
+なんとか撒いたみたいだな
+ふー、さすがにあの数は
+しんどかったなぁ
+
+# voice 1020 "sayaka_0030"
+# move 3102011 2 0
+# face 3102011 "normal"
+# alpha 3102011 1 0.5
+# mask 3102011 on
+# textboxarrow 0 1
+# move 3301511 4 0.5
+# mask 3301511 on
+@さやか
+みんなが来てくれなかったら
+どうなってたかわからないよ
+ありがとう
+
+# alpha 3301511 0 0.5
+# move 3401111 4 0
+# face 3401111 "normal"
+# alpha 3401111 1 0.5
+# mask 3401111 on
+# textboxarrow 0 3
+@まどか
+ふたりはどうして
+あそこにいたか…わかる？
+
+# textboxarrow 0 1
+@さやか
+それが全然わかんなくて
+気が付いたら杏子とふたり
+外にいて、途方にくれてたんだよね
+
+# alpha 3401111 0 0.5
+# move 3301511 4 0
+# face 3301511 "normal"
+# alpha 3301511 1 0.5
+# mask 3301511 on
+# textboxarrow 0 3
+@杏子
+ひとりじゃなかっただけ
+マシだけどな
+
+# emotionbody 1004 8 3301511 80 250
+# effectpattern 1004 1 0
+# effectstart 1004
+# textboxarrow 0 3
+@杏子
+たまたま見かけたヤツに
+話を聞こうとしたら突然
+襲われるし散々だったよ
+
+# effectskip 1004
+# face 3102011 "angry"
+# textboxarrow 0 1
+@さやか
+突然って…
+槍を突きつけながら
+話しかけたらそうなるって！
+
+# textboxarrow 0 3
+@杏子
+そうかぁ？
+普通に聞いても
+教えてくれそうになかったぞ
+
+# voice 1020 "sayaka_0027"
+# textboxarrow 0 1
+@さやか
+普通に話しかける気なんて
+これっぽっちもなかったでしょ…
+
+# emotionbody 1005 10 3301511 -60 235
+# effectpattern 1005 4 3
+# effectstart 1005
+# voice 3015 "kyoko_0005"
+# face 3301511 "happy"
+# textboxarrow 0 3
+@杏子
+あははっ
+バレてたか
+
+# effectskip 1005
+# alpha 3102011 0 0.5
+# alpha 3301511 0 0.5
+# move 3103811 3 0
+# face 3103811 "normal"
+# alpha 3103811 1 0.5
+# mask 3103811 off
+# textboxarrow 0 2
+@アルマス
+それにしても変ね
+三国の兵士が共闘してたなんて
+
+# voice 9967 "titania_0030"
+# move 3103811 2 0.5
+# mask 3103811 on
+# move 139 4 0
+# face 139 "surprise"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 3
+@ティターニア
+アルマスが冷静な分析を…
+大丈夫ですか？
+どこかに頭をぶつけてませんか？
+
+# emotionbody 1006 6 3103811 50 250
+# effectpattern 1006 1 1
+# effectstart 1006
+# voice 1038 "almace_0009"
+# face 3103811 "angry"
+# textboxarrow 0 1
+@アルマス
+ぶつけてないわよ！
+私だってちゃんと考えて
+戦ってるんだから…
+
+# voice 3015 "kyoko_0028"
+# alpha 3103811 0 0.5
+# alpha 139 0 0.5
+# move 3102011 2 0
+# face 3102011 "normal"
+# alpha 3102011 1 0.5
+# mask 3102011 on
+# move 3301511 4 0
+# face 3301511 "normal"
+# alpha 3301511 1 0.5
+# mask 3301511 on
+# textboxarrow 0 3
+@杏子
+んー、でも、ちょっと違うかな
+あいつらは共闘してたって
+訳じゃないと思う
+
+# voice 1020 "sayaka_0028"
+# face 3102011 "sad"
+# textboxarrow 0 1
+@さやか
+たしかに、同じ格好してた兵士でも
+連携してる感じはなくて
+好き勝手に戦ってたっていうか…
+
+# emotionbody 1007 2 3401111 10 290
+# effectpattern 1007 1 1
+# effectstart 1007
+# voice 4011 "madoka_0028"
+# alpha 3301511 0 0.5
+# move 3401111 4 0
+# face 3401111 "sad"
+# alpha 3401111 1 0.5
+# mask 3401111 on
+# textboxarrow 0 3
+@まどか
+同じ国の兵士でも
+バラバラに戦ってるって
+そんなことあるのかな？
+
+# voice 1038 "almace_0028"
+# alpha 3102011 0 0.5
+# move 3103811 2 0
+# face 3103811 "worry"
+# alpha 3103811 1 0.5
+# mask 3103811 on
+# textboxarrow 0 1
+@アルマス
+敵の事情なんて
+どうでもいいけど
+その話はどうにも引っ掛かるわね
+
+# voice 4011 "madoka_0022"
+# face 3401111 "surprise"
+# textboxarrow 0 3
+@まどか
+もしかして魔女の仕業…とか？
+
+# voice 1020 "sayaka_0015"
+# alpha 3103811 0 0.5
+# move 3102011 2 0
+# face 3102011 "sad"
+# alpha 3102011 1 0.5
+# mask 3102011 on
+# textboxarrow 0 1
+@さやか
+その可能性はあるかも
+だとしたらあの兵士達も
+少しかわいそう…
+
+# alpha 3401111 0 0.5
+# move 3301511 4 0
+# face 3301511 "normal"
+# alpha 3301511 1 0.5
+# mask 3301511 on
+# textboxarrow 0 3
+@杏子
+そうは言っても
+襲ってくるんだから
+対処しなきゃだろ
+
+# bgmfile "bgm053_054" "BgmMMcollabo001" 0
+# face 3301511 "angry"
+# textboxarrow 0 3
+@杏子
+とかなんとか言ってたら
+さっそくやることになりそうだ
+
+;;モノローグ
+# se "SE_5207"
+# textflame 0 0
+@
+そう言って杏子は武器を構える
+どうしたのか、と問うマスター
+
+# textflame 1 1
+# textboxarrow 0 3
+@杏子
+さっきの奴らが
+追ってきたみたいだ
+
+# voice 1020 "sayaka_battle_0005"
+# face 3102011 "angry"
+# textboxarrow 0 1
+@さやか
+ここから離れるにしても
+簡単に通してはくれなさそうだね…
+
+# alpha 3102011 0 0.5
+# alpha 3301511 0 0.5
+# move 3103811 3 0
+# face 3103811 "angry"
+# alpha 3103811 1 0.5
+# mask 3103811 off
+# textboxarrow 0 2
+@アルマス
+仕方ないわね
+行くわよ、みんな！

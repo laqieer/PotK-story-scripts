@@ -1,0 +1,427 @@
+;;-----------------------------------------
+;;SEA5章_1
+;;-----------------------------------------
+# script "lisp"
+# background "diary"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 5
+# scale 6504011 0.85 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;-----------------------------------------
+;;紙
+# imageset 0 "SEA_diary_bg"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imagescale 0 1.2 0
+;;1枚め
+# imageset 1 "SEA_diary_501"
+# imagealpha 1 0 0
+# imagescale 1 1 0
+# imagelayer 1 3
+;;1枚め
+# imageset 2 "SEA_diary_502"
+# imagealpha 2 0 0
+# imagescale 2 1 0
+# imagelayer 2 3
+;;暗転
+# imageset 3 "black"
+# imagealpha 3 0 0
+# imagelayer 3 3
+;;-----------------------------------------
+;;日記演出
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_6165"
+# face 270 "normal"
+# alpha 270 1 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+旅の記録三百六十三日――
+
+;;ミーミル消す
+;;テキストウィンドウを外す
+# alpha 270 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;フレームを外す
+# frameout 0 1
+# waitandnext 1
+
+;;紙を表示
+# imagealpha 0 1 1
+# imagepos 0 0 0
+# waitandnext 1
+
+;;1枚目を表示
+# se "SE_6175"
+# imagealpha 1 1 2
+# imagepos 1 0 -1000
+# waitandnext 1
+
+;;1枚目を上に
+# imagemoveto 1 0 900 20
+# waitandnext 18
+
+;;1枚目を消す
+# imagealpha 1 0 2
+# waitandnext 2
+
+;;2枚目を表示
+# se "SE_6166"
+# imagealpha 2 1 2
+# imagepos 2 0 -1000
+# waitandnext 1
+
+;;2枚目を上に
+# imagemoveto 2 0 900 20
+# waitandnext 18
+
+;;2枚目を消す
+# imagealpha 2 0 2
+# waitandnext 2
+
+;;紙を消す
+# se "SE_6167"
+# imagealpha 0 0 1
+# waitandnext 1
+
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# sestop "SE_6175"
+# framein 0 0
+;;背景：平原
+# background "plain"
+# bgm "bgm002" 0
+# fadein "black" 1.5
+# waitandnext 1.5
+
+# se "SE_0791"
+# se "SE_6241"
+# waitandnext 1
+
+# se "SE_5575"
+# move 6504011 4 0.5
+# scale 6504011 0.8 0.5
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# waitandnext 0.5
+
+# voice 650401 "manannan_ura_0050"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+ミーミル！マスター！
+早く、早くっ
+
+# voice 9917 "mimir_navikan_0056"
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ミーミル
+お待ち下さい、マナナンさん
+逸る気持ちは分かりますが…
+
+# voice 650401 "manannan_ura_0005"
+# face 6504011 "happy"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+早く会いたいな～
+私の“相棒”！
+
+# textboxarrow 0 3
+@マナナン
+会えたらきっと、喜劇的に愉快だよね
+
+# voice 9917 "mimir_navikan_0004"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+ふふっ
+マナナンさんの“相棒”は
+どのような方なのでしょう
+
+# voice 650401 "manannan_ura_0002"
+# face 6504011 "usual"
+# textboxarrow 0 3
+@マナナン
+ねぇねぇ
+ラグナロク教会ってどんなとこ？
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+そうでした
+マナナンさんは
+ご存じないのでしたね
+
+# textboxarrow 0 1
+@ミーミル
+それでは、教会に着くまでの間、
+どのようなところか、
+私が説明致しましょう
+
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+よろしくね～っ
+
+;;暗転挟む
+# imagealpha 3 1 0
+# imagepos 3 0 30
+# imageleftin 3 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# sestop "SE_6241"
+# bgm "bgm035" 0
+# waitandnext 0.2
+
+# imagealpha 3 0 0.5
+# imagerightout 3 0.5
+# waitandnext 0.5
+
+# face 270 "normal"
+# face 6504011 "usual"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+ラグナロク教会は、
+世界最古の教会でございます
+
+# textboxarrow 0 1
+@ミーミル
+その始まりは世界誕生の頃まで
+遡ると言われておりますが、
+これはいささか大げさでしょう
+
+# voice 650401 "manannan_ura_0039"
+# textboxarrow 0 3
+@マナナン
+ふーん
+すごい教会なんだねっ
+大きいのかな？
+
+# textboxarrow 0 1
+@ミーミル
+それにつきましては…
+歴史は古いものの、
+あまり大きな教会ではないのです
+
+# textboxarrow 0 1
+@ミーミル
+信仰の対象が「ラグナロク」という
+言葉そのものとされておりまして
+
+# textboxarrow 0 1
+@ミーミル
+教義も「ラグナロク」を讃えて
+その名を忘れずに
+受け継いでいくという
+
+# textboxarrow 0 1
+@ミーミル
+不思議なものだそうです
+
+# voice 650401 "manannan_ura_0005"
+# face 6504011 "happy"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+よく分からないけど、愉快だねっ
+
+# textboxarrow 0 1
+@ミーミル
+「ラグナロク」という単語は、
+私達の暮らしている
+大陸を指す言葉です
+
+# textboxarrow 0 1
+@ミーミル
+つまり、ラグナロク大陸そのものを
+神と見立てた大地信仰ではないかと
+愚考致します
+
+;;選択肢
+# select "………" "select_label_01" "……………" "select_label_01"
+……
+
+# label "select_label_01"
+# voice 9917 "mimir_navikan_0002"
+# textboxarrow 0 1
+@ミーミル
+あの、マスター様…
+何か気になることが
+ございますでしょうか？
+
+;;選択肢
+# select "“彼女”は確か…" "select_label_02"
+あの、マスター様…
+何か気になることが
+ございますでしょうか？
+
+# label "select_label_02"
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+“彼女”？
+あの…どなたのことを――
+
+;;ミーミルのペンダントが点滅する
+# bgm "stop"
+# se "SE_6191"
+# face 270 "surprise"
+# face 6504011 "surprise"
+# textwindow "close"
+# effectbody 100 51 -140 35 0
+# effectstart 100
+# waitandnext 1.5
+
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+あ！
+ティルフィングからの連絡だ！
+
+# voice 9917 "mimir_navikan_0003"
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+あ、そうですねっ
+マスター様、失礼致します…
+
+# voice 9917 "mimir_navikan_0049"
+# textboxarrow 0 1
+@ミーミル
+ティルフィング様、
+いかがなさいましたか？
+
+# serif 1
+@ティルフィング
+ミーミル、マスター、マナナン…
+ラグナロク教会…向かって…
+そこは…
+
+# serif 0
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+ティルフィング様っ？
+通信が上手く繋がっていないようです
+お声が途切れ途切れにしか…
+
+# serif 1
+@ティルフィング
+私は…“彼女”を…早くしないと――
+
+;;通信が切れる
+# se "SE_0845"
+# se "SE_6191_stop"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 2
+
+# voice 9917 "mimir_navikan_0055"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+ティルフィング様！？
+ティルフィング様！
+ああ…
+
+# voice 9917 "mimir_navikan_0027"
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+ダメです…
+繋がらなくなってしまいました
+どうしてなのでしょう？
+
+# voice 650401 "manannan_ura_0028"
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+ヴィモールの町でも
+似たようなことがあったよね～
+最近、調子悪いのかな？
+
+# textboxarrow 0 1
+@ミーミル
+ティルフィング様のお力は、
+あまねく世界に届くはずでございます
+このようなことは…
+
+# voice 650401 "manannan_ura_0022"
+# face 6504011 "surprise"
+# textboxarrow 0 3
+@マナナン
+…………あれ？
+
+# face 270 "surprise"
+# move 6504011 5 0.5
+# scale 6504011 0.75 0.5
+# alpha 6504011 0 0.3
+# textboxarrow 0 1
+@ミーミル
+マナナンさん？
+そちらに何が…
+
+# se "SE_4301"
+# alpha 270 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;スイハの射た矢がマスターに刺さる
+# se "SE_4817"
+# fadein "red" 1
+# waitandnext 1.3
+
+# bgm "bgm029" 0
+# waitandnext 0.2
+
+;;選択肢
+# select "ぐっ…？" "select_label_03" "あうっ…？" "select_label_03"
+！？
+
+# label "select_label_03"
+# voice 9917 "mimir_navikan_0048"
+# move 270 3 0
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+マスター様…！？
+
+# textboxarrow 0 2
+@ミーミル
+そんな…矢がっ…
+
+# fadeout "black" 1
+# waitandnext 1

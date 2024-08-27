@@ -1,0 +1,192 @@
+;;-----------------------------------------
+;;ネロ2_3
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgm "stop"
+;;-----------------------------------------
+# body 5603611
+# pos 5603611 3
+# scale 5603611 0.8 0
+# layer 5603611 3
+# mask 5603611 off
+# alpha 5603611 0 0
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 3
+# mask 810004 off
+# alpha 810004 1 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "c5603611"
+# imagealpha 1 0 0
+# imagelayer 1 1
+;;-----------------------------------------
+;;バトル終了後、最後の異族をネロが倒す
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# fadein "red" 1
+# waitandnext 1
+
+# alpha 810004 0 1
+# waitandnext 1
+
+# bgm "bgm003" 0
+# alpha 5603611 1 0.5
+# textflame 0 0
+# textwindow "nomal"
+@
+異族を一掃した後、
+ネロはマスターに声をかける
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5603611 "normal"
+# voice 6036 "uroboros_d_0002"
+@ネロ
+あれほど無謀な策を、我は識らぬ…
+うぬは、命が惜しくないのか？
+
+# textflame 0 0
+@
+いや、ネロが危ないと思った瞬間、
+体が勝手に動いちゃって…
+と、マスターは足を震わせながら笑う
+
+# textflame 1 1
+# textboxarrow 0 2
+@ネロ
+震えるほど恐ろしい体験をして、
+なぜ笑っておるのだ？
+
+# textflame 0 0
+@
+ネロが無事でよかったって…
+安心したから笑えるんだ、とマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5603611 "sad"
+# voice 6036 "uroboros_d_0014"
+@ネロ
+我には、理解できぬ…
+
+# textflame 0 0
+@
+それなら、ネロも笑ってみたら？
+と、マスターは言う
+
+# textflame 1 1
+# textboxarrow 0 2
+@ネロ
+面白くもないのに、
+笑うことなど不可能だ
+
+# textflame 0 0
+@
+笑顔から気持ちを明るくすることも
+できるんだよ、だから笑ってみよう！
+と、マスターはネロを励ます
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6036 "uroboros_d_0003"
+@ネロ
+ふむ…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5603611 "sad"
+# voice 6036 "uroboros_d_0004"
+;;@ネロ（表情：怪訝）
+@ネロ
+ふふっ…
+どうだ？
+これでいいのか？
+
+# textflame 0 0
+@
+笑顔はぎこちないが、
+ネロの努力は十分に伝わってくる
+
+# textflame 0 0
+@
+マスターは、とにかく
+ネロを褒めることにした
+
+;;選択肢
+# select "うん、いい笑顔だよ！" "select_label_01" "すごく可愛いよ！" "select_label_02" "その気持ちが大事だね！" "select_label_03"
+マスターは、とにかく
+ネロを褒めることにした
+
+;;アンサー
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6036 "uroboros_d_0003"
+@ネロ
+うむ
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6036 "uroboros_d_0003"
+@ネロ
+ふむ…
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6036 "uroboros_d_0003"
+@ネロ
+なるほど…
+
+# label "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 5603611 "normal"
+@ネロ
+…まぁ、悪くはない、か
+よし…
+戻ったら、あやつにも試してみよう
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 5603611 "smile"
+# voice 6036 "uroboros_d_0004"
+;;@ネロ（表情：微笑）
+@ネロ
+ふふ…
+楽しみがひとつできたぞ
+うぬに、礼を言っておこうか
+
+# textflame 0 0
+@
+そう話すネロは、
+わずかだが微笑んでいるように見えた
+
+;;一枚絵ボイス
+;;★５（uroboros-d_kyara_0026）
+;;ネロ「感謝しよう」
+# textflame 0 0
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# fadein "white" 3
+# buttonsout 0 0
+# textwindow "close"
+# voice 6036 "uroboros_d_kyara_0026"
+
+# frameout 0 1
+
+# waitandnext 0.8
+
+# fadeout "black" 1.5
+# waitandnext 1.5

@@ -1,0 +1,603 @@
+;;-----------------------------------------
+;;鎌倉5_0
+;;-----------------------------------------
+# script "lisp"
+;;# background "cityload"
+# background "courtyard"
+# bgm "bgm002" 0
+;;-----------------------------------------
+;;INヘレナ
+# body 5302811
+# pos 5302811 5
+# scale 5302811 0.8 0
+# layer 5302811 3
+# alpha 5302811 1 0
+;;鎌倉ヘレナ
+# body 6302811
+# pos 6302811 5
+# scale 6302811 0.8 0
+# layer 6302811 4
+# alpha 6302811 0 0
+;;ニール
+# body 162
+# pos 162 3
+# scale 162 0.8 0
+# layer 162 5
+# mask 162 off
+# alpha 162 1 0
+;;鎌倉ニール
+# body 323
+# pos 323 3
+# scale 323 0.8 0
+# layer 323 5
+# mask 323 off
+# alpha 323 0 0
+;;INリサナウト
+# body 5203011
+# pos 5203011 1
+# scale 5203011 0.8 0
+# layer 5203011 4
+# alpha 5203011 1 0
+;;鎌倉リサナウト
+# body 6203011
+# pos 6203011 1
+# scale 6203011 0.8 0
+# layer 6203011 3
+# mask 6203011 off
+# alpha 6203011 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "townscape_pos"
+# imagealpha 1 0 0
+# imagelayer 1 5
+# imageset 2 "SEA6203011"
+# imagealpha 2 0 0
+# imagelayer 2 5
+;;-----------------------------------------
+;;背景：町：学園編「courtyard」左
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# voice 530281 "herena_di_0002"
+# face 5203011 "happy2"
+# face 5302811 "usual"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+装置を修理するために探索するって
+言ったけど
+
+# textboxarrow 0 3
+@ヘレナ
+どうして探索する必要があるんだ？
+部品でも探すのかな
+
+# voice 520301 "risanautr_ca_0032"
+# face 5203011 "happy1"
+# textboxarrow 0 1
+@リサナウト
+あら
+察しが良いのね
+あなたも感じてるのかしら？
+
+# textboxarrow 0 1
+@リサナウト
+この地にある「強い力の残滓」を
+
+# face 5302811 "surprise"
+# textboxarrow 0 3
+@ヘレナ
+「強い力の残滓」…？
+そういえば…
+
+# textboxarrow 0 2
+@ニール
+ところどころ、マナが集まってる
+場所があるみたいね
+
+# face 5203011 "happy2"
+# textboxarrow 0 1
+@リサナウト
+それよ
+装置の修理にはマナが不可欠なの
+
+# textboxarrow 0 1
+@リサナウト
+マナを材料にして、
+私が部品を構築するわ
+だから探索が必要なのよ
+
+# voice 530281 "herena_di_0028"
+# face 5302811 "sad"
+# textboxarrow 0 3
+@ヘレナ
+面倒だなぁ…
+ヘレナはカフェで涼んでいたいよ
+
+# voice 520301 "risanautr_ca_0004"
+# face 5203011 "happy1"
+# textboxarrow 0 1
+@リサナウト
+そうよ！
+町中を歩くんだから、
+この格好は目立つわよね
+
+# textboxarrow 0 1
+@リサナウト
+着替えましょう、ヘレナ！
+
+# voice 530281 "herena_di_0022"
+# face 5302811 "surprise"
+# textboxarrow 0 3
+@ヘレナ
+えっ？
+何を言ってるんだ…
+
+# face 5203011 "happy2"
+# textboxarrow 0 1
+@リサナウト
+郷に入っては郷に従え
+という言葉があるわ
+
+# textboxarrow 0 1
+@リサナウト
+あっちに洋服屋があったから
+そこで服を手に入れるわよっ
+
+# voice 530281 "herena_di_0028"
+# face 5302811 "sad"
+# textboxarrow 0 3
+@ヘレナ
+ヘレナはこのままでもいいけど…
+
+# face 5203011 "happy1"
+# textboxarrow 0 1
+@リサナウト
+ほら、急いで！
+時は金なりという言葉があるわっ
+
+;;暗転挟む
+# se "SE_13694"
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# bgm "stop"
+# background "bg_white"
+# alpha 5302811 0 0
+# alpha 162 0 0
+# alpha 5203011 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+;;ここから２人とも鎌倉イベントの衣装
+# envbody 1000 11 0 0 0
+# effectpattern 1000 1 13
+# effectstart 1000
+# fadein "black" 1.5
+# waitandnext 1.5
+
+# se "SE_4780"
+# move 6302811 3 0
+# mask 6302811 off
+# alpha 6302811 1 0.5
+# waitandnext 3
+
+# se "SE_4780"
+# alpha 6302811 0 0.5
+# move 6203011 3 0
+# mask 6203011 off
+# alpha 6203011 1 0.5
+# waitandnext 3
+
+# alpha 6203011 0 0.5
+# waitandnext 1
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;# background "cityload"
+# background "courtyard"
+# bgmfile "bgm063" "BgmMizugi001" 0
+# alpha 323 1 0
+# move 6302811 5 0
+# mask 6302811 on
+# face 6302811 "normal"
+# alpha 6302811 1 0
+# move 6203011 1 0
+# mask 6203011 off
+# face 6203011 "normal"
+# alpha 6203011 1 0
+# effectskip 1000
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 520301 "risanautr_ca_0005"
+# textwindow "nomal"
+# textboxarrow 0 1
+@リサナウト
+着替え完了ね
+さあ、探索に繰り出すわよ！
+
+# voice 530281 "herena_di_0002"
+# face 6302811 "surprise"
+# textboxarrow 0 3
+@ヘレナ
+何でアナタはカメラを持ってるんだ？
+
+# voice 520301 "risanautr_ca_0032"
+# face 6203011 "usual"
+# textboxarrow 0 1
+@リサナウト
+別世界に来たんだもの
+記録は大切よ
+
+# voice 530281 "herena_di_0039"
+# face 6302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+ふぅん
+約束の地カマクランドは
+別世界だったんだな
+
+# face 6302811 "happy"
+# textboxarrow 0 3
+@ヘレナ
+ヘレナはてっきり時間を遡った
+だけかと思っていたよ…くふっ
+
+# voice 520301 "risanautr_ca_0013"
+# face 6203011 "angry"
+# textboxarrow 0 1
+@リサナウト
+ぐぬぬっ…
+あー、もうっ！
+そうよ！ここは別世界
+
+# textboxarrow 0 1
+@リサナウト
+時間を遡るだけの予定だったのに
+私も知らない世界に来ちゃったの！
+
+# voice 9952 "nir_0019"
+# textboxarrow 0 2
+@ニール
+あらあら
+ついに認めたわね
+
+# face 6203011 "normal"
+# textboxarrow 0 1
+@リサナウト
+温故知新の予定が別世界探索に
+なってしまったけど…
+
+# textboxarrow 0 1
+@リサナウト
+海がとっても綺麗だし、
+観光しないと勿体ないわ！
+
+# textboxarrow 0 1
+@リサナウト
+せっかくだから記念撮影しましょ
+ほら、ヘレナもニールも笑って
+
+# voice 530281 "herena_di_0007"
+# textboxarrow 0 3
+@ヘレナ
+リサナウトはヘレナに嘲笑って
+欲しいんだね…くふっ
+
+# textboxarrow 0 2
+@ニール
+そういう趣味なのよ、きっと
+
+# textboxarrow 0 1
+@リサナウト
+悪そうな笑みじゃなくて、
+もっと楽しそうな笑顔を
+撮りたいのっ
+
+# face 6302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+そんなことより装置の修理だろ
+さっさと片付けよう
+
+# voice 9952 "nir_0032"
+# textboxarrow 0 2
+@ニール
+そうね
+早くいきましょう、ヘレナ
+
+;;ヘレナとニールが歩いていく
+# se "SE_0719"
+# scale 323 0.7 0.5
+# alpha 323 0 0.3
+# scale 6302811 0.7 0.5
+# alpha 6302811 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# voice 520301 "risanautr_ca_0028"
+# move 6203011 3 0.5
+# face 6203011 "sad"
+# textwindow "nomal"
+# textboxarrow 0 2
+@リサナウト
+うーん…
+まだ自覚できるほどの変化は
+起きてないわね
+
+# textboxarrow 0 2
+@リサナウト
+この装置を直せるかどうかは…
+彼女達次第なんだけど
+
+;;暗転挟む
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：schoolroad_afternoon
+# background "schoolroad_afternoon"
+# bgm "bgm002" 0
+# move 6203011 1 0
+# face 6203011 "usual"
+# mask 6203011 on
+# scale 323 0.8 0
+# alpha 323 1 0
+# scale 6302811 0.8 0
+# face 6302811 "normal"
+# alpha 6302811 1 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 530281 "herena_di_0003"
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+この辺りで集められるマナは
+集めきったんじゃないかな
+
+# voice 9952 "nir_0010"
+# textboxarrow 0 2
+@ニール
+マナの塊が
+魔獣化して襲ってくるなんて
+聞いてないんだけど！
+
+# voice 520301 "risanautr_ca_0004"
+# face 6203011 "normal"
+# textboxarrow 0 1
+@リサナウト
+そういうこともあるわよ
+マナは力の源なんだから
+
+# textboxarrow 0 1
+@リサナウト
+それより、少し離れたところに
+移動するわよ
+あれに乗って！
+
+# face 6302811 "sad"
+# textboxarrow 0 3
+@ヘレナ
+あの乗り物は…
+車体に見知ったキル姫の姿が
+描かれているような気がするけど
+
+# voice 530281 "herena_di_0022"
+# face 6302811 "surprise"
+# textboxarrow 0 3
+@ヘレナ
+…あれ？
+絵が見えなくなったぞ
+気のせいだったのかな？
+
+# voice 520301 "risanautr_ca_0032"
+# face 6203011 "usual"
+# textboxarrow 0 1
+@リサナウト
+あれはバスという乗り物よ
+ヘレナが見たのは
+過去の残滓かもしれないわね
+
+# textboxarrow 0 2
+@ニール
+過去の残滓？
+何よ、それ
+
+# textboxarrow 0 1
+@リサナウト
+強い思いは時折、その場所や物に
+宿り続けたりするの
+
+# textboxarrow 0 1
+@リサナウト
+そういった思いや記憶が凝縮されて
+感覚的に認識できるマナになるのよ
+そして力の残滓を形成するの
+
+# voice 530281 "herena_di_0004"
+# face 6302811 "happy"
+# textboxarrow 0 3
+@ヘレナ
+つまり、さっきヘレナが見たのは
+誰かの思い出ってことか
+誰のものだったんだろう…ふふっ
+
+# face 6302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+もっと強い思いが凝縮されて
+「強い力の残滓」になるんだろ？
+それを探せば良いんだな
+
+# face 6203011 "normal"
+# textboxarrow 0 1
+@リサナウト
+そういうこと
+さあ、バスに乗るわよ！
+
+# alpha 6203011 0 0.3
+# alpha 323 0 0.3
+# alpha 6302811 0 0.3
+# imagealpha 1 1 2
+# imagepos 1 550 20
+# textwindow "close"
+# waitandnext 3
+
+;;バスで移動する描写
+# se "SE_6246"
+# imagemoveto 1 -550 20 9
+# waitandnext 8
+
+;;背景：beach
+# background "beach"
+# bgm "stop"
+# sestop "SE_6246"
+# se "SE_13814"
+# imagealpha 1 0 2
+# waitandnext 3
+
+;;リサナウトシナリオカット
+# bgmfile "bgm063" "BgmMizugi001" 0
+# fadein "white" 1
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# frameout 0 0
+# waitandnext 1
+
+# voice 520301 "risanautr_ca_0005"
+# se "SE_9141"
+# textwindow "nomal"
+# textboxarrow 0 0
+@リサナウト
+うふふふっ♪
+水が冷たくて心地良いわね
+景色も素敵よ
+
+@リサナウト
+おっ
+シャッターチャンス！
+
+# se "SE_9256"
+# fadein "white" 0.5
+# waitandnext 1.5
+
+# voice 520301 "risanautr_ca_0002"
+@リサナウト
+ねぇ！
+あなた達も海に入ってみたらっ？
+
+;;シナリオカット削除
+# imagealpha 2 0 1
+# framein 0 1
+# textwindow "close"
+# waitandnext 1
+
+# voice 530281 "herena_di_0028"
+# move 323 2 0
+# alpha 323 1 0.3
+# move 6302811 4 0
+# face 6302811 "normal"
+# alpha 6302811 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+はしゃいでるな…
+
+# voice 9952 "nir_0004"
+# textboxarrow 0 1
+@ニール
+お子様よね～
+
+# face 6203011 "angry"
+# alpha 6203011 1 0.3
+# move 323 3 0.5
+# move 6302811 5 0.5
+# textboxarrow 0 1
+@リサナウト
+あ…遊んでばかりいる
+わけじゃないのよ！
+ちゃんと探索もしてたわっ
+
+# textboxarrow 0 1
+@リサナウト
+ここにも「強い力の残滓」があるわね
+
+# textboxarrow 0 2
+@ニール
+あら、どこかしら？
+
+# textboxarrow 0 3
+@ヘレナ
+さっきバスで感じたような感覚が
+ここにもある
+…スイカ割りかな？
+
+# voice 520301 "risanautr_ca_0032"
+# face 6203011 "usual"
+# textboxarrow 0 1
+@リサナウト
+そうよ！
+ここでロンギヌスが
+スイカを割ったような…
+
+# textboxarrow 0 1
+@リサナウト
+そんな気配があるわ！
+
+# voice 9952 "nir_0028"
+# textboxarrow 0 2
+@ニール
+それってどんな状況よ…
+
+# textboxarrow 0 1
+@リサナウト
+とにかく強い力を感じる
+ここのマナも修理に使えるわね
+
+# textboxarrow 0 1
+@リサナウト
+あとは…あっちのお店からも
+「強い力の残滓」を感じるわよ！
+
+# voice 520301 "risanautr_ca_0004"
+# face 6203011 "normal"
+# textboxarrow 0 1
+@リサナウト
+可愛いお店♪
+あれも撮っちゃおっと
+
+;;リサナウトが走っていく
+# scale 6203011 0.6 1
+# alpha 6203011 0 0.8
+# se "SE_5004"
+# sedelay "SE_5005" 0.2
+# sedelay "SE_5004" 0.4
+# sedelay "SE_5005" 0.6
+# textwindow "close"
+# waitandnext 1.5
+
+# voice 530281 "herena_di_0007"
+# face 6302811 "happy"
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+慌ただしいな
+ヘレナはついていけないよ…くふっ
+
+# fadeout "black" 1
+# waitandnext 1

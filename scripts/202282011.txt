@@ -1,0 +1,219 @@
+;;-----------------------------------------
+;;鎌倉1_1
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgm "stop"
+;;-----------------------------------------
+;;グランテピエ
+# body 5303411
+# pos 5303411 4
+# scale 5303411 0.8 0
+# layer 5303411 3
+# mask 5303411 off
+# alpha 5303411 0 0
+;;ムー
+# body 161
+# pos 161 2
+# scale 161 0.8 0
+# layer 161 5
+# mask 161 off
+# alpha 161 0 0
+;;INソロモン
+# body 5503111
+# pos 5503111 4
+# scale 5503111 0.8 0
+# layer 5503111 3
+# mask 5503111 off
+# alpha 5503111 0 0
+;;グラウ
+# body 164
+# pos 164 2
+# scale 164 0.8 0
+# layer 164 5
+# mask 164 off
+# alpha 164 0 0
+;;INカリス
+# body 5602511
+# pos 5602511 2
+# scale 5602511 0.8 0
+# layer 5602511 3
+# mask 5602511 off
+# alpha 5602511 0 0
+;;キプル
+# body 163
+# pos 163 4
+# scale 163 0.8 0
+# layer 163 5
+# mask 163 off
+# alpha 163 0 0
+;;INヘレナ
+# body 5302811
+# pos 5302811 4
+# scale 5302811 0.8 0
+# layer 5302811 3
+# mask 5302811 off
+# alpha 5302811 0 0
+;;ニール
+# body 162
+# pos 162 2
+# scale 162 0.8 0
+# layer 162 5
+# mask 162 off
+# alpha 162 0 0
+;;魔獣バイコーン
+# body 900011
+# pos 900011 3
+# scale 900011 0.6 0
+# layer 900011 3
+# mask 900011 off
+# alpha 900011 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "bg_crack1"
+# imagealpha 1 0 0
+# imagelayer 1 2
+# imageset 2 "bg_crack1"
+# imagealpha 2 0 0
+# imagelayer 2 2
+;;-----------------------------------------
+;;背景：平原：plain
+# textwindow "close"
+# fadein "black" 1.5
+# waitandnext 2
+
+;;裏側が開く
+# se "SE_6146"
+# shake 0 1
+# imagealpha 1 1 0.2
+# imagepos 1 0 0
+# waitandnext 2.5
+
+;;ひび割れから魔獣が現れる
+# fadein "white" 1
+# imagealpha 1 0 0.5
+# imagealpha 2 1 0.3
+# imagepos 2 0 0
+# scale 900011 0.8 0.2
+# alpha 900011 1 0.2
+# waitandnext 1
+
+# imagealpha 2 0 0.5
+# se "SE_0792"
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 2
+@魔獣
+ガアアアアアア！
+
+# imagealpha 2 0 0.5
+# alpha 900011 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# bgmfile "bgm464_465" "BgmIntegralNoahDisrupters" 0
+# alpha 161 1 0.3
+# face 5303411 "normal"
+# alpha 5303411 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ムー
+お出ましだぜ！
+
+# voice 530341 "grandepieu_di_0003"
+# textboxarrow 0 3
+@グランテピエ
+うん
+行こう、ムー
+
+# voice 9950 "glau_0013"
+# move 161 1 0.5
+# alpha 161 0 0.3
+# move 5303411 5 0.5
+# alpha 5303411 0 0.3
+# alpha 164 1 0.3
+# face 5503111 "normal"
+# alpha 5503111 1 0.3
+# textboxarrow 0 1
+@グラウ
+「揺らぎ」によるひび割れから
+５体の魔獣が出現しました
+
+# voice 550311 "solomon_di_0043"
+# face 5503111 "angry"
+# textboxarrow 0 3
+@ソロモン
+戦闘態勢に移行するわ
+グラウ、標的の行動予測をお願い
+
+# voice 560251 "chalice_di_0033"
+# move 164 1 0.5
+# alpha 164 0 0.3
+# move 5503111 5 0.5
+# alpha 5503111 0 0.3
+# alpha 163 1 0.3
+# face 5602511 "normal"
+# alpha 5602511 1 0.3
+# textboxarrow 0 1
+@カリス
+よーし
+カリスちゃんも頑張っちゃうよ！
+
+# voice 9951 "kipuru_0012"
+# textboxarrow 0 3
+@キプル
+カリス！
+むやみに突っ込んだら危険ですっ
+
+# voice 560251 "chalice_di_0009"
+# face 5602511 "angry"
+# textboxarrow 0 1
+@カリス
+もーっ
+大丈夫だってば
+キプルは心配性なんだから
+
+# voice 530281 "herena_di_0007"
+# move 163 5 0.5
+# alpha 163 0 0.3
+# move 5602511 1 0.5
+# alpha 5602511 0 0.3
+# alpha 162 1 0.3
+# face 5302811 "normal"
+# alpha 5302811 1 0.3
+# textboxarrow 0 3
+@ヘレナ
+みんなやる気だね
+ヘレナの出番はなさそうだ…くふっ
+
+# textboxarrow 0 1
+@ニール
+そんなこと言って
+狙う相手は決めてるんでしょ
+
+# voice 530281 "herena_di_0032"
+# face 5302811 "usual"
+# textboxarrow 0 3
+@ヘレナ
+そうだな
+そろそろ行こうか、ニール
+
+# voice 9952 "nir_0004"
+# textboxarrow 0 1
+@ニール
+アタチ達の速さについてこれる
+魔獣なんていないものね
+
+;;バトル
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 162 0 0
+# alpha 5302811 0 0
+# waitandnext 0.2

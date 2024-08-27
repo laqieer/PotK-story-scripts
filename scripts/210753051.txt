@@ -1,0 +1,516 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;コマンドキラーズサイドストーリー前編シナリオ
+;;第3話　タイトル：欺く者
+;;3_5_1
+;;スクリプト最後の背景：村（ゴーストタウン）
+;;-----------------------------------------
+# script "lisp"
+# background "ghost_town"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;アダマス
+# body 101221
+# pos 101221 3
+# scale 101221 0.8 0
+# layer 101221 2
+# alpha 101221 0 0
+# mask 101221 off
+;;ハルパー
+# body 202011
+# pos 202011 3
+# scale 202011 0.8 0
+# layer 202011 2
+# alpha 202011 0 0
+# mask 202011 off
+;;如意金箍棒
+# body 232
+# pos 232 3
+# scale 232 0.8 0
+# layer 232 2
+# alpha 232 0 0
+# mask 232 off
+;;如意金箍棒・神令・フリッグ（ボイス用）
+# body 5203111
+# alpha 5203111 0 0
+;;ヤグルシ
+# body 201711
+# pos 201711 3
+# scale 201711 0.8 0
+# layer 201711 2
+# alpha 201711 0 0
+# mask 201711 off
+;;アイムール
+# body 200221
+# pos 200221 3
+# scale 200221 0.8 0
+# layer 200221 2
+# alpha 200221 0 0
+# mask 200221 off
+;;カドケウス
+# body 600431
+# pos 600431 3
+# scale 600431 0.8 0
+# layer 600431 2
+# alpha 600431 0 0
+# mask 600431 off
+;;ケーリュケイオン
+# body 600531
+# pos 600531 3
+# scale 600531 0.8 0
+# layer 600531 2
+# alpha 600531 0 0
+# mask 600531 off
+;;ナーゲルリング
+# body 100621
+# pos 100621 3
+# scale 100621 0.8 0
+# layer 100621 2
+# alpha 100621 0 0
+# mask 100621 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第3話　タイトル：欺く者
+;;//背景：村（ゴーストタウン）
+# move 101221 2 0
+# face 101221 "angry"
+# alpha 101221 1 0
+# mask 101221 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 202011 4 0
+# face 202011 "normal"
+# alpha 202011 1 0
+# mask 202011 on
+@アダマス
+さっさと出てきなさい、カドケウス！
+ケーリュケイオンもいるんでしょ
+
+# voice 2020 "harpe_0005"
+# face 202011 "smile"
+# textboxarrow 0 3
+@ハルパー
+ふふふっ
+大人しく出てきたら、
+優しく嬲ってあげますよ
+
+# alpha 101221 0 0.5
+# alpha 202011 0 0.5
+# move 201711 2 0
+# face 201711 "usual"
+# alpha 201711 1 0.5
+# mask 201711 on
+# move 200221 4 0
+# face 200221 "normal"
+# alpha 200221 1 0.5
+# mask 200221 on
+# textboxarrow 0 3
+@アイムール
+目標を発見次第、殲滅を開始します
+マスターの命令を最優先に
+
+# voice 2017 "yagurushi_0020"
+# face 201711 "normal"
+# textboxarrow 0 1
+@ヤグルシ
+お姉ちゃんと一緒に戦うんなら、
+ヤグは頑張れるよっ
+
+# alpha 201711 0 0.5
+# alpha 200221 0 0.5
+# move 100621 3 0
+# face 100621 "usual"
+# alpha 100621 1 0.5
+# mask 100621 off
+# textboxarrow 0 2
+@ナーゲルリング
+またあなた達ですかっ
+今度こそ、この村は守ってみせます
+
+# serif 1
+@祀官
+カドケウスもケーリュケイオンも
+この村にはおりません！
+帰って下さい！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 2020 "harpe_0022"
+# alpha 100621 0 0.5
+# move 101221 2 0
+# face 101221 "angry"
+# alpha 101221 1 0.5
+# mask 101221 on
+# move 202011 4 0
+# face 202011 "surprise"
+# alpha 202011 1 0.5
+# mask 202011 on
+# textboxarrow 0 3
+@ハルパー
+あら？
+それはおかしいですね
+
+# textboxarrow 0 1
+@アダマス
+あいつらがここに逃げ込んだのを
+見たって奴がいるんだよ
+隠し立てすると…また潰すわよ！
+
+# voice 1006 "nageruring_0001"
+# alpha 101221 0 0.5
+# alpha 202011 0 0.5
+# move 100621 3 0
+# face 100621 "usual"
+# alpha 100621 1 0.5
+# mask 100621 off
+# textboxarrow 0 2
+@ナーゲルリング
+マスター、あの方達に何を言っても
+無駄です
+ここは私が
+
+# serif 1
+@祀官
+すみません…
+村人が避難するまで、
+何とか持ち堪えて下さい
+
+# voice 1006 "nageruring_0003"
+# textboxarrow 0 2
+@ナーゲルリング
+はい
+お任せ下さい
+
+;;//画面スライド
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 100621 0 0
+# move 600531 2 0
+# face 600531 "normal"
+# alpha 600531 1 0
+# mask 600531 on
+# move 600431 4 0
+# face 600431 "normal"
+# alpha 600431 1 0
+# mask 600431 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 3
+# textwindow "normal"
+@カドケウス
+あらら～
+とうとうやってきたね～
+
+# textboxarrow 0 1
+@ケーリュケイオン
+昨日は無視してたのに、
+何だかちぐはぐなことしてるよね～
+
+# voice 6004 "kadokeusu_0028"
+# face 600431 "usual"
+# textboxarrow 0 3
+@カドケウス
+どうする？
+逃げる？
+それとも、手伝う？
+
+# voice 6005 "keryukeion_0028"
+# face 600531 "angry"
+# textboxarrow 0 1
+@ケーリュケイオン
+ただ働きはイヤなんだけどな～…
+こうなったら、陰ながらこっそり
+
+# voice 520311 "nyoikinkobou_c_0004"
+# alpha 600531 0 0.5
+# alpha 600431 0 0.5
+# move 232 3 0
+# face 232 "usual"
+# alpha 232 1 0.5
+# mask 232 off
+# textboxarrow 0 2
+@如意金箍棒
+そんなことしなくていいのよ
+ワタシがいるから
+
+# voice 6004 "kadokeusu_0024"
+# alpha 232 0 0.5
+# move 600531 2 0
+# face 600531 "surprise"
+# alpha 600531 1 0.5
+# mask 600531 on
+# move 600431 4 0
+# face 600431 "normal"
+# alpha 600431 1 0.5
+# mask 600431 on
+# textboxarrow 0 3
+@カドケウス
+わわっ？
+大きなお姉さん…！
+
+# voice 6005 "keryukeion_0022"
+# textboxarrow 0 1
+@ケーリュケイオン
+えっ？
+誰…！？
+見たことないんだけど…
+
+# alpha 600531 0 0.5
+# alpha 600431 0 0.5
+# move 232 3 0
+# face 232 "usual"
+# alpha 232 1 0.5
+# mask 232 off
+# textboxarrow 0 2
+@如意金箍棒
+あなた達は隠れていてね
+
+;;//如意金箍棒が飛び出す
+# se "SE_9021"
+# waitandnext 0.2
+
+# textwindow "close"
+# rightout 232 0.5
+# waitandnext 0.5
+
+;;//画面スライド
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 232 0 0
+# move 100621 3 0
+# face 100621 "worry"
+# alpha 100621 1 0
+# mask 100621 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 1006 "nageruring_battle_0005"
+# textboxarrow 0 2
+# textwindow "normal"
+@ナーゲルリング
+あうっ…！
+
+# voice 1012 "adamasu_battle_0003"
+# alpha 100621 0 0.5
+# move 101221 2 0
+# face 101221 "angry"
+# alpha 101221 1 0.5
+# mask 101221 on
+# textboxarrow 0 1
+# move 202011 4 0
+# face 202011 "normal"
+# alpha 202011 1 0.5
+# mask 202011 on
+@アダマス
+ほらほらぁ！
+だらしないわねぇ！
+
+# voice 2020 "harpe_0004"
+# textboxarrow 0 3
+@ハルパー
+そんな小さな体で必死に堪えて…
+可愛らしいですね
+もっといたぶってあげますよ
+
+# textwindow "close"
+# alpha 101221 0 0.5
+# alpha 202011 0 0.5
+# move 100621 3 0
+# face 100621 "usual"
+# alpha 100621 1 0.5
+# mask 100621 off
+# serif 1
+@祀官
+ナーゲルリング…！
+このままでは…
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ナーゲルリング
+大丈夫ですよ、マスター
+私のことは気にせず、逃げて下さい
+
+# textboxarrow 0 2
+@ナーゲルリング
+そういう扱いも…
+覚悟していましたから
+
+# serif 1
+@祀官
+何を言っているのですか！？
+あなたを見捨てることなど
+決してありません！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 100621 0 0.5
+# move 202011 3 0
+# face 202011 "normal"
+# alpha 202011 1 0.5
+# mask 202011 off
+# textboxarrow 0 2
+@ハルパー
+あら、キル姫思いの奏官なんですね
+そこにいると、手元が狂って
+首を落としてしまうかもしれませんよ
+
+# serif 1
+@祀官
+くっ…！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 202011 0 0.5
+# move 100621 3 0
+# face 100621 "surprise"
+# alpha 100621 1 0.5
+# mask 100621 off
+# textboxarrow 0 2
+@ナーゲルリング
+マスター！
+
+# bgm "stop"
+# voice 2020 "harpe_0031"
+# alpha 100621 0 0.5
+# move 202011 3 0
+# face 202011 "normal"
+# alpha 202011 1 0.5
+# mask 202011 off
+# textboxarrow 0 2
+@ハルパー
+はい、ごめんなさ――
+
+# se "SE_4100"
+# waitandnext 0.5
+
+;;//如意金箍棒がハルパーを弾き飛ばす
+# sedelay "SE_4602" 0.3
+# textwindow "close"
+# move 232 3 0
+# face 232 "normal"
+# alpha 232 1 0
+# mask 232 off
+# leftin 232 0.4
+# waitandnext 0.3
+
+# rightout 202011 0.4
+# waitandnext 0.4
+
+# voice 520311 "nyoikinkobou_c_0031"
+# alpha 202011 0 0
+# bgm "bgm035_036" 0
+# face 232 "usual"
+# textboxarrow 0 2
+# textwindow "normal"
+@如意金箍棒
+ごめんなさいね～！
+
+# voice 2020 "harpe_0037"
+# alpha 232 0 0.5
+# move 202011 3 0
+# face 202011 "sad"
+# alpha 202011 1 0.5
+# mask 202011 off
+# textboxarrow 0 2
+@ハルパー
+痛ぁい…
+何ですか、あなた
+
+# alpha 202011 0 0.5
+# move 200221 3 0
+# face 200221 "angry2"
+# alpha 200221 1 0.5
+# mask 200221 off
+# textboxarrow 0 2
+@アイムール
+想定外のキル姫を確認
+殲滅対象に登録します
+
+# alpha 200221 0 0.5
+# move 101221 3 0
+# face 101221 "angry"
+# alpha 101221 1 0.5
+# mask 101221 off
+# textboxarrow 0 2
+@アダマス
+ちょっと、そこのオバサン
+邪魔するんだったら、
+あんたもはね飛ばすわよ！
+
+# voice 520311 "nyoikinkobou_c_0005"
+# alpha 101221 0 0.5
+# move 232 3 0
+# face 232 "usual"
+# alpha 232 1 0.5
+# mask 232 off
+# textboxarrow 0 2
+@如意金箍棒
+ふふふっ
+オバサンって…誰のことかしら？
+
+# voice 2017 "yagurushi_0022"
+# alpha 232 0 0.5
+# move 201711 2 0
+# face 201711 "surprise"
+# alpha 201711 1 0.5
+# mask 201711 on
+# textboxarrow 0 1
+# move 200221 4 0
+# face 200221 "angry2"
+# alpha 200221 1 0.5
+# mask 200221 on
+@ヤグルシ
+ひゃうっ…！
+お姉ちゃん…あの人、急に…
+
+# textboxarrow 0 3
+@アイムール
+目標の脅威判定を更新します
+最大レベルの警戒で臨みましょう
+
+# alpha 201711 0 0.5
+# alpha 200221 0 0.5
+# move 232 2 0
+# face 232 "usual"
+# alpha 232 1 0.5
+# mask 232 on
+# move 100621 4 0
+# face 100621 "worry"
+# alpha 100621 1 0.5
+# mask 100621 on
+# textboxarrow 0 3
+@ナーゲルリング
+あの～…
+見ず知らずの方に手伝っていただく
+わけには…
+
+# textboxarrow 0 1
+@如意金箍棒
+安心して
+これはヒョウハちゃんと決めたこと
+だから
+
+# face 232 "angry"
+# textboxarrow 0 1
+@如意金箍棒
+この村には一歩も踏み入らせないわ

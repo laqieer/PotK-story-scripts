@@ -1,0 +1,479 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第19章 章タイトル：ワールドサルベイション
+;;第1話―６　タイトル：救済を謳う鎖
+;;6_3
+;;スクリプト最後の背景：地底世界（室内・鎖の繭無し）
+;;-----------------------------------------
+# script "lisp"
+# background "in_underground_world"
+# bgm "stop"
+;;-----------------------------------------
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 2
+# alpha 5101431 0 0
+# mask 5101431 off
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 2
+# alpha 5401721 0 0
+# mask 5401721 off
+;;ヴァナルガンド・聖鎖・サリエル 大罪ver.
+# body 5601111
+# pos 5601111 3
+# scale 5601111 0.8 0
+# layer 5601111 2
+# alpha 5601111 0 0
+# mask 5601111 off
+;;ミュルグレス・神令・トール
+# body 5104611
+# pos 5104611 3
+# scale 5104611 0.8 0
+# layer 5104611 2
+# alpha 5104611 0 0
+# mask 5104611 off
+;;如意金箍棒・神令・フリッグ
+# body 5203111
+# pos 5203111 3
+# scale 5203111 0.8 0
+# layer 5203111 2
+# alpha 5203111 0 0
+# mask 5203111 off
+;;ソロモン
+# body 5503111
+# pos 5503111 3
+# scale 5503111 0.8 0
+# layer 5503111 2
+# alpha 5503111 0 0
+# mask 5503111 off
+;;魔獣
+# body 806158
+# pos 806158 3
+# scale 806158 0.8 0
+# layer 806158 2
+# alpha 806158 0 0
+# mask 806158 off
+;;-----------------------------------------
+;;---------------------------------------------
+;;■ティルフィング
+;;//立ち絵：ティルフィング・擬彩
+;;■ソロモン
+;;//立ち絵：ソロモン・聖鎖・アテナ（IN編）
+;;■ヴァナルガンド
+;;//立ち絵：ヴァナルガンド・聖鎖・サリエル（大罪ver.）
+;;■ミュルグレス
+;;//立ち絵：ミュルグレス・神令・トール
+;;■如意金箍棒
+;;//立ち絵：如意金箍棒・神令・フリッグ
+;;■スイハ
+;;//立ち絵：スイハ・擬装・セイバー
+;;■ビコウ
+;;//立ち絵：ビコウ
+;;ビコウのみの立ち絵がない場合は、立ち絵なしで問題ありません
+;;■魔獣
+;;//立ち絵：新規魔獣
+;;新規エネミーの魔獣のみで、異族は出さないでください
+;;--------------------------------------------
+;;//背景：地底世界（屋外）
+;;//バトル
+# voice 510143 "tyrufing_iz_battle_0001"
+# move 5101431 2 0
+# face 5101431 "angry"
+# alpha 5101431 1 0
+# mask 5101431 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 806158 4 0
+# alpha 806158 1 0
+# mask 806158 on
+@ティルフィング
+はぁっ！
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# se "SE_0794"
+# textboxarrow 0 3
+@魔獣
+ガアアアア…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 806158 0 0.5
+# waitandnext 0.5
+
+# move 5101431 3 0.5
+# face 5101431 "normal"
+# mask 5101431 off
+# waitandnext 0.5
+
+# bgmfile "bgm454" "BgmIntegralNoahEvent007" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+皆さん、無事ですか？
+
+# alpha 5101431 0 0.5
+# move 5503111 3 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 off
+# textboxarrow 0 2
+@ソロモン
+周辺の敵性反応は全て消失したわ
+全員、怪我の具合を――
+
+# voice 360111 "vanargand_t_0033"
+# move 5503111 2 0.5
+# mask 5503111 on
+# move 5601111 4 0
+# face 5601111 "usual"
+# alpha 5601111 1 0.5
+# mask 5601111 on
+# textboxarrow 0 3
+@ヴァナルガンド
+治療は任せて下さい
+ミュルグレスは怪我してませんか？
+
+# voice 510461 "murgleys_c_0009"
+# alpha 5503111 0 0.5
+# move 5104611 2 0
+# face 5104611 "angry"
+# alpha 5104611 1 0.5
+# mask 5104611 on
+# textboxarrow 0 1
+@ミュルグレス
+それってミュルがこの程度の連中に
+後れを取ったって言いたいの？
+
+# voice 360111 "vanargand_t_0031"
+# face 5601111 "sad"
+# textboxarrow 0 3
+@ヴァナルガンド
+ごめんなさい
+そういうつもりでは
+なかったんですけど…
+
+# voice 520311 "nyoikinkobou_c_0044"
+# alpha 5601111 0 0.5
+# move 5203111 4 0
+# face 5203111 "sad"
+# alpha 5203111 1 0.5
+# mask 5203111 on
+# textboxarrow 0 3
+@如意金箍棒
+ミュルグレスちゃん
+意地悪な言い方しないの
+
+# textboxarrow 0 1
+@ミュルグレス
+つーん
+
+# alpha 5104611 0 0.5
+# alpha 5203111 0 0.5
+# move 5601111 3 0
+# face 5601111 "happy"
+# alpha 5601111 1 0.5
+# mask 5601111 off
+# textboxarrow 0 2
+@ヴァナルガンド
+そうだ
+少し休憩しませんか？
+お茶とカステラがありますよ
+
+# voice 510461 "murgleys_c_0004"
+# alpha 5601111 0 0.5
+# move 5104611 2 0
+# face 5104611 "happy"
+# alpha 5104611 1 0.5
+# mask 5104611 on
+# textboxarrow 0 1
+# move 5203111 4 0
+# face 5203111 "sad"
+# alpha 5203111 1 0.5
+# mask 5203111 on
+@ミュルグレス
+カステラ！？
+…まあ、休んでやってもいいわよ
+
+# textboxarrow 0 3
+@如意金箍棒
+ミュルグレスちゃん…
+
+# voice 4017 "suiha_0002"
+# alpha 5104611 0 0.5
+# alpha 5203111 0 0.5
+# move 5401721 3 0
+# face 5401721 "happy"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 2
+@スイハ
+休憩なら、そこの建物に入るのは
+どうですか？
+
+# voice 510143 "tyrufing_iz_0003"
+# alpha 5401721 0 0.5
+# move 5101431 3 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+@ティルフィング
+そうですね
+見張りもしやすそうです
+
+;;//背景：地底世界（室内・鎖の繭無し）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_underground_world_room"
+# alpha 5101431 0 0
+# move 5104611 2 0
+# face 5104611 "normal"
+# alpha 5104611 1 0
+# mask 5104611 on
+# move 5601111 4 0
+# face 5601111 "happy"
+# alpha 5601111 1 0
+# mask 5601111 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 1
+# textwindow "normal"
+@ミュルグレス
+ミュルのカステラは厚めに切り
+なさいよね！
+
+# textboxarrow 0 3
+@ヴァナルガンド
+分かってますよ～
+良い子にして待ってて下さいね
+
+# voice 510143 "tyrufing_iz_0030"
+# alpha 5104611 0 0.5
+# move 5101431 2 0
+# face 5101431 "happy"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# textboxarrow 0 1
+@ティルフィング
+ヴァナルガンド、
+休憩を提案してくれて
+ありがとうございます
+
+# alpha 5101431 0 0.5
+# move 5503111 2 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# textboxarrow 0 1
+@ソロモン
+仲間と散り散りになってしまった
+せいで体力的にも精神的にも
+負荷がかかっていたの…
+
+# textboxarrow 0 1
+@ソロモン
+一度、落ち着いて今後のことを
+考える時間が必要だったわ
+
+# textboxarrow 0 3
+@ヴァナルガンド
+実は私も疲れを感じていたので、
+休みたかっただけなんですよ～
+
+# alpha 5503111 0 0.5
+# move 5101431 2 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# textboxarrow 0 1
+@ティルフィング
+私も同じだから助かりました
+それにしても…
+
+# voice 520311 "nyoikinkobou_c_0027"
+# alpha 5601111 0 0.5
+# move 5203111 4 0
+# face 5203111 "sad"
+# alpha 5203111 1 0.5
+# mask 5203111 on
+# textboxarrow 0 3
+@如意金箍棒
+なかなかフォルカスちゃん達と
+合流できないね…
+
+# voice 550311 "solomon_di_0003"
+# alpha 5101431 0 0.5
+# move 5503111 2 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# textboxarrow 0 1
+@ソロモン
+グラウに周辺探査させたから
+大まかな位置は把握できているわ
+あとは…
+
+# alpha 5503111 0 0.5
+# alpha 5203111 0 0.5
+# move 5101431 3 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+@ティルフィング
+移動するだけです
+時折、魔獣が現れますが対処は
+難しくありません…
+
+# voice 510143 "tyrufing_iz_0027"
+# face 5101431 "sad"
+# textboxarrow 0 2
+@ティルフィング
+ふぅ…
+
+# voice 360111 "vanargand_t_0022"
+# move 5101431 2 0.5
+# mask 5101431 on
+# move 5601111 4 0
+# face 5601111 "surprise"
+# alpha 5601111 1 0.5
+# mask 5601111 on
+# textboxarrow 0 3
+@ヴァナルガンド
+ティルフィング？
+具合が悪いんですか？
+
+# face 5101431 "normal"
+# textboxarrow 0 1
+@ティルフィング
+いえ、そんなはずは…
+マスターもいらっしゃいますし、
+このくらいで…
+
+# alpha 5101431 0 0.5
+# alpha 5601111 0 0.5
+# move 5401721 3 0
+# face 5401721 "sad"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 2
+@スイハ
+…………
+
+;;スイハ（独白）
+# bgmfile "bgm457" "BgmIntegralNoahEvent008" 0
+# voice 4017 "suiha_0013"
+# move 5401721 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 5401721 off
+@スイハ
+体が重い…
+それに少し眠気も…
+しっかりしないとっ…
+
+;;スイハ（独白）
+# textboxarrow 0 0
+@スイハ
+やっぱり何か変だ…
+まるで力を…力を…ええと…
+
+;;スイハ（独白）
+# textboxarrow 0 0
+@スイハ
+ええと、何だっけ…？
+考えるのも億劫に…
+
+# alpha 5401721 0 0.5
+# move 5104611 3 0
+# face 5104611 "angry"
+# alpha 5104611 1 0.5
+# mask 5104611 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ミュルグレス
+ミュル、もう動きたくなーい
+
+# voice 520311 "nyoikinkobou_c_0015"
+# alpha 5104611 0 0.5
+# move 5203111 3 0
+# face 5203111 "sad"
+# alpha 5203111 1 0.5
+# mask 5203111 off
+# textboxarrow 0 2
+@如意金箍棒
+ミュルグレスちゃん…
+そんなところに寝転がったら…
+ううん…
+
+# textboxarrow 0 2
+@如意金箍棒
+頭がボーッとする…
+どうして？
+あ…ビコウ…
+
+# textboxarrow 0 2
+@ビコウ
+ウキー…
+
+# textboxarrow 0 2
+@如意金箍棒
+寝ちゃったの？
+ワタシも眠いの…
+
+# alpha 5203111 0 0.5
+# move 5101431 3 0
+# face 5101431 "angry"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+@ティルフィング
+…いけない！
+皆さん、しっかりして下さい
+このままだと…
+
+# voice 510143 "tyrufing_iz_0015"
+# face 5101431 "sad"
+# textboxarrow 0 2
+@ティルフィング
+このままだと…
+体が動かなくなってしまいます…
+
+;;//鎖の音
+# fadein "white" 0.5
+# se "SE_6136"
+# waitandnext 0.5
+
+# voice 510143 "tyrufing_iz_0022"
+# face 5101431 "surprise"
+# textboxarrow 0 2
+@ティルフィング
+今の音は…？
+まさか、私達はすでに…
+
+# textboxarrow 0 2
+@ティルフィング
+この地底そのものが…罠？
+
+;;//倒れる音
+# se "SE_3001"
+# textwindow "close"
+# alpha 5101431 0 0.5
+# waitandnext 2

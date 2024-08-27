@@ -1,0 +1,425 @@
+;;-----------------------------------------
+;;エイプリル5_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;スイハ
+# body 401711
+# alpha 401711 0 0
+# body 44017002
+# pos 44017002 4
+# scale 44017002 0.8 0
+# layer 44017002 2
+# mask 44017002 off
+# alpha 44017002 0 0
+;;シェキナー
+# body 400711
+# pos 400711 2
+# scale 400711 0.8 0
+# layer 400711 4
+# alpha 400711 0 0
+;;ロンギヌス
+# body 300111
+# pos 300111 3
+# scale 300111 0.8 0
+# layer 300111 2
+# mask 300111 off
+# alpha 300111 0 0
+;;ロンギヌスゾンビ
+# body 900029
+# pos 900029 2
+# scale 900029 0.8 0
+# layer 900029 2
+# mask 900029 off
+# alpha 900029 0 0
+;;アスモデウス
+# body 960021
+# pos 960021 3
+# scale 960021 0.8 0
+# layer 960021 2
+# mask 960021 off
+# alpha 960021 0 0
+;;ベルゼブブ
+# body 960022
+# pos 960022 2
+# scale 960022 0.8 0
+# layer 960022 4
+# alpha 960022 0 0
+# brightness 960022 0 0
+;;ベルフェゴール
+# body 960017
+# pos 960017 4
+# scale 960017 0.8 0
+# layer 960017 2
+# mask 960017 off
+# alpha 960017 0 0
+# brightness 960017 0 0
+;;ゾンビ異族
+# body 810004
+# pos 810004 2
+# scale 810004 0.8 0
+# layer 810004 4
+# mask 810004 off
+# alpha 810004 0 0
+# brightness 810004 0.7 0
+# reversal 810004 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：洋館の地下ビフレスト社研究所の薄暗い廊下
+# textwindow "close"
+# waitandnext 0.2
+
+# background "bifrost"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# alpha 44017002 1 0
+# alpha 400711 1 0
+# waitandnext 0.3
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 4007 "shekina_0030"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@シェキナー
+…助かりました
+マスター、それにスイハ
+貴方に託して良かった…
+
+# voice 4017 "suiha_0003"
+# textboxarrow 0 3
+@スイハ
+この抑制薬があればみんなを
+ゾンビから戻すことができます
+
+# textboxarrow 0 1
+@シェキナー
+それは私がやるわ
+ただ、問題は…
+
+# textboxarrow 0 3
+@スイハ
+ええ…
+ゾンビ異族達がいる限り
+何も解決していない…
+
+# face 44017002 "usual"
+# textboxarrow 0 3
+@スイハ
+抑制薬は通過点でしかなかった！
+
+# textflame 0 0
+@
+「そう、だから行こう――」
+決意を促す
+
+# textflame 1 1
+# textboxarrow 0 3
+@スイハ
+この研究所の最深部へ！
+
+;;演出：暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# bgmfile "bgm164" "BgmPJZero001" 0
+# move 44017002 3 0
+# alpha 44017002 0 0
+# alpha 400711 0 0
+# waitandnext 0.5
+
+# se "SE_0850"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# sestop "SE_0850"
+# textflame 0 0
+# textwindow "nomal"
+@
+どのくらい走っただろうか
+今、自分達はどこにいるのだろうか
+
+# se "SE_0648"
+# textflame 0 0
+@
+「あ…っ！」
+足がもつれ、よろけてしまう
+
+# face 44017002 "normal"
+# alpha 44017002 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+マスター！
+
+# textflame 0 0
+@
+「もうここまでだ…」
+そう言って肩に当てていた手をどける
+
+# se "SE_6219"
+# face 44017002 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+その傷…っ！
+
+# textflame 0 0
+@
+「さっき、やられたみたいだ」
+そして告げる、自分を置いていけ、と
+
+# face 44017002 "sad"
+# voice 4017 "suiha_0009"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+そんな、そんなの…
+私にはできません…
+
+# move 44017002 4 0.5
+# alpha 810004 1 0.5
+# textboxarrow 0 1
+@ゾンビ異族
+グォォォォ…
+
+# se "SE_6217"
+# face 44017002 "angry"
+# textboxarrow 0 3
+@スイハ
+もう、ここまで…
+マスター、私が支えます
+走りましょう！
+
+# bgm "stop"
+# se "SE_4817"
+# fadein "white" 0.5
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# se "SE_6220"
+# textboxarrow 0 1
+@ゾンビ異族
+グゥアッ！
+
+;;演出：ゾンビ異族out
+# move 810004 1 0.4
+# alpha 810004 0 0.4
+# textwindow "close"
+# waitandnext 0.5
+
+# face 44017002 "usual"
+# voice 4017 "suiha_0022"
+# move 44017002 3 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+@スイハ
+えっ…
+
+# textboxarrow 0 2
+@スイハ
+あ、あなたは――
+
+# voice 3001 "ronginusu_0004"
+# alpha 44017002 0 0.3
+# face 300111 "angry"
+# alpha 300111 1 0.3
+# textboxarrow 0 2
+@ロンギヌス
+よくここまで辿り着けましたね
+私が来たからにはもう大丈――
+
+# face 44017002 "usual"
+# move 300111 2 0.5
+# move 44017002 4 0
+# layer 44017002 4
+# mask 44017002 on
+# alpha 44017002 1 0.3
+# textboxarrow 0 3
+@スイハ
+…あなたは一体、何なのですか？
+
+;;ロンギヌスゾンビ
+# bgmfile "bgm168" "BgmPJZero001" 0
+# alpha 300111 0 1
+# alpha 900029 1 1
+# textboxarrow 0 0
+# waitandnext 1.5
+
+# imagescale 0 1.5 0
+# textboxarrow 0 1
+@ロンギヌス？
+ウフフ、さすがね
+ここまで来られるくらいだと
+警戒心も鍛えられちゃったのかしら♪
+
+;;アスモデウス
+# move 900029 3 0.5
+# move 44017002 5 0.5
+# alpha 44017002 0 0.3
+# textboxarrow 0 0
+# waitandnext 0.8
+
+# imagealpha 0 0.8 1
+# imagepos 0 0 0
+# waitandnext 1
+
+# alpha 900029 0 1.5
+# alpha 960021 1 1.5
+# waitandnext 1.5
+
+# imagealpha 0 0 1
+# waitandnext 1
+
+# textboxarrow 0 2
+@ロンギヌス？
+欲望を解放しちゃえば
+そんなこと考えなくてもいいのに～？
+
+# face 44017002 "normal"
+# move 960021 2 0.5
+# move 44017002 4 0.5
+# alpha 44017002 1 0.3
+# textboxarrow 0 3
+@スイハ
+…改めて聞きます
+あなたは何なのですか？
+
+# voice 8034 "asmodeus_0004"
+# textboxarrow 0 1
+@ロンギヌス？
+私は飽くなき悦楽の探求者
+《色欲》の王、アスモデウスよ♪
+
+# face 44017002 "angry"
+# textboxarrow 0 3
+@スイハ
+アスモデウス…
+悪魔、アスモデウス！
+
+# face 44017002 "usual"
+# textboxarrow 0 3
+@スイハ
+なるほど、この事態には
+悪魔が関わっていたというのですね…
+
+# textboxarrow 0 3
+@スイハ
+ビフレスト社も…
+悪魔が神々の架けた
+虹の橋の名を騙るなんて
+
+# face 960021 "happy"
+# voice 8034 "asmodeus_0020"
+# textboxarrow 0 1
+@アスモデウス
+ウフフ、そんな虹の橋が
+どうして『ぐらつく道』なんて
+呼ばれているのか、考えたことあるぅ？
+
+# face 960021 "normal"
+# textboxarrow 0 1
+@アスモデウス
+ま、それはそうと
+ちょっとやりすぎちゃってぇ
+暴走状態を制御できなかったのよ～
+
+# voice 8034 "asmodeus_0028"
+# textboxarrow 0 1
+@アスモデウス
+だからさぁ？
+私だけでここまで来るの面倒だし
+あなたに頑張ってもらっちゃった♪
+
+# face 960021 "happy"
+# textboxarrow 0 1
+@アスモデウス
+抑制薬まで見つけちゃうのは
+想定外だったんだけど…ねっ
+
+;;ベルフェゴール・ベルゼブブ
+# alpha 960021 0 0.3
+# alpha 44017002 0 0.3
+# alpha 960022 1 0.5
+# alpha 960017 1 0.5
+# textboxarrow 0 3
+@？？？
+道理で小ネズミと
+仲良く遊んでいたのね
+
+# textboxarrow 0 1
+@？？？
+キャキャ、キャキャキャキャ！
+
+# face 960021 "normal"
+# move 960021 3 0
+# alpha 960021 1 0.3
+# alpha 960022 0 0.5
+# alpha 960017 0 0.5
+# textboxarrow 0 2
+@アスモデウス
+あら、
+ベルフェゴール、ベルゼブブ
+お迎え？
+
+# alpha 960021 0 0.5
+# alpha 960022 1 0.5
+# face 960022 "happy"
+# alpha 960017 1 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# voice 8031 "belphegor_0033"
+# brightness 960022 1 0.5
+# brightness 960017 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 3
+@ベルフェゴール
+ちょっとね
+手癖の悪い小ネズミを始末しようかと
+
+# voice 8035 "beelzebub_0038"
+# textboxarrow 0 1
+@ベルゼブブ
+キャキャ！
+
+# voice 8034 "asmodeus_0006"
+# alpha 960021 1 0.3
+# alpha 960022 0 0.3
+# alpha 960017 0 0.3
+# textboxarrow 0 2
+@アスモデウス
+あら、奇遇ね
+私もそのつもりだったの
+
+# face 44017002 "sad"
+# voice 4017 "suiha_0037"
+# alpha 960021 0 0.3
+# move 44017002 3 0
+# mask 44017002 off
+# alpha 44017002 1 0.3
+# textwindow "moya"
+# textboxarrow 0 0
+@スイハ
+マスターを庇いながら…
+
+# face 44017002 "angry"
+# textwindow "nomal"
+# textboxarrow 0 2
+@スイハ
+いいえ、私は諦めない！
+
+# fadeout "black" 1
+# waitandnext 1

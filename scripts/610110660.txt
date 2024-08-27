@@ -1,0 +1,574 @@
+;;-----------------------------------------
+;;ファンキル学園
+;;ED
+;;-----------------------------------------
+# script "lisp"
+# bgm "bgm002" 0
+# background "bg_black"
+;;-----------------------------------------
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 3
+# mask 0 off
+# alpha 0 0 0
+;;マサムネ
+# body 101
+# pos 101 3
+# scale 101 0.8 0
+# layer 101 4
+# mask 101 off
+# alpha 101 0 0
+;;ティルフィング
+# body 101491
+# pos 101491 3
+# scale 101491 0.8 0
+# layer 101491 3
+# mask 101491 off
+# alpha 101491 0 0
+;;ダグダ
+# body 200651
+# pos 200651 3
+# scale 200651 0.8 0
+# layer 200651 3
+# mask 200651 off
+# alpha 200651 0 0
+;;メギド
+# body 500621
+# pos 500621 3
+# scale 500621 0.8 0
+# layer 500621 4
+# mask 500621 off
+# alpha 500621 0 0
+;;芭蕉扇
+# body 81
+# pos 81 3
+# scale 81 0.8 0
+# layer 81 3
+# mask 81 off
+# alpha 81 0 0
+;;フライクーゲル
+# body 126
+# pos 126 3
+# scale 126 0.8 0
+# layer 126 3
+# mask 126 off
+# alpha 126 0 0
+;;ウコンバサラ
+# body 201021
+# pos 201021 3
+# scale 201021 0.8 0
+# layer 201021 3
+# mask 201021 off
+# alpha 201021 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;【エンディング】
+;;背景：黒バック
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+;;モノローグ
+# textflame 0 0
+# textwindow "nomal"
+@
+ニューマスター像が設置された
+翌日のこと…
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：校門（朝）
+# background "schoolgate_morning"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_6505"
+# emotionbody 1000 3 126 -10 210
+# effectpattern 1000 2 3
+# effectstart 1000
+# alpha 126 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 126 "normal"
+# voice 5002 "furaikugeru_0004"
+@フライクーゲル
+フンフフンフフ～ン♪
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5002 "furaikugeru_0020"
+@フライクーゲル
+昨日はハードだったけど、
+なんだかんだで
+ヘァピィな一日だったなぁ♪
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+今日もまた、ヘァピィな気分で
+過ごせたらいいな！
+
+# effectskip 1000
+# se "SE_6500"
+# emotionbody 1001 1 126 10 270
+# effectpattern 1001 1 0
+# effectstart 1001
+# textflame 1 1
+# textboxarrow 0 2
+# face 126 "surprise"
+@フライクーゲル
+あっ！
+マスターっ！
+…と、芭蕉扇
+
+;;ＳＥ：タッタッタッ（フライクーゲルが走る音）
+# alpha 126 0 0.5
+# se "SE_5575"
+# textwindow "close"
+# waitandnext 1
+
+# move 126 2 0
+# mask 126 on
+# alpha 126 1 0.5
+# move 81 4 0
+# mask 81 on
+# alpha 81 1 0.5
+# face 81 "surprise"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 126 "normal"
+# voice 5002 "furaikugeru_0002"
+@フライクーゲル
+グッモ～ニ～ン☆
+どうしたの、
+こんなところでストップして？
+
+# bgm "bgm005" 0
+# textflame 0 0
+@マスター
+……
+
+# textflame 1 1
+# textboxarrow 0 3
+@芭蕉扇
+……
+
+# se "SE_6525"
+# emotionbody 1002 11 126 -90 220
+# effectpattern 1002 2 0
+# effectstart 1002
+# textflame 1 1
+# textboxarrow 0 1
+# face 126 "surprise"
+# voice 5002 "furaikugeru_0022"
+@フライクーゲル
+…あれ？
+な…ななっ、なにこれぇっ！？
+
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 1
+@フライクーゲル
+ニューマスター像が――
+黒焦げになってるーーーっ！！
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：体育館
+# background "gymnasium"
+# alpha 126 0 0
+# alpha 81 0 0
+# waitandnext 0.2
+
+;;ＳＥ：ざわざわざわ…（生徒たちのざわめき）
+# se "SE_0902"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 0 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 0 "sad"
+@デュリン
+え～…今日は皆さんに、
+お知らせと謝罪があります…
+
+# textflame 1 1
+# textboxarrow 0 2
+@デュリン
+昨日から設置してた
+ニューマスター像なんだけど
+
+# bgm "stop"
+# textflame 1 1
+# textboxarrow 0 2
+# face 0 "happy"
+@デュリン
+いろいろあって、
+間違えて燃やしちゃいました～
+…てへっ♪
+
+;;モノローグ
+# textflame 0 0
+@
+シーーーーーン…
+
+# bgm "bgm006" 0
+# se "SE_6517"
+# emotionbody 1003 9 0 10 100
+# effectpattern 1003 6 0
+# effectstart 1003
+# textflame 1 1
+# textboxarrow 0 2
+# face 0 "worry"
+# voice 9999 "durin_0042"
+@デュリン
+え、ええっとね？
+ほら、もうすぐ夏になるじゃない？
+
+# textflame 1 1
+# textboxarrow 0 2
+@デュリン
+夏と言えば花火！
+ってわけで、一足先に
+夏気分を楽しもうとしたら―
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9999 "durin_0008"
+@デュリン
+花火の火が燃え移っちゃって…
+こういう結果に
+なっちゃいました！
+
+# effectskip 1003
+# alpha 0 0 0.5
+# textflame 0 0
+@マスター
+よかった
+これで僕の銅像が
+人目に晒されなくてすむよ
+
+# move 81 3 0
+# mask 81 off
+# alpha 81 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 81 "sad"
+# voice 5008 "bashosen_0028"
+@芭蕉扇
+燃えてなくなるなら
+やはり私が貰うべきでしたわ…
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：廊下
+# background "corridor_daytime"
+# alpha 81 0 0
+# waitandnext 0.2
+
+;;ト書き：朝礼が終わり、一緒に話しながら歩くフライクーゲル・マサムネ・ウコンバサラの３人
+;;※マスターもいます
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 126 1 0
+# mask 126 on
+# alpha 126 1 0.5
+# face 126 "sad"
+# move 101 3 0
+# mask 101 on
+# alpha 101 1 0.5
+# move 201021 5 0
+# mask 201021 on
+# alpha 201021 1 0.5
+# face 201021 "normal"
+# textflame 0 0
+# textwindow "nomal"
+@マスター
+……
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5002 "furaikugeru_0015"
+@フライクーゲル
+オォーウ…ホワァイ…
+なぜこんなことに…
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1001 "masamune_0002"
+@マサムネ
+そう気を落とすな
+…たしかに衝撃的な
+光景ではあったが…
+
+# textflame 1 1
+# textboxarrow 0 1
+@フライクーゲル
+あんなにがんばって作ったのに…
+みんなも、ベリィダンディだって
+褒めてくれたのに…
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 2010 "ukonbasara_0008"
+@ウコンバサラ
+げ、元気出して！
+私のペンダントあげるから！
+
+# textflame 1 1
+# textboxarrow 0 2
+@マサムネ
+今日は早退して、
+家で存分に静養するといい
+
+# textflame 1 1
+# textboxarrow 0 1
+@フライクーゲル
+サンクス、２人とも…
+私は今とっても
+ヘァピィな気分だよ…
+
+# textflame 0 0
+@マスター
+えっと…２人は
+僕への慰めの言葉は
+ないのかな？
+
+# textflame 0 0
+@マスター
+像とはいえ、自分の姿をしたものが
+黒焦げになって気味が悪いんだけど…
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1001 "masamune_0028"
+@マサムネ
+…そういえば、今更ながら
+気になったことがあるのだが
+
+# textflame 1 1
+# textboxarrow 0 2
+@マサムネ
+そなたはなぜ昨日、
+トイレの個室などに隠れて
+像を作っていたのだ？
+
+# textflame 1 1
+# textboxarrow 0 2
+@マサムネ
+作業に適した場所なら
+他にいくらでもあっただろうに
+
+# se "SE_6502"
+# emotionbody 1007 2 126 10 260
+# effectpattern 1007 1 1
+# effectstart 1007
+# textflame 1 1
+# textboxarrow 0 1
+# face 126 "surprise"
+# voice 5002 "furaikugeru_0023"
+@フライクーゲル
+…ホワァット？
+
+# bgm "stop"
+# textflame 1 1
+# textboxarrow 0 1
+@フライクーゲル
+トイレット？　なんのこと？
+そんなところで作業してないけど
+
+# se "SE_6501"
+# emotionbody 1008 1 201021 10 260
+# effectpattern 1008 2 0
+# effectstart 1008
+# textflame 1 1
+# textboxarrow 0 3
+# face 201021 "surprise"
+# voice 2010 "ukonbasara_0022"
+@ウコンバサラ
+えっ？
+
+# bgmfile "bgm373" "BgmGakuen005" 0
+# textflame 1 1
+# textboxarrow 0 1
+@フライクーゲル
+朝に空き教室を出てからは、
+ずっとアウトサイドにいたよ？
+
+# textflame 1 1
+# textboxarrow 0 1
+@フライクーゲル
+ペイントもしなきゃだったし…
+トイレットなんて狭い場所で
+やろうとは思わないよ～
+
+# textflame 0 0
+@マスター
+木くずでトイレ詰まったら
+困るしね
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 126 "normal"
+# voice 5002 "furaikugeru_0006"
+@フライクーゲル
+イエス
+マスターの言う通りだよ
+
+# se "SE_6501"
+# emotionbody 1009 1 101 10 300
+# effectpattern 1009 2 0
+# effectstart 1009
+# textflame 1 1
+# textboxarrow 0 2
+# face 101 "angry"
+# voice 1001 "masamune_0022"
+@マサムネ
+ま、待てっ！
+では拙者たちが聞いた
+あの笑い声は…？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 126 "surprise"
+# voice 5002 "furaikugeru_0022"
+@フライクーゲル
+笑い声？　オゥ！
+それって噂の
+“キル子さん”じゃない？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 201021 "sad"
+# voice 2010 "ukonbasara_0015"
+@ウコンバサラ
+き…キル子、さん…
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1001 "masamune_0028"
+@マサムネ
+…ドアを開けたら、
+全身をバラバラに
+斬り刻まれる、だったな…？
+
+# se "SE_6505"
+# emotionbody 1010 3 126 0 200
+# effectpattern 1010 2 3
+# effectstart 1010
+# textflame 1 1
+# textboxarrow 0 1
+# face 126 "normal"
+# voice 5002 "furaikugeru_0006"
+@フライクーゲル
+イェス！
+ザッツラ～イト☆
+
+# effectskip 1010
+# alpha 126 0 0.5
+# move 101 2 0.5
+# move 201021 4 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 101 "normal"
+# voice 1001 "masamune_0002"
+@マサムネ
+なあ、ウコンバサラ
+あれはもしや本物の悪霊、
+だったのだろうか…？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 2010 "ukonbasara_0008"
+@ウコンバサラ
+あ、あはは…
+どうだろうね～…？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1001 "masamune_0004"
+@マサムネ
+ふふ、面白い
+動くマスター像を斬れなかったから、
+力を持て余していたところだ
+
+# textflame 0 0
+@マスター
+え？
+動くマスター像、
+斬る気だったの？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1001 "masamune_0007"
+@マサムネ
+よし、
+そのキル子さんとやらを
+逆に斬ってやろう
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 201021 "surprise"
+@ウコンバサラ
+ええー
+危ないからやめなよ
+
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+何を言っている
+危ない相手にこそ
+挑む価値があるというものだ
+
+# alpha 101 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+# move 201021 3 0.5
+# mask 201021 off
+# se "SE_6513"
+# emotionbody 1011 8 201021 -80 250
+# effectpattern 1011 1 0
+# effectstart 1011
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 201021 "sad"
+# voice 2010 "ukonbasara_0027"
+@ウコンバサラ
+はあ…
+もう、怪談はコリゴリだよ
+
+# fadeout "black" 3
+# waitandnext 3.5

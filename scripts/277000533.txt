@@ -1,0 +1,214 @@
+;;-----------------------------------------
+;;海上編3-3
+;;-----------------------------------------
+# script "lisp"
+# background "sea_floor_beach_day"
+# bgm "stop"
+;;-----------------------------------------
+;;にょい
+# body 2203111
+# pos 2203111 2
+# scale 2203111 0.8 0
+# layer 2203111 3
+# alpha 2203111 0 0
+;;ふぉる
+# body 2301821
+# pos 2301821 4
+# scale 2301821 0.8 0
+# layer 2301821 3
+# alpha 2301821 0 0
+;;そろもん
+# body 2503121
+# pos 2503121 3
+# scale 2503121 0.8 0
+# layer 2503121 2
+# alpha 2503121 0 0
+;;-----------------------------------------
+;;背景：砂浜
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# serif 1
+# textwindow "nomal"
+@異族
+グゥウ…
+
+;;演出：異族倒れる
+# se "SE_3001"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# alpha 2203111 1 0.5
+# alpha 2301821 1 0.5
+# serif 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 2301821 "sad"
+# face 2203111 "normal"
+@如意金箍棒
+…………
+
+# textflame 1 1
+# textboxarrow 0 3
+@フォルカス
+…………
+
+# bgmfile "bgm376" "BgmSeaEventBattle004" 0
+# alpha 2203111 0 0.5
+# alpha 2301821 0 0.5
+# mask 2503121 off
+# alpha 2503121 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2503121 "usual"
+@ソロモン
+グラウ、もういいわよ
+もどってきて
+
+# move 2503121 4 0.5
+# mask 2503121 off
+# alpha 2203111 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 520311 "nyoikinkobou_c_0008"
+@如意金箍棒
+ソロモンちゃん、強いのね？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 250312 "solomon_lo_0003"
+@ソロモン
+かれらのこうげきは、
+たんちょうで、かくいつてきよ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 2503121 "happy"
+@ソロモン
+こうどうパターンをぶんせきすれば、
+こうりつてきなせんぽうを
+おのずとみちびきだせるの
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 2203111 "happy"
+# voice 520311 "nyoikinkobou_c_0005"
+@如意金箍棒
+へえ…ソロモンちゃんは、
+強いだけじゃなくて
+難しい言葉も知ってるんだね
+
+# alpha 2503121 0 0.5
+# alpha 2301821 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 2301821 "happy"
+# voice 530181 "forcas_c_0004"
+@フォルカス
+私達の保護者は頼もしいですね
+
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+フフフッ、本当にね
+
+;;演出：可能であれば地響きや噴火の音
+# se "SE_0637"
+# sedelay "SE_5215" 2
+# shake 0 1
+# bgm "bgm005" 0
+# textflame 1 1
+# textboxarrow 0 3
+# face 2301821 "angry"
+# voice 530181 "forcas_c_battle_0005"
+@フォルカス
+…ソロモン、如意金箍棒！
+伏せて！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 2203111 "sad"
+# voice 520311 "nyoikinkobou_c_0025"
+@如意金箍棒
+きゃああっ！
+な、なに？地震？
+
+# alpha 2203111 0 0.5
+# alpha 2301821 0 0.5
+# move 2503121 3 0
+# mask 2503121 off
+# alpha 2503121 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2503121 "sad"
+# voice 250312 "solomon_lo_0024"
+@ソロモン
+うぅぅ…
+みんな、おおお…おちついて！
+
+# alpha 2503121 0 0.5
+;;演出：可能であれば地響きや噴火の音（フェイドアウト）
+# textwindow "close"
+# se "SE_11764"
+# sedelay "SE_5223" 1.5
+# waitandnext 3
+
+# move 2301821 3 0
+# mask 2301821 off
+# alpha 2301821 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 2301821 "usual"
+@フォルカス
+…おさまったようですね
+ふたりとも、大丈夫ですか？
+
+# alpha 2301821 0 0.5
+# alpha 2203111 1 0.5
+# move 2503121 4 0
+# mask 2503121 on
+# alpha 2503121 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 2203111 "sad"
+# face 2503121 "sad"
+# voice 250312 "solomon_lo_0032"
+@ソロモン
+うん、だいじょうぶ
+ニョイ子は？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 520311 "nyoikinkobou_c_0003"
+@如意金箍棒
+ワタシも、大丈夫
+海底で地震って、ちょっと怖いよね？
+
+# alpha 2203111 0 0.5
+# alpha 2503121 0 0.5
+# alpha 2301821 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 530181 "forcas_c_0028"
+@フォルカス
+いくつか土煙が見えますね
+崖崩れでも起きたのかも…
+
+# alpha 2301821 0 0.5
+# move 2503121 3 0
+# mask 2503121 off
+# alpha 2503121 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2503121 "usual"
+@ソロモン
+とにかくじょうほうがひつようね！
+フォルカス、ニョイ子、
+しゅっぱつするわよ！
+
+# fadeout "black" 1
+# waitandnext 1

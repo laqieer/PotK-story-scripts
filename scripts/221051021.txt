@@ -1,0 +1,296 @@
+;;-----------------------------------------
+;;ファントム オブ キル
+;;2019ハロウィン：イベントシナリオ
+;;「笑顔をくれなきゃ悪戯しちゃうぞ？」
+;;【EP1】
+;;スクリプト最後の背景：森（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgmfile "bgm071" "BgmHalloween001" 0
+;;-----------------------------------------
+;;ハロウィンマサムネ
+# body 3100121
+# pos 3100121 3
+# scale 3100121 0.8 0
+# layer 3100121 2
+# alpha 3100121 0 0
+# mask 3100121 off
+;;ハロウィンアロンダイト
+# body 3100721
+# pos 3100721 3
+# scale 3100721 0.8 0
+# layer 3100721 2
+# alpha 3100721 0 0
+# mask 3100721 off
+;;-----------------------------------------
+;;【EP1】
+# move 3100121 2 0
+# face 3100121 "usual"
+# alpha 3100121 1 0
+# mask 3100121 on
+# move 3100721 4 0
+# face 3100721 "angry"
+# alpha 3100721 1 0
+# mask 3100721 on
+# textflame 1 1
+# textboxarrow 0 1
+@ジャック
+僕ちゃんが近くの町のハロウィンを
+盛り上げようとしていたときに
+そいつ、ルタバガは現れた
+
+# textboxarrow 0 1
+@ジャック
+ルタバガは
+ハロウィン魔界に住む妖精で
+いろんな魔法を使えるんだ
+
+# face 3100721 "sad"
+# voice 310071 "arondaito_ge_0028"
+# textboxarrow 0 3
+@アロンダイト
+そんな世界
+聞いたことがありませんが…
+
+# textboxarrow 0 1
+@ジャック
+それでね
+ルタバガは魔法で
+僕ちゃんを身動きとれなくしたあと
+
+# textboxarrow 0 1
+@ジャック
+しもべたちと一緒に
+人々の衣服に取り憑いて
+
+# textboxarrow 0 1
+@ジャック
+町の人たちを
+怖がらせはじめたんだ
+
+# textboxarrow 0 1
+@ジャック
+事情を知らない町の人たちは
+悪霊のしわざだーってパニックさ
+みんな家に閉じこもっちゃった
+
+# textboxarrow 0 1
+@ジャック
+年に一度のハロウィンなんだから
+みんなで集まって
+笑い合ってほしいのに…
+
+# textboxarrow 0 1
+@マサムネ
+…
+
+# se "SE_8004"
+# voice 310011 "masamune_ge_0007"
+# face 3100121 "angry"
+# textboxarrow 0 1
+@マサムネ
+獣刻から解放されて以来
+拙者の命
+拙者の刀は
+
+# textboxarrow 0 1
+@マサムネ
+漆黒に染まった人の世を
+切り開くために使うと決めた
+
+# textboxarrow 0 1
+@マサムネ
+人を惑わす悪しき妖精め…
+許してはおけぬ！
+
+# face 3100721 "angry"
+# textboxarrow 0 3
+@アロンダイト
+みんなで笑い合って
+祭を楽しもうという気持ちは
+私にはわかりませんが…
+
+# textboxarrow 0 3
+@アロンダイト
+騎士として
+町が恐怖に包まれていくさまを
+黙って見過すわけにはいきません
+
+# textboxarrow 0 1
+@ジャック
+ルタバガを
+捜してくれるってこと？
+ありがとう！
+
+;;マサムネのグラフィックを左右にゆっくりと揺らしてください。
+# emotionbody 1001 8 3100121 80 280
+# effectpattern 1001 1 0
+# effectstart 1001
+# textboxarrow 0 1
+@ジャック
+…けど
+お嬢ちゃん方、ちょっと怖いね
+スマイル、スマーイル！
+
+;;モノローグ
+# effectskip 1001
+# textflame 0 0
+@
+マスターも小さくうなずく
+
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+共に参ろう、アロンダイト
+
+# voice 310071 "arondaito_ge_0003"
+# face 3100721 "angry"
+# textboxarrow 0 3
+@アロンダイト
+行きましょう
+か弱き人々を救うために！
+
+# textboxarrow 0 1
+@ジャック
+…ま、まぁ
+僕ちゃんからも頼むよ、リーダー
+
+# textboxarrow 0 1
+@ジャック
+ルタバガを止めて、ハロウィンに
+笑顔を取り戻してよ
+
+;;モノローグ
+# textflame 0 0
+@
+理由はどうあれ
+マサムネとアロンダイトを
+ハロウィン会場へ連れ出せそうだ
+
+;;暗転（移動）
+;;背景（道中となります。森（昼）のイメージでお願いします）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 3100121 0 0
+# alpha 3100721 0 0
+# move 3100121 3 0
+# face 3100121 "surprise"
+# alpha 3100121 1 0
+# mask 3100121 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm069_070" "BgmHalloween001" 0
+# emotionbody 1002 2 3100121 10 290
+# effectpattern 1002 1 1
+# effectstart 1002
+# voice 310011 "masamune_ge_0022"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@マサムネ
+町が見えてきたな
+…む、あれは？ 
+
+;;モノローグ
+# alpha 3100121 0 0.5
+# textflame 0 0
+@
+町の入り口の前に
+武装した集団が見える
+
+# voice 310071 "arondaito_ge_0009"
+# move 3100121 2 0
+# face 3100121 "usual"
+# alpha 3100121 1 0.5
+# mask 3100121 on
+# move 3100721 4 0
+# face 3100721 "angry"
+# alpha 3100721 1 0.5
+# mask 3100721 on
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+トレイセーマの憲兵…でしょうか？
+武器を構えているようです
+
+# textboxarrow 0 1
+@ジャック
+あれはきっと
+ルタバガのしもべたちだよ
+
+# textboxarrow 0 1
+@ジャック
+憲兵さんたちの
+兜とかに取り憑いて
+操っているんじゃないかな
+
+# face 3100721 "surprise"
+# textboxarrow 0 3
+@アロンダイト
+ハロウィンの妖精は
+物に取り憑いて
+その所有者を操れるのですか…
+
+;;マサムネのグラフィックを小さく何度かジャンプさせてください。
+# jump 3100121
+# waitandnext 0.5
+
+# jump 3100121
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@ジャック
+僕ちゃんは
+そんなことしない！
+ほかの妖精だってそうだよ
+
+# face 3100721 "sad"
+# voice 310071 "arondaito_ge_0028"
+# textboxarrow 0 3
+@アロンダイト
+では、なぜルタバガは…？
+
+;;マサムネのグラフィックを小さく何度かジャンプさせてください。
+# jump 3100121
+# waitandnext 0.5
+
+# jump 3100121
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@ジャック
+そ、それよりも！
+
+@ジャック
+しもべは他にもいると思う
+見つかって
+増援を呼ばれちゃう前に…
+
+# voice 310011 "masamune_ge_0003"
+# textboxarrow 0 1
+@マサムネ
+ふむ
+少し気を失っていてもらうか
+
+# textboxarrow 0 1
+@ジャック
+えっ？
+お嬢さん方、ちょっと
+待っ…
+
+# face 3100721 "angry"
+# textboxarrow 0 3
+@アロンダイト
+行きましょう、マサムネ！
+
+# voice 310011 "masamune_ge_0032"
+# face 3100121 "angry"
+# textboxarrow 0 1
+@マサムネ
+承知した！

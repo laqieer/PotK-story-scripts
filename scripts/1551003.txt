@@ -1,0 +1,579 @@
+;;バトル
+;;【５－５－３（バトル後）】
+# script "lisp"
+# background "005_Checkpoint"
+# bgm "bgm029" 0
+# body 24
+# pos 24 1
+# scale 24 0.8 0
+# alpha 24 1 0
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# alpha 0 1 0
+# layer 0 1
+# body 4
+# pos 4 5
+# scale 4 0.8 0
+# alpha 4 1 0
+# body 100221
+# pos 100221 4
+# scale 100221 0.8 0
+# alpha 100221 0 0
+# body 200611
+# pos 200611 2
+# scale 200611 0.8 0
+# alpha 200611 0 0
+# body 6
+# pos 6 2
+# scale 6 0.8 0
+# alpha 6 0 0
+# body 13
+# pos 13 4
+# scale 13 0.8 0
+# alpha 13 0 0
+# face 0 "angry"
+# face 4 "sad"
+# face 24 "sad"
+# voice 9999 "durin_0022"
+# textboxarrow 0 2
+@デュリン
+ヤバい！ヤバいわよ！！
+このままじゃ、オルトが！！
+
+# textboxarrow 0 1
+# voice 1014 "tyrufing_battle_0006"
+# face 24 "angry"
+@ティルフィング
+はっ！？
+危ない、トト！！伏せて！！
+
+# textboxarrow 0 3
+# fadein "white" 0.5
+# shake 1 1
+# voice 9998 "toto_0027"
+# face 4 "angry"
+@トト
+え！？
+…う、うわーっ！！！
+
+# se "SE_0618"
+# serif 1
+# textwindow "nomal"
+@変異種
+ググ…グガガ…カリ…ビト！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# face 24 "angry"
+# voice 1014 "tyrufing_0037"
+# textboxarrow 0 1
+@ティルフィング
+っ！
+へ、変異種…こんな時に！！
+
+# voice 9999 "durin_0025"
+# face 0 "worry"
+# textboxarrow 0 2
+@デュリン
+マズいわ！
+こうしてる間にもオルトは…
+ねぇ、どうすんの！？
+
+# select "オルトを助けに行く…ガードしろ！" "select_label_01" "変異種を倒すのが先決だ…急げ！" "select_label_02"
+マズいわ！
+こうしてる間にもオルトは…
+ねぇ、どうすんの！？
+
+# label "select_label_01"
+# face 0 "normal"
+@デュリン
+そうか！
+
+# labeljump "select_label_end"
+@デュリン
+警備兵の攻撃をガードするだけなら、
+“人間を傷つけてはならない”という
+第1条に反することはないわ！！
+
+# label "select_label_02"
+# voice 9999 "durin_0052"
+# face 0 "angry"
+@デュリン
+ちょっと！オルトはどうすんのよ！？
+
+# labeljump "select_label_end"
+# face 0 "angry2"
+@デュリン
+相手は、あの巡視兵団…
+ヘタすりゃ、いきなり
+処刑だってしかねないのよ！？
+
+# label "select_label_end"
+# se "SE_0617"
+# se "SE_4000"
+# serif 1
+# textboxarrow 1 0
+@変異種
+グガガガガーッ！！！
+
+# textwindow "close"
+# se "SE_4818"
+# shake 1 0.2
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_4601"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0038"
+# face 24 "angry"
+# face 4 "angry"
+# face 0 "angry2"
+@ティルフィング
+ぐ…っ、な、なんて凄まじい攻撃！
+力で圧される！！…くぅっ！！！
+
+# textboxarrow 0 3
+# voice 9998 "toto_0049"
+@トト
+ティルフィング！！
+
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0068"
+@ティルフィング
+トト！？
+…ダ、ダメよ、早く逃げて！！
+巻き込まれるわっ！！
+
+# textboxarrow 0 3
+# voice 9998 "toto_0013"
+# face 4 "angry"
+@トト
+…イヤだ
+
+@トト
+ディーンなら逃げない…
+ここで逃げたら、
+ディーンに笑われるもん！！
+
+# textboxarrow 0 2
+# voice 9999 "durin_0010"
+@デュリン
+バッ、バカ言ってんじゃないわよ！！
+また来たってば！！
+早く、逃げなさい！！
+
+# textboxarrow 0 3
+# voice 9998 "toto_0027"
+@トト
+え？
+…う、うぁ！
+…うわぁぁぁーっ！！！
+
+# bgm "stop"
+# serif 1
+# textwindow "nomal"
+# voice 9997 "deen_0031"
+@？？？
+…ったく…相変わらず、
+身の程知らずなガキだな
+
+# textboxarrow 0 3
+# face 0 "normal"
+# face 4 "normal"
+# face 24 "surprise"
+# voice 9998 "toto_0023"
+@トト
+え…？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# alpha 24 0 0.5
+# waitandnext 0.5
+
+# fadein "whtie" 0.5
+# rightin 100221 0.3
+# alpha 100221 1 0.5
+# leftin 200611 0.3
+# alpha 200611 1 0.5
+# waitandnext 1
+
+# bgm "bgm035" 0
+# serif 0
+# textwindow "nomal"
+# alpha 0 1 0.5
+# alpha 24 1 0.5
+# alpha 4 1 0.5
+# alpha 100221 0 0.5
+# alpha 200611 0 0.5
+# voice 1014 "tyrufing_0022"
+# textboxarrow 0 1
+@ティルフィング
+レ、レーヴァテイン！？ダグダ！？
+ディーン隊の…
+キラープリンセスたち！？
+
+# face 4 "angry"
+# textboxarrow 0 3
+@トト
+み、見て！
+関所の門が開いていく…！？
+
+# alpha 0 0 0.5
+# alpha 4 0 0.5
+# alpha 24 0 0.5
+# alpha 6 1 0.5
+# alpha 13 1 0.5
+# voice 9997 "deen_0008"
+# face 6 "happy"
+# face 13 "happy1"
+# textboxarrow 0 1
+@ディーン
+すんげぇバカだが…まぁ、
+逃げ出さなかっただけ褒めてやるぜ、
+クソガキ
+
+# alpha 0 1 0.5
+# alpha 4 1 0.5
+# alpha 24 1 0.5
+# alpha 6 0 0.5
+# alpha 13 0 0.5
+# voice 9998 "toto_0023"
+# face 0 "angry"
+# face 4 "smile01"
+# textboxarrow 0 3
+@トト
+ディーン！？
+
+# textboxarrow 0 2
+# voice 9999 "durin_0023"
+@デュリン
+オルトも！？
+どうして…！？
+
+# se "SE_0617"
+# serif 0
+# textwindow "close"
+# shake 1 1
+# fadein "red" 0.5
+# alpha 0 0 0.5
+# alpha 4 0 0.5
+# alpha 24 0 0.5
+# serif 1
+@変異種
+ググッ…グガガガガガガガ！！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# move 24 3 0
+# alpha 24 1 0.5
+# mask 24 off
+# voice 1014 "tyrufing_0037"
+# face 24 "angry"
+# textboxarrow 0 2
+@ティルフィング
+く…っ！レーヴァテイン！ダグダ！
+力を貸して！！
+一発で決めてみせる…行くわ！！
+
+# voice 1014 "tyrufing_0029"
+# face 24 "mad2"
+@ティルフィング
+…うぁぁぁぁぁーっ！！！
+
+# se "SE_9077"
+# textboxarrow 0 0
+# shake 1 1
+# alpha 24 0 0.5
+# mask 24 on
+# fadein "white" 0.5
+# waitandnext 1
+
+# move 4 3 0
+# alpha 4 1 0.5
+# voice 9998 "toto_0006"
+# face 4 "smile01"
+# textboxarrow 0 2
+@トト
+や、やった…！
+
+# move 4 2 0.5
+# alpha 13 1 0.5
+# textboxarrow 0 3
+# face 13 "angry"
+@オルト
+警備兵、巡視兵団、共に控えよ！
+その子は人民区の教会より
+招かれておる少年…
+
+@オルト
+招聘状もこうして、
+ディーン中奏官が持参された！
+彼らの入域に、なんら問題はない！
+
+# move 13 5 0.5
+# move 4 1 0.5
+# move 0 3 0
+# alpha 0 1 0.5
+# textboxarrow 0 2
+# voice 9999 "durin_0052"
+# face 0 "angry"
+# face 4 "normal"
+@デュリン
+はっ！？
+
+# textboxarrow 0 1
+@トト
+きょ、教会に招かれてるって…
+僕のこと！？
+
+# textboxarrow 0 2
+# voice 9999 "durin_0023"
+@デュリン
+どどど、どういうことよ！？
+ちょっと…
+アンタ、説明しなさいよっ！？
+
+# move 6 3 0
+# alpha 0 0 0.5
+# alpha 13 0 0.5
+# alpha 4 0 0.5
+# alpha 6 1 0.5
+# mask 6 off
+# voice 9997 "deen_0031"
+# face 6 "angry"
+@ディーン
+うっせーな…
+ちったぁスマートに出来ねぇのかよ？
+
+# face 6 "normal"
+@ディーン
+人民区の教会に事情を話して、
+招聘状を出してもらったんだ
+
+# face 6 "happy"
+# voice 9997 "deen_0008"
+@ディーン
+人民区内部からの要請なら、
+関所も無視出来ねぇだろ？
+
+# textboxarrow 0 3
+# mask 6 on
+# move 6 2 0.5
+# move 4 4 0
+# alpha 4 1 0.5
+# face 4 "smile02"
+@トト
+…ディーン！
+
+# textboxarrow 0 1
+# voice 9997 "deen_0048"
+# face 6 "sad"
+@ディーン
+なんだ、その熱い眼差し…
+気色悪ぃな？
+
+# voice 9997 "deen_0008"
+# face 6 "normal"
+@ディーン
+俺はティルフィングのために
+やっただけだ…
+勘違いしてんじゃねぇぞ、クソバカ
+
+@ディーン
+…おい、新米
+…こっちは、下げたくもねぇ頭を、
+下げてきてやったんだ
+
+# face 6 "happy"
+@ディーン
+…これで、貸し借りなしだぜ？
+
+# textboxarrow 0 2
+# move 0 3 0
+# alpha 0 1 0.5
+# mask 0 off
+# alpha 6 0 0.5
+# alpha 4 0 0.5
+# voice 9999 "durin_0071"
+# face 0 "usual"
+@デュリン
+ディーン…
+
+# textboxarrow 0 2
+# alpha 0 0 0.5
+# mask 0 on
+# move 13 3 0
+# alpha 13 1 0.5
+# mask 13 off
+# face 13 "normal"
+@オルト
+教会からの招聘状があれば、
+入域許可証は不要…
+
+# face 13 "angry"
+@オルト
+この許可証は
+取り上げさせてもらうぞ？
+
+# face 13 "normal"
+@オルト
+コイツのおかげで、巡視兵団に
+マークされていたようだからな…
+
+# textboxarrow 0 1
+# move 13 4 0.5
+# move 24 2 0
+# alpha 24 1 0.5
+# voice 1014 "tyrufing_0003"
+# face 24 "surprise"
+@ティルフィング
+あ、はい…私達より…
+オルトさんは、大丈夫なんですか？
+
+# textboxarrow 0 3
+@オルト
+許可証を処分すれば問題ない
+
+# face 13 "happy1"
+@オルト
+それに…あの招聘状のおかげで
+“いわれのない罪を着せられた”と、
+むしろ軍に貸しを作れる
+
+@オルト
+…ディーン中奏官に助けられたよ
+
+# textboxarrow 0 2
+# move 13 5 0.5
+# move 24 1 0.5
+# move 6 3 0
+# alpha 6 1 0.5
+# voice 9997 "deen_0005"
+# face 6 "smile"
+@ディーン
+い、いやぁ…ハハ！
+実はすべて計算通りなんす！
+この、俺の七色の脳細胞が…
+
+# face 6 "normal"
+# face 13 "normal"
+# textboxarrow 0 3
+@オルト
+医者を…探しに行くのか…？
+
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0003"
+# face 24 "angry"
+@ティルフィング
+…はい
+
+# textboxarrow 0 3
+# face 13 "sad"
+@オルト
+簡単には見つからんと思うがな…
+耕民区と同じ…
+人民区も深刻な医者不足だ
+
+# textboxarrow 0 1
+# move 0 1 0
+# alpha 24 0 0.5
+# alpha 0 1 0.5
+# face 0 "normal"
+@デュリン
+え…？
+だって…人民区は平和なクセに、
+医者だけはやたらと…
+
+# textboxarrow 0 2
+# voice 9997 "deen_0008"
+# face 6 "sad"
+@ディーン
+…悪いニュースだ
+噂は本当だった…人民区にも、
+大量の異族が入り込んでる
+
+# textboxarrow 0 1
+# face 0 "angry"
+@デュリン
+な…っ！？
+
+# textboxarrow 0 2
+@ディーン
+しかも…中に入り込んでるのは、
+より知能の高い異族だ
+
+# voice 9997 "deen_0010"
+# face 6 "angry"
+@ディーン
+それが外城と内城に
+閉鎖された空間にいやがる…
+余計、深刻だぜ
+
+@ディーン
+あまり公には
+されてねぇみたいだけどな
+
+# face 13 "normal"
+# textboxarrow 0 3
+@オルト
+現在、人民区は
+厳戒態勢が敷かれている状況だ
+
+@オルト
+クレナイに向かう余裕のある医者など
+そうはいないと思うが…
+
+# textboxarrow 0 1
+# alpha 0 0 0.5
+# alpha 24 1 0.5
+# layer 24 3
+# face 24 "angry"
+@ティルフィング
+見つけます！
+
+# face 13 "angry"
+# textboxarrow 0 3
+@オルト
+…っ！
+
+# textboxarrow 0 1
+@ティルフィング
+それでも…必ず見つけ出します！
+助けを待つ人々のために…
+お父様のためにも！！
+
+# face 13 "happy1"
+# textboxarrow 0 3
+@オルト
+そうか…
+フン…近いうちに、
+伝えておくとしよう…あの偏屈にも
+
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0022"
+# face 24 "surprise"
+@ティルフィング
+！！
+
+@ティルフィング
+オルトさん…学者さまに会いに！？
+
+# face 13 "angry"
+# textboxarrow 0 3
+@オルト
+…さぁ、門は開かれた！
+行くがいい…ここから先が、
+人民区サフランだ！

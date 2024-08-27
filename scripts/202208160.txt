@@ -1,0 +1,421 @@
+;;-----------------------------------------
+;;SEA夏2_6_0
+;;-----------------------------------------
+# script "lisp"
+# background "SEAsummer_town_evening"
+# bgm "bgm002" 0
+;;-----------------------------------------
+;;浴衣ミーミル
+# body 318
+# pos 318 2
+# scale 318 0.8 0
+# layer 318 4
+# mask 318 off
+# alpha 318 1 0
+;;浴衣七支刀
+# body 6105111
+# pos 6105111 4
+# scale 6105111 0.8 0
+# layer 6105111 2
+# mask 6105111 off
+# alpha 6105111 1 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：水路街
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# face 318 "normal"
+# face 6105111 "normal"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+ひとまず皆さんの願い事を
+確認すべきではないでしょうか
+
+# textboxarrow 0 1
+@ミーミル
+その中に、特別な願い事が
+あるのかもしれません
+
+# voice 1051 "shichishito_0022"
+# face 6105111 "surprise"
+# textboxarrow 0 3
+@七支刀
+もしかして、その願い事を叶えれば
+皆様の願い事も叶えられるという
+展開ですかっ？
+
+# face 318 "sad"
+# textboxarrow 0 1
+@ミーミル
+そこまでは分かりませんが…
+
+# face 6105111 "normal"
+# textboxarrow 0 3
+@七支刀
+では、手分けして皆様の願い事を
+見ていきましょう！
+
+# textboxarrow 0 3
+@七支刀
+わたくしが
+お役に立てそうな願い事でしたら、
+是非、力になりたいです
+
+;;選択肢
+# select "数が多すぎない？" "select_label_01" "さすがに無理…" "select_label_01"
+特別な願い事があるのかもしれません
+皆さんの願い事を
+確認すべきではないでしょうか
+
+# label "select_label_01"
+# voice 9917 "mimir_navikan_0031"
+# textboxarrow 0 1
+@ミーミル
+…申し訳ございません
+マスター様の仰る通りです
+
+# voice 1051 "shichishito_0017"
+# face 6105111 "sad"
+# textboxarrow 0 3
+@七支刀
+そんなっ…
+わたくし、精一杯頑張りますからっ
+
+# textboxarrow 0 1
+@ミーミル
+そう仰っても…恐らく夏祭りが
+終わるまでに確認するのは
+無理ではないかと…
+
+# face 6105111 "angry"
+# textboxarrow 0 3
+@七支刀
+諦めないで下さい！
+一緒に頑張りましょう！
+
+# textboxarrow 0 1
+@ミーミル
+ええと…
+
+;;強い風が吹く
+# se "SE_9022"
+# bgm "stop"
+# textboxarrow 0 0
+# waitandnext 1
+
+# voice 9917 "mimir_navikan_0024"
+# face 318 "surprise"
+# textboxarrow 0 1
+@ミーミル
+ひゃっ…
+風が…
+
+# face 6105111 "sad"
+# textboxarrow 0 3
+@七支刀
+あうっ…
+短冊が飛ばされるところでした…
+
+# voice 1051 "shichishito_0022"
+# face 6105111 "surprise"
+# textboxarrow 0 3
+@七支刀
+あれっ？
+短冊が一枚…
+
+# bgm "bgm005" 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@子ども
+うわぁぁぁん…！
+ぼくのたんざくーっ
+
+# serif 1
+@母親
+風に飛ばされちゃったわね
+仕方ないわ…
+
+# serif 1
+@父親
+ほら、これに新しく書きなさい
+
+# serif 1
+@子ども
+えーっ…
+さっきのじゃないと、ヤだ…
+
+# serif 1
+@母親
+また書けばいいでしょ
+どれも同じよ
+
+# serif 1
+@子ども
+うぅっ…
+ヤだー…！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 318 "normal"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+先程、飛ばされた短冊は、あちらの
+少年が書いたものだったようです
+
+# textboxarrow 0 1
+@ミーミル
+ご両親は同じ内容を別の短冊に
+記せば良いと仰ってますが…
+
+# face 6105111 "sad"
+# textboxarrow 0 3
+@七支刀
+…………
+
+# face 6105111 "angry"
+# textboxarrow 0 3
+@七支刀
+分かりました！
+わたくしが見つけてきますっ
+
+# serif 1
+@子ども
+えっ…
+おねえちゃん、だれ？
+
+# face 6105111 "normal"
+# textboxarrow 0 3
+@七支刀
+ここで待っていて下さいね
+必ず見つけてきますからっ
+
+;;七支刀が走っていく
+# se "SE_5575"
+# move 6105111 2 0.5
+# scale 6105111 0.7 0.3
+# alpha 6105111 0 0.3
+# serif 1
+# textwindow "nomal"
+# serif 0
+# textwindow "close"
+# waitandnext 0.5
+
+# serif 0
+# face 318 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+七支刀さんっ
+
+# serif 1
+@父親
+えっ？
+あのっ…
+
+# voice 9917 "mimir_navikan_0028"
+# move 318 3 0.5
+# face 318 "sad"
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+@ミーミル
+ええと…
+私達はどうすれば…
+
+;;選択肢
+# select "七支刀を追おう！" "select_label_02" "短冊を探そう！" "select_label_02"
+ええと…
+私達はどうすれば…
+
+# label "select_label_02"
+# voice 9917 "mimir_navikan_0003"
+# face 318 "angry"
+# textboxarrow 0 2
+@ミーミル
+は、はい！
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 318 0 0
+# waitandnext 0.2
+
+# move 6105111 4 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 1051 "shichishito_0028"
+# move 318 1 0
+# move 6105111 3 0.5
+# scale 6105111 0.8 0.5
+# face 6105111 "sad"
+# alpha 6105111 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@七支刀
+確か、こっちに飛んでいったはず
+なんですけど…
+
+# move 318 2 0.5
+# face 318 "normal"
+# alpha 318 1 0.3
+# move 6105111 4 0.5
+# textboxarrow 0 1
+@ミーミル
+七支刀さん
+私もお手伝い致します
+
+# voice 1051 "shichishito_0030"
+# face 6105111 "happy"
+# textboxarrow 0 3
+@七支刀
+ミーミル様、マスター様、
+ありがとうございます！
+
+# textboxarrow 0 3
+@七支刀
+三人で力を合わせれば、
+きっと見つかりますよ！
+
+# textboxarrow 0 1
+@ミーミル
+短冊を目撃した位置から
+風速と方角を計算致しました
+
+# textboxarrow 0 1
+@ミーミル
+飛ばされた短冊は
+もっと西にあると推測されます
+
+# face 6105111 "normal"
+# textboxarrow 0 3
+@七支刀
+そうなんですね！
+では、急ぎましょう
+
+;;七支刀が走っていく
+# se "SE_5575"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 318 "normal"
+# face 6105111 "sad"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+この付近にある可能性が
+高いはずなのですが…
+
+# textboxarrow 0 3
+@七支刀
+どこにも落ちてませんね…
+
+# face 318 "sad"
+# textboxarrow 0 1
+@ミーミル
+人通りがあるので、
+誰かに拾われたのかもしれません…
+
+;;選択肢
+# select "木の上は？" "select_label_03" "枝に引っ掛かってたり…" "select_label_03"
+人通りがあるので、
+誰かに拾われたのかもしれません…
+
+# label "select_label_03"
+# face 318 "surprise"
+# textboxarrow 0 1
+@ミーミル
+そうです
+地面ばかり見ておりましたっ
+
+# voice 1051 "shichishito_0022"
+# face 6105111 "surprise"
+# textboxarrow 0 3
+@七支刀
+あ！
+あのイチョウの木の枝に
+ひっかかっているの、短冊です！
+
+# voice 1051 "shichishito_battle_0001"
+# face 6105111 "angry"
+# textboxarrow 0 3
+@七支刀
+わたくしが取りますね！
+え～い！
+
+# jump 6105111
+# waitandnext 1
+
+# jump 6105111
+# textboxarrow 0 1
+@ミーミル
+七支刀さん！
+浴衣姿でそんなに飛び跳ねてはっ
+
+# bgm "stop"
+# se "SE_9230"
+# voice 1051 "shichishito_0022"
+# face 6105111 "surprise"
+# textboxarrow 0 3
+@七支刀
+やった！
+取れましたっ…あ！？
+
+# textboxarrow 0 1
+@ミーミル
+七支刀さん…！
+
+;;七支刀がマスターにぶつかる
+# se "SE_9347"
+# clash 6105111
+# waitandnext 1.5
+
+# voice 1051 "shichishito_0031"
+# face 6105111 "sad"
+# textboxarrow 0 3
+@七支刀
+あうぅ…
+ごめんなさい、マスター様
+
+# voice 9917 "mimir_navikan_0039"
+# face 318 "happy"
+# textboxarrow 0 1
+@ミーミル
+さすがです、マスター様
+上手く七支刀さんを
+受け止めて下さったのですね
+
+# voice 1051 "shichishito_0030"
+# face 6105111 "happy"
+# textboxarrow 0 3
+@七支刀
+ありがとうございます！
+マスター様は、
+やっぱり頼りになりますねっ
+
+# fadeout "black" 1
+# waitandnext 1

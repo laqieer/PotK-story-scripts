@@ -1,0 +1,297 @@
+;;-----------------------------------------
+;;punkこのすばコラボイベント2018後編
+;;タイトル：『この常夏の島で冒険を！』
+;;E10戦闘前
+;;背景：ビーチ（昼）
+;;スクリプト最後の背景:sea_beach_day
+;;スクリプトID:
+;;-----------------------------------------
+# script "lisp"
+# background "sea_beach_day"
+# bgm "bgm003" 0
+;;デュリン
+# body 0
+# pos 0 3 
+# scale 0 0.8 0
+# alpha 0 1 0
+# layer 0 3
+# mask 0 off
+# face 0 "happy"
+;;水着めぐみん
+# body 2502511
+# pos 2502511 1
+# scale 2502511 0.8 0
+# alpha 2502511 1 0
+# face 2502511 "irregular"
+;;水着ダクネス
+# body 2103411
+# pos 2103411 5
+# scale 2103411 0.8 0
+# alpha 2103411 1 0
+# face 2103411 "smile"
+;;ティルフィング（アクア）
+# body 2101431
+# pos 2101431 3
+# scale 2101431 0.8 0
+# alpha 2101431 0 0
+# mask 2101431 off
+# face 2101431 "smile"
+;;カエル
+# body 808212
+# pos 808212 3
+# mask 808212 off
+# scale 808212 0.8 0
+# alpha 808212 0 0
+;;水着アクア
+# body 2601711
+# pos 2601711 3
+# scale 2601711 0.8 0
+# alpha 2601711 0 0
+# mask 2601711 off
+# face 2601711 "angry"
+;;◆背景：ビーチ（昼）-------------------------------
+# textflame 0 0
+# textboxarrow 0 2
+@
+マスター達の見事な連携によって
+砂浜に爆裂魔法が放たれ
+カエルの軍団は壊滅した…
+
+# emotionbody 1004 3 0 0 230
+# effectpattern 1004 1 0
+# effectstart 1004 1 0
+# voice 9999 "durin_0005"
+# textflame 1 1
+@デュリン
+アタシ達の勝利ね！
+討伐クエスト完了よ！
+さっそく報告に行きましょう！
+
+# voice 1034 "dakunesu_0021"
+# textboxarrow 0 3
+@ダクネス
+見事な戦いだった
+夕飯はカエル料理だな！！
+
+# voice 5025 "megumin_0005"
+# textboxarrow 0 1
+@めぐみん
+フッ…心地よい爆裂でした…
+
+# textflame 0 0
+@
+「みんな、本当によくやってくれた
+このパーティーでクエストができて
+よかった…」とマスター
+
+# alpha 0 0 0.5
+# alpha 2502511 0 0.5
+# alpha 2103411 0 0.5
+# alpha 2101431 1 0.5
+# textflame 1 1
+# voice 1014 "tyrufing_0006"
+# textboxarrow 0 2
+@ティルフィング
+ええ、よかったです
+本当に…
+
+;;大ガエル、突然立ち上がる
+# bgm "stop" 
+# se "SE_5222"
+# alpha 2101431 0 0.5
+# alpha 808212 1 0.5
+# textwindow "close"
+# waitandnext 1
+
+# se "SE_0706"
+# waitandnext 0.3
+
+# alpha 808212 0 0.5
+# alpha 2101431 1 0.5
+# face 2101431 "normal"
+# textwindow "normal"
+@ティルフィング
+えっ？
+
+;;大ガエル、ティルを画面外へ突き飛ばす
+# bgm "bgm029" 0
+# alpha 2101431 0 0.5
+# alpha 808212 1 0.5
+# leftout 808212 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 2101431 1 0.5
+# alpha 808212 1 0
+# rightin 808212 0.5
+# move 808212 3 0.5
+# waitandnext 0.5
+
+# se "SE_0715"
+# leftout 2101431 0.3
+# textwindow "normal"
+# serif 0
+# textwindow "close"
+# serif 1
+@ティルフィング
+きゃああああ！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+「ティルフィング！？
+そ、そんな…！！」
+慌てるマスター
+
+# alpha 808212 0 0.5
+# alpha 0 1 0.5
+# face 0 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@デュリン
+大ガエルが…
+ま、まだ立ち上がれたの！？
+
+;;アウトしたまま
+# serif 0
+# textwindow "close"
+# brightness 0 0.5 0.2
+# serif 1
+@ティルフィング
+すみません、マスター…
+完全に、油断を…くっ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+# alpha 0 0 0.5
+# alpha 808212 1 0.5
+@
+ティルフィングを突き飛ばした
+大ガエルは、怒りに満ちた様子で
+マスターを睨みつけた
+
+# se "SE_0706"
+@
+そしてゆっくりと
+大ガエルの口が開かれ、
+マスターへとその舌が伸びる
+
+# alpha 808212 0 0.5
+# alpha 0 1 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# voice 1014 "tyrufing_0024"
+;;アウトしたまま
+@ティルフィング
+！？
+カエルがマスターを
+食べようとしている…！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# brightness 0 1 0.2
+# voice 9999 "durin_1023"
+# textboxarrow 0 2
+@デュリン
+ま、まさか…
+このカエル、カエルのくせに
+バイブスに気づいて…！？
+
+;;アウトしたまま
+# serif 0
+# textwindow "close"
+# brightness 0 0.5 0.2
+# serif 1
+@ティルフィング
+だ、ダクネスさん！めぐみんさん！
+お願いします！
+マスターを守ってください！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# brightness 0 1 0.2
+# move 2502511 2 0
+# move 2103411 4 0
+# alpha 0 0 0.5
+# alpha 2502511 1 0.5
+# alpha 2103411 1 0.5
+# face 2103411 "angry"
+# face 2502511 "angry"
+# voice 1034 "dakunesu_0009"
+# textboxarrow 0 3
+# se "SE_5205"
+@ダクネス
+無論だ！
+このカエルめ！
+狙うなら私にしろ！
+
+# face 2103411 "sad"
+# textflame 0 0
+@
+ダクネスが大ガエルに斬りかかったり
+石つぶてを投げつけたりするが…
+残念ながらまったく当たらない
+
+# face 2502511 "sad"
+# textflame 1 1
+# voice 5025 "megumin_0011"
+# textboxarrow 0 1
+@めぐみん
+ダクネス…！
+相変わらずですね…
+…ガクリ
+
+# textflame 0 0
+@
+めぐみんはしばらく動けそうにない
+そして吹き飛んだ衝撃のためか
+ティルフィングはまだ立ち上がれない
+
+@
+大ガエルはダクネスを完全無視し
+ついにマスター（とデュリン）を
+呑み込もうと構えた
+
+# alpha 2502511 0 0.5
+# alpha 2103411 0 0.5
+# alpha 0 1 0.5
+# face 0 "cry"
+# textflame 1 1
+# textboxarrow 0 2
+@デュリン
+だ、ダメだわ！！
+食べられちゃううっ！！
+
+# textflame 0 0
+@
+「万事休すか…！！」
+そうマスターが覚悟を決めかけた時…
+
+;;バァーン！！と音と光
+;;いきなりアクア入ってきて
+# bgm "bgm035_036" 0
+# se "SE_9172"
+# fadein "white" 0.8
+# alpha 0 0 0.5
+# alpha 2601711 1 0.5
+# textflame 1 1
+# voice 6017 "akua_battle_0003"
+@アクア
+待ちなさい！
+
+@アクア
+覚悟しなさい！
+このカエル達！！

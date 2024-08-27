@@ -1,0 +1,529 @@
+;;-----------------------------------------
+;;【OP～1_1】怯えん坊のサンタクロース
+;;-----------------------------------------
+# script "lisp"
+# background "town_night_snow"
+# bgm "bgm032" 0
+;;-----------------------------------------
+;;シタ
+# body 3201621
+# pos 3201621 2
+# scale 3201621 0.8 0
+# layer 3201621 3
+# alpha 3201621 0 0
+;;シェキナー
+# body 3400721
+# pos 3400721 4
+# scale 3400721 0.8 0
+# layer 3400721 3
+# alpha 3400721 0 0
+;;与一
+# body 400551
+# pos 400551 3
+# scale 400551 0.8 0
+# layer 400551 4
+# mask 400551 off
+# alpha 400551 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "e201201_logo"
+# imagealpha 1 0 0
+# imagelayer 1 1
+# imageset 2 "snowflake"
+# imagealpha 2 0 0
+# imagelayer 2 1
+# imagescale 2 0.5 0
+# imageset 3 "snowflake"
+# imagealpha 3 0 0
+# imagelayer 3 1
+# imagescale 3 0.7 0
+# imageset 4 "snowflake"
+# imagealpha 4 0 0
+# imagelayer 4 1
+# imagescale 4 0.2 0
+# imageset 5 "snowflake"
+# imagealpha 5 0 0
+# imagelayer 5 1
+# imagescale 5 0.3 0
+;;-----------------------------------------
+;;背景；下町(夜)
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2.5
+
+# alpha 3201621 1 0.5
+# alpha 3400721 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 3201621 "normal"
+# voice 320161 "shita_t_0041"
+@シタ
+わぁーっ！
+見てくださいマスター、
+町中が輝いてます！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3400721 "normal"
+# voice 340071 "shekina_t_0004"
+@シェキナー
+ふむ…聖夜にふさわしい
+見事な光景ですね
+
+# textflame 0 0
+@
+クリスマスの夜…
+シタとシェキナーの２人は
+マスターと共に町を歩いていた
+
+# textflame 0 0
+@ 
+豪華なイルミネーションや
+広場の巨大なツリーを見て
+感動する一同
+
+# textflame 0 0
+@
+そこに…
+
+# mask 3201621 off
+# move 3201621 3 0.5
+# alpha 3400721 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3201621 "surprise"
+# voice 320161 "shita_t_0001"
+@シタ
+マスター！
+向こうの方も見て回りま…
+きゃっ！？
+
+;;ＳＥ：ドンッ！（子どもとぶつかる音）
+;;演出：画面揺れ
+# alpha 3201621 0 0.5
+# se "SE_4602"
+# shake 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+# alpha 3201621 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 320161 "shita_t_0031"
+@シタ
+い、いたたた…！
+ごめんなさい、大丈夫でしたか？
+
+# textflame 0 0
+@
+元気に走る子ども達と
+ぶつかってしまったシタ
+
+# alpha 3201621 0 0.5
+# mask 3400721 off
+# move 3400721 3 0
+# alpha 3400721 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400721 "angry"
+@シェキナー
+貴方達、いけませんよ
+そうむやみに走り回っては
+
+# textflame 1 1
+# textboxarrow 0 2
+@シェキナー
+相手に傷でも負わせたら
+どう償うつもりなのです？
+もっと節度のある行動を…
+
+# mask 3201621 on
+# move 3201621 2 0
+# alpha 3201621 1 0.5
+# mask 3400721 on
+# move 3400721 4 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+シ、シェキナーさん！
+わたしは平気ですから！
+
+# textflame 0 0
+@
+叱られて落ち込む子ども達を
+フォローするシタ
+
+# textflame 0 0
+@
+その時、
+あっちにサンタいたよー！と
+遠くから他の子どもが叫ぶ
+
+;;ＳＥ：タッタッタッ（子ども達が走っていく音）
+# se "SE_5575"
+# textflame 1 1
+# textboxarrow 0 3
+@シェキナー
+あっ、待ちなさい！
+まだ話の途中ですよ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3400721 "sad"
+# voice 340071 "shekina_t_0014"
+@シェキナー
+まったく…
+神聖なクリスマスだというのに、
+なんと騒がしいのでしょう
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3201621 "normal"
+@シタ
+ずいぶんはしゃいでましたね
+向こうでイベントでも
+やっているんでしょうか？
+
+# textflame 0 0
+@
+えっとね、この辺では
+特別なイベントがあるんだよ、
+と説明するマスター
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3400721 "surprise"
+# face 3201621 "surprise"
+@シタ
+“サンタ・キャッチ”？
+へえ、そんなのやってるんですね！
+
+# textflame 1 1
+# textboxarrow 0 3
+@シェキナー
+それはどのような
+催しなのですか？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3400721 "angry"
+# voice 340071 "shekina_t_0009"
+@シェキナー
+ふむふむ…はっ？
+サンタを追いかけて捕まえる…？
+
+# textflame 1 1
+# textboxarrow 0 3
+@シェキナー
+そのままプレゼントを奪い、
+また別のサンタを
+捕まえに行く…！？
+
+# textflame 0 0
+@
+今日くらいは任務を忘れて、
+二人も楽しもうよ
+そう言いかけたマスターだったが
+
+# textflame 1 1
+# textboxarrow 0 3
+@シェキナー
+なんです、その野蛮な催しは！？
+聖夜をなんだと
+思っているのですか！
+
+# textflame 0 0
+@
+お、落ち着いて！
+と宥めるマスター
+
+# textflame 0 0
+@
+プレゼントは奪うんじゃなくて
+もらうだけだから…と言うが、
+シェキナーは聞く耳を持たない
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3201621 "angry"
+@シタ
+サンタ・キャッチ…
+そんなイベントだったなんて…
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+…わたしも許せません！
+年に一度の聖なる日に
+なんてことを！
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+中止にしてもらうよう
+頼みにいきましょう！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 340071 "shekina_t_0013"
+@シェキナー
+ええ…さっそく首謀者を
+探さなければなりませんね
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+はい！
+行きましょう、シェキナーさん！
+
+# alpha 3201621 0 0.5
+# alpha 3400721 0 0.5
+# textflame 0 0
+@
+意見が合致するやいなや、
+一目散に走っていく二人
+
+# textflame 0 0
+@
+…２人の真面目さを忘れてたよ
+マスターは急いで
+その背中を追いかけるのだった…
+
+# bgm "stop"
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# textwindow "close"
+# background "bg_black"
+# fadein "black" 0.2
+# frameout 0 0
+# waitandnext 0.2
+
+# se "SE_5675"
+# imagealpha 2 1 0.7
+# imagepos 2 100 -200
+# waitandnext 0.8
+
+# imagealpha 2 0 0.7
+# imagealpha 3 1 0.7
+# imagepos 3 -200 50
+# waitandnext 0.8
+
+# imagealpha 3 0 0.7
+# imagealpha 2 1 0.7
+# imagepos 2 100 -100
+# imagealpha 4 1 0.7
+# imagepos 4 -100 100
+# waitandnext 0.8
+
+# imagealpha 2 0 0.7
+# imagealpha 4 0 0.7
+# imagealpha 3 1 0.7
+# imagepos 3 180 150
+# imagealpha 5 1 0.7
+# imagepos 5 -200 -100
+# waitandnext 0.8
+
+# imagealpha 3 0 0.8
+# imagealpha 5 0 0.8
+# waitandnext 0.5
+
+# fadeout "white" 1
+# waitandnext 1
+
+# bgmfile "bgm449_450" "BgmChristmas003" 0
+# fadein "white" 2
+# imagealpha 1 1 0
+# imagepos 1 0 0
+
+# fadeout "white" 1.5
+# waitandnext 1.5
+
+;;背景：下町(夜)
+# imagealpha 1 0 0
+# framein 0 0
+# background "town_night_snow"
+# fadein "white" 1.5
+# waitandnext 1.7
+
+# alpha 400551 1 0.5
+# waitandnext 0.8
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 4005 "yoichi_0002"
+@与一
+わ、わわわわっ…！
+落ち着いてください、
+みんな～っ！
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 4005 "yoichi_0015"
+@与一
+もう捕まりましたからっ！
+手を離してください～っ…！
+
+# textflame 0 0
+@
+はしゃぐ子ども達に囲まれて
+慌てふためく与一
+
+# textflame 0 0
+@
+サンタ・キャッチの
+サンタ役として、
+みんなにプレゼントを渡していく
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400551 "smile"
+# voice 4005 "yoichi_0004"
+@与一
+はい、これで最後ですっ！
+メリークリスマス～…！
+
+;;ＳＥ：タッタッタッ（子ども達の足音）
+# se "SE_5575"
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400551 "normal"
+# voice 4005 "yoichi_0028"
+@与一
+はあ…やっと解放されました！
+大変ですね、サンタ役って…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400551 "smile"
+@与一
+でも…せっかく頼まれた
+大事なお役目ですし、
+がんばらなきゃです！
+
+# textflame 1 1
+# textboxarrow 0 2
+@与一
+よーしっ！
+与一サンタ、みんなのために
+まだまだ逃げ回るのです～っ！
+
+# textflame 0 0
+@
+おー！と空に向かって
+ガッツポーズを掲げる与一
+
+# textflame 0 0
+@
+そんな彼女のもとに…
+
+;;ＳＥ：コツ、コツ…（シェキナーとシタの足音）
+# se "SE_0740"
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400551 "normal"
+# voice 4005 "yoichi_0022"
+@与一
+わっ…誰か来るのです！
+はやく逃げなきゃ～！
+…あれ？
+
+;;演出：シェキナーとシタ登場、真顔で立っている
+# alpha 400551 0 0.5
+# move 3201621 2 0
+# mask 3201621 on
+# alpha 3201621 1 0.5
+# move 3400721 4 0
+# mask 3400721 on
+# alpha 3400721 1 0.5
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 3
+@シェキナー
+…………
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+…………
+
+# alpha 400551 1 0.5
+# alpha 3201621 0 0.5
+# alpha 3400721 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 4005 "yoichi_0002"
+@与一
+あ、あの…
+どうかしたのです…？
+
+# alpha 400551 0 0.5
+# alpha 3201621 1 0.5
+# alpha 3400721 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+さっそく見つけましたね、
+シェキナーさん？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 340071 "shekina_t_0003"
+@シェキナー
+ええ、まずは彼女から
+尋問するとしましょう
+
+# alpha 400551 1 0.5
+# alpha 3201621 0 0.5
+# alpha 3400721 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@与一
+えっ？
+あ、あのっ…！？
+
+;;ＳＥ：タッタッタッ！（シタとシェキナーが迫る音）
+# se "SE_5575"
+# move 3201621 1 0
+# alpha 3201621 1 0
+# leftin 3201621 0.5
+# move 3400721 5 0
+# alpha 3400721 1 0
+# rightin 3400721 0.5
+# waitandnext 0.5
+
+;;演出：画面揺れ
+# mask 400551 on
+# shake 0 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 4005 "yoichi_0025"
+@与一
+ひぃっ！？
+だっ、誰か助けて～～～っ！！
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 400551 0 0
+# alpha 3201621 0 0
+# alpha 3400721 0 0
+# background "bg_black"
+# waitandnext 0.2

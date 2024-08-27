@@ -1,0 +1,419 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第６章 章タイトル：アナザー・コンフリクト―交錯―
+;;第1話　タイトル：地上からの来訪者
+;;6_1_9
+;;スクリプト最後の背景：ユグドラシル（夜）
+;;-----------------------------------------
+# script "lisp"
+# background "in_yggdrasill_night"
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;ダモクレス
+# body 103511
+# pos 103511 3
+# scale 103511 0.8 0
+# layer 103511 3
+# alpha 103511 0 0
+# mask 103511 off
+;;ネス
+# body 602011
+# pos 602011 3
+# scale 602011 0.8 0
+# layer 602011 2
+# alpha 602011 0 0
+# mask 602011 off
+;;アスクレピオス
+# body 600131
+# pos 600131 3
+# scale 600131 0.8 0
+# layer 600131 2
+# alpha 600131 0 0
+# mask 600131 off
+;;-----------------------------------------
+;;第1話　タイトル：地上からの来訪者
+;;//背景：ユグドラシル（夜）
+//ネスがダモクレスを治癒する
+# textwindow "close"
+# move 103511 2 0
+# face 103511 "usual"
+# alpha 103511 1 0
+# mask 103511 on
+# move 602011 4 0
+# face 602011 "normal"
+# alpha 602011 1 0
+# mask 602011 on
+# waitandnext 0.5
+
+# se "SE_4781"
+# fadein "green" 0.5
+# waitandnext 0.5
+
+# voice 6020 "ness_0003"
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@ネス
+はい、これで治療は終わりですよ
+
+# voice 1035 "damocles_0030"
+# face 103511 "happy"
+# textboxarrow 0 1
+@ダモクレス
+ありがと～、ネス！
+クレス、痛くなくなったよ～♪
+
+# textboxarrow 0 3
+@ネス
+もっと規律正しくしてくれたら、
+治療も早く終わったんですけど…
+
+# voice 1035 "damocles_0005"
+# textboxarrow 0 1
+@ダモクレス
+うんうん
+愛があれば問題ない！
+
+# voice 6020 "ness_0027"
+# textboxarrow 0 3
+@ネス
+はぁ…
+もう夜も遅いので早く就寝して
+下さいね
+
+;;//ネスが歩いていく
+# se "SE_0719"
+# textwindow "close"
+# alpha 602011 0 0.5
+# waitandnext 1
+
+# voice 6001 "asukurepiosu_0027"
+# alpha 103511 0 0.5
+# move 600131 3 0
+# face 600131 "normal"
+# alpha 600131 1 0.5
+# mask 600131 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アスクレピオス
+やっと一息つけるわ！
+みんな無茶し過ぎなのよっ
+
+# textboxarrow 0 2
+@アスクレピオス
+今回は何とか治療が間に合ったけど
+こんな戦いばかり続けていたら、
+命が幾つあっても足りないわよ！
+
+;;//ネスがやって来る
+# voice 6020 "ness_0030"
+# se "SE_0719"
+# move 600131 2 0.5
+# mask 600131 on
+# move 602011 4 0
+# face 602011 "normal"
+# alpha 602011 1 0.5
+# mask 602011 on
+# textboxarrow 0 3
+@ネス
+お疲れ様です、アスクレピオスさん
+お陰で助かりました
+
+# textboxarrow 0 1
+@アスクレピオス
+お礼なんていいわよっ
+あのバカマスターが無理させたせい
+なんだから…
+
+# textboxarrow 0 1
+@アスクレピオス
+あなただって、戦闘に参加した上に
+今まで治療をしていたんでしょ
+さっさと休みなさい！
+
+# textboxarrow 0 1
+@アスクレピオス
+治癒役が倒れたら、
+元も子もないわよ
+
+# textboxarrow 0 3
+@ネス
+それを言うならアスクレピオスさんも
+ですよ
+あなたも休息を――
+
+# face 600131 "angry"
+# textboxarrow 0 1
+@アスクレピオス
+子どもが気を遣ってんじゃないわよ！
+私のことはいいから、さっさと
+寝なさい！
+
+# face 602011 "worry"
+# textboxarrow 0 3
+@ネス
+あうぅ…
+
+;;//画面隅にダモクレスが現れる
+# alpha 600131 0 0.5
+# move 103511 2 0
+# face 103511 "usual"
+# alpha 103511 1 0.5
+# mask 103511 on
+# textboxarrow 0 1
+@ダモクレス
+じーっ…
+
+# voice 6020 "ness_0022"
+# face 602011 "surprise"
+# textboxarrow 0 3
+@ネス
+はうっ？
+な…何ですか、ダモクレス…？
+早く就寝して下さい…
+
+# voice 1035 "damocles_0006"
+# textboxarrow 0 1
+@ダモクレス
+ネスの杖、いいな～
+
+# voice 6020 "ness_0011"
+# face 602011 "angry"
+# textboxarrow 0 3
+@ネス
+えっ？
+ダメです！
+これは玩具ではありませんっ
+
+# voice 1035 "damocles_0002"
+# textboxarrow 0 1
+@ダモクレス
+クレスだって
+そのくらい分かってるよ！
+ねぇねぇ、ネス～
+
+# textwindow "close"
+# move 103511 3 0.2
+# waitandnext 0.2
+
+# textboxarrow 0 3
+# textwindow "normal"
+@ネス
+くっつかないで下さいっ
+規律違反ですよっ
+
+# voice 1035 "damocles_0036"
+# textboxarrow 0 2
+@ダモクレス
+クレスにも、その杖使わせて～
+
+# voice 6020 "ness_0012"
+# textboxarrow 0 3
+@ネス
+…それは無理です
+
+# voice 1035 "damocles_0013"
+# face 103511 "normal"
+# textboxarrow 0 2
+@ダモクレス
+え～っ…
+なんで～っ？
+
+# textboxarrow 0 3
+@ネス
+この杖はわたしにしか使えません
+そもそもダモクレスは剣しか
+使えないでしょう
+
+# face 602011 "normal"
+# textboxarrow 0 3
+@ネス
+分かりましたか？
+分かったら――
+
+# voice 1035 "damocles_0004"
+# face 103511 "happy"
+# textboxarrow 0 2
+@ダモクレス
+うんうん
+愛さえあれば問題ない！
+
+# se "SE_0683"
+# textwindow "close"
+# move 103511 2 0.2
+# waitandnext 0.2
+
+# face 602011 "angry"
+# textboxarrow 0 3
+# textwindow "normal"
+@ネス
+あ！
+いけません！
+
+# se "SE_4500"
+# waitandnext 0.5
+
+# face 103511 "normal"
+# textboxarrow 0 1
+@ダモクレス
+…あれーっ？
+ネスの杖を振っても
+何も起きないや
+
+# textboxarrow 0 3
+@ネス
+だから言ったじゃないですか！
+ダモクレスには使えないんです！
+
+# voice 1035 "damocles_0015"
+# face 103511 "sad"
+# textboxarrow 0 1
+@ダモクレス
+うーん…
+スイハもフライシュッツも
+違うの使えてたのに…
+
+# face 602011 "normal"
+# textboxarrow 0 3
+@ネス
+そのことですか…
+あれは擬装《イミテイト》と
+いうそうですよ
+
+# textboxarrow 0 3
+@ネス
+詳しいことはラグナロクに
+聞いて下さい
+
+# voice 1035 "damocles_0030"
+# face 103511 "happy"
+# textboxarrow 0 1
+@ダモクレス
+そっか～！
+ありがと、ネス♪
+
+# se "SE_0648"
+# textwindow "close"
+# move 103511 3 0.2
+# waitandnext 0.2
+
+# face 602011 "angry"
+# textboxarrow 0 3
+# textwindow "normal"
+@ネス
+抱きつかないで下さいっ
+…ああ！
+また穿いてませんねっ
+
+# textwindow "close"
+# move 103511 2 0.2
+# waitandnext 0.2
+
+# voice 1035 "damocles_0029"
+# face 103511 "usual"
+# textboxarrow 0 1
+# textwindow "normal"
+@ダモクレス
+よ～し！
+クレスもラグナロクに頼んで
+杖が使えるようにしてもらお～っと
+
+# textboxarrow 0 3
+@ネス
+待って下さい…！
+
+# face 103511 "normal"
+# textboxarrow 0 1
+@ダモクレス
+どしたの、ネス～？
+
+# face 602011 "normal"
+# textboxarrow 0 3
+@ネス
+どうして杖なのですか？
+杖は…あまり戦い向きでは
+ありませんよ
+
+# face 103511 "usual"
+# textboxarrow 0 1
+@ダモクレス
+…だって
+モヤモヤするんだ～
+
+# textboxarrow 0 3
+@ネス
+曖昧な表現ですね
+もっと正確にお願いします
+
+# voice 1035 "damocles_0028"
+# face 103511 "normal"
+# textboxarrow 0 1
+@ダモクレス
+そんなこと言われても、
+クレスにも分からないよ～っ！
+
+# voice 1035 "damocles_0015"
+# face 103511 "sad"
+# textboxarrow 0 1
+@ダモクレス
+今日の戦いで、みんないっぱい
+傷ついて…
+
+# textboxarrow 0 1
+@ダモクレス
+もちろん、誰だっていつかは死ぬよ
+クレスもそれは分かってる
+
+# textboxarrow 0 1
+@ダモクレス
+それなのに…辛そうにしてるみんなを
+見てたら…モヤモヤしてきて…
+
+# textboxarrow 0 1
+@ダモクレス
+みんなとずっと一緒にいたいな…
+死んで欲しくないなって…
+思ったの
+
+# face 103511 "usual"
+# textboxarrow 0 1
+@ダモクレス
+そしたらネスの杖が欲しくなって
+きたんだ～
+
+# voice 1035 "damocles_0004"
+# face 103511 "happy"
+# textboxarrow 0 1
+@ダモクレス
+みんなを癒すクレス！
+それも愛だよね～っ
+
+# voice 6020 "ness_0027"
+# face 602011 "surprise"
+# textboxarrow 0 3
+@ネス
+はぁ…驚きました
+ダモクレスがそんなことを
+考えていたなんて…
+
+# voice 6020 "ness_0004"
+# face 602011 "happy"
+# textboxarrow 0 3
+@ネス
+ダモクレスも成長しているのですね
+良いことです♪
+
+# face 103511 "normal"
+# textboxarrow 0 1
+@ダモクレス
+ん～？
+クレス、いつもと変わってないよ～？
+
+# se "SE_0683"
+# waitandnext 0.5
+
+# face 602011 "angry"
+# textboxarrow 0 3
+@ネス
+服をめくらないで下さい！
+そういう意味ではありません！

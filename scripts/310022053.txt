@@ -1,0 +1,209 @@
+;;-----------------------------------------
+;;SEA2章_5_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "bgm031" 0
+;;-----------------------------------------
+;;カドケウス
+# body 600431
+# pos 600431 1
+# scale 600431 0.8 0
+# layer 600431 2
+# mask 600431 off
+# alpha 600431 0 0
+;;ケーリュケイオン
+# body 600531
+# pos 600531 5
+# scale 600531 0.8 0
+# layer 600531 4
+# alpha 600531 0 0
+;;フラン
+# body 284
+# pos 284 3
+# scale 284 0.8 0
+# layer 284 5
+# mask 284 off
+# alpha 284 0 0
+;;リットゥ
+# body 6100511
+# pos 6100511 3
+# scale 6100511 0.8 0
+# layer 6100511 3
+# mask 6100511 off
+# alpha 6100511 0 0
+;;シェキナー
+# body 6400711
+# pos 6400711 4
+# scale 6400711 0.8 0
+# layer 6400711 4
+# alpha 6400711 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：屋敷（夜）
+# textwindow "close"
+# waitandnext 0.2
+
+# background "sea_room"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# face 6100511 "angry"
+# alpha 6100511 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_10585"
+# voice 1005 "ritto_0029"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@リットゥ
+はああああああああ！
+
+# voice 6004 "kadokeusu_0024"
+# alpha 6100511 0 0.3
+# face 600431 "sad"
+# face 600531 "angry"
+# alpha 600431 1 0.3
+# alpha 600531 1 0.3
+# textboxarrow 0 1
+@カドケウス
+うひゃぁ…！
+リットゥってば本気過ぎ
+
+# voice 6005 "keryukeion_0027"
+# textboxarrow 0 3
+@ケーリュケイオン
+暑苦しいよねぇ…
+ちょっと疲れちゃった
+
+# voice 4007 "shekina_0027"
+# alpha 600431 0 0.3
+# alpha 600531 0 0.3
+# move 6100511 2 0
+# face 6100511 "normal"
+# alpha 6100511 1 0.3
+# face 6400711 "sad"
+# alpha 6400711 1 0.3
+# textboxarrow 0 3
+@シェキナー
+まったく…
+相変わらず、頭が固いようですね
+
+# textboxarrow 0 3
+@シェキナー
+こうと決めたらテコでも動かない
+さすがは聖域の守護者
+ということですか…
+
+# face 6400711 "surprise"
+# textboxarrow 0 3
+@シェキナー
+それでは、私も本気で…あら？
+
+;;フランが現れる
+# move 6400711 5 0.5
+# alpha 6400711 0 0.3
+# move 6100511 1 0.5
+# alpha 6100511 0 0.3
+# face 284 "normal"
+# alpha 284 1 0.5
+# textboxarrow 0 2
+@フラン
+リットゥ？
+誰か来てるの…？
+
+# move 284 2 0.5
+# move 6100511 4 0
+# face 6100511 "angry"
+# alpha 6100511 1 0.3
+# textboxarrow 0 3
+@リットゥ
+フランっ？
+こっちに来てはいけない！
+
+# face 284 "angry"
+# textboxarrow 0 1
+@フラン
+ひっ…
+お姉さん達、誰…？
+もしかして…強盗…
+
+# voice 6004 "kadokeusu_0004"
+# alpha 284 0 0.3
+# alpha 6100511 0 0.3
+# face 600431 "normal"
+# face 600531 "normal"
+# alpha 600431 1 0.3
+# alpha 600531 1 0.3
+# textboxarrow 0 1
+@カドケウス
+違うよ～っ
+私達は怪盗
+ちっとも怖くなんかないよ～
+
+# voice 6005 "keryukeion_0004"
+# textboxarrow 0 3
+@ケーリュケイオン
+怪盗は人を傷つけたりしないんだ
+だから安心していいよ
+
+# face 284 "normal"
+# face 6100511 "normal"
+# alpha 284 1 0.3
+# alpha 6100511 1 0.3
+# alpha 600431 0 0.3
+# alpha 600531 0 0.3
+# textboxarrow 0 1
+@フラン
+そうなの…？
+酷いこと、しない…？
+
+# textboxarrow 0 3
+@リットゥ
+フラン、大丈夫だ
+私が絶対に守ってみせる
+
+# textboxarrow 0 1
+@フラン
+リットゥ…
+
+;;フランがリットゥにくっつく
+# se"SE_5200"
+# move 284 3 0.5
+# move 6400711 3 0
+# mask 6400711 off
+# textboxarrow 0 0
+# waitandnext 1
+
+# voice 4007 "shekina_0027"
+# alpha 284 0 0.3
+# alpha 6100511 0 0.3
+# face 6400711 "usual"
+# alpha 6400711 1 0.3
+# bgm "stop"
+# textboxarrow 0 2
+@シェキナー
+ふぅ…
+邪魔が入りましたね
+仕方ありません
+
+# face 6400711 "normal"
+# textboxarrow 0 2
+@シェキナー
+また出直すことにします
+それでは皆さん、ごきげんよう
+
+# textboxarrow 0 2
+@シェキナー
+月が美しく輝く夜に
+また、お会いしましょう
+
+# fadeout "black" 1
+# waitandnext 1

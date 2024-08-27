@@ -1,0 +1,172 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;インテグラルキラーズサイドストーリー
+;;第1話―３　タイトル：平和への決意
+;;1_3_3
+;;スクリプト最後の背景：街中（town）
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgm "stop"
+;;-----------------------------------------
+;;カラドボルグ
+# body 102611
+# pos 102611 3
+# scale 102611 0.8 0
+# layer 102611 2
+# alpha 102611 0 0
+# mask 102611 off
+;;芭蕉扇
+# body 500811
+# pos 500811 3
+# scale 500811 0.8 0
+# layer 500811 2
+# alpha 500811 0 0
+# mask 500811 off
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 2
+# alpha 24 0 0
+# mask 24 off
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 2
+# alpha 0 0 0
+# mask 0 off
+;;-----------------------------------------
+# voice 5008 "bashosen_0013"
+# move 102611 2 0
+# face 102611 "angry"
+# alpha 102611 1 0
+# mask 102611 on
+# move 500811 4 0
+# face 500811 "angry"
+# alpha 500811 1 0
+# mask 500811 on
+# textflame 1 1
+# textboxarrow 0 3
+@芭蕉扇
+今日はこのくらいにしておいて
+あげるっ…
+
+# textboxarrow 0 1
+@カラドボルグ
+こんなの美しくない…ダメよ！
+
+;;//二人が立ち去る
+# se "SE_0719"
+# textwindow "close"
+# alpha 102611 0 0.5
+# alpha 500811 0 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm170" "BgmPJZero_EV001" 0
+# move 24 2 0
+# face 24 "sad"
+# alpha 24 1 0.5
+# mask 24 on
+# textboxarrow 0 1
+# move 0 4 0
+# face 0 "normal"
+# alpha 0 1 0.5
+# mask 0 on
+# textwindow "normal"
+@ティルフィング
+…………
+
+# textboxarrow 0 3
+@デュリン
+ティル、大丈夫？
+
+# textboxarrow 0 1
+@ティルフィング
+平気よ…
+また説得に失敗してしまいました…
+
+# face 0 "serious2"
+# textboxarrow 0 3
+@デュリン
+しょうがないわよ
+二人とも聞く耳持たなかったんだし
+
+# voice 1014 "tyrufing_0015"
+# textboxarrow 0 1
+@ティルフィング
+どうして…
+こんなことになってしまったん
+でしょう…
+
+# textboxarrow 0 1
+@ティルフィング
+悪魔の脅威が去って、平和な世界が
+訪れると思っていたのに…
+現実は…
+
+# face 0 "normal"
+# textboxarrow 0 3
+@デュリン
+人間同士で争うことになってしまった
+わね
+
+# textboxarrow 0 3
+@デュリン
+天上世界から降りてきた奏官達が
+今度は地上の覇権を獲ろうと
+争い合ってる…
+
+# textboxarrow 0 3
+@デュリン
+地上の人達も奏官と手を組んで
+新たな国が生まれつつあるわ
+
+# voice 9999 "durin_0027"
+# textboxarrow 0 3
+@デュリン
+こんなはずじゃなかったのにね…
+
+;;//選択肢
+;;A天上世界に行こう
+;;Bやり方を変えよう
+;;C諦めるな
+# select "天上世界に行こう" "select_label_01" "やり方を変えよう" "select_label_02" "諦めるな" "select_label_03"
+こんなはずじゃなかったのにね…
+
+;;A
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 0 "serious2"
+# textboxarrow 0 3
+@デュリン
+天上世界？
+まさか、今更ラグナロク教会に
+頼るつもりじゃないでしょうね
+
+;;B
+# label "select_label_02"
+# labeljump "select_label_end"
+# textboxarrow 0 1
+@ティルフィング
+確かに今のままでは何もできそうに
+ありませんね…
+
+;;C
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 24 "angry"
+# textboxarrow 0 1
+@ティルフィング
+はい
+私は決して諦めません
+
+# voice 1014 "tyrufing_0001"
+# label "select_label_end"
+# face 24 "normal"
+# textboxarrow 0 1
+@ティルフィング
+…マスター
+ずっと考えていたことがあるんです
+聞いていただけますか？

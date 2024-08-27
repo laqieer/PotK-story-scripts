@@ -1,0 +1,202 @@
+;;-----------------------------------------
+;;SEA_19_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;マサムネ
+# body 100111
+# pos 100111 1
+# scale 100111 0.8 0
+# layer 100111 4
+# alpha 100111 0 0
+;;パラシュ
+# body 200411
+# pos 200411 2
+# scale 200411 0.8 0
+# layer 200411 4
+# alpha 200411 0 0
+;;アルテミス
+# body 400131
+# pos 400131 4
+# scale 400131 0.8 0
+# layer 400131 2
+# mask 400131 off
+# alpha 400131 0 0
+;;ロンギヌス聖鎖
+# body 3300111
+# pos 3300111 3
+# scale 3300111 0.8 0
+# layer 3300111 3
+# mask 3300111 off
+# alpha 3300111 0 0
+;;フライクーゲル聖鎖
+# body 3500211
+# pos 3500211 3
+# scale 3500211 0.8 0
+# layer 3500211 3
+# mask 3500211 off
+# alpha 3500211 0 0
+;;9thティルフィング
+# body 6101441
+# pos 6101441 2
+# scale 6101441 0.8 0
+# layer 6101441 2
+# mask 6101441 off
+# alpha 6101441 0 0
+;;レーヴァテイン
+# body 100221
+# pos 100221 4
+# scale 100221 0.8 0
+# layer 100221 4
+# alpha 100221 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 4
+;;-----------------------------------------
+;;背景：祭壇：altar
+# textwindow "close"
+# waitandnext 0.2
+
+# background "altar"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# alpha 3500211 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 350021 "furaikugeru_t_0006"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@フライクーゲル
+あははは！
+ソゥヘアピィ？
+ヘアピィしてるぅ？
+
+;;フライクーゲルが撃ちまくる
+# se "SE_0835"
+# effectbody 1000 30 0 0 0
+# effectstart 1000
+# waitandnext 1
+
+# voice 1002 "revatein_0028"
+# alpha 3500211 0 0.3
+# face 6101441 "angry"
+# alpha 6101441 1 0.3
+# face 100221 "angry"
+# alpha 100221 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+面倒臭い…
+やっぱり…斬った方が早くない？
+
+# voice 610141 "tyrufing_7th_0011"
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+いいえ、まだです！
+皆が集まれば、きっと！
+
+;;マサムネ達がやってくる
+# se "SE_5575"
+# alpha 6101441 0 0.3
+# alpha 100221 0 0.3
+# layer 3500211 2
+# alpha 3500211 1 0.3
+# textwindow "close"
+# waitandnext 1
+
+# se "SE_4000"
+# move 100111 2 0.3
+# face 100111 "angry"
+# alpha 100111 1 0.3
+# move 3500211 3 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@マサムネ
+せいっ！
+
+;;マサムネの攻撃をフライクーゲルが避ける
+# bgm "stop"
+# se "SE_5527"
+# face 3500211 "sad"
+# move 3500211 4 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@フライクーゲル
+ワッツ！？
+
+# bgmfile "bgm037_038" "BgmStory004" 0
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+遅くなった
+皆の解放を確認していた故
+
+# alpha 100111 0 0.3
+# alpha 3500211 0 0.3
+# alpha 200411 1 0.3
+# alpha 400131 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@パラシュ
+こっちも終わったよ
+
+# textflame 1 1
+# textboxarrow 0 3
+@アルテミス
+他のキル姫達には
+異族の討伐を任せています
+
+# alpha 200411 0 0.3
+# alpha 400131 0 0.3
+# move 6101441 3 0
+# mask 6101441 off
+# face 6101441 "normal"
+# alpha 6101441 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+揃いましたね
+
+# face 6101441 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+フライクーゲル
+ロンギヌス
+必ずアナタ達を助けます！
+
+# voice 350021 "furaikugeru_t_0038"
+# alpha 6101441 0 0.3
+# move 3500211 3 0
+# alpha 3500211 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+オゥ…オゥマイガー…
+わたし…全然、ヘアピィじゃ…
+
+;;フライクーゲルが倒れる
+# se "SE_0846"
+# alpha 3500211 0 0.3
+# textwindow "close"
+# waitandnext 1.5
+
+# alpha 3300111 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ロンギヌス
+…………
+
+# fadeout "black" 2
+# waitandnext 2

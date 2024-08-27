@@ -1,0 +1,313 @@
+;;【OP】背景：森の中/追われている様子のイルダーナとガブリエル。フレアディアブロの咆哮が響き渡る。
+# script "lisp"
+# background "forest"
+# bgm "bgm015" 0
+# se "SE_7003"
+# body 802301
+# pos 802301 3
+# alpha 802301 0 0
+# body 301311
+# pos 301311 4
+# scale 301311 0.8 0
+# body 502811
+# pos 502811 2
+# scale 502811 0.8 0
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5028 "gabriel_dg_1019"
+# face 502811 "angry"
+# face 301311 "sad"
+@ガブリエル
+はぁ…はぁ…
+まだ追ってきます！
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# voice 3013 "ildana_0037"
+# textboxarrow 0 3
+# face 301311 "angry"
+@イルダーナ
+…くっ！これならどう！？
+
+# serif 0
+# textwindow "close"
+# mask 802301 off
+# alpha 802301 1 0.5
+# alpha 301311 0 0.5
+# alpha 502811 0 0.5
+# waitandnext 1
+
+# se "SE_5762"
+# fadein "red" 0.5
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# waitandnext 0.2
+
+# effectbody 2346 3 0 0
+# effectstart 2346
+# waitandnext 0.2
+
+# effectbody 2347 4 0 0
+# effectstart 2347
+# waitandnext 1
+
+;;イルダーナ、フレアディアブロに威力の高い一撃を加えるがフレアディアブロに効いた様子は微塵もない
+# fadein "red" 0.5
+# alpha 802301 0 0
+# alpha 301311 1 0
+# alpha 502811 1 0
+# effectkip 2346
+# effectkip 2347
+# shake 0 0.5
+# imagealpha 0 0 0
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voicedelay 3013 "ildana_0009" 0.5
+@イルダーナ
+効いてない！？
+なんて硬さなのよ、もう！
+
+# textboxarrow 0 1
+# face 502811 "surprise"
+@ガブリエル
+イルダーナ！
+
+# voice 3013 "ildana_1012"
+# textboxarrow 0 3
+@イルダーナ
+振り向いちゃダメ！
+なにがなんでも逃げ切るよ！
+
+;;フレアディアブロの咆哮が再び響き渡る。
+# se "SE_5575"
+# textboxarrow 0 0
+# alpha 301311 0 0.5
+# alpha 502811 0 0.5
+# waitandnext 1
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@？？？？
+我が意に反する者には消えてもらう
+…焼き尽くせ、フレアディアブロ
+
+;;フレアディアブロのブレス。イルダーナは間一髪でかわすがガブリエルは風圧で吹き飛ばされてしまう
+# serif 1
+# textwindow "close"
+# alpha 802301 1 0.5
+# fadeout "white" 1.5
+# waitandnext 1.5
+# se "SE_5716"
+
+# fadein "red" 0.5
+# shake 0 0.5
+# waitandnext 1
+# se "SE_4761"
+
+# alpha 802301 0 0.5
+# alpha 301311 1 0.5
+# alpha 502811 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# voice 5028 "gabriel_dg_0025"
+# textflame 1 1
+# textboxarrow 0 1
+# face 502811 "sad"
+@ガブリエル
+きゃあっ！
+
+# textboxarrow 0 3
+# face 301311 "surprise"
+@イルダーナ
+ガブリエル！
+
+# voice 5028 "gabriel_dg_0037"
+# textboxarrow 0 1
+# face 502811 "angry"
+@ガブリエル
+…大丈夫です
+まだ走れます！
+
+;;二人を追い詰めるようなフレアディアブロの咆哮が響き渡る
+# shake 0 1
+# alpha 802301 1 0.5
+# se "SE_7003"
+# waitandnext 1
+
+# voice 3013 "ildana_0015"
+# textboxarrow 0 3
+# face 301311 "angry"
+@イルダーナ
+くっ！
+誰か…誰か助けて…っ！
+
+;;再びブレス音。緊迫感を煽った後の暗転
+# se "SE_7003"
+# bgm "stop"
+# shake 0 3
+# imageset 1 "bg_white"
+# imagealpha 1 0 0
+# imagescale 1 10 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fillrect "white" 2.6 0 1
+# waitandnext 3
+
+# imagepos 1 0 0
+# imagealpha 1 1 0
+# fillrect "white" 1 1 0
+# waitandnext 0.1
+
+;;場面転換。少しの時間経過。
+;;背景：村の外れ
+;;剣を振り、一人鍛錬をしているカノン
+# face 101914 "angry"
+# alpha 802301 0 0
+# alpha 301311 0 0
+# alpha 502811 0 0
+# background "005_Windmill"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# imagealpha 0 0 1
+# imagealpha 1 0 1
+# waitandnext 1.1
+# body 101914
+# pos 101914 3
+# mask 101914 off
+# scale 101914 0.8 0
+
+# bgm "bgm002" 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1019 "kanon_battle_0003"
+# face 101914 "usual"
+@カノン
+はっ！…たぁぁっ！
+…ふう…こういい天気だと
+鍛錬も捗るわね
+
+# textboxarrow 0 2
+# voice 1019 "kanon_0024"
+# face 101914 "surprise"
+@カノン
+もう少し頑張ってから、
+散歩でもしようかな
+って、え…？
+
+;;カノンが振り向くと、フレアディアブロがいる
+# bgmfile "bgm046_047" "BgmRisecollabo001" 0.7
+# se "SE_5774"
+# shake 0 1
+# serif 0
+# textwindow "close"
+# alpha 101914 0 0.5
+# alpha 802301 1 0.5
+# waitandnext 1.5
+
+# serif 0
+# textwindow "nomal"
+# alpha 101914 1 0.5
+# alpha 802301 0 0.5
+# voice 1019 "kanon_0023"
+# textboxarrow 0 2
+@カノン
+…いつの間に！？
+どこから現れたの！？
+
+;;フレアディアブロが咆哮とともにブレスを吐く。一面が炎に包まれる
+# serif 0
+# textwindow "close"
+# alpha 101914 0 0.5
+# alpha 802301 1 0.5
+# waitandnext 0.5
+# se "SE_5662"
+# se "SE_7001"
+
+# fadeout "white" 1.5
+# waitandnext 1.5
+
+# se "SE_5753"
+# fadein "red" 0.5
+# shake 0 0.5
+# waitandnext 1
+
+# serif 0
+# textwindow "nomal"
+# alpha 101914 1 0.5
+# alpha 802301 0 0.5
+# voice 1019 "kanon_battle_0003"
+# textboxarrow 0 2
+# face 101914 "angry"
+@カノン
+危なかった…
+このまま村に向かうつもり？
+そんなことさせない！
+
+;;村人が慌てて出てくる
+# serif 1
+# textboxarrow 1 0
+@村人
+ひえええええ！
+た、助けて！
+
+# serif 0
+# textboxarrow 0 2
+@カノン
+そこのあなた！ここは危険よ
+村の人達に避難するように伝えて！
+私が食い止めてる間に行きなさい！
+
+;;村人、いなくなる
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# mask 101914 off
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 101914 "usual"
+@カノン
+…ふう…これが元の世界だったら
+聖教騎士団のみんながいるのに…
+なんて弱気になってる場合じゃない！
+
+;;SE：剣を構え直す音
+# se "SE_5582"
+# voice 1019 "kanon_0003"
+# textboxarrow 0 2
+@カノン
+私はこの世界の
+平和を守ると決めたの
+だからここは絶対食い止めてみせるわ
+
+# voice 1019 "kanon_unit_0010"
+# textboxarrow 0 2
+# face 101914 "angry"
+@カノン
+ロードマスター・カノン、参る！

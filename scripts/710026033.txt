@@ -1,0 +1,196 @@
+;;----------------------------------------------
+;;710026033
+;;EP3後半:相対
+;;----------------------------------------------
+# script "lisp"
+# background "plain"
+# bgm "bgm005" 0
+;;メルリヌス
+# body 602411
+# pos 602411 2
+# scale 602411 0.8 0
+# layer 602411 3
+# mask 602411 on
+# alpha 602411 1 0
+# face 602411 "usual"
+;;ダーインスレイブ
+# body 102811
+# pos 102811 4
+# scale 102811 0.8 0
+# layer 102811 1
+# mask 102811 on
+# alpha 102811 0 0
+;;フォルカス
+# body 301811
+# pos 301811 4
+# scale 301811 0.8 0
+# layer 301811 2
+# mask 301811 on
+# alpha 301811 1 0
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;◆背景（大陸外縁に近い村～丘を想定）
+# textflame 1 1
+# textboxarrow 0 3
+# voice 3018 "forcas_0039"
+# chara 301811
+@フォルカス
+なるほど…その怪物…いえ
+魔獣を倒すことは、メルリヌスの
+重要な任務の一つなのですね
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 6024 "merlinus_0032"
+# face 602411 "amazed"
+# chara 602411
+@メルリヌス
+ま、そんなところね
+エキドナを倒さずに帰るなんて
+さすがに英雄失格でしょ
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 3018 "forcas_0002"
+# face 301811 "usual"
+# chara 301811
+@フォルカス
+つまり、エキドナを打倒すれば
+あなたの帰路が開ける…と
+いうことですか
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 602411 "usual"
+# voice 6024 "merlinus_0003"
+# chara 602411
+@メルリヌス
+そうよ…
+あれを見つけて倒せば
+わたしは帰れる
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 602411 "normal"
+# chara 602411
+@メルリヌス
+…ってわたしが言ったら
+あなたは信じる？
+
+# shake 0 0.3
+# textflame 1 1
+# textboxarrow 0 3
+# voice 3018 "forcas_0023"
+# face 301811 "surprise"
+# chara 301811
+@フォルカス
+えっ？
+…ええっ？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 6024 "merlinus_0004"
+# face 602411 "smile"
+# chara 602411
+@メルリヌス
+さて、どうかしら？
+ふふっ…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 301811 "worry"
+# chara 301811
+@フォルカス
+…………
+
+# alpha 301811 0 0.3
+# alpha 102811 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1028 "dainsleif_0019"
+# face 102811 "happy"
+# chara 102811
+@ダーインスレイヴ
+なんて顔をしてるんだ
+フォルカス
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 6024 "merlinus_0008"
+# face 602411 "sad"
+# chara 602411
+@メルリヌス
+だけど困ったわ…
+この世界ではわたし、英雄の力を
+思うように使えないみたいなの
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 102811 "normal"
+# chara 102811
+@ダーインスレイヴ
+…だが、魔獣は民に害なす
+わたし達共通の敵だ
+そこで…
+
+# bgmfile "bgm297" "BgmCUcollabo001" 0
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1028 "dainsleif_0004"
+# face 102811 "happy"
+# chara 102811
+@ダーインスレイヴ
+どうだ、メルリヌス？
+一緒にエキドナを探さないか？
+戦いの呼吸も合うようだし…
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 6024 "merlinus_0005"
+# face 602411 "smile"
+# chara 602411
+@メルリヌス
+うーん…そうね
+いいんじゃない？
+臨時同盟も面白そう♪
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 102811 "normal"
+# chara 102811
+@ダーインスレイヴ
+良し…手を結ぶは難くない
+異世界から来たおぬしのその風貌
+まったくの他人とも思えぬしな…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 102811 "happy"
+# voice 1028 "dainsleif_0005"
+# chara 102811
+@ダーインスレイヴ
+そうだろう、フォルカス？
+
+;;ダーインとメルリヌスOUTしてからフォルカスつぶやき
+# textwindow "close"
+# alpha 102811 0 0.5
+# alpha 602411 0 0.5
+# waitandnext 0.5
+
+# pos 301811 3
+# mask 301811 off
+# alpha 301811 1 0.5
+# waitandnext 0.5
+
+;;もわもわ
+# move 301811 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+# voice 3018 "forcas_0027"
+# face 301811 "worry"
+# chara 301811
+@フォルカス
+（本当にあの人を信用しても
+良いのでしょうか…？）

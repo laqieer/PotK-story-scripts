@@ -1,0 +1,361 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー12章
+;;第4話　タイトル：完全、覚醒
+;;4_5
+;;スクリプト最後の背景：地底
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm273" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;ナディア
+# body 136
+# pos 136 3
+# scale 136 0.8 0
+# layer 136 2
+# alpha 136 0 0
+# mask 136 off
+;;ギル
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# layer 137 2
+# alpha 137 0 0
+# mask 137 off
+;;レーヴァテイン
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# layer 3100211 2
+# alpha 3100211 0 0
+# mask 3100211 off
+;;ティファレト
+# body 3503211
+# pos 3503211 3
+# scale 3503211 0.8 0
+# layer 3503211 2
+# alpha 3503211 0 0
+# mask 3503211 off
+;;オベロン
+# body 135
+# pos 135 3
+# scale 135 0.8 0
+# layer 135 2
+# alpha 135 0 0
+# mask 135 off
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;//回想シーン
+;;//背景：ラグナロク王国城内
+# textwindow "close"
+# fadeout "white" 1
+# se "SE_0742"
+# waitandnext 1
+
+# background "pope_room"
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# voice 9970 "oberon_0002"
+# move 135 3 0
+# face 135 "normal"
+# alpha 135 1 0.5
+# mask 135 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@オベロン
+今日から城で預かることになった
+ギルだ
+この子は親を亡くしてな…
+
+;;ギル（立ち絵無し）
+# textboxarrow 0 0
+@ギル
+…………
+
+# alpha 135 0 0.5
+# move 136 3 0
+# face 136 "normal"
+# alpha 136 1 0.5
+# mask 136 off
+# textboxarrow 0 2
+@ナディア
+こんにちは
+よろしくね、ギル
+
+# voice 9969 "gill_0002"
+# textboxarrow 0 0
+@ギル
+…無理に挨拶しなくてもいいぜ
+どうせ俺はあんたの従者なんだろ？
+
+# voice 9970 "oberon_0013"
+# alpha 136 0 0.5
+# move 135 3 0
+# face 135 "angry"
+# alpha 135 1 0.5
+# mask 135 off
+# textboxarrow 0 2
+@オベロン
+ギル！
+バカを申すな！
+
+# move 135 2 0.5
+# mask 135 on
+# move 136 4 0
+# face 136 "normal"
+# alpha 136 1 0.5
+# mask 136 on
+# textboxarrow 0 3
+@ナディア
+いいんです、オベロン様
+ギル、私は従者よりも
+お友達が欲しいと思っているの
+
+;;//回想終了
+;;//背景：地底
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "underground_world_3"
+# alpha 135 0 0
+# alpha 136 0 0
+# move 137 3 0
+# face 137 "surprise"
+# alpha 137 1 0
+# mask 137 off
+# imagealpha 0 0 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ギル
+あ、やべぇ…
+一瞬、意識飛んでた…
+
+# voice 9969 "gill_0007"
+# face 137 "sad"
+# textboxarrow 0 2
+@ギル
+へへっ…
+何でこんなときに
+ナディア様のことを…
+
+# voice 9969 "gill_0040"
+# textboxarrow 0 2
+@ギル
+…こんなときだから、かもな
+痛つつつっ…
+
+# textboxarrow 0 2
+@ギル
+まずったなあ…
+煙幕の中だったのに、
+腹に一発食らうなんて…
+
+# voice 9969 "gill_0016"
+# textboxarrow 0 2
+@ギル
+血が…止まんねぇや…
+これじゃ、どれだけ逃げても
+血の跡を追われるな…
+
+# textboxarrow 0 2
+@ギル
+でも…それでいいんだ…
+あいつらが俺のこと
+追っかけてくれれば…
+
+# textboxarrow 0 2
+@ギル
+ティルフィングさんが
+回復する時間を…稼げるっ…
+うぐっ…
+
+;;//ギルが倒れる
+# se "SE_5288"
+# textwindow "close"
+# alpha 137 0 0.5
+# waitandnext 1
+
+# move 137 2 0
+# face 137 "sad"
+# alpha 137 1 0.5
+# mask 137 on
+# move 3503211 4 0
+# face 3503211 "normal"
+# alpha 3503211 1 0.5
+# mask 3503211 on
+# textboxarrow 0 3
+# textwindow "normal"
+@ティファレト
+限界のようですね
+
+# textboxarrow 0 1
+@ギル
+天使様がやって来た…
+いや、死神かな…
+
+# textboxarrow 0 3
+@ティファレト
+どうしてティルフィングを
+守ろうとするのですか？
+彼女はナディアではありませんよ
+
+# textboxarrow 0 1
+@ギル
+…………分かってるよ
+でも…ダメなんだよ…
+あんなに似てたら…
+
+# textboxarrow 0 1
+@ギル
+俺はナディア様の従者で…
+護衛で…絶対、守るって…
+ずっと…
+
+# face 3503211 "sad"
+# textboxarrow 0 3
+@ティファレト
+論理が破綻していますね
+これが共感することの害悪…
+行きすぎた自己犠牲の末路ですか
+
+# textboxarrow 0 3
+@ティファレト
+早くバイブスをこの世界から消し去り
+この子のような悲しい存在を
+生み出さないようにしなければ
+
+# voice 9969 "gill_0010"
+# face 137 "angry"
+# textboxarrow 0 1
+@ギル
+何、言ってんだ…あんた？
+俺が悲しい存在…？
+ば…バカにすんなよっ…！
+
+# face 137 "sad"
+# textboxarrow 0 1
+@ギル
+俺は…俺は、すっげえ幸せ者なんだぜ
+ただのガキで、ほんの少し前まで
+王国から出たこともなかったのに…
+
+# textboxarrow 0 1
+@ギル
+アルマス達と…色んな所を旅して…
+この世界は俺の知らない…こと
+ばっかで…
+
+# textboxarrow 0 1
+@ギル
+おまけに…地底なんて…とんでもない
+ところにまで…連れてきてもらえた…
+みんなのお陰なんだっ…
+
+# textboxarrow 0 1
+@ギル
+それで…最後は…守りたい人のために
+俺…何の力も持ってないけど…
+少しでも役に立てるんなら…
+
+# face 137 "angry"
+# textboxarrow 0 1
+@ギル
+最高じゃねえか…！
+最高に幸せ者だよっ
+
+# face 3503211 "normal"
+# textboxarrow 0 3
+@ティファレト
+憐れな…
+あなたの魂を救済しましょう
+さあ、眠りなさい
+
+# voice 9969 "gill_0007"
+# face 137 "usual"
+# textboxarrow 0 1
+@ギル
+へへっ…
+ちょっと名残惜しいけど…
+けっこう楽しかったぜ
+
+# bgm "stop"
+# textboxarrow 0 1
+@ギル
+…………ナディア様
+
+;;//レーヴァテインが現れる
+# se "SE_5250"
+# textwindow "close"
+# alpha 137 0 0.5
+# alpha 3503211 0 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm301_302" "BgmLostRagnarokDisrupters" 0
+# voice 310021 "revatein_ge_0029"
+# move 3100211 3 0
+# face 3100211 "angry"
+# alpha 3100211 1 0.5
+# mask 3100211 off
+# textboxarrow 0 2
+# textwindow "normal"
+@レーヴァテイン
+たあああああああ！
+
+# voice 5032 "tiphereth_t_0022"
+# alpha 3100211 0 0.5
+# move 3503211 3 0
+# face 3503211 "surprise"
+# alpha 3503211 1 0.5
+# mask 3503211 off
+# textboxarrow 0 2
+@ティファレト
+レーヴァテイン！？
+
+# voice 310021 "revatein_ge_0002"
+# alpha 3503211 0 0.5
+# move 3100211 3 0
+# face 3100211 "normal"
+# alpha 3100211 1 0.5
+# mask 3100211 off
+# textboxarrow 0 2
+@レーヴァテイン
+そんなところで昼寝してると
+風邪引くわよ、ギル
+
+# voice 9969 "gill_0023"
+# alpha 3100211 0 0.5
+# move 137 3 0
+# face 137 "surprise"
+# alpha 137 1 0.5
+# mask 137 off
+# textboxarrow 0 2
+@ギル
+…………！
+
+# voice 310021 "revatein_ge_0004"
+# alpha 137 0 0.5
+# move 3100211 3 0
+# face 3100211 "normal"
+# alpha 3100211 1 0.5
+# mask 3100211 off
+# textboxarrow 0 2
+@レーヴァテイン
+よく頑張ったね
+ここからは…私達に任せて

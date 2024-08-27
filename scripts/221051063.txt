@@ -1,0 +1,333 @@
+;;-----------------------------------------
+;;ファントム オブ キル
+;;2019ハロウィン：イベントシナリオ
+;;「笑顔をくれなきゃ悪戯しちゃうぞ？」
+;;【EP5】戦闘後
+;;スクリプト最後の背景：街中（夜）
+;;-----------------------------------------
+# script "lisp"
+# background "101_city_night3"
+# bgmfile "bgm071" "BgmHalloween001" 0
+;;-----------------------------------------
+;;ハロウィンマサムネ
+# body 3100121
+# pos 3100121 3
+# scale 3100121 0.8 0
+# layer 3100121 2
+# alpha 3100121 0 0
+# mask 3100121 off
+;;ハロウィンアロンダイト
+# body 3100721
+# pos 3100721 3
+# scale 3100721 0.8 0
+# layer 3100721 2
+# alpha 3100721 0 0
+# mask 3100721 off
+;;トレイセーマ隊長
+# body 3830007
+# pos 3830007 3
+# scale 3830007 0.8 0
+# layer 3830007 3
+# alpha 3830007 0 0
+# mask 3830007 off
+;;-----------------------------------------
+;;マサムネとアロンダイトの立ち絵は最初から表示させておいてください
+;;背景：「街中（夜）」のイメージでお願いします
+# move 3100121 2 0
+# face 3100121 "usual"
+# alpha 3100121 1 0
+# mask 3100121 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 3100721 4 0
+# face 3100721 "angry"
+# alpha 3100721 1 0
+# mask 3100721 on
+@ジャック
+しもべたちを全滅させられたね
+
+# alpha 3100121 0 0.5
+# alpha 3100721 0 0.5
+# alpha 3830007 1 0.5
+# textboxarrow 0 2
+@ルタバガ
+我輩の負けだ
+ふふっ、そうか
+
+@ルタバガ
+笑顔でいることが
+悪霊を寄せ付けない
+いちばんの方法だったのだな
+
+@ルタバガ
+町の人々は
+それを実践していたわけか
+
+# alpha 3100121 1 0.5
+# alpha 3100721 1 0.5
+# alpha 3830007 0 0.5
+# voice 310011 "masamune_ge_0003"
+# textboxarrow 0 1
+@マサムネ
+…意識して実践していたのかは
+わからぬがな
+
+# voice 310071 "arondaito_ge_0032"
+# textboxarrow 0 3
+@アロンダイト
+ですが
+みんなで笑い合って
+疲れも恐怖も吹き飛ばしてしまえば
+
+@アロンダイト
+いつ悪霊が来ても
+人々は戦えるはずです
+
+# emotionbody 1001 10 3100121 40 320
+# effectpattern 1001 3 3
+# effectstart 1001
+# textboxarrow 0 1
+@ジャック
+さぁ、あとはお菓子と笑顔で
+町の人々を
+しもべの憑依を解くだけだよ
+
+;;モノローグ
+# effectskip 1001
+# textflame 0 0
+@
+マスターが
+お菓子を手に取ろうとすると
+マサムネたちがそれを制止した
+
+# voice 310011 "masamune_ge_0013"
+# face 3100121 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+…拙者は笑顔の価値を
+理解していなかったようだ
+
+# voice 310071 "arondaito_ge_0015"
+# face 3100721 "sad"
+# textboxarrow 0 3
+@アロンダイト
+私もです
+
+# face 3100121 "usual"
+# textboxarrow 0 1
+@マサムネ
+武の道に笑いなど不要
+ならばこそ
+拙者に笑顔は必要ないと思っていた
+
+# face 3100721 "angry"
+# textboxarrow 0 3
+@アロンダイト
+でも、ハロウィンに参加して
+笑顔の大切さを知りました
+
+# textboxarrow 0 3
+@アロンダイト
+…マスターが
+ハロウィンに誘ってくれた
+想いも伝わりました
+
+# textboxarrow 0 1
+@マサムネ
+今なら、笑える気がする
+
+# textboxarrow 0 3
+@アロンダイト
+マスターが用意してくれた
+この衣装もありますからね
+
+;;モノローグ
+# textflame 0 0
+@
+マスターはうなずく
+夜はまだまだこれからだ
+一緒にパーティに参加しよう、と
+
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+ああ、ここから楽しもう
+ハロウィンを
+
+# voice 310071 "arondaito_ge_0003"
+# textboxarrow 0 3
+@アロンダイト
+ええ
+素敵な夜を過ごしましょう
+
+;;モノローグ
+# textflame 0 0
+@
+ふたりはそう言ってお菓子を手に持ち
+倒れた憲兵の口に
+そっと放り込む
+
+;;演出:できればここでファイル名「masamune_ge_battle_0001」のボイス再生をお願いします
+;;マサムネ・ハロウィンver.の立ち絵を喜の表情で表示。
+# se "SE_6504"
+# emotionbody 1002 3 3100121 10 290
+# effectpattern 1002 1 3
+# effectstart 1002
+# voice 310011 "masamune_ge_battle_0001"
+# face 3100121 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+ハッピー・ハロウィン！
+
+;;演出:できればここでファイル名「arondaito_ge_battle_0001」のボイス再生をお願いします
+;;アロンダイト・ハロウィンver.の立ち絵を喜の表情で表示。
+# se "SE_6504"
+# emotionbody 1003 3 3100721 10 290
+# effectpattern 1003 1 3
+# effectstart 1003
+# voice 310071 "arondaito_ge_battle_0001"
+# face 3100721 "happy"
+# textboxarrow 0 3
+@アロンダイト
+ハッピー・ハロウィン！
+
+;;マサムネのグラフィックを小さく一度ジャンプさせてください。
+# jump 3100121
+# textboxarrow 0 1
+@ジャック
+なんで叫ぶの！
+この流れで！？
+
+;;モノローグ
+# textflame 0 0
+@
+まだまだ不器用なふたり
+だが、ついに奇跡は起きた
+
+;;モノローグ
+# alpha 3100121 0 0.5
+# alpha 3100721 0 0.5
+@
+倒れた憲兵たちがにこりと笑う
+憑依は解かれた
+笑顔だと認められたのだ
+
+;;モノローグ
+@
+…憲兵たちは起き上がり
+ふたりにお礼を言おうとして
+
+;;マサムネ・ハロウィンver.の立ち絵を怒の表情で表示。
+;;アロンダイト・ハロウィンver.の立ち絵を怒の表情で表示。
+# serif 1
+# move 3100121 2 0
+# face 3100121 "angry"
+# alpha 3100121 1 0.5
+# mask 3100121 on
+# move 3100721 4 0
+# face 3100721 "angry"
+# alpha 3100721 1 0.5
+# mask 3100721 on
+@憲兵たち
+うわ、怖っ！
+
+;;モノローグ
+# se "SE_5575"
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+@
+と言い残し
+一目散に逃げていってしまった
+
+# voice 310011 "masamune_ge_0037"
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+くっ…！
+
+# voice 310071 "arondaito_ge_0037"
+# textboxarrow 0 3
+@アロンダイト
+う…く…
+
+;;モノローグ
+# textflame 0 0
+@
+ふたりの笑顔は
+一瞬だけのものだったようだ
+
+# face 3100121 "sad"
+# face 3100721 "sad"
+@
+憲兵たちからも笑顔が怖いと言われ
+さすがにふたりは落ち込んでいる
+
+;;モノローグ
+@
+しかし彼女たちは確かな努力をした
+ここは、マスタ－として
+気の利く言葉をかけてやるべきだろう
+
+;;選択肢：
+;;A：…衣装に鬼の角でも足そうか？
+;;B：どんなに怖くても大切な姫だよ
+;;C：僕は好きだよ、ふたりの笑顔
+# select "…衣装に鬼の角でも足そうか？" "select_label_01" "どんなに怖くても大切な姫だよ" "select_label_02" "僕は好きだよ、ふたりの笑顔" "select_label_03"
+しかし彼女たちは確かな努力をした
+ここは、マスタ－として
+気の利く言葉をかけてやるべきだろう
+
+;;アンサー：
+;;A：
+# emotionbody 1004 1 3100121 10 310
+# effectpattern 1004 2 0
+# effectstart 1004
+# label "select_label_01"
+# labeljump "select_label_end"
+# voice 310011 "masamune_ge_0022"
+# face 3100121 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+なっ、主君っ！？
+この状況で
+追い討ちをかけてくるのか…
+
+;;B：
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 3100121 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+主君も拙者らの笑顔が怖いと
+そう思っているのだな…
+
+;;C：
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 3100121 "usual"
+# voice 310011 "masamune_ge_0007"
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+…それでフォローになったと
+思っているのか？ 
+
+# label "select_label_end"
+# textboxarrow 0 3
+@アロンダイト
+そんな…ひどいです…
+
+# textboxarrow 0 1
+@ジャック
+はははっ！
+でも、ふたりの笑顔が
+この町を救ったことは確かだよ
+
+@ジャック
+…ありがとう

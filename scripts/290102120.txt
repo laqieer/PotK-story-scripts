@@ -1,0 +1,588 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第2話　タイトル：雷霆の絆
+;;2_12
+;;スクリプト最後の背景：新天上世界遠景
+;;-----------------------------------------
+# script "lisp"
+# background "006_church"
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;アスクレピオス
+# body 600131
+# pos 600131 3
+# scale 600131 0.8 0
+# layer 600131 2
+# alpha 600131 0 0
+# mask 600131 off
+;;ケラウノス
+# body 500131
+# pos 500131 3
+# scale 500131 0.8 0
+# layer 500131 1
+# alpha 500131 0 0
+# mask 500131 off
+;;アポロン
+# body 400331
+# pos 400331 3
+# scale 400331 0.8 0
+# layer 400331 1
+# alpha 400331 0 0
+# mask 400331 off
+;;テュルソス
+# body 600321
+# pos 600321 3
+# scale 600321 0.8 0
+# layer 600321 2
+# alpha 600321 0 0
+# mask 600321 off
+;;ブリューナク
+# body 500721
+# pos 500721 3
+# scale 500721 0.8 0
+# layer 500721 1
+# alpha 500721 0 0
+# mask 500721 off
+;;フラガラッハ
+# body 101011
+# pos 101011 3
+# scale 101011 0.8 0
+# layer 101011 2
+# alpha 101011 0 0
+# mask 101011 off
+;;デオン
+# body 203
+# pos 203 3
+# scale 203 0.8 0
+# layer 203 2
+# alpha 203 0 0
+# mask 203 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第2話　タイトル：雷霆の絆
+;;//背景：教会
+# move 203 2 0
+# alpha 203 1 0
+# mask 203 on
+# face 203 "usual"
+# move 400331 4 0
+# face 400331 "sad"
+# alpha 400331 1 0
+# mask 400331 on
+# textflame 1 1
+# textboxarrow 0 3
+# voice 4003 "aporon_0015"
+@アポロン
+ごめんなさい、マスター…
+ボク…お姉ちゃんを射抜けなかった…
+
+# textboxarrow 0 1
+# voice 9939 "deon_0043"
+@デオン
+で、あるか
+ならば、その意志を貫くのである！
+
+# textboxarrow 0 1
+@デオン
+それもまたお前の生き様
+無理に変えることはないのである
+
+# face 400331 "happy"
+# textboxarrow 0 3
+# voice 4003 "aporon_0004"
+@アポロン
+マスター…！？
+そっか
+うん、そうだねっ
+
+# alpha 400331 0 0.5
+# move 600131 4 0
+# face 600131 "angry"
+# alpha 600131 1 0.5
+# mask 600131 on
+# textboxarrow 0 3
+# voice 6001 "asukurepiosu_0011"
+@アスクレピオス
+怪我人が何やってるの！
+まだ安静にしてないといけないって
+言ったでしょ！バカ！
+
+# textboxarrow 0 3
+@アスクレピオス
+大人しく寝てなさい！
+
+# textboxarrow 0 1
+# voice 9939 "deon_0030"
+# face 203 "sad"
+@デオン
+で、あるか…
+
+# move 203 1 0.5
+# move 400331 3 0
+# face 400331 "normal"
+# alpha 400331 1 0.5
+# mask 400331 on
+# textboxarrow 0 2
+# move 600131 5 0.5
+# voice 4003 "aporon_0001"
+@アポロン
+マスター、ボクが支えてあげるねっ
+
+;;//デオンとアスクレピオス、アポロンが引っ込む
+# se "SE_0740"
+# textwindow "close"
+# alpha 203 0 0.5
+# alpha 400331 0 0.5
+# waitandnext 0.8
+
+# alpha 600131 0 0.5
+# move 101011 1 0
+# face 101011 "normal"
+# alpha 101011 1 0.5
+# mask 101011 on
+# move 500721 3 0
+# face 500721 "normal"
+# alpha 500721 1 0.5
+# mask 500721 on
+# move 196 5 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 9943 "almace_navikan_0042"
+@アルマス
+今回はゲイボルグに助けられたわね
+あいつ、また姿消しちゃったけど
+
+# textboxarrow 0 2
+# voice 5007 "buryunaku_0003"
+@ブリューナク
+フライクーゲルを仕留め損なったこと
+悔やんでいるようだ
+秘密特訓に精を出している
+
+# textboxarrow 0 2
+@ブリューナク
+ただし、このことは秘密なので
+二人とも知らない振りをしていて
+欲しい
+
+# textboxarrow 0 1
+# voice 1010 "furagaraha_0004"
+@フラガラッハ
+ふふっ
+あの子は照れ屋だから
+
+# face 196 "angry"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0015"
+@アルマス
+それって、ブリューナクが
+言わなければ良かった話よね？
+
+# alpha 500721 0 0.5
+# move 500131 3 0
+# face 500131 "happy"
+# alpha 500131 1 0.5
+# mask 500131 on
+# textboxarrow 0 2
+# voice 5001 "keraunosu_0004"
+@ケラウノス
+ああ～っ…！
+私もゲイボルグに会いたかったな～
+ミステリアスなお姉さん…いいよね♪
+
+# textboxarrow 0 2
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+あなたもブレないわね
+
+# alpha 101011 0 0.5
+# alpha 500131 0 0.5
+# alpha 196 0 0.5
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+…………
+
+;;//暗転挟む
+;;//ケラウノスをラグナロクが呼び止める
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "006_church"
+# alpha 103611 0 0
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0
+# mask 103611 on
+# move 500131 4 0
+# face 500131 "normal"
+# alpha 500131 1 0
+# mask 500131 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 1036 "ragnarok_0002"
+@ラグナロク
+どうやってゲイボルグを動かしたの？
+
+# textboxarrow 0 3
+# voice 5001 "keraunosu_0023"
+@ケラウノス
+何～？
+藪から棒に
+
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0028"
+@ラグナロク
+今回の作戦、デュカキス大奏官は
+本気で自ら囮になったようだけど、
+あなたがそれを許すとは思えない
+
+# textboxarrow 0 1
+@ラグナロク
+彼を守る手立てを
+先に打っておいたからこそ、
+あんな賭けに乗ったのよね？
+
+# face 500131 "happy"
+# textboxarrow 0 3
+# voice 5001 "keraunosu_0042"
+@ケラウノス
+いや～、私のことを高く評価して
+くれてるなんて、嬉しいな～♪
+
+# face 103611 "angry"
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0010"
+@ラグナロク
+茶化さないで
+あなたはゲイボルグと会っていない
+はずなのに…
+
+# face 500131 "sad"
+# textboxarrow 0 3
+@ケラウノス
+それだけが心残りなんだよね～
+会えてたら、
+もう少しやりやすかったかな～
+
+# textboxarrow 0 3
+@ケラウノス
+マスターに呼ばれて、
+今回の作戦を聞かされたときは
+参ったな～…
+
+# face 500131 "normal"
+# textboxarrow 0 3
+@ケラウノス
+アポロンのために命を張るって
+いうんだから
+それで、何か手はないかと思ってたら
+
+# textboxarrow 0 3
+@ケラウノス
+君達の仲間がもう一人いるって
+気づいたから、会わせてくれ～って
+お願いしたんだよ
+
+# face 103611 "normal"
+# textboxarrow 0 1
+@ラグナロク
+でも、あのときアルマスは
+取り合わなかった…
+
+# textboxarrow 0 3
+# voice 5001 "keraunosu_0003"
+@ケラウノス
+それは計算の内
+重要なのはテュルソスに話を聞かせる
+ことだったんだ
+
+# textboxarrow 0 3
+@ケラウノス
+彼女はああいう性格だから、
+キル姫がもう一人いるって知ったら、
+仲間外れにはできない
+
+# textboxarrow 0 3
+@ケラウノス
+君達の誰かに必ず話を聞く
+そうなれば、あとはブリューナクが
+察してくれるよ
+
+# textboxarrow 0 3
+@ケラウノス
+彼女は察しが良すぎるくらいだから
+私の意図を汲んでマスターの側に
+キル姫を潜ませてくれる
+
+# textboxarrow 0 3
+@ケラウノス
+彼女が時間稼ぎをしてくれれば
+間に合う算段はできてたし、
+実際、君達は間に合っただろ？
+
+# textboxarrow 0 3
+@ケラウノス
+マスターがアスクレピオスを
+庇って射られたときは、さすがに
+ヒヤッとしたけどね～
+
+# face 500131 "happy"
+# textboxarrow 0 3
+# voice 5001 "keraunosu_0005"
+@ケラウノス
+うちのマスターって、
+すぐ私の予想を跳び越えてくれるから
+困るんだよな～♪
+
+# textboxarrow 0 1
+@ラグナロク
+…ブリューナクが察してくれる
+確証はなかったのに
+
+# face 500131 "normal"
+# textboxarrow 0 3
+@ケラウノス
+確証はなかったけど、
+確信はあったよ
+
+# textboxarrow 0 3
+@ケラウノス
+そういうの、何となく
+分かっちゃうんだよね～
+
+# face 103611 "sad"
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0027"
+@ラグナロク
+はぁ…
+天才は理解の埒外にいるわ
+
+# face 500131 "happy"
+# textboxarrow 0 3
+# voice 5001 "keraunosu_0032"
+@ケラウノス
+おけおけ～♪
+私のこともっと知りたいんだね？
+だったら今夜――
+
+# bgm "stop"
+# se "SE_5575"
+# alpha 103611 0 0.5
+# alpha 500131 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0002"
+@アルマス
+あ！こんなところにいた！
+二人とも、テュルソス達が
+帰ってきたわよっ…
+
+# alpha 196 0 0.5
+# move 103611 2 0
+# face 103611 "usual"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 500131 4 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 on
+# voice 1036 "ragnarok_0002"
+@ラグナロク
+アルマス、どうしたの？
+顔色が悪いけど…
+
+# face 500131 "angry"
+# textboxarrow 0 3
+@ケラウノス
+急ごう
+こういう予感は
+当たって欲しくないんだけどなー…
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "006_church"
+# alpha 103611 0 0
+# alpha 500131 0 0
+# move 600131 2 0
+# face 600131 "normal"
+# alpha 600131 1 0
+# mask 600131 on
+# move 600321 4 0
+# face 600321 "normal"
+# alpha 600321 1 0
+# mask 600321 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 1
+# textwindow "normal"
+@アスクレピオス
+マスターも診てないといけないのにっ
+何てことよ…！
+
+# face 600321 "happy"
+# textboxarrow 0 3
+# voice 6003 "tyurusosu_0008"
+@テュルソス
+あはは…
+一歩及ばずだったかー…
+鍛え直し…だね…
+
+# face 600131 "angry"
+# textboxarrow 0 1
+# voice 6001 "asukurepiosu_0010"
+@アスクレピオス
+怪我人は大人しくしてなさい！
+酷い傷ね…
+
+# alpha 600131 0 0.5
+# alpha 600321 0 0.5
+# move 500131 3 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 off
+# textboxarrow 0 2
+@ケラウノス
+これは派手にやられたな～
+
+# alpha 500131 0 0.5
+# move 196 2 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 1
+# move 500721 4 0
+# face 500721 "normal"
+# alpha 500721 1 0.5
+# mask 500721 on
+# voice 9943 "almace_navikan_0003"
+@アルマス
+さっき聞いたんだけど…
+フェルカの町に向かった
+連合軍は壊滅させられたそうよっ…
+
+# face 500721 "sad"
+# textboxarrow 0 3
+# voice 5007 "buryunaku_0017"
+@ブリューナク
+戦略的撤退を余儀なくされた…
+敵陣営は連合軍の想定以上の
+戦力を有している
+
+# textboxarrow 0 3
+@ブリューナク
+ソラ男も…
+助けられなかった…
+
+# alpha 196 0 0.5
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0015"
+@ラグナロク
+アルテミス達も強かったけれど…
+パラシュはそれ以上の
+脅威だというのっ？
+
+# face 500721 "normal"
+# textboxarrow 0 3
+# voice 5007 "buryunaku_0009"
+@ブリューナク
+半分、否定する
+脅威はパラシュだけではない
+
+# textboxarrow 0 3
+@ブリューナク
+彼女に味方するキル姫達の存在を
+確認した
+
+# face 103611 "usual"
+# textboxarrow 0 1
+@ラグナロク
+インテグラルキラーズが
+他にもいるというの…
+
+# textboxarrow 0 3
+@ブリューナク
+否定する
+パラシュに味方しているキル姫は
+インテグラルキラーズではない
+
+# textboxarrow 0 3
+@ブリューナク
+ヴァジュラとブラフマーストラだ
+
+;;//背景：新天上世界遠景
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "parchment_map01"
+# alpha 103611 0 0
+# alpha 500721 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;ナレーション
+# textflame 0 0
+# textwindow "normal"
+@
+カレットでの戦いは辛くもアルマス達
+が勝利を収めた
+
+;;ナレーション
+@
+しかしブリューナクがもたらした
+事実は新たな戦いを予感させる
+
+;;ナレーション
+@
+フェルカの町で起きている異変に
+二人はまだ気づいていなかった――

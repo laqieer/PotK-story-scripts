@@ -1,0 +1,340 @@
+;;【EP3】戦闘後
+# script "lisp"
+# background "forest"
+# bgm "bgm002" 0
+# body 200411
+# pos 200411 4
+# scale 200411 0.8 0
+# body 201921
+# pos 201921 2
+# scale 201921 0.8 0
+# textflame 1 1
+# textboxarrow 0 1
+# face 200411 "smile"
+# chara 201921
+@シユウ
+…なぁなぁ、おまえ！
+つよいなー！！
+
+# textboxarrow 0 1
+# voice 2019 "chihyu_0005"
+# face 201921 "happy"
+# chara 201921
+@シユウ
+シユウなんて
+ばーん！って飛ばされたのに！
+あははは！
+
+# textboxarrow 0 3
+# chara 200411
+# face 200411 "normal"
+# voice 2004 "parashu_0009"
+@パラシュ
+だから、下がってって
+言ったんだけどな…
+
+# emotionbody 5903 10 201921 95 225
+# effectpattern 5903 3 0
+# effectstart 5903
+# textboxarrow 0 1
+# voice 2019 "chihyu_0032"
+# chara 201921
+@シユウ
+きめた！
+ついてってやる！
+ますた～ってやつのところ！！
+
+# emotionbody 5801 9 200411 60 195
+# effectpattern 5801 1 0
+# effectstart 5801
+# effectskip 5903
+# alpha 500211 0 0
+# alpha 501731 0 0
+# body 500211
+# pos 500211 2
+# scale 500211 0.8 0
+# body 501731
+# pos 501731 4
+# scale 501731 0.8 0
+# textboxarrow 0 3
+# face 200411 "smile"
+# chara 200411
+@パラシュ
+うん…マスターも、
+もうここにいるんだけどね…
+
+;;//モヤモヤ
+# effectskip 5801
+# alpha 500211 1 0.5
+# alpha 501731 1 0.5
+# alpha 200411 0 0.5
+# alpha 201921 0 0.5
+# serif 1
+# textwindow "moya"
+# textboxarrow 0 0
+# face 501731 "angry"
+# chara 501731
+@グリモワール
+…ただのハイテンションバカかと
+思ったら、結構強い…
+もしかしたら、ワタシよりずっと…？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 500211 "happy"
+# chara 501731
+@フライクーゲル
+あははは～☆
+ヘイ、マスター！
+ワタシの活躍見てくれたー？
+
+;;//モヤモヤ
+# serif 1
+# textwindow "moya"
+# textboxarrow 1 0
+# chara 501731
+@グリモワール
+…でも、こんなのに負けるなんて
+納得いかない…！
+
+;;//モヤモヤ
+# serif 1
+# chara 501731
+# face 501731 "usual"
+@グリモワール
+もしかして、マスターに仕えれば、
+もっと強くなれる知恵を
+手に入れられるのかも…？
+
+# alpha 100111 0 0
+# alpha 102521 0 0
+# body 102521
+# pos 102521 3
+# scale 102521 0.8 0
+# body 100111
+# pos 100111 3
+# scale 100111 0.8 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+# select "三人には一緒に来てほしいんだけど" "select_label_01" "なかなか個性派ぞろいだね" "select_label_02" "お腹がすいた子はいる？" "select_label_03"
+もしかして、マスターに仕えれば、
+もっと強くなれる知恵を
+手に入れられるのかも…？
+
+# alpha 102521 1 0.5
+# alpha 500211 0 0.3
+# alpha 501731 0 0.3
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 102521 "sad"
+# chara 102521
+@ムラマサ
+はい…その、
+私でよろしければ、ですが…
+
+# move 501731 3 0.5
+# alpha 500211 0 0.3
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 501731 "angry"
+# chara 501731
+@グリモワール
+む～…こんな連中と
+いっしょにされるのは
+心外なんだけどぉ？
+
+# move 201921 3 0.5
+# alpha 201921 1 0.5
+# alpha 500211 0 0.3
+# alpha 501731 0 0.3
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 201921 "happy"
+# chara 201921
+@シユウ
+おなかすいた！
+ごはんたべさせてくれるのか？
+おまえ、いいやつだな！
+
+# alpha 100111 1 0.5
+# alpha 501731 0 0.3
+# alpha 102521 0 0.3
+# alpha 201921 0 0.3
+# label "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 100111 "nutual"
+# chara 100111
+@マサムネ
+ふむ、一気に三名を見つけられるとは
+幸運であったな
+
+# move 102521 2 0
+# move 100111 4 0.5
+# alpha 102521 1 0.5
+# textboxarrow 0 1
+# voice 1025 "muramasa_0027"
+# face 102521 "normal"
+# chara 102521
+@ムラマサ
+…あの、マサムネさ…
+
+# textboxarrow 0 1
+# face 102521 "shy"
+# chara 102521
+@ムラマサ
+いえ、マサムネ殿！
+先ほどは私を導くお言葉、
+ありがとうございました
+
+# textboxarrow 0 1
+# face 102521 "angry"
+# chara 102521
+@ムラマサ
+これを機に、
+マサムネ殿を姉とお慕いしても
+よろしいでしょうか！？
+
+# textboxarrow 0 3
+# voice 1001 "masamune_0039"
+# chara 100111
+@マサムネ
+姉か…
+
+# textboxarrow 0 3
+# voice 1001 "masamune_0003"
+# face 100111 "happy"
+# chara 100111
+@マサムネ
+うむ、よかろう
+…だが、拙者は身内にこそ
+厳しく接するが…覚悟は良いな…？
+
+# move 501731 3 0
+# textboxarrow 0 1
+# voice 1025 "muramasa_0032"
+# face 102521 "normal"
+# chara 102521
+@ムラマサ
+…はい！
+
+# alpha 501731 1 0.5
+# alpha 100111 0 0.3
+# alpha 102521 0 0.3
+# textboxarrow 0 2
+# face 501731 "usual"
+# chara 501731
+@グリモワール
+…まともっぽいと思った子が
+いきなり妙なこと
+言い出してるじゃない…
+
+# emotionbody 5881 9 501731 60 185
+# effectpattern 5881 1 0
+# effectstart 5881
+# textboxarrow 0 2
+# chara 501731
+@グリモワール
+ついていくことにしたの、
+間違いだったかな…？
+
+;;//ムラマサとグリモワールとシユウの出会いに関して終了
+;;//画面フェードアウト
+# effectskip 5881
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fadeout "white" 2.3
+# waitandnext 2.7
+
+# fadein "white" 1
+# background "town"
+# waitandnext 1.1
+
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 501731 "surprise"
+# chara 501731
+@グリモワール
+…こうしてみると、
+やっぱり教会についていったこと、
+正しいって気がしないわ…
+
+# effectskip 5711
+# move 501731 4 0.5
+# alpha 102521 1 0.5
+# face 102521 "sad"
+# textboxarrow 0 1
+# chara 102521
+@ムラマサ
+…あの、グリモワール殿…
+グリモワール殿が考え込んでいる間に
+シユウ殿がまたどこかに…
+
+# textboxarrow 0 3
+# face 501731 "angry"
+# chara 501731
+@グリモワール
+…でぇ？
+別に力を合わせるつもりも
+ないんだから、どうだってよくない？
+
+# textboxarrow 0 3
+# chara 501731
+@グリモワール
+キミも、ワタシについてくること
+ないんだけど
+
+# textboxarrow 0 1
+# face 102521 "normal"
+# chara 102521
+@ムラマサ
+それは…拙者も、目標の異族を
+討ち倒し、姉上に認めてもらいたいと
+考えておりますので…
+
+# textboxarrow 0 3
+# face 501731 "usual"
+# chara 501731
+@グリモワール
+目当てが一緒なら、
+方向が同じなのも仕方ないってこと？
+ふぅん、それはそうかもね
+
+# textboxarrow 0 3
+# chara 501731
+# face 501731 "angry"
+@グリモワール
+じゃあ、ワタシの魔弾が
+異族を倒すところ、
+しっかりとキミに見せてあげるわ
+
+# textboxarrow 0 1
+# voice 1025 "muramasa_0013"
+# face 102521 "angry"
+# chara 102521
+@ムラマサ
+その点については、
+拙者も譲るつもりはありません…
+
+# textflame 0 0
+@
+そうして二人のキラープリンセスは
+互いに負けじと、
+静かに火花を散らすのであった…

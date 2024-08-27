@@ -1,0 +1,549 @@
+;;----------------------------------------------
+;;100213061
+;;タイトル：ケアフル・シューター 06 戦闘前
+;;----------------------------------------------
+# script "lisp"
+# background "forest"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;ムー
+# body 161
+# pos 161 4
+# scale 161 0.6 0
+# layer 161 5
+# mask 161 off
+# alpha 161 0 0
+;;レーヴァ
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# layer 3100211 3
+# mask 3100211 on
+# alpha 3100211 0 0
+;;ヘレナ
+# body 3302811
+# pos 3302811 4
+# scale 3302811 0.8 0
+# layer 3302811 2
+# mask 3302811 on
+# alpha 3302811 0 0
+;;ニール
+# body 162
+# pos 162 4
+# scale 162 0.6 0
+# layer 162 5
+# mask 162 off
+# alpha 162 0 0
+;;キプル
+# body 163
+# pos 163 3
+# scale 163 0.6 0
+# layer 163 5
+# mask 163 off
+# alpha 163 0 0
+;;ハルモニア兵１
+# body 3810001
+# pos 3810001 3
+# scale 3810001 0.8 0
+# layer 3810001 5
+# mask 3810001 on
+# alpha 3810001 1 0
+# reversal 3810001 0
+;;ハルモニア兵２
+# entry 938100019 3810001
+# pos 938100019 1
+# scale 938100019 0.8 0
+# layer 938100019 1
+# mask 938100019 on
+# alpha 938100019 1 0
+# reversal 938100019 0
+;;ハルモニア兵３
+# entry 938100018 3810001
+# pos 938100018 5
+# scale 938100018 0.8 0
+# layer 938100018 3
+# mask 938100018 on
+# alpha 938100018 1 0
+# reversal 938100018 0
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;◆背景：森---------------------------------------------
+# textflame 1 1
+# textboxarrow 0 2
+# voice 381000 "angel_0002"
+# chara 3810001
+@ハルモニア兵
+遠くには逃げていないはずです！
+捜索を続けなさい！
+
+;;ハルモニア兵が走っていく
+# textwindow "close"
+# se "SE_5602"
+# alpha 938100019 0 0.6
+# alpha 938100018 0 0.6
+# waitandnext 1.0
+
+# alpha 3810001 0 0.5
+# waitandnext 0.5
+
+# alpha 161 1 0.5
+# alpha 3100211 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0007"
+# chara 161
+@ムー
+まったくしつこい連中だぜ
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 161
+@ムー
+…おい、レヴァ！
+いつまで呆けてんだよっ
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100211 "sad"
+# chara 3100211
+@レーヴァテイン
+…………
+
+# textwindow "close"
+# move 161 3 0.5
+# move 3100211 2 0.5
+# alpha 162 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9952 "nir_0027"
+# chara 162
+@ニール
+ソロモンのことが
+随分ショックだったみたいね
+
+# alpha 162 0 0.5
+# alpha 3302811 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "shy"
+# voice 3028 "herena_a_0004"
+# chara 3302811
+@ヘレナ
+本当にレーヴァは不器用で可愛いなあ
+…くふっ
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9953 "mwu_0027"
+# chara 161
+@ムー
+こんなときにからかうのは
+やめてくれよ…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "normal"
+# voice 3028 "herena_a_0045"
+# chara 3302811
+@ヘレナ
+なあ、レーヴァ
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3302811
+@ヘレナ
+ヘレナは誰かに使役されるなんて
+ゴメンだけど…
+ソロモンのような考え方も理解できる
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "surprise"
+# chara 3302811
+@ヘレナ
+何でそんなにショックを受けているか
+そっちの方が気になるな
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "usual"
+# chara 3302811
+@ヘレナ
+そういえばレーヴァは
+悪魔人も天使人も忌み嫌っているな
+
+# alpha 3302811 0 0.5
+# alpha 162 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9952 "nir_0032"
+# chara 162
+@ニール
+ケイオスリオンでもハルモニアでも
+イミテーションしか
+大切にしてなかったわよね
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "angry"
+# voice 310021 "revatein_ge_0011"
+# chara 3100211
+@レーヴァテイン
+…イミテーションと呼ばないで
+あの人達こそが人類なのよ
+
+# alpha 162 0 0.5
+# alpha 3302811 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 3028 "herena_a_0003"
+# chara 3302811
+@ヘレナ
+ああ、それだ
+レーヴァにとっての
+人類の定義が狭いんだよ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "usual"
+# chara 3302811
+@ヘレナ
+何か理由があるんだろ？
+一度、聞いてみたいと思っていたんだ
+休憩がてら聞きたいな…ふふっ
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9953 "mwu_0009"
+# chara 161
+@ムー
+こんなときに何言ってんだ！？
+今はそれどころじゃねえよ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "normal"
+# voice 3028 "herena_a_0028"
+# chara 3302811
+@ヘレナ
+そうかな？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "usual"
+# chara 3302811
+@ヘレナ
+下手に動くより
+身を潜めていた方が安全だと
+ヘレナは思うけど
+
+# alpha 3302811 0 0.5
+# alpha 162 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9952 "nir_0004"
+# chara 162
+@ニール
+アタチもヘレナに賛成ね！
+レーヴァの人類観にも興味あるわ
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9953 "mwu_0011"
+# chara 161
+@ムー
+お前らなあっ…！
+もう少しレヴァの気持ちを――
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "sad"
+# voice 310021 "revatein_ge_0027"
+# chara 3100211
+@レーヴァテイン
+はぁ…おっけ
+話してあげる
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9953 "mwu_0023"
+# chara 161
+@ムー
+レヴァ！？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "normal"
+# chara 3100211
+@レーヴァテイン
+そもそも…逆だったのよ…
+意図的に歴史はねじ曲げられ…
+書き換えられたの…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "angry"
+# voice 310021 "revatein_ge_0007"
+# chara 3100211
+@レーヴァテイン
+三国のトップによって
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9952 "nir_0039"
+# chara 162
+@ニール
+三国のトップというと…
+ハルモニアなら教皇よね
+ケイオスリオンなら皇帝…
+
+# textwindow "close"
+# alpha 3100211 0 0.5
+# alpha 161 0 0.5
+# alpha 162 0 0.5
+# se "SE_5575"
+# pos 938100019 3
+# mask 938100019 off
+# reversal 938100019 1
+# alpha 938100019 1 0
+# leftin 938100019 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3810001
+@ハルモニア兵
+発見しました！
+潜伏中の斬ル姫を発見致しましたー！
+
+# alpha 938100019 0 0.5
+# pos 161 3
+# alpha 161 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9953 "mwu_0037"
+# chara 161
+@ムー
+しまった！
+話の続きは後だ！
+
+# textwindow "close"
+# alpha 161 0 0.5
+# pos 3810001 3
+# alpha 3810001 1 0
+# rightin 3810001 0.5
+# waitandnext 0.5
+
+# se "SE_4600"
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 381000 "angel_0011"
+# chara 3810001
+@ハルモニア兵
+落ち着いて対処して下さい！
+完全に包囲してから攻撃を開始します
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3810001
+@ハルモニア兵
+下手に攻めて返り討ちにあっては
+元も子もありませんよ
+
+# alpha 3810001 0 0.5
+# pos 161 2
+# alpha 161 1 0.5
+# pos 3302811 4
+# alpha 3302811 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0015"
+# chara 161
+@ムー
+あいつらっ…
+俺達と正面切ってやり合っても
+勝てねぇからって…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "normal"
+# voice 3028 "herena_a_0020"
+# chara 3302811
+@ヘレナ
+悪くない作戦だね
+手負いのレーヴァを捨てて
+逃げた方が良さそうかな…くふっ
+
+;;◆背景：黒バック---------------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# alpha 161 0 0
+# alpha 3302811 0 0
+# background "bg_black"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.1
+# imagerightout 0 0.1
+# waitandnext 0.1
+
+# textwindow "toge"
+# textsize 35
+# textflame 1 1
+# textboxarrow 0 0
+# voice 9951 "kipuru_0029"
+# chara 149
+@キプル
+キプルアターック！
+
+;;◆背景：森---------------------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0
+# textwindow "close"
+# waitandnext 0.1
+
+# pos 938100019 2
+# alpha 938100019 1 0
+# background "forest"
+# waitandnext 0.1
+
+# se "SE_4747"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.3
+
+;;キプルがハルモニア兵に体当たりする
+# pos 163 3
+# alpha 163 1 0
+# rightin 163 0.3
+# waitandnext 0.3
+
+# se "SE_8022"
+# shake 0 0.6
+# fadein "white" 0.6
+# textwindow "normal"
+# textsize 24
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3810001
+@ハルモニア兵
+何っ？
+こいつはカリスの・・・
+我々の邪魔をするな！
+
+;;キプルが兵士に弾き飛ばされる
+# textwindow "close"
+# se "SE_4602"
+# shake 0 0.6
+# move 163 4 0.3
+# fadein "white" 0.3
+# waitandnext 0.3
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9951 "kipuru_0038"
+# chara 149
+@キプル
+ううっ…！
+キプルは負けません…！
+カリスに頼まれましたからっ
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 149
+@キプル
+囮になって…
+レーヴァさん達を
+必ず逃がしてみせます！
+
+# se "SE_4600"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 381000 "angel_0007"
+# chara 3810001
+@ハルモニア兵
+ええい、鬱陶しいですね！
+処分してあげましょう
+
+# alpha 163 0 0.5
+# alpha 938100019 0 0.5
+# pos 162 4
+# alpha 162 1 0.5
+# pos 3302811 3
+# mask 3302811 off
+# alpha 3302811 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9952 "nir_0007"
+# chara 162
+@ニール
+あらあら、
+キプルったら頑張るのね
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3302811 "normal"
+# voice 3028 "herena_a_0005"
+# chara 3302811
+@ヘレナ
+これはチャンスだな
+レーヴァ、今なら包囲を破って
+逃げられるよ…くふっ
+
+# alpha 3302811 0 0.5
+# alpha 162 0 0.5
+# pos 3100211 3
+# mask 3100211 off
+# alpha 3100211 1 0.5
+# pos 161 4
+# alpha 161 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100211 "normal"
+# voice 310021 "revatein_ge_0010"
+# chara 3100211
+@レーヴァテイン
+…そんなことするわけないって
+分かってるんでしょ？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0048"
+# chara 161
+@ムー
+レヴァ！
+やっと気合い入ったみてぇだな
+
+# se "SE_5205"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100211 "sad"
+# chara 3100211
+@レーヴァテイン
+…キプルが頑張ってるのに、
+私がいつまでも腑抜けてるわけには
+いかないから
+
+# move 3100211 3 0
+# textwindow "toge"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100211 "angry"
+# voice 310021 "revatein_ge_0029"
+# chara 3100211
+@レーヴァテイン
+キプルも連れて…包囲を突破する！

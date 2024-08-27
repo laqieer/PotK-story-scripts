@@ -1,0 +1,404 @@
+;;-----------------------------------------
+;;SEA5章_17-1
+;;-----------------------------------------
+# script "lisp"
+# background "101_cave"
+# bgmfile "bgm323_324" "BgmLostRagnarokCommand" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 3
+# alpha 6504011 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 3
+# scale 6603811 0.8 0
+# layer 6603811 2
+# mask 6603811 off
+# alpha 6603811 0 0
+;;ミネルヴァ
+# body 302511
+# pos 302511 2
+# scale 302511 0.8 0
+# layer 302511 2
+# alpha 302511 1 0
+;;神令スイハ
+# body 3401711
+# pos 3401711 4
+# scale 3401711 0.8 0
+# layer 3401711 4
+# alpha 3401711 1 0
+# body 401711
+# alpha 401711 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagescale 1 1.5 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：地下空洞：101_cave
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_4300"
+# face 302511 "angry"
+# face 3401711 "angry"
+# voice 4017 "suiha_battle_0002"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@スイハ
+せいっ！
+
+# se "SE_4301"
+# fadein "white" 0.5
+# move 302511 1 0.2
+# waitandnext 1
+
+# voice 3025 "minerva_battle_0001"
+# se "SE_4200"
+# move 302511 2 0.4
+# textboxarrow 0 1
+@ミネルヴァ
+やぁっ！
+
+# se "SE_3006"
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# move 3401711 5 0.3
+# waitandnext 1
+
+# move 302511 3 0.4
+# alpha 302511 0 0.3
+# move 3401711 4 0.3
+# alpha 3401711 0 0.3
+# textwindow "close"
+# waitandnext 1.5
+
+# voice 9917 "mimir_navikan_0018"
+# face 270 "sad"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+どうしてこのようなことに…
+
+# voice 9917 "mimir_navikan_0002"
+# face 270 "angry"
+# textboxarrow 0 2
+@ミーミル
+あの、マスター様！
+聞いて下さいっ
+
+# textboxarrow 0 2
+@ミーミル
+私、意識を失っていたときに
+夢の中で―――――さんを
+お見かけしたのです
+
+;;暗転
+# fadeout "black" 0.7
+# waitandnext 0.7
+
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "black" 0.7
+# waitandnext 0.7
+
+# face 270 "angry"
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+初めて見るはずなのに、
+何故か胸の奥が疼いて…
+不思議な心地になりました
+
+# textboxarrow 0 2
+@ミーミル
+理由は分かりませんが、
+私も―――――さんと会ってみたい
+そう感じております
+
+# textboxarrow 0 2
+@ミーミル
+―――――さんが不完全な状態で
+こちらに現れているのであれば、
+何とかして差し上げたいと…
+
+;;選択肢
+# select "自分も会いたいよ" "select_label_01" "何とかしよう" "select_label_02"
+理由は分かりませんが、
+私も―――――さんと会ってみたい
+そう感じております
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# voice 9917 "mimir_navikan_0030"
+# face 270 "happy"
+# textboxarrow 0 2
+@ミーミル
+マスター様！
+同じ気持ちでいて下さり、
+ありがとうございます
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# voice 9917 "mimir_navikan_0003"
+# face 270 "angry"
+# textboxarrow 0 2
+@ミーミル
+マスター様！
+はい！何とか致しましょう
+
+# label "select_label_end"
+# face 270 "angry"
+# textboxarrow 0 2
+@ミーミル
+―――――さんと会うためにも、
+まずはスイハさんに落ち着いて
+いただかなくてはなりませんね
+
+# voice 650401 "manannan_ura_0003"
+# move 270 2 0.5
+# face 6504011 "usual"
+# alpha 6504011 1 0.3
+# textboxarrow 0 3
+@マナナン
+「強い思い」に囚われてるから
+それをどうにかしないとね～
+
+# textboxarrow 0 1
+@ミーミル
+つまり「揺らぎ」を鎮めれば
+良いのですよね？
+
+# voice 650401 "manannan_ura_0028"
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+スイハの「揺らぎ」は
+“彼女”を取り戻すことでしょ？
+
+# textboxarrow 0 3
+@マナナン
+“彼女”が不完全なままじゃ
+無理なんじゃないかな～
+
+# voice 9917 "mimir_navikan_0003"
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+それについては…
+私、少々疑問に思っていることが
+ございました
+
+# textboxarrow 0 1
+@ミーミル
+本当にスイハさんの「揺らぎ」は
+「―――――さんを取り戻す」という
+ことなのでしょうか？
+
+# voice 650401 "manannan_ura_0022"
+# face 6504011 "surprise"
+# textboxarrow 0 3
+@マナナン
+あれ～？
+違うの？
+
+;;選択肢
+# select "そういえば…" "select_label_03" "ミネルヴァが…" "select_label_03"
+本当にスイハさんの「揺らぎ」は
+「―――――さんを取り戻す」という
+ことなのでしょうか？
+
+# label "select_label_03"
+;;回想シーン（１話―４の回想）
+# se "SE_0742"
+# fadeout "white" 1
+# waitandnext 1
+
+;;背景：町：town_2（トリミング）
+# background "town_3"
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 270 0 0
+# alpha 6504011 0 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミネルヴァ
+スイハが神令化によって
+暴走しているとも言い切れないと
+考えています
+
+# face 302511 "sad"
+# textboxarrow 0 2
+@ミネルヴァ
+その理由が何かは、
+まだ分かりませんけれど…
+
+# face 302511 "normal"
+# textboxarrow 0 2
+@ミネルヴァ
+いずれにしても、彼女は彼女なりに
+考えがあって行動しているのではと
+思うんです
+
+;;回想終了
+# se "SE_11762"
+# fadeout "white" 1
+# waitandnext 1
+
+;;背景：地下空洞：101_cave
+# background "101_cave"
+# imagealpha 1 0 0
+# alpha 302511 0 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1.5
+
+# face 270 "normal"
+# alpha 270 1 0.3
+# face 6504011 "usual"
+# alpha 6504011 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+私がマスター様と離れている間、
+そのようなお話を…
+
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+なるほど
+分かったかもしれません
+
+# voice 9917 "mimir_navikan_0002"
+# textboxarrow 0 1
+@ミーミル
+マナナンさん、マクリルさん
+手伝っていただけませんか？
+
+# voice 650401 "manannan_ura_0032"
+# face 6504011 "happy"
+# textboxarrow 0 3
+@マナナン
+いいよ～♪
+
+# alpha 270 0 0.3
+# alpha 6504011 0 0.3
+# voice 660381 "maclir_ura_0028"
+# face 6603811 "usual"
+# alpha 6603811 1 0.3
+# textboxarrow 0 2
+@マクリル
+マナナンがいいって言うなら…
+
+# alpha 6603811 0 0.3
+# voice 9917 "mimir_navikan_0030"
+# move 270 3 0
+# face 270 "happy"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+ありがとうございます
+一緒にスイハさんの「揺らぎ」を
+鎮めましょう
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 270 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 6504011 5 0
+# mask 6504011 on
+# move 6603811 1 0
+# mask 6603811 on
+# move 302511 2 0
+# mask 302511 on
+# face 302511 "angry"
+# alpha 302511 1 0.3
+# face 3401711 "angry"
+# alpha 3401711 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@スイハ
+しつこいですねっ
+
+# textboxarrow 0 1
+@ミネルヴァ
+その言葉、そっくりそのまま
+お返しします！
+
+# alpha 302511 0 0.3
+# alpha 3401711 0 0.3
+# voice 650401 "manannan_ura_0005"
+# move 6504011 4 0.5
+# face 6504011 "happy"
+# alpha 6504011 1 0.3
+# move 6603811 2 0.5
+# face 6603811 "angry"
+# alpha 6603811 1 0.3
+# textboxarrow 0 3
+@マナナン
+アハハハハ！
+私も混ぜてよ～っ
+
+# voice 660381 "maclir_ura_0015"
+# textboxarrow 0 1
+@マクリル
+うう…怖いっ
+でも、やるって決めたから…！
+
+# alpha 6504011 0 0.3
+# alpha 6603811 0 0.3
+# voice 4017 "suiha_0037"
+# move 3401711 3 0
+# mask 3401711 off
+# face 3401711 "angry"
+# alpha 3401711 1 0.3
+# textboxarrow 0 2
+@スイハ
+あなた達まで？
+無関係なキル姫は
+引っ込んでいて下さい！
+
+;;バトル
+;;マップ：木の洞窟・闇（567）
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 3401711 0 0
+# waitandnext 0.2

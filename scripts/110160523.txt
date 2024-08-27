@@ -1,0 +1,263 @@
+;;-----------------------------------------
+;;タイトル：ネオ・ユートピア
+;;第5話_2_3　タイトル：世界樹ユグドラシル
+;;背景：白
+;;-----------------------------------------
+# script "lisp"
+# background "bg_white"
+# bgmfile "bgm263" "BgmLostRagnarok001" 0
+;;-----------------------------------------
+;;アルマス
+# body 138
+# pos 138 3
+# scale 138 0.8 0
+# layer 138 3
+# alpha 138 0 0
+# mask 138 off
+;;バーテックスアルマス
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# layer 172 3
+# alpha 172 0 0
+;;ゴッドアルマス
+# entry 3103831 3103811 523
+# pos 3103831 3
+# scale 3103831 0.8 0
+# layer 3103831 4
+# alpha 3103831 0 0
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 5
+# alpha 139 0 0
+# mask 139 off
+;;神令ラグナロク（仮面）
+# body 3103619
+# pos 3103619 3
+# scale 3103619 0.8 0
+# layer 3103619 2
+# alpha 3103619 0 0
+;;レーヴァテイン
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# layer 3100211 3
+# alpha 3100211 0 0
+;;ティファレト
+# body 3503211
+# pos 3503211 3
+# scale 3503211 0.8 0
+# layer 3503211 5
+# alpha 3503211 0 0
+;;フェイルノート
+# body 3401911
+# pos 3401911 3
+# scale 3401911 0.8 0
+# layer 3401911 4
+# alpha 3401911 0 0
+;;カシウス
+# body 3303111
+# pos 3303111 3
+# scale 3303111 0.8 0
+# layer 3303111 2
+# alpha 3303111 0 0
+;;モラベガ
+# body 187
+# pos 187 3
+# scale 187 0.8 0
+# layer 187 5
+# alpha 187 0 0
+;;ティルフィング
+# body 3101411
+# pos 3101411 3
+# scale 3101411 0.8 0
+# layer 3101411 3
+# alpha 3101411 0 0
+;;-----------------------------------------
+# textwindow "close"
+# waitandnext 1.5
+
+;;アルマス（通常バージョン）
+# alpha 138 1 0.5
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 138 "angry"
+# voice 1038 "almace_0002"
+@アルマス
+ねえ！
+私の声、聞こえてるっ？
+
+# textboxarrow 0 2
+# voice 1038 "almace_0001"
+@アルマス
+ねえってば、マスター！
+
+;;選択肢
+# select "聞こえてるよ" "select_label_01" "うるさいなあ…" "select_label_01" "もう朝か？" "select_label_01"
+ねえってば、マスター！
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textboxarrow 0 2
+# face 138 "shy1"
+@アルマス
+良かった！
+マスターとも繋がったわ！
+
+;;答えたあと
+# label "select_label_end"
+# textboxarrow 0 2
+# face 138 "shy2"
+# voice 1038 "almace_0028"
+@アルマス
+…って、別にホッとしてないし！
+あくまで、ここからの戦いに
+マスターも必要だからってだけで…
+
+# serif 1
+# textwindow "nomal"
+;;ティターニア（声だけ）
+@ティターニア
+アルマス、そういう言い訳は
+いりませんから…
+急いで下さい
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 138 "worry"
+# voice 1038 "almace_0042"
+@アルマス
+分かってるってば！
+ええと…
+
+# serif 0
+# textboxarrow 0 2
+# face 138 "normal"
+@アルマス
+みんなのお陰でユグドラシルと
+繋がることができたの
+
+# serif 0
+# textboxarrow 0 2
+@アルマス
+ユグドラシルの力を使って、
+マスターのバイブスをもう一度、
+活性化させるわ
+
+# serif 1
+# textwindow "nomal"
+@ティターニア
+同時にラグナロクから送り込まれた
+自壊因子も消去します
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 138 "shy1"
+# voice 1038 "almace_0028"
+@アルマス
+だから、その…
+私に触れて
+
+# serif 0
+# textboxarrow 0 2
+# face 138 "angry"
+# voice 1038 "almace_0035"
+@アルマス
+あ！
+指で軽く触れるくらいで十分だからっ
+変なことしようとしないでよ！
+
+# serif 0
+# textboxarrow 0 2
+@アルマス
+分かった？
+それじゃ、ほら…
+
+;;選択肢
+# select "アルマスに触れる" "select_label_02"
+分かった？
+それじゃ、ほら…
+
+;;タップしたら白フラッシュ
+# bgmfile "bgm275" "BgmLostRagnarokEvent" 0
+# se "SE_9088"
+# textwindow "close"
+# fadein "white" 1
+# label "select_label_02"
+# labeljump "select_label_end2"
+# waitandnext 1.5
+
+;;答えたあと
+# se "SE_0803"
+# label "select_label_end2"
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 138 "happy1"
+# voice 1038 "almace_0004"
+@アルマス
+うん
+マスターのバイブスを感じる…
+また繋がりが強まっていく
+
+;;ティターニアが現れる
+# se "SE_0804"
+# alpha 138 0 0.5
+# alpha 139 1 0.5
+# textboxarrow 0 2
+# face 139 "normal"
+@ティターニア
+アルマス！
+さあ、妖精結合しましょう
+
+# move 138 2 0
+# alpha 138 1 0.5
+# move 139 4 0.5
+# textboxarrow 0 1
+# face 138 "surprise"
+@アルマス
+ティニ！
+良かった…さあ、いくわよ！
+
+;;アルマスがバーテックスバージョンに
+# se "SE_0805"
+# fadein "white" 1
+# alpha 138 0 0
+# move 172 2 0
+# alpha 172 1 0
+# textboxarrow 0 1
+@アルマス
+力が高まってきた！
+さらにもう一段階っ
+
+;;アルマス、ゴッドバージョンに
+# se "SE_0806"
+# fadein "white" 1
+# alpha 172 0 0
+# move 3103831 2 0
+# alpha 3103831 1 0
+# textboxarrow 0 1
+@アルマス
+よし！
+力を取り戻したわ！
+あとは…
+
+# textboxarrow 0 3
+# voice 9967 "titania_0004"
+@ティターニア
+ユグドラシルの力を借りて、
+もう一度、ラグナロクに挑みましょう
+
+# face 3103831 "angry"
+# textboxarrow 0 1
+@アルマス
+今度こそ、未来を切り拓いてみせる！

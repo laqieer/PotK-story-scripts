@@ -1,0 +1,425 @@
+;;-----------------------------------------
+;;ファンキル お正月イベント2019
+;;タイトル：振袖に降る雪
+;;【EP3_1戦闘前】反撃の砂嵐
+;;背景：野外（可能であればケイオスリオン）
+;;-----------------------------------------
+# script "lisp"
+# background "300_devil_daytime02"
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アバリス透明
+# body 3401011
+# alpha 3401011 0 0
+;;振袖アバリス
+# body 3401021
+# pos 3401021 3
+# scale 3401021 0.8 0
+# alpha 3401021 1 0
+# layer 3401021 15
+# mask 3401021 off
+;;enemy
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# alpha 3820001 0 0
+# layer 3820001 15
+# mask 3820001 off
+;;-----------------------------------------
+# envbody 9999 2 0
+# effectpattern 9999 1 0
+# effectstart 9999
+# chara 3401021
+# face 3401021 "normal"
+# voice 340101 "abaris_a_0001"
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+マスター、着きました
+ケイオスリオンです
+
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+領主によって自治されているので
+トレイセーマのように規律違反で
+いきなり捕まることはないかと…
+
+# textflame 0 0
+@
+アバリスはそう言いながら
+落ち着かない様子であたりを見回す
+
+# textflame 0 0
+@
+やっぱり知り合いに会うのは不安？
+とマスターが尋ねる
+
+# emotionbody 1000 9 3401021 -120 240
+# effectpattern 1000 4 0
+# effectstart 1000
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0015"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+はい…
+いつもと違う格好ですし、
+恥ずかしいです…
+
+# effectskip 1000
+# textflame 0 0
+@
+おじいさんにも褒めてもらったし、
+自信を持っていこうよ
+と、マスターはアバリスを励ます
+
+# textflame 0 0
+@
+それに今のアバリスを見たら、
+きっと印象が変わるはずだ、と続けた
+
+# face 3401021 "smile"
+# voice 340101 "abaris_a_0003"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+確かに、そうですね…
+今度は隠れずに、
+頑張ってみます！
+
+;;演出：場所移動
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# textwindow "nomal"
+# face 3401021 "normal"
+# voice 340101 "abaris_a_0028"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+こちらの集落は…
+みんな忙しそうですね？
+新年だからなのでしょうか…
+
+# textflame 0 0
+@
+ごちそうを作って運んだり、
+食器を磨いたりと、すべての人が
+忙しそうに走り回っていた
+
+# textflame 0 0
+@
+そのうちの一人がアバリスに気づき、
+めずらしさから近寄ってくると、
+周りの人も続いて集まってきた
+
+# emotionbody 1001 9 3401021 -120 240
+# effectpattern 1001 4 0
+# effectstart 1001
+# face 3401021 "surprise"
+# voice 340101 "abaris_a_0024"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+きゃっ！
+あ、あの…
+
+# serif 1
+# textwindow "nomal"
+@男性A
+へー、綺麗な衣装だな
+
+# serif 1
+@男性B
+うん
+とても似合っているよ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# effectskip 1001
+# textflame 0 0
+@
+あっという間にアバリスは囲まれ、
+綺麗な装束だ、とても似合っている
+と、四方八方から褒められまくった
+
+# serif 0
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0042"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+あ…ありがとうございます…
+マスター、あの…どうしたら…
+
+# textflame 0 0
+@
+その時、集落の長らしき男性が
+やってきて、人々に向けて
+作業に戻れと怒鳴り声をあげた
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@男性A
+やれやれ、戻るとするか
+お嬢さん、ありがとうな
+久しぶりに、いいものが見れたよ
+
+# voice 340101 "abaris_a_0002"
+# chara 3401021
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+あの…
+どうしてそんなに
+忙しそうなのですか？
+
+# serif 1
+# textwindow "nomal"
+@男性A
+いやね、
+ここの領主が新年に豪華なパーティを
+開きたいって言い出してね
+
+# serif 1
+@男性B
+それで、総出で
+その準備をさせられているって訳だ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+@
+豪華なパーティってどんなものかな
+と、マスターが興味を持った様子を
+見て、アバリスはひとつ提案をする
+
+# face 3401021 "usual"
+# voice 340101 "abaris_a_0001"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+マスター、みんな忙しそうですし、
+私たちもお手伝いしませんか？
+
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+きっとパーティもすこしなら
+見学できるでしょうし、雰囲気を
+味わえると思いますよ？
+
+# textflame 0 0
+@
+マスターはアバリスの提案にのり、
+二人はパーティの準備を
+手伝うことにした
+
+# voice 340101 "abaris_a_0003"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+…このお料理を、あちらに運べば
+いいのですね？
+マスター、いきましょう！
+
+# alpha 3401021 0 0.5
+# textflame 0 0
+@
+完成した料理を、マスターと
+アバリスは会場へと運ぶ係になり、
+二人は会場へと足を踏み入れる
+
+;;演出：場面転換
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textwindow "close"
+# waitandnext 0.2
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 1
+
+;;背景：ケイオスリオン室内
+;;ゲパルト伯爵がいた場所、もしくは城内の背景
+# background "300_devil_room"
+# effectskip 9999
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 3401021 1 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# face 3401021 "surprise"
+# voice 340101 "abaris_a_0021"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+わぁ…
+豪華ですねぇ…
+
+# textflame 0 0
+@
+会場には高価そうな家具や
+食器などが並べられ、
+すでに豪華な料理も飾られていた
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0028"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+あちらにいるのが領主でしょうか
+なんだか視線を感じます…
+マスター、早く戻りましょう
+
+# textflame 0 0
+@
+会場にいた来客たちもアバリスに
+注目していたが、そのなかでも領主は
+熱い視線をアバリスに向けている
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@領主
+おい！
+そこの者、止まれ！
+
+# face 3401021 "angry"
+# voice 340101 "abaris_a_0026"
+# chara 3401021
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+…なにかご用でしょうか？
+私たちは準備で忙しいのですが…
+
+# serif 1
+@領主
+ふふっ
+その強気の態度も気に入った
+私のものになれ
+
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0034"
+# chara 3401021
+# serif 0
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+それは、できません…
+では失礼します…
+
+# serif 1
+@領主
+フン！
+奴隷に拒否権などない
+おい、あいつを捕らえろ
+
+# alpha 3820001 1 0.5
+# alpha 3401021 0 0.5
+# chara 3401021
+# serif 0
+# textflame 1 1
+# textboxarrow 0 2
+@ケイオスリオン兵
+はっ！
+
+# alpha 3401021 1 0.5
+# alpha 3820001 0 0.5
+# face 3401021 "angry"
+# chara 3401021
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+…ここでは戦えません
+いったん、逃げます！
+
+# alpha 3401021 0 0.5
+# textflame 0 0
+@
+アバリスはそう言うと、
+マスターを抱えて会場から逃げ出した
+
+;;演出：場面転換
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textwindow "close"
+# waitandnext 0.2
+
+;;暗転挟む
+# se "SE_5575"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 1
+
+;;背景：ケイオスリオン野外
+# background "300_devil_daytime02"
+# bgmfile "bgm177_178" "BgmGakuen001" 0
+# envbody 9998 2 0
+# effectpattern 9998 1 0
+# effectstart 9998
+# alpha 3401021 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# textwindow "nomal"
+# textflame 0 0
+@
+アバリスたちはパーティ会場からも
+集落からも離れた場所にある
+荒野まで逃げてきた
+
+# face 3401021 "angry"
+# voice 340101 "abaris_a_battle_0005"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+…追っ手がきたようですね
+ここでなら、思い切りやれます！

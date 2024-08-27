@@ -1,0 +1,580 @@
+;;-----------------------------------------
+;;ファンキル　10月学園イベント2020シナリオ
+;;【EP.5】彼女の答え
+;;スクリプト最後の背景：理事長室(昼)
+;;背景：理事長室(昼)
+;;-----------------------------------------
+# script "lisp"
+# background "presidentroom"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 2
+# alpha 0 0 0
+# mask 0 off
+;;学園ティルフィング
+# body 101491
+# pos 101491 3
+# scale 101491 0.8 0
+# layer 101491 2
+# alpha 101491 0 0
+# mask 101491 off
+;;アルマス (学園)
+# body 3103831
+# pos 3103831 3
+# scale 3103831 0.8 0
+# layer 3103831 2
+# alpha 3103831 0 0
+# mask 3103831 off
+;;制服ヴァジュラ
+# body 38
+# pos 38 3
+# scale 38 0.8 0
+# layer 38 2
+# alpha 38 0 0
+# mask 38 off
+;;制服エクスカリバー
+# body 34
+# pos 34 3
+# scale 34 0.8 0
+# layer 34 2
+# alpha 34 0 0
+# mask 34 off
+;;ブラフマーストラ制服
+# body 115
+# pos 115 3
+# scale 115 0.8 0
+# layer 115 2
+# alpha 115 0 0
+# mask 115 off
+;;-----------------------------------------
+;;【EP.5】彼女の答え
+;;//コメント：EP5の展開につきまして、EP4までの噂の話をオチにも絡めるため、プロットから大幅に内容を変更させていただいております。エピローグ以後の最終的なオチ（アルマスが学園に残る展開）はプロット通りです。ご確認のほど、何卒よろしくお願いいたします。
+;;//背景：理事長室(昼)
+;;//ＳＥ：ガチャッ（ドアを開ける音）
+# se "SE_0914"
+# textwindow "close"
+# waitandnext 0.5
+
+# move 101491 2 0
+# face 101491 "normal"
+# alpha 101491 1 0.5
+# mask 101491 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 38 4 0
+# face 38 "usual"
+# alpha 38 1 0.5
+# mask 38 on
+# textwindow "normal"
+@ティルフィング
+あ…お帰りなさい！
+
+# face 38 "normal"
+# textboxarrow 0 3
+@ヴァジュラ
+待ってたよー、早く入って！
+
+# alpha 101491 0 0.5
+# alpha 38 0 0.5
+# move 34 3 0
+# face 34 "normal"
+# alpha 34 1 0.5
+# mask 34 off
+# textboxarrow 0 2
+@エクスカリバー
+お疲れ様です、お二人とも
+ブラフマーストラもご一緒で？
+
+# voice 5004 "burafumasutora_0003"
+# move 34 2 0.5
+# mask 34 on
+# move 115 4 0
+# face 115 "normal"
+# alpha 115 1 0.5
+# mask 115 on
+# textboxarrow 0 3
+@ブラフマーストラ
+たまたまね～
+ただごとじゃないみたいだから
+着いてきちゃった
+
+# emotionbody 1001 2 3103831 10 290
+# effectpattern 1001 1 1
+# effectstart 1001
+# alpha 34 0 0.5
+# alpha 115 0 0.5
+# move 3103831 3 0
+# face 3103831 "normal"
+# alpha 3103831 1 0.5
+# mask 3103831 off
+# textboxarrow 0 2
+@アルマス
+ええっと、いったい
+何の騒ぎなの…？
+
+# alpha 3103831 0 0.5
+# move 0 3 0
+# face 0 "serious"
+# alpha 0 1 0.5
+# mask 0 off
+# textboxarrow 0 2
+@デュリン
+アルマス、マスター！
+ずばり言うわ！
+
+# textboxarrow 0 2
+@デュリン
+あなた達二人は…
+今日限りでパートナー解散よ！
+
+# emotionbody 1002 1 3103831 10 310
+# effectpattern 1002 2 0
+# effectstart 1002
+# voice 1038 "almace_0022"
+# alpha 0 0 0.5
+# move 3103831 3 0
+# face 3103831 "surprise"
+# alpha 3103831 1 0.5
+# mask 3103831 off
+# textboxarrow 0 2
+@アルマス
+…えっ！？
+なにそれっ、どういうこと！？
+
+# alpha 3103831 0 0.5
+# move 34 2 0
+# face 34 "normal"
+# alpha 34 1 0.5
+# mask 34 on
+# move 38 4 0
+# face 38 "irregular"
+# alpha 38 1 0.5
+# mask 38 on
+# textboxarrow 0 3
+@ヴァジュラ
+いやー、それがさ？
+アルマスとマスターの噂が
+ものすごい広まっちゃって…
+
+# voice 1011 "excalibur_0008"
+# textboxarrow 0 1
+@エクスカリバー
+学内から不満の声が
+多数上がってきているのです
+
+# alpha 34 0 0.5
+# alpha 38 0 0.5
+# move 3103831 3 0
+# face 3103831 "surprise"
+# alpha 3103831 1 0.5
+# mask 3103831 off
+# textboxarrow 0 2
+@アルマス
+ええっ！？
+そんな大ごとに…？
+
+# voice 5005 "vajura_0004"
+# alpha 3103831 0 0.5
+# move 38 3 0
+# face 38 "normal"
+# alpha 38 1 0.5
+# mask 38 off
+# textboxarrow 0 2
+@ヴァジュラ
+まぁなんだかんだ、
+マスターって人気高いからねぇ
+
+# textboxarrow 0 2
+@ヴァジュラ
+マスターに憧れてた子達が
+怒りだしてもおかしくないさ
+
+# emotionbody 1003 1 115 10 310
+# effectpattern 1003 1 0
+# effectstart 1003
+# alpha 38 0 0.5
+# move 115 3 0
+# face 115 "surprise"
+# alpha 115 1 0.5
+# mask 115 off
+# textboxarrow 0 2
+@ブラフマーストラ
+あっ！
+そういえばうちの学院でも…
+
+# textboxarrow 0 2
+@ブラフマーストラ
+独占禁止！って
+書いてる張り紙、
+たくさん作ってる子いたわ～
+
+# face 115 "normal"
+# textboxarrow 0 2
+@ブラフマーストラ
+あれももしかしたら
+マスターの話だったのかも？
+
+# alpha 115 0 0.5
+# move 3103831 3 0
+# face 3103831 "surprise"
+# alpha 3103831 1 0.5
+# mask 3103831 off
+# textboxarrow 0 2
+@アルマス
+は、張り紙まで…！？
+
+# alpha 3103831 0 0.5
+# move 0 3 0
+# face 0 "serious"
+# alpha 0 1 0.5
+# mask 0 off
+# textboxarrow 0 2
+@デュリン
+このまま放っておいたら、
+みんなの不満が爆発して
+とんでもない事件が起こる…！
+
+# textboxarrow 0 2
+@デュリン
+これ以上噂を広げないために…
+アルマスは残りの視察期間、
+マスターとは会わないこと！
+
+# textboxarrow 0 2
+@デュリン
+代わりのパートナーは
+ちゃんと用意してあげる
+
+# textboxarrow 0 2
+@デュリン
+後は私達で対処するから！
+…それでいいわね？
+
+# alpha 0 0 0.5
+# move 3103831 3 0
+# face 3103831 "sad"
+# alpha 3103831 1 0.5
+# mask 3103831 off
+# textboxarrow 0 2
+@アルマス
+そ…それは…
+
+;;モノローグ
+# textflame 0 0
+@
+突きつけられた命令に
+戸惑いを隠せないアルマス
+
+;;//ト書き：以下、心の声です
+# move 3103831 3 0
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 3103831 off
+@アルマス
+たしかに…私自身、
+噂のせいで困ってる身ではある
+
+# textboxarrow 0 0
+@アルマス
+視察にしたって、
+マスターと一緒じゃなきゃ
+出来ないわけじゃない
+
+# textboxarrow 0 0
+@アルマス
+学園の平和のためにも、
+離れた方が合理的…
+そうは思うけど…
+
+# textboxarrow 0 0
+@アルマス
+そうしたら、
+もう…マスターとは
+会えないってこと…？
+
+;;//ト書き：心の声ここまで
+# bgm "stop"
+# move 101491 2 0
+# face 101491 "angry"
+# alpha 101491 1 0.5
+# mask 101491 on
+# textboxarrow 0 1
+# move 3103831 4 0.5
+# mask 3103831 on
+# textwindow "normal"
+@ティルフィング
+待ってください！
+
+# emotionbody 1004 1 3103831 10 310
+# effectpattern 1004 1 0
+# effectstart 1004
+# face 3103831 "surprise"
+# textboxarrow 0 3
+@アルマス
+…っ！
+ティルフィング…？
+
+# bgm "bgm003" 0
+# voice 1014 "tyrufing_0002"
+# face 101491 "normal"
+# textboxarrow 0 1
+@ティルフィング
+アルマス…何か思うことが
+あるのではないですか？
+
+# textboxarrow 0 1
+@ティルフィング
+あなたの気持ちを教えてください
+どうか、隠さずに
+
+# voice 1038 "almace_0028"
+# face 3103831 "sad"
+# textboxarrow 0 3
+@アルマス
+私の気持ち…？
+私、は…
+
+;;モノローグ
+# alpha 101491 0 0.5
+# move 3103831 3 0.5
+# mask 3103831 off
+# textflame 0 0
+@
+ティルフィングの言葉を聞き、
+自分の気持ちを
+素直に見つめなおすアルマス
+
+;;モノローグ
+@
+しばし考えた末…
+アルマスは自分なりの
+結論にたどり着いた
+
+# bgmfile "bgm183_184" "BgmGakuen003" 0
+# face 3103831 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+わかったわ、
+私の本当の気持ち…
+
+# voice 1038 "almace_0002"
+# textboxarrow 0 2
+@アルマス
+ねえ、デュリン！
+私にチャンスをちょうだい！
+
+# emotionbody 1005 2 0 40 200
+# effectpattern 1005 1 1
+# effectstart 1005
+# voice 9999 "durin_0023"
+# alpha 3103831 0 0.5
+# move 0 3 0
+# face 0 "normal"
+# alpha 0 1 0.5
+# mask 0 off
+# textboxarrow 0 2
+@デュリン
+チャンス…？
+どういうこと？
+
+# alpha 0 0 0.5
+# move 3103831 3 0
+# face 3103831 "normal"
+# alpha 3103831 1 0.5
+# mask 3103831 off
+# textboxarrow 0 2
+@アルマス
+私がここに来たせいで
+起こってしまった波乱…
+
+# textboxarrow 0 2
+@アルマス
+その後始末を、
+マスターと一緒に
+やってみせるチャンスよ！
+
+# alpha 3103831 0 0.5
+# move 0 3 0
+# face 0 "serious"
+# alpha 0 1 0.5
+# mask 0 off
+# textboxarrow 0 2
+@デュリン
+…！
+
+# alpha 0 0 0.5
+# move 3103831 3 0
+# face 3103831 "normal"
+# alpha 3103831 1 0.5
+# mask 3103831 off
+# textboxarrow 0 2
+@アルマス
+私、わかったの
+マスターがどうして
+この学園に受け入れられたのか
+
+# textboxarrow 0 2
+@アルマス
+異分子であるマスターが、
+どうして学園の
+一員になれたのか…
+
+# textboxarrow 0 2
+@アルマス
+きっと…マスターは一生懸命、
+学園に馴染むための
+努力をしていたのよね
+
+# textboxarrow 0 2
+@アルマス
+走り回って、手助けをして
+少しずつ信用を勝ち取って
+
+# textboxarrow 0 2
+@アルマス
+くだらない噂なんて
+消えてなくなっちゃうくらい、
+みんなの輪の中に溶け込んだ
+
+# face 3103831 "angry"
+# textboxarrow 0 2
+@アルマス
+…だったら私も、
+それと同じことを
+やり遂げてみせる！
+
+# textboxarrow 0 2
+@アルマス
+私が学園を出る頃には、
+誰も噂なんて覚えてない…
+そんな未来にしてみせる！
+
+# face 3103831 "normal"
+# textboxarrow 0 2
+@アルマス
+そのためには…
+私のパートナーは
+マスターでなくちゃ
+
+# textboxarrow 0 2
+@アルマス
+マスターならきっと…
+一生懸命に頑張る私を、
+全力で支えてくれるから！
+
+# face 3103831 "angry"
+# textboxarrow 0 2
+@アルマス
+だから…お願い！
+私にチャンスをちょうだいっ！
+
+# alpha 3103831 0 0.5
+# move 0 3 0
+# face 0 "usual2"
+# alpha 0 1 0.5
+# mask 0 off
+# textboxarrow 0 2
+@デュリン
+アルマス…
+
+# emotionbody 1006 10 38 -60 235
+# effectpattern 1006 4 3
+# effectstart 1006
+# voice 5005 "vajura_0005"
+# alpha 0 0 0.5
+# move 34 2 0
+# face 34 "normal"
+# alpha 34 1 0.5
+# mask 34 on
+# move 38 4 0
+# face 38 "smile"
+# alpha 38 1 0.5
+# mask 38 on
+# textboxarrow 0 3
+@ヴァジュラ
+はっはっは！
+いいんじゃない、理事長？
+
+# effectskip 1006
+# voice 1011 "excalibur_0003"
+# textboxarrow 0 1
+@エクスカリバー
+ええ…アルマスの気概、
+しかと胸に響きました
+
+# alpha 38 0 0.5
+# move 115 4 0
+# face 115 "normal"
+# alpha 115 1 0.5
+# mask 115 on
+# textboxarrow 0 3
+@ブラフマーストラ
+アタシ達もいろいろ
+サポートしてあげるからさっ！
+
+# voice 9999 "durin_0027"
+# alpha 34 0 0.5
+# alpha 115 0 0.5
+# move 0 3 0
+# face 0 "sad"
+# alpha 0 1 0.5
+# mask 0 off
+# textboxarrow 0 2
+@デュリン
+はぁ…
+まったく、仕方がないわね…
+
+# face 0 "normal"
+# textboxarrow 0 2
+@デュリン
+アルマス、マスター！
+改めて命令よ！
+
+# textboxarrow 0 2
+@デュリン
+この学園の緊急事態を、
+必ずや解決してみせること！
+いいっ！？
+
+# voice 1038 "almace_0003"
+# alpha 0 0 0.5
+# move 3103831 3 0
+# face 3103831 "angry"
+# alpha 3103831 1 0.5
+# mask 3103831 off
+# textboxarrow 0 2
+@アルマス
+ええ…わかったわ！
+
+# voice 1014 "tyrufing_0004"
+# alpha 3103831 0 0.5
+# move 101491 3 0
+# face 101491 "normal"
+# alpha 101491 1 0.5
+# mask 101491 off
+# textboxarrow 0 2
+@ティルフィング
+アルマス、マスター！
+どうか頑張って…！
+
+# voice 1038 "almace_0030"
+# alpha 101491 0 0.5
+# move 3103831 3 0
+# face 3103831 "normal"
+# alpha 3103831 1 0.5
+# mask 3103831 off
+# textboxarrow 0 2
+@アルマス
+ありがとう…
+行きましょ、マスター！
+
+# textboxarrow 0 2
+@アルマス
+私のパートナーとして…
+最後までよろしくね！

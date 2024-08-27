@@ -1,0 +1,522 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第９章 章タイトル：「雄弁な守人―プレッジ―」
+;;第2話－７　タイトル：為すべきこと
+;;2_7_3
+;;スクリプト最後の背景：下町
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;エクスカリバー
+# body 101111
+# pos 101111 3
+# scale 101111 0.8 0
+# layer 101111 2
+# alpha 101111 0 0
+# mask 101111 off
+;;ルーン
+# body 300531
+# pos 300531 3
+# scale 300531 0.8 0
+# layer 300531 2
+# alpha 300531 0 0
+# mask 300531 off
+;;ロンゴミアント
+# body 301021
+# pos 301021 3
+# scale 301021 0.8 0
+# layer 301021 2
+# alpha 301021 0 0
+# mask 301021 off
+;;モニカ
+# body 209
+# pos 209 3
+# scale 209 0.8 0
+# layer 209 2
+# alpha 209 0 0
+# mask 209 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;グングニル・D. plug・アモン
+# body 3300811
+# pos 3300811 3
+# scale 3300811 0.8 0
+# layer 3300811 2
+# alpha 3300811 0 0
+# mask 3300811 off
+;;グリモワール・獣刻・ニーズヘッグ 大罪ver.
+# body 5501711
+# pos 5501711 3
+# scale 5501711 0.8 0
+# layer 5501711 2
+# alpha 5501711 0 0
+# mask 5501711 off
+;;アスカロン・D. plug・レヴィアタン 大罪ver.
+# body 5102311
+# pos 5102311 3
+# scale 5102311 0.8 0
+# layer 5102311 2
+# alpha 5102311 0 0
+# mask 5102311 off
+;;カラドボルグ・聖鎖・レリエル
+# body 3102611
+# pos 3102611 3
+# scale 3102611 0.8 0
+# layer 3102611 2
+# alpha 3102611 0 0
+# mask 3102611 off
+;;ダーインスレイヴ・聖鎖・マリク
+# body 3102811
+# pos 3102811 3
+# scale 3102811 0.8 0
+# layer 3102811 2
+# alpha 3102811 0 0
+# mask 3102811 off
+;;-----------------------------------------
+;;第2話－７　タイトル：為すべきこと
+;;//背景：下町
+;;//バトル
+# voice 310231 "ascalon_a_battle_0002"
+# move 5102311 3 0
+# face 5102311 "normal"
+# alpha 5102311 1 0
+# mask 5102311 off
+# textflame 1 1
+# textboxarrow 0 2
+@アスカロン
+やああっ！
+
+# se "SE_4830"
+# fadein "white" 0.5
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# se "SE_10627"
+# voice 350171 "grimoire_ge_battle_0004"
+# alpha 5102311 0 0.5
+# move 5501711 3 0
+# face 5501711 "normal"
+# alpha 5501711 1 0.5
+# mask 5501711 off
+# textboxarrow 0 2
+@グリモワール
+そこっ！
+
+# voice 310281 "dainsleif_t_battle_0004"
+# alpha 5501711 0 0.5
+# move 3102811 3 0
+# face 3102811 "angry"
+# alpha 3102811 1 0.5
+# mask 3102811 off
+# textboxarrow 0 2
+@ダーインスレイヴ
+そこだっ！
+
+# se "SE_4001"
+# waitandnext 0.5
+
+# voice 330081 "gunguniru_a_battle_0001"
+# alpha 3102811 0 0.5
+# move 3300811 3 0
+# face 3300811 "angry"
+# alpha 3300811 1 0.5
+# mask 3300811 off
+# textboxarrow 0 2
+@グングニル
+はっ！
+
+# se "SE_4817"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# serif 1
+@奏官１
+くそっ…
+撤退だ、撤退！
+
+# se "SE_0799"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 1
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 3300811 0 0
+# move 209 2 0
+# face 209 "sad"
+# alpha 209 1 0
+# mask 209 on
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0
+# mask 210 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+# voice 9936 "kamito_0020"
+# textboxarrow 0 3
+# textwindow "normal"
+@カミト
+やっと追い返せた…
+
+# voice 9937 "monica_0018"
+# textboxarrow 0 1
+@モニカ
+日を追うごとに数が増えてるね…
+このままだとまずいかも
+
+# voice 310281 "dainsleif_t_0003"
+# alpha 210 0 0.5
+# move 3102811 4 0
+# face 3102811 "usual"
+# alpha 3102811 1 0.5
+# mask 3102811 on
+# textboxarrow 0 3
+@ダーインスレイヴ
+うむ…
+こちらへと逃げてきた奏官達を
+取り込んでいるようだ
+
+# textboxarrow 0 3
+@ダーインスレイヴ
+何としても、この町を手に入れようと
+考えているようだが…
+
+# textboxarrow 0 1
+@モニカ
+ここまでくると、ただの意地だよね
+早く諦めて別のところに行った方が
+良いはずなのに
+
+# alpha 3102811 0 0.5
+# move 101111 4 0
+# face 101111 "angry"
+# alpha 101111 1 0.5
+# mask 101111 on
+# textboxarrow 0 3
+@エクスカリバー
+その見極めを誤ったからこそ、
+流浪の身に墜ちたのでしょう
+
+# alpha 101111 0 0.5
+# move 3102811 4 0
+# face 3102811 "usual"
+# alpha 3102811 1 0.5
+# mask 3102811 on
+# textboxarrow 0 3
+@ダーインスレイヴ
+すでに町は連中に包囲されている
+連日の戦闘でおぬし達も疲れておろう
+
+# voice 330081 "gunguniru_a_0003"
+# alpha 209 0 0.5
+# move 3300811 2 0
+# face 3300811 "angry"
+# alpha 3300811 1 0.5
+# mask 3300811 on
+# textboxarrow 0 1
+@グングニル
+それだけではないぞ
+町の人々にも疲労の色が目立つ
+気が休まらないからな…
+
+# voice 310261 "caladbolg_t_0019"
+# alpha 3300811 0 0.5
+# move 3102611 2 0
+# face 3102611 "sad"
+# alpha 3102611 1 0.5
+# mask 3102611 on
+# textboxarrow 0 1
+@カラドボルグ
+子供達も怖がってるわ…
+物資だって残り少ないんでしょ？
+
+# voice 310281 "dainsleif_t_0032"
+# textboxarrow 0 3
+@ダーインスレイヴ
+そうだな
+先日、「ネオ・ラグナロク」本部に
+使いを出したが…
+
+# textboxarrow 0 3
+@ダーインスレイヴ
+支援が間に合うか分からぬ
+決断のときか
+
+# voice 9936 "kamito_0023"
+# alpha 3102611 0 0.5
+# move 210 2 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 1
+@カミト
+決断って…
+何をするつもりだい？
+
+# face 3102811 "angry"
+# textboxarrow 0 3
+@ダーインスレイヴ
+こちらから討って出る
+
+# alpha 210 0 0.5
+# move 209 2 0
+# face 209 "normal"
+# alpha 209 1 0.5
+# mask 209 on
+# textboxarrow 0 1
+@モニカ
+おおーっ！
+やる気だね
+
+# voice 350171 "grimoire_ge_0002"
+# alpha 209 0 0.5
+# move 5501711 2 0
+# face 5501711 "usual"
+# alpha 5501711 1 0.5
+# mask 5501711 on
+# textboxarrow 0 1
+@グリモワール
+ちょっと！
+そんなことしても多勢に無勢なん
+じゃないのっ？
+
+# face 3102811 "usual"
+# textboxarrow 0 3
+@ダーインスレイヴ
+そうかもしれん
+だが、わたしとて容易く討ち取られる
+気はない
+
+# textboxarrow 0 3
+@ダーインスレイヴ
+敵陣を掻き乱し、その半数を道連れに
+できれば、状況は好転する
+
+# alpha 5501711 0 0.5
+# move 210 2 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 1
+@カミト
+そんな、無茶だよ…！
+包囲の中に突っ込んだら、帰ってくる
+のは、ほぼ不可能だっ
+
+# textboxarrow 0 3
+@ダーインスレイヴ
+それは問題ない
+この道行きは片道だ
+わたしは戦場で果てる
+
+# textboxarrow 0 3
+@ダーインスレイヴ
+その代わり、咎人達を一人でも
+多く罰してみせよう
+
+# voice 330081 "gunguniru_a_0040"
+# alpha 3102811 0 0.5
+# move 3300811 4 0
+# face 3300811 "angry"
+# alpha 3300811 1 0.5
+# mask 3300811 on
+# textboxarrow 0 3
+@グングニル
+なるほど
+では、我も出よう
+
+# voice 9936 "kamito_0013"
+# textboxarrow 0 1
+@カミト
+グングニルまで何を言ってるんだ！？
+死にに行くなんてダメだ！
+
+# textboxarrow 0 3
+@グングニル
+そなたは優しいな
+だが、諍いを鎮めるためだ
+やむを得まい
+
+# textboxarrow 0 3
+@グングニル
+彼の者達も、我らから受けた傷の
+痛みは忘れまい
+
+# textboxarrow 0 3
+@グングニル
+その恨みが、この町を狙わせ
+続けているのだ
+ならば…
+
+# textboxarrow 0 3
+@グングニル
+その憂さを晴らす贄が必要となる
+そういうことだよ
+
+# voice 9936 "kamito_0017"
+# face 210 "sad"
+# textboxarrow 0 1
+@カミト
+そんなっ…
+
+# alpha 210 0 0.5
+# alpha 3300811 0 0.5
+# move 3102611 2 0
+# face 3102611 "usual"
+# alpha 3102611 1 0.5
+# mask 3102611 on
+# move 3102811 4 0
+# face 3102811 "usual"
+# alpha 3102811 1 0.5
+# mask 3102811 on
+# textboxarrow 0 3
+@ダーインスレイヴ
+カラドボルグ
+おぬし一人に後のことを任せて
+しまうのは申し訳ないが
+
+# textboxarrow 0 3
+@ダーインスレイヴ
+最初で最後のワガママだ
+どうか聞き入れてくれ
+
+# textboxarrow 0 1
+@カラドボルグ
+仕方のない人達ね…
+でも、その信念は好きよ
+
+# textboxarrow 0 1
+@カラドボルグ
+留守は必ず守るわ
+だから、帰ってきてね
+
+# textboxarrow 0 3
+@ダーインスレイヴ
+善処しよう
+
+# alpha 3102611 0 0.5
+# move 209 2 0
+# face 209 "normal"
+# alpha 209 1 0.5
+# mask 209 on
+# textboxarrow 0 1
+@モニカ
+うん！
+いいね！
+私も行くよっ
+
+# voice 1011 "excalibur_0012"
+# alpha 3102811 0 0.5
+# move 101111 4 9
+# face 101111 "angry"
+# alpha 101111 1 0.5
+# mask 101111 on
+# textboxarrow 0 3
+@エクスカリバー
+マスターっ？
+それはいけません
+
+# textboxarrow 0 1
+@モニカ
+安心して、エクスカリバーくん
+私は死ぬつもりないから
+
+# textboxarrow 0 1
+@モニカ
+ダーインスレイヴくんと
+グングニルくんが町に帰って
+こられるよう…
+
+# textboxarrow 0 1
+@モニカ
+門の側で戦うんだよ
+その方が、二人の戦いをよく
+見ることができるしっ
+
+# textboxarrow 0 3
+@エクスカリバー
+それでも危険なことに変わりは
+ありません！
+そのようなことは――
+
+# voice 3005 "roon_0007"
+# alpha 101111 0 0.5
+# move 300531 4 0
+# face 300531 "normal"
+# alpha 300531 1 0.5
+# mask 300531 on
+# textboxarrow 0 3
+@ルーン
+いいじゃないの！
+その方が暴れやすいわ
+
+# voice 3010 "rhongomiant_0013"
+# alpha 209 0 0.5
+# alpha 300531 0 0.5
+# move 301021 3 0
+# face 301021 "normal"
+# alpha 301021 1 0.5
+# mask 301021 off
+# textboxarrow 0 2
+@ロンゴミアント
+ルーンまで…
+
+# voice 3005 "roon_0001"
+# alpha 301021 0 0.5
+# move 209 2 0
+# face 209 "normal"
+# alpha 209 1 0.5
+# mask 209 on
+# move 300531 4 0
+# face 300531 "normal"
+# alpha 300531 1 0.5
+# mask 300531 on
+# textboxarrow 0 3
+@ルーン
+ちまちま守ってるのは
+性に合わないのよ！
+マスター、派手にやるわよ！
+
+# voice 9937 "monica_0004"
+# face 209 "happy"
+# textboxarrow 0 1
+@モニカ
+アハハハハ！
+ルーンくん、頼りにしてるよっ
+
+# alpha 209 0 0.5
+# alpha 300531 0 0.5
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+…………
+
+# alpha 210 0 0.5
+# move 3102811 3 0
+# alpha 3102811 1 0.5
+# mask 3102811 off
+# textboxarrow 0 2
+@ダーインスレイヴ
+決まりだ
+奇襲の定番だが、
+夜に出撃するとしよう

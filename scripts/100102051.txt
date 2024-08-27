@@ -1,0 +1,280 @@
+;;1章2話_5　戦闘前　タイトル：使命
+;;;;//背景：街中（夜）
+;;;;//バトル
+# script "lisp"
+# background "101_city_night3"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# body 3103811
+# pos 3103811 3
+# scale 3103811 0.8 0
+# alpha 3103811 0 0
+# body 136
+# pos 136 3
+# scale 136 0.8 0
+# alpha 136 0 0
+# mask 136 off
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# alpha 137 0 0
+# mask 137 off
+# layer 3103811 2
+# layer 136 3
+# layer 137 1
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 5
+# alpha 139 0 0
+# mask 139 off 
+# body 3500811
+# pos 3500811 3
+# scale 3500811 0.8 0
+# layer 3500811 4
+# mask 3500811 off
+# mask 3103811 off
+# face 3500811 "angry"
+# face 136 "sad"
+# face 139 "sad"
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3500811
+@芭蕉扇
+やっと見つけた
+これで、あの方に褒めてもらえるわ
+さあ、死になさいナディア！
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# face 3103811 "angry"
+# alpha 3103811 1 0
+# alpha 3500811 0 0
+# waitandnext 0.1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "normal" 
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+# voice 1038 "almace_0029"
+@アルマス
+させない！
+
+;;//アルマスと芭蕉扇が激突する
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# alpha 3103811 0 0
+# alpha 3500811 1 0
+# mask 3500811 on
+# mask 3103811 on
+# pos 3103811 2
+# waitandnext 0.1
+
+# se "SE_5222"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# alpha 3103811 1 0.3
+# leftin 3103811 0.3
+# waitandnext 0.3
+
+# se "SE_4601"
+# fadein "white" 0.3
+# shake 0 0.3
+# move 3500811 4 0.3
+# move 3103811 1 0.3
+# waitandnext 0.5
+
+# face 3500811 "surprise"
+# serif 0
+# textwindow "normal" 
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3500811
+# voice 350081 "bashosen_a_0013"
+@芭蕉扇
+…この力、やっぱり変ね
+あなた霊装支配されていない
+ただの斬ル姫よね？
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3500811
+@芭蕉扇
+それなのに
+どうして妾と対等に戦えるの？
+
+# move 3103811 2 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3103811
+# voice 1038 "almace_0010"
+@アルマス
+私だって妖精結合してるのよ
+ただの斬ル姫と侮らないで！
+
+# alpha 3103811 0 0.5
+# alpha 3500811 0 0.5
+# alpha 139 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 139
+@ティターニア
+マスター、彼女のキラーズが
+バイブスと共鳴するはずです
+芭蕉扇に呼びかけてみて下さい！
+
+# mask 3500811 off
+# move 3500811 3 0
+# alpha 3500811 1 0.5
+# alpha 139 0 0.5
+# select "目を覚ませ、芭蕉扇！" "select_label_01" "やめるんだ、芭蕉扇！" "select_label_01"
+マスター、彼女のキラーズが
+バイブスと共鳴するはずです
+芭蕉扇に呼びかけてみて下さい！
+
+# label "select_label_01"
+# imageset 2 "c500811"
+# imagealpha 2 0 0
+# imagelayer 2 3
+# imageset 3 "bg_white_circle"
+# imagealpha 3 0 0
+# imagescale 3 1.2 0
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3500811
+@芭蕉扇
+なにを言っているのかしら？
+マスターなんて…マスター…？
+
+# bgm "stop"
+# imagepos 2 0 30
+# imagepos 3 0 30
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3500811
+@芭蕉扇
+マスター…あなた…
+
+;;//芭蕉扇の一枚絵などをフラッシュバック形式で表示
+# se "SE_0742"
+# serif 0
+# textwindow "close"
+# se "SE_0742"
+# fadein "red" 0.3
+# imagealpha 2 1 0
+# imagealpha 3 1 0
+# waitandnext 1
+
+# se "SE_0644"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# serif 0
+# textwindow "normal"
+# fadein "red" 0.3
+# imagealpha 2 0 0
+# imagealpha 3 0 0
+# face 3500811 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3500811
+# voice 350081 "bashosen_a_0038"
+@芭蕉扇
+あなた…私…私は…あああああ！？
+違う違う違う違う違う違う違う違う
+違う違う違う違う違う違う違う違う
+
+# face 3103811 "surprise"
+# mask 3103811 off
+# move 3103811 3 0
+# alpha 3103811 1 0.5
+# alpha 3500811 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+# voice 1038 "almace_0022"
+@アルマス
+芭蕉扇の様子が…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+# voice 1038 "almace_0002"
+@アルマス
+ねえ！
+これって本当に
+バイブスと共鳴してるの！？
+
+# alpha 3103811 0 0.5
+# alpha 136 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 136
+# voice 9968 "nadia_0025"
+@ナディア
+私には
+苦しんでいるようにしか見えません…
+早く助けてあげて下さいっ
+
+# face 3103811 "sad"
+# mask 3103811 on
+# mask 3500811 on
+# move 3103811 2 0
+# move 3500811 4 0
+# alpha 136 0 0.5
+# alpha 3103811 1 0.5
+# alpha 3500811 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3103811
+# voice 1038 "almace_battle_0006"
+@アルマス
+そんなこと言われても…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3500811
+@芭蕉扇
+違う！
+ケイオスリオンこそ理想郷！
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3500811
+@芭蕉扇
+私は…
+あの方のお願いを聞いて
+あげているのっ…そうよ…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3500811
+@芭蕉扇
+あなた…マスターなんて…
+知らないわ…！
+
+# face 3500811 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3500811
+@芭蕉扇
+それより急いでナディア姫を…
+殺さないと！
+

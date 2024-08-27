@@ -1,0 +1,550 @@
+;;-----------------------------------------
+;;◆2019 海上編 3章（8月月初）シナリオ
+;;【タイトル：パラディーゾ幻想襲来編Ⅲ】
+;;EP1_1
+;;スクリプト最後の背景：ジャングル（朝）
+;;-----------------------------------------
+# script "lisp"
+# background "sea_palmbeach_day"
+# bgmfile "bgm348" "BgmSeaEventBattle003" 0
+;;-----------------------------------------
+;;水着アルマス
+# body 2103811
+# pos 2103811 3
+# scale 2103811 0.8 0
+# layer 2103811 2
+# alpha 2103811 0 0
+# mask 2103811 off
+;;水着ティファレト
+# body 2503211
+# pos 2503211 3
+# scale 2503211 0.8 0
+# layer 2503211 2
+# alpha 2503211 0 0
+# mask 2503211 off
+;;水着フェイルノート
+# body 2401911
+# pos 2401911 3
+# scale 2401911 0.8 0
+# layer 2401911 2
+# alpha 2401911 0 0
+# mask 2401911 off
+;;水着ヘレナ
+# body 2302811
+# pos 2302811 3
+# scale 2302811 0.8 0
+# layer 2302811 2
+# alpha 2302811 0 0
+# mask 2302811 off
+;;ニール
+# body 162
+# pos 162 3
+# scale 162 0.6 0
+# layer 162 2
+# alpha 162 0 0
+# mask 162 off
+;;水着ガ・ジャルグ
+# body 2303211
+# pos 2303211 3
+# scale 2303211 0.8 0
+# layer 2303211 2
+# alpha 2303211 0 0
+# mask 2303211 off
+;;-----------------------------------------
+# imageset 3 "bg_white"
+# imagealpha 3 1 0
+# imagescale 3 2.5 0
+# imageset 2 "mov2_2"
+# imagescale 2 1.15 0
+# imagealpha 2 0 0
+# imageset 0 "e190701_map"
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagescale 1 1.2 0
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;【OP】
+;;//背景：島全景（ローク島あり）
+;;ナレーション
+# textwindow "close"
+# waitandnext 0.2
+
+# imagealpha 2 1 0.5
+# imagepos 2 0 -590
+# waitandnext 0.5
+
+# se "SE_0050"
+# imagealpha 3 0 0
+# imagemoveto 2 0 -50 0.8
+# waitandnext 0.8
+
+# imagealpha 2 0 0.8
+# envbody 1201 3 0
+# effectpattern 1201 2 0
+# effectstart 1201
+# imagealpha 0 1 0.3
+# imagepos 0 0 15
+# textwindow "nomal"
+# textflame 0 0
+@
+青い海に浮かぶ常夏の島
+ラグーナ島
+
+;;ナレーション
+# imagemoveto 0 -320 500 0.8
+# imagescale 0 2 0.8
+@
+その沖合いに突如現れた
+未知の島、ローク島―
+
+;;ナレーション
+@
+その島になぜか転移することになった
+マスターは、
+見知らぬキル姫たちに遭遇する
+
+;;//背景：ビーチ
+# imagealpha 0 0 0
+# fadein "white" 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;ナレーション
+# move 2503211 2 0
+# face 2503211 "normal"
+# alpha 2503211 1 0.5
+# mask 2503211 on
+# move 2103811 4 0
+# face 2103811 "normal"
+# alpha 2103811 1 0.5
+# mask 2103811 on
+# textwindow "normal"
+@
+ラグーナ島の支配をもくろむ
+ティファレトと、
+それを阻止しようとするアルマス
+
+;;ナレーション
+@
+# alpha 2503211 0 0.5
+# alpha 2103811 0 0.5
+# move 2302811 3 0
+# face 2302811 "normal"
+# alpha 2302811 1 0.5
+# mask 2302811 off
+そして、マスターに興味を持ったと
+いうディスラプターズのヘレナだ
+
+;;ナレーション
+# alpha 2302811 0 0.5
+@
+アルマスとヘレナに連れられて
+ローク島をめぐるマスターに、
+新たなキル姫の影が近づいていた…
+
+;;//暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "sea_jungle_day"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//背景：ジャングル
+;;？？？（ガ・ジャルグ）
+# se "SE_0643"
+# move 2303211 3 0
+# face 2303211 "usual"
+# alpha 2303211 1 0.5
+# mask 2303211 off
+# textflame 1 1
+# textwindow "normal"
+@？？？
+今日はやけに森が騒がしいわね…
+
+@？？？
+至高の存在であるわたしの睡眠を
+妨げる、無礼者は誰なのかしら？
+
+;;//暗転
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 2303211 0 0
+# move 2401911 3 0
+# face 2401911 "normal"
+# alpha 2401911 1 0
+# mask 2401911 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;？？？（フェイルノート）
+# textwindow "normal"
+@？？？
+明星の如き輝きを放つこの私が、
+王としてやるべきことを為す…
+
+;;？？？（フェイルノート）
+@？？？
+ただ、それだけのこと…
+
+;;【EP1】閃耀する幻獣の槍
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 2401911 0 0
+# move 2302811 3 0
+# face 2302811 "usual"
+# alpha 2302811 1 0.5
+# mask 2302811 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//背景：ジャングル（朝）
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+# textflame 1 1
+# textwindow "normal"
+@ヘレナ
+先輩、ほら、こっちだよ…
+
+;;アルマス（不満）
+# alpha 2302811 0 0.5
+# move 2103811 3 0
+# face 2103811 "sad"
+# alpha 2103811 1 0.5
+# mask 2103811 off
+@アルマス
+…………
+
+;;ナレーション
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+# textflame 0 0
+@
+昨日のごたごたから一夜明け、
+アルマスは朝からゴッドキラーズを
+探すつもりだったのだが…
+
+;;//回想
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# alpha 2103811 0 0
+# move 2302811 1 0
+# face 2302811 "happy"
+# alpha 2302811 1 0
+# mask 2302811 on
+# move 162 3 0
+# alpha 162 1 0
+# mask 162 on
+# move 2103811 5 0
+# face 2103811 "usual"
+# alpha 2103811 1 0
+# mask 2103811 on
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# voice 3028 "herena_a_0004"
+# textflame 1 1
+# textwindow "normal"
+@ヘレナ
+相手の場所もわからないままで
+やみくもに探し回ろうなんて…
+アルマスらしいね、ふふっ…
+
+# face 2302811 "usual"
+@ヘレナ
+ヘレナはそんな面倒なこと、
+絶対にやらないけどな…
+なあ、ニール？
+
+# voice 9952 "nir_0032"
+@ニール
+ええ、そうよね！
+ヘレナは賢いから、
+そんな無駄なことはしないわね！
+
+;;アルマス（怒）
+# voice 1038 "almace_0009"
+# face 2103811 "angry"
+@アルマス
+は…？
+私がアタマ悪いって言いたいわけ！？
+
+# voice 3028 "herena_a_0004"
+# face 2302811 "happy"
+@ヘレナ
+そんなことは言ってないぞ？
+…くふっ
+
+;;アルマス（怒）
+@アルマス
+この…っ！
+
+;;ナレーション
+# textflame 0 0
+@
+一触即発の二人の間に
+慌てて入るマスター
+
+;;アルマス（怒）
+# textflame 1 1
+@アルマス
+なによっ！
+マスターはどっちの味方！？
+
+;;ナレーション
+# textflame 0 0
+@
+あの…ヘレナはもっと効率的な方法が
+ある、と言いたいんじゃないかな
+と、マスターは感じたことを伝える
+
+# voice 1038 "almace_0022"
+# face 2103811 "surprise"
+# textflame 1 1
+@アルマス
+…え？
+
+# face 2302811 "usual"
+@ヘレナ
+さすが先輩だ…
+ヘレナのことを
+よくわかってるじゃないか…
+
+# face 2103811 "angry"
+@アルマス
+…なによ、それ！
+絶・わかりにくいんだけど！
+
+;;ナレーション
+# textflame 0 0
+@
+まぁ落ち着いて、ヘレナの話を
+聞いてみようよ
+と、マスターはアルマスをなだめる
+
+# textflame 1 1
+# face 2103811 "usual"
+@ヘレナ
+敵を探すにしても、戦うにしても、
+仲間を増やすことが
+先決じゃないか、と思ってね…
+
+@ヘレナ
+それに、相手の位置を
+先に把握しておけば、
+先手を打てるだろう？
+
+@ヘレナ
+そういう偵察が得意な仲間には
+心当たりがあるんだ
+先輩には、さっき話しただろう？
+
+@ヘレナ
+彼女はジャングルの奥地にいるよ…
+会ってみるかい、先輩？
+
+;;//回想ここまで
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# alpha 2302811 0 0
+# alpha 162 0 0
+# alpha 2103811 0 0
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;ナレーション
+# textflame 0 0
+# textwindow "normal"
+@
+こうして、マスター達は
+ヘレナの案内でジャングルへと
+足を踏み入れたのだった
+
+# move 2302811 3 0
+# face 2302811 "usual"
+# alpha 2302811 1 0.5
+# mask 2302811 off
+# textflame 1 1
+@ヘレナ
+…おっと、この森は根が多くて
+つまづいてしまいそうだ
+先輩、手をつないでくれるかな？
+
+# voice 3028 "herena_a_0004"
+# face 2302811 "happy"
+@ヘレナ
+…くふっ
+
+# move 2302811 2 0.5
+# mask 2302811 on
+# move 2103811 4 0
+# face 2103811 "angry"
+# alpha 2103811 1 0.5
+# mask 2103811 on
+@アルマス
+ヘレナ！
+また変になっても知らないわよ！？
+
+# face 2302811 "usual"
+@ヘレナ
+ヘレナは別に困らないけどね…
+
+# voice 1038 "almace_0002"
+# face 2103811 "usual"
+@アルマス
+ねぇ、マスター…
+ヘレナの話を信用していいと思う？
+いつもふざけてばっかりなんだから…
+
+@ヘレナ
+ひどいなぁ、アルマス…
+ヘレナはいつだって真剣だよ？
+
+# voice 3028 "herena_a_0004"
+# face 2302811 "happy"
+@ヘレナ
+…くふっ
+
+# face 2103811 "angry"
+@アルマス
+…その仲間の話だって、
+あやしいものだわ！
+私たちを捕まえる罠なのかも…
+
+;;ナレーション
+# textflame 0 0
+@
+なんとなくだけど、大丈夫だと思うよ
+と、マスターはこたえる
+
+# face 2302811 "usual"
+# textflame 1 1
+@ヘレナ
+そうそう、仲間を信じることが大切だ
+やっぱり先輩は賢いなぁ…
+アルマスも見習ったらどうだい？
+
+# voice 1038 "almace_battle_0005"
+@アルマス
+くっ…
+
+;;ナレーション
+# alpha 2302811 0 0.5
+# alpha 2103811 0 0.5
+# textflame 0 0
+@
+ヘレナにからかわれるアルマスを
+なだめながら進むうちに、気がつけば
+ジャングルの奥の方まで来ていた
+
+;;ナレーション
+@
+それで、その仲間って
+どのあたりにいるのかな？
+と、マスターがヘレナに尋ねる
+
+# move 2302811 3 0
+# face 2302811 "usual"
+# alpha 2302811 1 0.5
+# mask 2302811 off
+# textflame 1 1
+@ヘレナ
+そうだなぁ…
+偵察部隊だからね、
+森の中を飛び回っているのかも…
+
+;;ナレーション
+# bgm "stop"
+# se "SE_0746"
+# textflame 0 0
+@
+その時、マスターたちの背後で
+草むらがガサガサっと動いた
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# se "SE_0617"
+# serif 1
+@異族1
+…グギャッ！
+
+# alpha 2302811 0 0.5
+# move 2103811 3 0
+# face 2103811 "angry"
+# alpha 2103811 1 0.5
+# mask 2103811 off
+# textflame 1 1
+@アルマス
+異族だわ！
+マスター、私の後ろに！
+
+# se "SE_0618"
+# serif 1
+@異族2
+グギギャッ！
+
+# voice 9952 "nir_0044"
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 2103811 0 0.5
+# move 162 3 0
+# alpha 162 1 0.5
+# mask 162 off
+@ニール
+ヘレナ！
+あっちからも来るわよ！
+
+;;ナレーション
+# textflame 0 0
+@
+アルマスたちを囲むように
+木々の間から異族たちが現れる
+
+# alpha 162 0 0.5
+# move 2302811 2 0
+# face 2302811 "usual"
+# alpha 2302811 1 0.5
+# mask 2302811 on
+# move 2103811 4 0
+# face 2103811 "angry"
+# alpha 2103811 1 0.5
+# mask 2103811 on
+# textflame 1 1
+@アルマス
+やるしかないようね…
+いくわよ、ヘレナ！
+
+# voice 3028 "herena_a_0003"
+# face 2302811 "angry"
+@ヘレナ
+ああ…
+面倒だけど、仕方ないね…

@@ -1,0 +1,340 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１５章 章タイトル「クリティカルフェイズ―連携―」
+;;第2話―３　タイトル：終焉を望む者
+;;2_3_1
+;;スクリプト最後の背景：荒野
+;;-----------------------------------------
+# script "lisp"
+# background "wild"
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 3
+# alpha 196 0 0
+# mask 196 off
+# brightness 196 0.8 0
+;;ネス・擬装・ランサー
+# body 5602021
+# pos 5602021 3
+# scale 5602021 0.8 0
+# layer 5602021 2
+# alpha 5602021 0 0
+# mask 5602021 off
+;;擬装フライシュッツ
+# body 5502721
+# pos 5502721 3
+# scale 5502721 0.8 0
+# layer 5502721 2
+# alpha 5502721 0 0
+# mask 5502721 off
+;;グランテピエ・獣刻・バハムート
+# body 5303411
+# pos 5303411 3
+# scale 5303411 0.8 0
+# layer 5303411 4
+# alpha 5303411 0 0
+# mask 5303411 off
+;;アルテミス
+# body 5400131
+# pos 5400131 3
+# scale 5400131 0.8 0
+# layer 5400131 2
+# alpha 5400131 0 0
+# mask 5400131 off
+;;異族化フライクーゲル
+# body 5500231
+# pos 5500231 3
+# scale 5500231 0.8 0
+# layer 5500231 2
+# alpha 5500231 0 0
+# mask 5500231 off
+;;盤古
+# body 250
+# pos 250 3
+# scale 250 0.8 0
+# layer 250 5
+# alpha 250 0 0
+# mask 250 off
+;;ムー
+# body 161
+# pos 161 3
+# scale 161 0.6 0
+# layer 161 6
+# alpha 161 0 0
+# mask 161 off
+;;異族化アルマス
+# body 5103831
+# pos 5103831 3
+# scale 5103831 0.8 0
+# layer 5103831 3
+# alpha 5103831 0 0
+# mask 5103831 off
+# brightness 5103831 0.8 0
+;;-----------------------------------------
+;;第2話―３　タイトル：終焉を望む者
+;;//背景：荒野：wild
+# move 5303411 4 0
+# face 5303411 "surprise"
+# alpha 5303411 1 0
+# mask 5303411 on
+# move 250 2 0
+# face 250 "sad"
+# alpha 250 1 0
+# mask 250 on
+# textflame 1 1
+# textboxarrow 0 3
+# voice 530341 "grandepieu_di_0017"
+@グランテピエ
+え…？
+盤古…何で…
+
+# textboxarrow 0 1
+@盤古
+…から
+
+# textboxarrow 0 1
+@盤古
+我と…一緒に…いてくれる、と…
+言って、くれたから…
+
+# face 250 "sad"
+# textboxarrow 0 1
+# voice 2022 "banko_0015"
+@盤古
+そなたに…我は、ついてく…
+どんな、とこでも…
+
+# face 5303411 "sad"
+# textboxarrow 0 3
+# voice 530341 "grandepieu_di_0038"
+@グランテピエ
+ああっ…
+ごめんなさい…盤古…！
+
+# alpha 5303411 0 0.5
+# alpha 250 0 0.5
+# move 161 2 0
+# alpha 161 1 0.5
+# move 161 3 0.3
+# textboxarrow 0 2
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+@ムー
+グラ！
+萎れてる場合じゃねぇぞ！
+その嬢ちゃん、まだ息はあるっ
+
+# textboxarrow 0 2
+@ムー
+しっかりしやがれ！
+
+# alpha 161 0 0.5
+# move 5303411 3 0
+# face 5303411 "angry"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+@グランテピエ
+…うん！
+盤古を死なせたりしない
+絶対のぜーったいに、ね
+
+# emotionbody 1000 15 5103831 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# alpha 5303411 0 0.5
+# move 5103831 3 0
+# face 5103831 "angry"
+# alpha 5103831 1 0.5
+# mask 5103831 off
+# textboxarrow 0 2
+@アルマス
+アアアアアアアアアア！
+
+# effectskip 1000
+# alpha 5103831 0 0.5
+# move 5303411 4 0
+# face 5303411 "sad"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# move 250 2 0
+# face 250 "normal"
+# alpha 250 1 0.5
+# mask 250 on
+# textboxarrow 0 3
+@グランテピエ
+ごめん、アルマス
+もう少し待っていて
+
+;;//グランテピエが退く
+# textwindow "close"
+# move 5303411 3 0.5
+# waitandnext 0.5
+
+# se "SE_9021"
+# rightout 5303411 0.5
+# rightout 250 0.6
+# waitandnext 0.5
+
+# alpha 5303411 0 0
+# alpha 250 0 0
+# emotionbody 1000 15 5103831 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5103831 3 0
+# face 5103831 "angry"
+# alpha 5103831 1 0.5
+# mask 5103831 off
+# textwindow "normal"
+# textboxarrow 0 2
+@アルマス
+アアアアアアアアア！
+
+# textwindow "close"
+# se "SE_9092"
+# effectskip 1000
+# rightout 5103831 0.3
+# waitandnext 0.5
+
+# alpha 5103831 0 0
+# move 5303411 4 0
+# face 5303411 "angry"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# move 250 3 0
+# face 250 "normal"
+# alpha 250 1 0.5
+# mask 250 on
+# move 161 2 0
+# alpha 161 1 0.5
+# textwindow "normal"
+# textboxarrow 0 1
+@ムー
+チッ
+やっぱ追ってくるわな
+グラ、どうする？
+
+# face 5303411 "angry"
+# textboxarrow 0 3
+@グランテピエ
+全力で逃げる
+今はそれだけだよっ
+
+# textboxarrow 0 1
+@ムー
+しゃーねぇな！
+史上最大最強の幻獣バハムート様の
+全力を見せてやるぜ！
+
+# textwindow "close"
+# emotionbody 1000 15 5103831 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# alpha 161 0 0.5
+# alpha 5303411 0 0.5
+# alpha 250 0 0.5
+# move 5103831 3 0
+# face 5103831 "normal"
+# alpha 5103831 1 0.5
+# mask 5103831 off
+# leftin 5103831 0.5
+# waitandnext 0.5
+
+;;//銃撃音
+# se "SE_6963"
+# fadein "white" 0.3
+# waitandnext 0.1
+
+# effectbody 1005 28 0 0 0
+# effectstart 1005
+# move 5103831 2 0.3
+# face 5103831 "surprise"
+# waitandnext 1.5
+
+# move 5103831 3 0.5
+# face 5103831 "angry"
+# textwindow "normal"
+# textboxarrow 0 2
+@アルマス
+アアアア…？
+
+# effectskip 1000
+# alpha 5103831 0 0.5
+# move 5500231 2 0
+# face 5500231 "happy"
+# alpha 5500231 1 0.5
+# mask 5500231 on
+# move 5400131 4 0
+# alpha 5400131 1 0.5
+# mask 5400131 on
+# textboxarrow 0 1
+# voice 550023 "furaikugeru_iz_0002"
+@フライクーゲル
+ヘ～イ！
+アーユーオーケー？
+
+# textboxarrow 0 3
+@アルテミス
+グランテピエ、無事でしたか
+…その子は？
+
+# alpha 5500231 0 0.5
+# alpha 5400131 0 0.5
+# move 5303411 3 0
+# face 5303411 "sad"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# move 250 2 0
+# face 250 "sad"
+# alpha 250 1 0.5
+# mask 250 on
+# textboxarrow 0 2
+@グランテピエ
+ごめんなさい…
+急いで撤退を
+
+# alpha 5303411 0 0.5
+# alpha 250 0 0.5
+# move 5400131 3 0
+# face 5400131 "normal"
+# alpha 5400131 1 0.5
+# mask 5400131 off
+# textboxarrow 0 2
+@アルテミス
+…概ね理解しました
+あなたは、その子を連れて先に
+ここは私達が引き受けます
+
+# alpha 5400131 0 0.5
+# move 5502721 2 0
+# face 5502721 "happy"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+# move 5602021 4 0
+# alpha 5602021 1 0.5
+# mask 5602021 on
+# textboxarrow 0 1
+@フライシュッツ
+おねーちゃん達に任せてね～
+
+# textboxarrow 0 3
+# face 5602021 "angry"
+@ネス
+規律正しい連携に不可能は
+ありません
+
+# alpha 5502721 0 0.5
+# alpha 5602021 0 0.5
+# move 5303411 3 0
+# face 5303411 "happy"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# move 250 2 0
+# face 250 "sad"
+# alpha 250 1 0.5
+# mask 250 on
+# textboxarrow 0 2
+@グランテピエ
+みんな、ありがとう！

@@ -1,0 +1,746 @@
+;;----------------------------------------------
+;;414020141
+;;２章 輪廻の斬ル姫【EP4バトル前】
+;;----------------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;ムラマサ
+# body 3102511
+# pos 3102511 5
+# scale 3102511 0.8 0
+# layer 3102511 4
+# mask 3102511 on
+# alpha 3102511 0 0
+# face 3102511 "angry"
+;;ロンギヌス
+# body 3300111
+# pos 3300111 1
+# scale 3300111 0.8 0
+# layer 3300111 3
+# mask 3300111 on
+# alpha 3300111 0 0
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textwindow "close"
+;;剣閃(ムラマサ)
+# effectbody 1000 2 70 0 5
+# effectbody 1001 2 -100 0 5
+# effectbody 1002 3 0 0 5
+;;剣閃(ロンギヌス)
+# effectbody 2000 4 70 0 3
+# effectbody 2001 5 -30 -30 3
+# effectbody 2002 4 0 0 3
+# effectbody 2003 6 100 0 3
+# waitandnext 0.1
+
+;;◆黒バック-------------------------------------------------
+;;演出・SE：ロンギヌスとムラマサの激しい剣戟
+# se "SE_5743"
+# effectstart 1000
+# effectstart 2000
+# waitandnext 0.6
+
+;;◆背景:町はずれ・夜----------------------------------------
+;;演出・SE：一際激しくぶつかる両者
+# se "SE_4818"
+# fadeout "white" 0.1
+# alpha 3300111 1 0
+# alpha 3102511 1 0
+# effectskip 1000
+# effectskip 2000
+# background "101_plain_daytime"
+# shake 1 0.5
+# fadein "white" 0.3
+# voice 310251 "muramasa_ge_battle_0001"
+# move 3300111 2 0.2
+# move 3102511 3 0.2
+# waitandnext 0.8
+
+# se "SE_5204"
+# rightout 3102511 0.4
+# waitandnext 0.1
+
+# rightout 3300111 0.4
+# waitandnext 0.4
+
+# pos 3102511 3
+# leftin 3102511 0.2
+# waitandnext 0.1
+
+# pos 3300111 1
+# leftin 3300111 0.2
+# waitandnext 0.2
+
+# se "SE_5736"
+# shake 1 0.3
+# effectstart 2001
+# waitandnext 0.5
+
+# se "SE_5906"
+# shake 0 0.6
+# fadein "white" 0.3
+# face 3300111 "angry"
+# move 3300111 2 0.2
+# move 3102511 4 0.2
+# textwindow "normal"
+# textflame 0 0
+@
+一刀が
+空に弾き飛ばされる
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3102511 "surprise"
+# voice 310251 "muramasa_ge_battle_0005"
+# chara 3102511
+@ムラマサ
+くっ…!!
+拙者の刀が…！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3300111 "normal"
+# voice 330011 "ronginusu_t_0004"
+# chara 3300111
+@ロンギヌス
+八
+あなたは力に溺れている
+
+# move 3102511 4 0
+# textwindow "toge"
+# textsize 35
+# textflame 1 1
+# textboxarrow 0 0
+# face 3102511 "angry"
+# chara 3102511
+@ムラマサ
+一本弾いたところで！
+
+# textwindow "close"
+# se "SE_5204"
+# leftout 3102511 0.5
+# leftout 3300111 0.4
+# waitandnext 0.4
+
+# pos 3300111 2
+# rightin 3300111 0.4
+# waitandnext 0.1
+
+# pos 3102511 3
+# rightin 3102511 0.4
+# waitandnext 0.4
+
+;;演出・SE：激しくぶつかる両者
+# voice 310251 "muramasa_ge_battle_0002"
+# se "SE_5773"
+# shake 1 0.5
+# effectstart 1001
+# waitandnext 0.8
+
+# se "SE_5906"
+# move 3102511 4 0.1
+# move 3300111 1 0.1
+# fadein "white" 0.3
+# shake 0 0.6
+# face 3102511 "surprise"
+# textwindow "normal"
+# textsize 24
+# textflame 0 0
+@
+ムラマサの二刀目が
+空に弾き飛ばされる
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3300111 "sad"
+# voice 330011 "ronginusu_t_0002"
+# chara 3300111
+@ロンギヌス
+七
+あなたの理想はどこにあります
+
+;;演出・SE：激しくぶつかる両者
+# se "SE_9017"
+# face 3102511 "angry"
+# textwindow "close"
+# effectstart 2002
+# shake 1 0.5
+# move 3300111 3 0.3
+# move 3102511 5 0.3
+# waitandnext 0.8
+
+# textwindow "normal"
+# se "SE_9086"
+# fadein "white" 0.3
+# shake 0 0.6
+# textflame 0 0
+@
+ムラマサの三刀目が
+失われる
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3300111 "normal"
+# chara 3300111
+@ロンギヌス
+六
+闇にまぎれたところでその八頭
+卑しい獣が隠れられるわけもなく
+
+# textwindow "close"
+# se "SE_5204"
+# rightout 3102511 0.3
+# alpha 3300111 0 0.3
+# waitandnext 0.3
+
+# pos 3102511 3
+# mask 3102511 off
+# leftin 3102511 0.5
+# waitandnext 0.5
+
+# se "SE_9146"
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3102511 "normal"
+# chara 3102511
+@ムラマサ
+ハッ…ハッ…ハッ…！
+
+# se "SE_5205"
+# textflame 0 0
+@
+ムラマサは鬼火を纏った刀を
+自らの側に寄せ
+二本、手に取る
+
+# alpha 3102511 0 0.5
+# pos 3300111 3
+# mask 3300111 off
+# alpha 3300111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3300111 "happy"
+# voice 330011 "ronginusu_t_0039"
+# chara 3300111
+@ロンギヌス
+ふふふっ
+その意気や良し
+というところでしょうか
+
+# move 3102511 3 0
+# textwindow "toge"
+# textsize 35
+# alpha 3300111 0 0.5
+# alpha 3102511 1 0.5
+# textflame 1 1
+# textboxarrow 0 0
+# face 3102511 "angry"
+# voice 310251 "muramasa_ge_0029"
+# chara 3102511
+@ムラマサ
+うあぁぁぁっ!!
+
+# textwindow "close"
+# se "SE_5575"
+# leftout 3102511 0.5
+# waitandnext 0.5
+
+# se "SE_5204"
+# pos 3300111 2
+# mask 3300111 on
+# leftin 3300111 0.4
+# alpha 3300111 1 0
+# alpha 3102511 1 0
+# pos 3102511 4
+# mask 3102511 on
+# face 3300111 "angry"
+# rightin 3102511 0.4
+# waitandnext 0.4
+
+;;演出・SE：激しくぶつかる両者
+# se "SE_9084"
+# effectstart 1002
+# shake 1 0.5
+# waitandnext 0.8
+
+# textwindow "normal"
+# textsize 24
+# se "SE_4600"
+# fadein "white" 0.3
+# shake 0 0.6
+# face 3102511 "surprise"
+# textflame 0 0
+@
+ムラマサの四・五刀目が
+地に叩き付けられる
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3300111 "normal"
+# voice 330011 "ronginusu_t_0028"
+# chara 3300111
+@ロンギヌス
+五、内心恐れながらの刃で
+四、ウロボロスに依存し…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3102511 "angry"
+# chara 3102511
+@ムラマサ
+くっ、このっ、どうして…
+
+# textflame 0 0
+@
+ムラマサは刀を握る手が
+いつしか震えていることに気づく
+
+# textflame 0 0
+@
+刀身が揺れる
+心の臓が内から胸を激しく叩く
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3102511 "sad"
+# voice 310251 "muramasa_ge_0037"
+# chara 3102511
+@ムラマサ
+な、なんたること…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3102511
+@ムラマサ
+拙者は、こんなにも
+こんなにも…
+憶病だったのか…!?
+
+;;演出・SE：ロンギヌスがムラマサに突っ込み激しい衝突音
+# se "SE_0693"
+# face 3300111 "normal"
+# face 3102511 "surprise"
+# effectstart 2003
+# voice 330011 "ronginusu_t_battle_0002"
+# textwindow "close"
+# move 3300111 3 0.3
+# shake 1 0.5
+# waitandnext 0.5
+
+# se "SE_4600"
+# shake 0 0.6
+# fadein "white" 0.3
+# textwindow "normal"
+# textflame 0 0
+@
+ムラマサの六・七・八刀目までもが
+その手から全て弾き飛ばされ
+彼女は丸腰になる
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3300111 "angry"
+# chara 3300111
+@ロンギヌス
+三、姉に引きずられ
+二、オロチの力に酩酊するだけ
+一、自身の刃も研いでいない
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3102511
+@ムラマサ
+あ、あああ…!!
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3300111 "sad"
+# chara 3300111
+@ロンギヌス
+そして…
+
+;;演出・SE：ムラマサを貫くロンギヌス
+# bgm "stop"
+# face 3300111 "normal"
+# se "SE_9016"
+# subfillrect 1 "red" 0.6 0.6 0
+# shake 1 0.6
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3102511 "angry"
+# voice 310251 "muramasa_ge_battle_0007"
+# chara 3102511
+@ムラマサ
+がはぁっ!!
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3300111 "angry"
+# chara 3300111
+@ロンギヌス
+刃を突き立てられぬ獣は
+生き延びる術もありません
+
+# textflame 0 0
+@
+ロンギヌスの槍が
+ムラマサの脇腹に突き刺さる
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3300111 "normal"
+# voice 330011 "ronginusu_t_0027"
+# chara 3300111
+@ロンギヌス
+トレイセーマに正義はありません
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3102511 "sad"
+# chara 3102511
+@ムラマサ
+な、に、を…!!
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3300111 "sad"
+# chara 3300111
+@ロンギヌス
+統治という大義名分の元に
+反抗勢力の
+監視と暗殺の繰り返し
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3300111
+@ロンギヌス
+肝心の国力は低下
+まるでこの国は、自らの尾を
+自らで食らっているだけ…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3300111 "normal"
+# chara 3300111
+@ロンギヌス
+なるほどウロボロスさながら
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3102511
+@ムラマサ
+目的は、カシウス、なのか…!?
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3300111 "happy"
+# voice 330011 "ronginusu_t_0003"
+# chara 3300111
+@ロンギヌス
+ハルモニアであれば
+彼女の有効活用が可能です
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3102511
+@ムラマサ
+そうなれば
+この国は、どうなるの…？
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3300111 "normal"
+# chara 3300111
+@ロンギヌス
+終焉となるかと
+
+;;演出：ロンギヌス、ムラマサから槍を抜く
+# se "SE_5542"
+# shake 1 0.5
+# subfillrect 1 "red" 0.6 0.6 0
+# face 3102511 "angry"
+# textwindow "close"
+# move 3300111 2 0.5
+# waitandnext 0.5
+
+# se "SE_9013"
+# textwindow "normal"
+# textflame 0 0
+@
+ロンギヌスはムラマサから槍を抜く
+
+# voice 310251 "muramasa_ge_battle_0008"
+# se "SE_3001"
+# alpha 3102511 0 0.3
+# shake 0 0.3
+# textflame 0 0
+@
+ムラマサはその場に倒れ
+気づかぬ内に
+風は凪いでいた
+
+;;◆背景:黒バック(ちょい赤)----------------------------------
+# se "SE_9022"
+# textwindow "close"
+# fadeout "black" 1.0
+# waitandnext 1.0
+
+# alpha 3300111 0 0
+# subfillrect 0 "red" 0 0 0.3
+# background "bg_black"
+# waitandnext 0.5
+
+# fadein "black" 1.0
+# waitandnext 1.3
+
+# textwindow "normal"
+# textflame 0 0
+# textboxarrow 0 0
+# chara 3102511
+@ムラマサ
+もはや拙者には刀もない…
+姉上もこの国も、もはや共にはない
+
+# textflame 0 0
+# textboxarrow 0 0
+# chara 3102511
+@ムラマサ
+依存するだけで何もなかった自分
+
+# se "SE_0644"
+# textflame 0 0
+# chara 3102511
+@ムラマサ
+だがしかし
+だからこそ
+思考しなければ…ならない…！
+
+# textflame 0 0
+# textboxarrow 0 0
+# chara 3102511
+@ムラマサ
+刀がなくとも頭があれば…
+思索を巡らせなければ
+
+# textflame 0 0
+@
+ムラマサの気が遠くなっていく
+ロンギヌスはその様子を見て
+その場を立ち去ろうとする
+
+# subfillrect 0 "red" 0.6 0.3 0
+# se "SE_8012"
+# textflame 1 1
+# textboxarrow 0 0
+# voice 310251 "muramasa_ge_battle_0005"
+# chara 3102511
+@ムラマサ
+いや、まだ、何か、あるはず…
+
+# textflame 1 1
+# textboxarrow 0 0
+# face 3102511 "normal"
+# chara 3102511
+@ムラマサ
+拙者には…まだ………
+
+;;◆背景:町はずれ・夜----------------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.1
+# textwindow "close"
+# waitandnext 0.1
+
+# subfillrect 0 "red" 0 0 0
+# pos 3300111 3
+# mask 3300111 off
+# alpha 3300111 1 0
+# background "101_plain_daytime"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3300111 "surprise"
+# voice 330011 "ronginusu_t_0022"
+# chara 3300111
+@ロンギヌス
+………まだ？
+
+# textflame 0 0
+@
+ロンギヌスは立ち止まる
+
+# textflame 0 0
+@
+その背に風を受けたから
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3300111 "happy"
+# chara 3300111
+@ロンギヌス
+そう、それを待っていたのです
+
+;;演出：ムラマサ、立ち上がる
+# se "SE_5737"
+# bgmfile "bgm291_292" "BgmLostRagnarokSideStory" 0
+# textwindow "close"
+# alpha 3300111 0 0.5
+# pos 3102511 3
+# mask 3102511 off
+# alpha 3102511 1 0.5
+# face 3102511 "normal"
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3102511 "angry"
+# voice 310251 "muramasa_ge_battle_0001"
+# chara 3102511
+@ムラマサ
+恐れるにはまだ早い…！
+拙者はまだ生きている…！
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3102511
+@ムラマサ
+監視も管理もされぬところに
+拙者の命がまだあるのだ…！
+
+# textwindow "close"
+# alpha 3102511 0 0.5
+# waitandnext 0.5
+
+# pos 3102511 4
+# mask 3102511 on
+# alpha 3102511 1 0.5
+# face 3102511 "normal"
+# pos 3300111 2
+# mask 3300111 on
+# alpha 3300111 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3300111 "happy"
+# voice 330011 "ronginusu_t_0031"
+# chara 3300111
+@ロンギヌス
+生きているのか
+死んでいるのか
+…確かめたかったのです
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3102511 "sad"
+# chara 3102511
+@ムラマサ
+酒を飲むのはまだ早い…
+力に酔うにはまだ未熟…
+
+;;演出・SE：ムラマサからオーラが吹き出る
+# se "SE_9034"
+# face 3102511 "normal"
+# subfillrect 1 "green" 0.6 0.6 0
+# textflame 0 0
+@
+ムラマサは逆巻く風で形作られた
+幻獣オロチを操り
+散らばった刀をその手に戻す
+
+# textflame 0 0
+@
+八刀全てが
+八頭全てに咥えられ
+再び風が吹き荒れる
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3300111 "normal"
+# chara 3300111
+@ロンギヌス
+まだ、あなたが終わっていないなら
+古き鎖を断ち切る時です
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3102511 "sad"
+# voice 310251 "muramasa_ge_0004"
+# chara 3102511
+@ムラマサ
+八つの頭で考えました
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3102511 "normal"
+# chara 3102511
+@ムラマサ
+終わりの先にも
+依存の先にも…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3102511 "angry"
+# chara 3102511
+@ムラマサ
+そこに拙者の理想はない！
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3102511
+@ムラマサ
+カウントダウンは
+まだ終わっていないぞ
+ロンギヌス…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3300111 "angry"
+# voice 330011 "ronginusu_t_0009"
+# chara 3300111
+@ロンギヌス
+なんですって？
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3102511
+@ムラマサ
+八本の刀を退けたとて…
+
+# textwindow "close"
+# alpha 3102511 0 0.5
+# alpha 3300111 0 0.5
+# waitandnext 0.5
+
+# pos 3102511 3
+# mask 3102511 off
+# alpha 3102511 1 0.5
+# face 3102511 "normal"
+# waitandnext 0.5
+
+# move 3102511 3 0
+# textwindow "toge"
+# textsize 35
+# shake 0 0.6
+# fadein "white" 0.6
+# textflame 1 1
+# textboxarrow 0 0
+# face 3102511 "angry"
+# voice 310251 "muramasa_ge_battle_0004"
+# chara 3102511
+@ムラマサ
+まだ、拙者の命がある！

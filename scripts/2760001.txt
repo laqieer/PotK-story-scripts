@@ -1,0 +1,433 @@
+;;▼１話
+;;//背景　街（town）
+;;指定　BgmKScollabo001　 bgm208
+# script "lisp"
+# background "town"
+# bgmfile "bgm208" "BgmKScollabo001" 0
+# body 24
+# pos 24 2
+# scale 24 0.8 0
+# mask 24 off
+# body 101411
+# pos 101411 3
+# alpha 101411 0 0
+# body 0
+# pos 0 4
+# scale 0 0.8 0
+# face 0 "usual2"
+# mask 0 off
+# textflame 0 0
+@
+世界樹“ユグドラシル”を
+目指す旅の途中、マスター達は
+とある街に立ち寄っていた…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 0
+# face 0 "serious"
+# voice 9999 "durin_0002"
+@デュリン
+そういえば、この街にあるギルドが
+かなり変わってるらしいのよね
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textflame 1 1
+# textboxarrow 0 3
+# chara 0
+@デュリン
+教会も協力して
+かなり独特のものになってるとか
+…寄っていってみましょ！
+
+;;alc_ch1_pub
+;;――場面転換――
+# body 601711
+# pos 601711 3
+# scale 601711 0.8 0
+# alpha 601711 0 0
+# mask 601711 off
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# background "alc_ch1_pub"
+# alpha 24 0 0
+# alpha 0 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+ギルドに入ってみると
+青い髪の女が
+受付嬢ともめていた
+
+# emotionbody 5805 9 601711 90 175
+# effectpattern 5805 5 0
+# effectstart 5805
+# alpha 601711 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 601711
+# voice 6017 "akua_0001"
+# face 601711 "sad"
+@青い髪の女
+…そこをなんとか！
+楽でお金がいっぱい入る、
+私一人でできるクエスト紹介して！
+
+;;指定　SE_0709
+# se "SE_0709"
+# effectbody 200 27 0 0
+# effectstart 200
+# effectskip 5805
+# serif 1
+# textboxarrow 1 3
+@ギルド受付嬢
+アクアさん…だから、
+そんなクエストはありません！
+
+# emotionbody 5400 6 601711 80 170
+# effectpattern 5400 1 1
+# effectstart 5400
+# textboxarrow 0 2
+# chara 601711
+# face 601711 "angry"
+@アクア
+私と組んでくれる人が
+いないんだから
+しょうがないじゃない！
+
+# effectskip 5400
+# serif 1
+@ギルド受付嬢
+もう、お仕事の邪魔なので
+あっちに行ってください…
+
+# effectskip 200
+# alpha 601711 0 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.8
+
+;;指定　SE_5594
+# se "SE_5594"
+# effectbody 100 26 0 0
+# effectstart 100
+# alpha 0 1 0.5
+# alpha 24 1 0.5
+# face 0 "usual2"
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 3
+@ギルド受付嬢
+…お待たせしてしまいすみません
+当ギルドへようこそ！
+
+# select "クエスト…ってなに？" "select_label_01" "寄ってみただけです" "select_label_02" "初めて来たんですが…" "select_label_03"
+…お待たせしてしまいすみません
+当ギルドへようこそ！
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 3
+@ギルド受付嬢
+では、当ギルドについて、
+簡単に説明しますね
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 3
+@ギルド受付嬢
+では、当ギルドについて、
+簡単に説明しますね
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 3
+@ギルド受付嬢
+では、当ギルドについて、
+簡単に説明しますね
+
+# label "select_label_end"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 3
+@ギルド受付嬢
+一般のギルドとは異なり、
+当ギルドではクエストというものを
+提供いたしております
+
+# serif 1
+# textboxarrow 1 3
+@ギルド受付嬢
+ラグナロク教会からの様々な指令を、
+皆様が選べるようにしたものなんです
+
+# serif 1
+# textboxarrow 1 3
+@ギルド受付嬢
+クリアすれば報酬ももらえますよ！
+
+# effectskip 100
+# emotionbody 5200 3 0 40 190
+# effectpattern 5200 1 3
+# effectstart 5200
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 0
+# face 0 "usual"
+# voice 9999 "durin_0004"
+@デュリン
+なかなか面白いじゃない
+試しに１つぐらいやってみる？
+
+# effectskip 5200
+# emotionbody 5815 9 601711 90 175
+# effectpattern 5815 5 0
+# effectstart 5815
+# mask 601711 on
+# mask 24 on
+# mask 0 on
+# layer 601711 4
+# move 24 1 0.3
+# move 0 5 0.3
+# move 601711 3 0
+# alpha 601711 1 0.5
+# textboxarrow 0 2
+# chara 601711
+# face 601711 "sad"
+@アクア
+…だったらお願いだから
+私もつれてってぇぇぇぇぇ！！
+お金が…お金がないんです！
+
+# effectskip 5815
+# textboxarrow 0 2
+# chara 601711
+@アクア
+こっちの世界に来てから
+他のみんなはいなくて心細いし、
+持ってたお金も使えないし…
+
+# textboxarrow 0 1
+# chara 101411
+# voice 1014 "tyrufing_0002"
+# face 24 "surprise"
+@ティルフィング
+こっちの世界…というのは
+どういうことですか？
+
+# emotionbody 5903 10 601711 100 230
+# effectpattern 5903 3 0
+# effectstart 5903
+# textboxarrow 0 2
+# chara 601711
+# face 601711 "normal"
+@アクア
+よくぞ聞いてくれました！
+これには聞くも涙、語るも涙の
+長い話があるんだけどね！
+
+# effectskip 5903
+# textboxarrow 0 3
+# chara 0
+# voice 9999 "durin_0009"
+# face 0 "occur"
+@デュリン
+長くなるんなら聞かないわよ
+
+# textboxarrow 0 2
+# chara 601711
+# face 601711 "usual"
+@アクア
+ここじゃない異世界から
+いきなり飛ばされてきました
+仲間とははぐれてぼっちです
+
+# textboxarrow 0 2
+# chara 601711
+# voice 6017 "akua_0008"
+@アクア
+あ、厳密にはぼっちじゃないわね
+そこで受付やってる子も
+私といっしょだし
+
+# textboxarrow 0 3
+# chara 0
+# voice 9999 "durin_0028"
+# face 0 "worry"
+@デュリン
+えっ、そうなの？
+異世界から来たとか
+うさんくさいだけだったけど…
+
+# emotionbody 5411 6 601711 90 170
+# effectpattern 5411 2 1
+# effectstart 5411
+# textboxarrow 0 2
+# chara 601711
+# face 601711 "angry"
+@アクア
+そして自分はちゃっかり
+受付の仕事をゲットしてるってわけ！
+私にも仕事よこしなさいよ！！
+
+# textboxarrow 0 2
+# chara 601711
+@アクア
+そもそも、私はただの人間じゃない、
+女神アクア様なのよ！それなのに
+日銭に困る毎日！おかしいでしょ！？
+
+;;指定　SE_0709
+# se "SE_0709"
+# effectbody 100 26 0 0
+# effectstart 100
+# effectskip 5411
+# serif 1
+# textboxarrow 1 3
+@ルナ
+あ、そういう設定だそうです
+こちらの世界に来る前から、
+ずっとそれで通してらっしゃいますね
+
+# emotionbody 5825 9 601711 90 175
+# effectpattern 5825 5 0
+# effectstart 5825
+# serif 0
+# textboxarrow 0 2
+# chara 601711
+# face 601711 "sad"
+@アクア
+設定とか言わないで！
+この世が定めた真理という
+意味では合ってるけど！
+
+# effectskip 100
+# effectskip 5825
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 601711
+# voice 6017 "akua_0001"
+@アクア
+…ねぇ、さっきから後ろで黙ってる
+そっちの人！あなたからは慈悲の心を
+感じるわ！なにか言ってやって！！
+
+# textflame 0 0
+@
+アクアに若干の不安を覚えつつも、
+困ってる人を見捨ててはおけないと
+マスターはデュリンに告げた
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 101411
+# voice 1014 "tyrufing_0063"
+# face 24 "normal"
+@ティルフィング
+…デュリン、私からもお願いします
+アクアさんのことはどういうわけか、
+赤の他人という気がしないのです
+
+# emotionbody 5700 8 0 -20 150
+# effectpattern 5700 1 0
+# effectstart 5700
+# voice 9999 "durin_0027"
+# textboxarrow 0 3
+# chara 0
+# face 0 "serious2"
+@デュリン
+はぁ…２人がそう言うなら
+しかたないわね…
+
+;;指定　SE_0708
+# se "SE_0708"
+# effectbody 100 26 0 0
+# effectstart 100
+# effectskip 5700
+# serif 1
+# textboxarrow 1 3
+@ルナ
+でしたら、
+街付近の異族討伐がお勧めです
+日帰りでこなせますよ
+
+# emotionbody 5420 5 601711 70 280
+# effectpattern 5420 1 0
+# effectstart 5420
+# serif 0
+# textboxarrow 0 2
+# chara 601711
+# face 601711 "happy1"
+@アクア
+そんな報酬が安いのじゃなく、
+もっと楽で
+派手にかせげるのにしない？
+
+# effectskip 100
+# effectskip 5420
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 0
+# face 0 "serious"
+@デュリン
+ティルもマスターも、
+やっぱりアクアと組むのは
+なしってことでいいわね？
+
+# emotionbody 5811 9 601711 80 210
+# effectpattern 5811 1 0
+# effectstart 5811
+# textboxarrow 0 2
+# chara 601711
+# face 601711 "surprise"
+@アクア
+やめて冗談です見捨てないで！
+街の近くで異族討伐いいわね！
+さぁ、張り切って行きましょう！
+
+# se "SE_0700"
+# bgm "stop"
+# effectbody 600 21 0 0
+# effectstart 600
+# textwindow "close"
+# waitandnext 2

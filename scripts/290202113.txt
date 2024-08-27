@@ -1,0 +1,369 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;２章２話　「エデンクライシス―覚醒―」
+;;第5話　タイトル：愚者の進行
+;;5_11_3
+;;スクリプト最後の背景：祭壇
+;;-----------------------------------------
+# script "lisp"
+# background "altar"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 3
+# alpha 196 0 0
+# mask 196 off
+;;ミネルヴァ
+# body 302511
+# pos 302511 3
+# scale 302511 0.8 0
+# layer 302511 2
+# alpha 302511 0 0
+# mask 302511 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;ゲイボルグ
+# body 300711
+# pos 300711 3
+# scale 300711 0.8 0
+# layer 300711 2
+# alpha 300711 0 0
+# mask 300711 off
+;;ロンギヌス・擬彩
+# body 5300131
+# pos 5300131 3
+# scale 5300131 0.8 0
+# layer 5300131 2
+# alpha 5300131 0 0
+# mask 5300131 off
+;;エクスカリバー
+# body 101111
+# pos 101111 3
+# scale 101111 0.8 0
+# layer 101111 1
+# alpha 101111 0 0
+# mask 101111 off
+;;アロンダイト
+# body 100711
+# pos 100711 3
+# scale 100711 0.8 0
+# layer 100711 2
+# alpha 100711 0 0
+# mask 100711 off
+;;ロンゴミアント
+# body 301021
+# pos 301021 3
+# scale 301021 0.8 0
+# layer 301021 2
+# alpha 301021 0 0
+# mask 301021 off
+;;モニカ
+# body 209
+# pos 209 3
+# scale 209 0.8 0
+# layer 209 2
+# alpha 209 0 0
+# mask 209 off
+;;-----------------------------------------
+;;//画面揺れ
+;;//炎上演出
+# textwindow "close"
+# waitandnext 0.2
+
+# se "SE_5599"
+# se "SE_0753"
+# envbody 1000 7 0
+# effectstart 1000
+# shake 0 0.5
+# waitandnext 0.5
+
+# move 5300131 3 0
+# face 5300131 "normal"
+# alpha 5300131 1 0.5
+# mask 5300131 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 530013 "ronginusu_iz_0028"
+@ロンギヌス
+このままでは誰も助かりませんね…
+残念ですけれど、私はこれで…
+
+;;//ロンギヌスが退く
+# se "SE_9021"
+# textwindow "close"
+# alpha 5300131 0 0.5
+# waitandnext 0.5
+
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+ハァ…ハァ…
+何とか追い払えたわねっ
+
+# se "SE_0754"
+# move 209 2 0
+# face 209 "irregular"
+# alpha 209 1 0.5
+# mask 209 on
+# textboxarrow 0 1
+# move 196 4 0.5
+# mask 196 on
+# voice 9937 "monica_0010"
+@モニカ
+あのさぁ…
+何で邪魔したの！？
+あたしが望んだことなのにっ
+
+# textboxarrow 0 1
+@モニカ
+自分が何をしたのか、
+ちゃんと理解してる
+だから罰を受けようと思ってた！
+
+# textboxarrow 0 1
+@モニカ
+マスターの言うことを聞かないなんて
+どういうつもり！？
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0015"
+@アルマス
+ちょっと！
+そんな言い方しなくて良いでしょ！
+
+# alpha 196 0 0.5
+# move 103611 4 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 3
+# voice 1036 "ragnarok_0003"
+@ラグナロク
+彼女達は、
+あなたを死なせたくなかったのよ…
+たとえ、どんな人であろうと
+
+# textboxarrow 0 3
+@ラグナロク
+それは無償の“愛”だと
+私は思う
+
+# face 209 "surprise"
+# textboxarrow 0 1
+# voice 9937 "monica_0023"
+@モニカ
+な…何でラグナロクくん達が
+そんなこと言うの！？
+
+# face 209 "irregular"
+# textboxarrow 0 1
+@モニカ
+あたし達、敵対してるよねっ？
+考え方、違うでしょっ
+
+# textboxarrow 0 3
+@ラグナロク
+あなたと敵対した覚えはないわ
+それに、考え方が違うとしても…
+
+# alpha 103611 0 0.5
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+自分と意見が違う人は死んでも
+良いなんて、そんな奴の方が
+絶・最悪よっ
+
+# face 209 "angry"
+# textboxarrow 0 1
+# voice 9937 "monica_0041"
+@モニカ
+…………！
+も…もういいっ！
+とにかく、あたしは――
+
+# move 101111 1 0
+# face 101111 "angry"
+# alpha 101111 1 0.5
+# mask 101111 on
+# textboxarrow 0 1
+# move 209 3 0.5
+# move 196 5 0.5
+# voice 1011 "excalibur_0001"
+@エクスカリバー
+…失礼します
+
+;;//エクスカリバーがモニカを気絶させる
+# se "SE_0656"
+# waitandnext 0.5
+
+# face 209 "surprise"
+# textboxarrow 0 2
+# voice 9937 "monica_0040"
+@モニカ
+あぐっ…？
+
+# textwindow "close"
+# alpha 209 0 0.5
+# waitandnext 0.5
+
+# move 101111 2 0.5
+# move 196 4 0.5
+# waitandnext 0.5
+
+# face 196 "surprise"
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 9943 "almace_navikan_0035"
+@アルマス
+えっ？
+いきなり何してるのっ？
+
+# textboxarrow 0 1
+# voice 1011 "excalibur_0003"
+@エクスカリバー
+マスターをお守りするため
+やむを得ない対応です
+
+# textboxarrow 0 1
+@エクスカリバー
+私はマスターを必ずお守りすると
+誓いましたので
+
+# alpha 196 0 0.5
+# move 301021 4 0
+# face 301021 "angry"
+# alpha 301021 1 0.5
+# mask 301021 on
+# textboxarrow 0 3
+# voice 3010 "rhongomiant_0008"
+@ロンゴミアント
+それは私の役目です
+マスターは私が運びます
+
+# textboxarrow 0 1
+# voice 1011 "excalibur_0034"
+@エクスカリバー
+いえ、これは私の役目です
+
+# textboxarrow 0 3
+# voice 3010 "rhongomiant_0014"
+@ロンゴミアント
+いいえ！
+それだけは譲れませんっ
+
+# alpha 101111 0 0.5
+# alpha 301021 0 0.5
+# move 100711 3 0
+# face 100711 "angry"
+# alpha 100711 1 0.5
+# mask 100711 off
+# textboxarrow 0 2
+# voice 1007 "Arondaito_0011"
+@アロンダイト
+どちらでも構いません！
+早くしないと火の手が回りますよっ
+
+# alpha 100711 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+そうだった！
+脱出経路は…
+
+;;//ゲイボルグが下から現れる
+# move 300711 2 0
+# face 300711 "normal"
+# alpha 300711 1 0.5
+# mask 300711 on
+# textboxarrow 0 1
+# move 196 4 0.5
+# mask 196 on
+# voice 3007 "gaiborugu_0001"
+@ゲイボルグ
+マスター、私のことを呼んだな？
+脱出経路は確保した
+
+# face 196 "surprise"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0036"
+@アルマス
+ゲイボルグ！？
+呼んでないけど、絶・良い
+タイミングよっ
+
+# alpha 196 0 0.5
+# move 103611 4 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 3
+# voice 1036 "ragnarok_0039"
+@ラグナロク
+こういうパターンもあるのね
+ブリューナクが出てくると
+思ってたんだけど…
+
+# textboxarrow 0 1
+# voice 3007 "gaiborugu_0003"
+@ゲイボルグ
+こんなこともあろうかと、
+ブリューナクに頼まれて地下を
+掘り進めておいた
+
+# textboxarrow 0 1
+@ゲイボルグ
+予想より時間がかかったが、
+いざというときに間に合って良かった
+
+# alpha 103611 0 0.5
+# move 196 4 0
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+そういえば、ずっと姿が見えなかった
+のって、そういう理由だったの？
+
+# alpha 300711 0 0.5
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0028"
+@ラグナロク
+こんなこともあろうかとって…
+察しが良すぎるという
+レベルじゃないわね…
+
+# alpha 103611 0 0.5
+# alpha 196 0 0.5
+# move 302511 3 0
+# face 302511 "angry"
+# alpha 302511 1 0.5
+# mask 302511 off
+# textboxarrow 0 2
+@ミネルヴァ
+皆さん！
+そんなことより急いで
+脱出しましょう！

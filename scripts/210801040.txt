@@ -1,0 +1,747 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第８章 章タイトル：「ビギニング・オブ・ジ・エンド」
+;;第1話－４　タイトル：幾つかの答え
+;;1_4_0
+;;スクリプト最後の背景：ユグドラシルの部屋
+;;-----------------------------------------
+# script "lisp"
+# background "in_yggdrasill"
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;ガブリエル
+# body 960030
+# pos 960030 3
+# scale 960030 0.8 0
+# layer 960030 2
+# alpha 960030 0 0
+# mask 960030 off
+;;ミネルヴァ
+# body 302511
+# pos 302511 3
+# scale 302511 0.8 0
+# layer 302511 2
+# alpha 302511 0 0
+# mask 302511 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+# brightness 210 0.8 0
+;;エイレーネ
+# body 132
+# pos 132 3
+# scale 132 0.8 0
+# layer 132 2
+# alpha 132 0 0
+# mask 132 off
+;;ユグドラシル
+# body 242
+# pos 242 3
+# scale 242 0.8 0
+# layer 242 2
+# alpha 242 0 0
+# mask 242 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;第1話－４　タイトル：幾つかの答え
+;;//背景：ユグドラシル（天上世界）
+;;ナレーション
+# textflame 0 0
+@
+その頃、ラグナロク達は――
+
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 302511 4 0
+# face 302511 "normal"
+# alpha 302511 1 0.5
+# mask 302511 on
+@ラグナロク
+ミネルヴァ、
+それじゃ少しの間、留守をお願いね
+
+# voice 3025 "minerva_0003"
+# textboxarrow 0 3
+@ミネルヴァ
+はい
+ラグナロクも気をつけて下さい
+
+# face 302511 "sad"
+# textboxarrow 0 3
+@ミネルヴァ
+ユグドラシルの内部は未知の世界です
+どんな危険があるか…
+
+# textboxarrow 0 1
+@ラグナロク
+慎重に動くから
+必ず有益な情報を手に入れて
+戻ってくる
+
+# textboxarrow 0 1
+@ラグナロク
+私がいない間、
+エルキュールのこと…よろしくね
+
+# face 302511 "normal"
+# textboxarrow 0 3
+@ミネルヴァ
+まだ落ち込んでいるようですが、
+彼女はきっと大丈夫です
+信じてあげましょう
+
+# textboxarrow 0 3
+@ミネルヴァ
+では、行ってらっしゃい
+
+# voice 1036 "ragnarok_0003"
+# textboxarrow 0 1
+@ラグナロク
+うん
+行って来ます
+
+# se "SE_0809"
+# waitandnext 0.2
+
+# textwindow "close"
+# alpha 103611 0 0.5
+# waitandnext 0.8
+
+;;//背景：黒
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# alpha 302511 0 0
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0
+# mask 103611 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;ラグナロク（独白）
+# move 103611 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 103611 off
+@ラグナロク
+ユグドラシルの中に入ったけれど、
+この辺りは表層に過ぎない
+
+;;ラグナロク（独白）
+# textboxarrow 0 0
+@ラグナロク
+天上世界と地上世界を行き来する
+だけなら、この表層を伝って
+いけば良いのだけれど…
+
+;;ラグナロク（独白）
+# face 103611 "sad"
+# textboxarrow 0 0
+@ラグナロク
+私がコマンドキラーズの
+フォルカスに天上世界への侵入を
+許したとき…
+
+;;ラグナロク（独白）
+# textboxarrow 0 0
+@ラグナロク
+もう少し奥の方で、人の姿をした
+何かを見た気がする…
+あれに気を取られたせいで…
+
+;;ラグナロク（独白）
+# textboxarrow 0 0
+@ラグナロク
+フォルカスの不意打ちを受けて
+しまった
+あれは一体、何だったの…？
+
+# face 103611 "surprise"
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+あっ！？
+あそこにっ…
+
+;;//背景：ユグドラシル内部
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "yggdrasill_interior"
+# alpha 103611 0 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgmfile "bgm437" "BgmIntegralNoahEvent005" 0
+# voice 1036 "ragnarok_0022"
+# move 103611 3 0
+# face 103611 "surprise"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+えっ…！？
+ここが、ユグドラシルの中っ？
+
+# face 103611 "normal"
+# textboxarrow 0 2
+@ラグナロク
+さすが世界樹ね…
+全ての世界を内包しているという
+ことかしら
+
+# textboxarrow 0 2
+@ラグナロク
+それよりも…
+さっき見かけた人の姿を
+確かめないとっ
+
+;;//カミトの身体が現れる
+# textwindow "close"
+# alpha 103611 0 0.5
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 off
+# waitandnext 1.2
+
+# alpha 210 0 0.5
+# move 103611 3 0
+# face 103611 "surprise"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+これ…ひょっとして、カミトの
+身体？
+
+# face 103611 "normal"
+# textboxarrow 0 2
+@ラグナロク
+腹を貫かれた痕がある…
+左手の義手…間違いなさそうね
+
+# textboxarrow 0 2
+@ラグナロク
+お腹の傷は…治療されてるから
+大丈夫
+あとは…
+
+# textboxarrow 0 2
+@ラグナロク
+いかにも即席って感じの結界を
+破れば、きっとカミトはハリーの
+身体から戻れるわ
+
+# textboxarrow 0 2
+@ラグナロク
+…でも、誰がこんなことを？
+
+;;ラグナロク（独白）
+# move 103611 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 103611 off
+@ラグナロク
+カミトの身体はひとまずこのままに
+して、もっと奥までいきましょう
+
+;;ラグナロク（独白）
+# textboxarrow 0 0
+@ラグナロク
+ユグドラシルに保管されている
+記録を調べていけば、
+世界の真実に辿り着けるはずよ
+
+;;//暗転挟む
+# se "SE_9139"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "fountain"
+# alpha 103611 0 0
+# move 103611 3 0
+# face 103611 "angry"
+# alpha 103611 1 0
+# mask 103611 off
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//これまでのシーンを幾つか遡って出す
+;;//ラグナロクがガブリエルを倒すシーン
+# voice 1036 "ragnarok_battle_0001"
+# waitandnext 0.5
+
+# alpha 103611 0 0.5
+# move 960030 3 0
+# alpha 960030 1 0.5
+# mask 960030 off
+# waitandnext 0.6
+
+# se "SE_9077"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_5620"
+# alpha 960030 0 0.5
+# waitandnext 0.8
+
+;;//一瞬、エイレーネの立ち絵
+# fadeout "white" 0.2
+# waitandnext 0.2
+
+# background "bg_black"
+# move 132 3 0
+# face 132 "normal"
+# alpha 132 1 0
+# mask 132 off
+# waitandnext 0.2
+
+# fadein "white" 0.2
+# waitandnext 0.2
+
+# waitandnext 0.5
+
+;;//神魔大戦の一枚絵（あれば）
+;;
+;;//ユグドラシルの部屋の背景を出す
+# fadeout "white" 0.2
+# waitandnext 0.2
+
+# background "yggdrasill_bedroom_light"
+# alpha 132 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.2
+# waitandnext 0.2
+
+;;//弾かれる音（サウンド）
+# se "SE_9066"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# waitandnext 0.5
+
+;;//背景：ユグドラシル内部
+# fadeout "white" 1
+# waitandnext 1
+
+# background "yggdrasill_interior"
+# move 103611 3 0
+# face 103611 "surprise"
+# alpha 103611 1 0
+# mask 103611 off
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# voice 1036 "ragnarok_0022"
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+えっ…！？
+今のは…
+
+;;ラグナロク（独白）
+# move 103611 3 0
+# face 103611 "normal"
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 103611 off
+@ラグナロク
+かなり深いところにあったような…
+それに、近づいたら弾き返された
+
+;;ラグナロク（独白）
+# textboxarrow 0 0
+@ラグナロク
+何かある…！
+もう一度、今度は丁寧に…
+踏み込むっ
+
+;;//背景：ユグドラシルの部屋
+# se "SE_5767"
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "yggdrasill_bedroom_light"
+# alpha 103611 0 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgmfile "bgm438" "BgmIntegralNoahEvent005" 0
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+…………
+
+;;ラグナロク（独白）
+# move 103611 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 103611 off
+@ラグナロク
+軽い抵抗があったけれど、
+入ることができた…
+
+;;ラグナロク（独白）
+# textboxarrow 0 0
+@ラグナロク
+恐らく、私にユグドラシルの管理権が
+あるから…そうでなかったら、
+さっきのように弾かれていたわ
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+ここは…誰かの部屋のようだけれど…
+
+;;ラグナロク（独白）
+# move 103611 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 103611 off
+@ラグナロク
+あそこの寝台に誰かが寝てる
+無断で入ったことを謝らないと
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+…………あの
+
+;;//ユグドラシルの立ち絵出す
+# move 103611 2 0.5
+# mask 103611 on
+# move 242 4 0
+# face 242 "normal"
+# alpha 242 1 0.5
+# mask 242 on
+# textboxarrow 0 3
+@？？？
+…………
+
+# face 103611 "sad"
+# textboxarrow 0 1
+@ラグナロク
+寝てるようね…
+でも、辛そうな顔をしてる…
+大丈夫かしら…？
+
+# textboxarrow 0 1
+@ラグナロク
+この人は、いったい…
+
+# textboxarrow 0 3
+@？？？
+ううっ…
+あら…？
+どなた…？
+
+# face 103611 "normal"
+# textboxarrow 0 1
+@ラグナロク
+あ…ごめんなさいっ
+決して怪しい者ではないのっ
+私は――
+
+# textboxarrow 0 3
+@？？？
+ああ…ラグナロクね…
+あなたもここに辿り着いたの…
+
+# voice 1036 "ragnarok_0022"
+# face 103611 "surprise"
+# textboxarrow 0 1
+@ラグナロク
+私のことを知っているのっ？
+
+# textboxarrow 0 3
+@？？？
+ええ、もちろん…
+あなただけでなく、私は全ての…
+ゴホッ…ゴホッ…！
+
+# face 103611 "normal"
+# textboxarrow 0 1
+@ラグナロク
+無理しないでっ
+何か私にできることはある？
+
+# textboxarrow 0 3
+@？？？
+ありがとう、優しい子…
+でも…いいのよ…
+これは仕方ないことなの…
+
+# textboxarrow 0 1
+@ラグナロク
+重い病なの？
+私の仲間に医療の心得がある者も
+いるからっ
+
+# textboxarrow 0 3
+@？？？
+ふふふっ
+その気持ちだけで十分よ…
+
+# textboxarrow 0 3
+@？？？
+これは…運命…
+私はもう…長くない…
+
+# textboxarrow 0 3
+@？？？
+あとは、ただ…
+“終焉”が訪れるのを…
+静かに待つだけ…
+
+# textboxarrow 0 3
+@？？？
+ごめんなさいね…
+
+# textboxarrow 0 1
+@ラグナロク
+何故、謝るの？
+大丈夫、きっと治るわっ
+
+# textboxarrow 0 1
+@ラグナロク
+明けない夜はない
+癒えない傷もない
+
+# textboxarrow 0 1
+@ラグナロク
+あなたはまだ生きているのだから、
+最後まで諦めないで！
+
+# textboxarrow 0 3
+@？？？
+そうね…
+でも…もう限界なの…
+本当に…ごめんなさい…
+
+# textboxarrow 0 3
+@？？？
+私がもっとしっかりしていれば…
+あなた達に辛い思いをさせずに
+済んだのに…
+
+# face 103611 "usual"
+# textboxarrow 0 1
+@ラグナロク
+何を言っているの？
+あなたの病と私達には何の関係も…
+
+# textboxarrow 0 1
+@ラグナロク
+…………
+
+# face 103611 "normal"
+# textboxarrow 0 1
+@ラグナロク
+あなた、どうしてユグドラシルの中で
+寝ているの？
+まさか…
+
+# textboxarrow 0 3
+@？？？
+…気づいたのね、聡い子
+ええ…あなたの想像通りよ…
+
+# face 103611 "surprise"
+# textboxarrow 0 1
+@ラグナロク
+あなたは…あなたは…
+ユグドラシルそのもの…！
+
+# textboxarrow 0 3
+@ユグドラシル
+本来なら…私の姿を…
+あなたが認識することは…
+できないのだけれど…
+
+# textboxarrow 0 3
+@ユグドラシル
+私の存在そのものが…
+不安定になっているの…
+だから…
+
+# textboxarrow 0 3
+@ユグドラシル
+あなたも…認識できる状態にまで…
+“落ちて”しまっている…
+
+# textboxarrow 0 3
+@ユグドラシル
+まるで…本物の病人みたいな姿で…
+今の私は…ここに…顕現しているの…
+
+# voice 1036 "ragnarok_0019"
+# face 103611 "sad"
+# textboxarrow 0 1
+@ラグナロク
+そんな…
+そんなっ…！
+ユグドラシルが…こんなに弱って…
+
+# face 103611 "normal"
+# textboxarrow 0 1
+@ラグナロク
+先程、もう長くないと…
+
+# textboxarrow 0 3
+@ユグドラシル
+ええ…そうなの…
+もうじき…私の下に“終焉”が
+訪れるわ…
+
+# textboxarrow 0 3
+@ユグドラシル
+もっと長く…この世界を支えて
+いたかったけれど…
+本当に…ごめんなさい…
+
+# face 103611 "surprise"
+# textboxarrow 0 1
+@ラグナロク
+何てことっ…！
+ユグドラシルに何らかの異変が
+起きているとは思っていたけれど…
+
+# textboxarrow 0 1
+@ラグナロク
+これほど大変なことになって
+いただなんて…！
+
+# face 103611 "normal"
+# textboxarrow 0 1
+@ラグナロク
+…ユグドラシル、あなたを助ける
+方法はないの？
+
+# textboxarrow 0 3
+@ユグドラシル
+ふふっ
+同じことを…幾度か尋ねられたわ…
+
+# textboxarrow 0 3
+@ユグドラシル
+でも…これは自然の摂理…
+私は…全てを委ねているわ…
+ごめんなさい…
+
+# face 103611 "angry"
+# textboxarrow 0 1
+@ラグナロク
+諦めないで！
+あなたが死ぬということは、
+この世界そのものが…
+
+# face 103611 "surprise"
+# textboxarrow 0 1
+@ラグナロク
+あっ…ああ…！？
+そういう…ことだったの…？
+
+# textboxarrow 0 1
+@ラグナロク
+インテグラルキラーズは…
+コマンドキラーズは…
+そのためにっ？
+
+# textboxarrow 0 3
+@ユグドラシル
+あの子達も…あの子達なりの
+考えで…抗っているようね…
+
+# textboxarrow 0 3
+@ユグドラシル
+私は…全てを受け入れるつもりよ…
+彼女達が…そして、あなた達が
+どのような選択をしても…
+
+# textboxarrow 0 3
+@ユグドラシル
+それを…受け入れるわ…
+全て…あるがままに…
+
+# textwindow "close"
+# alpha 242 0 0.5
+# waitandnext 0.5
+
+# move 103611 3 0.5
+# mask 103611 off
+# waitandnext 0.5
+
+# face 103611 "usual"
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+ユグドラシルっ？
+…眠ってしまったのね
+
+# face 103611 "angry"
+# textboxarrow 0 2
+@ラグナロク
+…早く、このことを皆に知らせないと
+ユグドラシルの寿命が尽きようと
+していることをっ
+
+# textboxarrow 0 2
+@ラグナロク
+地上に降りているアルマス達にも
+急いで伝えないと！

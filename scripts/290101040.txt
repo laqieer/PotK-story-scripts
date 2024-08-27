@@ -1,0 +1,589 @@
+;;-----------------------------------------
+;;4_10
+;;-----------------------------------------
+# script "lisp"
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+# background "005_Wilderness_Night"
+;;-----------------------------------------
+# body 196
+# pos 196 5
+# scale 196 0.8 0
+# layer 196 3
+# alpha 196 1 0
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 4
+# alpha 103611 1 0
+# body 500721
+# pos 500721 1
+# scale 500721 0.8 0
+# layer 500721 3
+# alpha 500721 1 0
+;;-----------------------------------------
+;;背景：村（夜）
+# textflame 1 1
+# textboxarrow 0 1
+@ブリューナク
+ここがコラール村だ
+ブリューナクは宿を手配しよう
+
+# voice 9943 "almace_navikan_0044"
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+ありがとう
+宿でこれからのことを
+話し合いましょう
+
+# voice 1036 "ragnarok_0033"
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+ええ、そうね…
+ユグドラシルまで…ううっ…
+
+;;ラグナロクが倒れる
+# textboxarrow 0 0
+# alpha 103611 0 0.5
+# se "SE_3001"
+# waitandnext 0.7
+
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+# voice 9943 "almace_navikan_0036"
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+ラグナロク！？
+やっぱり無理してたんじゃ…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ブリューナク
+緊急事態を認識した
+ただちに病院へ運ぶことを推奨する
+
+# alpha 103611 1 1
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+大丈夫っ…
+ちょっと立ちくらみがしただけ…
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+顔が真っ青よ…！
+ブリューナク、案内して！
+
+;;暗転挟む
+# se "SE_5575"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# body 101311
+# pos 101311 3
+# layer 101311 3
+# scale 101311 0.8 0
+# alpha 101311 0 0
+# mask 101311 off
+# textwindow "nomal"
+# se "SE_0831"
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+開けて！
+急患よっ
+
+# alpha 500721 0 0.5
+# alpha 103611 0 0.5
+# alpha 196 0 0.5
+# alpha 101311 1 0.5
+# se "SE_2025"
+# textflame 1 1
+# textboxarrow 0 2
+@パラケルスス
+悪いけど、今日の診察時間は
+終わって…おや？
+
+# voice 1013 "paracelsus_0023"
+# textflame 1 1
+# textboxarrow 0 2
+@パラケルスス
+これは珍しいお客さんだ
+どうぞ、中へ
+
+;;暗転挟む
+# se "SE_0740"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 103611 0 0
+# alpha 101311 0 0
+;;背景：教会の一室
+# background "church_room"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 103611 2 0
+# mask 103611 on
+# alpha 103611 1 0.5
+# move 101311 4 0
+# mask 101311 on
+# alpha 101311 1 0.5
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+こんな時間にごめんなさい…
+パラケルスス、あなたが医者を
+しているの…？
+
+# textflame 1 1
+# textboxarrow 0 3
+@パラケルスス
+医者はわたくしのマスターだよ
+とはいえ、老齢でね
+最近はわたくしが患者を診てる
+
+# textflame 1 1
+# textboxarrow 0 3
+@パラケルスス
+そこに寝るといい
+随分と顔色が悪いね
+
+# voice 1036 "ragnarok_0031"
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+ごめんなさい…
+
+# textflame 1 1
+# textboxarrow 0 3
+@パラケルスス
+それにしても、話題のキル姫が
+うちに来るなんてね
+
+# alpha 103611 0 0.5
+# move 196 2 0
+# mask 196 on
+# alpha 196 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+話題って…
+やっぱり教会が消滅したことよね？
+
+# textflame 1 1
+# textboxarrow 0 3
+@パラケルスス
+そういう君は？
+見ない顔だな
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+私はアルマスよ…
+
+# voice 1013 "paracelsus_0039"
+# textflame 1 1
+# textboxarrow 0 3
+@パラケルスス
+ふぅん…興味深い
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+患者はそっち
+私のことをじろじろ見ないで
+
+# textflame 1 1
+# textboxarrow 0 3
+@パラケルスス
+研究者の性分だよ
+さて、診せてもらおうか
+
+# alpha 196 0 0.5
+# alpha 103611 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+ちょっと立ちくらみがして…
+それだけなんだけど…
+
+# alpha 196 1 0.5
+# alpha 103611 0 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+絶・嘘っ
+色々あったんだから！
+
+# textflame 1 1
+# textboxarrow 0 3
+@パラケルスス
+騒がしいな
+付き添いは黙っていろ
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+説明がいると思ったからっ…
+
+# textflame 1 1
+# textboxarrow 0 3
+@パラケルスス
+それなら患者本人から聞く
+とりあえず、少し採血するよ
+
+# alpha 196 0 0.5
+# alpha 103611 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+よろしく頼むわ
+パラケルスス
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 196 1 0
+# alpha 103611 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 1013 "paracelsus_0028"
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 3
+@パラケルスス
+ふぅむ…
+これは妙なことになってるね
+
+# voice 9943 "almace_navikan_0016"
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+妙って何よ？
+曖昧な言い方しないで
+
+# textflame 1 1
+# textboxarrow 0 3
+@パラケルスス
+素人の分際で口を挟むな
+それとも君は高名な医者か
+何かなのか？
+
+# textflame 1 1
+# textboxarrow 0 3
+@パラケルスス
+そもそも診察時間が過ぎているのに
+押しかけてきた分際で、随分と
+偉そうにしているじゃないか
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+うぐっ…
+
+# voice 1036 "ragnarok_0031"
+# alpha 196 0 0.5
+# alpha 103611 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+ごめんなさい、パラケルスス
+あなたには感謝してる…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+私の体に、何が起きてるの…？
+
+# textflame 1 1
+# textboxarrow 0 3
+@パラケルスス
+ラグナロク、君、存在そのものが
+揺らいでいるようだね
+
+# voice 1036 "ragnarok_0022"
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+えっ…？
+
+# textflame 1 1
+# textboxarrow 0 3
+@パラケルスス
+バイブスをそっちのキル姫に
+奪われたそうじゃないか
+その影響が大きいんだろう
+
+# alpha 196 1 0.5
+# alpha 103611 0 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+アルマスよ！
+奪われたって…
+そんな自覚ないのに…
+
+# textflame 1 1
+# textboxarrow 0 3
+@パラケルスス
+元々、君は特別だった
+バイブスを持つキル姫としてね
+
+# textflame 1 1
+# textboxarrow 0 3
+@パラケルスス
+逆に言うと、それが君自身を
+形成していたともいえる
+それが失われた
+
+# textflame 1 1
+# textboxarrow 0 3
+@パラケルスス
+今はそっちのキル姫と繋がって
+かろうじて維持している状態、
+つまりひどく不安定なんだよ
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+だから、アルマスよ！
+あなた、わざと言ってるでしょっ
+
+# alpha 196 0 0.5
+# alpha 103611 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+治す方法は…あるの？
+
+# textflame 1 1
+# textboxarrow 0 3
+@パラケルスス
+そっちのアル何とかからバイブスを
+取り戻せば良いんだよ
+
+# textflame 1 1
+# textboxarrow 0 3
+@パラケルスス
+まあ、できるのならとっくに
+やっているんだろうけどね
+
+# se "SE_0648"
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+そう…
+ありがとう
+夜遅いし、これで失礼――
+
+;;ラグナロクが倒れる
+# alpha 103611 0 0.5
+# se "SE_3001"
+# textboxarrow 0 0
+# waitandnext 1
+
+# alpha 196 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+ラグナロク…
+無理しないでっ
+
+# textflame 1 1
+# textboxarrow 0 3
+@パラケルスス
+今夜は泊まっていくんだね
+ベッドは十分あるよ
+
+# textflame 1 1
+# textboxarrow 0 3
+@パラケルスス
+それじゃ、わたくしはこれで
+
+;;パラケルススが立ち去る
+# textwindow "close"
+# alpha 101311 0 0.5
+# se "SE_0740"
+# waitandnext 0.7
+
+# mask 196 off
+# move 196 3 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+…感じ悪い奴ね
+
+# voice 1036 "ragnarok_0003"
+# alpha 103611 1 0.5
+# mask 196 on
+# move 196 4 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+パラケルススは自分の知識や考えに
+自信があるの…
+同調しない相手には容赦がない
+
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+絶・腹立つけど、
+今夜はここに泊まるわ
+アナタを休ませないとっ
+
+# voice 1036 "ragnarok_0031"
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+ごめんなさい…
+明日にはきっと回復しているはず
+
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+あんまり気に病まないで
+…自分の存在が揺らぐ感覚は、
+分からなくもないから
+
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+私も…まだ今の自分に馴染んでない
+何か変な感じ…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+アルマス…
+
+# body 101011
+# pos 101011 2
+# scale 101011 0.8 0
+# layer 101011 3
+# alpha 101011 0 0
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+お互い、変なことになってる
+みたいだから、
+せめて、ぐっすり眠りましょ
+
+# voice 1010 "furagaraha_0003"
+# alpha 103611 0 0.5
+# alpha 101011 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@フラガラッハ
+そうね
+睡眠不足は美容の大敵だもの
+
+# voice 1010 "furagaraha_0001"
+# textflame 1 1
+# textboxarrow 0 1
+@フラガラッハ
+でも安心してマスター
+わたしの美貌は睡眠不足程度では
+衰えたりしないわ
+
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+分かったから、さっさと寝て
+
+;;暗転挟む
+# fadeout "black" 1
+# waitandnext 1
+
+# textwindow "close"
+# alpha 196 0 0
+# alpha 101011 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textwindow "nomal"
+# textflame 0 0
+@
+深夜――
+
+# move 101311 3 0
+# mask 101311 off
+# alpha 101311 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@パラケルスス
+…ああ、うん
+そうだ
+間違いないよ
+
+# textflame 1 1
+# textboxarrow 0 2
+@パラケルスス
+ラグナロクにアルマス…
+今、うちにいる
+
+# textflame 1 1
+# textboxarrow 0 2
+@パラケルスス
+急ぐといい
+とても興味深いものを
+見せてあげよう
+
+# textflame 1 1
+# textboxarrow 0 2
+@パラケルスス
+では、おやすみ
+
+# voice 1013 "paracelsus_0004"
+# textflame 1 1
+# textboxarrow 0 2
+@パラケルスス
+ふふっ
+まさか彼女達の方から来てくれる
+だなんて
+
+# textflame 1 1
+# textboxarrow 0 2
+@パラケルスス
+これは天佑だ
+わたくしの研究は完成する
+
+# textflame 1 1
+# textboxarrow 0 2
+@パラケルスス
+これで、この魔弾を彼女に…

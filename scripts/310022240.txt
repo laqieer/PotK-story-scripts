@@ -1,0 +1,249 @@
+;;-----------------------------------------
+;;SEA2章_24
+;;-----------------------------------------
+# script "lisp"
+# background "bg_white"
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 0 0
+;;ハイス老人
+# body 292
+# pos 292 3
+# scale 292 0.8 0
+# layer 292 3
+# mask 292 off
+# alpha 292 0 0
+;;ハイス少年
+# body 291
+# pos 291 2
+# scale 291 0.8 0
+# layer 291 3
+# mask 291 off
+# alpha 291 0 0
+;;フラン
+# body 284
+# pos 284 4
+# scale 284 0.8 0
+# layer 284 2
+# mask 284 off
+# alpha 284 0 0
+# reversal 284 0
+;;-----------------------------------------
+;;日記閉じる
+# imageset 2 "diary_close"
+# imagealpha 2 0 0
+# imagescale 2 1 0
+# imagelayer 2 5
+;;紙
+# imageset 4 "SEA_diary_bg"
+# imagealpha 4 0 0
+# imagelayer 4 1
+# imagescale 4 1.2 0
+;;1枚め
+# imageset 5 "SEA_diary_202"
+# imagealpha 5 0 0
+# imagescale 5 1 0
+# imagelayer 5 3
+;;2枚め
+# imageset 6 "SEA_diary_203"
+# imagealpha 6 0 0
+# imagescale 6 1 0
+# imagelayer 6 3
+;;3枚め
+# imageset 7 "SEA_diary_204"
+# imagealpha 7 0 0
+# imagescale 7 1 0
+# imagelayer 7 3
+;;4枚め
+# imageset 8 "SEA_diary_205"
+# imagealpha 8 0 0
+# imagescale 8 1 0
+# imagelayer 8 3
+;;-----------------------------------------
+;;背景：白
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# face 292 "normal"
+# alpha 292 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ハイス
+ここは…
+ああ、お迎えが来たんじゃな
+
+# textboxarrow 0 2
+@ハイス
+お嬢ちゃん達のお陰で、
+心置きなく逝けるのう
+…おや？あそこにおるのは
+
+# move 292 2 0.5
+# face 284 "normal"
+# alpha 284 1 0.5
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@フラン
+ハイス
+
+# face 292 "smile"
+# textboxarrow 0 1
+@ハイス
+姉さん！
+
+;;ハイスが老人から子どもに
+# sedelay "bgm601_windon" 3
+# fadein "white" 3
+# alpha 292 0 0
+# face 291 "normal"
+# alpha 291 1 0
+# textboxarrow 0 0
+# waitandnext 3
+
+# textboxarrow 0 1
+@ハイス
+姉さん
+良かった…
+会いたかったよ…
+
+# face 284 "happy"
+# textboxarrow 0 3
+@フラン
+心配かけてごめんね
+もう、大丈夫だから
+
+# textboxarrow 0 3
+@フラン
+さあ、一緒に帰ろう
+お父さまもお母さまも
+待ってくれてるよ
+
+# face 291 "happy"
+# textboxarrow 0 1
+@ハイス
+うん！
+姉さんに話したいことが
+たくさんあるんだっ
+
+# textboxarrow 0 1
+@ハイス
+町の外のこと
+学校のこと
+歩んできた人生のこと
+
+# textboxarrow 0 1
+@ハイス
+たくさんたくさん、
+面白い話をして
+あげられるんだよ！
+
+# textboxarrow 0 3
+@フラン
+うん
+とっても楽しみ♪
+
+;;二人が光の中に消えていく
+#setnextbgmblock 1
+# se "bgm601_guitaron"
+# alpha 284 0 1
+# alpha 291 0 1
+# fadeout "white" 1.5
+# waitandnext 1.5
+
+;;背景：日記帳
+# background "diary"
+# waitandnext 0.5
+
+;;フレーム・テキストウィンドウを外す
+# textwindow "close"
+# frameout 0 0
+# se "SE_6165"
+# fadein "white" 1
+# waitandnext 2
+
+;;紙を表示
+# imagealpha 4 0.7 1
+# imagepos 4 0 0
+# waitandnext 1
+
+;;1枚目を表示
+# se "SE_6175"
+# imagealpha 5 1 2
+# imagepos 5 0 -900
+# waitandnext 1
+
+;;1枚目を上に
+# imagemoveto 5 0 700 25
+# waitandnext 22
+
+;;1枚目を消す
+# imagealpha 5 0 2
+# waitandnext 2
+
+;;2枚目を表示
+# se "SE_6166"
+# imagealpha 6 1 2
+# imagepos 6 0 -900
+# waitandnext 1
+
+;;2枚目を上に
+# imagemoveto 6 0 500 24
+# waitandnext 21
+
+;;2枚目を消す
+# imagealpha 6 0 2
+# waitandnext 2
+
+;;3枚目を表示
+# se "SE_6166"
+# imagealpha 7 1 2
+# imagepos 7 0 -900
+# waitandnext 1
+
+;;3枚目を上に
+# imagemoveto 7 0 500 25
+# waitandnext 22
+
+;;3枚目を消す
+# imagealpha 7 0 2
+# waitandnext 2
+
+;;4枚目を表示
+# se "SE_6166"
+# imagealpha 8 1 2
+# imagepos 8 0 -850
+# waitandnext 1
+
+;;4枚目を真ん中で止め
+# imagemoveto 8 0 -130 16
+# waitandnext 18
+
+;;4枚目と紙を消す
+# sestop "SE_6175"
+# imagemoveto 8 400 -120 3
+# imagealpha 8 0 2
+# waitandnext 2
+
+# imagealpha 4 0 2
+# waitandnext 2
+
+;;日記帳を閉じる
+# se "SE_6167"
+# imagealpha 2 1 2
+# imagepos 2 0 0
+# waitandnext 4
+
+# fadeout "black" 2
+# waitandnext 2

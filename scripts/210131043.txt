@@ -1,0 +1,544 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１３章 章タイトル「ラルゴカタストロフィ―攪乱―」
+;;第1話－４　タイトル：眩惑のキル姫
+;;1_4_3
+;;スクリプト最後の背景：マサムネ城
+;;-----------------------------------------
+# script "lisp"
+# background "masamune_castle"
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 2
+# alpha 5401721 0 0
+# mask 5401721 off
+;;擬装フライシュッツ
+# body 5502721
+# pos 5502721 3
+# scale 5502721 0.8 0
+# layer 5502721 3
+# alpha 5502721 0 0
+# mask 5502721 off
+;;天沼矛
+# body 300431
+# pos 300431 3
+# scale 300431 0.8 0
+# layer 300431 2
+# alpha 300431 0 0
+# mask 300431 off
+;;八咫鏡
+# body 500331
+# pos 500331 3
+# scale 500331 0.8 0
+# layer 500331 2
+# alpha 500331 0 0
+# mask 500331 off
+;;草薙剣
+# body 100441
+# pos 100441 3
+# scale 100441 0.8 0
+# layer 100441 2
+# alpha 100441 0 0
+# mask 100441 off
+;;雑賀
+# body 502411
+# pos 502411 3
+# scale 502411 0.8 0
+# layer 502411 2
+# alpha 502411 0 0
+# mask 502411 off
+;;擬装フライシュッツ（？）
+# entry 955027211 5502721
+# pos 955027211 3
+# scale 955027211 0.8 0
+# layer 955027211 2
+# alpha 955027211 0 0
+# mask 955027211 off
+;;-----------------------------------------
+;;第1話－４　タイトル：眩惑のキル姫
+;;//背景：マサムネ城
+;;//バトル 
+# move 5401721 3 0
+# face 5401721 "normal"
+# alpha 5401721 1 0
+# mask 5401721 off
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+どうにか退くことができました
+
+# voice 5027 "freischotz_0030"
+# alpha 5401721 0 0.5
+# move 502411 2 0
+# face 502411 "normal"
+# alpha 502411 1 0.5
+# mask 502411 on
+# move 5502721 4 0
+# face 5502721 "happy"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+# textboxarrow 0 3
+@フライシュッツ
+雑賀ちゃんのお陰だね～
+ありがと～！
+
+;;//フライシュッツが抱きつこうとして雑賀が躱す
+# se "SE_0648"
+# textwindow "close"
+# move 5502721 3 0.2
+# waitandnext 0.2
+
+# se "SE_5200"
+# move 502411 1 0.2
+# waitandnext 0.2
+
+# textboxarrow 0 1
+# textwindow "normal"
+@雑賀
+いえ…
+うちは仕事をこなしただけっすから
+
+# textboxarrow 0 2
+@フライシュッツ
+でも、助かったからお礼のはぐだよ～
+
+# textboxarrow 0 1
+@雑賀
+そういうのいいんで
+それよりついて来てくださいっす
+
+;;//雑賀が歩き出す
+# se "SE_0740"
+# textwindow "close"
+# alpha 502411 0 0.5
+# waitandnext 0.5
+
+# face 5502721 "normal"
+# textboxarrow 0 2
+# textwindow "normal"
+@フライシュッツ
+雑賀ちゃん、どこ行くの～？
+
+# alpha 5502721 0 0.5
+# move 5401721 3 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 2
+@スイハ
+…ひとまず同行しましょう
+悪意はなさそうです
+
+;;//背景：室内
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "201_room"
+# alpha 5401721 0 0
+# move 502411 3 0
+# face 502411 "normal"
+# alpha 502411 1 0
+# mask 502411 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# voice 5024 "saika_0001"
+# textboxarrow 0 2
+# textwindow "normal"
+@雑賀
+マスター、戻ったっす
+
+# serif 1
+@奏官１
+お帰り、雑賀
+エンシェントの方々は…
+連れてきてくれたようだな
+
+# voice 5024 "saika_0003"
+# textboxarrow 0 2
+@雑賀
+自分、仕事はきっちりこなすんで
+
+# alpha 502411 0 0.5
+# move 5502721 3 0
+# face 5502721 "happy"
+# alpha 5502721 1 0.5
+# mask 5502721 off
+# textboxarrow 0 2
+@フライシュッツ
+こんにちは～
+雑賀ちゃんのマスターさんですか？
+
+# serif 1
+@奏官１
+そうだ
+ようこそフライシュッツ、
+スイハ
+
+# voice 1004 "kusanagi_0030"
+# alpha 5502721 0 0.5
+# move 100441 3 0
+# face 100441 "normal"
+# alpha 100441 1 0.5
+# mask 100441 off
+# textboxarrow 0 2
+@草薙剣
+余のギルドによくぞ参った
+そち達の献身に感謝するぞ
+
+# serif 1
+@奏官２
+コラ！
+草薙剣、話に割り込むんじゃないっ
+
+# face 100441 "angry"
+# textboxarrow 0 2
+@草薙剣
+なんじゃー！
+ギルドの長として余が挨拶をするのは
+当然じゃろうが！
+
+# serif 1
+@奏官２
+いや、お前は長じゃないし…
+
+# textwindow "close"
+# alpha 100441 0 0.5
+# serif 1
+@奏官３
+失礼した
+我々はこの町を治めていたギルドの
+生き残りだ
+
+# serif 1
+@奏官４
+以前、マサムネが襲ってきたとき
+恐れて逃げてしまった腰抜けだがな…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# move 5401721 3 0
+# face 5401721 "surprise"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 2
+# textwindow "normal"
+@スイハ
+あっ…
+
+;;スイハ（独白）
+# move 5401721 3 0
+# face 5401721 "normal"
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 5401721 off
+@スイハ
+以前、マサムネ城を訪れたとき、
+住民がそんな話をしていた…
+
+;;スイハ（独白）
+# textboxarrow 0 0
+@スイハ
+マサムネがいなくなったから戻って
+きてたのかな…
+だけど、また現れて…
+
+# alpha 5401721 0 0.5
+# move 100441 3 0
+# face 100441 "sad"
+# alpha 100441 1 0.5
+# mask 100441 off
+# textboxarrow 0 2
+# textwindow "normal"
+@草薙剣
+うむ…
+あのとき余は戦いたかったというのに
+悔しい思いをした…
+
+# textboxarrow 0 2
+@草薙剣
+この町に残った者達の中には、
+余が好敵手と認める草薙剣もおった…
+
+# textboxarrow 0 2
+@草薙剣
+いつか雌雄を決し、
+淘汰を為そうと思っておったのだが
+マサムネに討たれたそうじゃ…
+
+# voice 5027 "freischotz_0040"
+# move 100441 2 0.5
+# mask 100441 on
+# move 5502721 4 0
+# face 5502721 "normal"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+# textboxarrow 0 3
+@フライシュッツ
+そっかー…
+草薙剣ちゃんも辛い思いをしたんだね
+はぐだよ、はぐ
+
+;;//フライシュッツが草薙剣をハグする
+# se "SE_0648"
+# textwindow "close"
+# move 5502721 3 0.2
+# waitandnext 0.2
+
+# face 100441 "worry"
+# textboxarrow 0 1
+# textwindow "normal"
+@草薙剣
+ぬおおっ？
+何をしておるっ
+頭を撫で撫でするでない！
+
+# textwindow "close"
+# alpha 5502721 0 0.5
+# alpha 100441 0 0.5
+# serif 1
+@奏官１
+それで…またマサムネが現れたのだが
+今度は逃げずに戦うと決めたんだ！
+
+# serif 1
+@奏官３
+散っていった仲間達のためにもな
+必ず仇を討つ！
+
+# serif 1
+@奏官４
+そのための戦力を集めているところ
+だったんだ
+今のところは…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# move 955027211 3 0
+# face 955027211 "happy"
+# alpha 955027211 1 0.5
+# mask 955027211 off
+# textboxarrow 0 2
+# textwindow "normal"
+@フライシュッツ（？）
+ふっふっふ
+わらわを呼んだか？
+
+# voice 5027 "freischotz_0023"
+# alpha 955027211 0 0.5
+# move 5401721 2 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# mask 5401721 on
+# move 5502721 4 0
+# face 5502721 "surprise"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+# textboxarrow 0 3
+@フライシュッツ
+えええっ！？
+あたしがもう一人いるよーっ
+
+# voice 4017 "suiha_0034"
+# textboxarrow 0 1
+@スイハ
+いえ…これは…
+
+# voice 5003 "yatanokagami_0005"
+# alpha 5401721 0 0.5
+# alpha 5502721 0 0.5
+# move 500331 3 0
+# face 500331 "happy"
+# alpha 500331 1 0.5
+# mask 500331 off
+# textboxarrow 0 2
+@八咫鏡
+はっはっは！
+驚いたか？
+わらわの力に驚いたか？
+
+# alpha 500331 0 0.5
+# move 100441 3 0
+# face 100441 "angry"
+# alpha 100441 1 0.5
+# mask 100441 off
+# textboxarrow 0 2
+@草薙剣
+八咫鏡よ
+さぷらいずは程々にせいと
+何度言ったら分かるんじゃ
+
+# alpha 100441 0 0.5
+# move 500331 3 0
+# face 500331 "normal"
+# alpha 500331 1 0.5
+# mask 500331 off
+# textboxarrow 0 2
+@八咫鏡
+良いではないか
+それより、ほれ
+お主も挨拶をせい
+
+;;//八咫鏡が天沼矛を引っ張ってくる
+# se "SE_5200"
+# voice 3004 "amenonuboko_kyara_5001"
+# move 300431 2 0
+# face 300431 "surprise"
+# alpha 300431 1 0.5
+# mask 300431 on
+# textboxarrow 0 1
+# move 500331 4 0.5
+# mask 500331 on
+@天沼矛
+あら？
+いつの間にかキル姫が増えてます
+…もしかしてずっと前から？
+
+# textboxarrow 0 3
+@八咫鏡
+安心せい
+フライシュッツとスイハは
+今来たところじゃ
+
+# face 300431 "normal"
+# textboxarrow 0 1
+@天沼矛
+まあまあ
+遠いところをわざわざ
+わたし、天沼矛といいます
+
+# textboxarrow 0 1
+@天沼矛
+…どうしてお二人は持っている武具が
+変わっているのでしょう？
+
+# voice 3004 "amenonuboko_0004"
+# face 300431 "happy"
+# textboxarrow 0 1
+@天沼矛
+もしかして～…
+うふふふっ♪
+
+# alpha 500331 0 0.5
+# move 100441 4 0
+# face 100441 "angry"
+# alpha 100441 1 0.5
+# mask 100441 on
+# textboxarrow 0 3
+@草薙剣
+こりゃー！
+客人の前で妄想に耽るでないわ！
+
+# voice 3004 "amenonuboko_kyara_5001"
+# face 300431 "surprise"
+# textboxarrow 0 1
+@天沼矛
+あら？
+草薙ちゃん、いつからそこに？
+
+# textboxarrow 0 3
+@草薙剣
+さっきからずっとおったわ！
+そちはボーッとしすぎじゃ！
+
+# serif 1
+@奏官１
+…とまあ、こんな感じなんだ
+どうかマサムネ討伐に力を貸して
+もらいたい
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 300431 0 0.5
+# alpha 100441 0 0.5
+# move 5401721 3 0
+# face 5401721 "sad"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 2
+@スイハ
+これは、なかなか…
+
+;;スイハ（独白）
+# voice 4017 "suiha_0028"
+# move 5401721 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 5401721 off
+@スイハ
+まとめるのが大変そうだな…
+上手く連携を取れるかも分からないし
+どうしたら…
+
+# alpha 5401721 0 0.5
+# move 5502721 3 0
+# face 5502721 "happy"
+# alpha 5502721 1 0.5
+# mask 5502721 off
+# textboxarrow 0 2
+# textwindow "normal"
+@フライシュッツ
+うん！
+みんなで力を合わせて戦おうねっ
+
+# textboxarrow 0 2
+@フライシュッツ
+おねーちゃん、草薙剣ちゃんも
+八咫鏡ちゃんも天沼矛ちゃんも
+雑賀ちゃんも…
+
+# textboxarrow 0 2
+@フライシュッツ
+みーんな守ってあげるからね！
+
+# alpha 5502721 0 0.5
+# move 5401721 3 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 2
+@スイハ
+あ…ええと…
+そう、ですね
+
+# serif 1
+@奏官１
+そうか！
+それは本当に助かる！
+よろしく頼む
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 1004 "kusanagi_0003"
+# alpha 5401721 0 0.5
+# move 100441 3 0
+# face 100441 "normal"
+# alpha 100441 1 0.5
+# mask 100441 off
+# textboxarrow 0 2
+@草薙剣
+うむ
+余がおるのじゃ
+大船に乗った気でおると良いぞ
+
+# alpha 100441 0 0.5
+# move 502411 3 0
+# face 502411 "normal"
+# alpha 502411 1 0.5
+# mask 502411 off
+# textboxarrow 0 2
+@雑賀
+大丈夫っすよ
+うちが援護するっすから

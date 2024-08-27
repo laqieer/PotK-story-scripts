@@ -1,0 +1,220 @@
+;;第１話タイトル：再度の襲撃 戦闘前【指定】bgm003
+;;視点：前半ティルフィング　後半マスター
+;;ボス：バトルマップ：森
+;;バトル構成案：指定エリア（街の出入り口）到達でクリア
+;;//バトル　森から街の入り口まで移動側にいるグリードはそこそこの強さだが、別方向から街の入り口に進んでくる
+;;プライドは勝てないくらいの強さ先に街の入り口に到達されるとゲームオーバー
+;;背景　森
+;;レーヴァテインが昼寝している
+# script "lisp"
+# background "forest"
+# bgm "bgm003" 0
+# body 24
+# pos 24 4
+# scale 24 0.8 0
+# mask 24 off
+# body 100221
+# pos 100221 2
+# scale 100221 0.8 0
+# mask 100221 off
+# alpha 100221 0 0
+# body 101471
+# pos 101471 1
+# scale 101471 0.8 0
+# alpha 101471 0 0
+# body 100241
+# pos 100241 3
+# alpha 100241 0 0
+# textflame 1 1
+# textboxarrow 0 3
+# chara 101411
+# voice 1014 "tyrufing_0051"
+@ティルフィング
+またこんなところで
+昼寝していたのね
+探したのよ、レーヴァテイン
+
+# textboxarrow 0 1
+# alpha 100221 1 0.8
+# chara 100221
+# face 100221 "sad"
+# voice 10024 "revatein2_0019"
+@レーヴァテイン
+…んー？
+気持ち良く寝てたのに…
+なんの用？
+
+# textboxarrow 0 3
+# chara 101411
+@ティルフィング
+街に戻りましょう
+マスターが
+心配してるわ
+
+# textboxarrow 0 1
+# chara 100221
+# face 100221 "normal"
+@レーヴァテイン
+私のことなんか
+放っておけばいいのに…
+マスターも物好き…
+
+# textboxarrow 0 1
+# chara 100221
+# voice 10024 "revatein2_0002"
+@レーヴァテイン
+街では良い情報手に入ったの？
+
+# textboxarrow 0 3
+# chara 101411
+@ティルフィング
+…今のところ
+黒奏官についてはさっぱりね
+それより早く――
+
+;;【指定】BGM停止
+# bgm "stop"
+# serif 1
+# textboxarrow 1 0
+# face 24 "surprise"
+# face 100221 "surprise"
+# chara 101471
+# voice 10147 "tyrufing_k_0004"
+@？？？（グリード）
+こんなところに二人
+探す手間が省けて助かったわ
+
+;;【指定】SE_9121
+;;【指定】bgm158
+;;剣戟の音
+# bgmfile "bgm158" "BgmPJZero001" 0
+# se "SE_9121"
+# fadein "red" 1
+# shake 0 0.8
+# serif 1
+# textwindow "close"
+# textboxarrow 0 0
+# mask 100221 on
+# mask 24 on
+# leftin 101471 0.3
+# alpha 101471 1 0
+# move 100221 3 0.3
+# move 24 5 0.3
+# face 100221 "angry"
+# waitandnext 1
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+# chara 101411
+# face 24 "mad2"
+# voice 1014 "tyrufing_0023"
+@ティルフィング
+危ない！？
+
+# textboxarrow 0 2
+# chara 100221
+@レーヴァテイン
+…真っ黒なティルフィング
+あなた、黒奏官のキラープリンセス？
+
+# textboxarrow 0 1
+# chara 101471
+@グリード
+私はグリード
+"強欲"の大罪を背負いしもの…
+アナタ達には死んでもらうわ
+
+# textboxarrow 0 3
+# chara 101411
+# face 24 "angry"
+@ティルフィング
+…今度の狙いは私達というわけ？
+
+# textboxarrow 0 2
+# chara 100221
+# face 100221 "normal"
+@レーヴァテイン
+めんどくさい…
+私達がなにをしたっていうの…
+
+# textboxarrow 0 1
+# chara 101471
+# face 101471 "angry"
+@グリード
+別に知る必要はないわ
+なにも知らないまま死になさい
+
+# textboxarrow 0 2
+# chara 100221
+# voice 10024 "revatein2_0019"
+# face 100221 "angry"
+@レーヴァテイン
+ハァ…
+そんなの嫌に決まってる…
+
+;;二人とグリードが切り結ぶ
+# se "SE_5762"
+# flush "white" 0.1 2
+# shake 1 1
+# waitandnext 1.5
+
+# textboxarrow 0 1
+# chara 101471
+# voice 10147 "tyrufing_k_0007"
+# face 101471 "normal"
+@グリード
+ふふっ
+アナタ達ごときが私に勝てる
+わけないでしょう
+
+# textboxarrow 0 3
+# chara 101411
+# voice 1014 "tyrufing_0015"
+@ティルフィング
+くっ…
+悔しいけど、
+あの人の言うとおりかもしれない…
+
+# textboxarrow 0 3
+# chara 101411
+@ティルフィング
+ここは退いて
+マスターと合流しましょう
+
+# textboxarrow 0 1
+# chara 101471
+# face 101471 "angry"
+# voice 10147 "tyrufing_k_0011"
+@グリード
+逃がしはしない
+それにアナタ達のマスターは今頃、
+プライドが始末しているわ
+
+# textboxarrow 0 2
+# chara 100221
+# face 100221 "surprise"
+# voice 10024 "revatein2_0022"
+@レーヴァテイン
+！？
+
+# textboxarrow 0 2
+# chara 100221
+# face 100221 "angry"
+@レーヴァテイン
+…ああ、もう…めんどくさい！
+
+;;レーヴァテインがグリードを押しのける
+# textboxarrow 0 3
+# chara 101411
+# face 24 "mad2"
+@ティルフィング
+レーヴァテイン、急いで！
+
+# se "SE_5575"
+# fadeout "black" 1.5
+# textboxarrow 0 0
+# face 101471 "normal"
+# rightout 100221 0.7
+# rightout 24 0.6
+# waitandnext 1.6

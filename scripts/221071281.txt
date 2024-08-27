@@ -1,0 +1,1199 @@
+;;-----------------------------------------
+;;2021クリスマスイベント
+;;【EP.5】
+;;スクリプト最後の背景：平原
+;;背景：森
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgm "bgm004" 0
+;;-----------------------------------------
+;;ゲイボルグ
+# body 300741
+# pos 300741 3
+# scale 300741 0.8 0
+# layer 300741 2
+# alpha 300741 0 0
+# mask 300741 off
+;;シユウ feat. 聖夜のお星さま
+# body 6201911
+# pos 6201911 3
+# scale 6201911 0.8 0
+# layer 6201911 2
+# alpha 6201911 0 0
+# mask 6201911 off
+;;ゲイボルグ（クリスマス）
+# body 6300711
+# pos 6300711 3
+# scale 6300711 0.8 0
+# layer 6300711 2
+# alpha 6300711 0 0
+# mask 6300711 off
+;;老人
+# body 1
+# pos 1 3
+# scale 1 0.8 0
+# layer 1 2
+# alpha 1 0 0
+# mask 1 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;クリスマスシユウシナリオカット一枚絵
+# imageset 2 "SEA6201911"
+# imagelayer 2 3
+# imagealpha 2 0 0
+;;-----------------------------------------
+;;クリスマスゲイボルグシナリオカット一枚絵
+# imageset 3 "SEA6300711"
+# imagelayer 3 3
+# imagealpha 3 0 0
+;;-----------------------------------------
+;;【EP.5】
+;;登場人物：天上編ゲイボルグ（槍_03_ゲイボルグ_04）、シユウ（クリスマス）
+;;背景：森
+# move 300741 3 0
+# face 300741 "angry"
+# alpha 300741 1 0
+# mask 300741 off
+# textflame 1 1
+# textboxarrow 0 2
+@ゲイボルグ
+…シユウ
+私は止めたからな
+どうなっても知らないぞ
+
+# textboxarrow 0 2
+@ゲイボルグ
+……
+
+;;回想（セピア色）
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# subfillrect 1 "orange" 0 0 0.4
+# alpha 300741 0 0
+# move 6201911 3 0
+# face 6201911 "usual"
+# alpha 6201911 1 0
+# mask 6201911 off
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@シユウ
+ゲイボルグはいろいろ
+しってるんだな
+
+;;暗転
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 2019 "chihyu_0004"
+# face 6201911 "happy"
+# textboxarrow 0 2
+# textwindow "normal"
+@シユウ
+えへへへ
+みちあんないを
+ゲイボルグにたのんでよかったぞ
+
+;;暗転
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# face 6201911 "happy"
+# textboxarrow 0 2
+# textwindow "normal"
+@シユウ
+だれかといっしょって
+こんなにたのしいんだな！
+
+;;暗転
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# face 6201911 "angry"
+# textboxarrow 0 2
+# textwindow "normal"
+@シユウ
+ふあんなんか、
+シユウがぶっとばしてやる！
+
+;;回想終わり
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# subfillrect 1 "orange" 0 0.4 0
+# alpha 6201911 0 0
+# move 300741 3 0
+# face 300741 "sad"
+# alpha 300741 1 0
+# mask 300741 off
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ゲイボルグ
+…シユウ
+
+# textboxarrow 0 2
+@ゲイボルグ
+どうして、そんなに
+一生懸命になれるんだ？
+
+# textboxarrow 0 2
+@ゲイボルグ
+…サンタクロースも
+そうだったんだろうか？
+
+# textboxarrow 0 2
+@ゲイボルグ
+世界中にプレゼントを配りたい
+その思いだけで
+シユウのように進み続けたのか？
+
+;;回想
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "town"
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# alpha 300741 0 0
+# move 6201911 3 0
+# face 6201911 "usual"
+# alpha 6201911 1 0
+# mask 6201911 off
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@シユウ
+でも、サンタクロースは
+いってきたんだろ？
+
+;;回想終わり
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "forest"
+# imagealpha 0 0 0
+# alpha 6201911 0 0
+# move 300741 3 0
+# face 300741 "angry"
+# alpha 300741 1 0
+# mask 300741 off
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# bgm "stop"
+# textboxarrow 0 2
+# textwindow "normal"
+@ゲイボルグ
+…そうだな
+私はそんなサンタクロースの
+強さに憧れたんだ
+
+# textboxarrow 0 2
+@ゲイボルグ
+…よし
+
+;;暗転
+;;背景：山の中
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "forest"
+# alpha 300741 0 0
+# move 300741 3 0
+# face 300741 "angry"
+# alpha 300741 1 0
+# mask 300741 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ゲイボルグ
+シユウー！
+どこだー！？
+返事をしてくれ！
+
+# face 300741 "sad"
+# textboxarrow 0 2
+@ゲイボルグ
+おかしい
+とっくに追いついても
+いいはずなのに…
+
+;;シユウの立ち絵はなし（台詞のみ）
+# voice 2019 "chihyu_0025"
+# serif 1
+@シユウ
+うわああー！
+
+# bgm "bgm031" 0
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 3007 "gaiborugu_battle_0006"
+# face 300741 "angry"
+# textboxarrow 0 2
+@ゲイボルグ
+シユウ！
+くっ！
+今行くぞ！
+
+;;暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 300741 0 0
+# move 300741 3 0
+# face 300741 "surprise"
+# alpha 300741 1 0
+# mask 300741 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# emotionbody 1000 1 300741 10 310
+# effectpattern 1000 1 0
+# effectstart 1000
+# voice 3007 "gaiborugu_0023"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ゲイボルグ
+たしか、こちらから
+聞こえた気が…
+なっ！
+
+;;モノローグ
+# textflame 0 0
+@
+ゲイボルグがその場に到着すると
+大量のオオカミの群れに囲まれた
+シユウの姿があった
+
+# voice 3007 "gaiborugu_0024"
+# face 300741 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ゲイボルグ
+…なんて数だ
+それに、狂暴化しているような…
+
+;;モノローグ
+# textflame 0 0
+@
+そのとき、オオカミが一斉に
+シユウに襲い掛かって来た
+
+# emotionbody 2000 1 6201911 10 310
+# effectpattern 2000 1 0
+# effectstart 2000
+# voice 2019 "chihyu_0025"
+# alpha 300741 0 0.5
+# move 6201911 3 0
+# face 6201911 "surprise"
+# alpha 6201911 1 0.5
+# mask 6201911 off
+# textflame 1 1
+# textboxarrow 0 2
+@シユウ
+うわああ！
+
+# alpha 6201911 0 0.5
+# move 300741 3 0
+# face 300741 "angry"
+# alpha 300741 1 0.5
+# mask 300741 off
+# textboxarrow 0 2
+@ゲイボルグ
+シユウ！
+
+# voice 3007 "gaiborugu_battle_0006"
+# textboxarrow 0 2
+@ゲイボルグ
+くっ！
+足が震える…
+
+# textboxarrow 0 2
+@ゲイボルグ
+だが、それが
+どうしたー！
+
+# voice 3007 "gaiborugu_0029"
+# textboxarrow 0 2
+@ゲイボルグ
+はあああああ！
+
+# se "SE_5575"
+# textwindow "close"
+# sedelay "SE_4200" 1.2
+# leftout 300741 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# alpha 300741 0 0
+# textflame 0 0
+# textwindow "normal"
+@
+我を忘れたかのように
+オオカミの群れへと突っ込んでいく
+ゲイボルグ
+
+# emotionbody 3000 1 6201911 10 310
+# effectpattern 3000 1 0
+# effectstart 3000
+# move 6201911 2 0
+# face 6201911 "surprise"
+# alpha 6201911 1 0.5
+# mask 6201911 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 300741 4 0
+# face 300741 "angry"
+# alpha 300741 1 0.5
+# mask 300741 on
+@シユウ
+ゲイボルグ！
+
+# textboxarrow 0 3
+@ゲイボルグ
+大丈夫か、シユウ！
+
+# voice 2019 "chihyu_0003"
+# face 6201911 "usual"
+# textboxarrow 0 1
+@シユウ
+う、うん
+へいきだぞ！
+
+# textboxarrow 0 3
+@ゲイボルグ
+一気に切り抜けるぞ！
+
+# face 6201911 "angry"
+# textboxarrow 0 1
+@シユウ
+わかった！
+
+;;暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 6201911 0 0
+# alpha 300741 0 0
+# move 6201911 2 0
+# face 6201911 "usual"
+# alpha 6201911 1 0
+# mask 6201911 on
+# move 300741 4 0
+# face 300741 "normal"
+# alpha 300741 1 0
+# mask 300741 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "stop"
+# textboxarrow 0 3
+# textwindow "normal"
+@ゲイボルグ
+ふう、ここまで来れば
+大丈夫だろう
+
+# textboxarrow 0 1
+@シユウ
+ゲイボルグ…
+きてくれたんだな
+
+# face 300741 "angry"
+# textboxarrow 0 3
+@ゲイボルグ
+遅れてすまなかった
+
+# textboxarrow 0 1
+@シユウ
+でも、すごいな！
+ゲイボルグ、
+すごくつよかったんだな
+
+# voice 3007 "gaiborugu_0005"
+# face 300741 "happy"
+# textboxarrow 0 3
+@ゲイボルグ
+はは、私自身も驚いているよ
+
+# voice 2019 "chihyu_0005"
+# face 6201911 "happy"
+# textboxarrow 0 1
+@シユウ
+あはははは
+
+# face 300741 "normal"
+# textboxarrow 0 3
+@ゲイボルグ
+さてと、それじゃ行くか
+
+# emotionbody 4000 2 6201911 10 290
+# effectpattern 4000 1 1
+# effectstart 4000
+# voice 2019 "chihyu_0022"
+# face 6201911 "surprise"
+# textboxarrow 0 1
+@シユウ
+え？
+どこにだ？
+
+# textboxarrow 0 3
+@ゲイボルグ
+星に願いを叶えてもらいに
+行くのだろう？
+
+# textboxarrow 0 1
+@シユウ
+ゲイボルグ…！
+いいのか！
+
+# face 300741 "angry"
+# textboxarrow 0 3
+@ゲイボルグ
+時間がない
+急ぐぞ
+
+# face 6201911 "happy"
+# textboxarrow 0 1
+@シユウ
+おー！
+
+;;場面転換
+;;背景：平原（夜）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain_night"
+# alpha 6201911 0 0
+# alpha 300741 0 0
+# move 6201911 2 0
+# face 6201911 "sad"
+# alpha 6201911 1 0
+# mask 6201911 on
+# move 300741 4 0
+# face 300741 "sad"
+# alpha 300741 1 0
+# mask 300741 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 3
+# textwindow "normal"
+@ゲイボルグ
+はあ、はあ、はあ…
+
+# voice 2019 "chihyu_0015"
+# textboxarrow 0 1
+@シユウ
+うう…
+さすがのシユウも
+つかれたぞー
+
+# face 300741 "angry"
+# textboxarrow 0 3
+@ゲイボルグ
+だが、そのおかげで
+間に合ったみたいだぞ
+
+# face 6201911 "usual"
+# textboxarrow 0 1
+@シユウ
+……
+
+# emotionbody 5000 2 300741 10 290
+# effectpattern 5000 1 1
+# effectstart 5000
+# face 300741 "surprise"
+# textboxarrow 0 3
+@ゲイボルグ
+ん？　
+どうしたんだ、シユウ？
+
+# face 6201911 "normal"
+# textboxarrow 0 1
+@シユウ
+ほしが…きれいだ
+
+# face 300741 "normal"
+# textboxarrow 0 3
+@ゲイボルグ
+…本当だな
+これだけたくさんあるんだから
+どれかは願いを叶えてくれそうだな
+
+# voice 2019 "chihyu_0042"
+# face 6201911 "shy"
+# textboxarrow 0 1
+@シユウ
+えへへへ
+そうだな
+
+# textboxarrow 0 3
+@ゲイボルグ
+私達以外には誰もいないし
+これなら願いも
+叶いそうだ
+
+# voice 2019 "chihyu_0032"
+# face 6201911 "usual"
+# textboxarrow 0 1
+@シユウ
+うん！
+
+# textboxarrow 0 3
+@ゲイボルグ
+それじゃ、
+願いを言ってくれ
+
+# textboxarrow 0 1
+@シユウ
+……
+
+# sestop "SE_0944"
+# face 6201911 "happy"
+# textboxarrow 0 1
+@シユウ
+ゲイボルグを
+はいたつにんに
+してくれ！
+
+# voice 3007 "gaiborugu_0023"
+# face 300741 "surprise"
+# textboxarrow 0 3
+@ゲイボルグ
+なっ！
+待て、シユウ！
+何を言ってるんだ！
+
+# face 6201911 "usual"
+# textboxarrow 0 1
+@シユウ
+ん？
+ねがいごとを
+いっただけだぞ？
+
+# face 300741 "angry"
+# textboxarrow 0 3
+@ゲイボルグ
+ご馳走はどうしたんだ！？
+願いは一回だけなんだぞ！
+
+# textboxarrow 0 1
+@シユウ
+シユウのおねがいは
+もうかなったから
+いいんだ
+
+# emotionbody 6000 2 300741 10 290
+# effectpattern 6000 1 1
+# effectstart 6000
+# face 300741 "surprise"
+# textboxarrow 0 3
+@ゲイボルグ
+え？
+
+# bgm "bgm003" 0
+# textboxarrow 0 1
+@シユウ
+シユウのほんとのおねがいは
+ともだちがほしい、
+だったんだ
+
+# textboxarrow 0 3
+@ゲイボルグ
+友達…
+
+# textboxarrow 0 1
+@シユウ
+シユウはおおぐらいだし
+ちからもつよくて
+すぐいろんなものをこわしちゃう
+
+# textboxarrow 0 1
+@シユウ
+だから、いつもだれも
+いっしょにいてくれなかったんだ
+
+# textboxarrow 0 1
+@シユウ
+いろいろなまちにいって、
+いろいろなひととあった
+
+# textboxarrow 0 1
+@シユウ
+でも、みんな
+シユウのこと、
+いやなめでみるんだ
+
+# face 300741 "angry"
+# textboxarrow 0 3
+@ゲイボルグ
+…シユウ
+
+# textboxarrow 0 1
+@シユウ
+でも、ゲイボルグはちがった
+ずっといっしょにいてくれて
+ここまでつれてきてくれた
+
+# voice 2019 "chihyu_0004"
+# face 6201911 "happy"
+# textboxarrow 0 1
+@シユウ
+ゲイボルグはシユウの
+ともだちだ！
+
+# face 300741 "normal"
+# textboxarrow 0 3
+@ゲイボルグ
+…そうだな
+
+# textboxarrow 0 3
+@ゲイボルグ
+だが、私の願いも
+もう叶っている
+
+# emotionbody 7000 2 6201911 10 290
+# effectpattern 7000 1 1
+# effectstart 7000
+# voice 2019 "chihyu_0022"
+# face 6201911 "surprise"
+# textboxarrow 0 1
+@シユウ
+え？
+
+# voice 3007 "gaiborugu_0004"
+# textboxarrow 0 3
+@ゲイボルグ
+この場所にシユウを
+無事に届けられた
+私はもう立派な配達人だ
+
+# face 6201911 "usual"
+# textboxarrow 0 1
+@シユウ
+あ、それもそうだな！
+
+# textboxarrow 0 3
+@ゲイボルグ
+だから、シユウ
+ご馳走をお願いして
+二人で食べよう
+
+# se "SE_6504"
+# emotionbody 8000 3 6201911 10 290
+# effectpattern 8000 1 3
+# effectstart 8000
+# voice 2019 "chihyu_0032"
+# face 6201911 "happy"
+# textboxarrow 0 1
+@シユウ
+うん！
+
+;;モノローグ
+# bgm "stop"
+# textflame 0 0
+@
+そのときだった
+不意に一つの星が強く輝き出す
+
+# face 6201911 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@シユウ
+ん？
+なんだ？
+
+# se "SE_9139"
+# face 300741 "surprise"
+# textboxarrow 0 3
+@ゲイボルグ
+星が…降ってくる？
+
+# emotionbody 9000 1 6201911 10 310
+# effectpattern 9000 1 0
+# effectstart 9000
+# voice 2019 "chihyu_0025"
+# face 6201911 "surprise"
+# textboxarrow 0 1
+@シユウ
+うわあああ！
+
+;;演出：画面フラッシュ
+# se "SE_5215"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;フラッシュ後、シユウのシナリオカット（ユニットの背景付きイラスト）表示
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# alpha 6201911 0 0
+# alpha 300741 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm449" "BgmChristmas003" 0
+# voice 2019 "chihyu_0022"
+# textboxarrow 0 0
+# textwindow "normal"
+@シユウ
+ええ！？
+なんだ、これ？
+
+;;ゲイボルグは非表示
+# textboxarrow 0 0
+@ゲイボルグ
+これは…星の飾りだ
+もしかして、街のツリーの上に
+付いていたものと同じ物では…？
+
+# voice 2019 "chihyu_0021"
+# textboxarrow 0 0
+@シユウ
+わぁああああぁぁっ…！！
+
+# voice 2019 "chihyu_0041"
+# textboxarrow 0 0
+@シユウ
+すごいすごい！きれいだっ！
+きらきらだ～っ！！
+
+# voice 3007 "gaiborugu_0003"
+# textboxarrow 0 0
+@ゲイボルグ
+ああ、そうだな…
+
+;;暗転
+;;ここまでシナリオカット
+;;背景：夜の町
+;;ト書き：クリスマス当日の夜。屋根の上に登っているゲイボルグ
+;;ト書き：ここから以降、ゲイボルグはクリスマス衣装
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "town_night"
+# imagealpha 2 0 0
+# move 6201911 2 0
+# face 6201911 "usual"
+# alpha 6201911 1 0
+# mask 6201911 on
+# move 6300711 4 0
+# face 6300711 "happy"
+# alpha 6300711 1 0
+# mask 6300711 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 3007 "gaiborugu_0004"
+# textboxarrow 0 3
+# textwindow "normal"
+@ゲイボルグ
+…ふふふっ
+
+# textboxarrow 0 3
+@ゲイボルグ
+光り輝くツリーと、
+人々の賑わう声…
+
+# textboxarrow 0 3
+@ゲイボルグ
+こんなに人が集まってくるなんて
+初めて見たな…
+
+# textboxarrow 0 1
+@シユウ
+みんなよろこんでるな！
+かれてたきも
+キラキラのツリーになったしな
+
+;;ここからゲイボルグのシナリオカット表示
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# imagealpha 3 1 0
+# imagepos 3 0 0
+# alpha 6201911 0 0
+# alpha 6300711 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 3007 "gaiborugu_0003"
+# textboxarrow 0 0
+# textwindow "normal"
+@ゲイボルグ
+ああ、あれは不思議だったな
+でも、これでこの街も
+活気づくはずだ
+
+# textboxarrow 0 0
+@ゲイボルグ
+今度こそは、この星の飾りを
+守り通してみせる
+
+# voice 2019 "chihyu_0003"
+# textboxarrow 0 0
+@シユウ
+うん、ゲイボルグなら
+きっとできるぞ！
+
+# textboxarrow 0 0
+@シユウ
+それより、ゲイボルグ！
+まちのなかで、ごちそうが
+でてるみたいだぞ
+
+# textboxarrow 0 0
+@シユウ
+たべにいこう！
+
+# voice 3007 "gaiborugu_0003"
+# textboxarrow 0 0
+@ゲイボルグ
+ああ、そうだな
+
+# voice 3007 "gaiborugu_0004"
+# textboxarrow 0 0
+@ゲイボルグ
+それにしても…
+ふふっ
+
+# textboxarrow 0 0
+@シユウ
+どうしたんだ？
+
+# textboxarrow 0 0
+@ゲイボルグ
+ご馳走が欲しいという願いも
+叶ったな
+
+# textboxarrow 0 0
+@シユウ
+あ、そういえばそうだな！
+
+# textboxarrow 0 0
+@ゲイボルグ
+これも、クリスマスの奇跡なのかも
+しれないな
+
+;;ここまでシナリオカット絵
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# imagealpha 3 0 0
+# move 6201911 2 0
+# face 6201911 "usual"
+# alpha 6201911 1 0
+# mask 6201911 on
+# move 6300711 4 0
+# face 6300711 "happy"
+# alpha 6300711 1 0
+# mask 6300711 on
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# textwindow "normal"
+@ゲイボルグ
+それでは、食べにいくか
+
+# se "SE_6504"
+# emotionbody 10000 3 6201911 10 290
+# effectpattern 10000 1 3
+# effectstart 10000
+# face 6201911 "happy"
+# textboxarrow 0 1
+@シユウ
+いっぱいたべるぞ！
+
+;;暗転
+;;背景：平原
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# alpha 6201911 0 0
+# alpha 6300711 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# bgm "bgm003" 0
+# textflame 0 0
+# textwindow "normal"
+@
+クリスマスの翌日
+
+# move 6201911 2 0
+# face 6201911 "usual"
+# alpha 6201911 1 0.5
+# mask 6201911 on
+# move 6300711 4 0
+# face 6300711 "surprise"
+# alpha 6300711 1 0.5
+# mask 6300711 on
+# textflame 1 1
+# textboxarrow 0 3
+@ゲイボルグ
+…本当に行くのか？
+
+# voice 2019 "chihyu_0003"
+# textboxarrow 0 1
+@シユウ
+うん
+
+# face 6300711 "usual"
+# textboxarrow 0 3
+@ゲイボルグ
+この街に残って、私と一緒に
+配達人をやらないか？
+
+# textboxarrow 0 1
+@シユウ
+シユウはこれからもたびを
+つづけるぞ
+
+# textboxarrow 0 1
+@シユウ
+もしかしたら、シユウみたいに
+ともだちがいないひとが
+いるかもしれないからな
+
+# textboxarrow 0 1
+@シユウ
+だから、そのひとと
+ともだちになりにいくんだ
+
+# face 6300711 "happy"
+# textboxarrow 0 3
+@ゲイボルグ
+そうか…
+うん、そうだな
+シユウならきっとできるさ
+
+# textboxarrow 0 1
+@シユウ
+なあ、ゲイボルグ
+
+# face 6300711 "usual"
+# textboxarrow 0 3
+@ゲイボルグ
+なんだ？
+
+# textboxarrow 0 1
+@シユウ
+もし、シユウが
+さみしくなったら…
+
+# textboxarrow 0 1
+@シユウ
+ともだちのゲイボルグを
+シユウのところに
+とどけてくれるか？
+
+# voice 3007 "gaiborugu_0004"
+# face 6300711 "happy"
+# textboxarrow 0 3
+@ゲイボルグ
+ふふ、ああ、もちろんだ
+どんなところにいても
+必ず届けてみせるよ
+
+# voice 2019 "chihyu_0032"
+# textboxarrow 0 1
+@シユウ
+うん！
+
+# face 6201911 "happy"
+# textboxarrow 0 1
+@シユウ
+それじゃ、ゲイボルグ
+またな！
+
+# textboxarrow 0 3
+@ゲイボルグ
+ああ、また
+
+;;シユウの立ち絵非表示
+# textwindow "close"
+# alpha 6201911 0 0.5
+# waitandnext 0.5
+
+# move 6300711 3 0.5
+# mask 6300711 off
+# waitandnext 0.5
+
+# bgm "bgm002" 0
+# face 6300711 "usual"
+# textboxarrow 0 2
+# textwindow "normal"
+@ゲイボルグ
+……さてと
+配達の受付を開始するか
+
+# move 6300711 2 0.5
+# mask 6300711 on
+# move 1 4 0
+# face 1 "smile"
+# alpha 1 1 0.5
+# mask 1 on
+# textboxarrow 0 3
+@老人
+ふふふ
+今度は依頼を
+引き受けてくれそうですね
+
+# face 6300711 "surprise"
+# textboxarrow 0 1
+@ゲイボルグ
+あ！あなたは以前、
+依頼してきてくれた…
+
+# voice 3007 "gaiborugu_0003"
+# face 6300711 "usual"
+# textboxarrow 0 1
+@ゲイボルグ
+ああ、今度はどんな
+依頼でも引き受けるつもりだ
+確か、子供に配達だったな？
+
+# face 1 "normal"
+# textboxarrow 0 3
+@老人
+はい
+世界中の子供達に
+
+# face 6300711 "surprise"
+# textboxarrow 0 1
+@ゲイボルグ
+え？
+
+# face 1 "smile"
+# textboxarrow 0 3
+@老人
+ふふ
+昔は自分で配っていたんですがね
+
+# face 6300711 "usual"
+# textboxarrow 0 1
+@ゲイボルグ
+…もしかして、あなたは
+
+# face 1 "normal"
+# textboxarrow 0 3
+@老人
+もう一度お伺いしてもいいですかな？
+
+# textboxarrow 0 3
+@老人
+あなたはどうして配達人に？
+
+# face 6300711 "surprise"
+# textboxarrow 0 1
+@ゲイボルグ
+っ…！！
+
+# face 6300711 "angry"
+# textboxarrow 0 1
+@ゲイボルグ
+人々の想いと笑顔を届けるためです！
+あなたの想いも必ず…！
+
+# face 1 "smile"
+# textboxarrow 0 3
+@老人
+今のあなたなら
+サンタクロースを任せられる
+頼みましたよ
+
+# textboxarrow 0 1
+@ゲイボルグ
+はい！

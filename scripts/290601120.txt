@@ -1,0 +1,586 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第６章 章タイトル：アナザー・コンフリクト―交錯―
+;;第1話　タイトル：地上からの来訪者
+;;6_1_12
+;;スクリプト最後の背景：ユグドラシル
+;;-----------------------------------------
+# script "lisp"
+# background "in_yggdrasill"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 2
+# alpha 5101431 0 0
+# mask 5101431 off
+;;異族化アルマス
+# body 5103831
+# pos 5103831 3
+# scale 5103831 0.8 0
+# layer 5103831 2
+# alpha 5103831 0 0
+# mask 5103831 off
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;エルキュール
+# body 202511
+# pos 202511 3
+# scale 202511 0.8 0
+# layer 202511 2
+# alpha 202511 0 0
+# mask 202511 off
+;;グラーシーザ
+# body 302611
+# pos 302611 3
+# scale 302611 0.8 0
+# layer 302611 2
+# alpha 302611 0 0
+# mask 302611 off
+;;ネス
+# body 602011
+# pos 602011 3
+# scale 602011 0.8 0
+# layer 602011 2
+# alpha 602011 0 0
+# mask 602011 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;レーヴァテイン・擬彩
+# body 5100231
+# pos 5100231 3
+# scale 5100231 0.8 0
+# layer 5100231 2
+# alpha 5100231 0 0
+# mask 5100231 off
+;;神令フォルカス
+# body 5301811
+# pos 5301811 3
+# scale 5301811 0.8 0
+# layer 5301811 2
+# alpha 5301811 0 0
+# mask 5301811 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第1話　タイトル：地上からの来訪者
+;;//背景：ユグドラシル
+# move 302611 3 0
+# face 302611 "sad"
+# alpha 302611 1 0
+# mask 302611 off
+# textflame 1 1
+# textboxarrow 0 2
+@グラーシーザ
+むっ…
+ユグドラシルでさわぎがおきている
+ようだな
+
+# voice 3026 "grayside_0028"
+# textboxarrow 0 2
+@グラーシーザ
+あたしもかけつけるべきかっ
+しかしインテグラルキラーズの
+しゅうらいもけいかいせねば…
+
+# face 302611 "normal"
+# textboxarrow 0 2
+@グラーシーザ
+ここはちかくにいるスイハに――
+
+# alpha 302611 0 0.5
+# move 5101431 2 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# textboxarrow 0 1
+# move 5100231 4 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+@ティルフィング
+ああ…
+やはり、そうでしたか…
+
+# voice 510023 "revatein_iz_unit_0013"
+# textboxarrow 0 3
+@レーヴァテイン
+めんどくさい…
+
+# alpha 5101431 0 0.5
+# alpha 5100231 0 0.5
+# move 302611 3 0
+# face 302611 "surprise"
+# alpha 302611 1 0.5
+# mask 302611 off
+# textboxarrow 0 2
+@グラーシーザ
+やや！？
+うわさをすればかげというが、
+おまえたちはっ
+
+# alpha 302611 0 0.5
+# move 5101431 2 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# move 5100231 4 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+# textboxarrow 0 3
+@レーヴァテイン
+ティルフィング…
+ここは私が引き受けるから
+
+# voice 510143 "tyrufing_iz_0036"
+# textboxarrow 0 1
+@ティルフィング
+お願いしますね
+
+# alpha 5101431 0 0.5
+# alpha 5100231 0 0.5
+# move 302611 3 0
+# face 302611 "angry"
+# alpha 302611 1 0.5
+# mask 302611 off
+# textboxarrow 0 2
+@グラーシーザ
+さては、おまえたち
+さわぎにじょうじて
+ぎょふのりをえるつもりだな！
+
+# se "SE_5207"
+# voice 3026 "grayside_unit_0008"
+# textboxarrow 0 2
+@グラーシーザ
+ここはけっしてとおさない！
+せいぎをしっこうするぞ！
+
+# alpha 302611 0 0.5
+# move 5100231 3 0
+# face 5100231 "sad"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+はぁ…相変わらず、暑苦しいなぁ…
+
+;;//レーヴァテインがグラーシーザと切り結ぶ
+# textwindow "close"
+# alpha 5100231 0 0.5
+# waitandnext 0.5
+
+# move 302611 2 0
+# face 302611 "angry"
+# alpha 302611 1 0
+# mask 302611 on
+# move 5100231 4 0
+# face 5100231 "angry"
+# alpha 5100231 1 0
+# mask 5100231 on
+# leftin 302611 0.3
+# rightin 5100231 0.3
+# waitandnext 0.3
+
+# se "SE_9017"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 510023 "revatein_iz_0007"
+# textboxarrow 0 3
+# textwindow "normal"
+@レーヴァテイン
+何度やっても無駄だって…
+まだ分からないの…？
+
+# textboxarrow 0 1
+@グラーシーザ
+ぬうううっ！
+あたしはしんねんを
+つらぬくだけだ！
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 302611 0 0
+# alpha 5100231 0 0
+# move 5301811 3 0
+# face 5301811 "normal"
+# alpha 5301811 1 0
+# mask 5301811 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgmfile "bgm424" "BgmIntegralNoahCommand" 0
+# voice 530181 "forcas_c_0019"
+# textboxarrow 0 2
+# textwindow "normal"
+@フォルカス
+この程度ですか…
+予想より歯応えがありませんでしたね
+これなら、今のうちに…
+
+# textboxarrow 0 2
+@フォルカス
+彼女を還して、ユグドラシルの
+管理権を手に入れましょう
+
+;;//フォルカスがラグナロクに近づく
+# se "SE_0719"
+# textwindow "close"
+# alpha 5301811 0 0.5
+# waitandnext 0.5
+
+# move 5301811 2 0
+# face 5301811 "normal"
+# alpha 5301811 1 0.5
+# mask 5301811 on
+# move 103611 4 0
+# face 103611 "sad"
+# alpha 103611 1 0.5
+# mask 103611 on
+# waitandnext 0.5
+
+# voice 1036 "ragnarok_0037"
+# textboxarrow 0 3
+# textwindow "normal"
+@ラグナロク
+あ…うぐっ…
+
+# voice 2025 "hercule_0009"
+# alpha 103611 0 0.5
+# move 202511 4 0
+# face 202511 "angry"
+# alpha 202511 1 0.5
+# mask 202511 on
+# textboxarrow 0 3
+@エルキュール
+ううっ…させません…！
+
+;;//エルキュールが立ちふさがる
+# se "SE_5206"
+# textboxarrow 0 3
+@エルキュール
+私が、みんなの希望に…
+なるんですから！
+
+# voice 530181 "forcas_c_0027"
+# face 5301811 "angry"
+# textboxarrow 0 1
+@フォルカス
+はぁ…仕方ありませんね
+
+# textboxarrow 0 1
+@フォルカス
+あなたの言う“希望”がどれだけ
+薄っぺらなものなのか、
+思い知って下さい
+
+;;//フォルカスがエルキュールを斬る
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# voice 2025 "hercule_battle_0008"
+# face 202511 "surprise"
+# textboxarrow 0 3
+@エルキュール
+きゃぁっ！
+
+# voice 2025 "hercule_unit_0007"
+# face 202511 "sad"
+# textboxarrow 0 3
+@エルキュール
+嫌だ…、私はまだやれる…
+こんなところで私の光を
+消させは…
+
+;;//エルキュールが倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 202511 0 0.5
+# waitandnext 0.5
+
+# alpha 5301811 0 0.5
+# move 103611 3 0
+# face 103611 "surprise"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+エルキュール…！
+うううっ…
+
+# voice 6020 "ness_0011"
+# alpha 103611 0 0.5
+# move 602011 3 0
+# face 602011 "worry"
+# alpha 602011 1 0.5
+# mask 602011 off
+# textboxarrow 0 2
+@ネス
+ああっ…
+ダメです、ラグナロク…
+そんな体で立ち上がろうとしたら…
+
+# voice 1036 "ragnarok_battle_0007"
+# alpha 602011 0 0.5
+# move 103611 3 0
+# face 103611 "sad"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+ぐぅっ…
+
+# move 5301811 2 0
+# face 5301811 "normal"
+# alpha 5301811 1 0.5
+# mask 5301811 on
+# textboxarrow 0 1
+# move 103611 4 0.5
+# mask 103611 on
+@フォルカス
+最初の一突きが致命傷だったんです
+迂闊でしたね
+
+# textboxarrow 0 1
+@フォルカス
+私のことを警戒していたのに、
+何か別のものに気を取られてしまった
+からですよ
+
+# textboxarrow 0 3
+@ラグナロク
+…………
+
+# voice 530181 "forcas_c_unit_0009"
+# face 5301811 "angry"
+# textboxarrow 0 1
+@フォルカス
+それでは、ユグドラシルの糧と
+なるがいいっ！
+
+;;//アルマスが割り込む
+# se "SE_9021"
+# alpha 103611 0 0
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0
+# mask 196 on
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@アルマス
+やあああああああ！！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+# face 5301811 "surprise"
+# textboxarrow 0 1
+@フォルカス
+！？
+まだ動けたのですか…？
+あなた…どこか不自然ですね…
+
+# textboxarrow 0 3
+@アルマス
+そうかもねっ…！
+でも…今はどうでもいいわ！
+ラグナロクを守れるなら！！
+
+# se "SE_11632"
+# textboxarrow 0 3
+@アルマス
+あああああああああああああああああ
+あああああああああああああああああ
+ああああああああアアアアアアア！！
+
+;;//アルマスが擬彩化しかける
+# se "SE_0845"
+# textwindow "close"
+# alpha 196 0 0.5
+# move 5103831 4 0
+# face 5103831 "angry"
+# alpha 5103831 1 0.5
+# mask 5103831 on
+# waitandnext 0.5
+
+# face 5301811 "angry"
+# textboxarrow 0 1
+# textwindow "normal"
+@フォルカス
+これは…いけません！
+
+;;//フォルカスがアルマスを斬る
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 2000 1 200 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+# voice 510383 "almace_iz_battle_0006"
+# textboxarrow 0 3
+@アルマス
+ぐっ…
+
+;;//アルマス、元に戻る
+# se "SE_0845"
+# textwindow "close"
+# alpha 5103831 0 0.5
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# waitandnext 0.5
+
+# textboxarrow 0 1
+# textwindow "normal"
+@フォルカス
+あなたも危険ですね！
+先に御許へと還ってもらいます！
+
+;;//ティルフィングが現れる
+# bgm "stop"
+# voice 510143 "tyrufing_iz_unit_0008"
+# alpha 5301811 0 0.5
+# alpha 196 0 0.5
+# move 5101431 3 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+@ティルフィング
+純潔なる彩りよ…咲き誇れ
+
+# se "SE_4000"
+# waitandnext 0.5
+
+# voice 530181 "forcas_c_battle_0005"
+# alpha 5101431 0 0.5
+# move 5301811 3 0
+# face 5301811 "angry"
+# alpha 5301811 1 0.5
+# mask 5301811 off
+# textboxarrow 0 2
+@フォルカス
+くっ…
+
+;;//フォルカスがティルフィングの攻撃を躱す
+# se "SE_5204"
+# textwindow "close"
+# leftout 5301811 0.5
+# waitandnext 0.5
+
+# alpha 5301811 0 0
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+ティルフィング…！？
+コマンドキラーズ一人でも大変なのに
+インテグラルキラーズまでっ…
+
+# se "SE_5205"
+# face 196 "angry"
+# textboxarrow 0 2
+@アルマス
+いいわよ…！
+両方、相手になってやるわ！
+
+# voice 510143 "tyrufing_iz_0044"
+# move 5101431 2 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# textboxarrow 0 1
+# move 196 4 0.5
+# alpha 196 1 0.5
+# mask 196 on
+@ティルフィング
+アルマス
+しばらく大人しくしていて
+いただけませんか
+
+# voice 9943 "almace_navikan_0035"
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+えっ…？
+
+# bgmfile "bgm411_412" "BgmIntegralNoahBattle001" 0
+# textboxarrow 0 1
+@ティルフィング
+今は彼女と戦わなければ
+なりませんので
+
+# se "SE_5205"
+# waitandnext 0.5
+
+# voice 530181 "forcas_c_0002"
+# alpha 5101431 0 0.5
+# alpha 196 0 0.5
+# move 5301811 3 0
+# face 5301811 "normal"
+# alpha 5301811 1 0.5
+# mask 5301811 off
+# textboxarrow 0 2
+@フォルカス
+…あなた、
+インテグラルキラーズですか？
+
+# voice 510143 "tyrufing_iz_0003"
+# alpha 5301811 0 0.5
+# move 5101431 3 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+@ティルフィング
+はい…
+アナタ達とお会いする前に…
+
+# textboxarrow 0 2
+@ティルフィング
+擬彩されし不可逆世界
+《インテグラルノア》を
+完遂したかったのですけれど
+
+# face 5101431 "angry"
+# textboxarrow 0 2
+@ティルフィング
+残念ながら、間に合いませんでした
+ですから、ここであなたを
+打ち倒します！

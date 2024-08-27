@@ -1,0 +1,598 @@
+;;-----------------------------------------
+;;SEA2章_19
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgm "stop"
+;;-----------------------------------------
+;;リットゥ（剣無し）
+# body 285
+# pos 285 2
+# scale 285 0.8 0
+# layer 285 2
+# mask 285 off
+# alpha 285 0 0
+;;フラン
+# body 284
+# pos 284 4
+# scale 284 0.8 0
+# layer 284 4
+# mask 284 off
+# alpha 284 0 0
+;;シェキナー（過去）
+# body 400711
+# pos 400711 3
+# scale 400711 0.8 0
+# layer 400711 3
+# mask 400711 off
+# alpha 400711 0 0
+;;ハイス
+# body 292
+# pos 292 4
+# scale 292 0.8 0
+# layer 292 5
+# mask 292 off
+# alpha 292 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 4
+;;-----------------------------------------
+;;背景：平原
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# se "SE_0944"
+# textflame 0 0
+# textwindow "nomal"
+@
+数日前――
+
+# face 400711 "normal"
+# alpha 400711 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@シェキナー
+もう少しでジーゲルの町ですね
+
+# textboxarrow 0 2
+@シェキナー
+随分と長い間、
+リットゥが暮らしているそうですけど
+確か、丘の上にある宝石商の…
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：廃墟
+# background "201_border"
+# sestop "SE_0944"
+# alpha 400711 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 1.5
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 0.5
+
+;;背景：平原（戻る）
+# background "plain"
+# se "SE_0944"
+# face 400711 "surprise"
+# alpha 400711 1 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 4007 "shekina_0023"
+# textwindow "nomal"
+# textboxarrow 0 2
+@シェキナー
+ええっ？
+あれは廃墟…
+何が起きたのでしょう
+
+;;シェキナーが走っていく
+# se "SE_5575"
+# move 400711 4 0.5
+# alpha 400711 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+;;暗転
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+;;背景：町
+# background "town_2"
+# sestop "SE_0944"
+# textwindow "close"
+# waitandnext 0.5
+
+# move 400711 3 0
+# se "SE_6216"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# face 400711 "normal"
+# alpha 400711 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@シェキナー
+すみません
+お尋ねしたいことが
+
+# serif 1
+# textwindow "nomal"
+@町人
+何だい？
+あんた、旅のキル姫さん？
+
+# serif 0
+# textboxarrow 0 2
+@シェキナー
+シェキナーと申します
+町外れの丘に
+宝石商のお屋敷があると――
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# sestop "SE_6216"
+# serif 1
+@町人
+ああ、クライノートさんの
+お屋敷だねっ
+そこの坂道を行けば着くよ
+
+# voice 4007 "shekina_0022"
+# serif 0
+# face 400711 "surprise"
+# textboxarrow 0 2
+@シェキナー
+えっ？
+いえ…丘の上の屋敷は
+廃墟になっていますよね？
+
+# serif 1
+@町人
+おいおい、何てこと言うんだ
+あの立派なお屋敷が見えないのかい？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# move 400711 3 0
+# face 400711 "normal"
+# textwindow "moya"
+# textboxarrow 0 0
+@シェキナー
+この方…嘘を吐いているようには
+見えません
+本当に、屋敷が見えていると？
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：廃墟
+# background "201_border"
+# sestop "SE_0944"
+# alpha 400711 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 1
+
+;;背景が屋敷に変わる
+# fadein "white" 1
+# background "sea_room_day"
+# se "bgm602_basic_on_2"
+# waitandnext 2
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 0.5
+
+;;背景：平原（戻る）
+# background "town_2"
+# se "SE_0944"
+# face 400711 "sad"
+# alpha 400711 1 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@シェキナー
+うっ…
+
+# move 400711 3 0
+# face 400711 "normal"
+# textwindow "moya"
+# textboxarrow 0 0
+@シェキナー
+今、一瞬、丘の上の廃墟が
+屋敷に見えました…
+これは、何らかの力が働いていますね
+
+@シェキナー
+油断すると囚われてしまいます
+気をつけましょう
+
+# serif 1
+# textwindow "nomal"
+@町人
+あんた、大丈夫かい？
+
+# serif 0
+# face 400711 "happy"
+# textwindow "nomal"
+# textboxarrow 0 2
+@シェキナー
+…ご心配には及びません
+ありがとうございました
+
+;;暗転
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# move 400711 3 0
+# face 400711 "normal"
+# textwindow "moya"
+# textboxarrow 0 0
+@シェキナー
+あれから何人かに聞いてみましたが
+皆さん、丘の上には屋敷があると
+答えました
+
+# voice 4007 "shekina_0028"
+@シェキナー
+どうやら何者かによって
+認識を歪められているようですね
+一体、誰が何のために？
+
+@シェキナー
+ひとまず丘の上に行ってみましょう
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# bgm "bgm005" 0
+# alpha 400711 0 0
+# waitandnext 0.2
+
+# move 400711 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 292 "sad"
+# alpha 292 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 3
+@ハイス
+ううっ…
+
+# move 400711 2 0.5
+# face 400711 "surprise"
+# alpha 400711 1 0.3
+# textboxarrow 0 1
+@シェキナー
+あら？
+お爺さん、大丈夫ですか？
+
+# textboxarrow 0 3
+@ハイス
+だ…大丈夫じゃ…
+儂に…構わんでくれ…
+
+# face 400711 "normal"
+# textboxarrow 0 1
+@シェキナー
+そうはいきません
+とても辛そうですよ
+顔色も悪いですね
+
+# textboxarrow 0 1
+@シェキナー
+ただちに病院へ
+私に掴まって下さい
+
+# face 292 "angry"
+# textboxarrow 0 3
+@ハイス
+待ってくれ…！
+儂は…行かねばならんところが…
+あるんじゃ…
+
+# textboxarrow 0 3
+@ハイス
+病院に運ばれたら…
+また家に連れ戻されて…
+
+# textboxarrow 0 1
+@シェキナー
+どちらに行こうというのです？
+この坂道を上っていっても、
+丘の上の廃墟に着くだけですよ
+
+# textboxarrow 0 3
+@ハイス
+…………！？
+あ、あんた…！
+あれが廃墟に見えるのかっ？
+
+# textboxarrow 0 1
+@シェキナー
+はい
+町の皆さんは宝石商の屋敷だと
+言い張っていますけれど
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# face 292 "sad"
+# textboxarrow 0 3
+@ハイス
+そうか…
+ああ、そうかっ
+良かった…
+
+# face 400711 "surprise"
+# textboxarrow 0 1
+@シェキナー
+どうなさいました？
+
+# face 292 "angry"
+# textboxarrow 0 3
+@ハイス
+お嬢さん…頼みがある
+儂の姉を助けておくれ…
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：廃墟
+# background "201_border"
+# bgm "bgm003" 0
+# alpha 400711 0 0
+# alpha 292 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# layer 285 2
+# face 285 "normal"
+# alpha 285 1 0.3
+# layer 284 4
+# face 284 "happy"
+# alpha 284 1 0.3
+# move 400711 5 0
+# layer 400711 3
+# mask 400711 on
+# textwindow "nomal"
+# textboxarrow 0 3
+@フラン
+リットゥ！
+見てっ
+きれいな花が咲いてる
+
+# textboxarrow 0 1
+@リットゥ
+フラン
+走るときは足下に注意しろ
+転んでは大変だ
+
+# textboxarrow 0 3
+@フラン
+大丈夫だよ
+そのときはリットゥが
+支えてくれるものっ
+
+# textboxarrow 0 1
+@リットゥ
+私に甘えるな
+規律正しい言動を心がけるんだ
+
+# textboxarrow 0 3
+@フラン
+ふふっ
+そんなこと言って
+いつも助けてくれるよね
+
+;;シェキナーがやって来る
+# se "SE_0740"
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# face 400711 "surprise"
+# alpha 400711 1 0.3
+# move 285 1 0.5
+# move 284 3 0.5
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# voice 4007 "shekina_0023"
+# textboxarrow 0 3
+@シェキナー
+これは…
+リットゥ！
+貴方、何をしているのですかっ？
+
+# textboxarrow 0 1
+@リットゥ
+シェキナーか…
+
+# face 284 "normal"
+# textboxarrow 0 2
+@フラン
+誰…？
+怖い人…？
+
+# face 285 "happy"
+# textboxarrow 0 1
+@リットゥ
+心配ない
+フランは部屋に戻っていろ
+
+# textboxarrow 0 2
+@フラン
+う、うん…
+
+;;フランが立ち去る
+# se "SE_0740"
+# scale 284 0.7 0.5
+# alpha 284 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# move 400711 4 0.5
+# face 400711 "normal"
+# move 285 2 0.5
+# textboxarrow 0 3
+# textwindow "normal"
+@シェキナー
+あの子がフラン…
+
+# voice 1005 "ritto_0002"
+# face 285 "normal"
+# textboxarrow 0 1
+@リットゥ
+シェキナー
+久し振りだな
+何か用か？
+
+# face 400711 "angry"
+# textboxarrow 0 3
+@シェキナー
+何か用か、ですって？
+リットゥ
+貴方、何てことをっ
+
+# voice 1005 "ritto_0013"
+# textboxarrow 0 1
+@リットゥ
+…用がないなら帰ってくれ
+
+# textboxarrow 0 3
+@シェキナー
+…友人として旧交を温めようと
+思っていたのですけれど、
+考えが変わりました
+
+# textboxarrow 0 3
+@シェキナー
+今すぐ、その愚かな行為をやめなさい
+あんな幼い魂を
+現世に縛り続けるだなんてっ
+
+# textboxarrow 0 1
+@リットゥ
+理由があってのことだ
+見逃して欲しい
+
+# voice 4007 "shekina_0012"
+# textboxarrow 0 3
+@シェキナー
+いいえ
+見逃せません
+この術式の要は…
+
+;;シェキナーの前進を
+# move 400711 3 0.3
+# textboxarrow 0 0
+# waitandnext 0.3
+
+;;リットゥが阻む
+# move 285 1 0.3
+# waitandnext 0.8
+
+# voice 1005 "ritto_0010"
+# face 285 "angry"
+# textboxarrow 0 1
+@リットゥ
+それ以上近づくことは許さん
+
+# move 400711 4 0.5
+# move 285 2 0.5
+# textboxarrow 0 3
+@シェキナー
+リットゥ
+本気で言っているのですか？
+
+# textboxarrow 0 1
+@リットゥ
+そうだ
+私はいつだって本気だ
+ここは我が聖域
+
+# textboxarrow 0 1
+@リットゥ
+何人たりとも、
+この地を侵させはしない！
+
+# voice 4007 "shekina_0013"
+# face 400711 "normal"
+# textboxarrow 0 3
+@シェキナー
+…そうですか
+
+# textboxarrow 0 3
+@シェキナー
+頭の固い貴方のことです
+ただの説得など
+聞く耳を持たないのでしょうね
+
+# textboxarrow 0 3
+@シェキナー
+今日はこれで失礼します
+でも、覚えておいて下さいね
+
+# textboxarrow 0 3
+@シェキナー
+近々、貴方の欺瞞を
+必ず打ち破ってみせます
+
+# textboxarrow 0 1
+@リットゥ
+やれるものなら、やってみろ
+長年の友人といえど、
+容赦はしない
+
+# fadeout "black" 1
+# waitandnext 1

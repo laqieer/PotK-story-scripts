@@ -1,0 +1,205 @@
+;;-----------------------------------------
+;;■□■１－１改修案■□■
+;;整形版
+;;【１－２－１（バトル後）】
+;;スクリプト最後の背景：foot_mountain_village
+;;-----------------------------------------
+# script "lisp"
+# background "foot_mountain_village"
+# bgm "bgm023" 0
+;;----------------------------------------------------------
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 2
+# alpha 24 0 0
+# mask 24 off
+# face 24 "normal"
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 2
+# alpha 0 0 0
+# mask 0 off
+# face 0 "normal"
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 2
+# alpha 810004 0 0
+# mask 810004 off
+# face 810004 "normal"
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景:foot_mountain_village
+# voice 1014 "tyrufing_0036"
+# move 24 2 0
+# face 24 "angry"
+# alpha 24 1 0
+# mask 24 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 0 4 0
+# face 0 "normal"
+# alpha 0 1 0
+# mask 0 on
+@ティルフィング
+“異族”の最後の一体を追撃します！
+デュリン、
+マスターをお願いします！
+
+# textwindow "close"
+# se "SE_5000"
+# leftout 24 0.5
+# waitandnext 0.5
+
+# move 0 3 0.5
+# mask 0 off
+# textwindow "normal"
+# textboxarrow 0 2
+@デュリン
+あの異形の者たちは“異族”…
+人々を喰らう、人間の上位捕食者
+であり…この大陸最大の脅威よ
+
+# textboxarrow 0 2
+@デュリン
+…近寄らないほうがいいわ、
+いきなり寄生されることも
+あるんだから
+
+# voice 1014 "tyrufing_0038"
+# se "SE_4601"
+# shake 0 0.5
+# serif 1
+@ティルフィング
+…クッ…この…！
+
+# serif 0
+# textboxarrow 0 2
+@デュリン
+そんな大陸の脅威を斬り刻めるのは、
+キラープリンセスだけ…なのに…
+どうも人々の受けが悪いのよね
+
+# voice 1014 "tyrufing_0029"
+# se "SE_4815"
+# shake 0 0.5
+# serif 1
+@ティルフィング
+…これで終わりよ…っ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+@デュリン
+彼女達…対象を殺す瞬間、
+快楽に満ちたような
+表情を浮かべるでしょ？
+
+# textboxarrow 0 2
+@デュリン
+それが、人々を
+気味悪がらせてるのよ
+
+# textboxarrow 0 2
+@デュリン
+その証拠に…誰が名付けたのかは
+知らないけど、キラープリンセスには
+通り名があるの…
+
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 0 0 0
+# move 24 2 0
+# face 24 "angry"
+# alpha 24 1 0
+# mask 24 on
+# move 810004 4 0
+# face 810004 "normal"
+# alpha 810004 1 0
+# mask 810004 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 1014 "tyrufing_0037"
+# se "SE_4830"
+# textwindow "normal"
+# textboxarrow 0 1
+@ティルフィング
+…消えなさい！！
+
+# alpha 810004 0 2.5
+# fadein "red " 0.5
+# shake 0 0.5
+# se "SE_4815"
+# waitandnext 2.5
+
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 24 0 0
+# move 0 3 0
+# face 0 "normal"
+# alpha 0 1 0.5
+# mask 0 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@デュリン
+“恍惚の斬殺者”
+それが、
+彼女たちに与えられた通り名…
+
+# textboxarrow 0 2
+@デュリン
+異族をこともなく肉片に変える
+あの子たちは…
+
+# textboxarrow 0 2
+@デュリン
+世間から不気味に見え…
+忌み嫌われる存在なの
+
+;;《選択肢》
+;;…斬殺者だなんてあんまりじゃないか！
+;;彼女は…優しい人間なのに…
+
+# select "…斬殺者だなんてあんまりじゃないか！" "select_label_01" "彼女は…優しい人間なのに…" "select_label_01"
+世間から不気味に見え…
+忌み嫌われる存在なの
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# voice 9999 "durin_0007"
+# face 0 "usual"
+# textboxarrow 0 2
+@デュリン
+ふふ、熱くなっちゃって…
+少しはマスターっぽく
+なってきたじゃない？
+
+# label "select_label_end"
+# textboxarrow 0 2
+@デュリン
+さぁ…近くの村で、
+ひと息入れましょう

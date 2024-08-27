@@ -1,0 +1,914 @@
+;;【EP3】戦闘後/次元の狭間
+# script "lisp"
+# background "dimensions_sea"
+# bgmfile "bgm259_260" "Bgm3Tcollabo003" 0
+# body 100261
+# pos 100261 3
+# scale 100261 0.8 0
+# body 302711
+# pos 302711 3
+# scale 302711 0.8 0
+# body 602111
+# pos 602111 1
+# scale 602111 0.8 0
+# body 125
+# pos 125 5
+# scale 125 0.8 0
+# body 123
+# pos 123 3
+# scale 123 0.8 0
+# mask 123 off
+# alpha 125 0 0
+# alpha 602111 0 0
+# alpha 302711 0 0
+# alpha 100261 0 0
+# textflame 1 1
+# textboxarrow 0 2
+# face 123 "sad"
+# face 100261 "angry"
+# face 302711 "usual"
+# chara 123
+# face 123 "angry"
+# layer 123 1
+@カヤコ
+ウズシオマルが…敗れただと…？
+
+# alpha 302711 1 0.5
+# alpha 123 0 0.5
+# face 302711 "happy"
+# voice 3027 "amaterasu_0003"
+# chara 302711
+@アマテラス
+よかった…
+取られた『太陽の鍵』も
+ちゃんと取り戻せた！
+
+# alpha 302711 0 0.5
+# alpha 123 1 0.5
+# chara 123
+@カヤコ
+ばかな…！
+
+@カヤコ
+わしの計画が…
+全ての世界を闇に包む
+完璧な策がこんなところでぇぇっ！！
+
+# alpha 123 0 0.5
+# alpha 100261 1 0.5
+# alpha 602111 1 0.5
+# alpha 125 1 0.5
+# face 125 "angry"
+# textboxarrow 0 3
+# chara 125
+@ユリ
+カヤコ…あなたの負けですわ
+死界から蘇ってまで果たそうとした
+その執念はたいしたものですが…
+
+# textboxarrow 0 2
+# chara 100261
+# voice 1002 "revatein_0006"
+@レーヴァテイン
+でも、正義は必ず勝つってことだし…
+
+# face 602111 "angry"
+# voice 6021 "lizbeth_0003"
+# textboxarrow 0 1
+# chara 602111
+@リズベット
+アマテラスさんが
+１人ぼっちじゃなくなって
+勝ち目がなくなったってことよね！！
+
+# alpha 123 1 0.5
+# alpha 100261 0 0.5
+# alpha 602111 0 0.5
+# alpha 125 0 0.5
+# textboxarrow 0 2
+# chara 123
+@カヤコ
+…ええい、なめるな！
+まだわしが負けたわけではない！
+わしにはまだ、負のエネルギーが…
+
+# textflame 0 0
+@
+さらに荒ぶるカヤコを止めようと
+思わず『鍵』を握りしめた
+
+;;演出：画面の中心から光が発せられ
+;;ホワイトアウトする
+;;演出：画面のあちこちにキラキラエフェクト
+# se "SE_4782"
+# envbody 1234 8 0
+# effectpattern 1234 1 0
+# effectstart 1234
+# fadeout "white" 1
+# waitandnext 1
+
+# fadein "white" 0.5
+# alpha 123 0.85 0.5
+# mask 123 on
+# textflame 0 0
+@
+未来よりもたらされた
+『太陽の鍵』から
+
+@
+眩いばかりの光が発せられ
+カヤコを覆いつくした
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 123
+@カヤコ
+…うおおおおおっ！？
+なんという光…
+わしの体が消えるっ！！
+
+# move 125 5 0
+# move 302711 1 0
+# alpha 125 1 0.5
+# alpha 302711 1 0.5
+# face 302711 "angry"
+# voice 3027 "amaterasu_0003"
+# textboxarrow 0 1
+# chara 302711
+@アマテラス
+…死界から蘇った、
+負のエネルギーの塊のような人なら
+そうなっちゃうのも当然です
+
+# alpha 123 0.7 1
+# textboxarrow 0 2
+# chara 123
+@カヤコ
+馬鹿な！わしが…薄れてゆく！？
+わしの思いが…すべて！
+光の中に消えて…
+
+# textboxarrow 0 3
+# chara 125
+# face 125 "irregular1"
+@ユリ
+闇の中であれ、光の中であれ、
+これ以上、苦しまなくても
+よいことを祈ってますわ…
+
+# textboxarrow 0 2
+# chara 123
+@カヤコ
+お、お前ら…ぁ……っ……
+ああああああ……っ…………っ！！
+
+;;演出：キラキラいっぱいからのフラッシュ
+;;演出：↑と同時にカヤコ消える
+# se "SE_9048"
+# fadeout "white" 3
+# alpha 123 0 3
+# waitandnext 3
+
+# se "SE_8003"
+# waitandnext 2
+# bgm "stop" 0
+
+;;演出：すこし間をとる
+# fadein "white" 0.5
+# face 125 "usual"
+# face 602111 "normal"
+# effectskip 1234
+# alpha 602111 1 0
+# move 302711 3 0
+# face 602111 "sad"
+# voice 6021 "lizbeth_0016"
+# textboxarrow 0 1
+# chara 602111
+# layer 302711 1
+@リズベット
+うううっ…
+アマデラズざ～～～～ん！
+生ぎでるっ！　良がっだぁぁぁ！！
+
+# bgmfile "bgm198" "Bgm3Tcollabo002" 0
+# face 302711 "shy"
+# voice 3027 "amaterasu_0030"
+# textboxarrow 0 2
+# chara 302711
+@アマテラス
+…えっ、ええと…
+その、ありがとう…
+
+# face 602111 "normal"
+# face 302711 "happy"
+# voice 3027 "amaterasu_0003"
+@アマテラス
+きっと、あの海賊の人が、
+私が太陽を守りきれるように、
+あなた達を連れてきてくれたんだね…
+
+# textflame 0 0
+@
+そう、この『黄金のコンパス』が
+僕らをここまで導いてくれたんだ
+
+@
+そういってコンパスを
+アマテラスに見えるように掲げる
+
+@
+アマテラスも
+自分のコンパスを取り出し
+大事そうに握り締めた
+
+# textflame 1 1
+# face 302711 "shy"
+# textboxarrow 0 2
+# chara 302711
+@アマテラス
+ありがとう…
+これからも、お仕事頑張って
+いかなきゃいけないってことだね…
+
+# textflame 0 0
+@
+アマテラスの言葉に首を振る
+
+@
+…あの海賊が
+そのコンパスに込めた気持ちは
+それだけじゃないはずだ…なぜなら…
+
+@
+そのコンパスは
+『宵の間』に
+辿り着くためのもの…
+
+@
+ずっと『宵の間』にいるなら
+必要ないものだ…と
+
+# textflame 1 1
+# face 302711 "surprise"
+# voice 3027 "amaterasu_0007"
+# textboxarrow 0 2
+# chara 302711
+@アマテラス
+…っ！！
+
+@アマテラス
+私が…
+『宵の間』を出たときのために…
+くれた…そういうこと…？
+
+# face 125 "sad"
+# textboxarrow 0 3
+# chara 125
+@ユリ
+…いつまでも
+アマテラスさん１人なら…
+
+# face 125 "smile"
+@ユリ
+ここを離れることが
+できないかもしれません
+でも、信頼できる仲間がいるなら…？
+
+# textboxarrow 0 2
+# chara 302711
+# voice 3027 "amaterasu_0017"
+@アマテラス
+私も…冒険ができる！？
+
+# textboxarrow 0 1
+# chara 602111
+# face 602111 "happy"
+# voice 6021 "lizbeth_0004"
+@リズベット
+いつかそうなった時のために、
+コンパスを渡したってことなんだ…
+海賊さん、ロマンチストだね
+
+# alpha 100261 1 0.5
+# alpha 302711 0 0.5
+# layer 100261 3
+# layer 125 2
+# layer 602111 1
+# face 100261 "worry1"
+# textboxarrow 0 2
+# chara 100261
+@レーヴァテイン
+…ま、そのあたりについては
+後でゆっくり話そうよ
+
+;;SE：どさっと座り込む音
+# se "SE_3001"
+# voice 1002 "revatein_0013"
+@レーヴァテイン
+とりあえず今は、少し休ませて…
+
+;;SE：どさっと座り込む音
+# se "SE_3001"
+# textboxarrow 0 3
+# chara 125
+# face 125 "worry"
+# voice 4015 "yuri_0027"
+@ユリ
+はい…
+安心したら、一気に疲れが…
+
+;;SE：どさっと座り込む音
+# se "SE_3001"
+# textboxarrow 0 1
+# chara 602111
+# face 602111 "sad"
+# voice 6021 "lizbeth_0013"
+@リズベット
+た…確かにちょっとくたびれた…ね…
+
+# textflame 0 0
+@
+疲れがでて座り込む彼女達の代わりに
+アマテラスに頭を下げる
+
+@
+『宵の間』は
+神聖な場所と理解しているが
+少し休ませてあげて欲しいと
+
+# alpha 100261 0 0.5
+# alpha 302711 1 0.5
+# layer 302711 3
+# layer 125 2
+# layer 602111 1
+# textflame 1 1
+# textboxarrow 0 2
+# chara 302711
+# face 302711 "usual"
+# voice 3027 "amaterasu_0009"
+@アマテラス
+うーん、しょうがないですね…
+
+# face 302711 "shy"
+# voice 3027 "amaterasu_0004"
+@アマテラス
+…その代わり、
+私にあなた達のこと、教えて？
+
+@アマテラス
+…まだ、あなた達が
+心から信頼できる仲間かどうか
+ちょっとわからないけど…
+
+@アマテラス
+…でも、そうなるためには、
+お互い、もっとわかりあわなきゃね
+
+@アマテラス
+…ユリさん、でいいんだよね？
+言ったよね、信じるところから
+始めてみないとって…
+
+# textboxarrow 0 3
+# chara 125
+# face 125 "smile"
+# voice 4015 "yuri_0033"
+@ユリ
+…ええ！　言いました！！
+
+# voice 4015 "yuri_0004"
+@ユリ
+じゃあ、とりあえずは…
+自己紹介からかしら？
+
+# textboxarrow 0 2
+# chara 302711
+# face 302711 "happy"
+@アマテラス
+だったら、私から！
+
+# voice 3027 "amaterasu_0036"
+@アマテラス
+…改めて、自己紹介しますね
+私がアマテラスです
+…みんな、来てくれてありがとう！
+
+# textflame 0 0
+@
+少しはにかみながら
+アマテラスは微笑む
+
+@
+こうして太陽の女神は海賊となり
+冒険のために外の世界へと
+飛び出すことになるのだった…
+
+;;ホワイトフェード
+;;//画面フェードアウト
+# bgm "stop"
+# se "SE_5235"
+# imageset 1 "bg_white"
+# imagealpha 1 0 0
+# imagescale 1 10 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fillrect "white" 2.3 0 1
+# waitandnext 2.7
+
+# body 122
+# pos 122 3
+# scale 122 0.8 0
+# alpha 122 0 0
+# mask 122 off
+# alpha 302711 0 0
+# alpha 125 0 0
+# alpha 602111 0 0
+# imagepos 1 0 0
+# imagealpha 1 1 0
+# fillrect "white" 1 1 0
+# waitandnext 0.1
+
+# alpha 122 1 0
+# background "dimensions"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# imagealpha 1 0 1
+# waitandnext 1.1
+
+;;背景：次元の狭間
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 122
+@狛犬
+…本当に、成し遂げられるなんて…ね
+
+@狛犬
+こちらの計算では
+失敗する可能性の方が
+高いはずだったんだけどな…
+
+@狛犬
+まぁ、仕方ない…
+彼らがそれだけ、
+うまく立ち回ったってことなんだ
+
+# face 122 "smile"
+@狛犬
+だったら、彼らのことを
+祝福してあげないとね
+本当にたいしたものだよ…
+
+;;ブラックフェード
+# se "SE_5670"
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagescale 0 100 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fillrect "black" 2.3 0 1
+# waitandnext 2.7
+
+# alpha 122 0 0
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# fillrect "black" 1 1 0
+# waitandnext 0.1
+
+# move 302711 3 0
+# move 100261 5 0
+# move 602111 1 0
+# face 602111 "happy"
+# face 100261 "shy"
+# background "beach"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# imagealpha 0 0 1
+# waitandnext 1.1
+
+;;テロップ
+# bgm "bgm003" 0
+# se "SE_5580"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+数日後――
+
+;;背景：砂浜
+;;ＳＥ：ざざ～ん！(穏やかな波の音)
+# alpha 302711 1 0.5
+# alpha 100261 1 0.5
+# alpha 602111 1 0.5
+# layer 302711 3
+# layer 100261 2
+# layer 602111 1
+# textflame 1 1
+# textboxarrow 0 2
+# chara 302711
+# voice 3027 "amaterasu_0006"
+@アマテラス
+かんぱ～い！！
+
+# textflame 0 0
+@
+酒の入ったグラスを合わせる５人
+
+# textflame 1 1
+# voice 3027 "amaterasu_0004"
+@アマテラス
+んぐ、んぐ、んぐ…っ
+ぷっは～～～～！　最高！！
+夏、最高～～～っ！！
+
+# textboxarrow 0 3
+# chara 100261
+# face 100261 "normal"
+@レーヴァテイン
+…こういうところを見るとさ
+
+# voice 1002 "revatein_0004"
+@レーヴァテイン
+世界は違っても
+アマテラスの本性は変わらない
+って、よくわかるよね
+
+# textboxarrow 0 1
+# chara 602111
+# face 602111 "happy"
+# voice 6021 "lizbeth_0040"
+@リズベット
+アマテラスさん…
+こんなにお酒好きだったんですね
+
+# move 125 5 0
+# alpha 125 1 0.5
+# alpha 100261 0 0.5
+# layer 302711 3
+# layer 125 2
+# layer 602111 1
+# textboxarrow 0 3
+# chara 125
+# face 125 "happy"
+# voice 4015 "yuri_0005"
+@ユリ
+えぇ、仕事熱心で孤独だったなんて
+とても信じられませんわ
+
+# textboxarrow 0 2
+# chara 302711
+# voice 3027 "amaterasu_0003"
+@アマテラス
+はぁ…念願が叶ったわ！
+こうやって、仲間と飲みたかったの！
+照り付ける太陽の下で！！
+
+# textflame 0 0
+@
+彼女の言う通り、
+空はすっかり晴れ渡っている
+
+@
+それぞれの世界で空を覆っていた
+黒い雲は消え去り、
+まばゆいまでの光が大地に降り注ぐ
+
+@
+長かった『日蝕』は終わったのだ
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 302711
+# face 302711 "surprise"
+# voice 3027 "amaterasu_0002"
+@アマテラス
+…そういえば、
+みんなで海賊船に乗って
+航海の旅をしてたんだよね？
+
+# face 302711 "happy"
+@アマテラス
+いいな～
+海賊と言ったらやっぱお酒？
+
+# textboxarrow 0 1
+# chara 602111
+# voice 6021 "lizbeth_0032"
+@リズベット
+もちろんです～！
+
+# alpha 125 0 0.5
+# alpha 100261 1 0.5
+# layer 302711 3
+# layer 100261 2
+# layer 602111 1
+# textboxarrow 0 3
+# chara 100261
+# face 100261 "worry1"
+# voice 1002 "revatein_0009"
+@レーヴァテイン
+ちょっと、あなたは未成年でしょ…
+
+# emotionbody 5841 9 602111 -30 165
+# effectpattern 5841 1 0
+# effectstart 5841
+# textboxarrow 0 1
+# chara 602111
+# face 602111 "normal"
+# voice 6021 "lizbeth_0008"
+@リズベット
+…んぐ！
+
+# alpha 125 1 0.5
+# alpha 100261 0 0.5
+# layer 302711 3
+# layer 125 2
+# layer 602111 1
+# textboxarrow 0 3
+# chara 125
+# face 125 "smile"
+# voice 4015 "yuri_0001"
+@ユリ
+海賊と言えば…
+もう被らないんですか？
+その帽子は？
+
+# textflame 0 0
+@
+腰からつるした海賊帽に
+目をやる%(userName)s
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 602111
+# voice 6021 "lizbeth_0003"
+@リズベット
+その帽子には
+助けられっぱなしだったもんね
+
+# move 100261 3 0
+# alpha 100261 1 0.5
+# alpha 302711 0 0.5
+# layer 100261 3
+# layer 125 2
+# layer 602111 1
+# textboxarrow 0 2
+# chara 100261
+# face 100261 "normal"
+# voice 1002 "revatein_0003"
+@レーヴァテイン
+心の闇の敵と戦ってた時
+私達を救ってくれたのも
+その帽子だった
+
+# textboxarrow 0 3
+# chara 125
+# face 125 "usual"
+@ユリ
+その帽子があったからこそ
+３つの世界を航海し…
+
+# voice 4015 "yuri_0003"
+@ユリ
+アマテラスさんを
+救うことも出来ました
+
+# alpha 100261 0 0.5
+# alpha 302711 1 0.5
+# layer 302711 3
+# layer 125 2
+# layer 602111 1
+# textboxarrow 0 2
+# chara 302711
+# face 302711 "usual"
+@アマテラス
+その帽子を
+あげたのは私じゃないけど…
+
+# face 302711 "shy"
+# voice 3027 "amaterasu_0003"
+@アマテラス
+きっと言っておかなきゃいけないと
+思うから…言うね
+
+# textflame 0 0
+@
+アマテラスが、
+%(userName)sの
+前に立つ
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 302711
+@アマテラス
+こうしてここにいられるのも…
+あなたのおかげよ
+%(userName)s
+
+@アマテラス
+あなたがいなきゃ…
+うぅん…
+
+@アマテラス
+リズベットちゃん
+レーヴァテインさん
+ユリさん
+
+# face 302711 "usual"
+# voice 3027 "amaterasu_0003"
+@アマテラス
+みんながいなきゃ、
+私は闇に飲み込まれていた…
+
+@アマテラス
+何度言っても
+言い足りないくらい…
+本当に……
+
+# face 302711 "happy"
+# voice 3027 "amaterasu_0030"
+@アマテラス
+ありがとう
+
+# textboxarrow 0 0
+@リズベット・ユリ
+…アマテラスさん
+
+# move 100261 5 0
+# alpha 125 0 0.5
+# alpha 100261 1 0.5
+# layer 100261 3
+# layer 302711 2
+# layer 602111 1
+# textboxarrow 0 3
+# chara 100261
+@レーヴァテイン
+…………
+
+# bgm "stop"
+# textboxarrow 0 2
+# chara 302711
+@アマテラス
+ねぇ、船長！！
+
+# textflame 0 0
+@
+唐突な船長呼びに
+え？と聞き返してしまった
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 302711
+# voice 3027 "amaterasu_0004"
+@アマテラス
+被って、その帽子！
+
+# face 302711 "shy"
+@アマテラス
+そして、私も…
+
+# bgmfile "bgm261" "Bgm3Tcollabo003" 0
+# face 302711 "happy"
+@アマテラス
+ううん…
+私達を大冒険の旅に連れてって！！
+
+# alpha 125 1 0.5
+# alpha 100261 0 0.5
+# layer 302711 3
+# layer 125 2
+# layer 602111 1
+# textboxarrow 0 3
+# chara 125
+# face 125 "happy"
+# voice 4015 "yuri_0036"
+@ユリ
+ふふ…お願いしますわ、船長
+
+# textboxarrow 0 1
+# chara 602111
+# face 602111 "happy"
+# voice 6021 "lizbeth_0029"
+@リズベット
+行こうよ、キャプテンさん！！
+
+# alpha 125 0 0.5
+# alpha 100261 1 0.5
+# layer 100261 3
+# layer 302711 2
+# layer 602111 1
+# textboxarrow 0 3
+# chara 100261
+# face 100261 "shy"
+# voice 1002 "revatein_0020"
+@レーヴァテイン
+せーんちょ、早く
+
+# textflame 0 0
+@
+期待の目でこちらを見てくる
+ユリ、レーヴァテイン、リズベット
+そしてアマテラス
+
+@
+この帽子が…
+すべての始まりだった
+
+@
+静かに見つめていた帽子を
+ゆっくりと被る
+%(userName)s
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 100261
+# voice 1002 "revatein_0005"
+@レーヴァテイン
+ふっ、やっぱ似合うじゃん
+
+# textboxarrow 0 1
+# chara 602111
+# voice 6021 "lizbeth_0004"
+@リズベット
+じゃあ、キャプテンさん！
+号令を！！
+
+# textboxarrow 0 2
+# chara 302711
+# face 302711 "shy"
+# voice 3027 "amaterasu_0036"
+@アマテラス
+私達がドキドキするようなやつ
+お願いします、船長！！
+
+# textflame 0 0
+@
+今度こそ、本物の…
+海賊船の船長のように
+咳払いをして声を張る
+
+@
+あの太陽に向かって
+次なる冒険の旅に…
+出航だーーーーーっ！！
+
+# serif 1
+# textwindow "toge"
+# textboxarrow 1 0
+@全員
+おお～～～～う！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 302711
+# face 302711 "happy"
+# voice 3027 "amaterasu_0004"
+@アマテラス
+今度こそ…
+みんなで真夏の冒険を
+楽しみましょうね
+
+# textflame 0 0
+@レーヴァテイン
+彼女の笑顔は
+まるで太陽のように明るく
+そして眩しかった
+
+# imageset 2 "e170704_end"
+# imagealpha 2 0 0
+# imagelayer 2 1
+@レーヴァテイン
+こうして
+私達のひと夏の冒険は
+幕を下した…
+
+;;演出　一枚絵表示
+# se "SE_4780"
+# fadein "white" 2
+# imagealpha 2 1 0
+# imagepos 2 0 30
+# serif 0
+# textwindow "close"
+
+# fadeout "black" 4
+# waitandnext 5
+
+# bgm "stop"
+# movieplay "gg2_3TitleCollabo_ending_movie_170720" "unskip"
+# waitandnext 0.3
+
+;;END
+# waitandnext 0.1

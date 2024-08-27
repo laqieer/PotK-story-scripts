@@ -1,0 +1,470 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー13章
+;;第1話　タイトル：内なる闇へ
+;;1_4_0
+;;スクリプト最後の背景：研究所
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス
+# body 3103811
+# pos 3103811 3
+# scale 3103811 0.8 0
+# layer 3103811 2
+# alpha 3103811 0 0
+# mask 3103811 off
+;;アルマス（ジョブチェンジ後）
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# layer 172 2
+# alpha 172 0 0
+# mask 172 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 2
+# alpha 139 0 0
+# mask 139 off
+;;モラルタ
+# body 3104011
+# pos 3104011 3
+# scale 3104011 0.8 0
+# layer 3104011 2
+# alpha 3104011 0 0
+# mask 3104011 off
+;;ベガルタ
+# body 3104111
+# pos 3104111 3
+# scale 3104111 0.8 0
+# layer 3104111 2
+# alpha 3104111 0 0
+# mask 3104111 off
+;;リル=ティルフィング
+# body 3101411
+# pos 3101411 3
+# scale 3101411 0.8 0
+# layer 3101411 2
+# alpha 3101411 0 0
+# mask 3101411 off
+;;レーヴァテイン
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# layer 3100211 2
+# alpha 3100211 0 0
+# mask 3100211 off
+;;悪魔
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# layer 910013 2
+# alpha 910013 0 0
+# mask 910013 off
+;;幻獣
+# body 900016
+# pos 900016 3
+# scale 900016 0.8 0
+# layer 900016 2
+# alpha 900016 0 0
+# mask 900016 off
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;//背景：研究所
+;;//回想シーン
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "red_corridor"
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 0
+# serif 1
+@所長
+ふむ…ビフレストから警備用の
+斬ル姫が送られてくるとはね
+
+# serif 1
+@所長
+どうやら、我々の実験の有用性を
+理解して下さったようだ
+
+# serif 1
+@所長
+歓迎するよ…ええと、アルマス
+だったか？
+
+# serif 1
+@所長
+使い捨てできる量産型とは思えない
+見事な造形だな
+私もいつかビフレストで…ククッ
+
+;;//背景：荒廃している街中
+;;//モラ・ベガクエストの出だし
+# serif 1
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "ground_surface_break"
+# move 910013 3 0
+# alpha 910013 1 0
+# mask 910013 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@魔獣
+グアアアアアアア！
+
+# alpha 910013 0 0.5
+# move 900016 3 0
+# alpha 900016 1 0.5
+# mask 900016 off
+# textboxarrow 0 2
+@幻獣
+グルルルルルルルル！
+
+# serif 0
+# textwindow "close"
+# serif 1
+# alpha 900016 0 0.5
+@男
+逃げろぉっ！
+もう…この町はダメだぁっ…！
+
+# serif 1
+@女
+イヤアアア…！
+誰か助けてぇっ…！
+
+;;//魔獣達に追われて人々が逃げ惑う
+# serif 1
+@研究員
+ったく…
+地上で被検体の採取をしていると
+こういう危険がつきまとうからな…
+
+# serif 1
+@研究員
+おい、アルマス
+ちゃんと収容施設の周りを守って
+いろよ
+
+;;//暗転挟む
+# serif 1
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 3104111 2 0
+# alpha 3104111 1 0
+# mask 3104111 on
+# move 3104011 4 0
+# face 3104011 "sad"
+# alpha 3104011 1 0
+# mask 3104011 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 1040 "morallta_0016"
+# textboxarrow 0 3
+# textwindow "normal"
+@モラルタ
+私達、死ぬんだ…ここでみんな…
+殺されちゃうんだぁっ！！
+
+# face 3104111 "usual"
+# textboxarrow 0 1
+@ベガルタ
+お姉ちゃん！？
+しっかりして！
+しっかりしてよぉっ…！
+
+# alpha 3104111 0 0.5
+# alpha 3104011 0 0.5
+# move 3103811 2 0
+# face 3103811 "normal"
+# alpha 3103811 1 0.5
+# mask 3103811 on
+# move 910013 4 0
+# alpha 910013 1 0.5
+# mask 910013 on
+# textboxarrow 0 3
+@魔獣
+グオオオオオオオオ！
+
+# voice 1038 "almace_battle_0002"
+# face 3103811 "angry"
+# textboxarrow 0 1
+@アルマス
+せいっ！
+
+;;//斬ル姫（アルマス）が魔獣を斬り伏せる
+# se "SE_4830"
+# sedelay "SE_3001" 0.8
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 200 0 0
+# effectstart 1000
+# waitandnext 0.8
+
+# textwindow "close"
+# alpha 910013 0 0.5
+# waitandnext 1
+
+# alpha 3103811 0 0.5
+# waitandnext 0.5
+
+# voice 1041 "beagallta_0022"
+# move 3104111 3 0
+# face 3104111 "surprise"
+# alpha 3104111 1 0.5
+# mask 3104111 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ベガルタ
+えっ…？
+お姉さん…誰…？
+
+;;//暗転挟む
+;;
+;;//背景：研究所
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "red_corridor"
+# alpha 3104111 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# serif 1
+@所長
+あの双子、処分するしかないな…
+我々に刃向かうなど、
+図に乗りおって！
+
+# serif 1
+@所長
+…ん？
+どこに行く、アルマス？
+おいっ！？
+
+;;//暗転挟む
+# serif 1
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "006_jail"
+# move 3104011 3 0
+# face 3104011 "angry"
+# alpha 3104011 1 0
+# mask 3104011 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//ドアが開く音
+# se "SE_0690"
+# waitandnext 0.5
+
+# voice 1040 "morallta_0022"
+# face 3104011 "surprise"
+# textboxarrow 0 2
+# textwindow "normal"
+@モラルタ
+…えっ？
+ドアが…開いた！ベガ！？
+ベガなの！？ベガなんでしょ！？
+
+# textboxarrow 0 2
+@モラルタ
+ベガ！
+…あの後ろ姿…違う…誰？
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "red_corridor"
+# alpha 3104011 0 0
+# move 3103811 3 0
+# face 3103811 "sad"
+# alpha 3103811 1 0
+# mask 3103811 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+終わったわ…
+あの双子は地上に出ていった
+あなたの思惑通りにね
+
+# face 3103811 "normal"
+# textboxarrow 0 2
+@アルマス
+それじゃ、ビフレストに帰還する
+…ねえ
+
+# textboxarrow 0 2
+@アルマス
+これで本当に…裏切り者の“私”を
+地底に呼び寄せることができるん
+でしょうね？
+
+;;//回想終了
+;;//背景：研究所
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "red_corridor"
+# imagealpha 0 0 0
+# alpha 3103811 0 0
+# move 172 2 0
+# face 172 "normal"
+# alpha 172 1 0
+# mask 172 on
+# move 139 4 0
+# face 139 "normal"
+# alpha 139 1 0
+# mask 139 on
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# textboxarrow 0 1
+# textwindow "normal"
+@アルマス
+…ということよ
+
+# voice 9967 "titania_0042"
+# face 139 "worry"
+# textboxarrow 0 3
+@ティターニア
+以前、ビフレストで倒した
+もう一人のアルマス…
+
+# textboxarrow 0 3
+@ティターニア
+彼女が、あの双子をここから
+解放したと言うのですね
+それを「思い出した」と…
+
+# face 172 "sad"
+# textboxarrow 0 1
+@アルマス
+何だか不思議な感覚なんだけど…
+もう一人のアルマスの記憶が私の中に
+あったの
+
+# textboxarrow 0 1
+@アルマス
+あいつを倒したとき、何かが体内に
+流れ込んできたような気はしたけど…
+あのときは私…
+
+# textboxarrow 0 3
+@ティターニア
+怒りに囚われて意識を失ってしまい
+ましたからね…
+
+# voice 1038 "almace_0028"
+# textboxarrow 0 1
+@アルマス
+一体、どうなってるのかしら？
+
+;;//選択肢
+;;
+;;Ａ“淘汰”に似ているね
+;;Ｂ記憶が統合されたんだ
+;;Ｃ大丈夫だよ
+# select "“淘汰”に似ているね" "select_label_01" "記憶が統合されたんだ" "select_label_02" "大丈夫だよ" "select_label_03"
+一体、どうなってるのかしら？
+
+;;Ａ
+# label "select_label_01"
+# labeljump "select_label_end"
+# voice 310141 "tyrufing_lo_0001"
+# alpha 139 0 0.5
+# move 3101411 4 0
+# face 3101411 "normal"
+# alpha 3101411 1 0.5
+# mask 3101411 on
+# textboxarrow 0 3
+@ティルフィング
+マスター、
+私も同じことを考えていました
+
+;;Ｂ
+# label "select_label_02"
+# labeljump "select_label_end"
+# voice 310021 "revatein_ge_0040"
+# alpha 139 0 0.5
+# move 3100211 4 0
+# face 3100211 "normal"
+# alpha 3100211 1 0.5
+# mask 3100211 on
+# textboxarrow 0 3
+@レーヴァテイン
+私達が…天上世界でやってたのと
+同じようなことが…
+アルマスに起きたのね
+
+;;Ｃ
+# label "select_label_03"
+# labeljump "select_label_end"
+# voice 1038 "almace_0001"
+# face 172 "normal"
+# textboxarrow 0 1
+@アルマス
+何か知ってそうな口ぶりね、
+マスター
+
+# label "select_label_end"
+# voice 9967 "titania_0002"
+# alpha 3101411 0 0.5
+# alpha 3100211 0 0.5
+# move 139 4 0
+# face 139 "normal"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 3
+@ティターニア
+少し詳しく伺っても
+よろしいでしょうか？

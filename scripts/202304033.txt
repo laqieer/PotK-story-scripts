@@ -1,0 +1,712 @@
+;;-----------------------------------------
+;;SEAイベント不可欠彩度レルム3_3_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm037_038" "BgmStory004" 0
+;;-----------------------------------------
+;;パンドラ
+# body 62001111
+# pos 62001111 3
+# scale 62001111 0.8 0
+# layer 62001111 3
+# mask 62001111 off
+# alpha 62001111 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 3
+# scale 6603811 0.8 0
+# layer 6603811 3
+# mask 6603811 off
+# alpha 6603811 0 0
+;;天上編グリダヴォル
+# body 600811
+# pos 600811 3
+# scale 600811 0.8 0
+# layer 600811 3
+# mask 600811 off
+# alpha 600811 0 0
+;;天上編フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.8 0
+# layer 502711 3
+# mask 502711 off
+# alpha 502711 0 0
+;;SEAフライシュッツ
+# body 6502721
+# pos 6502721 3
+# scale 6502721 0.8 0
+# layer 6502721 3
+# mask 6502721 off
+# alpha 6502721 0 0
+;;敵
+# body 3880001
+# pos 3880001 3
+# scale 3880001 0.8 0
+# layer 3880001 3
+# mask 3880001 off
+# alpha 3880001 0 0
+# entry 3889991 3880001
+# pos 3889991 3
+# scale 3889991 0.8 0
+# layer 3889991 3
+# mask 3889991 off
+# alpha 3889991 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagescale 0 1.5 0
+# imagelayer 0 3
+# imageset 2 "SEA6502721"
+# imagealpha 2 0 0
+# imagescale 2 1 0
+# imagelayer 2 5
+;;-----------------------------------------
+;;背景：カコルフェの街
+# textwindow "close"
+# waitandnext 0.2
+
+# background "in_city_collapse"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;wait　1秒くらい
+# move 3880001 2 0
+# alpha 3880001 1 0.5
+# move 3889991 4 0
+# alpha 3889991 1 0.5
+# waitandnext 1
+
+;;演出：フライシュッツの銃弾に魔獣が倒れていく
+# se "SE_4400"
+# sedelay "SE_4400" 0.4
+# fadein "white" 1
+# waitandnext 1.5
+
+;;サウンドメモ　銃のヒット音2発
+# se "SE_4817"
+# sedelay "SE_4817" 0.4
+# effectbody 1001 29 50 -30 0
+# effectstart 1001
+# waitandnext 1.5
+
+;;魔獣ダウン
+# se "SE_3001"
+# alpha 3880001 0 1
+# waitandnext 0.2
+
+# se "SE_3001"
+# alpha 3889991 0 0.7
+# waitandnext 0.8
+
+# textflame 0 0
+# textwindow "nomal"
+@
+マクリルと並び立ち
+魔獣を仕留めていくフライシュッツ
+
+# voice 660381 "maclir_ura_0028"
+# alpha 6603811 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@マクリル
+すごい、でも…
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# textflame 0 0
+@
+覚悟を決めたフライシュッツだが
+マクリルはまだ彼女から
+『裏側』の気配を感じていた…
+
+;;演出：暗転
+;;背景：黒
+# bgm "stop"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# alpha 6603811 0 0
+# textwindow "close"
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+@
+その時、恐れていた事態が起きる
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# se "bgm602_basic_on"
+# imagealpha 0 0 1
+# waitandnext 1.5
+
+# se "bgm602_rhythm_on"
+# face 502711 "angry"
+# voice 5027 "freischotz_battle_0002"
+# alpha 502711 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@フライシュッツ
+やぁっ！
+
+# se "SE_4400"
+# sedelay "SE_4400" 0.5
+# fadein "white" 1
+# waitandnext 1.5
+
+;;銃のヒット音1発と逸れるSE
+# se "SE_4817"
+# sedelay "SE_8003" 0.5
+# waitandnext 1.5
+
+# face 502711 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@フライシュッツ
+…あっ！
+
+# textflame 0 0
+@
+また、視界の範囲がゆっくりと…
+スローモーションに感じる
+フライシュッツ
+
+# textflame 0 0
+@
+その視線は、魔獣ではなく
+あらぬ方向へ放たれた魔弾
+
+#setnextbgmblock 1
+# alpha 502711 0 0.3
+# textflame 0 0
+@
+その先には…
+
+# se "bgm602_tension_on"
+# alpha 600811 1 0.5
+# waitandnext 1.5
+
+# voice 5027 "freischotz_battle_0008"
+# alpha 600811 0 0.3
+# alpha 502711 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@フライシュッツ
+グリダヴォルちゃん！！！
+
+# textflame 0 0
+@
+「ああ、やっぱり」
+弾がそのまま進めば離れた場所で
+戦うグリダヴォルの胸を貫く
+
+# face 502711 "sad"
+;;モヤモヤフレーム
+# move 502711 3 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@フライシュッツ
+あたしのせいで
+あたしがこんなだから
+
+# textflame 0 0
+# textwindow "nomal"
+@
+覚悟を決めたはずなのに『揺らぐ』
+こんな自分でなかったらいいのに
+と願い続けた日々が後悔を駆り立てる
+
+# alpha 502711 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;演出：暗転
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# imagealpha 0 1 1
+# imagepos 0 0 0
+# waitandnext 1
+
+# imagealpha 0 0 0
+# background "bg_black"
+# se "SE_8003"
+# alpha 600811 1 0.3
+# waitandnext 1
+
+;;杖を振る→弾く
+# se "SE_4500"
+# move 600811 2 0.5
+# waitandnext 0.5
+
+;;演出：暗転明け、魔獣が跳弾で倒れる
+# se "SE_3006"
+# fadein "white" 2
+# background "in_city_collapse"
+# move 3880001 4 0
+# layer 3880001 4
+# alpha 3880001 1 0
+# waitandnext 3
+
+;;ヒット→倒れる
+# se "SE_4817"
+# shake 0 0.5
+# move 3880001 5 0.2
+# scale 3880001 0.75 0.3
+# waitandnext 1
+
+# se "SE_3001"
+# alpha 3880001 0 1
+# waitandnext 1.5
+
+# face 502711 "surprise"
+# alpha 600811 0 0.3
+# layer 502711 2
+# alpha 502711 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@フライシュッツ
+え…？
+
+# bgm "bgm033" 0
+# voice 6008 "guridavoru_0004"
+# move 502711 4 0.5
+# move 600811 2 0
+# layer 600811 4
+# mask 600811 on
+# alpha 600811 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+結果オーライ！
+
+# textflame 0 0
+@
+フライシュッツの魔弾を
+難なく杖で弾き、さらには跳弾で
+魔獣を倒したグリダヴォルは笑う
+
+# voice 5027 "freischotz_0022"
+# textflame 1 1
+# textboxarrow 0 3
+@フライシュッツ
+今、あたしの魔弾を弾いて…
+
+# face 600811 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+フライシュッツが戦えるなら
+私もとっても頼もしいよ！
+
+# voice 6008 "guridavoru_0033"
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+こっちに来た弾は
+全部弾いちゃうから気にせず
+バンバン撃っちゃって！
+
+# face 600811 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+だよね、パンドラ！
+
+# voice 6200111 "pandora_0003"
+# alpha 600811 0 0.3
+# alpha 502711 0 0.3
+# alpha 62001111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@パンドラ
+ええ、なんとかするわ
+
+# bgm "stop"
+# face 502711 "sad"
+# alpha 62001111 0 0.3
+# move 502711 3 0
+# alpha 502711 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@フライシュッツ
+そっか、そうだった…
+
+# textflame 0 0
+@
+頼もしい友人ふたりの言葉で
+フライシュッツは自身に刻まれた
+キラーズの伝承を思い出す
+
+# bgm "bgm035" 0
+# textflame 1 1
+# textboxarrow 0 2
+@フライシュッツ
+賢者の冠で、魔弾は弾かれる…
+
+# textflame 0 0
+@
+正しくは、その先にさらなる悲劇が
+待っているのがその伝承なのだが…
+
+# face 502711 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@フライシュッツ
+それでも！
+呪いは弾き飛ばしちゃえばいいんだ！
+
+# alpha 502711 0 0.3
+# voice 660381 "maclir_ura_0041"
+# alpha 6603811 1 0.3
+# face 6603811 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@マクリル
+伝承再解釈…
+フライシュッツ！
+
+# voice 5027 "freischotz_0030"
+# face 502711 "normal"
+# alpha 502711 1 0.3
+# alpha 6603811 0 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@フライシュッツ
+ありがとうマクリルちゃん
+それにパンドラちゃんと
+グリダヴォルちゃんも！
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライシュッツ
+たとえ呪いの弾丸だとしても…
+それを弾き飛ばしてくれる仲間が
+おねーちゃんにはいるんだから！
+
+# textflame 0 0
+@
+それは甘えかもしれない
+だが、甘えているだけで
+何もできない自分でいるのではなく…
+
+# textflame 0 0
+@
+甘えて頼って、でも頼ってくれる
+そばにいてくれる仲間とともに
+並び立てる自分でありたいと願う
+
+# face 502711 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@フライシュッツ
+だって、仲間なんだもん！
+スイハちゃん達とも、本当は
+ずっとこうだったはずなのに…
+
+# face 502711 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@フライシュッツ
+ううん、きっとみんな
+わかってくれてたんだよね
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライシュッツ
+わかっていなかったのはあたし
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライシュッツ
+でも、わかったからには
+みんなと寄り添っていられる
+おねーちゃんになっちゃうんだから！
+
+;;演出：フライシュッツのシナリオカット表示
+;;演出：以降、新Verの立ち絵
+# frameout 0 0
+# fadein "white" 1
+# alpha 502711 0 0
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# textwindow "close"
+# waitandnext 3
+
+# voice 5027 "freischotz_battle_0004"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@フライシュッツ
+外さないんだから！
+
+;;銃の発射音　2発
+# se "SE_4400"
+# sedelay "SE_4400" 0.5
+# waitandnext 1
+
+;;銃のヒット音2発
+# se "SE_4817"
+# sedelay "SE_4817" 0.5
+# fadein "white" 1
+# waitandnext 2
+
+;;魔獣ダウン
+# se "SE_3001"
+# textflame 1 1
+# textboxarrow 0 0
+@フライシュッツ
+…外れたとしても！
+
+;;演出：弾が逸れ、マクリルに向かう
+;;銃の発射音　2発
+# se "SE_4400"
+# sedelay "SE_4400" 0.5
+# waitandnext 1
+
+;;銃弾が飛んでくる
+# se "SE_8003"
+# serif 1
+@マクリル
+なんとか、する…っ！
+
+;;杖を振る→弾く
+# se "SE_4500"
+# sedelay "SE_3006" 1
+# waitandnext 2
+
+;;ヒット
+# se "SE_4817"
+# fadein "white" 1
+# shake 0 1
+# waitandnext 1.5
+
+;;魔獣ダウン
+# se "SE_3001"
+# serif 1
+@パンドラ
+私の言葉が…
+まぁ、そういうこともあるわね
+
+# voice 5027 "freischotz_battle_0003"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 0
+@フライシュッツ
+みんな、いくよ！
+
+# textflame 0 0
+@
+フライシュッツの魔弾を起点に
+魔獣を倒していくキル姫達
+
+# textflame 0 0
+@
+時折逸れてしまう弾も
+お互いに連携し合って弾かれる
+
+# textflame 0 0
+@
+やがて、魔獣は現れなくなる…
+
+;;シナリオカット削除
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# fadeout "black" 2
+# waitandnext 2
+
+;;背景：カコルフェの街
+# background "in_city_collapse"
+# imagealpha 2 0 0
+# framein 0 0
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+# se "bgm601_guitaron"
+# alpha 6502721 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@フライシュッツ
+おわったぁ～！
+
+# se "bgm601_windon"
+# textflame 0 0
+@
+フライシュッツに守られていた
+子供達も緊張が解け、やったーと喜ぶ
+
+# face 6502721 "shy"
+# voice 5027 "freischotz_0021"
+# textflame 1 1
+# textboxarrow 0 2
+@フライシュッツ
+ほんとによかったよぉ～！
+
+# textflame 0 0
+@
+子供達以上に
+ホッとして大きな声のフライシュッツ
+
+# face 6502721 "happy"
+# voice 5027 "freischotz_0030"
+# textflame 1 1
+# textboxarrow 0 2
+@フライシュッツ
+みんなありがとぉ～！
+
+;;サウンドメモ　フライシュッツが抱き着く
+# se "SE_0648"
+# scale 6502721 1 1
+# waitandnext 1.5
+
+# alpha 6502721 0 0.3
+# move 600811 3 0
+# layer 600811 4
+# mask 600811 on
+# alpha 600811 1 0.3
+# face 600811 "usual"
+# move 62001111 5 0
+# layer 62001111 3
+# mask 62001111 on
+# alpha 62001111 1 0.3
+# face 62001111 "happy"
+# move 6603811 1 0
+# layer 6603811 2
+# mask 6603811 on
+# alpha 6603811 1 0.3
+# face 6603811 "happy"
+# voice 660381 "maclir_ura_0023"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+わっ
+
+# voice 6008 "guridavoru_0004"
+# textflame 1 1
+# textboxarrow 0 2
+@グリダヴォル
+おっとと
+
+# voice 6200111 "pandora_0005"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+ふふっ
+
+# alpha 600811 0 0.3
+# alpha 62001111 0 0.3
+# alpha 6603811 0 0.3
+# textflame 0 0
+@
+三人に抱き着くフライシュッツ
+それはまるで子供のように
+甘えん坊なフライシュッツだった
+
+# move 6502721 4 0
+# scale 6502721 0.8 0
+# layer 6502721 2
+# alpha 6502721 1 0.3
+# face 6502721 "normal"
+# move 6603811 2 0
+# layer 6603811 4
+# alpha 6603811 1 0.3
+# face 6603811 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@フライシュッツ
+おねーちゃんはおねーちゃんだけど
+もう変に遠慮しないでみんなに
+甘えちゃうことにしたの！
+
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+これも…伝承再解釈？
+
+# textflame 0 0
+@
+無理をして頼りになるお姉さんを
+演じるのではなく困っている誰かの
+そばにいられるおねーちゃん
+
+# imagescale 0 1 0
+# textflame 0 0
+@
+それを選択したフライシュッツは
+もう、『揺るがない』
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：カコルフェの街（夜）
+# background "in_city_collapse_night"
+# alpha 6502721 0 0
+# alpha 6603811 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 62001111 "surprise"
+# voice 6200111 "pandora_0022"
+# move 62001111 4 0
+# layer 62001111 2
+# mask 62001111 off
+# alpha 62001111 1 0.3
+# face 6603811 "usual"
+# alpha 6603811 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@パンドラ
+もうこんな時間なのね
+
+# textflame 0 0
+@
+魔獣騒ぎが収まった
+カコルフェに夜が訪れる
+
+# textflame 0 0
+@
+シンボルのタワーを失っても
+不夜城の名を落とさんとする人々の
+思いが明かりを灯していく
+
+# face 6603811 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+…あれ
+
+# textflame 0 0
+@
+そして、マクリルはあることに気付く
+
+# face 6603811 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+『裏側』感じない…
+
+# textflame 0 0
+@
+多くの人々、キル姫達の胸に
+希望の火が灯ったことで
+『裏側』の気配が晴れたのだった
+
+# fadeout "black" 2
+# waitandnext 2

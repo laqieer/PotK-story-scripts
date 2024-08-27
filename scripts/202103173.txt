@@ -1,0 +1,318 @@
+;;-----------------------------------------
+;;SEA5章_17-3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm323" "BgmLostRagnarokCommand" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 5
+# scale 6504011 0.8 0
+# layer 6504011 4
+# alpha 6504011 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 1
+# scale 6603811 0.8 0
+# layer 6603811 3
+# alpha 6603811 0 0
+;;ミネルヴァ
+# body 302511
+# pos 302511 3
+# scale 302511 0.8 0
+# layer 302511 2
+# mask 302511 off
+# alpha 302511 0 0
+;;神令スイハ
+# body 3401711
+# pos 3401711 3
+# scale 3401711 0.78 0
+# layer 3401711 1
+# alpha 3401711 0 0
+# body 401711
+# alpha 401711 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagescale 1 1.5 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：地下空洞：101_cave
+# textwindow "close"
+# waitandnext 0.2
+
+# background "101_cave"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# face 3401711 "surprise"
+# alpha 3401711 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 4017 "suiha_battle_0006"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@スイハ
+くぅっ…！？
+
+# voice 660381 "maclir_ura_0004"
+# face 6603811 "usual"
+# alpha 6603811 1 0.3
+# se "SE_0648"
+# textboxarrow 0 1
+@マクリル
+捕まえたよ…
+
+# voice 650401 "manannan_ura_0005"
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# se "SE_5200"
+# textboxarrow 0 3
+@マナナン
+押さえ込め～っ
+
+# alpha 3401711 0 0.3
+# alpha 6603811 0 0.3
+# alpha 6504011 0 0.3
+# face 302511 "angry"
+# alpha 302511 1 0.3
+# textboxarrow 0 2
+@ミネルヴァ
+何か考えがあるのですね
+では、私も！
+
+# se "SE_0846"
+# alpha 302511 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;三人がスイハを押さえつける
+# face 3401711 "angry"
+# alpha 3401711 1 0.3
+# mask 3401711 off
+# textwindow "nomal"
+# textboxarrow 0 2
+@スイハ
+私の動きを封じたところで…
+あなた達に何ができるというのですっ
+
+# textboxarrow 0 2
+@スイハ
+私は必ず“彼女”を
+完全な状態にしてみせます！
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# alpha 3401711 0 0.3
+# voice 9917 "mimir_navikan_0002"
+# face 270 "angry"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+スイハさん
+それはアナタの願いではありません
+
+# face 3401711 "surprise"
+# alpha 3401711 1 0.3
+# alpha 270 0 0.3
+# textboxarrow 0 2
+@スイハ
+！？
+
+# alpha 3401711 0 0.3
+# voice 650401 "manannan_ura_0022"
+# move 6504011 3 0
+# mask 6504011 off
+# face 6504011 "surprise"
+# alpha 6504011 1 0.3
+# textboxarrow 0 2
+@マナナン
+ん？違うの～？
+
+# bgm "bgm004" 0
+# alpha 6504011 0 0.3
+# move 270 2 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# move 302511 4 0
+# face 302511 "angry"
+# alpha 302511 1 0.3
+# textboxarrow 0 1
+@ミーミル
+…思い返してみると、
+アナタはいつも辛そうでした
+
+# textboxarrow 0 1
+@ミーミル
+まるで何かを後悔して
+仲間の…エルキュールさんのために
+行動しようとされていましたね
+
+# voice 3025 "minerva_0022"
+# face 302511 "surprise"
+# textboxarrow 0 3
+@ミネルヴァ
+…あ！
+もしかして…
+
+# textboxarrow 0 1
+@ミーミル
+スイハさん
+アナタが抱いている強い思いは…
+
+;;回想シーン
+# se "SE_0742"
+# fadeout "white" 1
+# waitandnext 1
+
+;;背景：平原：plain
+# background "plain"
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 270 0 0
+# alpha 302511 0 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+# face 3401711 "angry"
+# alpha 3401711 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@スイハ
+今度こそ、私は仲間のためにっ
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：室内：201_room
+# background "201_room"
+# waitandnext 0.2
+
+# alpha 3401711 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 3401711 "sad"
+# alpha 3401711 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@スイハ
+…………ごめんなさい
+私は、もう二度と…
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：室内：201_room
+# background "201_room"
+# waitandnext 0.2
+
+# alpha 3401711 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 4017 "suiha_0028"
+# face 3401711 "sad"
+# alpha 3401711 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@スイハ
+エルキュールが希望を取り戻して
+くれるというのなら…
+
+# face 3401711 "angry"
+# textboxarrow 0 2
+@スイハ
+私は実行します
+それが、せめてもの罪滅ぼしに…
+
+;;回想終了
+# se "SE_11762"
+# fadeout "white" 1
+# waitandnext 1
+
+;;背景：地下空洞：101_cave
+# background "101_cave"
+# bgm "stop"
+# imagealpha 1 0 0
+# alpha 3401711 0 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1.5
+
+# face 270 "sad"
+# alpha 270 1 0.3
+# move 3401711 4 0
+# face 3401711 "normal"
+# alpha 3401711 1 0.3
+# mask 3401711 on
+# se "SE_6178"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+「悩んでいる仲間の力に
+なれなかった後悔」だったんですね
+
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+# voice 4017 "suiha_0022"
+# face 3401711 "surprise"
+# textboxarrow 0 3
+@スイハ
+…な、何を言っているんですか！？
+私はエルキュールと同じように
+“彼女”を取り戻すため――
+
+# voice 9917 "mimir_navikan_0034"
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+いいえ
+アナタは「エルキュールの願いを
+叶えたい」と強く願ったんです
+
+# textboxarrow 0 1
+@ミーミル
+たった一人
+悪役になるつもりで
+
+# textboxarrow 0 1
+@ミーミル
+それが…
+
+# voice 4017 "suiha_0015"
+# face 3401711 "angry"
+# textboxarrow 0 3
+@スイハ
+やめて…止めて下さい…！
+
+# textboxarrow 0 1
+@ミーミル
+アナタなりの償いだったんですね
+
+# fadeout "black" 1
+# waitandnext 1

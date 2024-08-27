@@ -1,0 +1,361 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第18章 章タイトル：×××アポカリプス
+;;第2話―６　タイトル：支えるために
+;;6_3
+;;スクリプト最後の背景：町：town
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;ハリー
+# body 208
+# pos 208 3
+# scale 208 0.8 0
+# layer 208 2
+# alpha 208 0 0
+# mask 208 off
+;;ダーインスレイヴ
+# body 102811
+# pos 102811 3
+# scale 102811 0.8 0
+# layer 102811 2
+# alpha 102811 0 0
+# mask 102811 off
+;;異族化マサムネ
+# body 5100131
+# pos 5100131 3
+# scale 5100131 0.8 0
+# layer 5100131 2
+# alpha 5100131 0 0
+# mask 5100131 off
+;;異族化パラシュ
+# body 5200431
+# pos 5200431 3
+# scale 5200431 0.8 0
+# layer 5200431 2
+# alpha 5200431 0 0
+# mask 5200431 off
+;;アロンダイト・暴走
+# body 5100711
+# pos 5100711 3
+# scale 5100711 0.8 0
+# layer 5100711 2
+# alpha 5100711 0 0
+# mask 5100711 off
+# brightness 5100711 0.8 0
+;;-----------------------------------------
+;;//血しぶき演出
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_9015"
+# se "SE_4815"
+# shake 0 0.5
+# fadein "red" 0.5
+# waitandnext 0.5
+
+# voice 9938 "harry_0049"
+# move 208 3 0
+# face 208 "angry"
+# alpha 208 1 0.5
+# mask 208 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ハリー
+ダーイン…！
+もう…
+
+# emotionbody 1000 15 5100711 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# voice 1028 "dainsleif_0004"
+# alpha 208 0 0.5
+# move 102811 2 0
+# face 102811 "happy"
+# alpha 102811 1 0.5
+# mask 102811 on
+# textboxarrow 0 1
+# move 5100711 4 0
+# face 5100711 "angry"
+# alpha 5100711 1 0.5
+# mask 5100711 on
+@ダーインスレイヴ
+大丈夫だ、ハリー…
+困った子猫ちゃんに…
+少々手こずらされている…だけだよ
+
+;;アロンダイト（暴走）
+# voice 510071 "arondaito_bo_b_battle_0001"
+# textboxarrow 0 3
+@アロンダイト
+ウガアッ！
+オマエヲケシテヤル！
+
+;;//血しぶき演出
+# se "SE_9015"
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 2000 1 -200 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+;;アロンダイト（暴走）
+# voice 510071 "arondaito_bo_b_battle_0002"
+# textboxarrow 0 3
+@アロンダイト
+ウガアアアアアアア！
+ナニモカモキエロ！
+キエロオオオ！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+# effectskip 1000
+# textwindow "close"
+# alpha 102811 0 0.5
+# alpha 5100711 0 0.5
+# waitandnext 0.5
+
+;;//剣戟音
+# bgm "stop"
+# se "SE_3006"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm403" "BgmIntegralNoahEvent" 0
+# move 5100131 2 0
+# face 5100131 "normal"
+# alpha 5100131 1 0.5
+# mask 5100131 on
+# textboxarrow 0 1
+# move 5200431 4 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+# textwindow "normal"
+@マサムネ
+そうはさせぬ
+
+# voice 520043 "parashu_iz_0004"
+# face 5200431 "happy"
+# textboxarrow 0 3
+@パラシュ
+よくここまで耐えたね
+その信念は誇っていいよ
+
+# alpha 5100131 0 0.5
+# alpha 5200431 0 0.5
+# move 102811 3 0
+# face 102811 "surprise"
+# alpha 102811 1 0.5
+# mask 102811 off
+# textboxarrow 0 2
+@ダーインスレイヴ
+おぬし達は…
+
+# alpha 102811 0 0.5
+# move 5100131 2 0
+# face 5100131 "normal"
+# alpha 5100131 1 0.5
+# mask 5100131 on
+# move 5200431 4 0
+# face 5200431 "happy"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+# textboxarrow 0 3
+@パラシュ
+運が良かったね
+たまたま近くに居合わせたんだ
+
+# face 5100131 "angry"
+# textboxarrow 0 1
+@マサムネ
+さて、ディスラプターズなしでは
+暴走の解除はままならぬが
+
+# face 5200431 "normal"
+# textboxarrow 0 3
+@パラシュ
+問題ないよ
+圧倒して押さえ込めばいい
+
+# voice 510013 "masamune_iz_0003"
+# face 5100131 "normal"
+# textboxarrow 0 1
+@マサムネ
+ふむ
+道理だな
+
+;;アロンダイト（暴走）
+# effectstart 1000
+# alpha 5100131 0 0.5
+# alpha 5200431 0 0.5
+# move 5100711 3 0
+# face 5100711 "angry"
+# alpha 5100711 1 0.5
+# mask 5100711 off
+# textboxarrow 0 2
+@アロンダイト
+ジャマスルナ！
+キエロ！キエテシマエ！
+
+# move 5100131 2 0
+# face 5100131 "normal"
+# alpha 5100131 1 0.5
+# mask 5100131 on
+# textboxarrow 0 1
+# move 5100711 4 0.5
+# mask 5100711 on
+@マサムネ
+アロンダイト
+義に篤いそなたが墜ちた理由、
+察せぬでもないが…
+
+# textboxarrow 0 1
+@マサムネ
+拙者の想像通りなら、
+ここに置いてはそなたの負けだ
+
+# textboxarrow 0 1
+@マサムネ
+ダーインスレイヴは、
+主君の身を守り抜いたのだからな
+
+;;アロンダイト（暴走）
+# textboxarrow 0 3
+@アロンダイト
+ウウ…グウウ…
+ニクシミノゴウカガ
+ワタシヲヤイテイク…
+
+# alpha 5100131 0 0.5
+# move 5200431 2 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+# textboxarrow 0 1
+@パラシュ
+マサムネの読み通りみたいだね
+君は君のマスターを守り切れなかった
+それで暴走したんだ
+
+;;アロンダイト（暴走）
+# textboxarrow 0 3
+@アロンダイト
+ヤメロ…ヤメロオオオオ…！
+コンナセカイ…！
+
+# se "SE_5206"
+# face 5200431 "angry"
+# textboxarrow 0 1
+@パラシュ
+違うよ
+君が一番消したいのは…
+
+;;アロンダイト（暴走）
+# voice 510071 "arondaito_bo_b_battle_0002"
+# textboxarrow 0 3
+@アロンダイト
+ウガアアアア…！
+
+# se "SE_9021"
+# textwindow "close"
+# waitandnext 0.5
+
+;;//アロンダイトとパラシュが切り結ぶ
+# se "SE_9017"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;//アロンダイトから黒い霧が消える
+# effectskip 1000
+# brightness 5100711 1 1
+# waitandnext 1
+
+;;アロンダイト（暴走）
+# face 5100711 "normal"
+# textboxarrow 0 3
+# textwindow "normal"
+@アロンダイト
+…………
+
+;;アロンダイト（暴走）
+# voice 510071 "arondaito_bo_0017"
+# textboxarrow 0 3
+@アロンダイト
+…わかってました
+
+# alpha 5200431 0 0.5
+# move 5100131 2 0
+# face 5100131 "normal"
+# alpha 5100131 1 0.5
+# mask 5100131 on
+# textboxarrow 0 1
+@マサムネ
+アロンダイト、そなたっ
+破壊衝動を自ら抑えたというのか
+
+;;アロンダイト（暴走）
+# face 5100711 "sad"
+# textboxarrow 0 3
+@アロンダイト
+ダーインスレイヴのせいで、
+かなり発散してしまいましたから…
+
+;;アロンダイト（暴走）
+# face 5100711 "normal"
+# textboxarrow 0 3
+@アロンダイト
+だからといって、何かが変わるわけ
+ではありません
+
+;;アロンダイト（暴走）
+# textboxarrow 0 3
+@アロンダイト
+今回は退きましょう
+それでも、いずれ醜態にまみれた
+この世界は終わります
+
+;;アロンダイト（暴走）
+# textboxarrow 0 3
+@アロンダイト
+私も当然、滅びます
+
+# voice 9938 "harry_0016"
+# alpha 5100131 0 0.5
+# move 208 2 0
+# face 208 "sad"
+# alpha 208 1 0.5
+# mask 208 on
+# textboxarrow 0 1
+@ハリー
+そんなの、悲しすぎるよ…！
+
+;;アロンダイト（暴走）
+# textboxarrow 0 3
+@アロンダイト
+…幼いマスター
+気遣いは不要です
+もう受け入れています
+
+;;//アロンダイトが立ち去る
+# se "SE_0719"
+# textwindow "close"
+# alpha 5100711 0 0.5
+# waitandnext 0.5
+
+# alpha 208 0 0.5
+# move 102811 3 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ダーインスレイヴ
+やれやれ…
+全く…困った子猫ちゃんだ…

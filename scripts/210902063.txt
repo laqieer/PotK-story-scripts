@@ -1,0 +1,324 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第９章 章タイトル：「雄弁な守人―プレッジ―」
+;;第2話－６　タイトル：為すべきこと
+;;2_6_3
+;;スクリプト最後の背景：教会
+;;-----------------------------------------
+# script "lisp"
+# background "400_angel_castle_room"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;アフロディーテ・D. plug・アスモデウス 大罪ver.
+# body 5401311
+# pos 5401311 3
+# scale 5401311 0.8 0
+# layer 5401311 2
+# alpha 5401311 0 0
+# mask 5401311 off
+;;ティファレト
+# body 171
+# pos 171 3
+# scale 171 0.8 0
+# layer 171 2
+# alpha 171 0 0
+# mask 171 off
+;;ティファレト（新ゴッド）ボイス用
+# body 5503211
+# alpha 5503211 0 0
+;;ツカサ
+# body 241
+# pos 241 3
+# scale 241 0.8 0
+# layer 241 2
+# alpha 241 0 0
+# mask 241 off
+;;ミカエル
+# body 3810008
+# pos 3810008 3
+# scale 3810008 0.8 0
+# layer 3810008 2
+# alpha 3810008 0 0
+# mask 3810008 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;//背景：豪華な室内
+# move 171 2 0
+# face 171 "angry"
+# alpha 171 1 0
+# mask 171 on
+# move 241 4 0
+# face 241 "normal"
+# alpha 241 1 0
+# mask 241 on
+# textflame 1 1
+# textboxarrow 0 3
+@ツカサ
+はぁ…はぁ…
+こっちだ、ティファレト！
+
+# voice 550321 "tiphereth_ca_0003"
+# textboxarrow 0 1
+@ティファレト
+はい！
+
+# voice 340131 "aphrodite_a_0001"
+# alpha 171 0 0.5
+# alpha 241 0 0.5
+# move 5401311 3 0
+# face 5401311 "usual"
+# alpha 5401311 1 0.5
+# mask 5401311 off
+# textboxarrow 0 2
+@アフロディーテ
+わたしはこちらで見張ってますわ
+お気をつけて、マスター
+
+# se "SE_0860"
+# textwindow "close"
+# serif 1
+# alpha 5401311 0 0.5
+# move 241 3 0
+# face 241 "normal"
+# alpha 241 1 0.5
+# mask 241 off
+@セキュリティ
+生体認証クリア
+周辺チェック完了
+オールグリーン
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ツカサ
+“天上の翼を広げよ”
+
+# serif 1
+@セキュリティ
+当該エリアへのロックを解除
+
+;;//扉が開く音
+# se "SE_0690"
+# waitandnext 1
+
+;;//背景：教会
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "006_church"
+# alpha 241 0 0
+# move 3810008 2 0
+# alpha 3810008 1 0
+# mask 3810008 on
+# move 241 4 0
+# face 241 "normal"
+# alpha 241 1 0
+# mask 241 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm188" "BgmStory007" 0
+# textboxarrow 0 3
+# textwindow "normal"
+@ツカサ
+ミカエル！
+
+# voice 8056 "new_michael_0004"
+# textboxarrow 0 1
+@ミカエル
+そんなに大きな声を出さなくても
+分かっていますよ、ツカサ
+連れてきてくれたのですね
+
+# textboxarrow 0 1
+@ミカエル
+ティファレトを
+
+# alpha 241 0 0.5
+# move 171 4 0
+# face 171 "surprise"
+# alpha 171 1 0.5
+# mask 171 on
+# textboxarrow 0 3
+@ティファレト
+ああっ…！
+とても神聖なものを感じます
+
+# face 171 "normal"
+# textboxarrow 0 3
+@ティファレト
+そこにいらっしゃるのですね
+大天使ミカエル
+
+# textboxarrow 0 1
+@ミカエル
+よく来てくれました
+キル姫、ティファレト
+
+# textboxarrow 0 1
+@ミカエル
+こうして出会って、確信しました
+あなたなら、私という存在を受け入れ
+力を取り戻させてくれる…
+
+# voice 550321 "tiphereth_ca_0048"
+# face 171 "angry"
+# textboxarrow 0 3
+@ティファレト
+ミカエル…
+私は、人々を救いたいのです
+そのための力が、欲しいっ
+
+# textboxarrow 0 3
+@ティファレト
+私にできることなら何でもします
+捧げられるものなら何だって
+捧げます
+
+# textboxarrow 0 3
+@ティファレト
+ですから、どうか救済のための力を！
+私にお与え下さいっ
+
+# textboxarrow 0 1
+@ミカエル
+その言葉は私にとっても福音です
+私もまた、あなたを必要としている
+
+# textboxarrow 0 1
+@ミカエル
+あなたから生命力を分け与えられる
+ことで、私は力を取り戻すでしょう
+ただし…
+
+# textboxarrow 0 1
+@ミカエル
+そのためには、私とあなたが、
+互いに誓いを立てなければ
+なりません
+
+# textboxarrow 0 3
+@ティファレト
+誓い？
+どのようなことでも誓いますっ
+
+# voice 8056 "new_michael_0034"
+# textboxarrow 0 1
+@ミカエル
+いいえ
+それではいけません
+誓いは、誓約は、神聖なもの
+
+# textboxarrow 0 1
+@ミカエル
+あなた自身にとって
+最も大切なものでなければ
+ならないのです
+
+# face 171 "sad"
+# textboxarrow 0 3
+@ティファレト
+私にとって、最も大切なもの…
+
+# textboxarrow 0 1
+@ミカエル
+ティファレト、私は誓います
+あなたの生命力を得る代わりに、
+私の力、その全てを…
+
+# textboxarrow 0 1
+@ミカエル
+あなたに委ね、その意思に従い
+ましょう
+
+# alpha 3810008 0 0.5
+# alpha 171 0 0.5
+# move 241 3 0
+# face 241 "normal"
+# alpha 241 1 0.5
+# mask 241 off
+# textboxarrow 0 2
+@ツカサ
+天使がキル姫の言動に従うなんて…
+
+# voice 550321 "tiphereth_ca_0033"
+# alpha 241 0 0.5
+# move 3810008 2 0
+# alpha 3810008 1 0.5
+# mask 3810008 on
+# move 171 4 0
+# face 171 "angry"
+# alpha 171 1 0.5
+# mask 171 on
+# textboxarrow 0 3
+@ティファレト
+…分かりました
+では、私も誓います
+
+# textboxarrow 0 3
+@ティファレト
+ミカエルの力を得る代わりに、
+私は私の願いから決して逃げません
+
+# textboxarrow 0 3
+@ティファレト
+私を守ってくれた町の人達を
+守りたい…助けたい…
+そう思っていました
+
+# textboxarrow 0 3
+@ティファレト
+ですが、それだけでは足りません
+私は救済のための力を求めています
+
+# textboxarrow 0 3
+@ティファレト
+「力なき者を守る力」
+それを得られたならば、私は…
+
+# textboxarrow 0 3
+@ティファレト
+どのような状況であれ、
+力なき者達を決して見捨てません
+必ず救済の手を差し伸べます
+
+# textboxarrow 0 1
+@ミカエル
+あなたの誓い、確かに聞き届けました
+
+# textboxarrow 0 1
+@ミカエル
+ここに誓約を交わします！
+互いの誓約は契約となり、
+それが破られたときは…
+
+# textboxarrow 0 1
+@ミカエル
+代償を、その身に受けることと
+なります
+
+# textboxarrow 0 1
+@ミカエル
+よろしいですね、ティファレト？
+
+# voice 550321 "tiphereth_ca_0003"
+# textboxarrow 0 3
+@ティファレト
+はい！
+人々の救済に、
+私はその身を捧げますっ
+
+;;//画面フラッシュで白背景に
+# se "SE_9149"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1.6

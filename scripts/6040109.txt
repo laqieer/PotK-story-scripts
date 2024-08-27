@@ -1,0 +1,282 @@
+;;【EP5】戦闘前
+# script "lisp"
+# background "forest"
+# bgmfile "bgm154" "BgmPJZero001" 0
+# body 200471
+# pos 200471 1
+# scale 200471 0.8 0
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# body 300181
+# pos 300181 5
+# scale 300181 0.8 0
+# layer 24 3
+# layer 300181 2
+# layer 200471 1
+# textflame 1 1
+# textboxarrow 0 1
+# chara 200471
+# face 200471 "angry"
+# face 24 "angry"
+@グラトニー
+今更、何をしても無駄だよ！
+
+# textboxarrow 0 2
+# chara 24
+# face 24 "mad2"
+@ティルフィング
+そんなことはありません！
+私達にはマスターが、
+仲間がいるから！
+
+# textboxarrow 0 3
+# chara 300181
+# voice 30018 "ronginusu_k_0005"
+# face 300181 "surprise"
+@エンヴィ
+その闘志、ステキですね
+…嫉妬してしまいます！
+
+;;矢が飛んでくる
+# se "SE_0688"
+# fadein "white" 0.2
+# waitandnext 0.2
+
+# fadein "white" 0.2
+# waitandnext 0.2
+
+# fadein "white" 0.2
+# waitandnext 0.2
+
+# fadein "white" 0.2
+# waitandnext 0.2
+
+# textboxarrow 0 1
+# chara 200471
+# face 200471 "surprise"
+@グラトニー
+おっと…弓？
+…いつの間にあんな高台に
+上がったんだい？
+
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# mask 100221 off
+# alpha 100221 0 0
+# textboxarrow 0 1
+# chara 200471
+# voice 20047 "parashu_k_0007"
+# face 200471 "usual"
+@グラトニー
+あれじゃ斧を投げても届かない…
+仕方ないな、一気に接近して――
+
+# move 300181 3 0
+# alpha 300181 0 0.5
+# alpha 200471 0 0.5
+# alpha 24 0 0.5
+# alpha 100221 1 0.5
+# rightin 100221 0.5
+# textboxarrow 0 2
+# voice 1002 "revatein_0009"
+# face 100221 "angry"
+# face 200471 "surprise"
+@レーヴァテイン
+どこ行くの…？
+面倒だけど…あなたの相手は私
+
+# alpha 100221 0 0.5
+# alpha 300181 1 0.5
+# textboxarrow 0 2
+# chara 300181
+@エンヴィ
+グラトニーさん、代わってくだ――
+
+;;銃撃音
+# se "SE_5809"
+# body 500211
+# pos 500211 1
+# scale 500211 0.8 0
+# alpha 500211 0 0
+# fadein "white" 0.5
+# waitandnext 1
+# face 300181 "surprise"
+
+# alpha 500211 1 0.5
+# leftin 500211 0.5
+# move 300181 5 0.5
+# textboxarrow 0 1
+# chara 500211
+# voice 5002 "furaikugeru_0020"
+# face 500211 "happy"
+# face 300181 "angry"
+@フライクーゲル
+は～い！ヘァッピーしてるぅ？
+蜂の巣ショータイムの始まりだよ～♪
+
+# textboxarrow 0 3
+# chara 300181
+# voice 30018 "ronginusu_k_0020"
+# face 300181 "surprise"
+@エンヴィ
+私の射程外から攻撃して…
+そんな羨ましいことされたら…
+突き刺したくなっちゃいます！
+
+# move 200471 3 0
+# fadein "black" 0.5
+# textboxarrow 0 0
+# move 300181 3 0.5
+# waitandnext 1
+
+# body 100111
+# pos 100111 5
+# scale 100111 0.8 0
+# alpha 100111 0 0
+# alpha 300181 0 0.5
+# alpha 200471 1 0.5
+# alpha 500211 0 0.5
+# textboxarrow 0 2
+# chara 200471
+# face 200471 "angry"
+@グラトニー
+エンヴィ！？
+そっちに行くな！
+分断されてしまうよ！
+
+# alpha 100111 1 0.5
+# rightin 100111 0.5
+# move 200471 1 0.5
+# textboxarrow 0 3
+# chara 100111
+# face 100111 "angry"
+@マサムネ
+もう遅い
+主君の采配により、
+そなたらの命運は尽きた
+
+# move 300181 5 0
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textboxarrow 0 1
+# chara 200471
+# face 200471 "surprise"
+@グラトニー
+…少しは頭を使ったようだね
+でも、それだけでボクに勝てると
+思うなんて愚かだよ！
+
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# alpha 200471 0 0
+# alpha 100111 0 0
+# alpha 300181 1 0
+# alpha 500211 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+# chara 500211
+# face 500211 "mad"
+@フライクーゲル
+へいへ～い！
+こっちだよ～っ
+
+# body 300111
+# pos 300111 3
+# scale 300111 0.8 0
+# alpha 300111 0 0
+# move 300181 4 0.7
+# textboxarrow 0 3
+# chara 300181
+# face 300181 "surprise"
+@エンヴィ
+もう少し…もう少しで槍の射程に…
+えっ！？
+
+# se "SE_5545"
+# fadein "white" 0.5
+# move 300181 5 0.5
+# alpha 300111 1 0.5
+# layer 300111 3
+# layer 300181 2
+# layer 500211 1
+# textboxarrow 0 2
+# chara 300111
+# face 300111 "angry"
+@ロンギヌス
+これが救いでありますように！
+
+# textboxarrow 0 3
+# chara 300181
+# face 300181 "sad"
+@エンヴィ
+ごめんなさい…
+そんな攻撃、私には
+効きません
+
+# body 200411
+# pos 200411 2
+# scale 200411 0.8 0
+# alpha 200411 0 0
+# serif 1
+# textboxarrow 1 0
+# chara 200411
+# face 200411 "mad"
+@パラシュ
+だったら、こういうのはどうかな！
+
+;;斬撃音
+# se "SE_5773"
+# serif 1
+# textwindow "close"
+# fadein "red" 0.5
+# alpha 500211 0 0.5
+# alpha 300111 0 0.5
+# alpha 200411 1 0.5
+# leftin 200411 0.5
+# waitandnext 1
+
+# serif 0
+# textwindow "nomal"
+# voice 30018 "ronginusu_k_0038"
+# face 300181 "angry"
+@エンヴィ
+あうっ…！
+斧が…建物の陰から？
+
+# textboxarrow 0 1
+# chara 200411
+# voice 2004 "parashu_0007"
+# face 200411 "smile"
+# face 300181 "surprise"
+@パラシュ
+やはりボクの攻撃は効くようだね
+
+# textboxarrow 0 1
+# chara 200411
+# face 200411 "normal"
+@パラシュ
+武具の相性…君達が他のブラック
+キラーズ達を圧倒できた理由は
+マスターが見切ってくれたよ
+
+# textboxarrow 0 3
+# chara 300181
+# face 300181 "angry"
+@エンヴィ
+そうですか…
+でも、それだけで勝てると思ったら
+大間違いですよ！

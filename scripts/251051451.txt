@@ -1,0 +1,447 @@
+;;-----------------------------------------
+;;エイプリル5_1
+;;-----------------------------------------
+# script "lisp"
+# background "201_center"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;スイハ
+# body 401711
+# alpha 401711 0 0
+# body 44017002
+# pos 44017002 3
+# scale 44017002 0.8 0
+# layer 44017002 2
+# mask 44017002 off
+# alpha 44017002 0 0
+;;シェキナー
+# body 400711
+# pos 400711 2
+# scale 400711 0.8 0
+# layer 400711 2
+# mask 400711 off
+# alpha 400711 0 0
+;;シェキナーゾンビ
+# body 900026
+# pos 900026 2
+# scale 900026 0.8 0
+# layer 900026 4
+# alpha 900026 0 0
+;;ブラフマーストラゾンビ
+# body 900027
+# pos 900027 4
+# scale 900027 0.8 0
+# layer 900027 2
+# mask 900027 off
+# alpha 900027 0 0
+;;デュランダルゾンビ
+# body 900028
+# pos 900028 4
+# scale 900028 0.8 0
+# layer 900028 4
+# alpha 900028 0 0
+;;ミョルニルゾンビ
+# body 900030
+# pos 900030 2
+# scale 900030 0.8 0
+# layer 900030 2
+# mask 900030 off
+# alpha 900030 0 0
+;;ゾンビ異族
+# body 810004
+# pos 810004 2
+# scale 810004 0.8 0
+# layer 810004 4
+# mask 810004 off
+# alpha 810004 0 0
+# brightness 810004 0.7 0
+# entry 810099 810004
+# pos 810099 4
+# scale 810099 0.8 0
+# layer 810099 5
+# mask 810099 off
+# alpha 810099 0 0
+# brightness 810099 0.7 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：洋館の地下ビフレスト社研究所の薄暗い廊下
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+@
+地下に辿り着いたマスターは
+そこに蠢くゾンビ異族達に驚愕した
+これでは先に進むのは難しい
+
+# textflame 0 0
+@
+しかし、諦めることはしなかった
+何故なら仲間達から託された
+希望を胸に抱いていたから
+
+# textflame 0 0
+@
+意を決したマスターは
+ゾンビ異族達の攻撃を掻い潜り
+とある矢じりを入手した
+
+# face 44017002 "surprise"
+# alpha 44017002 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+これがあれば、薬品庫に？
+
+# imagescale 0 1.5 0
+# textflame 0 0
+@
+「鍵は鍵の形だけじゃなくてね」
+先遣隊との探索の成果か
+この場の攻略法を見つけていたようだ
+
+# se "SE_6226"
+# imagealpha 0 0.7 0.2
+# imagepos 0 0 0
+# textflame 0 0
+# textalign "center"
+@
+　
+『矢じり型の鍵』を入手した
+
+# imagealpha 0 0 0.2
+# face 44017002 "normal"
+# voice 4017 "suiha_0003"
+# textflame 1 1
+@スイハ
+わかりました…
+先に進みましょう、マスター
+
+@スイハ
+みんなの為にも！
+
+;;暗転
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+# face 44017002 "sad"
+# imagescale 0 1 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# voice 4017 "suiha_0037"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@スイハ
+キリがない…
+
+# bgm "stop"
+# se "SE_6225"
+# textflame 0 0
+@
+ガチャン、と背後で音がする
+
+# face 44017002 "surprise"
+# voice 4017 "suiha_0022"
+# textflame 1 1
+@スイハ
+え…？
+この音、エレベーター？
+
+# textflame 0 0
+@
+何者かがスイハとマスターも
+利用したエレベーターを操作している
+
+# alpha 44017002 0 0.3
+# textflame 0 0
+@
+降り立ったのは…
+
+;;演出：ゾンビ化
+# bgmfile "bgm162_163" "BgmPJZero001" 0
+# alpha 900026 1 1
+# alpha 900027 1 1
+# textwindow "close"
+# waitandnext 2
+
+# alpha 900026 0 1
+# alpha 900027 0 1
+# alpha 900028 1 1
+# alpha 900030 1 1
+# waitandnext 2
+
+# alpha 900028 0 1
+# alpha 900030 0 1
+# waitandnext 2
+
+# face 44017002 "sad"
+# alpha 44017002 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@スイハ
+ゾンビ化が治ってるなんて…
+そんな訳ないですよね…
+
+;;スイハが攻撃する
+# se "SE_4302"
+# fadein "white" 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+# face 44017002 "angry"
+# voice 4017 "suiha_battle_0005"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+くっ！
+ゾンビ化しているせいか
+攻撃しても倒れません
+
+@スイハ
+これでは足止めどころか
+こちらが消耗するばかりです
+
+@スイハ
+抑制薬があるとわかった以上
+戦い続けるのは
+得策ではありませんね
+
+# textflame 0 0
+@
+「行こう、スイハ！」
+一際力強い声が響く
+
+# face 44017002 "usual"
+# voice 4017 "suiha_0032"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+はい！
+
+;;暗転挟む
+# se "SE_5575"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+# face 44017002 "surprise"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@スイハ
+あの扉…不思議なくぼみが
+
+# textflame 0 0
+@
+「それだ、鍵を使うんだ！」
+凛々しい声の指示が飛ぶ
+
+# face 44017002 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+はい！
+開け…やぁっ！
+
+;;明転
+# se "SE_0859"
+# fadeout "white" 1
+# waitandnext 1
+
+;;背景：白
+# background "bg_white"
+# bgm "stop"
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+# face 44017002 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 2
+@スイハ
+開いた…！
+
+# se "SE_6226"
+# subfillrect 1 "black" 0.2 0 0.7
+# textflame 0 0
+# textalign "center"
+@
+　
+『抑制薬』を入手した
+
+;;暗転
+# subfillrect 1 "black" 0.5 0.7 0
+# fadeout "black" 0.5
+# waitandnext 0.8
+# textalign "center"
+@
+　
+『抑制薬』を入手した
+
+;;背景：洋館の地下ビフレスト社研究所の薄暗い廊下
+# background "bifrost"
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@スイハ
+これがあれば、みんなを…
+でも、数に限りが…
+
+# textflame 0 0
+@
+「1本でも残せれば複製できる」
+後は仲間を救う為に使おう
+言外に込められた想い
+
+# imagescale 0 1.5 0
+# face 44017002 "usual"
+# voice 4017 "suiha_0032"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+はい、マスター！
+この抑制薬を矢じりに塗れば…
+
+# move 900026 1 0
+# layer 900026 2
+# mask 900026 off
+# se "SE_6226"
+# imagealpha 0 0.7 0.2
+# imagepos 0 0 0
+# textflame 0 0
+# textalign "center"
+@
+『抑制薬』と
+『特殊矢』を調合して
+『治療矢』を作った
+
+# imagealpha 0 0 0.2
+;;文字赤く
+# alpha 44017002 0 0.3
+# move 900026 2 0.5
+# alpha 900026 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@シェキナー
+[8b0000]アアアア、アアアアアア！[-]
+
+# imagescale 0 1 0
+# face 44017002 "angry"
+# move 44017002 4 0
+# layer 44017002 4
+# mask 44017002 on
+# alpha 44017002 1 0.3
+# textboxarrow 0 3
+@スイハ
+シェキナー！！
+少しだけ我慢してください
+
+# se "SE_4302"
+# voice 4017 "suiha_battle_0004"
+# textboxarrow 0 3
+@スイハ
+この矢で……
+射抜きます！！
+
+;;演出：矢を放って以下のシェキナーゾンビ化が治る
+# se "SE_4817"
+# effectbody 2001 32 -480 -200 5
+# effectstart 2001
+# textwindow "close"
+# waitandnext 1
+
+# alpha 900026 0 1
+# alpha 400711 1 1
+# waitandnext 1.5
+
+# voice 4007 "shekina_0037"
+# textwindow "nomal"
+# textboxarrow 0 1
+@シェキナー
+う、うぅ…
+
+# face 44017002 "happy"
+# voice 4017 "suiha_0006"
+# textboxarrow 0 3
+@スイハ
+効いた…効きました！
+やりましたよマスター！
+
+# textflame 0 0
+@
+「それじゃあ、次だね」
+その声は、喜びとは程遠い
+
+# face 44017002 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@スイハ
+次…？
+
+# se "SE_6217"
+# bgmfile "bgm164_165" "BgmPJZero001" 0
+# alpha 400711 0 0.3
+# alpha 44017002 0 0.3
+# alpha 810004 1 0.5
+# alpha 810099 1 0.5
+# textboxarrow 0 0
+@ゾンビ異族
+ギャ、オオ…
+
+# textflame 0 0
+@
+「危ない！」
+その声の主は、
+油断なんて一切見せなかったのに
+
+# alpha 810004 0 0.5
+# alpha 810099 0 0.5
+# face 44017002 "angry"
+# voice 4017 "suiha_0037"
+# move 44017002 3 0
+# mask 44017002 off
+# alpha 44017002 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+くっ…
+
+# textboxarrow 0 2
+@スイハ
+抑制薬ならきっと一撃だけど
+限りがあるから、使えない…
+
+# textboxarrow 0 2
+@スイハ
+これまで通り倒すしか！
+
+;;バトル
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 44017002 0 0
+# waitandnext 0.2

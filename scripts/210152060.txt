@@ -1,0 +1,454 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１５章 章タイトル「クリティカルフェイズ―連携―」
+;;第2話―６　タイトル：終焉を望む者
+;;2_6_0
+;;スクリプト最後の背景：花畑
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgm "stop"
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 3
+# alpha 5101431 0 0
+# mask 5101431 off
+;;ヴァリン
+# body 18
+# pos 18 3
+# scale 18 0.8 0
+# layer 18 2
+# alpha 18 0 0
+# mask 18 off
+;;異族化アルマス
+# body 5103831
+# pos 5103831 3
+# scale 5103831 0.8 0
+# layer 5103831 3
+# alpha 5103831 0 0
+# mask 5103831 off
+;;-----------------------------------------
+;;回想
+# imageset 0 "bg_white_circle"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;第2話―６　タイトル：終焉を望む者
+;;//地上から天上世界に上がる演出
+# textwindow "close"
+# se "SE_0057"
+# fadeout "black" 0
+# waitandnext 1.2
+
+;;//背景：天上世界：plain
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_0644"
+# waitandnext 1.0
+
+;;//大きな着地音
+# se "SE_11621"
+# shake 0 0.5
+# waitandnext 0.5
+
+# se "SE_0944"
+# face 196 "surprise"
+# alpha 196 1 0.5
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0053"
+@アルマス
+痛っ…！
+はぁ…やっと…やっとついた…
+
+# face 196 "sad"
+# textboxarrow 0 2
+@アルマス
+ヴァリン博士…絶・無理があった
+のよ…いくら中心部に近づけなく
+なってるからって…
+
+# textboxarrow 0 2
+@アルマス
+ユグドラシルを通らないで地上から
+天上世界まで上がるなんて
+
+# face 196 "angry"
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0041"
+@アルマス
+ああ、もうっ
+あれからどのくらい時間が経った
+んだろ…
+
+# face 196 "normal"
+# textboxarrow 0 2
+@アルマス
+とにかく、ティルフィングと
+ラグナロクを探さないとっ
+
+# sestop "SE_0944"
+# waitandnext 0.2
+
+;;//回想シーン
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+;;//背景：ラグナロク機関：in_ragnarok_institution
+# background "in_ragnarok_institution"
+# alpha 196 0 0
+# alpha 18 1 0
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.2
+
+# bgm "bgm102" 0
+# fadein "white" 1
+# waitandnext 1
+
+# textwindow "normal"
+# voice 9993 "valyn_0036"
+# textboxarrow 0 2
+@ヴァリン
+頼んだわよ、アルマス
+アンタのキラーズには特別な調整が
+施してあるから
+
+@ヴァリン
+ティルフィングとラグナロク
+この二人とスムーズに連携できるよう
+共鳴率を高めてあるわ
+
+# face 18 "smile_2"
+# voice 9993 "valyn_0044"
+@ヴァリン
+出会った瞬間、親友レベルで
+意思疎通ができるわよ！
+
+# face 18 "surprise"
+@ヴァリン
+えっ？
+どうしてこの二人なのかって？
+
+# face 18 "smile_1"
+@ヴァリン
+ティルとは長い付き合いだし、
+ラグナロクはずっと天上世界を
+守ってきたキル姫だから
+
+# face 18 "normal_1"
+@ヴァリン
+それに、アタシの研究者としての
+勘が囁くのよ
+ラグナロクがもってるバイブス…
+
+# face 18 "normal_2"
+@ヴァリン
+キル姫がバイブスを有している時点で
+特殊だけど、彼女のバイブスは何か
+特別なものなの
+
+# face 18 "smile_1"
+@ヴァリン
+確証があるわけじゃないけどね
+ま、とにかく…
+
+@ヴァリン
+これで初対面のアンタがアタシの
+計画を伝えても二人とも快く協力して
+くれると思うわ
+
+# face 18 "smile_2"
+# voice 9993 "valyn_0047"
+@ヴァリン
+フフン♪
+アタシってば、天才よね
+
+# face 18 "smile_1"
+@ヴァリン
+それじゃ気をつけて
+改良は加えたけど、かなり古い
+装置だから…
+
+@ヴァリン
+ティルによろしく伝えてね
+
+# face 18 "sad"
+@ヴァリン
+アンタがティルを連れてくる頃、
+アタシ自身はどうなってるか…
+分かんないし…
+
+# face 18 "smile_1"
+@ヴァリン
+それまでにディスラプターの準備は
+しっかり整えておくから、
+安心して
+
+;;//回想終了
+# textwindow "close"
+# se "SE_11762"
+# fadeout "white" 1
+# waitandnext 1
+
+;;//背景:天上世界：plain
+# background "plain"
+# alpha 18 0 0
+# imagealpha 0 0 0
+# face 196 "normal"
+# alpha 196 1 0
+# textwindow "close"
+# waitandnext 0.2
+
+# se "SE_0944"
+# fadein "white" 1
+# waitandnext 1
+
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0042"
+@アルマス
+まずはティルフィングを見つけないと
+ヴァリン博士の言ってたことが
+絶・本当なら…
+
+# face 196 "sad"
+# textboxarrow 0 2
+@アルマス
+私はティルフィングの居場所も
+感知できそうだけど…ん？
+
+# face 196 "happy"
+# textboxarrow 0 2
+@アルマス
+この感覚…ふふっ
+絶・幸先良いわね！
+
+# se "SE_0740"
+# textwindow "close"
+# alpha 196 0 0.5
+# waitandnext 0.5
+
+# sestop "SE_0944"
+;;//画面スライド
+# fadeout "black" 1
+# waitandnext 1.5
+
+;;//背景：花畑：flower garden
+# background "flower_garden"
+# alpha 196 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_0791"
+# face 196 "surprise"
+# alpha 196 1 0.5
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0035"
+@アルマス
+…何、ここっ？
+ティルフィングの気配を辿って
+洞窟を進んできたら
+
+# face 196 "sad"
+@アルマス
+こんなところに花畑なんて…
+しかもこれ、冥花？
+
+;;//ティルフィング・擬彩が現れる
+# bgmfile "bgm409" "BgmIntegralNoahEvent" 0
+# alpha 196 0 0.5
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# voice 510143 "tyrufing_iz_0001"
+# textboxarrow 0 2
+@ティルフィング
+どなたですか？
+ここで何を？
+
+# alpha 5101431 0 0.5
+# face 196 "surprise"
+# alpha 196 1 0.5
+# textboxarrow 0 2
+@アルマス
+あ！
+ティルフィング…？
+
+# move 196 3 0
+# textwindow "moya"
+# mask 196 off
+# textboxarrow 0 0
+;;アルマス（独白）
+@アルマス
+ヴァリン博士に見せてもらった
+映像と少し違う…それに雰囲気も…
+
+# face 196 "happy"
+# textboxarrow 0 0
+;;アルマス（独白）
+@アルマス
+でも、この感覚は間違いない
+彼女がティルフィングね！
+
+# move 196 4 0.5
+# move 5101431 2 0
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# textwindow "normal"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0001"
+@アルマス
+私はアルマス！
+あなた、ティルフィングよねっ？
+
+# face 196 "normal"
+@アルマス
+あなたに話があって来たの
+インテグラルノア計画についての
+話よ！
+
+# textboxarrow 0 1
+# voice 510143 "tyrufing_iz_0028"
+@ティルフィング
+"擬彩されし不可逆世界"
+《インテグラルノア》計画について
+ですか…
+
+@ティルフィング
+アナタがどこでその計画について
+知ったのか分かりませんが…
+どのような話でしょう？
+
+# face 196 "happy"
+# textboxarrow 0 3
+@アルマス
+お！ヴァリン博士の言ってた通り
+話が絶・早いわねっ
+
+# face 5101431 "angry"
+# textboxarrow 0 1
+@ティルフィング
+ヴァリン…？
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+私は計画をスムーズに進めるため
+あなた達の手伝いをしに来たの！
+一緒に世界を救いましょう
+
+# face 5101431 "normal"
+# textboxarrow 0 1
+@ティルフィング
+そう、ヴァリンがアナタを…
+アナタも世界の救済を望んでいるのね
+
+# textboxarrow 0 3
+@アルマス
+絶・当然よ！
+ええと、詳しい話は――
+
+# textboxarrow 0 1
+@ティルフィング
+必要ありません
+アナタは受け入れてくれれば
+いいんですから
+
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+受け入れる？
+って、何を…？
+
+# bgmfile "bgm410" "BgmIntegralNoahBattle001" 0
+# textboxarrow 0 1
+# voice 510143 "tyrufing_iz_kyara_8001"
+@ティルフィング
+もちろん、「アナタ」自身を
+さあ、ともに咲き乱れて
+
+# face 196 "sad"
+# textboxarrow 0 3
+@アルマス
+うっ？
+何、この感覚？
+共鳴…とは違う…
+
+@アルマス
+これは…ティルフィングの記憶…？
+覚えのない感覚が…
+知らない記憶が…
+
+# face 196 "angry"
+# voice 9943 "almace_navikan_0038"
+@アルマス
+私の中に、「私」自身が…
+ああああああああ！？
+
+# textboxarrow 0 1
+@ティルフィング
+そう…少し強引だったけれど、
+アナタなら分かってくれますよね
+
+# textboxarrow 0 1
+@ティルフィング
+そのまま受け入れて…
+理解して下さい
+
+;;//アルマスが擬彩化する
+# textwindow "close"
+# se "SE_11622"
+# shake 0 1.0
+# alpha 196 0 1.5
+# move 5103831 4 0
+# alpha 5103831 1 1.5
+# mask 5103831 on
+# waitandnext 2.0
+
+# textwindow "normal"
+# textboxarrow 0 3
+@アルマス
+ああ…ああ、そうだったのね
+うん…全て理解したわ
+
+@アルマス
+"あの子達"の苦しみも、
+あなた達が目指す道も
+
+# voice 510383 "almace_iz_kyara_2001"
+@アルマス
+方舟に咲き乱れしは、蒼き露の雫
+その一片が示す言の葉は絶えなき絆
+完全なる透過の世界に綻びを
+
+# textboxarrow 0 1
+# voice 510143 "tyrufing_iz_kyara_8001"
+@ティルフィング
+ようこそ、アルマス
+歓迎します
+さあ…
+
+@ティルフィング
+ともに"擬彩されし不可逆世界"
+《インテグラルノア》計画を
+完遂しましょう

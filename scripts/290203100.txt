@@ -1,0 +1,723 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;２章３話　「エデンクライシス―覚醒―」
+;;第6話　タイトル：もう一度出会うために
+;;6_10
+;;スクリプト最後の背景：黒
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgm "stop"
+;;-----------------------------------------
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 2
+# alpha 5101431 0 0
+# mask 5101431 off
+;;異族化アルマス
+# body 5103831
+# pos 5103831 3
+# scale 5103831 0.8 0
+# layer 5103831 2
+# alpha 5103831 0 0
+# mask 5103831 off
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;エルキュール
+# body 202511
+# pos 202511 3
+# scale 202511 0.8 0
+# layer 202511 2
+# alpha 202511 0 0
+# mask 202511 off
+;;ミネルヴァ
+# body 302511
+# pos 302511 3
+# scale 302511 0.8 0
+# layer 302511 2
+# alpha 302511 0 0
+# mask 302511 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;異族化フライクーゲル
+# body 5500231
+# pos 5500231 3
+# scale 5500231 0.8 0
+# layer 5500231 2
+# alpha 5500231 0 0
+# mask 5500231 off
+;;アルテミス
+# body 5400131
+# pos 5400131 3
+# scale 5400131 0.8 0
+# layer 5400131 2
+# alpha 5400131 0 0
+# mask 5400131 off
+;;レーヴァテイン・擬彩
+# body 198
+# pos 198 3
+# scale 198 0.8 0
+# layer 198 2
+# alpha 198 0 0
+# mask 198 off
+;;ロンギヌス・擬彩
+# body 5300131
+# pos 5300131 3
+# scale 5300131 0.8 0
+# layer 5300131 2
+# alpha 5300131 0 0
+# mask 5300131 off
+;;異族化マサムネ
+# body 5100131
+# pos 5100131 3
+# scale 5100131 0.8 0
+# layer 5100131 2
+# alpha 5100131 0 0
+# mask 5100131 off
+;;異族化パラシュ
+# body 5200431
+# pos 5200431 3
+# scale 5200431 0.8 0
+# layer 5200431 2
+# alpha 5200431 0 0
+# mask 5200431 off
+;;神令ラグナロク
+# body 3103611
+# pos 3103611 3
+# scale 3103611 0.8 0
+# layer 3103611 2
+# alpha 3103611 0 0
+# mask 3103611 off
+;;-----------------------------------------
+;;背景の暗転
+# imageset 2 "bg_black"
+# imagelayer 2 3
+# imagealpha 2 0 0
+;;-----------------------------------------
+;;第6話　タイトル：もう一度出会うために
+;;//背景：ユグドラシル
+# move 5101431 2 0
+# face 5101431 "normal"
+# alpha 5101431 1 0
+# mask 5101431 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 103611 4 0
+# face 103611 "normal"
+# alpha 103611 1 0
+# mask 103611 on
+# voice 510143 "tyrufing_iz_unit_0008"
+@ティルフィング
+純潔なる彩りよ…咲き誇れ
+
+# se "SE_4000"
+# waitandnext 0.5
+
+# face 103611 "angry"
+# textboxarrow 0 3
+# voice 1036 "ragnarok_unit_0009"
+@ラグナロク
+白き意志は、誰にも砕けはしない！
+
+;;//ティルフィングの攻撃をラグナロクが弾く
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm214" "BgmAncientKillers001" 0
+# face 5101431 "surprise"
+# textboxarrow 0 1
+# voice 510143 "tyrufing_iz_0023"
+@ティルフィング
+どうして…！
+私の攻撃を弾き返すなんて…
+
+# face 5101431 "normal"
+# textboxarrow 0 1
+@ティルフィング
+ラグナロク…力を取り戻したのですね
+
+# textboxarrow 0 3
+# voice 1036 "ragnarok_unit_0005"
+@ラグナロク
+もうあなた達の思い通りにはさせない
+さあ、みんな！
+この御旗に集え！
+
+# face 5101431 "sad"
+# textboxarrow 0 1
+@ティルフィング
+ユグドラシルも
+奪われてしまいました…
+
+# textboxarrow 0 1
+# voice 510143 "tyrufing_iz_0015"
+@ティルフィング
+“擬彩されし不可逆世界”
+《インテグラルノア》はもう…
+
+# alpha 5101431 0 0.5
+# alpha 103611 0 0.5
+# move 196 3 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0004"
+@アルマス
+絶・心配無用よ
+ティルフィング
+
+;;//アルマスの姿がインテグラルに
+# se "SE_0845"
+# textwindow "close"
+# alpha 196 0 0.5
+# move 5103831 3 0
+# face 5103831 "normal"
+# alpha 5103831 1 0.5
+# mask 5103831 off
+# waitandnext 1.2
+
+# alpha 5103831 0 0.5
+# move 103611 3 0
+# face 103611 "usual"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+アルマスっ…
+インテグラルキラーズに戻ったのね…
+
+# alpha 103611 0 0.5
+# move 5103831 3 0
+# face 5103831 "normal"
+# alpha 5103831 1 0.5
+# mask 5103831 off
+# textboxarrow 0 2
+# voice 510383 "almace_iz_0030"
+@アルマス
+随分と長い悪夢を見ていたわ
+繋がりを断ってくれて、ありがとう
+
+# textboxarrow 0 2
+@アルマス
+おかげでやっと…
+本来の私に戻れた
+
+# textboxarrow 0 2
+@アルマス
+方舟に咲き乱れしは、蒼き露の雫
+その一片が示す言の葉は、
+“絶えなき絆”
+
+# alpha 5103831 0 0.5
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+絶えなき…絆…
+
+# alpha 103611 0 0.5
+# move 5103831 2 0
+# face 5103831 "normal"
+# alpha 5103831 1 0.5
+# mask 5103831 on
+# textboxarrow 0 1
+# move 5101431 4 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# voice 510383 "almace_iz_0007"
+@アルマス
+完全なる透過の世界に綻びを
+ティルフィング、ユグドラシルの
+管理権を取り戻すわよ
+
+# textboxarrow 0 3
+# voice 510143 "tyrufing_iz_0003"
+@ティルフィング
+そうですね
+奪われたのなら、
+奪い返せば良いだけです
+
+# alpha 5103831 0 0.5
+# move 103611 2 0
+# face 103611 "angry"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+@ラグナロク
+やらせはしないわ！
+
+# textboxarrow 0 3
+@ティルフィング
+アルマスは再び私達の同胞と
+なりました
+戦力差は歴然ですよ
+
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0032"
+@ラグナロク
+ええ、そうね…
+だから、私は決断したの
+
+# textboxarrow 0 1
+@ラグナロク
+今ここで、
+反転世界を切り離す！
+
+# face 5101431 "surprise"
+# textboxarrow 0 3
+# voice 510143 "tyrufing_iz_0022"
+@ティルフィング
+何てことをっ…！？
+
+# face 103611 "normal"
+# textboxarrow 0 1
+@ラグナロク
+すでに奪われてしまった天上世界は
+およそ八割…たった二割しか
+守れないけれど…
+
+# textboxarrow 0 1
+@ラグナロク
+全てを奪われるより…
+幾らか、ましよ
+
+# textboxarrow 0 3
+@ティルフィング
+本気なのですか…
+何て、悲壮な決断を…
+
+;;//画面揺れ
+# se "SE_0637"
+# shake 0 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm410" "BgmIntegralNoahBattle001" 0
+# alpha 103611 0 0.5
+# move 5103831 2 0
+# face 5103831 "normal"
+# alpha 5103831 1 0.5
+# mask 5103831 on
+# textboxarrow 0 1
+# voice 510383 "almace_iz_0001"
+@アルマス
+…ティルフィング、天上の方舟が
+旅立つわ
+
+# face 5101431 "normal"
+# textboxarrow 0 3
+# voice 510143 "tyrufing_iz_0003"
+@ティルフィング
+予定より小さな世界に
+なってしまいましたけれど、
+仕方ありませんね
+
+# textboxarrow 0 3
+@ティルフィング
+理想郷の門出を祝しましょう
+
+# textboxarrow 0 1
+@アルマス
+悪くない判断だったわ、ラグナロク
+断ち切ることで全てを解決したのね
+
+# alpha 5103831 0 0.5
+# alpha 5101431 0 0.5
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+アルマス…！
+私はっ…
+
+# alpha 103611 0 0.5
+# move 5101431 3 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+@ティルフィング
+皆さん、私達の役目は終わりました
+あとは…礎になるだけです
+行きましょう
+
+# alpha 5101431 0 0.5
+# move 198 3 0
+# alpha 198 1 0.5
+# mask 198 off
+# textboxarrow 0 2
+@レーヴァテイン
+ああ…
+これで終わるんだね
+
+# alpha 198 0 0.5
+# move 5300131 3 0
+# face 5300131 "normal"
+# alpha 5300131 1 0.5
+# mask 5300131 off
+# textboxarrow 0 2
+# voice 530013 "ronginusu_iz_0005"
+@ロンギヌス
+天上の方舟よ
+愛によってどこまでも
+飛び続けて下さい
+
+# alpha 5300131 0 0.5
+# move 5200431 3 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 off
+# textboxarrow 0 2
+@パラシュ
+理想に、やっと手が届いたかな
+
+# alpha 5200431 0 0.5
+# move 5100131 3 0
+# face 5100131 "normal"
+# alpha 5100131 1 0.5
+# mask 5100131 off
+# textboxarrow 0 2
+@マサムネ
+強く…強くあれ
+
+# alpha 5100131 0 0.5
+# move 5500231 3 0
+# face 5500231 "normal"
+# alpha 5500231 1 0.5
+# mask 5500231 off
+# textboxarrow 0 2
+@フライクーゲル
+きっと、みんなヘアピィに
+なれるよ
+
+# alpha 5500231 0 0.5
+# move 5400131 3 0
+# face 5400131 "happy"
+# alpha 5400131 1 0.5
+# mask 5400131 off
+# textboxarrow 0 2
+# voice 540013 "arutemisu_iz_0005"
+@アルテミス
+美しい光景ですね
+
+;;//画面白フラッシュ
+;;//画面揺れ
+# se "SE_9139"
+# se "SE_0637"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;//インテグラルキラーズ達が飛び去っていく
+# se "SE_9021"
+# textwindow "close"
+# leftout 5400131 0.5
+# waitandnext 0.5
+
+# alpha 5400131 0 0
+# move 202511 3 0
+# face 202511 "surprise"
+# alpha 202511 1 0.5
+# mask 202511 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 2025 "hercule_0023"
+@エルキュール
+反転世界が…離れていきますっ
+
+# alpha 202511 0 0.5
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+アルマス！
+ティルフィング！
+あなた達も新世界に行くのね？
+
+# alpha 103611 0 0.5
+# move 5103831 2 0
+# face 5103831 "normal"
+# alpha 5103831 1 0.5
+# mask 5103831 on
+# textboxarrow 0 1
+# move 5101431 4 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+@アルマス
+いいえ
+私達にその資格はない
+
+# textboxarrow 0 3
+@ティルフィング
+だから…
+さようなら、ラグナロク
+…永遠に
+
+# textboxarrow 0 1
+@アルマス
+もう二度と、会うことはないわ
+
+;;//二人が飛び去る
+# se "SE_9021"
+# textwindow "close"
+# rightout 5101431 0.5
+# waitandnext 0.5
+
+# se "SE_9021"
+# rightout 5103831 0.5
+# waitandnext 0.5
+
+# alpha 5101431 0 0
+# alpha 5103831 0 0
+# move 103611 3 0
+# face 103611 "surprise"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+待って！
+だったら、あなた達は何でっ…
+
+# bgm "stop"
+;;//背景：黒
+;;ラグナロク（声だけ）
+# alpha 103611 0 0.5
+# imagepos 2 0 0
+# imagealpha 2 1 0.5
+# textboxarrow 0 0
+@ラグナロク
+何で…こんなことを…
+
+;;//背景：ユグドラシル
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# imagealpha 2 0 0
+# alpha 103611 0 0
+# move 103611 3 0
+# face 103611 "sad"
+# alpha 103611 1 0
+# mask 103611 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm214_03" "BgmAncientKillers001" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+…………
+
+# move 103611 2 0.5
+# mask 103611 on
+# move 302511 4 0
+# face 302511 "normal"
+# alpha 302511 1 0.5
+# mask 302511 on
+# textboxarrow 0 3
+# voice 3025 "minerva_0003"
+@ミネルヴァ
+天上世界の崩壊は完全に止まりました
+残ったのは…ほんの二割程度ですが…
+
+# textboxarrow 0 1
+@ラグナロク
+そう…
+
+# textboxarrow 0 3
+@ミネルヴァ
+元気を出して下さい、ラグナロク
+私達は天上世界を守り抜いたんですっ
+私達の勝利ですっ
+
+;;ラグナロク（独白）
+# move 103611 2 0
+# textboxarrow 0 0
+# textwindow "moya"
+@ラグナロク
+本当に、そうだったの…？
+私の選択は正しかったの…？
+
+# face 103611 "normal"
+# textboxarrow 0 1
+# textwindow "normal"
+@ラグナロク
+…ユグドラシルに潜るわ
+
+# textboxarrow 0 3
+# voice 3025 "minerva_0028"
+@ミネルヴァ
+反転世界を追うことは
+できませんよ…
+アルマス達の足取りも…
+
+# textboxarrow 0 1
+@ラグナロク
+それは、もういいの
+先に“繋がり”を断ったのは
+私なんだから…
+
+# textboxarrow 0 1
+@ラグナロク
+ただ…気になることがあって…
+それを調べないと気が済まない…
+
+# textboxarrow 0 1
+@ラグナロク
+復興で忙しい中、悪いけれど
+お願いね…
+
+# textboxarrow 0 3
+# voice 3025 "minerva_0003"
+@ミネルヴァ
+はい…ラグナロクもお気をつけて
+
+;;//天上世界遠景
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "aerial_shoot"
+# alpha 103611 0 0
+# alpha 302511 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;ナレーション
+# textflame 0 0
+# textwindow "normal"
+@
+反転世界はいずこかへと消え去り、
+天上世界はかろうじて消滅を
+免れた
+
+;;ナレーション
+@
+しかし僅か二割ほどになった
+世界で暮らすには人々の数が多すぎる
+
+;;ナレーション
+@
+大勢が難民と化し、地上へと
+大規模な移民が行われた
+
+;;ナレーション
+@
+地上世界で暮らしていた人々との
+軋轢は避けられず、再建された
+教会の威信も役には立たなかった
+
+;;ナレーション
+@
+奏官達が覇権を競って争いを続けて
+いた地上に新たな火種が舞い込んだ
+ことで…
+
+;;ナレーション
+@
+地上世界での争いは激しさを増して
+いく
+
+;;ナレーション
+@
+そうして年月は流れ、
+やがて――
+
+;;//背景：ラグナロクの間
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "abyss_room"
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0
+# mask 103611 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm325" "BgmLostRagnarokCommand" 0
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+そう…そういうことだったの…
+
+# textboxarrow 0 2
+@ラグナロク
+あの子…もう顔も名前も忘れて
+しまったけれど…あの子との
+共鳴を断ったのは正しかった
+
+# textboxarrow 0 2
+@ラグナロク
+私の選択は間違っていなかった
+全ての元凶は…バイブス
+
+# textboxarrow 0 2
+@ラグナロク
+あの不完全な存在を取り除かない
+限り、世界は救済できない
+
+# textboxarrow 0 2
+@ラグナロク
+インテグラルキラーズは、
+あのとき出来る限りのことをした…
+そういうことだったのね
+
+# textboxarrow 0 2
+@ラグナロク
+だったら私は…
+私のやり方で理想郷に…千年王国に
+至ってみせる
+
+;;//ラグナロクがコマンド化する
+# se "SE_11086"
+# textwindow "close"
+# alpha 103611 0 0.5
+# move 3103611 3 0
+# face 3103611 "usual"
+# alpha 3103611 1 0.5
+# mask 3103611 off
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 310361 "ragnarok_c_unit_0009"
+@ラグナロク
+全てのバイブスを排除し、
+完全なる世界へと導くわ
+
+# textboxarrow 0 2
+@ラグナロク
+神令、発動

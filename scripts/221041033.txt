@@ -1,0 +1,193 @@
+;;-----------------------------------------
+;;【ファンキル　クリスマスイベント2018　FB修正版2018.11.26
+;;【EP2】幸せな食卓
+;;2_3
+;;スクリプト最後の背景：ハルモニア周辺（可能であれば荒野っぽい雰囲気）
+;;-----------------------------------------
+# script "lisp"
+# background "wild"
+# bgm "bgm032" 0
+;;-----------------------------------------
+;;カリス（クリスマス用のボイスを鳴らすための呼び出し）
+# body 3602511
+# alpha 3602511 0 0
+;;フォルカス（クリスマス用のボイスを鳴らすための呼び出し）
+# body 3301811
+# alpha 3301811 0 0
+;;カリス（クリスマス）
+# body 3602521
+# pos 3602521 3
+# scale 3602521 0.8 0
+# layer 3602521 2
+# alpha 3602521 0 0
+# mask 3602521 off
+;;フォルカス（クリスマス）
+# body 3301821
+# pos 3301821 3
+# scale 3301821 0.8 0
+# layer 3301821 2
+# alpha 3301821 0 0
+# mask 3301821 off
+;;キプル
+# body 163
+# pos 163 3
+# scale 163 0.6 0
+# layer 163 2
+# alpha 163 0 0
+# mask 163 off
+;;-----------------------------------------
+# move 3602521 3 0
+# face 3602521 "normal"
+# alpha 3602521 1 0
+# mask 3602521 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0004"
+@カリス
+この子たちがあの作業場で暴れたら、
+大変だったね～
+
+# se "SE_6504"
+# emotionbody 1000 3 3602521 10 290
+# effectpattern 1000 1 3
+# effectstart 1000
+# face 3602521 "happy"
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0030"
+@カリス
+フォルカスが気づいてくれて、
+本当によかったよ～！ありがと！
+
+# textflame 0 0
+;;モノローグ
+@
+マスターもカリスに同意し、
+フォルカスに感謝の気持ちを伝える
+
+# alpha 3602521 0 0.5
+# move 3301821 3 0
+# face 3301821 "usual"
+# alpha 3301821 1 0.5
+# mask 3301821 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 330181 "forcas_t_0003"
+@フォルカス
+周囲の警戒は当然のことです
+お礼を言われるほどではありません
+
+# alpha 3301821 0 0.5
+# move 3602521 3 0
+# face 3602521 "normal"
+# alpha 3602521 1 0.5
+# mask 3602521 off
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0004"
+@カリス
+でも、そのおかげでお父さん達も
+無事に帰れたみたい！
+やっぱりフォルカスのお手柄だよ！
+
+# alpha 3602521 0 0.5
+# move 3301821 3 0
+# face 3301821 "shy"
+# alpha 3301821 1 0.5
+# mask 3301821 off
+# textboxarrow 0 2
+;;フォルカス（照れ）
+# voice 330181 "forcas_t_0042"
+@フォルカス
+…そうですか？
+私はただ、安全を守らなければと、
+そう思っただけです
+
+# se "SE_6504"
+# emotionbody 1001 3 3602521 10 290
+# effectpattern 1001 3 3
+# effectstart 1001
+# alpha 3301821 0 0.5
+# move 3602521 2 0
+# face 3602521 "happy"
+# alpha 3602521 1 0.5
+# mask 3602521 on
+# textboxarrow 0 1
+# move 163 4 0
+# alpha 163 1 0.5
+# mask 163 on
+# voice 6025 "chalice_t_0005"
+@カリス
+ふふっ、フォルカスらしいなぁ！
+でもこれで、あの家族は幸せな夜を
+過ごせるね！
+
+# effectskip 1001
+# se "SE_6513"
+# emotionbody 1002 8 3602521 80 250
+# effectpattern 1002 1 0
+# effectstart 1002
+# face 3602521 "sad"
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0026"
+@カリス
+だけど…今のところ、
+クリスマスの奇跡っていうより、
+お手伝いって感じかなぁ
+
+# effectskip 1002
+# se "SE_6504"
+# emotionbody 1003 10 3602521 -70 200
+# effectpattern 1003 2 3
+# effectstart 1003
+# face 3602521 "normal"
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0003"
+@カリス
+よーし！カリスちゃんも、
+でっかいミラクルを起こして
+みんなの願いを叶えてあげなくちゃ！
+
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0061"
+@カリス
+キプル！いっくよー！
+
+# textboxarrow 0 3
+# voice 9951 "kipuru_unit_0007"
+@キプル
+カリス！
+前を見て走らないと転びますよ！
+ああ！すみませんすみません！
+
+;;//演出：カリス、キプル移動
+# se "SE_5575"
+# se "SE_4747"
+# textwindow "close"
+# alpha 3602521 0 0.5
+# alpha 163 0 0.5
+# waitandnext 0.5
+
+# move 3301821 3 0
+# face 3301821 "angry"
+# alpha 3301821 1 0.5
+# mask 3301821 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 330181 "forcas_t_0027"
+@フォルカス
+また、勝手な行動を…
+マスター、私達も行きましょう！
+
+# se "SE_5575"
+# alpha 3301821 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+フォルカスに頷き、
+マスターもカリスを追って
+慌てて走り出す
+
+;;モノローグ
+@
+カリスとフォルカスは見た目も性格も
+正反対だが、意外といいコンビかも
+と、マスターは感じ始めていた

@@ -1,0 +1,509 @@
+;;-----------------------------------------
+;;SEA2章_3
+;;-----------------------------------------
+# script "lisp"
+# background "town_2"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 1
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 5
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;ハイス
+# body 292
+# pos 292 4
+# scale 292 0.8 0
+# layer 292 3
+# mask 292 off
+# alpha 292 0 0
+# brightness 292 0.5 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;紙
+# imageset 1 "SEA_diary_bg"
+# imagealpha 1 0 0
+# imagelayer 1 1
+# imagescale 1 1.2 0
+;;予告状
+# imageset 2 "SEA_Shekinah_Notice"
+# imagealpha 2 0 0
+# imagescale 2 1 0
+# imagelayer 2 3
+;;-----------------------------------------
+;;背景：町
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# se "SE_6170"
+# face 292 "sad"
+# alpha 292 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@？？？
+ううう…
+
+# voice 9917 "mimir_navikan_0002"
+# move 270 2 0.5
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ミーミル
+お爺さん
+どうされました？
+
+# face 292 "normal"
+# textboxarrow 0 3
+@？？？
+ああ、いや…すまんのう
+儂は…大丈夫じゃ
+
+# textboxarrow 0 3
+@？？？
+少し休めば…じきに落ち着く
+
+# voice 9917 "mimir_navikan_0001"
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+お顔の色が良くありません…
+マスター様、このようなときは
+どのようにすれば…
+
+;;選択肢
+# select "何かして欲しいことは？" "select_label_01"
+このようなときは
+どのようにすれば…
+
+# label "select_label_01"
+# textboxarrow 0 3
+@？？？
+そうじゃな…
+できれば日陰に運んでもらえると、
+助かるのう
+
+# voice 9917 "mimir_navikan_0033"
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+承知致しました
+マナナンさん、
+手伝っていただけますか？
+
+# voice 650401 "manannan_ura_0003"
+# move 270 1 0.5
+# alpha 270 0 0.3
+# move 292 2 0.5
+# move 6504011 4 0.5
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# textboxarrow 0 3
+@マナナン
+このお爺ちゃんを運ぶの？
+任せて～っ
+
+# move 6504011 3 0.5
+# se "SE_0683"
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# face 292 "smile"
+# textboxarrow 0 1
+@？？？
+お、おおおっ？
+お嬢ちゃん、力が強いのう…
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# bgm "bgm002" 0
+# alpha 292 0 0
+# alpha 6504011 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 292 3 0
+# face 292 "smile"
+# alpha 292 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+@？？？
+ふぅ…楽になってきたわい
+お嬢ちゃん達、ありがとう
+
+# face 292 "normal"
+# brightness 292 1 0.5
+# textboxarrow 0 2
+@ハイス
+儂はハイスじゃ
+あんた達、ここでは見ん顔じゃが
+旅人さんかな？
+
+# voice 9917 "mimir_navikan_0003"
+# alpha 292 0 0.3
+# move 270 2 0
+# face 270 "happy"
+# alpha 270 1 0.3
+# move 6504011 4 0
+# face 6504011 "usual"
+# alpha 6504011 1 0.3
+# textboxarrow 0 1
+@ミーミル
+はい
+私、ミーミルと申します
+
+# textboxarrow 0 1
+@ミーミル
+こちらにいらっしゃるマスター様の
+専属補佐官でございます
+
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+私のことは、マナナンって呼んで！
+
+# face 292 "normal"
+# alpha 292 1 0.3
+# alpha 270 0 0.3
+# alpha 6504011 0 0.3
+# textboxarrow 0 2
+@ハイス
+ミーミルさんにマナナンさん、
+それにマスターさん
+ありがとう
+
+# textboxarrow 0 2
+@ハイス
+儂はもう大丈夫じゃ
+
+;;選択肢
+# select "家まで送ります" "select_label_02"
+儂はもう大丈夫じゃ
+
+# label "select_label_02"
+# alpha 292 0 0.3
+# move 270 3 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+まだ、お顔の色が優れません
+お一人にするわけには…
+
+# face 292 "normal"
+# alpha 292 1 0.3
+# alpha 270 0 0.3
+# textboxarrow 0 2
+@ハイス
+すまんのう…
+儂も、すっかり老いた…
+
+# move 292 2 0.5
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# textboxarrow 0 3
+@マナナン
+このお爺ちゃんを家まで運ぶんだね
+任せて！
+
+# move 6504011 3 0.5
+# se "SE_0683"
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# face 292 "smile"
+# textboxarrow 0 1
+@ハイス
+おおおっ？
+担がれんでも、儂、歩ける…
+
+# voice 650401 "manannan_ura_0005"
+# face 6504011 "happy"
+# textboxarrow 0 2
+@マナナン
+アハハハハ！
+遠慮しなくていいよ～っ
+
+;;マナナンがハイスを担いで走り去る
+# se "SE_5575"
+# se "SE_9430"
+# alpha 292 0 0.3
+# alpha 6504011 0 0.3
+# textwindow "close"
+# waitandnext 0.8
+
+# voice 9917 "mimir_navikan_0060"
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+マナナンさん…！？
+そのような無茶をしてはいけませんっ
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;室内
+# background "201_room"
+# alpha 270 0 0
+# sestop "SE_6170"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 270 2 0
+# move 6504011 4 0
+# serif 1
+# textwindow "nomal"
+@ハイスの娘
+父を助けてくれて、
+ありがとうございました
+
+# face 270 "normal"
+# face 6504011 "normal"
+# alpha 270 1 0.3
+# alpha 6504011 1 0.3
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+どういたしまして！
+
+# serif 0
+# voice 9917 "mimir_navikan_0004"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+ハラハラしました…
+無事、お家に辿り着けて
+一安心です
+
+# serif 1
+@ハイスの娘
+お父さん！
+お医者さんにも安静にしてないと
+いけないって、あれほど…
+
+# alpha 270 0 0.3
+# alpha 6504011 0 0.3
+# move 292 3 0
+# face 292 "angry"
+# alpha 292 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@ハイス
+うるさいっ
+そんなことより、お客人に茶も
+出さんのか
+
+# face 292 "smile"
+# textboxarrow 0 2
+@ハイス
+あんた達、ありがとう
+せっかくじゃから、
+ゆっくりしていってくれ
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# voice 9917 "mimir_navikan_0034"
+# alpha 292 0 0.3
+# move 270 3 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+いえ
+私達はこれで失礼致します
+
+# serif 1
+# textwindow "nomal"
+@ハイスの娘
+おや？
+急ぎの用事でもあるのかい
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# serif 0
+# textboxarrow 0 2
+@ミーミル
+実は、怪盗シェキナーについて
+調べなければならないのです
+
+# serif 1
+@ハイスの娘
+ああ、あの怪盗さんね
+そういえば、今朝、家の前で
+予告状を拾ったのよね
+
+# serif 1
+@ハイスの娘
+見てみるかい？
+
+# serif 0
+# voice 9917 "mimir_navikan_0036"
+# face 270 "happy"
+# textboxarrow 0 2
+@ミーミル
+是非、お願い致します！
+
+# face 292 "normal"
+# alpha 292 1 0.3
+# alpha 270 0 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@ハイス
+…………
+
+# alpha 292 0 0.3
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@ハイスの娘
+ほら、これだよ
+今度はクライノートさんが
+狙われるんだねぇ…
+
+# serif 1
+# textwindow "close"
+# imagealpha 1 1 1
+# imagepos 1 0 0
+# imagealpha 2 1 0
+# imagepos 2 1500 0
+# waitandnext 1.5
+
+;;予告状
+# se "bgm602_basic_on_1"
+# imagemoveto 2 720 0 2
+# waitandnext 5
+
+# imagemoveto 2 0 0 2
+# waitandnext 5
+
+# imagemoveto 2 -720 0 2
+# waitandnext 5
+
+# imagealpha 2 0 1
+# imagealpha 1 0 1
+# waitandnext 1.5
+
+# voice 9917 "mimir_navikan_0001"
+# face 270 "normal"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+これは…
+マスター様、どう思われますか？
+
+;;選択肢
+# select "シェキナーらしくない" "select_label_03" "シェキナーっぽい" "select_label_04"
+マスター様、どう思われますか？
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# voice 9917 "mimir_navikan_0003"
+# face 270 "angry"
+# textboxarrow 0 2
+@ミーミル
+はい
+少々、演出過多なように
+お見受け致します
+
+# label "select_label_04"
+# labeljump "select_label_end"
+# face 270 "sad"
+# move 6504011 5 0
+# textboxarrow 0 2
+@ミーミル
+輝きに拘っておられるのは、
+シェキナーさんらしいかも
+しれませんが…
+
+# label "select_label_end"
+# voice 650401 "manannan_ura_0002"
+# move 270 2 0.5
+# move 6504011 4 0.5
+# face 6504011 "usual"
+# alpha 6504011 1 0.3
+# textboxarrow 0 3
+@マナナン
+ねえねえ
+クライノートって誰？
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+それは私もお尋ねしたいと
+思っておりました
+
+# serif 1
+# textwindow "nomal"
+@ハイスの娘
+クライノートさんは町外れの丘にある
+お屋敷に住んでる宝石商よ
+
+# serif 1
+@ハイスの娘
+こんなこと言っちゃ悪いけど、
+怪盗シェキナーに狙われても
+不思議じゃないわよね
+
+# move 292 5 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+なるほど…
+貴重なお話、ありがとうございました
+では、失礼致します
+
+# move 6504011 5 0.5
+# alpha 6504011 0 0.3
+# move 292 4 0.5
+# face 292 "normal"
+# alpha 292 1 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@ハイス
+…お嬢ちゃん達、達者でな
+
+# fadeout "black" 1
+# waitandnext 1

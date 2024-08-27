@@ -1,0 +1,574 @@
+;;-----------------------------------------
+;;海上編7-1
+;;-----------------------------------------
+# script "lisp"
+# background "sea_beach_day"
+# bgmfile "bgm386_387" "BgmSeaEventBattle005" 0
+;;-----------------------------------------
+# body 2503221
+# pos 2503221 3
+# scale 2503221 0.8 0
+# layer 2503221 1
+# mask 2503221 off
+# alpha 2503221 0 0
+# body 2401921
+# pos 2401921 3
+# scale 2401921 0.8 0
+# layer 2401921 3
+# mask 2401921 off
+# alpha 2401921 0 0
+# body 2101411
+# pos 2101411 3
+# scale 2101411 0.8 0
+# layer 2101411 2
+# mask 2101411 off
+# alpha 2101411 0 0
+# body 2103811
+# pos 2103811 3
+# scale 2103811 0.8 0
+# layer 2103811 4
+# mask 2103811 off
+# alpha 2103811 0 0
+# body 2202211
+# pos 2202211 3
+# scale 2202211 0.8 0
+# layer 2202211 2
+# mask 2202211 off
+# alpha 2202211 0 0
+# body 22000111
+# pos 22000111 3
+# scale 22000111 0.8 0
+# layer 22000111 2
+# mask 22000111 off
+# alpha 22000111 0 0
+# body 2811004
+# pos 2811004 3
+# scale 2811004 0.8 0
+# layer 2811004 3
+# mask 2811004 off
+# alpha 2811004 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imagescale 0 2 0
+# imageset 1 "e170701_map"
+# imagealpha 1 0 0
+# imagelayer 1 2
+# imageset 2 "kiri_02"
+# imagescale 2 1 0
+# imagealpha 2 0 0
+# imagelayer 2 3
+# imageset 3 "kiri_02"
+# imagescale 3 1.5 0
+# imagealpha 3 0 0
+# imagelayer 3 4
+# imageset 4 "kiri_02"
+# imagescale 4 2 0
+# imagealpha 4 0 0
+# imagelayer 4 5
+# imageset 5 "kiri_02"
+# imagescale 5 1.2 0
+# imagealpha 5 0 0
+# imagelayer 5 5
+# imageset 6 "bg_white"
+# imagealpha 6 1 0
+# imagepos 6 0 0
+# imagelayer 6 5
+# imagescale 6 3 0
+;;-----------------------------------------
+;;【EP1】ある条件
+;;背景：ラグーナ島全景
+# fadein "black" 1
+# textwindow "close"
+# waitandnext 1.3
+
+# imagealpha 6 0 1
+# imagealpha 2 1 0
+# imagepos 2 -150 -100
+# imagealpha 3 1 0
+# imagepos 3 80 240
+# imagealpha 4 1 0
+# imagepos 4 100 20
+# imagealpha 5 1 0
+# imagepos 5 -300 50
+# imagealpha 1 1 0
+# imagepos 1 0 10
+# waitandnext 1.4
+
+# imagemoveto 2 -300 -100 1
+# imagealpha 2 0 1
+# imagemoveto 3 100 240 1
+# imagealpha 3 0 1
+# imagemoveto 4 200 20 1
+# imagealpha 4 0 1
+# imagemoveto 5 -350 50 1
+# imagealpha 5 0 1
+# imagescale 1 1.1 1
+# waitandnext 1.3
+
+# textflame 0 0
+# textwindow "nomal"
+@
+青い海に浮かぶ常夏の島、
+ラグーナ島
+
+# textflame 0 0
+@
+その島ではキル姫達が
+外敵から島を守る使命を持ち
+日々戦い続ける
+
+# imagealpha 1 0 1
+# waitandnext 1.2
+
+# alpha 2101411 1 0.5
+# textflame 0 0
+@
+マスターとティルフィングが
+島の見回りをしている中、
+ふと、ある話題があがる
+
+# textflame 0 0
+@
+それはマスターとキル姫が結ぶ
+特殊な契約という話だった
+
+# textflame 0 0
+@
+その契約を結んでみたいという
+ティルフィングに、マスターは
+やってみようと言う
+
+# alpha 2101411 0 0.5
+# alpha 2503221 1 0.5
+# textflame 0 0
+@
+情報を集め、神と契約したという
+ティファレトをたずねると、
+フェイルノートが詳しいと教えられる
+
+# textflame 0 0
+@
+契約に必要な
+『誓詞印紙』を得るためにも
+
+# textflame 0 0
+@
+離れ小島にいるフェイルノートに
+会わなくてはならないらしい
+
+# alpha 2503221 0 0.5
+# textflame 0 0
+@
+さまざまな困難を乗り超えて
+島にたどり着いたマスター達は、
+フェイルノートを探すことに――
+
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：ビーチ
+# textwindow "close"
+# alpha 2503221 0 0
+# fadein "black" 1
+# waitandnext 1
+
+# move 2103811 4 0
+# mask 2103811 on
+# alpha 2103811 1 0.5
+# move 2101411 2 0
+# mask 2101411 on
+# alpha 2101411 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# face 2103811 "normal"
+@アルマス
+さてと、
+フェイルノートを探しに行くわよ
+
+# textflame 1 1
+# face 2101411 "normal"
+# voice 1014 "tyrufing_0002"
+@ティルフィング
+アルマスさんは、
+フェイルノートさんの居場所に
+心当たりがあるんですか？
+
+# textflame 1 1
+# face 2103811 "sad"
+# voice 1038 "almace_0028"
+@アルマス
+まったくないけど
+小さい島だし…
+なんとかなるわよ！
+
+# move 2103811 5 0.5
+# alpha 2103811 0 0.3
+# move 2101411 1 0.5
+# alpha 2101411 0 0.3
+# alpha 22000111 1 0.3
+# textflame 1 1
+# face 22000111 "usual"
+# voice 5200011 "aegis_c_0001"
+@イージス
+そもそも、この島には
+どんな用向きがあるのだ？
+
+# move 22000111 2 0.5
+# move 2103811 4 0.5
+# alpha 2103811 1 0.3
+# textflame 1 1
+# face 2103811 "surprise"
+@アルマス
+そっか、イージスと盤古には
+説明してなかったわね
+
+# alpha 22000111 0 0.3
+# move 2202211 2 0
+# alpha 2202211 1 0.3
+# textflame 1 1
+# voice 2022 "banko_0003"
+@盤古
+む…
+
+# alpha 2103811 0 0.3
+# move 2101411 4 0
+# alpha 2101411 1 0.3
+# textflame 1 1
+# voice 1014 "tyrufing_0003"
+@ティルフィング
+特別な契約について教えてもらうため
+フェイルノートさんを探してるんです
+
+# alpha 2202211 0 0.3
+# alpha 22000111 1 0.3
+# textflame 1 1
+# voice 5200011 "aegis_c_0039"
+@イージス
+特別な契約？
+それはどんな契約だ？
+
+# alpha 2101411 0 0.3
+# alpha 2103811 1 0.3
+# textflame 1 1
+# face 2103811 "normal"
+# voice 1038 "almace_0032"
+@アルマス
+ティファレトとカシウスは
+神と契約して力をもらうって
+言ってたわ
+
+# textflame 1 1
+# voice 5200011 "aegis_c_0040"
+@イージス
+なるほどな…
+それで、誰が神と契約するんだ？
+アルマスか？
+
+# alpha 2101411 1 0.3
+# alpha 2103811 0 0.3
+# textflame 1 1
+@ティルフィング
+あ、違います
+私がマスターと…
+
+# textflame 1 1
+# face 22000111 "sad"
+@イージス
+隊長…と？
+え！？
+隊長って神だったの！？
+
+# alpha 2101411 0 0.3
+# alpha 22000111 0 0.3
+# textflame 0 0
+@
+まさか、そんなわけないよ！
+と、マスターは慌てて否定する
+
+# move 2202211 3 0
+# mask 2202211 off
+# alpha 2202211 1 0.3
+# textflame 1 1
+# voice 2022 "banko_0040"
+@盤古
+え？うん…うん
+そうだな、リク…
+神にしては威厳が…足りないな…
+
+# alpha 2202211 0 0.3
+# move 2103811 4 0.5
+# alpha 2103811 1 0.3
+# move 2101411 2 0.5
+# alpha 2101411 1 0.3
+# face 2101411 "normal"
+# textflame 1 1
+# face 2103811 "smile"
+# voice 1038 "almace_0005"
+@アルマス
+あはは！
+マスターが神様だなんて、
+絶・ありえないわ！
+
+# textflame 1 1
+# voice 1014 "tyrufing_0003"
+@ティルフィング
+言い伝えによると、マスターと
+キル姫の共鳴を高めることで
+結べる契約があるらしいんです
+
+# textflame 1 1
+# face 2101411 "sad"
+@ティルフィング
+ティファレトさんがいうには、
+神と契約する方法で
+同じようにできるかもしれないと…
+
+# alpha 2103811 0 0.3
+# alpha 2101411 0 0.3
+# move 22000111 3 0
+# mask 22000111 off
+# alpha 22000111 1 0.3
+# textflame 1 1
+# face 22000111 "normal"
+# voice 5200011 "aegis_c_0032"
+@イージス
+ほう…
+その契約に興味が湧いてきたぞ
+よし、私も一緒に行くとしよう！
+
+# alpha 22000111 0 0.3
+# move 2103811 3 0
+# mask 2103811 off
+# alpha 2103811 1 0.3
+# textflame 1 1
+# face 2103811 "surprise"
+# voice 1038 "almace_0022"
+@アルマス
+え？
+
+# alpha 2103811 0 0.3
+# move 2101411 3 0
+# mask 2101411 off
+# alpha 2101411 1 0.3
+# textflame 1 1
+# voice 1014 "tyrufing_0022"
+@ティルフィング
+え！？
+
+# alpha 2101411 0 0.3
+# move 2202211 3 0
+# mask 2202211 off
+# alpha 2202211 1 0.3
+# textflame 1 1
+@盤古
+…………
+
+# alpha 2202211 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# move 2103811 1 0
+# mask 2103811 on
+# alpha 2401921 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# face 2401921 "angry"
+# voice 540191 "failnaught_ca_0009"
+@フェイルノート
+ちょっと！
+さっきからうるさいわね！
+騒ぐならこの島から出ていきなさい！
+
+# move 2401921 4 0.5
+# move 2103811 2 0.5
+# alpha 2103811 1 0.3
+# textflame 1 1
+# face 2103811 "angry"
+@アルマス
+フェイルノート！
+見つけたわよ！
+
+# move 2101411 1 0
+# textflame 1 1
+# face 2401921 "usual"
+# voice 540191 "failnaught_ca_0022"
+@フェイルノート
+あら、アルマスじゃない
+それにお前様まで…
+この私にどんな用件かしら？
+
+# alpha 2103811 0 0.3
+# move 2101411 2 0.5
+# alpha 2101411 1 0.3
+# textflame 1 1
+# face 2101411 "normal"
+@ティルフィング
+フェイルノートさんも
+特別な契約を終えたんですね
+
+# textflame 1 1
+# face 2401921 "angry"
+@フェイルノート
+…なぜお前がそれを知っているの？
+
+# alpha 2101411 0 0.3
+# alpha 2103811 1 0.3
+# textflame 1 1
+# face 2103811 "normal"
+# voice 1038 "almace_0003"
+@アルマス
+ティファレトから聞いたのよ
+でね、あなたの持っている
+『誓詞印紙』を分けてもらえない？
+
+# textflame 1 1
+# voice 540191 "failnaught_ca_0013"
+@フェイルノート
+ティファレトったら、
+そんなことまで話したの？
+
+# alpha 2103811 0 0.3
+# alpha 2101411 1 0.3
+# textflame 1 1
+# voice 1014 "tyrufing_0002"
+@ティルフィング
+あの、私がマスターと契約を
+結べないかって相談したんです
+
+# textflame 1 1
+@フェイルノート
+なんでそんなことを？
+
+# textflame 1 1
+@ティルフィング
+もしそれが本当なら
+マスターを守りたいという
+私の願いと一致します
+
+# textflame 1 1
+@ティルフィング
+それと…
+
+# textflame 1 1
+# voice 540191 "failnaught_ca_0039"
+@フェイルノート
+ふぅん、はっきりしないわね…
+まあティルフィングならいいわ
+試してみる価値はあるかも…
+
+# textflame 1 1
+@ティルフィング
+では、いただけるんですか？
+
+# textflame 1 1
+# face 2401921 "usual"
+# voice 540191 "failnaught_ca_0032"
+@フェイルノート
+ええ、いいわ
+分けてあげる
+ただし条件があるわ
+
+# alpha 2101411 0 0.3
+# alpha 2103811 1 0.3
+# textflame 1 1
+# face 2103811 "surprise"
+@アルマス
+条件？
+
+# textflame 1 1
+@フェイルノート
+そんなに難しいことではないわ
+この島に眠る宝に通じる道を
+切り開いてほしいのよ
+
+# alpha 2103811 0 0.3
+# alpha 2101411 1 0.3
+# textflame 1 1
+# face 2101411 "sad"
+# voice 1014 "tyrufing_0028"
+@ティルフィング
+この島に財宝が眠っているのですか？
+そんな噂、聞いたことが
+ないのですが…
+
+# textflame 1 1
+# face 2401921 "normal"
+# voice 540191 "failnaught_ca_0004"
+@フェイルノート
+ふふふ
+甘いわね
+
+# textflame 1 1
+# eye 2401921 "close"
+@フェイルノート
+今でも島に残っている、
+様々な施設があるでしょ？
+
+# textflame 1 1
+@フェイルノート
+あれはラグーナ島に
+かつては高度な文明が
+存在していた証なの
+
+# textflame 1 1
+@フェイルノート
+私が欲しいのは
+その文明が使っていたとされる
+通信機よ
+
+# alpha 2101411 0 0.3
+# alpha 2103811 1 0.3
+# textflame 1 1
+# voice 1038 "almace_0002"
+@アルマス
+でも、フェイルノートは
+力を得たはずなのに
+なんで自分でやらないの？
+
+# textflame 1 1
+# eye 2401921 "normal"
+@フェイルノート
+やれない理由があるのよ
+そうじゃないと『誓詞印紙』を
+使って交渉なんてしないわ
+
+# textflame 1 1
+@アルマス
+理由ってなに？
+
+# textflame 1 1
+# face 2401921 "usual"
+@フェイルノート
+その場所に向かいながら
+説明してあげるわ
+でも、その前に…
+
+# alpha 2401921 0 0.3
+# alpha 2103811 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 2811004 1 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+@異族
+グギギギギ！！
+
+# alpha 2811004 0 0.3
+# move 2401921 3 0
+# mask 2401921 off
+# alpha 2401921 1 0.3
+# textflame 1 1
+# face 2401921 "angry"
+# voice 540191 "failnaught_ca_0007"
+@フェイルノート
+邪魔者は消しておきましょうか？
+
+# fadeout "black" 0.5
+# waitandnext 0.5

@@ -1,0 +1,542 @@
+;;-----------------------------------------
+;;押忍！2_1
+;;-----------------------------------------
+# script "lisp"
+# background "courtyard"
+# bgm "stop"
+;;-----------------------------------------
+;;デュリン
+# body 62
+# pos 62 3
+# scale 62 0.8 0
+# layer 62 5
+# mask 62 off
+# alpha 62 1 0
+# body 0
+# alpha 0 0 0
+;;ティルフィング（はじ）
+# body 6101411
+# pos 6101411 1
+# scale 6101411 0.8 0
+# layer 6101411 4
+# face 6101411 "surprise"
+# alpha 6101411 1 0
+;;フライクーゲル服
+# body 346
+# pos 346 5
+# scale 346 0.8 0
+# layer 346 2
+# mask 346 off
+# alpha 346 1 0
+;;カシウス赤
+# body 43031002
+# pos 43031002 3
+# scale 43031002 0.8 0
+# layer 43031002 1
+# mask 43031002 off
+# alpha 43031002 0 0
+;;スラーンド赤
+# body 42012002
+# pos 42012002 3
+# scale 42012002 0.8 0
+# layer 42012002 3
+# mask 42012002 off
+# alpha 42012002 0 0
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 5
+# mask 810004 off
+# alpha 810004 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;背景：学園
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+# bgmfile "bgm183_story" "BgmGakuen003" 0
+# voice 610141 "tyrufing_7th_0002"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ティルフィング
+ここは学園のようですね
+デュリン、ここにも団員候補が？
+
+# voice 9999 "durin_0028"
+# textboxarrow 0 2
+@デュリン
+うーん、ここは何かしらね？
+
+# textboxarrow 0 3
+@フライクーゲル
+うぅぷす
+勘が働いていないのかい？
+うっぷ
+
+# face 62 "occur"
+# textboxarrow 0 2
+@デュリン
+間違いない！
+って思ったんだけど…
+なんだかわかりづらくなったのよね
+
+# textboxarrow 0 2
+@デュリン
+あとフライクーゲル
+最後のうっぷは食べすぎだから
+少しは食生活に気を付けなさい
+
+# textboxarrow 0 3
+@フライクーゲル
+のー…
+団長はこのぼでぃが魅力だと思って
+わたしをすかうとしたんじゃないの？
+
+# textboxarrow 0 2
+@デュリン
+体型維持はいいけど
+体調不良はだめってだけよ
+
+# textboxarrow 0 1
+@ティルフィング
+…その体型は維持でいいんだ？
+
+# face 62 "normal"
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 2
+# textflame 0 0
+@
+その時、学園と思しき施設の
+大きな建物…体育館から子供が
+泣き叫ぶ声が聞こえてくる
+
+# voice 610141 "tyrufing_7th_0023"
+# face 6101411 "angry"
+# bgm "bgm005" 0
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+この声は！
+
+# textboxarrow 0 2
+@デュリン
+さっきの世界でのことを考えると
+異族が現れたのかも！
+
+# textboxarrow 0 3
+@フライクーゲル
+おーけぃ
+わたし達は応援団の前にキル姫
+助けに行かなくっちゃね！
+
+;;演出：移動の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：体育館
+# background "gymnasium"
+# bgm "stop"
+# alpha 62 0 0
+# alpha 6101411 0 0
+# alpha 346 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 9999 "durin_0022"
+# alpha 62 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@デュリン
+こ、これは…！
+
+# textflame 0 0
+@
+デュリン達の目の前に
+広がっていたのは恐るべき惨劇…
+
+;;小さなキル姫は立ち絵無しで
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@小さなキル姫
+うわぁぁぁぁん！
+
+# bgm "bgm007" 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+小さく…幼い姿のキル姫達が
+ケンカして泣いたり怒ったり
+さながら戦場の様相を呈していた
+
+# move 62 4 0.5
+# move 6101411 2 0
+# mask 6101411 off
+# alpha 6101411 1 0.3
+# face 6101411 "surprise"
+# voice 610141 "tyrufing_7th_0026"
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+ど、どうしたの
+恐いことでもあったのかな…？
+
+# serif 1
+@小さなキル姫
+ちがうのぉ
+そのこがわかんないこというのぉ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+その子、と指さされたキル姫は
+泣いているキル姫を
+ただ無言で眺めていた…
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# alpha 62 0 0.3
+# alpha 6101411 0 0.3
+# textwindow "close"
+# waitandnext 1.5
+
+;;演出：カシウス（幼稚園）
+# bgm "bgm003" 0
+# alpha 43031002 1 0.5
+# waitandnext 1.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@？？？
+…………
+
+# move 43031002 4 0.5
+# layer 6101411 4
+# mask 6101411 on
+# alpha 6101411 1 0.3
+# voice 610141 "tyrufing_7th_0028"
+# textboxarrow 0 1
+@ティルフィング
+あなた…カシウス？
+
+# textboxarrow 0 1
+@ティルフィング
+もしかして、この子を…
+いじめたりしちゃったの？
+
+# textboxarrow 0 3
+@カシウス
+…えんかんとはときにざんこく
+しかしそれもまたしんり
+
+# voice 610141 "tyrufing_7th_0022"
+# textboxarrow 0 1
+@ティルフィング
+えっと、どういうことだろう？
+
+# textboxarrow 0 3
+@カシウス
+…………
+
+# textflame 0 0
+@
+それ以上カシウスが
+喋ることはなかった…
+
+# scale 62 0.6 0
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+何の解決にもなってないけど
+とりあえずケンカじゃないなら
+よかったのかな…？
+
+# move 43031002 5 0.4
+# move 6101411 1 0.4
+# move 62 3 0
+# scale 62 0.8 0.5
+# face 62 "angry"
+# alpha 62 1 0.3
+# textboxarrow 0 2
+@デュリン
+よくないわよ！
+
+# textflame 0 0
+@
+そう言うデュリンは
+そのサイズ感もあってか子供達の
+玩具のようにもみくちゃにされていた
+
+# alpha 43031002 0 0.3
+# alpha 346 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@フライクーゲル
+そーりぃ
+うちの団長はお人形さんじゃないんだ
+
+# face 62 "occur"
+# textboxarrow 0 2
+@デュリン
+助かったわフライクーゲル…
+危うくハリケーンみたいな力で
+身体を７つにされるとこだったわ…
+
+# textboxarrow 0 2
+@デュリン
+子供は手加減を知らないから怖いわね
+
+# voice 9999 "durin_0005"
+# face 62 "happy"
+# textboxarrow 0 2
+@デュリン
+それにしてもこの子達は…
+可能性の宝庫ね！
+
+# textboxarrow 0 1
+@ティルフィング
+団員候補なの？
+
+# textboxarrow 0 2
+@デュリン
+ええ…ちびっ子要素は
+特定の層にバカウケよ！
+
+# voice 9999 "durin_0044"
+# face 62 "normal"
+# textboxarrow 0 2
+@デュリン
+でも、誰でもいいって訳じゃ…ん？
+
+# alpha 346 0 0.3
+# alpha 62 0 0.3
+# alpha 6101411 0 0.3
+# textflame 0 0
+@
+デュリンはその時
+子供達の輪から外れ、ポツンと
+立っている存在に気付く
+
+;;演出：スラーンド（幼稚園）
+# move 42012002 5 0
+# layer 42012002 3
+# mask 42012002 on
+# alpha 42012002 1 0.3
+# alpha 62 1 0.3
+# move 6101411 1 0
+# layer 6101411 2
+# mask 6101411 off
+# alpha 6101411 1 0.3
+# bgm "bgm002" 0
+# textflame 1 1
+# textboxarrow 0 3
+@？？？
+…はぁ
+
+# textboxarrow 0 1
+@ティルフィング
+あれは…
+幼い姿だけれど
+スラーンドのような…
+
+# textboxarrow 0 3
+@？？？
+みんなこどもね
+おおさわぎすれば
+ハデってわけじゃないのよ
+
+# textboxarrow 0 1
+@ティルフィング
+…スラーンド、ですね
+
+# voice 9999 "durin_0002"
+# face 62 "usual"
+# textboxarrow 0 2
+@デュリン
+ピンと来たわ！
+ねぇ、人前に立つことに
+興味あったりしないかしら！
+
+# textboxarrow 0 3
+@スラーンド
+…っ、き、きょうみないわね
+
+# textboxarrow 0 2
+@デュリン
+ちびっ子要素に加えて
+ちょっぴり素直になれない
+生意気な感じ…これは売れるわ！
+
+# textboxarrow 0 1
+@ティルフィング
+売れる？
+
+# alpha 42012002 0 0.3
+# alpha 62 0 0.3
+# alpha 6101411 0 0.3
+# move 346 3 0
+# mask 346 off
+# alpha 346 1 0.3
+# textboxarrow 0 2
+@フライクーゲル
+それは団長とキャラ被ってないかい？
+
+# voice 9999 "durin_0045"
+# face 62 "occur"
+# alpha 346 0 0.3
+# move 62 4 0
+# alpha 62 1 0.3
+# move 6101411 2 0
+# alpha 6101411 1 0.3
+# textboxarrow 0 3
+@デュリン
+甘いわね、フライクーゲル
+それはチョコレートくらい甘いわ！
+
+# textboxarrow 0 3
+@デュリン
+モノホンの幼女は
+何物にも勝るのよ…っ！
+
+# voice 610141 "tyrufing_7th_0019"
+# textboxarrow 0 1
+@ティルフィング
+きっと今のデュリンには
+何を言っても通じません…
+
+# alpha 62 0 0.3
+# move 43031002 4 0
+# layer 43031002 4
+# mask 43031002 on
+# alpha 43031002 1 0.3
+# textboxarrow 0 3
+@カシウス
+…たとえいつわりであろうと
+これもまたりんねのみちびき
+
+# voice 610141 "tyrufing_7th_0028"
+# textboxarrow 0 1
+@ティルフィング
+そうなのかなぁ…
+
+;;wait 2秒くらい
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 2
+# alpha 6101411 0 0.3
+# alpha 43031002 0 0.3
+# textwindow "close"
+# waitandnext 2
+
+# se "SE_0617"
+# layer 810004 1
+# alpha 810004 1 0.3
+# textwindow "toge"
+# textboxarrow 0 2
+@異族
+キィィィィイ！
+
+# voice 9999 "durin_0049"
+# bgm "bgm033" 0
+# move 810004 5 0.5
+# move 62 3 0
+# face 62 "angry"
+# alpha 62 1 0.3
+# move 42012002 1 0
+# layer 42012002 3
+# alpha 42012002 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@デュリン
+出たわね！
+やっぱり異族が潜んでいたのね！
+
+# textflame 0 0
+@
+突如現れた異族は
+狙い定めたようにデュリンと
+スラーンドへ襲い掛かる！
+
+# textflame 1 1
+# textboxarrow 0 2
+@デュリン
+させないわ！
+
+;;wait 1秒
+;;異族襲い掛かる
+# se "SE_13657"
+# move 810004 4 1
+# textboxarrow 0 0
+# waitandnext 1
+
+;;サウンドメモ　デュリンが動く→構える→攻撃をガードする
+# se "SE_5256"
+# move 62 2 0.3
+# waitandnext 0.3
+
+# se "SE_5200"
+# waitandnext 0.5
+
+# se "SE_3006"
+# fadein "white" 0.5
+# move 62 3 0.3
+# move 810004 5 0.2
+# waitandnext 1
+
+# face 6101411 "angry"
+# alpha 810004 0 0.3
+# alpha 62 0 0.3
+# alpha 42012002 0 0.3
+# move 6101411 3 0
+# mask 6101411 off
+# alpha 6101411 1 0.3
+# textboxarrow 0 2
+@ティルフィング
+デュリン、大丈夫！？
+
+# voice 9999 "durin_0007"
+# alpha 6101411 0 0.3
+# move 62 4 0
+# face 62 "proud"
+# alpha 62 1 0.3
+# move 42012002 2 0
+# layer 42012002 2
+# mask 42012002 off
+# alpha 42012002 1 0.3
+# textboxarrow 0 3
+@デュリン
+ふっ、団長になったアタシは無敵よ！
+
+# textboxarrow 0 1
+@スラーンド
+…………
+
+;;バトル
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 62 0 0
+# alpha 42012002 0 0
+# waitandnext 0.2

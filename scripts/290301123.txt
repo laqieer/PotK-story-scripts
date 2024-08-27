@@ -1,0 +1,534 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;３章１話　タイトル「地上の脅威―リバイヴ―」
+;;第1話　タイトル：異形の浸食
+;;7_12_3
+;;スクリプト最後の背景：下町
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown"
+# bgmfile "bgm421_1" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 2
+# alpha 3201911 0 0
+# mask 3201911 off
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;魔獣化ミョルニル
+# body 1200111
+# pos 1200111 3
+# scale 1200111 0.8 0
+# layer 1200111 2
+# alpha 1200111 0 0
+# mask 1200111 off
+# brightness 1200111 0.5 0
+;;魔獣化トライデント
+# body 1300231
+# pos 1300231 3
+# scale 1300231 0.8 0
+# layer 1300231 2
+# alpha 1300231 0 0
+# mask 1300231 off
+# brightness 1300231 0.5 0
+;;グリダヴォル
+# body 3600811
+# pos 3600811 3
+# scale 3600811 0.8 0
+# layer 3600811 2
+# alpha 3600811 0 0
+# mask 3600811 off
+;;-----------------------------------------
+;;霧
+# imageset 2 "kiri_03"
+# imagescale 2 2.5 0
+# imagealpha 2 0.5 0
+# imagepos 2 0 0
+# imagelayer 2 4
+;;-----------------------------------------
+;;？？？（魔獣化トライデント）
+# se "SE_0847"
+# move 1300231 3 0
+# face 1300231 "angry_1"
+# alpha 1300231 1 0
+# mask 1300231 off
+# textboxarrow 0 2
+@？？？
+ガアアアアアア！！
+
+# textwindow "close"
+# alpha 1300231 0 0.5
+# move 3201911 3 0
+# face 3201911 "angry"
+# alpha 3201911 1 0.5
+# mask 3201911 off
+# waitandnext 0.6
+
+;;//魔獣化トライデントがシユウを弾き飛ばす 
+# se "SE_9017"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 320191 "chihyu_a_battle_0007"
+@シユウ
+ぐっ！
+
+;;モノローグ
+# textflame 0 0
+@
+魔獣と戦っていたカミト達だったが
+突如現れた人型の魔獣によって
+苦戦を強いられていた
+
+;;//魔獣化ミョルニルが立ちふさがる 
+;;？？？（魔獣化ミョルニル）
+# alpha 3201911 0 0.5
+# move 1200111 3 0
+# face 1200111 "angry_1"
+# alpha 1200111 1 0.5
+# mask 1200111 off
+# textflame 1 1
+# textboxarrow 0 2
+@？？？
+ゴオオオオオオオオ！！ 
+
+# alpha 1200111 0 0.5
+# move 3102311 3 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+# voice 310231 "ascalon_a_0024"
+@アスカロン
+ひっ…
+
+# se "SE_5208"
+# sedelay "SE_4400" 0.6
+# alpha 3102311  0 0.5
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_battle_0001"
+@グリモワール
+そこをどきなさいっ！ 
+
+;;//グリモワールの攻撃が弾かれる 
+# se "SE_9083"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0037"
+@グリモワール
+何なの…こいつっ…？ 
+周りにいる化け物とは 
+別の力を感じるわ…！ 
+
+# alpha 3501711 0 0.5
+# move 211 2 0
+# face 211 "irregular"
+# alpha 211 1 0.5
+# mask 211 on
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# voice 9936 "kamito_0018"
+@カミト 
+どうしよう…
+
+# face 211 "angry"
+# textboxarrow 0 1
+# voice 9935 "vang_0001"
+@ヴァング
+仕方ねぇ…
+おい、カミト！
+
+# textboxarrow 0 1
+@ヴァング
+お前は急いでここから離れやがれ！
+
+# textboxarrow 0 3
+# face 210 "surprise"
+# voice 9936 "kamito_0023"
+@カミト
+えっ…？
+でも…兄貴がっ…
+
+# textboxarrow 0 1
+# voice 9935 "vang_0009"
+@ヴァング
+うるせぇっ！
+お前の助けはいらねぇんだよ！！
+さっさと行け！
+
+# textboxarrow 0 3
+# face 210 "sad"
+# voice 9936 "kamito_0017"
+@カミト
+そ…そんなっ…
+
+# textboxarrow 0 1
+@ヴァング
+さっさと行けって言ってんだろうが
+カミトぉぉぉっ！
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 211 0 0
+# alpha 210 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//カミトが走っている
+;;カミト（独白）
+# se "SE_0850"
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 210 off
+@カミト
+何で…何でだよっ…？
+
+;;カミト（独白）
+# textboxarrow 0 0
+@カミト
+何で…こんなことになってしまった
+んだよぉ…！？
+
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+ハァッ…ハァッ…
+
+;;//カミトが立ち止まる
+# sestop "SE_0850"
+# alpha 210 0 0.5
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 3501711 4 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0007"
+@グリモワール
+とりあえず、あの化け物の群れからは
+逃げ切ったみたいね
+
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0003"
+@アスカロン
+周りの警戒は任せて下さい
+マスターは少し休んだ方が
+良いと思います
+
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# move 210 3 0
+# face 210 "sad"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+…………
+
+# textboxarrow 0 2
+# voice 9936 "kamito_0016"
+@カミト
+兄貴っ…
+僕は…何もできなかった…！
+
+# textboxarrow 0 2
+@カミト
+言われるまま逃げて…
+何してるんだよっ
+
+# move 3501711 2 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 1
+# move 210 4 0.5
+# mask 210 on
+@グリモワール
+あの状況じゃ他にどうしようも
+なかったわよ！
+
+# face 3501711 "normal"
+# textboxarrow 0 1
+@グリモワール
+それより、まだ終わりじゃないわ
+この霧…嫌な感じがすると思ったら
+何となく分かってきた
+
+# textboxarrow 0 1
+@グリモワール
+この霧のせいで、生者と死者の境界が
+曖昧になってきてるわ
+
+# textboxarrow 0 1
+@グリモワール
+滅んだはずの化け物が霧の中から
+現れたのも、きっとその影響ね
+
+# face 3501711 "angry"
+# textboxarrow 0 1
+# voice 350171 "grimoire_ge_0027"
+@グリモワール
+死者の眠りを妨げるなんて…
+この怒りで全て焼き払ってやるわ！
+
+# textboxarrow 0 3
+# voice 9936 "kamito_0014"
+@カミト
+分からないよ…
+僕にはどうすればいいのか…
+
+# alpha 3501711 0 0.5
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+@アスカロン
+大丈夫です！
+マスターの御身は私が必ず守って
+みせますので！
+
+# alpha 3102311 0 0.5
+# move 3501711 2 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 1
+@グリモワール
+しゃきっとしなさいよ！
+フォルカスにまた叱られるわよっ
+
+# face 210 "angry"
+# textboxarrow 0 3
+# voice 9936 "kamito_0011"
+@カミト
+ああもうっ…！
+誰かっ…誰か助けを…
+
+# textboxarrow 0 3
+@カミト
+誰か…助けて下さい！！
+
+# textboxarrow 0 3
+@カミト
+誰か！
+大変なんです！
+誰か…いませんかぁぁぁっ！
+
+;;//カミトが走っていく
+# se "SE_5575"
+# textwindow "close"
+# rightout 210 0.5
+# waitandnext 0.8
+
+# alpha 210 0 0
+# alpha 3501711 0 0.5
+# move 3102311 3 0
+# face 3102311 "surprise"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 310231 "ascalon_a_0022"
+@アスカロン
+あ！
+待って下さい、マスターっ
+
+# alpha 3102311 0 0.5
+# move 3501711 3 0
+# face 3501711 "surprise"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0009"
+@グリモワール
+何してるのよ！？
+そんなことしたって誰も…
+
+;;//グリダヴォルが現れる
+# alpha 3501711 0 0.5
+# move 3600811 3 0
+# face 3600811 "usual"
+# alpha 3600811 1 0.5
+# mask 3600811 off
+# textboxarrow 0 2
+@グリダヴォル
+おや…
+生者の声だったか
+
+# move 3600811 2 0.5
+# mask 3600811 on
+# move 210 4 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# voice 9936 "kamito_0024"
+@カミト
+グリダヴォル…！？
+た…助けてっ
+兄貴が…！
+
+;;//グリダヴォルの周りに人々が現れる
+# face 210 "surprise"
+# textboxarrow 0 3
+# voice 9936 "kamito_0023"
+@カミト
+えっ…
+あの…
+
+# serif 1
+@？？？
+キル姫様がお二人…
+
+# serif 1
+@？？？
+あの少年が奏官なのか？
+
+# serif 1
+@？？？
+聞けば分かることだ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 210 "normal"
+# textboxarrow 0 3
+# voice 9936 "kamito_0001"
+@カミト
+あの…
+助けてほしいんですけど…
+兄貴が…
+
+# face 3600811 "sad"
+# textboxarrow 0 1
+# voice 360081 "guridavoru_a_0027"
+@グリダヴォル
+はぁ…
+やはり生者は愚かだね
+
+;;//人々がカミトを捕らえる
+# se "SE_0799"
+# waitandnext 0.5
+
+# face 210 "surprise"
+# textboxarrow 0 3
+# voice 9936 "kamito_0026"
+@カミト
+えっ…？
+あの…うわぁっ！
+
+# alpha 3600811 0 0.5
+# alpha 210 0 0.5
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 3501711 4 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0002"
+@グリモワール
+マスター！
+キミ達、何してんのよっ！
+
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_battle_0005"
+@アスカロン
+マスター、すぐにお助けします！
+
+# serif 1
+@？？？
+お待ち下さい、キル姫様！
+こやつは大罪犯しし者！
+
+# serif 1
+@？？？
+マスターなどと呼ぶべき存在では
+ないのです！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 3102311 "surprise"
+# face 3501711 "surprise"
+# textboxarrow 0 0
+# voice 310231 "ascalon_a_0022"
+# voice 350171 "grimoire_ge_0022"
+@アスカロン＆グリモワール
+！？
+
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+何を言ってるんですか…？
+た…助けて下さいっ…
+兄貴がっ…
+
+# textboxarrow 0 2
+@カミト
+ヴァン兄ぃっ…
+
+;;//暗転
+# fadeout "black" 1
+# waitandnext 1

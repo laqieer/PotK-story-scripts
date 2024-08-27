@@ -1,0 +1,435 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;インテグラルキラーズサイドストーリー
+;;第1話―５　タイトル：平和への決意
+;;1_5_0
+;;スクリプト最後の背景：平原
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "stop"
+;;-----------------------------------------
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 2
+# alpha 24 0 0
+# mask 24 off
+;;フラベルム
+# body 501611
+# pos 501611 3
+# scale 501611 0.8 0
+# layer 501611 2
+# alpha 501611 0 0
+# mask 501611 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第1話―５　タイトル：平和への決意
+;;//地上世界から天上世界に上がる演出
+# textwindow "close"
+# fadeout "black" 0
+# waitandnext 0.5
+
+# background "aerial_shoot"
+# waitandnext 0.2
+
+# se "SE_0057"
+# fadein "black" 1
+# waitandnext 1
+
+;;//ユグドラシル（天上）の背景を一瞬差し込む
+# se "SE_0644"
+# waitandnext 0.5
+
+;;//背景：ユグドラシル
+;;//イラストチームさんに反転世界のない天上ユグドラシルの背景を
+;;//ご制作いただいております
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "in_yggdrasill2"
+# move 24 3 0
+# face 24 "surprise"
+# alpha 24 1 0
+# mask 24 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 1014 "tyrufing_0002"
+# bgm "bgm003" 0
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+久し振りの天上世界ですね、マスター
+…マスター？
+
+# textboxarrow 0 2
+@ティルフィング
+どこか具合が？
+ぼんやりしているように見えた
+もので…
+
+;;//選択肢
+;;A何でもない
+;;Bちょっとね…
+# select "何でもない" "select_label_01" "ちょっとね…" "select_label_01"
+どこか具合が？
+ぼんやりしているように見えた
+もので…
+
+;;AB共通
+# label "select_label_01"
+# face 24 "normal"
+# textboxarrow 0 2
+@ティルフィング
+そうですか…
+何かあったらすぐに言って下さいね
+
+;;//背景：平原
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# move 24 3 0
+# face 24 "normal"
+# alpha 24 1 0
+# mask 24 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 1014 "tyrufing_0028"
+# bgm "bgm005" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+女神エイレーネの石像はこの辺りに
+あるそうですけれど…
+
+# move 501611 2 0
+# face 501611 "angry"
+# alpha 501611 1 0.5
+# mask 501611 on
+# textboxarrow 0 1
+# move 24 4 0.5
+# mask 24 on
+@フラベルム
+そこの方々、お待ちなさい
+
+# face 24 "surprise"
+# textboxarrow 0 3
+@ティルフィング
+フラベルム
+何かありましたか？
+
+# voice 5016 "Flabellum_0028"
+# textboxarrow 0 1
+@フラベルム
+…見たところ、清浄なる者とは
+到底思えませんが
+
+# textboxarrow 0 1
+@フラベルム
+マスターのご命令です
+私としては非常に心外なのですけれど
+今回だけは特別にっ
+
+# voice 5016 "Flabellum_0019"
+# textboxarrow 0 1
+@フラベルム
+泉に立ち入ることを許可致します
+
+# voice 1014 "tyrufing_0002"
+# textboxarrow 0 3
+@ティルフィング
+泉…ひょっとして女神エイレーネの
+石像がっ？
+
+# textboxarrow 0 1
+@フラベルム
+その通りです
+私のマスターは代々、泉を穢れし者
+から守っています
+
+# textboxarrow 0 1
+@フラベルム
+それなのに、あなた達は立ち入る
+ことを許されました
+とても不可解ですね
+
+# textboxarrow 0 1
+@フラベルム
+私も同行させていただきますので
+不埒な真似はしないように
+
+# face 24 "normal"
+# textboxarrow 0 3
+@ティルフィング
+ありがとうございます！
+マスター、行きましょうっ
+
+;;//背景：泉
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "fountain"
+# alpha 501611 0 0
+# alpha 24 0 0
+# move 24 3 0
+# face 24 "surprise"
+# alpha 24 1 0
+# mask 24 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm004" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+これが女神エイレーネ…
+私の…お母さん…？
+
+# alpha 24 0 0.5
+# move 501611 3 0
+# face 501611 "surprise"
+# alpha 501611 1 0.5
+# mask 501611 off
+# textboxarrow 0 2
+@フラベルム
+あら？
+そうだったのですか
+それにしては…
+
+# textboxarrow 0 2
+@フラベルム
+あまりピンときていないようですね
+
+# alpha 501611 0 0.5
+# move 24 3 0
+# face 24 "sad"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+…………
+
+# voice 1014 "tyrufing_0037"
+# textboxarrow 0 2
+@ティルフィング
+…どうして？
+何も感じない
+何も伝わってこない
+
+# face 24 "sad2"
+# textboxarrow 0 2
+@ティルフィング
+お母さん！
+
+# textboxarrow 0 2
+@ティルフィング
+…………
+
+# textboxarrow 0 2
+@ティルフィング
+お母さん！
+お願い！
+声を聞かせて下さい…！
+
+# textboxarrow 0 2
+@ティルフィング
+…………
+
+# voice 1014 "tyrufing_0015"
+# face 24 "sad"
+# textboxarrow 0 2
+@ティルフィング
+こんなはずじゃ…
+
+;;//選択肢
+;;A一度出直そう
+;;B条件があるのかも
+# select "一度出直そう" "select_label_02" "条件があるのかも" "select_label_03"
+こんなはずじゃ…
+
+;;A
+# label "select_label_02"
+# labeljump "select_label_end"
+# textboxarrow 0 2
+@ティルフィング
+マスター…
+はい…
+
+;;B
+# label "select_label_03"
+# labeljump "select_label_end"
+# textboxarrow 0 2
+@ティルフィング
+マスター…
+そうかも…しれません…
+
+# voice 1014 "tyrufing_0058"
+# label "select_label_end"
+# textboxarrow 0 2
+@ティルフィング
+ごめんなさい、マスター
+
+# textboxarrow 0 2
+@ティルフィング
+母に会えば何かが変わると思って
+いたのですけれど…何も感じません
+
+# textboxarrow 0 2
+@ティルフィング
+目覚めさせる方法も…
+思いつかないんです…
+
+# voice 5016 "Flabellum_0019"
+# move 501611 2 0
+# face 501611 "normal"
+# alpha 501611 1 0.5
+# mask 501611 on
+# textboxarrow 0 1
+# move 24 4 0.5
+# mask 24 on
+@フラベルム
+気が済みましたか？
+では、そろそろお引き取りを
+
+# textboxarrow 0 3
+@ティルフィング
+…はい
+
+# face 24 "surprise"
+# textboxarrow 0 3
+@ティルフィング
+あれは…
+石像の足下にあるのは…斧？
+
+# face 501611 "angry"
+# textboxarrow 0 1
+@フラベルム
+何をしているんです？
+早くついてきなさい
+
+# face 24 "sad"
+# textboxarrow 0 3
+@ティルフィング
+ごめんなさい…
+今、行きます
+
+;;//背景：平原
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# alpha 501611 0 0
+# alpha 24 0 0
+# move 24 3 0
+# face 24 "sad"
+# alpha 24 1 0
+# mask 24 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+すみませんでした、マスター
+せっかくここまで来たのに…
+
+# textboxarrow 0 2
+@ティルフィング
+私は…これからどうすれば…
+
+;;//選択肢
+;;A諦めるな
+;;B一緒に考えよう
+# select "諦めるな" "select_label_04" "一緒に考えよう" "select_label_05"
+私は…これからどうすれば…
+
+;;A
+# label "select_label_04"
+# labeljump "select_label_end1"
+# textboxarrow 0 2
+@ティルフィング
+はい…
+私も諦めたくないんです
+何か方法は…
+
+;;B
+# label "select_label_05"
+# labeljump "select_label_end1"
+# textboxarrow 0 2
+@ティルフィング
+一緒に…
+ありがとうございます、マスター
+
+;;//暗転挟む
+# label "select_label_end1"
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 24 3 0
+# face 24 "sad"
+# alpha 24 1 0
+# mask 24 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm035" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+…淘汰、ですか？
+
+# voice 1014 "tyrufing_0028"
+# textboxarrow 0 2
+@ティルフィング
+確かに、私はまだオリジナルになって
+いません
+記憶も全て取り戻してはいない…
+
+# face 24 "surprise"
+# textboxarrow 0 2
+@ティルフィング
+あっ！
+だから何も感じられなかったの
+でしょうか…？
+
+# face 24 "normal"
+# textboxarrow 0 2
+@ティルフィング
+マスターの仰る通り、その可能性は
+あります
+それなら…
+
+# textboxarrow 0 2
+@ティルフィング
+私は…淘汰を完遂して、全ての記憶を
+取り戻します！
+
+# textboxarrow 0 2
+@ティルフィング
+オリジナルになって、
+もう一度、お母さんに会えば
+きっと…

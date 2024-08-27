@@ -1,0 +1,589 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１４章 章タイトル「ラルゴカタストロフィ―激突―」
+;;第2話－１　タイトル：決着の刻
+;;2_1_0
+;;スクリプト最後の背景：町
+;;-----------------------------------------
+# script "lisp"
+# background "parchment_map05"
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;異族化アルマス（ナレーションのボイス用）
+# body 5103831
+# alpha 5103831 0 0
+;;異族化フライクーゲル
+# body 5500231
+# pos 5500231 3
+# scale 5500231 0.8 0
+# layer 5500231 3
+# alpha 5500231 0 0
+# mask 5500231 off
+;;ソロモン
+# body 5503111
+# pos 5503111 3
+# scale 5503111 0.8 0
+# layer 5503111 4
+# alpha 5503111 0 0
+# mask 5503111 off
+;;グラウ
+# body 164
+# pos 164 3
+# scale 164 0.6 0
+# layer 164 2
+# alpha 164 0 0
+# mask 164 off
+;;グランテピエ・獣刻・バハムート
+# body 5303411
+# pos 5303411 3
+# scale 5303411 0.8 0
+# layer 5303411 3
+# alpha 5303411 0 0
+# mask 5303411 off
+;;アロンダイト・暴走
+# body 5100711
+# pos 5100711 3
+# scale 5100711 0.8 0
+# layer 5100711 2
+# alpha 5100711 0 0
+# mask 5100711 off
+;;ロンゴミアント・暴走
+# body 5301011
+# pos 5301011 3
+# scale 5301011 0.8 0
+# layer 5301011 2
+# alpha 5301011 0 0
+# mask 5301011 off
+# brightness 5301011 0.8 0
+;;-----------------------------------------
+;;第2話－１　タイトル：決着の刻
+;;//背景：天上世界遠景
+;;ナレーション
+# voice 9920 "IntegralNoah_Narration_14_2_0001"
+# textflame 0 0
+@
+ネス、グラーシーザ、ダモクレスの
+三人はインテグラルキラーズを止める
+ためケラウノス達と共闘していた
+
+;;ナレーション
+# voice 9920 "IntegralNoah_Narration_14_2_0002"
+@
+町の外でアルテミスとフライクーゲル
+に遭遇した彼女達は二人を退けるが
+
+;;ナレーション
+# voice 9920 "IntegralNoah_Narration_14_2_0003"
+@
+町を守るために来ていた、
+仲間のキル姫が暴走してしまう
+
+;;ナレーション
+# voice 9920 "IntegralNoah_Narration_14_2_0004"
+@
+暴走を止めるには倒すしかない
+辛い決断を余儀なくされたとき、
+新たなキル姫が姿を現した
+
+;;ナレーション
+# voice 9920 "IntegralNoah_Narration_14_2_0005"
+@
+ソロモンと名乗るキル姫は、
+暴走したキル姫を倒すことなく
+止めてみせる
+
+;;ナレーション
+# voice 9920 "IntegralNoah_Narration_14_2_0006"
+@
+そして、暴走の真実を話した後
+彼女達のリーダーだという
+キル姫グランテピエの下へと案内した
+
+;;ナレーション
+# voice 9920 "IntegralNoah_Narration_14_2_0007"
+@
+彼女はネス達に
+世界の有り様について語る
+
+;;ナレーション
+# voice 9920 "IntegralNoah_Narration_14_2_0008"
+@
+だが、その最中、再び暴走した
+キル姫が町に現れた
+
+;;ナレーション
+# voice 9920 "IntegralNoah_Narration_14_2_0009"
+@
+駆けつけたグランテピエとソロモンは
+暴走を解いていくが、そこに他とは
+違うキル姫が現れる
+
+;;ナレーション
+# voice 9920 "IntegralNoah_Narration_14_2_0010"
+@
+それは世界の終焉を望む者
+“終焉”の力を受け入れた
+アロンダイトだった
+
+;;ナレーション
+# voice 9920 "IntegralNoah_Narration_14_2_0011"
+@
+運命が描き出されていく――
+
+;;//背景：町
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "town"
+# move 5100711 2 0
+# face 5100711 "angry"
+# alpha 5100711 1 0
+# mask 5100711 on
+# move 5303411 4 0
+# face 5303411 "angry"
+# alpha 5303411 1 0
+# mask 5303411 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm467" "BgmIntegralNoahBoso" 0
+# voice 510071 "arondaito_bo_battle_0003"
+# textflame 1 1
+# textboxarrow 0 1
+# textwindow "normal"
+@アロンダイト
+そこ…
+
+# se "SE_4000"
+# waitandnext 0.5
+
+# voice 530341 "grandepieu_di_battle_0006"
+# textboxarrow 0 3
+@グランテピエ
+くぅっ…
+
+# textwindow "close"
+# waitandnext 0.2
+
+;;//アロンダイトとグランテピエが切り結ぶ
+# se "SE_9086"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.6
+
+# voice 550311 "solomon_di_battle_0002"
+# alpha 5100711 0 0.5
+# alpha 5303411 0 0.5
+# move 5503111 3 0
+# face 5503111 "angry"
+# alpha 5503111 1 0.5
+# mask 5503111 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ソロモン
+はあっ
+
+# se "SE_9137"
+# waitandnext 0.5
+
+;;//ソロモンが割り込み、アロンダイトが離れる
+# textwindow "close"
+# alpha 5503111 0 0.5
+# move 5100711 2 0
+# face 5100711 "angry"
+# alpha 5100711 1 0.5
+# mask 5100711 on
+# move 5303411 4 0
+# face 5303411 "angry"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# waitandnext 0.5
+
+# se "SE_9021"
+# leftout 5100711 0.5
+# waitandnext 0.5
+
+# voice 550311 "solomon_di_0048"
+# alpha 5100711 0 0
+# move 5503111 2 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# textboxarrow 0 1
+# textwindow "normal"
+@ソロモン
+グランお姉様、大丈夫！？
+守ってばかりでは
+彼女を止められないわ
+
+# face 5303411 "normal"
+# textboxarrow 0 3
+@グランテピエ
+そう、だね…
+二人で彼女を捕らえよう
+
+# textboxarrow 0 1
+@ソロモン
+私の分析によると、二対一なら確実に
+拘束できるわ
+
+# textboxarrow 0 3
+@グランテピエ
+ソロモンが導き出した最適解、だね
+何をすればいい？
+
+# textboxarrow 0 1
+@ソロモン
+私が射撃でアロンダイトの動きを
+制限するから、グランお姉様は
+その隙を突いて
+
+# textboxarrow 0 1
+@ソロモン
+アロンダイトの行動予測を共有して
+おくわ
+
+# voice 530341 "grandepieu_di_0030"
+# textboxarrow 0 3
+@グランテピエ
+うん、ありがとう
+短い間にここまで分析してくれて、
+ソロモンは頑張り屋さん、だね
+
+# textboxarrow 0 1
+@ソロモン
+いえ、そんなことは
+
+# voice 9950 "glau_0045"
+# move 164 1 0
+# alpha 164 1 0.5
+# mask 164 on
+# textboxarrow 0 1
+# move 5503111 3 0.5
+# move 5303411 5 0.5
+@グラウ
+ソロモン
+アロンダイトの反応に変化があります
+
+# voice 550311 "solomon_di_0022"
+# face 5503111 "surprise"
+# textboxarrow 0 2
+@ソロモン
+えっ？
+もしかして…
+
+# bgm "stop"
+# se "SE_2131"
+# alpha 164 0 0.5
+# alpha 5503111 0 0.5
+# alpha 5303411 0 0.5
+# move 5100711 3 0
+# face 5100711 "angry"
+# alpha 5100711 1 0.5
+# mask 5100711 off
+# textboxarrow 0 2
+@アロンダイト
+ああ…壊して…壊してしまえばいい…
+全てを破壊してしまえばっ
+
+;;//暴走アロンダイトから黒い霧が溢れる
+# se "SE_2132"
+# textwindow "close"
+# emotionbody 1000 15 5100711 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# brightness 5100711 0.8 1
+# mask 5100711 off
+# waitandnext 1
+
+# bgmfile "bgm469_470" "BgmIntegralNoahBoso" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@アロンダイト
+はあっ…はあっ…はあっ！
+スベテヲ…コワス！
+オマエヲ！セカイヲ！
+
+# effectskip 1000
+# alpha 5100711 0 0.5
+# move 5503111 2 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# move 5303411 4 0
+# face 5303411 "sad"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# textboxarrow 0 3
+@グランテピエ
+あれは良くない、かな
+暴走の力を解放してしまったみたい…
+
+# textboxarrow 0 1
+@ソロモン
+分析と計算をやり直さないとっ
+でも…
+
+# effectstart 1000
+# alpha 5503111 0 0.5
+# alpha 5303411 0 0.5
+# move 5100711 3 0
+# face 5100711 "angry"
+# alpha 5100711 1 0.5
+# mask 5100711 off
+# textboxarrow 0 2
+@アロンダイト
+スベテヲ…コワス！
+
+;;//アロンダイトが突っ込んでくる
+# se "SE_9092"
+# textwindow "close"
+# leftout 5100711 0.5
+# waitandnext 0.5
+
+# effectskip 1000
+# voice 530341 "grandepieu_di_0033"
+# alpha 5100711 0 0
+# move 5303411 3 0
+# face 5303411 "angry"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# textboxarrow 0 2
+# textwindow "normal"
+@グランテピエ
+ここは私に任せて
+ソロモンが最適解を導くまでの
+時間は稼ぐからっ
+
+# voice 550311 "solomon_di_0048"
+# alpha 5303411 0 0.5
+# move 164 2 0
+# alpha 164 1 0.5
+# mask 164 on
+# move 5503111 4 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# textboxarrow 0 3
+@ソロモン
+グランお姉様、無理をしては――
+
+# voice 9950 "glau_0045"
+# textboxarrow 0 1
+@グラウ
+ソロモン！
+また新たに暴走の反応を感知しました
+
+# voice 550311 "solomon_di_0022"
+# face 5503111 "surprise"
+# textboxarrow 0 3
+@ソロモン
+ええっ！？
+こちらに近づいているのっ？
+
+# voice 9950 "glau_0032"
+# textboxarrow 0 1
+@グラウ
+東から急接近してきます
+警戒して下さい
+
+;;//暴走ロンゴミアントが突っ込んでくる
+# textwindow "close"
+# alpha 164 0 0.5
+# alpha 5503111 0 0.5
+# waitandnext 0.5
+
+# se "SE_9118"
+# emotionbody 2000 15 5301011 0 0
+# effectpattern 2000 1 0
+# effectstart 2000
+# move 5301011 3 0
+# face 5301011 "angry"
+# alpha 5301011 1 0
+# mask 5301011 off
+# leftin 5301011 0.5
+# waitandnext 0.5
+
+# voice 530101 "rhongomiant_bo_b_battle_0004"
+# textboxarrow 0 2
+# textwindow "normal"
+@？？？
+イヤア！アアアアア！
+コンナセカイ…ホロベバイイ…
+
+# voice 550023 "furaikugeru_iz_battle_0006"
+# move 5500231 2 0
+# face 5500231 "angry"
+# alpha 5500231 1 0.5
+# mask 5500231 on
+# textboxarrow 0 1
+# move 5301011 4 0.5
+# mask 5301011 on
+@フライクーゲル
+アウチ！
+きみ…ソーベァッドだよ…！
+
+# effectskip 2000
+# alpha 5500231 0 0.5
+# alpha 5301011 0 0.5
+# move 5503111 2 0
+# face 5503111 "surprise"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# textboxarrow 0 1
+# move 5303411 4 0
+# face 5303411 "angry"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+@ソロモン
+あれはロンゴミアント！
+もみ合っているのはフライクーゲル？
+何がどうなっているのっ？
+
+# textboxarrow 0 3
+@グランテピエ
+こっちに突っ込んでくる…
+たとえ、この身が滅んでもソロモンは
+守ってみせるよ
+
+# face 5503111 "normal"
+# textboxarrow 0 1
+@ソロモン
+グランお姉様は自分のことも
+大切にしてっ
+
+# effectstart 1000
+# voice 510071 "arondaito_bo_b_0029"
+# alpha 5503111 0 0.5
+# alpha 5303411 0 0.5
+# move 5100711 3 0
+# face 5100711 "angry"
+# alpha 5100711 1 0.5
+# mask 5100711 off
+# textboxarrow 0 2
+@アロンダイト
+ガアアアアア！
+
+# effectskip 1000
+# effectstart 2000
+# voice 530101 "rhongomiant_bo_b_battle_0003"
+# alpha 5100711 0 0.5
+# move 5301011 3 0
+# face 5301011 "sad"
+# alpha 5301011 1 0.5
+# mask 5301011 off
+# textboxarrow 0 2
+@ロンゴミアント
+イヤアアアアア！
+
+# effectskip 2000
+# voice 550023 "furaikugeru_iz_0031"
+# alpha 5301011 0 0.5
+# move 5500231 3 0
+# face 5500231 "sad"
+# alpha 5500231 1 0.5
+# mask 5500231 off
+# textboxarrow 0 2
+@フライクーゲル
+オウッ？
+ソーリー…！
+
+;;//アロンダイトとロンゴミアントが
+;;//グランテピエとソロモンを挟み撃ちにする
+;;//フライクーゲルも挟み込まれる
+# textwindow "close"
+# alpha 5500231 0 0.5
+# move 5303411 3 0
+# face 5303411 "angry"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# waitandnext 0.5
+
+# effectstart 1000
+# effectstart 2000
+# move 5301011 1 0
+# face 5301011 "sad"
+# alpha 5301011 1 0
+# mask 5301011 on
+# mask 5303411 on
+# move 5100711 5 0
+# face 5100711 "angry"
+# alpha 5100711 1 0
+# mask 5100711 on
+# leftin 5301011 0.5
+# rightin 5100711 0.5
+# waitandnext 1.2
+
+# alpha 5303411 0 0.5
+# move 5503111 3 0
+# face 5503111 "angry"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# waitandnext 1.2
+
+# alpha 5503111 0 0.5
+# move 5500231 3 0
+# face 5500231 "sad"
+# alpha 5500231 1 0.5
+# mask 5500231 on
+# waitandnext 1.2
+
+# effectskip 1000
+# effectskip 2000
+# voice 530341 "grandepieu_di_battle_0006"
+# alpha 5301011 0 0.5
+# alpha 5500231 0 0.5
+# alpha 5100711 0 0.5
+# move 5303411 3 0
+# face 5303411 "sad"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# textboxarrow 0 2
+# textwindow "normal"
+@グランテピエ
+くぅっ…
+
+# voice 550023 "furaikugeru_iz_0015"
+# alpha 5303411 0 0.5
+# move 5500231 3 0
+# face 5500231 "sad"
+# alpha 5500231 1 0.5
+# mask 5500231 off
+# textboxarrow 0 2
+@フライクーゲル
+あうっ…
+
+# alpha 5500231 0 0.5
+# move 164 2 0
+# alpha 164 1 0.5
+# mask 164 on
+# move 5503111 4 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# textboxarrow 0 3
+@ソロモン
+この状況を打破するためには…
+すぐに対策を
+
+# voice 9950 "glau_0045"
+# textboxarrow 0 1
+@グラウ
+ソロモン！
+新たな反応を感知しました
+
+# voice 550311 "solomon_di_0023"
+# face 5503111 "surprise"
+# textboxarrow 0 3
+@ソロモン
+またなの！？
+これ以上、暴走キル姫が増えたら…
+
+# bgm "stop"
+# textboxarrow 0 1
+@グラウ
+この反応はインテグラルキラーズ、
+アルテミスのものです

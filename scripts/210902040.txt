@@ -1,0 +1,675 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第９章 章タイトル：「雄弁な守人―プレッジ―」
+;;第2話－４　タイトル：為すべきこと
+;;2_4_0
+;;スクリプト最後の背景：牢獄
+;;-----------------------------------------
+# script "lisp"
+# background "006_jail"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;グリダヴォル
+# body 3600811
+# pos 3600811 3
+# scale 3600811 0.8 0
+# layer 3600811 2
+# alpha 3600811 0 0
+# mask 3600811 off
+;;レシェフ
+# body 3201311
+# pos 3201311 3
+# scale 3201311 0.8 0
+# layer 3201311 2
+# alpha 3201311 0 0
+# mask 3201311 off
+;;タスラム
+# body 3502011
+# pos 3502011 3
+# scale 3502011 0.8 0
+# layer 3502011 2
+# alpha 3502011 0 0
+# mask 3502011 off
+;;ヴァナルガンド・聖鎖・サリエル 大罪ver.
+# body 5601111
+# pos 5601111 3
+# scale 5601111 0.8 0
+# layer 5601111 2
+# alpha 5601111 0 0
+# mask 5601111 off
+;;アフロディーテ・D. plug・アスモデウス 大罪ver.
+# body 5401311
+# pos 5401311 3
+# scale 5401311 0.8 0
+# layer 5401311 2
+# alpha 5401311 0 0
+# mask 5401311 off
+;;エンクウ
+# body 227
+# pos 227 3
+# scale 227 0.8 0
+# layer 227 2
+# alpha 227 0 0
+# mask 227 off
+;;クレイ
+# body 228
+# pos 228 3
+# scale 228 0.8 0
+# layer 228 2
+# alpha 228 0 0
+# mask 228 off
+;;ムラマサ・獣刻・ヤマタノオロチ 大罪ver.
+# body 5102511
+# pos 5102511 3
+# scale 5102511 0.8 0
+# layer 5102511 2
+# alpha 5102511 0 0
+# mask 5102511 off
+;;ティファレト
+# body 171
+# pos 171 3
+# scale 171 0.8 0
+# layer 171 2
+# alpha 171 0 0
+# mask 171 off
+;;ティファレト（新ゴッド）ボイス用
+# body 5503211
+# alpha 5503211 0 0
+;;フェイルノート
+# body 167
+# pos 167 3
+# scale 167 0.8 0
+# layer 167 2
+# alpha 167 0 0
+# mask 167 off
+;;ツカサ
+# body 241
+# pos 241 3
+# scale 241 0.8 0
+# layer 241 2
+# alpha 241 0 0
+# mask 241 off
+;;-----------------------------------------
+;;第2話－４　タイトル：為すべきこと
+;;//背景：牢獄
+# se "SE_10585"
+# voice 310251 "muramasa_ge_battle_0001"
+# move 3600811 2 0
+# face 3600811 "angry"
+# alpha 3600811 1 0
+# mask 3600811 on
+# move 5102511 4 0
+# face 5102511 "angry"
+# alpha 5102511 1 0
+# mask 5102511 on
+# textflame 1 1
+# textboxarrow 0 3
+@ムラマサ
+やあっ！
+
+# se "SE_4500"
+# voice 360081 "guridavoru_a_battle_0002"
+# textboxarrow 0 1
+@グリダヴォル
+はっ！
+
+# se "SE_4301"
+# voice 340131 "aphrodite_a_battle_0001"
+# alpha 3600811 0 0.5
+# alpha 5102511 0 0.5
+# move 3201311 2 0
+# face 3201311 "angry"
+# alpha 3201311 1 0.5
+# mask 3201311 on
+# move 5401311 4 0
+# face 5401311 "angry"
+# alpha 5401311 1 0.5
+# mask 5401311 on
+# textboxarrow 0 3
+@アフロディーテ
+そこっ！
+
+# se "SE_4817"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 320131 "reshef_ge_0015"
+# textboxarrow 0 1
+@レシェフ
+くぅっ…
+
+# se "SE_11029"
+# alpha 3201311 0 0.5
+# alpha 5401311 0 0.5
+# move 167 2 0
+# face 167 "angry"
+# alpha 167 1 0.5
+# mask 167 on
+# move 5601111 4 0
+# face 5601111 "normal"
+# alpha 5601111 1 0.5
+# mask 5601111 on
+# textboxarrow 0 3
+@ヴァナルガンド
+まだです！
+
+# se "SE_4301"
+# textboxarrow 0 1
+@フェイルノート
+甘いわよ！
+
+# voice 350201 "tasuramu_ge_0027"
+# alpha 167 0 0.5
+# alpha 5601111 0 0.5
+# move 3502011 3 0
+# face 3502011 "normal"
+# alpha 3502011 1 0.5
+# mask 3502011 off
+# textboxarrow 0 2
+@タスラム
+おいおい…
+こんなところで、やめろよなー
+
+# alpha 3502011 0 0.5
+# move 171 3 0
+# face 171 "sad"
+# alpha 171 1 0.5
+# mask 171 off
+# textboxarrow 0 2
+@ティファレト
+そうです…
+お願い…
+お願いですから…
+
+# bgm "stop"
+# face 171 "angry"
+# textboxarrow 0 2
+@ティファレト
+やめてください！
+
+;;//ティファレトが戦いの中に割り込む
+# se "SE_5255"
+# textwindow "close"
+# leftout 171 0.5
+# waitandnext 0.5
+
+# alpha 171 0 0
+# move 167 2 0
+# face 167 "normal"
+# alpha 167 1 0.5
+# mask 167 on
+# waitandnext 0.5
+
+# move 171 4 0
+# face 171 "angry"
+# alpha 171 1 0
+# mask 171 on
+# rightin 171 0.5
+# waitandnext 0.5
+
+# voice 4019 "failnaught_a_0009"
+# textboxarrow 0 1
+# textwindow "normal"
+@フェイルノート
+何の真似かしら、ティファレト？
+私は侵入者を排除しているだけよ
+
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+# face 171 "sad"
+# textboxarrow 0 3
+@ティファレト
+こんな戦いは無意味です…
+フェイルノート、あなただって
+傷を負って…
+
+# voice 4019 "failnaught_a_0007"
+# textboxarrow 0 1
+@フェイルノート
+このくらい掠り傷よ
+
+# textboxarrow 0 3
+@ティファレト
+私は、誰にも傷ついてほしく
+ないんです…
+
+;;//ティファレトが力を使う
+# se "SE_4781"
+# fadein "green" 0.5
+# waitandnext 0.5
+
+# voice 9931 "enkuu_0022"
+# alpha 167 0 0.5
+# alpha 171 0 0.5
+# move 227 3 0
+# face 227 "happy"
+# alpha 227 1 0.5
+# mask 227 off
+# textboxarrow 0 2
+@エンクウ
+おお！
+この輝きはっ…
+
+# voice 360111 "vanargand_t_0006"
+# alpha 227 0 0.5
+# move 5601111 3 0
+# face 5601111 "happy"
+# alpha 5601111 1 0.5
+# mask 5601111 off
+# textboxarrow 0 2
+@ヴァナルガンド
+傷が癒えていきます
+わお～ん
+
+# alpha 5601111 0 0.5
+# move 167 3 0
+# face 167 "normal"
+# alpha 167 1 0.5
+# mask 167 off
+# textboxarrow 0 2
+@フェイルノート
+愚かね…
+そうやって他者を癒せば、
+その反動でお前が傷つくのに…
+
+;;フェイルノート（独白）
+# voice 4019 "failnaught_a_0067"
+# move 167 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 167 off
+@フェイルノート
+ティファレト、覚悟を決めたのね
+あなたもまた強者ということ…
+
+# voice 550321 "tiphereth_ca_0037"
+# alpha 167 0 0.5
+# move 171 3 0
+# face 171 "sad"
+# alpha 171 1 0.5
+# mask 171 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ティファレト
+ううっ…
+
+;;//ティファレトが倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 171 0 0.5
+# waitandnext 0.5
+
+# voice 9929 "tsukasa_0024"
+# move 241 3 0
+# face 241 "normal"
+# alpha 241 1 0.5
+# mask 241 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ツカサ
+ティファレト！？
+どうして、彼女の身体に傷が…
+
+# alpha 241 0 0.5
+# move 167 3 0
+# face 167 "normal"
+# alpha 167 1 0.5
+# mask 167 off
+# textboxarrow 0 2
+@フェイルノート
+それが代償だからよ
+ティファレトの力は治癒じゃない
+生命力を分け与えることなの
+
+# textboxarrow 0 2
+@フェイルノート
+私達に生命力を与えた分、自身に
+反動がある
+その目だって…
+
+# textboxarrow 0 2
+@フェイルノート
+他者を助けすぎて見えなくなって
+しまったんでしょ
+人が好すぎるのよ
+
+# voice 9931 "enkuu_0003"
+# alpha 167 0 0.5
+# move 227 2 0
+# face 227 "sad"
+# alpha 227 1 0.5
+# mask 227 on
+# textboxarrow 0 1
+# move 228 4 0
+# face 228 "sad"
+# alpha 228 1 0.5
+# mask 228 on
+@エンクウ
+己を捨てて他者に尽くす…
+限りなき慈悲の心は有り難し
+だが…
+
+# voice 9930 "clay_0030"
+# textboxarrow 0 3
+@クレイ
+彼女を苦しめるのは
+私達の望むことじゃない…
+
+# alpha 227 0 0.5
+# alpha 228 0 0.5
+# move 167 2 0
+# face 167 "normal"
+# alpha 167 1 0.5
+# mask 167 on
+# textboxarrow 0 1
+# move 171 4 0
+# face 171 "sad"
+# alpha 171 1 0.5
+# mask 171 on
+@フェイルノート
+そういうことよ
+だから、ここで大人しくして
+いればいいの
+
+# textboxarrow 0 1
+@フェイルノート
+あなたはここで何もせずにいなさい
+全て私達に任せて、ね
+
+# textboxarrow 0 3
+@ティファレト
+フェイルノート、
+私は…
+
+# textboxarrow 0 1
+@フェイルノート
+まだ意地を張るというの？
+せっかく、あなたにはあの町で起きて
+いることも伝えずにいたのに
+
+# textboxarrow 0 3
+@ティファレト
+あの町…？
+
+# voice 4019 "failnaught_a_0003"
+# textboxarrow 0 1
+@フェイルノート
+ええ、あなたが以前暮らしていた町よ
+今、奏官達に目をつけられて、
+襲われているの
+
+# voice 550321 "tiphereth_ca_0017"
+# face 171 "surprise"
+# textboxarrow 0 3
+@ティファレト
+そんなっ…！
+急いで助けに…
+
+# face 167 "angry"
+# textboxarrow 0 1
+@フェイルノート
+だから言ってるでしょ
+あなたは何もしなくていい
+私達がすでに動いているわ
+
+# textboxarrow 0 1
+@フェイルノート
+全部任せて静かにしてなさい
+それが最善なのよ
+力を持たないあなたには、ね
+
+# voice 550321 "tiphereth_ca_0037"
+# textboxarrow 0 3
+@ティファレト
+ううっ…
+
+# face 167 "normal"
+# textboxarrow 0 1
+@フェイルノート
+哀れなティファレト
+あなたにできるのは他者の傷を
+代わりに引き受けることだけ
+
+# textboxarrow 0 1
+@フェイルノート
+守りたい者達がどれだけたくさん
+いたとしても、あなた一人では
+誰も守れやしないのよ
+
+# textboxarrow 0 1
+@フェイルノート
+さあ、大人しく部屋に戻りなさい
+
+# bgm "stop"
+# alpha 167 0 0.5
+# alpha 171 0 0.5
+# move 241 3 0
+# face 241 "normal"
+# alpha 241 1 0.5
+# mask 241 off
+# textboxarrow 0 2
+@ツカサ
+…………
+
+# alpha 241 0 0.5
+# move 171 3 0
+# face 171 "sad"
+# alpha 171 1 0.5
+# mask 171 off
+# textboxarrow 0 2
+@ティファレト
+…………
+
+# bgmfile "bgm405" "BgmIntegralNoahEvent003" 0
+# textboxarrow 0 2
+@ティファレト
+フェイルノート…
+確かに私は無力です…
+ずっと周りの人達に守られてきました
+
+# textboxarrow 0 2
+@ティファレト
+ここに来たのも、あの町を三人の
+キル姫が守ってくれると
+約束してもらったからです
+
+# textboxarrow 0 2
+@ティファレト
+本当は自分で守りたかった
+皆を救いたかった
+でも、私には…
+
+# face 171 "angry"
+# textboxarrow 0 2
+@ティファレト
+その力がなかった
+だから、任せてしまった…
+いいえ！
+
+# textboxarrow 0 2
+@ティファレト
+逃げたんですっ
+甘い誘いに乗って、
+私は逃げてしまいました…！
+
+# textboxarrow 0 2
+@ティファレト
+そのことを悔やんでいます
+悔やんでいたんだってことを、
+やっと自覚しましたっ
+
+# textboxarrow 0 2
+@ティファレト
+もう同じ過ちを繰り返したくは
+ありません
+私は、ここから出ます！
+
+# textboxarrow 0 2
+@ティファレト
+ここから出て、ミカエルと会います！
+
+# textboxarrow 0 2
+@ティファレト
+私を守ってくれた人達を、
+今度は私が守るため
+その力を手に入れるために！
+
+# textboxarrow 0 2
+@ティファレト
+お願いします、フェイルノート
+私を行かせて下さい！
+
+# alpha 171 0 0.5
+# move 3201311 3 0
+# face 3201311 "angry"
+# alpha 3201311 1 0.5
+# mask 3201311 off
+# textboxarrow 0 2
+@レシェフ
+へーっ
+熱いなぁ
+でも、そう簡単に――
+
+# alpha 3201311 0 0.5
+# move 167 3 0
+# face 167 "normal"
+# alpha 167 1 0.5
+# mask 167 off
+# textboxarrow 0 2
+@フェイルノート
+いいわよ
+行きなさい
+
+# voice 320131 "reshef_ge_0022"
+# alpha 167 0 0.5
+# move 3201311 3 0
+# face 3201311 "surprise"
+# alpha 3201311 1 0.5
+# mask 3201311 off
+# textboxarrow 0 2
+@レシェフ
+いいのかよ！？
+
+# voice 550321 "tiphereth_ca_0030"
+# alpha 3201311 0 0.5
+# move 171 3 0
+# face 171 "normal"
+# alpha 171 1 0.5
+# mask 171 off
+# textboxarrow 0 2
+@ティファレト
+ありがとう、フェイルノート！
+本当に、いいんですか？
+
+# alpha 171 0 0.5
+# move 227 2 0
+# face 227 "usual"
+# alpha 227 1 0.5
+# mask 227 on
+# textboxarrow 0 1
+# move 228 4 0
+# face 228 "irregular"
+# alpha 228 1 0.5
+# mask 228 on
+@エンクウ
+あれほど追い詰めておった割に、
+随分とあっさり認めたな
+
+# voice 9930 "clay_0003"
+# textboxarrow 0 3
+@クレイ
+逆に疑わしいくらいだよ…
+
+# alpha 227 0 0.5
+# alpha 228 0 0.5
+# move 167 3 0
+# face 167 "angry"
+# alpha 167 1 0.5
+# mask 167 off
+# textboxarrow 0 2
+@フェイルノート
+そこ、聞こえてるわよ
+
+# face 167 "normal"
+# textboxarrow 0 2
+@フェイルノート
+仕方ないでしょ
+こういう展開になるって
+前もって聞かされてたんだから
+
+# move 167 2 0.5
+# mask 167 on
+# move 241 4 0
+# face 241 "normal"
+# alpha 241 1 0.5
+# mask 241 on
+# textboxarrow 0 3
+@ツカサ
+前もって？
+誰に？
+
+# textboxarrow 0 1
+@フェイルノート
+リサナウトよ
+あいつ、たまに何でもお見通しって
+顔するからイラッとするのよね…
+
+# textboxarrow 0 1
+@フェイルノート
+リサナウトが、私に言い残して
+いったの
+
+# textboxarrow 0 1
+@フェイルノート
+もしティファレトが自分の意思で
+ここから出たいって言ったら、
+出してやれって
+
+# textboxarrow 0 1
+@フェイルノート
+それが、ティファレト
+あなたにとっての最善だとも
+言っていたわよ
+
+# alpha 241 0 0.5
+# move 171 4 0
+# face 171 "normal"
+# alpha 171 1 0.5
+# mask 171 on
+# textboxarrow 0 3
+@ティファレト
+…ありがとう、フェイルノート
+私のことを心配してくれていたん
+ですね
+
+# face 167 "angry"
+# textboxarrow 0 1
+@フェイルノート
+バカなこと言わないで
+私は言われたことをこなしただけよ
+
+# face 171 "angry"
+# textboxarrow 0 3
+@ティファレト
+必ず人々を救う力を手にして来ます
+待っていて下さい
+
+# voice 4019 "failnaught_a_0034"
+# face 167 "normal"
+# textboxarrow 0 1
+@フェイルノート
+あなたを待つつもりはないわ
+帰って来なくても、私の指揮で
+町は救われる
+
+# textboxarrow 0 1
+@フェイルノート
+気負わず、好きにしなさい
+
+# voice 550321 "tiphereth_ca_0003"
+# face 171 "normal"
+# textboxarrow 0 3
+@ティファレト
+はい…
+ありがとうございます
+行ってきます

@@ -1,0 +1,206 @@
+;;-----------------------------------------
+;;SEA2章_21_0
+;;-----------------------------------------
+# script "lisp"
+# background "courtyard"
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 1
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;-----------------------------------------
+;;日記閉じる
+# imageset 2 "diary_close"
+# imagealpha 2 0 0
+# imagescale 2 1 0
+# imagelayer 2 5
+;;紙
+# imageset 4 "SEA_diary_bg"
+# imagealpha 4 0 0
+# imagelayer 4 1
+# imagescale 4 1.2 0
+;;1枚め
+# imageset 5 "SEA_diary_302"
+# imagealpha 5 0 0
+# imagescale 5 1 0
+# imagelayer 5 3
+;;2枚め
+# imageset 6 "SEA_diary_303"
+# imagealpha 6 0 0
+# imagescale 6 1 0
+# imagelayer 6 3
+;;3枚め
+# imageset 7 "SEA_diary_304"
+# imagealpha 7 0 0
+# imagescale 7 1 0
+# imagelayer 7 3
+;;4枚め
+# imageset 8 "SEA_diary_305"
+# imagealpha 8 0 0
+# imagescale 8 1 0
+# imagelayer 8 3
+;;-----------------------------------------
+;;背景：中庭
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# move 6504011 3 0.5
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@マナナン
+あー！
+やっと見つけた！
+
+# voice 9917 "mimir_navikan_0056"
+# move 270 2 0.5
+# face 270 "normal"
+# alpha 270 1 0.3
+# move 6504011 4 0.5
+# textboxarrow 0 1
+@ミーミル
+マナナンさんっ
+…本物でございますよね？
+
+# voice 650401 "manannan_ura_0022"
+# face 6504011 "surprise"
+# textboxarrow 0 3
+@マナナン
+何のこと？
+それより、先に行っちゃうなんて
+ずるいよ～っ
+
+# face 6504011 "usual"
+# textboxarrow 0 3
+@マナナン
+私の知らないところで、
+どんな喜劇的なことしてたの？
+
+# voice 9917 "mimir_navikan_0004"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+それにつきましては、
+宿に戻りながら
+お話しさせていただきます
+
+# voice 9917 "mimir_navikan_0001"
+# textboxarrow 0 1
+@ミーミル
+では、マスター様
+参りましょう
+
+# voice 650401 "manannan_ura_0002"
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+ねぇねぇ
+早く聞かせてよ～
+
+# fadeout "white" 1
+# waitandnext 1
+
+;;背景：日記帳
+# background "diary"
+#setnextbgmblock 1
+# se "bgm601_windon"
+# se "bgm601_glockenon"
+# alpha 270 0 0
+# alpha 6504011 0 0
+# waitandnext 0.5
+
+;;フレーム・テキストウィンドウを外す
+# textwindow "close"
+# frameout 0 0
+# se "SE_6165"
+# fadein "white" 1
+# waitandnext 2
+
+;;紙を表示
+# imagealpha 4 0.7 1
+# imagepos 4 0 0
+# waitandnext 1
+
+;;1枚目を表示
+# se "SE_6175"
+# imagealpha 5 1 2
+# imagepos 5 0 -900
+# waitandnext 1
+
+;;1枚目を上に
+# imagemoveto 5 0 700 25
+# waitandnext 22
+
+;;1枚目を消す
+# imagealpha 5 0 2
+# waitandnext 2
+
+;;2枚目を表示
+# se "SE_6166"
+# imagealpha 6 1 2
+# imagepos 6 0 -900
+# waitandnext 1
+
+;;2枚目を上に
+# imagemoveto 6 0 500 24
+# waitandnext 21
+
+;;2枚目を消す
+# imagealpha 6 0 2
+# waitandnext 2
+
+;;3枚目を表示
+# se "SE_6166"
+# imagealpha 7 1 2
+# imagepos 7 0 -900
+# waitandnext 1
+
+;;3枚目を上に
+# imagemoveto 7 0 500 25
+# waitandnext 22
+
+;;3枚目を消す
+# imagealpha 7 0 2
+# waitandnext 2
+
+;;4枚目を表示
+# se "SE_6166"
+# imagealpha 8 1 2
+# imagepos 8 0 -850
+# waitandnext 1
+
+;;4枚目を真ん中で止め
+# imagemoveto 8 0 -130 14
+# waitandnext 16
+
+;;4枚目と紙を消す
+# sestop "SE_6175"
+# imagemoveto 8 400 -120 3
+# imagealpha 8 0 2
+# waitandnext 2
+
+# imagealpha 4 0 2
+# waitandnext 2
+
+;;日記帳を閉じる
+# se "SE_6167"
+# imagealpha 2 1 2
+# imagepos 2 0 0
+# waitandnext 4
+
+# fadeout "black" 2
+# waitandnext 2

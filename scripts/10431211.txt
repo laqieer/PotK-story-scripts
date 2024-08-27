@@ -1,0 +1,258 @@
+;;-----------------------------------------
+;;ズィーヴァ1-1
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "stop"
+;;-----------------------------------------
+# body 104311
+# pos 104311 3
+# scale 104311 0.8 0
+# layer 104311 2
+# mask 104311 off
+# alpha 104311 0 0
+;;-----------------------------------------
+# imageset 0 "mov2_3_overlay"
+# imagealpha 0 0 0
+# imagescale 0 1.4 0
+# imagelayer 0 1
+# imageset 1 "mov2_3_sword"
+# imagealpha 1 0 0
+# imagescale 1 1.4 0
+# imagelayer 1 1
+;;-----------------------------------------
+;;以下、ズィーヴァの立ち絵メイン。
+;;淡々と１セリフごとに異族を斬っていく描写。
+;;ズィーヴァのセリフというよりは内面の声というようにしたいので、
+;;必要であれば吹き出し処理でお願いしたいです。
+;;そして可能なら画面をモノクロにしていただけませんでしょうか。
+# textwindow "close"
+# waitandnext 1
+
+# alpha 104311 1 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@ズィーヴァ
+斬って
+
+;;異族が双剣で斬られる
+# se "SE_10588"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagepos 0 0 0
+# waitandnext 0.7
+
+# textflame 1 1
+# textboxarrow 0 0
+@ズィーヴァ
+斬って
+斬って
+
+;;異族が斬られる
+# se "SE_10588"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# waitandnext 0.7
+
+# textflame 1 1
+# textboxarrow 0 0
+@ズィーヴァ
+斬って
+斬って
+斬って
+
+;;異族が斬られる
+# se "SE_10588"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# waitandnext 0.7
+
+# textflame 1 1
+# textboxarrow 0 0
+@ズィーヴァ
+目の前の敵を斬って、
+ただそれだけ
+どこの世界でも同じ
+
+# textflame 1 1
+# textboxarrow 0 0
+@ズィーヴァ
+異なる世界に喚ばれたとはいえ、
+やることは変わらない
+この双剣を、絢爛に振るうだけ
+
+# textflame 1 1
+# textboxarrow 0 0
+@ズィーヴァ
+変わることといえば、そう
+
+;;異族が更に斬られる
+# se "SE_10588"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# waitandnext 0.7
+
+# textflame 1 1
+# textboxarrow 0 0
+@ズィーヴァ
+あいつが、いない
+
+# textflame 1 1
+# textboxarrow 0 0
+@ズィーヴァ
+あいつを超えるために
+この双剣を振るってきたのに
+
+# textflame 1 1
+# textboxarrow 0 0
+@ズィーヴァ
+“本物”になるために
+この双剣を振るい続けて生きたのに
+
+# textflame 1 1
+# textboxarrow 0 0
+@ズィーヴァ
+私はその機会を失ってしまったのだ
+――そう、永遠に
+
+;;最後の異族を派手に斬るズィーヴァ
+# se "SE_10588"
+# sedelay "SE_10588" 0.1
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# fadein "red" 0.5
+# alpha 104311 0 0
+# waitandnext 1
+
+# imagealpha 0 0 1
+# imagealpha 1 0 1
+# waitandnext 1
+
+# alpha 104311 1 0.5
+# face 104311 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ズィーヴァ
+世界が変わっても
+私の世界は、モノクロだ
+
+;;双剣を収める音がする
+;;ここから世界に色が戻る。通常の風景
+# fadeout "black" 1
+# se "SE_8000"
+# waitandnext 1
+
+# background "plain"
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm005" 0
+# textflame 0 0
+# textwindow "nomal"
+@
+彼女の中に、憂いがある
+マスターはそう感じていた
+
+# alpha 104311 1 0.5
+# face 104311 "normal"
+# textflame 0 0
+@
+しかし、いくら問いかけても
+彼女――ズィーヴァは答えてくれない
+
+# voice 1043 "siewa_0013"
+# textflame 1 1
+# textboxarrow 0 2
+@ズィーヴァ
+何もないって言ってるでしょ
+
+# textflame 0 0
+@
+いつもの問いに、
+いつもの答えが返ってくるのみ
+
+# face 104311 "sad"
+# voice 1043 "siewa_0019"
+# textflame 1 1
+# textboxarrow 0 2
+@ズィーヴァ
+これで何度目？
+アンタも飽きないわねえ
+
+# textflame 0 0
+@
+心配なんだ
+心からの言葉をかけるマスター
+
+# face 104311 "normal"
+# voice 1043 "siewa_0007"
+# textflame 1 1
+# textboxarrow 0 2
+@ズィーヴァ
+心配なんか必要ないわよ
+私にはもう…機会がないんだから
+
+# textflame 0 0
+@
+彼女は“機会”と口にした
+
+# bgm "bgm035" 0
+# textflame 0 0
+@
+その内容を知りたい
+そう口にする前に
+さらに異族がやってくる
+
+# textflame 1 1
+# textboxarrow 0 2
+@ズィーヴァ
+下がっていなさい
+
+# textflame 0 0
+@
+さっきの戦いの疲れもあるのに
+大丈夫なの？
+とマスターは口にする
+
+# face 104311 "mad"
+# voice 1043 "siewa_0004"
+# textflame 1 1
+# textboxarrow 0 2
+@ズィーヴァ
+心配は必要ないって言ったでしょ？
+
+;;少しだけ笑みを浮かべるズィーヴァ
+# textflame 1 1
+# textboxarrow 0 2
+@ズィーヴァ
+白黒つけるのは、得意なの
+
+# textflame 0 0
+@
+そう言って双剣を構えるズィーヴァ
+その姿が、その笑みが――
+
+# textflame 0 0
+@
+――やけに、美しい
+そう思うマスターだった

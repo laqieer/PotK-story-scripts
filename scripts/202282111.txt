@@ -1,0 +1,809 @@
+;;-----------------------------------------
+;;鎌倉11_0
+;;-----------------------------------------
+# script "lisp"
+# background "beach"
+# bgm "stop"
+;;-----------------------------------------
+;;INヘレナ
+# body 5302811
+# pos 5302811 4
+# scale 5302811 0.8 0
+# layer 5302811 2
+# alpha 5302811 0 0
+;;ニール
+# body 162
+# pos 162 2
+# scale 162 0.8 0
+# layer 162 5
+# mask 162 off
+# alpha 162 0 0
+;;鎌倉ヘレナ
+# body 6302811
+# pos 6302811 4
+# scale 6302811 0.8 0
+# layer 6302811 4
+# alpha 6302811 1 0
+;;鎌倉ニール
+# body 323
+# pos 323 2
+# scale 323 0.8 0
+# layer 323 5
+# mask 323 off
+# alpha 323 0.4 0
+;;鎌倉リサナウト
+# body 6203011
+# pos 6203011 1
+# scale 6203011 0.8 0
+# layer 6203011 2
+# alpha 6203011 0 0
+;;ボス魔獣
+# body 900019
+# pos 900019 1
+# scale 900019 0.9 0
+# layer 900019 1
+# mask 900019 off
+# alpha 900019 0 0
+# reversal 900019 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagescale 1 1.5 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：beach
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# voice 9952 "nir_0015"
+# textflame 1 1
+# face 6302811 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ニール
+バイバイ、ヘレナ！
+ちゃんと魔獣を倒すのよっ
+
+;;ニールが走り去る
+# se "SE_4747"
+# rightout 323 0.5
+# textwindow "close"
+# waitandnext 1
+
+# voice 530281 "herena_di_0045"
+# alpha 323 0 0
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+ニール…！
+
+# move 900019 2 0.5
+# alpha 900019 1 0.5
+# se "SE_7001"
+# textwindow "toge"
+# textboxarrow 0 1
+@魔獣
+ガアアアアアアアアアアアアア！！
+
+# voice 530281 "herena_di_battle_0006"
+# face 6302811 "angry"
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+…くっ！？
+戻ったんだよな
+ニールを追わないと
+
+# textboxarrow 0 3
+@ヘレナ
+ニール…
+何て言えばいいのか
+分からないけど…
+
+# textboxarrow 0 3
+@ヘレナ
+分からないなりに、伝えるよ
+
+;;ヘレナが走っていく
+# se "SE_5575"
+# move 6302811 5 0.5
+# scale 6302811 0.7 0.5
+# alpha 6302811 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 0.5
+
+;;背景：sea_park_day
+# background "sea_park_day"
+# bgm "bgm004" 0
+# alpha 900019 0 0
+# move 6302811 4 0
+# scale 6302811 0.8 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 9952 "nir_0032"
+# move 323 3 0
+# alpha 323 0.4 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+@ニール
+ここからならヘレナの勇姿が
+よく見えそうね
+
+# textboxarrow 0 2
+@ニール
+消える前に、しっかり
+目に焼き付けておかなくっちゃ
+
+# textboxarrow 0 2
+@ニール
+…ねぇ、ヘレナ
+アタチ達、出会ってから２人で
+たくさんイタズラをしたわよね
+
+# textboxarrow 0 2
+@ニール
+ヘレナの考えつくイタズラは
+面白かったし、アタチの思いつきに
+乗ってくれるのも嬉しかった
+
+# textboxarrow 0 2
+@ニール
+ヘレナといると、
+毎日楽しかったわ
+
+# textboxarrow 0 2
+@ニール
+でも、アタチ知ってるのよ
+ヘレナは嘘ばかりつくけど…
+
+# textboxarrow 0 2
+@ニール
+本当は優しくて繊細で、だから
+いつも混ぜっ返すようなことを言って
+場の雰囲気を明るくしようとして…
+
+# textboxarrow 0 2
+@ニール
+アタチにも…
+気を遣ってくれてたのよね
+でも…
+
+# voice 9952 "nir_0028"
+# textboxarrow 0 2
+@ニール
+ヘレナが傷つくのを見るのは、
+アタチ、イヤなのよ…
+
+# voice 9952 "nir_0046"
+# textboxarrow 0 2
+@ニール
+…………ヘレナ
+
+;;ヘレナが走ってくる
+# voice 530281 "herena_di_0045"
+# se "SE_5575"
+# rightin 6302811 0.5
+# face 6302811 "angry"
+# alpha 6302811 1 0.3
+# move 323 2 0.5
+# textboxarrow 0 3
+@ヘレナ
+ニール！
+
+# voice 9952 "nir_0023"
+# textboxarrow 0 1
+@ニール
+ヘレナ！？
+何で追ってきたの！
+
+# textboxarrow 0 1
+@ニール
+早く魔獣を倒さないと、
+どんどん被害が広がるわ！
+アタチのことはいいからっ
+
+# textsize 28
+# textboxarrow 0 3
+@ヘレナ
+よくない！
+
+# textsize 24
+# textboxarrow 0 3
+@ヘレナ
+よくないんだ、ニール
+
+# textboxarrow 0 1
+@ニール
+でも…アタチとヘレナは、もう…
+
+# face 6302811 "sad"
+# textboxarrow 0 3
+@ヘレナ
+一緒にいる意味がない
+そう言いたいんだろ
+
+# textboxarrow 0 3
+@ヘレナ
+気づいてた…
+本当は少し前から…
+ニールが悩んでいるって
+
+# textboxarrow 0 3
+@ヘレナ
+でも、聞くのが怖くて…
+気づいてないフリをしてたんだ
+
+# voice 9952 "nir_0008"
+# textboxarrow 0 1
+@ニール
+ヘレナ…
+やっぱり優しいのね
+
+# textboxarrow 0 1
+@ニール
+そうよ！
+アタチはヘレナの役に立てない
+一緒にいる意味がないの
+
+# textboxarrow 0 1
+@ニール
+だから、お別れなのよ！
+
+# voice 530281 "herena_di_0032"
+# textboxarrow 0 3
+@ヘレナ
+そうだな…
+一緒にいる意味はない
+意味はないけど…
+
+# move 6302811 4 0
+# textwindow "moya"
+# textboxarrow 0 0
+@ヘレナ
+ああ…何て言えばいいんだ…？
+この気持ちはどんな言葉にすれば
+いいんだよ…！
+
+@ヘレナ
+上手くニールを言いくるめられる
+言葉があれば…
+くっ…！
+
+# face 6302811 "angry"
+@ヘレナ
+そうじゃない…！
+ヘレナが今、伝えたいのは…
+
+;;回想シーン
+# se "SE_0742"
+# fadeout "white" 1.5
+# waitandnext 1.5
+
+;;背景：鎌倉：SEAsummer_town3
+# background "SEAsummer_town3"
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 6302811 0 0
+# alpha 323 0 0
+# textwindow "close"
+# fadein "white" 1.5
+# waitandnext 1.5
+
+# voice 530281 "herena_di_0004"
+# face 6302811 "normal"
+# alpha 5302811 1 0.3
+# alpha 162 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+その汗は暑さのせいか
+なるほどな…くふっ
+
+# voice 9952 "nir_0002"
+# textboxarrow 0 1
+@ニール
+面白そうだから、
+もう少し泳がせてみましょうよ
+
+# face 6302811 "usual"
+# textboxarrow 0 3
+@ヘレナ
+ああ、そうしよう
+近くに海もあることだし
+なんてね
+
+;;暗転挟む
+# se "SE_0742"
+# fadeout "white" 1.5
+# waitandnext 1.5
+
+;;背景：町：学園編「courtyard」左
+;;# background "cityload"
+# background "courtyard"
+# alpha 5302811 0 0
+# alpha 162 0 0
+# textwindow "close"
+# fadein "white" 1.5
+# waitandnext 1.5
+
+# voice 520301 "risanautr_ca_0002"
+# move 6302811 5 0
+# face 6302811 "happy"
+# alpha 6302811 1 0.3
+# move 323 3 0
+# alpha 323 1 0.3
+# face 6203011 "normal"
+# alpha 6203011 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@リサナウト
+せっかくだから記念撮影しましょ
+ほら、ヘレナもニールも笑って
+
+# voice 530281 "herena_di_0007"
+# textboxarrow 0 3
+@ヘレナ
+リサナウトはヘレナに嘲笑って
+欲しいんだね…くふっ
+
+# textboxarrow 0 2
+@ニール
+そういう趣味なのよ、きっと
+
+;;暗転挟む
+# se "SE_0742"
+# fadeout "white" 1.5
+# waitandnext 1.5
+
+;;背景：町：seahouse
+# background "seahouse"
+# alpha 6302811 0 0
+# alpha 323 0 0
+# alpha 6203011 0 0
+# textwindow "close"
+# fadein "white" 1.5
+# waitandnext 1.5
+
+# voice 530281 "herena_di_0039"
+# move 6302811 4 0
+# alpha 6302811 1 0.3
+# move 323 2 0
+# face 6302811 "normal"
+# alpha 323 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+ふぅん
+このカフェはのんびりできそうだ
+
+# voice 9952 "nir_0032"
+# textboxarrow 0 1
+@ニール
+飲み物を注文したいわね
+
+# textboxarrow 0 3
+@ヘレナ
+このドリンクなんかいいんじゃないか
+
+;;暗転挟む
+# se "SE_0742"
+# fadeout "white" 1.5
+# waitandnext 1.5
+
+;;背景：beach
+# background "beach"
+# alpha 6302811 0 0
+# alpha 323 0 0
+# textwindow "close"
+# fadein "white" 1.5
+# waitandnext 1.5
+
+# voice 9952 "nir_0004"
+# face 6302811 "normal"
+# alpha 6302811 1 0.3
+# alpha 323 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ニール
+みんな緩みきってるわねぇ
+
+# voice 530281 "herena_di_0004"
+# face 6302811 "happy"
+# textboxarrow 0 3
+@ヘレナ
+ああいうのを見ると、
+ちょっとイタズラしたくなるな
+ふふっ
+
+# textboxarrow 0 1
+@ニール
+やっちゃう？
+アタチに名案があるわよ
+
+# move 6302811 3 0.5
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# voice 530281 "herena_di_0002"
+# face 6302811 "normal"
+# textboxarrow 0 2
+@ヘレナ
+ヘレナにもあるよ
+例えば…ごにょごにょ
+
+# move 6302811 4 0.5
+# move 323 3 0.5
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# voice 9952 "nir_0007"
+# textboxarrow 0 2
+@ニール
+良いわね♪
+だったら、ごにょごにょ…
+
+# voice 530281 "herena_di_0005"
+# move 323 2 0.5
+# face 6302811 "happy"
+# textboxarrow 0 3
+@ヘレナ
+ふふふっ
+それは傑作だ！
+みんな大慌てだろうな
+
+;;回想終了
+# se "SE_11762"
+# fadeout "white" 1.5
+# waitandnext 1.5
+
+;;背景：sea_park_day
+# background "sea_park_day"
+# imagealpha 1 0 0
+# alpha 323 0.4 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1.5
+
+# move 6302811 4 0
+# face 6302811 "angry"
+# textwindow "moya"
+# textboxarrow 0 0
+@ヘレナ
+ヘレナが伝えたいのは、
+ニールとの何でもない会話とか
+ちょっとしたイタズラとか…
+
+@ヘレナ
+そういう…どうでもいいことが、
+ヘレナには大切だったってことだ
+意味なんて…
+
+# bgmfile "bgm464_465" "BgmIntegralNoahDisrupters" 0
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+意味なんてどうでもいい
+ヘレナは…
+ニールと一緒にいたいんだよ！！
+
+# voice 9952 "nir_0022"
+# textboxarrow 0 1
+@ニール
+ヘレナ…！？
+
+# voice 530281 "herena_di_0016"
+# textboxarrow 0 3
+@ヘレナ
+そうだ
+これはヘレナのわがままだ
+意味なんてなくていいっ
+
+# textboxarrow 0 3
+@ヘレナ
+戦うことがなくても
+ニールと一緒にいると楽しいから
+安心できるから
+
+# textboxarrow 0 3
+@ヘレナ
+ヘレナがニールと一緒にいたい
+ただ、それだけなんだよ！
+
+# textboxarrow 0 3
+@ヘレナ
+ニールはどうなんだっ？
+
+# textboxarrow 0 3
+@ヘレナ
+何か意味がないと…
+ヘレナと一緒にいたくないのか！？
+
+# textboxarrow 0 3
+@ヘレナ
+ヘレナ達の繋がりは、
+意味がないと成り立たない…
+その程度のものだったのか！？
+
+# voice 9952 "nir_0016"
+# textboxarrow 0 1
+@ニール
+ヘレナ…
+ううっ…
+ヘレナああああああああああ…！
+
+;;ニールがヘレナにくっつく
+# se "SE_4747"
+# move 323 3 0.2
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# textboxarrow 0 2
+@ニール
+アタチもヘレナと一緒にいたい
+何の役に立てなくても…
+一緒にいたいのよぉっ
+
+# textboxarrow 0 2
+@ニール
+ヘレナとの日々は楽しかったに
+決まってるでしょ！
+面白いこと、たくさんしたわ！
+
+# textboxarrow 0 2
+@ニール
+これからも一緒にイタズラして、
+平和な世界でも面白おかしく
+暮らしていたいのぉっ！
+
+# voice 530281 "herena_di_0005"
+# face 6302811 "happy"
+# textboxarrow 0 3
+@ヘレナ
+ふふふっ
+そうだ
+ヘレナも同じだ
+
+# textboxarrow 0 3
+@ヘレナ
+初めは戦うために必要だったから
+繋がったのかもしれない
+だけど…
+
+# textboxarrow 0 3
+@ヘレナ
+もう、そんな理由も意味も必要ない
+ヘレナとニールは一緒に楽しく
+生きるパートナーだ
+
+# voice 9952 "nir_0032"
+# textboxarrow 0 2
+@ニール
+そうね！
+戦いが終わったから消えるなんて
+そんなの勿体ないわ！
+
+# textboxarrow 0 2
+@ニール
+楽しくなるのは
+これからなんだものっ
+
+;;ヘレナとニールの間が光る
+# se "SE_12777"
+# effectbody 100 51 0 0 0
+# effectstart 100
+# move 323 2 1
+# alpha 323 1 1
+# textwindow "close"
+# waitandnext 2
+
+# voice 530281 "herena_di_0022"
+# face 6302811 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+何だ？
+この光は…
+
+# textboxarrow 0 1
+@ニール
+よく分からないけど、
+力が湧いてくるわよ
+
+# face 6302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+なるほど
+どうやらヘレナとニールは
+新たな力に目覚めたようだぞ
+
+# textboxarrow 0 1
+@ニール
+絆の力ってことかしら？
+あらあら、安直ねぇ
+
+# voice 530281 "herena_di_0004"
+# face 6302811 "happy"
+# textboxarrow 0 3
+@ヘレナ
+まったくだ
+別に、これ以上強くならなくても
+いいのになぁ…くふっ
+
+# se "SE_6232"
+# serif 1
+# textwindow "toge"
+@魔獣
+ガアアアアアアアアアアアア！！
+
+# voice 9952 "nir_0002"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@ニール
+ところでヘレナ
+アタチ達がおしゃべりしてる間に
+この世界がピンチになってるわよ
+
+# voice 530281 "herena_di_0003"
+# face 6302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+ああ、そうだった
+リサナウトが頑張って魔獣を
+足止めしてるみたいだけどね
+
+# face 6302811 "happy"
+# textboxarrow 0 3
+@ヘレナ
+どうする、ニール？
+見捨てて元の世界に帰ろうか…
+くふっ
+
+# voice 9952 "nir_0004"
+# textboxarrow 0 1
+@ニール
+あらあら
+もっと面白い展開があるって
+ヘレナも気づいてるくせに
+
+# textboxarrow 0 3
+@ヘレナ
+仕方ないなぁ
+それじゃ、さっさと片付けよう
+
+# textboxarrow 0 1
+@ニール
+魔獣のところまで、
+かなりの距離があるわよ
+間に合うかしら？
+
+# voice 530281 "herena_di_0004"
+# textboxarrow 0 3
+@ヘレナ
+ふふっ
+試してみようか、ニール？
+
+# voice 9952 "nir_0032"
+# textboxarrow 0 1
+@ニール
+ええ
+アタチ達の速さを見せつけて
+あげましょう
+
+# move 6302811 3 1
+# scale 6302811 0.7 0.5
+# alpha 6302811 0 0.3
+# move 323 3 1
+# scale 323 0.7 0.5
+# alpha 323 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+;;暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 0.5
+
+;;背景：beach
+# background "beach"
+# waitandnext 0.2
+
+# move 6302811 4 0
+# scale 6302811 0.8 0
+# move 323 2 0
+# scale 323 0.8 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 900019 3 0
+# scale 900019 1 1
+# alpha 900019 1 1
+# shake 1 1
+# se "SE_6232"
+# textwindow "toge"
+# textboxarrow 0 2
+@魔獣
+ガアアアアアアアアアアア！
+
+# serif 1
+# textwindow "nomal"
+@人々
+うわあああっ…！？
+巨大怪獣が迫ってくるぞぉっ
+
+# serif 1
+@人々
+もう、おしまいだあ…
+
+# voice 520301 "risanautr_ca_0015"
+# alpha 900019 0 0.5
+# move 6203011 3 0
+# mask 6203011 off
+# face 6203011 "angry"
+# alpha 6203011 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@リサナウト
+ぐぬぬっ…
+これ以上の時間稼ぎは無理ね
+
+# face 6203011 "sad"
+# textboxarrow 0 2
+@リサナウト
+人の避難は間に合いそうだけど
+町が壊されそう…
+
+# textboxarrow 0 2
+@リサナウト
+こんなにきれいな景色なのに…
+
+# alpha 6203011 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;ヘレナが突っ込んでくる
+# se "SE_12851"
+# rightin 6302811 0.5
+# face 6302811 "normal"
+# alpha 6302811 1 0.3
+# rightin 323 0.5
+# alpha 323 1 0.3
+# waitandnext 0.3
+
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+ヘレナの攻撃、避けられるかな？
+
+;;バトル
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 6302811 0 0
+# alpha 323 0 0
+# waitandnext 0.2

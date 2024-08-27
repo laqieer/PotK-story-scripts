@@ -1,0 +1,443 @@
+;;-----------------------------------------
+;;SEA1章_11
+;;-----------------------------------------
+# script "lisp"
+# background "mayor_room"
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+;;-----------------------------------------
+;;ゼロ
+# body 23
+# pos 23 3
+# scale 23 0.8 0
+# layer 23 3
+# mask 23 off
+# alpha 23 0 0
+# body 1100211
+# alpha 1100211 0 0
+;;ミーミル
+# body 270
+# pos 270 1
+# scale 270 0.8 0
+# layer 270 3
+# mask 270 off
+# alpha 270 0 0
+;;レーヴァテイン
+# body 41002002
+# pos 41002002 3
+# scale 41002002 0.75 0
+# layer 41002002 5
+# mask 41002002 off
+# alpha 41002002 0 0
+;;衛兵
+# body 12
+# pos 12 1
+# scale 12 0.8 0
+# layer 12 2
+# mask 12 off
+# alpha 12 0 0
+# reversal 12 0
+;;市長
+# body 277
+# pos 277 5
+# scale 277 0.8 0
+# layer 277 1
+# mask 277 off
+# alpha 277 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：市長の部屋
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# sedelay "bgm602_basic_on" 1
+# alpha 270 1 0.3
+# alpha 277 1 0.3
+# alpha 41002002 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@市長
+「レーギャルン」
+その言葉の意味は不明だが…
+
+# textboxarrow 0 3
+@市長
+当時の市長はレーヴァテイン様の
+ありがたいお言葉を受け、この町を
+「レガル」と改名したのだ！
+
+# textboxarrow 0 1
+@ミーミル
+…ということが「レガルの掟」に
+記してあります
+
+# textboxarrow 0 2
+@レーヴァテイン
+はぁ…鬱陶しい…
+
+# textboxarrow 0 3
+@市長
+それから四方に高い壁を造り――
+
+# bgm "stop"
+# alpha 270 0 0.3
+# alpha 277 0 0.3
+# alpha 41002002 0 0.3
+# move 12 3 0.5
+# face 12 "angry"
+# alpha 12 1 0.3
+# textboxarrow 0 2
+@衛兵
+市長！
+大変です！
+
+# move 12 2 0.5
+# move 277 4 0.5
+# face 277 "angry"
+# alpha 277 1 0.3
+# textboxarrow 0 3
+@市長
+何だっ？
+まだ話の途中だぞ！
+
+# bgm "bgm005" 0
+# textboxarrow 0 1
+@衛兵
+それが…八つの門、
+全て開放されてしまいました！
+
+# textboxarrow 0 3
+@市長
+何だと！？
+グングニルはどうした…！？
+
+# face 12 "normal"
+# textboxarrow 0 1
+@衛兵
+東門守備についておりましたが、
+現在、行方知れずとなっております
+
+# move 270 2 0
+# move 41002002 4 0
+# face 277 "sad"
+# textboxarrow 0 3
+@市長
+そんな…
+グングニルは自ら「最後の門番」と
+名乗っていたというのに…
+
+# voice 9917 "mimir_navikan_0001"
+# alpha 12 0 0.3
+# alpha 277 0 0.3
+# face 270 "normal"
+# alpha 270 1 0.3
+# alpha 41002002 1 0.3
+# textboxarrow 0 1
+@ミーミル
+マスター様
+全ての門が開いたということは、
+レーヴァテインさんのお姿もっ
+
+# textboxarrow 0 3
+@レーヴァテイン
+…………
+
+;;レーヴァテインの姿が縮む
+# scale 41002002 0.7 0.5
+# se "SE_7330"
+# waitandnext 0.5
+
+# voice 9917 "mimir_navikan_0023"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+戻って…いません…
+それどころか、
+また小さくなっています…
+
+# textboxarrow 0 3
+@レーヴァテイン
+ううっ…
+
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+レーヴァテインさん、
+どこか痛むのですかっ？
+
+# textboxarrow 0 3
+@レーヴァテイン
+あ…これ、本当にヤバイかも…
+ボーッとして…きた
+
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+しっかりして下さい！
+
+# alpha 270 0 0.3
+# alpha 41002002 0 0.3
+# move 277 3 0
+# layer 277 2
+# face 277 "sad"
+# alpha 277 1 0.3
+# textboxarrow 0 2
+@市長
+どうなってる…？
+何でレーヴァテイン様が
+苦しんでいるんだ…
+
+# face 277 "smile"
+# textboxarrow 0 2
+@市長
+こんなときは…そ、そうだ！
+「レガルの掟」に従って…
+
+# alpha 277 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# move 23 1 0
+# se "SE_6215"
+# waitandnext 0.5
+
+;;ゼロが飛び込んでくる
+# se "SE_6119"
+# move 23 2 0.3
+# layer 23 1
+# face 23 "normal"
+# alpha 23 1 0.3
+# waitandnext 0.8
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@ゼロ
+アマネ！
+ここにいるのか！？
+
+# alpha 23 0 0.3
+# move 270 3 0
+# face 270 "sad"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+ゼロさん！
+レーヴァテインさんが…
+
+# voice 11002 "laevateinm_0023"
+# alpha 270 0 0.3
+# face 23 "surprise"
+# alpha 23 1 0.3
+# move 41002002 4 0
+# alpha 41002002 1 0.3
+# textboxarrow 0 1
+@ゼロ
+アマネ！？
+何で元の姿に戻ってないんだ…！
+おい、しっかりしろ！
+
+# textboxarrow 0 1
+@ゼロ
+門は八つとも開けたんだぞ…
+今も仲間達が
+開きっぱなしにしてくれてる…
+
+# textboxarrow 0 1
+@ゼロ
+なのに、何でだ！
+
+# textboxarrow 0 3
+@レーヴァテイン
+ううっ…
+
+# voice 11002 "laevateinm_0009"
+# move 277 5 0
+# face 23 "angry_2"
+# textboxarrow 0 1
+@ゼロ
+おい市長！
+てめえ何をしやがった！？
+
+# move 41002002 5 0.5
+# alpha 41002002 0 0.3
+# move 277 4 0.5
+# face 277 "sad"
+# alpha 277 1 0.3
+# textboxarrow 0 3
+@市長
+ひぃぃぃっ…！
+待ってくれ…「レガルの掟」にも
+こんな状況は載ってないんだ…
+
+# face 23 "angry_1"
+# textboxarrow 0 1
+@ゼロ
+うるせぇ！
+こんな本、どうでもいいんだよ！
+
+# voice 9917 "mimir_navikan_0016"
+# alpha 277 0 0.3
+# alpha 23 0 0.3
+# layer 270 4
+# face 270 "sad"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+ああっ…
+あの…
+ゼロさん…
+
+# bgm "stop"
+;;選択肢
+# select "落ち着け！" "select_label_01"
+ゼロさん…
+
+# label "select_label_01"
+# voice 9917 "mimir_navikan_0045"
+# move 23 1 0
+# face 270 "normal"
+# layer 23 2
+# mask 23 off
+# textboxarrow 0 2
+@ミーミル
+マスター様…
+
+# move 270 4 0.5
+# move 23 2 0.5
+# face 23 "angry_2"
+# alpha 23 1 0.3
+# textboxarrow 0 1
+@ゼロ
+ふざけるな！
+落ち着いていられるような状況か！？
+
+# face 270 "angry"
+# textboxarrow 0 3
+@ミーミル
+いいえ
+こんな状況だからこそです
+
+# voice 9917 "mimir_navikan_0030"
+# face 270 "happy"
+# textboxarrow 0 3
+@ミーミル
+マスター様、ありがとうございます
+私、混乱しておりました
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# sedelay "bgm602_basic_on" 1
+# textboxarrow 0 3
+@ミーミル
+もっと冷静になって
+状況の把握と分析に努めます
+
+# voice 11002 "laevateinm_0013"
+# face 23 "angry_1"
+# textboxarrow 0 1
+@ゼロ
+くそっ…
+状況の把握も何も、見たまんまだろ
+
+# voice 9917 "mimir_navikan_0003"
+# face 270 "normal"
+# textboxarrow 0 3
+@ミーミル
+その通りです、ゼロさん
+八つの門を開いたというのに、
+レーヴァテインさんは元に戻らない
+
+# textboxarrow 0 3
+@ミーミル
+それどころか、小さくなり続けて
+存在そのものが危うい状態です
+これは、つまり…
+
+# sedelay "bgm602_rhythm_on_1" 1
+# textboxarrow 0 3
+@ミーミル
+全ての門を開いていないからでは
+ないでしょうか
+
+# voice 11002 "laevateinm_0023"
+# face 23 "surprise"
+# textboxarrow 0 1
+@ゼロ
+何…！？
+レガルの門は八つしかないぞ
+
+# textboxarrow 0 3
+@ミーミル
+それにつきまして先程、
+市長さんが仰った「レガル」という
+名の成り立ちに
+
+# textboxarrow 0 3
+@ミーミル
+気になるところがありました
+
+# textboxarrow 0 3
+@ミーミル
+元々、レーヴァテインさんが
+町の中心で
+「レーギャルン」と仰った…
+
+# textboxarrow 0 3
+@ミーミル
+その逸話から来ていると
+
+# textboxarrow 0 3
+@ミーミル
+「レガルの掟」にも
+そのように記されておりました
+この「レーギャルン」ですが…
+
+# textboxarrow 0 3
+@ミーミル
+私、ようやく思い出しました
+レーヴァテインの伝承に出てくる
+「レーギャルンの箱」です
+
+# voice 11002 "laevateinm_0022"
+# textboxarrow 0 1
+@ゼロ
+箱だと？
+何の箱だ？
+
+# textboxarrow 0 3
+@ミーミル
+この箱はレーヴァテインを
+収めておく箱です
+そして、この箱には
+
+#setnextbgmblock 1
+# se "bgm602_tension_on_1"
+# textboxarrow 0 3
+@ミーミル
+鍵が「九つ」ついているそうです
+
+# textboxarrow 0 1
+@ゼロ
+なっ…！？
+九つだと！
+町の門は八つ…一つ足りないぞ！
+
+# voice 9917 "mimir_navikan_0003"
+# textboxarrow 0 3
+@ミーミル
+はい
+もしこの町が「レーギャルンの箱」
+として造られたのなら
+
+# se "bgm602_tension_on"
+# textboxarrow 0 3
+@ミーミル
+あと一つ
+どこかに門があるはずだと
+推測致します
+
+# fadeout "black" 0.5
+# waitandnext 0.5

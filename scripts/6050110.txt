@@ -1,0 +1,398 @@
+;;【EP5】戦闘後/圧倒迫撃～前進～/背景：遺跡
+# script "lisp"
+# bgmfile "bgm214_02" "BgmAncientKillers001" 0
+# background "antiquity"
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# body 302511
+# pos 302511 2
+# scale 302511 0.8 0
+# body 300181
+# pos 300181 5
+# scale 300181 0.8 0
+# body 500261
+# pos 500261 2
+# scale 500261 0.8 0
+# body 502711
+# pos 502711 4
+# scale 502711 0.8 0
+# alpha 100221 0 0
+# alpha 502711 0 0
+# alpha 302511 0 0
+# alpha 500261 0 0
+# alpha 300181 0 0
+# textflame 0 0
+# face 100221 "angry"
+@考古学奏官
+…とんでもない銃撃で
+天井に大穴が空いてしまったおかげで
+外に出られたが
+
+# textflame 1 1
+# textboxarrow 0 2
+# mask 100221 off
+# alpha 100221 1 0.5
+# chara 100221
+# voice 1002 "revatein_0009"
+@レーヴァテイン
+…あいつら、なんなの？
+
+# alpha 100221 0 0.5
+# alpha 500261 1 0.5
+# alpha 300181 1 0.5
+# textboxarrow 0 1
+# chara 500261
+# voice 50026 "furaikugeru_k_0028"
+# face 500261 "angry"
+# face 300181 "angry"
+@プライド
+こんなの…こんなのベァッドだよ！
+わたしが押し負けるなんてっ…
+
+# textboxarrow 0 3
+# chara 300181
+# voice 30018 "ronginusu_k_0018"
+@エンヴィ
+妬ましいです妬ましいです妬ましい
+です妬ましいです妬ましいです妬まし
+いです妬ましいです妬ましいです
+
+# alpha 302511 1 0.5
+# alpha 502711 1 0.5
+# alpha 500261 0 0.5
+# alpha 300181 0 0.5
+# textboxarrow 0 1
+# chara 302511
+# face 302511 "angry"
+@ミネルヴァ
+命が惜しいなら
+退くことをお勧めします
+キミ達の動きは全て把握しました
+
+# textboxarrow 0 3
+# chara 502711
+# face 502711 "happy"
+@フライシュッツ
+あたしも～
+戦うよりぎゅっとしたいな～♪
+
+# alpha 302511 0 0.5
+# alpha 502711 0 0.5
+# alpha 500261 1 0.5
+# alpha 300181 1 0.5
+# textboxarrow 0 1
+# chara 500261
+@プライド
+…覚えてるデス！
+その顔、絶対サァッドに
+歪めてやるんだから！
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textboxarrow 0 3
+# chara 300181
+@エンヴィ
+強くて冷静で分析力があって、
+敵に情けまでかけられるなんて…
+嫉妬します！
+
+;;//プライドとエンヴィが立ち去る
+# bgm "stop"
+# se "SE_5575"
+# alpha 500261 0 0.5
+# alpha 300181 0 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# alpha 302511 0 0
+# alpha 100221 1 0
+# alpha 502711 1 0
+# move 100221 5 0
+# move 302511 3 0
+# move 502711 2 0
+# background "antiquity"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+# face 100221 "normal"
+# face 502711 "normal"
+# mask 100221 on
+@考古学奏官
+ブラックキラーズが…撤退した…？
+やはり彼女達は伝説のっ…
+
+;;//フライシュッツがレーヴァテインに抱きつく
+# bgm "bgm003" 0.7
+# se "SE_0675"
+# layer 502711 2
+# layer 100221 1
+# move 502711 3 0.5
+# textflame 1 1
+# textboxarrow 0 0
+# voice 5027 "freischotz_0020"
+# chara 502711
+# textboxarrow 0 2
+# face 502711 "happy"
+# face 100221 "surprise"
+@フライシュッツ
+また会えたね～！
+お姉ちゃん、とっても嬉しいよ～っ
+
+# alpha 502711 0 0.5
+# alpha 100221 0 0.5
+# alpha 302511 1 0.5
+# textboxarrow 0 2
+# face 302511 "normal"
+# chara 302511
+@ミネルヴァ
+案の定ですね
+また会えると確信していましたよ
+
+# move 502711 2 0.5
+# alpha 502711 1 0.5
+# alpha 100221 1 0.5
+# alpha 302511 0 0.5
+# textboxarrow 0 3
+# chara 100221
+# voice 1002 "revatein_0012"
+# face 100221 "angry"
+@レーヴァテイン
+は!?
+ちょっと…いきなり抱きつくとか
+やめてっ
+
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textflame 0 0
+@考古学奏官
+なんだ!?また会えたって、
+どういうことだ!?
+
+;;//暗転
+# bgm "stop"
+# se "SE_4779"
+# fadeout "black" 2
+# waitandnext 3
+
+;;――場面転換――
+# se "SE_9169"
+# fadein "black" 0.5
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 100221 0 0
+# alpha 502711 0 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 0
+@古文書
+――キラープリンセスに
+会うことができた私達は、
+
+# textwindow "nomal"
+# textboxarrow 0 0
+@古文書
+ラグナロクと引き合わせて
+くれるよう彼女達に頼んだ
+
+;;//背景：平原
+# se "SE_4779"
+# imageset 1 "bg_white"
+# imagealpha 1 0 0
+# imagescale 1 10 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fillrect "white" 2.3 0 1
+# waitandnext 2.7
+
+# imagepos 1 0 0
+# imagealpha 1 1 0
+# fillrect "white" 1 1 0
+# waitandnext 0.1
+
+# bgm "bgm002" 0.7
+# background "plain"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# imagealpha 0 0 1
+# imagealpha 1 0 1
+# waitandnext 1.1
+
+# move 302511 2 0
+# move 502711 4 0
+# body 75
+# pos 75 3
+# scale 75 0.8 0
+# alpha 75 0 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@フレンネル
+…というわけで、
+君達を率いている
+ラグナロクと話がしたいんだ
+
+# mask 75 off
+# alpha 75 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 75
+# face 75 "smile"
+@リベリオン
+神々とやり合う手伝いも
+できると思うぜ
+
+# alpha 75 0 0.5
+# alpha 302511 1 0.5
+# alpha 502711 1 0.5
+# textboxarrow 0 1
+# chara 302511
+# face 302511 "normal"
+# face 502711 "normal"
+@ミネルヴァ
+なるほど…ラグナロクに…
+それは――
+
+# layer 302511 2
+# layer 502711 4
+# move 502711 3 0.5
+# textboxarrow 0 2
+# chara 502711
+# face 502711 "happy"
+# face 302511 "surprise"
+@フライシュッツ
+ミネルヴァちゃん、ぎゅ～っ♪
+
+# textboxarrow 0 1
+# chara 302511
+# face 302511 "shy"
+@ミネルヴァ
+…今、真面目な話をしているんです
+胸を顔に押しつけないで下さい
+フライシュッツ
+
+# textboxarrow 0 2
+# chara 502711
+# voice 5027 "freischotz_0004"
+@フライシュッツ
+もう少しだけぎゅ～ってさせて～
+あたし、頑張ったからよしよしして
+もらいたいな～
+
+# move 502711 4 0.5
+# textboxarrow 0 1
+# chara 302511
+# face 302511 "normal"
+@ミネルヴァ
+後でしてあげますからっ
+…失礼、そうですね
+案内くらいならできますよ
+
+# textflame 0 0
+@フレンネル
+ありがとう！
+よろしく頼むよ
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 302511
+@ミネルヴァ
+ところで、あなた
+リベリオンと仰いましたか？
+その眼帯は…
+
+# mask 75 on
+# layer 75 5
+# move 502711 5 0.5
+# move 302511 1 0.5
+# alpha 75 1 0.5
+# textboxarrow 0 2
+# chara 75
+# voice 9979 "rebellion_0007"
+# face 75 "surprise"
+@リベリオン
+これか？まあ、気にするな
+
+# textboxarrow 0 1
+# chara 302511
+# face 302511 "normal"
+@ミネルヴァ
+そうですか…
+それでは、参りましょう
+
+# textboxarrow 0 3
+# chara 502711
+# face 502711 "normal"
+@フライシュッツ
+ラグナロクちゃんと
+会うのも久し振りかも～♪
+いっぱいぎゅっとしちゃお～
+
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textboxarrow 0 1
+# chara 302511
+# face 302511 "angry"
+@ミネルヴァ
+また彼女に怒られますよ
+まったく…
+
+;;//暗転
+# bgm "stop"
+# se "SE_4779"
+# fadeout "black" 2
+# waitandnext 3
+
+;;――場面転換――
+# se "SE_9169"
+# fadein "black" 0.5
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 100221 0 0
+# alpha 502711 0 0
+# textwindow "nomal"
+# textboxarrow 0 0
+@古文書
+――私達は首尾良く
+“ラグナロク”と引き合わせて
+もらえることになった
+
+# textwindow "nomal"
+# textboxarrow 0 0
+@古文書
+――しかし、それは神々との戦いに
+私達が足を踏み入れた瞬間
+でもあったのだ――

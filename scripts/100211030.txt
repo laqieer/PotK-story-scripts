@@ -1,0 +1,568 @@
+;;----------------------------------------------
+;;100211031
+;;第1-3話　タイトル：チーキー･プリズナー
+;;----------------------------------------------
+# script "lisp"
+# background "300_devil_daytime03"
+# bgmfile "bgm295" "BgmLostRagnarokBattle003" 0
+;;ムー
+# body 161
+# pos 161 4
+# scale 161 0.6 0
+# layer 161 3
+# mask 161 on
+# alpha 161 0 0
+;;レーヴァ
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# layer 3100211 1
+# mask 3100211 on
+# alpha 3100211 0 0
+;;ヘレナ
+# body 3302811
+# pos 3302811 2
+# scale 3302811 0.8 0
+# layer 3302811 2
+# mask 3302811 on
+;;ニール
+# body 162
+# pos 162 3
+# scale 162 0.6 0
+# layer 162 3
+# mask 162 on
+# alpha 162 0 0
+;;ケイオス兵
+# body 3820001
+# pos 3820001 4
+# scale 3820001 0.8 0
+# layer 3820001 1
+# mask 3820001 on
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;黒バック
+# imageset 1 "bg_black"
+# imagepos 1 0 0
+# imagelayer 1 1
+# imageleftin 1 0
+# imagealpha 1 0 0
+# textwindow "close"
+;;剣閃エフェクト（ヘレナ）
+# effectbody 2000 4 -150 0 1
+;;◆ケイオスリオン---------------------------------------
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 382000 "demon_0005"
+# chara 3820001
+@ケイオスリオン兵
+ヘレナ！
+その斬ル姫をさっさと倒せ！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3302811 "sad"
+# voice 3028 "herena_a_0028"
+# chara 3302811
+@ヘレナ
+うーん…いやだ
+なんだか気分が乗らないな
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 382000 "demon_0023"
+# chara 3820001
+@ケイオスリオン兵
+バカなことを言うな！
+俺の命令が聞けないのか！？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3302811 "usual"
+# voice 3028 "herena_a_0007"
+# chara 3302811
+@ヘレナ
+ヘレナはゲバルト卿の斬ル姫だ
+アナタ達みたいな雑魚に従ってる
+わけじゃないよ…くふっ
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 382000 "demon_0012"
+# chara 3820001
+@ケイオスリオン兵
+貴様っ…ゲバルト伯爵様に
+報告するからな！
+
+;;◆ヘレナとレーヴァ-------------------------------------
+# textwindow "close"
+# alpha 3820001 0 0.5
+# alpha 3302811 0 0.5
+# waitandnext 0.5
+
+# alpha 161 1 0.5
+# alpha 3100211 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0001"
+# chara 161
+@ムー
+どうなってんだ、あの嬢ちゃん？
+悪魔人に平気で言い返してんぞ
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3100211
+@レーヴァテイン
+…………
+
+# textwindow "close"
+# move 3100211 1 0.5
+# alpha 161 0 0.5
+# face 3302811 "normal"
+# pos 3302811 4
+# alpha 3302811 1 0.5
+# rightin 3302811 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 3028 "herena_a_0008"
+# chara 3302811
+@ヘレナ
+はいはい、好きにすれば…
+っと、見せかけて！
+
+;;ヘレナの攻撃をレーヴァテインが受け流す
+# voice 3028 "herena_a_battle_0001"
+# textwindow "close"
+# face 3100211 "angry"
+# face 3302811 "angry"
+# se "SE_5707"
+# effectstart 2000
+# shake 0 0.6
+# waitandnext 0.5
+
+# se "SE_4818"
+# shake 1 0.2
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "surprise"
+# voice 3028 "herena_a_0023"
+# chara 3302811
+@ヘレナ
+はあっ！？
+不意打ちも効かないとか
+お姉さん、相当な手練れだね
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "usual"
+# chara 3302811
+@ヘレナ
+これはヘレナも苦戦必至かなー
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "normal"
+# voice 310021 "revatein_ge_0002"
+# chara 3100211
+@レーヴァテイン
+冗談はそのくらいにしたら？
+あなた、全く本気を出してない
+でしょ…
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 3028 "herena_a_0004"
+# chara 3302811
+@ヘレナ
+そんなことないんだけど…
+くふっ
+お姉さん、面白いねぇ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "usual"
+# chara 3302811
+@ヘレナ
+特にその目…真っ直ぐで…
+ヘレナもたまには本気出そうかなぁ
+
+# textwindow "close"
+# alpha 3302811 0 0.5
+# alpha 3100211 0 0.5
+# waitandnext 0.5
+
+# alpha 162 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9952 "nir_0044"
+# chara 162
+@ニール
+ヘレナ、兵士達の撤退は完了したよ
+アタチ達も帰りましょう
+
+# textwindow "close"
+# move 162 4 0.5
+# pos 3100211 2
+# alpha 3100211 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "surprise"
+# voice 310021 "revatein_ge_0023"
+# chara 3100211
+@レーヴァテイン
+！？
+
+# pos 161 2
+# alpha 3100211 0 0.3
+# alpha 161 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0023"
+# chara 161
+@ムー
+うわっ？
+あの馬みたいな奴、俺の同類か？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9952 "nir_0023"
+# chara 162
+@ニール
+なっ…アナタ、何者？
+アタチの真似しないでよっ
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0015"
+# chara 161
+@ムー
+真似してねぇよ！
+お前こそなんなんだよっ？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9952 "nir_0013"
+# chara 162
+@ニール
+むー…
+今はそれどころじゃないわ
+ヘレナ、帰りましょ！
+
+# textwindow "close"
+# alpha 162 0 0.5
+# alpha 161 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# pos 3100211 2
+# pos 3302811 4
+# alpha 3100211 1 0.5
+# alpha 3302811 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "sad"
+# voice 3028 "herena_a_0034"
+# chara 3302811
+@ヘレナ
+うーん…
+ヘレナ、もう少しお姉さんとお話し
+していきたいなぁ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "normal"
+# chara 3302811
+@ヘレナ
+久し振りに気持ちが昂ぶってる
+ヘレナ達、良いお友達になれる気が
+するんだよねぇ
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310021 "revatein_ge_0010"
+# face 3100211 "normal"
+# chara 3100211
+@レーヴァテイン
+心にもないことを言わないで
+さっきからずっと、こちらの隙を
+窺っているくせに
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 3028 "herena_a_0020"
+# chara 3302811
+@ヘレナ
+それはそうだよ
+ヘレナが本気で倒したいと思う相手
+なんて滅多にいないから
+
+# alpha 3302811 0 0.3
+# alpha 162 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9952 "nir_0011"
+# chara 162
+@ニール
+ヘレナ、落ち着いて
+アナタらしくないよ
+一旦引いて、頭を冷やすのっ
+
+# alpha 3302811 1 0.3
+# alpha 162 0 0.3
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "sad"
+# voice 3028 "herena_a_0027"
+# chara 3302811
+@ヘレナ
+…残念だなぁ
+もっと交渉術を磨いて、次会ったとき
+はお姉さんを口説き落としてあげる
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "usual"
+# chara 3302811
+@ヘレナ
+ヘレナ・D. plug・ロキだよ
+覚えておいてね、お姉さん
+
+# alpha 3100211 0 0.3
+# alpha 161 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0036"
+# chara 161
+@ムー
+俺は史上最大にして最強の幻獣
+バハムート様だ！
+気軽にムーって呼んでくれて良いぜ！
+
+# alpha 3100211 1 0.3
+# alpha 161 0 0.3
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310021 "revatein_ge_0004"
+# chara 3100211
+@レーヴァテイン
+うるさい…
+レーヴァテインよ
+覚えなくていいけど
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "normal"
+# voice 3028 "herena_a_0005"
+# chara 3302811
+@ヘレナ
+じゃあね、レーヴァテイン
+
+;;◆レーヴァとムー---------------------------------------
+;;ヘレナが立ち去る
+# bgm "stop"
+# textwindow "close"
+# alpha 162 0 0.8
+# alpha 3302811 0 0.5
+# se "SE_0719"
+# waitandnext 0.8
+
+# alpha 3100211 0 0.5
+# waitandnext 0.5
+
+# pos 161 4
+# pos 3100211 3
+# alpha 161 1 0.5
+# alpha 3100211 1 0.5
+# waitandnext 0.8
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0020"
+# chara 161
+@ムー
+変わった子だったな
+それに可愛かったぜ
+ヘレナか、名前覚えておかねえとっ
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 310021 "revatein_ge_0013"
+# chara 3100211
+@レーヴァテイン
+そんなことよりムー…
+一緒にいた馬みたいなやつ
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3100211
+@レーヴァテイン
+あなたと同じ
+オートアバターじゃないの…？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0004"
+# chara 161
+@ムー
+よしてくれよレヴァ
+俺は馬じゃなくて誇り高き幻獣
+バハムート様だぜ！あんな――
+
+# move 3100211 4 0.3
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100211 "angry"
+# voice 310021 "revatein_ge_0014"
+# chara 3100211
+@レーヴァテイン
+真面目に答えなさい
+
+;;ムギュ
+# se "SE_0694"
+# shake 0 0.6
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0025"
+# chara 161
+@ムー
+ムギュギュギュギュッ…
+いや、俺だってビックリしてんだよ
+まさか同類がいたとはね
+
+# move 3100211 3 0.3
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100211 "normal"
+# voice 310021 "revatein_ge_0028"
+# chara 3100211
+@レーヴァテイン
+トレイセーマでは他に見かけなかった
+ケイオスリオンの斬ル姫達には
+みんなついてるのか…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3100211
+@レーヴァテイン
+それともヘレナだけなのか…
+少し…気になるわね
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0003"
+# chara 161
+@ムー
+なら、ちょいと調べてみるか？
+俺は大歓迎だぜ！可愛い斬ル姫達と
+お近づきになれるかもだからな！
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 161
+@ムー
+おっと妬くんじゃねえぞ
+心配しなくても一番可愛いのは
+レヴァだって分かって――
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100211 "angry"
+# voice 310021 "revatein_ge_0085"
+# chara 3100211
+@レーヴァテイン
+黙って
+…調べるつもりはないわ
+それより先を急ぐから
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3100211
+@レーヴァテイン
+早くティルフィングを封印してある
+ところまでいって…眠っている彼女を
+安全なところに移さないと
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 161
+@ムー
+あんまり俺の顎を掴まないでくれよ
+イケメンが台なしになったら
+どうしてくれんだ？
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100211 "normal"
+# chara 3100211
+@レーヴァテイン
+それ以上、ブサイクになることは
+ないから安心しなさい
+
+;;レーヴァテインが先に歩いていく
+# textwindow "close"
+# se "SE_0719"
+# leftout 3100211 1.0
+# waitandnext 1.0
+
+# alpha 3100211 0 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0027"
+# chara 161
+@ムー
+やれやれ…相変わらず余裕のない
+顔してんなあ…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 161
+@ムー
+一人で肩肘張ってっと、
+不意にポキッといっちまうぞ、レヴァ
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 161
+@ムー
+誰か、あいつの相談相手になって
+くれる奴がいてくれると良いんだが
+
+# pos 3100211 2
+# alpha 3100211 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "angry"
+# voice 310021 "revatein_ge_0071"
+# chara 3100211
+@レーヴァテイン
+さっさと来なさい、ムー
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0005"
+# chara 161
+@ムー
+今行くぜ！
+まったく世話が焼ける奴だっ

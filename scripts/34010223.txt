@@ -1,0 +1,231 @@
+;;-----------------------------------------
+;;お正月アバリス　キャラクエ　シナリオ FB修正版20181214
+;;【EP2戦闘後】
+;;//背景：野営地（ケイオスリオン）
+;;-----------------------------------------
+# script "lisp"
+# background "300_devil_daytime03"
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+# body 3401021
+# pos 3401021 3
+# scale 3401021 0.8 0
+# alpha 3401021 0 0
+# mask 3401021 off
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# alpha 3820001 1 0
+# mask 3820001 off
+;;-----------------------------------------
+# textflame 1 1
+# textboxarrow 0 2
+@ケイオスリオン兵
+ぐっ…どうせやられるなら…
+お前を道連れにしてやる！
+死ねぇッ！
+
+# textflame 0 0
+@
+兵士は剣を構え、マスターに
+向かって突進してきた
+マスターが驚いて固まっていると…
+
+# alpha 3401021 1 0.5
+# alpha 3820001 0 0.5
+# face 3401021 "angry"
+# voice 340101 "abaris_a_battle_0003"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+させるものですか！
+やあっ！
+
+# se "SE_4301"
+# fadein "white" 0.5
+# textflame 0 0
+@
+アバリスが強風に乗せて放った矢は、
+マスターに迫る兵を一撃で仕留めた
+
+# alpha 3401021 0 0.5
+# alpha 3820001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ケイオスリオン兵
+ぐあっ！
+
+# alpha 3401021 1 0.5
+# alpha 3820001 0 0.5
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+マスターには
+指一本触れさせません！
+
+# textflame 0 0
+@
+ケイオスリオン兵たちは
+アバリスの気迫に恐れをなして、
+あわてて逃げ帰っていく
+
+# face 3401021 "surprise"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+マスター！
+ご無事ですか？
+
+# textflame 0 0
+@
+アバリスのおかげで助かったよ、
+いまの技もすごかったね、
+マスターは感心する
+
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0002"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+…さきほど、私はマスターの行動を
+無茶だと批判しました
+
+# voice 340101 "abaris_a_0028"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+ですが、それで救われたあの子の
+笑顔を見て、無茶でも勇気ある行動が
+必要な時もあると、思い直しました
+
+# face 3401021 "smile"
+# voice 340101 "abaris_a_0005"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+私も勇気を持って、マスターを全力で
+サポートし、お守りしたいです
+
+# se "SE_0602"
+# fadein "white" 0.5
+# face 3401021 "sad"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+『新春六花の矢風』…
+この技で、あなたの役に立てると
+いいのですが…
+
+# textflame 0 0
+@
+それは彼女が
+新たなるスキルに目覚めた
+瞬間だった
+
+# face 3401021 "usual"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+…あ、みんなも戻ってきました！
+全員無事なようですね…
+では、羽根つき大会を再開しますか？
+
+;;//演出：時間経過
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# face 3401021 "angry"
+# voice 340101 "abaris_a_0029"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+えい！
+てやっ！
+
+# textflame 0 0
+@
+子供との対戦でもアバリスは
+手加減することなく、
+全力で戦って勝利をおさめた
+
+# textflame 0 0
+@
+試合後、子供がアバリスに駆け寄る
+負けたけど、全力で戦えて楽しかった
+そう言って嬉しそうに笑う
+
+# textflame 0 0
+@
+子供と握手で健闘を称え合うと、
+笑顔でマスターの元へやってくる
+
+# face 3401021 "smile"
+# voice 340101 "abaris_a_0005"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+マスター！
+私の戦いぶり、どうでしたか？
+
+# textflame 0 0
+@
+いつもの控えめな姿とはまた違って、
+すごく格好よかったよ、と
+マスターは正直に感想をいう
+
+# face 3401021 "shy"
+# voice 340101 "abaris_a_0020"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+ほ、本当ですか？嬉しいです！
+あ、あの…ありがとうございます！
+
+# imageset 1 "c3401021"
+# imagealpha 1 0 0
+# imagelayer 1 1
+# waitandnext 0.1
+
+# textwindow "close"
+# fadein "white" 3
+# buttonsout 0 0
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 3401021 0 0
+# voice 340101 "abaris_a_event_0002"
+
+# frameout 0 1
+
+# fadeout "black" 1.5
+# waitandnext 1.5
+;;＜一枚絵＞
+;;★５　アバリス
+;;一枚絵ボイス：abaris_a_event_0002
+;;「羽根つきですか…？　え、風でずるなんてしませんよ…」

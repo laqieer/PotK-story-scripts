@@ -1,0 +1,462 @@
+;;【EP1】聖泉奪取～喫緊～:戦闘前/背景：黒
+# script "lisp"
+# bgm "bgm005" 0
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.1
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# textflame 0 0
+@
+趣味の考古学を追及しすぎて
+奏官の資格を剥奪されてしまった
+考古学者だったが…
+
+@
+黒奏官に狙われながらも調査を進め
+“エンシェントキラーズ”との
+邂逅に成功する
+
+@
+彼女達の協力もあり、
+新たなエンシェントキラーズの
+復活にも成功した
+
+@
+しかし喜びも束の間、引き返してきた
+ブラックキラーズと戦うことになる
+
+;;//背景：遺跡（夜）
+# bgm "stop"
+# se "SE_4779"
+# imageset 1 "bg_white"
+# imagealpha 1 0 0
+# imagescale 1 10 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fillrect "white" 2.3 0 1
+# waitandnext 2.7
+
+# imagepos 1 0 0
+# imagealpha 1 1 0
+# fillrect "white" 1 1 0
+# waitandnext 0.1
+
+# background "antiquity_evening"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# imagealpha 0 0 1
+# imagealpha 1 0 1
+# waitandnext 1.1
+
+# body 401711
+# pos 401711 3
+# scale 401711 0.8 0
+# alpha 401711 0 0
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# alpha 100221 0 0
+# mask 100221 off
+# body 502711
+# pos 502711 4
+# scale 502711 0.8 0
+# alpha 502711 0 0
+# body 302511
+# pos 302511 3
+# scale 302511 0.8 0
+# alpha 302511 0 0
+# body 103511
+# pos 103511 3
+# scale 103511 0.8 0
+# alpha 103511 0 0
+# body 100161
+# pos 100161 2
+# scale 100161 0.8 0
+# alpha 100161 0 0
+# body 400151
+# pos 400151 4
+# scale 400151 0.8 0
+# alpha 400151 0 0
+# bgmfile "bgm164" "BgmPJZero001" 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@考古学者
+黒奏官のキル姫…こちらは更に二人
+復活して４対２だぞ
+それでも、やる気か！？
+
+# alpha 100161 1 1
+# alpha 400151 1 1
+# voice 10016 "masamune_k_0007"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 100161
+# face 100161 "angry"
+@ラース
+数の優位を恃むか
+拙者は一向に構わん
+皆、斬り伏せてくれよう
+
+# wait 2
+# sedelay "SE_5652" 1
+# voice 40015 "arutemisu_k_0011"
+# textboxarrow 0 3
+# chara 400151
+@ラスト
+熱くなり過ぎですよ、ラース
+マスターのご命令を遂行するため
+確実にいきましょう
+
+# textboxarrow 0 1
+# chara 100161
+@ラース
+ふむ
+背に腹は代えられぬか…
+あまり好みではないが、ご免！
+
+# textboxarrow 0 0
+# mask 100161 off
+# alpha 400151 0 0.5
+# move 100161 3 0.5
+# waitandnext 1
+
+# textflame 0 0
+@考古学者
+えっ…？
+
+;;レーヴァテインが考古学者を庇って斬られる
+# fadein "white" 0.5
+# serif 1
+# textwindow "toge"
+# textboxarrow 1 0
+@レーヴァテイン
+バカ…！
+
+# serif 1
+# textwindow "close"
+# se "SE_5762"
+# fadein "red" 0.5
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# serif 0
+# textwindow "close"
+# waitandnext 0.2
+
+# effectbody 2346 3 0 0
+# effectstart 2346
+# waitandnext 0.2
+
+# effectbody 2347 4 0 0
+# effectstart 2347
+# waitandnext 1
+
+# fadein "red" 0.5
+# alpha 100161 0 0
+# alpha 400151 0 0
+# alpha 100221 1 0
+# effectkip 2346
+# effectkip 2347
+# shake 0 0.5
+# imagealpha 0 0 0
+# serif 0
+# textwindow "normal"
+# voice 1002 "revatein_0038"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 100221
+# face 100221 "sad"
+@レーヴァテイン
+くぅっ…
+
+# textflame 0 0
+@考古学者
+レーヴァ！？
+…俺を庇って…貴様、よくも！
+
+;;//ラースが走り去る
+# move 100161 3 0
+# alpha 100161 1 0.5
+# alpha 100221 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 100161
+@ラース
+その“憤怒”をもって拙者に
+挑んでくるが良い
+
+# textboxarrow 0 0
+# se "SE_5575"
+# alpha 100161 0 0.5
+# waitandnext 1
+
+;;//ダモクレスがラースを追う
+# alpha 103511 1 0.5
+# mask 103511 off
+# voice 1035 "damocles_0009"
+# textboxarrow 0 2
+# chara 103511
+@ダモクレス
+あーっ！
+逃げてっちゃうよ
+追っかけないと！
+
+# textboxarrow 0 0
+# se "SE_5575"
+# alpha 103511 0 0.5
+# waitandnext 1
+
+# move 400151 3 0
+# alpha 302511 1 0.5
+# voice 3025 "minerva_battle_0005"
+# textboxarrow 0 2
+# chara 302511
+# face 302511 "angry"
+@ミネルヴァ
+いけませんダモクレス！
+これは罠――
+
+# alpha 302511 0 0.5
+# alpha 400151 1 0.5
+# alpha 100221 0 0.5
+# mask 400151 off
+# voice 40015 "arutemisu_k_0027"
+# textboxarrow 0 2
+# chara 400151
+@ラスト
+余所見している暇はありませんよ
+
+;;//ラストが弓を乱射する
+# move 302511 2 0
+# shake 0 0.3
+# se "SE_0688"
+# fadein "red" 0.3
+# waitandnext 0.3
+
+# shake 0 0.3
+# se "SE_0688"
+# fadein "red" 0.3
+# waitandnext 1
+
+# alpha 400151 0 0.5
+# alpha 302511 1 0.5
+# alpha 502711 1 0.5
+# textboxarrow 0 3
+# chara 502711
+# face 502711 "surprise"
+@フライシュッツ
+きゃ～っ
+一旦、避難した方が良さそうよ～
+
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textboxarrow 0 1
+# chara 302511
+@ミネルヴァ
+分断されてしまいました…
+このままではダモクレスが
+挟み撃ちに遭います
+
+;;//背景：森（夜）
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# move 103511 3 0
+# move 100161 2 0
+# move 400151 4 0
+# alpha 502711 0 0
+# alpha 302511 0 0
+# alpha 103511 1 0
+# bgmfile "bgm037" "BgmStory004" 0.7
+# background "plain_night"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# voice 1035 "damocles_0029"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 103511
+# face 103511 "usual"
+@ダモクレス
+待て待てーっ
+追いかけっこなら負けないよ！
+
+# mask 100161 on
+# mask 400151 on
+# alpha 103511 0 0.5
+# alpha 100161 1 0.5
+# alpha 400151 1 0.5
+# textboxarrow 0 1
+# chara 100161
+@ラース
+別に逃げ回る気はない
+自ら死地に飛び込んだこと
+あの世で後悔しろ！
+
+# alpha 400151 1 0.5
+# alpha 103511 0 0.5
+# voice 40015 "arutemisu_k_0007"
+# textboxarrow 0 3
+# chara 400151
+@ラスト
+退路は断ちました
+一人ずつ確実に仕留めます
+
+# alpha 400151 0 0.5
+# alpha 103511 1 0.5
+# alpha 100161 0 0.5
+# voice 1035 "damocles_0025"
+# textboxarrow 0 2
+# face 103511 "surprise"
+# chara 103511
+@ダモクレス
+わわっ…！
+クレス、いきなりピンチかも！？
+
+# face 103511 "usual"
+# textboxarrow 0 2
+# chara 103511
+@ダモクレス
+…ま、死ぬときは死ぬよね
+
+# mask 401711 off
+# alpha 103511 0 0.5
+# fadein "white" 0.5
+# se "SE_5781"
+# alpha 401711 1 0.5
+# textboxarrow 0 2
+# chara 401711
+# face 401711 "angry"
+@スイハ
+ダモクレス、伏せて！
+
+# alpha 401711 0 0.5
+# move 100161 1 0
+# move 400151 5 0
+# alpha 100161 1 0.5
+# alpha 400151 1 0.5
+# voice 10016 "masamune_k_0009"
+# textboxarrow 0 1
+# chara 100161
+# face 100161 "surprise"
+@ラース
+ぬっ…？
+そなた、いつの間に！？
+
+# alpha 401711 1 0.5
+# alpha 100161 0 0.5
+# alpha 400151 0 0.5
+# textboxarrow 0 2
+# chara 401711
+# face 401711 "normal"
+@スイハ
+…あなたの動きは気をつけて
+見ていました
+
+# alpha 401711 0 0.5
+# alpha 100161 1 0.5
+# alpha 400151 1 0.5
+# textboxarrow 0 3
+# chara 400151
+# face 400151 "angry"
+# face 100161 "ususal"
+@ラスト
+分断しきれなかったようですね…
+それなら一対一で潰すのみ！
+
+# move 103511 2 0
+# mask 103511 on
+# alpha 400151 1 0.5
+# alpha 401711 0 0.5
+# alpha 103511 1 0.5
+# alpha 100161 0 0.5
+# voice 1035 "damocles_0005"
+# textboxarrow 0 1
+# chara 103511
+# face 103511 "happy"
+@ダモクレス
+あはははは！
+クレス、おねーさんのことも
+大好きだよっ
+
+# voice 40015 "arutemisu_k_0027"
+# textboxarrow 0 3
+# chara 400151
+# face 400151 "sad"
+@ラスト
+愚かしいですね
+所詮、愛情など性欲の
+後天的理由づけに過ぎません
+
+# move 401711 4 0
+# mask 401711 on
+# alpha 400151 0 0.5
+# alpha 401711 1 0.5
+# alpha 103511 0 0.5
+# alpha 100161 1 0.5
+# voice 10016 "masamune_k_0029"
+# textboxarrow 0 1
+# chara 100161
+# face 100161 "angry"
+@ラース
+弓兵など懐に入り、
+一刀の下に切り捨ててくれる！
+
+# textboxarrow 0 3
+# chara 401711
+@スイハ
+なにもかも一人で為そうとしても…
+無理が生じます
+
+# move 401711 5 0.2
+# face 401711 "angry"
+# se "SE_5243"
+# waitandnext 1
+# fadein "white" 1
+
+# voice 10016 "masamune_k_0023"
+# textboxarrow 0 1
+# chara 100161
+# face 100161 "surprise"
+@ラース
+おのれ！…拙者の脇をあえて
+すり抜けただとっ？
+
+# alpha 400151 1 0.5
+# alpha 401711 0 0.5
+# alpha 103511 1 0.5
+# alpha 100161 0 0.5
+# voice 40015 "arutemisu_k_0015"
+# textboxarrow 0 3
+# chara 400151
+@ラスト
+なんなんですか、
+この奇妙な動きは！？
+まるで予測できませんっ
+
+# jump 103511
+# fadein "white" 0.5
+# textboxarrow 0 1
+# chara 103511
+# se "SE_5644"
+# voice 1035 "damocles_0021"
+@ダモクレス
+わ～い！
+おねーさん、こっちだよ～！

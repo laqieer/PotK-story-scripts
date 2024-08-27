@@ -1,0 +1,340 @@
+;;8月6幕戦闘後
+;;【指定】BgmSeaEventBattle bgm234_235
+# script "lisp"
+# background "sea_beach_day"
+# bgmfile "bgm234_235" "BgmSeaEventBattle" 0
+# body 2102711
+# pos 2102711 4
+# scale 2102711 0.8 0
+# body 2500611
+# pos 2500611 2
+# scale 2500611 0.8 0
+# body 2300111
+# pos 2300111 3
+# scale 2300111 0.8 0
+# alpha 2300111 0 0
+# voice 1027 "solais_0036"
+# face 2500611 "angry"
+# face 2102711 "angry"
+@クラウ・ソラス
+今日の指揮系統はいつもと違うな
+メギド、左翼は任せた
+
+# voice 5006 "megido_0004"
+# face 2500611 "normal"
+@メギド
+この程度、私だけで
+片付けてあげるわ
+
+# move 2102711 5 0.5
+# move 2500611 1 0.5
+# alpha 2300111 1 0.5
+# layer 2300111 4
+# layer 2102711 3
+# layer 2500611 2
+# face 2500611 "sad"
+# face 2300111 "angry"
+# face 2102711 "sad"
+# voice 3001 "ronginusu_0002"
+@ロンギヌス
+待って
+私にも戦わせて下さい
+
+# voice 5006 "megido_0022"
+@メギド
+ロンギヌス様っ？
+前線に出てきてはいけません
+危ないですよ
+
+# voice 3001 "ronginusu_kyara_1004"
+@ロンギヌス
+私も一人の王国民として
+戦いたいんです
+今までの償いも込めて…
+
+# body 2400711
+# pos 2400711 3
+# scale 2400711 0.8 0
+# alpha 2400711 0 0
+# body 2102611
+# pos 2102611 4
+# scale 2102611 0.8 0
+# alpha 2102611 0 0
+# body 2301811
+# pos 2301811 2
+# scale 2301811 0.8 0
+# alpha 2301811 0 0
+# voice 3001 "ronginusu_unit_0009"
+@ロンギヌス
+この戦いが、
+皆の救いになりますように！
+
+# alpha 2102711 0 0.3
+# alpha 2500611 0 0.3
+# alpha 2300111 0 0.3
+# alpha 2400711 1 0.5
+# layer 2301811 4
+# layer 2400711 3
+# layer 2102611 2
+# face 2400711 "angry"
+# voice 4007 "shekina_0008"
+@シェキナー
+メギドにロンギヌス…
+あまり戦いたくない相手ですが、
+仕方ありませんね
+
+# alpha 2400711 0 0.3
+# alpha 2301811 1 1
+# textwindow "close"
+# waitandnext 1
+
+# se "SE_5575"
+# textwindow "nomal"
+# rightin 2102611 0.5
+# alpha 2102611 1 0
+# voice 1026 "caladbolg_0004"
+@カラドボルグ
+良かった、追いついたわ
+
+@カラドボルグ
+いつものような
+無茶な突撃はしなかったのね、
+フォルカス
+
+@フォルカス
+…グリモワールに諫められました
+
+# body 2302111
+# pos 2302111 1
+# scale 2302111 0.8 0
+# alpha 2302111 0 0
+# face 2102611 "smile"
+# voice 1026 "caladbolg_kyara_1006"
+@カラドボルグ
+うん、いいわね、好きよ
+私達はパラシュとシェキナーを
+支援しましょう
+
+# move 2301811 3 0.5
+# move 2102611 5 0.5
+# alpha 2400711 0 0.5
+# alpha 2302111 1 0.5
+# face 2302111 "angry"
+@ガ・ボー
+敵は伏兵を潜ませています…
+気をつけて…
+
+# body 2500111
+# pos 2500111 3
+# scale 2500111 0.8 0
+# alpha 2500111 0 0
+# face 2301811 "angry"
+# voice 3018 "forcas_0009"
+@フォルカス
+伏兵…また騙し討ちを
+するつもりなんですか…
+どこまで卑怯なのっ
+
+;;【指定】SE_5004　0.5秒後SE_5005　更に0.5秒後SE_5004
+;;//ケラウノスがゆっくり移動してくる
+;;演出省略
+# fadeout "black" 1
+# waitandnext 1.5
+
+# fadein "black" 0.5
+# emotionbody 5270 3 2500111 10 255
+# effectpattern 5270 1 3
+# effectstart 5270
+# alpha 2500111 1 0
+# alpha 2102611 0 0
+# alpha 2301811 0 0
+# alpha 2302111 0 0
+# face 2500111 "smile"
+# voice 5001 "keraunosu_0005"
+@ケラウノス
+お！可愛い子達が寄り集まってるね♪
+まずは隊長のカラドボルグから～
+
+# alpha 2500111 0 0.3
+# alpha 2102611 1 0.5
+# face 2102611 "normal"
+# textwindow "close"
+# waitandnext 0.5
+
+;;【指定】SE_4400　0.4秒後　SE_3006
+;;//フォルカスがカラドボルグを守る
+# se "SE_4400"
+# fadein "red" 0.3
+# waitandnext 0.3
+
+# se "SE_3006"
+# fadein "white" 0.3
+# shake 0 0.5
+# emotionbody 6771 11 2102611 100 270
+# effectpattern 6771 1 0
+# effectstart 6771
+# textwindow "nomal"
+# alpha 2301811 1 0
+# rightin 2301811 0.1
+# face 2102611 "sad"
+# face 2500111 "angry"
+@フォルカス
+危ない！
+
+# alpha 2500111 1 0.5
+# alpha 2102611 0 0.3
+# alpha 2301811 0 0.3
+# face 2500111 "sad"
+# voice 5001 "keraunosu_0013"
+@ケラウノス
+惜しいな～
+おっと、急いで離脱しないと
+
+# se "SE_5575"
+# alpha 2500111 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# textwindow "nomal"
+# alpha 2102611 1 0.5
+# alpha 2301811 1 0.5
+# face 2102611 "sad"
+@カラドボルグ
+ありがとう、フォルカス
+今の銃撃…恐らくケラウノスね
+
+# face 2301811 "angry"
+@フォルカス
+ケラウノス？
+…あいつですか！
+許さない！
+
+# se "SE_5575"
+# leftout 2301811 0.7
+# alpha 2301811 0 0.7
+# waitandnext 1
+
+# body 2501711
+# pos 2501711 2
+# scale 2501711 0.8 0
+# alpha 2501711 0 0
+# face 2102611 "angry"
+# voice 1026 "caladbolg_0012"
+@カラドボルグ
+一人で突っ込んではダメよ、
+フォルカス！
+
+# face 2501711 "angry"
+# alpha 2501711 1 0.5
+# voice 5017 "grimoire_0010"
+@グリモワール
+フォルカス！
+もぉ～！！
+
+# fadeout "black" 2
+# waitandnext 2.5
+
+;;【指定】bgm023
+;;//暗転挟む
+# bgm "bgm023" 0
+# fadein "black" 0.5
+# alpha 2501711 0 0
+# alpha 2102611 0 0
+# move 2301811 3 0
+# body 2102311
+# pos 2102311 5
+# scale 2102311 0.8 0
+# alpha 2102311 0 0
+# alpha 2301811 1 0
+# face 2301811 "angry"
+@フォルカス
+ケラウノス、出てきなさい！
+陛下を傷つけた罪…
+その身をもって贖ってもらいます！
+
+# face 2102311 "sad"
+# alpha 2102311 1 0.5
+# move 2301811 2 0.5
+# voice 1023 "ascalon_0022"
+@アスカロン
+えっ…？
+本陣までたった一人で
+突っ込んでくるなんて…
+
+# emotionbody 5001 1 2301811 20 290
+# effectpattern 5001 2 0
+# effectstart 5001
+@フォルカス
+あなたは誰！？
+私はフォルカス！
+皇帝ダーインスレイヴ様の槍よ！
+
+# face 2102311 "usual"
+@アスカロン
+私はアスカロンといいます
+神聖プール王国の新しい王です
+
+# face 2301811 "angry"
+# voice 3018 "forcas_battle_0004"
+@フォルカス
+あなたが…国王！？
+そうですか、それは好都合ですね
+ここであなたを誅します！
+
+# face 2102311 "angry"
+# imageset 0 "black"
+# imagealpha 0 0 0
+# voice 1023 "ascalon_0035"
+@アスカロン
+全ての人のために、
+私は倒れるわけにいきません！
+
+;;【指定】SE_3006
+;;//フォルカスとアスカロンが切り結ぶ
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# imagescale 0 10 0
+# fadein "red" 0.5
+# effectbody 2346 3 0 0
+# effectstart 2346
+# effectbody 2347 6 0 0
+# effectstart 2347
+# layer 2301811 1
+# waitandnext 1
+# textwindow "close"
+# se "SE_3006"
+
+# textwindow "normal"
+# imageset 0 "black"
+# imagealpha 0 0 0
+# fadein "white" 0.3
+# move 2301811 1 0
+# move 2102311 3 0
+# effectskip 2346
+# effectskip 2347
+# layer 2301811 1
+# layer 2102311 2
+# voice 3018 "forcas_battle_0005"
+@フォルカス
+くっ…
+槍と剣なら私の方が
+有利なはずなのに押し負けてる？
+
+# face 2102311 "angry"
+# voice 1023 "ascalon_battle_0005"
+@アスカロン
+この人…強い！
+
+@アスカロン
+ですけど、切っ先に乱れが…
+これなら勝てます！
+
+# face 2301811 "sad"
+# voice 3018 "forcas_0018"
+@フォルカス
+どうしてっ…？
+私の槍が届かないっ
+
+# voice 1023 "ascalon_unit_0013"
+@アスカロン
+これで、終わりです！

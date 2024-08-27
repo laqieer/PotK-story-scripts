@@ -1,0 +1,250 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー12章
+;;第2話　タイトル：神器、昇天
+;;2_2_3
+;;スクリプト最後の背景：地底
+;;-----------------------------------------
+# script "lisp"
+# background "underground_world_3"
+# bgm "stop"
+;;-----------------------------------------
+;;アルマス（ジョブチェンジ後）
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# layer 172 2
+# alpha 172 0 0
+# mask 172 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 2
+# alpha 139 0 0
+# mask 139 off
+;;ヴァナルガンド
+# body 3601111
+# pos 3601111 3
+# scale 3601111 0.8 0
+# layer 3601111 2
+# alpha 3601111 0 0
+# mask 3601111 off
+;;フォルカス
+# body 3301811
+# pos 3301811 3
+# scale 3301811 0.8 0
+# layer 3301811 2
+# alpha 3301811 0 0
+# mask 3301811 off
+;;ロンギヌス
+# body 3300111
+# pos 3300111 3
+# scale 3300111 0.8 0
+# layer 3300111 2
+# alpha 3300111 0 0
+# mask 3300111 off
+;;魔獣ロンギヌス
+# body 1300151
+# pos 1300151 3
+# scale 1300151 0.8 0
+# layer 1300151 2
+# alpha 1300151 0 0
+# mask 1300151 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+# move 3300111 3 0
+# face 3300111 "normal"
+# alpha 3300111 1 0
+# mask 3300111 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ロンギヌス
+なんと憐れな…
+
+# se "SE_4815"
+# waitandnext 0.5
+
+# alpha 3300111 0 0.5
+# move 1300151 3 0
+# alpha 1300151 1 0.5
+# mask 1300151 off
+# textboxarrow 0 2
+@魔獣ロンギヌス
+ギャアアアアアアア…アア…
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# alpha 1300151 0 0.5
+# move 172 2 0
+# face 172 "angry"
+# alpha 172 1 0.5
+# mask 172 on
+# textboxarrow 0 1
+# move 139 4 0
+# face 139 "surprise"
+# alpha 139 1 0.5
+# mask 139 on
+@アルマス
+ロンギヌスがキラーメイルを
+仕留めたわ！
+
+# textboxarrow 0 3
+@ティターニア
+あのキラーメイルが持っている
+神器は何なのでしょうっ？
+
+# alpha 172 0 0.5
+# alpha 139 0 0.5
+# move 1300151 3 0
+# alpha 1300151 1 0.5
+# mask 1300151 off
+# textboxarrow 0 2
+@魔獣ロンギヌス
+グウウウウ…
+
+;;//ロンギヌスが倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 1300151 0 0.5
+# waitandnext 0.5
+
+# voice 1038 "almace_0022"
+# move 172 2 0
+# face 172 "surprise"
+# alpha 172 1 0.5
+# mask 172 on
+# textboxarrow 0 1
+# move 139 4 0
+# face 139 "surprise"
+# alpha 139 1 0.5
+# mask 139 on
+# textwindow "normal"
+@アルマス
+…神器が、出てこない？
+どうして！？
+まだとどめを差していないのっ？
+
+# textboxarrow 0 3
+@ティターニア
+いえ…キラーメイルの体が崩れて
+いきます…
+確かにとどめは差しています…
+
+# voice 9967 "titania_0042"
+# textboxarrow 0 3
+@ティターニア
+それなのに…何故、神器が出てこない
+のでしょう？
+
+# alpha 172 0 0.5
+# alpha 139 0 0.5
+# move 3300111 3 0
+# face 3300111 "normal"
+# alpha 3300111 1 0.5
+# mask 3300111 off
+# textboxarrow 0 2
+@ロンギヌス
+…………
+
+;;//画面スライド
+# se "SE_0539"
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 3300111 0 0
+# move 3301811 3 0
+# face 3301811 "normal"
+# alpha 3301811 1 0
+# mask 3301811 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+@フォルカス
+向こうは終わったようですね
+やはり聖槍ロンギヌスの力は
+強大です
+
+;;//心音演出
+# fadein "white" 0.3
+# se "SE_0644"
+# waitandnext 0.5
+
+# voice 360111 "vanargand_t_0022"
+# alpha 3301811 0 0.5
+# move 3601111 3 0
+# face 3601111 "surprise"
+# alpha 3601111 1 0.5
+# mask 3601111 off
+# textboxarrow 0 2
+@ヴァナルガンド
+マスター…？
+どうしました？
+
+;;//心音演出数回
+# fadein "white" 0.3
+# se "SE_0644"
+# sedelay "SE_0644" 0.7
+# sedelay "SE_0644" 1.4
+# waitandnext 2
+
+;;//背景が明滅して黒に
+# se "SE_0547"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# alpha 3601111 0 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//アルマスが駆けつける
+;;//顔アップ
+# se "SE_5575"
+# move 172 3 0
+# face 172 "angry"
+# alpha 172 1 0.5
+# mask 172 off
+# waitandnext 0.5
+
+# voice 1038 "almace_0002"
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+マスター！
+ちょっと！
+しっかりしてよっ…！
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 172 0 0
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 1038 "almace_0001"
+# textwindow "normal"
+# textboxarrow 0 0
+;;アルマス（声だけ）
+@アルマス
+マスター！
+
+;;//画面黒から白フラッシュ
+# se "SE_0540"
+# fadeout "white" 1
+# waitandnext 1.2

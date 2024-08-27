@@ -1,0 +1,534 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第４章 タイトル：「世界樹の子―インベイション―」
+;;第2話　タイトル：絶望の到来
+;;4_2_1
+;;スクリプト最後の背景：道路
+;;-----------------------------------------
+# script "lisp"
+# background "parchment_map03"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;異族化アルマス（ナレーションのボイス用）
+# body 5103831
+# alpha 5103831 0 0
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;マサムネ(キラーメイル)
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# layer 1100111 2
+# alpha 1100111 0 0
+# mask 1100111 off
+;;魔獣化アスクレピオス
+# body 1600111
+# pos 1600111 3
+# scale 1600111 0.8 0
+# layer 1600111 2
+# alpha 1600111 0 0
+# mask 1600111 off
+# brightness 1600111 0.5 0
+;;-----------------------------------------
+;;第2話　タイトル：絶望の到来
+;;//背景：新地上世界遠景
+;;ナレーション
+# voice 9925 "IntegralNoah_Narration_4_2_0001"
+# textflame 0 0
+@
+地上世界で起きている
+異変の原因を突き止めるため
+ユグドラシルを目指すカミト達
+
+;;ナレーション
+# voice 9925 "IntegralNoah_Narration_4_2_0002"
+@
+途中、奏官オルフェ・リファールに
+捕らえられるが、彼はカミト達に
+支援を申し出た
+
+;;ナレーション
+# voice 9925 "IntegralNoah_Narration_4_2_0003"
+@
+利用されることを承知で、
+カミトはその提案を受ける
+
+;;ナレーション
+# voice 9925 "IntegralNoah_Narration_4_2_0004"
+@
+オルフェからの支援で手に入れた
+乗り物に乗り、彼らはユグドラシルへ
+の道を突き進んだ
+
+;;ナレーション
+# voice 9925 "IntegralNoah_Narration_4_2_0005"
+@
+しかし、その行く手を魔獣と化した
+キラーメイルが阻む
+
+;;ナレーション
+# voice 9925 "IntegralNoah_Narration_4_2_0006"
+@
+再会したデュランダル、
+ブリューナクによって
+窮地を脱したかに見えたが
+
+;;ナレーション
+# voice 9925 "IntegralNoah_Narration_4_2_0007"
+@
+魔獣化キラーメイルは恐るべき
+速さで追いすがってきた
+
+;;ナレーション
+# voice 9925 "IntegralNoah_Narration_4_2_0008"
+@
+運命の輪は回り続ける――
+
+;;//背景：道路
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_cityroad"
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0
+# mask 1100111 on
+# move 210 4 0
+# face 210 "irregular"
+# alpha 210 1 0
+# mask 210 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm156" "BgmPJZero001" 0
+# se "SE_0883"
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@カミト
+マサムネ！
+僕に考えがあるんだ！
+
+# face 1100111 "angry"
+# textboxarrow 0 1
+# voice 11001 "masamunem_0009"
+@マサムネ
+考えだとっ？
+あまり時間はないぞ
+手短に話せ！
+
+# textboxarrow 0 3
+# voice 9936 "kamito_0003"
+@カミト
+うん
+僕を後ろに乗せてっ
+
+# textboxarrow 0 3
+@カミト
+それから、あのキラーメイルに
+向かって正面から突っ込むんだ
+
+# face 210 "angry"
+# textboxarrow 0 3
+@カミト
+すれ違い様、左手の
+「ディスラプター」を
+あいつに叩き込んでみせる！
+
+# alpha 1100111 0 0.5
+# move 3501711 2 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 1
+# voice 350171 "grimoire_ge_0010"
+@グリモワール
+ふざけんじゃないわよ！
+そんなの危険過ぎるわ！
+
+# face 210 "irregular"
+# textboxarrow 0 3
+@カミト
+でも、僕は託されたんだ
+この力を…
+
+# textboxarrow 0 3
+@カミト
+だから、やらなきゃいけない
+分かってよ、グリモワール
+
+# face 3501711 "normal"
+# textboxarrow 0 1
+# voice 350171 "grimoire_ge_0027"
+@グリモワール
+…ああ、もうっ
+アスカロン！
+マスターのフォローをするわよ！
+
+# alpha 3501711 0 0.5
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0032"
+@アスカロン
+はい！
+背中は任せて下さいっ
+
+# face 210 "happy"
+# textboxarrow 0 3
+# voice 9936 "kamito_0004"
+@カミト
+ありがとう
+二人とも、よろしくね
+
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# move 1100111 3 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 off
+# textboxarrow 0 2
+@マサムネ
+決まったか？
+なら、こっちに飛び移れ
+
+;;カミト（独白）
+# se "SE_0881"
+# se "SE_0636"
+# alpha 1100111 0 0.5
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 210 off
+@カミト
+う…
+かなりの速度で走ってる車から
+併走してるバイクに飛び乗るなんて…
+
+;;カミト（独白）
+# face 210 "irregular"
+# textboxarrow 0 0
+@カミト
+やるしかない！
+
+# sestop "SE_0883"
+# sestop "SE_0636"
+# face 210 "angry"
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9936 "kamito_0061"
+@カミト
+はあああああっ！
+
+# se "SE_9021"
+# textwindow "close"
+# leftout 210 0.5
+# waitandnext 0.5
+
+# alpha 210 0 0
+# waitandnext 0.2
+
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# waitandnext 0.5
+
+# move 210 4 0
+# face 210 "angry"
+# alpha 210 1 0
+# mask 210 on
+# rightin 210 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+# textwindow "normal"
+@マサムネ
+よし！
+しっかり掴まってろ
+反転する！
+
+# se "SE_0885"
+# waitandnext 0.5
+
+# alpha 1100111 0 0.5
+# alpha 210 0 0.5
+# move 1600111 3 0
+# face 1600111 "angry_1"
+# alpha 1600111 1 0.5
+# mask 1600111 off
+# textboxarrow 0 2
+@？？？
+グウウウウウウウウウウ！
+
+;;//魔獣化アスクレピオスがメスを放つ
+# se "SE_5711"
+# sedelay "SE_11613" 0.4
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# alpha 1600111 0 0.5
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# move 210 4 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# voice 9936 "kamito_0026"
+@カミト
+うわぁっ！
+たくさんの刃物が飛んできた！
+
+# face 1100111 "angry"
+# textboxarrow 0 1
+@マサムネ
+当たるものか！
+
+# textboxarrow 0 1
+# voice 11001 "masamunem_0002"
+@マサムネ
+いいか
+チャンスは一度きり
+勝負は一瞬だ
+
+# textboxarrow 0 1
+@マサムネ
+すれすれまで寄せてやる！
+思い切り叩き込んでやれ！
+
+# face 210 "irregular"
+# textboxarrow 0 3
+# voice 9936 "kamito_0063"
+@カミト
+任せて
+
+# se "SE_0885"
+# textboxarrow 0 1
+@マサムネ
+いくぞ！
+
+# alpha 1100111 0 0.5
+# alpha 210 0 0.5
+# move 1600111 3 0
+# face 1600111 "angry_1"
+# alpha 1600111 1 0.5
+# mask 1600111 off
+# textboxarrow 0 2
+@？？？
+グアアアアアアアアア！！
+
+;;//マサムネと魔獣化アスクレピオスが交叉する
+# textwindow "close"
+# alpha 1600111 0 0.5
+# waitandnext 0.5
+
+# se "SE_8003"
+# move 1100111 1 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# move 1600111 5 0
+# face 1600111 "angry_1"
+# alpha 1600111 1 0.5
+# mask 1600111 on
+# waitandnext 0.5
+
+# rightout 1100111 0.5
+# leftout 1600111 0.5
+# waitandnext 0.5
+
+# se "SE_0863"
+# alpha 1100111 0 0.5
+# alpha 1600111 0 0.5
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+“条理再構築”《ディスラプト》！！
+
+# alpha 210 0 0.5
+# move 1600111 3 0
+# face 1600111 "angry_1"
+# alpha 1600111 1 0.5
+# mask 1600111 off
+# textboxarrow 0 2
+@？？？
+ガガガアアッ…！？
+
+# alpha 1600111 0 0.5
+# move 1100111 3 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 off
+# textboxarrow 0 2
+# voice 11001 "masamunem_0022"
+@マサムネ
+よし！
+入った…カミト！？
+
+# alpha 1100111 0 0.5
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# voice 9936 "kamito_0041"
+@カミト
+あぐぅっ…！？
+
+;;//カミトが吹っ飛ぶ
+# se "SE_0715"
+# textwindow "close"
+# leftout 210 0.4
+# waitandnext 0.4
+
+# alpha 210 0 0
+# move 1100111 3 0
+# face 1100111 "angry"
+# alpha 1100111 1 0.5
+# mask 1100111 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 11001 "masamunem_0024"
+@マサムネ
+しまった…！
+反動で吹っ飛びやがった
+
+# alpha 1100111 0 0.5
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+うわあああああっ…！
+
+# alpha 210 0 0.5
+# move 3102311 3 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+# voice 310231 "ascalon_a_battle_0005"
+@アスカロン
+マスター！
+
+;;//アスカロンがカミトを受け止める
+# textwindow "close"
+# se "SE_9021"
+# rightout 3102311 0.5
+# waitandnext 0.5
+
+# alpha 3102311 0 0
+# waitandnext 0.2
+
+;;//防御術式的ななにか（サウンドメモ
+# se SE_9114"
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0
+# mask 3102311 on
+# leftin 3102311 0.5
+# waitandnext 0.3
+
+# se "SE_5567"
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0
+# mask 210 on
+# rightin 210 0.5
+# waitandnext 1
+
+# move 210 4 0.5
+# waitandnext 0.5
+
+# face 210 "happy"
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 9936 "kamito_0062"
+@カミト
+…助かったよ、アスカロン
+
+# face 3102311 "normal"
+# textboxarrow 0 1
+@アスカロン
+グリモワールが防御術式を展開して
+衝撃を和らげてくれたお陰です！
+…あの力、羨ましい
+
+# face 210 "shy"
+# textboxarrow 0 3
+# voice 9936 "kamito_0008"
+@カミト
+ははは…
+そうなんだ…
+
+# face 3102311 "happy"
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_kyara_1009"
+@アスカロン
+あ、そのっ、何でもないですよ！
+上手くいったみたいで良かったです
+
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# move 1100111 3 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 off
+# textboxarrow 0 2
+# voice 11001 "masamunem_0007"
+@マサムネ
+ふぅ…
+ヒヤッとしたぜ
+
+# alpha 1100111 0 0.5
+# move 1600111 3 0
+# face 1600111 "angry_1"
+# alpha 1600111 1 0.5
+# mask 1600111 off
+# textboxarrow 0 2
+@？？？
+グウウ…ウウウッ…
+
+# alpha 1600111 0 0.5
+# move 1100111 3 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 off
+# textboxarrow 0 2
+# voice 11001 "masamunem_0023"
+@マサムネ
+何だと！？

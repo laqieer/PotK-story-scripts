@@ -1,0 +1,568 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第４章 タイトル：「世界樹の子―インベイション―」
+;;第2話　タイトル：絶望の到来
+;;4_2_2
+;;スクリプト最後の背景：道路
+;;-----------------------------------------
+# script "lisp"
+# background "in_cityroad"
+# bgmfile "bgm164" "BgmPJZero001" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;マサムネ(キラーメイル)
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# layer 1100111 2
+# alpha 1100111 0 0
+# mask 1100111 off
+;;デュランダル
+# body 3100311
+# pos 3100311 3
+# scale 3100311 0.8 0
+# layer 3100311 2
+# alpha 3100311 0 0
+# mask 3100311 off
+;;ブリューナク・D. plug・バルバトス
+# body 3500711
+# pos 3500711 3
+# scale 3500711 0.8 0
+# layer 3500711 2
+# alpha 3500711 0 0
+# mask 3500711 off
+;;ピサール
+# body 3302011
+# pos 3302011 3
+# scale 3302011 0.8 0
+# layer 3302011 2
+# alpha 3302011 0 0
+# mask 3302011 off
+;;魔獣化アスクレピオス
+# body 1600111
+# pos 1600111 3
+# scale 1600111 0.8 0
+# layer 1600111 2
+# alpha 1600111 0 0
+# mask 1600111 off
+# brightness 1600111 0.5 0
+;;ペルーン・聖鎖・マスティマ
+# body 3200811
+# pos 3200811 3
+# scale 3200811 0.8 0
+# layer 3200811 2
+# alpha 3200811 0 0
+# mask 3200811 off
+;;-----------------------------------------
+;;第2話　タイトル：絶望の到来
+;;//背景：道路
+# move 1600111 5 0
+# face 1600111 "angry_1"
+# alpha 1600111 1 0
+# mask 1600111 on
+# textflame 1 1
+# textboxarrow 0 3
+@？？？
+グウウウ…アアアアア…！
+
+;;//魔獣化アスクレピオスが数歩、歩く
+# se "SE_5008"
+# sedelay "SE_5009" 0.3
+# sedelay "SE_5008" 0.6
+# textwindow "close"
+# move 1600111 2 1
+# waitandnext 1.2
+
+# alpha 1600111 0 0.5
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 1
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+# textwindow "normal"
+# voice 11001 "masamunem_0037"
+@マサムネ
+くっ
+どうなってる！？
+効いていないのかっ？
+
+# face 210 "sad"
+# textboxarrow 0 3
+# voice 9936 "kamito_0017"
+@カミト
+そんなっ…
+
+# alpha 1100111 0 0.5
+# alpha 210 0 0.5
+# move 1600111 3 0
+# face 1600111 "angry_1"
+# alpha 1600111 1 0.5
+# mask 1600111 off
+# textboxarrow 0 2
+@？？？
+ガアアアア…
+
+;;//魔獣化アスクレピオスが倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 1600111 0 0.5
+# waitandnext 0.5
+
+# bgm "bgm102" 0
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 1
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+# textwindow "normal"
+@マサムネ
+…ようやく寝てくれたようだな
+急いで離れるぞっ
+
+# face 210 "surprise"
+# textboxarrow 0 3
+# voice 9936 "kamito_0023"
+@カミト
+えっ？
+連れていかなくていいの？
+
+# textboxarrow 0 1
+# voice 11001 "masamunem_0003"
+@マサムネ
+放っておけ
+この腹黒メガネなら、目が覚めたら
+何をすべきか自分で考えられるだろ
+
+# textboxarrow 0 1
+@マサムネ
+厄介なのはもう一人いる
+追いつかれる前に行くぞ！
+
+# face 210 "normal"
+# textboxarrow 0 3
+# voice 9936 "kamito_0035"
+@カミト
+マサムネがそう言うなら…
+
+# alpha 1100111 0 0.5
+# alpha 210 0 0.5
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0002"
+@グリモワール
+二人とも早く乗りなさい！
+これ以上、ワタシを怒らせないで！
+
+# alpha 3501711 0 0.5
+# move 210 3 0
+# face 210 "sad"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# voice 9936 "kamito_0033"
+@カミト
+ごめん…！
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 210 0 0
+# move 3501711 2 0
+# face 3501711 "normal"
+# alpha 3501711 1 0
+# mask 3501711 on
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0
+# mask 210 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_0882"
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 350171 "grimoire_ge_0003"
+@グリモワール
+追ってくる気配はないわね…
+
+# textboxarrow 0 3
+# voice 9936 "kamito_0003"
+@カミト
+もう一人は徒歩だったから、
+さすがに追いついてこれないと
+思うけど…
+
+# alpha 3501711 0 0.5
+# alpha 210 0 0.5
+# move 3302011 3 0
+# face 3302011 "usual"
+# alpha 3302011 1 0.5
+# mask 3302011 off
+# textboxarrow 0 2
+# voice 330201 "pisear_t_0001"
+@ピサール
+ふわぁ～…
+ねえ～
+ユグドラシル、着いた～？
+
+# move 3501711 2 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 1
+# move 3302011 4 0.5
+# mask 3302011 on
+@グリモワール
+まだよ！
+キミ、今まで寝てたの！？
+
+# face 3302011 "normal"
+# textboxarrow 0 3
+# voice 330201 "pisear_t_0013"
+@ピサール
+だって眠かったから～
+あ～、運転しなくていいなら
+葡萄酒飲みたいな～
+
+# face 3501711 "angry"
+# textboxarrow 0 1
+@グリモワール
+何なのよ、キミ！
+
+# alpha 3501711 0 0.5
+# alpha 3302011 0 0.5
+# move 3100311 3 0
+# face 3100311 "angry"
+# alpha 3100311 1 0.5
+# mask 3100311 off
+# textboxarrow 0 2
+# voice 310031 "durandaru_a_0009"
+@デュランダル
+私も、バッサバサにしたくて
+堪りませんわ
+
+# textboxarrow 0 2
+@デュランダル
+そろそろ破壊と狂乱の舞台が
+始まりませんの？
+
+# alpha 3100311 0 0.5
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+@グリモワール
+こっちもこっちで
+何なのよ！
+
+# alpha 3501711 0 0.5
+# move 3102311 2 0
+# face 3102311 "happy"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+# voice 310231 "ascalon_a_0005"
+@アスカロン
+あはっ！
+賑やかになりましたね、マスター
+
+# face 210 "happy"
+# textboxarrow 0 3
+# voice 9936 "kamito_0008"
+@カミト
+ははは…
+そうだね…
+
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0009"
+@グリモワール
+キミ達も和んでるんじゃないわよ！
+
+# face 3501711 "normal"
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0001"
+@グリモワール
+ちょっと
+腕は大丈夫なんでしょうね、
+マスター？
+
+# move 3501711 2 0.5
+# mask 3501711 on
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# voice 9936 "kamito_0003"
+@カミト
+うん…
+痛みはないよ
+
+# textboxarrow 0 1
+# voice 350171 "grimoire_ge_0007"
+@グリモワール
+ラグナロク機関で倒れたときも
+「力」を使ってしばらくしてから
+痛みが出たんでしょ
+
+# textboxarrow 0 1
+@グリモワール
+念のため、調べておいた方が――
+
+;;//車が急停止する
+# bgm "stop"
+# sestop "SE_0882"
+# waitandnext 0.5
+
+# se "SE_11584"
+# se "SE_0881"
+# waitandnext 0.5
+
+# face 3501711 "angry"
+# textboxarrow 0 1
+# voice 350171 "grimoire_ge_0025"
+@グリモワール
+ひぃっ…！
+急に止まらないで！
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# alpha 210 0 0.5
+# move 3500711 4 0
+# face 3500711 "normal"
+# alpha 3500711 1 0.5
+# mask 3500711 on
+# textboxarrow 0 3
+# voice 350071 "buryunaku_a_0031"
+@ブリューナク
+申し訳ない
+尋常でない殺気を感じたのでね
+
+# alpha 3501711 0 0.5
+# move 210 2 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 1
+# voice 9936 "kamito_0023"
+@カミト
+殺気？
+
+# alpha 210 0 0.5
+# alpha 3500711 0 0.5
+# move 3501711 3 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+@グリモワール
+確認した方が良さそうね
+アスカロン、車を降りて
+周りを調べるわよ
+
+# alpha 3501711 0 0.5
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+# voice 310231 "ascalon_a_0032"
+@アスカロン
+はい！
+マスター、少し待っていて
+下さいね
+
+# face 210 "irregular"
+# textboxarrow 0 3
+@カミト
+あ、僕も降りるよ
+
+# se "SE_0884"
+# alpha 3102311 0 0.5
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 1
+# voice 11001 "masamunem_0022"
+@マサムネ
+おい、どうした！？
+急に止まって
+
+# textboxarrow 0 3
+@カミト
+ブリューナクが
+殺気を感じたって言うんだ
+どこからだろう？
+
+# alpha 1100111 0 0.5
+# alpha 210 0 0.5
+# move 3500711 3 0
+# face 3500711 "normal"
+# alpha 3500711 1 0.5
+# mask 3500711 off
+# textboxarrow 0 2
+# voice 350071 "buryunaku_a_0028"
+@ブリューナク
+ふむ…
+財宝を守る番人といったところかな
+恐らく、あそこだ
+
+# alpha 3500711 0 0.5
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+あそこ？
+ん？
+今、霧の中で何か光ったような…
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# alpha 210 0 0.5
+# move 3100311 3 0
+# face 3100311 "angry"
+# alpha 3100311 1 0.5
+# mask 3100311 off
+# textboxarrow 0 2
+@デュランダル
+皆様！
+お伏せになって下さいな！
+
+# alpha 3100311 0 0.5
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# voice 9936 "kamito_0023"
+@カミト
+えっ…？
+
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# move 210 4 0.5
+# mask 210 on
+@アスカロン
+マスター！
+伏せて下さいっ
+
+;;//アスカロンがカミトを押し倒す
+# se "SE_5257"
+# textwindow "close"
+# move 3102311 3 0.2
+# waitandnext 0.2
+
+# se "SE_0846"
+# alpha 210 0 0.5
+# waitandnext 0.5
+
+;;//斬撃演出
+# se "SE_4100"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+;;//デュランダルがペルーンと切り結ぶ
+# alpha 3102311 0 0.5
+# waitandnext 0.5
+
+# move 3200811 2 0
+# face 3200811 "angry"
+# alpha 3200811 1 0
+# mask 3200811 on
+# move 3100311 4 0
+# face 3100311 "angry"
+# alpha 3100311 1 0
+# mask 3100311 on
+# leftin 3200811 0.3
+# rightin 3100311 0.3
+# waitandnext 0.3
+
+# se "SE_9017"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 3200811 "happy"
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 320081 "perun_t_0041"
+@？？？
+すごーい！
+あたしの攻撃を止めるなんてっ
+
+# face 3100311 "happy"
+# textboxarrow 0 3
+# voice 310031 "durandaru_a_0004"
+@デュランダル
+お褒めにあずかり光栄ですわ♪
+
+# face 3100311 "normal"
+# textboxarrow 0 3
+# voice 310031 "durandaru_a_0029"
+@デュランダル
+それでは、楽しいお時間を
+ご一緒しましょう
+
+# face 3200811 "normal"
+# textboxarrow 0 1
+# voice 320081 "perun_t_unit_0010"
+@？？？
+うん
+暗黒パワーでやっつける！

@@ -1,0 +1,422 @@
+;;-----------------------------------------
+;;鎌倉8_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "bgm031" 0
+;;-----------------------------------------
+;;鎌倉ヘレナ
+# body 6302811
+# pos 6302811 4
+# scale 6302811 0.8 0
+# layer 6302811 4
+# alpha 6302811 0 0
+;;鎌倉ニール
+# body 323
+# pos 323 2
+# scale 323 0.8 0
+# layer 323 5
+# mask 323 off
+# alpha 323 0 0
+;;鎌倉リサナウト
+# body 6203011
+# pos 6203011 3
+# scale 6203011 0.8 0
+# layer 6203011 3
+# mask 6203011 off
+# alpha 6203011 0 0
+;;魔獣バイコーン
+# body 900011
+# pos 900011 2
+# scale 900011 0.8 0
+# layer 900011 4
+# mask 900011 off
+# alpha 900011 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagescale 1 1.5 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：beach
+# textwindow "close"
+# waitandnext 0.2
+
+# background "beach"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# face 6302811 "angry"
+# alpha 6302811 1 0
+# alpha 900011 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 530281 "herena_di_battle_0004"
+# se "SE_12848"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+そこだっ
+
+# se "SE_12853"
+# fadein "white" 0.5
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# move 6302811 3 0.2
+# move 900011 1 0.3
+# textboxarrow 0 0
+# waitandnext 1
+
+# se "SE_0794"
+# textboxarrow 0 1
+@魔獣
+ガアアアア…
+
+# alpha 900011 0 1
+# textwindow "close"
+# waitandnext 1
+
+# voice 9952 "nir_0004"
+# move 6302811 4 0.5
+# alpha 323 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 1
+@ニール
+やったわ、ヘレナ！
+これで…
+
+;;ニールの姿が薄れる
+# se "SE_13075"
+# alpha 323 0.8 1
+# waitandnext 1.5
+
+# voice 530281 "herena_di_0024"
+# face 6302811 "surprise"
+# textboxarrow 0 3
+@ヘレナ
+ニール…！？
+やっぱり消えかけていないかっ？
+
+# textboxarrow 0 1
+@ニール
+そんなことよりヘレナっ
+あっちにも魔獣がいるわ！
+
+# alpha 323 0 0.3
+# alpha 6302811 0 0.3
+# move 900011 3 0
+# alpha 900011 1 0.5
+# se "SE_0793"
+# textwindow "toge"
+# textboxarrow 0 2
+@魔獣
+ガアアアアアアアアアアア！
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@人々
+キャアアアアアア…！
+
+# voice 530281 "herena_di_0013"
+# alpha 900011 0 0.5
+# alpha 323 1 0.3
+# face 6302811 "angry"
+# alpha 6302811 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+むむっ…
+あと何体いるんだよ！
+
+# move 6302811 2 1
+# alpha 6302811 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# move 6302811 4 0
+# alpha 323 0 0.5
+# alpha 900011 1 0.5
+# waitandnext 1
+
+;;ヘレナが魔獣を倒す
+# se "SE_12853"
+# fadein "white" 1
+# rightin 6302811 0.3
+# face 6302811 "angry"
+# alpha 6302811 1 0.3
+# move 900011 2 0.4
+# waitandnext 1
+
+# se "SE_0794"
+# textwindow "nomal"
+# textboxarrow 0 1
+@魔獣
+ガアアアア…
+
+# alpha 900011 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+# alpha 323 0.8 0.5
+# textwindow "nomal"
+# textboxarrow 0 1
+@ニール
+やった…ヘレナ…
+
+;;ニールの姿が薄くなる
+# se "SE_13075"
+# alpha 323 0.6 1
+# waitandnext 1.5
+
+# voice 530281 "herena_di_battle_0005"
+# face 6302811 "surprise"
+# textboxarrow 0 3
+@ヘレナ
+ニール…！
+どんどん姿が薄れていってる
+何がどうなってるんだ…
+
+# voice 9952 "nir_0008"
+# textboxarrow 0 1
+@ニール
+いいの…
+気にしないで、ヘレナ
+それよりも…
+
+# textboxarrow 0 1
+@ニール
+平和な世界を守らなくっちゃ
+せっかく…ヘレナ達が手に入れた…
+戦いのない世界…
+
+# textboxarrow 0 1
+@ニール
+アタチの…必要ない世界…
+
+;;回想シーン
+# se "SE_0742"
+# fadeout "white" 1.5
+# waitandnext 1.5
+
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 6302811 0 0
+# alpha 323 0 0
+# textwindow "close"
+# fadein "white" 1.5
+# waitandnext 1.5
+
+# face 6203011 "angry"
+# alpha 6203011 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+@リサナウト
+意地を張っていると、
+取り返しのつかないことになるわよ
+
+;;暗転挟む
+# se "SE_0742"
+# fadeout "white" 1.5
+# waitandnext 1.5
+
+# alpha 6203011 0 0
+# textwindow "close"
+# fadein "white" 1.5
+# waitandnext 1.5
+
+# face 6203011 "angry"
+# alpha 6203011 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+@リサナウト
+私達が時空を越えて
+この世界に来たから、
+何か歪みが生じたのかもね
+
+# textboxarrow 0 2
+@リサナウト
+それでも、「揺らぎ」には
+原因があるものよ
+それを見つけないと
+
+;;回想終了
+# se "SE_11762"
+# fadeout "white" 1.5
+# waitandnext 1.5
+
+# imagealpha 1 0 0
+# alpha 6203011 0 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1.5
+
+# face 6302811 "surprise"
+# alpha 6302811 1 0.3
+# alpha 323 0.6 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+ニール…？
+そうか…この魔獣は…
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@人々
+た…助けてぇっ…！
+
+# se "SE_0792"
+# serif 1
+# textwindow "toge"
+@魔獣
+ゴオオオオオオ！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 6302811 "angry"
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+テピ姉さんが以前、話してたな
+キル姫は「揺らぎ」の影響を
+受けやすいって…
+
+# textboxarrow 0 3
+@ヘレナ
+特に強い感情を抱いているキル姫は
+影響が顕著に表れる
+だから…
+
+# textboxarrow 0 3
+@ヘレナ
+キル姫は特に気をつけないと
+いけないんだ
+「揺らぎ」に呑まれないよう
+
+# voice 9952 "nir_0015"
+# textboxarrow 0 1
+@ニール
+ヘレナ…
+魔獣を倒さないと…
+
+# voice 530281 "herena_di_0013"
+# face 6302811 "sad"
+# textboxarrow 0 3
+@ヘレナ
+でもっ…
+あの魔獣を全て倒したら…
+
+# textboxarrow 0 3
+@ヘレナ
+「戦いのない世界」が訪れたら
+ニールはきっと…
+
+# textboxarrow 0 1
+@ニール
+…………
+
+# voice 530281 "herena_di_0044"
+# textboxarrow 0 3
+@ヘレナ
+ニール…
+ヘレナは…ヘレナはっ…
+
+# textboxarrow 0 1
+@ニール
+ヘレナ…
+
+# alpha 6302811 0 0.3
+# alpha 323 0 0.3
+# move 900011 3 0
+# alpha 900011 1 0.5
+# se "SE_0793"
+# textwindow "toge"
+# textboxarrow 0 2
+@魔獣
+ゴオオオオオオオ！
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@人々
+いやあああぁぁっ…！
+
+# voice 530281 "herena_di_battle_0006"
+# alpha 900011 0 0.5
+# move 6302811 3 0
+# face 6302811 "angry"
+# alpha 6302811 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@ヘレナ
+くっ…
+
+# move 6302811 4 0.5
+# move 900011 2 0
+# alpha 900011 1 0.5
+# textboxarrow 0 0
+# waitandnext 1.5
+
+;;ヘレナが魔獣を倒す
+# se "SE_12853"
+# fadein "white" 1
+# effectbody 1001 1 0 0 0
+# effectstart 1001
+# move 6302811 3 0.3
+# move 900011 1 0.2
+# textwindow "close"
+# waitandnext 1
+
+# alpha 900011 0 0.5
+# move 6302811 4 0.5
+# alpha 323 0.6 0.5
+# waitandnext 1
+
+;;ニールが薄くなる
+# se "SE_13075"
+# alpha 323 0.4 0.5
+# waitandnext 1.5
+
+# face 6302811 "sad"
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+やはり…
+このままだと…
+
+# textboxarrow 0 1
+@ニール
+仕方ないわね…
+
+# voice 530281 "herena_di_0022"
+# face 6302811 "surprise"
+# textboxarrow 0 3
+@ヘレナ
+ニール…？
+
+# voice 9952 "nir_0043"
+# textboxarrow 0 1
+@ニール
+ヘレナ
+アタチ達、お別れしましょう
+
+# fadeout "black" 1
+# waitandnext 1

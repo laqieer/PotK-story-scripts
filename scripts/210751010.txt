@@ -1,0 +1,538 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;コマンドキラーズサイドストーリー前編シナリオ
+;;第1話　タイトル：射抜く者
+;;1_1
+;;スクリプト最後の背景：平原（夕）
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgmfile "bgm429" "BgmIntegralNoahCommand" 0
+;;-----------------------------------------
+;;ヒョウハ
+# body 231
+# pos 231 3
+# scale 231 0.8 0
+# layer 231 2
+# alpha 231 0 0
+# mask 231 off
+;;神令ヒョウハ（ボイス用）
+# body 5402011
+# alpha 5402011 0 0
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 2
+# alpha 810004 0 0
+# mask 810004 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景を白にする
+# imageset 2 "bg_white"
+# imagelayer 2 3
+# imagealpha 2 0 0
+;;-----------------------------------------
+;;第1話　タイトル：射抜く者
+;;//背景：森
+# textflame 1 1
+# textboxarrow 0 0
+@？？？
+この矢は黒雲を貫く
+
+@？？？
+山鳥の如く
+気高く一心に
+狙い過たず標的を射抜く
+
+@？？？
+幾千の空を切り、
+幾万の宙を割いて
+人に仇為す者達を討ってきた
+
+@？？？
+たとえそれが、誰の心にも残らぬ
+ものだとしても
+
+@？？？
+世界を救う
+それが自分の使命だと信じて
+
+@？？？
+迷うことなく
+悔やむことなく
+自らの為すべきことを為す
+
+@？？？
+それが、あたしの決めた道
+
+@？？？
+だから今日もまた、
+弓を引き、矢を射る
+
+@？？？
+この…ヒョウハの生きた証として！
+
+;;//矢が異族を射抜く
+# bgm "stop"
+# se "SE_4301"
+# textwindow "close"
+# waitandnext 0.5
+
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# waitandnext 0.6
+
+# se "SE_4817"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_0669"
+# textboxarrow 0 2
+# textwindow "normal"
+@異族
+ギャアアアア…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 810004 0 0.5
+# waitandnext 0.5
+
+;;ヒョウハ（ここで立ち絵出す）
+# voice 540201 "hyoha_c_0027"
+# move 231 3 0
+# face 231 "irregular"
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ヒョウハ
+これで五体目かな
+今日は多いなあ…
+
+# textboxarrow 0 2
+@ヒョウハ
+町の人達が来る前に
+みんな仕留めたいんだけど…
+
+;;//白背景など？
+;;//甲高い金属音のような
+# se "SE_0901"
+# layer 231 20
+# imagepos 2 0 0
+# imagealpha 2 1 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm409" "BgmIntegralNoahEvent" 0
+# face 231 "surprise"
+# textboxarrow 0 2
+@ヒョウハ
+っ……！？
+
+# face 231 "angry"
+# textboxarrow 0 2
+@ヒョウハ
+くそっ…
+この感覚は……
+
+# serif 1
+@？？？
+巫女――
+…命を…い…せ――
+
+# serif 1
+@？？？
+ユ……ラシ…に――
+
+# face 231 "irregular"
+# textboxarrow 0 2
+@ヒョウハ
+ま、またか……
+
+# serif 1
+@？？？
+選ばれし巫女――
+
+# serif 1
+@？？？
+使命を思い出せ――
+
+# face 231 "angry"
+# textboxarrow 0 2
+@ヒョウハ
+なあ、あんたは
+一体、誰なんだ…？
+
+# textboxarrow 0 2
+@ヒョウハ
+あたしに、
+何をしてほしいんだ？
+
+# serif 1
+@？？？
+全てはユグドラシルに――
+
+;;白背景の終わり
+# se "SE_11762"
+# bgm "stop"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# imagealpha 2 0 0.5
+# waitandnext 0.5
+
+# layer 231 2
+# face 231 "irregular"
+# textboxarrow 0 2
+# textwindow "normal"
+@ヒョウハ
+…………
+
+# bgm "bgm005" 0
+# voice 540201 "hyoha_c_0013"
+# textboxarrow 0 2
+@ヒョウハ
+…なんだよ、
+いつも一方的に話して
+終わりなんだからさ
+
+# textboxarrow 0 2
+@ヒョウハ
+ユグドラシルか…
+
+# textboxarrow 0 2
+@ヒョウハ
+そこに行けば、
+あたしは知ることができるのか？
+
+# textboxarrow 0 2
+@ヒョウハ
+あんたが誰なのか、
+この使命感はなんなのか、
+そして、あたし自身のことも…
+
+# textboxarrow 0 2
+@ヒョウハ
+…………
+
+;;町人（声だけ）
+# bgm "stop"
+# serif 1
+@町人
+うわああああああっ…！
+
+# bgm "bgm031" 0
+# serif 1
+# textwindow "close"
+# serif 0
+# face 231 "angry"
+# textboxarrow 0 2
+@ヒョウハ
+悲鳴！？
+しまった…！
+
+# se "SE_5575"
+# textwindow "close"
+# rightout 231 0.5
+# waitandnext 0.5
+
+;;//暗転挟む
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 231 0 0
+# move 810004 3 0
+# alpha 810004 1 0
+# mask 810004 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# se "SE_0617"
+# textboxarrow 0 2
+# textwindow "normal"
+@異族
+ガアアアアアアアア！
+
+# serif 1
+@町人
+た…助けてっ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 540201 "hyoha_c_battle_0001"
+# alpha 810004 0 0.5
+# move 231 3 0
+# face 231 "angry"
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+@ヒョウハ
+せいっ！
+
+# se "SE_4301"
+# waitandnext 0.5
+
+# textwindow "close"
+# alpha 231 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# waitandnext 0.6
+
+# se "SE_4817"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_0669"
+# textboxarrow 0 2
+# textwindow "normal"
+@異族
+ギャアアアア…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 810004 0 0.5
+# waitandnext 0.5
+
+# serif 1
+@町人
+ひぃぃぃぃっ…！
+…あれ？
+助かった…のか…？
+
+# move 231 3 0
+# face 231 "irregular"
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ヒョウハ
+おじさん
+この森には今、異族が現れてるんだ
+早く町に帰ってくれ
+
+# serif 1
+@町人
+あ…あんたキル姫かいっ？
+助かったよ！
+奏官様はどちらに…？
+
+# textboxarrow 0 2
+@ヒョウハ
+そんなのはいいから
+…あたしにマスターはいない
+
+# serif 1
+@町人
+マスターがいないって…
+もしかしてラグナロク教会の
+キル姫っ？
+
+# serif 1
+@町人
+かの有名なエンシェントキラーズ
+なのかい！？
+おお、ありがたや！
+
+# face 231 "angry"
+# textboxarrow 0 2
+@ヒョウハ
+違うって！
+そんなんじゃないし、
+まだここは危ないからっ
+
+# textboxarrow 0 2
+@ヒョウハ
+町の人達にも、しばらく森には
+近づくなって言っておいて！
+ほら、早く！
+
+# serif 1
+@町人
+ありがとうございます！
+せめて、お名前だけでもっ
+
+# voice 540201 "hyoha_c_0028"
+# face 231 "sad"
+# textboxarrow 0 2
+@ヒョウハ
+名乗っても意味ないんだけどな…
+
+# serif 1
+@町人
+えっ？
+
+# face 231 "normal"
+# textboxarrow 0 2
+@ヒョウハ
+…ヒョウハだよ
+
+# serif 1
+@町人
+ヒョウハ様！
+覚えました！
+このお礼は必ず！
+
+# face 231 "irregular"
+# textboxarrow 0 2
+@ヒョウハ
+分かったから！
+ほら、行って
+
+;;//町人が立ち去る
+# serif 1
+# textwindow "close"
+# se "SE_0719"
+# waitandnext 0.5
+
+# voice 540201 "hyoha_c_0027"
+# face 231 "normal"
+# textboxarrow 0 2
+@ヒョウハ
+ふぅ…
+ラグナロク教会のキル姫…
+エンシェントキラーズか…
+
+# voice 540201 "hyoha_c_0004"
+# face 231 "happy"
+# textboxarrow 0 2
+# serif 0
+@ヒョウハ
+ふふっ…
+悪い冗談だ
+あたしは…
+
+# face 231 "angry"
+# textboxarrow 0 2
+@ヒョウハ
+おっと
+余計なこと考えてる場合じゃ
+ないな
+
+# textboxarrow 0 2
+@ヒョウハ
+異族が近くの町を襲わないよう
+この森で片をつけないとっ
+
+# se "SE_5575"
+# textwindow "close"
+# rightout 231 0.5
+# waitandnext 0.5
+
+;;//背景：平原（夕）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain_evening"
+# alpha 231 0 0
+# move 231 3 0
+# face 231 "happy"
+# alpha 231 1 0
+# mask 231 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm429" "BgmIntegralNoahCommand" 0
+# voice 540201 "hyoha_c_0020"
+# textboxarrow 0 2
+# textwindow "normal"
+@ヒョウハ
+何とか町には被害を出さずに
+済んだな
+あたし、頑張った！
+
+# face 231 "irregular"
+# textboxarrow 0 2
+@ヒョウハ
+それにしても、最近この辺りで
+異族をよく見かけるよな…
+
+# textboxarrow 0 2
+@ヒョウハ
+別の町だと、
+異族が出ること自体
+稀だって話なのに…
+
+# face 231 "normal"
+# textboxarrow 0 2
+@ヒョウハ
+まあ、今のところ
+町に被害は出てないみたいだし
+不幸中の幸いってやつかな
+
+# voice 540201 "hyoha_c_0004"
+# face 231 "happy"
+# textboxarrow 0 2
+@ヒョウハ
+これからも、
+あたしが異族の手から
+この辺りを守ってやらないと！
+
+# face 231 "normal"
+# textboxarrow 0 2
+@ヒョウハ
+さてと…
+家に帰ったら
+いつもの鍛錬をするか
+
+;;ヒョウハ（立ち絵無し）
+# alpha 231 0 0.5
+# textboxarrow 0 0
+@ヒョウハ
+遙か昔、人間を捕食する化け物が
+この世界の至るところにいた
+
+# textboxarrow 0 0
+@ヒョウハ
+人々はそいつらを異族と呼んで
+恐れていたんだ
+
+# textboxarrow 0 0
+@ヒョウハ
+でも、あるときを境に異族は
+姿を消し、人々は安心して
+暮らせるようになった
+
+# textboxarrow 0 0
+@ヒョウハ
+全ては世界の中心に立つ世界樹
+ユグドラシル…そのふもとにある
+ラグナロク教会のキル姫
+
+# textboxarrow 0 0
+@ヒョウハ
+エンシェントキラーズのお陰らしい
+彼女達が異族の大本締めを倒して
+くれた
+
+# textboxarrow 0 0
+@ヒョウハ
+だからみんなラグナロク教会を
+崇めてるし、キル姫に良い印象を
+抱いてる
+
+# textboxarrow 0 0
+@ヒョウハ
+それはいいことだし、
+お陰であたしも助かってる
+ただ、多くの人は知らないだけだ
+
+# textboxarrow 0 0
+@ヒョウハ
+異族は今も、
+この世界に存在してる

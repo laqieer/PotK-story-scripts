@@ -1,0 +1,326 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;３章１話　タイトル「地上の脅威―リバイヴ―」
+;;第1話　タイトル：異形の浸食
+;;7_11_1
+;;スクリプト最後の背景：下町
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown"
+# bgmfile "bgm417_418" "BgmIntegralNoahBattle003" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;魔獣
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# layer 910013 2
+# alpha 910013 0 0
+# mask 910013 off
+;;魔獣1
+# entry 99100131 910013
+# pos 99100131 3
+# scale 99100131 0.8 0
+# layer 99100131 2
+# alpha 99100131 0 0
+# mask 99100131 off
+;;魔獣2
+# entry 99100132 910013
+# pos 99100132 3
+# scale 99100132 0.8 0
+# layer 99100132 2
+# alpha 99100132 0 0
+# mask 99100132 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 2
+# alpha 3201911 0 0
+# mask 3201911 off
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;-----------------------------------------
+;;霧
+# imageset 2 "kiri_03"
+# imagescale 2 2.5 0
+# imagealpha 2 0 0
+# imagelayer 2 4
+;;-----------------------------------------
+;;第1話　タイトル：異形の浸食
+;;//背景：下町
+;;//画面揺れ継続
+# se "SE_0637"
+# textwindow "close"
+# waitandnext 0.2
+
+# shakeloop 0
+# waitandnext 0.5
+
+# move 3501711 2 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# move 210 4 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 on
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@カミト
+グリモワール、どうしたのっ？
+ユグドラシルに何か起きたのっ？
+
+# face 3501711 "angry"
+# textboxarrow 0 1
+# voice 350171 "grimoire_ge_0037"
+@グリモワール
+ワタシにもよく分からないわよ！
+ただ、異様な気配が…
+いけない！
+
+# textboxarrow 0 1
+@グリモワール
+マスター！
+タオルか何かで口を覆って！
+なるべく息しないで！
+
+# face 210 "surprise"
+# textboxarrow 0 3
+# voice 9936 "kamito_0024"
+@カミト
+なっ！
+そんなこと急に言われても…
+
+;;//画面揺れ終了
+;;//霧演出
+# textwindow "close"
+# shakestop
+# imagealpha 2 0.5 0.5
+# imagepos 2 0 0
+# waitandnext 0.5
+
+# alpha 3501711 0 0.5
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# face 210 "normal"
+# textwindow "normal"
+# voice 310231 "ascalon_a_0024"
+@アスカロン
+ひぃっ…
+霧が、あっという間に…
+マスター、ご無事ですかっ？
+
+# textboxarrow 0 3
+# voice 9936 "kamito_0035"
+@カミト
+うん…
+アスカロンも口元を覆った方が
+いいんじゃないかな…
+
+# alpha 3102311 0 0.5
+# move 3501711 2 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 1
+@グリモワール
+何なのよ、この気配…
+死者の怒りが…間近に迫ってる！
+
+# textboxarrow 0 3
+# voice 9936 "kamito_0030"
+@カミト
+何が起きてるのか分からないし…
+早く兄貴と合流しよう
+
+# alpha 3501711 0 0.5
+# alpha 210 0 0.5
+# move 211 2 0
+# face 211 "angry"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+# move 3201911 4 0
+# face 3201911 "normal"
+# alpha 3201911 1 0.5
+# mask 3201911 on
+# voice 9935 "vang_0001"
+@ヴァング
+おい！カミト！
+無事か！？
+
+# textboxarrow 0 3
+# voice 320191 "chihyu_a_0010"
+@シユウ
+うがあああぁぁ！
+まわりがよくみえないぞ…
+
+# alpha 211 0 0.5
+# alpha 3201911 0 0.5
+# move 3501711 2 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+@カミト
+兄貴、ここだよっ
+
+# face 3501711 "angry"
+# textboxarrow 0 1
+@グリモワール
+キミ達も口元を覆って！
+なるべく霧を吸わないようにしなさい
+
+# alpha 3501711 0 0.5
+# alpha 210 0 0.5
+# move 211 3 0
+# face 211 "irregular"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+@ヴァング
+そんなの今更だぜ…
+特にヤバそうな感じはしねぇぞ
+
+# move 211 2 0.5
+# mask 211 on
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+@カミト
+ねぇ、兄貴…
+これから、どうする…？
+
+# textboxarrow 0 1
+# voice 9935 "vang_0003"
+@ヴァング
+一旦、家に帰るぜ
+ここにフォルカスはいねぇ
+おまけにジーベンもいねぇ
+
+# textboxarrow 0 1
+@ヴァング
+あげく、この霧だ
+探索なんてできっこねぇ…
+あん？
+
+# se "SE_0792"
+# alpha 211 0 0.5
+# alpha 210 0 0.5
+# move 99100131 1 0
+# alpha 99100131 1 0.5
+# mask 99100131 on
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 on
+# move 99100132 5 0
+# alpha 99100132 1 0.5
+# mask 99100132 on
+# textboxarrow 0 0
+@魔獣
+ガアアアアアアアアア！
+
+# alpha 99100131 0 0.5
+# alpha 910013 0 0.5
+# alpha 99100132 0 0.5
+# move 211 2 0
+# face 211 "irregular"
+# alpha 211 1 0.5
+# mask 211 on
+# move 210 4 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# voice 9936 "kamito_0025"
+@カミト
+霧の中から…何か現れたっ？
+
+# textboxarrow 0 1
+# voice 9935 "vang_0029"
+@ヴァング
+やれやれだぜ
+ありゃ「魔獣」ってやつじゃ
+ねぇのか？
+
+# textboxarrow 0 1
+@ヴァング
+遠い昔に、オレ達の先祖が
+地上世界から一掃したはずの
+化け物だろ
+
+# alpha 211 0 0.5
+# alpha 210 0 0.5
+# move 3201911 3 0
+# face 3201911 "angry"
+# alpha 3201911 1 0.5
+# mask 3201911 off
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_0029"
+@シユウ
+うがあああぁぁ！
+おまえ達、あっちにいけ！
+
+# se "SE_0793"
+# alpha 3201911 0 0.5
+# move 99100131 1 0
+# alpha 99100131 1 0.5
+# mask 99100131 on
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 on
+# move 99100132 5 0
+# alpha 99100132 1 0.5
+# mask 99100132 on
+# textboxarrow 0 0
+@魔獣
+ギイイイイイイイイイイ！
+
+# alpha 99100131 0 0.5
+# alpha 910013 0 0.5
+# alpha 99100132 0 0.5
+# move 3102311 3 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+# voice 310231 "ascalon_a_battle_0005"
+@アスカロン
+マスター、私の後ろにっ
+力尽くで突破するしかなさそうです！

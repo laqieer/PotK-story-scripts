@@ -1,0 +1,592 @@
+;;-----------------------------------------
+;;ファンキル　2021ウェディングイベント　シナリオ
+;;【EP.5】初めての友達
+;;スクリプト最後の背景：街(夜)　 006_town_TotalEclipse
+;;背景：街(夜)
+;;-----------------------------------------
+# script "lisp"
+# background "town_night"
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;ロジェスティラ・神令・スクルド
+# body 5503711
+# pos 5503711 3
+# scale 5503711 0.8 0
+# layer 5503711 3
+# alpha 5503711 0 0
+# mask 5503711 off
+;;イチイバル ウェディングver.
+# body 5402221
+# pos 5402221 3
+# scale 5402221 0.8 0
+# layer 5402221 2
+# alpha 5402221 0 0
+# mask 5402221 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;【EP.5】初めての友達
+;;//背景：街(夜)
+# se "SE_6117"
+# textwindow "close"
+# envbody 5000 1 0
+# effectpattern 5000 2 0
+# effectstart 5000
+# waitandnext 0.2
+
+;;//ＳＥ：パシャパシャパシャ…（雨の中走る音）
+# se "SE_5002"
+# sedelay "SE_5003" 0.25
+# sedelay "SE_5002" 0.5
+# sedelay "SE_5003" 0.75
+# sedelay "SE_5002" 1
+# move 5503711 3 0
+# face 5503711 "sad"
+# alpha 5503711 1 0.5
+# mask 5503711 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ロジェスティラ
+はぁっ、はぁっ、はぁっ…！！
+
+;;モノローグ
+# textflame 0 0
+@
+息も絶え絶えに
+足を進めるロジェスティラ
+
+;;モノローグ
+@
+その手には…
+イチイバルのくれたドレスと
+一通の手紙
+
+;;//ＳＥ：カーン…カーン…（鐘の音）
+# se "SE_0736"
+# waitandnext 0.5
+
+;;モノローグ
+@
+舞踏会の始まりを告げる
+鐘の音が鳴り響く
+
+# textflame 1 1
+# textboxarrow 0 2
+@ロジェスティラ
+イチイバルさんっ…
+イチイバルさんっ！！
+
+;;モノローグ
+# textflame 0 0
+@
+それを気にも留めない様子で、
+ロジェスティラは走りつづける
+
+;;モノローグ
+@
+手紙の内容を
+脳裏に思い出しながら…
+
+;;//演出：場面転換
+;;//背景：家(昼)　 church_room
+;;//演出案：以下の手紙の回想ですが、文字でイチイバルの感情を伝えるため、立ち絵なしでの進行でも良いかと思います。
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# sestop "SE_6117"
+# effectskip 5000
+# background "church_room"
+# alpha 5503711 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "normal"
+@イチイバル
+拝啓、ロジェスティラへ
+
+# voice 540221 "ichiibal_c_0042"
+@イチイバル
+いや、天才美少女ドレス職人と
+呼んだ方がいいかな？
+なんてね、テヘッ☆
+
+# voice 540221 "ichiibal_c_0031"
+@イチイバル
+この間はごめんね
+キミに無理を言ってしまって
+
+@イチイバル
+あれからいろいろ考えたんだ
+それで…やっと答えに辿り着いた
+
+@イチイバル
+ボクはやっぱり、
+キミと舞踏会に出たい
+
+;;//演出：場面転換
+;;//背景：村(昼)　 004_outland
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "004_outland"
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textwindow "normal"
+@イチイバル
+キミには、旅の思い出を
+いろいろ話したよね
+
+@イチイバル
+でもまだ話してないことがある
+ボクが旅をする理由だ
+
+@イチイバル
+もう気づかれているだろうけど…
+ボクは寂しいやつなんだよ
+
+@イチイバル
+今まで、旅の途中で
+知り合った人は大勢いた
+
+@イチイバル
+でも、本当に心から繋がれた人…
+友達はひとりもいない
+
+@イチイバル
+ボクが天才で、なんでも器用に
+こなせるからだろうね
+
+@イチイバル
+あれこれ首を突っ込んで、
+望まれてもいないのに
+勝手に解決する異邦人
+
+@イチイバル
+お礼の言葉を口にしながら
+本心ではボクのことを
+妬ましく思っている…
+
+@イチイバル
+そう気づいてから、ボクは
+人々からのお礼の言葉が
+泥のように感じるようになった
+
+@イチイバル
+お礼を言われるたび、
+ボクの心は泥で汚れていくような
+感覚がした
+
+@イチイバル
+だから、ボクは
+泥で心に蓋をしたんだ
+
+@イチイバル
+何も求めないように
+何も感じないように
+固く乾いた泥で
+
+@イチイバル
+それなら、人助けなんて
+しなければいい
+そう思うかい？
+
+@イチイバル
+いや、君はそんなことは
+言わないだろうね
+
+# voice 540221 "ichiibal_c_0047"
+@イチイバル
+ロジェ、君はボクのことを
+強い、なんていうけれど
+逆なんだ
+
+@イチイバル
+ボクは弱い
+一人では生きていけない
+だから、人と関わるんだ
+
+@イチイバル
+その結果、
+泥をかけられると
+わかっていてもね
+
+@イチイバル
+ボクはこれでいいと思ったんだ
+人と深く関わらずに生きていく
+それでいいって、ね
+
+@イチイバル
+でも、そんなときだった
+
+@イチイバル
+ボクは、ロジェ…
+君に出会ったんだ――
+
+;;//演出：場面転換
+;;//背景：家(昼)　 church_room
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "church_room"
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textwindow "normal"
+@イチイバル
+旅人のボクを
+甲斐甲斐しくお世話して、
+話も楽しそうに聞いてくれて
+
+@イチイバル
+ただの他人
+なんかじゃないって、
+そう言ってくれたよね
+
+@イチイバル
+ただ憧れるだけでも
+遠巻きに見るだけでもない
+
+@イチイバル
+対等な存在として、
+ボクに寄り添ってくれた
+
+@イチイバル
+だからボクは…
+キミに心を開いていったんだ
+
+@イチイバル
+…いや、違うね
+そうじゃない
+
+@イチイバル
+キミが、ボクの心の泥を
+拭ってくれたんだ
+
+;;//演出：場面転換
+;;//背景；黒バック
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "bg_black"
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textwindow "normal"
+@イチイバル
+泥で隠れてしまっていた
+ボクの心を……
+
+@イチイバル
+だから、ボクはもう隠さない
+分かり合いたいという想いを
+
+@イチイバル
+あの日キミを
+舞踏会に誘ったのはね
+
+@イチイバル
+やっとその願いを
+叶えられると思ったからなんだ
+
+@イチイバル
+キミもボクと同じように、
+胸の奥に寂しさを
+抱えていると感じたから
+
+@イチイバル
+そんなキミとならきっと、
+友達になれると思ったから―
+
+;;//演出：場面転換
+;;//背景；街(夜)　 006_town_TotalEclipse
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "006_town_TotalEclipse"
+# envbody 5001 1 0
+# effectpattern 5001 2 0
+# effectstart 5001
+# move 5503711 3 0
+# face 5503711 "sad"
+# alpha 5503711 1 0
+# mask 5503711 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 550371 "logistille_c_0046"
+# textboxarrow 0 2
+# textwindow "normal"
+@ロジェスティラ
+イチイバルさんっ！！
+
+# emotionbody 1000 1 5402221 10 310
+# effectpattern 1000 1 0
+# effectstart 1000
+# alpha 5503711 0 0.5
+# move 5402221 3 0
+# face 5402221 "surprise"
+# alpha 5402221 1 0.5
+# mask 5402221 off
+# textboxarrow 0 2
+@イチイバル
+っ！
+あ…ロジェ…？
+
+# voice 550371 "logistille_c_0035"
+# alpha 5402221 0 0.5
+# move 5503711 3 0
+# face 5503711 "sad"
+# alpha 5503711 1 0.5
+# mask 5503711 off
+# textboxarrow 0 2
+@ロジェスティラ
+さっきはごめんなさいっ！
+わたし、わたしっ…！
+
+;;//ＳＥ：パシャパシャパシャ…（雨の中走る音）
+# textwindow "close"
+# se "SE_5002"
+# sedelay "SE_5003" 0.25
+# sedelay "SE_5002" 0.5
+# rightout 5503711 0.5
+# waitandnext 0.5
+
+# alpha 5503711 0 0
+# move 5402221 3 0
+# face 5402221 "surprise"
+# alpha 5402221 1 0.5
+# mask 5402221 off
+# textboxarrow 0 2
+# textwindow "normal"
+@イチイバル
+ロジェっ！！
+
+# emotionbody 2000 1 5503711 10 310
+# effectpattern 2000 2 0
+# effectstart 2000
+# voice 550371 "logistille_c_0024"
+# move 5503711 2 0
+# face 5503711 "surprise"
+# alpha 5503711 1 0.5
+# mask 5503711 on
+# textboxarrow 0 1
+# move 5402221 4 0.5
+# mask 5402221 on
+@ロジェスティラ
+わっ！？
+
+# se "SE_0656"
+# textwindow "close"
+# shake 0 0.5
+# waitandnext 0.5
+
+;;//演出：画面揺れ
+;;//ＳＥ：バシャンッ！（二人が地面に倒れる音）
+# se "SE_7240"
+# alpha 5503711 0 0.5
+# alpha 5402221 0 0.5
+# waitandnext 0.5
+
+# move 5503711 3 0
+# face 5503711 "surprise"
+# alpha 5503711 1 0.5
+# mask 5503711 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ロジェスティラ
+イ、イチイバルさんっ…？
+
+;;モノローグ
+# textflame 0 0
+@
+勢いよく抱き着かれて
+地面に倒れ込む二人
+
+;;モノローグ
+@
+声をかけようとする
+ロジェスティラだったが…
+
+;;モノローグ
+# face 5503711 "usual"
+@
+イチイバルの体が
+震えているのに気づき、
+そっと口をつぐんだ
+
+# move 5503711 2 0.5
+# alpha 5503711 1 0.5
+# mask 5503711 on
+# move 5402221 4 0
+# face 5402221 "sad"
+# alpha 5402221 1 0.5
+# mask 5402221 on
+# textflame 1 1
+# textboxarrow 0 3
+@イチイバル
+は…初めて、なんだ
+こんなに怖いって思ったのは
+
+# textboxarrow 0 3
+@イチイバル
+このままキミと
+分かり合えないまま
+終わるかもしれないって…
+
+# textboxarrow 0 3
+@イチイバル
+それがこんなに怖いことだなんて、
+知らなかった…！
+
+;;モノローグ
+# textflame 0 0
+@
+イチイバルの瞳から、
+大粒の涙があふれだす
+
+;;モノローグ
+@
+純白のドレスは泥水で汚れて、
+もう見る影もない
+
+;;モノローグ
+@
+けれど…二人にとっては
+もはや些細なことだった
+
+# face 5402221 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@イチイバル
+お願いだ、ロジェ…
+ボクを嫌いにならないでくれ
+
+# textboxarrow 0 3
+@イチイバル
+ボクはキミと友達になりたい！
+それだけなんだ、だから…！
+
+;;//ＳＥ：ガサガサ…（衣擦れ音）
+# textwindow "close"
+# se "SE_10131"
+# bgmfile "bgm404" "BgmIntegralNoahEvent003" 0
+# move 5503711 3 0.2
+# waitandnext 0.5
+
+# face 5402221 "surprise"
+# textboxarrow 0 3
+# textwindow "normal"
+@イチイバル
+っ…
+
+;;モノローグ
+# textflame 0 0
+@
+震えるイチイバルの体を
+ロジェスティラは強く抱きしめる
+
+;;モノローグ
+# face 5402221 "usual"
+@
+その優しい温もりを感じ…
+イチイバルも彼女を抱きしめ返した
+
+# se "SE_6504"
+# emotionbody 3000 3 5503711 10 290
+# effectpattern 3000 1 3
+# effectstart 3000
+# voice 550371 "logistille_c_0004"
+# face 5503711 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@ロジェスティラ
+嬉しい、です…
+こんなに素敵な人に、
+友達だなんて思ってもらえて…
+
+# face 5503711 "usual"
+# textboxarrow 0 2
+@ロジェスティラ
+わたしも前を向きます、
+あなたと同じように…
+
+# textboxarrow 0 2
+@ロジェスティラ
+わたしなんかが…なんて言って、
+簡単に諦めないようにっ…！
+
+# face 5503711 "angry"
+# textboxarrow 0 2
+@ロジェスティラ
+イチイバルさんっ！
+もう舞踏会は
+始まっちゃったけど…
+
+# textboxarrow 0 2
+@ロジェスティラ
+もしよければ…
+わたしといっしょに、
+踊ってくれませんかっ？
+
+# face 5402221 "surprise"
+# textboxarrow 0 3
+@イチイバル
+ッ……！
+
+# voice 540221 "ichiibal_c_0004"
+# face 5402221 "normal"
+# textboxarrow 0 3
+@イチイバル
+フフフッ…
+アハハハッ…！
+
+# emotionbody 4000 2 5503711 10 290
+# effectpattern 4000 1 1
+# effectstart 4000
+# face 5503711 "surprise"
+# textboxarrow 0 2
+@ロジェスティラ
+イチイバルさん…？
+
+# voice 540221 "ichiibal_c_0003"
+# textboxarrow 0 3
+@イチイバル
+うん…うん！
+もちろんだよ、ロジェ！
+
+;;モノローグ
+# textflame 0 0
+@
+イチイバルの顔に、
+いつもの不敵な笑顔が戻った
+
+;;モノローグ
+# face 5503711 "happy"
+@
+そのまま二人はしばらく、
+倒れたままで笑い合うのだった…

@@ -1,0 +1,332 @@
+;;-----------------------------------------
+;;【ファントムオブキル】暴走クエストシナリオ後半
+;;【EP10】戦闘後
+;;スクリプト最後の背景：インテグラルノア編地上
+;;背景：インテグラルノア編地上
+;;-----------------------------------------
+# script "lisp"
+# background "in_underwild"
+# bgmfile "bgm464_1" "BgmIntegralNoahDisrupters" 0
+;;-----------------------------------------
+;;カリス・聖鎖・アザゼル
+# body 5602511
+# pos 5602511 3
+# scale 5602511 0.8 0
+# layer 5602511 2
+# alpha 5602511 0 0
+# mask 5602511 off
+;;キプル
+# body 163
+# pos 163 3
+# scale 163 0.6 0
+# layer 163 2
+# alpha 163 0 0
+# mask 163 off
+;;ヘレナ
+# body 5302811
+# pos 5302811 3
+# scale 5302811 0.8 0
+# layer 5302811 2
+# alpha 5302811 0 0
+# mask 5302811 off
+;;ニール
+# body 162
+# pos 162 3
+# scale 162 0.8 0
+# layer 162 2
+# alpha 162 0 0
+# mask 162 off
+;;ソロモン
+# body 5503111
+# pos 5503111 3
+# scale 5503111 0.8 0
+# layer 5503111 2
+# alpha 5503111 0 0
+# mask 5503111 off
+;;グラウ
+# body 164
+# pos 164 3
+# scale 164 0.6 0
+# layer 164 2
+# alpha 164 0 0
+# mask 164 off
+;;グランテピエ・獣刻・バハムート
+# body 5303411
+# pos 5303411 3
+# scale 5303411 0.8 0
+# layer 5303411 2
+# alpha 5303411 0 0
+# mask 5303411 off
+;;ムー
+# body 161
+# pos 161 3
+# scale 161 0.6 0
+# layer 161 2
+# alpha 161 0 0
+# mask 161 off
+;;アロンダイト・暴走
+# body 5100711
+# pos 5100711 3
+# scale 5100711 0.8 0
+# layer 5100711 2
+# alpha 5100711 0 0
+# mask 5100711 off
+;;ロンゴミアント・暴走
+# body 5301011
+# pos 5301011 3
+# scale 5301011 0.8 0
+# layer 5301011 2
+# alpha 5301011 0 0
+# mask 5301011 off
+;;-----------------------------------------
+# move 5100711 3 0
+# face 5100711 "angry"
+# alpha 5100711 1 0
+# mask 5100711 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 510071 "arondaito_bo_b_0029"
+@アロンダイト
+アアアアアアアアア！
+
+# alpha 5100711 0 0.5
+# move 161 2 0
+# alpha 161 1 0.5
+# mask 161 on
+# textboxarrow 0 1
+# move 5303411 4 0
+# face 5303411 "angry"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# voice 9953 "mwu_0029"
+@ムー
+グラ、トドメだ！
+この一発を食らわせりゃ
+コイツも大人しくできるかも…
+
+# textboxarrow 0 3
+@グランテピエ
+うん…いくよ、はぁっ！
+
+# se "SE_4200"
+# waitandnext 0.5
+
+# textwindow "close"
+# alpha 161 0 0.5
+# alpha 5303411 0 0.5
+# move 5100711 3 0
+# face 5100711 "angry"
+# alpha 5100711 1 0.5
+# mask 5100711 off
+# waitandnext 0.6
+
+;;演出：グランテピエの攻撃、しかし弾かれてしまう
+# bgm "stop"
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm467" "BgmIntegralNoahBoso" 0
+;;？？？（ロンゴミアント）
+# move 5301011 2 0
+# face 5301011 "usual"
+# alpha 5301011 1 0.5
+# mask 5301011 on
+# move 5100711 4 0.5
+# mask 5100711 on
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 530101 "rhongomiant_bo_0008"
+@？？？
+別に、哀しくはないんですけどね
+今失う訳にはいかないので
+
+# face 5100711 "surprise"
+# textboxarrow 0 3
+# voice 510071 "arondaito_bo_0024"
+@アロンダイト
+ア、ああ…ロンゴミアント？
+
+# face 5301011 "angry"
+# textboxarrow 0 1
+@ロンゴミアント
+後始末をしに来ました
+とはいえ今回は回収のみです
+さあ、退きますよ、アロンダイト
+
+# face 5100711 "normal"
+# textboxarrow 0 3
+# voice 510071 "arondaito_bo_0013"
+@アロンダイト
+退く？
+なぜです？
+私はまだ戦えますよ
+
+# textboxarrow 0 1
+@ロンゴミアント
+あの方からの命令です
+上の世界でやってほしいことが
+あるそうです
+
+# textboxarrow 0 3
+@アロンダイト
+従う義務はないと思いますが
+
+# textboxarrow 0 1
+# voice 530101 "rhongomiant_bo_0019"
+@ロンゴミアント
+…そうですね
+ですがより早く終焉を
+実現したいなら従った方が…
+
+# textboxarrow 0 3
+# voice 510071 "arondaito_bo_0033"
+@アロンダイト
+わかりました
+ここは退くとしましょう
+
+# alpha 5301011 0 0.5
+# alpha 5100711 0 0.5
+# move 5303411 3 0
+# face 5303411 "angry"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# textboxarrow 0 2
+@グランテピエ
+待って！
+あなた達は…
+
+# alpha 5303411 0 0.5
+# move 5301011 2 0
+# face 5301011 "angry"
+# alpha 5301011 1 0.5
+# mask 5301011 on
+# textboxarrow 0 1
+# move 5100711 4 0
+# face 5100711 "normal"
+# alpha 5100711 1 0.5
+# mask 5100711 on
+@ロンゴミアント
+あなた達の相手をするつもりは
+ありません
+
+# textboxarrow 0 1
+# voice 530101 "rhongomiant_bo_0007"
+@ロンゴミアント
+もし、余計なことをする、
+というのであれば
+その時は死んでいただきます
+
+;;演出：アロンダイト、ロンゴミアントout
+# se "SE_9021"
+# textwindow "close"
+# alpha 5301011 0 0.5
+# alpha 5100711 0 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm463" "BgmIntegralNoahDisrupters" 0
+# move 163 2 0
+# alpha 163 1 0.5
+# mask 163 on
+# move 161 4 0
+# alpha 161 1 0.5
+# mask 161 on
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 9953 "mwu_0015"
+@ムー
+堂々と逃げやがった…
+
+# textboxarrow 0 1
+# voice 9951 "kipuru_0027"
+@キプル
+けど、逃げてくれて助かったのは
+こちらのほうかもしれません…
+
+# alpha 163 0 0.5
+# alpha 161 0 0.5
+# move 164 2 0
+# alpha 164 1 0.5
+# mask 164 on
+# move 5503111 4 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# textboxarrow 0 3
+# voice 550311 "solomon_di_0037"
+@ソロモン
+アレを同時に相手なんて、無理ね…
+
+# textboxarrow 0 1
+# voice 9950 "glau_0009"
+@グラウ
+戦力差の想定
+不確定情報が多く、不明
+
+# alpha 164 0 0.5
+# alpha 5503111 0 0.5
+# move 5302811 2 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# move 162 4 0
+# alpha 162 1 0.5
+# mask 162 on
+# textboxarrow 0 3
+# voice 9952 "nir_0002"
+@ニール
+アタチ達の連携を強める必要は
+あると思うわよ、アナタ達
+
+# face 5302811 "normal"
+# textboxarrow 0 1
+# voice 530281 "herena_di_0007"
+@ヘレナ
+まぁ、向こうが戦わないって
+言うなら今回はヘレナ達の勝ち
+ってことで、くふっ
+
+# alpha 5302811 0 0.5
+# alpha 162 0 0.5
+# move 5602511 3 0
+# face 5602511 "normal"
+# alpha 5602511 1 0.5
+# mask 5602511 off
+# textboxarrow 0 2
+# voice 560251 "chalice_di_0002"
+@カリス
+ところでみんな怪我してない？
+カリスちゃんがぱぱっと治しちゃう！
+
+# alpha 5602511 0 0.5
+# move 5303411 3 0
+# face 5303411 "sad"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# textboxarrow 0 2
+@グランテピエ
+…………
+
+# alpha 5303411 0 0.5
+# move 5602511 3 0
+# face 5602511 "surprise"
+# alpha 5602511 1 0.5
+# mask 5602511 off
+# textboxarrow 0 2
+# voice 560251 "chalice_di_0047"
+@カリス
+グラ姉？
+
+# alpha 5602511 0 0.5
+# move 5303411 3 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# textboxarrow 0 2
+@グランテピエ
+ああ、うん、大丈夫
+
+# textboxarrow 0 2
+@グランテピエ
+大丈夫…

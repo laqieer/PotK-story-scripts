@@ -1,0 +1,304 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１５章 章タイトル「クリティカルフェイズ―連携―」
+;;第1話－９　タイトル：新たな連携
+;;1_9_3
+;;スクリプト最後の背景：泉
+;;-----------------------------------------
+# script "lisp"
+# background "fountain"
+# bgmfile "bgm403" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;ミネルヴァ・擬装・アーチャー
+# body 5302521
+# pos 5302521 3
+# scale 5302521 0.8 0
+# layer 5302521 2
+# alpha 5302521 0 0
+# mask 5302521 off
+;;グラーシーザ・擬装・ウォーリアー
+# body 5302621
+# pos 5302621 3
+# scale 5302621 0.8 0
+# layer 5302621 2
+# alpha 5302621 0 0
+# mask 5302621 off
+;;擬装ダモクレス
+# body 5103521
+# pos 5103521 3
+# scale 5103521 0.8 0
+# layer 5103521 2
+# alpha 5103521 0 0
+# mask 5103521 off
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 3
+# alpha 5101431 0 0
+# mask 5101431 off
+# brightness 5101431 0.8 0
+;;レーヴァテイン・擬彩
+# body 5100231
+# pos 5100231 3
+# scale 5100231 0.8 0
+# layer 5100231 2
+# alpha 5100231 0 0
+# mask 5100231 off
+;;ロンギヌス・擬彩
+# body 5300131
+# pos 5300131 3
+# scale 5300131 0.8 0
+# layer 5300131 2
+# alpha 5300131 0 0
+# mask 5300131 off
+;;ヘレナ・D. plug・ロキ
+# body 5302811
+# pos 5302811 3
+# scale 5302811 0.8 0
+# layer 5302811 2
+# alpha 5302811 0 0
+# mask 5302811 off
+;;ニール
+# body 162
+# pos 162 3
+# scale 162 0.6 0
+# layer 162 4
+# alpha 162 0 0
+# mask 162 off
+;;-----------------------------------------
+# move 5302521 3 0
+# face 5302521 "normal"
+# alpha 5302521 1 0
+# mask 5302521 off
+# textflame 1 1
+# textboxarrow 0 2
+@ミネルヴァ
+そこです！
+
+# se "SE_4301"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# alpha 5302521 0 0.5
+# emotionbody 1000 15 5101431 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5101431 3 0
+# face 5101431 "angry"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+@ティルフィング
+アアアアアアア…！
+
+# alpha 5101431 0 0.5
+# effectskip 1000
+# move 5103521 2 0
+# face 5103521 "happy"
+# alpha 5103521 1 0.5
+# mask 5103521 on
+# move 5302521 4 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 on
+# textboxarrow 0 1
+# voice 1035 "damocles_0029"
+@ダモクレス
+ティルフィングの動きが止まったよ！
+ここでクレスの出番だねっ
+
+# textboxarrow 0 3
+@ミネルヴァ
+違いますよ
+ヘレナ！今ですっ
+
+# alpha 5103521 0 0.5
+# alpha 5302521 0 0.5
+# move 5302811 3 0
+# face 5302811 "normal"
+# alpha 5302811 1 0.5
+# mask 5302811 off
+# move 162 2 0
+# alpha 162 1 0.5
+# textboxarrow 0 2
+@ヘレナ
+やっとか
+ヘレナは待ちくたびれたぞ
+…くふっ
+
+# textboxarrow 0 2
+# voice 530281 "herena_di_0045"
+@ヘレナ
+ここからなら外しようがないな
+ニール、いくぞ
+
+# textboxarrow 0 1
+@ニール
+アタチ達の力で、暴走を解いて
+あげましょ！
+
+# textboxarrow 0 2
+# face 5302811 "usual"
+@ヘレナ
+さあ、目を覚ますといい！
+
+# alpha 5302811 0 0.5
+# alpha 162 0 0.5
+# textwindow "close"
+# emotionbody 1000 15 5101431 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5101431 3 0
+# face 5101431 "angry"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# waitandnext 0.6
+
+;;//白フラッシュ
+# se "SE_0994"
+# fadein "white" 0.5
+# bgm "stop"
+# waitandnext 0.5
+
+# textwindow "normal"
+# textboxarrow 0 2
+@ティルフィング
+アアアアアアアアアアアア！
+
+# effectskip 1000
+# alpha 5101431 0 0.5
+# move 5302811 3 0
+# face 5302811 "surprise"
+# alpha 5302811 1 0.5
+# mask 5302811 off
+# move 162 2 0
+# alpha 162 1 0.5
+# voice 530281 "herena_di_0022"
+# textboxarrow 0 2
+@ヘレナ
+…おや？
+何だ、この手応えは…
+
+# textwindow "close"
+# alpha 5302811 0 0.5
+# alpha 162 0 0.5
+# waitandnext 1.0
+
+# emotionbody 1000 15 5101431 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5101431 3 0
+# face 5101431 "angry"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# bgmfile "bgm479" "BgmIntegralNoahBoso002" 0
+# textwindow "normal"
+# textboxarrow 0 2
+@ティルフィング
+アアアアアア…
+私ハ…私ハァ…
+オ母サン…！
+
+# effectskip 1000
+# alpha 5101431 0 0.5
+# move 5100231 4 0
+# face 5100231 "angry"
+# alpha 5100231 1 0.5
+# move 5100231 3 0.3
+# voice 510023 "revatein_iz_0037"
+# textboxarrow 0 2
+@レーヴァテイン
+…ダメ！
+ティル！
+
+# alpha 5100231 0 0.5
+# emotionbody 1000 15 5101431 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5101431 3 0
+# face 5101431 "angry"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# se "SE_9070"
+# shake 0 0.5
+# fadein "white" 0.5
+# textwindow "toge"
+# textboxarrow 0 2
+@ティルフィング
+ワアアアアアアアアアアアアアアアア
+アアアアアアアアアアアアアアア！！
+
+# textwindow "close"
+# se "SE_9037"
+# rightout 5101431 0.2
+# waitandnext 0.2
+
+;;//ヘレナが弾き飛ばされる
+# se "SE_9086"
+# fadein "white" 0.3
+# shake 0 0.3
+# effectbody 1001 2 0 0 0
+# effectstart 1001
+# alpha 5101431 0 0
+# move 162 1 0
+# move 5302811 2 0
+# face 5302811 "sad"
+# alpha 5302811 1 0.5
+# alpha 162 1 0.5
+# move 5302811 3 0.2
+# waitandnext 0.2
+
+# move 5302811 4 0.4
+# voice 530281 "herena_di_battle_0006"
+# textwindow "normal"
+# textboxarrow 0 2
+@ヘレナ
+カハッ…
+
+# move 162 2 0.3
+# textboxarrow 0 1
+@ニール
+ヘレナ…！？
+
+# alpha 5302811 0 0.5
+# alpha 162 0 0.5
+# move 5302521 3 0
+# face 5302521 "surprise"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+膨大なマナの奔流…
+これは…いけません…！
+
+# alpha 5302521 0 0.5
+# move 5300131 2 0
+# face 5300131 "surprise"
+# alpha 5300131 1 0.5
+# mask 5300131 on
+# move 5302621 4 0
+# face 5302621 "normal"
+# alpha 5302621 1 0.5
+# mask 5302621 on
+# voice 530013 "ronginusu_iz_0037"
+# textboxarrow 0 1
+@ロンギヌス
+ティルフィングが神器を…
+そんなことしたら…この泉も…
+女神エイレーネも全部…
+
+# textboxarrow 0 3
+# face 5302621 "angry"
+@グラーシーザ
+けしとんでしまうぞ！
+
+# alpha 5300131 0 0.5
+# alpha 5302621 0 0.5
+# move 5100231 3 0
+# face 5100231 "angry"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+…させない

@@ -1,0 +1,815 @@
+;;-----------------------------------------
+;;ダンまち1_5_1
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス
+# body 138
+# pos 138 3
+# scale 138 0.8 0
+# layer 138 3
+# alpha 138 0 0
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 5
+# mask 139 off
+# alpha 139 0 0
+;;ヘスティア
+# body 3603111
+# pos 3603111 3
+# scale 3603111 0.8 0
+# layer 3603111 5
+# alpha 3603111 0 0
+;;リュー
+# body 3104511
+# pos 3104511 3
+# scale 3104511 0.8 0
+# layer 3104511 3
+# alpha 3104511 0 0
+;;アイズ
+# body 3104411
+# pos 3104411 3
+# scale 3104411 0.8 0
+# layer 3104411 3
+# alpha 3104411 0 0
+;;ベル
+# body 216
+# pos 216 3
+# scale 216 0.8 0
+# layer 216 5
+# mask 216 off
+# alpha 216 0 0
+;;リリルカ
+# body 3402111
+# pos 3402111 3
+# scale 3402111 0.8 0
+# layer 3402111 3
+# alpha 3402111 0 0
+;;春姫
+# body 3503611
+# pos 3503611 3
+# scale 3503611 0.8 0
+# layer 3503611 3
+# alpha 3503611 0 0
+;;トレイセーマ兵
+# body 3830001
+# pos 3830001 1
+# scale 3830001 0.8 0
+# layer 3830001 3
+# mask 3830001 off
+# alpha 3830001 0 0
+# entry 3830002 3830001
+# pos 3830002 3
+# scale 3830002 0.8 0
+# layer 3830002 3
+# mask 3830002 off
+# alpha 3830002 0 0
+# entry 3830003 3830001
+# pos 3830003 5
+# scale 3830003 0.8 0
+# layer 3830003 3
+# mask 3830003 off
+# alpha 3830003 0 0
+# reversal 3830003 0
+;;ミノタウロス
+# body 805031
+# pos 805031 3
+# scale 805031 0.8 0
+# layer 805031 3
+# mask 805031 off
+# alpha 805031 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1.5
+
+;;背景：街中（昼）
+# move 216 4 0
+# alpha 216 1 0.5
+# move 3603111 2 0
+# alpha 3603111 1 0.5
+# face 3603111 "sad"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 216 "sad"
+@ベル
+やっぱり春姫さんだった…
+
+# textflame 0 0
+@
+仲間だとわかったのに
+目の前で連れ去られていった…
+ベルはそのショックが大きいのだろう
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 360311 "hestia_0028"
+@ヘスティア
+ベル君、あれは仕方ないよ
+追おうにも敵が多すぎた
+
+# textflame 1 1
+# textboxarrow 0 3
+@ベル
+僕が戦えたら…なんてもしもを
+話しても意味がないのは
+わかってます
+
+# textflame 1 1
+# textboxarrow 0 3
+@ベル
+それでも悔しいんです…
+僕は春姫さんを助けたい！
+
+# textflame 0 0
+@
+仲間を救いたいというベルの願い
+それを聞いたマスターは手伝うと
+言ったでしょと声を掛ける
+
+# textflame 1 1
+# textboxarrow 0 3
+@ベル
+マスターさん…
+
+# textwindow "close"
+# alpha 216 0 0.5
+# alpha 3603111 0 0.5
+# waitandnext 0.5
+
+# se "SE_5575"
+# mask 3402111 off
+# alpha 3402111 1 0.5
+# face 3402111 "normal"
+# waitandnext 0.7
+
+# se "SE_6523"
+# emotionbody 1000 10 3402111 -50 200
+# effectpattern 1000 4 0
+# effectstart 1000
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@リリルカ
+ただいま戻りましたー
+春姫さんが移送された場所
+しっかり掴んできましたよ！
+
+# textflame 0 0
+@
+リリルカは魔法で変装できるらしく
+その能力を使って情報収集に
+当たっていてくれたのだ
+
+# effectskip 1000
+# textflame 1 1
+# textboxarrow 0 2
+# face 3402111 "sad"
+# voice 340211 "lilliluka_0028"
+@リリルカ
+えぇと
+場所はそう遠くないんですけど…
+
+# move 138 2 0
+# alpha 138 1 0.5
+# move 3402111 4 0.5
+# mask 3402111 on
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "normal"
+@アルマス
+どうしたのよ
+言いづらいことでもあるの？
+
+# textflame 1 1
+# textboxarrow 0 3
+@リリルカ
+それが…どうにも
+さっきのことがあったせいか
+警備がさらに強化されたみたいで…
+
+# alpha 138 0 0.5
+# move 3104511 1 0
+# alpha 3104511 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310451 "ryu_0028"
+@リュー
+そう簡単には
+忍び込めない…という訳ですね
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 340211 "lilliluka_0003"
+@リリルカ
+はい…それにここは敵地
+言うなればダンジョンのようなもの
+
+# textflame 1 1
+# textboxarrow 0 3
+@リリルカ
+騒ぎを聞きつけたら
+あっという間に囲まれてしまうかと…
+
+# alpha 3104511 0 0.5
+# alpha 3402111 0 0.5
+# alpha 216 1 0.50
+# alpha 3603111 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@ベル
+…………
+
+# se "SE_6502"
+# emotionbody 1001 2 3603111 10 250
+# effectpattern 1001 1 1
+# effectstart 1001
+# textflame 1 1
+# textboxarrow 0 1
+# voice 360311 "hestia_0001"
+@ヘスティア
+どうしたんだいベル君？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ベル
+いえ、その…
+
+# bgmfile "bgm360" "BgmDanmachi" 0
+# textflame 0 0
+@
+何かを言い淀むベル
+それを見たヘスティアは
+ふぅと息を吐いて話を始める
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3603111 "usual"
+# voice 360311 "hestia_0002"
+@ヘスティア
+ベル君はまだ自分が戦えない
+ことを気にしているんだろう？
+
+# textflame 1 1
+# textboxarrow 0 1
+@ヘスティア
+助けたい
+でもみんなを危険にさらすことになる
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3603111 "angry"
+# voice 360311 "hestia_0007"
+@ヘスティア
+ボクから言わせてみれば
+なんだいそんなこと、だよ
+
+# textflame 1 1
+# textboxarrow 0 3
+@ベル
+神様…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3603111 "usual"
+@ヘスティア
+どんな困難があろうとも
+女の子を助けるために動いちゃう
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3603111 "sad"
+@ヘスティア
+それがベル君の考える
+英雄ってやつなんじゃないのかい？
+…ちょっと妬けるけどさ
+
+# alpha 216 0 0.50
+# alpha 3603111 0 0.5
+# move 3402111 3 0
+# mask 3402111 off
+# alpha 3402111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3402111 "happy"
+# voice 340211 "lilliluka_0032"
+@リリルカ
+…リリも、リリもそんな
+ベル様だからこそ支えたいと
+思っています
+
+# alpha 3402111 0 0.5
+# move 3104411 2 0
+# alpha 3104411 1 0.5
+# move 3104511 4 0
+# alpha 3104511 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 3104511 "happy"
+# face 3104411 "happy"
+# voice 310441 "aiz_0007"
+@アイズ
+わかっていても忘れてしまうこと
+それは…自分はひとりじゃないこと
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310451 "ryu_0005"
+@リュー
+ええ、何度だって言います
+あなたには仲間がいる
+
+# alpha 3104411 0 0.5
+# alpha 3104511 0 0.5
+# move 138 3 0
+# mask 138 off
+# alpha 138 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1038 "almace_0002"
+@アルマス
+これだけ言われても
+まだうじうじするの、ベル？
+
+# textflame 0 0
+@
+アルマスの素直じゃない
+言い回しに微笑みつつマスターも
+ベルに仲間を頼ってくれ、と話す
+
+# alpha 138 0 0.5
+# move 216 3 0
+# mask 216 off
+# alpha 216 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 216 "normal"
+# voice 9932 "bell_0031"
+@ベル
+皆さん…すみません
+知らない場所に来て、大事なことを
+見失ってしまっていたみたいです
+
+# textflame 1 1
+# textboxarrow 0 2
+@ベル
+行きましょう…春姫さんを助けに！
+
+;;演出：移動の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：森（夕）
+# background "forest_evening"
+# bgm "stop"
+# alpha 216 0 0
+# move 3402111 3 0
+# mask 3402111 off
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_0791"
+# alpha 3402111 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 3402111 "surprise"
+# voice 340211 "lilliluka_0001"
+@リリルカ
+情報によればこの辺りのはずです
+この兵士の数を見るにおそらくは
+間違いないかと…
+
+# textwindow "close"
+# alpha 3402111 0 0.5
+# waitandnext 0.8
+
+;;演出：トレイセーマ兵の立ち絵を複数人表示
+# alpha 3830001 1 0.5
+# waitandnext 0.5
+
+# move 3830001 4 1
+# alpha 3830001 0 0.5
+# waitandnext 1
+
+# alpha 3830002 1 0.5
+# waitandnext 0.5
+
+# move 3830002 5 1
+# alpha 3830002 0 0.5
+# waitandnext 1
+
+# alpha 3830003 1 0.5
+# waitandnext 0.7
+
+# move 3830003 3 1
+# alpha 3830003 0 0.5
+# waitandnext 1
+
+# move 3104511 3 0
+# mask 3104511 off
+# alpha 3104511 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 3104511 "surprise"
+# voice 310451 "ryu_0022"
+@リュー
+これはたしかに骨が折れそうな…
+む、何やら奥のほうが
+騒がしいですね
+
+# textwindow "close"
+# alpha 3104511 0 0.5
+# waitandnext 0.7
+
+# alpha 805031 1 0.5
+# waitandnext 0.8
+
+# se "SE_7038"
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 2
+@ミノタウロス
+グオオオオオッ！
+
+# se "SE_6500"
+# emotionbody 1003 1 138 10 310
+# effectpattern 1003 1 0
+# effectstart 1003
+# bgmfile "bgm361_362" "BgmDanmachi" 0
+# alpha 805031 0 0.5
+# move 138 3 0
+# mask 138 off
+# alpha 138 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 138 "surprise"
+# voice 1038 "almace_0022"
+@アルマス
+あっ！
+あれって、ミノタウロスっていう
+化け物じゃない！
+
+# alpha 138 0 0.5
+# move 3830001 3 0
+# alpha 3830001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@トレイセーマ兵
+くそっ！こんなときに…
+おい！例の幻獣人が逃げ出したぞ！
+遠くには行ってないはずだ、探せ！
+
+# alpha 3830001 0 0.5
+# move 216 4 0
+# alpha 216 1 0.5
+# move 138 2 0
+# mask 138 on
+# alpha 138 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 216 "sad"
+# voice 9932 "bell_0009"
+@ベル
+春姫さんが逃げ出した？
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+ベル達がいるってわかって
+行動を起こしたんじゃない？
+仲間がいるって勇気になるもの
+
+# textflame 1 1
+# textboxarrow 0 3
+@ベル
+だけど、
+こんな中を逃げ出したら…っ！
+
+# alpha 138 0 0.5
+# alpha 216 0 0.5
+# move 3603111 4 0
+# alpha 3603111 1 0.5
+# move 3104411 2 0
+# alpha 3104411 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 3603111 "angry"
+# face 3104411 "normal"
+# voice 310441 "aiz_0011"
+@アイズ
+危険もわかってのことだと思う
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヘスティア
+そしたらできることはただひとつ
+アイツらよりも先に見つけ出すことだ
+
+# alpha 3603111 0 0.5
+# alpha 216 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9932 "bell_0032"
+@ベル
+はい、神様！
+皆さん…力を貸してください！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3104411 "angry"
+# voice 310441 "aiz_0029"
+@アイズ
+なら、突っ込む
+
+# se "SE_6501"
+# emotionbody 1004 1 216 10 310
+# effectpattern 1004 2 0
+# effectstart 1004
+# textflame 1 1
+# textboxarrow 0 3
+# face 216 "surprise"
+@ベル
+ええっ！？
+アイズさん、それは無茶な…
+
+# textflame 0 0
+@
+騒ぎを起こす、それはベル達が
+迎えに来ているとアピールする
+ことになると説明するマスター
+
+# alpha 3104411 0 0.5
+# alpha 216 0 0.5
+# move 138 3 0
+# mask 138 off
+# alpha 138 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 138 "angry"
+# voice 1038 "almace_0007"
+@アルマス
+そういうことね
+暴れればいいなんて
+わかりやすいじゃない！
+
+# se "SE_5575"
+# alpha 138 0 0.5
+# textflame 0 0
+@
+アルマス達は春姫が逃げ出して
+混乱している兵士達へ向けて
+突撃していく
+
+;;演出：時間経過の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 138 1 0.5
+# waitandnext 0.5
+
+;;演出：攻撃エフェクトなど
+# se "SE_0810"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 1038 "almace_battle_0005"
+@アルマス
+くっ、ずっとは
+戦っていられないわよ！？
+
+# alpha 138 0 0.5
+# move 216 4 0
+# alpha 216 1 0.5
+# move 3603111 2 0
+# alpha 3603111 1 0.5
+# face 216 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@ヘスティア
+近くで隠れてるのかもしれない
+ベル君、叫ぶんだ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9932 "bell_0032"
+@ベル
+！
+わかりました！
+
+# textwindow "close"
+# sestop "SE_0810"
+# alpha 3603111 0 0.5
+# move 216 3 0.5
+# waitandnext 0.5
+
+;;できればトゲトゲフレームで
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 2
+# face 216 "normal"
+@ベル
+春姫さん！
+助けに来ました！
+もう大丈夫です！
+
+# se "SE_6500"
+# emotionbody 1005 1 3104511 10 310
+# effectpattern 1005 1 0
+# effectstart 1005
+# se "SE_0786"
+# alpha 216 0 0.5
+# move 3104511 3 0
+# mask 3104511 off
+# alpha 3104511 1 0.5
+# face 3104511 "angry"
+# textflame 0 0
+# textwindow "nomal"
+@
+ベルの叫びに呼応するかのように
+兵士達のいない茂みからゴソっと
+音がするのを察知するリュー
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@リュー
+ここは私にお任せを！
+
+# textwindow "close"
+# alpha 3104511 0 0.5
+# se "SE_5575"
+# waitandnext 0.5
+
+;;（春姫）セリフのみ
+# serif 1
+# textwindow "nomal"
+@？？？
+わっ、ひゃあ！
+
+# move 3104511 4 0
+# mask 3104511 on
+# alpha 3104511 1 0.5
+# move 3503611 2 0
+# alpha 3503611 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 3503611 "surprise"
+# face 3104511 "normal"
+# voice 310451 "ryu_0031"
+@リュー
+本当はクラネルさんが
+来るべきでしたが、ご容赦を
+
+# serif 0
+# textflame 1 1
+# textboxarrow 0 1
+# voice 350361 "haruhime_0042"
+@春姫
+あ、ありがとうございます…
+
+# alpha 3104511 0 0.5
+# alpha 3503611 0 0.5
+# move 216 4 0
+# alpha 216 1 0.5
+# move 138 2 0
+# mask 138 on
+# alpha 138 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 216 "happy"
+@ベル
+春姫さん！
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+よし、目的は達したわね
+あとはここを切り抜けるだけ！
+
+# alpha 216 0 0.5
+# alpha 138 0 0.5
+# alpha 3503611 1 0.5
+# move 3603111 4 0
+# alpha 3603111 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 3503611 "angry"
+# voice 350361 "haruhime_unit_0010"
+@春姫
+わたくしも戦います…っ！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヘスティア
+戦うと言ってもボクと
+同じで直接の戦闘力は低い
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヘスティア
+だからマスター
+指揮と援護はボク達に任せてくれ
+
+# textflame 0 0
+@
+多勢に無勢、指揮を執るにも
+マスターひとりでは手に余る
+
+# textflame 0 0
+@
+ヘスティアのバックアップは
+頼もしい、とマスターは
+ヘスティアの手助けを受け入れる
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3603111 "normal"
+# voice 360311 "hestia_battle_0004"
+@ヘスティア
+よーし、それじゃあ
+さっさと片付けちゃうよみんな！
+
+# fadein "white" 1
+# se "SE_11909"
+# sedelay "SE_11910" 0.1
+# envbody 1006 8 0
+# effectpattern 1006 1 0
+# effectstart 1006
+# textflame 1 1
+# textboxarrow 0 1
+# face 3503611 "happy"
+# voice 350361 "haruhime_0004"
+@春姫
+大きくなれ、大きくなぁれ…っ！
+
+# textflame 0 0
+@
+春姫の能力により、
+アルマス達の力が大幅に
+強化されていく
+
+# alpha 3503611 0 0.5
+# alpha 3603111 0 0.5
+# move 138 3 0
+# mask 138 off
+# alpha 138 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 138 "surprise"
+# voice 1038 "almace_0041"
+@アルマス
+なにこれ…
+力が絶、湧いてくるんだけど
+
+# se "SE_5205"
+# textflame 1 1
+# textboxarrow 0 2
+# face 138 "angry"
+# voice 1038 "almace_0029"
+@アルマス
+これならいける！
+はああああああ！
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# effectskip 1006
+# alpha 138 0 0
+# background "bg_black"
+# waitandnext 0.2

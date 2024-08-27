@@ -1,0 +1,456 @@
+;;【戦闘後】
+;;【中層階】
+# script "lisp"
+# background "upper_clean_floors"
+# bgmfile "bgm166" "BgmPJZero001" 0
+# body 23
+# pos 23 1
+# scale 23 0.8 0
+# body 1600221
+# pos 1600221 3
+# scale 1600221 0.8 0
+# body 1400131
+# pos 1400131 5
+# scale 1400131 0.8 0
+# alpha 23 0 0
+# alpha 1600221 0 0
+# alpha 1400131 0 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "toge"
+# textboxarrow 1 0
+@男
+やっちまえーっ！
+魔獣がなんだっていうんだ！！
+
+# serif 1
+# textboxarrow 1 0
+@女
+今まで散々虐げられてきた恨み、
+思い知りなさいよーっ！
+
+# serif 1
+# textboxarrow 1 0
+@男
+ぶち壊せぇっ！
+片っ端から奪い取ってやるんだ！
+クソ上層民どもめぇ！！
+
+;;魔獣達に引けを取らない暴徒達
+# alpha 23 1 0.5
+# alpha 1600221 1 0.5
+# alpha 1400131 1 0.5
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 23 "surprise"
+# voice 11002 "laevateinm_0041"
+@ゼロ
+すごい勢いだな
+人間が魔獣どもとやりあってやがる…
+
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 2
+# chara 1600221
+# voice 16002 "gambanteinnm_0017"
+@ガンバンテイン♂
+数にものを言わせて
+押し切っているんだよ
+
+# serif 1
+# voice 16002 "gambanteinnm_0013"
+@ガンバンテイン♂
+はてさて、いつまでもつか
+早く親玉を討った方が良さそうだ
+
+# textboxarrow 0 1
+# chara 23
+# face 23 "angry_2"
+# voice 11002 "laevateinm_0009"
+@ゼロ
+魔獣どもを蹴散らして
+最上階まで駆け上がるぞ！
+
+# serif 1
+# textboxarrow 1 3
+# chara 1400131
+# face 1400131 "surprise"
+# voice 14001 "artemism_0040"
+@アルテミス♂
+なにを言っているんだい
+せっかく彼らが魔獣を
+引きつけてくれているんだ
+
+# serif 1
+# face 1400131 "normal"
+# voice 14001 "artemism_0003"
+@アルテミス♂
+僕達は別ルートで最上階を目指そう
+
+# textboxarrow 0 1
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# chara 23
+# face 23 "angry_1"
+# voice 11002 "laevateinm_0013"
+@ゼロ
+チッ…随分と弱腰の指揮官だな
+アルン！
+ここはマスターが決めるべきだろ！
+
+# select "ゼロの言う通り、正面突破しましょう" "select_label_01" "彼の言う通り、迂回しましょう" "select_label_02" "分かりません…" "select_label_03"
+チッ…随分と弱腰の指揮官だな
+アルン！
+ここはマスターが決めるべきだろ！
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 1
+# face 23 "angry_2"
+# chara 23
+@ゼロ
+そうでないとな！
+俺について来い！
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 1400131
+@アルテミス♂
+やはりマスターは見所があるね
+さあ、行こうか
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 1600221
+# face 1600221 "trouble"
+@ガンバンテイン♂
+やれやれ、困ったマスターだ
+決断できないのなら
+指揮官に従ってもらおう
+
+;;――場面転換――
+# label "select_label_end"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imagerightin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# body 910013
+# pos 910013 5
+# scale 910013 0.8 0
+# alpha 910013 0 0
+# waitandnext 1
+
+# alpha 910013 1 0
+# alpha 1600221 0 0
+# alpha 1400131 0 0
+# mask 23 off
+# face 23 "angry_1"
+# imageleftout 0 0.5
+# serif 1
+# textwindow "toge"
+# textboxarrow 1 3
+# se "SE_0617"
+# chara 910013
+@魔獣
+グルアアアアアアアア！！
+
+# serif 0
+# textwindow "toge"
+# textboxarrow 0 1
+# chara 23
+# face 23 "angry_2"
+# voice 11002 "laevateinm_prolo_0001"
+@ゼロ
+ウオオオオオオオッ！
+
+;;ゼロが魔獣を叩き斬る
+# move 23 3 0.3
+# textboxarrow 0 0
+# textboxarrow 1 0
+# layer 23 2
+# layer 910013 1
+# fadein "red" 1
+# se "SE_9136"
+# waitandnext 1.5
+
+# se "SE_3001"
+# alpha 910013 0 0.6
+# waitandnext 1
+
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 0
+@男
+ヒイイイイイッ…
+殺さないで下さいっ…
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# chara 23
+# face 23 "angry_1"
+# voice 11002 "laevateinm_kyara_1017"
+@ゼロ
+人間かっ…ったく
+魔獣と人間両方いるから戦い難いな
+お前、さっさと逃げた方が良いぞ！
+
+# body 19
+# pos 19 5
+# scale 19 0.8 0
+# alpha 19 0 0
+# serif 1
+# textboxarrow 1 0
+@男
+た、助けてぇっ…
+
+# alpha 19 1 0
+# rightin 19 0.5
+# move 23 1 0.5
+# voice 9991 "arun_0028"
+# serif 1
+# textboxarrow 1 3
+# textboxarrow 0 0
+# face 19 "angry"
+# chara 19
+@アルン
+この辺りに住んでいる人達も
+キリュウさんの部下なんでしょうか？
+
+# textboxarrow 0 1
+# face 23 "angry_2"
+# chara 23
+@ゼロ
+キリュウ…
+悪魔に媚びを売るクソ野郎か！
+
+# face 23 "normal"
+@ゼロ
+さっきの奴も
+少しは痛い目見た方が
+良かったのかもな
+
+# alpha 1600221 1 0.5
+# serif 1
+# textboxarrow 1 2
+# chara 1600221
+# voice 16002 "gambanteinnm_0011"
+# face 1600221 "sad"
+@ガンバンテイン♂
+そう言いなさんな
+…あいつは不器用な男なんだよ
+
+# textboxarrow 0 1
+# chara 23
+# face 23 "angry_1"
+# voice 11002 "laevateinm_kyara_1009"
+@ゼロ
+てめえ、なにか知ってるのか？
+
+# serif 1
+# textboxarrow 1 2
+# chara 1600221
+# voice 16002 "gambanteinnm_0008"
+# face 1600221 "normal"
+@ガンバンテイン♂
+さて、どうだろうねぇ
+
+# serif 1
+# voice 16002 "gambanteinnm_0004"
+@ガンバンテイン♂
+俺が知っているのは
+キリュウとマルガリーテには
+縁があるってことくらいだ
+
+# textboxarrow 0 3
+# chara 19
+# face 19 "normal"
+# voice 9991 "arun_0022"
+@アルン
+マルガリーテ？
+誰ですか、その人
+
+# serif 1
+# textboxarrow 1 1
+# chara 23
+# face 23 "normal"
+# voice 11002 "laevateinm_0032"
+@ゼロ
+ああ。下層階に
+そんな名前の女がいたな
+
+# serif 1
+# face 23 "angry_2"
+# voice 11002 "laevateinm_0013"
+@ゼロ
+だが、キリュウと縁があるなら
+下層にいるはずないだろ
+いい加減なことを抜かすな！
+
+# textboxarrow 0 2
+# chara 1600221
+# voice 16002 "gambanteinnm_0027"
+# face 1600221 "trouble"
+@ガンバンテイン♂
+やれやれ
+坊やには男女の機微は
+早すぎたようだ
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# body 72
+# pos 72 3
+# scale 72 0.8 0
+# mask 72 off
+# alpha 72 0 0
+# body 401311
+# pos 401311 3
+# alpha 401311 0 0
+# serif 1
+# textboxarrow 1 1
+# chara 23
+# face 23 "angry_1"
+# voice 11002 "laevateinm_0010"
+@ゼロ
+なんだと？
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# imagerightout 0 0.5
+# alpha 23 0 0
+# alpha 19 0 0
+# alpha 1600221 0 0
+# serif 1
+# textwindow "toge"
+# textboxarrow 1 0
+@暴徒Ａ
+どけどけぇっ！
+上層階の奴ら、
+皆殺しにしてやらぁっ！
+
+# rightin 72 0.5
+# alpha 72 1 0
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# chara 72
+# face 72 "shout"
+# voice 4013 "aphrodite_0013"
+@マルガリーテ
+皆さん！
+落ち着いて下さいっ
+
+# serif 1
+# textboxarrow 1 0
+@暴徒Ｂ
+邪魔なんだよ、女！
+
+# serif 1
+# textboxarrow 1 0
+@暴徒Ａ
+ここの連中はなぁっ
+散々、甘い汁を啜ってきた
+クソどもなんだ！
+
+# serif 1
+# textboxarrow 1 0
+@暴徒Ａ
+殺されて当然だろうが！！
+
+# serif 0
+# textboxarrow 0 2
+# chara 72
+@マルガリーテ
+それではダメです！
+皆さん、落ち着いて！
+冷静になって下さい！
+
+# move 23 3 0
+# serif 1
+# textboxarrow 1 0
+@暴徒Ａ
+さっきからうるせぇんだよ、女ぁっ！
+てめえもぶっ殺されてえのか！？
+
+# pos 23 2
+# leftin 23 0.5
+# alpha 23 1 0
+# move 72 4 0.5
+# face 72 "sad1"
+# serif 0
+# textboxarrow 0 1
+# chara 23
+# face 23 "angry_2"
+# voice 11002 "laevateinm_0012"
+@ゼロ
+いい加減にしろ
+そいつはただの人間だろうが
+
+# move 19 3 0
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 0
+@暴徒Ｂ
+ひえっ……？
+な、なんだよぉっ…
+これは聖戦なんだからなぁっ…！
+
+# se "SE_0660"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# move 23 1 0.5
+# move 72 5 0.5
+# alpha 19 1 0.5
+# textboxarrow 0 2
+# face 19 "angry"
+# chara 19
+@アルン
+逃げていきましたね…
+大丈夫ですか？
+どうしてこんなところに女性一人で？
+
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 1
+# chara 23
+# face 23 "normal"
+# voice 11002 "laevateinm_0002"
+@ゼロ
+おい、アルン
+その女、さっき話していた
+マルガリーテだ
+
+# serif 1
+# voice 11002 "laevateinm_0022"
+@ゼロ
+本当に、
+なんでこんなところにいる？
+
+# textboxarrow 0 3
+# chara 72
+# face 72 "shout"
+@マルガリーテ
+私は…お願いします！
+私をキリュウのところまで
+連れて行って下さい！

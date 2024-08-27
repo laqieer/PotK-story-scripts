@@ -1,0 +1,480 @@
+;;-----------------------------------------
+;;まどマギイベント2-1
+;;-----------------------------------------
+# script "lisp"
+# bgmfile "bgm348_349" "BgmSeaEventBattle003" 0
+# background "sea_palmbeach_day"
+;;-----------------------------------------
+;;almace
+# body 2103811
+# pos 2103811 3
+# scale 2103811 0.8 0
+# layer 2103811 3
+# mask 2103811 off
+# alpha 2103811 0 0
+;;tini
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 4
+# mask 139 off
+# alpha 139 0 0
+;;madoka
+# body 2401111
+# pos 2401111 3
+# scale 2401111 0.8 0
+# layer 2401111 3
+# mask 2401111 off
+# alpha 2401111 0 0
+;;mami
+# body 2501411
+# pos 2501411 3
+# scale 2501411 0.8 0
+# layer 2501411 3
+# mask 2501411 off
+# alpha 2501411 0 0
+;;kura mini
+# body 805121
+# pos 805121 3
+# scale 805121 0.8 0
+# layer 805121 4
+# mask 805121 off
+# alpha 805121 0 0
+;;enemy
+# body 2811004
+# pos 2811004 3
+# scale 2811004 0.8 0
+# layer 2811004 4
+# mask 2811004 off
+# alpha 2811004 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;背景：海辺
+# fadein "black" 1
+# textwindow "close"
+# waitandnext 1
+
+# move 805121 2 0
+# mask 805121 on
+# alpha 805121 1 0.5
+# move 2401111 4 0
+# mask 2401111 on
+# alpha 2401111 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 2401111 "sad"
+@まどか
+大丈夫だった？
+怪我はない？
+
+# se "SE_0928"
+# textflame 1 1
+# textboxarrow 0 1
+@謎の生物
+キュ～
+
+# alpha 805121 0 0.5
+# alpha 2401111 0 0.5
+# alpha 2103811 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2103811 "usual"
+# voice 1038 "almace_0002"
+@アルマス
+倒したのはいいけど
+よく出没するって言ってたわね
+どういうことなの、まどか？
+
+# move 2103811 4 0.5
+# mask 2103811 on
+# move 2401111 2 0
+# mask 2401111 on
+# alpha 2401111 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 2401111 "sad"
+# voice 4011 "madoka_0003"
+@まどか
+異族のことも海の家で聞いてたけど
+実物を見るのは
+今のが初めてなんだ
+
+# textflame 1 1
+# textboxarrow 0 1
+@まどか
+頻繁に現れて
+住人の人達も迷惑してるみたい
+
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+そこまで強くないけど
+群れてるのが厄介ね
+
+# textflame 0 0
+@
+はぐれたみんなが
+危ないかもしれない…
+と危惧するマスター
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 2401111 "normal"
+@まどか
+うん、わたしもそう思って
+みんなを探そうと海の家を出た
+ところでマスター達と会ったんだ
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1038 "almace_0040"
+@アルマス
+なるほど、そういうこと
+で、異族のことを説明する前に
+本物と遭遇しちゃったって訳ね
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 2401111 "sad"
+# voice 4011 "madoka_0034"
+@まどか
+うん…ごめんね
+もっと早く言っておけばよかったね
+
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+別にまどかは悪くないわ
+それじゃ、早速
+みんなを探しに行くわよ
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 2401111 "angry"
+# voice 4011 "madoka_0003"
+@まどか
+うん
+みんな、危ない目に
+遭ってないといいんだけど…
+
+# textflame 0 0
+@
+みんなを探す
+改めて次の行動が決まったのだが…
+
+# move 805121 3 0
+# alpha 805121 1 0.5
+# waitandnext 0.5
+
+# se "SE_0928"
+# textflame 1 1
+# textboxarrow 0 2
+@謎の生物
+キュィッ！
+
+# textflame 0 0
+@
+謎の生物がぴったりと
+まどかにくっ付いてくる
+
+# emotionbody 1000 1 2401111 10 220
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 2401111 1 0.5
+# move 2103811 5 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 2401111 "sad"
+@まどか
+わ！だめだって
+また外に出たら怖い異族に
+襲われちゃうかもしれないんだよ？
+
+# textflame 1 1
+# textboxarrow 0 2
+@謎の生物
+キュウ…
+
+# se "SE_6504"
+# emotionbody 2000 3 2401111 10 220
+# effectpattern 2000 1 3
+# effectstart 2000
+# textflame 1 1
+# textboxarrow 0 1
+# face 2401111 "happy"
+# voice 4011 "madoka_0005"
+@まどか
+あはは…すっかり懐いちゃって
+海の家に預けていこうにも
+すぐ追いかけて来ちゃうの
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 2103811 "sad"
+@アルマス
+下手に置いていって
+出て来ちゃってまた異族に襲われる
+なんてことがあったら困るからね
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 2103811 "usual"
+# voice 1038 "almace_0002"
+@アルマス
+…ティニは海の家で待ってた方が
+いいんじゃない？
+水着に着替えられなくて暑いでしょ？
+
+# emotionbody 3000 9 139 -10 100
+# effectpattern 3000 6 0
+# effectstart 3000
+# alpha 805121 0 0.5
+# alpha 139 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 139 "worry"
+# voice 9967 "titania_0041"
+@ティターニア
+私は…ついていきますよ
+アルマスは私がいないと…
+ダメなんですから…
+
+# textflame 0 0
+@
+汗を拭いながら
+フラフラと飛ぶティターニアを見て、
+心配するまどか
+
+# effectskip 3000
+# textflame 1 1
+# textboxarrow 0 1
+# face 2401111 "sad"
+# voice 4011 "madoka_0008"
+@まどか
+ほ、本当に暑そうだね
+
+# textflame 0 0
+@
+アルマスの言うことも一理ある
+置いていくのは可哀そうだし、
+連れて行こうとマスターは提案する
+
+# alpha 139 0 0.5
+# alpha 805121 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 2401111 "normal"
+# voice 4011 "madoka_0003"
+@まどか
+そうだね
+それじゃ、連れて行こう
+面倒はちゃんとわたしが見るね
+
+# se "SE_6504"
+# emotionbody 4000 3 805121 10 260
+# effectpattern 4000 1 3
+# effectstart 4000
+# se "SE_0928"
+# textflame 1 1
+# textboxarrow 0 2
+@謎の生物
+キュイ～ッ♪
+
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+そういえばその子、名前は付けたの？
+一緒に行くなら名前がないと
+
+# textflame 1 1
+# textboxarrow 0 1
+@まどか
+名前、そういえば決めてなかったね
+えっと、イカみたいな見た目だから…
+
+# emotionbody 5000 2 2103811 10 290
+# effectpattern 5000 1 1
+# effectstart 5000
+# textflame 1 1
+# textboxarrow 0 3
+# face 2103811 "surprise"
+# voice 1038 "almace_0022"
+@アルマス
+イカ？
+イカって何？
+
+# emotionbody 6000 2 2401111 10 220
+# effectpattern 6000 1 1
+# effectstart 6000
+# textflame 1 1
+# textboxarrow 0 1
+@まどか
+あれ？
+アルマスちゃん
+イカ知らないの？
+
+# emotionbody 7000 11 2103811 -60 280
+# effectpattern 7000 2 0
+# effectstart 7000
+# alpha 805121 0 0.5
+# move 2401111 2 0.5
+# move 2103811 4 0.5
+# bgm "stop"
+# textflame 1 1
+# textboxarrow 0 3
+# face 2103811 "angry"
+@アルマス
+いや、見たことない…
+…ハッ、危ない！？
+
+;;演出：攻撃エフェクト
+# se "SE_12328"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textflame 0 0
+@
+マスター達と
+謎の生物の間に放たれた攻撃に
+アルマスは身構える
+
+;;演出：次のマミ、セリフのみ
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# alpha 2401111 0 0.5
+# alpha 2103811 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textflame 1 1
+# textwindow "nomal"
+;;？？？（マミ）
+@？？？
+みんな、大丈夫！？
+
+;;演出：マミ水着Ver立ち絵表示
+# serif 1
+# textwindow "close"
+# face 2501411 "angry"
+# alpha 2501411 1 0.5
+# waitandnext 0.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+その攻撃を行ったのは他ならぬ
+まどかの仲間であるマミだった
+
+# alpha 2501411 0 0.5
+# alpha 2401111 1 0.5
+# alpha 2103811 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 2401111 "normal"
+# face 2103811 "usual"
+@まどか
+マミさん！
+よかった、無事だったんだね！
+
+# alpha 2401111 0 0.5
+# alpha 2103811 0 0.5
+# alpha 2501411 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2501411 "angry"
+# voice 5014 "mami_battle_0005"
+@マミ
+鹿目さん、はやく離れてこっちに！
+
+# alpha 2501411 0 0.5
+# alpha 2401111 1 0.5
+# alpha 2103811 1 0.5
+# face 2401111 "normal"
+# face 2103811 "usual"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1038 "almace_0028"
+@アルマス
+なんか、水着姿とは
+思えないくらいすごい殺気なんだけど
+
+# textflame 0 0
+@
+アルマスの言う通り
+マミは何かを警戒しているようだ
+
+# textflame 1 1
+# textboxarrow 0 1
+@まどか
+もしかしてこの子のこと…
+
+# textflame 0 0
+@
+恐らくマミは謎の生物のことを
+敵だと勘違いしているようだ
+
+# alpha 2401111 0 0.5
+# alpha 2103811 0 0.5
+# textflame 0 0
+@
+誤解を解こうと
+まどかが話をしようとしたその時…
+
+# alpha 2811004 1 0.5
+# se "SE_0617"
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 0
+@異族
+グギャアアアッ！
+
+# alpha 2811004 0 0.5
+# move 2103811 3 0
+# mask 2103811 off
+# alpha 2103811 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 2103811 "angry"
+# voice 1038 "almace_0035"
+@アルマス
+ちょっとタイミング最悪だっての！
+
+# alpha 2103811 0 0.5
+# alpha 2501411 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2501411 "angry"
+# voice 5014 "mami_0029"
+@マミ
+増援を呼んだのね…
+鹿目さん、マスター達
+すぐに助けるわ！
+
+# alpha 2501411 0 0.5
+# move 2401111 3 0
+# mask 2401111 off
+# alpha 2401111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2401111 "sad"
+# voice 4011 "madoka_0028"
+@まどか
+マミさんの誤解を解かなきゃ…
+この子が呼んだんじゃないよ
+
+# alpha 2401111 0 0.5
+# alpha 2103811 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2103811 "angry"
+# voice 1038 "almace_0011"
+@アルマス
+待って！
+異族を倒すのが先よ！

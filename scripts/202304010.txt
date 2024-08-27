@@ -1,0 +1,1267 @@
+;;-----------------------------------------
+;;SEAイベント不可欠彩度レルム3_1_0
+;;-----------------------------------------
+# script "lisp"
+# background "in_city_collapse"
+# bgm "stop"
+;;-----------------------------------------
+;;パンドラ
+# body 62001111
+# pos 62001111 3
+# scale 62001111 0.8 0
+# layer 62001111 3
+# mask 62001111 off
+# alpha 62001111 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 3
+# scale 6603811 0.8 0
+# layer 6603811 3
+# mask 6603811 off
+# alpha 6603811 0 0
+;;SEAフェイルノート
+# body 6401911
+# pos 6401911 3
+# scale 6401911 0.8 0
+# layer 6401911 3
+# mask 6401911 off
+# alpha 6401911 0 0
+;;SEAダモクレス
+# body 6103521
+# pos 6103521 3
+# scale 6103521 0.8 0
+# layer 6103521 3
+# mask 6103521 off
+# alpha 6103521 0 0
+;;天上編グリダヴォル
+# body 600811
+# pos 600811 3
+# scale 600811 0.8 0
+# layer 600811 3
+# mask 600811 off
+# alpha 600811 0 0
+;;天上編フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.8 0
+# layer 502711 3
+# mask 502711 off
+# alpha 502711 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "e230213_logo_bg"
+# imagealpha 1 0 0
+# imagelayer 1 3
+# imageset 2 "e230213_logo_moji"
+# imagealpha 2 0 0
+# imagelayer 2 4
+;;-----------------------------------------
+;;背景：カコルフェの街
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# textflame 0 0
+# textwindow "nomal"
+@
+不夜城と称される街カコルフェは
+その日、大きな傷を負った
+
+# se "bgm602_rhythm_on"
+# textflame 0 0
+@
+多発する魔獣出没騒ぎに続き
+突如発生した地盤沈下により
+街の象徴、カコルフェタワーが崩落
+
+# se "bgm602_basic_on_1"
+# textflame 0 0
+@
+タワー内の人的被害はキル姫達の
+尽力によってわずかに抑えられたが
+その被害はあまりにも大きかった
+
+# textflame 0 0
+@
+しかし、街の活気は
+衰えるどころか勢いを増し
+誰しもが復興へ邁進していた
+
+;;演出：フェイルノート立ち絵表示
+# alpha 6401911 1 0.3
+# textflame 0 0
+@
+街の内外に出没する魔獣を討伐する者
+
+;;演出：ダモクレスの立ち絵表示
+# alpha 6401911 0 0.3
+# alpha 6103521 1 0.3
+# textflame 0 0
+@
+被災した人々を愛でもって癒す者
+
+;;演出：立ち絵非表示
+# alpha 6103521 0 0.3
+# textflame 0 0
+@
+そういったキル姫達の活躍も
+皆の心を復興へと向かわせる
+
+# textflame 0 0
+@
+だが、多くの者が心の奥底では
+魔獣の存在に対して不安を抱いていた
+
+# textflame 0 0
+@
+地盤沈下も魔獣が街の地下に現れ
+タワーの柱を破壊したことが原因だ
+と調査で判明している
+
+# textflame 0 0
+@
+そんな被害がまたいつ起こるか
+その中での復興に意味はあるのか
+
+;;演出：暗転
+# fadeout "black" 1
+# waitandnext 1
+
+# background "bg_black"
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+@
+すべての原因
+『裏側』の気配はいまだこの街に
+その影を色濃く落とすのだった…
+
+;;演出：暗転
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+;;背景：カコルフェの街
+# background "in_city_collapse"
+# textwindow "close"
+# waitandnext 1
+
+# bgm "bgm003" 0
+# fadein "black" 1.5
+# waitandnext 1.5
+
+# move 62001111 4 0
+# layer 62001111 2
+# alpha 62001111 1 0.3
+# move 6603811 2 0
+# layer 6603811 4
+# mask 6603811 on
+# alpha 6603811 1 0.3
+# voice 660381 "maclir_ura_0028"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@マクリル
+…わかんない
+
+# face 62001111 "sad"
+# voice 6200111 "pandora_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+ここも外れ、ね
+まぁ、いずれは見つかるでしょう
+
+# face 6603811 "usual"
+# voice 660381 "maclir_ura_0031"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+…うん
+あの、ごめんなさい
+
+# face 62001111 "surprise"
+# voice 6200111 "pandora_0022"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+どうして謝るの？
+
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+私が、上手く見つけられないから…
+マナナンだったらもっと早く
+なんとかできたかもしれないのに…
+
+# face 62001111 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+なんとかなるのはいつも最後よ
+その最後が来るのがいつかなんて
+誰にもわからないわ
+
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+…………
+
+# face 6603811 "happy"
+# voice 660381 "maclir_ura_0030"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+…ありがとう、パンドラ
+
+# face 62001111 "happy"
+# voice 6200111 "pandora_0005"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+ふふ、どういたしまして
+
+# textflame 0 0
+@
+パンドラとマクリルは引き続き
+『裏側』の気配の調査をしていたが
+どうにも進展がないようだった
+
+# face 62001111 "surprise"
+# face 6603811 "usual"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@男
+ああ、おふたりとも
+今日も例の調査ですか？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+そんなふたりに声を掛けたのは
+以前カコルフェタワー内で被災した
+人々の中のひとりだった
+
+# voice 6200111 "pandora_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+ええ、あなたは…仕事？
+大変な目に遭ったのに
+もう少しくらい休んだらいいのに
+
+# serif 1
+@男
+いやいや、皆さんのおかげで
+怪我もなくピンピンしてますから
+街の為に働かないと！
+
+# voice 660381 "maclir_ura_0028"
+# serif 0
+# textboxarrow 0 1
+@マクリル
+…でも、無理しないほうがいいよ
+
+# serif 1
+@男
+ダモクレスさんが、
+あれほど頑張ってたからね
+自分も頑張んないとって
+
+# serif 0
+# textboxarrow 0 1
+@マクリル
+…………
+
+# serif 1
+@男
+おっと、この荷物を
+早く届けないといけないんでした
+それじゃ、失礼します！
+
+# face 62001111 "normal"
+# serif 0
+# textboxarrow 0 3
+@パンドラ
+気をつけてね
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+…本当にこの街の人はすごいわね
+
+# voice 660381 "maclir_ura_0003"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+…みんな、前を向いてる
+不安なのに、怖いのに
+それでも先へ進もうとしてる
+
+# voice 6200111 "pandora_0032"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+そうね
+影響し合って、支え合って
+よりよい未来を作ろうとしているわ
+
+# textflame 0 0
+@
+ふたりが声を掛けられるのは
+これが初めてのことではなかった
+
+# textflame 0 0
+@
+タワーでの直接的に救済された者も
+そうなのだが、ふたりが原因を調べ
+街を救ってくれると話題になったのだ
+
+# face 6603811 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+でも…過度な期待は
+過酷な事態を招く…かも
+
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+それも込みでなんとかなるわ
+大変ということは大抵途中ってことだもの
+
+;;もやもやフレーム
+# move 62001111 4 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@パンドラ
+それにしても…
+こう、私を知って声を掛けられる
+なんて久しぶりの感覚ね
+
+# textflame 0 0
+# textwindow "nomal"
+@
+短くはあるがこの街での時間は
+マクリルとパンドラの心境にも
+小さな変化をもたらしつつあった
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@マクリル
+…ちなみに、不安がいっぱいだと
+『裏側』の気配も辿りにくい…
+
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+ああ…ここは人が多いものね
+でも、きっとなんとかなるわよ
+
+# face 6603811 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+…なんとか、なる？
+
+# face 62001111 "surprise"
+# voice 6200111 "pandora_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+なるわ
+…あれ、あの人だかりは何かしら？
+
+# alpha 62001111 0 0.3
+# alpha 6603811 0 0.3
+# textflame 0 0
+@
+パンドラの視線の先には
+笑顔で食事をする人達
+そしてその中心には…
+
+# face 600811 "happy"
+# voice 6008 "guridavoru_0004"
+# alpha 600811 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@グリダヴォル
+あっ！
+そこにいるのは
+街のヒーローじゃないか！
+
+# textflame 0 0
+@
+タワー侵入時にふたりを案内した
+グリダヴォルともうひとり…
+
+# voice 5027 "freischotz_0005"
+# alpha 600811 0 0.3
+# alpha 502711 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@フライシュッツ
+こんにちわ～！
+一緒にごはんたべよ～！
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# textflame 0 0
+@
+陽気なお姉さん…もとい
+キル姫フライシュッツだった
+
+;;暗転
+# bgm "stop"
+# se "SE_0809"
+# frameout 0 0
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 502711 0 0
+# textwindow "close"
+# fadein "white" 3
+# waitandnext 4
+
+# se "SE_0738"
+# imagealpha 2 1 1
+# imagepos 2 0 0
+
+# fadeout "black" 2
+# waitandnext 2
+
+;;背景：カコルフェの街
+# background "in_city_collapse"
+# framein 0 0
+# imagealpha 1 0 0
+# imagealpha 2 0 0
+# waitandnext 1
+
+# bgm "bgm002" 0
+# fadein "black" 2
+# waitandnext 2
+
+# move 502711 2 0
+# layer 502711 4
+# mask 502711 on
+# alpha 502711 1 0.3
+# face 62001111 "surprise"
+# alpha 62001111 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@フライシュッツ
+こんにちわ～！
+一緒にごはんたべよ～！
+
+# voice 6200111 "pandora_0021"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+これは…何かしら！
+皆さん美味しそうなものを
+食べてるわね
+
+# alpha 502711 0 0.3
+# alpha 62001111 0 0.3
+# move 6603811 2 0
+# layer 6603811 2
+# mask 6603811 off
+# alpha 6603811 1 0.3
+# face 6603811 "surprise"
+# move 600811 4 0
+# layer 600811 4
+# mask 600811 on
+# alpha 600811 1 0.3
+# face 600811 "usual"
+# textflame 1 1
+# textboxarrow 0 3
+@グリダヴォル
+炊き出しだよ炊き出し！
+腹が減ってはなんとやらだからね
+
+# voice 660381 "maclir_ura_0022"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+炊き出し…？
+みんなでご飯の…宴会？
+
+# voice 5027 "freischotz_0004"
+# alpha 6603811 0 0.3
+# layer 502711 2
+# mask 502711 off
+# alpha 502711 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@フライシュッツ
+街のみんなが集まると
+どうしてもこうなっちゃうの～
+
+# face 600811 "normal"
+# voice 6008 "guridavoru_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@グリダヴォル
+まぁ、みんな暗い顔してるより
+楽しく食べるほうがいいよね！
+
+# face 600811 "usual"
+# textflame 1 1
+# textboxarrow 0 3
+@グリダヴォル
+ほら、ふたりも…ってあれ？
+パンドラはどこに行ったの？ 
+
+# alpha 502711 0 0.3
+# alpha 600811 0 0.3
+# move 6603811 3 0
+# alpha 6603811 1 0.3
+# face 6603811 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+@マクリル
+？
+さっきまで一緒に…あっ
+
+# textflame 0 0
+@
+辺りを見回すとパンドラは
+いつの間にか炊き出しの列に
+しっかりと並んでいたのだった
+
+# alpha 6603811 0 0.3
+;;演出：セリフのみ
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@パンドラ
+ここに並んでいたら
+ごはんがもらえるのよね…え、何？
+
+# serif 1
+@パンドラ
+前に前に、ってちゃんと順番に…
+そんな、私はマクリルの手伝いを
+していただけだし、そんな…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+炊き出しの物珍しさに
+並んでみたらしいパンドラは
+街の人々によって列の前へ送られた
+
+;;演出：パンドラ立ち絵表示
+# move 6603811 2 0
+# layer 6603811 4
+# mask 6603811 on
+# alpha 6603811 1 0.3
+# move 62001111 5 0
+# serif 0
+# textwindow "close"
+# waitandnext 1
+
+;;サウンドメモ　戻ってくる足音
+# se "SE_0719"
+# move 62001111 4 0.5
+# layer 62001111 2
+# mask 62001111 off
+# alpha 62001111 1 0.5
+# face 62001111 "normal"
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@マクリル
+戻ってきた
+
+# face 62001111 "sad"
+# voice 6200111 "pandora_0028"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+並ばないといけないのに
+皆さんが先に行けって言うのよ
+
+# voice 6008 "guridavoru_0005"
+# alpha 6603811 0 0.3
+# move 600811 2 0
+# layer 600811 4
+# mask 600811 on
+# alpha 600811 1 0.3
+# face 600811 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+それはさっきも言ったけど
+パンドラもヒーローだからね！
+街のみんなの好意、受け取りなって！
+
+# face 62001111 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+…そうね
+
+# face 600811 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+ほら、フライシュッツ
+ふたりによそってあげて！
+…って、どうしたのぼーっとして
+
+# face 502711 "surprise"
+# voice 5027 "freischotz_0024"
+# alpha 62001111 0 0.3
+# alpha 600811 0 0.3
+# move 502711 3 0
+# layer 502711 2
+# mask 502711 off
+# alpha 502711 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@フライシュッツ
+…えっ、あ、ごめんなさい！
+えへへ、えっと、なんだっけ？
+
+# face 600811 "normal"
+# move 502711 4 0.5
+# alpha 600811 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+ふたりにご飯をよそってあげて…
+って、私がやればいっか！
+ほら、器としゃもじ貸して！
+
+# face 502711 "sad"
+# voice 5027 "freischotz_0013"
+# textflame 1 1
+# textboxarrow 0 3
+@フライシュッツ
+あ～それはおねーちゃんの仕事ぉ
+
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+私の仕事でもある！
+それにフライシュッツは
+そろそろ子供達の面倒見る時間でしょ？
+
+# face 502711 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@フライシュッツ
+みんなのお勉強終わるまで
+もう少しあるよ～？
+
+# face 600811 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+ま、いいじゃないか
+…と、そう言ってるうちに、ほら
+
+# face 6603811 "shy"
+# voice 660381 "maclir_ura_0030"
+# alpha 502711 0 0.3
+# alpha 600811 0 0.3
+# move 62001111 4 0
+# layer 62001111 2
+# mask 62001111 off
+# alpha 62001111 1 0.3
+# face 62001111 "happy"
+# move 6603811 2 0
+# layer 6603811 4
+# mask 6603811 on
+# alpha 6603811 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+あ、ありがと…
+
+# voice 6200111 "pandora_0004"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+これが炊き出しのごはん…
+
+# face 600811 "normal"
+# alpha 62001111 0 0.3
+# alpha 6603811 0 0.3
+# face 502711 "sad"
+# alpha 502711 1 0.3
+# alpha 600811 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+いっぱい食べてね！
+
+# textflame 1 1
+# textboxarrow 0 3
+@フライシュッツ
+あーん、おねーちゃんの仕事がぁ
+
+# face 600811 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+フライシュッツの分もよそったよ
+
+# voice 5027 "freischotz_0015"
+# textflame 1 1
+# textboxarrow 0 3
+@フライシュッツ
+うぅ…いただきます
+
+# alpha 600811 0 0.3
+# layer 6603811 4
+# mask 6603811 on
+# alpha 6603811 1 0.3
+# face 6603811 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+…そこは食べるんだね
+
+# textflame 1 1
+# textboxarrow 0 3
+@フライシュッツ
+折角よそってくれたんだもん
+
+# voice 6200111 "pandora_0030"
+# alpha 502711 0 0.3
+# layer 62001111 4
+# mask 62001111 on
+# alpha 62001111 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+おいしいわ
+ありがとう、グリダヴォル
+それに…フライシュッツも
+
+# face 600811 "happy"
+# voice 6008 "guridavoru_0003"
+# alpha 6603811 0 0.3
+# layer 600811 2
+# mask 600811 off
+# alpha 600811 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+それにしてもふたりは本当に
+よくやってくれたよ！
+
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+地盤沈下も結局魔獣のせいで
+『裏側』の影響があったら
+もっと被害が広がってたんでしょ？
+
+# face 62001111 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+皆さんにも言っているんだけど
+頑張ってくれたのはマクリル
+私はその付き添いみたいなもの
+
+# voice 660381 "maclir_ura_0028"
+# alpha 6603811 1 0.3
+# alpha 600811 0 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+私は『裏側』を感じられるだけで…
+でも、それでみんながよかったって
+言ってくれるなら、よかったのかな…
+
+# face 6603811 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+…ううん
+やっぱり、みんながいたから
+
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+…そうね、フェイルノートや
+ダモクレス、この街を救おうと
+頑張るキル姫達がいたおかげね
+
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+グリダヴォルも…
+私達のこと、案内してくれた…
+
+# face 62001111 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+こうしておいしいごはんも
+用意してくれているわ
+
+# textflame 0 0
+@
+マクリルとパンドラは
+お互いを見やる
+
+# textflame 0 0
+@
+はじめはぎこちなかったふたりも
+いつしか信頼し合える仲に
+なっていたようだった
+
+# face 600811 "shy"
+# voice 6008 "guridavoru_0042"
+# alpha 62001111 0 0.3
+# alpha 6603811 0 0.3
+# alpha 502711 1 0.3
+# layer 600811 4
+# mask 600811 on
+# alpha 600811 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+よ、よしてよそんな！
+急に褒められると照れるって…
+
+# textflame 1 1
+# textboxarrow 0 3
+@フライシュッツ
+…………
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 2
+# face 600811 "usual"
+# voice 6008 "guridavoru_0031"
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+あ、こっちだけ
+盛り上がってごめんね！
+
+# face 502711 "surprise"
+# voice 5027 "freischotz_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@フライシュッツ
+え、あ、いいのいいの
+おねーちゃんは楽しそうに
+話してるみんな見てるだけで十分！
+
+# face 6603811 "usual"
+# alpha 62001111 1 0.3
+# face 62001111 "normal"
+# alpha 6603811 1 0.3
+# alpha 502711 0 0.3
+# alpha 600811 0 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+…………
+
+# face 62001111 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+マクリル？
+
+# voice 660381 "maclir_ura_0002"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+あ、ううん…
+フライシュッツってフライシュッツ？
+
+# alpha 62001111 0 0.3
+# layer 502711 4
+# mask 502711 on
+# alpha 502711 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@フライシュッツ
+？
+
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+# textflame 1 1
+# textboxarrow 0 3
+@フライシュッツ
+ああ！
+マクリルちゃんってあの時の！
+
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+う、うん
+マナナンもミーミルもマスターも元気
+今は別々に裏側を調べてるところ…
+
+# face 502711 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@フライシュッツ
+そうかぁ…『裏側』って、そうかぁ
+
+# voice 6200111 "pandora_0022"
+# alpha 62001111 1 0.3
+# alpha 502711 0 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+知り合いなの？
+
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+…知り合ってはいないけれど
+見合ったことはあると思う
+でも、別のお話の出来事
+
+# alpha 6603811 0 0.3
+# alpha 600811 1 0.3
+# face 600811 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+なんだ！
+会ったことがあるなら話は早いね！
+
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+何かあるのかしら？
+
+# face 600811 "sad"
+# voice 6008 "guridavoru_0028"
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+そうなんだよ
+フライシュッツのことで
+ちょっと心配事があってさぁ…
+
+# alpha 62001111 0 0.3
+# alpha 502711 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@フライシュッツ
+お、おねーちゃんは
+何も心配することないよ～？
+
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+…って本人は言うんだけど
+さっきみたいに話の輪に入らず
+ぼーっと見てることが多くてさ
+
+# face 600811 "amazed"
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+復興に忙しい大人達に代わって
+子供達の面倒見てくれるのは
+助かってるんだけど…
+
+# face 600811 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+その子供達を相手にしてる時も
+どこか距離を取ってる感じでさ
+それが私は心配なんだよねぇ…
+
+# voice 5027 "freischotz_0028"
+# textflame 1 1
+# textboxarrow 0 3
+@フライシュッツ
+そ、そんなことは…
+うぅん、そう見える？
+
+# face 600811 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+悩みがあるなら話してみたほうが
+楽になるって絶対！ね！
+
+# textflame 1 1
+# textboxarrow 0 3
+@フライシュッツ
+え～ん…
+やさしさに泣いちゃいそう…
+
+# face 6603811 "normal"
+# alpha 62001111 1 0.3
+# face 62001111 "normal"
+# alpha 6603811 1 0.3
+# alpha 600811 0 0.3
+# alpha 502711 0 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+…………あ
+
+# voice 6200111 "pandora_0039"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+…なるほど、理解したわ
+
+# textflame 0 0
+@
+何かに勘付いた様子の
+マクリルに気付くパンドラは
+小声で確認を取る
+
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+『裏側』の気配かしら
+
+# face 6603811 "usual"
+# voice 660381 "maclir_ura_0028"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+ううん、まだわかんない
+けど…もしかしたら
+
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+これだけ多くの人の感情が
+ある場所は特定が難しいんだったわね
+
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+けど…フライシュッツも
+何かしらの思いを抱えているのは
+きっと間違いないわ
+
+# voice 6200111 "pandora_0004"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+…よし、いいことを思い付いたわ
+ここは私に任せて
+
+# face 6603811 "surprise"
+# voice 660381 "maclir_ura_0022"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+いいこと…？
+
+# voice 6008 "guridavoru_0002"
+# alpha 62001111 0 0.3
+# alpha 6603811 0 0.3
+# move 600811 3 0
+# mask 600811 off
+# alpha 600811 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@グリダヴォル
+どうしたの？
+急にこそこそ話なんかしちゃって
+
+# alpha 62001111 1 0.3
+# alpha 6603811 1 0.3
+# alpha 600811 0 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+この世界で唯一
+私のことを知っていた子の悩みも
+解消できる妙案を思いついたのよ
+
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+…？？？
+
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+まだ炊き出しの最中だし
+ふたりとはまた後日別の場所で
+話をさせてもらえないかしら？
+
+# face 62001111 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+たとえば…
+そうね、ランチでもしながら
+
+# voice 6008 "guridavoru_0021"
+# alpha 62001111 0 0.3
+# alpha 6603811 0 0.3
+# move 600811 2 0
+# layer 600811 2
+# mask 600811 off
+# alpha 600811 1 0.3
+# move 502711 4 0
+# layer 502711 4
+# mask 502711 on
+# alpha 502711 1 0.3
+# face 600811 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+ランチ！
+いいねいいね！
+フライシュッツもいいよね！
+
+# voice 5027 "freischotz_0028"
+# textflame 1 1
+# textboxarrow 0 3
+@フライシュッツ
+えぇと…ふたりは調査もあるから
+おねーちゃんに時間をもらうのは
+申し訳ないかな～なんて…
+
+# voice 6200111 "pandora_0034"
+# alpha 600811 0 0.3
+# alpha 502711 0 0.3
+# move 62001111 3 0
+# mask 62001111 off
+# alpha 62001111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@パンドラ
+気にしないで
+それに、これも調査の一環だと
+思ってくれていいわ、それに…
+
+# face 502711 "surprise"
+# alpha 62001111 0 0.3
+# move 502711 3 0
+# mask 502711 off
+# alpha 502711 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@フライシュッツ
+それに？
+
+# alpha 502711 0 0.3
+# move 62001111 4 0
+# mask 62001111 on
+# alpha 62001111 1 0.3
+# face 6603811 "normal"
+# alpha 6603811 1 0.3
+# face 62001111 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+この街を去る前に友達と食事や
+お茶をする予定のあるマクリルの
+予行演習と思って付き合ってほしいの
+
+# face 6603811 "angry"
+# voice 660381 "maclir_ura_0023"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+…！
+ぱ、パンドラ…
+
+# face 62001111 "happy"
+# voice 6200111 "pandora_0005"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+ふふっ…
+ミーミルにマクリルのことも
+託されていたの、忘れていないわよ
+
+# face 6603811 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+…忘れてた？
+
+# face 62001111 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@パンドラ
+…忘れてないわ
+思いつくタイミングがなかっただけよ
+
+# alpha 62001111 0 0.3
+# alpha 6603811 0 0.3
+# move 502711 4 0
+# layer 502711 4
+# mask 502711 on
+# alpha 502711 1 0.3
+# face 502711 "normal"
+# alpha 600811 1 0.3
+# face 600811 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@フライシュッツ
+マクリルちゃんの…うん！
+それなら、おねーちゃんも喜んで！
+
+# textflame 1 1
+# textboxarrow 0 1
+@グリダヴォル
+お、それじゃあ
+とびっきりの店を予約しなきゃね！
+
+# face 62001111 "happy"
+# voice 6200111 "pandora_0030"
+# alpha 502711 0 0.3
+# alpha 600811 0 0.3
+# move 62001111 3 0
+# mask 62001111 off
+# alpha 62001111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@パンドラ
+ふふ、ありがとうフライシュッツ
+グリダヴォルもね
+
+# textflame 1 1
+# textboxarrow 0 2
+@パンドラ
+…ほら、上手くいったわ
+
+# textflame 0 0
+@
+心配そうなマクリルをよそに
+見事なドヤ顔を披露する
+パンドラであった…
+
+# fadeout "black" 2
+# waitandnext 2

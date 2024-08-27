@@ -1,0 +1,698 @@
+;;----------------------------------------------
+;;100212021
+;;第2-2話戦闘前　タイトル：イノセント・ヒーラー
+;;----------------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "bgm103" 0
+;;ムー
+# body 161
+# pos 161 2
+# scale 161 0.6 0
+# layer 161 3
+# mask 161 on
+# alpha 161 0 0
+;;レーヴァ
+# body 3100211
+# pos 3100211 1
+# scale 3100211 0.8 0
+# layer 3100211 1
+# mask 3100211 on
+# alpha 3100211 0 0
+;;ヘレナ
+# body 3302811
+# pos 3302811 4
+# scale 3302811 0.8 0
+# layer 3302811 2
+# mask 3302811 on
+# alpha 3302811 0 0
+;;ニール
+# body 162
+# pos 162 5
+# scale 162 0.6 0
+# layer 162 3
+# mask 162 on
+# alpha 162 0 0
+;;ティル（これだけスケール1.0）
+# body 101415
+# pos 101415 3
+# scale 101415 1.0 0
+# layer 101415 3
+# mask 101415 off
+# alpha 101415 0 0
+;;リットゥ（ファントム１）
+# body 100531
+# pos 100531 3
+# scale 100531 0.8 0
+# alpha 100531 0 0
+;;グングニル（ファントム２）
+# body 300821
+# pos 300821 1
+# scale 300821 0.8 0
+# alpha 300821 0 0
+;;ウコンバサラ（ファントム３）
+# body 201011
+# pos 201011 5
+# scale 201011 0.8 0
+# alpha 201011 0 0
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;黒バック
+# imageset 1 "bg_black"
+# imagepos 1 0 0
+# imagelayer 1 1
+# imageleftin 1 0
+# imagealpha 1 0 0
+;;白バッグ
+# imageset 2 "bg_white_circle"
+# imageset 3 "bg_white_circle"
+# imageset 4 "bg_white_circle"
+# imagealpha 2 0 0
+# imagealpha 3 0 0
+# imagealpha 4 0 0
+# textwindow "close"
+# waitandnext 0.1
+
+;;◆背景：ティルフィング（ヘレナ編ステージ８と同じ見せ方）
+# fadeout "white" 0.1
+# waitandnext 0.6
+
+# imagescale 2 1.2 0
+# imagepos 2 0 980
+# imagescale 3 1.2 0
+# imagepos 3 0 -350
+# imagescale 4 1.2 0
+# imagepos 4 0 -350
+# imagealpha 2 1 0
+# imagealpha 3 1 0
+# imagealpha 4 1 0
+# alpha 101415 1 0
+# subfillrect 1 "white" 0 0 0.8
+# background "bg_white"
+# waitandnext 0.6
+
+# fadein "white" 1.0
+# waitandnext 1.3
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 0
+# voice 3028 "herena_a_0004"
+# chara 3302811
+@ヘレナ
+ふうん…
+彼女がティルフィングか
+
+# textflame 1 1
+# textboxarrow 0 0
+# chara 3302811
+@ヘレナ
+レーヴァテインの
+意中の人ってわけだ
+
+# textflame 1 1
+# textboxarrow 0 0
+# chara 3302811
+@ヘレナ
+…くふっ
+
+# textflame 1 1
+# textboxarrow 0 0
+# voice 9952 "nir_0039"
+# chara 162
+@ニール
+眠っているというより
+封印されてると言った方が正しそうね
+
+;;◆背景：洞窟
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# alpha 101415 0 0
+# imagealpha 2 0 0
+# imagealpha 3 0 0
+# imagealpha 4 0 0
+# alpha 3302811 1 0
+# alpha 3100211 1 0
+# alpha 162 1 0
+# alpha 161 1 0
+# face 3302811 "usual"
+# subfillrect 1 "white" 0 0.8 0
+# background "101_cave"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.8
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 3028 "herena_a_0002"
+# chara 3302811
+@ヘレナ
+今はまだ起こせないって言ってたけど
+眠り姫は王子様のキスで
+目覚めるんじゃなかったかな？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0004"
+# chara 161
+@ムー
+王子様のキス…
+俺の出番か！？
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 161
+@ムー
+仕方ねぇなあ
+別にやましい気持ちなんてなんも―
+
+# move 3100211 2 0.3
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "angry"
+# voice 310021 "revatein_ge_0085"
+# chara 3100211
+@レーヴァテイン
+黙って
+
+;;ムギュ
+# se "SE_0694"
+# shake 0 0.3
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0025"
+# chara 161
+@ムー
+ムギュギュギュギュッ…
+お茶目なジョークだって…
+
+# textwindow "close"
+# move 3100211 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "normal"
+# voice 310021 "revatein_ge_0027"
+# chara 3100211
+@レーヴァテイン
+無駄口叩いてないで…
+隠し場所を考えて
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9952 "nir_0028"
+# chara 162
+@ニール
+そう言われても、
+ここに長いこと隠されていて
+誰にも見つからなかったんでしょ？
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 162
+@ニール
+わざわざ動かさなくても、
+ここが一番安全なんじゃないの？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0007"
+# chara 161
+@ムー
+そうとは限らねぇぜ
+今はまだどこも本気で探してねぇから
+見つかってなかっただけで
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 161
+@ムー
+こんなところ
+大軍で虱潰しに探せば
+あっけなく見つかるだろ
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 161
+@ムー
+そんとき、守るのに
+適した場所じゃねぇってことが
+レヴァの一番の心配なんだよ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "surprise"
+# voice 3028 "herena_a_0028"
+# chara 3302811
+@ヘレナ
+なるほど
+でも、ヘレナの考えだとここの結界は
+かなり強力だ
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3302811
+@ヘレナ
+出入り口は誰かが何度も
+通り過ぎた影響で踏み固められてる
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "usual"
+# chara 3302811
+@ヘレナ
+レーヴァテインもヘレナも
+簡単に入れたけれど、
+それは特殊なんだ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "normal"
+# voice 3028 "herena_a_0020"
+# chara 3302811
+@ヘレナ
+ちょっと外に出るよ
+
+;;◆背景：大穴付近
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# background "101_plain_daytime"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0027"
+# chara 161
+@ムー
+ここでなにをするってんだ？
+っと、レヴァ！
+またファントムだ
+
+;;ファントム見せ
+# textwindow "close"
+# alpha 161 0 0.5
+# alpha 162 0 0.5
+# alpha 3100211 0 0.5
+# alpha 3302811 0 0.5
+# waitandnext 0.5
+
+# alpha 201011 1 0.5
+# alpha 300821 1 0.5
+# alpha 100531 1 0.5
+# waitandnext 1.2
+
+# alpha 201011 0 0.5
+# alpha 300821 0 0.5
+# alpha 100531 0 0.5
+# waitandnext 0.5
+
+# pos 161 2
+# pos 162 5
+# pos 3100211 1
+# pos 3302811 4
+# alpha 161 1 0.3
+# alpha 162 1 0.3
+# alpha 3100211 1 0.3
+# alpha 3302811 1 0.3
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "angry"
+# voice 310021 "revatein_ge_0014"
+# chara 3100211
+@レーヴァテイン
+ここには近づけさせない…！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "usual"
+# voice 3028 "herena_a_0027"
+# chara 3302811
+@ヘレナ
+その心配はない
+少し離れて様子を見ていれば
+きっと分かるよ
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0022"
+# chara 161
+@ムー
+なにっ？ヘレナ…
+そりゃどういう意味だ！？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9952 "nir_0011"
+# chara 162
+@ニール
+だから見てれば分かるって
+言ったでしょ
+ムーはせっかちね！
+
+;;ファントムが通り過ぎる
+# textwindow "close"
+# alpha 161 0 0.5
+# alpha 162 0 0.5
+# alpha 3302811 0 0.5
+# alpha 3100211 0 0.5
+# waitandnext 0.5
+
+# alpha 201011 1 0.5
+# alpha 300821 1 0.5
+# alpha 100531 1 0.5
+# waitandnext 1.0
+
+# se "SE_0719"
+# leftout 201011 1.2
+# leftout 100531 1
+# leftout 300821 0.8
+# waitandnext 0.8
+
+# alpha 201011 0 0
+# alpha 100531 0 0
+# alpha 300821 0 0
+# alpha 161 1 0.5
+# alpha 162 1 0.5
+# alpha 3302811 1 0.5
+# alpha 3100211 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# face 3100211 "surprise"
+# face 3302811 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0039"
+# chara 161
+@ムー
+出入り口を通りすぎたぜ！
+…単に気づかなかっただけじゃ
+ねえのか？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "normal"
+# voice 3028 "herena_a_0004"
+# chara 3302811
+@ヘレナ
+ふふっ…そうだよ
+ヘレナはあれに似てる結界を知ってる
+ティルヘルムの端にある幻想結界
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3302811
+@ヘレナ
+トレイセーマの誰かが張ったっていう
+存在自体を認識できなくさせる結界だ
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9952 "nir_0032"
+# chara 162
+@ニール
+つまり、さっきのファントムは
+あそこに洞窟の出入り口があることを
+認識できなかったのね
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "usual"
+# chara 3302811
+@ヘレナ
+ねえ、レーヴァテイン
+今、焦って動かすより先に
+ヘレナ達の拠点を作った方が良いな
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3302811
+@ヘレナ
+今のところ、あの結界よりも
+強い結界をレーヴァテインは
+張れないだろう？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "sad"
+# voice 310021 "revatein_ge_0032"
+# chara 3100211
+@レーヴァテイン
+…そうね
+はぁ…おっけ
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 161
+@ムー
+ティルフィングはひとまずあそこに
+置いたままってことか？
+なら、せめて出入り口を隠そうぜ
+
+# textflame 1 1
+# voice 9953 "mwu_0002"
+# textboxarrow 0 1
+# chara 161
+@ムー
+俺様が大岩か
+なにかを持ってきてやんよ！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "normal"
+# voice 310021 "revatein_ge_0004"
+# chara 3100211
+@レーヴァテイン
+任せよっかな…
+ムー、お願い
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9953 "mwu_0003"
+# chara 161
+@ムー
+よっしゃ！
+任せとけーっ！
+
+;;ムーが飛び去る
+# textwindow "close"
+# se "SE_4747"
+# alpha 161 0 0.5
+# waitandnext 0.8
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310021 "revatein_ge_0028"
+# chara 3100211
+@レーヴァテイン
+拠点探し…めんどくさい…
+どこがいいと思う？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "usual"
+# voice 3028 "herena_a_0013"
+# chara 3302811
+@ヘレナ
+それはレーヴァテイン次第だろ
+なんでもかんでも…
+あ、そうだ
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3302811
+@ヘレナ
+レーヴァテインは長いから、
+これからはレーヴァと呼ぶことにする
+ヘレナの親愛の証だよ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "normal"
+# voice 3028 "herena_a_0020"
+# chara 3302811
+@ヘレナ
+…くふっ
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "sad"
+# voice 310021 "revatein_ge_0013"
+# chara 3100211
+@レーヴァテイン
+…好きにして
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "usual"
+# voice 3028 "herena_a_0005"
+# chara 3302811
+@ヘレナ
+じゃあ、レーヴァ
+拠点をどこにするかは
+リーダーが決めることだ
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3302811
+@ヘレナ
+ヘレナはこれ以上、口出ししないよ
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "normal"
+# voice 310021 "revatein_ge_0027"
+# chara 3100211
+@レーヴァテイン
+はぁ…おっけ
+拠点になりそうなところを探すわ…
+めんどくさいけど…
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9952 "nir_0002"
+# chara 162
+@ニール
+できればケイオスリオンから
+出たいわよね！
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 162
+@ニール
+あの変態伯爵が追っ手を
+寄越すかもしれないもの
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "normal"
+# voice 3028 "herena_a_0028"
+# chara 3302811
+@ヘレナ
+ヘレナは気にしないな
+誰が来ても返り討ちにできるから
+
+;;ムー帰還
+# textwindow "close"
+# alpha 162 0 0.5
+# alpha 3302811 0 0.5
+# alpha 3100211 0 0.5
+# alpha 162 0 0.5
+# waitandnext 0.5
+
+# pos 161 3
+# mask 161 off
+# alpha 161 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9953 "mwu_0004"
+# chara 161
+@ムー
+ばっちり出入り口を隠してきたぜ！
+これでひとまず大丈夫だっ
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 161
+@ムー
+お？
+なんの話してたんだ？
+
+# textwindow "close"
+# move 161 4 0.5
+# pos 3100211 3
+# mask 3100211 off
+# alpha 3100211 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100211 "normal"
+# voice 310021 "revatein_ge_0003"
+# chara 3100211
+@レーヴァテイン
+…ハルモニアに向かうわ
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0023"
+# chara 161
+@ムー
+レヴァ！？
+急にどうしたっ？
+なんでハルモニアなんだ！？
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100211 "angry"
+# chara 3100211
+@レーヴァテイン
+拠点に相応しい場所を探す…
+そのためにも一旦、
+全ての国を見る必要があるから
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0005"
+# chara 161
+@ムー
+おっほぉ～！
+随分としっかりした返答じゃねえか！
+やっぱ仲間ができたお陰で――
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100211 "normal"
+# voice 310021 "revatein_ge_0085"
+# chara 3100211
+@レーヴァテイン
+黙って
+行くわよ…
+
+;;レヴァとムー退場
+# se "SE_0719"
+# textwindow "close"
+# leftout 3100211 0.7
+# leftout 161 0.8
+# waitandnext 0.8
+
+# mask 3302811 off
+# pos 3302811 3
+# alpha 3302811 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3028 "herena_a_0004"
+# chara 3302811
+@ヘレナ
+ふふっ…
+楽しくなりそうだな

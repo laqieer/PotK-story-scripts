@@ -1,0 +1,488 @@
+;;モラルタ_EP2
+;;//背景：収容所
+# script "lisp"
+# background "red_corridor"
+# bgm "bgm004" 0
+;;異族
+# body 810004
+# pos 810004 5
+# scale 810004 0.8 0
+# alpha 810004 0 0
+# layer 810004 5
+;;悪魔
+# body 910013
+# pos 910013 4
+# scale 910013 0.8 0
+# alpha 910013 0 0
+# layer 910013 4
+;;幻獣
+# body 900016
+# pos 900016 4
+# scale 900016 0.8 0
+# alpha 900016 0 0
+# layer 900016 3
+;;モラルタ
+# body 3104011
+# pos 3104011 3
+# scale 3104011 0.8 0
+# alpha 3104011 0 0
+# face 3104011 "sad"
+# layer 3104011 2
+;;ベガルタ
+# body 3104111
+# pos 3104111 1
+# scale 3104111 0.8 0
+# alpha 3104111 0 0
+# face 3104111 "sad"
+# layer 3104111 1
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@研究員
+よし、
+そこのお前とお前
+出番だ
+
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 0
+@男
+ま、待ってくれ…！
+俺はまだ死にたくないっ
+誰か別の奴にっ…
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@研究員
+崇高な目的の礎となれるんだ
+喜んでその身を捧げろ
+
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 0
+@男
+イヤだあああああっ…！
+
+;;//研究員達が男を引きずって連れていく
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1.5
+
+# alpha 3104011 1 0.5
+# serif 0
+# move 3104011 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+# chara 3104011
+@モラ
+あれから何日経ったのかな…
+
+# serif 0
+# move 3104011 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+# chara 3104011
+@モラ
+ここでの生活は外よりも快適だ
+毎日、ご飯を食べられるし、
+化け物に怯えることもない
+
+# serif 0
+# move 3104011 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+# chara 3104011
+@モラ
+それでも、怖い…
+毎日、怖くて怖くて仕方ない…
+
+# serif 0
+# move 3104011 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+# chara 3104011
+@モラ
+あの白衣を着た男達は毎日、
+数人の人を部屋から
+連れ出していく
+
+# serif 0
+# move 3104011 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+# chara 3104011
+@モラ
+そして、誰一人帰ってこなかった…
+実験ってなんなの…？
+私達は、どうなってしまうの…？
+
+;;//モラルタにベガルタがくっついている
+# se "SE_0675"
+# serif 0
+# textwindow "close"
+# alpha 3104111 1 0.5
+# waitandnext 1
+
+# serif 0
+# move 3104011 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+# chara 3104011
+@モラ
+妹はよく泣いている
+こんなところは嫌だって…
+怖くて仕方ないって…
+
+# serif 0
+# move 3104011 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+# chara 3104011
+@モラ
+私も同じだ…
+でも、お姉ちゃんだから
+泣くわけにはいかない
+
+# serif 0
+# move 3104011 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+# chara 3104011
+@モラ
+お父さん…お母さん…
+怖いよ…助けてよ…
+
+;;//暗転挟む
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# serif 0
+# textwindow "close"
+# layer 3104011 1
+# layer 3104111 2
+# move 3104011 4 0
+# move 3104111 2 0
+# face 3104111 "sad"
+# waitandnext 0.6
+
+# fadein "black" 1
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@所長
+よし、今日はそこのお前と…
+それから、そこの娘…
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@所長
+なんだ双子か？
+ならどちらか一方だ
+
+# face 3104111 "usual"
+# face 3104011 "angry"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+！！
+
+# face 3104011 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+大丈夫…
+大丈夫だからね
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+それなら私が行く！
+
+# face 3104111 "sad"
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@所長
+威勢が良いな
+よし、そいつを連れていけ
+
+# sedelay "SE_0675" 0.3
+# face 3104111 "usual"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# move 3104111 3 0.3
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+ダメーーーっ！
+
+# face 3104011 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+こ、コラッ
+しがみつかないで…
+歩けないからっ
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+お姉ちゃん、行かないでっ…
+一緒じゃなきゃヤだよ…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+そんなこと言っても…
+
+# face 3104011 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+大丈夫だよ、
+私は必ず戻ってくるから
+ここで待っていて
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+そんなの信じられないよっ…！
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+今までここを出ていって
+帰ってきた人なんて
+いないじゃない！
+
+# face 3104011 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+それはっ…
+でも、私は必ず戻ってくるから…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104111
+@ベガ
+ダメ！放しちゃダメなのっ…
+手を放したらお姉ちゃんも
+いなくなっちゃう…
+
+# face 3104111 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+…………
+
+# serif 1
+# textboxarrow 1 0
+@所長
+やれやれ面倒だな
+よし、予定変更だ
+そこの双子を二人とも使うぞ
+
+# serif 1
+# textboxarrow 1 0
+@研究員
+二人ともですか？
+しかし実験用の素材が…
+
+# serif 1
+# textboxarrow 1 0
+@所長
+先日発見されたアレがあるだろう
+一人では上手くいかなかったが
+二人ならあるいは
+
+# serif 1
+# textboxarrow 1 0
+@研究員
+なるほど、あの妙なキラーズを…
+試す価値はありそうですね
+
+# face 3104011 "angry"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+なんなの…？
+実験するなら私一人だけにしてよ！
+妹に手を出さないでっ
+
+# serif 1
+# textboxarrow 1 0
+@所長
+黙れ！
+
+# serif 1
+# textboxarrow 1 0
+@所長
+その妹がお前から
+離れないからこっちが譲歩して
+やったんだろうが！
+
+# serif 1
+# textboxarrow 1 0
+@所長
+せいぜい良い実験データになれよ
+
+# face 3104111 "sad"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+やめてよ！
+妹に変なことしないでっ…！
+
+;;//背景：実験室
+;;//警告アラーム
+;;//赤フラッシュ点滅
+# bgm "stop"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# face 3104011 "sad"
+# move 3104111 2 0
+# waitandnext 0.6
+
+# fadein "black" 1
+# waitandnext 1.5
+
+# se "SE_0710"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fadeout "red" 0.5
+# waitandnext 0.5
+
+# fadein "red" 0.5
+# waitandnext 0.5
+
+# waitandnext 0.3
+
+# fadeout "red" 0.5
+# waitandnext 0.5
+
+# fadein "red" 0.5
+# waitandnext 0.5
+
+# waitandnext 0.3
+
+# face 3104111 "surprise"
+# face 3104011 "surprise"
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@所長
+なんだ！？
+なにがどうなっている！？
+
+# serif 1
+# textboxarrow 1 0
+@研究員
+分かりません！急にキラーズが…
+あああああ！？変質しているっ？
+まさか、こんなことって…
+
+# face 3104011 "sad"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+なにが起きているの？
+白衣の人達が
+慌てているみたいだけど
+
+# face 3104111 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+怖いよ、お姉ちゃん…
+
+# face 3104011 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+大丈夫よ、
+私がずっと側にいるからね
+
+;;//制御不能になったキラーズ（と思われていた物質）が暴走する
+;;//ガラスが割れる音
+;;//激突音
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# se "SE_9063"
+# sedelay "SE_4602" 0.5
+# fadein "red" 0.5
+# shake 0 0.5
+# face 3104111 "sad"
+# face 3104011 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+あぐぅっ…！？
+胸に…なにかが…
+うえええ…気持ち悪いっ…
+
+# face 3104111 "usual"
+# face 3104011 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+なんなの！？
+なんなのよ、これぇっ…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+体の中を…
+虫が這い回ってるみたい！
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+嫌！嫌ああああああああ！！
+

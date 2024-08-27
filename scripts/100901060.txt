@@ -1,0 +1,344 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー9章
+;;【第1話　タイトル：悪魔の契約】
+;;1_6_10
+;;スクリプト最後の背景：ビフレスト
+;;-----------------------------------------
+# script "lisp"
+# background "bifrost"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス
+# body 138
+# pos 138 3
+# scale 138 0.8 0
+# layer 138 4
+# alpha 138 0 0
+# mask 138 off
+;;アルマス（ジョブチェンジ後）
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# layer 172 2
+# alpha 172 0 0
+# mask 172 off
+;;フェイルノート
+# body 167
+# pos 167 3
+# scale 167 0.8 0
+# layer 167 3
+# alpha 167 0 0
+# mask 167 off
+;;フェイルノート（ギアハック後）
+# body 3401911
+# pos 3401911 3
+# scale 3401911 0.8 0
+# layer 3401911 2
+# alpha 3401911 0 0
+# mask 3401911 off
+;;ティファレト
+# body 171
+# pos 171 3
+# scale 171 0.8 0
+# layer 171 1
+# alpha 171 0 0
+# mask 171 off
+;;カシウス
+# body 166
+# pos 166 3
+# scale 166 0.8 0
+# layer 166 2
+# alpha 166 0 0
+# mask 166 off
+;;-----------------------------------------
+;;//背景：ビフレスト
+# imageset 5 "bg_white_circle"
+# imagealpha 5 0 0
+# waitandnext 0.2
+
+# imagelayer 5 1
+# imagealpha 5 1 0
+# imagepos 5 0 30
+# move 138 1 0
+# alpha 138 1 0
+# mask 138 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 167 3 0
+# alpha 167 1 0
+# mask 167 on
+# move 171 5 0
+# alpha 171 1 0
+# mask 171 on
+# face 138 "sad"
+# voice 1038 "almace_0028"
+@アルマス
+私、ちょっと眠いから
+今夜は早めに
+休みたいんだけど…
+
+# textboxarrow 0 2
+# face 167 "normal"
+;;# voice 4019 ""
+@フェイルノート
+昨夜、私の寝室に忍び込んで
+この子を盗んでいったわね
+
+# textboxarrow 0 3
+# face 171 "surprise"
+;;# voice 5032 ""
+@ティファレト
+フェイルノートがいつも抱いている
+ぬいぐるみのことですか？
+でも、今も持っているのでは…
+
+# textboxarrow 0 2
+# face 167 "angry"
+# voice 4019 "failnaught_a_0014"
+@フェイルノート
+夜に盗んで、私が起きるまでの間に
+元に戻したのよ
+一体、どういうつもりかしら？
+
+# textboxarrow 0 1
+# face 138 "angry"
+# voice 1038 "almace_0009"
+@アルマス
+何を言ってるのか、
+絶・意味不明よ
+
+# alpha 171 0 0.5
+# move 166 5 0
+# alpha 166 1 0.5
+# mask 166 on
+# textboxarrow 0 3
+# face 166 "normal"
+# voice 3031 "cassius_ge_0003"
+@カシウス
+フェイルノートのぬいぐるみを
+修繕したの
+アルマスが一晩でやってくれた
+
+# textboxarrow 0 1
+# face 138 "worry"
+# voice 1038 "almace_0022"
+@アルマス
+カシウス！？
+何でばらすのっ？
+絶・裏切られたんだけどっ
+
+# textboxarrow 0 2
+;;# face 167 ""
+# voice 4019 "failnaught_a_0013"
+@フェイルノート
+この私がぬいぐるみの傷くらいで
+心を乱すとでも思ったのかしら
+冗談じゃないわ！
+
+# textboxarrow 0 2
+;;# face 167 ""
+;;# voice 4019 ""
+@フェイルノート
+二度と、こんな真似しないで！
+
+# textboxarrow 0 2
+;;# face 167 ""
+# voice 4019 "failnaught_a_0037"
+@フェイルノート
+私は…
+お前達に情けをかけられるような
+存在じゃない…！
+
+;;//フェイルノートが走り去る
+# se "SE_5575"
+# textwindow "close"
+# alpha 167 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# move 138 2 0.5
+# textboxarrow 0 1
+# move 166 4 0.5
+# face 138 "normal"
+# voice 1038 "almace_0027"
+@アルマス
+だから黙ってようって言ったのに…
+何で正直に言ったのよ、カシウス
+
+# textboxarrow 0 3
+# face 166 "sad"
+# voice 3031 "cassius_ge_0028"
+@カシウス
+負い目を抱かせたままにする方が
+ずっと残酷よ…
+
+# move 138 1 0.5
+# move 166 3 0.5
+# move 171 5 0
+# alpha 171 1 0.5
+# mask 171 on
+# textboxarrow 0 3
+# face 171 "surprise"
+# voice 5032 "tiphereth_t_0028"
+@ティファレト
+カシウスはいつも私達より
+はるか先を見ているのですね…
+
+# textboxarrow 0 3
+;;# face 171 ""
+;;# voice 5032 ""
+@ティファレト
+フェイルノートのぬいぐるみが
+傷ついているのにいち早く気づいたり
+彼女の気持ちを推し量ったり
+
+# textboxarrow 0 1
+# face 138 "angry"
+# voice 1038 "almace_0007"
+@アルマス
+でも、フェイルノートも
+絶・かわいげがないわっ
+お礼を言えとまでは言わないけど…
+
+# textboxarrow 0 1
+# face 138 "worry"
+;;# voice 1038 ""
+@アルマス
+少しは喜んで欲しかったのに…
+
+;;//暗転挟む
+;;//ここからアルマスはクラスチェンジ後に
+;;//フェイルノートも霊装支配後に
+# bgm "stop"
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 138 0 0
+# alpha 166 0 0
+# alpha 171 0 0
+# move 172 2 0
+# alpha 172 1 0
+# mask 172 on
+# move 3401911 4 0
+# alpha 3401911 1 0.5
+# mask 3401911 on
+# waitandnext 0.1
+
+# imagealpha 5 0 0
+# fadein "black" 1
+# waitandnext 1
+
+# textwindow "normal"
+# textboxarrow 0 1
+# face 172 "normal"
+# voice 1038 "almace_0042"
+@アルマス
+絶・恥ずかしい…
+何でこんな記憶を見せるのよっ？
+
+# bgmfile "bgm290" "BgmLostRagnarokEvent" 0
+# textboxarrow 0 3
+# face 3401911 "sad"
+# voice 4019 "failnaught_a_0003"
+@フェイルノート
+あのとき言いそびれたから…
+お礼を…
+
+# textboxarrow 0 1
+;;# face 172 ""
+# voice 1038 "almace_0022"
+@アルマス
+えっ？
+
+# textboxarrow 0 3
+# face 3401911 "smile"
+# voice 4019 "failnaught_a_0030"
+@フェイルノート
+あくまでほんの少しだけだけど、
+助かったわ
+…感謝してあげる
+
+# textboxarrow 0 1
+# face 172 "angry"
+# voice 1038 "almace_0023"
+@アルマス
+フェイルノート！？
+どうしたのっ？
+何か変なものでも食べたのっ？
+
+# textboxarrow 0 3
+# face 3401911 "angry"
+# voice 4019 "failnaught_a_0014"
+@フェイルノート
+黙りなさい！
+アルマス、お前が受けた仕打ちに
+対して怒るなとは言わないわ
+
+# textboxarrow 0 3
+;;# face 3401911 ""
+;;# voice 4019 ""
+@フェイルノート
+でも、怒りに飲まれて何もかもを
+憎むのは愚かなことよ
+怒りの対象を明確に絞りなさい
+
+# textboxarrow 0 3
+# face 3401911 "normal"
+# voice 4019 "failnaught_a_0007"
+@フェイルノート
+ビフレストでの日々は…
+悪くないときだって、あったでしょ？
+
+# textboxarrow 0 1
+# face 172 "sad"
+# voice 1038 "almace_0003"
+@アルマス
+…そうね、忘れてた
+
+# textboxarrow 0 1
+;;# face 172 ""
+;;# voice 1038 ""
+@アルマス
+色々なことがあり過ぎたけど…
+あなた達と過ごした日々は、
+絶・楽しかったわ
+
+# textboxarrow 0 1
+# face 172 "normal"
+# voice 1038 "almace_0030"
+@アルマス
+ありがとう、フェイルノート
+私はもう大丈夫
+ちゃんと戻れる
+
+# textboxarrow 0 3
+# face 3401911 "happy"
+# voice 4019 "failnaught_a_0021"
+@フェイルノート
+そう
+なら、戻ってから
+大いに働いてもらうから
+
+# textboxarrow 0 1
+# face 172 "angry"
+# voice 1038 "almace_0009"
+@アルマス
+えっ？
+何のこと？
+
+# textboxarrow 0 3
+;;# face 3401911 ""
+# voice 4019 "failnaught_a_0007"
+@フェイルノート
+何ごとにも対価は必要よ
+詳しい話は戻ってから
+マスターに聞きなさいな
+
+# textboxarrow 0 1
+;;# face 172 ""
+# voice 1038 "almace_0022"
+@アルマス
+ちょっと、フェイルノート！？
+ああ、もう！
+絶・意味不明よーっ

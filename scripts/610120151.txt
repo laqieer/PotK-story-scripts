@@ -1,0 +1,514 @@
+;;-----------------------------------------
+;;ファンキル学園8月
+;;5_1
+;;-----------------------------------------
+# script "lisp"
+# bgm "bgm005" 0
+# background "gymnasium"
+;;-----------------------------------------
+;;八咫鏡
+# body 98
+# pos 98 3
+# scale 98 0.8 0
+# layer 98 3
+# mask 98 off
+# alpha 98 0 0
+# body 500311
+# alpha 500311 0 0
+;;ナーゲルリング
+# body 77
+# pos 77 3
+# scale 77 0.8 0
+# layer 77 3
+# mask 77 off
+# alpha 77 0 0
+# body 100611
+# alpha 100611 0 0
+;;ラブリュス
+# body 67
+# pos 67 3
+# scale 67 0.8 0
+# layer 67 4
+# mask 67 off
+# alpha 67 0 0
+# body 200311
+# alpha 200311 0 0
+;;ダーインスレイヴ
+# body 102811
+# pos 102811 3
+# scale 102811 0.8 0
+# layer 102811 3
+# mask 102811 off
+# alpha 102811 0 0
+;;フラベルム
+# body 501611
+# pos 501611 3
+# scale 501611 0.8 0
+# layer 501611 3
+# mask 501611 off
+# alpha 501611 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;背景：体育館
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2.5
+
+# move 77 3 0
+# mask 77 off
+# alpha 77 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ナーゲルリング
+見てください！
+マスターの身柄は今、
+わたし達が預かっています！
+
+# textflame 0 0
+@マスター
+う、動けない…
+
+# alpha 77 0 0.5
+# alpha 102811 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1028 "dainsleif_0040"
+@ダーインスレイヴ
+おお…ずいぶん乱暴に
+ぐるぐる巻かれているね？
+
+# alpha 102811 0 0.5
+# move 77 4 0
+# mask 77 on
+# alpha 77 1 0.5
+# move 501611 2 0
+# mask 501611 on
+# alpha 501611 1 0.5
+# face 501611 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+# face 77 "angry"
+@ナーゲルリング
+マスターはあなたにとって
+大事なパートナーのはず！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1006 "nageruring_0007"
+@ナーゲルリング
+どうですか、フラベルムさん？
+今ならわたしを優勝に推すだけで
+マスターさんを助けられますよ…！
+
+# se "SE_6513"
+# emotionbody 2000 8 501611 80 250
+# effectpattern 2000 1 0
+# effectstart 2000
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5016 "Flabellum_0019"
+@フラベルム
+…………はぁ
+
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+いいですか？
+正直に申し上げますが
+
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+マスターのことなんて
+心底どうでもいいのです
+
+# textflame 0 0
+@マスター
+…え？
+
+# se "SE_6501"
+# emotionbody 2001 1 77 10 210
+# effectpattern 2001 2 0
+# effectstart 2001
+# textflame 1 1
+# textboxarrow 0 3
+# face 77 "surprise"
+# voice 1006 "nageruring_0023"
+@ナーゲルリング
+え…えぇっ！？
+
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+それに誰が優勝するか、というのも
+同じくらいどうでもいいんですの
+
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+素直に頼んでいれば、
+ためらいもなく協力したものを…
+
+# effectskip 2000
+# textflame 1 1
+# textboxarrow 0 1
+# face 501611 "angry"
+# voice 5016 "Flabellum_0009"
+@フラベルム
+ですが、このような汚い手段で
+優勝を奪おうとするその醜さ…
+見逃すわけには参りませんね？
+
+# se "SE_6515"
+# emotionbody 1005 9 77 50 110
+# effectpattern 1005 5 0
+# effectstart 1005
+# bgm "bgm006" 0
+# textflame 1 1
+# textboxarrow 0 3
+# face 77 "sad"
+# voice 1006 "nageruring_0008"
+@ナーゲルリング
+こ…これって…
+わたしまた
+ドジしちゃった～！？
+
+# effectskip 1005
+# alpha 77 0 0.5
+# alpha 501611 0 0.5
+# move 67 2 0
+# mask 67 on
+# alpha 67 1 0.5
+# move 98 4 0
+# mask 98 on
+# alpha 98 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 2003 "loveryus_0008"
+@ラブリュス
+ドンマイドンマイ、
+また次があるって！
+…たぶん！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5003 "yatanokagami_0003"
+@八咫鏡
+うむ、あるといいのう
+限りなくゼロに近いが…
+
+# alpha 67 0 0.5
+# alpha 98 0 0.5
+# alpha 77 1 0.5
+# alpha 501611 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@ナーゲルリング
+ちょっとぉ！？
+助けてくださいよっ！？
+
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+覚悟は済みましたか？
+でしたら力づくで…
+
+# textflame 1 1
+# textboxarrow 0 3
+@ナーゲルリング
+あ、あわわわわ…！！
+
+# alpha 77 0 0.5
+# alpha 501611 0 0.5
+# move 98 3 0
+# mask 98 off
+# alpha 98 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 98 "angry"
+# voice 5003 "yatanokagami_0028"
+@八咫鏡
+ふう、仕方あるまい
+ここはわらわが相手になろう
+
+# textflame 1 1
+# textboxarrow 0 2
+@八咫鏡
+見よ、フラベルム！
+これぞ我が曲芸がひとつ―
+チョコ神楽舞っ！！
+
+# textflame 0 0
+@マスター
+ちょっと待って、縄解いて！
+このままだと僕まで
+巻き込まれるから！
+
+;;演出：画面揺れ
+;;ＳＥ：ザパーン！！(大量のチョコが流れる音)
+# se "SE_9457"
+# shake 0 1
+# waitandnext 1.2
+
+# se "SE_6500"
+# emotionbody 1006 1 98 10 240
+# effectpattern 1006 1 0
+# effectstart 1006
+# textflame 1 1
+# textboxarrow 0 2
+# face 98 "surprise"
+# voice 5003 "yatanokagami_0023"
+@八咫鏡
+…どわぁあああああ～～～っ！？
+
+# textflame 0 0
+@マスター
+うわああ～～～～っ！？
+
+;;ト書き：八咫鏡、画面から消える
+# rightout 98 0.6
+# textwindow "close"
+# waitandnext 1
+
+# move 67 4 0
+# alpha 67 1 0.5
+# alpha 501611 1 0.5
+# face 501611 "surprise"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 67 "surprise"
+# voice 2003 "loveryus_0022"
+@ラブリュス
+ああっ！
+流されちゃった！
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5016 "Flabellum_0023"
+@フラベルム
+いったいどこから
+あんな大量のチョコが…？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 67 "normal"
+@ラブリュス
+しょうがない…
+次は私が相手だね！
+
+# bgmfile "bgm430" "BgmIntegralNoahEvent004" 0
+# textflame 1 1
+# textboxarrow 0 3
+# face 67 "happy"
+# voice 2003 "loveryus_0006"
+@ラブリュス
+せっかく舞台の上なんだし、
+ここはダンスで勝負しようよ！
+
+;;ト書き：ダンスを踊るラブリュス
+# textboxarrow 0 0
+# move 67 5 0.3
+# waitandnext 0.3
+
+# move 67 4 0.3
+# waitandnext 0.3
+
+# move 67 5 0.3
+# waitandnext 0.3
+
+# move 67 4 0.3
+# waitandnext 0.3
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 2003 "loveryus_0005"
+@ラブリュス
+ほらっ、どうっ？
+ライブで磨かれた
+私のアイドルステップは！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 501611 "normal"
+# voice 5016 "Flabellum_0039"
+@フラベルム
+ふむ、お見事ですね…
+さすがは学園のアイドルです
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5016 "Flabellum_0004"
+@フラベルム
+ふふふ…いいでしょう
+わたくしも本気を
+見せて差し上げます…
+
+;;ト書き：フラベルムがバレエを踊りだす
+# textboxarrow 0 0
+# move 501611 1 0.5
+# waitandnext 0.5
+
+# move 501611 2 0.5
+# waitandnext 0.5
+
+# move 501611 1 0.5
+# waitandnext 0.5
+
+# move 501611 2 0.5
+# waitandnext 0.5
+
+# se "SE_6501"
+# emotionbody 1007 1 67 10 310
+# effectpattern 1007 2 0
+# effectstart 1007
+# textflame 1 1
+# textboxarrow 0 3
+# face 67 "surprise"
+# voice 2003 "loveryus_0023"
+@ラブリュス
+なっ…？
+なにこれ～～～っ！？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 2003 "loveryus_0039"
+@ラブリュス
+すごいっ、まるで白鳥みたい…！
+こんなに綺麗なバレエ、
+生まれて初めて見た…！！
+
+;;ＳＥ：パチパチパチ…！(観客の拍手の音)
+# se "SE_0600"
+# bgm "stop"
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+ふうっ…
+こんなものでいかがでしょう？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 67 "sad"
+# voice 2003 "loveryus_0015"
+@ラブリュス
+ま…負けた…！
+私アイドルなのに～っ！！
+
+;;ＳＥ：タッタッタッ(ラブリュスが走る音)
+# se "SE_5575"
+;;ト書き：ラブリュス、画面から消える
+# alpha 67 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# move 501611 3 0.5
+# mask 501611 off
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@フラベルム
+さて…
+残るはあなたおひとりですね？
+
+# alpha 501611 0 0.5
+# move 77 3 0
+# mask 77 off
+# alpha 77 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1006 "nageruring_0024"
+@ナーゲルリング
+ひぃっ…！！
+ごごごごめんなさいっ、
+マスターは解放しますからっ！
+
+# se "SE_6502"
+# emotionbody 1008 2 77 10 220
+# effectpattern 1008 1 1
+# effectstart 1008
+# textflame 1 1
+# textboxarrow 0 2
+# face 77 "surprise"
+@ナーゲルリング
+…あれ？
+マスターは？
+
+# bgm "bgm005" 0
+# alpha 77 0 0.5
+# move 102811 3 0
+# mask 102811 off
+# alpha 102811 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1028 "dainsleif_0002"
+@ダーインスレイヴ
+…いいや、その必要はないよ
+レディ・ナーゲルリング
+
+# move 102811 4 0.5
+# mask 102811 on
+# move 501611 2 0
+# mask 501611 on
+# alpha 501611 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 501611 "angry"
+# voice 5016 "Flabellum_0022"
+@フラベルム
+あなた…
+いきなり何のつもりです？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1028 "dainsleif_0004"
+@ダーインスレイヴ
+大した理由はない
+そうだな、強いて言うなら…
+
+# textflame 1 1
+# textboxarrow 0 3
+@ダーインスレイヴ
+どんでん返しは、
+あればあるほど面白い…だろう？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1028 "dainsleif_0029"
+@ダーインスレイヴ
+さあっ、わたしたちも
+心ゆくまで戦おうではないか！
+
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+…もはやため息も
+満足に出ませんね
+
+# textflame 1 1
+# textboxarrow 0 1
+@フラベルム
+いいでしょう…
+実行委員の名において、
+あなた方を罰してみせます
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5016 "Flabellum_0029"
+@フラベルム
+覚悟しなさい、
+このはた迷惑な
+不届き者ども…！！
+
+# fadeout "black" 1
+# waitandnext 1.2

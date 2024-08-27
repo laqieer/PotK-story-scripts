@@ -1,0 +1,411 @@
+;;-----------------------------------------
+;;ファンキル　2021ウェディングイベント　シナリオ
+;;【オープニング】
+;;スクリプト最後の背景：家(昼)　 church_room
+;;背景：黒
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm404" "BgmIntegralNoahEvent003" 0
+;;-----------------------------------------
+;;イチイバル・神令・オーディン
+# body 5402211
+# pos 5402211 3
+# scale 5402211 0.8 0
+# layer 5402211 2
+# alpha 5402211 0 0
+# mask 5402211 off
+;;ロジェスティラ・神令・スクルド
+# body 5503711
+# pos 5503711 3
+# scale 5503711 0.8 0
+# layer 5503711 2
+# alpha 5503711 0 0
+# mask 5503711 off
+;;-----------------------------------------
+;;タイトル一枚絵
+# imageset 0 "e210613_logo"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;2021/5/24　ファンキル　2021ウェディングイベント　シナリオ
+;;【タイトル案】
+;;さあ、泥塗れのままに踊ろう
+;;
+;;【EP.1】未完成のドレス
+;;【EP.2】お姫様の夢
+;;【EP.3】旅人の望み
+;;【EP.4】泥塗れの少女
+;;【EP.5】初めての友達
+;;【オープニング】
+;;背景：黒
+;;//ナレーションのようなイメージです
+;;//立ち絵は非表示でお願いします
+# textflame 1 1
+# textboxarrow 0 0
+@イチイバル
+それは、
+気まぐれが見せた夢だったのか
+はたまた、違う世界での遠い記憶か…
+
+# textboxarrow 0 0
+@イチイバル
+これから語られる物語は
+ボクが知る世界でのものではない
+つまり、この世界での史実ではない
+
+# textboxarrow 0 0
+@イチイバル
+そうだなぁ…
+吟遊詩人が奏でる詩曲のようなもの
+と思って、聞いて欲しい
+
+# textboxarrow 0 0
+@イチイバル
+ボクらは人生という旅路を歩み続ける
+終わることのない円舞曲を
+踊り続けるように
+
+# textboxarrow 0 0
+@イチイバル
+無限のように続く舞台の上を、
+途方もなく舞い続ける
+
+# textboxarrow 0 0
+@イチイバル
+パートナーのように
+互いの手と手を取って――
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "004_outland"
+# envbody 4000 1 0
+# effectpattern 4000 2 0
+# effectstart 4000
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//背景：村(昼) 　004_outland
+;;//イチイバル（コマンド通常）
+;;//ロジェスティラ　（コマンド通常）
+;;モノローグ
+# bgm "stop"
+# se "SE_0610"
+# textflame 0 0
+# textwindow "normal"
+@
+ある雨の日…
+
+;;//ＳＥ：ザアアアアア…（雨が降る音）
+;;//ＳＥ：パシャパシャパシャ…（雨の中走る音）
+# se "SE_5002"
+# sedelay "SE_5003" 0.25
+# sedelay "SE_5002" 0.5
+# sedelay "SE_5003" 0.75
+# sedelay "SE_5002" 1
+# move 5402211 3 0
+# face 5402211 "usual"
+# alpha 5402211 1 0.5
+# mask 5402211 off
+# textflame 1 1
+# textboxarrow 0 2
+@イチイバル
+はぁっ…はぁっ…
+
+;;モノローグ
+# textflame 0 0
+@
+足音を響かせながら、
+ひとりの少女が村を駆けていく
+
+;;モノローグ
+@
+辺りでは見ない外套と、
+つかみどころのない
+雰囲気をまとった旅人
+
+# textflame 1 1
+# textboxarrow 0 2
+@イチイバル
+はぁっ…はぁっ…
+ここ、開いてるかな…
+
+;;//ＳＥ：コンコン（ノックする音）
+# se "SE_0679"
+# waitandnext 2
+
+# face 5402211 "sad"
+# textboxarrow 0 2
+@イチイバル
+…………
+うーん、出ないか
+
+# voice 540221 "ichiibal_c_0019"
+# textboxarrow 0 2
+@イチイバル
+仕方ない
+他の家をあたって…
+
+;;//ＳＥ：ガチャッ（ドアを開ける音）
+# se "SE_0914"
+# waitandnext 0.5
+
+# voice 550371 "logistille_c_0035"
+# move 5503711 2 0
+# face 5503711 "sad"
+# alpha 5503711 1 0.5
+# mask 5503711 on
+# textboxarrow 0 1
+# move 5402211 4 0.5
+# mask 5402211 on
+@ロジェスティラ
+ご、ごめんなさい！
+お待たせしましたっ！
+
+# emotionbody 1000 1 5402211 10 310
+# effectpattern 1000 1 0
+# effectstart 1000
+# voice 540221 "ichiibal_c_0025"
+# face 5402211 "surprise"
+# textboxarrow 0 3
+@イチイバル
+わっ！
+
+;;モノローグ
+# textflame 0 0
+@
+店の中から勢いよく現れたのは、
+小柄で穏やかな印象の少女
+
+;;モノローグ
+@
+二人はしばし固まり、
+お互いの顔を見つめ合う
+
+# emotionbody 2000 1 5503711 10 310
+# effectpattern 2000 1 0
+# effectstart 2000
+# voice 550371 "logistille_c_0031"
+# face 5503711 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@ロジェスティラ
+…あっ、すみません！
+じっと見てしまって…！
+
+# face 5503711 "usual"
+# textboxarrow 0 1
+@ロジェスティラ
+びしょ濡れで大変ですよね
+タオルを持って
+きますので、のでっ…！
+
+;;//ＳＥ：タッタッタッ（店の中に駆けていく音）
+# se "SE_5575"
+# textwindow "close"
+# leftout 5503711 0.5
+# waitandnext 0.5
+
+# voice 540221 "ichiibal_c_0031"
+# alpha 5503711 0 0
+# face 5402211 "normal"
+# textboxarrow 0 3
+# textwindow "normal"
+@イチイバル
+あ、あぁ
+こんな泥々でごめんね
+助かるよ！
+
+;;モノローグ
+# textflame 0 0
+@
+奥に走り去るロジェスティラに、
+イチイバルは戸惑いながらも
+声をかけるのだった
+
+;;//演出：場面転換
+;;//背景：家(昼)　 church_room
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# sestop "SE_0610"
+# effectskip 4000
+# background "church_room"
+# move 5503711 2 0
+# face 5503711 "usual"
+# alpha 5503711 1 0
+# mask 5503711 on
+# move 5402211 4 0
+# face 5402211 "normal"
+# alpha 5402211 1 0
+# mask 5402211 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# voice 540221 "ichiibal_c_0030"
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@イチイバル
+ふう、おいしい…
+ありがとう、お茶まで淹れてくれて
+
+# se "SE_6504"
+# emotionbody 3000 3 5503711 10 290
+# effectpattern 3000 1 3
+# effectstart 3000
+# voice 550371 "logistille_c_0004"
+# face 5503711 "happy"
+# textboxarrow 0 1
+@ロジェスティラ
+いえ！
+お口に合ったようで
+よかったです
+
+;;モノローグ
+# textflame 0 0
+@
+かわいらしくもじもじする
+ロジェスティラを見て、
+イチイバルは笑顔を浮かべる
+
+# textflame 1 1
+# textboxarrow 0 3
+@イチイバル
+とても助かったよ
+服もすっかり綺麗になったし
+
+# textboxarrow 0 3
+@イチイバル
+キミは裁縫が得意なのかな？
+ほつれていたところも
+ぜんぶ直ってる
+
+# voice 550371 "logistille_c_0031"
+# face 5503711 "sad"
+# textboxarrow 0 1
+@ロジェスティラ
+は、はいっ！
+すみませんっ、迷惑でしたか…？
+
+# textboxarrow 0 1
+@ロジェスティラ
+普段は仕立て屋を
+やっていますので、のでっ…
+お力になれたらと思い…！
+
+# voice 540221 "ichiibal_c_0040"
+# textboxarrow 0 3
+@イチイバル
+なるほど、納得だ
+むしろありがたいよ！
+
+# textboxarrow 0 3
+@イチイバル
+この服もそろそろ
+替え時かなと思っていたからね
+
+# voice 540221 "ichiibal_c_0021"
+# face 5402211 "shy"
+# textboxarrow 0 3
+@イチイバル
+直してもらえて
+この子も喜んでるよ
+キランッ☆
+
+# voice 550371 "logistille_c_0042"
+# face 5503711 "shy"
+# textboxarrow 0 1
+@ロジェスティラ
+ほんとですか？
+嬉しいですっ、えへえへ…
+
+# voice 550371 "logistille_c_0007"
+# face 5503711 "usual"
+# textboxarrow 0 1
+@ロジェスティラ
+ええと…
+イチイバルさんでしたよね
+
+# textboxarrow 0 1
+@ロジェスティラ
+イチイバルさんは、その…
+旅人さんなのでしょうか？
+
+# voice 540221 "ichiibal_c_0003"
+# face 5402211 "normal"
+# textboxarrow 0 3
+@イチイバル
+あぁ、そうだよ
+世界を旅して周ってる
+
+# voice 540221 "ichiibal_c_0006"
+# face 5402211 "angry"
+# textboxarrow 0 3
+@イチイバル
+人呼んで、
+天才美少女吟遊詩人と
+いったところかな？ドヤッ☆
+
+# voice 550371 "logistille_c_0041"
+# face 5503711 "shy"
+# textboxarrow 0 1
+@ロジェスティラ
+わぁぁっ…
+吟遊詩人さん…素敵です！
+
+# voice 540221 "ichiibal_c_0004"
+# face 5402211 "normal"
+# textboxarrow 0 3
+@イチイバル
+フッフッフ
+興味津々って感じだね？
+
+# textboxarrow 0 3
+@イチイバル
+そうだな…
+雨宿りと服のお礼だ
+
+# textboxarrow 0 3
+@イチイバル
+旅の思い出話を
+聞かせてあげようか
+
+# voice 550371 "logistille_c_0021"
+# face 5503711 "happy"
+# textboxarrow 0 1
+@ロジェスティラ
+わぁっ…！
+ぜひぜひっ、お願いしますっ！
+
+# textboxarrow 0 3
+@イチイバル
+それじゃあまずは、
+遠い遠い国のお話から…
+
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# alpha 5503711 0 0
+# alpha 5402211 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.5
+
+# fadeout "white" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# imagealpha 0 0 0
+# waitandnext 0.2

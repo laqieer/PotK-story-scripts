@@ -1,0 +1,272 @@
+;;-----------------------------------------
+;;バレンタイン「ヘレナ」キャラクエシナリオ
+;;【EP.2_3】
+;;スクリプト最後の背景：300_devil_daytime02
+;;背景：ケイオスリオン街中（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "300_devil_daytime02"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;ヘレナ(ハ?レンタイン)
+# body 3302821
+# pos 3302821 3
+# scale 3302821 0.8 0
+# layer 3302821 2
+# alpha 3302821 0 0
+# mask 3302821 off
+;;ニール
+# body 162
+# pos 162 3
+# scale 162 0.6 0
+# layer 162 2
+# alpha 162 0 0
+# mask 162 off
+;;ケイオスリオン兵
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# layer 3820001 2
+# alpha 3820001 0 0
+# mask 3820001 off
+;;ケイオスリオン兵（クローン1）
+# entry 938200011 3820001
+# pos 938200011 3
+# scale 938200011 0.8 0
+# layer 938200011 2
+# alpha 938200011 0 0
+# mask 938200011 off
+;;-----------------------------------------
+;;ヘレナ一枚絵
+# imageset 0 "c3302821"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;【EP.2_3】
+;;//背景：ケイオスリオン、屋外
+# move 3820001 2 0
+# alpha 3820001 1 0
+# mask 3820001 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 938200011 4 0
+# alpha 938200011 1 0
+# mask 938200011 on
+@ケイオスリオン兵1
+お前…知っているぞ、
+伯爵の飼っていた斬ル姫だな！
+
+# textboxarrow 0 3
+@ケイオスリオン兵2
+なにを勝手にふらついてやがる！？
+飼い犬は飼い犬らしく、
+飼い主に尻尾を振っていろよ！
+
+;;モノローグ
+# alpha 3820001 0 0.5
+# alpha 938200011 0 0.5
+# move 3302821 3 0
+# face 3302821 "usual"
+# alpha 3302821 1 0.5
+# mask 3302821 off
+# textflame 0 0
+@
+兵士の言葉をヘレナは黙って
+聞いているが、マスターは
+どうしても我慢できなかった
+
+;;モノローグ
+@
+ヘレナは飼い犬じゃない、
+自分の大切な仲間だ！
+と、言い返す
+
+;;モノローグ
+@
+マスターの言葉を聞いて、
+ヘレナは嬉しそうに、ふふっと笑う
+
+# voice 3028 "herena_a_0020"
+# face 3302821 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@ヘレナ
+そうだ、ヘレナはもう…
+あの頃のヘレナじゃない
+
+# textboxarrow 0 2
+@ヘレナ
+つまらない悪戯やくだらない嘘で、
+自分をごまかしたりしなくていい…
+
+# textboxarrow 0 2
+@ヘレナ
+ヘレナには、大好きな仲間がいる…
+これからも仲間と一緒に戦うんだ！
+
+# se "SE_0602"
+# textboxarrow 0 2
+@ヘレナ
+『小悪魔の隠し味』！
+
+;;モノローグ
+# textflame 0 0
+@
+それは彼女が
+新たなるスキルに目覚めた
+瞬間だった
+
+# alpha 3302821 0 0.5
+# move 3820001 2 0
+# alpha 3820001 1 0.5
+# mask 3820001 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 938200011 4 0
+# alpha 938200011 1 0.5
+# mask 938200011 on
+@ケイオスリオン兵1
+くそっ、退却だ！
+
+;;モノローグ
+# alpha 3820001 0 0.5
+# textflame 0 0
+# alpha 938200011 0 0.5
+@
+兵士たちはヘレナに恐れをなして
+逃げていく
+
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+# move 3302821 3 0
+# face 3302821 "happy"
+# alpha 3302821 1 0.5
+# mask 3302821 off
+# textflame 1 1
+# textboxarrow 0 2
+@ヘレナ
+先輩、兵士に言い返すなんて
+やるじゃないか…
+
+;;モノローグ
+# textflame 0 0
+@
+ヘレナのことを、
+あんな風に言われたら我慢できないよ
+と、マスターはこたえる
+
+# voice 3028 "herena_a_0020"
+# face 3302821 "shy"
+# textflame 1 1
+# textboxarrow 0 2
+;;ヘレナ（上機嫌）
+@ヘレナ
+ふふっ、そうか…
+さてと、戻るとしよう
+荷物を忘れないでくれ
+
+;;//演出：場面転換
+;;//背景：ケイオスリオン、屋外
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# move 3302821 3 0
+# face 3302821 "usual"
+# alpha 3302821 1 0.5
+# mask 3302821 on
+# move 162 4 0
+# alpha 162 1 0.5
+# mask 162 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 3028 "herena_a_0069"
+# textboxarrow 0 2
+# textwindow "normal"
+@ヘレナ
+ニール、惚れ薬はやめた
+先輩には使わない
+
+# voice 9952 "nir_0022"
+# textboxarrow 0 3
+@ニール
+あら…
+どういう心境の変化？
+
+# textboxarrow 0 2
+@ヘレナ
+…先輩の本心を知りたいんだ
+
+;;モノローグ
+# textflame 0 0
+@
+その時、まだ時間がかかるのかな
+と、マスターが実験室をのぞく
+
+# voice 9952 "nir_0011"
+# textflame 1 1
+# textboxarrow 0 3
+@ニール
+マスター！
+呼ぶまでこないでと言ったはずよ！
+
+;;モノローグ
+# textflame 0 0
+@
+隠さなくてもわかっているよ、
+バレンタインのチョコレートだろう
+と、マスターが笑う
+
+;;モノローグ
+# face 3302821 "shy"
+@
+ヘレナが驚いて顔を赤くすると、
+マスターは、ヘレナにチョコをもらう
+相手がうらやましいよ、と苦笑いした
+
+# voice 9952 "nir_0022"
+# textflame 1 1
+# textboxarrow 0 3
+@ニール
+…え？
+
+# voice 3028 "herena_a_0005"
+# face 3302821 "happy"
+# textboxarrow 0 2
+@ヘレナ
+…ふふっ、あはははっ！
+そうだよ、ヘレナがマスターに
+チョコをあげるわけがないからな…
+
+# voice 3028 "herena_a_0004"
+# textboxarrow 0 2
+@ヘレナ
+…くふっ
+
+;;＜一枚絵ボイス＞
+;;★５
+;;ファイル名：herena_a_kyara_0018
+;;「これでは、先輩に嘘が通じなくなってしまいそうだ」
+;;ホワイトアウト
+# textflame 0 0
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# fadein "white" 3
+# buttonsout 0 0
+# textwindow "close"
+# voice 3028 "herena_a_kyara_0018"
+
+# frameout 0 1
+
+# waitandnext 0.8
+
+# fadeout "black" 1.5
+# waitandnext 1.5

@@ -1,0 +1,730 @@
+;;------------------
+;;■第４話「ラグナロク女学院（舞台の学園名が入ります）」
+;;□登場人物：ロンギヌス(学園)→ロンギヌス(コラボコス)、さくら(学生服)
+;;　　　　　　ナーゲルリング(学園)→ナーゲルリング(コラボコス)、与一（学園）
+;;□背景　　：野外（かつバトル背景があるならならどこでもいい）
+;;------------------
+;;背景ラグナロク女学院、校門があれば
+# script "lisp"
+# background "schoolgate_daytime"
+# bgmfile "bgm183" "BgmGakuen003" 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+;;ロンギ制服
+# body 147
+# pos 147 5
+# scale 147 0.8 0
+# layer 147 4
+;;ナーゲル制服
+# body 77
+# pos 77 1
+# scale 77 0.8 0
+# layer 77 2
+;;さくら制服
+# body 145
+# pos 145 3
+# scale 145 0.8 0
+# layer 145 5
+;;ケロちゃん
+# body 146
+# pos 146 4
+# scale 146 0.8 0
+# layer 146 1
+# alpha 146 0 0
+;;ロンギ魔法服
+# body 300191
+# pos 300191 4
+# scale 300191 0.8 0
+# layer 300191 4
+# alpha 300191 0 0
+;;ナーゲル魔法服
+# body 100661
+# pos 100661 3
+# scale 100661 0.8 0
+# layer 100661 4
+# alpha 100661 0 0
+# mask 100661 off
+;;さくらボイス用
+# body 602321
+# alpha 602321 0 0
+;;ナーゲルボイス用
+# body 100661
+# alpha 100661 0 0
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagelayer 1 2
+# imagescale 1 1.2 0
+# imageset 2 "e180201_2"
+# imagealpha 2 0 0
+# imagelayer 2 3
+# imagescale 2 0.64 0
+# imageset 3 "e180201_1"
+# imagealpha 3 0 0
+# imagelayer 3 4
+# imagescale 3 0.64 0
+# imageset 4 "bg_black"
+# imagealpha 4 0 0
+# imagelayer 4 5
+# imagescale 4 2 0
+# face 147 "sad"
+;;さくらボイス用
+# body 602321
+# alpha 602321 0 0
+# subfillrect 1 "black" 0 0 1
+# waitandnext 0.3
+
+# imagealpha 4 1 0
+# imagepos 4 0 0
+# imagealpha 2 1 0
+# imagepos 2 90 -180
+# subfillrect 1 "black" 0.5 1 0
+# waitandnext 0.1
+
+# imagealpha 4 0 0.5
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@マスター
+さて、ラグナロク女学院で
+実際に聞き込みを行ってみたものの
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 146
+# voice 9966 "cckero_g_0027"
+@ケロちゃん
+手がかりなしかいな
+
+# face 77 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 77
+# voice 1006 "nageruring_0028"
+@ナーゲルリング
+やはり他学園と同様の事件は
+ここでは起きていないようですね
+しかし、どういうことでしょう
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 147
+# voice 3001 "ronginusu_0028"
+@ロンギヌス
+うちの学園でも
+聖ユグドラシル姫学院でも
+起こってるのに
+
+# textflame 0 0
+@
+生徒の聞き込みを一通り終えた後、
+一同は人影のない場所を
+選んで話をしていた
+
+# face 77 "normal"
+# textflame 0 0
+@マスター
+でも、なにも起きてないことは
+いいことだよ
+
+# textflame 0 0
+@マスター
+それに僕たちの目的は
+起こってるかの調査じゃなくて
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 145
+@さくら
+起こることに備えて
+みんなが自由に行き来できるように
+するのが目的なんだもんね
+
+# bgm "stop"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 146
+# voice 9966 "cckero_g_0022"
+@ケロちゃん
+！？
+
+# face 145 "surprise"
+# face 77 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 145
+# voice 60231 "ccsakura_g_0043"
+@さくら
+どうしたのケロちゃん？
+
+# textflame 0 0
+@
+一同が構える
+だが
+
+# bgm "bgm006" 0
+# imagemoveto 2 90 -30 0.3
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9966 "cckero_g_0021"
+@ケロちゃん
+いい匂いがするで！？
+これは、二階からやな！
+
+;;ケロちゃんの立ち絵を消す
+;;SEでヒューンと飛んでいくみたいなものがあれば
+# se "SE_9430"
+# imagerightout 2 0.5
+# imagealpha 2 0 0.5
+# emotionbody 0502 9 147 80 130
+# effectpattern 0502 5 0
+# effectstart 0502
+# face 147 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 147
+# voice 3001 "ronginusu_0022"
+@ロンギヌス
+わわわ、
+ケロちゃんがお一人で
+
+# effectskip 0502
+# face 145 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 145
+# voice 60231 "ccsakura_g_0009"
+@さくら
+もう、ケロちゃんったら！
+
+;;ガチャンズデーンゴローンとコメディちっくなSEがあれば
+;;トゲトゲのメッセージウィンドウ
+;;メッセージウィンドウ揺らせれば揺らしてください
+# se "SE_9457"
+# serif 1
+# textwindow "toge"
+@
+「きゃー、ぬいぐるみが空を
+　飛んでる！？」
+「なになに、理事長の親戚っ！？」
+
+# face 145 "surprise"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 145
+@さくら
+大変っ！
+わたし行ってくるね！！
+
+# face 145 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 145
+# voice 60231 "ccsakura_g_0045"
+@さくら
+こらー！
+ケーローちゃーんー！！
+
+;;さくら立ち絵消す
+# se "SE_5575"
+# serif 0
+# textwindow "close"
+# rightout 145 0.5
+# alpha 145 0 0.5
+# waitandnext 1.5
+
+# face 77 "normal"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 147
+# voice 3001 "ronginusu_0008"
+@ロンギヌス
+さくらちゃんの帰りを待つしか
+ないのですね…
+
+# textflame 0 0
+@マスター
+そうだね、ここでみんな出ていって
+騒動を大きくすると
+視察自体が行えなくなる可能性もある
+
+# textflame 0 0
+@
+と―
+
+;;突如、ガラスの割れる音が校舎に鳴り響いた
+;;↑ガラスが割れるSEがなければ追加してください
+;;SEガラスの割れる音
+# serif 0
+# textwindow "close"
+# bgm "stop"
+# se "SE_9063"
+# waitandnext 1
+
+# face 77 "surprise"
+# bgmfile "bgm185" "BgmGakuen003" 0
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@マスター
+！？
+
+# textflame 0 0
+@マスター
+近い、すぐそこだ
+
+# face 77 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 77
+@ナーゲルリング
+緊急事態です
+いってみましょう！
+
+;;暗転
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# alpha 77 0 0
+# alpha 147 0 0
+# move 77 2 0
+# move 147 4 0
+# background "courtyard"
+# waitandnext 0.6
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 1
+# textwindow "normal" 
+# textboxarrow 1 0
+@生徒
+――――！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+事件現場にはケロちゃんが
+引き起こした騒ぎのおかげか
+幸いにして他の人影はなかった
+
+# textflame 0 0
+@マスター
+く、やっぱり
+でも、どうしよう…
+さくらちゃんが！
+
+# alpha 77 1 0.5
+# alpha 147 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 77
+@ナーゲルリング
+被害の拡大は
+未然に食い止めたいところですが…
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 77
+@ナーゲルリング
+ですが、ここは一旦引くしかないです
+さくらちゃんを
+連れ戻しにいきましょう！
+
+# face 147 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 147
+# voice 3001 "ronginusu_0009"
+@ロンギヌス
+ううん
+さ、さくらちゃんが
+い、い、いなくてもっ…！
+
+# face 77 "surprise"
+# textflame 0 0
+@マスター
+ロンギヌス、まさか一人で！？
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 147
+@ロンギヌス
+だって、
+あの人を野放しにすると
+大変なことになっちゃう！
+
+# face 147 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 147
+@ロンギヌス
+こ、怖いですよ
+でも、私と同じように
+この前みたいな思いを、人には…
+
+# face 147 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 147
+@ロンギヌス
+あのとき、さくらちゃんが
+助けてくれたんです
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 147
+@ロンギヌス
+今度は私が
+さくらちゃんになります
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 77
+@ナーゲルリング
+――！？
+
+# se "SE_9132"
+# serif 0
+# textwindow "close"
+# fadein "white" 1
+# alpha 147 0 0
+# alpha 300191 1 0
+# face 300191 "angry"
+# waitandnext 2
+
+# serif 0
+# textwindow "normal"
+# alpha 77 0 0.5
+# move 300191 3 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 300191
+# voice 3001 "ronginusu_0029"
+@ロンギヌス
+えーい！！
+
+;;声SEと閃光
+# fadein "white" 0.5
+# se "SE_0618"
+# se "SE_5215"
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@生徒
+――――！
+
+# face 300191 "normal"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 300191
+# voice 3001 "ronginusu_0037"
+@ロンギヌス
+きゃっ！！
+
+# textflame 0 0
+@
+だが、ロンギヌスは
+異族化した生徒の威嚇に足がすくむ
+
+# se "SE_9118"
+# textflame 0 0
+@
+その一瞬を逃さず
+生徒が飛びかかってくる
+
+# face 300191 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 300191
+# voice 3001 "ronginusu_0015"
+@ロンギヌス
+う、ううっ！！
+
+# textflame 0 0
+@マスター
+危ないっ！
+
+;;フラッシュ
+;;画面揺らしできれば
+# face 300191 "surprise"
+# se "SE_5810"
+# fadein "red" 0.5
+# shake 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 300191
+@ロンギヌス
+えっ、マスター！？
+
+# face 300191 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 300191
+@ロンギヌス
+マスター、マスター！
+大丈夫ですか！？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 300191
+@ロンギヌス
+そんな、私を助けるために
+身を挺して…
+
+# face 77 "angry"
+# mask 77 off
+# move 77 3 0
+# alpha 77 1 0.5
+# alpha 300191 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 77
+@ナーゲルリング
+ロンギヌス、後ろっ
+近づいて来てる！逃げて！
+
+# face 300191 "sad"
+# alpha 77 0 0.5
+# alpha 300191 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 300191
+@ロンギヌス
+い、嫌です
+マスターが、私のために
+私のために…
+
+# face 77 "surprise"
+# alpha 77 1 0.5
+# alpha 300191 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 77
+@ナーゲルリング
+危ない―！！
+
+;;SEと閃光
+# serif 0
+# textwindow "close"
+# fadein "white" 0.5
+# se "SE_5215"
+# shake 0 0.5
+# waitandnext 1.5
+
+# serif 0
+# textwindow "normal"
+# bgmfile "bgm198" "Bgm3Tcollabo002" 0
+# textflame 0 0
+@
+ナーゲルリングは
+その光景を見ながら
+足がすくんでいた
+
+# face 77 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 77
+@ナーゲルリング
+くっ
+
+;;↓回想
+# fadein "white" 0.5
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# face 147 "sad"
+# face 77 "surprise"
+# move 77 2 0
+# alpha 147 1 0
+# textflame 1 1
+# textboxarrow 0 3
+# chara 147
+@ロンギヌス
+『あのとき、さくらちゃんが
+　助けてくれたんです』
+
+# face 147 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 147
+@ロンギヌス
+『今度は私が
+　さくらちゃんになります』
+
+# face 77 "sad"
+# fadein "white" 0.5
+# imagealpha 1 0 0
+# alpha 147 0 0
+# alpha 77 1 0
+# move 77 3 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "moya"
+# textboxarrow 1 0
+# chara 77
+@ナーゲルリング
+私だって…！
+あんな風になりたい
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+ナーゲルリングが思い浮かべるのは
+聖ユグドラシル姫学院での
+初めて見たさくらたちの姿
+
+# textflame 0 0
+@
+瞬く間に異族化した生徒を
+浄化して見せたシーン
+
+# textflame 0 0
+@
+だが、ナーゲルリングがなりたいのは
+過去、自分を救ってくれたように
+ロンギヌスを救うマスターの姿
+
+# mask 145 off
+# move 145 3 0
+# alpha 77 0 0.5
+# alpha 145 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 145
+@さくら
+みんな、大丈夫！？
+
+# alpha 77 1 0.5
+# alpha 145 0 0.5
+# face 77 "angry"
+# serif 0
+# textwindow "close"
+# move 77 3 0
+# serif 1
+# textwindow "moya"
+# textboxarrow 1 0
+# chara 77
+@ナーゲルリング
+助けられる力が、ほしい…
+さくらちゃんみたいな
+私にも…
+
+# face 77 "sad"
+# serif 1
+# move 77 3 0
+# textwindow "moya"
+# textboxarrow 1 0
+# chara 77
+@ナーゲルリング
+マスター…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+それはナーゲルリングの心からの願い
+その瞳に映る少女への憧れ
+
+# textflame 0 0
+@
+想いは同じく救いたいと
+願っている少女の存在と共鳴し
+そして…
+
+;;画面フラッシュ2回くらい
+;;ウエイトを入れる
+;;徐々に白は背景全画面にだし一瞬、全白にしてから背景を既存のものに
+;;クロスフェードでナーゲルリング制服立ち絵を魔法少女コス立ち絵に変更
+;;画面フラッシュ１回（シュパーンとなるイメージ）
+# bgmfile "bgm183_184" "BgmGakuen003" 0
+# se "SE_9158"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fadein "white" 0.5
+# waitandnext 0.6
+
+# se "SE_9158"
+# fadein "white" 0.5
+# waitandnext 1
+
+# se "SE_0624"
+# fadeout "white" 1.5
+# waitandnext 1.5
+
+# envbody 1000 11 0
+# effectpattern 1000 2 0
+# effectstart 1000
+# face 100661 "usual"
+# alpha 77 0 0
+# alpha 100661 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 2.2
+
+# se "SE_9132"
+# effectskip 1000
+# fadein "white" 0.5
+# waitandnext 1.5
+
+# face 145 "surprise"
+# alpha 100661 0 0.5
+# alpha 146 1 0.5
+# alpha 145 1 0.5
+# serif 0
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 3
+# chara 146
+# voice 9966 "cckero_g_0022"
+@ケロちゃん
+な、なんや…
+あの子も
+
+;;-----------
+;;バトル
+;;-----------
+# se "SE_5207"
+# face 100661 "angry"
+# alpha 100661 1 0.5
+# alpha 146 0 0.5
+# alpha 145 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 100661
+@ナーゲルリング
+こ、細かい話は後です
+今はあの生徒を一刻も早く
+解き放ちましょう！
+

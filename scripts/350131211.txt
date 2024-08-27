@@ -1,0 +1,248 @@
+;;-----------------------------------------
+;;ほむら1-1
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;ほむら
+# body 3501311
+# pos 3501311 3
+# scale 3501311 0.8 0
+# layer 3501311 2
+# alpha 3501311 0 0
+# mask 3501311 off
+;;ほむら（通常）
+# body 501311
+# pos 501311 3
+# scale 501311 0.8 0
+# layer 501311 2
+# alpha 501311 1 0
+# mask 501311 off
+;;-----------------------------------------
+;;背景：平原など
+;;演出：ほむら通常衣装
+# textflame 1 1
+# textboxarrow 0 2
+# face 501311 "normal"
+# voice 5013 "homura_battle_0001"
+@ほむら
+はっ！
+
+;;演出：攻撃エフェクト、倒される敵兵
+# fadein "white" 0.5
+# textflame 0 0
+@
+ほむらは目にも止まらぬ動きで
+敵兵を倒していく
+その姿は頼もしいの一言に尽きる
+
+# textflame 1 1
+# textboxarrow 0 2
+@ほむら
+…………
+
+# textflame 0 0
+@
+だが、ほむらとマスター達の関係は
+戦いにおいて、単なる協力関係であり
+それ以外のなにものでもない
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5013 "homura_0003"
+@ほむら
+…また、戦闘があれば
+いつでも力になるわ
+
+# textflame 0 0
+@
+そう言ってマスター達から
+離れていくほむらに
+マスターは何か声を掛けたいが…
+
+# select "…わかった" "select_label_01" "一緒に休憩しない？" "select_label_02" "今日はいい天気だね" "select_label_03"
+そう言ってマスター達から
+離れていくほむらに
+マスターは何か声を掛けたいが…
+
+;;Ａ
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ほむら
+…………
+
+;;Ｂ
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ほむら
+結構よ
+
+;;Ｃ
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ほむら
+…そうかしら
+
+;;答えたあと
+# label "select_label_end"
+# textflame 0 0
+@
+ほむらとの会話は
+どうも上手く弾まない
+
+# textflame 1 1
+# textboxarrow 0 2
+@ほむら
+…………
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5013 "homura_0002"
+@ほむら
+わたしについて
+何か心配しているなら
+それは無用よ
+
+# textflame 1 1
+# textboxarrow 0 2
+@ほむら
+あくまで今の状況で
+目的が一致しているから
+共に行動しているだけだから
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;演出：ほむらout
+# alpha 501311 0 0.5
+# textflame 0 0
+@
+マスターは
+そんなほむらを
+ただ見送ることしかできなかった
+
+;;演出：時間経過の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.7
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+ある日のこと
+マスター達は補給のために
+近くの街を訪れることになった
+
+# textflame 0 0
+@
+そのメンバーの中に
+ほむらがいるのだが…
+
+# textflame 0 0
+@
+ほむらの能力に不満はない
+きっと大丈夫だろうと
+マスターは気を取り直す
+
+;;演出：ほむらドレスverでin
+# alpha 3501311 1 0.5
+# textflame 0 0
+@
+しかし、そこに現れた
+ほむらの格好にマスターは息を飲む
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501311 "surprise"
+# voice 5013 "homura_0009"
+@ほむら
+…ん？
+ああ、この服ね
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501311 "normal"
+@ほむら
+あの辺りに潜入するなら
+これがいいって言われたのよ
+
+# textflame 0 0
+@
+ほむらに何かを吹き込んだであろう
+斬ル姫達のほうを見ると
+なぜかグッと親指を立てている
+
+# textflame 0 0
+@
+見慣れないほむらの服装に
+違和感を覚えつつマスター達は
+補給へ向かうのだった…
+
+;;演出：移動の暗転
+;;背景：平原
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.7
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5013 "homura_0001"
+@ほむら
+…さっきから
+落ち着かないようだけど、
+どうしたの？
+
+# textflame 0 0
+@
+なんでもない、と返すマスター
+本当はいつもと違うほむらの
+雰囲気にドキドキしているのだが…
+
+# textflame 1 1
+# textboxarrow 0 2
+@ほむら
+…そう
+油断だけはしないでほしいわ
+
+# textflame 0 0
+@
+そのほむらの言葉に
+ハッとしたマスター
+前方には敵兵が…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501311 "angry"
+# voice 5013 "homura_battle_0005"
+@ほむら
+巡回中の兵士に
+こんなにあっさり
+見つかるなんて…！

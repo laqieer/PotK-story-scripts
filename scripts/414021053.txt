@@ -1,0 +1,644 @@
+;;-----------------------------------------
+;;414021053
+;;業果の斬ル姫【EP5】バトル後
+;;-----------------------------------------
+# script "lisp"
+# background "300_devil_night02"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 5
+# mask 3102311 off
+# alpha 3102311 1 0
+# face 3102311 "angry"
+;;フェイルノート
+# body 167
+# pos 167 4
+# scale 167 0.8 0
+# layer 167 3
+# mask 167 on
+# alpha 167 0 0
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 4
+# mask 3201911 off
+# alpha 3201911 0 0
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 3
+# mask 3501711 off
+# alpha 3501711 0 0
+;;トレイセーマ兵
+# body 3830001
+# pos 3830001 4
+# scale 3830001 0.8 0
+# layer 3830001 1
+# mask 3830001 on
+# alpha 3830001 0 0
+;;トレイセーマ兵2
+# entry 938300019 3830001
+# pos 938300019 2
+# scale 938300019 0.8 0
+# layer 938300019 1
+# mask 938300019 on
+# alpha 938300019 0 0
+# reversal 938300019 0
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;剣閃（アスカロン）
+# effectbody 1000 1 0 0 9
+# effectbody 1001 3 30 0 9
+;;剣閃（シユウ）
+# effectbody 2000 2 0 0 1
+# effectbody 2001 3 0 0 1
+;;剣閃（グリモ）
+# effectbody 3000 4 0 0 1
+# effectbody 3001 6 -30 0 1
+;;炎
+# envbody 4000 7 14
+# effectpattern 4000 1 14
+;;◆背景：ケイオスリオン街中夜-----------------------------
+# textflame 1 1
+# textboxarrow 0 2
+# voice 310231 "ascalon_a_battle_0001"
+# chara 3102311
+@アスカロン
+とどめは私がっ！
+シユウ！
+
+# textwindow "close"
+# se "SE_5575"
+# leftout 3102311 0.4
+# alpha 3201911 1 0.4
+# waitandnext 0.4
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3201911 "normal"
+# voice 320191 "chihyu_a_0033"
+# chara 3201911
+@シユウ
+まかせてやる！
+アスカロン！
+
+# textwindow "close"
+# se "SE_5575"
+# rightout 3201911 0.3
+# waitandnext 0.3
+
+;;演出・SE：アスカロンとシユウの連携コンボ攻撃、トレイセーマ兵が複数人倒される。
+# se "SE_4600"
+# textwindow "close"
+# alpha 3102311 0 0
+# alpha 3201911 0 0
+# alpha 938300019 1 0.5
+# alpha 3830001 1 0.5
+# waitandnext 0.5
+
+# voice 310231 "ascalon_a_battle_0002"
+# voice 320191 "chihyu_a_battle_0001"
+# pos 3102311 1
+# mask 3102311 on
+# alpha 3102311 1 0
+# face 3102311 "angry"
+# leftin 3102311 0.5
+# pos 3201911 5
+# mask 3201911 on
+# alpha 3201911 1 0
+# face 3201911 "angry"
+# rightin 3201911 0.5
+# se "SE_5811"
+# shake 0 0.5
+# effectstart 1000
+# effectstart 2000
+# waitandnext 0.8
+
+# voice 383000 "cryptid_0038"
+# se "SE_4759"
+# shake 1 0.6
+# move 3102311 2 0.2
+# face 3102311 "normal"
+# move 3201911 4 0.2
+# face 3201911 "usual"
+# alpha 938300019 0 0.2
+# alpha 3830001 0 0.2
+# fadein "white" 0.6
+# waitandnext 0.9
+
+# textwindow "normal"
+# textflame 0 0
+@
+アスカロンとシユウに
+死角はなかった
+
+# textflame 0 0
+@
+アスカロンが氷柱を突き立て
+敵を蹴散らせば…
+
+# textflame 0 0
+@
+それを叩き壊して
+更なる氷の牙で
+敵を襲わせるシユウ
+
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 1
+# face 3102311 "angry"
+# voice 310231 "ascalon_a_0029"
+# chara 3102311
+@アスカロン
+いきましょうっ！
+
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 3
+# face 3201911 "happy"
+# voice 320191 "chihyu_a_0006"
+# chara 3201911
+@シユウ
+いっくぞおおぉぉ！！
+
+# textwindow "close"
+# se "SE_5204"
+# rightout 3201911 0.3
+# leftout 3102311 0.3
+# waitandnext 0.3
+
+# se "SE_8009"
+# fadein "white" 0.6
+# alpha 3201911 0 0
+# alpha 3102311 0 0
+# textwindow "normal"
+# textflame 0 0
+@
+アスカロンが道を拓き
+シユウがその中心を暴走する
+
+# textflame 0 0
+@
+暴走しているというのに
+その道はしっかり
+アスカロンが制御している
+
+# alpha 3501711 1 0.5
+# face 3501711 "normal"
+# textflame 0 0
+@
+その指向性を得た暴力が
+一般兵の手に負えるわけもない
+
+;;◆アスカ + シユウ vs グリモ------------------------------
+# se "SE_5838"
+# shake 0 0.6
+# effectstart 4000
+# subfillrect 1 "red" 0.3 0.4 0
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 2
+# face 3501711 "angry"
+# voice 350171 "grimoire_ge_battle_0005"
+# chara 3501711
+@グリモワール
+だっからぁ…！
+なんなのよォォッ！！
+
+;;演出・SE：グリモワールが放った炎をアスカロン・シユウが避け、そのままグリモワールに斬り付ける
+# textwindow "close"
+# se "SE_5204"
+# leftout 3501711 0.3
+# waitandnext 0.3
+
+;;アスカ
+# pos 3102311 2
+# alpha 3102311 1 0
+# face 3102311 "normal"
+# leftin 3102311 0.3
+# pos 3501711 4
+# alpha 3501711 1 0
+# rightin 3501711 0.3
+# waitandnext 0.3
+
+# voice 350171 "grimoire_ge_battle_0002"
+# face 3102311 "angry"
+# move 3102311 1 0.2
+# move 3501711 3 0.2
+# se "SE_9100"
+# effectstart 3000
+# shake 0 0.5
+# subfillrect 1 "red" 0.5 0.8 0
+# waitandnext 0.5
+
+;;シユウ
+# face 3501711 "surprise"
+# se "SE_5204"
+# alpha 3102311 0 0.3
+# pos 3201911 2
+# alpha 3201911 1 0
+# face 3201911 "usual"
+# leftin 3201911 0.3
+# waitandnext 0.3
+
+# voice 320191 "chihyu_a_battle_0002"
+# se "SE_4830"
+# face 3201911 "angry"
+# effectstart 2001
+# shake 0 0.5
+# move 3501711 5 0.2
+# fadein "white" 0.3
+# waitandnext 0.5
+
+;;アスカ+グリモ
+# face 3501711 "angry"
+# se "SE_5204"
+# alpha 3201911 0 0.3
+# pos 3102311 2
+# alpha 3102311 1 0.3
+# move 3501711 4 0.3
+# waitandnext 0.3
+
+# voice 310231 "ascalon_a_battle_0004"
+# voice 350171 "grimoire_ge_battle_0001"
+# se "SE_5762"
+# shake 1 0.5
+# effectstart 1001
+# effectstart 3001
+# waitandnext 0.5
+
+;;◆背景：黒バック-----------------------------------------
+# se "SE_8015"
+# fadeout "white" 1.0
+# textwindow "close"
+# waitandnext 1.0
+
+# effectskip 4000
+# alpha 3102311 0 0
+# alpha 3501711 0 0
+# background "bg_black"
+# waitandnext 0.5
+
+# fadein "white" 1.0
+# waitandnext 1.2
+
+# textwindow "normal"
+# textflame 0 0
+@
+トレイセーマ兵はあらかた蹴散らされ
+斬ル姫三者の闘いは
+獣と悪魔が食い合う泥沼となっていた
+
+;;◆背景：ケイオスリオン街中夜-----------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.1
+# textwindow "close"
+# waitandnext 0.1
+
+# pos 3201911 4
+# alpha 3201911 1 0
+# face 3201911 "usual"
+# pos 3102311 2
+# alpha 3102311 1 0
+# face 3102311 "sad"
+# background "300_devil_night02"
+# waitandnext 0.1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_battle_0005"
+# chara 3102311
+@アスカロン
+くっ…
+もう、氷が…！！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3201911 "normal"
+# voice 320191 "chihyu_a_battle_0007"
+# chara 3201911
+@シユウ
+うぐぐぅ…ッ！
+おのが、もちあがらない………ッ
+
+# alpha 3201911 0 0.5
+# alpha 3102311 0 0.5
+# textflame 0 0
+@
+やっとのことで
+己の武器を振るう三人
+
+# textflame 0 0
+@
+アスカロン達は大会時の消費がたたり
+グリモワールは都を覆った
+極大魔法の反動がのしかかっていた
+
+# pos 3501711 3
+# mask 3501711 on
+# alpha 3501711 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "normal"
+# voice 350171 "grimoire_ge_0029"
+# chara 3501711
+@グリモワール
+ふざけんじゃないわよっ…！
+ふざけんじゃないわよ！
+イライラするわ！！
+
+# textflame 0 0
+@
+グリモワールが腕を振り上げるも
+舞い上がる炎は切れ
+戦う力もわずかとなった
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "angry"
+# chara 3501711
+@グリモワール
+この程度でっ
+ワタシがっ
+あああっ、もおォォォッ！
+
+# textwindow "close"
+# move 3501711 4 0.5
+# pos 167 2
+# mask 167 on
+# alpha 167 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 167 "normal"
+# chara 167
+@フェイルノート
+…
+
+# voice 4019 "failnaught_a_0002"
+# se "SE_0648"
+# textflame 1 1
+# textboxarrow 0 1
+# face 167 "angry"
+# chara 167
+@フェイルノート
+…グリモワール
+あなた、帰ったら？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3501711 "surprise"
+# voice 350171 "grimoire_ge_0022"
+# chara 3501711
+@グリモワール
+はァッ！？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 167 "normal"
+# chara 167
+@フェイルノート
+周りを見て
+あなたの味方は誰もいないわ
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 167
+@フェイルノート
+仮に私達を退けたとして
+このままルシファーに挑むつもり？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 167 "normal"
+# chara 167
+@フェイルノート
+それに、この国には
+まだ二人も斬ル姫がいる
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3501711 "normal"
+# chara 3501711
+@グリモワール
+だからぁっ…！？
+
+# voice 4019 "failnaught_a_0007"
+# textflame 1 1
+# textboxarrow 0 1
+# face 167 "smile"
+# chara 167
+@フェイルノート
+準備不足よ、あなた
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3501711 "angry"
+# voice 350171 "grimoire_ge_0010"
+# chara 3501711
+@グリモワール
+…偉ッそおに…！！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 167 "normal"
+# chara 167
+@フェイルノート
+そういうものでしょ？
+「王」って
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3501711 "normal"
+# chara 3501711
+@グリモワール
+「鍵」のくせして
+指図しないで…！
+
+;;◆グリモ撤退表明-----------------------------------------
+# textwindow "close"
+# alpha 3501711 0 0.5
+# alpha 167 0 0.5
+# waitandnext 0.5
+
+# pos 3501711 3
+# mask 3501711 off
+# alpha 3501711 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "normal"
+# voice 350171 "grimoire_ge_0032"
+# chara 3501711
+@グリモワール
+いーわ…
+退いてあげる
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "angry"
+# chara 3501711
+@グリモワール
+でもね
+勝ったのはワタシ………ッ！
+
+# textflame 0 0
+@
+肩で息をしながら
+勝ち誇った口ぶりで言うグリモワール
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "normal"
+# voice 350171 "grimoire_ge_0004"
+# chara 3501711
+@グリモワール
+タスクは終えたんだから…っ
+
+# alpha 3501711 0 0.5
+# pos 3102311 1
+# mask 3102311 on
+# alpha 3102311 1 0.5
+# face 3102311 "normal"
+# pos 3201911 5
+# mask 3201911 on
+# face 3201911 "normal"
+# alpha 3201911 1 0.5
+# pos 167 3
+# mask 167 on
+# alpha 167 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0028"
+# chara 3102311
+@アスカロン
+…タスク…？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3201911 "sad"
+# chara 3201911
+@シユウ
+たすく…
+
+# voice 4019 "failnaught_a_0004"
+# textflame 1 1
+# textboxarrow 0 2
+# face 167 "smile"
+# chara 167
+@フェイルノート
+おしごとのことね
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3201911 "shy"
+# voice 320191 "chihyu_a_battle_0006"
+# chara 3201911
+@シユウ
+し、しってるぞ！　そんなこと！
+
+# alpha 167 0 0.5
+# alpha 3102311 0 0.5
+# alpha 3201911 0 0.5
+# alpha 3501711 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "normal"
+# voice 350171 "grimoire_ge_0007"
+# chara 3501711
+@グリモワール
+ワタシのタスクは
+理想郷への「鍵」を見つけること
+ならびに他国へのジャマ
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3501711
+@グリモワール
+ウロボロスの指示に従う気なんて
+毛頭なかったけどね
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3501711
+@グリモワール
+鍵を奪ってこいなんて言われてないし
+これ以上死者の怒りを
+積み上げるのもイヤだから
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "angry"
+# voice 350171 "grimoire_ge_0005"
+# chara 3501711
+@グリモワール
+「鍵」は見つけた
+王都はめちゃくちゃ
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3501711
+@グリモワール
+あなた方の国民は死屍累々
+ワタシの損失はわずか
+
+# alpha 3501711 0 0.5
+# pos 3102311 3
+# mask 3102311 off
+# alpha 3102311 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3102311 "angry"
+# voice 310231 "ascalon_a_0026"
+# chara 3102311
+@アスカロン
+…！
+
+# alpha 3102311 0 0.5
+# alpha 3501711 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "normal"
+# chara 3501711
+@グリモワール
+さあ、敗けたのは
+どっちかしら？
+
+# alpha 3501711 0 0.5
+# pos 167 3
+# mask 167 on
+# alpha 167 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 167 "normal"
+# chara 167
+@フェイルノート
+…
+
+# alpha 167 0 0.5
+# alpha 3501711 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0020"
+# chara 3501711
+@グリモワール
+どお
+大ヤケドでしょ

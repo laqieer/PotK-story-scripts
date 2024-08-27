@@ -1,0 +1,283 @@
+;;-----------------------------------------
+;;【このすばEP4･戦闘後】
+;;スクリプトID:
+;;スクリプト最後の背景：sea_beach_day
+;;背景：プール ※無いのでリゾートで代用
+;;-----------------------------------------
+# script "lisp"
+# background "sea_beach_day"
+# bgm "bgm005" 0
+;;海上編ティルフィング
+# body 2101411
+# pos 2101411 4
+# scale 2101411 0.8 0
+# alpha 2101411 0 0
+;;デュリン
+# body 0
+# pos 0 4
+# scale 0 0.8 0
+# alpha 0 0 0
+# layer 0 3
+# mask 0 off
+# face 0 "worry"
+;;水着アスクレピオス
+# body 2600111
+# pos 2600111 2
+# scale 2600111 0.8 0
+# alpha 2600111 1 0
+;;水着シタ
+# body 2201611
+# pos 2201611 2
+# scale 2201611 0.8 0
+# alpha 2201611 0 0
+;;水着めぐみん
+# body 2502511
+# pos 2502511 2
+# scale 2502511 0.8 0
+# alpha 2502511 0 0
+# face 2502511 "worry"
+;;水着ダクネス
+# body 2103411
+# pos 2103411 4
+# scale 2103411 0.8 0
+# alpha 2103411 1 0
+# face 2103411 "sad"
+;;◆背景：リゾート（昼）---------------------
+# textboxarrow 0 3
+# voice 1034 "dakunesu_0022"
+@ダクネス
+水着で大群を相手の連戦
+耐久力に自信のある私でも
+さすがに…ハァハァ
+
+# voice 6001 "asukurepiosu_0003"
+# textboxarrow 0 1
+@アスクレピオス
+まだ元気そうねダクネス
+治療はギリギリまで
+遅らせてあげよう
+
+# emotionbody 1001 1 2103411 0 270
+# effectpattern 1001 2 0
+# effectstart 1001
+# textboxarrow 0 3
+@ダクネス
+なっ！？
+アスクレピオスは
+本当に容赦ないな…
+
+# alpha 2103411 0 0.5
+# alpha 2600111 0 0.5
+# alpha 2502511 1 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 1
+@めぐみん
+あれほどの敵を前にしても
+私はろくに動くことすらできず
+なんと歯がゆいことか！
+
+# voice 9999 "durin_0010"
+# textboxarrow 0 3
+@デュリン
+一日一回とかの大魔法を
+さっき自分で使っちゃったくせに
+
+# emotionbody 1002 8 2502511 0 260
+# effectpattern 1002 1 0
+# effectstart 1002
+# voice 5025 "megumin_0026"
+# textboxarrow 0 1
+@めぐみん
+そ、それはそうですが…
+…魔力回復中は実に
+もどかしいですね
+
+# effectskip 1002
+# alpha 2502511 0 0.5
+# alpha 0 0 0.5
+# alpha 2101411 1 0.5
+# alpha 2201611 1 0.5
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0003"
+@ティルフィング
+…あのカエル達はプールを通って
+ビーチに向かおうとしていました
+だけど…
+
+# textboxarrow 0 1
+# voice 2016 "shita_0009"
+@シタ
+あれで全部ではない
+まだ本命の群れはこの先に…
+ティルフィングもそう思いますか？
+
+# textboxarrow 0 3
+@ティルフィング
+はい
+なんというか…
+胸騒ぎがするんです
+
+# face 2101411 "smile"
+# voice 1014 "tyrufing_0005"
+@ティルフィング
+近くの森の中に集落があります
+そこでカエルのことを少しでも
+きいてみましょう
+
+;;//ティルフィング一旦はける
+# rightout 2101411 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 2201611 0 0.5
+# move 0 3 0
+# alpha 0 1 0.5
+# textwindow "normal"
+# textboxarrow 0 2
+@デュリン
+…ティルフィング？
+やけに積極的じゃないの
+まったく、お人好しにもほどがあるわ
+
+# textflame 0 0
+@
+「だけどそれがティルフィングの
+いいところだよ」とマスター
+
+# textflame 1 1
+# face 0 "usual"
+@デュリン
+そうね…
+
+# emotionbody 1003 1 2101411 0 300
+# effectpattern 1003 1 0
+# effectstart 1003
+# bgm "bgm029" 0
+# rightin 2101411 0.5
+# move 2101411 4 0.5
+# move 0 2 0.5
+# face 2101411 "angry"
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0015"
+@ティルフィング
+大変です！聞き込みによると、
+カエル軍団に囚われた人が
+いるらしいです！
+
+# alpha 0 0 0.5
+# alpha 2101411 0 0.5
+# alpha 2201611 1 0.5
+# move 2502511 4 0
+# alpha 2502511 1 0.5
+# face 2201611 "sad"
+# face 2502511 "angry"
+# emotionbody 1008 1 2201611 0 300
+# effectpattern 1008 2 0
+# effectstart 1008
+# textboxarrow 0 1
+@シタ
+か、カエルが人を…
+つかまえるんですか！？
+
+# textboxarrow 0 3
+@めぐみん
+単に、カエルが人を食べる、
+とかではなく！？
+
+# alpha 2201611 0 0.5
+# alpha 2502511 0 0.5
+# move 2101411 3 0
+# alpha 2101411 1 0.5
+# mask 2101411 off
+# textboxarrow 0 2
+@ティルフィング
+ええ…
+
+@ティルフィング
+たくさんのカエル達に囲まれ睨まれて
+わんわん泣いている女の人がいた、
+という目撃証言が…
+
+# emotionbody 1004 1 2502511 0 300
+# effectpattern 1004 2 0
+# effectstart 1004
+# alpha 2101411 0 0.5
+# alpha 2103411 1 0.5
+# alpha 0 1 0.5
+# face 2103411 "angry"
+# textboxarrow 0 3
+@ダクネス
+なにっ！？ジャイアントトードに
+囲まれ睨まれべろべろと舌で舐められ
+ぬるぬるにされているだって！？
+
+# textboxarrow 0 1
+@デュリン
+いや
+そこまでは言ってないと思うけど
+
+# emotionbody 1005 4 2103411 0 300
+# effectpattern 1005 1 0
+# effectstart 1005
+# textboxarrow 0 3
+# face 2103411 "shy"
+# voice 1034 "dakunesu_0005"
+@ダクネス
+なんとうらやまし…
+ゲフンゲフン
+け、けしからん！
+
+# alpha 2600111 1 0.5
+# move 2101411 4 0
+# mask 2101411 on
+# alpha 2101411 1 0.5
+# alpha 2103411 0 0.5
+# alpha 0 0 0.5
+# textboxarrow 0 1
+@アスクレピオス
+ティルフィング、その
+囚われの人の場所は？
+
+# textboxarrow 0 3
+@ティルフィング
+それが…カエル軍団は
+より良い棲みかを求めてジャングルの
+奥深くへと移ったらしくて
+
+# voice 1014 "tyrufing_0001"
+@ティルフィング
+きっと、その人も一緒にそこに…
+マスター…どうしたら…
+
+# textflame 0 0
+@
+「必ず、囚われの人を助けよう
+それも僕達のクエストの目的だ…
+そうだろう？」マスターは言った
+
+# textflame 1 1
+@ティルフィング
+…はい、マスター！
+私も必ず、その人を
+助け出したいと思います！
+
+# voice 6001 "asukurepiosu_0003"
+# textboxarrow 0 1
+@アスクレピオス
+では、先を急ぎましょう
+事は一刻を争うことに
+なるかもしれないわ
+
+# emotionbody 1006 8 0 0 260
+# effectpattern 1006 1 0
+# effectstart 1006
+# alpha 2600111 0 0.5
+# alpha 2101411 0 0.5
+# move 0 3 0
+# alpha 0 1 0.5
+# face 0 "worry"
+# textboxarrow 0 2
+# voice 9999 "durin_0027"
+@デュリン
+ふぅ…なんだか、
+おおごとになってきたわね

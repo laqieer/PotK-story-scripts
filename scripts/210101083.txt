@@ -1,0 +1,220 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１０章 章タイトル「勝利を招く悪魔―フレイルティ―」
+;;第1話－８　タイトル：誓約の条件
+;;1_8_3
+;;スクリプト最後の背景：中心部
+;;-----------------------------------------
+# script "lisp"
+# background "in_city"
+# bgmfile "bgm424_block" "BgmIntegralNoahCommand" 0
+;;-----------------------------------------
+;;バルムンク
+# body 3100911
+# pos 3100911 3
+# scale 3100911 0.8 0
+# layer 3100911 2
+# alpha 3100911 0 0
+# mask 3100911 off
+;;グラム
+# body 3100811
+# pos 3100811 3
+# scale 3100811 0.8 0
+# layer 3100811 2
+# alpha 3100811 0 0
+# mask 3100811 off
+;;シェキナー
+# body 3400711
+# pos 3400711 3
+# scale 3400711 0.8 0
+# layer 3400711 2
+# alpha 3400711 0 0
+# mask 3400711 off
+;;フォルカス・神令・ヘル
+# body 5301811
+# pos 5301811 3
+# scale 5301811 0.8 0
+# layer 5301811 2
+# alpha 5301811 0 0
+# mask 5301811 off
+;;ヒョウハ・神令・テュール
+# body 5402011
+# pos 5402011 3
+# scale 5402011 0.8 0
+# layer 5402011 2
+# alpha 5402011 0 0
+# mask 5402011 off
+;;ミュルグレス・神令・トール
+# body 5104611
+# pos 5104611 3
+# scale 5104611 0.8 0
+# layer 5104611 2
+# alpha 5104611 0 0
+# mask 5104611 off
+;;如意金箍棒・神令・フリッグ
+# body 5203111
+# pos 5203111 3
+# scale 5203111 0.8 0
+# layer 5203111 2
+# alpha 5203111 0 0
+# mask 5203111 off
+;;-----------------------------------------
+# move 5301811 3 0
+# face 5301811 "normal"
+# alpha 5301811 1 0
+# mask 5301811 off
+# textflame 1 1
+# textboxarrow 0 2
+@フォルカス
+…………
+
+;;フォルカス（独白）
+# move 5301811 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 5301811 off
+@フォルカス
+中心部のキル姫達は連携が上手く
+いっていませんね
+
+;;フォルカス（独白）
+# textboxarrow 0 0
+@フォルカス
+これなら思い切った手を打つことが
+できそうです
+
+# voice 530181 "forcas_c_0050"
+# face 5301811 "angry"
+# textboxarrow 0 2
+# textwindow "normal"
+@フォルカス
+如意金箍棒！
+
+# move 5301811 2 0.5
+# mask 5301811 on
+# move 5203111 4 0
+# face 5203111 "sad"
+# alpha 5203111 1 0.5
+# mask 5203111 on
+# textboxarrow 0 3
+@如意金箍棒
+うーん…
+まだニョイ子って呼んでくれないん
+だねぇ…
+
+# face 5301811 "normal"
+# textboxarrow 0 1
+@フォルカス
+ごめんなさい…
+それより、相手の動きが乱れています
+この隙に！
+
+# voice 520311 "nyoikinkobou_c_0033"
+# face 5203111 "normal"
+# textboxarrow 0 3
+@如意金箍棒
+うん、任せて
+手加減しなくていいよね
+
+# voice 530181 "forcas_c_0003"
+# textboxarrow 0 1
+@フォルカス
+周りは気にせず、
+全力でお願いします
+
+# voice 520311 "nyoikinkobou_c_0003"
+#setnextbgmblock 1
+# textboxarrow 0 3
+@如意金箍棒
+はい
+それじゃ、いくわね！
+
+# se "SE_9092"
+# sedelay "SE_9469" 1 
+# voice 520311 "nyoikinkobou_c_0029"
+# face 5203111 "angry"
+# textboxarrow 0 3
+@如意金箍棒
+仙人の術の深奥、見せてあげる！
+はああああっ！
+
+;;//如意金箍棒が中心部を囲う壁を一部破壊する
+;;//画面揺れ
+# se "SE_11586"
+# textwindow "close"
+# alpha 5301811 0 0.5
+# alpha 5203111 0 0.5
+# waitandnext 0.5
+
+# se "SE_12471"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 540201 "hyoha_c_0021"
+# move 5402011 2 0
+# face 5402011 "normal"
+# alpha 5402011 1 0.5
+# mask 5402011 on
+# textboxarrow 0 1
+# move 5104611 4 0
+# face 5104611 "normal"
+# alpha 5104611 1 0.5
+# mask 5104611 on
+# textwindow "normal"
+@ヒョウハ
+おおっ！
+やるなー、ニョイ子さん！
+
+# voice 510461 "murgleys_c_0004"
+# face 5104611 "happy"
+# textboxarrow 0 3
+@ミュルグレス
+壁の一部におっきな穴が空いたわね
+これってミュル達、すっごく
+有利になったんじゃない？
+
+# alpha 5402011 0 0.5
+# alpha 5104611 0 0.5
+# move 3100811 2 0
+# face 3100811 "angry"
+# alpha 3100811 1 0.5
+# mask 3100811 on
+# textboxarrow 0 1
+# move 3100911 4 0
+# face 3100911 "sad"
+# alpha 3100911 1 0.5
+# mask 3100911 on
+@グラム
+なんてことだ…！
+南側の壁がっ
+
+# voice 310091 "barumunku_t_0015"
+# textboxarrow 0 3
+@バルムンク
+あんな大きな穴が空いてしまっては
+外から獣達が町に入り込んで
+しまうわ…
+
+# voice 340071 "shekina_t_battle_0005"
+# alpha 3100811 0 0.5
+# alpha 3100911 0 0.5
+# move 3400711 3 0
+# face 3400711 "sad"
+# alpha 3400711 1 0.5
+# mask 3400711 off
+# textboxarrow 0 2
+@シェキナー
+くっ…
+守護とは、全てを守れてこその
+言葉なのに…
+
+# alpha 3400711 0 0.5
+# move 5301811 3 0
+# face 5301811 "angry"
+# alpha 5301811 1 0.5
+# mask 5301811 off
+# textboxarrow 0 2
+@フォルカス
+上手くいきました
+更に攻勢を強めましょう！

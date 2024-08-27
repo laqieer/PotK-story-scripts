@@ -1,0 +1,509 @@
+;;-----------------------------------------
+;;ファンキル　10月学園イベント2020シナリオ
+;;【EP.2】清純乙女大作戦
+;;スクリプト最後の背景：教室(昼)
+;;背景：生徒会室(昼)
+;;-----------------------------------------
+# script "lisp"
+# background "student_council_room_02"
+# bgm "bgm002" 0
+;;-----------------------------------------
+;;アルマス (学園)
+# body 3103831
+# pos 3103831 3
+# scale 3103831 0.8 0
+# layer 3103831 2
+# alpha 3103831 0 0
+# mask 3103831 off
+;;制服エクスカリバー
+# body 34
+# pos 34 3
+# scale 34 0.8 0
+# layer 34 2
+# alpha 34 0 0
+# mask 34 off
+;;制服パラシュ
+# body 118
+# pos 118 3
+# scale 118 0.8 0
+# layer 118 2
+# alpha 118 0 0
+# mask 118 off
+;;-----------------------------------------
+;;【EP.2】清純乙女大作戦
+;;//背景：生徒会室(昼)
+# move 34 2 0
+# face 34 "normal"
+# alpha 34 1 0
+# mask 34 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 3103831 4 0
+# face 3103831 "normal"
+# alpha 3103831 1 0
+# mask 3103831 on
+@エクスカリバー
+あなたがアルマスですね
+ようこそ、聖ユグドラシル姫学院へ
+
+# se "SE_6504"
+# emotionbody 1001 3 34 10 290
+# effectpattern 1001 1 3
+# effectstart 1001
+# voice 1011 "excalibur_0004"
+# face 34 "happy"
+# textboxarrow 0 1
+@エクスカリバー
+お噂はいろいろ
+耳にしていますよ…ふふ
+
+# voice 1038 "almace_0031"
+# textboxarrow 0 3
+@アルマス
+あぁ…
+ごめんなさい、迷惑をかけて…
+
+# textflame 0 0
+@マスター
+惜しかったんだけどね
+
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+勝負は勝負よ
+
+;;モノローグ
+# textflame 0 0
+@
+結局、レーヴァテインとの
+勝負は負けてしまい、
+誤解を解くチャンスを逃してしまった
+
+# voice 1011 "excalibur_0034"
+# face 34 "normal"
+# textboxarrow 0 1
+# textflame 1 1
+@エクスカリバー
+いえ、仕方のないことです
+謝る必要はありませんよ
+
+# textboxarrow 0 1
+@エクスカリバー
+我が校…聖ユグは、
+気品あふれる淑女達を
+育てるための学院です
+
+# textboxarrow 0 1
+@エクスカリバー
+その校風の反動なのか、
+色恋沙汰に興味のある
+生徒が多いようで…
+
+# textboxarrow 0 3
+@アルマス
+それで、この学院にもすっかり
+広まっちゃったってわけね…
+
+# voice 1038 "almace_0027"
+# face 3103831 "sad"
+# textboxarrow 0 3
+@アルマス
+はぁ、どうしよう？
+これじゃ視察どころじゃないわ…
+
+;;モノローグ
+# textflame 0 0
+@
+困り切った様子のアルマス
+
+@マスター
+大丈夫
+きっとすぐ誤解は解けるよ
+
+# voice 1038 "almace_0022"
+# face 3103831 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+え…？
+そ、そうね
+
+# textboxarrow 0 3
+@アルマス
+悩んでいても解決はしない…
+今はとにかく、
+噂を解消することを考えましょう
+
+# voice 1038 "almace_0030"
+# textboxarrow 0 3
+@アルマス
+ありがとう、マスター
+あなたのおかげで
+少し冷静になれたわ
+
+;;モノローグ
+# face 34 "happy"
+# textflame 0 0
+@
+二人の様子を見て、
+ふふ、と微笑むエクスカリバー
+
+# se "SE_0737"
+# face 34 "surpurise"
+# waitandnext 0.5
+
+;;モノローグ
+@
+すると突然、
+そうだ！と大きく手を叩いた
+
+# face 34 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@エクスカリバー
+思いつきましたよ
+お二人の噂を解消する方法
+
+# emotionbody 1002 1 3103831 10 310
+# effectpattern 1002 2 0
+# effectstart 1002
+# face 3103831 "angry"
+# textboxarrow 0 3
+@アルマス
+ほんとっ！？
+
+# voice 1011 "excalibur_0003"
+# textboxarrow 0 1
+@エクスカリバー
+ええ、きっと上手くいきます
+ご協力をお願いできますか？
+
+# voice 1038 "almace_0033"
+# face 3103831 "normal"
+# textboxarrow 0 3
+@アルマス
+もちろん！
+私にできることなら
+なんだってするわっ！
+
+;;//演出：場面転換
+;;//背景：教室(昼)
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "classroom02_afternoon"
+# alpha 34 0 0
+# alpha 3103831 0 0
+# move 3103831 3 0
+# face 3103831 "normal"
+# alpha 3103831 1 0.5
+# mask 3103831 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//演出：苦笑いするアルマス
+# bgm "stop"
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+…………
+
+# bgm "bgm006" 0
+# se "SE_6505"
+# emotionbody 1003 3 3103831 10 200
+# effectpattern 1003 2 3
+# effectstart 1003
+# face 3103831 "happy"
+# textboxarrow 0 2
+@アルマス
+…う、うふふふふっ♪
+聖ユグのみなさま、
+ごきげんよう！
+
+# textboxarrow 0 2
+@アルマス
+わたし…あ、いえ！
+わたくしはアルマスと申します
+
+# textboxarrow 0 2
+@アルマス
+清純な淑女を目指すため、
+みなさまと共に
+お勉強させていただきますわ
+
+# textboxarrow 0 2
+@アルマス
+以後お見知りおきを！
+うふふっ、ふふふふふ…♪
+
+# effectskip 1003
+# textflame 0 0
+@マスター
+…………
+
+;;モノローグ
+@
+ぎこちない様子で、
+優雅に話そうと
+奮闘しているアルマス
+
+;;モノローグ
+@
+普段の彼女からすると
+違和感だらけの口調だが…
+
+# voice 2004 "parashu_0006"
+# move 118 2 0
+# face 118 "happy"
+# alpha 118 1 0.5
+# mask 118 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 3103831 4 0.5
+# mask 3103831 on
+@パラシュ
+ふふ、いいね…
+彼女には素質がある、
+ボクの理想までもう少しだ…
+
+;;モノローグ
+# textflame 0 0
+@
+そんなアルマスを
+満足そうに見つめる
+風紀委員のパラシュ
+
+;;モノローグ
+@
+エクスカリバーの要請で、
+アルマスにお嬢様としての
+口調や仕草を指導していた
+
+# voice 1038 "almace_0002"
+# face 3103831 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+ね、ねえ…
+本当にこれで上手くいくの？
+
+# face 118 "normal"
+# textboxarrow 0 1
+@パラシュ
+口調が戻っているよ、
+アルマス
+
+# face 3103831 "happy"
+# textboxarrow 0 3
+@アルマス
+うぐっ…こ、これで
+よろしいでしょうか…？
+
+;;モノローグ
+# textflame 0 0
+@
+慣れないお嬢様の所作に
+全身をぷるぷるさせるアルマス
+
+# textflame 1 1
+# textboxarrow 0 1
+@パラシュ
+視察が終わるまでは、
+常にその振る舞いを忘れないこと
+…いいね？
+
+# emotionbody 1004 1 3103831 10 310
+# effectpattern 1004 2 0
+# effectstart 1004
+# voice 1038 "almace_0022"
+# face 3103831 "surprise"
+# textboxarrow 0 3
+@アルマス
+ええっ、そんなぁっ！？
+こんなの我慢できないわよ、
+絶・やめたいんだけど…！？
+
+# voice 2004 "parashu_0011"
+# textboxarrow 0 1
+@パラシュ
+それは駄目だよ
+生徒会長も言っていただろう？
+
+# textboxarrow 0 1
+@パラシュ
+キミが清楚で気位の高い
+生粋のお嬢様であると、
+生徒達に思わせられれば…
+
+# textboxarrow 0 1
+@パラシュ
+色恋の噂なんて
+自然と無くなるはずだって
+
+# textboxarrow 0 1
+@パラシュ
+いわれのない噂を
+解消したいのなら、
+今は従うべきだ…わかるね？
+
+# voice 1038 "almace_0013"
+# face 3103831 "sad"
+# textboxarrow 0 3
+@アルマス
+う、うう…
+わかったわよ…
+
+;;モノローグ
+# alpha 118 0 0.5
+# alpha 3103831 0 0.5
+# textflame 0 0
+@
+その後も、お嬢様になりきって
+生徒達と交流するアルマス
+
+;;モノローグ
+@
+だが、アルマスの限界は
+思ったよりも早く…
+
+# emotionbody 1005 6 3103831 50 250
+# effectpattern 1005 1 1
+# effectstart 1005
+# move 3103831 3 0
+# face 3103831 "angry"
+# alpha 3103831 1 0.5
+# mask 3103831 off
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+…だぁああああっ！！
+やってられるかぁあああっ！！
+
+# emotionbody 1006 2 118 10 220
+# effectpattern 1006 1 1
+# effectstart 1006
+# voice 2004 "parashu_0022"
+# alpha 3103831 0 0.5
+# move 118 3 0
+# face 118 "surprise"
+# alpha 118 1 0.5
+# mask 118 off
+# textboxarrow 0 2
+@パラシュ
+えっ？
+
+;;モノローグ
+# textflame 0 0
+@
+お嬢様の皮は
+あっさりと剥がれてしまった
+
+# alpha 118 0 0.5
+# move 3103831 3 0
+# face 3103831 "angry"
+# alpha 3103831 1 0.5
+# mask 3103831 off
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+もういいっ！
+やっぱり正攻法で行くわ！
+
+# textboxarrow 0 2
+@アルマス
+みんな、聞いて！
+私とマスターの噂なんだけど…
+あれはただの勘違いなの！！
+
+# textboxarrow 0 2
+@アルマス
+そうよねマスター！？
+
+# textflame 0 0
+@マスター
+う、うん
+
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+ほら、マスターも頷いてる！
+これでわかってくれるわよね！？
+
+# emotionbody 1007 8 118 80 220
+# effectpattern 1007 1 0
+# effectstart 1007
+# move 118 2 0
+# face 118 "sad"
+# alpha 118 1 0.5
+# mask 118 on
+# textboxarrow 0 1
+# move 3103831 4 0.5
+# mask 3103831 on
+@パラシュ
+あぁあぁ…
+そんなことしたら、余計に…
+
+# effectskip 1007
+# voice 1038 "almace_0022"
+# face 3103831 "surprise"
+# textboxarrow 0 3
+@アルマス
+え…な、なに！？
+どうしてみんな、
+目をキラキラさせてるの…！？
+
+# face 118 "normal"
+# textboxarrow 0 1
+@パラシュ
+当然だろう？
+ついさっきまで
+清純乙女だったキミが…
+
+# textboxarrow 0 1
+@パラシュ
+今は素の調子で、
+マスターに元気よく
+話しかけている
+
+# textboxarrow 0 1
+@パラシュ
+そんなの…恋人の前では
+本当の自分を見せてしまう、
+恋する乙女そのものじゃないか
+
+# emotionbody 1008 1 3103831 10 310
+# effectpattern 1008 2 0
+# effectstart 1008
+# textboxarrow 0 3
+@アルマス
+はっ…！？
+
+;;モノローグ
+# textflame 0 0
+@
+そう言われて、
+アルマスは今一度
+生徒達の顔を見る
+
+;;モノローグ
+@
+生徒達は一様に、
+恋人って素敵…と言いたげな
+熱いまなざしを送っていた…
+
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+ちっ…違うのっ！！
+そうじゃなくて、もうっ…
+なんなのよーーーっ！！
+
+# face 118 "sad"
+# textboxarrow 0 1
+@パラシュ
+あらら…
+まぁ、いろいろ
+上手くいくといいね…

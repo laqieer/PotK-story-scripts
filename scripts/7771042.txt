@@ -1,0 +1,405 @@
+;;【EP4】戦闘後
+# script "lisp"
+# background "plain"
+# bgm "bgm023" 0
+# alpha 102321 0 0
+# alpha 102521 0 0
+# alpha 501731 0 0
+# alpha 301821 0 0
+# mask 810004 off
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# body 501731
+# pos 501731 5
+# scale 501731 0.8 0
+# body 301821
+# pos 301821 1
+# scale 301821 0.8 0
+# body 102521
+# pos 102521 1
+# scale 102521 0.8 0
+# body 102321
+# pos 102321 3
+# scale 102321 0.8 0
+# layer 102321 4
+# layer 301821 3
+# layer 501731 2
+# layer 102521 1
+# textflame 1 1
+# textboxarrow 0 2
+# chara 810004
+@異族
+ググギギギ…！
+グギャギャギャギャッ！！
+
+;;//下記セリフ、戦いで余裕がなく一人称が素に戻っています
+# alpha 810004 0 0.3
+# alpha 102521 1 0.5
+# alpha 102321 1 0.5
+# alpha 501731 1 0.5
+# textboxarrow 0 1
+# voice 1025 "muramasa_battle_0008"
+# face 102521 "sad"
+# face 102321 "sad"
+# face 501731 "sad"
+# chara 102521
+@ムラマサ
+ぐぅっ！！
+…強い…今の私、では到底…
+
+# alpha 102521 0 0.3
+# alpha 301821 1 0.5
+# textboxarrow 0 1
+# voice 3018 "forcas_battle_0005"
+# face 301821 "sad"
+# chara 301821
+@フォルカス
+…力、力と語っておいて、
+この体たらく…！
+私はなんて情けない…
+
+# textboxarrow 0 2
+# voice 1023 "ascalon_battle_0005"
+# face 102321 "angry"
+# chara 102321
+@アスカロン
+フォルカス！
+気持ちはわかりますが、
+ムラマサの援護を…！
+
+# textboxarrow 0 2
+# face 102321 "angry"
+# chara 102321
+@アスカロン
+グリモワール、
+なんとか異族の
+気を引いてください！
+
+# textboxarrow 0 3
+# face 501731 "angry"
+# chara 501731
+@グリモワール
+くっ…魔力がもう…でも…
+…気を引く、なんてのじゃなく
+この一発でぶちのめすんだから！
+
+;;//SE：爆発音
+;;//画面ゆれる
+# envbody 1501 6 0
+# effectpattern 1501 1 0
+# effectstart 1501
+# waitandnext 0.7
+
+# sedelay "SE_0637" 0.5
+# effectskip 1501
+# se "SE_5680"
+# fadein "red" 0.8
+# shake 0 1.5
+# face 102321 "angry"
+# face 301821 "angry"
+# waitandnext 1.6
+
+# textboxarrow 0 2
+# chara 102321
+@アスカロン
+今だよ、フォルカス！
+
+# textboxarrow 0 1
+# chara 301821
+@フォルカス
+わ、わかりました…！
+
+# alpha 102521 1 0.5
+# alpha 301821 0 0.3
+# textboxarrow 0 1
+# face 102521 "sad"
+# chara 102521
+@ムラマサ
+す、すみません、みなさん…！
+肩を貸していただきまして、
+ありがとうございます…
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textboxarrow 0 2
+# face 102321 "normal"
+# chara 102321
+@アスカロン
+気にしないでください！
+それよりも今は、
+逃げることに集中しましょう…！
+
+;;//画面暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# bgm "bgm003" 0.7
+# background "plain"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# voice 1023 "ascalon_0019"
+# textflame 1 1
+# textboxarrow 0 2
+# face 102321 "normal"
+# face 102521 "normal"
+# face 501731 "usual"
+# chara 102321
+@アスカロン
+…ふぅ、異族は私達が
+ここに隠れてるって気づかないまま
+あっちへ行ってしまったようです
+
+# alpha 102521 0 0.3
+# alpha 301821 1 0.5
+# textboxarrow 0 1
+# face 301821 "normal"
+# chara 301821
+@フォルカス
+ありがとう、アスカロン
+…ひとまず、安心かな…
+
+# alpha 102521 1 0.5
+# alpha 301821 0 0.3
+# textboxarrow 0 1
+# voice 1025 "muramasa_0031"
+# face 102521 "sad"
+# chara 102521
+@ムラマサ
+面目ありません
+わた…拙者がふがいないばかりに…
+
+# textboxarrow 0 3
+# face 501731 "angry"
+# chara 501731
+@グリモワール
+…キミねぇ…そのしゃべり方、
+マサムネの前だけで
+いいんじゃないのぉ？
+
+# emotionbody 5801 9 102521 60 220
+# effectpattern 5801 1 0
+# effectstart 5801
+# textboxarrow 0 1
+# face 102521 "normal"
+# chara 102521
+@ムラマサ
+いいえ！常に姉上の妹として
+恥ずかしくない生き方を心がけるには
+話し方も常にこうあるべきですから…
+
+# effectskip 5801
+# textboxarrow 0 3
+# face 501731 "usual"
+# chara 501731
+@グリモワール
+さっきの戦いで危なくなった時、
+素に戻ってたけど？
+
+# emotionbody 6002 11 102521 -85 195
+# effectpattern 6002 2 0
+# effectstart 6002
+# textboxarrow 0 1
+# face 102521 "angry"
+# chara 102521
+@ムラマサ
+それは…！
+いえ、それこそ、拙者の実力が
+不足していたという証です…
+
+# effectskip 6002
+# textboxarrow 0 2
+# voice 1023 "ascalon_0004"
+# face 102321 "happy"
+# chara 102321
+@アスカロン
+…うふふっ
+よかったです！
+
+# textboxarrow 0 3
+# face 501731 "angry"
+# chara 501731
+@グリモワール
+…どこがぁ？
+異族にまるで歯が立たなくて
+こうして隠れてるっていうのに…
+
+# emotionbody 5844 9 102321 -50 195
+# effectpattern 5844 1 0
+# effectstart 5844
+# textboxarrow 0 2
+# voice 1023 "ascalon_0028"
+# chara 102321
+# face 102321 "normal"
+@アスカロン
+それは全然よくないですけど…
+でも、ムラマサとグリモワールが
+いつもみたいに話してたから…
+
+# effectskip 5844
+# textboxarrow 0 2
+# face 102321 "shy"
+# chara 102321
+@アスカロン
+みんなで落ち込んじゃって、
+黙り込んでしまうよりは
+よかったって思ったんです
+
+# alpha 102521 0 0.3
+# alpha 301821 1 0.5
+# textboxarrow 0 1
+# face 301821 "normal"
+# face 102321 "normal"
+# chara 301821
+@フォルカス
+確かにそうかもね
+…でも、さっきの戦いのことも
+よく考えないといけない
+
+# textboxarrow 0 1
+# voice 3018 "forcas_battle_0005"
+# face 301821 "sad"
+# chara 301821
+@フォルカス
+…まるで歯が立たなかった…
+マスターが判断した通り、
+勝てない相手だったんだ…
+
+# textboxarrow 0 3
+# face 501731 "angry"
+# chara 501731
+@グリモワール
+…勝てない相手、じゃないわ
+今はまだ、勝てない相手…よ
+…悔しいけど…
+
+# alpha 102521 1 0.5
+# alpha 301821 0 0.3
+# textboxarrow 0 1
+# face 102521 "angry"
+# chara 102521
+@ムラマサ
+…はい
+ですが、次は必ず、
+この雪辱を果たしてみせます
+
+# textboxarrow 0 1
+# face 102521 "normal"
+# chara 102521
+@ムラマサ
+ただ、それは今の拙者達だけでは
+恐らく叶えることは
+できないのでしょう
+
+# textboxarrow 0 1
+# face 102321 "sad"
+# voice 1025 "muramasa_0015"
+# face 102521 "sad"
+# chara 102521
+@ムラマサ
+仮に、この４人で
+力を合わせたとしても…
+
+# alpha 102521 0 0.3
+# alpha 301821 1 0.5
+# textboxarrow 0 1
+# chara 301821
+@フォルカス
+一人一人の力量が足りないのは
+言うまでもないですし、
+協力することにも慣れていません
+
+# textboxarrow 0 1
+# voice 3018 "forcas_battle_0005"
+# face 301821 "sad"
+# chara 301821
+@フォルカス
+そもそも…恐らく、
+私達は、私達だけでは
+満足に戦えないのでしょう
+
+# textboxarrow 0 1
+# chara 301821
+@フォルカス
+さっきの戦いより、
+この前の掃討戦の時の方が
+よほどよかったように思いました…
+
+# textboxarrow 0 3
+# face 501731 "usual"
+# chara 501731
+@グリモワール
+…確かにそうかもね
+特に、マスターに指揮されてると
+動きやすかったと思ったわ
+
+# emotionbody 5700 8 501731 -80 205
+# effectpattern 5700 1 0
+# effectstart 5700
+# textboxarrow 0 3
+# face 501731 "angry"
+# chara 501731
+@グリモワール
+…マスターがいないと
+力がちゃんと引き出せないなんて
+なんかくやしいけど！
+
+# effectskip 5700
+# textboxarrow 0 3
+# chara 501731
+@グリモワール
+あのハイテンションバカに
+勝つためなら、
+そのぐらい受け入れてやるわ
+
+# textboxarrow 0 2
+# chara 102321
+@アスカロン
+そうですね…
+マスターがいてくれるから
+私達は思いっきり戦える…
+
+# textboxarrow 0 2
+# voice 1023 "ascalon_0003"
+# face 102321 "angry"
+# chara 102321
+@アスカロン
+…その通りだと思います！
+だったら、いつまでも
+こんなとこにいられません
+
+# textboxarrow 0 2
+# face 102321 "normal"
+# chara 102321
+@アスカロン
+もう少しだけここに隠れて
+安全そうなら少しずつ移動を！
+…みんなで無事に街へ戻りましょう
+
+# textboxarrow 0 2
+# face 102321 "sad"
+# chara 102321
+@アスカロン
+そうして…マスターに…
+それと、みんなに謝りましょう…
+勝手に出て行ってごめんなさい…と
+
+# textflame 0 0
+@
+残る三人のキラープリンセス達も
+アスカロンの言葉に黙って頷く
+
+# textflame 0 0
+@
+彼女達は、
+自分達が間違っていたということを
+その身をもって学んだのであった…

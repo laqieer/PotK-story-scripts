@@ -1,0 +1,172 @@
+;;-----------------------------------------
+;;【OP】
+;;-----------------------------------------
+# script "lisp"
+# background "101_cave"
+# bgmfile "bgm454" "BgmIntegralNoahEvent007" 0
+;;-----------------------------------------
+;;イージス
+# body 52000111
+# pos 52000111 3
+# scale 52000111 0.8 0
+# layer 52000111 3
+# mask 52000111 off
+# alpha 52000111 0 0
+;;魔物
+# body 808412
+# pos 808412 4
+# scale 808412 0.8 0
+# layer 808412 4
+# alpha 808412 0 0
+# brightness 808412 0.1 0
+;;-----------------------------------------
+;;背景：死者の国イメージの洞窟っぽいところをお願いします。
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+死者の国の玄関口、地底世界
+そこで戦うキル姫の姿があった
+彼女の名は、イージス
+
+;;演出：イージスin
+# alpha 52000111 1 1
+# waitandnext 1.5
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 52000111 "angry"
+# voice 5200011 "aegis_c_battle_0001"
+@イージス
+はあっ！
+
+;;演出：イージスが亡者を留めているイメージの攻撃エフェクト
+# se "SE_12603"
+# fadein "white" 0.5
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+@イージス
+この先は貴様らが
+赴くには相応しい地ではない！
+
+# textflame 1 1
+# textboxarrow 0 2
+@イージス
+死せる者には死せる者の役目…
+ユグドラシルの下でマナに還る日を
+大人しく待っていろ！
+
+# alpha 52000111 0 0.5
+# textflame 0 0
+@
+地上世界や天上世界の悪魔や天使
+その者らが地に堕ち、地底へと
+死者の国へと、誘われる
+
+# textflame 0 0
+@
+力ある者達も地に堕ちれば
+いずれはただ純粋な力、マナへと還り
+新たなモノを生み出す力となる
+
+# textflame 0 0
+@
+そうして世界は回っていく…
+
+# textflame 0 0
+@
+だが、その世界の
+循環機構を成り立たせていた
+ユグドラシルの力は失われかけている
+
+# textflame 0 0
+@
+ユグドラシルの異常によって
+地上に発生した裂け目は
+地底とつながっている
+
+# textflame 0 0
+@
+亡者達は地への、生への
+執念をもってその裂け目を目指す
+
+# textflame 0 0
+@
+それを防ぐ地底から地上への
+道を護る盾…それがイージスだった
+
+;;できればもやもやフレームで
+# move 52000111 3 0
+# alpha 52000111 1 0.5
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+# face 52000111 "normal"
+@イージス
+…それにしても今日は数が多い
+
+;;できればもやもやフレームで
+@イージス
+ユグドラシルが循環機能を
+停止してしまっているとしたら…？
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 52000111 "angry"
+# voice 5200011 "aegis_c_0022"
+@イージス
+地に還るべき力がマナとならずに
+不完全な状態で留まり続け…はっ！？
+
+# move 52000111 2 0.3
+# alpha 808412 1 0.5
+# textboxarrow 0 0
+# waitandnext 0.5
+
+;;演出：攻撃エフェクト
+;;演出：黒い影のようなものがイージスを襲う
+# se "SE_5732"
+# move 808412 3 0
+# fadein "red" 0.5
+# waitandnext 0.7
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5200011 "aegis_c_battle_0005"
+@イージス
+くっ！
+
+# alpha 52000111 0 0.5
+# se "SE_0846"
+# textwindow "close"
+# waitandnext 0.5
+
+;;演出：転ぶイージス黒い影が通り過ぎていく
+# leftout 808412 0.5
+# se "SE_5767"
+# waitandnext 0.8
+
+# move 52000111 3 0
+# alpha 52000111 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@イージス
+なんだ今のは…
+亡者と呼ぶには
+あまりにも強大で…危険だ！
+
+# textflame 0 0
+@
+一連の流れを見ていた
+カオスリーパーにも
+不安が広がっていくのだった
+
+# fadeout "black" 2
+# waitandnext 2.2

@@ -1,0 +1,461 @@
+;;-----------------------------------------
+;;413022021
+;;ロンゴピックアップ【EP2】「獣の本質」後半
+;;-----------------------------------------
+# script "lisp"
+# background "201_border"
+# bgm "bgm029_030" 0
+;;ロンゴミアント
+# body 3301011
+# pos 3301011 3
+# scale 3301011 0.8 0
+# layer 3301011 4
+# mask 3301011 off
+# alpha 3301011 1 0
+;;ミョルニル
+# body 3200111
+# pos 3200111 3
+# scale 3200111 0.8 0
+# layer 3200111 3
+# mask 3200111 off
+# alpha 3200111 0 0
+;;ケイオスリオン兵1
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# layer 3820001 3
+# mask 3820001 on
+# alpha 3820001 0 0
+;;ケイオスリオン兵2
+# entry 938200019 3820001
+# pos 938200019 1
+# scale 938200019 0.8 0
+# layer 938200019 2
+# mask 938200019 on
+# alpha 938200019 0 0
+;;ケイオスリオン兵3
+# entry 938200018 3820001
+# pos 938200018 5
+# scale 938200018 0.8 0
+# layer 938200018 2
+# mask 938200018 on
+# alpha 938200018 0 0
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;火エフェクト
+# envbody 0 6 0
+# effectpattern 0 1 0
+;;剣閃（ロンゴ）
+# effectbody 1000 1 -100 0 1
+# effectbody 1001 3 0 0 1
+;;剣閃（ミョル）
+# effectbody 2000 6 100 0 5
+;;◆背景：国境-----------------------------------------
+# textflame 1 1
+# textboxarrow 0 2
+# face 3301011 "angry"
+# voice 330101 "rhongomiant_a_0024"
+# chara 3301011
+@ロンゴミアント
+やり…づらいっ！
+
+# textflame 0 0
+@
+何度も槍を振るう
+ロンゴミアント
+
+# textflame 0 0
+@
+しかし、ミョルニルに
+当たることはない
+
+# textflame 0 0
+@
+そのことにロンゴミアントは
+苛立たしげに顔をしかめた
+
+# textwindow "close"
+# alpha 3301011 0 0.5
+# se "SE_9146"
+# alpha 3200111 1 0
+# face 3200111 "happy"
+# rightin 3200111 0.3
+# waitandnext 0.3
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 320011 "myuruniru_ge_0004"
+# chara 3200111
+@ミョルニル
+ふっふ～んっ！
+こっちだよ！
+
+# textflame 0 0
+@
+規則性もなにもない動き
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3200111 "angry"
+# voice 320011 "myuruniru_ge_0029"
+# chara 3200111
+@ミョルニル
+次はライオンさんのメラメラで
+丸コゲになっちゃえっ！
+
+# textwindow "close"
+# se "SE_5215"
+# shake 1 0.6
+# fadein "white" 0.6
+# waitandnext 0.9
+
+;;SE：炎が噴きだすような音
+# se "SE_5596"
+# subfillrect 1 "red" 0.3 0 0.2
+# effectstart 0
+# alpha 3200111 0 0.5
+# alpha 3301011 1 0.5
+# face 3301011 "surprise"
+# textwindow "normal"
+# textflame 0 0
+@
+斧を大雑把に振り下ろしたかと
+思えば次の瞬間には炎が迫る
+
+# se "SE_5204"
+# move 3301011 4 0.1
+# subfillrect 1 "red" 0.1 0.2 0
+# effectskip 0
+# fadein "white" 0.3
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3301011 "angry"
+# voice 330101 "rhongomiant_a_battle_0005"
+# chara 3301011
+@ロンゴミアント
+くっ…！
+うろちょろとっ…
+くらぇっ！
+
+# textwindow "close"
+# se "SE_5575"
+# leftout 3301011 0.5
+# waitandnext 0.5
+
+# voice 330101 "rhongomiant_a_battle_0002"
+# pos 3200111 3
+# mask 3200111 on
+# face 3200111 "normal"
+# alpha 3200111 1 0.5
+# pos 3301011 4
+# mask 3301011 on
+# alpha 3301011 1 0
+# rightin 3301011 0.5
+# waitandnext 0.4
+
+# face 3200111 "happy"
+# se "SE_4601"
+# effectstart 1000
+# shake 0 0.6
+# move 3200111 2 0.3
+# fadein "white" 0.3
+# waitandnext 0.3
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 320011 "myuruniru_ge_0005"
+# chara 3200111
+@ミョルニル
+あははっ！
+効かないよっ！
+
+# textflame 0 0
+@
+炎をかわし一撃を放っても、
+強固なガントレットに防がれてしまう
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3200111 "normal"
+# voice 320011 "myuruniru_ge_0009"
+# chara 3200111
+@ミョルニル
+なになにヤギさん！
+え？　ここでシッポ？
+よーし、えいっ！
+
+# textwindow "close"
+# move 3200111 3 0.2
+# waitandnext 0.2
+
+# voice 330101 "rhongomiant_a_0038"
+# face 3200111 "angry"
+# se "SE_4759"
+# shake 1 0.6
+# effectstart 2000
+# subfillrect 1 "red" 0.6 0.3 0
+# move 3301011 5 0.2
+# face 3301011 "sad"
+# waitandnext 0.2
+
+# face 3200111 "normal"
+# textwindow "normal"
+# textflame 0 0
+@
+さらに無秩序なミョルニルの
+動きの中に、的確な一撃が
+叩き込まれた
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 330101 "rhongomiant_a_battle_0008"
+# chara 3301011
+@ロンゴミアント
+ぐぅぅっ…!!
+
+# textflame 0 0
+@
+咄嗟に槍を掲げて防いだものの、
+圧倒的な膂力の前に
+地面が揺れる
+
+# textflame 0 0
+@
+無自覚に行われる緩急に
+ロンゴミアントはついていくのが
+やっとな状況だった
+
+# textflame 1 1
+# textwindow "toge"
+# textsize 35
+# face 3301011 "angry"
+# textboxarrow 0 3
+# voice 330101 "rhongomiant_a_0029"
+# chara 3301011
+@ロンゴミアント
+はあぁぁっー！
+
+# textwindow "normal"
+# se "SE_5812"
+# effectstart 1001
+# move 3301011 4 0.2
+# move 3200111 2 0.2
+# fadein "white" 0.6
+# face 3200111 "happy"
+# textsize 24
+# textflame 0 0
+@
+大きく振りぬいた槍を
+ひょいと飛び越え、
+ミョルニルは距離を取る
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3301011 "sad"
+# voice 330101 "rhongomiant_a_0015"
+# chara 3301011
+@ロンゴミアント
+はあ…くっ…
+規則性も何もない…
+まさに獣…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3200111 "normal"
+# voice 320011 "myuruniru_ge_0020"
+# chara 3200111
+@ミョルニル
+ミョルニルちゃんはキメラだもん
+ライオンさんもヘビさんも
+みーんな、あたしの仲間だよっ！
+
+# textflame 0 0
+@
+息を切らしたロンゴミアント
+それに対して楽しげなミョルニル
+
+# textflame 0 0
+@
+その姿に、ともにいた兵は
+苦々しく顔を歪めた
+
+# se "SE_4600"
+# alpha 3301011 0 0.5
+# alpha 3200111 0 0.5
+# alpha 3820001 1 0.5
+# alpha 938200019 1 0.5
+# alpha 938200018 1 0.4
+# textflame 1 1
+# textboxarrow 0 2
+# voice 382000 "demon_0029"
+# chara 3820001
+@ケイオスリオン兵
+くそっ！　役立たずめ！
+総員！　攻め込むぞっ！
+
+# textwindow "close"
+# se "SE_5575"
+# leftout 3820001 0.5
+# leftout 938200019 0.5
+# leftout 938200018 0.5
+# waitandnext 0.5
+
+# pos 3301011 3
+# mask 3301011 off
+# alpha 3301011 1 0.5
+# face 3301011 "angry"
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 330101 "rhongomiant_a_0023"
+# chara 3301011
+@ロンゴミアント
+ダメですよぉっ！
+
+# textflame 0 0
+@
+ロンゴミアントの劣勢に
+痺れを切らしたのか
+ケイオスリオン兵が攻め込む
+
+# alpha 3301011 0 0.5
+# pos 3200111 3
+# mask 3200111 off
+# alpha 3200111 1 0.5
+# textflame 1 2
+# textboxarrow 0 2
+# face 3200111 "normal"
+# voice 320011 "myuruniru_ge_0021"
+# chara 3200111
+@ミョルニル
+ふ～ん
+キミたちもぺったんこに
+なりたいんだ！
+
+# face 3200111 "angry"
+# se "SE_5223"
+# shake 0 0.6
+# fadein "white" 0.3
+# textflame 0 0
+@
+空気を吹き飛ばすような轟音を
+響かせ、シッポがうなりを上げる
+
+# alpha 3200111 0 0.5
+# alpha 3301011 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3301011 "sad"
+# voice 330101 "rhongomiant_a_0036"
+# chara 3301011
+@ロンゴミアント
+今、前に出ればあれの餌食ですっ…
+ですから…
+
+# textflame 0 0
+@
+素早い動きで翻弄され、
+気付いたら後ろにいる―
+まさに獣の動きだ
+
+# alpha 3301011 0 0.5
+# pos 3820001 3
+# alpha 3820001 1 0.5
+# pos 938200019 1
+# alpha 938200019 1 0.5
+# pos 938200018 5
+# alpha 938200018 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 382000 "demon_0028"
+# chara 3820001
+@ケイオスリオン兵
+ぐっ…
+ならさっさと倒してしまえっ！
+
+# alpha 3820001 0 0.5
+# alpha 938200019 0 0.5
+# alpha 938200018 0 0.5
+# alpha 3301011 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3301011 "angry"
+# voice 330101 "rhongomiant_a_0037"
+# chara 3301011
+@ロンゴミアント
+分かっていますっ…
+
+;;モヤモヤ
+# move 3301011 3 0
+# textwindow "moya"
+# textflame 1 1
+# textboxarrow 0 0
+# chara 3301011
+@ロンゴミアント
+ですが…あの動き…
+読めません
+
+;;モヤモヤ
+# move 3301011 3 0
+# textwindow "moya"
+# textflame 1 1
+# textboxarrow 0 0
+# face 3301011 "sad"
+# chara 3301011
+@ロンゴミアント
+こんなときあの力が使えれば
+いいのですが…
+
+# textwindow "normal"
+# textflame 0 0
+@
+過去と未来を見通す
+グラシャラボラス
+
+# textflame 0 0
+@
+しかし、それも万能ではない
+あくまで夢という形でしか
+見ることができない
+
+;;モヤモヤ
+# textflame 1 1
+# move 3301011 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+# face 3301011 "angry"
+# chara 3301011
+@ロンゴミアント
+上手く防がれていますが、
+あの機動力なら
+決して防御は固くないはず…
+
+# textwindow "normal"
+# textflame 0 0
+@
+考えつつ息を整える
+ロンゴミアント
+
+# alpha 3301011 0 0.5
+# alpha 3200111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3200111 "sad"
+# voice 320011 "myuruniru_ge_0027"
+# chara 3200111
+@ミョルニル
+はぁ～あ…
+なんだかつまんない…
+
+# textflame 0 0
+@
+そんな彼女を見て、
+ミョルニルは退屈そうに
+息を吐いた―

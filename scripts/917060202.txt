@@ -1,0 +1,458 @@
+;;【EP1】『巨獣を追って』背景：宿の中/カノンが悔しそうにしている
+# script "lisp"
+# background "005_Windmill"
+# bgm "bgm002" 0
+# body 101914
+# pos 101914 3
+# scale 101914 0.8 0
+# body 24
+# pos 24 4
+# scale 24 0.8 0
+# alpha 24 0 0
+# body 202611
+# pos 202611 5
+# scale 202611 0.8 0
+# alpha 202611 0 0
+# mask 101914 off
+# body 103711
+# pos 103711 1
+# scale 103711 0.8 0
+# alpha 103711 0 0
+# layer 101914 1
+# layer 24 1
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1019 "kanon_0014"
+# chara 101914
+# face 101914 "angry"
+@カノン
+あー、もう！
+全然敵わなかった！
+
+# textflame 0 0
+@
+無理もないよ
+一人で巨獣に敵うわけがない
+と、言うマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 101914
+# face 101914 "worry"
+@カノン
+でも、止められなかった以上
+どこかで誰かが
+被害に遭ってるかもしれない…
+
+# voice 1019 "kanon_0026"
+# chara 101914
+# face 101914 "angry"
+@カノン
+そんなの、ごめんだわ
+
+# chara 101914
+# face 101914 "surprise"
+@カノン
+巨獣の行方？
+
+# chara 101914
+# face 101914 "angry"
+@カノン
+…それがわからないの！
+私の目の前で消えたのよ、一瞬で！
+まるで魔法みたいに！
+
+# chara 101914
+# face 101914 "usual"
+@カノン
+でも、なにかを
+探しているようだった…
+
+# voice 1019 "kanon_0014"
+# chara 101914
+# face 101914 "angry"
+@カノン
+ということはまた必ず現れるはず…
+今度こそあの巨獣を倒さなきゃ！
+
+;;ティルフィングが会話に入ってくる
+# move 101914 2 0.5
+# mask 101914 on
+# alpha 24 1 0.5
+# voice 1014 "tyrufing_0001"
+# textboxarrow 0 3
+# chara 24
+@ティルフィング
+マスター、私がカノンに同行します
+許可していただけますか？
+
+# textboxarrow 0 1
+# voice 1019 "kanon_0006"
+# chara 101914
+# face 101914 "usual"
+@カノン
+ティルフィング…！
+やった！とっても心強いわ！
+…でも、いいの？
+
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0002"
+# chara 24
+# face 24 "sad"
+@ティルフィング
+一人じゃ敵わなくても、二人なら
+活路が開けるかもしれません
+それとも私では力不足でしょうか？
+
+# textboxarrow 0 1
+# chara 101914
+@カノン
+ううん、そんなことない
+…でも、二人だけじゃ
+あの巨獣を倒すには至らないかも
+
+# select "より強い連携が必要だ" "select_label_01" "確かに二人だけじゃ危険かもしれない" "select_label_02" "強力な助っ人が必要だね" "select_label_03"
+ううん、そんなことない
+…でも、二人だけじゃ
+あの巨獣を倒すには至らないかも
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 101914
+@カノン
+そうね…
+欲を言えばあと何人か
+力を借りたいところだけど…
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 101914
+@カノン
+だからって、どうしたらいいのか
+わからないんだけどね…確実にあの
+巨獣を仕留める戦力はほしいわ
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 101914
+@カノン
+そんな助っ人、簡単に
+見つかるわけないってわかってる
+…でも、いるに越したことはないわ
+
+# label "select_label_end"
+# voice 1014 "tyrufing_0013"
+# textboxarrow 0 3
+# chara 24
+@ティルフィング
+確かに、戦力を整える必要が
+あるかもしれませんね
+しかし、そんな時間は…
+
+# textflame 0 0
+@
+ティルフィングが少し目を伏せた
+その瞬間、唐突にドアが開いた
+
+;;入ってくるミウナとヤウラス
+# se "SE_0690"
+# move 101914 3 0.5
+# alpha 24 0 0.5
+# alpha 202611 1 1
+# alpha 103711 1 1
+# textflame 1 1
+# textboxarrow 0 3
+# chara 202611
+# face 202611 "surprise"
+# face 101914 "surprise"
+@ミウナ
+…カノン！？
+カノンなの？
+
+# voice 1037 "yauras_0004"
+# textboxarrow 0 1
+# chara 103711
+@ヤウラス
+やっぱりカノンの声だったわね
+久しぶり、カノン
+
+# voice 1019 "kanon_0022"
+# textboxarrow 0 2
+# chara 101914
+@カノン
+ミウナ！…ヤウラスも！
+二人とも、どうしてここに！？
+
+# voice 1014 "tyrufing_0027"
+# textboxarrow 0 3
+# chara 202611
+# face 101914 "usual"
+@ミウナ
+そんなのこっちが聞きたいよ
+二人とも気づいたらこの世界に
+いたってわけ
+
+# move 101914 2 0.5
+# alpha 202611 0 0.5
+# alpha 103711 0 0.5
+# alpha 24 1 0.5
+# textboxarrow 0 3
+# chara 24
+# face 24 "surprise"
+@ティルフィング
+カノンさん…こちらの方々は？
+
+# voice 1019 "kanon_0004"
+# textboxarrow 0 1
+# chara 101914
+# face 101914 "usual"
+@カノン
+私の仲間よ
+しかも、とびっきり頼りになる、ね
+
+# textflame 0 0
+@
+カノンは
+ミウナとヤウラスに
+現状を説明する
+
+# textflame 0 0
+@
+この世界にキラープリンセスとして
+召喚されたこと
+
+# textflame 0 0
+@
+今はマスターの元で
+この世界のために戦っていること
+
+# textflame 0 0
+@
+二人はそれを半信半疑で聞いていたが
+信じるしかない状況のようであった
+
+# move 202611 4 0
+# alpha 24 0 0.5
+# alpha 202611 1 0.5
+# voice 2026 "miuna_0028"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 202611
+@ミウナ
+現状はなんとなくわかったわ
+ところでカノン、アンタあの
+巨獣についてなにか知ってる？
+
+# textboxarrow 0 1
+# chara 101914
+# face 101914 "surprise"
+@カノン
+え…
+二人もあの巨獣と遭遇したの？
+
+# move 202611 5 0.5
+# move 101914 3 0.5
+# alpha 103711 1 0.5
+# textboxarrow 0 1
+# chara 103711
+@ヤウラス
+いえ、私達は遠目に見ただけ
+でも、放っておけないでしょ？
+情報を集めるためにこの村に来たのよ
+
+# textboxarrow 0 2
+# chara 101914
+# face 101914 "usual"
+@カノン
+そっか…！
+二人がいてくれるなら
+どうにかなるかもしれないわ！
+
+# textflame 0 0
+@
+現状が変わったわけではないが、
+カノンの目に希望の火が灯っている
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 101914
+@カノン
+マスター、待ってて！
+ちゃちゃっとあの巨獣倒してくるから
+行くよ、二人とも！
+
+# textboxarrow 0 3
+# chara 202611
+# face 202611 "surprise"
+@ミウナ
+え、ちょ、ちょっとカノン！
+
+;;カノンがミウナとヤウラスを連れて出て行く
+# se "SE_5575"
+# textboxarrow 0 0
+# move 24 3 0
+# alpha 101914 0 0.5
+# alpha 202611 0 0.5
+# alpha 103711 0 0.5
+# waitandnext 1
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# alpha 24 1 0.5
+# voice 1014 "tyrufing_0024"
+# textboxarrow 0 2
+# chara 24
+# face 24 "surprise"
+@ティルフィング
+あ、カノンさん！
+…私も行ってまいります
+待っててください、マスター
+
+;;場面転換/背景：街道
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# move 24 3 0
+# alpha 24 0 0
+# alpha 101914 1 0
+# alpha 202611 1 0
+# alpha 103711 1 0
+# background "plain"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# voice 2026 "miuna_0014"
+# textboxarrow 0 3
+# chara 202611
+# face 202611 "angry"
+@ミウナ
+ちょっとカノン！まだなんの準備も
+できてないんだから
+そんなに慌てて出発しなくても！
+
+# textboxarrow 0 1
+# chara 103711
+# face 103711 "worry"
+@ヤウラス
+そうよ
+まだ情報が足りない
+闇雲に挑むなんて華麗じゃないわ
+
+# textboxarrow 0 3
+# chara 202611
+@ミウナ
+まだこっちの世界にきたばっかで
+まともな武器も手に入れてないし
+…いい素材あるといいんだけど
+
+# voice 1019 "kanon_0009"
+# textboxarrow 0 2
+# chara 101914
+@カノン
+確かに二人の言う通りかもしれない
+だけど、一刻も早くあの巨獣を
+どうにかしなきゃいけないでしょ？
+
+# textboxarrow 0 2
+# chara 101914
+# face 101914 "happy"
+@カノン
+大丈夫！
+二人がいれば百人力だもの！
+この二人、すっごく強いんだよ！
+
+# alpha 24 1 0.5
+# alpha 101914 0 0.5
+# voice 1014 "tyrufing_0004"
+# textboxarrow 0 2
+# chara 24
+# face 24 "normal"
+@ティルフィング
+そうなのですね
+カノンさんが、お二人をとっても
+信頼してるのが伝わってきます
+
+# alpha 24 0 0.5
+# alpha 101914 1 0.5
+# alpha 101914 1 0.5
+# alpha 24 0 0.5
+# textboxarrow 0 2
+# chara 101914
+# face 101914 "usual"
+@カノン
+ミウナはね、腕利きの鍛冶職人なの
+ヤウラスは、聖教騎士団で一番の
+人気を誇る団長なんだよ！
+
+# voice 1019 "kanon_0021"
+# textboxarrow 0 2
+# chara 101914
+# face 101914 "happy"
+# face 103711 "shy"
+@カノン
+はあー…
+相変わらずヤウラスは
+いい匂いがするね！
+
+# voice 1037 "yauras_0023"
+# textboxarrow 0 1
+# chara 103711
+@ヤウラス
+なっ…なにを言うのカノン！
+今はそんなことを言っている
+状況じゃないでしょう…っ！
+
+# body 810004
+# pos 810004 3
+# alpha 810004 0 0
+# mask 810004 off
+# scale 810004 0.8 0
+# textboxarrow 0 3
+# chara 202611
+# face 202611 "angry"
+# face 101914 "surprise"
+# face 103711 "surprise"
+@ミウナ
+…っ！
+なにか来るわ、構えて！
+
+;;異族が現れる
+# bgmfile "bgm044_045" "BgmRisecollabo001" 0.7
+# serif 0
+# textwindow "close"
+# alpha 101914 0 0.5
+# alpha 202611 0 0.5
+# alpha 103711 0 0.5
+# alpha 810004 1 0.5
+# waitandnext 2
+# se "SE_0617"
+
+# serif 0
+# textwindow "nomal"
+# mask 101914 off
+# alpha 101914 1 0.5
+# alpha 810004 0 0.5
+# voice 1019 "kanon_unit_1005"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 101914
+# face 101914 "angry"
+@カノン
+今はあんた達の相手を
+してる場合じゃないの
+そこを通してもらうわ！

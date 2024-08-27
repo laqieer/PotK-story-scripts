@@ -1,0 +1,259 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー5章
+;;第4話　タイトル：拳
+;;スクリプト最後の背景：街中
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgm "bgm100" 0
+;;----------------------------------------------------------
+;;ミョルニル（♂）
+# body 1200111
+# pos 1200111 4
+# scale 1200111 0.8 0
+# layer 1200111 1
+# alpha 1200111 1 0
+# mask 1200111 on
+# face 1200111 "normal"
+;;ガンバンテイン（♂）
+# body 1600221
+# pos 1600221 2
+# scale 1600221 0.8 0
+# layer 1600221 2
+# alpha 1600221 1 0
+# mask 1600221 on
+# face 1600221 "normal"
+;;幻獣
+# body 900016
+# pos 900016 3
+# scale 900016 0.8 0
+# layer 900016 2
+# alpha 900016 0 0
+# mask 900016 off
+# face 900016 "normal"
+;;-----------------------------------------
+;;背景：平原
+# textflame 1 1
+# textboxarrow 0 3
+@ミョルニル（♂）
+かなりユグドラシルから離れたが
+周りは随分と変わっちまってるな
+俺達はどのくらい寝てたんだ？
+
+# face 1600221 "sad"
+# textboxarrow 0 1
+@ガンバンテイン（♂）
+それを知ってどうするね
+俺達の意識が保たれるのも
+それほど長くないというのに
+
+# voice 12001 "mjolnirm_0032"
+# face 1200111 "trouble"
+# textboxarrow 0 3
+@ミョルニル（♂）
+そうかもな…
+
+# face 1600221 "normal"
+# textboxarrow 0 1
+@ガンバンテイン（♂）
+さて、この辺りで別れよう
+
+# voice 16002 "gambanteinnm_0004"
+@ガンバンテイン（♂）
+奇妙な格好の男が二人、
+武器を持って歩いていたら
+人々を怖がらせてしまう
+
+@ガンバンテイン（♂）
+俺はこっちに
+お前さんは向こうに行くと良い
+
+# voice 12001 "mjolnirm_0002"
+# face 1200111 "normal"
+# textboxarrow 0 3
+@ミョルニル（♂）
+おい、最後に一つ教えろ
+
+# voice 16002 "gambanteinnm_0033"
+# face 1600221 "sad"
+# textboxarrow 0 1
+@ガンバンテイン（♂）
+なにかな？
+
+# voice 12001 "mjolnirm_0001"
+# textboxarrow 0 3
+@ミョルニル（♂）
+あんた、本名はなんて言うんだ？
+
+# face 1600221 "normal"
+# textboxarrow 0 1
+@ガンバンテイン（♂）
+俺の名前はガンバンテイン
+それでいいだろう、ミョルニル？
+では
+
+;;ガンバンテインが去っていく
+# textwindow "close"
+# alpha 1600221 0 0.5
+# move 1200111 3 0.5
+# waitandnext 0.5
+
+# voice 12001 "mjolnirm_0014"
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@ミョルニル（♂）
+…ったく
+最後までくえねえオッサンだったぜ
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：街中
+# background "imperial_city"
+# face 1200111 "normal"
+# mask 1200111 off
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@ミョルニル（♂）
+街中に入ったみてえだな
+…すっかり見違えてやがる
+
+@ミョルニル（♂）
+こんな世界なら、
+酷い目にあってるガキなんか
+一人もいねえんだろうよ
+
+# bgm "stop"
+# se "SE_5736"
+;;白フラッシュ
+# se "SE_0637"
+;;画面揺れ
+;;ユグドラシルが切断される
+# textwindow "close"
+# fadein "white" 0.5
+# shake 0 0.5
+# waitandnext 0.8
+
+# textwindow "normal"
+# bgmfile "bgm160" "BgmPJZero001" 0
+# voice 12001 "mjolnirm_0022"
+# face 1200111 "surprise"
+# textflame 1 1
+@ミョルニル（♂）
+うお！？
+今のは…ユグドラシルかっ？
+
+# serif 1
+@町人１
+キャアアアア！？
+なに、あれぇっ？
+
+# serif 1
+@町人２
+大樹様が…浮き上がってる…？
+
+# serif 1
+@町人３
+なんだか薄くなってないかっ？
+そんな…なにが起きたんだよ…！？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# face 1200111 "angry_1"
+# textflame 1 1
+@ミョルニル（♂）
+ついにやりやがったな、
+ティルフィング…！
+
+# face 1200111 "surprise"
+@ミョルニル（♂）
+まずい！
+衝撃がこっちに…
+
+;;画面揺れ
+;;ユグドラシル切断の衝撃波が周囲に広がる
+# se "SE_5662"
+# waitandnext 0.8
+
+# shake 0 0.5
+# waitandnext 0.1
+
+# serif 1
+@町人３
+うわああああああああっ…！
+
+# serif 1
+@町人４
+た、助けてぇぇぇっ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# voice 12001 "mjolnirm_0034"
+# face 1200111 "angry_1"
+@ミョルニル（♂）
+ちっ…
+無茶しやがって…！
+
+# face 1200111 "surprise"
+@ミョルニル（♂）
+ユグドラシルが…
+空に上がっていきやがる…！
+天上世界に向かってんのか…？
+
+# textwindow "close"
+# alpha 1200111 0 0.5
+# serif 1
+@町人５
+あああっ…大樹様が消える…！
+消えてしまうっ…！
+
+# serif 1
+@町人６
+破滅だっ…
+天罰が下ったんだ…！
+
+# alpha 900016 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+@幻獣
+クワアアアアアアアアア！！
+
+# serif 1
+@町人７
+あれはなんだ！？
+まさか…幻獣かっ…？
+
+# serif 1
+@町人８
+幻獣なんてとっくの昔に滅んだだろ！
+こんなところに出てくるはずがっ…
+うわ…うわあああああっ…！
+
+# alpha 900016 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+@幻獣
+グウウウウウウウウ！
+
+# alpha 900016 0 0.5
+# alpha 1200111 1 0.5
+@ミョルニル（♂）
+おいおい、見覚えのねえ化け物が
+出てきやがったぜ

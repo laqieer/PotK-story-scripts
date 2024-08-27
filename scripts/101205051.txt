@@ -1,0 +1,180 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー12章
+;;タイトル：因果、転輪
+;;5-5-1
+;;背景：地底
+;;-----------------------------------------
+# script "lisp"
+# background "underground_world_3"
+# bgmfile "bgm279_280" "BgmLostRagnarokBattle002" 0
+;;-----------------------------------------
+;;アルマス
+# body 172
+# pos 172 2
+# scale 172 0.8 0
+# alpha 172 0 0
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# alpha 139 0 0
+# mask 139 off
+;;ギル
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# alpha 137 0 0
+;;カシウス
+# body 3303111
+# pos 3303111 3
+# scale 3303111 0.8 0
+# alpha 3303111 0 0
+# mask 3303111 off
+;;ティルフィング
+# body 3101411
+# pos 3101411 2
+# scale 3101411 0.8 0
+# alpha 3101411 0 0
+;;レーヴァテイン
+# body 3100211
+# pos 3100211 2
+# scale 3100211 0.8 0
+# alpha 3100211 0 0
+# mask 3100211 off
+;;アルテミス
+# body 3400111
+# pos 3400111 3
+# scale 3400111 0.8 0
+# alpha 3400111 0 0
+# mask 3400111 off
+;;スイハ
+# body 3401719
+# pos 3401719 3
+# scale 3401719 0.8 0
+# alpha 3401719 1 0
+# mask 3401719 off
+# layer 3401719 5
+;;ハルパー
+# body 3202011
+# pos 3202011 3
+# scale 3202011 0.8 0
+# alpha 3202011 0 0
+# mask 3202011 off
+;;-----------------------------------------
+# textboxarrow 0 2
+# face 3401719 "normal"
+# voice 340171 "suiha_c_0007"
+@スイハ
+理由は後で調べましょう
+邪魔する者は消去するのみです
+
+# alpha 3401719 0 0.5
+# alpha 3202011 1 0.5
+# textboxarrow 0 2
+# face 3202011 "happy"
+# voice 320201 "harpe_t_0004"
+@ハルパー
+うふ…新しい子が来たわ…
+楽しい狩りの始まりねぇ
+
+# textboxarrow 0 2
+# face 3202011 "angry"
+@ハルパー
+まずは足から潰して、
+逃げられないようにして
+あげましょうか
+
+# alpha 3202011 0 0.5
+# alpha 3303111 1 0.5
+# textboxarrow 0 2
+# face 3303111 "angry"
+# voice 3031 "cassius_ge_0059"
+@カシウス
+アルマス、立って
+未来への一歩を踏み出しましょう
+
+# mask 3303111 on
+# move 3303111 4 0.5
+# alpha 172 1 0.5
+# textboxarrow 0 1
+# face 172 "normal"
+# voice 1038 "almace_0028"
+@アルマス
+ええと…
+ここから離脱するってことで…
+いいのよね？
+
+# textboxarrow 0 3
+# voice 3031 "cassius_ge_0003"
+@カシウス
+全ては輪廻の理に導かれるの
+わたしがあらゆる未来を
+見通してみせる
+
+# textboxarrow 0 1
+# face 172 "angry"
+# voice 1038 "almace_0035"
+@アルマス
+ここは任せろって言いたいの…？
+でも、カシウス一人じゃ…
+
+# alpha 3303111 0 0.5
+# alpha 172 0 0.5
+# alpha 3401719 1 0.5
+# textboxarrow 0 2
+# face 3401719 "angry"
+# voice 340171 "suiha_c_0010"
+@スイハ
+いい加減にしなさい
+射抜きますよ？
+
+;;スイハの攻撃をカシウスが防御する
+# se "SE_9018"
+# sedelay "SE_3006" 0.8
+# textwindow "close"
+# leftout 3401719 0.3
+# waitandnext 0.2
+
+# alpha 3401719 0 0
+# waitandnext 0.2
+
+# move 3401719 4 0
+# alpha 3401719 1 0
+# rightin 3401719 0.3
+# move 3303111 3 0
+# alpha 3303111 1 0
+# leftin 3303111 0.3
+# waitandnext 0.2
+
+# fadein "white" 0.3
+# waitandnext 1
+
+# alpha 3401719 0 0.5
+# alpha 3303111 0 0.5
+# alpha 3202011 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 3202011 "happy"
+# voice 320201 "harpe_t_0021"
+@ハルパー
+素敵だわぁ
+次は私がいくわねぇ
+
+# alpha 3202011 0 0.5
+# alpha 3400111 1 0.5
+# textboxarrow 0 2
+# face 3400111 "angry"
+# voice 340011 "arutemisu_ge_battle_0001"
+@アルテミス
+規律を乱すのであれば、
+カシウス殿であろうと
+容赦はしません！
+
+# alpha 3400111 0 0.5
+# move 3303111 3 0
+# mask 3303111 off
+# alpha 3303111 1 0.5
+# textboxarrow 0 2
+# face 3303111 "sad"
+@カシウス
+全て見通しているの

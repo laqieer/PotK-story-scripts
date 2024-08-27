@@ -1,0 +1,487 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第４章 タイトル：「世界樹の子―インベイション―」
+;;第1話　タイトル：ユグドラシルへ
+;;4_1_12_3
+;;スクリプト最後の背景：道路
+;;-----------------------------------------
+# script "lisp"
+# background "in_cityroad"
+# bgmfile "bgm160" "BgmPJZero001" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;魔獣化ミョルニル
+# body 1200111
+# pos 1200111 3
+# scale 1200111 0.8 0
+# layer 1200111 2
+# alpha 1200111 0 0
+# mask 1200111 off
+# brightness 1200111 0.5 0
+;;マサムネ(キラーメイル)
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# layer 1100111 2
+# alpha 1100111 0 0
+# mask 1100111 off
+;;デュランダル
+# body 3100311
+# pos 3100311 3
+# scale 3100311 0.8 0
+# layer 3100311 2
+# alpha 3100311 0 0
+# mask 3100311 off
+;;ブリューナク・D. plug・バルバトス
+# body 3500711
+# pos 3500711 3
+# scale 3500711 0.8 0
+# layer 3500711 2
+# alpha 3500711 0 0
+# mask 3500711 off
+;;ピサール
+# body 3302011
+# pos 3302011 3
+# scale 3302011 0.8 0
+# layer 3302011 2
+# alpha 3302011 0 0
+# mask 3302011 off
+;;魔獣化アスクレピオス
+# body 1600111
+# pos 1600111 3
+# scale 1600111 0.8 0
+# layer 1600111 2
+# alpha 1600111 0 0
+# mask 1600111 off
+# brightness 1600111 0.5 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;//車の走行音
+;;//車を運転してきたブリューナクが現れる
+# se "SE_0882"
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_0884"
+# waitandnext 0.5
+
+# sestop "SE_0882"
+# move 3500711 3 0
+# face 3500711 "normal"
+# alpha 3500711 1 0.5
+# mask 3500711 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 350071 "buryunaku_a_0002"
+@ブリューナク
+待たせたな
+ブリューナクも到着した
+車に乗るといい
+
+# move 210 2 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 1
+# move 3500711 4 0.5
+# mask 3500711 on
+# voice 9936 "kamito_0024"
+@カミト
+ブリューナク！？
+えっ…この車、どうしたのっ？
+
+# textboxarrow 0 3
+# voice 350071 "buryunaku_a_0003"
+@ブリューナク
+お前達を追って移動してきたところ
+倉庫と思しき建物で発見したので
+失敬してきた
+
+# face 3500711 "happy"
+# textboxarrow 0 3
+# voice 350071 "buryunaku_a_0005"
+@ブリューナク
+思いがけぬ財宝との出会いは
+ロマンがあるな！
+
+# face 210 "normal"
+# textboxarrow 0 1
+# voice 9936 "kamito_0029"
+@カミト
+それって、勝手に乗ってきたって
+ことだよね…
+
+# alpha 3500711 0 0.5
+# move 3501711 4 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0027"
+@グリモワール
+この際、何だって良いわよ！
+さっさと乗りなさい！
+
+# alpha 210 0 0.5
+# alpha 3501711 0 0.5
+# move 3500711 3 0
+# face 3500711 "happy"
+# alpha 3500711 1 0.5
+# mask 3500711 off
+# textboxarrow 0 2
+@ブリューナク
+こんなこともあろうかと
+八人乗りを選んできた
+ゆったり座れるぞ
+
+# textboxarrow 0 2
+@ブリューナク
+ブリューナクの目に間違いはない！
+
+# alpha 3500711 0 0.5
+# move 3102311 2 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 210 4 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# voice 9936 "kamito_0049"
+@カミト
+アスカロン、大丈夫？
+
+# face 3102311 "sad"
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0031"
+@アスカロン
+ごめんなさい…
+マスターのご命令を果たせなくて…
+
+# textboxarrow 0 3
+@カミト
+そんなこといいから
+早く乗って！
+
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# move 3302011 3 0
+# face 3302011 "happy"
+# alpha 3302011 1 0.5
+# mask 3302011 off
+# textboxarrow 0 2
+# voice 330201 "pisear_t_0006"
+@ピサール
+やったぁ！
+運転してくれるんだ～
+じゃ、後よろしくね～
+
+# alpha 3302011 0 0.5
+# move 3500711 3 0
+# face 3500711 "normal"
+# alpha 3500711 1 0.5
+# mask 3500711 off
+# textboxarrow 0 2
+@ブリューナク
+全員乗ったな？
+デュランダル、先に行くぞ！
+
+# se "SE_0883"
+# waitandnext 0.5
+
+# alpha 3500711 0 0.5
+# move 3100311 3 0
+# face 3100311 "angry"
+# alpha 3100311 1 0.5
+# mask 3100311 off
+# textboxarrow 0 2
+# voice 310031 "durandaru_a_0032"
+@デュランダル
+はいですの
+私は破壊的に楽しいお時間を
+過ごしてますからっ♪
+
+# alpha 3100311 0 0.5
+# move 1200111 3 0
+# face 1200111 "angry_1"
+# alpha 1200111 1 0.5
+# mask 1200111 off
+# textboxarrow 0 2
+@？？？
+ガアアアアアアアアア！！
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 1200111 0 0
+# move 210 2 0
+# face 210 "normal"
+# alpha 210 1 0
+# mask 210 on
+# move 3500711 4 0
+# face 3500711 "normal"
+# alpha 3500711 1 0
+# mask 3500711 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm102" 0
+# se "SE_0882"
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 9936 "kamito_0062"
+@カミト
+助かったよ、ブリューナク
+でも、デュランダルを残してきて
+良かったのかな…
+
+# face 3500711 "happy"
+# textboxarrow 0 3
+# voice 350071 "buryunaku_a_0004"
+@ブリューナク
+戦場で散るのであれば、
+彼女も本望だろう
+それがロマンというものだ
+
+# face 3500711 "normal"
+# textboxarrow 0 3
+@ブリューナク
+それよりも、さて…
+
+;;//バイクの走行音
+;;//マサムネが併走する
+# se "SE_0885"
+# alpha 210 0 0.5
+# alpha 3500711 0 0.5
+# move 1100111 3 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 off
+# textboxarrow 0 2
+# voice 11001 "masamunem_0031"
+@マサムネ
+すまない…
+予想以上に手こずった…
+
+# move 1100111 2 0.5
+# mask 1100111 on
+# move 210 4 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+@カミト
+マサムネ！
+あのキラーメイルは倒したのっ？
+
+# textboxarrow 0 1
+# voice 11001 "masamunem_0028"
+@マサムネ
+だったら良かったんだが…
+あの腹黒メガネ、姿を消しやがった
+
+# textboxarrow 0 1
+@マサムネ
+またどこかから
+襲ってくるかもしれないな
+
+# face 210 "angry"
+# textboxarrow 0 3
+@カミト
+デュランダルは！？
+途中、もう一人のキラーメイルと
+戦ってたと思うんだけどっ
+
+# textboxarrow 0 1
+# voice 11001 "masamunem_0003"
+@マサムネ
+ああ、それなら…
+
+# alpha 1100111 0 0.5
+# alpha 210 0 0.5
+# move 3100311 3 0
+# face 3100311 "normal"
+# alpha 3100311 1 0.5
+# mask 3100311 off
+# textboxarrow 0 2
+# voice 310031 "durandaru_a_0004"
+@デュランダル
+失礼いたしますの
+
+;;//デュランダルが車に乗り込んでくる
+# se "SE_5257"
+# waitandnext 0.5
+
+# alpha 3100311 0 0.5
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# move 210 4 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# voice 9936 "kamito_0026"
+@カミト
+うわっ？
+デュランダル、何で！？
+
+# textboxarrow 0 1
+@マサムネ
+戦ってる脇を通り抜けようとしたら
+吹っ飛んできたから、ついでに
+後ろに乗せて連れてきた
+
+# alpha 210 0 0.5
+# move 3100311 4 0
+# face 3100311 "angry"
+# alpha 3100311 1 0.5
+# mask 3100311 on
+# textboxarrow 0 3
+# voice 310031 "durandaru_a_0026"
+@デュランダル
+不愉快ですわ
+大好きな楽園で散ることが
+できたのなら本望でしたのに…
+
+# alpha 1100111 0 0.5
+# move 210 2 0
+# face 210 "happy"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 1
+@カミト
+そんなこと言わないでよっ
+助かって良かった…
+
+# face 3100311 "happy"
+# textboxarrow 0 3
+# voice 310031 "durandaru_a_0030"
+@デュランダル
+仰る意味が分かりませんけれど…
+わたくしのことを気に掛けて
+下さったのなら感謝しますわ♪
+
+# alpha 210 0 0.5
+# alpha 3100311 0 0.5
+# move 3102311 3 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+# voice 310231 "ascalon_a_0019"
+@アスカロン
+このまま逃げ切れると
+良いんですけど…
+
+# move 3102311 2 0.5
+# mask 3102311 on
+# move 3501711 4 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+@グリモワール
+ちょっと！
+そういうことを言ったら…
+
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# move 3500711 3 0
+# face 3500711 "happy"
+# alpha 3500711 1 0.5
+# mask 3500711 off
+# textboxarrow 0 2
+# voice 350071 "buryunaku_a_0004"
+@ブリューナク
+ふっ…
+旅に困難はつきものだな
+
+;;//画面スライド
+;;//魔獣化アスクレピオスが迫ってくる
+# se "SE_0813"
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 3500711 0 0
+# move 1600111 3 0
+# face 1600111 "angry_1"
+# alpha 1600111 1 0
+# mask 1600111 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# se "SE_5022"
+# sedelay "SE_5023" 0.4
+# sedelay "SE_5022" 0.8
+# textboxarrow 0 2
+# textwindow "normal"
+@？？？
+グウウウウウウウウウ！
+
+# alpha 1600111 0 0.5
+# move 1100111 3 0
+# face 1100111 "angry"
+# alpha 1100111 1 0.5
+# mask 1100111 off
+# textboxarrow 0 2
+# voice 11001 "masamunem_0024"
+@マサムネ
+くそっ
+やはり、また現れたか！
+今度こそっ
+
+# move 1100111 2 0.5
+# mask 1100111 on
+# move 210 4 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# voice 9936 "kamito_0057"
+@カミト
+待って、マサムネ！
+
+# face 1100111 "normal"
+# textboxarrow 0 1
+@マサムネ
+何だ！？
+
+# textboxarrow 0 3
+@カミト
+僕に考えがあるんだ！

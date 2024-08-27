@@ -1,0 +1,484 @@
+;;-----------------------------------------
+;;正月【EP.3】赤い水の謎
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;フォルカス（天上編Ver）
+# body 301821
+# pos 301821 3
+# scale 301821 0.8 0
+# layer 301821 2
+# alpha 301821 0 0
+# mask 301821 off
+;;ソロモン（ロストラグナロク編Ver）
+# body 3503111
+# pos 3503111 3
+# scale 3503111 0.8 0
+# layer 3503111 2
+# alpha 3503111 0 0
+# mask 3503111 off
+;;ソロモン（ボイス用）
+# body 503111
+# alpha 503111 0 0
+;;-----------------------------------------
+;;【EP.3】
+;;背景：山　forest
+# se "SE_6186"
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_5000"
+# sedelay "SE_5001" 2
+# move 301821 2 0
+# face 301821 "normal"
+# alpha 301821 1 1
+# mask 301821 on
+# move 3503111 4 0
+# face 3503111 "normal"
+# alpha 3503111 1 1
+# mask 3503111 on
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@ソロモン
+はあっ…はあっ…
+
+# textboxarrow 0 3
+@ソロモン
+い、意気揚々と
+出かけたのは良いけど…
+
+# textboxarrow 0 3
+@ソロモン
+思っていた以上に、険しい…！！
+
+# textboxarrow 0 1
+@フォルカス
+そ、そうですね…
+この山は長らく
+整備もされていませんから…
+
+# face 301821 "angry"
+# textboxarrow 0 1
+@フォルカス
+いつ獣に襲われるとも知れません
+慎重に進みましょう…！
+
+# voice 50311 "solomon_0032"
+# face 3503111 "angry"
+# textboxarrow 0 3
+@ソロモン
+そうね…
+気を引き締めるわ！
+
+# se "SE_5000"
+# sedelay "SE_5001" 2
+# textwindow "close"
+# alpha 301821 0 1
+# alpha 3503111 0 1
+# waitandnext 2
+
+;;暗転（時間経過）
+# fadeout "black" 1
+# waitandnext 1.2
+
+# sestop "SE_6186"
+# move 301821 2 0
+# face 301821 "normal"
+# alpha 301821 1 0
+# mask 301821 on
+# move 3503111 4 0
+# face 3503111 "surprise"
+# alpha 3503111 1 0
+# mask 3503111 on
+# waitandnext 0.2
+
+# se "SE_6185"
+# fadein "black" 1
+# waitandnext 1
+
+# emotionbody 1000 1 3503111 10 310
+# effectpattern 1000 1 0
+# effectstart 1000
+# textboxarrow 0 3
+# textwindow "normal"
+@ソロモン
+あっ！
+川が見えてきた…！
+
+# textboxarrow 0 1
+@フォルカス
+ここはまだ
+流れの途中のようですね
+
+# voice 3018 "forcas_0017"
+# face 301821 "sad"
+# textboxarrow 0 1
+@フォルカス
+赤色が濃くなっています…
+やはり、神様が
+生贄を欲して…
+
+# face 3503111 "normal"
+# textboxarrow 0 3
+@ソロモン
+いいえ
+そんなことはありえない
+
+# textboxarrow 0 3
+@ソロモン
+…違うわね
+犠牲を求める神様なんか
+認めないわ
+
+# textboxarrow 0 3
+@ソロモン
+そんなの悪魔と一緒よ
+
+# face 301821 "normal"
+# textboxarrow 0 1
+@フォルカス
+…ソロモン
+
+# voice 50311 "solomon_0004"
+# face 3503111 "happy"
+# textboxarrow 0 3
+@ソロモン
+それにね…
+川を観察していて
+気づいたことがあるの
+
+# textboxarrow 0 3
+@ソロモン
+私は旅の中で
+これに近いものを
+見たことがある！
+
+# emotionbody 2000 1 301821 10 310
+# effectpattern 2000 1 0
+# effectstart 2000
+# voice 3018 "forcas_0022"
+# face 301821 "surprise"
+# textboxarrow 0 1
+@フォルカス
+！
+そうなんですか？
+
+# face 3503111 "normal"
+# textboxarrow 0 3
+@ソロモン
+川が赤くなる理由は
+いくつか存在するわ
+
+# textboxarrow 0 3
+@ソロモン
+中でも多いのは、
+赤色を帯びた何らかの成分が
+水に溶け出している場合よ
+
+# textboxarrow 0 3
+@ソロモン
+私はさっき、
+川から血の匂いがすると
+感じたのだけど
+
+# textboxarrow 0 3
+@ソロモン
+もしかしたら
+この匂いはシンプルに…
+
+# se "SE_6187"
+# face 3503111 "angry"
+# textboxarrow 0 3
+@ソロモン
+あそこ！滝つぼがある！
+
+;;モノローグ
+# envbody 1001 1 0
+# effectpattern 1001 1 0
+# effectstart 1001
+# textflame 0 0
+@
+そのとき、わずかに雨が降り始め
+風も強くなってくる
+
+# face 3503111 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+雲行きが怪しくなってきたわね
+急ぎましょう！
+
+;;暗転（時間経過）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# effectskip 1001
+# envbody 1002 1 0
+# effectpattern 1002 2 0
+# effectstart 1002
+# move 301821 2 0
+# face 301821 "normal"
+# alpha 301821 1 0
+# mask 301821 on
+# move 3503111 4 0
+# face 3503111 "angry"
+# alpha 3503111 1 0
+# mask 3503111 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 3
+# textwindow "normal"
+@ソロモン
+見て、フォルカス！
+上から流れてくる湧き水の色…
+透明のままよ！
+
+# emotionbody 3000 1 301821 10 310
+# effectpattern 3000 1 0
+# effectstart 3000
+# face 301821 "surprise"
+# textboxarrow 0 1
+@フォルカス
+ほ、本当です…！
+
+# voice 3018 "forcas_0013"
+# face 301821 "normal"
+# textboxarrow 0 1
+@フォルカス
+でも、滝つぼの中に
+溜まってる水は真っ赤…
+どうして…？
+
+# face 3503111 "normal"
+# textboxarrow 0 3
+@ソロモン
+滝つぼの奥に
+原因があると見て
+間違いないわね
+
+# sedelay "SE_5200" 0.8
+# sedelay "SE_5200" 1.6
+# face 3503111 "angry"
+# textboxarrow 0 3
+@ソロモン
+よーし…さっそく準備よ！
+いっちにっ、さーんしっ！
+
+# emotionbody 4000 2 301821 10 290
+# effectpattern 4000 1 1
+# effectstart 4000
+# voice 3018 "forcas_0023"
+# face 301821 "surprise"
+# textboxarrow 0 1
+@フォルカス
+ええっ？
+な、なぜいきなり体操を？
+
+# voice 50311 "solomon_0005"
+# face 3503111 "happy"
+# textboxarrow 0 3
+@ソロモン
+決まってるじゃない
+これから水の中に
+潜ろうかと思って！
+
+# textboxarrow 0 3
+@ソロモン
+水面からだと
+底の方が見えないもの
+
+# textboxarrow 0 3
+@ソロモン
+それなら直接潜って
+自分の目で確かめるのが最適解！
+そう思わない？
+
+# textboxarrow 0 3
+@ソロモン
+だけど、水の中にどんな危険が
+潜んでいるかわからないわ
+準備体操は念入りにしないと
+
+# face 3503111 "normal"
+# textboxarrow 0 3
+@ソロモン
+…よし、
+行ってくるわね
+
+# face 301821 "angry"
+# textboxarrow 0 1
+@フォルカス
+待ってください、ソロモン
+この滝は流れが急ですし
+すぐに水量も増えます
+
+# textboxarrow 0 1
+@フォルカス
+雨が強くなってきた今、
+潜るのは危険です
+
+# textboxarrow 0 3
+@ソロモン
+目の前に真実への鍵があるのに
+それをみすみす見逃せないわ
+
+# textboxarrow 0 1
+@フォルカス
+ですが、もし何か起きたら…！
+
+# face 3503111 "happy"
+# textboxarrow 0 3
+@ソロモン
+平気よ
+何も起こらないってことを
+証明しに行くんだから
+
+# face 301821 "normal"
+# textboxarrow 0 1
+@フォルカス
+どうして…
+そこまでしてくれるのですか？
+
+# textboxarrow 0 1
+@フォルカス
+あなたはこの町の
+住人ではないのに…
+
+# bgm "bgm004" 0
+# textboxarrow 0 3
+@ソロモン
+昔はね、私も信じてたの
+神の存在を
+
+# face 3503111 "normal"
+# textboxarrow 0 3
+@ソロモン
+いや、違うわね
+私の大切だった人が
+信じていたの
+
+# textboxarrow 0 3
+@ソロモン
+その人は巫女だった
+
+# voice 3018 "forcas_0022"
+# face 301821 "surprise"
+# textboxarrow 0 1
+@フォルカス
+え？
+
+# textboxarrow 0 3
+@ソロモン
+その人は最後まで
+神に祈っていたの
+自分の命を顧みないで
+
+# textboxarrow 0 3
+@ソロモン
+それでも全てを失った
+
+# face 301821 "sad"
+# textboxarrow 0 1
+@フォルカス
+……
+
+# face 3503111 "sad"
+# textboxarrow 0 3
+@ソロモン
+後悔したわ
+そのとき、私は何も
+しなかったことに
+
+# face 3503111 "normal"
+# textboxarrow 0 3
+@ソロモン
+だから、今度は抗うの
+
+# textboxarrow 0 3
+@ソロモン
+神に復讐……
+ううん、神なんていないって
+証明するのよ
+
+# textboxarrow 0 3
+@ソロモン
+これは私の単なる意地よ
+君は気にしなくていいわ
+だから、君はここで待ってて
+
+# bgm "stop"
+# voice 3018 "forcas_0033"
+# face 301821 "normal"
+# textboxarrow 0 1
+@フォルカス
+わかりました
+私も行きます
+
+# textboxarrow 0 3
+@ソロモン
+何を言ってるのよ
+危ないわ
+
+# face 301821 "angry"
+# textboxarrow 0 1
+@フォルカス
+…いいえ、私もっ
+
+;;モノローグ
+# bgm "bgm029" 0
+# se "SE_9366"
+# textflame 0 0
+@
+そのとき、滝の水が溢れ
+フォルカスとソロモンに迫る
+
+# emotionbody 5000 1 3503111 10 310
+# effectpattern 5000 1 0
+# effectstart 5000
+# face 3503111 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+フォルカス危ない！
+
+# textwindow "close"
+# move 301821 1 0.2
+# alpha 301821 0 0.2
+# move 3503111 3 0.2
+# mask 3503111 off
+# waitandnext 0.2
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+ソロモンに押され水の渦に
+巻き込まれずに済んだ
+フォルカス
+
+;;モノローグ
+@
+しかし、代わりにソロモンが
+水の渦に飲み込まれてしまう
+
+# alpha 3503111 0 0.5
+# move 301821 3 0
+# face 301821 "surprise"
+# alpha 301821 1 0.5
+# mask 301821 off
+# textflame 1 1
+# textboxarrow 0 2
+@フォルカス
+ソロモンー！
+
+# fadeout "black" 0.5
+# waitandnext 0.5

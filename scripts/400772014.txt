@@ -1,0 +1,409 @@
+;;-----------------------------------------
+;;4007724
+;;シェキナー(ウェディング)　キャラ【EP3】
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgm "bgm002" 0
+;;シェキナー
+# body 400771
+# pos 400771 3
+# scale 400771 0.8 0
+# layer 400771 1
+# mask 400771 off
+# alpha 400771 0 0
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;一枚絵
+# imageset 1 "c400771"
+# imagealpha 1 0 0
+# imagelayer 1 1
+;;◆背景：街中１----------------------------------
+# textflame 0 0
+@
+マスターがシェキナーから
+宝石をプレゼントされた後の
+ある日…
+
+# textflame 0 0
+@
+姫達から離れ、マスターは
+一人、青ざめながら
+床や地面を這いずり回っていた
+
+# textflame 0 0
+@
+と、そこへドレス姿のシェキナーが
+マスターを探しにやってくる
+
+# textwindow "close"
+# alpha 400771 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "normal"
+# voice 4007 "shekina_0002"
+# chara 400771
+@シェキナー
+マスター？
+いったいどうしたんですか
+皆も心配して…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400771
+@シェキナー
+だいたい…どうして貴方はそんなに
+服も顔も、泥やほこりまみれに
+なってるんです？
+
+# textflame 0 0
+@
+だが
+シェキナーに寄られるといっそう
+うろたえてしまうマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "sad"
+# chara 400771
+@シェキナー
+なにかお困りの様子ですが
+私もお手伝いしたほうが
+いいのでしょうか？
+
+# textflame 0 0
+@
+だ、大丈夫…
+自分一人で解決するから、と
+マスターは大きく左右に首を振る
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "angry"
+# voice 4007 "shekina_0003"
+# chara 400771
+@シェキナー
+貴方は確かにキラープリンセスの長
+ですが…黙って誰にも相談しないなど
+逆に皆に失礼ですよ
+
+# textflame 0 0
+@
+で、でも…！
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "normal"
+# chara 400771
+@シェキナー
+…わかりました
+それほど言いにくいことなら
+私が、皆には内緒で手を貸します
+
+;;選択肢-----------------------------------------------------
+# select "ダメだ！そのドレスが汚れる！" "select_label_end" "やめてくれ！きみがケガをする！" "select_label_end"
+…わかりました
+それほど言いにくいことなら
+私が、皆には内緒で手を貸します
+
+;;合流-----------------------------------------------------
+# label "select_label_end"
+# textflame 1 1
+# textwindow "toge"
+# move 400771 3 0
+# textboxarrow 0 0
+# face 400771 "angry"
+# voice 4007 "shekina_0012"
+# chara 400771
+@シェキナー
+いいえ！
+見過ごすわけにはいきません！
+さあ！おっしゃってください！
+
+# textwindow "normal"
+# textflame 0 0
+@
+彼女の剣幕に観念したマスター
+実は探し物をしていて…と
+シェキナーに告げた
+
+# textflame 1 1
+# textboxarrow 0 0
+# face 400771 "normal"
+# chara 400771
+@シェキナー
+まったく仕方ありませんね…
+で、いったい
+なにをなくしたんです？
+
+;;◆背景：空--------------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# alpha 400771 0 0
+# background "mov2_1"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 0 0
+@
+まさか、シェキナーからもらった
+あの宝石をなくした…とは
+言えないマスターだった
+
+;;◆背景：街中２----------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# alpha 400771 1 0
+# face 400771 "sad"
+# background "town"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 4007 "shekina_0027"
+# chara 400771
+@シェキナー
+はぁ…町のゴミ溜めから
+近くの小川の底まで探しても
+全然、見つかる気配はなし…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "surprise"
+# chara 400771
+@シェキナー
+え？ドレスが汚れた？
+裾も破けてる？
+…構いませんよ、少しくらい…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "angry"
+# voice 4007 "shekina_0013"
+# chara 400771
+@シェキナー
+それより、マスター！
+もっと詳しく、探し物の特徴を
+教えてくださいます？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400771
+@シェキナー
+貴方があまりに
+あいまいな言い方をするから
+私も探しにくくて仕方ありません
+
+# textflame 0 0
+@
+すまない、すまない…
+とマスター、ひたすら頭を下げつつ
+
+# textflame 0 0
+@
+ある人から大事なプレゼントとして
+もらった、光る石なんだ…
+と答える
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "sad"
+# chara 400771
+@シェキナー
+正直なところ…貴方が
+なにをそんなに必死に探しているのか
+…察しはついていますけど
+
+# textflame 0 0
+@
+申し訳ない…だけど！
+とマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "angry"
+# voice 4007 "shekina_battle_0005"
+# chara 400771
+@シェキナー
+言い訳無用！
+ああ、もう…
+本当にこの人は…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400771
+@シェキナー
+そんなに大事なものだって
+思うなら…どうして
+なくしてしまうんですか…！
+
+# textflame 0 0
+@
+だって、きみがくれたものだ
+戦いのときでも肌身離さずつけて
+いたかったから…とマスターは言う
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "surprise"
+# voice 4007 "shekina_0024"
+# chara 400771
+@シェキナー
+あ…
+
+# textflame 0 0
+@
+だから自分の力で見つけたかった
+たとえどんなに人に笑われようとも
+たとえ異族に襲われようとも…と
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "shy"
+# chara 400771
+@シェキナー
+…命がけで探そうと
+してくださっていたのですね
+
+# textflame 0 0
+@
+ほこりまみれの姿のままの
+マスターを見て、薄汚れたドレスの
+シェキナーが微笑む
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "happy"
+# voice 4007 "shekina_0004"
+# chara 400771
+@シェキナー
+今日はもう日が暮れますから
+教会に戻りましょう…
+探し物はまた今度に
+
+;;◆背景：教会------------------------------------
+# se "SE_2025"
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# bgm "bgm003" 0
+# face 400771 "normal"
+# background "006_church"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 0 0
+@
+そして、マスターの隊が
+現在拠点として使っている
+教会まで戻ってみると…
+
+# textwindow "close"
+# se "SE_5786"
+# subfillrect 1 "white" 0.8 0.6 0
+# face 400771 "surprise"
+# waitandnext 0.8
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "normal"
+# voice 4007 "shekina_0005"
+# chara 400771
+@シェキナー
+あ…床に光が…
+マスター！あの宝石です！
+こんなところに…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "happy"
+# chara 400771
+@シェキナー
+あははは…先日の出撃の前に
+ここに置いていったまま
+だったんですね
+
+# textflame 0 0
+@
+シェキナーが石を拾い上げた
+間違いなく、例の宝石だった
+彼女は再びそれをマスターへと手渡す
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "normal"
+# voice 4007 "shekina_0001"
+# chara 400771
+@シェキナー
+ほら、マスター
+二度と見失わないでくださいね？
+大切な贈り物…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "shy"
+# chara 400771
+@シェキナー
+この光は、他の誰でもない…
+貴方だけのものなのだから
+ふふっ…
+
+# se "SE_0602"
+# textflame 0 0
+@
+『誓いのジュエルリング』
+光とともに…シェキナーは
+新たな境地を見つけていた
+
+# textflame 0 0
+@
+石の不思議な輝きが、
+薄汚れた格好のシェキナーと
+マスターをあたたかく照らした
+
+;;◆一枚絵----------------------------------------
+# textwindow "close"
+# fadein "white" 3
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 400771 0 0
+# voice 4007 "shekina_event_0007"
+# buttonsout 0 0
+# textwindow "close"
+;;「はぁ…。いつか、私の隣に並んでヴァージンロードを歩いてくれるのはどんな方なのでしょう…」
+
+# frameout 0 1
+# waitandnext 0.8
+
+# fadeout "black" 1.5
+# waitandnext 1.5

@@ -1,0 +1,469 @@
+;;-----------------------------------------
+;;ダンまち1_3_1
+;;-----------------------------------------
+# script "lisp"
+# background "201_border"
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス
+# body 138
+# pos 138 3
+# scale 138 0.8 0
+# layer 138 5
+# alpha 138 0 0
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 3
+# mask 139 off
+# alpha 139 0 0
+;;ヘスティア
+# body 3603111
+# pos 3603111 3
+# scale 3603111 0.8 0
+# layer 3603111 4
+# alpha 3603111 0 0
+;;リュー
+# body 3104511
+# pos 3104511 5
+# scale 3104511 0.8 0
+# layer 3104511 3
+# alpha 3104511 0 0
+;;アイズ
+# body 3104411
+# pos 3104411 1
+# scale 3104411 0.8 0
+# layer 3104411 3
+# alpha 3104411 0 0
+;;ベル
+# body 216
+# pos 216 3
+# scale 216 0.8 0
+# layer 216 5
+# mask 216 off
+# alpha 216 0 0
+;;トレイセーマ兵
+# body 3830001
+# pos 3830001 3
+# scale 3830001 0.8 0
+# layer 3830001 4
+# mask 3830001 off
+# alpha 3830001 0 0
+;;ミノタウロス
+# body 805031
+# pos 805031 3
+# scale 805031 0.8 0
+# layer 805031 3
+# mask 805031 off
+# alpha 805031 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# alpha 138 1 0.7
+# alpha 3104511 1 0.7
+# alpha 3104411 1 0.7
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 1038 "almace_0007"
+@アルマス
+…ふぅ
+あれと戦い慣れてる
+あなた達に手伝ってもらってよかった
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310441 "aiz_0027"
+@アイズ
+…けど、違う
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310451 "ryu_0032"
+@リュー
+そうですね
+私達が最初に遭遇した
+ミノタウロスとは違うようです
+
+# se "SE_6501"
+# emotionbody 1001 1 138 10 310
+# effectpattern 1001 2 0
+# effectstart 1001
+# textflame 1 1
+# textboxarrow 0 2
+# face 138 "angry"
+# voice 1038 "almace_0009"
+@アルマス
+はぁ！？
+こんなのが何体もいるっての！？
+
+# textflame 0 0
+@
+強力なミノタウロスが
+複数いるということは
+マスター達にとっても問題だ
+
+# alpha 3104511 0 0.5
+# move 216 5 0
+# alpha 216 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 216 "sad"
+# voice 9932 "bell_0025"
+@ベル
+ダンジョンの罠でもなんでも
+僕達のことでマスターさん達にも
+迷惑がかかってる…
+
+# textflame 1 1
+# textboxarrow 0 3
+@ベル
+そんなの見過ごせません！
+…といっても僕は戦えないんですが
+
+# textflame 1 1
+# textboxarrow 0 1
+@アイズ
+大丈夫、私がいる
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 216 "happy"
+# voice 9932 "bell_0003"
+@ベル
+は、はい！
+アイズさんがそう言ってくださるなら
+とても心強いです！
+
+# alpha 138 0 0.5
+# alpha 3603111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3603111 "surprise"
+# voice 360311 "hestia_0014"
+@ヘスティア
+ちょっとヴァレンなにがし君！
+ベル君の信頼を勝ち取ろうなんて
+小癪な真似は許さないよ！
+
+# se "SE_6502"
+# emotionbody 1002 2 310441 10 290
+# effectpattern 1002 1 1
+# effectstart 1002
+# textflame 1 1
+# textboxarrow 0 1
+# face 3104411 "sad"
+# voice 310441 "aiz_0028"
+@アイズ
+…そういう訳じゃないけど？
+
+# alpha 216 0 0.5
+# alpha 3104511 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310451 "ryu_0003"
+@リュー
+クラネルさんの憂いはもっともです
+私もできる限りお手伝いします
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3603111 "angry"
+# voice 360311 "hestia_0026"
+@ヘスティア
+ボクだってここなら
+戦うキミ達を
+手助けすることくらいできる！
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3603111 "sad"
+@ヘスティア
+本当ならベル君のことを
+助けてあげたいけど
+戦える状態じゃないし…
+
+# alpha 3104511 0 0.5
+# alpha 216 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 216 "normal"
+# voice 9932 "bell_0030"
+@ベル
+ありがとうございます神様
+
+# textflame 1 1
+# textboxarrow 0 3
+@ベル
+たしかに僕は今戦えません
+それでもできる戦いがあるはず
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 216 "happy"
+# voice 9932 "bell_0004"
+@ベル
+どんな状況であっても
+戦うのが英雄ですから！
+
+# textflame 1 1
+# textboxarrow 0 2
+@ヘスティア
+ベル君…
+
+# alpha 216 0 0.5
+# alpha 3603111 0 0.5
+# alpha 3104411 0 0.5
+# move 138 3 0
+# mask 138 off
+# alpha 138 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 138 "happy1"
+# voice 1038 "almace_0004"
+@アルマス
+ふふ、ベルってなんだか
+マスターみたいね
+
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+ヘスティアがベルに
+こだわるのもなんだかわかるわ
+
+# move 138 2 0.5
+# mask 138 on
+# move 216 4 0
+# alpha 216 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@ベル
+はは、それは僕が
+神様の眷族だからです
+
+# se "SE_6513"
+# emotionbody 1003 8 3603111 60 200
+# effectpattern 1003 1 0
+# effectstart 1003
+# alpha 138 0 0.5
+# move 3603111 2 0
+# alpha 3603111 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 360311 "hestia_0013"
+@ヘスティア
+むー、それだけじゃないんだけど
+
+# textflame 0 0
+@
+話がまとまったところで
+と、切り出すマスター
+
+# effectskip 1003
+# se "SE_6501"
+# emotionbody 1004 1 3603111 10 280
+# effectpattern 1004 2 0
+# effectstart 1004
+# textflame 1 1
+# textboxarrow 0 1
+# face 3603111 "surprise"
+# voice 360311 "hestia_0023"
+@ヘスティア
+全然まとまってないけど！？
+
+# alpha 216 0 0.5
+# move 3104411 4 0
+# alpha 3104411 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104411 "normal"
+# voice 310441 "aiz_0011"
+@アイズ
+ミノタウロスを探す
+それでまとまったわ
+
+# textflame 0 0
+@
+その通り、とマスターは
+次の行動について考えよう
+と話を進める
+
+# alpha 3603111 0 0.5
+# alpha 3104411 0 0.5
+# alpha 138 1 0.5
+# move 139 4 0
+# alpha 139 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "normal"
+# face 139 "sad"
+# voice 1038 "almace_0028"
+@アルマス
+この騒ぎじゃ
+しばらくトレイセーマに
+潜入するのは難しいわね
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9967 "titania_0042"
+@ティターニア
+その線からの情報は
+頼れない、ということですね
+
+# alpha 139 0 0.5
+# alpha 3104511 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310451 "ryu_0028"
+@リュー
+けれど、状況からして
+あの者達はミノタウロスを
+御すことができた訳ではないようです
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1038 "almace_0032"
+@アルマス
+私もそう思う
+そして兵士達はあの存在に気付いて
+捕獲しようとしていたし…
+
+# alpha 3104511 0 0.5
+# move 3603111 4 0
+# alpha 3603111 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 3603111 "usual"
+# voice 360311 "hestia_0040"
+@ヘスティア
+だとすれば
+まだほかのがこのあたりに
+いるかもしれないってことだね
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "angry"
+@アルマス
+そういうこと！
+じゃあ、すぐにでも行動よ！
+
+;;演出：移動の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# se "SE_0719"
+# waitandnext 0.5
+
+# bgmfile "bgm361_362" "BgmDanmachi" 0
+# alpha 3603111 0 0
+# alpha 138 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 805031 1 0.7
+# waitandnext 1
+
+# se "SE_7038"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミノタウロス
+ブオ、ブオオ…
+
+# se "SE_6513"
+# emotionbody 1005 10 138 90 260
+# effectpattern 1005 3 0
+# effectstart 1005
+# alpha 805031 0 0.5
+# move 138 4 0
+# alpha 138 1 0.5
+# move 3104411 2 0
+# alpha 3104411 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 138 "happy1"
+# voice 1038 "almace_0006"
+@アルマス
+当たりね！
+今日の私ってば絶・冴えてる！ 
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3104411 "angry"
+@アイズ
+あれは…手負い
+たぶん私達が戦ったミノタウロス
+
+# effectskip 1005
+# textflame 1 1
+# textboxarrow 0 3
+# face 138 "normal"
+# voice 1038 "almace_0003"
+@アルマス
+大当たりってことね
+ひとまずはアイツを倒せば…
+
+# alpha 138 0 0.5
+# alpha 3104411 0 0.5
+# alpha 3830001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@トレイセーマ兵
+いたぞ！
+あれを捕獲するんだ！
+
+# se "SE_6513"
+# emotionbody 1006 8 3603111 60 200
+# effectpattern 1006 1 0
+# effectstart 1006
+# alpha 3830001 0 0.5
+# alpha 138 1 0.5
+# move 3603111 2 0
+# alpha 3603111 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 3603111 "sad"
+# voice 360311 "hestia_0028"
+@ヘスティア
+アルマス、勘も冴えてるけど
+悪運も相当きてると思うなー
+
+# se "SE_6509"
+# emotionbody 1007 6 138 -20 240
+# effectpattern 1007 2 1
+# effectstart 1007
+# textflame 1 1
+# textboxarrow 0 3
+# face 138 "angry"
+# voice 1038 "almace_0027"
+@アルマス
+だああっ！
+もうめんどくさい！
+全員ぶっ飛ばす！
+
+# effectskip 1006
+# effectskip 1007
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 138 0 0
+# alpha 3603111 0 0
+# background "bg_black"
+# waitandnext 0.2

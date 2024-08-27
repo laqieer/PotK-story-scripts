@@ -1,0 +1,731 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第５章
+;;第2話　タイトル：世界樹攻略戦
+;;5_2_11
+;;スクリプト最後の背景：ユグドラシルの麓
+;;-----------------------------------------
+# script "lisp"
+# background "command_logo_tree"
+# bgmfile "bgm291" "BgmLostRagnarokSideStory" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 3
+# alpha 210 0 0
+# mask 210 off
+;;ミョルニル(キラーメイル)
+# body 1200111
+# pos 1200111 3
+# scale 1200111 0.8 0
+# layer 1200111 2
+# alpha 1200111 0 0
+# mask 1200111 off
+;;巨大死霊
+# body 5810301
+# pos 5810301 3
+# scale 5810301 0.8 0
+# layer 5810301 2
+# alpha 5810301 0 0
+# mask 5810301 off
+;;マサムネ(キラーメイル)
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# layer 1100111 2
+# alpha 1100111 0 0
+# mask 1100111 off
+;;デュランダル
+# body 3100311
+# pos 3100311 3
+# scale 3100311 0.8 0
+# layer 3100311 2
+# alpha 3100311 0 0
+# mask 3100311 off
+;;ブリューナク・D. plug・バルバトス
+# body 3500711
+# pos 3500711 3
+# scale 3500711 0.8 0
+# layer 3500711 2
+# alpha 3500711 0 0
+# mask 3500711 off
+;;ピサール
+# body 3302011
+# pos 3302011 3
+# scale 3302011 0.8 0
+# layer 3302011 2
+# alpha 3302011 0 0
+# mask 3302011 off
+;;ミストルティン
+# body 3600611
+# pos 3600611 3
+# scale 3600611 0.8 0
+# layer 3600611 2
+# alpha 3600611 0 0
+# mask 3600611 off
+;;アスクレピオス(キラーメイル)
+# body 1600111
+# pos 1600111 3
+# scale 1600111 0.8 0
+# layer 1600111 2
+# alpha 1600111 0 0
+# mask 1600111 off
+;;ロジェスティラ
+# body 5503711
+# pos 5503711 3
+# scale 5503711 0.8 0
+# layer 5503711 2
+# alpha 5503711 0 0
+# mask 5503711 off
+;;アルテミス(キラーメイル)
+# body 1400131
+# pos 1400131 3
+# scale 1400131 0.8 0
+# layer 1400131 2
+# alpha 1400131 0 0
+# mask 1400131 off
+;;アポロン(キラーメイル)
+# body 1400331
+# pos 1400331 3
+# scale 1400331 0.8 0
+# layer 1400331 2
+# alpha 1400331 0 0
+# mask 1400331 off
+;;ゴーレム
+# body 900012
+# pos 900012 3
+# scale 900012 0.8 0
+# layer 900012 3
+# alpha 900012 0 0
+# mask 900012 off
+;;ゴーレム（クローン1）
+# entry 99000121 900012
+# pos 99000121 3
+# scale 99000121 0.8 0
+# layer 99000121 3
+# alpha 99000121 0 0
+# mask 99000121 off
+;;-----------------------------------------
+;;第2話　タイトル：世界樹攻略戦
+;;//背景：ユグドラシルの麓
+# voice 310231 "ascalon_a_0029"
+# move 3102311 3 0
+# face 3102311 "angry"
+# alpha 3102311 1 0
+# mask 3102311 off
+# textflame 1 1
+# textboxarrow 0 2
+@アスカロン
+いきますっ！
+
+# textwindow "close"
+# alpha 3102311 0 0.5
+# move 900012 3 0
+# alpha 900012 1 0.5
+# mask 900012 off
+# waitandnext 0.6
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ゴーレム
+ムウウウウウウ…
+
+# voice 350171 "grimoire_ge_battle_0003"
+# alpha 900012 0 0.5
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+@グリモワール
+くらいなさいっ！
+
+# textwindow "close"
+# alpha 3501711 0 0.5
+# move 900012 3 0
+# alpha 900012 1 0.5
+# mask 900012 off
+# waitandnext 0.6
+
+# se "SE_4820"
+# envbody 2000 7 14
+# effectstart 2000
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ゴーレム
+ムウウウウウウウ…
+
+;;//二人がゴーレムを倒す
+;;//ゴーレムが次々に現れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 900012 0 0.5
+# waitandnext 0.5
+
+# effectskip 2000
+# waitandnext 0.4
+
+# se "SE_5613"
+# sedelay "SE_5620" 0.8
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# move 900012 2 0
+# alpha 900012 1 0.5
+# mask 900012 on
+# waitandnext 0.8
+
+# move 99000121 4 0
+# alpha 99000121 1 0.5
+# mask 99000121 on
+# waitandnext 1.2
+
+# voice 350171 "grimoire_ge_0014"
+# alpha 900012 0 0.5
+# alpha 99000121 0 0.5
+# move 3102311 1 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+# move 3501711 5 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+# textwindow "normal"
+@グリモワール
+倒しても倒してもキリがないわね！
+
+# textboxarrow 0 1
+@アスカロン
+それでもっ
+少しずつ前進しています！
+
+# voice 9936 "kamito_0003"
+# face 210 "angry"
+# textboxarrow 0 2
+@カミト
+そうだよ、二人とも！
+押すんだ！
+押して押して押し通せぇっ！
+
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# alpha 3501711 0 0.5
+# move 5503711 3 0
+# face 5503711 "sad"
+# alpha 5503711 1 0.5
+# mask 5503711 off
+# textboxarrow 0 2
+@ロジェスティラ
+うぅ…
+いくらゴーレムを作り出しても
+進んできます…
+
+# textboxarrow 0 2
+@ロジェスティラ
+こんなのこんなの…
+本当に…危なかったです…
+
+# face 5503711 "angry"
+# textboxarrow 0 2
+@ロジェスティラ
+でも、間に合いました…！
+ゴーレムを倒される速さより、
+作り出す速さの方が勝ってます
+
+# voice 350171 "grimoire_ge_battle_0006"
+# alpha 5503711 0 0.5
+# move 3102311 1 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+# move 3501711 5 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+@グリモワール
+ぐっ…！
+あと…少しなのにっ…
+
+# voice 310231 "ascalon_a_unit_1006"
+# textboxarrow 0 1
+@アスカロン
+こんなに早く召喚できるなんて…
+羨ましい！
+
+# voice 9936 "kamito_0040"
+# textboxarrow 0 2
+@カミト
+あと一押しなんだ！
+あと…ぐぅっ…！？
+
+# se "SE_0846"
+# waitandnext 0.5
+
+# voice 9936 "kamito_0041"
+# face 210 "angry"
+# textboxarrow 0 2
+@カミト
+あがあああああ…！？
+
+# textboxarrow 0 1
+# face 3102311 "surprise"
+@アスカロン
+マスター！？
+
+# face 3501711 "normal"
+# textboxarrow 0 3
+@グリモワール
+こんなときに…！
+腕が痛むのねっ
+
+# voice 550371 "logistille_c_0027"
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# alpha 3501711 0 0.5
+# move 5503711 3 0
+# face 5503711 "normal"
+# alpha 5503711 1 0.5
+# mask 5503711 off
+# textboxarrow 0 2
+@ロジェスティラ
+ふぅ…
+ここまでですね
+
+# face 5503711 "angry"
+# textboxarrow 0 2
+@ロジェスティラ
+空虚なる魂の器さん、
+大樹さまの贄となってください…！
+
+# textboxarrow 0 2
+@ロジェスティラ
+もう終わりにしましょうっ
+
+# alpha 5503711 0 0.5
+# move 3102311 1 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 2
+# move 3501711 5 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+@カミト
+まだ、だ…
+
+# face 3501711 "angry"
+# textboxarrow 0 3
+@グリモワール
+マスターっ…
+いいからキミは大人しくしてなさい
+
+# face 3102311 "angry"
+# textboxarrow 0 1
+@アスカロン
+グリモワール、
+マスターの治療を！
+魔獣達は私がなんとかします！
+
+# face 210 "angry"
+# textboxarrow 0 2
+@カミト
+まだだ…こんな痛み、
+どうってことない…！
+
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# alpha 3501711 0 0.5
+# move 900012 2 0
+# alpha 900012 1 0.5
+# mask 900012 on
+# move 99000121 4 0
+# alpha 99000121 1 0.5
+# mask 99000121 on
+# textboxarrow 0 0
+@ゴーレム
+ムウウウウウウウウウ！
+
+;;//ゴーレムがカミト達を囲む
+# alpha 99000121 0 0.5
+# alpha 900012 0 0.5
+# move 3102311 1 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 2
+# move 3501711 5 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+@カミト
+二人とも、僕のことはいいから
+進んでくれ！
+
+# voice 350171 "grimoire_ge_0010"
+# face 3501711 "angry"
+# textboxarrow 0 3
+@グリモワール
+マスターっ…
+ふざけんじゃ――
+
+# face 210 "angry"
+# textboxarrow 0 2
+@カミト
+進むんだ！
+進むことでしか、突破できない！
+
+# face 3501711 "normal"
+# textboxarrow 0 3
+@グリモワール
+…………
+
+# textboxarrow 0 2
+@カミト
+未来はいつだって“この先”に
+あるんだ！！
+
+;;//画面フラッシュ
+# se "SE_9089"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 9936 "kamito_0023"
+# face 210 "surprise"
+# textboxarrow 0 2
+@カミト
+えっ？
+
+# face 3102311 "surprise"
+# textboxarrow 0 1
+@アスカロン
+ユグドラシルが…光りました…！
+
+# voice 350171 "grimoire_ge_0023"
+# face 3501711 "surprise"
+# textboxarrow 0 3
+@グリモワール
+何なの、今のっ？
+何が…えぇぇっ！？
+
+# se "SE_0867"
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# alpha 3501711 0 0.5
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# mask 5810301 off
+# textboxarrow 0 2
+@？？？
+ＲＹＡＡＡＡＡＡＡＡＡＡＡＡＡＡＡ
+ＡＡＡＡＡＡＡＡＡＡＡＡ…
+
+;;//巨大死霊が消えていく
+# se "SE_5215"
+# textwindow "close"
+# alpha 5810301 0 1
+# waitandnext 1
+
+# move 3102311 2 0
+# face 3102311 "surprise"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 210 4 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# textwindow "normal"
+@カミト
+霧が…周りを覆っていた霧が
+晴れていく…
+
+# textboxarrow 0 1
+@アスカロン
+巨大な化け物も姿を消していきます！
+何が起きたんでしょう…
+
+# voice 550371 "logistille_c_0023"
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# move 5503711 3 0
+# face 5503711 "surprise"
+# alpha 5503711 1 0.5
+# mask 5503711 off
+# textboxarrow 0 2
+@ロジェスティラ
+あわわっ！
+霧が晴れていきますっ…
+
+# voice 550371 "logistille_c_0014"
+# textboxarrow 0 2
+@ロジェスティラ
+これってユグドラシルが…
+でもでもっ…
+
+# alpha 5503711 0 0.5
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 3501711 4 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+@グリモワール
+理由は分からないけど、
+はっきりしていることが一つだけ
+あるわ
+
+# voice 310231 "ascalon_a_0032"
+# textboxarrow 0 1
+@アスカロン
+はい！
+絶好機です！
+
+# voice 550371 "logistille_c_0022"
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# move 5503711 3 0
+# face 5503711 "surprise"
+# alpha 5503711 1 0.5
+# mask 5503711 off
+# textboxarrow 0 2
+@ロジェスティラ
+いけません！
+もっとゴーレムを…あれっ？
+
+;;//ゴーレムが地面から現れようとして止まる
+# voice 550371 "logistille_c_0015"
+# face 5503711 "sad"
+# textboxarrow 0 2
+@ロジェスティラ
+地中で何かが邪魔してますっ…
+これって…
+
+# voice 360061 "misutoru_ge_0004"
+# alpha 5503711 0 0.5
+# move 3600611 3 0
+# face 3600611 "normal"
+# alpha 3600611 1 0.5
+# mask 3600611 off
+# textboxarrow 0 2
+@ミストルティン
+ようやく蔦を届かせることが
+できました
+
+# textboxarrow 0 2
+@ミストルティン
+これでマスター様のご命令を
+全うできます！
+
+# voice 330201 "pisear_t_0019"
+# move 3302011 2 0
+# face 3302011 "sad"
+# alpha 3302011 1 0.5
+# mask 3302011 on
+# textboxarrow 0 1
+# move 3600611 4 0.5
+# mask 3600611 on
+@ピサール
+あ～、疲れた～…
+それじゃ、あとよろしく～
+
+# voice 360061 "misutoru_ge_0012"
+# face 3600611 "usual"
+# textboxarrow 0 3
+@ミストルティン
+ピサール、寝ないで下さい
+マスター様のために働かないとっ
+
+# voice 330201 "pisear_t_0001"
+# textboxarrow 0 1
+@ピサール
+あっちこっち往復して、
+わたし、疲れてるんだってば～…
+
+# voice 350071 "buryunaku_a_0003"
+# alpha 3302011 0 0.5
+# alpha 3600611 0 0.5
+# move 3500711 2 0
+# face 3500711 "normal"
+# alpha 3500711 1 0.5
+# mask 3500711 on
+# textboxarrow 0 1
+# move 3100311 4 0
+# face 3100311 "normal"
+# alpha 3100311 1 0.5
+# mask 3100311 on
+@ブリューナク
+うむ
+後はブリューナク達に任せるといい
+
+# voice 310031 "durandaru_a_0004"
+# face 3100311 "happy"
+# textboxarrow 0 3
+@デュランダル
+こんな楽しいパーティーに
+危うく参加しそびれるところ
+でしたわ♪
+
+# alpha 3500711 0 0.5
+# alpha 3100311 0 0.5
+# move 210 3 0
+# face 210 "happy"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+みんな…！
+
+# alpha 210 0 0.5
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# move 1600111 4 0
+# face 1600111 "normal"
+# alpha 1600111 1 0.5
+# mask 1600111 on
+# textboxarrow 0 3
+@アスクレピオス
+待たせたね
+あのばかでかい化け物のせいで
+足止めされていたけれど
+
+# textboxarrow 0 1
+@マサムネ
+霧と一緒に消えてくれたお陰で
+やっと駆けつけられた
+立てるか？
+
+# voice 9936 "kamito_0003"
+# alpha 1600111 0 0.5
+# move 210 4 0
+# face 210 "happy"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+@カミト
+うん、大丈夫
+
+# voice 12001 "mjolnirm_0001"
+# alpha 1100111 0 0.5
+# move 1200111 2 0
+# face 1200111 "angry_1"
+# alpha 1200111 1 0.5
+# mask 1200111 on
+# textboxarrow 0 1
+@ミョルニル
+なら、アンタは下がってな
+俺が全てぶっ飛ばしてやるよ！
+
+# alpha 210 0 0.5
+# move 1400131 4 0
+# face 1400131 "angry"
+# alpha 1400131 1 0.5
+# mask 1400131 on
+# textboxarrow 0 3
+@アルテミス
+いや、彼を先に行かせるのが
+目的だろう？
+勘違いしないでくれ
+
+# alpha 1200111 0 0.5
+# move 1400331 2 0
+# face 1400331 "normal"
+# alpha 1400331 1 0.5
+# mask 1400331 on
+# textboxarrow 0 1
+@アポロン
+道を切り拓くのが
+俺達の役目ってわけだな
+任せろ！
+
+# voice 9936 "kamito_0001"
+# alpha 1400331 0 0.5
+# alpha 1400131 0 0.5
+# move 210 3 0
+# face 210 "happy"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+君達…アルテミスとアポロンっ？
+良かった…意識が戻ったんだね
+
+# voice 14001 "artemism_0003"
+# alpha 210 0 0.5
+# move 1400331 2 0
+# face 1400331 "normal"
+# alpha 1400331 1 0.5
+# mask 1400331 on
+# move 1400131 4 0
+# face 1400131 "angry"
+# alpha 1400131 1 0.5
+# mask 1400131 on
+# textboxarrow 0 3
+@アルテミス
+お礼は後にさせてもらうよ
+今は…
+
+# voice 14003 "apollonm_0003"
+# textboxarrow 0 1
+@アポロン
+この土塊人形を撃ち抜いて、
+ユグドラシルへの道を作る！
+
+# alpha 1400331 0 0.5
+# alpha 1400131 0 0.5
+# move 1100111 3 0
+# face 1100111 "angry"
+# alpha 1100111 1 0.5
+# mask 1100111 off
+# textboxarrow 0 2
+@マサムネ
+さあ、走れ！
+あんたの目的のために！

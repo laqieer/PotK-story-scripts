@@ -1,0 +1,394 @@
+;;【EP1】聖泉奪取～喫緊～:戦闘後
+# script "lisp"
+# bgmfile "bgm037" "BgmStory004" 0
+# background "plain_night"
+# body 44
+# pos 44 5
+# scale 44 0.8 0
+# alpha 44 0 0
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# alpha 103611 0 0
+# body 101471
+# pos 101471 3
+# scale 101471 0.8 0
+# alpha 101471 0 0
+# body 401711
+# pos 401711 5
+# scale 401711 0.8 0
+# alpha 401711 0 0
+# body 502711
+# pos 502711 5
+# scale 502711 0.8 0
+# alpha 502711 0 0
+# body 302511
+# pos 302511 3
+# scale 302511 0.8 0
+# alpha 302511 0 0
+# body 103511
+# pos 103511 2
+# scale 103511 0.8 0
+# alpha 103511 0 0
+# body 100161
+# pos 100161 2
+# scale 100161 0.8 0
+# body 400151
+# pos 400151 4
+# scale 400151 0.8 0
+# voice 40015 "arutemisu_k_0014"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 400151
+# face 400151 "sad"
+@ラスト
+ここは分が悪すぎますね…
+ラース、引きましょう…！
+
+# textboxarrow 0 1
+# chara 100161
+# voice 10016 "masamune_k_0024"
+# face 100161 "angry"
+@ラース
+納得いかぬ！
+拙者が弓兵ごときに翻弄されるなど！
+この屈辱は決して忘れぬぞ！
+
+;;//ラースとラストが撤退する
+# textboxarrow 0 0
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# se "SE_5575"
+# alpha 100161 0 0.5
+# alpha 400151 0 0.5
+# waitandnext 1
+
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# layer 103611 3
+# layer 302511 2
+# layer 101471 1
+# alpha 103511 1 0
+# alpha 401711 1 0
+# bgm "bgm003" 0.7
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@考古学者
+二人とも無事か！？
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 103511
+# voice 1035 "damocles_0004"
+# face 103511 "happy"
+@ダモクレス
+クレスもスイハも大丈夫だよ～！
+おねーさん達逃げていっちゃった
+
+# textflame 0 0
+@考古学者
+良かった…
+レーヴァの傷も大したことなさそう
+だし、一安心だな
+
+# textflame 1 1
+# move 401711 5 0.5
+# move 103511 1 0.5
+# alpha 302511 1 0.5
+# textboxarrow 0 2
+# chara 302511
+# voice 3025 "minerva_0028"
+# face 302511 "angry"
+@ミネルヴァ
+そうでもありませんよ
+急いで残りの三人を蘇らせた方が
+良さそうです
+
+# textflame 0 0
+@考古学者
+でも、壊したってなにしたって
+復活させられるんだろ？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 302511
+@ミネルヴァ
+そのことを彼女達にも知られました
+次は恐らく、永遠に復活させられない
+よう手を打ってくるでしょう
+
+# textflame 0 0
+# imagealpha 0 0 0
+# imagelayer 0 1
+@考古学者
+なるほど…それは確かに急いだ方が
+良さそうだ
+
+【指定】
+;;//背景：町
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# body 41
+# pos 41 3
+# scale 41 0.8 0
+# mask 41 off
+# alpha 100161 0 0
+# alpha 400151 0 0
+# alpha 103511 0 0
+# alpha 401711 0 0
+# alpha 302511 0 0
+# background "town_night"
+# bgmfile "bgm166" "BgmPJZero001" 0.7
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 41
+@黒奏官
+失態だな
+
+# alpha 41 0 0.5
+# alpha 100161 1 0.5
+# alpha 400151 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 100161
+# voice 10016 "masamune_k_0031"
+# face 100161 "sad"
+@ラース
+面目次第もございません！
+
+# textboxarrow 0 3
+# chara 400151
+# voice 40015 "arutemisu_k_0031"
+@ラスト
+私としたことが、詰めが甘かった
+ようです…
+
+# alpha 41 1 0.5
+# alpha 100161 0 0.5
+# alpha 400151 0 0.5
+# textboxarrow 0 2
+# chara 41
+@黒奏官
+いや、失態を犯したのは俺の方だ
+まさか破壊しても蘇るとは…
+
+# textboxarrow 0 2
+# chara 41
+@黒奏官
+ならば、やり方を変えるまでだな
+グリード
+
+# move 41 4 0.5
+# move 101471 2 0
+# alpha 101471 1 1
+# textflame 1 1
+# textboxarrow 0 1
+# chara 101471
+# voice 10147 "tyrufing_k_0003"
+@グリード
+はい
+他の四人も準備はできています
+
+# textboxarrow 0 3
+# chara 41
+@黒奏官
+ラースとラストも連れていけ
+七人全員で残り三人の復活を
+なんとしても阻止しろ
+
+# voice 10147 "tyrufing_k_0001"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 101471
+# face 101471 "angry"
+@グリード
+お任せ下さい、マスター
+
+;;//暗転
+# fadeout "black" 2
+# waitandnext 3
+# se "SE_9169"
+# bgm "stop"
+
+;;――場面転換――
+# fadein "black" 0.5
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 0
+@古文書
+――キラープリンセスをまとめる
+組織の創設
+そのために必須の地があった
+
+@古文書
+――私はリベリオンとラグナロクに
+その地を奪取するよう頼み
+彼らと一時、行動を別にした
+
+;;//背景：平原（夜）
+# se "SE_4779"
+# imageset 1 "bg_white"
+# imagealpha 1 0 0
+# imagescale 1 10 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fillrect "white" 2.3 0 1
+# waitandnext 2.7
+
+# imagepos 1 0 0
+# imagealpha 1 1 0
+# fillrect "white" 1 1 0
+# waitandnext 0.1
+
+# face 302511 "normal"
+# alpha 302511 1 0
+# alpha 44 1 0
+# alpha 103611 1 0
+# move 101471 3 0
+# move 302511 1 0
+# alpha 100161 0 0
+# alpha 400151 0 0
+# alpha 101471 0 0
+# alpha 41 0 0
+# background "plain_night"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# imagealpha 1 0 1
+# imagealpha 0 0 1
+# waitandnext 1.1
+
+# bgm "bgm013" 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+# voice 9979 "rebellion_0028"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 44
+@リベリオン
+ここがフレンネルの言っていた
+王政府の管理してる土地か…
+この奥に泉があるって話だが
+
+# textboxarrow 0 2
+# chara 103611
+# voice 1036 "ragnarok_0007"
+@ラグナロク
+異族の気配がする
+王政府と神々が繋がっているという
+話は事実だったようね
+
+# textboxarrow 0 3
+# chara 44
+# voice 9979 "rebellion_0004"
+# face 44 "irregular"
+@リベリオン
+それじゃ予定通り派手にいくか！
+ここを守ってる異族どもを殲滅して
+マナの泉とやらを分捕るぞ！
+
+# textboxarrow 0 1
+# chara 302511
+# voice 3025 "minerva_0002"
+# face 302511 "sad"
+@ミネルヴァ
+ラグナロク…まだ彼女達が合流して
+いないのですけれど…
+
+# textboxarrow 0 2
+# chara 103611
+@ラグナロク
+エルキュール達なら心配いらないわ
+きっと運命の理に導かれるから！
+
+# alpha 44 0 0.5
+# alpha 502711 1 0.5
+# voice 5027 "freischotz_0005"
+# textboxarrow 0 3
+# chara 502711
+@フライシュッツ
+うふふ。ネスやグラーシーザも
+久し振りだから、いっぱいぎゅ～って
+しちゃおっと♪
+
+# alpha 502711 0 0.5
+# alpha 401711 1 0.5
+# voice 4017 "suiha_0032"
+# textboxarrow 0 3
+# chara 401711
+@スイハ
+…異族の隙を突くなら、今
+
+# move 44 3 0
+# alpha 302511 0 0.5
+# alpha 103511 1 0.5
+# voice 1035 "damocles_kyara_1006"
+# textboxarrow 0 1
+# chara 103611
+@ダモクレス
+奇襲だって愛があれば問題ない！
+ラグナロク、早く行こうよ～っ
+
+# mask 44 off
+# alpha 44 1 0.5
+# alpha 103511 0 0.5
+# alpha 103611 0 0.5
+# alpha 401711 0 0.5
+# textboxarrow 0 2
+# chara 44
+# face 44 "smile"
+@リベリオン
+…ったく、頼もしい奴らだぜ
+
+# alpha 44 0 0.5
+# alpha 103511 1 0.5
+# alpha 103611 1 0.5
+# alpha 401711 1 0.5
+# voice 1036 "ragnarok_unit_0012"
+# textboxarrow 0 2
+# chara 103611
+# face 103611 "angry"
+# face 103511 "normal"
+@ラグナロク
+進撃するわ！
+皆、この御旗に続けっ
+正義をもって異族を殲滅する！！

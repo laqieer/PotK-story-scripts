@@ -1,0 +1,906 @@
+;;-----------------------------------------
+;;ファンキル学園
+;;OP～1_1
+;;-----------------------------------------
+# script "lisp"
+# bgm "bgm002" 0
+# background "gymnasium"
+;;-----------------------------------------
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 3
+# mask 0 off
+# alpha 0 0 0
+;;マサムネ
+# body 101
+# pos 101 3
+# scale 101 0.8 0
+# layer 101 3
+# mask 101 off
+# alpha 101 0 0
+;;ティルフィング
+# body 101491
+# pos 101491 3
+# scale 101491 0.8 0
+# layer 101491 3
+# mask 101491 off
+# alpha 101491 0 0
+;;ダグダ
+# body 200651
+# pos 200651 3
+# scale 200651 0.8 0
+# layer 200651 3
+# mask 200651 off
+# alpha 200651 0 0
+;;メギド
+# body 500621
+# pos 500621 3
+# scale 500621 0.8 0
+# layer 500621 4
+# mask 500621 off
+# alpha 500621 0 0
+;;芭蕉扇
+# body 81
+# pos 81 3
+# scale 81 0.8 0
+# layer 81 3
+# mask 81 off
+# alpha 81 0 0
+;;フライクーゲル
+# body 126
+# pos 126 3
+# scale 126 0.8 0
+# layer 126 3
+# mask 126 off
+# alpha 126 0 0
+;;ウコンバサラ
+# body 201021
+# pos 201021 3
+# scale 201021 0.8 0
+# layer 201021 3
+# mask 201021 off
+# alpha 201021 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;学園ロゴ
+# imageset 2 "school_logo"
+# imagealpha 2 0 0
+# imagelayer 2 5
+;;イベントロゴ
+# imageset 3 "e200621_logo"
+# imagealpha 3 0 0
+# imagelayer 3 5
+;;-----------------------------------------
+;;背景：体育館
+;;ＳＥ：ざわざわ…（生徒たちのざわめき）
+# se "SE_0902"
+# sedelay "SE_0716" 0.5
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 3.5
+
+# alpha 0 1 0.5
+# waitandnext 0.5
+
+# se "SE_6521"
+# emotionbody 1000 10 0 -10 150
+# effectpattern 1000 4 0
+# effectstart 1000
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 2
+# face 0 "happy"
+@デュリン
+生徒諸君、おはよ～！
+全校朝礼を始めるわよ！
+
+# effectskip 1000
+# textflame 1 1
+# textboxarrow 0 2
+@デュリン
+今日はさっそく
+嬉しいニュースから！
+マスター、上がってきて！
+
+;;ＳＥ：コツ、コツ（マスターが壇上に上がる音）
+# se "SE_0740"
+# textboxarrow 0 0
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 0 "normal"
+@デュリン
+こないだの“黒い霧”事件…
+ＭＡＩが起こしていた
+学園の異族問題だけど
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 0 "happy"
+# voice 9999 "durin_0030"
+@デュリン
+諸君のおかげで
+無事に解決できたわ！
+改めてありがとう！
+
+# textflame 1 1
+# textboxarrow 0 2
+@デュリン
+中でも特に
+がんばってくれたのが…
+マスター、あなたよ！
+
+;;ＳＥ：パチパチパチ…（拍手の音）
+# se "SE_0600"
+# textboxarrow 0 0
+# waitandnext 1
+
+# alpha 0 0 0.5
+# move 101 4 0
+# mask 101 on
+# alpha 101 1 0.5
+# move 101491 2 0
+# mask 101491 on
+# alpha 101491 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1001 "masamune_0003"
+@マサムネ
+うむ…
+主君の尽力なしでは、
+解決には至らなかったであろう
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0005"
+@ティルフィング
+ふふふっ
+さすがです、マスター
+
+# textflame 0 0
+@マスター
+はは…
+なんだか、照れるなぁ
+
+# alpha 101 0 0.5
+# alpha 101491 0 0.5
+# alpha 0 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 0 "proud"
+# voice 9999 "durin_0020"
+@デュリン
+そんなマスターの栄誉を称えて、
+理事長の私からプレゼント！
+
+# textflame 0 0
+@マスター
+え？なんだろ？
+楽しみだなぁ
+
+# se "SE_0673"
+# bgm "stop"
+# textflame 1 1
+# textboxarrow 0 2
+# face 0 "happy"
+# voice 9999 "durin_0004"
+@デュリン
+じゃじゃーんっ！
+マスターの銅像よ！
+すごいでしょ～！
+
+;;モノローグ
+# textflame 0 0
+@
+シーーーーン…
+
+# textflame 0 0
+@マスター
+プレゼントっていうより
+嫌がらせだと思う…
+
+# bgm "bgm006" 0
+# se "SE_6517"
+# emotionbody 1001 9 0 10 100
+# effectpattern 1001 6 0
+# effectstart 1001
+# textflame 1 1
+# textboxarrow 0 2
+# face 0 "worry"
+# voice 9999 "durin_0042"
+@デュリン
+…………あ、あれっ？
+なんでみんな静かになるの？
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 0 "proud"
+@デュリン
+ほらっ、銅像よ？
+それも等身大で全身金ピカ！
+すごくない！？
+
+# effectskip 1001
+;;ＳＥ：ざわざわざわ…（生徒たちのざわめき）
+# alpha 0 0 0.5
+# se "SE_0902"
+# textwindow "close"
+# waitandnext 0.8
+
+# move 200651 2 0
+# mask 200651 on
+# alpha 200651 1 0.5
+# move 500621 4 0
+# mask 500621 on
+# alpha 500621 1 0.5
+# face 500621 "sad"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 200651 "sad"
+# voice 2006 "daguda_0028"
+@ダグダ
+うぅ～ん…全身金色かぁ
+悪趣味ー
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+なんです、あのポーズ
+なんだか気持ち悪いですわ…
+
+# alpha 200651 0 0.5
+# alpha 500621 0 0.5
+# alpha 201021 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 201021 "sad"
+# voice 2010 "ukonbasara_0008"
+@ウコンバサラ
+あはは…リアルすぎて
+ちょっと怖いかも
+
+# alpha 201021 0 0.5
+# move 126 2 0
+# mask 126 on
+# alpha 126 1 0.5
+# move 81 4 0
+# mask 81 on
+# alpha 81 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5008 "bashosen_0021"
+@芭蕉扇
+うふふふ
+旦那様の銅像…
+当然、あれは私のものよね
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 126 "surprise"
+# voice 5002 "furaikugeru_0028"
+@フライクーゲル
+あ、芭蕉扇
+また、バットなこと考えてるね
+注意しとかないと
+
+# alpha 126 0 0.5
+# alpha 81 0 0.5
+# alpha 0 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 0 "usual2"
+@デュリン
+あー…………
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9999 "durin_0002"
+@デュリン
+こ、こほん！
+全員静かにー！
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 0 "angry"
+@デュリン
+とにかく、この銅像は
+さっそく校門に飾るから！
+異議は認めない！
+
+# textflame 1 1
+# textboxarrow 0 2
+@デュリン
+くれぐれもイタズラとか
+しないように！
+以上、朝礼終わり！
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：校門
+# background "schoolgate_daytime"
+# bgm "bgm002" 0
+# alpha 0 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+# textwindow "nomal"
+@
+こうして金色のマスター像は、
+生徒から絶大な不評を買いつつも
+学園の顔となった
+
+;;モノローグ
+# textflame 0 0
+@
+しかし―
+
+# bgm "stop"
+;;モノローグ
+# textflame 0 0
+@
+この像が後に
+あんな事件の引き金になるとは、
+誰も想像していなかった…
+
+# fadeout "black" 1
+# waitandnext 1.5
+
+# textwindow "close"
+# bgmfile "bgm187" "BgmGakuen_OP" 0.3
+# fadein "white" 0.8
+# background "schoolgate_daytime"
+# textwindow "close"
+# waitandnext 1
+
+# move 101 5 0
+# alpha 101 1 0.38
+# face 101 "normal"
+# waitandnext 0.38
+
+# move 126 1 0
+# alpha 126 1 0.38
+# face 126 "normal"
+# waitandnext 0.38
+
+# move 500621 3 0
+# alpha 500621 1 0.38
+# face 500621 "normal"
+# waitandnext 0.5
+
+# fadein "white" 0.8
+# background "corridor_daytime"
+# alpha 500621 0 0
+# alpha 126 0 0
+# alpha 101 0 0
+# waitandnext 1
+
+# move 201021 1 0
+# alpha 201021 1 0.39
+# face 201021 "normal"
+# waitandnext 0.4
+
+# move 0 3 0
+# alpha 0 1 0.39
+# face 0 "normal"
+# waitandnext 0.4
+
+# move 101491 5 0
+# alpha 101491 1 0.39
+# face 101491 "normal"
+# waitandnext 0.5
+
+# fadein "white" 0.8
+# background "classroom01"
+# alpha 201021 0 0
+# alpha 101491 0 0
+# alpha 0 0 0
+# waitandnext 0.8
+
+# fadeout "white" 1
+# waitandnext 1.2
+
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# bgm "stop"
+# fadein "white" 0.5
+# voice 1014 "tyrufing_g_title_0007"
+# voice 1002 "revatein_g_title_0007"
+# voicedelay 1001 "masamune_g_title_0007" 0.1
+# voicedelay 2006 "daguda_g_title_0007" 0.1
+# voice 5002 "furaikugeru_g_title_0007"
+# waitandnext 2
+
+# imagealpha 2 0 1
+# imagepos 2 0 0
+# imagealpha 3 1 1
+# imagepos 3 0 0
+
+# fadeout "black" 2
+# waitandnext 3
+
+;;【EP.1】暗い教室と残骸の怪
+;;背景：黒バック
+# imagealpha 3 0 0
+# background "bg_black"
+# bgm "bgm002" 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textflame 0 0
+# textwindow "nomal"
+@
+マスター像が建てられて数日…
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：廊下（朝）
+# background "corridor_daytime"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 201021 3 0
+# mask 201021 off
+# alpha 201021 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 201021 "sad"
+@ウコンバサラ
+ふわぁあ…眠い…
+…ん？
+
+# alpha 201021 0 0.5
+# move 81 3 0
+# mask 81 off
+# alpha 81 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 81 "sad"
+@芭蕉扇
+あなた～どこなの～？
+出てきて、一緒に
+朝の優雅な時間を過ごしましょ～
+
+# alpha 81 0 0.5
+# alpha 201021 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ウコンバサラ
+朝から何してるんだろ？
+それにしても、ちょっと早く
+来すぎちゃったなぁ
+
+;;ＳＥ：タッタッタッ（メギドが走ってくる音）
+# textboxarrow 0 0
+# se "SE_5575"
+# bgm "stop"
+# waitandnext 1
+
+# se "SE_6502"
+# emotionbody 1002 2 201021 10 260
+# effectpattern 1002 1 1
+# effectstart 1002
+# textflame 1 1
+# textboxarrow 0 2
+# voice 2010 "ukonbasara_0022"
+@ウコンバサラ
+…うん？
+
+# move 500621 4 0
+# alpha 500621 1 0
+# face 500621 "angry"
+# rightin 500621 0.3
+# waitandnext 0.4
+
+# se "SE_6525"
+# emotionbody 1003 11 201021 10 290
+# effectpattern 1003 2 0
+# effectstart 1003
+# textflame 1 1
+# textboxarrow 0 2
+# face 201021 "angry"
+# voice 2010 "ukonbasara_battle_0008"
+@ウコンバサラ
+うわっ！？
+# waitandnext 1
+
+;;演出：画面揺れ
+# shake 0 1
+;;ＳＥ：ドサッ（メギドとウコンバサラが倒れる音）
+# move 201021 2 0.2
+# alpha 201021 0 0.4
+# alpha 500621 0 0.4
+# se "SE_9347"
+# sedelay "SE_0852" 0.1
+# textwindow "close"
+# waitandnext 1
+
+# mask 201021 on
+# alpha 201021 1 0.5
+# alpha 500621 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 500621 "sad"
+# voice 5006 "megido_0015"
+@メギド
+うう…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 201021 "sad"
+# voice 2010 "ukonbasara_0015"
+@ウコンバサラ
+いたたた…
+だ、大丈夫！？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5006 "megido_0031"
+@メギド
+え、ええ…
+申し訳ありません、
+ぶつかってしまって
+
+# textflame 1 1
+# textboxarrow 0 1
+@ウコンバサラ
+ええと…どうしたの？
+ずいぶん慌ててるみたいだけど
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+あ、いえ…
+
+# bgm "bgm005" 0
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5006 "megido_0028"
+@メギド
+実は先ほど、
+少々不気味なことが
+起こったもので…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ウコンバサラ
+不気味なこと？
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+はい…
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+その…もしよろしければ、
+一緒についてきて
+いただけませんか？
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+確かめに行きたいのですが、
+ひとりだけだと
+落ち着かないのです
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 201021 "usual"
+# voice 2010 "ukonbasara_0040"
+@ウコンバサラ
+そっか…
+よくわからないけど、
+私でよければ力になるよ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5006 "megido_0030"
+@メギド
+本当ですか？
+ありがとうございます…！
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：廊下（朝）※直前と同じなのも微妙なので階段で代用
+# background "stairs_day"
+# bgmfile "bgm373" "BgmGakuen005" 0
+# alpha 201021 0 0
+# alpha 500621 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 201021 1 0.5
+# alpha 500621 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@メギド
+着きましたわ
+こちらです
+
+# se "SE_6502"
+# emotionbody 1004 2 201021 10 290
+# effectpattern 1004 1 1
+# effectstart 1004
+# textflame 1 1
+# textboxarrow 0 1
+# face 201021 "surprise"
+@ウコンバサラ
+ここって…空き教室だよね？
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+ええ、いつもは誰にも
+使われていないのですけれど
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+先ほどこの場所を通ったとき、
+教室の中から
+奇妙な音が漏れていて…
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+しゃっ、しゃっ、というような
+乾いた音だけが、
+何度も繰り返し聞こえてきたのです
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 201021 "sad"
+@ウコンバサラ
+うわぁ…
+それはちょっと不気味だね
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+気になって中を
+覗こうとしたのですが、
+窓もカーテンも閉じられていて
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+声をかけるのも
+ためらわれてしまい、
+いったいどうしたものかと…
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 2010 "ukonbasara_0028"
+@ウコンバサラ
+なるほどなぁ…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 201021 "usual"
+@ウコンバサラ
+まあきっと、
+どこかの部活が朝錬で使ってるとか
+そういうパターンだと思うけど
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 201021 "angry"
+@ウコンバサラ
+よし…思い切って
+ノックしてみよう
+
+;;ＳＥ：コンコン（ノックの音）
+# se "SE_0679"
+# textboxarrow 0 0
+# waitandnext 1.2
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 2010 "ukonbasara_0002"
+@ウコンバサラ
+誰かいる？
+いたら返事して！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ウコンバサラ
+…返ってこない
+誰もいないのかな
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 201021 "surprise"
+# voice 2010 "ukonbasara_0022"
+@ウコンバサラ
+あれ？
+ドアの鍵、開いてる…
+
+;;ＳＥ：ガラガラガラ…（ウコンバサラがドアを開く音）
+# se "SE_0676"
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# face 500621 "surprise"
+# brightness 201021 0.3 0
+# brightness 500621 0.3 0
+;;背景：黒バック
+# background "bg_black"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.3
+# imagerightout 0 0.3
+# waitandnext 0.3
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ウコンバサラ
+うわっ、真っ暗！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5006 "megido_0028"
+@メギド
+窓側のカーテンまで
+すべて閉められてますわね…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ウコンバサラ
+とりあえず電気つけなきゃ
+ええと、スイッチはこの辺に―
+
+;;ＳＥ：クシャ…クシャ…（木くずを踏む音）
+# se "SE_0912"
+# textboxarrow 0 0
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 500621 "sad"
+@メギド
+ひっ！
+な、何か踏みましたわっ！？
+
+# textflame 1 1
+# textboxarrow 0 1
+@ウコンバサラ
+え？…ほんとだ、
+足元に何か落ちてるね
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 201021 "angry"
+@ウコンバサラ
+電気つけて確認してみよう
+いくよ…？
+
+;;ＳＥ：パチッ（スイッチを押す音）
+# se "SE_0913"
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.3
+# textwindow "close"
+# waitandnext 0.3
+
+# brightness 201021 1 0
+# brightness 500621 1 0
+;;背景：教室（朝）
+# background "classroom02_morning"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_6501"
+# emotionbody 1005 1 500621 10 310
+# effectpattern 1005 2 0
+# effectstart 1005
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# voice 5006 "megido_0038"
+@メギド
+―！！
+いやぁあああああああっ！！
+む、虫っ…！？
+
+# textflame 1 1
+# textboxarrow 0 1
+@ウコンバサラ
+落ち着いて！
+これ虫じゃないよ！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 201021 "surprise"
+@ウコンバサラ
+…木くずだ
+床一面に大量に散らばってる
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5006 "megido_0024"
+@メギド
+ど、どうしてこんな状態に…？
+
+# textflame 1 1
+# textboxarrow 0 1
+@ウコンバサラ
+わからない…
+人もいないし物もないのに、
+残骸だけが散らばってるなんて…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 201021 "sad"
+@ウコンバサラ
+いったい誰がこんなことを…？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 500621 "angry"
+# voice 5006 "megido_0013"
+@メギド
+祟りですわ…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 201021 "surprise"
+@ウコンバサラ
+…え？
+
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+こんな奇怪なこと、
+怪異の仕業に決まってますわ！
+
+# fadeout "black" 1
+# waitandnext 1.2

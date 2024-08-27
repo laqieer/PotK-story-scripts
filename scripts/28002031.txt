@@ -1,0 +1,552 @@
+;;-----------------------------------------
+;;【第三幕】共鳴のエンシェント3話･戦闘前
+;;//背景：ビーチ
+;;スクリプトID:28002031
+;;スクリプト最後の背景:sea_jungle_night
+;;-----------------------------------------
+# script "lisp"
+# background "sea_jungle_day"
+# bgm "bgm005" 0
+;;水着グリード（ティルフィング）
+# body 2101421
+# pos 2101421 5
+# scale 2101421 0.8 0
+# alpha 2101421 1 0
+# face 2101421 "usual"
+;;水着グラトニー（パラシュ）
+# body 2200421
+# pos 2200421 3
+# scale 2200421 0.8 0
+# alpha 2200421 1 0
+;;水着ラスト（アルテミス）
+# body 2400121
+# pos 2400121 1
+# scale 2400121 0.8 0
+# alpha 2400121 1 0
+;;水着ミネルヴァ
+# body 2302511
+# pos 2302511 3
+# scale 2302511 0.8 0
+# alpha 2302511 0 0
+# mask 2302511 off
+;;水着フライシュッツ
+# body 2502711
+# pos 2502711 3
+# scale 2502711 0.8 0
+# alpha 2502711 0 0
+# face 2502711 "happy"
+# mask 2502711 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;◆背景：ジャングル（昼）------------------
+# textflame 1 1
+# textboxarrow 0 3
+# voice 10147 "tyrufing_k_0003"
+@グリード
+島の危機、ですか？
+私達には関係ありません
+
+@グリード
+神々が異族を送り込むのは
+想定外ですが、それも任務達成後に
+報告するだけのこと
+
+@グリード
+あなたたちに協力する必要は
+ありません
+
+# voice 40015 "arutemisu_k_0004"
+# textboxarrow 0 1
+@ラスト
+グリードの言う通りです
+あなたに協力したところで
+私達が得られるものはありません
+
+@ラスト
+マスターも私達の手中にあります
+心を掴み、任務を達成するのも
+時間の問題でしょう
+
+# textboxarrow 0 2
+@グラトニー
+…………
+
+# serif 0
+# textwindow "close"
+# brightness 2101421 0.5 0.2
+# brightness 2200421 0.5 0.2
+# brightness 2400121 0.5 0.2
+# serif 1
+# bgm "stop" 
+@？？？
+…ちゃ〜ん！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# brightness 2101421 1 0.2
+# brightness 2200421 1 0.2
+# brightness 2400121 1 0.2
+# face 2200421 "angry"
+# face 2101421 "angry"
+# textboxarrow 0 3
+@グリード
+この声はっ！
+
+# alpha 2101421 0 0.5
+# alpha 2200421 0 0.5
+# alpha 2400121 0 0.5
+# alpha 2302511 1 0.5
+# textboxarrow 0 2
+# voice 3025 "minerva_0008"
+@ミネルヴァ
+来てしまいましたか…
+
+# alpha 2302511 0 0.5
+# alpha 2101421 1 0.5
+# alpha 2200421 1 0.5
+# alpha 2400121 1 0.5
+# face 2400121 "sad"
+# textboxarrow 0 1
+@ラスト
+何が来るのですか？
+
+# voice 20047 "parashu_k_0009"
+# textboxarrow 0 2
+@グラトニー
+あれは…！
+
+;;//フライシュッツ飛び込む
+# alpha 2101421 0 0.5
+# alpha 2200421 0 0.5
+# alpha 2400121 0 0.5
+# alpha 2502711 1 0.5
+# leftin 2502711 0.5
+# bgm "bgm006" 0
+# se "SE_5785"
+# voice 5027 "freischotz_0005"
+@フライシュッツ
+やっと見つけたー！
+ミネルヴァちゃ〜〜ん！
+あー、マスターくんも！
+
+;;//演出：抱きつき効果音
+# rightout 2502711 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# mask 2302511 on
+# alpha 2302511 1 0.5
+# face 2302511 "sad"
+# waitandnext 0.5
+
+# alpha 2502711 1 0.5
+# mask 2502711 on
+# leftin 2502711 0.5
+# move 2502711 2 0.5
+# waitandnext 0.5
+
+# move 2302511 4 0.3
+# move 2502711 3 0.3
+# textwindow "normal"
+# se "SE_0646"
+# textboxarrow 0 3
+@ミネルヴァ
+うっ！
+
+# alpha 2302511 0 0.5
+# alpha 2502711 0 0.5
+# alpha 2101421 1 0.5
+# alpha 2200421 1 0.5
+# alpha 2400121 1 0.5
+# face 2101421 "sad"
+# face 2200421 "sad"
+# textflame 0 0
+@
+フライシュッツに全力で抱きしめられ
+マスターも一瞬息が止まる
+が、ターゲットはすぐに次へと移った
+
+# alpha 2101421 0 0.5
+# alpha 2200421 0 0.5
+# alpha 2400121 0 0.5
+# move 2502711 3 0
+# mask 2502711 off
+# alpha 2502711 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@フライシュッツ
+グリードちゃんも
+グラトニーちゃんも、
+みんなここにいたんだね〜
+
+@フライシュッツ
+おねーちゃん寂しかったよ〜！
+ハグだよ、ハグ～！
+
+;;//演出：抱きつき効果音
+# alpha 2502711 0 0.5
+# alpha 2101421 1 0.5
+# alpha 2200421 1 0.5
+# alpha 2400121 1 0.5
+# textboxarrow 0 3
+# se "SE_0646"
+# voice 10147 "tyrufing_k_0024"
+@グリード
+きゃっ！
+
+# se "SE_0646"
+# textboxarrow 0 2
+@グラトニー
+ひっ！
+
+# se "SE_0646"
+# textboxarrow 0 1
+@ラスト
+えっ！
+私は初対面ですから、離してください！
+
+# alpha 2101421 0 0.5
+# alpha 2200421 0 0.5
+# alpha 2400121 0 0.5
+# alpha 2502711 1 0.5
+# face 2502711 "usual"
+# textboxarrow 0 2
+@フライシュッツ
+いいの！
+これは、はじめましての
+“ハグ”だよ〜！
+
+# alpha 2502711 0 0.5
+# alpha 2200421 1 0.5
+# mask 2200421 off
+@グラトニー
+ラストでもあの大きさには
+対抗できなかったか…
+圧倒的だな…
+
+# alpha 2200421 0 0.5
+# alpha 2502711 1 0.5
+@フライシュッツ
+あなたはラストちゃんっていうの？
+フライシュッツだよ〜
+仲良くしてね！
+
+# alpha 2502711 0 0.5
+# move 2302511 3 0
+# alpha 2302511 1 0.5
+# mask 2302511 off
+# face 2302511 "normal"
+# voice 3025 "minerva_0031"
+@ミネルヴァ
+すみません、フライシュッツが
+ご迷惑をおかけしました
+
+@ミネルヴァ
+今日のところは引き上げます
+今、あなた方からマスターを
+助けるには人数が足りません
+
+@ミネルヴァ
+話の続きは、また日を改めて…
+
+@ミネルヴァ
+それでは失礼します
+フライシュッツ、行きましょう
+
+# alpha 2302511 0 0.5
+# alpha 2502711 1 0.5
+# face 2502711 "sad"
+# voice 5027 "freischotz_0015"
+@フライシュッツ
+え～！？
+もう行くの～？
+みんなと仲良くしたいのに…
+
+# alpha 2502711 0 0.5
+# alpha 2302511 1 0.5
+@ミネルヴァ
+まだ、調査が終っていませんから
+力を貸してください
+
+# alpha 2302511 0 0.5
+# alpha 2502711 1 0.5
+# face 2502711 "usual"
+@フライシュッツ
+む～、仕方ないな～
+みんな、またね〜
+
+# textflame 0 0
+@
+そう言って、
+二人はまるで嵐のように
+その場を去ってしまった
+
+;;//演出：場所移動
+;;//背景：密林（夜）
+;;◆背景：ジャングル（夜）-------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "sea_jungle_night"
+# bgmfile "bgm232_story" "BgmSeaEvent" 0
+# move 2502711 2 0
+# mask 2502711 on
+# alpha 2302511 1 0
+# move 2302511 4 0
+# mask 2302511 on
+# waitandnext 0.1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5027 "freischotz_0002"
+@フライシュッツ
+ねぇ、ミネルヴァちゃん
+あの子たち、あたしたちと
+仲良くしてくれるかなぁ？
+
+# face 2302511 "angry"
+# textboxarrow 0 3
+# voice 3025 "minerva_0010"
+@ミネルヴァ
+何を言っているんですか？
+
+@ミネルヴァ
+ブラックキラーズはマスターを
+ひいては島を支配するために
+侵入しているのでしょう？
+
+# textboxarrow 0 1
+@フライシュッツ
+でもでも～
+きっと仲良くできると思うんだ
+
+# face 2302511 "sad"
+# textboxarrow 0 3
+@ミネルヴァ
+はあ…相変わらずですね
+ですが、協力を願い出ましたが、
+あっさり断られてしまいました
+
+@ミネルヴァ
+異族の調査とマスターの救出、
+この両方をこなすには
+どう考えても人出が足りませんね
+
+# face 2502711 "happy"」
+# textboxarrow 0 1
+# voice 5027 "freischotz_0004"
+@フライシュッツ
+そっかぁ…
+でも、ちゃんと話せば
+あの子たちもわかってくれるよ〜
+
+# face 2302511 "smile"
+# textboxarrow 0 3
+# voice 3025 "minerva_0003"
+@ミネルヴァ
+そうですね
+明日また、彼女達のところへ
+行ってみましょう
+
+# textboxarrow 0 1
+@フライシュッツ
+うん！
+おねーちゃんも、がんばるからね！
+
+# textboxarrow 0 3
+@ミネルヴァ
+ふふっ、頼もしいですね
+さあ、今日はもう休みましょう
+
+;;//SE：草を掻き分ける音
+# face 2302511 "normal"
+# face 2502711 "usual"
+# textboxarrow 0 1
+@フライシュッツ
+…あれ〜？
+
+@フライシュッツ
+ねぇねぇ、ミネルヴァちゃん
+あそこにいるの、
+もしかしてグラトニーちゃんかな？
+
+# textboxarrow 0 3
+@ミネルヴァ
+そうみたいですね
+なにかあったのでしょうか
+
+@ミネルヴァ
+マスターもいない…
+ということは一人で
+来ているのでしょう
+
+@ミネルヴァ
+私が行ってきます
+フライシュッツは
+ここにいてください
+
+# face 2502711 "happy"
+# textboxarrow 0 1
+# voice 5027 "freischotz_0032"
+@フライシュッツ
+はーい
+
+;;//演出：場所移動
+;;//背景：密林（夜）
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# bgmfile "bgm166" "BgmPJZero001" 0
+# alpha 2502711 0 0
+# move 2302511 2 0
+# face 2302511 "smile"
+# move 2200421 4 0
+# face 2200421 "usual"
+# alpha 2200421 1 0
+# mask 2200421 on
+# waitandnext 0.1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textboxarrow 0 1
+# voice 3025 "minerva_0002"
+@ミネルヴァ
+こんばんは、グラトニーさん
+夜中にどうされたんですか？
+
+# voice 20047 "parashu_k_0004"
+# textboxarrow 0 3
+@グラトニー
+やあ、きっとキミが来ると思ったよ
+あのさ、ボクはキミとなら
+手を組んでもいいよ？
+
+# face 2302511 "normal"
+# textboxarrow 0 1
+@ミネルヴァ
+私と、ですか？
+差し支えなければ
+その理由をお教えいただけますか？
+
+# textboxarrow 0 3
+@グラトニー
+きみも悩んでいるのだろう？
+あんなに大きいのと一緒では、
+自分にないものを自覚せざるをえない
+
+# voice 3025 "minerva_0004"
+# textboxarrow 0 1
+@ミネルヴァ
+たしかにフライシュッツは
+大きいですが…
+悩みとは？
+
+# textboxarrow 0 3
+@グラトニー
+隠さなくてもいいよ
+ボクとキミは似たような体型だろう？
+圧倒的にボリュームが足りないことさ
+
+# textboxarrow 0 1
+@ミネルヴァ
+ああ、なるほど…
+そういうことですか
+
+;;//モヤモヤ
+# move 2302511 2 0
+# textwindow "moya"
+# textboxarrow 0 0
+@ミネルヴァ
+私は別に気にしてませんが…
+
+;;//モヤモヤ
+@ミネルヴァ
+ですが、せっかく協力してくれると
+いうのだから、その誤解は解かずに
+おくのが上策ですね…
+
+# face 2302511 "smile"
+# textwindow "normal"
+# textboxarrow 0 1
+@ミネルヴァ
+それではグラトニーさん、
+よろしくお願いします
+
+# face 2200421 "shy"
+# voice 20047 "parashu_k_0005"
+# textboxarrow 0 3
+@グラトニー
+ああ、交渉成立だね
+
+# textflame 0 0
+@
+握手をかわそうとした瞬間―
+
+;;//SE：矢が飛ぶ音
+# fadein "white" 0.5
+# se "SE_4811"
+# bgm "stop" 
+# waitandnext 0.5
+
+# face 2302511 "angry"
+# face 2200421 "angry"
+@
+ふたりの同盟を阻むように
+矢が放たれる
+
+# textflame 1 1
+@グラトニー
+くっ…！
+誰だい！
+
+# alpha 2302511 0 0.5
+# alpha 2200421 0 0.5
+# move 2400121 3 0
+# alpha 2400121 1 0.5
+# mask 2400121 off
+# face 2400121 "angry"
+# textboxarrow 0 2
+# bgmfile "bgm160" "BgmPJZero001" 0
+# voice 40015 "arutemisu_k_0011"
+@ラスト
+ひとりで出かけるのを見たので
+後をつけてみれば…
+勝手なことを！
+
+@ラスト
+その子と手を組むということは、
+私達を裏切るというのですね？
+許しませんよ…覚悟しなさい！
+
+# alpha 2400121 0 0.5
+# alpha 2302511 1 0.5
+# alpha 2200421 1 0.5
+# textboxarrow 0 3
+@グラトニー
+ラストか…
+あれは話ができる状態じゃないな
+仕方ない、君も準備はいいかい？
+
+# textboxarrow 0 1
+@ミネルヴァ
+ええ、もちろんです

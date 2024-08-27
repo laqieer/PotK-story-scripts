@@ -1,0 +1,160 @@
+;;第１話　タイトル：トレイセーマ潜入
+;;//背景：平原
+# script "lisp"
+# background "101_plain_daytime"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;アルマス
+# body 3103811
+# pos 3103811 3
+# scale 3103811 0.8 0
+# face 3103811 "worry"
+;;ギル
+# body 137
+# pos 137 1
+# scale 137 0.8 0
+# alpha 137 0 0
+;;ティターニア
+# body 139
+# pos 139 5
+# scale 139 0.8 0
+# face 139 "sad"
+# alpha 139 0 0
+# layer 3103811 3
+# layer 139 5
+# layer 137 1
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+@アルマス
+やっと本隊に辿り着いたわ…
+
+# face 3103811 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+# voice 1038 "almace_0052"
+@アルマス
+ナディア！
+ナディア、返事してっ
+
+# face 139 "worry"
+# alpha 139 1 0.5
+# move 3103811 2 0.5
+# move 139 4 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 139
+# voice 9967 "titania_0026"
+@ティターニア
+…アルマス、
+残念ですが一歩遅かったようです
+
+# face 3103811 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3103811
+# voice 1038 "almace_0017"
+@アルマス
+そんなこと…
+テントはもぬけの殻…？
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 139
+@ティターニア
+兵士達と戦っている間に、
+本隊はナディアを連れて
+帰国したのでしょう
+
+# face 3103811 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3103811
+@アルマス
+ありえない…！
+間に合わなかっただなんて…
+
+# select "まだ終わっていない！" "select_label_01" "急いで追いかけよう！" "select_label_02" "もうダメなのか…？" "select_label_03"
+ありえない…！
+間に合わなかっただなんて…
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 3103811 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3103811
+@アルマス
+そうよ！
+まだ終わりじゃない
+急いで追いかけるわよっ
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 3103811 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3103811
+@アルマス
+そうね！
+今ならきっと間に合うわっ
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 3103811 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3103811
+@アルマス
+そんなことない！
+追いかければ、きっと間に合うわ！
+
+# label "select_label_end"
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# move 3103811 3 0
+# move 139 5 0
+# move 137 1 0
+# alpha 137 1 0
+# face 3103811 "normal"
+# face 139 "sad"
+# bgmfile "bgm279_280" "BgmLostRagnarokBattle002" 0
+# waitandnext 0.6
+
+;;//暗転挟む
+# fadein "black" 1
+# textflame 1 1
+# textboxarrow 0 3
+# chara 139
+@ティターニア
+皆さん、気をつけて下さい
+町が見えてきました
+ここからトレイセーマ領内です
+
+# face 137 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 137
+# voice 9969 "gill_0002"
+@ギル
+ティルヘルムの外って、
+すぐに他の国なんじゃなかったのか？
+
+# face 139 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 139
+@ティターニア
+国境としてはその通りですけれど、
+町に入るまでは警備の目もそれほど
+厳しくはありません
+
+# face 3103811 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+@アルマス
+つまり、ここからは
+いつ襲われるか分からないってことね
+みんな油断しないでよ！

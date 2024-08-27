@@ -1,0 +1,410 @@
+;;-----------------------------------------
+;;SEA1章_16
+;;-----------------------------------------
+# script "lisp"
+# background "sea_town_night"
+# bgm "bgm029_030" 0
+;;-----------------------------------------
+;;レーヴァテイン
+# body 100221
+# pos 100221 4
+# scale 100221 0.8 0
+# layer 100221 2
+# mask 100221 off
+# alpha 100221 0 0
+;;グングニル
+# body 300841
+# pos 300841 1
+# scale 300841 0.8 0
+# layer 300841 3
+# alpha 300841 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：町（夜）
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 1
+
+# fadein "red" 1
+# envbody 1001 7 0
+# effectstart 1001
+# se "SE_0753"
+# shake 0 0.5
+# subfillrect 0 "red" 0.2 0 0.4
+# waitandnext 1.5
+
+;;レーヴァテインが歩いてくる
+# move 100221 3 0.5
+# scale 100221 0.8 0.5
+# face 100221 "sad"
+# alpha 100221 1 0.5
+# se "SE_0740"
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# voice 1002 "revatein_0013"
+# textwindow "nomal"
+# textboxarrow 0 2
+@レーヴァテイン
+はぁ…
+めんどくさいなぁ
+
+# shake 0 1
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "toge"
+@？？？
+ガアアアアアアアアア！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# se "SE_5205"
+# face 100221 "normal"
+# textwindow "nomal"
+# textboxarrow 0 2
+@レーヴァテイン
+あなたは…とっとと、消えて…
+
+# se "SE_4000"
+# waitandnext 0.5
+
+;;雷演出あれば
+# fadein "white" 2
+# scale 100221 0.9 0.2
+# se "SE_12082"
+# effectskip 1001
+# waitandnext 0.2
+
+# scale 100221 0.8 0.5
+# waitandnext 1.8
+
+;;背景の炎演出が消え、レーヴァテインが一瞬燃える
+# sestop "SE_0753"
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@？？？
+ガアアアアアアアアアア…
+
+;;レーヴァテインの中に力が入っていく
+# fadein "white" 2
+# effectbody 100 51 0 0 0
+# effectstart 100
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# face 100221 "sad"
+# textwindow "nomal"
+# textboxarrow 0 2
+@レーヴァテイン
+うっ…？
+
+# voice 1002 "revatein_0013"
+# textboxarrow 0 2
+@レーヴァテイン
+はぁ…
+参ったな
+このままだと…
+
+;;レーヴァテインが歩いていく
+# se "SE_0740"
+# move 100221 2 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# serif 1
+# textwindow "nomal"
+@グングニル
+レーヴァテイン！
+
+;;グングニルが斬りかかる
+# se "SE_4200"
+# move 300841 2 0.2
+# face 300841 "angry"
+# alpha 300841 1 0.3
+# waitandnext 0.2
+
+;;レーヴァテインが受ける
+# se "SE_9017"
+# fadein "white" 0.5
+# serif 1
+# textwindow "close"
+# move 100221 4 0.3
+# waitandnext 0.8
+
+# voice 1002 "revatein_0009"
+# face 100221 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 3
+@レーヴァテイン
+…何？
+
+# voice 3008 "gunguniru_0009"
+# bgm "bgm031" 0
+# textboxarrow 0 1
+@グングニル
+そなた、どういうつもりだ…！？
+何故…
+
+# textboxarrow 0 1
+@グングニル
+何故、あの巨人を滅さなかった！？
+何故、そなたの中に取り込んだ！？
+答えよ！
+
+# voice 1002 "revatein_0013"
+# face 100221 "sad"
+# textboxarrow 0 3
+@レーヴァテイン
+はぁ…見られてたんだ
+めんどくさい…
+
+# voice 3008 "gunguniru_0022"
+# face 300841 "surprise"
+# textboxarrow 0 1
+@グングニル
+何だと…？
+
+# face 100221 "normal"
+# textboxarrow 0 3
+@レーヴァテイン
+話してもいいけど…
+聞いたら、あなたにも…
+手伝ってもらうからね
+
+# face 300841 "angry"
+# textboxarrow 0 1
+@グングニル
+いいだろう
+聞かせてもらおうではないか
+
+# textboxarrow 0 3
+@レーヴァテイン
+先に言っておくけど
+私が取り込んだんじゃなくて
+あっちが勝手に…入ってきたの
+
+# textboxarrow 0 3
+@レーヴァテイン
+でも…それで分かった
+あの巨人は…スルトだよ
+
+# voice 3008 "gunguniru_0023"
+# face 300841 "surprise"
+# textboxarrow 0 1
+@グングニル
+スルトだと！？
+それは…そなたの伝承にある
+巨人の名ではないかっ
+
+# textboxarrow 0 3
+@レーヴァテイン
+スルトそのものだとは…思えないけど
+何ていうか…
+似たような別の力…とかね
+
+# face 300841 "sad"
+# textboxarrow 0 1
+@グングニル
+言っている意味がよく分からぬな…
+
+# voice 1002 "revatein_0013"
+# face 100221 "sad"
+# textboxarrow 0 3
+@レーヴァテイン
+はぁ…私だって分からない
+そんなことより…この力、
+封じておかないとヤバイから
+
+# face 100221 "normal"
+# textboxarrow 0 3
+@レーヴァテイン
+私と馴染んでる…みたいだし
+このまま封印するよ
+
+# voice 3008 "gunguniru_0013"
+# textboxarrow 0 1
+@グングニル
+封印か…
+しかし、あれだけのマナを封じるには
+相応の儀式が必要であろうな
+
+# voice 1002 "revatein_0003"
+# textboxarrow 0 3
+@レーヴァテイン
+そう…だから、あれを使う
+「レーギャルンの箱」を
+
+# face 300841 "surprise"
+# textboxarrow 0 1
+@グングニル
+何だ、それは？
+
+# voice 1002 "revatein_0028"
+# face 100221 "sad"
+# textboxarrow 0 3
+@レーヴァテイン
+説明…めんどくさいなぁ
+ざっくり言うと、私の力を
+封じておく結界…みたいなものだよ
+
+# textboxarrow 0 1
+@グングニル
+それは…そなたの力も
+封じられるということにならぬか？
+
+# face 100221 "normal"
+# textboxarrow 0 3
+@レーヴァテイン
+まあね…
+でも、不完全な状態にしておけば
+特に問題ないし
+
+# textboxarrow 0 3
+@レーヴァテイン
+肝心なところだけ…鍵を掛けておけば
+大丈夫…と思う
+
+# face 300841 "angry"
+# textboxarrow 0 1
+@グングニル
+そのような曖昧なことで良いのか？
+そなた自身に、もし
+万が一のことがあれば――
+
+# voice 1002 "revatein_0013"
+# face 100221 "sad"
+# textboxarrow 0 3
+@レーヴァテイン
+はぁ…何でグングニルが
+私の心配してるの？
+
+# face 100221 "normal"
+# textboxarrow 0 3
+@レーヴァテイン
+何とかなるって
+それとも…巨人の力を解放して、
+この町を火の海に…したい？
+
+# textboxarrow 0 1
+@グングニル
+…覚悟はできていると言うのだな
+
+# voice 1002 "revatein_0003"
+# textboxarrow 0 3
+@レーヴァテイン
+…まあね
+
+;;暗転
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+;;背景：地下室
+# background "beast_world_underground"
+# bgm "bgm005" 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# voice 3008 "gunguniru_0003"
+# face 300841 "usual"
+# face 100221 "normal"
+# textwindow "nomal"
+# textboxarrow 0 1
+@グングニル
+ふむ
+これが九つ目の門となるわけだな
+
+# textboxarrow 0 3
+@レーヴァテイン
+他の門はともかく…
+これは絶対に開けないで…
+「箱」の中心だから
+
+# voice 3008 "gunguniru_0032"
+# face 300841 "normal"
+# textboxarrow 0 1
+@グングニル
+良かろう
+では、我がこの門の門番となろう
+さしずめ「最後の門番」だな
+
+# face 300841 "usual"
+# textboxarrow 0 1
+@グングニル
+この門の鍵はどこだ？
+預かっておくぞ
+
+# textboxarrow 0 3
+@レーヴァテイン
+そっちはいいから
+他に…あてがあるし
+
+# textboxarrow 0 1
+@グングニル
+そうか…
+
+# face 300841 "angry"
+# textboxarrow 0 1
+@グングニル
+レーヴァテインよ
+本当に良いのだな？
+もし「箱」が全て閉ざされたなら…
+
+# voice 1002 "revatein_0013"
+# face 100221 "sad"
+# textboxarrow 0 3
+@レーヴァテイン
+はぁ…心配し過ぎ
+もし全部の門を
+閉じないといけないことになったら…
+
+# textboxarrow 0 3
+@レーヴァテイン
+それは私が…抱いちゃいけない思いを
+強く抱いてしまったときだから…
+
+# face 300841 "surprise"
+# textboxarrow 0 1
+@グングニル
+抱いてはならぬ思い、だと？
+
+# face 100221 "normal"
+# textboxarrow 0 3
+@レーヴァテイン
+覚悟はできてるよ
+それで…私が消えることに
+なったとしてもね
+
+# voice 3008 "gunguniru_0011"
+# face 300841 "angry"
+# textboxarrow 0 1
+@グングニル
+レーヴァテイン、そなた…！
+
+# voice 1002 "revatein_0032"
+# textboxarrow 0 3
+@レーヴァテイン
+大丈夫だって
+じゃ、よろしく
+
+;;レーヴァテインが立ち去る
+# se "SE_0740"
+# move 100221 3 0.5
+# scale 100221 0.6 0.5
+# alpha 100221 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# fadeout "black" 0.5
+# waitandnext 0.5

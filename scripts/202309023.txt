@@ -1,0 +1,1348 @@
+;;-----------------------------------------
+;;ツークンフトラスト1_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "stop"
+;;-----------------------------------------
+;;イージス：新Ver立ち絵
+# body 62000111
+# pos 62000111 3
+# scale 62000111 0.8 0
+# layer 62000111 3
+# mask 62000111 off
+# alpha 62000111 0 0
+;;カシウス：新Ver立ち絵
+# body 6303121
+# pos 6303121 3
+# scale 6303121 0.8 0
+# layer 6303121 3
+# mask 6303121 off
+# alpha 6303121 0 0
+;;フォルカス：天上編立ち絵→リル姫立ち絵
+# body 301811
+# pos 301811 3
+# scale 301811 0.8 0
+# layer 301811 3
+# mask 301811 off
+# alpha 301811 0 0
+# body 43018002
+# pos 43018002 3
+# scale 43018002 0.8 0
+# layer 43018002 3
+# mask 43018002 off
+# alpha 43018002 0 0
+;;アスカロン：天上編立ち絵
+# body 102311
+# pos 102311 3
+# scale 102311 0.8 0
+# layer 102311 3
+# mask 102311 off
+# alpha 102311 0 0
+;;魔獣
+# body 920014
+# pos 920014 3
+# scale 920014 0.8 0
+# layer 920014 1
+# mask 920014 off
+# alpha 920014 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "e230514_logo_bg"
+# imagealpha 1 0 0
+# imagelayer 1 3
+# imageset 2 "e230514_logo_moji"
+# imagealpha 2 0 0
+# imagelayer 2 4
+;;-----------------------------------------
+# textwindow "close"
+# waitandnext 0.2
+
+;;背景：郊外
+# background "highland"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;魔獣の威嚇の声
+# se "SE_0792"
+# alpha 920014 1 0.5
+# waitandnext 1.5
+
+;;演出：フォルカスとアスカロンが魔獣と戦っている
+# voice 3018 "forcas_battle_0002"
+# move 920014 4 0.5
+# move 301811 2 0
+# alpha 301811 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@フォルカス
+はっ！
+
+;;槍振る→ヒット→魔獣倒れる
+# se "SE_4200"
+# move 301811 3 0.2
+# textboxarrow 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.3
+# se "SE_4846"
+# move 920014 5 0.3
+# waitandnext 1
+
+;;演出：魔獣倒される
+# se "SE_3001"
+# alpha 920014 0 1
+# waitandnext 1.5
+
+# bgm "bgm003" 0
+# move 301811 4 0.5
+# move 102311 2 0
+# layer 102311 4
+# mask 102311 on
+# alpha 102311 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+ふぅ、これでひとまずは
+問題なさそうですね
+
+# voice 3018 "forcas_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@フォルカス
+ええ…
+
+# textflame 0 0
+@
+街の人々を守る為、
+魔獣と戦うフォルカスとアスカロン
+
+# textflame 0 0
+@
+彼女達の活躍に住民達は感謝をし、
+彼女達もまたその思いに応える
+
+# textflame 0 0
+@
+各地を転々とするフォルカスは
+行く先々で
+街の警護を担当してきたらしい
+
+# textflame 1 1
+# textboxarrow 0 3
+@フォルカス
+また何かありましたら
+お呼びくださいね
+
+# serif 1
+@老人
+おお、ありがとう
+本当にあなた達には
+足を向けて眠れませんな
+
+# voice 3018 "forcas_0028"
+# face 301811 "worry"
+# serif 0
+# textboxarrow 0 3
+@フォルカス
+そんな…大げさですよ
+それでは、また
+
+;;演出：フォルカスout
+# se "SE_0719"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# move 301811 5 0.5
+# alpha 301811 0 0.3
+# waitandnext 1.5
+
+# move 102311 3 0.5
+# mask 102311 off
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@アスカロン
+…………
+
+# textflame 0 0
+@
+何気ない
+当たり前の会話
+
+# voice 1023 "ascalon_0028"
+# face 102311 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@アスカロン
+なんか、違うんだよなぁ…
+
+# serif 1
+@老人
+おや、どうしましたかな？
+
+# face 102311 "worry"
+# serif 0
+# textboxarrow 0 2
+@アスカロン
+あ、いえ！
+なんでもないです！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+アスカロンは去って行く
+フォルカスの背中をただ見つめる…
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# fadeout "black" 3
+# waitandnext 3
+
+# bgm "stop"
+# se "SE_0809"
+# frameout 0 0
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 102311 0 0
+# textwindow "close"
+# fadein "white" 3
+# waitandnext 4
+
+# se "SE_0738"
+# imagealpha 2 1 1
+# imagepos 2 0 0
+
+# fadeout "black" 3
+# waitandnext 3
+
+;;背景：街
+# background "in_city"
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+# framein 0 0
+# imagealpha 1 0 0
+# imagealpha 2 0 0
+# se "SE_6171"
+# fadein "black" 2
+# waitandnext 3
+
+# sestop "SE_6171"
+# move 62000111 2 0
+# layer 62000111 4
+# mask 62000111 on
+# face 62000111 "sad"
+# alpha 62000111 1 0.3
+# move 6303121 4 0
+# layer 6303121 2
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@カシウス
+運命が導く街…
+やがて辿り着くは如何なる地か
+
+# voice 5200011 "aegis_c_0028"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+ここで間違いないはずだ
+ヘルの気配が強いからな
+
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+しかし、これでは…
+
+# textflame 0 0
+@
+イージスが見渡す街中は
+人通りも多くキル姫も多数いるようだ
+
+;;もやもや
+# move 62000111 2 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@イージス
+うずうず
+
+# voice 530311 "cassius_ca_0041"
+# face 6303121 "surprise"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@カシウス
+繋がりがあっても正確な位置が
+わかるという訳ではないのね
+
+# voice 5200011 "aegis_c_0003"
+# face 62000111 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+有事であればできることもあるが…
+気がかり程度で事を大きくする
+必要もないだろう
+
+# face 62000111 "sad"
+;;もやもや
+# move 62000111 2 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@イージス
+うずうず
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@カシウス
+…活気があって見慣れない物も多い
+世界を見るにはいい場所ね
+
+# voice 5200011 "aegis_c_0033"
+# face 62000111 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+そ、そうだな！
+フォルカスを探すにも
+情報収集しないと！ 
+
+# voice 530311 "cassius_ca_0003"
+# face 6303121 "usual"
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+街を見て回りましょう
+
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+ああ！
+
+;;演出：走って消えていくイージス
+# face 6303121 "surprise"
+# se "SE_5575"
+# move 62000111 3 0.5
+# scale 62000111 0.75 0.5
+# alpha 62000111 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# scale 62000111 0.8 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@カシウス
+…………
+
+# face 6303121 "usual"
+# move 6303121 3 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@カシウス
+…イージスの気持ちも理解できる
+規模はこちらの方が大きいのに
+自然もあるこの街はとてもいい
+
+# textflame 1 1
+# textboxarrow 0 2
+@カシウス
+アルマスも如意金箍棒も
+同じ考えに行き当たるはずよ
+
+;;セリフのみ
+# serif 1
+@イージス
+何をしている！
+しっかり私の後をついてこい！
+
+# serif 0
+# textboxarrow 0 2
+@カシウス
+…歩行は思考を巡らせるのに
+適度な刺激として有用
+
+;;暗転挟む
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 6303121 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# bgm "bgm002" 0
+# voice 5200011 "aegis_c_0005"
+# move 62000111 2 0
+# layer 62000111 4
+# mask 62000111 on
+# face 62000111 "normal"
+# alpha 62000111 1 0.3
+# move 6303121 4 0
+# layer 6303121 2
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@イージス
+よい街だな！
+
+# voice 530311 "cassius_ca_0004"
+# face 6303121 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+食べ歩きに最適なことは
+イージスが証明したわね
+
+# voice 5200011 "aegis_c_0015"
+# face 62000111 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+し、仕方ないじゃない
+初めて見るものばかりなんだし…
+
+# face 6303121 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+責めてはいないわ
+流通を見るにも食は大事な要素
+
+# alpha 62000111 0 0.3
+# alpha 6303121 0 0.3
+# face 102311 "normal"
+# move 102311 3 0
+# layer 102311 4
+# mask 102311 off
+# alpha 102311 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@アスカロン
+あれ、見慣れないキル姫さんですね
+
+# alpha 102311 0 0.3
+# move 62000111 3 0
+# layer 62000111 2
+# mask 62000111 off
+# alpha 62000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@イージス
+わぁ！？
+
+# voice 1023 "ascalon_0023"
+# move 62000111 2 0.5
+# face 102311 "worry"
+# move 102311 4 0
+# layer 102311 4
+# mask 102311 on
+# alpha 102311 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+ご、ごめんなさい！
+急に話しかけちゃって…
+
+# face 62000111 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+い、いえ、いいのよ…
+じゃなくて、いや、いいんだ
+
+;;もやもや
+# move 102311 4 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@アスカロン
+言い直した…？
+
+# voice 5200011 "aegis_c_0003"
+# face 62000111 "usual"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@イージス
+私はイージス
+よろしくな
+
+# face 102311 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+あ、私はアスカロン
+この街にちょっと長くいまして…
+
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+おふたりは旅行か何かですか？
+
+# voice 530311 "cassius_ca_0032"
+# alpha 62000111 0 0.3
+# move 6303121 2 0
+# layer 6303121 2
+# mask 6303121 off
+# face 6303121 "normal"
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+そんなところ
+今は街の情報収集中
+
+# voice 1023 "ascalon_0040"
+# face 102311 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+そうなんですね！
+なら、図書館に行くといいですよ！
+
+# voice 5200011 "aegis_c_0022"
+# face 62000111 "angry"
+# alpha 62000111 1 0.3
+# alpha 6303121 0 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+図書館…本がいっぱいある？
+
+# voice 1023 "ascalon_0032"
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+はい！
+利用者は少ないのですがこの街が
+作られた頃からある図書館らしく…
+
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+何かを調べるには最適です
+あ、よかったら私が案内しますよ！
+
+# voice 530311 "cassius_ca_0022"
+# alpha 62000111 0 0.3
+# face 6303121 "surprise"
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+いいの？
+そこまでしてもらって
+
+# voice 1023 "ascalon_0033"
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+もちろん、お任せください！
+
+# alpha 62000111 1 0.3
+# alpha 6303121 0 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+なら、その言葉に甘えるとしよう
+
+;;もやもや
+# move 62000111 2 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@イージス
+うずうず
+
+# face 102311 "worry"
+;;もやもや
+# move 102311 4 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@アスカロン
+冷静を装えてない…っ！
+
+;;暗転挟む
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：図書館っぽい室内
+# background "jukebox"
+# alpha 62000111 0 0.3
+# alpha 102311 0 0.3
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 62000111 "surprise"
+# move 62000111 3 0
+# mask 62000111 off
+# alpha 62000111 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@イージス
+……………………
+
+# voice 1023 "ascalon_0022"
+# alpha 62000111 0 0.3
+# move 102311 3 0
+# mask 102311 off
+# alpha 102311 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@アスカロン
+ど、どうしました？
+
+# voice 530311 "cassius_ca_0003"
+# alpha 102311 0 0.3
+# move 62000111 2 0
+# layer 62000111 4
+# mask 62000111 on
+# alpha 62000111 1 0.3
+# move 6303121 4 0
+# layer 6303121 2
+# face 6303121 "normal"
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+心配は無用
+ちょっと物珍しさに固まっているだけ
+
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+付き合いは短いけれど
+そのくらいはわかるようになったわ
+
+# bgm "bgm006" 0
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+こ、これって…全部読んでいいの！？
+
+# alpha 6303121 0 0.3
+# move 102311 4 0
+# layer 102311 2
+# alpha 102311 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+え、ええ…図書館ですから？
+
+# face 62000111 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+うおおおおおおおおお！
+
+;;演出：イージスout
+# leftout 62000111 0.5
+# textwindow "close"
+# waitandnext 1
+
+# voice 530311 "cassius_ca_0027"
+# alpha 62000111 0 0
+# alpha 102311 0 0
+# move 6303121 3 0
+# layer 6303121 2
+# mask 6303121 off
+# face 6303121 "sad"
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@カシウス
+雄叫びをあげて本を読み漁るのは
+初めて見る姿だけれど…
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# face 6303121 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@カシウス
+それにしてもすごいわね、ここ
+これだけの蔵書を集めて管理するの
+とてつもない労力を感じるわ
+
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+# move 6303121 2 0.5
+# move 102311 4 0
+# layer 102311 4
+# mask 102311 on
+# face 102311 "normal"
+# alpha 102311 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+この図書館の維持のために
+街があるようなものらしいですよ
+
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+…なのに、利用者が少ないの？
+
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+とある商人が商売の記録を残し
+世に出回る書物も置くようになった
+
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+いつしかその蔵書を求める
+人達が集まり街になった
+
+# voice 1023 "ascalon_0028"
+# face 102311 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+その功績を讃える為
+この図書館が建てられたのですが
+形骸化してしまったようなんです
+
+# voice 530311 "cassius_ca_0019"
+# face 6303121 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+知の集積だけで
+継承が成されなかった…
+
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+要素はすべて揃える必要があるのね
+
+# face 102311 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+要素、ですか？
+
+# voice 530311 "cassius_ca_0003"
+# face 6303121 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+それはこちらの都合の話
+
+# voice 1023 "ascalon_0019"
+# face 102311 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+そう、ですか…
+
+# face 102311 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+それにしても、図書館のことも
+ご存知なかったようですし
+
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+情報収集と言ってもこの街自体が
+目的だった訳ではないのですか？
+
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+今、あそこで本から得られる
+情報の波に溺れているイージスは
+この街に目的があると言っていたわ
+
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+わたしはそのついで
+だけれど、成果は得られそう
+
+# alpha 102311 0 0.3
+# move 62000111 4 0
+# layer 62000111 4
+# mask 62000111 on
+# alpha 62000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@イージス
+…とあるキル姫に用があってな
+
+# face 6303121 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+本はもういいの？
+
+# voice 5200011 "aegis_c_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@イージス
+明日も明後日も来ると決めた
+焦る必要はないのだ
+
+# voice 530311 "cassius_ca_0040"
+# face 6303121 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+…答えが出たなら
+思考は次に進めるべきね
+
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+イージス、落ち着いたのなら
+アスカロンと話をするといいわ
+
+# voice 5200011 "aegis_c_0032"
+# textflame 1 1
+# textboxarrow 0 3
+@イージス
+ああ、そうだな…
+で、カシウスは？
+
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+要素を揃えるわ
+
+;;演出：カシウスout
+# se "SE_0719"
+# move 6303121 1 0.5
+# alpha 6303121 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# voice 5200011 "aegis_c_0027"
+# face 62000111 "sad"
+# move 102311 2 0
+# layer 102311 2
+# mask 102311 off
+# face 102311 "surprise"
+# alpha 102311 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@イージス
+いまひとつ言葉が足りないんだよな…
+
+# voice 1023 "ascalon_0008"
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+あはは…
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+ところで、そのキル姫って
+どなたなんでしょうか？
+私が知っているといいんですけど
+
+# textflame 1 1
+# textboxarrow 0 3
+@イージス
+そのキル姫というのは――
+
+# move 102311 1 0.5
+# alpha 102311 0 0.3
+# move 62000111 5 0
+# alpha 62000111 0 0.3
+;;演出：フォルカスin
+# se "SE_0719"
+# layer 301811 2
+# face 301811 "normal"
+# move 301811 3 0
+# mask 301811 off
+# alpha 301811 1 0.3
+# textwindow "close"
+# waitandnext 1
+
+# voice 3018 "forcas_0022"
+# face 301811 "surprise"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@フォルカス
+っ！
+
+# alpha 301811 0 0.3
+# move 102311 2 0.5
+# alpha 102311 1 0.3
+# face 62000111 "angry"
+# move 62000111 4 0
+# alpha 62000111 1 0.3
+# bgm "bgm003" 0
+# textflame 1 1
+# textboxarrow 0 3
+@イージス
+フォルカス！
+
+# voice 1023 "ascalon_0022"
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+どうしました？
+図書館に来るなんて珍しいですね
+
+# voice 3018 "forcas_0002"
+# move 301811 4 0
+# layer 301811 4
+# mask 301811 on
+# alpha 301811 1 0.3
+# alpha 62000111 0 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@フォルカス
+え、ええ、ちょっと…
+それより、イージスがどうして？
+
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+えっ、おふたりは知り合い！？
+それじゃあイージスさんが
+用があるのって…
+
+# voice 5200011 "aegis_c_0003"
+# alpha 102311 0 0.3
+# move 62000111 2 0
+# layer 62000111 2
+# mask 62000111 off
+# alpha 62000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+ヘルを通して感じるフォルカスに
+何か違和感のようなものがあってな
+
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+隊員の様子を伺うのも隊長の役目
+たまには直接会いに行こうと思ってな
+
+# face 301811 "usual"
+# textflame 1 1
+# textboxarrow 0 3
+@フォルカス
+そうだったんですね…
+久しぶりに会えて嬉しいです
+
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+世辞はいい
+何か調子がおかしいなんてことは？
+
+# face 301811 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@フォルカス
+何か、と言われても…
+そうですね、問題はありませんよ？
+
+# face 62000111 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+…………そう、なら気のせい、かな
+
+# face 301811 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@フォルカス
+イージスが地上に出て…
+しばらくはこの街にいるんですか？
+
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+カオちゃん達にも背中を押されてな
+世界を見て回っているのだが…
+そうだな、しばらく滞在するつもりだ
+
+# textflame 1 1
+# textboxarrow 0 3
+@フォルカス
+それはよかった
+近いうちに食事でもしましょう
+
+# face 62000111 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+食事！
+
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+…コホン、この街の飯は美味い
+再会を祝うには相応しいだろう
+
+# textflame 1 1
+# textboxarrow 0 3
+@フォルカス
+それじゃあ…
+アスカロンに泊まる宿を伝えておいて
+
+# textflame 1 1
+# textboxarrow 0 3
+@フォルカス
+店を決めたら連絡します
+…それじゃ、私はこれで
+
+# voice 1023 "ascalon_0022"
+# alpha 62000111 0 0.3
+# move 102311 2 0
+# layer 102311 2
+# mask 102311 off
+# alpha 102311 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+あれ、図書館に用事があったんじゃ…
+
+# voice 3018 "forcas_0003"
+# face 301811 "worry"
+# textflame 1 1
+# textboxarrow 0 3
+@フォルカス
+違う用事を思い出してしまって…
+イージスのこと、お願いしますね
+
+;;演出：フォルカスout
+# se "SE_0719"
+# move 301811 5 0.5
+# alpha 301811 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# face 102311 "worry"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@アスカロン
+…………行っちゃいました
+
+# voice 1023 "ascalon_0002"
+# face 102311 "normal"
+# move 62000111 4 0
+# layer 62000111 4
+# mask 62000111 on
+# face 62000111 "usual"
+# alpha 62000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+イージスさんはフォルカスの
+神令仲間、だったんですね
+
+# voice 5200011 "aegis_c_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@イージス
+それも同じ神を半身ずつ宿している
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# voice 5200011 "aegis_c_0028"
+# face 62000111 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@イージス
+…おかしいな
+それなら私が近くにいるのにも
+気付けたはずなのだがどうして――
+
+# face 102311 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+フォルカスは嘘を言ったりしてない
+でも、やっぱり変だと思うんです
+
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+フォルカスはセブンスであることも
+神令であることも大事にしてくれて…
+
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+仲間であったみんなを
+強く想ってくれている
+
+# face 62000111 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@イージス
+…ああ、だから私はフォルカスに
+隊長代理を任せたのだ
+
+# bgmfile "bgm273" "BgmLostRagnarokEvent" 0
+# face 102311 "worry"
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+でも、それと同時に
+「そうである自分」の全部を
+罪として背負っている…
+
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+私にはそう見えるんです
+
+# face 62000111 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@イージス
+…………
+
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+街の人に対してもそう
+どこか壁を作っているようで…
+
+# textflame 1 1
+# textboxarrow 0 3
+@イージス
+…そう、フォルカスが
+あの姿でいてもヘルを宿したまま
+過ごしているのは――
+
+# textflame 1 1
+# textboxarrow 0 3
+@イージス
+誰もあの子を憎んでなんていないのに
+
+# voice 530311 "cassius_ca_0032"
+# alpha 102311 0 0.3
+# alpha 62000111 0 0.3
+# move 6303121 3 0
+# mask 6303121 off
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@カシウス
+干渉は悪いことではない
+それに、あなた達には資格がある
+
+# alpha 6303121 0 0.3
+# move 102311 3 0
+# mask 102311 off
+# face 102311 "normal"
+# alpha 102311 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@アスカロン
+カシウスさん、戻っていたんですね
+
+# alpha 102311 0 0.3
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@カシウス
+用が済んだから…
+途中から話を聞いてしまったけれど
+要はふたりとも目的は同じでしょう？
+
+# alpha 6303121 0 0.3
+# move 102311 2 0
+# layer 102311 2
+# mask 102311 off
+# alpha 102311 1 0.3
+# alpha 62000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@イージス
+フォルカスは地上にいて
+人々と交流して過ごすことで
+生まれた思いに苦しんでいた…
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# textflame 1 1
+# textboxarrow 0 3
+@イージス
+私に流れ込んできた
+違和感がそれなら
+私がするべきことは決まった
+
+# bgmfile "bgm405" "BgmIntegralNoahEvent003" 0
+# face 102311 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+…自分で自分を憎もうとしている
+フォルカスのことを救いたいっ！
+
+# voice 5200011 "aegis_c_0003"
+# face 62000111 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@イージス
+ああ！
+
+# alpha 102311 0 0.3
+# move 6303121 2 0
+# layer 6303121 2
+# mask 6303121 off
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+なら、話をしに行かないとね
+
+# textflame 1 1
+# textboxarrow 0 3
+@イージス
+そうだな
+食事の予定なんて関係ない
+今すぐ会いに行こう
+
+# voice 530311 "cassius_ca_0022"
+# face 6303121 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+…食事？
+
+# voice 5200011 "aegis_c_0034"
+# face 62000111 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@イージス
+いや、それは気にしないで！
+ほ、ほら、行くぞ！
+
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+…………
+
+;;演出：移動の暗転
+# se "SE_5575"
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：フォルカスの部屋
+# background "201_room"
+# alpha 6303121 0 0
+# alpha 62000111 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+;;ドアを勢いよく開ける音
+# se "SE_6119"
+# fadein "black" 0.3
+# waitandnext 0.3
+
+# face 62000111 "angry"
+# move 62000111 3 0
+# mask 62000111 off
+# alpha 62000111 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@イージス
+フォルカス、いるか！
+
+# textflame 0 0
+@
+そうしてイージス達が訪れた
+フォルカスの部屋だったが…
+
+# voice 1023 "ascalon_0018"
+# move 6303121 2 0
+# layer 6303121 2
+# mask 6303121 off
+# face 6303121 "surprise"
+# alpha 6303121 1 0.3
+# move 102311 4 0
+# layer 102311 4
+# mask 102311 on
+# face 102311 "surprise"
+# alpha 102311 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+フォルカス…？
+
+# voice 530311 "cassius_ca_0041"
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+しばらく見ないうちに
+ずいぶんと小さくなったのね
+
+# alpha 6303121 0 0.3
+# alpha 102311 0 0.3
+# face 62000111 "surprise"
+# alpha 62000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@イージス
+…………え？
+
+;;演出：リル化フォルカス立ち絵表示
+# bgm "stop"
+# alpha 62000111 0 0.3
+# textwindow "close"
+# waitandnext 1.5
+
+# alpha 43018002 1 0.5
+# waitandnext 1.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+そこには、幼くなったフォルカスが
+待ち受けていたのだった…
+
+# fadeout "black" 2
+# waitandnext 2

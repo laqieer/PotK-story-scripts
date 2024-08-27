@@ -1,0 +1,212 @@
+;;-----------------------------------------
+;;■□■１－５改修案■□■
+;;整形済み
+;;【１－５－１（バトル後）】
+;;スクリプト最後の背景：town
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgm "bgm003" 0
+;;----------------------------------------------------------
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 2
+# alpha 24 0 0
+# mask 24 off
+# face 24 "normal"
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 2
+# alpha 0 0 0
+# mask 0 off
+# face 0 "normal"
+;;-----------------------------------------
+;;背景:town
+# move 24 2 0
+# face 24 "sad"
+# alpha 24 1 0
+# mask 24 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 0 4 0
+# face 0 "normal"
+# alpha 0 1 0
+# mask 0 on
+@ティルフィング
+……
+
+# textboxarrow 0 3
+@デュリン
+…ああ、アレ？
+あの子、たまにああして
+考え込んでるのよ
+
+# face 0 "serious"
+# textboxarrow 0 3
+@デュリン
+…ティルフィング！
+
+# voice 1014 "tyrufing_0022"
+# face 24 "surprise"
+# textboxarrow 0 1
+@ティルフィング
+…え？…あ
+
+# face 0 "serious2"
+# textboxarrow 0 3
+@デュリン
+どうしたの、また考え事？
+
+# face 24 "sad"
+# textboxarrow 0 1
+@ティルフィング
+…考え事というか…その
+
+# voice 9999 "durin_0009"
+# face 0 "normal"
+# textboxarrow 0 3
+@デュリン
+…なによ？
+言ってごらんなさいよ？
+
+# textboxarrow 0 1
+@ティルフィング
+殺意に身を包んだ時に感じる、
+高揚感のこと…いずれは慣れるって
+言ってたけど…たまらなく怖いの
+
+# textboxarrow 0 3
+@デュリン
+怖い…？
+
+# textboxarrow 0 1
+@ティルフィング
+その先に行ったら、
+戻って来れなくなる気がして…
+
+# voice 9999 "durin_0027"
+# face 0 "occur"
+# textboxarrow 0 3
+@デュリン
+…考え過ぎよ
+まったく、マジメね…アンタは
+
+# voice 1014 "tyrufing_0001"
+# face 24 "normal"
+# textboxarrow 0 1
+@ティルフィング
+…マスターもそう思いますか？
+
+;;《選択肢》
+;;…その一線は越えてはならない…そんな気がする
+;;大丈夫…たとえ、その先に堕ちたとしても…必ず連れ戻す
+# select "…その一線は越えてはならない…そんな気がする" "select_label_01" "大丈夫…たとえ、その先に堕ちたとしても…必ず連れ戻す" "select_label_01"
+…マスターもそう思いますか？
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 24 "surprise"
+# textboxarrow 0 1
+@ティルフィング
+っ！…デュリン…アナタが言っていた
+“バランスが重要”って意味が、
+わかった気がする！！
+
+# label "select_label_end"
+# face 0 "normal"
+# textboxarrow 0 3
+@デュリン
+え…？
+
+# face 24 "normal"
+# textboxarrow 0 1
+@ティルフィング
+“アナタを探してたのかもしれない”
+なぜそう思ったのか、デュリンは
+知りたがっていましたよね？
+
+# textboxarrow 0 1
+@ティルフィング
+きっと私は…マスターに、
+バランスを求めたんです
+
+# textboxarrow 0 3
+@デュリン
+…この人なら、
+引き戻してくれる…と？
+
+# textboxarrow 0 1
+@ティルフィング
+はい
+狂気に呑まれても…
+
+# textboxarrow 0 1
+@ティルフィング
+たとえ、狩ることだけが目的の
+“獣”に堕ちたとしても…
+
+# textboxarrow 0 1
+@ティルフィング
+この人なら、マスターなら、
+再び引き戻してくれる…
+そう思えたの
+
+# face 0 "usual2"
+# textboxarrow 0 3
+@デュリン
+…………
+
+# textboxarrow 0 1
+@ティルフィング
+確信しました…
+やはり私のマスターは、
+アナタをおいて他にいないと！
+
+# textboxarrow 0 1
+@ティルフィング
+行きましょう…
+世界樹・ユグドラシルのふもと…
+大聖堂へ！
+
+# textwindow "close"
+# se "SE_0719"
+# leftout 24 1
+# waitandnext 1
+
+# alpha 24 0 0
+# move 0 3 0.5
+# face 0 "normal"
+# mask 0 off
+# textwindow "normal"
+# textboxarrow 0 2
+@デュリン
+…彼女達、キラープリンセスは、
+極めて危うい均衡の上に
+成り立っているの
+
+# textboxarrow 0 2
+@デュリン
+そのせいもあって、
+誤解も多く…人々になかなか
+受け入れてもらえない
+
+# textboxarrow 0 2
+@デュリン
+…彼女たちが、
+世間でなんて呼ばれているか、
+聞いたかしら？
+
+# textboxarrow 0 2
+@デュリン
+“キル姫”
+侮蔑の意味も含めて、
+そう呼ばれているの
+
+# textboxarrow 0 2
+@デュリン
+命懸けで助けている人々からね…
+ま、覚えておくといいわ

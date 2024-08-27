@@ -1,0 +1,562 @@
+;;-----------------------------------------
+;;鎌倉12_0
+;;-----------------------------------------
+# script "lisp"
+# background "beach"
+# bgmfile "bgm464_1" "BgmIntegralNoahDisrupters" 0
+;;-----------------------------------------
+;;INヘレナ
+# body 5302811
+# pos 5302811 4
+# scale 5302811 0.8 0
+# layer 5302811 2
+# mask 5302811 off
+# alpha 5302811 0 0
+;;ニール
+# body 162
+# pos 162 2
+# scale 162 0.8 0
+# layer 162 5
+# mask 162 off
+# alpha 162 0 0
+;;INリサナウト
+# body 5203011
+# pos 5203011 2
+# scale 5203011 0.8 0
+# layer 5203011 4
+# alpha 5203011 0 0
+;;鎌倉ヘレナ
+# body 6302811
+# pos 6302811 5
+# scale 6302811 0.8 0
+# layer 6302811 4
+# alpha 6302811 1 0
+;;鎌倉ニール
+# body 323
+# pos 323 3
+# scale 323 0.8 0
+# layer 323 5
+# mask 323 off
+# alpha 323 1 0
+;;鎌倉リサナウト
+# body 6203011
+# pos 6203011 1
+# scale 6203011 0.8 0
+# layer 6203011 2
+# alpha 6203011 0 0
+;;ボス魔獣
+# body 900019
+# pos 900019 1
+# scale 900019 0.9 0
+# layer 900019 1
+# mask 900019 off
+# alpha 900019 1 0
+# reversal 900019 0
+;;グランテピエ
+# body 5303411
+# pos 5303411 2
+# scale 5303411 0.8 0
+# layer 5303411 2
+# mask 5303411 off
+# alpha 5303411 0 0
+;;ムー
+# body 161
+# pos 161 2
+# scale 161 0.8 0
+# layer 161 5
+# mask 161 off
+# alpha 161 0 0
+;;INソロモン
+# body 5503111
+# pos 5503111 4
+# scale 5503111 0.8 0
+# layer 5503111 2
+# mask 5503111 off
+# alpha 5503111 0 0
+;;INカリス
+# body 5602511
+# pos 5602511 2
+# scale 5602511 0.8 0
+# layer 5602511 4
+# alpha 5602511 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "e220815_logo"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：beach
+# face 6302811 "angry"
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+;;ヘレナが魔獣を倒す
+# fadein "white" 1
+# shake 1 0.5
+# waitandnext 1
+
+# se "SE_6233"
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 1
+@魔獣
+ガアアアアアアア！？
+
+# voice 9952 "nir_0007"
+# textwindow "nomal"
+# textboxarrow 0 2
+@ニール
+あら、残念
+避けるどころか見えなかったみたいね
+クスクス
+
+# textboxarrow 0 1
+@魔獣
+ガアア…アアアアアア…！？
+
+# voice 530281 "herena_di_0007"
+# se "SE_12855"
+# sedelay "SE_12856" 1
+# textboxarrow 0 3
+@ヘレナ
+これで終わりだ
+
+# alpha 6302811 0 0.3
+# alpha 323 0 0.3
+# alpha 900019 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# serif 1
+@人々
+巨大怪獣が一瞬で消えた…
+何が起きたんだ？
+
+# serif 1
+@人々
+一筋の閃光が走ったような
+気がしたんだけど…
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 520301 "risanautr_ca_0004"
+# face 6302811 "normal"
+# alpha 6302811 1 0.3
+# alpha 323 1 0.3
+# face 6203011 "normal"
+# alpha 6203011 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@リサナウト
+ヘレナ、ニール
+やっと素直になれたみたいね
+
+# voice 530281 "herena_di_0027"
+# face 6302811 "sad"
+# textboxarrow 0 3
+@ヘレナ
+やれやれ
+とんだ茶番に付き合わされたな
+
+# voice 9952 "nir_0032"
+# textboxarrow 0 2
+@ニール
+さっさと帰りましょ！
+
+# voice 530281 "herena_di_0032"
+# face 6302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+そうだな
+この装置を起動させるマナも
+さっきの魔獣を倒して補充できた
+
+# face 6203011 "usual"
+# textboxarrow 0 1
+@リサナウト
+少し名残惜しいけど…
+ああ、そうだわヘレナ
+
+# voice 530281 "herena_di_0022"
+# alpha 323 0 0.3
+# move 6302811 4 0.5
+# move 6203011 2 0.5
+# textboxarrow 0 3
+@ヘレナ
+なんだい？
+お礼でも言って欲しいのかな？
+
+# textboxarrow 0 1
+@リサナウト
+それはいいわよ
+ねえ、あなた
+この時間軸で確定して良い？
+
+# voice 530281 "herena_di_0005"
+# face 6302811 "happy"
+# textboxarrow 0 3
+@ヘレナ
+ふふふっ
+ああ、もちろんだ
+
+;;時空移動する演出あれば
+# se "SE_9139"
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# fadeout "white" 1
+# waitandnext 4
+
+;;背景：町：
+# background "town_evening"
+# alpha 6302811 0 0
+# alpha 6203011 0 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 2
+
+# bgmfile "bgm462" "BgmIntegralNoahDisrupters" 0
+# move 6302811 5 0
+# move 5303411 3 0
+# face 5303411 "happy"
+# alpha 5303411 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@グランテピエ
+お帰りなさい、ヘレナ、ニール！
+
+# voice 530341 "grandepieu_di_0041"
+# textboxarrow 0 2
+@グランテピエ
+よく頑張ったね
+えらい、えらい
+
+# voice 530281 "herena_di_0022"
+# move 5303411 2 0.5
+# move 6302811 4 0.5
+# layer 6302811 4
+# mask 6302811 on
+# face 6302811 "surprise"
+# alpha 6302811 1 0.3
+# textboxarrow 0 3
+@ヘレナ
+えっ？
+テピ姉さん、どうして…
+
+# voice 560251 "chalice_di_0005"
+# move 5303411 1 0.5
+# alpha 5303411 0 0.3
+# move 6302811 5 0.5
+# alpha 6302811 0 0.3
+# face 5503111 "happy"
+# alpha 5503111 1 0.3
+# face 5602511 "happy"
+# alpha 5602511 1 0.3
+# textboxarrow 0 1
+@カリス
+わたしもいるよー！
+ヘレナもニールも
+元気そうで良かった！
+
+# voice 550311 "solomon_di_0004"
+# textboxarrow 0 3
+@ソロモン
+やはり休息は大切ね
+グランお姉様の判断は正しかったわ
+
+# voice 530281 "herena_di_0003"
+# alpha 5503111 0 0.3
+# alpha 5602511 0 0.3
+# move 323 2 0
+# alpha 323 1 0.3
+# move 6302811 4 0
+# face 6302811 "normal"
+# alpha 6302811 1 0.3
+# textboxarrow 0 3
+@ヘレナ
+まあ…意義のある休暇だったよ
+どこかの誰かさんのお陰でね
+
+# voice 9952 "nir_0002"
+# textboxarrow 0 1
+@ニール
+今回ばかりは、お節介に感謝して
+あげなくもないわ
+ねえ、リサ…あら？
+
+# voice 530281 "herena_di_0028"
+# face 6302811 "happy"
+# textboxarrow 0 3
+@ヘレナ
+…いないな
+ヘレナに気づかれず姿を消すなんて
+やるじゃないか…ふふっ
+
+# voice 530341 "grandepieu_di_0003"
+# alpha 323 0 0.3
+# alpha 6302811 0 0.3
+# move 5303411 3 0
+# mask 5303411 off
+# face 5303411 "normal"
+# alpha 5303411 1 0.3
+# textboxarrow 0 2
+@グランテピエ
+それじゃ、宿に戻ろう
+明日からの予定を話し合わないと
+いけないから、ね
+
+# voice 530281 "herena_di_0043"
+# alpha 323 1 0.3
+# face 6302811 "normal"
+# alpha 6302811 1 0.3
+# alpha 5303411 0 0.3
+# textboxarrow 0 3
+@ヘレナ
+うん、テピ姉さん
+…ニール
+
+# textboxarrow 0 1
+@ニール
+何かしら、ヘレナ？
+
+# face 6302811 "happy"
+# textboxarrow 0 3
+@ヘレナ
+…これからも、よろしく
+
+# voice 9952 "nir_0044"
+# textboxarrow 0 1
+@ニール
+ヘレナ！
+アタチこそ、よろしくねっ
+
+;;暗転
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+;;背景：町（夜）：town_night
+# background "town_night"
+# bgmfile "bgm404" "BgmIntegralNoahEvent003" 0
+# alpha 323 0 0
+# alpha 6302811 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1.5
+# waitandnext 1.5
+
+;;ここからリサナウトの立ち絵は霊装支配姿に戻る
+# voice 530341 "grandepieu_di_0059"
+# layer 5203011 4
+# face 5203011 "happy2"
+# alpha 5203011 1 0
+# move 5303411 4 0
+# layer 5303411 2
+# mask 5303411 off
+# face 5303411 "happy"
+# alpha 5303411 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@グランテピエ
+リサ、本当にありがとう
+あなたにお願いして良かった
+
+# voice 520301 "risanautr_ca_0004"
+# face 5203011 "happy1"
+# textboxarrow 0 1
+@リサナウト
+ふふっ
+言ったでしょ
+おおびゅねに…
+
+# textboxarrow 0 1
+@リサナウト
+大船に乗ったつもりで任せなさいって
+…最後は彼女達次第だったんだけどね
+
+# voice 530341 "grandepieu_di_0003"
+# face 5303411 "normal"
+# textboxarrow 0 3
+@グランテピエ
+確かに私達とムー達は戦うために
+繋がったけれど
+
+# textboxarrow 0 3
+@グランテピエ
+今はもう、それだけの繋がりじゃない
+カリスはそれを感覚的に受け入れてる
+
+# textboxarrow 0 3
+@グランテピエ
+ソロモンは理屈でグラウの存在を
+必要不可欠だと理解してるみたいだね
+
+# face 5303411 "sad"
+# textboxarrow 0 3
+@グランテピエ
+でも、ヘレナは…
+元々、繊細な子だったらしいから
+
+# textboxarrow 0 3
+@グランテピエ
+今のニールとの関係に
+悩んでるのかもしれないって
+
+# textboxarrow 0 3
+@グランテピエ
+分かってはいたんだけど
+良い解決策が見つからなくて…
+
+# voice 520301 "risanautr_ca_0040"
+# face 5203011 "happy2"
+# textboxarrow 0 1
+@リサナウト
+それで私の出番だったってわけね
+
+# face 5303411 "normal"
+# textboxarrow 0 3
+@グランテピエ
+自分達の出会いまで遡ってみれば、
+ただ戦うためだけに
+繋がっていたわけじゃないって
+
+# voice 530341 "grandepieu_di_0004"
+# textboxarrow 0 3
+@グランテピエ
+きっと気づいてくれるって
+信じてたんだ
+上手くいって本当に良かったよ
+
+# voice 520301 "risanautr_ca_0003"
+# face 5203011 "happy1"
+# textboxarrow 0 1
+@リサナウト
+ええ、そうね…
+何の問題もなく…
+全て想定通りに進んだわ
+
+# voice 9953 "mwu_0009"
+# move 161 3 0
+# alpha 161 1 0.5
+# move 5203011 1 0.5
+# move 5303411 5 0.5
+# textboxarrow 0 2
+@ムー
+お嬢ちゃん
+何か目が泳いでねぇか？
+
+# face 5203011 "angry"
+# textboxarrow 0 1
+@リサナウト
+そそそそんなことないわよっ
+気のせいよっ
+
+# voice 530341 "grandepieu_di_0011"
+# textboxarrow 0 3
+@グランテピエ
+ダメだよ、ムー
+リサは私達のために
+頑張ってくれたんだから
+
+# voice 520301 "risanautr_ca_0005"
+# face 5203011 "happy1"
+# textboxarrow 0 1
+@リサナウト
+まあ、私も面白い経験ができたから！
+めでたし、めでたしよね！
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：201_room
+# background "201_room"
+# bgmfile "bgm464_1" "BgmIntegralNoahDisrupters" 0
+# alpha 161 0 0
+# alpha 5203011 0 0
+# alpha 5303411 0 0
+# waitandnext 0.5
+
+;;ここからヘレナの立ち絵はIN編ヘレナに戻る
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 5302811 "usual"
+# alpha 5302811 1 0.3
+# alpha 162 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ニール
+あら、ヘレナ
+その装置、もう使えないんでしょ？
+まだ持ってたの？
+
+# voice 530281 "herena_di_0003"
+# textboxarrow 0 3
+@ヘレナ
+保存した記録を見ることだけは
+できるみたいだからな
+ちょっと見返してたんだよ
+
+# voice 530281 "herena_di_0002"
+# textboxarrow 0 3
+@ヘレナ
+ほら、ニール
+この画像とか良さげじゃないか？
+
+# voice 9952 "nir_0004"
+# move 162 3 0.5
+# textboxarrow 0 2
+@ニール
+あらあら
+良く撮れてるわねぇ
+いつの間に撮ったの？
+
+# textboxarrow 0 3
+@ヘレナ
+リサナウトがのんきに
+観光してる間にね
+
+# voice 9952 "nir_0003"
+# move 162 2 0.5
+# textboxarrow 0 1
+@ニール
+ふふふっ
+これでからかってやるのも
+面白そうよね
+
+# voice 530281 "herena_di_0005"
+# face 5302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+さあ、２人でこれから、
+どんなイタズラをしようかな
+…ふふっ♪
+
+# fadeout "black" 2
+# waitandnext 2.5
+
+# fadein "white" 2
+# frameout 0 0
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# textwindow "close"
+# alpha 5302811 0 0
+# alpha 162 0 0
+
+# fadeout "white" 2
+# waitandnext 2

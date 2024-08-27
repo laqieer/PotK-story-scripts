@@ -1,0 +1,489 @@
+;;１０話戦闘後
+;;イビルドレイクの立ち絵があるなら薄くしていく
+# script "lisp"
+# background "corridor_daytime"
+# bgmfile "bgm185" "BgmGakuen003" 0
+;;ナーゲル
+# body 100661
+# pos 100661 4
+# scale 100661 0.8 0
+# layer 100661 1
+# alpha 100661 0 0
+# face 100661 "angry"
+;;ロンギ
+# body 300191
+# pos 300191 2
+# scale 300191 0.8 0
+# layer 300191 2
+# alpha 300191 0 0
+# face 300191 "sad"
+;;さくら
+# body 148
+# pos 148 3
+# scale 148 0.8 0
+# layer 148 3
+# alpha 148 0 0
+# mask 148 off
+;;ケルベロス
+# body 144
+# pos 144 4
+# scale 144 0.8 0
+# layer 144 5
+# alpha 144 0 0
+;;ケルベロス
+# body 146
+# pos 146 4
+# scale 146 0.8 0
+# layer 146 5
+# alpha 146 0 0
+;;与一
+# body 400571
+# pos 400571 1
+# scale 400571 0.8 0
+# layer 400571 4
+# alpha 400571 0 0
+;;イビルドレイク
+# body 900017
+# pos 900017 3
+# scale 900017 1 0
+# layer 900017 2
+# mask 900017 off
+# alpha 900017 0.9 0
+;;さくらボイス用
+# body 602331
+# alpha 602331 0 0
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# serif 0
+# textwindow "close"
+# serif 1
+# textboxarrow 1 0
+# chara 900017
+@イビルドレイク
+『世界を、違う世界を夢見た我の…
+　これが終焉というのか…』
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@マスター
+そんな夢、本当の夢じゃない
+お前の邪悪な夢なんて
+ただの悪夢だ！
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textboxarrow 1 0
+# chara 900017
+@イビルドレイク
+『くっ…
+　こんなところで…』
+
+# serif 1
+# textboxarrow 1 0
+# chara 900017
+@イビルドレイク
+『おかしい…
+　そんなわけがない…
+　間違っている、間違っている…』
+
+# alpha 900017 0.8 1
+# serif 1
+# textboxarrow 1 0
+# chara 900017
+@イビルドレイク
+『こんなところで…
+　こんな、こんなところで…』
+
+# alpha 144 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+# voice 9966 "cckero_g_0027"
+@ケロちゃん
+往生際の悪いやっちゃな
+みっともないで？
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textboxarrow 1 0
+# chara 900017
+@イビルドレイク
+『黙れ…』
+
+# serif 1
+# textboxarrow 1 0
+# chara 900017
+@イビルドレイク
+『はぁ、はぁ、せめて…』
+
+;;イビルドレイクの立ち絵があるなら薄くしていく
+# alpha 900017 0.7 0.5
+# se "SE_5767"
+# serif 1
+# textboxarrow 1 0
+# chara 900017
+@イビルドレイク
+『お前だけでもぉぉぉぉっ――！！』
+
+;;さくら立ち絵表示
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# alpha 144 0 0
+# alpha 900017 0 0
+# alpha 148 1 0
+# face 148 "surprise"
+# waitandnext 0.1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 1
+# textsize 34
+# textwindow "toge"
+# textboxarrow 1 0
+# chara 144
+# voice 9966 "cckero_g_0045"
+@ケロちゃん
+さくら！
+
+# face 148 "sad"
+# serif 1
+# textsize 24
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 148
+@さくら
+えっ、きゃあっ！
+
+# brightness 400571 0.3 0
+# move 400571 5 0
+# scale 400571 1.1 0
+# textflame 0 0
+@マスター
+さくらちゃん！！
+
+;;さくらに向かっていたイビルドレイクが進行を止める演出
+;;立ち絵をシェイクして、ブレーキが掛かったような見た目にしてください。
+# se "SE_5781"
+# bgm "stop"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# scale 900017 1.2 0
+# alpha 148 0 0
+# alpha 400571 0.6 0
+# scale 400571 1.8 0.4
+# move 400571 1 0.4
+# envbody 3031 12 0
+# effectpattern 3031 1 0
+# effectstart 3031
+# voice 4005 "yoichi_battle_0004"
+# waitandnext 0.3
+
+# fadein "white" 0.5
+# effectskip 3031
+# alpha 400571 0 0
+# alpha 900017 1 0
+# effectbody 1000 28 0 0 5
+# effectstart 1000
+# shake 1 0.3
+# scale 900017 0.8 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+# chara 900017
+@イビルドレイク
+『ぐ、ぐぅぅぅぅっ！？』
+
+;;はじけるようなエフェクトを
+# se "SE_10355"
+# brightness 400571 1 0
+# scale 400571 0.8 0
+# effectskip 1000
+# fadein "white" 0.5
+# shake 0 0.3
+# alpha 900017 0 0
+# bgmfile "bgm183" "BgmGakuen003" 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@マスター
+え、これは…？
+
+;;与一の立ち絵を
+# move 148 5 0
+# mask 148 on
+# alpha 148 1 0.5
+# alpha 400571 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 400571
+@与一
+よ、与一の友達を
+傷つけようとする奴は許しません…
+
+# face 400571 "surprise"
+# move 400571 2 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 400571
+@与一
+さくらちゃん、
+大丈夫でしたか！？
+
+# face 148 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 148
+# voice 60231 "ccsakura_g_0030"
+@さくら
+与一ちゃん…ありがとう！
+
+# face 400571 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 400571
+@与一
+ううん。さくらちゃんが
+与一にしてくれたことに比べたら
+
+;;立ち絵イビルドレイク表示
+;;立ち絵シェイクして下さい
+# shakeloop 0
+# scale 900017 1 0
+# move 900017 3 0
+# alpha 400571 0 0.5
+# alpha 148 0 0.5
+# alpha 900017 0.6 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+# chara 900017
+@イビルドレイク
+『う、うう…』
+
+# serif 1
+# textboxarrow 1 0
+# chara 900017
+@イビルドレイク
+『う、ううぅぅぅぅぅ…』
+
+# serif 1
+# textboxarrow 1 0
+# chara 900017
+@イビルドレイク
+『くそ、くそぉぉぉぉぉぉぉっ…！』
+
+;;ゴゴゴ…とSEを鳴らしながら
+;;立ち絵シェイクして消して下さい
+;;最後はシュンと消えるイビルドレイク
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# se "SE_0637"
+# bgm "stop"
+# alpha 900017 0.3 2
+# waitandnext 2
+
+# shakestop
+# fadein "black" 0.5
+# alpha 900017 0 0
+# se "SE_5733"
+# waitandnext 1.5
+
+# face 300191 "surprise"
+# face 100661 "surprise"
+# alpha 300191 1 0.5
+# alpha 100661 1 0.5
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 300191
+# voice 3001 "ronginusu_0023"
+@ロンギヌス
+き、消えた！？
+
+# move 144 3 0
+# alpha 144 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 144
+@ケロちゃん
+弱ってるのに
+すばしっこい奴やな
+
+# face 300191 "usual"
+# face 100661 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 144
+@ケロちゃん
+でもまあ
+あの調子やったら
+しばらくは悪さなんてできんやろ
+
+;;ウエイト
+# bgm "bgm003" 0
+# serif 0
+# textwindow "close"
+# waitandnext 1.5
+
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@マスター
+終わったんだな
+
+;;校舎内の背景を順々に表示して
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# alpha 144 0 0
+# alpha 300191 0 0
+# alpha 100661 0 0
+# background "stairs_day"
+# waitandnext 0.6
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 1.5
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 1
+
+# background "classroom03_morning"
+# waitandnext 0.6
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 1.5
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 1
+
+# background "courtyard"
+# waitandnext 0.6
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 1.5
+
+# move 148 3 0
+# move 144 4 0
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@マスター
+何事もないみたいに
+静かな校舎だね
+
+# face 148 "sad"
+# mask 148 off
+# alpha 148 1 0.5
+# alpha 144 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 148
+@さくら
+うん…
+
+# face 100661 "usual"
+# move 300191 3 0
+# move 400571 1 0
+# move 100661 5 0
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+そうやな…
+
+# face 300191 "happy"
+# alpha 148 0 0.5
+# alpha 144 0 0.5
+# alpha 300191 1 0.5
+# alpha 100661 1 0.5
+# alpha 400571 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 300191
+@ロンギヌス
+でも、明日…
+みんなが登校すれば
+賑やかになりますよ
+
+# face 100661 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 100661
+# voice 1006 "nageruring_0003"
+@ナーゲルリング
+そうですね
+きっと賑やかな、
+笑顔溢れるいつもの学園です
+
+# face 400571 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 400571
+# voice 4005 "yoichi_0032"
+@与一
+はい…！
+わたしたちが守ってきた
+大切な学園です
+
+# alpha 148 1 0.5
+# alpha 144 1 0.5
+# alpha 300191 0 0.5
+# alpha 100661 0 0.5
+# alpha 400571 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 148
+@さくら
+うん…
+わたしたちの…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+さて、じゃあ…
+最後の一仕事といかんとな

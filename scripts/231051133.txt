@@ -1,0 +1,391 @@
+;;-----------------------------------------
+;;ダンまち1_3_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm361" "BgmDanmachi" 0
+;;-----------------------------------------
+;;アルマス
+# body 138
+# pos 138 3
+# scale 138 0.8 0
+# layer 138 4
+# alpha 138 0 0
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 3
+# mask 139 off
+# alpha 139 0 0
+;;ヘスティア
+# body 3603111
+# pos 3603111 5
+# scale 3603111 0.8 0
+# layer 3603111 4
+# alpha 3603111 0 0
+;;リュー
+# body 3104511
+# pos 3104511 5
+# scale 3104511 0.8 0
+# layer 3104511 3
+# alpha 3104511 0 0
+;;アイズ
+# body 3104411
+# pos 3104411 2
+# scale 3104411 0.8 0
+# layer 3104411 3
+# alpha 3104411 0 0
+;;ベル
+# body 216
+# pos 216 3
+# scale 216 0.8 0
+# layer 216 5
+# mask 216 off
+# alpha 216 0 0
+;;トレイセーマ兵
+# body 3830001
+# pos 3830001 3
+# scale 3830001 0.8 0
+# layer 3830001 4
+# mask 3830001 off
+# alpha 3830001 0 0
+# reversal 3830001 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textwindow "close"
+# waitandnext 0.5
+
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# background "201_border"
+# move 138 2 0
+# alpha 138 1 0
+# move 3104511 4 0
+# alpha 3104511 1 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 138 "worry"
+# voice 1038 "almace_battle_0005"
+@アルマス
+た、倒した…けど
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104511 "sad"
+# voice 310451 "ryu_battle_0005"
+@リュー
+私達はここにいます
+
+# alpha 138 0 0.5
+# alpha 3104511 0 0.5
+# move 216 4 0
+# alpha 216 1 0.5
+# move 3603111 2 0
+# alpha 3603111 1 0.5
+# face 3603111 "usual"
+# textflame 1 1
+# textboxarrow 0 3
+# face 216 "sad"
+@ベル
+皆さんに戦ってもらって
+大変申し訳ないんですが
+ナイフも見つかりませんでした…
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9932 "bell_0031"
+@ベル
+すみません神様
+僕がしっかりと持っていれば…
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 360311 "hestia_0003"
+@ヘスティア
+いいんだよベル君
+世の中仕方のないことだってあるさ
+
+# alpha 216 0 0.5
+# alpha 3603111 0 0.5
+# alpha 3830001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@トレイセーマ兵
+くっ…
+
+# move 3830001 4 0.5
+# alpha 138 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1038 "almace_0007"
+@アルマス
+まだ意識があるなんて
+意外とタフね
+
+# textflame 0 0
+@
+気絶させようとする
+アルマスを止めるマスター
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "normal"
+# voice 1038 "almace_0035"
+@アルマス
+何よ
+増援呼ばれたら面倒じゃない
+
+# se "SE_6500"
+# emotionbody 1001 1 3104411 10 310
+# effectpattern 1001 1 0
+# effectstart 1001
+# alpha 138 0 0.5
+# alpha 3104411 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 3104411 "angry"
+# voice 310441 "aiz_0001"
+@アイズ
+待って
+何か…喋ってる
+
+# textflame 1 1
+# textboxarrow 0 3
+@トレイセーマ兵
+…あの幻獣を捕らえずとも
+あの巨人の力さえあれば――
+
+# alpha 3104411 0 0.5
+# move 3104511 2 0
+# alpha 3104511 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 3104511 "surprise"
+@リュー
+巨人？
+
+# textflame 1 1
+# textboxarrow 0 3
+@トレイセーマ兵
+くく、そうだ
+巨人と…捕らえた幻獣人のことが
+解析されればお前達なんて――
+
+# alpha 3830001 0 1
+# se "SE_5200"
+# textboxarrow 0 0
+# waitandnext 1
+
+# textflame 0 0
+@
+そう言ったところで
+ガクリ、と気を失う兵士
+
+# se "SE_6502"
+# emotionbody 1002 2 138 10 290
+# effectpattern 1002 1 1
+# effectstart 1002
+# alpha 3104511 0 0.5
+# alpha 138 1 0.5
+# alpha 216 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "surprise"
+# voice 1038 "almace_0022"
+@アルマス
+捕らえた幻獣人？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ベル
+幻獣人っていうのは
+動物と人を合わせたような
+姿をした人のことですか？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "normal"
+# voice 1038 "almace_0003"
+@アルマス
+ま、そんなとこね
+
+# se "SE_6500"
+# emotionbody 1003 1 3603111 10 280
+# effectpattern 1003 1 0
+# effectstart 1003
+# move 138 1 0.5
+# move 216 5 0.5
+# move 3603111 3 0
+# alpha 3603111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3603111 "angry"
+# voice 360311 "hestia_0022"
+@ヘスティア
+だとすると…もしかして！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "surprise"
+@アルマス
+何か心当たりがあるの？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9932 "bell_0032"
+@ベル
+はい…けどこれ以上
+マスターさん達にご迷惑を
+お掛けするのは…
+
+# textflame 0 0
+@
+困ってる人は放っておけないよね
+とマスターはベルの言葉を遮る
+ようにアルマスへ目配せをする
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1038 "almace_0003"
+@アルマス
+…と、いうことよベル
+それにヘスティア、アイズ、リュー
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "angry"
+@アルマス
+私達はあなた達を助けるわ
+大船に乗ったつもりで
+いてくれて構わないわ！
+
+# alpha 3603111 0 0.5
+# alpha 138 0 0.5
+# alpha 216 0 0.5
+# alpha 139 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9967 "titania_0006"
+@ティターニア
+ふふっ、張り切ってますね
+アルマスは困ってる人を
+放っておけないんです
+
+# alpha 139 0 0.5
+# move 138 3 0
+# mask 138 off
+# alpha 138 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 138 "shy1"
+# voice 1038 "almace_0042"
+@アルマス
+べ、別に張り切ってるわけじゃ…
+
+# textflame 0 0
+@
+改めて、ヘスティア達に
+事態が収束するまで手伝うと
+誓うマスター
+
+# alpha 138 0 0.5
+# move 216 3 0
+# mask 216 on
+# alpha 216 1 0.5
+# move 3104511 5 0
+# mask 3104511 on
+# alpha 3104511 1 0.5
+# move 3104411 1 0
+# mask 3104411 on
+# alpha 3104411 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 216 "happy"
+# voice 9932 "bell_0030"
+@ベル
+…ありがとうございます！
+マスターさん達に出会えてよかった
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104511 "happy"
+# voice 310451 "ryu_0004"
+@リュー
+もうしばらくお世話になります
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3104411 "happy"
+# voice 310441 "aiz_0005"
+@アイズ
+私も手伝う
+
+# alpha 216 0 0.5
+# alpha 3104511 0 0.5
+# alpha 3104411 0 0.5
+# move 138 2 0
+# alpha 138 1 0.5
+# move 3603111 4 0
+# alpha 3603111 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 3603111 "happy"
+# voice 360311 "hestia_0005"
+@ヘスティア
+よし、それじゃあ
+マスター達も一時的にボクの
+ファミリアの仮眷族だ！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "normal"
+# voice 1038 "almace_0034"
+@アルマス
+それは断るわ
+私はマスターの隊にいるもの
+
+# se "SE_6524"
+# emotionbody 1004 11 3603111 80 210
+# effectpattern 1004 1 0
+# effectstart 1004
+# textflame 1 1
+# textboxarrow 0 3
+# face 3603111 "surprise"
+# voice 360311 "hestia_0023"
+@ヘスティア
+のあっ！？
+
+# imageset 1 "e200301_logo_white"
+# imagealpha 1 0 0
+# imagelayer 1 1
+# textflame 0 0
+@
+にぎやかな冒険者達との出会いは
+もう少し長い旅路になりそうだ
+
+# bgm "stop"
+# textwindow "close"
+# se "SE_0891"
+# fadein "white" 1
+# imagealpha 1 1 0
+# imagepos 1 0 0
+
+# fadeout "black" 1
+# waitandnext 1

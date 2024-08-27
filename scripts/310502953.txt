@@ -1,0 +1,191 @@
+;;-----------------------------------------
+;;覚醒グリモワール　シナリオ_3
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm212" "BgmSeventhKillers001" 0
+;;-----------------------------------------
+# body 501711
+# pos 501711 4
+# scale 501711 0.8 0
+# layer 501711 3
+# mask 501711 off
+# alpha 501711 0 0
+# body 500211
+# pos 500211 2
+# scale 500211 0.8 0
+# layer 500211 4
+# alpha 500211 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;荒野または草原などの野外（昼）
+;;背景：草原　plain
+# textwindow "close"
+# waitandnext 0.3
+
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# textwindow "close"
+# waitandnext 0.2
+
+# background "plain"
+# alpha 501711 1 0
+# face 501711 "angry"
+# alpha 500211 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;できればもやもやフレームで
+# move 501711 4 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@グリモワール
+必ず当たる魔弾の技術…
+その真髄を見つけ出さなくちゃ！
+集中するのよ…
+
+# textflame 0 0
+# textwindow "nomal"
+@
+魔術と魔弾の激しい応酬のなか、
+フライクーゲルが渾身の一撃を放つ
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 5002 "furaikugeru_0029"
+@フライクーゲル
+はぁっ！
+
+# se "SE_4400"
+# effectbody 1001 28 0 0 0
+# effectstart 1001
+# waitandnext 0.5
+
+# textflame 0 0
+@
+その時、グリモワールの目に
+魔弾の軌道を操る魔術の流れが
+はっきりと見えた
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5017 "grimoire_battle_0004"
+@グリモワール
+…そこよ！
+たぁーっ！
+
+# se "SE_4731"
+# fadein "white" 0.5
+# move 501711 3 0.2
+# textflame 0 0
+@
+グリモワールは魔弾をかわして
+反撃に転じる
+# waitandnext 0.5
+
+# se "SE_4773"
+# shake 0 0.5
+# layer 501711 4
+# mask 501711 on
+# layer 500211 3
+# mask 500211 off
+# move 500211 1 0.2
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 500211 "sad"
+@フライクーゲル
+アウチ！
+
+# textflame 0 0
+@
+グリモワールの攻撃を受け、
+フライクーゲルは派手に吹き飛んだ
+
+# move 501711 4 0.5
+# move 500211 2 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5002 "furaikugeru_0037"
+@フライクーゲル
+いたた…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 501711 "usual"
+# voice 5017 "grimoire_0030"
+@グリモワール
+ワタシのために、ありがと…
+自分の殻を破れたのは
+キミのおかげよ
+
+# textflame 0 0
+@
+グリモワールはそう言って
+フライクーゲルに手を差し出す
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 500211 "normal"
+# voice 5002 "furaikugeru_0004"
+@フライクーゲル
+アハハ、今度はわたしが
+ティーチャーになる番ね☆
+もう、教えることはないけど♪
+
+# textflame 0 0
+@
+フライクーゲルはその手を借りて
+立ち上がりながら、そう笑う
+
+# textflame 1 1
+# textboxarrow 0 3
+@グリモワール
+キミが教えてくれたこと忘れないわ
+仲間と一緒に戦って成長することの
+大切さも…ね
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 500211 "happy"
+@フライクーゲル
+ワァオ！
+これでみんなソーヘァピィだね！
+ほら、マスターがきみを待ってるよ♪
+
+# textflame 1 1
+# textboxarrow 0 3
+@グリモワール
+え？ああ、そうだったわ
+急がなくっちゃ！じゃあね！
+
+# move 501711 5 0.5
+# alpha 501711 0 0.5
+# se "SE_5575"
+# waitandnext 0.5
+
+# textflame 0 0
+@
+グリモワールは振り向きもせずに
+マスターの元へと走り出す
+
+# textflame 1 1
+# textboxarrow 0 1
+@フライクーゲル
+ははっ…
+バイバイ、マイティーチャー…
+
+# textflame 0 0
+@
+その背中を見送りながら、
+フライクーゲルはそう言って
+少し寂しそうに微笑んだ
+
+# fadeout "black" 1
+# waitandnext 1.5

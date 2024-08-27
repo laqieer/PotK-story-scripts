@@ -1,0 +1,475 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第20章 章タイトル：ワールドサルベイション
+;;第2話―１１　タイトル：遺されたもの
+;;11_0
+;;スクリプト最後の背景：宇宙（ラストバトル空間）
+;;-----------------------------------------
+# script "lisp"
+# background "in_perspective"
+# bgm "stop"
+;;-----------------------------------------
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 3
+# alpha 5101431 0 0
+# mask 5101431 off
+;;レーヴァテイン・擬彩
+# body 5100231
+# pos 5100231 3
+# scale 5100231 0.8 0
+# layer 5100231 2
+# alpha 5100231 0 0
+# mask 5100231 off
+;;フォルカス・神令・ヘル
+# body 5301811
+# pos 5301811 3
+# scale 5301811 0.8 0
+# layer 5301811 2
+# alpha 5301811 0 0
+# mask 5301811 off
+;;ラグナロク・擬装・ガンナー
+# body 5103621
+# pos 5103621 3
+# scale 5103621 0.8 0
+# layer 5103621 2
+# alpha 5103621 0 0
+# mask 5103621 off
+;;グランテピエ・獣刻・バハムート
+# body 5303411
+# pos 5303411 3
+# scale 5303411 0.8 0
+# layer 5303411 2
+# alpha 5303411 0 0
+# mask 5303411 off
+;;アルマス・誓約・ティターニア
+# body 5103811
+# pos 5103811 3
+# scale 5103811 0.8 0
+# layer 5103811 2
+# alpha 5103811 0 0
+# mask 5103811 off
+;;-----------------------------------------
+;;---------------------------------------------
+;;■フォルカス
+;;立ち絵：フォルカス・神令・ヘル
+;;■アルマス
+;;立ち絵：アルマス・誓約・ティターニア
+;;■グランテピエ
+;;立ち絵：グランテピエ・獣刻・バハムート
+;;■ティルフィング
+;;立ち絵：ティルフィング・擬彩
+;;■ラグナロク
+;;立ち絵：ラグナロク・擬装・ガンナー
+;;■レーヴァテイン
+;;立ち絵：レーヴァテイン・擬彩
+;;---------------------------------------------
+;;背景：宇宙（ラストバトル空間）
+;;画面揺れ
+# textwindow "close"
+# waitandnext 0.2
+
+# se "SE_0637"
+# shake 0 2
+# waitandnext 2
+
+# bgmfile "bgm409" "BgmIntegralNoahEvent" 0
+# move 5301811 3 0
+# face 5301811 "angry"
+# alpha 5301811 1 0.5
+# mask 5301811 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@フォルカス
+揺れが大きくなってきました
+あまり時間はありませんね
+
+# voice 510381 "almace_ca_0028"
+# alpha 5301811 0 0.5
+# move 5103811 3 0
+# face 5103811 "normal"
+# alpha 5103811 1 0.5
+# mask 5103811 off
+# textboxarrow 0 2
+@アルマス
+ええと、そこのマスターさん
+やれる！？
+
+;;選択肢
+;;
+;;A問題ない
+;;Bどうかな…
+;;C無理だよ
+# select "問題ない" "select_label_01" "どうかな…" "select_label_02" "無理だよ" "select_label_03"
+ええと、そこのマスターさん
+やれる！？
+
+;;A
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 5103811 "happy"
+# textboxarrow 0 2
+@アルマス
+良い返事ね！
+頼んだわよっ
+
+;;B
+# label "select_label_02"
+# labeljump "select_label_end1"
+# alpha 5103811 0 0.5
+# move 5303411 3 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# textboxarrow 0 2
+@グランテピエ
+自信がないんだね
+うんうん、分かるよ
+少しだけ頑張ってみよう？
+
+;;C
+# label "select_label_03"
+# labeljump "select_label_end2"
+# alpha 5303411 0 0.5
+# move 5101431 3 0
+# face 5101431 "angry"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+@ティルフィング
+マスター…
+私も全力でお手伝いします！
+だから、お願いします！
+
+;;選択肢
+;;
+;;Aやってみる！
+# label "select_label_end"
+# select "やってみる！" "select_label_04"
+良い返事ね！
+頼んだわよっ
+
+# label "select_label_end1"
+# select "やってみる！" "select_label_04"
+自信がないんだね
+うんうん、分かるよ
+少しだけ頑張ってみよう？
+
+# label "select_label_end2"
+# select "やってみる！" "select_label_04"
+マスター…
+私も全力でお手伝いします！
+だから、お願いします！
+
+;;小さな方舟が現れる
+;;方舟のイラストを用意していないため、小さな光が現れる演出でお願いいたします
+# label "select_label_04"
+# se "SE_9147"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1.2
+
+# alpha 5103811 0 0
+# alpha 5303411 0 0
+# move 5101431 3 0
+# face 5101431 "normal"
+# alpha 5101431 1 0
+# mask 5101431 off
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+これが方舟…
+
+# move 5103621 2 0
+# face 5103621 "normal"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# textboxarrow 0 1
+# move 5101431 4 0.5
+# mask 5101431 on
+@ラグナロク
+船というより、箱ね
+片手で持てそうなくらいの大きさの
+箱…
+
+# voice 510143 "tyrufing_iz_0004"
+# face 5101431 "happy"
+# textboxarrow 0 3
+@ティルフィング
+世界の全てをここに保存して
+新世界へ船出するんですね
+
+# move 5103621 1 0.5
+# move 5101431 3 0.5
+# move 5103811 5 0
+# face 5103811 "normal"
+# alpha 5103811 1 0.5
+# mask 5103811 on
+# textboxarrow 0 3
+@アルマス
+新しい世界の種が生まれるとか
+言ってたけど、あれを植える役目は…
+
+# face 5101431 "normal"
+# textboxarrow 0 2
+@ティルフィング
+私がやります
+
+# voice 1036 "ragnarok_0022"
+# face 5103621 "surprise"
+# textboxarrow 0 1
+@ラグナロク
+いいの…？
+たった一人で
+無を彷徨うことになりそうだけど…
+
+# face 5101431 "angry"
+# textboxarrow 0 2
+@ティルフィング
+この方舟は、マスターが私達に
+残してくれた最後の希望なんです
+私に守らせて下さい
+
+# voice 510381 "almace_ca_0021"
+# face 5103811 "happy"
+# textboxarrow 0 3
+@アルマス
+その心意気、絶・最高ね！
+
+# voice 1036 "ragnarok_0030"
+# face 5103621 "happy"
+# textboxarrow 0 1
+@ラグナロク
+ありがとう
+ティルフィング、あなたに委ねるわ
+
+# voice 510143 "tyrufing_iz_0030"
+# face 5101431 "happy"
+# textboxarrow 0 2
+@ティルフィング
+ありがとうございます
+必ず、皆を乗せた希望の方舟を
+新世界へと船出させます
+
+;;画面揺れ
+# se "SE_9036"
+# textwindow "close"
+# shake 0 1
+# waitandnext 1
+
+;;フラッシュ明滅
+# fadein "white" 0.5
+# waitandnext 0.8
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 510143 "tyrufing_iz_0015"
+# face 5101431 "sad"
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+くっ…
+方舟が、起動しません
+
+# voice 510381 "almace_ca_0022"
+# face 5103811 "surprise"
+# textboxarrow 0 3
+@アルマス
+えっ？
+どういうこと…
+
+# face 5101431 "normal"
+# textboxarrow 0 2
+@ティルフィング
+恐らく、方舟を起動させるための
+力がないんです
+
+# textboxarrow 0 3
+@アルマス
+起動させる力…？
+
+# face 5103621 "normal"
+# textboxarrow 0 1
+@ラグナロク
+…………
+
+# bgm "stop"
+# textboxarrow 0 1
+@ラグナロク
+…皆、聞いて
+方舟を起動させる力が何なのか、
+予想はついているの
+
+# face 5103811 "angry"
+# textboxarrow 0 3
+@アルマス
+本当、ラグナロク！？
+早く教えてよっ
+
+# voice 1036 "ragnarok_0003"
+# textboxarrow 0 1
+@ラグナロク
+うん…
+レーヴァテイン、来て
+
+# alpha 5103811 0 0.5
+# move 5100231 5 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+# textboxarrow 0 3
+@レーヴァテイン
+何か用…？
+
+# bgmfile "bgm473_block" "BgmIntegralNoahEvent009" 0
+# textboxarrow 0 1
+@ラグナロク
+これはきっと、私達の問題よ
+
+# textboxarrow 0 1
+@ラグナロク
+少し前から気になっていたの
+
+# textboxarrow 0 1
+@ラグナロク
+ユグドラシルは、あなたのマスターが
+自分自身のバイブスを使って方舟を
+創るよう言ったけれど
+
+# textboxarrow 0 1
+@ラグナロク
+私の中にもバイブスがあるわ
+これも方舟を造るのに必要なもの
+じゃないの？
+
+# textboxarrow 0 2
+@ティルフィング
+でも、それを失うとラグナロクは
+ラグナロクでなくなってしまうのでは
+ありませんか？
+
+# textboxarrow 0 1
+@ラグナロク
+そう…
+ギャラルホルン達が私のキラーズに
+ついて気にしていたり…
+
+# textboxarrow 0 1
+@ラグナロク
+幾つか疑問だったことがある
+“終焉”のことを優先して、
+今まで考えてこなかったけれど
+
+# textboxarrow 0 1
+@ラグナロク
+さっきのユグドラシルの言葉で、
+確信したわ
+
+# textboxarrow 0 1
+@ラグナロク
+私は…私自身に決着をつけないと
+いけないのよ
+
+# face 5101431 "surprise"
+# textboxarrow 0 2
+@ティルフィング
+ラグナロク、まさかバイブスをっ
+
+# textboxarrow 0 1
+@ラグナロク
+これは元々、ユグドラシルにあって
+キル姫に宿るものではなかったはず
+
+# textboxarrow 0 1
+@ラグナロク
+つまり、今の状態がイレギュラーなの
+私はこれを、還さないといけない
+
+# face 5101431 "angry"
+# textboxarrow 0 2
+@ティルフィング
+でも、もう還すところなんて
+ありません…！
+
+# textboxarrow 0 1
+@ラグナロク
+いいえ、あるわ
+あなたのマスターが創ってくれた
+方舟
+
+# textboxarrow 0 1
+@ラグナロク
+新世界への旅路に、これはきっと
+必要なマナなのよ
+
+# voice 510023 "revatein_iz_0001"
+# textboxarrow 0 3
+@レーヴァテイン
+…ねえ
+あなたも…気づいてるのよね
+
+# voice 1036 "ragnarok_0003"
+# textboxarrow 0 1
+@ラグナロク
+ええ
+ずっと気づかない振りをしてきた
+けれど、間違いない
+
+# textboxarrow 0 3
+@レーヴァテイン
+あなたのキラーズは、私と同じ
+
+# textboxarrow 0 1
+@ラグナロク
+私のキラーズはレーヴァテイン
+
+# textboxarrow 0 1
+@ラグナロク
+ラグナロクという名は、
+私が天上世界に現れたとき、
+そう名乗ったに過ぎないわ
+
+# voice 510143 "tyrufing_iz_0022"
+# face 5101431 "surprise"
+# textboxarrow 0 2
+@ティルフィング
+二人とも、キラーズが
+レーヴァテイン…まさか…
+
+# voice 510023 "revatein_iz_0003"
+#setnextbgmblock 1
+# textboxarrow 0 3
+@レーヴァテイン
+うん
+やっと分かった
+私がオリジナルになれていない理由
+
+# textboxarrow 0 3
+@レーヴァテイン
+だって…
+ここにもう一人、残っていたから
+
+# textboxarrow 0 1
+@ラグナロク
+バイブスの影響で淘汰が起きずに
+いたのね
+
+# face 5100231 "angry"
+# textboxarrow 0 3
+@レーヴァテイン
+でも、そのバイブスを還すのなら…
+やらなきゃいけないことがある
+
+# textboxarrow 0 3
+@レーヴァテイン
+一応、言っとくよ
+私は譲る気なんて…ないから

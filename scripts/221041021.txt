@@ -1,0 +1,450 @@
+;;-----------------------------------------
+;;【ファンキル　クリスマスイベント2018　FB修正版2018.11.26
+;;【EP1】少女の宝物
+;;1_1
+;;スクリプト最後の背景：ハルモニア擬人区（街）
+;;-----------------------------------------
+# script "lisp"
+# background "imperial_city"
+# bgm "bgm032" 0
+;;-----------------------------------------
+;;カリス（クリスマス用のボイスを鳴らすための呼び出し）
+# body 3602511
+# alpha 3602511 0 0
+;;フォルカス（クリスマス用のボイスを鳴らすための呼び出し）
+# body 3301811
+# alpha 3301811 0 0
+;;カリス（クリスマス）
+# body 3602521
+# pos 3602521 3
+# scale 3602521 0.8 0
+# layer 3602521 2
+# alpha 3602521 0 0
+# mask 3602521 off
+;;フォルカス（クリスマス）
+# body 3301821
+# pos 3301821 3
+# scale 3301821 0.8 0
+# layer 3301821 2
+# alpha 3301821 0 0
+# mask 3301821 off
+;;キプル
+# body 163
+# pos 163 3
+# scale 163 0.6 0
+# layer 163 2
+# alpha 163 0 0
+# mask 163 off
+;;ハルモニア兵
+# body 3810001
+# pos 3810001 3
+# scale 3810001 0.8 0
+# layer 3810001 2
+# alpha 3810001 0 0
+# mask 3810001 off
+;;-----------------------------------------
+;;【EP1】少女の宝物
+;;//背景：ハルモニア擬人区（街）
+# se "SE_6504"
+# emotionbody 1000 3 3602521 10 290
+# effectpattern 1000 2 3
+# effectstart 1000
+# move 3602521 3 0
+# face 3602521 "normal"
+# alpha 3602521 1 0
+# mask 3602521 off
+# textflame 1 1
+# textboxarrow 0 2
+;;（以下、クリスマス衣装）
+# voice 6025 "chalice_t_0041"
+@カリス
+わぁ！この衣装、かわいい～！
+フォルカスが選んでくれたの？
+
+# textflame 0 0
+;;モノローグ
+@
+渡された衣装に着替えたカリスが
+はしゃいでいると、フォルカスは
+厳しい表情でカリスを諌める
+
+# effectskip 1000
+# move 3602521 2 0.5
+# mask 3602521 on
+# move 3301821 4 0
+# face 3301821 "angry"
+# alpha 3301821 1 0.5
+# mask 3301821 on
+# textflame 1 1
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0011"
+@フォルカス
+カリス…
+あなたの行動は軽率すぎます、
+もう少し慎重にならなくては…
+
+# alpha 3602521 0 0.5
+# move 163 2 0
+# alpha 163 1 0.5
+# mask 163 on
+# textboxarrow 0 1
+# voice 9951 "kipuru_0031"
+@キプル
+あああ、フォルカス様！
+すみませんすみません！
+
+# alpha 163 0 0.5
+# move 3602521 2 0
+# face 3602521 "happy"
+# alpha 3602521 1 0.5
+;;カリス（笑顔）
+# voice 6025 "chalice_t_0030"
+@カリス
+えへへ…
+ごめんね、ありがと！
+
+# se "SE_6502"
+# emotionbody 1001 2 3602521 10 290
+# effectpattern 1001 1 1
+# effectstart 1001
+# face 3602521 "surprise"
+# textboxarrow 0 1
+@カリス
+…あれ？
+なんか泣き声が聞こえない？
+
+# se "SE_6500"
+# emotionbody 1002 1 3602521 10 310
+# effectpattern 1002 1 0
+# effectstart 1002
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0002"
+@カリス
+…あ、あそこだ！
+女の子が泣いてるよ！
+どうしたのかなぁ？
+
+# textwindow "close"
+# se "SE_5575"
+# leftout 3602521 0.5
+# waitandnext 0.5
+
+# alpha 3602521 0 0
+# textflame 0 0
+# textwindow "normal"
+;;モノローグ
+@
+カリスは、道の端で泣いている
+少女のもとに駆け寄っていった
+
+# se "SE_6513"
+# emotionbody 1003 8 3301821 80 250
+# effectpattern 1003 1 0
+# effectstart 1003
+# face 3301821 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0027"
+@フォルカス
+はぁ…
+本当にわかっているのでしょうか…
+
+# se "SE_0740"
+# effectskip 1003
+# alpha 3301821 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+フォルカスはため息をつきながら
+カリスのあとを追い、マスターも
+それに続いた
+
+# move 3602521 2 0
+# face 3602521 "normal"
+# alpha 3602521 1 0.5
+# mask 3602521 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 3301821 4 0
+# face 3301821 "usual"
+# alpha 3301821 1 0.5
+# mask 3301821 on
+# voice 6025 "chalice_t_0002"
+@カリス
+…この子ね、お母さんからもらった
+大事なネックレスを
+落としちゃったんだって！
+
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0004"
+@カリス
+でも、わたしが見つけてあげるから
+安心してね！
+この二人も一緒に探してくれるって！
+
+# face 3301821 "angry"
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0022"
+@フォルカス
+なにを勝手なことを
+マスターの許可もなしに…
+
+# se "SE_6504"
+# emotionbody 1004 3 3602521 10 290
+# effectpattern 1004 1 3
+# effectstart 1004
+# face 3602521 "happy"
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0005"
+@カリス
+マスターさんなら、
+絶対頷いてくれるって信じてるもん！
+ね、マスターさん？
+
+# textflame 0 0
+;;モノローグ
+@
+もちろんだ、フォルカスもいいよね
+と、マスターが言うと
+フォルカスはしぶしぶ頷いた
+
+# textwindow "close"
+# alpha 3602521 0 0.5
+# alpha 3301821 0 0.5
+# waitandnext 0.5
+
+# move 3301821 3 0
+# face 3301821 "usual"
+# alpha 3301821 1 0.5
+# mask 3301821 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 330181 "forcas_t_0032"
+@フォルカス
+…わかりました、了解です
+落としたのはどんなものですか？
+
+# textflame 0 0
+;;モノローグ
+@
+フォルカスは少女から、
+ネックレスの情報を聞き出した
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 330181 "forcas_t_0040"
+@フォルカス
+…なるほど
+とりあえず、彼女が歩いた道を
+たどってみましょう
+
+# alpha 3301821 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+しばらく歩いていくと
+子供が近道として使う細い路地裏に
+光るものが見えた
+
+;;モノローグ
+@
+少女もこの道を通ったそうなので、
+ここで落としたのかもしれない
+
+# move 3602521 3 0
+# face 3602521 "normal"
+# alpha 3602521 1 0.5
+# mask 3602521 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0004"
+@カリス
+きっとそうだよ！
+見つかってよかったね！
+
+# move 3602521 2 0.5
+# mask 3602521 on
+# move 3301821 4 0
+# face 3301821 "angry"
+# alpha 3301821 1 0.5
+# mask 3301821 on
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0011"
+@フォルカス
+カリス、落ち着いてください
+喜ぶのはまだ早いですよ
+
+# alpha 3602521 0 0.5
+# alpha 3301821 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+マスターが見にいくと、
+そこにあったのは、間違いなく
+少女の落としたネックレスだった
+
+;;モノローグ
+@
+マスターがそれを拾ったその時、
+いつの間にか現れたハルモニア兵に
+無理やり奪い取られてしまう
+
+# bgm "bgm005" 0
+# move 3810001 3 0
+# alpha 3810001 1 0.5
+# mask 3810001 off
+# textflame 1 1
+# textboxarrow 0 2
+@ハルモニア兵
+このネックレス…
+擬人には不相応です、
+どうせ盗品でしょう！
+
+# textflame 0 0
+;;モノローグ
+@
+マスターは、それはあの少女が
+落としたものだ、と説明するが
+ハルモニア兵は納得しない
+
+# textflame 1 1
+# textboxarrow 0 2
+@ハルモニア兵
+はははっ！
+そんな話、信じられませんね！
+これは没収です！
+
+# alpha 3810001 0 0.5
+# move 3602521 3 0
+# face 3602521 "sad"
+# alpha 3602521 1 0.5
+# mask 3602521 off
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0017"
+@カリス
+この子のネックレスなのに、
+返してもらえないの？
+
+# se "SE_0648"
+# alpha 3602521 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+ネックレスを奪われた少女は
+ハルモニア兵の足にすがりつき、
+返してください、と泣き出した
+
+# move 3810001 3 0
+# alpha 3810001 1 0.5
+# mask 3810001 off
+# textflame 1 1
+# textboxarrow 0 2
+@ハルモニア兵
+この…っ！
+汚い手で触れるな！
+
+# se "SE_0770"
+# shake 0 0.5
+# waitandnext 0.5
+
+# textflame 0 0
+;;モノローグ
+@
+しかし、ハルモニア兵は
+少女を引き剥がすと、
+カリス達に向けて投げ飛ばす
+
+# se "SE_6509"
+# emotionbody 1005 6 3602521 50 250
+# effectpattern 1005 1 1
+# effectstart 1005
+# alpha 3810001 0 0.5
+# move 3602521 3 0
+# face 3602521 "angry"
+# alpha 3602521 1 0.5
+# mask 3602521 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0009"
+@カリス
+あっ…ひどいよ…
+もう、我慢できない！
+
+# se "SE_0772"
+# textflame 0 0
+;;モノローグ
+@
+カリスがハルモニア兵に
+飛びかかろうとしたが、
+フォルカスがそれを引き止める
+
+# se "SE_6509"
+# emotionbody 1006 6 3301821 50 250
+# effectpattern 1006 1 1
+# effectstart 1006
+# move 3602521 2 0.5
+# mask 3602521 on
+# move 3301821 4 0
+# face 3301821 "angry"
+# alpha 3301821 1 0.5
+# mask 3301821 on
+# textflame 1 1
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0012"
+@フォルカス
+だめです！
+ここで私達の正体がバレては
+面倒なことになります！
+
+# textboxarrow 0 3
+;;# voice 330181 ""
+@フォルカス
+周辺にはほかの兵士もいるはずです、
+奪い返す機会を待ちましょう
+
+# alpha 3602521 0 0.5
+# alpha 3301821 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+泣きじゃくる少女をマスターは慰め、
+ちゃんと取り返すから大丈夫、
+安全な場所で待ってて、と伝える
+
+;;モノローグ
+@
+そして3人は
+ハルモニア兵の後を追い、
+襲撃のタイミングを待った
+
+# se "SE_5207"
+# move 3602521 2 0
+# face 3602521 "normal"
+# alpha 3602521 1 0.5
+# mask 3602521 on
+# move 3301821 4 0
+# face 3301821 "angry"
+# alpha 3301821 1 0.5
+# mask 3301821 on
+# textflame 1 1
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0007"
+@フォルカス
+…いまなら目撃者はいませんね
+カリス、行きますよ！
+
+# face 3602521 "angry"
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0029"
+@カリス
+うん！いっくよー！
+
+# alpha 3602521 0 0.5
+# alpha 3301821 0 0.5
+# move 3810001 3 0
+# alpha 3810001 1 0.5
+# textboxarrow 0 2
+@ハルモニア兵
+うわっ！
+な、なんだ！？

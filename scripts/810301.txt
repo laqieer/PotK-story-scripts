@@ -1,0 +1,708 @@
+;;1_3_1　背景：内壁関所
+;;※関所前に辿り着き、馬を降りる黒奏官。
+# script "lisp"
+# background "005_Checkpoint"
+# bgmfile "bgm164" "BgmPJZero001" 0
+# body 41
+# pos 41 3
+# scale 41 0.8 0
+# voice 9983 "kokusohkan_0026"
+# textboxarrow 0 2
+@黒奏官
+リベリオンめ…
+こんなにも早く、
+内壁に辿り着こうとは…
+
+# body 10
+# pos 10 3
+# scale 10 0.8 0
+# alpha 10 0 0
+# body 12
+# pos 12 1
+# scale 12 0.8 0
+# alpha 12 0 0
+# reversal 10 0
+# reversal 12 0
+@黒奏官
+…まったく
+王立軍はなにをしている
+
+;;※内壁の警備兵二名が、黒奏官の前に立ちはだかる。
+# alpha 10 1 0.5
+# alpha 12 1 0.5
+# leftin 10 0.5
+# leftin 12 0.5
+# move 41 5 0.5
+# textboxarrow 0 1
+@警備兵Ａ
+止まれ
+…先ほどのルシドラの教会の者か？
+いかがした？
+
+# textboxarrow 0 3
+@黒奏官
+プライドでは足止め出来んか…
+王都に戻り、
+態勢を整えざるを得まい
+
+# textboxarrow 0 2
+@警備兵Ｂ
+おい、聞いているのか？
+…止まれ！
+今一度、認証を…
+
+# se "SE_4000"
+# textboxarrow 0 3
+@黒奏官
+…邪魔だ
+
+;;※小刀で、警備兵Ｂの首を一突きにする黒奏官。
+# se "SE_4815"
+# fadein "red" 0.5
+# shake 1 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+# textboxarrow 0 2
+@警備兵Ｂ
+ガッ…！？
+…ガハッ…！！
+
+# textboxarrow 0 0
+# se "SE_3001"
+# alpha 10 0 0.5
+# waitandnext 1
+
+# se "SE_5205"
+# textboxarrow 0 1
+# move 12 2 0.5
+@警備兵Ａ
+き、貴様！？
+なにを…！？
+
+# textboxarrow 0 3
+@黒奏官
+我は、教皇直属の黒奏官…
+緊急の命につき、
+関を通らせてもらう
+
+@黒奏官
+これは王政府も承認済みの特命だ
+
+# textboxarrow 0 1
+@警備兵Ａ
+き、貴様…！
+このような真似をして…
+
+# textboxarrow 0 3
+@黒奏官
+これ以上の問答は無用
+下っ端相手に割く時間はない…
+お前も逝け
+
+;;※俊敏な動きで警備兵に襲い掛かる黒奏官。
+# se "SE_9118"
+# move 41 3 0.3
+# move 12 1 0.3
+# textboxarrow 0 0
+# shake 0 0.5
+# waitandnext 1
+
+# textboxarrow 0 1
+@警備兵Ａ
+う、うぉっ…！？
+
+
+# bgm "stop"
+# serif 1
+# textwindow "normal"
+@？？？
+…無茶苦茶な人ね、アナタ
+
+# voice 9983 "kokusohkan_0022"
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# alpha 100221 0 0
+# layer 100221 4
+# textboxarrow 0 2
+@黒奏官
+！？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# subfillrect 1 "black" 0.2 0 1
+# se "SE_4601"
+# effectbody 700 1 0 0
+# effectstart 700
+# waitandnext 0.3
+
+# fadein "red" 0.3
+# subfillrect 1 "black" 0.2 1 0
+# shake 1 0.3
+;;※飛び散る火花…弾き飛ばされる黒奏官の小刀。ディーン隊のレーヴァテインが姿を現す。
+# move 41 5 0.5
+# alpha 100221 1 0.5
+# textboxarrow 0 0
+# waitandnext 0.7
+
+# body 6
+# pos 6 1
+# scale 6 0.8 0
+# alpha 6 0 0
+# textboxarrow 0 2
+# face 100221 "angry"
+# voice 1002 "revatein_0027"
+@レーヴァテイン
+ラグナロク教会の名を
+汚すような真似は、
+よしてほしいわ
+
+;;※姿を現すディーン。
+# alpha 12 0 0.5
+# face 6 "sad"
+# alpha 6 1 0.5
+# textboxarrow 0 1
+@ディーン
+お人よしだな、レーヴァテイン
+そんなことコイツに
+期待するだけ無駄だよ
+
+# textboxarrow 0 3
+@黒奏官
+ディーン中奏…
+
+# bgmfile "bgm166""BgmPJZero001" 0
+# face 6 "angry"
+# textboxarrow 0 1
+@ディーン
+まだ白黒ついてねぇんだ…
+逃がしてたまるかよ
+
+# textboxarrow 0 3
+@黒奏官
+…サイラス少奏のことか？
+彼の死は、キラープリンセスの
+暴走によるものだと…
+
+# textboxarrow 0 1
+@ディーン
+確かに、直接手を
+下しちゃいないのかもしれない
+
+@ディーン
+だが、サイラスは
+アンタの監視下にあったはず…
+
+# face 6 "sad"
+@ディーン
+ヤツを見殺しにしたことに
+変わりはないだろ
+
+# voice 9983 "kokusohkan_0027"
+# textboxarrow 0 3
+@黒奏官
+…それで、すべてを棒に振り、
+仇討ちというわけか…？
+
+# face 6 "angry"
+# voice 9997 "deen_0011"
+# textboxarrow 0 1
+@ディーン
+棒に振る…？
+冗談じゃねぇ…今の俺は
+そのためだけに生きてるんだよ
+
+# textboxarrow 0 3
+@黒奏官
+…君の心情は理解できる
+だが、その先はどうするつもりだ？
+
+# face 6 "normal"
+# textboxarrow 0 1
+@ディーン
+…どういう意味だ？
+
+# textboxarrow 0 3
+@黒奏官
+君が為そうとしていることは、
+ラグナロク教会に背を向ける行為…
+
+@黒奏官
+追放どころか、
+確実に粛清の対象となる
+
+@黒奏官
+そんな状況を…
+死んだサイラス少奏は
+望んでいるというのか？
+
+# face 6 "sad"
+# voice 9997 "deen_0024"
+# textboxarrow 0 1
+@ディーン
+…！
+…サイラスが？
+
+# textboxarrow 0 3
+@黒奏官
+君達は、誓い合ったのだろう…
+ともにマスターとなり、
+家族を奪った異族を殲滅しようと
+
+@黒奏官
+その尊き誓いを棄て、
+復讐に生きることを…
+サイラス少奏が望むと思うのか？
+
+# textboxarrow 0 1
+@ディーン
+…！
+
+# textboxarrow 0 3
+@黒奏官
+一時の情に、我を失う…
+若い時分には、よくあることだ
+
+@黒奏官
+だが…
+今の君が為そうとしていることは、
+取り返しのつく話ではない
+
+# face 6 "angry"
+# voice 9997 "deen_0011"
+# textboxarrow 0 1
+@ディーン
+うるせぇ！！
+俺は、自分を見失ってなど…
+
+# textboxarrow 0 3
+@黒奏官
+いいや、君はそもそもの
+初心を忘れてしまっている
+
+# face 41 "smile"
+@黒奏官
+…まだ間に合う、よく考えるのだ
+君が為すべきは、
+怒りに任せた復讐などではなく…
+
+@黒奏官
+死んだ友との誓いに
+生きることではないのか？
+
+# face 6 "sad"
+# textboxarrow 0 1
+@ディーン
+！！
+
+# face 41 "normal"
+# voice 9983 "kokusohkan_0031"
+# textboxarrow 0 3
+@黒奏官
+サイラス少奏の死を
+止められなかったのは私の責任…
+そのことは、素直に認めよう
+
+@黒奏官
+だが…、死んだ彼を
+これ以上悲しませるべきではない
+
+@黒奏官
+君は道を踏み外すことなく、
+彼とともに誓った
+正義の道に生きるべきだ
+
+# face 6 "normal"
+# textboxarrow 0 1
+@ディーン
+正義の道…だと…？
+
+# textboxarrow 0 3
+@黒奏官
+そうだ。亡き友の遺志を継ぐのは、
+生き残った君にしかできんことだ
+
+@黒奏官
+ただの犬死にか…
+未来につながる意味ある死となるか…
+
+@黒奏官
+友の死に
+意味を持たせることができるのは、
+今を生きる君だけなのだぞ？
+
+# face 6 "sad"
+# textboxarrow 0 1
+@ディーン
+！！
+
+# face 41 "smile"
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textboxarrow 0 3
+@黒奏官
+私とともに来い…
+君の中の正義が
+まだ死んでいないのならば
+
+;;●１－１０＜戦闘画面＞　背景：内壁関所
+;;※関所前に到達する一行。
+# bgm "bgm005" 0
+# body 128
+# pos 128 2
+# scale 128 0.8 0
+# alpha 128 0 0
+# body 75
+# pos 75 4
+# scale 75 0.8 0
+# alpha 75 0 0
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# alpha 128 1 0
+# alpha 75 1 0
+# alpha 100221 0 0
+# alpha 41 0 0
+# alpha 6 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 128 "surprise"
+@ノーブル
+ま、待て！
+お前達は王都へ
+行くつもりなのか！？
+
+# face 75 "normal"
+# voice 9979 "rebellion_0003"
+# textboxarrow 0 3
+@リベリオン
+そうだ
+…俺に会うことが目的だったのなら、
+別に問題ないだろ？
+
+# face 75 "smile"
+@リベリオン
+安心しろ…
+話なら、道中でいくらでもしてやる
+
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# alpha 0 0 0
+# textboxarrow 0 1
+# face 128 "normal"
+@ノーブル
+それはそうだが、
+私にはもうひとつ目的が…
+私は、耕民区に行かねばならんのだ
+
+# face 0 "serious"
+# move 128 1 0.5
+# move 75 5 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 2
+@デュリン
+もしかして、
+学者さまに会いに…？
+
+# body 4
+# pos 4 3
+# scale 4 0.8 0
+# alpha 4 0 0
+# textboxarrow 0 1
+# face 128 "surprise"
+@ノーブル
+む…！
+なぜ、それを…！？
+
+# alpha 0 0 0.5
+# alpha 4 1 0.5
+# layer 4 4
+# textboxarrow 0 2
+@トト
+爺ちゃんから、
+教授に渡すよう託されたんだ
+…この暦が必要なんでしょ？
+
+;;※暦をノーブル教授に手渡すトト。
+# textboxarrow 0 1
+@ノーブル
+！！
+おお…！
+おおお…！！
+
+# face 0 "serious2"
+;;※暦を食い入るように見つめるノーブル教授。
+# alpha 4 0 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 2
+@デュリン
+その暦をアナタに届けることが、
+私達の旅の目的のひとつだったのよ
+少し、肩の荷が降りたわ…
+
+@デュリン
+確かに渡したからね？
+
+# textboxarrow 0 1
+# face 128 "normal"
+@ノーブル
+ここまで届けるのに、
+どれほどの苦労があったのだろう…
+感謝のしようもない
+
+# face 0 "serious2"
+# textboxarrow 0 2
+@デュリン
+礼なら、この子に言って
+肌身離さず、
+ずっと守り続けてきたんだから
+
+# textboxarrow 0 1
+@ノーブル
+…坊や、本当にありがとう
+君のおかげで、この大陸の人々の目を
+覚ましてやることができるかもしれん
+
+# face 4 "smile02"
+# alpha 4 1 0.5
+# alpha 0 0 0.5
+# textboxarrow 0 2
+@トト
+そ、そんな…ハハ…！
+僕は爺ちゃんとの
+約束を守っただけだよ！
+
+# textboxarrow 0 3
+@リベリオン
+謙遜するな。その感謝は、
+お前の勇気に捧げられたんだ…
+胸を張って、答えろ
+
+# face 4 "happy"
+# textboxarrow 0 2
+@トト
+…！
+う、うん…！
+どういたしまして！！
+
+# voice 9979 "rebellion_0004"
+# body 40
+# pos 40 3
+# scale 40 0.8 0
+# alpha 40 0 0
+# textboxarrow 0 3
+@リベリオン
+ヘッ…。さぁ…着いたぜ、関所に
+いいか…無駄な戦闘は極力避けろ
+くれぐれも、いらぬ被害は…
+
+;;※ふと、周囲の雰囲気に訝し気な表情を見せるエドガー。
+# alpha 4 0 0.5
+# alpha 40 1 0.5
+# layer 40 4
+# textboxarrow 0 2
+@エドガー
+…？
+…妙だな…
+
+# textboxarrow 0 1
+@ノーブル
+うむ…
+先ほど通った時と勝手が違う…
+
+# face 75 "normal"
+# textboxarrow 0 3
+@リベリオン
+おい、聞いてるのか？
+俺は今、とても大事なことを…
+
+# face 0 "occur"
+# voice 9999 "durin_0050"
+# alpha 40 0 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 2
+@デュリン
+うっさいわね！
+わかってるわよ！
+
+@デュリン
+ただ、どうも様子が…
+あまりに静か過ぎるのよ
+
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# alpha 24 0 0
+# textboxarrow 0 3
+@リベリオン
+静か…？
+
+# face 24 "surprise"
+# voice 1014 "tyrufing_0023"
+# alpha 24 1 0.5
+# alpha 0 0 0.5
+# layer 24 4
+# textboxarrow 0 2
+@ティルフィング
+…！
+見て！あれを…！
+
+;;※倒れた警備兵を指差すティルフィング。
+# alpha 128 0 0.5
+# alpha 40 1 0.5
+# face 40 "irregular"
+# move 40 1 0
+# layer 40 3
+# textboxarrow 0 1
+@エドガー
+…！
+あれは、警備兵…！？
+まさか既に黒奏官が…！
+
+# alpha 75 0 0.5
+# alpha 0 1 0.5
+# move 0 5 0
+# textboxarrow 0 3
+@デュリン
+クッ…！
+ディーン隊は、
+いったいなにをしてるのよ！
+
+;;※その時…ドーンと弾き飛ぶ、関所の鉄扉。
+# bgm "stop"
+# se "SE_5223"
+# fadein "white" 0.5
+# shake 1 0.5
+# waitandnext 1
+
+# layer 10 2
+# layer 12 1
+# textboxarrow 0 1
+@エドガー
+！？
+関所の門が…吹き飛んだ！？
+
+;;※関所から、慌てて飛び出してくる警備兵達。
+# bgm "bgm023" 0
+# alpha 40 0 0.5
+# alpha 0 0 0.5
+# alpha 24 0 0.5
+# alpha 10 1 0.5
+# alpha 12 1 0.5
+# leftin 10 0.5
+# leftin 12 0.5
+# textboxarrow 0 1
+@警備兵Ａ
+ぼ、暴走だ！！
+巻き込まれるぞ！！
+
+# textboxarrow 0 2
+@警備兵Ｂ
+政府に出動要請を！！
+…急げ！！
+
+;;※ゆらりと関所から現れる、ディーン隊のレーヴァテイン。
+# move 100221 5 0
+# alpha 100221 1 0.5
+# textboxarrow 0 3
+@レーヴァテイン
+邪魔する者は、殲滅する…
+死にたくなければ、消えて
+
+# face 24 "angry"
+# alpha 10 0 0.5
+# alpha 12 0 0.5
+# move 24 1 0
+# alpha 24 1 0.5
+# textboxarrow 0 1
+@ティルフィング
+レーヴァテイン！？
+アナタ、なにを…！？
+
+;;※レーヴァテインの背後から現れる黒奏官。
+# move 100221 3 0.5
+# move 41 5 0
+# alpha 41 1 0.5
+# textboxarrow 0 3
+@黒奏官
+彼女らは…
+この大陸の未来を想い、
+行動しているだけだ
+
+@黒奏官
+…なぁ、ディーン中奏？
+
+;;※黒奏官の背後から姿を現すディーン。
+# face 6 "normal"
+# alpha 24 0 0.5
+# move 100221 1 0.5
+# move 41 3 0.5
+# alpha 6 1 0.5
+# textboxarrow 0 3
+# move 6 5 0
+@ディーン
+…………
+
+# face 0 "angry"
+# voice 9999 "durin_0022"
+# alpha 100221 0 0.5
+# alpha 41 0 0.5
+# move 0 2 0
+# alpha 0 1 0.5
+# textboxarrow 0 1
+@デュリン
+ディーン…！？
+アンタ、いったい…！？
+
+# face 6 "angry"
+# textboxarrow 0 3
+@ディーン
+…思い出したんだよ…
+遠い昔に立てた、亡き兄との誓いを
+
+@ディーン
+その正義を貫くためなら、
+悪と呼ばれることも辞さない…
+俺は、そう心に決めたんだ
+
+# voice 9982 "edgar_0009"
+# alpha 40 1 0.5
+# move 40 3 0
+# move 0 1 0.5
+# move 6 5 0.5
+# textboxarrow 0 2
+@エドガー
+まさか、ディーン…！
+お前…黒奏官に寝返ったのか！？
+
+# textboxarrow 0 3
+@ディーン
+レーヴァテイン！！
+俺達の道を妨げる者は、
+すべて殲滅しろ！！
+
+@ディーン
+誰であろうと、
+容赦なく叩き斬れ！！！
+
+# face 24 "surprise"
+# textboxarrow 0 2
+# alpha 40 0 0.5
+# alpha 24 1 0.5
+# move 24 3 0
+@ティルフィング
+！！！

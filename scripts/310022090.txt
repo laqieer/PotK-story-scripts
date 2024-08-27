@@ -1,0 +1,537 @@
+;;-----------------------------------------
+;;SEA2章_9
+;;-----------------------------------------
+# script "lisp"
+# background "sea_room"
+# bgm "bgm102" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 5
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;クライノート
+# body 283
+# pos 283 5
+# scale 283 0.8 0
+# layer 283 3
+# mask 283 off
+# alpha 283 0 0
+;;リットゥ
+# body 6100511
+# pos 6100511 5
+# scale 6100511 0.8 0
+# layer 6100511 2
+# mask 6100511 off
+# alpha 6100511 0 0
+;;シェキナー
+# body 6400711
+# pos 6400711 3
+# scale 6400711 0.8 0
+# layer 6400711 2
+# mask 6400711 off
+# alpha 6400711 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "bg_crack1"
+# imagealpha 1 0 0
+# imagelayer 1 3
+;;-----------------------------------------
+;;背景：屋敷（夜）
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# face 6400711 "normal"
+# alpha 6400711 1 1
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@シェキナー
+美しく輝き舞い踊る、
+真紅の高貴なる蝶
+“エレガントバタフライ”！
+
+# textboxarrow 0 2
+@シェキナー
+怪盗シェキナー
+参上しました
+
+# textboxarrow 0 2
+@シェキナー
+今宵、貴方の大切なもの
+いただきます
+
+# alpha 6400711 0 0.3
+# face 270 "angry"
+# face 283 "angry"
+# alpha 270 1 0.3
+# alpha 283 1 0.3
+# textboxarrow 0 3
+@クライノート
+また現れおったな、怪盗め！
+
+# voice 9917 "mimir_navikan_0046"
+# textboxarrow 0 1
+@ミーミル
+マスター様、
+あちらにシェキナーさんがっ
+
+# voice 4007 "shekina_0005"
+# face 6400711 "normal"
+# alpha 6400711 1 0.3
+# alpha 270 0 0.3
+# alpha 283 0 0.3
+# textboxarrow 0 2
+@シェキナー
+ふふふっ
+貴方達に私を捕まえることは
+できませんよ
+
+;;シェキナーが走り去る
+# se "SE_5575"
+# move 6400711 5 0.5
+# scale 6400711 0.6 0.8
+# alpha 6400711 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# face 270 "angry"
+# face 283 "angry"
+# alpha 270 1 0.3
+# alpha 283 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@クライノート
+逃がさんぞ、怪盗！
+
+;;クライノートが追っていく
+# se "SE_5575"
+# move 283 5 0.5
+# scale 283 0.7 0.5
+# alpha 283 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# scale 6400711 0.8 0
+# scale 283 0.8 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+クライノートさん、
+お一人では危険ですっ
+
+# voice 9917 "mimir_navikan_0001"
+# move 270 3 0.5
+# textboxarrow 0 2
+@ミーミル
+マスター様、
+私達も怪盗シェキナーさんを
+追いましょう
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.8
+# textwindow "close"
+# waitandnext 0.8
+
+;;背景：屋敷内部
+# background "300_devil_room"
+# move 270 1 0
+# alpha 270 0 0
+# imagealpha 0 0 0.8
+# imagerightout 0 0.8
+# waitandnext 0.8
+
+# move 270 3 0.5
+# face 270 "normal"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+シェキナーさん、
+どちらにいらっしゃるのですかっ？
+
+# face 270 "sad"
+# textboxarrow 0 2
+@ミーミル
+クライノートさんの姿も
+見当たりません…
+一体、どちらに…
+
+# move 270 2 0.5
+# move 6100511 4 0.5
+# face 6100511 "normal"
+# alpha 6100511 1 0.3
+# textboxarrow 0 3
+@リットゥ
+どうした、お前達？
+そんなに騒いで
+
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+リットゥさん！
+怪盗シェキナーさんが現れました
+
+# face 6100511 "angry"
+# textboxarrow 0 3
+@リットゥ
+何だと！？
+…よし、私はこちらを捜す
+お前達は向こうを捜せ！
+
+# voice 9917 "mimir_navikan_0003"
+# textboxarrow 0 1
+@ミーミル
+はいっ
+
+;;リットゥが立ち去る
+# se "SE_0740"
+# move 6100511 5 0.5
+# alpha 6100511 0 0.3
+# waitandnext 0.5
+
+# voice 9917 "mimir_navikan_0022"
+# move 6100511 1 0
+# move 270 3 0.5
+# face 270 "surprise"
+# textboxarrow 0 2
+@ミーミル
+玄関に戻ることになりますが、
+リットゥさんの言う通りに…えっ？
+
+;;反対側からリットゥが現れる
+# se "SE_5575"
+# move 6100511 2 0.3
+# face 6100511 "normal"
+# alpha 6100511 1 0.3
+# move 270 4 0.3
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# face 6100511 "angry"
+# textboxarrow 0 1
+@リットゥ
+お前達！
+今、ここで私を見なかったかっ？
+
+# textboxarrow 0 3
+@ミーミル
+リットゥさん、
+どうして玄関の方から…？
+奥に走っていかれたのでは…
+
+# textboxarrow 0 1
+@リットゥ
+バカ者！
+そいつが怪盗シェキナーだ！
+
+# face 270 "sad"
+# textboxarrow 0 3
+@ミーミル
+そんなっ…
+すっかり騙されてしまいました
+
+# textboxarrow 0 1
+@リットゥ
+急いで追うぞ！
+
+;;リットゥが走り去る
+# se "SE_5575"
+# move 6100511 3 0.3
+# scale 6100511 0.6 0.6
+# alpha 6100511 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# voice 9917 "mimir_navikan_0003"
+# face 270 "angry"
+# textwindow "nomal"
+# textboxarrow 0 3
+@ミーミル
+は、はいっ
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# bgm "bgm005" 0
+# scale 6400711 0.8 0
+# move 270 3 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 9917 "mimir_navikan_0027"
+# face 270 "sad"
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+…困りました
+
+# textboxarrow 0 2
+@ミーミル
+私、位置情報の把握は
+得意なはずなのですが…
+迷ってしまいました…
+
+# voice 9917 "mimir_navikan_0031"
+# textboxarrow 0 2
+@ミーミル
+こちらのお屋敷は、
+広いだけでなく入り組んでいて…
+申し訳ございません
+
+;;選択肢
+# select "気にしないで" "select_label_01" "落ち着いていこう" "select_label_01"
+迷ってしまいました…
+申し訳ございません
+
+# label "select_label_01"
+# voice 9917 "mimir_navikan_0030"
+# face 270 "happy"
+# textboxarrow 0 2
+@ミーミル
+ありがとうございます、
+マスター様
+
+# face 270 "normal"
+# textboxarrow 0 2
+@ミーミル
+そういえば、これだけお屋敷の中を
+走り回っているのに、
+誰ともお会いしていません…
+
+# textboxarrow 0 2
+@ミーミル
+フランさんやご家族、
+使用人の皆さんはどちらに？
+
+;;クライノートが現れる
+# move 270 2 0.5
+# move 283 4 0.5
+# face 283 "normal"
+# alpha 283 1 0.3
+# textboxarrow 0 3
+@クライノート
+おや、お客人
+こんなところに
+
+# voice 9917 "mimir_navikan_0031"
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+クライノートさん
+申し訳ございません
+迷ってしまって…
+
+# textboxarrow 0 3
+@クライノート
+ハッハッハ！
+そんなことで――
+
+;;マナナンが現れる
+# alpha 283 0 0.3
+# move 6504011 4 0.5
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# bgm "stop"
+# textboxarrow 0 3
+@マナナン
+あ！
+二人ともこんなところにいたんだね
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+えっ…？
+マナナンさん、今
+壁をすり抜けませんでした？
+
+# voice 650401 "manannan_ura_0002"
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+何のこと？
+ねえねえ、それよりも…
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# textboxarrow 0 3
+@マナナン
+退屈だよー
+二人とも、いつまでこんな…
+
+# se "bgm602_basic_on"
+# textboxarrow 0 3
+@マナナン
+廃墟にいるつもりなの？
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+廃墟…？
+マナナンさん、他人様のお屋敷を
+そのように言うのは…
+
+# face 6504011 "usual"
+# textboxarrow 0 3
+@マナナン
+それなんだけど
+他人様の屋敷って、
+ここ、誰も住んでないよね
+
+# textboxarrow 0 3
+@マナナン
+マスターもミーミルも
+ここに来てから変だよ
+
+# se "bgm602_rhythm_on"
+# textboxarrow 0 3
+@マナナン
+誰もいない方向に向かって
+話をしてたり…そういう遊びなの？
+
+# voice 9917 "mimir_navikan_0056"
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+マナナンさん
+何を仰っているのですか
+今も、そちらにクライノートさんが…
+
+# alpha 270 0 0.3
+# alpha 6504011 0 0.3
+# move 283 3 0
+# face 283 "normal"
+# alpha 283 1 0.3
+# textboxarrow 0 2
+@クライノート
+…………
+
+;;選択肢
+# select "まさか…" "select_label_02" "やっぱり…" "select_label_03"
+…………
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 270 "surprise"
+# face 6504011 "usual"
+# alpha 270 1 0.3
+# alpha 6504011 1 0.3
+# alpha 283 0 0.3
+#setnextbgmblock 1
+# textboxarrow 0 1
+@ミーミル
+マスター様
+何か、お気づきに？
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# voice 650401 "manannan_ura_0005"
+# face 270 "normal"
+# face 6504011 "normal"
+# alpha 270 1 0.3
+# alpha 6504011 1 0.3
+# alpha 283 0 0.3
+#setnextbgmblock 1
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+マスターは気づいてたみたいだね
+
+# label "select_label_end"
+# se "SE_6210"
+# face 6504011 "usual"
+# textboxarrow 0 3
+@マナナン
+ここはただの廃墟だよ
+人なんて誰も住んでない
+ここにいるのは…
+
+# se "bgm602_tension_on"
+# textboxarrow 0 3
+@マナナン
+リットゥって呼ばれてた、
+あの怖いお姉さん一人だけ
+
+# textboxarrow 0 3
+@マナナン
+私には、それだけしか見えてないよ
+
+# bgm "stop"
+# move 270 1 0.5
+# alpha 270 0 0.3
+# move 6504011 5 0.5
+# alpha 6504011 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# face 283 "normal"
+# alpha 283 1 1
+# waitandnext 1
+
+;;ひび割れの演出
+# se "SE_6146"
+# fadein "white" 0.5
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# waitandnext 2
+
+;;何かが砕け散る
+;;クライノートの姿が消える
+;;背景：廃墟（夜）
+# se "SE_13310"
+# fadein "white" 0.5
+# background "201_border"
+# imagealpha 1 0 0
+# move 270 3 0
+# alpha 283 0 0
+# waitandnext 2
+
+# se "SE_6170"
+# voice 9917 "mimir_navikan_0023"
+# face 270 "surprise"
+# alpha 270 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+これは…
+
+# textboxarrow 0 2
+@ミーミル
+クライノートさんのお姿が…
+お屋敷も、一瞬で廃墟に…
+
+# face 270 "sad"
+# textboxarrow 0 2
+@ミーミル
+いえ…
+これが、本当の姿だったのですね
+私達は今まで…
+
+# textboxarrow 0 2
+@ミーミル
+ずっと幻覚を見せられていたのです
+恐らく、リットゥさんに
+
+# fadeout "black" 1
+# waitandnext 1

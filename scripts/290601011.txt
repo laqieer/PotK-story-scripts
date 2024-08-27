@@ -1,0 +1,417 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第６章 章タイトル：アナザー・コンフリクト―交錯―
+;;第1話　タイトル：地上からの来訪者
+;;6_1_1_1
+;;スクリプト最後の背景：ユグドラシル（天上世界）
+;;-----------------------------------------
+# script "lisp"
+# background "parchment_map03"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;異族化アルマス（ナレーションのボイス用）
+# body 5103831
+# alpha 5103831 0 0
+;;フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.8 0
+# layer 502711 2
+# alpha 502711 0 0
+# mask 502711 off
+;;ハリー（カミト）
+# body 208
+# pos 208 3
+# scale 208 0.8 0
+# layer 208 2
+# alpha 208 0 0
+# mask 208 off
+;;ダーインスレイヴ
+# body 102811
+# pos 102811 3
+# scale 102811 0.8 0
+# layer 102811 2
+# alpha 102811 0 0
+# mask 102811 off
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 2
+# alpha 5401721 0 0
+# mask 5401721 off
+;;レーヴァテイン・擬彩
+# body 5100231
+# pos 5100231 3
+# scale 5100231 0.8 0
+# layer 5100231 2
+# alpha 5100231 0 0
+# mask 5100231 off
+;;-----------------------------------------
+;;第1話　タイトル：地上からの来訪者
+;;//背景：新地上世界遠景
+;;ナレーション
+# voice 9923 "IntegralNoah_Narration_6_1_0001"
+# textflame 0 0
+@
+連携する二体の魔獣化キラーメイルに
+苦戦を強いられるカミト達
+
+;;ナレーション
+# voice 9923 "IntegralNoah_Narration_6_1_0002"
+@
+カミトは自ら囮となり、キル姫達の
+協力を得て彼らの解放に成功する
+
+;;ナレーション
+# voice 9923 "IntegralNoah_Narration_6_1_0003"
+@
+急ぎ、ヴァングの下に戻った
+彼が見たのは、撤退する
+ヒョウハの姿だった
+
+;;ナレーション
+# voice 9923 "IntegralNoah_Narration_6_1_0004"
+@
+ヴァングと合流し、カミト達は
+ユグドラシルへと攻め込む
+
+;;ナレーション
+# voice 9923 "IntegralNoah_Narration_6_1_0005"
+@
+だが、それは
+コマンドキラーズ・ロジェスティラの
+仕掛けた罠だった
+
+;;ナレーション
+# voice 9923 "IntegralNoah_Narration_6_1_0006"
+@
+窮地に追い込まれたカミト達だったが
+諦めない彼らに希望の光が差す
+
+;;ナレーション
+# voice 9923 "IntegralNoah_Narration_6_1_0007"
+@
+地上から不気味な霧が消え去り、
+巨大な化け物も姿を消したのだ
+
+;;ナレーション
+# voice 9923 "IntegralNoah_Narration_6_1_0008"
+@
+増援が到着し、カミトは
+フォルカスの下へと走る
+
+;;ナレーション
+# voice 9923 "IntegralNoah_Narration_6_1_0009"
+@
+再会したフォルカスに問いかける
+カミト
+しかし…
+
+;;ナレーション
+# voice 9923 "IntegralNoah_Narration_6_1_0010"
+@
+フォルカスの返答は、
+あまりに無慈悲なものだった
+
+;;ナレーション
+# voice 9923 "IntegralNoah_Narration_6_1_0011"
+@
+ユグドラシルに磔にされたカミト
+
+;;ナレーション
+# voice 9923 "IntegralNoah_Narration_6_1_0012"
+@
+その左手がユグドラシルに触れたとき
+意識が天上世界へと転移した
+
+;;ナレーション
+# voice 9923 "IntegralNoah_Narration_6_1_0013"
+@
+運命の糸が絡み始める――
+
+;;//地上から天上に上がる演出
+# bgm "stop"
+# se "SE_0057"
+;;//背景：ユグドラシル（天上世界）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_yggdrasill"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;カミト（立ち絵無し）
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "normal"
+@カミト
+ここは…どこ…？
+フォルカスは？
+
+# move 102811 3 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 off
+# textboxarrow 0 2
+@ダーインスレイヴ
+おやおや
+まだ寝ぼけているのかな？
+ここはユグドラシルだ
+
+# textboxarrow 0 2
+@ダーインスレイヴ
+おぬしは成し遂げたのだぞ
+ユグドラシルに至るという目的を
+
+# textboxarrow 0 2
+@ダーインスレイヴ
+わたしも全てを見ていたわけでは
+ないが、ユグドラシルに触れた途端、
+意識を失ったようだな
+
+# textboxarrow 0 2
+@ダーインスレイヴ
+その代わりに、
+ラグナロクが力を取り戻し
+更に新たな力を得たようだ
+
+# textboxarrow 0 2
+@ダーインスレイヴ
+見てみろ、ハリー
+スイハが新たな可能性を手にして
+戦っているよ
+
+# se "SE_11711"
+# voice 4017 "suiha_im2_unit_0008"
+# alpha 102811 0 0.5
+# move 5401721 3 0
+# face 5401721 "angry"
+# alpha 5401721 1 0.5
+# mask 5401721 off
+# textboxarrow 0 2
+@スイハ
+大地を貫く、剣の雨よ！
+
+;;カミト（ハリーの立ち絵で）
+# alpha 5401721 0 0.5
+# move 208 3 0
+# alpha 208 1 0.5
+# mask 208 off
+# textboxarrow 0 2
+@カミト
+…………
+
+;;カミト（独白）
+# move 208 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 208 off
+@カミト
+何だ、これ…？
+同じユグドラシルだけど…
+僕の知ってる場所とは違う…
+
+;;カミト（独白）
+# voice 9938 "harry_0030"
+# textboxarrow 0 0
+@カミト
+それに…知らないキル姫ばかりだ…
+何が起きたんだ…？
+
+;;カミト（独白）
+# textboxarrow 0 0
+@カミト
+僕はフォルカスに刺されて…
+それから…
+
+# voice 1028 "dainsleif_0022"
+# move 102811 2 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 on
+# textboxarrow 0 1
+# move 208 4 0.5
+# mask 208 on
+# textwindow "normal"
+@ダーインスレイヴ
+…ハリー？
+まだ意識がはっきりしていないのか
+
+# voice 9938 "harry_0002"
+# textboxarrow 0 3
+@カミト
+あの…僕は、ハリーじゃありません…
+カミトと言います
+
+# voice 1028 "dainsleif_0024"
+# face 102811 "surprise"
+# textboxarrow 0 1
+@ダーインスレイヴ
+何とっ？
+もしや、記憶が蘇ったのか？
+
+# voice 9938 "harry_0023"
+# textboxarrow 0 3
+@カミト
+え…？
+いえ、そういうわけじゃ…
+
+# face 102811 "normal"
+# textboxarrow 0 1
+@ダーインスレイヴ
+ふむ…
+いずれにせよ、今は戦いの最中だ
+ゆっくり話している場合でもない
+
+# textboxarrow 0 1
+@ダーインスレイヴ
+カミトと言ったかな？
+私の側を離れないでいてくれ
+
+# textboxarrow 0 1
+@ダーインスレイヴ
+この戦いが終われば、
+落ち着いて話すこともできるだろう
+
+# textboxarrow 0 3
+@カミト
+は、はいっ
+
+;;カミト（独白）
+# move 208 4 0
+# textboxarrow 0 0
+# textwindow "moya"
+@カミト
+よく分からないけど、
+彼女は味方だよね…？
+
+;;カミト（独白）
+# textboxarrow 0 0
+@カミト
+ひとまず言うことを聞いて…あれ？
+体の調子が…左手の感覚も…
+
+# voice 9938 "harry_0024"
+# textboxarrow 0 3
+# textwindow "normal"
+@カミト
+ええっ？
+義手じゃなくなってる！？
+
+# face 102811 "surprise"
+# textboxarrow 0 1
+@ダーインスレイヴ
+どうした？
+おぬしの腕が如何――
+
+;;//レーヴァテインがやって来る
+# bgm "stop"
+# se "SE_0719"
+# textwindow "close"
+# alpha 102811 0 0.5
+# alpha 208 0 0.5
+# move 5100231 3 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# waitandnext 0.5
+
+# bgmfile "bgm411_412" "BgmIntegralNoahBattle001" 0
+# voice 510023 "revatein_iz_0019"
+# textboxarrow 0 2
+# textwindow "normal"
+@レーヴァテイン
+はぁ…
+何だかおかしなことになってるけど…
+それって、つまり…
+
+# textboxarrow 0 2
+@レーヴァテイン
+あなたが引き金になってるのよね？
+私が仕留め損なったから…
+
+# se "SE_5205"
+# textboxarrow 0 2
+@レーヴァテイン
+今度こそ、礎になってもらうよ…
+
+# se "SE_5200"
+# alpha 5100231 0 0.5
+# move 102811 3 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 off
+# textboxarrow 0 2
+@ダーインスレイヴ
+ハリー…いや、カミト
+わたしの背中に
+
+# move 102811 2 0.5
+# mask 102811 on
+# move 5100231 4 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+# textboxarrow 0 3
+@レーヴァテイン
+あなたじゃ私を止められない
+さっき…思い知ったでしょ？
+
+# face 102811 "angry"
+# textboxarrow 0 1
+@ダーインスレイヴ
+だとしても！
+わたしは我が剣を捧げたマスターを
+守り抜く！
+
+# voice 510023 "revatein_iz_0014"
+# face 5100231 "angry"
+# textboxarrow 0 3
+@レーヴァテイン
+はぁ…めんどくさい…
+まとめて散らせる…！
+
+;;//銃撃演出
+# se "SE_4400"
+# waitandnext 0.5
+
+;;フライシュッツ（擬装前）
+# voice 5027 "freischotz_battle_0001"
+# alpha 102811 0 0.5
+# alpha 5100231 0 0.5
+# move 502711 3 0
+# face 502711 "angry"
+# alpha 502711 1 0.5
+# mask 502711 off
+# textboxarrow 0 2
+@フライシュッツ
+おねーちゃんが、
+みんなを守るんだからーっ
+
+# alpha 502711 0 0.5
+# move 102811 2 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 on
+# move 5100231 4 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+# textboxarrow 0 3
+@レーヴァテイン
+また邪魔が入った…
+そんな攻撃…当たらないよ
+
+# textboxarrow 0 1
+@ダーインスレイヴ
+だが、隙は生じたな！
+
+# face 5100231 "angry"
+# textboxarrow 0 3
+@レーヴァテイン
+本気で言ってるの？

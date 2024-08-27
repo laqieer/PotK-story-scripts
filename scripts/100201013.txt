@@ -1,0 +1,232 @@
+;;2章1話戦闘後
+# script "lisp"
+# background "101_plain_daytime"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;アルマス
+# body 3103811
+# pos 3103811 2
+# scale 3103811 0.8 0
+# face 3103811 "angry"
+;;ギル
+# body 137
+# pos 137 1
+# scale 137 0.8 0
+# face 137 "surprise"
+# alpha 137 0 0
+;;ティターニア
+# body 139
+# pos 139 5
+# scale 139 0.8 0
+# face 139 "sad"
+# alpha 139 0 0
+;;トレイセーマ兵
+# body 3830001
+# pos 3830001 3
+# scale 3830001 0.8 0
+;;トレイセーマ兵その２
+# entry 98300019 3830001
+# pos 98300019 1
+# scale 98300019 0.8 0
+# alpha 98300019 0 0
+;;トレイセーマ兵その３
+# entry 88300018 3830001
+# pos 88300018 5
+# scale 88300018 0.8 0
+# reversal 88300018 0
+# reversal 98300019 0
+# reversal 3830001 0
+;;トレイセーマ隊長
+# body 3830007
+# pos 3830007 3
+# scale 3830007 0.8 0
+# alpha 3830007 0 0
+# mask 3830007 off
+# layer 3103811 5
+# layer 137 1
+# layer 139 3
+# layer 3830001 2
+# layer 88300018 3
+# layer 98300019 4
+# layer 3830007 1
+# mask 139 off
+;;//アルマスの攻撃を弾く
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.3
+
+# se "SE_4601"
+# fadein "white" 0.5
+# shake 0 0.5
+# move 3103811 1 0.3
+# waitandnext 1
+
+# face 3103811 "surprise"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3103811
+# voice 1038 "almace_0022"
+@アルマス
+なんなの、こいつら？
+一枚の壁みたいに固まって…
+
+# se "SE_5205"
+# face 3103811 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3103811
+# voice 1038 "almace_battle_0005"
+@アルマス
+だったら！
+
+;;//アルマスの強攻撃で一人が倒れる
+# se "SE_9086"
+# sedelay "SE_3001" 0.3
+# fadein "white" 0.5
+# move 3103811 2 0.2
+# shake 0 0.5
+# alpha 3830001 0 0.5
+# textflame 1 1
+# textboxarrow 0 0
+# chara 3830001
+# voice 383000 "cryptid_0038"
+@トレイセーマ兵
+ぐあああっ…
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3103811
+@アルマス
+よし！
+あの隙間から強引に――
+
+# alpha 3103811 0 0.5
+# alpha 88300018 0 0.5
+# alpha 3830007 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3830007
+@トレイセーマ兵隊長
+壁要員をすぐに補充！
+隙間を埋めろ！
+
+;;//トレイセーマ兵がすぐに並ぶ
+# serif 0
+# textwindow "close"
+# alpha 3830007 0 0.5
+# alpha 98300019 1 0.5
+# alpha 3830001 1 0.5
+# alpha 88300018 1 0.5
+# leftin 98300019 0.5
+# rightin 3830001 0.5
+# rightin 88300018 0.5
+# waitandnext 1
+
+# face 3103811 "surprise"
+# serif 0
+# textwindow "normal"
+# move 3103811 3 0
+# alpha 98300019 0 0.5
+# alpha 3830001 0 0.5
+# alpha 88300018 0 0.5
+# alpha 3103811 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+# voice 1038 "almace_0014"
+@アルマス
+絶最悪！
+あっという間に隙間が埋まった…
+
+# face 3103811 "worry"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+@アルマス
+この兵士達、さっきから全然、
+感情を感じない…
+まるで操り人形だわ…
+
+# face 137 "angry"
+# alpha 137 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 137
+@ギル
+アルマス！俺に任せろって！
+かかってこいよ、トレイセーマ兵！
+それとも俺が怖いのかっ？
+
+# alpha 3103811 0 0.5
+# alpha 137 0 0.5
+# alpha 98300019 1 0.5
+# alpha 3830001 1 0.5
+# alpha 88300018 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3830001
+@トレイセーマ兵
+…………
+
+# face 137 "surprise"
+# alpha 98300019 0 0.5
+# alpha 3830001 0 0.5
+# alpha 88300018 0 0.5
+# alpha 3103811 1 0.5
+# alpha 137 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 137
+# voice 9969 "gill_0010"
+@ギル
+無視かよ！？
+俺をスルーするな！
+
+# face 3103811 "happy1"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+# voice 1038 "almace_0005"
+@アルマス
+ぷふぅっ！
+スルーする…ふふふっ…
+ギル、戦闘中に笑わせないで！
+
+# se "SE_5686"
+# face 137 "sad"
+# face 139 "worry"
+# alpha 139 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 139
+# voice 9967 "titania_0041"
+@ティターニア
+今のはアナタに問題があると
+思いますよ…
+
+# alpha 3103811 0 0.5
+# alpha 137 0 0.5
+# alpha 139 0 0.5
+# alpha 3830007 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3830007
+@トレイセーマ兵隊長
+Ｂ・○一が任務を完遂するまで
+決してここを通すな！
+
+# face 3103811 "angry"
+# alpha 3830007 0 0.5
+# alpha 3103811 1 0.5
+# alpha 137 1 0.5
+# alpha 139 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+# voice 1038 "almace_battle_0005"
+@アルマス
+くっ…
+絶燃えてきたわ！

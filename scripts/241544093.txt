@@ -1,0 +1,600 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;セブンスサイドストーリー後編
+;;第2話　タイトル：絆を胸に（２－９）
+;;2_9_3
+;;スクリプト最後の背景：実験場
+;;-----------------------------------------
+# script "lisp"
+# background "006_jail"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 2
+# alpha 3201911 0 0
+# mask 3201911 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 3
+# alpha 3501711 0 0
+# mask 3501711 off
+;;ヴァナルガンド
+# body 3601111
+# pos 3601111 3
+# scale 3601111 0.8 0
+# layer 3601111 2
+# alpha 3601111 0 0
+# mask 3601111 off
+;;アフロディーテ
+# body 3401311
+# pos 3401311 3
+# scale 3401311 0.8 0
+# layer 3401311 2
+# alpha 3401311 0 0
+# mask 3401311 off
+;;ムラマサ
+# body 3102511
+# pos 3102511 3
+# scale 3102511 0.8 0
+# layer 3102511 2
+# alpha 3102511 0 0
+# mask 3102511 off
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;フォルカス
+# body 3301811
+# pos 3301811 3
+# scale 3301811 0.8 0
+# layer 3301811 2
+# alpha 3301811 0 0
+# mask 3301811 off
+;;ウロボロス
+# body 3830008
+# pos 3830008 3
+# scale 3830008 0.8 0
+# layer 3830008 3
+# alpha 3830008 0 0
+# mask 3830008 off
+;;ウロボロス（クローン1）
+# entry 938300081 3830008
+# pos 938300081 3
+# scale 938300081 0.8 0
+# layer 938300081 2
+# alpha 938300081 0 0
+# mask 938300081 off
+;;ウロボロス（クローン2）
+# entry 938300082 3830008
+# pos 938300082 3
+# scale 938300082 0.8 0
+# layer 938300082 2
+# alpha 938300082 0 0
+# mask 938300082 off
+;;-----------------------------------------
+# emotionbody 1000 14 3501711 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# voice 350171 "grimoire_ge_battle_0003"
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0
+# mask 3501711 off
+# textflame 1 1
+# textboxarrow 0 2
+@グリモワール
+くらいなさい！
+
+;;//グリモワールがウロボロスを攻撃する
+# effectskip 1000
+# textwindow "close"
+# alpha 3501711 0 0.5
+# move 3830008 3 0
+# alpha 3830008 1 0.5
+# mask 3830008 off
+# waitandnext 0.6
+
+# se "SE_4716"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ウロボロス
+シュウウウウウウウ…
+
+;;//ウロボロスが倒れ、二体になって立ち上がる
+# textwindow "close"
+# alpha 3830008 0 0.5
+# waitandnext 1.2
+
+# se "SE_2091"
+# move 3830008 2 0
+# alpha 3830008 1 0.5
+# mask 3830008 on
+# move 938300081 4 0
+# alpha 938300081 1 0.5
+# mask 938300081 on
+# waitandnext 0.5
+
+# waitandnext 1
+
+# effectstart 1000
+# voice 350171 "grimoire_ge_0023"
+# alpha 3830008 0 0.5
+# alpha 938300081 0 0.5
+# move 3501711 3 0
+# face 3501711 "surprise"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+# textwindow "normal"
+@グリモワール
+えええっ！？
+蘇っただけじゃなくて、
+何で増えるのよっ？
+
+# effectskip 1000
+# emotionbody 2000 14 3102311 0 0
+# effectpattern 2000 1 0
+# effectstart 2000
+# voice 310231 "ascalon_a_0026"
+# alpha 3501711 0 0.5
+# move 3102311 3 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+@アスカロン
+倒したと思った途端、再生して…
+しかも二つに分かれてしまいますっ
+
+# effectskip 2000
+# emotionbody 3000 14 3102511 0 0
+# effectpattern 3000 1 0
+# effectstart 3000
+# voice 310251 "muramasa_ge_0028"
+# alpha 3102311 0 0.5
+# move 3102511 3 0
+# face 3102511 "normal"
+# alpha 3102511 1 0.5
+# mask 3102511 off
+# textboxarrow 0 2
+@ムラマサ
+風の力で吹き散らしても、
+あっという間に…
+これは如何なる絡繰りでしょう
+
+# effectskip 3000
+# emotionbody 4000 14 3201911 0 0
+# effectpattern 4000 1 0
+# effectstart 4000
+# voice 320191 "chihyu_a_0010"
+# alpha 3102511 0 0.5
+# move 3201911 3 0
+# face 3201911 "angry"
+# alpha 3201911 1 0.5
+# mask 3201911 off
+# textboxarrow 0 2
+@シユウ
+うがあああぁぁ…！
+つぶしてもつぶしても、
+きりがないっ
+
+# effectskip 4000
+# emotionbody 5000 14 3601111 0 0
+# effectpattern 5000 1 0
+# effectstart 5000
+# voice 360111 "vanargand_t_0009"
+# alpha 3201911 0 0.5
+# move 3601111 3 0
+# face 3601111 "angry"
+# alpha 3601111 1 0.5
+# mask 3601111 off
+# textboxarrow 0 2
+@ヴァナルガンド
+これは…蘇生しているというより、
+自らをループさせているんです！
+
+# textboxarrow 0 2
+@ヴァナルガンド
+死んだ自分を死ぬ前の時間まで
+戻し、その際、分岐を起こしている…
+だから増えるんですっ
+
+# effectskip 5000
+# emotionbody 6000 14 3401311 0 0
+# effectpattern 6000 1 0
+# effectstart 6000
+# alpha 3601111 0 0.5
+# move 3401311 3 0
+# face 3401311 "sad"
+# alpha 3401311 1 0.5
+# mask 3401311 off
+# textboxarrow 0 2
+@アフロディーテ
+うーん…
+よく意味が分かりませんわ…
+いずれにしても美しくありませんね
+
+# effectskip 6000
+# effectstart 1000
+# alpha 3401311 0 0.5
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+@グリモワール
+確かに理屈が通ってないわよ！
+でも、暴走してるウロボロスに理屈を
+求める方が間違ってる…
+
+# textboxarrow 0 2
+@グリモワール
+ようするに全員まとめて焼き払えば
+良いだけでしょ！
+
+# effectskip 1000
+# alpha 3501711 0 0.5
+# move 3830008 3 0
+# alpha 3830008 1 0.5
+# mask 3830008 off
+# textboxarrow 0 2
+@ウロボロス
+シュウウウウウウウウウウウ！！
+
+# emotionbody 7000 14 3301811 0 0
+# effectpattern 7000 1 0
+# effectstart 7000
+# alpha 3830008 0 0.5
+# move 3301811 3 0
+# face 3301811 "angry"
+# alpha 3301811 1 0.5
+# mask 3301811 off
+# textboxarrow 0 2
+@フォルカス
+いけません！
+
+;;フォルカス（独白）
+# voice 330181 "forcas_t_0028"
+# move 3301811 3 0
+# face 3301811 "usual"
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 3301811 off
+@フォルカス
+このまま戦っても勝ち目はない…
+そんな直感があります
+何か対策を打たないとっ
+
+# effectstart 2000
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# move 3301811 4 0.5
+# mask 3301811 on
+# textwindow "normal"
+@アスカロン
+フォルカス！
+まとめて凍てつかせるのは
+どうですかっ？
+
+# textboxarrow 0 1
+@アスカロン
+動きを封じてしまえば、
+増殖できないはずです！
+
+# textboxarrow 0 3
+@フォルカス
+それは…
+
+;;フォルカス（独白）
+# move 3301811 4 0
+# textboxarrow 0 0
+# textwindow "moya"
+@フォルカス
+無駄な気がします…
+でも、どう伝えればっ
+
+# textboxarrow 0 1
+# textwindow "normal"
+@アスカロン
+嫉妬の氷で凍てつかせます！
+
+;;//アスカロンがウロボロスを斬る
+# effectskip 2000
+# effectskip 7000
+# textwindow "close"
+# alpha 3102311 0 0.5
+# alpha 3301811 0 0.5
+# move 3830008 3 0
+# alpha 3830008 1 0.5
+# mask 3830008 off
+# waitandnext 0.6
+
+# se "SE_4820"
+# se "SE_11029"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1001 1 0 0 0
+# effectstart 1001
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ウロボロス
+シュウウウウウウ…
+
+# effectstart 2000
+# voice 310231 "ascalon_a_0006"
+# alpha 3830008 0 0.5
+# move 3102311 3 0
+# face 3102311 "happy"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+@アスカロン
+やりました！
+凍りつきましたよっ
+
+# effectskip 2000
+# effectstart 7000
+# alpha 3102311 0 0.5
+# move 3301811 3 0
+# face 3301811 "angry"
+# alpha 3301811 1 0.5
+# mask 3301811 off
+# textboxarrow 0 2
+@フォルカス
+上手くいった…？
+いえ、アスカロン避けて下さい！
+
+# effectskip 7000
+# effectstart 2000
+# voice 310231 "ascalon_a_0022"
+# alpha 3301811 0 0.5
+# move 3102311 3 0
+# face 3102311 "surprise"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+@アスカロン
+えっ…？
+キャアアアアア…！
+
+;;//アスカロンが弾き飛ばされる
+# se "SE_5922"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# effectskip 2000
+# alpha 3102311 0 0.5
+# move 3830008 3 0
+# alpha 3830008 1 0.5
+# mask 3830008 off
+# textboxarrow 0 2
+@ウロボロス
+シュウウウウウウウウウウ！！
+
+# effectstart 5000
+# effectstart 1000
+# effectstart 6000
+# alpha 3830008 0 0.5
+# move 3601111 1 0
+# face 3601111 "usual"
+# alpha 3601111 1 0.5
+# mask 3601111 on
+# textboxarrow 0 1
+# move 3501711 3 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# move 3401311 5 0
+# face 3401311 "sad"
+# alpha 3401311 1 0.5
+# mask 3401311 on
+@ヴァナルガンド
+氷を溶かしてしまいました…
+生半可な攻撃では通用しないよう
+ですね…
+
+# voice 340131 "aphrodite_a_0015"
+# textboxarrow 0 3
+@アフロディーテ
+でも、倒せば増えてしまいます…
+嫌ですわぁ
+
+# face 3501711 "angry"
+# textboxarrow 0 2
+@グリモワール
+こういうときは、どこかにいる
+核を破壊するって相場が決まってる
+ものよ！
+
+# textboxarrow 0 2
+@グリモワール
+ワタシが見定めてやるわ！
+
+# face 3601111 "angry"
+# textboxarrow 0 1
+@ヴァナルガンド
+それなら私もっ
+この邪眼から逃れられる者など
+いませんよ！
+
+;;//ウロボロスの群れが並ぶ
+# effectskip 5000
+# effectskip 1000
+# effectskip 6000
+# alpha 3601111 0 0.5
+# alpha 3501711 0 0.5
+# alpha 3401311 0 0.5
+# move 938300081 1 0
+# alpha 938300081 1 0.5
+# mask 938300081 on
+# move 3830008 3 0
+# alpha 3830008 1 0.5
+# mask 3830008 on
+# move 938300082 5 0
+# alpha 938300082 1 0.5
+# mask 938300082 on
+# textboxarrow 0 0
+@ウロボロス
+シュウウウウウウウウウウ！
+
+# effectstart 3000
+# alpha 938300081 0 0.5
+# alpha 3830008 0 0.5
+# alpha 938300082 0 0.5
+# move 3102511 3 0
+# face 3102511 "angry"
+# alpha 3102511 1 0.5
+# mask 3102511 off
+# textboxarrow 0 2
+@ムラマサ
+如何ですか！？
+核は何処にっ？
+
+# effectskip 3000
+# effectstart 5000
+# effectstart 1000
+# voice 350171 "grimoire_ge_0022"
+# alpha 3102511 0 0.5
+# move 3601111 2 0
+# face 3601111 "surprise"
+# alpha 3601111 1 0.5
+# mask 3601111 on
+# move 3501711 4 0
+# face 3501711 "surprise"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+@グリモワール
+ちょっと…
+どうなってるのよ…
+
+# voice 360111 "vanargand_t_0026"
+# textboxarrow 0 1
+@ヴァナルガンド
+あり得ません…
+こんなことって…
+
+# effectstart 7000
+# move 3601111 1 0.5
+# mask 3601111 on
+# move 3501711 3 0.5
+# mask 3501711 on
+# move 3301811 5 0
+# face 3301811 "usual"
+# alpha 3301811 1 0.5
+# mask 3301811 on
+# textboxarrow 0 3
+@フォルカス
+どうしたんですかっ？
+核が見当たらないんですか？
+
+# face 3501711 "normal"
+# textboxarrow 0 2
+@グリモワール
+核は見えてるわよ…
+ええ、見えてるの…
+
+# face 3601111 "usual"
+# textboxarrow 0 1
+@ヴァナルガンド
+フォルカス…
+ここにいるウロボロスは…
+その全てが“本体”です
+
+# face 3601111 "angry"
+# textboxarrow 0 1
+@ヴァナルガンド
+全てに等しく、核があります…！
+
+# voice 350171 "grimoire_ge_0037"
+# face 3501711 "angry"
+# textboxarrow 0 2
+@グリモワール
+こんなの…どうやって倒せって
+いうの…！！
+
+;;フォルカス（独白）
+# move 3301811 5 0
+# face 3301811 "sad"
+# textboxarrow 0 0
+# textwindow "moya"
+@フォルカス
+ああっ…
+嫌な感覚の正体は、
+これだったんですね…！
+
+;;フォルカス（独白）
+# textboxarrow 0 0
+@フォルカス
+無限の再生と増殖…
+暴走したウロボロスの力が
+これほどとはっ…
+
+# effectskip 5000
+# effectskip 1000
+# effectskip 7000
+# effectstart 2000
+# alpha 3601111 0 0.5
+# alpha 3501711 0 0.5
+# alpha 3301811 0 0.5
+# move 3102311 3 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アスカロン
+諦めません…！
+私は…その力を凌駕してみせます！
+
+# effectskip 2000
+# effectstart 7000
+# alpha 3102311 0 0.5
+# move 3301811 3 0
+# face 3301811 "surprise"
+# alpha 3301811 1 0.5
+# mask 3301811 off
+# textboxarrow 0 2
+@フォルカス
+アスカロンっ
+
+;;フォルカス（独白）
+# move 3301811 3 0
+# face 3301811 "usual"
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 3301811 off
+@フォルカス
+そうです…
+ここまで来たんですから、
+必ず突破してみせます
+
+;;フォルカス（独白）
+# face 3301811 "angry"
+# textboxarrow 0 0
+@フォルカス
+そのためなら…私の“憤怒”の
+“大罪”も受け入れましょう！
+
+# serif 1
+@？？？
+ふぅん
+やっと、その気になってくれたんだね

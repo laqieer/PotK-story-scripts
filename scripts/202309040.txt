@@ -1,0 +1,1026 @@
+;;-----------------------------------------
+;;ツークンフトラスト3_0
+;;-----------------------------------------
+# script "lisp"
+# background "highland"
+# bgm "stop"
+;;-----------------------------------------
+;;イージス：新Ver立ち絵
+# body 62000111
+# pos 62000111 3
+# scale 62000111 0.8 0
+# layer 62000111 2
+# mask 62000111 off
+# face 62000111 "angry"
+# alpha 62000111 1 0
+;;カシウス：新Ver立ち絵
+# body 6303121
+# pos 6303121 3
+# scale 6303121 0.8 0
+# layer 6303121 3
+# mask 6303121 off
+# alpha 6303121 0 0
+;;フォルカス：天上編立ち絵→リル姫立ち絵
+# body 301811
+# alpha 301811 0 0
+# body 43018002
+# pos 43018002 4
+# scale 43018002 0.8 0
+# layer 43018002 4
+# alpha 43018002 0 0
+;;アスカロン：天上編立ち絵
+# body 102311
+# pos 102311 3
+# scale 102311 0.8 0
+# layer 102311 3
+# mask 102311 off
+# alpha 102311 0 0
+;;如意金箍棒：新Ver立ち絵
+# body 6203121
+# pos 6203121 3
+# scale 6203121 0.8 0
+# layer 6203121 3
+# mask 6203121 off
+# alpha 6203121 0 0
+;;魔獣
+# body 920014
+# pos 920014 5
+# scale 920014 0.8 0
+# layer 920014 5
+# alpha 920014 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：郊外
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# voice 5200011 "aegis_c_battle_0003"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@イージス
+ふんっ！
+
+;;演出：魔獣の攻撃をイージスが防ぐ
+# se "SE_14152"
+# fadein "white" 0.5
+# waitandnext 1.5
+
+# move 62000111 2 0.5
+# move 43018002 4 0
+# alpha 43018002 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+立て、フォルカス！
+
+# textflame 1 1
+# textboxarrow 0 3
+@フォルカス
+すみませ、ん…
+
+;;魔獣の威嚇の声
+# se "SE_0792"
+# alpha 920014 1 0.5
+# move 62000111 1 0.5
+# move 43018002 3 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@魔獣
+グォォォォ！
+
+;;演出：如意金箍棒がイージス達と魔獣の間に入り攻撃する
+;;こん棒振る→ヒット
+# se "SE_4100"
+# alpha 62000111 0 0.3
+# alpha 43018002 0 0.3
+# move 6203121 2 0.3
+# alpha 6203121 1 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_7249"
+# fadein "white" 0.5
+# alpha 920014 0 0.2
+# waitandnext 1
+
+# voice 520311 "nyoikinkobou_c_0022"
+# face 6203121 "surprise"
+# move 6203121 3 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@如意金箍棒
+イージスちゃん、
+フォルカスちゃんどうしちゃったの？
+
+# alpha 6203121 0 0.3
+# move 62000111 2 0
+# layer 62000111 2
+# mask 62000111 off
+# face 62000111 "sad"
+# alpha 62000111 1 0.3
+# move 102311 4 0
+# layer 102311 4
+# mask 102311 on
+# face 102311 "worry"
+# alpha 102311 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+わ、わからない…
+けど、今はリカバリーして
+戦わないと！
+
+# voice 1023 "ascalon_battle_0005"
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+…魔獣の数が多いです！
+今までで一番！
+
+# alpha 62000111 0 0.3
+# alpha 102311 0 0.3
+# move 43018002 3 0
+# mask 43018002 off
+# alpha 43018002 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@フォルカス
+すみません…
+やはりこの姿のせいでみなさんに
+迷惑を掛けてしまって…
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# voice 530311 "cassius_ca_battle_0001"
+# alpha 43018002 0 0.3
+# move 6303121 4 0
+# layer 6303121 2
+# mask 6303121 off
+# face 6303121 "angry"
+# alpha 6303121 1 0.3
+# move 920014 2 0
+# layer 920014 4
+# mask 920014 on
+# alpha 920014 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+はっ！
+
+;;槍振る→ヒット→魔獣倒れる
+# se "SE_4200"
+# move 6303121 4 0.2
+# textboxarrow 0 0
+# waitandnext 0.3
+
+# se "SE_6794"
+# move 920014 2 0
+# fadein "white" 0.5
+# waitandnext 1.5
+
+;;演出：カシウスが魔獣を倒す
+# se "SE_3001"
+# alpha 920014 0 1
+# waitandnext 1.5
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# move 6303121 3 0.5
+# face 6303121 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@カシウス
+フォルカス…重いのね？
+
+# se "bgm602_rhythm_on"
+# alpha 6303121 0 0.3
+# alpha 43018002 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@フォルカス
+それは…
+
+# textflame 0 0
+@
+フォルカスは手にした槍…
+神器フォルカスを握るが
+持ち上がらない
+
+# textflame 1 1
+# textboxarrow 0 2
+@フォルカス
+この姿では力が足りないのですか…
+
+# textflame 1 1
+# textboxarrow 0 2
+@フォルカス
+いえ、どんな姿であろうと
+いつかこうなっていた…
+
+# textflame 0 0
+@
+その重さは、罪の重さだから
+
+# textflame 1 1
+# textboxarrow 0 2
+@フォルカス
+どれだけの覚悟を持とうとも
+誰が理解して、応援してくれようとも
+
+# textflame 1 1
+# textboxarrow 0 2
+@フォルカス
+私はそれを重いと感じてしまう…
+逃げようとしてしまう程度なんですね
+
+# alpha 43018002 0 0.3
+# move 62000111 2 0
+# layer 62000111 4
+# mask 62000111 on
+# face 62000111 "angry"
+# alpha 62000111 1 0.3
+# move 6203121 4 0
+# layer 6203121 2
+# mask 6203121 off
+# face 6203121 "angry"
+# alpha 6203121 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@如意金箍棒
+それは違うわフォルカスちゃん！
+
+# voice 5200011 "aegis_c_0003"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+ああ、逃げようとする者ならば
+重さすら知ることがないだろう！
+
+# alpha 62000111 0 0.3
+# move 43018002 2 0
+# layer 43018002 4
+# mask 43018002 on
+# alpha 43018002 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+ふたりとも…
+
+# face 6203121 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@如意金箍棒
+フォルカスちゃんの正義は
+そばにいた私達がよ～く知ってるよ
+
+#setnextbgmblock 1
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+でも…でも、私はそう言って
+仲間に信頼してもらって
+いいのでしょうか…
+
+# se "bgm602_pad_on"
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+私の罪は、かつての世界で
+仲間を裏切り、選択を誤ったこと
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+その選択を肯定しながらも
+選んだ道を貫くことすらできず、
+大勢を傷付けてしまったこと…
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+だから、罪滅ぼしのために
+新しい世界では人のためになることを
+しようと思ったのに…
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+また迷惑をかけて中途半端で…
+こんな身勝手を理解してもらおうなど…
+
+# voice 1023 "ascalon_0009"
+# alpha 6203121 0 0.3
+# move 102311 4 0
+# layer 102311 2
+# mask 102311 off
+# face 102311 "sad"
+# alpha 102311 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+いいんだよ！
+
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+フォルカスが前の世界のことを
+罪だとして受け入れた覚悟
+それを否定するつもりはないよ…
+
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+でも、それを理由に
+自分の為に生きることを
+諦めないでほしい…っ！
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+…今の世界に於いての罪ではない
+その罪を知る民もいない
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+でも、私が思い出してしまった
+それを知るキル姫だっている
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+なら、自由に生きるなんて
+そんなこと許されるはずがないんです
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+誰にも、望まれてないんです…
+
+;;演出：アスカロン、フォルカスに近寄る
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# move 102311 3 0.3
+# face 102311 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@アスカロン
+私が望んでるんだよ！
+
+# textflame 0 0
+@
+アスカロンは
+子どもの様にできないできないと
+
+# textflame 0 0
+@
+駄々をこねているわけではないかと…
+言い募る
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+アスカロン…
+
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+# alpha 102311 0 0.3
+# move 6303121 4 0
+# layer 6303121 2
+# mask 6303121 off
+# face 6303121 "normal"
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+キル姫、キラーズは願いの形
+そう望まれたから、そうなった
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+え…？
+
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+罪の意識の表れは槍に
+担い手への願いはその身に
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+それって…
+
+# alpha 6303121 0 0.3
+# move 102311 4 0
+# layer 102311 2
+# mask 102311 off
+# face 102311 "sad"
+# alpha 102311 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+持たなくていいんだよ、フォルカス
+
+# textflame 0 0
+@
+覚悟は否定しない
+だが、手放す選択をしてもいい
+
+# textflame 0 0
+@
+矛盾しているようで
+背反ではないその想い、願い
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+でも、どうしたら…
+
+# textflame 0 0
+@
+矛盾ではなくとも
+そこにあるのは歪み
+
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+許されることを
+変わることを恐れないで
+
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+責任感が強くて
+意地っ張りなあなたの代わりに、
+私があなたを許してあげる
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+アスカロン…私、本当は…
+違う生き方ができたらって…
+でも、そんなこと認められなくて…
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+結局「揺らぎ」は私にあったんだ…
+
+# alpha 43018002 0 0.3
+# alpha 102311 0 0.3
+# move 62000111 2 0
+# layer 62000111 4
+# mask 62000111 on
+# face 62000111 "sad"
+# alpha 62000111 1 0.3
+# move 6203121 4 0
+# layer 6203121 2
+# mask 6203121 off
+# face 6203121 "surprise"
+# alpha 6203121 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@如意金箍棒
+フォルカスちゃんは過去があっての
+今っていうのを見過ぎてるんだよ
+
+# face 6203121 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@如意金箍棒
+未来を見たっていい…
+私もつい最近気付けたことだけどね
+
+# voice 5200011 "aegis_c_0003"
+# face 62000111 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+自身の殻に閉じこもってばかりいるな
+
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+罪の意識、責任にかまけて
+周囲を見る余裕がなくなるなんて
+隊長代理失格だぞ
+
+# voice 5200011 "aegis_c_0028"
+# face 62000111 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+私もカオちゃん達やカシウス
+トライデントのおかげで
+気付けたことだけど…
+
+# voice 530311 "cassius_ca_0003"
+# alpha 62000111 0 0.3
+# alpha 6203121 0 0.3
+# move 43018002 2 0
+# layer 43018002 4
+# mask 43018002 on
+# alpha 43018002 1 0.3
+# move 6303121 4 0
+# layer 6303121 2
+# mask 6303121 off
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+友のことを想うのであれば
+自分の想いを抑え込まなくたっていい
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+想い、抑え込む…
+
+# voice 530311 "cassius_ca_0032"
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+そう、アスカロン？
+
+# alpha 6303121 0 0.3
+# face 102311 "surprise"
+# move 102311 4 0
+# layer 102311 2
+# mask 102311 off
+# alpha 102311 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+っ！
+
+# textflame 0 0
+@
+アスカロンとフォルカスは
+ハッとして目を合わせる
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+この魔獣を
+引き寄せている「揺らぎ」は…
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+覚悟の外にあった
+「罪のない自分であったなら」
+という望み…
+
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+そしてそのフォルカスと
+共にいられたならという私の願い…
+
+# bgmfile "bgm290" "BgmLostRagnarokEvent" 0
+# voice 1023 "ascalon_0015"
+# face 102311 "worry"
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+私、だったんだ…
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+いや、「私達」でしょ？
+
+# face 102311 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+ううん、私はフォルカスの様子が
+おかしいのに気付いてた…
+
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+なのに、自分にはどうもできない
+って決めつけて、拒絶されてしまう
+可能性が怖くて何も言えなかった…
+
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+…そんなの仲間じゃ、友達じゃないよ
+
+# textflame 0 0
+@
+アスカロンの言葉に
+フォルカスは首を振る
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+私をこんな姿にするほどの
+想いを持ったアスカロンが
+友達じゃない訳ないでしょう？
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+ありがとう、アスカロン
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+それとイージスも
+如意金箍棒…ニョイ子も
+
+# voice 520311 "nyoikinkobou_c_0004"
+# alpha 102311 0 0.3
+# alpha 43018002 0 0.3
+# move 6203121 3 0
+# mask 6203121 off
+# face 6203121 "happy"
+# alpha 6203121 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@如意金箍棒
+フォルカスちゃん！
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# alpha 6203121 0 0.3
+# move 62000111 3 0
+# mask 62000111 off
+# face 62000111 "surprise"
+# alpha 62000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@イージス
+そう言ってくれるのは良いけど
+この状況はマズいままよ！？
+
+# textflame 0 0
+@
+今の今まで魔獣の攻撃を
+防ぎ切っていたイージスだが
+それも限界に近づいていた
+
+# alpha 62000111 0 0.3
+# move 6303121 2 0
+# layer 6303121 2
+# mask 6303121 off
+# alpha 6303121 1 0.3
+# move 102311 4 0
+# layer 102311 4
+# mask 102311 on
+# alpha 102311 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+「揺らぎ」の理由に気付けても
+解決に至ってない…っ！
+
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+キラーズは願いの形
+そこに至る経緯はどうであれ
+込められた思いは純粋な力
+
+# alpha 6303121 0 0.3
+# alpha 102311 0 0.3
+# move 43018002 2 0
+# layer 43018002 4
+# mask 43018002 on
+# alpha 43018002 1 0.3
+# move 6203121 4 0
+# layer 6203121 2
+# mask 6203121 off
+# face 6203121 "angry"
+# alpha 6203121 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@如意金箍棒
+そういうことね…っ！
+
+# textflame 0 0
+@
+如意金箍棒は
+フォルカスが持つ槍に手を添える
+
+# alpha 43018002 0 0.3
+# alpha 6203121 0 0.3
+# move 62000111 2 0
+# layer 62000111 2
+# mask 62000111 off
+# face 62000111 "usual"
+# alpha 62000111 1 0.3
+# move 102311 4 0
+# layer 102311 4
+# mask 102311 on
+# face 102311 "surprise"
+# alpha 102311 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+はっ、そういうことですか！
+
+# voice 5200011 "aegis_c_0004"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+ふっ、なるほどな！
+
+# alpha 62000111 0 0.3
+# alpha 102311 0 0.3
+# move 43018002 3 0
+# mask 43018002 off
+# alpha 43018002 1 0.3
+# textflame 0 0
+@
+アスカロンとイージスも
+フォルカスの槍に手を添える
+
+# textflame 1 1
+# textboxarrow 0 2
+@フォルカス
+これは一体…
+
+# alpha 43018002 0 0.3
+# move 102311 3 0
+# mask 102311 off
+# alpha 102311 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@アスカロン
+フォルカス！
+ひとりで持つには重いなら！
+
+# bgm "bgm035" 0
+# alpha 102311 0 0.3
+# move 62000111 3 0
+# mask 62000111 off
+# face 62000111 "normal"
+# alpha 62000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@イージス
+皆で持てばいいだけだ！
+
+# alpha 62000111 0 0.3
+# alpha 43018002 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@フォルカス
+！
+
+# alpha 43018002 0 0.3
+# move 6203121 3 0
+# mask 6203121 off
+# alpha 6203121 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@如意金箍棒
+いっくよー！
+
+# alpha 6203121 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# move 920014 3 0
+# mask 920014 off
+# alpha 920014 1 1
+# waitandnext 1
+
+;;チャージ（あおり）→攻撃→魔獣倒れる
+# se "SE_9552"
+# fadeout "white" 2
+# waitandnext 2
+
+# se "SE_9554"
+# fadein "white" 3
+# waitandnext 3
+
+# se "SE_3001"
+# alpha 920014 0 1
+# waitandnext 2
+
+# voice 1023 "ascalon_0004"
+# move 43018002 2 0
+# layer 43018002 4
+# mask 43018002 on
+# alpha 43018002 1 0.3
+# move 102311 4 0
+# layer 102311 2
+# mask 102311 off
+# face 102311 "happy"
+# alpha 102311 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@アスカロン
+た、倒せました！
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+…………
+
+# alpha 43018002 0 0.3
+# alpha 102311 0 0.3
+# face 62000111 "usual"
+# voice 5200011 "aegis_c_0028"
+# alpha 62000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@イージス
+…協力、はひとりじゃできないわね
+
+# voice 530311 "cassius_ca_0004"
+# alpha 62000111 0 0.3
+# move 6203121 2 0
+# layer 6203121 2
+# mask 6203121 off
+# face 6203121 "happy"
+# alpha 6203121 1 0.3
+# move 6303121 4 0
+# layer 6303121 4
+# mask 6303121 on
+# face 6303121 "happy"
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+それぞれの想いが力と成り
+形を成して得られた勝利…
+
+# voice 520311 "nyoikinkobou_c_0030"
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+みんなの想いを繋げてくれて
+ありがとうね、カシウスちゃん
+
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+貸しを作るのも交流の内
+感謝は学園作りに転用させてほしい
+
+# alpha 6203121 0 0.3
+# alpha 6303121 0 0.3
+# face 62000111 "sad"
+# alpha 62000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@イージス
+意外と強かだな…
+
+# voice 1023 "ascalon_0022"
+# alpha 62000111 0 0.3
+# alpha 43018002 1 0.3
+# face 102311 "surprise"
+# alpha 102311 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+あれ、フォルカス…
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+…………ええ、変ですね
+
+# textflame 0 0
+@
+「揺らぎ」の原因に気付き
+取り除かれたはず
+しかし、フォルカスの姿は…
+
+# alpha 102311 0 0.3
+# move 6303121 4 0
+# layer 6303121 2
+# mask 6303121 off
+# voice 530311 "cassius_ca_0022"
+# face 6303121 "surprise"
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+幼い姿のまま…
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+アスカロンが願ったからだとしても
+「揺らぎ」の影響で変化
+してしまったのではなかったんです？
+
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+一度願われたのならば
+成就されなければ戻れない
+という可能性が考えられるわ
+
+# alpha 43018002 0 0.3
+# move 102311 2 0
+# layer 102311 4
+# mask 102311 on
+# face 102311 "worry"
+# alpha 102311 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+その願いって…
+私の想いは届いて叶えられたような…
+
+# face 6303121 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+きっとフォルカスの願いも
+そこに集約されてしまったのね
+
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+もしかしたらアスカロンにも
+まだ成就されない願いがあるのかも
+
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+願いは願いに惹かれるものだから
+「裏側」だって引き寄せられるから
+「揺らぎ」を起こすのだし
+
+# textflame 1 1
+# textboxarrow 0 1
+@アスカロン
+…………
+
+# alpha 102311 0 0.3
+# move 62000111 2 0
+# layer 62000111 4
+# mask 62000111 on
+# face 62000111 "sad"
+# alpha 62000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+なら、その願いって…
+
+# voice 530311 "cassius_ca_0002"
+# face 6303121 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+フォルカス、アスカロン
+あなた達はこれからどうしたい？
+
+# alpha 6303121 0 0.3
+# alpha 62000111 0 0.3
+# move 43018002 2 0
+# layer 43018002 4
+# mask 43018002 on
+# alpha 43018002 1 0.3
+# move 102311 4 0
+# layer 102311 2
+# mask 102311 off
+# alpha 102311 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+…………
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+カシウスは学園を作るんですよね？
+
+# textflame 0 0
+@
+カシウスは首肯する
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+なら、その学校に通ってみたい
+
+# textflame 1 1
+# textboxarrow 0 1
+@フォルカス
+できれば、友達と一緒に
+
+# face 102311 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+…っ！
+
+# fadeout "black" 2
+# waitandnext 2

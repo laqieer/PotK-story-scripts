@@ -1,0 +1,397 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;コマンドキラーズサイドストーリー前編シナリオ
+;;第1話　タイトル：射抜く者
+;;1_6
+;;スクリプト最後の背景：室内
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;ヒョウハ
+# body 231
+# pos 231 3
+# scale 231 0.8 0
+# layer 231 2
+# alpha 231 0 0
+# mask 231 off
+;;神令ヒョウハ（ボイス用）
+# body 5402011
+# alpha 5402011 0 0
+;;梓弓
+# body 400611
+# pos 400611 3
+# scale 400611 0.8 0
+# layer 400611 2
+# alpha 400611 0 0
+# mask 400611 off
+;;アバリス
+# body 401021
+# pos 401021 3
+# scale 401021 0.8 0
+# layer 401021 2
+# alpha 401021 0 0
+# mask 401021 off
+;;与一
+# body 400531
+# pos 400531 3
+# scale 400531 0.8 0
+# layer 400531 2
+# alpha 400531 0 0
+# mask 400531 off
+;;-----------------------------------------
+;;第1話　タイトル：射抜く者
+;;//背景：町
+# move 231 3 0
+# face 231 "normal"
+# alpha 231 1 0
+# mask 231 off
+# textflame 1 1
+# textboxarrow 0 2
+@ヒョウハ
+朝になったし、
+梓弓達もあたしのことを
+忘れてるだろ
+
+# textboxarrow 0 2
+@ヒョウハ
+さて…本番は夜中だけど、
+今のうちに少し探りを入れて
+おこうかね
+
+# textboxarrow 0 2
+@ヒョウハ
+この時間なら、
+何かの任務に付いているはず
+町を歩いてれば見つかるか…
+
+;;//ヒョウハが歩いていく
+# se "SE_0740"
+# textwindow "close"
+# rightout 231 1
+# waitandnext 1
+
+# alpha 231 0 0
+# bgm "bgm031" 0
+# serif 1
+@町人
+誰かーっ！
+泥棒よーっ…！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# move 231 3 0
+# face 231 "surprise"
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ヒョウハ
+なっ！
+盗人か…！
+
+# serif 1
+@泥棒
+どけ！どけーっ！
+ぶっ殺すぞ！
+
+# serif 1
+@町人達
+うわあああ！？
+刃物を持ってやがる…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 231 "angry"
+# textboxarrow 0 2
+@ヒョウハ
+くそっ
+こっからだと距離があるなっ…
+届くかどうか…！
+
+# voice 4010 "Abaris_battle_0001"
+# alpha 231 0 0.5
+# move 401021 3 0
+# face 401021 "angry"
+# alpha 401021 1 0.5
+# mask 401021 off
+# textboxarrow 0 2
+@アバリス
+やあっ！
+
+;;//アバリスが矢を放つ
+# se "SE_4301"
+# waitandnext 0.5
+
+# alpha 401021 0 0.5
+# move 231 3 0
+# face 231 "angry"
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+@ヒョウハ
+見つけた、アバリス！
+
+# se "SE_0844"
+# serif 1
+@泥棒
+うひゃあ！？
+どっから矢が…？
+
+;;ヒョウハ（独白）
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 540201 "hyoha_c_0039"
+# move 231 3 0
+# face 231 "normal"
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 231 off
+@ヒョウハ
+盗人の足元に矢を射て
+動きを止めさせた
+良い腕してるな
+
+# alpha 231 0 0.5
+# move 401021 3 0
+# face 401021 "angry"
+# alpha 401021 1 0.5
+# mask 401021 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アバリス
+大人しく捕まって下さい
+あなたは――
+
+# serif 1
+@奏官
+与一、やれ！
+
+# voice 4005 "yoichi_0032"
+# alpha 401021 0 0.5
+# move 400531 3 0
+# alpha 400531 1 0.5
+# mask 400531 off
+# textboxarrow 0 2
+@与一
+はい！
+
+# se "SE_4301"
+# waitandnext 0.5
+
+# se "SE_4817"
+# serif 1
+@泥棒
+へっ…？
+ギャアアアア…！
+
+# serif 1
+@奏官
+よし、良いぞ！
+どうだ、盗人？
+壁に縫い止められた気分は？
+
+# serif 1
+@奏官
+この町で悪事を働けると
+思うなよ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 400531 0 0.5
+# move 401021 3 0
+# face 401021 "surprise"
+# alpha 401021 1 0.5
+# mask 401021 off
+# textboxarrow 0 2
+@アバリス
+あっ…
+
+# alpha 401021 0 0.5
+# move 400531 3 0
+# alpha 400531 1 0.5
+# mask 400531 off
+# textboxarrow 0 2
+@与一
+泥棒さんが立ち止まってくれた
+お陰で与一は助かりました
+何で止まったんでしょう？
+
+# serif 1
+@奏官
+おい、与一！
+こいつを連れていくぞ
+さっさと来い！
+
+# textboxarrow 0 2
+@与一
+あ…はいっ
+すみません、マスター…
+
+;;//与一達が立ち去る
+# se "SE_0740"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# alpha 400531 0 0.5
+# waitandnext 0.5
+
+# move 401021 3 0
+# face 401021 "normal"
+# alpha 401021 1 0.5
+# mask 401021 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アバリス
+…………
+
+;;//アバリスが立ち去る
+# se "SE_0740"
+# textwindow "close"
+# rightout 401021 1
+# waitandnext 1
+
+# alpha 401021 0 0
+# move 231 3 0
+# face 231 "normal"
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ヒョウハ
+ふうん…
+
+;;//背景：町（夜）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "town_night"
+# alpha 231 0 0
+# move 400531 3 0
+# alpha 400531 1 0
+# mask 400531 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm005" 0
+# serif 1
+@奏官
+今夜もしっかり見回るんだぞ！
+梓弓と連携を取れよっ
+
+# voice 4005 "yoichi_0034"
+# textboxarrow 0 2
+# textwindow "normal"
+@与一
+いやー…やっぱり与一には荷が重いと
+いうか…犯人を捕まえることができる
+かどうかはお約束できないというか…
+
+# serif 1
+@奏官
+いいから、さっさと見回りに
+行ってこい！
+
+# se "SE_5200"
+# textboxarrow 0 2
+@与一
+はいぃぃっ！
+精一杯、務めさせていただきます！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 4006 "azusa_0036"
+# move 400531 2 0.5
+# mask 400531 on
+# move 400611 4 0
+# face 400611 "normal"
+# alpha 400611 1 0.5
+# mask 400611 on
+# textboxarrow 0 3
+@梓弓
+与一、今夜もよろしくお願いします
+何事もなければ良いのですけれど…
+
+# voice 4005 "yoichi_0036"
+# textboxarrow 0 1
+@与一
+よろしくお願い致します、
+梓弓さんっ
+
+;;//二人が立ち去る
+# se "SE_0740"
+# textwindow "close"
+# alpha 400531 0 0.5
+# alpha 400611 0 0.5
+# waitandnext 0.5
+
+# serif 1
+@奏官
+まったく…
+昨夜は何事もなかったようだが…
+
+# serif 1
+@奏官
+犯人はどこに隠れてやがるんだっ？
+必ず見つけ出して思い知らせて
+やるからな！
+
+# serif 1
+@奏官
+…少し仮眠を取るか
+
+;;//背景：室内
+# serif 1
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "201_room"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//画面の端にアバリスが現れる
+# se "SE_5200"
+# voice 4010 "Abaris_0031"
+# move 401021 4 0
+# face 401021 "normal"
+# alpha 401021 1 0.5
+# mask 401021 on
+# textboxarrow 0 3
+# textwindow "normal"
+@アバリス
+ごめんなさい…
+
+# move 231 2 0
+# face 231 "irregular"
+# alpha 231 1 0.5
+# mask 231 on
+# textboxarrow 0 1
+@ヒョウハ
+やめときなよ
+誰のためにもなんないから
+
+# voice 4010 "Abaris_0024"
+# face 401021 "surprise"
+# textboxarrow 0 3
+@アバリス
+ひゃ！
+誰ですかっ？
+
+# voice 540201 "hyoha_c_0004"
+# face 231 "normal"
+# textboxarrow 0 1
+@ヒョウハ
+通りすがりのお節介焼きだ

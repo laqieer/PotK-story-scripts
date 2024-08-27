@@ -1,0 +1,448 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;インテグラルキラーズサイドストーリー
+;;第1話―９　タイトル：平和への決意
+;;1_9_0
+;;スクリプト最後の背景：村（004_outland）
+;;-----------------------------------------
+# script "lisp"
+# background "004_outland"
+# bgm "bgm021" 0
+;;-----------------------------------------
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 3
+# alpha 24 0 0
+# mask 24 off
+;;ロンギヌス
+# body 300111
+# pos 300111 3
+# scale 300111 0.8 0
+# layer 300111 2
+# alpha 300111 0 0
+# mask 300111 off
+;;マサムネ
+# body 100111
+# pos 100111 3
+# scale 100111 0.8 0
+# layer 100111 2
+# alpha 100111 0 0
+# mask 100111 off
+;;マサムネ（別）
+# entry 91001111 100111
+# pos 91001111 3
+# scale 91001111 0.8 0
+# layer 91001111 2
+# alpha 91001111 0 0
+# mask 91001111 off
+# brightness 91001111 0.8 0
+;;-----------------------------------------
+;;第1話―９　タイトル：平和への決意
+;;//背景：村（004_outland）
+# move 100111 2 0
+# face 100111 "angry"
+# alpha 100111 1 0
+# mask 100111 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 91001111 4 0
+# face 91001111 "angry"
+# alpha 91001111 1 0
+# mask 91001111 on
+@マサムネ
+いざ、尋常に
+
+;;マサムネ（別）
+# textboxarrow 0 3
+@マサムネ
+勝負！
+
+;;//マサムネ同士が切り結ぶ
+# se "SE_8023"
+# waitandnext 0.2
+
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 1014 "tyrufing_0024"
+# se "SE_0810"
+# alpha 100111 0 0.5
+# alpha 91001111 0 0.5
+# move 24 3 0
+# face 24 "surprise"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+あれは…！
+
+# face 24 "angry"
+# textboxarrow 0 2
+@ティルフィング
+マスター
+向こうでマサムネが淘汰を行って
+いるみたいです
+
+# voice 3001 "ronginusu_0002"
+# move 24 2 0.5
+# mask 24 on
+# move 300111 4 0
+# face 300111 "normal"
+# alpha 300111 1 0.5
+# mask 300111 on
+# textboxarrow 0 3
+@ロンギヌス
+あの…私達は迂回した方が…
+
+# sestop "SE_0810"
+# textboxarrow 0 1
+@ティルフィング
+ロンギヌス、危ない！
+
+;;//ティルフィングがロンギヌスを庇う
+# se "SE_5200"
+# textwindow "close"
+# move 24 3 0.2
+# waitandnext 0.5
+
+# textwindow "close"
+# alpha 24 0 0.5
+# alpha 300111 0 0.5
+# waitandnext 0.5
+
+;;//マサムネ（別）が吹っ飛んでくる
+# se "SE_9045"
+# sedelay "SE_9146" 0.8
+# move 91001111 3 0
+# face 91001111 "nutual"
+# alpha 91001111 1 0
+# mask 91001111 off
+# leftin 91001111 0.5
+# waitandnext 0.5
+
+;;マサムネ（別）
+# voice 1001 "masamune_0037"
+# textboxarrow 0 2
+# textwindow "normal"
+@マサムネ
+ぬうっ…
+これは失敬
+
+# textwindow "close"
+# alpha 91001111 0 0.5
+# waitandnext 0.5
+
+;;//もう一人のマサムネが駆けてくる
+# se "SE_5575"
+# move 100111 3 0
+# alpha 100111 1 0.5
+# mask 100111 off
+# leftin 100111 0.5
+# waitandnext 0.5
+
+# se "SE_8000"
+# face 100111 "angry"
+# textboxarrow 0 2
+# textwindow "normal"
+@マサムネ
+そこの御仁！
+離れてもらおうか
+
+# alpha 100111 0 0.5
+# move 91001111 2 0
+# face 91001111 "nutual"
+# alpha 91001111 1 0.5
+# mask 91001111 on
+# move 300111 4 0
+# face 300111 "sad"
+# alpha 300111 1 0.5
+# mask 300111 on
+# textboxarrow 0 3
+@ロンギヌス
+ごめんなさい…
+
+;;マサムネ（別）
+# textboxarrow 0 1
+@マサムネ
+そなたが謝ることではない…
+拙者の落ち度よ
+
+;;マサムネ（別）
+# textboxarrow 0 1
+@マサムネ
+見知らぬ者を盾になどせぬ
+こっちだ！
+
+;;//マサムネ（別）がロンギヌス達から離れる
+# se "SE_9021"
+# textwindow "close"
+# leftout 91001111 0.5
+# waitandnext 0.5
+
+# voice 1001 "masamune_0003"
+# alpha 91001111 0 0
+# alpha 300111 0 0.5
+# move 100111 2 0
+# face 100111 "nutual"
+# alpha 100111 1 0.5
+# mask 100111 on
+# textboxarrow 0 1
+# move 91001111 4 0
+# face 91001111 "nutual"
+# alpha 91001111 1 0.5
+# mask 91001111 on
+# textwindow "normal"
+@マサムネ
+武人としてのそなたの誇り
+確かに見せてもらった
+だが…
+
+# face 100111 "angry"
+# textboxarrow 0 1
+@マサムネ
+これで終わりだ！
+
+;;//マサムネがマサムネ（別）を斬る
+# bgm "stop"
+# se "SE_9121"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+;;マサムネ（別）
+# face 91001111 "unhappy"
+# textboxarrow 0 3
+@マサムネ
+ぬうっ…
+拙者は…ここまでか…
+
+# face 100111 "nutual"
+# textboxarrow 0 1
+@マサムネ
+安心せよ
+そなたの意思は拙者が担う
+
+;;マサムネ（別）
+# voice 1001 "masamune_0004"
+# textboxarrow 0 3
+@マサムネ
+ふっ…
+そなたの理想…実現は辛く険しい
+道程だぞ…精々――
+
+;;//マサムネ（別）が光になって消える
+# se "SE_9148"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# alpha 91001111 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 1
+# textwindow "normal"
+@マサムネ
+覚悟の上だ
+我が同胞よ
+
+# bgm "bgm003" 0
+# alpha 100111 0 0.5
+# move 24 2 0
+# face 24 "normal"
+# alpha 24 1 0.5
+# mask 24 on
+# textboxarrow 0 1
+# move 300111 4 0
+# face 300111 "normal"
+# alpha 300111 1 0.5
+# mask 300111 on
+@ティルフィング
+終わったようです…
+ロンギヌス、怪我はありませんか？
+
+# voice 3001 "ronginusu_0003"
+# textboxarrow 0 3
+@ロンギヌス
+大丈夫です…
+
+# move 100111 1 0
+# face 100111 "nutual"
+# alpha 100111 1 0.5
+# mask 100111 on
+# textboxarrow 0 1
+# move 24 3 0.5
+# alpha 24 1 0.5
+# mask 24 on
+# move 300111 5 0.5
+# alpha 300111 1 0.5
+# mask 300111 on
+@マサムネ
+そなた達、巻き込んですまなかった
+
+# textboxarrow 0 1
+@マサムネ
+淘汰の最中はどうしても目の前の
+「拙者」にばかり意識が向いて
+しまってな
+
+# voice 1001 "masamune_0031"
+# textboxarrow 0 1
+@マサムネ
+オリジナルを目指す身故、
+視野が狭まってしまうのかもしれん
+本当にすまぬ
+
+# face 300111 "sad"
+# textboxarrow 0 3
+@ロンギヌス
+そんな…
+私は平気ですから…
+
+# voice 1014 "tyrufing_0002"
+# textboxarrow 0 2
+@ティルフィング
+アナタもオリジナルを目指しているの
+ですね
+
+# textboxarrow 0 1
+@マサムネ
+その口ぶり…
+そなたもか？
+
+# voice 1014 "tyrufing_0003"
+# textboxarrow 0 2
+@ティルフィング
+はい
+私は平和な世界を築くため、
+オリジナルを目指しています
+
+# textboxarrow 0 1
+@マサムネ
+ほほう
+これは奇縁だな
+
+# textboxarrow 0 1
+@マサムネ
+拙者の目指すところも同じだ
+この世界から争いをなくし平和な
+世界をもたらす
+
+# textboxarrow 0 1
+@マサムネ
+そのためには、まず己が強く
+あらねばならん
+故に淘汰を続けている
+
+# textboxarrow 0 1
+@マサムネ
+オリジナルになり、神器を得れば
+争いを収める力も得ることができよう
+
+# face 24 "sad"
+# textboxarrow 0 2
+@ティルフィング
+それは…
+力によって人々を支配しようと
+いうのですか？
+
+# textboxarrow 0 1
+@マサムネ
+それでは、昨今勢力を拡大しておる
+奏官達の集まり…何といったかな？
+
+# face 300111 "normal"
+# textboxarrow 0 3
+@ロンギヌス
+…ギルドです
+
+# textboxarrow 0 1
+@マサムネ
+ああ、それだ
+多くのギルドがやろうとしておる
+ことと変わらぬ
+
+# textboxarrow 0 1
+@マサムネ
+拙者は自らが抑止力になれればと
+考えておる
+
+# textboxarrow 0 1
+@マサムネ
+何らかの制裁を加えるには
+相応の力が必要になることは
+疑いようがなかろう
+
+# textboxarrow 0 2
+@ティルフィング
+そうですか…
+
+;;//選択肢
+;;Aそれも一つの真理だ
+;;B考え方は人それぞれ
+# select "それも一つの真理だ" "select_label_01" "考え方は人それぞれ" "select_label_02"
+そうですか…
+
+;;A
+# label "select_label_01"
+# labeljump "select_label_end"
+# textboxarrow 0 1
+@マサムネ
+そちらの奏官殿は達観しているようだ
+
+;;B
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 24 "normal"
+# textboxarrow 0 2
+@ティルフィング
+マサムネにはマサムネのやり方が
+あるということですね
+
+# voice 1001 "masamune_0002"
+# label "select_label_end"
+# textboxarrow 0 1
+@マサムネ
+ところで、そなたらはもう地上にて
+淘汰を終えた身か？
+
+# face 24 "surprise"
+# textboxarrow 0 2
+@ティルフィング
+地上？
+いえ、まだ…
+
+# textboxarrow 0 1
+@マサムネ
+そうか
+拙者のイミテーションがどれだけ
+残っておるのか定かでないが
+
+# textboxarrow 0 1
+@マサムネ
+地上に降りた者達もいるので
+あろうから、いずれそこでも淘汰を
+為さねばならぬと考えていた
+
+# textboxarrow 0 2
+@ティルフィング
+あ！
+そうでした、マスター…
+
+# face 24 "angry"
+# textboxarrow 0 2
+@ティルフィング
+私のイミテーションも天上世界だけ
+とは限りません
+
+# textboxarrow 0 2
+@ティルフィング
+一度、地上に降りる必要が
+ありますね

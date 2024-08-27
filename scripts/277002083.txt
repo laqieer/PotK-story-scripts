@@ -1,0 +1,132 @@
+;;■□■ファンキル_LR海上編第2回（7月中旬）シナリオ_20190624■□■
+;;【タイトル：パラディーゾ幻想襲来編Ⅱ】
+;;【EP3】再臨する天の神
+;;背景：ビーチ
+;;-----------------------------------------
+# script "lisp"
+# background "sea_palmbeach_day"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス
+# body 2103811
+# pos 2103811 3
+# scale 2103811 0.8 0
+# layer 2103811 1
+# mask 2103811 off
+# alpha 2103811 1 0
+;;ヘレナ
+# body 2302811
+# pos 2302811 1
+# scale 2302811 0.8 0
+# layer 2302811 3
+# mask 2302811 off
+# alpha 2302811 0 0
+;;ティファレト
+# body 2503211
+# pos 2503211 3
+# scale 2503211 0.8 0
+# layer 2503211 2
+# mask 2503211 off
+# alpha 2503211 0 0
+;;-----------------------------------------
+# voice 1038 "almace_0029"
+# face 2103811 "angry"
+# textflame 1 1
+@アルマス
+このぉぉぉっー!!
+
+# textwindow "close"
+# alpha 2103811 0 0.5
+# waitandnext 0.5
+
+# face 2503211 "angry"
+# alpha 2503211 1 0.5
+# waitandnext 0.5
+
+;;アルマスの剣戟をティファレト防ぐ
+# se "SE_4000"
+# move 2103811 4 0
+# alpha 2103811 1 0
+# rightin 2103811 0.3
+# waitandnext 0.2
+
+# se "SE_4601"
+# fadein "white" 0.5
+# mask 2103811 on
+# mask 2503211 on
+# move 2503211 2 0.2
+# waitandnext 0.3
+
+# textwindow "nomal"
+# textflame 1 1
+@ティファレト
+無意味だというのに…
+
+;;画面外からヘレナ登場
+# se "SE_9021"
+# voice 3028 "herena_a_0004"
+# alpha 2103811 0 0.5
+# alpha 2503211 0 0.5
+# face 2302811 "usual"
+# alpha 2302811 1 0.5
+@ヘレナ
+それは、どうかな…？
+
+;;ヘレナの攻撃もティファレト防ぐ
+# textwindow "close"
+# alpha 2302811 0 0.5
+# waitandnext 0.5
+
+# se "SE_10521"
+# mask 2503211 off
+# face 2503211 "angry"
+# alpha 2503211 1 0.5
+# waitandnext 0.5
+
+;;アルマスの剣戟をティファレト防ぐ
+# move 2302811 2 0
+# alpha 2302811 1 0
+# leftin 2302811 0.3
+# waitandnext 0.2
+
+# se "SE_4601"
+# fadein "white" 0.5
+# mask 2302811 on
+# mask 2503211 on
+# move 2503211 4 0.2
+# waitandnext 0.3
+
+# voice 5032 "tiphereth_t_0012"
+# textwindow "nomal"
+# textflame 1 1
+@ティファレト
+無駄です
+この程度で倒せるほど、
+神を殺した者は甘くありません
+
+# textflame 1 1
+@ティファレト
+それより、早く返答を―
+
+# alpha 2302811 0 0.5
+# alpha 2503211 0 0.5
+# textflame 0 0
+@
+アルマス、ヘレナと戦いながらも、
+ティファレトの目は
+マスターをじっと見つめている
+
+# move 2302811 3 0
+# mask 2302811 off
+# face 2302811 "usual"
+# alpha 2302811 1 0.5
+;;もやもや吹き出し
+# textflame 1 1
+# textwindow "moya"
+@ヘレナ
+この人をここまで重視する
+その理由はなんだろう…？
+
+@ヘレナ
+ただ、強くなるためだけ…
+というわけではないようだね

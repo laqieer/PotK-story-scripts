@@ -1,0 +1,402 @@
+;;-----------------------------------------
+;;ファンキル　2020ウェディングイベントシナリオ
+;;Will you marry us?
+;;【EP.3】運命を繋ぐために
+;;1_3_3
+;;スクリプト最後の背景：室内（ハルモニア）
+;;-----------------------------------------
+# script "lisp"
+# background "201_room"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;カシウス・獣刻・ウロボロス　ウェディングver.
+# body 3303131
+# pos 3303131 3
+# scale 3303131 0.8 0
+# layer 3303131 2
+# alpha 3303131 0 0
+# mask 3303131 off
+;;ソロモン
+# body 3503111
+# pos 3503111 3
+# scale 3503111 0.8 0
+# layer 3503111 2
+# alpha 3503111 0 0
+# mask 3503111 off
+;;グラウ
+# body 164
+# pos 164 3
+# scale 164 0.6 0
+# layer 164 3
+# alpha 164 0 0
+# mask 164 off
+;;ムー
+# body 161
+# pos 161 3
+# scale 161 0.6 0
+# layer 161 3
+# alpha 161 0 0
+# mask 161 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;//演出：場面転換
+;;//背景：室内
+# voice 5031 "solomon_t_0004"
+# move 164 2 0
+# alpha 164 1 0
+# mask 164 on
+# move 3503111 4 0
+# face 3503111 "happy"
+# alpha 3503111 1 0
+# mask 3503111 on
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+ふう
+これでひと段落ね
+
+# voice 9950 "glau_0043"
+# textboxarrow 0 1
+@グラウ
+ソロモン
+そろそろカシウスから
+指輪を返して貰いませんか？
+
+# voice 5031 "solomon_t_0032"
+# face 3503111 "normal"
+# textboxarrow 0 3
+@ソロモン
+そうね、カシウスどこだろ…
+こっちの方に
+いるって聞いたけど
+
+;;//ＳＥ：ドサッ（マスターが倒れる音）
+# se "SE_3001"
+# waitandnext 0.5
+
+# emotionbody 1001 1 3503111 10 310
+# effectpattern 1001 1 0
+# effectstart 1001
+# voice 5031 "solomon_t_0023"
+# face 3503111 "surprise"
+# textboxarrow 0 3
+@ソロモン
+っ！
+今の音は？
+
+# textboxarrow 0 1
+@グラウ
+あの部屋からです
+行きましょう！
+
+;;//ＳＥ：タッタッタッ…（走る音）
+# se "SE_0876"
+# textwindow "close"
+# alpha 164 0 0.5
+# alpha 3503111 0 0.5
+# waitandnext 0.8
+
+# emotionbody 1002 1 3503111 10 310
+# effectpattern 1002 2 0
+# effectstart 1002
+# move 3503111 3 0
+# face 3503111 "surprise"
+# alpha 3503111 1 0.5
+# mask 3503111 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ソロモン
+うそ！？
+あれって…カシウスっ！
+
+# emotionbody 1003 1 3303131 10 310
+# effectpattern 1003 1 0
+# effectstart 1003
+# alpha 3503111 0 0.5
+# move 3303131 3 0
+# face 3303131 "surprise"
+# alpha 3303131 1 0.5
+# mask 3303131 off
+# textboxarrow 0 2
+@カシウス
+…！
+
+;;//演出：場面転換
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 3303131 0 0
+# move 3503111 3 0
+# face 3503111 "normal"
+# alpha 3503111 1 0
+# mask 3503111 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ソロモン
+カシウス…
+貴方が何を考えているのか、
+私にはわからないけれど
+
+# face 3503111 "angry"
+# textboxarrow 0 2
+@ソロモン
+マスターを傷つけるつもりなら
+見過ごすわけにはいかないわ…
+覚悟しなさい！
+
+# alpha 3503111 0 0.5
+# move 3303131 3 0
+# face 3303131 "usual"
+# alpha 3303131 1 0.5
+# mask 3303131 off
+# textboxarrow 0 2
+@カシウス
+…落ち着いて、ソロモン
+こうなることは、
+わたしですら予想外だった
+
+# textboxarrow 0 2
+@カシウス
+原因は、この指輪よ
+
+# move 3303131 2 0.5
+# mask 3303131 on
+# move 3503111 4 0
+# face 3503111 "normal"
+# alpha 3503111 1 0.5
+# mask 3503111 on
+# textboxarrow 0 3
+@ソロモン
+それ…私の指輪よね
+
+# textboxarrow 0 1
+@カシウス
+正確には…あなたの指輪と、
+わたしが手を加えた指輪を
+連動させたことが原因
+
+# textboxarrow 0 1
+@カシウス
+元々ソロモンの指輪には
+斬ル姫を操る…正確には
+人の心を誘導する能力があった
+
+# textboxarrow 0 1
+@カシウス
+そこに円環を繋げる力を付与した
+指輪を使うことで、わたしの意思を
+干渉させることができるの
+
+# emotionbody 1004 2 3503111 10 290
+# effectpattern 1004 1 1
+# effectstart 1004
+# textboxarrow 0 3
+@ソロモン
+どういうこと？
+
+# textboxarrow 0 1
+@カシウス
+この２つの指輪を使えば
+マスターがわたしと
+結婚したいという思考に誘導できる
+
+# textboxarrow 0 1
+@カシウス
+つまり疑似的に結婚の誓いを
+果たすことになるの
+
+# emotionbody 1005 1 3503111 10 310
+# effectpattern 1005 2 0
+# effectstart 1005
+# voice 5031 "solomon_t_0023"
+# face 3503111 "surprise"
+# textboxarrow 0 3
+@ソロモン
+け、結婚…！？
+
+# face 3303131 "happy"
+# textboxarrow 0 1
+@カシウス
+そう
+御館様の願いを
+叶えてあげるの
+
+# face 3503111 "normal"
+# textboxarrow 0 3
+@ソロモン
+で、でも、
+なぜマスターが倒れたの？
+
+# face 3303131 "usual"
+# textboxarrow 0 1
+@カシウス
+わたしが指輪を嵌める前に
+思考を一度に変えようとし過ぎたの
+
+# textboxarrow 0 1
+@カシウス
+そのせいで、本能的に
+意識を遮断したのだと思うわ
+
+# face 3303131 "happy"
+# textboxarrow 0 1
+@カシウス
+でも安心して…
+それはあくまでも一時的なこと
+
+# textboxarrow 0 1
+@カシウス
+この指輪の力を最大限に発揮して
+一瞬で心を塗り替えれば、
+御館様の意識はすぐに戻るわ…
+
+# textboxarrow 0 3
+@ソロモン
+な、なるほど…？
+よくわからないけど、
+マスターはちゃんと助かるのね？
+
+# voice 3031 "cassius_ge_0003"
+# textboxarrow 0 1
+@カシウス
+ええ…あとはわたしが
+この指輪をつけるだけ
+
+# face 3503111 "angry"
+# textboxarrow 0 3
+@ソロモン
+………んっ？
+ち、ちょっと待って！
+
+# textboxarrow 0 3
+@ソロモン
+それだと、
+マスターと貴方が結婚する…
+ってことになるんじゃ？
+
+# voice 3031 "cassius_ge_0033"
+# face 3303131 "usual"
+# textboxarrow 0 1
+@カシウス
+…？
+もちろん、そうだけど
+
+# emotionbody 1006 6 3503111 50 250
+# effectpattern 1006 1 1
+# effectstart 1006
+# voice 5031 "solomon_t_0012"
+# textboxarrow 0 3
+@ソロモン
+だ…ダメっ！
+そんなのはダメよ、
+見過ごせないっ！
+
+# voice 3031 "cassius_ge_0013"
+# face 3303131 "surprise"
+# textboxarrow 0 1
+@カシウス
+どうして…？
+
+# textboxarrow 0 3
+@ソロモン
+前に言ったでしょ！
+マスターは今のままが
+いいって！
+
+# face 3303131 "usual"
+# textboxarrow 0 1
+@カシウス
+わたしはそうは思わない
+御館様には幸せになって
+もらいたいから
+
+# face 3503111 "normal"
+# textboxarrow 0 3
+@ソロモン
+それは私だって同じだけど…
+
+# textboxarrow 0 1
+@カシウス
+それなら邪魔しないで
+
+# voice 5031 "solomon_t_0009"
+# face 3503111 "angry"
+# textboxarrow 0 3
+@ソロモン
+ちょっと待って！
+だからって、貴方が相手なのは
+納得がいかないわ
+
+# textboxarrow 0 1
+@カシウス
+それならどうするの？
+
+# face 3503111 "normal"
+# textboxarrow 0 3
+@ソロモン
+えっと、
+それは、その……
+
+;;//演出：画面揺れ
+;;//ＳＥ：ドゴーン！！（部屋の壁が突き破られる音）
+# bgm "stop"
+# se "SE_5620"
+# shake 0 0.5
+# waitandnext 0.5
+
+# emotionbody 1007 1 3303131 10 310
+# effectpattern 1007 2 0
+# effectstart 1007
+# se "SE_6501"
+# emotionbody 1008 1 3503111 10 310
+# effectpattern 1008 2 0
+# effectstart 1008
+# voice 3031 "cassius_ge_0025"
+# face 3303131 "surprise"
+# textboxarrow 0 1
+# face 3503111 "surprise"
+@カシウス
+っ！？
+
+# voice 5031 "solomon_t_0023"
+# textboxarrow 0 3
+@ソロモン
+うわっ！？
+けほっ、けほっ…！
+なんなのいきなり！？
+
+;;？？？（ムー）
+# bgmfile "bgm334" "BgmWedding001" 0
+# alpha 3303131 0 0.5
+# alpha 3503111 0 0.5
+# move 161 3 0
+# alpha 161 1 0.5
+# mask 161 off
+# textboxarrow 0 2
+@？？？
+おうおうおうっ！
+話はぜーんぶ
+聞かせてもらったぜぇ！
+
+;;？？？（ムー）
+# textboxarrow 0 2
+@？？？
+お前らの気持ちは
+よーくわかった…
+
+# voice 9953 "mwu_0004"
+# textboxarrow 0 2
+@ムー
+ここはひとつ勝負で決着を
+つけようじゃねぇかっ！

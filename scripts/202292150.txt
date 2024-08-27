@@ -1,0 +1,502 @@
+;;-----------------------------------------
+;;SEA4章_15
+;;-----------------------------------------
+# script "lisp"
+# background "in_city"
+# bgm "bgm023_024" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 1 0
+# face 270 "sad"
+;;マナナン
+# body 6504011
+# pos 6504011 3
+# scale 6504011 0.8 0
+# layer 6504011 3
+# mask 6504011 off
+# alpha 6504011 0 0
+;;オルフェウス（神令前）
+# body 234
+# pos 234 4
+# scale 234 0.8 0
+# layer 234 2
+# mask 234 off
+# alpha 234 0 0
+;;オルフェウス
+# body 5603211
+# pos 5603211 4
+# scale 5603211 0.8 0
+# layer 5603211 2
+# mask 5603211 off
+# alpha 5603211 0 0
+# brightness 5603211 0.7 0
+;;イージス
+# body 52000111
+# pos 52000111 4
+# scale 52000111 0.8 0
+# layer 52000111 3
+# mask 52000111 off
+# alpha 52000111 1 0
+# face 52000111 "sad"
+;;イチイバル
+# body 5402211
+# pos 5402211 2
+# scale 5402211 0.8 0
+# layer 5402211 4
+# alpha 5402211 0 0
+;;ヒョウハ
+# body 5402011
+# pos 5402011 4
+# scale 5402011 0.8 0
+# layer 5402011 2
+# mask 5402011 off
+# alpha 5402011 0 0
+;;ミュルグレス
+# body 5104611
+# pos 5104611 2
+# scale 5104611 0.8 0
+# layer 5104611 4
+# alpha 5104611 0 0
+;;如意金箍棒
+# body 5203111
+# pos 5203111 3
+# scale 5203111 0.7 0
+# layer 5203111 3
+# mask 5203111 off
+# alpha 5203111 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：町：in_city
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+オルフェウスさん、
+しっかりして下さい…！
+
+# voice 52000111 "aegis_c_0015"
+# se "SE_6166"
+# sedelay "SE_6166" 0.7
+# textboxarrow 0 3
+@イージス
+ええと…
+こういうときの対処法は…
+
+# alpha 52000111 0 0.3
+# alpha 270 0 0.3
+# face 5402011 "angry"
+# alpha 5402011 1 0.3
+# alpha 5104611 1 0.3
+# textboxarrow 0 3
+@ヒョウハ
+おい、イチイバル！
+もう十分だろ！
+早くしてくれよっ
+
+# textboxarrow 0 1
+@ミュルグレス
+何だ、意外とあっけなかったね
+
+# voice 650401 "manannan_ura_0022"
+# alpha 5402011 0 0.3
+# alpha 5104611 0 0.3
+# face 6504011 "surprise"
+# alpha 6504011 1 0.3
+# textboxarrow 0 2
+@マナナン
+あれ？
+また別の愉快なことが始まったのかな
+
+# voice 560321 "orpheus_c_0015"
+# alpha 6504011 0 0.3
+# face 5402211 "sad"
+# alpha 5603211 1 0.3
+# face 5603211 "sad"
+# alpha 5402211 1 0.3
+# textboxarrow 0 3
+@オルフェウス
+ううっ…
+あたしの中に…何か別の力が…
+
+# textboxarrow 0 1
+@イチイバル
+ごめんね、オルオル
+辛い思いをさせて
+でも、これで大丈夫
+
+# textboxarrow 0 1
+@イチイバル
+キミの中に「別物」が混じっている
+それを強く意識するんだ
+その力はキミのものじゃない
+
+# textboxarrow 0 1
+@イチイバル
+それはフォルセティ
+キミが神令している神の力だよ
+
+# textboxarrow 0 3
+@オルフェウス
+う…ああっ…
+そっか…あたし…
+知らないうちに…
+
+# textboxarrow 0 1
+@イチイバル
+フォルセティの力に呑まれて
+しまうところだったんだ
+ボクが切り離してあげるからね
+
+# textboxarrow 0 3
+@オルフェウス
+ううっ…
+イッチーさん…よろ…
+
+# voice 540221 "ichiibal_c_0003"
+# face 5402211 "usual"
+# textboxarrow 0 1
+@イチイバル
+…よし
+今なら術式を使える
+これで――
+
+;;如意金箍棒がやってくる
+# se "SE_5575"
+# scale 5203111 0.8 0.5
+# face 5203111 "angry"
+# alpha 5203111 1 0.3
+# move 5603211 5 0.3
+# alpha 5603211 0 0.3
+# move 5402211 1 0.3
+# alpha 5402211 0 0.3
+# textboxarrow 0 2
+@如意金箍棒
+待ってー！
+イチイバルちゃん、ダメー！
+
+# voice 540221 "ichiibal_c_0022"
+# alpha 5203111 0 0.3
+# move 5603211 4 0
+# alpha 5603211 1 0.3
+# move 5402211 2 0
+# face 5402211 "surprise"
+# alpha 5402211 1 0.3
+# textboxarrow 0 1
+@イチイバル
+如意金箍棒？
+…悪いけど、邪魔はさせないよ
+ボクの方が早い
+
+# face 5402211 "usual"
+# textboxarrow 0 1
+@イチイバル
+術式、発動！
+
+;;術式が発動する
+# se "SE_9173"
+# fadein "white" 1
+# textboxarrow 0 0
+# waitandnext 1
+
+# textboxarrow 0 3
+@オルフェウス
+あああああああああああああ！？
+
+# voice 540221 "ichiibal_c_battle_0006"
+# face 5402211 "sad"
+# textboxarrow 0 1
+@イチイバル
+くっ…
+制御が難しいな
+それに凄い反動だ…
+
+# textboxarrow 0 1
+@イチイバル
+これは…天才美少女戦姫
+イチイバルさんじゃないと
+扱いきれなかったね
+
+# textboxarrow 0 3
+@オルフェウス
+ああっ…
+
+;;オルフェウスが神令前の姿になる
+# bgm "stop"
+# se "SE_5752"
+# alpha 5603211 0 0
+# alpha 234 1 0
+# face 234 "sad"
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 2
+
+# voice 540221 "ichiibal_c_0005"
+# face 5402211 "normal"
+# textwindow "nomal"
+# textboxarrow 0 1
+@イチイバル
+…やった
+成功だ
+
+# alpha 234 0 0.3
+# move 270 4 0
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textboxarrow 0 3
+@ミーミル
+オルフェウスさんの姿が…
+
+# voice 540221 "ichiibal_c_0030"
+# textboxarrow 0 1
+@イチイバル
+これでオルオルとフォルセティを
+切り離すことができたよ
+みんな、ありがとう
+
+# voice 540201 "hyoha_c_0006"
+# alpha 270 0 0.3
+# alpha 5402211 0 0.3
+# move 5402011 3 0
+# mask 5402011 off
+# face 5402011 "happy"
+# alpha 5402011 1 0.3
+# textboxarrow 0 2
+@ヒョウハ
+よっしゃぁぁぁ！
+良かったな、オルフェウス
+
+# serif 1
+@オルフェウス
+…………
+
+# face 5402011 "normal"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@ヒョウハ
+あ、寝てる
+ゆっくり休みなっ
+
+# move 5203111 1 0
+# alpha 5402011 0 0.3
+# move 5402211 3 0
+# mask 5402211 off
+# alpha 5402211 1 0.3
+# textboxarrow 0 2
+@イチイバル
+これでオルオルの問題は解決だね
+次は――
+
+# move 5402211 4 0.5
+# layer 5402211 2
+# move 5203111 2 0.5
+# layer 5203111 4
+# mask 5203111 on
+# face 5203111 "sad"
+# alpha 5203111 1 0.3
+# bgm "bgm031" 0
+# textboxarrow 0 1
+@如意金箍棒
+解決じゃないよー！
+何で術式を止めてくれなかったのっ？
+
+# face 5402211 "surprise"
+# textboxarrow 0 3
+@イチイバル
+ああ、キン子のことを忘れてた
+
+# voice 520311 "nyoikinkobou_c_0010"
+# face 5203111 "angry"
+# textboxarrow 0 1
+@如意金箍棒
+誰がキン子だってぇ！？
+
+# face 5203111 "sad"
+# textboxarrow 0 1
+@如意金箍棒
+ワタシはニョイ子だっていつも…
+あら、いけない
+ワタシったら、つい…
+
+# textboxarrow 0 1
+@如意金箍棒
+それより！
+みんなの危機なんだから、
+慌てるに決まってるよ！
+
+# alpha 5402211 0 0.3
+# alpha 5203111 0 0.3
+# move 52000111 3 0
+# mask 52000111 off
+# face 52000111 "angry"
+# alpha 52000111 1 0.3
+# textboxarrow 0 2
+@イージス
+貴様も未曾有の危機を
+感じ取ったのだなっ
+
+# voice 520311 "nyoikinkobou_c_0022"
+# face 5203111 "angry"
+# alpha 5402211 1 0.3
+# alpha 5203111 1 0.3
+# alpha 52000111 0 0.3
+# textboxarrow 0 1
+@如意金箍棒
+未曾有の危機？
+それは分からないけど、みんな
+神令の力が増大してるでしょっ
+
+# voice 540221 "ichiibal_c_0032"
+# textboxarrow 0 3
+@イチイバル
+そうだよ
+だから、切り離すための術式を
+使ったんだ
+
+# textboxarrow 0 3
+@イチイバル
+まず、かなり危ない状態になっていた
+オルオルを解放したよ
+次はロジェに――
+
+# textboxarrow 0 1
+@如意金箍棒
+待って！
+その術式、どうやって作ったの？
+
+# bgmfile "bgm602" "BgmSecretlyEverAfter002" 0
+# voice 540221 "ichiibal_c_0023"
+# face 5402211 "surprise"
+# textboxarrow 0 3
+@イチイバル
+どうやってって…
+ボクが「揺らぎ」について調べて
+たくさんの書物にあたって…
+
+# textboxarrow 0 1
+@如意金箍棒
+それから？
+それから、どうしたのっ？
+
+# textboxarrow 0 3
+@イチイバル
+それから…それからボクは…
+え？ボクは何かを読んで…
+この術式を…
+
+# textboxarrow 0 3
+@イチイバル
+…………
+
+# textboxarrow 0 1
+@如意金箍棒
+イチイバルちゃん！
+もしかして、あなた…
+あなたも神令の力に呑まれてない？
+
+# textboxarrow 0 1
+@如意金箍棒
+その術式を作り上げたのは、
+本当にあなた？
+それとも…
+
+# voice 540221 "ichiibal_c_0025"
+# move 270 1 0
+# face 5402211 "sad"
+# textboxarrow 0 3
+@イチイバル
+あ…あああああ…！
+しまった！
+ボクとしたことがっ…
+
+# move 5402211 3 0.5
+# face 5402211 "angry"
+# alpha 5203111 0 0.3
+# textboxarrow 0 2
+@イチイバル
+ミーミル！
+
+# move 5402211 4 0.5
+# move 270 2 0.5
+# face 270 "surprise"
+# alpha 270 1 0.3
+# voice 9917 "mimir_navikan_0022"
+# textboxarrow 0 1
+@ミーミル
+は、はいっ
+何でしょう？
+
+# textboxarrow 0 3
+@イチイバル
+手を！
+
+;;イチイバルがミーミルと手を繋ぐ
+# se "SE_0737"
+# move 5402211 3 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+# textboxarrow 0 1
+@ミーミル
+えっ？
+握手ですか…
+
+# voice 540221 "ichiibal_c_battle_0006"
+# textboxarrow 0 2
+@イチイバル
+ごめん！
+キミに賭けるよ
+何とかしてロジェと連絡を――
+
+# voice 540201 "hyoha_c_0016"
+# alpha 5402211 0 0.3
+# alpha 270 0 0.3
+# move 5402011 4 0
+# layer 5402011 2
+# mask 5402011 off
+# face 5402011 "angry"
+# alpha 5402011 1 0.3
+# move 5104611 2 0
+# layer 5104611 4
+# mask 5104611 on
+# face 5104611 "angry"
+# alpha 5104611 1 0.3
+# textboxarrow 0 3
+@ヒョウハ
+うおおおおおおおおおおおおお！！
+
+# textboxarrow 0 1
+@ミュルグレス
+うあああああああああああああ！！
+
+# alpha 5402011 0 0.3
+# alpha 5104611 0 0.3
+# alpha 270 1 0.3
+# move 52000111 4 0
+# face 52000111 "surprise"
+# alpha 52000111 1 0.3
+# textboxarrow 0 1
+@ミーミル
+ヒョウハさん！？
+ミュルグレスさん！？
+
+# textboxarrow 0 3
+@イージス
+次から次へと、何事だ…！？
+
+# fadeout "black" 1
+# waitandnext 1

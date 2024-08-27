@@ -1,0 +1,336 @@
+;;-----------------------------------------
+;;鎌倉10_0
+;;-----------------------------------------
+# script "lisp"
+# background "beach"
+# bgm "bgm004" 0
+;;-----------------------------------------
+;;鎌倉ヘレナ
+# body 6302811
+# pos 6302811 4
+# scale 6302811 0.8 0
+# layer 6302811 4
+# mask 6302811 off
+# alpha 6302811 1 0
+;;鎌倉ニール
+# body 323
+# pos 323 3
+# scale 323 0.8 0
+# layer 323 5
+# mask 323 off
+# alpha 323 0 0
+;;鎌倉リサナウト
+# body 6203011
+# pos 6203011 1
+# scale 6203011 0.8 0
+# layer 6203011 2
+# alpha 6203011 0 0
+;;ボス魔獣
+# body 900019
+# pos 900019 2
+# scale 900019 1 0
+# layer 900019 5
+# alpha 900019 1 0
+# reversal 900019 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：beach
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# voice 530281 "herena_di_0010"
+# face 6302811 "angry"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+磔にしてやろうか？
+
+# textboxarrow 0 1
+@魔獣
+ガアアアアア…
+
+;;ヘレナが魔獣を倒す
+# move 900019 1 1
+# alpha 900019 0 1
+# textwindow "close"
+# waitandnext 1.5
+
+# move 6302811 3 0.5
+# face 6302811 "normal"
+# textwindow "nomal"
+# textboxarrow 0 2
+@ヘレナ
+ふぅ…
+これで全て終わった…
+
+# voice 530281 "herena_di_0044"
+# face 6302811 "sad"
+# textboxarrow 0 2
+@ヘレナ
+ニール……
+
+# voice 530281 "herena_di_0045"
+# face 6302811 "surprise"
+# textboxarrow 0 2
+@ヘレナ
+ニール…！
+
+;;ヘレナが走り去る
+# move 6302811 1 0.5
+# alpha 6302811 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：sea_park_day
+# background "sea_park_day"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 9952 "nir_0015"
+# alpha 323 0.4 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+@ニール
+やったわね、ヘレナ…
+
+# textboxarrow 0 2
+@ニール
+ごめんなさい、ヘレナ
+きっとアタチのせいで
+「揺らぎ」が起きちゃったのよね
+
+# textboxarrow 0 2
+@ニール
+ヘレナとまた一緒に戦えることを
+願ってしまったから…
+
+# textboxarrow 0 2
+@ニール
+アタチ達は戦うために必要だったから
+繋がっていたけど…
+
+# textboxarrow 0 2
+@ニール
+今のヘレナにアタチは必要ない
+それが分かっちゃったの…
+
+# textboxarrow 0 2
+@ニール
+せめて最後に…ヘレナの勇姿を
+見ておきたかったのよね…
+
+;;ニールが消えていく
+# move 6302811 5 0
+# alpha 323 0.2 1
+# waitandnext 2
+
+# voice 530281 "herena_di_0045"
+# move 323 2 1
+# move 6302811 4 0.3
+# face 6302811 "surprise"
+# alpha 6302811 1 0.3
+# textboxarrow 0 3
+@ヘレナ
+ニール！
+
+# voice 9952 "nir_0046"
+# textboxarrow 0 1
+@ニール
+ヘレナ…
+
+# face 6302811 "angry"
+# textboxarrow 0 3
+@ヘレナ
+ニール！
+いやだ！
+ヘレナは…！
+
+# textboxarrow 0 1
+@ニール
+…バイバイ
+
+;;ニールが消える
+# alpha 323 0 2
+# textboxarrow 0 0
+# waitandnext 3
+
+# voice 530281 "herena_di_0015"
+# face 6302811 "sad"
+# textboxarrow 0 3
+@ヘレナ
+あ…ああっ…
+ううっ…
+
+# textboxarrow 0 3
+@ヘレナ
+…………
+
+;;リサナウトがやってくる
+# voice 520301 "risanautr_ca_0049"
+# move 6203011 2 1
+# face 6203011 "normal"
+# alpha 6203011 1 0.3
+# textboxarrow 0 1
+@リサナウト
+全ての魔獣を倒せたみたいね
+この世界の平和は守られたわ
+
+# textboxarrow 0 3
+@ヘレナ
+…………
+
+# voice 520301 "risanautr_ca_0032"
+# textboxarrow 0 1
+@リサナウト
+装置も今なら起動できそうよ
+あとは元の世界に帰るだけね
+
+# textboxarrow 0 3
+@ヘレナ
+…………
+
+# face 6203011 "usual"
+# textboxarrow 0 1
+@リサナウト
+さあ、どうする？
+
+# textboxarrow 0 1
+@リサナウト
+この時間軸で確定して良いのかしら？
+
+# textboxarrow 0 3
+@ヘレナ
+…………
+
+# voice 530281 "herena_di_0028"
+# face 6302811 "angry"
+# textboxarrow 0 3
+@ヘレナ
+…アナタには色々と
+言いたいことがあるんだけど、
+今はいいや
+
+# textboxarrow 0 3
+@ヘレナ
+この時間軸で確定して良いのかって？
+そんなの…
+
+# textsize 26
+# textboxarrow 0 3
+@ヘレナ
+良いわけないだろ！！
+
+# textsize 24
+# textboxarrow 0 1
+@リサナウト
+そう
+それじゃ時を遡るけど…
+
+# textboxarrow 0 1
+@リサナウト
+ただ遡っただけじゃ、
+あなたはさっきと同じ行動を
+取るでしょうね
+
+# voice 530281 "herena_di_0007"
+# face 6302811 "happy"
+# textboxarrow 0 3
+@ヘレナ
+…ふふっ
+あまりヘレナをバカにするなよ
+
+# textboxarrow 0 3
+@ヘレナ
+そのための装置だろ
+今ならこれでヘレナも記憶を
+残したまま時を遡れるはずだ
+
+# voice 520301 "risanautr_ca_0004"
+# face 6203011 "normal"
+# textboxarrow 0 1
+@リサナウト
+さすがに気づいたわね
+でも、マナの消費量が
+思ったより多いのよ
+
+# textboxarrow 0 1
+@リサナウト
+だから今の蓄積量で遡れるのは
+ほんの少し前まで
+
+# textboxarrow 0 1
+@リサナウト
+具体的に言うと、
+ニールがあなたの下を去った
+タイミングね
+
+# voice 530281 "herena_di_0003"
+# face 6302811 "angry"
+# textboxarrow 0 3
+@ヘレナ
+十分だよ
+さあ、さっさと片付けよう
+
+# voice 520301 "risanautr_ca_0002"
+# face 6203011 "usual"
+# textboxarrow 0 1
+@リサナウト
+一つだけ言っておくわ
+あなたがニールを追ったら
+魔獣の被害は拡大する
+
+# textboxarrow 0 1
+@リサナウト
+私がなるべく足止めするけど
+取り逃がしたら
+大惨事になるでしょうね
+
+# textboxarrow 0 3
+@ヘレナ
+ニールか世界か…
+なんて陳腐なことを
+言ったりしないよな？
+
+# textboxarrow 0 1
+@リサナウト
+それはあなた達次第よ
+
+# voice 530281 "herena_di_0004"
+# face 6302811 "happy"
+# textboxarrow 0 3
+@ヘレナ
+なるほど…
+ヘレナの選択で世界が滅ぶことも
+あるわけだ…くふっ
+
+# voice 520301 "risanautr_ca_0032"
+# face 6203011 "normal"
+# textboxarrow 0 1
+@リサナウト
+いつもの調子を取り戻したみたいね
+それじゃ、遠慮無く
+
+# face 6302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+ニール…
+今度はちゃんと伝えるよ
+ヘレナの気持ちを
+
+# fadeout "black" 1
+# waitandnext 1

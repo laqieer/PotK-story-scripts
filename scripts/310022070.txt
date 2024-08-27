@@ -1,0 +1,446 @@
+;;-----------------------------------------
+;;SEA2章_7
+;;-----------------------------------------
+# script "lisp"
+# background "town_2"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 1 0
+;;カドケウス
+# body 600431
+# pos 600431 1
+# scale 600431 0.8 0
+# layer 600431 2
+# mask 600431 off
+# alpha 600431 0 0
+;;ケーリュケイオン
+# body 600531
+# pos 600531 5
+# scale 600531 0.8 0
+# layer 600531 4
+# alpha 600531 0 0
+;;ハイス
+# body 292
+# pos 292 3
+# scale 292 0.8 0
+# layer 292 3
+# mask 292 off
+# alpha 292 0 0
+;;医者
+# body 69
+# pos 69 4
+# scale 69 0.8 0
+# layer 69 3
+# mask 69 off
+# alpha 69 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：町
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# face 270 "normal"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+夜が明けました…
+
+# voice 9917 "mimir_navikan_0001"
+# textboxarrow 0 2
+@ミーミル
+マスター様
+一度、クライノートさんのお屋敷に
+戻りましょう
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 270 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 270 "surprise"
+# alpha 270 1 0.5
+# se "SE_5000"
+# sedelay "SE_5001" 1.2
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+お屋敷までの上り坂は、
+やはり一苦労ですね
+マスター様、お疲れでは…あっ？
+
+# alpha 270 0 0.3
+# face 292 "sad"
+# alpha 292 1 0.3
+# textboxarrow 0 2
+@ハイス
+ううっ…
+
+# bgm "bgm031" 0
+# face 270 "surprise"
+# alpha 270 1 0.3
+# alpha 292 0 0.3
+# textboxarrow 0 2
+@ミーミル
+あそこで蹲っておられるのは
+ハイスさんではっ？
+
+# se "SE_5575"
+# move 270 5 0.5
+# alpha 270 0 0.3
+# textwindow "close"
+# waitandnext 0.8
+
+# move 270 1 0
+# move 292 4 0
+# face 292 "sad"
+# alpha 292 1 0.3
+# waitandnext 0.5
+
+# move 270 2 0.5
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+# textwindow "normal"
+@ミーミル
+大丈夫ですか？
+
+# face 292 "normal"
+# textboxarrow 0 3
+@ハイス
+ああ…お嬢ちゃん…
+大丈夫じゃ…
+儂は…行かねばならん…
+
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+とても苦しそうにお見受けします
+汗も随分とかかれて…
+
+# textboxarrow 0 3
+@ハイス
+大丈夫…なんじゃ…
+それより儂は…
+
+# textboxarrow 0 3
+@ハイス
+姉さんに…会いに行かねばならん…
+
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+お姉さんですか？
+その方は、どちらに
+お住まいなのでしょう？
+
+# textboxarrow 0 1
+@ミーミル
+家がお近くなのであれば、
+すぐに呼んでまいりますけれど…
+
+# textboxarrow 0 3
+@ハイス
+姉さんは…
+あそこに…
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+あそこ…？
+あちらにはクライノートさんの
+お屋敷が…
+
+# face 292 "sad"
+# textboxarrow 0 3
+@ハイス
+ううっ…
+
+;;ハイスが倒れる
+# se "SE_3001"
+# scale 292 0.75 0.8
+# alpha 292 0 0.3
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@ミーミル
+ハイスさん…！？
+
+;;選択肢
+# select "助けを呼ぼう！" "select_label_01" "急いで病院へ！" "select_label_01"
+ハイスさん…！？
+
+# label "select_label_01"
+# voice 9917 "mimir_navikan_0003"
+# move 270 3 0.5
+# face 270 "angry"
+# textboxarrow 0 2
+@ミーミル
+は、はいっ
+マスター様の仰る通りに
+
+;;暗転
+# fadeout "black" 0.8
+# waitandnext 0.8
+
+;;背景：病院
+# background "infirmary"
+# bgm "bgm005" 0
+# alpha 270 0 0
+# textwindow "close"
+# waitandnext 0.4
+
+# move 270 2 0
+# fadein "black" 0.8
+# waitandnext 0.8
+
+# face 270 "normal"
+# face 69 "normal"
+# alpha 270 1 0.3
+# alpha 69 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@医者
+何とか容態は落ち着きました
+危ないところでしたが…
+
+# face 69 "sad"
+# textboxarrow 0 3
+@医者
+あれほど安静にしているよう
+言ったのに…
+頑固な爺さんだ
+
+# voice 9917 "mimir_navikan_0002"
+# textboxarrow 0 1
+@ミーミル
+あの…ハイスさんは持病を？
+
+# textboxarrow 0 3
+@医者
+肺の病です
+かなりの高齢ですから、
+いつ何が起きてもおかしくない…
+
+# move 292 5 0
+# textboxarrow 0 3
+@医者
+ご家族も心配しているのに、
+すぐ一人で出歩こうとするんです
+困ったものですよ
+
+# alpha 69 0 0.3
+# move 292 4 0.5
+# face 292 "normal"
+# alpha 292 1 0.3
+# textboxarrow 0 3
+@ハイス
+…儂のせいなんじゃ
+
+# voice 9917 "mimir_navikan_0004"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+ハイスさん
+目が覚めたのですね
+
+# face 292 "sad"
+# textboxarrow 0 3
+@ハイス
+儂のせいで…あのお嬢ちゃんが
+怪盗になってしもうた…
+儂が、何とかせにゃならんのじゃ
+
+# voice 9917 "mimir_navikan_0002"
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+怪盗？
+あの、それはシェキナーさんの
+ことでしょうか？
+
+# face 292 "normal"
+# textboxarrow 0 3
+@ハイス
+ああ…あのお嬢ちゃんは、
+そんな名前じゃったのう…
+
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+そのお話、もう少し詳しく
+聞かせていただけませんか？
+
+# face 69 "normal"
+# alpha 69 1 0.3
+# alpha 292 0 0.3
+# textboxarrow 0 3
+@医者
+ハイスさん
+もうすぐご家族が来ますから
+寝ていてください
+
+# face 69 "angry"
+# textboxarrow 0 3
+@医者
+君達、ちょっと
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.8
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.8
+
+# face 270 "normal"
+# face 69 "angry"
+# textwindow "nomal"
+# textboxarrow 0 3
+@医者
+これ以上、無理をさせないで下さい
+正直、ハイスさんはもう長くない…
+
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+そんなっ…
+
+# face 69 "sad"
+# textboxarrow 0 3
+@医者
+本人も分かっているはずです
+それなのに、最近
+どんどん意固地になって…
+
+# textboxarrow 0 3
+@医者
+なるべく穏やかに
+過ごして欲しいものですが…
+
+# alpha 69 0 0.3
+# alpha 270 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;画面両端にカドケウスとケーリュケイオンが現れる
+# face 600431 "usual"
+# face 600531 "normal"
+# alpha 600431 1 0.5
+# alpha 600531 1 0.5
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@カドケウス
+…………
+
+# textboxarrow 0 3
+@ケーリュケイオン
+…………
+
+;;選択肢
+# select "カドケウス！" "select_label_02" "ケーリュケイオン！" "select_label_03"
+！
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# voice 6004 "kadokeusu_0004"
+# face 600431 "normal"
+# textboxarrow 0 1
+@カドケウス
+おっと
+気づかれちゃったね～
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# voice 6005 "keryukeion_0004"
+# face 600531 "smile"
+# textboxarrow 0 3
+@ケーリュケイオン
+おっと
+見つかっちゃったね～
+
+;;二人が姿を消す
+# label "select_label_end"
+# leftout 600431 1
+# rightout 600531 1
+# textwindow "close"
+# waitandnext 1
+
+# move 270 3 0
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+あっ
+カドケウスさん
+ケーリュケイオンさん
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：町
+# background "town_2"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 270 "sad"
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+お二人とも
+お話できればと思いましたが
+いなくなってしまわれました…
+
+# voice 9917 "mimir_navikan_0001"
+# face 270 "normal"
+# textboxarrow 0 2
+@ミーミル
+マスター様、クライノートさんの
+お屋敷に戻って、今一度
+お話を聞いてみては如何でしょう？
+
+# textboxarrow 0 2
+@ミーミル
+リットゥさんのことも、
+ハイスさんのお姉さんのことも
+気になります
+
+# fadeout "black" 1
+# waitandnext 1

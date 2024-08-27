@@ -1,0 +1,546 @@
+;;-----------------------------------------
+;;■□■新・海上編9月中旬シナリオ■□■
+;;《第六回》
+;;【第5幕】久遠のパラディーゾ 戦闘前
+;;スクリプト最後の背景：密林（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "sea_jungle_day"
+# bgm "bgm004" 0
+;;------------------------------------------
+;;グラーシーザ
+# body 2302611
+# pos 2302611 3
+# scale 2302611 0.8 0
+# layer 2302611 2
+# alpha 2302611 0 0
+# mask 2302611 on
+# face 2302611 "normal"
+;;スロウス（レーヴァテイン）
+# body 2100221
+# pos 2100221 3
+# scale 2100221 0.8 0
+# layer 2100221 2
+# alpha 2100221 0 0
+# mask 2100221 on
+# face 2100221 "normal"
+;;ラグナロク
+# body 2103611
+# pos 2103611 3
+# scale 2103611 0.8 0
+# layer 2103611 2
+# alpha 2103611 0 0
+# mask 2103611 on
+# face 2103611 "normal"
+;;エンヴィ（ロンギヌス）
+# body 2300121
+# pos 2300121 3
+# scale 2300121 0.8 0
+# layer 2300121 2
+# alpha 2300121 0 0
+# mask 2300121 on
+# face 2300121 "normal"
+;;水着ミネルヴァ
+# body 2302511
+# pos 2302511 3
+# scale 2302511 0.8 0
+# layer 2302511 2
+# mask 2302511 on
+# alpha 2302511 0 0
+# face 2302511 "normal"
+;;フライシュッツ（水着）
+# body 2502711
+# pos 2502711 3
+# scale 2502711 0.8 0
+# layer 2502711 2
+# mask 2502711 on
+# alpha 2502711 0 0
+# face 2502711 "normal"
+;;水着ダモクレス
+# body 2103511
+# pos 2103511 3
+# scale 2103511 0.8 0
+# layer 2103511 2
+# alpha 2103511 0 0
+# mask 2103511 on
+# face 2103511 "normal"
+;;ネス
+# body 2602011
+# pos 2602011 3
+# scale 2602011 0.8 0
+# layer 2602011 2
+# alpha 2602011 0 0
+# mask 2602011 on
+# face 2602011 "normal"
+;;エルキュール
+# body 2202511
+# pos 2202511 3
+# scale 2202511 0.8 0
+# layer 2202511 2
+# alpha 2202511 0 0
+# mask 2202511 on
+# face 2202511 "normal"
+;;水着グリード（ティルフィング）
+# body 2101421
+# pos 2101421 3
+# scale 2101421 0.8 0
+# layer 2101421 3
+# alpha 2101421 0 0
+# mask 2101421 on
+# face 2101421 "normal"
+;;水着グラトニー（パラシュ）
+# body 2200421
+# pos 2200421 3
+# scale 2200421 0.8 0
+# layer 2200421 2
+# alpha 2200421 0 0
+# mask 2200421 on
+# face 2200421 "normal"
+;;水着ラスト（アルテミス）
+# body 2400121
+# pos 2400121 3
+# scale 2400121 0.8 0
+# layer 2400121 2
+# alpha 2400121 0 0
+# mask 2400121 on
+# face 2400121 "normal"
+;;ラース（マサムネ）
+# body 2100121
+# pos 2100121 3
+# scale 2100121 0.8 0
+# layer 2100121 2
+# alpha 2100121 0 0
+# mask 2100121 on
+# face 2100121 "normal"
+;;プライド（フライクーゲル）
+# body 2500221
+# pos 2500221 3
+# scale 2500221 0.8 0
+# layer 2500221 2
+# alpha 2500221 0 0
+# mask 2500221 on
+# face 2500221 "normal"
+;;スイハ
+# body 2401711
+# pos 2401711 3
+# scale 2401711 0.8 0
+# layer 2401711 2
+# alpha 2401711 0 0
+# mask 2401711 on
+# face 2401711 "normal"
+;;--------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;--------------------------------------
+;;//背景：密林（昼）
+# face 2103611 "usual"
+# alpha 2103611 1 0
+# mask 2103611 off
+# textflame 0 0
+;;ナレーション
+@
+ラグナロクは結界の歪みの前に立ち、
+これまでのことを思い返していた
+
+# voice 1036 "ragnarok_0004"
+# textflame 1 1
+@ラグナロク
+短い間だったけど、
+みんなと一緒に過ごせて
+楽しかったな…
+
+# se "SE_0742"
+;;//演出：回想
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "sea_resort_day"
+# face 2103611 "normal"
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# textwindow "normal"
+# textflame 1 1
+@ラグナロク
+私はここに、「マスター争奪
+ビーチフラッグス大会」の開催を
+宣言する！
+
+# alpha 2103611 0 0.5
+# face 2101421 "sad"
+# move 2101421 3 0
+# alpha 2101421 1 0.5
+# mask 2101421 off
+# voice 10147 "tyrufing_k_0022"
+@グリード
+ビーチ…フラッグス…？
+
+# alpha 2101421 0 0.5
+# face 2502711 "happy"
+# alpha 2502711 1 0.5
+# mask 2502711 off
+# voice 5027 "freischotz_0021"
+@フライシュッツ
+わーい！
+とっても楽しそう〜！
+おねーちゃん、そういうの大好き！
+
+# alpha 2502711 0 0.5
+# move 2200421 3 0
+# alpha 2200421 1 0.5
+# mask 2200421 off
+# voice 20047 "parashu_k_0007"
+@グラトニー
+ふん…
+たまにはこういう戦いも
+悪くない
+
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "sea_jungle_day"
+# alpha 2200421 0 0
+# imagealpha 0 0 0
+# face 2103611 "smile"
+# alpha 2103611 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//演出：回想ここまで
+# textwindow "normal"
+# textflame 1 1
+# voice 1036 "ragnarok_0005"
+@ラグナロク
+ブラックキラーズの子達も、
+みんな個性的で、面白かった…
+
+# face 2103611 "normal"
+@ラグナロク
+私が、マスターも、みんなも守る…
+そう決めたんだから…
+
+# se "SE_5602"
+# bgm "stop"
+# textflame 0 0
+@
+ラグナロクが覚悟を決めたその時、
+マスター達が間一髪で追いついた
+
+# voice 1036 "ragnarok_0022"
+# face 2103611 "sad"
+# textflame 1 1
+@ラグナロク
+マスター…
+それにみんなも…どうして…？
+
+# voice 2025 "hercule_0031"
+# bgmfile "bgm198" "Bgm3Tcollabo002" 0
+# alpha 2103611 0 0.5
+# face 2202511 "sad"
+# alpha 2202511 1 0.5
+# mask 2202511 off
+@エルキュール
+ラグナロク、さっきはごめんなさい…
+私、あなたかマスターだけが
+犠牲になることばかり考えていた
+
+# face 2202511 "angry"
+@エルキュール
+あなたを一人にはしません！
+私も、この身を捧げます！
+
+# alpha 2202511 0 0.5
+# face 2103611 "sad"
+# alpha 2103611 1 0.5
+@ラグナロク
+エルキュール！
+なにを言い出すの？
+
+# voice 3025 "minerva_0004"
+# alpha 2103611 0 0.5
+# face 2302511 "normal"
+# alpha 2302511 1 0.5
+# mask 2302511 off
+@ミネルヴァ
+私達、全員で決めたことなのです、
+もちろん、私も捧げます
+
+# voice 1035 "damocles_0004"
+# alpha 2302511 0 0.5
+# face 2103511 "happy"
+# alpha 2103511 1 0.5
+# mask 2103511 off
+@ダモクレス
+クレスも！クレスも！
+
+# voice 5027 "freischotz_0005"
+# alpha 2103511 0 0.5
+# alpha 2502711 1 0.5
+# face 2502711 "happy"
+# mask 2502711 off
+@フライシュッツ
+おねーちゃんもだよ！
+みんな一緒なら寂しくないね〜！
+
+# voice 4017 "suiha_0002"
+# alpha 2502711 0 0.5
+# face 2401711 "usual"
+# alpha 2401711 1 0.5
+# mask 2401711 off
+@スイハ
+私もお供します、ラグナロク…
+
+# voice 6020 "ness_0004"
+# alpha 2401711 0 0.5
+# alpha 2602011 1 0.5
+# mask 2602011 off
+# face 2602011 "smile"
+@ネス
+わたしの力も
+どうぞ使ってください
+
+# voice 3026 "grayside_0004"
+# alpha 2602011 0 0.5
+# face 2302611 "usual"
+# alpha 2302611 1 0.5
+# mask 2302611 off
+@グラーシーザ
+あたしもだ、ラグナロク！
+一人で決めるなといっただろう？
+
+# alpha 2302611 0 0.5
+# face 2103611 "sad"
+# alpha 2103611 1 0.5
+@ラグナロク
+みんな…
+
+# voice 10147 "tyrufing_k_0004"
+# alpha 2103611 0 0.5
+# face 2101421 "usual"
+# alpha 2101421 1 0.5
+# mask 2101421 off
+@グリード
+あなた達だけでは力不足でしょう、
+私達の力も使ってください
+
+# alpha 2101421 0 0.5
+# face 2103611 "sad"
+# alpha 2103611 1 0.5
+@ラグナロク
+グリード…！
+あなたまで、どうしちゃったの？
+
+# voice 20047 "parashu_k_0004"
+# alpha 2103611 0 0.5
+# face 2200421 "shy"
+# alpha 2200421 1 0.5
+# mask 2200421 off
+@グラトニー
+ボク達はマスターに従うと決めたのさ
+
+# voice 40015 "arutemisu_k_0004"
+# alpha 2200421 0 0.5
+# face 2400121 "normal"
+# alpha 2400121 1 0.5
+# mask 2400121 off
+@ラスト
+あなたも感じているのでしょう？
+マスターとの暖かなつながりを…
+
+# voice 10016 "masamune_k_0004"
+# alpha 2400121 0 0.5
+# face 2100121 "shy"
+# alpha 2100121 1 0.5
+# mask 2100121 off
+@ラース
+誰かのためになど、
+拙者も初めての感情だが…悪くない
+
+# voice 30018 "ronginusu_k_0002"
+# alpha 2100121 0 0.5
+# face 2300121 "usual"
+# alpha 2300121 1 0.5
+# mask 2300121 off
+@エンヴィ
+私も、みなさんと同じ気持ちです
+同じだから、羨ましくないんです
+
+# voice 50026 "furaikugeru_k_0041"
+# alpha 2300121 0 0.5
+# alpha 2500221 1 0.5
+# mask 2500221 off
+# face 2500221 "smile"
+@プライド
+こんなスウィートな話…
+信じたくないけど、エクセレントね！
+
+# voice 10028 "revatein_k_0027"
+# alpha 2500221 0 0.5
+# face 2100221 "usual"
+# alpha 2100221 1 0.5
+# mask 2100221 off
+@スロウス
+私も行くよ、
+一人で残ってもめんどくさいし…
+
+# voice 1036 "ragnarok_0015"
+# alpha 2100221 0 0.5
+# face 2103611 "sad"
+# alpha 2103611 1 0.5
+@ラグナロク
+そんなの、ダメだってば…
+どうしよう、マスター？
+
+# textflame 0 0
+@
+ラグナロクの目に、
+うっすらと涙が浮かぶ
+
+@
+マスターも、胸いっぱいに広がる
+暖かな感情に、魂が震えるような
+感動を覚えていた
+
+@
+そして、ラグナロクに、
+自分もこの身を捧げるつもりだ、と
+伝える
+
+# textflame 1 1
+@ラグナロク
+マスター…！
+
+# bgm "stop"
+# se "SE_9131"
+;;（可能であれば）
+;;//演出：白フラッシュ的なもの
+;;（バイブスでつながった感じ）
+# fadeout "white" 0.4
+# textwindow "close"
+# waitandnext 0.6
+
+# alpha 2103611 0 0
+# waitandnext 0.1
+
+# fadein "white" 0.4
+# waitandnext 0.6
+
+# textflame 0 0
+# textwindow "normal"
+# bgmfile "bgm305_306" "BgmSeaEventBattle002" 0
+@
+その瞬間、
+15人全員の体が光り輝き、
+マスターと共鳴する
+
+@
+全員が、これまで以上に
+力が湧き上がる感覚を味わっていた
+
+# face 2103611 "sad"
+# alpha 2103611 1 0.5
+# textflame 1 1
+@ラグナロク
+これって…
+すごすぎない？
+
+# voice 10147 "tyrufing_k_0001"
+# alpha 2103611 0 0.5
+# face 2101421 "usual"
+# alpha 2101421 1 0.5
+# mask 2101421 off
+@グリード
+マスター…
+あなたは、どこまで私達を
+強くするつもりなんですか？
+
+# textflame 0 0
+@
+確かに、つながりがぐっと強まり、
+彼女達の力が高まっていくのを感じる
+
+# alpha 2101421 0 0.5
+# face 2302511 "angry"
+# alpha 2302511 1 0.5
+# mask 2302511 off
+# textflame 1 1
+@ミネルヴァ
+マスター！
+歪みが動きます！
+
+# textwindow "close"
+# serif 1
+# alpha 2302511 0 0.5
+# se "SE_0618"
+@異族の群れ
+グギャアア！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# alpha 2500221 1 0.5
+# mask 2500221 off
+# face 2500221 "sad"
+# voice 50026 "furaikugeru_k_0035"
+@プライド
+ノーウェイ！
+ちょっと多すぎな〜い？
+
+# textwindow "close"
+# serif 1
+# alpha 2500221 0 0.5
+# se "SE_0617"
+@巨大異族
+グルウウウウウウウ…！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# alpha 2400121 1 0.5
+# mask 2400121 off
+# face 2400121 "angry"
+# voice 40015 "arutemisu_k_0037"
+@ラスト
+巨大異族まで…！
+
+# voice 1035 "damocles_0024"
+# alpha 2400121 0 0.5
+# face 2103511 "sad"
+# alpha 2103511 1 0.5
+# mask 2103511 off
+@ダモクレス
+この子達、歪みを
+拡げようとしてるよ！
+
+# alpha 2103511 0 0.5
+# alpha 2103611 1 0.5
+# mask 2103611 off
+# face 2103611 "angry"
+@ラグナロク
+全員で行きましょう！
+
+# alpha 2103611 0 0.5
+# face 2101421 "angry"
+# alpha 2101421 1 0.5
+# mask 2101421 off
+@グリード
+もちろんです！
+
+# alpha 2101421 0 0.5
+# textflame 0 0
+@
+全員が戦闘態勢を取り、
+最後の戦いに向かっていった

@@ -1,0 +1,315 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１０章 章タイトル「勝利を招く悪魔―フレイルティ―」
+;;第2話－１０　タイトル：強くある者
+;;2_10_3
+;;スクリプト最後の背景：中心部
+;;-----------------------------------------
+# script "lisp"
+# background "in_city"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;フォルカス・神令・ヘル
+# body 5301811
+# pos 5301811 3
+# scale 5301811 0.8 0
+# layer 5301811 2
+# alpha 5301811 0 0
+# mask 5301811 off
+;;ルシファー
+# body 3820008
+# pos 3820008 3
+# scale 3820008 0.8 0
+# layer 3820008 2
+# alpha 3820008 0 0
+# mask 3820008 off
+;;フェイルノート
+# body 167
+# pos 167 3
+# scale 167 0.8 0
+# layer 167 2
+# alpha 167 0 0
+# mask 167 off
+;;フェイルノート（誓約）ボイス用
+# body 5401911
+# alpha 5401911 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景の暗転
+# imageset 2 "bg_black"
+# imagelayer 2 3
+# imagealpha 2 0 0
+;;-----------------------------------------
+;;//開幕SEが裏読みで再生されてしまうので若干遅延（サウンドメモ
+# sedelay "SE_4817" 1
+# textwindow "close"
+# move 5301811 2 0
+# face 5301811 "angry"
+# alpha 5301811 1 0
+# mask 5301811 on
+# move 167 4 0
+# face 167 "angry"
+# alpha 167 1 0
+# mask 167 on
+# waitandnext 1
+
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 540191 "failnaught_ca_battle_0008"
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@フェイルノート
+きゃあああああっ…！
+
+# textboxarrow 0 1
+@フォルカス
+ハァ…ハァ…
+ようやく離れてくれましたね…
+これで…
+
+# voice 540191 "failnaught_ca_0003"
+# textboxarrow 0 3
+@フェイルノート
+ええ…これで終わりよ…
+あなたがね！
+
+;;//フェイルノートが無数の矢を放つ
+# se "SE_0841"
+# waitandnext 0.5
+
+# voice 530181 "forcas_c_0022"
+# face 5301811 "surprise"
+# textboxarrow 0 1
+@フォルカス
+これは…罠！？
+いつの間にっ…
+
+# voice 540191 "failnaught_ca_battle_0003"
+# textboxarrow 0 3
+@フェイルノート
+消えなさい
+
+# se "SE_0836"
+# shake 0 0.5
+# fadein "white" 0.5
+# face 5301811 "angry"
+# textboxarrow 0 1
+@フォルカス
+きゃああああああっ…！？
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 5301811 0 0
+# alpha 167 0 0
+# move 167 3 0
+# face 167 "normal"
+# alpha 167 1 0
+# mask 167 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 540191 "failnaught_ca_battle_0005"
+# textboxarrow 0 2
+# textwindow "normal"
+@フェイルノート
+くっ…
+逃げられたわね…
+詰めが甘かったみたい…
+
+# textboxarrow 0 2
+@フェイルノート
+でも…私の勝ち…よ…
+
+# voice 540191 "failnaught_ca_0027"
+# textboxarrow 0 2
+@フェイルノート
+あ…力が…
+まったく…強者である私が…
+この程度で…
+
+;;//暗転しかけて戻る
+# bgm "stop"
+# se "SE_11762"
+# textwindow "close"
+# imagepos 2 0 0
+# imagealpha 2 0.8 1
+# waitandnext 1
+
+# imagealpha 2 0 1
+# waitandnext 1
+
+# voice 8057 "new_lucifer_0006"
+# layer 167 2
+# move 167 2 0.5
+# mask 167 on
+# move 3820008 4 0
+# alpha 3820008 1 0.5
+# mask 3820008 on
+# textboxarrow 0 3
+# textwindow "normal"
+@ルシファー
+ククッ…
+クハハハハハハハハハハハハ！！
+なかなか良い見せ物だったぞ
+
+# voice 540191 "failnaught_ca_0047"
+# textboxarrow 0 1
+@フェイルノート
+ルシファー…？
+あなた…どうやって…ここまで…
+
+# bgmfile "bgm447_block" "BgmNeoRagnarok" 0
+# textboxarrow 0 3
+@ルシファー
+何だ？
+また勘が鈍ったか？
+貴様と仮契約をしたであろうが
+
+# textboxarrow 0 3
+@ルシファー
+それを辿れば、瞬時に移動する
+くらい、今の我でもできる
+
+# textboxarrow 0 3
+@ルシファー
+さて…死にかけておるようだな
+小娘
+
+# textboxarrow 0 3
+@ルシファー
+まさか己の身を捨てて勝利を獲るとは
+思っていなかったぞ
+貴様はバカなのか？
+
+# textboxarrow 0 1
+@フェイルノート
+そんなことを言いに来たの…？
+
+# textboxarrow 0 3
+@ルシファー
+無論、違う
+どうだ？助けてやってもいいぞ
+
+# textboxarrow 0 3
+@ルシファー
+我に全て差し出すのなら、
+その命を繋いでやろう
+その代わり…
+
+# textboxarrow 0 3
+@ルシファー
+貴様の体は我のものだ
+我が地上に君臨する様を、
+指を咥えて眺めておれ
+
+# textboxarrow 0 3
+@ルシファー
+さあ、どうする？
+このままくたばるか？
+それとも我に全て差し出すか？
+
+# textboxarrow 0 3
+@ルシファー
+貴様の命がかかっているのだ
+よく考えて答えよ
+
+# textboxarrow 0 1
+@フェイルノート
+そんなの…考えるまでもないわ…
+
+# textboxarrow 0 1
+@フェイルノート
+私は死なない
+あなたに全てを差し出す気もない
+
+# textboxarrow 0 1
+@フェイルノート
+私はあなたと誓約を結んで…
+その力を手に入れる…
+そして世界を治めるのっ
+
+# voice 540191 "failnaught_ca_battle_0006"
+# textboxarrow 0 1
+@フェイルノート
+カハッ…
+
+;;//フェイルノートが倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 167 0 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# textwindow "normal"
+@ルシファー
+クハハハハハハハハハハハ！！
+死にかけておるのに、愉快愉快！
+
+# textboxarrow 0 3
+@ルシファー
+気に入ったぞ、フェイルノート
+
+# move 167 2 0
+# face 167 "normal"
+# alpha 167 1 0.5
+# mask 167 on
+# textboxarrow 0 1
+@フェイルノート
+…ようやく、私の名前を呼んだわね
+
+# textboxarrow 0 3
+@ルシファー
+我は口にする価値のない名を
+呼びはせん
+
+# textboxarrow 0 3
+@ルシファー
+フェイルノート
+誓約を結んでやる
+この誓約は契約となる
+
+# textboxarrow 0 3
+@ルシファー
+もしこの先、貴様が敵に屈することが
+あれば…我はその代償をいただく
+
+# voice 540191 "failnaught_ca_0003"
+# textboxarrow 0 1
+@フェイルノート
+ええ…構わないわ
+
+# textboxarrow 0 3
+@ルシファー
+決まりだ
+我の力を使いこなしてみせろ
+
+# voice 8057 "new_lucifer_0004"
+# textboxarrow 0 3
+@ルシファー
+貴様となら、もっと面白いものが
+見られそうだ
+
+# textboxarrow 0 1
+@フェイルノート
+あなたの…いいえ、お前の思い通りに
+動く気なんて、これっぽっちも
+ないけれどね！
+
+;;//画面白フラッシュ
+# se "SE_9149"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1.6

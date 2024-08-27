@@ -1,0 +1,772 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第18章 章タイトル：×××アポカリプス
+;;第2話―１　タイトル：支えるために
+;;1_0
+;;スクリプト最後の背景：天上ユグドラシル：in_yggdrasill
+;;-----------------------------------------
+# script "lisp"
+# background "parchment_map03"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;異族化アルマス（ナレーションのボイス用）
+# body 5103831
+# alpha 5103831 0 0
+;;異族化フライクーゲル
+# body 5500231
+# pos 5500231 3
+# scale 5500231 0.8 0
+# layer 5500231 2
+# alpha 5500231 0 0
+# mask 5500231 off
+;;アルテミス
+# body 5400131
+# pos 5400131 3
+# scale 5400131 0.8 0
+# layer 5400131 2
+# alpha 5400131 0 0
+# mask 5400131 off
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 2
+# alpha 5401721 0 0
+# mask 5401721 off
+;;擬装フライシュッツ
+# body 5502721
+# pos 5502721 3
+# scale 5502721 0.8 0
+# layer 5502721 2
+# alpha 5502721 0 0
+# mask 5502721 off
+;;擬装ダモクレス
+# body 5103521
+# pos 5103521 3
+# scale 5103521 0.8 0
+# layer 5103521 2
+# alpha 5103521 0 0
+# mask 5103521 off
+;;擬装エルキュール
+# body 5202521
+# pos 5202521 3
+# scale 5202521 0.8 0
+# layer 5202521 2
+# alpha 5202521 0 0
+# mask 5202521 off
+;;グラーシーザ・擬装・ウォーリアー
+# body 5302621
+# pos 5302621 3
+# scale 5302621 0.8 0
+# layer 5302621 2
+# alpha 5302621 0 0
+# mask 5302621 off
+;;ミネルヴァ・擬装・アーチャー
+# body 5302521
+# pos 5302521 3
+# scale 5302521 0.8 0
+# layer 5302521 3
+# alpha 5302521 0 0
+# mask 5302521 off
+;;ラグナロク・擬装・ガンナー
+# body 5103621
+# pos 5103621 3
+# scale 5103621 0.8 0
+# layer 5103621 2
+# alpha 5103621 0 0
+# mask 5103621 off
+;;カリス・聖鎖・アザゼル
+# body 5602511
+# pos 5602511 3
+# scale 5602511 0.8 0
+# layer 5602511 3
+# alpha 5602511 0 0
+# mask 5602511 off
+;;ヘレナ
+# body 5302811
+# pos 5302811 3
+# scale 5302811 0.8 0
+# layer 5302811 3
+# alpha 5302811 0 0
+# mask 5302811 off
+;;ソロモン
+# body 5503111
+# pos 5503111 3
+# scale 5503111 0.8 0
+# layer 5503111 2
+# alpha 5503111 0 0
+# mask 5503111 off
+;;ギャラルホルン
+# body 52000311
+# pos 52000311 3
+# scale 52000311 0.8 0
+# layer 52000311 2
+# alpha 52000311 0 0
+# mask 52000311 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;---------------------------------------------
+;;■ラグナロク
+;;//立ち絵：ラグナロク・擬装・ガンナー
+;;■ミネルヴァ
+;;//立ち絵：ミネルヴァ・擬装・アーチャー
+;;■エルキュール
+;;//立ち絵：エルキュール・擬装・セイバー
+;;■グラーシーザ
+;;//立ち絵：グラーシーザ・擬装・ウォーリアー
+;;■フライシュッツ
+;;//立ち絵：フライシュッツ・擬装・ランサー
+;;■ネス
+;;//立ち絵：ネス・擬装・ランサー
+;;■ダモクレス
+;;//立ち絵：ダモクレス・擬装・プリースト
+;;■スイハ
+;;//立ち絵：スイハ・擬装・セイバー
+;;■アルテミス
+;;//立ち絵：アルテミス・擬彩
+;;■パラシュ
+;;//立ち絵：パラシュ・擬彩
+;;■マサムネ
+;;//立ち絵：マサムネ・擬彩
+;;■フライクーゲル
+;;//立ち絵：フライクーゲル・擬彩
+;;■ロンギヌス
+;;//立ち絵：ロンギヌス・擬彩
+;;■カリス
+;;//立ち絵：カリス・聖鎖・アザゼル（IN編）
+;;■ソロモン
+;;//立ち絵：ソロモン・聖鎖・アテナ（IN編）
+;;■ヘレナ
+;;//立ち絵：ヘレナ・D. plug・ロキ（IN編）
+;;■暴走キル姫達
+;;//立ち絵なし
+;;■？？？（ギャラルホルン）、ギャラルホルン
+;;//立ち絵：ギャラルホルン
+;;()内表記はスクリプト作成時削除でお願いします
+;;--------------------------------------------
+;;//背景：地上世界遠景：地上世界ナレーションマップ
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_2_0001"
+# textflame 0 0
+@
+ユグドラシルから現れたキル姫
+フリズスキャールヴ
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_2_0002"
+@
+彼女は世界の終焉こそ
+全ての救済なのだと告げる
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_2_0003"
+@
+アルマスやコマンドキラーズが
+彼女を倒そうと戦いを挑むが
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_2_0004"
+@
+不可解なことに、連携が上手くいかず
+敗北を喫してしまう
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_2_0005"
+@
+フリズスキャールヴの言葉は徐々に
+人々の心を浸食していき、地上世界に
+終末思想を蔓延させる
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_2_0006"
+@
+彼女に与する者達が現れる中、
+コマンドキラーズが再び戦いを挑み、
+カミト達もまた戦場に臨む
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_2_0007"
+@
+しかし、フリズスキャールヴの力は
+強大だった
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_2_0008"
+@
+窮地に陥るフォルカスとアスカロン、
+グリモワール
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_2_0009"
+@
+彼女達を守るため、咄嗟に動いた
+カミトに再びバイブスが宿った
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_2_0010"
+@
+そこにアルマスも駆けつけ、
+“絆の繋ぎ手”《テイルリンカー》で
+キル姫達の思念を繋ぐ
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_2_0011"
+@
+連携を取り戻したアスカロン達は
+フリズスキャールヴを中心部から
+退かせることに成功した
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_2_0012"
+@
+ユグドラシルへと戻る彼女を
+アルマス達は追いかける
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_2_0013"
+@
+その頃、天上世界にも“終焉”に
+繋がるキル姫が現れていた
+
+;;ナレーション
+# voice 510383 "IntegralNoah_Narration_18_2_0014"
+@
+運命が織り上げられていく――
+
+;;//背景：天上ユグドラシル：in_yggdrasill
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_yggdrasill"
+# move 5103621 1 0
+# face 5103621 "normal"
+# alpha 5103621 1 0
+# mask 5103621 on
+# move 5302521 3 0
+# face 5302521 "normal"
+# alpha 5302521 1 0
+# mask 5302521 on
+# move 5400131 5 0
+# face 5400131 "normal"
+# alpha 5400131 1 0
+# mask 5400131 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+# textflame 1 1
+# textboxarrow 0 1
+# textwindow "normal"
+@ラグナロク
+どうなっているの…？
+皆と繋がっていたはずなのに…
+
+# textboxarrow 0 2
+@ミネルヴァ
+無理やり切り離されたようです
+先程、角笛のような音が
+聞こえましたが…
+
+# face 5400131 "angry"
+# textboxarrow 0 3
+@アルテミス
+あれが邪魔をしたのでしょうか？
+そうなると、一体、誰が…
+
+# textboxarrow 0 1
+@ラグナロク
+考えられるとすれば、
+コマンドキラーズだけれど…
+
+# textboxarrow 0 2
+@ミネルヴァ
+コマンドキラーズにそんな力を
+持つキル姫はいたでしょうか？
+
+# voice 4017 "suiha_0003"
+# alpha 5400131 0 0.5
+# move 5401721 5 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# mask 5401721 on
+# textboxarrow 0 3
+@スイハ
+音楽を奏でるキル姫はいました
+でも、角笛ではなくギターでしたので
+
+# voice 1036 "ragnarok_0028"
+# face 5103621 "sad"
+# textboxarrow 0 1
+@ラグナロク
+うーん…
+違う気がする
+
+# textboxarrow 0 2
+@ミネルヴァ
+ひとまず、角笛の影響が他に出て
+いないか調べましょう
+
+# face 5103621 "normal"
+# textboxarrow 0 1
+@ラグナロク
+お願い
+それから皆がどこにいるのかも
+確認して
+
+# alpha 5103621 0 0.5
+# alpha 5302521 0 0.5
+# alpha 5401721 0 0.5
+# move 5503111 3 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 off
+# textboxarrow 0 2
+@ソロモン
+話は聞かせてもらったわ
+すでに主立ったキル姫の居場所は
+確認済みよ
+
+# move 5503111 2 0.5
+# mask 5503111 on
+# move 5302521 4 0
+# face 5302521 "usual"
+# alpha 5302521 1 0.5
+# mask 5302521 on
+# textboxarrow 0 3
+@ミネルヴァ
+ソロモン
+仕事が早いですね
+
+# textboxarrow 0 1
+@ソロモン
+カリスとヘレナに天上世界の見回りを
+お願いしていたから
+
+# voice 550311 "solomon_di_0004"
+# face 5503111 "happy"
+# textboxarrow 0 1
+@ソロモン
+二人の状況を把握するのに努めていた
+お陰ね
+
+# alpha 5302521 0 0.5
+# move 5400131 4 0
+# face 5400131 "normal"
+# alpha 5400131 1 0.5
+# mask 5400131 on
+# textboxarrow 0 3
+@アルテミス
+それで、皆さんの様子は？
+
+# face 5503111 "normal"
+# textboxarrow 0 1
+@ソロモン
+カリスはダモクレス、グラーシーザと
+ともに行動中ね
+以前、マサムネ城があった近くよ
+
+;;//背景表示：006_town
+;;//立ち絵表示：カリス、擬装ダモクレス、擬装グラーシーザ
+# se "SE_0813"
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "006_town"
+# alpha 5503111 0 0
+# alpha 5400131 0 0
+# move 5103521 1 0
+# face 5103521 "normal"
+# alpha 5103521 1 0
+# mask 5103521 on
+# move 5602511 3 0
+# face 5602511 "normal"
+# alpha 5602511 1 0
+# mask 5602511 on
+# move 5302621 5 0
+# face 5302621 "normal"
+# alpha 5302621 1 0
+# mask 5302621 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;//一瞬紹介の形で見せて非表示に
+# waitandnext 1
+
+;;//背景表示：天上ユグドラシル：in_yggdrasill
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "in_yggdrasill"
+# alpha 5103521 0 0
+# alpha 5602511 0 0
+# alpha 5302621 0 0
+# move 5503111 3 0
+# face 5503111 "normal"
+# alpha 5503111 1 0
+# mask 5503111 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ソロモン
+ヘレナは…冥花繁殖帯の近くにいる
+かなり離れてしまっているわね
+同行しているのは…
+
+# textboxarrow 0 2
+@ソロモン
+エルキュールとフライシュッツ
+この三人には急いで戻ってもらった
+方が良さそうね
+
+;;//背景表示：flower garden
+;;//立ち絵表示：ヘレナ、擬装エルキュール、擬装フライシュッツ
+# se "SE_0813"
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "flower_garden"
+# alpha 5503111 0 0
+# move 5202521 1 0
+# face 5202521 "normal"
+# alpha 5202521 1 0
+# mask 5202521 on
+# move 5302811 3 0
+# face 5302811 "usual"
+# alpha 5302811 1 0
+# mask 5302811 on
+# move 5502721 5 0
+# face 5502721 "normal"
+# alpha 5502721 1 0
+# mask 5502721 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;//一瞬紹介の形で見せて非表示に
+# waitandnext 1
+
+;;//背景：天上ユグドラシル：in_yggdrasill
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "in_yggdrasill"
+# alpha 5202521 0 0
+# alpha 5302811 0 0
+# alpha 5502721 0 0
+# move 5302521 2 0
+# face 5302521 "normal"
+# alpha 5302521 1 0
+# mask 5302521 on
+# move 5400131 4 0
+# face 5400131 "normal"
+# alpha 5400131 1 0
+# mask 5400131 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 1
+# textwindow "normal"
+@ミネルヴァ
+連絡はすぐに届けられるはずです
+後は…
+
+# textboxarrow 0 3
+@アルテミス
+ここに残っているのが、ラグナロク、
+ミネルヴァ、ソロモン、スイハ、
+フライクーゲルと私です
+
+# alpha 5302521 0 0.5
+# move 5103621 2 0
+# face 5103621 "normal"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# textboxarrow 0 1
+@ラグナロク
+ネスとロンギヌスはすぐ近くの町に
+待機しているわ
+そういえば…
+
+# textboxarrow 0 1
+@ラグナロク
+ダーインスレイヴとハリーが他の町
+まで復興の手伝いに出てる
+あっちは大丈夫かな…
+
+# textboxarrow 0 3
+@アルテミス
+パラシュとマサムネも天上世界を
+二人で見回っているはずです
+
+# alpha 5103621 0 0.5
+# move 5503111 2 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# textboxarrow 0 1
+@ソロモン
+それぞれ連絡して戻ってきて
+もらいましょう
+同時に周辺の状況を調査して――
+
+# alpha 5503111 0 0.5
+# alpha 5400131 0 0.5
+# move 5500231 3 0
+# face 5500231 "surprise"
+# alpha 5500231 1 0.5
+# mask 5500231 off
+# textboxarrow 0 2
+@フライクーゲル
+オウ…！
+黒い柱がモアビッグになってるよ！
+オーマイガッ…
+
+# alpha 5500231 0 0.5
+# move 5503111 2 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.5
+# mask 5503111 on
+# move 5400131 4 0
+# face 5400131 "normal"
+# alpha 5400131 1 0.5
+# mask 5400131 on
+# textboxarrow 0 3
+@アルテミス
+“終焉”の影響が強まっている
+可能性が高いですね
+
+# voice 550311 "solomon_di_0003"
+# textboxarrow 0 1
+@ソロモン
+ええ、そうよ
+だから効率的に周辺調査を――
+
+;;//角笛の音
+# bgm "stop"
+# se "SE_6124"
+# waitandnext 0.5
+
+# alpha 5503111 0 0.5
+# alpha 5400131 0 0.5
+# move 5103621 2 0
+# face 5103621 "surprise"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# textboxarrow 0 1
+# move 5302521 4 0
+# face 5302521 "sad"
+# alpha 5302521 1 0.5
+# mask 5302521 on
+@ラグナロク
+これは…さっきと同じ音…
+
+# voice 3025 "minerva_0028"
+# textboxarrow 0 3
+@ミネルヴァ
+どこから聞こえてきたのでしょう？
+それほど離れていなかったような…
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# serif 1
+@暴走キル姫達
+ウウウウウウウ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 3025 "minerva_0037"
+# face 5302521 "normal"
+# textboxarrow 0 3
+@ミネルヴァ
+暴走したキル姫ですっ
+
+# face 5103621 "angry"
+# textboxarrow 0 1
+@ラグナロク
+すぐに対処を！
+
+# alpha 5103621 0 0.5
+# alpha 5302521 0 0.5
+# move 5503111 3 0
+# face 5503111 "angry"
+# alpha 5503111 1 0.5
+# mask 5503111 off
+# textboxarrow 0 2
+@ソロモン
+大丈夫よ
+私に任せて
+
+# voice 550311 "solomon_di_0043"
+# textboxarrow 0 2
+@ソロモン
+グラウ、いきましょう！
+
+;;//暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 5503111 0 0
+# move 5503111 3 0
+# face 5503111 "angry"
+# alpha 5503111 1 0
+# mask 5503111 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 550311 "solomon_di_0029"
+# textboxarrow 0 2
+# textwindow "normal"
+@ソロモン
+はあああっ！
+
+;;//暴走が解ける演出
+# se "SE_0994"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# serif 1
+@暴走キル姫
+ウウウあああ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 5503111 "happy"
+# textboxarrow 0 2
+@ソロモン
+ふぅ…
+最適解を導き出すことができたわ
+
+# voice 1036 "ragnarok_0030"
+# move 5103621 2 0
+# face 5103621 "happy"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# textboxarrow 0 1
+# move 5503111 4 0.5
+# alpha 5503111 1 0.5
+# mask 5503111 on
+@ラグナロク
+ありがとう、ソロモン
+
+# textboxarrow 0 3
+@ソロモン
+グランお姉様に天上世界を
+任されたんだもの
+完璧にこなしてみせるわ！
+
+;;？？？（ギャラルホルン）
+# bgm "stop"
+# serif 1
+@？？？
+ふーん…
+おねーさんは必要とされているのね
+
+;;//ギャラルホルンが現れる
+# bgmfile "bgm457" "BgmIntegralNoahEvent008" 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# alpha 5103621 0 0.5
+# alpha 5503111 0 0.5
+# move 52000311 3 0
+# face 52000311 "normal"
+# alpha 52000311 1 0.5
+# mask 52000311 off
+# waitandnext 1.6
+
+# voice 550311 "solomon_di_0022"
+# alpha 52000311 0 0.5
+# move 5503111 3 0
+# face 5503111 "surprise"
+# alpha 5503111 1 0.5
+# mask 5503111 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ソロモン
+えっ？
+誰…！？
+どこから現れたの？
+
+# alpha 5503111 0 0.5
+# move 5103621 2 0
+# face 5103621 "normal"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# move 5302521 4 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 on
+# textboxarrow 0 3
+@ミネルヴァ
+ユグドラシルから出てきたように
+見えましたが…
+
+# textboxarrow 0 1
+@ラグナロク
+見覚えのないキル姫ね
+あなた、何者っ？
+
+# voice 5200031 "gjallarhorn_kyara_1001"
+# alpha 5103621 0 0.5
+# alpha 5302521 0 0.5
+# move 52000311 3 0
+# face 52000311 "usual"
+# alpha 52000311 1 0.5
+# mask 52000311 off
+# textboxarrow 0 2
+@ギャラルホルン
+はじめまして、ギャラルホルンよ
+ギャラルって呼んでくれて構わないわ
+
+# voice 5200031 "gjallarhorn_kyara_2001"
+# textboxarrow 0 2
+@ギャラルホルン
+世界の悲劇が幕を下ろすとき…
+終焉の訪れはまもなくよ
+
+# alpha 52000311 0 0.5
+# move 5400131 3 0
+# face 5400131 "angry"
+# alpha 5400131 1 0.5
+# mask 5400131 off
+# textboxarrow 0 2
+@アルテミス
+何ですって…！？
+
+# voice 5200031 "gjallarhorn_kyara_3001"
+# alpha 5400131 0 0.5
+# move 52000311 3 0
+# face 52000311 "normal"
+# alpha 52000311 1 0.5
+# mask 52000311 off
+# textboxarrow 0 2
+@ギャラルホルン
+ぬひひひひ
+そのときまで楽しく過ごしましょうね

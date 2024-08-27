@@ -1,0 +1,411 @@
+;;【EP5バトル後】
+;;背景:グライヒハイト町はずれ・朝焼け
+;;演出：ムラマサ・マサムネ、交錯し最後の一閃を放つ
+# script "lisp"
+# background "101_plain_daytime"
+# bgm "stop"
+# body 3100111
+# pos 3100111 5
+# scale 3100111 0.8 0
+# layer 3100111 2
+# body 3102511
+# pos 3102511 1
+# scale 3102511 0.8 0
+# layer 3102511 1
+# body 166
+# mask 166 off
+# pos 166 3
+# scale 166 0.8 0
+# alpha 166 0 0
+# face 3100111 "angry"
+# face 3102511 "angry"
+# textwindow "close"
+# waitandnext 0.1
+
+# voice 310251 "muramasa_ge_0029"
+# voice 310011 "masamune_ge_0029"
+# waitandnext 0.4
+
+# move 3100111 1 0.4
+# move 3102511 5 0.4
+# waitandnext 0.1
+
+# subfillrect 1 "black" 0.1 0 1
+# waitandnext 0.1
+
+# se "SE_4807"
+# effectbody 700 1 0 0 7
+# effectstart 700
+# waitandnext 0.3
+
+# se "SE_4830"
+# effectbody 701 2 0 0 5
+# effectstart 701
+# waitandnext 0.3
+
+# subfillrect 1 "black" 0.1 1 0
+# waitandnext 0.1
+
+# se "SE_5540"
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 3
+@ムラマサ
+…
+
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+…
+
+;;モノローグ
+# fadein "white" 0.4
+# se "SE_9063"
+# textflame 0 0
+@
+ムラマサの刀が割れ
+切先が舞い、地面に刺さる
+
+# textflame 0 0
+@
+しかし…
+
+# alpha 3100111 0 0.5
+# alpha 3102511 0 0.5
+# alpha 166 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3031 "cassius_ge_battle_0005"
+@カシウス
+───風が、抜けた
+
+# alpha 3100111 1 0.5
+# alpha 3102511 1 0.5
+# alpha 166 0 0.5
+# textflame 0 0
+@
+折れたムラマサの刀には
+マサムネの鮮血が染みていた
+
+# face 3100111 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310011 "masamune_ge_0037"
+@マサムネ
+…グッ………!!
+
+# se "SE_0606"
+# textwindow "close"
+# alpha 3100111 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# bgmfile "bgm273" "BgmLostRagnarokEvent" 0
+# textflame 0 0
+@
+その場に膝を突くマサムネ
+
+# se "SE_5603"
+# move 3102511 3 0.4
+# textflame 1 1
+# textboxarrow 0 2
+# voice 310251 "muramasa_ge_0037"
+@ムラマサ
+姉上！
+
+# sestop "SE_5603"
+# alpha 3102511 0 0.5
+# alpha 3100111 1 0.5
+# face 3100111 "sad"
+# move 3100111 3 0
+# mask 3100111 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 310011 "masamune_ge_0004"
+@マサムネ
+見事だ…ムラマサ…
+
+# alpha 3102511 1 0.5
+# alpha 3100111 0 0.5
+# move 3102511 3 0
+# face 3102511 "sad"
+# mask 3102511 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 310251 "muramasa_ge_0018"
+@ムラマサ
+なぜ、手を抜かれたのです
+
+# face 166 "surprise"
+# alpha 3100111 0 0.5
+# alpha 3102511 0 0.5
+# alpha 166 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3031 "cassius_ge_0022"
+@カシウス
+え…？
+
+# mask 3102511 on
+# mask 3100111 on
+# move 3100111 4 0
+# move 3102511 1 0
+# alpha 3100111 1 0.5
+# alpha 3102511 1 0.5
+# alpha 166 0 0.5
+# face 3100111 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310011 "masamune_ge_0008"
+@マサムネ
+全力であった
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310251 "muramasa_ge_0016"
+@ムラマサ
+嘘です…っ！
+姉上は、姉上は嘘つきです…っ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310011 "masamune_ge_0013"
+@マサムネ
+ムラマサ…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ムラマサ
+姉上は、誰よりも強いのです…
+拙者より、この国の誰よりも…！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310011 "masamune_ge_0028"
+@マサムネ
+…ムラマサ
+自らの身の丈を認めよ
+そなたは拙者を下したのだ
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310251 "muramasa_ge_0037"
+@ムラマサ
+しかし…
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310011 "masamune_ge_0027"
+@マサムネ
+なぜ敗者が勝者を慰めねばならんのだ
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310251 "muramasa_ge_0015"
+@ムラマサ
+拙者は、姉上を目指して…これまで…
+ですから…
+
+# face 3100111 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310011 "masamune_ge_0003"
+@マサムネ
+そなたが追うべき理想は
+まだ先にある、だろう？
+
+# alpha 3100111 0 0.5
+# alpha 3102511 0 0.5
+# alpha 166 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3031 "cassius_ge_0003"
+@カシウス
+そうよ
+
+# alpha 3100111 1 0.5
+# alpha 3102511 1 0.5
+# alpha 166 0 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@ムラマサ
+…
+
+# bgmfile "bgm290" "BgmLostRagnarokEvent" 0
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310011 "masamune_ge_0015"
+@マサムネ
+…手を出せ。ムラマサ
+
+# textflame 1 1
+# textboxarrow 0 1
+@ムラマサ
+…え？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310011 "masamune_ge_0008"
+@マサムネ
+いいから。ほら
+
+# move 3100111 3 0.4
+# textflame 0 0
+@
+マサムネは無理矢理
+ムラマサの手を引く
+
+# se "SE_5208"
+# textflame 0 0
+@
+そうしてその手にマサムネの刀を置く
+
+# move 3100111 4 0.4
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "surprise"
+@ムラマサ
+姉上の…刀…？
+
+# textflame 1 1
+# textboxarrow 0 3
+@マサムネ
+鍛冶のマネゴトというわけではないが
+
+;;演出：マサムネからムラマサへ力が受け渡される（ような演出効果があれば…）
+# textwindow "close"
+# fadein "white" 0.5
+# se "SE_9088"
+# waitandnext 1
+
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310251 "muramasa_ge_0022"
+@ムラマサ
+拙者の、割れた刀が
+元通りに…？
+
+# face 3100111 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310011 "masamune_ge_0004"
+@マサムネ
+我がキラーズの「正宗」を
+そなたに託す
+
+# textflame 1 1
+# textboxarrow 0 1
+@ムラマサ
+なっ…!?
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310011 "masamune_ge_0005"
+@マサムネ
+八本目の刀として
+使ってやってくれ
+
+# face 3102511 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@ムラマサ
+何をおっしゃいます！
+それでは姉上は!?
+
+# face 3100111 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@マサムネ
+もちろん、「正宗」全ての
+力を譲渡したわけではない
+半分ほど、分け与えただけのこと
+
+# alpha 3100111 0 0.5
+# alpha 3102511 0 0.5
+# alpha 166 1 0.5
+# textflame 1 1
+# face 166 "sad"
+# textboxarrow 0 2
+# voice 3031 "cassius_ge_0013"
+@カシウス
+それでも、あなた
+そんな半減した力じゃあ
+オーダーキラーズなんて…
+
+# alpha 3100111 1 0.5
+# alpha 3102511 1 0.5
+# alpha 166 0 0.5
+# textflame 1 1
+# face 3100111 "sad"
+# textboxarrow 0 3
+# voice 310011 "masamune_ge_0008"
+@マサムネ
+ウロボロス様のご意思に従うまでだ
+それに…
+
+# face 3102511 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@ムラマサ
+？
+
+# textflame 1 1
+# textboxarrow 0 3
+@マサムネ
+トレイセーマ国に反旗を翻し
+打倒しようというのだろう？
+
+# face 3100111 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310011 "masamune_ge_0004"
+@マサムネ
+その理想に
+拙者も半分乗せてもらおう
+
+# textflame 1 1
+# textboxarrow 0 1
+@ムラマサ
+姉上…!!
+
+# textflame 1 1
+# textboxarrow 0 3
+@マサムネ
+文字通りの、助太刀だ
+
+# face 3102511 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310251 "muramasa_ge_0032"
+@ムラマサ
+………しかと、受け取りました…！
+
+# face 3100111 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310011 "masamune_ge_0015"
+@マサムネ
+立場上
+これ以上の手助けはしてやれん
+今度会う時はまた、敵同士かもしれぬ
+
+# textflame 1 1
+# textboxarrow 0 3
+@マサムネ
+拙者は拙者で
+自分の理想を探すこととしよう
+
+# face 3100111 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@マサムネ
+体制の中で
+あがいてみよう
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "angry"
+@ムラマサ
+…必ずや、恩義に報います
+姉上

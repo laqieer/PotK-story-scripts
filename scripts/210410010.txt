@@ -1,0 +1,209 @@
+;;-----------------------------------------
+;;ファントムオブキル　ハロウィンイベント2018
+;;【OP】
+;;スクリプト最後の背景：紙芝居のような舞台
+;;-----------------------------------------
+# script "lisp"
+# background "201_beast_night"
+# bgmfile "bgm071" "BgmHalloween001" 0
+;;-----------------------------------------
+;;ハロウィンモラルタ
+# body 3104071
+# pos 3104071 3
+# scale 3104071 0.8 0
+# alpha 3104071 0 0
+;;ハロウィンベガルタ
+# body 3104171
+# pos 3104171 3
+# scale 3104171 0.8 0
+# alpha 3104171 0 0
+;;-----------------------------------------
+;;//背景：紙芝居のような舞台
+# textwindow "close"
+# fadeout "black" 0.1
+# imageset 0 "st_thickcurtain_left"
+# imagealpha 0 0 0 
+# imageset 1 "st_thickcurtain_right"
+# imagealpha 1 0 0 
+# imageset 2 "st_thickcurtain_top"
+# imagealpha 2 0 0 
+# frameout 0 0.5
+# waitandnext 0.1
+
+# imagepos 0 -180 0
+# imagepos 1 180 0
+# imagepos 2 0 450
+# imagealpha 1 1 0
+# imagealpha 0 1 0
+# imagealpha 2 1 0
+# waitandnext 0.2
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# imagemoveto 0 -540 0 2
+# imagemoveto 1 540 0 2
+# waitandnext 2
+
+# imagealpha 1 0 0
+# imagealpha 0 0 0
+;;//背景：紙芝居のような舞台
+;;//OPはハロウィン衣装でお願いします。
+# move 3104071 2 0
+# face 3104071 "normal"
+# alpha 3104071 1 0.5
+# mask 3104071 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 3104171 4 0
+# face 3104171 "normal"
+# alpha 3104171 1 0.5
+# mask 3104171 on
+# textwindow "normal"
+# voice 1040 "morallta_kyara_1001"
+@モラルタ
+ねえねえ知ってる？
+ねえ知ってる？
+こんな喜劇をねえ知ってる？
+
+# voice 1041 "beagallta_kyara_1001"
+# textboxarrow 0 3
+@ベガルタ
+ねえねえ知ってる？
+ねえ知ってる？
+こんな悲劇をねえ知ってる？
+
+# voice 1040 "morallta_0004"
+# face 3104071 "usual"
+# textboxarrow 0 1
+@モラルタ
+私はかわいい赤ずきん
+おばあさんのところへ
+おつかいに行かないといけないの
+
+# voice 1041 "beagallta_0033"
+# face 3104171 "happy"
+# textboxarrow 0 3
+@ベガルタ
+私は親切な狼
+赤ずきん、おばあさんのために
+お花を摘んで行くといい
+
+# voice 1040 "morallta_0030"
+# face 3104071 "shy"
+# textboxarrow 0 1
+@モラルタ
+まぁ、狼さん
+そうね、ありがとう
+きっとおばあさんも喜ぶわ
+
+# face 3104071 "sad"
+# textboxarrow 0 1
+@モラルタ
+…でも知っているの
+狼が赤ずきんを騙しているの
+騙して襲おうとしているの
+
+# textboxarrow 0 3
+@ベガルタ
+そんなことないわ、赤ずきん
+あなたのことが食べちゃいたいくらい
+愛しているだけなの
+
+# face 3104171 "usual"
+# textboxarrow 0 3
+@ベガルタ
+…でも赤ずきんは気付いてる
+狼がおばあさんに化けていること
+騙されている振りをしているの
+
+# face 3104071 "normal"
+# textboxarrow 0 1
+@モラルタ
+そんなことないわ、おばあさん
+私はあなたが愛しいから
+ここまで来たんだもの
+
+# voice 1040 "morallta_0004"
+# face 3104071 "shy"
+# textboxarrow 0 1
+@モラルタ
+ふふふ、罠にかけてみよう
+
+# voice 1041 "beagallta_0005"
+# face 3104171 "happy"
+# textboxarrow 0 3
+@ベガルタ
+ふふふ、罠にかけてみよう
+
+# emotionbody 3000 3 3104071 -50 100
+# emotionbody 4000 3 3104171 50 100
+# effectpattern 3000 1 11
+# effectpattern 4000 1 11
+# effectstart 3000
+# effectstart 4000
+# voice 1040 "morallta_event_1011"
+# voice 1041 "beagallta_event_1010"
+# textboxarrow 0 0
+@モラ＆ベガ
+トリックオアトリート
+
+# textboxarrow 0 1
+@モラルタ
+私だけの狼さん
+
+# textboxarrow 0 3
+@ベガルタ
+私だけの赤ずきん
+
+# emotionbody 1000 4 3104071 -50 100
+# emotionbody 2000 4 3104171 50 100
+# effectpattern 1000 1 11
+# effectpattern 2000 1 11
+# effectstart 1000
+# effectstart 2000
+# textboxarrow 0 0
+# voice 1040 "morallta_event_1011"
+# voice 1041 "beagallta_event_1010"
+@モラ＆ベガ
+トリックオアトリート
+
+# face 3104071 "usual"
+# textboxarrow 0 1
+@モラルタ
+欲しいのは、あなただけ
+
+# face 3104171 "usual"
+# textboxarrow 0 3
+@ベガルタ
+いらないのは、あなた以外
+
+# face 3104071 "surprise"
+# textboxarrow 0 1
+@モラルタ
+噛み合っているのに
+間違っている！
+
+# face 3104171 "happy"
+# textboxarrow 0 3
+@ベガルタ
+求めあっているのに
+求められてることに気づかない
+ああ、愉快愉快
+
+# face 3104071 "shy"
+# textboxarrow 0 0
+@モラ＆ベガ
+ああ、愉快愉快♪
+
+# voice 1041 "beagallta_kyara_1001"
+# voice 1040 "morallta_kyara_1001"
+# textboxarrow 0 0
+@モラ＆ベガ
+ねえねえ知ってる？
+ねえ知ってる？
+こんなお話、ねえ知ってる？
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.5

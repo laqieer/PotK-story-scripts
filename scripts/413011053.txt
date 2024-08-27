@@ -1,0 +1,688 @@
+;;モラベガマルチ_EP2（モラルタ視点）
+;;//背景：研究所
+;;//警告アラーム
+;;//赤フラッシュ点滅
+# script "lisp"
+# background "red_corridor"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# sedelay "SE_0710" 0.5
+;;モラルタ
+# body 3104011
+# pos 3104011 4
+# scale 3104011 0.8 0
+# alpha 3104011 0 0
+# layer 3104011 2
+;;ベガルタ
+# body 3104111
+# pos 3104111 1
+# scale 3104111 0.8 0
+# alpha 3104111 0 0
+# layer 3104111 1
+# face 3104111 "angry"
+;;アルマス
+# body 3103811
+# pos 3103811 3
+# scale 3103811 0.8 0
+# alpha 3103811 0 0
+# brightness 3103811 0 0
+# layer 3103811 23
+;;レヴァ
+# body 100211
+# pos 100211 3
+# scale 100211 0.8 0
+# alpha 100211 0 0
+# brightness 100211 0 0
+# layer 100211 23
+;;マサムネ
+# body 100111
+# pos 100111 3
+# scale 100111 0.9 0
+# alpha 100111 0 0
+# brightness 100111 0 0
+# layer 100111 23
+;;ティル
+# body 24
+# pos 24 3
+# scale 24 0.9 0
+# alpha 24 0 0
+# brightness 24 0 0
+# layer 24 23
+# imageset 3 "bg_white"
+# imagealpha 3 0 0
+# imagelayer 3 4
+# imagescale 3 2 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# fadeout "red" 0.5
+# waitandnext 0.5
+
+# fadein "red" 0.5
+# waitandnext 0.5
+
+# waitandnext 0.3
+
+# fadeout "red" 0.5
+# waitandnext 0.5
+
+# fadein "red" 0.5
+# waitandnext 0.5
+
+# waitandnext 0.3
+
+# voice 1040 "morallta_battle_0002"
+# alpha 3104011 1 0.5
+# alpha 3104111 1 0.5
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+それそれ～♪
+こんな忌々しい実験施設なんて
+ぶっ壊しちゃえ～！
+
+# voice 1041 "beagallta_battle_0004"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+壊れろ…滅べっ…
+クソクソクソクソ
+クソ忌々しい設備だらけだ！
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@研究員
+やめろ！お前達っ…！
+まずい、とても近づけない…
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@研究員
+問題ない
+第１７隔壁を閉鎖しろ
+あの二人を分断する
+
+;;//隔壁によってモラルタとベガルタが引き離される
+# se "SE_5215"
+# face 3104111 "surprise"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# move 3104111 1 0.5
+# alpha 3104111 0 0.5
+# shake 0 0.5
+# waitandnext 1.5
+
+# voice 1040 "morallta_0022"
+# face 3104011 "surprise"
+# move 3104011 3 0.5
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104011
+@モラ
+あれっ？
+ベガ…！？
+ベガ、どこに行ったんだよ！？
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@研究員
+分断は成功だ
+十分に引き離してから取り押さえろ
+
+# voice 1040 "morallta_0015"
+# face 3104011 "sad"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104011
+@モラ
+ベガ！ベガベガベガベガベガ！！
+もう、どこに行ったの！？
+ヤだよ！離ればなれは嫌だ！
+
+# voice 1040 "morallta_0016"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104011
+@モラ
+ねえ…返事してよっ
+ねえってば！ねえベガぁっ…？
+どこに行っちゃったのぉ…
+
+;;//モラルタが倒れる
+# serif 0
+# textwindow "close"
+# alpha 3104011 0 0.5
+# waitandnext 0.3
+
+# se "SE_3001"
+# shake 0 0.5
+# waitandnext 1
+
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 0
+# chara 3104011
+@モラ
+ベガがいない…
+ベガがいないよぉ…！
+
+# textflame 1 1
+# textboxarrow 0 0
+# chara 3104011
+@モラ
+嫌だよ怖いよ
+一人にしないでよぉ…！
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@研究員
+所長の狙い通りだ
+元々一つだった物質を二つに分けて
+埋め込まれているから…
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@研究員
+一定以上の距離を開けると
+たちまち不安定になる
+これなら捕縛は簡単だな
+
+# voice 1040 "morallta_0015"
+# alpha 3104011 1 0.5
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104011
+@モラ
+お願いだよベガぁ…
+どこにいるのぉ…？
+
+;;//背景：収容所
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# bgm "bgm004" 0
+# imageset 1 "bg_black"
+# imagealpha 1 0 0
+# imagelayer 1 2
+# imagescale 1 2 0
+# alpha 3104011 0 0
+# mask 3104011 off
+# serif 0
+# textwindow "close"
+# background "006_jail"
+# waitandnext 0.6
+
+# imagepos 1 0 30
+# serif 1
+# textwindow "normal"
+# fadein "black" 1
+# textboxarrow 1 0
+@研究員
+お前はここに一人っきりでいろ！
+永遠にな
+
+;;//背景：黒
+# se "SE_0690"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# imagealpha 1 1 1
+# shake 0 0.5
+# alpha 3104011 0 0.5
+# waitandnext 1.5
+
+# voice 1040 "morallta_0038"
+# serif 0
+# textwindow "normal"
+# layer 3104011 23
+# alpha 3104011 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104011
+@モラ
+あああああああああああああ…！
+苦しいっ…熱いっ…怖いよっ…
+怖いよベガぁっ…！
+
+# voice 1040 "morallta_0025"
+# face 3104011 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104011
+@モラ
+わたち暗いところ嫌いなのっ…俺？
+いや私だって…違うよボクだよ！
+なに言ってんの、ワタシィィィ…
+
+# face 3104011 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104011
+@モラ
+怖い痛い苦しい寂しい
+恐ろしい悲しいおぞましい
+
+# voice 1040 "morallta_0016"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104011
+@モラ
+気持ち悪い気色悪いキモイ
+臭い汚い汚らわしい気味が悪い…
+
+# face 3104011 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104011
+@モラ
+一人は…
+嫌だよぉぉぉぉぉぉっ…
+
+;;//背景：収容所
+;;//ドアが開く音
+# se "SE_0690"
+# serif 0
+# textwindow "close"
+# imagealpha 1 0 1
+# waitandnext 1.5
+
+# voice 1040 "morallta_0022"
+# face 3104011 "surprise"
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# layer 3104011 2
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104011
+@モラ
+…えっ？
+ドアが…開いた！ベガ！？
+ベガなの！？ベガなんでしょ！？
+
+;;//モラルタが部屋の外に飛び出す
+;;//背景：研究所
+;;//アルマスが立っている（逆光やシルエットでアルマスとわからないようにぼかす）
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# background "red_corridor"
+# waitandnext 0.6
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 1.5
+
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# alpha 3103811 0.01 0
+# imagepos 3  0 30
+# imagealpha 0 0 0
+# imagealpha 3 1 0
+# alpha 3104011 1 0
+# alpha 100211 0.01 0
+# alpha 100111 0.01 0
+# alpha 24 0.01 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 0
+# chara 3104011
+@モラ
+ベガ！
+…あの後ろ姿…違う…誰？
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 2
+@？？？
+…………
+
+;;//アルマス？が走り去る
+# se "SE_5575"
+# serif 1
+# textwindow "close"
+# alpha 3103811 0 0.5
+# alpha 100211 0 0.5
+# alpha 100111 0 0.5
+# alpha 24 0 0.5
+# waitandnext 1
+
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# voice 1040 "morallta_0010"
+# face 3104011 "angry"
+# imagealpha 3 0 1
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104011
+@モラ
+ちょっと待ってよ！
+…あ、あそこにいるのは
+てめぇら！よくもやってくれたな！
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@研究員
+バカな！？
+どうやって部屋から出たんだ！？
+すぐに捕らえ直し――
+
+# voice 1040 "morallta_0004"
+# face 3104011 "happy"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104011
+@モラ
+あははははっ
+てめぇら、皆殺しだよ！
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@研究員
+ギャアアアアアア…！
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@所長
+待て！俺を殺したらベガルタの
+居場所は分からなくなるぞ！
+
+# voice 1040 "morallta_0012"
+# face 3104011 "normal"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104011
+@モラ
+は～い！
+そんなの気にしてないから～
+
+# voice 1040 "morallta_0005"
+# face 3104011 "angry"
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104011
+@モラ
+だって…てめぇを食らって脳みそ
+直接覗けば良いんだからなぁ！！
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@所長
+アギャアアアアアアアアア！？
+た…たしゅけてへぇ…
+
+;;//鮮血演出
+;;//暗転挟む
+# se "SE_9161"
+# fadein "red" 0.5
+# shake 0 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 1
+
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# waitandnext 0.6
+
+# voice 1040 "morallta_0013"
+# serif 0
+# textwindow "normal"
+# fadein "black" 1
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3104011
+@モラ
+ハア…ハア…
+ベガ、今、行くからね
+
+;;//背景：収容所
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# bgm "bgm004" 0
+# alpha 3104011 0 0
+# move 3104011 4 0
+# move 3104111 2 0
+# mask 3104011 on
+# background "006_jail"
+# waitandnext 0.6
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_0690"
+# alpha 3104011 1 0.51
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+ベガ！ここにいるんだろっ？
+
+# voice 1041 "beagallta_0016"
+# face 3104111 "surprise"
+# alpha 3104111 1 0.3
+# leftin 3104111 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+モラ…？
+モラなの…？
+うわああああああああん！
+
+# voice 1040 "morallta_0004"
+# face 3104111 "sad"
+# face 3104011 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+大丈夫、もう大丈夫だよ
+ベガ、一緒に外に出よう
+
+# voice 1041 "beagallta_0020"
+# face 3104111 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+本当に大丈夫…？
+もう、モラと引き離されたり
+しない？
+
+# voice 1040 "morallta_0003"
+# face 3104011 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+もちろん！
+私達はいつも一緒だよ！
+邪魔する奴は誰もいないからねっ
+
+# face 3104111 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+でも、私、モラの足手まといに
+なるかもしれない…
+
+# voice 1040 "morallta_0004"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+そんなこと気にしなくて良いんだよ
+ほら、こっちこっち！
+
+;;//モラルタとベガルタが走っていく
+;;――場面転換――
+# se "SE_5575"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# face 3104111 "normal"
+# face 3104011 "normal"
+# background "red_corridor"
+# waitandnext 0.6
+
+# voice 1040 "morallta_0028"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+外に出よう！
+広い広い外にっ
+あの崖を登って地上の世界に！
+
+# voice 1041 "beagallta_0022"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3104111
+@ベガ
+外に出たら…
+なにをするの…？
+
+# voice 1040 "morallta_0004"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+それは外に出てから考えよう！
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+大丈夫！
+私達ならなんだってできるし
+どこにだって行けるよ！
+
+;;//背景：崖
+# voice 1040 "morallta_0029"
+# face 3104011 "happy"
+# imageset 4 "c_3104011_3104111"
+# imagealpha 4 0 0
+# imagelayer 4 5
+# imageset 1 "bg_black"
+# imagealpha 1 0 0
+# imagelayer 1 2
+# imagescale 1 2 0
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3104011
+@モラ
+ここを登れば良さそうだね
+ベガ、行こう！
+背中はみんなに任せよー！
+
+;;一枚絵ボイス
+;;モラ　　「ベガ、行こう！
+;;背中はみんなに任せよー！」
+;;ID:morallta_unit_0005
+;;morallta_unit_0005_1
+# imagealpha 4 1 0
+# imagealpha 1 1 0
+# imagepos 4 0 0 
+# imagepos 1 0 0
+# fadein "white" 3
+# voice 1040 "morallta_unit_1005"
+# textwindow "close"
+
+# waitandnext 1.5
+
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 1.5
+# imagealpha 4 0 1.5
+# waitandnext 2.5
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@？？？
+そうか…
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@？？？
+彼女達は外に出たんだね
+とても嬉しいよ
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@？？？
+これからが、本当に楽しみだ
+

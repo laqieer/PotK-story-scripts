@@ -1,0 +1,284 @@
+;;第4話（4-5）　タイトル：
+;;//背景：地底
+;;-----------------------------------------
+# script "lisp"
+# background "underground_world_3"
+# bgmfile "bgm273" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;@アルマス
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# alpha 172 1 0
+# mask 172 off
+;;@ムラマサ
+# body 3102511
+# pos 3102511 2
+# scale 3102511 0.8 0
+# alpha 3102511 0 0
+;;@マサムネ
+# body 3100111
+# pos 3100111 4
+# scale 3100111 0.8 0
+# alpha 3100111 0 0
+;;@ティターニア
+# body 139
+# pos 139 4
+# scale 139 0.8 0
+# alpha 139 0 0
+;;@ギル
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# alpha 137 0 0
+# face 172 "normal"
+# textboxarrow 0 2
+@アルマス
+マサムネを返してもらえるのなら
+こっちは大歓迎よ
+
+# voice 1038 "almace_0002"
+@アルマス
+でも、あなたは大丈夫なの？
+マサムネを逃がしたことが
+知られたら…
+
+# textboxarrow 0 1
+# alpha 172 0 0.5
+# alpha 3102511 1 0.5
+# alpha 3100111 1 0.5
+# face 3102511 "angry"
+# voice 310251 "muramasa_ge_0037"
+# chara 3102511
+@ムラマサ
+腹を切る覚悟はできております！
+拙者は、それでもっ…
+
+# textboxarrow 0 3
+# face 3100111 "angry"
+# voice 310011 "masamune_ge_0009"
+# chara 3100111
+@マサムネ
+待てムラマサっ…
+そんなことを
+させるわけにはいかぬ
+
+# textboxarrow 0 1
+# voice 310251 "muramasa_ge_0011"
+# chara 3102511
+@ムラマサ
+そのように憔悴された姿で
+何を仰せですか、姉様！
+いいえ、マサムネ…
+
+# textboxarrow 0 3
+# face 3100111 "surprise"
+# voice 310011 "masamune_ge_0022"
+# chara 3100111
+@マサムネ
+今、何と…？
+
+# textboxarrow 0 1
+# chara 3102511
+@ムラマサ
+今、このときより拙者とそなたは
+姉でもなければ妹でもありませぬっ
+
+# chara 3102511
+@ムラマサ
+袂を分かった斬ル姫同士…
+もし戦場で相まみえれば
+容赦なく刃を交えましょう
+
+# face 3102511 "sad"
+# voice 310251 "muramasa_ge_0015"
+# chara 3102511
+@ムラマサ
+お別れです…姉…マサムネ…
+
+;;//ムラマサが走り去る
+# se "SE_5575"
+# textboxarrow 0 0
+# alpha 3102511 0 1
+# waitandnext 1.5
+
+# mask 3100111 off
+# textboxarrow 0 2
+# move 3100111 3 0.3
+# face 3100111 "sad"
+# voice 310011 "masamune_ge_0037"
+# chara 3100111
+@マサムネ
+ムラマサ…！
+待ってくれ…あううっ…
+
+;;//マサムネが倒れる
+# se "SE_3001"
+# textboxarrow 0 0
+# alpha 3100111 0 1
+# waitandnext 1.5
+
+# mask 172 on
+# textboxarrow 0 3
+# move 172 2 0
+# alpha 172 1 0.5
+# alpha 139 1 0.5
+# face 139 "surprise"
+# voice 9967 "titania_0020"
+@ティターニア
+無理をしてはいけません！
+今は静養が必要です
+
+# textboxarrow 0 1
+# face 172 "sad"
+@アルマス
+ムラマサ、泣いてたわね…
+
+# textboxarrow 0 2
+# alpha 172 0 0.5
+# alpha 139 0 0.5
+# alpha 3100111 1 0.5
+# mask 3100111 off
+# face 3100111 "sad"
+# voice 310011 "masamune_ge_0016"
+# chara 3100111
+@マサムネ
+拙者はっ…拙者は…情けない！
+妹を呪縛から解き放つどころか
+自分が追い詰められ…
+
+# chara 3100111
+@マサムネ
+ムラマサに助けられたあげく、
+あのような悲愴な決意までさせて
+しまうなどっ…姉失格だ！
+
+# select "顔を上げろ" "select_label_01" "そんなことはない" "select_label_02" "大丈夫だ" "select_label_03"
+@マサムネ
+ムラマサに助けられたあげく、
+あのような悲愴な決意までさせて
+しまうなどっ…姉失格だ！
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# bgm "stop"
+# face 3100111 "surprise"
+# chara 3100111
+@マサムネ
+主君…？
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# bgm "stop"
+# face 3100111 "surprise"
+# chara 3100111
+@マサムネ
+主君…？
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# bgm "stop"
+# face 3100111 "surprise"
+# chara 3100111
+@マサムネ
+主君…？
+
+# bgmfile "bgm279" "BgmLostRagnarokBattle002" 0
+# textboxarrow 0 1
+# mask 3100111 on
+# move 3100111 4 0.5
+# alpha 172 1 0.5
+# label "select_label_end"
+# face 172 "angry"
+# voice 1038 "almace_0003"
+@アルマス
+そうよ、マサムネ！
+落ち込んでる場合じゃない！
+
+@アルマス
+失ったのなら取り戻せば良い！
+壊れたのなら直せば良い！
+まだ終わりじゃないわ！
+
+@アルマス
+霊装支配から解放されれば
+ムラマサだってあなたの言うことを
+理解できるはず
+
+# face 172 "normal"
+@アルマス
+そうしたら姉妹の仲だって
+元に戻るわよっ
+
+@アルマス
+だから今は前を向いて！
+私達には為すべきことがあるの！
+
+# textboxarrow 0 3
+# face 3100111 "normal"
+# voice 310011 "masamune_ge_0003"
+# chara 3100111
+@マサムネ
+アルマス…
+そうであったな…
+ここで挫けてばかりはおれぬ
+
+# voice 310011 "masamune_ge_0001"
+# chara 3100111
+@マサムネ
+主君、長きに渡る無礼
+お詫びいたす
+
+# chara 3100111
+@マサムネ
+これより先、
+拙者は主君の剣となること、
+改めてここに誓う
+
+# chara 3100111
+@マサムネ
+何とぞ、よろしく願いつかまつる
+
+# textboxarrow 0 2
+# alpha 172 0 0.5
+# alpha 3100111 0 0.5
+# alpha 137 1 0.5
+# face 137 "surprise"
+@ギル
+堅苦しい言い回しだなぁ…
+
+# textboxarrow 0 1
+# alpha 172 1 0.5
+# alpha 137 0 0.5
+# alpha 139 1 0.5
+# face 172 "normal"
+@アルマス
+とにかく、
+マサムネとも合流できて
+良かったわ！
+
+# voice 1038 "almace_0002"
+@アルマス
+今はとにかく先を急ぎましょう
+深奥に一番に辿り着いて
+「神」とやらに会わないとっ
+
+# textboxarrow 0 3
+# face 139 "normal"
+# voice 9967 "titania_0004"
+@ティターニア
+そうですね
+マサムネ、歩けますか？
+
+# textboxarrow 0 2
+# mask 3100111 off
+# move 3100111 3 0
+# alpha 172 0 0.5
+# alpha 139 0 0.5
+# alpha 3100111 1 0.5
+# face 3100111 "angry"
+# voice 310011 "masamune_ge_0033"
+# chara 3100111
+@マサムネ
+無論だ
+行こう、主君

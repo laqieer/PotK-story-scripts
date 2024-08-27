@@ -1,0 +1,426 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第2話　タイトル：雷霆の絆
+;;2_9_1
+;;スクリプト最後の背景：町
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.8 0
+# layer 502711 2
+# alpha 502711 0 0
+# mask 502711 off
+;;ダモクレス
+# body 103511
+# pos 103511 3
+# scale 103511 0.8 0
+# layer 103511 2
+# alpha 103511 0 0
+# mask 103511 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;異族化フライクーゲル
+# body 5500231
+# pos 5500231 3
+# scale 5500231 0.8 0
+# layer 5500231 2
+# alpha 5500231 0 0
+# mask 5500231 off
+;;アスクレピオス
+# body 600131
+# pos 600131 3
+# scale 600131 0.8 0
+# layer 600131 2
+# alpha 600131 0 0
+# mask 600131 off
+;;異族化アルテミス
+# body 5400131
+# pos 5400131 3
+# scale 5400131 0.8 0
+# layer 5400131 2
+# alpha 5400131 0 0
+# mask 5400131 off
+;;ケラウノス
+# body 500131
+# pos 500131 3
+# scale 500131 0.8 0
+# layer 500131 2
+# alpha 500131 0 0
+# mask 500131 off
+;;フラガラッハ
+# body 101011
+# pos 101011 3
+# scale 101011 0.8 0
+# layer 101011 2
+# alpha 101011 0 0
+# mask 101011 off
+;;デオン
+# body 203
+# pos 203 3
+# scale 203 0.8 0
+# layer 203 2
+# alpha 203 0 0
+# mask 203 off
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 2
+# alpha 810004 0 0
+# mask 810004 off
+;;-----------------------------------------
+;;第2話　タイトル：雷霆の絆
+;;//背景：町
+;;//モブ奏官達とキル姫達が出ていく
+# se "SE_0799"
+# textwindow "close"
+# waitandnext 1
+
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+フェルカの町に向けて連合軍が
+出発したみたいね
+
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0003"
+@ラグナロク
+テュルソスとアポロンも出たわ
+
+# alpha 196 0 0.5
+# move 500131 4 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 on
+# textboxarrow 0 3
+@ケラウノス
+さて、こっちも仕掛けよっか～
+
+# face 103611 "usual"
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0022"
+@ラグナロク
+何のこと？
+
+# face 500131 "happy"
+# textboxarrow 0 3
+# voice 5001 "keraunosu_0004"
+@ケラウノス
+決まってるでしょ～
+私達でアルテミスを捕まえるんだよ
+こっちに来て
+
+;;//背景：教会
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "town"
+# alpha 103611 0 0
+# alpha 500131 0 0
+# move 203 2 0
+# alpha 203 1 0.5
+# mask 203 on
+# face 203 "usual"
+# move 500131 4 0
+# face 500131 "normal"
+# alpha 500131 1 0
+# mask 500131 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 5001 "keraunosu_0001"
+@ケラウノス
+マスター、私に名案があるよ
+
+# textboxarrow 0 1
+# voice 9939 "deon_0043"
+@デオン
+で、あるか
+ならば見事、アルテミスを捕らえて
+くるのである！
+
+# alpha 500131 0 0.5
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0016"
+@アルマス
+名案の内容、聞いてないんだけどっ
+
+# textboxarrow 0 1
+# voice 9939 "deon_0034"
+@デオン
+うむ
+ケラウノスなら安心である
+アスクレピオス、お前も行け
+
+# alpha 196 0 0.5
+# move 600131 4 0
+# face 600131 "angry"
+# alpha 600131 1 0.5
+# mask 600131 on
+# textboxarrow 0 3
+@アスクレピオス
+待ちなさい、マスター！
+私まで出たらここの守りは
+どうするのよっ？
+
+# textboxarrow 0 1
+# face 203 "angry"
+@デオン
+心配無用である！
+下手に戦力を分割するは愚行！
+攻撃こそ最大の防御である
+
+# textboxarrow 0 1
+@デオン
+全力を投じて、
+アルテミスを一気呵成に
+攻め叩くのである！
+
+# alpha 203 0 0.5
+# alpha 600131 0 0.5
+# move 500131 3 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 off
+# textboxarrow 0 2
+@ケラウノス
+ほら、行くよ
+アスクレピオス
+後衛は任せたからね～
+
+# alpha 500131 0 0.5
+# move 203 2 0
+# alpha 203 1 0.5
+# mask 203 on
+# move 600131 4 0
+# face 600131 "normal"
+# alpha 600131 1 0.5
+# mask 600131 on
+# textboxarrow 0 3
+@アスクレピオス
+…マスターの命令なら従うわ
+
+# textboxarrow 0 1
+@デオン
+勇ましき姫達よ！
+その力、遺憾なく発揮するのである
+
+;;//背景：町
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "town"
+# alpha 203 0 0
+# alpha 600131 0 0
+# move 103511 2 0
+# face 103511 "usual"
+# alpha 103511 1 0
+# mask 103511 on
+# move 5400131 4 0
+# face 5400131 "angry"
+# alpha 5400131 1 0
+# mask 5400131 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 3
+# textwindow "normal"
+@アルテミス
+待ちなさい、破廉恥娘！
+
+# face 103511 "angry"
+# textboxarrow 0 1
+# voice 1035 "damocles_0013"
+@ダモクレス
+クレスは破廉恥じゃないよ！
+これは愛だよ、愛！
+
+# textboxarrow 0 3
+@アルテミス
+そんなふしだらな姿が愛だなんて
+認めません！
+射抜かれ、枯れ果てなさい！
+
+# face 103511 "happy"
+# textboxarrow 0 1
+# voice 1035 "damocles_0004"
+@ダモクレス
+うんうん
+愛があれば大丈夫♪
+
+# alpha 103511 0 0.5
+# alpha 5400131 0 0.5
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# move 196 4 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0001"
+@アルマス
+名案って、あれ？
+
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0028"
+@ラグナロク
+まんまと釣られたアルテミスも
+どうかと思うけど…
+
+# alpha 103611 0 0.5
+# alpha 196 0 0.5
+# move 502711 3 0
+# face 502711 "normal"
+# alpha 502711 1 0.5
+# mask 502711 off
+# textboxarrow 0 2
+# voice 5027 "freischotz_0004"
+@フライシュッツ
+わ～い！
+おねーちゃんも加勢するよ～っ
+
+# se "SE_5575"
+# textwindow "close"
+# leftout 502711 0.5
+# waitandnext 0.5
+
+# alpha 502711 0 0.5
+# move 5400131 3 0
+# face 5400131 "angry"
+# alpha 5400131 1 0.5
+# mask 5400131 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 540013 "arutemisu_iz_0010"
+@アルテミス
+は？
+ふしだらな格好のキル姫が
+増えましたね！
+
+# se "SE_0830"
+# alpha 5400131 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# textboxarrow 0 2
+@異族
+イイイイイイイイイ！
+
+# alpha 810004 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+異族が出てきたわ
+フラガラッハ！
+
+# move 101011 2 0
+# face 101011 "normal"
+# alpha 101011 1 0.5
+# mask 101011 on
+# textboxarrow 0 1
+# move 196 4 0.5
+# mask 196 on
+# voice 1010 "furagaraha_0033"
+@フラガラッハ
+任せて
+周りの異族はわたしが
+
+# textboxarrow 0 1
+@フラガラッハ
+マスターはわたしの勇姿に
+見惚れていていいのよ
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0015"
+@アルマス
+私も戦うからっ
+
+# alpha 101011 0 0.5
+# alpha 196 0 0.5
+# move 500131 3 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 off
+# textboxarrow 0 2
+# voice 5001 "keraunosu_0039"
+@ケラウノス
+なるほど～
+うんうん、分かった
+
+# move 500131 2 0.5
+# mask 500131 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+一人で何を頷いてるの？
+
+# face 500131 "angry"
+# textboxarrow 0 1
+@ケラウノス
+次の展開を考えてたんだ～
+これで勝てるね
+
+# textboxarrow 0 1
+# voice 5001 ""
+とりあえず、私の言う通りに
+動いてよ！
+上手くいくから
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0011"
+@アルマス
+自信満々ね
+
+# face 500131 "happy"
+# textboxarrow 0 1
+# voice 5001 "keraunosu_0003"
+@ケラウノス
+私だからね～
+それじゃ、よろしく！

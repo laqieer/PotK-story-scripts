@@ -1,0 +1,237 @@
+;;【EP3】/背景　プール
+# script "lisp"
+# background "sea_resort_day"
+# bgmfile "bgm226" "BgmSeaEvent" 0
+# body 2102311
+# pos 2102311 3
+# mask 2102311 off
+# alpha 2102311 0 0
+# textflame 0 0
+@
+アスカロンとマスターは
+抱き合うようにして
+プールに落ちてしまった
+
+# alpha 2102311 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2102311
+# face 2102311 "sad"
+@アスカロン
+…ぷはっ！
+大丈夫ですか、マスター？
+
+# textflame 0 0
+@
+アスカロンはマスターを抱えて
+水面まで浮上する
+
+# voice 1023 "ascalon_0031"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2102311
+@アスカロン
+すみません、マスター
+私のせいで…
+
+# textflame 0 0
+@
+マスターがアスカロンから
+離れようとしたとき
+突然、足に激痛が走り苦しみだす
+
+# voice 1023 "ascalon_0002"
+# textflame 1 1
+# chara 2102311
+# textboxarrow 0 2
+# face 2102311 "sad"
+@アスカロン
+ま、マスター…っ！
+大丈夫ですか！？
+
+# select "助けて、アスカロン！" "select_label_01" "誰か助けを呼んで来て！" "select_label_02" "足がつった！溺れるっ…！" "select_label_03"
+ま、マスター…っ！
+大丈夫ですか！？
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2102311
+# face 2102311 "angry"
+@アスカロン
+はい、私につかまってください！
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2102311
+# face 2102311 "angry"
+@アスカロン
+いえ、私が助けます！
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2102311
+# face 2102311 "angry"
+@アスカロン
+私が溺れさせたりしません！
+
+# label "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2102311
+# face 2102311 "angry"
+@アスカロン
+マスター、今すぐ助け――
+
+# bgm "stop"
+# textflame 0 0
+@
+しかしその時
+アスカロンに異変が起こる
+
+# bgmfile "bgm234" "BgmSeaEventBattle" 0
+# voice 1023 "ascalon_0038"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2102311
+# face 2102311 "sad"
+@アスカロン
+うっ、うぅぅ…………
+マス、たぁ…
+
+# textflame 0 0
+@
+アスカロンは苦しそうに唸りながら
+溺れそうなマスターに
+必死に手を伸ばす
+
+# voice 1023 "ascalon_battle_0005"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2102311
+@アスカロン
+う、ぐぅぅ……
+ここで呪いに屈したら…
+マスターが…！
+
+;;SE　水音
+# se "SE_9130"
+# textflame 1 1
+# chara 2102311
+# textboxarrow 0 2
+# face 2102311 "angry"
+@アスカロン
+うぅぅ…絶対…
+マスターを、助ける…
+呪いになんか…負け、ない…！
+
+# textflame 0 0
+@
+…しかし
+必死にマスターに近づこうとする
+アスカロンの動きがふいに止まる
+
+# voice 1023 "ascalon_0022"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2102311
+# face 2102311 "sad"
+@アスカロン
+え…水になにかが浮かんで…
+あれは…私？
+呪いに苦しむ私を笑ってる…？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2102311
+@アスカロン
+そんな…
+私は…自分の弱さになんか…
+
+# voice 1023 "ascalon_battle_0002"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2102311
+# face 2102311 "angry"
+@アスカロン
+負ける…もんかぁー！
+
+# textflame 0 0
+@
+アスカロンは強い意志を目に宿し
+呪いも幻影もまとめて薙ぎ払うように
+剣で水を切った
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# se "SE_0602"
+@
+それはアスカロンが新たなスキル
+『スプリットブルー』に
+目覚めた瞬間だった…！
+
+;;時間経過
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# bgmfile "bgm255" "BgmSeaDate" 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# chara 2102311
+# textboxarrow 0 2
+# face 2102311 "usual"
+@アスカロン
+もう大丈夫ですよ！
+
+# textflame 0 0
+@
+アスカロンは
+マスターを抱きかかえて水から上がる
+
+# textflame 1 1
+# chara 2102311
+# textboxarrow 0 2
+# face 2102311 "smile"
+@アスカロン
+もう、大丈夫です…！
+
+# voice 1023 "ascalon_0004"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2102311
+@アスカロン
+マスターを助けようと思って
+必死になってたら
+呪いを抑えられていました…！
+
+# imageset 0 "c2102311"
+# imagealpha 0 0 0
+# textflame 0 0
+@
+そう話すアスカロンは
+いつになく晴れやかな表情をしていた
+
+# frameout 0 0.5
+# buttonsout 0 0.5
+# imagealpha 0 1 0
+# imagepos 0 0 0 
+# fadein "white" 3
+# textwindow "close"
+# voice 1023 "ascalon_kyara_1001"
+;;「まだまだ未熟な私ですけど、お役にたてるように頑張りますから！」 

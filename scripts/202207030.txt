@@ -1,0 +1,445 @@
+;;-----------------------------------------
+;;SEA夏1_3_0
+;;-----------------------------------------
+# script "lisp"
+# background "SEAsummer_town1"
+# bgm "stop"
+;;-----------------------------------------
+;;浴衣ミーミル
+# body 318
+# pos 318 3
+# scale 318 0.8 0
+# layer 318 4
+# mask 318 off
+# alpha 318 0 0
+;;浴衣ティルフィング
+# body 6101421
+# pos 6101421 3
+# scale 6101421 0.8 0
+# layer 6101421 2
+# mask 6101421 off
+# alpha 6101421 1 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "SEA6101421"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：忍の里（シノビナトリミング）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_6170"
+# face 6101421 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+…………
+
+;;選択肢
+# select "驚いたね" "select_label_01" "強引だった" "select_label_01"
+…………
+
+# label "select_label_01"
+# bgmfile "bgm601_yukata_block" "BgmSecretlyEverAfter001" 0
+# sedelay "bgm601_yukata_on" 1.5
+# voice 610141 "tyrufing_7th_0003"
+# textboxarrow 0 2
+@ティルフィング
+はい
+私も驚きました…
+
+# textboxarrow 0 2
+@ティルフィング
+ミーミルは、きっと、
+気を遣ってくれたんです
+
+# textboxarrow 0 2
+@ティルフィング
+旅に出る前は、物事をそのまま
+受け取ることしかできなかった
+あの子が…
+
+# textboxarrow 0 2
+@ティルフィング
+他者の気持ちを推し量って
+行動するなんて…
+成長したんですね
+
+# voice 610141 "tyrufing_7th_0030"
+# textboxarrow 0 2
+@ティルフィング
+全てマスターのお陰です
+ありがとうございます
+
+;;選択肢
+# select "何もしてないよ" "select_label_02" "ミーミル自身の力だよ" "select_label_02"
+全てマスターのお陰です
+ありがとうございます
+
+# label "select_label_02"
+# voice 610141 "tyrufing_7th_0004"
+# face 6101421 "normal"
+# textboxarrow 0 2
+@ティルフィング
+ふふっ
+マスターは謙虚ですね
+
+# sestop "SE_6170"
+# voice 610141 "tyrufing_7th_0002"
+# face 6101421 "usual"
+# textboxarrow 0 2
+@ティルフィング
+…………あの
+
+# voice 610141 "tyrufing_7th_0001"
+# textboxarrow 0 2
+@ティルフィング
+こうしてお会いするのは、
+久し振りですね、マスター
+
+# face 6101421 "shy"
+# textboxarrow 0 2
+@ティルフィング
+それで、その…
+
+;;選択肢
+# select "浴衣、似合ってるよ" "select_label_03" "その髪型もいいね" "select_label_04"
+それで、その…
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# voice 610141 "tyrufing_7th_0030"
+# face 6101421 "normal"
+# textboxarrow 0 2
+@ティルフィング
+ありがとうございますっ
+実は気に入っていただけるか…
+少し不安でした
+
+# label "select_label_04"
+# labeljump "select_label_end"
+# voice 610141 "tyrufing_7th_0030"
+# face 6101421 "normal"
+# textboxarrow 0 2
+@ティルフィング
+ありがとうございますっ
+この髪飾りもこだわってみたんですよ
+
+;;選択肢
+# label "select_label_end"
+# select "少し歩こうか" "select_label_05"
+…………
+
+# label "select_label_05"
+# voice 610141 "tyrufing_7th_0003"
+# face 6101421 "usual"
+# textboxarrow 0 2
+@ティルフィング
+はい、マスター
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：春の街道（シノビナトリミング）
+# background "SEAsummer_town2"
+# se "SE_6193"
+# alpha 6101421 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_0902"
+# fadein "black" 1
+# waitandnext 1
+
+# serif 1
+@人々
+ワイワイ…ガヤガヤ…
+
+;;ティルフィングシナリオカット
+#setnextbgmblock 1
+# fadein "white" 1
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# frameout 0 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 0
+@ティルフィング
+まだ朝ですけれど、
+思ったより人通りが多いですね
+
+@ティルフィング
+皆さん、楽しそうです
+
+# voice 610141 "tyrufing_7th_0004"
+@ティルフィング
+ふふっ
+小さな子がお父さんに
+肩車されていますよ
+
+@ティルフィング
+あのお面は…もしかしてキル姫の
+誰かを模しているのではっ？
+マスター、どう思い――
+
+# serif 1
+@通りすがりの見物客
+おっと、ゴメンよ
+
+;;シナリオカット削除
+# se "SE_6239"
+# imagealpha 1 0 1
+# framein 0 1
+# waitandnext 1
+
+# face 6101421 "surprise"
+# alpha 6101421 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@ティルフィング
+あっ…
+
+;;ティルフィングがよろける
+;;ティルフィングを抱き留める
+# se "SE_0648"
+# move 6101421 4 0.3
+# scale 6101421 1 0.2
+# textboxarrow 0 0
+# waitandnext 1.5
+
+;;選択肢
+# select "おっと" "select_label_06" "大丈夫？" "select_label_06"
+あっ…
+
+# label "select_label_06"
+# face 6101421 "sad"
+# textboxarrow 0 3
+@ティルフィング
+すみません…
+周りを良く見ていませんでした
+
+# textboxarrow 0 3
+@ティルフィング
+…………
+
+# voice 610141 "tyrufing_7th_0001"
+# face 6101421 "usual"
+# textboxarrow 0 3
+@ティルフィング
+マスター
+もう少し、腕をお借りしていても
+いいですか？
+
+;;選択肢
+# select "いいよ" "select_label_07" "手を繋ぐ？" "select_label_08"
+マスター
+もう少し、腕をお借りしていても
+いいですか？
+
+# label "select_label_07"
+# labeljump "select_label_end2"
+# voice 610141 "tyrufing_7th_0030"
+# face 6101421 "normal"
+# textboxarrow 0 3
+@ティルフィング
+ありがとうございます
+それでは、もう少しだけ…
+
+# label "select_label_08"
+# labeljump "select_label_end2"
+# face 6101421 "shy"
+# textboxarrow 0 3
+@ティルフィング
+それはっ…
+恥ずかしいです
+
+;;暗転挟む
+# label "select_label_end2"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：公家屋敷（シノビナトリミング）
+# background "SEAsummer_town3"
+# move 6101421 3 0
+# scale 6101421 0.8 0
+# face 6101421 "usual"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@ティルフィング
+この辺りは木陰になっていて、
+涼しいですね
+
+# voice 610141 "tyrufing_7th_0001"
+# textboxarrow 0 2
+@ティルフィング
+マスター
+あちらの茶屋で少し休みませんか？
+
+# textboxarrow 0 2
+@ティルフィング
+ミーミル
+アナタも一緒に
+
+# move 318 1 0
+# scale 318 0.6 0
+# alpha 6101421 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# face 318 "normal"
+# alpha 318 1 0.3
+# waitandnext 0.5
+
+# face 318 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+…………！
+
+;;ミーミルが姿を消す
+# se "SE_12407"
+# alpha 318 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# face 6101421 "sad"
+# alpha 6101421 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ティルフィング
+あっ…
+気を遣いすぎですね
+それなら…
+
+# face 6101421 "usual"
+# textboxarrow 0 2
+@ティルフィング
+このうちわを、こうですっ
+
+# se "SE_12405"
+# sedelay "SE_12405" 0.5
+# move 6101421 4 0.5
+# textboxarrow 0 0
+# waitandnext 1.5
+
+;;ミーミルが引き寄せられてくる
+# se "SE_5006"
+# scale 318 0.8 0.5
+# face 318 "surprise"
+# alpha 318 1 0.3
+# waitandnext 1
+
+# se "SE_5007"
+# move 318 2 0.5
+# waitandnext 1
+
+# textboxarrow 0 1
+@ミーミル
+ああっ
+うちわがひらひらと…はたはたと…
+
+# textboxarrow 0 1
+@ミーミル
+ハッ！
+マスター様とティルフィング様の
+二人だけの時間を邪魔しては…
+
+# voice 9917 "mimir_navikan_0016"
+# face 318 "sad"
+# textboxarrow 0 1
+@ミーミル
+で、ですが…
+揺らめくものに抗えません
+
+# textboxarrow 0 3
+@ティルフィング
+いいんですよ、ミーミル
+アナタもこちらに
+
+# voice 9917 "mimir_navikan_0003"
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+は、はい
+では、失礼致します
+
+# voice 610141 "tyrufing_7th_0004"
+# face 6101421 "normal"
+# textboxarrow 0 3
+@ティルフィング
+アナタも成長しているんですね
+嬉しく思います
+
+# voice 9917 "mimir_navikan_0022"
+# face 318 "surprise"
+# textboxarrow 0 1
+@ミーミル
+えっ？
+なんと…恐縮です…
+
+# face 6101421 "usual"
+# textboxarrow 0 3
+@ティルフィング
+ところで、マナナンはどちらに？
+
+# face 318 "sad"
+# textboxarrow 0 1
+@ミーミル
+それが…
+着替えを終えた途端、一人で
+飛び出していってしまって…
+
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+探しに行かなければと思ったのですが
+先にお二人に連絡しておこうと思い
+私だけ戻ってまいりました
+
+# textboxarrow 0 3
+@ティルフィング
+そうですか…
+大丈夫ですよ、ミーミル
+
+# textboxarrow 0 3
+@ティルフィング
+彼女が会場内にいることは
+把握できています
+
+# voice 9917 "mimir_navikan_0023"
+# face 318 "surprise"
+# textboxarrow 0 1
+@ミーミル
+なんと！
+さすがでございますっ
+
+# textboxarrow 0 3
+@ティルフィング
+マナナンもしばらく自由にさせて
+あげましょう
+
+# fadeout "black" 1
+# waitandnext 1

@@ -1,0 +1,152 @@
+;;■□■２－４改修案■□■
+;;整形済み
+;;【２－４－４（バトル前）】
+# script "lisp"
+# background "forest"
+# bgm "bgm005" 0
+# body 24
+# pos 24 2
+# scale 24 0.8 0
+# alpha 24 1 0
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# alpha 0 0 0
+# mask 0 off
+# body 4
+# pos 4 4
+# scale 4 0.8 0
+# alpha 4 1 0
+# body 5
+# pos 5 3
+# scale 5 0.8 0
+# alpha 5 0 0
+# mask 5 off
+# face 4 "normal"
+# textboxarrow 0 1
+# face 24 "normal"
+@ティルフィング
+安心してください…トトは無事です
+
+# alpha 24 0 0.5
+# alpha 4 0 0.5
+# alpha 5 1 0.5
+# textboxarrow 0 2
+# face 5 "angry"
+@祀官
+…！
+トトに触るなキル姫！！
+…来い、トト！！
+
+# alpha 5 0 0.5
+# alpha 0 1 0.5
+# voice 9999 "durin_0052"
+@デュリン
+ちょっ、なにすんのよ！？
+ティルフィングは、
+ケガを負いながら助けたのよ！？
+
+# alpha 0 0 0.5
+# alpha 5 1 0.5
+@祀官
+黙れ！！
+聞いただろう…ラグナロクが
+どんな仕打ちをしたのか？
+
+@祀官
+ラグナロクさえ手を差し伸べていれば
+ナパル一家の悲劇は無かったんだぞ？
+
+@祀官
+わかるか？
+ラグナロクは恨みの対象でしかない！
+
+@祀官
+そんなお前らが
+トトに何がしてやれるというんだ？
+
+# alpha 0 1 0.5
+# alpha 5 0 0.5
+# face 0 "worry"
+# voice 9999 "durin_0009"
+@デュリン
+…待ってよ
+…アンタ、いったい何者なの？
+
+# face 0 "serious2"
+@デュリン
+ラグナロクをこれだけ憎悪して、
+デディケーターなわけがない…
+
+# face 0 "serious"
+@デュリン
+さらに、あの教会は
+おそらく登録から抹消されてる…
+
+# face 0 "occur"
+@デュリン
+つまり…エゼル村に
+祀官は存在しないってこと
+
+# select "本当に、ラグナロクの祀官なのか？" "select_label_01" "祀官じゃないなら、いったい…？" "select_label_01"
+つまり…エゼル村に
+祀官は存在しないってこと
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textboxarrow 0 2
+# face 0 "normal"
+# voice 9999 "durin_0077"
+@デュリン
+トトが“悪魔の子”のように
+異族を呼んでしまうのなら、
+アンタもただじゃ…
+
+# label "select_label_end"
+# alpha 0 0 0.5
+# alpha 5 1 0.5
+@祀官
+黙れ！！
+なにが“悪魔の子”だ！
+
+@祀官
+どいつもこいつも、
+偏見で物を見やがって！
+
+@祀官
+俺達は…
+俺達は…………
+悪魔の子なんかじゃない！！
+
+# bgm "stop"
+# alpha 0 1 0.5
+# alpha 5 0 0.5
+@デュリン
+え…？
+
+# bgm "bgm023_024" 0
+# textwindow "close"
+# imageset 1 "mov2_3"
+# imagealpha 1 0 0
+# imagelayer 1 1
+# waitandnext 0.1
+
+# textboxarrow 0 0
+# textboxarrow 1 0
+# imagealpha 1 1 0.5
+# imagepos 1 0 -80
+# shakeloop 0
+# waitandnext 0.5
+
+# textwindow "toge"
+# textboxarrow 0 0
+# voice 1014 "tyrufing_0068"
+@ティルフィング
+トト、逃げて！！
+異族よ！！
+
+# voice 9998 "toto_0027"
+@トト
+え？
+…うわっ！！
+;;バトル

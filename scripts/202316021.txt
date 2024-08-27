@@ -1,0 +1,525 @@
+;;-----------------------------------------
+;;SEA_2_1
+;;-----------------------------------------
+# script "lisp"
+# background "in_city"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;異族
+# body 810004
+# pos 810004 2
+# scale 810004 0.8 0
+# layer 810004 5
+# mask 810004 off
+# alpha 810004 0 0
+# entry 810994 810004
+# body 810994
+# pos 810994 4
+# scale 810994 0.8 0
+# layer 810994 3
+# mask 810994 off
+# alpha 810994 0 0
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 3
+# scale 6504011 0.8 0
+# layer 6504011 3
+# mask 6504011 off
+# alpha 6504011 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 3
+# scale 6603811 0.8 0
+# layer 6603811 3
+# mask 6603811 off
+# alpha 6603811 0 0
+;;マサムネ
+# body 100111
+# pos 100111 3
+# scale 100111 0.8 0
+# layer 100111 3
+# mask 100111 off
+# alpha 100111 0 0
+;;フライクーゲル
+# body 500211
+# pos 500211 3
+# scale 500211 0.8 0
+# layer 500211 3
+# mask 500211 off
+# alpha 500211 0 0
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 3
+# mask 103611 off
+# alpha 103611 0 0
+# brightness 103611 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 4
+;;-----------------------------------------
+;;背景：中心部：in_city
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+;;異族の群れが現れる
+# alpha 810004 1 0.5
+# alpha 810994 1 0.5
+# waitandnext 1
+
+# se "SE_0617"
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 0
+@異族
+ガアアアアアアアアアア！
+
+;;住民達が逃げている
+# se "SE_6265"
+# serif 1
+@住民達
+うわああああああ…！！
+化け物だぁぁっ…！
+助けてー…！
+
+;;異族が追いかける
+# move 810994 5 1
+# alpha 810994 0 1
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 2
+
+# sestop "SE_6265"
+# move 6504011 4 0
+# layer 6504011 2
+# alpha 6504011 1 0.3
+# voice 650401 "manannan_ura_battle_0002"
+# face 6504011 "angry"
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 3
+@マナナン
+そこだぁっ
+
+;;マナナンの攻撃で異族が倒れる
+# se "SE_8568"
+# fadein "white" 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+# se "SE_8569"
+# shake 0 0.5
+# waitandnext 1
+
+# se "SE_3001"
+# alpha 810004 0 1
+# waitandnext 1
+
+# voice 650401 "manannan_ura_0006"
+# face 6504011 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@マナナン
+やったね！
+
+;;異族が更にやってくる
+# alpha 6504011 0 0.3
+# move 810004 4 0
+# alpha 810004 1 0.3
+# move 6603811 2 0
+# layer 6603811 2
+# voice 660381 "maclir_ura_battle_0003"
+# alpha 6603811 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+来ないでっ
+
+;;マクリルの攻撃で異族が倒れる
+# se "SE_4817"
+# fadein "white" 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+# se "SE_3001"
+# alpha 810004 0 1
+# waitandnext 1
+
+# voice 660381 "maclir_ura_0004"
+# face 6504011 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+よかったぁ
+
+# alpha 6603811 0 0.3
+# alpha 270 1 0.3
+# face 270 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+皆さん、こちらです！
+お早く避難をっ
+
+# serif 1
+@住民達
+ああ、ありがとう！
+
+;;住民達が逃げていく
+# voice 9917 "mimir_navikan_0001"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+こちらの区画は
+避難が完了したようです
+マスター様、お怪我はありませんか？
+
+;;選択肢
+# select "大丈夫" "select_label_01" "大変なことになってるね…" "select_label_01"
+マスター様、お怪我はありませんか？
+
+# label "select_label_01"
+;;マサムネが現れる
+# se "SE_0719"
+# move 270 2 0.5
+# move 100111 4 0
+# layer 100111 2
+# voice 1001 "masamune_0030"
+# alpha 100111 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@マサムネ
+ご助力感謝致す
+まさか、このトーキョーに異族が
+現れるとはな…
+
+# voice 9917 "mimir_navikan_0002"
+# face 270 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+あの…
+異族とは、
+どういった存在なのでしょう？
+
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+不勉強で申し訳ございません…
+
+# voice 1001 "masamune_0003"
+# face 100111 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@マサムネ
+その話は後にしよう
+今は手分けして住民を
+避難させることに専念すべきだ
+
+# textflame 1 1
+# textboxarrow 0 3
+@マサムネ
+ここは大きな町だからな
+キル姫も比較的多くいるが、
+人手はあるに越したことはない
+
+# voice 9917 "mimir_navikan_0032"
+# face 270 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+そうですね
+では、次の区画へ参りましょう
+
+# voice 1001 "masamune_0036"
+# face 100111 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@マサムネ
+拙者はあちらに向かう
+では、よろしく頼む
+
+;;マサムネが立ち去る
+# se "SE_5575"
+# move 100111 5 0.5
+# alpha 100111 0 0.3
+# layer 270 5
+# textwindow "close"
+# waitandnext 1
+
+# move 270 3 0.5
+# move 6504011 5 0
+# layer 6504011 4
+# mask 6504011 on
+# voice 650401 "manannan_ura_0005"
+# face 6504011 "happy"
+# alpha 6504011 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+次の標的はどこかな～♪
+
+# move 6603811 1 0
+# layer 6603811 2
+# mask 6603811 off
+# face 6504011 "normal"
+# alpha 6603811 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+私達を襲うのなら…
+倒さないと
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+マナナンさん、マクリルさん、
+こちらへ
+次の区画に向かいます
+
+;;三人が走っていく
+;;暗転挟む
+# se "SE_5575"
+# sedelay "SE_5575" 0.2
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# face 6504011 "surprise"
+# face 270 "surprise"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+こちらは…すでに避難を終えられて
+いるようですね
+異族の姿もありません
+
+# voice 650401 "manannan_ura_0009"
+# textflame 1 1
+# textboxarrow 0 3
+@マナナン
+なーんだ…
+つまんないの
+
+# voice 660381 "maclir_ura_0004"
+# face 6603811 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+よかった
+誰も襲ってこないんだね
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+それでは、次の区画へ――
+
+# bgm "stop"
+# voice 660381 "maclir_ura_0024"
+# face 6603811 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@マクリル
+…！？
+嫌ぁぁっ…！
+何か来る…！！
+
+;;フライクーゲルが現れる（天上編の姿で）
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# alpha 270 0 0.3
+# alpha 6504011 0 0.3
+# alpha 6603811 0 0.3
+# layer 500211 3
+# voice 5002 "furaikugeru_0004"
+# alpha 500211 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+へ～い！
+ヘアピィしてるぅ？
+
+# alpha 500211 0 0.3
+# alpha 270 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ミーミル
+フライクーゲルさん！
+
+;;フライクーゲルの後ろに異族の群れが現れる
+# alpha 270 0 0.3
+# layer 500211 4
+# mask 500211 on
+# alpha 500211 1 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_0658"
+# move 810004 1 0
+# layer 810004 2
+# alpha 810004 1 0.5
+# move 810994 5 0
+# layer 810994 3
+# alpha 810994 1 0.5
+# waitandnext 1.5
+
+# voice 9917 "mimir_navikan_0024"
+# alpha 500211 0 0.3
+# alpha 810004 0 0.3
+# alpha 810994 0 0.3
+# face 270 "angry"
+# alpha 270 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+フライクーゲルさん、後ろです！
+後ろに異族がっ
+
+# alpha 270 0 0.3
+# face 500211 "surprise"
+# move 500211 2 0
+# layer 500211 5
+# mask 500211 on
+# voice 5002 "furaikugeru_0032"
+# alpha 500211 1 0.3
+# move 810994 4 0
+# layer 810994 4
+# mask 810994 on
+# alpha 810994 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@フライクーゲル
+ん？オッケー
+ノープロブレムだよ
+
+# face 500211 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@フライクーゲル
+だって、この子達は味方だから
+
+# voice 9917 "mimir_navikan_0022"
+# move 270 1 0
+# layer 270 2
+# face 270 "surprise"
+# alpha 270 1 0.3
+# move 500211 3 0.5
+# move 810994 5 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+…どういう意味でしょうか？
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+もうすぐ神の国が復活するんだよ
+みんな、ヘアピィになれるんだ！
+最高だよねっ
+
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+神の国…？
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+イエス！
+み～んながラブに包まれて
+ヘアピィになれるんだ！
+
+# voice 5002 "furaikugeru_0021"
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+わたしもみんなにラブを届ける
+手伝いをするよ～！
+ラブ＆ヘアピィ♪
+
+;;背景：白
+;;立ち絵：ラグナロクの薄い黒シルエット表示（薄くぼやけるように）
+;;SE：旗がなびく音（もしくは心音）
+# se "SE_6272"
+# fadein "white" 1
+# background "bg_white"
+# alpha 270 0 0
+# alpha 500211 0 0
+# alpha 810994 0 0
+# textwindow "close"
+# waitandnext 1
+
+# se "SE_6266"
+# alpha 103611 0.1 1
+# waitandnext 2
+
+;;背景：中心部（in_city）に戻す。
+# se "SE_6273"
+# fadein "white" 1
+# background "in_city"
+# face 270 "angry"
+# alpha 270 1 0
+# alpha 500211 1 0
+# alpha 810994 1 0
+# alpha 103611 0 0
+# waitandnext 2
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+……！？
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# face 500211 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+だからぁ、邪魔しないでね
+邪魔するようなら…
+
+# bgm "bgm009_013" 0
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+片っ端から蜂の巣にしていくよ♪
+
+;;バトル
+;;マップ：042復興街
+;;エネミー：天上編フライクーゲル（銃_04_フライクーゲル_01）、異族
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 270 0 0
+# alpha 500211 0 0
+# alpha 810994 0 0
+# waitandnext 0.2

@@ -1,0 +1,320 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第７章 章タイトル：「夢追い人―デザイア―」
+;;第1話　タイトル：ラグナロク機関へ
+;;7_1_9_1
+;;スクリプト最後の背景：下町
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown"
+# bgmfile "bgm405" "BgmIntegralNoahEvent003" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 2
+# alpha 3201911 0 0
+# mask 3201911 off
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;スラーンド
+# body 3201211
+# pos 3201211 3
+# scale 3201211 0.8 0
+# layer 3201211 2
+# alpha 3201211 0 0
+# mask 3201211 off
+;;ジーベン
+# body 212
+# pos 212 3
+# scale 212 0.8 0
+# layer 212 2
+# alpha 212 0 0
+# mask 212 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;//背景：下町
+# se "SE_10433"
+# voice 320191 "chihyu_a_battle_0003"
+# move 3201911 3 0
+# face 3201911 "angry"
+# alpha 3201911 1 0
+# mask 3201911 off
+# textflame 1 1
+# textboxarrow 0 2
+@シユウ
+てぇあ！
+
+# voice 320121 "srand_ge_battle_0003"
+# alpha 3201911 0 0.5
+# move 3201211 3 0
+# face 3201211 "angry"
+# alpha 3201211 1 0.5
+# mask 3201211 off
+# textboxarrow 0 2
+@スラーンド
+くらいなぁっ！
+
+# se "SE_4100"
+# waitandnext 0.5
+
+;;//シユウとスラーンドが戦う
+# textwindow "close"
+# alpha 3201211 0 0.5
+# waitandnext 0.5
+
+# move 3201911 2 0
+# face 3201911 "angry"
+# alpha 3201911 1 0
+# mask 3201911 on
+# move 3201211 4 0
+# face 3201211 "angry"
+# alpha 3201211 1 0
+# mask 3201211 on
+# leftin 3201911 0.3
+# rightin 3201211 0.3
+# waitandnext 0.3
+
+# se "SE_9017"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.6
+
+# voice 9934 "sieben_0047"
+# alpha 3201911 0 0.5
+# alpha 3201211 0 0.5
+# move 211 2 0
+# face 211 "irregular"
+# alpha 211 1 0.5
+# mask 211 on
+# move 212 4 0
+# face 212 "normal"
+# alpha 212 1 0.5
+# mask 212 on
+# textboxarrow 0 3
+# textwindow "normal"
+@ジーベン
+そうだ、スラーンド！
+胃袋マーラーカオな小娘に
+格の違いを見せつけてやれ！
+
+# voice 9935 "vang_0001"
+# face 211 "angry"
+# textboxarrow 0 1
+@ヴァング
+おい、ジーベン！
+呑気にふんぞり返ってんじゃ
+ねえぞ！
+
+;;//ヴァングがジーベンを殴る
+# se "SE_4602"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 9934 "sieben_0010"
+# face 212 "angry"
+# textboxarrow 0 3
+@ジーベン
+ガッ…！
+お前、何の真似だっ…？
+この僕を殴るだなんて…
+
+# textboxarrow 0 1
+@ヴァング
+てめえが言ったんだろうが
+俺達の間に理由なんていらねぇ
+相対したときが勝負の始まりだ！
+
+# textboxarrow 0 1
+@ヴァング
+こっちも立て込んでてな！
+ここで長年の決着、つけてやるぜ
+
+# voice 9934 "sieben_0043"
+# face 212 "normal"
+# textboxarrow 0 3
+@ジーベン
+なるほど…
+たまには良いことを言うな
+生まれたての子鹿プルプル足野郎
+
+# textboxarrow 0 3
+@ジーベン
+キル姫はキル姫同士
+奏官は奏官同士というわけだ
+いいだろう
+
+# textboxarrow 0 3
+@ジーベン
+僕が叡智とカリスマだけで
+成り上がったインテリだと思ったら
+大間違いだぞ
+
+# voice 9935 "vang_0009"
+# face 211 "irregular"
+# textboxarrow 0 1
+@ヴァング
+ああん？
+一ミリも思ってねぇよ！
+
+;;//ジーベンがヴァングにカウンターを決める
+# se "SE_0656"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@ヴァング
+ぐっ…
+
+# voice 9934 "sieben_0008"
+# textboxarrow 0 3
+@ジーベン
+格闘技の心得もあるんでね
+ほら、来いよ
+僕が特別に、相手してやる
+
+# face 211 "angry"
+# textboxarrow 0 1
+@ヴァング
+面白ぇ…
+その高すぎる鼻、へし折ってやるぜ！
+
+;;//画面スライド
+# se "SE_0848"
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 211 0 0
+# alpha 212 0 0
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0
+# mask 196 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 9943 "almace_navikan_0035"
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+ええっ？
+奏官同士で殴り合い始めたわよっ
+地上って、こうなの！？
+
+# alpha 196 0 0.5
+# move 3102311 2 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 3501711 4 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+@グリモワール
+そんなわけないでしょっ
+あいつらがバカなだけよ！
+
+# voice 310231 "ascalon_a_unit_1006"
+# textboxarrow 0 1
+@アスカロン
+でも…あんなに純粋にぶつかり合える
+なんて…羨ましい
+
+# textboxarrow 0 1
+@アスカロン
+私も、もっと…
+フォルカスと向き合えていたら…
+
+# textboxarrow 0 3
+@グリモワール
+ちょっと！
+あそこで殴り合ってるバカと
+フォルカスを一緒にしないでっ
+
+# voice 310231 "ascalon_a_0031"
+# face 3102311 "sad"
+# textboxarrow 0 1
+@アスカロン
+あうう…
+ごめんなさい…
+
+# face 3501711 "normal"
+# textboxarrow 0 3
+@グリモワール
+とにかく…
+絶対勝ちなさいよ、シユウ！
+それと、ヴァングも！
+
+;;//画面スライド
+# se "SE_0848"
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 3102311 0 0
+# alpha 3501711 0 0
+# move 3201911 3 0
+# face 3201911 "angry"
+# alpha 3201911 1 0
+# mask 3201911 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 320191 "chihyu_a_0029"
+# textboxarrow 0 2
+# textwindow "normal"
+@シユウ
+うがあああぁぁ！
+いっくぞおおぉぉ！！
+
+# voice 320121 "srand_ge_0029"
+# alpha 3201911 0 0.5
+# move 3201211 3 0
+# face 3201211 "angry"
+# alpha 3201211 1 0.5
+# mask 3201211 off
+# textboxarrow 0 2
+@スラーンド
+すべてを蹂躙する神の雷！
+その身で味わえ！！

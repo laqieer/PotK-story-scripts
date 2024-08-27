@@ -1,0 +1,489 @@
+;;-----------------------------------------
+;;【2_1】サンタ・クロノスがやってくる
+;;-----------------------------------------
+# script "lisp"
+# background "town_night_snow"
+# bgmfile "bgm449_450" "BgmChristmas003" 0
+;;-----------------------------------------
+;;シタ
+# body 3201621
+# pos 3201621 1
+# scale 3201621 0.8 0
+# layer 3201621 3
+# alpha 3201621 0 0
+;;シェキナー
+# body 3400721
+# pos 3400721 5
+# scale 3400721 0.8 0
+# layer 3400721 3
+# alpha 3400721 0 0
+;;リサナウト
+# body 3203021
+# pos 3203021 3
+# scale 3203021 0.8 0
+# layer 3203021 4
+# mask 3203021 off
+# alpha 3203021 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "bg_endroll"
+# imagealpha 1 0 0
+# imagescale 1 1.4 0
+# imagelayer 1 1
+;;-----------------------------------------
+;;背景：下町(夜)
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# alpha 3203021 1 0.5
+# waitandnext 0.7
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 3203021 "happy"
+@リサナウト
+ふんふふんふふ～ん♪
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 2030 "risanautr_l_0005"
+@リサナウト
+楽しいわ～、サンタ・キャッチ！
+子供達と遊んであげると
+つい夢中になっちゃうわね
+
+# textflame 0 0
+@
+ご機嫌な様子で町を回る
+サンタ役のひとり、リサナウト
+
+# textflame 0 0
+@
+彼女の背には、
+満杯まで膨らんだままの
+プレゼント袋が背負われていた
+
+# textflame 0 0
+@
+その様子を見るに、
+まだ一度も子ども達には
+捕まっていないようだ
+
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+イベントが終わった時点で
+余ったプレゼントは…
+
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+すべてサンタが
+もらってよし！って、
+あの人が言ってたものね
+
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+つまり…このまま逃げ切れば、
+袋いっぱいのプレゼントが
+ぜんぶ私のものに！
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 2030 "risanautr_l_0021"
+@リサナウト
+ふふっ♪
+この町に立ち寄れてよかったわ！
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3203021 "normal"
+@リサナウト
+今夜はプレゼントに
+囲まれながらパーティーを～…
+きゃあっ！？
+
+;;ＳＥ：ドサッ！（シタに捕まる音）
+;;演出：画面揺れ
+# se "SE_0846"
+# shake 0 0.5
+# alpha 3203021 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+# alpha 3201621 1 0.5
+# alpha 3400721 1 0.5
+# mask 3203021 on
+# alpha 3203021 1 0.5
+# face 3201621 "angry"
+# face 3400721 "angry"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@シタ
+シェキナーさん！
+サンタ、捕まえました！
+
+# textflame 1 1
+# textboxarrow 0 3
+@シェキナー
+見事です！
+さあ、今度こそ
+白状してもらいましょう！
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 2030 ""
+@リサナウト
+え？
+うそ、捕まっちゃった？
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 2030 "risanautr_l_0042"
+@リサナウト
+ふ、ふふっ…
+言っておくけど、捕まったのは
+わざとよ
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 320161 "shita_t_0028"
+@シタ
+…捕まったとき、
+驚いてましたよね？
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 2030 "risanautr_l_0013"
+@リサナウト
+う、うるさいわね
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3203021 "usual"
+# voice 2030 "risanautr_l_0007"
+@リサナウト
+捕まったとしても
+何も問題ないわ
+なぜなら――
+
+;;ト書き：リサナウトが時を戻す
+;;演出：ザッとした場転
+# se "SE_11251"
+# imagealpha 1 0.7 0
+# imagepos 1 0 0
+# mask 3203021 off
+# textwindow "close"
+# waitandnext 0.8
+
+# alpha 3201621 0 0
+# alpha 3400721 0 0
+# fadein "white" 0.5
+# imagealpha 1 0 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 2030 "risanautr_l_0032"
+@リサナウト
+こうやって時間を戻すだけ…
+一件落着ね！
+
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+クロノスの力を使えば、
+“捕まらない”時間軸を
+選び取るくらい造作もないわ
+
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+普段は使わないようにしている
+能力だけど、
+クリスマスは別よ
+
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+このまま私は最後まで逃げ切り、
+大量のプレゼントを手にする
+
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+これは予言ではない
+確定事象の報告に過ぎな…
+
+;;ＳＥ：タッタッタッ（シェキナーとシタの足音）
+# se "SE_5575"
+# move 3400721 4 0
+# alpha 3400721 1 0
+# rightin 3400721 0.4
+# move 3203021 2 0.4
+# mask 3203021 on
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 3
+@シェキナー
+見つけましたよ！
+さあ、首謀者を教えなさい！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3203021 "normal"
+# voice 2030 "risanautr_l_0022"
+@リサナウト
+あれ？
+
+;;ト書き：リサナウトが時を戻す
+;;演出：ザッとした場転
+# se "SE_11251"
+# imagealpha 1 0.7 0
+# imagepos 1 0 0
+# textwindow "close"
+# waitandnext 0.8
+
+# move 3203021 3 0
+# mask 3203021 off
+# alpha 3400721 0 0
+# imagealpha 1 0 0
+# fadein "white" 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@リサナウト
+ふうっ…
+これで今度こそ…
+
+;;ＳＥ：タッタッタッ（シェキナーとシタの足音）
+# se "SE_5575"
+# move 3201621 2 0
+# alpha 3201621 1 0
+# leftin 3201621 0.4
+# move 3203021 4 0.4
+# mask 3203021 on
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+いました、サンタです！
+捕まえましょう！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 2030 "risanautr_l_0023"
+@リサナウト
+あれれっ？
+
+;;ト書き：リサナウトが時を戻す
+;;演出：ザッとした場転
+# se "SE_11251"
+# imagealpha 1 0.7 0
+# imagepos 1 0 0
+# textwindow "close"
+# waitandnext 0.8
+
+# move 3203021 3 0
+# mask 3203021 off
+# alpha 3201621 0 0
+# imagealpha 1 0 0
+# fadein "white" 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 3203021 "angry"
+# voice 2030 "risanautr_l_battle_0006"
+@リサナウト
+こ、これで今度こそ…！
+
+# alpha 3203021 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;ＳＥ：タッタッタッ（シェキナーとシタの足音）
+# se "SE_5575"
+# alpha 3201621 1 0.5
+# alpha 3400721 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@シタ
+そこのサンタ、待ちなさ～い！
+
+# textflame 1 1
+# textboxarrow 0 3
+@シェキナー
+私達から逃げられると
+思わないことです！
+
+# alpha 3201621 0 0.5
+# alpha 3400721 0 0.5
+# alpha 3203021 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3203021 "normal"
+# voice 2030 "risanautr_l_0024"
+@リサナウト
+なんで～っ！？
+
+;;演出：場面転換（通常）
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 3203021 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 3203021 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 3203021 "sad"
+# voice 2030 "risanautr_l_0027"
+@リサナウト
+はぁ、はぁ、はぁ…！
+どれだけしつこいのよ、
+あなた達…！？
+
+# alpha 3203021 0 0.5
+# alpha 3201621 1 0.5
+# alpha 3400721 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 340071 "shekina_t_battle_0005"
+@シェキナー
+はぁ、はぁ…あ、貴方こそ…！
+いいかげん逃げるのを
+やめたらどうですか…！？
+
+# alpha 3203021 1 0.5
+# alpha 3201621 0 0.5
+# alpha 3400721 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3203021 "angry"
+# voice 2030 "risanautr_l_0011"
+@リサナウト
+それはいやよ！
+私は完璧に逃げ切ると決めたの！
+
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+このプレゼントはすべて私のもの！
+これは確定事象よ！！
+
+# textflame 0 0
+@
+大声で自信満々に
+そう叫ぶリサナウトだったが…
+
+# alpha 3203021 0 0.5
+# alpha 3201621 1 0.5
+# alpha 3400721 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+…いいえ、
+あなたは間違っています！
+
+# alpha 3203021 1 0.5
+# alpha 3201621 0 0.5
+# alpha 3400721 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+ど…どういう意味！？
+
+# alpha 3203021 0 0.5
+# alpha 3201621 1 0.5
+# alpha 3400721 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+だってあなた…
+サンタ役なんですよね？
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+みんなにプレゼントを配らずに
+独り占めするなんて…
+サンタにあるまじき行為です！
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+あなたはサンタに
+ふさわしくありません！！
+
+# alpha 3203021 1 0.5
+# alpha 3201621 0 0.5
+# alpha 3400721 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3203021 "normal"
+@リサナウト
+はっ…！！
+た、たしかに…！！
+
+# textflame 0 0
+@
+シタの熱弁に
+思わず納得してしまうリサナウト
+
+# alpha 3203021 0 0.5
+# alpha 3201621 1 0.5
+# alpha 3400721 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@シェキナー
+今です！
+
+;;ＳＥ：タッタッタッ（シタとシェキナーが攻める足音）
+# se "SE_5575"
+# alpha 3201621 0 0.5
+# alpha 3400721 0 0.5
+# textflame 0 0
+@
+その隙を突き、
+シェキナーとシタは
+同時に攻め込む！
+
+# alpha 3203021 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 2030 "risanautr_l_battle_0007"
+@リサナウト
+くぅっ…！
+ま、負けるものですかーっ！！
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 3203021 0 0
+# background "bg_black"
+# waitandnext 0.5

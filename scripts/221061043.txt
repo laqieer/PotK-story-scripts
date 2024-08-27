@@ -1,0 +1,175 @@
+;;-----------------------------------------
+;;ファニー・ハロウィンナイト
+;;【EP.4】子どもにやさしく_3
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown_night"
+# bgm "stop"
+;;-----------------------------------------
+;;アルテミス
+# body 3400121
+# pos 3400121 3
+# scale 3400121 0.8 0
+# layer 3400121 3
+# mask 3400121 off
+# alpha 3400121 0 0
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 3
+# mask 211 off
+# alpha 211 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# alpha 3400121 1 0.5
+# face 3400121 "angry"
+# waitandnext 0.7
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@アルテミス
+はぁっ、はぁっ…！！
+大丈夫でしたか、みなさん…！？
+
+# textflame 1 1
+# textboxarrow 0 2
+@アルテミス
+良かった…！
+また魔獣が来るかもしれません、
+すぐお家に戻ってください！
+
+;;ＳＥ：タッタッタッ（子ども達が去っていく音）
+# se "SE_5575"
+# waitandnext 0.8
+
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# move 211 2 0
+# mask 211 on
+# alpha 211 1 0.5
+# move 3400121 4 0.5
+# mask 3400121 on
+# textflame 1 1
+# textboxarrow 0 1
+# face 211 "normal"
+# voice 9935 "vang_0006"
+@ヴァング
+よくやった、アルテミス！
+ケガはねぇか！？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 340011 "arutemisu_ge_0032"
+@アルテミス
+ええ…なんとか…！
+
+;;ＳＥ：タッタッタッ（マスターがやってくる音）
+# se "SE_5575"
+# textflame 0 0
+@
+そこに慌てた様子でやってくる
+マスター
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3400121 "surprise"
+# voice 340011 "arutemisu_ge_0001"
+@アルテミス
+あっ…マスター！
+来てくださったんですね！
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9935 "vang_0034"
+@ヴァング
+この辺の魔獣は
+アルテミスが倒したぜ
+お手柄だな！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3400121 "shy"
+# voice 340011 "arutemisu_ge_0034"
+@アルテミス
+いえ、私は…きゃっ！？
+
+;;ＳＥ：ゴソゴソ…（アルテミスの頭を撫でる音）
+# se "SE_11618"
+# textflame 0 0
+@
+ありがとう、と言って
+アルテミスの頭を撫でる
+マスター
+
+# alpha 211 0 0.5
+# move 3400121 3 0.5
+# mask 3400121 off
+# textflame 1 1
+# textboxarrow 0 2
+@アルテミス
+き、恐縮ですっ
+マスターに褒めて
+いただけるなんて…！
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400121 "happy"
+# voice 340011 "arutemisu_ge_0004"
+@アルテミス
+ふふ…マスターの手、
+とてもあたたかいです…♪
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400121 "surprise"
+# voice 340011 "arutemisu_ge_0034"
+@アルテミス
+はい？
+いえ、パラシュとは別行動で…
+今はどこにいるのか…
+
+# alpha 3400121 0 0.5
+# move 211 3 0
+# mask 211 off
+# alpha 211 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 211 "sad"
+@ヴァング
+シユウも心配だな…
+まぁあいつなら大丈夫だろうが
+
+;;演出：画面揺れ
+;;ＳＥ：ドゴォオオオン！！（遠くから轟音）
+# se "SE_5223"
+# bgm "stop"
+# shake 0 1
+# waitandnext 1.2
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 211 "surprise"
+# voice 9935 "vang_0026"
+@ヴァング
+っ！？
+な、なんだ今のっ…！？
+
+# alpha 211 0 0.5
+# alpha 3400121 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400121 "angry"
+@アルテミス
+向こうの方からです！
+行きましょう…！
+
+# fadeout "black" 1
+# waitandnext 1

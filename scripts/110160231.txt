@@ -1,0 +1,307 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー16章
+;;第2話　タイトル：不完全なる者達よ
+;;2_3_1
+;;スクリプト最後の背景：ラグナロクの間
+;;-----------------------------------------
+# script "lisp"
+# background "abyss_room"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;ゴッドアルマス
+# entry 201 3103811 523
+# pos 201 3
+# scale 201 0.8 0
+# layer 201 2
+# alpha 201 0 0
+# mask 201 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 2
+# alpha 139 0 0
+# mask 139 off
+;;リル=ティルフィング
+# body 3101411
+# pos 3101411 3
+# scale 3101411 0.8 0
+# layer 3101411 2
+# alpha 3101411 0 0
+# mask 3101411 off
+;;ティファレト
+# body 3503211
+# pos 3503211 3
+# scale 3503211 0.8 0
+# layer 3503211 2
+# alpha 3503211 0 0
+# mask 3503211 off
+;;フェイルノート
+# body 3401911
+# pos 3401911 3
+# scale 3401911 0.8 0
+# layer 3401911 2
+# alpha 3401911 0 0
+# mask 3401911 off
+;;神令ラグナロク（仮面）
+# body 3103619
+# pos 3103619 3
+# scale 3103619 0.8 0
+# layer 3103619 2
+# alpha 3103619 0 0
+# mask 3103619 off
+;;-----------------------------------------
+;;//背景：ラグナロクの間
+# voice 1038 "almace_0002"
+# move 3101411 2 0
+# face 3101411 "sad"
+# alpha 3101411 1 0
+# mask 3101411 on
+# move 201 4 0
+# face 201 "surprise"
+# alpha 201 1 0
+# mask 201 on
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+ちょっと待って
+その頃って、マスターは天上世界に
+いたんじゃないの？
+
+# textboxarrow 0 3
+@アルマス
+地上で斬ル姫達を率いてなんか
+いなかったわよね？
+
+;;//選択肢
+;;
+;;Ａそうだな
+;;Ｂそうだったような…
+;;Ｃ覚えていない
+# select "そうだな" "select_label_01" "そうだったような…" "select_label_01" "覚えていない" "select_label_01"
+地上で斬ル姫達を率いてなんか
+いなかったわよね？
+
+;;ＡＢＣ共通
+# label "select_label_01"
+# voice 310141 "tyrufing_lo_0003"
+# face 3101411 "normal"
+# textboxarrow 0 1
+@ティルフィング
+マスターは確かに天上世界で
+過ごしていました
+
+# textboxarrow 0 1
+@ティルフィング
+それに、私以外の斬ル姫は皆、
+ユグドラシルで眠りに就いて
+いましたよ
+;;マスターと斬ル姫両方が寝ているように見えたシーンを、調整していただいてます。
+
+# face 201 "normal"
+# textboxarrow 0 3
+@アルマス
+だったら、バイブスが元凶だって
+考えには穴があるんじゃないの？
+
+# voice 310361 "ragnarok_c_0033"
+# alpha 3101411 0 0.5
+# alpha 201 0 0.5
+# move 3103619 3 0
+# face 3103619 "normal"
+# alpha 3103619 1 0.5
+# mask 3103619 off
+# textboxarrow 0 2
+@ラグナロク
+その観測結果も出ている
+何の矛盾もない
+
+# textboxarrow 0 2
+@ラグナロク
+バイブス所持者が天上世界にいた
+からこそ、地上での争いは
+ある程度で済んでいた
+
+# textboxarrow 0 2
+@ラグナロク
+私達の世界線…
+万を超えるバイブス所持者がいた
+世界は、常に戦いの日々だったわ
+
+# textboxarrow 0 2
+@ラグナロク
+もちろん共闘も同盟もあった
+味方同士での友情も愛情もあった
+だが…
+
+# textboxarrow 0 2
+@ラグナロク
+全てが他者との争いに収束する
+そこだけは変わらない
+
+# textboxarrow 0 2
+@ラグナロク
+この世界は、それに比べれば
+とても平和だ
+それは間違いない
+
+# textboxarrow 0 2
+@ラグナロク
+だからこそ、千年王国に至る道を
+選ぶべきだ
+バイブスを排除して…
+
+# textboxarrow 0 2
+@ラグナロク
+この世界に永遠の平穏を
+世界に黄昏をもたらす
+そこにこそ救済がある
+
+# textboxarrow 0 2
+@ラグナロク
+そこのバイブス所持者
+もう、いいだろう？
+この蒼き剣にて終焉を迎えろ
+
+# textboxarrow 0 2
+@ラグナロク
+この地が、あなたの墓標だ
+
+# voice 1038 "almace_0042"
+# alpha 3103619 0 0.5
+# move 201 3 0
+# face 201 "angry"
+# alpha 201 1 0.5
+# mask 201 off
+# textboxarrow 0 2
+@アルマス
+ああ、もうっ…！
+何なのよっ
+
+# voice 9967 "titania_0035"
+# move 139 2 0
+# face 139 "surprise"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 1
+# move 201 4 0.5
+# mask 201 on
+@ティターニア
+アルマス、落ち着いて下さい
+
+# textboxarrow 0 3
+@アルマス
+だって…
+何でこんなに噛み合わないのっ？
+
+# voice 4019 "failnaught_a_0009"
+# alpha 139 0 0.5
+# move 3401911 2 0
+# face 3401911 "angry"
+# alpha 3401911 1 0.5
+# mask 3401911 on
+# textboxarrow 0 1
+@フェイルノート
+話し合えば分かり合えるなんて
+幻想、さっさと捨てなさい
+
+# face 3401911 "normal"
+# textboxarrow 0 1
+@フェイルノート
+いい？
+この世界には決して分かり合えない
+存在だっているのよ
+
+# voice 5032 "tiphereth_t_0027"
+# alpha 201 0 0.5
+# move 3503211 4 0
+# face 3503211 "sad"
+# alpha 3503211 1 0.5
+# mask 3503211 on
+# textboxarrow 0 3
+@ティファレト
+本来なら、分かり合えない存在同士、
+適切な距離を取って干渉せずに
+いれば良いだけですけれど…
+
+# textboxarrow 0 1
+@フェイルノート
+降りかかる火の粉は払うしかない
+あいつは世界線まで越えてきた
+かなり異常よ
+
+# voice 4019 "failnaught_a_0007"
+# face 3401911 "happy"
+# textboxarrow 0 1
+@フェイルノート
+自分の理想を他者に押しつけたら
+どんな目に遭うのか、
+分からせてやるわ
+
+# voice 310361 "ragnarok_c_0027"
+# alpha 3401911 0 0.5
+# alpha 3503211 0 0.5
+# move 3103619 3 0
+# face 3103619 "normal"
+# alpha 3103619 1 0.5
+# mask 3103619 off
+# textboxarrow 0 2
+@ラグナロク
+やれやれ…
+こうなることは初めから分かって
+いたけれど
+
+# voice 310361 "ragnarok_c_0019"
+# textboxarrow 0 2
+@ラグナロク
+あまり良い気分ではないな
+
+# alpha 3103619 0 0.5
+# move 201 3 0
+# face 201 "sad"
+# alpha 201 1 0.5
+# mask 201 off
+# textboxarrow 0 2
+@アルマス
+…………
+
+# voice 4019 "failnaught_a_0059"
+# move 3401911 2 0
+# face 3401911 "angry"
+# alpha 3401911 1 0.5
+# mask 3401911 on
+# textboxarrow 0 1
+# move 201 4 0.5
+# mask 201 on
+@フェイルノート
+アルマス、
+戦う意思がないなら
+下がっていなさい！
+
+# voice 1038 "almace_0009"
+# face 201 "angry"
+# textboxarrow 0 3
+@アルマス
+…戦わないなんて、
+言ってないでしょ！
+
+# se "SE_10585"
+# textboxarrow 0 3
+@アルマス
+マスターを死なせたりしない
+それは絶・揺るがないんだからっ
+
+# alpha 3401911 0 0.5
+# alpha 201 0 0.5
+# move 3103619 3 0
+# face 3103619 "normal"
+# alpha 3103619 1 0.5
+# mask 3103619 off
+# textboxarrow 0 2
+@ラグナロク
+彼女達の力が増していく
+バイブスとキラーズの共鳴…
+
+# textboxarrow 0 2
+@ラグナロク
+いつ見ても、憐れだ

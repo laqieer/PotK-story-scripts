@@ -1,0 +1,180 @@
+;;-----------------------------------------
+;;ファンキル　バレンタインイベント　シナリオ
+;;【タイトル案】
+;;悪戯姫の甘い嘘
+;;【プロローグ】
+;;背景：荒野
+;;-----------------------------------------
+# background "wild"
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;ヘレナ（通常衣装）
+# body 3302811
+# pos 3302811 3
+# scale 3302811 0.8 0
+# alpha 3302811 0 0
+;;ニール
+# body 162
+# pos 162 4
+# scale 162 0.6 0
+# alpha 162 0 0
+# layer 162 4
+;;オティヌス（通常衣装）
+# body 3400811
+# pos 3400811 3
+# scale 3400811 0.8 0
+# alpha 3400811 0 0
+# mask 3400811 off
+;;-----------------------------------------
+# textflame 0 0
+@
+2月のある日、隊の斬ル姫達は
+もうすぐやってくるバレンタインに
+向けて、そわそわと浮き足立っていた
+
+# textflame 0 0
+@
+マスターにどんなチョコレートを
+渡すのか相談しあい、はしゃいでいる
+
+# textflame 0 0
+@
+ヘレナとニールはそんな姫達を、
+少し離れた場所から見ていた
+
+# textboxarrow 0 2
+# textflame 1 1
+# mask 3302811 off
+# alpha 3302811 1 1
+# alpha 162 1 1
+# face 3302811 "usual"
+;;# voice 3028 ""
+# chara 3302811
+@ヘレナ
+ふぅん…
+先輩はたくさんチョコレートを
+もらえそうだな…
+
+# textboxarrow 0 3
+# voice 9952 "nir_0002"
+# chara 162
+@ニール
+ヘレナはどうするの？
+
+# emotionbody 1000 10 3302811 -60 200
+# effectpattern 1000 4 0
+# effectstart 1000
+# textboxarrow 0 2
+# face 3302811 "normal"
+# voice 3028 "herena_a_0004"
+# chara 3302811
+@ヘレナ
+そうだな…普通じゃ退屈だろう？
+みんなとは違うことをしないとね
+…くふっ
+
+# effectskip 1000
+# textflame 0 0
+@
+ニールはヘレナの意見に賛同し、
+二人はマスターを驚かす計画について
+相談を始める
+
+# textflame 0 0
+@
+そんなヘレナとニールの様子を
+じっと見ていたオティヌスが、
+二人に歩み寄ってきた
+
+# se "SE_0719"
+# textboxarrow 0 2
+# alpha 3400811 1 1
+# alpha 3302811 0 0.5
+# alpha 162 0 0.5
+# textflame 1 1
+# face 3400811 "normal"
+# voice 340081 "otyinusu_a_0002"
+# chara 3400811
+@オティヌス
+楽しそうな話をしているじゃないか
+あたしも混ぜてよ
+似たようなことを考えていたんだ
+
+# voice 340081 "otyinusu_a_0004"
+# chara 3400811
+@オティヌス
+あたし一人でやるより、
+ヘレナと組めば、
+もっと面白くなると思ってさ
+
+# emotionbody 1001 1 3302811 0 250
+# effectpattern 1001 1 0
+# effectstart 1001
+# textboxarrow 0 3
+# move 3400811 2 0.5
+# move 3302811 4 0
+# alpha 3302811 1 0.5
+# mask 3400811 on
+# mask 3302811 on
+# face 3302811 "surprise"
+# voice 3028 "herena_a_0022"
+# chara 3302811
+@ヘレナ
+へぇ…それは気になるな
+話を聞かせてよ
+
+# textboxarrow 0 1
+;;# voice 340081 ""
+# chara 3400811
+@オティヌス
+まずは、マスターを…
+それでチョコレートに…
+
+;;演出：時間経過
+# se "SE_5686"
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# face 3302811 "normal"
+;;# voice 340081 ""
+# chara 3400811
+@オティヌス
+…と、いうわけで、
+あたし達のバレンタインショウは、
+素晴らしいエンディングを迎えるのさ
+
+# textboxarrow 0 3
+# voice 3028 "herena_a_0040"
+# chara 3302811
+@ヘレナ
+なるほど…
+悪くないな
+いいよ、一緒にやろうか
+
+# emotionbody 1002 3 3400811 50 200
+# effectpattern 1002 1 0
+# effectstart 1002
+# textboxarrow 0 1
+# face 3400811 "happy"
+# voice 340081 "otyinusu_a_0005"
+# chara 3400811
+@オティヌス
+そうこなくちゃ！
+では、当日までは各自準備を進めよう
+ふふっ、楽しみだね…

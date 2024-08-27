@@ -1,0 +1,587 @@
+;;でんぱイベント　最終ステージ ３（ＳＴＡＧＥ２　クリア後）
+;;グリードとでんぱ６人との激闘。弓を放つえいたそ。フッと姿を消すグリード
+;;【指定】bgm009
+# script "lisp"
+# background "plain_totaleclipse"
+# bgm "bgm009" 0
+# body 103013
+# pos 103013 3
+# scale 103013 0.8 0
+# alpha 103013 0 0
+# body 101471
+# pos 101471 1
+# scale 101471 0.8 0
+# body 601513
+# pos 601513 5
+# scale 601513 0.8 0
+# textflame 1 1
+# textboxarrow 0 3
+# chara 601513
+# face 601513 "surprise"
+# voice 9974 "eitaso_pok_collabo0304_0014"
+@えいたそ
+…！
+後ろに回った…！
+
+# serif 1
+# textboxarrow 1 2
+# alpha 103013 1 0.3
+# layer 601513 1
+# layer 103013 2
+# chara 103013
+# face 103013 "angry"
+# voice 9974 "lisa_pok_collabo0304_0014"
+@リサ
+任せて！！
+
+;;魔法でグリードを拘束するリサ
+# se "SE_0691"
+# fadein "pink" 1
+# serif 0
+# textboxarrow 0 1
+# chara 101471
+# voice 9974 "tyrufing_k_pok_collabo0304_0015"
+@グリード
+…………
+
+# serif 1
+# textboxarrow 1 2
+# imageset 0 "black"
+# imagealpha 0 0 0
+# chara 103013
+# face 103013 "normal"
+# voice 9974 "lisa_pok_collabo0304_0015"
+@リサ
+やった…！　今よ！
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# imagerightout 0 0.5
+# alpha 101471 0 0
+# alpha 601513 0 0
+# alpha 103013 0 0
+# body 202113
+# pos 202113 5
+# scale 202113 0.8 0
+# body 502213
+# pos 502213 1
+# scale 502213 0.8 0
+# body 401413
+# pos 401413 3
+# scale 401413 0.8 0
+# layer 202113 1
+# layer 401413 2
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 0
+# face 502213 "usual"
+# face 401413 "usual"
+# face 202113 "usual"
+# voice 9974 "nemu_pok_collabo0304_0013"
+# voice 9974 "mirin_pok_collabo0304_0015"
+# voice 9974 "pinkey_pok_collabo0304_0011"
+@みりん・ねむ・ピンキー
+うん！！
+
+;;三方から、一斉に攻撃をかけるみりん・ねむ・ピンキー
+# pos 101471 3
+# mask 101471 off
+# alpha 502213 0 0.3
+# alpha 401413 0 0.3
+# alpha 202113 0 0.3
+# leftin 101471 0.5
+# alpha 101471 1 0
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 2
+# chara 101471
+# voice 9974 "tyrufing_k_pok_collabo0304_0016"
+@グリード
+…フン…
+
+;;黒いオーラをまとう、グリードの剣…スパッとリサの魔法拘束を断ち切る
+;;フッと上方へと身をかわすグリード
+;;【指定】SE_5743
+# se "SE_5743"
+# fadein "white" 0.5
+# alpha 101471 0 0.5
+# leftin 502213 0.5
+# rightin 202113 0.5
+# alpha 502213 1 0
+# alpha 401413 1 0.8
+# alpha 202113 1 0
+# body 302213
+# pos 302213 2
+# scale 302213 0.8 0
+# alpha 302213 0 0
+# layer 202113 1
+# layer 401413 2
+# serif 0
+# textboxarrow 0 0
+# textboxarrow 1 0
+# face 502213 "surprise"
+# face 401413 "surprise"
+# face 202113 "surprise"
+# voice 9974 "nemu_pok_collabo0304_0014"
+# voice 9974 "mirin_pok_collabo0304_0016"
+# voice 9974 "pinkey_pok_collabo0304_0012"
+@みりん・ねむ・ピンキー
+わわっ…！！
+
+;;お互いを斬りつけそうになり、慌てて攻撃をやめるみりん・ねむ・ピンキー
+;;上方に逃げ延びたグリード…その背後に、武器を構えるもが
+# serif 1
+# textboxarrow 1 3
+# pos 101471 5
+# mask 101471 on
+# alpha 502213 0 0.3
+# alpha 401413 0 0.3
+# alpha 202113 0 0.3
+# alpha 101471 1 0.5
+# alpha 302213 1 0.5
+# chara 101471
+# face 101471 "angry"
+# voice 9974 "tyrufing_k_pok_collabo0304_0017"
+@グリード
+…逃げ延びた先で待ち受ける
+…そんな戦術も、読めないと思うの？
+
+# serif 0
+# textboxarrow 0 1
+# chara 302213
+# face 302213 "surprise"
+# voice 9974 "moga_pok_collabo0304_0010"
+@もが
+…！
+
+;;すべてを読んでいたように、もがの攻撃を弾き返すグリード
+;;【指定】SE_4818
+# se "SE_9017"
+# fadein "white" 1
+# leftout 302213 0.9
+# serif 1
+# textboxarrow 1 3
+# textboxarrow 0 0
+# chara 101471
+# face 101471 "normal"
+# voice 9974 "tyrufing_k_pok_collabo0304_0018_1"
+@グリード
+…にわかの連携じゃ、
+それが限界かしら…
+
+# serif 1
+# textboxarrow 1 3
+# chara 101471
+# voice 9974 "tyrufing_k_pok_collabo0304_0018_2"
+@グリード
+…アナタ達を、
+買い被り過ぎていたようね
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# imagerightout 0 0.5
+# pos 502213 3
+# pos 401413 1
+# alpha 101471 0 0
+# alpha 502213 1 0
+# alpha 401413 1 0
+# alpha 202113 1 0
+# layer 202113 1
+# layer 502213 2
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# chara 101511
+# face 502213 "angry"
+# face 401413 "angry"
+# face 202113 "normal"
+# voice 9974 "mirin_pok_collabo0304_0017"
+@みりん
+クッ…！
+…このーっ！！
+
+;;一斉にグリードへと向かってゆく６人。グリードの身体から漆黒のオーラが湧き出す
+# se "SE_5575"
+# textboxarrow 0 0
+# rightout 502213 0.3
+# rightout 401413 0.3
+# rightout 202113 0.3
+# body 101811
+# pos 101811 3
+# mask 101811 off
+# scale 101811 0.8 0
+# alpha 101811 0 0
+# waitandnext 0.5
+
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 2
+# alpha 101811 1 0.3
+# chara 101811
+# face 101811 "sad"
+# voice 9974 "denparley_pok_collabo0304_0016"
+@でんぱちゃん
+うぐ…！
+みんな、マズい…っ！
+逃げるんだ…はやく…！！
+
+# serif 0
+# textboxarrow 0 2
+# textboxarrow 1 0
+# pos 502213 3
+# pos 401413 1
+# pos 202113 5
+# alpha 502213 1 0.5
+# alpha 401413 1 0.5
+# alpha 202113 1 0.5
+# alpha 101811 0 0.2
+# layer 202113 1
+# layer 502213 2
+# chara 101511
+# face 502213 "surprise"
+# face 401413 "surprise"
+# face 202113 "surprise"
+# voice 9974 "mirin_pok_collabo0304_0018"
+@みりん
+え…！？
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+;;【指定】SE_9156
+# se "SE_9156"
+# fadein "black" 0.5
+# imagerightout 0 0
+# pos 101471 3
+# alpha 101471 1 0
+# mask 101471 off
+# alpha 502213 0 0
+# alpha 401413 0 0
+# alpha 202113 0 0
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# chara 101471
+# voice 9974 "tyrufing_k_pok_collabo0304_0019_1"
+@グリード
+…我らが背負うは、
+異界を統べし《魔》の《大罪》…！
+
+# serif 0
+# textboxarrow 0 2
+# chara 101471
+# face 101471 "angry"
+# voice 9974 "tyrufing_k_pok_collabo0304_0019_2"
+@グリード
+その強大な感情の増幅の元に、
+キラーズが最強の力を
+我らにもたらす…！
+
+;;【指定】SE_5776
+# se "SE_5776"
+# fadein "black" 1
+# serif 0
+# textboxarrow 0 2
+# chara 101471
+# voice 9974 "tyrufing_k_pok_collabo0304_0019_3"
+@グリード
+何人たりとも…
+決して、太刀打ちは出来ない…！！
+
+;;漆黒のオーラが悪魔の形をかたどってゆく
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 3
+# textboxarrow 0 0
+# pos 302213 1
+# leftin 302213 0.5
+# leftin 601513 0.5
+# leftin 103013 0.5
+# alpha 302213 1 0
+# alpha 601513 1 0
+# alpha 103013 1 0
+# alpha 101471 0 0.3
+# layer 103013 1
+# layer 302213 2
+# face 601513 "surprise"
+# face 103013 "surprise"
+# chara 601513
+# voice 9974 "eitaso_pok_collabo0304_0015"
+@えいたそ
+な、なんか、ヤバそう…！
+
+# serif 0
+# textboxarrow 0 2
+# textboxarrow 1 0
+# alpha 101811 1 0.5
+# alpha 302213 0 0.3
+# alpha 601513 0 0.3
+# alpha 103013 0 0.3
+# chara 101811
+# voice 9974 "denparley_pok_collabo0304_0017"
+@でんぱちゃん
+みんな！！逃げて―っ！！
+
+# serif 1
+# textboxarrow 1 2
+# textboxarrow 0 0
+# rightin 101471 0.5
+# alpha 101471 1 0
+# alpha 101811 0 0.3
+# chara 101471
+# voice 9974 "tyrufing_k_pok_collabo0304_0020"
+@グリード
+…『黒式・幻影朧』！！
+
+;;【指定】SE_9059
+;;あたり一面に、爆発的な黒い閃光が放たれる
+# se "SE_9059"
+# shake 1 2.6
+# fadeout "black" 2.5
+# waitandnext 2.6
+# voice 9974 "lisa_pok_collabo0304_0016"
+# voice 9974 "eitaso_pok_collabo0304_0016"
+# voice 9974 "moga_pok_collabo0304_0011"
+# voice 9974 "pinkey_pok_collabo0304_0013"
+# voice 9974 "mirin_pok_collabo0304_0019"
+# voice 9974 "nemu_pok_collabo0304_0015"
+@でんぱ組全員
+う…うわーっ！！
+
+;;その凄まじい憎悪のエネルギーに弾き飛ばされる６人
+# fadein "black" 1
+# serif 0
+# textboxarrow 0 2
+# textboxarrow 1 0
+# alpha 101811 1 0
+# alpha 101471 0 0
+# chara 101811
+# voice 9974 "denparley_pok_collabo0304_0018"
+@でんぱちゃん
+みんなーっ！！！
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imagerightin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+;;ドサドサっと地面に叩き付けられるでんぱチーム
+;;【指定】SE_3001
+;;【指定】ＢＧＭ停止
+# bgm "stop"
+# shake 0 0.5
+# se "SE_3001"
+# fadein "white" 0.5
+# imagerightout 0 0
+# alpha 101811 0 0
+# pos 103013 1
+# rightin 103013 0.4
+# alpha 103013 1 0
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+# chara 103013
+# face 103013 "sad"
+# voice 9974 "lisa_pok_collabo0304_0017"
+@リサ
+う…うぐ…！
+
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 3
+# pos 101471 5
+# mask 101471 on
+# rightin 101471 0.5
+# alpha 101471 1 0
+# chara 101471
+# face 101471 "normal"
+# voice 9974 "tyrufing_k_pok_collabo0304_0021"
+@グリード
+…さぁ、終わりにしましょう
+これ以上続けても、同じことだわ
+
+# serif 0
+# textboxarrow 0 2
+# alpha 502213 1 0.5
+# layer 103013 1
+# layer 502213 2
+# chara 101511
+# face 502213 "sad"
+# voice 9974 "mirin_pok_collabo0304_0020"
+@みりん
+グ…！
+イ、イヤよ…！あなたなんかに…
+絶対に負けはしない…！
+
+;;【指定】bgm158
+# bgmfile "bgm158" "BgmPJZero001" 0
+# serif 1
+# textboxarrow 1 3
+# chara 101471
+# face 101471 "angry"
+# voice 9974 "tyrufing_k_pok_collabo0304_0022"
+@グリード
+アナタなんかに…？
+…正確には《アナタ達》だわ
+
+# serif 0
+# textboxarrow 0 1
+# body 100281
+# pos 100281 3
+# scale 100281 0.8 0
+# alpha 100281 0 0
+# body 400151
+# pos 400151 5
+# scale 400151 0.8 0
+# alpha 400151 0 0
+# body 100161
+# pos 100161 1
+# scale 100161 0.8 0
+# alpha 100161 0 0
+# body 500261
+# pos 500261 1
+# scale 500261 0.8 0
+# alpha 500261 0 0
+# chara 103013
+# face 103013 "surprise"
+# voice 9974 "lisa_pok_collabo0304_0018"
+@リサ
+え…？
+
+;;でんぱチームを囲むように現れる黒キラープリンセス達（ラース・ラスト・スロウス・プライド）
+# serif 1
+# textboxarrow 1 1
+# textboxarrow 0 0
+# alpha 101471 0 0.3
+# alpha 502213 0 0.3
+# alpha 103013 0 0.3
+# rightin 500261 0.5
+# rightin 100281 0.5
+# rightin 400151 0.5
+# alpha 500261 1 0
+# alpha 100281 1 0
+# alpha 400151 1 0
+# chara 500261
+# voice 9974 "furaikugeru_k_pok_collabo0304_0001"
+@プライド
+ワァオ…！
+ペインでベァッドな表情…
+もう、最高にヘァピィだね！！
+
+# serif 0
+# textboxarrow 0 2
+# chara 100281
+# voice 9974 "revatein_k_pok_collabo0304_0001"
+@スロウス
+…時間の無駄だわ
+
+# serif 1
+# textboxarrow 1 3
+# chara 400151
+# voice 9974 "arutemisu_k_pok_collabo0304_0001"
+@ラスト
+手が足りないなら、手を貸すけど？
+
+# serif 0
+# textboxarrow 0 1
+# alpha 500261 0 0.3
+# alpha 100161 1 0.5
+# chara 100161
+# face 100161 "angry"
+# voice 9974 "masamune_k_pok_collabo0304_0001"
+@ラース
+《グリード》…
+主君と合流せねばならぬ
+早々に始末をつけよ
+
+# serif 1
+# textboxarrow 1 1
+# textboxarrow 0 0
+# pos 202113 3
+# pos 502213 1
+# alpha 100281 0 0.3
+# alpha 100161 0 0.3
+# alpha 400151 0 0.3
+# leftin 401413 0.5
+# leftin 202113 0.5
+# leftin 101471 0.5
+# alpha 401413 1 0
+# alpha 202113 1 0
+# alpha 101471 1 0
+# layer 202113 1
+# layer 401413 2
+# face 101471 "normal"
+# face 202113 "sad"
+# chara 401413
+# face 401413 "sad"
+# voice 9974 "nemu_pok_collabo0304_0016"
+@ねむ
+！！
+う、うぁ…！よ、四人も…！！
+
+# serif 0
+# textboxarrow 0 2
+# chara 202113
+# voice 9974 "pinkey_pok_collabo0304_0014"
+@ピンキー
+こんなの…絶対、無理じゃん…！！
+
+# serif 1
+# textboxarrow 1 1
+# alpha 502213 1 0.5
+# alpha 401413 0 0.3
+# layer 202113 1
+# layer 502213 2
+# chara 101511
+# voice 9974 "mirin_pok_collabo0304_0021"
+@みりん
+そんな…！！
+
+# serif 0
+# textboxarrow 0 3
+# chara 101471
+# face 101471 "angry"
+# voice 9974 "tyrufing_k_pok_collabo0304_0023"
+@グリード
+そう…アナタ達は、
+既に終わっているの
+…安心して逝きなさい！
+
+;;グン、とトドメにかかるグリード
+# serif 1
+# textboxarrow 1 2
+# textboxarrow 0 0
+# leftin 101811 0.3
+# alpha 101811 1 0
+# alpha 101471 0 0.3
+# alpha 502213 0 0.3
+# alpha 202113 0 0.3
+# chara 101811
+# voice 9974 "denparley_pok_collabo0304_0019"
+@でんぱちゃん
+みんな…！
+諦めちゃ、ダメーーーー！！

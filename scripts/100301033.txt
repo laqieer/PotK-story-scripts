@@ -1,0 +1,453 @@
+;;----------------------------------------------
+;;100301033
+;;第1話　タイトル：思いがけぬ提案
+;;1-3-3
+;;----------------------------------------------
+# script "lisp"
+# background "beast_world"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;アルマス
+# body 3103811
+# pos 3103811 2
+# scale 3103811 0.8 0
+# layer 3103811 2
+# alpha 3103811 1 0
+# mask 3103811 on
+# face 3103811 "angry"
+;;ギル
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# layer 137 2
+# alpha 137 0 0
+# mask 137 on
+;;ティターニア
+# body 139
+# pos 139 2
+# scale 139 0.8 0
+# layer 139 5
+# alpha 139 0 0
+# mask 139 on
+;;ミョルニル
+# body 3200111
+# pos 3200111 4
+# scale 3200111 0.8 0
+# layer 3200111 1
+# alpha 3200111 1 0
+# mask 3200111 on
+;;アロンダイト
+# body 3100711
+# pos 3100711 3
+# scale 3100711 0.8 0
+# layer 3100711 3
+# alpha 3100711 0 0
+# mask 3100711 on
+;;トレイセーマ隊長
+# body 3830007
+# pos 3830007 3
+# scale 3830007 0.8 0
+# reversal 3830007 0
+# layer 3830007 3
+# alpha 3830007 0 0
+# mask 3830007 on
+;;トレイセーマ兵１
+# body 3830001
+# pos 3830001 1
+# scale 3830001 0.8 0
+# reversal 3830001 0
+# layer 3830001 2
+# alpha 3830001 0 0
+# mask 3830001 on
+;;トレイセーマ兵２
+# entry 93830001 3830001
+# pos 93830001 5
+# scale 93830001 0.8 0
+# reversal 93830001 0
+# layer 93830001 2
+# alpha 93830001 0 0
+# mask 93830001 on
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;剣閃（アルマス）
+# effectbody 1000 1 150 0 7
+;;剣閃（ミョル）
+# effectbody 1001 4 0 0 5
+# textwindow "close"
+# waitandnext 0.1
+
+;;◆背景：トレイセーマ----------------------------------------------------
+# face 3200111 "angry"
+# voice 1038 "almace_0029"
+# se "SE_4818"
+# shake 0 0.6
+# fadein "white" 0.3
+# move 3200111 5 0.3
+# move 3103811 3 0.3
+# effectstart 1000
+# waitandnext 0.8
+
+# voice 320011 "myuruniru_ge_battle_0003"
+# se "SE_5736"
+# shake 0 0.6
+# fadein "white" 0.3
+# move 3200111 3 0.3
+# move 3103811 2 0.3
+# effectstart 1001
+# waitandnext 0.8
+
+;;アロンダイトが割り込む
+# se "SE_5204"
+# face 3200111 "surprise"
+# face 3103811 "surprise"
+# move 3103811 1 0.3
+# move 3200111 5 0.3
+# fadein "white" 0.3
+# alpha 3100711 1 0.3
+# textwindow "toge"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100711 "angry"
+# voice 310071 "arondaito_ge_0012"
+# chara 3100711
+@？？？
+ミョルニル、そこまでです！
+
+# textwindow "close"
+# alpha 3103811 0 0.5
+# move 3200111 4 0.5
+# move 3100711 2 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3200111 "normal"
+# voice 320011 "myuruniru_ge_0009"
+# chara 3200111
+@ミョルニル
+えっ？
+アロンダイト、じゃましないでよ～
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310071 "arondaito_ge_0034"
+# chara 3100711
+@アロンダイト
+あなたには目標の探索だけが
+命じられていたはずですよ
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3100711
+@アロンダイト
+勝手に戦闘を行うのは任務に反します
+下がってください
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3200111 "angry"
+# voice 320011 "myuruniru_ge_0013"
+# chara 3200111
+@ミョルニル
+ちぇー…
+アロンダイトばっかりずるいよ～
+ミョルニルちゃんもたたかいたい！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100711 "sad"
+# voice 310071 "arondaito_ge_0027"
+# chara 3100711
+@アロンダイト
+あいにくと、私の任務も戦闘では
+ありません
+
+# alpha 3200111 0 0.5
+# alpha 3100711 0 0.5
+# pos 3103811 3
+# alpha 3103811 1 0.5
+# alpha 139 1 0.5
+# mask 3103811 off
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103811 "normal"
+# voice 1038 "almace_0009"
+# chara 3103811
+@アルマス
+もう一人現れたと思ったら仲間割れ？
+私は二人相手でも構わないわよっ
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 139 "surprise"
+# voice 9967 "titania_0065"
+# chara 139
+@ティターニア
+そんな挑発をしないで下さい！
+あなたも一旦、剣を引いて
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103811 "angry"
+# voice 1038 "almace_battle_0005"
+# chara 3103811
+@アルマス
+攻撃を仕掛けてきたのは
+向こうの方なのにっ…
+
+# alpha 3103811 0 0.5
+# alpha 139 0 0.5
+# pos 3200111 3
+# mask 3200111 off
+# alpha 3200111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3200111 "normal"
+# voice 320011 "myuruniru_ge_0027"
+# chara 3200111
+@ミョルニル
+どうせ、ぺったんこにしないと
+いけなくなるんでしょ～？
+だったらミョルニルちゃんが――
+
+;;◆トレイセーマ兵合流----------------------------------------------------
+# textwindow "close"
+# alpha 3200111 0 0.5
+# se "SE_0719"
+# alpha 3830001 1 0
+# rightin 3830001 0.8
+# waitandnext 0.2
+
+# alpha 3830007 1 0
+# rightin 3830007 0.6
+# waitandnext 0.2
+
+# alpha 93830001 1 0
+# rightin 93830001 0.4
+# waitandnext 0.4
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 383000 "cryptid_0002"
+# chara 3830007
+@トレイセーマ兵隊長
+止まれ、識別系統Ｈ・○五
+ミョルニル
+
+# textwindow "close"
+# move 3830007 4 0.5
+# alpha 3830001 0 0.5
+# alpha 93830001 0 0.5
+# pos 3200111 2
+# alpha 3200111 1 0.5
+# mask 3200111 on
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3200111 "sad"
+# voice 320011 "myuruniru_ge_0022"
+# chara 3200111
+@ミョルニル
+は…はい…！
+しきべつけいとーＨ・○五
+そのばでたいきします…
+
+# alpha 3830007 0 0.5
+# alpha 3200111 0 0.5
+# alpha 137 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 137 "surprise"
+# voice 9969 "gill_0001"
+# chara 137
+@ギル
+なんだ？
+急に大人しくなったっていうか…
+
+# alpha 137 0 0.5
+# pos 3103811 3
+# alpha 3103811 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103811 "worry"
+# voice 1038 "almace_0028"
+# chara 3103811
+@アルマス
+怯えているみたい…
+味方の兵士が来たっていうのに
+
+# alpha 3103811 0 0.5
+# alpha 3830007 1 0.5
+# alpha 3200111 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 383000 "cryptid_0001"
+# chara 3830007
+@トレイセーマ兵隊長
+Ｈ・○五
+任務に対する逸脱行為が見受けられた
+ようだが？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3200111 "sad"
+# voice 320011 "myuruniru_ge_0015"
+# chara 3200111
+@ミョルニル
+ごめんなさい…怒らないで…
+
+# alpha 3200111 0 0.5
+# alpha 3830007 0 0.5
+# pos 3100711 3
+# mask 3100711 off
+# alpha 3100711 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100711 "sad"
+# voice 310071 "arondaito_ge_0013"
+# chara 3100711
+@アロンダイト
+ミョルニル…
+
+# alpha 3100711 0 0.5
+# alpha 3200111 1 0.5
+# alpha 3830007 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 383000 "cryptid_0004"
+# chara 3830001
+@トレイセーマ兵隊長
+フン！
+識別系統Ｈ・○五
+ただちに施設へ帰還せよ
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3200111 "sad"
+# voice 320011 "myuruniru_ge_battle_0005"
+# chara 3200111
+@ミョルニル
+はい…
+しきべつけいとーＨ・○五
+帰還します…
+
+;;ミョルニルが走り去る
+# textwindow "close"
+# se "SE_5575"
+# alpha 3200111 0 0.5
+# waitandnext 0.8
+
+# alpha 3830007 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# alpha 137 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 137 "sad"
+# voice 9969 "gill_0009"
+# chara 137
+@ギル
+人が変わったみたいに素直に
+言うことを聞いたな…
+でも、なんか辛そうだったぜ
+
+# alpha 137 0 0.5
+# alpha 3830007 1 0.5
+# pos 3100711 2
+# alpha 3100711 1 0.5
+# mask 3100711 on
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100711 "angry"
+# voice 310071 "arondaito_ge_0031"
+# chara 3100711
+@アロンダイト
+ミョルニル…Ｈ・○五は任務を
+完遂しました
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3100711
+@アロンダイト
+多少の逸脱行為は不問にして下さい
+お願い致します
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 383000 "cryptid_0035"
+# chara 3830007
+@トレイセーマ兵隊長
+それを判断するのは貴様ではない
+自分の任務を遂行しろ、
+識別系統Ｂ・○二
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100711 "sad"
+# chara 3100711
+@アロンダイト
+はい…失礼致しました
+
+;;◆アロンとアルマス------------------------------------------------------
+# alpha 3830007 0 0.5
+# alpha 3100711 0 0.5
+# pos 3103811 3
+# alpha 3103811 1 0.5
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103811 "angry"
+# voice 1038 "almace_0007"
+# chara 3103811
+@アルマス
+あの兵士達、偉そうにっ
+
+# textwindow "close"
+# move 3103811 2 0.5
+# pos 3100711 4
+# alpha 3100711 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100711 "angry"
+# voice 310071 "arondaito_ge_0002"
+# chara 3100711
+@アロンダイト
+私はアロンダイト・獣刻・ユニコーン
+あなた達と話をするために来ました
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3100711
+@アロンダイト
+剣を収めていただけませんか、
+アルマス
+
+# alpha 3103811 0 0.5
+# alpha 139 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 139 "normal"
+# voice 9967 "titania_0003"
+# chara 139
+@ティターニア
+私達と？
+なんのお話しでしょう？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100711 "normal"
+# voice 310071 "arondaito_ge_0036"
+# chara 3100711
+@アロンダイト
+率直にお伝えします
+私達と手を組みましょう

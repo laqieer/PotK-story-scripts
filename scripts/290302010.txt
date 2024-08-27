@@ -1,0 +1,545 @@
+;;-----------------------------------------
+;;3_2_1_0
+;;-----------------------------------------
+# script "lisp"
+# background "parchment_map03"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;異族化アルマス（ナレーションのボイス用）
+# body 5103831
+# alpha 5103831 0 0
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# mask 210 off
+# alpha 210 0 0
+;;グリモワール
+# body 3501711
+# pos 3501711 2
+# scale 3501711 0.8 0
+# alpha 3501711 0 0
+;;アスカロン
+# body 3102311
+# pos 3102311 4
+# scale 3102311 0.8 0
+# alpha 3102311 0 0
+;;レシェフ
+# body 3201311
+# alpha 3201311 0 0
+;;-----------------------------------------
+;;暗転
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;霧
+# imageset 1 "kiri_03"
+# imagescale 1 2.5 0
+# imagealpha 1 0 0
+# imagelayer 1 4
+# imageset 2 "kiri_03"
+# imagescale 2 2 0
+# imagealpha 2 0 0
+# imagelayer 2 3
+;;-----------------------------------------
+;;背景：新地上世界遠景
+# voice 9926 "IntegralNoah_Narration_3_2_0001"
+# textflame 0 0
+@
+フォルカス、アスカロン、
+グリモワールと適合している
+少年カミトは
+
+# voice 9926 "IntegralNoah_Narration_3_2_0002"
+@
+兄貴分であるヴァングとともに
+地上世界統一の夢を追っていた
+
+# voice 9926 "IntegralNoah_Narration_3_2_0003"
+@
+そんなある日、フォルカスが
+姿を消し
+
+# voice 9926 "IntegralNoah_Narration_3_2_0004"
+@
+地上世界は突如、怪しげな霧に
+包まれる
+
+# voice 9926 "IntegralNoah_Narration_3_2_0005"
+@
+過去の幻覚に心を苛まれ、
+見たこともない魔物に襲われる
+カミト達
+
+# voice 9926 "IntegralNoah_Narration_3_2_0006"
+@
+不利を悟ったヴァングは
+カミトだけでも生き残らせようと
+身を挺して魔物達を足止めする
+
+# voice 9926 "IntegralNoah_Narration_3_2_0007"
+@
+カミトはヴァングに言われるがまま
+逃げることしかできなかった
+
+# voice 9926 "IntegralNoah_Narration_3_2_0008"
+@
+必死に助けを求めるカミトの周りに
+謎めいた集団が現れる
+
+# voice 9926 "IntegralNoah_Narration_3_2_0009"
+@
+彼らは一体、何者なのか
+
+# voice 9926 "IntegralNoah_Narration_3_2_0010"
+@
+運命の輪は回り続ける――
+
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：荒廃した街
+# background "devastated_city_night"
+# textwindow "close"
+# imagealpha 1 1 0
+# imagepos 1 -70 170
+# imagealpha 2 1 0
+# imagepos 2 50 -100
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;霧演出
+# imageleftout 1 5
+# imagerightout 2 5
+# imagealpha 1 0 1
+# imagealpha 2 0 1
+# waitandnext 1
+
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@？？？
+さあ、歩け！
+この大罪人めっ
+
+# alpha 210 1 0.5
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 210 "sad"
+# voice 9936 "kamito_0001"
+@カミト
+あの…
+何かの間違いです
+僕は罪なんて…
+
+# serif 1
+@？？？
+祭祀長さまが裁定を下される
+黙って歩くんだ！
+
+# serif 0
+# textboxarrow 0 2
+@カミト
+…………
+
+# alpha 210 0 0.5
+# se "SE_0740"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.7
+
+;;後ろからアスカロンとグリモワールが続く
+# alpha 3501711 1 0.5
+# alpha 3102311 1 0.5
+# waitandnext 0.7
+
+# face 3501711 "angry"
+# voice 350171 "grimoire_ge_0010"
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 1
+@グリモワール
+ふざけんじゃないわよ！
+アスカロン、何でこいつらの
+言うことを聞かなきゃいけないの！
+
+# face 3102311 "normal"
+# voice 310231 "ascalon_a_0028"
+# textboxarrow 0 3
+@アスカロン
+堪えて下さい
+マスターは手を出さないよう
+仰いました
+
+# face 3102311 "angry"
+# voice 310231 "ascalon_a_battle_0005"
+# textboxarrow 0 3
+@アスカロン
+もちろん、マスターの身に
+もしものことがあれば、私が
+命に代えてもお守りします！
+
+# voice 350171 "grimoire_ge_0027"
+# textboxarrow 0 1
+@グリモワール
+さっさと焼き払えば良いのよ！
+まったく…
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 3501711 0 0
+# alpha 3102311 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 0
+@？？？
+祭祀長さま！
+大罪人を捕らえて参りました！
+
+# serif 1
+@祭祀長
+ご苦労さまです
+今日の大罪人は随分と若いですね
+
+# alpha 210 1 0.5
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@カミト
+あ、あのっ…
+僕は罪なんて犯してませんっ
+何かの間違いですっ
+
+# serif 0
+# textboxarrow 0 2
+# face 210 "angry"
+@カミト
+それより、大変なんですっ
+町が…化け物が出てきて…
+それで兄貴がっ…
+
+# serif 1
+@祭祀長
+おやおや
+自身の罪を自覚していないとは
+罪深いことですね
+
+# serif 0
+# textboxarrow 0 2
+# face 210 "sad"
+@カミト
+あの…
+僕の話をっ…
+
+# serif 1
+@祭祀長
+あなたはここがどこか
+ご存知ですか？
+
+# serif 0
+# textboxarrow 0 2
+# face 210 "surprise"
+# voice 9936 "kamito_0023"
+@カミト
+えっ…
+いえ、知りません…
+
+# serif 1
+@祭祀長
+ここは神聖なるラグナロク教会の
+正統なる教えを守り続ける者達が
+集まって作り上げた楽園
+
+# serif 1
+@祭祀長
+「ネオ・ラグナロク」です
+
+# serif 0
+# textboxarrow 0 2
+# voice 9936 "kamito_0030"
+@カミト
+ネオ・ラグナロク…？
+聞いたことがありません
+
+# serif 1
+@祭祀長
+そうでしょうね
+あなた達は大罪人ですから
+
+# serif 1
+@祭祀長
+ご覧なさい
+周りにいる人々の目を
+あなたを責め立てる眼差しを
+
+# serif 0
+# textboxarrow 0 0
+@信者達
+キル姫様を使役しようとする
+大罪人めっ
+
+# serif 0
+# textboxarrow 0 0
+@信者達
+自分の罪を知らぬ恥知らずが！
+
+# serif 0
+# textboxarrow 0 2
+# face 210 "sad"
+# voice 9936 "kamito_0025"
+@カミト
+ひっ…
+そんな…
+
+# serif 1
+@祭祀長
+あなたは自身の罪を自覚して
+いませんね
+では、教えて差し上げましょう
+
+# serif 1
+@祭祀長
+あなたの罪は、奏官であることです
+
+# serif 0
+# textboxarrow 0 2
+@カミト
+奏官であることが、罪？
+意味が分かりません…
+
+# serif 1
+@祭祀長
+おお！
+何ということですかっ
+これほどまでに罪深いとはっ
+
+# serif 1
+@祭祀長
+よくお聞きなさい、大罪人よ
+奏官などという職が作られたことが
+過ちの始まりだったのです
+
+# serif 1
+@祭祀長
+偉大なるユグドラシル
+その懐に抱かれし天上世界
+その中心たるラグナロク教会
+
+# serif 1
+@祭祀長
+そこに祀られているものは
+何ですか？
+ご神体は何ですか？
+
+# serif 0
+# textboxarrow 0 2
+# face 210 "normal"
+# voice 9936 "kamito_0029"
+@カミト
+ええと…
+それは確か、神器です
+様々な逸話を持つ伝説の武具
+
+# serif 1
+@祭祀長
+その通りです！
+神器こそが最も尊きご神体！
+
+# serif 1
+@祭祀長
+その神器の力を抽出したキラーズを
+宿した方々が、キル姫なのです！
+分かりますね？
+
+# serif 0
+# textboxarrow 0 2
+# voice 9936 "kamito_0034"
+@カミト
+はい…
+
+# serif 1
+@祭祀長
+では、あなたの罪は自明では
+ありませんか！！
+
+# serif 1
+@祭祀長
+あなたはあろうことか、
+ご神体の化身であらせられる
+キル姫様を使役しているのですよ！
+
+# serif 1
+@祭祀長
+何たる無礼！
+何たる不遜！
+神をも恐れぬ所業とはこのことです！
+
+# serif 0
+# textboxarrow 0 0
+@信者達
+この極悪人め！！
+
+# serif 1
+@祭祀長
+本来、私達は皆、キル姫様に
+傅くべき存在なのです
+
+# serif 1
+@祭祀長
+崇め、敬い、一心にお世話をさせて
+いただく！
+それこそが最大の使命であったのに…
+
+# serif 1
+@祭祀長
+ラグナロク教会は高邁で崇高なる
+使命を忘れ、奏官などという
+大罪人を作り出してしまいました！
+
+# serif 1
+@祭祀長
+その結果が、今の乱れた世なのです！
+大罪人たる奏官達が傲慢にも
+キル姫様を使役して争い続けている
+
+# serif 1
+@祭祀長
+何と嘆かわしいことでしょう！
+
+# serif 0
+# textboxarrow 0 0
+@信者達
+祭祀長さま！
+大罪人に罰を！
+奏官に死を！
+
+# serif 1
+@祭祀長
+ありがとうございます、皆さん
+その信心は必ずや神器に届くでしょう
+
+# serif 1
+@祭祀長
+「ネオ・ラグナロク」祭祀長の
+名において裁定を下します
+大罪人に死の裁きを！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "toge"
+# textboxarrow 0 0
+@信者達
+おおおおおおおおおおお！！
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 210 "sad"
+# voice 9936 "kamito_0017"
+@カミト
+そんな…待って…！
+
+# voice 350171 "grimoire_ge_0014"
+# serif 1
+# textwindow "toge"
+# textboxarrow 0 0
+@グリモワール
+いい加減にしなさいっ！
+
+# alpha 210 0 0.5
+# move 3501711 3 0
+# mask 3501711 off
+# alpha 3501711 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.5
+
+;;グリモワールの炎演出
+# fadein "white" 0.5
+# envbody 1001 7 14
+# effectpattern 1001 1 0
+# effectstart 1001
+# se "SE_5664"
+# waitandnext 1
+
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 0
+@信者達
+ひぃぃぃぃぃぃっ…！
+
+# serif 1
+# textwindow "nomal"
+@祭祀長
+怒りをお鎮め下さい、キル姫様！
+
+# voice 350171 "grimoire_ge_0007"
+# serif 0
+# textboxarrow 0 2
+@グリモワール
+あいにくと、
+ワタシは怒りの具現なの！
+黙って聞いてればいい気になって！
+
+# effectskip 1001
+# alpha 3501711 0 0.5
+# move 3102311 3 0
+# mask 3102311 off
+# alpha 3102311 1 0.5
+# face 3102311 "angry"
+# serif 0
+# textboxarrow 0 2
+@アスカロン
+マスターを害する者に
+容赦はしませんよ！
+
+# serif 1
+@祭祀長
+違うのです、キル姫様！
+その者は貴女方を縛る大罪人で…
+
+# effectstart 1001
+# alpha 3102311 0 0.5
+# alpha 3501711 1 0.5
+# serif 0
+# textboxarrow 0 2
+@グリモワール
+骨も残さず焼き払ってあげるわ
+
+# serif 1
+@祭祀長
+ひええええええっ…
+
+# serif 1
+# textwindow "close"
+# voice 320131 "reshef_ge_unit_0013"
+# serif 0
+# textboxarrow 0 0
+@？？？
+やっはー！
+その辺にしときな、グリモワール
+じゃないと、痛い目見るよ

@@ -1,0 +1,497 @@
+;;-----------------------------------------
+;;SEA5章_4
+;;-----------------------------------------
+# script "lisp"
+# background "town_3"
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+;;-----------------------------------------
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 1
+# mask 6504011 off
+# alpha 6504011 0 0
+;;ミネルヴァ
+# body 302511
+# pos 302511 3
+# scale 302511 0.8 0
+# layer 302511 3
+# mask 302511 off
+# alpha 302511 0 0
+;;フライシュッツ
+# body 502711
+# pos 502711 4
+# scale 502711 0.8 0
+# layer 502711 3
+# alpha 502711 0 0
+;;ダモクレス
+# body 103511
+# pos 103511 3
+# scale 103511 0.8 0
+# layer 103511 3
+# mask 103511 off
+# alpha 103511 0 0
+;;グラーシーザ
+# body 302611
+# pos 302611 2
+# scale 302611 0.8 0
+# layer 302611 3
+# alpha 302611 0 0
+;;ネス
+# body 602011
+# pos 602011 3
+# scale 602011 0.8 0
+# layer 602011 3
+# mask 602011 off
+# alpha 602011 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：ラグナロク教会のある町
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# sedelay "bgm602_basic_on" 2
+# voice 3025 "minerva_0028"
+# face 302511 "surprise"
+# alpha 302511 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミネルヴァ
+神令…ですか？
+
+# voice 3026 "grayside_0028"
+# alpha 302511 0 0.3
+# face 302611 "sad"
+# alpha 302611 1 0.3
+# face 502711 "sad"
+# alpha 502711 1 0.3
+# textboxarrow 0 1
+@グラーシーザ
+ふむ…
+おぼえがあるような、ないような
+
+# voice 5027 "freischotz_0028"
+# textboxarrow 0 3
+@フライシュッツ
+おねーちゃんにはよくわからないな～
+
+# alpha 302611 0 0.3
+# alpha 502711 0 0.3
+# face 6504011 "usual"
+# alpha 6504011 1 0.3
+# move 302511 2 0
+# mask 302511 on
+# face 302511 "sad"
+# alpha 302511 1 0.3
+# textboxarrow 0 1
+@ミネルヴァ
+…私は、少し分かる気がします
+そうなると…
+
+# voice 650401 "manannan_ura_0033"
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+分かった！
+ヴィモールの町で会った
+キル姫達と同じだね！
+
+# textboxarrow 0 3
+@マナナン
+神様の力が暴走しちゃって、
+おかしくなってるんだよ！
+
+# textboxarrow 0 1
+@ミネルヴァ
+神様の力…
+
+;;選択肢
+# select "どうかな？" "select_label_01" "何か違うような…" "select_label_01"
+神様の力…
+
+# label "select_label_01"
+# voice 650401 "manannan_ura_0022"
+# face 6504011 "surprise"
+# textboxarrow 0 3
+@マナナン
+あれ？
+違った？
+
+;;選択肢
+# select "どちらかというと…" "select_label_02"
+あれ？
+違った？
+
+# label "select_label_02"
+# face 302511 "normal"
+# textboxarrow 0 1
+@ミネルヴァ
+「孤高」ですか…
+それが神令化したスイハの特徴で、
+その雰囲気があった…
+
+# textboxarrow 0 1
+@ミネルヴァ
+神令、神様、前世の記憶…
+マスターとマナナンのお話から
+考察すると
+
+# textboxarrow 0 1
+@ミネルヴァ
+スイハは神々の力ではなく、
+彼女の前世の記憶に引きずられて
+姿が変わったということでしょうか
+
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+そっか～
+神様はオルフェウス達と
+一緒になったもんね
+
+# textboxarrow 0 1
+@ミネルヴァ
+マスターは私達が覚えていないことも
+知っているようなので、その意見は
+考慮すべきですね
+
+# voice 3025 "minerva_0002"
+# face 302511 "sad"
+# textboxarrow 0 1
+@ミネルヴァ
+でも、どうしてスイハは
+神令化してしまったのでしょう？
+
+# alpha 6504011 0 0.3
+# alpha 302511 0 0.3
+# face 302611 "sad"
+# alpha 302611 1 0.3
+# face 502711 "sad"
+# alpha 502711 1 0.3
+# textboxarrow 0 3
+@フライシュッツ
+ひょっとして、エルキュールちゃんも
+神令化っていうのに
+なっちゃってるのかな…？
+
+# textboxarrow 0 1
+@グラーシーザ
+やはり、二人にあってみないと
+わからんな
+
+# alpha 302611 0 0.3
+# alpha 502711 0 0.3
+# move 302511 3 0
+# layer 302511 2
+# mask 302511 off
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# textboxarrow 0 2
+@ミネルヴァ
+そうですね
+ただ…
+
+# textboxarrow 0 2
+@ミネルヴァ
+スイハが神令化によって暴走している
+とも言い切れないと考えています
+
+# move 302511 2 0.5
+# move 602011 4 0
+# layer 602011 4
+# mask 602011 on
+# face 602011 "normal"
+# alpha 602011 1 0.3
+# se "bgm602_rhythm_on"
+# textboxarrow 0 3
+@ネス
+毒のことですね
+
+# textboxarrow 0 1
+@ミネルヴァ
+実は、気になることがあったので
+矢じりに残っていた毒を
+ネスに分析してもらいました
+
+# textboxarrow 0 3
+@ネス
+あの毒は、ヒュドラのものです
+ヒュドラというのは毒蛇の化け物で、
+スイハとは関係ありません
+
+# textboxarrow 0 1
+@ミネルヴァ
+それで私も思い出したんです
+
+#setnextbgmblock 1
+# voice 3025 "minerva_0001"
+# textboxarrow 0 1
+@ミネルヴァ
+マスター
+エルキュールのヒュドラ退治の
+伝承をご存じですか？
+
+# voice 5027 "freischotz_0023"
+# alpha 302511 0 0.3
+# alpha 602011 0 0.3
+# move 502711 3 0
+# mask 502711 off
+# face 502711 "surprise"
+# alpha 502711 1 0.3
+# textboxarrow 0 2
+@フライシュッツ
+エルキュールちゃん！？
+
+# alpha 502711 0 0.3
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# face 602011 "normal"
+# alpha 602011 1 0.3
+# textboxarrow 0 1
+@ミネルヴァ
+スイハがヒュドラの毒を
+使うというのは違和感があります
+これは、あくまで推測ですけれど…
+
+# textboxarrow 0 1
+@ミネルヴァ
+おそらく、二人は繋がっています
+そのことを、あえてスイハは
+分かるようにしてきた
+
+# textboxarrow 0 1
+@ミネルヴァ
+あの毒はそういう意味も
+あったのではないかと考えています
+何より…
+
+# voice 6020 "ness_0032"
+# textboxarrow 0 3
+@ネス
+あの毒、致死量ではありませんでした
+すごく薄められていて、それでも
+苦しむのは苦しむんですけど
+
+# textboxarrow 0 3
+@ネス
+解毒剤がなくても死ぬことは
+なかったと思います
+
+# voice 650401 "manannan_ura_0023"
+# alpha 602011 0 0.3
+# move 6504011 4 0
+# layer 6504011 4
+# mask 6504011 on
+# face 6504011 "surprise"
+# alpha 6504011 1 0.3
+# textboxarrow 0 3 
+@マナナン
+ええーっ！？
+ミーミルは騙されたってこと！？
+
+# voice 650401 "manannan_ura_0028"
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+そういうの愉快じゃないなー…
+
+# textboxarrow 0 1
+@ミネルヴァ
+スイハは
+ミーミルの身柄を確保するために
+一芝居打ったのでしょう
+
+# voice 5027 "freischotz_0028"
+# alpha 6504011 0 0.3
+# move 502711 4 0
+# layer 502711 4
+# mask 502711 on
+# face 502711 "normal"
+# alpha 502711 1 0.3
+# textboxarrow 0 3
+@フライシュッツ
+そんなことしなくても、
+ミーミルちゃんにお願いすれば
+良かったのにね
+
+# face 302511 "sad"
+# textboxarrow 0 1
+@ミネルヴァ
+おそらくミーミルだけを
+連れていかなければならない理由が
+あったんです
+
+# textboxarrow 0 1
+@ミネルヴァ
+その理由が何かは、
+まだ分かりませんけれど…
+
+# face 302511 "normal"
+# textboxarrow 0 1
+@ミネルヴァ
+いずれにしても、彼女は彼女なりに
+考えがあって行動しているのではと
+思うんです
+
+# alpha 302511 0 0.3
+# voice 3026 "grayside_0040"
+# move 302611 2 0
+# mask 302611 on
+# face 302611 "normal"
+# alpha 302611 1 0.3
+# textboxarrow 0 1
+@グラーシーザ
+たんなるぼうそうときめつけるのは
+あさはかというわけだな
+
+# alpha 502711 0 0.3
+# voice 650401 "manannan_ura_0028"
+# face 6504011 "sad"
+# alpha 6504011 1 0.3
+# textboxarrow 0 3
+@マナナン
+うーん…
+でも、あのキル姫がマスターのこと
+傷つけたのは変わらないよ！
+
+# voice 3025 "minerva_0028"
+# alpha 302611 0 0.3
+# mask 302511 on
+# face 302511 "sad"
+# alpha 302511 1 0.3
+# textboxarrow 0 1
+@ミネルヴァ
+そうですね…
+私達も、彼女を信じたいだけ
+なのかもしれません
+
+# textboxarrow 0 1
+@ミネルヴァ
+二人を見つけ出して
+話をすることが
+できればいいんですが…
+
+# alpha 302511 0 0.3
+# alpha 6504011 0 0.3
+# voice 1035 "damocles_0028"
+# move 103511 3 0
+# face 103511 "normal"
+# alpha 103511 1 0.3
+# textboxarrow 0 2
+@ダモクレス
+クレス達がこんなに探してるのに
+見つからないんだよねー…
+
+# textboxarrow 0 2
+@ダモクレス
+かくれんぼだったら、クレスの方が
+上手なはずなのになぁ
+
+# voice 3025 "minerva_0002"
+# alpha 103511 0 0.3
+# move 302511 3 0
+# mask 302511 off
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# textboxarrow 0 2
+@ミネルヴァ
+マスター
+ティルフィングと連絡は取れませんか
+
+# textboxarrow 0 2
+@ミネルヴァ
+ミーミルとティルフィングは
+連絡を取り合えるはずですので
+
+# textboxarrow 0 2
+@ミネルヴァ
+彼女を通じて居場所を知ることが
+できるかもしれません
+
+;;選択肢
+# select "それが…" "select_label_03" "何故か…" "select_label_03"
+マスター
+ティルフィングと連絡は取れませんか
+
+# label "select_label_03"
+# voice 3025 "minerva_0022"
+# face 302511 "surprise"
+# textboxarrow 0 2
+@ミネルヴァ
+通信が途切れた…？
+
+# alpha 302511 0 0.3
+# move 6504011 3 0
+# mask 6504011 off
+# face 6504011 "sad"
+# alpha 6504011 1 0.3
+# textboxarrow 0 2
+@マナナン
+ヴィモールの町に行くときも
+同じようなことが起きたよね～
+
+# alpha 6504011 0 0.3
+# face 302511 "sad"
+# alpha 302511 1 0.3
+# textboxarrow 0 2
+@ミネルヴァ
+そうですか…
+では、別の手段を…
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# alpha 302511 0 0.3
+# move 302611 3 0
+# mask 302611 off
+# face 302611 "angry"
+# alpha 302611 1 0.3
+# textboxarrow 0 2
+@グラーシーザ
+むっ？
+なにやらよくないけはいがするな
+
+# alpha 302611 0 0.3
+# move 103511 2 0
+# mask 103511 on
+# face 103511 "angry"
+# alpha 103511 1 0.3
+# face 502711 "angry"
+# alpha 502711 1 0.3
+# textboxarrow 0 3
+@フライシュッツ
+うん
+ここから少し離れてるけど、
+この感覚は…
+
+# textboxarrow 0 1
+@ダモクレス
+魔獣だね！
+
+# alpha 103511 0 0.3
+# alpha 502711 0 0.3
+# move 302511 2 0
+# mask 302511 on
+# face 302511 "angry"
+# alpha 302511 1 0.3
+# move 602011 4 0
+# mask 602011 on
+# face 602011 "angry"
+# alpha 602011 1 0.3
+# textboxarrow 0 3
+@ネス
+町に被害が出ては大変です
+すぐに対処しましょう！
+
+# voice 3025 "minerva_0032"
+# textboxarrow 0 1
+@ミネルヴァ
+そうですね
+マスター、続きはまた後ほど
+
+# fadeout "black" 1
+# waitandnext 1

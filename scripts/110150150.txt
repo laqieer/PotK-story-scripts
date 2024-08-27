@@ -1,0 +1,381 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー15章
+;;第1話　タイトル：再び深奥へ
+;;1_5_10
+;;スクリプト最後の背景：深奥
+;;-----------------------------------------
+# script "lisp"
+# background "profound_nolight"
+# bgmfile "bgm323" "BgmLostRagnarokCommand" 0
+;;-----------------------------------------
+;;ゴッドアルマス
+# entry 201 3103811 523
+# pos 201 3
+# scale 201 0.8 0
+# layer 201 2
+# alpha 201 0 0
+# mask 201 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 4
+# alpha 139 0 0
+# mask 139 off
+;;リル=ティルフィング
+# body 3101411
+# pos 3101411 3
+# scale 3101411 0.8 0
+# layer 3101411 4
+# alpha 3101411 0 0
+# mask 3101411 off
+;;レーヴァテイン
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# layer 3100211 2
+# alpha 3100211 0 0
+# mask 3100211 off
+;;ティファレト
+# body 3503211
+# pos 3503211 3
+# scale 3503211 0.8 0
+# layer 3503211 2
+# alpha 3503211 0 0
+# mask 3503211 off
+;;神令スイハ（仮面）
+# body 3401719
+# pos 3401719 3
+# scale 3401719 0.8 0
+# layer 3401719 2
+# alpha 3401719 0 0
+# mask 3401719 off
+;;神令エルキュール（仮面）
+# body 3202519
+# pos 3202519 3
+# scale 3202519 0.8 0
+# layer 3202519 2
+# alpha 3202519 0 0
+# mask 3202519 off
+;;神令グラーシーザ（仮面）
+# body 3302619
+# pos 3302619 3
+# scale 3302619 0.8 0
+# layer 3302619 2
+# alpha 3302619 0 0
+# mask 3302619 off
+;;神令ミネルヴァ（仮面）
+# body 3302519
+# pos 3302519 3
+# scale 3302519 0.8 0
+# layer 3302519 2
+# alpha 3302519 0 0
+# mask 3302519 off
+;;-----------------------------------------
+;;//背景：深奥
+# voice 1038 "almace_battle_0002"
+# move 201 2 0
+# face 201 "angry"
+# alpha 201 1 0
+# mask 201 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 3202519 4 0
+# face 3202519 "normal"
+# alpha 3202519 1 0
+# mask 3202519 on
+@アルマス
+せいっ！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+# voice 320251 "hercule_c_battle_0004"
+# textboxarrow 0 3
+@エルキュール
+消し飛べ！
+
+# se "SE_4100"
+# waitandnext 0.5
+
+# voice 9967 "titania_0063"
+# alpha 201 0 0.5
+# alpha 3202519 0 0.5
+# move 139 3 0
+# face 139 "surprise"
+# alpha 139 1 0.5
+# mask 139 off
+# textboxarrow 0 2
+@ティターニア
+アルマス、前に出過ぎていますよっ
+周りをよく見て下さい！
+
+# voice 1038 "almace_0043"
+# alpha 139 0 0.5
+# move 201 3 0
+# face 201 "angry"
+# alpha 201 1 0.5
+# mask 201 off
+# textboxarrow 0 2
+@アルマス
+大丈夫よ、ティニ
+ちゃんと分かってるから
+
+# voice 330261 "grayside_c_battle_0003"
+# alpha 201 0 0.5
+# move 3302619 3 0
+# face 3302619 "normal"
+# alpha 3302619 1 0.5
+# mask 3302619 off
+# textboxarrow 0 2
+@グラーシーザ
+えぇいっ！
+
+# se "SE_4200"
+;;//グラーシーザが攻撃するが、アルマスは避ける
+# textwindow "close"
+# alpha 3302619 0 0.5
+# move 201 3 0
+# face 201 "normal"
+# alpha 201 1 0.5
+# mask 201 off
+# waitandnext 0.5
+
+# se "SE_5204"
+# leftout 201 0.3
+# waitandnext 0.3
+
+# voice 5032 "tiphereth_t_0029"
+# alpha 201 0 0.5
+# move 3503211 3 0
+# face 3503211 "angry"
+# alpha 3503211 1 0.5
+# mask 3503211 off
+# textboxarrow 0 2
+# textwindow "nomal"
+@ティファレト
+はあっ！
+
+# se "SE_6718"
+;;//ティファレトの攻撃がグラーシーザに当たる
+# textwindow "close"
+# alpha 3503211 0 0.5
+# move 3302619 3 0
+# face 3302619 "normal"
+# alpha 3302619 1 0.5
+# mask 3302619 off
+# waitandnext 0.5
+
+# se "SE_6719"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 330261 "grayside_c_battle_0005"
+# textboxarrow 0 2
+# textwindow "normal"
+@グラーシーザ
+ぐぬぅっ…
+
+# voice 340171 "suiha_c_0007"
+# alpha 3302619 0 0.5
+# move 3401719 3 0
+# face 3401719 "normal"
+# alpha 3401719 1 0.5
+# mask 3401719 off
+# textboxarrow 0 2
+@スイハ
+連携ですか
+実に下らない戦い方です
+
+# voice 310021 "revatein_ge_0002"
+# move 3100211 2 0
+# face 3100211 "normal"
+# alpha 3100211 1 0.5
+# mask 3100211 on
+# textboxarrow 0 1
+# move 3401719 4 0.5
+# mask 3401719 on
+@レーヴァテイン
+そう言う割に、余裕がなさそうね
+
+# textboxarrow 0 3
+@スイハ
+私は犬が嫌いなだけですよ
+バイブスに飼い慣らされた犬がっ
+
+# textboxarrow 0 1
+@レーヴァテイン
+でも…あなた達だって“彼女”に
+従っているんでしょ？
+
+# textboxarrow 0 3
+@スイハ
+“彼女”ですか
+私達は従っているのではなく、
+手伝っているだけです
+
+# textboxarrow 0 3
+@スイハ
+共通の目的のために
+
+# voice 1038 "almace_0002"
+# alpha 3100211 0 0.5
+# move 201 2 0
+# face 201 "angry"
+# alpha 201 1 0.5
+# mask 201 on
+# textboxarrow 0 1
+@アルマス
+その“彼女”って何者なの！？
+目的って何なのよ！？
+
+# voice 310021 "revatein_ge_0027"
+# alpha 3401719 0 0.5
+# move 3100211 4 0
+# face 3100211 "normal"
+# alpha 3100211 1 0.5
+# mask 3100211 on
+# textboxarrow 0 3
+@レーヴァテイン
+はぁ…
+割り込まないでよ
+
+# voice 1038 "almace_0031"
+# face 201 "normal"
+# textboxarrow 0 1
+@アルマス
+悪かったわね！
+あなたの背中をフライシュッツが
+狙っていたから防いだのよっ
+
+# face 3100211 "sad"
+# textboxarrow 0 3
+@レーヴァテイン
+あなたに背を預けなきゃいけない
+ときが来るなんてね…
+
+# textboxarrow 0 1
+@アルマス
+ティルフィングじゃなくて、
+お生憎様っ
+
+# voice 9967 "titania_0021"
+# move 201 1 0.5
+# move 139 3 0
+# face 139 "worry"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 2
+# move 3100211 5 0.5
+@ティターニア
+二人とも、こんなときにケンカは
+やめて下さい
+
+# voice 310141 "tyrufing_lo_0005"
+# alpha 139 0 0.5
+# move 3101411 3 0
+# face 3101411 "happy"
+# alpha 3101411 1 0.5
+# mask 3101411 on
+# textboxarrow 0 2
+@ティルフィング
+ふふっ
+レーヴァもアルマスも憎まれ口を
+叩いている方が調子良いんですよ
+
+# face 3100211 "angry"
+# textboxarrow 0 3
+@レーヴァテイン
+ティル！
+変なこと言わないでよっ…
+
+# face 201 "angry"
+# textboxarrow 0 1
+@アルマス
+そうよ！
+私はいつだって絶・好調よ！
+
+# voice 340171 "suiha_c_0027"
+# alpha 201 0 0.5
+# alpha 3101411 0 0.5
+# alpha 3100211 0 0.5
+# move 3401719 3 0
+# face 3401719 "normal"
+# alpha 3401719 1 0.5
+# mask 3401719 off
+# textboxarrow 0 2
+@スイハ
+つき合い切れませんね…
+
+# voice 320251 "hercule_c_0012"
+# alpha 3401719 0 0.5
+# move 201 2 0
+# face 201 "normal"
+# alpha 201 1 0.5
+# mask 201 on
+# move 3202519 4 0
+# face 3202519 "normal"
+# alpha 3202519 1 0.5
+# mask 3202519 on
+# textboxarrow 0 3
+@エルキュール
+アルマス！
+逃がしませんっ
+
+# voice 1038 "almace_battle_0006"
+# face 201 "angry"
+# textboxarrow 0 1
+@アルマス
+また突っ込んできて…！
+そういう戦い方は身を滅ぼすって
+言ってるでしょっ
+
+# textboxarrow 0 3
+@エルキュール
+私の身がどうなろうと、
+一向に構わないと言いました！
+
+# voice 1038 "almace_0010"
+# textboxarrow 0 1
+@アルマス
+バカなこと言わないで！
+あなたも“彼女”の手伝いをして
+いるんでしょっ？
+
+# textboxarrow 0 1
+@アルマス
+だったら自分の身も案じるべきよ！
+
+# textboxarrow 0 3
+@エルキュール
+何を言っているのか理解できません
+
+# textboxarrow 0 1
+@アルマス
+このっ…
+
+;;//アルマスとエルキュールが鍔迫り合いをする
+# se "SE_4601"
+# textwindow "close"
+# move 201 3 0.2
+# waitandnext 0.8
+
+# se "SE_4601"
+# move 201 2 0.2
+# move 3202519 3 0.2
+# waitandnext 0.8
+
+# voice 330251 "minerva_c_0020"
+# alpha 201 0 0.5
+# alpha 3202519 0 0.5
+# move 3302519 3 0
+# face 3302519 "normal"
+# alpha 3302519 1 0.5
+# mask 3302519 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ミネルヴァ
+そうです
+そのままアルマスを押さえて
+いて下さい、エルキュール

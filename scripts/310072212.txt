@@ -1,0 +1,426 @@
+;;-----------------------------------------
+;;アロンダイト2-1
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgmfile "bgm069" "BgmHalloween001" 0
+;;-----------------------------------------
+# body 3100721
+# pos 3100721 4
+# scale 3100721 0.8 0
+# layer 3100721 2
+# alpha 3100721 1 0
+# body 3830001
+# pos 3830001 2
+# scale 3830001 0.8 0
+# layer 3830001 3
+# alpha 3830001 1 0
+# entry 3830002 3830001
+# pos 3830002 2
+# scale 3830002 0.8 0
+# layer 3830002 3
+# alpha 3830002 0 0
+# entry 3830003 3830001
+# pos 3830003 2
+# scale 3830003 0.8 0
+# layer 3830003 3
+# alpha 3830003 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;アロンダイトと、敵トレイセーマ兵（一体）は最初から表示させておいてください
+# face 3100721 "angry"
+# voice 310071 "arondaito_ge_battle_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+くらいなさいっ！
+
+;;アロンダイトがトレイセーマ兵に向かって切りつけるような攻撃アクション
+;;トレイセーマ兵は攻撃を受けて退場させてください
+# textwindow "close"
+# move 3100721 3 0.2
+# move 3830001 1 0.2
+# fadein "white" 0.3
+# waitandnext 0.3
+
+# mask 3100721 off
+# alpha 3830001 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textflame 0 0
+@
+見事な剣さばきで
+憲兵を打ち倒すアロンダイト
+
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+あなたは憲兵でしょう！
+それがなぜ街の人を襲うのです！？
+
+# textflame 0 0
+@
+アロンダイトは詰問しようとするが
+憲兵らしき男はすでに気を失っていた
+
+# textflame 0 0
+@
+ふとマスターは気づく
+これはトレイセーマの憲兵ではない
+仮装して街に紛れ込んでいたのだ
+
+# voice 310071 "arondaito_ge_0009"
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+な…っ！？
+
+# voice 310071 "arondaito_ge_0013"
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+憲兵に化けて
+街の人々の信頼を逆手に取るなんて
+許せません、言語道断です！
+
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+マスター！
+この者たちを排除しましょう
+他にもいるはずです！
+
+# textflame 0 0
+@
+確かにアロンダイトの言うように
+変装は手が込んでいるし
+武器も揃えているようだ
+
+# textflame 0 0
+@
+大方、この祭りの騒ぎに乗じて
+盗みでも働こうとしているのだろう
+
+# textflame 0 0
+@
+だが、自分たちも仮装している身
+あまり目立つ行動は危険だ
+
+# voice 310071 "arondaito_ge_0012"
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+マスター
+これは騎士として見逃せません
+戦わせてください！
+
+# textflame 0 0
+@
+しかし彼女の意思は固い
+止めても聞いてくれそうにない
+
+# textflame 0 0
+@
+じゃあ、手分けして
+ひとまず状況を確認しよう
+と、マスターは提案する
+
+# voice 310071 "arondaito_ge_0013"
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+し、しかしそれでは
+マスターの護衛が…
+
+# textflame 0 0
+@
+今は被害が広がる前に、いち早く
+街の状況を把握するのが大切だよ
+と、マスターは伝える
+
+# voice 310071 "arondaito_ge_0032"
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+わかりました
+では、私は向こうを見て参ります！
+
+# textflame 0 0
+@
+そう言うや否や、アロンダイトは
+矢のような早さで走り去った
+
+;;背景そのままに、右から左へ流れるような暗転をお願いします
+;;アロンダイトの立ち絵は表示させたまま暗転をお願いします（できれば）
+;;暗転挟む
+# imagealpha 1 1 0
+# imagepos 1 0 30
+# imageleftin 1 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# imagealpha 1 0 0.5
+# imagerightout 1 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textflame 0 0
+@
+しかし、探すとは言っても
+街中は誰も彼もが仮装しており
+言ってみれば、全員が怪しい
+
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+闇雲に探しても
+見つからないでしょうね…
+
+# textflame 0 0
+@
+先ほどから憲兵らしき男が
+注意喚起を呼びかけているが
+本物の憲兵かどうか不明だ
+
+# face 3100721 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+これでは、もう何がなんだか…
+
+# textflame 0 0
+@
+混乱するアロンダイト
+そこへ突如、悲鳴が聞こえてくる
+
+# face 3100721 "angry"
+# voice 310071 "arondaito_ge_0022"
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+いったい何が！？
+
+# textflame 0 0
+@
+アロンダイトは
+悲鳴の上がった路地裏へ
+ためらうことなく駆けていく
+
+;;トレイセーマ兵を登場させてください（できれば２～３体）
+;;暗転挟む
+# imagealpha 1 1 0
+# imagepos 1 0 30
+# imageleftin 1 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 3100721 0 0
+# move 3830001 1 0
+# alpha 3830001 1 0
+# move 3830002 3 0
+# alpha 3830002 1 0
+# move 3830003 5 0
+# alpha 3830003 1 0
+# waitandnext 0.2
+
+# imagealpha 1 0 0.5
+# imagerightout 1 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textflame 0 0
+@
+しかしそこで待っていたのは、
+仮装した悪党たちだった
+
+# textflame 1 1
+# textboxarrow 0 2
+@仮装した悪党
+トリック・オア・トリートォ～
+お菓子くれなきゃ悪戯しちゃうぜ
+お嬢ちゃん？
+
+# alpha 3100721 1 0.5
+# alpha 3830001 0 0.5
+# alpha 3830002 0 0.5
+# alpha 3830003 0 0.5
+# voice 310071 "arondaito_ge_0009"
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+くっ、私をおびき寄せたと…？
+いいでしょう
+武器を取った者から、懲らしめます！
+
+# textflame 0 0
+@
+アロンダイトは
+怯むことなく剣を抜き
+悪党たちに斬りかかる
+
+;;攻撃エフェクトがあれば挿入していただけますでしょうか。
+# effectbody 1000 3 0 0 0
+# effectstart 1000
+# shake 0 0.5
+
+# textflame 0 0
+@
+悪党たちに身構えるスキすら与えず
+アロンダイトは彼らの武器を
+すべて弾き飛ばした
+
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+…諦めるなら、今のうちですよ
+
+# alpha 3100721 0 0.5
+# alpha 3830001 1 0.5
+# alpha 3830002 1 0.5
+# alpha 3830003 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@仮装した悪党
+くそっ、強ぇ…
+けどよ、これならどうだ！？
+
+# textflame 0 0
+@
+悪党は近くを通りかかった女性の
+腕をつかんで引き寄せ
+その首元へナイフを突きつける
+
+# alpha 3100721 1 0.5
+# alpha 3830001 0 0.5
+# alpha 3830002 0 0.5
+# alpha 3830003 0 0.5
+# voice 310071 "arondaito_ge_0013"
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+人質とは、卑劣な…っ！
+
+# alpha 3100721 0 0.5
+# alpha 3830001 1 0.5
+# alpha 3830002 1 0.5
+# alpha 3830003 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@仮装した悪党
+なぁお前、俺たちの仲間になれよ
+一生遊んで暮らせるぞ？
+
+# alpha 3100721 1 0.5
+# alpha 3830001 0 0.5
+# alpha 3830002 0 0.5
+# alpha 3830003 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+…私は騎士です
+マスターを裏切ることなど
+断じてありません
+
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+声をかける相手は
+よく選ぶべきです
+
+# alpha 3100721 0 0.5
+# alpha 3830001 1 0.5
+# alpha 3830002 1 0.5
+# alpha 3830003 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@仮装した悪党
+…なんだよ、こいつ斬ル姫か？
+斬ル姫はおとなしく
+人間様に従ってりゃいいんだよ！
+
+# alpha 3100721 1 0.5
+# alpha 3830001 0 0.5
+# alpha 3830002 0 0.5
+# alpha 3830003 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+…っ！
+
+# textflame 0 0
+@
+悪党たちの意識が
+アロンダイトへ集中した瞬間
+マスターが飛び出した
+
+# textflame 0 0
+@
+そのまま
+悪党へと体当たりを決め
+人質を解放する
+
+# voice 310071 "arondaito_ge_0014"
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+マスター！
+どうしてこんなところに！？
+
+# textflame 0 0
+@
+マスターは悪党たちを一瞥したあと
+アロンダイトに優しく微笑んで
+こう言う
+
+# select "キミが心配だったから" "select_label_01" "妙な一団を見かけたから" "select_label_02" "キミの芳香に惹きつけられた" "select_label_03"
+マスター！
+どうしてこんなところに！？
+
+;;Ａ
+# label "select_label_01"
+# labeljump "select_label_end"
+# voice 310071 "arondaito_ge_0009"
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+そんな…
+ご自身の身の安全を
+優先してください…っ！
+
+;;Ｂ
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 3100721 "usual"
+# voice 310071 "arondaito_ge_0004"
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+さすがはマスター
+私が見込んだとおりのお方です
+
+;;Ｃ
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 3100721 "surprise"
+# voice 310071 "arondaito_ge_0022"
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+今朝もしっかり水浴びしたのに？
+って、こんな状況でもご冗談を…
+おみそれしました、マスター
+
+;;答えたあと
+# label "select_label_end"
+# face 3100721 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+お心遣い、感謝いたします
+でも…この悪党どもだけは
+私の力で成敗してみせます！

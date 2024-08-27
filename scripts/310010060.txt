@@ -1,0 +1,383 @@
+;;-----------------------------------------
+;;SEA_プロローグ_6_0
+;;-----------------------------------------
+# script "lisp"
+# background "201_room"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル（仮当てアルマス）
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 3
+# mask 270 off
+# alpha 270 1 0
+;;ティルフィング
+# body 6101411
+# pos 6101411 3
+# scale 6101411 0.8 0
+# layer 6101411 2
+# mask 6101411 off
+# alpha 6101411 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 2
+# imageset 1 "bg_white_circle"
+# imagescale 1 1.2 0
+# imagealpha 1 0 0
+# imagelayer 1 1
+;;-----------------------------------------
+;;背景：日記
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_6165"
+# waitandnext 0.5
+
+# se "SE_6166"
+# waitandnext 0.5
+
+# se "SE_6175"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@ミーミル
+旅の記録一日目――
+
+;;ミーミル消す
+# alpha 270 0 0.5
+# waitandnext 0.5
+
+;;フレーム・テキストウィンドウを外す
+# textwindow "close"
+# frameout 0 1
+;;紙を読み込み
+# imageset 3 "SEA_diary_bg"
+# imagealpha 3 0 0
+# imagelayer 3 1
+# imagescale 3 1.2 0
+;;1枚目を読み込み
+# imageset 4 "SEA_diary_001"
+# imagealpha 4 0 0
+# imagelayer 4 3
+# waitandnext 1
+
+;;紙を表示
+# imagealpha 3 1 1
+# imagepos 3 0 0
+# waitandnext 1
+
+;;1枚目を表示
+# imagealpha 4 1 2
+# imagepos 4 0 -900
+# waitandnext 1
+
+;;1枚目を上に
+# imagemoveto 4 0 900 25
+# waitandnext 23
+
+;;1枚目を消す
+# imagealpha 4 0 2
+# waitandnext 2
+
+;;紙を消す
+# sestop "SE_6175"
+# imagealpha 3 0 1
+# waitandnext 1
+
+# fadeout "black" 1
+# waitandnext 1.5
+
+# framein 0 0
+# background "in_yggdrasill_up"
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_0944"
+# move 270 3 0
+# alpha 270 1 0.3
+# face 270 "surprise"
+# waitandnext 0.8
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+ここが外の世界なのですね…
+
+# voice 9917 "mimir_navikan_0001"
+# face 270 "angry"
+@ミーミル
+マスター様、ご安心下さい
+世界についての知識なら、
+しっかり身につけております
+
+@ミーミル
+マスター様の専属補佐官として
+完璧にサポートしてみせますので
+
+# textflame 0 0
+@%(userName)s
+…………
+
+# sestop "SE_0944"
+# se "SE_0742"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "yggdrasill_interior"
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 270 0 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+@
+出発前――
+
+# bgm "bgm003" 0
+# alpha 6101411 1 0.3
+# face 6101411 "usual"
+# waitandnext 0.8
+
+# voice 610141 "tyrufing_7th_0003"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ティルフィング
+…以上が、ミーミルを
+育てることになった経緯です
+
+@ティルフィング
+あの子が生まれた理由については
+私にも
+分からないことばかりですので…
+
+@ティルフィング
+あの子の前で
+何もお聞きにならなかった
+マスターのご配慮には感謝します
+
+@ティルフィング
+それと、ミーミルには
+マスターの補佐をするよう
+言いつけていますけれど…
+
+@ティルフィング
+私は、あの子の知識こそが
+鍵だと考えています
+
+@ティルフィング
+キル姫の強い感情が「揺らぎ」に
+共鳴しないよう制御するには
+
+@ティルフィング
+その感情に名前をつけることが
+大切なんです
+
+@ティルフィング
+自分の気持ちの正体を理解すれば、
+それと適切に向き合う方法も
+見えてきます
+
+@ティルフィング
+ミーミルはとても聡い子です
+知識も豊富ですので
+感情の分析は任せられます
+
+@ティルフィング
+同時に、あの子自身も
+名づけた感情の意味だけでなく…
+
+@ティルフィング
+その「価値」を
+識ることになるでしょう
+
+@ティルフィング
+今、ミーミルは全ての物事を
+フラットに見ています
+
+@ティルフィング
+彼女にとって全ての事柄が等しく
+価値を持ち、だからこそ
+全て無価値ともいえるんです
+
+@ティルフィング
+「美しい」が理解できないのも、
+そこに原因があるのかも…
+
+@ティルフィング
+私はあの子にも、この世界を
+美しいと思って欲しい…
+
+# voice 610141 "tyrufing_7th_0036"
+@ティルフィング
+マスター
+ミーミルのことを、
+よろしくお願いします
+
+# select "もちろん" "select_label_01" "任せて" "select_label_01"
+マスター
+ミーミルのことを、
+よろしくお願いします
+
+# voice 610141 "tyrufing_7th_0030"
+# face 6101411 "happy"
+# label "select_label_01"
+# labeljump "select_label_end01"
+@ティルフィング
+ありがとうございます、
+マスター！
+
+# label "select_label_end01"
+@ティルフィング
+どうか、お気をつけて
+
+# se "SE_11762"
+# fadeout "white" 1
+# waitandnext 1
+
+# bgm "stop"
+# se "SE_0944"
+# background "in_yggdrasill_up"
+# imagealpha 1 0 0
+# alpha 6101411 0 0
+# alpha 270 1 0
+# face 270 "surprise"
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+# voice 9917 "mimir_navikan_0002"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+マスター様、どうされましたか？
+ぼんやりされているように
+お見受けしましたが…
+
+# face 270 "angry"
+@ミーミル
+これからの指針について
+お考えなのでしたら、問題ありません
+
+# se "SE_6161"
+@ミーミル
+私、きちんと準備をして参りました
+こちらの地図をご覧下さい
+
+@ミーミル
+どこにキル姫の皆さんが
+いらっしゃるのか
+情報を書き写しておきました
+
+@ミーミル
+それに…
+
+# face 270 "normal"
+@ミーミル
+私は、ティルフィング様のお力を
+少しばかり分けていただいております
+
+@ミーミル
+こちらのペンダントに
+お力が込められているんですよ
+
+@ミーミル
+これでマスター様を
+確実にお守り致します
+
+# face 270 "angry"
+# sestop "SE_0944"
+@ミーミル
+それでは、手始めに…
+
+# se "SE_6162"
+# fadein "white" 0.5
+# subfillrect 0 "white" 0.5 0 0.3
+# envbody 100 8 0
+# effectstart 100
+# textwindow "close"
+# waitandnext 1
+
+# select "何をしているの？" "select_label_02" "ここで魔法？" "select_label_02"
+それでは、手始めに…
+
+# voice 9917 "mimir_navikan_0003"
+# label "select_label_02"
+# labeljump "select_label_end02"
+@ミーミル
+マスター様の周りに
+結界を張ろうと思います
+
+# label "select_label_end02"
+@ミーミル
+外の世界には、どんな病原菌が
+漂っているのか分かりませんので
+
+;;選択肢
+# select "そこまでしなくても…" "select_label_03" "いや、気にしすぎ！" "select_label_03"
+外の世界には、どんな病原菌が
+漂っているのか分かりませんので
+
+# face 270 "sad"
+# label "select_label_03"
+# labeljump "select_label_end03"
+@ミーミル
+ですが、マスター様に
+悪い虫がついては
+
+# label "select_label_end03"
+@ミーミル
+ティルフィング様に
+申し訳が立ちません
+
+# select "意味が違うような…" "select_label_04" "大丈夫だからっ" "select_label_04"
+ティルフィング様に
+申し訳が立ちません
+
+# se "SE_6163"
+# se "SE_0944"
+# label "select_label_04"
+# labeljump "select_label_end04"
+# subfillrect 0 "white" 0.5 0.3 0
+@ミーミル
+そうでございますか…
+それでは、せめてこちらを
+
+# face 270 "normal"
+# se "SE_5200"
+# label "select_label_end04"
+@ミーミル
+除菌シートです
+お手に触れるものはきちんと
+お拭きになって下さい
+
+;;選択肢
+# select "几帳面だね…" "select_label_05" "ええぇ…" "select_label_05"
+除菌シートです
+お手に触れるものはきちんと
+お拭きになって下さい
+
+# face 270 "angry"
+# label "select_label_05"
+# labeljump "select_label_end05"
+@ミーミル
+私はマスター様の専属補佐官ですので
+御身をお守りする責任がございます
+
+# label "select_label_end05"
+@ミーミル
+では、マスター様
+私が道案内を致しますので
+ついてきていただければ幸いです
+
+# fadeout "black" 1
+# waitandnext 1

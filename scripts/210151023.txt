@@ -1,0 +1,420 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１５章 章タイトル「クリティカルフェイズ―連携―」
+;;第1話－２　タイトル：新たな連携
+;;1_2_3
+;;スクリプト最後の背景：廃墟（夕）
+;;-----------------------------------------
+# script "lisp"
+# background "ghost_town_evening"
+# bgmfile "bgm479_480" "BgmIntegralNoahBoso002" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+# brightness 196 0.8 0
+;;擬装エルキュール
+# body 5202521
+# pos 5202521 3
+# scale 5202521 0.8 0
+# layer 5202521 2
+# alpha 5202521 0 0
+# mask 5202521 off
+;;ミネルヴァ・擬装・アーチャー
+# body 5302521
+# pos 5302521 3
+# scale 5302521 0.8 0
+# layer 5302521 2
+# alpha 5302521 0 0
+# mask 5302521 off
+;;ラグナロク・擬装・ガンナー
+# body 5103621
+# pos 5103621 3
+# scale 5103621 0.8 0
+# layer 5103621 3
+# alpha 5103621 0 0
+# mask 5103621 off
+# brightness 5103621 0.8 0
+;;擬装フライシュッツ
+# body 5502721
+# pos 5502721 3
+# scale 5502721 0.8 0
+# layer 5502721 2
+# alpha 5502721 0 0
+# mask 5502721 off
+;;カリス・聖鎖・アザゼル
+# body 5602511
+# pos 5602511 3
+# scale 5602511 0.8 0
+# layer 5602511 4
+# alpha 5602511 0 0
+# mask 5602511 off
+;;グランテピエ・獣刻・バハムート
+# body 5303411
+# pos 5303411 3
+# scale 5303411 0.8 0
+# layer 5303411 3
+# alpha 5303411 0 0
+# mask 5303411 off
+;;キプル
+# body 163
+# pos 163 3
+# scale 163 0.6 0
+# layer 163 5
+# alpha 163 0 0
+# mask 163 off
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 3
+# alpha 5101431 0 0
+# mask 5101431 off
+# brightness 5101431 0.8 0
+;;アルテミス
+# body 5400131
+# pos 5400131 3
+# scale 5400131 0.8 0
+# layer 5400131 2
+# alpha 5400131 0 0
+# mask 5400131 off
+;;レーヴァテイン・擬彩
+# body 5100231
+# pos 5100231 3
+# scale 5100231 0.8 0
+# layer 5100231 2
+# alpha 5100231 0 0
+# mask 5100231 off
+;;ロンギヌス・擬彩
+# body 5300131
+# pos 5300131 3
+# scale 5300131 0.8 0
+# layer 5300131 2
+# alpha 5300131 0 0
+# mask 5300131 off
+;;異族化マサムネ
+# body 5100131
+# pos 5100131 3
+# scale 5100131 0.8 0
+# layer 5100131 2
+# alpha 5100131 0 0
+# mask 5100131 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第1話－２　タイトル：新たな連携
+;;;;//背景：廃墟（夕）
+# emotionbody 1000 15 5101431 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5101431 2 0
+# face 5101431 "angry"
+# alpha 5101431 1 0
+# mask 5101431 on
+# move 5100131 4 0
+# face 5100131 "angry"
+# alpha 5100131 1 0
+# mask 5100131 on
+# se "SE_11633"
+# textwindow "toge"
+# textflame 1 1
+# textboxarrow 0 1
+# shake 0 0.5
+@ティルフィング
+ウアアアアアアアアアアアアアア！！
+
+;;//ティルフィングがインテグラルを弾き飛ばす
+# textwindow "close"
+# se "SE_9182"
+# fadein "white" 0.5
+# effectbody 1001 1 200 0 0
+# effectstart 1001
+# waitandnext 0.5
+# rightout 5100131 0.5
+# waitandnext 0.5
+
+# effectskip 1000
+# alpha 5101431 0 0.5
+# waitandnext 1.0
+
+# alpha 5400131 1 0.5
+# move 5400131 2 0
+# face 5400131 "angry"
+# mask 5400131 on
+# alpha 5100231 1 0.5
+# move 5100231 4 0
+# mask 5100231 on
+# voice 540013 "arutemisu_iz_0038"
+# textwindow "normal"
+# textboxarrow 0 1
+@アルテミス
+そんなっ…
+まるで歯が立たないなんて…
+
+# face 5100231 "angry"
+# textboxarrow 0 3
+@レーヴァテイン
+動きを…読まれてる…
+
+# alpha 5400131 0 0.5
+# alpha 5100231 0 0.5
+# move 5300131 3 0
+# face 5300131 "sad"
+# mask 5300131 off
+# alpha 5300131 1 0.5
+# voice 530013 "ronginusu_iz_0015"
+# textboxarrow 0 2
+@ロンギヌス
+このままだと…
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# alpha 5300131 0 0
+# emotionbody 2000 15 5103621 0 0
+# effectpattern 2000 1 0
+# effectstart 2000
+# move 5103621 3 0
+# face 5103621 "angry"
+# alpha 5103621 1 0
+# mask 5103621 on
+# move 5502721 5 0
+# face 5502721 "angry"
+# alpha 5502721 1 0
+# mask 5502721 on
+# move 5202521 1 0
+# face 5202521 "angry"
+# alpha 5202521 1 0
+# mask 5202521 on
+# fadein "black" 1
+# waitandnext 1
+
+# shake 0 0.5
+# textwindow "toge"
+# textboxarrow 0 2
+@ラグナロク
+アアアアアアアアアアアアアアア！！
+
+;;//ラグナロクがエンシェントを薙ぎ払う
+# textwindow "close"
+# se "SE_12462"
+# fadein "white" 0.5
+# rightout 5202521 0.3
+# leftout 5502721 0.3
+# waitandnext 1
+
+# effectskip 2000
+# alpha 5103621 0 0.5
+# waitandnext 1.0
+
+# move 5502721 2 0
+# face 5502721 "sad"
+# alpha 5502721 1 0.3
+# mask 5502721 off
+# move 5502721 3 0.2
+# voice 5027 "freischotz_0025"
+# textwindow "normal"
+# textboxarrow 0 2
+@フライシュッツ
+キャアアアア…！
+
+# textwindow "close"
+# alpha 5502721 0 0.5
+# waitandnext 0.5
+
+# move 5202521 4 0
+# face 5202521 "sad"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# move 5202521 3 0.2
+# face 5202521 "angry"
+# voice 2025 "hercule_0037"
+# textwindow "normal"
+# textboxarrow 0 2
+@エルキュール
+まだですっ…
+私は…決して挫けません…！
+
+# alpha 5202521 0 0.5
+# move 5302521 3 0
+# face 5302521 "sad"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+七人がかりでも抑えられないなんて…
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# alpha 5302521 0 0
+# emotionbody 3000 15 196 0 0
+# effectpattern 3000 1 0
+# effectstart 3000
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0
+# mask 196 on
+# move 5303411 2 0
+# face 5303411 "angry"
+# alpha 5303411 1 0
+# mask 5303411 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//アルマスがグランテピエを弾き飛ばす
+# move 196 3 0.1
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# se "SE_9086"
+# effectbody 1002 2 -200 0 0
+# effectstart 1002
+# leftout 5303411 0.5
+# face 5303411 "sad"
+# alpha 5303411 0 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "toge"
+# shake 0 0.5
+@アルマス
+アアアアアアアアアアアアアアア！！
+
+# textwindow "close"
+# effectskip 3000
+# alpha 196 0 0.5
+# waitandnext 0.5
+
+# move 5303411 3 0
+# face 5303411 "sad"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 530341 "grandepieu_di_battle_0006"
+@グランテピエ
+くっ…
+どうして…？
+私の声が届かないの…
+
+# face 5303411 "sad"
+# textboxarrow 0 2
+@グランテピエ
+そんなはずない
+もっと側に寄れば、伝わるはずっ
+
+# face 5303411 "angry"
+# textboxarrow 0 2
+@グランテピエ
+私はどうなってもいいから…
+お願い、声を聞いて
+アルマス！
+
+;;//グランテピエがアルマスに突っ込む
+# se "SE_9092"
+# textwindow "close"
+# rightout 5303411 0.4
+# waitandnext 0.5
+
+# alpha 5303411 0 0
+# move 5602511 3 0
+# face 5602511 "angry"
+# alpha 5602511 1 0.5
+# mask 5602511 off
+# se "SE_9021"
+# voice 560251 "chalice_di_0048"
+# textboxarrow 0 2
+# textwindow "normal"
+@カリス
+グラ姉、ダメ！
+
+# textwindow "close"
+# rightout 5602511 0.5
+# alpha 5602511 0 0.5
+# waitandnext 0.5
+
+# emotionbody 3000 15 196 0 0
+# effectpattern 3000 1 0
+# effectstart 3000
+# move 196 4 0
+# alpha 196 1 0.5
+# alpha 5303411 1 0.5
+# mask 196 on
+# move 5602511 3 0
+# mask 5602511 on
+# move 5303411 2 0
+# face 5303411 "angry"
+# mask 5303411 on
+# textwindow "toge"
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+アアアアアアアアアアア！
+
+;;//アルマスがカリスを弾き飛ばして去る
+# textwindow "close"
+# leftin 5602511 0.5
+# alpha 5602511 1 0.5
+# waitandnext 0.5
+
+# se "SE_3006"
+# sedelay "SE_9021" 0.8
+# fadein "white" 0.5
+# effectbody 1002 1 0 0 0
+# effectstart 1002
+# move 5602511 2 0.3
+# face 5602511 "sad"
+# move 5303411 1 0.3
+# face 5303411 "surprise"
+# waitandnext 1.0
+
+# effectskip 3000
+# move 196 5 0.3
+# alpha 196 0 0.3
+# waitandnext 1.0
+
+# move 5602511 3 1.0
+# voice 560251 "chalice_di_battle_0006"
+# textwindow "normal"
+# textboxarrow 0 2
+@カリス
+あうっ…
+
+# move 163 5 0
+# alpha 163 1 0.5
+# textboxarrow 0 3
+@キプル
+カリス…！
+
+# voice 530341 "grandepieu_di_0051"
+# textboxarrow 0 1
+@グランテピエ
+カリス！
+しっかりして…
+
+# face 5602511 "happy"
+# textboxarrow 0 2
+@カリス
+えへへ…
+カリスちゃん、頼りになるでしょ？
+
+# face 5303411 "sad"
+# textboxarrow 0 1
+# voice 530341 "grandepieu_di_0015"
+@グランテピエ
+ごめんなさい…
+私が上手くやれなかったせいで…

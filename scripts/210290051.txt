@@ -1,0 +1,574 @@
+;;2018エイプリルイベント_05『七人の勇者』戦闘前
+;;//背景：島全景
+# script "lisp"
+# background "sea_jungle_day"
+# bgmfile "bgm230_story" "BgmSeaEvent" 0
+# subfillrect 1 "black" 0 0 1
+;;ムラマサ
+# body 41025001
+# pos 41025001 3
+# scale 41025001 0.8 0
+# alpha 41025001 0 0
+;;雑賀
+# body 45024001
+# pos 45024001 1
+# scale 45024001 0.8 0
+# alpha 45024001 0 0
+;;トライデント
+# body 43002001
+# pos 43002001 5
+# scale 43002001 0.8 0
+# alpha 43002001 0 0
+;;レーヴァテイン
+# body 41002001
+# pos 41002001 3
+# scale 41002001 0.8 0
+# alpha 41002001 0 0
+;;シユウ
+# body 42019001
+# pos 42019001 5
+# scale 42019001 0.8 0
+# alpha 42019001 0 0
+;;ヴァナルガンド
+# body 46011001
+# pos 46011001 1
+# scale 46011001 0.8 0
+# alpha 46011001 0 0
+;;アイムール
+# body 42002001
+# pos 42002001 3
+# scale 42002001 0.8 0
+# alpha 42002001 0 0
+# mask 42002001 off
+;;異族？
+# body 4810004
+# pos 4810004 3
+# scale 4810004 0.8 0
+# alpha 4810004 0 0
+# mask 4810004 off
+;;アフロディーテ
+# body 44013001
+# pos 44013001 5
+# scale 44013001 0.8 0
+# alpha 44013001 0 0
+;;エロース
+# body 44004001
+# pos 44004001 3
+# scale 44004001 0.8 0
+# alpha 44004001 0 0
+;;ミストルティン
+# body 46006001
+# pos 46006001 1
+# scale 46006001 0.8 0
+# alpha 46006001 0 0
+;;ブラフマーストラ
+# body 45004001
+# pos 45004001 2
+# scale 45004001 0.8 0
+# alpha 45004001 0 0
+;;ルーン
+# body 43005001
+# pos 43005001 3
+# scale 43005001 0.8 0
+# alpha 43005001 0 0
+;;デュランダル
+# body 41003001
+# pos 41003001 2
+# scale 41003001 0.8 0
+# alpha 41003001 0 0
+;;ロンゴミアント
+# body 43010001
+# pos 43010001 4
+# scale 43010001 0.8 0
+# alpha 43010001 0 0
+# layer 41025001 5
+# layer 45024001 4
+# layer 43002001 3
+# layer 41002001 2
+# layer 42019001 1
+# layer 44013001 5
+# layer 44004001 4
+# layer 46006001 3
+# layer 43005001 1
+# layer 41003001 2
+# layer 43010001 3
+# imageset 0 "bg_black"
+# imagelayer 0 5
+# imagealpha 0 0 0
+# imagescale 0 2 0
+# imageset 2 "e170701_map"
+# imagealpha 2 0 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.5
+
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# imagealpha 2 1 0
+# imagepos 2 0 15
+# imagescale 2 1.2 0
+# imagelayer 2 3
+# waitandnext 0.1
+
+# subfillrect 1 "black" 0 1 0
+# waitandnext 0.1
+
+# imagealpha 0 0 1
+# imagescale 2 1.5 10
+# imagemoveto 2 -25 -110 10
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+多くの食料に恵まれた国
+ふくよか連合
+
+# textflame 0 0
+@
+連合の名の通り、国内には
+いくつかのグループが存在し、
+国の体裁を保っている
+
+# textflame 0 0
+@
+和食を好む“和食家”
+好きなものを食べる“満腹結社”
+食事と運動を好む“健康騎士団”
+
+# textflame 0 0
+@
+それらが纏まっていたのは、
+連合盟主としてマサムネが
+いたからである
+
+# textflame 0 0
+@
+しかし彼女は突然姿を消し、
+やむなく妹ムラマサが盟主を
+引き継いでいる
+
+;;//場面転換
+;;//背景：ジャングル
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# bgmfile "bgm238" "BgmSeaEventBattle" 0
+# imagealpha 2 0 0
+# alpha 41025001 1 0
+# waitandnext 0.6
+
+# fadein "black" 1
+# textflame 0 0
+@
+連合盟主としての力が足りないと
+実感するムラマサは、
+七人の勇者を捜すことを決意する
+
+# alpha 45024001 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@雑賀
+ケホッ…ケホッ…
+あ～、そろそろ出発っすか
+
+# alpha 43002001 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 3002 "toraidento_0002"
+@トライデント
+おまたせ～！
+ピクニックみたいで
+楽しみだな～☆
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1025 "muramasa_0036"
+@ムラマサ
+はむはむ…んっ…
+雑賀、トライデント
+よろしくお願いします
+
+;;//SE：ビデオテープの早送りの音「キュルルル～」みたいな 
+;;//早送り演出
+# se "SE_0748"
+# se "bgm238_speedup"
+# serif 0
+# textwindow "close"
+# envbody 1000 19 0
+# effectstart 1000
+# alpha 41025001 0 0.3
+# alpha 43002001 0 0.3
+# alpha 45024001 0 0.3
+# waitandnext 0.3
+
+# alpha 41002001 1 0.2
+# waitandnext 0.2
+
+# alpha 46011001 1 0.3
+# alpha 42019001 1 0.3
+# waitandnext 0.3
+
+# se "SE_0749"
+# se "bgm238_default"
+# effectskip 1000
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+その旅の途中、
+レーヴァテインと戦う
+シユウ、ヴァナルガンドを見かける
+
+# alpha 41002001 0 0.5
+# alpha 46011001 0 0.5
+# alpha 42019001 0 0.5
+# alpha 42002001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 2002 "aimuru_0033"
+@アイムール
+遅刻者アイムール、
+防衛行動に移ります
+
+# alpha 42002001 0 0.5
+# textflame 0 0
+@
+アイムールの乱入で
+なんとか危機を乗り越えたものの、
+レーヴァテインは逃げてしまう
+
+# move 42019001 4 0
+# move 46011001 2 0
+# alpha 42019001 1 0.5
+# alpha 46011001 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 2029 "chihyu_0020"
+@シユウ
+ヴァドはいっつもやさしいんだぞ！
+こころもからだもでっかくて
+だきついたかんしょくもばつぐんだ！
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 6011 "vanargand_0004"
+@ヴァナルガンド
+あらあら～
+今、冬毛ですからね～
+
+;;//SE：ビデオテープの早送りの音「キュルルル～」みたいな
+;;//早送り演出
+# se "SE_0748"
+# se "bgm238_speedup"
+# serif 0
+# textwindow "close"
+# envbody 1001 19 0
+# effectstart 1001
+# waitandnext 0.3
+
+# alpha 42019001 1 0.2
+# alpha 46011001 1 0.2
+# waitandnext 0.2
+
+# se "SE_0749"
+# se "bgm238_default"
+# effectskip 1001
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+暴走するレーヴァテインを追うため
+二人も旅についてきてくれることに
+
+# textflame 0 0
+@
+目的地は連合の派閥の一つ
+“満腹結社”だった
+
+;;//早送り演出
+;;//背景：ジャングル
+# se "SE_0748"
+# se "bgm238_speedup"
+# serif 0
+# textwindow "close"
+# envbody 1002 19 0
+# effectstart 1002
+# imagealpha 0 1 0.3
+# waitandnext 0.3
+
+# mask 4810004 off
+# alpha 42019001 0 0
+# alpha 46011001 0 0
+# alpha 4810004 1 0
+# waitandnext 0.1
+
+# se "SE_0749"
+# se "bgm238_default"
+# imagealpha 0 0 0.3
+# waitandnext 0.3
+
+# bgm "bgm005" 0
+# effectskip 1002
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+結社の近くまで来たところで、
+正体不明の生物に囲まれ
+窮地に追い込まれたムラマサ達
+
+# se "SE_0617"
+# textflame 1 1
+# textboxarrow 0 2
+@異族？
+ぷぎぃぃぃっ…！
+（腹減ったぞー！飯をよこせぇ！）
+
+# move 41025001 2 0
+# alpha 4810004 0 0.5
+# alpha 42019001 1 0.5
+# alpha 41025001 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 2029 "chihyu_0023"
+@シユウ
+なんだ、こいつらー！
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1025 "muramasa_battle_0005"
+@ムラマサ
+くっ…囲まれた
+
+;;//アフロディーテ
+# serif 1
+# textboxarrow 1 0
+# voice 4013 "aphrodite_unit_0009"
+@？？？
+その醜怪な姿、許しません！
+
+# se "SE_0618"
+# fadein "white" 0.5
+# shake 0 0.5
+# alpha 42019001 0 0
+# alpha 41025001 0 0
+# alpha 4810004 1 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "noemal"
+# textflame 1 1
+# textboxarrow 0 2
+@異族？
+ピギイィィィ…
+（死ぬ前に、特上寿司…
+食べたかったな…）
+
+;;//異族消滅
+# se "SE_0634"
+# serif 0
+# textwindow "close"
+# alpha 4810004 0 0.5
+# waitandnext 1.5
+
+# bgmfile "bgm230_story" "BgmSeaEvent" 0
+# mask 41025001 off
+# serif 0
+# textwindow "normal"
+# move 41025001 3 0
+# alpha 41025001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1025 "muramasa_0022"
+@ムラマサ
+そなた達は…？
+
+# alpha 41025001 0 0.5
+# alpha 44013001 1 0.5
+# alpha 44004001 1 0.5
+# alpha 46006001 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 4013 "aphrodite_0041"
+@アフロディーテ
+究極な美とは、
+触りたくなるような丸みに宿る
+―そう、それは私のことです！
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 4004 "erosu_0004"
+@エロース
+エロースよ
+ふふっ…エロースの恋の魔法、
+かかってくれた？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 6006 "misutoru_0023"
+@ミストルティン
+ひゃっ…ミストルティンです
+あ、あの…お怪我は…
+な、なんでもないです
+
+# textflame 0 0
+@
+アフロディーテの圧倒的自信に
+勇者としての力を感じた
+ムラマサだったが
+
+# alpha 44013001 0 0.5
+# alpha 44004001 0 0.5
+# alpha 46006001 0 0.5
+# textflame 0 0
+@
+三人はすぐさま
+いなくなってしまう
+
+;;//早送り演出
+;;//背景：ジャングル
+# se "SE_0748"
+# se "bgm230_story_speedup"
+# serif 0
+# textwindow "close"
+# envbody 1003 19 0
+# effectstart 1003
+# imagealpha 0 1 0.3
+# waitandnext 0.3
+
+# alpha 43002001 1 0
+# alpha 45004001 1 0
+# move 43002001 4 0
+# waitandnext 0.1
+
+# se "SE_0749"
+# se "bgm230_story_default"
+# imagealpha 0 0 0.3
+# waitandnext 0.3
+
+# bgmfile "bgm238_239" "BgmSeaEventBattle" 0
+# effectskip 1003
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5004 "burafumasutora_0002"
+@ブラフマーストラ
+アタシはブラフマーストラ
+“満腹結社”の幹部さ
+アタシのダンス見ていきなよっ
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 3002 "toraidento_0021"
+@トライデント
+わぁお！
+派手なお姉さんだね～☆
+
+# textflame 0 0
+@
+ようやく“満腹結社”に
+到着したメンバーは
+明るい女性からの歓待を受けるが
+
+# mask 43005001 off
+# alpha 43002001 0 0.5
+# alpha 45004001 0 0.5
+# alpha 43005001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3005 "roon_0029"
+@ルーン
+健康騎士団のルーン様が
+来てやったんだ！
+とっとと顔出せよっ
+
+# textflame 0 0
+@
+“満腹結社”と対立する
+“健康騎士団”のルーンが
+攻めてきた
+
+;;//早送り演出
+# se "SE_0748"
+# se "bgm238_239_speedup"
+# serif 0
+# textwindow "close"
+# envbody 1004 19 0
+# effectstart 1004
+# imagealpha 0 1 0.3
+# waitandnext 0.3
+
+# alpha 43005001 0 0
+# waitandnext 0.1
+
+# imagealpha 0 0 0.3
+# waitandnext 0.3
+
+# se "SE_0749"
+# se "bgm238_239_default"
+# effectskip 1004
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+なんとか仲裁し、“健康騎士団”の
+拠点に案内してもらうが、
+そこでは…
+
+# alpha 41003001 1 0.5
+# alpha 43010001 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1003 "durandaru_0005"
+@デュランダル
+『食事は優雅に静かに』が
+騎士のたしなみですわ
+負けるわけにはいきません
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 3010 "rhongomiant_unit_0010"
+@ロンゴミアント
+挑まれたからには受けるしか
+ありませんね…
+さあ、横綱相撲を見せてあげます
+
+# textflame 0 0
+@
+夕飯の献立をめぐって
+騎士達が決闘を行っていた
+
+# mask 41025001 on
+# move 41025001 2 0
+# alpha 41003001 0 0.5
+# alpha 43010001 0 0.5
+# alpha 41025001 1 0.5
+# alpha 42019001 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1025 "muramasa_0027"
+@ムラマサ
+な、なるほど…
+それは難しい…
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 2029 "chihyu_0036"
+@シユウ
+ちゃーしゅーおおもりだ！
+
+;;//バトル
+;;//敵は、デュランダル・ロンゴミアント・ルーンで
+# alpha 41025001 0 0.5
+# alpha 42019001 0 0.5
+# alpha 43005001 1 0.4
+# textflame 1 1
+# textboxarrow 0 2
+@ルーン
+それなら
+最後まで起きてた奴が
+献立を決めるってことで！
+

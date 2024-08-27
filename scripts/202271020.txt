@@ -1,0 +1,756 @@
+;;-----------------------------------------
+;;「サイコパス」コラボイベント シナリオ
+;;【EP2】
+;;スクリプト最後の背景：荒野　004_wildland
+;;背景：荒野　004_wildland
+;;-----------------------------------------
+# script "lisp"
+# background "004_wildland"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;常守朱
+# body 501011
+# pos 501011 3
+# scale 501011 0.8 0
+# layer 501011 2
+# alpha 501011 0 0
+# mask 501011 off
+;;六合塚弥生
+# body 501111
+# pos 501111 3
+# scale 501111 0.8 0
+# layer 501111 2
+# alpha 501111 0 0
+# mask 501111 off
+;;霜月美佳
+# body 501211
+# pos 501211 3
+# scale 501211 0.8 0
+# layer 501211 4
+# alpha 501211 0 0
+# mask 501211 off
+;;マサムネ ブラックキラーズ
+# body 100161
+# pos 100161 3
+# scale 100161 0.8 0
+# layer 100161 2
+# alpha 100161 0 0
+# mask 100161 off
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;【EP2】
+;;背景：荒野　004_wildland
+;;モノローグ
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+@
+美佳に助けられた剣士は、
+マサムネと名乗った
+
+# voice 5012 "mika_0004"
+# move 100161 2 0
+# face 100161 "usual"
+# alpha 100161 1 0.5
+# mask 100161 on
+# move 501211 4 0
+# face 501211 "happy"
+# alpha 501211 1 0.5
+# mask 501211 on
+# textflame 1 1
+# textboxarrow 0 3
+@霜月美佳
+それにしても、
+お互い助かって良かったね
+
+;;モノローグ
+# textflame 0 0
+@
+しかし――
+
+# voice 10016 "masamune_k_0007"
+# face 100161 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+拙者は、
+そなたに助けてくれと言った
+覚えはないが
+
+# face 501211 "surprise"
+# textboxarrow 0 3
+@霜月美佳
+……は？
+
+# face 501211 "angry"
+# textboxarrow 0 3
+@霜月美佳
+なに言ってんのよ？
+あのまま戦ってたら、
+あなた どうなってたか…！
+
+# face 100161 "usual"
+# textboxarrow 0 1
+@マサムネ
+それで命を失ったとしたら、
+拙者は所詮、
+それまでの器だったということ
+
+# voice 5012 "mika_0009"
+# textboxarrow 0 3
+@霜月美佳
+ちょっと、あんたねぇ～！
+
+;;モノローグ
+# textflame 0 0
+@
+マサムネに反感を抱く美佳
+
+;;モノローグ
+@
+――だが、
+
+# voice 5012 "mika_0022"
+# face 501211 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@霜月美佳
+……！
+
+# se "SE_0982"
+# voice 10016 "masamune_k_battle_0007"
+# face 100161 "irregular"
+# textboxarrow 0 1
+@マサムネ
+……ッ！！
+
+;;モノローグ
+# textflame 0 0
+@
+美佳は気づいた
+強く、強く握り締められた
+マサムネの拳に
+
+;;:;モヤモヤ吹き出し
+# move 501211 4 0
+# face 501211 "normal"
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+@霜月美佳
+……そっか
+
+;;演出：フラッシュ回想
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# move 100161 2 0
+# face 100161 "usual"
+# alpha 100161 1 0
+# mask 100161 on
+# move 501211 4 0
+# face 501211 "normal"
+# alpha 501211 1 0
+# mask 501211 on
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# bgm "bgm003" 0
+# textboxarrow 0 1
+# textwindow "normal"
+@マサムネ
+……拙者は…
+マサムネ
+
+# textboxarrow 0 1
+@マサムネ
+憤怒の業を背負う、
+ただの一振りの刀だ
+
+;;回想終わり
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# alpha 100161 0 0
+# alpha 501211 0 0
+# move 100161 2 0
+# face 100161 "irregular"
+# alpha 100161 1 0
+# mask 100161 on
+# move 501211 4 0
+# face 501211 "normal"
+# alpha 501211 1 0
+# mask 501211 on
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;:;モヤモヤ吹き出し
+# move 501211 4 0
+# textboxarrow 0 0
+# textwindow "moya"
+@霜月美佳
+憤怒って言ったっけ……
+
+;;:;モヤモヤ吹き出し
+# textboxarrow 0 0
+@霜月美佳
+怒ってるんだ……
+無力な自分に
+
+;;モノローグ
+# textflame 0 0
+@
+怒りで握り締められた
+マサムネの拳を見て、
+美佳は思う
+
+;;:;モヤモヤ吹き出し
+# face 501211 "sad"
+# textflame 1 1
+# textboxarrow 0 0
+@霜月美佳
+今になって分かった……
+
+;;:;モヤモヤ吹き出し
+# textboxarrow 0 0
+@霜月美佳
+元の世界に帰りたい…
+なぜ、先輩達に
+あんなことを言ったのか……
+
+;;:;モヤモヤ吹き出し
+# textboxarrow 0 0
+@霜月美佳
+私も……怒ってたんだ
+
+;;:;モヤモヤ吹き出し
+# textboxarrow 0 0
+@霜月美佳
+ただ嘆くだけで、
+前に進めない無力な自分に……
+
+;;演出：フラッシュ回想
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "masamune_room"
+# alpha 100161 0 0
+# alpha 501211 0 0
+# move 501111 1 0
+# face 501111 "sad"
+# alpha 501111 1 0
+# mask 501111 on
+# move 501211 3 0
+# face 501211 "sad"
+# alpha 501211 1 0
+# mask 501211 on
+# move 501011 5 0
+# face 501011 "normal"
+# alpha 501011 1 0
+# mask 501011 on
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 3
+# textwindow "normal"
+@常守朱
+『この世界』でどうありたいか、
+どうあるべきか……、
+考えてみてください
+
+# face 501111 "normal"
+# textboxarrow 0 1
+@六合塚弥生
+事態は急を要します
+もし気持ちに整理がついたら……
+私達に追いついてきてください
+
+;;回想終わり
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "004_wildland"
+# alpha 501111 0 0
+# alpha 501211 0 0
+# alpha 501011 0 0
+# move 100161 2 0
+# face 100161 "irregular"
+# alpha 100161 1 0
+# mask 100161 on
+# move 501211 4 0
+# face 501211 "sad"
+# alpha 501211 1 0
+# mask 501211 on
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;:;モヤモヤ吹き出し
+# move 501211 4 0
+# textboxarrow 0 0
+# textwindow "moya"
+@霜月美佳
+あの２人は現実を受け入れ、
+戦っているっていうのに……
+
+;;:;モヤモヤ吹き出し
+# textboxarrow 0 0
+@霜月美佳
+拗ねて、悲しんでるだけの
+無力な自分に……
+怒ってたんだ………
+
+;;モノローグ
+# face 501211 "normal"
+# textflame 0 0
+@
+拳を握り締めるマサムネを見る美佳
+
+# voice 10016 "masamune_k_0015"
+# face 100161 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+# textwindow "normal"
+@マサムネ
+……不甲斐ない
+
+;;:;モヤモヤ吹き出し
+# move 501211 4 0
+# face 501211 "sad"
+# textboxarrow 0 0
+# textwindow "moya"
+@霜月美佳
+この人……
+もしかしたら……
+そんな私に似てるのかも
+
+# face 501211 "normal"
+# textboxarrow 0 3
+# textwindow "normal"
+@霜月美佳
+……ねぇ
+
+# face 100161 "usual"
+# textboxarrow 0 1
+@マサムネ
+…なんだ？
+
+# face 501211 "happy"
+# textboxarrow 0 3
+@霜月美佳
+これ……貸してあげようか
+
+# se "SE_5208"
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+@
+自身のドミネーターを
+マサムネに見せる美佳
+
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+……
+
+# face 501211 "normal"
+# textboxarrow 0 3
+@霜月美佳
+新種の標的に、
+あなたの武器は効かない
+
+# textboxarrow 0 3
+@霜月美佳
+でもこの銃なら、倒せるわよ
+
+# face 100161 "normal"
+# textboxarrow 0 1
+@マサムネ
+……結構
+
+# voice 5012 "mika_0022"
+# face 501211 "surprise"
+# textboxarrow 0 3
+@霜月美佳
+なっ、なんでよ…！？
+
+# face 100161 "angry"
+# textboxarrow 0 1
+@マサムネ
+拙者は剣一筋に生きてきた
+
+# textboxarrow 0 1
+@マサムネ
+剣を捨てるということは、
+己を棄てること……！
+
+# textboxarrow 0 1
+@マサムネ
+剣を捨てたら、
+拙者は拙者でなくなって
+しまうのだ！
+
+# face 501211 "angry"
+# textboxarrow 0 3
+@霜月美佳
+でも……
+その武器じゃ勝てないって
+言ってんの！
+
+# se "SE_8000"
+# face 100161 "normal"
+# textboxarrow 0 1
+@マサムネ
+拙者は一振りの刀
+さらに己を磨き、
+新種ですら斬ってみせる
+
+# se "SE_0719"
+# textwindow "close"
+# move 100161 1 0.5
+# alpha 100161 0 0.3
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+そう言って、
+去っていこうとするマサムネ
+
+# move 501211 3 0.5
+# face 501211 "surprise"
+# mask 501211 off
+# textflame 1 1
+# textboxarrow 0 2
+@霜月美佳
+ちょっ……！
+
+# face 501211 "angry"
+# textboxarrow 0 2
+@霜月美佳
+なによ！
+貸してあげるって
+言ってんのに！
+
+# textboxarrow 0 2
+@霜月美佳
+どうなっても知らないからねっ！！
+
+# alpha 501211 0 0.5
+# move 100161 3 0
+# face 100161 "usual"
+# alpha 100161 1 0.5
+# mask 100161 off
+# textboxarrow 0 2
+@マサムネ
+……
+
+;;モノローグ
+# textflame 0 0
+@
+口ではそう言いつつも、
+先程の異族との戦闘もあり、
+マサムネが気になってしまう
+
+# alpha 100161 0 0.5
+# move 501211 3 0
+# face 501211 "angry"
+# alpha 501211 1 0.5
+# mask 501211 off
+# textflame 1 1
+# textboxarrow 0 2
+@霜月美佳
+……もう！
+
+;;モノローグ
+# textflame 0 0
+@
+なんだかんだ言いつつ、
+マサムネの後を追う
+美佳だった
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain_night"
+# alpha 501211 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# bgm "stop"
+# textwindow "normal"
+@
+その夜――
+
+# bgmfile "bgm092" "BgmPPcollabo002" 0
+# se "SE_4000"
+# sedelay "SE_4000" 1
+# voice 10016 "masamune_k_battle_0001"
+# move 100161 3 0
+# face 100161 "angry"
+# alpha 100161 1 0.5
+# mask 100161 off
+# textflame 1 1
+# textboxarrow 0 2
+@マサムネ
+ふっ！ふっ！
+
+;;モノローグ
+# textflame 0 0
+@
+鍛錬のため、
+マサムネは剣を振り続けている
+
+# alpha 100161 0 0.5
+# move 501211 3 0
+# face 501211 "normal"
+# alpha 501211 1 0.5
+# mask 501211 off
+# textflame 1 1
+# textboxarrow 0 2
+@霜月美佳
+……
+
+;;モノローグ
+# textflame 0 0
+@
+そんな彼女を見ている美佳
+
+;;:;モヤモヤ吹き出し
+# move 501211 3 0
+# face 501211 "normal"
+# alpha 501211 1 0.5
+# mask 501211 off
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+@霜月美佳
+いくら努力しても、
+その武器じゃ勝てないのに……
+馬鹿みたい
+
+;;:;モヤモヤ吹き出し
+# face 501211 "sad"
+# textboxarrow 0 0
+@霜月美佳
+でも……
+
+;;演出:;フラッシュ回想
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "masamune_room"
+# alpha 501211 0 0
+# move 501111 1 0
+# face 501111 "sad"
+# alpha 501111 1 0
+# mask 501111 on
+# move 501211 3 0
+# face 501211 "sad"
+# alpha 501211 1 0
+# mask 501211 on
+# move 501011 5 0
+# face 501011 "usual"
+# alpha 501011 1 0
+# mask 501011 on
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 3
+# textwindow "normal"
+@常守朱
+でも、
+立ち止まっていても、
+なにも解決はしませんよ
+
+;;回想終わり
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "plain_night"
+# alpha 501111 0 0
+# alpha 501211 0 0
+# alpha 501011 0 0
+# move 501211 3 0
+# face 501211 "sad"
+# alpha 501211 1 0
+# mask 501211 off
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;:;モヤモヤ吹き出し
+# voice 5012 "mika_0027"
+# move 501211 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+@霜月美佳
+まるで……
+私と同じ
+
+;;:;モヤモヤ吹き出し
+# textboxarrow 0 0
+@霜月美佳
+目の前にある現実を
+頑なに受け入れようとしないで……
+
+# se "SE_4000"
+# sedelay "SE_4000" 1
+# voice 10016 "masamune_k_battle_0001"
+# alpha 501211 0 0.5
+# move 100161 3 0
+# face 100161 "angry"
+# alpha 100161 1 0.5
+# mask 100161 off
+# textboxarrow 0 2
+# textwindow "normal"
+@マサムネ
+ふっ！ふっ！
+
+;;モノローグ
+# textflame 0 0
+@
+そんなマサムネに、
+美佳が語り掛ける
+
+# move 100161 2 0.5
+# mask 100161 on
+# move 501211 4 0
+# face 501211 "normal"
+# alpha 501211 1 0.5
+# mask 501211 on
+# textflame 1 1
+# textboxarrow 0 3
+@霜月美佳
+あなたの気持ち…
+分かる気がする……
+
+# voice 10016 "masamune_k_0022"
+# face 100161 "surprise"
+# textboxarrow 0 1
+@マサムネ
+……？
+
+# textboxarrow 0 3
+@霜月美佳
+あなたは、
+剣を心の拠り所にしている
+
+# textboxarrow 0 3
+@霜月美佳
+でも、あの異族には
+普通の武器は通じない
+
+# textboxarrow 0 3
+@霜月美佳
+私はこっちの世界に来て、
+『シビュラシステム』という
+心の拠り所を失ったわ
+
+# textboxarrow 0 3
+@霜月美佳
+拠り所を失うのは……
+とても怖いわよね
+
+# face 100161 "usual"
+# textboxarrow 0 1
+@マサムネ
+……
+
+# textboxarrow 0 3
+@霜月美佳
+でも私は、尊敬する
+先輩達に教えられた
+
+# textboxarrow 0 3
+@霜月美佳
+それでも人は…
+前に進まなくちゃいけない
+
+# textboxarrow 0 3
+@霜月美佳
+立ち止まってちゃ…
+成長はないって
+
+# voice 10016 "masamune_k_0026"
+# face 100161 "normal"
+# textboxarrow 0 1
+@マサムネ
+なにを突然、偉そうに……
+
+# textboxarrow 0 1
+@マサムネ
+そんなことを言って、
+そなたも異族に
+敵わなかったではないか
+
+# face 501211 "sad"
+# textboxarrow 0 3
+@霜月美佳
+…う、ごもっとも
+
+# face 501211 "normal"
+# textboxarrow 0 3
+@霜月美佳
+だから…変わりたいの
+
+# textboxarrow 0 3
+@霜月美佳
+あなたは私に似ている
+だからこそ……
+
+# textboxarrow 0 3
+@霜月美佳
+一緒に変わっていきたい
+
+# textboxarrow 0 1
+@マサムネ
+……
+
+# fadeout "black" 1
+# waitandnext 1

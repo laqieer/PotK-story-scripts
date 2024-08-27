@@ -1,0 +1,138 @@
+;;-----------------------------------------
+;;ダンまち1_4_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm361" "BgmDanmachi" 0
+;;-----------------------------------------
+;;アルマス
+# body 138
+# pos 138 3
+# scale 138 0.8 0
+# layer 138 3
+# alpha 138 0 0
+;;リュー
+# body 3104511
+# pos 3104511 3
+# scale 3104511 0.8 0
+# layer 3104511 3
+# alpha 3104511 0 0
+;;アイズ
+# body 3104411
+# pos 3104411 3
+# scale 3104411 0.8 0
+# layer 3104411 3
+# alpha 3104411 0 0
+;;ベル
+# body 216
+# pos 216 3
+# scale 216 0.8 0
+# layer 216 5
+# mask 216 off
+# alpha 216 0 0
+;;春姫
+# body 3503611
+# pos 3503611 3
+# scale 3503611 0.8 0
+# layer 3503611 3
+# mask 3503611 off
+# alpha 3503611 0 0
+# brightness 3503611 0.1 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+# textwindow "close"
+# waitandnext 0.5
+
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# background "plain"
+# move 138 1 0
+# alpha 138 1 0
+# move 3104411 3 0
+# alpha 3104411 1 0
+# face 3104411 "angry"
+# move 3104511 5 0
+# alpha 3104511 1 0
+# face 3104511 "angry"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+リリルカの情報通り
+たしかに警備は手薄だった
+しかし、戦闘は避けられなかった
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310451 "ryu_0037"
+@リュ―
+この先のほうに兵士が
+集まっていきます！
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 310441 "aiz_0009"
+@アイズ
+逃げるつもり？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "worry"
+# voice 1038 "almace_0027"
+@アルマス
+これだけ騒ぎになったら
+さすがにバレるわよね
+
+# textflame 0 0
+@
+騒ぎを聞きつけた兵士が
+捕らえていた者を
+連れ出している
+
+# se "SE_6500"
+# emotionbody 1000 1 216 10 310
+# effectpattern 1000 1 0
+# effectstart 1000
+# alpha 138 0 0.5
+# alpha 3104411 0 0.5
+# alpha 3104511 0 0.5
+# alpha 216 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 216 "sad"
+@ベル
+…あれは！
+
+# textwindow "close"
+# alpha 216 0 0.5
+# waitandnext 0.5
+
+;;演出：春姫の立ち絵を一瞬表示
+# alpha 3503611 1 1
+# waitandnext 1.5
+
+# alpha 3503611 0 0.5
+# alpha 216 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ベル
+春姫さん！
+
+# textflame 0 0
+@
+その姿を一目見たベルが叫ぶ
+
+# fadeout "black" 1
+# waitandnext 1

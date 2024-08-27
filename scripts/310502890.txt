@@ -1,0 +1,1439 @@
+;;-----------------------------------------
+# script "lisp"
+# bgm "stop"
+# background "town"
+;;セブンスキラーズ覚醒　OPシナリオ
+;;-----------------------------------------
+;;マサムネ（神7）
+# body 100111
+# pos 100111 2
+# scale 100111 0.8 0
+# layer 100111 2
+# alpha 100111 0 0
+# mask 100111 off
+;;フライクーゲル（神7）
+# body 500211
+# pos 500211 3
+# scale 500211 0.8 0
+# layer 500211 2
+# alpha 500211 0 0
+# mask 500211 on
+;;パラシュ（神7）
+# body 200411
+# pos 200411 2
+# scale 200411 0.8 0
+# layer 200411 2
+# alpha 200411 0 0
+# mask 200411 off
+;;ティルフィング（神7）
+# body 24
+# pos 24 4
+# scale 24 0.8 0
+# layer 24 2
+# alpha 24 0 0
+# mask 24 off
+;;レーヴァテイン（神7）
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# layer 100221 2
+# alpha 100221 0 0
+# mask 100221 on
+;;ロンギヌス（神7）
+# body 300111
+# pos 300111 3
+# scale 300111 0.8 0
+# layer 300111 2
+# alpha 300111 0 0
+# mask 300111 on
+;;アルテミス（神7）
+# body 400131
+# pos 400131 3
+# scale 400131 0.8 0
+# layer 400131 2
+# alpha 400131 0 0
+# mask 400131 off
+;;アスカロン（セブンスキラーズ）
+# body 102311
+# pos 102311 4
+# scale 102311 0.8 0
+# layer 102311 2
+# alpha 102311 0 0
+# mask 102311 on
+;;フォルカス（セブンスキラーズ）
+# body 301811
+# pos 301811 3
+# scale 301811 0.8 0
+# layer 301811 3
+# alpha 301811 0 0
+# mask 301811 off
+;;ムラマサ（セブンスキラーズ）
+# body 102511
+# pos 102511 2
+# scale 102511 0.8 0
+# layer 102511 2
+# alpha 102511 0 0
+# mask 102511 on
+;;シユウ（セブンスキラーズ）
+# body 201911
+# pos 201911 2
+# scale 201911 0.8 0
+# layer 201911 2
+# alpha 201911 0 0
+# mask 201911 on
+;;アフロディーテ（セブンスキラーズ）
+# body 401311
+# pos 401311 4
+# scale 401311 0.8 0
+# layer 401311 4
+# alpha 401311 0 0
+# mask 401311 on
+;;グリモワール（セブンスキラーズ）
+# body 501711
+# pos 501711 2
+# scale 501711 0.8 0
+# layer 501711 2
+# alpha 501711 0 0
+# mask 501711 on
+;;ヴァナルガンド（セブンスキラーズ）
+# body 601111
+# pos 601111 4
+# scale 601111 0.8 0
+# layer 601111 2
+# alpha 601111 0 0
+# mask 601111 on
+;;異族
+# body 810004
+# pos 810004 4
+# scale 810004 1.2 0
+# layer 810004 2
+# alpha 810004 0 0
+# mask 810004 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;【OP】
+;;背景：町
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1.5
+
+# alpha 810004 1 1
+# move 810004 3 1.5
+# textwindow "nomal"
+# textflame 0 0
+;;モノローグ
+@
+荒野より街に向けて、
+一体の巨大な異族が移動していた
+
+# alpha 810004 0 1
+# move 810004 2 1.5
+;;モノローグ
+@
+だれもが恐怖するその巨体の前に
+7人のキラープリンセスが
+立ちはだかる
+
+# move 810004 4 0
+# bgmfile "bgm212" "BgmSeventhKillers001" 0
+# voice 5017 "grimoire_0004"
+# alpha 501711 1 0.5
+# alpha 401311 1 0.5
+# face 401311 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@グリモワール
+いい的になりそうなのがいるじゃない
+今日はどの魔法を試そうかしら…
+ね、クロピヨ？
+
+# textboxarrow 0 3
+@アフロディーテ
+まったくもって美しさの欠片も
+感じられませんわね…
+
+# voice 3018 "forcas_0011"
+# alpha 501711 0 0.5
+# alpha 401311 0 0.5
+# alpha 301811 1 0.5
+# face 301811 "normal"
+# textboxarrow 0 2
+@フォルカス
+どんな相手でも油断は禁物です
+あの大きさなら力も強いでしょう
+
+# alpha 301811 0 0.5
+# alpha 601111 1 0.5
+# alpha 201911 1 0.5
+# face 201911 "normal"
+# textboxarrow 0 1
+@シユウ
+おおー、でっかいなー！
+あたまをねらう？
+それともあしにする？
+
+# voice 6011 "vanargand_0004"
+# face 601111 "normal"
+# textboxarrow 0 3
+@ヴァナルガンド
+シユウさん、
+がんばってください〜
+ケガしたらすぐに教えてくださいね！
+
+# alpha 201911 0 0.5
+# alpha 601111 0 0.5
+# alpha 102511 1 0.5
+# alpha 102311 1 0.5
+# textboxarrow 0 1
+@ムラマサ
+力任せの攻撃など、
+拙者がすべて見切ります
+アスカロン殿、号令を！
+
+# voice 1023 "ascalon_0003"
+# face 102311 "happy"
+# textboxarrow 0 3
+@アスカロン
+はい！
+それじゃ、みんなで力を合わせて
+あの異族を倒しましょう！
+
+;;//演出：異族倒れる
+# alpha 102511 0 0.5
+# alpha 102311 0 0.5
+# alpha 810004 1 1
+# move 810004 3 1.5
+# textwindow "close"
+# waitandnext 1.5
+
+# effectbody 1000 1 -200 0 0
+# effectstart 1000
+# waitandnext 0.3
+
+# effectbody 2000 29 200 0 0
+# effectstart 2000
+# waitandnext 0.3
+
+# effectbody 3000 3 200 0 0
+# effectstart 3000
+# waitandnext 0.3
+
+# effectbody 4000 31 -200 0 0
+# effectstart 4000
+# waitandnext 0.3
+
+# se "SE_5215"
+# effectbody 5000 4 200 0 0
+# effectbody 6000 28 -200 0 0
+# effectstart 5000
+# effectstart 6000
+# alpha 810004 0 1.5
+# shake 1 1.5
+# waitandnext 2
+
+# voice 2019 "chihyu_0005"
+# alpha 201911 1 0.5
+# face 201911 "smile"
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 1
+@シユウ
+やったー！
+でっかいの、やっつけたー！
+
+# mask 301811 on
+# move 301811 4 0
+# textflame 0 0
+;;モノローグ
+@
+みんな、お疲れ様！
+マスターが駆け寄ってくる
+
+# voice 3018 "forcas_0004"
+# alpha 301811 1 0.5
+# face 301811 "smile"
+# textflame 1 1
+# textboxarrow 0 3
+@フォルカス
+マスターの指揮が
+あってこそです
+
+# move 102311 3 0
+# textflame 0 0
+;;モノローグ
+@
+いや、そんなことない
+みんなの実力だよ
+と微笑むマスター
+
+# alpha 201911 0 0.5
+# alpha 301811 0 0.5
+# alpha 102311 1 0.5
+# mask 102311 off
+# face 102311 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@アスカロン
+あ…
+
+;;できればもやもやフレームで
+# move 301811 2 0
+# move 102311 3 0
+# textwindow "moya"
+# mask 102311 off
+# textboxarrow 0 0
+@アスカロン
+なんか懐かしいと思ったら、
+あの時の雰囲気に似てるんだ
+
+# voice 3018 "forcas_0002"
+# alpha 301811 1 0.5
+# mask 102311 on
+# move 102311 4 0.5
+# face 301811 "normal"
+# textwindow "nomal"
+# textboxarrow 0 1
+@フォルカス
+アスカロン？
+どうしたの、ぼぅっとして
+
+# textboxarrow 0 3
+@アスカロン
+うん…
+なんだか昔のことを思い出しちゃって
+私達が出会って間もない頃のこと…
+
+# textboxarrow 0 1
+@フォルカス
+ああ、あの巨大異族のこと？
+懐かしいね
+
+# face 102311 "happy"
+# textboxarrow 0 3
+@アスカロン
+あの頃に比べたら
+私達も強くなったと思わない？
+
+# voice 3018 "forcas_0008"
+# move 401311 2 0
+# face 301811 "smile"
+# textboxarrow 0 1
+@フォルカス
+うん、そうだね
+あの頃は連携もめちゃくちゃだったし
+
+# voice 4013 "aphrodite_0004"
+# alpha 301811 0 0.25
+# alpha 401311 1 0.5
+# face 401311 "shy"
+# textboxarrow 0 1
+@アフロディーテ
+ですが、今では協力しあって
+華麗に戦えるようになりましたわ
+
+# voice 1023 "ascalon_0028"
+# alpha 102311 1 0
+# face 102311 "worry"
+# textboxarrow 0 3
+@アスカロン
+でも、まだまだあの人達には
+及ばないんだろうなぁ…
+
+# voice 3018 "forcas_0013"
+# alpha 401311 0 0.25
+# alpha 301811 1 0.5
+# face 301811 "worry"
+# textboxarrow 0 1
+@フォルカス
+そうだね…
+
+;;暗転
+# bgm "bgm005" 0
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 102311 0 0
+# alpha 301811 0 0
+# alpha 401311 0 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textwindow "normal"
+# textflame 0 0
+;;モノローグ
+@
+そんなセブンスキラーズ達の
+活躍を見ていた
+２人のキル姫
+
+# alpha 100111 1 0.5
+# alpha 24 1 0.5
+# face 100111 "nutual"
+# mask 100111 on
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+拙者達は
+必要なかったようだな
+
+# voice 1014 "tyrufing_0003"
+# face 24 "normal"
+# alpha 24 1 0
+# textboxarrow 0 3
+@ティルフィング
+はい
+７人で倒してしまうとは
+思いませんでした
+
+# alpha 100111 1 0
+# face 100111 "happy"
+# textboxarrow 0 1
+@マサムネ
+実力的には
+拙者たちと同等か、
+それ以上かもしれんな
+
+# alpha 24 1 0
+# textboxarrow 0 3
+@ティルフィング
+……これなら安心して
+託せそうです
+
+# alpha 100111 1 0
+# face 100111 "nutual"
+# textboxarrow 0 1
+@マサムネ
+いや……
+確かに彼女らは強くなった
+だが、絶対的に足りないものがある
+
+# voice 1014 "tyrufing_0022"
+# alpha 24 1 0
+# face 24 "surprise"
+# textboxarrow 0 3
+@ティルフィング
+足りないもの……ですか？
+
+# voice 1001 "masamune_0003"
+# alpha 100111 1 0
+# face 100111 "angry"
+# textboxarrow 0 1
+@マサムネ
+ああ
+それを確かめるために
+他のみんなにも来てもらおう
+
+;;暗転
+# move 501711 4 0
+# move 301811 2 0
+# bgm "stop"
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+;;背景：草原
+# alpha 100111 0 0
+# alpha 24 0 0
+# background "plain"
+# alpha 301811 1 0
+# alpha 501711 1 0
+# move 102311 4 0
+# move 201911 2 0
+# face 501711 "usual"
+# face 301811 "normal"
+# fadein "black" 1
+# waitandnext 1
+
+# textwindow "normal"
+# textflame 0 0
+;;モノローグ
+@
+ある日の穏やかな午後
+任務の合間で休憩している
+フォルカス達
+
+# face 102311 "worry"
+# face 201911 "surprise"
+# move 102311 4 0
+# move 201911 2 0
+;;モノローグ
+@
+そこにアスカロンと
+シユウが駆け込んでくる
+
+# textwindow "close"
+# alpha 301811 0 0.5
+# alpha 501711 0 0.5
+# se "SE_5575"
+# bgm "bgm031" 0
+# alpha 102311 1 0
+# alpha 201911 1 0
+# rightin 102311 1
+# rightin 201911 1
+# waitandnext 1
+
+# voice 1023 "ascalon_0023"
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@アスカロン
+みなさん、大変です！
+
+# textboxarrow 0 1
+@シユウ
+ますた～がつれていかれたぞ！
+
+# voice 3018 "forcas_0022"
+# alpha 201911 0 0.5
+# alpha 301811 1 0.5
+# face 301811 "surprise"
+# textboxarrow 0 1
+@フォルカス
+シユウ、アスカロン
+落ち着いて
+マスターがどうしたの？
+
+# voice 1023 "ascalon_0015"
+# face 102311 "sad"
+# textboxarrow 0 3
+@アスカロン
+……マスターが
+ファーストキラーズに
+連れて行かれて…
+
+# voice 3018 "forcas_0018"
+# textboxarrow 0 1
+@フォルカス
+どういうこと？
+なぜ、ファーストキラーズが
+マスターを？
+
+# voice 1023 "ascalon_0019"
+# move 401311 2 0
+# move 501711 4 0
+# face 102311 "worry"
+# textboxarrow 0 3
+@アスカロン
+それが
+何も説明してくれなくて…
+
+# voice 4013 "aphrodite_0006"
+# alpha 102311 0 0.5
+# alpha 301811 0 0.5
+# alpha 401311 1 0.5
+# alpha 501711 1 0.5
+# face 401311 "worry"
+# face 501711 "angry"
+# textboxarrow 0 1
+@アフロディーテ
+まあ、情熱的ですね
+それで、どうします？
+
+# voice 5017 "grimoire_0010"
+# move 601111 4 0
+# move 102511 2 0
+# face 501711 "normal"
+# textboxarrow 0 3
+@グリモワール
+決まってるわよ！
+取り返しにいくわ！
+
+# voice 6011 "vanargand_0010"
+# alpha 401311 0 0.5
+# alpha 501711 0 0.5
+# alpha 601111 1 0.5
+# alpha 102511 1 0.5
+# face 601111 "amazed"
+# textboxarrow 0 3
+@ヴァナルガンド
+そうですよ～
+納得できません
+
+# move 301811 3 0
+# mask 301811 off
+# face 102511 "normal"
+# textboxarrow 0 1
+@ムラマサ
+……
+
+# alpha 601111 0 0.5
+# alpha 102511 0 0.5
+# alpha 301811 1 0.5
+# face 301811 "normal"
+# textboxarrow 0 2
+@フォルカス
+みんな、行こう！
+
+;;暗転
+# se "SE_5575"
+# move 301811 5 0.5
+# alpha 301811 0 0.5
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# move 301811 1 0
+# alpha 301811 0 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 3018 "forcas_0009"
+# se "SE_5575"
+# textwindow "normal"
+# textflame 1 1
+# alpha 301811 1 0.5
+# move 301811 3 0.5
+# face 301811 "surprise"
+# textboxarrow 0 2
+@フォルカス
+待ってください！
+マスターをどうするつもりですか？
+
+# alpha 301811 0 0.5
+# alpha 24 1 0.5
+# alpha 200411 1 0.5
+# face 24 "sad"
+# textboxarrow 0 3
+@ティルフィング
+……マスターに
+ある嫌疑がかけられています
+
+# move 501711 2 0
+# move 100221 4 0
+# face 200411 "normal"
+# textboxarrow 0 1
+@パラシュ
+一ヶ月後にある査問委員会までに
+教会までマスターを
+連れて来いって言われたんだよ
+
+# voice 5017 "grimoire_0012"
+# alpha 24 0 0.5
+# alpha 200411 0 0.5
+# alpha 501711 1 0.5
+# alpha 100221 1 0.5
+# face 501711 "normal"
+# textboxarrow 0 1
+@グリモワール
+嫌疑ってなによ！
+内容をいいなさい！
+
+# voice 1002 "revatein_0013"
+# face 501711 "angry"
+# face 100221 "normal"
+# textboxarrow 0 3
+@レーヴァテイン
+面倒だし、言う必要はないわ
+
+# alpha 501711 0 0.5
+# alpha 100221 0 0.5
+# move 200411 2 0
+# move 100111 4 0
+# move 500211 2 0
+# textflame 0 0
+;;モノローグ
+@
+大丈夫だよ、すぐに戻ってくるから
+とマスターが
+セブンスキラーズ達に言う
+
+# textflame 1 1
+# alpha 200411 1 0.5
+# alpha 100111 1 0.5
+# face 200411 "normal"
+# face 100111 "nutual"
+# mask 100111 on
+# textboxarrow 0 1
+@パラシュ
+いいのかい？
+そんな約束をして
+
+# face 100111 "unhappy"
+# textboxarrow 0 3
+@マサムネ
+査問とは名ばかりで
+内容は決まっている
+ようなものだ
+
+# voice 5002 "furaikugeru_0015"
+# alpha 200411 0 0.5
+# alpha 500211 1 0.5
+# face 500211 "sad"
+# textboxarrow 0 1
+@フライクーゲル
+つまり、マスターは
+キミたちを永遠に
+待たせることになるだろうね
+
+# voice 3018 "forcas_0022"
+# alpha 100111 0 0.5
+# alpha 500211 0 0.5
+# alpha 301811 1 0.5
+# face 301811 "surprise"
+# textboxarrow 0 2
+@フォルカス
+どういうことですか！？
+
+# voice 3001 "ronginusu_0002"
+# move 300111 4 0
+# move 100111 2 0
+# alpha 301811 0 0.5
+# alpha 300111 1 0.5
+# alpha 100111 1 0.5
+# face 300111 "sad"
+# face 100111 "unhappy"
+# textboxarrow 0 3
+@ロンギヌス
+そ、その……
+マスターは……
+
+# move 501711 2 0
+# move 301811 4 0
+# textboxarrow 0 1
+@マサムネ
+恐らく、死罪だろうな
+
+# voice 5017 "grimoire_0023"
+# alpha 300111 0 0.5
+# alpha 100111 0 0.5
+# alpha 501711 1 0.5
+# alpha 301811 1 0.5
+# mask 301811 on
+# face 501711 "normal"
+# face 301811 "surprise"
+# textboxarrow 0 1
+@グリモワール
+ど、どうしてよ！
+
+# voice 3018 "forcas_0014"
+# move 24 4 0
+# move 601111 2 0
+# textboxarrow 0 3
+@フォルカス
+あなた達は、それでいいのですか？
+あなた達のマスターでも
+あるんですよ？
+
+# alpha 501711 0 0.5
+# alpha 301811 0 0.5
+# alpha 24 1 0.5
+# alpha 601111 1 0.5
+# face 24 "sad"
+# textboxarrow 0 3
+@ティルフィング
+教会の命令です
+私情を挟むわけにはいきません
+
+# voice 6011 "vanargand_0013"
+# move 100221 3 0
+# mask 100221 off
+# face 601111 "angry"
+# textboxarrow 0 1
+@ヴァナルガンド
+命令って…
+マスターとあなた達の絆は
+そんなものなんですか？
+
+# voice 1002 "revatein_0009"
+# alpha 24 0 0.5
+# alpha 601111 0 0.5
+# move 300111 2 0
+# move 400131 4 0
+# face 300111 "sad"
+# face 400131 "sad"
+# alpha 100221 1 0.5
+# face 100221 "sad"
+# mask 100221 off
+# textboxarrow 0 2
+@レーヴァテイン
+勘違いしないで
+…平気なわけじゃないわ
+
+# move 102511 2 0
+# move 100111 4 0
+# alpha 100221 0 0.5
+# alpha 300111 1 0.5
+# alpha 400131 1 0.5
+# mask 100221 on
+# mask 300111 on
+# mask 400131 on
+# textflame 0 0
+;;モノローグ
+@
+ファーストキラーズ達は
+悲痛な表情を浮かべながらも
+必死に耐えているような様子だった
+
+# alpha 300111 0 0.5
+# alpha 400131 0 0.5
+# textflame 1 1
+# alpha 102511 1 0.5
+# alpha 100111 1 0.5
+# face 102511 "angry"
+# face 100111 "nutual"
+# textboxarrow 0 1
+@ムラマサ
+姉上……
+教えてください
+マスターはどうして
+
+# face 100111 "angry"
+# textboxarrow 0 3
+@マサムネ
+気に入らぬというなら
+力づくで取り返したらどうだ？
+
+# move 24 3 0
+# mask 24 off
+# face 102511 "normal"
+# textboxarrow 0 1
+@ムラマサ
+い、いえ……
+それは……
+
+# alpha 102511 0 0.5
+# alpha 100111 0 0.5
+# alpha 24 1 0.5
+# face 24 "sad"
+# textboxarrow 0 2
+@ティルフィング
+それでは行きましょう
+
+# move 501711 2 0
+# move 301811 4 0
+# alpha 24 0 0.25
+# move 24 5 1
+# textflame 0 0
+;;モノローグ
+@
+ティルフィングが促すと
+ファーストキラーズは
+マスターを連れて歩き出す
+
+# voice 5017 "grimoire_0014"
+# alpha 501711 1 0.5
+# alpha 301811 1 0.5
+# face 501711 "normal"
+# face 301811 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@グリモワール
+ちょっと！
+いいの？
+このままじゃマスターが！
+
+# voice 3018 "forcas_0010"
+# move 201911 4 0
+# move 102311 2 0
+# move 102511 4 0
+# textboxarrow 0 3
+@フォルカス
+何かの誤解だとは思うけど、
+ここはマスターを取り返すべきよ
+
+# alpha 501711 0 0.5
+# alpha 301811 0 0.5
+# alpha 201911 1 0.5
+# alpha 102311 1 0.5
+# face 201911 "angry"
+# face 102311 "sad"
+# face 102511 "angry"
+# textboxarrow 0 3
+@シユウ
+シユウ、ますた～を
+たすけたいぞ
+
+# voice 1023 "ascalon_0010"
+# textboxarrow 0 1
+@アスカロン
+はい！
+納得できません
+
+# move 301811 3 0
+# alpha 201911 0 0.25
+# alpha 102511 1 0.5
+# textboxarrow 0 3
+@ムラマサ
+せ、拙者もです！
+
+# alpha 102311 0 0.25
+# alpha 102511 0 0.25
+# alpha 301811 1 0.5
+# face 301811 "usual"
+# mask 301811 off
+# textboxarrow 0 2
+@フォルカス
+……みんな、覚悟はいい？
+
+# voice 5017 "grimoire_0007"
+# alpha 301811 0 0.25
+# move 102311 4 0
+# alpha 501711 1 0.5
+# face 501711 "normal"
+# textboxarrow 0 1
+@グリモワール
+とっくにできてるわよ！
+
+# voice 1023 "ascalon_battle_0001"
+# alpha 301811 0 0.25
+# alpha 102311 1 0.5
+# face 102311 "normal"
+# textboxarrow 0 3
+@アスカロン
+はあああ！
+
+# textwindow "close"
+# alpha 102311 0 0.25
+# alpha 501711 0 0.25
+# mask 301811 on
+# move 102311 5 0.25
+# move 501711 5 0.5
+# waitandnext 0.5
+
+# move 102311 1 0
+# alpha 24 1 0.5
+# face 24 "sad"
+# textboxarrow 0 3
+# textwindow "normal"
+@ティルフィング
+……やはり来ましたか
+
+# alpha 102311 1 0.5
+# move 102311 2 0.4
+# move 24 4 0.4
+# face 24 "angry"
+# textflame 0 0
+;;モノローグ
+@
+セブンスキラーズと
+ファーストキラーズとの
+戦いが始まる
+
+;;暗転
+# move 501711 2 0
+# move 102511 1 0
+# move 100111 5 0
+# bgm "bgm023" 0
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 501711 0 0
+# alpha 102311 0 0
+# alpha 24 0 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 1025 "muramasa_battle_0002"
+# se "SE_10585"
+# textwindow "normal"
+# textflame 1 1
+# alpha 102511 1 0.5
+# face 102511 "angry"
+# textboxarrow 0 1
+@ムラマサ
+はあああああ！
+
+# voice 1001 "masamune_battle_0002"
+# se "SE_11742"
+# alpha 100111 1 0.5
+# face 100111 "angry"
+# textboxarrow 0 3
+@マサムネ
+はあああ！
+
+# move 102511 2 0.25
+# waitandnext 0.5
+
+# effectbody 1001 3 200 0 0
+# effectstart 1001
+# se "SE_3006"
+# rightout 100111 1
+# move 102311 3 0
+# alpha 100111 0 0.25
+# move 102511 3 0.25
+# face 102511 "angry"
+# mask 102511 off
+# textboxarrow 0 2
+@ムラマサ
+今です
+
+# voice 1023 "ascalon_battle_0003"
+# alpha 102511 0 0.25
+# se "SE_4000"
+# alpha 102311 1 0.5
+# mask 102311 off
+# textboxarrow 0 2
+@アスカロン
+はい！
+やあ！
+
+# textwindow "close"
+# alpha 102311 0 0.25
+# move 102311 5 0.5
+# waitandnext 0.5
+
+# mask 102311 on
+# mask 102511 on
+# move 102311 1 0
+# move 24 4 0
+# waitandnext 0.25
+
+# alpha 102311 1 0.25
+# move 102311 3 0.5
+# move 24 5 0.5
+# alpha 24 1 0.5
+# waitandnext 0.25
+
+# se "SE_3006"
+# textboxarrow 0 3
+# textwindow "normal"
+@ティルフィング
+させません
+
+# alpha 102311 0 0.25
+# alpha 24 0 0.25
+# move 102311 1 1
+# textflame 0 0
+;;モノローグ
+@
+セブンスキラーズと
+ファーストキラーズとの
+戦いは拮抗している
+
+# textflame 1 1
+# alpha 100221 1 0.5
+# face 100221 "sad"
+# move 24 4 0
+# move 100221 2 0
+# textboxarrow 0 1
+@レーヴァテイン
+やっぱりね
+
+# voice 1014 "tyrufing_0003"
+# move 100111 3 0
+# alpha 24 1 0.5
+# face 24 "mad2"
+# textboxarrow 0 3
+@ティルフィング
+はい
+連携して戦えば
+互角です
+
+# alpha 100221 0 0.25
+# alpha 24 0 0.25
+# alpha 100111 1 0.5
+# face 100111 "nutual"
+# mask 100111 off
+# textboxarrow 0 2
+@マサムネ
+だが……
+
+# voice 2004 "parashu_0029"
+# se "SE_4100"
+# alpha 100111 0 0.25
+# alpha 200411 1 0.5
+# alpha 201911 1 0.5
+# move 200411 1 0
+# move 201911 4 0
+# face 200411 "angry02"
+# textboxarrow 0 1
+@パラシュ
+はああ！
+
+# move 200411 3 0.25
+# waitandnext 0.25
+
+# voice 2019 "chihyu_0038"
+# effectbody 1002 1 200 0 0
+# effectstart 1002
+# se "SE_4816"
+# move 201911 5 0.25
+# face 201911 "surprise"
+# textboxarrow 0 3
+@シユウ
+うわああ！
+
+# voice 3018 "forcas_battle_0005"
+# alpha 200411 0 0.25
+# alpha 201911 0 0.25
+# move 301811 3 0
+# alpha 301811 1 0.5
+# face 301811 "worry"
+# mask 301811 off
+# textboxarrow 0 2
+@フォルカス
+くっ！
+連携が崩れた…
+
+# voice 4001 "arutemisu_0003"
+# alpha 301811 0 0.25
+# move 400131 4 0
+# move 200411 2 0
+# alpha 400131 1 0.5
+# alpha 200411 1 0.5
+# face 400131 "nutual"
+# textboxarrow 0 3
+@アルテミス
+個々の実力では
+まだまだですね
+
+# voice 2004 "parashu_0007"
+# face 200411 "normal"
+# textboxarrow 0 1
+@パラシュ
+詰めが甘いね
+この機会に自分の戦い方を
+見つめ直すといいよ
+
+# mask 301811 on
+# alpha 400131 0 0.5
+# alpha 200411 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+連携を崩し
+1対1での戦いになった瞬間
+拮抗はあっさりと崩れる
+
+# bgm "stop"
+;;モノローグ
+@
+決着はあっさりとついた
+セブンスキラーズ全員が
+倒れている
+
+# voice 1014 "tyrufing_0015"
+# textflame 1 1
+# move 24 3 0
+# alpha 24 1 0.5
+# face 24 "sad"
+# textboxarrow 0 2
+@ティルフィング
+……
+
+# move 24 5 2
+# alpha 24 0 0.6
+# se "SE_0719"
+# textflame 0 0
+;;モノローグ
+@
+ティルフィングが
+セブンスキラーズを
+悲しそうに見つめた後、歩き始める
+
+;;暗転
+# bgm "bgm004" 0
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 24 0 0
+# alpha 100221 0 0
+# alpha 100111 0 0
+# alpha 200411 0 0
+# alpha 400131 0 0
+# alpha 301811 0 0
+# alpha 201911 0 0
+# alpha 102311 0 0
+# alpha 102511 0 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 5017 "grimoire_0016"
+# face 501711 "sad"
+# alpha 501711 1 0.5
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@グリモワール
+うう……
+このままじゃマスターが
+
+# voice 2019 "chihyu_0013"
+# alpha 201911 1 0.5
+# move 201911 4 0
+# face 201911 "cry"
+# textboxarrow 0 3
+@シユウ
+ますた～がしぬなんて
+シユウ、いやだ！
+
+# voice 6011 "vanargand_0018"
+# alpha 501711 0 0.25
+# alpha 601111 1 0.5
+# move 601111 2 0
+# face 601111 "amazed"
+# textboxarrow 0 1
+@ヴァナルガンド
+でも、どうすれば……
+
+# face 201911 "angry"
+# textboxarrow 0 3
+@シユウ
+もういっかいだ！
+こんどはかつぞ！
+
+# voice 4013 "aphrodite_0027"
+# alpha 601111 0 0.25
+# alpha 201911 0 0.25
+# alpha 401311 1 0.5
+# move 401311 2 0
+# face 401311 "angry"
+# textboxarrow 0 1
+@アフロディーテ
+ここまで完璧に負けて
+よくそんな台詞が言えるわね
+
+# alpha 102511 1 0.5
+# move 102511 4 0
+# face 102511 "normal"
+# textboxarrow 0 3
+@ムラマサ
+もう一度、挑みましょう！
+今度こそは……
+
+# voice 3018 "forcas_0011"
+# alpha 102511 0 0.25
+# alpha 401311 0 0.25
+# alpha 301811 1 0.5
+# face 301811 "sad"
+# move 301811 3 0
+# mask 301811 off
+# textboxarrow 0 2
+@フォルカス
+無駄よ
+今のままなら
+何度挑んでも結果は同じ
+
+# voice 6011 "vanargand_0009"
+# alpha 301811 0 0.25
+# alpha 601111 1 0.5
+# alpha 201911 1 0.5
+# face 601111 "angry"
+# face 201911 "angry"
+# textboxarrow 0 1
+@ヴァナルガンド
+じゃあ、諦めるってことですか？
+
+# textboxarrow 0 3
+@シユウ
+ますた～をみすてるのか？
+
+# alpha 201911 0 0.25
+# alpha 601111 0 0.25
+# bgm "stop"
+# voice 3018 "forcas_0027"
+# alpha 301811 1 0.5
+# face 301811 "usual"
+# textboxarrow 0 2
+@フォルカス
+私は今のままなら、
+って言ったのよ
+
+# voice 5017 "grimoire_0009"
+# mask 301811 on
+# alpha 501711 1 0.5
+# move 301811 4 0.5
+# face 501711 "angry"
+# textboxarrow 0 1
+@グリモワール
+どういうことよ？
+
+# bgm "bgm035" 0
+# face 301811 "worry"
+# textboxarrow 0 3
+@フォルカス
+力を磨き、個々の強さを
+引き上げるしかない
+
+# voice 5017 "grimoire_0023"
+# face 501711 "normal"
+# textboxarrow 0 1
+@グリモワール
+ちょ、ちょっと何言ってるのよ
+そんな時間は…
+
+# alpha 501711 0 0.25
+# alpha 102311 1 0.5
+# move 102311 2 0
+# face 102311 "surprise"
+# textboxarrow 0 1
+@アスカロン
+マスターの査問委員会は
+1ヶ月後だと言ってました
+
+# voice 3018 "forcas_0003"
+# face 301811 "usual"
+# face 102311 "normal"
+# textboxarrow 0 3
+@フォルカス
+ええ
+その1ヶ月の間で強くなる
+
+# voice 5017 "grimoire_0012"
+# alpha 102311 0 0.25
+# alpha 501711 1 0.5
+# textboxarrow 0 1
+@グリモワール
+1ヶ月で強くなるなんて無茶よ！
+
+# alpha 301811 1 0
+# face 301811 "normal"
+# textboxarrow 0 3
+@フォルカス
+無茶でもやるしかない
+
+# voice 5017 "grimoire_0024"
+# face 501711 "shy"
+# textboxarrow 0 1
+@グリモワール
+うっ……
+
+# voice 3018 "forcas_0009"
+# face 501711 "angry"
+# face 301811 "worry"
+# textboxarrow 0 3
+@フォルカス
+確かにグリモワールの言う通り
+１ヶ月で技を磨くのは不可能
+
+# face 301811 "normal"
+# textboxarrow 0 3
+@フォルカス
+だから、キラーズそのものを
+強くするしかない
+
+# voice 4013 "aphrodite_0022"
+# alpha 501711 0 0.25
+# alpha 401311 1 0.5
+# face 401311 "surprise"
+# textboxarrow 0 1
+@アフロディーテ
+キラーズを強くする？
+そんなことが可能なのですか？
+
+# face 301811 "normal"
+# textboxarrow 0 3
+@フォルカス
+わからない
+だが、それぞれ自分の内の
+キラーズと向き合ってほしい
+
+# face 301811 "worry"
+# textboxarrow 0 3
+@フォルカス
+力の使い方を理解しきれないまま
+戦っている気がして…
+みんなは？
+
+# alpha 401311 0 0.25
+# alpha 301811 0 0.25
+# alpha 102311 1 0.5
+# alpha 102511 1 0.5
+# face 102311 "sad"
+# textboxarrow 0 1
+@アスカロン
+それなら私も…
+私のキラーズの呪いを
+ずっとどこかで恐れていました…
+
+# voice 1025 "muramasa_0039"
+# face 102511 "surprise"
+# textboxarrow 0 3
+@ムラマサ
+なるほど…キラーズと向き合い
+今よりもキラーズの力を
+引き出す、ということですか
+
+# voice 3018 "forcas_0003"
+# alpha 102311 0 0.25
+# alpha 102511 0 0.25
+# alpha 301811 1 0.5
+# move 301811 3 0
+# face 301811 "usual"
+# mask 301811 off
+# textboxarrow 0 2
+@フォルカス
+可能性は０に
+近いかもしれないけど
+やるしかない
+
+# textwindow "close"
+# alpha 301811 0 0.25
+# alpha 601111 1 0.5
+# alpha 201911 1 0.5
+# move 601111 2 0
+# move 201911 4 0
+# face 601111 "usual"
+# face 201911 "angry"
+# waitandnext 1.5
+
+# alpha 601111 0 0.25
+# alpha 201911 0 0.25
+# alpha 401311 1 0.5
+# alpha 501711 1 0.5
+# move 401311 2 0
+# move 501711 4 0
+# face 501711 "usual"
+# face 401311 "normal"
+# waitandnext 1.5
+
+# alpha 401311 0 0.25
+# alpha 501711 0 0.25
+# alpha 102511 1 0.5
+# alpha 102311 1 0.5
+# move 102511 2 0
+# move 102311 4 0
+# face 102511 "smile"
+# face 102311 "happy"
+# textwindow "nomal"
+# textflame 0 0
+;;モノローグ
+@
+フォルカスの言葉に、
+全員が頷く
+
+# alpha 102511 0 0.25
+# alpha 102311 0 0.25
+# alpha 301811 1 0.5
+# face 301811 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@フォルカス
+私もマスターを救うため
+自分に足りないものを
+見つけ出してみせます
+
+# alpha 301811 0 0.25
+# textflame 0 0
+;;モノローグ
+@
+こうして、セブンスキラーズ達の
+自分自身との戦いが始まった
+
+;;モノローグ
+@
+すべては
+ファーストキラーズを倒し
+マスターを取り戻すために
+
+# fadeout "black" 1.5
+# waitandnext 1.5

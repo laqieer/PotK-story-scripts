@@ -1,0 +1,568 @@
+;;-----------------------------------------
+;;イースター4_1
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm327" "BgmEaster001" 0
+;;-----------------------------------------
+;;イースターアルマス
+# body 3103821
+# pos 3103821 2
+# scale 3103821 0.8 0
+# layer 3103821 3
+# alpha 3103821 0 0
+;;イースターモラベガ
+# body 3104221
+# pos 3104221 4
+# scale 3104221 0.8 0
+# layer 3104221 3
+# alpha 3104221 0 0
+;;ケイオスリオン兵
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# layer 3820001 3
+# mask 3820001 off
+# alpha 3820001 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 2 "bg_white_circle"
+# imagealpha 2 0 0
+# imagescale 2 1.3 0
+# imagelayer 2 1
+;;-----------------------------------------
+;;背景：平原
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# alpha 3103821 1 0.5
+# face 3103821 "normal"
+# alpha 3104221 1 0.5
+# face 3104221 "sad"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 1038 "almace_0004"
+@アルマス
+…ほら、もう大丈夫！
+今度は捕まらないようにね！
+
+;;ＳＥ：タッタッタッ…（ウサギが去っていく音）
+;;伝わらないので変えます
+# se "SE_0683"
+# sedelay "SE_0683" 0.5
+# waitandnext 0.8
+
+# textflame 1 1
+# textboxarrow 0 3
+@モラベガ
+アルマスっ！
+大丈夫？ケガしてない…！？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103821 "happy"
+@アルマス
+心配しないで
+それよりほら、卵！
+ちゃんとゲットしたわよっ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104221 "shy"
+# voice 310421 "morabeaga_l_0030"
+@モラベガ
+わっ…！
+あ、ありがとう…！
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1038 "almace_0032"
+@アルマス
+ええ、どういたしまして♪
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103821 "normal"
+# voice 1038 "almace_0039"
+@アルマス
+さて、これが黄金卵かぁ…
+純金製ってだけあって
+少し重いわね
+
+# se "SE_6502"
+# emotionbody 1000 2 3104221 10 280
+# effectpattern 1000 1 1
+# effectstart 1000
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104221 "surprise"
+# voice 310421 "morabeaga_l_0028"
+@モラベガ
+あれ？
+そんなに重たかったかな…？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1038 "almace_0001"
+@アルマス
+それじゃ、マスター
+さっそくモラベガからの
+メッセージ読んでみて
+
+# textflame 0 0
+@
+アルマスがマスターに
+金色の卵を渡す
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104221 "sad"
+# voice 310421 "morabeaga_l_0031"
+@モラベガ
+ごめんね…口下手だから、
+こうしないと
+伝えられないなって…
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+どういう形でも
+伝えることが重要よ
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103821 "happy"
+# voice 1038 "almace_0002"
+@アルマス
+ねっ、これ私も読んでもいい？
+マスター、一緒に見ましょ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104221 "surprise"
+# voice 310421 "morabeaga_l_0022"
+@モラベガ
+ええっ…！？
+あっ、えと…ど、どうぞ！
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+えーっと、
+どこに書いてあるのかしら
+
+;;ト書き：モラベガ、照れる
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104221 "sad"
+# voice 310421 "morabeaga_l_0015"
+@モラベガ
+～～～っ…！！
+
+# textflame 0 0
+@
+マスターとアルマスの様子を
+ふるふると震えながら
+見ていたモラベガだったが…
+
+# move 3104221 3 0.2
+# waitandnext 0.2
+
+# move 3104221 4 0.3
+# waitandnext 0.3
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103821 "surprise"
+# voice 1038 "almace_0023"
+@アルマス
+――わっ！？
+
+# textflame 0 0
+@
+微笑みながら卵を見ている
+二人の反応に耐えられず、
+卵を奪いとってしまう
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+ち、ちょっとモラベガっ？
+まだ読んでないんだけどっ！
+
+# textflame 1 1
+# textboxarrow 0 3
+@モラベガ
+ご、ごめんなさいっ！
+でも、でもぉ…ううっ…！
+やっぱり恥ずかしいよぉ～…！！
+
+# se "SE_6513"
+# emotionbody 1001 8 3103821 80 220
+# effectpattern 1001 1 0
+# effectstart 1001
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103821 "sad"
+# voice 1038 "almace_0027"
+@アルマス
+はぁ～…
+まったく、何のために
+メッセージにしたんだか…
+
+# effectskip 1001
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103821 "usual"
+@アルマス
+ま、いいわっ
+恥ずかしくなる
+気持ちはわかるし
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+その代わり…隊に戻ったら
+残りも読ませてもらうから！
+いいわよね？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104221 "usual"
+@モラベガ
+う、うん…！
+できれば私たちのいないところで
+読んでほしいかな…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103821 "normal"
+@アルマス
+はいはい、わかった！
+さ、早く戻りましょ――
+
+# alpha 3103821 0 0.5
+# alpha 3104221 0 0.5
+# alpha 3820001 1 0.5
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# textflame 1 1
+# textboxarrow 0 2
+@ケイオスリオン兵
+いたぞっ！！
+あいつらだっ！
+
+# alpha 3103821 1 0.5
+# alpha 3104221 1 0.5
+# face 3104221 "sad"
+# alpha 3820001 0 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103821 "angry"
+# voice 1038 "almace_battle_0005"
+@アルマス
+っ！
+まずい、兵が来たわ…！
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+数が多い…
+ここはいったん逃げるわよ！
+
+# textflame 1 1
+# textboxarrow 0 3
+@モラベガ
+う、うん…！
+
+;;演出：場所移動
+# se "SE_5575"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 3103821 0 0
+# alpha 3104221 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_6500"
+# emotionbody 1003 1 3103821 10 280
+# effectpattern 1003 1 0
+# effectstart 1003
+# move 3103821 3 0
+# mask 3103821 off
+# alpha 3103821 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@アルマス
+はぁっ、はぁっ…！
+くっ…うわっ！？
+
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+二人ともっ、止まって！！
+この先は――谷底よ！
+
+# textflame 0 0
+@
+巨大な亀裂のような谷…
+三人は追い込まれ、
+逃げ場を失ってしまった
+
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+くっ…
+やっぱり戦わなくちゃ
+ダメってことね…！
+
+# textflame 0 0
+@
+迫り来る兵たちと
+対峙しながら、
+アルマスは一歩前に進む
+
+# alpha 3103821 0 0.5
+# move 3104221 3 0
+# mask 3104221 off
+# alpha 3104221 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@モラベガ
+ア、アルマスっ…！
+
+# alpha 3104221 0 0.5
+# alpha 3103821 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+心配しないで、モラベガ
+あなたとマスターは
+私が守るからっ！
+
+# alpha 3103821 0 0.5
+# alpha 3104221 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@モラベガ
+っ…！！
+
+# alpha 3104221 0 0.5
+# textflame 0 0
+@
+アルマスの後ろ姿を見て――
+モラベガは思い出す
+
+;;ト書き：以下、EP3の回想です。
+# imagealpha 2 1 1
+# imagepos 2 0 0
+# se "SE_0742"
+# textwindow "close"
+# waitandnext 1
+
+# move 3820001 4 0
+# alpha 3820001 1 0.5
+# move 3103821 2 0
+# mask 3103821 on
+# alpha 3103821 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@アルマス
+やめなさいっ！
+今すぐその子を解放して！
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+弱いものを傷つける
+あなたたちのやり方…
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+絶・許さない！
+
+# alpha 3103821 0 0.5
+# alpha 3820001 0 0.5
+;;ト書き：回想ここまで
+# bgm "stop"
+# imagealpha 2 0 1
+# se "SE_11762"
+# textwindow "close"
+# waitandnext 1
+
+# alpha 3104221 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 3104221 "angry"
+@モラベガ
+そうだ…
+アルマスみたいに、
+今度は、私たちが…！！
+
+;;ＳＥ：ザッ！（モラベガが前に出る音）
+# alpha 3104221 0 0.5
+# se "SE_5200"
+# se "SE_5000"
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_6501"
+# emotionbody 1005 1 3103821 10 290
+# effectpattern 1005 2 0
+# effectstart 1005
+# alpha 3103821 1 0.5
+# move 3104221 4 0
+# mask 3104221 on
+# alpha 3104221 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 3103821 "surprise"
+# voice 1038 "almace_0022"
+@アルマス
+っ！？
+ちょっと、モラベガっ…！？
+
+# bgmfile "bgm275" "BgmLostRagnarokEvent" 0
+# textflame 1 1
+# textboxarrow 0 3
+@モラベガ
+アルマスっ！　マスターっ！
+お願い…私たちに、
+二人のことを守らせて！
+
+# textflame 1 1
+# textboxarrow 0 3
+@モラベガ
+私たちは…今まで何回も、
+アルマスとマスターに
+助けられてきた！
+
+# textflame 1 1
+# textboxarrow 0 3
+@モラベガ
+隊に入れてもらえて…
+みんなと仲良くなって、
+楽しい毎日を過ごせて…
+
+# textflame 1 1
+# textboxarrow 0 3
+@モラベガ
+ぜんぶぜんぶ、
+二人のおかげなんだ…
+だからっ！
+
+# textflame 1 1
+# textboxarrow 0 3
+@モラベガ
+今度は私たちが――
+二人に恩返しする番だよっ！
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+…モラベガ…
+
+# textflame 1 1
+# textboxarrow 0 3
+@モラベガ
+ねえ、アルマス…！
+私たちね、
+アルマスみたいになりたいの！
+
+# textflame 1 1
+# textboxarrow 0 3
+@モラベガ
+どんなに不利な状況でも…
+どれだけ戦いが怖くてもっ…！
+
+# textflame 1 1
+# textboxarrow 0 3
+@モラベガ
+大切な人を守るために、
+誰よりも早く
+舞台の一番前に立つ――
+
+# textflame 1 1
+# textboxarrow 0 3
+@モラベガ
+そんな、強くてかっこいい
+お姫様になりたいっ…！
+
+# textflame 1 1
+# textboxarrow 0 3
+@モラベガ
+だから、お願い…
+今だけでいいから、
+私たちを…！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104221 "surprise"
+@モラベガ
+――あっ…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103821 "happy"
+# voice 1038 "almace_0004"
+@アルマス
+ふふっ…
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+えらいわね、モラベガ…
+自分の気持ち、
+ちゃんと言葉にできたじゃない
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+…わかったわ、行きましょう！
+私があなたを支えてあげる！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103821 "angry"
+@アルマス
+だからあなたは、
+あなたの思うままに――
+私たちを守ってみせて！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104221 "happy"
+# voice 310421 "morabeaga_l_0003"
+@モラベガ
+っ…！！
+うんっ…！
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 3103821 0 0
+# alpha 3104221 0 0
+# background "bg_black"
+# waitandnext 0.2

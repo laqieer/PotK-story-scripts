@@ -1,0 +1,493 @@
+;;-----------------------------------------
+;;2022バレンタインイベント【5話】
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgm "stop"
+;;-----------------------------------------
+;;グレイプニル（バレンタイン）
+# body 62000511
+# pos 62000511 3
+# scale 62000511 0.8 0
+# layer 62000511 2
+# alpha 62000511 0 0
+# mask 62000511 off
+;;ダモクレス（バレンタイン）
+# body 6103511
+# pos 6103511 3
+# scale 6103511 0.8 0
+# layer 6103511 3
+# alpha 6103511 0 0
+# mask 6103511 off
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;背景：町
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+# textwindow "nomal"
+@
+――数週間後
+
+;;モノローグ
+# bgm "bgm002" 0
+# move 62000511 3 0
+# face 62000511 "usual"
+# alpha 62000511 1 0.5
+# mask 62000511 off
+@
+テオバルトとデートを
+しているグレイプニル
+
+# serif 1
+@テオバルト
+それで、アンったら
+ビックリして
+逃げてしまったんだよ
+
+;;モヤモヤ吹き出しで
+# serif 1
+# textwindow "close"
+# serif 0
+# move 62000511 3 0
+# face 62000511 "sad"
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 62000511 off
+@グレイプニル
+…他の女性ともお付き合い
+されているのでしょうか？
+
+;;モヤモヤ吹き出しで
+# textboxarrow 0 0
+@グレイプニル
+もし、その女性の方が
+先にチョコを渡したとしたら
+そちらを受け取るのでしょうか？
+
+;;モヤモヤ吹き出しで
+# face 62000511 "usual"
+# textboxarrow 0 0
+@グレイプニル
+ここは確認しておきましょう…
+
+;;回想
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "201_room"
+# subfillrect 1 "orange" 0 0 0.4
+# alpha 62000511 0 0
+# move 6103511 3 0
+# face 6103511 "usual"
+# alpha 6103511 1 0
+# mask 6103511 off
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;背景：部屋　セピア色で
+# textboxarrow 0 2
+# textwindow "normal"
+@ダモクレス
+いい？
+相手が女の子の話をしても
+詮索しちゃダメだよ
+
+;;回想終わり
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "town"
+# subfillrect 1 "orange" 0 0.4 0
+# alpha 6103511 0 0
+# move 62000511 3 0
+# face 62000511 "surprise"
+# alpha 62000511 1 0
+# mask 62000511 off
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;モヤモヤ吹き出しで
+# move 62000511 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 62000511 off
+@グレイプニル
+はっ…そうでした
+ここはスルーいたします
+
+# face 62000511 "usual"
+# textboxarrow 0 2
+# textwindow "normal"
+@グレイプニル
+まあっ、それは大変でしたね
+その後は大丈夫だったのですか？
+
+# serif 1
+@テオバルト
+ああ、ケロッとしてたよ
+
+# serif 1
+@テオバルト
+っと、もうこんな時間か
+
+# se "SE_6504"
+# emotionbody 1000 3 62000511 10 290
+# effectpattern 1000 1 3
+# effectstart 1000
+# voice 5200051 "gleipnir_0004"
+# face 62000511 "happy"
+# textboxarrow 0 2
+@グレイプニル
+今日は本当に楽しかったです
+
+# serif 1
+@テオバルト
+僕もだよ
+また誘うね
+
+# voice 5200051 "gleipnir_0032"
+# face 62000511 "usual"
+# textboxarrow 0 2
+@グレイプニル
+はい、お待ちしております
+
+;;モノローグ
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+@
+テオバルトが去っていく
+入れ替わるように
+ダモクレスがやってくる
+
+# move 6103511 2 0
+# face 6103511 "happy"
+# alpha 6103511 1 0.5
+# mask 6103511 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 62000511 4 0.5
+@ダモクレス
+バッチリだったよ、お嬢様
+これならチョコも受け取って
+貰えるはずだよ！
+
+# se "SE_6504"
+# emotionbody 2000 3 62000511 10 290
+# effectpattern 2000 1 3
+# effectstart 2000
+# face 62000511 "happy"
+# textboxarrow 0 3
+@グレイプニル
+はいっ
+これもダモクレスさんの
+おかげです
+
+# face 6103511 "usual"
+# textboxarrow 0 1
+@ダモクレス
+ところで、お嬢様
+チョコはどうするの？
+テオバルトに渡すやつ
+
+# face 62000511 "usual"
+# textboxarrow 0 3
+@グレイプニル
+老舗のチョコレートを
+既に購入しております
+ご満足いただけるかと
+
+# emotionbody 3000 1 6103511 10 310
+# effectpattern 3000 1 0
+# effectstart 3000
+# voice 1035 "damocles_0023"
+# face 6103511 "surprise"
+# textboxarrow 0 1
+@ダモクレス
+ええー！
+手作りじゃないの？
+
+# emotionbody 4000 2 62000511 10 290
+# effectpattern 4000 1 1
+# effectstart 4000
+# face 62000511 "surprise"
+# textboxarrow 0 3
+@グレイプニル
+手作り？
+…手作りの方がいいのでしょうか？
+
+# face 6103511 "happy"
+# textboxarrow 0 1
+@ダモクレス
+もちろんだよ！
+
+# face 62000511 "usual"
+# textboxarrow 0 3
+@グレイプニル
+ですが、やはり、職人の作られた
+チョコレートのお味には
+到底敵わないのではないかと…
+
+# face 6103511 "angry"
+# textboxarrow 0 1
+@ダモクレス
+違う違う！
+大事なのは質じゃないよ！
+
+# textboxarrow 0 3
+@グレイプニル
+では、量でしょうか？
+どのくらい大きなチョコを
+お作りすればご満足いただけ…
+
+# textboxarrow 0 1
+@ダモクレス
+ちーがーうーよー！
+とにかく、作ってみよう！
+
+;;暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "201_room"
+# move 6103511 2 0
+# face 6103511 "usual"
+# alpha 6103511 1 0
+# mask 6103511 on
+# move 62000511 4 0
+# face 62000511 "usual"
+# alpha 62000511 1 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;背景：部屋
+# bgmfile "bgm203" "BgmGakuen004" 0
+# emotionbody 5000 10 6103511 60 235
+# effectpattern 5000 3 3
+# effectstart 5000
+# textboxarrow 0 1
+# textwindow "normal"
+@ダモクレス
+それじゃ、チョコレート作りの
+授業を始めるよ！
+
+# effectskip 5000
+# voice 5200051 "gleipnir_0002"
+# textboxarrow 0 3
+@グレイプニル
+あの…
+一ついいでしょうか？
+
+# face 6103511 "surprise"
+# textboxarrow 0 1
+@ダモクレス
+なに？
+
+# textboxarrow 0 3
+@グレイプニル
+どうして手作りにする
+必要があるのでしょうか？
+既製品でも美味しいと思うのですが
+
+# voice 1035 "damocles_0004"
+# face 6103511 "happy"
+# textboxarrow 0 1
+@ダモクレス
+手作りにする理由はね、
+愛を入れるためだよ！
+
+# textboxarrow 0 1
+@ダモクレス
+買って来たチョコでも
+それに愛を入れれば
+特別なチョコになるんだよ！
+
+# face 62000511 "sad"
+# textboxarrow 0 3
+@グレイプニル
+愛…ですか
+
+# textboxarrow 0 3
+@グレイプニル
+思えば、私は愛を教えて
+いただきたくてダモクレスさんに
+弟子入りしたのでしたね
+
+# face 6103511 "usual"
+# textboxarrow 0 1
+@ダモクレス
+あれからデートを重ねて
+何かわかった？
+
+# textboxarrow 0 3
+@グレイプニル
+…正直、
+まだよくわかりません
+それが私に足りないことしか…
+
+# textboxarrow 0 1
+@ダモクレス
+じゃあさ、料理で考えてみて？
+例えば、相手の好きなものを
+入れる、とか
+
+# textboxarrow 0 1
+@ダモクレス
+それも愛だと思うよ
+
+# face 62000511 "usual"
+# textboxarrow 0 3
+@グレイプニル
+では、テオバルト様は
+辛い物がお好きなので
+トウガラシを入れましょう
+
+# face 6103511 "angry"
+# textboxarrow 0 1
+@ダモクレス
+あー、それトラウマで
+トウガラシとチョコが
+嫌いになると思うよ
+
+# face 62000511 "sad"
+# textboxarrow 0 3
+@グレイプニル
+やはり、私の腕では
+変に手を加えるよりも
+そのまま渡した方が良い気がします
+
+# face 6103511 "usual"
+# textboxarrow 0 1
+@ダモクレス
+お嬢様はさ、
+どうしてテオバルトに
+チョコを受け取ってほしいの？
+
+# textboxarrow 0 1
+@ダモクレス
+受け取って貰って
+どう思ってほしいの？
+
+# emotionbody 6000 2 62000511 10 290
+# effectpattern 6000 1 1
+# effectstart 6000
+# textboxarrow 0 3
+@グレイプニル
+…どうして？
+…どうして、なのでしょう？
+
+# textboxarrow 0 3
+@グレイプニル
+私…受け取って貰いたいとしか
+考えていませんでした
+
+# textboxarrow 0 3
+@グレイプニル
+チョコを受け取ったときに
+テオバルト様がどう思うかは…
+考えたことがなかったです
+
+# face 62000511 "usual"
+# textboxarrow 0 3
+@グレイプニル
+ダモクレスさんは…
+ダモクレスさんはなぜ
+チョコレートを渡すのですか？
+
+# textboxarrow 0 1
+@ダモクレス
+クレス？
+クレスは愛を受け取って
+ほしいから！
+
+# textboxarrow 0 1
+@ダモクレス
+だから、チョコに
+愛を込めるんだよ！
+
+# face 62000511 "surprise"
+# textboxarrow 0 3
+@グレイプニル
+愛を…込めるですか？
+
+# textboxarrow 0 1
+@ダモクレス
+うん
+ちょっとチョコ、
+分けてもらうね
+
+;;モノローグ
+# textflame 0 0
+@
+ダモクレスがチョコレートを
+色々と調整していく
+
+# face 6103511 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@ダモクレス
+出来た！
+はい、どーぞ
+
+# se "SE_6504"
+# emotionbody 7000 3 62000511 10 290
+# effectpattern 7000 1 3
+# effectstart 7000
+# face 62000511 "happy"
+# textboxarrow 0 3
+@グレイプニル
+…すごく美味しいです
+甘くて、深くて、優しい味です
+
+# voice 1035 "damocles_0004"
+# face 6103511 "usual"
+# textboxarrow 0 1
+@ダモクレス
+これが愛だよ
+
+# textboxarrow 0 1
+@ダモクレス
+チョコレートを美味しくするには
+愛が必要なんだよ
+
+# textboxarrow 0 1
+@ダモクレス
+お嬢様にね
+美味しいって、幸せになって
+欲しいって想いを込めたの！
+
+# emotionbody 8000 1 62000511 10 310
+# effectpattern 8000 2 0
+# effectstart 8000
+# face 62000511 "surprise"
+# textboxarrow 0 3
+@グレイプニル
+……！？
+
+# fadeout "black" 0.5
+# waitandnext 0.5

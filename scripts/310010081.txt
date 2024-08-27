@@ -1,0 +1,664 @@
+;;-----------------------------------------
+;;SEA_プロローグ_8_1
+;;-----------------------------------------
+# script "lisp"
+# background "foot_mountain_village_evening"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル（仮当てアルマス）
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 3
+# mask 270 off
+# alpha 270 0 0
+;;マナナン（仮当てニクス）
+# body 6504011
+# pos 6504011 3
+# scale 6504011 0.8 0
+# layer 6504011 3
+# mask 6504011 off
+# alpha 6504011 0 0
+;;村人
+# body 3
+# pos 3 3
+# scale 3 0.8 0
+# layer 3 3
+# mask 3 off
+# alpha 3 0 0
+;;女の子
+# body 141
+# pos 141 3
+# scale 141 0.8 0
+# layer 141 3
+# mask 141 off
+# alpha 141 0 0
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 3
+# mask 810004 off
+# alpha 810004 0 0
+# entry 810098 810004
+# pos 810098 2
+# scale 810098 0.8 0
+# layer 810098 3
+# mask 810098 off
+# alpha 810098 0 0
+# entry 810099 810004
+# pos 810099 4
+# scale 810099 0.8 0
+# layer 810099 3
+# mask 810099 off
+# alpha 810099 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 2
+# imageset 1 "mov2_3_overlay"
+# imagescale 1 1.2 0
+# imagealpha 1 0 0
+# imagelayer 1 3
+;;-----------------------------------------
+;;背景：村（夕）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_6176"
+# alpha 3 1 0.3
+# waitandnext 0.8
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@村人
+ありがとう
+ここが俺達の村だ
+
+@村人
+俺はさっきの変なキル姫のことを
+皆に知らせてくるよ
+それじゃ
+
+# se "SE_0719"
+# move 3 4 0.5
+# alpha 3 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# voice 9917 "mimir_navikan_0001"
+# alpha 270 1 0.3
+# face 270 "normal"
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+マスター様、私達も今夜の宿を
+決めましょう
+そこで…あら？
+
+# se "SE_0719"
+# move 270 5 1
+# alpha 270 0 1
+# textwindow "close"
+# waitandnext 1
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 0.7
+
+# sestop "SE_6176"
+# bgm "bgm002" 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.7
+
+# serif 1
+# textwindow "nomal"
+@店主
+はい
+お子様ランチ、お待たせ
+
+# alpha 141 1 0.3
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@女の子
+わ～い！
+見て見て、おかあさん
+ちっちゃな旗が立ってるよ
+
+# move 270 1 0
+# serif 1
+@母親
+ふふふ
+本当ね
+
+# se "SE_5200"
+# sedelay "SE_5200" 1
+# alpha 141 0 0.3
+# move 270 2 0.5
+# alpha 270 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 1
+
+# move 270 3 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+…………
+
+# select "どうしたの？" "select_label_01" "お腹空いた？" "select_label_01"
+…………
+
+# voice 9917 "mimir_navikan_0034"
+# face 270 "shy"
+# label "select_label_01"
+# labeljump "select_label_end"
+@ミーミル
+いえ、何でもありません…
+ミーミルは何も…
+
+# se "SE_5200"
+# sedelay "SE_5200" 1
+# label "select_label_end"
+# move 270 2 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+# serif 1
+# textwindow "nomal"
+@店主
+いらっしゃい
+ご注文は？
+
+# move 270 3 0.5
+# serif 0
+# textboxarrow 0 2
+@ミーミル
+あ、いえ…その…
+
+# select "お子様ランチを一つ" "select_label_02" "旗が立ってる料理を下さい" "select_label_03"
+あ、いえ…その…
+
+# face 270 "surprise"
+# label "select_label_02"
+# labeljump "select_label_end2"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+ま、マスター様っ
+私は立派な大人の女性ですので
+お子様ランチは…
+
+# face 270 "shy"
+# label "select_label_03"
+# labeljump "select_label_end2"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+な、何のことでしょうか
+マスター様…
+
+# label "select_label_end2"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# face 270 "sad"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.7
+
+# voice 9917 "mimir_navikan_0019"
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+ううっ…
+先程は失礼致しました
+
+@ミーミル
+ティルフィング様からお聞きに
+なっておられるかもしれませんが…
+
+@ミーミル
+私、旗のように揺れていたり
+はためいていたりするものが
+どうしても気になってしまうのです
+
+@ミーミル
+このままでは補佐官失格…
+次で挽回致しますっ
+さあ、宿に向かいましょう
+
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+# bgm "bgm003" 0
+# background "201_room"
+# alpha 270 0 0
+# textwindow "close"
+# waitandnext 0.2
+
+# face 270 "angry"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# voice 9917 "mimir_navikan_0002"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+マスター様、お部屋に入るのは
+少しお待ち下さい
+
+@ミーミル
+私がこれから部屋の全てを
+完全除菌致します
+マスター様は、それから中に
+
+# select "やり過ぎだよ！" "select_label_04" "じゅうぶん、清潔だから" "select_label_04"
+私がこれから部屋の全てを
+完全除菌致します
+マスター様は、それから中に
+
+# face 270 "sad"
+# label "select_label_04"
+# labeljump "select_label_end3"
+@ミーミル
+そうですか…
+お役に立てず、申し訳ないです…
+
+# face 270 "normal"
+# label "select_label_end3"
+@ミーミル
+それでは、せめてお部屋に結界を――
+
+# face 270 "surprise"
+# bgm "stop"
+# se "SE_10391"
+# waitandnext 1
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "toge"
+@村人達
+キャアアアアア…！
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "angry"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+今の悲鳴は…？
+外の様子を見て参ります
+
+@ミーミル
+マスター様はここで
+待機していて下さい
+
+# select "自分も行くよ" "select_label_05" "一緒にいた方が良い" "select_label_05"
+マスター様はここで
+待機していて下さい
+
+# voice 9917 "mimir_navikan_0003"
+# face 270 "surprise"
+# label "select_label_05"
+# labeljump "select_label_end4"
+@ミーミル
+…マスター様が仰るのでしたら
+
+# label "select_label_end4"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：村（夜）
+# bgm "bgm023_024" 0
+# background "foot_mountain_village_night"
+# alpha 270 0 0
+# waitandnext 0.2
+
+# move 810004 5 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 810004 4 0.5
+# alpha 810004 1 0.5
+# waitandnext 1
+
+# move 810004 3 0.5
+# alpha 810004 0 0.5
+# waitandnext 0.5
+
+# reversal 810004 0
+# move 810004 3 0
+# alpha 810004 1 0.5
+# waitandnext 1
+
+# se "SE_0618"
+# textwindow "toge"
+# textboxarrow 0 0
+@異族
+ガアアアアアア！
+
+# move 810004 5 0.3
+# alpha 810004 0 0.3
+# textwindow "close"
+# waitandnext 0.8
+
+# serif 1
+# textwindow "nomal"
+@村人１
+何だ…？
+何なんだ、あの化け物は…！？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 0
+@村人２
+ひぃぃぃぃっ…！
+あいつら…人を…食ってるぞっ
+
+# move 270 2 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@村人３
+逃げろ！
+急いで逃げるんだぁっ
+
+# move 270 3 0.5
+# alpha 270 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+あれは…
+ティルフィング様から
+教わったことがあります
+
+@ミーミル
+「異族」という、
+人を捕食する存在…
+ですが…
+
+# face 270 "sad"
+@ミーミル
+この世界には存在していないと
+教わりました…
+それなのに、どうして？
+
+# reversal 810004 1
+# layer 810004 3
+# layer 141 4
+# alpha 270 0 0.3
+# textwindow "close"
+# waitandnext 0.8
+
+# face 141 "worry"
+# alpha 141 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@女の子
+おかあさん…！？
+おかあさーん…！！
+
+# se "SE_0618"
+# alpha 810004 1 0.5
+# textwindow "toge"
+# textboxarrow 0 3
+@異族
+ガアアアアアア！
+
+# move 141 2 1
+# waitandnext 1.3
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@村人１
+おい！
+女の子が一人、逃げ遅れてるぞ…！
+
+# serif 1
+@村人２
+そんなこと言われても…
+もう無理だ…
+助けられない…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@少女
+おかあさん、どこー…！？
+おかあさん…？
+
+# se "SE_0618"
+# move 810004 4 0.6
+# textwindow "toge"
+# textboxarrow 0 3
+@異族
+ガアアアアアアアア！
+
+# move 141 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 1
+@少女
+あ…あああ…
+
+# move 810004 3 0.7
+# waitandnext 1.2
+
+# select "その子に近づくな！" "select_label_06" "今、助ける！" "select_label_06"
+あ…あああ…
+
+# voice 9917 "mimir_navikan_0048"
+# face 270 "surprise"
+# label "select_label_06"
+# labeljump "select_label_end5"
+# alpha 141 0 0.3
+# alpha 810004 0 0.3
+# move 270 3 0
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+マスター様？
+
+# se "SE_4000"
+# label "select_label_end5"
+# alpha 270 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_0617"
+# alpha 810004 1 0.5
+# textwindow "toge"
+# textboxarrow 0 2
+@異族
+ガアアアアアアア！
+
+# se "SE_9015"
+# fadein "red" 0.3
+# scale 810004 1 0.3
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# waitandnext 0.8
+
+# scale 810004 0.8 1
+# imagealpha 1 0 1
+# waitandnext 1
+
+# fadeout "black" 1
+# waitandnext 1
+
+# alpha 810004 0 0
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# move 141 3 0
+# alpha 141 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@少女
+あ…ありがとうございます…
+けが、だいじょうぶですか…？
+
+# select "大したことないよ" "select_label_07" "このくらい慣れてる" "select_label_07"
+あ…ありがとうございます…
+けが、だいじょうぶですか…？
+
+# face 270 "angry"
+# label "select_label_07"
+# labeljump "select_label_end6"
+# alpha 141 0 0.3
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+マスター様…！
+どうぞ、私の肩にお掴まり下さい
+早く、この場を――
+
+# label "select_label_end6"
+# alpha 270 0 0.3
+# textwindow "close"
+# waitandnext 0.8
+
+# alpha 810098 1 0.5
+# waitandnext 0.3
+
+# alpha 810099 1 0.5
+# waitandnext 0.7
+
+# se "SE_0618"
+# textwindow "toge"
+# textboxarrow 0 0
+@異族
+ガアアアアアア！
+
+# voice 9917 "mimir_navikan_0028"
+# alpha 810098 0 0.3
+# alpha 810099 0 0.3
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+どうしましょう…
+すっかり囲まれてしまったようです
+
+@ミーミル
+どこかに、逃げ道は…
+
+# bgm "stop"
+# alpha 270 0 0.3
+# textwindow "close"
+# waitandnext 0.8
+
+# move 810099 3 0.5
+# alpha 810099 1 0.5
+# waitandnext 0.8
+
+# se "SE_4400"
+# fadein "white" 0.5
+# effectbody 101 28 0 0 0
+# effectstart 101
+# waitandnext 0.8
+
+# se "SE_8569"
+# se "SE_0669"
+# textwindow "nomal"
+# textboxarrow 0 0
+@異族
+ガアアア…？
+
+# se "SE_3001"
+# alpha 810099 0 1
+# textwindow "close"
+# waitandnext 1.5
+
+# voice 9917 "mimir_navikan_0024"
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+ひゃっ
+今の銃声…
+
+# alpha 270 0 0.3
+# textwindow "close"
+# waitandnext 0.8
+
+# bgm "bgm009_013" 0
+# alpha 6504011 1 0.5
+# waitandnext 0.8
+
+# voice 650401 "manannan_ura_0005"
+# face 6504011 "happy"
+# textwindow "nomal"
+# textboxarrow 0 2
+@マナナン
+あははっ！
+当たった、当たった
+
+# face 6504011 "normal"
+@マナナン
+ほらほら
+こっちに私がいるよ
+こっちにおいでよ
+
+# se "SE_0617"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "toge"
+@異族
+ガアアアアアア！
+
+# face 6504011 "happy"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+@マナナン
+あはっ
+みんな私を見てくれてる
+それじゃ…
+
+# face 6504011 "usual"
+# se "SE_5208"
+@マナナン
+ショータイムの始まり始まり～！
+
+;;バトル（マップ：020荒野の酒場/夜　エネミー：異族）
+# fadeout "black" 0.5
+# waitandnext 0.5

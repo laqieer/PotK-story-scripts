@@ -1,0 +1,486 @@
+;;-----------------------------------------
+;;SEA3章_3
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown"
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 3
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;七支刀
+# body 5105111
+# pos 5105111 3
+# scale 5105111 0.8 0
+# layer 5105111 2
+# mask 5105111 off
+# alpha 5105111 0 0
+;;ghost
+# body 302
+# pos 302 5
+# scale 302 0.8 0
+# layer 302 5
+# mask 302 off
+# alpha 302 0 0
+;;パラシュ
+# body 200411
+# pos 200411 1
+# scale 200411 0.8 0
+# layer 200411 2
+# mask 200411 off
+# alpha 200411 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：町
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# sedelay "bgm602_basic_on" 2
+# serif 1
+# textflame 1 1
+@町の人々
+うわあああっ…！
+助けてっ…
+
+#setnextbgmblock 1
+# voice 650401 "manannan_ura_0005"
+# face 6504011 "happy"
+# alpha 6504011 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@マナナン
+アハハハ！
+色んな物が勝手に飛び回ってる
+喜劇的に愉快だねっ♪
+
+# alpha 6504011 0 0.3
+# face 5105111 "angry"
+# alpha 5105111 1 0.3
+# textboxarrow 0 2
+@七支刀
+また、心霊現象なんですね…
+わたくしもキル姫なんですから、
+皆様のお役に…！
+
+# voice 1051 "shichishito_0015"
+# face 5105111 "sad"
+# textboxarrow 0 2
+@七支刀
+うぅ…剣が震えて、
+上手く力が入りません…
+
+# serif 1
+@町人１
+あ！
+危ないよ、七支刀ちゃん！
+
+# serif 1
+@町人２
+大変だ！七支刀ちゃんが
+物の飛び交っているところに
+取り残されてるぞ！
+
+# se "SE_6212"
+# serif 1
+@町の人々
+七支刀ちゃんを守れー！
+
+# voice 1051 "shichishito_0022"
+# face 5105111 "surprise"
+# textboxarrow 0 2
+@七支刀
+え…？
+あ、あのっ、皆様…
+
+# serif 1
+@町人３
+任せて！
+いつも七支刀ちゃんに
+励ましてもらっているから
+
+# serif 1
+@町人４
+こういうときは俺達が
+七支刀ちゃんを守る番だぜ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 5105111 "sad"
+# textwindow "nomal"
+# textboxarrow 0 2
+@七支刀
+いえ、あのっ
+わたくしが皆様のお役に…
+
+;;幽霊が画面を通り過ぎる
+# se "SE_11585"
+# move 302 1 2.2
+# alpha 302 0.4 0.7
+# waitandnext 0.7
+
+# alpha 302 0 0.7
+# waitandnext 0.7
+
+# voice 1051 "shichishito_0025"
+# face 5105111 "surprise"
+# textboxarrow 0 2
+@七支刀
+きゃあ…！？
+
+# face 5105111 "angry"
+# textboxarrow 0 2
+@七支刀
+これでは皆様のお役に立てません…
+でしたら、わたくしの呪術でっ
+
+# textboxarrow 0 2
+@七支刀
+…………
+
+# move 5105111 3 0
+# face 5105111 "sad"
+# textwindow "moya"
+# textboxarrow 0 0
+@七支刀
+もし、呪術も上手くいかなかったら
+わたくしは…
+本当にただのお飾りに…
+
+# voice 9917 "mimir_navikan_0001"
+# alpha 5105111 0 0.3
+# face 270 "angry"
+# alpha 270 1 0.3
+# move 6504011 4 0.3
+# face 6504011 "usual"
+# alpha 6504011 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+マスター様、ご覧になりましたか？
+何か、ふわふわしたものが
+飛び回っているようでございます
+
+# textboxarrow 0 1
+@ミーミル
+あれを何とかしなければならないと
+思うのですけれど…
+
+# voice 650401 "manannan_ura_0022"
+# face 6504011 "surprise"
+# textboxarrow 0 3
+@マナナン
+んんっ？
+ふわふわしたものなんて
+どこにいるの？
+
+;;幽霊がマナナンに近づく
+# se "SE_11585"
+# move 302 5 0
+# alpha 302 0.3 0.7
+# waitandnext 1
+
+# voice 9917 "mimir_navikan_0058"
+# textboxarrow 0 1
+@ミーミル
+マナナンさん、伏せて下さい！
+
+;;パラシュがそこに割り込む
+# bgm "stop"
+# move 302 4 0.5
+# alpha 270 0 0.3
+# alpha 6504011 0 0.3
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@？？？
+はあああああああ！
+
+# se "SE_9021"
+# move 200411 2 0.3
+# face 200411 "angry02"
+# alpha 200411 1 0.3
+# serif 1
+# textwindow "close"
+# waitandnext 0.3
+
+;;斬撃演出
+# se "SE_4100"
+# fadein "white" 0.5
+# move 200411 3 0.2
+# waitandnext 0.5
+
+;;幽霊が逃げる
+# se "SE_11585"
+# move 302 5 0.5
+# alpha 302 0 0.5
+# waitandnext 1
+
+# voice 2004 "parashu_battle_0005"
+# face 200411 "angry01"
+# textwindow "nomal"
+# textboxarrow 0 2
+@パラシュ
+くっ…
+届かなかったか
+
+# move 270 3 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# alpha 200411 0 0.3
+# textboxarrow 0 2
+@ミーミル
+あのキル姫は、
+パラシュさんですっ
+
+# se "SE_6216"
+# se "SE_0607"
+# serif 1
+@町の人々
+おおっ
+心霊現象が収まったぞ
+
+# serif 1
+@町の人々
+七支刀ちゃんも無事だ！
+俺達の勝利だぜ！
+
+# move 5105111 5 0
+# layer 5105111 4
+# mask 5105111 on
+# alpha 270 0 0.3
+# layer 200411 2
+# face 200411 "normal"
+# alpha 200411 1 0.3
+# textboxarrow 0 2
+@パラシュ
+はぁ…
+呑気なものだね
+
+;;パラシュが立ち去ろうとする
+# se "SE_5200"
+# se "SE_5006"
+# sedelay "SE_5007" 0.8
+# serif 1
+# textwindow "close"
+# move 200411 1 1
+# textboxarrow 0 0
+# waitandnext 1
+
+;;七支刀が駆け寄る
+# se "SE_5575"
+# move 5105111 4 0.3
+# face 5105111 "normal"
+# alpha 5105111 1 0.3
+# waitandnext 0.3
+
+# voice 1051 "shichishito_0030"
+# textboxarrow 0 3
+@七支刀
+パラシュ様！
+ありがとうございますっ
+
+# move 200411 2 0.5
+# textboxarrow 0 1
+@パラシュ
+…七支刀か
+
+# textboxarrow 0 3
+@七支刀
+心霊現象を斧で薙ぎ払う勇姿、
+とても格好良くて、憧れます！
+
+# textboxarrow 0 3
+@七支刀
+わたくしも、あなた様のように
+皆様のお役に立てるキル姫に
+なりたいです！
+
+# face 200411 "angry01"
+# textboxarrow 0 1
+@パラシュ
+君が、ボクのように？
+フン…
+
+# textboxarrow 0 1
+@パラシュ
+ボクはあるべき理想のために
+行動し続けている
+
+# textboxarrow 0 1
+@パラシュ
+でも、君はさっきまで何をしていた？
+ただ震えていただけじゃないか
+
+# textboxarrow 0 1
+@パラシュ
+いつも「世界平和」だとか
+「世界中の人々を幸せに」だとか
+言っているけどね
+
+# textboxarrow 0 1
+@パラシュ
+君がやっているのは、せいぜい
+町の人々のお悩み相談程度だよ
+発言と行動が全く釣り合っていない
+
+# textboxarrow 0 1
+@パラシュ
+行動を伴わない発言に価値はないよ
+君はそこで、いつまでも飾り物を
+演じていればいい
+
+# voice 1051 "shichishito_0022"
+# face 5105111 "sad"
+# textboxarrow 0 3
+@七支刀
+あ…
+
+;;パラシュが立ち去る
+# se "SE_0740"
+# move 200411 1 0.5
+# alpha 200411 0 0.3
+# waitandnext 1
+
+# alpha 5105111 0 0.3
+# face 270 "sad"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+パラシュさんが行ってしまいます…
+でも、七支刀さんも気になります…
+
+# voice 9917 "mimir_navikan_0001"
+# face 270 "normal"
+# textboxarrow 0 2
+@ミーミル
+マスター様、
+如何致しましょう？
+
+;;選択肢
+# select "パラシュを追おう" "select_label_01" "七支刀はそっとしておこう" "select_label_02"
+パラシュさんが行ってしまいます…
+でも、七支刀さんも気になります…
+マスター様、如何致しましょう？
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# voice 9917 "mimir_navikan_0003"
+# face 270 "angry"
+# textboxarrow 0 2
+@ミーミル
+はい
+それでは、急ぎましょう
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 270 "happy"
+# textboxarrow 0 2
+@ミーミル
+なるほど
+それも気遣いなのですね
+
+;;暗転挟む
+# label "select_label_end"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# bgm "bgm005" 0
+# alpha 270 0 0
+# waitandnext 0.2
+
+# move 270 1 0
+# move 200411 5 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 200411 4 0.5
+# face 200411 "normal"
+# alpha 200411 1 0.3
+# waitandnext 0.5
+
+# move 270 2 0.5
+# face 270 "normal"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+パラシュさん、
+お待ち下さい
+
+# textboxarrow 0 3
+@パラシュ
+ん？
+…見ない顔だね
+そっちはティルフィングのマスターか
+
+# textboxarrow 0 3
+@パラシュ
+ティルフィングは元気かい？
+
+;;選択肢
+# select "元気だよ" "select_label_03" "いつも通りかな" "select_label_03"
+ティルフィングは元気かい？
+
+# label "select_label_03"
+# voice 2004 "parashu_0004"
+# face 200411 "smile"
+# textboxarrow 0 3
+@パラシュ
+それならいいんだ
+よろしく伝えておいてよ
+
+# face 200411 "normal"
+# textboxarrow 0 3
+@パラシュ
+それで、君達は
+ボクに何か用でもあるのかい？
+
+# textboxarrow 0 1
+@ミーミル
+この町について、
+聞かせていただきたいことが
+ございます
+
+# textboxarrow 0 3
+@パラシュ
+ああ…
+さっきの幽霊騒ぎのことだね
+それなら、ついてくるといい
+
+# textboxarrow 0 3
+@パラシュ
+君達の理想に適うかどうかは
+分からないけれど…
+
+# textboxarrow 0 3
+@パラシュ
+この町について、十分過ぎる
+情報が手に入るところに
+連れていってあげるよ
+
+# fadeout "black" 1
+# waitandnext 1

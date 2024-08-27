@@ -1,0 +1,356 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー12章
+;;第4話　タイトル：完全、覚醒
+;;4_6_3
+;;スクリプト最後の背景：地底
+;;-----------------------------------------
+# script "lisp"
+# background "underground_world_3"
+# bgmfile "bgm301" "BgmLostRagnarokDisrupters" 0
+;;-----------------------------------------
+;;ギル
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# layer 137 2
+# alpha 137 0 0
+# mask 137 off
+;;リル=ティルフィング
+# body 3101411
+# pos 3101411 3
+# scale 3101411 0.8 0
+# layer 3101411 2
+# alpha 3101411 0 0
+# mask 3101411 off
+;;レーヴァテイン
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# layer 3100211 2
+# alpha 3100211 0 0
+# mask 3100211 off
+;;カリス
+# body 3602511
+# pos 3602511 3
+# scale 3602511 0.8 0
+# layer 3602511 2
+# alpha 3602511 0 0
+# mask 3602511 off
+;;ソロモン
+# body 3503111
+# pos 3503111 3
+# scale 3503111 0.8 0
+# layer 3503111 2
+# alpha 3503111 0 0
+# mask 3503111 off
+;;ヘレナ
+# body 3302811
+# pos 3302811 3
+# scale 3302811 0.8 0
+# layer 3302811 2
+# alpha 3302811 0 0
+# mask 3302811 off
+;;ティファレト
+# body 3503211
+# pos 3503211 3
+# scale 3503211 0.8 0
+# layer 3503211 2
+# alpha 3503211 0 0
+# mask 3503211 off
+;;ニール
+# body 162
+# pos 162 3
+# scale 162 0.6 0
+# layer 162 2
+# alpha 162 0 0
+# mask 162 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;//背景：地底
+# voice 5032 "tiphereth_t_0015"
+# move 3503211 3 0
+# alpha 3503211 1 0
+# mask 3503211 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ティファレト
+レーヴァテインの力が向上している？
+何が起きているのでしょう…
+
+# voice 3028 "herena_a_0004"
+# alpha 3503211 0 0.5
+# move 3302811 3 0
+# face 3302811 "normal"
+# alpha 3302811 1 0.5
+# mask 3302811 off
+# textboxarrow 0 2
+@ヘレナ
+もしかして君の方が
+弱くなったのかもしれないよ
+…くふっ
+
+# alpha 3302811 0 0.5
+# move 3503211 3 0
+# face 3503211 "normal"
+# alpha 3503211 1 0.5
+# mask 3503211 off
+# textboxarrow 0 2
+@ティファレト
+いつの間に背後にっ？
+仕方ありませんね…
+
+;;//ティファレトが飛び去る
+# se "SE_5626"
+# textwindow "close"
+# rightout 3503211 0.5
+# waitandnext 0.5
+
+# alpha 3503211 0 0
+# move 3302811 3 0
+# face 3302811 "normal"
+# alpha 3302811 1 0.5
+# mask 3302811 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ヘレナ
+おや、もう逃げるのかい？
+だらしないなあ
+
+# voice 5031 "solomon_t_0049"
+# move 3302811 2 0.5
+# mask 3302811 on
+# move 3503111 4 0
+# face 3503111 "angry"
+# alpha 3503111 1 0.5
+# mask 3503111 on
+# textboxarrow 0 3
+@ソロモン
+ヘレナ！
+追ってはダメ
+
+# alpha 3302811 0 0.5
+# move 162 2 0
+# alpha 162 1 0.5
+# mask 162 on
+# textboxarrow 0 1
+@ニール
+分かってるわよ
+アタチ達、ちゃんと作戦通りに
+動いたでしょ？
+
+# voice 310021 "revatein_ge_0002"
+# alpha 162 0 0.5
+# move 3100211 2 0
+# face 3100211 "normal"
+# alpha 3100211 1 0.5
+# mask 3100211 on
+# textboxarrow 0 1
+@レーヴァテイン
+二人とも…お疲れ様
+ティルフィングは？
+
+# face 3503111 "normal"
+# textboxarrow 0 3
+@ソロモン
+それならカリスと一緒に
+彼のところへ
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# bgmfile "bgm290" "BgmLostRagnarokEvent" 0
+# alpha 3100211 0 0
+# alpha 3503111 0 0
+# move 3602511 3 0
+# face 3602511 "normal"
+# alpha 3602511 1 0
+# mask 3602511 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# se "SE_4781"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@カリス
+やっほい！
+ティルフィングに続いてギルも
+治癒しちゃうなんて
+
+# voice 6025 "chalice_t_0004"
+# face 3602511 "happy"
+# textboxarrow 0 2
+@カリス
+カリスちゃんマジ天使♪
+
+# voice 9969 "gill_0007"
+# move 137 2 0
+# face 137 "usual"
+# alpha 137 1 0.5
+# mask 137 on
+# textboxarrow 0 1
+# move 3602511 4 0.5
+# mask 3602511 on
+@ギル
+へへっ…
+本当、助かったよ
+ありがとな
+
+# voice 310141 "tyrufing_lo_0005"
+# alpha 3602511 0 0.5
+# move 3101411 4 0
+# face 3101411 "happy"
+# alpha 3101411 1 0.5
+# mask 3101411 on
+# textboxarrow 0 3
+@ティルフィング
+ギル！
+良かった…
+
+# textboxarrow 0 1
+@ギル
+ティルフィングさん！
+回復したんですね
+良かっ――
+
+# voice 310141 "tyrufing_lo_0009"
+# face 3101411 "angry"
+# textboxarrow 0 3
+@ティルフィング
+何て無茶をするんですか！
+身を隠していなさいと
+言ったでしょう！
+
+# voice 9969 "gill_0016"
+# face 137 "sad"
+# textboxarrow 0 1
+@ギル
+俺は…
+そんな怒鳴らなくても…
+
+# voice 310141 "tyrufing_lo_0015"
+# face 3101411 "sad"
+# textboxarrow 0 3
+@ティルフィング
+心配したんですよ
+本当に…
+
+# textboxarrow 0 1
+@ギル
+だから…ナディア様みたいなこと
+言わないで下さい…
+
+# face 3101411 "angry"
+# textboxarrow 0 3
+@ティルフィング
+違います！ナディアのようなことを
+言っているのではありません！
+
+# voice 9969 "gill_0023"
+# face 137 "surprise"
+# textboxarrow 0 1
+@ギル
+えっ…？
+
+# face 3101411 "normal"
+# textboxarrow 0 3
+@ティルフィング
+私自身がアナタのことを
+心配しているんですっ
+
+# face 3101411 "sad"
+# textboxarrow 0 3
+@ティルフィング
+ギル…私もアナタとの接し方に
+迷っていました
+ナディアではない自分自身に
+
+# face 3101411 "normal"
+# textboxarrow 0 3
+@ティルフィング
+けれど、そんな遠慮はもうやめます
+私は私自身の意思でアナタと
+向き合いますっ
+
+# face 137 "normal"
+# textboxarrow 0 1
+@ギル
+ティルフィングさん…
+
+# voice 310141 "tyrufing_lo_0030"
+# face 3101411 "happy"
+# textboxarrow 0 3
+@ティルフィング
+ギル…生きていて…本当に良かった
+身を挺して守ってくれて
+ありがとう
+
+# voice 9969 "gill_0033"
+# face 137 "sad"
+# textboxarrow 0 1
+@ギル
+うん…ごめん、なさい…
+
+# voice 5031 "solomon_t_0002"
+# alpha 137 0 0.5
+# alpha 3101411 0 0.5
+# move 3503111 3 0
+# face 3503111 "normal"
+# alpha 3503111 1 0.5
+# mask 3503111 off
+# textboxarrow 0 2
+@ソロモン
+取り込み中のところ悪いのだけれど
+早くアルマス達と合流したいの
+
+# voice 3028 "herena_a_0015"
+# move 3302811 2 0
+# face 3302811 "sad"
+# alpha 3302811 1 0.5
+# mask 3302811 on
+# textboxarrow 0 1
+# move 3503111 4 0.5
+# mask 3503111 on
+@ヘレナ
+ソロモンは空気を読めないなあ
+ヘレナは感動で涙ぐんでいたのに…
+くふっ
+
+# voice 5031 "solomon_t_0023"
+# face 3503111 "surprise"
+# textboxarrow 0 3
+@ソロモン
+わ…私だって邪魔したくは
+なかったのだけれど、急がないと…
+
+# voice 310021 "revatein_ge_battle_0005"
+# alpha 3302811 0 0.5
+# alpha 3503111 0 0.5
+# move 3100211 3 0
+# face 3100211 "normal"
+# alpha 3100211 1 0.5
+# mask 3100211 off
+# textboxarrow 0 2
+@レーヴァテイン
+スイハが来る…
+あいつはかなり厄介よ
+
+# voice 310141 "tyrufing_lo_0031"
+# alpha 3100211 0 0.5
+# move 3101411 3 0
+# face 3101411 "normal"
+# alpha 3101411 1 0.5
+# mask 3101411 off
+# textboxarrow 0 2
+@ティルフィング
+ごめんなさい
+アルマス達のところに急ぎましょう

@@ -1,0 +1,509 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー13章
+;;第4話　タイトル：響き渡る音色
+;;4_5
+;;スクリプト最後の背景：地底
+;;-----------------------------------------
+# script "lisp"
+# background "bifrost"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス（ジョブチェンジ後）
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# layer 172 2
+# alpha 172 0 0
+# mask 172 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 2
+# alpha 139 0 0
+# mask 139 off
+;;モラルタ
+# body 3104011
+# pos 3104011 3
+# scale 3104011 0.8 0
+# layer 3104011 2
+# alpha 3104011 0 0
+# mask 3104011 off
+;;ベガルタ
+# body 3104111
+# pos 3104111 3
+# scale 3104111 0.8 0
+# layer 3104111 2
+# alpha 3104111 0 0
+# mask 3104111 off
+;;ティファレト
+# body 3503211
+# pos 3503211 3
+# scale 3503211 0.8 0
+# layer 3503211 1
+# alpha 3503211 0 0
+# mask 3503211 off
+;;フェイルノート
+# body 3401911
+# pos 3401911 3
+# scale 3401911 0.8 0
+# layer 3401911 2
+# alpha 3401911 0 0
+# mask 3401911 off
+;;カシウス
+# body 3303111
+# pos 3303111 3
+# scale 3303111 0.8 0
+# layer 3303111 1
+# alpha 3303111 0 0
+# mask 3303111 off
+;;マサムネ
+# body 3100111
+# pos 3100111 3
+# scale 3100111 0.8 0
+# layer 3100111 2
+# alpha 3100111 0 0
+# mask 3100111 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;//背景：ビフレスト
+;;//爆発音
+;;//画面揺れ
+;;//アルマスが画面を横切る
+# textwindow "close"
+# waitandnext 0.2
+
+# se "SE_9096"
+# shake 0 1
+# waitandnext 1
+
+# move 172 1 0
+# face 172 "normal"
+# alpha 172 1 0.5
+# mask 172 off
+# waitandnext 0.5
+
+# se "SE_5575"
+# rightout 172 0.8
+# waitandnext 0.8
+
+# alpha 172 0 0
+# move 139 3 0
+# face 139 "surprise"
+# alpha 139 1 0.5
+# mask 139 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ティターニア
+待って下さい、アルマス
+どこに行くのですかっ？
+
+# alpha 139 0 0.5
+# move 172 3 0
+# face 172 "normal"
+# alpha 172 1 0.5
+# mask 172 off
+# textboxarrow 0 2
+@アルマス
+“私”がやってくれたのよっ
+ちょっとした意趣返しだったん
+でしょうけど…
+
+# face 172 "angry"
+@アルマス
+今回はそれに助けてもらったわ！
+…ここだ
+
+# move 172 2 0.5
+# mask 172 on
+# move 139 4 0
+# face 139 "surprise"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 3
+@ティターニア
+これは…隠し扉？
+奥には何が…
+
+# face 172 "angry"
+# textboxarrow 0 1
+@アルマス
+説明は後っ
+私についてきて、マスター！
+ティニ！
+
+;;//背景：地底
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "underground_world_1"
+# alpha 172 0 0
+# alpha 139 0 0
+# move 3100111 3 0
+# face 3100111 "sad"
+# alpha 3100111 1 0
+# mask 3100111 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# voice 310011 "masamune_ge_0015"
+# textboxarrow 0 2
+# textwindow "normal"
+@マサムネ
+無念…
+
+# voice 1040 "morallta_0015"
+# alpha 3100111 0 0.5
+# move 3104111 2 0
+# face 3104111 "sad"
+# alpha 3104111 1 0.5
+# mask 3104111 on
+# move 3104011 4 0
+# face 3104011 "sad"
+# alpha 3104011 1 0.5
+# mask 3104011 on
+# textboxarrow 0 3
+@モラルタ
+あはは…やっぱり痛いのは
+イヤだね、ベガ…
+
+# voice 1041 "beagallta_0015"
+# textboxarrow 0 1
+@ベガルタ
+ううう…痛いよ、モラぁ…
+
+# voice 4019 "failnaught_a_0007"
+# alpha 3104111 0 0.5
+# alpha 3104011 0 0.5
+# move 3401911 3 0
+# face 3401911 "happy"
+# alpha 3401911 1 0.5
+# mask 3401911 off
+# textboxarrow 0 2
+@フェイルノート
+大したことなかったわね
+さて、そろそろビフレストが
+崩壊する頃よ
+
+# textboxarrow 0 2
+@フェイルノート
+これでバイブス所持者もろとも
+「宝物」も消滅するわ
+
+# voice 310011 "masamune_ge_0038"
+# alpha 3401911 0 0.5
+# move 3100111 3 0
+# face 3100111 "angry"
+# alpha 3100111 1 0.5
+# mask 3100111 off
+# textboxarrow 0 2
+@マサムネ
+おのれっ…
+何という奸計を弄しおったのだ…！
+
+# voice 4019 "failnaught_a_0009"
+# alpha 3100111 0 0.5
+# move 3401911 3 0
+# face 3401911 "normal"
+# alpha 3401911 1 0.5
+# mask 3401911 off
+# textboxarrow 0 2
+@フェイルノート
+仕方ないでしょ
+隠し場所に「宝物」がなかったの
+私たちも驚いたわよ
+
+# voice 5032 "tiphereth_t_0028"
+# move 3401911 2 0.5
+# mask 3401911 on
+# move 3503211 4 0
+# face 3503211 "sad"
+# alpha 3503211 1 0.5
+# mask 3503211 on
+# textboxarrow 0 3
+@ティファレト
+どうして失われたのでしょう…
+“裁定者”に気づかれて
+捨てられてしまったのでしょうか？
+
+# face 3401911 "sad"
+# textboxarrow 0 1
+@フェイルノート
+さあね、そんなところじゃない
+今更、気にしても仕方ないわ…
+
+# voice 3031 "cassius_ge_0003"
+# alpha 3401911 0 0.5
+# alpha 3503211 0 0.5
+# move 3303111 3 0
+# face 3303111 "normal"
+# alpha 3303111 1 0.5
+# mask 3303111 off
+# textboxarrow 0 2
+@カシウス
+わたしたちの根幹が一部、失われる
+それもまた輪廻の理なの…
+
+# alpha 3303111 0 0.5
+# move 3100111 3 0
+# face 3100111 "angry"
+# alpha 3100111 1 0.5
+# mask 3100111 off
+# textboxarrow 0 2
+@マサムネ
+主君！アルマス！ティターニア！
+何ということだっ…
+
+;;//爆発音
+;;//画面揺れ
+# textwindow "close"
+# alpha 3100111 0 0.5
+# waitandnext 0.5
+
+# se "SE_9096"
+# waitandnext 0.5
+
+# se "SE_0637"
+# shake 0 0.5
+# waitandnext 0.5
+
+# voice 5032 "tiphereth_t_0015"
+# move 3503211 3 0
+# face 3503211 "sad"
+# alpha 3503211 1 0.5
+# mask 3503211 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ティファレト
+ビフレストが…崩れ落ちていきます
+あの崩落に巻き込まれては…
+誰も助からないでしょうね…
+
+# alpha 3503211 0 0.5
+# move 3503211 3 0
+# face 3503211 "normal"
+# alpha 3503211 1 0.5
+# mask 3503211 off
+# textboxarrow 0 2
+@ティファレト
+アルマス…どうか、安らかに
+
+# alpha 3503211 0 0.5
+# move 3303111 3 0
+# face 3303111 "normal"
+# alpha 3303111 1 0.5
+# mask 3303111 off
+# textboxarrow 0 2
+@カシウス
+…………
+
+# bgm "stop"
+# alpha 3303111 0 0.5
+# move 3401911 3 0
+# face 3401911 "angry"
+# alpha 3401911 1 0.5
+# mask 3401911 off
+# textboxarrow 0 2
+@フェイルノート
+フン！
+バイブス所持者なんかに
+穢されるからよっ…あのバカ
+
+;;//画面スライド
+# se "SE_0054"
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "bg_black"
+# alpha 3401911 0 0
+# move 172 3 0
+# face 172 "angry"
+# alpha 172 1 0
+# mask 172 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 1038 "almace_0029"
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+せやあああああああああああ！！
+
+;;//アルマスが瓦礫の下から出てくる
+# bgmfile "bgm266" "BgmLostRagnarokBattle001" 0
+# se "SE_9092"
+# textwindow "close"
+# fadeout "white" 0.2
+# waitandnext 0.2
+
+# background "underground_world_1"
+# move 172 2 0
+# face 172 "normal"
+# alpha 172 1 0
+# mask 172 on
+# move 139 4 0
+# face 139 "normal"
+# alpha 139 1 0
+# mask 139 on
+# waitandnext 0.2
+
+# fadein "white" 0.2
+# waitandnext 0.2
+
+# textboxarrow 0 1
+# textwindow "normal"
+@アルマス
+危うく下敷きになるところだったけど
+隠し部屋から隠し通路が延びていて
+助かったわ
+
+# voice 9967 "titania_0063"
+# textboxarrow 0 3
+@ティターニア
+九死に一生を得ましたね
+さあ、アルマス
+
+# voice 1038 "almace_0003"
+# face 172 "angry"
+# textboxarrow 0 1
+@アルマス
+ええ、分かってる
+あの三人にきっちり
+思い知らせてやるわ！
+
+;;//画面スライド
+# se "SE_0054"
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 172 0 0
+# alpha 139 0 0
+# move 3303111 1 0
+# face 3303111 "normal"
+# alpha 3303111 1 0
+# mask 3303111 on
+# move 3401911 3 0
+# face 3401911 "angry"
+# alpha 3401911 1 0
+# mask 3401911 on
+# move 3503211 5 0
+# face 3503211 "normal"
+# alpha 3503211 1 0
+# mask 3503211 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 4019 "failnaught_a_0026"
+# textboxarrow 0 2
+# textwindow "normal"
+@フェイルノート
+あいつ！
+どうやって脱出したのよ！？
+まあ、いいわ…
+
+# face 3503211 "sad"
+# textboxarrow 0 3
+@ティファレト
+やはり、私自身の手で
+救済しなければならないのですね
+
+# imageset 4 "st190301_1"
+# imagealpha 4 0 0
+# imagelayer 4 1
+# voice 3031 "cassius_ge_0004"
+# face 3303111 "happy"
+# textboxarrow 0 1
+@カシウス
+理想社会への一歩を…
+踏み出しましょう！
+
+;;//三人がアルマスに向かってくる
+# fadeout "black" 1
+# waitandnext 1
+
+# textwindow "close"
+# alpha 3303111 0 0
+# alpha 3401911 0 0
+# alpha 3503211 0 0
+# waitandnext 0.5
+
+# fadein "white" 0.5
+# imagealpha 4 1 0
+# imagepos 4 0 0
+# waitandnext 1
+
+# textwindow "normal"
+# textboxarrow 0 0
+@アルマス
+来たわね
+聞きなさい、この調べを！
+
+@アルマス
+これが「私たちの宝物」…
+私たちの思い出を記録した装置
+そして…
+
+@アルマス
+叛逆の始まりを告げる
+角笛の音色よ！
+
+;;//角笛の音色が鳴り響く
+# se "SE_0784"
+# shake 0 1
+# fadeout "black" 1
+# textwindow "close"
+# waitandnext 1
+ 
+# imagealpha 4 0 0
+# waitandnext 0.5
+ 
+# fadein "black" 1
+# waitandnext 1
+
+# textwindow "nomal"
+# voice 5032 "tiphereth_t_0022"
+# alpha 172 0 0.5
+# move 3503211 3 0
+# face 3503211 "surprise"
+# alpha 3503211 1 0.5
+# mask 3503211 off
+# textboxarrow 0 2
+@ティファレト
+これはっ…？
+
+# voice 3031 "cassius_ge_0026"
+# alpha 3503211 0 0.5
+# move 3303111 3 0
+# face 3303111 "sad"
+# alpha 3303111 1 0.5
+# mask 3303111 off
+# textboxarrow 0 2
+@カシウス
+ううっ…
+
+# voice 4019 "failnaught_a_0038"
+# alpha 3303111 0 0.5
+# move 3401911 3 0
+# face 3401911 "angry"
+# alpha 3401911 1 0.5
+# mask 3401911 off
+# textboxarrow 0 2
+@フェイルノート
+ああ…あああああああああああ…！

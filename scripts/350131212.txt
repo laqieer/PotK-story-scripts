@@ -1,0 +1,210 @@
+;;-----------------------------------------
+;;ほむら2-1
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;ほむら
+# body 3501311
+# pos 3501311 3
+# scale 3501311 0.8 0
+# layer 3501311 2
+# alpha 3501311 1 0
+# mask 3501311 off
+;;-----------------------------------------
+;;背景：平原
+# textflame 0 0
+@
+斬ル姫達は
+マスターと打ち解けてくれれば
+と思ってのことだとあっさり白状する
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501311 "surprise"
+# voice 5013 "homura_0028"
+@ほむら
+そういうことだったの？
+今さら着替える訳にもいかないし
+仕方ないわ…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501311 "sad"
+@ほむら
+…貴方のまわりには
+貴方のことを考えてくれる
+人達がいるのね
+
+;;演出：ほむらout
+# alpha 3501311 0 0.5
+# textflame 0 0
+@
+そう言い残すと
+ほむらは去って行ってしまう
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textflame 0 0
+@
+ほむらがマスターについて
+言及するのは珍しいが
+それに応える隙すらなかった…
+
+;;演出：時間経過の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.7
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 3501311 1 0.5
+# face 3501311 "usual"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+道中、ほむらは相変わらず
+ひとりでいることが多い…
+何か声を掛けようと思うマスター
+
+# select "何か気になることがあるの？" "select_label_01" "一息つこうか" "select_label_02" "…今日もいい天気だね" "select_label_03"
+道中、ほむらは相変わらず
+ひとりでいることが多い…
+何か声を掛けようと思うマスター
+
+;;Ａ
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ほむら
+特にないわ
+
+;;Ｂ
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ほむら
+さっき休んだばかりよ
+
+;;Ｃ
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ほむら
+…この辺りは薄暗いけれど
+
+;;答えたあと
+# label "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5013 "homura_0002"
+@ほむら
+…油を売るのは終わりにして
+早く用を済ませるべきよ
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textflame 0 0
+@
+ほむらの返答は素っ気ないが
+マスターに落ち込んだ様子はなかった
+
+;;演出：移動の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：ケイオスリオン郊外
+# background "300_devil_daytime03"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+目的地に着き
+必要な物資を集めるマスター達
+
+# textflame 1 1
+# textboxarrow 0 2
+@ほむら
+…ここにはあまり
+長居しないほうがいいみたいね
+
+# textflame 0 0
+@
+遠目に兵士達が
+マスター達を気にして
+集合していくのが見える
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501311 "angry"
+@ほむら
+完全に気付かれたという
+訳じゃなさそうだけど
+戦闘は避けられないと思うわ
+
+# textflame 1 1
+# textboxarrow 0 2
+@ほむら
+わたしが先手を打つ
+貴方達はこのまま目的を果たして
+
+# textflame 0 0
+@
+自分も手伝うとマスターは言うが
+ほむらはそれを断る
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5013 "homura_0001"
+@ほむら
+貴方には貴方の
+やるべきことがあるはずよ
+
+# textflame 0 0
+@
+ほむらの静かだけれど強い言葉
+
+# textflame 0 0
+@
+だが、マスターは
+それでもほむらをひとりで
+行かせる訳にはいかないと返す
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501311 "usual"
+# voice 5013 "homura_0032"
+@ほむら
+わかったわ
+好きにするといい
+
+# textflame 0 0
+@
+じりじりと迫ってくる
+兵士をマスター達は迎え撃つ

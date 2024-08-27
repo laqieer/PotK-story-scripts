@@ -1,0 +1,607 @@
+;;-----------------------------------------
+;;悪魔サイド4話8_1
+;;-----------------------------------------
+# script "lisp"
+# background "underwild"
+# bgm "stop"
+;;-----------------------------------------
+;;ティルフィング・リンク・エイレーネ
+# body 101415
+# pos 101415 3
+# scale 101415 0.8 0
+# layer 101415 2
+# mask 101415 off
+# alpha 101415 0 0
+;;人々
+# body 2
+# pos 2 3
+# scale 2 0.8 0
+# layer 2 2
+# mask 2 off
+# alpha 2 0 0
+;;魔獣（バイコーン）
+# body 960011
+# pos 960011 3
+# scale 960011 0.8 0
+# layer 960011 2
+# mask 960011 off
+# alpha 960011 0 0
+;;バアル
+# body 960022
+# pos 960022 3
+# scale 960022 0.8 0
+# layer 960022 2
+# mask 960022 off
+# alpha 960022 1 0
+;;ゼロ
+# body 23
+# pos 23 3
+# scale 23 0.8 0
+# layer 23 2
+# mask 23 off
+# alpha 23 0 0
+;;レーヴァテイン
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# layer 100221 2
+# mask 100221 off
+# alpha 100221 0 0
+;;ロンギヌス
+# body 300111
+# pos 300111 3
+# scale 300111 0.8 0
+# layer 300111 2
+# mask 300111 off
+# alpha 300111 0 0
+;;マサムネ
+# body 100111
+# pos 100111 3
+# scale 100111 0.8 0
+# layer 100111 2
+# mask 100111 off
+# alpha 100111 0 0
+;;パラシュ
+# body 200411
+# pos 200411 3
+# scale 200411 0.8 0
+# layer 200411 2
+# mask 200411 off
+# alpha 200411 0 0
+;;マサムネ（♂）
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# layer 1100111 2
+# mask 1100111 off
+# alpha 1100111 0 0
+;;アルテミス（♂）
+# body 1400131
+# pos 1400131 3
+# scale 1400131 0.8 0
+# layer 1400131 2
+# mask 1400131 off
+# alpha 1400131 0 0
+;;八咫鏡（♂）
+# body 1500331
+# pos 1500331 3
+# scale 1500331 0.8 0
+# layer 1500331 2
+# mask 1500331 off
+# alpha 1500331 0 0
+;;ロンギヌス（♂）
+# body 1300111
+# pos 1300111 3
+# scale 1300111 0.8 0
+# layer 1300111 2
+# mask 1300111 off
+# alpha 1300111 0 0
+;;ダグダ（♂）
+# body 1200641
+# pos 1200641 3
+# scale 1200641 0.8 0
+# layer 1200641 2
+# mask 1200641 off
+# alpha 1200641 0 0
+;;アスクレピオス（♂）
+# body 1600111
+# pos 1600111 3
+# scale 1600111 0.8 0
+# layer 1600111 2
+# mask 1600111 off
+# alpha 1600111 0 0
+;;アルテミス
+# body 400131
+# pos 400131 3
+# scale 400131 0.8 0
+# layer 400131 2
+# mask 400131 off
+# alpha 400131 0 0
+;;フライクーゲル
+# body 500211
+# pos 500211 3
+# scale 500211 0.8 0
+# layer 500211 2
+# mask 500211 off
+# alpha 500211 0 0
+;;ブラフマーストラ（♂）
+# body 1500421
+# pos 1500421 3
+# scale 1500421 0.8 0
+# layer 1500421 2
+# mask 1500421 off
+# alpha 1500421 0 0
+;;パラシュ（♂）
+# body 1200411
+# pos 1200411 3
+# scale 1200411 0.8 0
+# layer 1200411 2
+# mask 1200411 off
+# alpha 1200411 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：ユグドラシル：underwild
+# face 960022 "happy"
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# move 23 1 0
+# face 23 "angry_2"
+# voice 8035 "beelzebub_0020"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@バアル
+キャハハハハ！
+じゃあ、トドメだね！
+いただきま～す！
+
+;;バアルをゼロが止める
+# se "SE_9083"
+# fadein "white" 0.5
+# move 23 2 0.3
+# alpha 23 1 0.3
+# mask 23 on
+# move 960022 4 0.3
+# mask 960022 on
+# textboxarrow 0 0
+# waitandnext 1
+
+# voice 11002 "laevateinm_0029"
+# textboxarrow 0 1
+@ゼロ
+ぬああああっ！
+
+# face 960022 "normal"
+# textboxarrow 0 3
+@バアル
+…あれ～？
+まだ、そんな力が残ってたんだ
+
+# bgmfile "bgm154_155" "BgmPJZero001" 0
+# textboxarrow 0 1
+@ゼロ
+バアル…
+舐めるのも大概にしろよ！
+
+;;ゼロがバアルを押し返す
+# se "SE_9017"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# voice 8035 "beelzebub_0022"
+# textboxarrow 0 3
+@バアル
+えっ…？
+何で…？
+
+;;ロンギヌス（♂）
+# alpha 23 0 0.5
+# alpha 960022 0 0.5
+# move 1300111 3 0
+# face 1300111 "normal"
+# mask 1300111 off
+# alpha 1300111 1 0.5
+# textboxarrow 0 2
+@ロンギヌス
+余所見してる暇があるのか？
+
+# se "SE_4200"
+# waitandnext 0.5
+
+# textwindow "close"
+# alpha 1300111 0 0.5
+# move 960022 3 0
+# face 960022 "normal"
+# mask 960022 off
+# alpha 960022 1 0.5
+# waitandnext 0.6
+
+;;ロンギヌスの攻撃をバアルが避ける
+# se "SE_5204"
+# move 960022 4 0.2
+# waitandnext 0.2
+
+# voice 8035 "beelzebub_0023"
+# textboxarrow 0 3
+# textwindow "normal"
+@バアル
+わっ？
+お兄ちゃんも動けるの？
+おかしいな～…
+
+# voice 8035 "beelzebub_0028"
+# textboxarrow 0 3
+@バアル
+みんな抗う意思を食べられて、
+絶望に呑まれたはずなのに…
+
+;;マサムネ（♂）
+# voice 11001 "masamunem_0003"
+# alpha 960022 0 0.5
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 1
+# move 1200641 4 0
+# face 1200641 "normal"
+# alpha 1200641 1 0.5
+# mask 1200641 on
+@マサムネ
+確かに…さっきまで上手く動けずに
+いたが、また胸に火が灯ったんだ
+
+;;ダグダ（♂）
+# face 1200641 "angry"
+# textboxarrow 0 3
+@ダグダ
+希望の灯火がな！
+
+;;アスクレピオス（♂）
+# alpha 1100111 0 0.5
+# alpha 1200641 0 0.5
+# move 1600111 3 0
+# face 1600111 "normal"
+# mask 1600111 off
+# alpha 1600111 1 0.5
+# textboxarrow 0 2
+@アスクレピオス
+そういうこと
+悪いね、皆
+ちょっと腑抜けてたよ
+
+;;アスクレピオス（♂）
+# textboxarrow 0 2
+@アスクレピオス
+ちなみに僕達だけじゃない
+キラープリンセスも再び立ち上がって
+くれたよ
+
+# voice 1002 "revatein_0013"
+# alpha 1600111 0 0.5
+# move 100111 2 0
+# face 100111 "nutual"
+# alpha 100111 1 0.5
+# mask 100111 on
+# move 100221 4 0
+# face 100221 "normal"
+# alpha 100221 1 0.5
+# mask 100221 on
+# textboxarrow 0 3
+@レーヴァテイン
+面倒くさい…
+今度こそ…倒すから
+
+# voice 1001 "masamune_0003"
+# face 100111 "angry"
+# textboxarrow 0 1
+@マサムネ
+そなたを討つまで
+拙者達は決して挫けたりせぬ
+
+# voice 5002 "furaikugeru_0004"
+# alpha 100111 0 0.5
+# alpha 100221 0 0.5
+# move 500211 3 0
+# face 500211 "happy"
+# mask 500211 off
+# alpha 500211 1 0.5
+# textboxarrow 0 2
+@フライクーゲル
+ヘァピィな未来目指して、
+レッツ、シューティン！
+
+# alpha 500211 0 0.5
+# move 960022 3 0
+# face 960022 "normal"
+# mask 960022 off
+# alpha 960022 1 0.5
+# textboxarrow 0 2
+@バアル
+何で…
+何でみんな意思を取り戻してるの？
+…いいよ、だったら
+
+# voice 8035 "beelzebub_0004"
+# face 960022 "happy"
+# textboxarrow 0 2
+@バアル
+また食らい尽くしてあげるから！
+
+;;バアルがユグドラシルに噛みつく
+# se "SE_6202"
+# fadein "red" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+@バアル
+…………
+
+# voice 8035 "beelzebub_0022"
+# face 960022 "normal"
+# textboxarrow 0 2
+@バアル
+…何で？
+みんなの意思が食べられない
+何かに守られてる…？
+
+# textboxarrow 0 2
+@バアル
+これって…
+
+# alpha 960022 0 0.5
+# move 101415 3 0
+# face 101415 "angry"
+# mask 101415 off
+# alpha 101415 1 0.5
+# textboxarrow 0 2
+@ティルフィング
+それは「希望」です
+アナタがどんなに食べようとしても
+決して食べ尽くせはしない
+
+# textboxarrow 0 2
+@ティルフィング
+私達に残された
+揺るぎない力です！
+
+;;背景：地上世界：ground_surface_break
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "ground_surface_break"
+# alpha 101415 0 0
+# move 960011 2 0
+# alpha 960011 1 0
+# mask 960011 on
+# move 2 4 0
+# face 2 "angry"
+# alpha 2 1 0
+# mask 2 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 3
+# textwindow "normal"
+@人々
+そうだ…
+どんなに辛くても…
+どんなに苦しくても…
+
+# textboxarrow 0 3
+@人々
+何度、打ちのめされても…
+俺達私達は立ち上がれる
+
+# textboxarrow 0 3
+@人々
+この胸に宿った希望さえあれば！
+
+# se "SE_0792"
+# textboxarrow 0 1
+@魔獣
+グルルルルルルル！
+
+# textboxarrow 0 3
+@人々
+負けるものか…！
+この世界を取り戻すんだ！
+
+# se "SE_6212"
+# textboxarrow 0 3
+# serif 1
+@人々
+オオオオオオオオオ！
+
+;;矢が魔獣を射る
+# se "SE_4301"
+# sedelay "SE_4817" 0.5
+# waitandnext 0.5
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_0794"
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 1
+@魔獣
+グルルルル…
+
+;;アルテミス（♂）
+# alpha 2 0 0.5
+# move 1400131 4 0
+# face 1400131 "angry"
+# alpha 1400131 1 0.5
+# mask 1400131 on
+# textboxarrow 0 3
+@アルテミス
+そうだ！
+僕達の手で未来を掴むぞ！
+
+# voice 4001 "arutemisu_0033"
+# alpha 1400131 0 0.5
+# move 400131 4 0
+# face 400131 "angry"
+# alpha 400131 1 0.5
+# mask 400131 on
+# textboxarrow 0 3
+@アルテミス
+皆さんは無理をしないように
+戦いは私達に任せて下さい
+
+;;ブラフマーストラ（♂）
+# voice 15004 "brahmaastram_unit_0009"
+# alpha 400131 0 0.5
+# move 1500421 4 0
+# face 1500421 "normal"
+# alpha 1500421 1 0.5
+# mask 1500421 on
+# textboxarrow 0 3
+@ブラフマーストラ
+太陽は朝、月は夜
+つまり俺が最強ってこと！
+
+;;銃で魔獣を倒す
+# se "SE_4400"
+# fadein "white" 0.5
+# effectbody 2000 28 -200 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+# textwindow "close"
+# alpha 960011 0 1
+# waitandnext 1
+
+# voice 2004 "parashu_0039"
+# alpha 1500421 0 0.5
+# move 960011 2 0
+# alpha 960011 1 0.5
+# mask 960011 on
+# move 200411 4 0
+# face 200411 "normal"
+# alpha 200411 1 0.5
+# mask 200411 on
+# textwindow "normal"
+# textboxarrow 0 3
+@パラシュ
+イルファーン…
+君、相変わらず意味が分からないね
+でも、ちゃんと通じてるよ！
+
+;;斧で魔獣を斬る
+# se "SE_4100"
+# sedelay "SE_4816" 1
+# waitandnext 1
+
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;パラシュ（♂）
+# voice 12004 "parashm_0004"
+# alpha 960011 0 0.5
+# alpha 200411 0 0.5
+# move 1200411 3 0
+# face 1200411 "smile"
+# mask 1200411 off
+# alpha 1200411 1 0.5
+# textboxarrow 0 2
+@パラシュ
+こんなに可愛い子達と一緒に
+戦えるなんて、オジサン嬉しいね～
+
+;;八咫鏡（♂）
+# alpha 1200411 0 0.5
+# move 1500331 3 0
+# face 1500331 "normal"
+# mask 1500331 off
+# alpha 1500331 1 0.5
+# textboxarrow 0 2
+@八咫鏡
+魔獣どもよ
+うぬらの命運、尽きたと思え
+我が進む道に真理あり
+
+;;ブラフマーストラ（♂）
+# alpha 1500331 0 0.5
+# move 1500421 3 0
+# face 1500421 "normal"
+# mask 1500421 off
+# alpha 1500421 1 0.5
+# textboxarrow 0 2
+@ブラフマーストラ
+真理！
+つまりオレもアンタ達も宇宙と
+繋がってる！だから最強！
+
+# voice 3001 "ronginusu_0042"
+# alpha 1500421 0 0.5
+# move 300111 3 0
+# face 300111 "normal"
+# mask 300111 off
+# alpha 300111 1 0.5
+# textboxarrow 0 2
+@ロンギヌス
+あわわわ…
+私も、頑張りますっ
+
+;;背景：ユグドラシル：underwild
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "underwild"
+# alpha 300111 0 0
+# move 101415 2 0
+# face 101415 "normal"
+# alpha 101415 1 0
+# mask 101415 on
+# move 960022 4 0
+# face 960022 "normal"
+# alpha 960022 1 0
+# mask 960022 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 3
+# textwindow "normal"
+@バアル
+みんなが希望を抱いてる…
+どうして？
+何でこんなことになってるの？
+
+# textboxarrow 0 1
+@ティルフィング
+誰かが私達の心に
+希望を宿してくれたんです
+それが誰なのかは分かりませんが…
+
+;;バトル
+# imagealpha 1 1 0
+# imagepos 1 0 30
+# imageleftin 1 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 101415 0 0
+# alpha 960022 0 0
+# waitandnext 0.2

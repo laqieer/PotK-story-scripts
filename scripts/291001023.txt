@@ -1,0 +1,324 @@
+;;-----------------------------------------
+;;■□■神器レーヴァテイン再強化イベントシナリオ_20190610■□■
+;;【第12話】光を共に
+;;12_3
+;;スクリプト最後の背景：街（夜）
+;;-----------------------------------------
+# script "lisp"
+# background "highland"
+# bgm "bgm023" 0
+;;-----------------------------------------
+;;レーヴァテイン
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# layer 100221 2
+# alpha 100221 0 0
+# mask 100221 off
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 2
+# alpha 810004 0 0
+# mask 810004 off
+;;村長
+# body 1
+# pos 1 3
+# scale 1 0.8 0
+# layer 1 2
+# alpha 1 0 0
+# mask 1 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;//バトル（VS異族）
+;;//背景：丘
+;;モノローグ
+# textflame 0 0
+@
+とある町に立ち寄った際に依頼された
+異族討伐―
+
+# voice 1002 "revatein_0029"
+# move 100221 3 0
+# face 100221 "angry"
+# alpha 100221 1 0.5
+# mask 100221 off
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+はぁっ！
+
+;;//異族を切る演出
+# textwindow "close"
+# alpha 100221 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# waitandnext 0.8
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# se "SE_0669"
+# textboxarrow 0 2
+# textwindow "normal"
+@異族
+グォォォォ…ォ…
+
+;;//異族倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 810004 0 0.5
+# waitandnext 1
+
+# move 100221 3 0
+# face 100221 "normal"
+# alpha 100221 1 0.5
+# mask 100221 off
+# textboxarrow 0 2
+# textwindow "normal"
+@レーヴァテイン
+これでお終い？
+
+;;モノローグ
+# textflame 0 0
+@
+辺りを見渡すレーヴァテインに
+マスターも頷き返した
+
+# voice 1002 "revatein_0013"
+# face 100221 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+まだ足りない…
+はぁ…イライラする
+
+# textboxarrow 0 2
+@レーヴァテイン
+ん…マスターのせいじゃないから
+ただ、全然前に進んでない気がする
+
+;;モノローグ
+# textflame 0 0
+@
+自分の実力が上がっている実感が
+ないからか、彼女の表情は暗い
+
+;;モノローグ
+@
+強くなるなら経験が必要だと
+思ったんだけど…と
+マスターも首をひねる
+
+# face 100221 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+別に…元々手がかりすらないんだし…
+それより、さっさと報告しよ
+めんどうだし
+
+;;モノローグ
+# alpha 100221 0 0.5
+# textflame 0 0
+@
+そう言ってさっさと踵を返す彼女を
+遅れてマスターも追いかけた…
+
+;;//場面転換
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "005_Wilderness"
+# move 1 3 0
+# face 1 "smile"
+# alpha 1 1 0
+# mask 1 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;//背景：村
+# bgm "bgm005" 0
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@村長
+感謝しますぞ、マスター
+これで異族の脅威に
+怯えずにすむ
+
+# textboxarrow 0 2
+@村長
+教会から呼ばれたマスターが
+こんな若造で心配しておりましたが
+無用のものでしたな
+
+# alpha 1 0 0.5
+# move 100221 3 0
+# face 100221 "normal"
+# alpha 100221 1 0.5
+# mask 100221 off
+# textboxarrow 0 2
+@レーヴァテイン
+…………
+
+# alpha 100221 0 0.5
+# move 1 3 0
+# face 1 "angry"
+# alpha 1 1 0.5
+# mask 1 off
+# textboxarrow 0 2
+@村長
+それにしても、キル姫という者も
+恐ろしいですな
+
+# textboxarrow 0 2
+@村長
+子供の頃にキル姫の戦いを
+見たことがありますが…
+まさに狂っているとしか
+
+# textboxarrow 0 2
+@村長
+最近では、凄まじく強いキル姫の
+噂がありますし、
+いつその刃が私たちに…
+
+# voice 1002 "revatein_0023"
+# alpha 1 0 0.5
+# move 100221 3 0
+# face 100221 "surprise"
+# alpha 100221 1 0.5
+# mask 100221 off
+# textboxarrow 0 2
+@レーヴァテイン
+凄まじく強いキル姫…？
+
+;;モノローグ
+# textflame 0 0
+@
+なにか感じるものがあったのか
+小さく声にしたレーヴァテインに
+気づき、マスターが村長に尋ねる
+
+# alpha 100221 0 0.5
+# move 1 3 0
+# face 1 "normal"
+# alpha 1 1 0.5
+# mask 1 off
+# textflame 1 1
+# textboxarrow 0 2
+@村長
+ええ、ええ
+恐ろしく強いキル姫が、異族どころか
+キル姫すら倒しているとか
+
+# textboxarrow 0 2
+@村長
+まあ、あくまで噂ですよ
+場所もユグドラシルに近い場所です
+
+# textboxarrow 0 2
+@村長
+こんな辺鄙な村ですから、
+噂に尾ひれがつくのも
+仕方のないことでしょうな
+
+# alpha 1 0 0.5
+# move 100221 3 0
+# face 100221 "sad"
+# alpha 100221 1 0.5
+# mask 100221 off
+# textboxarrow 0 2
+@レーヴァテイン
+…………
+
+;;//暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "005_Wilderness_Night"
+# alpha 100221 0 0
+# move 100221 3 0
+# face 100221 "normal"
+# alpha 100221 1 0
+# mask 100221 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//背景：街（夜）
+# voice 1002 "revatein_0001"
+# textboxarrow 0 2
+# textwindow "normal"
+@レーヴァテイン
+マスター
+
+;;モノローグ
+# textflame 0 0
+@
+その日の夜、宿を取って休んでいると
+レーヴァテインが真剣な眼差しで
+声をかけてきた
+
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+なんか気になる
+
+;;モノローグ
+# textflame 0 0
+@
+昼間のこと？
+とマスターが尋ねると
+彼女は小さく頷く
+
+# voice 1002 "revatein_0003"
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+なんとなく…ううん、
+絶対私が行かないといけない
+
+# textboxarrow 0 2
+@レーヴァテイン
+そんな気が…
+確信がある…
+
+;;モノローグ
+# textflame 0 0
+@
+キル姫同士の…
+なにかに当てられたのか
+彼女の顔は上気していた
+
+# face 100221 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+マスターが拒否しても行くから
+忘れないで
+
+;;モノローグ
+# se "SE_0740"
+# alpha 100221 0 0.5
+# textflame 0 0
+@
+そう言って部屋を出て行く彼女からは
+今までに感じたことのない熱が発せられていた

@@ -1,0 +1,537 @@
+;;-----------------------------------------
+;;ファンキル　2020ウェディングイベントシナリオ
+;;Will you marry us?
+;;【EP.4】エンゲージリング争奪戦
+;;EP4_1
+;;スクリプト最後の背景：ハルモニア市街地
+;;-----------------------------------------
+# script "lisp"
+# background "400_angel_town_daytime"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;レーヴァテイン
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# layer 3100211 2
+# alpha 3100211 0 0
+# mask 3100211 off
+;;ムー
+# body 161
+# pos 161 3
+# scale 161 0.6 0
+# layer 161 3
+# alpha 161 0 0
+# mask 161 off
+;;ハルモニア兵
+# body 3810001
+# pos 3810001 3
+# scale 3810001 0.8 0
+# layer 3810001 2
+# alpha 3810001 0 0
+# mask 3810001 off
+;;グラウ
+# body 164
+# pos 164 3
+# scale 164 0.6 0
+# layer 164 3
+# alpha 164 0 0
+# mask 164 off
+;;ソロモンウェディング
+# body 3503131
+# pos 3503131 3
+# scale 3503131 0.8 0
+# layer 3503131 2
+# alpha 3503131 0 0
+# mask 3503131 off
+;;カシウス・獣刻・ウロボロス　ウェディングver.
+# body 3303131
+# pos 3303131 3
+# scale 3303131 0.8 0
+# layer 3303131 2
+# alpha 3303131 0 0
+# mask 3303131 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;【EP.4】エンゲージリング争奪戦
+;;//コメント：後編のレーヴァテインの出番を増やすため、EP4冒頭に少し登場させています。
+;;//コメント：便宜上、ハルモニア兵の名前に数字をつけております。
+;;//背景：ハルモニア市街地
+;;//演出：画面揺れ
+;;//ＳＥ：ザシュッ！（兵が攻撃される音）
+# textwindow "close"
+# move 3810001 2 0
+# alpha 3810001 1 0
+# mask 3810001 on
+# move 3100211 4 0
+# face 3100211 "normal"
+# alpha 3100211 1 0
+# mask 3100211 on
+# waitandnext 0.5
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 -200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 1
+# textwindow "normal"
+@ハルモニア兵
+ぐあぁああああっ…！！
+
+;;//ＳＥ：ドサッ（兵が倒れる音）
+# se "SE_3001"
+# waitandnext 0.5
+
+# face 3100211 "angry"
+# textboxarrow 0 3
+@レーヴァテイン
+なんなのよ、一体
+随分と大掛かりに
+兵を集めているみたいだけど
+
+# textboxarrow 0 1
+@ハルモニア兵
+くっ…我々は諦めませんよ
+せっかく掴んだ、
+ソロモンの指輪の情報を…
+
+# emotionbody 1001 2 3100211 10 290
+# effectpattern 1001 1 1
+# effectstart 1001
+# voice 310021 "revatein_ge_0023"
+# face 3100211 "surprise"
+# textboxarrow 0 3
+@レーヴァテイン
+え？ソロモン？
+そういえば、ハルモニアに
+行くって言ってたわね
+
+# textboxarrow 0 1
+@ハルモニア兵
+ソロモンの指輪さえあれば
+アナタのような強い斬ル姫を
+操ることができるのに…
+
+# voice 310021 "revatein_ge_0027"
+# face 3100211 "angry"
+# textboxarrow 0 3
+@レーヴァテイン
+はぁ…
+まだ、そんな野望を持ってるの？
+いい加減、諦めたら？
+
+;;//ＳＥ：ざわざわざわ…（街のざわめき）
+# se "SE_0902"
+# waitandnext 0.5
+
+# face 3100211 "surprise"
+# textboxarrow 0 3
+@レーヴァテイン
+…ん？
+なにかあったのかしら…
+
+# textwindow "close"
+# alpha 3810001 0 0.5
+# alpha 3100211 0 0.5
+# serif 1
+@市民
+なあ、聞いたか？
+ウェディングドレス姿の美女が
+二人も現れたって！
+
+# serif 1
+@市民
+しかも、変な機械みたいな生物を
+連れているみたいだぜ
+
+# serif 1
+@市民
+なんだそれ？
+気になるな…見に行くか！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 310021 "revatein_ge_0069"
+# move 3100211 3 0
+# face 3100211 "normal"
+# alpha 3100211 1 0.5
+# mask 3100211 off
+# textboxarrow 0 2
+# textwindow "normal"
+@レーヴァテイン
+嫌な予感がするわ
+ムー、ちょっと見てきて
+くれないかしら？
+
+# face 3100211 "surprise"
+# textboxarrow 0 2
+@レーヴァテイン
+あれ？
+ムー？
+
+# face 3100211 "angry"
+# textboxarrow 0 2
+@レーヴァテイン
+………まさか
+
+;;//演出：場面転換
+;;//背景：ハルモニア市街地
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 3100211 0 0
+# move 3303131 1 0
+# face 3303131 "usual"
+# alpha 3303131 1 0
+# mask 3303131 on
+# move 161 3 0
+# alpha 161 1 0
+# mask 161 on
+# move 3503131 4 0
+# face 3503131 "usual"
+# alpha 3503131 1 0
+# mask 3503131 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;カシウス（以下、ウェディング姿）
+# bgmfile "bgm334_335" "BgmWedding001" 0
+# textboxarrow 0 1
+# textwindow "normal"
+@カシウス
+…それで？
+
+;;ソロモン（以下、ウェディング姿）
+# textboxarrow 0 3
+@ソロモン
+どうしてドレスを
+着せられてるのか、
+説明してもらえるかしら…？
+
+# emotionbody 1002 10 161 -60 180
+# effectpattern 1002 4 3
+# effectstart 1002
+# voice 9953 "mwu_0020"
+# textboxarrow 0 2
+@ムー
+おー、いいねぇ
+二人ともなかなか
+似合ってんじゃねえかっ！
+
+# effectskip 1002
+# face 3503131 "angry"
+# textboxarrow 0 3
+@ソロモン
+それはどうも…
+って、そうじゃなくて！
+
+# textboxarrow 0 2
+@ムー
+あーあー、うるせえなぁ…
+さっきちゃんと言っただろ？
+
+# textboxarrow 0 2
+@ムー
+どっちがマスターの
+花嫁にふさわしいか、
+勝負で決着つけようぜってな！
+
+# textboxarrow 0 2
+@ムー
+ただ、斬ル姫がここで動き回ってたら
+マズいだろ？
+だから変装ってわけだ
+
+# textboxarrow 0 3
+@ソロモン
+ウェディングドレスを選んだ意味は？
+
+# textboxarrow 0 2
+@ムー
+俺の趣味だ…っては冗談で
+今は結婚式が多いだろ？
+
+# textboxarrow 0 1
+@カシウス
+確かに町で
+結婚式を挙げている人が
+多いわ
+
+# textboxarrow 0 2
+@ムー
+だろ？
+じゃあ、さっそく
+本題に入るぜ
+
+# textboxarrow 0 2
+@ムー
+今からお前らには、
+俺が持ってるこの指輪を
+奪い合ってもらう！
+
+# textboxarrow 0 2
+@ムー
+先に俺を捕まえて、
+指輪をゲットした方の勝ち！
+
+# textboxarrow 0 2
+@ムー
+カシウスが勝てば
+マスターと結婚できる
+
+# textboxarrow 0 2
+@ムー
+で、ソロモンが勝てば
+マスターの結婚を
+阻止できるってわけだ
+
+# textboxarrow 0 2
+@ムー
+つまり、カシウスは
+指輪を嵌める以外の方法で
+マスターを起こしてもらう
+
+# textboxarrow 0 1
+@カシウス
+…理解した
+その勝負、乗ってあげる
+
+# emotionbody 1003 1 3503131 10 310
+# effectpattern 1003 2 0
+# effectstart 1003
+# voice 5031 "solomon_t_0009"
+# face 3503131 "angry"
+# textboxarrow 0 3
+@ソロモン
+ちょっとっ！？
+カシウス、何を…！
+
+# textboxarrow 0 1
+@カシウス
+ルールに不満はない…
+勝負に勝って、予定通り
+御館様と結婚するだけ
+
+# voice 5031 "solomon_t_0037"
+# textboxarrow 0 3
+@ソロモン
+くうっ…！
+どうしてそんなにあっさりと
+適応できるの！？
+
+# textboxarrow 0 2
+@ムー
+おいおい
+このままだとマスターが
+カシウスに取られちまうぞ
+
+# textboxarrow 0 3
+@ソロモン
+っ！
+わ、わかったわ
+勝負を受けるわ
+
+# voice 9950 "glau_0043"
+# alpha 161 0 0.5
+# move 164 3 0
+# alpha 164 1 0.5
+# mask 164 on
+# textboxarrow 0 2
+@グラウ
+ソロモン
+気絶中のマスターの退避、
+無事に完了しました
+
+# voice 5031 "solomon_t_0002"
+# face 3503131 "usual"
+# textboxarrow 0 3
+@ソロモン
+あ…ありがとうグラウ
+ねえ、グラウからも
+何か言ってくれない？
+
+# textboxarrow 0 3
+@ソロモン
+こんなのどう考えても
+最適解には程遠いわ！
+そうでしょ？
+
+# voice 9950 "glau_0034"
+# textboxarrow 0 2
+@グラウ
+…私の計算によりますと
+
+# textboxarrow 0 2
+@グラウ
+ソロモンがカシウスを説得できる
+確率はゼロです
+勝負に勝つしかありません
+
+# emotionbody 1004 1 3503131 10 310
+# effectpattern 1004 2 0
+# effectstart 1004
+# voice 5031 "solomon_t_0023"
+# face 3503131 "surprise"
+# textboxarrow 0 3
+@ソロモン
+ええっ！？
+グ、グラウまでそんな…！
+
+# textboxarrow 0 2
+@グラウ
+安心してください
+マスターは私が
+見守っていますので
+
+# alpha 164 0 0.5
+# move 161 3 0
+# alpha 161 1 0.5
+# mask 161 on
+# textboxarrow 0 2
+@ムー
+ほらっ、早いとこ始めようぜ！
+
+# voice 9953 "mwu_0002"
+# textboxarrow 0 2
+@ムー
+準備はいいか？
+よーい、スタートっ！
+
+# voice 3031 "cassius_ge_0001"
+# textboxarrow 0 1
+@カシウス
+…待っていて、御館様
+わたしが必ず勝ってみせる
+
+# emotionbody 1005 1 3503131 10 310
+# effectpattern 1005 2 0
+# effectstart 1005
+# face 3503131 "surprise"
+# textboxarrow 0 3
+@ソロモン
+ちょ、待って！
+私も行っ…ひあっ！？
+
+;;//ソロモンとカシウス、画面から消える
+# textwindow "close"
+# alpha 3303131 0 0.5
+# alpha 3503131 0 0.5
+# waitandnext 0.5
+
+;;//演出：画面揺れ
+;;//ＳＥ：ズボッ（落とし穴に落ちる音）
+# se "SE_0903"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# emotionbody 1006 10 161 -60 180
+# effectpattern 1006 4 3
+# effectstart 1006
+# voice 9953 "mwu_0005"
+# mask 161 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ムー
+はははっ！
+いい引っかかりっぷりだなぁ！
+
+# effectskip 1006
+# alpha 161 0 0.5
+# move 3503131 3 0
+# face 3503131 "surprise"
+# alpha 3503131 1 0.5
+# mask 3503131 off
+# textboxarrow 0 2
+@ソロモン
+けほ…けほ…
+なによこれ、落とし穴！？
+
+# emotionbody 1007 6 3303131 50 250
+# effectpattern 1007 1 1
+# effectstart 1007
+# voice 3031 "cassius_ge_0009"
+# alpha 3503131 0 0.5
+# move 3303131 3 0
+# face 3303131 "angry"
+# alpha 3303131 1 0.5
+# mask 3303131 off
+# textboxarrow 0 2
+@カシウス
+…あなたの仕業？
+こんな街中に落とし穴なんて
+あるわけない…
+
+# voice 9953 "mwu_0032"
+# alpha 3303131 0 0.5
+# move 161 3 0
+# alpha 161 1 0.5
+# mask 161 off
+# textboxarrow 0 2
+@ムー
+その通り！
+この辺にはあらかじめ
+罠を仕掛けておいたのさ
+
+# textboxarrow 0 2
+@ムー
+せっかくのドレスなんだ
+汚さないように気をつけろよ！
+じゃあな～
+
+;;//ムー、去っていく
+# se "SE_4747"
+# textwindow "close"
+# leftout 161 0.5
+# waitandnext 0.5
+
+# alpha 161 0 0
+# move 3503131 3 0
+# face 3503131 "angry"
+# alpha 3503131 1 0.5
+# mask 3503131 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ソロモン
+ああっ、待ちなさいっ！
+
+# alpha 3503131 0 0.5
+# move 3810001 3 0
+# alpha 3810001 1 0.5
+# mask 3810001 off
+# textboxarrow 0 2
+@ハルモニア兵
+…いました！
+あの小さい生き物が
+指輪を持って飛び去りました！
+
+# alpha 3810001 0 0.5
+# move 3303131 2 0
+# face 3303131 "usual"
+# alpha 3303131 1 0.5
+# mask 3303131 on
+# move 3503131 4 0
+# face 3503131 "usual"
+# alpha 3503131 1 0.5
+# mask 3503131 on
+# textboxarrow 0 3
+@ソロモン
+まだ指輪を諦めていなかったのね
+
+# face 3303131 "angry"
+# textboxarrow 0 1
+@カシウス
+邪魔者は排除するだけよ

@@ -1,0 +1,359 @@
+;;-----------------------------------------
+;;「サイコパス」コラボイベント シナリオ
+;;【EP1】戦闘後
+;;スクリプト最後の背景：荒野　004_wildland
+;;背景：荒野　004_wildland
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm051" "BgmPPcollabo001" 0
+;;-----------------------------------------
+;;ロンギヌス ブラックキラーズ執行官衣装ver.
+# body 5300141
+# pos 5300141 3
+# scale 5300141 0.8 0
+# layer 5300141 2
+# alpha 5300141 0 0
+# mask 5300141 off
+;;ティルフィング ブラックキラーズ執行官衣装ver.
+# body 5101411
+# pos 5101411 3
+# scale 5101411 0.8 0
+# layer 5101411 2
+# alpha 5101411 0 0
+# mask 5101411 off
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 3
+# alpha 810004 0 0
+# mask 810004 off
+;;アルテミス ブラックキラーズ執行官衣装ver.
+# body 5400111
+# pos 5400111 3
+# scale 5400111 0.8 0
+# layer 5400111 2
+# alpha 5400111 0 0
+# mask 5400111 off
+;;霜月美佳
+# body 501211
+# pos 501211 3
+# scale 501211 0.8 0
+# layer 501211 4
+# alpha 501211 0 0
+# mask 501211 off
+;;マサムネ ブラックキラーズ
+# body 100161
+# pos 100161 3
+# scale 100161 0.8 0
+# layer 100161 2
+# alpha 100161 0 0
+# mask 100161 off
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+# textwindow "close"
+# waitandnext 0.2
+
+# background "004_wildland"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# move 810004 3 0
+# alpha 810004 1 0
+# mask 810004 off
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_0617"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "nomal"
+@異族
+ギイイイイイイ！！
+
+# voice 5012 "mika_battle_0008"
+# alpha 810004 0 0.5
+# move 501211 3 0
+# face 501211 "surprise"
+# alpha 501211 1 0.5
+# mask 501211 off
+# textboxarrow 0 2
+@霜月美佳
+きゃあっ！
+
+;;モノローグ
+# textflame 0 0
+@
+剣士に加勢しようとした美佳だが、
+その強さに圧倒されていく
+
+# face 501211 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@霜月美佳
+はぁ…はぁ…
+こ、こんなところで……
+
+# textboxarrow 0 2
+@霜月美佳
+死にたくない…死にたくない…！
+
+# alpha 501211 0 0.3
+# move 810004 4 0
+# move 810004 3 0.5
+# alpha 810004 1 0.3
+# mask 810004 off
+# textboxarrow 0 2
+@異族
+ギギギギ！
+
+;;モノローグ
+# textflame 0 0
+@
+２人に向かって、襲い来る異族
+
+# alpha 810004 0 0.5
+# move 100161 3 0
+# face 100161 "angry"
+# alpha 100161 1 0.5
+# mask 100161 off
+# textflame 1 1
+# textboxarrow 0 2
+@マサムネ
+拙者とて……
+このようなところで！！
+
+# textboxarrow 0 2
+@マサムネ
+死ぬわけには
+いかないのだぁぁぁっ！！
+
+# se "SE_0618"
+# move 100161 2 0.5
+# mask 100161 on
+# move 810004 5 0
+# move 810004 4 0.5
+# alpha 810004 1 0.3
+# mask 810004 on
+# textboxarrow 0 3
+@異族
+ギイイイイイイ！！
+
+;;モノローグ
+# se "SE_8000"
+# textflame 0 0
+@
+剣を構える彼女
+
+;;モノローグ
+@
+だが――
+
+# voice 10016 "masamune_k_0022"
+# face 100161 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+！？
+
+# textwindow "close"
+# alpha 100161 0 0.5
+# alpha 810004 0 0.5
+# waitandnext 0.5
+
+# voice 10147 "tyrufing_k_0029"
+# move 5101411 4 0
+# move 5101411 3 0.3
+# face 5101411 "angry"
+# alpha 5101411 1 0.3
+# mask 5101411 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+はぁぁぁぁっ！！
+
+# voice 30018 "ronginusu_k_0029"
+# alpha 5101411 0 0.3
+# move 5300141 4 0
+# move 5300141 3 0.3
+# face 5300141 "angry"
+# alpha 5300141 1 0.3
+# mask 5300141 off
+# textboxarrow 0 2
+@ロンギヌス
+えぇぇぇいっ！！
+
+# voice 40015 "arutemisu_k_battle_0003"
+# alpha 5300141 0 0.3
+# move 5400111 2 0
+# move 5400111 3 0.3
+# face 5400111 "angry"
+# alpha 5400111 1 0.3
+# mask 5400111 off
+# textboxarrow 0 2
+@アルテミス
+ふん！！
+
+# textwindow "close"
+# alpha 5400111 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# waitandnext 0.5
+
+# se "SE_12720"
+# effectbody 1000 30 0 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# se "SE_0669"
+# bgm "stop"
+# textboxarrow 0 2
+# textwindow "normal"
+@異族
+ギイイイイッ！
+
+;;モノローグ
+# textflame 0 0
+@
+マサムネの剣よりも速く、
+黒い３人のキル姫の攻撃が
+異族を葬り去るのだった
+
+# alpha 810004 0 0.5
+# move 100161 2 0
+# face 100161 "normal"
+# alpha 100161 1 0.5
+# mask 100161 on
+# move 5101411 4 0
+# face 5101411 "normal"
+# alpha 5101411 1 0.5
+# mask 5101411 on
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+大丈夫でしたか？
+
+# face 100161 "surprise"
+# textboxarrow 0 1
+@マサムネ
+………！
+
+# alpha 100161 0 0.5
+# alpha 5101411 0 0.5
+# move 5400111 2 0
+# face 5400111 "angry"
+# alpha 5400111 1 0.5
+# mask 5400111 on
+# textboxarrow 0 1
+# move 5300141 4 0
+# face 5300141 "normal"
+# alpha 5300141 1 0.5
+# mask 5300141 on
+@アルテミス
+ティルフィング、
+私達には次の任務がある
+急ぎましょう
+
+# textboxarrow 0 3
+@ロンギヌス
+ここら一帯は、
+新種の異族のテリトリーです
+お二人とも気を付けて下さいね
+
+# alpha 5400111 0 0.5
+# alpha 5300141 0 0.5
+# move 100161 2 0
+# face 100161 "surprise"
+# alpha 100161 1 0.5
+# mask 100161 on
+# textboxarrow 0 1
+# move 501211 4 0
+# face 501211 "surprise"
+# alpha 501211 1 0.5
+# mask 501211 on
+@マサムネ
+………ッ！！
+
+;;モノローグ
+# textflame 0 0
+@
+それだけ言って、
+黒いキル姫達は
+その場を後にした
+
+# se "SE_0648"
+# face 501211 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@霜月美佳
+た……助かった……
+
+# voice 10016 "masamune_k_battle_0005"
+# face 100161 "irregular"
+# textboxarrow 0 1
+@マサムネ
+………くっ！
+なんたる不覚…！
+
+# voice 5012 "mika_0004"
+# face 501211 "happy"
+# textboxarrow 0 3
+@霜月美佳
+いいじゃない
+命があるだけ
+
+# textboxarrow 0 1
+@マサムネ
+……
+
+# bgmfile "bgm092" "BgmPPcollabo002" 0
+# textboxarrow 0 3
+@霜月美佳
+私は公安局刑事課一係所属、
+監視官・霜月美佳
+
+# face 100161 "surprise"
+# textboxarrow 0 1
+@マサムネ
+……？
+
+# face 501211 "normal"
+# textboxarrow 0 3
+@霜月美佳
+…って言っても分かんないよね
+あなた、名前は？
+
+# face 100161 "usual"
+# textboxarrow 0 1
+@マサムネ
+……拙者は…
+マサムネ
+
+# textboxarrow 0 1
+@マサムネ
+憤怒の業を背負う、
+ただの一振りの刀だ
+
+# face 501211 "happy"
+# textboxarrow 0 3
+@霜月美佳
+マサムネ……か
+
+;;モノローグ
+# textflame 0 0
+@
+マサムネと美佳
+
+;;モノローグ
+@
+これが２人の出会いだった
+
+# fadeout "black" 1
+# waitandnext 1

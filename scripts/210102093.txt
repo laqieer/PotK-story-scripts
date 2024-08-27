@@ -1,0 +1,397 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１０章 章タイトル「勝利を招く悪魔―フレイルティ―」
+;;第2話－９　タイトル：強くある者
+;;2_9_3
+;;スクリプト最後の背景：下町
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;フェイルノート
+# body 167
+# pos 167 3
+# scale 167 0.8 0
+# layer 167 2
+# alpha 167 0 0
+# mask 167 off
+;;フェイルノート（誓約）ボイス用
+# body 5401911
+# alpha 5401911 0 0
+;;方天画戟・D. plug・アバドン
+# body 3300311
+# pos 3300311 3
+# scale 3300311 0.8 0
+# layer 3300311 2
+# alpha 3300311 0 0
+# mask 3300311 off
+;;ハルパー・聖鎖・ゼルエル
+# body 3202011
+# pos 3202011 3
+# scale 3202011 0.8 0
+# layer 3202011 2
+# alpha 3202011 0 0
+# mask 3202011 off
+;;-----------------------------------------
+# voice 330031 "hotengageki_a_battle_0005"
+# move 3300311 2 0
+# face 3300311 "angry"
+# alpha 3300311 1 0
+# mask 3300311 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 167 4 0
+# face 167 "normal"
+# alpha 167 1 0
+# mask 167 on
+@方天画戟
+グハァッ…！？
+ど…どうなってやがんだ…？
+
+# textboxarrow 0 1
+@方天画戟
+オレの方が強いはずだろ…
+こんなガキに負けるはずが…
+
+# textboxarrow 0 3
+@フェイルノート
+だから言ったでしょう
+あなたは私に勝てない
+動きはすでに分析済みなの
+
+# textboxarrow 0 3
+@フェイルノート
+あなたの攻撃は私に当たらない
+でも、私の攻撃は無駄なく
+あなたを射抜くわ
+
+# face 167 "smile"
+# textboxarrow 0 3
+@フェイルノート
+つまり、この結果は必然よ
+あなたも、もう少し頭を使って
+戦ってみたらどう？
+
+# textboxarrow 0 1
+@方天画戟
+チッ…
+覚えてやがれ…！
+
+;;//方天画戟が立ち去る
+# se "SE_0719"
+# textwindow "close"
+# alpha 3300311 0 0.5
+# waitandnext 0.5
+
+# move 167 3 0.5
+# mask 167 off
+# waitandnext 0.5
+
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# face 167 "normal"
+# textboxarrow 0 2
+# textwindow "normal"
+@フェイルノート
+退屈な捨て台詞ね
+
+# serif 1
+@村人達
+フェイルノートちゃん…
+大丈夫だったかい？
+
+# serif 1
+@村人達
+俺達のために…
+ありがとう…ありがとう…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+@フェイルノート
+別に…
+そういうつもりではないわ…
+
+;;フェイルノート（独白）
+# move 167 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 167 off
+@フェイルノート
+本当に…お人好しな人達ばかり…
+お人好しで…何の力も持たない…
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 167 0 0
+# move 3202011 3 0
+# face 3202011 "sad"
+# alpha 3202011 1 0
+# mask 3202011 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;ハルパー（霊装支配）
+# voice 320201 "harpe_t_0018"
+# textboxarrow 0 2
+# textwindow "normal"
+@ハルパー
+そんなぁ…
+この手で捕まえられないものが
+あるなんて…
+
+# textwindow "close"
+# alpha 3202011 0 0.5
+# waitandnext 0.5
+
+# serif 1
+@村人達
+おおおおお！
+またフェイルノートちゃんが
+キル姫を追い払ってくれたぞっ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# move 167 3 0
+# face 167 "normal"
+# alpha 167 1 0.5
+# mask 167 off
+# textboxarrow 0 2
+# textwindow "normal"
+@フェイルノート
+大したことじゃないわ
+
+;;フェイルノート（独白）
+# move 167 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 167 off
+@フェイルノート
+いつの間にか、用心棒みたいな
+立ち位置になってしまったわね…
+
+;;フェイルノート（独白）
+# textboxarrow 0 0
+@フェイルノート
+この村だけじゃなくて、
+周辺の騒ぎも収めているけれど…
+
+;;フェイルノート（独白）
+# textboxarrow 0 0
+@フェイルノート
+私…何をしているのかしら…？
+
+;;//背景：下町（夜）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_downtown_night"
+# move 167 3 0
+# face 167 "normal"
+# alpha 167 1 0
+# mask 167 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 540191 "failnaught_ca_0022"
+# textboxarrow 0 2
+# textwindow "normal"
+@フェイルノート
+あら？
+あなた、そこで何をしているの？
+
+# serif 1
+@女の子
+あ…フェイちゃん
+
+# textboxarrow 0 2
+@フェイルノート
+私はフェイルノートよ
+何度言ったら分かるのかしら
+
+# serif 1
+@女の子
+ごめんなさい…
+
+# textboxarrow 0 2
+@フェイルノート
+早く家に帰りなさい
+子供は寝る時間よ
+
+# serif 1
+@女の子
+うん…でも、パパが…
+まだ帰ってこないから…
+待ってるの…
+
+# textboxarrow 0 2
+@フェイルノート
+あなたの父親って…
+
+# serif 1
+@女の子
+遠くの国まで行って、物を売ったり
+買ったりしてるんだよっ
+
+# serif 1
+@女の子
+いつも珍しい物をお土産に持って
+帰ってくるんだ！
+
+# serif 1
+@女の子
+いつもなら、もう帰ってくる頃
+なのに…
+
+# textboxarrow 0 2
+@フェイルノート
+行商人ね…
+二、三日のずれなんて
+よくあることよ
+
+# serif 1
+@女の子
+そうだけど…
+
+# textboxarrow 0 2
+@フェイルノート
+…仕方ないわね
+ほら、これをあげるわ
+
+# serif 1
+@女の子
+わあ！
+可愛いウサギさんっ
+
+# serif 1
+@女の子
+フェイちゃん、ぬいぐるみ作るの
+上手だねっ
+本当にもらっていいの？
+
+# textboxarrow 0 2
+@フェイルノート
+だから私は…
+まあ、いいわ
+あげるから、家に帰りなさい
+
+# serif 1
+@女の子
+ありがとう！
+大切にするねっ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 540191 "failnaught_ca_0013"
+# textboxarrow 0 2
+@フェイルノート
+ふう…
+子供の相手は疲れるわ…
+
+;;フェイルノート（独白）
+# move 167 3 0
+# mask 167 off
+# textboxarrow 0 0
+# textwindow "moya"
+@フェイルノート
+行商人ね…
+
+;;//背景：下町
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_downtown"
+# alpha 167 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+# serif 1
+@村人１
+ハルモニアとケイオスリオンの
+戦に巻き込まれたらしい…
+
+# serif 1
+@村人２
+生き残った奴は…
+一人もいないそうだ…
+
+# serif 1
+@村人３
+何てことだ…
+幼い娘を残して…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# move 167 3 0
+# face 167 "normal"
+# alpha 167 1 0.5
+# mask 167 off
+# textboxarrow 0 2
+# textwindow "normal"
+@フェイルノート
+…………
+
+;;フェイルノート（独白）
+# move 167 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 167 off
+@フェイルノート
+私がついていれば…
+何て考えるのは無意味ね
+こんなことは珍しくない…
+
+;;フェイルノート（独白）
+# textboxarrow 0 0
+@フェイルノート
+私の知謀で勝利し続けても…
+大きな流れの前では、あまりに
+無力だわ…
+
+;;フェイルノート（独白）
+# face 167 "angry"
+# textboxarrow 0 0
+@フェイルノート
+力が欲しい…
+もっと圧倒的な力が…！
+
+;;フェイルノート（独白）
+# textboxarrow 0 0
+@フェイルノート
+私が…私という存在が、
+「強者」として君臨すれば…
+
+;;フェイルノート（独白）
+# textboxarrow 0 0
+@フェイルノート
+誰もが恐れる抑止力になれれば…
+私を頼ってくる力なき者達を
+皆、守れるのに！
+
+;;フェイルノート（独白）
+# textboxarrow 0 0
+@フェイルノート
+私は「強者」にならないといけない
+圧倒的な「強者」に
+
+;;フェイルノート（独白）
+# textboxarrow 0 0
+@フェイルノート
+そのための力を…
+必ず手に入れてみせる！

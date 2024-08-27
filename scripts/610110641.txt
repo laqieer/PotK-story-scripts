@@ -1,0 +1,502 @@
+;;-----------------------------------------
+;;ファンキル学園
+;;4_1
+;;-----------------------------------------
+# script "lisp"
+# bgm "bgm005" 0
+# background "corridor_daytime"
+;;-----------------------------------------
+;;マサムネ
+# body 101
+# pos 101 3
+# scale 101 0.8 0
+# layer 101 3
+# mask 101 off
+# alpha 101 0 0
+;;ティルフィング
+# body 101491
+# pos 101491 3
+# scale 101491 0.8 0
+# layer 101491 3
+# mask 101491 off
+# alpha 101491 0 0
+;;ダグダ
+# body 200651
+# pos 200651 3
+# scale 200651 0.8 0
+# layer 200651 3
+# mask 200651 off
+# alpha 200651 0 0
+;;メギド
+# body 500621
+# pos 500621 3
+# scale 500621 0.8 0
+# layer 500621 4
+# mask 500621 off
+# alpha 500621 0 0
+;;フライクーゲル
+# body 126
+# pos 126 3
+# scale 126 0.8 0
+# layer 126 3
+# mask 126 off
+# alpha 126 0 0
+;;ウコンバサラ
+# body 201021
+# pos 201021 3
+# scale 201021 0.8 0
+# layer 201021 3
+# mask 201021 off
+# alpha 201021 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;【EP.4】逃げ回る像と真犯人の怪
+;;背景：廊下
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+# se "SE_6513"
+# emotionbody 1000 8 500621 -90 260
+# effectpattern 1000 1 0
+# effectstart 1000
+# alpha 500621 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 500621 "sad"
+# voice 5006 "megido_0013"
+@メギド
+はぁ…
+
+# textflame 1 1
+# textboxarrow 0 2
+@メギド
+もう放課後だというのに、
+いまだに気力が湧きませんわ…
+
+# textflame 1 1
+# textboxarrow 0 2
+@メギド
+あんな妙な光景を
+見てしまった上に、
+銅像まで消えるだなんて…
+
+# textflame 1 1
+# textboxarrow 0 2
+@メギド
+今日はなんだか嫌な日ですわね
+早く帰らなくては…
+
+# effectskip 1000
+# bgm "stop"
+# alpha 500621 0 0.5
+# textwindow "close"
+# waitandnext 0.8
+
+;;ＳＥ：タッタッタッ（銅像が走ってくる音）
+# se "SE_0876"
+# waitandnext 1
+
+# se "SE_6525"
+# emotionbody 1001 11 500621 -100 270
+# effectpattern 1001 2 0
+# effectstart 1001
+# bgmfile "bgm373" "BgmGakuen005" 0
+# alpha 500621 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 5006 "megido_0022"
+@メギド
+あら…？
+あれはいったい
+―ひいっ！？
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5006 "megido_0025"
+@メギド
+ど、銅像がっ！
+祟り！祟りですわー！
+
+;;演出：画面揺れ
+;;ＳＥ：ドタドタドタ（銅像が近くまで走ってくる音）
+# shake 0 1
+# se "SE_0876"
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5006 "megido_0038"
+@メギド
+いやぁあああああああっ！！
+来ないでくださいっ、
+来ないでーーーっ！！
+
+# alpha 500621 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 201021 1 0.5
+# face 201021 "angry"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 2
+# voice 2010 "ukonbasara_battle_0003"
+@ウコンバサラ
+たぁあああああああっ！！
+
+;;演出：画面揺れ
+;;ＳＥ：バキッ！（銅像を攻撃する音）
+# textboxarrow 0 0
+# shake 1 0.5
+# se "SE_0656"
+# waitandnext 0.5
+
+# alpha 201021 0 0.5
+# alpha 101 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 101 "angry"
+# voice 1001 "masamune_0029"
+@マサムネ
+ハァッ！！
+
+;;演出：画面揺れ
+;;ＳＥ：ズバッ！（銅像を攻撃する音）
+# textboxarrow 0 0
+# effectbody 2000 1 0 0 0
+# effectstart 2000
+# se "SE_4000"
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+@マサムネ
+くっ、外したか…！
+
+;;ＳＥ：タッタッタッ…（銅像が逃げる音）
+# se "SE_0876"
+# textboxarrow 0 0
+# waitandnext 0.8
+
+# textflame 1 1
+# textboxarrow 0 2
+@マサムネ
+待て、逃げるなっ！！
+
+# alpha 101 0 0.5
+# move 201021 4 0
+# mask 201021 on
+# alpha 201021 1 0.5
+# move 500621 2 0
+# mask 500621 on
+# alpha 500621 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@ウコンバサラ
+大丈夫！？
+ケガはない？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 5006 "megido_0015"
+@メギド
+え、ええ
+なんとか…
+
+# textflame 1 1
+# textboxarrow 0 1
+@メギド
+それより、どうして銅像が
+廊下を走っているの？
+わけがわかりません…！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 201021 "sad"
+@ウコンバサラ
+だよね、私も…
+やっぱりあの銅像が
+事件の犯人なのかな？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 500621 "surprise"
+# voice 5006 "megido_0022"
+@メギド
+では、あれは祟りではなく
+中に人が入っているって
+ことですの？
+
+# alpha 101 1 0.5
+# alpha 201021 0 0.5
+# alpha 500621 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1001 "masamune_0013"
+@マサムネ
+捕らえて詰問すれば済むことだ
+行くぞっ！逃がしはせんっ！
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 101 0 0
+# move 201021 3 0
+# mask 201021 off
+# move 500621 3 0
+# mask 500621 off
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 201021 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 201021 "angry"
+@ウコンバサラ
+待てぇっ！
+逃げるなぁーっ！！
+
+# alpha 201021 0 0.5
+# alpha 500621 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 500621 "angry"
+@メギド
+この私を脅かした罪、
+償わせて差し上げますわ…！
+
+# alpha 500621 0 0.5
+;;ＳＥ：タッタッタッ（銅像が逃げる音）
+# se "SE_0876"
+# textwindow "close"
+# waitandnext 0.8
+
+# alpha 101 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 1001 "masamune_0012"
+@マサムネ
+くっ！
+奴め、階下に逃げる気だぞ！
+
+# alpha 101 0 0.5
+# alpha 201021 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ウコンバサラ
+外に出るつもり！？
+そうはさせない…！
+
+# alpha 201021 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;演出：画面揺れ
+;;ＳＥ：バサッ！（銅像が網に捕まる音）
+# shake 0 1
+# se "SE_0846"
+# waitandnext 1
+
+# se "SE_6501"
+# emotionbody 1003 1 201021 10 270
+# effectpattern 1003 2 0
+# effectstart 1003
+# alpha 201021 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 2010 "ukonbasara_0022"
+@ウコンバサラ
+っ！？
+
+# alpha 201021 0 0.5
+# alpha 200651 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 200651 "angry"
+# voice 2006 "daguda_0013"
+@ダグダ
+ふー…
+やっと捕まえたよ、
+手間かけさせるなぁ
+
+# alpha 200651 0 0.5
+# alpha 101491 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 101491 "angry"
+@ティルフィング
+大人しくしてください！
+もう逃げられませんよ！
+
+# alpha 101491 0 0.5
+# alpha 101 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 101 "surprise"
+# voice 1001 "masamune_0023"
+@マサムネ
+ダグダ先生！
+ティルフィングも！
+
+# alpha 101 0 0.5
+# alpha 200651 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 200651 "normal"
+# voice 2006 "daguda_0003"
+@ダグダ
+待ち伏せしてた甲斐があったよ～
+３人ともお疲れ様
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 200651 "usual"
+@ダグダ
+さて…動く銅像の正体は
+いったい誰だろうね、っと！
+
+;;ＳＥ：バサッ（網をめくる音）
+# alpha 200651 0 0.5
+# se "SE_11618"
+# waitandnext 0.5
+
+# textflame 0 0
+@マスター
+あっ！
+
+# se "SE_6502"
+# emotionbody 1004 2 500621 10 290
+# effectpattern 1004 1 1
+# effectstart 1004
+# move 201021 4 0
+# mask 201021 on
+# alpha 201021 1 0.5
+# move 500621 2 0
+# mask 500621 on
+# alpha 500621 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 500621 "surprise"
+# voice 5006 "megido_0023"
+@メギド
+あら…？
+もしや貴方、マスターご本人では？
+
+# se "SE_6500"
+# emotionbody 1005 1 201021 10 310
+# effectpattern 1005 1 0
+# effectstart 1005
+# textflame 1 1
+# textboxarrow 0 3
+# face 201021 "surprise"
+# voice 2010 "ukonbasara_0023"
+@ウコンバサラ
+ええっ！？
+ど、どういうこと？
+
+# alpha 201021 0 0.5
+# alpha 500621 0 0.5
+# move 200651 4 0
+# mask 200651 on
+# alpha 200651 1 0.5
+# move 101 2 0
+# mask 101 on
+# alpha 101 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 101 "angry"
+# voice 1001 "masamune_0018"
+@マサムネ
+主君が犯人…だと？
+ば、馬鹿な！そんなはずは…！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 200651 "angry"
+# voice 2006 "daguda_0009"
+@ダグダ
+…どういうことか
+説明してくれるかなぁ？
+
+# textflame 0 0
+@マスター
+いや、これは…
+その…
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1001 "masamune_0009"
+@マサムネ
+これ以上、逃げようとは
+思わない方が身のためだぞ
+
+# textflame 0 0
+@マスター
+う、うう…
+
+# alpha 200651 0 0.5
+# alpha 101 0 0.5
+;;@？？？？（フライクーゲル）
+# serif 0
+# textwindow "close"
+# serif 1
+# textflame 1 1
+# textwindow "nomal"
+@？？？
+ウェイトッ！
+みんな待って、話を聞いてっ！
+
+# se "SE_6502"
+# emotionbody 1006 2 201021 10 260
+# effectpattern 1006 1 1
+# effectstart 1006
+# move 201021 3 0
+# mask 201021 off
+# alpha 201021 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 201021 "surprise"
+@ウコンバサラ
+っ！
+キミは…フライクーゲル？
+
+# alpha 201021 0 0.5
+# alpha 126 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 126 "sad"
+# voice 5002 "furaikugeru_0015"
+@フライクーゲル
+マスターは何も悪くない…
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+悪いのはぜんぶ――私なんだっ！！
+
+# fadeout "black" 1
+# waitandnext 1.2

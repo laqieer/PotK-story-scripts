@@ -1,0 +1,239 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１５章 章タイトル「クリティカルフェイズ―連携―」
+;;第2話―１０　タイトル：終焉を望む者
+;;2_10_3
+;;スクリプト最後の背景：平野（夜）
+;;-----------------------------------------
+# script "lisp"
+# background "plain_night"
+# bgmfile "bgm467" "BgmIntegralNoahBoso" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;ラグナロク・擬装・ガンナー
+# body 5103621
+# pos 5103621 3
+# scale 5103621 0.8 0
+# layer 5103621 2
+# alpha 5103621 0 0
+# mask 5103621 off
+;;グランテピエ・獣刻・バハムート
+# body 5303411
+# pos 5303411 3
+# scale 5303411 0.8 0
+# layer 5303411 3
+# alpha 5303411 0 0
+# mask 5303411 off
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 3
+# alpha 5101431 0 0
+# mask 5101431 off
+;;ムー
+# body 161
+# pos 161 3
+# scale 161 0.6 0
+# layer 161 4
+# alpha 161 0 0
+# mask 161 off
+;;ラブリュス・暴走
+# body 5200311
+# pos 5200311 3
+# scale 5200311 0.8 0
+# layer 5200311 2
+# alpha 5200311 0 0
+# mask 5200311 off
+# brightness 5200311 0.8 0
+;;オティヌス・暴走
+# body 5400811
+# pos 5400811 3
+# scale 5400811 0.8 0
+# layer 5400811 2
+# alpha 5400811 0 0
+# mask 5400811 off
+# brightness 5400811 0.8 0
+;;アロンダイト・暴走
+# body 5100711
+# pos 5100711 3
+# scale 5100711 0.8 0
+# layer 5100711 2
+# alpha 5100711 0 0
+# mask 5100711 off
+# brightness 5100711 0.8 0
+;;ロンゴミアント・暴走
+# body 5301011
+# pos 5301011 3
+# scale 5301011 0.8 0
+# layer 5301011 2
+# alpha 5301011 0 0
+# mask 5301011 off
+# brightness 5301011 0.8 0
+;;-----------------------------------------
+# emotionbody 1000 15 5400811 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5400811 3 0
+# face 5400811 "sad"
+# alpha 5400811 1 0
+# mask 5400811 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 540081 "otyinusu_bo_battle_0008"
+@オティヌス
+う、くうっ
+うーん…悪戯失敗かな
+
+# effectskip 1000
+# alpha 5400811 0 0.5
+# move 5103621 3 0
+# face 5103621 "angry"
+# alpha 5103621 1 0.5
+# mask 5103621 off
+# textboxarrow 0 2
+@ラグナロク
+今よ、グランテピエ！
+彼女の暴走を解いてっ
+
+# alpha 5103621 0 0.5
+# move 161 2 0
+# alpha 161 1 0.5
+# move 5303411 3 0
+# face 5303411 "angry"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# textboxarrow 0 2
+# voice 530341 "grandepieu_di_0046"
+@グランテピエ
+任せて！
+いくよ、ムー
+
+# textboxarrow 0 1
+# voice 9953 "mwu_0029"
+@ムー
+おうよ！
+決めてやるぜえええ！
+
+;;//弾かれる音
+# textwindow "close"
+# fadein "white" 0.5
+# se "SE_3006"
+# face 5303411 "surprise"
+# waitandnext 1.0
+
+;;//グランテピエとオティヌスが弾かれる
+# face 5303411 "sad"
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 530341 "grandepieu_di_0025"
+@グランテピエ
+きゃっ…！
+弾かれた…どうして？
+
+# effectstart 1000
+# alpha 161 0 0.5
+# alpha 5303411 0 0.5
+# move 5400811 3 0
+# face 5400811 "sad"
+# alpha 5400811 1 0.5
+# mask 5400811 off
+# textboxarrow 0 2
+# voice 540081 "otyinusu_bo_0026"
+@オティヌス
+うわ…
+あんたの悪戯は嬉しくないな
+
+# face 5400811 "normal"
+@オティヌス
+もう十分喜ばせてもらったし、
+あたしはこの辺で
+
+;;//オティヌスが立ち去る
+# effectskip 1000
+# se "SE_0719"
+# alpha 5400811 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# move 196 3 0
+# alpha 196 1 0.5
+# face 196 "surprise"
+# textwindow "normal"
+# textboxarrow 0 2
+@アルマス
+あ、ちょっと！
+暴走を解くのに失敗したの…？
+
+# alpha 196 0 0.5
+# emotionbody 2000 15 5100711 0 0
+# effectpattern 2000 1 0
+# effectstart 2000
+# move 5100711 2 0
+# face 5100711 "normal"
+# alpha 5100711 1 0.5
+# mask 5100711 on
+# emotionbody 3000 15 5301011 0 0
+# effectpattern 3000 1 0
+# effectstart 3000
+# move 5301011 4 0
+# face 5301011 "normal"
+# alpha 5301011 1 0.5
+# mask 5301011 on
+# textboxarrow 0 1
+@アロンダイト
+…もう関わらないで下さい
+
+# textboxarrow 0 3
+# voice 530101 "rhongomiant_bo_0019"
+@ロンゴミアント
+ああ…
+早くこの世界を終わらせないと
+
+# effectskip 2000
+# alpha 5100711 0 0.5
+# effectskip 3000
+# alpha 5301011 0 0.5
+# emotionbody 4000 15 5200311 0 0
+# effectpattern 4000 1 0
+# effectstart 4000
+# move 5200311 3 0
+# face 5200311 "happy"
+# alpha 5200311 1 0.5
+# mask 5200311 off
+# textboxarrow 0 2
+@ラブリュス
+次はもっともっと盛り上げて
+あげるからね～
+バイバ～イ☆
+
+;;//三人が立ち去る
+# textwindow "close"
+# se "SE_0719"
+# bgm "stop"
+# effectskip 4000
+# alpha 5200311 0 0.5
+# waitandnext 1.0
+
+# move 161 2 0
+# alpha 161 1 0.5
+# move 5303411 3 0
+# face 5303411 "sad"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# textwindow "normal"
+# textboxarrow 0 1
+@ムー
+行っちまった
+グラ…
+
+# textboxarrow 0 2
+# voice 530341 "grandepieu_di_0017"
+@グランテピエ
+どうして…？

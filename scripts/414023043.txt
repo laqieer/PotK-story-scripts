@@ -1,0 +1,332 @@
+;;-----------------------------------------
+;;【PUNK】ロストラグナロク_サイドストーリー5章
+;;【EP4バトル後】
+;;スクリプト最後の背景：黒
+;;-----------------------------------------
+# script "lisp"
+# background "400_angel_pope_room"
+# bgmfile "bgm189" "BgmStory007" 0
+;;フライクーゲル
+# body 3500211
+# pos 3500211 3
+# scale 3500211 0.8 0
+# layer 3500211 2
+# alpha 3500211 0 0
+# mask 3500211 on
+# face 3500211 "normal"
+;;ティファレト
+# body 171
+# pos 171 3
+# scale 171 0.8 0
+# layer 171 2
+# alpha 171 0 0
+# mask 171 on
+# face 171 "normal"
+;;ロンギヌス
+# body 3300111
+# pos 3300111 3
+# scale 3300111 0.8 0
+# layer 3300111 2
+# alpha 3300111 0 0
+# mask 3300111 on
+# face 3300111 "normal"
+;;ミカエル
+# body 3810008
+# pos 3810008 3
+# scale 3810008 0.8 0
+# layer 3810008 2
+# alpha 3810008 1 0
+# mask 3810008 off
+# face 3810008 "normal"
+;;【EP4バトル後】
+;;背景：大聖堂・謁見の間
+;;演出・SE：ミカエルの斬撃、フライクーゲルとロンギヌスはそれを食らい吹き飛ばされる
+;;----------------------------------------------------------
+# se "SE_9077"
+# shake 0 0.5
+# textwindow "close"
+# fadeout "white" 1.8
+# waitandnext 1.8
+
+# fadein "white" 1
+# waitandnext 1
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 8056 "new_michael_0007"
+@ミカエル
+…選ばれし者だけが
+理想郷へと至るのだ
+
+@ミカエル
+貴方達はその権利があった
+
+@ミカエル
+にもかかわらず
+放棄した
+
+@ミカエル
+慈悲をかける必要も
+もはや、あるまい
+
+;;モノローグ
+# textflame 0 0
+@
+天使の羽が散っている
+
+;;モノローグ
+@
+フライクーゲルとロンギヌスは
+ミカエルの圧倒的な力の前に
+手も足も出ずにいた
+
+# alpha 3810008 0 0.5
+# face 171 "surprise"
+# alpha 171 1 0.5
+# mask 171 off
+# textflame 1 1
+# voice 5032 "tiphereth_t_0018"
+@ティファレト
+………フライクーゲル…
+ロンギヌス………！！
+
+# alpha 171 0 0.5
+# face 3500211 "angry"
+# alpha 3500211 1 0.5
+# mask 3500211 off
+# voice 350021 "furaikugeru_t_battle_0006"
+@フライクーゲル
+う………っ！！
+ああっ………！！
+
+# alpha 3500211 0 0.5
+# face 3300111 "angry"
+# alpha 3300111 1 0.5
+# mask 3300111 off
+# voice 330011 "ronginusu_t_battle_0006"
+@ロンギヌス
+クッ……ゲホゲホッ！！！
+
+# alpha 3300111 0 0.5
+# alpha 3810008 1 0.5
+# voice 8056 "new_michael_0019"
+@ミカエル
+そんな人数で国中の兵士と争い
+よく辿り着いたものだ
+
+@ミカエル
+だが無謀であった
+だが無力であった
+だが無策であった
+
+# alpha 3810008 0 0.5
+# alpha 3300111 1 0.5
+@ロンギヌス
+ッ…！
+
+# alpha 3300111 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+ロンギヌスもフライクーゲルも
+満身創痍…体を起こすことすら出来ず
+その場に倒れ込む
+
+# alpha 3810008 1 0.5
+# textflame 1 1
+@ミカエル
+裁きを、受け入れよ
+
+# textwindow "close"
+# rightout 3810008 2
+# waitandnext 2
+
+# alpha 3810008 0 0
+# textwindow "normal"
+# textflame 0 0
+;;モノローグ
+@
+横たわったフライクーゲルに
+ゆっくりと近づくミカエル
+
+# move 3810008 2 0
+# alpha 3810008 1 0.5
+# mask 3810008 on
+# move 3500211 4 0
+# face 3500211 "usual"
+# alpha 3500211 1 0.5
+# mask 3500211 on
+# textflame 1 1
+# textboxarrow 0 3
+@フライクーゲル
+…はい、そうですかと…
+受け入れるヤツは、いないさ…
+
+# textboxarrow 0 1
+@ミカエル
+裁きとはそういうものだ
+
+@ミカエル
+愚かな者が受けるべき
+正義の粛正
+
+# face 3500211 "normal"
+# textboxarrow 0 3
+@フライクーゲル
+………粛正だ、戒律だってさ…
+
+;;モノローグ
+# textflame 0 0
+@
+もはや傷だらけの腕を投げ出し
+フライクーゲルは言葉をこぼす
+
+# face 3500211 "usual"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 350021 "furaikugeru_t_0013"
+@フライクーゲル
+天使を裁くのが正義なら
+正義の過ちを裁くのは
+誰なんだろうね………
+
+# voice 8056 "new_michael_0004"
+# textboxarrow 0 1
+@ミカエル
+誤ることなどない
+
+@ミカエル
+私が行うことこそ正しきこと
+私が述べることこそ正しき教義
+命を選別することすら
+
+# face 3500211 "sad"
+# textboxarrow 0 3
+@フライクーゲル
+話し相手は…あんたじゃないさ…
+
+;;モノローグ
+# textflame 0 0
+@
+フライクーゲルの瞳は虚空を眺める
+
+;;モノローグ
+@
+彼女を見下ろすミカエルは
+剣を振り上げる
+
+# textflame 1 1
+# textboxarrow 0 3
+@フライクーゲル
+ここが天国だなんて…
+
+# se "SE_0752"
+# textflame 0 0
+;;モノローグ
+@
+フライクーゲルは
+銃を握る力すら失くなった
+その手を、挙げる
+
+# alpha 3810008 0 0.5
+# alpha 3500211 0 0.5
+# face 171 "surprise"
+# alpha 171 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 5032 "tiphereth_t_0058"
+@ティファレト
+フライクーゲル………ッッ！！
+
+# alpha 171 0 0.5
+# move 3500211 3 0
+# face 3500211 "sad"
+# alpha 3500211 1 0.5
+# mask 3500211 off
+# voice 350021 "furaikugeru_t_0026"
+@フライクーゲル
+…悪いジョークだ
+
+# alpha 3500211 0 0.5
+# move 3810008 3 0
+# alpha 3810008 1 0.5
+# mask 3810008 off
+# textflame 0 0
+;;モノローグ
+@
+ミカエルから
+無慈悲にも
+裁きの剣が振り下ろされる
+
+;;演出・ＳＥ：剣が振り下ろされる重い音
+;;背景：黒
+# se "SE_9061"
+# waitandnext 1
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# background "bg_black"
+# alpha 3810008 0 0.5
+# face 3500211 "sad"
+# alpha 3500211 1 0
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "stop"
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+たまらず、手を挙げてみる───
+
+# bgmfile "bgm293" "BgmLostRagnarokSideStory" 0
+@フライクーゲル
+誰かに見つけてほしかった
+
+@フライクーゲル
+わたしが揺らいで
+揺らいで、揺らいで…
+
+@フライクーゲル
+そうして消えてしまう前に
+
+@フライクーゲル
+それを引き留めてくれる
+誰かに
+
+@フライクーゲル
+どこにも行けないわたしは
+
+@フライクーゲル
+わたしはここだよと
+手を挙げていた
+
+@フライクーゲル
+…
+
+# voice 350021 "furaikugeru_t_0004"
+@フライクーゲル
+見つけてくれるよな
+
+;;演出・SE：暗闇の中、一抹の炎が燃え上がる（※演出のみでいけた方が格好いいかな、
+;;と考えているのですが表現が困難そうであればモノローグとします。
+;;お手間をおかけしますが申しつけください⇒以下のモノローグとします）
+# se "SE_5222"
+# textflame 0 0
+;;モノローグ
+@
+闇が深まると…
+
+;;モノローグ
+@
+そこに揺らぐ
+一抹の炎
+
+# textflame 1 1
+@フライクーゲル
+───見つけてくれるよな

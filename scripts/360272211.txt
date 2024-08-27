@@ -1,0 +1,335 @@
+;;【ファントムオブキル_Re:ゼロコラボ】エミリアウェディングVer.　　　　　　　　　　　　　　　
+;;【ＥＰ1-1】
+;;スクリプト最後の背景：plain
+;;-----------------------------------------
+# script "lisp"
+# background "004_outland"
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;エミリアウェディング
+# body 3602721
+# pos 3602721 3
+# scale 3602721 0.8 0
+# layer 3602721 3
+# alpha 3602721 1 0
+# mask 3602721 off
+;;エミリア
+# body 3602711
+# pos 3602711 3
+# scale 3602711 0.8 0
+# layer 3602711 3
+# alpha 3602711 0 0
+# mask 3602711 off
+;;-----------------------------------------
+# face 3602721 "shy"
+# voice 6027 "emiria_0001"
+# textflame 1 1
+# textboxarrow 0 2
+@エミリア
+どう？　変じゃない？
+
+# textflame 0 0
+@
+恐る恐る、というように
+外に出て来たエミリアは
+白いドレスを身にまとっていた
+
+;;選択肢
+# select "素敵だよ" "select_label_01" "変じゃない" "select_label_02" "結婚したいくらい" "select_label_03"
+@エミリア
+どう？　変じゃない？
+
+;;アンサー
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 3602721 "shy"
+;;# voice 6027 "emiria_00"
+# textflame 1 1
+# textboxarrow 0 2
+@エミリア
+もうっ、からかわないの！
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 3602721 "smile"
+;;# voice 6027 "emiria_00"
+# textflame 1 1
+# textboxarrow 0 2
+@エミリア
+ふふっ、それならよかった
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 3602721 "usual"
+# voice 6027 "emiria_0042"
+# textflame 1 1
+# textboxarrow 0 2
+@エミリア
+あ、バカなこと言うんだから
+
+# label "select_label_end"
+# face 3602721 "shy"
+;;# voice 6027 "emiria_00"
+# textflame 1 1
+# textboxarrow 0 2
+@エミリア
+でも、急にこんな格好、
+さすがにちょっと恥ずかしいわね
+
+# textflame 0 0
+@
+どうしてエミリアが
+こんな格好をしているかというと
+時は一日前にさかのぼる…
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.2
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.6
+
+# alpha 3602721 0 0
+# alpha 3602711 1 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# face 3602711 "usual"
+# voice 6027 "emiria_0001"
+# textflame 1 1
+# textboxarrow 0 2
+@エミリア
+ねえ、あの人、何食べてるのかしら？
+あ、あっちのお店はなあに？
+
+# textflame 0 0
+@
+マスター達は違う世界から
+やってきたというエミリアに
+この世界の村を案内していた
+
+# face 3602711 "sad"
+# voice 6027 "emiria_0031"
+# textflame 1 1
+# textboxarrow 0 2
+@エミリア
+あっ…
+私ばっかりはしゃいじゃって
+ごめんなさい
+
+;;# face 3602711 ""
+;;# voice 6027 "emiria_00"
+# textflame 1 1
+# textboxarrow 0 2
+@エミリア
+こんな風に人目を気にしなくていいの
+あんまり経験がなかったから…
+
+# face 3602711 "happy"
+;;# voice 6027 "emiria_00"
+# textflame 1 1
+# textboxarrow 0 2
+@エミリア
+それに、ここって
+知らないものがいっぱいだから、
+つい興奮しちゃって…
+
+# textflame 0 0
+@
+いろんなことに好奇心旺盛な
+エミリアなのだが
+どうやら普段はそうでもないらしい
+
+# face 3602711 "sad"
+;;# voice 6027 "emiria_00"
+# textflame 1 1
+# textboxarrow 0 2
+@エミリア
+迷惑だったりしたら
+ちゃんと言ってね？
+もちろん、私も気を付けるけど…
+
+# textflame 0 0
+@
+気にしないでいい、とマスター
+
+# face 3602711 "surprise"
+# voice 6027 "emiria_0023"
+# textflame 1 1
+# textboxarrow 0 2
+@エミリア
+マスターさんっていつもそう
+あんまり甘やかさないでね
+って、あれは何！？
+
+# textflame 0 0
+@
+しゅんとしたかと思えば
+すぐ次に興味が移る
+まるで子供のようなエミリア
+
+# face 3602711 "usual"
+;;# voice 6027 "emiria_00"
+# textflame 1 1
+# textboxarrow 0 2
+@エミリア
+ほかの建物とはちょっと
+雰囲気が違うみたいだけど…
+
+# textflame 0 0
+@
+マスターはエミリアが指さした
+その建物について説明する
+
+;;# face 3602711 ""
+# voice 6027 "emiria_0039"
+# textflame 1 1
+# textboxarrow 0 2
+@エミリア
+へえ、教会なんだ！
+たくさん人が出てくるみたい
+何かあったのかしら？
+
+# textflame 0 0
+@
+教会から大勢の人が列をなして
+ぞろぞろと出てくる
+その中に一際目を引くふたりがいた
+
+# face 3602711 "surprise"
+;;# voice 6027 "emiria_00"
+# textflame 1 1
+# textboxarrow 0 2
+@エミリア
+あれ、もしかして結婚式？
+
+# textflame 0 0
+@
+エミリアは花嫁のドレスに
+目が行っているようだ
+近くに行ってみよう、とマスター
+
+;;演出：移動の暗転
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.2
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.6
+
+;;背景：村から少し離れた草原など
+# background "plain"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# face 3602711 "sad"
+;;# voice 6027 ""
+# textflame 1 1
+# textboxarrow 0 2
+@エミリア
+わ、すごーく素敵なドレスね！
+それに、あのふたり…
+とっても幸せそう！
+
+# textflame 0 0
+@
+近くに来たというのにエミリアは
+なんだか遠くを見ているような
+少しさみしそうな顔をする
+
+# face 3602711 "usual"
+# voice 6027 "emiria_0001"
+# textflame 1 1
+# textboxarrow 0 2
+@エミリア
+――？
+私の顔、何かついてる？
+
+# textflame 0 0
+@
+どうしたのだろうかと
+マスターが訪ねようとした瞬間…
+
+;;演出：兵士in
+# serif 1
+# textwindow "nomal"
+@兵士
+貴様ら、何をしている！
+
+# face 3602711 "surprise"
+# voice 6027 "emiria_0022"
+# serif 0
+# textflame 1 1
+# textboxarrow 0 2
+@エミリア
+えっ、あ、私達はたまたま
+ここを通りがかっただけで…
+
+# serif 1
+# textwindow "nomal"
+@兵士
+黙れ、イミテーションが！
+あの方たちに近づこうとは
+何か企んでるんじゃないだろうな？
+
+# serif 0
+# textflame 0 0
+@
+どうやら式を挙げているふたりは
+それなりの地位にあるようで
+兵士達はその警護をしていたようだ
+
+# serif 1
+# textwindow "nomal"
+@兵士
+いや、考えるまでもない
+疑わしきはすべて悪だ！
+貴様らを捕える！
+
+;;# face 3602711 ""
+# voice 6027 "emiria_0018"
+# serif 0
+# textflame 1 1
+# textboxarrow 0 2
+@エミリア
+そ、そんな…っ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+誤解を受けてしまったようだ
+兵士達がどんどん集まってくる
+
+# face 3602711 "happy"
+# voice 6027 "emiria_0008"
+# serif 0
+# textflame 1 1
+# textboxarrow 0 2
+@エミリア
+話し合えばわかってくれたり…
+しない？　しないかな？

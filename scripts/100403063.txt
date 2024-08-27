@@ -1,0 +1,258 @@
+;;-----------------------------------------
+;;第3話　タイトル：問われる覚悟
+;;03-6
+;;スクリプトID：100403063
+;;スクリプト最後の背景：ラグナロク城内
+;;-----------------------------------------
+# script "lisp"
+# background "201_border"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;アルマス
+# body 3103811
+# pos 3103811 2
+# scale 3103811 0.8 0
+# layer 3103811 4
+# alpha 3103811 1 0
+# mask 3103811 on
+# face 3103811 "normal"
+;;ティターニア
+# body 139
+# pos 139 4
+# scale 139 0.8 0
+# layer 139 5
+# alpha 139 1 0
+# mask 139 on
+# face 139 "normal"
+;;ギル
+# body 137
+# pos 137 2
+# scale 137 0.8 0
+# layer 137 1
+# alpha 137 0 0
+# mask 137 off
+# face 137 "normal"
+;;ナディア
+# body 136
+# pos 136 4
+# scale 136 0.8 0
+# layer 136 1
+# alpha 136 0 0
+# mask 136 off
+# face 136 "normal"
+;;天沼矛
+# body 3300411
+# pos 3300411 4
+# scale 3300411 0.8 0
+# layer 3300411 1
+# alpha 3300411 0 0
+# mask 3300411 on
+# face 3300411 "normal"
+;;アロンダイト
+# body 3100711
+# pos 3100711 2
+# scale 3100711 0.8 0
+# layer 3100711 1
+# alpha 3100711 0 0
+# mask 3100711 on
+# face 3100711 "normal"
+;;//背景：ラグナロク王国---------------------
+# face 3103811 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+…………
+
+;;//アルマスがうろうろしている
+# textboxarrow 0 3
+@ティターニア
+ケイオスリオン軍の布陣は
+分かりましたね
+そろそろ城に戻りましょう
+
+# face 3103811 "normal"
+# textboxarrow 0 1
+@アルマス
+そうね…
+
+# textboxarrow 0 3
+# voice 9967 "titania_0063"
+@ティターニア
+アルマス、
+シユウを探しているのですか？
+ナディアと約束したでしょう
+
+# face 3103811 "sad"
+# textboxarrow 0 1
+# voice 1038 "almace_0003"
+@アルマス
+分かってる
+ただ、シユウだけじゃなくて
+もう一人いたはずなのに…
+
+# face 139 "worry"
+# textboxarrow 0 3
+@ティターニア
+そういえば
+ロンゴミアントの姿もありませんね
+
+# textboxarrow 0 1
+# voice 1038 "almace_0028"
+@アルマス
+斬ル姫の動きも
+把握しておきたかったんだけど…
+
+# face 139 "normal"
+# textboxarrow 0 3
+@ティターニア
+これ以上、留まるのは危険です
+一度、戻りましょう
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1
+
+# face 3103811 "normal"
+# background "mamon_room"
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//背景：ラグナロク城内---------------------
+# se "SE_0740"
+# bgm "bgm002" 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@アルマス
+ただいま
+
+# alpha 3103811 0 0.5
+# alpha 139 0 0.5
+# alpha 137 1 0.5
+# alpha 136 1 0.5
+# textboxarrow 0 3
+# voice 9968 "nadia_0004"
+@ナディア
+お帰りなさい、アルマス
+マスターもティターニアも
+無事で良かった
+
+# textboxarrow 0 1
+@ギル
+こっちはとくに問題なかったぜ
+
+# face 137 "usual"
+# voice 9969 "gill_0007"
+@ギル
+ナディア様は
+俺がばっちり守ってたからな！
+
+# alpha 137 0 0.5
+# alpha 136 0 0.5
+# move 139 3 0
+# alpha 139 1 0.5
+# mask 139 off
+# textboxarrow 0 2
+@ティターニア
+他の皆さんはまだでしょうか？
+
+# se "SE_0740"
+# alpha 139 0 0.5
+# alpha 3300411 1 0.5
+# alpha 3100711 1 0.5
+# textboxarrow 0 3
+# voice 330041 "amenonuboko_t_0020"
+@天沼矛
+ただいま戻りました～
+
+# textboxarrow 0 1
+# voice 310071 "arondaito_ge_0031"
+@アロンダイト
+遅くなってすみません…
+
+# alpha 3300411 0 0.5
+# alpha 3100711 0 0.5
+# move 3103811 3 0
+# alpha 3103811 1 0.5
+# textboxarrow 0 2
+@アルマス
+二人ともお帰りなさい
+
+# face 3103811 "surprise"
+# voice 1038 "almace_0023"
+@アルマス
+アロンダイト、
+その怪我はどうしたのよ！？
+
+# move 3103811 2 0.5
+# move 3100711 4 0
+# alpha 3100711 1 0.5
+# textboxarrow 0 3
+@アロンダイト
+大したことはありません…
+途中、ロンゴミアントと
+遭遇してしまって
+
+# textboxarrow 0 1
+# voice 1038 "almace_0022"
+@アルマス
+そっちに行ってたの！？
+よく逃げてこられたわね
+もしかして返り討ちにした？
+
+# textboxarrow 0 3
+@アロンダイト
+それが…戦っているところに
+シユウが割り込んできたんです
+
+@アロンダイト
+そうしたらロンゴミアントが怒って
+同士討ちを始めたので、
+その隙に離脱しました
+
+# alpha 3103811 0 0.5
+# alpha 3100711 0 0.5
+# move 137 3 0
+# face 137 "normal"
+# alpha 137 1 0.5
+# textboxarrow 0 2
+@ギル
+ケイオスリオンの斬ル姫って
+仲悪いのか？
+
+# alpha 137 0 0.5
+# move 3100711 2 0
+# alpha 3100711 1 0.5
+# alpha 136 1 0.5
+# face 136 "sad"
+# textboxarrow 0 3
+@ナディア
+それより早く手当てを
+さあ、こちらに
+
+# textboxarrow 0 1
+@アロンダイト
+いえ、斬ル姫は傷の治りが早いので
+放っておいても――
+
+# face 136 "angry"
+# textboxarrow 0 3
+# voice 9968 "nadia_0009"
+@ナディア
+こ・ち・ら・に！
+
+# face 3100711 "surprise"
+# textboxarrow 0 1
+@アロンダイト
+あ…はい
+
+# alpha 3100711 0 0.5
+# alpha 136 0 0.5
+# face 137 "surprise"
+# alpha 137 1 0.5
+# textboxarrow 0 2
+# voice 9969 "gill_0025"
+@ギル
+こういうときのナディア様って
+おっかねぇんだよなあ…
+

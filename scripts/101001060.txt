@@ -1,0 +1,356 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー10章
+;;第1話（1-6）　タイトル：
+;;1-6
+;;スクリプト最後の背景：ビフレスト
+;;-----------------------------------------
+# script "lisp"
+# background "bifrost"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス（ジョブチェンジ後）
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# layer 172 3
+# alpha 172 0 0
+# mask 172 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 2
+# alpha 139 0 0
+# mask 139 off
+;;ギル
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# layer 137 2
+# alpha 137 0 0
+# mask 137 off
+;;モラルタ
+# body 3104011
+# pos 3104011 3
+# scale 3104011 0.8 0
+# layer 3104011 2
+# alpha 3104011 0 0
+# mask 3104011 off
+;;ベガルタ
+# body 3104111
+# pos 3104111 3
+# scale 3104111 0.8 0
+# layer 3104111 2
+# alpha 3104111 0 0
+# mask 3104111 off
+;;ミョルニル
+# body 3200111
+# pos 3200111 3
+# scale 3200111 0.8 0
+# layer 3200111 2
+# alpha 3200111 0 0
+# mask 3200111 off
+;;天沼矛
+# body 3300411
+# pos 3300411 3
+# scale 3300411 0.8 0
+# layer 3300411 2
+# alpha 3300411 0 0
+# mask 3300411 off
+;;-----------------------------------------
+;;//背景：ビフレスト
+# move 3104111 2 0
+# face 3104111 "normal"
+# alpha 3104111 1 0
+# mask 3104111 on
+# move 3104011 4 0
+# face 3104011 "happy"
+# alpha 3104011 1 0
+# mask 3104011 on
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1040 "morallta_0006"
+@モラルタ
+アルマスだ！
+ベガ、アルマスが
+やっと戻ってきたよ
+
+# face 3104111 "happy"
+# textboxarrow 0 1
+# voice 1041 "beagallta_0005"
+@ベガルタ
+アルマスだ！
+モラ、アルマスが
+やっと戻ってきたね
+
+# move 3104111 1 0.5
+# move 172 3 0
+# face 172 "normal"
+# alpha 172 1 0.5
+# mask 172 on
+# textboxarrow 0 2
+# move 3104011 5 0.5
+# voice 1038 "almace_0003"
+@アルマス
+あなた達、ここにいたのね
+ティルフィングの推測通り、
+ケイオスリオン軍は誰もいない…
+
+# face 3104011 "normal"
+# textboxarrow 0 3
+# voice 1040 "morallta_0002"
+@モラルタ
+僕達が戻ってきたときには
+一人もいなくなってたよ！
+
+# face 3104111 "normal"
+# textboxarrow 0 1
+# voice 1041 "beagallta_0003"
+@ベガルタ
+私達が戻ってきたときには
+みんな出ていった後だったよ！
+
+# alpha 3104111 0 0.5
+# alpha 172 0 0.5
+# alpha 3104011 0 0.5
+# move 137 3 0
+# face 137 "angry"
+# alpha 137 1 0.5
+# mask 137 off
+# textboxarrow 0 2
+# voice 9969 "gill_0010"
+@ギル
+フェイルノートの奴…
+俺のことバカにしやがって…！
+
+# alpha 137 0 0.5
+# move 3300411 3 0
+# face 3300411 "surprise"
+# alpha 3300411 1 0.5
+# mask 3300411 off
+# textboxarrow 0 2
+# voice 330041 "amenonuboko_t_0028"
+@天沼矛
+あら～？
+そういえばガンバンテインさんも
+いないんですね～
+
+# alpha 3300411 0 0.5
+# move 3200111 3 0
+# face 3200111 "normal"
+# alpha 3200111 1 0.5
+# mask 3200111 off
+# textboxarrow 0 2
+# voice 320011 "myuruniru_ge_0022"
+@ミョルニル
+ガンバンテインはシユウたちに
+つれていかれちゃったの？
+たいへんだよ、マスタ！
+
+# alpha 3200111 0 0.5
+# move 172 2 0
+# face 172 "normal"
+# alpha 172 1 0.5
+# mask 172 on
+# move 139 4 0
+# face 139 "normal"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 3
+# voice 9967 "titania_0042"
+@ティターニア
+恐らくガンバンテインの諜報能力に
+目をつけたのでしょう
+
+# textboxarrow 0 1
+# voice 1038 "almace_0028"
+@アルマス
+まだ使い道があるから連れていった
+ってこと？
+あいつらしいけど…
+
+# textboxarrow 0 1
+# voice 1038 "almace_0001"
+@アルマス
+マスター、モラルタとベガルタとも
+合流できたし、今度こそ
+ケイオスリオン軍を追っかけるわよ
+
+# textboxarrow 0 1
+@アルマス
+もう文句はないわよね？
+
+;;//選択肢
+;;Ａもう少し調べよう
+;;Ｂ何か残ってないか？
+;;Ｃ焦らなくていい
+# select "もう少し調べよう" "select_label_01" "何か残ってないか？" "select_label_01" "焦らなくていい" "select_label_01"
+もう文句はないわよね？
+
+;;ＡＢＣ共通
+# label "select_label_01"
+# face 172 "surprise"
+# textboxarrow 0 1
+# voice 1038 "almace_0009"
+@アルマス
+これ以上、ここには何もないわよっ
+何も…何も…？
+
+# face 139 "surprise"
+# textboxarrow 0 3
+# voice 9967 "titania_0036"
+@ティターニア
+どうしました、アルマス？
+
+# face 172 "normal"
+# textboxarrow 0 1
+# voice 1038 "almace_0028"
+@アルマス
+あ、ううん…
+何か引っ掛かったんだけど、
+気のせいだったわ
+
+# alpha 139 0 0.5
+# move 3104011 4 0
+# face 3104011 "normal"
+# alpha 3104011 1 0.5
+# mask 3104011 on
+# textboxarrow 0 3
+# voice 1040 "morallta_0002"
+@モラルタ
+ねえねえアルマス
+そこの机にこんなのが置いて
+あったよ
+
+# move 3104111 1 0
+# face 3104111 "normal"
+# alpha 3104111 1 0.5
+# mask 3104111 on
+# textboxarrow 0 1
+# move 172 3 0.5
+# move 3104011 5 0.5
+# voice 1041 "beagallta_0023"
+@ベガルタ
+きっとお手紙だねっ
+アルマス宛てだったから、
+中身は見てないよ
+
+# face 172 "angry"
+# textboxarrow 0 2
+# voice 1038 "almace_0022"
+@アルマス
+そういうことは早く言いなさいよ！
+…フェイルノートの書き置きね
+ええと…
+
+# textwindow "close"
+# fadeout "black" 0.6
+# waitandnext 0.8
+
+# background "bg_black"
+# alpha 3104111 0 0
+# alpha 172 0 0
+# alpha 3104011 0 0
+# waitandnext 0.1
+
+# fadein "black" 0.6
+# waitandnext 0.8
+
+# textflame 0 0
+# textwindow "normal"
+@書き置き
+お寝坊アルマスと
+お人好しティファレトへ
+
+@書き置き
+あなた達みたいな甘ちゃんが
+深奥に辿り着くなんて夢のまた夢よ
+
+@書き置き
+これ以上、痛い目を見る前に
+進むのをやめて、ここで大人しく
+していなさい
+
+@書き置き
+ビフレストは古い言葉で
+「虹の橋」という意味を持つの
+地上と神々の世界を繋ぐ橋
+
+@書き置き
+つまり、ここを越えた先は神々の世界
+あなた達には荷が重すぎるわ
+
+@書き置き
+全て私が片付けてあげるから
+二人で思い出話にでも
+花を咲かせていると良い
+
+@書き置き
+もし余力があるならカシウスも
+引き止めておきなさい
+　　　　　　　　　　フェイルノート
+
+# textwindow "close"
+# fadeout "black" 0.6
+# waitandnext 0.8
+
+# background "bifrost"
+# move 172 2 0
+# face 172 "angry"
+# alpha 172 1 0
+# mask 172 on
+# move 139 4 0
+# face 139 "normal"
+# alpha 139 1 0
+# mask 139 on
+# waitandnext 0.1
+
+# fadein "black" 0.6
+# waitandnext 0.8
+
+# textflame 1 1
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 1038 "almace_0035"
+@アルマス
+あいつぅぅぅっ！
+何なのよ、いつもいつも上からで！
+
+# face 139 "worry"
+# textboxarrow 0 3
+@ティターニア
+…………
+
+# textboxarrow 0 3
+# voice 9967 "titania_0042"
+@ティターニア
+本当にそうなのでしょうか？
+
+# textboxarrow 0 1
+# voice 1038 "almace_0022"
+@アルマス
+何よ、ティニ？
+まさかフェイルノートの言う通りに
+しようって言うの！？
+
+# textboxarrow 0 3
+# voice 9967 "titania_0022"
+@ティターニア
+いえ、そうではありません…
+私にはまるで…
+
+# face 172 "normal"
+# textboxarrow 0 1
+@アルマス
+まるで？
+
+# face 139 "normal"
+# textboxarrow 0 3
+@ティターニア
+ごめんなさい…
+やっぱり何でもありません…
+
+# face 172 "angry"
+# textboxarrow 0 1
+@アルマス
+何よ、それっ

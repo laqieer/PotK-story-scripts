@@ -1,0 +1,210 @@
+;;-----------------------------------------
+;;ファントムオブキル　Ｒｅ：ゼロから始める異世界生活　シナリオ
+;;エピソードタイトル：
+;;【EP.3】決戦前夜 バトル後
+;;スクリプト最後の背景：plain
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm318" "BgmReZerocollobo" 0
+;;-----------------------------------------
+;;アルマス
+# body 3103811
+# pos 3103811 3
+# scale 3103811 0.8 0
+# layer 3103811 3
+# alpha 3103811 0 0
+# mask 3103811 off
+# face 3103811 "normal"
+;;ギル
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# layer 137 3
+# alpha 137 0 0
+# mask 137 off
+# face 137 "normal"
+;;ラム
+# body 3503311
+# pos 3503311 3
+# scale 3503311 0.8 0
+# layer 3503311 3
+# alpha 3503311 0 0
+# mask 3503311 off
+# face 3503311 "normal"
+;;レム
+# body 3202911
+# pos 3202911 3
+# scale 3202911 0.8 0
+# layer 3202911 3
+# alpha 3202911 0 0
+# mask 3202911 off
+# face 3202911 "normal"
+;;白鯨
+# body 3808711
+# pos 3808711 3
+# scale 3808711 1.3 0
+# layer 3808711 3
+# alpha 3808711 0 0
+# mask 3808711 off
+# face 3808711 "normal"
+# brightness 3808711 0.3 0
+;;白鯨（クローン）
+# entry 938087111 3808711
+# pos 938087111 3
+# scale 938087111 0.8 0
+# layer 938087111 3
+# alpha 938087111 0 0
+# mask 938087111 off
+# face 938087111 "normal"
+# brightness 938087111 0.3 0
+;;-----------------------------------------
+# move 137 3 0
+# face 137 "surprise"
+# alpha 137 1 0
+# mask 137 off
+# textflame 1 1
+# voice 9969 "gill_0018"
+@ギル
+す、すげぇ…
+
+# alpha 137 0 0.5
+# move 3503311 2 0
+# face 3503311 "normal"
+# alpha 3503311 1 0.5
+# mask 3503311 on
+# textboxarrow 0 1
+# move 3202911 4 0
+# face 3202911 "normal"
+# alpha 3202911 1 0.5
+# mask 3202911 on
+# voice 5033 "ramu_0005"
+@ラム
+これで…打ち止めかしら？
+
+# face 3202911 "happy"
+# textboxarrow 0 3
+# voice 2029 "remu_0006"
+@レム
+やりました…やりました、姉様！
+
+# alpha 3503311 0 0.5
+# alpha 3202911 0 0.5
+# move 3103811 3 0
+# face 3103811 "normal"
+# alpha 3103811 1 0.5
+# mask 3103811 off
+# textboxarrow 0 2
+# voice 1038 "almace_0007"
+@アルマス
+ま、私達にかかればこんなもんね
+ラムとレムもなかなかやるじゃない
+見事な戦いぶりだったわ
+
+# move 3103811 2 0.5
+# mask 3103811 on
+# move 3202911 4 0
+# face 3202911 "normal"
+# alpha 3202911 1 0.5
+# mask 3202911 on
+# textboxarrow 0 3
+# voice 2029 "remu_0041"
+@レム
+ふふ、なんといっても
+レムは鬼がかってますから！
+
+# textboxarrow 0 1
+# voice 1038 "almace_0004"
+@アルマス
+鬼がかってる？
+ふふ、違うわ
+絶鬼がかってる、よ
+
+# bgm "stop"
+# alpha 3103811 0 0.5
+# alpha 3202911 0 0.5
+# move 137 3 0
+# face 137 "surprise"
+# alpha 137 1 0.5
+# mask 137 off
+# textboxarrow 0 2
+# voice 9969 "gill_0002"
+@ギル
+…お、おい、お喋りしてるとこ
+悪いんだけど、向こうの霧！
+なんだよあれ！
+
+# bgmfile "bgm317" "BgmReZerocollobo" 0
+# imageset 2 "mov2_1"
+# imageset 1 "kiri_02"
+# imagealpha 1 0 0
+# imagealpha 2 0 0
+# imagelayer 1 5
+# imagelayer 2 1
+# alpha 137 0 0.5
+# move 3503311 3 0
+# face 3503311 "angry"
+# alpha 3503311 1 0.5
+# mask 3503311 off
+# textboxarrow 0 2
+# voice 5033 "ramu_0022"
+@ラム
+…霧？
+しまった！まさか！
+
+;;演出：白鯨のシルエットが表示できれば
+# textwindow "close"
+# alpha 3503311 0 0
+# fadein "white" 0.3
+# imagescale 2 2.5 0
+# imagealpha 2 1 0
+# imagepos 1 0 -150
+# imagepos 2 0 0
+# layer 3808711 20
+# imagealpha 1 1 1
+# imagemoveto 1 -100 -150 1
+# waitandnext 1
+
+# se "SE_0540"
+# alpha 3808711 1 1
+# move 3808711 3 0
+# mask 3808711 off
+# waitandnext 2
+
+# fadein "white" 0.3
+# imagealpha 2 0 0
+# imagealpha 1 0 0
+# alpha 3808711 0 0
+# move 3202911 3 0
+# face 3202911 "surprise"
+# alpha 3202911 1 0.5
+# mask 3202911 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 2029 "remu_0025"
+@レム
+嘘…白鯨がほかにも？
+
+;;演出：白鯨のシルエットを2体分に
+# se "SE_0540"
+# se "SE_7019"
+# fadein "white" 0.3
+# imagealpha 2 1 0
+# imagealpha 1 1 0
+# textwindow "close"
+# alpha 3202911 0 0.5
+# move 3808711 2 0
+# alpha 3808711 1 0
+# mask 3808711 on
+# move 938087111 4 0
+# alpha 938087111 1 1
+# mask 938087111 on
+# layer 938087111 21
+# waitandnext 1
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+霧に映った白鯨の影は
+間違いなくふたつに増えていた

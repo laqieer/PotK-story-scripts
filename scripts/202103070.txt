@@ -1,0 +1,591 @@
+;;-----------------------------------------
+;;SEA5章_7
+;;-----------------------------------------
+# script "lisp"
+# background "town_night_3"
+# bgm "bgm003" 0
+;;-----------------------------------------
+;;マナナン
+# body 6504011
+# pos 6504011 3
+# scale 6504011 0.8 0
+# layer 6504011 3
+# mask 6504011 off
+# alpha 6504011 0 0
+;;ミネルヴァ
+# body 302511
+# pos 302511 3
+# scale 302511 0.8 0
+# layer 302511 4
+# mask 302511 off
+# alpha 302511 0 0
+;;フライシュッツ
+# body 502711
+# pos 502711 4
+# scale 502711 0.8 0
+# layer 502711 4
+# alpha 502711 0 0
+;;ダモクレス
+# body 103511
+# pos 103511 2
+# scale 103511 0.8 0
+# layer 103511 3
+# alpha 103511 0 0
+;;グラーシーザ
+# body 302611
+# pos 302611 4
+# scale 302611 0.8 0
+# layer 302611 4
+# alpha 302611 0 0
+;;ネス
+# body 602011
+# pos 602011 2
+# scale 602011 0.8 0
+# layer 602011 3
+# alpha 602011 0 0
+;;神令エルキュール
+# body 3202511
+# pos 3202511 3
+# scale 3202511 0.75 0
+# layer 3202511 3
+# mask 3202511 off
+# alpha 3202511 0 0
+;;-----------------------------------------
+# imageset 0 "bg_white_circle"
+# imagealpha 0 0 0
+# imagescale 0 1.5 0
+# imagelayer 0 5
+# imageset 2 "bg_crack1"
+# imagealpha 2 0 0
+# imagelayer 2 5
+;;-----------------------------------------
+;;背景：町（夜）（トリミング）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_6211"
+# face 502711 "sad"
+# alpha 502711 1 0.3
+# face 103511 "sad"
+# alpha 103511 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@フライシュッツ
+…………
+
+# textboxarrow 0 1
+@ダモクレス
+…………
+
+# alpha 502711 0 0.3
+# alpha 103511 0 0.3
+# face 602011 "sad"
+# alpha 602011 1 0.3
+# face 302611 "sad"
+# alpha 302611 1 0.3
+# textboxarrow 0 3
+@グラーシーザ
+…………
+
+# textboxarrow 0 1
+@ネス
+…………
+
+# alpha 602011 0 0.3
+# alpha 302611 0 0.3
+# face 302511 "sad"
+# alpha 302511 1 0.3
+# textboxarrow 0 2
+@ミネルヴァ
+…………
+
+# alpha 302511 0 0.3
+# voice 650401 "manannan_ura_0022"
+# face 6504011 "surprise"
+# alpha 6504011 1 0.3
+# textboxarrow 0 2
+@マナナン
+あれ～？
+みんな静かになっちゃったね
+
+# voice 650401 "manannan_ura_0002"
+# face 6504011 "normal"
+# textboxarrow 0 2
+@マナナン
+ねぇねぇ、マスター
+早くミーミルを助けに行こうよ
+
+;;選択肢
+# select "マナナンは…" "select_label_01" "“相棒”は…" "select_label_01"
+ねぇねぇ、マスター
+早くミーミルを助けに行こうよ
+
+# label "select_label_01"
+# voice 650401 "manannan_ura_0028"
+# face 6504011 "sad"
+# textboxarrow 0 2
+@マナナン
+うーん…
+“相棒”のことは気になってるし
+探しに行きたいけど…
+
+# face 6504011 "usual"
+# textboxarrow 0 2
+@マナナン
+ミーミルにマスターのこと
+お願いされたから
+
+# textboxarrow 0 2
+@マナナン
+それに、この町にいるって
+確かに感じるんだ
+その気配は消えてない
+
+# voice 650401 "manannan_ura_0003"
+# textboxarrow 0 2
+@マナナン
+だから、ミーミルが戻ってくるまで
+私がマスターを守らないとね
+
+;;選択肢
+# select "ありがとう" "select_label_02" "変わったね" "select_label_03"
+だから、ミーミルが戻ってくるまで
+私がマスターを守らないとね
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# voice 650401 "manannan_ura_0005"
+# face 6504011 "happy"
+# textboxarrow 0 2
+@マナナン
+アハハハ！
+お礼を言われるの愉快な気分♪
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 6504011 "normal"
+# textboxarrow 0 2
+@マナナン
+そうかな？
+もしそうならマスターとミーミルの
+影響かもね～
+
+# label "select_label_end"
+# voice 3025 "minerva_0028"
+# face 302511 "sad"
+# alpha 302511 1 0.3
+# alpha 6504011 0 0.3
+# textboxarrow 0 2
+@ミネルヴァ
+…失礼しました、マスター
+エルキュールに言われたことが
+引っかかっていて……
+
+# textboxarrow 0 2
+@ミネルヴァ
+皆さんも同じだと思います…
+
+;;選択肢
+# select "“彼女”というのは…" "select_label_04" "君達が忘れているのは…" "select_label_04"
+エルキュールに言われたことが
+引っかかっていて……
+皆さんも同じだと思います…
+
+# label "select_label_04"
+;;マスター自身が痛みを感じる演出
+# fadein "red" 1
+# textboxarrow 0 0
+# waitandnext 2
+
+;;選択肢
+# select "うぐっ…？" "select_label_05"
+！？
+
+# label "select_label_05"
+# voice 3025 "minerva_0022"
+# face 302511 "surprise"
+# textboxarrow 0 2
+@ミネルヴァ
+どうしましたっ？
+急に喉を押さえて…
+
+;;選択肢
+# select "おかしい…" "select_label_06" "言葉が出てこない…" "select_label_06"
+どうしましたっ？
+急に喉を押さえて…
+
+# label "select_label_06"
+# move 302511 2 0.5
+# layer 302511 2
+# move 6504011 4 0
+# layer 6504011 4
+# mask 6504011 on
+# voice 650401 "manannan_ura_0022"
+# face 6504011 "surprise"
+# alpha 6504011 1 0.3
+# textboxarrow 0 3
+@マナナン
+どうしたの？
+普通に喋れてるよ
+
+# voice 3025 "minerva_0002"
+# textboxarrow 0 1
+@ミネルヴァ
+マスター、もしかして…
+
+# textboxarrow 0 1
+@ミネルヴァ
+“彼女”のことを
+私達が忘れていることについて、
+何か知っているのですか？
+
+;;選択肢
+# select "そうだけど…" "select_label_07" "話したいのに…" "select_label_07"
+“彼女”のことを
+私達が忘れていることについて、
+何か知っているのですか？
+
+# label "select_label_07"
+# voice 650401 "manannan_ura_0028"
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+何だか苦しそうだね…
+
+# voice 3025 "minerva_0001"
+# face 302511 "angry"
+# textboxarrow 0 1
+@ミネルヴァ
+マスター
+無理に話そうとしないで下さい
+
+# textboxarrow 0 1
+@ミネルヴァ
+マスターは今、話したくても話せない
+…そのような状況に
+あるのではないかと推測します
+
+# face 6504011 "usual"
+# textboxarrow 0 3
+@マナナン
+ふーん…何で？
+
+# face 302511 "sad"
+# textboxarrow 0 1
+@ミネルヴァ
+理由までは分かりません
+ただ…
+
+;;回想シーン（１話―５の回想）
+# se "SE_0742"
+# fadeout "white" 1
+# waitandnext 1
+
+;;背景：荒野：wild
+# background "wild"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# alpha 302511 0 0
+# alpha 6504011 0 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+# face 3202511 "angry"
+# alpha 3202511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@エルキュール
+あなた達は覚えていない
+思い出すこともできない
+
+# textboxarrow 0 2
+@エルキュール
+私も“彼女”のことは“彼女”としか
+口にできません
+大切な存在なのに…！
+
+# textboxarrow 0 2
+@エルキュール
+それが普通だって…
+理解しています
+でも、だからこそ
+
+# textboxarrow 0 2
+@エルキュール
+私は抗います
+抗って抗って抗って…
+“彼女”を取り戻すんです！
+
+# textboxarrow 0 2
+@エルキュール
+“彼女”だけが忘れられて…
+それでいいはずがないんです
+
+;;回想終了
+# se "SE_11762"
+# fadeout "white" 1
+# waitandnext 1
+
+;;背景：町（夜）
+# background "town_night_3"
+# imagealpha 0 0 0
+# alpha 3202511 0 0
+# mask 302511 on
+# face 302511 "sad"
+# alpha 302511 1 0
+# face 6504011 "usual"
+# alpha 6504011 1 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1.5
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミネルヴァ
+あのとき、エルキュールは
+“彼女”としか言えないと
+言っていました
+
+# textboxarrow 0 1
+@ミネルヴァ
+ひょっとすると、
+この世界そのものが
+
+# textboxarrow 0 1
+@ミネルヴァ
+“彼女”に関することを
+伝えられないように
+しているのかもしれません
+
+# voice 650401 "manannan_ura_0009"
+# face 6504011 "surprise"
+# textboxarrow 0 3
+@マナナン
+ええーっ
+何それ…
+
+# face 302511 "angry"
+# textboxarrow 0 1
+@ミネルヴァ
+ともかく、マスター
+無理に伝えようとしなくて
+構いません
+
+# textboxarrow 0 1
+@ミネルヴァ
+これは私達自身で思い出さなければ
+ならない事柄なんです
+
+;;選択肢
+# select "分かった" "select_label_08" "もどかしい…" "select_label_09"
+マスター
+無理に伝えようとしなくて
+構いません
+
+# label "select_label_08"
+# labeljump "select_label_end2"
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+何だか面倒臭そうだね～
+
+# label "select_label_09"
+# labeljump "select_label_end2"
+# face 302511 "normal"
+# textboxarrow 0 1
+@ミネルヴァ
+そうですね…
+でも、私達は大丈夫です
+
+# label "select_label_end2"
+# face 302511 "angry"
+# textboxarrow 0 1
+@ミネルヴァ
+それより、ミーミルのことです
+早く助け出さないと
+いけなかったんですよね
+
+# voice 650401 "manannan_ura_0003"
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+そうだよ！
+早く探しに行こう！
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# face 302511 "normal"
+# textboxarrow 0 1
+@ミネルヴァ
+それについては、そろそろ報告が
+あるはずです
+
+# voice 650401 "manannan_ura_0022"
+# face 6504011 "surprise"
+# textboxarrow 0 3
+@マナナン
+報告？
+誰から？
+
+# voice 3025 "minerva_0004"
+# face 302511 "happy"
+# textboxarrow 0 1
+@ミネルヴァ
+もちろん…ああ、来ました！
+ニケ！
+
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+あ！フクロウだっ
+
+# bgm "bgm005" 0
+# face 302511 "normal"
+# textboxarrow 0 1
+@ミネルヴァ
+この子はニケ
+とても賢い子なんですよ
+
+# textboxarrow 0 1
+@ミネルヴァ
+実はエルキュールの後をこっそり
+追ってもらったんです
+
+# textboxarrow 0 1
+@ミネルヴァ
+彼女の拠点がどこなのか
+きちんと見つけてくれたようですね
+
+# voice 650401 "manannan_ura_0005"
+# face 6504011 "happy"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+本当に賢いんだね～
+
+# textboxarrow 0 1
+@ミネルヴァ
+私の推測では、エルキュールと
+スイハは協力関係にあります
+
+# textboxarrow 0 1
+@ミネルヴァ
+エルキュールの拠点に
+スイハもいるはずです
+そして、そこには…
+
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+ミーミルもいるってことだね！
+
+# voice 3025 "minerva_0032"
+# textboxarrow 0 1
+@ミネルヴァ
+はい
+ニケ、案内して下さい
+
+# alpha 302511 0 0.3
+# alpha 6504011 0 0.3
+# face 103511 "usual"
+# alpha 103511 1 0.3
+# face 302611 "normal"
+# alpha 302611 1 0.3
+# voice 3026 "grayside_0032"
+# textboxarrow 0 3
+@グラーシーザ
+エルキュールのところにいくのだな
+では、あたしもどうこうしよう
+
+# voice 1035 "damocles_0004"
+# face 103511 "happy"
+# textboxarrow 0 1
+@ダモクレス
+クレスも！
+よく分かんないことをいつまでも
+考えてたって仕方ないもんね
+
+# alpha 103511 0 0.3
+# alpha 302611 0 0.3
+# face 502711 "surprise"
+# alpha 502711 1 0.3
+# face 602011 "angry"
+# alpha 602011 1 0.3
+# textboxarrow 0 3
+@フライシュッツ
+おねーちゃんを置いてかないで～
+
+# textboxarrow 0 1
+@ネス
+わたしも、行きます…！
+
+# alpha 502711 0 0.3
+# alpha 602011 0 0.3
+# move 302511 3 0
+# mask 302511 off
+# face 302511 "normal"
+# voice 3025 "minerva_0033"
+# alpha 302511 1 0.3
+# textboxarrow 0 2
+@ミネルヴァ
+分かりました
+マスターは、動けそうですか？
+
+;;選択肢
+# select "もちろん！" "select_label_10" "一緒に行くよ" "select_label_10"
+マスターは、動けそうですか？
+
+# label "select_label_10"
+# textboxarrow 0 2
+@ミネルヴァ
+では、皆で行きましょう！
+
+;;皆が走っていく
+# se "SE_5575"
+# sedelay "SE_5575" 0.2
+# sedelay "SE_5575" 0.3
+# sedelay "SE_5575" 0.4
+# scale 302511 0.75 0.5
+# textwindow "close"
+# alpha 302511 0 0.3
+# waitandnext 1
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;世界にヒビ割れが入る（マクリルがいる場所の方で）
+# background "town_night_2"
+# bgm "stop"
+# fadein "black" 1
+# waitandnext 1.5
+
+# fadein "white" 0.5
+# se "SE_6210"
+# imagealpha 2 1 0.2
+# imagepos 2 0 0
+# waitandnext 2
+
+# fadeout "black" 1
+# waitandnext 1
+
+# background "town_night_3"
+# imagealpha 2 0 0
+# fadein "black" 1
+# waitandnext 1.5
+
+# voice 650401 "manannan_ura_0022"
+# move 6504011 3 0
+# mask 6504011 off
+# face 6504011 "surprise"
+# alpha 6504011 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@マナナン
+…あれ？
+今の感覚って…
+
+# fadeout "black" 1
+# waitandnext 1

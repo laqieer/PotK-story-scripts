@@ -1,0 +1,376 @@
+;;-----------------------------------------
+;;エイプリル6_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "stop"
+;;-----------------------------------------
+;;スイハ
+# body 401711
+# alpha 401711 0 0
+# body 44017002
+# pos 44017002 2
+# scale 44017002 0.8 0
+# layer 44017002 2
+# mask 44017002 off
+# alpha 44017002 0 0
+;;シェキナー？
+# body 900026
+# pos 900026 1
+# scale 900026 0.8 0
+# layer 900026 4
+# alpha 900026 0 0
+# brightness 900026 0 0
+;;デュランダル？
+# body 900028
+# pos 900028 5
+# scale 900028 0.8 0
+# layer 900028 2
+# alpha 900028 0 0
+# brightness 900028 0 0
+;;ブラフマーストラ？
+# body 900027
+# pos 900027 3
+# scale 900027 0.8 0
+# layer 900027 4
+# alpha 900027 0 0
+# brightness 900027 0 0
+;;ミョルニル？
+# body 900030
+# pos 900030 1
+# scale 900030 0.8 0
+# layer 900030 2
+# alpha 900030 0 0
+# brightness 900030 0 0
+;;ゼロ
+# body 23
+# pos 23 3
+# scale 23 0.8 0
+# layer 23 2
+# mask 23 off
+# alpha 23 0 0
+;;マモン
+# body 960020
+# pos 960020 4
+# scale 960020 1 0
+# layer 960020 4
+# alpha 960020 0 0
+# brightness 960020 0.6 0
+# face 960020 "angry"
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：洋館の地下ビフレスト社研究所の薄暗い廊下
+# textwindow "close"
+# waitandnext 0.2
+
+# background "bifrost"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# alpha 44017002 1 0
+# alpha 960020 1 0
+# waitandnext 0.3
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 3
+@マモン
+グガアアアア……！
+
+# alpha 960020 0 1
+# textwindow "close"
+# waitandnext 1.5
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@スイハ
+勝った…
+今度こそ、本当に
+
+# alpha 44017002 0 0.3
+# alpha 23 1 0.3
+# textboxarrow 0 2
+@ゼロ
+さあ、みんな乗れ！
+帰るぞ！
+
+;;暗転
+# se "SE_6227"
+# fadeout "black" 1
+# waitandnext 1
+
+;;黒背景
+# background "bg_black"
+# alpha 23 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# move 23 2 0
+# layer 23 4
+# mask 23 on
+# move 44017002 4 0
+# layer 44017002 2
+# mask 44017002 off
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+@
+全員がヘリに乗り込み、
+再び飛び立つ
+
+# alpha 23 1 0.5
+# alpha 44017002 1 0.5
+# waitandnext 0.8
+
+# face 44017002 "happy"
+# voice 4017 "suiha_0004"
+;;モヤモヤ吹き出し
+# move 44017002 4 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@スイハ
+ようやく、この長かった
+任務も終わったんですね…
+
+# face 23 "surprise"
+# voice 11002 "laevateinm_0023"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ゼロ
+ん？
+なんだ？
+ヘリの制御が…
+
+# se "SE_6228"
+# face 44017002 "surprise"
+# shake 0 1
+# textflame 0 0
+@
+急にヘリがガクガクと震えだす
+
+# face 23 "angry_2"
+# voice 11002 "laevateinm_battle_0005"
+# textflame 1 1
+# textboxarrow 0 1
+@ゼロ
+くそ！
+墜落するぞ！
+機体に掴まれ！
+
+# face 44017002 "sad"
+# voice 4017 "suiha_battle_0006"
+# textboxarrow 0 3
+@スイハ
+きゃああああ！
+
+;;暗転
+# sestop "SE_6228"
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+;;背景：町中夜
+# background "town_night"
+# bgmfile "bgm166" "BgmPJZero001" 0
+# alpha 23 0 0
+# alpha 44017002 0 0
+# textwindow "close"
+# waitandnext 1
+
+# move 44017002 3 0
+# layer 44017002 2
+# mask 44017002 off
+# face 44017002 "surprise"
+# fadein "black" 1.5
+# waitandnext 1.5
+
+# voice 4017 "suiha_0022"
+# alpha 44017002 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@スイハ
+……こ、ここは
+私が暮らしている町？
+
+# textboxarrow 0 2
+@スイハ
+どうして到着しているのでしょう？
+確か墜落したはずでは…？
+
+# textboxarrow 0 2
+@スイハ
+それより、
+みんなは…？
+
+# move 900026 2 0.5
+# alpha 900026 1 0.5
+# move 44017002 4 0.5
+# textflame 0 0
+@
+そこにシェキナーが
+通りかかる
+
+# face 44017002 "happy"
+# voice 4017 "suiha_0004"
+# textflame 1 1
+# textboxarrow 0 3
+@スイハ
+シェキナー！
+無事だったのですね
+
+# textflame 0 0
+@
+スイハに声をかけられ
+シェキナーが振り向く
+
+# brightness 900026 1 0.5
+# textflame 1 1
+# textboxarrow 0 0
+@シェキナー？
+……
+
+# face 44017002 "sad"
+# voice 4017 "suiha_0024"
+# textboxarrow 0 3
+@スイハ
+きゃあああ！
+ど、どうして？
+
+# se "SE_5575"
+# move 44017002 5 0.5
+# alpha 44017002 0 0.3
+# textflame 0 0
+@
+駆け出すスイハ
+
+;;暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# move 44017002 3 0
+# alpha 900026 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 44017002 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@スイハ
+はあ、はあ、はあ…
+
+# alpha 44017002 0 0.3
+# alpha 900028 1 0.5
+# alpha 900027 1 0.5
+# alpha 900030 1 0.5
+# textflame 0 0
+@
+そこにブラフマーストラ、
+デュランダル、ミョルニルが
+通りかかる
+
+# face 44017002 "angry"
+# alpha 44017002 1 0.3
+# alpha 900028 0 0.5
+# alpha 900027 0 0.5
+# alpha 900030 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+みんなっ、
+聞いてください！
+シェキナーが…
+
+# alpha 44017002 0 0.3
+# alpha 900028 1 0.5
+# alpha 900027 1 0.5
+# alpha 900030 1 0.5
+# textwindow "close"
+# waitandnext 0.8
+
+# brightness 900027 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 0
+@ブラフマーストラ？
+……
+
+# brightness 900028 1 0.5
+@デュランダル？
+……
+
+# brightness 900030 1 0.5
+@ミョルニル？
+……
+
+# face 44017002 "sad"
+# voice 4017 "suiha_0025"
+# alpha 44017002 1 0.3
+# alpha 900028 0 0.5
+# alpha 900027 0 0.5
+# alpha 900030 0 0.5
+# textboxarrow 0 2
+@スイハ
+そ、そんな…
+
+# textflame 0 0
+@
+「スイハっ！逃げろ！」
+戸惑うスイハに
+声がかかる
+
+# face 44017002 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+あっ！
+マスター！
+
+# face 44017002 "happy"
+# voice 4017 "suiha_0004"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+よかった…
+マスターは無事だったんですね
+
+# textflame 0 0
+@
+[8b0000]「いや、そうでもないんだ…」[-]
+暗く不吉をはらんだ声
+
+# face 44017002 "surprise"
+# voice 4017 "suiha_0022"
+# textflame 1 1
+# textboxarrow 0 2
+@スイハ
+え？
+
+# textflame 0 0
+@
+マスターが顔を上げると
+なんと、マスターも
+ゾンビ化していたのだった
+
+# face 44017002 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+# textsize 28
+@スイハ
+いやあああああああ！
+
+# fadeout "black" 2
+# waitandnext 2

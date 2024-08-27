@@ -1,0 +1,510 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第18章 章タイトル：×××アポカリプス
+;;第1話―１１　タイトル：絆を胸に
+;;11_3
+;;スクリプト最後の背景：中心部（崩壊・昼）
+;;-----------------------------------------
+# script "lisp"
+# background "in_city_collapse"
+# bgmfile "bgm483" "BgmIntegralNoahBattle007" 0
+;;-----------------------------------------
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;ムラマサ・獣刻・ヤマタノオロチ 大罪ver.
+# body 5102511
+# pos 5102511 3
+# scale 5102511 0.8 0
+# layer 5102511 2
+# alpha 5102511 0 0
+# mask 5102511 off
+;;フォルカス・神令・ヘル
+# body 5301811
+# pos 5301811 3
+# scale 5301811 0.8 0
+# layer 5301811 3
+# alpha 5301811 0 0
+# mask 5301811 off
+;;グリモワール・獣刻・ニーズヘッグ 大罪ver.
+# body 5501711
+# pos 5501711 3
+# scale 5501711 0.8 0
+# layer 5501711 2
+# alpha 5501711 0 0
+# mask 5501711 off
+;;アスカロン・D. plug・レヴィアタン 大罪ver.
+# body 5102311
+# pos 5102311 3
+# scale 5102311 0.8 0
+# layer 5102311 2
+# alpha 5102311 0 0
+# mask 5102311 off
+;;カミト義手破壊
+# body 257
+# pos 257 3
+# scale 257 0.8 0
+# layer 257 2
+# alpha 257 0 0
+# mask 257 off
+;;フリズスキャールヴ
+# body 52000411
+# pos 52000411 3
+# scale 52000411 0.8 0
+# layer 52000411 2
+# alpha 52000411 0 0
+# mask 52000411 off
+;;魔獣
+# body 806158
+# pos 806158 3
+# scale 806158 0.8 0
+# layer 806158 2
+# alpha 806158 0 0
+# mask 806158 off
+;;-----------------------------------------
+# se "SE_11742"
+# voice 310251 "muramasa_ge_battle_0002"
+# move 806158 2 0
+# alpha 806158 1 0
+# mask 806158 on
+# move 5102511 4 0
+# face 5102511 "angry"
+# alpha 5102511 1 0
+# mask 5102511 on
+# textflame 1 1
+# textboxarrow 0 3
+@ムラマサ
+せいっ！
+
+# se "SE_7272"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 -200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# se "SE_0794"
+# textboxarrow 0 1
+@魔獣
+ガアアアアアアアア…
+
+;;//魔獣が倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 806158 0 0.5
+# waitandnext 0.8
+
+# alpha 5102511 0 0.5
+# waitandnext 0.5
+
+;;//アスカロンが駆け抜ける
+# se "SE_5575"
+# move 5102311 3 0
+# face 5102311 "normal"
+# alpha 5102311 1 0
+# mask 5102311 off
+# rightin 5102311 0.5
+# waitandnext 0.5
+
+;;//フリズスキャールヴに迫る
+# se "SE_9149"
+# waitandnext 0.5
+
+# se "SE_5205"
+# voice 310231 "ascalon_a_0029"
+# textboxarrow 0 2
+# textwindow "normal"
+@アスカロン
+嫉妬の氷で凍てつかせます！
+
+;;# voice 5200041 "hlidskjalf_0027"
+# alpha 5102311 0 0.5
+# move 52000411 3 0
+# face 52000411 "usual"
+# alpha 52000411 1 0.5
+# mask 52000411 off
+# textboxarrow 0 2
+@フリズスキャールヴ
+まったく…
+頭を冷やせ
+
+;;//フリズスキャールヴが避ける
+# se "SE_5204"
+# textwindow "close"
+# leftout 52000411 0.5
+# waitandnext 0.5
+
+# alpha 52000411 0 0
+# move 5301811 1 0
+# move 5102311 5 0
+# waitandnext 0.2
+
+;;//向かいにいたフォルカスとアスカロンがぶつかる
+# move 5301811 2 0.1
+# face 5301811 "angry"
+# alpha 5301811 1 0.2
+# mask 5301811 on
+# move 5102311 4 0.1
+# face 5102311 "sad"
+# alpha 5102311 1 0.2
+# mask 5102311 on
+# waitandnext 0.2
+
+# se "SE_4602"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 310231 "ascalon_a_battle_0006"
+# textboxarrow 0 3
+# textwindow "normal"
+@アスカロン
+あうっ…
+
+# voice 530181 "forcas_c_0015"
+# textboxarrow 0 1
+@フォルカス
+くっ…
+
+# textboxarrow 0 1
+@フォルカス
+今なら隙を突けると思ったのに…
+
+# voice 310231 "ascalon_a_0031"
+# face 5102311 "sad"
+# textboxarrow 0 3
+@アスカロン
+ごめんなさい、フォルカス…
+大丈夫ですか？
+
+# textboxarrow 0 1
+@フォルカス
+…離れて下さい
+あなたに心配されなくても…
+
+# alpha 5301811 0 0.5
+# alpha 5102311 0 0.5
+# move 5501711 3 0
+# face 5501711 "normal"
+# alpha 5501711 1 0.5
+# mask 5501711 off
+# textboxarrow 0 2
+@グリモワール
+こんなときまで意地張ってる場合じゃ
+ないでしょ！
+ここは力を合わせて――
+
+;;# voice 5200041 "hlidskjalf_battle_0002"
+# move 52000411 2 0
+# face 52000411 "angry"
+# alpha 52000411 1 0.5
+# mask 52000411 on
+# textboxarrow 0 1
+# move 5501711 4 0.5
+# mask 5501711 on
+@フリズスキャールヴ
+そこじゃ
+
+;;//フリズスキャールヴがグリモワールを弾く
+# se "SE_9083"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textwindow "close"
+# rightout 5501711 0.3
+# waitandnext 0.6
+
+# alpha 5501711 0 0
+# alpha 52000411 0 0.5
+# waitandnext 0.5
+
+;;//グリモワールがアスカロン達とぶつかる
+# move 5301811 3 0
+# face 5301811 "normal"
+# alpha 5301811 1 0.5
+# mask 5301811 on
+# move 5102311 5 0
+# face 5102311 "usual"
+# alpha 5102311 1 0.5
+# mask 5102311 on
+# waitandnext 0.5
+
+# move 5501711 1 0
+# face 5501711 "usual"
+# alpha 5501711 1 0
+# mask 5501711 on
+# leftin 5501711 0.3
+# waitandnext 0.3
+
+# se "SE_4602"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 350171 "grimoire_ge_battle_0006"
+# face 5501711 "normal"
+# textboxarrow 0 1
+# face 5301811 "angry"
+# face 5102311 "normal"
+# textwindow "normal"
+@グリモワール
+ぐっ…
+動きを見切られてる…
+ただでさえ力が入らないのにっ…
+
+# alpha 5501711 0 0.5
+# alpha 5301811 0 0.5
+# alpha 5102311 0 0.5
+# move 52000411 3 0
+# face 52000411 "usual"
+# alpha 52000411 1 0.5
+# mask 52000411 off
+# textboxarrow 0 2
+@フリズスキャールヴ
+三人とも、しばし眠っておれ
+
+# se "SE_0793"
+# alpha 52000411 0 0.5
+# move 806158 3 0
+# alpha 806158 1 0.5
+# mask 806158 off
+# textboxarrow 0 2
+@魔獣
+ガアアアアアアアアアア！
+
+# voice 310231 "ascalon_a_battle_0006"
+# alpha 806158 0 0.5
+# move 5102311 3 0
+# face 5102311 "sad"
+# alpha 5102311 1 0.5
+# mask 5102311 off
+# textboxarrow 0 2
+@アスカロン
+うっ…こんなところで…
+
+;;//カミトが間に割り込む
+# se "SE_5200"
+# alpha 5102311 0 0.5
+# move 257 3 0
+# face 257 "angry"
+# alpha 257 1 0.5
+# mask 257 off
+# textboxarrow 0 2
+@カミト
+まだだ！
+
+# alpha 257 0 0.5
+# move 5501711 2 0
+# face 5501711 "usual"
+# alpha 5501711 1 0.5
+# mask 5501711 on
+# move 5102311 4 0
+# face 5102311 "surprise"
+# alpha 5102311 1 0.5
+# mask 5102311 on
+# textboxarrow 0 3
+@アスカロン
+マスター！？
+
+# face 5501711 "normal"
+# textboxarrow 0 1
+@グリモワール
+キミ、またそういう無茶をして…！
+
+;;# voice 5200041 "hlidskjalf_0022"
+# alpha 5501711 0 0.5
+# alpha 5102311 0 0.5
+# move 52000411 3 0
+# face 52000411 "surprise"
+# alpha 52000411 1 0.5
+# mask 52000411 off
+# textboxarrow 0 2
+@フリズスキャールヴ
+おや？
+ただの人間が何故ここに…
+
+# se "SE_0792"
+# alpha 52000411 0 0.5
+# move 806158 3 0
+# alpha 806158 1 0.5
+# mask 806158 off
+# textboxarrow 0 2
+@魔獣
+ガアアアアアアアア！！
+
+# alpha 806158 0 0.5
+# move 257 3 0
+# face 257 "angry"
+# alpha 257 1 0.5
+# mask 257 off
+# textboxarrow 0 2
+@カミト
+アスカロン、グリモワール、
+フォルカス、立つんだ！
+君達はまだ戦える！
+
+# textboxarrow 0 2
+@カミト
+僕達は、人類は、キル姫は、
+“終焉”の力になんて負けない！
+
+# se "SE_0793"
+# alpha 257 0 0.5
+# move 806158 3 0
+# alpha 806158 1 0.5
+# mask 806158 off
+# textboxarrow 0 2
+@魔獣
+ガアアアアアアア！！
+
+;;//魔獣がカミトに襲い掛かる
+# se "SE_5732"
+# textwindow "close"
+# leftout 806158 0.5
+# waitandnext 0.5
+
+# alpha 806158 0 0
+# move 5102311 3 0
+# face 5102311 "normal"
+# alpha 5102311 1 0.5
+# mask 5102311 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アスカロン
+マスターに――
+
+# bgm "stop"
+# alpha 5102311 0 0.5
+# move 5301811 3 0
+# face 5301811 "angry"
+# alpha 5301811 1 0.5
+# mask 5301811 off
+# textboxarrow 0 2
+@フォルカス
+マスターには指一本触れさせません！
+
+# textwindow "close"
+# alpha 5301811 0 0.5
+# move 806158 3 0
+# alpha 806158 1 0.5
+# mask 806158 off
+# waitandnext 0.6
+
+;;//フォルカスが魔獣を斬る
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_0794"
+# alpha 806158 1 0.5
+# textboxarrow 0 2
+# textwindow "normal"
+@魔獣
+ガアアアアアア…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 806158 0 0.5
+# waitandnext 0.5
+
+# move 5501711 1 0
+# face 5501711 "surprise"
+# alpha 5501711 1 0.5
+# mask 5501711 on
+# move 5301811 3 0
+# face 5301811 "angry"
+# alpha 5301811 1 0.5
+# mask 5301811 on
+# move 5102311 5 0
+# face 5102311 "surprise"
+# alpha 5102311 1 0.5
+# mask 5102311 on
+# textboxarrow 0 3
+# textwindow "normal"
+@アスカロン
+フォルカス…
+
+# textboxarrow 0 1
+@グリモワール
+キミ…
+
+# face 5301811 "sad"
+# textboxarrow 0 2
+@フォルカス
+いえ、今のは…その…
+
+;;//画面フラッシュ
+;;//金属的な音とか
+# se "SE_9088"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm405" "BgmIntegralNoahEvent003" 0
+# voice 9936 "kamito_0026"
+# alpha 5501711 0 0.5
+# alpha 5301811 0 0.5
+# alpha 5102311 0 0.5
+# move 257 3 0
+# face 257 "surprise"
+# alpha 257 1 0.5
+# mask 257 on
+# textboxarrow 0 2
+@カミト
+あれ…？
+何だか、胸が…
+う…わあああああああ！？
+
+# voice 9935 "vang_0026"
+# alpha 257 0 0.5
+# move 211 3 0
+# face 211 "surprise"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+@ヴァング
+何だ、この光は！？
+
+;;//心音演出
+# se "SE_0644"
+# waitandnext 0.5
+
+# alpha 211 0 0.5
+# move 5501711 1 0
+# face 5501711 "usual"
+# alpha 5501711 1 0.5
+# mask 5501711 on
+# move 5301811 3 0
+# face 5301811 "surprise"
+# alpha 5301811 1 0.5
+# mask 5301811 on
+# move 5102311 5 0
+# face 5102311 "normal"
+# alpha 5102311 1 0.5
+# mask 5102311 on
+# textboxarrow 0 3
+@アスカロン
+あ…胸が温かい…
+力が…力が湧き上がってきます！
+
+# face 5501711 "normal"
+# textboxarrow 0 1
+@グリモワール
+これってもしかして…
+間違いないわ！
+
+# voice 530181 "forcas_c_0013"
+# textboxarrow 0 2
+@フォルカス
+どうしてですか…？
+どうして私まで…
+
+# textboxarrow 0 0
+@三人
+キラーズとバイブスが
+共鳴してる！

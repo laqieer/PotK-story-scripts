@@ -1,0 +1,1128 @@
+;;-----------------------------------------
+;;SEAイベント不可思議仕儀ツークンフト2_3_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "stop"
+;;-----------------------------------------
+;;SEAカシウス・誓約
+# body 6303121
+# pos 6303121 2
+# scale 6303121 0.8 0
+# layer 6303121 2
+# mask 6303121 off
+# alpha 6303121 0 0
+;;イージス
+# body 52000111
+# pos 52000111 3
+# scale 52000111 0.8 0
+# layer 52000111 2
+# mask 52000111 off
+# alpha 52000111 0 0
+;;SEAイージス
+# body 62000111
+# pos 62000111 3
+# scale 62000111 0.8 0
+# layer 62000111 3
+# mask 62000111 off
+# alpha 62000111 0 0
+;;トライデント天上編
+# body 300231
+# pos 300231 4
+# scale 300231 0.8 0
+# layer 300231 4
+# alpha 300231 0 0
+;;カオスリーパー
+# body 5810301
+# pos 5810301 3
+# scale 5810301 1 0
+# layer 5810301 3
+# mask 5810301 off
+# alpha 5810301 0 0
+;;魔獣
+# body 920014
+# pos 920014 3
+# scale 920014 0.8 0
+# layer 920014 5
+# alpha 920014 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+# imageset 2 "SEA62000111"
+# imagealpha 2 0 0
+# imagescale 2 1 0
+# imagelayer 2 5
+# imageset 3 "bg_white_circle"
+# imagealpha 3 0 0
+# imagescale 3 1.2 0
+# imagelayer 3 4
+;;-----------------------------------------
+;;背景：村
+# textwindow "close"
+# waitandnext 0.2
+
+# bgm "bgm005" 0
+# background "004_outland"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_4200"
+# sedelay "SE_6795" 0.3
+# voice 530311 "cassius_ca_battle_0001"
+# face 6303121 "angry"
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@カシウス
+はっ！
+
+# se "SE_4200"
+# sedelay "SE_6831" 0.3
+# voice 3002 "toraidento_0029"
+# face 300231 "surprise"
+# alpha 300231 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@トライデント
+たぁー！
+
+# textflame 0 0
+@
+村人を守り、カオスリーパーの
+動向に気を配りながら魔獣を退ける
+カシウスとトライデント
+
+# textflame 0 0
+@
+三方を気にしながらの戦闘に
+ふたりが苦戦する中、イージスは
+返事はしたもののただ立ち尽くす
+
+# alpha 6303121 0 0.3
+# alpha 300231 0 0.3
+# layer 52000111 2
+# face 52000111 "sad"
+# alpha 52000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@イージス
+カオちゃん…
+
+# textflame 0 0
+@
+村をうろつき、恐怖を煽る
+カオスリーパー達の行動に
+イージスは強いショックを受けていた
+
+# move 52000111 2 0.5
+# move 6303121 4 0
+# layer 6303121 4
+# mask 6303121 on
+# face 6303121 "normal"
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+カオスリーパー達の目的は不明
+
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+けれど、今あなたがその盾で
+戦わなければカオスリーパー達を
+守ることすらできない
+
+# face 52000111 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+…っ！
+
+# face 52000111 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+…すまない
+これでは隊長として失格だな
+
+# alpha 6303121 0 0.3
+# move 920014 4 0
+# alpha 920014 1 0.5
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 0
+@魔獣
+グォォォオン！
+
+# voice 5200011 "aegis_c_battle_0001"
+# face 52000111 "angry"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@イージス
+はっ！
+
+;;演出：魔獣を退けるイージス
+# fadein "white" 0.5
+# se "SE_4114"
+# sedelay "SE_7370" 0.3
+# move 52000111 3 0.3
+# move 920014 5 0.2
+# textboxarrow 0 0
+# waitandnext 1
+
+# se "SE_3001"
+# alpha 920014 0 0.7
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+@イージス
+そうだ、防御こそ最大の攻撃
+まずはカオちゃんを守るんだ！
+
+# alpha 52000111 0 0.3
+# move 6303121 2 0
+# layer 6303121 2
+# mask 6303121 off
+# face 6303121 "angry"
+# alpha 6303121 1 0.3
+# alpha 300231 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@トライデント
+で、でも、この状況…
+長くはもたないと思うよぉ～！
+
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+…っ
+
+# textflame 0 0
+@
+イージスに発破をかけたものの
+カシウスもまた苦戦しているのも事実
+
+# face 300231 "angry"
+# alpha 6303121 0 0.3
+# move 52000111 2 0
+# layer 52000111 2
+# mask 52000111 off
+# face 52000111 "normal"
+# alpha 52000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@トライデント
+…言いたくないけど！
+
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+…………
+
+# bgm "stop"
+# textflame 1 1
+# textboxarrow 0 3
+@トライデント
+カオちゃんも退治するしかないよ！
+
+# face 52000111 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+…………っ
+
+# textflame 0 0
+@
+口には出さないだけでカシウスや
+イージスもが考えていた選択肢
+それを選ぶ時を迫るトライデント
+
+;;できればもやもやフレームで
+# move 52000111 2 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@イージス
+カオちゃん…
+
+;;演出：回想入りの暗転
+# fadeout "white" 1
+# waitandnext 1
+
+;;背景：地底
+# background "dimensions"
+# imagealpha 3 0.7 0
+# imagepos 3 0 0
+# alpha 300231 0 0
+# move 52000111 2 0
+# layer 52000111 4
+# mask 52000111 on
+# face 52000111 "shy"
+# move 5810301 4 0
+# alpha 5810301 1 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 3
+
+;;演出：回想終わりの暗転
+# fadeout "white" 1
+# waitandnext 1
+
+;;背景：村
+# background "004_outland"
+# imagealpha 3 0 0
+# alpha 5810301 0 0
+# move 52000111 2 0
+# layer 52000111 2
+# mask 52000111 off
+# face 52000111 "surprise"
+# alpha 300231 1 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# textflame 0 0
+# textwindow "nomal"
+@
+カオスリーパーとの思い出
+今目の前にある外の世界
+その狭間でイージスは「揺らぐ」
+
+# se "bgm602_rhythm_on"
+# textflame 0 0
+@
+だが、イージスは決断する
+
+# voice 5200011 "aegis_c_battle_0005"
+# move 52000111 3 0.5
+# face 52000111 "angry"
+# alpha 300231 0 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@イージス
+…仕方があるまい
+カオちゃん達を――
+
+# voice 530311 "cassius_ca_0011"
+# alpha 52000111 0 0.3
+# move 6303121 3 0
+# layer 6303121 2
+# mask 6303121 off
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@カシウス
+待って！
+
+# move 6303121 4 0.5
+# move 52000111 2 0
+# layer 52000111 4
+# mask 52000111 on
+# alpha 52000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+止めてくれるな！
+だって、だって、もうカオちゃんは！
+
+#setnextbgmblock 1
+# voice 530311 "cassius_ca_0034"
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+違う、よく見て
+
+# se "bgm602_basic_on"
+# face 52000111 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+え…？
+
+# textflame 0 0
+@
+戦いの最中によそ見をするのは
+死を招く行為であるとキル姫ならば
+誰もがわきまえていること
+
+# se "SE_10997"
+# alpha 6303121 0 0.3
+# alpha 52000111 0 0.3
+# move 5810301 3 0
+# alpha 5810301 1 0.5
+# textflame 0 0
+@
+しかし、カシウスの
+必死な声にイージスは
+カオスリーパー達を見やる
+
+# alpha 6303121 1 0.3
+# alpha 52000111 1 0.3
+# alpha 5810301 0 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+カオちゃん…っ！？
+
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+わたしもすぐには気付かなかった
+けれど、カオスリーパーは
+村人を傷付けたりはしていない
+
+#setnextbgmblock 2
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+むしろ、守るように
+戦ってくれてる…？
+
+# voice 3002 "toraidento_0023"
+# alpha 6303121 0 0.3
+# move 300231 4 0
+# layer 300231 2
+# mask 300231 off
+# face 300231 "surprise"
+# alpha 300231 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@トライデント
+いやでもトライデント達も
+攻撃されなかった！？
+
+# face 52000111 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+それは…当然だ！
+
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+カオちゃんの魔獣への攻撃に
+急に割って入ったんだから
+勢い余って当たることもある！
+
+# textflame 1 1
+# textboxarrow 0 3
+@トライデント
+それもそっか！？
+
+# voice 530311 "cassius_ca_0028"
+# alpha 300231 0 0.3
+# move 6303121 4 0
+# layer 6303121 2
+# mask 6303121 off
+# face 6303121 "sad"
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+けれど、依然として
+カオスリーパーが地上に
+出てしまった理由は不明…
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# face 52000111 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+カオちゃんがこんなにも
+明るい地上に…
+
+# face 52000111 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+カオちゃんが…
+
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+…………
+
+# bgm "bgm035" 0
+# voice 5200011 "aegis_c_0034"
+# face 52000111 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+違う、私だ…
+
+# voice 530311 "cassius_ca_0022"
+# face 6303121 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+イージス？
+
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+カオちゃんは私が生み出した
+だから、ある意味私の分身…
+
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+私の思いを
+地上への憧れを…
+
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+私の代わりに…
+
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+わかるの？
+
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+伝わったよ
+言葉なんてなくても
+
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+…そう
+
+# voice 3002 "toraidento_0003"
+# alpha 6303121 0 0.3
+# alpha 300231 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@トライデント
+それじゃ魔獣は？
+水害は…トライデントが
+ごめんなさいって感じだけど
+
+# voice 5200011 "aegis_c_0003"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+そっちも私だ…
+私の中に「揺らぎ」を感じた
+それに引き寄せられたんだろう…
+
+# alpha 300231 0 0.3
+# face 6303121 "usual"
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+思考の末
+答えに辿り着いた…
+
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+ほとんどは私のせいだけど…
+
+# alpha 52000111 0 0.3
+# move 300231 2 0
+# layer 300231 4
+# mask 300231 on
+# alpha 300231 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@トライデント
+で、原因がわかったとしても
+この魔獣達はどうすれば…
+
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+カオスリーパーと一緒でも
+ぬかるんだ足場でいつまでも戦うのは
+得策ではない…
+
+# alpha 300231 0 0.3
+# alpha 6303121 0 0.3
+# move 52000111 3 0
+# layer 52000111 2
+# mask 52000111 off
+# face 52000111 "sad"
+# alpha 52000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@イージス
+…っ
+
+# move 52000111 2 0.5
+# move 6303121 4 0
+# layer 6303121 4
+# mask 6303121 on
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+ならば、イージス
+今が答えを出すとき
+
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+地上への憧憬で眩んだ
+その目をしっかりと見開いて
+自身の在り方を見定めるべきでは？
+
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+…私はまだ「揺らいで」いる
+
+# face 52000111 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+でも、自分の本当の思いに
+気付かせてくれたカオちゃんを
+守れない自分なんて嫌だ！
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# move 52000111 3 0.5
+# alpha 6303121 0 0.3
+# textflame 0 0
+@
+イージスは可能性すら抱けなかった
+外の世界にいる自分を見据える
+
+# textflame 1 1
+# textboxarrow 0 2
+@イージス
+私…行くよ、カオちゃん！
+
+# textflame 0 0
+@
+地上へ、外へ、自由へ
+未来の自分へと歩み始める覚悟――
+
+;;イージスシナリオカット表示
+# bgmfile "bgm424" "BgmIntegralNoahCommand" 0
+# frameout 0 0
+# fadein "white" 1
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# alpha 52000111 0 0
+# textwindow "close"
+# waitandnext 3
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@イージス
+私は、この世界に生きる…っ！
+
+@イージス
+眩しいからって目を背けない
+わたしが守ってきた世界を、
+わたしが守りたい世界を見てくるよ
+
+@イージス
+まだ、これから先どうするかは
+決まってないけど…
+自分の心に言い訳をするのはやめた！
+
+# textflame 0 0
+@
+これまでの役割、ではなく
+これからの未来に向き合ったイージス
+
+@
+不安ばかりの未来だとしても
+新たな世界を歩むことを決めた
+彼女はもう「揺らがない」
+
+;;シナリオカット削除
+# imagealpha 2 0 1
+# framein 0 1
+# textwindow "close"
+# waitandnext 2
+
+# move 6303121 3 0
+# mask 6303121 off
+# face 6303121 "surprise"
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@カシウス
+ちゃんと前を向いて進む者に
+未来への道は拓かれる…
+
+# voice 5200011 "aegis_c_0029"
+# alpha 6303121 0 0.3
+# move 62000111 3 0
+# mask 62000111 off
+# face 62000111 "angry"
+# alpha 62000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@イージス
+はぁぁぁぁあ！
+
+;;演出：明転
+# se "SE_14150"
+# sedelay "SE_14151" 0.5
+# sedelay "SE_14152" 0.6
+# sedelay "SE_3001" 2.5
+# fadeout "white" 3
+# waitandnext 3
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# alpha 62000111 0 0
+# textwindow "close"
+# fadein "white" 3
+# waitandnext 3
+
+# voice 530311 "cassius_ca_0032"
+# face 6303121 "normal"
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@カシウス
+――以上が事の顛末
+
+# bgm "bgm002" 0
+# alpha 6303121 0 0.3
+# move 62000111 2 0
+# layer 62000111 2
+# mask 62000111 off
+# face 62000111 "surprise"
+# alpha 62000111 1 0.3
+# move 300231 4 0
+# layer 300231 4
+# mask 300231 on
+# face 300231 "cry"
+# alpha 300231 1 0.3
+# textflame 1 1
+# textboxarrow 0 0
+@イージス＆トライデント
+すみませんでしたーっ！
+
+# textflame 0 0
+@
+魔獣を一掃した後
+騒動を引き起こした犯人として
+村人達へ土下座するふたりだった
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@村人Ａ
+…って言われてもなぁ
+
+# serif 1
+@村人Ｂ
+ああ、そうだなぁ
+
+# voice 3002 "toraidento_0031"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+@トライデント
+うぅぅ…ごめんなさいぃ
+
+# serif 1
+@村人Ａ
+いや、ありがとうな！
+
+# face 300231 "surprise"
+# serif 0
+# textboxarrow 0 1
+@イージス
+へ？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+水源からの流れはトライデントが
+突貫工事で調整し、問題ない程度に
+
+# textflame 0 0
+@
+カオスリーパー達はイージスが
+地底へ戻るよう伝えた為
+村は平穏を取り戻していた
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@村人Ｂ
+だからさ、水害は大変だったけど
+魔獣に関しちゃ守ってくれたから
+村のみんなに直接の被害はなかった
+
+# serif 1
+@村人Ａ
+水が溢れたりしないなら
+感謝することばかりさ！
+
+# serif 1
+@村人Ｂ
+バケモンには驚いたけどな！
+
+# face 62000111 "sad"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@イージス
+化け物…ああ、魔獣のことか
+カオちゃんと違って愛嬌がないからな
+
+# serif 0
+# textboxarrow 0 3
+@トライデント
+えっ
+
+# serif 0
+# textboxarrow 0 1
+@イージス
+？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+ということで
+村の騒動は一件落着したのだった
+
+;;演出：暗転
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# fadeout "black" 2
+# waitandnext 2
+
+# alpha 62000111 0 0
+# alpha 300231 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 2
+# waitandnext 2
+
+# textflame 0 0
+# textwindow "nomal"
+@
+その翌日
+
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+# move 6303121 2 0
+# layer 6303121 2
+# mask 6303121 off
+# alpha 6303121 1 0.3
+# move 300231 4 0
+# layer 300231 4
+# mask 300231 on
+# alpha 300231 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@トライデント
+もう行っちゃうんだ
+ゆっくりしてったらいいのにぃ
+
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+ここを学園にするのは
+少し難しいと思うから
+また候補地を探しに行かないと
+
+# voice 3002 "toraidento_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@トライデント
+そっか…
+トライデントはもう少し
+この村でやることがあるから…
+
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+地底への穴は埋めたし
+水の流れは変えたけど
+急拵えだったものね
+
+# face 300231 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@トライデント
+そそ、水害で壊れちゃったとことか
+直すのも手伝っていきたいし！
+
+# textflame 1 1
+# textboxarrow 0 3
+@トライデント
+それで、イージスは！？
+
+# alpha 6303121 0 0.3
+# alpha 300231 0 0.3
+# move 62000111 3 0
+# layer 62000111 2
+# mask 62000111 off
+# voice 5200011 "aegis_c_0015"
+# face 62000111 "surprise"
+# alpha 62000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@イージス
+…っ
+
+# textflame 1 1
+# textboxarrow 0 2
+@イージス
+わ、私は…
+
+# face 62000111 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@イージス
+地上のことは…たまに出るし
+知識では知っているけれど
+知らないこともいっぱいだから…
+
+# textflame 0 0
+@
+外へ出ると決めたものの
+どうするか定められず
+もじもじとしているイージスだった
+
+# voice 530311 "cassius_ca_0004"
+# move 62000111 2 0.5
+# move 6303121 4 0
+# layer 6303121 4
+# mask 6303121 on
+# alpha 6303121 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+知らないのであれば知ればいいだけ
+その目はもう眩んでいないのだから
+
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+そ、そうは言うが…
+
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+わたしの旅は目標はあれど
+当てのない行きあたりばったり…
+
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+それは世界を見て
+知るのには最適だと思うのだけれど
+
+# face 62000111 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+…っ！
+
+# face 62000111 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+しかし…
+
+#setnextbgmblock 1
+# voice 5200011 "aegis_c_0034"
+# face 62000111 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+いや、そうではないな
+ここで引いては地底の番を託した
+カオちゃんに顔向けができん！
+
+# se "bgm601_windon"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+その旅の共に
+私を加えてくれ！
+
+# voice 5200011 "aegis_c_0003"
+# face 62000111 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+まずは地上世界を知ってから
+これからどうするか決めていくよ
+
+# se "bgm601_guitaron"
+# voice 3002 "toraidento_0004"
+# alpha 6303121 0 0.3
+# move 300231 4 0
+# layer 300231 4
+# mask 300231 on
+# face 300231 "happy"
+# alpha 300231 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@トライデント
+わー！
+めっちゃいいと思う！
+トライデントも参加したいくらい
+
+# face 300231 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@トライデント
+…だけど、イージスが
+すぐ出発できるように村のことは
+トライデントがしっかりやっておくね
+
+# face 62000111 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+すまない、トライデント
+
+# textflame 1 1
+# textboxarrow 0 3
+@トライデント
+そういう時は
+「ありがと」だけでいいんだよ！
+
+# voice 5200011 "aegis_c_0004"
+# face 62000111 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+ああ、ありがとう！
+
+# alpha 6303121 1 0.3
+# alpha 300231 0 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+旅は道連れ世は情け
+旅の出会いは一生の宝…
+
+# voice 530311 "cassius_ca_0004"
+# face 6303121 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+これからよろしく、イージス
+
+# face 62000111 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+こちらこそ、カシウス
+
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+早速だが私には
+隊長の経験があってだな…
+
+# textflame 1 1
+# textboxarrow 0 1
+@イージス
+旅をするにあたって
+序列を明確に――
+
+# voice 530311 "cassius_ca_0002"
+# face 6303121 "surprise"
+# alpha 62000111 0 0.3
+# move 300231 2 0
+# layer 300231 2
+# mask 300231 off
+# alpha 300231 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@カシウス
+ではまた、トライデント
+円環の果てにまた巡り合えますように
+
+# face 300231 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@トライデント
+え、うん、ばいばい？
+
+;;演出：カシウスout
+# se "SE_0719"
+# move 6303121 5 0.5
+# alpha 6303121 0 0.3
+# waitandnext 1
+
+# alpha 300231 0 0.3
+# move 62000111 3 0
+# mask 62000111 off
+# voice 5200011 "aegis_c_0015"
+# face 62000111 "surprise"
+# alpha 62000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@イージス
+ま、待ってカシウス！？
+
+# textflame 1 1
+# textboxarrow 0 2
+@イージス
+えぇと、部下が話を
+聞いてくれない時の対策は
+どこにしまったっけ…
+
+;;演出：イージスout
+# se "SE_5575"
+# move 62000111 4 0.5
+# alpha 62000111 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# move 300231 3 0
+# alpha 300231 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@トライデント
+あのふたり、大丈夫かなぁ
+
+# voice 3002 "toraidento_0005"
+# face 300231 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+@トライデント
+まっ、なるようになるよね！
+
+# textflame 0 0
+@
+世界を見てきた者と
+世界を知らぬ者の新たな旅が
+ここから始まるのだった…
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 4
+# fadeout "black" 4
+# waitandnext 4

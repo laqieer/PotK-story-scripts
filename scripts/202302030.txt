@@ -1,0 +1,690 @@
+;;-----------------------------------------
+;;SEAイベント不可欠彩度レルム1_2
+;;-----------------------------------------
+# script "lisp"
+# background "201_slum"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;パンドラ
+# body 62001111
+# pos 62001111 4
+# scale 62001111 0.8 0
+# layer 62001111 2
+# mask 62001111 off
+# alpha 62001111 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 2
+# scale 6603811 0.8 0
+# layer 6603811 4
+# alpha 6603811 0 0
+;;フェイルノート
+# body 5401911
+# pos 5401911 3
+# scale 5401911 0.8 0
+# layer 5401911 3
+# mask 5401911 off
+# face 5401911 "surprise"
+# alpha 5401911 1 0
+;;天上編タスラム
+# body 502011
+# pos 502011 3
+# scale 502011 0.8 0
+# layer 502011 3
+# mask 502011 off
+# alpha 502011 0 0
+;;魔獣
+# body 3870001
+# pos 3870001 3
+# scale 3870001 0.8 0
+# layer 3870001 1
+# mask 3870001 off
+# alpha 3870001 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;背景：崩壊したカコルフェタワー
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+# voice 540191 "failnaught_ca_0015"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@フェイルノート
+カコルフェタワーが…
+そんな、この街の象徴が…！
+
+# alpha 5401911 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;演出：魔獣表示
+# se "SE_0779"
+# alpha 3870001 1 0.5
+# waitandnext 1.5
+
+# voice 6200111 "pandora_0013"
+# alpha 3870001 0 0.5
+# face 62001111 "angry"
+# alpha 62001111 1 0.3
+# alpha 6603811 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@パンドラ
+こんな時に…
+フェイルノート、マクリル
+
+# voice 660381 "maclir_ura_0003"
+# textboxarrow 0 1
+@マクリル
+…うん
+
+# textflame 0 0
+@
+混乱に乗じたというのか
+魔獣は最悪のタイミングで現れた
+
+# voice 6200111 "pandora_battle_0002"
+# move 62001111 3 0.3
+# alpha 6603811 0 0.3
+# se "SE_8623"
+# textflame 1 1
+# textboxarrow 0 2
+@パンドラ
+えいっ！
+
+# se "SE_8624"
+# fadein "white" 1
+# textwindow "close"
+# waitandnext 1
+
+# alpha 62001111 0 0.3
+# alpha 3870001 1 0.5
+# waitandnext 1.5
+
+;;演出：パンドラの攻撃をかわし
+# fadein "white" 0.5
+# move 3870001 4 0.3
+# waitandnext 1
+
+;;逃げて行く魔獣
+# se "SE_5255"
+# move 3870001 2 1.5
+# scale 3870001 0.7 1.5
+# alpha 3870001 0 1.5
+# waitandnext 2.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+魔獣達はカコルフェタワーへと
+向かっていく
+
+# textflame 0 0
+@
+そして、パンドラ達や
+街の警備をしていたキル姫達が
+それぞれ魔獣の対処を始める
+
+# voice 540191 "failnaught_ca_battle_0001"
+# face 5401911 "angry"
+# alpha 5401911 1 0.3
+# se "SE_4300"
+# textflame 1 1
+# textboxarrow 0 2
+@フェイルノート
+はっ！
+
+# alpha 5401911 0 0.3
+# move 3870001 3 0
+# scale 3870001 0.8 0
+# alpha 3870001 1 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;演出：フェイルノートの攻撃は当たらない
+# se "SE_4301"
+# sedelay "SE_5243" 0.2
+# fadein "white" 1
+# move 3870001 4 0.3
+# waitandnext 1
+
+# voice 540191 "failnaught_ca_battle_0005"
+# move 5401911 2 0
+# layer 5401911 4
+# mask 5401911 on
+# face 5401911 "surprise"
+# alpha 5401911 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@フェイルノート
+でもこれじゃ…
+やっぱり追い払えてるだけね…っ！
+
+# se "SE_4300"
+# textboxarrow 0 0
+# waitandnext 1
+
+;;演出：フェイルノートの攻撃を避け
+# se "SE_4301"
+# fadein "white" 1
+# move 3870001 5 0.2
+# layer 3870001 4
+# mask 3870001 on
+# layer 5401911 3
+# mask 5401911 off
+# textwindow "close"
+# waitandnext 1
+
+;;逃げて行く魔獣
+# se "SE_5255"
+# scale 3870001 0.7 1
+# alpha 3870001 0 1
+# waitandnext 2
+
+# voice 660381 "maclir_ura_0022"
+# alpha 5401911 0 0.3
+# move 62001111 4 0
+# alpha 62001111 1 0.3
+# face 6603811 "surprise"
+# alpha 6603811 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@マクリル
+この魔獣…
+
+# voice 6200111 "pandora_0022"
+# face 62001111 "surprise"
+# textboxarrow 0 3
+@パンドラ
+どうしたの、マクリル？
+
+# voice 660381 "maclir_ura_0028"
+# face 6603811 "usual"
+# textboxarrow 0 1
+@マクリル
+う、ううん、なんでもない…
+
+# alpha 6603811 0 0.3
+# move 5401911 2 0
+# layer 5401911 4
+# mask 5401911 on
+# face 5401911 "normal"
+# alpha 5401911 1 0.3
+# textboxarrow 0 1
+@フェイルノート
+ひとまずタワーに向かうわよ
+魔獣を追い払いつつ行けば
+救助の助けにもなるでしょうし
+
+# voice 6200111 "pandora_0032"
+# face 62001111 "normal"
+# textboxarrow 0 3
+@パンドラ
+そうね、行きましょう
+
+# face 5401911 "angry"
+# alpha 62001111 0 0.3
+# move 3870001 4 0
+# layer 3870001 2
+# mask 3870001 off
+# alpha 3870001 1 0.5
+# se "SE_4300"
+# textboxarrow 0 1
+@フェイルノート
+はっ！
+
+;;演出：フェイルノートの攻撃を避け
+# se "SE_4301"
+# fadein "white" 1
+# move 3870001 5 0.2
+# layer 3870001 4
+# mask 3870001 on
+# layer 5401911 2
+# mask 5401911 off
+# textwindow "close"
+# waitandnext 1
+
+;;逃げて行く魔獣
+# se "SE_5255"
+# scale 3870001 0.7 1
+# alpha 3870001 0 1
+# waitandnext 2
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@フェイルノート
+追い払えればいいと切り替えても
+矢が当たらないのは気に障るわね
+
+# alpha 5401911 0 0.3
+# face 62001111 "sad"
+# alpha 62001111 1 0.3
+# face 6603811 "usual"
+# alpha 6603811 1 0.3
+# textboxarrow 0 3
+@パンドラ
+それにしても急にこんな…
+一体どこから現れたのかしら
+
+# textboxarrow 0 1
+@マクリル
+…………
+
+# alpha 62001111 0 0.3
+# alpha 6603811 0 0.3
+# move 5401911 3 0
+# mask 5401911 off
+# alpha 5401911 1 0.3
+# textboxarrow 0 2
+@フェイルノート
+警備隊のキル姫達がいるわね
+合流して話を聞くわよ
+
+;;演出：時間経過の暗転
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# move 5401911 5 0
+# layer 5401911 2
+# mask 5401911 off
+# move 62001111 3 0
+# layer 62001111 4
+# mask 62001111 on
+# move 6603811 1 0
+# layer 6603811 3
+# mask 6603811 on
+# alpha 5401911 0 0
+# alpha 62001111 0 0
+# alpha 6603811 0 0
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+三人は魔獣を追い払うのを
+他のキル姫と交代し、救助などに
+当たるキル姫達から情報共有を受ける
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# sedelay "bgm602_basic_on_1" 1
+# voice 540191 "failnaught_ca_0023"
+# face 5401911 "surprise"
+# alpha 5401911 1 0.3
+# face 62001111 "normal"
+# alpha 62001111 1 0.3
+# face 6603811 "usual"
+# alpha 6603811 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@フェイルノート
+地盤沈下だなんて…
+カコルフェの不夜城たる象徴の
+整備を怠る訳がないし…
+
+# textboxarrow 0 2
+@パンドラ
+「揺らぎ」の影響なのかしら
+
+# voice 660381 "maclir_ura_0028"
+# face 6603811 "normal"
+# textboxarrow 0 1
+@マクリル
+わからない…けど…
+
+# face 62001111 "surprise"
+# textboxarrow 0 2
+@パンドラ
+けど？
+
+# se "bgm602_rhythm_on"
+# textboxarrow 0 1
+@マクリル
+あそこが一番濃いと思う…
+
+# voice 540191 "failnaught_ca_0002"
+# face 5401911 "angry"
+# textboxarrow 0 3
+@フェイルノート
+ふたりとも、いい？
+私達も救助に加わるわよ
+
+# textboxarrow 0 3
+@フェイルノート
+と言ってもさっきまでと同じく
+魔獣をタワーに近寄らせない為に
+戦うことが主な役割よ
+
+# voice 6200111 "pandora_0032"
+# face 62001111 "normal"
+# textboxarrow 0 2
+@パンドラ
+…そうね、調査は後回し
+今は私達に出来ることをしましょう
+ね、マクリル
+
+# voice 660381 "maclir_ura_0033"
+# face 6603811 "usual"
+# textboxarrow 0 1
+@マクリル
+…うん、わかった
+
+# textboxarrow 0 3
+@フェイルノート
+マクリル、あなたさっきから
+タワーを気にしてるようだけど
+私達に出来ることはないわ
+
+# textboxarrow 0 3
+@フェイルノート
+街を熟知してる警備隊に
+救助は任せるしかないわね
+
+# textboxarrow 0 1
+@マクリル
+う、うん…
+
+;;演出：マクリル、パンドラout
+# alpha 62001111 0 0.3
+# alpha 6603811 0 0.3
+# textwindow "close"
+# waitandnext 1.5
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# move 5401911 3 0.5
+# face 5401911 "sad"
+# textwindow "nomal"
+# textboxarrow 0 2
+@フェイルノート
+あとは私自身がしっかりすればいい
+
+# textboxarrow 0 2
+@フェイルノート
+私の力は、必中だからこそ
+「無駄のない弓」なのよ…
+
+;;演出：移動の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：崩壊したカコルフェの街中：夜
+# background "in_city_collapse_night"
+# move 5401911 5 0
+# alpha 5401911 0 0
+# waitandnext 0.5
+
+# bgm "bgm008" 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 5401911 "normal"
+# alpha 5401911 1 0.3
+# alpha 62001111 1 0.3
+# face 6603811 "usual"
+# alpha 6603811 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@パンドラ
+フェイルノートの矢は
+当たらなくても牽制の効果があるわ
+辛いかもしれないけれど、よろしくね
+
+# se "SE_4300"
+# textboxarrow 0 3
+@フェイルノート
+…わかっているわ――
+
+# face 5401911 "angry"
+# se "SE_4301"
+# fadein "white" 0.5
+# textboxarrow 0 3
+@フェイルノート
+――よ！
+
+# se "SE_5255"
+# face 5401911 "sad"
+;;もやもやフレーム
+# move 5401911 5 0
+# textwindow "moya"
+# textboxarrow 0 0
+@フェイルノート
+どうして、どうして当たらないのよ
+
+@フェイルノート
+今、矢を命中させられないのなら
+私は私じゃないのに…！
+
+# face 6603811 "normal"
+# textwindow "nomal"
+# textboxarrow 0 1
+@マクリル
+フェイルノート…
+
+# face 5401911 "angry"
+# textboxarrow 0 3
+@フェイルノート
+逃げられ続けて数が減らないなら
+ジリ貧としか言いようがないわね
+
+# textboxarrow 0 2
+@パンドラ
+それでも、
+出来る限り時間を稼げば
+
+# textboxarrow 0 2
+@パンドラ
+救助隊の皆さんが
+タワーに取り残された人達を
+助け出してくれるはず…
+
+# textboxarrow 0 2
+@パンドラ
+今は
+今をなんとかするしかないわ
+
+# voice 540191 "failnaught_ca_0015"
+# alpha 62001111 0 0.3
+# alpha 6603811 0 0.3
+# move 5401911 3 0.5
+# se "SE_0694"
+# textboxarrow 0 2
+@フェイルノート
+わかってるわよ…
+わかってるって言ってるじゃない！
+
+# se "SE_4301"
+# fadein "white" 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_4301"
+# fadein "white" 1
+# waitandnext 1
+
+;;演出：魔獣に避けられる
+# alpha 5401911 0 0.3
+# waitandnext 0.5
+
+# move 3870001 3 0
+# mask 3870001 off
+# alpha 3870001 1 0.5
+# waitandnext 1
+
+# move 3870001 4 0.3
+# waitandnext 1
+
+# se "SE_5255"
+# move 3870001 2 0.7
+# scale 3870001 0.7 0.7
+# alpha 3870001 0 0.7
+# waitandnext 1.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+フェイルノートはそれでも
+と矢を射るが、それも避けられる
+
+# textflame 0 0
+@
+だが…
+
+;;タスラム立ち絵無し
+# bgm "stop"
+# se "SE_5208"
+# serif 0
+# textwindow "close"
+# serif 1
+# textflame 1 1
+# textwindow "nomal"
+@？？？
+よくやった！
+
+;;演出：逃げていた魔獣が
+# move 3870001 3 0
+# scale 3870001 0.8 0.5
+# alpha 3870001 1 0.5
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+;;攻撃を
+# se "SE_4400"
+# effectbody 1001 28 0 0 0
+# effectstart 1001
+# waitandnext 0.5
+
+;;受け
+# se "SE_4824"
+# fadein "white" 1
+# shake 0 1
+# scale 3870001 0.7 0.3
+# waitandnext 1
+
+;;倒れる
+# se "SE_2019"
+# alpha 3870001 0 0.5
+# waitandnext 2
+
+;;演出：タスラム立ち絵表示
+# bgmfile "bgm037_038" "BgmStory004" 0
+# layer 502011 2
+# alpha 502011 1 0.3
+# voice 5020 "tasuramu_0030"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@？？？
+ありがとな
+おまえのおかげで仕留められた
+
+# textflame 0 0
+@
+フェイルノートの脇を駆け抜け
+魔獣を追い詰め、一撃で倒したのは
+キル姫、タスラムだった
+
+# textflame 1 1
+# textboxarrow 0 2
+@タスラム
+おまえの矢が魔獣の逃げる先の
+選択肢を狭めてくれた
+
+# move 502011 4 0.5
+# move 5401911 2 0
+# layer 5401911 4
+# mask 5401911 on
+# face 5401911 "sad"
+# alpha 5401911 1 0.3
+# textboxarrow 0 1
+@フェイルノート
+でも、どうして…
+
+# textboxarrow 0 1
+@フェイルノート
+同じことをしようとしても
+私の矢は避けられ、逃げられて
+ばかりだというのに…
+
+# voice 5020 "tasuramu_0004"
+# face 502011 "happy"
+# textboxarrow 0 3
+@タスラム
+逃げられるなら
+追えばいいだけだろう
+いつかは倒せる！
+
+# textboxarrow 0 1
+@フェイルノート
+そんな非効率的な…
+無駄が多すぎるわ
+
+# textflame 0 0
+@
+だが、目の前で繰り広げられたのは
+泥臭くとも、非効率であっても
+タスラムによる“一撃必殺”
+
+# voice 540191 "failnaught_ca_0007"
+# face 5401911 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@フェイルノート
+ふ、ふふふ…
+
+;;もやもやフレーム
+# move 5401911 2 0
+# textwindow "moya"
+# textboxarrow 0 0
+@フェイルノート
+この、争いの無い世界で
+無駄に強い力を持っていて…
+
+@フェイルノート
+こんな時にも役立たずの私なんて…
+
+# bgm "stop"
+# voice 660381 "maclir_ura_0002"
+# alpha 502011 0 0.3
+# alpha 5401911 0 0.3
+# move 6603811 3 0
+# mask 6603811 off
+# face 6603811 "normal"
+# alpha 6603811 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@マクリル
+それが、願いなの？
+
+# alpha 6603811 0 0.3
+# move 5401911 3 0
+# mask 5401911 off
+# face 5401911 "surprise"
+# alpha 5401911 1 0.3
+# textboxarrow 0 2
+@フェイルノート
+！！！
+
+# textflame 0 0
+@
+フェイルノートの感情が強く
+「揺さぶられる」
+
+# fadeout "black" 2
+# waitandnext 2

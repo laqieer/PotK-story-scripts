@@ -1,0 +1,263 @@
+# script "lisp"
+# background "ghost_town2"
+# bgmfile "bgm166" "BgmPJZero001" 0
+# textwindow "close"
+;;アルマス
+# body 3103811
+# pos 3103811 3
+# scale 3103811 0.8 0
+# layer 3103811 3
+;;天沼矛♂
+# body 1300491
+# pos 1300491 5
+# scale 1300491 0.8 0
+# layer 1300491 2
+;;天沼矛
+# body 3300411
+# pos 3300411 5
+# scale 3300411 0.8 0
+# alpha 3300411 0 0
+# layer 3300411 1
+# fadeout "black" 0.1
+# waitandnext 0.1
+
+# se "SE_4601"
+;;# face 3103811 "angry"
+# envbody 2000 6 0
+# effectstart 2000
+# waitandnext 0.1
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+槍と剣じゃ
+剣が不利だって分かってるけど…
+このまま終われない！
+
+# select "距離を取れ！" "select_label_01" "特技を活かせ！" "select_label_01" "諦めるな！" "select_label_01"
+槍と剣じゃ
+剣が不利だって分かってるけど…
+このまま終われない！
+
+# label "select_label_01"
+@アルマス
+そうよ！私にはこういう戦い方だって
+あるんだから！
+
+# voice 1038 "almace_0029"
+# textwindow "close"
+# fadein "white" 0.5
+# shake 0 0.5
+# move 3103811 1 0.2
+# waitandnext 0.2
+
+# se "SE_5315"
+# effectbody 700 31 0 -50 6
+# effectstart 700
+# waitandnext 0.5
+
+# shake 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 3
+@？？？
+ギャオオオオ…！
+
+# se "SE_9118"
+# textwindow "close"
+;;//？？？が跳躍して距離を取る
+# rightout 1300491 0.4
+# waitandnext 0.4
+
+# alpha 1300491 0 0
+# imageset 3 "black"
+# imagealpha 3 0 0
+# imagelayer 3 1
+# textwindow "nomal"
+# face 3103811 "angry"
+# textboxarrow 0 1
+# textflame 1 1
+@アルマス
+逃がしはしない！
+
+# imagealpha 3 1 0
+# imagepos 3 0 30
+# imagerightin 3 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# move 1300491 3 0
+# alpha 3300411 1 0
+# alpha 3103811 0 0
+# waitandnext 0.1
+
+# imagealpha 3 0 0.5
+# imageleftout 3 0.5
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+# voice 330041 "amenonuboko_t_battle_0003"
+@天沼矛
+お空はわたしが守りますよ～
+
+;;//天沼矛が？？？を頭上から攻撃する
+# se "SE_4200"
+# sedelay "SE_4817" 0.3
+# textwindow "close"
+# alpha 1300491 1 0
+# leftin 1300491 0.3
+# move 3103811 1 0
+# waitandnext 0.1
+
+# shake 0 0.6
+# textwindow "nomal"
+# textboxarrow 0 2
+@？？？
+グガアアアッ…！
+
+# imageset 0 "bg_black"
+# imagealpha 0 0 0
+# alpha 3103811 1 0
+# leftin 3103811 0.4
+# textboxarrow 0 1
+# voice 1038 "almace_kyara_0019"
+@アルマス
+助かったわ！
+これで仕留める！
+絶撃破ぁぁぁ！！
+
+# imagepos 0 0 0
+;;//アルマスが？？？を刺し貫く
+# move 3103811 2 0.2
+# waitandnext 0.2
+
+# se "SE_9077"
+# fadein "red" 0.6
+# shake 1 0.8
+# waitandnext 0.5
+
+# layer 3103811 23
+# textboxarrow 0 2
+@？？？
+ギアアアアアアアアアアアアア…！
+
+;;//白フラッシュ明滅
+;;//背景：黒
+# se "SE_9449"
+# imagealpha 0 1 0
+# effectskip 2000
+# textwindow "close"
+# background "black"
+# alpha 3103811 0 0
+# alpha 1300491 0 0
+# alpha 3300411 0 0
+# move 3103811 3 0
+# fadein "white" 0.2
+# waitandnext 0.2
+
+# fadein "white" 0.2
+# waitandnext 0.2
+
+# fadein "white" 0.2
+# waitandnext 0.2
+
+# fadein "white" 0.2
+# waitandnext 0.2
+
+# imageset 1 "noise_01"
+# imagealpha 1 0 0
+# imagelayer 1 2
+# imageset 2 "noise_02"
+# imagealpha 2 0 0
+# imagelayer 2 2
+# imageset 3 "noise_03"
+# imagealpha 3 0 0
+# imagelayer 3 2
+# imageset 4 "noise_04"
+# imagealpha 4 0 0
+# imagelayer 4 2
+# alpha 3103811 1 0.6
+# mask 3103811 off
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 3103811 "surprise"
+# voice 1038 "almace_0022"
+@アルマス
+えっ…？
+なに、この感覚…
+
+@アルマス
+頭の中に…なにかが流れ込んでくる…！
+
+# textwindow "close"
+;;//ノイズ音
+;;//画面灰色砂嵐に
+# se "SE_9451"
+# alpha 3103811 0 0
+# imagepos 1 0 0
+# imagealpha 1 1 0
+# waitandnext 0.05
+
+# imagepos 2 0 0
+# imagealpha 1 0 0
+# imagealpha 2 1 0
+# waitandnext 0.05
+
+# imagepos 3 0 0
+# imagealpha 2 0 0
+# imagealpha 3 1 0
+# waitandnext 0.05
+
+# imagepos 4 0 0
+# imagealpha 3 0 0
+# imagealpha 4 1 0
+# waitandnext 0.05
+
+# imagealpha 4 0 0
+# imagealpha 2 1 0
+# waitandnext 0.05
+
+# imagealpha 2 0 0
+# imagealpha 3 1 0
+# waitandnext 0.05
+
+# imagealpha 3 0 0
+# imagealpha 4 1 0
+# waitandnext 0.05
+
+# imagealpha 4 0 0
+# imagealpha 1 1 0
+# waitandnext 0.05
+
+# imagealpha 1 0 0
+# imagealpha 3 1 0
+# waitandnext 0.05
+
+# imagealpha 3 0 0
+# imagealpha 2 1 0
+# waitandnext 0.05
+
+# imagealpha 2 0 0
+# imagealpha 3 1 0
+# waitandnext 0.05
+
+# imagealpha 3 0 0
+# imagealpha 4 1 0
+# waitandnext 0.05
+
+# imagealpha 4 0 0
+# imagealpha 2 1 0
+# waitandnext 0.05
+
+# imagealpha 2 0 0
+# imagealpha 1 1 0
+# waitandnext 0.05
+
+# imagealpha 1 0 0.5
+# waitandnext 0.5

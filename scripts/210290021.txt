@@ -1,0 +1,474 @@
+;;2_1
+;;【EP2】『新王』戦闘前
+;;//背景：プール
+# script "lisp"
+# background "sea_resort_day"
+# bgmfile "bgm224_story" "BgmSeaEvent" 0
+# body 45006001
+# pos 45006001 4
+# scale 45006001 0.8 0
+# alpha 45006001 0 0
+# body 43001001
+# pos 43001001 2
+# scale 43001001 0.8 0
+# alpha 43001001 0 0
+# body 41027001
+# pos 41027001 3
+# scale 41027001 0.8 0
+# alpha 41027001 0 0
+# body 42005001
+# pos 42005001 5
+# scale 42005001 0.8 0
+# alpha 42005001 0 0
+# body 42001001
+# pos 42001001 1
+# scale 42001001 0.8 0
+# alpha 42001001 0 0
+# body 41023001
+# pos 41023001 3
+# scale 41023001 0.8 0
+# alpha 41023001 0 0
+# body 46013001
+# pos 46013001 3
+# scale 46013001 0.8 0
+# alpha 46013001 0 0
+# body 41004001
+# pos 41004001 3
+# scale 41004001 0.8 0
+# alpha 41004001 0 0
+# body 45003001
+# pos 45003001 3
+# scale 45003001 0.8 0
+# alpha 45003001 0 0
+# body 41011001
+# pos 41011001 3
+# scale 41011001 0.8 0
+# alpha 41011001 0 0
+# body 45001001
+# pos 45001001 2
+# scale 45001001 0.8 0
+# alpha 45001001 0 0
+# body 44001001
+# pos 44001001 2
+# scale 44001001 0.8 0
+# alpha 44001001 0 0
+# body 44010001
+# pos 44010001 4
+# scale 44010001 0.8 0
+# alpha 44010001 0 0
+# body 41009001
+# pos 41009001 3
+# scale 41009001 0.8 0
+# alpha 41009001 0 0
+# body 41012001
+# pos 41012001 2
+# scale 41012001 0.8 0
+# alpha 41012001 0 0
+# body 43003001
+# pos 43003001 4
+# scale 43003001 0.8 0
+# alpha 43003001 0 0
+# imageset 0 "bg_black"
+# imagelayer 0 1
+# imagealpha 0 0 0
+# imagescale 0 2 0
+# textwindow "nomal"
+# textflame 0 0
+@
+一方その頃、王達は―
+
+;;//ロンギヌス&メギドの立ち絵
+# imagepos 0 0 0
+# alpha 45006001 1 0.5
+# alpha 43001001 1 0.5
+# voice 5006 "megido_0022"
+# textflame 1 1
+# textboxarrow 0 3
+@メギド
+ロンギヌス様、
+どこかお加減でも？
+
+# voice 3001 "ronginusu_0009"
+# textboxarrow 0 1
+@ロンギヌス
+食料が減っているのに、
+私ばかり食べていいの？
+このトマトを皆に…
+
+# textboxarrow 0 3
+@メギド
+ロンギヌス様が
+ぽっちゃりしていなければ
+皆を統べることもできません
+
+# textboxarrow 0 3
+@メギド
+私が調理したステーキもどうぞ
+
+;;//SE：ざわざわ音
+;;//喧騒の音
+# waitandnext 0.5
+
+@メギド
+外が騒がしいですね
+見てきます
+
+;;//背景：リゾート地
+;;//SE：ビデオテープの早送りの音「キュルルル～」みたいな
+;;//メギド、クラウソラス、ミョルニル、ミトゥム登場 
+;;//早送り演出
+# se "bgm224_story_speedup"
+# se "SE_0748"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# envbody 1000 19 0
+# effectstart 1000
+# imagealpha 0 1 0.3
+# waitandnext 0.3
+
+# alpha 45006001 0 0
+# alpha 43001001 0 0
+# waitandnext 0.1
+
+# imagealpha 0 0 0.3
+# waitandnext 0.3
+
+# se "SE_0749"
+# se "bgm224_story_default"
+# effectskip 1000
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+王へと直談判に
+やってきたアスカロンに
+気付いたメギドは撃退を命じる
+
+# alpha 41027001 1 0.5
+# alpha 42005001 1 0.5
+# alpha 42001001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@クラウ・ソラス
+はあ…はあ…
+今日のトレーニングの締めだな
+ミトゥム！ミョルニル！
+
+# voice 2005 "mitwumu_0004"
+# textboxarrow 0 3
+@ミトゥム
+っしゃ～！
+ぶっ飛ばしてやるぜ～っ
+こいつも元気いっぱいだからな！
+
+# voice 2001 "myuruniru_0002"
+# textboxarrow 0 1
+@ミョルニル
+は～い！
+みんな、ブランコプレスで
+ぺったんこにしてあげるよ～
+
+;;//背景：プール 
+;;//SE：ビデオテープの早送りの音「キュルルル～」みたいな
+;;//クラウ・ソラスとアスカロンの立ち絵が登場し、クラウソラスがアスカロンを吹き飛ばす
+;;//早送り演出
+# se "SE_0748"
+# se "bgm224_story_speedup"
+# textwindow "close"
+# envbody 1001 19 0
+# effectstart 1001
+# imagealpha 0 1 0.3
+# waitandnext 0.3
+
+# move 41023001 2 0
+# alpha 41023001 1 0
+# move 41027001 4 0
+# alpha 42005001 0 0
+# alpha 42001001 0 0
+# waitandnext 0.5
+
+# se "SE_0749"
+# se "bgm224_story_default"
+# imagealpha 0 0 0.3
+# waitandnext 0.3
+
+# effectskip 1001
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1027 "solais_unit_0008"
+@クラウ・ソラス
+これがタイヤ引きの成果だ！
+
+# voice 1023 "ascalon_battle_0006"
+# textboxarrow 0 1
+@アスカロン
+くぅっ…！
+ただの突進なのに
+弾かれる…なんて…
+
+# mask 46013001 off
+# alpha 41023001 0 0.5
+# alpha 41027001 0 0.5
+# alpha 46013001 1 0.5
+# voice 6013 "sistrum_0038"
+# textboxarrow 0 2
+@シストルム
+その子を捕まえるのは待って…
+にゃ？にゃーっ！
+解けないにゃっ！？
+
+# textflame 0 0
+@
+突如現れたシストルムのおかげ？で、
+なんとか逃げることに成功した
+
+;;//背景：プール
+;;//SE：ビデオテープの早送りの音「キュルルル～」みたいな
+;;//アスカロンとグラム、バルムンク
+;;//早送り演出
+# se "SE_0748"
+# se "bgm224_story_speedup"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# envbody 1002 19 0
+# effectstart 1002
+# imagealpha 0 1 0.3
+# waitandnext 0.3
+
+# alpha 46013001 0 0
+# mask 41004001 off
+# alpha 41004001 1 0
+# waitandnext 0.1
+
+# se "SE_0749"
+# se "bgm224_story_default"
+# imagealpha 0 0 0.3
+# waitandnext 0.3
+
+# effectskip 1002
+# serif 0
+# textwindow "nomal"
+@
+クラウ・ソラスに勝つべく、
+特訓を決意するアスカロンに
+草薙剣が提案する
+
+# se "SE_5686"
+# textflame 1 1
+# voice 1004 "kusanagi_0003"
+@草薙剣
+ならば、
+そちは「剣聖」に師事―ヒィッ！？
+八咫鏡、蛇は止めろと言っておろう！
+
+;;//背景：ジャングル
+;;//SE：ビデオテープの早送りの音「キュルルル～」みたいな
+;;//アスカロンとエクスカリバーが相対
+;;//早送り演出
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# bgmfile "bgm238" "BgmSeaEventBattle" 0.1
+# waitandnext 0.1
+
+# se "SE_0748"
+# se "bgm238_speedup"
+# envbody 1002 19 0
+# effectstart 1002
+# imagealpha 0 1 0.3
+# waitandnext 0.3
+
+# alpha 41004001 0 0
+# background "sea_jungle_day"
+# waitandnext 0.6
+
+# imagealpha 0 0 0.3
+# waitandnext 0.3
+
+# se "SE_0749"
+# se "bgm238_default"
+# effectskip 1002
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+弟子入りを果たし、
+修行を開始するアスカロン
+
+# mask 41011001 off
+# alpha 41011001 1 0.5
+# textflame 1 1
+@エクスカリバー
+あなたに必要なのは
+美味しいものを食べたいという
+強い食欲です！
+
+@エクスカリバー
+この特訓で
+それが得られないようであれば…
+私とともに金メダルを目指しましょう
+
+;;//SE：剣で打ち合う音
+;;//SE：ビデオテープの早送りの音「キュルルル～」みたいな
+;;//アスカロンがエクスカリバーを吹っ飛ばす
+;;//早送り演出
+;;//背景：プール（夜）
+# se "SE_0748"
+# se "bgm238_speedup"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# envbody 1003 19 0
+# effectstart 1003
+# imagealpha 0 1 0.3
+# waitandnext 0.3
+
+# background "sea_resort_night"
+# alpha 41011001 0 0
+# waitandnext 0.6
+
+# se "SE_0749"
+# se "bgm238_default"
+# imagealpha 0 0 0.3
+# waitandnext 0.3
+
+# effectskip 1003
+# bgmfile "bgm226_story" "BgmSeaEvent" 0
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+時刻は少し前、
+アスカロンが修行を行う前日、深夜
+
+@
+二人の大臣のもとへ
+ケラウノスが姿を現す
+
+# voice 5001 "keraunosu_0004"
+# alpha 45006001 1 0.5
+# alpha 45001001 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@ケラウノス
+ダイナマイト帝国
+皇帝ダーインスレイヴは
+しばらくまともに動けないよ～
+
+# textboxarrow 0 3
+@メギド
+なら次は、
+反抗的な下級民の始末を
+してきてくれないかしら
+
+# textboxarrow 0 1
+@ケラウノス
+も～、酷使されすぎマジやばい
+いつも通りアルテミスとアバリス、
+ミトゥムとミョルニルも連れて行くね
+
+# alpha 45006001 0 0.5
+# alpha 45001001 0 0.5
+# alpha 44001001 1 0.5
+# alpha 44010001 1 0.5
+# textboxarrow 0 1
+@アルテミス
+アバリス、どこにいるのです？
+出番ですよ
+ふぅ…暑い…
+
+;;//可能なら文字自体半透明にしたい
+# textboxarrow 0 3
+# voice 4001 "arutemisu_0008"
+# move 41027001 3 0
+@アバリス
+ここにいます…
+
+# alpha 44001001 0 0.5
+# alpha 44010001 0 0.5
+# alpha 41027001 1 0.5
+# mask 41027001 off
+# textboxarrow 0 2
+@クラウ・ソラス
+待て、私も出る
+
+;;//SE：ビデオテープの早送りの音「キュルルル～」みたいな
+;;//クラウソラスがグラムを吹っ飛ばす
+;;//早送り演出
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# bgmfile "bgm234_235" "BgmSeaEventBattle" 0.1
+# waitandnext 0.1
+
+# se "SE_0748"
+# se "bgm234_235_speedup"
+# envbody 1004 19 0
+# effectstart 1004
+# imagealpha 0 1 0.3
+# waitandnext 0.3
+
+# alpha 41027001 0 0
+# waitandnext 0.1
+
+# se "SE_0749"
+# se "bgm234_235_default"
+# imagealpha 0 0 0.3
+# waitandnext 0.3
+
+# effectskip 1004
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+アスカロン達の拠点に奇襲を掛けた
+クラウ・ソラス達だったが―
+
+# textflame 1 1
+# mask 41023001 off
+# se "SE_0751"
+# move 41023001 3 0
+# alpha 41023001 1 0.5
+# textboxarrow 0 2
+@アスカロン
+させません！
+
+;;//SE：剣をはじく音
+# fadein "white" 0.5
+# shake 0 0.5
+# se "SE_3006"
+# textflame 0 0
+@
+アスカロンが駆けつける
+さらに…
+
+# textflame 1 1
+# alpha 41023001 0 0.5
+# alpha 43003001 1 0.5
+# alpha 41012001 1 0.5
+# voice 1012 "adamasu_0008"
+# textboxarrow 0 1
+@アダマス
+ふんっ…
+悪くはない豚だね
+少し調教してやろうか
+
+# voice 3003 "hotengageki_0004"
+# textboxarrow 0 3
+@方天画戟
+いよう！
+こっからは
+天下不動のオレに任せな
+
+# textflame 0 0
+@
+各地にいた友人達が合流し
+一気に攻勢をかける

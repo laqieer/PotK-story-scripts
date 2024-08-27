@@ -1,0 +1,237 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１３章 章タイトル「ラルゴカタストロフィ―攪乱―」
+;;第1話－１２　タイトル：眩惑のキル姫
+;;1_12_3
+;;スクリプト最後の背景：マサムネ城内
+;;-----------------------------------------
+# script "lisp"
+# background "masamune_arena"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;異族化マサムネ
+# body 5100131
+# pos 5100131 3
+# scale 5100131 0.8 0
+# layer 5100131 2
+# alpha 5100131 0 0
+# mask 5100131 off
+;;異族化パラシュ
+# body 5200431
+# pos 5200431 3
+# scale 5200431 0.8 0
+# layer 5200431 2
+# alpha 5200431 0 0
+# mask 5200431 off
+;;擬装フライシュッツ
+# body 5502721
+# pos 5502721 3
+# scale 5502721 0.8 0
+# layer 5502721 2
+# alpha 5502721 0 0
+# mask 5502721 off
+;;ヘレナ・D. plug・ロキ
+# body 5302811
+# pos 5302811 3
+# scale 5302811 0.8 0
+# layer 5302811 2
+# alpha 5302811 0 0
+# mask 5302811 off
+;;ニール
+# body 162
+# pos 162 3
+# scale 162 0.8 0
+# layer 162 2
+# alpha 162 0 0
+# mask 162 off
+;;-----------------------------------------
+# se "SE_9021"
+# voice 5027 "freischotz_im_0029"
+# move 5502721 3 0
+# face 5502721 "angry"
+# alpha 5502721 1 0
+# mask 5502721 off
+# textflame 1 1
+# textboxarrow 0 2
+@フライシュッツ
+はあああああああああ！
+
+# se "SE_4200"
+# waitandnext 0.5
+
+# alpha 5502721 0 0.5
+# move 5100131 3 0
+# face 5100131 "normal"
+# alpha 5100131 1 0.5
+# mask 5100131 off
+# textboxarrow 0 2
+@マサムネ
+どこを狙っている
+
+;;//フライシュッツの攻撃をマサムネが避ける
+# se "SE_5204"
+# textwindow "close"
+# rightout 5100131 0.5
+# waitandnext 0.5
+
+;;//フライシュッツが壁を破壊する
+# alpha 5100131 0 0
+# se "SE_11575"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# move 5502721 3 0
+# face 5502721 "angry"
+# alpha 5502721 1 0.5
+# mask 5502721 off
+# textboxarrow 0 2
+# textwindow "normal"
+@フライシュッツ
+ヘレナちゃん、こっち！
+
+# voice 510013 "masamune_iz_0009"
+# alpha 5502721 0 0.5
+# move 5100131 3 0
+# face 5100131 "surprise"
+# alpha 5100131 1 0.5
+# mask 5100131 off
+# textboxarrow 0 2
+@マサムネ
+なにっ？
+壁に穴を空けおった…
+
+# alpha 5100131 0 0.5
+# move 5302811 3 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 off
+# textboxarrow 0 2
+@ヘレナ
+三十六計何とやら、だな
+仕方ない…ここは逃げるとしよう
+
+# voice 520043 "parashu_iz_battle_0001"
+# move 5302811 2 0.5
+# mask 5302811 on
+# move 5200431 4 0
+# face 5200431 "angry"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+# textboxarrow 0 3
+@パラシュ
+させるか！
+
+# se "SE_4100"
+# waitandnext 0.5
+
+# voice 5027 "freischotz_battle_0002"
+# alpha 5302811 0 0.5
+# move 5502721 2 0
+# face 5502721 "angry"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+# textboxarrow 0 1
+@フライシュッツ
+やあっ！
+
+# se "SE_4200"
+# waitandnext 0.5
+
+;;//パラシュの攻撃をフライシュッツが止める
+# se "SE_4816"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@パラシュ
+邪魔だ！
+
+# se "SE_9084"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 5027 "freischotz_0025"
+# face 5502721 "sad"
+# textboxarrow 0 1
+@フライシュッツ
+きゃああああ…！
+
+;;//フライシュッツが吹っ飛ぶ
+# se "SE_11585"
+# textwindow "close"
+# leftout 5502721 0.5
+# waitandnext 0.5
+
+# voice 530281 "herena_di_0043"
+# alpha 5502721 0 0
+# alpha 5200431 0 0.5
+# move 5302811 2 0
+# face 5302811 "angry"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 1
+# move 162 4 0
+# alpha 162 1 0.5
+# mask 162 on
+# textwindow "normal"
+@ヘレナ
+フライシュッツ…！
+ニール、行くよっ
+
+# voice 9952 "nir_0033"
+# textboxarrow 0 3
+@ニール
+任せて！
+
+;;//ヘレナがフライシュッツを受け止めて逃げる
+# textwindow "close"
+# alpha 5302811 0 0.5
+# alpha 162 0 0.5
+# waitandnext 0.5
+
+# move 5502721 3 0
+# face 5502721 "sad"
+# alpha 5502721 1 0
+# mask 5502721 on
+# rightin 5502721 0.5
+# waitandnext 0.2
+
+# sedelay "SE_0846" 0.2
+# move 5302811 2 0
+# face 5302811 "usual"
+# alpha 5302811 1 0
+# mask 5302811 on
+# leftin 5302811 0.3
+# waitandnext 0.5
+
+# alpha 5502721 0 0.5
+# alpha 5302811 0 0.5
+# waitandnext 0.5
+
+# voice 510013 "masamune_iz_0013"
+# move 5100131 2 0
+# face 5100131 "angry"
+# alpha 5100131 1 0.5
+# mask 5100131 on
+# textboxarrow 0 1
+# move 5200431 4 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+# textwindow "normal"
+@マサムネ
+待て！
+…捕り逃がしたか
+
+# face 5200431 "angry"
+# textboxarrow 0 3
+@パラシュ
+手応えはあった
+下に降りてトドメを刺してくるよ
+
+# textboxarrow 0 1
+@マサムネ
+拙者も参る
+他の侵入者達も始末するとしよう

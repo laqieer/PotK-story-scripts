@@ -1,0 +1,440 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;セブンスキラーズサイドストーリー前編
+;;第1話　タイトル：初めての再会
+;;1_8_1
+;;スクリプト最後の背景：ケイオスリオン
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm428" "BgmIntegralNoahSeventh" 0
+;;-----------------------------------------
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 3
+# alpha 3201911 0 0
+# mask 3201911 off
+;;ヴァナルガンド
+# body 3601111
+# pos 3601111 3
+# scale 3601111 0.8 0
+# layer 3601111 2
+# alpha 3601111 0 0
+# mask 3601111 off
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;フォルカス
+# body 3301811
+# pos 3301811 3
+# scale 3301811 0.8 0
+# layer 3301811 2
+# alpha 3301811 0 0
+# mask 3301811 off
+;;ロンゴミアント
+# body 3301011
+# pos 3301011 3
+# scale 3301011 0.8 0
+# layer 3301011 2
+# alpha 3301011 0 0
+# mask 3301011 off
+;;リットゥ・D. plug・ナベリウス
+# body 3100511
+# pos 3100511 3
+# scale 3100511 0.8 0
+# layer 3100511 2
+# alpha 3100511 0 0
+# mask 3100511 off
+;;方天画戟
+# body 3300311
+# pos 3300311 3
+# scale 3300311 0.8 0
+# layer 3300311 2
+# alpha 3300311 0 0
+# mask 3300311 off
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;第1話　タイトル：初めての再会
+;;//回想シーン
+# se "SE_0742"
+# frameout 0 0
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "400_angel_town_daytime"
+# framein 0 0
+# move 3601111 3 0
+# face 3601111 "usual"
+# alpha 3601111 1 0
+# mask 3601111 off
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：ハルモニア
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ヴァナルガンド
+いいですか
+ハルモニアは教皇様を頂点とした
+一つの「群れ」なんです
+
+# textboxarrow 0 2
+@ヴァナルガンド
+自分勝手な行動は慎み、
+群れの規律を守るよう心がけて
+下さい
+
+;;//回想終了
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "101_city_night1"
+# alpha 3601111 0 0
+# move 3102311 1 0
+# face 3102311 "normal"
+# alpha 3102311 1 0
+# mask 3102311 on
+# move 3301811 4 0
+# face 3301811 "usual"
+# alpha 3301811 1 0
+# mask 3301811 on
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：室内
+# textboxarrow 0 3
+# textwindow "normal"
+@フォルカス
+ヴァナルガンドは集団の規律を
+重んじていましたから
+
+# textboxarrow 0 3
+@フォルカス
+私のやろうとしていることとは
+対立すると考えて、なるべく
+距離を取っていたんです
+
+# textboxarrow 0 3
+@フォルカス
+仲間になってくれるとは、
+考えてもみませんでした…
+
+# textboxarrow 0 1
+@アスカロン
+そうだったんですね…
+
+# textboxarrow 0 3
+@フォルカス
+ですが、セブンス同士の接触が
+きっかけとなり得るのなら、
+避けてばかりもいられません
+
+# textboxarrow 0 3
+@フォルカス
+いずれ、彼女とも相対さなければ
+ならないでしょう
+
+# textboxarrow 0 3
+@フォルカス
+さて、そろそろここを発ちましょう
+シユウは…
+
+# textboxarrow 0 0
+@シユウ
+スゥ…スゥ…
+
+# face 3102311 "happy"
+# textboxarrow 0 1
+@アスカロン
+私が背負っていきます
+起こしたら可哀想ですから
+
+# textboxarrow 0 3
+@フォルカス
+一人で大丈夫ですか？
+
+# voice 310231 "ascalon_a_0003"
+# textboxarrow 0 1
+@アスカロン
+平気ですよ
+けっこう力はあるんです
+
+;;//アスカロンがシユウを担いでいく
+# se "SE_0648"
+# textwindow "close"
+# waitandnext 0.8
+
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "300_devil_daytime03"
+# move 3102311 2 0
+# face 3102311 "normal"
+# alpha 3102311 1 0
+# move 3301811 4 0
+# face 3301811 "usual"
+# alpha 3301811 1 0
+# mask 3301811 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//背景：ケイオスリオン
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 3
+# textwindow "normal"
+@フォルカス
+夜が明けましたね
+結局、夜通し歩くことになって
+しまいましたが…
+
+# textboxarrow 0 3
+@フォルカス
+お陰でトレイセーマとの国境まで
+あと一息です
+
+# textboxarrow 0 3
+@フォルカス
+少し休みましょうか、アスカロン？
+
+# face 3102311 "happy"
+# textboxarrow 0 1
+@アスカロン
+いえ…！
+このくらい平気ですからっ
+
+;;フォルカス（独白）
+# voice 330181 "forcas_t_0028"
+# move 3301811 4 0
+# textboxarrow 0 0
+# textwindow "moya"
+@フォルカス
+無理をしていますね
+どこかで休憩を取らないと
+
+# move 3102311 1 0.5
+# move 3201911 3 0
+# face 3201911 "sad"
+# alpha 3201911 1 0.5
+# mask 3201911 on
+# textboxarrow 0 2
+# move 3301811 5 0.5
+# textwindow "normal"
+@シユウ
+ん～…
+もう、あさなのか…？
+
+# textboxarrow 0 1
+@アスカロン
+おはようございます、シユウ
+
+# textboxarrow 0 2
+@シユウ
+ん～…
+アスカロン、おはよ～
+
+# voice 320191 "chihyu_a_0022"
+# face 3201911 "surprise"
+# textboxarrow 0 2
+@シユウ
+んん～？
+どうしてシユウはアスカロンに
+せおわれてるんだ？
+
+# voice 310231 "ascalon_a_0004"
+# textboxarrow 0 1
+@アスカロン
+ふふふっ
+ぐっすり眠ってましたね
+
+# textboxarrow 0 3
+@フォルカス
+シユウ、おはよう
+自分で歩けますか？
+
+# face 3201911 "normal"
+# textboxarrow 0 2
+@シユウ
+うがあああぁぁっ
+おなかがすいたぞ！
+
+# voice 330181 "forcas_t_0027"
+# textboxarrow 0 3
+@フォルカス
+起きた途端にこれですか…
+どこか落ち着けるところで
+朝食を摂りましょう
+
+# voice 320191 "chihyu_a_0006"
+# face 3201911 "happy"
+# textboxarrow 0 2
+@シユウ
+うがあああぁぁ！
+あさごはんだ！
+
+# textboxarrow 0 1
+@アスカロン
+うふふっ
+ヨーグルトもありますよ♪
+
+# bgm "stop"
+# face 3301811 "angry"
+# textboxarrow 0 3
+@フォルカス
+…止まって下さい
+どうやら朝食は一旦、お預けに
+なりそうです
+
+# voice 310231 "ascalon_a_0022"
+# face 3102311 "surprise"
+# textboxarrow 0 1
+@アスカロン
+えっ…？
+この気配…
+
+# voice 320191 "chihyu_a_0010"
+# face 3201911 "angry"
+# textboxarrow 0 2
+@シユウ
+うがあああぁぁ…！
+シユウのごはんをじゃまするやつには
+ようしゃしないぞ！！
+
+;;//ケイオスリオンのキル姫達が現れる
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# voice 330101 "rhongomiant_a_0005"
+# alpha 3102311 0 0.5
+# alpha 3201911 0 0.5
+# alpha 3301811 0 0.5
+# move 3301011 3 0
+# face 3301011 "happy"
+# alpha 3301011 1 0.5
+# mask 3301011 off
+# textboxarrow 0 2
+@ロンゴミアント
+あらあらあら～♪
+見つけましたよ、裏切り者さん
+
+# voice 310051 "ritto_a_0004"
+# alpha 3301011 0 0.5
+# move 3100511 3 0
+# face 3100511 "normal"
+# alpha 3100511 1 0.5
+# mask 3100511 off
+# textboxarrow 0 2
+@リットゥ
+帝都から連絡を受けて国境近辺を
+見回っていたが、こんなにあっさり
+見つかるとはな
+
+# voice 330031 "hotengageki_a_0004"
+# alpha 3100511 0 0.5
+# move 3300311 3 0
+# face 3300311 "normal"
+# alpha 3300311 1 0.5
+# mask 3300311 off
+# textboxarrow 0 2
+@方天画戟
+ひぃ、ふぅ、みぃ…
+たった三人か
+
+# textboxarrow 0 2
+@方天画戟
+だが、どいつも美味そうな匂いを
+させてやがる
+
+# face 3300311 "angry"
+# textboxarrow 0 2
+@方天画戟
+おい、お前ら！
+オレの獲物を横取りするんじゃ
+ねえぞ！
+
+# voice 330101 "rhongomiant_a_0009"
+# move 3300311 2 0.5
+# mask 3300311 on
+# move 3301011 4 0
+# face 3301011 "angry"
+# alpha 3301011 1 0.5
+# mask 3301011 on
+# textboxarrow 0 3
+@ロンゴミアント
+はぁ？
+何であなたに遠慮しないといけない
+んですか？
+
+# textboxarrow 0 3
+@ロンゴミアント
+あかぁくて、あかぁい鮮血を
+散らせるのが、私の楽しみなんです
+から
+
+# voice 310051 "ritto_a_0013"
+# alpha 3301011 0 0.5
+# alpha 3300311 0 0.5
+# move 3100511 3 0
+# face 3100511 "angry"
+# alpha 3100511 1 0.5
+# mask 3100511 off
+# textboxarrow 0 2
+@リットゥ
+下らん言い争いはよそでやれ！
+フォルカスとアスカロンを潰すのが
+マスターから受けた命令だ
+
+# face 3100511 "normal"
+# textboxarrow 0 2
+@リットゥ
+シユウも戦う気満々らしいが、
+刃向かうようなら、ついでに潰して
+やるか
+
+# se "SE_5205"
+# textboxarrow 0 2
+@リットゥ
+躾のなっていない者どもに、
+たっぷり教育してやる！
+
+# voice 310231 "ascalon_a_0026"
+# alpha 3100511 0 0.5
+# move 3102311 3 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+@アスカロン
+国境警備のキル姫達が、
+こんなところにまで…
+
+# alpha 3102311 0 0.5
+# move 3300311 3 0
+# face 3300311 "normal"
+# alpha 3300311 1 0.5
+# mask 3300311 off
+# textboxarrow 0 2
+@方天画戟
+帝都からの連中が来る前に、
+さっさと平らげてやるぜ！

@@ -1,0 +1,331 @@
+;;-----------------------------------------
+;;【ファンキル　クリスマスイベント2018　FB修正版2018.11.26
+;;【EP5】君の願いは？
+;;5_1
+;;スクリプト最後の背景：ハルモニア擬人区
+;;-----------------------------------------
+# script "lisp"
+# background "town_night_snow"
+# bgmfile "bgm290" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;カリス（クリスマス用のボイスを鳴らすための呼び出し）
+# body 3602511
+# alpha 3602511 0 0
+;;フォルカス（クリスマス用のボイスを鳴らすための呼び出し）
+# body 3301811
+# alpha 3301811 0 0
+;;カリス（クリスマス）
+# body 3602521
+# pos 3602521 3
+# scale 3602521 0.8 0
+# layer 3602521 2
+# alpha 3602521 0 0
+# mask 3602521 off
+;;フォルカス（クリスマス）
+# body 3301821
+# pos 3301821 3
+# scale 3301821 0.8 0
+# layer 3301821 2
+# alpha 3301821 0 0
+# mask 3301821 off
+;;キプル
+# body 163
+# pos 163 3
+# scale 163 0.6 0
+# layer 163 2
+# alpha 163 0 0
+# mask 163 off
+;;-----------------------------------------
+# move 3602521 3 0
+# face 3602521 "normal"
+# alpha 3602521 1 0
+# mask 3602521 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 6025 "chalice_t_0032"
+@カリス
+これで…おっけい！
+みんな、ケガは治してあげたけど
+追いかけてこないでね～
+
+# alpha 3602521 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+いつも通り、倒した兵の治療を
+終えると、マスター達はハルモニアを
+出るために外周へと向かった
+
+;;モノローグ
+@
+そういえば、フォルカスには
+カリスに聞きたいことがあったはず
+と、マスターは思い出した
+
+# move 3602521 2 0
+# face 3602521 "normal"
+# alpha 3602521 1 0.5
+# mask 3602521 on
+# move 3301821 4 0
+# face 3301821 "usual"
+# alpha 3301821 1 0.5
+# mask 3301821 on
+# textflame 1 1
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0003"
+@フォルカス
+…はい
+どうしてカリスは…そんなに
+前向きでいられるのでしょうか？
+
+# emotionbody 60251 11 3602521 -100 250
+# effectpattern 60251 2 0
+# effectstart 60251
+# face 3602521 "surprise"
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0022"
+@カリス
+え！？フォルカスは後ろ向きなの？
+なにか、悩みごとでもあるの？
+ちゃんと聞くから、話してみて？
+
+# emotionbody 30181 9 3301821 80 220
+# effectpattern 30181 3 0
+# effectstart 30181
+# face 3301821 "surprise"
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0023"
+@フォルカス
+えっ！
+いえ、そういうわけでは…
+
+# face 3602521 "normal"
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0004"
+@カリス
+そっか、それならいいんだ～！
+で、なんだっけ？
+
+# face 3301821 "usual"
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0002"
+@フォルカス
+私は、カリスがいつも明るく、
+失敗を恐れずにいられるのは
+どうしてか、それを知りたいのです
+
+# textboxarrow 0 3
+@フォルカス
+だれかを助けたいというあなたの
+気持ちは立派ですが、必ずしも
+いい結果が出るとは限りません
+
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0015"
+@フォルカス
+もし失敗したら…
+そう考えると怖くはありませんか？
+
+# face 3602521 "sad"
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0026"
+@カリス
+むー…
+…失敗するのはわたしも怖いよ？
+
+# face 3602521 "normal"
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0004"
+@カリス
+でも、だからってなんにもしないのは
+もっと怖いし、助けたいって思ったら
+我慢できないんだよね～！
+
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0033"
+@カリス
+あと、必ずミラクルを起こすって
+決めているからかな？
+願えば叶うって、わたしは信じてる！
+
+# face 3301821 "surprise"
+# textboxarrow 0 3
+@フォルカス
+カリス…
+私は、あなたは自由奔放で手のかかる
+問題児だと、そう思っていましたが…
+
+# face 3301821 "usual"
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0028"
+@フォルカス
+ですが、あなたは私よりも
+ずっと強い心を持っていたのですね、
+私は考えを改めなくてはなりません
+
+# se "SE_6500"
+# emotionbody 1000 1 3602521 10 310
+# effectpattern 1000 1 0
+# effectstart 1000
+# face 3602521 "surprise"
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0022"
+@カリス
+わたしが、フォルカスより強いなんて
+そんなことないよー！
+
+# emotionbody 60252 10 3602521 -70 200
+# effectpattern 60252 4 0
+# effectstart 60252
+# face 3602521 "happy"
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0005"
+@カリス
+フォルカスは、かっこよくて強くて、
+優しくて綺麗で、それからそれから…
+天使で賢くて、すごいんだよ！
+
+# effectskip 60252
+# face 3602521 "normal"
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0001"
+@カリス
+マスターさんも、そう思うでしょ？
+
+# textflame 0 0
+;;モノローグ
+@
+マスターも、その通りだ、と頷く
+
+# emotionbody 30182 9 3301821 80 220
+# effectpattern 30182 5 0
+# effectstart 30182
+# face 3301821 "shy"
+# textflame 1 1
+# textboxarrow 0 3
+;;フォルカス（照れ）
+# voice 330181 "forcas_t_0004"
+@フォルカス
+マスターまで…やめてください
+は、恥ずかしい…
+
+# face 3602521 "happy"
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0005"
+@カリス
+照れ屋なところは、新しい発見かな！
+真っ赤になっちゃって可愛い～！
+
+# effectskip 30182
+# textboxarrow 0 3
+;;フォルカス（照れ）
+# voice 330181 "forcas_t_0042"
+@フォルカス
+カリス…
+本当にもう…やめてください
+
+# face 3602521 "surprise"
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0002"
+@カリス
+え～？
+照れるフォルカス、もっと見たい～！
+こっち向いてよ、ねぇねぇ！
+
+# emotionbody 30183 6 3301821 80 220
+# effectpattern 30183 1 0
+# effectstart 30183
+# face 3301821 "angry"
+# textboxarrow 0 3
+;;フォルカス（すごむ）
+# brightness 3301821 0.9 0.2
+# voice 330181 "forcas_t_0009"
+@フォルカス
+カリス…
+それくらいにしないと…
+わたしも怒りますよ？
+
+# emotionbody 1631 9 163 60 100
+# effectpattern 1631 5 0
+# effectstart 1631
+# move 3602521 1 0.5
+# mask 3602521 on
+# move 163 3 0
+# alpha 163 1 0.5
+# mask 163 on
+# textboxarrow 0 2
+# move 3301821 5 0.5
+# brightness 3301821 1 0.2
+# voice 9951 "kipuru_0023"
+@キプル
+あわわわわ…フォルカス様！
+カリスが失礼を！
+すみませんすみませんすみません！
+
+# effectskip 1631
+# face 3602521 "normal"
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0061"
+@カリス
+キプル、謝る必要はないよ？
+だって本当のことだもん！
+
+# face 3301821 "usual"
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0028"
+@フォルカス
+カリス…
+あなたって人は、本当に…
+
+# bgm "bgm032" 0
+# face 3301821 "smile"
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0004"
+@フォルカス
+…ふふふっ、私の負けですね
+
+# textflame 0 0
+;;モノローグ
+@
+そうだね、笑ったら負けだね、と
+マスターも笑う
+
+# emotionbody 60253 3 3602521 0 270
+# effectpattern 60253 2 0
+# effectstart 60253
+# face 3602521 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 6025 "chalice_t_0005"
+@カリス
+ミラクルは起こせなかったけど、
+フォルカスとも仲良くなれたし、
+今日は楽しかったな～！
+
+# textboxarrow 0 3
+;;フォルカス（笑顔）
+# voice 330181 "forcas_t_0030"
+@フォルカス
+私もお役に立てて、嬉しかったです
+人々の笑顔を見せてくれた
+カリスとマスターに感謝します…
+
+# effectskip 60253
+# alpha 3602521 0 0.5
+# alpha 163 0 0.5
+# alpha 3301821 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+ハルモニアのクリスマスには
+天使が舞い降りるという
+言い伝えがある
+
+;;モノローグ
+@
+願いは叶えるもの…
+奇跡は起こすもの…
+
+;;モノローグ
+@
+天使は、いつでもあなたのそばにー

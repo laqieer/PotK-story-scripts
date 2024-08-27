@@ -1,0 +1,639 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;インテグラルキラーズサイドストーリー
+;;第3話―１２　タイトル：不可欠な痛み
+;;3_12_0
+;;スクリプト最後の背景：ユグドラシル内部
+;;-----------------------------------------
+# script "lisp"
+# background "flower_garden"
+# bgm "bgm003" 0
+;;-----------------------------------------
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 3
+# alpha 24 0 0
+# mask 24 off
+;;ティルフィング（別）
+# entry 9241 24
+# pos 9241 3
+# scale 9241 0.8 0
+# layer 9241 2
+# alpha 9241 0 0
+# mask 9241 off
+# brightness 9241 0.8 0
+;;ティルフィング・擬彩
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 2
+# alpha 5101431 0 0
+# mask 5101431 off
+;;レーヴァテイン
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# layer 100221 2
+# alpha 100221 0 0
+# mask 100221 off
+;;ロンギヌス
+# body 300111
+# pos 300111 3
+# scale 300111 0.8 0
+# layer 300111 2
+# alpha 300111 0 0
+# mask 300111 off
+;;マサムネ
+# body 100111
+# pos 100111 3
+# scale 100111 0.8 0
+# layer 100111 2
+# alpha 100111 0 0
+# mask 100111 off
+;;パラシュ
+# body 200411
+# pos 200411 3
+# scale 200411 0.8 0
+# layer 200411 2
+# alpha 200411 0 0
+# mask 200411 off
+;;アルテミス
+# body 400131
+# pos 400131 3
+# scale 400131 0.8 0
+# layer 400131 2
+# alpha 400131 0 0
+# mask 400131 off
+;;フライクーゲル
+# body 500211
+# pos 500211 3
+# scale 500211 0.8 0
+# layer 500211 2
+# alpha 500211 0 0
+# mask 500211 off
+;;ユグドラシル
+# body 242
+# pos 242 3
+# scale 242 0.8 0
+# layer 242 2
+# alpha 242 0 0
+# mask 242 off
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 2
+# alpha 810004 0 0
+# mask 810004 off
+;;-----------------------------------------
+;;シナリオカット一枚絵
+# imageset 0 "integral_side04"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;第3話―１２　タイトル：不可欠な痛み
+;;//背景：花畑
+# voice 1014 "tyrufing_0005"
+# move 24 3 0
+# face 24 "normal"
+# alpha 24 1 0
+# mask 24 off
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+懐かしいですね…
+初めてマスターにお会いしたのも
+こんなところでした
+
+# textboxarrow 0 2
+@ティルフィング
+…………
+
+# voice 1014 "tyrufing_0001"
+# face 24 "happy"
+# textboxarrow 0 2
+@ティルフィング
+マスター…
+ありがとうございます
+私達に新しい道を示して下さって
+
+# face 24 "happy2"
+# textboxarrow 0 2
+@ティルフィング
+必ず、人々がずっと幸せに暮らせる
+理想郷を…理想郷を…
+
+# voice 1014 "tyrufing_0058"
+# face 24 "sad2"
+# textboxarrow 0 2
+@ティルフィング
+ごめんなさい…
+堪えないといけないのに…
+
+# textboxarrow 0 2
+@ティルフィング
+やっぱり…寂しいです…
+長い間、本当にお世話になって…
+
+# textboxarrow 0 2
+@ティルフィング
+マスターと一緒にいるのが、
+当たり前でしたから…
+
+# textboxarrow 0 2
+@ティルフィング
+離ればなれになってしまうのは…
+
+;;//選択肢
+;;
+;;Aいつも側にいるよ
+# select "いつも側にいるよ" "select_label_01"
+離ればなれになってしまうのは…
+
+;;//シナリオカット表示
+;;A
+# label "select_label_01"
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# alpha 24 0 0.5
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 0
+# textwindow "normal"
+@ティルフィング
+マスター
+
+# textboxarrow 0 0
+@ティルフィング
+はい…
+はい！
+
+# textboxarrow 0 0
+@ティルフィング
+新たな世界樹となって、
+マスターは私達を見守っていてくれる
+
+# textboxarrow 0 0
+@ティルフィング
+そうでした
+寂しがることなんてないんですよね
+
+# textboxarrow 0 0
+@ティルフィング
+これからも、
+私達は一緒です
+
+# textboxarrow 0 0
+@ティルフィング
+…それでは、いってらっしゃい
+
+# textboxarrow 0 0
+@ティルフィング
+アナタのことを…
+ずっと側に感じています
+ずっと…
+
+;;//マスターが疑似ユグドラシルになる
+;;//上昇していく演出等
+# se "SE_9139"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1.2
+
+# imagealpha 0 0 0
+# move 100111 2 0
+# face 100111 "nutual"
+# alpha 100111 1 0
+# mask 100111 on
+# move 400131 4 0
+# face 400131 "nutual"
+# alpha 400131 1 0
+# mask 400131 on
+# waitandnext 0.8
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//暗転挟む
+# bgmfile "bgm409" "BgmIntegralNoahEvent" 0
+# voice 4001 "arutemisu_0003"
+# textboxarrow 0 3
+# textwindow "normal"
+@アルテミス
+あれが新世界の核…
+
+# textboxarrow 0 1
+@マサムネ
+奏官殿は行かれたのだな
+拙者達も引き返せぬ
+
+# alpha 100111 0 0.5
+# alpha 400131 0 0.5
+# move 24 3 0
+# face 24 "normal"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+皆さん…お気遣い
+ありがとうございました
+
+# alpha 24 0 0.5
+# move 500211 3 0
+# face 500211 "sad"
+# alpha 500211 1 0.5
+# mask 500211 off
+# textboxarrow 0 2
+@フライクーゲル
+ソーリー
+わたしだけ察せてなかったよ
+
+# alpha 500211 0 0.5
+# move 24 2 0
+# face 24 "normal"
+# alpha 24 1 0.5
+# mask 24 on
+# move 300111 4 0
+# face 300111 "normal"
+# alpha 300111 1 0.5
+# mask 300111 on
+# textboxarrow 0 3
+@ロンギヌス
+お別れを、したんですか…？
+
+# voice 1014 "tyrufing_0003"
+# textboxarrow 0 1
+@ティルフィング
+はい
+
+# alpha 300111 0 0.5
+# move 200411 4 0
+# face 200411 "normal"
+# alpha 200411 1 0.5
+# mask 200411 on
+# textboxarrow 0 3
+@パラシュ
+その様子だと、話さなかったんだね
+ボク達の計画を
+
+# textboxarrow 0 1
+@ティルフィング
+言えば反対されていましたから
+
+# alpha 200411 0 0.5
+# move 100221 4 0
+# face 100221 "normal"
+# alpha 100221 1 0.5
+# mask 100221 on
+# textboxarrow 0 3
+@レーヴァテイン
+ティル…
+
+# textboxarrow 0 1
+@ティルフィング
+マスターは新世界に私達も行くもの
+だと想定していたようですけれど
+そういうわけにはいきません
+
+# textboxarrow 0 1
+@ティルフィング
+私達は…もうどうしようもなく
+罪を背負っています
+
+# textboxarrow 0 3
+@レーヴァテイン
+ティルはそんなことないと…思うけど
+
+# face 24 "angry"
+# textboxarrow 0 1
+@ティルフィング
+いいえ
+私が最も罪深い
+新世界には相応しくありません
+
+# textboxarrow 0 1
+@ティルフィング
+マスターのいる新世界は
+永遠の理想郷にしなければ
+ならないんです
+
+# textboxarrow 0 1
+@ティルフィング
+そこに一滴の汚れもあっては
+なりません
+純粋なものだけで満たさないと
+
+# alpha 24 0 0.5
+# alpha 100221 0 0.5
+# move 300111 2 0
+# face 300111 "angry"
+# alpha 300111 1 0.5
+# mask 300111 on
+# move 400131 4 0
+# face 400131 "nutual"
+# alpha 400131 1 0.5
+# mask 400131 on
+# textboxarrow 0 3
+@アルテミス
+私達も覚悟はできています
+皆で、新たな世界の礎となりましょう
+
+# textboxarrow 0 1
+@ロンギヌス
+もう異族が生み出されることのない
+本当に完璧な世界を創るために…
+
+# alpha 300111 0 0.5
+# alpha 400131 0 0.5
+# move 500211 3 0
+# face 500211 "happy"
+# alpha 500211 1 0.5
+# mask 500211 off
+# textboxarrow 0 2
+@フライクーゲル
+サァッドな思いをする「わたし」も
+ベァッドな気持ちになる「わたし」も
+いないヘアピィな世界だね！
+
+# alpha 500211 0 0.5
+# move 24 3 0
+# face 24 "normal"
+# alpha 24 1 0.5
+# mask 24 off
+# textboxarrow 0 2
+@ティルフィング
+はい
+まずは「私」達を迎えに
+
+# textboxarrow 0 2
+@ティルフィング
+あの子達全てを受け入れて、
+計画を実行に移します
+
+;;//背景：ユグドラシル内部
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "yggdrasill_interior"
+# alpha 24 0 0
+# move 400131 1 0
+# face 400131 "nutual"
+# alpha 400131 1 0
+# mask 400131 on
+# move 24 3 0
+# face 24 "normal"
+# alpha 24 1 0
+# mask 24 on
+# move 200411 5 0
+# face 200411 "normal"
+# alpha 200411 1 0
+# mask 200411 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm410_block" "BgmIntegralNoahBattle001" 0
+# textboxarrow 0 1
+# textwindow "normal"
+@アルテミス
+そういえば、少し話していたんです
+計画の名前について
+
+# textboxarrow 0 2
+@ティルフィング
+名前ですか？
+何か良いものはありましたか？
+
+# voice 2004 "parashu_1003"
+# face 200411 "smile"
+# textboxarrow 0 3
+@パラシュ
+新しい世界を作り上げて
+旅立たせるのは、船出に似ているから
+古い伝承から名前を拝借してみたよ
+
+# alpha 400131 0 0.5
+# move 300111 1 0
+# face 300111 "happy"
+# alpha 300111 1 0.5
+# mask 300111 on
+# textboxarrow 0 1
+@ロンギヌス
+それから…異なる世界線の「私」達も
+不可欠な存在なので…それも
+
+# face 24 "happy2"
+# textboxarrow 0 2
+@ティルフィング
+いいですね
+
+# alpha 300111 0 0.5
+# move 100111 1 0
+# face 100111 "nutual"
+# alpha 100111 1 0.5
+# mask 100111 on
+# textboxarrow 0 1
+@マサムネ
+もう後には退けぬ
+船出すれば戻ることはない
+不可逆だという思いも込めてある
+
+# voice 1002 "revatein_0013"
+# alpha 200411 0 0.5
+# move 100221 5 0
+# face 100221 "sad"
+# alpha 100221 1 0.5
+# mask 100221 on
+# textboxarrow 0 3
+@レーヴァテイン
+色々詰め込みすぎて…
+面倒くさい名前になってる…
+
+# alpha 100111 0 0.5
+# move 400131 1 0
+# face 400131 "nutual"
+# alpha 400131 1 0.5
+# mask 400131 on
+# textboxarrow 0 1
+@アルテミス
+そんなことありません
+美しくまとまっています
+
+# voice 1014 "tyrufing_0004"
+# face 24 "happy"
+# textboxarrow 0 2
+@ティルフィング
+ふふっ
+皆で考えてくれたのなら、
+きっと素敵な名前ですよ
+
+;;//ユグドラシルの寝室
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "yggdrasill_bedroom_light"
+# alpha 400131 0 0
+# alpha 24 0 0
+# alpha 100221 0 0
+# move 24 2 0
+# face 24 "normal"
+# alpha 24 1 0
+# mask 24 on
+# move 242 4 0
+# face 242 "normal"
+# alpha 242 1 0
+# mask 242 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 3
+# textwindow "normal"
+@ユグドラシル
+やはり、そうだったの…
+自分達の命すら惜しまないのね
+
+# voice 1014 "tyrufing_0036"
+# face 24 "angry"
+# textboxarrow 0 1
+@ティルフィング
+全て覚悟しています
+ですから、お願いです…！
+
+# textboxarrow 0 3
+@ユグドラシル
+…分かったわ
+全ての異族…「あなた達」と
+繋がることができるようにする
+
+# face 242 "happy"
+# textboxarrow 0 3
+@ユグドラシル
+…あの子達のことも大切に思って
+くれて、ありがとう
+
+# face 24 "normal"
+# textboxarrow 0 1
+@ティルフィング
+あの子達も、
+私達と同じだったんですから…
+一緒に進みたいんです
+
+;;//背景：ユグドラシル内部
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "yggdrasill_interior"
+# alpha 24 0 0
+# alpha 242 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//異族化しかけているティルフィング（別）が現れる
+# se "bgm410_2_filteroff"
+# move 9241 3 0
+# face 9241 "mad2"
+# alpha 9241 1 0.5
+# mask 9241 off
+# waitandnext 1.2
+
+# alpha 9241 0 1
+# move 810004 3 0
+# alpha 810004 1 1
+# mask 810004 off
+# waitandnext 1.4
+
+# textboxarrow 0 2
+# textwindow "normal"
+@異族
+ああアアアアア…
+ガアアアアアアアアア！
+
+# move 24 2 0
+# face 24 "normal"
+# alpha 24 1 0.5
+# mask 24 on
+# textboxarrow 0 1
+# move 810004 4 0.5
+# mask 810004 on
+@ティルフィング
+ああ、見つけた
+今度は、一人にはしないから
+
+# textboxarrow 0 1
+@ティルフィング
+おいで
+棄てられた、異なる世界の私達
+ともにいきましょう
+
+# textboxarrow 0 1
+@ティルフィング
+永遠の理想郷のために
+
+# textboxarrow 0 3
+@異族
+ガアアアアアアア
+
+# textwindow "close"
+# move 24 3 0.5
+# move 810004 3 0.5
+# waitandnext 0.4
+
+;;//ティルフィングと異族が融合する
+;;//ティルフィング・擬彩になる
+# se "SE_11622"
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# alpha 24 0 0
+# alpha 810004 0 0
+# move 5101431 3 0
+# face 5101431 "normal"
+# alpha 5101431 1 0
+# mask 5101431 off
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 510143 "tyrufing_iz_kyara_6001"
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+方舟に咲き乱れしは、清き乙女の輝き
+その一片が示す言の葉は、
+色褪せぬ純潔
+
+# voice 510143 "tyrufing_iz_kyara_4001"
+# textboxarrow 0 2
+@ティルフィング
+さあ、純潔なる花よ
+暗き世界に調和の彩りを届けるのです
+完全なる透過の世界に綻びを
+
+;;//ちょっとwaitいれて間を作る
+#setnextbgmblock 2
+# waitandnext 1
+
+# voice 510143 "tyrufing_iz_kyara_7001"
+# textboxarrow 0 2
+@ティルフィング
+“擬彩されし不可逆世界”
+《インテグラルノア》、始動

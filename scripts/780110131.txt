@@ -1,0 +1,516 @@
+;;-----------------------------------------
+;;アハトストーリー：喪失の月を照らして【3_1】
+;;-----------------------------------------
+# script "lisp"
+# background "masamune_room"
+# bgmfile "bgm385" "Bgm3Tcollabo008" 0
+;;-----------------------------------------
+;;アハト
+# body 202711
+# pos 202711 3
+# scale 202711 0.8 0
+# layer 202711 3
+# mask 202711 off
+# alpha 202711 0 0
+# body 5202711
+# pos 5202711 3
+# scale 5202711 0.8 0
+# layer 5202711 3
+# mask 5202711 off
+# alpha 5202711 0 0
+;;イージス
+# body 52000111
+# pos 52000111 3
+# scale 52000111 0.8 0
+# layer 52000111 2
+# alpha 52000111 0 0
+;;ルーン
+# body 3300511
+# pos 3300511 2
+# scale 3300511 0.8 0
+# layer 3300511 3
+# alpha 3300511 0 0
+;;フラガラッハ
+# body 3101011
+# pos 3101011 3
+# scale 3101011 0.8 0
+# layer 3101011 3
+# mask 3101011 off
+# alpha 3101011 0 0
+;;カオスリーパー
+# body 5810301
+# pos 5810301 5
+# scale 5810301 0.8 0
+# layer 5810301 2
+# alpha 5810301 0 0
+;;スケルトン
+# body 910013
+# pos 910013 4
+# scale 910013 0.8 0
+# layer 910013 4
+# mask 910013 off
+# alpha 910013 0 0
+# entry 91001301 910013
+# pos 91001301 1
+# scale 91001301 0.8 0
+# layer 91001301 4
+# alpha 91001301 0 0
+# reversal 91001301 0
+# entry 91001302 910013
+# pos 91001302 5
+# scale 91001302 0.8 0
+# layer 91001302 4
+# alpha 91001302 0 0
+;;フライデヴィル
+# body 920014
+# pos 920014 5
+# scale 920014 0.8 0
+# layer 920014 4
+# alpha 920014 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagescale 1 1.5 0
+# imagelayer 1 1
+;;-----------------------------------------
+;;背景：小綺麗な部屋　
+# fadein "black" 1
+# textwindow "close"
+# waitandnext 1.5
+
+# alpha 202711 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 202711 "normal"
+@アハト
+お節介ですね、本当に…
+
+# textflame 1 1
+# textboxarrow 0 2
+@アハト
+「助かる可能性は残されていたのに、
+それを自ら手放すなんて、
+許せません」か…
+
+# textflame 1 1
+# textboxarrow 0 2
+@アハト
+みんなが言いそうな言葉…
+
+# textflame 0 0
+@
+アハトはイージスに手渡された紙束、
+アームズストレージの取扱説明書を
+手に取った
+
+# textflame 0 0
+@
+遠く離れた世界にいても
+浮かび上がってくる
+過去や思い出
+
+# textflame 0 0
+@
+遺された紙束は変わらず
+とりとめのない言葉を語っていた
+
+# textflame 0 0
+@
+『不壊
+風邪ひくんじゃねえぞ』
+
+# textflame 0 0
+@
+『不惑
+迷わず飾って』
+
+# textflame 0 0
+@
+『不憎
+己を呪わず』
+
+# textflame 0 0
+@
+『不騙
+夢に正直に』
+
+# textflame 0 0
+@
+『不忘
+空虚な思いに火を点けろ』
+
+# textflame 0 0
+@
+『不赦
+自分だけは赦してやれ』
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 202711 "sad"
+@アハト
+みんなのことば
+これからの為のことば
+
+# textflame 1 1
+# textboxarrow 0 2
+@アハト
+みんなの遺志
+
+# textflame 1 1
+# textboxarrow 0 2
+@アハト
+遠く離れた世界に
+いるのだとしても
+私が諦めてしまったら…
+
+# textflame 1 1
+# textboxarrow 0 2
+@アハト
+みんなは笑って
+赦してくれるかもしれないけど
+
+# textflame 1 1
+# textboxarrow 0 2
+@アハト
+私は…
+
+;;演出：回想
+# se "SE_0742"
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+# background "in_underground_world"
+# alpha 202711 0 0
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# alpha 52000111 1 0.5
+# alpha 5810301 1 0.5
+# move 202711 1 0
+# mask 202711 on
+# alpha 202711 1 0.5
+# waitandnext 0.56
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@イージス
+諦めるな、と言いたい
+
+;;演出：回想終わり
+# se "SE_11762"
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+# background "masamune_room"
+# alpha 52000111 0 0
+# alpha 5810301 0 0
+# move 202711 3 0
+# mask 202711 off
+# imagealpha 1 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@アハト
+お節介…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 202711 "angry"
+@アハト
+私は昔も今も
+なぜか独りではないから
+お節介な誰かがいてくれるから
+
+# move 202711 5 0.5
+# alpha 202711 0 0.3
+# textflame 0 0
+@
+アハトは静かに立ち上がり
+開け放たれた扉に歩を進める
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：地底世界
+# background "in_underground_world"
+# bgmfile "bgm455" "BgmIntegralNoahEvent007" 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_4200"
+# alpha 3300511 1 0.3
+# alpha 910013 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 3300511 "angry"
+# voice 330051 "roon_ge_battle_0001"
+@ルーン
+うおおおおっ！
+
+;;演出・SE：ルーンがスケルトンに攻撃を仕掛ける
+# se "SE_9037"
+# fadein "white" 0.5
+# move 910013 5 0.3
+# alpha 910013 0 0.3
+# move 3300511 3 0.2
+# mask 3300511 off
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# textboxarrow 0 0
+# waitandnext 1
+
+;;演出・SE：スケルトンを吹き飛ばすが次々を湧いてくる
+# alpha 91001301 1 0.5
+# waitandnext 0.2
+
+# alpha 91001302 1 0.5
+# waitandnext 0.8
+
+# textflame 1 1
+# textboxarrow 0 2
+@ルーン
+くっそ、キリがねえぞ！
+どうすんだよ、隊長！
+
+# alpha 91001301 0 0.5
+# alpha 91001302 0 0.5
+# alpha 3300511 0 0.3
+# move 52000111 3 0
+# mask 52000111 off
+# alpha 52000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+# face 52000111 "angry"
+@イージス
+ルーン、ちょっと退がれ！
+連戦で動きが雑になってるぞ！
+
+# alpha 52000111 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+;;演出・SE：フライデビルがルーンに攻撃を仕掛ける
+# move 3300511 3 0
+# mask 3300511 off
+# alpha 3300511 1 0.3
+# waitandnext 0.5
+
+# se "SE_4000"
+# fadein "white" 0.5
+# move 920014 4 0.2
+# alpha 920014 1 0.2
+# move 3300511 2 0.2
+# mask 3300511 on
+# waitandnext 0.6
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 330051 "roon_ge_battle_0006"
+@ルーン
+くっ！
+
+;;立ち絵なし
+# bgm "stop"
+# se "SE_6120"
+# serif 1
+# textwindow "nomal"
+@？？？
+“ガントレット”
+
+;;演出・SE：フライデビルが吹き飛ばされる
+# se "SE_9082"
+# fadein "white" 0.5
+# move 920014 5 0.2
+# alpha 920014 0 0.2
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# face 3300511 "surprise"
+# waitandnext 1
+
+;;演出：現れるアハト（ノーマル
+# bgmfile "bgm365_366" "Bgm3Tcollabo007" 0
+# alpha 3300511 0 0.3
+# move 202711 3 0
+# alpha 202711 1 1
+# face 202711 "normal"
+# waitandnext 2
+
+# alpha 202711 0 0.3
+# alpha 52000111 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 5200011 "aegis_c_0022"
+@イージス
+お、おい、アハト！
+なんで来たんだ！
+
+# alpha 202711 1 0.3
+# alpha 52000111 0 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@アハト
+お節介をするために
+
+# alpha 202711 0 0.3
+# alpha 52000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@イージス
+はぁ！？
+
+# se "SE_6120"
+# alpha 202711 1 0.3
+# alpha 52000111 0 0.3
+# textflame 1 1
+# textboxarrow 0 2
+# face 202711 "angry"
+@アハト
+“アクス”
+
+# se "SE_9086"
+# fadein "white" 0.5
+# textflame 0 0
+@
+アハトの振り下ろした一撃が
+周囲の異形を弾き飛ばしていく
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 2027 "acht_0013"
+@アハト
+ルーンもフラガラッハも
+もちろんイージスも
+とんだお人好しです
+
+# alpha 202711 0 0.3
+# move 3300511 2 0
+# alpha 3300511 1 0.3
+# move 52000111 4 0
+# mask 52000111 on
+# alpha 52000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+# face 3300511 "angry"
+# voice 330051 "roon_ge_0013"
+@ルーン
+なんだと！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 5200011 "aegis_c_0023"
+@イージス
+にゃにおう！
+
+# alpha 202711 1 0.3
+# alpha 3300511 0 0.3
+# alpha 52000111 0 0.3
+# textflame 1 1
+# textboxarrow 0 2
+# face 202711 "happy"
+# voice 2027 "acht_0030"
+@アハト
+ルーン、フラガラッハ
+私の大切なものを拾い集めてくれて
+ありがとうございました
+
+# textflame 1 1
+# textboxarrow 0 2
+@アハト
+思い出しました
+アナタ達のおかげで
+
+# textflame 1 1
+# textboxarrow 0 2
+@アハト
+あの日々を…
+大切な人達のことを…
+だからこそのお節介です
+
+# textflame 1 1
+# textboxarrow 0 2
+@アハト
+今の運命を憎みもしません
+忘れてしまうことなんて
+できはしないから
+
+# textflame 1 1
+# textboxarrow 0 2
+@アハト
+抑えることなんてしない
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 202711 "normal"
+@アハト
+武装排除《アームズ・パージ》――
+
+;;演出・ＳＥ：装備がガランガランと脱げ落ちる音
+# se "SE_6121"
+# sedelay "SE_5836" 1
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 2
+@アハト
+今の私にできることを…
+アナタ達を助けます
+
+# se "SE_6122"
+# textflame 1 1
+# textboxarrow 0 2
+# face 202711 "angry"
+@アハト
+――装束錬金《アームズ・マージ》
+
+;;演出：錬金術によって脱げた装備がアハトの衣装に錬金される
+;;演出：以降アハト念装スキン、眼帯無し
+;;バトル必要ならここで
+# fadeout "white" 1.5
+# waitandnext 1.6
+
+# se "SE_6123"
+# alpha 202711 0 0
+# alpha 5202711 1 0
+# fadein "white" 1.5
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# background "bg_black"
+# alpha 5202711 0 0
+# waitandnext 0.5

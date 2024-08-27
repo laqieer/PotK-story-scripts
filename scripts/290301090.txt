@@ -1,0 +1,455 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;３章１話　タイトル「地上の脅威―リバイヴ―」
+;;第1話　タイトル：異形の浸食
+;;7_1_9
+;;スクリプト最後の背景：下町
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown_night"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 2
+# alpha 3201911 0 0
+# mask 3201911 off
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;フォルカス
+# body 3301811
+# pos 3301811 3
+# scale 3301811 0.8 0
+# layer 3301811 2
+# alpha 3301811 0 0
+# mask 3301811 off
+;;-----------------------------------------
+;;第1話　タイトル：異形の浸食
+;;//背景：下町（夜）
+;;//血しぶき演出
+# textwindow "close"
+# waitandnext 0.2
+
+# se "SE_9015"
+# shake 0 0.5
+# fadein "red" 0.5
+# waitandnext 0.5
+
+;;カミト（立ち絵無し）
+# se "SE_3001"
+# textflame 1 1
+# textwindow "normal"
+@カミト
+ああああぁぁぁ…！
+
+@カミト
+痛い痛い痛い痛い痛い痛い痛い痛い
+痛い怖い痛い痛い痛い痛い痛い痛い
+痛い痛い痛い痛い痛い痛い痛い痛い
+
+@カミト
+痛いよぉっ…！
+僕の…左腕がぁっ…
+
+@カミト
+そんな…
+死ぬのかな…僕…
+
+;;？？？（フォルカス）
+# se "SE_5575"
+# move 3301811 3 0
+# face 3301811 "angry"
+# alpha 3301811 1 0.5
+# mask 3301811 off
+# textboxarrow 0 2
+@？？？
+大丈夫ですか！？
+しっかりして下さい
+
+# textboxarrow 0 0
+@カミト
+えっ…
+君は…
+
+# face 3301811 "normal"
+# textboxarrow 0 2
+# voice 330181 "forcas_t_0003"
+@フォルカス
+私はフォルカス・聖鎖・ウリエル
+止血をしますので、
+じっとしていて下さいね
+
+# textboxarrow 0 0
+@カミト
+あ、うん…
+ありがとう…
+
+;;//暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "201_room"
+# alpha 3301811 0 0
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0
+# mask 210 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//背景：部屋
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+…………
+
+# textboxarrow 0 2
+@カミト
+懐かしい夢を見たな
+
+;;カミト（独白）
+# move 210 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 210 off
+@カミト
+僕が「事故」で左腕を無くした
+ときのこと…
+
+;;カミト（独白）
+# textboxarrow 0 0
+@カミト
+あのとき助けてくれたのが、
+フォルカスだった
+
+;;カミト（独白）
+# textboxarrow 0 0
+@カミト
+それ以来、側にいてくれる…
+考えてみれば兄貴より一緒にいる
+時間は長いんだよな…
+
+# face 210 "sad"
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9936 "kamito_0030"
+@カミト
+…昨日のアレ、何だったんだろう？
+やっぱりちゃんと聞いた方が
+良いかな
+
+# move 3102311 2 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# move 210 4 0.5
+# mask 210 on
+@アスカロン
+おはようございます、マスター
+
+# face 210 "surprise"
+# textboxarrow 0 3
+# voice 9936 "kamito_0023"
+@カミト
+おはよう、アスカロン
+…どうしたの？
+浮かない顔してるね
+
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0002"
+@アスカロン
+あの…フォルカスがどこに行ったか
+知りませんか？
+朝から姿が見当たらなくて
+
+# textboxarrow 0 3
+# voice 9936 "kamito_0024"
+@カミト
+なっ！
+グリモワールも知らないのっ？
+
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0003"
+@アスカロン
+はい
+聞いてみたんですけど、
+何も知らないそうです…
+
+;;カミト（独白）
+# move 210 4 0
+# face 210 "normal"
+# textboxarrow 0 0
+# textwindow "moya"
+@カミト
+あのフォルカスが僕達に黙って
+一人で行動するはずない…！
+
+# face 210 "sad"
+# textboxarrow 0 3
+# textwindow "normal"
+@カミト
+あ、兄貴に相談してみるよっ
+
+# se "SE_5575"
+# textwindow "close"
+# alpha 210 0 0.5
+# waitandnext 1
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 3102311 0 0
+# move 211 2 0
+# face 211 "irregular"
+# alpha 211 1 0
+# mask 211 on
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0
+# mask 210 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 9935 "vang_0024"
+@ヴァング
+フォルカスがいないだとぉ？
+
+# textboxarrow 0 3
+@カミト
+どうしよう、兄貴…
+昨日の連中の仕業かなっ？
+
+# textboxarrow 0 1
+@ヴァング
+それにしちゃ、フォルカスだけを
+狙うなんて中途半端だろ
+
+# textboxarrow 0 1
+@ヴァング
+こういうことをするんなら、
+むしろジーベンじゃねえか？
+何にしろ…
+
+# textboxarrow 0 1
+# voice 9935 "vang_0001"
+@ヴァング
+探しに出るか
+おい、カミト
+捨てられた犬みてぇな顔してんぞ
+
+# face 211 "angry"
+# textboxarrow 0 1
+# voice 9935 "vang_0007"
+@ヴァング
+ちゃんと飯食ってるかぁ？
+しゃきっとしろや！
+
+# textboxarrow 0 3
+# voice 9936 "kamito_0033"
+@カミト
+あ、うん…
+ごめん…
+
+# face 211 "usual"
+# textboxarrow 0 1
+@ヴァング
+そんなに思い詰めんじゃねぇ
+おおかた、朝の見回りでも
+してるんだろうよ
+
+# face 211 "usual"
+# textboxarrow 0 1
+@ヴァング
+すぐに再会できるぜ
+朝飯食って支度しろ
+
+# face 210 "normal"
+# textboxarrow 0 3
+# voice 9936 "kamito_0003"
+@カミト
+うん…
+そうだよねっ
+
+;;カミト（独白）
+# move 210 4 0
+# textboxarrow 0 0
+# textwindow "moya"
+@カミト
+懐かしい夢を見たせいで、
+ちょっと深刻になりすぎてたの
+かもな…
+
+;;//背景：下町
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_downtown"
+# alpha 211 0 0
+# alpha 210 0 0
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0
+# mask 3501711 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 350171 "grimoire_ge_0010"
+@グリモワール
+まったく！
+普段は偉そうに規律がどうとか
+マスターに忠誠をとかうるさいのに
+
+# textboxarrow 0 2
+@グリモワール
+自分が無断で単独行動だなんて、
+ワタシを怒らせないでほしいわ！
+
+# move 210 2 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 1
+# move 3501711 4 0.5
+# mask 3501711 on
+# voice 9936 "kamito_0001"
+@カミト
+そんなに怒らないで、グリモワール
+
+# textboxarrow 0 3
+@グリモワール
+キミがそんなだからでしょ！
+
+# alpha 210 0 0.5
+# alpha 3501711 0 0.5
+# move 3102311 3 0
+# face 3102311 "surprise"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+# voice 310231 "ascalon_a_0001"
+@アスカロン
+あ！
+見えてきましたよ
+ジーベンの拠点です
+
+# alpha 3102311 0 0.5
+# move 211 3 0
+# face 211 "angry"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+# voice 9935 "vang_0006"
+@ヴァング
+おっしゃぁ！
+気合い入れてけよ、シユウ
+
+# textboxarrow 0 2
+@ヴァング
+まず奴の顔面に一発叩き込め！
+話はそれからだ！
+
+# se "SE_5206"
+# alpha 211 0 0.5
+# move 3201911 3 0
+# face 3201911 "angry"
+# alpha 3201911 1 0.5
+# mask 3201911 off
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_0029"
+@シユウ
+うがあああぁぁ！
+いっぱつでたたきつぶしてやるぞ！
+
+# alpha 3201911 0 0.5
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+兄貴っ…
+まだジーベンの仕業だって
+決まったわけじゃないから…
+
+# sedelay "SE_0849" 0.8
+# alpha 210 0 0.5
+# move 211 2 0
+# face 211 "angry"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+# move 3201911 4 0
+# face 3201911 "normal"
+# alpha 3201911 1 0.5
+# mask 3201911 on
+# voice 9935 "vang_0031"
+@ヴァング
+行くぞ、おらあああ！！
+
+# face 3201911 "angry"
+# textboxarrow 0 3
+# voice 320191 "chihyu_a_0010"
+@シユウ
+うがあああぁぁ！
+
+;;//ヴァングとシユウが突っ込んでいく
+# se "SE_9021"
+# textwindow "close"
+# leftout 211 0.5
+# leftout 3201911 0.5
+# waitandnext 0.5
+
+# alpha 211 0 0
+# alpha 3201911 0 0
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+待ってよ、兄貴…！

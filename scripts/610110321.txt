@@ -1,0 +1,477 @@
+;;-----------------------------------------
+;;第１話「急襲」戦闘前
+;;-----------------------------------------
+# script "lisp"
+# bgm "bgm002" 0
+# background "classroom02_afternoon"
+;;-----------------------------------------
+;;アイムール
+# body 37
+# pos 37 2
+# scale 37 0.8 0
+# layer 37 3
+# alpha 37 0 0
+# body 200211
+# pos 200211 3
+# scale 200211 0.8 0
+# layer 200211 3
+# alpha 200211 0 0
+;;ヤグルシ
+# body 31
+# pos 31 4
+# scale 31 0.8 0
+# layer 31 3
+# alpha 31 0 0
+# body 201711
+# pos 201711 3
+# scale 201711 0.8 0
+# layer 201711 3
+# alpha 201711 0 0
+;;MAI
+# body 601911
+# pos 601911 3
+# scale 601911 0.8 0
+# layer 601911 3
+# alpha 601911 0 0
+# mask 601911 off
+;;ティルフィング
+# body 101491
+# pos 101491 3
+# scale 101491 0.8 0
+# layer 101491 3
+# alpha 101491 0 0
+# mask 101491 off
+# brightness 101491 0 0
+;;-----------------------------------------
+# textflame 0 0
+@
+ラグナロク女学院
+放課後――
+
+# alpha 37 1 0.5
+# alpha 31 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@アイムール
+本日の課題は全て終了
+追加するなら…
+
+# voice 2002 "aimuru_0004"
+# textflame 1 1
+# textboxarrow 0 1
+@アイムール
+私とヤグルシ、
+そしてマスター揃っての
+寄り道…ですかね
+
+# se "SE_6504"
+# emotionbody 1001 3 31 10 290
+# effectpattern 1001 1 3
+# effectstart 1001
+# face 31 "happy"
+# voice 2017 "yagurushi_0020"
+# textflame 1 1
+# textboxarrow 0 3
+@ヤグルシ
+さすがお姉ちゃん、
+ナイス思いつきだよ！
+ヤグは寄り道したいな～♪
+
+;;選択肢
+;;以下、選択肢は全て、どっちを選んでも一緒です
+# select "寄り道しよう" "select_label_01" "まっすぐ帰宅だ" "select_label_01"
+;;質問文
+さすがお姉ちゃん、
+ナイス思いつきだよ！
+ヤグは寄り道したいな～♪
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# bgm "stop"
+# voice 2002 "aimuru_0003"
+# textflame 1 1
+# textboxarrow 0 1
+@アイムール
+了解です――ん？
+待ってください、マスター
+
+;;答えたあと
+# label "select_label_end"
+# emotionbody 1002 1 31 10 310
+# effectpattern 1002 1 0
+# effectstart 1002
+# face 31 "surprise"
+# voice 2017 "yagurushi_0022"
+# textflame 1 1
+# textboxarrow 0 3
+@ヤグルシ
+えっ！
+水着の女の子が
+走ってくるんだけど…！？
+
+;;アイムールとヤグルシを消す
+# alpha 37 0 0.5
+# alpha 31 0 0.5
+# se "SE_0827"
+# sedelay "SE_4602" 0.5
+# textflame 0 0
+@
+水着の女子が全力疾走で
+マスターに抱き着いた
+タックルのような勢いで
+
+# se "SE_0694"
+# sedelay "SE_4300" 0.4
+# textflame 0 0
+@
+「絶対に離さない！
+マスターは私のものだ！」
+そしてマスターを締め上げる
+
+# textflame 0 0
+@マスター
+ぐぁぁ、お、折れるぅ…！
+
+# alpha 37 1 0.5
+# alpha 31 1 0.5
+# voice 2017 "yagurushi_0023"
+# textflame 1 1
+# textboxarrow 0 3
+@ヤグルシ
+何これ！？愛の告白！？
+
+# textflame 1 1
+# textboxarrow 0 1
+@アイムール
+いいえ！
+これは告白ではなく
+攻撃行為…失礼します！
+
+# textwindow "close"
+# alpha 37 0 0.5
+# alpha 31 0 0.5
+;;攻撃音
+# se "SE_4601"
+# waitandnext 0.5
+
+# subfillrect 0 "black" 1 0 0.5
+# waitandnext 1
+
+# textwindow "nomal"
+# textflame 0 0
+@
+アイムールが強引に
+少女を引きはがした瞬間、
+その体から黒い霧が噴き出した
+
+# textflame 0 0
+@マスター
+まさか、これは…！？
+
+# bgmfile "bgm185" "BgmGakuen003" 0
+# emotionbody 1003 10 601911 60 235
+# effectpattern 1003 3 3
+# effectstart 1003
+# alpha 601911 1 0.5
+# face 601911 "happy"
+# voice 6019 "mai_0005"
+# textflame 1 1
+# textboxarrow 0 2
+@MAI
+こんにちはー！
+みんなのアイドル、
+MAIちゃんです☆
+
+# effectskip 1003
+# voice 6019 "mai_0001"
+# textflame 1 1
+# textboxarrow 0 2
+@MAI
+マスター！
+MAIちゃん特製！
+神聖ハーレム王国を楽しんで♪
+
+;;選択肢（どっち選んでも同じ）
+# select "あいさつは結構です" "select_label_02" "誰？" "select_label_02"
+マスター！
+MAIちゃん特製！
+神聖ハーレム王国を楽しんで♪
+
+# label "select_label_02"
+# labeljump "select_label_end2"
+# textflame 1 1
+# textboxarrow 0 2
+@MAI
+さすがマスター！
+冷たくて最高～！
+
+;;答えたあと
+# label "select_label_end2"
+# face 601911 "angry"
+# voice 6019 "mai_0027"
+# textflame 1 1
+# textboxarrow 0 2
+@MAI
+…じゃ、じゃなくて～！
+そんな塩対応じゃ
+秒で嫌われちゃうよ～！？
+
+# move 601911 2 0.5
+# move 37 4 0
+# alpha 37 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@アイムール
+あなたは誰？
+この黒い霧は何なんですか？
+
+# emotionbody 1004 2 601911 10 290
+# effectpattern 1004 1 1
+# effectstart 1004
+# face 601911 "surprise"
+# voice 6019 "mai_0022"
+# textflame 1 1
+# textboxarrow 0 1
+@MAI
+あれ？…あなた、
+MAIちゃんや
+霧が見えてるの？
+
+# textflame 1 1
+# textboxarrow 0 1
+@MAI
+そういえば二人とも
+マスターの浄化を
+経験してるんだったね
+
+# textflame 1 1
+# textboxarrow 0 3
+@アイムール
+質問に答えなさい
+何をしたのですか？
+
+# face 601911 "happy"
+# voice 6019 "mai_0004"
+# textflame 1 1
+# textboxarrow 0 1
+@MAI
+この学校の生徒に、
+黒い霧を宿しただけだよ☆
+
+# face 601911 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@MAI
+そしたら
+こんなに影響が出て…
+MAIちゃん的にもビックリ
+
+# se "SE_6504"
+# emotionbody 1005 3 601911 10 290
+# effectpattern 1005 1 3
+# effectstart 1005
+# voice 6019 "mai_0020"
+# textflame 1 1
+# textboxarrow 0 1
+@MAI
+フフン♪
+それだけあの子の悩みが
+深刻ってことだね
+
+# textflame 0 0
+@マスター
+“あの子”？
+
+# alpha 601911 0 0.5
+# alpha 37 0 0.5
+# waitandnext 0.7
+
+;;斬撃エフェクト
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# se "SE_4000"
+# waitandnext 1
+
+# alpha 101491 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@？？？
+ここにいましたか！
+今度は逃がしませんよ！
+
+# alpha 101491 0 0.5
+# move 601911 3 0
+# alpha 601911 1 0.5
+# face 601911 "angry"
+# voice 6019 "mai_0013"
+# textflame 1 1
+# textboxarrow 0 2
+@MAI
+ケガするのはイヤ！
+MAIちゃんの顔ファン、
+けっこう多いし
+
+# textflame 1 1
+# textboxarrow 0 2
+@MAI
+また逃げるもん！
+はい、大きく深呼吸～！
+すぅぅぅぅ～～～～！
+
+# face 601911 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@MAI
+みんな～～～～！！
+愛しいマスターは、
+ここにいますよ～～～～！！
+
+# textflame 0 0
+@
+MAIの叫びに応じるように、
+猛々しい女子生徒の声が上がる
+MAIはその人ごみに紛れ――
+
+# voice 6019 "mai_0005"
+# textflame 1 1
+# textboxarrow 0 2
+@MAI
+またね☆
+
+;;MAI退場
+# alpha 601911 0 1
+# se "SE_0827"
+# textwindow "close"
+# waitandnext 1
+
+# textwindow "nomal"
+# alpha 101491 1 0.5
+# voice 1014 "tyrufing_0024"
+# textflame 1 1
+# textboxarrow 0 2
+@？？？
+ま、待ちなさい！
+
+# alpha 101491 0 0.5
+# alpha 31 1 0.5
+# move 37 2 0
+# alpha 37 1 0.5
+# voice 2017 "yagurushi_0028"
+# textflame 1 1
+# textboxarrow 0 3
+@ヤグルシ
+あっ、あれ？
+周りが歪んで…わわっ！
+なんかバケモノも来るよ！？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヤグルシ
+なにこれ！？お姉ちゃん！？
+
+# voice 2002 "aimuru_0003"
+# textflame 1 1
+# textboxarrow 0 1
+@アイムール
+私にも見えています
+黒い霧に覆われた怪物たちが
+
+# alpha 31 0 0.5
+# alpha 37 0 0.5
+# alpha 101491 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@？？？
+いけない…！
+お二人を異族との戦いに
+巻き込むわけには…！
+
+# textflame 0 0
+@マスター
+君は、たしか――
+
+# brightness 101491 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+ティルフィングです！
+
+# face 101491 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+事情は後で説明しますから
+アナタは二人を逃がしてください！
+異族は私が止めます！
+
+# textflame 0 0
+@マスター
+いや、僕も加勢する
+
+# face 101491 "surprise"
+# voice 1014 "tyrufing_0022"
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+え？
+
+# alpha 31 1 0.5
+# alpha 37 1 0.5
+# alpha 101491 0 0.5
+# voice 2002 "aimuru_0033"
+# textflame 1 1
+# textboxarrow 0 1
+@アイムール
+迎撃を選択しますか
+では、ご一緒しましょう
+
+# textflame 1 1
+# textboxarrow 0 1
+@アイムール
+そちらの方とは初対面ですが、
+所作から察するに、
+悪い方ではなさそうです
+
+# face 31 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@ヤグルシ
+お姉ちゃんが戦うなら、
+ヤグも戦うよ！
+
+# textflame 1 1
+# textboxarrow 0 1
+@アイムール
+では、
+私たち姉妹も戦いますので
+よろしくお願いします
+
+# alpha 101491 1 0.5
+# alpha 31 0 0.5
+# alpha 37 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+はい、よろし…
+
+# face 101491 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+ではなく…！
+危険だから逃げてください！
+
+# alpha 31 1 0.5
+# alpha 37 1 0.5
+# alpha 101491 0 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@アイムール
+気持ちは嬉しいのですが、
+逃げるにはもう遅いかと
+
+# se "SE_5206"
+# textflame 1 1
+# textboxarrow 0 3
+@ヤグルシ
+来るよ～！　かまえて！

@@ -1,0 +1,450 @@
+;;-----------------------------------------
+;;SEA5章_21-1
+;;-----------------------------------------
+# script "lisp"
+# background "town_night_2"
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 4
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 4
+# alpha 6504011 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 2
+# scale 6603811 0.8 0
+# layer 6603811 2
+# alpha 6603811 0 0
+;;ミネルヴァ
+# body 302511
+# pos 302511 2
+# scale 302511 0.8 0
+# layer 302511 2
+# alpha 302511 0 0
+;;フライシュッツ
+# body 502711
+# pos 502711 4
+# scale 502711 0.8 0
+# layer 502711 4
+# alpha 502711 0 0
+;;グラーシーザ
+# body 302611
+# pos 302611 4
+# scale 302611 0.8 0
+# layer 302611 4
+# alpha 302611 0 0
+;;ダモクレス
+# body 103511
+# pos 103511 2
+# scale 103511 0.8 0
+# layer 103511 2
+# alpha 103511 0 0
+;;ネス
+# body 602011
+# pos 602011 4
+# scale 602011 0.8 0
+# layer 602011 4
+# alpha 602011 0 0
+;;神令エルキュール
+# body 3202511
+# pos 3202511 3
+# scale 3202511 0.8 0
+# layer 3202511 3
+# mask 3202511 off
+# alpha 3202511 0 0
+# body 202511
+# alpha 202511 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagescale 1 1.5 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：町（夜）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# sedelay "bgm602_basic_on" 2
+# voice 3026 "grayside_0040"
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# face 302611 "normal"
+# alpha 302611 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@グラーシーザ
+なるほど
+じゅんびをととのえなおす
+ということだな
+
+# textboxarrow 0 1
+@ミネルヴァ
+「穴」からマナが
+あふれ出していることも危険なんです
+魔獣が出現し続けてしまいます
+
+# alpha 302611 0 0.3
+# face 502711 "sad"
+# alpha 502711 1 0.3
+# textboxarrow 0 3
+@フライシュッツ
+でも～、エルキュールちゃんが
+良いって言うかな？
+
+# voice 3025 "minerva_0028"
+# face 302511 "sad"
+# textboxarrow 0 1
+@ミネルヴァ
+そうですね
+エルキュールの「揺らぎ」を
+鎮める必要もあるでしょう
+
+# face 302511 "normal"
+# textboxarrow 0 1
+@ミネルヴァ
+ミーミル
+スイハのときのように
+お願いできますか？
+
+# alpha 502711 0 0.3
+# voice 9917 "mimir_navikan_0003"
+# face 270 "angry"
+# alpha 270 1 0.3
+# textboxarrow 0 3
+@ミーミル
+は、はい！
+やってみます
+
+# textboxarrow 0 1
+@ミネルヴァ
+では、私達はスイハと連携して
+エルキュールを押さえつけましょう
+
+# alpha 302511 0 0.3
+# alpha 270 0 0.3
+# face 103511 "usual"
+# alpha 103511 1 0.3
+# face 602011 "angry"
+# alpha 602011 1 0.3
+# textboxarrow 0 3
+@ネス
+周りの魔獣達も
+倒さないといけません！
+
+# voice 1035 "damocles_0004"
+# face 103511 "happy"
+# textboxarrow 0 1
+@ダモクレス
+だね！
+そっちも頑張ろ～っ
+
+# alpha 103511 0 0.3
+# alpha 602011 0 0.3
+# voice 9917 "mimir_navikan_0036"
+# move 270 3 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+マナナンさんとマクリルさんは
+「穴」を閉じる準備を
+していただけますか
+
+# alpha 270 0 0.3
+# voice 650401 "manannan_ura_0032"
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# face 6603811 "usual"
+# alpha 6603811 1 0.3
+# textboxarrow 0 3
+@マナナン
+いいよ～
+行こう、マクリル
+
+# voice 660381 "maclir_ura_0003"
+# face 6603811 "happy"
+# textboxarrow 0 1
+@マクリル
+うん！
+マナナン
+
+;;皆が立ち去る
+# se "SE_0740"
+#setnextbgmblock 1
+# alpha 6504011 0 0.3
+# alpha 6603811 0 0.3
+# textwindow "close"
+# waitandnext 1.5
+
+# face 270 "angry"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+スイハさんに続き、大切な役目を
+担うことになりました
+
+# textboxarrow 0 2
+@ミーミル
+精一杯務めさせていただきます
+
+# face 270 "normal"
+# textboxarrow 0 2
+@ミーミル
+エルキュールさんの抱いている
+強い思いは、やはり―――――さんと
+会いたいというものですよね
+
+# textboxarrow 0 2
+@ミーミル
+そのことを自覚していただければ…
+
+# face 270 "sad"
+# textboxarrow 0 2
+@ミーミル
+…………
+
+;;選択肢
+# select "本当にそうかな？" "select_label_01" "別の可能性もありそう" "select_label_01"
+エルキュールさんの抱いている
+強い思いは、やはり―――――さんと
+会いたいというものですよね
+
+# label "select_label_01"
+# face 270 "normal"
+# textboxarrow 0 2
+@ミーミル
+あ…マスター様も疑問をお持ち
+なのですね
+
+# textboxarrow 0 2
+@ミーミル
+実は私も…
+
+# textboxarrow 0 2
+@ミーミル
+エルキュールさんは―――――さんを
+取り戻したいと強く願っております
+
+# textboxarrow 0 2
+@ミーミル
+そして、そのことをはっきり
+口にしておられます
+
+# textboxarrow 0 2
+@ミーミル
+もしかすると、本当に考えるべきは
+そこではなくて…
+
+;;選択肢
+# select "エルキュール自身のこと" "select_label_02" "もっと根本的なこと" "select_label_03"
+もしかすると、本当に考えるべきは
+そこではなくて…
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# se "bgm602_rhythm_on"
+# face 270 "angry"
+# textboxarrow 0 2
+@ミーミル
+そうですっ
+エルキュールさんのことをもっと
+考えるべきなんです
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# se "bgm602_rhythm_on"
+# face 270 "happy"
+# textboxarrow 0 2
+@ミーミル
+エルキュールさんが口にしていない
+もっと奥底にある気持ちを
+考えるべきなんですねっ
+
+# label "select_label_end"
+;;選択肢
+# select "確か…" "select_label_04"
+エルキュールは…
+
+# label "select_label_04"
+;;回想シーン1-5
+# se "SE_0742"
+# fadeout "white" 1
+# waitandnext 1
+
+;;背景：荒野：wild
+# background "wild"
+# se "bgm602_basic_off"
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 270 0 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+# move 302511 2 0
+# layer 302511 2
+# mask 302511 on
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# move 3202511 4 0
+# layer 3202511 4
+# mask 3202511 on
+# face 3202511 "usual"
+# alpha 3202511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミネルヴァ
+エルキュール
+何かあったんですよね？
+聞かせてくれませんか
+
+# textboxarrow 0 1
+@ミネルヴァ
+私達は仲間です
+きっと力になれますから
+
+# voice 2025 "hercule_0024"
+# face 3202511 "sad"
+# textboxarrow 0 3
+@エルキュール
+力に…
+そうですか…
+やっぱり、私は希望になれていません
+
+# voice 2025 "hercule_0031"
+# textboxarrow 0 3
+@エルキュール
+私が真の希望になれていないから、
+みんな心配してるんですよね…
+ごめんなさい…
+
+;;回想シーン1-11
+# se "SE_0742"
+# fadeout "white" 1
+# waitandnext 1
+
+;;背景：町（夜）：town_night_2
+# background "town_night_2"
+# alpha 302511 0 0
+# move 3202511 3 0
+# face 3202511 "angry"
+# mask 3202511 off
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@エルキュール
+“彼女”がいない…
+そのことを忘れたままで…
+本当の希望になんか…
+
+# textboxarrow 0 2
+@エルキュール
+欠けたままの世界で、
+私は希望になんかなれっこない！
+
+# face 3202511 "sad"
+# textboxarrow 0 2
+@エルキュール
+私は…真の希望じゃないんです…
+
+# textboxarrow 0 2
+@エルキュール
+御旗に導かれていないと
+希望の光になれないって、
+分かってしまいました…
+
+;;回想シーン1-13
+# se "SE_0742"
+# fadeout "white" 1
+# waitandnext 1
+
+;;背景：地下空洞：101_cave
+# background "101_cave"
+# textwindow "close"
+# face 3202511 "normal"
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@エルキュール
+はい！
+一生懸命願い続けたんです
+“彼女”のことを
+
+# textboxarrow 0 2
+@エルキュール
+真の希望になるために
+今の私ではダメだから…
+
+;;回想終了
+# se "SE_11762"
+# fadeout "white" 1
+# waitandnext 1
+
+;;背景：町（夜）：town_night_2
+# background "town_night_2"
+# imagealpha 1 0 0
+# alpha 3202511 0 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1.5
+
+# se "bgm602_basic_on"
+#setnextbgmblock 2
+# face 270 "normal"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+エルキュールさんが
+そのようなことを…
+
+# voice 9917 "mimir_navikan_0039"
+# face 270 "happy"
+# textboxarrow 0 2
+@ミーミル
+ありがとうございます、マスター様
+さすがでございます！
+
+# textboxarrow 0 2
+@ミーミル
+私、見えてきたように存じます
+エルキュールさんの「強い思い」が
+何なのか
+
+# textboxarrow 0 2
+@ミーミル
+どうしてエルキュールさんが特に
+強く―――――さんを求めるように
+なったのか
+
+;;バトル
+;;マップ：荒野の酒場・夜（020） 
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 270 0 0
+# waitandnext 0.2

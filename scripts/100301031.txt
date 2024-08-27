@@ -1,0 +1,111 @@
+;;----------------------------------------------
+;;100301031
+;;第1話　タイトル：思いがけぬ提案
+;;1-3-1
+;;----------------------------------------------
+# script "lisp"
+# background "beast_world"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;アルマス
+# body 3103811
+# pos 3103811 2
+# scale 3103811 0.8 0
+# layer 3103811 2
+# alpha 3103811 1 0
+# mask 3103811 on
+;;ミョルニル
+# body 3200111
+# pos 3200111 4
+# scale 3200111 0.8 0
+# layer 3200111 3
+# alpha 3200111 1 0
+# mask 3200111 on
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;剣閃（アルマス）
+# effectbody 1000 1 130 0 7
+;;剣閃（ミョル）
+# effectbody 1001 4 -100 0 5
+;;◆背景：トレイセーマ----------------------------------------------------
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103811 "angry"
+# voice 1038 "almace_0035"
+# chara 3103811
+@アルマス
+いきなり攻撃してくるなんて
+どういうつもり！？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3200111 "happy"
+# voice 320011 "myuruniru_ge_0004"
+# chara 3200111
+@ミョルニル
+あははは！
+キミがあいてしてくれるのっ？
+やった！
+
+;;アルマスとミョルニルがぶつかり合う
+# textwindow "close"
+# voice 320011 "myuruniru_ge_battle_0001"
+# face 3200111 "angry"
+# face 3103811 "normal"
+# se "SE_5736"
+# shake 0 0.6
+# fadein "white" 0.3
+# move 3200111 3 0.3
+# move 3103811 1 0.3
+# effectstart 1001
+# waitandnext 0.7
+
+# face 3200111 "normal"
+# face 3103811 "angry"
+# voice 1038 "almace_battle_0001"
+# se "SE_4816"
+# shake 0 0.6
+# fadein "white" 0.3
+# move 3200111 5 0.3
+# move 3103811 3 0.3
+# effectstart 1000
+# waitandnext 0.8
+
+# se "SE_4759"
+# shake 0 0.6
+# voice 1038 "almace_battle_0007"
+# fadein "white" 0.3
+# face 3200111 "angry"
+# face 3103811 "surprise"
+# move 3200111 4 0.3
+# move 3103811 2 0.3
+# waitandnext 0.8
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 320011 "myuruniru_ge_0002"
+# face 3200111 "normal"
+# chara 3200111
+@ミョルニル
+キミはぺったんこにされたいの？
+それとも火でメラッメラにされたい？
+どっちかな～っ
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103811 "angry"
+# voice 1038 "almace_battle_0005"
+# chara 3103811
+@アルマス
+くっ…なんなの、この威圧感…
+体は小さいのに、押されるっ…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3200111 "happy"
+# voice 320011 "myuruniru_ge_0020"
+# chara 3200111
+@ミョルニル
+たのしいね～！

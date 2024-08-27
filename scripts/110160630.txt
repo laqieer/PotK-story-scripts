@@ -1,0 +1,1152 @@
+;;-----------------------------------------
+;;タイトル：ネオ・ユートピア
+;;第6話　タイトル：エピローグ
+;;背景：大穴
+;;-----------------------------------------
+# script "lisp"
+# background "101_hole"
+# bgmfile "bgm264_1" "BgmLostRagnarokBattle001" 0
+;;-----------------------------------------
+;;ギル
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# layer 137 3
+# alpha 137 0 0
+;;レーヴァテイン
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# layer 3100211 2
+# alpha 3100211 0 0
+;;ムー
+# body 161
+# pos 161 3
+# scale 161 0.6 0
+# layer 161 5
+# alpha 161 0 0
+;;モラベガ
+# body 187
+# pos 187 3
+# scale 187 0.8 0
+# layer 187 5
+# alpha 187 0 0
+;;ゴッドアルマス
+# entry 3103831 3103811 523
+# pos 3103831 3
+# scale 3103831 0.8 0
+# layer 3103831 3
+# mask 3103831 off
+# alpha 3103831 1 0
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 5
+# alpha 139 0 0
+;;神令スイハ（仮面）
+# body 3401719
+# pos 3401719 3
+# scale 3401719 0.8 0
+# layer 3401719 2
+# alpha 3401719 0 0
+;;神令フライシュッツ（仮面）
+# body 3502719
+# pos 3502719 3
+# scale 3502719 0.8 0
+# layer 3502719 2
+# alpha 3502719 0 0
+;;神令ダモクレス（仮面）
+# body 3103519
+# pos 3103519 3
+# scale 3103519 0.8 0
+# layer 3103519 2
+# alpha 3103519 0 0
+;;神令エルキュール
+# body 3202511
+# pos 3202511 3
+# scale 3202511 0.8 0
+# layer 3202511 5
+# alpha 3202511 0 0
+;;神令グラーシーザ（仮面）
+# body 3302619
+# pos 3302619 3
+# scale 3302619 0.8 0
+# layer 3302619 5
+# alpha 3302619 0 0
+;;神令ミネルヴァ（仮面）
+# body 3302519
+# pos 3302519 3
+# scale 3302519 0.8 0
+# layer 3302519 2
+# alpha 3302519 0 0
+;;神令ネス（仮面）
+# body 3602019
+# pos 3602019 3
+# scale 3602019 0.8 0
+# layer 3602019 2
+# alpha 3602019 0 0
+;;神令ラグナロク（仮面）
+# body 3103619
+# pos 3103619 3
+# scale 3103619 0.8 0
+# layer 3103619 3
+# mask 3103619 off
+# alpha 3103619 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103831 "smile"
+# voice 1038 "almace_0006"
+@アルマス
+やった！
+帰ってきた！
+帰ってきたわよ！
+
+;;選択肢
+# select "お帰り" "select_label_03"
+やった！
+帰ってきた！
+帰ってきたわよ！
+
+# label "select_label_03"
+# labeljump "select_label_end3"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103831 "shy"
+# voice 1038 "almace_0004"
+@アルマス
+あ、マスター…
+ただいまっ
+
+;;答えたあと
+# label "select_label_end3"
+# alpha 3103831 0 0.5
+# alpha 139 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 139 "happy"
+# voice 9967 "titania_0064"
+@ティターニア
+アルマス！
+
+# leftout 139 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 139 0 0
+# alpha 3103831 1 0.5
+# waitandnext 0.5
+
+# move 139 3 0
+# mask 139 on
+# alpha 139 1 0
+# rightin 139 0.3
+# waitandnext 0.2
+
+# move 3103831 2 0.3
+# waitandnext 0.6
+
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103831 "surprise"
+# voice 1038 "almace_0023"
+@アルマス
+わっ？
+ティニ…！？
+
+# alpha 139 0 0.5
+# alpha 3103831 0 0.5
+# move 187 3 0
+# mask 187 off
+# alpha 187 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 187 "happy"
+# voice 310421 "morabeaga_l_0005"
+@モラベガ
+アルマスだーっ！
+アルマスアルマスアルマスーっ
+
+# rightout 187 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 187 0 0
+# alpha 139 1 0.5
+# alpha 3103831 1 0.5
+# waitandnext 0.5
+
+# move 187 1 0
+# mask 187 on
+# alpha 187 1 0
+# leftin 187 0.3
+# waitandnext 0.2
+
+# move 139 4 0.3
+# move 3103831 3 0.3
+# waitandnext 0.6
+
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1038 "almace_0042"
+@アルマス
+モラベガまでっ
+
+# alpha 187 0 0.5
+# alpha 139 0 0.5
+# alpha 3103831 0 0.5
+# move 137 3 0
+# mask 137 off
+# alpha 137 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 137 "usual"
+# voice 9969 "gill_0007"
+@ギル
+帰ってきた…
+本当に、帰ってきた！
+アルマスっ…
+
+# alpha 137 0 0.5
+# move 139 4 0
+# alpha 139 1 0.5
+# move 3103831 2 0
+# mask 3103831 on
+# alpha 3103831 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+あれ？
+ギル、ちょっと雰囲気変わった？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 139 "worry"
+# voice 9967 "titania_0028"
+@ティターニア
+アルマス！
+アナタって子は…まったく…！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3103831 "sad"
+# voice 1038 "almace_0046"
+@アルマス
+ティニ…ごめんなさい
+そんなに泣かないでよ…
+
+# alpha 139 0 0.5
+# move 3100211 4 0
+# mask 3100211 on
+# alpha 3100211 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100211 "sad"
+# voice 310021 "revatein_ge_0027"
+@レーヴァテイン
+はぁ…心配させないでよね…
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+何か言った？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310021 "revatein_ge_0007"
+@レーヴァテイン
+別に…
+
+# mask 161 off
+# alpha 161 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9953 "mwu_0021"
+@ムー
+おおっとぉ！
+ここでレヴァ渾身のツンデ――
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100211 "angry"
+# voice 310021 "revatein_ge_0084"
+@レーヴァテイン
+黙って
+
+# alpha 161 0 0.5
+# se "SE_0694"
+# textflame 1 1
+# textboxarrow 0 0
+@ムー
+ムギュギュギュギュ…
+
+# alpha 161 0 0.5
+# alpha 3100211 0 0.5
+# alpha 3103831 0 0.5
+# textwindow "close"
+# waitandnext 0.8
+
+;;画面白フラッシュ
+# se "SE_9089"
+# fadein "white" 0.5
+# waitandnext 1
+
+;;ラグナロクが登場する
+# se "bgm264_1_volumeup"
+# fadein "white" 1.5
+# move 3103619 3 0
+# mask 3103619 off
+# alpha 3103619 1 0
+# waitandnext 2.5
+
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+…………
+
+# alpha 3103619 0 0
+# move 139 2 0
+# alpha 139 1 0.5
+# alpha 3100211 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 139 "surprise"
+# voice 9967 "titania_0030"
+@ティターニア
+あ、あなたはっ！？
+どうしてっ…！？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100211 "angry"
+# voice 310021 "revatein_ge_0023"
+@レーヴァテイン
+ラグナロクっ…！
+あなたまで戻ってくるなんて
+どういうこと…？
+
+# alpha 139 0 0.5
+# alpha 3100211 0 0.5
+# move 137 3 0
+# alpha 137 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 137 "surprise"
+# voice 9969 "gill_0026"
+@ギル
+まさか…
+また、バイブスを
+狙って…
+
+# alpha 137 0 0.5
+# move 187 3 0
+# mask 187 off
+# alpha 187 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 187 "angry"
+# voice 310421 "morabeaga_l_0010"
+@モラベガ
+そんなことさせないよっ！
+
+# alpha 187 0 0.5
+# alpha 3103619 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 310361 "ragnarok_c_0027"
+@ラグナロク
+…やはり、
+私はここに来るべきでは
+なかったようね
+
+# alpha 3103619 0 0.5
+# move 3103831 3 0
+# mask 3103831 off
+# alpha 3103831 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103831 "angry"
+# voice 1038 "almace_0009"
+@アルマス
+ラグナロク！？
+まだ、そんな―
+
+# alpha 3103831 0 0.5
+# alpha 3103619 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク 
+ならば、 
+誰かが私を待っているとでも―
+
+# alpha 3103619 0 0.5
+# mask 3502719 off
+# alpha 3502719 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 350271 "freischotz_c_0020"
+@フライシュッツ
+ラグナロクちゃ～ん
+ハグだよ、ハグ～っ
+
+;;飛んできたフライシュッツをラグナロクが避ける
+# textwindow "close"
+# alpha 3502719 0 0.5
+# waitandnext 0.7
+
+# alpha 3103619 1 0.5
+# waitandnext 0.6
+
+# move 3502719 2 0
+# mask 3502719 on
+# alpha 3502719 1 0
+# leftin 3502719 0.5
+# waitandnext 0.4
+
+# se "SE_5204"
+# move 3103619 5 0.3
+# mask 3103619 on
+# waitandnext 0.7
+
+# move 3103619 4 0.5
+# waitandnext 1
+
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310361 "ragnarok_c_0022"
+@ラグナロク
+フライシュッツ…？
+
+# alpha 3502719 0 0.5
+# alpha 3103619 0 0.5
+# move 3401719 5 0
+# alpha 3401719 1 0.5
+# move 3302619 3 0
+# alpha 3302619 1 0.5
+# move 3302519 1 0
+# alpha 3302519 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 340171 "suiha_c_0027"
+@スイハ
+まったく…
+出迎えは私一人で十分だというのに
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 330261 "grayside_c_0027"
+@グラーシーザ
+ぬけがけしようとは、
+さてはおまえ、悪だなっ
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 330251 "minerva_c_0007"
+@ミネルヴァ
+計算通りでしたね
+ラグナロクの帰還が成ってこそ
+完全なる勝利がもたらされます
+
+# alpha 3401719 0 0.5
+# alpha 3302619 0 0.5
+# alpha 3302519 0 0.5
+# move 3103519 5 0
+# alpha 3103519 1 0.5
+# move 3202511 3 0
+# alpha 3202511 1 0.5
+# move 3602019 1 0
+# alpha 3602019 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 360201 "ness_c_0011"
+@ネス
+私より先にラグナロクと話そうと
+しないで下さい
+死によって支配しますよ
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310351 "damocles_c_0005"
+@ダモクレス
+クレス様、ラグナロクを愛したくて
+ずっと待ってたんだよ
+
+# voice 320251 "hercule_c_0004"
+# textflame 1 1
+# textboxarrow 0 2
+@エルキュール
+希望はいまだ潰えていません
+お帰りなさい、ラグナロク
+
+# alpha 3103519 0 0.5
+# alpha 3202511 0 0.5
+# alpha 3602019 0 0.5
+# move 3103831 2 0
+# mask 3103831 on
+# alpha 3103831 1 0.5
+# move 3103619 4 0
+# mask 3103619 on
+# alpha 3103619 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@ラグナロク
+どうして…？
+私を待つ必要などなかったはず
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1038 "almace_0007"
+@アルマス
+言ったでしょ
+仲間だからよっ
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310361 "ragnarok_c_0028"
+@ラグナロク
+理解できない…
+これもバイブスの影響…
+
+# textflame 1 1
+# textboxarrow 0 3
+@ラグナロク
+どうやら、もっとバイブスについて
+観測が必要なようね
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+マスターには
+指一本触れさせないわよ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310361 "ragnarok_c_0033"
+@ラグナロク
+戦うつもりはない
+今は、まだ…
+
+# textflame 1 1
+# textboxarrow 0 3
+@ラグナロク
+あなた達がバイブスに絶望する
+そのときまで、観測させてもらうわ
+
+# alpha 3103619 0 0.5
+# move 3103831 3 0.5
+# mask 3103831 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1038 "almace_0003"
+@アルマス
+好きなだけ観測すればいい
+でも、私達は絶対に
+絶望なんかしない！
+
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+絶・未来を切り拓いて
+みせるんだから！
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1038 "almace_0002"
+@アルマス
+そうよね、マスター！？
+
+;;選択肢
+# select "もちろんだ！" "select_label_04" "アルマスと一緒なら" "select_label_05" "この剣先に続けーっ！" "select_label_06"
+そうよね、マスター！？
+
+;;Ａ
+# label "select_label_04"
+# labeljump "select_label_end4"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103831 "smile"
+# voice 1038 "almace_0005"
+@アルマス
+そう言うと思ってたわ！
+私達、相性ばっちりね
+
+;;Ｂ
+# label "select_label_05"
+# labeljump "select_label_end4"
+# textflame 1 1
+# textboxarrow 0 2
+@
+# face 3103831 "shy"
+# voice 1038 "almace_0004"
+@アルマス
+私だって…
+マスターと一緒なら
+何だってやれる気がする！
+
+;;Ｃ
+# label "select_label_06"
+# labeljump "select_label_end4"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103831 "surprise"
+# voice 1038 "almace_0042"
+@アルマス
+それ、私の台詞！
+もう…バカっ
+
+;;答えたあと
+# label "select_label_end4"
+# alpha 3103831 0 0.5
+# move 139 3 0
+# mask 139 off
+# alpha 139 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 139 "normal"
+# voice 9967 "titania_0006"
+@ティターニア
+まだまだ困難は多いですよ
+本当に大丈夫なんですか、
+アルマス？
+
+;;一枚絵
+# imageset 7 "st190601_1"
+# imagealpha 7 0 0
+# imagelayer 7 1
+# alpha 139 0 0.5
+# alpha 3103831 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103831 "normal"
+# voice 1038 "almace_0032"
+@アルマス
+ええ
+私達は千年王国（ラグナロク）を
+失った（ロスト）けれど…
+
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+新しい理想郷を作る未来を
+手に入れた
+
+# fadein "white" 0.7
+# textwindow "close"
+# imagealpha 7 1 0
+# imagepos 7 0 0
+# waitandnext 2
+
+# textwindow "nomal"
+# textboxarrow 0 0
+# voice 1038 "almace_0004"
+@アルマス
+きっといつか、辿り着けるわ
+
+@アルマス
+バイブスとキラーズ
+二つ揃うことで
+完全となる世界―
+
+@アルマス
+そんな理想で満ち溢れた
+未来へ
+
+@アルマス
+一歩一歩、歩き続けていけば
+絶・間違いない
+
+# voice 1038 "almace_0001"
+@アルマス
+だからマスター、
+これからもよろしくね！
+
+;;9
+# imageset 9 "bg_white"
+# imagealpha 9 0 0
+# imagelayer 9 3
+# imagescale 9 1.5 0
+;;background---------------
+;;0
+# imageset 0 "st171201_0"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;1
+# imageset 1 "st171201_1"
+# imagealpha 1 0 0
+# imagelayer 1 1
+;;2
+# imageset 2 "st180301_1"
+# imagealpha 2 0 0
+# imagelayer 2 1
+;;--------------------------------------
+;;3
+# imageset 3 "lostragnarok_ed1"
+# imagealpha 3 0 0
+# imagescale 3 0.9 0
+# imagelayer 3 5
+;;4
+# imageset 4 "lostragnarok_ed2"
+# imagealpha 4 0 0
+# imagescale 4 0.9 0
+# imagelayer 4 5
+;;5
+# imageset 5 "lostragnarok_ed3"
+# imagealpha 5 0 0
+# imagescale 5 0.9 0
+# imagelayer 5 5
+;;-------------------------
+# bgm "stop"
+# fadeout "black" 3
+# waitandnext 4
+
+# imagealpha 7 0 0
+# alpha 137 0 0
+# alpha 3100211 0 0
+# alpha 161 0 0
+# alpha 187 0 0
+# alpha 3103831 0 0
+# alpha 139 0 0
+# alpha 3401719 0 0
+# alpha 3502719 0 0
+# alpha 3103519 0 0
+# alpha 3202511 0 0
+# alpha 3302619 0 0
+# alpha 3302519 0 0
+# alpha 3602019 0 0
+# alpha 3103619 0 0
+;;layer----------
+# imagealpha 9 0.6 0
+# imagepos 9 0 30
+;;---------------
+# frameout 0 0
+# buttonsout 0 0
+# fadein "white" 0.3
+# textwindow "close"
+# background "bg_white"
+# bgmfile "bgm350" "BgmAlmaceSong002" 0
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imagepos 1 0 30
+# imagepos 2 0 30
+;;endrollアルファ表示----------------------------
+# imagealpha 3 1 0
+# imagepos 3 0 30
+# imagealpha 4 1 0
+# imagepos 4 0 -1000
+# imagealpha 5 1 0
+# imagepos 5 0 -1000
+# waitandnext 5.6
+
+;;endroll----------------------------
+# imagemoveto 3 0 1000 15
+;;background----------------------------
+# imagealpha 0 0 3
+# imagealpha 1 1 3
+# imagepos 0 0 30
+# imagepos 1 0 30
+# imagepos 2 0 30
+# waitandnext 11.3
+;;---------------------------------------
+
+;;background----------------------------
+;;0
+# imageset 0 "st180502_01"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;endroll----------------------------
+# imagemoveto 4 0 1000 20
+;;background----------------------------
+# imagealpha 1 0 3
+# imagealpha 2 1 3
+# imagepos 0 0 30
+# imagepos 1 0 30
+# imagepos 2 0 30
+# waitandnext 11.3
+
+;;endroll----------------------------
+# imagemoveto 5 0 1000 20
+;;-------------------------
+# imagealpha 2 0 3
+# imagealpha 0 1 3
+# imagepos 0 0 30
+# imagepos 1 0 30
+# imagepos 2 0 30
+# waitandnext 11.3
+
+;;background----------------------------
+;;1
+# imageset 1 "st180701_01"
+# imagealpha 1 0 0
+# imagelayer 1 1
+;;--------------------------------------
+;;エンドロール3をセット
+# imageset 3 "lostragnarok_ed4"
+# imagealpha 3 0 0
+# imagelayer 3 5
+# waitandnext 0.5
+
+;;--------------------------------------
+;;エンドロール3をアルファ表示
+# imagealpha 3 1 0
+# imagepos 3 0 -1000
+# waitandnext 0.5
+;;endroll----------------------------
+# imagemoveto 3 0 1000 20
+;;-------------------------
+# imagealpha 0 0 3
+# imagealpha 1 1 3
+# imagepos 0 0 30
+# imagepos 1 0 30
+# imagepos 2 0 30
+# waitandnext 11.3
+
+;;background----------------------------
+;;2
+# imageset 2 "st180801_1"
+# imagealpha 2 0 0
+# imagelayer 2 1
+;;--------------------------------------
+;;エンドロール4をセット
+# imageset 4 "lostragnarok_ed5"
+# imagealpha 4 0 0
+# imagelayer 4 5
+# waitandnext 0.5
+
+;;--------------------------------------
+;;エンドロール3をアルファ表示
+# imagealpha 4 1 0
+# imagepos 4 0 -1000
+# waitandnext 0.5
+;;endroll----------------------------
+# imagemoveto 4 0 1000 20
+;;-------------------------
+# imagealpha 1 0 3
+# imagealpha 2 1 3
+# imagepos 0 0 30
+# imagepos 1 0 30
+# imagepos 2 0 30
+# waitandnext 11.3
+
+;;background----------------------------
+;;0
+# imageset 0 "st180901_1"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;--------------------------------------
+;;エンドロール5をセット
+# imageset 5 "lostragnarok_ed6"
+# imagealpha 5 0 0
+# imagelayer 5 5
+# waitandnext 0.5
+
+;;--------------------------------------
+;;エンドロール5をアルファ表示
+# imagealpha 5 1 0
+# imagepos 5 0 -1000
+# waitandnext 0.5
+;;endroll----------------------------
+# imagemoveto 5 0 1000 20
+;;-------------------------
+# imagealpha 2 0 3
+# imagealpha 0 1 3
+# imagepos 0 0 30
+# imagepos 1 0 30
+# imagepos 2 0 30
+# waitandnext 11.3
+
+;;background----------------------------
+;;1
+# imageset 1 "st181001_1"
+# imagealpha 1 0 0
+# imagelayer 1 1
+;;--------------------------------------
+;;エンドロール3をセット
+# imageset 3 "lostragnarok_ed7"
+# imagealpha 3 0 0
+# imagelayer 3 5
+# waitandnext 0.5
+
+;;--------------------------------------
+;;エンドロール3をアルファ表示
+# imagealpha 3 1 0
+# imagepos 3 0 -1000
+# waitandnext 0.5
+;;endroll----------------------------
+# imagemoveto 3 0 1000 20
+;;-------------------------
+# imagealpha 0 0 3
+# imagealpha 1 1 3
+# imagepos 0 0 30
+# imagepos 1 0 30
+# imagepos 2 0 30
+# waitandnext 11.3
+
+;;background----------------------------
+;;2
+# imageset 2 "st181002_1"
+# imagealpha 2 0 0
+# imagelayer 2 1
+;;--------------------------------------
+;;エンドロール4をセット
+# imageset 4 "lostragnarok_ed8"
+# imagealpha 4 0 0
+# imagelayer 4 5
+# waitandnext 0.5
+
+;;--------------------------------------
+;;エンドロール7をアルファ表示
+# imagealpha 4 1 0
+# imagepos 4 0 -1000
+# waitandnext 0.5
+;;endroll----------------------------
+# imagemoveto 4 0 1100 20
+;;-------------------------
+# imagealpha 1 0 3
+# imagealpha 2 1 3
+# imagepos 0 0 30
+# imagepos 1 0 30
+# imagepos 2 0 30
+# waitandnext 11.3
+
+;;background----------------------------
+;;0
+# imageset 0 "st181101_1"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;--------------------------------------
+;;エンドロールをセット
+# imageset 5 "lostragnarok_ed9"
+# imagealpha 5 0 0
+# imagelayer 5 5
+# waitandnext 0.5
+
+;;--------------------------------------
+;;エンドロールをアルファ表示
+# imagealpha 5 1 0
+# imagepos 5 0 -1000
+# waitandnext 0.5
+;;endroll----------------------------
+# imagemoveto 5 0 1100 20
+;;-------------------------
+# imagealpha 2 0 3
+# imagealpha 0 1 3
+# imagepos 0 0 30
+# imagepos 1 0 30
+# imagepos 2 0 30
+# waitandnext 11.3
+
+;;background----------------------------
+;;1
+# imageset 1 "st181201_1"
+# imagealpha 1 0 0
+# imagelayer 1 1
+;;--------------------------------------
+;;エンドロールをセット
+# imageset 3 "lostragnarok_ed10"
+# imagealpha 3 0 0
+# imagelayer 3 5
+# waitandnext 0.5
+
+;;--------------------------------------
+;;エンドロールをアルファ表示
+# imagealpha 3 1 0
+# imagepos 3 0 -1000
+# waitandnext 0.5
+;;endroll----------------------------
+# imagemoveto 3 0 1000 20
+;;-------------------------
+# imagealpha 0 0 3
+# imagealpha 1 1 3
+# imagepos 0 0 30
+# imagepos 1 0 30
+# imagepos 2 0 30
+# waitandnext 11.3
+
+;;background----------------------------
+;;2
+# imageset 2 "st190101_1"
+# imagealpha 2 0 0
+# imagelayer 2 1
+;;--------------------------------------
+;;エンドロールをセット
+# imageset 4 "lostragnarok_ed11"
+# imagealpha 4 0 0
+# imagelayer 4 5
+# waitandnext 0.5
+
+;;--------------------------------------
+;;エンドロールをアルファ表示
+# imagealpha 4 1 0
+# imagepos 4 0 -1000
+# waitandnext 0.5
+;;endroll----------------------------
+# imagemoveto 4 0 1100 20
+;;-------------------------
+# imagealpha 1 0 3
+# imagealpha 2 1 3
+# imagepos 0 0 30
+# imagepos 1 0 30
+# imagepos 2 0 30
+# waitandnext 11.3
+
+;;background----------------------------
+;;0
+# imageset 0 "st190201_1"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;--------------------------------------
+;;エンドロールをセット
+# imageset 5 "lostragnarok_ed12"
+# imagealpha 5 0 0
+# imagelayer 5 5
+# waitandnext 0.5
+
+;;--------------------------------------
+;;エンドロールをアルファ表示
+# imagealpha 5 1 0
+# imagepos 5 0 -1000
+# waitandnext 0.5
+;;endroll----------------------------
+# imagemoveto 5 0 1100 20
+;;-------------------------
+# imagealpha 2 0 3
+# imagealpha 0 1 3
+# imagepos 0 0 30
+# imagepos 1 0 30
+# imagepos 2 0 30
+# waitandnext 11.3
+
+;;background----------------------------
+;;1
+# imageset 1 "st190301_1"
+# imagealpha 1 0 0
+# imagelayer 1 1
+;--------------------------------------
+;;エンドロールをセット
+# imageset 3 "lostragnarok_ed13"
+# imagealpha 3 0 0
+# imagelayer 3 5
+# waitandnext 0.5
+
+;;--------------------------------------
+;;エンドロールをアルファ表示
+# imagealpha 3 1 0
+# imagepos 3 0 -1000
+# waitandnext 0.5
+;;endroll----------------------------
+# imagemoveto 3 0 1000 20
+;;-------------------------
+# imagealpha 0 0 3
+# imagealpha 1 1 3
+# imagepos 0 0 30
+# imagepos 1 0 30
+# imagepos 2 0 30
+# waitandnext 11.3
+
+;;background----------------------------
+;;2
+# imageset 2 "st190401_1"
+# imagealpha 2 0 0
+# imagelayer 2 1
+;--------------------------------------
+;;エンドロールをセット
+# imageset 4 "lostragnarok_ed14"
+# imagealpha 4 0 0
+# imagelayer 4 5
+# waitandnext 0.5
+
+;;--------------------------------------
+;;エンドロールをアルファ表示
+# imagealpha 4 1 0
+# imagepos 4 0 -1000
+# waitandnext 0.5
+;;endroll----------------------------
+# imagemoveto 4 0 1000 20
+;;-------------------------
+# imagealpha 1 0 3
+# imagealpha 2 1 3
+# imagepos 0 0 30
+# imagepos 1 0 30
+# imagepos 2 0 30
+# waitandnext 11.3
+
+;;background----------------------------
+;;0
+# imageset 0 "st190501_1"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;--------------------------------------
+;;エンドロールをセット
+# imageset 5 "lostragnarok_ed15"
+# imagealpha 5 0 0
+# imagelayer 5 5
+# waitandnext 0.5
+
+;;エンドロールをアルファ表示
+# imagealpha 5 1 0
+# imagepos 5 0 -1000
+# waitandnext 0.5
+
+;;endroll----------------------------
+# imagemoveto 5 0 1000 20
+;;-------------------------
+# imagealpha 2 0 3
+# imagealpha 0 1 3
+# imagepos 0 0 30
+# imagepos 1 0 30
+# imagepos 2 0 30
+# waitandnext 11.3
+
+;;background----------------------------
+;;1
+# imageset 1 "st190601_1"
+# imagealpha 1 0 0
+# imagelayer 1 1
+;--------------------------------------
+;;エンドロールをセット
+# imageset 3 "lostragnarok_ed16"
+# imagealpha 3 0 0
+# imagelayer 3 5
+# waitandnext 0.5
+
+;;--------------------------------------
+;;エンドロールをアルファ表示
+# imagealpha 3 1 0
+# imagepos 3 0 -1000
+# waitandnext 0.5
+
+;;endroll----------------------------
+# imagemoveto 3 0 1000 20
+;;background----------------------------
+# imagealpha 0 0 3
+# imagealpha 1 1 3
+# imagepos 0 0 30
+# imagepos 1 0 30
+# imagepos 2 0 30
+# waitandnext 11.3
+
+;--------------------------------------
+;;エンドロールをセット
+# imageset 4 "lostragnarok_ed17"
+# imagealpha 4 0 0
+# imagelayer 4 5
+# waitandnext 0.5
+
+;;--------------------------------------
+;;エンドロールをアルファ表示
+# imagealpha 4 1 0
+# imagepos 4 0 -1000
+;;endroll----------------------------
+# imagemoveto 4 0 0 15
+
+# fadeout "black" 2
+# waitandnext 3

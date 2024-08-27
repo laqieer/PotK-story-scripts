@@ -1,0 +1,355 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;コマンドキラーズサイドストーリー前編シナリオ
+;;第1話　タイトル：射抜く者
+;;1_8_1
+;;スクリプト最後の背景：森（夜）
+;;-----------------------------------------
+# script "lisp"
+# background "forest_totaleclipse"
+# bgm "bgm004" 0
+;;-----------------------------------------
+;;ヒョウハ
+# body 231
+# pos 231 3
+# scale 231 0.8 0
+# layer 231 2
+# alpha 231 0 0
+# mask 231 off
+;;神令ヒョウハ（ボイス用）
+# body 5402011
+# alpha 5402011 0 0
+;;アバリス
+# body 401021
+# pos 401021 3
+# scale 401021 0.8 0
+# layer 401021 2
+# alpha 401021 0 0
+# mask 401021 off
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 2
+# alpha 810004 0 0
+# mask 810004 off
+;;異族（クローン1）
+# entry 98100041 810004
+# pos 98100041 3
+# scale 98100041 0.8 0
+# layer 98100041 2
+# alpha 98100041 0 0
+# mask 98100041 off
+;;異族（クローン2）
+# entry 98100042 810004
+# pos 98100042 3
+# scale 98100042 0.8 0
+# layer 98100042 2
+# alpha 98100042 0 0
+# mask 98100042 off
+;;-----------------------------------------
+;;第1話　タイトル：射抜く者
+;;//背景：森（夜）
+# voice 4010 "Abaris_0016"
+# move 231 2 0
+# face 231 "irregular"
+# alpha 231 1 0
+# mask 231 on
+# move 401021 4 0
+# face 401021 "worry"
+# alpha 401021 1 0
+# mask 401021 on
+# textflame 1 1
+# textboxarrow 0 3
+@アバリス
+ううううああ…！！
+どうしてです？
+どうして…
+
+# textboxarrow 0 3
+@アバリス
+私は…マスターっ…
+
+# textboxarrow 0 1
+@ヒョウハ
+だから…間違えてんだよ、あんた
+
+# textboxarrow 0 3
+@アバリス
+…………
+
+# face 231 "sad"
+# textboxarrow 0 1
+@ヒョウハ
+存在感がないせいで報われないって
+気持ちは…少しは分かるよ…
+
+# textboxarrow 0 1
+@ヒョウハ
+どんなに頑張っても、誰も自分の
+ことを見てくれない…覚えていて
+くれない…
+
+# textboxarrow 0 1
+@ヒョウハ
+そういうのは…正直、しんどいよな
+
+# face 231 "irregular"
+# textboxarrow 0 1
+@ヒョウハ
+それでも、やらないといけない
+それが使命だから…
+
+# face 401021 "normal"
+# textboxarrow 0 3
+@アバリス
+ヒョウハ…？
+
+# textboxarrow 0 1
+@ヒョウハ
+でも…あんたイヤだったんだろ
+マスターの命令とはいえ、
+仲間の奏官を襲うなんて
+
+# textboxarrow 0 3
+@アバリス
+そんなことはっ…
+
+# face 231 "angry"
+# textboxarrow 0 1
+@ヒョウハ
+だったら、どうして仕留め損なった？
+それも三度も
+
+# textboxarrow 0 1
+@ヒョウハ
+あんたの腕なら確実にやれてたはずだ
+なのに、し損じた
+
+# textboxarrow 0 1
+@ヒョウハ
+あんた、最初から殺す気なかったんだ
+そのうち自分が捕まれば、全ての
+罪をかぶるつもりだったんだろ
+
+# textboxarrow 0 1
+@ヒョウハ
+暴走したとか言い張って
+そんなの上手くいくわけないのに！
+
+# face 401021 "angry"
+# textboxarrow 0 3
+@アバリス
+それでも…！
+マスターのためにっ…
+
+# textboxarrow 0 1
+@ヒョウハ
+間違えてるって言っただろ
+あんたは、マスターをぶん殴って
+やるべきだったんだ
+
+# textboxarrow 0 3
+@アバリス
+何てことを言うんですか…！？
+
+# voice 540201 "hyoha_c_0007"
+# face 231 "irregular"
+# textboxarrow 0 1
+@ヒョウハ
+あたしだったら殴ってたね
+それから全力で謝って…
+で、こう言うんだ
+
+# textboxarrow 0 1
+@ヒョウハ
+「自分の評価を――
+
+;;//地響き
+# se "SE_0799"
+# bgm "stop"
+# shake 0 1
+# waitandnext 1
+
+# face 231 "surprise"
+# textboxarrow 0 1
+# face 401021 "surprise"
+@ヒョウハ
+何だ…？
+あ…まずいっ…！
+
+# textboxarrow 0 3
+@アバリス
+森の奥から…
+もしかして異族っ？
+
+;;//異族の群れが押し寄せてくる
+# se "SE_0618"
+# alpha 231 0 0.5
+# alpha 401021 0 0.5
+# move 98100041 1 0
+# alpha 98100041 1 0.5
+# mask 98100041 on
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 on
+# move 98100042 5 0
+# alpha 98100042 1 0.5
+# mask 98100042 on
+# textboxarrow 0 0
+@異族
+ガアアアアアアアアアアアアア！！
+
+# bgm "bgm035_036" 0
+# voice 540201 "hyoha_c_battle_0005"
+# alpha 98100041 0 0.5
+# alpha 810004 0 0.5
+# alpha 98100042 0 0.5
+# move 231 2 0
+# face 231 "angry"
+# alpha 231 1 0.5
+# mask 231 on
+# textboxarrow 0 1
+# move 401021 4 0
+# face 401021 "normal"
+# alpha 401021 1 0.5
+# mask 401021 on
+@ヒョウハ
+こんなときに…
+
+;;ヒョウハ（独白）
+# move 231 2 0
+# face 231 "irregular"
+# textboxarrow 0 0
+# textwindow "moya"
+@ヒョウハ
+ん？
+こいつら、あたしを狙って
+一直線に向かってくる？
+
+;;ヒョウハ（独白）
+# textboxarrow 0 0
+@ヒョウハ
+それなら……
+
+# face 231 "angry"
+# textboxarrow 0 1
+# textwindow "normal"
+@ヒョウハ
+アバリス、町に戻って
+このことを知らせな
+急いで防御を固めるんだ
+
+# textboxarrow 0 3
+@アバリス
+あなたは、どうするんですか？
+
+# textboxarrow 0 1
+@ヒョウハ
+決まってるだろ
+
+# textboxarrow 0 1
+@ヒョウハ
+ここでまとめてぶっ飛ばすんだよ！！
+
+# voice 4010 "Abaris_0038"
+# face 401021 "surprise"
+# textboxarrow 0 3
+@アバリス
+そんな…無茶です…！
+
+# textboxarrow 0 1
+@ヒョウハ
+…さっき言いかけたことを
+言っとくな
+
+# textboxarrow 0 1
+@ヒョウハ
+「自分の評価を他人に任せんな！」
+
+# textboxarrow 0 3
+@アバリス
+！！
+
+# voice 540201 "hyoha_c_0003"
+# face 231 "normal"
+# textboxarrow 0 1
+@ヒョウハ
+ああ、そうだよ…
+そういうことだ
+あたしもやっと分かった
+
+# voice 540201 "hyoha_c_0030"
+# textboxarrow 0 1
+@ヒョウハ
+あんたのお陰で気づけたよ
+ありがとな
+
+# face 231 "angry"
+# textboxarrow 0 1
+@ヒョウハ
+さあ、かかってこい
+こういうときのために、
+毎日、鍛錬を続けてきたんだ！
+
+# se "SE_0617"
+# alpha 231 0 0.5
+# alpha 401021 0 0.5
+# move 98100041 1 0
+# alpha 98100041 1 0.5
+# mask 98100041 on
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 on
+# move 98100042 5 0
+# alpha 98100042 1 0.5
+# mask 98100042 on
+# textboxarrow 0 0
+@異族
+ガアアアアアアアアアアアア！！
+
+# alpha 98100041 0 0.5
+# alpha 810004 0 0.5
+# alpha 98100042 0 0.5
+# move 231 2 0
+# face 231 "angry"
+# alpha 231 1 0.5
+# mask 231 on
+# move 401021 4 0
+# face 401021 "angry"
+# alpha 401021 1 0.5
+# mask 401021 on
+# textboxarrow 0 3
+@アバリス
+…………
+
+# textboxarrow 0 1
+@ヒョウハ
+おい！
+町に行けって
+
+# textboxarrow 0 3
+@アバリス
+いえ…
+ここで食い止めるべきです
+
+# textboxarrow 0 3
+@アバリス
+ここと町の間には田畑や牧場も
+あるんです
+
+# textboxarrow 0 3
+@アバリス
+そこを荒らさせるわけには
+いきません
+
+# voice 540201 "hyoha_c_0040"
+# face 231 "normal"
+# textboxarrow 0 1
+@ヒョウハ
+なるほど、それもそうだな
+なら、二人で頑張るか！
+
+# textboxarrow 0 3
+@アバリス
+はい

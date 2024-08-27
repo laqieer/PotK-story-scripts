@@ -1,0 +1,553 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;３章１話　タイトル「地上の脅威―リバイヴ―」
+;;第1話　タイトル：異形の浸食
+;;7_1_3
+;;スクリプト最後の背景：下町
+;;-----------------------------------------
+# script "lisp"
+# background "in_city"
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 2
+# alpha 3201911 0 0
+# mask 3201911 off
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第1話　タイトル：異形の浸食
+;;//背景：新地上世界
+;;カミト（立ち絵無し）
+# textflame 1 1
+@カミト
+遙か昔、この世界は悪魔に支配されて
+いたそうだ
+
+@カミト
+そこに天上から天使が舞い降りて
+悪魔を倒し、世界を人々の手に
+取り戻してくれたらしい
+
+@カミト
+その天使達はキル姫と呼ばれた
+そして彼女達を指揮して悪魔と
+戦った人々のことを
+
+@カミト
+みんなは奏官と呼んだんだ
+
+@カミト
+舞うように戦う美しいキル姫達を
+指揮する姿が、まるで音楽を奏でる
+指揮者のようだったかららしいよ
+
+@カミト
+奏官達の登場で、世界は一変した
+彼らは英雄だったけれど
+
+@カミト
+同時に強大な戦闘力を有する
+新興勢力でもあったんだ
+
+@カミト
+世界は奏官達の手によって
+新しく切り分けられ、
+統治されていった
+
+@カミト
+やがて奏官同士で覇権を競うように
+なり、一時は三つの国にまとまった
+こともあったそうだけど…
+
+;;//ハルモニア、ケイオスリオン、トレイセーマの背景を表示
+# se "SE_0848"
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "angel_world"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# waitandnext 0.8
+
+# se "SE_0848"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "devil_world"
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# waitandnext 0.8
+
+# se "SE_0848"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "beast_world"
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# waitandnext 0.8
+
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_city"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textwindow "normal"
+@カミト
+結局、それも崩れて幾つもの
+「国」に分かれてしまった
+
+@カミト
+それが、今、僕達が生きている世界
+この、地上世界なんだ
+
+;;//背景：下町
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_downtown"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;カミト（ここから立ち絵あり）
+# move 210 3 0
+# face 210 "sad"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+…………
+
+# move 211 2 0
+# face 211 "usual"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+# move 210 4 0.5
+# alpha 210 1 0.5
+# mask 210 on
+# voice 9935 "vang_0002"
+@ヴァング
+どうした、カミト？
+ボーッとして
+お前も腹減ってんのかぁ？
+
+# face 210 "normal"
+# textboxarrow 0 3
+# voice 9936 "kamito_0033"
+@カミト
+あ、ごめん兄貴…
+ここからユグドラシルが
+よく見えるんだよ
+
+# face 211 "normal"
+# textboxarrow 0 1
+# voice 9935 "vang_0022"
+@ヴァング
+どれどれ？
+おお！
+いいじゃねぇの！
+
+# textboxarrow 0 1
+@ヴァング
+いつ見てもでけぇなあ
+カミト、オレ達はあそこに上るんだ
+ワクワクすんだろ？
+
+# textboxarrow 0 1
+@ヴァング
+地上世界を統一して、
+ユグドラシルから見下ろす景色は
+きっと最高だぜ！
+
+# textboxarrow 0 3
+# voice 9936 "kamito_0003"
+@カミト
+うん…
+ヴァングが…じゃなかった
+兄貴が言うんなら、きっと…
+
+# face 211 "usual"
+# textboxarrow 0 1
+# voice 9935 "vang_0014"
+@ヴァング
+もっと自信を持てって！
+オレとお前で地上世界を統一して
+みせるんだ！
+
+# textboxarrow 0 1
+@ヴァング
+いつまで続くか分かんねぇ
+紛争なんざまとめて解決して、
+みんな楽しく暮らすんだよ！
+
+# face 210 "happy"
+# textboxarrow 0 3
+# voice 9936 "kamito_0004"
+@カミト
+うん！
+僕は一生、兄貴についていくよ！
+
+# face 211 "normal"
+# textboxarrow 0 1
+# voice 9935 "vang_0004"
+@ヴァング
+かははっ！
+なぁ、カミト
+オレについてくんのも――
+
+# se "SE_0671"
+# alpha 211 0 0.5
+# alpha 210 0 0.5
+# move 3201911 3 0
+# face 3201911 "normal"
+# alpha 3201911 1 0.5
+# mask 3201911 off
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_0010"
+@シユウ
+うがあああぁぁ！
+ますた～、はらがへったぞ！
+シユウはいえまでがまんできない！
+
+# alpha 3201911 0 0.5
+# move 211 3 0
+# face 211 "normal"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+# voice 9935 "vang_0029"
+@ヴァング
+やれやれだぜ
+お！ちょうどいいや
+
+# textboxarrow 0 2
+@ヴァング
+おっさん
+マーラーカオをくれ
+
+# serif 1
+@屋台の主人
+なんだ悪ガキども
+今日もケンカ帰りか？
+ちったぁ働け
+
+# face 211 "angry"
+# textboxarrow 0 2
+# voice 9935 "vang_0009"
+@ヴァング
+働いてんだよ！
+ジーベンを追っ払ってきたとこだ
+
+# serif 1
+@屋台の主人
+ジーベンってのは、あれだろ？
+隣国の一匹狼っていう
+
+# face 211 "irregular"
+# textboxarrow 0 2
+# voice 9935 "vang_0003"
+@ヴァング
+ああ、そいつだ
+スラーンドを連れてる
+やたら上から目線の奴だよ
+
+# serif 1
+@屋台の主人
+ハッハッハ！
+やっぱりガキのケンカじゃないか
+
+# textboxarrow 0 2
+@ヴァング
+おっさん…
+キル姫同士の戦闘、
+見たことねぇだろ
+
+# serif 1
+@屋台の主人
+あいにくと俺は奏官じゃないんでね
+ほれ、マーラーカオだよ
+シユウちゃん
+
+# alpha 211 0 0.5
+# move 3201911 3 0
+# face 3201911 "happy"
+# alpha 3201911 1 0.5
+# mask 3201911 off
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_0006"
+@シユウ
+うがあああぁぁ♪
+おまえのマーラーカオは
+おいしいからだいすきだぞ！
+
+# serif 1
+@屋台の主人
+ありがとな
+シユウちゃんも怪我をしないよう
+ケンカはほどほどにな
+
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_0032"
+@シユウ
+あんしんしろ！
+シユウはさいきょうだから
+ぜんいんぶっつぶす！
+
+# serif 1
+@屋台の主人
+はっはっは！
+元気が良いねえ
+
+# serif 1
+@屋台の主人
+そっちのアスカロンちゃんも
+どうだい？
+おまけしとくよ
+
+# alpha 3201911 0 0.5
+# move 3102311 3 0
+# face 3102311 "happy"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+# voice 310231 "ascalon_a_0004"
+@アスカロン
+ありがとうございます
+でも、あんまり食べると大きく
+なってしまうので…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 3102311 0 0.5
+# move 3201911 3 0
+# face 3201911 "normal"
+# alpha 3201911 1 0.5
+# mask 3201911 off
+# textboxarrow 0 2
+@シユウ
+うがあああぁぁ！
+アスカロンがたべないなら
+シユウがたべるぞ！
+
+# alpha 3201911 0 0.5
+# move 211 3 0
+# face 211 "normal"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+# voice 9935 "vang_0005"
+@ヴァング
+ははははっ！
+食え食え、どんどん食え！
+
+;;//画面揺れ
+;;//地響き
+# se "SE_5223"
+# shake 0 0.5
+# waitandnext 0.5
+
+# face 211 "irregular"
+# textboxarrow 0 2
+# voice 9935 "vang_0008"
+@ヴァング
+おっと…
+また地震かよ
+
+# serif 1
+@屋台の主人
+最近、多いなぁ
+少し前、どっかの火山が噴火した
+そうじゃないか
+
+# serif 1
+@屋台の主人
+こりゃ、どこぞの教団が言ってる
+世界の終わりが本当に来るのかも
+しれないなっ
+
+# move 211 2 0.5
+# mask 211 on
+# move 210 4 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# voice 9936 "kamito_0023"
+@カミト
+えっ…
+そんな話があるの…？
+
+# face 211 "angry"
+# textboxarrow 0 1
+# voice 9935 "vang_0001"
+@ヴァング
+バカ抜かせ！
+カルトの妄言なんざ気にして
+どうする
+
+# face 211 "irregular"
+# textboxarrow 0 1
+@ヴァング
+おっさんも、
+地震で物理的に店が潰れねぇよう
+気をつけるんだな
+
+# serif 1
+@屋台の主人
+うるさいぞ、悪ガキが！
+
+;;//暗転挟む
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 211 0 0
+# alpha 210 0 0
+# move 211 2 0
+# face 211 "normal"
+# alpha 211 1 0
+# mask 211 on
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0
+# mask 210 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 9935 "vang_0029"
+@ヴァング
+やれやれだぜ
+地震程度でビビってんじゃねぇぞ
+カミト
+
+# textboxarrow 0 3
+# voice 9936 "kamito_0033"
+@カミト
+ごめん…
+でも、天災が多くなってるのは
+事実だと思うよ…
+
+# textboxarrow 0 3
+@カミト
+屋台のおじさんが言ってた
+火山の噴火とか、ひどい豪雨とか…
+
+# face 211 "angry"
+# textboxarrow 0 1
+# voice 9935 "vang_0039"
+@ヴァング
+ちっ…
+オレ達は天下統一を果たすんだぜ
+
+# textboxarrow 0 1
+@ヴァング
+どんな天災が起きようと、
+オレ達が皆を守ってやりゃいいだけ
+だろうが！
+
+# face 210 "happy"
+# textboxarrow 0 3
+# voice 9936 "kamito_0003"
+@カミト
+う、うん…
+そうだねっ
+さすが兄貴だっ
+
+# face 210 "normal"
+# textboxarrow 0 3
+# voice 9936 "kamito_0002"
+@カミト
+ねぇ、兄貴…
+僕達は…どうして奏官なんだろう？
+
+# face 211 "irregular"
+# textboxarrow 0 1
+# voice 9935 "vang_0023"
+@ヴァング
+あん？
+そりゃバイブスを持ってるからだろ
+
+# textboxarrow 0 1
+@ヴァング
+体内のバイブスがキル姫のキラーズと
+適合した奴
+そいつが、奏官になるんだ
+
+# face 210 "sad"
+# textboxarrow 0 3
+# voice 9936 "kamito_0015"
+@カミト
+そうなんだけど…
+僕には、本当に奏官の資格が
+あるのかな…
+
+# face 211 "normal"
+# textboxarrow 0 1
+# voice 9935 "vang_0012"
+@ヴァング
+また余計なこと考えてやがんな？
+やめとけ
+腹が減るだけだぞ
+
+# face 210 "normal"
+# textboxarrow 0 3
+@カミト
+う、うん…
+兄貴がそう言うなら…

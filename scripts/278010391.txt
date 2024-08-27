@@ -1,0 +1,561 @@
+;;-----------------------------------------
+;;【ファントムオブキル】ALCコラボ_イベントシナリオ前編
+;;【EP.1】
+;;スクリプト最後の背景：荒野（昼）
+;;背景：街中（夜）
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown_night"
+# bgmfile "bgm473_block" "BgmIntegralNoahEvent009" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;青龍偃月刀・聖鎖・ザドキエル
+# body 3300911
+# pos 3300911 3
+# scale 3300911 0.8 0
+# layer 3300911 2
+# alpha 3300911 0 0
+# mask 3300911 off
+;;魔獣
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# layer 910013 3
+# alpha 910013 0 0
+# mask 910013 off
+;;-----------------------------------------
+# imageset 0 "e211113_logo"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;メインシナリオ　前編
+;;【OP】
+;;背景：街中（夜）
+;;（以下、セツナ視点の独り言）
+;;モノローグ
+# textflame 0 0
+@
+…どうやらここは
+私がいた世界ではないらしい
+
+;;モノローグ
+@
+異世界、とでも言えばいいのか
+似ているようで、少し違う景色…
+幸い、言葉は通じるようだけど…
+
+;;モノローグ
+@
+けれど、どの世界でも同じ…
+私の力を利用しようとするばかりで
+私の苦しみや怒りを知ろうともしない
+
+;;モノローグ
+@
+その真っ直ぐさが…羨ましい
+その厚かましさが…妬ましい
+だから、壊す…
+
+;;モノローグ
+@
+世界がどうなろうと
+知ったことではないもの…
+
+# fadeout "black" 1
+# waitandnext 1.5
+
+# textwindow "close"
+# frameout 0 0
+# buttonsout 0 0
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# fadein "white" 2
+
+# fadeout "black" 1
+# waitandnext 1
+
+# background "wild"
+# imagealpha 0 0 0
+# framein 0 0
+# buttonsin 0 0
+# waitandnext 0.5
+
+# move 196 4 0
+# fadein "black" 1
+# waitandnext 1
+
+# move 196 3 0.5
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# waitandnext 0.5
+
+;;【EP.1】旅は道連れ
+;;背景：荒野（昼）
+;;マスターアルマス（以下アルマス）
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+ハァハァ…
+早く戻って、みんなにあのことを
+知らせないといけないのに…
+
+;;魔獣出現
+# se "SE_0792"
+# move 910013 2 0
+# alpha 910013 1 0.5
+# mask 910013 on
+# move 196 4 0.5
+# mask 196 on
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+もう！
+邪魔しないでってば！
+絶・うっとおしいんだから！
+
+;;？？？（青龍偃月刀：セリフだけ）
+# serif 1
+@？？？
+戦いの中で冷静さを欠くとは…
+上に立つ者としての心得が
+なっていないようですね
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 9943 "almace_navikan_0035"
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+えっ！？
+だ、誰？
+
+;;魔獣、鳴く
+# se "SE_0793"
+# waitandnext 0.5
+
+;;？？？（青龍偃月刀）
+# move 3300911 1 0
+# face 3300911 "angry"
+# alpha 3300911 1 0.5
+# mask 3300911 on
+# textboxarrow 0 1
+# move 910013 3 0.5
+# move 196 5 0.5
+@？？？
+敵を目前にして
+別のことに気をとられ、
+動揺するのも感心できません
+
+;;青龍偃月刀の攻撃
+;;魔獣倒れる
+# se "SE_4817"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_0794"
+# sedelay "SE_3001" 0.8
+# waitandnext 0.8
+
+# textwindow "close"
+# alpha 910013 0 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+# voice 9943 "almace_navikan_0044"
+# move 3300911 2 0.5
+# move 196 4 0.5
+# face 196 "happy"
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+た、助かったわ、ありがとう…
+私はアルマス
+あなたは？
+
+# face 3300911 "normal"
+# textboxarrow 0 1
+@青龍偃月刀
+私は青龍偃月刀・聖鎖・ザドキエル
+仕えるべき主君と出会う日に備え、
+武術の研鑽と勉学に励んでおります
+
+# voice 9943 "almace_navikan_0055"
+# textboxarrow 0 3
+@アルマス
+そうなんだ
+いいマスターに会えるといいわね
+それじゃ…
+
+# textboxarrow 0 1
+@青龍偃月刀
+不躾ながら…お聞かせください
+貴方はマスターでありながら
+なぜキル姫を連れていないのです？
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+それは…
+ちょっと事情があって…
+
+# voice 330091 "seiryu_t_0027"
+# face 3300911 "sad"
+# textboxarrow 0 1
+@青龍偃月刀
+そうですか…
+事情については追求しませんが
+貴方ひとりでは先行き不安ですね
+
+# voice 9943 "almace_navikan_0015"
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+そんなことないわよ！
+さっきは、あなたの声に
+驚いて油断しただけだし
+
+# voice 330091 "seiryu_t_0013"
+# face 3300911 "normal"
+# textboxarrow 0 1
+@青龍偃月刀
+戦闘中に油断するのは
+命取りだと思うのですが？
+
+# face 196 "sad"
+# textboxarrow 0 3
+@アルマス
+うっ…
+
+# textboxarrow 0 1
+@青龍偃月刀
+…わかりました
+しばらく私が貴方とともに
+参りましょう
+
+# voice 9943 "almace_navikan_0035"
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+え！？
+どうしてそうなるの？
+
+# textboxarrow 0 1
+@青龍偃月刀
+ここで出会ったのも何かの縁です
+貴方を良きマスターに導くのも
+私に与えられた試練かもしれません
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+試練って…
+言い過ぎじゃない？
+
+# face 3300911 "angry"
+# textboxarrow 0 1
+@青龍偃月刀
+とにかく！
+この青龍偃月刀が全力で
+貴方をご指導いたします
+
+# textboxarrow 0 1
+@青龍偃月刀
+護衛の方も承りますゆえ、
+安心してお任せください！
+
+# voice 9943 "almace_navikan_0035"
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+え…？
+ええーっ！？
+
+;;場面転換
+;;背景：街中（昼）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_city"
+# move 3300911 2 0
+# face 3300911 "normal"
+# alpha 3300911 1 0
+# mask 3300911 on
+# move 196 4 0
+# face 196 "sad"
+# alpha 196 1 0
+# mask 196 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# voice 330091 "seiryu_t_0002"
+# textboxarrow 0 1
+# textwindow "normal"
+@青龍偃月刀
+いいですか？
+戦況を冷静に判断できなければ
+勝ち戦も負け戦に変わります
+
+# textboxarrow 0 1
+@青龍偃月刀
+たとえ相手が格下であっても、
+油断をすれば足元を
+すくわれることもあるのです
+
+# textboxarrow 0 1
+@青龍偃月刀
+主君にとって最大の敵は慢心です
+自信を持つのは良いことですが、
+謙虚さと礼節も重んじなくては…
+
+# textboxarrow 0 3
+@アルマス
+…………
+
+# textboxarrow 0 1
+@青龍偃月刀
+アルマス？
+聞いていますか？
+
+# voice 9943 "almace_navikan_0004"
+# face 196 "happy"
+# textboxarrow 0 3
+@アルマス
+あ、もちろんよ！
+青龍偃月刀の話は
+すごく勉強になるわね
+
+# textboxarrow 0 3
+@アルマス
+油断と慢心は禁物で、
+自信を持つなら謙虚さと礼節も
+併せ持たないと…ってことでしょ？
+
+# voice 330091 "seiryu_t_0004"
+# face 3300911 "happy"
+# textboxarrow 0 1
+@青龍偃月刀
+その通りです！
+正直に申し上げまして
+想像よりも優秀で驚いています
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+私にはやるべきことがあるの
+でも、それを実現するのは
+とても難しいこともわかってる
+
+# textboxarrow 0 3
+@アルマス
+私は足りないことばかりだから…
+もっといろんなことを学ばなくちゃ
+いけないって思ったの
+
+# textboxarrow 0 1
+@青龍偃月刀
+目的と向上心があることは
+とても良いことです
+険しい道での道標になりますから
+
+# voice 9943 "almace_navikan_0044"
+# face 196 "happy"
+# textboxarrow 0 3
+@アルマス
+うん、ありがとう…
+あなたには感謝してるわ
+
+# face 3300911 "normal"
+# textboxarrow 0 1
+@青龍偃月刀
+それはそうと、
+なにを考えていたのですか？
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+うん…この街の周辺には
+魔獣が少なかった気がしない？
+何か理由があるのかなって
+
+# textboxarrow 0 1
+@青龍偃月刀
+それなら噂を聞いたことがあります
+凄まじい強さの剣士と魔術師が
+突然現れ、魔獣を倒しているとか…
+
+;;モノローグ
+# textflame 0 0
+@
+その噂には続きがある、と
+2人の話を聞いていた街の人が
+会話に入ってきた
+
+;;モノローグ
+@
+聞けば、その剣士と魔術師は
+魔獣だけでなく、奏官も倒して
+回っているらしいとのことだった
+
+# voice 9943 "almace_navikan_0035"
+# face 196 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+奏官もって
+もしかしてコマンドキラーズ！？
+それなら急いで止めないと！
+
+# face 3300911 "angry"
+# textboxarrow 0 1
+@青龍偃月刀
+アルマス、落ち着いてください
+魔獣とも戦っているのなら
+コマンドキラーズとは限りません
+
+# textboxarrow 0 1
+@青龍偃月刀
+この地上は奏官が覇を競う時代…
+別のマスターが率いる
+キル姫という可能性もあります
+
+# textboxarrow 0 1
+@青龍偃月刀
+もしくは、まったく別の目的で動く
+新たな脅威の存在…という可能性も
+ないとは言い切れませんね
+
+# face 196 "sad"
+# textboxarrow 0 3
+@アルマス
+そっか…
+そういう考え方もあるのね…
+でも、なんだか気になるわね
+
+# face 3300911 "normal"
+# textboxarrow 0 1
+@青龍偃月刀
+それほど気になるようでしたら
+一度会ってみるのも
+いいかもしれませんね
+
+# textboxarrow 0 1
+@青龍偃月刀
+敵か味方かわかりませんが、
+相手が誰であっても
+私がいれば大丈夫です
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+…それって慢心じゃないの？
+
+# textboxarrow 0 1
+@青龍偃月刀
+私はよいのです
+さあ、情報収集に行きますよ
+
+;;場面転換
+;;背景：荒野（昼）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "wild"
+# alpha 3300911 0 0
+# alpha 196 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+# textflame 0 0
+# textwindow "normal"
+@
+噂を元に辺境の荒野までやってきた
+アルマスと青龍偃月刀は、
+目の前の景色に言葉を失った
+
+;;モノローグ
+@
+激しい戦闘の余波で、大地が
+抉れて切り裂かれている
+それは戦慄すら覚える光景だった
+
+# move 3300911 2 0
+# face 3300911 "sad"
+# alpha 3300911 1 0.5
+# mask 3300911 on
+# move 196 4 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+これって…
+噂の剣士か魔術師の仕業なの？
+
+# textboxarrow 0 1
+@青龍偃月刀
+おそらく…
+痕跡から見るに、
+剣士のほうでしょうか
+
+;;魔獣出現
+;;魔獣、鳴く
+# bgmfile "bgm417_418" "BgmIntegralNoahBattle003" 0
+# se "SE_0792"
+# textwindow "close"
+# alpha 3300911 0 0.5
+# alpha 196 0 0.5
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 off
+# waitandnext 1.2
+
+# alpha 910013 0 0.5
+# move 3300911 2 0
+# face 3300911 "angry"
+# alpha 3300911 1 0.5
+# mask 3300911 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textwindow "normal"
+@青龍偃月刀
+魔獣？
+しかも手負いですね
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+近くで戦っているんだわ！
+もしかしたら、その剣士かも…
+
+;;魔獣、鳴く
+# se "SE_0793"
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@アルマス
+この魔獣を倒したら
+すぐに探しに行くわよ！

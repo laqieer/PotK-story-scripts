@@ -1,0 +1,554 @@
+;;-----------------------------------------
+# script "lisp"
+# bgmfile "bgm197" "Bgm3Tcollabo002" 0
+# background "bg_black"
+;;ALCコラボ2021　シナリオ
+;;タイトル案：運命の果てに結ばれる絆
+;;【OP】
+;;-----------------------------------------
+;;デュリン
+# body 0
+# pos 0 4
+# scale 0 0.8 0
+# layer 0 2
+# alpha 0 0 0
+# mask 0 off
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 2
+# alpha 24 0 0
+# mask 24 off
+;;ラキナ
+# body 5104911
+# pos 5104911 3
+# brightness 5104911 0.3 0
+# scale 5104911 0.8 0
+# layer 5104911 20
+# alpha 5104911 0 0
+# mask 5104911 off
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 2
+# alpha 810004 0 0
+# mask 810004 off
+;;異族（クローン1）
+# entry 98100041 810004
+# pos 98100041 2
+# scale 98100041 0.8 0
+# layer 98100041 2
+# alpha 98100041 0 0
+# mask 98100041 off
+;;異族（クローン2）
+# entry 98100042 810004
+# pos 98100042 4
+# scale 98100042 0.8 0
+# layer 98100042 2
+# alpha 98100042 0 0
+# mask 98100042 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "bg_black"
+# imagealpha 0 1 0
+# imagelayer 0 1
+# imagepos 0 0 30
+;;-----------------------------------------
+;;タイトル一枚絵
+# imageset 1 "r210601_logo"
+# imagelayer 1 3
+# imagealpha 1 0 0
+;;-----------------------------------------
+;;背景：黒背景
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1.5
+
+# alpha 5104911 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textsize 24
+@？？？
+ここは生と死の狭間…
+死んだ者は全て聖石“ルシファー”の
+生み出した世界を通って…
+
+@？？？
+言わば、“ふるいにかけられる”
+
+@？？？
+わたしがいなければ、
+死期が迫った者は肉体ごと強制的に
+ルシファーの世界に引きずりこまれ
+
+@？？？
+まだ生きられるはずの命も消えていく
+
+@？？？
+それを防ぎ、
+世界の秩序を守るための
+たったひとりの騎士団
+
+@？？？
+わたしはルシファーに
+存在を認めさせた“管理者”
+
+# alpha 5104911 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;演出：ラキナの攻撃エフェクト
+# se "SE_4000"
+# effectbody 1000 1 -200 0 0
+# effectstart 1000
+# waitandnext 0.3
+
+# se "SE_4817"
+# effectbody 2000 3 200 0 0
+# effectstart 2000
+# waitandnext 0.3
+
+# alpha 5104911 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+@？？？
+人にも幻影兵にもなれなかった魂を
+斬って斬って斬って…
+世界の秩序を守る
+
+@？？？
+それがわたしの使命で受け入れた運命
+たったひとりの騎士団のなすべきこと
+
+# alpha 5104911 0 1
+@？？？
+そんな日々が
+ずっと続くと思っていた…
+
+# textwindow "close"
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.5
+
+# fadeout "white" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# imagealpha 1 0 0
+# waitandnext 0.2
+
+;;演出：フラッシュ
+;;暗転
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：平原
+# bgm "bgm023" 0
+# se "SE_0975"
+# fadein "white" 1
+# imagealpha 0 0 0
+# brightness 5104911 1 0
+# background "plain"
+# waitandnext 1
+
+;;できればトゲトゲフレームで
+# voice 1014 "tyrufing_battle_0001"
+# alpha 24 1 0.5
+# face 24 "mad2"
+# textwindow "toge"
+# textboxarrow 0 2
+@ティルフィング
+はぁっ！
+
+;;演出：異族の立ち絵と攻撃エフェクト
+;;キャラ: ティルフィング_01（天上編）
+# textwindow "close"
+# alpha 24 0 0.25
+# move 810004 3 0.5
+# alpha 810004 1 0.5
+# waitandnext 1
+
+# se "SE_4830"
+# sedelay "SE_3001" 0.8
+# alpha 810004 0 0.5
+# effectbody 1001 1 0 0 0
+# effectstart 1001
+# fadein "white" 0.5
+# waitandnext 1
+
+# textwindow "nomal"
+# textflame 0 0
+;;モノローグ
+@
+紫電一閃
+ティルフィングの剣が異族を屠る
+
+# voice 1014 "tyrufing_battle_0005"
+# alpha 24 1 0.5
+# face 24 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+…くっ、はぁ、はぁ
+
+;;演出：異族、出現
+# textwindow "close"
+# alpha 24 0 0.25
+# waitandnext 0.25
+
+# alpha 98100041 1 0.75
+# waitandnext 0.75
+
+# alpha 98100042 1 0.75
+# waitandnext 0.75
+
+# textwindow "nomal"
+# textflame 0 0
+# move 24 2 0
+;;モノローグ
+@
+倒せども倒せども次々と現れる異族
+かれこれもう長いこと、この繰り返し
+
+# voice 9999 "durin_0002"
+# alpha 98100041 0 0.25
+# alpha 98100042 0 0.25
+# alpha 0 1 0.5
+# alpha 24 1 0.5
+# face 0 "worry"
+# textflame 1 1
+# textboxarrow 0 3
+@デュリン
+これ以上は危険よ！
+一度下がって態勢を立て直して――
+
+# textboxarrow 0 1
+@ティルフィング
+まだ、私はまだ…っ！
+
+;;演出：異族を倒すティルフィング。しかし、異族は後からどんどん湧いてくる。
+# alpha 0 0 0.25
+# alpha 24 0 0.25
+# alpha 98100041 1 0.5
+# alpha 98100042 1 0.5
+# textwindow "close"
+# waitandnext 1
+
+# se "SE_4830"
+# sedelay "SE_3001" 0.8
+# alpha 98100041 0 0.5
+# alpha 98100042 0 0.5
+# effectbody 1002 1 0 0 0
+# effectstart 1002
+# fadein "white" 0.5
+# waitandnext 1
+
+# move 98100041 1 0
+# move 98100042 5 0
+# waitandnext 0.1
+
+# alpha 810004 1 0.75
+# waitandnext 1
+
+# alpha 98100041 1 0.75
+# alpha 98100042 1 0.75
+# move 24 3 0
+# waitandnext 1
+
+# alpha 810004 0 0.25
+# alpha 98100041 0 0.25
+# alpha 98100042 0 0.25
+# alpha 24 1 0.5
+# face 24 "angry"
+# textwindow "nomal"
+# textflame 0 0
+;;モノローグ
+@
+私はまだ戦える
+ティルフィングはそれを剣で示す
+
+;;モノローグ
+@
+痛ましいまでの覚悟を背負った
+ティルフィングの一撃
+
+;;モノローグ
+@
+戦うことができない
+マスターとデュリンは
+その姿をただ見つめるしかない
+
+;;モノローグ
+@
+しかし…
+
+;;演出：異族からの攻撃を受けるティルフィング
+# voice 1014 "tyrufing_battle_0005"
+# se "SE_4815"
+# move 24 2 0.5
+# face 24 "sad"
+# effectbody 3000 2 0 0 0
+# effectstart 3000
+# fadein "white" 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+くっ！
+
+# voice 1014 "tyrufing_0029"
+# se "SE_4000"
+# move 24 3 0.5
+# face 24 "angry"
+# textboxarrow 0 2
+@ティルフィング
+はああああっ！！！
+
+;;演出：異族を倒すティルフィング
+# alpha 24 0 0.25
+# alpha 810004 1 0.5
+# alpha 98100041 1 0.5
+# alpha 98100042 1 0.5
+# waitandnext 1
+
+# se "SE_4830"
+# sedelay "SE_3001" 0.8
+# alpha 810004 0 0.5
+# alpha 98100041 0 0.5
+# alpha 98100042 0 0.5
+# effectbody 1003 1 0 0 0
+# effectstart 1003
+# fadein "white" 0.5
+# waitandnext 1
+
+# alpha 24 1 0.5
+# face 24 "sad"
+# textboxarrow 0 2
+@ティルフィング
+うぅ…
+
+;;演出：異族立ち絵
+# se "SE_0617"
+# alpha 24 0 0.25
+# alpha 810004 1 0.5
+# waitandnext 1
+
+# alpha 98100041 1 0.75
+# alpha 98100042 1 0.75
+# waitandnext 1
+
+# move 24 2 0
+# textwindow "toge"
+# textboxarrow 0 0
+@異族
+グギャアアアアアア！
+
+# alpha 810004 0 0.25
+# alpha 98100041 0 0.25
+# alpha 98100042 0 0.25
+# alpha 0 1 0.5
+# alpha 24 1 0.5
+# face 0 "serious"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ティルフィング
+…………
+
+# voice 9999 "durin_0022"
+# face 0 "worry"
+# textboxarrow 0 3
+@デュリン
+…………っ！
+
+# textflame 0 0
+# imagealpha 0 1 2
+# imagepos 0 0 30
+;;モノローグ
+@
+覚悟と想いは力となる
+だが、それにも限界が訪れようと――
+
+;;モノローグ
+# alpha 0 0 0.75
+# alpha 24 0 0.75
+@
+していたはずだった
+
+# voice 1049 "lakinna_battle_0002"
+# se "SE_4000"
+# bgm "stop"
+# textflame 1 1
+# textboxarrow 0 0
+;;（ラキナ、セリフのみ）
+@？？？
+せいっ！
+
+;;演出：ラキナの攻撃で異族が倒される
+# se "SE_4830"
+# sedelay "SE_3001" 0.8
+# fadein "white" 1
+# imagealpha 0 0 0
+# waitandnext 2
+
+
+# bgm "bgm002" 0
+# move 24 3 0
+# move 0 3 0
+# alpha 5104911 1 0.5
+# textboxarrow 0 2
+;;（ラキナ）
+@？？？
+困ってたみたいだから
+助けに入ったけど…よかったかな？
+
+# voice 1014 "tyrufing_0022"
+# alpha 5104911 0 0.25
+# alpha 24 1 0.5
+# face 24 "surprise"
+# textboxarrow 0 2
+@ティルフィング
+えっ――
+
+# alpha 24 0 0.25
+# alpha 5104911 1 0.5
+# textflame 0 0
+;;モノローグ
+@
+危機に瀕した
+ティルフィングの前に立ち
+あっさりと異族を屠った少女
+
+# alpha 5104911 0 0.25
+# alpha 0 1 0.5
+# face 0 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@デュリン
+あれ、異族は！？
+
+# alpha 0 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+デュリンの言葉に
+マスターも辺りを見回す
+
+# move 24 2 0
+# move 0 4 0
+# move 5104911 4 0
+# mask 24 on
+# mask 5104911 on
+;;モノローグ
+@
+ほんのついさっきまで
+大量にいたはずの異族の姿が
+見当たらない
+
+# alpha 24 1 0.5
+# alpha 5104911 1 0.5
+# face 24 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+…これをアナタが？
+
+# textboxarrow 0 3
+;;（ラキナ）
+@？？？
+あ、わたしはラキナ
+歩いてたらあなた達が襲われてて――
+
+# voice 1014 "tyrufing_0030"
+# face 24 "happy2"
+# textboxarrow 0 1
+@ティルフィング
+ラキナ、さん
+…助けていただいたことは感謝します
+
+# face 24 "normal"
+# textboxarrow 0 1
+@ティルフィング
+ちゃんとしたお礼はできませんが
+私達は行かなくてはならないので…
+
+# voice 1049 "lakinna_0002"
+# textboxarrow 0 3
+@ラキナ
+…また戦いに、行くの？
+
+# face 24 "angry"
+# textboxarrow 0 1
+@ティルフィング
+行かなきゃいけないんです
+
+# textboxarrow 0 3
+@ラキナ
+…その、傷で？
+
+# voice 1014 "tyrufing_0003"
+# face 24 "sad"
+# textboxarrow 0 1
+@ティルフィング
+…………はい
+
+# voice 1049 "lakinna_0001"
+# textboxarrow 0 3
+@ラキナ
+…それじゃあ、
+その行かなきゃいけないところまで
+一緒にいってもいいかな？
+
+# textboxarrow 0 1
+@ティルフィング
+それは――
+
+# alpha 24 0 0.5
+# alpha 5104911 0 0.5
+# textflame 0 0
+;;モノローグ
+@
+「お願いします」
+と、ティルフィングよりも先に
+マスターが答える
+
+# alpha 24 1 0.5
+# alpha 0 1 0.5
+# face 24 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+マスター！？
+
+# face 0 "usual"
+# textboxarrow 0 3
+@デュリン
+アタシもそれがいいと思うわ！
+ティルフィングは少し休まないとね
+
+# move 5104911 3 0
+# mask 5104911 off
+# face 24 "sad"
+# textboxarrow 0 1
+@ティルフィング
+デュリンまで…っ！
+
+# voice 1049 "lakinna_0004"
+# alpha 24 0 0.25
+# alpha 0 0 0.25
+# alpha 5104911 1 0.5
+# textboxarrow 0 2
+@ラキナ
+ふふっ、よろしくね
+
+# textboxarrow 0 2
+@ラキナ
+ここで出会ったのも
+きっと、運命だから――

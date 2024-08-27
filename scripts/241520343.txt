@@ -1,0 +1,404 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;コマンドキラーズサイドストーリー後編
+;;第6話　タイトル：集いし者
+;;6_4_3
+;;スクリプト最後の背景：花畑
+;;-----------------------------------------
+# script "lisp"
+# background "flower_garden"
+# bgm "bgm010" 0
+;;-----------------------------------------
+;;ヒョウハ
+# body 231
+# pos 231 3
+# scale 231 0.8 0
+# layer 231 2
+# alpha 231 0 0
+# mask 231 off
+;;ヒョウハ・神令・テュール
+# body 5402011
+# alpha 5402011 0 0
+;;如意金箍棒
+# body 232
+# pos 232 3
+# scale 232 0.8 0
+# layer 232 2
+# alpha 232 0 0
+# mask 232 off
+;;如意金箍棒・神令・フリッグ
+# body 5203111
+# alpha 5203111 0 0
+;;ミュルグレス
+# body 230
+# pos 230 3
+# scale 230 0.8 0
+# layer 230 2
+# alpha 230 0 0
+# mask 230 off
+;;ミュルグレス・神令・トール
+# body 5104611
+# alpha 5104611 0 0
+;;ロジェスティラ
+# body 235
+# pos 235 3
+# scale 235 0.8 0
+# layer 235 2
+# alpha 235 0 0
+# mask 235 off
+;;ロジェスティラ・神令・スクルド
+# body 5503711
+# alpha 5503711 0 0
+;;イチイバル
+# body 233
+# pos 233 3
+# scale 233 0.8 0
+# layer 233 2
+# alpha 233 0 0
+# mask 233 off
+;;イチイバル・神令・オーディン
+# body 5402211
+# alpha 5402211 0 0
+;;オルフェウス
+# body 234
+# pos 234 3
+# scale 234 0.8 0
+# layer 234 2
+# alpha 234 0 0
+# mask 234 off
+;;オルフェウス・神令・フォルセティ
+# body 5603211
+# alpha 5603211 0 0
+;;巨大異族
+# body 810004
+# pos 810004 3
+# scale 810004 1.1 0
+# layer 810004 2
+# alpha 810004 0 0
+# mask 810004 off
+;;-----------------------------------------
+# move 232 2 0
+# face 232 "angry"
+# alpha 232 1 0
+# mask 232 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 234 4 0
+# face 234 "angry"
+# alpha 234 1 0
+# mask 234 on
+# voice 520311 "nyoikinkobou_c_battle_0001"
+@如意金箍棒
+ええい！！
+
+# se "SE_4100"
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@オルフェウス
+足元に攻撃を集中！
+
+# alpha 232 0 0.5
+# alpha 234 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# textboxarrow 0 2
+@巨大異族
+ゴオアアアアア！
+
+# alpha 810004 0 0.5
+# move 232 3 0
+# face 232 "angry"
+# alpha 232 1 0.5
+# mask 232 off
+# textboxarrow 0 2
+@如意金箍棒
+いいわよ
+もう少しでバランスを崩すわっ
+
+# textboxarrow 0 2
+@如意金箍棒
+倒れなさい！
+
+# se "SE_5215"
+# waitandnext 0.5
+
+# alpha 232 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# textboxarrow 0 2
+@巨大異族
+ゴオアアア…！
+
+# se "SE_5223"
+# textwindow "close"
+# alpha 810004 0 0.5
+# waitandnext 0.5
+
+# move 232 2 0
+# face 232 "normal"
+# alpha 232 1 0.5
+# mask 232 on
+# move 234 4 0
+# face 234 "angry"
+# alpha 234 1 0.5
+# mask 234 on
+# textboxarrow 0 3
+# textwindow "normal"
+@オルフェウス
+やった！
+異族が片膝をついたっ
+
+# textboxarrow 0 1
+@如意金箍棒
+動きが止まったわ
+今ならっ
+
+# se "SE_4300"
+# alpha 232 0 0.5
+# alpha 234 0 0.5
+# move 231 3 0
+# face 231 "angry"
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+# voice 540201 "hyoha_c_battle_0003"
+@ヒョウハ
+決めてみせる！
+
+;;//ヒョウハが矢を放つ
+# se "SE_9118"
+# waitandnext 0.5
+
+;;//巨大異族が腕でガードする
+# textwindow "close"
+# alpha 231 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# waitandnext 0.6
+
+# se "SE_4601"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+@巨大異族
+ゴオアッ！！
+
+# alpha 810004 0 0.5
+# move 231 3 0
+# face 231 "surprise"
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+# voice 540201 "hyoha_c_0023"
+@ヒョウハ
+何っ？
+腕で防がれた…！
+
+# alpha 231 0 0.5
+# move 230 3 0
+# face 230 "normal"
+# alpha 230 1 0.5
+# mask 230 off
+# textboxarrow 0 2
+@ミュルグレス
+だと思った！
+予定通りだね～っ
+
+# face 230 "angry"
+# textboxarrow 0 2
+@ミュルグレス
+これで“完全に”動きを止めたね
+でっかいだけのウスノロ異族！
+
+;;//ミュルグレスが巨大異族を斬る
+# se "SE_5811"
+# se "SE_8115"
+# waitandnext 0.5
+
+# se "SE_0911"
+# alpha 230 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# textboxarrow 0 2
+@巨大異族
+ゴオアアアアアアア…！？
+
+# se "SE_5223"
+# textwindow "close"
+# alpha 810004 0 0.5
+# waitandnext 0.5
+
+# move 230 3 0
+# face 230 "normal"
+# alpha 230 1 0.5
+# mask 230 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 510461 "murgleys_c_0006"
+@ミュルグレス
+ミュルにかかれば、大したこと
+なかったね～っ♪
+
+# move 231 2 0
+# face 231 "angry"
+# alpha 231 1 0.5
+# mask 231 on
+# textboxarrow 0 1
+# move 230 4 0.5
+# mask 230 on
+# voice 540201 "hyoha_c_0013"
+@ヒョウハ
+ミュルグレス！
+あんた、初めからあたしも囮にする
+つもりだったな！
+
+# textboxarrow 0 3
+# voice 510461 "murgleys_c_0004"
+@ミュルグレス
+今頃、気づいたの～？
+『決めてみせる！』なんて言って
+恥ずかしいね
+
+# textboxarrow 0 1
+@ヒョウハ
+あんたはーっ…！
+…ったく、倒せたからいいけど
+
+# bgm "stop"
+# alpha 230 0 0.5
+# move 233 4 0
+# face 233 "angry"
+# alpha 233 1 0.5
+# mask 233 on
+# textboxarrow 0 3
+@イチイバル
+油断してはダメだよ！
+まだ終わっていない
+
+# alpha 233 0 0.5
+# move 235 4 0
+# face 235 "angry"
+# alpha 235 1 0.5
+# mask 235 on
+# textboxarrow 0 3
+@ロジェスティラ
+その異族は、再生能力をもってます！
+
+# face 231 "surprise"
+# textboxarrow 0 1
+@ヒョウハ
+何だって…！？
+
+# se "SE_0909"
+# alpha 231 0 0.5
+# alpha 235 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# textboxarrow 0 2
+@巨大異族
+ゴオアアア…
+ゴオアアアアアアアアアアアアア！！
+
+;;//金属を打ち鳴らすような音
+# se "SE_0910"
+# bgm "bgm024" 0
+# waitandnext 0.5
+
+# alpha 810004 0 0.5
+# move 232 2 0
+# face 232 "sad"
+# alpha 232 1 0.5
+# mask 232 on
+# textboxarrow 0 1
+# move 233 4 0
+# face 233 "irregular"
+# alpha 233 1 0.5
+# mask 233 on
+# voice 520311 "nyoikinkobou_c_battle_0005"
+@如意金箍棒
+うっ…
+何なの、この音…？
+
+# face 233 "surprise"
+# textboxarrow 0 3
+# voice 540221 "ichiibal_c_0025"
+@イチイバル
+巨大異族が歯を打ち鳴らしている？
+いや…まさか…！？
+
+# alpha 232 0 0.5
+# move 231 2 0
+# face 231 "surprise"
+# alpha 231 1 0.5
+# mask 231 on
+# textboxarrow 0 1
+# voice 540201 "hyoha_c_0018"
+@ヒョウハ
+嘘だろ…
+あいつ…“空間”を食らってる！
+
+# alpha 233 0 0.5
+# move 230 4 0
+# face 230 "normal"
+# alpha 230 1 0.5
+# mask 230 on
+# textboxarrow 0 3
+# voice 510461 "murgleys_c_0022"
+@ミュルグレス
+「穴」が空いてく…
+世界に「穴」が…
+あんな大きいの、初めて見た…
+
+# alpha 231 0 0.5
+# alpha 230 0 0.5
+# move 234 3 0
+# face 234 "angry"
+# alpha 234 1 0.5
+# mask 234 off
+# textboxarrow 0 2
+# voice 560321 "orpheus_c_0024"
+@オルフェウス
+待って…
+傷口がどんどん塞がってく…！
+あいつ、再生してるよっ
+
+# alpha 234 0 0.5
+# move 231 2 0
+# face 231 "irregular"
+# alpha 231 1 0.5
+# mask 231 on
+# move 233 4 0
+# face 233 "irregular"
+# alpha 233 1 0.5
+# mask 233 on
+# textboxarrow 0 3
+# voice 540221 "ichiibal_c_0039"
+@イチイバル
+ああ、そういうことなんだね
+あの巨大異族は…“世界”を食べて
+自己を維持しているんだ
+
+# textboxarrow 0 1
+@ヒョウハ
+おいおい
+最悪だな…
+
+# se "SE_0909"
+# alpha 231 0 0.5
+# alpha 233 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# textboxarrow 0 2
+@巨大異族
+ゴオアアアアアアアアアアアアアアア
+アアアアアアアアアアアアアアアアア
+アアアアアアアアアアアアアアア！！

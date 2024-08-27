@@ -1,0 +1,259 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー8章
+;;第2話　タイトル：反転する真実
+;;2_5_10
+;;スクリプト最後の背景：室内
+;;-----------------------------------------
+# script "lisp"
+# background "forest_totaleclipse"
+# bgm "stop"
+;;-----------------------------------------
+;;レーヴァテイン（通常）
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# layer 100221 2
+# alpha 100221 0 0
+# mask 100221 off
+# face 100221 "normal"
+;;老人
+# body 1
+# pos 1 3
+# scale 1 0.8 0
+# layer 1 1
+# alpha 1 0 0
+# mask 1 off
+# face 1 "normal"
+;;--------------------------------------
+;;//背景：森（夜）
+# se "SE_5602"
+# face 100221 "angry"
+# move 100221 3 0
+# alpha 100221 1 0
+# mask 100221 off
+# textflame 1 1
+# textboxarrow 0 2
+@レーヴァテイン
+何とか…逃げ切った…
+さすがに手強かったわね…
+
+# textboxarrow 0 2
+@レーヴァテイン
+でも、“白羽”は手に入れたっ…
+これさえあれば…たくさんの人達を
+瘴気から…守れ…る…
+
+;;//レーヴァテインが倒れる
+# se "SE_5602"
+# textwindow "close"
+# alpha 100221 0 0.5
+# waitandnext 0.5
+
+;;//老人が現れる
+# se "SE_3001"
+# move 1 3 0
+# alpha 1 1 0.5
+# brightness 1 0 0
+# mask 1 off
+# waitandnext 1
+
+;;//暗転
+# fadeout "black" 1
+# waitandnext 1.2
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# background "201_room"
+# alpha 1 0 0
+# face 100221 "sad"
+# move 100221 3 0
+# alpha 100221 1 0
+# mask 100221 on
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//背景：室内
+# voice 1002 "revatein_0037"
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 2
+@レーヴァテイン
+ううっ…
+ここ…どこ…？
+
+# face 100221 "normal"
+# textboxarrow 0 2
+@レーヴァテイン
+確か森で意識を失って…
+何でベッドに寝ていたの…？
+
+# move 100221 2 0.5
+# mask 100221 on
+# move 1 4 0
+# alpha 1 1 0.5
+# mask 1 on
+# textboxarrow 0 3
+@老人
+ああ、目を覚ましたかね
+良かった、良かった
+
+# se "SE_5200"
+# face 100221 "angry"
+# textboxarrow 0 1
+@レーヴァテイン
+誰！？
+
+# textboxarrow 0 3
+@老人
+そんなに身構えんでくれ
+わしゃ、ただのジジイじゃよ
+
+# textboxarrow 0 3
+@老人
+近くの森で倒れとるあんたを
+見つけてのう
+
+# textboxarrow 0 3
+@老人
+老骨に鞭打って家まで運んだんじゃ
+
+# face 100221 "normal"
+# voice 1002 "revatein_0030"
+# textboxarrow 0 1
+@レーヴァテイン
+そう…ありがと…
+それじゃ、もう行くから
+
+# textboxarrow 0 3
+@老人
+そう急くこともあるまいて
+それに、これなんじゃが…
+
+# face 100221 "angry"
+# textboxarrow 0 1
+@レーヴァテイン
+その瓶は…返して！
+
+# textboxarrow 0 3
+@老人
+別に盗りゃせんよ…
+それより老いぼれの話を少し
+聞いてもらえんかね
+
+# face 100221 "normal"
+# textboxarrow 0 1
+@レーヴァテイン
+…………
+
+# textboxarrow 0 3
+@老人
+こう見えて、わしゃ医者なんじゃ
+酷い時代になったもんで、
+毎日、患者に事欠かん
+
+# textboxarrow 0 3
+@老人
+あんた…この瓶に入っとるのは
+“白羽”じゃろ？
+ミカエル様の恩寵…
+
+# textboxarrow 0 3
+@老人
+これだけあれば、たくさんの人々を
+瘴気から守ることができる
+あんた、そう考えとるわけだ
+
+# face 100221 "normal"
+# voice 1002 "revatein_0003"
+# textboxarrow 0 1
+@レーヴァテイン
+そうよ…
+お爺さんも、それが必要？
+
+# textboxarrow 0 3
+@老人
+いいや、いらん
+むしろ今すぐ捨ててしまいたい
+くらいじゃよ
+
+# face 100221 "surprise"
+# voice 1002 "revatein_0009"
+# textboxarrow 0 1
+@レーヴァテイン
+何を言うの…？
+あなた、医者なんでしょ？
+
+# textboxarrow 0 3
+@老人
+医者だからじゃ…
+この辺りでは皆、ミカエル様の恩寵を
+受けようとやっきになっておる
+
+# textboxarrow 0 3
+@老人
+他にも悪魔の血を求める者や獣の
+肉を欲する者もおるようじゃな
+
+# face 100221 "normal"
+# voice 1002 "revatein_0006"
+# textboxarrow 0 1
+@レーヴァテイン
+生き延びるためよ…
+そうしないと瘴気で人類は死に絶えて
+しまうから…
+
+# textboxarrow 0 3
+@老人
+そう…
+皆、そう信じておる
+わしも以前はそうじゃったよ…
+
+# textboxarrow 0 3
+@老人
+孫を失うまでは、のう…
+
+# textboxarrow 0 1
+# face 100221 "surprise"
+@レーヴァテイン
+“白羽”が…効かなかったの？
+
+# textboxarrow 0 3
+@老人
+それだけならどんなに良かったか…
+ついて来なさい
+見せてあげよう…
+
+# textboxarrow 0 3
+@老人
+天使人の、なれの果てを
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# face 100221 "normal"
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 1002 "revatein_0013"
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 1
+@レーヴァテイン
+随分と肌寒い…地下倉庫？
+
+# textboxarrow 0 3
+@老人
+この棺に孫が収められて眠っておる
+…許しておくれ
+
+# face 100221 "angry"
+# voice 1002 "revatein_0023"
+# textboxarrow 0 1
+@レーヴァテイン
+えっ…！？
+何…これっ…？

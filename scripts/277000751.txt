@@ -1,0 +1,221 @@
+;;-----------------------------------------
+;;海上編5-1
+;;-----------------------------------------
+# script "lisp"
+# background "sea_floor_jungle_day"
+# bgmfile "bgm374_375" "BgmSeaEventBattle004" 0
+;;-----------------------------------------
+;;ひょうは
+# body 2402011
+# pos 2402011 2
+# scale 2402011 0.8 0
+# layer 2402011 3
+# alpha 2402011 0 0
+;;みゅる
+# body 2104611
+# pos 2104611 4
+# scale 2104611 0.8 0
+# layer 2104611 3
+# alpha 2104611 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imagescale 0 1.2 0
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagepos 1 0 0
+# imagelayer 1 4
+# imagescale 1 1.4 0
+;;-----------------------------------------
+;;背景：ジャングル
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# face 2402011 "angry"
+# face 2104611 "normal"
+# alpha 2402011 1 0.5
+# alpha 2104611 1 0.5
+# waitandnext 0.5
+
+# voice 540201 "hyoha_c_battle_0004"
+# textwindow "nomal"
+@ヒョウハ
+そこだぁ！
+
+# se "SE_4301"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# serif 1
+# textwindow "nomal"
+# se "SE_0669"
+@異族
+グギャアアアァアア！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# face 2402011 "normal"
+@ヒョウハ
+よぉし！
+片付いたな！
+
+# voice 510461 "murgleys_c_0005"
+# face 2104611 "happy"
+@ミュルグレス
+あはははっ！
+ミュルの計算どおり〜
+
+@ミュルグレス
+洞窟の入口で異族が待ち受けてるって
+フォルカスから聞いてたもんね
+
+# voice 540201 "hyoha_c_0003"
+# face 2402011 "usual"
+@ヒョウハ
+ああ！
+あんたの作戦は大成功だったな！
+
+@ヒョウハ
+この島に来たときから…
+いや、その前からミュルグレスには
+助けられてばっかりだ
+
+# voice 540201 "hyoha_c_0030"
+# face 2402011 "smile"
+@ヒョウハ
+いつも、ありがとな！
+頼りにしてるぜ！
+
+# face 2104611 "angry"
+@ミュルグレス
+…なによ？
+おだてたって、
+カステラの数は減らないわよ？
+
+# voice 540201 "hyoha_c_0022"
+# face 2402011 "surprise"
+@ヒョウハ
+へっ？
+あたしは、思ったことを
+言ってるだけだぞ？
+
+@ミュルグレス
+本当にアンタってば…
+そういえば、この島で会った時も
+同じこと、言ってたわね
+
+# face 2402011 "usual"
+@ヒョウハ
+んん？
+そうだったかな？
+
+;;演出：回想シーン開始
+# fadeout "white" 0.5
+# se "SE_0742"
+# waitandnext 0.5
+
+;;背景：ジャングル
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 2402011 0 0
+# alpha 2104611 0 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# move 2104611 3 0
+# mask 2104611 off
+# alpha 2104611 1 0.5
+# textwindow "nomal"
+# face 2104611 "sad"
+@ミュルグレス
+はぁ…
+ここ、どこ？
+なんでミュルが、こんな目に…
+
+# serif 1
+# textwindow "nomal"
+@？？？
+グギャアアア！
+
+;;？？？（ヒョウハ：姿なし）
+# voice 540201 "hyoha_c_battle_0002"
+# serif 1
+@？？？
+やってやる！
+てやぁっ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# face 2104611 "angry"
+@ミュルグレス
+…ん？
+…この声は、もしかして！
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# move 2402011 3 0
+# mask 2402011 off
+# alpha 2104611 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 2402011 "angry"
+# alpha 2402011 1 0.5
+# serif 1
+# textwindow "nomal"
+@異族
+グギャッ！
+
+# serif 0
+# textwindow "nomal"
+@ヒョウハ
+このっ！
+
+;;できればもやもやフレームで
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 510461 "murgleys_c_0004"
+# alpha 2402011 0 0.5
+# move 2104611 3 0
+# face 2104611 "normal"
+# alpha 2104611 1 0.5
+# textwindow "moya"
+# mask 2104611 off
+@ミュルグレス
+やっぱり、ヒョウハじゃない！
+あの調子なら楽勝だろうけど、
+手伝って恩を売ってやろうっと
+
+# voice 510461 "murgleys_c_0033"
+# serif 0
+# textwindow "nomal"
+# face 2104611 "angry"
+@ミュルグレス
+ヒョウハ！
+そいつはミュルに任せてっ！
+
+# serif 1
+# textwindow "nomal"
+@異族
+ギャアッ！

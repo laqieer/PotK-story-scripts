@@ -1,0 +1,139 @@
+;;-----------------------------------------
+;;冬イベント雪下の騎士流離譚1_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+;;-----------------------------------------
+;;SEAアロンダイト
+# body 6100711
+# pos 6100711 3
+# scale 6100711 0.8 0
+# layer 6100711 3
+# mask 6100711 off
+# alpha 6100711 0 0
+;;シタ
+# body 201621
+# pos 201621 1
+# scale 201621 0.8 0
+# layer 201621 5
+# alpha 201621 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "bg_black"
+# imagealpha 1 0 0
+# imagescale 1 1.5 0
+# imagelayer 1 5
+# imageset 2 "bg_black_circle"
+# imagealpha 2 0 0
+# imagescale 2 1.5 0
+# imagelayer 2 5
+;;-----------------------------------------
+;;背景：黒
+# textwindow "close"
+# waitandnext 0.2
+
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;立ち絵なし
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@アロンダイト
+私に刻まれたキラーズが持つ伝承は…
+
+# imagealpha 1 1 0
+# imagepos 1 0 0
+@アロンダイト
+自らの罪によって
+聖杯を得るに至らなかった
+という記憶…
+
+;;背景：室内（シタの部屋）masamune_room
+# background "masamune_room"
+@アロンダイト
+かの王の剣で在った彼女に
+そのことを指摘された私はまた
+感情の渦に飲み込まれてしまいそうで
+
+;;演出：目覚めた
+# imagealpha 1 0.5 1
+# imagepos 1 0 0
+# imagealpha 2 0.5 1
+# imagepos 2 0 0
+# textwindow "close"
+# waitandnext 2
+
+# imagealpha 1 1 2
+# imagepos 1 0 0
+# imagealpha 2 0 2
+# waitandnext 2
+
+# imagealpha 1 0 2
+# imagealpha 2 1 2
+# imagepos 2 0 0
+# waitandnext 2
+
+# imagealpha 2 0 2
+# waitandnext 3
+
+;;アロンダイトが起き上がる
+# se "SE_5200"
+# alpha 6100711 1 1
+# waitandnext 1
+
+# voice 1007 "Arondaito_0022"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@アロンダイト
+夢…
+
+# textflame 0 0
+@
+自身の罪を改めて
+突き詰められたような最悪の目覚め
+
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+…と、そうではなくて
+私はたしか森の中で――
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@？？？
+よかった！
+目が覚めたんですね！
+
+;;演出：シタin
+# move 6100711 4 0.5
+# move 201621 2 0.5
+# alpha 201621 1 0.3
+# voice 2016 "shita_0004"
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@シタ
+おはようございます！
+
+# textflame 0 0
+@
+アロンダイトに声を掛けたのは
+キル姫、シタだった
+
+# fadeout "black" 1
+# waitandnext 1

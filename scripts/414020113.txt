@@ -1,0 +1,530 @@
+;;----------------------------------------------
+;;414020113
+;;２章 輪廻の斬ル姫【EP1バトル後】
+;;----------------------------------------------
+# script "lisp"
+# background "alc_ch1_pub"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;カシウス
+# body 166
+# pos 166 3
+# scale 166 0.8 0
+# layer 166 3
+# mask 166 on
+# alpha 166 0 0
+;;ムラマサ
+# body 3102511
+# pos 3102511 3
+# scale 3102511 0.8 0
+# layer 3102511 1
+# mask 3102511 off
+# alpha 3102511 1 0
+;;マサムネ
+# body 3100111
+# pos 3100111 3
+# scale 3100111 0.8 0
+# layer 3100111 2
+# mask 3100111 off
+# alpha 3100111 0 0
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;剣閃エフェクト(ムラマサ)
+# effectbody 1000 1 170 0 5
+# effectbody 1001 2 -150 0 5
+;;◆背景：反政府派の潜伏場所-------------------------------
+# textflame 1 1
+# textboxarrow 0 2
+# face 3102511 "angry"
+# voice 310251 "muramasa_ge_battle_0004"
+# chara 3102511
+@ムラマサ
+邪魔立て…するなッ！
+
+;;演出・SE：鋭い斬撃
+# textwindow "close"
+# se "SE_9166"
+# effectstart 1000
+# effectstart 1001
+# shake 0 0.8
+# fadein "white" 0.6
+# waitandnext 0.6
+
+# textwindow "normal"
+# textflame 0 0
+@
+ムラマサの斬撃は敵影を払い
+壁を切り裂き
+屋根を吹き飛ばす
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3102511 "normal"
+# voice 310251 "muramasa_ge_battle_0005"
+# chara 3102511
+@ムラマサ
+くっ…！
+反体制側の指導者の会合
+さすがに敵の数が…
+
+# brightness 3102511 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@護衛兵C
+こ、これ以上進ませはせぬ…！
+
+# se "SE_5205"
+# brightness 3102511 1.0 0.3
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3102511 "angry"
+# voice 310251 "muramasa_ge_battle_0002"
+# chara 3102511
+@ムラマサ
+道を譲らねば、斬る…！
+
+# brightness 3102511 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@護衛兵D
+あのお二方が
+逃げおおせるまで
+貴様を通すわけにはまいらん！
+
+# brightness 3102511 1.0 0.3
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 310251 "muramasa_ge_battle_0007"
+# chara 3102511
+@ムラマサ
+………しつこい…！
+
+;;◆背景：黒バック-----------------------------------------
+# textwindow "top_close"
+# textwindow "bottom_close"
+# fadeout "black" 0.8
+# waitandnext 0.8
+
+# alpha 3102511 0 0.5
+# background "bg_black"
+# waitandnext 0.5
+
+# fadein "black" 0.8
+# waitandnext 0.8
+
+;;マサムネ
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 0
+# voice 310011 "masamune_ge_0002"
+# chara 3100111
+@？？？
+通してもらおうか
+
+;;◆背景：反政府派の潜伏場所-------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.1
+# textwindow "close"
+# waitandnext 0.1
+
+# background "alc_ch1_pub"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_5582"
+# alpha 3100111 1 0.5
+# waitandnext 0.8
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100111 "normal"
+# voice 310011 "masamune_ge_0004"
+# chara 3100111
+@マサムネ
+妹が世話をかけて悪いがな
+
+# alpha 3100111 0 0.5
+# alpha 3102511 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3102511 "surprise"
+# voice 310251 "muramasa_ge_0023"
+# chara 3102511
+@ムラマサ
+姉上…！
+
+# brightness 3102511 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@護衛兵C
+き、貴様も、もしや…!?
+
+# alpha 3102511 0 0.5
+# alpha 3100111 1 0.5
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100111 "normal"
+# voice 310011 "masamune_ge_battle_0001"
+# chara 3100111
+@マサムネ
+識別系統はＢ・〇一
+マサムネ・獣刻・ヨルムンガンド
+文字通り、助太刀しよう
+
+# brightness 3100111 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@護衛兵D
+オーダーキラーズが二人も…！
+
+# textwindow "top_close"
+# textwindow "bottom_close"
+# alpha 3100111 0 0.5
+# waitandnext 0.5
+
+# pos 3100111 4
+# mask 3100111 on
+# brightness 3100111 1.0 0
+# alpha 3100111 1 0.5
+# face 3100111 "normal"
+# pos 3102511 2
+# mask 3102511 on
+# brightness 3102511 1.0 0
+# alpha 3102511 1 0.5
+# face 3102511 "surprise"
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "angry"
+# voice 310251 "muramasa_ge_0012"
+# chara 3102511
+@ムラマサ
+ふ、不要です
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100111 "normal"
+# chara 3100111
+@マサムネ
+遠慮するな
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3102511
+@ムラマサ
+拙者ひとりで十分ですっ
+
+# face 3102511 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100111 "angry"
+# voice 310011 "masamune_ge_0011"
+# chara 3100111
+@マサムネ
+重役を逃がした
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "surprise"
+# chara 3102511
+@ムラマサ
+今から追うつもりでしたっ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100111 "normal"
+# chara 3100111
+@マサムネ
+早く行け
+たまには姉を頼ってほしいものだな
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "angry"
+# voice 310251 "muramasa_ge_0028"
+# chara 3102511
+@ムラマサ
+～～～ッ…！
+
+;;演出：ムラマサ、去る。
+# se "SE_5575"
+# textwindow "close"
+# alpha 3102511 0 0.5
+# waitandnext 0.8
+
+# alpha 3100111 0 0.5
+# waitandnext 0.5
+
+# pos 3100111 3
+# mask 3100111 off
+# alpha 3100111 1 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 0
+# face 3100111 "angry"
+# voice 310011 "masamune_ge_0005"
+# chara 3100111
+@マサムネ
+…さあ
+妹の為に一肌脱ごうか
+
+;;◆背景：グライヒハイト・裏路地---------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# alpha 3100111 0 0
+# background "201_slum"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;演出：走り抜けるカシウス。追い、まわりこむムラマサ
+# se "SE_5603"
+# pos 166 4
+# alpha 166 1 0
+# rightin 166 0.5
+# waitandnext 0.5
+
+# se "SE_5204"
+# se "SE_9146"
+# pos 3102511 2
+# alpha 3102511 1 0
+# face 3102511 "normal"
+# rightin 3102511 0.3
+# face 166 "surprise"
+# fadein "white" 0.3
+# voice 310251 "muramasa_ge_battle_0001"
+# waitandnext 0.3
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "angry"
+# chara 3102511
+@ムラマサ
+待て!!
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 166 "normal"
+# chara 166
+@カシウス
+…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "normal"
+# chara 3102511
+@ムラマサ
+大人しく、我が刃の錆となれ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 166 "happy"
+# voice 3031 "cassius_ge_0020"
+# chara 166
+@カシウス
+………くすくす
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "surprise"
+# voice 310251 "muramasa_ge_battle_0005"
+# chara 3102511
+@ムラマサ
+な、何を笑う！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 3031 "cassius_ge_0005"
+# chara 166
+@カシウス
+だって、おかしくて…あはは
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "normal"
+# chara 3102511
+@ムラマサ
+斬られたいのか
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 166 "normal"
+# voice 3031 "cassius_ge_0007"
+# chara 166
+@カシウス
+どちらにしてもでしょ？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310251 "muramasa_ge_0013"
+# chara 3102511
+@ムラマサ
+…
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 3031 "cassius_ge_0002"
+# chara 166
+@カシウス
+…あなたは今、何をしているの？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "surprise"
+# chara 3102511
+@ムラマサ
+…なに？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 166 "sad"
+# chara 166
+@カシウス
+思考は時に鳥のように羽ばたく
+…気に障ったなら
+ごめんなさい
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "angry"
+# voice 310251 "muramasa_ge_0010"
+# chara 3102511
+@ムラマサ
+ああ、気に触った
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 166 "normal"
+# voice 3031 "cassius_ge_0040"
+# chara 166
+@カシウス
+この国の為、ウロボロスの為
+反乱分子であれば見境なく殺す
+そう言うのね？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "normal"
+# chara 3102511
+@ムラマサ
+もちろんだ
+秩序を守ることこそ…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 166 "sad"
+# voice 3031 "cassius_ge_0002"
+# chara 166
+@カシウス
+何を目指しているの？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310251 "muramasa_ge_0022"
+# chara 3102511
+@ムラマサ
+ウロボロス様は秩序を守り
+国を平定させることこそ
+理想郷を目指す近道だと…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 166 "normal"
+# chara 166
+@カシウス
+そこにあなたの考えはあるの？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "surprise"
+# chara 3102511
+@ムラマサ
+…拙者の…？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310251 "muramasa_ge_0037"
+# face 3102511 "angry"
+# chara 3102511
+@ムラマサ
+う、ウロボロス様が望んでおられる
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 166
+@カシウス
+それが、あなたの理想なの？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "surprise"
+# chara 3102511
+@ムラマサ
+…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 166 "sad"
+# chara 166
+@カシウス
+………あなたは酔っている
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "normal"
+# chara 3102511
+@ムラマサ
+拙者は酒など…！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 166 "normal"
+# chara 166
+@カシウス
+与えられた力に
+認められた立場に
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102511 "sad"
+# voice 310251 "muramasa_ge_0015"
+# chara 3102511
+@ムラマサ
+…私は…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 166 "happy"
+# voice 3031 "cassius_ge_0004"
+# chara 166
+@カシウス
+まるで酒に誘われた
+愚かなヤマタノオロチのよう

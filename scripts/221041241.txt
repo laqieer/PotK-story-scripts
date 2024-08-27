@@ -1,0 +1,534 @@
+;;-----------------------------------------
+;;ファンキル お正月イベント2019
+;;タイトル：振袖に降る雪
+;;【EP4_1戦闘前】祈りの熱風
+;;背景：野外（可能であればハルモニア）
+;;-----------------------------------------
+# script "lisp"
+# background "400_angel_town_daytime"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;アバリス（正月用のボイスを鳴らすための呼び出し）
+# body 3401011
+# alpha 3401011 0 0
+;;アバリス（正月）
+# body 3401021
+# pos 3401021 3
+# scale 3401021 0.8 0
+# mask 3401021 off
+# layer 3401021 15
+# alpha 3401021 1 0
+;;エネミー
+# body 3810001
+# pos 3810001 2
+# scale 3810001 0.8 0
+# layer 3810001 15
+# alpha 3810001 0 0
+# entry 12345 3810001
+# pos 12345 4
+# scale 12345 0.8 0
+# layer 12345 15
+# alpha 12345 0 0
+;;-----------------------------------------
+# envbody 9998 2 0
+# effectpattern 9998 1 0
+# effectstart 9998
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401021 "normal"
+# voice 340101 "abaris_a_0001"
+@アバリス
+マスター、大丈夫ですか？
+ハルモニアに着きましたよ
+
+# textflame 0 0
+@
+ハルモニアに向かう途中で、
+マスターは急にめまいを感じ、
+足がふらつきだした
+
+# textflame 0 0
+@
+いまではアバリスに支えられて、
+なんとか歩いている状態だった
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0015"
+@アバリス
+私がケイオスリオンで使った
+熱風の影響でしょうか…
+どこかで休ませないと…
+
+# serif 1
+# textwindow "nomal"
+@女性
+ちょっと、いいかい？
+
+# emotionbody 1000 1 3401021 10 300
+# effectpattern 1000 1 0
+# effectstart 1000
+# serif 0
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401021 "surprise"
+# voice 340101 "abaris_a_0024"
+@アバリス
+きゃっ！
+あ、あの…
+なにか…？
+
+# serif 1
+@女性
+振袖が気になって見てたのだけど
+…なにか困っているのかい？
+
+# serif 0
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0002"
+@アバリス
+あの…連れの者が熱を出して…
+どこか休める場所はありませんか？
+
+# serif 1
+@女性
+休める場所ねぇ…
+よかったら、
+うちで休んでいくかい？
+
+# serif 0
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401021 "surprise"
+# voice 340101 "abaris_a_0022"
+@アバリス
+えっ…でも…
+
+# serif 1
+# textwindow "close"
+# serif 0
+;;できればもやもやフレームで
+# move 3401021 3 0
+# textwindow "moya"
+# textflame 1 1
+# textboxarrow 0 0
+# face 3401021 "sad"
+;;# voice 340101 ""
+@アバリス
+私のような悪魔を宿した斬ル姫は、
+ハルモニアで忌み嫌われている…
+もし、ここで正体がバレたら…
+
+# serif 0
+;;できればもやもやフレームで
+# move 3401021 3 0
+# textwindow "moya"
+# textflame 1 1
+# textboxarrow 0 0
+;;# voice 340101 ""
+@アバリス
+でも、いまはマスターの体力回復を
+最優先にするべきかも…
+
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 340101 "abaris_a_0002"
+@アバリス
+あの…では、お言葉に甘えて
+お世話になります…
+
+# serif 1
+# textwindow "nomal"
+@女性
+たいしたもてなしはできないけど
+ゆっくりしていくといいよ
+
+;;演出：時間経過
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.2
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 1
+
+;;背景：室内（ハルモニア）
+# background "201_room"
+# bgm "bgm003" 0
+# effectskip 9998
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401021 "surprise"
+;;# voice 340101 ""
+@アバリス
+あ…マスター！
+顔色がよくなりましたね！
+よかった…
+
+# alpha 3401021 0 0.5
+# textflame 0 0
+@
+マスターが目を覚ますと、
+アバリスは安堵の表情を見せた
+
+# textflame 0 0
+@
+確かに、さっきのような
+めまいや悪寒はもう感じない
+
+# se "SE_0679"
+# textflame 0 0
+@
+その時、ドアがノックされ、
+先ほどの女性が飲み物を乗せた
+お盆を持って、部屋に入ってきた
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@女性
+どうだい？
+連れの具合の方は？
+
+# alpha 3401021 1 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401021 "normal"
+@アバリス
+あ…いま起きたところです、
+本当にありがとうございました
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401021 "smile"
+# voice 340101 "abaris_a_0001"
+@アバリス
+マスター、この方が
+この部屋を貸してくれたんですよ
+
+# serif 0
+# textflame 0 0
+@
+マスターも、助かりました
+と、女性に感謝の気持ちを伝える
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@女性
+困った時はお互い様さ
+さっ、これでもお飲み
+身体が温まるよ
+
+# se "SE_6504"
+# emotionbody 1001 3 3401021 10 300
+# effectpattern 1001 1 3
+# effectstart 1001
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401021 "normal"
+# voice 340101 "abaris_a_0030"
+@アバリス
+ありがとうございます
+本当、温まりますね…
+
+# textflame 0 0
+@
+女性も椅子に座り、
+同じものを飲み始める
+
+# textflame 0 0
+@
+マスターも飲み物を受け取ろうと
+寝台を出るが、汗が冷えたせいで
+体が震えてしまった
+
+# emotionbody 1002 1 3401021 10 300
+# effectpattern 1002 1 0
+# effectstart 1002
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401021 "surprise"
+;;# voice 340101 ""
+@アバリス
+あ…！
+
+# textflame 0 0
+@
+それを見たアバリスは、
+反射的に熱風を吹かせて
+部屋を一瞬で暖めてしまう
+
+# textflame 0 0
+@
+女性は熱風と室温の変化に驚き、
+二人を見て不思議そうな顔をした
+
+# textflame 1 1
+# textboxarrow 0 2
+;;# voice 340101 ""
+@アバリス
+な…なんだか
+急に暖かくなりましたね？
+
+# textflame 0 0
+@
+もらった飲み物のおかげかな、
+これはなんですか？
+と、二人は必死にごまかす
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@女性
+これはホットワインといってね
+温めたワインに
+スパイスを入れてあるんだよ
+
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401021 "smile"
+# voice 340101 "abaris_a_0004"
+@アバリス
+だから、体が温まるし、
+いい香りがするんですね！
+とても、おいしいです
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+@
+女性は嬉しそうに笑った後、
+今度は膝をさすりながら
+溜息をついた
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@女性
+この温かさが
+ずっと続けばいいのにねぇ
+今年は寒すぎて、古傷が痛むのよ
+
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0040"
+@アバリス
+そうですか…大変ですね
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401021 "normal"
+@アバリス
+あの…本当にお世話になりました
+私たち、そろそろ出発しようかと…
+
+# serif 0
+# textflame 0 0
+@
+なんのお礼もできずに申し訳ない
+と、マスターも頭を下げる
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@女性
+いいのよ、私も綺麗な振袖を
+近くで見られて嬉しかったわ
+それじゃ、帰り道に気をつけるんだよ
+
+;;演出：時間経過
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.2
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# waitandnext 1
+
+;;背景：野外（可能であればハルモニア）
+# background "400_angel_town_daytime"
+# envbody 9999 2 0
+# effectpattern 9999 1 0
+# effectstart 9999
+# alpha 3401021 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 3401021 1 0.5
+# waitandnext 0.5
+
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0002"
+@アバリス
+マスター、
+あの…相談なんですが
+
+# textflame 0 0
+@
+国境に向かう途中で、さっきの家を
+見下ろせる高台に着くと、
+アバリスが真面目な顔で話を切り出す
+
+# textflame 1 1
+# textboxarrow 0 2
+;;# voice 340101 ""
+@アバリス
+パズズの能力で熱風を呼び、
+あの女性に暖かいお正月を過ごして
+ほしいのですが…ダメでしょうか？
+
+# textflame 1 1
+# textboxarrow 0 2
+;;# voice 340101 ""
+@アバリス
+私にできるお礼は、
+これぐらいしか思いつかなくて…
+それも今日一日限定になりますが…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401021 "angry"
+;;# voice 340101 ""
+@アバリス
+それでも、なにもしないままでは
+帰れません…
+私もだれかを喜ばせたいんです！
+
+# textflame 0 0
+@
+真剣に考えた結果なのだろう、
+マスターは、アバリスから
+今までにないほどの熱意を感じていた
+
+# textflame 0 0
+@
+熱病を運ばずにやれるならいいと思う
+と、マスターはアバリスに同意する
+
+# emotionbody 1003 10 3401021 -100 220
+# effectpattern 1003 4 3
+# effectstart 1003
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401021 "normal"
+# voice 340101 "abaris_a_0003"
+@アバリス
+はい！やってみます！
+今日だけでも、優しいあの人が
+暖かく過ごせるよう、祈りをこめて！
+
+# effectskip 1003
+# se "SE_5678"
+# fadein "green" 0.5
+# textflame 0 0
+@
+アバリスの熱風が一帯を覆う
+冬の寒さと熱風が混ざり合って
+周囲は春のような温かさに包まれた
+
+# se "SE_6504"
+# emotionbody 1004 3 3401021 10 300
+# effectpattern 1004 3 3
+# effectstart 1004
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401021 "smile"
+# voice 340101 "abaris_a_0005"
+@アバリス
+…マスター！
+私、できました！
+あの人に喜んでもらえるでしょうか？
+
+# effectskip 1004
+# textflame 0 0
+@
+大成功だね、きっと喜んでいるよ
+と、マスターとアバリスが作戦成功を
+喜んでいると…
+
+# bgmfile "bgm177_178" "BgmGakuen001" 0
+# alpha 3401021 0 0.5
+# alpha 3810001 1 0.5
+# alpha 12345 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@ハルモニア兵A
+そこでなにをしているのですか！？
+その出で立ち…
+ハルモニアの者ではありませんね？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ハルモニア兵B
+外部の人間がこんな場所に…？
+どこかの国の偵察部隊か…
+…まさか「悪魔憑き」か？
+
+# alpha 3401021 1 0.5
+# alpha 3810001 0 0.5
+# alpha 12345 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3401021 "angry"
+# voice 340101 "abaris_a_battle_0005"
+@アバリス
+くっ…
+見つかってしまいましたか…

@@ -1,0 +1,354 @@
+;;-----------------------------------------
+;;SEA2章_16
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "stop"
+;;-----------------------------------------
+;;リットゥ（剣無し）
+# body 285
+# pos 285 3
+# scale 285 0.8 0
+# layer 285 2
+# mask 285 off
+# alpha 285 0 0
+;;リットゥ
+# body 6100511
+# pos 6100511 3
+# scale 6100511 0.8 0
+# layer 6100511 2
+# mask 6100511 off
+# alpha 6100511 0 0
+;;フラン
+# body 284
+# pos 284 4
+# scale 284 0.8 0
+# layer 284 4
+# mask 284 off
+# alpha 284 0 0
+# reversal 284 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 4
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagescale 1 1.5 0
+# imagelayer 1 3
+# imageset 2 "littwu_sword"
+# imagealpha 2 0 0
+# imagelayer 2 2
+;;-----------------------------------------
+;;背景：廃墟
+# textwindow "close"
+# waitandnext 0.2
+
+;;リットゥの回想
+# background "201_border"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# imagealpha 1 0.5 0
+# imagepos 1 0 0
+# waitandnext 0.3
+
+# se "SE_6170"
+# imagealpha 0 0 1
+# waitandnext 1
+
+# face 285 "sad"
+# alpha 285 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@リットゥ
+盗賊どもは、一人残らず捕らえ、
+警察に引き渡したが…
+
+# textboxarrow 0 2
+@リットゥ
+クライノート…彼の妻も…
+使用人達も…
+
+# textboxarrow 0 2
+@リットゥ
+守れなかった…
+私は…
+
+# voice 1005 "ritto_0016"
+# textboxarrow 0 2
+@リットゥ
+ううっ…
+うああああああああああああ！！
+
+# sestop "SE_6170"
+# textboxarrow 0 0
+# waitandnext 1
+
+# face 285 "surprise"
+# textboxarrow 0 2
+@リットゥ
+…………！
+
+# bgm "bgm031" 0
+# move 285 3 0
+# face 285 "angry"
+# textwindow "moya"
+# textboxarrow 0 0
+@リットゥ
+微かに人の気配がする
+ひょっとして…頼む！
+
+;;リットゥが走っていく
+# se "SE_5575"
+# move 285 5 0.5
+# alpha 285 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# move 285 1 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# brightness 284 0.8 0
+# move 285 2 0.5
+# face 285 "angry"
+# alpha 285 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@リットゥ
+この瓦礫の下だ…
+間に合ってくれっ
+
+# se "SE_11575"
+# face 284 "normal"
+# alpha 284 1 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@フラン
+…………
+
+# face 285 "sad"
+# textboxarrow 0 1
+@リットゥ
+フラン！
+ああ…フラン…
+
+# textboxarrow 0 3
+@フラン
+…………リットゥ？
+
+# textboxarrow 0 1
+@リットゥ
+フラン…ああ、そうだ
+私だ…
+
+# face 284 "happy"
+# textboxarrow 0 3
+@フラン
+良かった…
+やっぱり…来てくれたんだ…ね…
+
+# bgm "stop"
+# face 285 "surprise"
+# textboxarrow 0 1
+@リットゥ
+急いで治癒を…なっ！？
+
+# voice 1005 "ritto_0018"
+# move 285 2 0
+# face 285 "sad"
+# textwindow "moya"
+# textboxarrow 0 0
+@リットゥ
+これは…酷い…
+もう…
+
+# bgm "bgm004" 0
+# face 284 "sad"
+# textwindow "nomal"
+# textboxarrow 0 3
+@フラン
+信じて…たんだよ…
+きっと帰って…きて…
+怖い人達…から…守ってくれる…
+
+# textboxarrow 0 3
+@フラン
+急にね…たくさんの人達が…
+お父さまもお母さまも…
+みんなもね…
+
+# textboxarrow 0 3
+@フラン
+血がいっぱい…
+怖くて…逃げたんだけど…
+だけど…うううっ…
+
+# face 285 "angry"
+# textboxarrow 0 1
+@リットゥ
+もういい！
+喋らなくていいぞ、フラン
+もう…大丈夫だ…
+
+;;リットゥがフランを抱きしめる
+# se "SE_11618"
+# move 285 3 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@フラン
+みんな…みんな血がいっぱい出てて…
+私…私も…ああっ…あああああ…
+
+# textboxarrow 0 2
+@リットゥ
+ダメだ！
+思い出すなっ
+フラン、それ以上は…！
+
+# textboxarrow 0 3
+@フラン
+あああああああああああああああああ
+あああああああああああああああああ
+あああアアアアアアアアアアアア！！
+
+;;フランの体からどす黒い霧が出る
+# se "SE_9156"
+# emotionbody 2001 15 284 0 0
+# effectstart 2001
+# brightness 284 0.8 1
+# move 285 2 0.3
+# mask 285 on
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 1
+@リットゥ
+ダメだ、フラン！
+苦しみに…悲しみに囚われては…
+お前の魂がっ
+
+# textboxarrow 0 3
+@フラン
+嫌だ嫌だ嫌だ嫌だ何で何で何で何で
+何で…
+
+# textboxarrow 0 3
+@フラン
+リットゥ…助けて…
+
+# move 285 2 0
+# textwindow "moya"
+# textboxarrow 0 0
+@リットゥ
+このままではフランの魂が
+悪霊と化してしまう…
+
+@リットゥ
+全て私のせいだ
+私の驕りが、
+このような事態を招いた…！
+
+@リットゥ
+何とかしなければ…
+せめて…フランの魂を…
+絶対に悪霊になどさせないっ
+
+@リットゥ
+そのためならば…
+たとえ理を歪めようとも構わない
+私自身が罪を背負う
+
+# imagescale 2 0.5 0
+# textboxarrow 0 1
+@リットゥ
+フラン、大丈夫だ
+絶対にお前を守り抜いてみせる
+
+;;リットゥの神器イラスト表示
+# move 285 1 0.5
+# move 284 5 0.5
+# se "SE_5205"
+# imagealpha 2 1 1
+# imagepos 2 0 -60
+# textwindow "close"
+# waitandnext 1.5
+
+;;リットゥが床に剣を刺す音
+# se "SE_5574"
+# imagescale 2 0.45 1
+# imagemoveto 2 0 -30 1
+# waitandnext 1.5
+
+# se "SE_12809"
+# shake 0 0.2
+# imagemoveto 2 0 -160 0.2
+# fadeout "white" 1
+# waitandnext 1.2
+
+;;SEA編リットゥ
+# bgm "stop"
+# se "SE_6197"
+# fadein "white" 2
+# imagealpha 2 0 0
+# effectskip 2001
+# alpha 285 0 0
+# alpha 284 0 0
+# face 6100511 "angry"
+# alpha 6100511 1 0
+# waitandnext 2.5
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@リットゥ
+私は聖域の守護者リットゥ
+今、このときをもってこの地は
+我が聖域となった
+
+# voice 1005 "ritto_0010"
+# textboxarrow 0 2
+@リットゥ
+何者であろうとも、
+この地を侵すことは許さない
+
+# face 6100511 "happy"
+# textboxarrow 0 2
+@リットゥ
+フラン、安心しろ
+お前の魂が安らぎ、その悲しみが、
+苦しみが、消え去るときまで
+
+# textboxarrow 0 2
+@リットゥ
+この穏やかな聖域の中で、
+お前の魂を護り続けよう
+
+;;背景：黒
+# background "bg_black"
+# se "SE_6197_2"
+# alpha 6100511 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 0
+@リットゥ
+たとえそれが、
+仮初めの救いであったとしても
+
+# fadeout "black" 1
+# waitandnext 1

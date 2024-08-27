@@ -1,0 +1,492 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１１章 章タイトル「問いかける幻獣―ダイアローグ―」
+;;第1話－１　タイトル：久遠問答
+;;1_1_0
+;;スクリプト最後の背景：平原
+;;-----------------------------------------
+# script "lisp"
+# background "parchment_map03"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;異族化アルマス（ナレーションのボイス用）
+# body 5103831
+# alpha 5103831 0 0
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 3
+# alpha 5101431 0 0
+# mask 5101431 off
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;エイレーネ
+# body 132
+# pos 132 3
+# scale 132 0.8 0
+# layer 132 2
+# alpha 132 0 0
+# mask 132 off
+;;ラグナロク・擬装・ガンナー
+# body 5103621
+# pos 5103621 3
+# scale 5103621 0.8 0
+# layer 5103621 2
+# alpha 5103621 0 0
+# mask 5103621 off
+;;ミカエル
+# body 960029
+# pos 960029 3
+# scale 960029 0.8 0
+# layer 960029 2
+# alpha 960029 0 0
+# mask 960029 off
+;;ルシファー
+# body 960028
+# pos 960028 3
+# scale 960028 0.8 0
+# layer 960028 2
+# alpha 960028 0 0
+# mask 960028 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第1話－１　タイトル：久遠問答
+;;//背景：地上世界地図
+;;ナレーション
+# voice 9921 "IntegralNoah_Narration_11_1_0001"
+# textflame 0 0
+@
+リサナウトに連れられ、
+再び中心部を訪れたカミト達
+
+;;ナレーション
+# voice 9921 "IntegralNoah_Narration_11_1_0002"
+@
+そこでは中心部のキル姫と
+コマンドキラーズが壮絶な戦いを
+繰り広げていた
+
+;;ナレーション
+# voice 9921 "IntegralNoah_Narration_11_1_0003"
+@
+カミト達の参戦も虚しく、
+北・西地区の奏官とキル姫が
+討たれてしまう
+
+;;ナレーション
+# voice 9921 "IntegralNoah_Narration_11_1_0004"
+@
+さらに東地区の奏官、
+ゴウバラも窮地に陥った
+
+;;ナレーション
+# voice 9921 "IntegralNoah_Narration_11_1_0005"
+@
+そこにフェイルノートと
+ヴァング達が現れ、
+コマンドキラーズを退かせる
+
+;;ナレーション
+# voice 9921 "IntegralNoah_Narration_11_1_0006"
+@
+自身の指揮により、勝利を
+もたらすと宣言する
+フェイルノート
+
+;;ナレーション
+# voice 9921 "IntegralNoah_Narration_11_1_0007"
+@
+その言葉通り、戦況は中心部の者達に
+有利に進み始めた
+
+;;ナレーション
+# voice 9921 "IntegralNoah_Narration_11_1_0008"
+@
+だが、フォルカスとの一騎討ちで
+フェイルノートは死に瀕する
+
+;;ナレーション
+# voice 9921 "IntegralNoah_Narration_11_1_0009"
+@
+自分を弱者と認めるよう囁く
+悪魔ルシファーの声を拒絶し、彼女は
+命がけで自身の「強さ」を証明した
+
+;;ナレーション
+# voice 9921 "IntegralNoah_Narration_11_1_0010"
+@
+ルシファーと誓約を結び、
+フェイルノートは
+コマンドキラーズを撤退させる
+
+;;ナレーション
+# voice 9921 "IntegralNoah_Narration_11_1_0011"
+@
+そして、戦いを終えたカミトに
+リサナウトが告げた
+地底世界にキラーメイルがいる、と
+
+;;//天上世界遠景
+# se "SE_0057"
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "parchment_map02"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;ナレーション
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+# voice 9921 "IntegralNoah_Narration_11_1_0012"
+# textwindow "normal"
+@
+一方、ユグドラシル内部では、
+アルマスとラグナロクが
+ティルフィングを追っていた
+
+;;ナレーション
+# voice 9921 "IntegralNoah_Narration_11_1_0013"
+@
+運命の糸が織り成し続ける――
+
+;;//ユグドラシル内部
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "yggdrasill_interior"
+# move 5103621 2 0
+# face 5103621 "normal"
+# alpha 5103621 1 0
+# mask 5103621 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0
+# mask 196 on
+# waitandnext 0.2
+
+# se "SE_9139"
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm437" "BgmIntegralNoahEvent005" 0
+# voice 9943 "almace_navikan_0001"
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+かなり記録を遡ってきたと思うけど
+今、どのくらい…？
+
+# textboxarrow 0 1
+@ラグナロク
+そうね…
+もうじき私達キル姫が存在しなかった
+時代に入る
+
+# textboxarrow 0 1
+@ラグナロク
+神魔契約が結ばれた頃よ
+
+# textboxarrow 0 3
+@アルマス
+それって、神魔大戦の終わりって
+ことよね…
+
+# voice 9943 "almace_navikan_0022"
+# face 196 "sad"
+# textboxarrow 0 3
+@アルマス
+これから、あの長い神魔大戦の時代を
+遡るってこと？
+気が遠くなるわ…
+
+# textboxarrow 0 1
+@ラグナロク
+一つ一つの記録に囚われていたら
+膨大な時間を費やすことになる
+意識しすぎないよう、気をつけて
+
+# textboxarrow 0 1
+@ラグナロク
+私達の目的はティルフィングに
+追いつくことなのだから
+
+# voice 9943 "almace_navikan_0004"
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+分かってる
+でも、勝手に頭の中に流れ込んで
+くるときがあるのよっ
+
+# textboxarrow 0 3
+@アルマス
+ユグドラシルに蓄積された情報が
+こんなにたくさんあっただなんて…
+
+# textboxarrow 0 1
+@ラグナロク
+世界の始まりからある存在だもの
+ユグドラシルは全てを見守って――
+
+;;//神魔大戦の背景があれば（それらしい戦闘風景）
+;;//背景：遺跡もしくは荒野
+;;//魔獣や悪魔と天使が戦う描写
+;;//SE：剣戟、術発動音、爆発音など神と悪魔の戦闘を沸騰させる音 
+# se "SE_11324"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1.2
+
+# background "wild"
+# alpha 5103621 0 0
+# alpha 196 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# se "SE_0984"
+# waitandnext 2
+
+# voice 9972 "michael_0015"
+# move 960029 2 0
+# alpha 960029 1 0.5
+# mask 960029 on
+# move 960028 4 0
+# alpha 960028 1 0.5
+# mask 960028 on
+# textboxarrow 0 1
+# textwindow "normal"
+@ミカエル
+皆が生き存えるために、
+全てを管理すべきなのです
+まだそれが分からないのですかっ？
+
+;;ルシファー（地上編ルシファー）
+# voice 8032 "lucifer_0007"
+# textboxarrow 0 3
+@ルシファー 
+愚かだな
+滅びに瀕しても生き存える者だけが
+生き延びれば良いのだ
+
+;;//ユグドラシル内部
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1.2
+
+# background "yggdrasill_interior"
+# alpha 960029 0 0
+# alpha 960028 0 0
+# move 5103621 2 0
+# face 5103621 "sad"
+# alpha 5103621 1 0
+# mask 5103621 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0
+# mask 196 on
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+ラグナロク！
+
+# voice 1036 "ragnarok_0031"
+# face 5103621 "normal"
+# textboxarrow 0 1
+@ラグナロク
+…ごめんなさい、アルマス
+囚われかけていたわ
+
+;;ラグナロク（独白）
+# voice 1036 "ragnarok_0028"
+# move 5103621 2 0
+# textboxarrow 0 0
+# textwindow "moya"
+@ラグナロク
+今の記録は、神魔大戦中のもの…
+あの二体は何の話をしていたの？
+
+;;//背景：教会
+;;//エイレーネの立ち絵あり、名前は？？？で伏せる形で
+# se "SE_11324"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1.2
+
+# background "006_church"
+# alpha 5103621 0 0
+# alpha 196 0 0
+# move 132 3 0
+# face 132 "normal"
+# alpha 132 1 0
+# mask 132 off
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;？？？（エイレーネ）
+# voice 9976 "eirene_0030"
+# textboxarrow 0 2
+# textwindow "normal"
+@？？？
+貴方達の献身に感謝します
+どうか、世界をお願いね 
+
+;;？？？（エイレーネ）
+# face 132 "sad"
+# textboxarrow 0 2
+@？？？
+私には…もう平和を維持することが
+できそうにないから…
+
+;;//背景：ユグドラシル内部
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1.2
+
+# background "yggdrasill_interior"
+# alpha 132 0 0
+# move 5103621 2 0
+# face 5103621 "normal"
+# alpha 5103621 1 0
+# mask 5103621 on
+# move 196 4 0
+# face 196 "surprise"
+# alpha 196 1 0
+# mask 196 on
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+…ハッ！
+今のは…誰…？
+
+# textboxarrow 0 1
+@ラグナロク
+気をしっかり持って、アルマス！
+神魔大戦の時代を過ぎたわ
+ここから先は…
+
+# textboxarrow 0 1
+@ラグナロク
+人間も動物も存在していない時代…
+神々すら少なかった創世期よ
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+創世期…世界の始まりまで、
+もうすぐってことね
+
+# voice 1036 "ragnarok_0003"
+# textboxarrow 0 1
+@ラグナロク
+ええ…
+それまでにティルフィングに
+追いつければいいのだけど…
+
+# textboxarrow 0 3
+@アルマス
+いっそ、世界の始まりを見てみたい
+気持ちもあるけどねっ
+
+# face 5103621 "surprise"
+# textboxarrow 0 1
+@ラグナロク
+それは…
+あ！アルマスっ
+
+;;//背景：平原
+# se "SE_9139"
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "plain"
+# alpha 5103621 0 0
+# alpha 196 0 0
+# move 5101431 3 0
+# face 5101431 "normal"
+# alpha 5101431 1 0
+# mask 5101431 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgmfile "bgm410_1" "BgmIntegralNoahBattle001" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+…………
+
+# move 5103621 1 0
+# face 5103621 "normal"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# mask 5101431 on
+# move 196 5 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+追いついたわよ、ティルフィング！
+
+# textboxarrow 0 1
+@ラグナロク
+ここは…世界が生まれて間もない
+頃のようね…
+
+# textboxarrow 0 2
+@ティルフィング
+やはり、アナタ達も来たんですね
+
+# textboxarrow 0 2
+@ティルフィング
+あと少しで「世界の始まり」を
+観測することができたのですけれど…
+
+# textboxarrow 0 2
+@ティルフィング
+少し準備に手間取ってしまいました
+
+# voice 9943 "almace_navikan_0035"
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+準備？
+ここまで来ておいて、
+今更、何を準備するっていうの？
+
+# textboxarrow 0 2
+@ティルフィング
+アナタ達も知っているはずですよ
+“終焉”に対する準備です

@@ -1,0 +1,543 @@
+;;-----------------------------------------
+;;■リル＝ティルフィングキャラシナリオ
+;;【ＥＰ２】戦闘後
+;;スクリプト最後の背景：森
+;;背景：洞穴
+;;-----------------------------------------
+# script "lisp"
+# background "101_cave"
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;ティルフィング（新生バージョン）
+# body 3101411
+# pos 3101411 3
+# scale 3101411 0.8 0
+# layer 3101411 2
+# alpha 3101411 0 0
+# mask 3101411 off
+# face 3101411 "normal"
+;;ティルフィング（ゴッドティルフィングバージョン）
+# body 101415
+# pos 101415 3
+# scale 101415 0.8 0
+# layer 101415 2
+# alpha 101415 0 0
+# mask 101415 off
+# face 101415 "normal"
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 2
+# alpha 24 0 0
+# mask 24 off
+# face 24 "normal"
+;;ナディア
+# body 136
+# pos 136 3
+# scale 136 0.8 0
+# layer 136 2
+# alpha 136 0 0
+# mask 136 off
+# face 136 "normal"
+;;レーヴァテイン
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# layer 3100211 1
+# alpha 3100211 0 0
+# mask 3100211 off
+# face 3100211 "normal"
+;;ムー
+# body 161
+# pos 161 3
+# scale 161 0.6 0
+# layer 161 3
+# alpha 161 0 0
+# mask 161 off
+# face 161 "normal"
+;;ヘレナ
+# body 3302811
+# pos 3302811 3
+# scale 3302811 0.8 0
+# layer 3302811 2
+# alpha 3302811 0 0
+# mask 3302811 off
+# face 3302811 "normal"
+;;カリス
+# body 3602511
+# pos 3602511 3
+# scale 3602511 0.8 0
+# layer 3602511 2
+# alpha 3602511 0 0
+# mask 3602511 off
+# face 3602511 "normal"
+;;ソロモン
+# body 3503111
+# pos 3503111 3
+# scale 3503111 0.8 0
+# layer 3503111 1
+# alpha 3503111 0 0
+# mask 3503111 off
+# face 3503111 "normal"
+;;-----------------------------------------
+;;ティルフィング一枚絵
+# imageset 0 "c3101411"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;【ＥＰ２】戦闘後-------------------------
+;;EP2（後半）　タイトル：
+;;//背景：洞穴
+# voice 5031 "solomon_t_0002"
+# move 3602511 1 0
+# face 3602511 "normal"
+# alpha 3602511 1 0
+# mask 3602511 on
+# move 3503111 3 0
+# face 3503111 "happy"
+# alpha 3503111 1 0
+# mask 3503111 on
+# textflame 1 1
+# textboxarrow 0 2
+# move 136 5 0
+# face 136 "normal"
+# alpha 136 1 0
+# mask 136 on
+@ソロモン
+話は聞かせてもらったわ！
+
+# voice 6025 "chalice_t_0025"
+# face 3602511 "surprise"
+# textboxarrow 0 1
+@カリス
+わ！
+ソロモン、どうしたの～っ？
+
+# voice 5031 "solomon_t_0004"
+# textboxarrow 0 2
+@ソロモン
+ティルフィングが覚醒しない原因を
+私なりに分析していたのだけれど
+謎は全て解けたみたいね
+
+# voice 9968 "nadia_0003"
+# textboxarrow 0 3
+@ナディア
+はい…
+私自身の問題だったんです…
+
+# face 3602511 "normal"
+# textboxarrow 0 1
+@カリス
+ナディアは何も悪くないよ～
+
+# face 3503111 "normal"
+# textboxarrow 0 2
+@ソロモン
+ナディアの恐れ…目覚めない
+ティルフィング…導き出される
+最適解は…時期尚早よ！
+
+# face 3503111 "happy"
+# textboxarrow 0 2
+@ソロモン
+ナディア、焦ることはないわ
+無理に『鍵』としての役割を
+果たそうとしても上手くいかない
+
+# textboxarrow 0 2
+@ソロモン
+きっとまだ時間はあるわ
+自分の中で折り合いがつくまで
+ここでゆっくりしていって
+
+# voice 6025 "chalice_t_0049"
+# textboxarrow 0 1
+@カリス
+それってわたしが言ったのと
+ほとんど同じだよ～っ
+
+# voice 5031 "solomon_t_0022"
+# face 3503111 "surprise"
+# textboxarrow 0 2
+@ソロモン
+えっ…そうなの…！？
+
+# voice 9968 "nadia_0004"
+# textboxarrow 0 3
+@ナディア
+ふふふ
+二人とも、ありがとうございます
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 3602511 0 0
+# alpha 3503111 0 0
+# alpha 136 0 0
+# move 161 1 0
+# face 161 "normal"
+# alpha 161 1 0.5
+# mask 161 on
+# move 3100211 1 0
+# face 3100211 "normal"
+# alpha 3100211 1 0
+# mask 3100211 on
+# move 3302811 3 0
+# face 3302811 "usual"
+# alpha 3302811 1 0
+# mask 3302811 on
+# move 136 5 0
+# face 136 "normal"
+# alpha 136 1 0
+# mask 136 on
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 310021 "revatein_ge_0077"
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 1
+@レーヴァテイン
+カリス達から話は聞いたわ
+焦ることないから…
+
+# voice 9968 "nadia_0032"
+# textboxarrow 0 3
+@ナディア
+お心遣い感謝致します
+
+# face 3302811 "normal"
+# textboxarrow 0 2
+@ヘレナ
+レーヴァもカリスもソロモンも
+お人好しだね
+
+# voice 3028 "herena_a_0004"
+# textboxarrow 0 2
+@ヘレナ
+本当は早くティルフィングに目覚めて
+もらいたいと思ってるのに…ふふっ
+
+# voice 9953 "mwu_0044"
+# textboxarrow 0 1
+@ムー
+おいおい！
+そういうこと言うんじゃねぇよ！
+
+# textboxarrow 0 3
+@ナディア
+いえ、良いんです…
+ヘレナ、はっきり言ってくれて
+ありがとうございます
+
+# textboxarrow 0 2
+@ヘレナ
+ヘレナにお礼を言うなんて、
+君は変わってるね…くふっ
+
+# voice 9968 "nadia_0002"
+# textboxarrow 0 3
+@ナディア
+しばらく…ティルフィングと
+二人きりにさせていただけませんか
+
+# voice 310021 "revatein_ge_0032"
+# textboxarrow 0 1
+@レーヴァテイン
+いいわよ…
+みんな…行こう
+
+;;//レーヴァテイン達が立ち去る
+# alpha 161 0 0.5
+# alpha 3302811 0 0.5
+# alpha 3100211 0 0.5
+# waitandnext 0.5
+
+# move 136 3 0.5
+# face 136 "sad"
+# textboxarrow 0 2
+@ナディア
+ティルフィング…
+私は、あなたと一つになるのが怖い…
+そのことを認めます
+
+# textboxarrow 0 2
+@ナディア
+あなたはこんな弱い私を…
+受け入れてくれるのでしょうか…？
+
+;;//暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+;;//天上編でのシーンを幾つか
+;;シーン1
+# background "flower_garden"
+# alpha 136 0 0
+# move 24 3 0
+# face 24 "normal"
+# alpha 24 1 0
+# mask 24 off
+# waitandnext 0.1
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+;;シーン2
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# background "ghost_town"
+# waitandnext 0.1
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;シーン3
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# background "castle_wall"
+# waitandnext 0.1
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;//暗転
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagelayer 1 1
+# fadeout "black" 1
+# waitandnext 1.2
+
+# subfillrect 0 "blue" 0 0 0.3
+# background "forest"
+# alpha 24 0 0
+# move 136 3 0
+# face 136 "surprise"
+# alpha 136 1 0
+# mask 136 off
+# waitandnext 0.1
+
+# imagealpha 1 1 0
+# imagepos 1 0 30
+# envbody 1000 8 1
+# effectpattern 1000 1 1
+# effectstart 1000
+# fadein "black" 1
+# waitandnext 1
+
+;;//背景：森（幻想的な感じのものがあれば）
+# voice 9968 "nadia_0023"
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 2
+@ナディア
+今のは、夢…？
+えっ？
+ここは…どこですかっ？
+
+# face 136 "sad"
+# textboxarrow 0 2
+@ナディア
+とても静謐なところ…
+でも、何だか胸騒ぎがします…
+
+# textboxarrow 0 2
+@ナディア
+向こう…？
+向こうに…私の求めるものが
+あるというの…？
+
+;;//ナディアが歩いていく
+# textboxarrow 0 0
+# leftout 136 1
+# waitandnext 1
+
+;;//天上編でのシーンを幾つか
+# alpha 136 0 0
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1.2
+
+;;シーン1
+# background "castle_town"
+# move 101415 3 0
+# face 101415 "normal"
+# alpha 101415 1 0
+# mask 101415 off
+# waitandnext 0.1
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+;;シーン2
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# background "imperial_city"
+# waitandnext 0.1
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;シーン3
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# background "underwild"
+# waitandnext 0.1
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+# background "forest"
+# alpha 101415 0 0
+# move 136 3 0
+# alpha 136 1 0
+# mask 136 off
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 2
+@ナディア
+ああ、ここはティルフィングの
+記憶の中なのですね
+
+# face 136 "sad"
+# textboxarrow 0 2
+@ナディア
+いつの間にか彼女と繋がったという
+こと？それとも何か別の力が…
+
+# face 136 "surprise"
+# textboxarrow 0 2
+@ナディア
+あ！
+あそこにある棺のような容れ物
+洞穴にあったものと同じですっ
+
+# face 136 "normal"
+# textboxarrow 0 2
+@ナディア
+ひょっとして…ああ、やっぱり！
+ティルフィングが眠っています
+
+# face 136 "sad"
+# textboxarrow 0 2
+@ナディア
+ティルフィング…
+分かたれた、もう一人の私
+
+# textboxarrow 0 2
+@ナディア
+ここであなたに触れれば、
+目を覚ましていただけるのかも…
+そうしたら私は…
+
+# face 136 "normal"
+# textboxarrow 0 2
+@ナディア
+いいえ
+ここで躊躇う理由はありません
+皆の思いに答えるためにもっ
+
+# textboxarrow 0 2
+@ナディア
+ティルフィング、起きて下さい
+ティルフィングっ
+
+# serif 1
+@ティルフィング
+………………んんっ
+
+# serif 1
+# textwindow "close"
+# textboxarrow 0 2
+# serif 0
+@ナディア
+ティルフィング！
+
+;;//ティルフィングの姿が変わる
+# face 136 "surprise"
+# textboxarrow 0 2
+@ナディア
+あ、目を覚まして…
+えっ…？
+姿が変わっていきますっ
+
+# textboxarrow 0 2
+@ナディア
+どうしてっ？
+まるで幼子に戻るみたいに…
+ティルフィング！
+
+;;//ティルフィングが目を覚ます
+# alpha 136 0 0.5
+# move 3101411 3 0
+# face 3101411 "normal"
+# alpha 3101411 1 0.5
+# mask 3101411 off
+# textboxarrow 0 2
+@ティルフィング
+…………
+
+# move 3101411 2 0.5
+# alpha 3101411 1 0.5
+# mask 3101411 on
+# move 136 4 0
+# alpha 136 1 0.5
+# mask 136 on
+# textboxarrow 0 3
+@ナディア
+おはようございます、
+ティルフィング
+あの…その姿は…
+
+# textboxarrow 0 1
+@ティルフィング
+…………覚醒を確認
+上体を起こします
+
+# voice 9968 "nadia_0023"
+# face 136 "surprise"
+# textboxarrow 0 3
+@ナディア
+えっ…？
+何だか、無機質な声…
+
+# textboxarrow 0 1
+@ティルフィング
+起床しました
+質問、アナタは誰ですか？
+
+;;一枚絵ボイス：ティルフィング「むぅ…」
+;;：tyrufing_lo_0013
+;;ホワイトアウト
+# effectskip 1000
+# textflame 0 0
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# fadein "white" 3
+# buttonsout 0 0
+# textwindow "close"
+# voice 310141 "tyrufing_lo_0013"
+
+# frameout 0 1
+# waitandnext 0.8
+
+# fadeout "black" 1.5
+# waitandnext 1.5

@@ -1,0 +1,668 @@
+;;-----------------------------------------
+;;SEA1章_18
+;;-----------------------------------------
+# script "lisp"
+# background "sea_town_night"
+# bgm "bgm029_030" 0
+;;-----------------------------------------
+;;レーヴァテイン
+# body 100221
+# pos 100221 5
+# scale 100221 0.8 0
+# layer 100221 3
+# alpha 100221 0 0
+;;グングニル
+# body 300841
+# pos 300841 4
+# scale 300841 0.8 0
+# layer 300841 1
+# mask 300841 off
+# alpha 300841 0 0
+;;与一
+# body 6400511
+# pos 6400511 2
+# scale 6400511 0.8 0
+# layer 6400511 3
+# alpha 6400511 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：町（夜）
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 1
+
+;;炎上演出
+# fadein "red" 1
+# envbody 1001 7 0
+# effectstart 1001
+# se "SE_0753"
+# shake 0 0.5
+# subfillrect 0 "red" 0.2 0 0.4
+# waitandnext 1.5
+
+# serif 1
+# textwindow "toge"
+@炎の巨人
+ガアアアアアアアアアア！
+
+# face 6400511 "normal"
+# face 300841 "angry"
+# alpha 6400511 1 0.3
+# alpha 300841 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+@グングニル
+与一！
+そちらに向かったぞ
+準備は良いか？
+
+# voice 4005 "yoichi_0032"
+# textboxarrow 0 1
+@与一
+はい！
+ここからなら、確実に射抜けます
+
+# face 300841 "normal"
+# textboxarrow 0 3
+@グングニル
+我らの住む町を襲うとは、
+あの巨人も愚かよな
+
+# face 300841 "usual"
+# textboxarrow 0 3
+@グングニル
+与一よ
+巨人の頭に良い目印がある
+
+# textboxarrow 0 3
+@グングニル
+先程、そなたの家を巨人が破壊した
+折、引っ掛かったものだろう
+
+# textboxarrow 0 1
+@与一
+頭に目印ですね
+分かりました！
+
+# move 300841 5 0.5
+# alpha 300841 0 0.3
+# move 6400511 1 0.5
+# alpha 6400511 0 0.3
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "toge"
+@炎の巨人
+ガアアアアアアアアアアア！
+
+# move 300841 3 0
+# mask 300841 off
+# move 6400511 3 0
+# mask 6400511 off
+# face 6400511 "normal"
+# alpha 6400511 1 0.3
+# se "SE_4300"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@与一
+近づいてきた…
+えっと
+頭にある目印は…
+
+# face 6400511 "surprise"
+# textboxarrow 0 2
+@与一
+えっ…
+あれ、与一の扇…
+扇が巨人の頭にくっついてる…
+
+# voice 4005 "yoichi_0015"
+# face 6400511 "sad"
+# textboxarrow 0 2
+@与一
+あうぅ…
+
+# voice 3008 "gunguniru_0022"
+# alpha 6400511 0 0.3
+# face 300841 "angry"
+# alpha 300841 1 0.3
+# textboxarrow 0 2
+@グングニル
+与一、どうしたっ？
+早う射るのだ！
+
+# voice 4005 "yoichi_0024"
+# face 6400511 "sad"
+# alpha 6400511 1 0.3
+# alpha 300841 0 0.3
+# textboxarrow 0 2
+@与一
+はぅ！
+そ…そうです…与一はっ
+
+;;与一が矢を外す
+# se "SE_4301"
+# fadein "white" 0.5
+# textboxarrow 0 0
+# waitandnext 0.8
+
+# face 6400511 "surprise"
+# textboxarrow 0 2
+@与一
+あ…
+
+# voice 3008 "gunguniru_0011"
+# alpha 6400511 0 0.3
+# face 300841 "angry"
+# alpha 300841 1 0.3
+# textboxarrow 0 2
+@グングニル
+何だと…
+与一があの距離で外すなど
+考えられぬ
+
+# textboxarrow 0 2
+@グングニル
+何をしておる、与一！
+
+# se "SE_4300"
+# face 6400511 "sad"
+# alpha 6400511 1 0.3
+# alpha 300841 0 0.3
+# textboxarrow 0 2
+@与一
+ごめんなさい…
+もう一度…
+
+# voice 3008 "gunguniru_0012"
+# alpha 6400511 0 0.3
+# face 300841 "angry"
+# alpha 300841 1 0.3
+# textboxarrow 0 2
+@グングニル
+愚か者！
+もう間に合わぬ
+早くそこから離れるのだ！
+
+# alpha 300841 0 0.3
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "toge"
+@炎の巨人
+ガアアアアアアアアアアア！
+
+# se "SE_5224"
+# move 300841 4 0
+# layer 300841 3
+# mask 300841 on
+# face 300841 "angry"
+# alpha 300841 1 0.3
+# move 6400511 2 0
+# layer 6400511 2
+# mask 6400511 off
+# face 6400511 "sad"
+# alpha 6400511 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@与一
+ああっ…
+
+# voice 3008 "gunguniru_battle_0002"
+# textboxarrow 0 3
+@グングニル
+やあっ！
+
+# se "SE_9021"
+# move 300841 3 0.2
+# move 6400511 1 0.3
+# textboxarrow 0 0
+# waitandnext 0.2
+
+;;グングニルが与一を庇う
+# se "SE_5620"
+# fadein "red" 0.5
+# waitandnext 0.5
+
+# voice 3008 "gunguniru_0038"
+# textboxarrow 0 2
+@グングニル
+ぬうっ…
+
+;;グングニルが吹き飛ばされる
+# move 300841 4 0.5
+# scale 300841 0.7 0.5
+# alpha 300841 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# move 6400511 3 0.5
+# face 6400511 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 2
+@与一
+グングニルさん…！
+
+# voice 4005 "yoichi_0038"
+# face 6400511 "sad"
+# textboxarrow 0 2
+@与一
+ああ…やっぱり与一は…
+ダメダメです…
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "toge"
+@炎の巨人
+ガアアアアアアアアアアアア！！
+
+# scale 100221 0.7 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@与一
+与一が、射抜けなかったせいで…
+
+;;レーヴァテインが歩いてくる
+# move 6400511 2 0.5
+# move 100221 4 0.5
+# scale 100221 0.8 0.5
+# face 100221 "sad"
+# alpha 100221 1 0.5
+# se "SE_0740"
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# voice 1002 "revatein_0013"
+# textboxarrow 0 3
+@レーヴァテイン
+はぁ…
+めんどくさいなぁ
+
+# face 6400511 "surprise"
+# textboxarrow 0 1
+@与一
+レーヴァテインさん…
+
+# shake 0 1
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "toge"
+@炎の巨人
+ガアアアアアアアアア！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 6400511 "normal"
+# textwindow "nomal"
+# textboxarrow 0 1
+@与一
+あ…危ないです…！
+
+# se "SE_5205"
+# face 100221 "normal"
+# textboxarrow 0 3
+@レーヴァテイン
+あなたは…とっとと、消えて…
+
+# se "SE_4000"
+# alpha 6400511 0 0.3
+# move 100221 3 0.5
+# textboxarrow 0 0
+# waitandnext 0.5
+
+;;雷演出あれば
+# fadein "white" 2
+# scale 100221 0.9 0.2
+# se "SE_12082"
+# effectskip 1001
+# waitandnext 0.2
+
+# scale 100221 0.8 0.5
+# waitandnext 1.8
+
+# sestop "SE_0753"
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+@炎の巨人
+ガアアアアアアアアアア…
+
+# voice 4005 "yoichi_0039"
+# face 6400511 "surprise"
+# alpha 6400511 1 0.3
+# move 100221 4 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@与一
+炎の巨人が…消えました…
+すごい…
+
+# face 6400511 "usual"
+# textboxarrow 0 1
+@与一
+すごいです…
+レーヴァテインさん
+
+# voice 1002 "revatein_0013"
+# textsize 20
+# face 100221 "sad"
+# textboxarrow 0 3
+@レーヴァテイン
+はぁ…
+……たな
+このままだと…
+
+# textsize 24
+# face 6400511 "surprise"
+# textboxarrow 0 1
+@与一
+え…？
+
+;;レーヴァテインが立ち去る
+# move 100221 5 0.5
+# scale 100221 0.6 1
+# alpha 100221 0 0.5
+# se "SE_0740"
+# waitandnext 0.7
+
+# move 6400511 3 0.5
+# textboxarrow 0 2
+@与一
+あ、レーヴァテインさん…
+レーヴァテインさん…！
+どちらにっ…
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：町
+# background "006_town2"
+# subfillrect 0 "red" 0 0.4 0
+# se "SE_6170"
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# face 6400511 "normal"
+# alpha 6400511 1 0.5
+# waitandnext 1
+
+# voice 4005 "yoichi_battle_0001"
+# se "SE_4300"
+# textwindow "nomal"
+# textboxarrow 0 2
+@与一
+はっ！
+
+# se "SE_4301"
+# fadein "white" 0.3
+# waitandnext 0.5
+
+# voice 4005 "yoichi_battle_0001"
+# se "SE_4300"
+# textboxarrow 0 2
+@与一
+やあっ！
+
+# se "SE_4301"
+# fadein "white" 0.3
+# waitandnext 0.5
+
+# voice 4005 "yoichi_unit_0009"
+# se "SE_4300"
+# textboxarrow 0 2
+@与一
+これで…仕留める！
+
+# se "SE_4301"
+# fadein "white" 0.8
+# waitandnext 1.2
+
+# face 6400511 "usual"
+# textboxarrow 0 2
+@与一
+ふぅ…
+少し休憩しよっと
+
+# textboxarrow 0 2
+@与一
+…うん
+今日もちゃんと鍛錬できてる
+
+# bgm "bgm003" 0
+# sestop "SE_6170"
+# move 6400511 3 0
+# face 6400511 "sad"
+# textwindow "moya"
+# textboxarrow 0 0
+@与一
+あれから、町は変わったなぁ
+
+@与一
+四方に高い壁を造ってる…
+やっぱり、あの巨人対策だよね
+
+@与一
+あのときは
+レーヴァテインさんのお陰で
+助かったけど…
+
+@与一
+与一は、もう二度と
+あんな失敗をしたくない…
+
+# se "SE_6170"
+# face 6400511 "usual"
+# textwindow "nomal"
+# textboxarrow 0 2
+@与一
+毎日、鍛錬してるんだから、
+きっと大丈夫！
+
+# textboxarrow 0 2
+@与一
+大丈夫…だよね？
+
+# move 100221 5 0
+# layer 100221 2
+# scale 100221 0.8 0
+# alpha 6400511 0 0.3
+# textwindow "close"
+# waitandnext 0.8
+
+;;画面端にレーヴァテインが現れる
+# bgm "stop"
+# move 100221 4 0.5
+# face 100221 "sad"
+# alpha 100221 1 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 3
+@レーヴァテイン
+…………
+
+# voice 4005 "yoichi_0024"
+# move 100221 5 0.5
+# alpha 100221 0 0.5
+# face 6400511 "surprise"
+# alpha 6400511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@与一
+はぅ！
+…あそこにいるの、
+レーヴァテインさんだ
+
+# face 6400511 "sad"
+# textboxarrow 0 2
+@与一
+あの木の上でお昼寝してたの
+全然、気づいてなかった…
+
+# textboxarrow 0 2
+@与一
+どうしよう…
+与一、うるさかったかも…
+怒ってないかな…
+
+# move 6400511 2 0.5
+# alpha 6400511 0 0.3
+# move 100221 4 0.5
+# face 100221 "sad"
+# alpha 100221 1 0.5
+# textboxarrow 0 3
+@レーヴァテイン
+…………
+
+# move 100221 5 0.5
+# alpha 100221 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# voice 4005 "yoichi_0015"
+# move 6400511 3 0.5
+# face 6400511 "sad"
+# alpha 6400511 1 0.3
+# textwindow "moya"
+# textboxarrow 0 0
+@与一
+あうぅ…
+場所、変えた方が良いよね
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# sestop "SE_6170"
+# bgm "bgm002" 0
+# alpha 6400511 0 0
+# waitandnext 0.2
+
+# se "SE_6170"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 6400511 "normal"
+# alpha 6400511 1 0.5
+# waitandnext 0.5
+
+# voice 4005 "yoichi_battle_0001"
+# se "SE_4300"
+# textwindow "nomal"
+# textboxarrow 0 2
+@与一
+はっ！
+
+# se "SE_4301"
+# fadein "white" 0.3
+# waitandnext 0.5
+
+# face 6400511 "usual"
+# textboxarrow 0 2
+@与一
+うん
+今日も良い調子
+ちゃんと集中できてる
+
+# face 6400511 "sad"
+# textboxarrow 0 2
+@与一
+…でも、やっぱり不安だな
+どうしたら自信を持てるんだろう
+
+# move 6400511 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+@与一
+どれだけ鍛錬をしても、
+胸の奥にある不安が拭えない…
+
+# move 100221 5 0
+# layer 100221 2
+# scale 100221 0.8 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@与一
+もっと自信を持てたらいいのになあ…
+
+;;レーヴァテインが画面の端に現れる
+# alpha 6400511 0 0.3
+# textwindow "close"
+# waitandnext 0.8
+
+# move 100221 4 0.5
+# face 100221 "sad"
+# alpha 100221 1 0.5
+# waitandnext 2
+
+# voice 4005 "yoichi_0024"
+# move 100221 5 0.5
+# alpha 100221 0 0.5
+# face 6400511 "surprise"
+# alpha 6400511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@与一
+はぅ！
+あそこにいるのは…
+
+# face 6400511 "sad"
+# textboxarrow 0 2
+@与一
+ううっ…
+やっぱりレーヴァテインさんだよぉ
+何でぇ…
+
+# textboxarrow 0 2
+@与一
+お昼寝の邪魔にならないよう、
+場所を変えて鍛錬してるのに…
+
+# textboxarrow 0 2
+@与一
+近頃、毎日レーヴァテインさんと
+同じところに来ちゃうよぉ…
+
+# textboxarrow 0 2
+@与一
+わざとじゃないんだって
+謝った方がいいかな？
+だけど…
+
+# textboxarrow 0 2
+@与一
+話しかけるのも畏れ多いし…
+
+# fadeout "black" 0.5
+# waitandnext 0.5

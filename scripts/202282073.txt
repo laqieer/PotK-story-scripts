@@ -1,0 +1,219 @@
+;;-----------------------------------------
+;;鎌倉7_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm063" "BgmMizugi001" 0
+;;-----------------------------------------
+;;鎌倉ヘレナ
+# body 6302811
+# pos 6302811 4
+# scale 6302811 0.8 0
+# layer 6302811 4
+# alpha 6302811 0 0
+;;鎌倉ニール
+# body 323
+# pos 323 2
+# scale 323 0.8 0
+# layer 323 5
+# mask 323 off
+# alpha 323 0 0
+;;鎌倉リサナウト
+# body 6203011
+# pos 6203011 1
+# scale 6203011 0.7 0
+# layer 6203011 3
+# alpha 6203011 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：beach
+# textwindow "close"
+# waitandnext 0.2
+
+# background "beach"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# face 6302811 "happy"
+# alpha 6302811 1 0
+# alpha 323 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 530281 "herena_di_0002"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+これでマナは十分たまっただろ
+リサナウトは放っておいて
+ヘレナ達だけで帰ろうか…くふっ
+
+# voice 9952 "nir_0005"
+# textboxarrow 0 1
+@ニール
+ナイスアイディアね、ヘレナ！
+そうしましょっ
+
+# face 6302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+ここをタップすれば…
+
+# se "SE_12406"
+# textboxarrow 0 0
+# waitandnext 1
+
+# voice 530281 "herena_di_0013"
+# face 6302811 "sad"
+# textboxarrow 0 3
+@ヘレナ
+起動しない…
+これ、本当に直ってるのか？
+
+;;リサナウトが現れる
+# se "SE_5373"
+# scale 6203011 0.8 1
+# face 6203011 "usual"
+# alpha 6203011 1 0.3
+# move 6302811 5 0.5
+# move 323 3 0.5
+# textboxarrow 0 1
+@リサナウト
+装置の修理は完了してるわ
+起動できないのは、別の理由よ
+
+# textboxarrow 0 2
+@ニール
+マナが足りないんでしょ
+でも、十分集めたはずよ！
+
+# voice 520301 "risanautr_ca_0032"
+# face 6203011 "normal"
+# textboxarrow 0 1
+@リサナウト
+そうね
+マナは十分よね
+それなら別に理由があるのよ
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# textboxarrow 0 1
+@リサナウト
+ヘレナもニールも、
+思い当たることがあるでしょ
+
+# voice 530281 "herena_di_0022"
+# textboxarrow 0 3
+@ヘレナ
+思い当たること？
+…特に、ないな
+
+# voice 9952 "nir_0028"
+# textboxarrow 0 2
+@ニール
+アタチだって…
+
+# voice 520301 "risanautr_ca_0027"
+# face 6203011 "angry"
+# textboxarrow 0 1
+@リサナウト
+まだ自覚してないの？
+それとも、誤魔化してるの？
+
+# textboxarrow 0 1
+@リサナウト
+意地を張っていると、
+取り返しのつかないことになるわよ
+例えば…
+
+# textboxarrow 0 1
+@リサナウト
+ニールが消えてしまう、とか
+
+# face 6302811 "surprise"
+# textboxarrow 0 3
+@ヘレナ
+…………！？
+
+# textboxarrow 0 2
+@ニール
+…………！
+
+# bgm "bgm005" 0
+# face 6203011 "usual"
+# textboxarrow 0 1
+@リサナウト
+それがイヤなら、自分の気持ちを
+素直に――
+
+# voice 9952 "nir_0022"
+# textboxarrow 0 2
+@ニール
+アタチが消える？
+
+# voice 530281 "herena_di_0028"
+# face 6302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+やれやれ…
+さすがにヘレナもそういう冗談は
+笑えないな
+
+# textboxarrow 0 3
+@ヘレナ
+ニールは消えたりしないよ
+さっきのは、たまたま…
+
+# voice 9952 "nir_0027"
+# textboxarrow 0 2
+@ニール
+それがどうしたっていうの？
+アタチが消えても
+何の問題もないでしょ
+
+# voice 530281 "herena_di_0023"
+# face 6302811 "surprise"
+# textboxarrow 0 3
+@ヘレナ
+ニール！？
+
+# textboxarrow 0 2
+@ニール
+アタチが消えるのは
+仕方ないことなのよ、きっと
+
+# face 6302811 "angry"
+# textboxarrow 0 3
+@ヘレナ
+その冗談は笑えないって
+言ってるじゃな――
+
+;;爆発音
+# se "SE_5215"
+;;画面揺れ
+# shake 1 1
+# waitandnext 1
+
+# serif 1
+@人々
+キャアアアアアアアアア…！？
+
+# serif 0
+# face 6302811 "surprise"
+# textboxarrow 0 3
+@ヘレナ
+何だ…！？
+
+# serif 0
+# face 6203011 "sad"
+# textboxarrow 0 1
+@リサナウト
+…まずいわね
+
+# fadeout "black" 1
+# waitandnext 1

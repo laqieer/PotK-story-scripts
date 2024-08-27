@@ -1,0 +1,421 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１３章 章タイトル「ラルゴカタストロフィ―攪乱―」
+;;第2話－１１　タイトル：暴走の真実
+;;2_11_3
+;;スクリプト最後の背景：マサムネ城内
+;;-----------------------------------------
+# script "lisp"
+# background "masamune_arena"
+# bgmfile "bgm462_464_block" "BgmIntegralNoahDisrupters" 0
+;;-----------------------------------------
+;;異族化マサムネ
+# body 5100131
+# pos 5100131 3
+# scale 5100131 0.8 0
+# layer 5100131 2
+# alpha 5100131 0 0
+# mask 5100131 off
+;;異族化パラシュ
+# body 5200431
+# pos 5200431 3
+# scale 5200431 0.8 0
+# layer 5200431 2
+# alpha 5200431 0 0
+# mask 5200431 off
+;;ヘレナ・D. plug・ロキ
+# body 5302811
+# pos 5302811 3
+# scale 5302811 0.8 0
+# layer 5302811 2
+# alpha 5302811 0 0
+# mask 5302811 off
+;;ニール
+# body 162
+# pos 162 3
+# scale 162 0.8 0
+# layer 162 2
+# alpha 162 0 0
+# mask 162 off
+;;-----------------------------------------
+;;シナリオカット一枚絵
+# imageset 0 "integral_13"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+# se "bgm463_switch_2"
+# voice 510013 "masamune_iz_battle_0001"
+# move 5100131 2 0
+# face 5100131 "angry"
+# alpha 5100131 1 0
+# mask 5100131 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 5200431 4 0
+# face 5200431 "angry"
+# alpha 5200431 1 0
+# mask 5200431 on
+@マサムネ
+せいっ！
+
+# se "SE_10585"
+# waitandnext 0.5
+
+# voice 520043 "parashu_iz_battle_0001"
+# textboxarrow 0 3
+@パラシュ
+はぁっ！
+
+# se "SE_4100"
+# waitandnext 0.5
+
+;;//マサムネとパラシュの攻撃をヘレナが躱す
+# textwindow "close"
+# alpha 5100131 0 0.5
+# alpha 5200431 0 0.5
+# move 5302811 3 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 off
+# waitandnext 0.5
+
+# se "SE_5204"
+# rightout 5302811 0.5
+# waitandnext 0.5
+
+# voice 530281 "herena_di_0004"
+# alpha 5302811 0 0
+# move 5302811 2 0
+# face 5302811 "normal"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 1
+# move 162 4 0
+# alpha 162 1 0.5
+# mask 162 on
+# textwindow "normal"
+@ヘレナ
+ふふっ…
+凄まじい攻撃だな
+当たればひとたまりもない
+
+# voice 9952 "nir_0007"
+# textboxarrow 0 3
+@ニール
+当たればの話だけどね～
+
+# alpha 5302811 0 0.5
+# alpha 162 0 0.5
+# move 5100131 2 0
+# face 5100131 "angry"
+# alpha 5100131 1 0.5
+# mask 5100131 on
+# textboxarrow 0 1
+# move 5200431 4 0
+# face 5200431 "normal"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+@マサムネ
+そなたこそ逃げ回ってばかりで
+まるで戦う意思を感じられぬ…
+拙者達を愚弄するか！？
+
+# textboxarrow 0 3
+@パラシュ
+…違うよ、マサムネ
+彼女、ボク達の動きを操っているんだ
+
+# face 5200431 "angry"
+# textboxarrow 0 3
+@パラシュ
+そのせいでフライシュッツや
+スイハに攻撃できない…
+君は何なんだっ？
+
+# alpha 5100131 0 0.5
+# alpha 5200431 0 0.5
+# move 5302811 3 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 off
+# textboxarrow 0 2
+@ヘレナ
+ヘレナはヘレナだよ
+ヘレナ・D.plug・ロキだ
+
+# voice 530281 "herena_di_0007"
+# face 5302811 "normal"
+# textboxarrow 0 2
+@ヘレナ
+さあ、そろそろ終わりにしよう
+ヘレナは神をも凌駕する力を秘めて
+いるんだ…くふっ
+
+# alpha 5302811 0 0.5
+# move 5100131 3 0
+# face 5100131 "angry"
+# alpha 5100131 1 0.5
+# mask 5100131 off
+# textboxarrow 0 2
+@マサムネ
+吠えるな！
+
+# alpha 5100131 0 0.5
+# move 5302811 3 0
+# face 5302811 "normal"
+# alpha 5302811 1 0.5
+# mask 5302811 off
+# textboxarrow 0 2
+@ヘレナ
+ヘレナの一撃…見破れるかな
+
+;;//ヘレナの攻撃が床に刺さる
+# se "SE_0998"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;//この辺りからシナリオカット挿入シーンの想定です
+# se "bgm462_switch_2"
+# voice 510013 "masamune_iz_0004"
+# alpha 5302811 0 0.5
+# move 5100131 3 0
+# face 5100131 "happy"
+# alpha 5100131 1 0.5
+# mask 5100131 off
+# textboxarrow 0 2
+@マサムネ
+ふっ…
+どこを狙っておる
+
+# voice 530281 "herena_di_0007"
+# alpha 5100131 0 0.5
+# move 5302811 3 0
+# face 5302811 "normal"
+# alpha 5302811 1 0.5
+# mask 5302811 off
+# textboxarrow 0 2
+@ヘレナ
+避けられてしまったなぁ…くふっ
+
+# alpha 5302811 0 0.5
+# move 5200431 3 0
+# face 5200431 "surprise"
+# alpha 5200431 1 0.5
+# mask 5200431 off
+# textboxarrow 0 2
+@パラシュ
+ん…？
+
+;;//画面揺れ
+# textwindow "close"
+# alpha 5200431 0 0.5
+# waitandnext 0.5
+
+# se "SE_0918"
+#setnextbgmblock 2
+# shake 0 1.6
+# waitandnext 1
+
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 0
+# textwindow "normal"
+@ヘレナ
+それではアナタ達にヘレナの
+とっておきをお見せしよう
+
+# textboxarrow 0 0
+@マサムネ
+何だ、この揺れは…？
+徐々に大きくなっていく…！
+
+# textboxarrow 0 0
+@パラシュ
+おかしい…
+まるで城そのものが崩れかけて…
+
+# textboxarrow 0 0
+@パラシュ
+まさか…！？
+
+# textboxarrow 0 0
+@ヘレナ
+ヘレナがここに来て何日になるかな？
+アナタ達が放っておいてくれたお陰で
+時間は十分にあったぞ
+
+# textboxarrow 0 0
+@ニール
+ヘレナってば、人を驚かすためなら
+労力を惜しまないのよね
+
+# textboxarrow 0 0
+@ヘレナ
+この城中に仕掛けを施しておいた
+ある一点を壊すと、全てが崩壊する
+ようにな
+
+# textboxarrow 0 0
+@マサムネ
+そなた…もしや…
+
+# textboxarrow 0 0
+@ヘレナ
+ここだよ
+今、ヘレナが釘を突き刺した床
+ここが急所だ
+
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;//揺れが大きくなる
+# se "SE_0999"
+# shake 0 1
+# waitandnext 1
+
+# voice 530281 "herena_di_0030"
+# move 5100131 2 0
+# face 5100131 "normal"
+# alpha 5100131 1 0.5
+# mask 5100131 on
+# move 5302811 4 0
+# face 5302811 "normal"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 3
+# textwindow "normal"
+@ヘレナ
+避けてくれてありがとう、マサムネ
+お陰でしっかり急所を壊すことが
+できたぞ
+
+# face 5100131 "angry"
+# textboxarrow 0 1
+@マサムネ
+おのれぇ…！
+
+# textboxarrow 0 3
+@ヘレナ
+のんびりしていて良いのかな？
+ここはじきに崩れ落ちる
+
+# textboxarrow 0 1
+@マサムネ
+ならばそなた達も道連れに…！
+
+# voice 520043 "parashu_iz_0011"
+# alpha 5302811 0 0.5
+# move 5200431 4 0
+# face 5200431 "angry"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+# textboxarrow 0 3
+@パラシュ
+ダメだ、マサムネ
+それは理想に反する
+
+# textboxarrow 0 1
+@マサムネ
+止めるな！
+あの者だけはっ…
+
+# textboxarrow 0 3
+@パラシュ
+君の命を掛けるようなことじゃない
+逃げるんだ
+
+# face 5100131 "surprise"
+# textboxarrow 0 1
+@マサムネ
+そなた、今、何と…？
+
+# textboxarrow 0 3
+@パラシュ
+ボクは…理想のためなら一時の恥も
+受け入れるよ…
+それを糧としてより高みを目指すんだ
+
+# textboxarrow 0 3
+@パラシュ
+君は違うのか？
+
+# voice 510013 "masamune_iz_0013"
+# face 5100131 "angry"
+# textboxarrow 0 1
+@マサムネ
+ぬぅ…
+やむをえぬ…
+拙者も、この屈辱を胸に刻もう
+
+# textboxarrow 0 1
+@マサムネ
+ヘレナ…覚えておれ
+
+# voice 530281 "herena_di_0004"
+# alpha 5100131 0 0.5
+# alpha 5200431 0 0.5
+# move 5302811 3 0
+# face 5302811 "normal"
+# alpha 5302811 1 0.5
+# mask 5302811 off
+# textboxarrow 0 2
+@ヘレナ
+悪いけど、ヘレナは物覚えが悪いんだ
+…ふふっ
+
+# alpha 5302811 0 0.5
+# move 5100131 2 0
+# face 5100131 "normal"
+# alpha 5100131 1 0.5
+# mask 5100131 on
+# move 5200431 4 0
+# face 5200431 "angry"
+# alpha 5200431 1 0.5
+# mask 5200431 on
+# textboxarrow 0 3
+@パラシュ
+スイハもフライシュッツも
+命拾いしたね
+次は潰すよ
+
+;;//マサムネとパラシュが立ち去る
+# se "SE_0740"
+# textwindow "close"
+# alpha 5100131 0 0.5
+# alpha 5200431 0 0.5
+# waitandnext 0.5
+
+;;//揺れがさらに大きくなる
+# se "SE_0637"
+# shake 0 1
+# waitandnext 1
+
+# voice 9952 "nir_0044"
+# move 5302811 2 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# move 162 4 0
+# alpha 162 1 0.5
+# mask 162 on
+# textboxarrow 0 3
+# textwindow "normal"
+@ニール
+ヘレナ！
+アタチ達も早く脱出しないとっ

@@ -1,0 +1,712 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;２章１話　「エデンクライシス―覚醒―」
+;;第4話　タイトル：風雲！マサムネ城
+;;4_1
+;;スクリプト最後の背景：マサムネ城
+;;-----------------------------------------
+# script "lisp"
+# background "parchment_map02"
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;異族化アルマス（ナレーションのボイス用）
+# body 5103831
+# alpha 5103831 0 0
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;スイハ
+# body 401711
+# pos 401711 3
+# scale 401711 0.8 0
+# layer 401711 2
+# alpha 401711 0 0
+# mask 401711 off
+;;フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.8 0
+# layer 502711 2
+# alpha 502711 0 0
+# mask 502711 off
+;;ダモクレス
+# body 103511
+# pos 103511 3
+# scale 103511 0.8 0
+# layer 103511 2
+# alpha 103511 0 0
+# mask 103511 off
+;;ネス
+# body 602011
+# pos 602011 3
+# scale 602011 0.8 0
+# layer 602011 3
+# alpha 602011 0 0
+# mask 602011 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;ブリューナク
+# body 500721
+# pos 500721 3
+# scale 500721 0.8 0
+# layer 500721 2
+# alpha 500721 0 0
+# mask 500721 off
+;;フラガラッハ
+# body 101011
+# pos 101011 3
+# scale 101011 0.8 0
+# layer 101011 2
+# alpha 101011 0 0
+# mask 101011 off
+;;-----------------------------------------
+;;残り時間一枚絵
+# imageset 0 "integral_02_01"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;２章１話　「エデンクライシス―覚醒―」
+;;※緑字はナレーション部分となります。
+;;第4話　タイトル：風雲！マサムネ城
+;;//背景：新天上世界遠景
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_1_0001"
+# textflame 0 0
+@
+連合軍を壊滅させたパラシュと
+戦うため、アルマス達はフェルカの
+町を訪れる
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_1_0002"
+@
+そこは自身の理想を追求する者だけが
+暮らす町へと変貌を遂げていた
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_1_0003"
+@
+パラシュの味方をするキル姫、
+ブラフマーストラとヴァジュラに
+遭遇したアルマス達は
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_1_0004"
+@
+彼女達の火力の前に撤退を余儀なく
+された
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_1_0005"
+@
+逃げ込んだ森にはプタハが作り上げた
+村があった
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_1_0006"
+@
+そこでフェルカの町が変貌した理由を
+知ったアルマス達は改めてパラシュと
+戦うことを決意する
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_1_0007"
+@
+デオン大奏官の加勢もあり、
+パラシュとの戦いに勝利したかに
+見えたが
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_1_0008"
+@
+彼女はすでにフェルカでの選定を
+終えており、天上世界の一区画を
+砕いて移送しようとしていた
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_1_0009"
+@
+パラシュを止めるため、
+駆けつけたアルマス達だったが…
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_1_0010"
+@
+地盤は崩壊し、天上世界の一区画が
+失われてしまう
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_1_0011"
+@
+天上世界の崩壊を止めるため、
+アルマスとラグナロクは
+ユグドラシルへの旅を続ける――
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_1_0012"
+@
+天上世界崩壊まで、
+残り――
+
+# bgm "stop"
+# se "SE_0828"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# fadein "white" 0.5
+# textwindow "close"
+
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# imagealpha 0 0 0
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//背景：平原
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 9943 "almace_navikan_0001"
+@アルマス
+ふう…
+ようやく道半ばって感じね
+
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0003"
+@ラグナロク
+もうじきキトゥリスに着くはずよ
+天上世界における中心部と外縁部を
+繋ぐ中継都市…
+
+# textboxarrow 0 1
+@ラグナロク
+その先は教会の影響力が強かった
+地域になるから旅も楽になるはず
+
+# alpha 196 0 0.5
+# move 602011 4 0
+# face 602011 "normal"
+# alpha 602011 1 0.5
+# mask 602011 on
+# textboxarrow 0 3
+# voice 6020 "ness_0028"
+@ネス
+教会が消滅した後も、皆さん、
+規律を守って暮らしてくれていると
+良いのですけれど
+
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0028"
+@ラグナロク
+まだ合流できていないスイハ達も
+無事でいて欲しいわね…
+
+# alpha 602011 0 0.5
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0004"
+@アルマス
+何にせよ、急ぎましょ！
+町までもう一息なんでしょっ
+
+# textboxarrow 0 1
+@ラグナロク
+ええ
+あの丘を越えればすぐよ
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# alpha 103611 0 0.5
+# move 500721 2 0
+# face 500721 "normal"
+# alpha 500721 1 0.5
+# mask 500721 on
+# textboxarrow 0 1
+# voice 5007 "buryunaku_0002"
+@ブリューナク
+緊急事態だ
+不可解なものを発見した
+
+# face 196 "surprise"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0035"
+@アルマス
+どうしたの、ブリューナク？
+
+# textboxarrow 0 1
+# voice 5007 "buryunaku_0003"
+@ブリューナク
+ブリューナクは自主的に斥候を行った
+この先に見慣れぬものを確認
+留意して欲しい
+
+# textboxarrow 0 3
+@アルマス
+この先って、まさか…
+
+# alpha 500721 0 0.5
+# move 103611 2 0
+# face 103611 "surprise"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0022"
+@ラグナロク
+キトゥリスの町に異変がっ？
+
+;;//アルマス達が走る
+# se "SE_5575"
+# textwindow "close"
+# alpha 103611 0 0.5
+# alpha 196 0 0.5
+# waitandnext 0.5
+
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# move 103611 2 0
+# face 103611 "angry"
+# alpha 103611 1 0
+# mask 103611 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0
+# mask 196 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 9943 "almace_navikan_0018"
+@アルマス
+くっ…
+フェルカみたいな展開は、
+二度とお断りよっ…！
+
+# face 103611 "angry"
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0037"
+@ラグナロク
+お願い…！
+どうか無事で…
+
+# bgm "stop"
+# face 196 "surprise"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0036"
+@アルマス
+えええええええええええええ！？
+
+# face 103611 "usual"
+# textboxarrow 0 1
+@ラグナロク
+そんなに叫んで
+何があったのっ？
+
+# face 103611 "surprise"
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0023"
+@ラグナロク
+な…何なの、これ！？
+
+;;//背景：マサムネ城
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "masamune_castle"
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0
+# mask 103611 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0
+# mask 196 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm415" "BgmIntegralNoahBattle002" 0
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 1036 "ragnarok_0028"
+@ラグナロク
+城…ね
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0003"
+@アルマス
+城…よね
+念のため、聞くけど…
+
+# textboxarrow 0 3
+@アルマス
+あんなの、前から建ってた？
+
+# textboxarrow 0 1
+@ラグナロク
+全く記憶にないわ…
+
+# alpha 103611 0 0.5
+# alpha 196 0 0.5
+# move 103511 2 0
+# face 103511 "normal"
+# alpha 103511 1 0.5
+# mask 103511 on
+# move 502711 4 0
+# face 502711 "normal"
+# alpha 502711 1 0.5
+# mask 502711 on
+# textboxarrow 0 3
+# voice 5027 "freischotz_0004"
+@フライシュッツ
+わ～っ
+大っきいね～♪
+それに頑丈そう
+
+# face 103511 "happy"
+# textboxarrow 0 1
+# voice 1035 "damocles_0041"
+@ダモクレス
+あんな大っきいものを建てるなんて
+きっと愛の力だね！
+クレスは気に入ったよ♪
+
+# alpha 502711 0 0.5
+# move 602011 4 0
+# face 602011 "angry"
+# alpha 602011 1 0.5
+# mask 602011 on
+# textboxarrow 0 3
+# voice 6020 "ness_0012"
+@ネス
+何を言ってるんですか！
+勝手にあんなものを建てて
+規律違反ですっ
+
+# textboxarrow 0 1
+# voice 1035 "damocles_0005"
+@ダモクレス
+アッハッハ！
+愛さえあれば問題ない！
+とってもきれいだよっ
+
+# alpha 103511 0 0.5
+# alpha 602011 0 0.5
+# move 101011 3 0
+# face 101011 "happy"
+# alpha 101011 1 0.5
+# mask 101011 off
+# textboxarrow 0 2
+# voice 1010 "furagaraha_0004"
+@フラガラッハ
+あら？
+きれいだなんて、私のことね♪
+
+# move 101011 2 0.5
+# alpha 101011 1 0.5
+# mask 101011 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0042"
+@アルマス
+いや…あなたのことじゃなくて、
+あっちの城のことよ
+
+# face 101011 "normal"
+# textboxarrow 0 1
+# voice 1010 "furagaraha_0005"
+@フラガラッハ
+城を背景に佇む私…
+いいのよ
+好きなだけ見惚れていらして
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+フラガラッハ、
+少し脇に寄って
+城が見えないから
+
+# textboxarrow 0 3
+@アルマス
+とりあえず、回り道はできないの？
+あんなのに関わりたくないんだけど…
+
+# alpha 101011 0 0.5
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0027"
+@ラグナロク
+それが…
+キトゥリスの町は関所も
+兼ねているのよ
+
+# alpha 103611 0 0.5
+# move 500721 2 0
+# face 500721 "normal"
+# alpha 500721 1 0.5
+# mask 500721 on
+# textboxarrow 0 1
+# voice 5007 "buryunaku_0003"
+@ブリューナク
+堅牢な防壁が長く続いているのを
+ブリューナクも確認した
+
+# textboxarrow 0 1
+@ブリューナク
+ユグドラシルに向かうためには
+あの城を抜ける他ない
+
+# face 196 "sad"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0041"
+@アルマス
+何てこと…
+
+# alpha 500721 0 0.5
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0003"
+@ラグナロク
+風がざわついているけれど、
+行くしかないわね
+
+# alpha 196 0 0.5
+# move 602011 4 0
+# face 602011 "angry"
+# alpha 602011 1 0.5
+# mask 602011 on
+# textboxarrow 0 3
+# voice 6020 "ness_0003"
+@ネス
+城下町で情報を集めましょう
+きっと規律正しく抜ける方法が
+ありますっ
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 103611 0 0
+# alpha 602011 0 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+# serif 1
+@住人１
+大会はいよいよ明日だ！
+観覧席、まだ少し空きがあるよーっ
+
+# serif 1
+@住人２
+この大会で俺達の運命が決まると
+いっても過言じゃないんだ！
+見逃せないぞ！
+
+# serif 1
+@住人３
+よく見える双眼鏡だよ！
+これなら遠くからでも臨場感
+たっぷりに観戦できるよ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# move 103611 1 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# move 602011 3 0
+# face 602011 "normal"
+# alpha 602011 1 0.5
+# mask 602011 on
+# move 196 5 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 9943 "almace_navikan_0001"
+@アルマス
+町に入ってみたけど、
+何だか騒がしいわね
+お祭りでもあるの？
+
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0032"
+@ラグナロク
+「大会」と言っているわ…
+
+# textboxarrow 0 2
+# voice 6020 "ness_0002"
+@ネス
+あの、つかぬことをお聞きします
+明日は何の大会があるのですか？
+
+# serif 1
+@住人４
+おや、お嬢ちゃん
+知らないのかい？
+
+# serif 1
+@住人４
+…って、キル姫じゃないか！？
+あんた達は参加しないのか？
+
+# face 196 "angry"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0016"
+@アルマス
+だから、何の大会なのよっ？
+
+# serif 1
+@住人４
+決まってんだろ
+マサムネ主催の
+「天上一武闘大会」だよ！
+
+# serif 1
+@住人５
+天上世界一強い奴を決めるって
+いう大会さ！
+
+# serif 1
+@住人６
+この大会の優勝者に、
+この町の支配権が与えられる
+重要な戦いなんだよ！
+
+# serif 1
+@住人７
+誰か…あのマサムネを倒してくれっ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+「天上一武闘大会」…？
+しかも主催がマサムネ？
+
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0002"
+@ラグナロク
+何でそんなことになっているの？
+
+# textboxarrow 0 2
+# voice 6020 "ness_0028"
+@ネス
+あの…
+マサムネは、やはり、あのお城に
+住んでいるのでしょうか？
+
+# serif 1
+@住人４
+あん？
+ああ、もちろん！
+あれがマサムネの居城だ
+
+# serif 1
+@住人４
+俺達は、マサムネ城って
+呼んでるよ
+
+# face 103611 "surprise"
+# textboxarrow 0 0
+# voice 9943 "almace_navikan_0035"
+# voice 1036 "ragnarok_0022"
+@アルマス＆ラグナロク
+マサムネ城！？
+
+# serif 1
+@住人８
+武闘大会の会場もあそこにある
+明日、この町の命運が、
+俺達の運命が決まるんだっ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+# voice 6020 "ness_0022"
+@ネス
+あ…ありがとうございました…
+
+# face 196 "sad"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0022"
+@アルマス
+来て早々、混乱してるんだけど…
+
+# face 103611 "sad"
+# textboxarrow 0 1
+@ラグナロク
+私の胸もざわついているわ…
+
+# textboxarrow 0 2
+# voice 6020 "ness_0003"
+@ネス
+誰かに、これまでの経緯を説明して
+いただきたいですっ
+
+;;//スイハが恐る恐る現れる
+# alpha 103611 0 0.5
+# alpha 602011 0 0.5
+# alpha 196 0 0.5
+# move 401711 3 0
+# face 401711 "sad"
+# alpha 401711 1 0.5
+# mask 401711 off
+# textboxarrow 0 2
+# voice 4017 "suiha_0002"
+@スイハ
+あのー…

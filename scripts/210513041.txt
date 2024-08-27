@@ -1,0 +1,438 @@
+;;-----------------------------------------
+;;バレンタイン3-1
+;;-----------------------------------------
+# script "lisp"
+# background "church_room"
+# bgmfile "bgm363_364" "BgmValentine001" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102321
+# pos 3102321 4
+# scale 3102321 0.8 0
+# layer 3102321 4 0
+# alpha 3102321 0 0
+;;フェイルノート
+# body 3401921
+# pos 3401921 2
+# scale 3401921 0.8 0
+# layer 3401921 3 0
+# alpha 3401921 0 0
+;;兵
+# body 3820001
+# pos 3820001 4
+# scale 3820001 0.8 0
+# alpha 3820001 0 0
+# entry 3820099 3820001
+# pos 3820099 2
+# scale 3820099 0.8 0
+# alpha 3820099 0 0
+# reversal 3820099 0
+;;-----------------------------------------
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# alpha 3401921 1 0.5
+# alpha 3102321 1 0.5
+# face 3401921 "usual"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 4019 "failnaught_a_0002"
+@フェイルノート
+あそこの部屋…
+兵たちがひっきりなしに
+出入りしているわね
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3102321 "normal"
+# voice 310231 "ascalon_a_0003"
+@アスカロン
+ええ…それに皆、
+大きな箱を抱えて
+入っていきますね…！
+
+# textflame 1 1
+# textboxarrow 0 1
+@フェイルノート
+回収されたチョコの在り処は、
+きっとあそこで間違いないわ
+
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+どうします、陛下？
+もう一度正面突破ですか…？
+
+# textflame 1 1
+# textboxarrow 0 1
+@フェイルノート
+逃げ道のない屋内では危険よ
+囲まれたら突破は難しいもの
+
+# textflame 1 1
+# textboxarrow 0 1
+@フェイルノート
+どうにか兵たちの隙を突いて、
+部屋の中に侵入できれば
+いいのだけど…
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# textflame 1 1
+# textboxarrow 0 1
+# voice 4019 "failnaught_a_0028"
+@フェイルノート
+…そうね、定番だけれど、
+この作戦で行ってみようかしら…
+
+;;演出：時間経過
+;;兵が二人登場するため、ＡとＢで区別しています。
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 3401921 0 0
+# alpha 3102321 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 3820001 1 0.5
+# alpha 3820099 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ケイオスリオン兵
+よい、しょっ…！
+この辺に下ろすぞ！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ケイオスリオン兵
+わかった！
+せーの…よっと！
+
+;;ＳＥ：ドスンッ！（箱を下ろす音）
+# se "SE_0877"
+# shake 0 0.5
+# waitandnext 0.5
+
+;;ト書き：床に下ろした衝撃で、アスカロンが声を出してしまう
+# serif 1
+# textwindow "nomal"
+@？？？
+うっっ…！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textboxarrow 0 1
+@ケイオスリオン兵
+ふーっ…うん？
+なんか今、変な声しなかったか？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ケイオスリオン兵
+そうか？　気のせいだろう
+さ、次の荷物運び行くぞ！
+
+;;ＳＥ：タッタッタッ…（兵たちが部屋を去る音）
+# se "SE_0740"
+# alpha 3820001 0 0.5
+# alpha 3820099 0 0.5
+# textwindow "close"
+# waitandnext 0.8
+
+;;演出：場所移動
+;;背景：黒（真っ暗な箱の中を表現）
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 3401921 1 0.5
+# alpha 3102321 1 0.5
+# face 3401921 "angry"
+# face 3102321 "angry"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@フェイルノート
+ふう～
+なんとか侵入成功ね…
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310231 "ascalon_a_0003"
+@アスカロン
+は、はい…
+やりましたね陛下…！
+
+# emotionbody 1001 6 3401921 80 180
+# effectpattern 1001 1 1
+# effectstart 1001
+# textflame 1 1
+# textboxarrow 0 1
+# voice 4019 "failnaught_a_0026"
+@フェイルノート
+あのねぇ…
+やりましたね、じゃないわよ！
+
+# textflame 1 1
+# textboxarrow 0 1
+@フェイルノート
+ねえアスカロン…？
+お前はなぜ、私と同じ箱に
+入ってきてしまったのかしらぁ…？
+
+# emotionbody 1002 9 3102321 60 180
+# effectpattern 1002 5 0
+# effectstart 1002
+# textflame 1 1
+# textboxarrow 0 3
+# face 3102321 "sad"
+# voice 310231 "ascalon_a_0031"
+@アスカロン
+も、申し訳ありませんっ！
+兵に見つかりそうになったので、
+慌ててしまってっ…！ 
+
+# effectskip 1002
+# textflame 1 1
+# textboxarrow 0 1
+@フェイルノート
+大声を出さない！
+まったく…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3401921 "usual"
+@フェイルノート
+いいわ、しばらくこのまま
+息をひそめて待っていましょう
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3401921 "angry"
+@フェイルノート
+兵の出入りがなくなり次第動くわよ
+…アスカロン？　聞いているの？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3102321 "angry"
+# voice 310231 "ascalon_a_0032"
+@アスカロン
+…あっ、はい！
+だ、大丈夫です…！
+
+# emotionbody 1003 2 3401921 10 290
+# effectpattern 1003 1 1
+# effectstart 1003
+# textflame 1 1
+# textboxarrow 0 1
+# face 3401921 "surprise"
+@フェイルノート
+…？
+なによ…私の美貌に
+見惚れでもしていたの？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3102321 "sad"
+@アスカロン
+いえ、その…！
+陛下って、思っていたよりも
+小さいんだなぁと思いまして…！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3401921 "angry"
+@フェイルノート
+ち・い・さ・い…？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 4019 "failnaught_a_0013"
+@フェイルノート
+それはどういう意味かしら…？
+返答次第では地獄を見るわよ…！！
+
+# emotionbody 1004 1 3102321 10 310
+# effectpattern 1004 2 0
+# effectstart 1004
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310231 "ascalon_a_0024"
+@アスカロン
+ひぃっ！？
+ちちち違いますっ！
+悪い意味ではなくって…！
+
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+その…私の目には、
+陛下の御姿はいつも
+大きく頼もしく映っているので…
+
+# textflame 1 1
+# textboxarrow 0 3
+@アスカロン
+実際の御体を間近で見たら、
+こんなにも華奢な方なんだと
+驚いてしまったというか…！
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 4019 "failnaught_a_0009"
+@フェイルノート
+はあ、なにをいまさら…
+そんなの当たり前でしょう？
+
+# textflame 1 1
+# textboxarrow 0 1
+@フェイルノート
+私だってお前と同じ、
+今はただの斬ル姫なのだから
+
+# emotionbody 1005 1 3102321 10 310
+# effectpattern 1005 1 0
+# effectstart 1005
+# textflame 1 1
+# textboxarrow 0 3
+# face 3102321 "surprise"
+@アスカロン
+あっ！
+そ、そっか…そうですよね…
+私、なんだか勘違いして――
+
+;;ＳＥ：ドンッ！（箱に物がぶつかる音）
+# se "SE_0878"
+# shake 0 0.5
+# waitandnext 0.5
+
+# emotionbody 1006 1 3102321 10 310
+# effectpattern 1006 2 0
+# effectstart 1006
+# textflame 1 1
+# textboxarrow 0 3
+# face 3102321 "sad"
+# voice 310231 "ascalon_a_0025"
+@アスカロン
+――ひゃああぁっ！？
+
+;;演出：場所移動
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 3401921 0 0
+# alpha 3102321 0 0
+;;背景：ケイオスリオン城内
+# background "church_room"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 3820001 1 0.5
+# alpha 3820099 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@ケイオスリオン兵
+いててて…おいっ！
+いきなり手を放すなよ、
+危ないだろう！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ケイオスリオン兵
+わ、悪い…！
+足が箱に引っかか…って
+…ん？
+
+# textflame 0 0
+@
+衝撃で箱が倒れ、
+中からアスカロンと
+フェイルノートが飛び出す
+
+# alpha 3820001 0 0.5
+# alpha 3820099 0 0.5
+# alpha 3401921 1 0.5
+# alpha 3102321 1 0.5
+# face 3102321 "angry"
+# shake 0 0.5
+# se "SE_4726"
+# waitandnext 1
+
+# emotionbody 1007 1 3102321 10 310
+# effectpattern 1007 2 0
+# effectstart 1007
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310231 "ascalon_a_0037"
+@アスカロン
+いったぁ～っ…はっ！？
+
+# alpha 3820001 1 0.5
+# alpha 3820099 1 0.5
+# alpha 3401921 0 0.5
+# alpha 3102321 0 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@ケイオスリオン兵
+きっ、斬ル姫だ…！！
+侵入者！　侵入者だー！！
+
+# alpha 3820001 0 0.5
+# alpha 3820099 0 0.5
+# alpha 3401921 1 0.5
+# alpha 3102321 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 4019 "failnaught_a_battle_0001"
+@フェイルノート
+ああもうっ…！
+こうなったらやるしかないわね！
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 3102321 0 0
+# alpha 3401921 0 0
+# background "bg_black"
+# waitandnext 0.2

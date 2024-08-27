@@ -1,0 +1,668 @@
+;;-----------------------------------------
+;;414021041
+;;業果の斬ル姫【EP4】バトル前
+;;-----------------------------------------
+# script "lisp"
+# background "300_devil_daytime02"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 4
+# mask 3102311 off
+# alpha 3102311 0 0
+# face 3102311 "angry"
+;;フェイルノート
+# body 167
+# pos 167 5
+# scale 167 0.8 0
+# layer 167 5
+# mask 167 off
+# alpha 167 0 0
+# face 167 "angry"
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 3
+# mask 3201911 off
+# alpha 3201911 0 0
+# face 3201911 "angry"
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;火の粉
+# envbody 1000 6 0
+# effectpattern 1000 1 0
+# textwindow "close"
+# waitandnext 0.3
+
+;;◆背景：ケイオスリオン街中-------------------------------
+;;演出：アスカロン・シユウ・フェイルノートが駆け抜ける
+# se "SE_5575"
+# alpha 3102311 1 0
+# rightin 3102311 0.7
+# waitandnext 0.6
+
+# se "SE_5575"
+# alpha 3201911 1 0
+# rightin 3201911 0.7
+# leftout 3102311 0.7
+# waitandnext 0.6
+
+# se "SE_5575"
+# alpha 167 1 0
+# rightin 167 0.7
+# leftout 3201911 0.7
+# waitandnext 0.6
+
+# leftout 167 0.7
+# waitandnext 0.3
+
+;;◆背景：ケイオスリオン全域-------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 3102311 0 0
+# alpha 3201911 0 0
+# alpha 167 0 0
+# effectstart 1000
+# background "devil_world"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.8
+
+;;立ち絵無し
+# serif 1
+# textwindow "toge"
+# textboxarrow 1 0
+# voice 350171 "grimoire_ge_0004"
+# chara 3501711
+@グリモワール
+お楽しみのお祭りも、もうお終い！
+
+;;立ち絵なし
+# serif 1
+# textwindow "toge"
+# textboxarrow 1 0
+# voice 350171 "grimoire_ge_0020"
+# chara 3501711
+@グリモワール
+後の祭りよ！
+
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+王都中にグリモワールの声が響く
+
+# textflame 0 0
+@
+王都は決勝トーナメント
+どころではなくなった
+
+# textflame 0 0
+@
+つい先程
+フェイルノート陣営の勝利で終えた
+トーナメント第一回戦
+
+# textflame 0 0
+@
+第二回戦は
+パラシュ陣営と
+アフロディーテ陣営の闘い
+
+# textflame 0 0
+@
+試合は後日であり
+各勢力は自地区にて待機
+にらみ合いを続けている
+
+# textflame 0 0
+@
+その為、この事態に
+巻き込まれていないことだけが
+不幸中の幸いであったが…
+
+;;◆背景：ケイオスリオン街中-------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "top_close"
+# textwindow "bottom_close"
+# waitandnext 0.5
+
+# effectskip 1000
+# pos 167 3
+# mask 167 off
+# alpha 167 1 0
+# face 167 "normal"
+# background "300_devil_daytime02"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 4019 "failnaught_a_0018"
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 167
+@フェイルノート
+誰もかれもが敵だなんて…！
+
+# textflame 0 0
+@
+王都の国民たちは
+グリモワールの魔術によって使役され
+アスカロン達を狙い、武器を取る
+
+# textflame 0 0
+@
+もちろんフェイルノート陣営の
+兵士達も斬ル姫達の敵となり
+彼女らは追われる身
+
+# se "SE_5643"
+# shake 0 0.6
+# subfillrect 1 "red" 0.6 0.4 0
+# textflame 0 0
+@
+天から、地から
+黒炎が降り注ぎ、吹き上がり
+夕日が辺りを真っ赤に染める
+
+# textflame 0 0
+@
+都の端から端まで逃げて周り
+逃げ場がないことを確かめた一行は
+やっとのことで物陰に隠れる
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 167 "angry"
+# chara 167
+@フェイルノート
+………まるで、地獄ね
+
+# alpha 167 0 0.5
+# pos 3201911 4
+# mask 3201911 on
+# alpha 3201911 1 0.5
+# pos 3102311 2
+# mask 3102311 on
+# alpha 3102311 1 0.5
+# face 3102311 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3201911 "normal"
+# voice 320191 "chihyu_a_0002"
+# chara 3201911
+@シユウ
+はぁ、はぁ、はぁ…
+なんでシユウたちは
+あやつられないんだ…？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0019"
+# chara 3102311
+@アスカロン
+悪魔の血を宿さないフェイルノートと
+超高位の悪魔を身に宿した私達だけは
+あの魔術から逃れられるんでしょう…
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3102311
+@アスカロン
+ただ、王都中どこへ行っても
+敵ばかり…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "sad"
+# voice 310231 "ascalon_a_battle_0006"
+# chara 3102311
+@アスカロン
+くぅっ…！？
+
+;;演出：アスカロンが倒れる
+# textwindow "close"
+# shake 0 0.6
+# se "SE_2019"
+# alpha 3102311 0 0.3
+# waitandnext 0.3
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3201911 "surprise"
+# voice 320191 "chihyu_a_0023"
+# chara 3201911
+@シユウ
+アスカロン！？
+
+# se "SE_0648"
+# alpha 3102311 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "normal"
+# chara 3102311
+@アスカロン
+だ、大丈夫です
+すこし、疲れただけで…！
+
+# alpha 3102311 0 0.5
+# pos 167 2
+# mask 167 on
+# alpha 167 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 167 "normal"
+# chara 167
+@フェイルノート
+シユウや何千何万の敵と闘った後よ
+無理もないわ…
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 167
+@フェイルノート
+だけど、今はそれ以上の、数…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3201911 "sad"
+# voice 320191 "chihyu_a_0028"
+# chara 3201911
+@シユウ
+ううー…！　シユウは
+こういうちまちまにげるのとか
+じっとしているのとか、にがてだ…！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 167 "angry"
+# chara 167
+@フェイルノート
+王都を囲む極大魔術
+それを崩さなきゃ、終わらない
+術者を倒すしか…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3201911 "sad"
+# chara 3201911
+@シユウ
+…
+
+# alpha 167 0 0.5
+# alpha 3102311 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "normal"
+# voice 310231 "ascalon_a_battle_0005"
+# chara 3102311
+@アスカロン
+…私が、打って出ます…！
+
+# textflame 0 0
+@
+疲労困憊の体を
+なんとか起こそうとするアスカロン
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "angry"
+# chara 3102311
+@アスカロン
+私は、先兵です…！
+囮にくらい…
+
+# voice 4019 "failnaught_a_0012"
+# alpha 3102311 0 0.5
+# alpha 167 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 167 "normal"
+# chara 167
+@フェイルノート
+あちらの目的は私よ
+私が身を晒せば済むことよ
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 167
+@フェイルノート
+とにかく目立って
+グリモワールを呼び込み
+そこを叩く…
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 167
+@フェイルノート
+今のこの疲弊した状態で
+叩けるかどうかはともかくね…
+
+# bgm "stop"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3201911 "sad"
+# chara 3201911
+@シユウ
+…
+
+# bgmfile "bgm295_296" "BgmLostRagnarokBattle003" 0
+# textflame 1 1
+# textboxarrow 0 3
+# face 3201911 "usual"
+# voice 320191 "chihyu_a_0003"
+# chara 3201911
+@シユウ
+…シユウがいくぞ
+
+# alpha 167 0 0.5
+# alpha 3102311 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "normal"
+# chara 3102311
+@アスカロン
+シユウ、でも
+まださっきの闘いの疲労だって…！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3201911 "happy"
+# chara 3201911
+@シユウ
+めだつのは、とくいだ
+
+# se "SE_8000"
+# textflame 0 0
+@
+満身創痍のまま
+シユウは大斧をかつぐ
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "angry"
+# voice 310231 "ascalon_a_0026"
+# chara 3102311
+@アスカロン
+し、シユウ！　待ってください！
+私も…！
+
+# textflame 0 0
+@
+シユウは
+立ちあがろうとするアスカロンを
+制する
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3201911 "usual"
+# voice 320191 "chihyu_a_0011"
+# chara 3201911
+@シユウ
+アスカロンは
+そこでねてろ
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "surprise"
+# chara 3102311
+@アスカロン
+あ、あれ、シユウ
+なんか不機嫌、ですか？
+
+# textflame 1 1
+# se "SE_5223"
+# shake 0 0.6
+# textwindow "toge"
+# textboxarrow 0 3
+# face 3201911 "angry"
+# chara 3201911
+@シユウ
+あたりまえだ！！
+
+# textwindow "normal"
+# textflame 0 0
+@
+大声でキレるシユウ
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "sad"
+# voice 310231 "ascalon_a_0023"
+# chara 3102311
+@アスカロン
+きゃああっ！？
+し、シユウ、声っ！
+声！　潜めてぇー！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3201911 "usual"
+# chara 3201911
+@シユウ
+シユウはじごくのこうていだ…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "normal"
+# chara 3102311
+@アスカロン
+え、ええ、そうですね…
+
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 3
+# face 3201911 "normal"
+# voice 320191 "chihyu_a_0010"
+# chara 3201911
+@シユウ
+じごくでこそ
+そのすべてをたいらげるんだ！！
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "sad"
+# chara 3102311
+@アスカロン
+シユウぅー！
+声ぇーッ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3201911 "sad"
+# chara 3201911
+@シユウ
+シユウはさっき
+アスカロンにまけた
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "surprise"
+# voice 310231 "ascalon_a_0008"
+# chara 3102311
+@アスカロン
+は、はい
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3201911 "usual"
+# chara 3201911
+@シユウ
+だけど、きのうはかったんだ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3201911 "normal"
+# voice 320191 "chihyu_a_battle_0003"
+# chara 3201911
+@シユウ
+だからシユウはまだまけてない！
+ひきわけだ！！
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "sad"
+# voice 310231 "ascalon_a_0016"
+# chara 3102311
+@アスカロン
+声ぇぇぇぇ！！
+居場所バレちゃうからぁッ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3201911 "usual"
+# chara 3201911
+@シユウ
+いまから、シユウはアスカロンより
+ずっとつよいところをみせてやる！
+
+;;◆背景：黒バック-----------------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+# alpha 3201911 0 0
+# alpha 3102311 0 0
+# background "bg_black"
+# waitandnext 0.1
+
+# imagealpha 0 0 0.1
+# imagerightout 0 0.1
+# waitandnext 0.1
+
+# se "SE_5575"
+# textwindow "normal"
+# textflame 0 0
+@
+シユウは物陰から
+都の大通りへ姿を現し
+咆哮する
+
+;;◆背景：ケイオスリオン街中-------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.1
+# textwindow "close"
+# waitandnext 0.1
+
+# pos 3201911 3
+# mask 3201911 off
+# alpha 3201911 1 0
+# face 3201911 "usual"
+# background "300_devil_daytime02"
+# waitandnext 0.1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "toge"
+# shake 0 0.6
+# se "SE_5223"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3201911 "angry"
+# voice 320191 "chihyu_a_0029"
+# chara 3201911
+@シユウ
+うがあああああああっ！！
+
+# textwindow "normal"
+# textflame 0 0
+@
+王都全域に渡って響く咆哮
+
+# textflame 0 0
+@
+周辺で練り歩いていた悪魔人が
+シユウを見つけ、向かってくる
+
+# brightness 3201911 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 0 0
+# voice 310231 "ascalon_a_battle_0007"
+# chara 3102311
+@アスカロン
+し、シユウ…！
+
+# brightness 3201911 1.0 0.3
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3201911 "usual"
+# chara 3201911
+@シユウ
+とにかくめだって
+グリモワールをたたく！
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3201911
+@シユウ
+そういうことだな！？
+フェイルノート！
+
+# voice 4019 "failnaught_a_0046"
+# brightness 3201911 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+# chara 167
+@フェイルノート
+…シユウ、あなたも
+私と………？
+
+# face 3201911 "happy"
+# textwindow "top_close"
+# se "SE_4600"
+# brightness 3201911 1.0 0.3
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+シユウはニッと笑うと
+大斧を振り上げ、叫ぶ
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3201911 "usual"
+# voice 320191 "chihyu_a_0004"
+# chara 3201911
+@シユウ
+シユウにまかせろ！
+
+# se "SE_4757"
+# shake 0 0.6
+# fadein "white" 0.6
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 2
+# face 3201911 "angry"
+# voice 320191 "chihyu_a_battle_0004"
+# chara 3201911
+@シユウ
+こうていのおとおりだ！
+みちをあけろ！

@@ -1,0 +1,253 @@
+;;-----------------------------------------
+;;【このすばEP3･戦闘後】7/12 19:40 更新
+;;スクリプト最後の背景：seahouse
+;;背景：ビーチ
+;;-----------------------------------------
+# script "lisp"
+# background "sea_beach_day"
+# bgmfile "bgm208" "BgmKScollabo001" 0
+;;海上編ティルフィング
+# body 2101411
+# pos 2101411 3
+# scale 2101411 0.8 0
+# alpha 2101411 1 0
+# mask 2101411 off
+# face 2101411 "sad"
+;;デュリン
+# body 0
+# pos 0 2
+# scale 0 0.8 0
+# alpha 0 0 0
+# layer 0 3
+# mask 0 off
+;;水着アスクレピオス
+# body 2600111
+# pos 2600111 4
+# scale 2600111 0.8 0
+# alpha 2600111 0 0
+;;水着シタ
+# body 2201611
+# pos 2201611 2
+# scale 2201611 0.8 0
+# alpha 2201611 0 0
+;;水着めぐみん
+# body 2502511
+# pos 2502511 2
+# scale 2502511 0.8 0
+# alpha 2502511 0 0
+# face 2502511 "sad"
+;;水着ダクネス
+# body 2103411
+# pos 2103411 4
+# scale 2103411 0.8 0
+# alpha 2103411 0 0
+# face 2103411 "shy"
+;;◆背景：ビーチ（昼）---------------------
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0005"
+@ティルフィング
+なんとか撃退できましたね
+
+# emotionbody 1001 8 2502511 0 260
+# effectpattern 1001 1 0
+# effectstart 1001
+# alpha 2101411 0 0.5
+# alpha 2103411 1 0.5
+# alpha 2502511 1 0.5
+# voice 5025 "megumin_0003"
+# textboxarrow 0 1
+@めぐみん
+はうぅ…
+爆裂魔法を放てなかったことが
+心残りでなりません…
+
+# effectskip 1001
+# textboxarrow 0 3
+@ダクネス
+唐突で驚いたが…
+悪くない戦闘だった
+
+# emotionbody 1002 1 0 0 260
+# effectpattern 1002 2 0
+# effectstart 1002
+# alpha 2103411 0 0.5
+# alpha 2502511 0 0.5
+# alpha 0  1 0.5
+# alpha 2600111 1 0.5
+# face 0 "angry2"
+# face 2600111 "sad"
+# textboxarrow 0 1
+# voice 9999 "durin_0010"
+@デュリン
+ねえ！？異族はともかく
+なんであんな変な大きなカエルが
+ビーチにいるのよ！？
+
+# voice 6001 "asukurepiosu_0003"
+# textboxarrow 0 3
+@アスクレピオス
+分からないわね…
+一度“海の家”に
+問い合わせてみましょう
+
+;;//海の家に移動
+;;//ビーチ背景
+# se "SE_0700"
+# bgm "stop"
+# effectbody 600 21 0 0
+# effectstart 600
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 2
+
+;;◆背景：海の家-------------------------------
+# effectskip 600
+# background "seahouse"
+# bgmfile "bgm208" "BgmKScollabo001" 0
+# alpha 2600111 0 0
+# move 2101411 4 0
+# alpha 2101411 1 0
+# waitandnext 0.1
+
+# textwindow "normal"
+# textboxarrow 0 1
+@デュリン
+ふーむ…
+
+# voice 1014 "tyrufing_0003"
+# textboxarrow 0 3
+@ティルフィング
+見たことのない大きなカエルが
+いるって、少し前から島で噂に
+なってたみたいです
+
+@ティルフィング
+異族がおかしな様子で
+暴れ始めたのも、そのカエルの
+噂と同じ頃からだとか
+
+# alpha 2101411 0 0.5
+# alpha 0 0 0.5
+# alpha 2201611 1 0.5
+# alpha 2600111 1 0.5
+# textboxarrow 0 1
+# voice 2016 "shita_0009"
+@シタ
+本当にいたんですね、噂のカエル
+今までのビーチの巡回では
+わたし、見たことなくて
+
+# emotionbody 1003 8 2600111 0 300
+# effectpattern 1003 1 0
+# effectstart 1003
+# face 2600111 "normal"
+# textboxarrow 0 3
+@アスクレピオス
+私はジャングル近くのプールで
+二度ほどカエルっぽいものを見たわ
+でも、ビーチにまで…
+
+# effectskip 1003
+# alpha 2201611 0 0.5
+# alpha 2600111 0 0.5
+# alpha 2101411 1 0.5
+# alpha 0 1 0.5
+@ティルフィング
+もしかしたらカエルが
+増えてるのではないでしょうか？
+
+# textboxarrow 0 1
+@デュリン
+島の奥にしかいなかったカエルが
+繁殖して、棲息範囲を広げてる…
+ってこと？
+
+# alpha 2101411 0 0.5
+# alpha 0 0 0.5
+# alpha 2600111 1 0.5
+# move 2103411 2 0
+# alpha 2103411 1 0.5
+# face 2103411 "usual"
+# textboxarrow 0 3
+@アスクレピオス
+その可能性はあるわ
+さらなる調査が必要そうね
+
+# textboxarrow 0 1
+@ダクネス
+ふむ、この“海の家”にも、浜辺の
+近隣住民からカエルに関する
+苦情が続々と集まっているようだ
+
+# face 2103411 "sad"
+@ダクネス
+カエルの鳴き声がうるさい！
+ぬるぬるする！大きすぎる！
+キモい！などなど
+
+# alpha 2103411 0 0.5
+# alpha 2502511 1 0.5
+# face 2502511 "worry"
+# textboxarrow 0 1
+@めぐみん
+あんなカエルが増えれば
+そうなるでしょうね
+
+# alpha 2600111 0 0.5
+# alpha 2502511 0 0.5
+# alpha 2101411 1 0.5
+# alpha 2201611 1 0.5
+# mask 2101411 on
+# face 2101411 "normal"
+@シタ
+ということは…？
+
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0001"
+@ティルフィング
+どうでしょう、マスター
+島の皆さんのためにも
+カエル問題を解決しませんか？
+
+;;select（選択肢）
+# select "賛成だ、ティルフィング" "select_label_01" "ああ、そうしよう" "select_label_01" 
+どうでしょう、マスター
+島の皆さんのためにも
+カエル問題を解決しませんか？
+
+# label "select_label_01"
+# bgmfile "bgm211" "BgmKScollabo001" 0
+# textflame 0 0
+@
+マスターは“海の家”から
+異族討伐に加えて、カエル討伐の
+クエストも受けることにする
+
+# eye 2201611 "close"
+# face 2101411 "smile"
+# se "SE_0602"
+@
+これがマスターのクエストリストに
+『カエル討伐』の追加が決まった
+その瞬間だった
+
+# emotionbody 1004 1 0 40 260
+# effectpattern 1004 1 0
+# effectstart 1004
+# alpha 2201611 0 0.5
+# alpha 2101411 0 0.5
+# move 0 3 0
+# alpha 0 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@デュリン
+…ってどうして新スキル獲得
+みたいなノリになってるのよ！
+
+# voice 9999 "durin_0027"
+@デュリン
+ああ、もう
+やることが増えたじゃないの…

@@ -1,0 +1,376 @@
+;;-----------------------------------------
+;;お正月アバリス　キャラクエ　シナリオ FB修正版20181214
+;;【EP3】
+;;//背景：野営地（ケイオスリオン）
+;;-----------------------------------------
+# script "lisp"
+# background "300_devil_daytime03"
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+# body 3401021
+# pos 3401021 3
+# scale 3401021 0.8 0
+# alpha 3401021 1 0
+# mask 3401021 off
+;;-----------------------------------------
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0015"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+今日は、いよいよ決勝戦ですね…
+うう…緊張してきました
+
+# textflame 0 0
+@
+昨日は途中で邪魔が入ったため、
+羽根つき大会の決勝戦は
+今日に持ち越されたのだった
+
+# textflame 0 0
+@
+アバリスは、昨日と同じく晴れ着に
+身を包み、緊張した面持ちで
+試合開始の合図を待っている
+
+# textflame 0 0
+@
+晴れ着じゃなくてもよかったのでは
+と、マスターが尋ねると、
+アバリスは真剣な顔で答える
+
+# face 3401021 "angry"
+# voice 340101 "abaris_a_0011"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+いいえ、昨日と同じ条件でなくては！
+それに、この晴れ着だと、いつもより
+実力が発揮できそうなので…
+
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0028"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+ですが、今日の対戦相手は昨年の
+優勝者でかなり強敵だそうです…
+
+# textflame 0 0
+@
+気負わずに、軽い気持ちで
+楽しんでおいで、とマスターは
+明るくアバリスを送り出す
+
+# face 3401021 "smile"
+# voice 340101 "abaris_a_0003"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+はい！
+がんばります！
+
+;;//演出：時間経過
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# face 3401021 "angry"
+# voice 340101 "abaris_a_0037"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+はぁ…はぁ…
+申し訳ありません…
+これほど苦戦するとは…
+
+# textflame 0 0
+@
+激戦で荒れた地面をならすために
+試合は一時中断され、
+アバリスはマスターの元にやってきた
+
+# textflame 0 0
+@
+決勝戦は一進一退の白熱戦で、
+マスターの顔は鼻を残して
+墨で塗られてしまった
+
+# voice 340101 "abaris_a_0003"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+あちらのパートナーも
+墨を塗れる場所はあとひとつ…
+次で、決まります…
+
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0015"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+ですが、勝てる自信はありません…
+私はマスター守れないのかも…
+
+# textflame 0 0
+@
+くじけそうなアバリスに、
+マスターは声をかける
+
+# select "がんばれ、君ならできる！" "select_label_01" "負けてもいいんだよ？" "select_label_02" "そんなに簡単に諦めるのか？" "select_label_03"
+@
+くじけそうなアバリスに、
+マスターは声をかける
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 3401021 "smile"
+# voice 340101 "abaris_a_0030"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+ありがとうございます！
+あなたが信じてくれるのなら
+私も勝てると信じます！
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 3401021 "smile"
+# voice 340101 "abaris_a_0032"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+…わかりました！
+それぐらい肩の力を抜いていけ、と…
+そういういうことですね！
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 3401021 "angry"
+# voice 340101 "abaris_a_battle_0005"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+…いいえ、決して諦めません！
+私の戦いを見届けてください！
+
+# label "select_label_end"
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# face 3401021 "angry"
+# voice 340101 "abaris_a_0029"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+せいっ！
+やっ！
+
+# textflame 0 0
+@
+激しいラリーが続き、
+試合を見守る観客の
+ボルテージも上がっていく
+
+# textflame 0 0
+@
+晴れ着で舞うように羽をつく
+華麗な姿に魅了されたのか、
+アバリスへの声援が会場を包む
+
+# voice 340101 "abaris_a_battle_0004"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+いきます！
+はぁぁぁぁああ！
+
+# textflame 0 0
+@
+アバリス入魂の一打が決まった
+決勝戦を制したのはアバリスだった
+
+# face 3401021 "surprise"
+# voice 340101 "abaris_a_0024"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+マスター！
+私、やりました…
+ひゃ！
+
+# textflame 0 0
+@
+マスターに駆け寄ろうとした
+アバリスだったが、祝福する子供や
+観客たちに囲まれてしまう
+
+# voice 340101 "abaris_a_0042"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+あ、ありがとうございます！
+あの…通してくださいー！
+
+# textflame 0 0
+@
+人をかき分けて
+マスターにたどり着いたアバリスは、
+自信に満ちた笑顔を見せる
+
+# face 3401021 "smile"
+# voice 340101 "abaris_a_0005"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+マスター！
+私、やりました！
+すべて、マスターのおかげです！
+
+# textflame 0 0
+@
+自分はなにもしていない、
+アバリスの実力と努力の結果だよ、
+おめでとう、とマスターも祝福を送る
+
+# face 3401021 "usual"
+# voice 340101 "abaris_a_0002"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+いえ…
+マスターが私を信じてくれたから、
+私も、私を信じて戦えたのです…
+
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+マスターがくれた晴れ着に
+身を包むことで、マスターを
+いつもより近くに感じました
+
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+その安心感が、私に新しい力を
+くれました…
+
+# se "SE_0602"
+# fadein "white" 0.5
+# face 3401021 "usual"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+魔眼『迎春の追い風』…
+私はもっと、強くなれる気がします
+
+# textflame 0 0
+@
+彼女はまた、新たなるスキルに
+目覚めたのだった
+
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0015"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+存在感のない私が、こんなに
+たくさんの人に注目されるなんて…
+昨日までは想像もできませんでした
+
+# textflame 0 0
+@
+注目されて、どんな気分？と
+マスターが尋ねると…
+
+# face 3401021 "shy"
+# voice 340101 "abaris_a_0042"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+あの…恥ずかしくはありますが…
+存在を認めてもらえたという
+嬉しさでいっぱいです！
+
+# face 3401021 "smile"
+# voice 340101 "abaris_a_0020"
+# chara 3401021
+# textboxarrow 0 2
+# textflame 1 1
+@アバリス
+目立つってこんな気持ちなのですね…
+ふふっ、少しくせになりそうです
+
+# imageset 1 "c3401021"
+# imagealpha 1 0 0
+# imagelayer 1 1
+# waitandnext 0.1
+
+# textwindow "close"
+# fadein "white" 3
+# buttonsout 0 0
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 3401021 0 0
+# voice 340101 "abaris_a_event_0007"
+
+# frameout 0 1
+
+# fadeout "black" 1.5
+# waitandnext 1.5
+;;＜一枚絵＞
+;;★６（一枚絵同じ）　アバリス
+;;一枚絵ボイス：abaris_a_event_0007
+;;「いつもは存在感のない私ですが、今の私、輝いてますか？」

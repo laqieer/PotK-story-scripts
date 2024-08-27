@@ -1,0 +1,309 @@
+;;第5話　タイトル：独りは寂しいから
+;;//背景：ビフレスト
+# background "bifrost"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# body 172
+# pos 172 1
+# scale 172 0.8 0
+# alpha 172 1 0
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# alpha 137 1 0
+# body 139
+# pos 139 5
+# scale 139 0.8 0
+# alpha 139 1 0
+# body 3300411
+# pos 3300411 3
+# scale 3300411 0.8 0
+# alpha 3300411 0 0
+# mask 3300411 off
+# body 3200111
+# pos 3200111 3
+# scale 3200111 0.8 0
+# alpha 3200111 0 0
+# mask 3200111 off
+# body 3600211
+# pos 3600211 3
+# scale 3600211 0.8 0
+# alpha 3600211 0 0
+# mask 3600211 off
+# body 3840001
+# pos 3840001 2
+# scale 3840001 0.8 0
+# alpha 3840001 0 0
+;; # face 172 ""
+# textboxarrow 0 1
+@アルマス
+魔物は倒せたけど、完全に双子を
+見失ったわね…
+
+# textboxarrow 0 2
+;; # face 137 ""
+# voice 9969 "gill_0001"
+@ギル
+あいつらなら放っといても大丈夫
+なんじゃね？
+
+# textboxarrow 0 1
+;; # face 172 ""
+# voice 1038 "almace_0027"
+@アルマス
+そうね…にしても、あいつは
+どこにいるのよっ？
+
+# textboxarrow 0 3
+;; # face 139 ""
+# voice 9967 "titania_0042"
+@ティターニア
+ただ闇雲に歩き回っても
+体力を消耗するだけですね…
+
+# select "中心的な場所に向かう" "select_label_01" "居住区はどうかな？" "select_label_02" "どこかで休もう" "select_label_03"
+ただ闇雲に歩き回っても
+体力を消耗するだけですね…
+
+# label "select_label_01"
+# labeljump "select_label_end"
+;; # face 139 ""
+# voice 9967 "titania_0004"
+# textboxarrow 0 3
+@ティターニア
+そこで館内の見取り図を手に入れる
+ことができれば動きやすくなりますね
+
+# textboxarrow 0 1
+# label "select_label_02"
+# labeljump "select_label_end"
+;; # face 172 ""
+# voice 1038 "almace_0028"
+@アルマス
+私達が住んでいた場所？
+どこだったかな…
+
+# textboxarrow 0 2
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 137 "usual"
+# voice 9969 "gill_0004"
+@ギル
+さんせーい！
+とりあえず座りてぇよ
+
+# label "select_label_end"
+# alpha 172 0 0.5
+# alpha 139 0 0.5
+# alpha 137 0 0.5
+# alpha 3300411 1 0.5
+# face 3300411 "surprise"
+# voice 330041 "amenonuboko_t_0022"
+# textboxarrow 0 2
+@天沼矛
+あら？
+マスターさん、この矢印は
+何でしょう？
+
+# alpha 3200111 1 0.5
+# alpha 3300411 0 0.5
+# face 3200111 "surprise"
+# voice 320011 "myuruniru_ge_0002"
+# textboxarrow 0 2
+@ミョルニル
+あ！こっちにもあるよ、マスタ！
+ずっとつづいてる～
+
+# move 172 3 0
+# mask 172 off
+# alpha 3200111 0 0.5
+# alpha 172 1 0.5
+;; # face 172 ""
+# textboxarrow 0 2
+@アルマス
+床や壁に記してあるわね
+
+# alpha 172 0 0.5
+# alpha 3600211 1 0.5
+# face 3600211 "sad"
+# voice 360021 "ganbantein_a_0026"
+# textboxarrow 0 2
+@ガンバンテイン
+うわぁ…絶対、罠じゃーん…
+
+# alpha 3600211 0 0.5
+# alpha 172 1 0.5
+;; # face 172 ""
+# textboxarrow 0 2
+@アルマス
+罠というより、
+あいつが呼んでいるんだと思う
+
+# se "SE_5575"
+# face 172 "angry"
+# voice 1038 "almace_0001"
+@アルマス
+マスター、この矢印を辿るわよっ
+ついてきて！
+
+# move 139 3 0
+# alpha 172 0 0.5
+# alpha 139 1 0.5
+# face 139 "surprise"
+# voice 9967 "titania_0041"
+# textboxarrow 0 2
+@ティターニア
+あの子ったら…
+
+;;//暗転挟む
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+;;# background ""
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# alpha 139 0 0
+# alpha 3200111 1 0
+# face 3200111 "normal"
+# voice 320011 "myuruniru_ge_0039"
+# textboxarrow 0 2
+@ミョルニル
+ここにもみつけた！
+こっちのかどをまがるんだね～
+
+# move 172 1 0
+# move 139 5 0
+# mask 172 on
+# alpha 3200111 0 0.5
+# alpha 172 1 0.5
+# alpha 139 1 0.5
+# alpha 137 1 0.5
+;; # face 172 ""
+# textboxarrow 0 1
+@アルマス
+…………
+
+# face 139 "normal"
+# voice 9967 "titania_0055"
+# textboxarrow 0 3
+@ティターニア
+居住区らしい空間に来ましたね
+アルマス、何か思い出せそう
+ですか？
+
+# textboxarrow 0 1
+# bgm "stop"
+# se "SE_0769"
+;; # face 172 ""
+# voice 1038 "almace_0028"
+@アルマス
+どうだろ…
+ん？この音…
+
+# textboxarrow 0 2
+# face 137 "normal"
+# voice 9969 "gill_0001"
+@ギル
+どっかからオルゴールの音が
+聞こえてくるぜ
+
+# textboxarrow 0 1
+;; # face 172 ""
+@アルマス
+矢印の先…あの部屋みたいね
+
+# textboxarrow 0 2
+# alpha 172 0 0.5
+# alpha 139 0 0.5
+# alpha 137 0 0.5
+# alpha 3200111 1 0.5
+;; # face 3200111 ""
+@ミョルニル
+こっちだね～♪
+
+# textboxarrow 0 2
+# move 172 3 0
+# mask 172 off
+# alpha 172 1 0.5
+# alpha 3200111 0 0.5
+# face 172 "angry"
+@アルマス
+待って、ミョルニル！
+
+# alpha 172 0 0.5
+# alpha 3200111 1 0.5
+# face 3200111 "surprise"
+@ミョルニル
+なぁに、アルマス？
+
+# alpha 172 1 0.5
+# alpha 3200111 0 0.5
+;; # face 172 ""
+@アルマス
+私が先に行く…
+多分、その部屋にいるから
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# voice 1038 "almace_0007"
+# textboxarrow 0 1
+;;# background ""
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# alpha 3840001 1 0
+# face 172 "normal"
+# mask 172 on
+# move 172 4 0
+@アビス・アルマス
+やっと来たわね
+
+# textboxarrow 0 3
+@アルマス
+…ここが私の部屋だったの？
+
+# textboxarrow 0 1
+@アビス・アルマス
+ここは談話室…かな…
+ほら、いまだにこのオルゴール
+動くのよ
+
+# textboxarrow 0 3
+;; # face 172 ""
+@アルマス
+そんな話をするために
+待っていたわけじゃないわよね？
+
+# voice 1038 "almace_0003"
+# textboxarrow 0 1
+@アビス・アルマス
+そうね…
+少し歩きましょうよ
+ここを案内してあげる
+
+# sestop "SE_0769"
+@アビス・アルマス
+大切なことを忘れてしまった
+あなたのために、ね

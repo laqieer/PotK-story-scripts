@@ -1,0 +1,307 @@
+;;-----------------------------------------
+;;ファンキル お正月イベン2019　シナリオ
+;;【タイトル】
+;;振袖に降る雪
+;;【EP.1_1】初めての振袖
+;;//背景：室内（宿舎とか本拠地？）
+;;-----------------------------------------
+# script "lisp"
+# background "201_room"
+# bgm "stop"
+;;-----------------------------------------
+;;アバリス透明
+# body 3401011
+# alpha 3401011 0 0
+;;振袖アバリス
+# body 3401021
+# pos 3401021 3
+# scale 3401021 0.8 0
+# alpha 3401021 0 0
+# layer 3401021 15
+# mask 3401021 off
+;;enemy
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# alpha 3820001 0 0
+# layer 3820001 15
+# mask 3820001 off
+;;-----------------------------------------
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0002"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 0
+@アバリス
+あの…マスター！
+これは、どういうつもりですか？
+
+# se "SE_10262"
+# alpha 3401021 1 1
+# waitandnext 1
+
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+# textflame 0 0
+@
+アバリスが着ているものは、
+マスターがある店でひとめぼれして
+買った、振袖という特別な衣装だ
+
+# textflame 0 0
+@
+やっぱり似合うと思ったんだ、
+これなら絶対にみんなが注目するよ
+と、マスターはこたえる
+
+# voice 340101 "abaris_a_0028"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+そうでしょうか？
+たしかに、いつもの服装とは
+まったく違いますけど…
+
+# textflame 0 0
+@
+この振袖姿なら、必ず印象に残るし、
+アバリスにも自信がつくはずだ
+と、マスターは考えたのだった
+
+# textflame 0 0
+@
+さっそくみんなに見てもらうために
+人の多い場所に出かけようと誘うが
+アバリスは困惑した顔で首を振る
+
+# emotionbody 1000 9 3401021 -120 240
+# effectpattern 1000 4 0
+# effectstart 1000
+# voice 340101 "abaris_a_0042"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+あの…ええと…外は寒いし、雪も
+降っていますから
+外出はやめませんか？
+
+# effectskip 1000
+# voice 340101 "abaris_a_0015"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+というか、
+そんなの恥ずかしいです…
+
+# textflame 0 0
+@
+注目されないと意味がないんだけど
+アバリスが嫌なら仕方ない、近所を
+散歩するだけにしよう、とマスター
+
+# voice 340101 "abaris_a_0028"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+そ…それぐらいなら…
+
+;;//演出：場面転換
+;;//背景：野外
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.1
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# background "300_devil_daytime02"
+# envbody 9999 2 0
+# effectpattern 9999 1 0
+# effectstart 9999
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+足元に気をつけつつ、ゆっくりと
+散歩するマスターとアバリスの耳に、
+仲間の斬ル姫たちの声が聞こえてきた
+
+# emotionbody 1001 11 3401021 -130 250
+# effectpattern 1001 2 0
+# effectstart 1001
+# face 3401021 "surprise"
+# voice 340101 "abaris_a_0024"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+…！
+
+;;//演出：アバリス、素早く隠れる
+# effectskip 1001
+# se "SE_9021"
+# textboxarrow 0 0
+# fadein "white" 0.3
+# alpha 3401021 0 0
+# waitandnext 1
+
+# textflame 0 0
+@
+マスターは、急に姿を消した
+アバリスを探してあたりを見回す
+
+;;できればもやもやフレームで
+# textflame 1 1
+# move 3401021 3 0
+# textwindow "moya"
+# alpha 3401021 1 1
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0031"
+# chara 3401021
+@アバリス
+…マスター、ごめんなさい
+私、やっぱり…無理みたいです
+
+# textwindow "nomal"
+# textflame 0 0
+@
+その時、マスターは木の陰から
+はみ出る振袖の袖の先を発見した
+アバリスらしくないミスだった
+
+# textflame 0 0
+@
+こっそりとアバリスに近づいて
+ここにいたんだね、と声をかける
+
+# face 3401021 "surprise"
+# voice 340101 "abaris_a_0025"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+ひゃっ！
+ど、どうしてわかったんですか？
+
+# textflame 0 0
+@
+袖が見えてたよ、とマスターは答える
+そして、嫌がるアバリスを強引に
+連れ出したことを謝った
+
+# textflame 0 0
+@
+アバリスの振袖姿が綺麗だから、
+みんなに見せたかったんだけど、迷惑
+だったね、とマスターはうなだれる
+
+# face 3401021 "sad"
+# voice 340101 "abaris_a_0028"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+あの…迷惑じゃないです、マスターに
+褒めてもらえて嬉しいんですが…
+本当に似合っていますか？
+
+# voice 340101 "abaris_a_0015"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+せっかくマスターが考えてくれたのに
+勇気が出なくて…すみません
+
+# textflame 0 0
+@
+そう言って、今度はアバリスが
+落ちこんでしまう
+
+# textflame 0 0
+@
+アバリスはもっと自信を持っていい、
+色も柄もすごく似合っているよ
+と、マスターはアバリスを励ます
+
+# voice 340101 "abaris_a_0042"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+あ…ありがとうございます…
+でも…マスターは優しいから、
+そう言ってくれるんですよね？
+
+# textflame 0 0
+@
+それは違う、本当にそう思っている、
+この想いは信じてほしい
+と、マスターは力強く訴えた
+
+# face 3401021 "normal"
+# voice 340101 "abaris_a_0032"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+…わかりました
+私、マスターの言葉を信じます！
+勇気を出して頑張ってみます！
+
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+この振袖姿で、私の存在を
+みんなに認識してもらいたいです！
+
+# textflame 0 0
+@
+アバリスの決意表明を受けて、
+マスターも、そんなアバリスを
+応援すると、決意表明を返した
+
+# textflame 0 0
+@
+しかし、気合が入りすぎた二人は、
+思った以上に大きな声が
+出ていた
+
+# bgmfile "bgm177_178" "BgmGakuen001" 0
+# alpha 3401021 0 0.5
+# alpha 3820001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ケイオスリオン兵
+オラオラ！
+そこで騒いでやがるヤツはだれだ！
+
+@ケイオスリオン兵
+イミテーションなら
+ただじゃおかねえ！
+
+# alpha 3401021 1 0.5
+# alpha 3820001 0 0.5
+# face 3401021 "angry"
+# voice 340101 "abaris_a_0027"
+# chara 3401021
+# textflame 1 1
+# textboxarrow 0 2
+@アバリス
+巡回中の兵士に
+見つかってしまいましたか…
+はぁ…仕方ありませんね

@@ -1,0 +1,752 @@
+;;-----------------------------------------
+;;ゴッティル1_1
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "bgm103" 0
+;;-----------------------------------------
+;;ティル
+# body 101415
+# pos 101415 3
+# scale 101415 0.8 0
+# layer 101415 3
+# mask 101415 off
+# alpha 101415 0 0
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 5
+# mask 0 off
+# alpha 0 0 0
+;;ゼロ
+# body 23
+# pos 23 3
+# scale 23 0.8 0
+# layer 23 3
+# mask 23 off
+# alpha 23 0 0
+# body 1100221
+# alpha 1100221 0 0
+;;アスモデウス
+# body 960021
+# pos 960021 3
+# scale 960021 0.8 0
+# layer 960021 4
+# mask 960021 off
+# alpha 960021 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：赤い海（地上の赤い空をイメージした赤のみの画面もしくは真っ黒でも）
+;;演出：ティルフィング立ち絵表示
+;;演出：以下のセリフ群はティルフィングの回想的モノローグのイメージ
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1.5
+
+# alpha 101415 1 0.5
+# waitandnext 0.7
+
+# textflame 0 0
+# textwindow "nomal"
+@
+……不安かい？
+
+# textflame 1 1
+# textboxarrow 0 0
+@ティルフィング
+赤い海……いえ、赤い雲に
+飛び込む前、マスターが
+私に投げかけてくれた言葉
+
+@ティルフィング
+マスターのその声に
+私の不安は無くなっていた
+
+@ティルフィング
+たくさんの出逢いとたくさんの別れ
+そして託された、たくさんの思い
+
+;;演出：エイレーネのセリフは回想
+# serif 1
+# textwindow "nomal"
+@エイレーネ
+『我が…愛しき娘よ』
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+@ティルフィング
+お母さん…
+
+@ティルフィング
+お母さんとお父さんが
+遺してくれた希望…
+私が必ず、この世界に！
+
+;;演出：以下は回想ではなく実際に喋っているイメージ
+# textboxarrow 0 2
+# face 101415 "angry"
+@ティルフィング
+地上を救う！
+
+# textflame 0 0
+@
+ふと、ティルフィングは
+自身を包むような温かさを感じる
+
+# textflame 1 1
+# face 101415 "normal"
+@ティルフィング
+ああ、これはきっと
+そう、みんなの思いの形
+
+@ティルフィング
+そして、マスターとの繋がりの証
+
+# textflame 0 0
+@
+手を握られたような感触
+それに呼応するように
+ティルフィングは拳を握る
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0001"
+@ティルフィング
+マスター、私は大丈夫です
+
+@ティルフィング
+行きましょう、私達を待つ人達の元へ
+
+;;場面展開
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：地上世界（荒廃した街？）
+# background "ground_surface_break"
+# bgm "stop"
+# textwindow "close"
+# alpha 101415 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# move 101415 4 0
+# mask 101415 on
+# alpha 101415 1 0.5
+# move 0 2 0
+# mask 0 on
+# alpha 0 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 101415 "surprise"
+@ティルフィング
+これが…地上
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 0 "sad"
+# voice 9999 "durin_0015"
+@デュリン
+想定以上の惨状ね
+なんとか持ちこたえた…にしては
+あまりにも酷い景色…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 101415 "angry"
+@ティルフィング
+それでも、私達を信じて
+送り出してくれたみんなが
+待っているはずです
+
+# textflame 0 0
+@
+そのためにここへ来たんだからね
+マスターは力強く答える
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0003"
+@ティルフィング
+…はい！
+私が天上世界で得た力が
+この地上を救うんです！
+
+# serif 1
+# textwindow "nomal"
+# face 23 "sad"
+# voice 11002 "laevateinm_0024"
+@？？？
+…う、あ
+
+;;演出：物音に身構えるティルフィング
+# se "SE_5200"
+# alpha 0 0 0.5
+# move 101415 3 0.3
+# mask 101415 off
+# serif 0
+# textflame 1 1
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0037"
+@ティルフィング
+何者ですか！？
+
+# move 101415 1 0.5
+# mask 101415 on
+# move 23 5 0
+# mask 23 on
+# alpha 23 1 0.5
+# move 0 3 0
+# mask 0 off
+# alpha 0 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textboxarrow 0 3
+@？？？
+お前達は…
+
+# bgmfile "bgm150" "BgmPJZero001" 0
+# textflame 1 1
+# textboxarrow 0 1
+# face 101415 "surprise"
+# voice 1014 "tyrufing_0024"
+@ティルフィング
+ゼロ！！！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ゼロ
+ア…、うぅ
+
+# textflame 1 1
+# textboxarrow 0 2
+@デュリン
+消耗しきってる
+ずっと…戦ってたんだ、この地上で
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 101415 "angry"
+@ティルフィング
+ゼロが…こんなになるまで
+でも、大丈夫です、希望はここに！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 11002 "laevateinm_0004"
+@ゼロ
+…は、はは、やっと、か
+
+;;演出：気絶するゼロ
+# se "SE_0846"
+# alpha 23 0 0.5
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# move 101415 2 0.5
+# move 0 4 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+マスター、ゼロの保護を最優先に！
+彼の話が聞ければ地上で
+何があったかわかるはずです
+
+# textflame 0 0
+@
+うん、そうだね
+とマスターは返す
+
+# bgmfile "bgm160" "BgmPJZero001" 0
+# textflame 0 0
+@
+だが、マスターはそれと同時に
+殺気に満ちた気配を感じていた
+
+# move 101415 3 0.5
+# mask 101415 off
+# alpha 0 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+どうやら、私達が戦うべき相手の
+おでましのようですね
+
+# move 101415 4 0.5
+# mask 101415 on
+# move 960021 2 0
+# mask 960021 on
+# alpha 960021 1 0.5
+# face 101415 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@？？？
+あらぁ～？
+ベルちゃんがおねだりするからって
+こ～んなところに来てみれば…
+
+# textflame 1 1
+# textboxarrow 0 1
+@？？？
+本当に可愛い可愛い邪魔者が
+戻ってきちゃったみたいねぇ？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+あなたは……
+アスモデウス
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 960021 "usual"
+@アスモデウス
+さあ、玩具は玩具らしく、
+大人しく私に
+遊ばれるのがいいわ
+
+# move 101415 3 0.5
+# mask 101415 off
+# alpha 960021 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 101415 "angry"
+@ティルフィング
+みなさん、下がっていてください
+私がアスモデウスは抑えます
+
+# alpha 101415 0 0.5
+# move 0 3 0
+# alpha 0 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9999 "durin_0002"
+@デュリン
+…本当に大丈夫なの、
+ティルフィング
+
+# alpha 0 0 0.5
+# alpha 101415 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 101415 "normal"
+# voice 1014 "tyrufing_0044"
+@ティルフィング
+ええ、大丈夫です
+それに、私にはマスターもいます！
+
+# textflame 0 0
+@
+強大な敵を前にしているというのに
+可憐に笑うティルフィング
+
+# textflame 0 0
+@
+マスターはその笑顔へ
+信頼を込めて笑みを返す
+
+# move 101415 4 0.5
+# mask 101415 on
+# alpha 960021 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 960021 "happy"
+@アスモデウス
+余裕たっぷりって感じね
+…その笑顔、歪ませたくなっちゃう！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 101415 "angry"
+@ティルフィング
+…来ます！
+
+;;演出：戦っているような演出をお願いいたします。
+# fadein "white" 0.5
+# move 960021 3 0.2
+# move 101415 5 0.2
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0029"
+@ティルフィング
+はあっ！
+
+# fadein "white" 0.5
+# se "SE_4000"
+# se "SE_0810"
+# move 960021 2 0.3
+# move 101415 4 0.3
+# waitandnext 0.5
+
+# sestop "SE_0810"
+# textflame 1 1
+# textboxarrow 0 1
+# face 960021 "usual"
+@アスモデウス
+あら、やるじゃない
+
+# se "SE_4000"
+# fadein "white" 0.5
+# alpha 960021 0 0.5
+# alpha 101415 0 0.5
+# alpha 0 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 0 "worry"
+@デュリン
+これがティルフィングの力…
+まさに、天使と悪魔の戦いみたい…
+
+# bgm "stop"
+# alpha 0 0 0.5
+# textflame 0 0
+@
+ティルフィングの剣先が
+アスモデウスの頬を
+薄く切り裂く
+
+# alpha 960021 1 0.5
+# alpha 101415 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 960021 "surprise"
+@アスモデウス
+……ふん
+今日のところは退いてあげるわ
+次はちゃんと殺してあげる
+
+;;演出：消えるアスモデウス
+# alpha 960021 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# move 0 2 0
+# alpha 0 1 0.5
+# face 0 "usual"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 101415 "surprise"
+@ティルフィング
+…随分あっさりと退いていきましたね
+
+# textflame 0 0
+@
+何か企んでいたとしても
+ティルフィングがいれば大丈夫
+と微笑むマスター
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 9999 "durin_0004"
+@デュリン
+ティルフィングがいれば
+世界が救える、そう確信しちゃった？
+
+# textflame 0 0
+@
+デュリンも同じことを
+考えていたのか、とマスターは笑う
+
+;;場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：廃墟
+# bgm "bgm101" 0
+# move 101415 5 0
+# move 0 3 0
+# move 23 1 0
+# alpha 23 1 0.5
+# face 101415 "normal"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0001"
+@ティルフィング
+マスター、
+ゼロの様子はいかがですか？
+
+# textflame 1 1
+# textboxarrow 0 1
+@ゼロ
+…………
+
+# textflame 1 1
+# textboxarrow 0 2
+@デュリン
+苦しそうな顔じゃなくなった
+って程度には回復したみたいね
+
+# textflame 1 1
+# textboxarrow 0 2
+@デュリン
+ほんっとにボロボロの状態で
+ここまで来れたのが奇跡ね
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 0 "normal"
+@デュリン
+休める場所が早くに
+見つかったのは運がよかったわね
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0003"
+@ティルフィング
+ここであれば迎撃も容易ですし
+いざとなれば退路も
+確保できますから
+
+# textflame 1 1
+# textboxarrow 0 2
+@デュリン
+ティルが悪魔みんなやっつければ
+こんな風にこそこそする必要も
+ないんじゃない？
+
+# textflame 0 0
+@
+ティルフィングの力は確かだが
+そう簡単な話じゃないよ
+とデュリンを諭すマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 0 "sad"
+@デュリン
+それはそうだけど…
+
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+平和への道のりは
+一歩一歩確実に、ですよデュリン
+
+;;演出：画面揺れ等、戦闘が行われていることがわかる演出
+# shake 0 1
+# se "SE_5223"
+# bgmfile "bgm150_151" "BgmPJZero001" 0
+# textboxarrow 0 0
+# waitandnext 1.5
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 101415 "surprise"
+@ティルフィング
+魔獣が現れたようです！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 101415 "angry"
+@ティルフィング
+様子を見てきます
+
+# alpha 101415 0 0.5
+# textflame 0 0
+@
+頼んだ
+とマスターはティルフィングを
+送り出す
+
+# move 0 4 0.5
+# move 23 2 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 23 "normal"
+# voice 11002 "laevateinm_0037"
+@ゼロ
+…う、く
+ここはどこだ…？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 0 "usual"
+# voice 9999 "durin_0002"
+@デュリン
+目が覚めたのね！
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 11002 "laevateinm_0003"
+@ゼロ
+なんだ、この小さい
+うるさい奴は
+妖精…か？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 0 "angry"
+# voice 9999 "durin_0010"
+@デュリン
+誰が妖精よ！
+失礼ね、
+鼻にナッツ詰めるわよ！
+
+# textboxarrow 0 0
+# alpha 0 0 0.5
+# alpha 101415 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+マスター！
+
+# textflame 0 0
+@
+音がした方へ
+向かったはずのティルフィングが
+マスター達に駆け寄ってくる
+
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+魔獣の行動は明らかに
+ここを狙ってきています
+…しかも、その数は膨大です
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 11002 "laevateinm_0032"
+@ゼロ
+いつもそうだ
+あいつらは俺らを弄ぶように
+襲ってくるんだ…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ゼロ
+ベルゼブブと
+アスモデウスはいたか？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+いえ、アスモデウスは少し前に
+あっさりと退いていったままです
+ベルゼブブは…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ゼロ
+まだ見ていないのか
+だが、あいつも
+絶対に近くにいるはずだ
+
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+…ゼロが目覚めたのであれば、
+ここに長居するのは
+危険です、移動しましょう
+
+# textflame 0 0
+@
+目が覚めたとはいえ
+すぐに動くのは…とマスターは
+ゼロの身を案ずるが…
+
+# textflame 1 1
+# textboxarrow 0 1
+@ゼロ
+…大丈夫だ
+俺はそんなにやわじゃない
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 11002 "laevateinm_0002"
+@ゼロ
+誰だか知らんが助かった
+ジリ貧になる前に移動しよう
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0003"
+@ティルフィング
+では、マスター達はこちらへ！
+
+# alpha 101415 0 0.5
+# alpha 23 0 0.5
+# textflame 0 0
+@
+ティルフィングの案内で
+逃げ道へと移動を始めた
+マスター達だったが…
+
+# move 101415 2 0
+# mask 101415 on
+# alpha 101415 1 0.5
+# move 0 4 0
+# alpha 0 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 0 "worry"
+# voice 9999 "durin_0024"
+@デュリン
+嘘でしょ…
+
+# serif 1
+# textwindow "nomal"
+@魔獣
+グガアアアアアアアア！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0037"
+@ティルフィング
+…くっ、こんなところにまで！
+
+# textflame 0 0
+@
+いくよ、ティルフィング
+マスターは声に力を込める
+
+# se "SE_5205"
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+…はい！
+なんとしてもここは通ります！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 0 "sad"
+@デュリン
+…………
+
+# textflame 0 0
+@
+……デュリン、どうかしたの？
+マスターがそう問いかけるが
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 0 "usual2"
+@デュリン
+ううん、なんでもないわ
+さあ、いくわよ！

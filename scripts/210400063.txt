@@ -1,0 +1,326 @@
+;;-----------------------------------------
+;;210400063
+;;【EP5】6月の花嫁 戦闘後
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgm "stop"
+;;シェキナー
+# body 400771
+# pos 400771 4
+# scale 400771 0.8 0
+# layer 400771 2
+# mask 400771 on
+# alpha 400771 1 0
+;;スイハ
+# body 401721
+# pos 401721 2
+# scale 401721 0.8 0
+# layer 401721 1
+# mask 401721 on
+# alpha 401721 1 0
+# face 401721 "usual"
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;暗幕上
+# imageset 1 "bg_black"
+# imagelayer 1 1
+# imagealpha 1 0 0
+;;暗幕下
+# imageset 2 "bg_black"
+# imagelayer 2 1
+# imagealpha 2 0 0
+;;弓エフェクト(シェキナー)
+# effectbody 1000 31 0 0 7
+;;弓エフェクト(スイハ)
+# effectbody 2000 32 0 0 7
+;;◆背景：街-------------------------------------------
+# textflame 1 1
+# textboxarrow 0 3
+# face 400771 "normal"
+# voice 4007 "shekina_0027"
+# chara 400771
+@シェキナー
+こちらは片付きましたね…
+
+# face 400771 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+# face 401721 "surprise"
+# voice 4017 "suiha_0022"
+# chara 401721
+@スイハ
+！？
+あれを見てください！
+
+;;◆背景：街(モブ側)-----------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# bgm "bgm031" 0
+# imagepos 1 0 700
+# imagepos 2 0 -700
+# imagealpha 1 1 0
+# imagealpha 2 1 0
+# alpha 401721 0 0
+# alpha 400771 0 0
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 0
+# voice 4007 "shekina_0023"
+# chara 400771
+@シェキナー
+ああっ！隠れていた一体の異族が
+女性へと向かって行きます！
+彼女があぶない！
+
+# textflame 0 0
+@
+彼女は自分が必ず守る!
+と叫び、恋人は女性をかばうため
+異族の前に立ちふさがった
+
+;;◆背景：街-------------------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# imagealpha 1 0 0
+# imagealpha 2 0 0
+# pos 400771 3
+# mask 400771 off
+# alpha 400771 1 0
+# face 400771 "surprise"
+# background "town"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# se "SE_5718"
+# shake 0 0.6
+# textflame 1 1
+# textboxarrow 0 2
+# face 400771 "angry"
+# voice 4007 "shekina_0029"
+# chara 400771
+@シェキナー
+お願い、間に合って…！
+せぇぇい！
+
+# se "SE_5734"
+# shake 0 0.6
+# alpha 400771 0 0.5
+# pos 401721 3
+# mask 401721 off
+# alpha 401721 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 401721 "angry"
+# voice 4017 "suiha_battle_0002"
+# chara 401721
+@スイハ
+やぁっ！
+
+;;◆背景：黒バック-------------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0
+# textwindow "close"
+# waitandnext 0.1
+
+# alpha 401721 0 0
+# background "bg_black"
+# waitandnext 0.1
+
+# imagealpha 0 0 0.1
+# imagerightout 0 0.1
+# waitandnext 0.1
+
+# se "SE_9126"
+# effectstart 1000
+# effectstart 2000
+# waitandnext 0.8
+
+# se "SE_0618"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# bgm "stop"
+# se "SE_3001"
+# textwindow "normal"
+# textflame 0 0
+@
+男性に襲いかかろうと
+手をふり上げたその時、
+異族は矢によって倒れた
+
+;;◆背景：街-------------------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.1
+# textwindow "close"
+# waitandnext 0.1
+
+# bgm "bgm101" 0
+# pos 401721 2
+# mask 401721 on
+# alpha 401721 1 0
+# face 401721 "normal"
+# pos 400771 4
+# mask 400771 on
+# alpha 400771 1 0
+# face 400771 "normal"
+# background "town"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 400771 "sad"
+# voice 4007 "shekina_0013"
+# chara 400771
+@シェキナー
+愛する女性を守るためとはいえ、
+異族の前に立つだなんて
+危険すぎますよ！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 401721 "happy"
+# voice 4017 "suiha_0003"
+# chara 401721
+@スイハ
+ええ…でも、あの男性の勇気は
+すばらしいものです
+これが愛の力なのですね
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 400771 "happy"
+# voice 4007 "shekina_0004"
+# chara 400771
+@シェキナー
+ふふっ…そうですね
+きっと、あのご両親にも
+届きますよね！
+
+;;◆背景：空-------------------------------------------
+# textwindow "close"
+# fadeout "black" 0.8
+# waitandnext 0.8
+
+# alpha 400771 0 0
+# alpha 401721 0 0
+# background "mov2_1"
+# waitandnext 0.5
+
+# fadein "black" 0.8
+# waitandnext 1.0
+
+# textwindow "normal"
+# textflame 0 0
+@
+両親達が見送る中、
+女性と恋人は馬車に乗りこみ、
+新天地に向けて出発した
+
+;;◆背景：街-------------------------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 401721 1 0
+# face 401721 "normal"
+# alpha 400771 1 0
+# face 400771 "normal"
+# background "town"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 4017 "suiha_0005"
+# chara 401721
+@スイハ
+愛とは不思議なものですね
+一緒にいることも、離れることも
+どちらも愛の証になるんですね
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 401721 "happy"
+# chara 401721
+@スイハ
+愛の力は凄いです
+わたくしも、
+いつかは愛を知るのでしょうか
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 400771 "shy"
+# voice 4007 "shekina_0020"
+# chara 400771
+@シェキナー
+もちろんですよ！
+ふふっ、ねぇマスター…
+スイハってかわいいですよね？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 401721 "normal"
+# chara 401721
+@スイハ
+おほん…
+シェキナー、聞こえてます
+
+# textflame 0 0
+@
+スイハは綺麗すぎて近寄りがたい
+雰囲気があるからなぁ、と
+マスターはスイハの顔を見つめる
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 401721 "shy"
+# voice 4017 "suiha_0042"
+# chara 401721
+@スイハ
+マスター、あまり見ないでください！
+（見られてる〜！！恥ずかしい
+恥ずかしい恥ずかしい恥ずかしい！）
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 400771 "happy"
+# voice 4007 "shekina_0005"
+# chara 400771
+@シェキナー
+スイハのいいところ、
+もっとみんなに知ってほしいな
+ふふっ！

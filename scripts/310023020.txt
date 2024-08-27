@@ -1,0 +1,524 @@
+;;-----------------------------------------
+;;SEA2章_2
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;町の人1
+# body 2
+# pos 2 2
+# scale 2 0.8 0
+# layer 2 4
+# mask 2 off
+# alpha 2 0 0
+# reversal 2 0
+;;七支刀
+# body 5105111
+# pos 5105111 4
+# scale 5105111 0.8 0
+# layer 5105111 2
+# mask 5105111 off
+# alpha 5105111 0 0
+# brightness 5105111 0.05 0
+;;ghost
+# body 302
+# pos 302 5
+# scale 302 0.8 0
+# layer 302 5
+# mask 302 off
+# alpha 302 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：町（インテグラルノア編の下町）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_6216"
+# face 270 "normal"
+# alpha 270 1 0.5
+# face 6504011 "usual"
+# alpha 6504011 1 0.5
+# waitandnext 0.5
+
+# voice 9917 "mimir_navikan_0001"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+マスター様
+こちらがコラソンの町でございます
+
+# textboxarrow 0 1
+@ミーミル
+大学があり、
+若い方々が比較的多い町と
+認識しております
+
+# textboxarrow 0 1
+@ミーミル
+科学技術が発達しており、
+通信網も整備されているそうです
+
+# textboxarrow 0 1
+@ミーミル
+なんでも、この地域の磁場を
+利用した技術らしく
+
+# textboxarrow 0 1
+@ミーミル
+この町の中に限られるようですが、
+遠く離れた人同士で
+連絡を取り合う器機があるとか
+
+# textboxarrow 0 1
+@ミーミル
+ティルフィング様のお力に
+近いものでしょうか？
+少し気になります
+
+# voice 650401 "manannan_ura_0004"
+# face 6504011 "happy"
+# textboxarrow 0 3
+@マナナン
+ふふっ♪
+楽しそうな町なんだね！
+
+# textboxarrow 0 3
+@マナナン
+ここではどんな喜劇的なことが
+起きてるんだろっ？
+
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+まずは情報収集を致しましょう
+…あら？
+
+# textboxarrow 0 1
+@ミーミル
+あちらに人だかりができています
+何事でしょう
+
+# voice 650401 "manannan_ura_0005"
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+早速、愉快な予感っ
+
+;;マナナンが走っていく
+# se "SE_5575"
+# se "SE_9430"
+# move 6504011 3 0.5
+# scale 6504011 0.6 0.5
+# alpha 6504011 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# bgm "bgm002" 0
+# move 6504011 4 0
+# scale 6504011 0.8 0
+# alpha 270 0 0
+# waitandnext 0.2
+
+# se "SE_0902"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# serif 1
+@町の人々
+ありがたや
+ありがたやー
+
+# face 2 "normal"
+# alpha 2 1 0.3
+# face 5105111 "normal"
+# alpha 5105111 1 0.3
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+@町人１
+ありがとうございました！
+これからも頑張りますっ
+
+# voice 1051 "shichishito_0003"
+# textboxarrow 0 3
+@？？？
+はい
+応援してますよ！
+
+# alpha 2 0 0.3
+# alpha 5105111 0 0.3
+# face 270 "normal"
+# alpha 270 1 0.3
+# face 6504011 "surprise"
+# alpha 6504011 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+あれ？
+あそこにいるのってキル姫だよね
+みんなに囲まれてるよ
+
+# textboxarrow 0 1
+@ミーミル
+あちらのキル姫さんは…
+ええと…
+
+# textboxarrow 0 1
+@ミーミル
+確か、七支刀さんです
+キル姫一覧の中にお姿がありました
+
+# textboxarrow 0 1
+@ミーミル
+どうして皆さんに
+囲まれているのでしょう？
+
+# serif 1
+@町の人々
+ん？
+あんた達、七支刀ちゃんの
+凄さを知らないのかい！？
+
+# serif 1
+@町の人々
+七支刀ちゃんは町の守り神、
+いや、世界の守り神といってもいい
+キル姫なんだよ！
+
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+そ…そんな方がいらっしゃったとは
+私、不勉強で
+恥ずかしい限りでございます…
+
+# move 5105111 5 0
+# move 270 3 0.5
+# face 270 "surprise"
+# alpha 6504011 0 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+…はて？
+世界を護っておられるのは、
+ティルフィング様では…？
+
+# textboxarrow 0 2
+@ミーミル
+マスター様、これは一体、
+どういうことなのでしょう…！
+
+# serif 1
+# voice 1051 "shichishito_0002"
+@？？？
+そちらのあなた、
+何か悩みごとですか？
+
+;;七支刀が近づいてくる
+# se "SE_0740"
+# move 270 2 0.5
+# move 5105111 4 0.5
+# face 5105111 "normal"
+# alpha 5105111 1 0.5
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+@？？？
+わたくしで良ければ、
+お話しを聞かせて下さい
+
+# textboxarrow 0 1
+@ミーミル
+あ…ですが…
+
+# se "SE_0902"
+# serif 1
+@町人２
+遠慮しなくていいよ
+七支刀ちゃんに話を聞いてもらえば
+どんな悩みも一発解決さ！
+
+# serif 0
+# textboxarrow 0 0
+@町人３
+七支刀ちゃんに相談したお陰で
+理想の相手と巡り会えて
+結婚できました
+
+# serif 1
+@町人４
+七支刀ちゃんのお陰で運気アップ
+今は儲かって儲かって
+仕方ありません
+
+# serif 0
+# textboxarrow 0 0
+@町人５
+七支刀ちゃんを拝んでいたら
+腰痛が治りました
+
+# serif 1
+@町の人々
+さあ、あなた達も七支刀ちゃんを
+崇めて御利益を得よう！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 270 "normal"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+霊験あらたかな
+キル姫さんのようですね…
+
+# textboxarrow 0 3
+@？？？
+いえいえ、そんなことないんですよ
+
+# textboxarrow 0 3
+@？？？
+わたくしはただ、
+皆さんのお話しを聞いて
+
+# textboxarrow 0 3
+@？？？
+上手くいって欲しいな
+幸せになって欲しいなと
+
+# textboxarrow 0 3
+@？？？
+精一杯、励ましの言葉を
+かけさせていただいているだけです
+
+# textboxarrow 0 3
+@？？？
+あと、呪術については詳しいので
+恋のおまじないなんかを少々
+
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+なるほど
+…申し遅れました
+
+# move 6504011 1 0
+# layer 6504011 4
+# mask 6504011 on
+# textboxarrow 0 1
+@ミーミル
+私、ミーミルと申します
+こちらにいらっしゃるマスター様の
+専属補佐官でございます
+
+# move 270 1 0.5
+# alpha 270 0 0.3
+# move 6504011 2 0.5
+# face 6504011 "normal"
+# alpha 6504011 1 0.3
+# textboxarrow 0 1
+@マナナン
+私のことは、マナナンって呼んで！
+
+# move 270 2 0.5
+# face 270 "normal"
+# alpha 270 1 0.3
+# move 6504011 1 0.5
+# alpha 6504011 0 0.3
+# textboxarrow 0 1
+@ミーミル
+私達はティルフィング様の命を受け、
+世界中を旅して「揺らぎ」を
+修復して回っております
+
+# voice 1051 "shichishito_0021"
+# textboxarrow 0 3
+@？？？
+わあ！
+マスター様とミーミル様、
+マナナン様は
+
+# voice 1051 "shichishito_0041"
+# textboxarrow 0 3
+@？？？
+世界を救うために
+旅をされているのですね！
+素敵です！
+
+# brightness 5105111 1 0.7
+# textboxarrow 0 3
+@七支刀
+わたくし、七支刀といいます
+
+# textboxarrow 0 3
+@七支刀
+わたくしも世界を平和にしたいと
+願っているんです
+
+# face 5105111 "sad"
+# textboxarrow 0 3
+@七支刀
+目立たないだけで、
+この世界には争いがあります…
+苦しんでいる人達もたくさんいます…
+
+# face 5105111 "normal"
+# textboxarrow 0 3
+@七支刀
+そんな方々をあらゆる脅威から
+お守りし、世界中を幸せで
+満たしたいんですっ
+
+# voice 1051 "shichishito_0002"
+# textboxarrow 0 3
+@七支刀
+あの、ミーミル様
+マスター様、マナナン様…
+
+# se "SE_6506"
+# emotionbody 2000 4 5105111 0 220
+# effectpattern 2000 1 12
+# effectstart 2000
+# textboxarrow 0 3
+@七支刀
+わたくし達、世界平和を目指す
+仲間ですよねっ
+皆様のこと、もっと教えて下さい！
+
+# se "SE_0607"
+# serif 1
+@町の人々
+ああっ
+七支刀ちゃんの上目遣いが
+炸裂だーっ！
+
+# serif 1
+@町の人々
+あれを食らって
+まともに立っていられた奴を
+見たことねぇよ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+ええと…
+先程から周りの皆様の熱量が
+すごすぎて…
+
+;;幽霊が画面を通り過ぎる
+# bgm "stop"
+# sestop "SE_6216"
+# alpha 270 0 0.3
+# alpha 5105111 0 0.3
+# textwindow "close"
+# waitandnext 0.8
+
+# se "SE_11585"
+# move 302 1 2.2
+# alpha 302 0.5 1
+# waitandnext 1
+
+# alpha 302 0 1
+# move 270 3 0
+# waitandnext 1
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+えっ？
+今、何か通り過ぎたような…
+
+# voice 9917 "mimir_navikan_0025"
+# textboxarrow 0 2
+@ミーミル
+きゃっ！？
+
+;;画面揺れ
+# se "SE_0936"
+# se "SE_12257"
+# shake 0 0.2
+# textboxarrow 0 0
+# waitandnext 0.7
+
+# se "SE_0989"
+# sedelay "SE_12620" 0.3
+# shake 1 0.7
+# waitandnext 1
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# sedelay "bgm602_basic_on" 2
+# se "SE_6194"
+# serif 1
+@町の人々
+うわぁっ！？
+何だ、何だっ？
+
+# serif 1
+@町の人々
+物が勝手に…動き出したぞ！？
+
+# serif 1
+@町の人々
+きゃああああ…！
+また、心霊現象よっ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 9917 "mimir_navikan_0046"
+# face 270 "angry"
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+何ということでしょう…！
+マスター様、お伏せ下さいっ
+
+# fadeout "black" 1
+# waitandnext 1

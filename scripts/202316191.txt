@@ -1,0 +1,718 @@
+;;-----------------------------------------
+;;SEA_19_1
+;;-----------------------------------------
+# script "lisp"
+# background "in_city"
+# bgm "stop"
+;;-----------------------------------------
+;;天沼矛聖鎖
+# body 3300411
+# pos 3300411 3
+# scale 3300411 0.8 0
+# layer 3300411 3
+# mask 3300411 off
+# alpha 3300411 0 0
+# body 300431
+# pos 300431 3
+# scale 300431 0.8 0
+# layer 300431 3
+# mask 300431 off
+# alpha 300431 0 0
+;;草薙剣
+# body 100441
+# pos 100441 2
+# scale 100441 0.8 0
+# layer 100441 1
+# mask 3300411 off
+# alpha 100441 0 0
+;;八咫鏡
+# body 500331
+# pos 500331 4
+# scale 500331 0.8 0
+# layer 500331 2
+# alpha 500331 0 0
+;;SEA与一
+# body 6400511
+# pos 6400511 3
+# scale 6400511 0.8 0
+# layer 6400511 3
+# mask 6400511 off
+# alpha 6400511 0 0
+;;ルーン
+# body 300531
+# pos 300531 4
+# scale 300531 0.8 0
+# layer 300531 4
+# alpha 300531 0 0
+;;フラガラッハ聖鎖
+# body 3101011
+# pos 3101011 2
+# scale 3101011 0.8 0
+# layer 3101011 2
+# mask 3101011 off
+# alpha 3101011 0 0
+# body 101011
+# pos 101011 2
+# scale 101011 0.8 0
+# layer 101011 2
+# mask 101011 off
+# alpha 101011 0 0
+;;SEAリットゥ
+# body 6100511
+# pos 6100511 2
+# scale 6100511 0.8 0
+# layer 6100511 2
+# mask 6100511 off
+# alpha 6100511 0 0
+;;シェキナー聖鎖
+# body 3400711
+# pos 3400711 4
+# scale 3400711 0.8 0
+# layer 3400711 4
+# alpha 3400711 0 0
+# body 6400711
+# pos 6400711 4
+# scale 6400711 0.8 0
+# layer 6400711 4
+# alpha 6400711 0 0
+;;アルテミス
+# body 400131
+# pos 400131 2
+# scale 400131 0.8 0
+# layer 400131 4
+# alpha 400131 0 0
+;;アポロン聖鎖
+# body 3400311
+# pos 3400311 4
+# scale 3400311 0.8 0
+# layer 3400311 2
+# mask 3400311 off
+# alpha 3400311 0 0
+# body 400331
+# pos 400331 4
+# scale 400331 0.8 0
+# layer 400331 2
+# mask 400331 off
+# alpha 400331 0 0
+;;マサムネ
+# body 100111
+# pos 100111 2
+# scale 100111 0.8 0
+# layer 100111 4
+# alpha 100111 0 0
+;;青龍偃月刀聖鎖
+# body 3300911
+# pos 3300911 4
+# scale 3300911 0.8 0
+# layer 3300911 2
+# mask 3300911 off
+# alpha 3300911 0 0
+# body 300911
+# pos 300911 4
+# scale 300911 0.8 0
+# layer 300911 2
+# mask 300911 off
+# alpha 300911 0 0
+;;ロンギヌス聖鎖
+# body 3300111
+# pos 3300111 3
+# scale 3300111 0.8 0
+# layer 3300111 3
+# mask 3300111 off
+# alpha 3300111 0 0
+;;フライクーゲル聖鎖
+# body 3500211
+# pos 3500211 3
+# scale 3500211 0.8 0
+# layer 3500211 3
+# mask 3500211 off
+# alpha 3500211 0 0
+;;9thティルフィング
+# body 6101441
+# pos 6101441 3
+# scale 6101441 0.8 0
+# layer 6101441 3
+# mask 6101441 off
+# alpha 6101441 0 0
+;;レーヴァテイン
+# body 100221
+# pos 100221 3
+# scale 100221 0.8 0
+# layer 100221 3
+# mask 100221 off
+# alpha 100221 0 0
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 3
+# mask 103611 off
+# alpha 103611 0 0
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 4
+;;-----------------------------------------
+;;背景：中心部：in_city
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+# bgmfile "bgm291" "BgmLostRagnarokSideStory" 0
+# se "SE_4300"
+# move 6400511 2 0
+# layer 6400511 4
+# mask 6400511 on
+# alpha 6400511 1 0.3
+# move 3300411 4 0
+# layer 3300411 2
+# alpha 3300411 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@与一
+天沼矛さん、ごめんなさい！
+
+;;与一が矢を放つ
+# se "SE_4301"
+# fadein "white" 0.5
+# move 3300411 5 0.3
+# waitandnext 1
+
+# alpha 6400511 0 0.3
+# move 3300411 3 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@天沼矛
+あらぁ？
+危ないですよぉ…
+
+;;草薙剣と八咫鏡が飛び出す
+# se "SE_5575"
+# sedelay "SE_5575" 0.2
+# alpha 3300411 0 0.3
+# voice 1004 "kusanagi_0006"
+# face 100441 "angry"
+# alpha 100441 1 0.3
+# face 500331 "angry"
+# alpha 500331 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@草薙剣
+今じゃ！
+余が捕まえておるうちにっ
+
+# textflame 1 1
+# textboxarrow 0 3
+@八咫鏡
+わらわの鏡で
+真の姿を思い出させてやろうぞ！
+
+;;飛び出した二人が勢い余って天沼矛とぶつかる
+# se "SE_5575"
+# layer 3300411 4
+# mask 3300411 on
+# alpha 3300411 1 0.3
+# move 100441 1 0.5
+# move 500331 5 0.5
+# textboxarrow 0 0
+# waitandnext 0.5
+
+# se "SE_0846"
+# shake 0 0.5
+# voice 330041 "amenonuboko_t_battle_0006"
+# face 3300411 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@天沼矛
+あうっ…！？
+
+# voice 1004 "kusanagi_0037"
+# face 100441 "worry"
+# textflame 1 1
+# textboxarrow 0 1
+@草薙剣
+うぎゃっ…！
+
+# voice 5003 "yatanokagami_0022"
+# face 500331 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@八咫鏡
+何と…！？
+
+# se "SE_0624"
+# fadeout "white" 1
+# waitandnext 1
+
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+;;天沼矛の姿が聖鎖バージョンから天上編に変わる
+# move 300431 3 0
+# layer 300431 4
+# mask 300431 on
+# face 300431 "worry"
+# alpha 300431 1 0.3
+# alpha 3300411 0 0.3
+# face 100441 "normal"
+# waitandnext 2
+
+# voice 3004 "amenonuboko_0015"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@天沼矛
+…痛いですぅ
+草薙ちゃん、八咫ちゃん
+大丈夫ですかぁ？
+
+# face 300431 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@天沼矛
+わたし、またぼんやりしてしまって…
+あらぁ？ここはどこでしょう？
+
+# voice 1004 "kusanagi_0023"
+# face 100441 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@草薙剣
+おおっ！
+天沼矛が元に戻ったぞ
+
+# voice 5003 "yatanokagami_0003"
+# face 500331 "smile"
+# textflame 1 1
+# textboxarrow 0 3
+@八咫鏡
+うむ
+結果良ければ全て良し！
+
+# voice 4005 "yoichi_0004"
+# alpha 100441 0 0.3
+# alpha 500331 0 0.3
+# alpha 300431 0 0.3
+# move 6400511 3 0
+# mask 6400511 off
+# face 6400511 "shy"
+# alpha 6400511 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@与一
+はわわっ…
+上手くいって良かったです
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 6400511 0 0.3
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 1.5
+
+# rightin 300531 0.3
+# alpha 300531 1 0
+# face 300531 "mad"
+# leftin 3101011 0.3
+# alpha 3101011 1 0
+# waitandnext 0.3
+
+# se "SE_9182"
+# fadein "white" 0.5
+# shake 0 0.5
+# waitandnext 1
+
+# face 300531 "surprise"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@ルーン
+いい加減にしやがれ、
+フラガラッハ！
+
+# se "SE_0624"
+# fadeout "white" 1
+# waitandnext 1
+
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+;;フラガラッハの姿が聖鎖バージョンから天上編に変わる
+# alpha 101011 1 0.3
+# face 101011 "sad"
+# alpha 3101011 0 0.3
+# waitandnext 2
+
+# voice 1010 "furagaraha_0023"
+# face 101011 "surprise"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@フラガラッハ
+…あら？
+ルーンも私の美貌に
+見蕩れていらしたの？
+
+# voice 3005 "roon_0007"
+# face 300531 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@ルーン
+フン！そんな体たらくなら、
+隊長に鍛え直してもらった方が
+いいんじゃない？
+
+# voice 1010 "furagaraha_0004"
+# face 101011 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@フラガラッハ
+ふふっ
+懐かしいお話ね
+
+# voice 3005 "roon_0027"
+# textflame 1 1
+# textboxarrow 0 3
+@ルーン
+…ったく！
+次は本当に切り刻むわよぉ
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 300531 0 0
+# alpha 101011 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 6100511 "angry"
+# alpha 6100511 1 0.3
+# face 3400711 "angry"
+# alpha 3400711 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@リットゥ
+私の炎で取り戻せ！
+お前の意思を！
+シェキナー！
+
+# voice 340071 "shekina_t_battle_0005"
+# textflame 1 1
+# textboxarrow 0 3
+@シェキナー
+くぅっ…
+暑苦しいですね
+節度を守りなさいと、あれほど…
+
+# se "SE_0624"
+# fadeout "white" 1
+# waitandnext 1
+
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+;;シェキナーの姿が聖鎖バージョンからSEA編（怪盗姿）に変わる
+# alpha 3400711 0 0.3
+# face 6400711 "sad"
+# alpha 6400711 1 0.3
+# waitandnext 1
+
+# voice 4007 "shekina_0023"
+# face 6400711 "surprise"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@シェキナー
+…えっ？
+私、今まで何を
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 6100511 0 0
+# alpha 6400711 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 400131 "angry"
+# alpha 400131 1 0.3
+# alpha 3400311 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@アルテミス
+アポロン！
+
+;;アルテミスがアポロンを抱きしめる
+# se "SE_0648"
+# move 400131 3 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+# se "SE_0624"
+# fadeout "white" 1
+# waitandnext 1
+
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+;;アポロンの姿が聖鎖バージョンから天上編に変わる
+# alpha 3400311 0 0.3
+# face 400331 "sad"
+# alpha 400331 1 0.3
+# waitandnext 1
+
+# voice 4003 "aporon_0023"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@アポロン
+アルテミスお姉ちゃん…？
+ボク…どうしちゃってたんだろ…
+お姉ちゃんに矢を向けるなんて…
+
+# face 400131 "normal"
+# move 400131 2 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@アルテミス
+大丈夫
+もう大丈夫ですよ
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 400131 0 0
+# alpha 400331 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 100111 "angry"
+# alpha 100111 1 0.3
+# alpha 3300911 1 0.3
+# waitandnext 1
+
+;;青龍偃月刀とマサムネが刃を交える
+# se "SE_9017"
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# move 100111 3 0.2
+# move 3300911 4 0.3
+# waitandnext 1
+
+# voice 3009 "seiryu_0037"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@青龍偃月刀
+ぬうぅっ…
+ああああああああああ！
+
+# voice 1001 "masamune_0013"
+# textflame 1 1
+# textboxarrow 0 2
+@マサムネ
+今こそ、そなたの義に報いるとき！
+青龍偃月刀！
+拙者が助けるぞ
+
+# se "SE_0624"
+# fadeout "white" 1
+# waitandnext 1
+
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+;;青龍偃月刀の姿が聖鎖バージョンから天上編に変わる
+# alpha 3300911 0 0.3
+# face 300911 "sad"
+# alpha 300911 1 0.3
+# waitandnext 1.5
+
+;;暗転
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：祭壇：altar
+# background "altar"
+# alpha 100111 0 0
+# alpha 300911 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm417" "BgmIntegralNoahBattle003" 0
+# alpha 3300111 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ロンギヌス
+…………
+
+# move 103611 1 0
+# alpha 3300111 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;ラグナロク達が走ってくる
+# se "SE_5575"
+# move 103611 3 0.5
+# alpha 103611 1 0.3
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ラグナロク
+ついに辿り着いたわ
+ここが最終決戦の地ね
+
+# move 103611 2 0.5
+# move 3500211 4 0
+# layer 3500211 4
+# mask 3500211 on
+# voice 350021 "furaikugeru_t_0039"
+# alpha 3500211 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@フライクーゲル
+ワァオ！
+きみ達、神の国が復活するのを
+邪魔するなんて、ソゥベァッドだよ
+
+# textflame 1 1
+# textboxarrow 0 3
+@フライクーゲル
+みんなでヘアピィになるために～
+蜂の巣にするね☆
+
+# alpha 103611 0 0.3
+# move 270 2 0
+# layer 270 3
+# face 270 "angry"
+# alpha 270 1 0.3
+# voice 9917 "mimir_navikan_0012"
+# textflame 1 1
+# textboxarrow 0 1
+@ミーミル
+おやめください、
+フライクーゲルさん！
+それはアナタの意思ではありません
+
+# textflame 1 1
+# textboxarrow 0 3
+@フライクーゲル
+ノン！
+わたしはいつだってみんなが
+ヘアピィになるよう願ってるよ～
+
+# alpha 270 0 0.3
+# alpha 3500211 0 0.3
+# move 6101441 2 0
+# layer 6101441 2
+# face 6101441 "angry"
+# alpha 6101441 1 0.3
+# voice 610141 "tyrufing_7th_battle_0005"
+# move 100221 4 0
+# layer 100221 4
+# mask 100221 on
+# face 100221 "angry"
+# alpha 100221 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@ティルフィング
+その思いを利用されているんです！
+私達との日々を思い出してください
+
+# voice 1002 "revatein_0011"
+# textflame 1 1
+# textboxarrow 0 3
+@レーヴァテイン
+何を言ったって…無駄
+さっさと気絶させた方が…いいよ
+
+# alpha 6101441 0 0.3
+# alpha 100221 0 0.3
+# move 103611 3 0
+# mask 103611 off
+# face 103611 "angry"
+# alpha 103611 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+そんなことはない！
+あなた達の絆は鮮烈で強靱よ
+きっと彼女の心を呼び起こす
+
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+もっと強く訴えかけて！
+
+# voice 350021 "furaikugeru_t_0002"
+# alpha 103611 0 0.3
+# move 3500211 3 0
+# mask 3500211 off
+# alpha 3500211 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+ヘ～イ！
+お喋りしてたら終わっちゃうよ
+わたしのワンマンショー！
+
+;;バトル
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 3500211 0 0
+# waitandnext 0.2

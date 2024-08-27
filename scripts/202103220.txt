@@ -1,0 +1,726 @@
+;;-----------------------------------------
+;;SEA5章_22
+;;-----------------------------------------
+# script "lisp"
+# background "town_2"
+# bgm "bgm003" 0
+;;-----------------------------------------
+;;マクリル
+# body 6603811
+# pos 6603811 2
+# scale 6603811 0.8 0
+# layer 6603811 2
+# mask 6603811 off
+# alpha 6603811 0 0
+;;エルキュール
+# body 202511
+# pos 202511 5
+# scale 202511 0.8 0
+# layer 202511 2
+# mask 202511 off
+# alpha 202511 0 0
+;;神令エルキュール
+# body 3202511
+# pos 3202511 3
+# scale 3202511 0.8 0
+# layer 3202511 3
+# mask 3202511 off
+# alpha 3202511 0 0
+;;住民、旅人、村人
+# body 1
+# pos 1 3
+# scale 1 0.8 0
+# layer 1 5
+# mask 1 off
+# alpha 1 0 0
+# body 2
+# pos 2 3
+# scale 2 0.8 0
+# layer 2 5
+# mask 2 off
+# alpha 2 0 0
+# body 3
+# pos 3 3
+# scale 3 0.8 0
+# layer 3 5
+# mask 3 off
+# alpha 3 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+# imageset 1 "bg_crack1"
+# imagealpha 1 0 0
+# imagelayer 1 3
+;;-----------------------------------------
+;;背景：町：town_2
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+;;（声だけ）
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@エルキュール
+ずっと前から、何か大切なことを
+忘れている…そう感じていたんです
+
+@エルキュール
+でも、それが何なのか分からないまま
+今まで過ごしてきました
+
+# face 2 "sad"
+# alpha 2 1 0.5
+# textboxarrow 0 2
+@住民
+だ、誰かーっ
+助けてぇ…！
+
+# voice 2025 "hercule_unit_0013"
+# move 2 2 0.5
+# move 202511 4 0.5
+# face 202511 "normal"
+# alpha 202511 1 0.3
+;;（ここから立ち絵あり）
+# textboxarrow 0 3
+@エルキュール
+私を呼びましたね！
+任せて下さい！
+
+# face 2 "smile"
+# textboxarrow 0 1
+@住民
+ありがとうございます、
+エルキュールさん！
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 2 0 0
+# move 202511 3 0
+# alpha 202511 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# serif 1
+@住民達
+ううむ、困ったなぁ…
+
+# face 202511 "normal"
+# alpha 202511 1 0.3
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@エルキュール
+お困りごとなら私が解決します！
+
+# serif 1
+@住民達
+おおっ！
+エルキュールさんが来てくれたぞ！
+もう安心だ
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：荒野：wild
+# background "wild"
+# move 202511 1 0
+# alpha 202511 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 3 "sad"
+# alpha 3 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+@旅人
+くっ…俺もここまでか…
+
+# move 3 4 0.5
+# move 202511 2 0.5
+# face 202511 "normal"
+# alpha 202511 1 0.3
+# textboxarrow 0 1
+@エルキュール
+しっかりして下さい！
+助けに来ましたよっ
+
+# face 3 "smile"
+# textboxarrow 0 3
+@旅人
+ああっ
+助かりました！
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：森：forest
+# background "forest"
+# alpha 3 0 0
+# move 202511 2 0
+# alpha 202511 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 1 "sad"
+# alpha 1 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+@村人
+もうダメだ…
+ここで死んだ方が楽じゃよ…
+
+# voice 2025 "hercule_0012"
+# move 1 4 0.5
+# face 202511 "normal"
+# alpha 202511 1 0.3
+# textboxarrow 0 1
+@エルキュール
+待って下さい！
+あなたが希望を失っているのなら
+
+# textboxarrow 0 1
+@エルキュール
+この私が、
+新たな希望になってみせます！
+
+# face 1 "smile"
+# textboxarrow 0 3
+@村人
+エルキュールさん…
+ぐすっ…
+ありがとうございます
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：平原：plain
+# background "plain"
+# alpha 1 0 0
+# move 202511 3 0
+# alpha 202511 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;（声だけ）
+# textwindow "nomal"
+# textboxarrow 0 0
+@エルキュール
+皆さんの希望になるため、
+私は世界中を飛び回っていました
+
+# textboxarrow 0 0
+@エルキュール
+大切なことを忘れている…
+
+# textboxarrow 0 0
+@エルキュール
+そのことも
+皆さんのために動いているときは
+気にしないでいられました
+
+# textboxarrow 0 0
+@エルキュール
+ただ…
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：廃墟：ghost_town
+# background "ghost_town"
+# bgm "bgm004" 0
+# alpha 202511 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# serif 1
+@住民達
+うぅっ…
+何てことだ…
+
+# serif 1
+@住民達
+エルキュールさんのお陰で
+多くの命が救われたけれど…
+
+# serif 1
+@住民達
+何人かは…
+
+# voice 2025 "hercule_0031"
+# face 202511 "sad"
+# alpha 202511 1 0.3
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@エルキュール
+ごめんなさい…
+
+# serif 0
+# textboxarrow 0 2
+@エルキュール
+ごめんなさい…！
+私がもっと上手くやれていればっ
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：平原：plain
+# background "plain"
+# face 202511 "sad"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@エルキュール
+…………
+
+# voice 2025 "hercule_0024"
+# textboxarrow 0 2
+@エルキュール
+はぁ…
+“彼女”だったら、こんな失敗
+しないのに…
+
+# move 202511 3 0
+# face 202511 "surprise"
+# textwindow "moya"
+# textboxarrow 0 0
+@エルキュール
+…え？
+“彼女”って誰？
+
+# face 202511 "sad"
+@エルキュール
+そんな人、いるわけないのに…
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：町：town_2
+# background "town_2"
+# alpha 202511 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;（声だけ）
+# textwindow "nomal"
+# textboxarrow 0 0
+@エルキュール
+“彼女”…
+それは実在しない存在
+私の心の弱さの表れ
+
+# textboxarrow 0 0
+@エルキュール
+そう思って、私は努力を続けました
+皆さんの希望になるために
+
+# textboxarrow 0 0
+@エルキュール
+努力して努力して努力して…
+そして
+
+# textboxarrow 0 0
+@エルキュール
+私は理解してしまったんです
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：町（夜）：town_night_2
+# background "town_night_2"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 2025 "hercule_0024"
+# face 202511 "sad"
+# alpha 202511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@エルキュール
+…私は、このままでは皆さんの希望に
+なることができません
+
+# textboxarrow 0 2
+@エルキュール
+いつだったか、誰だったか…
+私を導いてくれた者がいました
+道標となった御旗がありました
+
+# textboxarrow 0 2
+@エルキュール
+その御旗に集うことで
+私は希望の光になれていました
+
+# textboxarrow 0 2
+@エルキュール
+私は欠けています
+大切な者を失っているんです
+だから…
+
+# face 202511 "angry"
+# textboxarrow 0 2
+@エルキュール
+取り戻さないといけません
+“彼女”を
+絶対に！
+
+# textboxarrow 0 2
+@エルキュール
+どこにいるのか分からないけれど、
+見つけてみせます
+どんな困難があろうとも
+
+# textboxarrow 0 2
+@エルキュール
+私は皆さんの、真の希望にならないと
+いけないんです！
+
+;;金属音
+# se "SE_0901"
+# bgm "stop"
+;;一瞬、エルキュールが神令化する
+# se "SE_9451"
+# alpha 202511 0.1 0.2
+# alpha 3202511 0.9 0.2
+# textboxarrow 0 0
+# waitandnext 1
+
+# voice 2025 "hercule_0022"
+# face 202511 "surprise"
+# alpha 202511 1 0.2
+# alpha 3202511 0 0.2
+# textboxarrow 0 2
+@エルキュール
+えっ？
+今のは…何でしょう？
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：町：town_2
+# background "town_2"
+# move 202511 5 0
+# layer 202511 4
+# mask 202511 on
+# alpha 202511 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;（声だけ）
+# textwindow "nomal"
+# textboxarrow 0 0
+@エルキュール
+そして、あの日――
+
+# move 6603811 3 0.5
+# face 6603811 "normal"
+# alpha 6603811 1 0.3
+# textwindow "close"
+# waitandnext 1
+
+# voice 660381 "maclir_ura_0015"
+# textwindow "nomal"
+# textboxarrow 0 2
+@マクリル
+ううっ…
+やっちゃった…
+やっぱり知らないところは怖いよ…
+
+;;エルキュールがやってくる
+# bgm "bgm002" 0
+# face 202511 "normal"
+# alpha 202511 1 0.3
+# textboxarrow 0 3
+@エルキュール
+そこのあなた！
+何かお困りですねっ？
+是非、お手伝いさせて下さい！
+
+# voice 660381 "maclir_ura_0024"
+# move 6603811 2 0.2
+# face 6603811 "surprise"
+# textboxarrow 0 1
+@マクリル
+ひゃぁぁぁぁ…！？
+何っ…？怖いっ…
+
+# voice 2025 "hercule_0004"
+# move 202511 4 0.5
+# textboxarrow 0 3
+@エルキュール
+怖がらなくても大丈夫ですよ！
+私があなたの希望になってみせます！
+
+# move 6603811 1 0.5
+# face 6603811 "usual"
+# textboxarrow 0 1
+@マクリル
+いえ…気にしないで…
+
+;;逃げようとするマクリルをエルキュールが捕まえる
+# se "SE_5575"
+# voice 2025 "hercule_0012"
+# move 202511 3 0.2
+# face 202511 "angry"
+# textboxarrow 0 2
+@エルキュール
+気にしないなんてできません！
+私は皆さんの希望になるんですから
+
+# textboxarrow 0 2
+@エルキュール
+さあ、何でも言って下さい！
+
+# voice 660381 "maclir_ura_0028"
+# face 6603811 "normal"
+# textboxarrow 0 1
+@マクリル
+うぅっ…
+私、“相棒”を探してて…
+
+# voice 2025 "hercule_0003"
+# move 202511 4 0.4
+# move 6603811 2 0.4
+# face 202511 "normal"
+# textboxarrow 0 3
+@エルキュール
+人捜しですね！
+一緒に探しましょう
+どんな見た目の人ですかっ？
+
+# textboxarrow 0 1
+@マクリル
+ううう…
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：室内：201_room
+# background "201_room"
+# face 6603811 "usual"
+# face 202511 "normal"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 3
+@エルキュール
+“相棒”さんが見つかるまで、
+この部屋を使って下さい
+必ず見つけますからね！
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 5
+# voice 660381 "maclir_ura_0022"
+# face 6603811 "surprise"
+# textboxarrow 0 1
+@マクリル
+う、うん…
+あれ？
+
+# voice 2025 "hercule_0022"
+# face 202511 "surprise"
+# textboxarrow 0 3
+@エルキュール
+どうしました？
+
+# face 6603811 "usual"
+# textboxarrow 0 1
+@マクリル
+ううん、何でもない…
+下の方から変な気配がしただけ…
+
+# face 202511 "normal"
+# textboxarrow 0 3
+@エルキュール
+この下ですか？
+分かりました、調べます！
+
+;;エルキュールが飛び出す
+# se "SE_5575"
+# move 202511 5 0.3
+# alpha 202511 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@マクリル
+あ、でも…
+気のせい、かも…
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：地下空洞：101_cave
+# background "101_cave"
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# alpha 6603811 0 0
+# move 202511 3 0
+# mask 202511 off
+# waitandnext 0.2
+
+# sedelay "bgm602_basic_on" 2
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 2
+
+# imagealpha 1 0 0.5
+# voice 2025 "hercule_0039"
+# face 202511 "surprise"
+# alpha 202511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@エルキュール
+わーっ！
+こんなところがあったんですね
+…あれは？
+
+# textboxarrow 0 2
+@エルキュール
+壁に裂け目が…いえ、違いますっ
+これは空間そのものにヒビが
+入っています！？
+
+# voice 2025 "hercule_0024"
+# face 202511 "sad"
+# textboxarrow 0 2
+@エルキュール
+どうしてこんなことが…
+うっ！？
+
+;;一瞬、エルキュールが神令化する
+# se "SE_9451"
+#setnextbgmblock 1
+# se "bgm602_tension_on"
+# alpha 202511 0.1 0.2
+# alpha 3202511 0.9 0.2
+# textboxarrow 0 0
+# waitandnext 1
+
+# face 202511 "sad"
+# alpha 202511 1 0.2
+# alpha 3202511 0 0.2
+# textboxarrow 0 2
+@エルキュール
+…………
+
+# alpha 202511 0.8 0.2
+# alpha 3202511 0.2 0.2
+# textboxarrow 0 2
+@エルキュール
+…そこに、いるんですか？
+
+# alpha 202511 0.6 0.2
+# alpha 3202511 0.4 0.2
+# textboxarrow 0 2
+@エルキュール
+そこに、いるんですね！？
+“彼女”がっ
+
+# alpha 202511 0.5 0.2
+# alpha 3202511 0.5 0.2
+# textboxarrow 0 2
+@エルキュール
+ずっと忘れていた、大切な存在
+本当の希望！
+
+# alpha 202511 0.4 0.2
+# alpha 3202511 0.6 0.2
+# textboxarrow 0 2
+@エルキュール
+取り戻さないと…
+取り戻さないといけません…
+皆さんのために
+
+# alpha 202511 0.2 0.2
+# alpha 3202511 0.8 0.2
+# textboxarrow 0 2
+@エルキュール
+皆さんの真の希望になるために
+絶対に“彼女”を取り戻します！
+
+;;エルキュールが神令化する
+# alpha 202511 0 1
+# alpha 3202511 1 1
+# textboxarrow 0 0
+# waitandnext 3
+
+# fadeout "black" 1
+# waitandnext 1

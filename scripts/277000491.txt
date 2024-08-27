@@ -1,0 +1,540 @@
+;;-----------------------------------------
+;;◆2019 海上編 9月中旬（6章）シナリオ
+;;【タイトル：パラディーゾ幻想襲来編Ⅵ】
+;;EP5_1
+;;スクリプト最後の背景：ジャングル
+;;-----------------------------------------
+# script "lisp"
+# background "sea_jungle_day"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;水着アルマス
+# body 2103811
+# pos 2103811 3
+# scale 2103811 0.8 0
+# layer 2103811 2
+# alpha 2103811 0 0
+# mask 2103811 off
+;;水着ティファレト
+# body 2503211
+# pos 2503211 3
+# scale 2503211 0.8 0
+# layer 2503211 2
+# alpha 2503211 0 0
+# mask 2503211 off
+;;水着フェイルノート
+# body 2401911
+# pos 2401911 3
+# scale 2401911 0.8 0
+# layer 2401911 2
+# alpha 2401911 0 0
+;;水着レーヴァテイン
+# body 2100231
+# pos 2100231 3
+# scale 2100231 0.8 0
+# layer 2100231 2
+# alpha 2100231 0 0
+# mask 2100231 off
+;;水着カシウス
+# body 2303111
+# pos 2303111 3
+# scale 2303111 0.8 0
+# layer 2303111 2
+# alpha 2303111 0 0
+# mask 2303111 off
+;;水着モラベガ
+# body 2104211
+# pos 2104211 3
+# scale 2104211 0.8 0
+# layer 2104211 2
+# alpha 2104211 0 0
+# mask 2104211 off
+;;水着カリス
+# body 2602511
+# pos 2602511 3
+# scale 2602511 0.8 0
+# layer 2602511 2
+# alpha 2602511 0 0
+# mask 2602511 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagescale 1 1.2 0
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;【EP5】約束のパラディーゾ
+;;ナレーション
+# textflame 0 0
+@
+次々に現れる異族を前に、
+状況は悪化する一方だった
+
+;;//異族の群れが段々と近づいてくる
+# voice 1038 "almace_battle_0006"
+# move 2103811 3 0
+# face 2103811 "angry"
+# alpha 2103811 1 0.5
+# mask 2103811 off
+# textflame 1 1
+@アルマス
+これは…
+ちょっとやばいかも…
+
+# se "SE_0617"
+# serif 1
+@異族
+グオォォォォォッ！！
+
+;;//異族の一体が急に突っ込んでくる
+# voice 310421 "morabeaga_l_0024"
+# alpha 2103811 0 0.5
+# move 2104211 3 0
+# face 2104211 "angry"
+# alpha 2104211 1 0.5
+# mask 2104211 off
+# serif 1
+# textwindow "close"
+# serif 0
+@モラベガ
+危ない、マスターッ！！
+
+;;ナレーション
+# textflame 0 0
+@
+その時…
+
+# bgmfile "bgm348" "BgmSeaEventBattle003" 0
+# voice 5032 "tiphereth_t_unit_0008"
+# alpha 2104211 0 0.5
+# move 2503211 3 0
+# face 2503211 "angry"
+# alpha 2503211 1 0.5
+# mask 2503211 off
+# textflame 1 1
+@ティファレト
+天秤よ、罪の裁定をっ！
+
+;;//SE:銃声
+# se "SE_4400"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_0669"
+# serif 1
+@異族
+グギャアッ！
+
+;;//接近した異族倒れる
+# serif 1
+# textwindow "close"
+# se "SE_3001"
+# waitandnext 0.5
+
+# voice 310021 "revatein_ge_0029"
+# alpha 2503211 0 0.5
+# move 2100231 3 0
+# face 2100231 "angry"
+# alpha 2100231 1 0.5
+# mask 2100231 off
+# serif 0
+@レーヴァテイン
+はぁああっ！
+
+;;//SE:剣撃
+# se "SE_4830"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_0669"
+# serif 1
+@異族の群れ1
+グギャアアアッ！
+
+;;//異族の群れがいったん壊滅する
+# alpha 2100231 0 0.5
+# move 2103811 3 0
+# face 2103811 "surprise"
+# alpha 2103811 1 0.5
+# mask 2103811 off
+# serif 1
+# textwindow "close"
+# serif 0
+@アルマス
+みんな！
+
+# alpha 2103811 0 0.5
+# move 2100231 3 0
+# face 2100231 "angry"
+# alpha 2100231 1 0.5
+# mask 2100231 off
+@レーヴァテイン
+さあ、包囲を突破するわよ！
+
+;;ナレーション
+# alpha 2100231 0 0.5
+# textflame 0 0
+@
+アルマス達は援護を受け、
+なんとか安全な場所まで逃げのびた
+
+;;//場面転換
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# move 2602511 3 0
+# face 2602511 "normal"
+# alpha 2602511 1 0
+# mask 2602511 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# se "SE_4781"
+# fadein "white" 1
+# waitandnext 1
+
+# voice 6025 "chalice_t_0032"
+# textflame 1 1
+# textwindow "normal"
+@カリス
+アルマスとモラベガは
+これでおっけい！
+
+# voice 6025 "chalice_t_0029"
+# face 2602511 "usual"
+@カリス
+次はフェイルノートだね！
+いっくよ〜…
+
+# move 2401911 2 0
+# face 2401911 "angry"
+# alpha 2401911 1 0.5
+# mask 2401911 on
+# move 2602511 4 0.5
+# mask 2602511 on
+@フェイルノート
+嫌よっ！
+敵の施しなど受けないわ…
+
+# voice 6025 "chalice_t_0003"
+# face 2602511 "normal"
+@カリス
+うんうん、大丈夫だよ！
+すぐに元気になるからね〜…
+やぁっ！
+
+# se "SE_4781"
+# fadein "white" 1
+# waitandnext 1
+
+;;ナレーション
+# textflame 0 0
+@
+フェイルノートの抵抗もむなしく、
+カリスの治療で傷と疲労は回復された
+
+# voice 6025 "chalice_t_0004"
+# face 2602511 "smile"
+# textflame 1 1
+@カリス
+これでおっけい！
+カリスちゃん、マジ天使〜！
+
+# voice 4019 "failnaught_a_0007"
+@フェイルノート
+ふんっ…
+天使ですって？
+忌々しい…
+
+@フェイルノート
+かつて、魔を統べた王の私の力で、
+お前を消してやろうかしら？
+
+# alpha 2602511 0 0.5
+# move 2103811 4 0
+# face 2103811 "usual"
+# alpha 2103811 1 0.5
+# mask 2103811 on
+@アルマス
+もう、もめてる場合じゃないでしょ？
+みんなのおかげで助かったわ
+無事で、よかった…
+
+# voice 310021 "revatein_ge_0002"
+# alpha 2401911 0 0.5
+# move 2100231 2 0
+# face 2100231 "usual"
+# alpha 2100231 1 0.5
+# mask 2100231 on
+@レーヴァテイン
+でも、あの異族の大群はどうするの？
+このままじゃ、島を乗っ取られるわ
+
+# alpha 2100231 0 0.5
+# alpha 2103811 0 0.5
+# move 2503211 3 0
+# face 2503211 "angry"
+# alpha 2503211 1 0.5
+# mask 2503211 off
+@ティファレト
+そうはさせません
+
+# alpha 2503211 0 0.5
+# move 2401911 3 0
+# face 2401911 "normal"
+# alpha 2401911 1 0.5
+# mask 2401911 off
+@フェイルノート
+そう…
+これは私達の責務
+
+# alpha 2401911 0 0.5
+# move 2303111 3 0
+# face 2303111 "normal"
+# alpha 2303111 1 0.5
+# mask 2303111 off
+@カシウス
+…先に行くわ
+
+;;ナレーション
+# textflame 0 0
+@
+発とうとするゴッドキラーズに、
+君達が責務を背負う必要はない
+と、マスターは声をかける
+
+# voice 5032 "tiphereth_t_0022"
+# alpha 2303111 0 0.5
+# move 2503211 3 0
+# face 2503211 "surprise"
+# alpha 2503211 1 0.5
+# mask 2503211 off
+# textflame 1 1
+@ティファレト
+なぜ、あなたがそのようなことを…
+
+;;ナレーション
+# alpha 2503211 0 0.5
+# textflame 0 0
+@
+君達は島を“守りたい”はずなのに、
+力で“支配”しようとした…
+
+# bgm "stop"
+;;ナレーション
+@
+それじゃ、
+君達が倒した“神”と同じだ
+と、マスターは言葉を続ける
+
+;;ナレーション
+@
+ゴッドキラーズ達は、
+ハッとしてマスターを見る
+
+;;ナレーション
+# bgmfile "bgm353_354" "BgmGod4Love" 0
+@
+自分を含め、ここには
+君たちに力を貸したいと思う人が
+たくさんいるんだ―
+
+;;ナレーション
+@
+君達はひとりじゃないんだ、
+みんなで助け合おうよ、
+とマスターは笑みを見せる
+
+# voice 5032 "tiphereth_t_0015"
+# move 2503211 3 0
+# face 2503211 "sad"
+# alpha 2503211 1 0.5
+# mask 2503211 off
+# textflame 1 1
+@ティファレト
+ああ…
+
+@ティファレト
+私は責務に気を取られ、
+大事なことを
+見失ったのですね…
+
+;;ナレーション
+# textflame 0 0
+@
+大丈夫、ここからやり直そう
+と、マスターは明るく笑う
+
+;;ナレーション
+# se "SE_0644"
+# fadein "white" 0.5
+@
+その時、ティファレトの胸に
+暖かな光が差し込む
+
+# voice 5032 "tiphereth_t_0001"
+# face 2503211 "usual"
+# textflame 1 1
+@ティファレト
+導きとなる光を感じます…
+ああ、主様…
+私の力をお役立てください
+
+;;//場面転換
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 2503211 0 0
+# move 2401911 3 0
+# face 2401911 "normal"
+# alpha 2401911 1 0
+# mask 2401911 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 4019 "failnaught_a_0007"
+# textwindow "normal"
+@フェイルノート
+ふんっ、いいわ…
+一度だけお前の口車に乗ってあげる
+
+@フェイルノート
+けれど、忘れないことね…
+偉そうに命令すれば…わかるわね？
+
+;;ナレーション
+# textflame 0 0
+@
+仲間に命令なんてしないよ
+と、マスターが返すと…
+
+;;フェイルノート（赤面）
+# se "SE_0644"
+# voice 4019 "failnaught_a_0022"
+# face 2401911 "angry"
+# textflame 1 1
+@フェイルノート
+なっ…
+だ…誰が仲間ですって？
+
+;;ナレーション
+# textflame 0 0
+@
+フェイルノートが珍しく
+顔を赤らめて動揺した姿を見せる
+
+;;//できればもやもやフレームで
+# move 2401911 3 0
+# face 2401911 "normal"
+# textflame 1 1
+# textwindow "moya"
+# mask 2401911 off
+@フェイルノート
+力が湧いて、感情が制御できない…
+これがバイブスとやらの影響なの？
+でも、不快ではないわ…
+
+# voice 4019 "failnaught_a_0007"
+# face 2401911 "angry"
+# textwindow "normal"
+@フェイルノート
+ふんっ…
+この新たな力に免じて、
+今日は特別に許してあげるわ、お前様
+
+;;//場面転換
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 2401911 0 0
+# move 2303111 3 0
+# face 2303111 "normal"
+# alpha 2303111 1 0
+# mask 2303111 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textwindow "normal"
+@カシウス
+…この世すべては円環の因子
+あなたに出会うことも理の内…
+
+# voice 3031 "cassius_ge_0004"
+@カシウス
+あなたを受け入れるわ…
+さあ、あなたの価値を見せて…
+
+;;ナレーション
+# textflame 0 0
+@
+カシウスが差し出した手を
+マスターが握ると、
+彼女の体に異変が起きる
+
+# se "SE_0644"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 3031 "cassius_ge_battle_0005"
+# face 2303111 "sad"
+# textflame 1 1
+@カシウス
+く…っ
+この温かさは、何…？
+
+# voice 3031 "cassius_ge_0005"
+# face 2303111 "smile"
+@カシウス
+これが…心？
+ああ…
+あなたが…私の御館様なのね
+
+;;ナレーション
+# textflame 0 0
+@
+ゴッドキラーズ全員が
+マスターとのつながりを得て、
+新しい輝きを放ち始めた
+
+# face 2303111 "normal"
+# textflame 1 1
+@カシウス
+御館様の場所は
+円環の中心…
+
+# voice 5032 "tiphereth_t_0003"
+# alpha 2303111 0 0.5
+# move 2503211 3 0
+# face 2503211 "usual"
+# alpha 2503211 1 0.5
+# mask 2503211 off
+@ティファレト
+ええ…
+主様は上に立つ者でなく、
+多くの者の中心に立つ者なのですね
+
+# voice 4019 "failnaught_a_0004"
+# alpha 2503211 0 0.5
+# move 2401911 3 0
+# face 2401911 "smile"
+# alpha 2401911 1 0.5
+# mask 2401911 off
+@フェイルノート
+ふふっ…
+この関係も、悪くはないわね…
+
+@フェイルノート
+さぁ、行きましょう
+この力、早く試してみたいわ…

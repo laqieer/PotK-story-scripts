@@ -1,0 +1,203 @@
+;;-----------------------------------------
+;;■□■３－１改修案■□■
+;;整形済み
+;;【３－１－３（バトル後）】
+;;スクリプト最後の背景：mountain
+;;-----------------------------------------
+# script "lisp"
+# background "mountain"
+# bgm "bgm005" 0
+;;----------------------------------------------------------
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 1
+# alpha 24 0 0
+# mask 24 off
+# face 24 "normal"
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 3
+# alpha 0 0 0
+# mask 0 off
+# face 0 "normal"
+;;ディーン
+# body 6
+# pos 6 3
+# scale 6 0.8 0
+# layer 6 2
+# alpha 6 0 0
+# mask 6 off
+# face 6 "normal"
+;;トト
+# body 4
+# pos 4 3
+# scale 4 0.8 0
+# layer 4 1
+# alpha 4 0 0
+# mask 4 off
+# face 4 "normal"
+;;-----------------------------------------
+;;背景:mountain
+# move 24 1 0
+# face 24 "surprise"
+# alpha 24 1 0
+# mask 24 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 0 3 0
+# face 0 "usual2"
+# alpha 0 1 0
+# mask 0 on
+# move 4 5 0
+# face 4 "normal"
+# alpha 4 1 0
+# mask 4 on
+@ティルフィング
+ロンギヌス…
+なぜ、こんなに動けるの？
+とうに体力は尽きているはずなのに…
+
+# face 0 "normal"
+# textboxarrow 0 2
+@デュリン
+暴走は限界以上の力を引き出すけど…
+でも、確かに…
+
+# voice 9998 "toto_0001"
+# textboxarrow 0 3
+@トト
+ねぇ…普通の人間も襲うって、
+ティルフィングも？
+
+# voice 1014 "tyrufing_0015"
+# face 24 "sad"
+# textboxarrow 0 1
+@ティルフィング
+暴走状態に陥れば、おそらく…
+
+# textboxarrow 0 3
+@トト
+…！
+
+# alpha 0 0 0.5
+# move 6 3 0
+# face 6 "happy"
+# alpha 6 1 0.5
+# mask 6 on
+# textboxarrow 0 2
+@ディーン
+んなことも知らねぇで
+一緒にいたのかよ？
+
+# textboxarrow 0 2
+@ディーン
+どんな幻想を抱いてんのか
+知らねぇけどな…キラープリンセスは
+人間じゃないんだぜ、坊や
+
+# voice 1014 "tyrufing_0012"
+# face 24 "angry"
+# textboxarrow 0 1
+@ティルフィング
+やめてください、
+そんな言い方…
+
+# voice 9997 "deen_0008"
+# textboxarrow 0 2
+@ディーン
+だって、そうだろ？
+どんなに美人だって、
+キラープリンセスはキラープリンセス
+
+# textboxarrow 0 2
+@ディーン
+…異族討伐のための兵器じゃねぇか？
+新人マスター…お前もいい加減、
+理解しただろ？
+
+;;《選択肢》
+;;キラープリンセスは道具じゃない！
+;;思いが通わなければ、連携は取れない
+# select "キラープリンセスは道具じゃない！" "select_label_01" "思いが通わなければ、連携は取れない" "select_label_02"
+…異族討伐のための兵器じゃねぇか？
+新人マスター…お前もいい加減、
+理解しただろ？
+
+;;《返答１》
+# label "select_label_01"
+# labeljump "select_label_end"
+# voice 9997 "deen_0052"
+# textboxarrow 0 2
+@ディーン
+…ティルフィング
+お前、本当に…コイツが
+洗礼を受けられると思っているのか？
+
+;;《返答２》
+# label "select_label_02"
+# labeljump "select_label_end"
+# voice 9997 "deen_0031"
+# textboxarrow 0 2
+@ディーン
+やれやれ…焦るこたぁ無ぇな
+ティルフィング、
+お前はいずれ俺のモンだ
+
+# label "select_label_end"
+# voice 1014 "tyrufing_0022"
+# face 24 "surprise"
+# textboxarrow 0 1
+@ティルフィング
+え？
+
+# textboxarrow 0 2
+@ディーン
+断言するぜ
+お前がラグナロク大聖堂に
+辿り着ける可能性は０％だ
+
+# textboxarrow 0 2
+@ディーン
+そんな甘っちょろい考えで、
+生き残れるはずがねぇ
+
+# alpha 4 0 0.5
+# voice 9999 "durin_0027"
+# move 0 5 0
+# face 0 "occur"
+# alpha 0 1 0.5
+# mask 0 on
+# textboxarrow 0 3
+@デュリン
+…どっちもどっちだと思うけど
+
+# voice 9997 "deen_0011"
+# face 6 "angry"
+# textboxarrow 0 2
+@ディーン
+あ…？
+
+# textboxarrow 0 3
+@デュリン
+確かに甘いけど…ウチからは、
+暴走するようなキラープリンセスは
+出てないわ…
+
+# voice 9997 "deen_0030"
+# textboxarrow 0 2
+@ディーン
+…どういう意味だよ、それ？
+
+# face 24 "angry"
+# textboxarrow 0 1
+@ティルフィング
+引き離される…急いでください！
+
+# voice 9997 "deen_0010"
+# textboxarrow 0 2
+@ディーン
+…チッ

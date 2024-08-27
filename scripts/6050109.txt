@@ -1,0 +1,255 @@
+;;【EP5】戦闘前/圧倒迫撃～前進～/背景：壁画の間
+# script "lisp"
+# bgmfile "bgm214_02" "BgmAncientKillers001" 0
+# background "006_jail"
+# body 302511
+# pos 302511 2
+# scale 302511 0.8 0
+# body 300181
+# pos 300181 4
+# scale 300181 0.8 0
+# body 500261
+# pos 500261 3
+# scale 500261 0.8 0
+# body 502711
+# pos 502711 4
+# scale 502711 0.8 0
+# alpha 500261 0 0
+# alpha 300181 0 0
+# layer 500261 4
+# layer 502711 3
+# layer 302511 2
+# textflame 1 1
+# textboxarrow 0 3
+# chara 502711
+# face 502711 "happy"
+@フライシュッツ
+う～ん！よく寝た～っ
+元気いっぱ～い！
+
+# textboxarrow 0 1
+# chara 302511
+# face 302511 "angry"
+# face 502711 "normal"
+@ミネルヴァ
+おや…、起きて早々、
+緊張感のある状況みたいですね
+話し合いの余地は…なさそうです
+
+# se "SE_5668"
+# move 502711 5 0.5
+# move 302511 1 0.5
+# alpha 500261 1 0.5
+# textboxarrow 0 2
+# chara 500261
+# face 500261 "angry"
+@プライド
+ヘ～イ！誰だか知らないけど、
+わたし達の邪魔するなら
+消えるデス！
+
+;;//プライドが二人に攻撃する
+;;//フライシュッツが全弾撃ち返す
+# se "SE_5744"
+# sedelay "SE_5773" 0.5
+# face 502711 "angry"
+# fadein "red" 0.5
+# shake 0 0.5
+# waitandnext 0.5
+
+# fadein "red" 0.5
+# shake 0 0.5
+# waitandnext 0.5
+
+# se "SE_5773"
+# fadein "red" 0.5
+# shake 0 0.5
+# waitandnext 1
+
+# alpha 302511 0 0.3
+# move 500261 2 0.3
+# textboxarrow 0 3
+# chara 502711
+# voice 5027 "freischotz_0010"
+@フライシュッツ
+もぉ～
+いきなりなんて
+ビックリしちゃうよ～
+
+# textboxarrow 0 1
+# chara 500261
+# voice 50026 "furaikugeru_k_0025"
+@プライド
+シィット！
+わたしの弾を全部弾くなんて…
+許せないデス！
+
+;;//エンヴィの攻撃をミネルヴァが受け流す
+# textwindow "close"
+# alpha 500261 0 0
+# alpha 502711 0 0
+# alpha 300181 1 0.5
+# alpha 302511 1 0.5
+# move 302511 2 0
+# layer 302511 3
+# layer 300181 2
+# waitandnext 1
+
+# effectbody 100 1 10 10
+# effectstart 100
+# move 300181 3 0.2
+# move 302511 1 0.2
+# se "SE_5815"
+# fadein "white" 0.5
+# face 302511 "angry"
+# face 300181 "angry"
+# waitandnext 1
+
+# textwindow "normal"
+# move 300181 4 0.3
+# textboxarrow 0 1
+# chara 502711
+# voice 3025 "minerva_0007"
+@ミネルヴァ
+キミも冷静さを欠いているようですね
+降りかかる火の粉は、
+払うしかありません
+
+# textboxarrow 0 3
+# chara 300181
+@エンヴィ
+その余裕…
+嫉妬してしまいます！
+
+# textflame 0 0
+@考古学奏官
+…なにが起きてるんだ？
+まさか…エンシェントキラーズが…
+現代に…？
+
+# alpha 502711 1 0.5
+# alpha 500261 1 0.5
+# alpha 300181 0 0.5
+# alpha 302511 0 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 500261
+# face 500261 "usual"
+@プライド
+そんなヘァッピーそうな顔しちゃ
+ノンノン！今すぐベァッドに
+塗り替えてあげるデース！
+
+# move 300181 4 0
+# move 302511 3 0
+# textboxarrow 0 3
+# chara 502711
+# voice 5027 "freischotz_0004"
+# face 502711 "normal"
+@フライシュッツ
+うふふふ♪
+怖い顔してないで、
+甘えさせて欲しいな～♪
+
+# move 300181 5 0
+# move 302511 1 0
+# alpha 502711 0 0.5
+# alpha 500261 0 0.5
+# alpha 300181 1 0.5
+# alpha 302511 1 0.5
+# textboxarrow 0 1
+# chara 302511
+# voice 3025 "minerva_0004"
+# face 302511 "angry"
+@ミネルヴァ
+キミ、間合いの取り方が
+良くないですね
+それでは私に届きませんよ
+
+# textboxarrow 0 3
+# chara 300181
+# voice 30018 "ronginusu_k_0019"
+# face 300181 "angry"
+@エンヴィ
+即座に冷静な対応をして…
+すごく、妬ましいです！
+
+# textboxarrow 0 1
+# chara 302511
+# face 302511 "normal"
+@ミネルヴァ
+フライシュッツ、右二十度に二発
+左四十五度、下方四度に三発
+撃って下さい
+
+# se "SE_5577"
+# alpha 300181 0 0.5
+# alpha 502711 1 0.5
+# textboxarrow 0 3
+# chara 502711
+# face 502711 "happy"
+@フライシュッツ
+は～い♪
+
+;;//フライシュッツの銃撃が二人の動きを止める
+# se "SE_5809"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_5809"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_5809"
+# fadein "white" 0.5
+# waitandnext 1
+
+# alpha 502711 0 0.5
+# alpha 500261 1 0.5
+# alpha 300181 1 0.5
+# alpha 302511 0 0.5
+# voice 50026 "furaikugeru_k_0014"
+# textboxarrow 0 1
+# chara 500261
+# face 500261 "surprise"
+# face 300181 "surprise"
+@プライド
+ホワッツ!?
+
+# textboxarrow 0 3
+# chara 300181
+# voice 30018 "ronginusu_k_0017"
+@エンヴィ
+どうしてっ…？
+
+# alpha 502711 1 0.5
+# alpha 500261 0 0.5
+# alpha 300181 0 0.5
+# alpha 302511 1 0.5
+# textboxarrow 0 1
+# chara 302511
+# voice 3025 "minerva_battle_0004"
+# face 302511 "angry"
+# face 502711 "normal"
+@ミネルヴァ
+手早く終わらせましょう
+フライシュッツ、最大火力で！
+
+# textboxarrow 0 3
+# chara 502711
+@フライシュッツ
+はいは～い！
+当たったら痛いから、
+ちゃんと避けてね～♪
+
+;;//画面フラッシュ
+;;//爆発音
+# voice 5027 "freischotz_battle_0003"
+# se "SE_5921"
+# fadeout "white" 1.5
+# waitandnext 1.5
+
+# se "SE_9096"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 2

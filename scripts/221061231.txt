@@ -1,0 +1,321 @@
+;;-----------------------------------------
+;;【EP.3】森奥の激流_1
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm451_452" "BgmNewYear003" 0
+;;-----------------------------------------
+;;フライクーゲル
+# body 3500221
+# pos 3500221 4
+# scale 3500221 0.8 0
+# layer 3500221 2
+# alpha 3500221 0 0
+;;ラグナロク
+# body 103621
+# pos 103621 2
+# scale 103621 0.8 0
+# layer 103621 3
+# alpha 103621 0 0
+;;アロンダイト
+# body 100741
+# pos 100741 3
+# scale 100741 0.8 0
+# layer 100741 3
+# mask 100741 off
+# alpha 100741 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;-----------------------------------------
+;;背景：草原(昼)
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# alpha 100741 1 0.5
+# face 100741 "surprise"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 1007 "Arondaito_0039"
+@アロンダイト
+なるほど…
+そんな経緯があったのですね
+
+# textflame 0 0
+@
+戦闘を終えた後、
+一同はアロンダイトに
+詳しい事情を話した
+
+# textflame 0 0
+@
+アロンダイトによれば、
+近ごろ近隣で急激に
+魔獣の数が増えたと聞き…
+
+# textflame 0 0
+@
+魔獣達を退治するために
+辺りを散策していたのだという
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 100741 "sad"
+# voice 1007 "Arondaito_0008"
+@アロンダイト
+まさか、
+大凶を引いた程度のことが
+原因だとは思えませんが…
+
+# alpha 100741 0 0.5
+# alpha 3500221 1 0.5
+# alpha 103621 1 0.5
+# face 103621 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3500221 "sad"
+# voice 350021 "furaikugeru_t_0028"
+@フライクーゲル
+イエース…
+わたし達もそう思うよ
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 10036 "ragnarok_0028"
+@ラグナロク
+偶然、運命の歯車が
+噛み合わさっただけだと思うわ
+
+# alpha 103621 0 0.5
+# move 100741 2 0
+# mask 100741 on
+# alpha 100741 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@アロンダイト
+…いずれにしても、
+ご本人がその様子なら、
+厄祓いは遂行するべきでしょう
+
+# textflame 1 1
+# textboxarrow 0 3
+@フライクーゲル
+そ、そうだね…
+ヘイマスター、落ち込まないで！
+わたし達は平気だから、ね？
+
+# textflame 0 0
+@
+フライクーゲルの慰めも敵わず、
+ずぅぅぅん…と頭を垂れて
+意気消沈するマスター
+
+# textflame 0 0
+@
+ここまでの不運の連続は、
+完全に自分のせいだと
+思い込んでいる
+
+# alpha 3500221 0 0.5
+# move 100741 3 0.5
+# mask 100741 off
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+随分とお悩みのようですね…
+わかりました
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 100741 "normal"
+# voice 1007 "Arondaito_0002"
+@アロンダイト
+…あなたにひとつ、
+伺いたいことがあります
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 100741 "angry"
+@アロンダイト
+たとえどんなに危険な行為でも…
+厄を祓うためならば、
+やり遂げる覚悟はありますか？
+
+# textflame 0 0
+@
+アロンダイトの試すような言葉に、
+マスターは顔を上げて
+こくこくと何度も頷く
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 100741 "normal"
+# voice 1007 "Arondaito_0032"
+@アロンダイト
+わかりました…
+皆さん、私についてきてください
+
+# alpha 100741 0 0.5
+# move 103621 3 0
+# mask 103621 off
+# alpha 103621 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 103621 "surprise"
+# voice 10036 "ragnarok_0022"
+@ラグナロク
+ど、どこに行くの？
+なんだか不穏な話だけど…
+
+# alpha 103621 0 0.5
+# alpha 100741 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+私の知る聖域に、です
+では参りましょう
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：森(昼)
+;;って指定あるけど滝っぽいの使う（スクリプトメモ）
+# background "highland"
+# alpha 100741 0 0
+# waitandnext 0.2
+
+# move 100741 5 0
+# mask 100741 on
+# move 103621 1 0
+# mask 103621 on
+# move 3500221 3 0
+# mask 3500221 on
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;ＳＥ：ドドドドドドド…！！（滝が激しく流れる音）
+;;演出：画面揺れ
+# se "SE_11454"
+# shake 0 1
+# waitandnext 1
+
+# alpha 100741 1 0.5
+# alpha 103621 1 0.5
+# alpha 3500221 1 0.5
+# face 100741 "angry"
+# face 3500221 "surprise"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@フライクーゲル
+わっ、ぷっ…オゥマイガッ！！
+なにこれっ、滝ぃっ！？
+
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+人々は古来より、
+滝に打たれることで
+厄や煩悩を祓ったと聞きます！
+
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+これほどの勢いなら、
+大凶程度の厄なんて
+一瞬で洗い流されるはず…！！
+
+# textflame 1 1
+# textboxarrow 0 1
+@ラグナロク
+な、なんて言ったの？
+滝がうるさすぎて
+聞き取れないのだけど
+
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+さあ行きましょう、
+あなたの厄を祓うのです…！
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+ス、ストーップッ！！
+こんな滝に打たれたら、
+一瞬で水底にダイブしちゃうよ！
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+マスターも止まってってば！
+…うわっ、完全に
+覚悟決めたフェイスしてる…！？
+
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+ご安心を！
+いざというときは、私の幸運が
+あなたの不運を相殺するでしょう！
+
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+なにしろ…私の引いたくじは、
+大吉を超える"大大吉"ですから！！
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+そんなのあるんだ！？
+うわあっ、ウェイトウェイト～！？
+
+;;ＳＥ：ゴゴゴゴゴ……（魔獣達が迫る音）
+;;演出：画面揺れ
+# se "SE_0637"
+# shake 1 1
+# textboxarrow 0 0
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 103621 "angry"
+# voice 10036 "ragnarok_0024"
+@ラグナロク
+な、なにっ！？
+大地が鳴動しているわ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 1007 "Arondaito_0022"
+@アロンダイト
+この気配…魔獣の群れです
+でも、いったいどこから…？
+
+;;ＳＥ：ザッパァッ！！（滝の上から魔獣達が現れる音）
+;;演出：画面フラッシュ（※水しぶきのイメージです）
+# se "SE_0655"
+# sedelay "SE_11356" 0.5
+# fadein "white" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+@フライクーゲル
+たっ…滝の上から～～～ッ！？
+
+# fadeout "black" 0.5
+# waitandnext 0.5

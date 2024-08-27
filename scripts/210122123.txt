@@ -1,0 +1,273 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１２章 章タイトル「ラルゴカタストロフィ―暴走―」
+;;第2話－１２　タイトル：暴走の契機
+;;2_12_3
+;;スクリプト最後の背景：泉
+;;-----------------------------------------
+# script "lisp"
+# background "fountain"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;レーヴァテイン・擬彩
+# body 5100231
+# pos 5100231 3
+# scale 5100231 0.8 0
+# layer 5100231 2
+# alpha 5100231 0 0
+# mask 5100231 off
+;;ミネルヴァ・擬装・アーチャー
+# body 5302521
+# pos 5302521 3
+# scale 5302521 0.8 0
+# layer 5302521 2
+# alpha 5302521 0 0
+# mask 5302521 off
+;;フラベルム
+# body 501611
+# pos 501611 3
+# scale 501611 0.8 0
+# layer 501611 2
+# alpha 501611 0 0
+# mask 501611 off
+# brightness 501611 0.8 0
+;;セファー
+# body 502111
+# pos 502111 3
+# scale 502111 0.8 0
+# layer 502111 2
+# alpha 502111 0 0
+# mask 502111 off
+# brightness 502111 0.8 0
+;;カリス・聖鎖・アザゼル
+# body 5602511
+# pos 5602511 3
+# scale 5602511 0.8 0
+# layer 5602511 2
+# alpha 5602511 0 0
+# mask 5602511 off
+;;キプル
+# body 163
+# pos 163 3
+# scale 163 0.6 0
+# layer 163 2
+# alpha 163 0 0
+# mask 163 off
+;;-----------------------------------------
+;;//ミネルヴァの攻撃をレーヴァテインが躱す
+# textwindow "close"
+# move 5100231 3 0
+# face 5100231 "normal"
+# alpha 5100231 1 0
+# mask 5100231 off
+# waitandnext 0.5
+
+# se "SE_4301"
+# sedelay "SE_5204" 0.5
+# waitandnext 0.5
+
+# rightout 5100231 0.5
+# waitandnext 0.5
+
+# alpha 5100231 0 0
+# move 5302521 3 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ミネルヴァ
+レーヴァテイン、話を聞いて下さい！
+カリスは敵ではありません
+
+# textboxarrow 0 2
+@ミネルヴァ
+彼女はロンギヌスの傷を癒したん
+ですよっ
+
+# voice 510023 "revatein_iz_0018"
+# alpha 5302521 0 0.5
+# move 5100231 3 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+信じられない…
+ロンギヌスの傷は致命傷だった
+
+# textboxarrow 0 2
+@レーヴァテイン
+あの状態から助けられる治癒能力
+なんて…ありえない
+
+# alpha 5100231 0 0.5
+# move 5302521 3 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+確かに信じられないほどの力です
+彼女の言葉を借りるなら、
+ミラクルでしょう
+
+# alpha 5302521 0 0.5
+# move 5100231 3 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+ミラクルなんて…バカげてる
+
+# se "SE_5205"
+# textboxarrow 0 2
+@レーヴァテイン
+あなたも彼女も…新世界の礎に
+なって
+
+# voice 3025 "minerva_0037"
+# alpha 5100231 0 0.5
+# move 5302521 3 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+レーヴァテイン…！
+どうすれば、あなたの心を――
+
+;;//画面フラッシュ
+# bgm "stop"
+# se "SE_0993"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# alpha 5302521 0 0.5
+# move 5100231 3 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+…！？
+
+# alpha 5100231 0 0.5
+# move 5302521 3 0
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+今の光は…！？
+
+# bgmfile "bgm464_1" "BgmIntegralNoahDisrupters" 0
+# alpha 5302521 0 0.5
+# move 5602511 2 0
+# face 5602511 "normal"
+# alpha 5602511 1 0.5
+# mask 5602511 on
+# textboxarrow 0 1
+# move 163 4 0
+# alpha 163 1 0.5
+# mask 163 on
+@カリス
+やっほい！
+二人とも捕まえたよ～っ
+
+# voice 9951 "kipuru_0052"
+# textboxarrow 0 3
+@キプル
+カリス！
+キプルも準備は万端ですっ
+
+# emotionbody 1000 15 501611 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# emotionbody 2000 15 502111 0 0
+# effectpattern 2000 1 0
+# effectstart 2000
+# alpha 5602511 0 0.5
+# alpha 163 0 0.5
+# move 501611 2 0
+# face 501611 "angry"
+# alpha 501611 1 0.5
+# mask 501611 on
+# textboxarrow 0 1
+# move 502111 4 0
+# face 502111 "angry"
+# alpha 502111 1 0.5
+# mask 502111 on
+@フラベルム
+アアアアアアアアアア！？
+
+# textboxarrow 0 3
+@セファー
+アアアアアアアアアア！？
+
+# effectskip 1000
+# effectskip 2000
+# brightness 501611 1 0
+# brightness 502111 1 0
+# voice 560251 "chalice_di_0004"
+# alpha 501611 0 0.5
+# alpha 502111 0 0.5
+# move 5602511 3 0
+# face 5602511 "normal"
+# alpha 5602511 1 0.5
+# mask 5602511 off
+# textboxarrow 0 2
+@カリス
+二人とも大丈夫だよ
+わたしが救ってみせる！
+
+;;//回復音など
+# se "SE_0994"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 560251 "chalice_di_0029"
+# textboxarrow 0 2
+@カリス
+いっけー！！
+
+;;霧なし
+# alpha 5602511 0 0.5
+# move 501611 3 0
+# face 501611 "angry"
+# alpha 501611 1 0.5
+# mask 501611 off
+# textboxarrow 0 2
+@フラベルム
+アアアアアアアアアアアああああああ
+ああああああっ…
+
+# alpha 501611 0 0.5
+# move 502111 3 0
+# face 502111 "angry"
+# alpha 502111 1 0.5
+# mask 502111 off
+# textboxarrow 0 2
+@セファー
+アアアアアアアアアアアああああああ
+ああああああっ…
+
+# alpha 502111 0 0.5
+# move 5302521 3 0
+# face 5302521 "normal"
+# alpha 5302521 1 0.5
+# mask 5302521 off
+# textboxarrow 0 2
+@ミネルヴァ
+二人の雰囲気が…
+穏やかになっていきます
+
+# alpha 5302521 0 0.5
+# move 5100231 3 0
+# face 5100231 "surprise"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+何なの…あれ？

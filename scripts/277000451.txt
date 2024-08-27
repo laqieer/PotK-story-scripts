@@ -1,0 +1,963 @@
+;;-----------------------------------------
+;;◆2019 海上編 9月中旬（6章）シナリオ
+;;【タイトル：パラディーゾ幻想襲来編Ⅵ】
+;;EP1_1
+;;スクリプト最後の背景：プール
+;;-----------------------------------------
+# script "lisp"
+# background "sea_palmbeach_day"
+# bgmfile "bgm348" "BgmSeaEventBattle003" 0
+;;-----------------------------------------
+;;水着アルマス
+# body 2103811
+# pos 2103811 3
+# scale 2103811 0.8 0
+# layer 2103811 2
+# alpha 2103811 0 0
+# mask 2103811 off
+;;水着ティファレト
+# body 2503211
+# pos 2503211 3
+# scale 2503211 0.8 0
+# layer 2503211 2
+# alpha 2503211 0 0
+# mask 2503211 off
+;;水着フェイルノート
+# body 2401911
+# pos 2401911 3
+# scale 2401911 0.8 0
+# layer 2401911 2
+# alpha 2401911 0 0
+# mask 2401911 off
+;;水着ヘレナ
+# body 2302811
+# pos 2302811 3
+# scale 2302811 0.8 0
+# layer 2302811 2
+# alpha 2302811 0 0
+# mask 2302811 off
+;;水着ガ・ジャルグ
+# body 2303211
+# pos 2303211 3
+# scale 2303211 0.8 0
+# layer 2303211 2
+# alpha 2303211 0 0
+# mask 2303211 off
+;;水着ソロモン
+# body 2503111
+# pos 2503111 3
+# scale 2503111 0.8 0
+# layer 2503111 2
+# alpha 2503111 0 0
+# mask 2503111 off
+;;水着レーヴァテイン
+# body 2100231
+# pos 2100231 3
+# scale 2100231 0.8 0
+# layer 2100231 2
+# alpha 2100231 0 0
+# mask 2100231 off
+;;水着カシウス
+# body 2303111
+# pos 2303111 3
+# scale 2303111 0.8 0
+# layer 2303111 2
+# alpha 2303111 0 0
+# mask 2303111 off
+;;水着モラベガ
+# body 2104211
+# pos 2104211 3
+# scale 2104211 0.8 0
+# layer 2104211 2
+# alpha 2104211 0 0
+# mask 2104211 off
+;;水着カリス
+# body 2602511
+# pos 2602511 3
+# scale 2602511 0.8 0
+# layer 2602511 2
+# alpha 2602511 0 0
+# mask 2602511 off
+;;キプル
+# body 163
+# pos 163 3
+# scale 163 0.6 0
+# layer 163 2
+# alpha 163 0 0
+# mask 163 off
+;;-----------------------------------------
+# imageset 3 "bg_white"
+# imagealpha 3 1 0
+# imagescale 3 2.5 0
+# imageset 2 "mov2_2"
+# imagescale 2 1.15 0
+# imagealpha 2 0 0
+# imageset 0 "e190701_map"
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagescale 1 1.2 0
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;【OP】
+;;//背景：島全景（ローク島あり）
+;;ナレーション
+# textwindow "close"
+# waitandnext 0.2
+
+# imagealpha 2 1 0.5
+# imagepos 2 0 -590
+# waitandnext 0.5
+
+# se "SE_0050"
+# imagealpha 3 0 0
+# imagemoveto 2 0 -50 0.8
+# waitandnext 0.8
+
+# imagealpha 2 0 0.8
+# envbody 1201 3 0
+# effectpattern 1201 2 0
+# effectstart 1201
+# imagealpha 0 1 0.3
+# imagepos 0 0 15
+# textwindow "nomal"
+# textflame 0 0
+@
+青い海に浮かぶ常夏の島
+ラグーナ島
+
+;;ナレーション
+# imagemoveto 0 -320 500 0.8
+# imagescale 0 2 0.8
+@
+その沖合いに突如現れた
+未知の島、ローク島
+
+;;ナレーション
+@
+その島になぜか転移することに
+なったマスターは―
+
+;;ナレーション
+@
+そこで見知らぬキル姫たちに
+遭遇した
+
+;;//背景：ビーチ
+# imagealpha 0 0 0
+# fadein "white" 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;//ティファレトとアルマスの立ち絵表示
+;;ナレーション
+# move 2503211 2 0
+# face 2503211 "angry"
+# alpha 2503211 1 0.5
+# mask 2503211 on
+# move 2103811 4 0
+# face 2103811 "angry"
+# alpha 2103811 1 0.5
+# mask 2103811 on
+# textwindow "normal"
+@
+ビーチでは、島の支配をもくろむ
+ゴッドキラーズのティファレトと、
+それに対抗して奮闘するアルマス
+
+;;//ヘレナの立ち絵表示
+;;ナレーション
+# alpha 2503211 0 0.5
+# alpha 2103811 0 0.5
+# move 2302811 3 0
+# face 2302811 "normal"
+# alpha 2302811 1 0.5
+# mask 2302811 off
+@
+そして、ゴッドキラーズに反感を抱く
+ディスラプターズのヘレナと出会う
+
+;;//背景：ジャングル
+;;//ガ・ジャルグ、フェイルノートの立ち絵表示
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "sea_jungle_day"
+# alpha 2302811 0 0
+# move 2303211 2 0
+# face 2303211 "normal"
+# alpha 2303211 1 0
+# mask 2303211 on
+# move 2401911 4 0
+# face 2401911 "normal"
+# alpha 2401911 1 0
+# mask 2401911 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;ナレーション
+# textwindow "normal"
+@
+そしてジャングルでは、一匹狼の
+ガ・ジャルグと、ゴッドキラーズの
+ひとり、フェイルノートと遭遇
+
+;;//フェイルノート立ち絵削除
+;;//ガ・ジャルグ、アルマスの立ち絵表示
+;;ナレーション
+# alpha 2401911 0 0.5
+# move 2103811 4 0
+# face 2103811 "usual"
+# alpha 2103811 1 0.5
+# mask 2103811 off
+@
+ガ・ジャルグはアルマスの説得で、
+マスター達と同行することに
+
+;;ナレーション
+@
+圧倒的な力を持つゴッドキラーズ
+そんな彼女たちに対抗するべく、
+新たな戦力を求めるマスター達
+
+;;//ガ・ジャルグ、アルマスの立ち絵削除
+;;//ソロモン立ち絵表示
+;;ナレーション
+# alpha 2303211 0 0.5
+# alpha 2103811 0 0.5
+# move 2503111 3 0
+# face 2503111 "usual"
+# alpha 2503111 1 0.5
+# mask 2503111 off
+@
+ヘレナの仲間を探してジャングルの
+さらに奥へと進み、ソロモンと出会う
+
+;;//背景：プール
+;;//ソロモン立ち絵削除
+;;//カシウス立ち絵表示
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "sea_landmark_day"
+# alpha 2503111 0 0
+# move 2303111 3 0
+# face 2303111 "normal"
+# alpha 2303111 1 0
+# mask 2303111 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;ナレーション
+# textwindow "normal"
+@
+ソロモンの案内でプール地区にきた
+マスターは、最後のゴッドキラーズ、
+カシウスと…
+
+;;//レーヴァテイン立ち絵表示
+;;ナレーション
+# alpha 2303111 0 0.5
+# move 2100231 3 0
+# face 2100231 "angry"
+# alpha 2100231 1 0.5
+# mask 2100231 off
+@
+ディスラプターズのリーダー的存在、
+レーヴァテインの戦闘を目撃
+
+;;//モラベガ立ち絵表示
+;;ナレーション
+# alpha 2100231 0 0.5
+# move 2104211 3 0
+# face 2104211 "normal"
+# alpha 2104211 1 0.5
+# mask 2104211 off
+@
+その後、共闘を受け入れた
+レーヴァテインと、アルマスを慕う
+モラベガも仲間に加わる
+
+;;//レーヴァテイン、モラベガ立ち絵削除
+;;ナレーション
+# alpha 2104211 0 0.5
+# move 2303111 3 0
+# face 2303111 "normal"
+# alpha 2303111 1 0.5
+# mask 2303111 off
+@
+そして、マスター達は、カシウスが
+去り際に残した言葉で、それぞれに
+戸惑いを抱くことになった
+
+;;ナレーション
+# alpha 2303111 0 0.5
+@
+そんな一行の行く先に、新たな
+キル姫が待っているとも知らずに…
+
+;;//暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "sea_landmark_day"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//背景：プール
+;;？？？（カリス）
+# move 163 1 0
+# alpha 163 1 0.5
+# mask 163 on
+# move 2602511 3 0
+# face 2602511 "usual"
+# alpha 2602511 1 0.5
+# mask 2602511 off
+# textflame 1 1
+# textwindow "normal"
+@？？？
+ケガをしてる子はどこかな〜？
+あっちで音がしたから、
+行ってみよっか？
+
+;;？？？（キプル）
+@？？？
+というか、ここはどこですか？
+もしや、私達、迷子なのでは…
+
+;;？？？（キプル）
+@？？？
+ああ…私がついていながら、
+なんということでしょう！
+また、みなさんにご迷惑を…
+
+# voice 6025 "chalice_t_0004"
+# face 2602511 "normal"
+@カリス
+キプルは心配性だね〜！
+大丈夫、カリスちゃんに任せて！
+ほら、行くよっ！
+
+# voice 9951 "kipuru_0022"
+# se "SE_5575"
+# alpha 2602511 0 0.5
+@キプル
+あっ、待ちなさい、カリス！
+置いていかないでぇぇぇ！
+
+;;【EP1】天使降臨
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "sea_landmark_day"
+# alpha 163 0 0
+# move 2103811 3 0
+# face 2103811 "sad"
+# alpha 2103811 1 0
+# mask 2103811 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm273" "BgmLostRagnarokEvent" 0
+# textflame 1 1
+# textwindow "normal"
+@アルマス
+ローク島だけでなく、ラグーナ島も
+支配するつもりだったなんて…
+
+# alpha 2103811 0 0.5
+# move 2503111 3 0
+# face 2503111 "usual"
+# alpha 2503111 1 0.5
+# mask 2503111 off
+@ソロモン
+だから、結界の要である
+マスターが必要なのね
+
+;;ナレーション
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+# textflame 0 0
+@
+マスターは、
+ティファレトの言葉を思い出す
+
+;;//回想ここから（パラディーゾ幻想襲来編 EP.1より抜粋）
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "sea_palmbeach_day"
+# alpha 2503111 0 0
+# move 2503211 3 0
+# face 2503211 "angry"
+# alpha 2503211 1 0
+# mask 2503211 off
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：ビーチ
+# voice 5032 "tiphereth_t_0002"
+# textflame 1 1
+# textwindow "normal"
+@ティファレト
+あなたは、結界に覆われている
+あの島から来た…
+間違いないですね？
+
+@ティファレト
+あの島に住む者はみな、
+恐怖に囚われているはず…
+
+;;//回想ここまで
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "sea_landmark_day"
+# alpha 2503211 0 0
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;ナレーション
+# textflame 0 0
+# textwindow "normal"
+@
+カシウスも、島の結界は、
+神を恐れる弱さの証だといった
+
+;;ナレーション
+@
+神の干渉を断ち、
+楽しい日々を過ごしていたけれど、
+本当は怖がっていたのだろうか…
+
+;;ナレーション
+@
+マスターは、そう考えて思い悩む
+
+# voice 1038 "almace_0001"
+# move 2103811 3 0
+# face 2103811 "usual"
+# alpha 2103811 1 0.5
+# mask 2103811 off
+# textflame 1 1
+@アルマス
+マスター…
+カシウスに言われたこと、
+気にしてるの？
+
+;;ナレーション
+# textflame 0 0
+@
+マスターはうなずき、
+ティファレトについても話す
+
+# bgmfile "bgm290" "BgmLostRagnarokEvent" 0
+# voice 1038 "almace_0002"
+# textflame 1 1
+@アルマス
+…ねぇ、
+ラグーナ島でキル姫達と
+一緒に過ごしたのはあなたでしょ？
+
+@アルマス
+あなたは、あの島が憐れな島で、
+みんなは幸せじゃなかったと思う？
+
+;;ナレーション
+# textflame 0 0
+@
+島での日々を思い出すと、
+マスターの心に浮かんでくるのは
+みんなの明るい笑顔だけだ
+
+;;ナレーション
+@
+いや、幸せじゃないなんて、
+そんなことは絶対にない
+と、力強く否定する
+
+# face 2103811 "angry"
+# textflame 1 1
+@アルマス
+それなら、自信を持って
+自分達は幸せだって
+言ってやればいいのよ！
+
+@アルマス
+誰かの言葉なんかより
+自分の気持ちと仲間を信じなきゃ
+
+;;ナレーション
+# textflame 0 0
+@
+アルマスの励ましを受けて、
+マスターは再び元気を取り戻す
+
+;;ナレーション
+@
+アルマスに感謝しながら
+ラグーナ島を守るためにも、
+彼女を助けたいと、強く思った
+
+# textflame 1 1
+@アルマス
+ラグーナ島のためにも、
+必ず、あの子達を止めなくっちゃ！
+
+;;ナレーション
+# textflame 0 0
+@
+ほかのメンバーも、
+その言葉にうなずく
+
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+# alpha 2103811 0 0.5
+# move 2303211 2 0
+# face 2303211 "usual"
+# alpha 2303211 1 0.5
+# mask 2303211 on
+# move 2100231 4 0
+# face 2100231 "usual"
+# alpha 2100231 1 0.5
+# mask 2100231 on
+# textflame 1 1
+@レーヴァテイン
+それで…
+このままカシウスを
+追いかけるってことでいいの？
+
+@ガ・ジャルグ
+それでもいいけれど、
+このままただ後手に回るのは
+万全たる私がやることではないわ
+
+# voice 230321 "gaedearg_ge_0028"
+@ガ・ジャルグ
+なにかいい案とかないかしら？
+
+# alpha 2100231 0 0.5
+# move 2103811 4 0
+# face 2103811 "surprise"
+# alpha 2103811 1 0.5
+# mask 2103811 on
+@アルマス
+あっ、そういえば、中央の島にある
+あの子達の本拠地には何があるの？
+
+# alpha 2303211 0 0.5
+# move 2503111 2 0
+# face 2503111 "usual"
+# alpha 2503111 1 0.5
+# mask 2503111 on
+@ソロモン
+そうね…
+ひとつ気になる建物があってね、
+時々、異様な気配を放つのよ
+
+# face 2103811 "usual"
+@アルマス
+ふうん、気になるわね…
+そこに行ってみない？
+
+# voice 210023 "revatein_ge_0032"
+# alpha 2503111 0 0.5
+# move 2100231 2 0
+# face 2100231 "normal"
+# alpha 2100231 1 0.5
+# mask 2100231 on
+@レーヴァテイン
+…おっけ
+ほかに手がかりもないしね
+
+;;ナレーション
+# alpha 2100231 0 0.5
+# alpha 2103811 0 0.5
+# textflame 0 0
+@
+ほかのメンバーも異論はなく、
+全員で島の中央に
+向かうことになった
+
+;;//場面転換
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# move 163 2 0
+# alpha 163 1 0
+# mask 163 on
+# move 2602511 4 0
+# face 2602511 "usual"
+# alpha 2602511 1 0
+# mask 2602511 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 9951 "kipuru_0052"
+# textflame 1 1
+# textwindow "normal"
+@キプル
+カリス…
+どうして、プールに来たんです？
+
+# voice 6025 "chalice_t_0020"
+# face 2602511 "smile"
+@カリス
+ふんふん〜♪
+なんとなく、かなー？
+
+# voice 9951 "kipuru_0015"
+@キプル
+うう…
+また異族の大群に
+会ったりしませんように…
+
+;;//できればギザギザフレームで
+# voice 6025 "chalice_t_battle_0008"
+# face 2602511 "angry"
+# textwindow "toge"
+@カリス
+ああっ！
+
+# voice 9951 "kipuru_0025"
+# textwindow "normal"
+@キプル
+ぎゃぁぁぁっ！
+ななな、なんですか！
+急に大声を出して！
+
+# face 2602511 "smile"
+@カリス
+ほら、あそこ！
+レーヴァ達だよっ！
+やっほーい！
+
+# se "SE_5575"
+# textwindow "close"
+# alpha 2602511 0 0.5
+# waitandnext 0.8
+
+;;//場面転換
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 163 0 0
+# move 2100231 3 0
+# face 2100231 "usual"
+# alpha 2100231 1 0
+# mask 2100231 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textwindow "normal"
+@レーヴァテイン
+カリス？
+あなたには待機を命じてたはず
+どうしてこんな場所に？
+
+# alpha 2100231 0 0.5
+# move 163 2 0
+# alpha 163 1 0.5
+# mask 163 on
+# move 2602511 4 0
+# face 2602511 "usual"
+# alpha 2602511 1 0.5
+# mask 2602511 on
+@カリス
+ケガした子がいないかなって
+探してたんだ〜！
+
+# voice 9951 "kipuru_0031"
+@キプル
+カリスが勝手な行動をして
+すみません、すみませぇぇぇん！
+迷子になって困ってたんですぅ！
+
+;;ナレーション
+# textflame 0 0
+@
+謝りまくる機械獣を無視して、
+カリスと呼ばれた少女は
+マスター達の顔を見回す
+
+# voice 6025 "chalice_t_0029"
+# face 2602511 "normal"
+# textflame 1 1
+@カリス
+むー…
+みんな、疲れてるね？
+じゃ、いっくよぉー！
+
+;;//演出：光が降り注ぐ
+# se "SE_4781"
+# fadein "white" 1
+# waitandnext 1
+
+# voice 1038 "almace_0023"
+# alpha 163 0 0.5
+# alpha 2602511 0 0.5
+# move 2103811 3 0
+# face 2103811 "surprise"
+# alpha 2103811 1 0.5
+# mask 2103811 off
+@アルマス
+これは…
+傷が…
+
+# voice 210421 "morabeaga_l_0021"
+# alpha 2103811 0 0.5
+# move 2104211 3 0
+# face 2104211 "normal"
+# alpha 2104211 1 0.5
+# mask 2104211 off
+@モラベガ
+わぁ～…！！
+なんだかポカポカするね
+
+# voice 6025 "chalice_t_0005"
+# alpha 2104211 0 0.5
+# move 2602511 3 0
+# face 2602511 "smile"
+# alpha 2602511 1 0.5
+# mask 2602511 off
+@カリス
+ふふふっ！
+カリスちゃんマジ天使！
+
+;;ナレーション
+# textflame 0 0
+@
+カリスはそう言って、
+満足そうに笑う
+
+# voice 6025 "chalice_t_0004"
+# face 2602511 "normal"
+# textflame 1 1
+@カリス
+なんとなくこっちに来たら、
+みんなを助けることが出来ちゃった！
+またミラクル起こしちゃったね〜♪
+
+# voice 250311 "solomon_t_0055"
+# move 2503111 2 0
+# face 2503111 "angry"
+# alpha 2503111 1 0.5
+# mask 2503111 on
+# move 2602511 4 0.5
+# mask 2602511 on
+@ソロモン
+カリス！
+無断での単独行動は慎むようにって
+いつも言っているでしょう？
+
+@カリス
+ソロモンは心配性だな〜
+大丈夫だよ！
+
+# alpha 2503111 0 0.5
+# alpha 2602511 0 0.5
+# move 2302811 3 0
+# face 2302811 "usual"
+# alpha 2302811 1 0.5
+# mask 2302811 off
+@ヘレナ
+先輩、彼女はカリス…
+ディスラプターズの一員だよ
+能力はいま見た通り…すごいだろ？
+
+# voice 230281 "herena_a_0049"
+@ヘレナ
+カリス、こちらは…マスターだ
+ヘレナは先輩って呼んでいるけどね
+
+;;ナレーション
+# textflame 0 0
+@
+マスターが治療のお礼をいうと
+カリスは明るく笑って応える
+
+# alpha 2302811 0 0.5
+# move 2602511 3 0
+# face 2602511 "smile"
+# alpha 2602511 1 0.5
+# mask 2602511 off
+# textflame 1 1
+@カリス
+やっほい！
+カリスちゃんだよ！
+元気になってよかったね！
+
+;;ナレーション
+# textflame 0 0
+@
+マスターがこれまでのことを話し、
+君も一緒に来てくれないか
+と、頼むと…
+
+# voice 6025 "chalice_t_0032"
+# face 2602511 "normal"
+# textflame 1 1
+@カリス
+おっけい！
+カリスちゃんにお任せあれ！
+
+;;ナレーション
+# textflame 0 0
+@
+カリスは二つ返事で承諾する
+
+;;ナレーション
+@
+マスターが再びお礼を言い、
+カリスと一緒なら安心だ
+と、話すと彼女はじっと見つめてきた
+
+# voice 6025 "chalice_t_0002"
+# face 2602511 "usual"
+# textflame 1 1
+@カリス
+君…マスターさん、だっけ？
+不思議な人だね？
+
+# face 2602511 "smile"
+@カリス
+マスターさんのそばにいると、
+なんだかここがホカホカして…
+たっくさん力が湧いてくるんだぁ
+
+;;ナレーション
+# textflame 0 0
+@
+カリスは胸に手を当てながら
+にっこりと微笑む
+
+# face 2602511 "normal"
+# textflame 1 1
+@カリス
+この力で、もっとミラクルを
+起こしちゃうから、期待しててね！
+
+;;ナレーション
+# textflame 0 0
+@
+そう言って笑うカリスを仲間に加え、
+改めて島の中央を目指そうとするが…
+
+# bgm "stop"
+# alpha 2602511 0 0.5
+# move 2303211 3 0
+# face 2303211 "usual"
+# alpha 2303211 1 0.5
+# mask 2303211 off
+# textflame 1 1
+@ガ・ジャルグ
+ねぇ…
+あれをなんとかしないと、
+どこにも行けなさそうよ？
+
+;;ナレーション
+# se "SE_0617"
+# alpha 2303211 0 0.5
+# textflame 0 0
+@
+ガ・ジャルグの示した方角には、
+これまで見たことのないほど
+大規模な異族の群れが集まっていた
+
+# voice 210421 "morabeaga_l_0023"
+# move 2104211 3 0
+# face 2104211 "sad"
+# alpha 2104211 1 0.5
+# mask 2104211 off
+# textflame 1 1
+@モラベガ
+ひゃあっ！
+あんなにたくさん！？
+
+# alpha 2104211 0 0.5
+# move 2503111 3 0
+# face 2503111 "angry"
+# alpha 2503111 1 0.5
+# mask 2503111 off
+@ソロモン
+ここで戦うのは非効率よ
+迂回して進みましょう
+
+# bgmfile "bgm348_349" "BgmSeaEventBattle003" 0
+# move 2503111 2 0.5
+# mask 2503111 on
+# move 2103811 4 0
+# face 2103811 "angry"
+# alpha 2103811 1 0.5
+# mask 2103811 on
+@アルマス
+…いいえ、戦うわ
+
+# se "SE_10585"
+# waitandnext 0.5
+
+@アルマス
+あれぐらいの相手にひるんでいたら、
+あの子達を倒せないもの！
+
+# voice 210023 "revatein_ge_0032"
+# alpha 2503111 0 0.5
+# move 2100231 2 0
+# face 2100231 "angry"
+# alpha 2100231 1 0.5
+# mask 2100231 on
+@レーヴァテイン
+おっけ…
+さっさと片付けるわよ！
+
+# se "SE_5205"
+# waitandnext 0.5
+
+;;ナレーション
+# alpha 2100231 0 0.5
+# alpha 2103811 0 0.5
+# textflame 0 0
+@
+アルマスとレーヴァテインは
+不敵に笑い、敵陣へと突っ込んでいく
+
+;;ナレーション
+@
+気合の入った二人を先頭に
+メンバーは奮起し、
+次々と敵陣に切り込んでいった

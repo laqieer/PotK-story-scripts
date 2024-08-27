@@ -1,0 +1,334 @@
+;;-----------------------------------------
+;;神令ラグナロク_キャラクエシナリオ 深浦
+;;【EP3】
+;;スクリプト最後の背景：丘（戦場などのイメージ）（夜明けぐらいの時間帯）
+;;背景：丘（戦場などのイメージ）（夜明けぐらいの時間帯）
+;;-----------------------------------------
+# script "lisp"
+# background "wild"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;神令ラグナロク
+# body 3103611
+# pos 3103611 3
+# scale 3103611 0.8 0
+# layer 3103611 2
+# alpha 3103611 0 0
+# mask 3103611 off
+;;-----------------------------------------
+;;神令ラグナロク一枚絵
+# imageset 0 "c3103611"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;【EP3】
+;;背景：丘（戦場などのイメージ）（夜明けぐらいの時間帯）
+# voice 310361 "ragnarok_c_unit_0012"
+# move 3103611 3 0
+# face 3103611 "usual"
+# alpha 3103611 1 0
+# mask 3103611 off
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+世界は革命を欲してる
+さあ、ついてこれる？
+
+;;モノローグ
+# textflame 0 0
+@
+大革命である
+
+;;モノローグ
+@
+ラグナロクは旗を掲げ
+最前線で活躍するようになった
+
+;;モノローグ
+@
+彼女が奮戦し
+その動きに扇動されるように
+他の斬ル姫達の士気が高まる
+
+;;モノローグ
+@
+ラグナロクが敵を集めた分だけ
+勝利の数も増えた
+
+;;演出：場転
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# move 3103611 3 0
+# face 3103611 "usual"
+# alpha 3103611 1 0
+# mask 3103611 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+これだけ多くの姫達を
+率いたことはない
+
+;;モノローグ
+# textflame 0 0
+@
+戦いを終え、祝勝会が開かれる
+
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+彼女らをよく統率し
+戦いを続けてきたのは、マスター
+お前の他にはいないわ
+
+;;選択肢
+;;@
+;;A　ラグナロクの方こそ
+;;B　彼女らの力だよ
+;;C　助けられてばかりさ
+# select "ラグナロクの方こそ" "select_label_01" "彼女らの力だよ" "select_label_02" "助けられてばかりさ" "select_label_03"
+彼女らをよく統率し
+戦いを続けてきたのは、マスター
+お前の他にはいないわ
+
+;;アンサー
+;;A
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+私までも率いたのはお前だ
+
+;;B
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+彼女らの力は、お前が発揮させている
+
+;;C
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+助けてもいるはずでしょう
+
+;;モノローグ
+# label "select_label_end"
+# textflame 0 0
+@
+冷静ながら
+マスターに称賛を送るラグナロク
+
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+私も先導者として
+より多くの仲間と共に
+戦い抜こう
+
+# textboxarrow 0 2
+@ラグナロク
+もしお前が
+戦場の混沌に
+飲み込まれそうになったら…
+
+# textboxarrow 0 2
+@ラグナロク
+その時は、この御旗を探して
+
+# textboxarrow 0 2
+@ラグナロク
+これはお前の道しるべ
+その先に私がいる
+
+;;モノローグ
+# textflame 0 0
+@
+キラーズとバイブスが繋がり
+共鳴するのがわかる
+
+;;モノローグ
+# se "SE_0602"
+@
+それは彼女の新スキル
+黄昏『裁定の世界樹』
+誕生の瞬間でもあった
+
+;;モノローグ
+@
+勝利の喜びを
+仲間と共感してきてはどうかと
+提案するマスター
+
+;;モノローグ
+@
+無理して
+もう自分を見張り続けなくても
+いいのだからと
+
+# face 3103611 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+…
+
+;;モノローグ
+# textflame 0 0
+@
+だが、ラグナロクは動こうとしない
+
+# face 3103611 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+…もはや、お前の観測は責務ではない
+
+# textboxarrow 0 2
+@ラグナロク
+だが、やめるわけにもいかない
+
+;;モノローグ
+# textflame 0 0
+@
+なぜ？と問うマスター
+
+# face 3103611 "shy"
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+これは、これから先は…
+
+;;モノローグ
+# textflame 0 0
+@
+ラグナロクは落ち着かぬ様子で
+マスターを見上げる
+
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+私の、興味だ
+
+;;モノローグ
+# textflame 0 0
+@
+自分でも自分の気持ちがわからない
+といった面持ちのラグナロク
+
+# face 3103611 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+…
+
+;;モノローグ
+# textflame 0 0
+@
+黙り込んでしまった彼女にマスターは
+自分もラグナロクのことを
+もっと知りたいと述べる
+
+# voice 310361 "ragnarok_c_0023"
+# face 3103611 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+…！
+
+# face 3103611 "shy"
+# textboxarrow 0 2
+@ラグナロク
+あ、あまり、観ないで
+
+;;モノローグ
+# textflame 0 0
+@
+不意打ちの共感に
+思わず赤面するラグナロク
+
+# voice 310361 "ragnarok_c_0039"
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+そ、そうか
+
+# textboxarrow 0 2
+@ラグナロク
+観測されるというのは
+存外恥ずかしいものなのね…
+
+# textboxarrow 0 2
+@ラグナロク
+だけど、悪くはない
+
+;;モノローグ
+# textflame 0 0
+@
+頬の紅潮を隠すように
+周囲を見回すラグナロク
+
+# voice 310361 "ragnarok_c_0002"
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+もう少し、ふたりで、話そう
+
+;;モノローグ
+# textflame 0 0
+@
+と、彼女は旗を下ろす
+
+# textflame 1 1
+# textboxarrow 0 2
+@ラグナロク
+旗を掲げたままではな
+
+# textboxarrow 0 2
+@ラグナロク
+…敵が増える
+
+;;モノローグ
+# textflame 0 0
+@
+旗を下げた意味は
+黄昏のような頬の色が
+物語っていた
+
+;;【一枚絵指定】
+;;★６（一枚絵同じ）
+;;
+;;ラグナロク　「善も悪もなく、全て飲み込んで先に進む。それが私のやるべきこと。そうでしょう？」
+;;ragnarok_c_kyara_0026
+;;ホワイトアウト
+# textflame 0 0
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# fadein "white" 3
+# buttonsout 0 0
+# textwindow "close"
+# voice 310361 "ragnarok_c_kyara_0026"
+
+# frameout 0 1
+
+# waitandnext 0.8
+
+# fadeout "black" 1.5
+# waitandnext 1.5

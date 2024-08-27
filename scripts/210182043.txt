@@ -1,0 +1,237 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第18章 章タイトル：×××アポカリプス
+;;第2話―４　タイトル：支えるために
+;;4_3
+;;スクリプト最後の背景：廃墟：ghost_town
+;;-----------------------------------------
+# script "lisp"
+# background "ghost_town"
+# bgm "stop"
+;;-----------------------------------------
+;;ヘレナ
+# body 5302811
+# pos 5302811 3
+# scale 5302811 0.8 0
+# layer 5302811 2
+# alpha 5302811 0 0
+# mask 5302811 off
+;;ニール
+# body 162
+# pos 162 3
+# scale 162 0.8 0
+# layer 162 2
+# alpha 162 0 0
+# mask 162 off
+;;オティヌス・暴走
+# body 5400811
+# pos 5400811 3
+# scale 5400811 0.8 0
+# layer 5400811 2
+# alpha 5400811 0 0
+# mask 5400811 off
+# brightness 5400811 0.8 0
+;;-----------------------------------------
+;;オティヌス（暴走）
+# emotionbody 1000 15 5400811 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# voice 540081 "otyinusu_bo_b_battle_0007"
+# move 5400811 2 0
+# face 5400811 "happy"
+# alpha 5400811 1 0
+# mask 5400811 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 5302811 4 0
+# face 5302811 "usual"
+# alpha 5302811 1 0
+# mask 5302811 on
+@オティヌス
+アハハハハハハハ！
+アタシガコワレテイク！
+
+;;//オティヌスが倒れる
+# se "SE_3001"
+# effectskip 1000
+# textwindow "close"
+# alpha 5400811 0 0.5
+# waitandnext 0.5
+
+# se "SE_5207"
+# voice 530281 "herena_di_0007"
+# face 5302811 "normal"
+# textboxarrow 0 3
+# textwindow "normal"
+@ヘレナ
+さあ、これでとどめだよ
+覚悟はいいかい？
+…くふっ
+
+;;オティヌス（暴走）
+# effectstart 1000
+# voice 540081 "otyinusu_bo_b_battle_0003"
+# alpha 5302811 0 0.5
+# move 5400811 3 0
+# face 5400811 "happy"
+# alpha 5400811 1 0.5
+# mask 5400811 off
+# textboxarrow 0 2
+@オティヌス
+アハハハハハ！
+…マダ、アタシノイタズラハ――
+
+;;//斬撃音
+# se "SE_4817"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;//血しぶき演出
+# se "SE_9015"
+# fadein "red" 0.5
+# waitandnext 0.5
+
+;;オティヌス（暴走）
+# face 5400811 "angry"
+# textboxarrow 0 2
+# textwindow "normal"
+@オティヌス
+ア…アレ？
+アハ…アハハハハ！
+チガイッパイ…
+
+;;オティヌス（暴走）
+# bgmfile "bgm464_1" "BgmIntegralNoahDisrupters" 5
+# face 5400811 "surprise"
+# textboxarrow 0 2
+@オティヌス
+チガ…アタシノチガ…
+チガ？チ…チガウ！？
+コレ…アタシノ血じゃないっ
+
+# voice 530281 "herena_di_0005"
+# move 5400811 2 0.5
+# mask 5400811 on
+# move 5302811 4 0
+# face 5302811 "normal"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 3
+@ヘレナ
+ふふふっ
+ヘレナ特製の血糊は喜んでもらえた
+かい？
+
+# textboxarrow 0 3
+@ヘレナ
+アナタの驚いた顔、
+とても愉快だったな
+やはり悪戯はヘレナの方が上手だ
+
+;;//オティヌスから黒い霧が消える
+# effectskip 1000
+# textwindow "close"
+# brightness 5400811 1 1
+# waitandnext 1
+
+;;オティヌス（暴走）
+# voice 540081 "otyinusu_bo_0020"
+# face 5400811 "happy"
+# textboxarrow 0 1
+# textwindow "normal"
+@オティヌス
+ふふふ…あはははははは！
+悪戯…こんな単純な悪戯…
+ふっ…
+
+;;オティヌス（暴走）
+# textboxarrow 0 1
+@オティヌス
+…こういうの、定番だったなあ
+マスターも喜んで…
+
+;;オティヌス（暴走）
+# textboxarrow 0 1
+@オティヌス
+…………ははっ
+
+# voice 530281 "herena_di_0004"
+# face 5302811 "usual"
+# textboxarrow 0 3
+@ヘレナ
+やっと少しは笑えたようだな
+「喜び」は感じられたかい？
+
+;;オティヌス（暴走）
+# face 5400811 "normal"
+# textboxarrow 0 1
+@オティヌス
+…あははは
+分からないよ
+ずっと、分からないまま
+
+;;オティヌス（暴走）
+# voice 540081 "otyinusu_bo_0019"
+# face 5400811 "sad"
+# textboxarrow 0 1
+@オティヌス
+はあ…
+世界を終わらせる壮大な悪戯が
+成功すれば…
+
+;;オティヌス（暴走）
+# textboxarrow 0 1
+@オティヌス
+また思い出せると思ったのになぁ…
+
+# voice 530281 "herena_di_0007"
+# face 5302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+悪戯は相手がいないと成り立たないぞ
+ヘレナが相手をしてやろうか？
+…くふっ
+
+;;オティヌス（暴走）
+# voice 540081 "otyinusu_bo_0035"
+# face 5400811 "normal"
+# textboxarrow 0 1
+@オティヌス
+嫌だよ
+あんたじゃ喜びを感じられない
+
+;;オティヌス（暴走）
+# textboxarrow 0 1
+@オティヌス
+じゃあね…
+
+;;//オティヌスが立ち去る
+# se "SE_0719"
+# textwindow "close"
+# alpha 5400811 0 0.5
+# waitandnext 0.5
+
+# voice 9952 "nir_0043"
+# move 162 2 0
+# alpha 162 1 0.5
+# mask 162 on
+# textboxarrow 0 1
+# textwindow "normal"
+@ニール
+行かせて良かったの、ヘレナ？
+
+# voice 530281 "herena_di_0003"
+# face 5302811 "usual"
+# textboxarrow 0 3
+@ヘレナ
+うん
+いつかまた、彼女も出会えるよ
+悪戯を楽しめる相手と
+
+# voice 530281 "herena_di_0007"
+# face 5302811 "normal"
+# textboxarrow 0 3
+@ヘレナ
+まあ、その頃には世界が終わってる
+かもしれないけどな…くふっ

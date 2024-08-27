@@ -1,0 +1,276 @@
+;;-----------------------------------------
+;;3_2_10_1
+;;-----------------------------------------
+# script "lisp"
+# background "in_ragnarok_institution"
+# bgmfile "bgm162_163" "BgmPJZero001" 0
+;;-----------------------------------------
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 5
+# mask 210 off
+# alpha 210 0 0
+;;アスカロン
+# body 3102311
+# pos 3102311 4
+# scale 3102311 0.8 0
+# alpha 3102311 1 0
+;;グリモワール
+# body 3501711
+# pos 3501711 2
+# scale 3501711 0.8 0
+# alpha 3501711 1 0
+;;魔獣化マサムネ
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# mask 1100111 off
+# alpha 1100111 0 0
+# brightness 1100111 0.5 0
+# face 1100111 "angry"
+;;ヴァリン
+# body 18
+# pos 18 3
+# scale 18 0.8 0
+# mask 18 off
+# alpha 18 0 0
+# brightness 18 0.1 0
+;;-----------------------------------------
+;;回想
+# imageset 0 "bg_white_circle"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;シナリオカット一枚絵
+# imageset 1 "st200101_1"
+# imagelayer 1 3
+# imagealpha 1 0 0
+;;-----------------------------------------
+;;魔獣化マサムネとアスカロン、グリモワールが戦っている
+# face 3102311 "angry"
+# face 3501711 "angry"
+# textwindow "close"
+# se "SE_0810"
+# waitandnext 1
+
+# effectbody 1001 3 0 0 0
+# effectstart 1001
+# waitandnext 0.5
+
+# fadein "white" 0.2
+# waitandnext 0.3
+
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# alpha 1100111 1 0.5
+# waitandnext 0.5
+
+# effectbody 1002 3 0 0 0
+# effectstart 1002
+# waitandnext 0.5
+
+# fadein "white" 0.2
+# waitandnext 0.3
+
+# alpha 1100111 0 0.5
+# waitandnext 1
+
+# alpha 210 1 0.5
+# waitandnext 0.5
+
+# se "SE_0862"
+# face 210 "irregular"
+# voice 9936 "kamito_0006"
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+@カミト
+よしっ
+義手を装着し直した
+
+# face 210 "normal"
+# textboxarrow 0 2
+@カミト
+これでいいのかな？
+一体、どんな力が――
+
+;;砂嵐演出（ないのでそれっぽくしておく。さいとう）
+# bgm "stop"
+# fadeout "black" 0.5
+# sestop "SE_0810"
+# se "SE_9451"
+# waitandnext 0.5
+
+;;背景：ラグナロク機関（霧演出はなしで）
+# alpha 210 0 0
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# imagescale 0 1.2 0
+# bgm "bgm103" 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# alpha 18 1 0.5
+# textwindow "nomal"
+# face 18 "smile_1"
+# voice 9993 "valyn_004"
+# textboxarrow 0 2
+@？？？
+ありがとう
+その力を受け取ってくれたのね
+
+# face 18 "sad"
+@？？？
+それは…私の贖罪みたいなものよ
+生きている間に完成して良かった
+これで心置きなく…
+
+# face 18 "normal_2"
+# voice 9993 "valyn_001"
+@？？？
+なんて浸ってる場合じゃないわ！
+いい？
+それは“ディスラプター”よ
+
+@？？？
+キラーメイルの体に押しつけて
+体内に崩壊プログラムを
+送り込みなさい
+
+@？？？
+そうすれば体内の獣血が分解・除去
+されて彼らは正気を取り戻す…
+はずよ
+
+# face 18 "trouble"
+@？？？
+実験できなかったから
+確証はないけれど…お願い！
+
+# face 18 "angry_1"
+@？？？
+私の代わりに彼らを、
+解放してあげて
+
+# voice 9993 "valyn_036"
+@？？？
+お願いね
+――――――！
+
+;;砂嵐演出
+# fadeout "black" 0.5
+# se "SE_9451"
+# se "SE_11324"
+# waitandnext 0.5
+
+# alpha 18 0 0
+# imagealpha 0 0 0
+# bgmfile "bgm162_163" "BgmPJZero001" 3
+# textwindow "close"
+# waitandnext 0.2
+
+# se "SE_0810"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# alpha 1100111 1 0.5
+# textwindow "nomal"
+# textboxarrow 0 2
+@？？？
+ガアアアアアアア！
+
+;;アスカロン達が戦っている
+# se "SE_5234"
+# fadein "red" 0.2
+# waitandnext 0.4
+
+# alpha 1100111 0 0.5
+# alpha 210 1 0.5
+# face 210 "surprise"
+# voice 9936 "kamito_0023"
+# textboxarrow 0 2
+@カミト
+…………！
+今のは…
+
+# serif 1
+# textwindow "nomal"
+@合成音声
+ヴァリン―――任からの
+最―のメッセージです
+
+# serif 1
+@合成音声
+使用方法を再度説明致しますか？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 210 "irregular"
+# textboxarrow 0 2
+@カミト
+いや、いいよ
+やり方は分かった
+
+# textboxarrow 0 2
+@カミト
+あとは、僕の覚悟だけだ！
+
+# textwindow "close"
+# fadein "white" 1
+# bgmfile "bgm403" "BgmIntegralNoahEvent" 0
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# waitandnext 1
+
+# serif 1
+# textwindow "nomal"
+@カミト
+アスカロン！
+グリモワール！
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 0
+@アスカロン
+はい！
+
+# serif 0
+@グリモワール
+何よっ？
+
+# serif 1
+@カミト
+五秒でいい
+その化け物の動きを
+止めてくれないかっ
+
+# voice 350171 "grimoire_ge_0009"
+# serif 0
+@グリモワール
+五秒でいいって、
+一秒だって難しいのよ！
+
+# voice 310231 "ascalon_a_0033"
+# serif 0
+@アスカロン
+任せて下さい！
+私の命に代えても
+成し遂げてみせます！
+
+# voice 350171 "grimoire_ge_0028"
+# serif 0
+@グリモワール
+ああ、もうっ！
+キミを犠牲にはできないわっ
+連携しなさい！
+
+# voice 9936 "kamito_0067"
+# serif 1
+@カミト
+頼んだ
+僕が決めてみせる！

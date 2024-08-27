@@ -1,0 +1,268 @@
+;;-----------------------------------------
+;;【EP1】
+;;バレンタイン「オティヌス」キャラクエ
+;;背景：ケイオスリオン、可能であれば街中
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;オティヌス（バレンタイン衣装）
+# body 3400821
+# pos 3400821 3
+# scale 3400821 0.8 0
+# alpha 3400821 1 0
+# mask 3400821 off
+;;ケイオスリオン兵
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# alpha 3820001 0 0
+# mask 3820001 off
+;;-----------------------------------------
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "usual"
+# voice 340081 "otyinusu_a_0003"
+@オティヌス
+さて、これでチョコレートの
+材料は揃ったが…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "normal"
+# voice 340081 "otyinusu_a_0004"
+@オティヌス
+せっかくのバレンタインだ、
+マスターがあっと驚く
+贈り物にしなくてはね…
+
+# textflame 0 0
+@
+マスターに渡す贈り物の
+アイデアを探して、
+街を歩くオティヌス
+
+# textflame 0 0
+@
+いつもと違う服装のおかげで
+斬ル姫だとはバレていない
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "usual"
+# voice 340081 "otyinusu_a_0039"
+@オティヌス
+ここは、おもちゃ屋か…
+手品に使えそうなものがあるかも…
+
+# textflame 0 0
+@
+なにげなくのぞいたおもちゃ屋で
+オティヌスは、ある箱を見つけた
+普通の箱に見えるが、開けた途端…
+
+;;できればギザギザフレームで
+# se "SE_0743"
+# textwindow "toge"
+# textflame 0 0
+@
+パーン!!
+
+# textwindow "nomal"
+# textflame 0 0
+@
+大きな破裂音が鳴り、
+なかから人形が飛び出す
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "surprise"
+# voice 340081 "otyinusu_a_0040"
+@オティヌス
+へぇ…
+これは、びっくり箱か
+…なるほど、これは使えそうだ！
+
+;;演出：場所移動の演出
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+# textwindow "close"
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "usual"
+# voice 340081 "otyinusu_a_0003"
+@オティヌス
+これで準備は整ったな
+マスターに見つからないよう、
+あの屋敷に行くとするか…
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.2
+
+;;演出：場所移動の演出
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+# alpha 3400821 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# textwindow "nomal"
+# textflame 0 0
+@
+他の斬ル姫と街に来ていたマスターは
+荷物を抱えたオティヌスを見かけて
+声をかける
+
+# alpha 3400821 1 0.5
+# textflame 0 0
+@
+荷物が多くて大変そうだね、
+手伝おうか、というマスターに、
+オティヌスは首をふってこたえる
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "usual"
+# voice 340081 "otyinusu_a_0034"
+@オティヌス
+マスターの助けは不要だ、
+手品の小道具だからね…
+見られては困るのさ、それじゃ…
+
+# textflame 0 0
+@
+なぜかそっけなく別れたがる
+オティヌス
+
+# textflame 0 0
+@
+マスターは
+露骨に誤魔化そうとする
+彼女の態度が妙に気になった
+
+# textflame 0 0
+@
+オティヌスが心配だから
+絶対についていくと言いはり、
+マスターは彼女の荷物を奪い取る
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "surprise"
+# voice 340081 "otyinusu_a_0027"
+@オティヌス
+まったく…強引だな、君は…
+どうなっても知らないよ？ふふっ
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.2
+
+;;演出：場所移動の演出
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+;;背景：ケイオスリオン、屋外
+# background "plain"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "usual"
+# voice 340081 "otyinusu_a_0039"
+@オティヌス
+さて…屋敷の周辺には
+警備の兵士がうろついているようだ
+少し、眠ってもらうとしよう…
+
+# textflame 0 0
+@
+オティヌスの幻術で警備兵を
+無力化し、ふたりは無事に
+屋敷へと入ることができた
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.2
+
+;;演出：場所移動の演出
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+;;背景：ケイオスリオン、伯爵の屋敷
+# background "201_room"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 340081 "otyinusu_a_0001"
+@オティヌス
+マスター、キッチンへ向かうよ
+屋敷内にも警備兵がいるはずだから、
+見つからないように…
+
+# alpha 3400821 0 0.5
+# alpha 3820001 1 0.5
+# textboxarrow 0 2
+@ケイオスリオン兵
+おい！
+そこでなにをしている！
+どこから入りやがった！
+
+# alpha 3820001 0 0.5
+# alpha 3400821 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3400821 "surprise"
+# voice 340081 "otyinusu_a_0013"
+@オティヌス
+おっと…
+もう見つかってしまったか
+
+# mask 3820001 on
+# move 3820001 4 0
+# alpha 3820001 1 0.5
+# mask 3400821 on
+# move 3400821 2 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@ケイオスリオン兵
+お前は…斬ル姫だな！？
+ここでなにをしている？
+飼い犬は飼い主のもとに戻れ！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ケイオスリオン兵
+お前らは戦うための道具だろうが！
+さっさと命令通りに動けよ！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3400821 "angry"
+# voice 340081 "otyinusu_a_unit_0005"
+@オティヌス
+…言いたいことは、それだけかい？
+それじゃあ、ショウを始めようか？

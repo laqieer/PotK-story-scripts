@@ -1,0 +1,603 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１５章 章タイトル「クリティカルフェイズ―連携―」
+;;第2話―９　タイトル：終焉を望む者
+;;2_9_1
+;;スクリプト最後の背景：町（夜）
+;;-----------------------------------------
+# script "lisp"
+# background "town_night"
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;暴走四天王一枚絵
+# imageset 0 "integral_15"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;ラグナロク・擬装・ガンナー
+# body 5103621
+# pos 5103621 3
+# scale 5103621 0.8 0
+# layer 5103621 2
+# alpha 5103621 0 0
+# mask 5103621 off
+;;グランテピエ・獣刻・バハムート
+# body 5303411
+# pos 5303411 3
+# scale 5303411 0.8 0
+# layer 5303411 3
+# alpha 5303411 0 0
+# mask 5303411 off
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 3
+# alpha 5101431 0 0
+# mask 5101431 off
+;;ムー
+# body 161
+# pos 161 3
+# scale 161 0.6 0
+# layer 161 4
+# alpha 161 0 0
+# mask 161 off
+;;ラブリュス・暴走
+# body 5200311
+# pos 5200311 3
+# scale 5200311 0.8 0
+# layer 5200311 2
+# alpha 5200311 0 0
+# mask 5200311 off
+# brightness 5200311 0.8 0
+;;オティヌス・暴走
+# body 5400811
+# pos 5400811 3
+# scale 5400811 0.8 0
+# layer 5400811 2
+# alpha 5400811 0 0
+# mask 5400811 off
+# brightness 5400811 0.8 0
+;;アロンダイト・暴走
+# body 5100711
+# pos 5100711 3
+# scale 5100711 0.8 0
+# layer 5100711 2
+# alpha 5100711 0 0
+# mask 5100711 off
+# brightness 5100711 0.8 0
+;;ロンゴミアント・暴走
+# body 5301011
+# pos 5301011 3
+# scale 5301011 0.8 0
+# layer 5301011 2
+# alpha 5301011 0 0
+# mask 5301011 off
+# brightness 5301011 0.8 0
+;;-----------------------------------------
+;;第2話―９　タイトル：終焉を望む者
+;;//背景：平原（夜）：plain_night
+# move 196 2 0
+# face 196 "angry"
+# alpha 196 1 0
+# mask 196 on
+# move 5303411 4 0
+# alpha 5303411 1 0
+# mask 5303411 on
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+暴走してるキル姫の集団からは
+抜け出せたけど、特殊なキル姫って
+どこにいるの！？
+
+# face 5303411 "angry"
+# textboxarrow 0 3
+# voice 530341 "grandepieu_di_0003"
+@グランテピエ
+近づいてるよ
+アルマス、あまり前に出ないで、ね
+
+# alpha 196 0 0.5
+# alpha 5303411 0 0.5
+# move 5103621 2 0
+# face 5103621 "angry"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# move 5101431 4 0
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# voice 1036 "ragnarok_0037"
+# textboxarrow 0 1
+@ラグナロク
+うっ…
+この感じ…
+
+# face 5101431 "angry"
+# textboxarrow 0 3
+@ティルフィング
+"終焉"に囚われたとき感じたものに
+近いですね
+
+# alpha 5101431 0 0.5
+# alpha 5103621 0 0.5
+# move 5303411 3 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# move 161 2 0
+# alpha 161 1 0.5
+# textboxarrow 0 1
+@ムー
+おい、グラ！
+いるぜ…しかも、四人だ
+
+# face 5303411 "sad"
+# textboxarrow 0 2
+@グランテピエ
+四人…やっぱりアロンダイトと
+ロンゴミアントだけじゃ
+なかったんだね
+
+# alpha 161 0 0.5
+# alpha 5303411 0 0.5
+# move 5103621 3 0
+# face 5103621 "normal"
+# alpha 5103621 1 0.5
+# mask 5103621 off
+@ラグナロク
+あの四人…
+確かに"終焉"の気配を感じる
+
+# alpha 5103621 0 0.5
+# move 5303411 3 0
+# face 5303411 "angry"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+@グランテピエ
+アロンダイト！
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 5303411 0 0
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# bgmfile "bgm467_468" "BgmIntegralNoahBoso" 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//暴走四天王が現れる
+# voice 510071 "arondaito_bo_0025"
+# textwindow "normal"
+# textboxarrow 0 0
+@アロンダイト
+誰かと思えば…
+本当にしつこいですね
+
+@ロンゴミアント
+そうやってつきまとって、
+私を騙すつもりなんでしょう…
+何て醜悪な…
+
+@グランテピエ
+ロンゴミアント、
+私達は騙したりしないよ
+信じて
+
+# bgmfile "bgm467_468" "BgmIntegralNoahBoso" 0
+# voice 520031 "loveryus_bo_0006"
+@？？？
+きゃはははは！
+君達だね～
+終焉に抗ってるっていうの
+
+@？？？
+ほ～んと
+分かってないな～
+
+@？？？
+せっかくの楽しい終わりが
+地味になっちゃうじゃんか～
+
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# emotionbody 3000 15 5200311 0 0
+# effectpattern 3000 1 0
+# effectstart 3000
+# move 5200311 4 0
+# face 5200311 "normal"
+# alpha 5200311 1 0.5
+# mask 5200311 on
+# move 5103621 2 0
+# face 5103621 "surprise"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1.2
+
+# textwindow "normal"
+# textboxarrow 0 1
+@ラグナロク
+あなた、ラブリュス…？
+
+# textboxarrow 0 3
+@ラブリュス
+そうだよ～っ
+わたしが、この世界を派手に
+終わらせてあげるからね☆
+
+# effectskip 3000
+# alpha 5200311 0 0.5
+# alpha 5103621 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0018"
+@アルマス
+冗談じゃないわよ！
+他のキル姫を暴走させるのも、
+やめて！
+
+# alpha 196 0 0.5
+# emotionbody 3000 15 5200311 0 0
+# effectpattern 3000 1 0
+# effectstart 3000
+# move 5200311 3 0
+# face 5200311 "angry"
+# alpha 5200311 1 0.5
+# mask 5200311 off
+# textboxarrow 0 2
+# voice 520031 "loveryus_bo_0009"
+@ラブリュス
+はあ？
+意味分かんな～い
+
+# face 5200311 "happy"
+@ラブリュス
+わたしの魅力に惑わされちゃう
+子はいるかもだけど～
+そんなの知らな～い
+
+# effectskip 3000
+# alpha 5200311 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+@アルマス
+何なのよ、こいつ…！
+
+# serif 1
+# face 196 "surprise"
+# textboxarrow 0 0
+# voice 540081 "otyinusu_bo_0006"
+@？？？
+あははははは！
+喜んでもらえてるみたいで
+あたしも嬉しいよ
+
+# serif 0
+# face 196 "angry"
+# textboxarrow 0 2
+@アルマス
+今度は誰？
+
+# serif 1
+# alpha 196 0 0.5
+# textwindow "close"
+# emotionbody 4000 15 5400811 0 0
+# effectpattern 4000 1 0
+# effectstart 4000
+# move 5400811 3 0
+# face 5400811 "happy"
+# alpha 5400811 1 0.5
+# mask 5400811 off
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 2
+@オティヌス
+あたしだよ！
+悪戯は上手くいってるみたいだ
+もっとあたしを喜ばせてね
+
+# effectskip 4000
+# alpha 5400811 0 0.5
+# move 196 4 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# move 5101431 2 0
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0015"
+@アルマス
+喜ばせる？
+何を言ってるの…
+
+# face 5101431 "angry"
+# textboxarrow 0 1
+@ティルフィング
+もしかして…キル姫を暴走させて
+いるのはアナタですか？
+
+# alpha 196 0 0.5
+# alpha 5101431 0 0.5
+# emotionbody 4000 15 5400811 0 0
+# effectpattern 4000 1 0
+# effectstart 4000
+# move 5400811 3 0
+# face 5400811 "normal"
+# alpha 5400811 1 0.5
+# mask 5400811 off
+# textboxarrow 0 2
+@オティヌス
+あたしが少し煽ってあげると、
+すぐに昂ぶってくれるんだよ
+だから嬉しくって
+
+# face 5400811 "happy"
+# voice 540081 "otyinusu_bo_0005"
+@オティヌス
+片っ端から煽ってみたんだ
+最高の悪戯でしょ？
+あははは♪
+
+# effectskip 4000
+# alpha 5400811 0 0.5
+# move 196 2 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# move 5303411 4 0
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# textboxarrow 0 1
+# voice 9943 "almace_navikan_0017"
+@アルマス
+悪戯とか、ふざけないで！
+何なの、あなたっ
+
+# face 5303411 "sad"
+# textboxarrow 0 3
+# voice 530341 "grandepieu_di_0044"
+@グランテピエ
+アルマス、落ち着いて
+彼女達は暴走しているんだよ
+
+# alpha 196 0 0.5
+# alpha 5303411 0 0.5
+# move 5103621 3 0
+# face 5103621 "surprise"
+# alpha 5103621 1 0.5
+# mask 5103621 off
+# textboxarrow 0 2
+@ラグナロク
+でも、会話できている
+暴走しているのに自我が
+残っているの？
+
+# alpha 5103621 0 0.5
+# move 5303411 3 0
+# face 5303411 "sad"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+@グランテピエ
+彼女達は何か特別なんだと思う
+その理由は分からないけど
+
+# alpha 5303411 0 0.5
+# move 5101431 4 0
+# face 5101431 "angry"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# move 5103621 2 0
+# face 5103621 "normal"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# textboxarrow 0 3
+@ティルフィング
+いずれにしても、ここで散らせる
+べきです
+
+# textboxarrow 0 3
+@ティルフィング
+これ以上、暴走するキル姫を
+増やすわけにはいきません
+
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0002"
+@ラグナロク
+グランテピエなら彼女達の
+暴走を解くことができるのよね？
+
+# alpha 5101431 0 0.5
+# alpha 5103621 0 0.5
+# move 5303411 3 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# move 161 2 0
+# alpha 161 1 0.5
+# textboxarrow 0 2
+# voice 530341 "grandepieu_di_0003"
+@グランテピエ
+うん
+そうだよ
+
+# textboxarrow 0 1
+@ムー
+でも、あの嬢ちゃん達には逃げられて
+ばっかでなぁ…
+
+# alpha 5303411 0 0.5
+# alpha 161 0 0.5
+# move 196 3 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+それなら話は簡単よ
+私達で捕まえて、お姉ちゃんに
+暴走を解いてもらう
+
+# face 196 "angry"
+# textboxarrow 0 2
+@アルマス
+それでいいんでしょ！？
+
+# move 196 2 0.5
+# move 5303411 4 0
+# face 5303411 "happy"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# textboxarrow 0 3
+# voice 530341 "grandepieu_di_0004"
+@グランテピエ
+うん！
+アルマス…無理はしないでね
+絶対のぜーったいに――
+
+# face 196 "shy"
+# textboxarrow 0 1
+@アルマス
+それは分かったから！
+
+# alpha 5303411 0 0.5
+# alpha 196 0 0.5
+# emotionbody 1000 15 5100711 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5100711 2 0
+# face 5100711 "normal"
+# alpha 5100711 1 0.5
+# mask 5100711 on
+# emotionbody 2000 15 5301011 0 0
+# effectpattern 2000 1 0
+# effectstart 2000
+# move 5301011 4 0
+# face 5301011 "normal"
+# alpha 5301011 1 0.5
+# mask 5301011 on
+# textboxarrow 0 1
+# voice 510071 "arondaito_bo_0007"
+@アロンダイト
+またですか…
+やはり全て滅ぶべきですね
+
+# textboxarrow 0 3
+@ロンゴミアント
+この醜悪な世界には耐えられません…
+
+# effectskip 1000
+# effectskip 2000
+# alpha 5301011 0 0.5
+# alpha 5100711 0 0.5
+# emotionbody 4000 15 5200311 0 0
+# effectpattern 4000 1 0
+# effectstart 4000
+# move 5400811 2 0
+# face 5400811 "normal"
+# alpha 5400811 1 0.5
+# mask 5400811 on
+# emotionbody 3000 15 5200311 0 0
+# effectpattern 3000 1 0
+# effectstart 3000
+# move 5200311 4 0
+# face 5200311 "normal"
+# alpha 5200311 1 0.5
+# mask 5200311 on
+# textboxarrow 0 1
+@オティヌス
+あはは！
+いーっぱい、
+あたしを喜ばせてよね♪
+
+# face 5200311 "sad"
+# textboxarrow 0 3
+# voice 520031 "loveryus_bo_0028"
+@ラブリュス
+うーん
+わたしはパス～
+盛り上げるのは大好きだけど～
+
+# face 5200311 "happy"
+@ラブリュス
+手が汚れるのは、アイドル的に
+ＮＧなんだよね～っ
+
+# effectskip 3000
+# effectskip 4000
+# alpha 5400811 0 0.5
+# alpha 5200311 0 0.5
+# emotionbody 1000 15 5100711 0 0
+# effectpattern 1000 1 0
+# effectstart 1000
+# move 5100711 3 0
+# face 5100711 "normal"
+# alpha 5100711 1 0.5
+# mask 5100711 off
+# textboxarrow 0 2
+@アロンダイト
+だったら離れていて下さい
+邪魔です
+
+# effectskip 1000
+# alpha 5100711 0 0.5
+# emotionbody 3000 15 5200311 0 0
+# effectpattern 3000 1 0
+# effectstart 3000
+# move 5200311 3 0
+# face 5200311 "angry"
+# alpha 5200311 1 0.5
+# mask 5200311 off
+# textboxarrow 0 2
+# voice 520031 "loveryus_bo_0009"
+@ラブリュス
+はあ？
+命令しないでくれる～
+
+# face 5200311 "normal"
+# textboxarrow 0 2
+@ラブリュス
+ま、三人とも好きにしてれば～
+
+# effectskip 3000
+# alpha 5200311 0 0.5
+# move 5103621 2 0
+# face 5103621 "normal"
+# alpha 5103621 1 0.5
+# mask 5103621 on
+# move 196 4 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+この四人、仲間じゃないの？
+
+# face 5103621 "angry"
+# textboxarrow 0 1
+@ラグナロク
+今は好機と考えておくわ
+三人を捕らえる！

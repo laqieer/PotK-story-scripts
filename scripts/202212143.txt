@@ -1,0 +1,724 @@
+;;-----------------------------------------
+;;冬イベント雪下の騎士流離譚4_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;SEAアロンダイト
+# body 6100711
+# pos 6100711 3
+# scale 6100711 0.8 0
+# layer 6100711 2
+# mask 6100711 off
+# alpha 6100711 0 0
+;;シタ
+# body 201621
+# pos 201621 1
+# scale 201621 0.8 0
+# layer 201621 3
+# alpha 201621 0 0
+;;mob
+# body 1
+# pos 1 5
+# scale 1 0.8 0
+# layer 1 5
+# mask 1 off
+# alpha 1 0 0
+# body 2
+# pos 2 4
+# scale 2 0.8 0
+# layer 2 4
+# mask 2 off
+# alpha 2 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：雪山の森
+# textwindow "close"
+# waitandnext 0.2
+
+# background "snow_highland_2"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# face 6100711 "sad"
+# alpha 6100711 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@アロンダイト
+足跡を見つけて
+追ってみたはいいものの
+やはりこの森に入ったのですね
+
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+村の人ならここの危険性が
+わかっているはずなのにどうして…
+
+;;サウンドメモ　暴走の予兆
+# se "SE_4815"
+# fadein "red" 1
+# textboxarrow 0 0
+# waitandnext 1
+
+# voice 1007 "Arondaito_0024"
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+うっ…
+
+# textflame 0 0
+@
+胸の奥、内側からいくつもの
+剣で突き刺されたかのような感覚
+
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+はぁ、はぁ…
+どうして、こんな時に…
+
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+ダメですね、こんな状態の私では
+二次被害を起こしてシタ達に
+また迷惑をかけてしまいます
+
+# textflame 0 0
+@
+強くなった雪は
+目印にしていた若者の足跡も
+消し去ってしまっていた
+
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+私が無理をするより
+戻ってシタを呼んで――
+
+# move 6100711 4 0.5
+# move 201621 2 0.3
+# face 201621 "surprise"
+# alpha 201621 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+アロンダイトさん！
+
+# voice 1007 "Arondaito_0022"
+# face 6100711 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+シタ！
+来てくれたんですね！
+
+# voice 2016 "shita_0003"
+# face 201621 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+村の人が呼びに来てくださって…
+あとは任せてください！
+
+# voice 1007 "Arondaito_0002"
+# face 6100711 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+はい、私では力不足ですので
+あとはシタにお願いできれば…
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+力不足なんかじゃないですよ！
+あの子のことを想ってここまで
+追って来てくれたんですから！
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+それに、そのおかげでわたしも
+後を追いやすかったんですから
+
+# voice 1007 "Arondaito_0022"
+# face 6100711 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+後を追いやすかった？
+この雪では足跡なんて…
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+アロンダイトさんの通った後を
+追うのは二度目でしたから
+わたしにはばっちりわかりましたよ
+
+# voice 1007 "Arondaito_0004"
+# face 6100711 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+…あなたには敵いませんね
+では、後は任せました
+
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+はい！
+アロンダイトさんも気をつけて
+戻ってくださいね
+
+;;演出：シタout
+# move 201621 1 0.3
+# alpha 201621 0 0.3
+# textwindow "close"
+# waitandnext 1.5
+
+# face 6100711 "usual"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@アロンダイト
+シタの言葉は
+いつも頼もしいですね
+
+;;演出：時間経過の暗転
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：冬の村
+# background "town_night_snow"
+# move 6100711 3 0
+# alpha 6100711 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1
+
+# alpha 6100711 1 0.3
+# textflame 0 0
+# textwindow "nomal"
+@
+それから数刻が経ち――
+
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+…シタ！
+
+# bgm "bgm003" 0
+# alpha 6100711 0 0.3
+# move 201621 2 0
+# alpha 201621 1 0.3
+# face 2 "sad"
+# alpha 2 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@シタ
+ただいま戻りましたぁ
+
+# textflame 1 1
+# textboxarrow 0 3
+@若者
+…………
+
+# textflame 0 0
+@
+無事、シタは若者を連れ
+下山してきたのだった
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：室内（親子の家）
+# background "church_room"
+# alpha 201621 0 0
+# alpha 2 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 1 4 0
+# layer 1 2
+# face 1 "angry"
+# alpha 1 1 0.3
+# move 2 2 0
+# layer 2 4
+# alpha 2 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@若者
+…………
+
+# textflame 1 1
+# textboxarrow 0 3
+@父親
+これだけの人に迷惑をかけて
+何か言ったらどうなんだ
+
+# textflame 1 1
+# textboxarrow 0 1
+@若者
+…はっ、何を偉そうに
+
+# textflame 1 1
+# textboxarrow 0 3
+@父親
+なんだと！？
+
+# voice 2016 "shita_0034"
+# move 201621 3 0
+# mask 201621 off
+# face 201621 "sad"
+# alpha 201621 1 0.3
+# alpha 1 0 0.3
+# alpha 2 0 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@シタ
+まぁまぁ
+おふたりとも落ち着いて…
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 2
+# alpha 201621 0 0.3
+# alpha 1 1 0.3
+# face 2 "angry"
+# alpha 2 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@若者
+俺なんかいなくなればよかったんだろ
+
+# textflame 1 1
+# textboxarrow 0 3
+@父親
+なっ
+
+# textflame 1 1
+# textboxarrow 0 1
+@若者
+そもそも探されなくても
+俺は山を越えて向こうの街に
+着くはずだったんだ、余計なことを…
+
+# alpha 1 0 0.3
+# waitandnext 0.5
+
+;;演出：アロンダイトが机を叩いた
+# se "SE_6249"
+# shake 1 0.5
+# move 6100711 4 0
+# layer 6100711 2
+# mask 6100711 off
+# face 6100711 "angry"
+# alpha 6100711 1 0.3
+# textboxarrow 0 0
+# waitandnext 2
+
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+…………
+
+# face 2 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@若者
+な、なんだよ
+
+# voice 1007 "Arondaito_0013"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+…失礼しました
+前職の癖で、つい
+
+# bgm "bgm004" 0
+# alpha 6100711 0 0.3
+# move 201621 4 0
+# layer 201621 2
+# mask 201621 off
+# alpha 201621 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@シタ
+ここで暮らすあなたは
+冬の山…それにあの森の恐ろしさは
+よく知っていたはずです
+
+# voice 2016 "shita_0018"
+# textflame 1 1
+# textboxarrow 0 3
+@シタ
+なのに、どうして
+山や森のことを軽く見たり
+お父さんにそんな口ぶりなんですか？
+
+# textflame 1 1
+# textboxarrow 0 1
+@若者
+はっ、このオヤジは
+俺がどうなろうと知ったこっちゃない
+
+# face 2 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@若者
+たとえ山を越えられず
+死んだと知っても手を叩いて
+喜んだだろうよ！
+
+# alpha 6100711 1 0.3
+# alpha 201621 0 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+…………
+
+# textflame 1 1
+# textboxarrow 0 1
+@若者
+あんた達に
+迷惑は掛けたかもしれないけど
+それはただの無駄骨だったんだよ
+
+# se "SE_6249"
+# shake 1 0.5
+# textboxarrow 0 0
+# waitandnext 2
+
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+…言いたいことはそれだけですか？
+
+;;剣
+# se "SE_5205"
+# move 6100711 3 0.4
+# move 2 1 0.6
+# textboxarrow 0 0
+# waitandnext 1
+
+# voice 1007 "Arondaito_0014"
+# textflame 1 1
+# textboxarrow 0 2
+@アロンダイト
+そんなに死にたいのであれば
+今ここで私が殺して差し上げましょう
+
+# textflame 1 1
+# textboxarrow 0 1
+@若者
+…………っ！
+
+# voice 2016 "shita_0022"
+# alpha 6100711 0 0.3
+# alpha 2 0 0.3
+# move 201621 3 0
+# face 201621 "surprise"
+# alpha 201621 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@シタ
+アロンダイトさん！
+
+# voice 1007 "Arondaito_0003"
+# move 6100711 4 0
+# alpha 6100711 1 0.3
+# move 2 2 0
+# alpha 2 1 0.3
+# alpha 201621 0 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+もちろん、シタが救った命です
+本当にあなたを今ここで
+斬り捨てることはありません
+
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+一時の感情であれ
+家族の、親子の絆を自分勝手で
+壊そうとした罪は重いですよ
+
+# face 2 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+@若者
+…………
+
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+生きていれば迷惑をかけることは
+多々あることです、些末なことです
+
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+しかし、自身が働いた不義は
+その魂に突き刺さって一生抜けない
+呪いとなるのです
+
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+そんなことを言ってしまった自分は
+あの森で死んだことにして…
+
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+心を入れ替えて
+償い、生きるといいでしょう
+と忠告しておきます
+
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+それでは、私はこれで
+
+;;演出：アロンダイトout
+# se "SE_0719"
+# move 6100711 5 0.5
+# textwindow "close"
+# waitandnext 1.5
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# alpha 2 0 0.3
+# alpha 201621 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@シタ
+あ、アロンダイトさん！
+待ってください！
+
+;;演出：移動の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：冬の村
+# background "town_night_snow"
+# move 201621 5 0
+# alpha 201621 0 0
+# move 6100711 3 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 6100711 2 1
+# layer 6100711 4
+# mask 6100711 on
+# face 6100711 "normal"
+# alpha 6100711 1 1
+# waitandnext 1
+
+# move 201621 4 0.3
+# layer 201621 2
+# mask 201621 off
+# alpha 201621 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@シタ
+待ってください！
+どこまで行っちゃうんですか
+
+# textflame 1 1
+# textboxarrow 0 1
+@アロンダイト
+…………
+
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+# voice 1007 "Arondaito_0031"
+# face 6100711 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@アロンダイト
+…ごめんなさい、シタ
+私はもうここから去らないと
+
+# voice 2016 "shita_0022"
+# face 201621 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+@シタ
+…っ！
+
+# textflame 1 1
+# textboxarrow 0 3
+@シタ
+暴走の予兆、ですか…？
+
+# voice 1007 "Arondaito_0003"
+# textflame 1 1
+# textboxarrow 0 1
+@アロンダイト
+ええ、先ほどの
+若者への怒りは本当に
+剣を振りかぶってしまいそうでした
+
+# textflame 1 1
+# textboxarrow 0 1
+@アロンダイト
+諫めるのではなく
+諭すのではなく
+
+# textflame 1 1
+# textboxarrow 0 1
+@アロンダイト
+終わらせてしまうのが最善だと
+選択してしまいそうな自分は
+もう、ここにはいられないのです
+
+# textflame 1 1
+# textboxarrow 0 3
+@シタ
+そんな、アロンダイトさんの怒りは
+優しさ、思いやりが故のものです！
+
+# textflame 1 1
+# textboxarrow 0 3
+@シタ
+そんなに、自分を責めないで…
+
+# voice 1007 "Arondaito_0004"
+# face 6100711 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@アロンダイト
+ふふ、本当の優しさとは
+あなたのような者を指すのです、シタ
+
+# voice 1007 "Arondaito_0030"
+# textflame 1 1
+# textboxarrow 0 1
+@アロンダイト
+こんな私によくしてくださって
+本当にありがとうございます
+深い感謝をあなたに
+
+# textflame 1 1
+# textboxarrow 0 3
+@シタ
+アロンダイトさん…
+
+# textflame 1 1
+# textboxarrow 0 1
+@アロンダイト
+あなたは悪くないんです
+そんな顔をしないでください
+
+# face 6100711 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+@アロンダイト
+私の中にある怒りはただの害悪
+
+# textflame 1 1
+# textboxarrow 0 1
+@アロンダイト
+あなたのような人のそばに
+いてはいけないのです
+
+# textflame 1 1
+# textboxarrow 0 1
+@アロンダイト
+私は、孤独でいるべきなんです
+
+# textflame 1 1
+# textboxarrow 0 3
+@シタ
+わたしとアロンダイトさんの
+出会いは…無意味でしたか？
+
+# textflame 1 1
+# textboxarrow 0 1
+@アロンダイト
+すべてなかったことにしてしまえば
+そんなことも考えずに済みます
+
+# textflame 1 1
+# textboxarrow 0 3
+@シタ
+どうしても、行くのですか？
+
+# textflame 1 1
+# textboxarrow 0 1
+@アロンダイト
+元々、そうあるべきだったんです
+
+# voice 2016 "shita_0017"
+# textflame 1 1
+# textboxarrow 0 3
+@シタ
+…そうですか
+
+# textflame 1 1
+# textboxarrow 0 3
+@シタ
+わかりました
+
+# face 6100711 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@アロンダイト
+では、さようなら
+
+# textflame 1 1
+# textboxarrow 0 3
+@シタ
+…………
+
+;;演出：アロンダイトout
+# se "SE_6250"
+# move 6100711 1 1
+# alpha 6100711 0 1
+# textboxarrow 0 0
+# waitandnext 2
+
+# move 201621 3 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@シタ
+アロンダイトさん…
+あなたは――
+
+# textflame 0 0
+@
+それが偶然出会った
+ふたりに訪れた必然の別れだった…
+
+# fadeout "black" 2
+# waitandnext 2

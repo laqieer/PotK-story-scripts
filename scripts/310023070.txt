@@ -1,0 +1,386 @@
+;;-----------------------------------------
+;;SEA3章_7
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown_night"
+# bgm "stop"
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;七支刀
+# body 5105111
+# pos 5105111 5
+# scale 5105111 0.8 0
+# layer 5105111 3
+# mask 5105111 off
+# alpha 5105111 0 0
+;;パラシュ
+# body 6200411
+# pos 6200411 2
+# scale 6200411 0.8 0
+# layer 6200411 4
+# alpha 6200411 0 0
+;;イシューリエル
+# body 6301411
+# pos 6301411 4
+# scale 6301411 0.8 0
+# layer 6301411 2
+# mask 6301411 off
+# alpha 6301411 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：町（夜）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_6211"
+# face 270 "sad"
+# alpha 270 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+イシューリエルさんの
+勢いに押されて、廃病院の
+調査をすることになりましたけれど…
+
+# textboxarrow 0 2
+@ミーミル
+本当に廃病院を調べることで
+心霊現象は収まるのでしょうか？
+
+# textboxarrow 0 2
+@ミーミル
+それに、「揺らぎ」の影響が
+誰に起きているのかも
+よく分かっておりません…
+
+# voice 9917 "mimir_navikan_0001"
+# face 270 "normal"
+# textboxarrow 0 2
+@ミーミル
+マスター様は
+どのようにお考えですか？
+
+;;選択肢
+# select "パラシュが怪しい" "select_label_01" "イシューリエルが怪しい" "select_label_02" "七支刀が怪しい" "select_label_03"
+マスター様は
+どのようにお考えですか？
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 270 "sad"
+# textboxarrow 0 2
+@ミーミル
+パラシュさんですか…
+七支刀さんに対して、
+少し冷たい印象を受けましたね
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 270 "sad"
+# textboxarrow 0 2
+@ミーミル
+イシューリエルさんですか…
+どうしてあんなに心霊現象を
+否定するのか少し気になりますね
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 270 "sad"
+# textboxarrow 0 2
+@ミーミル
+七支刀さんですか…
+ご自身の在り方について、
+思い悩んでおられるようですね
+
+# label "select_label_end"
+# face 270 "normal"
+# textboxarrow 0 2
+@ミーミル
+…そろそろ待ち合わせのお時間です
+集合場所はここで
+合っているはずですけれど
+
+# move 270 2 0.5
+# se "SE_5575"
+# move 5105111 4 0.5
+# face 5105111 "normal"
+# alpha 5105111 1 0.3
+# textboxarrow 0 3
+@七支刀
+お待たせしましたー！
+
+;;パラシュとイシューリエルSEA
+# alpha 270 0 0.3
+# alpha 5105111 0 0.3
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# face 6301411 "usual"
+# alpha 6301411 1 0.3
+# textboxarrow 0 1
+@パラシュ
+イシューリエルを起こすのに
+少し手間取ったんだ
+
+# voice 3014 "ithuriel_0004"
+# textboxarrow 0 3
+@イシューリエル
+今夜のために
+仮眠を取っていたのですわ
+これでパーフェクトな状態です
+
+# voice 9917 "mimir_navikan_0004"
+# move 270 3 0
+# face 270 "happy"
+# alpha 270 1 0.3
+# alpha 6200411 0 0.3
+# alpha 6301411 0 0.3
+# textboxarrow 0 2
+@ミーミル
+お二人とも、準備万端といった
+ご様子ですね
+
+# face 270 "surprise"
+# textboxarrow 0 2
+@ミーミル
+あ…そういえば、マナナンさんが
+まだ…
+
+# alpha 270 0 0.3
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# se "SE_0613"
+# textboxarrow 0 3
+@イシューリエル
+一分一秒も無駄にはできませんわ
+出発！
+
+# voice 2004 "parashu_0009"
+# textboxarrow 0 1
+@パラシュ
+遅刻したのは君のせいだけどね
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：病院前（夜の校門）
+# background "schoolgate_night"
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# sestop "SE_6211"
+# alpha 6200411 0 0
+# alpha 6301411 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;二人が歩いていく
+# se "SE_0740"
+# move 270 2 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 3
+@イシューリエル
+ここが「原因」となっている
+廃病院です
+
+# textboxarrow 0 1
+@ミーミル
+廃病院と伺っていたので
+もっと朽ちているかと
+思っておりましたが…
+
+# textboxarrow 0 1
+@ミーミル
+外見はそれほど傷んでおりませんね
+
+# face 6301411 "usual"
+# textboxarrow 0 3
+@イシューリエル
+木造家屋ならいざ知らず、
+現代建築は
+そうそう朽ち果てたりしませんわ
+
+# voice 1051 "shichishito_0015"
+# alpha 270 0 0.3
+# alpha 6301411 0 0.3
+# move 5105111 4 0
+# layer 5105111 2
+# mask 5105111 off
+# face 6200411 "sad"
+# alpha 6200411 1 0.3
+# face 5105111 "sad"
+# alpha 5105111 1 0.3
+# se "bgm602_rhythm_on"
+# textboxarrow 0 3
+@七支刀
+ううっ…
+でも、この建物…
+
+# textboxarrow 0 1
+@パラシュ
+…何かいるね
+
+# textboxarrow 0 3
+@七支刀
+はい…！
+強い霊気を感じます
+
+# voice 3014 "ithuriel_0009"
+# alpha 5105111 0 0.3
+# alpha 6200411 0 0.3
+# move 6301411 3 0
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# textboxarrow 0 2
+@イシューリエル
+ちょっと
+あなた達がそんなことで
+どうするんですか？
+
+# textboxarrow 0 2
+@イシューリエル
+そうやって「霊気を感じる」だの
+「何かいる」だのと
+雰囲気に呑まれて口にするから…
+
+# textboxarrow 0 2
+@イシューリエル
+存在しないものが
+「見え」てしまうんですよ
+
+# textboxarrow 0 2
+@イシューリエル
+ここはただの放置された廃病院です
+心霊現象なんて起きません
+全てインチキです
+
+# textboxarrow 0 2
+@イシューリエル
+勝手な思い込みを捨てて
+客観的に物事を見る
+調査の基本ですわよ
+
+# move 6301411 4 0.5
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# textboxarrow 0 1
+@パラシュ
+君はブレないね
+そこは評価に値するんだけど…
+
+# textboxarrow 0 1
+@パラシュ
+本当に、この嫌な気配を
+感じないのかい？
+
+# textboxarrow 0 3
+@イシューリエル
+くどいですわ！
+あなたまで臆病風に吹かれるなんて
+がっかりです
+
+# face 6200411 "sad"
+# textboxarrow 0 1
+@パラシュ
+ボクは別に…
+
+# voice 1051 "shichishito_0015"
+# alpha 6301411 0 0.3
+# alpha 6200411 0 0.3
+# face 270 "normal"
+# alpha 270 1 0.3
+# face 5105111 "sad"
+# alpha 5105111 1 0.3
+# textboxarrow 0 3
+@七支刀
+ううっ…
+怖い…でも、ここで逃げたら
+わたくしは…
+
+# voice 9917 "mimir_navikan_0002"
+# textboxarrow 0 1
+@ミーミル
+あの、イシューリエルさん
+ここで具体的にはどのようなことを
+なさるのでしょうか？
+
+# voice 3014 "ithuriel_0004"
+# alpha 270 0 0.3
+# alpha 5105111 0 0.3
+# move 6301411 3 0
+# face 6301411 "usual"
+# alpha 6301411 1 0.3
+# se "bgm602_basic_on"
+# textboxarrow 0 2
+@イシューリエル
+良い質問です、ミーミル
+この廃病院にまつわる噂を
+一通り集めておきました
+
+# textboxarrow 0 2
+@イシューリエル
+特にインパクトの強い噂を検証して
+片っ端から真実を
+看破していきます！
+
+# textboxarrow 0 2
+@イシューリエル
+真実を明るみに出すことで
+オカルトを駆逐するのですわ
+
+# face 6301411 "normal"
+# textboxarrow 0 2
+@イシューリエル
+さあ、行きますわよ
+超オカルトバスターズの皆さん
+
+# se "SE_0613"
+# textboxarrow 0 2
+@イシューリエル
+レッツ、オカルトバスター！！
+
+# alpha 6301411 0 0.3
+# move 5105111 3 0
+# face 5105111 "normal"
+# alpha 5105111 1 0.3
+# textboxarrow 0 2
+@七支刀
+ば…バスターっ
+
+# alpha 5105111 0 0.3
+# move 6200411 3 0
+# mask 6200411 off
+# face 6200411 "sad"
+# alpha 6200411 1 0.3
+# textboxarrow 0 2
+@パラシュ
+はぁ…
+そのかけ声は好みじゃない
+
+# fadeout "black" 1
+# waitandnext 1

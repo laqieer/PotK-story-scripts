@@ -1,0 +1,115 @@
+;;-----------------------------------------
+;;海上編4-3
+;;-----------------------------------------
+# script "lisp"
+# background "sea_floor_room_byakko"
+# bgmfile "bgm378" "BgmSeaEventBattle004" 0
+;;-----------------------------------------
+;;ひょうは
+# body 2402011
+# pos 2402011 2
+# scale 2402011 0.8 0
+# layer 2402011 3
+# alpha 2402011 0 0
+;;みゅる
+# body 2104611
+# pos 2104611 4
+# scale 2104611 0.8 0
+# layer 2104611 3
+# alpha 2104611 0 0
+;;ごーれむ
+# body 900012
+# pos 900012 3
+# scale 900012 0.8 0
+# layer 900012 3
+# mask 900012 off
+# alpha 900012 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;背景：隠し部屋（白虎）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# move 2104611 3 0
+# face 2104611 "angry"
+# alpha 2104611 1 0.5
+# mask 2104611 off
+# waitandnext 0.5
+
+# voice 510461 "murgleys_c_battle_0002"
+# textwindow "nomal"
+@ミュルグレス
+ていっ！
+
+# fadein "white" 0.5
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# se "SE_4001"
+# alpha 2104611 0 0.5
+# alpha 900012 1 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# textwindow "nomal"
+@石のゴーレム
+グゥ…
+
+;;演出：石のゴーレム、消滅
+# se "SE_9061"
+# alpha 900012 0 0.5
+# textwindow "close"
+# waitandnext 0.6
+
+;;演出：コインが落ちる音
+# se "SE_0767"
+# waitandnext 0.6
+
+# voice 540201 "hyoha_c_0006"
+# face 2402011 "normal"
+# alpha 2402011 1 0.5
+# move 2104611 4 0
+# face 2104611 "normal"
+# alpha 2104611 1 0.5
+# mask 2104611 on
+# textwindow "nomal"
+@ヒョウハ
+出たぞ！
+“謎のコイン”だ！
+やったな、ミュルグレス！
+
+# voice 510461 "murgleys_c_0004"
+@ミュルグレス
+ミュル達が本気を出せば、
+こんな仕事、朝飯前よ！
+
+@ミュルグレス
+これを倒した報酬も上乗せして、
+全部でカステラ8本ってとこね
+
+# voice 540201 "hyoha_c_0022"
+# face 2402011 "surprise"
+@ヒョウハ
+へっ…？
+それは聞いてないぞ！
+
+# voice 510461 "murgleys_c_0009"
+# face 2104611 "angry"
+@ミュルグレス
+はぁ？ミュルの働きに
+不満があるっていうの？
+これでも大サービスなんだからね！
+
+# voice 540201 "hyoha_c_0028"
+# face 2402011 "angry"
+@ヒョウハ
+むむむ…
+とりあえず、フォルカスに相談だ！
+いくぞ、ミュルグレス！
+
+# fadeout "black" 1
+# waitandnext 1

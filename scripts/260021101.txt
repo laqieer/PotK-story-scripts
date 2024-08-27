@@ -1,0 +1,156 @@
+;;ガンバンテインEP1
+;;背景：砂浜（昼）
+# script "lisp"
+# background "sea_beach_day"
+# bgmfile "bgm227" "BgmSeaEvent" 0
+# body 2600211
+# pos 2600211 3
+# mask 2600211 off
+# textflame 0 0
+# face 2600211 "usual"
+@
+マスターは
+毎日ぼーっとするか昼寝をしている
+ガンバンテインを海に連れてきた
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2600211
+# voice 6002 "ganbantein_0004"
+@ガンバンテイン
+やーっと着いたぁ…
+さあ、お昼寝だー
+
+# textflame 0 0
+@
+来たとたんにか！
+とマスターは思いつつ…
+
+# textflame 0 0
+@
+せっかく来たんだし
+ちょっとは海で遊ぼう、と誘う
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2502111
+# eye 2600211 "close"
+# voice 6002 "ganbantein_0003"
+@ガンバンテイン
+うーん、あたしは遊ぶより
+ぼーっとするほうがいいなー
+
+# eye 2600211 "normal"
+@ガンバンテイン
+でも、海でぼーっとしてたら
+溺れちゃうかなぁ…
+
+@ガンバンテイン
+溺れたらぼーっとできないから
+やっぱり海に入るのはやめておくよ
+
+# select "なにその天然理論…" "select_label_01" "どうしてもぼーっとしたいんだね…" "select_label_02" "泳ぐって選択肢はないんだ…" "select_label_03"
+溺れたらぼーっとできないから
+やっぱり海に入るのはやめておくよ
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2600211
+ganbantein@ガンバンテイン
+えー、なんか変かな～
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2600211
+@ガンバンテイン
+そりゃそうだよ～当たり前じゃない～
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2600211
+# voice 6002 "ganbantein_0002"
+@ガンバンテイン
+うん。ぼーっとか昼寝かどっちかだね
+
+# label "select_label_end"
+# textflame 0 0
+@
+マスターは、ビニールボートを使えば
+多少はぼーっとしてても大丈夫
+自分もついてるし、と再度誘う
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2502111
+# face 2600211 "normal"
+# voice 6002 "ganbantein_0006"
+@ガンバンテイン
+えー、そうなのー？
+そっかー。じゃあ入ろっかなー
+
+;;一時暗転
+# fadeout "black" 2
+# waitandnext 2
+
+# fadein "black" 0.5
+# textflame 0 0
+@
+そしていざ海に入ってみると…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2502111
+# face 2600211 "smile"
+# voice 6002 "ganbantein_0021"
+@ガンバンテイン
+うわ～。これいいね～
+ぼーっとするのがはかどるよ～
+
+# textflame 0 0
+@
+ガンバンテインは思いのほか
+ビニールボートで
+ぼーっとするのが気に入ったらしい
+
+# textflame 0 0
+@
+彼女が楽しんでる様子を見て
+マスターもよかった、と満足する
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2502111
+# eye 2600211 "close"
+# voice 6002 "ganbantein_0019"
+@ガンバンテイン
+う～ん。ぷかぷか気持ちぃ…
+
+# textflame 0 0
+@
+そのうち、ガンバンテインは
+うとうとしはじめ
+あっという間に眠ってしまった
+
+# textflame 0 0
+@
+マスターも、しょうがないなぁ…と
+見ているうちに眠気におそわれ
+ガンバンテインと一緒に眠ってしまう
+
+;;あれば瞬きっぽい暗転処理を入れて欲しいです
+# se "SE_5580"
+# fadein "black" 0.5
+# textflame 0 0
+@
+そして
+マスターがふと気がつくと…
+
+# textflame 0 0
+@
+そこは、はるか沖だった…

@@ -1,0 +1,327 @@
+;;-----------------------------------------
+;;3月初マイペ
+# script "lisp"
+# background "profound"
+# bgmfile "bgm266" "BgmLostRagnarokBattle001" 0
+;;-----------------------------------------
+;;フライシュッツ
+# body 3502711
+# pos 3502711 3
+# scale 3502711 0.8 0
+# alpha 3502711 0 0
+# mask 3502711 off
+;;エクスカリバー
+# body 3101111
+# pos 3101111 3
+# scale 3101111 0.8 0
+# alpha 3101111 0 0
+# mask 3101111 off
+;;与一
+# body 3400511
+# pos 3400511 3
+# scale 3400511 0.8 0
+# alpha 3400511 0 0
+# mask 3400511 off
+;;ひなまつり
+# body 3303111
+# pos 3303111 3
+# scale 3303111 0.8 0
+# alpha 3303111 0 0
+# layer 3303111 5
+# body 3100311
+# pos 3100311 5
+# scale 3100311 0.8 0
+# alpha 3100311 0 0
+# layer 3100311 1
+# body 3300411
+# pos 3300411 1
+# scale 3300411 0.8 0
+# alpha 3300411 0 0
+# layer 3300411 2
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagepos 1 0 0
+# imagelayer 1 4
+# imagescale 1 1.2 0
+# imageset 2 "bg_white_circle"
+# imagealpha 2 0 0
+# imagepos 2 0 0
+# imagelayer 2 5
+# imagescale 2 1.4 0
+;;-----------------------------------------
+# fadein "black" 2
+# textwindow "close"
+# waitandnext 2
+
+# envbody 11111 8 0
+# effectpattern 11111 1 0
+# effectstart 11111
+# imagealpha 1 1 1
+# imagepos 1 0 0
+# imagealpha 2 1 1
+# imagepos 2 0 0
+# waitandnext 1
+
+# textwindow "nomal"
+# textflame 0 0
+# textalign "center"
+# textsize 30
+@
+[0000CD]ロストラグナロク[-]
+新ユニット登場！
+
+# fadeout "black" 1
+# waitandnext 1.4
+# textflame 0 0
+# textalign "center"
+# textsize 30
+@
+[0000CD]ロストラグナロク[-]
+新ユニット登場！
+
+# fadein "white" 0.3
+# se "SE_5535"
+# imagealpha 1 0 0
+# imagealpha 2 0 0
+# alpha 3502711 1 0
+# textflame 0 0
+# textalign "center"
+# textsize 28
+@
+共鳴無き信仰、それゆえの陶酔
+フライシュッツ･[1E90FF]神令[-]･フリッグ
+
+# face 3502711 "happy"
+# voice 350271 "freischotz_c_0004"
+# textflame 0 0
+# textalign "center"
+# textsize 28
+@
+スキル『[191970]蒼の再燃[-]』
+自身から攻撃して敵を倒した際
+1ターンに1度だけ[FF0000]再行動が可能[-]
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 3502711 0 0
+# background "angel_world"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# fadein "white" 0.4
+# se "SE_5535"
+# alpha 3101111 1 0
+# textwindow "nomal"
+# textflame 0 0
+# textalign "center"
+# textsize 28
+@
+主に心酔し、その身を捧げる崇拝者
+エクスカリバー･[DC143C]聖鎖[-]･セラフィエル
+
+# face 3101111 "happy"
+# voice 310111 "excalibur_t_0005"
+# textflame 0 0
+# textalign "center"
+# textsize 28
+@
+解放スキル『[FFA500]神を讃えし波動[-]』
+物防･魔防が0になる代わりに
+[FF0000]物攻･命中100%上昇[-]、[FF0000]必殺下限100％[-]に
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 3101111 0 0
+# background "beast_world"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# fadein "white" 0.4
+# se "SE_5535"
+# alpha 3400511 1 0
+# textwindow "nomal"
+# textflame 0 0
+# textalign "center"
+# textsize 28
+@
+他人のためなら自己犠牲も厭わない
+与一･[9400D3]獣刻[-]･グライアイ
+
+# face 3400511 "happy"
+# voice 340051 "yoichi_ge_0004"
+# textflame 0 0
+# textalign "center"
+# textsize 28
+@
+スキル『[8B0000]自犠なる予防術[-]』
+クエスト開始から5ターンの間
+味方ユニットへ[FF0000]行動不可の耐性を付与[-]
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 3400511 0 0
+# background "underground_world"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 3101111 2 0
+# mask 3101111 on
+# alpha 3101111 1 0
+# move 3400511 4 0
+# mask 3400511 on
+# alpha 3400511 1 0
+# fadein "white" 0.4
+# se "SE_1504"
+# textwindow "nomal"
+# textflame 0 0
+# textalign "center"
+# textsize 28
+@
+与一とエクスカリバーは
+クラスチェンジ可能状態で登場！
+
+;;暗転
+# se "SE_0619"
+# fadeout "black" 1
+# waitandnext 0.8
+# textflame 0 0
+# textalign "center"
+# textsize 28
+@
+与一とエクスカリバーは
+クラスチェンジ可能状態で登場！
+
+# alpha 3101111 0 0
+# alpha 3400511 0 0
+# textwindow "close"
+# waitandnext 0.2
+
+# mask 3502711 on
+# move 3101111 1 0
+# move 3400511 5 0
+# fadein "black" 1
+# waitandnext 1
+
+# fadein "white" 0.5
+# se "SE_2501"
+# alpha 3502711 1 0
+# alpha 3101111 1 0
+# alpha 3400511 1 0
+# face 3502711 "normal"
+# face 3101111 "normal"
+# face 3400511 "normal"
+# textwindow "nomal"
+# textflame 0 0
+# textalign "center"
+# textsize 28
+@
+新ユニットはそれぞれ
+[00BFFF]9STEP[-]ガチャで登場！
+
+# se "SE_0575"
+# textflame 0 0
+# textalign "center"
+# textsize 28
+@
+STEP1では
+[FF0000]ピックアップユニット1体確定[-]！
+
+# face 3101111 "surprise"
+# face 3400511 "surprise"
+# face 3502711 "surprise"
+# voicedelay 310111 "excalibur_t_0006" 1
+# voice 340051 "yoichi_ge_0006"
+# voicedelay 350271 "freischotz_c_0039" 1.5
+# textflame 0 0
+# textalign "center"
+# textsize 28
+@
+STEP6で
+[FF8C00]新ユニット確定
+ガチャチケット[-]GET！
+
+# face 3101111 "happy"
+# face 3400511 "happy"
+# face 3502711 "happy"
+# voice 310111 "excalibur_t_0005"
+# voice 340051 "yoichi_ge_0004"
+# voice 350271 "freischotz_c_0005"
+# textflame 0 0
+# textalign "center"
+# textsize 28
+@
+さらにSTEP9で
+[FF69B4]新ユニットキラーズチケット[-]
+プレゼント！
+
+# fadein "white" 0.5
+# se "SE_5535"
+# alpha 3502711 0 0
+# alpha 3101111 0 0
+# alpha 3400511 0 0
+# alpha 3303111 1 0
+# alpha 3100311 1 0
+# alpha 3300411 1 0
+# textflame 0 0
+# textalign "center"
+# textsize 28
+@
+ひなまつり期間限定
+9STEPUPガチャも登場！
+
+# face 3303111 "angry"
+# face 3100311 "surprise"
+# face 3300411 "surprise"
+# voicedelay 3031 "cassius_ge_0021" 2
+# voicedelay 310031 "durandaru_a_0021" 1
+# voice 330041 "amenonuboko_t_0021"
+# textflame 0 0
+# textalign "center"
+# textsize 28
+@
+各STEPで
+[FF0000]対象ユニット1体確定[-]！
+
+# fadein "white" 0.5
+# se "SE_0504"
+# alpha 3303111 0 0
+# alpha 3100311 0 0
+# alpha 3300411 0 0
+# textflame 0 0
+# textalign "center"
+# textsize 28
+@
+他にもお得なCP、イベント開催中！
+詳しくはお知らせをチェック！
+
+# bgm "stop"
+# fadeout "black" 1
+# waitandnext 0.8
+# textflame 0 0
+# textalign "center"
+# textsize 28
+@
+他にもお得なCP、イベント開催中！
+詳しくはお知らせをチェック！

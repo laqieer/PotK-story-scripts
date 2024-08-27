@@ -1,0 +1,656 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;２章３話　「エデンクライシス―覚醒―」
+;;第6話　タイトル：もう一度出会うために
+;;6_13_3
+;;スクリプト最後の背景：ユグドラシル
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm214" "BgmAncientKillers001" 0
+;;-----------------------------------------
+;;異族化ティルフィング
+# body 5101431
+# pos 5101431 3
+# scale 5101431 0.8 0
+# layer 5101431 3
+# alpha 5101431 0 0
+# mask 5101431 off
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;スイハ
+# body 401711
+# pos 401711 3
+# scale 401711 0.8 0
+# layer 401711 2
+# alpha 401711 0 0
+# mask 401711 off
+;;エルキュール
+# body 202511
+# pos 202511 3
+# scale 202511 0.8 0
+# layer 202511 2
+# alpha 202511 0 0
+# mask 202511 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;ハリー
+# body 208
+# pos 208 3
+# scale 208 0.8 0
+# layer 208 2
+# alpha 208 0 0
+# mask 208 off
+;;レーヴァテイン・擬彩
+# body 198
+# pos 198 3
+# scale 198 0.8 0
+# layer 198 2
+# alpha 198 0 0
+# mask 198 off
+;;擬装スイハ
+# body 5401721
+# pos 5401721 3
+# scale 5401721 0.8 0
+# layer 5401721 2
+# alpha 5401721 0 0
+# mask 5401721 off
+;;-----------------------------------------
+;;シナリオカット一枚絵
+# imageset 0 "integral_02"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+# move 103611 2 0
+# face 103611 "angry"
+# alpha 103611 0.8 0
+# mask 103611 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0
+# mask 196 on
+# voice 1036 "ragnarok_0038"
+@ラグナロク
+はぁあああああ！
+…うっ
+
+;;//ラグナロクの姿が更に薄くなる
+# se "SE_9103"
+# alpha 103611 0.6 1
+# waitandnext 1
+
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+ラグナロク…！
+
+# face 103611 "normal"
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0015"
+@ラグナロク
+限界みたいね…
+でも、平気…
+私が私でなくなっても…
+
+# face 196 "angry"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0018"
+@アルマス
+冗談じゃないわ！
+ラグナロク！
+私はあなたを諦めない！
+
+# textboxarrow 0 3
+@アルマス
+私達の“繋がり”は、
+絶・絶えないんだから！！
+
+# face 103611 "surprise"
+# textboxarrow 0 1
+@ラグナロク
+！！
+
+;;//ラグナロクの姿が元に戻る
+# se "SE_5517"
+# alpha 103611 1 1
+# waitandnext 1
+
+# face 103611 "normal"
+# textboxarrow 0 1
+@ラグナロク
+力が漲ってくる
+でも、これはバイブスじゃない
+これは…
+
+;;//背景：黒
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# alpha 103611 0 0
+# alpha 196 0 0
+# move 208 3 0
+# alpha 208 1 0
+# mask 208 off
+# face 208 "hack"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm409" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@ハリー
+イミテイトキーの起動を確認
+プログラム：イミテイト
+実行可能です
+
+# textboxarrow 0 2
+@ハリー
+ラグナロク、あなたはキラーズの
+本質を見極めることが可能に
+なりました
+
+# textboxarrow 0 2
+@ハリー
+神器に宿るキラーズは
+長い間、込められてきた
+願いの結晶体です
+
+# textboxarrow 0 2
+@ハリー
+ですから、その形状に本質は
+ありません
+より深淵を覗いて下さい
+
+# textboxarrow 0 2
+@ハリー
+そこにある本質こそが
+重要であり、キラーズを
+より強く輝かせます
+
+# textboxarrow 0 2
+@ハリー
+あとは適した形状を模倣するだけ
+それには共鳴が不可欠です
+すでにクリア済みですね
+
+# textboxarrow 0 2
+@ハリー
+それでは、あなたの意思で
+プログラム：イミテイトを
+実行して下さい
+
+# textboxarrow 0 2
+@ハリー
+ハロー・ワールド
+新たな旅路に幸運あれ
+
+;;//背景：ユグドラシル
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# alpha 208 0 0
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0
+# mask 103611 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm422_block" "BgmIntegralNoahBattle004" 0
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 1036 "ragnarok_0033"
+@ラグナロク
+…理解したわ
+キラーズの本質を見極め、
+神器の性質を変容させる
+
+# textboxarrow 0 2
+@ラグナロク
+共鳴により他者の武具種をも
+その身に宿し、神器の力を
+新たな段階へと昇華させるのね
+
+;;//ラグナロクに力が集まっていく（光が収束していくような演出あれば）
+# se "SE_9091"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1.2
+
+# alpha 103611 0 0
+# move 5101431 3 0
+# face 5101431 "surprise"
+# alpha 5101431 1 0
+# mask 5101431 off
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 510143 "tyrufing_iz_0022"
+@ティルフィング
+何ですか…この力の奔流は…？
+今までと全く異なったものを
+感じます
+
+# alpha 5101431 0 0.5
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0035"
+@アルマス
+ラグナロク、何をする
+つもりなのっ？
+
+# alpha 196 0 0.5
+# move 5101431 3 0
+# face 5101431 "angry"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+# voice 510143 "tyrufing_iz_battle_0005"
+@ティルフィング
+嫌な予感が…
+彼女を止めないと…！
+
+;;//ティルフィングがラグナロクに迫る
+# se "SE_9092"
+# waitandnext 0.2
+
+# textwindow "close"
+# rightout 5101431 0.5
+# waitandnext 0.5
+
+# alpha 5101431 0 0
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# waitandnext 0.6
+
+# move 5101431 2 0
+# face 5101431 "angry"
+# alpha 5101431 1 0
+# mask 5101431 on
+# leftin 5101431 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+させないわよ！
+
+# textboxarrow 0 1
+@ティルフィング
+どいて下さい！
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0054"
+@アルマス
+うぐっ…
+
+# alpha 196 0 0.5
+# move 202511 4 0
+# face 202511 "angry"
+# alpha 202511 1 0.5
+# mask 202511 on
+# textboxarrow 0 3
+@エルキュール
+ここは私が！
+希望は決して潰えませんっ
+
+;;//エルキュールがティルフィングを止める
+# se "SE_9017"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@ティルフィング
+通してもらいます！
+
+;;//ティルフィングが強引に押し切ろうとする
+# se "SE_8023"
+# waitandnext 0.4
+
+# textwindow "close"
+# move 5101431 3 0.1
+# waitandnext 0.8
+
+# alpha 5101431 0 0.5
+# alpha 202511 0 0.5
+# move 401711 3 0
+# face 401711 "angry"
+# alpha 401711 1 0.5
+# mask 401711 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 4017 "suiha_battle_0001"
+@スイハ
+はぁっ！
+
+;;//スイハが矢を放つ
+# se "SE_4301"
+# waitandnext 0.5
+
+;;//ティルフィングが下がる
+# textwindow "close"
+# alpha 401711 0 0.5
+# move 5101431 3 0
+# face 5101431 "angry"
+# alpha 5101431 1 0.5
+# mask 5101431 on
+# move 202511 4 0
+# face 202511 "angry"
+# alpha 202511 1 0.5
+# mask 202511 on
+# waitandnext 0.6
+
+# se "SE_5204"
+# move 5101431 2 0.2
+# waitandnext 0.2
+
+# face 202511 "normal"
+# textboxarrow 0 3
+# textwindow "normal"
+@エルキュール
+ありがとうございます、
+スイハ！
+
+# alpha 5101431 0 0.5
+# alpha 202511 0 0.5
+# move 401711 3 0
+# face 401711 "angry"
+# alpha 401711 1 0.5
+# mask 401711 off
+# textboxarrow 0 2
+# voice 4017 "suiha_0032"
+@スイハ
+援護は任せて下さい
+
+;;スイハ（独白）
+# move 401711 3 0
+# face 401711 "sad"
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 401711 off
+@スイハ
+この局面…私も前に出ることが
+できれば良いのにっ
+
+;;スイハ（独白）
+# face 401711 "normal"
+# textboxarrow 0 0
+@スイハ
+いえ…今は射撃に集中して
+皆の支援に徹しよう
+
+# alpha 401711 0 0.5
+# move 5101431 3 0
+# face 5101431 "normal"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+そう簡単にいかせてはくれない
+ようですね…
+
+;;ラグナロク（独白）
+# alpha 5101431 0 0.5
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 103611 off
+@ラグナロク
+意識を集中して…
+キラーズの本質を…
+このときに相応しい形状を…
+
+;;ラグナロク（独白）
+# textboxarrow 0 0
+@ラグナロク
+逆転の一手として先陣を切って
+くれる存在は…誰？
+応えて！
+
+;;//画面スライド
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 103611 0 0
+# move 401711 3 0
+# face 401711 "normal"
+# alpha 401711 1 0
+# mask 401711 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 1
+
+;;//「キーン」というような金属音があれば
+# se "SE_5786"
+#setnextbgmblock 2
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 4017 "suiha_0022"
+@スイハ
+えっ…？
+今、ラグナロクの声が
+聞こえたような…
+
+;;//画面スライド
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 401711 0 0
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0
+# mask 103611 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ラグナロク
+見つけた
+あなたね…
+
+# textboxarrow 0 2
+@ラグナロク
+悠久の時より紡がれし
+願いと望みの象徴よ
+我が前にあるべき姿を示せ
+
+# textboxarrow 0 2
+@ラグナロク
+深淵より希う
+不屈の勇気に折れぬ刃を
+スイハ！
+
+# textwindow "close"
+# alpha 103611 0 0.5
+# move 401711 3 0
+# face 401711 "normal"
+# alpha 401711 1 0.5
+# mask 401711 off
+# waitandnext 0.6
+
+;;//心音演出
+# se "SE_0644"
+# waitandnext 0.5
+
+# face 401711 "angry"
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 4017 "suiha_0023"
+@スイハ
+えっ…？
+この感じ…
+頭の中に言葉が…！
+
+# se "SE_11705"
+# sedelay "SE_11706" 0.5
+# textboxarrow 0 0
+# voice 540172 "suiha_im_0051"
+@ラグナロク＆スイハ
+“擬装”《イミテイト》！！
+
+;;//スイハの姿が擬装バージョンに
+;;//光演出等あれば
+# se "SE_9150"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1.2
+
+# alpha 401711 0 0
+# move 5401721 3 0
+# face 5401721 "normal"
+# alpha 5401721 1 0
+# mask 5401721 off
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 2
+
+# alpha 5401721 0 0.5
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9943 "almace_navikan_0035"
+@アルマス
+スイハの姿が変わっていく
+これが…イミテイト？
+
+;;スイハ（独白）
+# se "SE_11696"
+# alpha 196 0 0.5
+# move 5401721 3 0
+# face 5401721 "normal"
+# alpha 5401721 1 0.5
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 5401721 off
+@スイハ
+私の周りに剣が…
+ああ、この力なら、前に出て
+皆を守ることができる！
+
+;;スイハ（独白）
+# face 5401721 "angry"
+# textboxarrow 0 0
+@スイハ
+この剣とともに、
+私は一歩踏み出す！
+
+# se "SE_11708"
+# textboxarrow 0 2
+# textwindow "normal"
+@スイハ
+この身に解き放たれしは、
+雲をも射抜く水の剣
+
+# textboxarrow 0 2
+# voice 540172 "suiha_im_kyara_1001"
+@スイハ
+スイハ・擬装・セイバー
+勇気をもって、戦い抜きます！
+七つの光は御旗とともに
+
+# alpha 5401721 0 0.5
+# move 5101431 3 0
+# face 5101431 "surprise"
+# alpha 5101431 1 0.5
+# mask 5101431 off
+# textboxarrow 0 2
+# voice 510143 "tyrufing_iz_0018"
+@ティルフィング
+ああっ…
+何ですか…！？
+あの力はっ…
+
+# alpha 5101431 0 0.5
+# move 198 3 0
+# alpha 198 1 0.5
+# mask 198 off
+# textboxarrow 0 2
+# voice 510023 "revatein_iz_0009"
+@レーヴァテイン
+単に武具種が変わったくらいで…
+
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 0
+# textwindow "normal"
+@ラグナロク
+武具種が変わっただけではないわ
+その真価をとくと味わって
+
+# textboxarrow 0 0
+@ラグナロク
+今こそ反撃のとき！
+この御旗に集え！
+
+# voice 540172 "suiha_im2_unit_0005"
+# textboxarrow 0 0
+@スイハ
+この剣で、皆の道を切り拓く！

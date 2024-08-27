@@ -1,0 +1,275 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;３章１話　タイトル「地上の脅威―リバイヴ―」
+;;第1話　タイトル：異形の浸食
+;;7_11_3
+;;スクリプト最後の背景：黒
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown"
+# bgmfile "bgm417" "BgmIntegralNoahBattle003" 0
+;;-----------------------------------------
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;魔獣
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# layer 910013 2
+# alpha 910013 0 0
+# mask 910013 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 2
+# alpha 3201911 0 0
+# mask 3201911 off
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;霧
+# imageset 2 "kiri_03"
+# imagescale 2 2.5 0
+# imagealpha 2 0.5 0
+# imagepos 2 0 0
+# imagelayer 2 4
+;;-----------------------------------------
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0
+# mask 3501711 off
+# textflame 1 1
+# textboxarrow 0 2
+@グリモワール
+死者の怒りに焼かれなさい！
+
+# se "SE_0794"
+# alpha 3501711 0 0.5
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 off
+# textboxarrow 0 2
+@魔獣
+ギャアアアアアア…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 910013 0 0.5
+# waitandnext 0.5
+
+# move 211 2 0
+# face 211 "irregular"
+# alpha 211 1 0.5
+# mask 211 on
+# move 210 4 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 9936 "kamito_0006"
+@カミト
+よしっ
+兄貴、今のうちに…兄貴っ？
+
+# textboxarrow 0 1
+@ヴァング
+…………
+
+# face 210 "angry"
+# textboxarrow 0 3
+@カミト
+兄貴、どうしたのっ？
+急いでここから離れようっ
+
+# alpha 211 0 0.5
+# alpha 210 0 0.5
+# move 3201911 3 0
+# face 3201911 "angry"
+# alpha 3201911 1 0.5
+# mask 3201911 off
+# textboxarrow 0 2
+@シユウ
+うがあああぁぁ！
+ますた～、はやくしろ！
+
+# alpha 3201911 0 0.5
+# move 211 3 0
+# face 211 "irregular"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+@ヴァング
+…………
+
+# alpha 211 0 0.5
+# move 3201911 3 0
+# face 3201911 "angry"
+# alpha 3201911 1 0.5
+# mask 3201911 off
+# textboxarrow 0 2
+@シユウ
+うがあああぁぁ…！
+シユウのこえがきこえてないのか？
+ますた～っ…
+
+# alpha 3201911 0 0.5
+# move 211 3 0
+# face 211 "irregular"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+@ヴァング
+親父…
+
+# se "SE_0740"
+# textwindow "close"
+# alpha 211 0 0.5
+# waitandnext 0.5
+
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9936 "kamito_0023"
+@カミト
+どうしたの、兄貴っ？
+そっちには誰もいないよっ？
+兄貴…！
+
+;;//暗転
+;;//背景：赤い廊下
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "red_corridor"
+# alpha 210 0 0
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0
+# mask 210 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9936 "kamito_0023"
+@カミト
+えっ…？
+
+# textboxarrow 0 2
+# voice 9936 "kamito_0025"
+@カミト
+ここは…どこ…？
+兄貴っ？アスカロン！？
+グリモワール！！
+
+# face 210 "sad"
+# textboxarrow 0 2
+# voice 9936 "kamito_0017"
+@カミト
+そんな…誰もいないなんて…
+
+# face 210 "surprise"
+# textboxarrow 0 2
+@カミト
+…足が、勝手に動く？
+
+;;//カミトが歩いていく
+# se "SE_0740"
+# textwindow "close"
+# leftout 210 1
+# waitandnext 1
+
+# alpha 210 0 0
+# waitandnext 0.2
+
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+…待って
+そっちには…行きたくないんだ
+何だか嫌な予感が…
+
+;;//カミトが歩き続ける
+# se "SE_0740"
+# textwindow "close"
+# leftout 210 1
+# waitandnext 1
+
+# alpha 210 0 0
+# waitandnext 0.2
+
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+待って…
+待ってよ…
+そっちはダメなんだ…
+
+# textboxarrow 0 2
+# voice 9936 "kamito_0027"
+@カミト
+そっちに行ったら…
+僕はっ…
+
+;;//背景：黒
+;;//血しぶき演出
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# alpha 210 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_9015"
+# fadein "red" 0.5
+# waitandnext 0.5
+
+;;カミト（立ち絵なし）
+# se "SE_3001"
+# textboxarrow 0 0
+# textwindow "normal"
+@カミト
+あぁぁぁぁっ…！

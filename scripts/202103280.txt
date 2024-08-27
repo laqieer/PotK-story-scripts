@@ -1,0 +1,591 @@
+;;-----------------------------------------
+;;SEA5章_28
+;;-----------------------------------------
+# script "lisp"
+# background "yggdrasill_interior"
+# bgm "bgm000" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;ラグナロク
+# body 103611
+# pos 103611 4
+# scale 103611 0.8 0
+# layer 103611 2
+# mask 103611 off
+# alpha 103611 0 0
+;;ミネルヴァ
+# body 302511
+# pos 302511 2
+# scale 302511 0.8 0
+# layer 302511 2
+# alpha 302511 0 0
+;;スイハfeat
+# body 6401711
+# pos 6401711 4
+# scale 6401711 0.8 0
+# layer 6401711 4
+# alpha 6401711 0 0
+;;グラーシーザ
+# body 302611
+# pos 302611 2
+# scale 302611 0.8 0
+# layer 302611 2
+# alpha 302611 0 0
+;;ネス
+# body 602011
+# pos 602011 4
+# scale 602011 0.8 0
+# layer 602011 4
+# alpha 602011 0 0
+;;ダモクレス
+# body 103511
+# pos 103511 2
+# scale 103511 0.8 0
+# layer 103511 2
+# alpha 103511 0 0
+;;フライシュッツ
+# body 502711
+# pos 502711 4
+# scale 502711 0.8 0
+# layer 502711 4
+# alpha 502711 0 0
+;;エルキュール
+# body 202511
+# pos 202511 3
+# scale 202511 0.8 0
+# layer 202511 3
+# mask 202511 off
+# alpha 202511 0 0
+;;与一
+# body 6400511
+# pos 6400511 4
+# scale 6400511 0.8 0
+# layer 6400511 4
+# alpha 6400511 0 0
+;;レーヴァテイン
+# body 6100211
+# pos 6100211 2
+# scale 6100211 0.8 0
+# layer 6100211 2
+# alpha 6100211 0 0
+;;シェキナー
+# body 6400711
+# pos 6400711 2
+# scale 6400711 0.8 0
+# layer 6400711 2
+# alpha 6400711 0 0
+;;リットゥ
+# body 6100511
+# pos 6100511 4
+# scale 6100511 0.8 0
+# layer 6100511 4
+# alpha 6100511 0 0
+;;七支刀
+# body 5105111
+# pos 5105111 3
+# scale 5105111 0.8 0
+# layer 5105111 3
+# mask 5105111 off
+# alpha 5105111 0 0
+;;パラシュ
+# body 6200411
+# pos 6200411 2
+# scale 6200411 0.8 0
+# layer 6200411 2
+# alpha 6200411 0 0
+;;イシューリエル
+# body 6301411
+# pos 6301411 4
+# scale 6301411 0.8 0
+# layer 6301411 4
+# alpha 6301411 0 0
+;;オルフェウス
+# body 6603211
+# pos 6603211 3
+# scale 6603211 0.8 0
+# layer 6603211 3
+# mask 6603211 off
+# alpha 6603211 0 0
+;;ヒョウハ
+# body 5402011
+# pos 5402011 2
+# scale 5402011 0.8 0
+# layer 5402011 2
+# alpha 5402011 0 0
+;;イチイバル
+# body 5402211
+# pos 5402211 4
+# scale 5402211 0.8 0
+# layer 5402211 4
+# alpha 5402211 0 0
+;;ロジェスティラ
+# body 6503711
+# pos 6503711 3
+# scale 6503711 0.8 0
+# layer 6503711 3
+# mask 6503711 off
+# alpha 6503711 0 0
+;;ティルフィング
+# body 6101411
+# pos 6101411 3
+# scale 6101411 0.8 0
+# layer 6101411 3
+# mask 6101411 off
+# face 6101411 "angry"
+# alpha 6101411 1 0
+;;8thティルフィング
+# body 6101431
+# pos 6101431 3
+# scale 6101431 0.8 0
+# layer 6101431 3
+# mask 6101431 off
+# alpha 6101431 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 2 "SEA6101431"
+# imagealpha 2 0 0
+# imagelayer 2 5
+;;-----------------------------------------
+;;背景：ユグドラシル内部
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ティルフィング
+お願いします、ユグドラシル
+どうか私に力を！
+
+;;ティルフィングが光り輝く
+# se "SE_9101"
+# fadeout "white" 2
+# waitandnext 2
+
+;;８周年ティルフィングシナリオカット
+# frameout 0 0
+# fadein "white" 2
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# alpha 6101411 0 0
+# textwindow "close"
+# waitandnext 3
+
+# textboxarrow 0 0
+# textwindow "normal"
+@ティルフィング
+ミーミル…ラグナロク…
+どこにいますか？
+
+# textboxarrow 0 0
+@ティルフィング
+どうか帰ってきて下さい
+アナタ達を待っている者達が
+たくさんいるんです
+
+# textboxarrow 0 0
+@ティルフィング
+もちろん、私も…
+
+;;シナリオカット削除
+;;背景：町
+# fadeout "black" 2
+# waitandnext 2
+
+# framein 0 1
+# background "006_town"
+# imagealpha 2 0 0
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+# face 6400511 "normal"
+# alpha 6400511 1 0.3
+# face 6100211 "usual"
+# alpha 6100211 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@与一
+せいっ！
+やぁっ！
+
+# textboxarrow 0 1
+@レーヴァテイン
+…ミーミル
+
+# face 6400511 "surprise"
+# textboxarrow 0 3
+@与一
+えっ？
+レーヴァテインさん、
+何か言いました？
+
+# textboxarrow 0 1
+@レーヴァテイン
+ミーミル達…
+今頃、何してるんだろ？
+
+# face 6400511 "usual"
+# textboxarrow 0 3
+@与一
+そうですねぇ…
+また会いたいですね！
+
+# face 6100211 "happy"
+# textboxarrow 0 1
+@レーヴァテイン
+うん…
+
+;;背景：屋敷
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "sea_room_day"
+# alpha 6400511 0 0
+# alpha 6100211 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 6400711 "usual"
+# alpha 6400711 1 0.3
+# face 6100511 "normal"
+# alpha 6100511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@シェキナー
+ミーミル達は今頃、どの辺りを
+旅しているのかしら？
+
+# textboxarrow 0 3
+@リットゥ
+おい、シェキナー
+休憩は終わりだ
+続きを始めるぞ
+
+# face 6400711 "sad"
+# textboxarrow 0 1
+@シェキナー
+せっかちですね
+休憩時間はあと二分残ってますよ
+
+# face 6100511 "angry"
+# textboxarrow 0 3
+@リットゥ
+今度、ミーミル達に会ったとき
+再建した屋敷を見せて驚かせるんだ
+ほら、早くしろ！
+
+;;背景：町
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "office_room"
+# alpha 6400711 0 0
+# alpha 6100511 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 6200411 "usual"
+# alpha 6200411 1 0.3
+# face 6301411 "normal"
+# alpha 6301411 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@イシューリエル
+これですわ！
+「揺らぎ」の正体はこれに違い
+ありません！
+
+# face 6200411 "happy"
+# textboxarrow 0 1
+@パラシュ
+すっかり「揺らぎ」の研究に
+没頭しているね、イシューリエル
+
+# face 6301411 "usual"
+# textboxarrow 0 3
+@イシューリエル
+当然です！全てを解き明かすと
+ミーミルに約束したのですから
+これぞ、トゥルース！
+
+# alpha 6200411 0 0.3
+# alpha 6301411 0 0.3
+# face 5105111 "happy"
+# alpha 5105111 1 0.3
+# textboxarrow 0 2
+@七支刀
+皆さん、お茶が入りましたよ～♪
+
+;;背景：町
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "in_city"
+# alpha 5105111 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 6603211 "usual"
+# alpha 6603211 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@オルフェウス
+ミーミル、頑張ってるかな？
+あたし達もアゲてくよ～！
+
+# alpha 6603211 0 0.3
+# face 5402011 "angry"
+# alpha 5402011 1 0.3
+# face 5402211 "usual"
+# alpha 5402211 1 0.3
+# textboxarrow 0 1
+@ヒョウハ
+よっしゃああああああ！
+
+# face 5402211 "normal"
+# textboxarrow 0 3
+@イチイバル
+ふふっ
+上手くいっているといいね
+
+;;背景：平原
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "plain"
+# alpha 5402011 0 0
+# alpha 5402211 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 6503711 "usual"
+# alpha 6503711 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ロジェスティラ
+また会えるときまで、
+わたしも頑張りますので、のでっ
+
+;;背景：町
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "town_2"
+# alpha 6503711 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 302511 "angry"
+# alpha 302511 1 0.3
+# face 6401711 "usual"
+# alpha 6401711 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミネルヴァ
+帰ってきて下さい、ミーミル！
+それから…
+
+# face 6401711 "normal"
+# textboxarrow 0 3
+@スイハ
+もう少しで思い出せそうなんですっ
+あなたのことを
+
+# alpha 302511 0 0.3
+# alpha 6401711 0 0.3
+# face 103511 "usual"
+# alpha 103511 1 0.3
+# face 502711 "normal"
+# alpha 502711 1 0.3
+# textboxarrow 0 3
+@フライシュッツ
+大切な存在なんだよ～っ
+
+# textboxarrow 0 1
+@ダモクレス
+クレス、大好きなんだよ！
+
+# alpha 103511 0 0.3
+# alpha 502711 0 0.3
+# alpha 302611 1 0.3
+# face 602011 "angry"
+# alpha 602011 1 0.3
+# textboxarrow 0 3
+@ネス
+あなたがいてくれたから…
+
+# textboxarrow 0 1
+@グラーシーザ
+あたしたちはせいぎをしっこう
+できたのだ
+
+# alpha 302611 0 0.3
+# alpha 602011 0 0.3
+# face 202511 "angry"
+# alpha 202511 1 0.3
+# textboxarrow 0 2
+@エルキュール
+お願いします！
+希望の御旗をっ
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：混沌
+# background "ancient_back"
+# bgm "bgm035" 0
+# alpha 202511 0 0
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 9917 "mimir_navikan_0002"
+# face 270 "normal"
+# alpha 270 1 0.3
+# face 103611 "normal"
+# alpha 103611 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+ラグナロクさん
+この感じは…もしかして…
+
+# voice 1036 "ragnarok_0032"
+# textboxarrow 0 3
+@ラグナロク
+ええ
+皆が呼んでいるわ
+行きましょう、ミーミル
+
+# face 103611 "angry"
+# textboxarrow 0 3
+@ラグナロク
+この御旗が導く先へ！
+私達の仲間が待つ、希望の未来へ！
+
+# voice 9917 "mimir_navikan_0003"
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+はい！
+
+;;二人が移動していく
+# move 270 3 0.5
+# scale 270 0.75 0.6
+# alpha 270 0 0.3
+# move 103611 3 0.5
+# scale 103611 0.7 0.5
+# alpha 103611 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：ユグドラシル内部
+# background "yggdrasill_interior"
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# face 6101431 "surprise"
+# alpha 6101431 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ティルフィング
+…………！！
+
+# textboxarrow 0 2
+@ティルフィング
+皆さんの思いが集まって…
+一つところに収束していきます
+
+# face 6101431 "normal"
+# textboxarrow 0 2
+@ティルフィング
+この感覚は…
+間違いありません
+
+# textboxarrow 0 2
+@ティルフィング
+そこにいるのですね、ミーミル！
+それに…
+
+# move 6101431 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+@ティルフィング
+ラグナロクも…
+
+# voice 610141 "tyrufing_7th_0001"
+# face 6101431 "usual"
+# textwindow "nomal"
+# textboxarrow 0 2
+@ティルフィング
+マスター
+二人を見つけました！
+
+# textboxarrow 0 2
+@ティルフィング
+私が合図をしたら
+「穴」を開いて下さい
+
+;;選択肢
+# select "分かった！" "select_label_01" "任せろっ" "select_label_01"
+私が合図をしたら
+「穴」を開いて下さい
+
+# label "select_label_01"
+# voice 610141 "tyrufing_7th_0036"
+# textboxarrow 0 2
+@ティルフィング
+お願いします！
+
+# fadeout "black" 1
+# waitandnext 1

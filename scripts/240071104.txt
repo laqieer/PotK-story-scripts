@@ -1,0 +1,207 @@
+;;【EP4】
+# script "lisp"
+# background "sea_beach_night"
+# bgmfile "bgm256" "BgmSeaDate" 0
+# body 2400711
+# pos 2400711 3
+# mask 2400711 off
+# textflame 0 0
+@
+―とある夜。
+水着姿のシェキナーと、
+ばったり出会った
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2400711
+# face 2400711 "sad"
+# voice 4007 "shekina_0001"
+@シェキナー
+あ、マスター！
+こんな時間に奇遇ですね
+
+# select "こんな時間にトレーニングか？" "select_label_01" "夜なのに泳ぎに行くのか？" "select_label_02" "敵襲か！？" "select_label_03"
+あ、マスター！
+こんな時間に奇遇ですね
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2400711
+# face 2400711 "normal"
+@シェキナー
+いえ、違いますよ
+トレーニングは54分前に終わりました
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2400711
+# face 2400711 "angry"
+@シェキナー
+まさか！
+この時間は遊泳禁止です！
+マスターもダメですよ！
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2400711
+@シェキナー
+あ、いえ…
+この弓矢はそう言うのではなくて…
+
+# label "select_label_end"
+# face 2400711 "normal"
+@シェキナー
+実はこれから花火大会の
+打ち上げ係を頼まれているんです
+
+@シェキナー
+この間ふたりで上げた花火を
+見た人がいたらしくて…
+
+# textflame 0 0
+@
+独りでは大変そうだ…。
+手伝おうか？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2400711
+# face 2400711 "smile"
+# voice 4007 "shekina_0030"
+@シェキナー
+本当ですか…？
+ありがとうございます！
+
+;;//暗転（時間経過）
+# fadeout "black" 2
+# waitandnext 2.5
+
+# fadein "black" 1
+# face 2400711 "normal"
+# textflame 0 0
+@
+花火大会の会場へ行くと、
+多くの人が今か今かと待っていた
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2400711
+@シェキナー
+時間が迫っています
+さっそく準備をしましょう
+
+# textflame 0 0
+@
+シェキナーとふたりで、
+矢に花火を付け始める
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2400711
+# face 2400711 "sad"
+@シェキナー
+…マスター
+この間の夜のことなんですが―
+
+# voice 4007 "shekina_0028"
+@シェキナー
+あれだけ多くの花火を
+勝手に打ち上げて
+私は怒られると思っていました
+
+@シェキナー
+…けれど、怒られるどころか
+こうして皆を喜ばせる催しまで
+任されて…
+
+# face 2400711 "normal"
+@シェキナー
+規則を守ることは大切ですが、
+それがすべてではないのですね
+
+# voice 4007 "shekina_0004"
+@シェキナー
+そのことに気づけたのは…
+マスター、あなたのおかげです
+
+# face 2400711 "smile"
+@シェキナー
+…さあ、
+そろそろ打ち上げの時間ですね
+
+# textflame 0 0
+@
+シェキナーは立ち上がると、
+花火付きの矢を空へと放っていく
+
+# fadein "white" 1.5
+# background "sea_fireworks"
+# se "SE_0605"
+# sedelay "SE_0605" 1
+# textflame 0 0
+@
+打ち上げられた花火は、
+夜空で次々と開花する
+
+# textflame 0 0
+@
+観客達の上げる歓声をききながら
+シェキナーは嬉しそうに微笑んでいた
+
+# fadein "white" 2
+# envbody 1701 8 0
+# effectpattern 1701 1 0
+# effectstart 1701
+# textflame 0 0
+@
+その瞬間、
+彼女の身体が光につつまれた
+
+# textflame 0 0
+@
+それはまさしく、
+彼女が新たなるスキルに
+目覚めた瞬間だった
+
+# se "SE_0602"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 2400711
+# voice 4007 "shekina_0005"
+@シェキナー
+時には形にとらわれずに矢を放つ…
+新技『海浜ビーチ帝国の誇り』です！
+
+# face 2400711 "normal"
+@シェキナー
+これなら、今まで以上に
+いろんな状況で、いろんな人を
+救えます！
+
+# voice 4007 "shekina_0001"
+@シェキナー
+でも…夜空の花火が終わるまで、
+もう少しかかります
+
+# imageset 0 "c2400711"
+# imagealpha 0 0 0
+# voice 4007 "shekina_0042"
+@シェキナー
+だから…今だけは
+時間を忘れてあなたと…
+
+;;「マスターとなら、私は上手くやっていける。そんな気がするんです。…おかしいですか？」
+# effectskip 1701
+# voice 4007 "shekina_kyara_0018"
+# frameout 0 0.5
+# buttonsout 0 0.5
+# imagealpha 0 1 0
+# imagepos 0 0 0 
+# fadein "white" 3
+# textwindow "close"

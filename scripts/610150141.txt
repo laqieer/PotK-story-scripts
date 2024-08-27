@@ -1,0 +1,628 @@
+;;-----------------------------------------
+;;ファンキル　学園イベント（2021年3月）シナリオ
+;;【EP.4】未来を守る力
+;;スクリプト最後の背景：廊下(昼)
+;;背景：中庭
+;;-----------------------------------------
+# script "lisp"
+# background "courtyard"
+# bgm "stop"
+;;-----------------------------------------
+;;制服ヴァジュラ
+# body 38
+# pos 38 3
+# scale 38 0.8 0
+# layer 38 2
+# alpha 38 0 0
+# mask 38 off
+;;制服エクスカリバー
+# body 34
+# pos 34 3
+# scale 34 0.8 0
+# layer 34 2
+# alpha 34 0 0
+# mask 34 off
+;;ブラフマーストラ制服
+# body 115
+# pos 115 3
+# scale 115 0.8 0
+# layer 115 2
+# alpha 115 0 0
+# mask 115 off
+;;リサナウト 制服ver.
+# body 203011
+# pos 203011 3
+# scale 203011 0.8 0
+# layer 203011 2
+# alpha 203011 0 0
+# mask 203011 off
+;;ＭＡＩ
+# body 113
+# pos 113 3
+# scale 113 0.8 0
+# layer 113 2
+# alpha 113 0 0
+# mask 113 off
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 2
+# alpha 810004 0 0
+# mask 810004 off
+;;異族（クローン1）
+# entry 98100041 810004
+# pos 98100041 3
+# scale 98100041 0.8 0
+# layer 98100041 2
+# alpha 98100041 0 0
+# mask 98100041 off
+;;-----------------------------------------
+;;【EP.4】未来を守る力
+;;//ＳＥ：パシャッ！（カメラのシャッター音）
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_12798"
+# sedelay "SE_12802" 0.8
+;;//演出：画面フラッシュ
+;;//ト書き：上記、時間遡行の演出です。
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;//背景：中庭
+# fadeout "white" 1
+# waitandnext 1.2
+
+# move 203011 3 0
+# face 203011 "surprise"
+# alpha 203011 1 0
+# mask 203011 off
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@リサナウト
+ふう……到着ね！
+さっそく次のイベントに……あら？
+
+# bgmfile "bgm185" "BgmGakuen003" 0
+# textboxarrow 0 2
+@リサナウト
+なんだか変ね、静かすぎる……
+来る時間を間違えたかしら？
+
+;;モノローグ
+# textflame 0 0
+@
+あれから過去の世界を
+飛び回っていた２人だったが……
+
+;;モノローグ
+@
+次にやってきた場所には、
+何やら不気味な空気が
+漂っていた……
+
+;;？？？（ＭＡＩ）
+# emotionbody 1000 2 113 10 240
+# effectpattern 1000 1 1
+# effectstart 1000
+# alpha 203011 0 0.5
+# move 113 3 0
+# face 113 "surprise"
+# alpha 113 1 0.5
+# mask 113 off
+# textflame 1 1
+@？？？
+あれぇ……マスター？
+どうしてこんなところに
+いるんですか～？
+
+;;モノローグ
+# textflame 0 0
+@
+そこに現れた少女
+―その姿を見て、マスターは
+思わず身震いをする
+
+# alpha 113 0 0.5
+# move 203011 3 0
+# face 203011 "normal"
+# alpha 203011 1 0.5
+# mask 203011 off
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+ちょうどよかった！
+あなたに聞きたいことが……
+
+# textflame 0 0
+@マスター
+近付いたらダメだよ！
+
+;;モノローグ
+@
+近付こうとする
+リサナウトの腕を引き、
+マスターは警戒を深める
+
+;;モノローグ
+@
+その様子を見て……
+少女は目を細め、２人を睨みつける
+
+;;？？？（ＭＡＩ）
+# voice 6019 "mai_0009"
+# alpha 203011 0 0.5
+# move 113 3 0
+# face 113 "angry"
+# alpha 113 1 0.5
+# mask 113 off
+# textflame 1 1
+@？？？
+なに、その態度？
+お前のことはお見通しって顔！
+気に入らないな～
+
+# textboxarrow 0 2
+@ＭＡＩ
+そんなイケない顔する子には……
+ＭＡＩちゃんが直々に
+お仕置きしないとねぇ！！
+
+;;//演出：画面揺れ
+;;//ＳＥ：ゴゴゴゴゴ…（地揺れの音）
+# se "SE_0637"
+# shake 0 0.5
+# waitandnext 0.5
+
+;;//ト書き：ＭＡＩの周りに異族が現れる
+# move 810004 1 0
+# alpha 810004 1 0.5
+# mask 810004 on
+# mask 113 on
+# move 98100041 5 0
+# alpha 98100041 1 0.5
+# mask 98100041 on
+# textboxarrow 0 0
+@異族
+グオオオオオオオオオッ！！
+
+# voice 2030 "risanautr_l_0037"
+# alpha 810004 0 0.5
+# alpha 113 0 0.5
+# alpha 98100041 0 0.5
+# move 203011 3 0
+# face 203011 "angry"
+# alpha 203011 1 0.5
+# mask 203011 off
+# textboxarrow 0 2
+@リサナウト
+……っ！？
+に、逃げましょうっ！
+
+;;//ＳＥ：タッタッタッ（２人が走る音）
+# se "SE_5575"
+# textwindow "close"
+# alpha 203011 0 0.5
+# waitandnext 0.5
+
+;;//演出：場面転換
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 203011 3 0
+# face 203011 "angry"
+# alpha 203011 1 0
+# mask 203011 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@リサナウト
+はぁっ、はぁっ！
+なんだったの、今の！？
+
+;;モノローグ
+# textflame 0 0
+@
+混乱するリサナウトに、
+マスターはＭＡＩについての
+情報を話す
+
+;;モノローグ
+@
+異族騒ぎの元凶……
+学園を危機に陥れた
+ＭＡＩという存在についてを
+
+# voice 2030 "risanautr_l_0040"
+# face 203011 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+なるほどね……
+
+# textboxarrow 0 2
+@リサナウト
+この時期に学園内が
+騒がしかったのは
+そういうわけだったのか
+
+# textflame 0 0
+@マスター
+早く何とかしないと
+
+# face 203011 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+ちょい待った！
+
+# textflame 0 0
+@マスター
+え？どうして？
+
+# face 203011 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+タイムパラドックスは
+起こらないのよ
+
+# textflame 0 0
+@マスター
+…どういうこと？
+
+# alpha 203011 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# textflame 1 1
+# textboxarrow 0 2
+@異族
+グオオオオオオッ！！
+
+# textwindow "close"
+# alpha 810004 0 0.5
+# move 203011 3 0
+# face 203011 "normal"
+# alpha 203011 1 0.5
+# mask 203011 off
+# waitandnext 0.6
+
+;;//ＳＥ：ドンッ！（異族の攻撃音）
+# se "SE_0715"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# emotionbody 2000 1 203011 10 310
+# effectpattern 2000 2 0
+# effectstart 2000
+# voice 2030 "risanautr_l_0038"
+# face 203011 "surprise"
+# textboxarrow 0 2
+# textwindow "normal"
+@リサナウト
+っ！？
+きゃあぁああああっ……！
+
+;;//ＳＥ：ドサッ（リサナウトが倒れる音）
+# se "SE_0846"
+# textwindow "close"
+# alpha 203011 0 0.5
+# waitandnext 0.5
+
+# voice 6019 "mai_0004"
+# move 113 3 0
+# face 113 "usual"
+# alpha 113 1 0.5
+# mask 113 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ＭＡＩ
+フフフ☆
+そう簡単にＭＡＩちゃんから
+逃げられるとでも～？
+
+# textboxarrow 0 2
+@ＭＡＩ
+追いかけっこするのも退屈だし
+ここでやっつけちゃうね♪
+
+# voice 2030 "risanautr_l_battle_0006"
+# alpha 113 0 0.5
+# move 203011 3 0
+# face 203011 "angry"
+# alpha 203011 1 0.5
+# mask 203011 off
+# textboxarrow 0 2
+@リサナウト
+くっ……！！
+
+# textwindow "close"
+# alpha 203011 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# waitandnext 0.6
+
+;;//ＳＥ：（生徒会長３人の攻撃音）
+;;//演出：画面揺れ
+# bgm "stop"
+# se "SE_9706"
+# sedelay "SE_5743" 0.6
+# fadein "white" 0.5
+# shake 0 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+@異族
+グオオオオオオオオオッ！？
+
+# emotionbody 3000 1 113 10 260
+# effectpattern 3000 2 0
+# effectstart 3000
+# voice 6019 "mai_0023"
+# alpha 810004 0 0.5
+# move 113 3 0
+# face 113 "surprise"
+# alpha 113 1 0.5
+# mask 113 off
+# textboxarrow 0 2
+@ＭＡＩ
+なっ……！？
+
+# bgmfile "bgm183" "BgmGakuen003" 0
+# alpha 113 0 0.5
+# move 34 2 0
+# face 34 "normal"
+# alpha 34 1 0.5
+# mask 34 on
+# move 115 4 0
+# face 115 "normal"
+# alpha 115 1 0.5
+# mask 115 on
+# textboxarrow 0 3
+@ブラフマーストラ
+大丈夫、２人ともっ！？
+助けに来たよ～！
+
+# textboxarrow 0 1
+@エクスカリバー
+間に合いましたね
+さあ、早くここから
+お逃げください！
+
+# voice 2030 "risanautr_l_0022"
+# alpha 34 0 0.5
+# alpha 115 0 0.5
+# move 203011 3 0
+# face 203011 "surprise"
+# alpha 203011 1 0.5
+# mask 203011 off
+# textboxarrow 0 2
+@リサナウト
+せ、生徒会長さん達！？
+どうして……！？
+
+# alpha 203011 0 0.5
+# move 38 3 0
+# face 38 "irregular"
+# alpha 38 1 0.5
+# mask 38 off
+# textboxarrow 0 2
+@ヴァジュラ
+あん？
+そんなの、理由なんかないよ！
+
+# face 38 "irregular2"
+# textboxarrow 0 2
+@ヴァジュラ
+後輩の未来を守るのが
+あたし達の役目……
+ただそれだけだ！
+
+# alpha 38 0 0.5
+# move 203011 3 0
+# face 203011 "surprise"
+# alpha 203011 1 0.5
+# mask 203011 off
+# textboxarrow 0 2
+@リサナウト
+……！！
+
+# alpha 203011 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_6509"
+# emotionbody 4000 6 113 50 180
+# effectpattern 4000 1 1
+# effectstart 4000
+# move 113 3 0
+# face 113 "angry"
+# alpha 113 1 0.5
+# mask 113 off
+# textwindow "nomal"
+# textboxarrow 0 2
+@ＭＡＩ
+フフッ……ふざけないでよっ！
+こんなところで昇天する
+ＭＡＩちゃんじゃないっての！！
+
+# face 113 "normal"
+# textboxarrow 0 2
+@ＭＡＩ
+いっけ～、みんな～っ！！
+ハハハハハッ☆
+
+# alpha 113 0 0.5
+# move 810004 2 0
+# alpha 810004 1 0.5
+# mask 810004 on
+# move 98100041 4 0
+# alpha 98100041 1 0.5
+# mask 98100041 on
+# textboxarrow 0 0
+@異族
+グオオオオオオオオオオッ！！
+
+# textflame 0 0
+@マスター
+みんな！
+
+# se "SE_5200"
+# waitandnext 0.5
+
+# alpha 810004 0 0.5
+# alpha 98100041 0 0.5
+# move 203011 3 0
+# face 203011 "angry"
+# alpha 203011 1 0.5
+# mask 203011 off
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+だーかーら！
+ちょっと待ちなさい
+こっち来て！
+
+# textflame 0 0
+@マスター
+え？でも…
+
+;;モノローグ
+@
+強引にマスターを
+引っ張っていくリサナウト
+
+;;//演出：場面転換
+;;//背景：廊下(昼)
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "corridor_daytime"
+# move 203011 3 0
+# face 203011 "normal"
+# alpha 203011 1 0
+# mask 203011 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm005" 0
+# textwindow "normal"
+@マスター
+離して、リサナウト
+早くみんなを
+助けに戻らないと！
+
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+大丈夫！
+この事件は
+あなたが解決したんでしょ？
+
+# textboxarrow 0 2
+@リサナウト
+それなら、この時間軸の
+あなたに任せないと
+おかしいことになるでしょ
+
+# textflame 0 0
+@マスター
+あ、そっか…
+
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+とは言っても
+長居は無用ね
+
+# textboxarrow 0 2
+@リサナウト
+早く現代に戻りましょう！
+マスター、こっちに来て！
+はい、チーズ……！
+
+;;//ＳＥ：パシャッ！（カメラのシャッター音）
+# se "SE_12805"
+# waitandnext 0.5
+
+# bgm "bgm031" 0
+# voice 2030 "risanautr_l_0022"
+# face 203011 "surprise"
+# textboxarrow 0 2
+@リサナウト
+あれっ？
+ブレスレットが……光らない？
+
+# emotionbody 5000 1 203011 10 310
+# effectpattern 5000 2 0
+# effectstart 5000
+# textboxarrow 0 2
+@リサナウト
+……あぁーーーーーっ！？
+
+# face 203011 "angry"
+# textboxarrow 0 2
+@リサナウト
+ブ……ブレスレットに、
+ヒビが入ってるっ！！
+
+# face 203011 "surprise"
+# textboxarrow 0 2
+@リサナウト
+まさかさっきの攻撃で……！？
+こ、これじゃ、
+元の時間に帰れないわ！！
+
+;;モノローグ
+# textflame 0 0
+@
+リサナウトの叫びに
+本気で焦り出すマスター
+
+@マスター
+何か方法はないの！？
+
+# face 203011 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+…タイムパラドックスは
+起こらない
+
+# textboxarrow 0 2
+@リサナウト
+つまり
+ブレスレットが壊れることは
+確定事象だったってこと？
+
+# face 203011 "surprise"
+# textboxarrow 0 2
+@リサナウト
+……そうだわ！
+もしかして……あの場所なら！
+
+# face 203011 "angry"
+# textboxarrow 0 2
+@リサナウト
+ついてきて、マスター！
+一か八かの作戦だけど
+やるしかないわっ！

@@ -1,0 +1,328 @@
+;;-----------------------------------------
+;;【ファントムオブキル_Re:ゼロコラボ】レムウェディングVer.
+;;【EP1】
+;;スクリプト最後の背景：草原
+;;背景：拠点・昼
+;;-----------------------------------------
+# script "lisp"
+# background "006_church"
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;レム
+# body 3202911
+# pos 3202911 3
+# scale 3202911 0.8 0
+# layer 3202911 2
+# alpha 3202911 0 0
+# mask 3202911 off
+;;レムウェディング
+# body 3202931
+# pos 3202931 3
+# scale 3202931 0.8 0
+# layer 3202931 2
+# alpha 3202931 0 0
+# mask 3202931 off
+;;-----------------------------------------
+;;【EP1】
+;;背景：拠点・昼
+;;演出：レム通常衣装
+# move 3202911 3 0
+# face 3202911 "sad"
+# alpha 3202911 1 0
+# mask 3202911 off
+# textflame 1 1
+# textboxarrow 0 2
+@レム
+…………
+
+;;モノローグ
+# textflame 0 0
+@
+違う世界からやってきたというレム
+その状況のせいか、不安そうな
+顔をしていることが多い
+
+# face 3202911 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@レム
+あっ、マスター様がいらしたのに
+気付かなくてすみません…
+
+;;モノローグ
+# textflame 0 0
+@
+ここ数日、レムはずっと
+こんな調子だ
+
+# face 3202911 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+@レム
+何か御用でしょうかマスター様
+レムにできることであれば
+お手伝いさせていただきますが…
+
+;;モノローグ
+# textflame 0 0
+@
+この世界に来たのがレムひとりだけ
+という状況でない分マシではあるが
+やはり気になるマスター
+
+# voice 2029 "remu_0002"
+# face 3202911 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@レム
+あの…ずっと黙ったままですけど
+レム、何かしてしまいましたか？
+
+;;モノローグ
+# textflame 0 0
+@
+気分転換しよう！
+とマスターはレムに宣言する
+
+# voice 2029 "remu_0022"
+# face 3202911 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@レム
+え、ええっ、えっと
+あの、は、はい…っ！
+
+;;モノローグ
+# textflame 0 0
+@
+マスターの勢いに圧倒され
+思わず返事をしてしまうレムだった
+
+;;演出：移動の暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# move 3202911 3 0
+# face 3202911 "usual"
+# alpha 3202911 1 0
+# mask 3202911 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;背景：草原など
+# voice 2029 "remu_0028"
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@レム
+マスター様これからどちらへ？
+それより、どうしてレムを…
+
+;;選択肢
+# textflame 0 0
+;;@
+;;A　行きたいところがあるんだ！
+;;B　嫌だったかな？
+;;C　レムと一緒にいたかった
+# select "行きたいところがあるんだ！" "select_label_01" "嫌だったかな？" "select_label_02" "レムと一緒にいたかった" "select_label_03"
+マスター様これからどちらへ？
+それより、どうしてレムを…
+
+;;アンサー
+;;A
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 3202911 "usual"
+# textflame 1 1
+@レム
+ご、ご一緒できて光栄です！？
+
+;;B
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 3202911 "sad"
+# textflame 1 1
+@レム
+そんなことありませんが…
+
+;;C
+# label "select_label_03"
+# labeljump "select_label_end"
+# face 3202911 "surprise"
+# textflame 1 1
+@レム
+急にどうされたんですか？
+
+# label "select_label_end"
+# face 3202911 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@レム
+すんなり教えてくださる訳では
+なさそうですね…
+マスター様は時々いじわるです
+
+;;モノローグ
+# textflame 0 0
+@
+あまりからかってもいけない
+マスターはレムを元気づけたかった
+と話す
+
+# face 3202911 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+@レム
+そう、ですか…
+元気がないように
+見えてしまいましたか…
+
+# textflame 1 1
+# textboxarrow 0 2
+@レム
+ご心配をおかけするなんて
+メイドとして情けないです
+
+# voice 2029 "remu_0034"
+# textflame 1 1
+# textboxarrow 0 2
+@レム
+いえ、決して
+マスター様に不満がある
+ということではありません
+
+# face 3202911 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@レム
+ですが、結果的にご迷惑を
+それはとても反省しています…
+
+;;モノローグ
+# textflame 0 0
+@
+そんなことはない、とマスター
+むしろもっと頼ってほしいと
+レムを諭す
+
+# voice 2029 "remu_0004"
+# face 3202911 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@レム
+…では、今度からはそうしますね
+マスター様はお優しい方です
+
+;;モノローグ
+# textflame 0 0
+@
+レムを元気づけられたかは
+わからないけれど、肩の荷は
+少し下ろしてあげられたようだ
+
+# face 3202911 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+@レム
+ところでマスター様
+どこへ向かっているかは
+本当に教えてもらえないんですか？
+
+;;モノローグ
+# textflame 0 0
+@
+まだ内緒、とマスター
+
+# face 3202911 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@レム
+やっぱり、訂正します
+マスター様はいじわるな方ですね
+
+;;モノローグ
+# voice 2029 "remu_0006"
+# face 3202911 "happy"
+# textflame 0 0
+@
+むくれるレムだが
+気が付くとマスターと顔を合わせ
+ふたりして笑っていた
+
+# serif 1
+@おばさん
+なんだ、もう来てるじゃない！
+
+;;モノローグ
+# face 3202911 "surprise"
+# textflame 0 0
+@
+突然声を掛けられ
+驚くマスターとレム
+
+# serif 1
+@おばさん
+まったくこっちは
+ずっと支度して待ってたんだからね
+ほら、早くこっち来る！
+
+;;モノローグ
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+@
+急展開に頭がついていかない
+マスターとレムは
+おばさんのなすがままになる
+
+# voice 2029 "remu_0024"
+# textflame 1 1
+# textboxarrow 0 2
+@レム
+えっ、ああっ！
+ま、マスター様っ！
+
+;;モノローグ
+# textflame 0 0
+@
+レムはおばさんに拉致されてしまった
+
+;;演出：時間経過の暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 3202911 0 0
+# move 3202931 3 0
+# face 3202931 "usual"
+# alpha 3202931 1 0
+# mask 3202931 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;演出：レムウェディング衣装
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@レム
+…………
+
+;;モノローグ
+# textflame 0 0
+@
+そこには
+花嫁衣裳に着替えたレムが立っていた
+
+# voice 2029 "remu_0022"
+# face 3202931 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@レム
+こ、これは一体何事ですか！？

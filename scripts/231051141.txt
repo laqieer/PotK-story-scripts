@@ -1,0 +1,1000 @@
+;;-----------------------------------------
+;;ダンまち1_4_1
+;;-----------------------------------------
+# script "lisp"
+# background "bg_white"
+# bgm "stop"
+;;-----------------------------------------
+;;アルマス
+# body 138
+# pos 138 3
+# scale 138 0.8 0
+# layer 138 3
+# alpha 138 0 0
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 5
+# mask 139 off
+# alpha 139 0 0
+;;ヘスティア
+# body 3603111
+# pos 3603111 3
+# scale 3603111 0.8 0
+# layer 3603111 5
+# alpha 3603111 0 0
+;;リュー
+# body 3104511
+# pos 3104511 3
+# scale 3104511 0.8 0
+# layer 3104511 3
+# alpha 3104511 0 0
+;;アイズ
+# body 3104411
+# pos 3104411 3
+# scale 3104411 0.8 0
+# layer 3104411 3
+# alpha 3104411 0 0
+;;ベル
+# body 216
+# pos 216 3
+# scale 216 0.8 0
+# layer 216 5
+# mask 216 off
+# alpha 216 0 0
+;;リリルカ
+# body 3402111
+# pos 3402111 3
+# scale 3402111 0.8 0
+# layer 3402111 3
+# alpha 3402111 0 0
+# brightness 3402111 0.2 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;OP
+# imageset 1 "e200301_logo_white2"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 2
+
+;;背景：森（昼）
+# background "forest"
+# se "SE_0891"
+# fadein "white" 1
+# imagealpha 1 1 0
+# imagepos 1 0 0
+
+# fadeout "black" 1
+# waitandnext 1
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# imagealpha 1 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# move 138 1 0
+# alpha 138 1 0.5
+# alpha 139 1 0.5
+# move 3603111 5 0
+# alpha 3603111 1 0.5
+# face 3603111 "sad"
+# face 139 "worry"
+# waitandnext 0.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+異なる世界から訪れた
+ヘスティア達とともに野営地で
+今後について話し合うマスター達
+
+# se "SE_6513"
+# emotionbody 1000 8 3603111 50 220
+# effectpattern 1000 1 0
+# effectstart 1000
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# voice 360311 "hestia_0027"
+@ヘスティア
+結局ボク達は元の世界に
+帰れず仕舞い…それどころか
+ベル君のナイフも見つからないまま…
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1038 "almace_0028"
+@アルマス
+気が滅入ることばかり
+言っていても仕方ないじゃない
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 139 "sad"
+# voice 9967 "titania_0065"
+@ティターニア
+現状を確認することも大事ですよ
+アルマスは結果を急ぎ過ぎです
+そんなだから…
+
+# se "SE_6513"
+# emotionbody 1001 8 138 80 250
+# effectpattern 1001 1 0
+# effectstart 1001
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "worry"
+# voice 1038 "almace_0027"
+@アルマス
+あーもうまたティニの
+お小言が始まった
+
+# effectskip 1000
+# effectskip 1001
+# alpha 138 0 0.5
+# alpha 139 0 0.5
+# alpha 3603111 0 0.5
+# alpha 216 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 216 "sad"
+# voice 9932 "bell_0003"
+@ベル
+それもこれも僕が
+神様からもらった大事なナイフを
+なくしてしまったのが悪いんです…
+
+# move 216 2 0.5
+# move 3104511 4 0
+# alpha 3104511 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310451 "ryu_0028"
+@リュー
+まぁ、気が滅入ることばかり言うのは
+確かによくありませんし…
+
+# textflame 1 1
+# textboxarrow 0 3
+@リュー
+現状を確認するのが大事…
+どちらの意見も正しいかと思います
+
+# alpha 216 0 0.5
+# alpha 3104511 0 0.5
+# alpha 138 1 0.5
+# face 138 "normal"
+# face 3603111 "usual"
+# alpha 139 1 0.5
+# alpha 3603111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9967 "titania_0004"
+@ティターニア
+それに、こちらの世界に来た
+きっかけがナイフだと
+決まったわけではありませんし
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 360311 "hestia_0003"
+@ヘスティア
+ま、そんなこんなで
+差し当たっての手掛かりは
+あの兵士が言っていたことだね
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "surprise"
+@アルマス
+トレイセーマが捕え
+解析を進めてるっていう幻獣人？
+
+# alpha 138 0 0.5
+# alpha 139 0 0.5
+# alpha 3603111 0 0.5
+# move 3104411 2 0
+# alpha 3104411 1 0.5
+# alpha 3104511 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@リュー
+そして、巨人という単語…
+
+# textflame 0 0
+@
+巨人と謎の幻獣人、そのどちらも
+心当たりがある様子だったね
+と確認を取るマスター
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3104411 "sad"
+# voice 310441 "aiz_0027"
+@アイズ
+巨人…それが私達の
+想像通りだったとしたら、大変
+
+# alpha 3104411 0 0.5
+# alpha 3104511 0 0.5
+# move 216 4 0
+# alpha 216 1 0.5
+# move 138 2 0
+# alpha 138 1 0.5
+# face 138 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 216 "sad"
+@ベル
+ミノタウロスがいた以上
+ないとは言い切れませんね
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+大変なことになるっていうなら
+もう騒ぎになってそうじゃない？
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+巨人ってくらいなんだから
+隠れるにも限度ありそうだし
+
+# alpha 216 0 0.5
+# alpha 138 0 0.5
+# move 3603111 3 0
+# alpha 3603111 1 0.5
+# move 3104411 1 0
+# alpha 3104411 1 0.5
+# move 3104511 5 0
+# alpha 3104511 1 0.5
+# face 3603111 "sad"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310451 "ryu_0003"
+@リュー
+あの兵士が知らなかっただけで
+もう捕らえることに成功
+しているのかもしれませんね
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 360311 "hestia_0028"
+@ヘスティア
+そうなると余計に厄介だなぁ…
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310441 "aiz_0027"
+@アイズ
+あの力が制御できるとは
+
+# alpha 3603111 0 0.5
+# alpha 3104411 0 0.5
+# alpha 3104511 0 0.5
+# alpha 216 1 0.5
+# alpha 138 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9932 "bell_0003"
+@ベル
+可能性があるなら
+調べない訳にはいきません…けど
+
+# se "SE_6502"
+# emotionbody 1003 2 138 10 290
+# effectpattern 1003 1 1
+# effectstart 1003
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "surprise"
+# voice 1038 "almace_0002"
+@アルマス
+けど？
+ほかにも問題があるの？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ベル
+いえ、その、僕はこの世界で
+上手く戦えないので…
+
+# bgmfile "bgm367_2" "BgmDanmachi" 0
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "normal"
+# voice 1038 "almace_0007"
+@アルマス
+なんだ
+まだそんなこと気にしてたの？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "happy1"
+# voice 1038 "almace_0004"
+@アルマス
+私達がいるんだから
+絶・大舟に乗ったつもりでいなさいよ
+
+# alpha 216 0 0.5
+# alpha 138 0 0.5
+# alpha 3603111 1 0.5
+# alpha 3104411 1 0.5
+# alpha 3104511 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3603111 "usual"
+@ヘスティア
+そうだぞ、ベル君
+キミはなんでもかんでも
+自分だけで背負い過ぎだ
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3104411 "happy"
+# voice 310441 "aiz_0005"
+@アイズ
+もっと周りを頼っていい
+
+# se "SE_6510"
+# emotionbody 1004 6 3603111 50 190
+# effectpattern 1004 2 1
+# effectstart 1004
+# textflame 1 1
+# textboxarrow 0 2
+# face 3603111 "surprise"
+# voice 360311 "hestia_0023"
+@ヘスティア
+ちょ、ヴァレンなにがし君！
+ボクのセリフを取るんじゃない！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104511 "happy"
+# voice 310451 "ryu_0004"
+@リュー
+話は決まったようですね
+
+# effectskip 1004
+# alpha 3603111 0 0.5
+# alpha 3104411 0 0.5
+# alpha 3104511 0 0.5
+# move 138 3 0
+# mask 138 off
+# alpha 138 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 138 "normal"
+@アルマス
+ミノタウロスとかいうヤツの
+こともあったからトレイセーマの
+警備は厳重になってるかもしれない…
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 138 "angry"
+@アルマス
+気を引き締めて行くわよ！
+
+# se "SE_0719"
+# alpha 138 0 0.5
+# textflame 0 0
+@
+アルマスの言葉に各々が応える
+マスター達は再びトレイセーマへ…
+
+;;演出：移動の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：街中その２
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+# background "town"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textflame 0 0
+# textwindow "nomal"
+@
+アルマスの予想通り
+警備は厳重なものとなっていたが
+なんとか潜入に成功したマスター達
+
+# move 138 2 0
+# mask 138 on
+# alpha 138 1 0.5
+# face 138 "normal"
+# move 3104411 4 0
+# alpha 3104411 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104411 "sad"
+# voice 310441 "aiz_0027"
+@アイズ
+耳…
+
+# se "SE_6502"
+# emotionbody 1005 2 138 10 290
+# effectpattern 1005 1 1
+# effectstart 1005
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "surprise"
+@アルマス
+潜入のために着けてたやつ？
+なんでちょっと名残惜しそうなのよ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3104411 "shy"
+# voice 310441 "aiz_0034"
+@アイズ
+別に…そういう訳じゃないけど
+
+# alpha 138 0 0.5
+# alpha 3104411 0 0.5
+# move 216 3 0
+# alpha 216 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 216 "happy"
+# voice 9932 "bell_0004"
+@ベル
+（獣人みたいに
+耳を着けたアイズさん…）
+
+# move 3603111 2 0
+# alpha 3603111 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 3603111 "angry"
+# voice 360311 "hestia_0002"
+@ヘスティア
+ちょっとベル君？
+何を考えてるのかな？
+
+# se "SE_6524"
+# emotionbody 1006 11 216 80 250
+# effectpattern 1006 1 0
+# effectstart 1006
+# face 216 "surprise"
+# waitandnext 0.3
+
+# move 216 4 0.2
+# waitandnext 0.2
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9932 "bell_0009"
+@ベル
+わわっ、なんでもありません神様！
+
+# alpha 3603111 0 0.5
+# alpha 216 0 0.5
+# move 3104511 3 0
+# mask 3104511 off
+# alpha 3104511 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3104511 "normal"
+# voice 310451 "ryu_0002"
+@リュー
+皆さん、そんなことより
+この街の住人の噂話聞こえましたか？
+
+# textflame 0 0
+@
+リューの言う噂話
+それは幻獣人達が自分らとは違う
+雰囲気を持った幻獣人がいるという噂
+
+# alpha 3104511 0 0.5
+# alpha 3603111 1 0.5
+# alpha 216 1 0.5
+# face 216 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3603111 "sad"
+# voice 360311 "hestia_0028"
+@ヘスティア
+うーん、それがルナール…
+狐の獣人だった場合
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9932 "bell_0032"
+@ベル
+僕達の仲間かもしれません
+あ、あの、巨人探しも大事ですけど…
+
+# alpha 3603111 0 0.5
+# alpha 138 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "normal"
+# voice 1038 "almace_0003"
+@アルマス
+仲間かどうかの確認したいんでしょ？
+いいじゃない、そっちも何かの
+手掛かりになるかもしれないんだし
+
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+なにより、捕まってるっていうなら
+誰だろうと助けてあげないとね
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 216 "happy"
+# voice 9932 "bell_0030"
+@ベル
+アルマスさん！
+ありがとうございます！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "shy1"
+# voice 1038 "almace_0042"
+@アルマス
+い、いちいち礼なんかいらないって
+
+# alpha 216 0 0.5
+# move 139 4 0
+# alpha 139 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 139 "normal"
+# voice 9967 "titania_0006"
+@ティターニア
+そういう時は恥ずかしがらずに
+ちゃんとお礼を受け取るものですよ
+
+# se "SE_6513"
+# emotionbody 1007 8 138 80 250
+# effectpattern 1007 1 0
+# effectstart 1007
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "happy2"
+# voice 1038 "almace_0009"
+@アルマス
+はっ、恥ずかしがってなんか！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ティターニア
+もう、素直じゃないんですから
+
+# effectskip 1007
+# alpha 138 0 0.5
+# alpha 139 0 0.5
+# alpha 3104511 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3104511 "normal"
+# voice 310451 "ryu_0001"
+@リュー
+兵士達に連れられて歩いていた
+という目撃情報があったエリアは
+大体目星がつきそうですね
+
+# alpha 3104511 0 0.5
+# se "SE_0719"
+# textflame 0 0
+@
+聞き耳を立て、情報を整理していた
+リューの話に従い、移動を開始する
+
+;;演出：移動の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：平原
+# background "plain"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# alpha 3104511 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 3603111 2 0
+# alpha 3603111 1 0.5
+# move 3104511 4 0
+# alpha 3104511 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 3603111 "sad"
+@ヘスティア
+ずいぶん人里離れたとこに来たね
+…けど、こんな辺ぴなところなのに
+あちこちに兵士がうろうろしてる
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310451 "ryu_0028"
+@リュー
+恐らくここで正解、ということですね
+
+# alpha 3603111 0 0.5
+# alpha 3104511 0 0.5
+# alpha 138 1 0.5
+# move 3104411 4 0
+# alpha 3104411 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 3104411 "angry"
+# face 138 "surprise"
+# voice 1038 "almace_0002"
+@アルマス
+でも、なんで、
+わざわざこんなところに
+捕まえた人を連れてきたのかしら？
+
+# textflame 1 1
+# textboxarrow 0 3
+@アイズ
+巨人を呼び寄せる
+囮にされてるのかもしれない
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1038 "almace_0040"
+@アルマス
+ほぼ同時期に現れた未知の存在…
+関係性があるのかもって考えた訳ね
+
+# alpha 138 0 0.5
+# alpha 3104411 0 0.5
+# move 216 3 0
+# alpha 216 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 216 "sad"
+@ベル
+このまま兵士達が多くいるところに
+行けば目的地に辿り着ける…おわっ！
+
+;;演出：画面揺れなど
+# bgm "stop"
+# shake 0 0.5
+# se "SE_0656"
+# alpha 216 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+# se "SE_6501"
+# emotionbody 1008 1 3603111 10 250
+# effectpattern 1008 2 0
+# effectstart 1008
+# alpha 138 1 0.5
+# move 3603111 4 0
+# alpha 3603111 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 138 "angry"
+# face 3603111 "angry"
+# voice 360311 "hestia_0024"
+@ヘスティア
+ベル君！？
+
+# se "SE_5205"
+# textflame 0 0
+@
+突然、何者かのタックルで
+転んでしまうベル
+突然のことに剣を握るアルマス達
+
+# bgmfile "bgm367_1" "BgmDanmachi" 0
+# alpha 138 0 0.5
+# alpha 3603111 0 0.5
+# move 3402111 4 0
+# alpha 3402111 1 0.5
+# move 216 2 0
+# alpha 216 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 3402111 "shy"
+# voice 340211 "lilliluka_0015"
+;;（リリルカ）
+@？？？
+ベル様ぁ～～～！
+会いたかったですぅ！
+
+# se "SE_6501"
+# emotionbody 1009 1 216 10 310
+# effectpattern 1009 2 0
+# effectstart 1009
+# textflame 1 1
+# textboxarrow 0 1
+# face 216 "surprise"
+# voice 9932 "bell_0009"
+@ベル
+いてて…って、リリ！？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3402111 "happy"
+# voice 340211 "lilliluka_0032"
+;;（リリルカ）
+@？？？
+はいっ、リリですよベル様！
+
+# se "SE_6502"
+# emotionbody 1010 2 138 10 290
+# effectpattern 1010 1 1
+# effectstart 1010
+# alpha 3402111 0 0.5
+# move 138 4 0
+# alpha 138 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "surprise"
+# voice 1038 "almace_0022"
+@アルマス
+えっ、何、知り合い？
+
+# brightness 3402111 1 0
+# alpha 138 0 0.5
+# move 3104511 4 0
+# mask 3104511 on
+# alpha 3104511 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310451 "ryu_0032"
+@リュー
+彼女は…そうです
+クラネルさん達のお仲間の…
+
+# alpha 216 0 0.5
+# alpha 3104511 0 0.5
+# move 3402111 3 0
+# mask 3402111 off
+# alpha 3402111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@リリルカ
+リリルカ・アーデと申します！
+ベル様のサポーターです！
+…それで、この方達は？
+
+# textflame 0 0
+@
+ベル達の仲間だというリリルカに
+自己紹介と経緯を説明するマスター
+
+;;演出：時間経過の暗転
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# move 3402111 5 0
+# mask 3402111 on
+# move 216 3 0
+# alpha 216 1 0
+# move 3603111 1 0
+# alpha 3603111 1 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 3402111 "normal"
+# voice 340211 "lilliluka_0040"
+@リリルカ
+なるほど～それで皆さんも
+ここへいらしたんですね
+リリももしかして…と思ったんです！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3603111 "angry"
+# voice 360311 "hestia_0013"
+@ヘスティア
+そんなことよりなんでずっと
+ベル君に抱きついたままなんだい？
+さっさと離れたらどうだい
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3402111 "surprise"
+# voice 340211 "lilliluka_0003"
+@リリルカ
+ああ、ヘスティア様
+これはお気になさらずに
+リリとベル様は感動の再会中ですから
+
+# se "SE_6510"
+# emotionbody 1011 6 3603111 50 190
+# effectpattern 1011 2 1
+# effectstart 1011
+# textflame 1 1
+# textboxarrow 0 1
+@ヘスティア
+もう十分だろぉ～！
+ベル君も困ってるんだから
+さっさと離れる！
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 216 "sad"
+# voice 9932 "bell_0042"
+@ベル
+は、はは…
+これじゃ話が進まないから、
+ね、リリ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3402111 "sad"
+@リリルカ
+むぅ、ベル様がそう言うなら
+仕方がありませんね…
+
+# effectskip 1011
+# alpha 3603111 0 0.5
+# alpha 216 0 0.5
+# move 138 2 0
+# alpha 138 1 0.5
+# move 3402111 4 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 138 "normal"
+# voice 1038 "almace_0002"
+@アルマス
+で、もしかしてと思ったって
+あなたも幻獣人の噂を聞いたの？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 340211 "lilliluka_0003"
+@リリルカ
+はい…変装して
+この国に潜んでいたら
+
+# textflame 1 1
+# textboxarrow 0 3
+@リリルカ
+ベル様達の情報は何も
+得られないままだったのですが
+捕らえられた獣人の話を聞いたんです
+
+# textflame 1 1
+# textboxarrow 0 3
+@リリルカ
+もしかしたらベル様も
+このことを聞いて現れるかもしれない
+と思って…
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1038 "almace_0039"
+@アルマス
+それで今に至るって訳ね
+合流できてよかったわね
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 340211 "lilliluka_0028"
+@リリルカ
+ベル様に会えなくても
+噂の獣人…春姫さんかもしれない
+その人に会えればと思ったんですが…
+
+# move 3104411 2 0
+# alpha 3104411 1 0.5
+# alpha 138 0 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 3104411 "sad"
+# voice 310441 "aiz_0013"
+@アイズ
+…この警備をひとりで
+抜けるのはあなたじゃ難しい
+
+# textflame 1 1
+# textboxarrow 0 3
+@リリルカ
+そうなんです…
+あ、でも、
+警備が手薄なところはわかりました
+
+# textflame 1 1
+# textboxarrow 0 3
+@リリルカ
+まったく
+兵士がいないって訳じゃ
+ないんですけど…
+
+# move 3104511 2 0
+# alpha 3104511 1 0.5
+# alpha 3104411 0 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@リュー
+戦力が増えた今なら
+無謀な突入にはならないでしょう
+
+# se "SE_6523"
+# emotionbody 1012 10 3402111 -50 200
+# effectpattern 1012 4 0
+# effectstart 1012
+# alpha 3104511 0 0.5
+# move 3402111 5 0.5
+# mask 3402111 on
+# move 216 3 0
+# alpha 216 1 0.5
+# move 3603111 1 0
+# alpha 3603111 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 3402111 "normal"
+# voice 340211 "lilliluka_0032"
+@リリルカ
+はい！
+何と言ってもベル様の
+サポーターであるリリがいますから！
+
+# se "SE_6510"
+# emotionbody 1013 6 3603111 50 190
+# effectpattern 1013 2 1
+# effectstart 1013
+# textflame 1 1
+# textboxarrow 0 1
+# voice 360311 "hestia_0009"
+@ヘスティア
+だーかーらー
+すぐそうやってベル君に
+くっつくんじゃない！
+
+# textflame 0 0
+@
+にぎやかな仲間が増えた一行
+リリルカの情報のもとに
+マスター達は目的地へ向かう
+
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# effectskip 1012
+# effectskip 1013
+# alpha 3402111 0 0
+# alpha 216 0 0
+# alpha 3603111 0 0
+# background "bg_black"
+# waitandnext 0.2

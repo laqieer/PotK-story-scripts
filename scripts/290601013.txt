@@ -1,0 +1,147 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第６章 章タイトル：アナザー・コンフリクト―交錯―
+;;第1話　タイトル：地上からの来訪者
+;;6_1_1_3
+;;スクリプト最後の背景：ユグドラシル（天上世界）
+;;-----------------------------------------
+# script "lisp"
+# background "in_yggdrasill"
+# bgmfile "bgm411" "BgmIntegralNoahBattle001" 0
+;;-----------------------------------------
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;ハリー（カミト）
+# body 208
+# pos 208 3
+# scale 208 0.8 0
+# layer 208 2
+# alpha 208 0 0
+# mask 208 off
+;;ダーインスレイヴ
+# body 102811
+# pos 102811 3
+# scale 102811 0.8 0
+# layer 102811 2
+# alpha 102811 0 0
+# mask 102811 off
+;;レーヴァテイン・擬彩
+# body 5100231
+# pos 5100231 3
+# scale 5100231 0.8 0
+# layer 5100231 2
+# alpha 5100231 0 0
+# mask 5100231 off
+;;擬装フライシュッツ
+# body 5502721
+# pos 5502721 3
+# scale 5502721 0.8 0
+# layer 5502721 2
+# alpha 5502721 0 0
+# mask 5502721 off
+;;-----------------------------------------
+# textwindow "close"
+# move 102811 3 0
+# face 102811 "sad"
+# alpha 102811 1 0
+# mask 102811 off
+# waitandnext 0.2
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# voice 1028 "dainsleif_battle_0006"
+# textboxarrow 0 2
+# textwindow "normal"
+@ダーインスレイヴ
+ガハッ…
+
+# voice 9938 "harry_0024"
+# alpha 102811 0 0.5
+# move 208 3 0
+# alpha 208 1 0.5
+# mask 208 off
+# textboxarrow 0 2
+@カミト
+ああっ…！？
+
+# voice 510023 "revatein_iz_0007"
+# alpha 208 0 0.5
+# move 102811 2 0
+# face 102811 "sad"
+# alpha 102811 1 0.5
+# mask 102811 on
+# move 5100231 4 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+# textboxarrow 0 3
+@レーヴァテイン
+だから言ったでしょ…
+あなたじゃ止められないって
+
+# voice 1028 "dainsleif_0004"
+# face 102811 "happy"
+# textboxarrow 0 1
+@ダーインスレイヴ
+ふふっ…
+それでも、わたしは…
+
+# bgmfile "bgm422" "BgmIntegralNoahBattle004" 0
+# voice 1036 "ragnarok_0030"
+# alpha 102811 0 0.5
+# alpha 5100231 0 0.5
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+ありがとう、ダーインスレイヴ
+お陰で間に合ったわ
+
+# alpha 103611 0 0.5
+# move 5100231 2 0
+# face 5100231 "surprise"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+# textboxarrow 0 1
+@レーヴァテイン
+今度は何…？
+
+;;//擬装フライシュッツが飛び込んでくる
+# se "SE_9092"
+# textwindow "close"
+# move 5502721 4 0
+# face 5502721 "angry"
+# alpha 5502721 1 0
+# mask 5502721 on
+# rightin 5502721 0.5
+# waitandnext 0.5
+
+;;フライシュッツ（擬装）
+# voice 5027 "freischotz_im_0029"
+# textboxarrow 0 3
+# textwindow "normal"
+@フライシュッツ
+やああ～～っ！
+
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 510023 "revatein_iz_0037"
+# face 5100231 "angry"
+# textboxarrow 0 1
+@レーヴァテイン
+くっ…

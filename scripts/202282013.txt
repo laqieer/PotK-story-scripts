@@ -1,0 +1,550 @@
+;;-----------------------------------------
+;;鎌倉1_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm463_462" "BgmIntegralNoahDisrupters" 0
+;;-----------------------------------------
+;;グランテピエ
+# body 5303411
+# pos 5303411 4
+# scale 5303411 0.8 0
+# layer 5303411 3
+# mask 5303411 off
+# alpha 5303411 0 0
+;;ムー
+# body 161
+# pos 161 2
+# scale 161 0.8 0
+# layer 161 5
+# mask 161 off
+# alpha 161 0 0
+;;INソロモン
+# body 5503111
+# pos 5503111 2
+# scale 5503111 0.8 0
+# layer 5503111 3
+# mask 5503111 off
+# alpha 5503111 0 0
+;;グラウ
+# body 164
+# pos 164 2
+# scale 164 0.8 0
+# layer 164 5
+# mask 164 off
+# alpha 164 0 0
+;;INカリス
+# body 5602511
+# pos 5602511 2
+# scale 5602511 0.8 0
+# layer 5602511 3
+# mask 5602511 off
+# alpha 5602511 0 0
+;;キプル
+# body 163
+# pos 163 4
+# scale 163 0.8 0
+# layer 163 5
+# mask 163 off
+# alpha 163 0 0
+;;INヘレナ
+# body 5302811
+# pos 5302811 4
+# scale 5302811 0.8 0
+# layer 5302811 3
+# mask 5302811 off
+# alpha 5302811 0 0
+;;ニール
+# body 162
+# pos 162 2
+# scale 162 0.8 0
+# layer 162 5
+# mask 162 off
+# alpha 162 0 0
+;;魔獣バイコーン
+# body 900011
+# pos 900011 2
+# scale 900011 0.8 0
+# layer 900011 4
+# mask 900011 off
+# alpha 900011 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+# textwindow "close"
+# waitandnext 0.2
+
+# background "wild"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.3
+
+# alpha 900011 1 0
+# face 5303411 "angry"
+# alpha 5303411 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 530341 "grandepieu_di_0029"
+# se "SE_4200"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@グランテピエ
+はあっ！
+
+;;魔獣を斬る
+# move 900011 1 0.3
+# move 5303411 3 0.2
+# se "SE_4830"
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# textboxarrow 0 0
+# waitandnext 1
+
+# se "SE_0794"
+# textboxarrow 0 1
+@魔獣
+ガアアアア…
+
+# se "SE_3001"
+# alpha 900011 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+# voice 550311 "solomon_di_battle_0003"
+# alpha 5303411 0 0.3
+# move 900011 4 0
+# alpha 900011 1 0.5
+# face 5503111 "angry"
+# alpha 5503111 1 0.3
+# se "SE_4966"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ソロモン
+そこっ！
+
+;;魔獣を撃ち抜く
+# se "SE_4968"
+# effectbody 1001 28 150 0 0
+# effectstart 1001
+# textboxarrow 0 0
+# waitandnext 1
+
+# move 900011 5 0.5
+# se "SE_0794"
+# textboxarrow 0 3
+@魔獣
+グウウウウ…
+
+# se "SE_3001"
+# alpha 900011 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+# voice 560251 "chalice_di_battle_0002"
+# alpha 5503111 0 0.3
+# move 900011 4 0
+# alpha 900011 1 0.5
+# face 5602511 "angry"
+# alpha 5602511 1 0.3
+# se "SE_4500"
+# textwindow "nomal"
+# textboxarrow 0 1
+@カリス
+えいっ！
+
+;;魔獣を倒す
+# move 900011 5 0.3
+# se "SE_4718"
+# fadein "white" 1
+# textboxarrow 0 0
+# waitandnext 1
+
+# se "SE_0794"
+# textboxarrow 0 3
+@魔獣
+ガアアアア…
+
+# se "SE_3001"
+# alpha 900011 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+# voice 530281 "herena_di_battle_0001"
+# alpha 5602511 0 0.3
+# move 900011 2 0
+# mask 900011 on
+# alpha 900011 1 0.5
+# face 5302811 "angry"
+# alpha 5302811 1 0.3
+# se "SE_12848"
+# textwindow "nomal"
+# textboxarrow 0 3
+@ヘレナ
+はっ！
+
+;;魔獣を串刺しにする
+# move 900011 5 0.3
+# move 5302811 1 0.2
+# fadein "white" 0.5
+# se "SE_12853"
+# effectbody 1000 2 0 0 0
+# effectstart 1000
+# textboxarrow 0 0
+# waitandnext 1
+
+# se "SE_0794"
+# textboxarrow 0 3
+@魔獣
+ゲエエエエ…
+
+# se "SE_3001"
+# alpha 900011 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+# voice 9953 "mwu_0004"
+# se "bgm462_switch_1"
+# alpha 5302811 0 0.3
+# move 5303411 4 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.3
+# alpha 161 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@ムー
+俺様とグラにかかれば
+このくらい余裕だぜ！
+
+# voice 530341 "grandepieu_di_0004"
+# textboxarrow 0 3
+@グランテピエ
+そうだね、頼りにしてるよ
+みんな怪我してない？
+大丈夫？
+
+# voice 560251 "chalice_di_0003"
+# alpha 5303411 0 0.3
+# alpha 161 0 0.3
+# move 5602511 2 0
+# face 5602511 "normal"
+# alpha 5602511 1 0.3
+# alpha 163 1 0.3
+# textboxarrow 0 1
+@カリス
+怪我してるなら、わたしがすぐに
+治療してあげるからねっ
+
+# voice 9951 "kipuru_0027"
+# textboxarrow 0 3
+@キプル
+カリスはもう少し
+自分の心配もしてください…
+
+# voice 560251 "chalice_di_0005"
+# face 5602511 "happy"
+# textboxarrow 0 1
+@カリス
+わたしのことは
+キプルが心配してくれるから
+大丈夫！
+
+# voice 550311 "solomon_di_0004"
+# alpha 5602511 0 0.3
+# alpha 163 0 0.3
+# move 5503111 4 0
+# face 5503111 "happy"
+# alpha 5503111 1 0.3
+# alpha 164 1 0.3
+# textboxarrow 0 3
+@ソロモン
+グラウ、ありがとう
+お陰で効率良く戦えたわ
+
+# voice 9950 "glau_0042"
+# textboxarrow 0 1
+@グラウ
+ソロモンの役に立つのが
+私の役割ですので
+
+# voice 530281 "herena_di_0003"
+# alpha 5503111 0 0.3
+# alpha 164 0 0.3
+# move 5302811 4 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.3
+# alpha 162 1 0.3
+# textboxarrow 0 3
+@ヘレナ
+ふぅ…
+大したことなかったな
+
+# textboxarrow 0 1
+@ニール
+…………
+
+# voice 9953 "mwu_0001"
+# alpha 5302811 0 0.3
+# alpha 162 0 0.3
+# face 5303411 "normal"
+# alpha 5303411 1 0.3
+# alpha 161 1 0.3
+# textboxarrow 0 1
+@ムー
+魔獣を片付けたんなら、さっさと
+このひび割れを修復しようぜ
+ティルフィングに連絡だ！
+
+# voice 530341 "grandepieu_di_0003"
+# textboxarrow 0 3
+@グランテピエ
+うん、そうだね
+私から連絡するよ
+みんな少し待ってて、ね
+
+# voice 530281 "herena_di_0004"
+# alpha 5303411 0 0.3
+# alpha 161 0 0.3
+# face 5302811 "normal"
+# alpha 5302811 1 0.3
+# alpha 162 1 0.3
+# textboxarrow 0 3
+@ヘレナ
+早くしてくれないと、ヘレナは
+退屈で死んでしまうかもしれないぞ
+…くふっ
+
+# voice 9952 "nir_0004"
+# textboxarrow 0 1
+@ニール
+まあ、それは大変ね！
+ふふっ
+
+# alpha 5302811 0 0.3
+# alpha 162 0 0.3
+# move 5602511 2 0
+# layer 5602511 4
+# mask 5602511 on
+# face 5602511 "surprise"
+# alpha 5602511 1 0.3
+# move 5503111 4 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.3
+# textboxarrow 0 1
+@カリス
+ヘレナが死んじゃう前に
+癒やしてあげないとっ
+
+# voice 550311 "solomon_di_0022"
+# face 5503111 "surprise"
+# textboxarrow 0 3
+@ソロモン
+退屈で死ぬ…？
+ヘレナ、そんな奇病に
+罹っていたなんて…
+
+# textboxarrow 0 3
+@ソロモン
+どうしてもっと早く言ってくれ
+なかったの！？
+
+# voice 530281 "herena_di_0005"
+# alpha 5602511 0 0.3
+# alpha 5503111 0 0.3
+# face 5302811 "normal"
+# alpha 5302811 1 0.3
+# alpha 162 1 0.3
+# textboxarrow 0 3
+@ヘレナ
+ふふっ
+相変わらずカリスもソロモンも
+面白いなあ
+
+# voice 9952 "nir_0032"
+# textboxarrow 0 1
+@ニール
+そうね
+２人ともヘレナの大切な仲間だもの
+グランテピエも頼りになるし…
+
+# voice 530281 "herena_di_0022"
+# face 5302811 "surprise"
+# textboxarrow 0 3
+@ヘレナ
+ニール…？
+
+# voice 9950 "glau_0045"
+# alpha 5302811 0 0.3
+# alpha 162 0 0.3
+# face 5503111 "normal"
+# alpha 5503111 1 0.3
+# alpha 164 1 0.3
+# se "bgm463_switch_1"
+# textboxarrow 0 1
+@グラウ
+ソロモン
+数が一致しません
+
+# voice 550311 "solomon_di_0022"
+# face 5503111 "surprise"
+# textboxarrow 0 3
+@ソロモン
+どうしたの、グラウ？
+数が合わないって…
+
+# voice 550311 "solomon_di_0023"
+# face 5503111 "angry"
+# textboxarrow 0 3
+@ソロモン
+あ！
+グラウ、警戒モードで周辺探査！
+
+# voice 9950 "glau_0032"
+# se "SE_0775"
+# textboxarrow 0 1
+@グラウ
+了解しました
+…５００メートル先に
+魔獣を１体、確認
+
+# face 5503111 "normal"
+# textboxarrow 0 3
+@ソロモン
+うっかりしてたわ…
+ひび割れから出てきた魔獣は
+５体いたのに…
+
+# voice 560251 "chalice_di_0003"
+# move 5503111 5 0.5
+# move 164 3 0.5
+# move 5602511 1 0
+# face 5602511 "normal"
+# alpha 5602511 1 0.3
+# textboxarrow 0 1
+@カリス
+わたしは１体しか倒してないよ
+
+# voice 550311 "solomon_di_0003"
+# textboxarrow 0 3
+@ソロモン
+私もよ
+きっとグランお姉様も
+ヘレナも
+
+# voice 530281 "herena_di_0032"
+# alpha 5602511 0 0.3
+# move 5302811 1 0
+# layer 5302811 4
+# mask 5302811 on
+# face 5302811 "usual"
+# alpha 5302811 1 0.3
+# textboxarrow 0 1
+@ヘレナ
+そうだな
+４人で４体しか倒していない
+１体足りないな
+
+# face 5503111 "angry"
+# textboxarrow 0 3
+@ソロモン
+出現と同時に
+逃げていった魔獣がいたのよ！
+今、敵の位置を共有するわ
+
+# alpha 164 0 0.3
+# alpha 5503111 0 0.3
+# alpha 5302811 0 0.3
+# move 5303411 5 0
+# layer 5303411 4
+# mask 5303411 on
+# face 5303411 "angry"
+# alpha 5303411 1 0.3
+# move 5302811 1 0
+# layer 5302811 2
+# mask 5302811 off
+# alpha 5302811 1 0.3
+# move 162 3 0
+# alpha 162 1 0.3
+# textboxarrow 0 3
+@グランテピエ
+話は聞いたよ
+急いで追いかけよう！
+
+# voice 530281 "herena_di_0002"
+# textboxarrow 0 1
+@ヘレナ
+いや
+テピ姉さんの手を
+煩わせることはない
+
+# textboxarrow 0 1
+@ヘレナ
+速さならヘレナ達の出番だ
+あのくらい追いつける
+行くよ、ニール
+
+# voice 9952 "nir_0007"
+# textboxarrow 0 2
+@ニール
+アタチ達なら余裕よね
+
+# voice 530281 "herena_di_0004"
+# textboxarrow 0 1
+@ヘレナ
+じゃ、ひとっ走りいってくる
+見ててよ、テピ姉さん
+
+;;ヘレナが走り去る
+# se "SE_9021"
+# move 5302811 3 1
+# scale 5302811 0.7 1
+# alpha 5302811 0 0.3
+# move 162 4 1
+# scale 162 0.7 1
+# alpha 162 0 0.3
+# textwindow "close"
+# waitandnext 2
+
+# voice 560251 "chalice_di_0021"
+# alpha 5303411 0 0.3
+# move 5602511 2 0
+# layer 5602511 4
+# mask 5602511 on
+# face 5602511 "surprise"
+# alpha 5602511 1 0.3
+# move 5503111 4 0
+# face 5503111 "normal"
+# alpha 5503111 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@カリス
+わ～っ！
+さすがヘレナ
+すごく速いね！
+
+# voice 550311 "solomon_di_0004"
+# face 5503111 "happy"
+# textboxarrow 0 3
+@ソロモン
+あれなら数秒後に追いつくわ
+
+# alpha 5602511 0 0.3
+# alpha 5503111 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+# move 5303411 3 0
+# mask 5303411 off
+# face 5303411 "sad"
+# alpha 5303411 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@グランテピエ
+ヘレナ…
+
+# fadeout "black" 1
+# waitandnext 1

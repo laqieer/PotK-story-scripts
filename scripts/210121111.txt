@@ -1,0 +1,354 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１２章 章タイトル「ラルゴカタストロフィ―暴走―」
+;;第1話―１１　タイトル：癒しのキル姫
+;;1_11_1
+;;スクリプト最後の背景：町（006_town2）
+;;-----------------------------------------
+# script "lisp"
+# background "006_town2"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;花異族
+# body 5809801
+# pos 5809801 3
+# scale 5809801 0.8 0
+# layer 5809801 2
+# alpha 5809801 0 0
+# mask 5809801 off
+;;レーヴァテイン・擬彩
+# body 5100231
+# pos 5100231 3
+# scale 5100231 0.8 0
+# layer 5100231 2
+# alpha 5100231 0 0
+# mask 5100231 off
+;;擬装エルキュール
+# body 5202521
+# pos 5202521 3
+# scale 5202521 0.8 0
+# layer 5202521 2
+# alpha 5202521 0 0
+# mask 5202521 off
+;;セファー
+# body 502111
+# pos 502111 3
+# scale 502111 0.8 0
+# layer 502111 2
+# alpha 502111 0 0
+# mask 502111 off
+;;カリス・聖鎖・アザゼル
+# body 5602511
+# pos 5602511 3
+# scale 5602511 0.8 0
+# layer 5602511 2
+# alpha 5602511 0 0
+# mask 5602511 off
+;;キプル
+# body 163
+# pos 163 3
+# scale 163 0.6 0
+# layer 163 2
+# alpha 163 0 0
+# mask 163 off
+;;-----------------------------------------
+;;第1話―１１　タイトル：癒しのキル姫
+;;//背景：町（006_town2）
+# voice 320251 "hercule_c_0022"
+# move 5602511 2 0
+# face 5602511 "normal"
+# alpha 5602511 1 0
+# mask 5602511 on
+# move 5202521 4 0
+# face 5202521 "surprise"
+# alpha 5202521 1 0
+# mask 5202521 on
+# textflame 1 1
+# textboxarrow 0 3
+@エルキュール
+戦いすぎは良くない？
+急にどうしたんです、カリス？
+
+# textboxarrow 0 1
+@カリス
+そのままの意味だよ！
+戦い過ぎるとねっ
+えーっと…
+
+# textboxarrow 0 1
+@カリス
+大変なことになって、
+最後には暴走しちゃうんだよ！
+それって良くないでしょ
+
+# alpha 5202521 0 0.5
+# move 502111 4 0
+# face 502111 "angry"
+# alpha 502111 1 0.5
+# mask 502111 on
+# textboxarrow 0 3
+@セファー
+肝心なところが！
+肝心なところが分かりません！
+
+# textboxarrow 0 3
+@セファー
+もっと詳しく教えて下さい！
+秘密にしないでっ
+
+# voice 560251 "chalice_di_0028"
+# textboxarrow 0 1
+@カリス
+えっとねー…
+何だったっけ？
+
+# voice 9951 "kipuru_0031"
+# alpha 502111 0 0.5
+# move 163 4 0
+# alpha 163 1 0.5
+# mask 163 on
+# textboxarrow 0 3
+@キプル
+すみません…すみませぇん…！
+カリスがちゃんと覚えてなくて
+すみませぇん…！
+
+# voice 510023 "revatein_iz_0001"
+# alpha 163 0 0.5
+# move 5100231 4 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+# textboxarrow 0 3
+@レーヴァテイン
+あなた…何？
+邪魔するのなら…斬るよ
+そこ、どいて
+
+# voice 560251 "chalice_di_0035"
+# face 5602511 "angry"
+# textboxarrow 0 1
+@カリス
+イヤだっ
+
+# textboxarrow 0 3
+@レーヴァテイン
+…………
+
+# textboxarrow 0 1
+@カリス
+ここでレーヴァテインが神器を
+使ったら、町が壊れちゃう！
+
+# textboxarrow 0 1
+@カリス
+パン屋さんも花屋さんも
+病院だって壊れちゃうし、
+町の人達が死んじゃう…
+
+# textboxarrow 0 1
+@カリス
+そんな悲しいことになったら
+悲しいから、カリスちゃんはここを
+どかないんだ！
+
+# face 5100231 "angry"
+# textboxarrow 0 3
+@レーヴァテイン
+…………そう
+それなら…容赦しない
+
+# textboxarrow 0 3
+@レーヴァテイン
+口だけじゃないってところ…
+見せてみて
+
+;;//レーヴァテインがカリスを攻撃する
+# se "SE_4000"
+# waitandnext 0.5
+
+# voice 560251 "chalice_di_battle_0008"
+# face 5602511 "sad"
+# textboxarrow 0 1
+@カリス
+きゃあ…！
+
+# alpha 5100231 0 0.5
+# move 5202521 4 0
+# face 5202521 "normal"
+# alpha 5202521 1 0.5
+# mask 5202521 on
+# textboxarrow 0 3
+@エルキュール
+大丈夫ですかっ？
+
+;;//エルキュールがカリスを受け止める
+# se "SE_5200"
+# textwindow "close"
+# move 5202521 3 0.2
+# waitandnext 0.2
+
+# face 5602511 "normal"
+# textboxarrow 0 1
+# textwindow "normal"
+@カリス
+平気だよっ
+このくらい…！
+
+# alpha 5202521 0 0.5
+# alpha 5602511 0 0.5
+# move 5100231 3 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+はぁ…
+あなた、大したことないね…
+
+# textboxarrow 0 2
+@レーヴァテイン
+覚悟の差を…思い知って
+
+;;//レーヴァテインが神器を構える
+# se "SE_8000"
+# waitandnext 0.5
+
+# alpha 5100231 0 0.5
+# move 5202521 3 0
+# face 5202521 "angry"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# textboxarrow 0 2
+@エルキュール
+レーヴァテインが神器をっ
+私が止めます！
+
+# alpha 5202521 0 0.5
+# move 5602511 3 0
+# face 5602511 "angry"
+# alpha 5602511 1 0.5
+# mask 5602511 off
+# textboxarrow 0 2
+@カリス
+ダメーーーーっ！
+
+# se "SE_5255"
+# textwindow "close"
+# rightout 5602511 0.5
+# waitandnext 0.5
+
+# alpha 5602511 0 0
+# move 5100231 4 0
+# face 5100231 "angry"
+# alpha 5100231 1 0.5
+# mask 5100231 on
+# waitandnext 0.5
+
+# move 5602511 2 0
+# face 5602511 "angry"
+# alpha 5602511 1 0
+# mask 5602511 on
+# leftin 5602511 0.3
+# waitandnext 0.3
+
+# textboxarrow 0 3
+# textwindow "normal"
+@レーヴァテイン
+邪魔だってば…
+
+;;//飛び出したカリスがレーヴァテインに斬られる
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 2000 1 -200 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+# voice 560251 "chalice_di_battle_0005"
+# face 5602511 "sad"
+# textboxarrow 0 1
+@カリス
+ぐっ…
+
+# voice 510023 "revatein_iz_0007"
+# textboxarrow 0 3
+@レーヴァテイン
+そんなんじゃ…
+何にもできやしないよ
+
+;;//カリスが吹っ飛ばされる
+# se "SE_9086"
+# se "SE_9149"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@カリス
+きゃあああああっ…！
+
+;;//破壊音
+;;//画面揺れ
+# se "SE_11764"
+# se "SE_11575"
+# textwindow "close"
+# alpha 5602511 0 0.5
+# alpha 5100231 0 0.5
+# shake 0 0.5
+# waitandnext 0.5
+
+# move 5202521 3 0
+# face 5202521 "angry"
+# alpha 5202521 1 0.5
+# mask 5202521 off
+# textboxarrow 0 2
+# textwindow "normal"
+@エルキュール
+カリス…！
+
+# se "SE_5200"
+# voice 560251 "chalice_di_0015"
+# alpha 5202521 0 0.5
+# move 5602511 3 0
+# face 5602511 "sad"
+# alpha 5602511 1 0.5
+# mask 5602511 off
+# textboxarrow 0 2
+@カリス
+うう……
+わたし…諦めないよ…！
+
+# alpha 5602511 0 0.5
+# move 5100231 3 0
+# face 5100231 "normal"
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+はぁ…しつこい
+出直そうかな
+
+# textboxarrow 0 2
+@レーヴァテイン
+ロンギヌスをひとりにしちゃったし
+これ以上、ここで時間を
+かけるわけにはいかない
+
+# se "SE_0829"
+# alpha 5100231 0 0.5
+# move 5809801 3 0
+# alpha 5809801 1 0.5
+# mask 5809801 off
+# textboxarrow 0 2
+@異族
+アアアアアアアアア！
+
+# se "SE_0719"
+# alpha 5809801 0 0.5
+# move 5100231 3 0
+# alpha 5100231 1 0.5
+# mask 5100231 off
+# textboxarrow 0 2
+@レーヴァテイン
+あとは…よろしく…

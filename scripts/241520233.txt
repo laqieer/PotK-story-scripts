@@ -1,0 +1,687 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;コマンドキラーズサイドストーリー後編
+;;第5話　タイトル：奏でる者
+;;5_3_3
+;;スクリプト最後の背景：町
+;;-----------------------------------------
+# script "lisp"
+# background "town_night"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;ロジェスティラ
+# body 235
+# pos 235 3
+# scale 235 0.8 0
+# layer 235 2
+# alpha 235 0 0
+# mask 235 off
+;;ロジェスティラ・神令・スクルド（ボイス用）
+# body 5503711
+# alpha 5503711 0 0
+;;イチイバル
+# body 233
+# pos 233 3
+# scale 233 0.8 0
+# layer 233 2
+# alpha 233 0 0
+# mask 233 off
+;;イチイバル・神令・オーディン（ボイス用）
+# body 5402211
+# alpha 5402211 0 0
+;;オルフェウス
+# body 234
+# pos 234 3
+# scale 234 0.8 0
+# layer 234 2
+# alpha 234 0 0
+# mask 234 off
+;;オルフェウス・神令・フォルセティ（ボイス用）
+# body 5603211
+# alpha 5603211 0 0
+;;ラブリュス
+# body 200331
+# pos 200331 3
+# scale 200331 0.8 0
+# layer 200331 2
+# alpha 200331 0 0
+# mask 200331 off
+;;シストルム
+# body 601311
+# pos 601311 3
+# scale 601311 0.8 0
+# layer 601311 2
+# alpha 601311 0 0
+# mask 601311 off
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 2
+# alpha 810004 0 0
+# mask 810004 off
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 1
+;;-----------------------------------------
+# se "SE_0669"
+# move 810004 3 0
+# alpha 810004 1 0
+# mask 810004 off
+# textflame 1 1
+# textboxarrow 0 2
+@異族
+グギャアアア…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 810004 0 0.5
+# waitandnext 0.5
+
+# move 601311 1 0
+# face 601311 "angry"
+# alpha 601311 1 0.5
+# mask 601311 on
+# move 233 3 0
+# face 233 "angry"
+# alpha 233 1 0.5
+# mask 233 on
+# textboxarrow 0 2
+# move 235 5 0
+# face 235 "normal"
+# alpha 235 1 0.5
+# mask 235 on
+# textwindow "normal"
+@イチイバル
+これではキリがないね
+シストルム、キミだけでも先に
+行って――
+
+;;//耳障りな金属音
+# se "SE_0907"
+# waitandnext 0.5
+
+# voice 550371 "logistille_c_0015"
+# face 235 "sad"
+# textboxarrow 0 3
+@ロジェスティラ
+ひぅぅっ…
+
+# textboxarrow 0 1
+@シストルム
+何なのにゃ、この音…？
+頭がクラクラするにゃー…
+
+# voice 540221 "ichiibal_c_battle_0006"
+# textboxarrow 0 2
+@イチイバル
+くっ…
+平衡感覚が…
+これも異族の仕業なのかっ…？
+
+# se "SE_0907"
+# alpha 601311 0 0.5
+# alpha 233 0 0.5
+# alpha 235 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# textboxarrow 0 2
+@異族
+――――――――――！！
+
+# alpha 810004 0 0.5
+# move 601311 1 0
+# face 601311 "angry"
+# alpha 601311 1 0.5
+# mask 601311 on
+# textboxarrow 0 1
+# move 233 3 0
+# face 233 "irregular"
+# alpha 233 1 0.5
+# mask 233 on
+# move 235 5 0
+# face 235 "sad"
+# alpha 235 1 0.5
+# mask 235 on
+@シストルム
+あいつにゃ…！
+あいつが気持ち悪い音を…
+にゃぁぁ…
+
+# textboxarrow 0 2
+@イチイバル
+このままでは…
+町の人達が…
+ううっ…
+
+;;//三人とも倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 601311 0 0.5
+# alpha 233 0 0.5
+# alpha 235 0 0.5
+# waitandnext 0.5
+
+# se "SE_0907"
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# textboxarrow 0 2
+# textwindow "normal"
+@異族
+――――――――――！！
+
+# alpha 810004 0 0.5
+# move 601311 1 0
+# face 601311 "angry"
+# alpha 601311 1 0.5
+# mask 601311 on
+# move 233 3 0
+# face 233 "irregular"
+# alpha 233 1 0.5
+# mask 233 on
+# textboxarrow 0 2
+# move 235 5 0
+# face 235 "sad"
+# alpha 235 1 0.5
+# mask 235 on
+@イチイバル
+何てことだっ…
+みんな…連れていかれて…
+
+;;//異族が迫ってくる
+# textboxarrow 0 3
+@ロジェスティラ
+このままだと…わたし達…
+
+;;//ギターの音が聞こえてくる
+# se "SE_0908"
+# waitandnext 0.5
+
+# voice 6013 "sistrum_0022"
+# face 601311 "surprise"
+# textboxarrow 0 1
+@シストルム
+にゃ…？
+別の音が…良い感じに異族の
+気持ち悪い音を妨げてるのにゃー
+
+# face 233 "usual"
+# textboxarrow 0 2
+@イチイバル
+よし、これならっ
+
+# alpha 601311 0 0.5
+# alpha 233 0 0.5
+# alpha 235 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# textboxarrow 0 2
+@異族
+ガガア？
+
+;;//異族が姿を消す
+# textwindow "close"
+# alpha 810004 0 0.5
+# waitandnext 0.5
+
+# voice 540221 "ichiibal_c_battle_0006"
+# move 233 3 0
+# face 233 "angry"
+# alpha 233 1 0.5
+# mask 233 off
+# textboxarrow 0 2
+# textwindow "normal"
+@イチイバル
+くっ…
+逃がさないよ…
+
+;;//イチイバルが倒れる
+# se "SE_3001"
+# textwindow "close"
+# alpha 233 0 0.5
+# waitandnext 0.5
+
+# move 601311 2 0
+# face 601311 "angry"
+# alpha 601311 1 0.5
+# mask 601311 on
+# move 235 4 0
+# face 235 "normal"
+# alpha 235 1 0.5
+# mask 235 on
+# textboxarrow 0 3
+# textwindow "normal"
+@ロジェスティラ
+イチイバルさん…
+無理しないで下さい…
+
+# textboxarrow 0 1
+@シストルム
+危ないところは切り抜けたけど…
+追うのは厳しいのにゃー…
+
+# alpha 601311 0 0.5
+# alpha 235 0 0.5
+# move 233 3 0
+# face 233 "irregular"
+# alpha 233 1 0.5
+# mask 233 off
+# textboxarrow 0 2
+@イチイバル
+やられたね…
+これは、対策を練らないと…
+
+;;イチイバル（独白）
+# bgm "stop"
+# move 233 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 233 off
+@イチイバル
+ボク達にとどめを刺すことも
+できただろうに、どうして
+異族は見逃したんだ…？
+
+;;イチイバル（独白）
+# textboxarrow 0 0
+@イチイバル
+それに、町の人達をさらって何を…
+ボク達を殺すことだけが目的じゃ
+ないってことなのか…
+
+;;//暗転
+# imagealpha 1 1 0
+# imagepos 1 0 30
+# imageleftin 1 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 233 0 0
+# background "bg_black"
+# waitandnext 0.2
+
+# imagealpha 1 0 0.2
+# imagerightout 1 0.2
+# waitandnext 0.2
+
+;;//回想シーン
+# se "SE_0742"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "plain"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：平原
+# textwindow "normal"
+# textboxarrow 0 0
+@？？？
+…音楽があれば、大丈夫だって
+思えるんだ
+
+@？？？
+だから、あなたも
+思い切り弾いて、歌いなよ
+そうすれば…
+
+;;//回想終了
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "201_room"
+# move 234 3 0
+# face 234 "normal"
+# alpha 234 1 0
+# mask 234 off
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：室内
+# se "SE_0643"
+# textboxarrow 0 2
+# textwindow "normal"
+@オルフェウス
+ううん…
+あ、もう朝…
+
+# voice 560321 "orpheus_c_0027"
+# face 234 "sad"
+# textboxarrow 0 2
+@オルフェウス
+何だかよく眠れなかったな…
+夜中、笛の音が聞こえてきて…
+
+# textboxarrow 0 2
+@オルフェウス
+気持ちがざわざわして…
+目が覚めちゃって…
+
+# textboxarrow 0 2
+@オルフェウス
+ギターを弾きながら
+少し歌ってたら気持ちが
+落ち着いたけど…
+
+# textboxarrow 0 2
+@オルフェウス
+まだ、頭がボーッとしてる…
+
+# face 234 "normal"
+# textboxarrow 0 2
+@オルフェウス
+しっかりしないと
+顔洗って、ギターの練習を…
+
+# textboxarrow 0 2
+@オルフェウス
+あの夢…
+久し振りに見たなぁ…
+
+# face 234 "happy"
+# textboxarrow 0 2
+@オルフェウス
+今日はあそこで弾こう
+誰もいない平原で思い切り
+
+# textboxarrow 0 2
+@オルフェウス
+ちょっとだけ、
+オシャレして…
+新しいヘアピンもつけてみよっ
+
+# textboxarrow 0 2
+@オルフェウス
+うん
+今日は良い曲が書けるような
+気がする
+
+;;//背景：町
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "town"
+# alpha 234 0 0
+# move 200331 3 0
+# face 200331 "happy"
+# alpha 200331 1 0
+# mask 200331 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm430_block" "BgmIntegralNoahEvent004" 0
+# voice 2003 "loveryus_0004"
+# textboxarrow 0 2
+# textwindow "normal"
+@ラブリュス
+おっはよ～！
+ラブリュスちゃんだよ～！
+みんな元気かな～？
+
+# serif 1
+@ファン達
+…………
+
+# face 200331 "surprise"
+# textboxarrow 0 2
+@ラブリュス
+あ…あれれ～？
+どうしたの～？
+お返事、聞こえないな～？
+
+# serif 1
+@ファン達
+…………
+
+# face 200331 "normal"
+# textboxarrow 0 2
+@ラブリュス
+えっと～…
+世界一可愛いのは～？
+
+# serif 1
+@ファン達
+…………
+
+# voice 2003 "loveryus_0005"
+# face 200331 "happy"
+# textboxarrow 0 2
+@ラブリュス
+そ…そうだよ～っ
+ラブリュスちゃんでぇ～す！
+
+# bgm "stop"
+# se "SE_9022"
+# serif 1
+@ファン達
+…………
+
+# voice 2003 "loveryus_0014"
+# face 200331 "angry2"
+# textboxarrow 0 2
+@ラブリュス
+むむむむむっ…
+ちょっとぉ！
+みんな、どうしちゃったの～！？
+
+# textboxarrow 0 2
+@ラブリュス
+ちゃんとラブリュスちゃんのこと
+可愛いって言いなさいよ～！
+
+# serif 1
+@ファン達
+ラブリュスちゃん可愛い…
+
+# face 200331 "angry1"
+# textboxarrow 0 2
+@ラブリュス
+何よ、それ～っ…
+全然、気持ちこもってないんだけど～
+もう！プンプンだぞ～っ
+
+# serif 1
+@ファン達
+…………
+
+# voice 2003 "loveryus_0015"
+# face 200331 "sad"
+# textboxarrow 0 2
+@ラブリュス
+本当に、どうしちゃったの～…
+こんなのイヤだよぉ…
+
+;;//暗転挟む
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 200331 3 0
+# face 200331 "angry2"
+# alpha 200331 1 0
+# mask 200331 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgm "bgm005" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@ラブリュス
+ちょっとマスター！
+どうなってるのよーっ…
+
+# serif 1
+@ラブリュスのマスター
+…………
+
+# voice 2003 "loveryus_0023"
+# face 200331 "surprise"
+# textboxarrow 0 2
+@ラブリュス
+えーっ…！？
+マスターまで…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 6013 "sistrum_0031"
+# move 601311 2 0
+# face 601311 "irregular"
+# alpha 601311 1 0.5
+# mask 601311 on
+# textboxarrow 0 1
+# move 200331 4 0.5
+# mask 200331 on
+@シストルム
+にゃにゃー…
+面目ないにゃ…
+ボクが不甲斐なかったのにゃ
+
+# face 200331 "normal"
+# textboxarrow 0 3
+@ラブリュス
+ん～？
+その猫耳はシストルムだね！
+猫キャラはあざといぞ～っ
+
+# voice 6013 "sistrum_0013"
+# face 601311 "angry"
+# textboxarrow 0 1
+@シストルム
+キミには言われたくないにゃ
+あと、キャラじゃないにゃ
+これが素にゃ
+
+# face 200331 "usual2"
+# textboxarrow 0 3
+@ラブリュス
+ふ～ん
+それで、何で君が責任感じてる
+みたいなこと言うの？
+
+# textboxarrow 0 1
+@シストルム
+実は…昨夜、この町に奇妙な異族が
+現れたのにゃー…
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 601311 0 0
+# alpha 200331 0 0
+# move 601311 2 0
+# face 601311 "angry"
+# alpha 601311 1 0
+# mask 601311 on
+# move 200331 4 0
+# face 200331 "angry2"
+# alpha 200331 1 0
+# mask 200331 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 2003 "loveryus_0009"
+# textboxarrow 0 3
+# textwindow "normal"
+@ラブリュス
+それって、異族がわたしのファンを
+横取りしたってこと～っ？
+浮気は絶許なんだぞ！
+
+# textboxarrow 0 1
+@シストルム
+ちょっと違う気がするけど、
+大体そんな感じにゃ
+
+# voice 6013 "sistrum_0023"
+# face 601311 "surprise"
+# textboxarrow 0 1
+@シストルム
+ボク達、その音にやられて…
+にゃにゃ？ボク達…？
+そういえば…
+
+# textboxarrow 0 1
+@シストルム
+誰かと一緒に戦ってた気がするにゃ
+でも、思い出せないにゃー…
+
+# textboxarrow 0 3
+@ラブリュス
+そんなことより！
+今はわたしのファンを横取りした
+異族をやっつけないと！
+
+# textboxarrow 0 3
+@ラブリュス
+世界で一番可愛いラブリュスちゃんを
+みんなが見てくれなくなっちゃう
+じゃん！
+
+# face 601311 "angry"
+# textboxarrow 0 1
+@シストルム
+異族を倒すのは賛成にゃ
+でも、その方法がにゃー…
+
+# alpha 601311 0 0.5
+# alpha 200331 0 0.5
+# move 233 2 0
+# face 233 "usual"
+# alpha 233 1 0.5
+# mask 233 on
+# textboxarrow 0 1
+# move 235 4 0
+# face 235 "normal"
+# alpha 235 1 0.5
+# mask 235 on
+@イチイバル
+話は聞かせてもらったよ
+
+# voice 550371 "logistille_c_0009"
+# textboxarrow 0 3
+@ロジェスティラ
+あのっ…音楽が必要なんです…
+
+# voice 6013 "sistrum_0022"
+# alpha 233 0 0.5
+# alpha 235 0 0.5
+# move 601311 3 0
+# face 601311 "surprise"
+# alpha 601311 1 0.5
+# mask 601311 off
+# textboxarrow 0 2
+@シストルム
+にゃ？
+キミ達、誰にゃ？

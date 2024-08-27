@@ -1,0 +1,312 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;３章１話　タイトル「地上の脅威―リバイヴ―」
+;;第1話　タイトル：異形の浸食
+;;7_2_3
+;;スクリプト最後の背景：下町（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "in_city"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 2
+# alpha 3201911 0 0
+# mask 3201911 off
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;スラーンド
+# body 3201211
+# pos 3201211 3
+# scale 3201211 0.8 0
+# layer 3201211 2
+# alpha 3201211 0 0
+# mask 3201211 off
+;;ジーベン
+# body 212
+# pos 212 3
+# scale 212 0.8 0
+# layer 212 2
+# alpha 212 0 0
+# mask 212 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+# move 3201911 2 0
+# face 3201911 "angry"
+# alpha 3201911 1 0
+# mask 3201911 on
+# move 3201211 4 0
+# face 3201211 "angry"
+# alpha 3201211 1 0
+# mask 3201211 on
+# textwindow "close"
+# waitandnext 0.2
+
+;;//シユウがスラーンドを弾き飛ばす
+# se "SE_9017"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_9146"
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 320121 "srand_ge_battle_0005"
+@スラーンド
+くぅっ…
+
+# alpha 3201911 0 0.5
+# alpha 3201211 0 0.5
+# move 211 2 0
+# face 211 "normal"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+# move 212 4 0
+# face 212 "usual"
+# alpha 212 1 0.5
+# mask 212 on
+# voice 9935 "vang_0006"
+@ヴァング
+おっしゃぁ！
+
+# face 212 "angry"
+# textboxarrow 0 3
+# voice 9934 "sieben_0019"
+@ジーベン
+あり得ない…！
+スラーンド、しっかりしろ！
+
+# alpha 211 0 0.5
+# alpha 212 0 0.5
+# move 3201211 3 0
+# face 3201211 "sad"
+# alpha 3201211 1 0.5
+# mask 3201211 off
+# textboxarrow 0 2
+# voice 320121 "srand_ge_0008"
+@スラーンド
+あ、はは…
+マスターが無事でよかったぁ…
+
+# alpha 3201211 0 0.5
+# move 211 2 0
+# face 211 "usual"
+# alpha 211 1 0.5
+# mask 211 on
+# move 212 4 0
+# face 212 "angry"
+# alpha 212 1 0.5
+# mask 212 on
+# textboxarrow 0 3
+# voice 9934 "sieben_0039"
+@ジーベン
+くっ…いいだろう
+今日のところは引き分けということに
+しておいてやる
+
+# face 211 "angry"
+# textboxarrow 0 1
+# voice 9935 "vang_0015"
+@ヴァング
+いや、どう見ても
+俺達の勝ちだろうが！
+
+# face 212 "normal"
+# textboxarrow 0 3
+# voice 9934 "sieben_0005"
+@ジーベン
+はっはっは！
+決着はいずれつけてやろう
+行くぞ、スラーンド！
+
+# textboxarrow 0 1
+# voice 9935 "vang_0001"
+@ヴァング
+シユウ！
+二人ともぶっ飛ばせ！
+
+# bgm "stop"
+# alpha 211 0 0.5
+# alpha 212 0 0.5
+# move 3201911 3 0
+# face 3201911 "sad"
+# alpha 3201911 1 0.5
+# mask 3201911 off
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_0009"
+@シユウ
+うがあああぁぁ…あれ？
+
+# alpha 3201911 0 0.5
+# move 211 3 0
+# face 211 "irregular"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+# voice 9935 "vang_0023"
+@ヴァング
+どうした？
+
+# se "SE_0671"
+# bgmfile "bgm400_1" "BgmIntegralNoahEvent" 0
+# alpha 211 0 0.5
+# move 3201911 3 0
+# face 3201911 "sad"
+# alpha 3201911 1 0.5
+# mask 3201911 off
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_0028"
+@シユウ
+うっ…
+はらがへったぞ…
+シユウはもううごけない…
+
+# alpha 3201911 0 0.5
+# move 211 3 0
+# face 211 "angry"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+# voice 9935 "vang_0014"
+@ヴァング
+ここでかよ！
+ちっ…あと一歩だったんだがなぁ
+
+# alpha 211 0 0.5
+# move 212 2 0
+# face 212 "normal"
+# alpha 212 1 0.5
+# mask 212 on
+# textboxarrow 0 1
+# move 3201211 4 0
+# face 3201211 "normal"
+# alpha 3201211 1 0.5
+# mask 3201211 on
+# voice 9934 "sieben_0046"
+@ジーベン
+はっはっは！
+全て僕の計算通りだよ
+万年ガス欠軽自動車め！
+
+# face 3201211 "happy"
+# textboxarrow 0 3
+# voice 320121 "srand_ge_0005"
+@スラーンド
+じゃあね～！
+
+;;//ジーベンとスラーンドが立ち去る
+# se "SE_0719"
+# textwindow "close"
+# alpha 212 0 0.5
+# alpha 3201211 0 0.5
+# waitandnext 0.5
+
+# move 211 3 0
+# face 211 "irregular"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9935 "vang_0013"
+@ヴァング
+計算通りだと！？
+そういうことは勝ってから言え！
+くそっ…逃げられた！
+
+# se "SE_0671"
+# alpha 211 0 0.5
+# move 3201911 3 0
+# face 3201911 "sad"
+# alpha 3201911 1 0.5
+# mask 3201911 off
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_0015"
+@シユウ
+ますた～…
+はらがへったぞ…
+
+# alpha 3201911 0 0.5
+# move 211 3 0
+# face 211 "usual"
+# alpha 211 1 0.5
+# mask 211 off
+# textboxarrow 0 2
+# voice 9935 "vang_0020"
+@ヴァング
+しょうがねぇなあ…
+今日は引き上げだ
+おい、カミト！
+
+# move 211 2 0.5
+# mask 211 on
+# move 210 4 0
+# face 210 "happy"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# voice 9936 "kamito_0051"
+@カミト
+兄貴っ
+惜しかったね！
+
+# face 211 "normal"
+# textboxarrow 0 1
+# voice 9935 "vang_0003"
+@ヴァング
+まあな
+お前もよくやったぜ
+
+# face 210 "sad"
+# textboxarrow 0 3
+# voice 9936 "kamito_0030"
+@カミト
+僕は何も…
+兄貴に言われた通り、
+周りを警戒してただけだよ…
+
+# textboxarrow 0 1
+@ヴァング
+邪魔が入らないって分かってたから
+ジーベンとの戦いに集中できたんだぜ
+
+# textboxarrow 0 1
+# voice 9935 "vang_0004"
+@ヴァング
+お前はやれる奴なんだ
+もっと自信持ちやがれ！
+
+# face 210 "normal"
+# textboxarrow 0 3
+# voice 9936 "kamito_0003"
+@カミト
+う、うん…
+僕には…良く分からないよ
+
+# face 211 "usual"
+# textboxarrow 0 1
+# voice 9935 "vang_0029"
+@ヴァング
+やれやれだぜ
+とりあえず、帰るとするか
+シユウに飯食わせてやんねぇとな

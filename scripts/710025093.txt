@@ -1,0 +1,677 @@
+;;８話戦闘後
+;;黒背景
+# script "lisp"
+# background "corridor_daytime"
+# bgmfile "bgm185" "BgmGakuen003" 0
+;;ナーゲル
+# body 100661
+# pos 100661 5
+# scale 100661 0.8 0
+# layer 100661 1
+# alpha 100661 0 0
+# face 100661 "sad"
+;;ロンギ
+# body 300191
+# pos 300191 1
+# scale 300191 0.8 0
+# layer 300191 2
+# alpha 300191 0 0
+# face 300191 "sad"
+;;さくら
+# body 143
+# pos 143 3
+# scale 143 0.8 0
+# layer 143 3
+# alpha 143 0 0
+# face 143 "sad"
+;;ケルベロス
+# body 144
+# pos 144 4
+# scale 144 0.8 0
+# layer 144 5
+# alpha 144 0 0
+;;ケルベロス
+# imageset 3 "e180201_1"
+# imagealpha 3 0 0
+# imagelayer 3 4
+# imagescale 3 0.64 0
+;;与一
+# body 400561
+# pos 400561 3
+# scale 400561 0.8 0
+# layer 400561 4
+# mask 400561 off
+# face 400561 "angry"
+;;与一
+# body 400571
+# pos 400571 3
+# scale 400571 0.8 0
+# layer 400571 4
+# alpha 400571 0 0
+;;さくらボイス用
+# body 602311
+# alpha 602311 0 0
+# imageset 4 "bg_black"
+# imagealpha 4 0 0
+# imagelayer 4 5
+# imagescale 4 2 0
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "bg_white"
+# imagealpha 1 0 0
+# imagelayer 1 2
+# subfillrect 1 "black" 0 0 1
+# serif 0
+# textwindow "close"
+# waitandnext 0.3
+
+# imagepos 3 150 0
+# imagealpha 4 1 0
+# imagepos 4 0 0
+# subfillrect 1 "black" 0.1 1 0
+# waitandnext 0.1
+
+# se "SE_4830"
+# effectbody 1000 4 0 0
+# effectstart 1000
+# waitandnext 0.6
+
+;;剣戟や衝突のエフェクトがあったら入れてください
+;;背景表示
+;;何事もないように立つ与一の立ち絵
+;;ウエイト
+;;与一を消し、書く立ち絵を表示
+# fadein "white" 0.5
+# shake 0 0.5
+# effectskip 1000
+# imagealpha 4 0 0
+# waitandnext 1.5
+
+# alpha 400561 0 0.5
+# alpha 300191 1 0.5
+# alpha 100661 1 0.5
+# alpha 143 1 0.5
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 300191
+# voice 3001 "ronginusu_0015"
+@ロンギヌス
+なんで…！
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 100661
+@ナーゲルリング
+くっ…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 143
+@さくら
+そんな！？
+
+# textflame 0 0
+@マスター
+やっぱり、ダメなのか…
+
+# textflame 0 0
+@
+何度も繰り返してきた浄化活動
+だが、与一に対しての効果はなかった
+
+# imagealpha 3 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+@ケロちゃん
+あかん、このままやと…
+
+# textflame 0 0
+@マスター
+マズい！
+
+# fadein "white" 0.5
+# shake 0 0.5
+# se "SE_9137"
+# face 300191 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 300191
+# voice 3001 "ronginusu_0024"
+@ロンギヌス
+きゃあっ！
+
+# textflame 0 0
+@
+追い詰めるどころか、
+一方的に追い詰められていく
+
+# alpha 400561 1 0.5
+# alpha 300191 0 0.5
+# alpha 100661 0 0.5
+# alpha 143 0 0.5
+# imagealpha 3 0 0.5
+# textflame 0 0
+@
+目の前にいるのは友達の与一
+無意識のうちに
+力を緩めてしまっていた
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400561
+# voice 4005 "yoichi_0017"
+@与一
+せっかくお友達になれたのに
+こんな終わり方は残念です
+
+# textflame 0 0
+@マスター
+ぐ、もう後がないぞ…
+
+# move 100661 4 0
+# move 300191 2 0
+# alpha 400561 0 0.5
+# alpha 100661 1 0.5
+# alpha 300191 1 0.5
+# textflame 1 1
+# textboxarrow 0 0
+# chara 100661
+@二人
+……っ！
+
+;;↑話者名数で入らない場合は次の形でお願いいたします。
+;;ナーゲルリング＆ロンギヌスの立ち絵を出して
+;;＠二人
+;;……っ！
+;;他の立ちを消し、さくらの一人立ち絵だしに
+;;さくら消し
+# serif 0
+# textwindow "close"
+# alpha 100661 0 0.5
+# alpha 300191 0 0.5
+# alpha 143 1 0.5
+# alpha 144 1 0.5
+# waitandnext 1.2
+
+# alpha 143 0 0.5
+# waitandnext 1
+
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 144
+# voice 9966 "cckero_g_0022"
+@ケロちゃん
+さくら！？
+
+;;カーテンのトランディション
+;;トランディションあけ、与一の立ち絵だし
+;;与一の立ち絵の横にさくらの立ち絵表示
+;;↑さくらが一人、間を詰めたように見えるようにしてください
+;;――場面転換――
+# se "SE_5241"
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# move 143 1 0
+# mask 400561 on
+# alpha 400561 1 0
+# alpha 144 0 0
+# waitandnext 0.6
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# face 143 "usual"
+# alpha 143 1 0.5
+# serif 0
+# textwindow "normal" 
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+@さくら
+与一ちゃん…
+
+;;BGMを変えられたら変えて、シーンの印章が変わった感を出してください
+# bgmfile "bgm183_story" "BgmGakuen003" 0
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+@さくら
+一緒に学園に笑顔を
+取り戻そうって頑張ってきたよね
+
+# face 143 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+@さくら
+なのに、わたし…
+与一ちゃんが笑顔をなくしちゃって
+悲しいよ…
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+@さくら
+わたしの大切なお友達が
+守ろうとしていた笑顔を
+なくしちゃうなんて…
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+@さくら
+そんなの、絶対にいやだよ
+
+;;さくらの立ち絵を与一に寄せる
+;;抱きしめにいっている体
+# sedelay "SE_0675" 0.5
+# move 143 2 0.5
+# face 400561 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400561
+@与一
+な、なにを…
+
+;;ガバッとSE（抱きしめ音）
+;;さくらの立ち絵をさらに与一に寄せる
+;;抱きしめてる体
+;;↓画面的に抱きしめてる感が薄かったら、次のコメントアウトを取って使用で
+;;モノローグ
+;;@
+;;さくらが与一の体を抱きしめた
+;;そして、耳元でささやく
+# face 143 "usual"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+@さくら
+だいじょうぶ、与一ちゃんなら
+きっと元に戻れるよ
+
+# face 143 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+@さくら
+わたし、もっと仲良くなりたい
+だから元の与一ちゃんに戻って
+
+# face 143 "usual"
+# imagepos 1 0 0 30
+# textflame 1 1
+# textboxarrow 0 1
+# chara 143
+@さくら
+絶対、だいじょうぶだよ
+
+;;徐々に画面を白みがからせるって出来ます？
+;;出来たら白みがからせながら服装が替わるまで進行
+# se "SE_0624"
+# face 400561 "sad"
+# imagealpha 1 0.1 1.5
+# textflame 0 0
+@
+それはさくらの澄み切った想い
+みんなと過ごした日々の結晶
+
+# imagealpha 1 0.3 1.5
+# textflame 0 0
+@
+友情という名の絆のもと
+紡がれた温かい言葉
+
+# imagealpha 1 0.5 1.5
+# textflame 0 0
+@
+与一はそれを…
+
+;;画面フラッシュ2回くらい
+;;ウエイトを入れる
+;;徐々に白は背景全画面にだし一瞬、全白にしてから背景を既存のものに
+;;クロスフェードで与一制服立ち絵を魔法少女コス立ち絵に変更
+;;画面フラッシュ１回（シュパーンとなるイメージ）
+;;与一、さくらコラボ衣装化
+;;さくらの腕の中で姿が変わっているように見えたらいいなぁ
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# se "SE_9158"
+# fadein "white" 0.5
+# waitandnext 0.6
+
+# se "SE_9158"
+# fadein "white" 0.5
+# waitandnext 1
+
+# se "SE_0624"
+# fadeout "white" 1.5
+# waitandnext 1.5
+
+# envbody 1000 11 0
+# effectpattern 1000 2 0
+# effectstart 1000
+# alpha 400561 0 0
+# alpha 400571 1 0
+# imagealpha 1 0 0
+# face 400571 "sad"
+# waitandnext 0.1
+
+# bgmfile "bgm183_184" "BgmGakuen003" 0
+# fadein "white" 1
+# waitandnext 2.2
+
+# se "SE_9132"
+# effectskip 1000
+# fadein "white" 0.5
+# waitandnext 1
+
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@与一
+う、うう…
+なんてことを…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400571
+@与一
+みなさん…ごめんなさい
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400571
+@与一
+まだ、お友達と思ってくれますか？
+
+;;与一立ち絵消し
+;;ナーゲルロンギの立ち絵を表示、一斉出しでもいいし準々でも
+# alpha 400571 0 0.5
+# alpha 143 0 0.5
+# alpha 300191 1 0.5
+# alpha 100661 1 0.5
+# face 300191 "happy"
+# face 100661 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 300191
+# voice 3001 "ronginusu_0005"
+@ロンギヌス
+与一ちゃん！
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 100661
+# voice 1006 "nageruring_0006"
+@ナーゲルリング
+与一さん！
+
+;;↓出来たら
+;;立ち絵消し
+;;与一立ち絵表示
+;;与一の背面にみんなの立ち絵を立たせて、囲んでいるように
+;;ウエイトとメッセージウィンドウ非表示が出来たらして
+;;一枚絵的に場面を見せる
+;;ウエイト
+# serif 0
+# textwindow "close"
+# alpha 100661 0 0.5
+# alpha 300191 0 0.5
+# waitandnext 0.5
+
+# move 400571 4 0
+# alpha 400571 1 0.5
+# face 143 "usual"
+# move 143 2 0
+# alpha 143 1 0.5
+# waitandnext 0.5
+
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@マスター
+与一、よかった…
+
+# move 144 3 0
+# serif 1
+# textboxarrow 1 0
+# chara 144
+# voice 9966 "cckero_g_0032"
+@ケロちゃん
+そやな、
+これで与一は大丈夫そうや
+
+;;立ち絵消し
+;;ケロちゃん表示
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# alpha 400571 0 0.5
+# alpha 143 0 0.5
+# alpha 144 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 144
+# voice 9966 "cckero_g_0028"
+@ケロちゃん
+けどなんや
+今回の与一の一件は
+ソードのカードを思い出すな…
+
+# textflame 0 0
+@マスター
+ソードのカード？
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 144
+@ケロちゃん
+詳しいことは割愛するけどな
+ずっと前にさくらの同級生が
+似たような目にあったんや
+
+# move 143 2 0
+# textflame 1 1
+# textboxarrow 0 2
+# chara 144
+@ケロちゃん
+あれは完全に意識がない状態で
+乗っ取られたっていうんかな
+操られたことがあったんや
+
+# face 143 "surprise"
+# alpha 143 1 0.5
+# move 143 3 0.5
+# move 144 4 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 143
+# voice 60231 "ccsakura_g_0028"
+@さくら
+利佳ちゃんのときだよね
+あれはカードがブローチに
+なってて…
+
+# face 143 "usual"
+# textflame 0 0
+@マスター
+そんなことが…
+
+# serif 0
+# textwindow "moya"
+# textflame 0 0
+@マスター
+操られていたか…
+やっぱり与一も何者かに？
+
+;;与一表示
+;;おずおずと
+# mask 400571 off
+# move 400571 3 0
+# alpha 143 0 0.5
+# alpha 144 0 0.5
+# alpha 400571 1 0.5
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400571
+@与一
+マスター…
+
+# textflame 0 0
+@マスター
+与一、お帰り
+そして、おめでとう
+
+# face 400571 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400571
+@与一
+あ…
+
+# face 400571 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400571
+# voice 4005 "yoichi_0004"
+@与一
+えへへ…似合ってますか？
+でも本当にご迷惑を掛けました
+これからはもっと…
+
+# textflame 0 0
+@マスター
+焦らず、ゆっくりね
+
+# face 400571 "usual"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400571
+# voice 4005 "yoichi_0032"
+@与一
+はい…
+
+# textflame 0 0
+@マスター
+それで与一…
+聞きたいことがあるんだ
+
+;;暗転、時間経過
+# fadeout "black" 1.5
+# waitandnext 1.5
+
+# bgm "bgm005" 0
+# face 400571 "normal"
+# waitandnext 0.6
+
+# fadein "black" 1
+# textflame 0 0
+# textflame 0 0
+@マスター
+そっか、露天商に
+そんなことが…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400571
+@与一
+はい、
+怪しいと思いつつ
+お守りを受け取ってしまって
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400571
+@与一
+そしてその日の夕方に
+怪しい人を見つけて
+つけて行ったら…
+
+# face 400571 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400571
+@与一
+与一、気づいたら
+あんなことに
+
+# textflame 0 0
+@マスター
+そうか…
+やはりこの件には黒幕が
+
+# face 143 "sad"
+# mask 143 off
+# alpha 400571 0 0.5
+# alpha 143 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 143
+# voice 60231 "ccsakura_g_0015"
+@さくら
+ひどい
+与一ちゃんの純粋な気持ちに
+つけ込むなんて…
+
+# mask 400571 on
+# move 300191 1 0
+# move 100661 5 0
+# alpha 143 0 0.5
+# alpha 300191 1 0.5
+# alpha 400571 1 0.5
+# alpha 100661 1 0.5
+# face 300191 "usual"
+# face 100661 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 300191
+# voice 3001 "ronginusu_0002"
+@ロンギヌス
+手がかりはないの？
+そのもらったお守りとか
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 400571
+@与一
+それが今見たら、
+跡形もなくなってて…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 100661
+@ナーゲルリング
+それはすごく残念です
+
+;;イビルドレイク
+# se "SE_0621"
+# serif 1
+# textboxarrow 1 0
+# chara 900018
+@？？？
+『ああ。全くもって、残念だよ…』
+
+# face 300191 "surprise"
+# face 100661 "surprise"
+# face 400571 "surprise"
+# waitandnext 0.5

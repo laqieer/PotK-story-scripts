@@ -1,0 +1,951 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第3話　タイトル：理想に殉じる者達よ
+;;3_9_3
+;;スクリプト最後の背景：森
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgmfile "bgm413" "BgmIntegralNoahBattle001" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.8 0
+# layer 502711 2
+# alpha 502711 0 0
+# mask 502711 off
+;;ダモクレス
+# body 103511
+# pos 103511 3
+# scale 103511 0.8 0
+# layer 103511 2
+# alpha 103511 0 0
+# mask 103511 off
+;;ネス
+# body 602011
+# pos 602011 3
+# scale 602011 0.8 0
+# layer 602011 2
+# alpha 602011 0 0
+# mask 602011 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;ケラウノス
+# body 500131
+# pos 500131 3
+# scale 500131 0.8 0
+# layer 500131 2
+# alpha 500131 0 0
+# mask 500131 off
+;;アポロン
+# body 400331
+# pos 400331 3
+# scale 400331 0.8 0
+# layer 400331 2
+# alpha 400331 0 0
+# mask 400331 off
+;;テュルソス
+# body 600321
+# pos 600321 3
+# scale 600321 0.8 0
+# layer 600321 2
+# alpha 600321 0 0
+# mask 600321 off
+;;ブリューナク
+# body 500721
+# pos 500721 3
+# scale 500721 0.8 0
+# layer 500721 2
+# alpha 500721 0 0
+# mask 500721 off
+;;ゲイボルグ
+# body 300711
+# pos 300711 3
+# scale 300711 0.8 0
+# layer 300711 2
+# alpha 300711 0 0
+# mask 300711 off
+;;パラシュ・擬彩
+# body 199
+# pos 199 3
+# scale 199 0.8 0
+# layer 199 3
+# alpha 199 0 0
+# mask 199 off
+;;ブラフマーストラ
+# body 500421
+# pos 500421 3
+# scale 500421 0.8 0
+# layer 500421 2
+# alpha 500421 0 0
+# mask 500421 off
+;;ヴァジュラ
+# body 500531
+# pos 500531 3
+# scale 500531 0.8 0
+# layer 500531 2
+# alpha 500531 0 0
+# mask 500531 off
+;;花異族
+# body 5809801
+# pos 5809801 3
+# scale 5809801 0.8 0
+# layer 5809801 2
+# alpha 5809801 0 0
+# mask 5809801 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+# se "SE_0830"
+# move 5809801 3 0
+# alpha 5809801 1 0
+# mask 5809801 off
+# textflame 1 1
+# textboxarrow 0 2
+@異族
+イイイイイイイ！
+
+# alpha 5809801 0 0.5
+# move 400331 3 0
+# face 400331 "angry"
+# alpha 400331 1 0.5
+# mask 400331 off
+# textboxarrow 0 2
+# voice 4003 "aporon_0029"
+@アポロン
+そこだね！
+
+# se "SE_4301"
+# waitandnext 0.5
+
+;;//アポロンが異族を射る
+# se "SE_4815"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# alpha 400331 0 0.5
+# move 502711 3 0
+# face 502711 "angry"
+# alpha 502711 1 0.5
+# mask 502711 off
+# textboxarrow 0 2
+# voice 5027 "freischotz_battle_0001"
+@フライシュッツ
+え～い！
+
+# se "SE_4400"
+# waitandnext 0.5
+
+;;//フライシュッツが異族を撃つ
+# se "SE_4734"
+# sedelay "SE_3001" 0.8
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# alpha 502711 0 0.5
+# move 500131 2 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0042"
+@アルマス
+初めて見た異族もイイ感じに
+倒せてるけど…
+おかしいわね
+
+# textboxarrow 0 1
+@ケラウノス
+ヴァジュラの姿もブラフマーストラの
+姿も見当たらない…
+パラシュだって
+
+# face 500131 "angry"
+# textboxarrow 0 1
+# voice 5001 "keraunosu_0027"
+@ケラウノス
+う～ん…
+これはやっぱり、アレかな～？
+
+# face 196 "angry"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0017"
+@アルマス
+アレってどれよっ？
+勿体つけないで教えて！
+
+# textboxarrow 0 1
+@ケラウノス
+森の中が戦場で、相手は高火力持ちが
+二人もいるんだよ
+ここは定番の…
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# se "SE_0753"
+# alpha 500131 0 0.5
+# alpha 196 0 0.5
+# move 103611 3 0
+# face 103611 "angry"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# voice 1036 "ragnarok_battle_0005"
+@ラグナロク
+アルマス！
+風が臭うわ…！
+この焦げ臭さは…
+
+# alpha 103611 0 0.5
+# move 500131 3 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 off
+# textboxarrow 0 2
+# voice 5001 "keraunosu_0003"
+@ケラウノス
+火を放ったんだね～
+やることが派手だな～
+
+# alpha 500131 0 0.5
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+そんなっ？
+森を焼かれたら、村の人達が…
+
+;;//アルマスが移動する
+# se "SE_5575"
+# textwindow "close"
+# leftout 196 0.5
+# waitandnext 0.5
+
+;;//ブラフマーストラ現れる
+# alpha 196 0 0.5
+# move 500421 3 0
+# face 500421 "normal"
+# alpha 500421 1 0.5
+# mask 500421 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 5004 "burafumasutora_0029"
+@ブラフマーストラ
+逃がさない…全部吹き飛ばす！
+
+# se "SE_4909"
+# waitandnext 0.5
+
+# move 500421 2 0.5
+# mask 500421 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+うっ…
+ちょっと！
+やり過ぎなんじゃないのっ？
+
+# face 500421 "happy"
+# textboxarrow 0 1
+# voice 5004 "burafumasutora_0005"
+@ブラフマーストラ
+あっはは！
+アタシってばすぐやり過ぎちゃう系
+なのよね～
+
+# face 500421 "normal"
+# textboxarrow 0 1
+@ブラフマーストラ
+でも、このくらい序の口だよ～！
+もっと派手に目立たないとね！
+
+# alpha 500421 0 0.5
+# alpha 196 0 0.5
+# move 602011 3 0
+# face 602011 "angry"
+# alpha 602011 1 0.5
+# mask 602011 off
+# textboxarrow 0 2
+# voice 6020 "ness_0009"
+@ネス
+火の手の回りが早いようですっ
+早く消し止めないとっ…
+
+# alpha 602011 0 0.5
+# move 502711 3 0
+# face 502711 "sad"
+# alpha 502711 1 0.5
+# mask 502711 off
+# textboxarrow 0 2
+# voice 5027 "freischotz_0015"
+@フライシュッツ
+みんな炎に巻かれちゃうよ～…
+
+# alpha 502711 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+誰か村に走って――
+
+# alpha 196 0 0.5
+# move 500531 3 0
+# face 500531 "happy"
+# alpha 500531 1 0.5
+# mask 500531 off
+# textboxarrow 0 2
+# voice 5005 "vajura_0005"
+@ヴァジュラ
+はっはっは！
+遅いよ
+ぶち抜けぇ！
+
+# se "SE_4401"
+# waitandnext 0.5
+
+# alpha 500531 0 0.5
+# move 103611 2 0
+# face 103611 "surprise"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+@ラグナロク
+ヴァジュラが村に向けて攻撃を…！
+
+# textboxarrow 0 3
+@アルマス
+何てことするのよ！
+
+# alpha 103611 0 0.5
+# alpha 196 0 0.5
+# move 500531 3 0
+# face 500531 "surprise"
+# alpha 500531 1 0.5
+# mask 500531 off
+# textboxarrow 0 2
+# voice 5005 "vajura_0028"
+@ヴァジュラ
+…あれぇ？
+手応えがないねぇ
+どうなってんだ？
+
+# alpha 500531 0 0.5
+# move 500421 3 0
+# face 500421 "surprise"
+# alpha 500421 1 0.5
+# mask 500421 off
+# textboxarrow 0 2
+# voice 5004 "burafumasutora_0018"
+@ブラフマーストラ
+おいおい！
+炎が…森の一部を避けてるよ～
+まさかの母性結界、強すぎ系～！？
+
+# alpha 500421 0 0.5
+# move 500131 2 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 on
+# move 196 4 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0059"
+@アルマス
+すごいっ…
+結界が炎を遮ってるのね
+
+# textboxarrow 0 1
+# voice 5001 "keraunosu_0003"
+@ケラウノス
+守りはプタハに任せて大丈夫そうだね
+それなら私達はこっちに集中しよう！
+
+# alpha 500131 0 0.5
+# alpha 196 0 0.5
+# move 500531 3 0
+# face 500531 "normal"
+# alpha 500531 1 0.5
+# mask 500531 off
+# textboxarrow 0 2
+# voice 5005 "vajura_0008"
+@ヴァジュラ
+あはは…
+こりゃ、しくじっちゃったかな
+
+# face 500531 "usual"
+# textboxarrow 0 2
+@ヴァジュラ
+な～んて
+一度や二度の失敗をいちいち気にして
+たらきりがないよっ
+
+# alpha 500531 0 0.5
+# move 500421 3 0
+# face 500421 "normal"
+# alpha 500421 1 0.5
+# mask 500421 off
+# textboxarrow 0 2
+# voice 5004 "burafumasutora_0039"
+@ブラフマーストラ
+アンタ、なかなか分かってる系ね～
+
+# face 500421 "happy"
+# textboxarrow 0 2
+@ブラフマーストラ
+そんじゃ、まとめてドカ～ンと
+いっちゃうよ！
+
+# alpha 500421 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0011"
+@アルマス
+やれるもんならやってみなさい！
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "forest"
+# alpha 196 0 0
+# move 199 3 0
+# face 199 "normal"
+# alpha 199 1 0
+# mask 199 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 520043 "parashu_iz_0007"
+@パラシュ
+プタハの結界か
+その執念は認めてあげるよ
+
+# face 199 "angry"
+# textboxarrow 0 2
+@パラシュ
+ただし、ボクが散らせるけどね！
+
+# move 199 2 0.5
+# mask 199 on
+# move 300711 4 0
+# face 300711 "angry"
+# alpha 300711 1 0.5
+# mask 300711 on
+# textboxarrow 0 3
+# voice 3007 "gaiborugu_0007"
+@ゲイボルグ
+魔槍に貫けぬものなし…
+
+# se "SE_4200"
+# waitandnext 0.5
+
+;;//ゲイボルグの攻撃をパラシュが弾く
+# se "SE_3006"
+# textwindow "close"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 300711 "surprise"
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 3007 "gaiborugu_0018"
+@ゲイボルグ
+どういうことだ…？
+
+# textboxarrow 0 1
+# voice 520043 "parashu_iz_0003"
+@パラシュ
+そろそろ現れる頃だと思っていたよ
+君のことは聞いている
+
+# textboxarrow 0 1
+@パラシュ
+切り札であることに執着し、
+努力する心意気は認めるよ
+でも、それだけだ
+
+# face 300711 "angry"
+# textboxarrow 0 3
+@ゲイボルグ
+私の槍から逃れられる者は――
+
+# face 199 "angry"
+# textboxarrow 0 1
+# voice 520043 "parashu_iz_0010"
+@パラシュ
+御託はいい！
+因果だろうと運命だろうと
+全て潰す
+
+# textboxarrow 0 1
+@パラシュ
+君もここで散り果てろ！
+
+# se "SE_4100"
+# waitandnext 0.5
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# background "forest"
+# alpha 199 0 0
+# alpha 300711 0 0
+# move 500421 3 0
+# face 500421 "normal"
+# alpha 500421 1 0
+# mask 500421 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+@ブラフマーストラ
+宇宙の始まり…知ってる？
+
+# se "SE_4909"
+# waitandnext 0.5
+
+# alpha 500421 0 0.5
+# move 500531 3 0
+# face 500531 "usual"
+# alpha 500531 1 0.5
+# mask 500531 off
+# textboxarrow 0 2
+# voice 5005 "vajura_0029"
+@ヴァジュラ
+疾風迅雷ってねぇ！
+
+# se "SE_4401"
+# waitandnext 0.5
+
+# alpha 500531 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0054"
+@アルマス
+二人とも一撃が凄まじくて…
+迂闊に近づけないっ
+
+# alpha 196 0 0.5
+# move 400331 3 0
+# face 400331 "angry"
+# alpha 400331 1 0.5
+# mask 400331 off
+# textboxarrow 0 2
+@アポロン
+見えてるよ
+そこだね！
+
+# se "SE_4300"
+# waitandnext 0.5
+
+# alpha 400331 0 0.5
+# move 103511 3 0
+# face 103511 "usual"
+# alpha 103511 1 0.5
+# mask 103511 off
+# textboxarrow 0 2
+# voice 1035 "damocles_0029"
+@ダモクレス
+クレスの愛の力、見せてあげよー！
+
+# se "SE_5205"
+# waitandnext 0.5
+
+# alpha 103511 0 0.5
+# move 500131 2 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 on
+# move 602011 4 0
+# face 602011 "angry"
+# alpha 602011 1 0.5
+# mask 602011 on
+# textboxarrow 0 3
+@ネス
+安心して下さい
+着実にこちらが押しています
+勝利は目前ですよっ
+
+# face 500131 "sad"
+# textboxarrow 0 1
+# voice 5001 "keraunosu_0015"
+@ケラウノス
+だといいんだけど…
+な～んか嫌な予感がするんだよね～
+
+;;//ゲイボルグが飛んでくる
+# textwindow "close"
+# alpha 500131 0 0.5
+# alpha 602011 0 0.5
+# waitandnext 0.5
+
+# se "SE_11585"
+# sedelay "SE_8022" 0.8
+# move 300711 3 0
+# face 300711 "normal"
+# alpha 300711 1 0
+# mask 300711 off
+# rightin 300711 0.5
+# waitandnext 0.5
+
+# face 300711 "sad"
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 3007 "gaiborugu_0037"
+@ゲイボルグ
+ぐうっ…
+魔槍の名が泣いている…
+こんなことがあってはならんのに…
+
+# alpha 300711 0 0.5
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# move 196 4 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0035"
+@アルマス
+ゲイボルグ！？
+酷い傷…
+
+# move 103611 1 0.5
+# mask 103611 on
+# move 199 3 0
+# face 199 "normal"
+# alpha 199 1 0.5
+# mask 199 on
+# textboxarrow 0 2
+# move 196 5 0.5
+# mask 196 on
+# voice 520043 "parashu_iz_0007"
+@パラシュ
+二人とも、
+この程度で苦戦しているのかい？
+それでは理想に届かないよ
+
+# face 103611 "surprise"
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0022"
+@ラグナロク
+パラシュ…！
+
+# textboxarrow 0 2
+@パラシュ
+ラグナロク、君達はここで終わりだ
+皆、新世界の礎になるといい
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+あなたの思い通りには――
+
+# face 199 "angry"
+# textboxarrow 0 2
+@パラシュ
+消失せし魂は、散る花のごとく！
+
+;;//パラシュがアルマスを斬る
+# se "SE_4601"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+@アルマス
+あぐっ…
+
+# alpha 103611 0 0.5
+# alpha 199 0 0.5
+# alpha 196 0 0.5
+# move 500131 3 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 off
+# textboxarrow 0 2
+@ケラウノス
+さすがに強いね～
+アルマス、大丈夫？
+
+# move 199 2 0
+# face 199 "normal"
+# alpha 199 1 0.5
+# mask 199 on
+# textboxarrow 0 1
+# move 500131 4 0.5
+# mask 500131 on
+# voice 520043 "parashu_iz_0001"
+@パラシュ
+次は君だよ
+
+# textboxarrow 0 3
+# voice 5001 "keraunosu_0004"
+@ケラウノス
+それはどうかな～？
+そろそろのはずだからね～
+
+# textboxarrow 0 1
+@パラシュ
+何のことだい
+
+# se "SE_8020"
+# bgmfile "bgm403" "BgmIntegralNoahEvent" 0
+# alpha 500131 0 0.5
+# move 500721 4 0
+# face 500721 "normal"
+# alpha 500721 1 0.5
+# mask 500721 on
+# textboxarrow 0 3
+# voice 5007 "buryunaku_0003"
+@ブリューナク
+すでにプランＢが
+遂行されていたということだ！
+
+# textboxarrow 0 1
+# voice 520043 "parashu_iz_0022"
+@パラシュ
+おっと…
+また新手か
+何人来ても同じだけどね
+
+# alpha 500721 0 0.5
+# move 600321 4 0
+# face 600321 "normal"
+# alpha 600321 1 0.5
+# mask 600321 on
+# textboxarrow 0 3
+# voice 6003 "tyurusosu_0003"
+@テュルソス
+君に関しては、そうかもね
+だけどフェルカの町はどうかしら？
+
+# alpha 199 0 0.5
+# alpha 600321 0 0.5
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0035"
+@アルマス
+テュルソス！
+…ということはっ？
+
+# alpha 196 0 0.5
+# move 500131 2 0
+# face 500131 "normal"
+# alpha 500131 1 0.5
+# mask 500131 on
+# textboxarrow 0 1
+# move 600321 4 0
+# face 600321 "normal"
+# alpha 600321 1 0.5
+# mask 600321 on
+# voice 5001 "keraunosu_0007"
+@ケラウノス
+やっと来たんだね～
+少し遅くないかな？
+
+# textboxarrow 0 3
+# voice 6003 "tyurusosu_0028"
+@テュルソス
+今回は失敗するわけにいかないから
+万全を期したのよ
+すでにマスター達は町に入ったわ
+
+# textboxarrow 0 3
+@テュルソス
+アルテミスのときのお返しよ
+
+# alpha 500131 0 0.5
+# alpha 600321 0 0.5
+# move 500531 3 0
+# face 500531 "amazed"
+# alpha 500531 1 0.5
+# mask 500531 off
+# textboxarrow 0 2
+# voice 5005 "vajura_0028"
+@ヴァジュラ
+あちゃ～…
+あたしら全員で来ちゃったのは
+しくじったかもね～…
+
+# alpha 500531 0 0.5
+# move 199 3 0
+# face 199 "normal"
+# alpha 199 1 0.5
+# mask 199 off
+# textboxarrow 0 2
+@パラシュ
+…………
+
+# move 199 2 0.5
+# mask 199 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+形勢逆転ね！
+簡単にここを切り抜けられると
+思ったら大間違いよ！
+
+# textboxarrow 0 1
+# voice 520043 "parashu_iz_0027"
+@パラシュ
+ふぅ…
+呆れたな
+そんなことで――
+
+# alpha 199 0 0.5
+# alpha 196 0 0.5
+# move 500421 3 0
+# face 500421 "normal"
+# alpha 500421 1 0.5
+# mask 500421 off
+# textboxarrow 0 2
+# voice 5004 "burafumasutora_0004"
+@ブラフマーストラ
+いっちゃうよ～！
+
+;;//爆発音
+# se "SE_5593"
+# waitandnext 0.5
+
+# alpha 500421 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+しまった…！
+視界がっ
+
+# alpha 196 0 0.5
+# move 500421 3 0
+# face 500421 "normal"
+# alpha 500421 1 0.5
+# mask 500421 off
+# textboxarrow 0 2
+# voice 5004 "burafumasutora_0003"
+@ブラフマーストラ
+ここはアタシに任せて、
+アンタ達は先に行っちゃって～っ
+
+# alpha 500421 0 0.5
+# move 199 2 0
+# face 199 "normal"
+# alpha 199 1 0.5
+# mask 199 on
+# textboxarrow 0 1
+# move 500531 4 0
+# face 500531 "usual"
+# alpha 500531 1 0.5
+# mask 500531 on
+@パラシュ
+ボクは別に…
+
+# textboxarrow 0 3
+# voice 5005 "vajura_0003"
+@ヴァジュラ
+ありがとよ！
+行こうぜ、パラシュ
+
+;;//ヴァジュラとパラシュが走り去る
+# se "SE_5575"
+# textwindow "close"
+# leftout 199 0.5
+# leftout 500531 0.5
+# waitandnext 0.5
+
+# alpha 199 0 0
+# alpha 500531 0 0
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+ああ、もうっ
+逃がさないわよ！
+
+# alpha 196 0 0.5
+# move 500421 3 0
+# face 500421 "surprise"
+# alpha 500421 1 0.5
+# mask 500421 off
+# textboxarrow 0 2
+@ブラフマーストラ
+アンタ達の相手はアタシだってば～っ
+
+# alpha 500421 0 0.5
+# move 602011 3 0
+# face 602011 "angry"
+# alpha 602011 1 0.5
+# mask 602011 off
+# textboxarrow 0 2
+@ネス
+皆さん、落ち着いて包囲して下さい
+彼女は細やかな攻撃は
+得意でないようですっ
+
+# textboxarrow 0 2
+@ネス
+攪乱すれば隙をつけます！

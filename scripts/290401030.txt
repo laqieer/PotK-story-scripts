@@ -1,0 +1,709 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第４章 タイトル：「世界樹の子―インベイション―」
+;;第1話　タイトル：ユグドラシルへ
+;;4_1_3
+;;スクリプト最後の背景：ラグナロク機関
+;;-----------------------------------------
+# script "lisp"
+# background "201_border"
+# bgmfile "bgm417" "BgmIntegralNoahBattle003" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;魔獣
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# layer 910013 2
+# alpha 910013 0 0
+# mask 910013 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;マサムネ(キラーメイル)
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# layer 1100111 2
+# alpha 1100111 0 0
+# mask 1100111 off
+;;デュランダル
+# body 3100311
+# pos 3100311 3
+# scale 3100311 0.8 0
+# layer 3100311 2
+# alpha 3100311 0 0
+# mask 3100311 off
+;;ブリューナク・D. plug・バルバトス
+# body 3500711
+# pos 3500711 3
+# scale 3500711 0.8 0
+# layer 3500711 2
+# alpha 3500711 0 0
+# mask 3500711 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第1話　タイトル：ユグドラシルへ
+;;//背景：赤い廊下
+# move 3102311 3 0
+# face 3102311 "angry"
+# alpha 3102311 1 0
+# mask 3102311 off
+# textflame 1 1
+# textboxarrow 0 2
+# voice 310231 "ascalon_a_battle_0001"
+@アスカロン
+はっ！
+
+;;//アスカロンが魔獣を斬る
+# textwindow "close"
+# alpha 3102311 0 0.5
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 off
+# waitandnext 0.6
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# alpha 910013 0 0.5
+# move 3100311 3 0
+# face 3100311 "angry"
+# alpha 3100311 1 0.5
+# mask 3100311 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 310031 "durandaru_a_battle_0004"
+@デュランダル
+バッサバサですの！
+
+;;//デュランダルが魔獣を斬る
+# sedelay "SE_10588" 0.4
+# textwindow "close"
+# alpha 3100311 0 0.5
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 off
+# waitandnext 0.6
+
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 2000 1 0 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+# alpha 910013 0 0.5
+# move 3500711 3 0
+# face 3500711 "angry"
+# alpha 3500711 1 0.5
+# mask 3500711 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 350071 "buryunaku_a_battle_0003"
+@ブリューナク
+そこだ！
+
+;;//ブリューナクが魔獣を撃つ
+# textwindow "close"
+# alpha 3500711 0 0.5
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 off
+# waitandnext 0.6
+
+# se "SE_4400"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_0794"
+# textboxarrow 0 2
+# textwindow "normal"
+@魔獣
+ガアアアアア…！
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 910013 0 0.5
+# waitandnext 0.5
+
+# move 210 3 0
+# face 210 "happy"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9936 "kamito_0044"
+@カミト
+さすがアスカロンっ
+デュランダルもブリューナクも
+強いなっ
+
+;;カミト（独白）
+# move 210 3 0
+# face 210 "irregular"
+# mask 210 off
+# textboxarrow 0 0
+# textwindow "moya"
+@カミト
+僕だって新しい力を手に入れたんだ
+少しは戦えるんじゃないか？
+
+# textwindow "normal"
+# textboxarrow 0 2
+@カミト
+よし！
+やってやる…うっ？
+
+;;//痛みを感じる演出が何かあれば
+# se "SE_5752"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 210 "sad"
+# textboxarrow 0 2
+# voice 9936 "kamito_0041"
+@カミト
+あぐぅっ…！？
+義手がっ…
+
+;;//画面スライド
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 210 0 0
+# move 910013 2 0
+# alpha 910013 1 0
+# mask 910013 on
+# move 3100311 4 0
+# face 3100311 "angry"
+# alpha 3100311 1 0
+# mask 3100311 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;//デュランダルが魔獣を斬る
+# se "SE_10588"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 3000 1 -200 0 0
+# effectstart 3000
+# waitandnext 0.5
+
+# alpha 910013 0 0.5
+# waitandnext 0.5
+
+# face 3100311 "happy"
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 310031 "durandaru_a_0005"
+@デュランダル
+破壊的に楽しいお時間でしたわ♪
+
+# alpha 3100311 0 0.5
+# move 3500711 3 0
+# face 3500711 "happy"
+# alpha 3500711 1 0.5
+# mask 3500711 off
+# textboxarrow 0 2
+# voice 350071 "buryunaku_a_unit_0006"
+@ブリューナク
+我らが勝利、
+偉大なる歴史に捧げるとしよう
+
+# alpha 3500711 0 0.5
+# move 3102311 3 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+# voice 310231 "ascalon_a_0019"
+@アスカロン
+みんな強かったですね！
+はぁ…羨ま――
+
+# face 3102311 "surprise"
+# textboxarrow 0 2
+# voice 310231 "ascalon_a_0022"
+@アスカロン
+マスター！？
+どうしたんですかっ…？
+
+# se "SE_5575"
+# textwindow "close"
+# rightout 3102311 0.5
+# waitandnext 0.5
+
+# alpha 3102311 0 0
+# move 210 3 0
+# face 210 "sad"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9936 "kamito_0040"
+@カミト
+あぐぅっ…
+ごめん、アスカロン…
+急に左腕がっ…
+
+;;//暗転
+;;//背景：ラグナロク機関
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_ragnarok_institution"
+# alpha 210 0 0
+# move 3501711 3 0
+# face 3501711 "normal"
+# alpha 3501711 1 0
+# mask 3501711 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 350171 "grimoire_ge_0027"
+@グリモワール
+ふんっ！
+義手におかしなプログラムを
+組み込んだ代償ね
+
+# textboxarrow 0 2
+@グリモワール
+何がどう影響して痛みを
+感じてるのかは分からないけど…
+
+# textboxarrow 0 2
+@グリモワール
+とりあえず、痛み止めの術式を
+キミの腕に刻んだわ
+これで痛みは和らぐはずよ
+
+# alpha 3501711 0 0.5
+# move 210 3 0
+# face 210 "happy"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# voice 9936 "kamito_0032"
+@カミト
+ありがとう…
+随分、楽になったよ
+
+# alpha 210 0 0.5
+# move 3102311 2 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# move 3501711 4 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# voice 310231 "ascalon_a_unit_1006"
+@アスカロン
+グリモワールは治療のための
+魔術も習得しているなんて…
+羨ましい
+
+# face 3102311 "happy"
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_kyara_1009"
+@アスカロン
+あ、そのっ
+痛みが治まって良かったです！
+
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0003"
+@グリモワール
+対症療法だから根本的な治療には
+なってないけどね
+プログラムなんて専門外だもの
+
+# textboxarrow 0 3
+@グリモワール
+それで…
+そっちの二人は何なの？
+
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# move 3500711 2 0
+# face 3500711 "normal"
+# alpha 3500711 1 0.5
+# mask 3500711 on
+# move 3100311 4 0
+# face 3100311 "normal"
+# alpha 3100311 1 0.5
+# mask 3100311 on
+# textboxarrow 0 3
+# voice 310031 "durandaru_a_0003"
+@デュランダル
+ごきげんよう
+デュランダル・D.plug・アレス
+と申します
+
+# textboxarrow 0 1
+# voice 350071 "buryunaku_a_0003"
+@ブリューナク
+我はブリューナク・D.plug・
+バルバトスだ
+
+# face 3500711 "happy"
+# textboxarrow 0 1
+@ブリューナク
+財宝を求める旅の途中、
+こうして出会えた奇跡…
+ロマンがあるな
+
+# face 3100311 "happy"
+# textboxarrow 0 3
+# voice 310031 "durandaru_a_0004"
+@デュランダル
+ふふっ
+わたくしの直感が囁いてますの
+
+# textboxarrow 0 3
+@デュランダル
+そちらの方と一緒にいれば、
+もっともっと楽しいお時間が
+過ごせそうですの♪
+
+# alpha 3500711 0 0.5
+# alpha 3100311 0 0.5
+# move 3501711 3 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0009"
+@グリモワール
+それでくっついてきたっていうの？
+キミ達ねぇっ！
+
+# alpha 3501711 0 0.5
+# move 1100111 3 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 off
+# textboxarrow 0 2
+# voice 11001 "masamunem_0011"
+@マサムネ
+騒ぐのは後にしろ
+それより、興味深い資料があったぞ
+
+# move 1100111 2 0.5
+# mask 1100111 on
+# move 210 4 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# voice 9936 "kamito_0023"
+@カミト
+何か分かったの？
+
+# textboxarrow 0 1
+# voice 11001 "masamunem_0003"
+@マサムネ
+博士が長いこと続けていた
+観測データだ
+何の観測データだと思う？
+
+# face 210 "surprise"
+# textboxarrow 0 3
+# voice 9936 "kamito_0029"
+@カミト
+…天上世界、とか？
+
+# alpha 1100111 0 0.5
+# move 3501711 2 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 1
+# voice 350171 "grimoire_ge_0007"
+@グリモワール
+ワタシと同じこと言ってるわね
+
+# face 210 "normal"
+# textboxarrow 0 3
+@カミト
+だって前に、グリモワールが…
+
+# alpha 3501711 0 0.5
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 1
+@マサムネ
+これはユグドラシルの観測データだ
+そして、こっちが観測結果に
+基づいた分析データだな
+
+# face 210 "irregular"
+# textboxarrow 0 3
+@カミト
+これで、何が分かるの？
+
+# alpha 1100111 0 0.5
+# move 3501711 2 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 1
+@グリモワール
+少しは自分で考えなさい！
+
+# face 210 "sad"
+# textboxarrow 0 3
+# voice 9936 "kamito_0033"
+@カミト
+ごめん…
+
+# alpha 3501711 0 0.5
+# move 1100111 2 0
+# face 1100111 "sad"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 1
+# voice 11001 "masamunem_0027"
+@マサムネ
+なにやってんだか…
+どっちがマスターか分からないな
+
+# face 1100111 "normal"
+# textboxarrow 0 1
+@マサムネ
+俺も完璧には理解できていないが
+これはユグドラシルが世界に及ぼす
+影響について分析してあるみたいだ
+
+# face 210 "surprise"
+# textboxarrow 0 3
+@カミト
+ユグドラシルが…
+
+# textboxarrow 0 1
+@マサムネ
+恐らく博士は、今、地上で起きている
+異変を予見していたんだろう
+
+# textboxarrow 0 1
+@マサムネ
+あの人のことだ
+何らかの対策を打ってくれたんじゃ
+ないかとは思うが…
+
+# textboxarrow 0 1
+@マサムネ
+具体的なことは分からない
+いずれにしても…
+
+# alpha 1100111 0 0.5
+# alpha 210 0 0.5
+# move 3501711 3 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+@グリモワール
+元凶はユグドラシルってことね！
+
+# alpha 3501711 0 0.5
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# move 210 4 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# voice 9936 "kamito_0023"
+@カミト
+元凶って…
+
+# textboxarrow 0 1
+# voice 11001 "masamunem_0003"
+@マサムネ
+異変の原因がユグドラシルにあるのは
+間違いないだろうな
+
+# face 210 "normal"
+# textboxarrow 0 3
+@カミト
+ユグドラシルか…
+
+# textboxarrow 0 1
+# voice 11001 "masamunem_0002"
+@マサムネ
+一通り調べ尽くしたと思うが、
+これからどうする？
+
+# textboxarrow 0 3
+# voice 9936 "kamito_0003"
+@カミト
+そうだね…
+
+;;//音声っぽい機械音（３章と同じもの）
+# se "SE_0853"
+;;//ユグドラシルの麓を一瞬映す
+# se "SE_0809"
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_underwild"
+# alpha 1100111 0 0
+# alpha 210 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# waitandnext 0.8
+
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_ragnarok_institution"
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0
+# mask 1100111 on
+# move 210 4 0
+# face 210 "surprise"
+# alpha 210 1 0
+# mask 210 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# face 210 "surprise"
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 9936 "kamito_0024"
+@カミト
+今のは…？
+
+# alpha 1100111 0 0.5
+# move 3102311 2 0
+# face 3102311 "surprise"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0022"
+@アスカロン
+どうしたんですか、マスター？
+
+# face 210 "irregular"
+# textboxarrow 0 3
+@カミト
+…ユグドラシルに向かおう
+そこに何かが…あるはずだからっ
+
+# alpha 3102311 0 0.5
+# move 3501711 2 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 1
+# voice 350171 "grimoire_ge_0003"
+@グリモワール
+曖昧な物言いね！
+でも、悪くはないんじゃない
+
+# alpha 3501711 0 0.5
+# move 1100111 2 0
+# face 1100111 "normal"
+# alpha 1100111 1 0.5
+# mask 1100111 on
+# textboxarrow 0 1
+# voice 11001 "masamunem_0032"
+@マサムネ
+俺も賛成だ
+
+# alpha 1100111 0 0.5
+# move 3102311 2 0
+# face 3102311 "happy"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0032"
+@アスカロン
+マスターの決めたことなら、
+賛成です！
+
+# face 210 "happy"
+# textboxarrow 0 3
+# voice 9936 "kamito_0003"
+@カミト
+ありがとう、みんな
+それじゃ――
+
+# se "SE_0764"
+# serif 1
+@？？？
+――――――！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# move 3500711 2 0
+# face 3500711 "surprise"
+# alpha 3500711 1 0.5
+# mask 3500711 on
+# textboxarrow 0 1
+# move 3100311 4 0
+# face 3100311 "normal"
+# alpha 3100311 1 0.5
+# mask 3100311 off
+# voice 350071 "buryunaku_a_0028"
+@ブリューナク
+おや？
+外が騒がしいな
+
+# face 3100311 "happy"
+# textboxarrow 0 3
+# voice 310031 "durandaru_a_0004"
+@デュランダル
+ふふっ
+また楽しいお時間が過ごせそうですの

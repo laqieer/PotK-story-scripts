@@ -1,0 +1,679 @@
+;;-----------------------------------------
+;;【PK】モラベガサイドストーリー後半_シナリオ190722
+;;【EP3『さよなら児童劇』】
+;;スクリプト最後の背景：深奥
+;;-----------------------------------------
+# script "lisp"
+# background "profound_nolight"
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス（ジョブチェンジ後）
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# layer 172 2
+# alpha 172 0 0
+# mask 172 off
+;;モラルタ
+# body 3104011
+# pos 3104011 3
+# scale 3104011 0.8 0
+# layer 3104011 2
+# alpha 3104011 0 0
+# mask 3104011 off
+;;ベガルタ
+# body 3104111
+# pos 3104111 3
+# scale 3104111 0.8 0
+# layer 3104111 2
+# alpha 3104111 0 0
+# mask 3104111 off
+;;モラベガ
+# body 3104211
+# pos 3104211 3
+# scale 3104211 0.8 0
+# layer 3104211 2
+# alpha 3104211 0 0
+# mask 3104211 off
+;;アイムール
+# body 3200211
+# pos 3200211 3
+# scale 3200211 0.8 0
+# layer 3200211 2
+# alpha 3200211 0 0
+# mask 3200211 off
+;;シストルム
+# body 3601311
+# pos 3601311 3
+# scale 3601311 0.8 0
+# layer 3601311 2
+# alpha 3601311 0 0
+# mask 3601311 off
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;メインタイトル
+;;『オーディトリアを抜け』 
+;;背景：深奥
+;;背景には炎がうずまき続けている
+# textwindow "close"
+# se "SE_0753"
+# envbody 1000 7 0
+# effectstart 1000
+# move 3104211 3 0
+# face 3104211 "angry"
+# alpha 3104211 1 0
+# mask 3104211 off
+# waitandnext 0.5
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;モラベガ、アイムール・シストルムと戦い、倒される
+# se "SE_3001"
+# alpha 3104211 0 0.5
+# waitandnext 0.5
+
+# se "SE_0754"
+# move 3104211 2 0
+# face 3104211 "sad"
+# alpha 3104211 1 0.5
+# mask 3104211 on
+# textflame 1 1
+# move 3200211 4 0
+# alpha 3200211 1 0.5
+# mask 3200211 on
+# textboxarrow 0 3
+# textwindow "normal"
+# face 3200211 "normal"
+# voice 320021 "aimuru_a_0019"
+@アイムール
+手加減は苦手です
+
+# voice 310421 "morabeaga_l_battle_0007"
+# textboxarrow 0 1
+@モラベガ
+うっ、ううっ
+
+# textboxarrow 0 3
+@アイムール
+強い敵を捕食するほど充実する
+どんな力を持っているのか
+気になって確かめてみましたが…
+
+# textboxarrow 0 3
+@アイムール
+リットゥとケーリュケイオンを
+退けただけのものがありました
+
+# alpha 3104211 0 0.5
+# alpha 3200211 0 0.5
+# move 3601311 3 0
+# alpha 3601311 1 0.5
+# mask 3601311 off
+# textboxarrow 0 2
+# face 3601311 "normal"
+# voice 360131 "sistrum_ge_0003"
+@シストルム
+視てたよ
+すっごかったにゃあ
+
+# alpha 3601311 0 0.5
+# move 3104211 2 0
+# face 3104211 "sad"
+# alpha 3104211 1 0.5
+# mask 3104211 on
+# move 3200211 4 0
+# alpha 3200211 1 0.5
+# mask 3200211 on
+# textboxarrow 0 3
+# voice 320021 "aimuru_a_0004"
+@アイムール
+だけど今はこの程度
+なぜ十全に力を発揮しないのですか？
+
+# textboxarrow 0 1
+@モラベガ
+わ、わかんないよ…っ
+
+;;アイムール、モラベガを弾き飛ばす
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# face 3104211 "angry"
+# textboxarrow 0 1
+@モラベガ
+ウアアァッ！？
+
+# textboxarrow 0 3
+@アイムール
+アルマスの元に辿り着いたとして
+どうするつもりだったのですか？
+
+# voice 310421 "morabeaga_l_battle_0006"
+# textboxarrow 0 1
+@モラベガ
+はぁ、はぁ、はぁ…！
+アルマスに恩返しするんだ…
+アルマスを、守るんだ………！
+
+# textboxarrow 0 3
+@アイムール
+守れる力もないのに？
+
+# textboxarrow 0 1
+@モラベガ
+つ、強くなったもん…っ
+
+# textboxarrow 0 3
+@アイムール
+アルマスよりも？
+
+# face 3104211 "sad"
+# textboxarrow 0 1
+@モラベガ
+…アルマスの方が
+
+# textboxarrow 0 3
+# face 3200211 "sad"
+# voice 320021 "aimuru_a_0019"
+@アイムール
+弱い者は食べられる
+食べる側が強い者
+
+# textboxarrow 0 3
+@アイムール
+あなたはきっとまた
+アルマスに守られてしまう
+
+# face 3104211 "surprise"
+# textboxarrow 0 1
+@モラベガ
+っ！？
+
+# textboxarrow 0 3
+@アイムール
+アルマスの足を引っ張る
+
+# face 3104211 "sad"
+# textboxarrow 0 1
+@モラベガ
+…私達、が
+アルマスを…
+
+# textboxarrow 0 3
+# face 3200211 "normal"
+# voice 320021 "aimuru_a_0003"
+@アイムール
+この身に宿るは冥界の番人、死神の力
+
+# textboxarrow 0 3
+@アイムール
+あなたの魂を
+冥府に導くのは容易なこと
+つまりあなたでは不足
+
+# textboxarrow 0 3
+@アイムール
+ですが、妖精結合…
+それに二人分の魂…
+どんな味がするのか興味はあります
+
+# face 3104211 "surprise"
+# voice 310421 "morabeaga_l_0024"
+# textboxarrow 0 1
+@モラベガ
+ひっ…！
+
+# alpha 3104211 0 0.5
+# alpha 3200211 0 0.5
+# move 3601311 3 0
+# alpha 3601311 1 0.5
+# mask 3601311 off
+# textboxarrow 0 2
+# face 3601311 "normal"
+@シストルム
+アイムール
+あんまり怖がらせちゃ
+かわいそうだにゃ
+
+# textboxarrow 0 2
+# voice 360131 "sistrum_ge_0028"
+@シストルム
+まぁ…
+キミ達が降参してくれるなら、
+見逃してあげてもいいかもにゃ
+
+# alpha 3601311 0 0.5
+# move 3104211 2 0
+# face 3104211 "angry"
+# alpha 3104211 1 0.5
+# mask 3104211 on
+# textboxarrow 0 1
+# move 3200211 4 0
+# alpha 3200211 1 0.5
+# mask 3200211 on
+@モラベガ
+ここまで来て…！
+
+# textboxarrow 0 3
+# face 3200211 "angry"
+# voice 320021 "aimuru_a_0007"
+@アイムール
+交渉不成立ですね
+
+;;アイムール、モラベガを吹き飛ばす
+# se "SE_0674"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 310421 "morabeaga_l_0025"
+# textboxarrow 0 1
+@モラベガ
+ああぁっ！？
+
+;;暗転（背景：黒、立ち絵なし）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# alpha 3104211 0 0
+# alpha 3200211 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+モラベガは、なすすべもなく
+アイムールに吹き飛ばされ地に伏せ
+視界は暗転する
+
+# serif 1
+@シストルム
+もういい加減諦めるんだにゃ
+敵とはいえ、子供相手
+見ていられないにゃ
+
+# textflame 1 1
+# textboxarrow 0 0
+@モラベガ
+こ…子供なんかじゃ…！！
+
+# serif 1
+# face 3200211 "normal"
+@アイムール
+これ以上の戦闘は無意味
+潔く撤退しなさい
+シストルムに免じて見逃してあげます
+
+@モラベガ
+…！！
+
+# serif 1
+# face 3601311 "smile"
+# voice 360131 "sistrum_ge_0005"
+@シストルム
+帰っていいんだにゃ
+妖精達のところに
+
+# serif 1
+# voice 320021 "aimuru_a_0003"
+@アイムール
+あなたはまだ戻れるでしょう
+しかし、抵抗をするのなら
+あなたごと全て飲み込むまでです
+
+# voice 310421 "morabeaga_l_0022"
+@モラベガ
+もど、れる…？
+
+;;モノローグ
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 0 0
+@
+モラベガは思わず
+帰路に目をやろうと
+顔を上げる
+
+;;背景：大穴（立ち絵なし）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "101_hole"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textwindow "normal"
+@
+偶然、大穴の上から
+微かに漏れ入ってきた光が
+モラベガに差し込んでいた
+
+;;回想（13章2話）
+# sestop "SE_0753"
+# effectskip 1000
+# waitandnext 0.2
+
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "ground_surface_break"
+# move 3104111 2 0
+# face 3104111 "sad"
+# alpha 3104111 1 0
+# mask 3104111 on
+# move 3104011 4 0
+# face 3104011 "sad"
+# alpha 3104011 1 0
+# mask 3104011 on
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+# bgmfile "bgm273" "BgmLostRagnarokEvent" 0
+# textboxarrow 0 3
+# textflame 1 1
+# textwindow "normal"
+@モラルタ
+みんな…
+行っちゃうの？
+
+# textboxarrow 0 1
+@ベガルタ
+寂しいよ…
+これからも一緒にいようよ
+
+# serif 1
+@青年
+ＨＥＹ！ＨＥＹ！
+それはできねえ相談
+俺はＳＡＹ・ＹＥＡＨ送還
+
+# serif 1
+@女性
+いつまでも私達がいたら邪魔に
+なっちゃうしねぇ～
+
+# serif 1
+@老人
+では、達者でのう
+
+# face 3104011 "surprise"
+# textboxarrow 0 3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+@モラルタ
+みんな…！
+
+# face 3104111 "happy"
+# textboxarrow 0 1
+@ベガルタ
+今まで…ありがとう！
+
+;;//背景：白
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1.2
+
+# background "bg_white"
+# alpha 3104111 0 0
+# alpha 3104011 0 0
+# move 172 3 0
+# face 172 "normal"
+# alpha 172 1 0
+# mask 172 off
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+全ての魂が解放されていく…
+
+# alpha 172 0 0.5
+# move 3104111 2 0
+# face 3104111 "sad"
+# alpha 3104111 1 0.5
+# mask 3104111 on
+# move 3104011 4 0
+# face 3104011 "sad"
+# alpha 3104011 1 0.5
+# mask 3104011 on
+# textboxarrow 0 0
+@モラルタ＆ベガルタ
+さよなら…
+さよなら、みんな…
+さよなら、お父さんお母さん
+
+;;回想終わり
+;;背景：深奥
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "profound_nolight"
+# alpha 3104111 0 0
+# alpha 3104011 0 0
+# move 3104211 3 0
+# face 3104211 "sad"
+# alpha 3104211 1 0
+# mask 3104211 off
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# se "SE_0753"
+# sedelay "SE_0754" 0.5
+# effectstart 1000
+# waitandnext 0.5
+
+;;炎が渦巻いている
+# bgmfile "bgm275" "BgmLostRagnarokEvent" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@モラベガ
+さよなら…したよ
+
+# alpha 3104211 0 0.5
+# move 3601311 3 0
+# alpha 3601311 1 0.5
+# mask 3601311 off
+# textboxarrow 0 2
+# face 3601311 "surprise"
+# voice 360131 "sistrum_ge_0022"
+@シストルム
+さよにゃら？
+
+# alpha 3601311 0 0.5
+# voice 310421 "morabeaga_l_0027"
+# move 3104211 3 0
+# face 3104211 "sad"
+# alpha 3104211 1 0.5
+# mask 3104211 off
+# textboxarrow 0 2
+@モラベガ
+泣きつく大人もいないんだ
+
+# textboxarrow 0 2
+@モラベガ
+みんな飲み込んじゃったから
+みんな見守ってくれてるから
+みんな信じてくれたから
+
+;;モラベガからマナが沸き出る
+# se "SE_5767"
+# fadein "white" 1
+# waitandnext 1.5
+
+# face 3104211 "normal"
+# textboxarrow 0 2
+@モラベガ
+みんなを守る為に頑張ろうって
+思ってたんだ
+
+# alpha 3104211 0 0.5
+# move 3601311 2 0
+# alpha 3601311 1 0.5
+# mask 3601311 on
+# textboxarrow 0 1
+# move 3200211 4 0
+# alpha 3200211 1 0.5
+# mask 3200211 on
+# face 3601311 "sad"
+# voice 360131 "sistrum_ge_0015"
+@シストルム
+…一緒だにゃ
+
+# textboxarrow 0 3
+# face 3200211 "sad"
+@アイムール
+今は独りだから
+守る対象がいないから
+頑張れないと？
+
+# alpha 3601311 0 0.5
+# alpha 3200211 0 0.5
+# voice 310421 "morabeaga_l_0003"
+# move 3104211 3 0
+# face 3104211 "normal"
+# alpha 3104211 1 0.5
+# mask 3104211 off
+# textboxarrow 0 2
+@モラベガ
+でも、もう大丈夫
+
+;;周囲を渦巻いていた炎が消える
+# sestop "SE_0753"
+# bgm "stop"
+# effectskip 1000
+# waitandnext 0.5
+
+# textboxarrow 0 2
+@モラベガ
+今はひとつだから
+
+;;モラベガの力が高まり、武具が完全なものとなる。（レーヴァテインの武具獲得シナリオを参照しましたが武具の画像などは出るのでしょうか？）
+# se "SE_9088"
+# waitandnext 0.5
+
+;;モノローグ
+# bgmfile "bgm266_267" "BgmLostRagnarokBattle001" 0
+# textflame 0 0
+@
+朱と蒼の粒子がモラベガから吹き出し
+それは彼女の剣に収束する
+
+;;モノローグ
+@
+モラルタ・ベガルタ双子の剣と
+ピスカの精霊力が完全に結合し
+ひとつとなる
+
+# alpha 3104211 0 0.5
+# move 3601311 2 0
+# alpha 3601311 1 0.5
+# mask 3601311 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 3200211 4 0
+# alpha 3200211 1 0.5
+# mask 3200211 on
+# voice 360131 "sistrum_ge_0027"
+@シストルム
+うわあ
+………帰っていいかにゃ
+
+# textboxarrow 0 3
+# face 3200211 "angry"
+# voice 320021 "aimuru_a_0007"
+@アイムール
+…捕食し甲斐があります
+
+# alpha 3601311 0 0.5
+# alpha 3200211 0 0.5
+# move 3104211 3 0
+# face 3104211 "angry"
+# alpha 3104211 1 0.5
+# mask 3104211 off
+# textboxarrow 0 2
+@モラベガ
+飲み込ませない
+もう、誰も
+
+# alpha 3104211 0 0.5
+# move 3601311 2 0
+# alpha 3601311 1 0.5
+# mask 3601311 on
+# move 3200211 4 0
+# alpha 3200211 1 0.5
+# mask 3200211 on
+# textboxarrow 0 3
+@アイムール
+もう帰しはしない
+
+# textboxarrow 0 1
+# voice 360131 "sistrum_ge_0028"
+@シストルム
+ボクは？
+
+# textboxarrow 0 3
+@アイムール
+あなたも戦いなさい
+
+# alpha 3601311 0 0.5
+# alpha 3200211 0 0.5
+# move 3104211 3 0
+# face 3104211 "normal"
+# alpha 3104211 1 0.5
+# mask 3104211 off
+# textboxarrow 0 2
+@モラベガ
+もう幕は上がったんだ
+舞台を降りるわけにはいかないよ
+
+# voice 310421 "morabeaga_l_0004"
+# textboxarrow 0 2
+@モラベガ
+勇気は未来への羽根！
+頑張りは正念場の剣！
+
+# textboxarrow 0 2
+@モラベガ
+これは
+みんなを愉快にする為の
+私達の見せ場だから
+
+# textboxarrow 0 2
+@モラベガ
+演じ切って魅せるよっ！！

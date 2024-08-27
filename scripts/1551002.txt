@@ -1,0 +1,422 @@
+;;------------------------------------------
+;;1551002
+;;4/4　吹き出しの位置調整
+;; 　　オルトのセリフを上ウィンドウに変更
+;; 　　トト登場時のキャラの移動処理を修正
+;; 　　小隊長登場時、他のキャラを非表示に変更
+;; 　　上記以降、キャラの位置関係を修正
+;; 　　小隊長のセリフは上ウィンドウに変更、それ以外のキャラは下に変更
+;; 　　ティル、トト、小隊長のスケールが入っていなかったので、0.8に設定
+;; 　　オルトと小隊長の表情指定が入っていなかったので、表情を設定。
+;; 　　ティル、デュリン、トトの表情もチグハグだったので修正
+;;------------------------------------------
+# script "lisp"
+# body 101411
+# pos 101411 1
+# body 0
+# pos 0 3
+# body 13
+# pos 13 5
+# scale 101411 0.8 0
+# scale 0 0.8 0
+# scale 13 0.8 0
+# body 11
+# pos 11 3
+# scale 11 0.8 0
+# alpha 11 0 0
+# layer 0 5
+# layer 4 2
+# layer 13 4
+# layer 101411 1
+# layer 11 3
+# body 4
+# pos 4 3
+# scale 4 0.8 0
+# alpha 4 0 0
+# textwindow "bottom_close"
+# serif 1
+# textboxarrow 1 3
+# chara 13
+@オルト
+…………
+
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 9999 "durin_0002"
+# face 0 "normal"
+# chara 0
+@デュリン
+あ、あの…
+これは、どういう…？
+
+# serif 1
+# textboxarrow 1 3
+# face 13 "sad"
+# chara 13
+@オルト
+…審判を行う前の聴取だ
+
+# serif 1
+# textboxarrow 1 3
+# chara 13
+@オルト
+入域目的に不審な点のある者は…
+ゲートキーパーの権限において、
+先んじて聴取を行うことが出来る
+
+# serif 1
+# textboxarrow 1 3
+# face 13 "normal"
+# chara 13
+@オルト
+その子の…
+人民区入域の名目はなんだ？
+
+# serif 0
+# textboxarrow 0 2
+# chara 0
+@デュリン
+え？あ、はい…王都におられる、
+フレンネル大公へ
+引き合わせるためです
+
+# serif 1
+# textboxarrow 1 3
+# chara 13
+@オルト
+…それは、
+お前たちの側の目的に過ぎん
+…フレンネル大公の招きはあるのか？
+
+# serif 0
+# textboxarrow 0 2
+# voice 9999 "durin_0022"
+# face 0 "sad"
+# chara 0
+@デュリン
+…う…い、いえ
+
+# serif 1
+# textboxarrow 1 3
+# chara 13
+@オルト
+…………
+
+# serif 1
+# textboxarrow 1 3
+# chara 13
+@オルト
+そこのお前…
+医者がどうのと言っていたな？
+
+# serif 0
+# textboxarrow 0 1
+# face 101411 "angry"
+# chara 101411
+@ティルフィング
+は、はい…！
+一刻も早く、お医者さんを
+向かわせなければ、学者さまが…
+
+# serif 1
+# textboxarrow 1 3
+# chara 13
+@オルト
+“クレナイに住む人々”が…だな？
+
+# serif 0
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0024"
+# face 101411 "surprised"
+# chara 101411
+@ティルフィング
+え…？
+
+# serif 1
+# textboxarrow 1 3
+# chara 13
+@オルト
+…耕民区には医者の助けを
+必要としている人々が数多くいる
+
+# serif 1
+# textboxarrow 1 3
+# chara 13
+@オルト
+そうした人々の生の声を届けるため、
+その子が代表として選ばれた…
+そういうことだな？
+
+# face 0 "normal"
+# serif 0
+# textboxarrow 0 2
+# voice 9999 "durin_0044"
+# chara 0
+@デュリン
+…っ！は、はい！そうです！
+王都に耕民区の現状を知らせる…
+それがこの子の、入域の名目です！
+
+# serif 1
+# textboxarrow 1 3
+# face 13 "happy1"
+# chara 13
+@オルト
+…なるほど…それならば、
+入域を許可するだけの名目となりえる
+
+# serif 0
+# textboxarrow 0 1
+# face 101411 "normal"
+# face 0 "usual"
+# chara 101411
+@ティルフィング
+…オルトさん！
+
+# serif 1
+# textboxarrow 1 3
+# face 13 "normal"
+# chara 13
+@オルト
+…まだだ
+
+# serif 1
+# textboxarrow 1 3
+# chara 13
+@オルト
+その子が入域許可証を
+借り受けた人物を
+明示してもらわねばならん
+
+# serif 0
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0002"
+# face 101411 "sad"
+# face 0 "sad"
+# chara 101411
+@ティルフィング
+あ…ですから、
+“学者さま”から…
+
+# serif 1
+# textboxarrow 1 3
+# chara 13
+@オルト
+それは俗称だ…
+正式な名を明示出来ねば、
+許可は出来ん
+
+# serif 1
+# textboxarrow 1 3
+# face 13 "sad"
+# chara 13
+@オルト
+まさか…
+入域許可証を借り受けたほどの
+人物の名を知らんわけはあるまい？
+
+# serif 0
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0022"
+# face 0 "worry"
+# face 101411 "sad"
+# chara 101411
+@ティルフィング
+…！？
+な、なんでしたっけ？
+
+# serif 0
+# textboxarrow 0 2
+# voice 9999 "durin_0042"
+# face 0 "occur"
+# chara 0
+@デュリン
+なんか、やたら長ったらしい
+名前だったような…
+
+# serif 1
+# textboxarrow 0 3
+# face 13 "normal"
+# chara 13
+@オルト
+名も知らん人間の許可証を
+借り受けたというのか？
+これでは…
+
+# move 0 2 0.4
+# alpha 4 1 0.5
+# waitandnext 0.5
+
+# serif 0
+# textboxarrow 0 2
+# voice 9998 "toto_0002"
+# face 4 "normal"
+# chara 4
+@トト
+エクスジェラルド・ヴァン・
+ルステンシュタイン3世！！
+
+# serif 1
+# textboxarrow 1 3
+# face 101411 "surprised"
+# face 13 "angry"
+# face 0 "serious"
+# chara 13
+@オルト
+…っ！
+
+# serif 0
+# textboxarrow 0 2
+# face 4 "smile02"
+# chara 4
+@トト
+爺ちゃんの名前でしょ？
+
+# serif 0
+# textboxarrow 0 2
+# face 4 "smile01"
+# chara 4
+@トト
+“エクスジェラルド・ヴァン・
+ルステンシュタイン3世”だよ！！
+
+# serif 1
+# textboxarrow 1 3
+# face 13 "happy1"
+# chara 13
+@オルト
+フッ…その通りだ
+あの男は、
+心を許した者にしか名を明かさん…
+
+# serif 1
+# textboxarrow 1 3
+# chara 13
+@オルト
+この入域許可証は…
+間違いなく、
+あの男から借り受けた物なのだな…
+
+# serif 0
+# textboxarrow 0 1
+# face 101411 "happy"
+# face 0 "usual"
+# chara 101411
+@ティルフィング
+トト！！
+
+# serif 1
+# textboxarrow 1 3
+# chara 13
+@オルト
+審判の間に来るがいい…
+入域手続を取る
+
+# serif 1
+# textboxarrow 1 3
+# chara 13
+@オルト
+…耕民区に
+…医者を導いてやってくれ
+
+# serif 0
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0003"
+# face 101411 "smile"
+# chara 101411
+@ティルフィング
+！！
+…は、はい！！
+必ず…約束します！！
+
+# textwindow "bottom_close"
+# textwindow "top_close"
+# alpha 0 0 0.3
+# alpha 4 0 0.3
+# alpha 13 0 0.3
+# alpha 101411 0 0.3
+# waitandnext 0.3
+
+;;そこに現れる巡視兵団
+# se "SE_5586"
+# alpha 11 1 0.5
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 2
+# face 11 "angry"
+# chara 11
+@小隊長
+そこまで！！
+
+# serif 1
+# textboxarrow 1 2
+# face 11 "sad"
+# chara 11
+@小隊長
+…やれやれ、これは驚きましたな？
+まさかゲートキーパーが、
+不正入域に加担するとは…
+
+# textwindow "top_close"
+# pos 13 3
+# pos 101411 1
+# move 11 5 0.5
+# alpha 13 1 0.5
+# alpha 101411 1 0.5
+# waitandnext 0.5
+
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 2
+# face 101411 "surprised"
+# face 13 "angry"
+# chara 13
+@オルト
+…っ！？
+じゅ、巡視兵団…小隊長！？
+なぜここに！？
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 3
+# face 11 "normal"
+# chara 11
+@小隊長
+内部監査ですよ
+アナタに不正入域関与の疑いが
+かけられておりましてな…
+
+# serif 1
+# textboxarrow 1 3
+# face 11 "angry"
+# chara 11
+@小隊長
+行動を監視させて頂いておりました…
+ゲートキーパー・オルトを拘束しろ！
+
+# serif 1
+# textboxarrow 1 3
+# chara 11
+@小隊長
+…貴様らのことは、
+ラグナロク総本部と話をさせてもらう
+ラグナロク一行は即刻強制退去だ！！
+
+# serif 0
+# textboxarrow 0 2
+# face 13 "angry"
+# chara 13
+@オルト
+…っ！
+なんということだ…クソッ！！
+
+# serif 0
+# textboxarrow 0 1
+# voice 1014 "tyrufing_0023"
+# face 101411 "angry"
+# chara 101411
+@ティルフィング
+ちょっと、やめてください！
+離してください！
+…オルトさんっ！！！

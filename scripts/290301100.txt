@@ -1,0 +1,468 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;３章１話　タイトル「地上の脅威―リバイヴ―」
+;;第1話　タイトル：異形の浸食
+;;7_1_10
+;;スクリプト最後の背景：部屋
+;;-----------------------------------------
+# script "lisp"
+# background "201_room"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 2
+# alpha 3201911 0 0
+# mask 3201911 off
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;グリダヴォル
+# body 3600811
+# pos 3600811 3
+# scale 3600811 0.8 0
+# layer 3600811 2
+# alpha 3600811 0 0
+# mask 3600811 off
+;;-----------------------------------------
+;;第1話　タイトル：異形の浸食
+;;//背景：部屋
+# move 211 2 0
+# face 211 "surprise"
+# alpha 211 1 0
+# mask 211 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 3201911 4 0
+# face 3201911 "normal"
+# alpha 3201911 1 0
+# mask 3201911 on
+# voice 9935 "vang_0014"
+@ヴァング
+…どうなってんだ、こりゃ？
+
+# textboxarrow 0 3
+# voice 320191 "chihyu_a_0029"
+@シユウ
+うがあああぁぁ！
+だれもいないぞ！
+
+# textboxarrow 0 3
+@シユウ
+でも、ちのにおいがする！
+ますた～、ここでだれかが
+たたかってたんだ！
+
+# face 211 "irregular"
+# textboxarrow 0 1
+# voice 9935 "vang_0003"
+@ヴァング
+そうみてぇだな…
+ちっ…どうなってんだ？
+
+# textboxarrow 0 1
+@ヴァング
+まさか、昨日の連中がジーベンを
+襲ったのか？
+
+# alpha 3201911 0 0.5
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# voice 9936 "kamito_0002"
+@カミト
+兄貴…ジーベンは？
+スラーンドの姿も見当たらないよ…
+
+# textboxarrow 0 1
+# voice 9935 "vang_0039"
+@ヴァング
+ちっ…
+こういうのは苦手なんだがな
+少し調べてみるか
+
+# textboxarrow 0 1
+# voice 9935 "vang_0048"
+@ヴァング
+カミト、部屋ん中はお前に任せる
+オレはシユウと辺りを
+見て回ってくるぜ
+
+# textboxarrow 0 3
+# voice 9936 "kamito_0035"
+@カミト
+分かったよ
+気をつけてね、兄貴…
+
+# face 211 "sad"
+# textboxarrow 0 1
+# voice 9935 "vang_0034"
+@ヴァング
+お前もな
+なーんか嫌な感じがするぜ…
+
+# alpha 210 0 0.5
+# move 3201911 4 0
+# face 3201911 "normal"
+# alpha 3201911 1 0.5
+# mask 3201911 on
+# textboxarrow 0 3
+@シユウ
+うがあああぁぁ！
+ますた～、ちのにおいは
+あっちにつづいてるぞ
+
+;;//ヴァングとシユウが立ち去る
+# se "SE_0740"
+# textwindow "close"
+# alpha 211 0 0.5
+# alpha 3201911 0 0.5
+# waitandnext 0.5
+
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9936 "kamito_0029"
+@カミト
+ええと…まず何をすれば…
+
+;;//選択肢
+;;
+;;A室内を物色する
+;;B窓の外を見る
+;;Cキル姫と話す
+# select "室内を物色する" "select_label_01" "窓の外を見る" "select_label_02" "キル姫と話す" "select_label_03"
+ええと…まず何をすれば…
+
+;;A
+# label "select_label_01"
+# labeljump "select_label_end"
+# alpha 210 0 0.5
+# move 3102311 3 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+# voice 310231 "ascalon_a_0028"
+@アスカロン
+壁にも床にも傷跡が残っています
+スラーンドのものではないような…
+
+;;B
+# label "select_label_02"
+# labeljump "select_label_end"
+# face 210 "happy"
+# textboxarrow 0 2
+@カミト
+良い天気だな…
+
+;;C
+# label "select_label_03"
+# labeljump "select_label_end"
+# alpha 210 0 0.5
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0009"
+@グリモワール
+どうしたいかは自分で決めなさいよ！
+怒りの炎に焼かれたいのっ？
+
+# label "select_label_end"
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+他の部屋も見てみようかな…
+
+;;//暗転挟む
+# se "SE_0740"
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 210 0 0
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0
+# mask 210 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9936 "kamito_0026"
+@カミト
+こっちは何が…なっ！
+
+;;//グリダヴォルが現れる
+# alpha 210 0 0.5
+# move 3600811 3 0
+# face 3600811 "usual"
+# alpha 3600811 1 0.5
+# mask 3600811 off
+# textboxarrow 0 2
+# voice 360081 "guridavoru_a_0022"
+@グリダヴォル
+おや…
+何だ、生きている人間か
+
+# move 3600811 2 0.5
+# mask 3600811 on
+# move 3102311 4 0
+# face 3102311 "surprise"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 3
+# voice 310231 "ascalon_a_0022"
+@アスカロン
+グリダヴォル！？
+どうして、あなたがこんなところに
+いるんですか！
+
+# face 3600811 "normal"
+# textboxarrow 0 1
+@グリダヴォル
+そんなに身構えなくてもいいよ
+私はただ、死者の声を聞いて…
+ああ、うん…そうだ
+
+# alpha 3102311 0 0.5
+# move 210 4 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# voice 9936 "kamito_0023"
+@カミト
+虚空を見つめて…
+何を言っているの…？
+
+# textboxarrow 0 1
+# voice 360081 "guridavoru_a_0003"
+@グリダヴォル
+ロズと話していたんだよ
+君には見えないだろうけどね
+
+# alpha 3600811 0 0.5
+# move 3102311 2 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0001"
+@アスカロン
+マスター
+グリダヴォルは
+死者と話すことができるんです
+
+# alpha 210 0 0.5
+# move 3501711 4 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0027"
+@グリモワール
+死者と話すなんて死に対する冒涜よ！
+
+# alpha 3102311 0 0.5
+# move 3600811 2 0
+# face 3600811 "normal"
+# alpha 3600811 1 0.5
+# mask 3600811 on
+# textboxarrow 0 1
+@グリダヴォル
+グリモワールもいるのか
+君だって私と大差ないだろ
+
+# textboxarrow 0 1
+@グリダヴォル
+それはそれとして、
+私は失礼するよ
+ここに死者はいない…
+
+# face 3600811 "sad"
+# textboxarrow 0 1
+@グリダヴォル
+変な気配を感じたから
+来てみたんだけど…
+当てが外れたなあ…
+
+# alpha 3501711 0 0.5
+# move 210 4 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# voice 9936 "kamito_0001"
+@カミト
+ま、待って！
+あの…フォルカスを見なかった？
+
+# face 3600811 "usual"
+# textboxarrow 0 1
+# voice 360081 "guridavoru_a_0028"
+@グリダヴォル
+フォルカス？
+うぅむ…知らないね
+
+# face 210 "normal"
+# textboxarrow 0 3
+# voice 9936 "kamito_0032"
+@カミト
+そう…ありがとう…
+
+# face 3600811 "normal"
+# textboxarrow 0 1
+# voice 360081 "guridavoru_a_0004"
+@グリダヴォル
+どういたしまして
+君達もここに長居は無用だよ
+どうも、良くないからね
+
+# alpha 210 0 0.5
+# move 3501711 4 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0022"
+@グリモワール
+良くない？
+何が良くないのよっ？
+
+# textboxarrow 0 1
+@グリダヴォル
+良くない感じなんだよ
+じゃあね
+
+;;//グリダヴォルが立ち去る
+# se "SE_0740"
+# textwindow "close"
+# alpha 3600811 0 0.5
+# waitandnext 0.5
+
+# face 3501711 "angry"
+# textboxarrow 0 3
+# textwindow "normal"
+@グリモワール
+待ちなさいって！
+ああ、もうっ
+
+# move 3102311 2 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0003"
+@アスカロン
+窓からどこか遠くを
+見ていたようですけど…
+
+# face 3102311 "surprise"
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0041"
+@アスカロン
+わあ！マスター！
+ユグドラシルがよく見えますよっ
+
+# face 3501711 "normal"
+# textboxarrow 0 3
+@グリモワール
+浮かれてる場合じゃないでしょ！
+…何だか、あのユグドラシル、
+少し変じゃない？
+
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0023"
+@アスカロン
+えっ？
+そうですか？
+…そう言われてみると――
+
+;;//地響き
+;;//画面揺れを継続
+# se "SE_0637"
+# bgm "stop"
+# shakeloop 0
+# waitandnext 0.5
+
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# voice 9936 "kamito_0026"
+@カミト
+うわぁっ！
+
+# alpha 210 0 0.5
+# move 3102311 3 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+@アスカロン
+マスター、伏せて下さい！
+地震ですっ
+
+# alpha 3102311 0 0.5
+# move 3501711 3 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0007"
+@グリモワール
+どうせ、すぐに収まるわよ
+いつものこと…
+
+# face 3501711 "surprise"
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0023"
+@グリモワール
+えっ…？
+何よ、あれ！？

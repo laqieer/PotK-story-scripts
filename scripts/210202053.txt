@@ -1,0 +1,350 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第20章 章タイトル：ワールドサルベイション
+;;第2話―５　タイトル：遺されたもの
+;;5_3
+;;スクリプト最後の背景：宇宙（ラストバトル空間）
+;;-----------------------------------------
+# script "lisp"
+# background "Schoolyard_rain"
+# bgmfile "bgm492_block" "BgmIntegralNoahBattle009" 0
+;;-----------------------------------------
+;;グランテピエ・獣刻・バハムート
+# body 5303411
+# pos 5303411 3
+# scale 5303411 0.8 0
+# layer 5303411 2
+# alpha 5303411 0 0
+# mask 5303411 off
+;;アルマス・誓約・ティターニア
+# body 5103811
+# pos 5103811 3
+# scale 5103811 0.8 0
+# layer 5103811 2
+# alpha 5103811 0 0
+# mask 5103811 off
+;;魔獣
+# body 806158
+# pos 806158 3
+# scale 806158 0.8 0
+# layer 806158 2
+# alpha 806158 0 0
+# mask 806158 off
+;;魔獣（フライデビル）
+# body 806157
+# pos 806157 3
+# scale 806157 0.8 0
+# layer 806157 3
+# alpha 806157 0 0
+# mask 806157 off
+;;魔獣（フライデビル1）
+# entry 98061571 806157
+# pos 98061571 3
+# scale 98061571 0.8 0
+# layer 98061571 2
+# alpha 98061571 0 0
+# mask 98061571 off
+;;魔獣（フライデビル2）
+# entry 98061572 806157
+# pos 98061572 3
+# scale 98061572 0.8 0
+# layer 98061572 2
+# alpha 98061572 0 0
+# mask 98061572 off
+;;ダーインスレイヴ（学園編）
+# body 110
+# pos 110 3
+# scale 110 0.8 0
+# layer 110 2
+# alpha 110 0 0
+# mask 110 off
+;;ブラフマーストラ（学園編）
+# body 115
+# pos 115 3
+# scale 115 0.8 0
+# layer 115 2
+# alpha 115 0 0
+# mask 115 off
+;;エクスカリバー（学園編）
+# body 34
+# pos 34 3
+# scale 34 0.8 0
+# layer 34 2
+# alpha 34 0 0
+# mask 34 off
+;;ティルフィング（学園編）
+# body 101491
+# pos 101491 3
+# scale 101491 0.8 0
+# layer 101491 2
+# alpha 101491 0 0
+# mask 101491 off
+;;デュリン（学園編）
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 2
+# alpha 0 0 0
+# mask 0 off
+;;-----------------------------------------
+;;背景：校庭　雨：Schoolyard_rain
+;;エクスカリバー（学園編）
+# move 34 3 0
+# face 34 "angry"
+# alpha 34 1 0
+# mask 34 off
+# textflame 1 1
+# textboxarrow 0 2
+@エクスカリバー
+皆さん、早く体育館に避難を！
+
+;;ブラフマーストラ（学園編）
+# alpha 34 0 0.5
+# move 115 3 0
+# face 115 "normal"
+# alpha 115 1 0.5
+# mask 115 off
+# textboxarrow 0 2
+@ブラフマーストラ
+迷ってる系の子達、こっちだよ～
+アタシが導いてあげるからね
+
+;;ダーインスレイヴ（学園編）
+# voice 1028 "dainsleif_0005"
+# alpha 115 0 0.5
+# move 110 3 0
+# face 110 "happy"
+# alpha 110 1 0.5
+# mask 110 off
+# textboxarrow 0 2
+@ダーインスレイヴ
+ふふっ
+子猫ちゃん達には指一本触れさせ
+ないよ
+
+;;新規魔獣が現れる
+# se "SE_0792"
+# alpha 110 0 0.5
+# move 806158 3 0
+# alpha 806158 1 0.5
+# mask 806158 off
+# textboxarrow 0 2
+@魔獣
+ガアアアアアアア！
+
+;;ティルフィング（学園編）
+# voice 1014 "tyrufing_g_0029"
+# move 101491 2 0
+# face 101491 "angry"
+# alpha 101491 1 0.5
+# mask 101491 on
+# textboxarrow 0 1
+# move 806158 4 0.5
+# mask 806158 on
+@ティルフィング
+やあっ！
+
+;;斬撃演出
+# se "SE_4815"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# se "SE_0794"
+# textboxarrow 0 3
+@魔獣
+ガアアアア…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 806158 0 0.5
+# waitandnext 0.5
+
+# move 101491 3 0.5
+# mask 101491 off
+# waitandnext 0.5
+
+;;ティルフィング（学園編）
+# face 101491 "normal"
+# textboxarrow 0 2
+# textwindow "normal"
+@ティルフィング
+皆さん、ありがとうございます！
+デュリン理事長からお話があります
+ので体育館に急いで下さい
+
+;;背景：体育館：gymnasium
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "gymnasium"
+# alpha 101491 0 0
+# move 0 3 0
+# face 0 "serious2"
+# alpha 0 1 0
+# mask 0 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;デュリン（学園編）
+# voice 9999 "durin_0002"
+# textboxarrow 0 2
+# textwindow "normal"
+@デュリン
+はい、注目！
+天気が荒れたり変な魔物が現れたり
+大変な状況だけど…
+
+;;デュリン（学園編）
+# textboxarrow 0 2
+@デュリン
+みんな感じたわよねっ？
+こことは違う世界で“終焉”に
+抗っているキル姫達のこと
+
+;;デュリン（学園編）
+# face 0 "serious"
+# textboxarrow 0 2
+@デュリン
+世界の終わりなんて
+アタシは認めないわよ
+みんなだってそうでしょ！
+
+;;デュリン（学園編）
+# textboxarrow 0 2
+@デュリン
+この一大事にアタシ達の世界を
+守るのはもちろん、あの子達にも
+希望を伝えてあげるのよ！
+
+;;ティルフィング（学園編）
+# voice 1014 "tyrufing_0063"
+# move 101491 2 0
+# face 101491 "angry"
+# alpha 101491 1 0.5
+# mask 101491 on
+# textboxarrow 0 1
+# move 0 4 0.5
+# mask 0 on
+@ティルフィング
+デュリン、私達は何をすれば
+いいの？
+
+;;デュリン（学園編）
+# face 0 "normal"
+# textboxarrow 0 3
+@デュリン
+決まってるでしょ
+どんな絶望にも負けない、
+アンタ達の強い思いを…
+
+;;デュリン（学園編）
+# textboxarrow 0 3
+@デュリン
+あっちの世界に送るのよ！
+さっき繋がった感覚があったでしょ
+
+;;デュリン（学園編）
+# textboxarrow 0 3
+@デュリン
+それを通して思いが伝わるはず
+希望がマナに変換されて、
+あの子達の力になるわっ
+
+;;新規魔獣の群れが現れる
+# se "SE_0792"
+# alpha 101491 0 0.5
+# alpha 0 0 0.5
+# move 98061571 1 0
+# alpha 98061571 1 0.5
+# mask 98061571 on
+# move 806157 3 0
+# alpha 806157 1 0.5
+# mask 806157 on
+# move 98061572 5 0
+# alpha 98061572 1 0.5
+# mask 98061572 on
+# textboxarrow 0 0
+@魔獣
+ガアアアアアアア！
+
+;;ティルフィング（学園編）
+# voice 1014 "tyrufing_battle_0005"
+# alpha 98061571 0 0.5
+# alpha 806157 0 0.5
+# alpha 98061572 0 0.5
+# move 101491 3 0
+# face 101491 "angry"
+# alpha 101491 1 0.5
+# mask 101491 off
+# textboxarrow 0 2
+@ティルフィング
+ここまで魔物が入ってくるなんて…
+でも、私達は怯みません！
+
+;;ティルフィング（学園編）
+# textboxarrow 0 2
+@ティルフィング
+皆さん
+希望の力を、あまねく世界に
+知らしめましょう！
+
+;;背景：宇宙（ラストバトル空間）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "in_perspective"
+# alpha 101491 0 0
+# move 5103811 3 0
+# face 5103811 "normal"
+# alpha 5103811 1 0
+# mask 5103811 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# waitandnext 1
+
+;;アルマスの身体が光に包まれる演出
+;;ユグドラシルに光が集まった演出と同じものでお願いいたします
+# se "SE_9148"
+#setnextbgmblock 2
+# fadeout "white" 1
+# waitandnext 1.2
+
+# face 5103811 "happy"
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+感じる…
+幾つもの世界から、皆の思いが
+伝わってくるわ！
+
+# voice 530341 "grandepieu_di_0003"
+# alpha 5103811 0 0.5
+# move 5303411 3 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# textboxarrow 0 2
+@グランテピエ
+うん
+どの世界の子達も希望を胸に
+前を向いてる、ね
+
+# textboxarrow 0 2
+@グランテピエ
+この思い…みんなの希望を
+ユグドラシルに届けよう！

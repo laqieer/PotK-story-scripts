@@ -1,0 +1,865 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第５章
+;;第2話　タイトル：世界樹攻略戦
+;;5_2_8
+;;スクリプト最後の背景：ユグドラシルの麓
+;;-----------------------------------------
+# script "lisp"
+# background "command_logo_tree"
+# bgmfile "bgm417" "BgmIntegralNoahBattle003" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;魔獣
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# layer 910013 2
+# alpha 910013 0 0
+# mask 910013 off
+;;魔獣1
+# entry 99100131 910013
+# pos 99100131 3
+# scale 99100131 0.8 0
+# layer 99100131 2
+# alpha 99100131 0 0
+# mask 99100131 off
+;;魔獣2
+# entry 99100132 910013
+# pos 99100132 3
+# scale 99100132 0.8 0
+# layer 99100132 2
+# alpha 99100132 0 0
+# mask 99100132 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 2
+# alpha 3201911 0 0
+# mask 3201911 off
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;蜻蛉切・聖鎖・インドラ
+# body 3302411
+# pos 3302411 3
+# scale 3302411 0.8 0
+# layer 3302411 2
+# alpha 3302411 0 0
+# mask 3302411 off
+;;ペルーン・聖鎖・マスティマ
+# body 3200811
+# pos 3200811 3
+# scale 3200811 0.8 0
+# layer 3200811 3
+# alpha 3200811 0 0
+# mask 3200811 off
+;;神令フォルカス
+# body 5301811
+# pos 5301811 3
+# scale 5301811 0.8 0
+# layer 5301811 2
+# alpha 5301811 0 0
+# mask 5301811 off
+;;神令ヒョウハ
+# body 5402011
+# pos 5402011 3
+# scale 5402011 0.8 0
+# layer 5402011 2
+# alpha 5402011 0 0
+# mask 5402011 off
+;;幻獣ピナーカ
+# body 3400211
+# pos 3400211 3
+# scale 3400211 0.8 0
+# layer 3400211 2
+# alpha 3400211 0 0
+# mask 3400211 off
+;;シェキナー
+# body 3400711
+# pos 3400711 3
+# scale 3400711 0.8 0
+# layer 3400711 2
+# alpha 3400711 0 0
+# mask 3400711 off
+;;エロース
+# body 3400411
+# pos 3400411 3
+# scale 3400411 0.8 0
+# layer 3400411 2
+# alpha 3400411 0 0
+# mask 3400411 off
+;;ロジェスティラ
+# body 5503711
+# pos 5503711 3
+# scale 5503711 0.8 0
+# layer 5503711 2
+# alpha 5503711 0 0
+# mask 5503711 off
+;;ゴーレム
+# body 900012
+# pos 900012 3
+# scale 900012 0.8 0
+# layer 900012 3
+# alpha 900012 0 0
+# mask 900012 off
+;;ゴーレム（クローン1）
+# entry 99000121 900012
+# pos 99000121 3
+# scale 99000121 0.8 0
+# layer 99000121 2
+# alpha 99000121 0 0
+# mask 99000121 off
+;;ゴーレム（クローン2）
+# entry 99000122 900012
+# pos 99000122 3
+# scale 99000122 0.8 0
+# layer 99000122 2
+# alpha 99000122 0 0
+# mask 99000122 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;第2話　タイトル：世界樹攻略戦
+;;//背景：ユグドラシルの麓
+# se "SE_0793"
+# move 99100131 1 0
+# alpha 99100131 1 0
+# mask 99100131 on
+# move 910013 3 0
+# alpha 910013 1 0
+# mask 910013 on
+# move 99100132 5 0
+# alpha 99100132 1 0
+# mask 99100132 on
+# textflame 1 1
+# textboxarrow 0 0
+@魔獣
+ガアアアアアアアア！
+
+# voice 320191 "chihyu_a_0029"
+# alpha 99100131 0 0.5
+# alpha 910013 0 0.5
+# alpha 99100132 0 0.5
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 3201911 4 0
+# face 3201911 "normal"
+# alpha 3201911 1 0.5
+# mask 3201911 on
+# textboxarrow 0 3
+@シユウ
+うがあああっ！
+こうていのおとおりだ！
+
+# se "SE_4601"
+# waitandnext 0.5
+
+# textboxarrow 0 1
+@アスカロン
+道を空けて下さい！
+さもないと…凍てつかせますよ
+
+# se "SE_4830"
+# waitandnext 0.5
+
+# voice 9935 "vang_0011"
+# alpha 3102311 0 0.5
+# alpha 3201911 0 0.5
+# move 211 2 0
+# face 211 "angry"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+# move 3501711 4 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+@ヴァング
+押せ押せ押しまくれ！
+この勢いを止めんじゃねえぞ！
+
+# voice 350171 "grimoire_ge_0007"
+# face 3501711 "angry"
+# textboxarrow 0 3
+@グリモワール
+化け物が次々湧いてくるけど、
+こんなのどうってことないわ！
+
+# se "SE_4301"
+# voice 340021 "pinaka_ge_0004"
+# alpha 211 0 0.5
+# alpha 3501711 0 0.5
+# move 3400411 2 0
+# face 3400411 "normal"
+# alpha 3400411 1 0.5
+# mask 3400411 on
+# move 3400211 4 0
+# face 3400211 "normal"
+# alpha 3400211 1 0.5
+# mask 3400211 on
+# textboxarrow 0 3
+@ピナーカ
+オイラの矢もイイ感じだろ！？
+
+# voice 340041 "erosu_t_0032"
+# textboxarrow 0 1
+@エロース
+は～い
+愛を知らない子達は
+眠っててくださいね～
+
+# se "SE_4301"
+# waitandnext 0.5
+
+# se "SE_0794"
+# sedealy "SE_3001" 0.8
+# alpha 3400411 0 0.5
+# alpha 3400211 0 0.5
+# move 99100131 1 0
+# alpha 99100131 1 0.5
+# mask 99100131 on
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 on
+# move 99100132 5 0
+# alpha 99100132 1 0.5
+# mask 99100132 on
+# textboxarrow 0 0
+@魔獣
+ギャアアアアア…
+
+# alpha 99100131 0 0.5
+# alpha 910013 0 0.5
+# alpha 99100132 0 0.5
+# move 210 3 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+今回は数も多いし、霧を払って
+進むのも難しくないな
+
+# voice 9936 "kamito_0030"
+# textboxarrow 0 2
+@カミト
+このまま進めればいいけど…
+
+# alpha 210 0 0.5
+# move 5402011 3 0
+# face 5402011 "normal"
+# alpha 5402011 1 0.5
+# mask 5402011 off
+# textboxarrow 0 2
+@ヒョウハ
+…………
+
+;;//ヒョウハが退く
+# se "SE_9021"
+# textwindow "close"
+# alpha 5402011 0 0.5
+# waitandnext 0.5
+
+# voice 320191 "chihyu_a_0029"
+# move 3201911 3 0
+# face 3201911 "normal"
+# alpha 3201911 1 0.5
+# mask 3201911 off
+# textboxarrow 0 2
+# textwindow "normal"
+@シユウ
+うがあああぁぁ！
+ヒョウハをみつけたぞ！
+
+# face 3201911 "angry"
+# textboxarrow 0 2
+@シユウ
+にげるな！
+シユウとたたかえ！！
+
+# se "SE_5575"
+# textwindow "close"
+# leftout 3201911 0.5
+# waitandnext 0.5
+
+# voice 9936 "kamito_0013"
+# alpha 3201911 0 0
+# move 210 3 0
+# face 210 "angry"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+シユウ、一人で前に出たら
+危ないよ！
+
+# voice 9935 "vang_0048"
+# move 211 2 0
+# face 211 "angry"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+# move 210 4 0.5
+# mask 210 on
+@ヴァング
+逆だ、カミト！
+俺達がシユウと離れねぇように
+走るんだよ！
+
+# voice 310231 "ascalon_a_battle_0001"
+# alpha 211 0 0.5
+# alpha 210 0 0.5
+# move 3102311 1 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# move 3200811 3 0
+# face 3200811 "normal"
+# alpha 3200811 1 0.5
+# mask 3200811 on
+# move 3302411 5 0
+# face 3302411 "normal"
+# alpha 3302411 1 0.5
+# mask 3302411 on
+@アスカロン
+もし罠だったとしても、
+私が打ち破ります！
+
+# voice 330241 "tonbokiri_t_battle_0001"
+# textboxarrow 0 3
+@蜻蛉切
+盛り上がってきたわね！
+さらにド派手に盛り上げるわよ！
+
+# voice 320081 "perun_t_unit_0010"
+# face 3200811 "angry"
+# textboxarrow 0 2
+@ペルーン
+悪者は絶対に逃がさないよ！
+暗黒パワーでやっつける！
+
+;;//キル姫達が走っていく
+# se "SE_5575"
+# textwindow "close"
+# leftout 3102311 0.3
+# waitandnext 0.3
+
+# se "SE_5575"
+# leftout 3200811 0.4
+# waitandnext 0.3
+
+# se "SE_5575"
+# leftout 3302411 0.5
+# waitandnext 0.5
+
+# alpha 3102311 0 0
+# alpha 3200811 0 0
+# alpha 3302411 0 0
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+待ってよ、兄貴…！
+
+;;//暗転挟む
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 210 0 0
+# move 5402011 3 0
+# face 5402011 "normal"
+# alpha 5402011 1 0
+# mask 5402011 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgmfile "bgm424_block" "BgmIntegralNoahCommand" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@ヒョウハ
+…………
+
+# alpha 5402011 0 0.5
+# move 211 2 0
+# face 211 "normal"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+# move 210 4 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+@ヴァング
+あっけねえなぁ
+ユグドラシルは目の前だぜ
+
+# face 210 "angry"
+# textboxarrow 0 3
+@カミト
+フォルカスは…
+あ！あそこだっ
+
+;;//フォルカスがヒョウハの隣に現れる
+# textwindow "close"
+# alpha 211 0 0.5
+# alpha 210 0 0.5
+# move 5402011 2 0
+# face 5402011 "normal"
+# alpha 5402011 1 0.5
+# mask 5402011 on
+# waitandnext 0.8
+
+# se "SE_5200"
+# move 5301811 4 0
+# face 5301811 "normal"
+# alpha 5301811 1 0.5
+# mask 5301811 on
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# textwindow "normal"
+@フォルカス
+…………
+
+;;//フォルカスが立ち去る
+# se "SE_0740"
+# textwindow "close"
+# alpha 5301811 0 0.5
+# waitandnext 0.8
+
+# alpha 5402011 0 0.5
+# move 211 2 0
+# face 211 "usual"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+# move 210 4 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+# textwindow "normal"
+@ヴァング
+よし！
+ヒョウハは俺達が押さえる
+
+# textboxarrow 0 1
+@ヴァング
+お前はフォルカスの方へ走れ！
+
+# voice 9936 "kamito_0003"
+# face 210 "happy"
+# textboxarrow 0 3
+@カミト
+うん…
+ありがとう、兄貴
+
+# voice 9935 "vang_0003"
+# face 211 "normal"
+# textboxarrow 0 1
+@ヴァング
+気にすんな
+ここが正念場だぜ！
+
+# voice 320191 "chihyu_a_0010"
+# alpha 211 0 0.5
+# alpha 210 0 0.5
+# move 5402011 2 0
+# face 5402011 "normal"
+# alpha 5402011 1 0.5
+# mask 5402011 on
+# move 3201911 4 0
+# face 3201911 "angry"
+# alpha 3201911 1 0.5
+# mask 3201911 on
+# textboxarrow 0 3
+@シユウ
+うがあああぁぁ！
+もうにげられないぞっ
+
+# voice 540201 "hyoha_c_0005"
+# face 5402011 "happy"
+# textboxarrow 0 1
+@ヒョウハ
+ははっ！
+そうだな
+もう逃げ場はないな！
+
+#setnextbgmblock 1
+# face 5402011 "normal"
+# textboxarrow 0 1
+@ヒョウハ
+これでいいんだろ、ロジェ
+第三段階、完了だ！
+
+# voice 9936 "kamito_0023"
+# alpha 5402011 0 0.5
+# alpha 3201911 0 0.5
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+えっ…？
+
+# voice 550371 "logistille_c_0030"
+# alpha 210 0 0.5
+# move 5503711 3 0
+# face 5503711 "happy"
+# alpha 5503711 1 0.5
+# mask 5503711 off
+# textboxarrow 0 2
+@ロジェスティラ
+は、はいっ
+ありがとうございますっ
+
+# alpha 5503711 0 0.5
+# move 211 2 0
+# face 211 "angry"
+# alpha 211 1 0.5
+# mask 211 on
+# textboxarrow 0 1
+# move 210 4 0
+# face 210 "irregular"
+# alpha 210 1 0.5
+# mask 210 on
+@ヴァング
+誰だ、あいつ！？
+くそっ…コマンドキラーズが
+戻ってきてたのかよっ
+
+# voice 9936 "kamito_0018"
+# face 210 "normal"
+# textboxarrow 0 3
+@カミト
+兄貴、どうしようっ…？
+
+# textboxarrow 0 1
+@ヴァング
+関係ねえ！
+まとめてぶっ飛ばせ！
+
+# voice 320191 "chihyu_a_0029"
+# alpha 211 0 0.5
+# alpha 210 0 0.5
+# move 5402011 2 0
+# face 5402011 "normal"
+# alpha 5402011 1 0.5
+# mask 5402011 on
+# move 3201911 4 0
+# face 3201911 "angry"
+# alpha 3201911 1 0.5
+# mask 3201911 on
+# textboxarrow 0 3
+@シユウ
+うがあああぁぁ！
+
+# voice 540201 "hyoha_c_0007"
+# textboxarrow 0 1
+@ヒョウハ
+ふふんっ、遅いんだよ
+あんたら全員、詰んでるぞ！
+
+# alpha 5402011 0 0.5
+# alpha 3201911 0 0.5
+# move 900012 3 0
+# alpha 900012 1 0.5
+# mask 900012 off
+# textboxarrow 0 2
+@ゴーレム
+ムウウウウウウウウウ
+
+;;//ゴーレムが何体も現れる
+# textwindow "close"
+# alpha 900012 0 0.5
+# waitandnext 0.5
+
+# se "SE_5613"
+# sedelay "SE_5620" 0.8
+# move 99000121 1 0
+# alpha 99000121 1 0.5
+# mask 99000121 on
+# waitandnext 0.6
+
+# move 900012 3 0
+# alpha 900012 1 0.5
+# mask 900012 on
+# waitandnext 0.6
+
+# move 99000122 5 0
+# alpha 99000122 1 0.5
+# mask 99000122 on
+# waitandnext 1
+
+# voice 350171 "grimoire_ge_0009"
+# alpha 99000121 0 0.5
+# alpha 900012 0 0.5
+# alpha 99000122 0 0.5
+# move 3501711 3 0
+# face 3501711 "surprise"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+# textwindow "normal"
+@グリモワール
+地面からゴーレムが何体も…
+どういうつもり？
+
+# voice 340071 "shekina_t_battle_0008"
+# alpha 3501711 0 0.5
+# move 3400711 3 0
+# face 3400711 "angry"
+# alpha 3400711 1 0.5
+# mask 3400711 off
+# textboxarrow 0 2
+@シェキナー
+きゃああああっ！
+
+# alpha 3400711 0 0.5
+# move 3400211 3 0
+# face 3400211 "angry"
+# alpha 3400211 1 0.5
+# mask 3400211 off
+# textboxarrow 0 2
+@ピナーカ
+このっ…
+邪魔なんだよ！
+
+# voice 9936 "kamito_0024"
+# alpha 3400211 0 0.5
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+えぇぇっ！？
+ゴーレムがピナーカを取り囲んだ…
+まさかっ？
+
+# textboxarrow 0 2
+@カミト
+後ろのシェキナー達も囲まれてるっ
+
+# voice 340041 "erosu_t_0018"
+# alpha 210 0 0.5
+# move 3400411 3 0
+# face 3400411 "sad"
+# alpha 3400411 1 0.5
+# mask 3400411 off
+# textboxarrow 0 2
+@エロース
+どいてくださ～い…
+これじゃ弓が使えませ～ん
+
+# voice 350171 "grimoire_ge_0022"
+# alpha 3400411 0 0.5
+# move 3501711 3 0
+# face 3501711 "surprise"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+@グリモワール
+壁っ？
+魔獣を壁に使ってるっていうの！？
+
+# voice 330241 "tonbokiri_t_0007"
+# alpha 3501711 0 0.5
+# move 900012 2 0
+# alpha 900012 1 0.5
+# mask 900012 on
+# move 3302411 4 0
+# face 3302411 "angry"
+# alpha 3302411 1 0.5
+# mask 3302411 on
+# textboxarrow 0 3
+@蜻蛉切
+こんな土塊人形、ド派手に壊して
+あげるわよ！
+
+# se "SE_4200"
+# waitandnext 0.5
+
+;;//ゴーレムが蜻蛉切の攻撃を弾く
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 330241 "tonbokiri_t_0024"
+# face 3302411 "surprise"
+# textboxarrow 0 3
+# textwindow "normal"
+@蜻蛉切
+ひゃあっ…？
+どうなってるの！？
+
+# alpha 900012 0 0.5
+# alpha 3302411 0 0.5
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+@グリモワール
+魔術よ！
+そいつら、魔術で強化されてる
+
+# textboxarrow 0 2
+@グリモワール
+このワタシの前で魔術を使う
+なんて、良い度胸してるわね！
+
+# voice 350171 "grimoire_ge_unit_0009"
+# textboxarrow 0 2
+@グリモワール
+報いを受けるがいいわ！
+
+;;//炎演出
+# se "SE_4830"
+# envbody 1000 7 14
+# effectstart 1000
+# waitandnext 1
+
+;;//炎演出が消える
+# sestop "SE_4830"
+# effectskip 1000
+# waitandnext 0.5
+
+# voice 350171 "grimoire_ge_0017"
+# face 3501711 "surprise"
+# textboxarrow 0 2
+@グリモワール
+そんなっ…
+ワタシの炎が…消えた…？
+
+# alpha 3501711 0 0.5
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+@カミト
+どうしたの、グリモワールっ？
+
+# voice 350171 "grimoire_ge_0013"
+# alpha 210 0 0.5
+# move 3501711 3 0
+# face 3501711 "surprise"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+@グリモワール
+このワタシが…グリモワールが
+魔術で後れを取るはずがないわ！
+どうなってるのよっ！？
+
+# voice 540201 "hyoha_c_0007"
+# alpha 3501711 0 0.5
+# move 5402011 3 0
+# face 5402011 "normal"
+# alpha 5402011 1 0.5
+# mask 5402011 off
+# textboxarrow 0 2
+@ヒョウハ
+だから言っただろ
+もう詰んでるんだって
+
+# textboxarrow 0 2
+@ヒョウハ
+あんたら、みんな…
+ロジェの作戦にはまったんだよ
+
+# textboxarrow 0 2
+@ヒョウハ
+さすがだな、ロジェ！
+お前、本当に頭いいよな！！
+
+# voice 550371 "logistille_c_0042"
+# alpha 5402011 0 0.5
+# move 5503711 3 0
+# face 5503711 "shy"
+# alpha 5503711 1 0.5
+# mask 5503711 off
+# textboxarrow 0 2
+@ロジェスティラ
+あのあのっ…
+えへえへっ…♪
+
+# voice 9936 "kamito_0023"
+# alpha 5503711 0 0.5
+# move 211 2 0
+# face 211 "irregular"
+# alpha 211 1 0.5
+# mask 211 on
+# move 210 4 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+@カミト
+全部、彼女の作戦…？
+
+# voice 9935 "vang_0039"
+# textboxarrow 0 1
+@ヴァング
+ちっ…
+俺達はおびき寄せられたって
+ことかよ…
+
+# alpha 211 0 0.5
+# alpha 210 0 0.5
+# move 5402011 3 0
+# face 5402011 "angry"
+# alpha 5402011 1 0.5
+# mask 5402011 off
+# textboxarrow 0 2
+@ヒョウハ
+さあ、これで心置きなく
+全力でやれるぞぉぉっ！
+
+# voice 540201 "hyoha_c_0029"
+# textboxarrow 0 2
+@ヒョウハ
+みんなまとめて、
+超爆・ぶっ飛ばしてやる！！

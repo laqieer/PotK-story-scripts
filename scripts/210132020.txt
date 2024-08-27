@@ -1,0 +1,418 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第１３章 章タイトル「ラルゴカタストロフィ―攪乱―」
+;;第2話－２　タイトル：暴走の真実
+;;2_2_0
+;;スクリプト最後の背景：マサムネ城
+;;-----------------------------------------
+# script "lisp"
+# background "masamune_castle"
+# bgm "stop"
+;;-----------------------------------------
+;;擬装フライシュッツ
+# body 5502721
+# pos 5502721 3
+# scale 5502721 0.8 0
+# layer 5502721 3
+# alpha 5502721 0 0
+# mask 5502721 off
+;;ヘレナ・D. plug・ロキ
+# body 5302811
+# pos 5302811 3
+# scale 5302811 0.8 0
+# layer 5302811 2
+# alpha 5302811 0 0
+# mask 5302811 off
+;;ニール
+# body 162
+# pos 162 3
+# scale 162 0.8 0
+# layer 162 2
+# alpha 162 0 0
+# mask 162 off
+;;-----------------------------------------
+;;回想用
+# imageset 0 "bg_white_circle"
+# imagelayer 0 3
+# imagealpha 0 0 0
+# imagescale 0 1.2 0
+;;-----------------------------------------
+;;第2話－２　タイトル：暴走の真実
+;;//背景：マサムネ城
+# voice 5027 "freischotz_0022"
+# move 5502721 3 0
+# face 5502721 "surprise"
+# alpha 5502721 1 0
+# mask 5502721 off
+# textflame 1 1
+# textboxarrow 0 2
+@フライシュッツ
+ううっ…
+あれ？
+あたし…
+
+# bgmfile "bgm463" "BgmIntegralNoahDisrupters" 0
+# voice 9952 "nir_0044"
+# alpha 5502721 0 0.5
+# move 5302811 2 0
+# face 5302811 "usual"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# move 162 4 0
+# alpha 162 1 0.5
+# mask 162 on
+# textboxarrow 0 3
+@ニール
+ヘレナ、ヘレナ！
+フライシュッツが目を覚ましたわ！
+
+# voice 530281 "herena_di_0007"
+# move 5302811 2 0
+# face 5302811 "normal"
+# alpha 5302811 1 0.5
+# mask 5302811 on
+# textboxarrow 0 1
+@ヘレナ
+おはよう
+よく眠れたかな…くふっ
+
+# sedelay "SE_5200" 0.6
+# voice 5027 "freischotz_0037"
+# move 5302811 1 0.5
+# move 5502721 3 0
+# face 5502721 "sad"
+# alpha 5502721 1 0.5
+# mask 5502721 on
+# textboxarrow 0 2
+# move 162 5 0.5
+# alpha 162 1 0.5
+# mask 162 on
+@フライシュッツ
+ヘレナちゃん…
+良かった、無事だったんだね
+はぐ…痛たたたっ…
+
+# face 5302811 "usual"
+# textboxarrow 0 1
+@ヘレナ
+まだ動かない方がいい
+パラシュの一撃は強烈だったからな
+
+# textboxarrow 0 3
+@ニール
+武具種の相性も悪いわよねー
+
+# voice 5027 "freischotz_0031"
+# textboxarrow 0 2
+@フライシュッツ
+ごめんね、ヘレナちゃん…
+せっかくお膳立てしてくれたのに
+上手くやれなくて…
+
+# textboxarrow 0 1
+@ヘレナ
+別にヘレナは気にしてない
+あれは咄嗟の思いつきに過ぎない
+ものだったからな
+
+;;//回想シーン
+# se "SE_0742"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "masamune_arena"
+# alpha 5302811 0 0
+# alpha 5502721 0 0
+# alpha 162 0 0
+# move 5302811 2 0
+# face 5302811 "usual"
+# alpha 5302811 1 0
+# mask 5302811 on
+# move 5502721 4 0
+# face 5502721 "angry"
+# alpha 5502721 1 0
+# mask 5502721 on
+# imagepos 0 0 0
+# imagealpha 0 1 0
+# waitandnext 0.1
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：マサムネ城内
+# textboxarrow 0 3
+# textwindow "normal"
+@フライシュッツ
+おねーちゃんは逃げるわけには
+いかないのっ
+みんなのために！
+
+# textboxarrow 0 3
+@フライシュッツ
+おねーちゃんは戦うよ！
+
+# voice 530281 "herena_di_0039"
+# textboxarrow 0 1
+@ヘレナ
+ふ～ん
+だったら…
+
+;;//ヘレナがフライシュッツに槍を突きつける
+# se "SE_5207"
+# waitandnext 0.5
+
+# face 5302811 "angry"
+# textboxarrow 0 1
+@ヘレナ
+ヘレナはアナタを止める
+力尽くで
+
+# textboxarrow 0 3
+@フライシュッツ
+ヘレナちゃんはインテグラルキラーズ
+の仲間なの…？
+
+# voice 530281 "herena_di_0034"
+# face 5302811 "usual"
+# textboxarrow 0 1
+@ヘレナ
+違う
+ヘレナはディスラプターズだ
+
+# face 5502721 "surprise"
+# textboxarrow 0 3
+@フライシュッツ
+ディスラプターズ？
+
+# textboxarrow 0 1
+@ヘレナ
+それについては、また今度にしよう
+とにかくヘレナはアナタ達が戦うのを
+止める
+
+# textboxarrow 0 1
+@ヘレナ
+インテグラルキラーズとアナタ達が
+争っても何も益はないんだ
+それより…
+
+# textboxarrow 0 1
+@ヘレナ
+アナタ達には
+もっとやるべきことがある
+
+# se "SE_0648"
+# textwindow "close"
+# move 5502721 3 0.2
+# face 5502721 "happy"
+# waitandnext 0.2
+
+# textboxarrow 0 2
+# textwindow "normal"
+@フライシュッツ
+ヘレナちゃん…
+はぐだよ、はぐ～っ
+
+# voice 530281 "herena_di_0024"
+# face 5302811 "surprise"
+# textboxarrow 0 1
+@ヘレナ
+わわっ！？
+こんなときに…何をするっ？
+
+# voice 9952 "nir_0027"
+# move 162 5 0
+# alpha 162 1 0.5
+# mask 162 on
+# textboxarrow 0 3
+@ニール
+ヘレナに槍を突きつけられてるのに
+変な子ねっ
+
+# textwindow "close"
+# move 5302811 1 0.2
+# waitandnext 0.2
+
+# face 5502721 "normal"
+# textboxarrow 0 2
+# textwindow "normal"
+@フライシュッツ
+だって～…
+おねーちゃん、感激したんだよ～
+
+# textboxarrow 0 2
+@フライシュッツ
+ヘレナちゃんは、あたし達と
+マサムネちゃん達の間を取り持とうと
+してくれてたんだね～
+
+# textboxarrow 0 1
+@ヘレナ
+そこまでは言ってないが…
+最終的にそうなることを狙っている
+だから――
+
+# voice 5027 "freischotz_0004"
+# face 5502721 "happy"
+# textboxarrow 0 2
+@フライシュッツ
+あたしも戦わないで済むなら、
+そっちの方が良いと思ってるよ！
+
+# textboxarrow 0 2
+@フライシュッツ
+もっとマサムネちゃん達とお話
+できたらいいのにね…
+
+# face 5302811 "sad"
+# textboxarrow 0 1
+@ヘレナ
+調子が狂うな…
+ヘレナはこういうタイプは苦手だ…
+
+# voice 9952 "nir_0007"
+# textboxarrow 0 3
+@ニール
+ふふふっ♪
+頑張って、ヘレナ
+
+# voice 530281 "herena_di_0032"
+# face 5302811 "usual"
+# textboxarrow 0 1
+@ヘレナ
+そうだな…
+フライシュッツ、ヘレナの言うことを
+聞いてくれたら…
+
+# textboxarrow 0 1
+@ヘレナ
+マサムネ達と話をする機会を
+作ってあげよう
+
+# textboxarrow 0 2
+@フライシュッツ
+分かった！
+おねーちゃん、何でも言うこと
+聞いちゃうよ～っ
+
+# textboxarrow 0 1
+@ヘレナ
+それなら、しばらく捕まった振りを
+してもらおうか
+
+;;//回想終了
+# se "SE_11762"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "masamune_castle"
+# alpha 5302811 0 0
+# alpha 5502721 0 0
+# alpha 162 0 0
+# move 5302811 1 0
+# face 5302811 "sad"
+# alpha 5302811 1 0
+# mask 5302811 on
+# move 5502721 3 0
+# face 5502721 "normal"
+# alpha 5502721 1 0
+# mask 5502721 on
+# move 162 5 0
+# alpha 162 1 0
+# mask 162 on
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：マサムネ城
+# bgm "stop"
+# textboxarrow 0 1
+# textwindow "normal"
+@ヘレナ
+もう少し、実のある話を聞き出せれば
+良かったんだが…
+
+# textboxarrow 0 3
+@ニール
+“終焉”について聞けると思ったら
+マサムネが攻撃してきたものねぇ
+
+# bgmfile "bgm409" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 1
+@ヘレナ
+“終焉”…そう“終焉”だ
+そのせいで暴走も頻発してる…
+
+# voice 5027 "freischotz_0023"
+# face 5502721 "surprise"
+# textboxarrow 0 2
+@フライシュッツ
+えっ…？
+ヘレナちゃん…暴走って…
+
+# face 5502721 "normal"
+# textboxarrow 0 2
+@フライシュッツ
+天上世界で増えてきてるっていう
+あの暴走のこと？
+それと“終焉”は関係があるの？
+
+# face 5302811 "usual"
+# textboxarrow 0 1
+@ヘレナ
+ああ、アナタ達は知らなかったのか
+そうか…通りで…
+
+# textboxarrow 0 1
+@ヘレナ
+その話をしておいた方が良かったの
+かもしれないな…
+
+# textboxarrow 0 3
+@ニール
+ヘレナが突然現れて暴走の話をしても
+誰も信じなかったんじゃないかしら？
+
+# voice 530281 "herena_di_0004"
+# face 5302811 "normal"
+# textboxarrow 0 1
+@ヘレナ
+ふふっ…
+ヘレナにもその懸念はあったよ
+
+# voice 530281 "herena_di_0007"
+# face 5302811 "normal"
+# textboxarrow 0 1
+@ヘレナ
+ヘレナはこんなに純粋なのに、
+何故か疑われやすいんだよな…くふっ
+
+# face 5502721 "angry"
+# textboxarrow 0 2
+@フライシュッツ
+ヘレナちゃん！
+おねーちゃんに教えてっ
+“終焉”と暴走のこと…！
+
+# face 5302811 "surprise"
+# textboxarrow 0 1
+@ヘレナ
+おや？
+フライシュッツはヘレナの言うことを
+信じるのかい？
+
+# face 5502721 "happy"
+# textboxarrow 0 2
+@フライシュッツ
+もちろんだよ～
+ヘレナちゃんは良い子だからっ
+
+# face 5302811 "usual"
+# textboxarrow 0 1
+@ヘレナ
+…やっぱり、こういうタイプは
+苦手だ

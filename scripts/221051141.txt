@@ -1,0 +1,400 @@
+;;-----------------------------------------
+;;【ファントムオブキル】クリスマス2019_イベントシナリオ
+;;【EP3】
+;;EP3_1
+;;スクリプト最後の背景：森（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgm "bgm032" 0
+;;-----------------------------------------
+;;グリモワール（クリスマス）
+# body 3501721
+# pos 3501721 3
+# scale 3501721 0.8 0
+# layer 3501721 2
+# alpha 3501721 0 0
+# mask 3501721 off
+;;リサナウト（クリスマス）
+# body 3203021
+# pos 3203021 3
+# scale 3203021 0.8 0
+# layer 3203021 2
+# alpha 3203021 0 0
+# mask 3203021 off
+;;-----------------------------------------
+;;【EP3】木々と魔術書
+;;背景：森（昼）
+# move 3501721 3 0
+# face 3501721 "usual"
+# alpha 3501721 1 0
+# mask 3501721 off
+# textflame 1 1
+# textboxarrow 0 2
+@グリモワール
+人間の死と違って
+枯れた木にはまだ生命の力が
+残っている…要はそれを増強するだけ
+
+# textboxarrow 0 2
+@グリモワール
+けれど、魔術だけでは
+どうすることもできないから
+自然の力を分けてもらうの
+
+# textboxarrow 0 2
+@グリモワール
+そのための材料は
+この森ですべて手に入るはず
+
+# alpha 3501721 0 0.5
+# move 3203021 3 0
+# face 3203021 "sad"
+# alpha 3203021 1 0.5
+# mask 3203021 off
+# textboxarrow 0 2
+@リサナウト
+…………
+
+# voice 350171 "grimoire_ge_0009"
+# move 3501721 2 0
+# face 3501721 "usual"
+# alpha 3501721 1 0.5
+# mask 3501721 on
+# textboxarrow 0 1
+# move 3203021 4 0.5
+# mask 3203021 on
+@グリモワール
+…なによ黙りこくって
+キミが静かだと気味が悪いわ
+
+# face 3203021 "usual"
+# textboxarrow 0 3
+@リサナウト
+グリモワールが
+どうして急にそんな
+積極的になったんだろうって思って
+
+# textboxarrow 0 1
+@グリモワール
+死者の想い、死者の怒り
+そして、ワタシにはあの木が
+泣いているように見えたのよ
+
+# emotionbody 1001 2 3203021 10 290
+# effectpattern 1001 1 1
+# effectstart 1001
+# voice 2030 "risanautr_l_0022"
+# face 3203021 "surprise"
+# textboxarrow 0 3
+@リサナウト
+木が泣いている？
+あなたはそんな詩的なことを
+言うタイプじゃないと思っていたわ
+
+# textboxarrow 0 1
+@グリモワール
+木とは本来
+ただそこにあるだけのものだけど
+それが泣いているように見えた
+
+# textboxarrow 0 1
+@グリモワール
+それはあの子の母親の想いが
+強く残っているということ
+ワタシが動く理由としては十分
+
+# voice 2030 "risanautr_l_0039"
+# face 3203021 "usual"
+# textboxarrow 0 3
+@リサナウト
+へぇ…当主様の言う通り
+なかなか優しいところがあるのね
+
+# emotionbody 1002 9 3501721 -30 140
+# effectpattern 1002 6 0
+# effectstart 1002
+# face 3501721 "normal"
+# textboxarrow 0 1
+@グリモワール
+ばっ、バカなことを言わないで
+消し炭になりたいの！？
+
+# effectskip 1002
+# textboxarrow 0 1
+@グリモワール
+キミと話していると
+ワタシのペースまで乱れる
+先に行かせてもらうわ！
+
+# se "SE_0719"
+# alpha 3501721 0 0.5
+# face 3203021 "surprise"
+# textboxarrow 0 3
+@リサナウト
+あっ、そっちは
+
+# emotionbody 1003 1 3501721 10 280
+# effectpattern 1003 2 0
+# effectstart 1003
+# voice 350171 "grimoire_ge_0023"
+# alpha 3203021 0 0.5
+# move 3501721 3 0
+# face 3501721 "surprise"
+# alpha 3501721 1 0.5
+# mask 3501721 off
+# textboxarrow 0 2
+@グリモワール
+へひゃあっ！？
+
+;;演出：画面揺れ、グリモワールが転んだイメージ
+# se "SE_0683"
+# sedelay "SE_9347" 0.5
+# waitandnext 0.5
+
+# shake 0 0.5
+# waitandnext 0.5
+
+# move 3501721 2 0.5
+# mask 3501721 on
+# move 3203021 4 0
+# face 3203021 "usual"
+# alpha 3203021 1 0.5
+# mask 3203021 on
+# textboxarrow 0 3
+@リサナウト
+そこは湿った苔が豊富で
+あなたは足を滑らせてしまうわ
+
+# face 3501721 "angry"
+# textboxarrow 0 1
+@グリモワール
+…身をもって体感したから
+説明は結構よ、リサナウト
+
+# textboxarrow 0 1
+@グリモワール
+はぁ…キミが相手だと
+ワタシの怒りは
+収まることがなさそうよ
+
+# voice 2030 "risanautr_l_0039"
+# textboxarrow 0 3
+@リサナウト
+へえ、それはグリモワールと
+私の親密度が上がったということ？
+
+# textboxarrow 0 1
+@グリモワール
+上がったというなら
+キミに対する
+怒りの炎の温度が正解かしらね
+
+# textboxarrow 0 3
+@リサナウト
+燃えるような恋がしたいと
+人間たちは言うものね
+友人関係もそうなのかしら
+
+# textboxarrow 0 1
+@グリモワール
+…少しは人の話を聞いたらどうなの？
+森でこんな騒がしい気持ちになる
+なんて初めてのことよ
+
+# textboxarrow 0 3
+@リサナウト
+初めてを共有することは
+ふたりをより親密に…
+だめよグリモワール！
+
+# textboxarrow 0 3
+@リサナウト
+これ以上はポイントと交換よ
+どうする？
+
+# textboxarrow 0 1
+@グリモワール
+はぁ…
+付き合ってられない
+先に行かせてもらうわ
+
+# se "SE_0719"
+# alpha 3501721 0 0.5
+# face 3203021 "surprise"
+# textboxarrow 0 3
+@リサナウト
+あ、そこは…
+
+# emotionbody 1004 1 3501721 10 280
+# effectpattern 1004 1 0
+# effectstart 1004
+# voice 350171 "grimoire_ge_0023"
+# alpha 3203021 0 0.5
+# move 3501721 3 0
+# face 3501721 "surprise"
+# alpha 3501721 1 0.5
+# mask 3501721 off
+# textboxarrow 0 2
+@グリモワール
+ひゃあんっ！
+
+;;演出：画面揺れ、グリモワールが転んだイメージ
+# se "SE_0683"
+# sedelay "SE_9347" 0.5
+# waitandnext 0.5
+
+# shake 0 0.5
+# waitandnext 0.5
+
+# move 3501721 2 0.5
+# mask 3501721 on
+# move 3203021 4 0
+# face 3203021 "usual"
+# alpha 3203021 1 0.5
+# mask 3203021 on
+# textboxarrow 0 3
+@リサナウト
+地面がぬかるんでるから
+転んだりしないようにね
+
+# face 3501721 "angry"
+# textboxarrow 0 1
+@グリモワール
+…ご忠告どうも
+おかげで泥だらけよ
+
+# textboxarrow 0 3
+@リサナウト
+あ、あとそのままそこにいると…
+
+;;演出：鳥のフンがグリモワールの頭の上に落ちたような演出は可能でしょうか。グリモワールが少し沈む、のような。
+# se "SE_9230"
+# sedelay "SE_9228" 0.4
+# waitandnext 0.5
+
+# emotionbody 1005 2 3501721 10 240
+# effectpattern 1005 1 1
+# effectstart 1005
+# voice 350171 "grimoire_ge_0022"
+# face 3501721 "usual"
+# textboxarrow 0 1
+@グリモワール
+ん？
+なによこれ？
+
+# textboxarrow 0 3
+@リサナウト
+上に鳥の巣があって
+鳥のフンが降ってくるわ
+
+# emotionbody 1006 6 3501721 50 200
+# effectpattern 1006 1 1
+# effectstart 1006
+# voice 350171 "grimoire_ge_0010"
+# face 3501721 "angry"
+# textboxarrow 0 1
+@グリモワール
+それは本当に早く言いなさいよ！
+
+# textboxarrow 0 1
+@グリモワール
+そもそも、本当に起こることが
+わかっているのなら
+先に行くのがキミの役目でしょ！
+
+# emotionbody 1007 6 3203021 50 220
+# effectpattern 1007 1 1
+# effectstart 1007
+# voice 2030 "risanautr_l_0014"
+# face 3203021 "angry"
+# textboxarrow 0 3
+@リサナウト
+確定事象を伝えようとしているのに
+そっちが
+話を聞かないんじゃない
+
+# face 3203021 "surprise"
+# textboxarrow 0 3
+@リサナウト
+あっ
+
+;;演出：リサナウト、横へスライドしていく
+# se "SE_4201"
+# textwindow "close"
+# rightout 3203021 0.5
+# waitandnext 0.5
+
+# voice 350171 "grimoire_ge_0012"
+# alpha 3203021 0 0
+# textboxarrow 0 1
+# textwindow "normal"
+@グリモワール
+…その確定事象とやらを
+自分でも使いこなしてから
+ワタシにモノを言いなさい
+
+;;リサナウト（セリフのみ）
+# serif 1
+@リサナウト
+私が木のツタに足を取られて
+逆さ吊りになっているのはわざとよ
+
+# textboxarrow 0 1
+@グリモワール
+どこにわざと逆さ吊りに
+なる奴がいるっていうのよ！
+
+;;リサナウト（セリフのみ）
+# serif 1
+@リサナウト
+おかげで高いところから
+森を見られて
+わかったことがあるわ
+
+;;リサナウト（セリフのみ）
+# serif 1
+@リサナウト
+ハルモニアの兵士が
+この森に入ってきているみたい
+見回り…かしら？
+
+# bgmfile "bgm073_074" "BgmChristmas001" 0
+# textboxarrow 0 1
+@グリモワール
+…不意に遭遇するのも面倒ね
+先手を打って焼き尽くしてやるわ
+
+;;リサナウト（セリフのみ）
+# serif 1
+@リサナウト
+いいわね、それ私も乗ったわ
+グリモワールに6ポイントあげる
+
+# textboxarrow 0 1
+@グリモワール
+…怒りは十分溜まっているわ！
+
+;;演出：グリモワールout
+# se "SE_0719"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# alpha 3501721 0 0.5
+# waitandnext 0.5
+
+# emotionbody 1008 10 3203021 -60 220
+# effectpattern 1008 4 3
+# effectstart 1008
+# voice 2030 "risanautr_l_0038"
+# move 3203021 3 0
+# face 3203021 "surprise"
+# alpha 3203021 1 0.5
+# mask 3203021 off
+# textboxarrow 0 2
+# textwindow "normal"
+@リサナウト
+あ、待って
+ツタが外れないの
+待ってぐりもわあああるうううう！

@@ -1,0 +1,246 @@
+;;-----------------------------------------
+;;SEA5章_15-1
+;;-----------------------------------------
+# script "lisp"
+# background "101_cave"
+# bgm "bgm023_024" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 3
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 5
+# scale 6504011 0.8 0
+# layer 6504011 3
+# mask 6504011 off
+# alpha 6504011 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 1
+# scale 6603811 0.8 0
+# layer 6603811 2
+# alpha 6603811 0 0
+;;ミネルヴァ
+# body 302511
+# pos 302511 4
+# scale 302511 0.8 0
+# layer 302511 2
+# mask 302511 off
+# alpha 302511 1 0
+;;魔獣
+# body 910013
+# pos 910013 2
+# scale 910013 0.8 0
+# layer 910013 4
+# alpha 910013 1 0
+# reversal 910013 0
+# body 920014
+# pos 920014 1
+# scale 920014 0.8 0
+# layer 920014 4
+# alpha 920014 0 0
+# reversal 920014 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：地下空洞：101_cave
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_0792"
+# face 302511 "angry"
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 1
+@魔獣
+ガアアアアアア…！
+
+# voice 3025 "minerva_battle_0002"
+# textwindow "nomal"
+# textboxarrow 0 3
+@ミネルヴァ
+はぁっ！
+
+# se "SE_4817"
+# fadein "white" 0.5
+# move 910013 1 0.3
+# move 302511 3 0.2
+# textboxarrow 0 0
+# waitandnext 1
+
+# se "SE_0794"
+# textboxarrow 0 1
+@魔獣
+ガアアアアアアア…
+
+;;魔獣が倒れる
+# se "SE_3001"
+# alpha 910013 0 0.6
+# textwindow "close"
+# waitandnext 2
+
+;;別の魔獣が現れる
+# se "SE_0792"
+# move 302511 4 0.4
+# move 920014 2 0.3
+# alpha 920014 1 0.3
+# textwindow "toge"
+# textboxarrow 0 1
+@魔獣
+ガアアアアアアアア！！
+
+# voice 3025 "minerva_0037"
+# textboxarrow 0 3
+# textwindow "normal"
+@ミネルヴァ
+くっ…
+私一人ではとても対応しきれません
+このままでは…
+
+;;魔獣の群れが三人を囲む
+# alpha 920014 0 0.3
+# alpha 302511 0 0.3
+# voice 9917 "mimir_navikan_0046"
+# face 270 "angry"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+ま、マスター様っ
+ミーミルの後ろにっ
+必ず御身を守ってみせます！
+
+;;選択肢
+# select "無理しないで" "select_label_01" "誰か助けてくれ！" "select_label_02"
+ま、マスター様っ
+ミーミルの後ろにっ
+必ず御身を守ってみせます！
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textboxarrow 0 2
+@ミーミル
+お心遣い感謝致します
+ですが、これは
+ミーミルのお役目ですのでっ
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# alpha 270 0 0.3
+# move 302511 3 0
+# face 302511 "angry"
+# alpha 302511 1 0.3
+# textboxarrow 0 2
+@ミネルヴァ
+すみません…
+私が何とかできれば…！
+
+# label "select_label_end"
+# move 270 2 0.5
+# move 302511 2 0.5
+# voice 650401 "manannan_ura_0002"
+# move 6504011 4 0.5
+# face 6504011 "surprise"
+# alpha 6504011 1 0.3
+# textboxarrow 0 3
+@マナナン
+あれ～？
+ひょっとしてマスター、
+ピンチなの？
+
+# alpha 302511 0 0.3
+# voice 9917 "mimir_navikan_0060"
+# face 270 "surprise"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ミーミル
+マナナンさんっ？
+
+# voice 650401 "manannan_ura_0004"
+# face 6504011 "normal"
+# textboxarrow 0 3
+@マナナン
+あ！
+ミーミル、起きたんだ～
+ねぇねぇ聞いてよ――
+
+# move 270 1 0.4
+# move 6504011 3 0.4
+# move 910013 5 0
+# layer 910013 4
+# mask 910013 on
+# alpha 910013 1 0.5
+# reversal 910013 1
+# se "SE_0793"
+# textwindow "toge"
+# textboxarrow 0 3
+@魔獣
+ガアアアアアアア！
+
+# alpha 270 0 0.3
+# alpha 6504011 0 0.3
+# face 6603811 "angry"
+# alpha 6603811 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 1
+@マクリル
+マナナン、危ないよっ
+
+;;マクリルが魔獣を倒す
+# se "SE_8582"
+# fadein "white" 0.5
+# move 6603811 2 0.3
+# alpha 910013 0 0.8
+# textboxarrow 0 0
+# waitandnext 1
+
+# voice 650401 "manannan_ura_0028"
+# move 6504011 4 0
+# mask 6504011 on
+# face 6504011 "usual"
+# alpha 6504011 1 0.3
+# se "SE_5208"
+# textboxarrow 0 3
+@マナナン
+うーん…
+これじゃゆっくり話ができないな～
+マクリル、やっちゃおっか？
+
+# voice 660381 "maclir_ura_0032"
+# face 6603811 "happy"
+# textboxarrow 0 1
+@マクリル
+そうだね
+やっちゃおうよ
+
+# voice 650401 "manannan_ura_0005"
+# face 6504011 "happy"
+# textboxarrow 0 3
+@マナナン
+アハハハハ！
+君達をたーっぷり満たしてあげるね！
+
+# face 6603811 "angry"
+# textboxarrow 0 1
+@マクリル
+私達の邪魔をしないでよ！
+
+;;バトル
+;;マップ：木の洞窟・闇（567）
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 6603811 0 0
+# alpha 6504011 0 0
+# waitandnext 0.2

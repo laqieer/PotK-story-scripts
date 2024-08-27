@@ -1,0 +1,238 @@
+;;-----------------------------------------
+;;海上編5-3
+;;-----------------------------------------
+# script "lisp"
+# background "sea_floor_beach_day"
+# bgmfile "bgm376" "BgmSeaEventBattle004" 0
+;;-----------------------------------------
+;;にょい
+# body 2203111
+# pos 2203111 3
+# scale 2203111 0.8 0
+# layer 2203111 3
+# alpha 2203111 0 0
+;;ふぉる
+# body 2301821
+# pos 2301821 3
+# scale 2301821 0.8 0
+# layer 2301821 3
+# alpha 2301821 0 0
+;;てぃる
+# body 2101441
+# pos 2101441 3
+# scale 2101441 0.8 0
+# layer 2101441 4
+# alpha 2101441 0 0
+;;そろもん
+# body 2503121
+# pos 2503121 3
+# scale 2503121 0.8 0
+# layer 2503121 4
+# alpha 2503121 0 0
+;;-----------------------------------------
+# imageset 1 "e200701_logo"
+# imagealpha 1 0 0
+;;-----------------------------------------
+;;背景：砂浜
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# move 2203111 2 0
+# alpha 2203111 1 0.5
+# move 2301821 4 0
+# alpha 2301821 1 0.5
+# face 2301821 "angry"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 520311 "nyoikinkobou_c_0027"
+@如意金箍棒
+ふぅ…ちょっと数が多かったかな？
+あれ？ソロモンちゃんたちは？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 530181 "forcas_c_0028"
+@フォルカス
+まさか、異族に…
+
+# textflame 1 1
+# textboxarrow 0 1
+@如意金箍棒
+あのふたりは大丈夫だと思うけど、
+ちょっと辺りを探してみよう？
+
+;;演出：場所移動
+# fadeout "black" 0.5
+# waitandnext 0.5
+
+# move 2203111 3 0
+# mask 2203111 off
+# alpha 2203111 0 0
+# alpha 2301821 0 0
+# textwindow "close"
+# waitandnext 0.3
+
+# fadein "black" 0.5
+# waitandnext 0.5
+
+# alpha 2203111 1 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@如意金箍棒
+フォルカスちゃん、いたよ！
+ふたりとも、無事だよね？
+
+# alpha 2203111 0 0.5
+# mask 2101441 off
+# alpha 2101441 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 2101441 "surprise"
+@ティルフィング
+あ、ニョイ子さん…
+
+# alpha 2101441 0 0.5
+# move 2203111 2 0
+# mask 2203111 on
+# alpha 2203111 1 0.5
+# move 2301821 4 0
+# alpha 2301821 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 2301821 "sad"
+# voice 520311 "nyoikinkobou_c_0011"
+@如意金箍棒
+ソロモンちゃん、
+ティルフィングちゃん…
+どうして待っててくれなかったの？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 530181 "forcas_c_0027"
+@フォルカス
+はぁ…無事でよかった…
+団体行動を乱す行為はだめですよ！
+
+# alpha 2203111 0 0.5
+# alpha 2301821 0 0.5
+# move 2101441 4 0
+# mask 2101441 on
+# alpha 2101441 1 0.5
+# move 2503121 2 0
+# alpha 2503121 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# face 2503121 "usual"
+# face 2101441 "sad"
+# voice 210144 "tyrufing_lo_0031"
+@ティルフィング
+フォルカスさん…
+すみません、
+私も止めたのですが…
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 250312 "solomon_lo_0003"
+@ソロモン
+グラウが、ひとのけはいを
+かんちしたの
+
+# textflame 1 1
+# textboxarrow 0 1
+@ソロモン
+…ていさつに出したわけじゃないわ
+グラウは、こうせいのうなの
+こうはんいをたんちできるだけ
+
+# textflame 1 1
+# textboxarrow 0 1
+@ソロモン
+それでね、
+このさきに、だれかいるみたいよ？
+
+# alpha 2101441 0 0.5
+# alpha 2503121 0 0.5
+# alpha 2203111 1 0.5
+# alpha 2301821 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 2203111 "usual"
+# voice 520311 "nyoikinkobou_c_0004"
+@如意金箍棒
+ワタシたちの仲間かな？
+フフッ、だれだろう？
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 530181 "forcas_c_0002"
+@フォルカス
+何度も同じことをいうようですが、
+相手が味方とは限りません
+警戒をゆるめずに…
+
+# textboxarrow 0 0
+@ビコウ
+キキッ！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 2203111 "normal"
+# voice 520311 "nyoikinkobou_c_0023"
+@如意金箍棒
+キャッ！
+もう、ビコウったら、どうしたの？
+うん？あっちは土煙の方向…
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 520311 "nyoikinkobou_c_0022"
+@如意金箍棒
+…フォルカスちゃん！ あれ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 2301821 "angry"
+# voice 530181 "forcas_c_0022"
+@フォルカス
+あっ！
+
+# leftout 2203111 0.5
+# leftout 2301821 0.5
+# rightin 2101441 0.5
+# alpha 2101441 1 0
+# rightin 2503121 0.5
+# alpha 2503121 1 0
+# textwindow "close"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 2101441 "surprise"
+# face 2503121 "surprise"
+# voice 250312 "solomon_lo_0023"
+@ソロモン
+えっ！
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 210144 "tyrufing_lo_0022"
+@ティルフィング
+あっ！
+
+# alpha 2101441 0 0
+# alpha 2503121 0 0
+# textwindow "close"
+# fadein "white" 0.7
+# imagealpha 1 1 0
+# imagepos 1 0 0
+
+# fadeout "black" 2
+# waitandnext 2.2

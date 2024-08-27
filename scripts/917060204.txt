@@ -1,0 +1,690 @@
+;;【EP3】『巨獣との対峙』/背景：街道
+# script "lisp"
+# background "plain"
+# bgmfile "bgm037" "BgmStory004" 0
+# body 202611
+# pos 202611 5
+# scale 202611 0.8 0
+# body 103711
+# pos 103711 1
+# scale 103711 0.8 0
+# body 101914
+# pos 101914 3
+# scale 101914 0.8 0
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# alpha 24 0 0
+# textflame 1 1
+# textboxarrow 0 3
+# chara 301311
+# voice 2026 "miuna_0002"
+# layer 101914 1
+# layer 24 1
+# face 301311 "angry"
+# face 101914 "worry"
+@ミウナ
+ねえ、カノン
+本当にこっちで合ってるの？
+影も形も見当たらないじゃん！
+
+# voice 1019 "kanon_0028"
+# textboxarrow 0 2
+# chara 101914
+@カノン
+…おかしいな
+こっちで間違いないはずなんだけど
+
+# voice 1037 "yauras_0028"
+# textboxarrow 0 1
+# chara 103711
+@ヤウラス
+このまま闇雲に進むだけでは
+時間がもったいないわ
+各々、別行動を取りましょう
+
+# textboxarrow 0 2
+# chara 101914
+# face 101914 "angry"
+@カノン
+ちょっと、ヤウラス！
+
+# voice 1037 "yauras_0036"
+# textboxarrow 0 1
+# chara 103711
+@ヤウラス
+私は情報を集めてくるわ
+ミウナも装備を整えたいでしょう？
+カノンは引き続き巨獣の後を追って
+
+# voice 1019 "kanon_0037"
+# textboxarrow 0 2
+# chara 101914
+# face 101914 "worry"
+@カノン
+だって、
+バラバラになっちゃったら
+あの巨獣に勝てるわけが…
+
+# textboxarrow 0 3
+# chara 301311
+# face 301311 "normal"
+@ミウナ
+探し出せないんだから
+勝つも負けるもないでしょ？
+ヤウラスの意見に私は賛成
+
+# alpha 101914 0 0.5
+# alpha 24 1 0.5
+# textboxarrow 0 2
+# chara 24
+@ティルフィング
+確かに、事態が変わらないなら
+それも一つの手ですね
+
+# textboxarrow 0 3
+# chara 301311
+@ミウナ
+なにも巨獣を倒さない
+なんて言ってない
+倒すための別行動なんだから
+
+# textboxarrow 0 1
+# chara 103711
+@ヤウラス
+そうよ、装備と情報が揃えば
+より優位に事を進める事ができるわ
+そうは思わない？
+
+# voice 2026 "miuna_0004"
+# textboxarrow 0 3
+# chara 301311
+@ミウナ
+大丈夫だって
+危なくなったらすぐに
+助けに行くから
+
+# textboxarrow 0 1
+# chara 103711
+# face 103711 "happy"
+@ヤウラス
+もちろん、私も約束するわ
+
+# alpha 101914 1 0.5
+# alpha 24 0 0.5
+# voice 1019 "kanon_0032"
+# textboxarrow 0 2
+# chara 101914
+# face 101914 "usual"
+@カノン
+…わかった、そうだよね
+確実に倒すためには
+そうすべきだよね
+
+# textboxarrow 0 2
+# chara 101914
+@カノン
+じゃあ、後で！
+
+;;ミウナ、ヤウラスがそれぞれいなくなる
+# se "SE_5575"
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# alpha 202611 0 0.5
+# alpha 103711 0 0.5
+
+;;時間経過演出
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# alpha 24 1 0
+# move 24 4 0
+# move 101914 2 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 101914
+# voice 1019 "kanon_0027"
+@カノン
+はあ…本当にどこ行ったんだろ
+もしかして追い越しちゃった？
+って、あんな巨体見逃すわけないし…
+
+# textboxarrow 0 3
+# chara 24
+# voice 1014 "tyrufing_0024"
+# face 24 "surprise"
+@ティルフィング
+…カノン！
+あれを見てください！
+
+;;森の方向に巨獣の姿を見つけるティルフィング
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# background "forest"
+# alpha 101914 0 0
+# alpha 24 0 0
+# body 802301
+# pos 802301 3
+# mask 802301 off
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 1.5
+
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imagerightin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# bgm "bgm029" 0
+# background "plain"
+# alpha 802301 0 0
+# alpha 101914 1 0
+# alpha 24 1 0
+# imagealpha 0 0 0.5
+# imageleftout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# voice 1019 "kanon_0022"
+# textboxarrow 0 1
+# chara 101914
+# face 101914 "surprise"
+@カノン
+やっぱり追い越してた！？
+…でも、一体どうして
+
+# voice 1014 "tyrufing_0015"
+# textboxarrow 0 3
+# chara 24
+# face 24 "angry"
+@ティルフィング
+今は考えている場合じゃ
+ありません！
+まずは巨獣の元へ！
+
+;;場面転換/背景：森の中/ディアブロと戦闘中のグリード、イルダーナ、ガブリエル。黒ティルフィングがディアブロの一撃を受けて吹き飛ばされてしまう
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# body 101471
+# pos 101471 3
+# scale 101471 0.8 0
+# body 301311
+# pos 301311 5
+# scale 301311 0.8 0
+# alpha 301311 0 0
+# body 502811
+# pos 502811 1
+# scale 502811 0.8 0
+# alpha 502811 0 0
+# alpha 24 0 0
+# alpha 101914 0 0
+# background "forest"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_5765"
+# serif 0
+# textwindow "nomal"
+# fadein "red" 1
+# shake 0 1
+# textflame 1 1
+# textboxarrow 0 2
+# chara 101471
+# voice 10147 "tyrufing_k_0025"
+# face 101471 "angry"
+@グリード
+うわあっ！
+
+# alpha 301311 1 0.5
+# alpha 502811 1 0.5
+# voice 5028 "gabriel_dg_0024"
+# textboxarrow 0 1
+# chara 502811
+# face 502811 "surprise"
+# face 301311 "sad"
+@ガブリエル
+グリードさん！
+大丈夫ですか！？
+
+# textboxarrow 0 3
+# chara 301311
+# face 301311 "angry"
+@イルダーナ
+くっ…突然現れるだなんて
+なんでもありなの！？
+
+# textboxarrow 0 1
+# chara 502811
+# face 502811 "angry"
+@ガブリエル
+だから言ったじゃないですか
+やっぱり敵うわけないんです！
+
+# textboxarrow 0 2
+# chara 101471
+@グリード
+大丈夫です
+あなた方は私が守ると
+決めたんですから…
+
+# voice 10147 "tyrufing_k_0029"
+# textboxarrow 0 2
+# chara 101471
+@グリード
+たぁっ！
+
+;;再びディアブロに向かっていくグリード。しかし再び吹き飛ばされる
+;;SE:剣が弾かれる音
+# se "SE_5715"
+# fadein "white" 1
+# shake 0 1
+# waitandnext 1
+
+# imageset 1 "bg_white"
+# imagealpha 1 0 0
+# imagescale 1 10 0
+# voice 3013 "ildana_0037"
+# textboxarrow 0 3
+# chara 301311
+@イルダーナ
+グリード！
+…くっ、どうしたらいいの？
+
+;;そこへ再びイルダーナとガブリエルの頭の中に声が響く。（何かしらのエフェクトを）
+# fadeout "white" 2
+# waitandnext 3
+# se "SE_9036"
+
+;;――場面転換――
+# move 502811 2 0
+# move 301311 4 0
+# layer 301311 6
+# layer 502811 6
+# alpha 101471 0 0
+# body 802301
+# layer 802301 6
+# pos 802301 3
+# mask 802301 off
+# alpha 802301 0 0
+# fadein "white" 0.5
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+# face 502811 "surprise"
+# face 301311 "surprise"
+
+# serif 1
+# textwindow "nomal"
+# textboxarrow 1 0
+@？？？？
+抗っても意味はない
+神の意に背いたお前達には
+消えてもらう
+
+# serif 0
+# textwindow "nomal"
+# voice 3013 "ildana_0024"
+# textboxarrow 0 3
+# chara 301311
+# face 301311 "angry"
+@イルダーナ
+…っ！どうして？
+どうしてこんなことをするの？
+
+# serif 1
+@？？？？
+我々の理想となる世界を構築する
+そのためだ
+
+# serif 0
+# textboxarrow 0 3
+# chara 301311
+@イルダーナ
+…なんでそのために私達が人間の
+新しい脅威になる必要があるの！？
+あなたのいう理想の世界ってなに？
+
+# serif 1
+@？？？？
+人々が繁栄し続ける世界だ
+
+# serif 0
+# voice 3013 "ildana_0014"
+# textboxarrow 0 3
+# chara 301311
+@イルダーナ
+それなのに人間の脅威となる
+私達が必要…？
+意味がわからない！
+
+# serif 1
+@？？？？
+お前達が理解する必要などない
+
+# serif 1
+@？？？？
+…私の言葉を受け入れれば、
+今すぐフレアディアブロを
+引き上げさせてもいいぞ
+
+# serif 0
+# voice 5028 "gabriel_dg_0037"
+# textboxarrow 0 1
+# chara 502811
+# face 502811 "angry"
+@ガブリエル
+…っ！
+本当ですか！？
+
+# select "なにが起こっているんだ？" "select_label_01" "『声』が聞こえているのか？" "select_label_02" "落ち着くんだ二人とも！" "select_label_03"
+…っ！
+本当ですか！？
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 301311
+@イルダーナ
+ガブリエルがこのままじゃ…
+どうにかしなきゃ！
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 301311
+@イルダーナ
+そうなの！全然わけわかんないこと
+言ってるんだけど…
+でもこのままじゃガブリエルが！
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 301311
+@イルダーナ
+私は落ち着いてるよ！
+だけど…ガブリエルが！
+落ち着いてよガブリエル！
+
+# label "select_label_end"
+# fadeout "white" 1
+# waitandnext 1
+
+# alpha 502811 0 0
+# alpha 301311 0 0
+# imagealpha 1 0 0
+# fadein "white" 0.5
+# textflame 0 0
+@
+困惑している様子のイルダーナ
+しかし、その困惑を感じて立ち上がる
+グリードの姿が視界に入った
+
+# alpha 101471 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 101471
+# face 101471 "normal"
+@グリード
+二人とも、大丈夫だと言ったでしょう
+…私のこの力は私が欲する平和のため
+そして仲間のためにあるのです
+
+# textboxarrow 0 2
+# chara 101471
+# face 101471 "angry"
+@グリード
+それを守るためなら、
+私は神の意志ですら
+断ち切ってみせましょう！
+
+# voice 10147 "tyrufing_k_battle_0002"
+# textboxarrow 0 2
+# chara 101471
+@グリード
+…はああっ！
+
+;;再三、ディアブロに立ち向かっていくグリード。しかし、少しして（先ほどよりも少し長めの間）吹き飛ばされるグリード
+# se "SE_5620"
+# fadein "white" 1
+# shake 0 1
+# waitandnext 1
+
+# alpha 502811 1 0.5
+# move 502811 2 0
+# move 101471 4 0.5
+# textboxarrow 0 1
+# chara 502811
+@ガブリエル
+グリードさん！
+
+# textboxarrow 0 1
+# chara 502811
+@ガブリエル
+…これ以上はさせません
+さあ、こっちへ！
+
+# se "SE_5575"
+# textboxarrow 0 0
+# alpha 101471 0 0.5
+# alpha 502811 0 0.5
+# waitandnext 1
+
+# textflame 0 0
+@
+ガブリエルは
+ディアブロを引きつけ、
+森の奥へと消えていった
+
+# move 301311 3 0
+# alpha 301311 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 301311
+# face 301311 "angry"
+@イルダーナ
+ガブリエル！
+…追いかけなきゃ！
+
+;;場面転換
+;;背景：森の奥、泉の前
+;;ディアブロと対峙しているガブリエル
+;;――場面転換――
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# layer 502811 1
+# move 502811 3 0
+# move 301311 5 0
+# alpha 301311 0 0
+# alpha 502811 1 0
+# background "tree_cavern"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# voice 5028 "gabriel_dg_0015"
+# textboxarrow 0 2
+# chara 502811
+# face 502811 "sad"
+@ガブリエル
+もう、いいでしょう
+あなたの言う通りにします
+ですから、もうこれ以上は…
+
+;;駆け付けるグリード、イルダーナ、マスター
+# move 101471 1 0
+# alpha 101471 1 0.5
+# alpha 301311 1 0.5
+# textboxarrow 0 3
+# chara 301311
+@イルダーナ
+ガブリエル！
+
+# textboxarrow 0 2
+# chara 502811
+@ガブリエル
+来ちゃダメです！
+私一人の命でどうにかなるなら
+それが一番いいんです
+
+# textflame 0 0
+@
+するとガブリエルの頭に
+謎の声が響く
+
+# se "SE_9036"
+# serif 1
+@？？？？
+ではまず手始めに、
+目の前の者達を全て殺せ
+
+# serif 0
+# textflame 1 1
+# textboxarrow 0 2
+# chara 502811
+# face 502811 "surprise"
+@ガブリエル
+…え？
+
+# serif 1
+@？？？？
+言う通りにすると言っただろう？
+ならばその言葉を証明しろ
+
+# serif 0
+# textflame 1 1
+# textboxarrow 0 2
+# chara 502811
+# voice 5028 "gabriel_dg_0019"
+# face 502811 "sad"
+@ガブリエル
+…………
+そんなこと、できません
+
+# serif 1
+@？？？？
+…ならば、お前は用なしだ
+当初の予定どおり消えてもらう
+やれ、ディアブロ
+
+;;ディアブロの咆哮が響き渡る
+# serif 0
+# textflame 1 1
+# textboxarrow 0 2
+# chara 502811
+@ガブリエル
+…っ！
+
+# voice 10147 "tyrufing_k_0024"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 1
+# chara 101471
+@グリード
+くっ！
+間に合わない！
+
+;;その瞬間、ディアブロの一撃を弾くカノンとティルフィングの姿
+;;SE：攻撃を弾く音
+# serif 1
+# textwindow "close"
+# se "SE_0693"
+# fadein "red" 0.5
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# serif 0
+# textwindow "close"
+# waitandnext 0.2
+
+# bgmfile "bgm250_251" "BgmRisecollabo002" 0
+# effectbody 2346 3 0 0
+# effectstart 2346
+# waitandnext 0.2
+
+# effectbody 2347 4 0 0
+# effectstart 2347
+# waitandnext 1
+
+# move 24 4 0
+# move 101914 2 0
+# alpha 502811 0 0
+# alpha 101471 0 0
+# alpha 301311 0 0
+# alpha 24 1 0
+# alpha 101914 1 0
+# fadein "red" 0.5
+# effectkip 2346
+# effectkip 2347
+# shake 0 0.5
+# imagealpha 0 0 0
+# serif 0
+# textwindow "normal"
+# voice 1019 "kanon_0037"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 101914
+# face 101914 "usual"
+# face 24 "angry"
+@カノン
+よかった、間に合った！
+
+# layer 301311 2
+# move 301311 3 0
+# move 24 5 0.5
+# move 101914 1 0.5
+# alpha 301311 1 0.5
+# textboxarrow 0 2
+# chara 301311
+# face 301311 "surprise"
+@イルダーナ
+…カノン！

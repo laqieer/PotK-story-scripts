@@ -1,0 +1,192 @@
+;;【PK】神令エルキュール_キャラクエ_シナリオ
+;;3-3
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;エルキュール
+# body 3202511
+# pos 3202511 3
+# scale 3202511 0.8 0
+# layer 3202511 2
+# alpha 3202511 1 0
+# mask 3202511 off
+;;-----------------------------------------
+;;一枚絵
+# imageset 0 "c3202511"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+# textflame 1 1
+# textboxarrow 0 2
+# face 3202511 "normal"
+# voice 320251 "hercule_c_0004"
+@エルキュール
+自分は騙せませんね
+
+# textflame 0 0
+@
+あれからというもの、エルキュールは
+戦いが終わると足を止め
+周囲の景色を見回すようになった
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3202511 "sad"
+# voice 320251 "hercule_c_0028"
+@エルキュール
+私が平和を乱していたのかも
+しれませんね
+
+# textflame 1 1
+# textboxarrow 0 2
+@エルキュール
+こんな穏やか景色、平和な風景を
+私は踏み荒らしていっていた
+
+# textflame 1 1
+# textboxarrow 0 2
+@エルキュール
+戦いが終わって
+短い平和を享受する時間を
+私は通り過ぎていた
+
+# textflame 0 0
+@
+隊の斬ル姫達を眺め
+朗らかに微笑むエルキュール
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3202511 "normal"
+# voice 320251 "hercule_c_0002"
+@エルキュール
+私は平和を守ります
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3202511 "normal"
+# voice 320251 "hercule_c_0001"
+@エルキュール
+マスターは、
+私の信念を守ってください
+
+# textflame 0 0
+@
+ゴールを明確に捉えた
+エルキュールのキラーズが
+マスターのバイブスと共鳴する
+
+# se "SE_0602"
+# textflame 0 0
+@
+それは彼女の新スキル
+黄昏『不動の信念』
+誕生の瞬間でもあった
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3202511 "normal"
+# voice 320251 "hercule_c_0004"
+@エルキュール
+私の『信念』と並走だなんて…
+ついてこれますか？
+
+;;選択肢
+# select "休む時も一緒なら" "select_label_01" "疲れたらおぶってもらおうかな" "select_label_02" "骨は拾ってね" "select_label_03"
+私の『信念』と並走だなんて…
+ついてこれますか？
+
+;;アンサー
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3202511 "shy"
+# voice 320251 "hercule_c_0042"
+@エルキュール
+い、いいですよ
+並走ですからね
+しょうがありませんねっ
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3202511 "shy"
+# voice 320251 "hercule_c_0042"
+@エルキュール
+…私も、おんぶ
+してくれるなら
+
+# label "select_label_03"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3202511 "shy"
+# voice 320251 "hercule_c_0027"
+@エルキュール
+もう…
+マスターの救済が先ですか？
+
+# label "select_label_end"
+# textflame 0 0
+@
+エルキュールを呼ぶ隊の皆の声
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3202511 "normal"
+@エルキュール
+行かなきゃ
+大丈夫、もう無理はしませんよ
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3202511 "happy"
+@エルキュール
+世界が私を待っています！
+
+# textflame 0 0
+@
+仲間の元へ進もうとした彼女は
+マスターの方へ振り返り…
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 320251 "hercule_c_0001"
+@エルキュール
+ありがとうマスター
+
+# textflame 1 1
+# textboxarrow 0 2
+@エルキュール
+ようやく
+スタート地点に立った気がします
+
+# se "SE_5575"
+# alpha 3202511 0 1
+# textflame 0 0
+@
+出る杭は、走り出した
+
+;;◆一枚絵指定
+;;★６(イラストは同じ)
+;;「あなたや隊の皆さんを見ていると、
+;;　平和とは何か考えてしまいます。
+;;　…感情がある世界も、悪くないのかもしれませんね」
+;;hercule_c_kyara_0027
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# fadein "white" 3
+# buttonsout 0 0
+# textwindow "close"
+# voice 320251 "hercule_c_kyara_0027"
+
+# frameout 0 1
+
+# waitandnext 0.8
+
+# fadeout "black" 1.5
+# waitandnext 1.5

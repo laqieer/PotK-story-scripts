@@ -1,0 +1,422 @@
+;;-----------------------------------------
+;;3月初マイペ
+# script "lisp"
+# background "plain"
+# bgmfile "bgm361_1" "BgmDanmachi" 0
+;;-----------------------------------------
+;;ヘスティア
+# body 3603111
+# pos 3603111 3
+# scale 3603111 0.8 0
+# layer 3603111 5
+# mask 3603111 off
+# alpha 3603111 0 0
+# body 3603121
+# pos 3603121 3
+# scale 3603121 0.8 0
+# layer 3603121 3
+# mask 3603121 off
+# alpha 3603121 0 0
+;;アイズ
+# body 3104411
+# pos 3104411 3
+# scale 3104411 0.8 0
+# layer 3104411 3
+# mask 3104411 off
+# alpha 3104411 0 0
+;;リュー
+# body 3104511
+# pos 3104511 3
+# scale 3104511 0.8 0
+# layer 3104511 3
+# mask 3104511 off
+# alpha 3104511 0 0
+;;ベル
+# body 216
+# pos 216 3
+# scale 216 0.8 0
+# layer 216 4
+# mask 216 off
+# alpha 216 0 0
+;;ミノタウロス
+# body 805031
+# pos 805031 4
+# scale 805031 0.8 0
+# layer 805031 3
+# mask 805031 on
+# alpha 805031 0 0
+;;異族化アルマス（ナレーションのボイス用）
+# body 5103831
+# alpha 5103831 0 0
+;;アスカロン
+# body 3102311
+# pos 3102311 5
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 1
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 4
+# alpha 210 0 0
+;;神令フォルカス
+# body 5301811
+# pos 5301811 2
+# scale 5301811 0.8 0
+# layer 5301811 2
+# alpha 5301811 0 0
+;;神令ヒョウハ
+# body 5402011
+# pos 5402011 4
+# scale 5402011 0.8 0
+# layer 5402011 2
+# alpha 5402011 0 0
+;;ロジェスティラ
+# body 5503711
+# pos 5503711 3
+# scale 5503711 0.8 0
+# layer 5503711 2
+# mask 5503711 off
+# alpha 5503711 0 0
+;;-----------------------------------------
+# imageset 0 "bg_white_circle"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imagescale 0 1.5 0
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 1
+;;-----------------------------------------
+# envbody 1000 8 13
+# effectpattern 1000 1 13
+# effectstart 1000
+# textwindow "close"
+# fadein "white" 2
+# waitandnext 2
+
+# se "SE_4781"
+# imagealpha 0 1 0.5
+# imagepos 0 0 30
+# textflame 0 0
+# textwindow "nomal"
+# textalign "center"
+# textsize 28
+@
+ダンジョンに出会いを求めるのは
+間違っているだろうかⅡ
+
+# textsize 30
+# textalign "center"
+@
+コラボスタート！
+
+# textsize 28
+# textalign "center"
+@
+新たに[FF0000]3ユニット[-]が登場！
+
+# imagealpha 0 0 0
+# se "SE_0575"
+# fadein "white" 0.5
+# alpha 3603111 1 0
+# textflame 0 0
+# textalign "center"
+# textsize 24
+@
+　
+『ヘスティア』
+
+# se "SE_0575"
+# fadein "white" 0.5
+# alpha 3603111 0 0
+# alpha 3104411 1 0
+# textflame 0 0
+# textalign "center"
+@
+　
+『アイズ・ヴァレンシュタイン』
+
+# imagealpha 0 0 0
+# se "SE_0575"
+# fadein "white" 0.5
+# alpha 3104411 0 0
+# alpha 3104511 1 0
+# textflame 0 0
+# textalign "center"
+@
+　
+『リュー・リオン』
+
+# move 3603111 3 0
+# mask 3603111 on
+# alpha 3603111 1 0
+# face 3603111 "happy"
+# voicedelay 360311 "hestia_0021" 0.5
+# move 3104411 1 0
+# mask 3104411 on
+# alpha 3104411 1 0
+# face 3104411 "happy"
+# voice 310441 "aiz_0005"
+# move 3104511 5 0
+# mask 3104511 on
+# face 3104511 "happy"
+# voice 310451 "ryu_0005"
+# fadein "white" 0.5
+# se "SE_1504"
+# textflame 0 0
+# textalign "center"
+# textsize 28
+@
+9STEPピックアップガチャ
+登場！
+
+# se "SE_0050"
+# textflame 0 0
+# textalign "center"
+# textsize 28
+# fadeout "black" 2
+# waitandnext 2
+@
+9STEPピックアップガチャ
+登場！
+
+;;暗転挟む
+# effectskip 1000
+# fadein "white" 0.5
+# alpha 3104411 0 0
+# alpha 3104511 0 0
+# alpha 3603111 0 0
+# textflame 0 0
+# textwindow "nomal"
+# textalign "center"
+# textsize 30
+@
+[FF0000]コラボクエスト[-]登場！！
+
+# textflame 0 0
+# textalign "center"
+# textsize 24
+@
+イベントクエスト、
+ユニット獲得クエストをクリアして…
+
+# se "SE_0575"
+# fadein "white" 0.5
+# alpha 3603121 1 0
+# face 3603121 "happy"
+# textflame 0 0
+# textwindow "nomal"
+# textalign "center"
+@
+　
+ヘスティア バイト衣装ver.をGET！
+
+;;暗転挟む
+# imagealpha 1 1 0
+# imagepos 1 0 30
+# imageleftin 1 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 3603121 0 0
+# waitandnext 0.2
+
+# imagealpha 1 0 0.5
+# imagerightout 1 0.5
+# waitandnext 0.5
+
+# alpha 216 1 0.5
+# textflame 0 0
+# textwindow "nomal"
+# textalign "center"
+@
+ストーリーを更に楽しむために、
+[MENU→データダウンロード→ボイスのみ]
+からボイスデータをダウンロード！
+
+# se "SE_7038"
+# face 216 "surprise"
+# move 216 2 0.5
+# mask 216 on
+# alpha 805031 1 0.5
+# textalign "center"
+@
+[FF8000]ベル・クラネル[-]のボイスが
+再生されるようになります！
+詳しくはお知らせをチェック！
+
+# fadein "white" 0.5
+# se "SE_0504"
+# alpha 216 0 0
+# alpha 805031 0 0
+# textalign "center"
+# textsize 30
+@
+[FF0000]他にもお得なCP開催中！[-]
+こちらもお知らせをチェック！
+
+# se "SE_0050"
+# bgm "stop"
+# fadeout "black" 1.5
+# textwindow "close"
+# waitandnext 1.5
+
+# background "parchment_map03"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+# waitandnext 0.2
+
+# fadein "black" 1.5
+# waitandnext 1.5
+
+# textflame 0 0
+# textwindow "nomal"
+# textalign "center"
+# textsize 34
+@
+擬彩されし
+不可逆世界編
+
+# se "SE_5535"
+# textflame 0 0
+# textalign "center"
+# textsize 28
+@
+第5章
+マスターの信念
+―ブレイブ―
+
+# alpha 3102311 1 0.5
+# alpha 3501711 1 0.5
+# alpha 210 1 0.5
+# textflame 0 0
+# textalign "center"
+# textsize 24
+@
+ユグドラシルの麓まで
+辿り着いたカミト達
+
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# alpha 210 0 0.5
+# face 5402011 "angry"
+# alpha 5301811 1 0.5
+# alpha 5402011 1 0.5
+# textflame 0 0
+# textalign "center"
+# textsize 24
+@
+「コマンド」
+という見知らぬ霊装支配を受けた
+キル姫達と出会う
+
+# textflame 0 0
+# textalign "center"
+# textsize 24
+@
+彼女達は何者なのか
+その目的は何なのか
+
+# alpha 5301811 0 0
+# alpha 5402011 0 0
+# fadein "white" 0.5
+# voice 510383 "IntegralNoah_Narration_5_1_0008"
+# textflame 0 0
+# textalign "center"
+# textsize 24
+@
+運命の輪は回り続ける――
+
+;;暗転(小)
+# imagealpha 1 1 0
+# imagepos 1 0 30
+# imageleftin 1 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# brightness 5503711 0 0
+# background "mirror_elysium"
+# envbody 11111 8 0
+# effectpattern 11111 1 0
+# effectstart 11111
+# waitandnext 0.2
+
+# imagealpha 1 0 0.5
+# imagerightout 1 0.5
+# waitandnext 0.5
+
+# imagealpha 0 1 1
+# imagepos 0 0 0
+# alpha 5503711 1 0.5
+# textflame 0 0
+# textwindow "nomal"
+# textalign "center"
+# textsize 34
+@
+新ユニット登場！
+
+# imagealpha 1 0 0
+# brightness 5503711 1 0
+# se "SE_2501"
+# fadein "white" 0.5
+# textflame 0 0
+# textalign "center"
+# textsize 32
+@
+【コマンドキラーズ】
+ロジェスティラ・神令・スクルド
+
+# face 5503711 "happy"
+# voice 550371 "logistille_c_kyara_0014"
+# textflame 1 1
+# textboxarrow 0 2
+# textsize 24
+@ロジェスティラ
+この力がみなさんのお役に立てるなら
+わたしは幸せですっ
+
+# se "SE_0504"
+# fadein "white" 0.5
+# face 5503711 "surprise"
+# voice 550371 "logistille_c_0039"
+# textflame 0 0
+# textalign "center"
+@
+新ユニットは
+9STEPガチャでピックアップ！
+
+# face 5503711 "shy"
+# voice 550371 "logistille_c_0041"
+# fadein "white" 0.5
+# textflame 0 0
+# textalign "center"
+@
+STEP9で
+[FF0000]コマンドキラーズキラーズチケット[-]を
+GET！！
+
+# fadein "white" 0.5
+# se "SE_0504"
+# alpha 5503711 0 0
+# textalign "center"
+@
+こちらも
+詳しくはお知らせをチェック！
+
+# se "SE_0050"
+# bgm "stop"
+# fadeout "black" 1.5
+# waitandnext 1.5
+# textalign "center"
+# textwindow "nomal"
+# textflame 0 0
+@
+こちらも
+詳しくはお知らせをチェック！

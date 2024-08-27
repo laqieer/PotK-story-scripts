@@ -1,0 +1,398 @@
+;;-----------------------------------------
+;;悪魔サイド4話1_0
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm170" "BgmPJZero_EV001" 0
+;;-----------------------------------------
+;;パンドラ
+# body 306
+# pos 306 3
+# scale 306 0.8 0
+# layer 306 2
+# mask 306 off
+# alpha 306 0 0
+;;パンドラ（ボイス用）
+# body 62001111
+# alpha 62001111 0 0
+;;ベルフェゴール
+# body 960017
+# pos 960017 3
+# scale 960017 0.8 0
+# layer 960017 2
+# mask 960017 off
+# alpha 960017 0 0
+;;-----------------------------------------
+;;背景：黒
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@？？？
+希望？
+そうね…
+
+# textboxarrow 0 0
+@？？？
+私はそれが何なのか、
+理解できていなかったの…
+
+# textboxarrow 0 0
+@？？？
+皆さんがそう望むから、
+希望になれるように行動して
+みたけれど…
+
+# textboxarrow 0 0
+@？？？
+なりたいものが何なのか、
+分かっていなかった私は何者にも
+なれないまま…
+
+# textboxarrow 0 0
+@？？？
+皆さんの希望を砕いて、
+絶望させてしまったのね…
+
+# textboxarrow 0 0
+@？？？
+希望って何なのかしら…？
+
+# textboxarrow 0 0
+@？？？
+私には、もう――
+
+;;パンドラの立ち絵ここから表示
+# move 306 3 0
+# face 306 "sad"
+# alpha 306 1 0.5
+# textboxarrow 0 2
+@パンドラ
+…………
+
+# voice 6200111 "pandora_0015"
+# textboxarrow 0 2
+@パンドラ
+うぅっ…
+ここは…？
+
+# face 306 "normal"
+# textboxarrow 0 2
+@パンドラ
+私…アスモデウスに負けて、
+ベルゼブブに食べられて…
+
+# textboxarrow 0 2
+@パンドラ
+でも、吐き出されて…
+そのまま野垂れ死ねって言われて…
+
+# voice 6200111 "pandora_0037"
+# face 306 "sad"
+# textboxarrow 0 2
+@パンドラ
+ああ…私、死んだのね…
+それじゃあ…ここは、あの世？
+
+# textboxarrow 0 2
+@パンドラ
+真っ暗だわ…
+そう…皆さんの期待に応えられず、
+希望になれなかった私は…
+
+# textboxarrow 0 2
+@パンドラ
+地獄に落ちるのが相応しいのね…
+
+;;パンドラが少しずつ歩いていく
+# se "SE_5006"
+# sedelay "SE_5007" 1.2
+# sedelay "SE_5006" 2.4
+# textwindow "close"
+# move 306 1 2
+# alpha 306 0 2
+# waitandnext 2
+
+;;背景：地獄の門（新規制作背景です）
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "hell_gate"
+# move 306 3 0
+# face 306 "normal"
+# alpha 306 1 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+@パンドラ
+大きな門…
+ここを潜れば良いのかしら？
+そうすれば…
+
+# move 306 2 0.5
+# mask 306 on
+# move 960017 4 0
+# face 960017 "smile"
+# mask 960017 on
+# alpha 960017 1 0.5
+# textboxarrow 0 3
+@ベルフェゴール
+あらぁ
+見覚えのある娘が来たと思ったら
+あなただったのねぇ
+
+# face 306 "surprise"
+# textboxarrow 0 1
+@パンドラ
+あなたは…
+私に力をくれると言った人…
+どうして、こんなところに？
+
+# voice 8031 "belphegor_0004"
+# textboxarrow 0 3
+@ベルフェゴール
+アハッ！
+あなた、相変わらずねぇ
+
+# textboxarrow 0 3
+@ベルフェゴール
+そういえば、私の正体を話して
+いなかったわぁ
+
+# textboxarrow 0 3
+@ベルフェゴール
+私はベルフェゴール
+七魔王の一人、
+“怠惰”のベルフェゴールよぉ
+
+# voice 6200111 "pandora_0021"
+# textboxarrow 0 1
+@パンドラ
+まぁっ
+あなた、悪魔だったの…
+
+# voice 8031 "belphegor_0032"
+# textboxarrow 0 3
+@ベルフェゴール
+そうよぉ
+木偶どもに負けちゃって、
+このザマだけれどねぇ
+
+# textboxarrow 0 3
+@ベルフェゴール
+あなたも落ちてきたってことは、
+誰かに殺されたのよねぇ？
+
+# textboxarrow 0 3
+@ベルフェゴール
+怠惰なのは好きだけどぉ
+少し退屈してたのよぉ
+何があったのか話してくれなぁい？
+
+# voice 6200111 "pandora_0033"
+# face 306 "happy"
+# textboxarrow 0 1
+@パンドラ
+…いいわ
+私も、これまでのことを整理して
+みたいから
+
+;;暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 306 2 0
+# face 306 "normal"
+# alpha 306 1 0
+# move 960017 4 0
+# face 960017 "normal"
+# alpha 960017 1 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 1
+# textwindow "normal"
+@パンドラ
+…それで、私はここに落ちてきたの
+
+# voice 8031 "belphegor_0005"
+# face 960017 "smile"
+# textboxarrow 0 3
+@ベルフェゴール
+アハハハハハハハ！
+無様ねぇ
+本当に無様！
+
+# textboxarrow 0 3
+@ベルフェゴール
+私がせっかく丹精込めて美しく
+作り上げたのに、いいように
+利用されて…
+
+# textboxarrow 0 3
+@ベルフェゴール
+あげく殺されて捨てられるなんて
+本当に哀れな娘
+
+# face 306 "sad"
+# textboxarrow 0 1
+@パンドラ
+私は…何を間違えたの…？
+
+# voice 8031 "belphegor_0004"
+# textboxarrow 0 3
+@ベルフェゴール
+ふふっ
+あなたは何も間違えてないわぁ
+これは当然の結果よぉ
+
+# textboxarrow 0 3
+@ベルフェゴール
+だって、あなたはちゃんと役割を
+果たしたんだものぉ
+「希望」の持つ最大の役割を
+
+# face 306 "normal"
+# textboxarrow 0 1
+@パンドラ
+私、役割を果たせていたのっ？
+…皆さんの希望を台無しにして
+絶望させてしまったのに
+
+# textboxarrow 0 3
+@ベルフェゴール
+それでいいのよぉ
+それが、あなたの役割だったんだから
+
+# voice 6200111 "pandora_0023"
+# face 306 "surprise"
+# textboxarrow 0 1
+@パンドラ
+えっ…？
+
+# textboxarrow 0 3
+@ベルフェゴール
+いい、パンドラ？
+哀れで罪深い箱入り娘さん
+希望っていうのはね…
+
+# textboxarrow 0 3
+@ベルフェゴール
+最悪の災厄なのよぉ！
+
+# voice 6200111 "pandora_0028"
+# face 306 "normal"
+# textboxarrow 0 1
+@パンドラ
+希望が、災厄…？
+よく分からないわ…
+
+# textboxarrow 0 3
+@ベルフェゴール
+簡単なことよぉ
+人間が何かに立ち向かうとき、
+何かに抗うとき…
+
+# textboxarrow 0 3
+@ベルフェゴール
+彼ら彼女らが抱いているのは何？
+絶望かしら？諦めかしら？
+違うわよねぇ
+
+# textboxarrow 0 3
+@ベルフェゴール
+希望よぉ
+未来への希望を抱いているから、
+人間は抗うのぉ
+
+# textboxarrow 0 3
+@ベルフェゴール
+無謀にもねぇ
+
+# face 306 "sad"
+# textboxarrow 0 1
+@パンドラ
+無謀…
+
+# voice 8031 "belphegor_0032"
+# textboxarrow 0 3
+@ベルフェゴール
+ええ、そう
+希望を抱いてる人間ってねぇ
+物事が見えなくなってるのぉ
+
+# textboxarrow 0 3
+@ベルフェゴール
+だから、どんな無謀なことにも
+挑戦できるしぃ、勝てない相手にも
+挑めるのよねぇ
+
+# textboxarrow 0 3
+@ベルフェゴール
+そして、失敗して
+踏みにじられて
+世界を呪うのよぉ！
+
+# voice 8031 "belphegor_0005"
+# textboxarrow 0 3
+@ベルフェゴール
+アハハハハハハハ！
+希望を抱いてしまって、
+本当に可哀想
+
+# textboxarrow 0 3
+@ベルフェゴール
+なまじ希望を抱くから、人間は
+いつまでも傷つき、苦しみ続けるのぉ
+
+# textboxarrow 0 3
+@ベルフェゴール
+分かったでしょぉ？
+希望こそが、最悪の災厄なのよぉ
+
+# textboxarrow 0 3
+@ベルフェゴール
+あなたは、その役割をちゃぁんと
+果たしたのぉ
+
+# textboxarrow 0 1
+@パンドラ
+私の…希望が…
+皆さんを苦しめた…
+
+# textboxarrow 0 3
+@ベルフェゴール
+あなたを信じて悪魔に抗った人間は
+どうなったかしらぁ？
+みぃんな蹂躙されちゃったわよねぇ
+
+# textboxarrow 0 1
+@パンドラ
+私…私がっ…
+
+# textboxarrow 0 3
+@ベルフェゴール
+いいのよ、パンドラ
+あなたはもう眠りなさい
+
+# textboxarrow 0 3
+@ベルフェゴール
+ここで怠惰に、永遠の眠りにつけば
+いいのよぉ
+
+# textboxarrow 0 1
+@パンドラ
+私は…
+
+# fadeout "black" 1
+# waitandnext 1

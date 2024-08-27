@@ -1,0 +1,1068 @@
+;;-----------------------------------------
+;;【ファントムオブキル】シンフォギアコラボ_イベントシナリオ前半
+;;【1話】
+;;スクリプト最後の背景：街の郊外　（野外音楽堂のような場所を想定しております）
+;;背景：街の郊外　（野外音楽堂のような場所を想定しております）
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgmfile "bgm430_block" "BgmIntegralNoahEvent004" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 3
+# alpha 196 0 0
+# mask 196 off
+;;ラブリュス
+# body 200331
+# pos 200331 3
+# scale 200331 0.8 0
+# layer 200331 3
+# alpha 200331 0 0
+# mask 200331 off
+;;立花 響
+# body 5303511
+# pos 5303511 3
+# scale 5303511 0.8 0
+# layer 5303511 2
+# alpha 5303511 0 0
+# mask 5303511 off
+;;小日向 未来
+# body 5603711
+# pos 5603711 3
+# scale 5603711 0.8 0
+# layer 5603711 2
+# alpha 5603711 0 0
+# mask 5603711 off
+;;異族 戦型種カルマノイズ
+# body 806142
+# pos 806142 3
+# scale 806142 0.8 0
+# layer 806142 2
+# alpha 806142 0 0
+# mask 806142 off
+;;異族 騎型種カルマノイズ
+# body 806143
+# pos 806143 3
+# scale 806143 0.8 0
+# layer 806143 2
+# alpha 806143 0 0
+# mask 806143 off
+;;異族 飛空型種カルマノイズ
+# body 806144
+# pos 806144 3
+# scale 806144 0.8 0
+# layer 806144 2
+# alpha 806144 0 0
+# mask 806144 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;【1話】
+;;//背景：街の郊外　（野外音楽堂のような場所を想定しております）
+;;モノローグ
+# textwindow "close"
+# waitandnext 0.2
+
+# envbody 1099 8 0
+# effectstart 1099
+# waitandnext 0.3
+
+# effectskip 1099
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+@
+晴れ渡る青空の下
+盛り上がるライブ会場
+舞台上には一人のキル姫がいた
+
+# move 200331 3 0
+# face 200331 "happy"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textflame 1 1
+# textboxarrow 0 2
+@ラブリュス
+は～い！
+みんな盛り上がってるぅ～？
+
+# voice 2003 "loveryus_0030"
+# textboxarrow 0 2
+@ラブリュス
+今日は～、キル姫界のアイドル
+ラブリュスちゃんのライブに
+来てくれてありがとぉ～♪
+
+# textboxarrow 0 2
+@ラブリュス
+い～っぱい楽しませちゃうから
+みんな、盛り上がってこ～♪
+
+;;モノローグ
+# se "SE_0607"
+# textflame 0 0
+@
+うおおお！と雄たけびがあがる
+一曲目から会場はファンの
+熱気にすっかり包まれていた
+
+# serif 1
+@ファン1
+ラブリュスちゃ～ん！！
+さいこ～！！
+
+# serif 1
+@ファン2
+ラブリュスちゃ～ん！
+こっち！こっちだ
+俺の方を向いてくれ～！
+
+# textflame 1 1
+# textboxarrow 0 2
+@ラブリュス
+は～い♪呼んだかな～？
+
+# serif 1
+@ファン3
+うおおおおっ！
+こっち向いたー！！
+かわいいー！！
+
+# voice 2003 "loveryus_0030"
+# face 200331 "shy"
+# textboxarrow 0 2
+@ラブリュス
+ありがと～！
+もっと褒めていいよ～！
+
+# se "SE_0843"
+# serif 1
+@ファン達
+うおおおおおお！！
+好きだ～！愛してる！
+ラブリュスちゃ～ん！！
+
+;;できればモヤモヤの吹き出しで
+# serif 1
+# textwindow "close"
+# serif 0
+# se "bgm430_volumedown"
+# voice 9943 "almace_navikan_0042"
+# alpha 200331 0 0.5
+# move 196 3 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 0
+# textwindow "moya"
+@アルマス
+なに、これ…
+
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+ラブリュスに来てって
+言われたから
+ライブに来たけど…
+
+# textboxarrow 0 2
+@アルマス
+正直、ついてけないわ…
+
+# serif 1
+@ファン達
+L・O・V・E
+ラブリーラブリュスー！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# voice 9943 "almace_navikan_0039"
+# face 196 "angry"
+# textboxarrow 0 2
+@アルマス
+…！
+絶・無理…！
+
+#setnextbgmblock 2
+# se "bgm430_volumeup"
+# alpha 196 0 0.5
+# move 200331 3 0
+# face 200331 "happy"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textboxarrow 0 2
+@ラブリュス
+じゃあ、二曲目いっくよ～！
+どんどん盛り上がっていこ～！
+
+;;モノローグ
+# textflame 0 0
+@
+ノリのいい大音量の楽曲に乗せ
+会場内にラブリュスの歌が
+響きわたる
+
+# textflame 1 1
+# textboxarrow 0 2
+@ラブリュス
+あぁ～♪
+
+;;できればモヤモヤの吹き出しで
+# voice 9943 "almace_navikan_0005"
+# alpha 200331 0 0.5
+# move 196 3 0
+# face 196 "happy"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 0
+# textwindow "moya"
+@アルマス
+ノリにはついていけないけど
+ラブリュスの歌はいいわね
+絶・いい感じ…！ 
+
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+ふふっ
+
+;;モノローグ
+# textflame 0 0
+@
+気付けば、アルマスの周囲の人々も
+すっかりラブリュスの歌に酔いしれ
+そのリズムに身を任せていた
+
+;;できればモヤモヤの吹き出しで
+# move 196 3 0
+# mask 196 off
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "moya"
+@アルマス
+みんな日々の大変なことを忘れて
+心から楽しんでいるって感じね
+
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+これが、歌の力ってやつかしら？
+
+;;モノローグ
+# alpha 196 0 0.5
+# textflame 0 0
+@
+アルマスも目を閉じる
+そしてラブリュスの歌に
+聞き入ろうとした、その時――
+
+;;//演出：画面揺らし
+# bgm "stop"
+# se "SE_0638"
+# shake 0 1
+# waitandnext 1
+
+;;//演出：flash効果（異族からの攻撃）
+# se "SE_5772"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;異族1　※こちら、カルマノイズ化した異族の想定です
+# move 806142 3 0
+# alpha 806142 1 0.5
+# mask 806142 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@異族1
+キシャアアアアアアアアアアッ！！
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# serif 1
+@ファン1
+うわああああ！
+異族だっ、異族が出たぞっ！
+
+# serif 1
+@ファン2
+たっ、助け…
+ウアアアッ！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 806142 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+危ないっ！
+
+# se "SE_9021"
+# textwindow "close"
+# leftout 196 0.5
+# waitandnext 0.6
+
+# alpha 196 0 0
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# rightin 196 0.5
+# waitandnext 0.5
+
+;;//演出：剣戟演出
+# se "SE_4000"
+# waitandnext 0.5
+
+# se "SE_3006"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+逃げ遅れたファンをかばい
+アルマスが異族の攻撃を
+とっさに受け止める
+
+# voice 9943 "almace_navikan_0054"
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+くっ！
+なんでこんなところに
+異族がっ…！？
+
+;;//演出：異族IN　
+# alpha 196 0 0.5
+# move 806143 3 0
+# alpha 806143 1 0.5
+# mask 806143 off
+# textboxarrow 0 2
+@異族2
+シャアアアアッ！
+
+;;//演出：斬撃演出
+# se "SE_4000"
+# waitandnext 0.5
+
+# alpha 806143 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+う、くっ！？
+次から次へと…
+
+# textboxarrow 0 2
+@アルマス
+このままじゃヤバいわ
+なんとか会場のみんなを
+避難させないと
+
+;;//演出：異族IN　複数体
+# alpha 196 0 0.5
+# move 806143 2 0
+# alpha 806143 1 0.5
+# mask 806143 on
+# textboxarrow 0 1
+# move 806144 4 0
+# alpha 806144 1 0.5
+# mask 806144 on
+@異族2
+キッシャアアア！
+
+# textboxarrow 0 3
+@異族3
+シャアアアアッ！！
+
+# alpha 806143 0 0.5
+# alpha 806144 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+邪魔よっ！
+さっさとどきなさいっ！
+ハアッ！
+
+# textwindow "close"
+# alpha 196 0 0.5
+# move 806143 2 0
+# alpha 806143 1 0.5
+# mask 806143 on
+# move 806144 4 0
+# alpha 806144 1 0.5
+# mask 806144 on
+# waitandnext 0.5
+
+;;//演出：斬撃演出
+;;//演出：画面揺らし
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# move 806143 2 0
+# alpha 806143 1 0.5
+# mask 806143 on
+# textboxarrow 0 1
+# move 806144 4 0
+# alpha 806144 1 0.5
+# mask 806144 on
+# textwindow "normal"
+@異族2
+シャッ……
+
+;;//演出：異族フェードアウト
+;;//演出：異族IN　（別の異族がさらに現れた想定です）
+# textwindow "close"
+# alpha 806143 0 0.5
+# alpha 806144 0 0.5
+# waitandnext 0.6
+
+# move 806142 3 0
+# alpha 806142 1 0.5
+# mask 806142 off
+# waitandnext 1
+
+# alpha 806142 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+退けても次から次へとっ…
+絶・不愉快！！
+
+# serif 1
+@？？？
+不愉快？
+それはわたしのセリフだよ！
+
+;;//演出：ラブリュスIN
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# move 200331 2 0
+# face 200331 "angry1"
+# alpha 200331 1 0.5
+# mask 200331 on
+# move 196 4 0.5
+# mask 196 on
+# waitandnext 0.5
+
+# face 196 "surprise"
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+ラブリュス！？
+あなた、ファンの人達は？
+
+# voice 2003 "loveryus_0003"
+# face 200331 "happy"
+# textboxarrow 0 1
+@ラブリュス
+うん、ちゃ～んと
+避難誘導もしてきたよ～
+
+# face 196 "happy"
+# textboxarrow 0 3
+@アルマス
+そう、よか……
+
+;;//演出：斬撃演出
+# se "SE_4000"
+# waitandnext 0.5
+
+# alpha 200331 0 0.5
+# alpha 196 0 0.5
+# move 806144 3 0
+# alpha 806144 1 0.5
+# mask 806144 off
+# textboxarrow 0 2
+@異族3
+シャアアッ！
+
+# voice 2003 "loveryus_0012"
+# alpha 806144 0 0.5
+# move 200331 3 0
+# face 200331 "angry1"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textboxarrow 0 2
+@ラブリュス
+お触りはダメだぞっ
+
+;;//演出：斬撃演出
+# se "SE_4000"
+# waitandnext 0.5
+
+# se "SE_5204"
+# textwindow "close"
+# leftout 200331 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# alpha 200331 0 0
+# textflame 0 0
+# textwindow "normal"
+@
+異族の不意打ちを
+ラブリュスがとっさに躱す
+
+# voice 2003 "loveryus_0014"
+# move 200331 3 0
+# face 200331 "angry1"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textflame 1 1
+# textboxarrow 0 2
+@ラブリュス
+も～、怒ったんだからね！
+ラブリュスちゃんのライブを
+台無しにしてくれちゃって～！
+
+# textboxarrow 0 2
+@ラブリュス
+覚悟しなさいっ！
+キル姫界のアイドル、
+ラブリュスちゃんの～…
+
+# textboxarrow 0 2
+@ラブリュス
+特別ライブ、第二幕っ！
+殲滅ライブの開幕よぉ！！
+
+;;//演出：ラブリュススライドアウト
+# se "SE_9092"
+# textwindow "close"
+# rightout 200331 0.5
+# waitandnext 0.5
+
+# alpha 200331 0 0
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+ラ、ラブリュス！？
+
+;;モノローグ
+# textflame 0 0
+@
+怒るラブリュスが突っ込んでいく
+とっさにアルマスが後を追うも
+ラブリュスの勢いに出遅れた
+
+# alpha 196 0 0.5
+# move 200331 3 0
+# face 200331 "angry2"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textflame 1 1
+# textboxarrow 0 2
+@ラブリュス
+はあっ！
+討伐討伐―！！
+
+# alpha 200331 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+待って、ラブリュスっ！
+一人じゃ危ないわ！
+
+# alpha 196 0 0.5
+# move 200331 3 0
+# face 200331 "angry1"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textboxarrow 0 2
+@ラブリュス
+平気だよ！　それにわたし
+ライブを邪魔されて
+ぷんぷんだし～！！
+
+;;モノローグ
+# textflame 0 0
+@
+なおも突進していくラブリュス
+アルマスは後を追いながらも
+違和感を覚えていた
+
+# alpha 200331 0 0.5
+# move 196 3 0
+# face 196 "sad"
+# alpha 196 1 0.5
+# mask 196 off
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+それにしても、この異族
+見た目もそうだけど
+いつもと違うのよね
+
+# textboxarrow 0 2
+@アルマス
+攻撃があまり効いてないって
+いうか…
+
+;;//演出：場面転換
+;;//演出：爆発
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 196 0 0
+# move 200331 2 0
+# face 200331 "angry2"
+# alpha 200331 1 0
+# mask 200331 on
+# move 806142 4 0
+# alpha 806142 1 0
+# mask 806142 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# se "SE_5599"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# textwindow "normal"
+@異族4
+ギャアアッ！！
+
+# textboxarrow 0 1
+@ラブリュス
+ふっふ～ん、どう？
+殲滅のアイドル
+ラブリュスちゃんの怒り！
+
+# textboxarrow 0 1
+@ラブリュス
+わたしのライブを邪魔した罪！
+異族達にはた～っぷり
+反省してもら――
+
+;;//演出：消えかけた異族が再びフェードイン
+# textwindow "close"
+# alpha 806142 0.5 1
+# waitandnext 1.2
+
+# alpha 806142 1 1
+# waitandnext 0.5
+
+# textboxarrow 0 3
+# textwindow "normal"
+@異族4
+シャアッ！
+
+# voice 2003 "loveryus_0023"
+# face 200331 "surprise"
+# textboxarrow 0 1
+@ラブリュス
+ええ！　攻撃が
+効いてないっ！？
+
+# textboxarrow 0 3
+@異族4
+ギャアアアッ！！
+
+# voice 9943 "almace_navikan_0043"
+# move 200331 1 0.5
+# move 806142 3 0.5
+# move 196 5 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+はあああ！
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# textboxarrow 0 2
+@異族4
+グガアア！
+
+# textwindow "close"
+# alpha 806142 0 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+間一髪でアルマスは
+異族の手からラブリュスを
+救いだした
+
+# move 200331 2 0.5
+# move 196 4 0.5
+# face 196 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+ラブリュス、一人じゃ絶・危険よ
+
+# textboxarrow 0 3
+@アルマス
+あの異族、今までの異族と違うわ
+いつもより攻撃が
+効きにくいっていうか…
+
+# voice 2003 "loveryus_0014"
+# face 200331 "angry1"
+# textboxarrow 0 1
+@ラブリュス
+それは、わたしも感じた
+いつもこのくらいの数なら
+すぐに倒せるのに～
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+でも、弱音なんて吐いてられない
+一気に行くわ！
+はあああ！
+
+# se "SE_9092"
+# textwindow "close"
+# alpha 196 0 0.5
+# waitandnext 0.5
+
+# voice 2003 "loveryus_0023"
+# face 200331 "surprise"
+# textboxarrow 0 1
+# textwindow "normal"
+@ラブリュス
+ええ！？
+一人じゃ危険って
+アルマスが言ったのに！
+
+;;//演出：異族フェードイン
+# textwindow "close"
+# alpha 200331 0 0.5
+# move 806142 3 0
+# alpha 806142 1 0.5
+# mask 806142 off
+# waitandnext 1
+
+# alpha 806142 0 0.5
+# move 200331 3 0
+# face 200331 "angry2"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textboxarrow 0 2
+# textwindow "normal"
+@ラブリュス
+しまっ……！
+
+# alpha 200331 0 0.5
+# move 806142 3 0
+# alpha 806142 1 0.5
+# mask 806142 off
+# textboxarrow 0 2
+@異族
+ギャッ、ガアアアアアアッ！！
+
+# alpha 806142 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+しまった！
+
+;;モノローグ
+# bgm "stop"
+# textflame 0 0
+@
+異族の攻撃に防御態勢をとった
+その時――アルマス達の耳に
+美しい歌声が遠く響いてきた
+
+;;//演出：flash効果
+# se "SE_9149"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;//演出：画面ホワイトアウト
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 1.2
+
+# background "bg_white"
+# alpha 196 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;？？？　（立花響：立ち絵無し　もしくはシルエット）
+# se "SE_9150"
+# bgmfile "bgm475_476" "BgmSymphogearXD" 0
+# voice 530351 "tachibanahibiki_unit_1005"
+# textflame 1 1
+# textboxarrow 0 0
+# textwindow "normal"
+@？？？
+大丈夫、ここはわたし達にまかせてッ！
+未来、行くよッ！
+
+;;？？？　（小日向未来：立ち絵無し　もしくはシルエット）
+# textboxarrow 0 0
+@？？？
+ええッ！？
+ちょっと待って、響ッ！
+
+;;？？？　（小日向未来：立ち絵無し　もしくはシルエット）
+# voice 560371 "miku_0037"
+# textboxarrow 0 0
+@？？？
+もうッ…
+わかった、援護は任せてねッ！
+
+;;？？？（立花響：立ち絵無し　もしくはシルエット）
+# textboxarrow 0 0
+@？？？
+はああああッ！！
+
+;;//演出：剣戟演出
+# se "SE_7428"
+# waitandnext 0.5
+
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 1.2
+
+# background "plain"
+# move 806142 3 0
+# alpha 806142 1 0
+# mask 806142 off
+# waitandnext 0.2
+
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+@異族
+ア？　アアア…アアアア…
+
+;;//演出：異族フェードアウト
+# textwindow "close"
+# alpha 806142 0 0.5
+# waitandnext 0.5
+
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+い、今のは……
+
+;;//演出：響・未来フェードイン
+# alpha 196 0 0.5
+# move 5603711 2 0
+# face 5603711 "normal"
+# alpha 5603711 1 0.5
+# mask 5603711 on
+# move 5303511 4 0
+# face 5303511 "normal"
+# alpha 5303511 1 0.5
+# mask 5303511 on
+# textboxarrow 0 3
+@立花響
+いや～、間一髪だったねッ～！
+間に合ってよかったよッ～！
+
+# voice 560371 "miku_0037"
+# textboxarrow 0 1
+@小日向未来
+もう、響ったら
+弦十郎さんに無理するなって
+言われてたのに…
+
+# face 5303511 "shy"
+# textboxarrow 0 3
+@立花響
+そ、それは～…あはは
+仕方ないでしょぉ…こっちに
+着いたら人が襲われてたんだもん
+
+# textboxarrow 0 3
+@立花響
+放っておけないよ
+
+# alpha 5603711 0 0.5
+# alpha 5303511 0 0.5
+# move 196 3 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+…あなた、達は…誰？
+見たことないキル姫だけど
+
+# alpha 196 0 0.5
+# move 5303511 3 0
+# face 5303511 "surprise"
+# alpha 5303511 1 0.5
+# mask 5303511 off
+# textboxarrow 0 2
+@立花響
+キル姫？
+いやいやいや違いますッ！
+わたし、お姫様なんかじゃありません
+
+# voice 2003 "loveryus_0028"
+# alpha 5303511 0 0.5
+# move 200331 3 0
+# face 200331 "usual2"
+# alpha 200331 1 0.5
+# mask 200331 off
+# textboxarrow 0 2
+@ラブリュス
+違うの～？
+でも、異族を倒してたじゃない
+
+# alpha 200331 0 0.5
+# move 5603711 2 0
+# face 5603711 "sad"
+# alpha 5603711 1 0.5
+# mask 5603711 on
+# textboxarrow 0 1
+# move 5303511 4 0
+# face 5303511 "normal"
+# alpha 5303511 1 0.5
+# mask 5303511 on
+@小日向未来
+異族、やキル姫…という言葉は
+わかりませんけど…
+
+# textboxarrow 0 3
+@立花響
+わたし達二人、
+別の世界からこっちの世界に
+やってきたんです
+
+# alpha 5603711 0 0.5
+# alpha 5303511 0 0.5
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+別の世界…？
+
+# alpha 196 0 0.5
+# move 5303511 3 0
+# face 5303511 "happy"
+# alpha 5303511 1 0.5
+# mask 5303511 off
+# textboxarrow 0 2
+@立花響
+そう、わたしの名前は立花響
+ここと違う世界から来た
+シンフォギアの装者だよッ！
+
+;;//演出：異族ＩＮ
+# alpha 5303511 0 0.5
+# move 806142 3 0
+# alpha 806142 1 0.5
+# mask 806142 off
+# textboxarrow 0 2
+@異族
+ギャアアアアッ！！
+
+# alpha 806142 0 0.5
+# move 5603711 2 0
+# face 5603711 "normal"
+# alpha 5603711 1 0.5
+# mask 5603711 on
+# move 5303511 4 0
+# face 5303511 "surprise"
+# alpha 5303511 1 0.5
+# mask 5303511 on
+# textboxarrow 0 3
+@立花響
+わわっ、話はあとで
+今はカルマノイズを倒すのが先ッ！
+
+# textboxarrow 0 1
+@小日向未来
+響、今度は無茶したらダメだよ
+
+# alpha 5603711 0 0.5
+# alpha 5303511 0 0.5
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+あ、待って！
+私も戦うわ！
+行くわよ、ラブリュス
+
+# move 200331 2 0
+# face 200331 "happy"
+# alpha 200331 1 0.5
+# mask 200331 on
+# textboxarrow 0 1
+# move 196 4 0.5
+# mask 196 on
+@ラブリュス
+もぉ～、しょうがないなぁ
+ラブリュスちゃんの本気
+見せてあげちゃうっ♪
+
+;;モノローグ
+# textflame 0 0
+@
+そして出会ったばかりの装者と
+キル姫達は互いに手を携えて
+異族へと向かっていった

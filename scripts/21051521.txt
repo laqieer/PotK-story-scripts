@@ -1,0 +1,674 @@
+;;-----------------------------------------
+;;ファンキル　2020ウェディングイベントシナリオ
+;;Will you marry us?
+;;【EP.1】プロポーズは突然に
+;;1_1_1
+;;スクリプト最後の背景：街（ラグナロク王国）
+;;-----------------------------------------
+# script "lisp"
+# background "201_room"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;カシウス
+# body 3303111
+# pos 3303111 3
+# scale 3303111 0.8 0
+# layer 3303111 2
+# alpha 3303111 0 0
+# mask 3303111 off
+;;カシウス・獣刻・ウロボロス　ウェディングver.
+# body 3303131
+# pos 3303131 3
+# scale 3303131 0.8 0
+# layer 3303131 2
+# alpha 3303131 0 0
+# mask 3303131 off
+;;ソロモン
+# body 3503111
+# pos 3503111 3
+# scale 3503111 0.8 0
+# layer 3503111 2
+# alpha 3503111 0 0
+# mask 3503111 off
+;;グラウ
+# body 164
+# pos 164 3
+# scale 164 0.6 0
+# layer 164 3
+# alpha 164 0 0
+# mask 164 off
+;;ハルモニア兵
+# body 3810001
+# pos 3810001 3
+# scale 3810001 0.8 0
+# layer 3810001 2
+# alpha 3810001 0 0
+# mask 3810001 off
+;;-----------------------------------------
+;;タイトル一枚絵
+# imageset 0 "e200601_logo"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;【タイトル案】
+;;Will you marry us?
+;;
+;;●前編
+;;【EP.1】プロポーズは突然に
+;;
+;;【オープニング】
+;;
+;;//背景：室内（ハルモニア）
+;;//演出：画面揺れ
+;;//ＳＥ：ドサッ（マスターが倒れる音）
+# textwindow "close"
+# waitandnext 0.5
+
+# se "SE_3001"
+# shake 0 0.5
+# waitandnext 0.5
+
+;;//カシウスは花嫁verでお願いします
+# emotionbody 1001 2 3303131 10 290
+# effectpattern 1001 1 1
+# effectstart 1001
+# move 3303131 3 0
+# face 3303131 "surprise"
+# alpha 3303131 1 0.5
+# mask 3303131 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@カシウス
+…御館様？
+
+# face 3303131 "usual"
+# textboxarrow 0 2
+@カシウス
+ああ…
+気を失ってしまったのね
+
+# textboxarrow 0 2
+@カシウス
+途絶えし円環は不安定…
+囚われた魂は停滞し、
+時の檻をさまよいつづける…
+
+# voice 3031 "cassius_ge_0001"
+# textboxarrow 0 2
+@カシウス
+大丈夫よ、御館様
+すぐにあなたを孤独から
+解き放ってあげる…
+
+;;//演出：画面揺れ
+;;//ＳＥ：バタン！（ドアを開ける音）
+# se "SE_0690"
+# shake 0 0.5
+# waitandnext 0.5
+
+;;//ソロモンは通常verでお願いいたします
+# alpha 3303131 0 0.5
+# move 3503111 3 0
+# face 3503111 "normal"
+# alpha 3503111 1 0.5
+# mask 3503111 off
+# textboxarrow 0 2
+@ソロモン
+カシウスっ！
+
+# voice 3031 "cassius_ge_0022"
+# alpha 3503111 0 0.5
+# move 3303131 3 0
+# face 3303131 "surprise"
+# alpha 3303131 1 0.5
+# mask 3303131 off
+# textboxarrow 0 2
+@カシウス
+ソロモン？
+どうしてここに？
+
+# voice 9950 "glau_0045"
+# alpha 3303131 0 0.5
+# move 164 2 0
+# alpha 164 1 0.5
+# mask 164 on
+# textboxarrow 0 1
+# move 3503111 4 0
+# face 3503111 "normal"
+# alpha 3503111 1 0.5
+# mask 3503111 on
+@グラウ
+ソロモン！
+マスターが床に倒れています！
+
+# voice 5031 "solomon_t_0009"
+# face 3503111 "angry"
+# textboxarrow 0 3
+@ソロモン
+マスターに何をしたの？
+答えなさいっ！
+
+# alpha 164 0 0.5
+# alpha 3503111 0 0.5
+# move 3303131 3 0
+# face 3303131 "usual"
+# alpha 3303131 1 0.5
+# mask 3303131 off
+# textboxarrow 0 2
+@カシウス
+…案ずることは何もない
+すべては御館様のため
+
+# textboxarrow 0 2
+@カシウス
+わたしはただ、
+やるべきことを果たしたまで
+
+# alpha 3303131 0 0.5
+# move 164 2 0
+# alpha 164 1 0.5
+# mask 164 on
+# move 3503111 4 0
+# face 3503111 "normal"
+# alpha 3503111 1 0.5
+# mask 3503111 on
+# textboxarrow 0 3
+@ソロモン
+カシウス、貴方…………
+
+# voice 5031 "solomon_t_0069"
+# textboxarrow 0 3
+@ソロモン
+そう…わかったわ
+グラウ、戦闘準備を！
+
+# voice 9950 "glau_0032"
+# textboxarrow 0 1
+@グラウ
+…はい！
+
+# textboxarrow 0 3
+@ソロモン
+カシウス…
+貴方が何を考えているのか、
+私にはわからないけれど
+
+# face 3503111 "angry"
+# textboxarrow 0 3
+@ソロモン
+マスターを傷つけるつもりなら
+見過ごすわけにはいかないわ…
+覚悟しなさい！
+
+# alpha 164 0 0.5
+# alpha 3503111 0 0.5
+# move 3303131 3 0
+# face 3303131 "usual"
+# alpha 3303131 1 0.5
+# mask 3303131 off
+# textboxarrow 0 2
+@カシウス
+………
+
+;;//白フラッシュ
+;;//ここにタイトル演出を入れたい（齋藤）
+;;//白フェードイン
+# bgm "stop"
+# textwindow "close"
+# fadeout "white" 0.5
+# waitandnext 0.5
+
+# se "SE_5563"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# alpha 3303131 0 0
+# waitandnext 0.2
+
+# fadein "white" 0.5
+
+# fadeout "white" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# imagealpha 0 0 0
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;【EP.1】プロポーズは突然に
+;;//背景：黒バック
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+カシウスとソロモンが
+対峙する数日前…
+
+;;//演出：場面転換
+;;//背景：街（ハルモニア国）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "400_angel_town_daytime"
+# move 164 2 0
+# alpha 164 1 0
+# mask 164 on
+# move 3503111 4 0
+# face 3503111 "normal"
+# alpha 3503111 1 0
+# mask 3503111 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+# textflame 1 1
+# textboxarrow 0 1
+# textwindow "normal"
+@グラウ
+あのような依頼があるとは
+驚きでした
+
+# textboxarrow 0 3
+@ソロモン
+そうね
+まさか、ソロモンの指輪を
+見せてほしいって言われるなんて
+
+;;モノローグ
+# textflame 0 0
+@
+去年、ハルモニアで結婚式に
+関して、ある騒動があった
+
+;;モノローグ
+@
+その際、ソロモンも関わったのだが
+そのときにソロモンが嵌めていた
+指輪のデザインを見た、職人が
+
+;;モノローグ
+@
+是非、レプリカを作らせてほしい
+と懇願してきたのだ
+
+# voice 5031 "solomon_t_0001"
+# textflame 1 1
+# textboxarrow 0 3
+@ソロモン
+マスター、買い忘れたものはない？
+ないなら帰ろうと思うんだけど
+
+;;モノローグ
+# textflame 0 0
+@
+マスターはソロモンがハルモニアに
+行くと聞いて、付いていき
+物資の買い出しもしようと考えた
+
+;;モノローグ
+@
+ソロモンにグラウ、
+それにカシウスもごめんね
+買い物に付き合って貰って
+
+;;モノローグ
+@
+そう言ってマスターが
+申し訳なさそうな顔をする
+
+# move 3303111 1 0
+# face 3303111 "normal"
+# alpha 3303111 1 0.5
+# mask 3303111 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 164 3 0.5
+# move 3503111 5 0.5
+@カシウス
+構わないわ
+予定もなかったし、
+御館様の頼みなら断る理由がない
+
+# textboxarrow 0 3
+@ソロモン
+そうよ
+マスターは気を使いすぎだわ
+
+;;モノローグ
+# textflame 0 0
+@
+苦笑いしつつも、
+マスターはあるものが目に入り
+足を止めた
+
+# emotionbody 1002 2 3303111 10 290
+# effectpattern 1002 1 1
+# effectstart 1002
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+…御館様？
+どうかした…？
+
+;;モノローグ
+# textflame 0 0
+@
+マスターの視線の先には教会…
+そこではちょうど新婚夫婦が
+結婚式を挙げていた
+
+# textflame 1 1
+# textboxarrow 0 2
+@グラウ
+この時期は特に
+結婚式が多いみたいですね
+
+# voice 5031 "solomon_t_0004"
+# face 3503111 "happy"
+# textboxarrow 0 3
+@ソロモン
+結婚式か…
+去年のことを思い出すわね
+
+# voice 3031 "cassius_ge_0002"
+# textboxarrow 0 1
+@カシウス
+…あれは何をしているの？
+
+# textboxarrow 0 3
+@ソロモン
+ん？
+ああ、指輪の交換ね
+
+# emotionbody 1003 2 3303111 10 290
+# effectpattern 1003 1 1
+# effectstart 1003
+# face 3303111 "angry"
+# textboxarrow 0 1
+@カシウス
+指輪の…交換？
+
+# voice 5031 "solomon_t_0032"
+# textboxarrow 0 3
+@ソロモン
+婚約指輪は愛の証、
+結婚指輪は絆の証と
+言われているのよ
+
+# face 3303111 "normal"
+# textboxarrow 0 1
+@カシウス
+それじゃ、
+お互いの絆を結ぶことを
+誓う儀式なのね
+
+# textboxarrow 0 2
+@グラウ
+誓いの儀式というより
+風習に近いですね
+
+;;モノローグ
+# textflame 0 0
+@
+指輪の交換をする、
+幸せそうな夫婦の姿を見て
+
+;;モノローグ
+@
+僕は一生結婚できないかも…
+と、苦笑をこぼすマスター
+
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+どうして？
+
+;;モノローグ
+# textflame 0 0
+@
+カシウスの問いに
+僕には魅力がないからね
+と、マスターが答える
+
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+そんなことはないと思う…
+
+# textboxarrow 0 1
+@カシウス
+隊の姫たちもみんな、
+御館様を慕っているし
+
+# textboxarrow 0 1
+@カシウス
+好意を抱いている子は
+たくさんいる気がするけれど…
+ね？ソロモン？
+
+# voice 5031 "solomon_t_0009"
+# face 3503111 "normal"
+# textboxarrow 0 3
+@ソロモン
+な、なんでそこで私に
+話を振るのよ……
+
+# voice 5031 "solomon_t_0004"
+# face 3503111 "happy"
+# textboxarrow 0 3
+@ソロモン
+でも、そうね
+マスターはみんなに
+慕われていると思うわ
+
+;;モノローグ
+# textflame 0 0
+@
+そんな２人の言葉に、
+どうだろうね…と
+困ったような表情をするマスター
+
+;;モノローグ
+@
+慕われているのと
+愛情じゃ、意味が違うよ
+
+;;モノローグ
+@
+マスターの言葉を聞いて、
+カシウスは隊でのいつもの
+風景を思い返す
+
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+…ああ、たしかに
+
+# textboxarrow 0 1
+@カシウス
+みんな、御館様を
+慕ってはいると
+思うけれど…
+
+# textboxarrow 0 1
+@カシウス
+好きというより、
+子どものように甘えている…
+そんな風に見えなくもない
+
+# textboxarrow 0 3
+@ソロモン
+特に、みんなの前だと
+愛情に映るようなことは
+しないわよね
+
+# textboxarrow 0 2
+@グラウ
+ソロモンも意図的に
+そうしてますよね
+
+# voice 5031 "solomon_t_0023"
+# emotionbody 1004 9 3503111 30 220
+# effectpattern 1004 5 0
+# effectstart 1004
+# face 3503111 "surprise"
+# textboxarrow 0 3
+@ソロモン
+な、なにをいっているのよ…！
+
+# effectskip 1004
+# face 3503111 "normal"
+# textboxarrow 0 3
+@ソロモン
+と、とにかく
+マスターは結婚なんて
+考えない方が隊のためよ
+
+;;モノローグ
+# textflame 0 0
+@
+そうだよね…と
+肩をすくめるマスター
+
+;;モノローグ
+@
+元気をなくした様子の
+マスターを見て、カシウスは…
+
+# voice 3031 "cassius_ge_0013"
+# face 3303111 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@カシウス
+どうして？
+御館様にも幸せになる
+権利はあるわ
+
+# face 3503111 "sad"
+# textboxarrow 0 3
+@ソロモン
+それはそうだけど…
+でも、隊のことを考えれば
+マスターは今のままが一番だわ
+
+# textboxarrow 0 1
+@カシウス
+でも……
+
+# face 3503111 "normal"
+# textboxarrow 0 3
+@ソロモン
+はい！
+もうこの話は終わり！
+さあ、早く帰るわよ
+
+;;モノローグ
+# se "SE_0740"
+# alpha 164 0 0.5
+# alpha 3503111 0 0.5
+# textflame 0 0
+@
+足早に歩いていくソロモン
+
+# textwindow "close"
+# move 3303111 3 0.5
+# mask 3303111 off
+# waitandnext 0.5
+
+;;モノローグ
+# textwindow "normal"
+@
+そんなソロモンの後姿を見ながら
+ごめんね、変なことを言って
+と、カシウスに謝るマスター
+
+# face 3303111 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@カシウス
+……それなら
+
+# se "SE_6504"
+# emotionbody 1005 3 3303111 10 290
+# effectpattern 1005 1 3
+# effectstart 1005
+# voice 3031 "cassius_ge_0004"
+# textboxarrow 0 2
+@カシウス
+…わたしが御館様と
+結婚してあげる
+
+# textboxarrow 0 2
+@カシウス
+そうすればもう、
+結婚できないなんて
+落ち込む必要はなくなるわ
+
+;;モノローグ
+# textflame 0 0
+@
+突然のプロポーズに、
+マスターは耳を疑う
+
+# face 3303111 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@カシウス
+…御館様？
+何をそんなに驚いているの？
+
+;;モノローグ
+# textflame 0 0
+@
+きっとカシウスなりの
+励ましなのだろうと思い、
+ありがとう、と軽く流す
+
+# textflame 1 1
+# textboxarrow 0 2
+@カシウス
+…………
+
+;;モノローグ
+# textflame 0 0
+@
+だが…
+
+;;モノローグ
+@
+マスターを見つめる
+カシウスの表情は
+真剣そのものだった
+
+# alpha 3303111 0 0.5
+# move 3810001 3 0
+# alpha 3810001 1 0.5
+# mask 3810001 off
+# textflame 1 1
+# textboxarrow 0 2
+@ハルモニア兵
+あの斬ル姫は
+まさか…
+
+;;モノローグ
+# textflame 0 0
+@
+そして、マスターたち
+一行の様子をジッと見る
+ハルモニア兵
+
+;;モノローグ
+@
+こうして、
+マスターの何気ない一言が
+事件へと発展していくのだった

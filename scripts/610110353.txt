@@ -1,0 +1,320 @@
+;;-----------------------------------------
+;;第４話「焦燥」戦闘後
+;;-----------------------------------------
+# script "lisp"
+# bgm "bgm004" 0
+# background "courtyard"
+;;-----------------------------------------
+;;MAI
+# body 601911
+# pos 601911 3
+# scale 601911 0.8 0
+# layer 601911 6
+# alpha 601911 0 0
+# mask 601911 off
+;;ティルフィング
+# body 101491
+# pos 101491 3
+# scale 101491 0.8 0
+# layer 101491 3
+# alpha 101491 1 0
+# mask 101491 off
+;;グラム
+# body 116
+# pos 116 2
+# scale 116 0.8 0
+# layer 116 3
+# alpha 116 0 0
+# body 100821
+# pos 100821 3
+# scale 100821 0.8 0
+# layer 100821 3
+# alpha 100821 0 0
+;;アロンダイト
+# body 100751
+# pos 100751 4
+# scale 100751 0.8 0
+# layer 100751 5
+# alpha 100751 0 0
+# body 100711
+# pos 100711 3
+# scale 100711 0.8 0
+# layer 100711 3
+# alpha 100711 0 0
+;;-----------------------------------------
+# subfillrect 0 "black" 0 0 0.5
+# brightness 101491 0.5 0
+# textflame 0 0
+@マスター
+…ティルフィング、
+僕の声は、聞こえてる？
+
+# face 101491 "sad"
+# voice 1014 "tyrufing_0025"
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+うっ…私は…？
+
+# textflame 0 0
+@マスター
+MAIの黒い霧によって
+異族化しつつある
+
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+そ、そんな…！
+
+# textflame 0 0
+@マスター
+いや、君は負の感情に、
+自分への怒りに、
+飲まれてしまったんだ
+
+# emotionbody 1001 8 101491 80 250
+# effectpattern 1001 1 0
+# effectstart 1001
+# voice 1014 "tyrufing_0015"
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+ウソ…
+みんなを救うどころか
+霧に飲まれるなんて…
+
+# effectskip 1001
+# textflame 0 0
+@マスター
+起きてしまったことは
+変えられない
+
+# bgmfile "bgm183_story" "BgmGakuen003" 0
+# textflame 0 0
+@マスター
+けれど、未来は違う
+自分を憎むくらいなら、
+誰かの助けを借りればいい
+
+# textflame 0 0
+@マスター
+今の君には仲間がいるんだ
+
+# brightness 101491 0.6 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+マスター…
+
+# brightness 101491 0.7 0.5
+# face 101491 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+…そうですね、
+その通り…
+今の私には仲間がいる…
+
+# brightness 101491 0.8 0.5
+# face 101491 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+ありがとうございます
+私は…
+背負いすぎていたようです！
+
+# brightness 101491 0.9 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+私一人じゃ勝てない
+でも…
+
+# brightness 101491 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+@ティルフィング
+今の私は一人じゃない！
+もう負けません！
+
+;;画面が砕ける演出
+# se "SE_10391"
+# subfillrect 0 "black" 0 0 0
+# fadein "white" 1
+# waitandnext 1.2
+
+# emotionbody 1002 1 601911 10 310
+# effectpattern 1002 2 0
+# effectstart 1002
+# alpha 101491 0 0.5
+# alpha 601911 1 0.5
+# face 601911 "surprise"
+# voice 6019 "mai_0023"
+# textflame 1 1
+# textboxarrow 0 2
+@MAI
+なんか復活してるー！？
+もう一回、闇堕ちして！
+
+# textflame 0 0
+@
+MAIの黒い霧が
+ティルフィングを包む
+しかし――
+
+# textflame 0 0
+@
+ティルフィングは
+何事もなかったように、
+黒い霧をすり抜けた
+
+# move 101491 4 0
+# alpha 101491 1 0.5
+# move 601911 2 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+無駄です…！
+もう二度と、こんな霧に
+飲まれることはありません！
+
+# face 601911 "angry"
+# voice 6019 "mai_0027"
+# textflame 1 1
+# textboxarrow 0 1
+@MAI
+そうくるわけね…
+
+# se "SE_6504"
+# emotionbody 1003 3 601911 10 290
+# effectpattern 1003 1 3
+# effectstart 1003
+# face 601911 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@MAI
+だったら逃げるよ♪
+MAIちゃんは何処にでも
+逃げられるんだし――
+
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+ご自由にどうぞ！
+
+# emotionbody 1004 2 601911 10 290
+# effectpattern 1004 1 1
+# effectstart 1004
+# face 601911 "surprise"
+# voice 6019 "mai_0022"
+# textflame 1 1
+# textboxarrow 0 1
+@MAI
+へ？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+どこへ逃げても探します！
+来るなら戦います！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+あなたが私たちに
+敵意を持つ限り、
+ずっと戦い続けます…！
+
+# alpha 101491 0 0.5
+# alpha 601911 0 0.5
+# alpha 100751 1 0.5
+# alpha 116 1 0.5
+# face 100751 "angry"
+# voice 1007 "Arondaito_0003"
+# textflame 1 1
+# textboxarrow 0 3
+@アロンダイト
+…私もです
+やっと覚悟が決まりました
+
+# face 116 "usual"
+# voice 1008 "guramu_0004"
+# textflame 1 1
+# textboxarrow 0 1
+@グラム
+もう焦らない
+たとえ永遠にだって、
+戦い続けるよ…！
+
+# alpha 101491 1 0.5
+# alpha 601911 1 0.5
+# alpha 100751 0 0.5
+# alpha 116 0 0.5
+# textflame 1 1
+# textboxarrow 0 3
+@ティルフィング
+私は…いいえ！
+私たちは、
+あなたに決して屈さない！
+
+# textflame 1 1
+# textboxarrow 0 1
+@MAI
+揃いも揃って、
+開き直った目をしてるね
+…時は来たか
+
+# bgmfile "bgm185" "BgmGakuen003" 0
+# emotionbody 1005 10 601911 60 235
+# effectpattern 1005 3 3
+# effectstart 1005
+# face 601911 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@MAI
+オッケー、追いかけっこは終了！
+もう小細工なし！
+正々堂々と決着つけよう！
+
+# effectskip 1005
+# textflame 1 1
+# textboxarrow 0 1
+@MAI
+場所も時間も指定する！
+私は仲間の異族を全て集めて
+あなた達と戦う！
+
+# textflame 1 1
+# textboxarrow 0 1
+@MAI
+負けたら、能力を封印して、
+地面のずっと奥の方で
+静かに暮らすよ
+
+# se "SE_6504"
+# emotionbody 1006 3 601911 10 290
+# effectpattern 1006 1 3
+# effectstart 1006
+# voice 6019 "mai_0004"
+# textflame 1 1
+# textboxarrow 0 1
+@MAI
+それじゃ、またね♪
+
+# textwindow "close"
+# alpha 601911 0 0.5
+# se "SE_0809"
+# waitandnext 0.8
+
+# alpha 101491 0 0.5
+# textwindow "nomal"
+# textflame 0 0
+@
+MAIはいつも通り姿を消した
+そして、その数日後――
+
+# textflame 0 0
+@
+三校それぞれに
+MAI直筆の決闘状が届いた

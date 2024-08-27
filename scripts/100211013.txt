@@ -1,0 +1,269 @@
+;;----------------------------------------------
+;;100211013
+;;第1-1話後半　タイトル：チーキー・プリズナー
+;;----------------------------------------------
+# script "lisp"
+# background "devil_world"
+# bgm "stop"
+;;ムー
+# body 161
+# pos 161 4
+# scale 161 0.6 0
+# layer 161 3
+# mask 161 on
+# alpha 161 0 0
+;;レーヴァ
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# layer 3100211 1
+# mask 3100211 on
+# alpha 3100211 0 0
+;;ヘレナ
+# body 3302811
+# pos 3302811 2
+# scale 3302811 0.8 0
+# layer 3302811 2
+# mask 3302811 on
+;;ニール
+# body 162
+# pos 162 4
+# scale 162 0.6 0
+# layer 162 3
+# mask 162 on
+# alpha 162 0 0
+;;ケイオス兵
+# body 3820001
+# pos 3820001 4
+# scale 3820001 0.8 0
+# layer 3820001 1
+# mask 3820001 on
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;黒バック
+# imageset 1 "bg_black"
+# imagepos 1 0 0
+# imagelayer 1 1
+# imageleftin 1 0
+# imagealpha 1 0 0
+;;剣閃エフェクト（ヘレナ）
+# effectbody 2000 1 100 0 1
+# waitandnext 0.1
+
+;;◆ケイオスリオン--------------------------------------------
+# se "SE_4759"
+# shake 0 0.6
+# fadein "white" 0.6
+# textflame 1 1
+# textboxarrow 0 1
+# face 3302811 "angry"
+# voice 3028 "herena_a_battle_0002"
+# chara 3302811
+@ヘレナ
+磔にしてやろう！
+
+;;ダメージ
+# se "SE_5793"
+# shake 1 0.2
+# effectstart 2000
+# fadein "red" 0.5
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 382000 "demon_0038"
+# chara 3820001
+@ケイオスリオン兵
+ぐわあああああああっ…！
+
+;;ケイオス死亡
+# textwindow "close"
+# se "SE_3001"
+# alpha 3820001 0 0.8
+# waitandnext 1.1
+
+;;ニール登場
+# face 3302811 "usual"
+# move 3302811 3 0.5
+# alpha 162 1 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9952 "nir_0041"
+# chara 162
+@ニール
+すごいすごいっ！
+アタチ達の速さについてこられる
+奴なんていないねっ
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3302811 "normal"
+# voice 3028 "herena_a_0003"
+# chara 3302811
+@ヘレナ
+ふっ…今回も手応えなかったな
+せめて斬ル姫がいてくれたら
+良かったのに
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9952 "nir_0002"
+# chara 162
+@ニール
+悪魔人達が逃げていくよ
+追いかけて、みんな倒しちゃおうか
+
+;;◆レーヴァとムー--------------------------------------------
+# alpha 162 0 0.3
+# alpha 3302811 0 0.3
+# alpha 161 1 0.3
+# alpha 3100211 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+# voice 310021 "revatein_ge_0004"
+# chara 3100211
+@レーヴァテイン
+その必要はないわ…
+私達には絶対に敵わないと
+分からせれば良い…
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9953 "mwu_0004"
+# chara 161
+@ムー
+ほーら、俺の言った通りだったろ！
+レヴァが出るまでもなかったぜ
+まったく連中と来たら腰抜けの――
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 310021 "revatein_ge_0085"
+# face 3100211 "angry"
+# chara 3100211
+@レーヴァテイン
+黙って
+
+;;◆全員------------------------------------------------------
+# textwindow "close"
+# alpha 161 0 0.6
+# pos 162 4
+# move 3100211 1 0.5
+# alpha 162 1 0.5
+# rightin 162 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm273" "BgmLostRagnarokEvent" 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9952 "nir_0019"
+# chara 162
+@ニール
+…アタチ達、大苦戦してたのに、
+レーヴァテインは寝ぼけ顔で
+呑気に歩いてくるなんて傷つくわぁ
+
+# pos 3302811 4
+# alpha 162 0 0.3
+# alpha 3302811 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "sad"
+# voice 3028 "herena_a_0013"
+# chara 3302811
+@ヘレナ
+そうだよ…
+ヘレナはアナタのために昔の仲間達を
+この手にかけたんだ
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 3302811
+@ヘレナ
+とても心が痛んだのに、
+レーヴァはヘレナ達に
+なんのねぎらいの言葉もないんだね…
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "sad"
+# voice 310021 "revatein_ge_0048"
+# chara 3100211
+@レーヴァテイン
+そんなことは…
+ヘレナにもニールにも、感謝してる
+辛い思いをさせたわね…
+
+# bgm "stop"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "usual"
+# chara 3302811
+@ヘレナ
+まったくだよ…くふっ
+
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+# pos 162 4
+# alpha 162 1 0.3
+# alpha 3302811 0 0.3
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "normal"
+# voice 9952 "nir_0005"
+# chara 162
+@ニール
+レーヴァテインはからかいがいのある
+良い子ねー
+あははっ！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "normal"
+# voice 310021 "revatein_ge_0014"
+# chara 3100211
+@レーヴァテイン
+…あなた達、傷ついたなんて嘘ね
+
+# alpha 162 0 0.3
+# alpha 3302811 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+# voice 3028 "herena_a_0007"
+# chara 3302811
+@ヘレナ
+当然だ！
+あんな連中、仲間だと思ったことは
+一度もない
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "usual"
+# chara 3302811
+@ヘレナ
+いい加減、レーヴァもヘレナの嘘に
+騙されないよう、気をつけなよ
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3302811 "normal"
+# voice 3028 "herena_a_0005"
+# chara 3302811
+@ヘレナ
+ま、そういうところも面白いから
+良いんだけどね
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3100211 "sad"
+# voice 310021 "revatein_ge_0013"
+# chara 3100211
+@レーヴァテイン
+はぁ…そうよね
+あなたは初めて会ったときから
+そうだったわね

@@ -1,0 +1,556 @@
+;;-----------------------------------------
+;;3_2_11_1
+;;-----------------------------------------
+# script "lisp"
+# background "in_ragnarok_institution"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;カミト
+# body 210
+# pos 210 2
+# scale 210 0.8 0
+# layer 210 5
+# mask 210 off
+# alpha 210 0 0
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# mask 3102311 off
+# alpha 3102311 1 0
+;;グリモワール
+# body 3501711
+# pos 3501711 4
+# scale 3501711 0.8 0
+# alpha 3501711 0 0
+;;巨大デーモン
+# body 5810301
+# pos 5810301 3
+# scale 5810301 0.8 0
+# mask 5810301 off
+# alpha 5810301 0 0
+;;魔獣化マサムネ
+# body 1100111
+# pos 1100111 3
+# scale 1100111 0.8 0
+# layer 1100111 4
+# mask 1100111 off
+# alpha 1100111 0 0
+;;-----------------------------------------
+;;暗転
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;霧
+# imageset 1 "kiri_03"
+# imagescale 1 2.5 0
+# imagealpha 1 0 0
+# imagelayer 1 4
+;;-----------------------------------------
+# face 3102311 "happy"
+# voice 310231 "ascalon_a_0006"
+# textboxarrow 0 2
+@アスカロン
+やったあ！
+やりましたね、マスター
+
+# face 3102311 "surprise"
+# textboxarrow 0 2
+@アスカロン
+あっ…
+右腕、大丈夫ですかっ？
+急いで手当てしないとっ
+
+# alpha 3102311 0 0.5
+# alpha 3501711 1 0.5
+# alpha 210 1 0.5
+# face 3501711 "angry"
+# voice 350171 "grimoire_ge_0009"
+# textboxarrow 0 3
+@グリモワール
+ワタシが診るわ！
+あんな思い切ったことするなんて…
+どういう心境の変化なのっ？
+
+# face 210 "sad"
+# voice 9936 "kamito_0008"
+# textboxarrow 0 1
+@カミト
+あはは…
+ちょっと無理したかな…
+
+# face 3501711 "normal"
+# voice 350171 "grimoire_ge_0004"
+# textboxarrow 0 3
+@グリモワール
+…良い顔してるじゃない
+ところで…
+
+# face 3501711 "angry"
+# textboxarrow 0 3
+@グリモワール
+その義手、どうなってるの！？
+何をしたのよっ？
+
+# face 210 "normal"
+# voice 9936 "kamito_0030"
+# textboxarrow 0 1
+@カミト
+僕も具体的なところは
+よく分からないんだけど――
+
+# bgm "stop"
+;;画面揺れ
+# shake 1 2
+;;巨大な足音
+# se "SE_0864"
+# sedelay "SE_0864" 1
+# textwindow "close"
+# waitandnext 2.5
+
+# move 3102311 2 0
+# mask 3102311 on
+# alpha 3102311 1 0.5
+# alpha 3501711 0 0.5
+# move 210 4 0.5
+# face 3102311 "surprise"
+# textwindow "nomal"
+# textboxarrow 0 1
+@アスカロン
+マスター！
+外を見て下さいっ
+
+# face 210 "surprise"
+# voice 9936 "kamito_0023"
+# textboxarrow 0 3
+@カミト
+えっ…
+あああっ…！
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 3102311 0 0
+# alpha 210 0 0
+;;背景：遺跡
+# background "201_border"
+# bgmfile "bgm419" "BgmIntegralNoahBattle003" 0
+# imagealpha 1 0.5 0
+# imagepos 1 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 5810301 1 0.5
+# waitandnext 0.5
+
+# se "SE_0854"
+# textwindow "toge"
+# textboxarrow 0 0
+@？？？
+BYAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAA！！
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 5810301 0 0
+;;背景：ラグナロク機関
+# background "in_ragnarok_institution"
+# imagealpha 1 0 0
+# imagepos 1 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 3501711 5 0
+# mask 3501711 on
+# alpha 3501711 1 0.5
+# move 3102311 1 0
+# mask 3102311 on
+# alpha 3102311 1 0.5
+# move 210 3 0
+# mask 210 on
+# alpha 210 1 0.5
+# face 210 "sad"
+# textwindow "nomal"
+# textboxarrow 0 2
+@カミト
+すっかり忘れてた…
+こんな近くまで迫ってたんだ
+
+# face 3501711 "normal"
+# voice 350171 "grimoire_ge_0027"
+# textboxarrow 0 3
+@グリモワール
+今から逃げても間に合わないわね
+…アスカロン
+
+# face 3102311 "angry"
+# voice 310231 "ascalon_a_0032"
+# textboxarrow 0 1
+@アスカロン
+はい！
+マスターのためならっ
+
+# textboxarrow 0 3
+@グリモワール
+今回ばかりはワタシもキミと
+同じ考えよ
+
+# face 3501711 "angry"
+# textboxarrow 0 3
+@グリモワール
+マスター！
+急いで逃げなさいっ
+
+# textboxarrow 0 1
+@アスカロン
+私達があの巨大な化け物を
+引きつけて足止めします！
+
+# textboxarrow 0 3
+@グリモワール
+キミを一人にしてしまうけど、
+まず生き存えて、それから――
+
+# face 210 "angry"
+# voice 9936 "kamito_0066"
+# textboxarrow 0 2
+@カミト
+嫌だ
+
+# voice 350171 "grimoire_ge_0022"
+# textboxarrow 0 3
+@グリモワール
+マスターっ？
+ちょっと…
+こんなときに意地張らないで！
+
+# textboxarrow 0 2
+@カミト
+こんなときだから意地を張るんだよ
+僕はグリモワールもアスカロンも
+失いたくないんだ
+
+# face 210 "irregular"
+# textboxarrow 0 2
+@カミト
+生き延びるなら、みんな一緒だよ
+
+# face 3102311 "normal"
+# voice 310231 "ascalon_a_0004"
+# textboxarrow 0 1
+@アスカロン
+マスター…
+こんな窮地でも希望を失ってない
+なんて…羨ましい
+
+# face 3102311 "angry"
+# textboxarrow 0 1
+@アスカロン
+あ、そのっ、なんでもないです！
+みんなで生き延びましょう！
+
+# textboxarrow 0 3
+@グリモワール
+でぇ？
+あんなデカブツ相手にどうしようって
+いうのよ！？
+
+# face 210 "normal"
+# voice 9936 "kamito_0036"
+# textboxarrow 0 2
+@カミト
+それは…
+今から考えるよっ
+
+# voice 350171 "grimoire_ge_0014"
+# textboxarrow 0 3
+@グリモワール
+いい加減にしなさい！
+この状況でどうやって――
+
+# voice 11001 "masamunem_0013"
+# textboxarrow 0 0
+@？？？
+うるさいな…
+少し静かにしてくれ
+頭に響く
+# waitandnext 1
+
+# alpha 3501711 0 0.5
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# alpha 1100111 1 1
+;;魔獣化の解けたマサムネが起き上がる
+# se "SE_0648"
+
+# alpha 3501711 1 0.5
+# alpha 3102311 1 0.5
+# alpha 210 1 0.5
+# alpha 1100111 0 0.5
+# face 3102311 "surprise"
+# voice 310231 "ascalon_a_0018"
+# textboxarrow 0 1
+@アスカロン
+そんな…
+倒せていなかったなんて…
+
+# face 210 "surprise"
+# voice 9936 "kamito_0033"
+# textboxarrow 0 2
+@カミト
+ごめん…！
+僕がちゃんと確認しなかったから…
+
+# textboxarrow 0 3
+@グリモワール
+悔やむのは後よ！
+もう一度、焼き払ってやるわ！！
+
+# fadein "white" 0.5
+# envbody 1001 7 14
+# effectpattern 1001 1 0
+# effectstart 1001
+# se "SE_4716"
+# waitandnext 1
+
+# alpha 3501711 0 0.5
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# alpha 1100111 1 0.5
+# voice 11001 "masamunem_0022"
+# textboxarrow 0 2
+@？？？
+！！
+
+;;グリモワールの攻撃をマサムネが受け流す
+# fadein "white" 0.3
+# se "SE_4000"
+# effectskip 1001
+# waitandnext 0.8
+
+# move 3501711 4 0.5
+# alpha 3501711 1 0.5
+# move 1100111 2 0.5
+# mask 1100111 on
+# face 1100111 "angry"
+# textboxarrow 0 1
+@？？？
+いきなり何をするんだ？
+
+# face 3501711 "surprise"
+# voice 350171 "grimoire_ge_0023"
+# textboxarrow 0 3
+@グリモワール
+えぇぇっ！？
+ワタシの炎を剣で捌いたの！？
+
+# face 1100111 "normal"
+# textboxarrow 0 1
+@？？？
+お前、キラープリンセスだな
+…見た目が少し違う気もするが
+
+# face 3501711 "normal"
+# textboxarrow 0 3
+@グリモワール
+キラープリンセス？
+随分、古い呼び方するじゃないの！
+キミこそ何者なのっ？
+
+# voice 11001 "masamunem_0003"
+# textboxarrow 0 1
+@マサムネ
+俺は…マサムネ
+キラーメイルのマサムネだ
+…っつう
+
+# face 1100111 "sad"
+# voice 11001 "masamunem_0037"
+# textboxarrow 0 1
+@マサムネ
+くそっ…
+まだ頭痛が治まらないな
+記憶も曖昧だ…
+
+# alpha 3501711 0 0.5
+# alpha 1100111 0 0.5
+# alpha 210 1 0.5
+# face 210 "surprise"
+# move 210 3 0
+# textwindow "moya"
+# textboxarrow 0 0
+@カミト
+さっきまで言葉なんか通じそうに
+なかったのに…
+これが“ディスラプター”の力？
+
+# move 3102311 4 0
+# alpha 3102311 1 0.5
+# alpha 1100111 1 0.5
+# alpha 210 0 0.5
+# face 3102311 "sad"
+# voice 310231 "ascalon_a_0002"
+# textboxarrow 0 3
+# textwindow "normal"
+@アスカロン
+あの…
+大丈夫ですか？
+辛そうですけど…
+
+# face 1100111 "normal"
+# voice 11001 "masamunem_0023"
+# textboxarrow 0 1
+@マサムネ
+ああ、じきに治まる
+…お前！？
+シオリ…
+
+# face 3102311 "surprise"
+# voice 310231 "ascalon_a_0022"
+# textboxarrow 0 3
+@アスカロン
+えっ？
+私はアスカロンです
+
+# face 1100111 "sad"
+# voice 11001 "masamunem_0031"
+# textboxarrow 0 1
+@マサムネ
+ああ、そうだな…
+すまない
+何でもない
+
+# face 1100111 "normal"
+# textboxarrow 0 1
+@マサムネ
+さてと…
+気分は最悪だが、
+まずはあれを何とかしないとな
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 3102311 0 0
+# alpha 1100111 0 0
+;;巨大死霊が窓から顔を覗かせる
+;;演出が無理なようなら背景変えで←むりだったので背景かえます。さいとう
+;;背景：遺跡
+# background "201_border"
+# bgmfile "bgm419" "BgmIntegralNoahBattle003" 0
+# imagealpha 1 0.5 0
+# imagepos 1 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 5810301 1 0.5
+# waitandnext 0.5
+
+# se "SE_0865"
+# textwindow "toge"
+# textboxarrow 0 0
+@？？？
+SYAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAA
+AAAAAAAAAAAAA！！
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 5810301 0 0
+;;背景：ラグナロク機関
+# background "in_ragnarok_institution"
+# imagealpha 1 0 0
+# imagepos 1 0 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 3501711 4 0
+# alpha 3501711 1 0.5
+# move 3102311 2 0
+# alpha 3102311 1 0.5
+# face 3102311 "normal"
+# face 3501711 "angry"
+# textwindow "nomal"
+# textboxarrow 0 3
+@グリモワール
+そうよ！
+キミなんかに構ってる場合じゃ
+なかったわ
+
+# textboxarrow 0 1
+@アスカロン
+マスター！
+なるべく安全なところに
+いて下さいねっ
+
+# face 3102311 "angry"
+# textboxarrow 0 1
+@アスカロン
+あの化け物は私が命に代えても――
+
+# bgmfile "bgm154_155" "BgmPJZero001" 0
+# alpha 3501711 0 0.5
+# alpha 3102311 0 0.5
+# move 1100111 3 0
+# mask 1100111 off
+# alpha 1100111 1 0.5
+# voice 11001 "masamunem_0002"
+# textboxarrow 0 2
+@マサムネ
+お前も下がってろ
+ああいうのは、俺の領分だ
+# se "SE_10585"
+
+# alpha 1100111 0 0.5
+# alpha 3501711 1 0.5
+# alpha 3102311 1 0.5
+# face 3501711 "surprise"
+# face 3102311 "surprise"
+# voice 310231 "ascalon_a_0022"
+# textboxarrow 0 1
+@アスカロン
+えっ…？
+
+# voice 350171 "grimoire_ge_0002"
+# textboxarrow 0 3
+@グリモワール
+ちょっと、キミ…！
+
+# alpha 1100111 1 0.5
+# alpha 3501711 0 0.5
+# alpha 3102311 0 0.5
+# voice 11001 "masamunem_0007"
+# textboxarrow 0 2
+@マサムネ
+起き抜けで体も温まっていないが、
+まあ、いけるだろ！

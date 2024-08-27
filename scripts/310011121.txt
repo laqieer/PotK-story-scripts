@@ -1,0 +1,141 @@
+;;--------------------------------------------
+;;SEA_幕間_2_1
+;;--------------------------------------------
+# bgm "stop"
+# background "004_outland"
+;;--------------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 4
+# scale 196 0.8 0
+# layer 196 5
+# mask 196 off
+# alpha 196 0 0
+;;フライデビル
+# body 920014
+# pos 920014 1
+# scale 920014 0.8 0
+# layer 920014 2
+# mask 920014 off
+# alpha 920014 0 0
+# reversal 920014 0
+;;村人
+# body 3
+# pos 3 1
+# scale 3 0.8 0
+# layer 3 4
+# mask 3 off
+# alpha 3 0 0
+;;--------------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;--------------------------------------------
+;;背景：村
+# se "SE_6193"
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# move 196 3 0.5
+# alpha 196 1 0.3
+# face 196 "sad"
+# waitandnext 0.5
+
+# voice 9943 "almace_navikan_0022"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@アルマス
+まったく…
+お姉ちゃんにも困ったものよね
+
+@アルマス
+世界の平和を守るんだって
+あちこち飛び回ってるから…
+
+@アルマス
+たまに会おうと思っても居場所が
+掴み辛いんだもの
+
+# face 196 "surprise"
+# sestop "SE_6193"
+@アルマス
+今日はこの村で一泊しようかな
+…あれ？
+
+# textwindow "close"
+# alpha 196 0 0.3
+# waitandnext 0.8
+
+# se "SE_6194"
+# serif 1
+# textwindow "toge"
+@村人達
+うわあああああ…！
+
+# move 196 4 0
+# alpha 196 1 0.3
+# waitandnext 0.5
+
+;;村人達が逃げてくる
+# se "SE_0799"
+# move 3 2 0.3
+# alpha 3 1 0.3
+# waitandnext 0.8
+
+# voice 9943 "almace_navikan_0036"
+# face 196 "angry"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+@アルマス
+ちょっと！
+どうしたの？
+何か――
+
+;;魔獣が現れる
+# move 196 5 0.5
+# move 3 3 0.5
+# alpha 920014 1 1
+# textboxarrow 0 0
+# waitandnext 1
+
+# se "SE_0792"
+# textwindow "toge"
+@魔獣
+グガアアアアアアア！！
+
+# bgm "bgm023_024" 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@村人
+た…助けてくれぇっ…！
+
+# textboxarrow 0 3
+@アルマス
+何なの、あれっ？
+…とにかく、今は村の人達を
+守らないと！
+
+# scale 3 0.7 0.6
+# alpha 3 0 0.3
+# move 196 4 0.5
+# move 920014 2 0.5
+@アルマス
+私に任せて！
+みんなはどこかに隠れててねっ
+
+;;バトル
+;;マップ：015
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 196 0 0
+# waitandnext 0.2

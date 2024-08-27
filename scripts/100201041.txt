@@ -1,0 +1,261 @@
+;;２章１話４戦闘前
+;;第１話　タイトル：トレイセーマ潜入
+;;//背景：街中
+# script "lisp"
+# background "004_outland"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;アルマス
+# body 151
+# pos 151 1
+# scale 151 0.8 0
+# face 151 "worry"
+;;ギル
+# body 153
+# pos 153 3
+# scale 153 0.8 0
+# face 153 "surprise"
+;;ティターニア
+# body 152
+# pos 152 5
+# scale 152 0.8 0
+# alpha 152 0 0
+# face 152 "sad"
+;;耳つきモブ
+# body 155
+# pos 155 5
+# scale 155 0.8 0
+;;トレ兵1
+# body 3830007
+# pos 3830007 2
+# scale 3830007 0.8 0
+# alpha 3830007 0 0
+;;トレ兵2
+# body 3830001
+# pos 3830001 3
+# scale 3830001 0.8 0
+# alpha 3830001 0 0
+# layer 151 5
+# layer 155 1
+# layer 153 3
+# layer 152 5
+# layer 3830007 4
+# layer 3830001 2
+;;アルマスボイス用
+# body 3103811
+# pos 3103811 3
+# alpha 3103811 0 0
+# textflame 1 1
+# textboxarrow 0 2
+# chara 153
+# voice 9969 "gill_0008"
+@ギル
+へ…へへっ…
+おじさんなに言ってんの？
+俺の耳は普通だろ…
+
+# move 155 4 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 155
+@トレイセーマ民
+そうかぁ？
+良く見ると、尻尾も
+作り物っぽくないか？
+
+# face 153 "sad"
+# face 151 "sad"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 151
+# voice 1038 "almace_battle_0005"
+@アルマス
+まずいっ…
+こんなところで正体が
+バレてしまったら…
+
+# bgm "stop"
+# alpha 153 0 0.5
+# alpha 151 0 0.5
+# alpha 3830007 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3830007
+# voice 383000 "cryptid_0002"
+@トレイセーマ兵隊長
+おい、お前！
+今、形態差別発言をしたな！
+
+# face 155 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 155
+@トレイセーマ民
+えっ？
+
+# move 155 5 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 155
+@トレイセーマ民
+い、いえっ…
+俺はそんなつもりじゃなくて…
+単に気になって…
+
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3830007
+@トレイセーマ兵隊長
+いいや、お前はこの少年の外見を
+他者と違うと言った
+これは立派な差別発言だ！
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3830007
+@トレイセーマ兵隊長
+ただちにエドゥーへ連行しろ！
+
+# face 155 "sad"
+# alpha 3830001 1 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 155
+@トレイセーマ民
+待ってくれぇ！
+違うんだっ…そんなつもりじゃ…
+矯正施設送りは嫌だぁぁぁっ…！
+
+;;//トレイセーマ民が兵士に連れて行かれる
+# se "SE_0719"
+# serif 0
+# textwindow "close"
+# rightout 155 1
+# rightout 3830001 1
+# alpha 155 0 0.5
+# alpha 3830001 0 0.5
+# waitandnext 1.5
+
+# face 153 "surprise"
+# face 151 "normal"
+# alpha 3830007 0 0.5
+# alpha 153 1 0.5
+# alpha 151 1 0.5
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 153
+@ギル
+…なんだ、今の？
+なにが起きたんだよ…
+
+# mask 3830007 off
+# alpha 153 0 0.5
+# alpha 151 0 0.5
+# move 3830007 3 0
+# alpha 3830007 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3830001
+@トレイセーマ兵隊長
+我々は平等維持委員会だ
+外見の違いに関係なくトレイセーマ
+国民は皆、平等である！
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3830001
+@トレイセーマ兵隊長
+平等に反する言動は全て矯正対象だ
+それでは、全てのトレイセーマ国民が
+平等でありますよう！
+
+# serif 1
+# textboxarrow 1 0
+# chara 155
+@トレイセーマ民達
+平等でありますよう！
+
+# face 151 "sad"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# alpha 3830007 0 0.5
+# alpha 151 1 0.5
+# alpha 152 1 0.5
+# alpha 153 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 151
+@アルマス
+なにこれ、怖い…
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 152
+# voice 9967 "titania_0042"
+@ティターニア
+この場は助かりましたけれど、
+私達も言動には注意しないと
+大変なことになりそうですね…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 153
+@ギル
+あ…焦ったぁ…
+早く出ようぜ、この町…
+
+# face 151 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 151
+# voice 1038 "almace_0028"
+@アルマス
+トレイセーマ国内はどこも
+こんな感じだと思うわよ
+バレなくて良かったじゃない
+
+# face 153 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 153
+@ギル
+そうだけどさぁ…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 153
+# voice 9969 "gill_0030"
+@ギル
+矯正施設って
+どんなところなんだろ…？
+怖すぎるぜ…
+
+# face 152 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 152
+@ティターニア
+予想に反してギルの外見を咎められた
+ときはゾッとしましたけれど、
+やはり理念は徹底していますね
+
+# textflame 1 1
+# textboxarrow 0 3
+# chara 152
+# voice 9967 "titania_0004"
+@ティターニア
+むしろ変装がバレにくいと
+前向きに捉えていきましょう
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 151
+@アルマス
+そうよね
+変なことに首を突っ込まなければ
+首都までスムーズに行けそうだわ
+

@@ -1,0 +1,868 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第17章 章タイトル「到来せし繋ぎ手―エクスプレス―」
+;;第2話―３　タイトル：繋がる力
+;;3_0
+;;スクリプト最後の背景：城内：pope_room
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgmfile "bgm264" "BgmLostRagnarokBattle001" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;フライデビル
+# body 920014
+# pos 920014 3
+# scale 920014 0.8 0
+# layer 920014 2
+# alpha 920014 0 0
+# mask 920014 off
+;;グランテピエ・獣刻・バハムート
+# body 5303411
+# pos 5303411 3
+# scale 5303411 0.8 0
+# layer 5303411 2
+# alpha 5303411 0 0
+# mask 5303411 off
+;;ムー
+# body 161
+# pos 161 3
+# scale 161 0.6 0
+# layer 161 2
+# alpha 161 0 0
+# mask 161 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 2
+# alpha 139 0 0
+# mask 139 off
+;;オベロン
+# body 135
+# pos 135 3
+# scale 135 0.8 0
+# layer 135 2
+# alpha 135 0 0
+# mask 135 off
+;;ティターニア（大人）
+# body 258
+# pos 258 3
+# scale 258 0.8 0
+# layer 258 2
+# alpha 258 0 0
+# mask 258 off
+;;-----------------------------------------
+;;--------------------------------------------
+;;■アルマス
+;;//立ち絵：マスターアルマス
+;;■グランテピエ
+;;立ち絵：グランテピエ・獣刻・バハムート
+;;■ムー
+;;立ち絵：オートアバター・ムー
+;;■ティターニア
+;;//立ち絵：ロスラグ編妖精ティターニア
+;;■ティターニア（大人）
+;;//立ち絵：インノア編大人ティターニア（本シナリオ合わせで新規制作）
+;;(大人)表記はスクリプト作成時削除でお願いします
+;;■オベロン
+;;立ち絵：ロスラグ編オベロン
+;;--------------------------------------------
+;;//背景：森：forest
+# move 920014 2 0
+# alpha 920014 1 0
+# mask 920014 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0
+# mask 196 on
+# textflame 1 1
+# textboxarrow 0 3
+@アルマス
+せいっ！
+
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 -200 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# se "SE_0794"
+# textboxarrow 0 1
+@魔獣
+ガアアアアア…
+
+# se "SE_3001"
+# textwindow "close"
+# alpha 920014 0 0.5
+# waitandnext 0.5
+
+# move 139 2 0
+# face 139 "normal"
+# alpha 139 1 0.5
+# mask 139 on
+# waitandnext 0.5
+
+;;//アルマスがティターニアとともに走り抜ける
+# se "SE_5575"
+# leftout 139 0.5
+# leftout 196 0.5
+# waitandnext 0.5
+
+# alpha 139 0 0
+# alpha 196 0 0
+# waitandnext 0.5
+
+# voice 9967 "titania_0064"
+# move 139 2 0
+# face 139 "surprise"
+# alpha 139 1 0.5
+# mask 139 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textwindow "normal"
+@ティターニア
+アルマス！
+何をしているのですかっ？
+これがあなたの答えなのですかっ？
+
+# voice 9943 "almace_navikan_0048"
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+そうよ、ティターニア！
+そういえば、今、ティターニアは
+ピスカ役よねっ
+
+# voice 9943 "almace_navikan_0052"
+# textboxarrow 0 3
+@アルマス
+だったらピスカ
+ティルヘルムまでの道案内は
+お願いね！
+
+# textboxarrow 0 3
+@アルマス
+そこまで二人で一緒に、
+絶・駆け抜けるわ！
+
+# textboxarrow 0 1
+@ティターニア
+待って下さい！
+私が尋ねているのは…
+
+# textboxarrow 0 3
+@アルマス
+生き残る覚悟でしょっ
+ティターニアは私にどっちかを
+選ばせたかったみたいだけど
+
+# textboxarrow 0 3
+@アルマス
+私は一緒に生き残る道を選ぶ！
+だって、これから挑まなくちゃ
+ならない道は、そういうものだから
+
+# textboxarrow 0 3
+@アルマス
+世界を“終焉”から守るために、
+誰も犠牲にしたりしない
+キル姫も奏官も…もちろん自分自身も
+
+# textboxarrow 0 3
+@アルマス
+みんなで生き残るの
+そのためのインテグラルノア計画
+なのよっ
+
+# textboxarrow 0 1
+@ティターニア
+二人で逃げたとして…
+この状況に勝算はあるのですか？
+
+# textboxarrow 0 3
+@アルマス
+だから言ったじゃない
+ピスカに案内してもらって、
+私が道を切り拓く
+
+# textboxarrow 0 3
+@アルマス
+ただ闇雲に戦ってるわけでも
+逃げてるわけでもないわ
+力を合わせるのよ！
+
+# textboxarrow 0 3
+@アルマス
+ティターニア
+私、仲間がいるの
+
+# textboxarrow 0 3
+@アルマス
+今まで色んなことがあったけど、
+彼女達と一緒だったから戦って
+これたのよ
+
+# textboxarrow 0 3
+@アルマス
+これからも仲間と一緒に乗り越える
+生き残ってみせる
+
+# textboxarrow 0 3
+@アルマス
+それが私の、絶・覚悟よ！！
+
+# se "SE_0793"
+# alpha 139 0 0.5
+# alpha 196 0 0.5
+# move 920014 3 0
+# alpha 920014 1 0.5
+# mask 920014 off
+# textboxarrow 0 2
+@魔獣
+ガアアアアアアアアア！
+
+# voice 9943 "almace_navikan_0043"
+# move 920014 2 0.5
+# mask 920014 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+せやああああ！
+
+;;//斬撃音
+# se "SE_9077"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 2000 1 -200 0 0
+# effectstart 2000
+# waitandnext 0.5
+
+;;//画面真っ白に
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1.2
+
+# background "pope_room"
+# alpha 920014 0 0
+# alpha 196 0 0
+# move 196 3 0
+# face 196 "surprise"
+# alpha 196 1 0
+# mask 196 off
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：城内：pope_room
+# bgmfile "bgm263" "BgmLostRagnarok001" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+…あれ？
+戻ってきたんだ
+
+# voice 530341 "grandepieu_di_0043"
+# move 196 2 0.5
+# mask 196 on
+# move 5303411 4 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# textboxarrow 0 3
+@グランテピエ
+お帰り、アルマス
+よく頑張った、ね
+
+;;//グランテピエがアルマスを抱きしめる
+# se "SE_0648"
+# textwindow "close"
+# move 5303411 3 0.2
+# waitandnext 0.2
+
+# face 196 "shy"
+# textboxarrow 0 1
+# textwindow "normal"
+@アルマス
+お姉ちゃん
+子ども扱いしないでってば
+
+# voice 9953 "mwu_0004"
+# alpha 5303411 0 0.5
+# alpha 196 0 0.5
+# move 161 3 0
+# alpha 161 1 0.5
+# mask 161 off
+# textboxarrow 0 2
+@ムー
+試練の間、ずっとそわそわしてた
+からなあ…
+
+;;//以降から、大人ティターニアの立ち絵
+;;ティターニア（大人）
+# alpha 161 0 0.5
+# move 258 3 0
+# face 258 "normal"
+# alpha 258 1 0.5
+# mask 258 off
+# textboxarrow 0 2
+@ティターニア
+あなたの覚悟、
+確かに見せていただきました
+
+# voice 9943 "almace_navikan_0035"
+# move 258 2 0.5
+# mask 258 on
+# move 196 4 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+えっ？
+ティターニアが大きくなってる！？
+
+;;ティターニア（大人）
+# textboxarrow 0 1
+@ティターニア
+これが元の姿なんですよ
+今まで、アルマスのキラーズを
+抑えるために力を使っていたので
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+ティターニアに負荷がかけられてる
+のは聞いていたけど、こういうこと
+だったのね…
+
+# voice 9943 "almace_navikan_0046"
+# face 196 "sad"
+# textboxarrow 0 3
+@アルマス
+長い間、ごめんなさい
+ティターニア…
+
+;;ティターニア（大人）
+# textboxarrow 0 1
+@ティターニア
+いいんですよ、アルマス
+私がそうしたかったんです
+
+# voice 9970 "oberon_0002"
+# alpha 258 0 0.5
+# alpha 196 0 0.5
+# move 135 3 0
+# face 135 "normal"
+# alpha 135 1 0.5
+# mask 135 off
+# textboxarrow 0 2
+@オベロン
+さて、アルマスよ
+そなたのキラーズは完全に目覚めた
+
+;;ティターニア（大人）
+# alpha 135 0 0.5
+# move 258 2 0
+# face 258 "happy"
+# alpha 258 1 0.5
+# mask 258 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+@ティターニア
+これで一人前ですね
+あなたの答えに安心しました
+
+# textboxarrow 0 3
+@アルマス
+あれはティターニアが望んでいた
+答えとは違ったんじゃないの？
+
+;;ティターニア（大人）
+# face 258 "normal"
+# textboxarrow 0 1
+@ティターニア
+あら
+私はどちらかを選べとは言って
+いませんよ
+
+;;ティターニア（大人）
+# textboxarrow 0 1
+@ティターニア
+一人で生き残ろうとしなくても、
+あなたの側に頼れる者がいる
+そのことに気づいて欲しかった
+
+;;ティターニア（大人）
+# textboxarrow 0 1
+@ティターニア
+でも、あなたはすでにちゃんと
+理解していたんですね
+本当に大きくなりました…
+
+# textboxarrow 0 3
+@アルマス
+それは…ラグナロク達のお陰よ
+
+# alpha 258 0 0.5
+# alpha 196 0 0.5
+# move 5303411 3 0
+# face 5303411 "sad"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# textboxarrow 0 2
+@グランテピエ
+…………
+
+;;//グランテピエがそわそわする
+# se "SE_11618"
+# waitandnext 0.5
+
+# alpha 5303411 0 0.5
+# move 196 3 0
+# face 196 "happy"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+あ、あとっ
+お姉ちゃんも知らないところで
+頑張ってくれてたみたいだしっ
+
+# alpha 196 0 0.5
+# move 161 2 0
+# alpha 161 1 0.5
+# mask 161 on
+# move 5303411 4 0
+# face 5303411 "happy"
+# alpha 5303411 1 0.5
+# mask 5303411 on
+# textboxarrow 0 3
+@グランテピエ
+アルマスっ
+
+# voice 9953 "mwu_0027"
+# textboxarrow 0 1
+@ムー
+やれやれ…
+
+# alpha 161 0 0.5
+# alpha 5303411 0 0.5
+# move 135 2 0
+# face 135 "normal"
+# alpha 135 1 0.5
+# mask 135 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+@オベロン
+では、行くのだな
+世界を“終焉”から守るため
+仲間達の下に
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+その前に、お願いがあるの！
+
+# voice 9970 "oberon_0034"
+# textboxarrow 0 1
+@オベロン
+ほう
+儂にできることなら何でも申してみよ
+
+# face 196 "normal"
+# textboxarrow 0 3
+@アルマス
+オベロン様じゃなくて、
+ティターニアになんだけどっ
+
+;;ティターニア（大人）
+# alpha 135 0 0.5
+# move 258 2 0
+# face 258 "surprise"
+# alpha 258 1 0.5
+# mask 258 on
+# textboxarrow 0 1
+@ティターニア
+私にですか？
+
+# voice 9943 "almace_navikan_0048"
+# textboxarrow 0 3
+@アルマス
+うん
+力を貸して欲しいの！
+
+# textboxarrow 0 3
+@アルマス
+ラグナロク達は擬装して
+新たな力を手に入れた
+
+# textboxarrow 0 3
+@アルマス
+お姉ちゃんもバハムートを
+霊装支配されてる
+
+# textboxarrow 0 3
+@アルマス
+やっと一人前って言われたけれど、
+それだけじゃ足りないのよ
+
+# textboxarrow 0 3
+@アルマス
+“終焉”に抗うためには、
+私も更に強くならないと！
+
+;;ティターニア（大人）
+# face 258 "happy"
+# textboxarrow 0 1
+@ティターニア
+そのために私を…
+うふふっ
+思い切りましたね
+
+# textboxarrow 0 3
+@アルマス
+頼れる仲間は側にいるって
+ティターニアが言ったのよ
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+ティターニアの協力があれば、
+私はみんなを支えられるわ！
+
+;;ティターニア（大人）
+# face 258 "normal"
+# textboxarrow 0 1
+@ティターニア
+でしたら、私よりオベロンの方が
+頼りになりそうですけれど…
+
+# voice 9943 "almace_navikan_0035"
+# face 196 "surprise"
+# textboxarrow 0 3
+@アルマス
+え？
+えっと…
+私はティターニアがいいのっ
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+不思議と身近に感じるっていうか、
+絶・心強いのよ！
+だから、お願い！
+
+;;ティターニア（大人）
+# textboxarrow 0 1
+@ティターニア
+まあっ
+何だかくすぐったいですね
+
+# voice 9970 "oberon_0043"
+# alpha 258 0 0.5
+# alpha 196 0 0.5
+# move 135 3 0
+# face 135 "normal"
+# alpha 135 1 0.5
+# mask 135 off
+# textboxarrow 0 2
+@オベロン
+長い間、そなたがアルマスを守って
+おったのだ
+相性は良かろう
+
+;;ティターニア（大人）
+# alpha 135 0 0.5
+# move 258 2 0
+# face 258 "normal"
+# alpha 258 1 0.5
+# mask 258 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+@ティターニア
+はい
+私もアルマスに頼ってもらえるのは
+嬉しく思います
+
+# voice 9943 "almace_navikan_0009"
+# face 196 "happy"
+# textboxarrow 0 3
+@アルマス
+本当っ？
+やった！
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+ティターニア
+私、誓うわ！
+もう心配させるようなことはしない
+
+# textboxarrow 0 3
+@アルマス
+誰も犠牲にすることなく
+“終焉”から世界を守る
+絶対に、みんなで生き残るわ！
+
+# textboxarrow 0 3
+@アルマス
+そのために、
+ティターニアの力を借りるの
+
+;;ティターニア（大人）
+# textboxarrow 0 1
+@ティターニア
+その思い、確かに受け取りました
+でも、力を「借りる」なんて
+考えなくて良いんですよ
+
+;;ティターニア（大人）
+# textboxarrow 0 1
+@ティターニア
+この身はここから離れるわけに
+いきませんが、心は常に一緒です
+
+;;ティターニア（大人）
+# textboxarrow 0 1
+@ティターニア
+私も誓いましょう
+この力は如何なるときでも、
+あなたとともにあります
+
+;;//画面フラッシュ
+# se "SE_9149"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm275" "BgmLostRagnarokEvent" 0
+# alpha 258 0 0.5
+# alpha 196 0 0.5
+# move 135 3 0
+# face 135 "surprise"
+# alpha 135 1 0.5
+# mask 135 off
+# textboxarrow 0 2
+@オベロン
+おお！？
+この光は…もしやっ
+
+# voice 9943 "almace_navikan_0035"
+# alpha 135 0 0.5
+# move 258 2 0
+# face 258 "surprise"
+# alpha 258 1 0.5
+# mask 258 on
+# move 196 4 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+え？
+何が起きたの…？
+
+;;ティターニア（大人）
+# textboxarrow 0 1
+@ティターニア
+驚きました
+こんなに強い繋がりを感じられる
+なんて
+
+# alpha 258 0 0.5
+# alpha 196 0 0.5
+# move 135 3 0
+# face 135 "normal"
+# alpha 135 1 0.5
+# mask 135 off
+# textboxarrow 0 2
+@オベロン
+そなた達の思いは儂の予想以上で
+あった…先程の二人の「誓い」
+それが「誓約」へと昇華したのだ
+
+# alpha 135 0 0.5
+# move 258 2 0
+# face 258 "normal"
+# alpha 258 1 0.5
+# mask 258 on
+# move 196 4 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+誓約…って、何？
+
+;;ティターニア（大人）
+# textboxarrow 0 1
+@ティターニア
+互いに誓いを立て、その制約を
+受ける代わりに強い力を得る
+古より伝わる秘術です
+
+# alpha 258 0 0.5
+# alpha 196 0 0.5
+# move 135 3 0
+# face 135 "normal"
+# alpha 135 1 0.5
+# mask 135 off
+# textboxarrow 0 2
+@オベロン
+だが、天使や悪魔のような強大な
+力を持つ者ならともかく、
+儂らが為せるものではないはず…
+
+# alpha 135 0 0.5
+# move 5303411 3 0
+# face 5303411 "normal"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# textboxarrow 0 2
+@グランテピエ
+アルマスとティターニアの思いが
+奇跡を起こしたんだね！
+ちょっと妬けちゃう、かな
+
+# alpha 5303411 0 0.5
+# move 258 2 0
+# face 258 "normal"
+# alpha 258 1 0.5
+# mask 258 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+@アルマス
+ええと…
+とにかく、すごい力を得ることが
+できたってことよねっ？
+
+;;ティターニア（大人）
+# face 258 "angry"
+# textboxarrow 0 1
+@ティターニア
+…アルマス、よく聞いて下さい
+とても重要なことです
+
+;;ティターニア（大人）
+# textboxarrow 0 1
+@ティターニア
+この誓約は契約となります
+ひとたび違えれば、私はあなたの
+力を封じなければなりません
+
+;;ティターニア（大人）
+# textboxarrow 0 1
+@ティターニア
+そのようなことになれば、
+計画の実行も不可能になるでしょう
+それでも、本当に誓えますか？
+
+;;ティターニア（大人）
+# textboxarrow 0 1
+@ティターニア
+今ならまだ――
+
+# face 196 "angry"
+# textboxarrow 0 3
+@アルマス
+誓うわ！
+未来を切り拓くためなら
+恐れたりしない
+
+# textboxarrow 0 3
+@アルマス
+それに、ティターニアとの誓いを
+なかったことになんてしたくないもの
+
+;;ティターニア（大人）
+# face 258 "happy"
+# textboxarrow 0 1
+@ティターニア
+アルマス…
+うふふっ
+あなたの覚悟、確かに受け取りました
+
+# voice 9943 "almace_navikan_0044"
+# face 196 "happy"
+# textboxarrow 0 3
+@アルマス
+ありがとう、ティターニア
+絶・誓約ね！
+
+# textboxarrow 0 3
+@アルマス
+あ！
+もう一つ、お願いがあるんだけど…
+
+;;ティターニア（大人）
+# face 258 "normal"
+# textboxarrow 0 1
+@ティターニア
+何でしょう？
+
+# textboxarrow 0 3
+@アルマス
+ティターニアのこと、
+またティニって呼んで良い？
+何だか堅苦しいと思ってたのよね
+
+# voice 530341 "grandepieu_di_0014"
+# alpha 258 0 0.5
+# alpha 196 0 0.5
+# move 5303411 3 0
+# face 5303411 "angry"
+# alpha 5303411 1 0.5
+# mask 5303411 off
+# textboxarrow 0 2
+@グランテピエ
+アルマスってば
+ティターニアに甘えすぎ、だよっ
+
+;;ティターニア（大人）
+# alpha 5303411 0 0.5
+# move 258 2 0
+# face 258 "happy"
+# alpha 258 1 0.5
+# mask 258 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+@ティターニア
+うふふっ
+構いませんよ
+私もその方が嬉しいです
+
+# voice 9943 "almace_navikan_0009"
+# face 196 "happy"
+# textboxarrow 0 3
+@アルマス
+やった！
+よろしくね、ティニ

@@ -1,0 +1,395 @@
+;;-----------------------------------------
+;;ファントムオブキル　Ｒｅ：ゼロから始める異世界生活コラボ第2弾　シナリオ
+;;タイトル案：Re:またゼロからの異世界生活
+;;【EP.3】獣と仲良く？
+;;背景：トレイセーマ共和国付近
+;;-----------------------------------------
+# script "lisp"
+# background "beast_world"
+# bgmfile "bgm272" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス
+# body 138
+# pos 138 3
+# scale 138 0.8 0
+# layer 138 3
+# alpha 138 0 0
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 3
+# alpha 139 0 0
+;;ギル
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# layer 137 3
+# alpha 137 0 0
+;;スバル
+# body 174
+# pos 174 3
+# scale 174 0.8 0
+# layer 174 3
+# alpha 174 0 0
+;;エミリア(WD)
+# body 3602721
+# pos 3602721 3
+# scale 3602721 0.8 0
+# layer 3602721 3
+# alpha 3602721 0 0
+;;ラム(WD)
+# body 3503331
+# pos 3503331 3
+# scale 3503331 0.8 0
+# layer 3503331 3
+# alpha 3503331 0 0
+;;レム(WD)
+# body 3202931
+# pos 3202931 3
+# scale 3202931 0.8 0
+# layer 3202931 3
+# alpha 3202931 0 0
+;;パック
+# body 175
+# pos 175 4
+# scale 175 0.8 0
+# layer 175 4
+# alpha 175 0 0
+;;トレイセーマ兵
+# body 3830001
+# pos 3830001 3
+# scale 3830001 0.8 0
+# layer 3830001 3
+# alpha 3830001 0 0
+# mask 3830001 off
+;;-----------------------------------------
+# move 3503331 4 0
+# alpha 3503331 1 0
+# move 174 2 0
+# alpha 174 1 0
+# face 174 "surprise"
+# voice 9947 "subaru_0008"
+# face 3503331 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@スバル
+はぁ～酷い目に遭ったな…
+
+# voice 5033 "ramu_0027"
+# textflame 1 1
+# textboxarrow 0 3
+@ラム
+自分の責任じゃなくなった途端、
+被害者面をしだすのね、浅ましい
+
+# face 174 "normal"
+# voice 9947 "subaru_0004"
+# textflame 1 1
+# textboxarrow 0 1
+@スバル
+そこまで言います！？
+と、そんな姉様の毒舌も
+命があるから楽しく聞こえるぜ
+
+# face 3503331 "sad"
+# voice 5033 "ramu_0028"
+# textflame 1 1
+# textboxarrow 0 3
+@ラム
+いよいよ末期ね
+もう完全に救えないわ
+
+# face 174 "surprise"
+# voice 9947 "subaru_0036"
+# textflame 1 1
+# textboxarrow 0 1
+@スバル
+だからって
+傷つかないわけじゃねぇからな！
+
+# alpha 3503331 0 0.5
+# alpha 174 0 0.5
+# move 138 3 0
+# mask 138 off
+# alpha 138 1 0.5
+# face 138 "normal"
+# voice 1038 "almace_0002"
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+楽しそうにしてるとこ悪いけど
+そろそろトレイセーマに入るから
+準備して
+
+;;演出：移動の暗転
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.2
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：トレイセーマ共和国
+# alpha 138 0 0
+# background "beast_world_town2"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# move 139 4 0
+# alpha 139 1 0.5
+# move 3602721 2 0
+# alpha 3602721 1 0.5
+# face 3602721 "normal"
+# voice 6027 "emiria_0002"
+# face 139 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@エミリア
+ここは他の国と違って、
+すごーく簡単に入れるのね
+
+# voice 9967 "titania_0004"
+# textflame 1 1
+# textboxarrow 0 3
+@ティターニア
+幻獣の力を得た人が暮らす街
+とりあえずならそれっぽくすれば
+一応は大丈夫なんです
+
+# alpha 139 0 0.5
+# move 174 4 0
+# alpha 174 1 0.5
+# face 174 "surprise"
+# voice 9947 "subaru_0042"
+# textflame 1 1
+# textboxarrow 0 3
+@スバル
+へぇ…って、あれっ
+もう耳とか外しちゃったの！？
+
+# alpha 3602721 0 0.5
+# move 138 2 0
+# mask 138 on
+# alpha 138 1 0.5
+# face 138 "normal"
+# voice 1038 "almace_0007"
+# textflame 1 1
+# textboxarrow 0 1
+@アルマス
+入れればもう必要ないでしょ
+そもそもドレスとかで隠れて
+あまり見えなかったし
+
+# face 174 "normal"
+# voice 9947 "subaru_0004"
+# textflame 1 1
+# textboxarrow 0 3
+@スバル
+いや、単純に可愛かったから
+もっと見たかった的なヤツだよ
+
+# alpha 138 0 0.5
+# move 137 2 0
+# alpha 137 1 0.5
+# face 137 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@ギル
+スバルは自分の欲に忠実だな
+でも、獣の耳ならこの辺りで
+いくらでも見られるだろ？
+
+# face 174 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@スバル
+別に獣耳ならいいって話じゃなく
+普段から可愛いエミリアたんたちの
+普段と別の可愛いのが見たいの
+
+# alpha 137 0 0.5
+# move 3202931 2 0
+# alpha 3202931 1 0.5
+# face 3202931 "shy"
+# voice 2029 "remu_0004"
+# textflame 1 1
+# textboxarrow 0 1
+@レム
+そんな…
+可愛くてお嫁さんにしたいなんて
+照れます
+
+# alpha 3202931 0 0.5
+# move 3602721 2 0
+# alpha 3602721 1 0.5
+# face 3602721 "normal"
+# voice 6027 "emiria_0027"
+# textflame 1 1
+# textboxarrow 0 1
+@エミリア
+スバルは、
+耳がいっぱいあるのがいいの？
+ふわふわした耳がいいってこと？
+
+# face 174 "normal"
+# textflame 1 1
+# textboxarrow 0 3
+@スバル
+両極端で驚きの解釈！
+獣耳キャラの耳の数問題か…
+それは深く長い歴史があってだな
+
+# alpha 3602721 0 0.5
+# move 137 2 0
+# alpha 137 1 0.5
+# face 137 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@ギル
+また妙な熱弁を始めたな
+そんな重要なことかね？
+
+# face 174 "normal"
+# voice 9947 "subaru_0001"
+# textflame 1 1
+# textboxarrow 0 3
+@スバル
+重要も重要、大重要だろ！
+あ、でも、誤解しないでくれよな
+
+# voice 9947 "subaru_0005"
+# textflame 1 1
+# textboxarrow 0 3
+@スバル
+どんな獣耳をつけようと、
+エミリアたんの可愛さはパーフェクト
+この国の誰にも負けないぜ！
+
+# alpha 137 0 0.5
+# move 3602721 2 0
+# alpha 3602721 1 0.5
+# face 3602721 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+@エミリア
+あっ！
+そういうトレイセーマの
+人達と比べるようなことは…
+
+# textwindow "close"
+# alpha 174 0 0.5
+# alpha 3602721 0 0.5
+;;演出：トレイセーマ兵in
+# alpha 3830001 1 1
+# se "SE_0719"
+# bgm "stop"
+# waitandnext 1.5
+
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 2
+@トレイセーマ兵
+貴様…差別的な発言をしたな！？
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# alpha 3830001 0 0.5
+# move 139 3 0
+# mask 139 off
+# alpha 139 1 0.5
+# face 139 "worry"
+# voice 9967 "titania_0041"
+# textflame 1 1
+# textboxarrow 0 2
+@ティターニア
+幻獣の力を得ているので
+ここの人達、とくに兵士は
+耳がとてもいいのです…
+
+# alpha 139 0 0.5
+# move 174 3 0
+# mask 174 off
+# alpha 174 1 0.5
+# face 174 "surprise"
+# voice 9947 "subaru_0026"
+# textflame 1 1
+# textboxarrow 0 2
+@スバル
+それを先に言ってよぉ！？
+
+# move 174 4 0.5
+# move 3830001 2 0
+# mask 3830001 on
+# alpha 3830001 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@トレイセーマ兵
+よく見れば耳も尻尾もない
+それに斬ル姫もいるじゃないか！
+この者達を捕えろ！
+
+# move 3602721 3 0
+# mask 3602721 on
+# alpha 3602721 1 0.5
+# face 3602721 "angry"
+# voice 6027 "emiria_battle_0004"
+# textflame 1 1
+# textboxarrow 0 2
+@エミリア
+スバル、下がって！
+
+# move 174 5 0.5
+# move 3830001 1 0.5
+# se "SE_0648"
+# face 174 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@スバル
+おわっ、エミリアたん！？
+
+# textflame 1 1
+# textboxarrow 0 1
+@トレイセーマ兵
+逆らうか、小娘！
+…む、妙な幻獣を連れているな？
+まずは貴様を連行する！
+
+# alpha 174 0 0.5
+# alpha 3830001 0 0.5
+# alpha 3602721 0 0.5
+# move 175 3 0
+# mask 175 off
+# alpha 175 1 0.5
+# voice 9946 "pakku_0023"
+# textflame 1 1
+# textboxarrow 0 2
+@パック
+あれれ？
+もしかして、ボク狙われてる？
+
+# alpha 175 0 0.5
+# move 3503331 3 0
+# mask 3503331 off
+# alpha 3503331 1 0.5
+# face 3503331 "normal"
+# voice 5033 "ramu_0001"
+# textflame 1 1
+# textboxarrow 0 2
+@ラム
+エミリア様が危険ね
+マスター様、力をお貸しください
+
+;;モノローグ
+# textflame 0 0
+@
+マスターはもちろんと答え
+アルマス達も戦闘態勢に入る

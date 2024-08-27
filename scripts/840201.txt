@@ -1,0 +1,386 @@
+;;●４－３＜戦闘画面＞　背景：グランエクスペリ、大聖堂
+;;テロップ
+# script "lisp"
+# background "imperial_city"
+# bgm "bgm005" 0
+# body 40
+# pos 40 2
+# scale 40 0.8 0
+# alpha 40 0 0
+# body 128
+# pos 128 4
+# scale 128 0.8 0
+# alpha 128 0 0
+# textflame 0 0
+@
+王都中心部・グランエクスペリ
+;;※王都中心部・グランエクスペリ。エドガーの元へ戻ってくるノーブル。
+
+# alpha 128 1 0.5
+# alpha 40 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+@エドガー
+教授！
+いかがでした？
+
+# textboxarrow 0 3
+@ノーブル
+うむ…！教授達も、
+私の話に耳を傾けてくれた！
+
+@ノーブル
+王政府との関係もあり、
+全員とまではいかんが…
+
+@ノーブル
+多くの教授が賛同し、
+研究室の有志とともに
+民衆集めに動き出しておる！
+
+# textboxarrow 0 1
+# face 40 "smile"
+@エドガー
+そうですか…！
+王政府に目をつけられれば、
+立場も危うくなるというのに…
+
+# textboxarrow 0 3
+@ノーブル
+それだけ、
+王政府の在り方に疑問を
+持っておったということであろう
+
+@ノーブル
+ともかく、
+彼らの勇気には感謝の念しかない
+…それより、レンくんは？
+
+# textboxarrow 0 1
+@エドガー
+彼女のお父さんの
+記者仲間を当たっています
+
+@エドガー
+安心してください
+彼女にはミョルニルとシェキナーを
+つけてますので
+
+# textboxarrow 0 3
+@ノーブル
+そうか…。前代未聞のスクープだ
+ジョンの記者仲間も
+喜んで動き出すだろう
+
+@ノーブル
+…悪いが、君達の属する
+ラグナロク教会にも
+メスが入ることになるはずだ
+
+# textboxarrow 0 1
+@エドガー
+謝ることなんてありません
+僕らも、腐敗した組織になんて
+属したくはありませんから
+
+# body 28
+# pos 28 1
+# scale 28 0.8 0
+# alpha 28 0 0
+# textboxarrow 0 3
+@ノーブル
+うむ…！全てが明らかになれば、
+ラグナロク教会も正されるはず…
+なんとしても、やり遂げよう
+
+;;※そこへ駆けてくるレン。
+# se "SE_5575"
+# move 40 3 0.5
+# move 128 5 0.5
+# alpha 28 1.0 0.5
+# leftin 28 0.5
+# textboxarrow 0 1
+@レン
+ハァ…ハァ…！
+教授！エドガー！
+ちょっと…ヤバイわ！！
+
+# textboxarrow 0 3
+@ノーブル
+レンくん…！
+どうかしたのか！？
+
+# textboxarrow 0 1
+@レン
+あの、黒いマサムネが…！
+今、ミョルニルとシェキナーが
+闘ってる！！
+
+# textboxarrow 0 3
+@ノーブル
+…！
+
+# face 40 "irregular"
+# textboxarrow 0 2
+@エドガー
+…大丈夫、
+ここには決して近付かせません
+
+@エドガー
+二人は人々へ
+真実を伝えることに
+集中してください
+
+# textboxarrow 0 3
+@ノーブル
+あ、ああ…すまない…！
+
+# serif 0
+# textwindow "close"
+# leftout 40 1
+# fadeout "white" 1
+# waitandnext 1.5
+
+;;※空を見上げ、自分に言い聞かせるように呟くエドガー。
+# alpha 28 0 0
+# alpha 128 0 0
+# alpha 40 0 0
+# background "mov2_1"
+# fadein "white" 2
+# waitandnext 1.5
+
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 0
+@エドガー
+安心しろ、サイラス…
+君が追い続けた真実は、
+俺達が必ず、世に伝えてみせる…！
+;;※駆けてゆくエドガー。
+
+# fadeout "black" 2
+# bgm "stop"
+# waitandnext 2
+
+;;※一方、大聖堂に乗り込むティルフィング達。
+# background "mamon_room"
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# alpha 24 0 0
+# layer 24 4
+# body 75
+# pos 75 5
+# scale 75 0.8 0
+# alpha 75 0 0
+# body 6
+# pos 6 1
+# scale 6 0.8 0
+# alpha 6 0 0
+# body 29
+# pos 29 3
+# reversal 29 0
+# scale 29 0.8 0
+# alpha 29 0 0
+# fadein "black" 1
+# textflame 0 0
+@
+ラグナロク大聖堂
+サウスタワー・大階段
+
+# bgm "bgm009" 0
+# voice 1014 "tyrufing_0029"
+# alpha 24 1.0 0.5
+# face 24 "mad2"
+# textboxarrow 0 2
+# textflame 1 1
+@ティルフィング
+…ハァァァァァァァーッ！！！
+
+# serif 0
+# textwindow "close"
+# subfillrect 1 "black" 0.2 0 1
+# waitandnext 0.4
+
+# se "SE_4601"
+# effectbody 700 1 0 0
+# effectstart 700
+# alpha 24 0 0
+# waitandnext 0.3
+
+# serif 0
+# textwindow "nomal"
+# se "SE_4830"
+# subfillrect 1 "black" 0.2 1 0
+;;※迎撃部隊のキラープリンセスと刃を合わせながら、なだれ込んでくるティルフィング。
+# alpha 29 1.0 0.5
+# textboxarrow 0 2
+@教会職員
+き、来ました…！
+リベリオン一行です！！
+
+# serif 1
+# textboxarrow 1 0
+@祀官
+早い…！
+周辺警備部隊はなにをしている…！？
+
+# serif 0
+# textboxarrow 0 2
+@教会職員
+それが、その勢いたるや凄まじく…
+既に…！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# alpha 29 0 0.5
+# alpha 6 1.0 0.5
+# alpha 24 1.0 0.5
+# alpha 75 1.0 0.5
+# textboxarrow 0 2
+@ティルフィング
+…どいてください！！！
+
+# serif 0
+# textwindow "close"
+# se "SE_5723"
+# subfillrect 1 "black" 0.5 0 1
+# waitandnext 0.4
+
+# se "SE_4601"
+# effectbody 701 1 0 0
+# effectstart 701
+# waitandnext 0.3
+
+# serif 0
+# textwindow "nomal"
+# subfillrect 1 "black" 0.2 1 0
+# textflame 1 1
+# textboxarrow 0 2
+# face 24 "angry"
+;;※一閃…弾き飛ばされるキラープリンセス達。
+@ティルフィング
+陣形が崩れた…！
+今よ、早く！
+
+# face 6 "angry"
+# textboxarrow 0 1
+@ディーン
+よし…！
+一気に行くぞ！！
+
+# bgm "stop"
+# serif 1
+;;//大奏官
+@？？？
+…そこまでだ！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 2
+# face 24 "surprise"
+@ティルフィング
+…！
+
+;;※大階段の奥から悠然と現れる大奏官部隊。
+# bgmfile "bgm059" "BgmMMcollabo001" 0
+# textboxarrow 0 3
+# face 75 "normal"
+@リベリオン
+…なんだ？
+
+# serif 1
+@大奏官
+闇より現れし悪魔“リベリオン”、
+そしてその男に加担する
+反逆者どもよ！
+
+# serif 1
+@大奏官
+我は、この神聖なる大聖堂の
+守護を司る大奏官である！
+
+# serif 1
+@大奏官
+血にまみれたお前達をこれより先、
+ただの一歩とて通しはせん！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 6 "sad"
+# textboxarrow 0 1
+@ディーン
+だ、大奏官…！
+アンタ達が…！
+
+# voice 1014 "tyrufing_0001"
+# face 24 "sad"
+# textboxarrow 0 2
+@ティルフィング
+マスター…！
+
+# face 75 "angry"
+# textboxarrow 0 3
+@リベリオン
+うろたえる必要なんてねぇさ…
+ヤツらが勝手に作った、ただの階級だ
+
+# face 75 "smile"
+# voice 9979 "rebellion_0001"
+@リベリオン
+恐縮するなら、
+むしろ創設者の俺の方だろうが？
+
+# face 24 "surprise"
+# textboxarrow 0 2
+@ティルフィング
+あ…
+
+# textboxarrow 0 3
+@リベリオン
+大聖堂の守護の要だというのなら、
+むしろ好都合だ
+
+@リベリオン
+コイツらさえ倒せば、
+教皇への道が開くってことだろ…
+違うか？
+
+# body 0
+# pos 0 5
+# scale 0 0.8 0
+# alpha 0 0 0
+# textboxarrow 0 1
+# face 24 "angry"
+# face 6 "angry"
+@ディーン
+確かに…！チッ…
+一瞬、怯んじまった自分が
+恥ずかしいぜ！
+
+# alpha 75 0 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 3
+# face 0 "serious"
+@デュリン
+そうよ！
+こっちはもう、
+覚悟は決まってるんだから！
+
+# face 24 "mad2"
+# textboxarrow 0 2
+@ティルフィング
+ええ…！
+行きましょう、マスター！！
+
+;;※ドンっと駆け出すティルフィング。
+# se "SE_9092"
+# serif 1
+@大奏官
+愚かな…
+ゆくぞ、お前達！！
+;;※ウォォー！と駆け出してくる大奏官部隊のキラープリンセス達。

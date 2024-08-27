@@ -1,0 +1,517 @@
+;;-----------------------------------------
+;;SEA2章_22
+;;-----------------------------------------
+# script "lisp"
+# background "town_2"
+# bgm "bgm003" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 1 0
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;リットゥ（剣無し）
+# body 285
+# pos 285 2
+# scale 285 0.8 0
+# layer 285 4
+# alpha 285 0 0
+;;シェキナー（仮面無し）
+# body 286
+# pos 286 4
+# scale 286 0.8 0
+# layer 286 2
+# mask 286 off
+# alpha 286 1 0
+;;カドケウス
+# body 600431
+# pos 600431 2
+# scale 600431 0.8 0
+# layer 600431 2
+# mask 600431 off
+# alpha 600431 0 0
+;;ケーリュケイオン
+# body 600531
+# pos 600531 4
+# scale 600531 0.8 0
+# layer 600531 3
+# alpha 600531 0 0
+;;ハイス
+# body 292
+# pos 292 3
+# scale 292 0.8 0
+# layer 292 3
+# mask 292 off
+# alpha 292 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# imageset 1 "bg_white_circle"
+# imagealpha 1 0 0
+# imagescale 1 1.2 0
+# imagelayer 1 3
+;;-----------------------------------------
+;;背景：町
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# face 270 "normal"
+# face 286 "usual"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@シェキナー
+そして私は、怪盗になりました
+
+# voice 9917 "mimir_navikan_0040"
+# textboxarrow 0 1
+@ミーミル
+そういうご事情だったのですね…
+それで町の人々から宝石を盗んだり
+予告状をばらまいたり…
+
+# textboxarrow 0 1
+@ミーミル
+ご心労、お察し致します
+
+# face 286 "normal"
+# textboxarrow 0 3
+@シェキナー
+ありがとうございます
+念のため言っておきますけど、
+私はやりたくなかったんですよっ
+
+# voice 6004 "kadokeusu_0013"
+# alpha 270 0 0.3
+# alpha 286 0 0.3
+# face 600431 "usual"
+# face 600531 "normal"
+# alpha 600431 1 0.3
+# alpha 600531 1 0.3
+# textboxarrow 0 1
+@カドケウス
+え～？
+すっごくノリノリだったけどな～
+
+# voice 6005 "keryukeion_0004"
+# textboxarrow 0 3
+@ケーリュケイオン
+活き活きしてたよね～
+
+# alpha 600431 0 0.3
+# alpha 600531 0 0.3
+# face 285 "normal"
+# face 286 "angry"
+# alpha 285 1 0.3
+# alpha 286 1 0.3
+# textboxarrow 0 3
+@シェキナー
+そんなはずがありません！
+口を慎んで下さい
+
+# bgm "stop"
+# voice 1005 "ritto_0009"
+# face 285 "angry"
+# textboxarrow 0 1
+@リットゥ
+そんなことより、ハイスはっ
+あいつの家はまだなのかっ？
+
+# alpha 286 0 0.3
+# move 600431 4 0
+# face 600431 "usual"
+# alpha 600431 1 0.3
+# textboxarrow 0 3
+@カドケウス
+焦ってもしょうがないよ
+ほら、あの家――
+
+# face 285 "surprise"
+# textboxarrow 0 1
+@リットゥ
+ハイス！
+
+;;リットゥが走っていく
+# se "SE_5575"
+# move 285 3 0.3
+# alpha 285 0 0.3
+# textwindow "close"
+# waitandnext 0.5
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：室内
+# background "201_room"
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+# alpha 600431 0 0
+# move 292 4 0
+# layer 292 4
+# mask 292 off
+# move 285 2 0
+# layer 285 2
+# mask 285 off
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# alpha 292 "normal"
+# alpha 292 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 3
+@ハイス
+…………
+
+# face 285 "sad"
+# alpha 285 1 0.3
+# textboxarrow 0 1
+@リットゥ
+ハイス！
+すまなかった…
+私のせいで…
+
+# alpha 292 "smile"
+# textboxarrow 0 3
+@ハイス
+ああ…リットゥ…
+懐かしいのう…
+
+# textboxarrow 0 3
+@ハイス
+話は…そこのお嬢さんに聞いたよ…
+
+# alpha 292 0 0.3
+# alpha 285 0 0.3
+# move 600531 3 0
+# mask 600531 off
+# face 600531 "angry"
+# alpha 600531 1 0.3
+# textboxarrow 0 2
+@ケーリュケイオン
+そっちは上手くいったみたいだね
+このお爺さんも、もう…
+
+# voice 1005 "ritto_0015"
+# face 285 "sad"
+# alpha 292 "normal"
+# alpha 285 1 0.3
+# alpha 292 1 0.3
+# alpha 600531 0 0.3
+# textboxarrow 0 1
+@リットゥ
+ハイス…私は…
+
+# alpha 292 "smile"
+# textboxarrow 0 3
+@ハイス
+リットゥ…ありがとう
+姉さんを守り続けて…くれて…
+
+# textboxarrow 0 3
+@ハイス
+これで儂も、ようやく…
+
+# alpha 292 0 0.5
+# face 285 "surprise"
+# textboxarrow 0 1
+@リットゥ
+ハイス…？
+
+# serif 1
+# textwindow "nomal"
+@ハイスの娘
+お父さん…？
+お父さん…！
+
+# serif 0
+# textboxarrow 0 0
+@ハイス
+…………
+
+# alpha 285 0 0.3
+# face 600531 "normal"
+# alpha 600531 1 0.3
+# serif 0
+# textboxarrow 0 2
+@ケーリュケイオン
+さて、後は私の役目だね
+あなた達も祈ってあげてよ
+ハイスさんが天に還れるように
+
+# serif 1
+@ハイスの娘
+お父さん…穏やかな顔をしてる
+きっと皆さんのお陰です
+ありがとうございました
+
+# alpha 600531 0 0.3
+# face 285 "normal"
+# alpha 285 1 0.3
+# move 286 4 0
+# layer 286 4
+# mask 286 on
+# face 286 "usual"
+# alpha 286 1 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textboxarrow 0 3
+@シェキナー
+リットゥ
+祈りましょう
+二人のために
+
+# textboxarrow 0 1
+@リットゥ
+ああ…
+さよなら、フラン…ハイス
+
+;;暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：町
+# background "town_2"
+# face 270 "normal"
+# alpha 270 1 0
+# move 285 4 0
+# face 285 "sad"
+# layer 286 2
+# mask 286 off
+# alpha 286 0 0
+# textwindow "close"
+# waitandnext 0.5
+
+# fadein "black" 1
+# waitandnext 1.5
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+これで「揺らぎ」は解消致しました
+ただ…
+
+# textboxarrow 0 3
+@リットゥ
+…………
+
+;;リットゥが立ち去る
+# se "SE_0740"
+# move 285 5 1
+# alpha 285 0 0.5
+# textwindow "close"
+# waitandnext 1
+
+# face 270 "sad"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+リットゥさん…
+
+# face 286 "usual"
+# alpha 286 1 0.3
+# textboxarrow 0 3
+@シェキナー
+今はそっとしておいて下さい
+きっと、時が解決してくれます
+
+# voice 9917 "mimir_navikan_0003"
+# face 270 "happy"
+# textboxarrow 0 1
+@ミーミル
+はい…
+シェキナーさんはリットゥさんの
+ことをよく分かっておられるのですね
+
+# voice 650401 "manannan_ura_0002"
+# alpha 286 0 0.3
+# face 6504011 "usual"
+# alpha 6504011 1 0.3
+# textboxarrow 0 3
+@マナナン
+ねえねえ
+シェキナーは何でリットゥの剣を
+盗もうとしたの？
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+マナナンさん、
+急にどうされたのですか？
+
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+シェキナーはリットゥの
+友達なんだよね？
+
+# textboxarrow 0 3
+@マナナン
+リットゥはあのままフランと
+暮らしていたかったのに
+
+# textboxarrow 0 3
+@マナナン
+「揺らぎ」の影響が
+広がってるからって、
+友達のやってることを止めるなんて
+
+# textboxarrow 0 3
+@マナナン
+ひどくない？
+
+# voice 9917 "mimir_navikan_0056"
+# move 286 2 0
+# layer 286 4
+# mask 286 on
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+マナナンさん、
+そのようなことを言っては
+失礼ですよ
+
+# voice 4007 "shekina_0004"
+# alpha 270 0 0.3
+# face 286 "normal"
+# alpha 286 1 0.3
+# textboxarrow 0 1
+@シェキナー
+良いのです
+
+# textboxarrow 0 1
+@シェキナー
+私も、心の底からリットゥが
+そう望んでいたのなら、
+止めなかったでしょう
+
+# textboxarrow 0 1
+@シェキナー
+「揺らぎ」の影響が拡大するのは
+阻止しなければなりませんが、
+それなら他の方法もありました
+
+# voice 650401 "manannan_ura_0022"
+# face 6504011 "surprise"
+# textboxarrow 0 3
+@マナナン
+そうなの？
+じゃ、何で？
+
+# face 286 "usual"
+# textboxarrow 0 1
+@シェキナー
+リットゥが…
+辛そうにしていたからです
+
+;;回想
+# se "SE_0742"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "201_border"
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# alpha 286 0 0
+# alpha 6504011 0 0
+# move 285 3 0
+# mask 285 off
+# face 285 "normal"
+# alpha 285 1 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 2
+@リットゥ
+理由があってのことだ
+見逃して欲しい
+
+;;回想終了
+# se "SE_11762"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "town_2"
+# imagealpha 1 0 0
+# face 286 "usual"
+# face 6504011 "usual"
+# alpha 286 1 0
+# alpha 6504011 1 0
+# alpha 285 0 0
+# textwindow "close"
+# fadein "white" 1
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@シェキナー
+彼女は自分の過ちに気づいていながら
+自分ではどうすることも
+できなくなっていました
+
+# textboxarrow 0 1
+@シェキナー
+誰かに止めて欲しい
+そう思っていたのかどうかまでは、
+分かりません
+
+# textboxarrow 0 1
+@シェキナー
+ただ、友人であるからこそ、
+彼女のあんな姿は
+見ていられなかったのです
+
+# textboxarrow 0 1
+@シェキナー
+いうなれば、これは私のお節介です
+リットゥは頭が固くて口うるさくて
+暑苦しくて突っ走り過ぎですが…
+
+# textboxarrow 0 1
+@シェキナー
+正義感が強く、規律正しい
+一本気なキル姫なんです
+
+# textboxarrow 0 1
+@シェキナー
+そんな彼女の姿を取り戻したかった
+罪の意識に苛まれながら、目を背けて
+生きる彼女など見たくなかったのです
+
+# textboxarrow 0 3
+@マナナン
+ふーん…
+
+# face 286 "normal"
+# textboxarrow 0 1
+@シェキナー
+では、私はこれで
+
+# textboxarrow 0 1
+@シェキナー
+皆さん
+これからも規律正しく
+生活して下さいね
+
+# fadeout "black" 1
+# waitandnext 1

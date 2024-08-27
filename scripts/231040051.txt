@@ -1,0 +1,241 @@
+;;2019 イースターイベント シナリオ
+;;【エピソード5】Lucky Eggs!
+;;背景：森（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgmfile "bgm327_328" "BgmEaster001" 0
+;;-----------------------------------------
+;;シユウ
+# body 3201921
+# pos 3201921 3
+# scale 3201921 0.8 0
+# alpha 3201921 1 0
+# mask 3201921 off
+;;ヴァナルガンド
+# body 3601121
+# pos 3601121 3
+# scale 3601121 0.8 0
+# alpha 3601121 0 0
+# mask 3601121 off
+;;-----------------------------------------
+# face 3201921 "sad"
+# textflame 0 0
+@
+ヴァナルガンドに謝ることを約束した
+シユウとマスターは、
+パーティーの会場へと戻ってきた
+
+# textflame 0 0
+@
+会場はにわかに盛り上がっていた
+どうやらレースの参加者を
+募っているようだ
+
+# se "SE_5602"
+# textflame 0 0
+@
+マスターとシユウの帰りに気付いた
+ヴァナルガンドは、二人のもとへ
+駆け寄ってくる
+
+# alpha 3201921 0 0.5
+# alpha 3601121 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3601121 "surprise"
+@ヴァナルガンド
+あ、マスターさん、
+例のエッグレースだそうです～
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 360111 "vanargand_t_0004"
+# face 3601121 "normal"
+@ヴァナルガンド
+優勝すると、幸運を呼ぶという
+「伝説のイースターエッグ」が
+もらえるそうですよ～
+
+# textflame 0 0
+@
+先ほどまで大人しかったシユウだが
+その単語をきくやいなや、顔を上げ
+目を輝かせる
+
+# emotionbody 1000 1 3201921 30 210
+# effectpattern 1000 1 0
+# effectstart 1000
+# alpha 3601121 0 0.5
+# alpha 3201921 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_0023"
+# face 3201921 "surprise"
+@シユウ
+あの、うわさにきいた、
+でんせつのいーすたーえっぐか！
+よし、えっぐれーすにでるぞ！
+
+# textflame 0 0
+@
+レースは二人一組で出場だって、
+とマスターは出場条件を確認する
+
+# alpha 3601121 1 0.5
+# alpha 3201921 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 360111 "vanargand_t_0003"
+@ヴァナルガンド
+私が、シユウと一緒に出ます～
+
+# alpha 3601121 0 0.5
+# alpha 3201921 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3201921 "sad"
+@シユウ
+そ、そうか！
+ヴァナルガンドがそういうなら、
+しかたがないな！
+
+# alpha 3601121 1 0.5
+# alpha 3201921 0 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 360111 "vanargand_t_0004"
+@ヴァナルガンド
+シユウが騒ぎを起こさないよう、
+私がしっかり見張っておきます～
+マスターさん、応援してくださいね
+
+;;演出：場面転換
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.2
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# move 3601121 4 0
+# mask 3601121 on
+# alpha 3601121 0 0
+# move 3201921 2 0
+# mask 3201921 on
+# alpha 3201921 0 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+エッグレースは、スプーンに卵を
+乗せて運ぶ早さを競うゲームだ
+
+# textflame 0 0
+@
+このパーティーでは、二人で一つの
+卵をリレー方式で運ぶらしい
+
+# textflame 0 0
+@
+あの二人、仲直りしたかなぁ、と
+マスターはスタート地点に目をやる
+
+;;演出：場面転換
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+# waitandnext 0.2
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 1
+
+# alpha 3601121 1 0
+# alpha 3201921 1 0
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# serif 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 1
+@シユウ
+…………
+
+# textflame 1 1
+# textboxarrow 0 3
+@ヴァナルガンド
+…………
+
+# textflame 0 0
+@
+スタート地点の二人は、それぞれ
+無言で準備を進めていたが、
+ヴァナルガンドがその沈黙を破る
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 360111 "vanargand_t_0002"
+@ヴァナルガンド
+シユウ、準備はできましたか～？
+レースでは転ばないように、
+気をつけてくださいね～
+
+# emotionbody 1004 6 3201921 50 140
+# effectpattern 1004 1 0
+# effectstart 1004
+# textflame 1 1
+# textboxarrow 0 1
+# voice 320191 "chihyu_a_0015"
+# face 3201921 "angry"
+@シユウ
+…うう、こどもあつかいするなぁ！
+おまえこそ、あしをひっぱるなよ！
+
+# textflame 0 0
+@
+謝りたい気持ちはあるのだが、
+うまく言葉にできずにもやもやして、
+シユウはつい乱暴に声をかけてしまう
+
+# emotionbody 1012 8 3601121 -100 160
+# effectpattern 1012 1 0
+# effectstart 1012
+# textflame 1 1
+# textboxarrow 0 3
+# voice 360111 "vanargand_t_0027"
+# face 3601121 "sad"
+@ヴァナルガンド
+はぁ…
+自分勝手な行動は、
+できるだけ我慢してくださいね～
+
+# textflame 0 0
+@
+ヴァナルガンドの方は、
+シユウがまだ怒っていると思い、
+刺激しないように事務的に返す
+
+# effectskip 1012
+# alpha 3601121 0 0.5
+# alpha 3201921 0 0.5
+# textflame 0 0
+@
+二人を心配するマスターが見守る中、
+エッグレースがスタートした

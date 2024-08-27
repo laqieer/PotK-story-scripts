@@ -1,0 +1,161 @@
+;;-----------------------------------------
+;;■□■１－４改修案■□■
+;;整形済み
+;;【１－４－１（バトル後）】
+;;スクリプト最後の背景：plain
+;;-----------------------------------------
+# script "lisp"
+# background "plain"
+# bgm "bgm003" 0
+;;----------------------------------------------------------
+;;ティルフィング
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# layer 24 2
+# alpha 24 0 0
+# mask 24 off
+# face 24 "normal"
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 2
+# alpha 0 0 0
+# mask 0 off
+# face 0 "normal"
+;;-----------------------------------------
+;;背景:plain
+# move 24 2 0
+# face 24 "normal"
+# alpha 24 1 0
+# mask 24 on
+# move 0 4 0
+# face 0 "normal"
+# alpha 0 1 0
+# mask 0 on
+# textflame 1 1
+# textboxarrow 0 3
+@デュリン
+やっぱ“海”が近いせいかしら…
+このあたりは異族の数が多いわね…
+
+# textboxarrow 0 1
+@ティルフィング
+このラグナ大陸を取り囲む、
+大いなる“海”…異族はその海から
+出現すると言われているのです
+
+# textboxarrow 0 1
+@ティルフィング
+なので、海周辺は
+一般人立ち入り禁止区域…
+
+# textboxarrow 0 1
+@ティルフィング
+侵入が許されてるのは、
+王国政府の人間と私達ラグナロクの
+関係者だけなのです
+
+# voice 9999 "durin_0027"
+# textboxarrow 0 3
+@デュリン
+…表向きはね
+
+# voice 1014 "tyrufing_0022"
+# face 24 "surprise"
+# textboxarrow 0 1
+@ティルフィング
+え？
+
+# textboxarrow 0 3
+@デュリン
+どこからか勝手に入り込んで、
+住みついてるヤツらがいるのよ
+
+# textboxarrow 0 3
+@デュリン
+異族だらけのこんなところに
+わざわざ…理解に苦しむけどね
+
+# voice 9999 "durin_0001"
+# face 0 "occur"
+# textboxarrow 0 3
+@デュリン
+…アンタも記憶を失ってたとはいえ
+こんな場所で寝っ転がってて
+よく無事だったわね？
+
+# textboxarrow 0 3
+@デュリン
+アタシ達が通りかからなきゃ、
+間違いなく死んでたわよ？
+
+# voice 1014 "tyrufing_0013"
+# face 24 "normal"
+# textboxarrow 0 1
+@ティルフィング
+でも…マスターが
+ここにいらっしゃらなければ、
+私達は…
+
+# face 0 "normal"
+# textboxarrow 0 3
+@デュリン
+は？
+
+# textboxarrow 0 1
+@ティルフィング
+ここにいてくださったおかげで…
+私はマスターと巡り会えたんです
+だから…
+
+;;《選択肢》
+;;記憶を失くした者同士…運命的にも思えるな
+;;最後まで共に闘い、必ず記憶を取り戻そう
+# select "記憶を失くした者同士…運命的にも思えるな" "select_label_01" "最後まで共に闘い、必ず記憶を取り戻そう" "select_label_01"
+ここにいてくださったおかげで…
+私はマスターと巡り会えたんです。
+だから…
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# face 24 "surprise"
+# textboxarrow 0 1
+@ティルフィング
+え…？
+あ…は、はいっ！！
+
+# label "select_label_end"
+# voice 9999 "durin_0039"
+# textboxarrow 0 3
+@デュリン
+…あらぁ？
+
+# voice 1014 "tyrufing_0023"
+# face 24 "shy"
+# textboxarrow 0 1
+@ティルフィング
+…な、なに？
+
+# textboxarrow 0 3
+@デュリン
+どうしたのティルフィング？
+なに…動揺してんの？
+
+# textboxarrow 0 1
+@ティルフィング
+な、なにを言ってるの？！
+わ、私は、その…
+
+# se "SE_0719"
+# textboxarrow 0 1
+@ティルフィング
+と、ともかく、先を急ぎましょう！
+街まではもうすぐなんだから…！
+
+# voice 9999 "durin_0046"
+# face 0 "usual"
+# textboxarrow 0 3
+@デュリン
+…ふふ

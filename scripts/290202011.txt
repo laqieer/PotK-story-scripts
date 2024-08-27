@@ -1,0 +1,664 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;２章２話　「エデンクライシス―覚醒―」
+;;第5話　タイトル：愚者の進行
+;;5_1
+;;スクリプト最後の背景：王都
+;;-----------------------------------------
+# script "lisp"
+# background "parchment_map02"
+# bgmfile "bgm408" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;異族化アルマス（ナレーションのボイス用）
+# body 5103831
+# alpha 5103831 0 0
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;スイハ
+# body 401711
+# pos 401711 3
+# scale 401711 0.8 0
+# layer 401711 2
+# alpha 401711 0 0
+# mask 401711 off
+;;フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.8 0
+# layer 502711 2
+# alpha 502711 0 0
+# mask 502711 off
+;;ダモクレス
+# body 103511
+# pos 103511 3
+# scale 103511 0.8 0
+# layer 103511 2
+# alpha 103511 0 0
+# mask 103511 off
+;;ネス
+# body 602011
+# pos 602011 3
+# scale 602011 0.8 0
+# layer 602011 2
+# alpha 602011 0 0
+# mask 602011 off
+;;ラグナロク
+# body 103611
+# pos 103611 3
+# scale 103611 0.8 0
+# layer 103611 2
+# alpha 103611 0 0
+# mask 103611 off
+;;ハリー
+# body 208
+# pos 208 3
+# scale 208 0.8 0
+# layer 208 2
+# alpha 208 0 0
+# mask 208 off
+;;ダーインスレイヴ
+# body 102811
+# pos 102811 3
+# scale 102811 0.8 0
+# layer 102811 2
+# alpha 102811 0 0
+# mask 102811 off
+;;蜻蛉切
+# body 302411
+# pos 302411 3
+# scale 302411 0.8 0
+# layer 302411 2
+# alpha 302411 0 0
+# mask 302411 off
+;;ルーン
+# body 300531
+# pos 300531 3
+# scale 300531 0.8 0
+# layer 300531 2
+# alpha 300531 0 0
+# mask 300531 off
+;;-----------------------------------------
+;;残り時間一枚絵
+# imageset 0 "integral_02_02"
+# imagelayer 0 3
+# imagealpha 0 0 0
+;;-----------------------------------------
+;;第5話　タイトル：愚者の進行
+;;//背景：新天上世界遠景
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_2_0001"
+# textflame 0 0
+@
+ユグドラシルを目指すアルマス達の
+前に巨大な城が姿を現す
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_2_0002"
+@
+マサムネ城と呼ばれるその城では
+最強のキル姫を決める
+大会が催されようとしていた
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_2_0003"
+@
+アルマスもマサムネを倒すため
+大会に参加するが…
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_2_0004"
+@
+キル姫との戦いの中で
+インテグラルキラーズの力を
+発現させてしまう
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_2_0005"
+@
+自分自身について考えるアルマス
+彼女の変化にラグナロクも
+思い悩む
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_2_0006"
+@
+しかし彼女達の思いとは関係なく
+試合は進み、決勝でアルマスと
+マサムネが激突した
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_2_0007"
+@
+マサムネはアルマスに、
+再びインテグラルキラーズになるよう
+迫る
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_2_0008"
+@
+アルマスはそれを拒否し、
+改めて自分自身の意思で真実を知ると
+決意した
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_2_0009"
+@
+仲間達の力添えもあり、かろうじて
+マサムネ城を脱したアルマス達は
+ユグドラシルを目指す
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_2_0010"
+@
+そこには如何なる“真実”が
+待ち受けているのか
+
+;;ナレーション
+# voice 9927 "IntegralNoah_Narration_2_2_0011"
+@
+天上世界崩壊まで、
+残り――
+
+# bgm "stop"
+# se "SE_0828"
+# imagealpha 0 1 0
+# imagepos 0 0 0
+# fadein "white" 0.5
+# textwindow "close"
+
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "plain"
+# imagealpha 0 0 0
+# move 302411 3 0
+# face 302411 "normal"
+# alpha 302411 1 0
+# mask 302411 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//背景：平原
+# bgmfile "bgm400" "BgmIntegralNoahEvent" 0
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 3024 "tonbokiri_0004"
+@蜻蛉切
+ユグドラシルはもう目と鼻の先よ！
+私についてきなさい！
+
+# move 302411 2 0.5
+# mask 302411 on
+# move 196 4 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0042"
+@アルマス
+何であなたまでついてきてるのよ…
+しかも先頭に立って…
+
+# face 302411 "angry"
+# textboxarrow 0 1
+# voice 3024 "tonbokiri_0007"
+@蜻蛉切
+仕方ないでしょっ
+そなたがわたしの殿になっちゃったん
+だから！
+
+# textboxarrow 0 1
+@蜻蛉切
+別にそなたのことなんて、
+何とも思ってないんだからね！
+
+# face 196 "sad"
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0041"
+@アルマス
+また面倒なのが増えたわ…
+
+# alpha 302411 0 0.5
+# move 103511 2 0
+# face 103511 "usual"
+# alpha 103511 1 0.5
+# mask 103511 on
+# textboxarrow 0 1
+# voice 1035 "damocles_0004"
+@ダモクレス
+うんうん
+愛さえあれば問題ない！
+
+# alpha 196 0 0.5
+# move 302411 4 0
+# face 302411 "angry"
+# alpha 302411 1 0.5
+# mask 302411 on
+# textboxarrow 0 3
+@蜻蛉切
+だから！
+そんなんじゃないんだってば！
+
+# alpha 103511 0 0.5
+# alpha 302411 0 0.5
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+# voice 1036 "ragnarok_0004"
+@ラグナロク
+懐かしい風ね
+心が安らぐわ
+
+# alpha 103611 0 0.5
+# move 196 3 0
+# face 196 "normal"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# voice 9943 "almace_navikan_0001"
+@アルマス
+…ねえ
+みんな少し緊張感なくしてない？
+
+# alpha 196 0 0.5
+# move 602011 3 0
+# face 602011 "angry"
+# alpha 602011 1 0.5
+# mask 602011 off
+# textboxarrow 0 2
+# voice 6020 "ness_0011"
+@ネス
+そうです！
+確かにユグドラシルまであと一息
+ですけれど、規律は守って下さい
+
+# alpha 602011 0 0.5
+# move 502711 3 0
+# face 502711 "normal"
+# alpha 502711 1 0.5
+# mask 502711 off
+# textboxarrow 0 2
+# voice 5027 "freischotz_0028"
+@フライシュッツ
+しょうがないと思うな～
+だって、この辺りは教会の
+お膝元だから～
+
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 502711 4 0.5
+# mask 502711 on
+# voice 1036 "ragnarok_0003"
+@ラグナロク
+今までよりも旅しやすくなるはずよ
+町に着いたらユグドラシルに向けて
+最後の準備をしましょう
+
+# alpha 103611 0 0.5
+# alpha 502711 0 0.5
+# move 196 3 0
+# face 196 "happy"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+@アルマス
+そっか
+あなた達にとっては
+庭みたいなものなのね
+
+# alpha 196 0 0.5
+# move 102811 3 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 off
+# textboxarrow 0 2
+# voice 1028 "dainsleif_0007"
+@ダーインスレイヴ
+だが、教会が失われた後もおぬし達の
+庭であるとは限らないのではないかな
+
+# move 102811 2 0.5
+# mask 102811 on
+# move 208 4 0
+# alpha 208 1 0.5
+# mask 208 on
+# textboxarrow 0 3
+# voice 9938 "harry_0030"
+@ハリー
+ダーイン、
+そんなイジワルなこと言わなくても…
+
+# face 102811 "happy"
+# textboxarrow 0 1
+# voice 1028 "dainsleif_0004"
+@ダーインスレイヴ
+おっと失礼
+わたしはこう見えて心配性でね
+
+# alpha 102811 0 0.5
+# alpha 208 0 0.5
+# move 602011 3 0
+# face 602011 "angry"
+# alpha 602011 1 0.5
+# mask 602011 off
+# textboxarrow 0 2
+# voice 6020 "ness_0003"
+@ネス
+ダーインスレイヴの言うことも
+一理あります
+皆さん、油断しないで下さい
+
+# alpha 602011 0 0.5
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# move 401711 4 0
+# face 401711 "normal"
+# alpha 401711 1 0.5
+# mask 401711 on
+# textboxarrow 0 3
+# voice 4017 "suiha_0002"
+@スイハ
+町が見えてきました
+
+# textboxarrow 0 1
+@ラグナロク
+ああ…
+町は無事なようね
+良かった…
+
+;;//背景：王都
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "imperial_city"
+# alpha 103611 0 0
+# alpha 401711 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+# serif 1
+@奏官１
+インテグラルキラーズは我々を
+新世界に導いて下さる救世主なのです
+
+# serif 1
+@奏官２
+彼女達を信じ、
+その選定に身を委ねましょう
+
+# serif 1
+@奏官３
+ロンギヌス様に祈りを
+あの方は“果てなき慈愛”の
+持ち主です
+
+# serif 1
+@奏官４
+愛です
+全ては愛なのです
+
+# serif 1
+@住人達
+ロンギヌス様！
+どうか私達を新世界にお連れ下さい！
+その慈愛でお包み下さい！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# move 103611 2 0
+# face 103611 "surprise"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 196 4 0
+# face 196 "surprise"
+# alpha 196 1 0.5
+# mask 196 on
+# textwindow "normal"
+# voice 1036 "ragnarok_0022"
+@ラグナロク
+何なの、これ…
+
+# textboxarrow 0 3
+# voice 9943 "almace_navikan_0035"
+@アルマス
+ちょっと…
+教会のお膝元じゃなかったの？
+これじゃあ…
+
+# alpha 103611 0 0.5
+# alpha 196 0 0.5
+# move 302411 3 0
+# face 302411 "normal"
+# alpha 302411 1 0.5
+# mask 302411 off
+# textboxarrow 0 2
+# voice 3024 "tonbokiri_0023"
+@蜻蛉切
+まるでインテグラルキラーズを
+信奉してるみたいじゃないの！
+
+# serif 1
+@？？？
+その通りだぜ
+今更のこのこやってきた
+グズでのろまな毛虫ども！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 302411 0 0.5
+# move 103611 2 0
+# face 103611 "surprise"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# move 300531 4 0
+# face 300531 "normal"
+# alpha 300531 1 0.5
+# mask 300531 on
+@ラグナロク
+あなた、ルーン…！
+何がどうなっているのっ？
+
+# face 300531 "mad"
+# textboxarrow 0 3
+# voice 3005 "roon_0009"
+@ルーン
+ああん？
+私に気安く話しかけんじゃないよ
+虫けら風情が
+
+# alpha 103611 0 0.5
+# move 602011 2 0
+# face 602011 "angry"
+# alpha 602011 1 0.5
+# mask 602011 on
+# textboxarrow 0 1
+# voice 6020 "ness_0010"
+@ネス
+ラグナロクに対して、何て口の
+利き方をするんですか！
+規律違反ですよっ
+
+# face 300531 "normal"
+# textboxarrow 0 3
+@ルーン
+ピィピィ囀るな！
+お前達の時代は終わったんだ
+これからは…
+
+# textboxarrow 0 3
+@ルーン
+あたいのマスターと
+インテグラルキラーズの時代
+なんだよ！
+
+# alpha 602011 0 0.5
+# move 103611 2 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 on
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0002"
+@ラグナロク
+…あなたのマスターは
+インテグラルキラーズ側についた
+ということなの？
+
+# face 300531 "mad"
+# textboxarrow 0 3
+@ルーン
+だから気安く話しかけるなって
+言ってんだろうが！
+おい、野郎ども！
+
+;;//人間の兵士が集まってくる
+# se "SE_0799"
+# waitandnext 0.5
+
+# serif 1
+@兵士１
+ルーン様！
+包囲は完了致しましたっ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# face 300531 "normal"
+# textboxarrow 0 3
+# voice 3005 "roon_0007"
+@ルーン
+よーし
+そんじゃとっととやっちまうよ
+
+# face 103611 "surprise"
+# textboxarrow 0 1
+# voice 1036 "ragnarok_0023"
+@ラグナロク
+異族じゃなくて、人間の兵士…？
+そんなっ…
+
+# alpha 103611 0 0.5
+# move 502711 2 0
+# face 502711 "sad"
+# alpha 502711 1 0.5
+# mask 502711 on
+# textboxarrow 0 1
+# voice 5027 "freischotz_0018"
+@フライシュッツ
+やめて～っ…
+私達、人に危害を加えるなんて
+できないよ～
+
+# textboxarrow 0 3
+@ルーン
+はんっ
+だからお前達はダメなんだよ
+おら、とっとといきな！
+
+# textboxarrow 0 3
+@ルーン
+あたいもたっぷり血の匂いを
+嗅がせてもらうからねぇ！
+
+# alpha 502711 0 0.5
+# alpha 300531 0 0.5
+# move 103611 3 0
+# face 103611 "normal"
+# alpha 103611 1 0.5
+# mask 103611 off
+# textboxarrow 0 2
+@ラグナロク
+兵士を攻撃するわけにはいかない
+何とかして逃げないとっ
+
+# serif 1
+@兵士１
+かかれーっ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# alpha 103611 0 0.5
+# move 102811 2 0
+# face 102811 "normal"
+# alpha 102811 1 0.5
+# mask 102811 on
+# textboxarrow 0 1
+# move 208 4 0
+# alpha 208 1 0.5
+# mask 208 on
+# voice 1028 "dainsleif_0002"
+@ダーインスレイヴ
+ハリー、少し失礼するよ
+
+# se "SE_0648"
+# textwindow "close"
+# move 102811 3 0.2
+# waitandnext 0.2
+
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 9938 "harry_0024"
+@ハリー
+えっ？
+わわっ？
+ダーイン！？
+
+# face 102811 "happy"
+# textboxarrow 0 2
+@ダーインスレイヴ
+すまないが、全員はわたしの手に余る
+おぬし達は自らの力で逃げてくれ
+
+;;//ダーインスレイヴがハリーを抱えて飛び去る
+# se "SE_9021"
+# textwindow "close"
+# rightout 102811 0.3
+# rightout 208 0.3
+# waitandnext 0.3
+
+# alpha 102811 0 0
+# alpha 208 0 0
+# move 196 3 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 9943 "almace_navikan_0035"
+@アルマス
+ダーインスレイヴ！？
+仕方ないわね…私達もっ
+
+# alpha 196 0 0.5
+# move 300531 3 0
+# face 300531 "normal"
+# alpha 300531 1 0.5
+# mask 300531 off
+# textboxarrow 0 2
+# voice 3005 "roon_0029"
+@ルーン
+飛んで火に入るクソムシさん♪
+…ぶっ殺す！

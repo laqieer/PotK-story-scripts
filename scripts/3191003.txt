@@ -1,0 +1,336 @@
+# script "lisp"
+# background "antiquity"
+# bgmfile "bgm059" "BgmMMcollabo001" 0
+;;マミ準備
+# body 501411
+# pos 501411 1
+# face 501411 "sad2"
+;;ほむら準備
+# body 501311
+# pos 501311 3
+# face 501311 "angry"
+;;QB準備
+# body 8
+# pos 8 5
+# layer 8 1
+;;黒準備
+# imageset 1 "bg_black"
+# imagepos 1 0 0
+# imagealpha 1 0 0
+# imagelayer 1 6
+# textboxarrow 0 1
+# chara 501411
+# voice 9942 "fok_collabo1_0207_mami"
+@巴マミ
+やだ……死にたくない
+
+;;ワルプルギスの夜は、ディメンションホールを侵食していく演出
+# se "SE_0632"
+# shake 1 1
+# fillrect "green" 1 0 0.3
+# waitandnext 0.5
+
+# fillrect "green" 1 0.3 0
+# serif 1
+# textboxarrow 1 2
+# chara 501311
+# voice 9942 "fok_collabo1_0208_homura"
+@暁美ほむら
+あいつ…
+
+# serif 0
+# textboxarrow 0 3
+# chara 8
+# voice 9942 "fok_collabo1_0209_kyube"
+@キュゥべえ
+戻ろうとしている
+無理矢理ホールをこじ開ける気だ
+
+# serif 1
+# textboxarrow 1 2
+# chara 501311
+# voice 9942 "fok_collabo1_0210_homura"
+# face 501311 "sad"
+@暁美ほむら
+ここで私達がやられたら…
+
+# serif 0
+# textboxarrow 0 3
+# chara 8
+# voice 9942 "fok_collabo1_0211_kyube"
+@キュゥべえ
+向こうの世界もおしまいだろうね
+
+# serif 1
+# textboxarrow 1 2
+# chara 501311
+# voice 9942 "fok_collabo1_0212_homura"
+# face 501311 "angry"
+@暁美ほむら
+ここで、食い止める
+この世界を、私は守り続ける！
+
+;;ワルプルにほむらが攻撃する演出
+# flush "red" 0.1 1
+# se "SE_4400"
+# waitandnext 1
+
+# serif 1
+# textboxarrow 1 2
+# chara 501311
+# voice 9942 "fok_collabo1_0213_homura"
+# face 501311 "sad"
+@暁美ほむら
+うあっ！！
+…くっ…やっぱりダメなの
+
+;;QB退場
+# alpha 8 0 0.5
+;;ティル準備
+# body 101411
+# pos 101411 5
+;;ティル登場
+# rightin 101411 0.5
+;;ティル台詞
+# serif 0
+# textboxarrow 0 3
+# chara 101411
+# voice 9942 "fok_collabo1_0214_tyrufing"
+# face 101411 "angry"
+@ティルフィング
+しっかりしてください！
+ほむらさん！
+
+# serif 1
+# textboxarrow 1 2
+# chara 501311
+# voice 9942 "fok_collabo1_0215_homura"
+# face 501311 "amazed"
+@暁美ほむら
+この世界の理…私には使えない
+でも、もしかしたら…
+
+# serif 0
+# textboxarrow 0 3
+# chara 101411
+# voice 9942 "fok_collabo1_0216_tyrufing"
+# face 101411 "sad"
+@ティルフィング
+…？
+
+# serif 1
+# textboxarrow 1 2
+# chara 501311
+# voice 9942 "fok_collabo1_0217_homura"
+# face 501311 "angry"
+@暁美ほむら
+ティルフィング
+時を駆ける覚悟はある？
+
+# serif 0
+# textboxarrow 0 3
+# chara 101411
+# voice 9942 "fok_collabo1_0218_tyrufing"
+# face 101411 "angry"
+@ティルフィング
+それで皆さんを救えるなら
+
+# serif 1
+# textboxarrow 1 2
+# chara 501311
+# voice 9942 "fok_collabo1_0219_homura"
+@暁美ほむら
+…行って！
+まどかたちに伝えて！！
+
+# bgm "stop"
+# se "SE_0629"
+# imagepos 1 0 0
+# imagealpha 1 1 1
+;;暗転⇒黒背景継続
+# waitandnext 1
+
+;;マミ、ほむら、消す
+# alpha 501311 0 0
+# alpha 501411 0 0
+# alpha 101411 0 0
+# textwindow "close"
+# imagepos 1 0 0
+# imagealpha 1 0 0.8
+# background "black"
+# serif 1
+# textboxarrow 1 0
+# voice 9942 "fok_collabo1_0220_homura"
+@暁美ほむら
+この世界は、
+絶対に私が守り通してみせる
+
+# serif 1
+# voice 9942 "fok_collabo1_0221_homura"
+# face 501311 "sad"
+@暁美ほむら
+だから…
+
+# imagepos 1 0 0
+# imagealpha 1 1 0.8
+# waitandnext 1
+
+# imagepos 1 0 0
+# imagealpha 1 0 0.8
+# move 101411 3 0
+# alpha 101411 1 0
+# mask 101411 off
+# se "SE_0626"
+# waitandnext 1
+
+# serif 1
+# textflame 1 0
+# voice 9942 "fok_collabo1_0222_homura"
+# face 501311 "angry"
+@暁美ほむら
+頼んだわよ、
+ティルフィング
+
+# sestop "SE_0626"
+# serif 1
+# textboxarrow 1 0
+# chara 101411
+# voice 9942 "fok_collabo1_0223_tyrufing"
+@ティルフィング
+…………
+
+;;ティルフィング、ディメンションホールに飛び込む演出(ホワイトアウト？)
+# fillrect "white" 3 0 1
+# se "SE_0627"
+# waitandnext 1
+
+;;空モノローグ
+# fillrect "white" 3 1 0
+# background "road"
+;;まどか準備
+# body 401111
+# pos 401111 1
+# alpha 401111 0 0
+;;さやか準備
+# body 102011
+# pos 102011 5
+# alpha 102011 0 0
+;;杏子準備
+# body 301511
+# pos 301511 3
+# alpha 301511 0 0
+;;制服ティル準備
+# body 101441
+# pos 101441 3
+# mask 101441 off
+# layer 101441 4
+# scale 101441 0.9 0
+;;ティル消す
+# alpha 101411 0 0
+# waitandnext 0.5
+
+# bgmfile "bgm057" "BgmMMcollabo001" 0
+# serif 1
+# textboxarrow 1 2
+# chara 101441
+# voice 9942 "fok_collabo1_0224_tyrufing"
+@ティルフィング
+私と一緒に、来てもらえますか？
+
+# mask 101441 on
+# alpha 401111 1 0.5
+# textwindow "nomal"
+# serif 0
+# textboxarrow 0 1
+# chara 401111
+# voice 9942 "fok_collabo1_0225_madoka"
+# face 401111 "usual"
+@鹿目まどか
+…もちろん
+
+# alpha 102011 1 0.5
+# serif 1
+# textboxarrow 1 3
+# chara 102011
+# voice 9942 "fok_collabo1_0226_sayaka"
+# face 102011 "happy"
+@美樹さやか
+うん！
+
+;;ティル退場
+# alpha 101441 0 0.5
+;;杏子登場
+# alpha 301511 1 0.5
+# serif 0
+# textboxarrow 0 2
+# chara 301511
+# voice 9942 "fok_collabo1_0227_kyoko"
+# face 301511 "angry"
+@佐倉杏子
+好き勝手させられるかよ！
+
+# serif 1
+# textboxarrow 1 1
+# chara 401111
+# voice 9942 "fok_collabo1_0228_madoka"
+@鹿目まどか
+向こうで、
+ほむらちゃんが待ってるんだね
+
+# serif 0
+# textboxarrow 0 3
+# chara 102011
+# voice 9942 "fok_collabo1_0229_sayaka"
+# face 102011 "angry"
+@美樹さやか
+マミさんも戦ってる
+
+# serif 1
+# textboxarrow 1 2
+# chara 301511
+# voice 9942 "fok_collabo1_0230_kyoko"
+@佐倉杏子
+行こうぜ。世界を救ってやろう
+
+;;杏子退場
+# alpha 301511 0 0.5
+;;ティル登場
+# alpha 101441 1 0.5
+# serif 0
+# textboxarrow 0 2
+# chara 101441
+# voice 9942 "fok_collabo1_0231_tyrufing"
+# face 101441 "angry1"
+@ティルフィング
+ええ
+
+# serif 1
+# textboxarrow 1 1
+# chara 401111
+# voice 9942 "fok_collabo1_0232_madoka"
+@鹿目まどか
+行こう、みんな！
+
+;;暗転
+# imagepos 1 0 0
+# imagealpha 1 1 0.8
+# waitandnext 1
+
+# bgm "stop"
+# leftout 401111 0
+# leftout 102011 0
+# leftout 101441 0
+# background "black"
+;;モノローグと同じ吹き出し
+# textwindow "close"
+# serif 1
+# textboxarrow 1 0
+# voice 9942 "fok_collabo1_0233_homura"
+# face 501311 "sad"
+@暁美ほむら
+まどか
+あなたは生きて…
+
+# serif 1
+@
+GO TO OTHER STAGE…

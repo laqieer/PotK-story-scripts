@@ -1,0 +1,1132 @@
+;;-----------------------------------------
+;;SEAイベント異聞不可分フォーハング3_3
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgm "stop"
+;;-----------------------------------------
+;;ミュルグレス
+# body 5104611
+# pos 5104611 3
+# scale 5104611 0.8 0
+# layer 5104611 2
+# mask 5104611 off
+# alpha 5104611 0 0
+;;ミュルグレス？
+# entry 5104699 5104611
+# pos 5104699 3
+# scale 5104699 0.8 0
+# layer 5104699 3
+# mask 5104699 off
+# alpha 5104699 0 0
+# brightness 5104699 0.5 0
+;;featミュルグレス
+# body 6104611
+# pos 6104611 3
+# scale 6104611 0.8 0
+# layer 6104611 3
+# mask 6104611 off
+# alpha 6104611 0 0
+;;一般ミュルグレス
+# body 230
+# pos 230 3
+# scale 230 0.8 0
+# layer 230 5
+# mask 230 off
+# alpha 230 0 0
+;;ナーゲルリング
+# body 100621
+# pos 100621 3
+# scale 100621 0.8 0
+# layer 100621 2
+# mask 100621 off
+# alpha 100621 0 0
+# brightness 100621 0.5 0
+;;イチイバル？
+# body 5402211
+# pos 5402211 3
+# scale 5402211 0.8 0
+# layer 5402211 3
+# mask 5402211 off
+# alpha 5402211 0 0
+;;featイチイバル
+# body 6402211
+# pos 6402211 3
+# scale 6402211 0.8 0
+# layer 6402211 3
+# mask 6402211 off
+# alpha 6402211 0 0
+;;ヒョウハ？
+# body 5402011
+# pos 5402011 2
+# scale 5402011 0.8 0
+# layer 5402011 4
+# alpha 5402011 0 0
+;;featヒョウハ
+# body 6402011
+# pos 6402011 3
+# scale 6402011 0.8 0
+# layer 6402011 3
+# mask 6402011 off
+# alpha 6402011 0 0
+;;オルフェウス？
+# body 6603211
+# pos 6603211 4
+# scale 6603211 0.8 0
+# layer 6603211 2
+# mask 6603211 off
+# alpha 6603211 0 0
+;;イージス？
+# body 52000111
+# pos 52000111 3
+# scale 52000111 0.8 0
+# layer 52000111 3
+# mask 52000111 off
+# alpha 52000111 0 0
+;;mobcommand
+# body 231
+# pos 231 4
+# scale 231 0.8 0
+# layer 231 4
+# alpha 231 0 0
+# body 232
+# pos 232 2
+# scale 232 0.8 0
+# layer 232 2
+# alpha 232 0 0
+# body 233
+# pos 233 2
+# scale 233 0.8 0
+# layer 233 1
+# alpha 233 0 0
+# body 234
+# pos 234 3
+# scale 234 0.8 0
+# layer 234 3
+# mask 234 off
+# alpha 234 0 0
+# body 235
+# pos 235 4
+# scale 235 0.8 0
+# layer 235 1
+# alpha 235 0 0
+;;ティファレト
+# body 6503211
+# pos 6503211 5
+# scale 6503211 0.8 0
+# layer 6503211 4
+# alpha 6503211 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 2 "SEA6104611"
+# imagealpha 2 0 0
+# imagescale 2 1 0
+# imagelayer 2 5
+# imageset 3 "bg_white_circle"
+# imagealpha 3 0 0
+# imagescale 3 1.5 0
+# imagelayer 3 5
+;;-----------------------------------------
+;;背景：町（舞台上のイメージ）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# fadein "white" 2
+# background "in_city"
+# imagealpha 3 0.8 0
+# imagepos 3 0 0
+# waitandnext 3
+
+# serif 1
+# textflame 1 1
+@ミュルグレス
+あれ、ここって…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+舞台の幕が上がる
+
+# textflame 0 0
+@
+それは知略、謀略、奸計、奇策で
+彩られた裏切りの英雄譚――
+
+# textflame 0 0
+@
+…とは、程遠い
+楽しいばかりの、ただの日常
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# sedelay "bgm602_rhythm_on"1
+# alpha 5402211 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@イチイバル？
+ボクはしばらくこの町に残るよ
+騒ぎのお詫びはしないとね
+テヘッ☆
+
+# alpha 5402211 0 0.3
+# alpha 6603211 1 0.3
+# alpha 5402011 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@オルフェウス？
+じゃあ、一緒にバンドするっしょ！
+不安にさせちゃった分、
+アゲアゲな曲やるし！
+
+# face 5402011 "happy"
+# textflame 1 1
+# textboxarrow 0 1
+@ヒョウハ？
+お、いいな！
+それならあたしも手伝うぞ！
+ミュルグレスもやるよなっ
+
+# move 6603211 5 0.5
+# alpha 6603211 0 0.3
+# move 5402011 1 0.5
+# alpha 5402011 0 0.3
+# voice 510461 "murgleys_c_0013"
+# face 5104699 "angry"
+# alpha 5104699 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス？
+えーっ…
+
+# move 5104699 2 0.5
+# move 5402211 4 0
+# layer 5402211 4
+# mask 5402211 on
+# alpha 5402211 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@イチイバル？
+この町にいないと、ボクから
+報酬のカステラを貰えないよ
+ニヤリ
+
+# voice 510461 "murgleys_c_0027"
+# textflame 1 1
+# textboxarrow 0 1
+@ミュルグレス？
+むむむー…
+報酬に上乗せだからね！
+
+# alpha 5104699 0 0.3
+# alpha 5402211 0 0.3
+# alpha 52000111 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@イージス？
+私は一度、フォルカスに報告に行く
+まあ、すでに全て
+知っているかもしれんがな
+
+# se "bgm602_basic_on"
+# serif 1
+@ミュルグレス
+これ…これはミュル達だ
+ミュルの知ってる、ミュルだ
+
+# alpha 52000111 0 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+ミュルグレスは先ほどまでと違う
+今の自分自身の記憶を突きつけられる
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@ミュルグレス
+もやもや…ううん、もっと悪い
+胸がズキズキする
+
+#setnextbgmblock 1
+# se "bgm602_tension_on"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+「裏側」へ訪れた時の嫌悪感は
+ミュルグレスの中でさらに強くなる
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@ミュルグレス
+…なんで、楽しそうなの
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+舞台の主役はミュルグレスのはず…
+
+# serif 0
+# textflame 0 0
+@
+だが、いつか裏切るかもしれない
+自分はその役目に相応しくはない
+とミュルグレスは理解している
+
+# face 100621 "usual"
+# alpha 100621 1 0.3
+;;ナーゲルリング
+# textflame 1 1
+# textboxarrow 0 2
+@？？？
+どうしてそんな風に思うんですか？
+
+# bgm "stop"
+# serif 1
+# textflame 1 1
+@ミュルグレス
+！？
+
+# imagealpha 3 0 1
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+突然の声に驚くミュルグレス
+声の主は舞台上にはなく、
+自らと同じ観客席からのものだった
+
+# bgmfile "bgm405" "BgmIntegralNoahEvent003" 0
+# voice 1006 "nageruring_0004"
+;;ナーゲルリング
+# textflame 1 1
+# textboxarrow 0 2
+@？？？
+裏切ったって裏切られたって
+別にいいじゃないですか
+
+# face 100621 "surprise"
+;;ナーゲルリング
+# textflame 1 1
+# textboxarrow 0 2
+@？？？
+あ、いや、よくはないですね？
+
+# textflame 0 0
+@
+そう言って「彼女」は笑う
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@ミュルグレス
+アンタ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+いろいろ聞きたいことはある
+だが、ミュルグレスの口から出たのは
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@ミュルグレス
+…アンタの方こそ
+どうしてそんな風に言えるの？
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+ここにいる「彼女」がどういった
+存在であるかを問うのではなく
+「彼女」に抱いた疑問をぶつける
+
+# face 100621 "usual"
+;;ナーゲルリング
+# textflame 1 1
+# textboxarrow 0 2
+@？？？
+どうして、ですかね？
+
+# serif 1
+@ミュルグレス
+ちょっとぉ～
+聞いてるのはミュルなんだけど？
+
+# face 100621 "surprise"
+;;ナーゲルリング
+# serif 0
+# textboxarrow 0 2
+@？？？
+あ、そうですよね、すみません
+ん～どうしてでしょう…？
+
+# face 100621 "usual"
+;;ナーゲルリング
+# serif 0
+# textboxarrow 0 2
+@？？？
+あなたと私が
+似ているから…かもしれません
+
+# serif 1
+@ミュルグレス
+…！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+その言葉はいつか
+言われたことがある
+とミュルグレスは感じた
+
+# textflame 0 0
+@
+それはどこかのミュルグレスの
+運命を左右したかもしれない言葉
+
+;;ナーゲルリング
+# textflame 1 1
+# textboxarrow 0 2
+@？？？
+たぶん、なんですけど
+私もあなたも誰かに心を
+開くということに否定的で…
+
+;;ナーゲルリング
+# textflame 1 1
+# textboxarrow 0 2
+@？？？
+なのに、憧れがあって…
+でも、諦めていて
+
+;;ナーゲルリング
+# textflame 1 1
+# textboxarrow 0 2
+@？？？
+だったら、裏切るとか
+裏切られるとかどうでもいい
+
+;;ナーゲルリング
+# textflame 1 1
+# textboxarrow 0 2
+@？？？
+自分は自分だって
+そう言えるだけで十分じゃないかな
+って私は思うんです
+
+;;ナーゲルリング
+# textflame 1 1
+# textboxarrow 0 2
+@？？？
+だから、私と似ているあなたも
+そう思うようにできれば
+そんなに苦しまなくて済むかなって
+
+# serif 1
+@ミュルグレス
+ミュルが、苦しんでる？
+なんでアンタにそんなことが
+言えるのよ、初対面なのに
+
+# voice 1006 "nageruring_0031"
+# face 100621 "surprise"
+;;ナーゲルリング
+# serif 0
+# textboxarrow 0 2
+@？？？
+…そうですね！？
+あの、お気を悪くしたのなら
+ごめんなさい
+
+# face 100621 "usual"
+;;ナーゲルリング
+# serif 0
+# textboxarrow 0 2
+@？？？
+何だかあなたは話しやすくて…
+背格好が近いからですかね？
+つい本音を話してしまったみたいです
+
+# serif 1
+@ミュルグレス
+…バカみたい
+
+# voice 1006 "nageruring_0008"
+# face 100621 "shy"
+;;ナーゲルリング
+# serif 0
+# textboxarrow 0 2
+@？？？
+あ、あはは、そうですね…
+
+# serif 1
+@ミュルグレス
+背格好が近いとか
+似てるとこがあるとか
+そんなの結局他人でしかないじゃない
+
+# serif 1
+@ミュルグレス
+そんなことで
+相手を信用していいの？
+
+# serif 1
+@ミュルグレス
+アンタの言ったことを
+吹聴して回るかもしれないのよ？
+
+# serif 1
+@ミュルグレス
+アンタのその想いを
+裏切るかもしれないのよ？
+
+# face 100621 "usual"
+;;ナーゲルリング
+# serif 0
+# textboxarrow 0 2
+@？？？
+そんなことでも、大層なことでも
+信用信頼の理由って大して
+問題にならないんですよね
+
+;;ナーゲルリング
+# serif 0
+# textboxarrow 0 2
+@？？？
+もちろん、
+裏切られれば傷つきますし、
+嫌な気持ちになりますけど…
+
+;;ナーゲルリング
+# serif 0
+# textboxarrow 0 2
+@？？？
+それ以上に信頼の先には…
+あ、ほら
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# alpha 100621 0 0.3
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+彼女はミュルグレスに
+舞台を観るように促す
+
+# textflame 0 0
+@
+そこにあったのは――
+
+;;演出：コマンドサイドストーリー時の如意金箍棒とヒョウハを表示
+# bgmfile "bgm429" "BgmIntegralNoahCommand" 0
+# alpha 231 1 0.5
+# alpha 232 1 0.5
+# waitandnext 2
+
+# alpha 231 0 0.5
+# alpha 232 0 0.5
+# waitandnext 2
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@ミュルグレス
+あ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+それは、ミュルグレスが
+かつて初めて出会った、仲間
+
+;;演出：コマンドサイドストーリー時のオルフェウス、イチイバル、ロジェスティラを表示
+# alpha 233 1 0.5
+# alpha 235 1 0.5
+# waitandnext 2
+
+# alpha 233 0 0.5
+# alpha 235 0 0.5
+# alpha 234 1 0.5
+# waitandnext 2
+
+# alpha 234 0 0.5
+# waitandnext 2
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@ミュルグレス
+…うぅ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+物語の中心ではないかもしれない
+けれど、今この舞台の主役は
+ミュルグレスだった
+
+# textflame 0 0
+@
+裏切られるかも
+裏切ってしまうかも
+その可能性がどうでもよくなるほど
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@ミュルグレス
+…ミュルは、楽しかったんだね
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+その光景は今のミュルグレスには
+あまりにも眩しく、羨ましい
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@ミュルグレス
+契約が、あったから、なんでしょ
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+舞台上の光景に対して
+今の自分はどうだと対比すると
+ただただ惨めに思えてくる
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@ミュルグレス
+ミュルの傍にもあるのに
+ミュルには手が届かないもの
+
+# serif 1
+@ミュルグレス
+神令の繋がりがなければ
+イチイバルだってミュルに
+声を掛けなかったかもしれない
+
+# serif 1
+@ミュルグレス
+でも、契約で取り繕わなくても
+神令がきっかけだったとしても…っ！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+誰かとの繋がりが欲しかった
+独りでなんていたくなかった
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "nomal"
+# textflame 1 1
+@ミュルグレス
+だから、仲間ができて嬉しかった
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textflame 0 0
+@
+そして、願わくば――
+
+# voice 540221 "ichiibal_c_0045"
+;;イチイバル
+# textflame 1 1
+# textboxarrow 0 0
+@？？？
+あれ、にゃんころ
+やけに素直だね？
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# textflame 0 0
+@
+いつものように
+ミュルグレスをからかう声がする
+
+# bgmfile "bgm601_block" "BgmSecretlyEverAfter001" 0
+# voice 510461 "murgleys_c_0022"
+# move 6402211 4 0
+# layer 6402211 2
+# mask 6402211 off
+# face 5104611 "surprise"
+# alpha 5104611 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス
+イチイバル！？
+
+# se "bgm601_windon"
+# move 5104611 2 0.5
+# alpha 5104611 0 0.3
+# move 6402211 3 0.5
+# face 6402211 "usual"
+# alpha 6402211 1 0.3
+# textflame 0 0
+@
+舞台の上ではなく
+振り返った先にイチイバルがいた
+
+# voice 540201 "hyoha_c_0039"
+# alpha 6402211 0 0.3
+# move 6402011 2 0
+# layer 6402011 2
+# mask 6402011 off
+# face 6402011 "shy"
+# alpha 6402011 1 0.3
+# move 5104611 4 0
+# layer 5104611 4
+# mask 5104611 on
+# alpha 5104611 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@ヒョウハ
+へぇ…ミュルグレスも
+あたし達のこと仲間だって
+思ってくれてたんだな！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ミュルグレス
+ヒョウハまで！？
+え、これも「裏側」の…？
+
+# voice 540221 "ichiibal_c_0003"
+# alpha 5104611 0 0.3
+# move 6402211 4 0
+# layer 6402211 4
+# mask 6402211 on
+# alpha 6402211 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@イチイバル
+たしかに「裏側」の力だけど
+このイチイバルさんは正真正銘
+本物のイチイバルさんだよ
+
+# voice 540221 "ichiibal_c_0021"
+# textflame 1 1
+# textboxarrow 0 3
+@イチイバル
+キラン☆
+
+# voice 540201 "hyoha_c_0028"
+# textflame 1 1
+# textboxarrow 0 1
+@ヒョウハ
+なんか気付いたら
+ここにいたっていうか
+あたしはてっきりもう帰るのかと
+
+# face 6402211 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@イチイバル
+まぁ、必要があれば引き合わせる
+というのが「裏側」のやり方
+みたいなんだよね
+
+# alpha 6402011 0 0.3
+# alpha 6402211 0 0.3
+# textflame 0 0
+@
+急に騒がしくなった
+ミュルグレスの「裏側」
+
+# textflame 0 0
+@
+いつもなら不機嫌な振りをして
+皮肉のひとつでも言うミュルグレス
+なのだが、今は何故か心地いい
+
+# face 5104611 "shy"
+# move 5104611 3 0
+# layer 5104611 2
+# mask 5104611 off
+# alpha 5104611 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス
+…仲間は、都合がいいから
+一緒にいたってだけのことだし
+
+# voice 550321 "tiphereth_ca_0004"
+# move 5104611 2 0.5
+# move 6503211 4 0.5
+# alpha 6503211 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@ティファレト
+ふふ、ここまで来ても
+やっぱり素直になれない
+ミュルグレスもまた愛おしいですね
+
+# face 5104611 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@ミュルグレス
+げっ
+
+# textflame 0 0
+@
+想定外にティファレトまでいたのか
+とミュルグレスは顔を赤くする
+
+# face 5104611 "shy"
+# textflame 1 1
+# textboxarrow 0 1
+@ミュルグレス
+…あ
+
+# textflame 0 0
+@
+とミュルグレスは話を戻す
+さっきのヒョウハの言葉が気になると
+
+# voice 510461 "murgleys_c_0001"
+# move 5104611 3 0.5
+# move 6503211 5 0.5
+# alpha 6503211 0 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス
+…ねぇ、ヒョウハはさっき
+ミュル「も」って言ったわよね？
+
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス
+アンタはミュルのこと
+…どう思ってたのよ
+
+# voice 540201 "hyoha_c_0022"
+# alpha 5104611 0 0.3
+# face 6402011 "sad"
+# alpha 6402011 1 0.3
+# alpha 6402211 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@ヒョウハ
+え、いやぁ
+どうって、なぁイチイバル？
+
+#setnextbgmblock 1
+# se "bgm601_celloon"
+# se "bgm601_guitaron"
+# se "bgm601_glockenon"
+# face 6402211 "usual"
+# voice 540221 "ichiibal_c_0032"
+# textflame 1 1
+# textboxarrow 0 3
+@イチイバル
+そうじゃないっていうなら
+ハナから声なんて掛けないさ
+
+# voice 510461 "murgleys_c_0037"
+# face 5104611 "sad"
+# alpha 5104611 1 0.3
+# alpha 6402011 0 0.3
+# alpha 6402211 0 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス
+っ！！
+
+# textflame 0 0
+@
+裏切るかもしれない
+と信じてもらえなかったなんて
+それが幻想でしかなかった
+
+# textflame 0 0
+@
+自分が誰かに信頼されることはない
+そう思いこんでいたから信頼されて
+いないんだということにしていた
+
+# face 5104611 "shy"
+# move 6402211 5 0
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス
+…ミュルはアンタ達のこと
+嫌じゃなかったわ
+
+# voice 540221 "ichiibal_c_0019"
+# move 5104611 2 0.5
+# move 6402211 4 0.5
+# face 6402211 "sad"
+# alpha 6402211 1 0.3
+# textflame 1 1
+# textboxarrow 0 3
+@イチイバル
+はぁ、何を言ってるんだいにゃんころ
+
+# move 6402011 1 0
+# layer 6402011 4
+# mask 6402011 on
+# textflame 1 1
+# textboxarrow 0 1
+@ミュルグレス
+猫じゃない
+
+# voice 540201 "hyoha_c_0028"
+# move 5104611 4 1
+# move 6402211 5 0.5
+# alpha 6402211 0 0.3
+# move 6402011 2 0.5
+# alpha 6402011 1 0.3
+# textflame 1 1
+# textboxarrow 0 1
+@ヒョウハ
+そんなの、知ってたしなぁ…
+
+# voice 510461 "murgleys_c_0009"
+# face 5104611 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+@ミュルグレス
+はぁ！？
+
+# voice 550321 "tiphereth_ca_0005"
+# alpha 6402011 0 0.3
+# alpha 5104611 0 0.3
+# move 6503211 3 0
+# mask 6503211 off
+# alpha 6503211 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ティファレト
+ふふふふ
+
+# face 5104611 "shy"
+# alpha 6503211 0 0.3
+# move 5104611 3 0
+# mask 5104611 off
+# alpha 5104611 1 0.3
+# textflame 1 1
+# textboxarrow 0 2
+@ミュルグレス
+…………
+
+# textflame 0 0
+@
+「じゃあさ」
+それでも、ミュルグレスは
+その一言が声にならない
+
+# textflame 0 0
+@
+ここに来てどうしてまだ自分は
+恐がっているのだろう
+とミュルグレスは考える
+
+# textflame 0 0
+@
+そんなこと、かもしれない
+大層なこと、なのかもしれない
+
+# textflame 0 0
+@
+もう、理由なんてどうでもいい
+
+;;もやもやフレーム
+# move 5104611 3 0
+# textflame 1 1
+# textwindow "moya"
+# textboxarrow 0 0
+@ミュルグレス
+大丈夫よ、ミュル
+
+;;もやもやフレーム
+@ミュルグレス
+ってか、粗暴なとこを
+ちょっと分けなさいよ、トール
+
+# move 5104611 4 0.5
+# face 6402011 "sad"
+# alpha 6402011 1 0.3
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@ヒョウハ
+どうした？
+
+# textflame 1 1
+# textboxarrow 0 3
+@ミュルグレス
+じゃ、じゃあ…
+
+# textflame 1 1
+# textboxarrow 0 3
+@ミュルグレス
+友達になってあげても、いいわよ
+
+;;演出：イチイバル、ヒョウハ、そしてティファレトの立ち絵を順番に表示
+# alpha 5104611 0 0.3
+# alpha 6402011 0 0.3
+# move 6402211 3 0
+# mask 6402211 off
+# face 6402211 "usual"
+# alpha 6402211 1 0.3
+# textflame 0 0
+@
+少しだけ素直に、
+そしてまだ素直じゃないミュルグレス
+
+# alpha 6402211 0 0.3
+# move 6402011 3 0
+# mask 6402011 off
+# face 6402011 "shy"
+# alpha 6402011 1 0.3
+# textflame 0 0
+@
+けれど、誰かのことを信じてみよう
+そして自分のことも信じてあげよう
+
+# alpha 6402011 0 0.3
+# move 6503211 3 0
+# mask 6503211 off
+# alpha 6503211 1 0.3
+# textflame 0 0
+@
+今の自分がたとえ裏切られたとして
+誰かを信じることができたなら
+きっとどこかの自分も報われる
+
+# alpha 6503211 0 0.3
+# textflame 0 0
+@
+あり得たかもしれない可能性
+じゃなくて、それを今にできるのは
+自分しかいないのだ
+
+;;ミュルグレスのシナリオカット表示
+# frameout 0 0
+# fadein "white" 1
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# textwindow "close"
+# waitandnext 2
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 0
+@ミュルグレス
+使命や利益がなくても
+ミュルの力を貸してあげる
+
+@ミュルグレス
+トールの力だって
+今度は徹底的にミュルが
+使いこなしてやるんだから！
+
+;;演出：暗転
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：黒
+# background "bg_black"
+;;シナリオカット削除
+# imagealpha 2 0 1
+# framein 0 1
+# textwindow "close"
+# waitandnext 1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+@
+ミュルグレスはもう、揺るがない
+
+# textflame 1 1
+# textboxarrow 0 0
+@ミュルグレス
+…あれ？
+
+# textflame 0 0
+@
+緞帳が下りゆく舞台を眺め
+ミュルグレスは違和感に気付く
+
+# textflame 1 1
+# textboxarrow 0 0
+@ミュルグレス
+もうひとり、いたわよね
+
+# textflame 0 0
+@
+それは誰だったのだろうか
+
+# fadeout "black" 1
+# waitandnext 1

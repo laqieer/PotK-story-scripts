@@ -1,0 +1,456 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第４章 タイトル：「世界樹の子―インベイション―」
+;;第1話　タイトル：ユグドラシルへ
+;;4_1_2
+;;スクリプト最後の背景：赤い廊下
+;;-----------------------------------------
+# script "lisp"
+# background "201_border"
+# bgmfile "bgm417" "BgmIntegralNoahBattle003" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;魔獣
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# layer 910013 2
+# alpha 910013 0 0
+# mask 910013 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 3
+# alpha 210 0 0
+# mask 210 off
+;;デュランダル
+# body 3100311
+# pos 3100311 3
+# scale 3100311 0.8 0
+# layer 3100311 2
+# alpha 3100311 0 0
+# mask 3100311 off
+;;ブリューナク・D. plug・バルバトス
+# body 3500711
+# pos 3500711 3
+# scale 3500711 0.8 0
+# layer 3500711 2
+# alpha 3500711 0 0
+# mask 3500711 off
+;;-----------------------------------------
+;;第1話　タイトル：ユグドラシルへ
+;;//背景：遺跡
+;;//デュランダルが魔獣を斬る
+# move 3100311 3 0
+# face 3100311 "angry"
+# alpha 3100311 1 0
+# mask 3100311 off
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 310031 "durandaru_a_unit_0009"
+@デュランダル
+踊り狂いなさい！
+
+# sedelay "SE_10588" 0.4
+# textwindow "close"
+# alpha 3100311 0 0.5
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 off
+# waitandnext 0.6
+
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# waitandnext 0.5
+
+# se "SE_0794"
+# alpha 3100311 0 0.5
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 off
+# textboxarrow 0 2
+# textwindow "normal"
+@魔獣
+ガアアアアア…
+
+# textwindow "close"
+# se "SE_3001"
+# alpha 910013 0 0.5
+# waitandnext 0.5
+
+;;//ブリューナクが魔獣を撃つ
+# move 3500711 3 0
+# face 3500711 "normal"
+# alpha 3500711 1 0.5
+# mask 3500711 off
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 350071 "buryunaku_a_unit_0009"
+@ブリューナク
+障害は排除する
+
+# textwindow "close"
+# alpha 3500711 0 0.5
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 off
+# waitandnext 0.6
+
+# se "SE_4400"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_0794"
+# textboxarrow 0 2
+# textwindow "normal"
+@魔獣
+グウウウウウ…
+
+# textwindow "close"
+# se "SE_3001"
+# alpha 910013 0 0.5
+# waitandnext 0.5
+
+# move 3500711 2 0
+# face 3500711 "normal"
+# alpha 3500711 1 0.5
+# mask 3500711 on
+# move 3100311 4 0
+# face 3100311 "happy"
+# alpha 3100311 1 0.5
+# mask 3100311 on
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 310031 "durandaru_a_0005"
+@デュランダル
+うふふふふっ！
+魔物さん達、楽しいお時間を過ごせた
+こと、感謝致しますわ♪
+
+# face 3500711 "happy"
+# textboxarrow 0 1
+# voice 350071 "buryunaku_a_0004"
+@ブリューナク
+ふっ…
+戦い続けているうちに
+随分と遠くまで来てしまった
+
+# textboxarrow 0 1
+@ブリューナク
+長き旅路の果てに財宝と巡り会う…
+ロマンがあるな
+
+# face 3100311 "normal"
+# textboxarrow 0 3
+# voice 310031 "durandaru_a_0007"
+@デュランダル
+この辺りにはもう魔物さんは
+いらっしゃいませんの？
+
+# textboxarrow 0 1
+# voice 350071 "buryunaku_a_0003"
+@ブリューナク
+魔物はいないようだが、
+見てみろ、デュランダル
+ロマンを感じる建物ではないか！
+
+# face 3100311 "surprise"
+# textboxarrow 0 3
+# voice 310031 "durandaru_a_0022"
+@デュランダル
+ただの廃墟ですの…
+あら？でも、中に…
+
+;;//デュランダルが立ち去る
+# se "SE_0740"
+# textwindow "close"
+# alpha 3100311 0 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 350071 "buryunaku_a_0006"
+@ブリューナク
+良いな
+長き年月を感じさせる
+朽ちた、たたずまい
+
+# textboxarrow 0 1
+@ブリューナク
+こうして壁面に手を触れると
+古の日々が思い起こされるようだ
+
+# face 3500711 "surprise"
+# textboxarrow 0 1
+@ブリューナク
+そうは思わないか、
+デュランダル
+…デュランダル？
+
+# face 3500711 "normal"
+# textboxarrow 0 1
+# voice 350071 "buryunaku_a_0027"
+@ブリューナク
+ふぅ…
+ブリューナクは置いてけぼりを
+食らったようだ
+
+;;//ブリューナクが立ち去る
+# se "SE_0740"
+# textwindow "close"
+# alpha 3500711 0 0.5
+# waitandnext 0.5
+
+;;//背景：赤い廊下
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# background "red_corridor"
+# move 3102311 3 0
+# face 3102311 "angry"
+# alpha 3102311 1 0
+# mask 3102311 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 310231 "ascalon_a_0011"
+@アスカロン
+止まってください、デュランダル！
+それ以上、近づいたら…
+敵と判断します！
+
+# move 3102311 2 0.5
+# mask 3102311 on
+# move 3100311 4 0
+# face 3100311 "surprise"
+# alpha 3100311 1 0.5
+# mask 3100311 on
+# textboxarrow 0 3
+# voice 310031 "durandaru_a_0023"
+@デュランダル
+あら？
+アスカロンですの
+ご無沙汰致しておりますわ
+
+# face 3100311 "normal"
+# textboxarrow 0 3
+@デュランダル
+そちらは貴方のマスターですの？
+
+# face 3102311 "angry"
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0009"
+@アスカロン
+そうです
+決して危害は加えさせません
+
+# move 3102311 1 0.5
+# move 210 3 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 2
+# move 3100311 5 0.5
+# alpha 3100311 1 0.5
+# mask 3100311 on
+# voice 9936 "kamito_0002"
+@カミト
+アスカロンの知り合い？
+
+# face 3102311 "normal"
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0003"
+@アスカロン
+はい
+彼女はデュランダル
+以前、同じ国に所属していました
+
+# textboxarrow 0 1
+@アスカロン
+デュランダル…
+あなたもネオ・ラグナロクの一員
+なんですかっ？
+
+# face 3100311 "surprise"
+# textboxarrow 0 3
+# voice 310031 "durandaru_a_0022"
+@デュランダル
+ネオ・ラグナロク？
+何のことかさっぱりですわ
+
+# face 3100311 "happy"
+# textboxarrow 0 3
+@デュランダル
+わたくし、突然霧の中から現れた
+魔物さん達と楽しいお時間を過ごして
+おりましたの♪
+
+# face 3100311 "sad"
+# textboxarrow 0 3
+@デュランダル
+気づいたら、このようなところまで
+どうしてなのでしょう？
+
+# textboxarrow 0 2
+# voice 9936 "kamito_0023"
+@カミト
+魔物と楽しいお時間…？
+
+# textboxarrow 0 1
+@アスカロン
+デュランダルは戦うことが
+大好きなんです
+だから、楽しい時間というのも…
+
+# face 3100311 "happy"
+# textboxarrow 0 3
+# voice 310031 "durandaru_a_0032"
+@デュランダル
+はい！
+ザックザクのバッタバタでしたわ♪
+
+# face 210 "sad"
+# textboxarrow 0 2
+# voice 9936 "kamito_0008"
+@カミト
+それは…すごいね…
+
+# textboxarrow 0 3
+# voice 310031 "durandaru_a_0004"
+@デュランダル
+ふふっ
+お褒め頂き、
+感謝しますわ♪
+
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_unit_1006"
+@アスカロン
+会ったばかりなのに、
+マスターに褒めてもらえるなんて
+…羨ましい
+
+# textboxarrow 0 3
+@デュランダル
+それでは、アスカロン
+貴方と貴方のマスターも
+素敵な楽園へご招待致しますわ♪
+
+# face 3102311 "surprise"
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0022"
+@アスカロン
+えっ…？
+あなたと戦う理由がありません
+
+# face 3100311 "surprise"
+# textboxarrow 0 3
+@デュランダル
+あら？
+戦うことに理由など必要でして？
+
+# face 3100311 "happy"
+# textboxarrow 0 3
+@デュランダル
+破壊と狂乱の舞台…
+わたくしの楽園へ、ようこそですわ♪
+
+;;//デュランダルをブリューナクが止める
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# move 3500711 2 0
+# face 3500711 "angry"
+# alpha 3500711 1 0.5
+# mask 3500711 on
+# textboxarrow 0 1
+# voice 350071 "buryunaku_a_0002"
+@ブリューナク
+そこまでだ
+ブリューナクはここでの戦いを
+良しとしない
+
+# move 3100311 4 0.3
+# face 3100311 "angry"
+# textboxarrow 0 3
+# voice 310031 "durandaru_a_0026"
+@デュランダル
+不愉快ですわ
+ブリューナク、おどきになって
+
+# textboxarrow 0 1
+# voice 350071 "buryunaku_a_0011"
+@ブリューナク
+駄目だ
+お前達が戦えば、この遺跡に
+甚大な被害を及ぼすだろう
+
+# textboxarrow 0 1
+@ブリューナク
+貴重な遺跡を破壊してしまうのは
+ロマンがない
+
+# textboxarrow 0 1
+@ブリューナク
+どうしても戦いを求めるというのなら
+あちらの相手をしてはどうだ
+
+;;//魔獣が現れる
+# bgmfile "bgm417_418" "BgmIntegralNoahBattle003" 0
+# se "SE_0793"
+# alpha 3500711 0 0.5
+# alpha 3100311 0 0.5
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 off
+# textboxarrow 0 2
+@魔獣
+ギャアアアアアアアア！
+
+# alpha 910013 0 0.5
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 210 4 0
+# face 210 "surprise"
+# alpha 210 1 0.5
+# mask 210 on
+# textboxarrow 0 3
+# voice 9936 "kamito_0026"
+@カミト
+うわっ！
+窓から入ってきたのかな…
+
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0033"
+@アスカロン
+マスター、
+私に任せて下さい！
+
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# move 3100311 3 0
+# face 3100311 "happy"
+# alpha 3100311 1 0.5
+# mask 3100311 off
+# textboxarrow 0 2
+# voice 310031 "durandaru_a_0004"
+@デュランダル
+ふふっ
+破壊的に楽しませていただきますの！

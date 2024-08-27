@@ -1,0 +1,407 @@
+;;-----------------------------------------
+;;SEA夏1_11_0
+;;-----------------------------------------
+# script "lisp"
+# background "SEAsummer_fes_day"
+# bgm "bgm002" 0
+;;-----------------------------------------
+;;浴衣ミーミル
+# body 318
+# pos 318 3
+# scale 318 0.8 0
+# layer 318 5
+# mask 318 off
+# alpha 318 0 0
+;;浴衣マナナン
+# body 6504021
+# pos 6504021 4
+# scale 6504021 0.8 0
+# layer 6504021 3
+# mask 6504021 off
+# alpha 6504021 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "SEA6504021"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;背景：夏祭り会場（昼）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# face 318 "normal"
+# alpha 318 1 0.3
+# se "SE_6216"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミーミル
+たくさんの屋台が並んでいます
+人通りも多いですね
+
+# voice 9917 "mimir_navikan_0001"
+# textboxarrow 0 2
+@ミーミル
+日差しが強くなってまいりました
+マスター様、帽子か日傘、どちらを
+ご用意致しましょう？
+
+# textboxarrow 0 2
+@ミーミル
+小まめな水分補給も必要です
+
+;;マナナンが走ってくる
+# se "SE_5575"
+;;マナナンシナリオカット表示
+# bgmfile "bgm605_606" "BgmSecretlyEverAfter003" 0
+# fadein "white" 1
+# imagealpha 1 1 0
+# imagepos 1 0 0
+# frameout 0 0
+# alpha 318 0 0
+# textwindow "close"
+# waitandnext 1
+
+# voice 650401 "manannan_ura_0005"
+# textwindow "nomal"
+# textboxarrow 0 0
+@マナナン
+あ～！
+ミーミルとマスターだ！
+アハハハッ♪
+
+# serif 1
+# voice 9917 "mimir_navikan_0056"
+@ミーミル
+マナナンさんっ
+こちらにいらっしゃったのですね
+
+# serif 0
+@マナナン
+ここには喜劇的に愉快なものが
+たくさんあるね！
+
+# serif 1
+@ミーミル
+それより、ティルフィング様を
+見ませんでしたか？
+
+# move 318 2 0
+# face 318 "normal"
+# alpha 318 1 0
+# face 6504021 "usual"
+# alpha 6504021 1 0
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+@マナナン
+ティルフィング？
+…あ！そうだった
+
+;;シナリオカット削除
+# se "SE_6239"
+# imagealpha 1 0 1
+# framein 0 1
+# waitandnext 1
+
+# textboxarrow 0 3
+@マナナン
+あのね！
+ミーミルに会ったら、
+これを渡してって言われてたんだ～
+
+# se "SE_0857"
+# textboxarrow 0 1
+@ミーミル
+この紙は…
+
+# textboxarrow 0 1
+@ミーミル
+「牛提灯の側に座り
+一番美味しいものを見つけて」
+
+# face 318 "angry"
+# textboxarrow 0 1
+@ミーミル
+ティルフィング様の筆跡です
+これは、やはり…
+
+;;選択肢
+# select "ちょうどお昼どきだ" "select_label_01" "屋台巡りをしよう" "select_label_02"
+ティルフィング様の筆跡です
+これは、やはり…
+
+# label "select_label_01"
+# labeljump "select_label_end"
+# voice 9917 "mimir_navikan_0004"
+# face 318 "happy"
+# textboxarrow 0 1
+@ミーミル
+確かに
+食事も大切でございます
+
+# label "select_label_02"
+# labeljump "select_label_end"
+# voice 650401 "manannan_ura_0005"
+# face 6504021 "happy"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+楽しそうだねっ
+
+# label "select_label_end"
+# voice 9917 "mimir_navikan_0001"
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+マスター様
+この文面から察しますところ
+
+# textboxarrow 0 1
+@ミーミル
+私達はここにある屋台を巡り、
+その中から「一番」を
+見つけなければならないようです
+
+# face 318 "sad"
+# textboxarrow 0 1
+@ミーミル
+ですが、どのような基準で判断すれば
+良いのでしょうか？
+
+# textboxarrow 0 1
+@ミーミル
+食べ物には
+甘いものも辛いものもございます
+
+# textboxarrow 0 1
+@ミーミル
+明確な基準を
+設定していただかなければ、
+順位をつけることができません
+
+# voice 650401 "manannan_ura_0002"
+# move 6504021 3 0.5
+# face 6504021 "usual"
+# textboxarrow 0 2
+@マナナン
+ねぇねぇ
+早く行こうよ！
+
+;;マナナンがミーミルを引っ張る
+# se "SE_5200"
+# move 6504021 5 0.5
+# scale 6504021 0.75 0.5
+# move 318 3 0.8
+# textboxarrow 0 0
+# waitandnext 1
+
+# face 318 "surprise"
+# textboxarrow 0 2
+@ミーミル
+あ、袖が…
+おやめ下さい、マナナンさん
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# move 318 2 0
+# face 318 "normal"
+# move 6504021 4 0
+# scale 6504021 0.8 0
+# face 6504021 "usual"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+では、一つずつ
+検証してまいりたいと存じます
+こちらの屋台は…たこ焼きです
+
+# voice 650401 "manannan_ura_0028"
+# face 6504021 "sad"
+# textboxarrow 0 3
+@マナナン
+うーん…
+どこにもタコがいないよ？
+
+# voice 9917 "mimir_navikan_0056"
+# face 318 "happy"
+# textboxarrow 0 1
+@ミーミル
+マナナンさん
+タコはこの中に入っているんですよ
+
+# face 6504021 "happy"
+# textboxarrow 0 3
+@マナナン
+本当だ！
+美味しいねっ
+
+# voice 9917 "mimir_navikan_0003"
+# textboxarrow 0 1
+@ミーミル
+はい
+美味でございます
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# face 318 "happy"
+# face 6504021 "usual"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+次はイカ焼きですね
+
+# face 6504021 "surprise"
+# textboxarrow 0 3
+@マナナン
+あれ～？
+今度はイカが丸焼きになってる
+たこ焼きと違うよ…
+
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+起源が異なるのでしょうか？
+焼きイカと表記されることも
+あるそうです
+
+# voice 650401 "manannan_ura_0005"
+# face 6504021 "happy"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+変なの～っ
+でも、美味しい！
+
+# voice 9917 "mimir_navikan_0003"
+# face 318 "happy"
+# textboxarrow 0 1
+@ミーミル
+はい
+イカの食感がしっかりしています
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# face 318 "happy"
+# face 6504021 "usual"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+こちらは焼きそばです
+
+# face 6504021 "happy"
+# textboxarrow 0 3
+@マナナン
+啜るの面白～い！
+
+# voice 9917 "mimir_navikan_0060"
+# face 318 "surprise"
+# textboxarrow 0 1
+@ミーミル
+マナナンさん
+お口の周りが大変なことにっ
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# face 318 "happy"
+# face 6504021 "usual"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+水分補給も兼ねて
+かき氷を食べましょう
+
+# voice 650401 "manannan_ura_0002"
+# textboxarrow 0 3
+@マナナン
+ねぇねぇ
+何色のシロップが一番美味しいの？
+
+# face 318 "normal"
+# textboxarrow 0 1
+@ミーミル
+それは…
+全て検証してみないことには何とも…
+
+# voice 650401 "manannan_ura_0005"
+# face 6504021 "happy"
+# textboxarrow 0 3
+@マナナン
+アハハハ！
+それじゃ三人で頑張ろうね！
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# face 318 "normal"
+# face 6504021 "sad"
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# voice 650401 "manannan_ura_0028"
+# textwindow "nomal"
+# textboxarrow 0 3
+@マナナン
+うーん…
+頭がキンキンする
+
+# textboxarrow 0 1
+@ミーミル
+あまり早く食べると
+発生する現象だそうですよ
+
+# face 6504021 "usual"
+# textboxarrow 0 3
+@マナナン
+よ～し！
+次に行こう！
+
+# fadeout "black" 1
+# waitandnext 1

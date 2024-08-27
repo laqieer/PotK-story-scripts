@@ -1,0 +1,370 @@
+;;-----------------------------------------
+;;【PK】モラベガキャラクエ_シナリオ190712
+;;【EP2】戦闘前
+;;スクリプト最後の背景：森
+;;背景：街中（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "town"
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;モラベガ
+# body 3104211
+# pos 3104211 3
+# scale 3104211 0.8 0
+# layer 3104211 2
+# alpha 3104211 0 0
+# mask 3104211 off
+;;-----------------------------------------
+;;【EP2】
+;;街中（昼）
+# voice 310421 "morabeaga_l_0002"
+# move 3104211 3 0
+# face 3104211 "normal"
+# alpha 3104211 1 0
+# mask 3104211 off
+# textflame 1 1
+# textboxarrow 0 2
+@モラベガ
+私達、強くてカッコイイお姫様に
+憧れてるんだっ
+
+;;モノローグ
+# textflame 0 0
+@
+モラベガは
+任務の有無にかかわらず積極的に
+仲間へ話しかけにいくようになった
+
+# textflame 1 1
+# textboxarrow 0 2
+@モラベガ
+あの、それでねっ
+えーっと…
+
+;;モノローグ
+# textflame 0 0
+@
+しかし、言葉に詰まり…
+
+# face 3104211 "angry"
+# textflame 1 1
+# textboxarrow 0 2
+@モラベガ
+つ、強いよねっ
+
+# textboxarrow 0 2
+@モラベガ
+…
+
+# face 3104211 "happy"
+# textboxarrow 0 2
+@モラベガ
+すっ、す、すごいね～…っ
+
+# textboxarrow 0 2
+@モラベガ
+………
+
+;;モノローグ
+# textflame 0 0
+@
+仲間とコミュニケーションを取ろう！
+という気持ちだけが先走っている…
+
+;;モノローグ
+@
+周囲の斬ル姫達は温かく質問に答え
+彼女の言葉を待ったり
+話を広げようと努めるが…
+
+# voice 310421 "morabeaga_l_0030"
+# face 3104211 "normal"
+# textflame 1 1
+# textboxarrow 0 2
+@モラベガ
+あ、う、ううんっ！
+ありがとう！お話してくれて…！
+そっ、それじゃあっ！！
+
+;;モノローグ
+# alpha 3104211 0 0.5
+# textflame 0 0
+@
+会話が続かず、沈黙に耐え切れず
+モラベガの方から引いてしまい
+意志疎通がとても難しいようだった
+
+;;背景：森（夜）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "forest_totaleclipse"
+# move 3104211 3 0
+# face 3104211 "sad"
+# alpha 3104211 1 0
+# mask 3104211 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 2
+# textwindow "normal"
+@モラベガ
+…
+
+;;モノローグ
+# textflame 0 0
+@
+あの日以来
+日記をつけることを
+やめてしまったモラベガ
+
+;;モノローグ
+@
+自分達の過去を責め
+日記へ過去を記すことを
+躊躇しているようなのだ
+
+;;モノローグ
+@
+また今夜もひとり
+ぽつんと起きているモラベガ
+
+# textflame 1 1
+# textboxarrow 0 2
+@モラベガ
+眠れないんだ…
+やっぱり
+
+;;選択肢
+;;@
+;;A　横になるだけでも…
+;;B　皆の所へ行く？
+;;C　ずっと寝てないの…？
+# select "横になるだけでも…" "select_label_01" "皆の所へ行く？" "select_label_02" "ずっと寝てないの…？" "select_label_03"
+眠れないんだ…
+やっぱり
+
+;;アンサー
+;;A
+# label "select_label_01"
+# labeljump "select_label_end"
+@モラベガ
+寝ちゃうのも、怖くて…
+
+;;B
+# label "select_label_02"
+# labeljump "select_label_end"
+@モラベガ
+迷惑、かけちゃうよ…
+
+;;C
+# label "select_label_03"
+# labeljump "select_label_end"
+@モラベガ
+気づいたら朝なんだ…
+
+# label "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+@モラベガ
+怖い夢…見ちゃう
+
+;;モノローグ
+# textflame 0 0
+@
+何をするわけでもなく
+彼女の日記は閉じたまま
+
+;;演出：暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 3104211 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# textwindow "normal"
+@
+マスターはある夜
+一冊の本を持って彼女の元に訪れる
+
+# voice 310421 "morabeaga_l_0022"
+# move 3104211 3 0
+# face 3104211 "surprise"
+# alpha 3104211 1 0.5
+# mask 3104211 off
+# textflame 1 1
+# textboxarrow 0 2
+@モラベガ
+…？
+
+;;モノローグ
+# textflame 0 0
+@
+可愛らしい装丁のそれを
+マスターはモラベガへ手渡す
+
+# face 3104211 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@モラベガ
+…かわいい本
+くれるの…？
+
+;;モノローグ
+# textflame 0 0
+@
+おずおずと本を開くモラベガ
+
+# face 3104211 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@モラベガ
+…！
+
+;;モノローグ
+# textflame 0 0
+@
+それは小説や絵本などではなく…
+
+# textflame 1 1
+# textboxarrow 0 2
+@モラベガ
+今日のことが書いてある…
+
+# textboxarrow 0 2
+@モラベガ
+今日のマスターのこと…
+他のみんなのこと………
+私達のこと…
+
+;;モノローグ
+# textflame 0 0
+@
+それは
+マスターと斬ル姫達が書いた
+日記だった
+
+# face 3104211 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@モラベガ
+みんなの文字だ…
+みんなの絵だ…
+
+;;モノローグ
+# textflame 0 0
+@
+隣のページに
+モラベガの日記を書いてみないか
+と提案するマスター
+
+# face 3104211 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@モラベガ
+私達、も…？
+
+;;モノローグ
+# textflame 0 0
+@
+そうして毎日
+今日あった出来事を
+記し合って知らせ合うのだと
+
+;;モノローグ
+@
+いわば“交換日記”である
+
+# face 3104211 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@モラベガ
+…交換日記
+
+;;モノローグ
+# textflame 0 0
+@
+モラベガは一生懸命
+皆のことを知ろうと努力している
+
+;;モノローグ
+@
+だけど
+皆もモラベガのことを知りたい
+マスターも、その一人
+
+;;モノローグ
+@
+消せない過去もあるかもしれない
+言えない出来事もあるかもしれない
+
+;;モノローグ
+@
+だから今の、これからのモラベガを
+皆は知っていきたい
+そう話すマスター
+
+;;モノローグ
+@
+その伝え方、知り方がわからないなら
+まずは慣れ親しんだやり方から
+少しずつ始めてみないかと
+
+# voice 310421 "morabeaga_l_0003"
+# face 3104211 "happy"
+# textflame 1 1
+# textboxarrow 0 2
+@モラベガ
+…っ
+うん…！！
+
+;;モノローグ
+# textflame 0 0
+@
+モラベガは
+マスターから受け取った交換日記を
+きゅっと抱きしめる
+
+# voice 310421 "morabeaga_l_0042"
+# textflame 1 1
+# textboxarrow 0 2
+@モラベガ
+えへへ…
+
+# textboxarrow 0 2
+@モラベガ
+おやすみっ
+
+;;演出：暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "forest"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;背景：森
+;;立ち絵：笑顔のモラベガ
+;;
+;;モノローグ
+# face 3104211 "happy"
+# mask 3104211 off
+# textflame 0 0
+# textwindow "normal"
+@
+翌日の任務には
+すっきりとした表情の
+モラベガがいた

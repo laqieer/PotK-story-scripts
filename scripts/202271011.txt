@@ -1,0 +1,704 @@
+;;-----------------------------------------
+;;「サイコパス」コラボイベント シナリオ
+;;【EP1】戦闘前
+;;スクリプト最後の背景：荒野　004_wildland
+;;背景：荒野　004_wildland
+;;-----------------------------------------
+# script "lisp"
+# background "004_wildland"
+# bgm "stop"
+;;-----------------------------------------
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 3
+# alpha 810004 0 0
+# mask 810004 off
+;;常守朱
+# body 501011
+# pos 501011 3
+# scale 501011 0.8 0
+# layer 501011 2
+# alpha 501011 0 0
+# mask 501011 off
+;;六合塚弥生
+# body 501111
+# pos 501111 3
+# scale 501111 0.8 0
+# layer 501111 2
+# alpha 501111 0 0
+# mask 501111 off
+;;霜月美佳
+# body 501211
+# pos 501211 3
+# scale 501211 0.8 0
+# layer 501211 4
+# alpha 501211 0 0
+# mask 501211 off
+;;マサムネ ブラックキラーズ
+# body 100161
+# pos 100161 3
+# scale 100161 0.8 0
+# layer 100161 2
+# alpha 100161 0 0
+# mask 100161 off
+;;-----------------------------------------
+# imageset 2 "e220711_logo"
+# imagealpha 2 0 0
+# imagelayer 2 5
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;「サイコパス」コラボイベント シナリオ
+;;＜イベントタイトル＞
+;;懊悩の監視官
+;;＜各エピソードタイトル＞
+;;【EP1】出会い
+;;【EP2】似た者同士
+;;【EP3】銃と剣
+;;【OP】
+;;背景：荒野　004_wildland
+;;モノローグ
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 0 0
+# textwindow "nomal"
+@
+荒野の中、
+３人の女性が疾走する
+
+# bgmfile "bgm049" "BgmPPcollabo001" 0
+# voice 5010 "akane_unit_0005"
+# move 501111 1 0
+# face 501111 "normal"
+# alpha 501111 1 0.5
+# mask 501111 on
+# move 501211 3 0
+# face 501211 "normal"
+# alpha 501211 1 0.5
+# mask 501211 on
+# textflame 1 1
+# move 501011 5 0
+# face 501011 "normal"
+# alpha 501011 1 0.5
+# mask 501011 on
+# textboxarrow 0 3
+@常守朱
+標的を確認しました！
+行きます！
+私に続いてください！
+
+# voice 5011 "yayoi_unit_0005"
+# textboxarrow 0 1
+@六合塚弥生
+標的確認、執行対象
+すみやかに排除します
+
+# voice 5012 "mika_unit_0005"
+# face 501211 "angry"
+# textboxarrow 0 2
+@霜月美佳
+標的確認！
+すぐに消してやる…
+いくわよ！
+
+;;モノローグ
+# textflame 0 0
+@
+常守朱（つねもりあかね）
+六合塚弥生（くにづかやよい）
+霜月美佳（しもつきみか）…
+
+;;モノローグ
+@
+彼女達は、ある日
+異世界から迷い込んだ
+特異な存在
+
+;;モノローグ
+@
+今では、キル姫の武器が効かない
+新種の異族達と戦う日々を
+送っていた
+
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# face 501111 "normal"
+# face 501211 "normal"
+# face 501011 "usual"
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgm "stop"
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@常守朱
+……ふぅ
+
+# bgm "bgm002" 0
+# textboxarrow 0 1
+@六合塚弥生
+標的の排除完了
+
+# textboxarrow 0 3
+@常守朱
+なんとか勝てましたね
+
+# voice 5011 "yayoi_0003"
+# face 501111 "happy"
+# textboxarrow 0 1
+@六合塚弥生
+マスターの的確な指示のおかげです
+
+;;モノローグ
+# textflame 0 0
+@
+彼女達はその適応能力の高さで、
+こちらの世界の戦闘に
+慣れつつあった
+
+;;モノローグ
+@
+ただひとりを除いては……
+
+# face 501211 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+@霜月美佳
+……
+
+# textboxarrow 0 3
+@常守朱
+どうしたんですか？
+
+# face 501211 "surprise"
+# textboxarrow 0 2
+@霜月美佳
+い、いえっ……！
+なんでもありません
+
+# face 501211 "sad"
+# textboxarrow 0 2
+@霜月美佳
+なんでも……
+
+;;モノローグ
+# textflame 0 0
+@
+霜月美佳…彼女だけは
+なぜか浮かない顔をしていた
+
+;;暗転
+;;背景：建物内　masamune_room
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "masamune_room"
+# alpha 501111 0 0
+# alpha 501211 0 0
+# alpha 501011 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;モノローグ
+# bgm "stop"
+# textwindow "normal"
+@
+そんな、ある日――
+
+# bgm "bgm005" 0
+# move 501011 3 0
+# face 501011 "surprise"
+# alpha 501011 1 0.5
+# mask 501011 off
+# textflame 1 1
+# textboxarrow 0 2
+@常守朱
+また、新種の異族が……！？
+
+;;モノローグ
+# textflame 0 0
+@
+それが、ここから少し離れた場所に
+出没したみたいなんだ
+これは遠征になるだろうね
+
+;;モノローグ
+@
+と、マスター
+
+# move 501111 2 0
+# face 501111 "normal"
+# alpha 501111 1 0.5
+# mask 501111 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 501011 4 0.5
+# mask 501011 on
+@六合塚弥生
+構いません
+早速、現地に急行しましょう
+
+# face 501011 "usual"
+# textboxarrow 0 3
+@常守朱
+そうですね
+さあ、行きましょう！
+
+;;モノローグ
+# textflame 0 0
+@
+すぐさま出撃しようとする朱と弥生
+
+;;モノローグ
+@
+だが――
+
+# alpha 501111 0 0.5
+# alpha 501011 0 0.5
+# move 501211 3 0
+# face 501211 "sad"
+# alpha 501211 1 0.5
+# mask 501211 off
+# textflame 1 1
+# textboxarrow 0 2
+@霜月美佳
+……
+
+# move 501211 2 0.5
+# mask 501211 on
+# move 501011 4 0
+# face 501011 "surprise"
+# alpha 501011 1 0.5
+# mask 501011 on
+# textboxarrow 0 3
+@常守朱
+霜月さん……？
+
+# bgm "stop"
+# textboxarrow 0 1
+@霜月美佳
+……行かない
+
+# voice 5010 "akane_0022"
+# textboxarrow 0 3
+@常守朱
+…え？
+
+# textboxarrow 0 1
+@霜月美佳
+私…行きません……
+
+# textboxarrow 0 3
+@常守朱
+急にどうしたんですか、霜月さん？
+
+# bgm "bgm004" 0
+# face 501211 "normal"
+# textboxarrow 0 1
+@霜月美佳
+急じゃありませんよ
+
+# textboxarrow 0 1
+@霜月美佳
+私達一体……
+いつまで、こんなことを
+続ければいいんですか…？
+
+# face 501011 "sad"
+# textboxarrow 0 3
+@常守朱
+いつまで……って…
+
+# textboxarrow 0 1
+@霜月美佳
+いつまで、
+この世界にいなければ
+いけないんですか……？　
+
+# alpha 501211 0 0.5
+# alpha 501011 0 0.5
+# move 501111 3 0
+# face 501111 "sad"
+# alpha 501111 1 0.5
+# mask 501111 off
+# textboxarrow 0 2
+@六合塚弥生
+……
+
+# alpha 501111 0 0.5
+# move 501211 3 0
+# face 501211 "normal"
+# alpha 501211 1 0.5
+# mask 501211 off
+# textboxarrow 0 2
+@霜月美佳
+異族なんて化け物を
+狩る日々…
+
+# textboxarrow 0 2
+@霜月美佳
+このまま、ここにいたら……
+私はクリアでいられる気が
+しない…
+
+# face 501211 "sad"
+# textboxarrow 0 2
+@霜月美佳
+早く……
+元の世界に帰りたいんです……
+
+;;モノローグ
+# textflame 0 0
+@
+俯く美佳
+
+;;モノローグ
+@
+そんな彼女に、
+弥生と朱が声をかける
+
+# move 501111 1 0
+# face 501111 "sad"
+# alpha 501111 1 0.5
+# mask 501111 on
+# textflame 1 1
+# textboxarrow 0 1
+# mask 501211 on
+# move 501011 5 0
+# face 501011 "usual"
+# alpha 501011 1 0.5
+# mask 501011 on
+@六合塚弥生
+霜月さんの気持ち、
+わからなくはありませんが……
+
+# textboxarrow 0 3
+@常守朱
+でも、
+立ち止まっていても、
+なにも解決はしませんよ
+
+# textboxarrow 0 2
+@霜月美佳
+……
+
+# face 501011 "normal"
+# textboxarrow 0 3
+@常守朱
+『この世界』でどうありたいか、
+どうあるべきか……、
+考えてみてください
+
+# textboxarrow 0 2
+@霜月美佳
+……そんなこと…
+言われても……
+
+;;モノローグ
+# textflame 0 0
+@
+俯く美佳に、マスターは言う
+異なる世界で生きることは辛いと思う
+
+;;モノローグ
+@
+でも、この世界で
+なにか得られるものがあれば
+僕は嬉しいよ、と
+
+# textflame 1 1
+# textboxarrow 0 2
+@霜月美佳
+…………そんなの…
+わかりません
+
+;;モノローグ
+# textflame 0 0
+@
+俯いたまま、
+立ち上がろうとしない彼女に
+弥生は言う
+
+# face 501111 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+@六合塚弥生
+事態は急を要します
+もし気持ちに整理がついたら……
+私達に追いついてきてください
+
+# textboxarrow 0 3
+@常守朱
+待ってますから！
+
+;;モノローグ
+# alpha 501111 0 0.5
+# mask 501211 off
+# alpha 501011 0 0.5
+# textflame 0 0
+@
+そう言い残して、
+３人は美佳を置いて出動していった
+
+# textflame 1 1
+# textboxarrow 0 2
+@霜月美佳
+この世界で……
+得るもの…
+
+# bgm "stop"
+# se "SE_0995"
+# frameout 0 0
+# fadein "white" 2
+# imagealpha 2 1 0
+# imagepos 2 0 0
+# alpha 501211 0 0
+# textwindow "close"
+
+# fadeout "white" 1
+# waitandnext 1
+
+# background "004_wildland"
+# imagealpha 2 0 0
+# framein 0 0
+# fadein "white" 1
+# waitandnext 1
+
+;;【EP1】
+;;背景：荒野　004_wildland
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+マスター達が出撃したことで、
+美佳はひとり、考えていた
+
+# move 501211 3 0
+# face 501211 "sad"
+# alpha 501211 1 0.5
+# mask 501211 off
+# textflame 1 1
+# textboxarrow 0 2
+@霜月美佳
+この世界で得られるものなんて……
+
+;;モノローグ
+# textflame 0 0
+@
+――と、その時
+
+;;ＳＥ：剣の音
+# se "SE_4830"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 5012 "mika_0022"
+# face 501211 "surprise"
+# textflame 1 1
+# textboxarrow 0 2
+@霜月美佳
+…！
+
+# textboxarrow 0 2
+@霜月美佳
+なに…？この音は……
+
+# se "SE_5575"
+# textwindow "close"
+# move 501211 1 0.3
+# alpha 501211 0 0.3
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+彼女はその正体を確かめるべく、
+音のする方角へと駆けていった
+
+;;モノローグ
+@
+すると、そこには――
+
+# move 501211 3 0
+# face 501211 "surprise"
+# alpha 501211 1 0.5
+# mask 501211 off
+# textflame 1 1
+# textboxarrow 0 2
+@霜月美佳
+あっ…！
+
+;;通常のブラックマサムネ
+# bgmfile "bgm166" "BgmPJZero001" 0
+# voice 10016 "masamune_k_battle_0002"
+# alpha 501211 0 0.5
+# move 100161 3 0
+# face 100161 "angry"
+# alpha 100161 1 0.5
+# mask 100161 off
+# textboxarrow 0 2
+@マサムネ
+せいっ！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+@
+異族相手に剣を振るう
+キル姫の姿があった
+
+;;モノローグ
+@
+だが――
+
+# voice 10016 "masamune_k_battle_0005"
+# face 100161 "irregular"
+# textflame 1 1
+# textboxarrow 0 2
+@マサムネ
+くっ…！なぜだ…！？
+なぜ拙者の剣が効かぬ…！？
+
+# alpha 100161 0 0.5
+# move 501211 3 0
+# face 501211 "surprise"
+# alpha 501211 1 0.5
+# mask 501211 off
+# textboxarrow 0 2
+@霜月美佳
+まさか、あの個体は……！
+
+;;モノローグ
+# textflame 0 0
+@
+そう、剣士が戦っているのは、
+キル姫の武器が効かない
+新種の異族だったのだ
+
+# alpha 501211 0 0.5
+# move 100161 2 0
+# face 100161 "irregular"
+# alpha 100161 1 0.5
+# mask 100161 on
+# move 810004 4 0
+# alpha 810004 1 0.5
+# mask 810004 on
+# textflame 1 1
+# textboxarrow 0 3
+@異族
+ギギギ……
+
+# face 100161 "angry"
+# textboxarrow 0 1
+@マサムネ
+はぁ…はぁ…！
+こ、これしきで……！
+
+;;モノローグ
+# textflame 0 0
+@
+明らかに苦戦を強いられている剣士
+
+# se "SE_0617"
+# textflame 1 1
+# textboxarrow 0 3
+@異族
+ギイイイイイイ！
+
+# se "SE_4000"
+# waitandnext 0.5
+
+;;モノローグ
+# textflame 0 0
+@
+彼女に向かって、
+異族の攻撃が振り下ろされた
+
+;;モノローグ
+# bgm "stop"
+@
+――と、その時
+
+# se "SE_5208"
+# voice 5012 "mika_battle_0005"
+# alpha 100161 0 0.5
+# alpha 810004 0 0.5
+# move 501211 3 0
+# face 501211 "angry"
+# alpha 501211 1 0.5
+# mask 501211 off
+# textflame 1 1
+# textboxarrow 0 2
+@霜月美佳
+くっ！！
+
+;;ＳＥ：ドミネーターの音
+# se "SE_12720"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# bgmfile "bgm051" "BgmPPcollabo001" 0
+# textflame 0 0
+@
+彼女が放った銃撃が、
+異族に命中する
+
+# alpha 501211 0 0.5
+# move 100161 2 0
+# face 100161 "irregular"
+# alpha 100161 1 0.5
+# mask 100161 on
+# move 810004 4 0
+# alpha 810004 1 0.5
+# mask 810004 on
+# textflame 1 1
+# textboxarrow 0 3
+@異族
+ギギッ…！？
+
+# face 100161 "surprise"
+# textboxarrow 0 1
+@マサムネ
+そ、そなたは…？
+
+# alpha 100161 0 0.5
+# alpha 810004 0 0.5
+# move 501211 3 0
+# face 501211 "angry"
+# alpha 501211 1 0.5
+# mask 501211 off
+# textboxarrow 0 2
+@霜月美佳
+話しは後！
+今は標的を……！
+
+;;バトル
+# imagealpha 1 1 0
+# imagepos 1 0 30
+# imageleftin 1 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# background "bg_black"
+# alpha 501211 0 0
+# waitandnext 0.2

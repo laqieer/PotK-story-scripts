@@ -1,0 +1,699 @@
+;;-----------------------------------------
+;;3_2_7_0
+;;-----------------------------------------
+# script "lisp"
+# background "red_corridor"
+# bgmfile "bgm421" "BgmIntegralNoahEvent002" 0
+;;-----------------------------------------
+;;カミト
+# body 210
+# pos 210 4
+# scale 210 0.8 0
+# layer 210 5
+# alpha 210 0 0
+;;アスカロン
+# body 3102311
+# pos 3102311 2
+# scale 3102311 0.8 0
+# alpha 3102311 0 0
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# mask 3501711 off
+# alpha 3501711 1 0
+;;フォルカス
+# body 3301811
+# pos 3301811 3
+# scale 3301811 0.8 0
+# mask 3301811 off
+# alpha 3301811 0 0
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# mask 211 off
+# alpha 211 0 0
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# mask 3201911 off
+# alpha 3201911 0 0
+;;-----------------------------------------
+;;暗転
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;霧
+# imageset 1 "kiri_03"
+# imagescale 1 2.5 0
+# imagealpha 1 0 0
+# imagelayer 1 4
+# imageset 2 "kiri_03"
+# imagescale 2 2 0
+# imagealpha 2 0 0
+# imagelayer 2 3
+;;-----------------------------------------
+;;背景：赤い廊下
+# face 3501711 "angry"
+# textboxarrow 0 2
+@グリモワール
+しっかり歩きなさい！
+ああ、もうっ！
+
+# textboxarrow 0 2
+@グリモワール
+アスカロン！
+引きずってでも連れてきて！
+
+# alpha 3501711 0 0.5
+# alpha 3102311 1 0.5
+# alpha 210 1 0.5
+# face 3102311 "normal"
+# face 210 "sad"
+# voice 310231 "ascalon_a_0001"
+# textboxarrow 0 1
+@アスカロン
+マスター
+もう少し頑張って歩いて下さいね
+
+# voice 9936 "kamito_0033"
+# textboxarrow 0 3
+@カミト
+ごめん…
+ごめん、アスカロン…
+グリモワール…
+
+# textboxarrow 0 1
+@アスカロン
+あんな巨大な化け物、
+私も初めて見ましたから
+驚くのは当然です！
+
+# face 3102311 "angry"
+# textboxarrow 0 1
+@アスカロン
+もし私があんなに大きくなって
+しまったら…
+
+# textboxarrow 0 1
+@アスカロン
+でも、それでマスターをお守り
+できるのであれば、迷いません！
+
+# alpha 3501711 1 0.5
+# alpha 3102311 0 0.5
+# alpha 210 0 0.5
+# textboxarrow 0 2
+@グリモワール
+何を言ってるのよ！？
+…そこに座らせてっ
+
+# face 3501711 "angry"
+# voice 350171 "grimoire_ge_0002"
+# textboxarrow 0 2
+@グリモワール
+ちょっと
+少しは落ち着いた？
+
+# alpha 3501711 0 0.5
+# move 210 3 0
+# mask 210 off
+# alpha 210 1 0.5
+# voice 9936 "kamito_0033"
+# textboxarrow 0 2
+@カミト
+う、うん…
+二人とも、ごめん…
+
+# alpha 210 0 0.5
+# move 3501711 4 0
+# mask 3501711 on
+# alpha 3501711 1 0.5
+# alpha 3102311 1 0.5
+# face 3501711 "angry"
+# face 3102311 "normal"
+# voice 350171 "grimoire_ge_0027"
+# textboxarrow 0 3
+@グリモワール
+それはもういいわよ！
+…あのデカブツ、
+こっちに近づいてきてたわよね？
+
+# face 3102311 "angry"
+# voice 310231 "ascalon_a_0033"
+# textboxarrow 0 1
+@アスカロン
+私が命に代えても
+食い止めてみせます！
+すべて任せて下さいっ
+
+# alpha 3501711 0 0.5
+# alpha 3102311 0 0.5
+# alpha 210 1 0.5
+# voice 9936 "kamito_0012"
+# textboxarrow 0 2
+@カミト
+や、やめようよ…
+危ないよっ
+
+# alpha 3501711 1 0.5
+# alpha 3102311 1 0.5
+# alpha 210 0 0.5
+# textboxarrow 0 3
+@グリモワール
+でぇ？
+このままここに隠れていたって
+どっちみちアウトなのよ！
+
+# textboxarrow 0 3
+@グリモワール
+あのデカブツ…死者の怒りと
+生者の怒りを両方感じたわ
+得体が知れない…
+
+# textboxarrow 0 3
+@グリモワール
+いくわよ、アスカロン！
+絶対に二人で倒す！
+
+# voice 310231 "ascalon_a_0032"
+# textboxarrow 0 1
+@アスカロン
+はい！
+マスターはここで待っていて
+下さいね
+
+;;二人が走り去る
+# alpha 3501711 0 0.5
+# alpha 3102311 0 0.5
+# se "SE_5575"
+# sedelay "SE_5575" 0.2
+# textwindow "close"
+# waitandnext 1
+
+# alpha 210 1 0.5
+# face 210 "surprise"
+# voice 9936 "kamito_0016"
+# textwindow "nomal"
+# textboxarrow 0 2
+@カミト
+あ、待って…！
+待ってよ…
+
+# face 210 "sad"
+# voice 9936 "kamito_0018"
+# textboxarrow 0 2
+@カミト
+どうしよう…
+このままじゃ二人が…
+僕のせいで…
+
+# textboxarrow 0 2
+@カミト
+誰か…助けてよぉ…
+兄貴ぃ…フォルカスぅ…
+
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：黒
+# alpha 210 0 0
+# background "bg_black"
+# bgm "stop"
+# textwindow "close"
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textwindow "nomal"
+# textboxarrow 0 0
+@カミト
+僕にはもう…
+わからないよ…
+
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：下町
+;;セピア調で
+# background "in_downtown"
+# subfillrect 1 "orange" 0 0 0.4
+# bgmfile "bgm406" "BgmIntegralNoahEvent" 0
+# textwindow "close"
+# waitandnext 0.2
+
+# se "SE_0742"
+# fadein "black" 1
+# waitandnext 1
+
+# alpha 3301811 1 0.5
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 3301811 "normal"
+# voice 330181 "forcas_t_0001"
+@フォルカス
+退院おめでとうございます
+義手の調子はどうですか、
+マスター？
+
+# serif 1
+# textwindow "nomal"
+@カミト
+あ、ありがとう
+義手は…まだ慣れないけど、
+悪くはない、かな…
+
+# serif 0
+# textboxarrow 0 2
+@フォルカス
+まずはリハビリですね
+それでは帰宅しましょう
+
+# serif 1
+@カミト
+あ、あのっ…
+
+# serif 0
+# textboxarrow 0 2
+# face 3301811 "surprise"
+# voice 330181 "forcas_t_0003"
+@フォルカス
+はい
+ご命令ですか、マスター？
+
+# serif 1
+@カミト
+あ、その…
+前も聞いたけど、僕が君の
+マスターって、本当？
+
+# serif 0
+# textboxarrow 0 2
+# face 3301811 "normal"
+@フォルカス
+あなたのバイブスと私のキラーズが
+適合しているのは、マスターも
+感じておられるはずですよ
+
+# serif 1
+@カミト
+それは、そうなんだけど…
+
+# serif 0
+# textboxarrow 0 2
+@フォルカス
+質問は以上ですか？
+それでは、行きましょう
+
+# serif 1
+@カミト
+あ、うん…
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+;;背景：部屋
+# background "201_room"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@フォルカス
+今宵の恵みに感謝を
+マスター、食べ残したら
+裁きますからね
+
+# se "SE_0737"
+# waitandnext 0.3
+
+# serif 1
+# textwindow "nomal"
+@カミト
+い、いただきます…
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.7
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@フォルカス
+マスター、占いによると
+今日は新たな出会いの好機です
+外に出ることをお薦めします
+
+# serif 1
+# textwindow "nomal"
+@カミト
+あ、うん…
+フォルカスがそう言うなら…
+
+;;暗転挟む
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.7
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# se "SE_0855"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@フォルカス
+ゆっくり…
+ゆっくり動かして下さい
+そう、いいですよ
+
+# serif 0
+# textboxarrow 0 2
+# face 3301811 "happy"
+# voice 330181 "forcas_t_0004"
+@フォルカス
+義手にもすっかり慣れたようですね
+よく頑張りました、マスター
+
+# serif 1
+# textwindow "nomal"
+@カミト
+フォルカスのお陰だよ
+あ、ありがとう…
+
+# serif 0
+# textboxarrow 0 2
+# face 3301811 "normal"
+# voice 330181 "forcas_t_0003"
+@フォルカス
+キル姫として、当然のことです
+
+# serif 1
+@カミト
+ねぇ、フォルカス…
+どうして僕と適合したの？
+
+# serif 0
+# textboxarrow 0 2
+# face 3301811 "surprise"
+@フォルカス
+仰る意味が分かりません
+
+# serif 1
+@カミト
+フォルカスはすごく強いキル姫なのに
+僕なんかがマスターでいいのかな？
+
+# serif 1
+@カミト
+僕は弱くて…
+何にもできないのに…
+
+# serif 1
+@カミト
+もっと君に相応しい
+強い奏官がいるんじゃないかな…
+
+# serif 0
+# textboxarrow 0 2
+# face 3301811 "angry"
+# voice 330181 "forcas_t_0009"
+@フォルカス
+…マスター
+裁きをくだしますよ
+
+# serif 1
+@カミト
+ひっ…
+な、何でっ？
+
+# serif 0
+# textboxarrow 0 2
+# face 3301811 "sad"
+# voice 330181 "forcas_t_0027"
+@フォルカス
+はぁ…
+いいですか、マスター
+初めから強い者などいません
+
+# serif 0
+# textboxarrow 0 2
+# face 3301811 "normal"
+@フォルカス
+強さとは、自身を律する意思です
+それは「力」とは別の概念です
+
+# serif 0
+# textboxarrow 0 2
+@フォルカス
+腕力、権力、財力…人は様々な力を
+得ますが、それらは全て「強さ」と
+同義ではありません
+
+# serif 0
+# textboxarrow 0 2
+@フォルカス
+もちろん、その力に依って立つ
+ことで強さを獲得していくのが
+常道でしょう
+
+# serif 0
+# textboxarrow 0 2
+@フォルカス
+「力」は「自信」に繋がり、
+「自信」が「強さ」の土台となります
+
+# serif 0
+# textboxarrow 0 2
+@フォルカス
+マスター
+あなたはまず、自信をもたなくては
+なりませんね
+
+# serif 1
+@カミト
+それは…
+で、出来ないよ…
+
+# serif 0
+# textboxarrow 0 2
+@フォルカス
+ええ、分かっています
+自信というのは、もてと言われて
+もてるものではありませんから
+
+# serif 0
+# textboxarrow 0 2
+@フォルカス
+自信は、他人から与えられて
+初めて自身に根ざします
+皮肉なことに
+
+# serif 0
+# textboxarrow 0 2
+@フォルカス
+誰かに信じてもらえることで、
+自分を信じられるようになる
+
+# serif 0
+# textboxarrow 0 2
+@フォルカス
+マスター
+あなたは今まで、無条件の信頼を
+受けてこなかっただけです
+
+# serif 0
+# textboxarrow 0 2
+@フォルカス
+だから、まず
+私があなたを信じます
+
+# serif 0
+# textboxarrow 0 2
+@フォルカス
+マスターは必ず強くなれると、
+私は信じ続けます
+
+# serif 0
+# textboxarrow 0 2
+@フォルカス
+私の信頼があなたに根ざしたとき
+あなたの中に芽生えた自信が、
+きっとあなたを強くします
+
+# serif 0
+# textboxarrow 0 2
+# face 3301811 "happy"
+# voice 330181 "forcas_t_0004"
+@フォルカス
+忘れないで下さいね、マスター
+
+# serif 0
+# textboxarrow 0 2
+@フォルカス
+あなたがいつか、
+あなた自身を信じることが
+できたとき
+
+# serif 0
+# textboxarrow 0 2
+@フォルカス
+あなたはきっと、強くなります
+
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：下町（昼）
+# background "in_downtown"
+# alpha 3301811 0 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.2
+
+# se "SE_0742"
+# fadein "black" 1
+# waitandnext 1
+
+# alpha 211 1 0.5
+# waitandnext 0.8
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 9935 "vang_0004"
+@ヴァング
+お前はやれる奴なんだ
+もっと自信持ちやがれ！
+
+# fadeout "black" 1
+# waitandnext 1
+
+;;霧演出プラス
+# imagealpha 1 0.5 0
+# imagepos 1 0 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# alpha 211 0 0
+# waitandnext 0.2
+
+# se "SE_0742"
+# fadein "black" 1
+# waitandnext 1
+
+# alpha 3201911 1 0.5
+# face 3201911 "happy"
+# voice 320191 "chihyu_a_0021"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+@シユウ
+カミトはすごいな！
+シユウにできないことを
+やってのけたぞ！
+
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：荒野
+# background "wild"
+# alpha 3201911 0 0
+# alpha 3102311 1 0
+# alpha 3501711 1 0
+# face 3501711 "normal"
+# face 3102311 "happy"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.2
+
+# se "SE_0742"
+# fadein "black" 1
+# waitandnext 1
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+@グリモワール
+…キミはもっと自信持って良いのよ
+ちゃんと自分で決断できるんだから
+
+# voice 310231 "ascalon_a_0004"
+# serif 0
+# textboxarrow 0 1
+@アスカロン
+ふふっ
+みんな、マスターのことを
+信頼しているんです…羨ましい
+
+# face 3102311 "normal"
+# serif 0
+# textboxarrow 0 1
+@アスカロン
+あ、そのっ
+私もマスターを
+信頼していますからっ
+
+# fadeout "black" 1
+# waitandnext 1
+
+;;背景：部屋（夜）
+# imagealpha 1 0 0
+# background "church_room"
+# alpha 3301811 1 0
+# alpha 3102311 0 0
+# alpha 3501711 0 0
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.2
+
+# se "SE_0742"
+# fadein "black" 1
+# waitandnext 1
+
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 2
+# face 3301811 "happy"
+# voice 330181 "forcas_t_0001"
+@フォルカス
+マスター…
+あなたは、あなたが思っているより
+ずっと強い方です

@@ -1,0 +1,303 @@
+;;-----------------------------------------
+;;めあたまコラボ_チャレンジクエスト2_OP
+;;-----------------------------------------
+# script "lisp"
+# background "bifrost"
+# bgmfile "bgm454" "BgmIntegralNoahEvent007" 0
+;;-----------------------------------------
+;;神楽めあ
+# body 5105021
+# pos 5105021 4
+# scale 5105021 0.8 0
+# layer 5105021 2
+# mask 5105021 off
+# alpha 5105021 0 0
+;;犬山たまき
+# body 5303721
+# pos 5303721 2
+# scale 5303721 0.8 0
+# layer 5303721 4
+# mask 5303721 off
+# alpha 5303721 0 0
+;;イージス・冥令・ヘル
+# body 52000111
+# pos 52000111 3
+# scale 52000111 0.8 0
+# layer 52000111 1
+# mask 52000111 off
+# alpha 52000111 0 0
+;;-----------------------------------------
+;;背景：ビフレスト
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# voice 530371 "inuyamatamaki_0028"
+# face 5303721 "normal"
+# alpha 5303721 1 0.5
+# face 5105021 "usual"
+# alpha 5105021 1 0.5
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@犬山たまき
+えっと…ここが
+待ち合わせ場所だよね？
+
+;;演出：画面を左右に振る
+# alpha 5303721 0 0.3
+# alpha 5105021 0 0.3
+# se "SE_0683"
+# textwindow "close"
+# waitandnext 1
+
+# se "SE_0683"
+# alpha 5303721 1 0.3
+# alpha 5105021 1 0.3
+# face 5105021 "sad"
+# textwindow "nomal"
+# textboxarrow 0 3
+@神楽めあ
+うわぁ…お化け出そう…
+
+# voice 530371 "inuyamatamaki_0025"
+# face 5303721 "sad"
+# textboxarrow 0 1
+@犬山たまき
+ひっ…そういうの言うの
+止めてよ…
+
+# alpha 5303721 0 0.5
+# alpha 5105021 0 0.5
+# face 52000111 "normal"
+# alpha 52000111 1 0.5
+# textboxarrow 0 2
+@イージス
+待たせたなっ！
+私があらゆる脅威を防ぐ絶対の盾、
+イージスだ
+
+# textboxarrow 0 2
+@イージス
+私が来たからには、
+恐れることは何もない
+
+# textboxarrow 0 2
+@イージス
+今回は申し訳ない
+普段私は地底深くにいるからな
+
+# textboxarrow 0 2
+@イージス
+だから、この場を
+待ち合わせ場所にしてもらった
+
+# voice 510501 "kaguramea_0039"
+# alpha 52000111 0 0.5
+# face 5303721 "normal"
+# alpha 5303721 1 0.5
+# face 5105021 "normal"
+# alpha 5105021 1 0.5
+# textboxarrow 0 3
+@神楽めあ
+おおー、おっきい盾…
+
+# voice 530371 "inuyamatamaki_0004"
+# textboxarrow 0 1
+@犬山たまき
+これなら安心できそう
+
+# voice 5200011 "aegis_c_0004"
+# alpha 5303721 0 0.5
+# alpha 5105021 0 0.5
+# face 52000111 "happy"
+# alpha 52000111 1 0.5
+# textboxarrow 0 2
+@イージス
+フッ、私に任せておくがいいっ！
+（決まったな…）
+
+# face 52000111 "normal"
+# textboxarrow 0 2
+@イージス
+それで、どこに行く予定なんだ？
+
+# alpha 52000111 0 0.5
+# move 5303721 3 0.5
+# face 5303721 "normal"
+# alpha 5303721 1 0.5
+# textboxarrow 0 2
+@犬山たまき
+えっと、地上世界の散策のために
+案内をお願いしたくて
+
+# voice 5200011 "aegis_c_0032"
+# alpha 5303721 0 0.5
+# face 52000111 "happy"
+# alpha 52000111 1 0.5
+# textboxarrow 0 2
+@イージス
+いいだろう、
+私に任せておくがいい
+付いてくるがいいっ！
+
+;;SE：何かに躓く音
+# textwindow "close"
+# bgm "stop"
+# se "SE_0656"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;演出：イージスが神楽めあに倒れ込む
+# move 52000111 5 0.2
+# alpha 52000111 0 0.2
+# waitandnext 0.3
+
+# move 52000111 1 0
+# move 5105021 4 0
+# face 5105021 "usual"
+# mask 5105021 on
+# alpha 5105021 1 0.5
+# waitandnext 0.5
+
+# se "SE_9230"
+# move 52000111 3 0.2
+# face 52000111 "normal"
+# alpha 52000111 1 0.2
+# waitandnext 0.3
+
+;;太字、フォント大き目に
+# emotionbody 1000 1 52000111 10 310
+# effectpattern 1000 1 0
+# effectstart 1000
+# voice 5200011 "aegis_c_0024"
+# textsize 28
+# face 52000111 "surprise"
+# textboxarrow 0 2
+# textwindow "normal"
+@イージス
+えっ、きゃぁぁっ！
+
+# se "SE_9347"
+# shake 0 0.5
+# waitandnext 0.5
+
+# emotionbody 2000 1 5105021 10 310
+# effectpattern 2000 2 0
+# effectstart 2000
+# textsize 24
+# face 5105021 "normal"
+# textboxarrow 0 3
+@神楽めあ
+むぉっ…！
+ふがっ…にゃ、にこれ…すご…
+おっぱいで溺れる！？
+
+# voice 530371 "inuyamatamaki_0022"
+# alpha 52000111 0 0.5
+# alpha 5105021 0 0.5
+# move 5303721 3 0
+# face 5303721 "surprise"
+# alpha 5303721 1 0.5
+# textboxarrow 0 2
+@犬山たまき
+なにこれ…ラッキースケベ？
+二次元の幻想じゃなかったんだ…
+
+# voice 5200011 "aegis_c_0031"
+# alpha 5303721 0 0.5
+# move 52000111 3 0
+# face 52000111 "sad"
+# mask 52000111 off
+# alpha 52000111 1 0.5
+# textboxarrow 0 2
+@イージス
+ご、ごめんなさい
+決して抱き着いたわけじゃなくて…
+
+# textboxarrow 0 2
+@イージス
+こ、こういう時の対処法は、
+このメモに…
+
+;;SE：ガサゴソ
+# se "SE_6161"
+# waitandnext 0.5
+
+# alpha 52000111 0 0.5
+# move 5303721 2 0
+# face 5303721 "sad"
+# mask 5303721 off
+# alpha 5303721 1 0.5
+# textboxarrow 0 1
+# move 5105021 4 0
+# face 5105021 "sad"
+# mask 5105021 off
+# alpha 5105021 1 0.5
+@犬山たまき
+ね、ねえ…本当にこの子に
+任せて大丈夫なの？
+
+# voice 510501 "kaguramea_0028"
+# textboxarrow 0 3
+@神楽めあ
+どうなんだろ
+
+;;？？？（カオスリーパー数体）
+# bgmfile "bgm419_420" "BgmIntegralNoahBattle003" 0
+# se "SE_0868"
+# serif 1
+@？？？
+GYAAAAAAAAAA!!
+
+# emotionbody 3000 1 5105021 10 310
+# effectpattern 3000 1 0
+# effectstart 3000
+# voice 510501 "kaguramea_0023"
+# face 5105021 "surprise"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# textboxarrow 0 3
+@神楽めあ
+なんか来たっ！
+
+# emotionbody 4000 2 5303721 10 290
+# effectpattern 4000 1 1
+# effectstart 4000
+# face 5303721 "surprise"
+# textboxarrow 0 1
+@犬山たまき
+い、イージスさん？
+
+# alpha 5303721 0 0.5
+# alpha 5105021 0 0.5
+# move 52000111 3 0
+# face 52000111 "sad"
+# alpha 52000111 1 0.5
+# textboxarrow 0 2
+@イージス
+えっと…これじゃない…
+
+# alpha 52000111 0 0.5
+# face 5303721 "sad"
+# alpha 5303721 1 0.5
+# textboxarrow 0 1
+# face 5105021 "sad"
+# alpha 5105021 1 0.5
+@犬山たまき
+ダメだ…これ、ボクたちが
+対処しないと…
+
+# voice 510501 "kaguramea_0013"
+# textboxarrow 0 3
+@神楽めあ
+えぇぇぇ…
+介護してもらうはずが、
+こっちが介護してんじゃん
+
+;;クエスト開始
+# fadeout "black" 1
+# waitandnext 1

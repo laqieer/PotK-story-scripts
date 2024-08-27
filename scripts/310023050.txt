@@ -1,0 +1,438 @@
+;;-----------------------------------------
+;;SEA3章_5
+;;-----------------------------------------
+# script "lisp"
+# background "office_room"
+# bgm "bgm005" 0
+;;-----------------------------------------
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 4
+# mask 270 off
+# alpha 270 1 0
+;;マナナン
+# body 6504011
+# pos 6504011 4
+# scale 6504011 0.8 0
+# layer 6504011 2
+# mask 6504011 off
+# alpha 6504011 0 0
+;;七支刀
+# body 5105111
+# pos 5105111 4
+# scale 5105111 0.8 0
+# layer 5105111 4
+# mask 5105111 off
+# alpha 5105111 0 0
+;;パラシュ
+# body 200411
+# pos 200411 3
+# scale 200411 0.8 0
+# layer 200411 2
+# mask 200411 off
+# alpha 200411 0 0
+;;イシューリエル
+# body 301421
+# pos 301421 4
+# scale 301421 0.8 0
+# layer 301421 2
+# mask 301421 off
+# alpha 301421 1 0
+;;-----------------------------------------
+;;背景：室内
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# face 270 "normal"
+# face 301421 "normal"
+# textwindow "nomal"
+# textboxarrow 0 1
+@ミーミル
+全てのオカルトをバスターなさる…
+とても崇高なお考えと存じます
+
+# face 270 "angry"
+# textboxarrow 0 1
+@ミーミル
+ですが、「揺らぎ」は
+オカルトではありません
+間違いなく影響が――
+
+# textboxarrow 0 3
+@イシューリエル
+まったくもってナンセンスですわ
+
+# textboxarrow 0 3
+@イシューリエル
+全ての心霊現象は
+プラズマで説明することができます
+
+# voice 9917 "mimir_navikan_0022"
+# face 270 "surprise"
+# textboxarrow 0 1
+@ミーミル
+プラズマ…で、ございますか？
+
+# textboxarrow 0 3
+@イシューリエル
+あなた達の言う「揺らぎ」も
+きっとプラズマで説明できます
+
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+ええと…
+
+# alpha 270 0 0.3
+# alpha 301421 0 0.3
+# face 200411 "normal"
+# alpha 200411 1 0.3
+# textboxarrow 0 2
+@パラシュ
+ふぅ…
+イシューリエルを
+説き伏せようとしても無駄だよ
+
+# textboxarrow 0 2
+@パラシュ
+彼女は真実の追求において
+絶対に妥協しない
+
+# textboxarrow 0 2
+@パラシュ
+是非はともかく、
+その姿勢は
+尊敬に値するものだからね
+
+# face 270 "sad"
+# alpha 270 1 0.3
+# face 301421 "normal"
+# alpha 301421 1 0.3
+# alpha 200411 0 0.3
+# textboxarrow 0 1
+@ミーミル
+そのように仰いましても…
+
+# face 301421 "angry"
+# textboxarrow 0 3
+@イシューリエル
+分かりました
+あなた達がそこまで「揺らぎ」に
+怯えるのであれば…
+
+# textboxarrow 0 3
+@イシューリエル
+わたくしが「揺らぎ」など
+インチキであると
+看破して差し上げますわ！
+
+# textboxarrow 0 1
+@ミーミル
+そんな…
+「揺らぎ」はインチキでは…
+
+;;選択肢
+# select "ひとまず任せてみよう" "select_label_01" "「揺らぎ」を調べられそうだ" "select_label_01"
+わたくしが「揺らぎ」など
+インチキであると
+看破して差し上げますわ！
+
+# label "select_label_01"
+# face 270 "normal"
+# textboxarrow 0 1
+@ミーミル
+マスター様がそう仰るのでしたら…
+
+# voice 650401 "manannan_ura_0005"
+# alpha 301421 0 0.3
+# face 6504011 "happy"
+# alpha 6504011 1 0.3
+# textboxarrow 0 3
+@マナナン
+あはっ
+随分、大きく出たね～
+喜劇的な予感♪
+
+# alpha 270 0 0.3
+# alpha 6504011 0 0.3
+# move 301421 3 0
+# face 301421 "normal"
+# alpha 301421 1 0.3
+# textboxarrow 0 2
+@イシューリエル
+わたくしには、町で起きている
+心霊現象の「原因」もすでに
+察しがついております
+
+# bgm "stop"
+# face 301421 "surprise"
+# textboxarrow 0 2
+@イシューリエル
+今から、その調査に…あら？
+
+;;ノックの音
+# se "SE_0679"
+# textboxarrow 0 0
+# waitandnext 2
+
+# alpha 301421 0 0.3
+# face 200411 "normal"
+# alpha 200411 1 0.3
+# textboxarrow 0 2
+@パラシュ
+誰か来たみたいだね
+
+;;七支刀が現れる
+# se "SE_0914"
+# move 200411 2 0.4
+# alpha 200411 0 0.3
+# move 5105111 3 0.4
+# face 5105111 "normal"
+# alpha 5105111 1 0.4
+# textwindow "close"
+# waitandnext 0.5
+
+# bgm "bgm002" 0
+# voice 1051 "shichishito_0002"
+# textwindow "nomal"
+# textboxarrow 0 2
+@七支刀
+こんにちは！
+「超オカルトバスターズ事務所」は
+こちらで合ってますか？
+
+# voice 3014 "ithuriel_0003"
+# alpha 5105111 0 0.3
+# move 200411 2 0
+# layer 200411 2
+# face 200411 "normal"
+# alpha 200411 1 0.3
+# move 301421 4 0
+# layer 301421 4
+# mask 301421 on
+# face 301421 "normal"
+# alpha 301421 1 0.3
+# textboxarrow 0 3
+@イシューリエル
+ええ、その通りですわ
+お客様かしら？
+
+# textboxarrow 0 1
+@パラシュ
+君は…
+
+# voice 1051 "shichishito_0059"
+# face 5105111 "normal"
+# alpha 5105111 1 0.3
+# alpha 200411 0 0.3
+# alpha 301421 0 0.3
+# textboxarrow 0 2
+@七支刀
+あ！パラシュ様
+先程は、ありがとうございましたっ
+
+# alpha 5105111 0 0.3
+# face 200411 "normal"
+# alpha 200411 1 0.3
+# face 301421 "normal"
+# alpha 301421 1 0.3
+# textboxarrow 0 3
+@イシューリエル
+あら？
+誰かと思えば七支刀ですわね
+パラシュとお知り合いでしたの？
+
+# textboxarrow 0 1
+@パラシュ
+知人というほどの関係じゃない
+
+# move 5105111 5 0
+# textboxarrow 0 1
+@パラシュ
+七支刀
+こんなところに何の用かな？
+
+# voice 1051 "shichishito_0003"
+# move 301421 5 0.5
+# alpha 301421 0 0.3
+# move 5105111 4 0.5
+# layer 5105111 4
+# mask 5105111 on
+# face 5105111 "normal"
+# alpha 5105111 1 0.3
+# textboxarrow 0 3
+@七支刀
+はい！
+わたくしをここで働かせて下さい
+
+# voice 2004 "parashu_0022"
+# face 200411 "angry01"
+# textboxarrow 0 1
+@パラシュ
+何だって…？
+
+# textboxarrow 0 3
+@七支刀
+わたくし、
+パラシュ様のお言葉に
+胸を打たれたんですっ
+
+# textboxarrow 0 3
+@七支刀
+パラシュ様はわたくしに…
+言葉だけでなく態度で示せと
+仰いました
+
+# face 200411 "normal"
+# textboxarrow 0 1
+@パラシュ
+そんなこと言ったかな…
+
+# textboxarrow 0 3
+@七支刀
+理想を体現する自分の背中を
+追って来いと、そうわたくしを
+激励して下さったんです
+
+# face 200411 "angry01"
+# textboxarrow 0 1
+@パラシュ
+いや、そんなつもりは全く
+なかったよ…！
+
+# voice 1051 "shichishito_0004"
+# face 5105111 "happy"
+# textboxarrow 0 3
+@七支刀
+ですから、わたくし
+こうして伺いましたっ
+
+# face 200411 "normal"
+# textboxarrow 0 1
+@パラシュ
+ボクは呼んでない…
+そもそも、ここの所長は
+イシューリエルだ
+
+# textboxarrow 0 1
+@パラシュ
+働きたいのなら、
+彼女の許可を貰うんだね
+
+# move 200411 1 0.5
+# alpha 200411 0 0.3
+# move 301421 2 0
+# layer 301421 2
+# mask 301421 off
+# face 301421 "normal"
+# alpha 301421 1 0.3
+# textboxarrow 0 1
+@イシューリエル
+確かに
+わたくしに話を通すのが
+筋というものですわね
+
+# voice 1051 "shichishito_0031"
+# face 5105111 "sad"
+# textboxarrow 0 3
+@七支刀
+ごめんなさい…！
+わたくし、不作法でした…
+
+# voice 1051 "shichishito_0036"
+# face 5105111 "normal"
+# textboxarrow 0 3
+@七支刀
+お願い致します、イシューリエル様
+わたくし、皆様のお役に立てる
+キル姫になりたいんですっ
+
+# textboxarrow 0 3
+@七支刀
+イシューリエル様から、
+たくさんのことを学ばせて下さい！
+
+# textboxarrow 0 3
+@七支刀
+いつも堂々とオカルトを看破する
+お姿、とても素敵だと思っていました
+
+# voice 3014 "ithuriel_0040"
+# textboxarrow 0 1
+@イシューリエル
+なるほど…
+
+# textboxarrow 0 1
+@イシューリエル
+つまり、わたくしの姿に
+心を射抜かれたということですね
+見る目がありますわ！
+
+# textboxarrow 0 3
+@七支刀
+わたくし、戦いにはあまり
+向いていないようなのですが…
+
+# textboxarrow 0 3
+@七支刀
+呪術や儀式の知識はありますので
+きっとイシューリエル様の
+お手伝いができます！
+
+# voice 3014 "ithuriel_kyara_1021"
+# textboxarrow 0 1
+@イシューリエル
+ふむ…
+
+# move 200411 3 0
+# face 200411 "normal"
+# alpha 200411 1 0.3
+# alpha 301421 0 0.3
+# alpha 5105111 0 0.3
+# textboxarrow 0 2
+@パラシュ
+イシューリエル
+つまらない情けは無用だよ
+
+# voice 3014 "ithuriel_0003"
+# alpha 200411 0 0.3
+# face 301421 "normal"
+# alpha 301421 1 0.3
+# face 5105111 "normal"
+# alpha 5105111 1 0.3
+# textboxarrow 0 1
+@イシューリエル
+ええ、もちろん
+単なる熱意にほだされるような
+わたくしではありませんわ
+
+# bgmfile "bgm410_stop" "BgmIntegralNoahBattle001" 3
+# textboxarrow 0 1
+@イシューリエル
+七支刀
+あなたの気持ちはよく分かりました
+結論を申し上げます
+
+# textboxarrow 0 3
+@七支刀
+はい…
+
+# se "SE_0613"
+# textboxarrow 0 1
+@イシューリエル
+採用ですわ！
+
+# face 200411 "angry01"
+# alpha 200411 1 0.3
+# alpha 301421 0 0.3
+# alpha 5105111 0 0.3
+# textboxarrow 0 2
+@パラシュ
+なっ…？
+
+# fadeout "black" 1
+# waitandnext 1

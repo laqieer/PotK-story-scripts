@@ -1,0 +1,355 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第20章 章タイトル：ワールドサルベイション
+;;第1話―１３　タイトル：全てを賭けて
+;;13_3
+;;スクリプト最後の背景：宇宙（ラストバトル空間）
+;;-----------------------------------------
+# script "lisp"
+# background "in_perspective"
+# bgmfile "bgm424_block" "BgmIntegralNoahCommand" 0
+;;-----------------------------------------
+;;フォルカス・神令・ヘル
+# body 5301811
+# pos 5301811 3
+# scale 5301811 0.8 0
+# layer 5301811 2
+# alpha 5301811 0 0
+# mask 5301811 off
+;;アスカロン・D. plug・レヴィアタン 大罪ver.
+# body 5102311
+# pos 5102311 3
+# scale 5102311 0.8 0
+# layer 5102311 2
+# alpha 5102311 0 0
+# mask 5102311 off
+;;リサナウト・誓約・クロノス
+# body 5203011
+# pos 5203011 3
+# scale 5203011 0.8 0
+# layer 5203011 2
+# alpha 5203011 0 0
+# mask 5203011 off
+;;アルマス・誓約・ティターニア
+# body 5103811
+# pos 5103811 3
+# scale 5103811 0.8 0
+# layer 5103811 2
+# alpha 5103811 0 0
+# mask 5103811 off
+;;魔獣
+# body 806158
+# pos 806158 3
+# scale 806158 0.8 0
+# layer 806158 2
+# alpha 806158 0 0
+# mask 806158 off
+;;終焉
+# body 806164
+# pos 806164 3
+# scale 806164 0.8 0
+# layer 806164 2
+# alpha 806164 0 0
+# mask 806164 off
+;;魔獣（フライデビル）
+# body 806157
+# pos 806157 3
+# scale 806157 0.8 0
+# layer 806157 2
+# alpha 806157 0 0
+# mask 806157 off
+;;魔獣（フライデビル1）
+# entry 98061571 806157
+# pos 98061571 3
+# scale 98061571 0.8 0
+# layer 98061571 2
+# alpha 98061571 0 0
+# mask 98061571 off
+;;-----------------------------------------
+# move 5301811 3 0
+# face 5301811 "sad"
+# alpha 5301811 1 0
+# mask 5301811 off
+# textflame 1 1
+# textboxarrow 0 2
+@フォルカス
+はぁ…はぁ…
+何とか群れを突破しましたけれど…
+
+;;フォルカス（独白）
+# move 5301811 3 0
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 5301811 off
+@フォルカス
+無限に湧き出してくる魔獣達の
+中に残る方が、よほど危険なのに
+皆さん、私に気を遣ってくれて…
+
+# face 5301811 "angry"
+# textboxarrow 0 2
+# textwindow "normal"
+@フォルカス
+“終焉”を打ち破るまで、
+堪えて下さい…！
+
+;;魔獣の群れが現れる
+# se "SE_0792"
+# alpha 5301811 0 0.5
+# move 806157 1 0
+# alpha 806157 1 0.5
+# mask 806157 on
+# move 806158 3 0
+# alpha 806158 1 0.5
+# mask 806158 on
+# move 98061571 5 0
+# alpha 98061571 1 0.5
+# mask 98061571 on
+# textboxarrow 0 0
+@魔獣
+ガアアアアアアアア！
+
+# voice 530181 "forcas_c_0026"
+# alpha 806157 0 0.5
+# alpha 806158 0 0.5
+# alpha 98061571 0 0.5
+# move 5301811 3 0
+# face 5301811 "sad"
+# alpha 5301811 1 0.5
+# mask 5301811 off
+# textboxarrow 0 2
+@フォルカス
+うっ…
+こんな数、一体どこからっ？
+
+# textboxarrow 0 2
+@フォルカス
+まずいですね…
+一人で対応できるかどうか
+
+# face 5301811 "angry"
+# textboxarrow 0 2
+@フォルカス
+…いえ、やらなければなりません
+ここから先は私一人で！
+
+;;アスカロンが飛び込んでくる
+# bgm "stop"
+# se "SE_9021"
+# voice 310231 "ascalon_a_battle_0002"
+# alpha 5301811 0 0.5
+# move 5102311 3 0
+# face 5102311 "normal"
+# alpha 5102311 1 0.5
+# mask 5102311 off
+# textboxarrow 0 2
+@アスカロン
+やあああああ！
+
+;;斬撃演出
+# se "SE_4830"
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# bgmfile "bgm293" "BgmLostRagnarokSideStory" 0
+# voice 530181 "forcas_c_0022"
+# alpha 5102311 0 0.5
+# move 5301811 3 0
+# face 5301811 "surprise"
+# alpha 5301811 1 0.5
+# mask 5301811 off
+# textboxarrow 0 2
+@フォルカス
+アスカロン…！？
+どうして…
+
+# voice 310231 "ascalon_a_0031"
+# move 5301811 2 0.5
+# mask 5301811 on
+# move 5102311 4 0
+# face 5102311 "sad"
+# alpha 5102311 1 0.5
+# mask 5102311 on
+# textboxarrow 0 3
+@アスカロン
+ごめんなさいっ
+やっぱり心配で…
+来てしまいましたっ
+
+# textboxarrow 0 3
+@アスカロン
+ティルフィングさんは仲間を信じて
+進んだのに…私は、フォルカスの
+ことが気になって…
+
+# textboxarrow 0 3
+@アスカロン
+グリモワールも気にしていたので…
+お節介かもしれないと思ったんです
+けど…
+
+# voice 530181 "forcas_c_0004"
+# face 5301811 "happy"
+# textboxarrow 0 1
+@フォルカス
+…ふふっ
+
+# face 5102311 "surprise"
+# textboxarrow 0 3
+@アスカロン
+フォルカス…？
+
+# voice 530181 "forcas_c_0030"
+# textboxarrow 0 1
+@フォルカス
+あなたらしいですね、アスカロン
+…ありがとうございます
+助かりました
+
+# textboxarrow 0 1
+@フォルカス
+あのときも…
+真っ先に私に力を貸して
+くれたのはあなたでした
+
+# face 5102311 "happy"
+# textboxarrow 0 3
+@アスカロン
+あっ…
+世界がループに陥っていたときの
+ことですね
+
+# textboxarrow 0 3
+@アスカロン
+もちろん、いつだって何度だって
+力を貸しますよ
+私達は仲間ですから！
+
+# textboxarrow 0 3
+@アスカロン
+それに、グリモワールが言ってました
+何でも一人で背負わないで
+私達にも任せて下さいねっ
+
+# voice 530181 "forcas_c_0004"
+# textboxarrow 0 1
+@フォルカス
+グリモワール…
+ふふっ
+彼女もお節介ですね
+
+# face 5301811 "angry"
+# textboxarrow 0 1
+@フォルカス
+さあ、二人で蹴散らしましょう
+“終焉”の下に急がないと
+
+# voice 310231 "ascalon_a_0032"
+# face 5102311 "normal"
+# textboxarrow 0 3
+@アスカロン
+はい！
+全て凍てつかせます！
+
+;;暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 5301811 0 0
+# alpha 5102311 0 0
+# move 806164 3 0
+# face 806164 "normal"
+# alpha 806164 1 0
+# mask 806164 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;巨大終焉がいる
+# bgmfile "bgm458" "BgmIntegralNoahBattle009" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@終焉
+…………
+
+# alpha 806164 0 0.5
+# move 5203011 2 0
+# face 5203011 "normal"
+# alpha 5203011 1 0.5
+# mask 5203011 on
+# move 5103811 4 0
+# face 5103811 "normal"
+# alpha 5103811 1 0.5
+# mask 5103811 on
+# textboxarrow 0 3
+@アルマス
+ついに、辿り着いた…
+
+# textboxarrow 0 1
+@リサナウト
+ええ
+別世界からどんどん力を吸い上げて
+益々大きくなってるわね
+
+# face 5103811 "sad"
+# textboxarrow 0 3
+@アルマス
+あんなの…勝てるの？
+
+# face 5203011 "happy2"
+# textboxarrow 0 1
+@リサナウト
+さあ
+私にも分からないわ
+
+# face 5103811 "normal"
+# textboxarrow 0 3
+@アルマス
+その割には余裕そうなんだけど
+本当は何か見えてるんじゃないの？
+
+# voice 520301 "risanautr_ca_0004"
+# face 5203011 "happy1"
+# textboxarrow 0 1
+@リサナウト
+ふふっ
+ごめんなさいね
+本当に何も見えないわ
+
+# face 5203011 "normal"
+# textboxarrow 0 1
+@リサナウト
+この展開は、未知の領域なの
+つまり、何も確定していない
+
+# textboxarrow 0 1
+@リサナウト
+この世界が滅ぶのか、
+それとも存続するのか、
+私には分からないのよ
+
+# textboxarrow 0 3
+@アルマス
+そっか
+それって…
+
+# voice 510381 "almace_ca_0021"
+# face 5103811 "happy"
+# textboxarrow 0 3
+@アルマス
+絶・最高ね！
+
+# voice 520301 "risanautr_ca_0032"
+# face 5203011 "happy1"
+# textboxarrow 0 1
+@リサナウト
+ええ、そうよ
+何も決まっていないのだから
+きっと見出せるわ
+
+# textboxarrow 0 1
+@リサナウト
+終焉の理を打ち破る、
+新たな可能性を

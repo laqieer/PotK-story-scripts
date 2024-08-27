@@ -1,0 +1,686 @@
+;;-----------------------------------------
+;;【ファントムオブキル】クリスマス2019_イベントシナリオ
+;;【EP1】
+;;EP1_1
+;;スクリプト最後の背景：ハルモニア市街地（昼）
+;;-----------------------------------------
+# script "lisp"
+# background "400_angel_town_daytime"
+# bgm "bgm032" 0
+;;-----------------------------------------
+;;グリモワール（クリスマス）
+# body 3501721
+# pos 3501721 3
+# scale 3501721 0.8 0
+# layer 3501721 2
+# alpha 3501721 0 0
+# mask 3501721 off
+;;リサナウト（クリスマス）
+# body 3203021
+# pos 3203021 3
+# scale 3203021 0.8 0
+# layer 3203021 2
+# alpha 3203021 0 0
+# mask 3203021 off
+;;少女
+# body 141
+# pos 141 3
+# scale 141 0.8 0
+# layer 141 2
+# alpha 141 0 0
+# mask 141 off
+;;ハルモニア兵
+# body 3810001
+# pos 3810001 3
+# scale 3810001 0.8 0
+# layer 3810001 2
+# alpha 3810001 0 0
+# mask 3810001 off
+;;ハルモニア兵（クローン1）
+# entry 938100011 3810001
+# pos 938100011 3
+# scale 938100011 0.8 0
+# layer 938100011 2
+# alpha 938100011 0 0
+# mask 938100011 off
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 1 "black"
+# imagealpha 1 0 0
+# imagelayer 1 5
+;;-----------------------------------------
+;;【EP1】いい子にしていたら
+;;背景：ハルモニア市街地（昼）
+;;演出：立ち絵少女のみ
+# move 141 3 0
+# face 141 "normal"
+# alpha 141 1 0
+# mask 141 off
+# textflame 1 1
+# textboxarrow 0 2
+@少女
+…………
+
+;;演出：暗転
+;;演出：リサナウト、グリモワール側に話が移る
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 141 0 0
+# move 3501721 2 0
+# face 3501721 "usual"
+# alpha 3501721 1 0
+# mask 3501721 on
+# move 3203021 4 0
+# face 3203021 "sad"
+# alpha 3203021 1 0
+# mask 3203021 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# voice 350171 "grimoire_ge_0028"
+# textboxarrow 0 1
+# textwindow "normal"
+@グリモワール
+「いい子にしていたら、きっと」
+そう言ったきり黙ったままね
+
+# voice 2030 "risanautr_l_0028"
+# textboxarrow 0 3
+@リサナウト
+なんだか、悲しそうな雰囲気
+なにかあったのかしら…
+
+# face 3203021 "usual"
+# textboxarrow 0 3
+@リサナウト
+よし、決めたわ
+ちょっと聞きに行ってくる
+
+# voice 350171 "grimoire_ge_0011"
+# face 3501721 "angry"
+# textboxarrow 0 1
+@グリモワール
+待ちなさいよ！
+斬ル姫が人間の前に出たら
+面倒になるって言ったでしょ！？
+
+# textboxarrow 0 3
+@リサナウト
+けど、気になるじゃない
+お礼もしたいし
+話をしてみないと
+
+# face 3501721 "usual"
+# textboxarrow 0 1
+@グリモワール
+キミが散らかしたところを
+片付けてもらった恩があるのは
+わかるけど、そこまでする必要ある？
+
+# textboxarrow 0 1
+@グリモワール
+人間にしても
+斬ル姫と関わっていいことはない
+…きっとそう考えてるわ
+
+# textboxarrow 0 3
+@リサナウト
+それでも…
+あの子にとってはなにかだいでぃな…
+
+# emotionbody 1001 6 3501721 50 200
+# effectpattern 1001 1 1
+# effectstart 1001
+# face 3501721 "angry"
+# textboxarrow 0 1
+@グリモワール
+大事なところで噛まないでよ！
+怒ってるワタシの身にもなりなさい！
+
+;;モノローグ
+# textflame 0 0
+@
+なにをしているの？
+と物陰でこそこそ言い合っている
+ふたりに声を掛けるマスター
+
+# emotionbody 1002 1 3203021 10 310
+# effectpattern 1002 2 0
+# effectstart 1002
+# voice 2030 "risanautr_l_0025"
+# face 3501721 "surprise"
+# face 3203021 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+@リサナウト
+きゃあああああああっ！？
+
+# emotionbody 1003 1 3501721 10 280
+# effectpattern 1003 2 0
+# effectstart 1003
+# voice 350171 "grimoire_ge_0025"
+# textboxarrow 0 1
+@グリモワール
+ひゃあっ！？
+
+;;モノローグ
+# textflame 0 0
+@
+リサナウトとグリモワール
+ふたりの驚きように思わず
+ごめん、と謝るマスター
+
+# emotionbody 1004 6 3501721 50 200
+# effectpattern 1004 1 1
+# effectstart 1004
+# voice 350171 "grimoire_ge_0010"
+# face 3501721 "angry"
+# textflame 1 1
+# textboxarrow 0 1
+@グリモワール
+ごめんじゃ済まないわよ！
+このワタシを驚かせるなんて
+いい度胸してるわね、マスター
+
+# face 3203021 "angry"
+# textboxarrow 0 3
+@リサナウト
+グリモワールも当主様も
+ちょっと静かに…
+
+# textboxarrow 0 1
+@グリモワール
+ワタシより大きな悲鳴を
+上げてたキミに言われたくないわ…
+
+;;モノローグ
+# textflame 0 0
+@
+それで、どうしたの？
+とふたりに問いかけるマスター
+
+# textflame 1 1
+# textboxarrow 0 1
+@グリモワール
+聞いてよマスター
+リサナウトったらね――
+
+;;演出：時間経過の暗転
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 3501721 2 0
+# face 3501721 "angry"
+# alpha 3501721 1 0.5
+# mask 3501721 on
+# move 3203021 4 0
+# face 3203021 "usual"
+# alpha 3203021 1 0.5
+# mask 3203021 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# voice 350171 "grimoire_ge_0001"
+# textboxarrow 0 1
+# textwindow "normal"
+@グリモワール
+不用意に斬ル姫が人間と
+関わるのはよくないわよねマスター
+ワタシは間違ってないわよね！？
+
+# textboxarrow 0 3
+@リサナウト
+でもお礼を言うくらい
+どうということもないでしょう？
+
+;;モノローグ
+# textflame 0 0
+@
+マスターはグリモワールの意見に
+同意する
+
+# textflame 1 1
+# textboxarrow 0 1
+@グリモワール
+そうよねマスター！
+ほら見なさい！
+マスターもこう言ってるじゃない！
+
+;;モノローグ
+# textflame 0 0
+@
+けれど、リサナウトの
+言っていることも間違ってはいない
+とマスターは続ける
+
+# se "SE_6504"
+# emotionbody 1005 3 3203021 10 290
+# effectpattern 1005 1 3
+# effectstart 1005
+# voice 2030 "risanautr_l_0004"
+# face 3203021 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@リサナウト
+当主様！
+ふふ、当主様が私の意見を
+支持するのはわかりきっていたこと…
+
+;;モノローグ
+# textflame 0 0
+@
+正しいことがひとつとは限らなくて
+時にそれがぶつかり合うこともある
+と、ふたりを諭すマスター
+
+# face 3203021 "usual"
+# textflame 1 1
+# textboxarrow 0 3
+@リサナウト
+けど、お礼をするのは大事だし
+それにあんな表情を見たら
+放っておけないわ
+
+;;モノローグ
+# textflame 0 0
+@
+それはリサナウトの
+ありがとうを伝えたいという
+優しい気持ちだ、とマスター
+
+# textflame 1 1
+# textboxarrow 0 1
+@グリモワール
+でも、斬ル姫と人間が
+関わったことで起きた悲劇を
+過去にたくさん読んだことがあるわ
+
+;;モノローグ
+# textflame 0 0
+@
+そう言えるのはグリモワールの
+あの子を傷つけたくないという
+優しさの表れだ、とマスター
+
+# textflame 1 1
+# textboxarrow 0 1
+@グリモワール
+それじゃあ
+どうしたらいいっていうの？
+
+;;モノローグ
+# textflame 0 0
+@
+ふたりの気持ちを汲んだ上で
+人間である自分があの子に
+声を掛けてみるよ、とマスター
+
+# se "SE_6504"
+# emotionbody 1006 3 3203021 10 290
+# effectpattern 1006 1 3
+# effectstart 1006
+# face 3203021 "happy"
+# textflame 1 1
+# textboxarrow 0 3
+@リサナウト
+名案ね、当主様！
+
+# voice 2030 "risanautr_l_0004"
+# textboxarrow 0 3
+@リサナウト
+ふふ、これは予言ではない
+確定事象の報告に過ぎないの…
+
+# textboxarrow 0 3
+@リサナウト
+三分後、当主様が
+あの子にお礼を言って
+仲良くなっている姿がそこにあると！
+
+# face 3501721 "usual"
+# textboxarrow 0 1
+@グリモワール
+…それはあり得ないわね
+
+# face 3203021 "angry"
+# textboxarrow 0 3
+@リサナウト
+どうしてそんなことがわかるの？
+あなたの魔術書のデータベースから
+導き出した答えだって言うの？
+
+# textboxarrow 0 1
+@グリモワール
+ワタシたちが話し込んでるうちに
+あの子はどこかへ
+行っちゃったみたいよ
+
+# emotionbody 1007 1 3203021 10 310
+# effectpattern 1007 1 0
+# effectstart 1007
+# voice 2030 "risanautr_l_0022"
+# face 3203021 "surprise"
+# textboxarrow 0 3
+@リサナウト
+…………っ！
+これもまた時のいたずらね
+
+# face 3501721 "angry"
+# textboxarrow 0 1
+@グリモワール
+そうやっていちいち
+大袈裟に言ってるから
+余計に時間がかかるんじゃない？
+
+;;モノローグ
+# textflame 0 0
+@
+とにかく、どうするにしても
+とりあえず少女を追おう
+とマスターはふたりとともに駆け出す
+
+;;演出：暗転
+# se "SE_5575"
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# move 3501721 2 0
+# face 3501721 "usual"
+# alpha 3501721 1 0
+# mask 3501721 on
+# move 3203021 4 0
+# face 3203021 "surprise"
+# alpha 3203021 1 0
+# mask 3203021 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 3
+# textwindow "normal"
+@リサナウト
+いたわ、あの木の前よ当主様
+あんなところでどうしたのかしら？
+
+# voice 350171 "grimoire_ge_0028"
+# textboxarrow 0 1
+@グリモワール
+またなにか言っているようね
+あんな枯れた木に話しかけて…
+一体なにを？
+
+;;演出：暗転
+;;演出：少女側の話に移る
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 3501721 0 0
+# alpha 3203021 0 0
+# move 141 3 0
+# face 141 "smile"
+# alpha 141 1 0
+# mask 141 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgmfile "bgm273" "BgmLostRagnarokEvent" 0
+# se "SE_6504"
+# emotionbody 1008 3 141 10 240
+# effectpattern 1008 1 3
+# effectstart 1008
+# textboxarrow 0 2
+# textwindow "normal"
+@少女
+わたしね、今日は
+街でツリーの飾りが散らかってるの
+見つけたから片付けたんだ！
+
+# face 141 "normal"
+# textboxarrow 0 2
+@少女
+あ、そうだ、この木も
+そろそろ飾り付けしないとね
+去年とおんなじように…
+
+# textboxarrow 0 2
+@少女
+ねぇ、いい子にしてたら
+クリスマスには特別なことが起こる
+って、そう言ってたよね…
+
+# face 141 "worry"
+# textboxarrow 0 2
+@少女
+お母さん…
+どうして死んじゃったの…
+もう一度お母さんに会いたいよ…
+
+;;演出：暗転
+;;演出：リサナウト、グリモワールたち側に話が移る
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 141 0 0
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+;;モノローグ
+# textflame 0 0
+# textwindow "normal"
+@
+お母さん、お母さん
+とつぶやいて涙を流す少女
+マスターたちは眺めることしかできない
+
+# voice 2030 "risanautr_l_0028"
+# move 3501721 2 0
+# face 3501721 "sad"
+# alpha 3501721 1 0.5
+# mask 3501721 on
+# move 3203021 4 0
+# face 3203021 "sad"
+# alpha 3203021 1 0.5
+# mask 3203021 on
+# textflame 1 1
+# textboxarrow 0 3
+@リサナウト
+…当主様
+やっぱり私はあの子になにか
+してあげたいと思うんだけど
+
+# voice 350171 "grimoire_ge_0015"
+# textboxarrow 0 1
+@グリモワール
+でも、お母さんに会いたいという
+あの子の願いをかなえることは…
+
+# textboxarrow 0 3
+@リサナウト
+…それは私だって理解してるわ
+でも、ほかになにかできることが
+あるかもしれないでしょ？
+
+;;モノローグ
+# textflame 0 0
+@
+そうだね、とマスターは
+ひとまず少女へ声を掛けに
+行こうとするが…
+
+;;少女（セリフのみ）
+# bgm "stop"
+# serif 1
+@少女
+やめてっ！
+
+;;演出：暗転
+;;演出：少女側に話が移る
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 3501721 0 0
+# alpha 3203021 0 0
+# move 3810001 2 0
+# alpha 3810001 1 0
+# mask 3810001 on
+# move 141 4 0
+# face 141 "worry"
+# alpha 141 1 0
+# mask 141 on
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# textflame 1 1
+# textboxarrow 0 1
+# textwindow "normal"
+@ハルモニア兵
+木を処分するのに邪魔です
+離れなさい
+
+# textboxarrow 0 3
+@少女
+でも、この木には
+お母さんとの思い出が…
+
+# textboxarrow 0 3
+@少女
+飾り付けて
+クリスマスツリーにするの
+せめてそれまででも…
+
+# textboxarrow 0 1
+@ハルモニア兵
+枯れた木に飾り付けを？
+おかしなことを言う
+おい、この子を連れていけ
+
+;;演出：ひとりのハルモニア兵が少女を連れて行ってしまう
+# textwindow "close"
+# move 3810001 1 0.5
+# move 938100011 3 0
+# alpha 938100011 1 0.5
+# mask 938100011 on
+# move 141 5 0.5
+# waitandnext 0.8
+
+# se "SE_0719"
+# rightout 938100011 1
+# rightout 141 0.8
+# waitandnext 1
+
+;;演出：暗転
+;;演出：リサナウト、グリモワール側に話が移る
+# imagepos 1 0 30
+# imagealpha 1 1 0
+# imageleftin 1 0.6
+# waitandnext 0.6
+
+# alpha 3810001 0 0
+# alpha 938100011 0 0
+# alpha 141 0 0
+# move 3203021 3 0
+# face 3203021 "angry"
+# alpha 3203021 1 0
+# mask 3203021 off
+# imagealpha 1 0 0.5
+# imagerightout 1 0.6
+# waitandnext 0.6
+
+# textboxarrow 0 2
+# textwindow "normal"
+@リサナウト
+事態急変…どうする当主様？
+
+;;モノローグ
+# textflame 0 0
+@
+どうしたものか
+とマスターが考えあぐねていると
+すっとグリモワールが動いた
+
+# alpha 3203021 0 0.5
+# move 3501721 3 0
+# face 3501721 "usual"
+# alpha 3501721 1 0.5
+# mask 3501721 off
+# textflame 1 1
+# textboxarrow 0 2
+@グリモワール
+…できることはあるわ
+考える必要もないでしょう
+
+;;モノローグ
+# alpha 3501721 0 0.5
+# textflame 0 0
+@
+そう言うとグリモワールは
+兵士たちの前へ飛び出して行く
+
+# voice 2030 "risanautr_l_0004"
+# move 3203021 3 0
+# face 3203021 "happy"
+# alpha 3203021 1 0.5
+# mask 3203021 off
+# textflame 1 1
+# textboxarrow 0 2
+@リサナウト
+ふふ、グリモワールに5ポイント
+当主様、私たちも行くわよ！
+
+;;演出：ハルモニア兵と対峙するグリモワール、リサナウト
+# bgmfile "bgm073_074" "BgmChristmas001" 0
+# alpha 3203021 0 0.5
+# move 3501721 2 0
+# face 3501721 "angry"
+# alpha 3501721 1 0.5
+# mask 3501721 off
+# move 3810001 4 0
+# alpha 3810001 1 0.5
+# mask 3810001 on
+# reversal 3810001 0
+# textboxarrow 0 3
+@ハルモニア兵
+貴様、なに者だ！
+
+# textboxarrow 0 1
+@グリモワール
+ワタシは怒り
+死者の怒りを代弁する者…
+
+# textboxarrow 0 1
+@グリモワール
+死者の遺した想いを断ち切ろうなんて
+言語道断！
+そんなのは生者の傲慢よ
+
+# textboxarrow 0 1
+@グリモワール
+怒りを知れ、死者の怒りを知れ
+憤怒の炎に焼かれ思い知れ！

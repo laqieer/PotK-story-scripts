@@ -1,0 +1,154 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー12章
+;;第1話　タイトル：神令、発動
+;;1_3_1
+;;スクリプト最後の背景：深奥
+;;-----------------------------------------
+# script "lisp"
+# background "profound_nolight"
+# bgmfile "bgm320_321" "BgmLostRagnarokBattle006" 0
+;;-----------------------------------------
+;;アルマス（ジョブチェンジ後）
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# layer 172 2
+# alpha 172 0 0
+# mask 172 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 2
+# alpha 139 0 0
+# mask 139 off
+;;ハルモニア兵
+# body 3810001
+# pos 3810001 3
+# scale 3810001 0.8 0
+# layer 3810001 2
+# alpha 3810001 0 0
+# mask 3810001 off
+;;ケイオスリオン兵
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# layer 3820001 2
+# alpha 3820001 0 0
+# mask 3820001 off
+;;トレイセーマ兵
+# body 3830001
+# pos 3830001 3
+# scale 3830001 0.8 0
+# layer 3830001 2
+# alpha 3830001 0 0
+# mask 3830001 off
+;;-----------------------------------------
+;;//背景：深奥
+# sedelay "SE_4830" 0.7
+# voice 1038 "almace_0029"
+# move 172 3 0
+# face 172 "angry"
+# alpha 172 1 0
+# mask 172 off
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+はぁぁぁっ！
+
+# se "SE_5575"
+# textwindow "close"
+# rightout 172 0.5
+# waitandnext 0.5
+
+;;//アルマス達が三国の包囲網を抜けていく
+# se "SE_0777"
+# alpha 172 0 0.5
+# move 3830001 3 0
+# alpha 3830001 1 0.5
+# mask 3830001 off
+# textboxarrow 0 2
+# textwindow "normal"
+@トレイセーマ兵
+逃がすな！
+追え！追えーっ！
+
+# alpha 3830001 0 0.5
+# move 3810001 3 0
+# alpha 3810001 1 0.5
+# mask 3810001 off
+# textboxarrow 0 2
+@ハルモニア兵
+諸悪の根源を絶ち、世界に
+真の平穏をもたらすのです！
+バイブスに死を！
+
+# alpha 3810001 0 0.5
+# move 3820001 3 0
+# alpha 3820001 1 0.5
+# mask 3820001 off
+# textboxarrow 0 2
+@ケイオスリオン兵
+連中を分断しろ！
+一人ずつ血祭りに上げるんだ！
+
+;;//暗転挟む
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# alpha 3820001 0 0
+# move 172 2 0
+# face 172 "normal"
+# alpha 172 1 0
+# mask 172 on
+# move 139 4 0
+# face 139 "worry"
+# alpha 139 1 0
+# mask 139 on
+# waitandnext 0.1
+
+# fadein "black" 1
+# waitandnext 1
+
+# textboxarrow 0 1
+# textwindow "normal"
+@アルマス
+ハア…ハア…
+何とか包囲網は突破できたけど…
+
+# voice 9967 "titania_0026"
+# textboxarrow 0 3
+@ティターニア
+バラバラになってしまいましたね
+皆さん、無事でしょうか…
+
+# textboxarrow 0 1
+@アルマス
+ここにいるのは私とティニ…
+それと、マスターだけっ？
+
+# voice 9967 "titania_0035"
+# face 139 "surprise"
+# textboxarrow 0 3
+@ティターニア
+ギルの姿もありません…！
+こんな危険なところにあの子を
+一人にしてしまったら…
+
+# voice 1038 "almace_battle_0005"
+# face 172 "angry"
+# textboxarrow 0 1
+@アルマス
+でも…探してる暇はなさそうよ
+
+# alpha 172 0 0.5
+# alpha 139 0 0.5
+# move 3830001 3 0
+# alpha 3830001 1 0.5
+# mask 3830001 off
+# textboxarrow 0 2
+@トレイセーマ兵
+いたぞ！
+バイブス所持者と護衛の斬ル姫だ！
+殺せ、殺せーっ！

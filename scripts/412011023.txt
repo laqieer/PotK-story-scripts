@@ -1,0 +1,364 @@
+;;2話戦闘後
+;;//背景：森
+# script "lisp"
+# background "forest"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# body 3103811
+# pos 3103811 2
+# scale 3103811 0.8 0
+# mask 3103811 off
+# alpha 3103811 0 0
+# body 139
+# pos 139 5
+# scale 139 0.8 0
+# mask 139 off
+# alpha 139 0 0
+# layer 139 5 0
+# layer 3103811 4 0
+# face 3103811 "angry"
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+アルマスの気配が残っています
+やはり、こちらに来ていたのですね
+
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+…あの女性を殺された地に
+
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+それにしても…
+あの子、どうやってオベロンの結界を
+越えたのでしょう…？
+
+;;//異族の群れが現れる
+# se "SE_0617"
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@異族
+グルルルルルルル…
+
+;;//アルマスが現れる
+# se "SE_4100"
+# sedelay "SE_4000" 0.4
+# move 3103811 3 0
+# alpha 3103811 1 0.5
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+# voice 1038 "almace_0025"
+@アルマス
+このっ…このっ…！
+化け物どもっ！
+お前達なんか…！！
+
+# se "SE_0618"
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@異族
+グアアアアアアアアア！！
+
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+いけない！
+アルマスが異形に囲まれてっ…
+
+;;//ダメージ演出
+;;//アルマスが異族から攻撃を受ける
+# se "SE_4824"
+# fadein "red" 0.5
+# shake 0 0.5
+# face 3103811 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+# voice 1038 "almace_0038"
+@アルマス
+がはぁっ…！
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+# voice 1038 "almace_0019"
+@アルマス
+なんで…全然、剣が届かない…
+私、なんにも出来ないまま…
+
+# se "SE_0618"
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@異族
+グアアアアアアアアアアアア！
+
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+# voice 1038 "almace_0015"
+@アルマス
+悔しい…
+みんな…ごめんなさい…
+私が…弱いから…
+
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# alpha 3103811 0 0.5
+# waitandnext 0.5
+
+# se "SE_2019"
+# shake 0 0.5
+# waitandnext 1
+
+# se "SE_9173"
+# fadein "white" 0.5
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+異形の者達よ！
+アルマスから離れなさい！
+
+# se "SE_0669"
+# shake 0 0.5
+# serif 1
+# textwindow "normal"
+# textboxarrow 1 0
+@異族
+グギャアアア…！
+
+;;//異族が数体、倒れる
+# se "SE_3001"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+しっかり…
+しっかりして下さいアルマス！
+
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+ああ…、命の灯火が薄れていく…
+
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+こうなったら…
+最後の可能性に
+賭けてみるしかありませんね
+
+# imageset 1 "bg_black"
+# imagealpha 1 0 0
+# imagelayer 1 2
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+ごめんなさい、アルマス…
+アナタにはこれから過酷な道を
+歩ませることになるでしょう
+
+# imagepos 1 0 0
+# imagescale 1 2 0
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+それでも私は…
+妖精結合-テイルリンク-！！
+
+;;//画面フラッシュ
+;;//背景：黒
+# serif 0
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# imagealpha 1 1 0
+# layer 3103811 25
+# brightness 3103811 0.3 0
+# alpha 3103811 0.4 0
+# envbody 2000 5 1
+# effectpattern 2000 4
+# effectstart 2000
+# face 3103811 "irregular"
+# waitandnext 0.6
+
+# fadein "white" 1
+# waitandnext 1
+
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+くっ…なんておぞましい闇…
+これがアルマスの抱えている復讐心…
+“憤怒”の無明…
+
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+でも…確かに感じます…
+この子との繋がりを…
+これならきっと…
+
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+いいえ必ず！
+
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+私の声に答えて下さい、アルマス！
+
+# brightness 3103811 1 1
+# alpha 3103811 0.2 1
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+@アルマス
+……………
+
+# face 3103811 "normal"
+# alpha 3103811 0.3 1
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+# voice 1038 "almace_prolo_0007"
+@アルマス
+……………
+…ティターニア？
+
+# textflame 0 0
+# textboxarrow 0 0
+@ティターニア
+ここです！
+お願い、私と繋がって下さい！
+どうか手を伸ばして！
+
+# alpha 3103811 0.4 1
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+@アルマス
+手を…
+
+;;//画面が白く光る
+;;//背景：森
+# se "SE_9148"
+# bgm "stop"
+# serif 0
+# textwindow "close"
+# fadeout "white" 1.5
+# waitandnext 2
+
+# imagealpha 1 0 0
+# layer 3103811 2
+# effectskip 2000
+# envbody 3000 8 1
+# effectstart 3000
+# background "forest"
+# alpha 3103811 1 0
+# face 3103811 "angry"
+# waitandnext 0.6
+
+# fadein "white" 1.5
+# serif 0
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+# voice 1038 "almace_prolo_1008"
+@アルマス
+あああああああああああああ！
+
+# face 3103811 "sad"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3103811
+# voice 1038 "almace_prolo_2008"
+@アルマス
+…私、生きてるの？
+
+;;//ティターニア登場
+# bgmfile "bgm270" "BgmLostRagnarokEvent" 0
+# alpha 139 1 0.5
+# move 139 4 0.5
+# move 3103811 2 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# chara 139
+@ティターニア
+アルマス！
+良かった…
+まったく、この子はっ…
+
+# face 3103811 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3103811
+@アルマス
+えっ…？
+あなた、なんで小さくなってるの？
+
+# face 139 "worry"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 139
+@ティターニア
+それはアナタと
+妖精結合したからですよ！
+本当に心配させてっ…
+
+# face 3103811 "worry"
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3103811
+@アルマス
+私が妖精結合をっ？
+やった…
+これで私はあいつらを皆殺しに…
+
+# face 3103811 "sad"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+# fadein "red" 0.5
+# effectskip 3000
+# shake 0 0.5
+@アルマス
+あぐぅっ？
+
+# face 139 "surprise"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 139
+@ティターニア
+どうしました、アルマス！？
+アルマス！？
+あ…くぅぅぅっ…！
+
+# fadein "red" 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# chara 3103811
+# voice 1038 "almace_prolo_0009"
+@アルマス
+熱いっ…痛くて苦しいっ…
+がはああああああ！？

@@ -1,0 +1,318 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー13章
+;;第2話　タイトル：光ある外へ
+;;2_3_1
+;;スクリプト最後の背景：荒廃した街中
+;;-----------------------------------------
+# script "lisp"
+# background "bg_black"
+# bgmfile "bgm273" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アルマス（ジョブチェンジ後）
+# body 172
+# pos 172 3
+# scale 172 0.8 0
+# layer 172 2
+# alpha 172 0 0
+# mask 172 off
+;;モラルタ
+# body 3104011
+# pos 3104011 3
+# scale 3104011 0.8 0
+# layer 3104011 2
+# alpha 3104011 0 0
+# mask 3104011 off
+;;ベガルタ
+# body 3104111
+# pos 3104111 3
+# scale 3104111 0.8 0
+# layer 3104111 2
+# alpha 3104111 0 0
+# mask 3104111 off
+;;悪魔
+# body 910013
+# pos 910013 3
+# scale 910013 0.8 0
+# layer 910013 2
+# alpha 910013 0 0
+# mask 910013 off
+;;幻獣
+# body 900016
+# pos 900016 3
+# scale 900016 0.8 0
+# layer 900016 2
+# alpha 900016 0 0
+# mask 900016 off
+;;-----------------------------------------
+;;//背景：黒
+# move 172 3 0
+# face 172 "normal"
+# alpha 172 1 0
+# mask 172 off
+# textflame 1 1
+# textboxarrow 0 2
+@アルマス
+無理やり二人の記憶を引っ張り上げ
+ようとしたから失敗した…
+
+# textboxarrow 0 2
+@アルマス
+モラルタもベガルタも、心の奥では
+解放されたがっていないんだ
+その理由を探らないとっ
+
+# face 172 "angry"
+# textboxarrow 0 2
+@アルマス
+二人の心の深奥
+彼女達を彼女達たらしめている
+核心まで…潜る！
+
+;;//アルマスがダメージを受ける
+;;//画面揺れ等
+# se "SE_4778"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 1038 "almace_battle_0006"
+# textboxarrow 0 2
+@アルマス
+うぐっ…！
+そうよね…拒絶されるわよね
+
+# textboxarrow 0 2
+@アルマス
+誰だって、他人に自分の本質なんて
+晒したくないものね
+
+# voice 1038 "almace_0031"
+# face 172 "normal"
+# textboxarrow 0 2
+@アルマス
+でも、ごめんなさい
+モラルタ、ベガルタ
+今回は踏み込ませてもらうわ
+
+# textboxarrow 0 2
+@アルマス
+あなた達のためなんて、
+偉そうなことは言わない
+これは、私のワガママ
+
+# face 172 "angry"
+# textboxarrow 0 2
+@アルマス
+一度、あなた達の闇を覗いて、
+その心に触れてしまった私自身の
+ケジメよ！
+
+;;//ダメージ演出
+# se "SE_4778"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+;;//背景：実験室（モラ・ベガクエストep2のシーン）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "red_corridor"
+# alpha 172 0 0
+# move 3104111 2 0
+# face 3104111 "normal"
+# alpha 3104111 1 0
+# mask 3104111 on
+# move 3104011 4 0
+# face 3104011 "surprise"
+# alpha 3104011 1 0
+# mask 3104011 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//警告アラーム
+;;//赤フラッシュ点滅
+# se "SE_4730"
+# fadein "red" 0.5
+# shake 0 0.5
+# textboxarrow 0 3
+# textwindow "normal"
+@モラルタ
+あぐぅっ…！？
+胸に…何かが…
+うえええ…気持ち悪いっ…
+
+# voice 1041 "beagallta_battle_0007"
+# face 3104111 "sad"
+# textboxarrow 0 1
+@ベガルタ
+あぐぅっ…！？
+胸に何かが…入ってくる！？
+私の中に気持ち悪いのが…おええっ…
+
+;;//ダメージ演出
+;;
+;;//背景：黒
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "bg_black"
+# alpha 3104111 0 0
+# alpha 3104011 0 0
+# move 172 3 0
+# face 172 "sad"
+# alpha 172 1 0
+# mask 172 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# se "SE_4778"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 1038 "almace_battle_0006"
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+うぐぅっ…
+今のは…二人がキラーズを…
+でも、あれって元々、一つのものが…
+
+# textboxarrow 0 2
+@アルマス
+二つに別れて…双子に埋め込まれた
+ってこと…なのっ？
+
+# face 172 "normal"
+# textboxarrow 0 2
+@アルマス
+近づいてる…
+二人の本質に…近づいてる…
+もう少しよっ
+
+# voice 1038 "almace_0029"
+# face 172 "angry"
+# textboxarrow 0 2
+@アルマス
+うううあああああああああ！
+届けぇぇぇっ！！
+
+;;//画面白フラッシュ
+# se "SE_9150"
+# textwindow "close"
+# fadeout "white" 1
+# waitandnext 1
+
+# background "ground_surface_break"
+# alpha 172 0 0
+# move 910013 3 0
+# alpha 910013 1 0
+# mask 910013 off
+# waitandnext 0.2
+
+# fadein "white" 1
+# waitandnext 1
+
+;;//背景：荒廃した街中
+# bgmfile "bgm276" "BgmLostRagnarokEvent" 0
+# se "SE_0753"
+# textboxarrow 0 2
+# textwindow "normal"
+@魔獣
+グアアアアアアア！
+
+# alpha 910013 0 0.5
+# move 900016 3 0
+# alpha 900016 1 0.5
+# mask 900016 off
+# textboxarrow 0 2
+@幻獣
+グルルルルルルルル！
+
+# alpha 900016 0 0.5
+# move 172 3 0
+# face 172 "surprise"
+# alpha 172 1 0.5
+# mask 172 off
+# textboxarrow 0 2
+@アルマス
+辿り着いた…！
+って、ここは…
+
+# alpha 172 0 0.5
+# move 3104111 2 0
+# face 3104111 "usual"
+# alpha 3104111 1 0.5
+# mask 3104111 on
+# textboxarrow 0 1
+# move 3104011 4 0
+# face 3104011 "angry"
+# alpha 3104011 1 0.5
+# mask 3104011 on
+@ベガルタ
+お姉ちゃぁん…！
+家が…家が燃えてるよぉっ…
+
+# textboxarrow 0 3
+@モラルタ
+それより走って！
+お父さんの手を放しちゃダメだよっ
+
+# textboxarrow 0 3
+@モラルタ
+私もお母さんの手を放さないから…
+大丈夫だよ、きっと…
+
+# textboxarrow 0 1
+@ベガルタ
+本当っ…？
+本当に大丈夫なのっ…？
+怖いよ、お姉ちゃん…
+
+# textboxarrow 0 3
+@モラルタ
+お父さんもお母さんも、私だって
+いるんだから大丈夫！
+ほら、しっかり走って！
+
+# se "SE_5575"
+# textwindow "close"
+# alpha 3104111 0 0.5
+# alpha 3104011 0 0.5
+# waitandnext 0.5
+
+# move 172 3 0
+# face 172 "surprise"
+# alpha 172 1 0.5
+# mask 172 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アルマス
+二人が両親と逃げている記憶…
+ここが…彼女達の本質…？
+
+# alpha 172 0 0.5
+# move 910013 3 0
+# alpha 910013 1 0.5
+# mask 910013 off
+# textboxarrow 0 2
+@魔獣
+グルルルルルルルルル！
+
+# alpha 910013 0 0.5
+# move 172 3 0
+# face 172 "angry"
+# alpha 172 1 0.5
+# mask 172 off
+# textboxarrow 0 2
+@アルマス
+いけない！
+とにかく、ここは二人の両親を
+助けないとっ

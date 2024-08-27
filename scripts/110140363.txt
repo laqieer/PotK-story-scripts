@@ -1,0 +1,204 @@
+;;-----------------------------------------
+;;【PUNK】新章ストーリー14章
+;;第3話　タイトル：総力戦
+;;3_6_3
+;;スクリプト最後の背景：森
+;;-----------------------------------------
+# script "lisp"
+# background "forest"
+# bgmfile "bgm323" "BgmLostRagnarokCommand" 0
+;;-----------------------------------------
+;;リル=ティルフィング
+# body 3101411
+# pos 3101411 3
+# scale 3101411 0.8 0
+# layer 3101411 2
+# alpha 3101411 0 0
+# mask 3101411 off
+;;レーヴァテイン
+# body 3100211
+# pos 3100211 3
+# scale 3100211 0.8 0
+# layer 3100211 2
+# alpha 3100211 0 0
+# mask 3100211 off
+;;神令スイハ（仮面）
+# body 3401719
+# pos 3401719 3
+# scale 3401719 0.8 0
+# layer 3401719 2
+# alpha 3401719 0 0
+# mask 3401719 off
+;;神令ダモクレス（仮面）
+# body 3103519
+# pos 3103519 3
+# scale 3103519 0.8 0
+# layer 3103519 2
+# alpha 3103519 0 0
+# mask 3103519 off
+;;-----------------------------------------
+;;//背景：森
+# se "SE_4000"
+# move 3101411 2 0
+# face 3101411 "sad"
+# alpha 3101411 1 0
+# mask 3101411 on
+# textflame 1 1
+# move 3103519 4 0
+# face 3103519 "normal"
+# alpha 3103519 1 0
+# mask 3103519 on
+# textboxarrow 0 3
+# voice 310351 "damocles_c_unit_0008"
+@ダモクレス
+愛に埋もれ、
+死者の国へ旅立つといいっ
+
+# se "SE_3006"
+# textboxarrow 0 1
+@ティルフィング
+私には成さねばならないことが
+あるというのに…
+
+# textboxarrow 0 3
+# voice 310351 "damocles_c_0005"
+@ダモクレス
+安心して！
+この世界はクレス様が
+愛し抜いてみせるからねっ
+
+# textboxarrow 0 3
+@ダモクレス
+もう苦しませることなんかない…
+愛して愛して愛して
+世界を愛で満たすんだ！
+
+# textboxarrow 0 1
+@ティルフィング
+アナタの愛は…
+あまりに一方通行で…
+
+# textboxarrow 0 3
+# voice 310351 "damocles_c_battle_0004"
+@ダモクレス
+それでもクレス様は…
+愛してるんだから！
+
+;;//ダモクレスがティルフィングを斬る
+# textwindow "close"
+# se "SE_4830"
+# shake 0 0.5
+# fadein "white" 0.5
+# effectbody 1000 1 -200 0 0
+# effectstart 1000
+# waitandnext 0.8
+
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "101_hole"
+# alpha 3101411 0 0
+# alpha 3103519 0 0
+# move 3100211 2 0
+# face 3100211 "sad"
+# alpha 3100211 1 0
+# mask 3100211 on
+# move 3401719 4 0
+# face 3401719 "normal"
+# alpha 3401719 1 0
+# mask 3401719 on
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+;;//背景：大穴
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 340171 "suiha_c_0027"
+@スイハ
+随分と離れてしまいましたね
+これでは戦況の把握ができません
+そろそろ戻らないと
+
+# face 3100211 "normal"
+# textboxarrow 0 1
+# voice 310021 "revatein_ge_battle_0007"
+@レーヴァテイン
+待って…
+まだよっ…
+
+# textboxarrow 0 3
+# voice 340171 "suiha_c_0007"
+@スイハ
+私の矢で磔にされている割に、
+まだ喋る体力が残っていましたか
+
+# textboxarrow 0 1
+# voice 310021 "revatein_ge_0014"
+@レーヴァテイン
+今まで…本気じゃなかったのね…
+そんな強力な武器を
+持っていた…なんてっ…
+
+# textboxarrow 0 3
+@スイハ
+何か勘違いしているようですけれど
+私達の目的はバイブスの排除であり
+この世界の救済です
+
+# textboxarrow 0 3
+@スイハ
+これを使うと
+世界を破壊しすぎてしまいますからね
+できれば使いたくなかった…
+
+# face 3100211 "angry"
+# textboxarrow 0 1
+# voice 310021 "revatein_ge_0010"
+@レーヴァテイン
+マスターは…殺させないっ…！
+
+# textboxarrow 0 3
+@スイハ
+射抜かれたいのですか？
+犬のようにバイブス所持者に
+尻尾を振って…
+
+# textboxarrow 0 3
+# voice 340171 "suiha_c_0027"
+@スイハ
+おぞましいものですね
+私は犬は嫌いです
+
+# face 3100211 "normal"
+# textboxarrow 0 1
+@レーヴァテイン
+何故、バイブスを…
+共鳴をそんなに忌避するの…？
+あなた達は…どこから来たの…？
+
+# textboxarrow 0 3
+@スイハ
+…壊れてしまった世界から
+
+# face 3100211 "surprise"
+# textboxarrow 0 1
+@レーヴァテイン
+えっ…？
+
+# voice 340171 "suiha_c_0007"
+# textboxarrow 0 3
+@スイハ
+何でもありません
+これで、終わりです
+
+;;//スイハがレーヴァテインを射る
+# textwindow "close"
+# se "SE_5743"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# fadeout "black" 1.5
+# waitandnext 1.5

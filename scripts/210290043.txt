@@ -1,0 +1,107 @@
+;;4_3
+# script "lisp"
+# background "sea_beach_day"
+# bgmfile "bgm236" "BgmSeaEventBattle" 0
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 3
+# body 45007001
+# pos 45007001 4
+# scale 45007001 0.8 0
+# body 43018001
+# pos 43018001 2
+# scale 43018001 0.8 0
+# body 41028001
+# pos 41028001 3
+# scale 41028001 0.8 0
+# layer 43018001 5
+# alpha 41028001 0 0
+# imageset 0 "bg_black"
+# imagelayer 0 1
+# imagealpha 0 0 0
+# imagescale 0 2 0
+# voice 5007 "buryunaku_0012"
+@ブリューナク
+三国統一
+それは生半可な覚悟で
+成し遂げられるものではない
+
+# imagepos 0 0 0
+@ブリューナク
+多くの痛みを伴うだろう
+三国統一のために
+お前に死ぬ覚悟はあるか？
+
+# textboxarrow 0 1
+@フォルカス
+もちろん
+死ぬ覚悟なんてありません！
+
+;;//フォルカス、ブリューナクを吹っ飛ばす
+# move 43018001 3 0.2
+# waitandnext 0.1
+
+# se "SE_0750"
+# move 45007001 5 0.2
+# shake 0 0.5
+# textboxarrow 0 3
+@ブリューナク
+なにっ…？
+
+# textboxarrow 0 2
+@フォルカス
+三国統一を果たし、
+みんながお腹いっぱいになるまで
+死ぬわけにはいきません！
+
+# textflame 0 0
+@
+力強い宣言と共に、
+ブリューナクの銃は吹き飛んだ
+
+;;//SE：ビデオテープの早送りの音「キュルルル～」みたいな
+;;//フォルカスとダーインスレイヴが相対
+;;//早送り演出
+# se "SE_0748"
+# se "bgm236_speedup"
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "close"
+# envbody 1000 19 0
+# effectstart 1000
+# imagealpha 0 1 0.3
+# waitandnext 0.3
+
+# alpha 43018001 0 0
+# alpha 45007001 0 0
+# waitandnext 0.1
+
+# se "SE_0749"
+# se "bgm236_default"
+# imagealpha 0 0 0.3
+# waitandnext 0.3
+
+# effectskip 1000
+# serif 0
+# textwindow "normal"
+# textflame 0 0
+@
+堕落隊とクラブ隊の謀反が
+ダーインスレイヴの試練だったことを
+知ったフォルカス
+
+@
+フォルカスは、改めて皇帝として
+三国統一を目指すことを宣言する
+
+# mask 43018001 off
+# move 43018001 3 0
+# alpha 43018001 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 3018 "forcas_0036"
+@フォルカス
+皆がお腹いっぱいになれる世界を
+作ります！
+どうか、力を貸してください！

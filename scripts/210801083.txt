@@ -1,0 +1,208 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;第８章 章タイトル：「ビギニング・オブ・ジ・エンド」
+;;第1話－８　タイトル：幾つかの答え
+;;1_8_3
+;;スクリプト最後の背景：荒野
+;;-----------------------------------------
+# script "lisp"
+# background "wild"
+# bgmfile "bgm401" "BgmIntegralNoahEvent" 0
+;;-----------------------------------------
+;;マスターアルマス
+# body 196
+# pos 196 3
+# scale 196 0.8 0
+# layer 196 2
+# alpha 196 0 0
+# mask 196 off
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 2
+# alpha 3201911 0 0
+# mask 3201911 off
+;;ゴーレム
+# body 900012
+# pos 900012 3
+# scale 900012 0.8 0
+# layer 900012 2
+# alpha 900012 0 0
+# mask 900012 off
+;;-----------------------------------------
+# voice 320191 "chihyu_a_0029"
+# move 3201911 3 0
+# face 3201911 "angry"
+# alpha 3201911 1 0
+# mask 3201911 off
+# textflame 1 1
+# textboxarrow 0 2
+@シユウ
+うがあああぁぁ！
+
+;;//ゴーレムが倒される
+;;//すぐ次のゴーレムが現れる
+# textwindow "close"
+# alpha 3201911 0 0.5
+# move 900012 3 0
+# alpha 900012 1 0.5
+# mask 900012 off
+# waitandnext 0.6
+
+# se "SE_4816"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# se "SE_3001"
+# alpha 900012 0 0.5
+# waitandnext 1.2
+
+# se "SE_5613"
+# move 900012 3 0
+# alpha 900012 1 0.5
+# mask 900012 off
+# waitandnext 0.5
+
+# waitandnext 1
+
+# alpha 900012 0 0.5
+# move 3102311 2 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 196 4 0
+# face 196 "angry"
+# alpha 196 1 0.5
+# mask 196 on
+# textboxarrow 0 3
+# textwindow "normal"
+@アルマス
+何なのよっ…
+キリがないわ…！
+
+# textboxarrow 0 1
+@アスカロン
+ハァ…ハァ…
+まだ、いけますっ
+
+# alpha 3102311 0 0.5
+# alpha 196 0 0.5
+# move 3501711 3 0
+# face 3501711 "angry"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# textboxarrow 0 2
+@グリモワール
+この魔力…ロジェスティラって
+奴の仕業ね…！
+負けるもんですかっ
+
+# textboxarrow 0 2
+@グリモワール
+魔術においては、ワタシの方が
+格上だってことを教えてあげるわ！
+
+# face 3501711 "normal"
+# textboxarrow 0 2
+@グリモワール
+この怒り…“憤怒”がワタシの
+“大罪”だったら
+分かりやすかったんだけど
+
+# textboxarrow 0 2
+@グリモワール
+フォルカスが“憤怒”を象徴する
+ユニコーンを従えていた
+ということは…
+
+# textboxarrow 0 2
+@グリモワール
+ワタシの“大罪”は恐らく“傲慢”
+それを呼び覚ませれば、こんな土人形
+なんて焼き払ってやる！
+
+# face 3501711 "angry"
+# textboxarrow 0 2
+@グリモワール
+ワタシが…ワタシこそが最強なのよ！
+皆、跪き、ひれ伏しなさい！！
+
+;;//炎上演出
+# se "SE_4716"
+# envbody 1000 7 14
+# effectstart 1000
+# waitandnext 0.5
+
+# textboxarrow 0 2
+@グリモワール
+…………
+
+;;グリモワール（独白）
+# voice 350171 "grimoire_ge_0022"
+# move 3501711 3 0
+# face 3501711 "surprise"
+# alpha 3501711 1 0.5
+# textboxarrow 0 0
+# textwindow "moya"
+# mask 3501711 off
+@グリモワール
+どうして…？
+何の力も湧いてこない…
+そんなはずないのにっ
+
+;;グリモワール（独白）
+# voice 350171 "grimoire_ge_0028"
+# face 3501711 "normal"
+# textboxarrow 0 0
+@グリモワール
+何か足りないっていうの？
+でも、一体、何が…？
+
+# effectskip 1000
+# alpha 3501711 0 0.5
+# move 3102311 3 0
+# face 3102311 "angry"
+# alpha 3102311 1 0.5
+# mask 3102311 off
+# textboxarrow 0 2
+# textwindow "normal"
+@アスカロン
+グリモワール、危ない！！
+
+;;//ゴーレムがグリモワールを弾き飛ばす
+# textwindow "close"
+# alpha 3102311 0 0.5
+# effectstart 1000
+# move 3501711 3 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 off
+# waitandnext 0.6
+
+# se "SE_4602"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# voice 350171 "grimoire_ge_0038"
+# face 3501711 "angry"
+# textboxarrow 0 2
+# textwindow "normal"
+@グリモワール
+あぐうっ…！

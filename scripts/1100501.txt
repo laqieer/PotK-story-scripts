@@ -1,0 +1,988 @@
+;;//妖精王の城
+# script "lisp"
+# background "pope_room"
+# bgm "bgm005" 0
+# body 135
+# pos 135 3
+# scale 135 0.8 0
+# mask 135 off
+# layer 135 2
+# body 3820001
+# pos 3820001 3
+# scale 3820001 0.8 0
+# alpha 3820001 0 0
+# layer 3820001 1
+# textflame 1 1
+# textboxarrow 0 2
+# voice 9970 "oberon_0009"
+# face 135 "angry"
+@オベロン
+他国の兵よ！
+
+# entry 38200011 3820001
+# pos 38200011 1
+# scale 38200011 0.8 0
+# alpha 38200011 0 0
+# entry 38200012 3820001
+# pos 38200012 5
+# scale 38200012 0.8 0
+# alpha 38200012 0 0
+@オベロン
+なぜ、協定を破って
+我が庇護下の国に攻め入った！？
+これ以上の狼藉は許さんぞ！
+
+# imageset 2 "bg_white"
+# imagealpha 2 0 0
+# imagelayer 2 1
+# imageset 3 "bg_white"
+# imagealpha 3 0 0
+# imagelayer 3 2
+# alpha 135 0 0.5
+# alpha 3820001 1 0.5
+# alpha 38200011 1 0.5
+# alpha 38200012 1 0.5
+# voice 382000 "demon_0004"
+# textboxarrow 0 2
+@ケイオスリオン兵
+妖精王オベロンを発見！
+殺せーっ！！
+
+# imagepos 2 0 30
+# imagepos 3 0 30
+# alpha 135 1 0.5
+# alpha 3820001 0 0.5
+# alpha 38200011 0 0.5
+# alpha 38200012 0 0.5
+# voice 9970 "oberon_0019"
+@オベロン
+愚かな者達よ
+今すぐここから立ち去れ！
+
+;;//兵士達が見えない壁にぶつかる
+;;# se "SE_9157"
+# sedelay "SE_9118" 0.3
+# sedelay "SE_9127" 0.6
+# imagescale 2 0.5 0.5
+# imagealpha 2 0.4 0.5
+# imagescale 3 0.7 0.5
+# imagealpha 3 0.4 0.5
+# waitandnext 1
+
+# imagealpha 2 0 0.5
+# imagealpha 3 0 0.5
+# alpha 135 0 0.5
+# alpha 3820001 1 0.5
+# alpha 38200011 1 0.5
+# alpha 38200012 1 0.5
+# voice 382000 "demon_0009"
+# textboxarrow 0 2
+@ケイオスリオン兵
+くそっ！
+また結界を張りやがったんだ
+力尽くでぶち壊せ！
+
+# body 136
+# pos 136 5
+# scale 136 0.8 0
+# alpha 136 0 0
+# body 137
+# pos 137 1
+# scale 137 0.8 0
+# alpha 137 0 0
+# serif 1
+# mask 135 on
+@ケイオスリオン兵
+おおーーーーーーーーっ！！
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# alpha 136 1 0.5
+# alpha 137 1 0.5
+# alpha 135 1 0.5
+# alpha 3820001 0 0.5
+# alpha 38200011 0 0.5
+# alpha 38200012 0 0.5
+# voice 9970 "oberon_0007"
+# textboxarrow 0 2
+@オベロン
+その程度で
+わしの結界を破ろうとは
+愚かしいものだ
+
+# face 136 "angry"
+# face 137 "sad"
+# voice 9969 "gill_0016"
+# textboxarrow 0 1
+@ギル
+…これ、本当に大丈夫なのかよ？
+黒い連中に白い連中、
+茶色の連中まで群がってきてるぞ…
+
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+# imageset 1 "new_chapter_01"
+# imagealpha 1 0 0
+# imagelayer 1 4
+# textboxarrow 0 3
+@ナディア
+大丈夫ですよ、ギル
+オベロン様の結界が
+この程度でゆらぐことなどありません
+
+# body 3810001
+# pos 3810001 3
+# scale 3810001 0.8 0
+# layer 3810001 1
+# alpha 3810001 0 0
+# imagepos 0 0 0
+# imagepos 1 0 0
+# voice 9970 "oberon_0003"
+# textboxarrow 0 2
+@オベロン
+その通りだ
+しかし、「幻想結界」を破ったのが
+あの者達の仕業だったのなら…
+
+# bgm "stop"
+# waitandnext 0.1
+
+;;//黒画面に白文字で「――奪還せよ」を一瞬入れる
+;;//ドクン…という心音（海上編デートのときの音）も入れる？
+# fadein "white" 0.8
+# textwindow "close"
+# se "SE_9451"
+# se "SE_0644"
+# entry 38100011 3810001
+# pos 38100011 5
+# scale 38100011 0.8 0
+# alpha 38100011 0 0
+# entry 38100012 3810001
+# pos 38100012 1
+# scale 38100012 0.8 0
+# alpha 38100012 0 0
+# imagealpha 0 1 0.3
+# imagealpha 1 1 0.3
+# waitandnext 1.5
+
+# imageset 4 "black"
+# imagelayer 0 0
+# imagelayer 4 0
+# imagealpha 4 0 0
+# alpha 136 0 0
+# alpha 137 0 0
+# alpha 135 0 0
+# alpha 3820001 1 0
+# alpha 38200011 1 0
+# alpha 38200012 1 0
+# waitandnext 0.3
+
+# imagealpha 1 0 0.3
+# waitandnext 0.5
+
+# imagealpha 0 0 0.3
+# waitandnext 0.6
+
+# imagepos 0 0 -320
+# imagepos 4 0 320
+# body 3100111
+# pos 3100111 3
+# scale 3100111 0.8 0
+# mask 3100111 off
+# alpha 3100111 0 0
+# textwindow "nomal"
+# voice 382000 "demon_0017"
+# textboxarrow 0 2
+@ケイオスリオン兵
+ちくしょう！
+なんて固い結界だ…！
+あん…？
+
+;;//マサムネがケイオスリオン兵を薙ぎ払う
+# textwindow "close"
+# imagealpha 0 1 0.5
+# imagealpha 4 1 0.5
+# waitandnext 0.5
+
+# alpha 3820001 0 0
+# alpha 38200011 0 0
+# alpha 38200012 0 0
+# alpha 3100111 1 0
+# waitandnext 0.1
+
+# se "SE_4830"
+# effectbody 7000 1 0 0
+# effectpattern 7000 1 5
+# effectstart 7000
+# waitandnext 0.5
+
+# imagemoveto 0 0 -335 0.8
+# imagemoveto 4 0 335 0.8
+# waitandnext 2
+
+# se "SE_4732"
+# imagemoveto 0 -1000 -335 0.6
+# imagemoveto 4 1000 335 0.6
+# shake 0 0.5
+# waitandnext 1
+
+# serif 0
+# imagealpha 0 0 0
+# imagealpha 4 0 0
+# textwindow "nomal"
+# bgm "bgm010" 0
+# body 3500811
+# pos 3500811 3
+# scale 3500811 0.8 0
+# alpha 3500811 0 0
+# mask 3500811 off
+# face 3100111 "angry"
+# textboxarrow 0 2
+# voice 310011 "masamune_ge_0004"
+@マサムネ
+識別系統Ｂ・〇一
+マサムネ・獣刻・ヨルムンガンド
+世界蛇の力をもって切り開く！
+
+# alpha 3100111 0 0.5
+# face 3500811 "angry"
+# textwindow "nomal"
+# alpha 3500811 1 0.5
+# voice 350081 "bashosen_a_0007"
+# imagepos 0 0 0
+@芭蕉扇
+この私が一番乗りじゃないなんて
+気分が悪いわね
+全員、這いつくばると良いわ！
+
+;;//芭蕉扇がハルモニア兵を吹き飛ばす
+# textwindow "close"
+# se "SE_4771"
+# alpha 3500811 0 0.5
+# alpha 3810001 1 0.5
+# alpha 38100011 1 0.5
+# alpha 38100012 1 0.5
+# waitandnext 0.5
+
+# fadein "white" 0.5
+# shake 0 0.5
+# waitandnext 0.5
+
+# voice 381000 "angel_0025"
+# textwindow "nomal"
+# textboxarrow 0 2
+@ハルモニア兵
+ぎゃああああ…！
+
+# textwindow "close"
+# alpha 3810001 0 0.5
+# alpha 38100011 0 0.5
+# alpha 38100012 0 0.5
+# waitandnext 0.8
+
+# textwindow "nomal"
+# body 3830001
+# pos 3830001 3
+# scale 3830001 0.8 0
+# alpha 3830001 0 0
+# body 3400711
+# pos 3400711 3
+# scale 3400711 0.8 0
+# alpha 3400711 0 0
+# layer 3830001 1
+# mask 3400711 off
+# alpha 3500811 1 0.5
+# voice 350081 "bashosen_a_0027"
+@芭蕉扇
+ああ、イヤだ…
+妾と同じ目線に立たないで
+忌々しいD.plug・リリスが疼くのよ
+
+# face 3400711 "angry"
+# entry 38300011 3830001
+# pos 38300011 5
+# scale 38300011 0.8 0
+# alpha 38300011 0 0
+# entry 38300012 3830001
+# pos 38300012 1
+# scale 38300012 0.8 0
+# alpha 38300012 0 0
+# alpha 3500811 0 0.5
+# alpha 3400711 1 0.5
+# voice 340071 "shekina_t_0004"
+@シェキナー
+シェキナー、聖鎖名・ラファエル
+光を纏い降臨しました
+全ての者に規律と守護を
+
+;;//シェキナーがトレイセーマ兵を射抜く
+# textwindow "close"
+# se "SE_9083"
+# alpha 3400711 0 0.5
+# alpha 38300011 1 0.5
+# alpha 38300012 1 0.5
+# alpha 3830001 1 0.5
+# waitandnext 0.5
+
+# fadein "white" 0.5
+# shake 0 0.5
+# waitandnext 0.5
+
+# voice 383000 "cryptid_0025"
+# textwindow "nomal"
+# textboxarrow 0 2
+@トレイセーマ兵
+うわあああっ…！
+一旦、退け！退けぇっ…！
+
+# alpha 38300011 0 0.5
+# alpha 38300012 0 0.5
+# alpha 3830001 0 0.5
+# waitandnext 0.5
+
+# face 136 "surprise"
+# face 135 "surprise"
+# alpha 136 1 0.5
+# alpha 137 1 0.5
+# alpha 135 1 0.5
+# voice 9968 "nadia_0023"
+# textboxarrow 0 3
+@ナディア
+あれは…
+斬ル姫…！
+
+# face 137 "normal"
+# voice 9969 "gill_0044"
+# textboxarrow 0 1
+@ギル
+…すげぇ強いじゃないか！
+まさか、本当に伝承みたく俺達を
+助けに来てくれたのかよっ…？
+
+;;//黒画面に白文字「――奪還せよ」一瞬
+;;//ドクン…という心音も？
+# fadein "white" 0.8
+# se "SE_9451"
+# se "SE_0644"
+# textwindow "close"
+# imagealpha 0 1 0.3
+# imagealpha 1 1 0.3
+# waitandnext 1.5
+
+# imagealpha 1 0 0.3
+# waitandnext 0.4
+
+# imagealpha 0 0 0.3
+# waitandnext 0.6
+
+# face 136 "normal"
+# textwindow "nomal"
+# serif 1
+@住民４
+やった！
+兵士達が皆、退いていくぞっ
+
+# serif 1
+@住民５
+あれが伝説の斬ル姫っ…
+ありがたや、ありがたや
+
+# alpha 136 0 0.5
+# alpha 137 0 0.5
+# alpha 135 0 0.5
+# alpha 3100111 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textwindow "nomal"
+# face 3100111 "normal"
+# voice 310011 "masamune_ge_0039"
+# textboxarrow 0 2
+@マサムネ
+ほう
+芭蕉扇にシェキナー
+そなた達も出張ってきたか
+
+# alpha 3100111 0 0.5
+# alpha 3500811 1 0.5
+# voice 350081 "bashosen_a_0004"
+@芭蕉扇
+まあねぇ
+あの方の命令だし…
+さっさと終わらせたいわ
+
+# face 3400711 "usual"
+# alpha 3500811 0 0.5
+# alpha 3400711 1 0.5
+# voice 340071 "shekina_t_0003"
+@シェキナー
+全てを守護するため、
+聖なる浄化のときが訪れました
+規律正しい連携によって
+
+;;//黒画面に白文字「――奪還せよ」一瞬
+;;//心音も？
+# se "SE_9451"
+# se "SE_0644"
+# fadein "white" 0.8
+# textwindow "close"
+# imagealpha 0 1 0.3
+# imagealpha 1 1 0.3
+# waitandnext 1.5
+
+# imagealpha 1 0 0.3
+# waitandnext 0.3
+
+# imagealpha 0 0 0.3
+# waitandnext 0.5
+
+# face 3400711 "angry"
+# textwindow "nomal"
+# bgm "stop"
+# textboxarrow 0 2
+@シェキナー
+妖精王の結界を破りましょう
+
+# alpha 3400711 0 0.5
+# alpha 136 1 0.5
+# alpha 137 1 0.5
+# alpha 135 1 0.5
+# voice 9969 "gill_0023"
+# face 137 "surprise"
+# face 136 "surprise"
+# textboxarrow 0 1
+@ギル
+えっ…？
+
+# bgm "bgm023" 0
+# face 135 "angry"
+# voice 9970 "oberon_0028"
+# textboxarrow 0 2
+@オベロン
+ええいっ！
+やはり、あの者達を
+出してきおったか！
+
+@オベロン
+これは…
+耐えられぬかもしれぬっ…！
+
+# textwindow "close"
+# sedelay "SE_9118" 0.3
+# sedelay "SE_9127" 0.6
+# imagescale 2 0.5 0.5
+# imagealpha 2 0.4 0.5
+# imagescale 3 0.7 0.5
+# imagealpha 3 0.4 0.5
+# waitandnext 1
+
+# imagealpha 2 0 0.5
+# imagealpha 3 0 0.5
+# textwindow "nomal"
+# alpha 136 0 0.5
+# alpha 137 0 0.5
+# alpha 135 0 0.5
+# alpha 3500811 1 0.5
+# face 3500811 "angry"
+# voice 350081 "bashosen_a_0007"
+@芭蕉扇
+ふんっ
+今さら遅いわ！
+
+# voice 340071 "shekina_t_unit_0009"
+# alpha 3500811 0 0.5
+# alpha 3400711 1 0.5
+# face 3400711 "angry"
+@シェキナー
+お前の生命力をもらう！
+
+# face 3100111 "angry"
+# alpha 3400711 0 0.5
+# alpha 3100111 1 0.5
+# voice 310011 "masamune_ge_unit_0009"
+@マサムネ
+我が毒蛇の刻印、
+貴様の目に焼き付けてやろう！
+
+# alpha 3100111 0 0.5
+# waitandnext 0.5
+
+# imagealpha 2 0.4 0.5
+# imagealpha 3 0.4 0.5
+# voice 9970 "oberon_0027"
+# alpha 136 1 0.5
+# alpha 137 1 0.5
+# alpha 135 1 0.5
+@オベロン
+う、うおおおおっ！
+皆、伏せるのだ…！
+
+;;# se "SE_9094"
+;;//三人の攻撃で結界が砕け散る
+# textwindow "close"
+# se "SE_9063"
+# imagealpha 2 0 0.5
+# shake 0 0.5
+# waitandnext 0.6
+
+
+# se "SE_9063"
+# imagealpha 3 0 0.5
+# shake 1 0.5
+# waitandnext 1
+
+# se "SE_9175"
+# fadein "red" 0.5
+# shake 1 1
+# waitandnext 1
+
+# face 135 "surprise"
+# textwindow "nomal"
+# voice 9968 "nadia_0027"
+# textboxarrow 0 3
+@ナディア
+きゃあぁぁぁぁ…！
+
+# textboxarrow 0 1
+# voice 9969 "gill_0019"
+@ギル
+嘘だろ…
+オベロン様の結界が…
+壊された…
+
+# alpha 136 0 0.5
+# alpha 137 0 0.5
+# alpha 135 0 0.5
+# alpha 3100111 1 0.5
+# voice 310011 "masamune_ge_0007"
+# textboxarrow 0 2
+@マサムネ
+雑魚に用はない
+そなたがナディア王女だな
+
+# face 136 "angry"
+# alpha 3100111 0 0.5
+# alpha 136 1 0.5
+# alpha 137 1 0.5
+# alpha 135 1 0.5
+# textboxarrow 0 3
+@ナディア
+…仰る通り、私がナディアです
+
+# face 3400711 "usual"
+# alpha 136 0 0.5
+# alpha 137 0 0.5
+# alpha 135 0 0.5
+# alpha 3400711 1 0.5
+# voice 340071 "shekina_t_0013"
+# textboxarrow 0 2
+@シェキナー
+この者が託宣にあった「鍵」…
+
+# face 3500811 "shy"
+# alpha 3400711 0 0.5
+# alpha 3500811 1 0.5
+# voice 350081 "bashosen_a_0005"
+@芭蕉扇
+ふふふ
+これであの方に褒めていただけるわ
+さあ、こっちに来なさい！
+
+# alpha 3500811 0 0.5
+# alpha 3100111 1 0.5
+# voice 310011 "masamune_ge_0009"
+@マサムネ
+勝手な真似をするな
+彼女の身柄は拙者があずかる
+それが十三議会からの命令だ
+
+# face 3500811 "surprise"
+# alpha 3100111 0 0.5
+# alpha 3500811 1 0.5
+# voice 350081 "bashosen_a_0009"
+@芭蕉扇
+はあ？
+そっちの都合なんて知らないわよ
+吹き飛ばされたいの？
+
+# alpha 3500811 0 0.5
+# alpha 3400711 1 0.5
+@シェキナー
+二人とも下がりなさい
+「鍵」は私達ハルモニア教皇国にこそ
+ふさわしいもの
+
+@シェキナー
+汚らわしい貴方達には
+指一本触れる資格はありませんよ
+
+# imageset 2 "c100111"
+# imageset 3 "c400711"
+# imageset 4 "c500811"
+# imagealpha 2 0 0
+# imagealpha 3 0 0
+# imagealpha 4 0 0
+# imagelayer 2 4
+# imagelayer 3 3
+# imagelayer 4 2
+# imagescale 2 1 0
+# imagescale 3 1 0
+# imagescale 4 1 0
+# alpha 3400711 0 0.5
+# alpha 3100111 1 0.5
+# voice 310011 "masamune_ge_0010"
+@マサムネ
+その侮辱…
+聞き捨てならんな
+
+# imagepos 2 0 0
+# imagepos 3 0 0
+# imagepos 4 0 0
+# alpha 3100111 0 0.5
+# alpha 136 1 0.5
+# alpha 137 1 0.5
+# alpha 135 1 0.5
+# face 135 "normal"
+# face 136 "surprise"
+# textboxarrow 0 1
+@ギル
+なんだ、あいつら…？
+今度は仲間割れかよ
+
+;;//ドクン…と心音
+;;//マサムネ、芭蕉扇、シェキナーの記憶がフラッシュバック
+;;//通常キル姫の時のキャラクエ一枚絵とかいれる
+# se "SE_0644"
+# se "SE_0742"
+# textwindow "close"
+# fadein "white" 0.5
+# imagealpha 2 1 0
+# imagealpha 3 1 0
+# imagealpha 4 1 0
+# waitandnext 1
+
+# se "SE_0742"
+# fadein "white" 0.5
+# imagealpha 2 0 0
+# waitandnext 1
+
+# se "SE_0742"
+# fadein "white" 0.5
+# imagealpha 3 0 0
+# waitandnext 1
+
+# fadein "white" 1
+# imagealpha 4 0 0
+# waitandnext 1
+
+# textwindow "nomal"
+# select "みんな…仲間だった…？" "select_label_01" "一緒に戦っていたはずなのに…" "select_label_01" "今の記憶は…？" "select_label_01"
+なんだ、あいつら…？
+今度は仲間割れかよ
+
+# label "select_label_01"
+# imageset 2 "new_chapter_02"
+# imageset 3 "new_chapter_03"
+# imageset 4 "new_chapter_04"
+# imagealpha 2 0 0
+# imagealpha 3 0 0
+# imagealpha 4 0 0
+# imagelayer 2 4
+# imagelayer 3 3
+# imagelayer 4 4
+# imagescale 2 1 0
+# imagescale 3 1 0
+# imagescale 4 1 0
+# labeljump "select_label_end"
+# textflame 1 1
+# bgm "stop"
+# voice 9968 "nadia_0040"
+# textboxarrow 0 3
+@ナディア
+しっかりして下さい
+顔が真っ青ですよ…
+
+# label "select_label_end"
+;;//黒画面に白文字「――奪還せよ」と心音
+;;//黒画面に白文字「――人類の復興」と心音
+;;//黒画面に白文字「お前はそのために帰ってきたのだから」と心音
+;;//黒画面に白文字で「――斬ル姫を奪還せよ」
+# fadein "white" 0.8
+# textwindow "close"
+# imagepos 2 0 0
+# imagepos 3 0 0
+# imagepos 4 0 0
+# imagealpha 0 1 0.3
+# imagealpha 1 1 0.3
+# se "SE_9451"
+# se "SE_0644"
+# waitandnext 1.5
+
+# imagealpha 1 0 0.3
+# waitandnext 0.3
+
+# imagealpha 2 1 0.3
+# se "SE_0644"
+# waitandnext 1.5
+
+# imagealpha 2 0 0.3
+# waitandnext 0.3
+
+# imagealpha 3 1 0.3
+# se "SE_0644"
+# waitandnext 1.5
+
+# imagealpha 3 0 0.3
+# waitandnext 0.3
+
+# se "SE_0644"
+# bgmfile "bgm264" "BgmLostRagnarokBattle001" 0
+# imagealpha 4 1 0.3
+# waitandnext 2
+
+# imagealpha 4 0 0.3
+# waitandnext 0.3
+
+# imagealpha 0 0 1
+# waitandnext 1
+
+# textwindow "nomal"
+# select "彼女達を軛から解放する！" "select_label_02" "人類の復興を成す！" "select_label_02"
+しっかりして下さい
+顔が真っ青ですよ…
+
+# label "select_label_02"
+# labeljump "select_label_end02"
+# textflame 1 1
+# face 135 "surprise"
+# voice 9970 "oberon_0044"
+# textboxarrow 0 2
+@オベロン
+おお！記憶の一部が戻ったか…
+ならば、わしも一世一代の賭けに
+出るとしよう
+
+# label "select_label_end02"
+# face 135 "angry"
+@オベロン
+…バイブスを有する者よ、
+ナディアを連れて逃げてくれ
+
+# face 136 "sad"
+@オベロン
+わしが今から転移魔法を使う
+だが、きっとすぐに
+アルマスが駆けつける
+
+# voice 9970 "oberon_0011"
+@オベロン
+彼女とともに…
+そなたの使命を
+成し遂げるのだ…！
+
+@オベロン
+ギル、お前も同行しなさい
+壁の外で生きるのだ
+
+# voice 9970 "oberon_0033"
+@オベロン
+もっといろいろなことを
+教えておいてやりたかったが…
+
+@オベロン
+これからは自分の力で
+前に進んでいくしかない
+
+# textboxarrow 0 1
+# voice 9969 "gill_0023"
+@ギル
+ちょ…ちょっと遺言みたいなこと
+言うのやめて下さいよ…！
+オレはまだ戦えます！
+
+# voice 9970 "oberon_0013"
+# textboxarrow 0 2
+@オベロン
+馬鹿を申すな！
+…ギル、ナディアを頼んだぞ
+
+# face 136 "angry"
+# voice 9968 "nadia_0037"
+# textboxarrow 0 3
+@ナディア
+王女である私が民を残して逃げる
+わけにはまいりません！
+
+# face 135 "normal"
+# voice 9970 "oberon_0012"
+# textboxarrow 0 2
+@オベロン
+聞き分けてくれ…
+そなたを失えば全て終わりなのだ
+
+# voice 9968 "nadia_0014"
+# face 136 "surprise"
+# textboxarrow 0 3
+@ナディア
+ですがっ…！
+
+# alpha 3400711 1 0.5
+# alpha 136 0 0.5
+# alpha 137 0 0.5
+# alpha 135 0 0.5
+# voice 340071 "shekina_t_0034"
+# textboxarrow 0 2
+@シェキナー
+逃がしはしません！
+
+;;//シェキナーが矢を放つ
+# se "SE_4301"
+# shake 0 0.5
+# fadein "red" 0.5
+# waitandnext 0.5
+
+# alpha 3400711 0 0.5
+# alpha 136 1 0.5
+# alpha 137 1 0.5
+# alpha 135 1 0.5
+# face 135 "angry"
+# voice 9970 "oberon_0040"
+@オベロン
+ぐうぅっ…！
+行くのだ、運命の子らよっ
+
+# textboxarrow 0 3
+@ナディア
+オベロン様ぁっ…！
+
+# se "SE_5651"
+# textwindow "close"
+# alpha 135 0 1
+# fadeout "white" 1
+# se "SE_5517"
+# waitandnext 1.1
+;;//白フラッシュ
+;;//マスターとナディア、ギルが転移する
+;;//街中（夜）
+
+# pos 136 4
+# pos 137 2
+# alpha 136 1 0
+# alpha 137 1 0
+# background "101_city_night3"
+# waitandnext 1
+
+# fadein "white" 0.8
+# waitandnext 0.8
+
+# face 137 "angry"
+# alpha 136 1 0.5
+# alpha 137 1 0.5
+# face 136 "sad"
+# textwindow "nomal"
+# voice 9969 "gill_0040"
+# bgm "bgm004" 0
+# textboxarrow 0 1
+@ギル
+ちっくしょぉぉっ…！
+あいつら、絶対に許さねえ！
+
+@ギル
+オレは逃げるなんてご免だ！
+すぐに引き返して、
+あいつらを全員ぶっ倒してやる！
+
+# select "それはダメだ" "select_label_03" "このまま逃げよう" "select_label_03" "君じゃ勝てない" "select_label_03"
+オレは逃げるなんてご免だ！
+すぐに引き返して、
+あいつらを全員ぶっ倒してやる！
+
+# label "select_label_03"
+# labeljump "select_label_end03"
+# textflame 1 1
+# voice 9969 "gill_0009"
+# textboxarrow 0 1
+@ギル
+なんだと！？
+ふざけんなよ、あんたっ
+
+# label "select_label_end03"
+# textboxarrow 0 3
+@ナディア
+…ギル、私もこの方の意見に賛成です
+この場は一旦、逃げましょう
+
+# voice 9969 "gill_0010"
+# textboxarrow 0 1
+@ギル
+姫様までっ…
+だったら二人で逃げろよ！
+オレは戻るぞ
+
+# voice 9968 "nadia_0011"
+# face 136 "angry"
+# textboxarrow 0 3
+@ナディア
+いい加減になさい！
+
+# face 137 "surprise"
+# textboxarrow 0 1
+@ギル
+！？
+
+# textboxarrow 0 3
+@ナディア
+…あなたは私の従者です
+主人の命令に従いなさい
+
+# voice 9969 "gill_0033"
+# face 137 "sad"
+# textboxarrow 0 1
+@ギル
+…姫様、泣いて――
+…ごめん…なさい
+
+# face 136 "angry"
+# textboxarrow 0 3
+@ナディア
+さあ、急ぎましょう！
+
+# alpha 136 0 0.5
+# alpha 137 0 0.5
+# alpha 3100111 1 0.5
+# bgm "bgm005" 0
+# voice 310011 "masamune_ge_0007"
+# textboxarrow 0 2
+@マサムネ
+兵は拙速を尊ぶと言う
+獣刻・ヨルムンガンドの牙は
+そなた達を捕らえた
+
+# alpha 3100111 0 0.5
+# alpha 3400711 1 0.5
+# voice 340071 "shekina_t_0004"
+@シェキナー
+せっかく妖精王が作り出した
+最大の好機を無駄にしましたね
+
+# alpha 3400711 0 0.5
+# alpha 3500811 1 0.5
+# face 3500811 "usual"
+# voice 350081 "bashosen_a_0005"
+@芭蕉扇
+あははははっ！
+あっけなく追いついたわ
+あいつ無駄死にだったかしら？
+
+# alpha 3500811 0 0.5
+# alpha 136 1 0.5
+# alpha 137 1 0.5
+# face 137 "surprise"
+# face 136 "surprise"
+# voice 9968 "nadia_0040"
+# textboxarrow 0 3
+@ナディア
+こんなに早く追いつかれるだなんて

@@ -1,0 +1,408 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;３章１話　タイトル「地上の脅威―リバイヴ―」
+;;第1話　タイトル：異形の浸食
+;;7_1_8
+;;スクリプト最後の背景：部屋（夜）
+;;-----------------------------------------
+# script "lisp"
+# background "in_downtown"
+# bgmfile "bgm271" "BgmLostRagnarokEvent" 0
+;;-----------------------------------------
+;;アスカロン
+# body 3102311
+# pos 3102311 3
+# scale 3102311 0.8 0
+# layer 3102311 2
+# alpha 3102311 0 0
+# mask 3102311 off
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 2
+# alpha 3501711 0 0
+# mask 3501711 off
+;;カミト
+# body 210
+# pos 210 3
+# scale 210 0.8 0
+# layer 210 2
+# alpha 210 0 0
+# mask 210 off
+;;ヴァング
+# body 211
+# pos 211 3
+# scale 211 0.8 0
+# layer 211 2
+# alpha 211 0 0
+# mask 211 off
+;;フォルカス
+# body 3301811
+# pos 3301811 3
+# scale 3301811 0.8 0
+# layer 3301811 2
+# alpha 3301811 0 0
+# mask 3301811 off
+;;-----------------------------------------
+;;第1話　タイトル：異形の浸食
+;;//背景：下町
+# move 211 2 0
+# face 211 "normal"
+# alpha 211 1 0
+# mask 211 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0
+# mask 210 on
+# voice 9935 "vang_0020"
+@ヴァング
+やっと帰りやがったな
+
+# face 210 "sad"
+# textboxarrow 0 3
+# voice 9936 "kamito_0001"
+@カミト
+兄貴…
+本当に良かったのかな…？
+ギルドの話、断って…
+
+# textboxarrow 0 3
+@カミト
+今日はあっさり帰っていったけど、
+あとで報復とか…
+
+# face 211 "usual"
+# textboxarrow 0 1
+# voice 9935 "vang_0007"
+@ヴァング
+何て顔してんだ、カミト
+ちゃんと飯食ってるかぁ？
+
+# textboxarrow 0 1
+@ヴァング
+心配すんな
+さっきも言っただろうが
+
+# textboxarrow 0 1
+@ヴァング
+あいつらは群れることを第一に
+考えてやがる
+天下統一はただの建前だ
+
+# textboxarrow 0 1
+@ヴァング
+そんな連中と組んだら、
+天下統一どころか
+この町から出ることすらできねぇぜ
+
+# face 210 "normal"
+# textboxarrow 0 3
+# voice 9936 "kamito_0035"
+@カミト
+兄貴がそう言うなら…
+
+# face 211 "normal"
+# textboxarrow 0 1
+# voice 9935 "vang_0029"
+@ヴァング
+朝から面倒くせぇ話だったな
+オレは二度寝するわ
+
+;;//ヴァングが立ち去る
+# se "SE_0740"
+# textwindow "close"
+# alpha 211 0 0.5
+# waitandnext 0.5
+
+# move 210 3 0.5
+# mask 210 off
+# waitandnext 1.2
+
+;;//フォルカスがやって来る
+# se "SE_0740"
+# move 210 2 0.5
+# mask 210 on
+# move 3301811 4 0
+# face 3301811 "normal"
+# alpha 3301811 1 0.5
+# mask 3301811 on
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 330181 "forcas_t_0001"
+@フォルカス
+マスター、少しいいですか
+
+# textboxarrow 0 1
+# voice 9936 "kamito_0023"
+@カミト
+あ、うん…
+どうしたの？
+
+# textboxarrow 0 3
+@フォルカス
+先程のお話、マスターは納得して
+いないように見えましたけれど
+
+# textboxarrow 0 1
+@カミト
+そんなことないよっ…
+兄貴の言うことは正しいから
+
+# face 3301811 "angry"
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0009"
+@フォルカス
+マスター！
+これは…反省会を開く必要が
+ありますね
+
+# face 210 "surprise"
+# textboxarrow 0 1
+@カミト
+ええっ…
+
+;;//アスカロンとグリモワールがやって来る
+# se "SE_0740"
+# textwindow "close"
+# alpha 210 0 0.5
+# alpha 3301811 0 0.5
+# move 3102311 2 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# move 3501711 4 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# waitandnext 0.5
+
+# textboxarrow 0 1
+# textwindow "normal"
+# voice 310231 "ascalon_a_0001"
+@アスカロン
+マスター
+全員が町の外に出たのを確認しました
+
+# textboxarrow 0 3
+# voice 350171 "grimoire_ge_0003"
+@グリモワール
+戻ってくる気配もなかったわ
+
+# alpha 3102311 0 0.5
+# alpha 3501711 0 0.5
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 off
+# textboxarrow 0 2
+# voice 9936 "kamito_0032"
+@カミト
+ありがとう…
+
+# move 3102311 2 0
+# face 3102311 "normal"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# move 210 4 0.5
+# mask 210 on
+@アスカロン
+どうしたんですか？
+何だか元気がありませんよっ
+
+# alpha 210 0 0.5
+# move 3301811 4 0
+# face 3301811 "normal"
+# alpha 3301811 1 0.5
+# mask 3301811 on
+# textboxarrow 0 3
+@フォルカス
+あなた達も来て下さい
+部屋でマスターの反省会をします
+
+# alpha 3102311 0 0.5
+# move 3501711 2 0
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# mask 3501711 on
+# textboxarrow 0 1
+# voice 350171 "grimoire_ge_0034"
+@グリモワール
+ワタシは嫌よ
+キミ達だけでやってて
+
+# alpha 3501711 0 0.5
+# alpha 3301811 0 0.5
+# move 3102311 2 0
+# face 3102311 "happy"
+# alpha 3102311 1 0.5
+# mask 3102311 on
+# textboxarrow 0 1
+# move 210 4 0
+# face 210 "normal"
+# alpha 210 1 0.5
+# mask 210 on
+# voice 310231 "ascalon_a_0004"
+@アスカロン
+私は、マスターを応援しますね！
+
+# textboxarrow 0 3
+# voice 9936 "kamito_0003"
+@カミト
+ああ、うん…
+
+;;//背景：部屋（夜）
+# textwindow "close"
+# fadeout "black" 1
+# waitandnext 1.2
+
+# background "201_room"
+# alpha 3102311 0 0
+# alpha 210 0 0
+# move 210 3 0
+# face 210 "normal"
+# alpha 210 1 0
+# mask 210 off
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1
+
+# bgmfile "bgm409" "BgmIntegralNoahEvent" 0
+# textboxarrow 0 2
+# textwindow "normal"
+@カミト
+…………
+
+;;カミト（独白）
+# move 210 3 0
+# mask 210 off
+# textboxarrow 0 0
+# textwindow "moya"
+@カミト
+今日もフォルカスに叱られた…
+僕が全然しっかりしてないから…
+
+;;カミト（独白）
+# textboxarrow 0 0
+@カミト
+でも、何だか最近、怒りすぎな
+気もするんだよな…
+まるで焦ってるような…
+
+;;//フォルカスがやって来る
+# se "SE_0740"
+# move 210 2 0.5
+# mask 210 on
+# move 3301811 4 0
+# face 3301811 "normal"
+# alpha 3301811 1 0.5
+# mask 3301811 on
+# textboxarrow 0 3
+# textwindow "normal"
+# voice 330181 "forcas_t_0002"
+@フォルカス
+マスター、まだ起きていますか？
+
+# face 210 "surprise"
+# textboxarrow 0 1
+# voice 9936 "kamito_0026"
+@カミト
+フォルカス！？
+こんな夜中にどうしたのっ
+
+# face 3301811 "angry"
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0011"
+@フォルカス
+起きないで！
+…どうか、そのままで聞いて下さい
+
+# face 210 "normal"
+# textboxarrow 0 1
+# voice 9936 "kamito_0034"
+@カミト
+あ、うん…
+フォルカスがそう言うなら…
+
+# face 3301811 "normal"
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0001"
+@フォルカス
+マスター…
+あなたは、あなたが思っているより
+ずっと強い方です
+
+# textboxarrow 0 3
+@フォルカス
+あなたのバイブスと共鳴しているから
+分かります
+あなたは強い
+
+# textboxarrow 0 3
+@フォルカス
+そのことを信じて下さい
+あなたが、あなた自身を一番に
+信じて下さい
+
+# textboxarrow 0 3
+@フォルカス
+あなたはすぐヴァングさんを
+頼って、他人を頼って、その言葉に
+流されてしまいます
+
+# textboxarrow 0 3
+@フォルカス
+でも、いつか…
+ご自身で決断しなければ
+ならないときが来ます
+
+# textboxarrow 0 3
+@フォルカス
+どうか、そのとき悔いることのない
+決断ができるように
+
+# textboxarrow 0 3
+@フォルカス
+最後はご自身の意思で
+決断して下さいね
+
+# textboxarrow 0 1
+# voice 9936 "kamito_0023"
+@カミト
+うん…
+ねえ、フォルカス
+何でそんなことを…？
+
+# face 3301811 "sad"
+# textboxarrow 0 3
+# voice 330181 "forcas_t_0028"
+@フォルカス
+…いえ
+昼間、少し言い過ぎたかもと
+思っただけです
+
+# face 3301811 "normal"
+# textboxarrow 0 3
+@フォルカス
+それでは、おやすみなさい
+マスター
+
+# textboxarrow 0 1
+# voice 9936 "kamito_0003"
+@カミト
+うん
+おやすみ
+
+;;//フォルカスが出ていく
+# se "SE_0740"
+# textwindow "close"
+# alpha 3301811 0 0.5
+# waitandnext 1
+
+;;//暗転
+# fadeout "black" 1
+# waitandnext 1

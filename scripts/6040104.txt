@@ -1,0 +1,228 @@
+;;【EP2】戦闘後/弓矢の音:ラストが逃げ道を作る
+# script "lisp"
+# background "forest"
+# bgmfile "bgm166" "BgmPJZero001" 0
+# body 400151
+# pos 400151 5
+# scale 400151 0.8 0
+# body 24
+# pos 24 2
+# scale 24 0.8 0
+# body 100161
+# pos 100161 4
+# scale 100161 0.8 0
+# alpha 100161 0 0
+# face 400151 "angry"
+# face 24 "surprise"
+# textwindow "close"
+# waitandnext 0.1
+
+# se "SE_0688"
+# fadein "white" 0.2
+# waitandnext 0.2
+
+# fadein "white" 0.2
+# waitandnext 0.2
+
+# fadein "white" 0.2
+# waitandnext 0.2
+
+# textwindow "nomal"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 400151
+# voice 40015 "arutemisu_k_0024"
+@ラスト
+さあ、今のうちに行きなさい
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 24
+# face 24 "sad"
+@ティルフィング
+…彼女達を信じて良いのでしょうか、
+マスター？
+
+# body 200411
+# pos 200411 5
+# scale 200411 0.8 0
+# textflame 1 1
+# textboxarrow 0 3
+# alpha 400151 0 0.5
+# alpha 200411 0 0
+# alpha 100161 1 0.5
+# voice 10016 "masamune_k_0007"
+# chara 100161
+# face 100161 "angry"
+@ラース
+罠を仕掛けるくらいなら、
+すでにそなた達を斬っておる
+早く行け
+
+# body 200471
+# pos 200471 3
+# scale 200471 0.8 0
+# alpha 200471 0 0
+# alpha 200411 1 0.5
+# alpha 100161 0 0.5
+# textflame 1 1
+# textboxarrow 0 3
+# voice 2004 "parashu_unit_1005"
+# chara 200411
+# face 200411 "angry02"
+@パラシュ
+よく分からないけど、
+仲間割れをしているみたいだ
+行こう、マスター！
+
+# body 100281
+# pos 100281 5
+# scale 100281 0.8 0
+# alpha 24 0 0.5
+# alpha 200411 0 0.5
+# alpha 100281 0 0
+# alpha 200471 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# voice 20047 "parashu_k_battle_0001"
+# chara 200471
+@グラトニー
+逃がしはしないよ！
+
+;;グラトニーが斧を投げるが、それはスロウスが弾く
+# fadein "white" 0.5
+# shake 0 0.5
+# waitandnext 1
+# se "SE_9017"
+
+# body 500261
+# pos 500261 3
+# scale 500261 0.8 0
+# move 200471 1 0.5
+# rightin 100281 0.5
+# alpha 100281 1 0.5
+# alpha 500261 0 0
+# textflame 1 1
+# textboxarrow 0 3
+# chara 100281
+# voice 10028 "revatein_k_0013"
+# face 200471 "usual"
+# face 100281 "sad"
+@スロウス
+ハア…めんどくさい…
+
+# body 300111
+# pos 300111 3
+# scale 300111 0.8 0
+# alpha 300111 0 0
+# alpha 500261 1 0.5
+# layer 500261 3
+# layer 100281 2
+# layer 200471 1
+# textflame 1 1
+# textboxarrow 0 2
+# chara 500261
+# voice 50026 "furaikugeru_k_0005"
+# face 500261 "happy"
+@プライド
+アハハハハ！
+グラトニーのベァッドな顔、
+すっごくいいデス！！
+
+# alpha 500261 0 0.5
+# alpha 100281 0 0.5
+# alpha 200471 0 0.5
+# alpha 300111 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# chara 300111
+# voice 3001 "ronginusu_0001"
+# face 300111 "sad"
+@ロンギヌス
+マスター…ここは、この方々を
+信じてみませんか？
+
+# textflame 0 0
+@
+突然の展開に困惑しながらも
+マスター一行はその場から
+逃げることにした
+
+# body 300181
+# pos 300181 5
+# scale 300181 0.8 0
+# alpha 300181 0 0
+# body 101471
+# pos 101471 3
+# scale 101471 0.8 0
+# alpha 101471 0 0
+# alpha 300111 0 1
+# fadeout "black" 1
+# waitandnext 2
+
+# layer 101471 3
+# layer 300181 2
+# layer 200471 1
+# fadein "black" 0.5
+# alpha 200471 1 0
+# alpha 101471 1 0
+# alpha 300181 1 0
+# textflame 1 1
+# textboxarrow 0 1
+# chara 200471
+# face 200471 "surprise"
+@グラトニー
+…逃げられたね
+グリード、ラース、ラスト、プライド
+スロウス、どういうつもりだい？
+
+# alpha 101471 1 0.5
+# chara 101471
+# voice 10147 "tyrufing_k_0031"
+# textflame 1 1
+# textboxarrow 0 2
+# face 101471 "surprise"
+@グリード
+悪いけれど、ここは通さない
+彼らにはユグドラシルまで
+辿り着いてもらうわ
+
+# alpha 300181 1 0.5
+# voice 30018 "ronginusu_k_0010"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 300181
+# face 300181 "surprise"
+@エンヴィ
+どうしてこんなことを…
+皆さんは私と違って、
+とても優秀な方達なのに…
+
+# move 100281 3 0
+# textflame 1 1
+# textboxarrow 0 1
+# chara 200471
+# face 200471 "angry"
+@グラトニー
+理由を聞くだけ無駄だよ、エンヴィ
+仕方ないから全員、平らげる
+
+# alpha 101471 0 0.5
+# alpha 100281 1 0.5
+# voice 10028 "revatein_k_0002"
+# textflame 1 1
+# textboxarrow 0 2
+# chara 100281
+# face 100281 "surprise"
+@スロウス
+５対２なんだけど…
+そのこと分かってる？
+
+# textflame 1 1
+# textboxarrow 0 1
+# chara 200471
+# voice 20047 "parashu_k_0035"
+# face 200471 "usual"
+@グラトニー
+君達こそ、まさかボク達に
+勝てると思ってるのかい？

@@ -1,0 +1,600 @@
+;;-----------------------------------------
+;;SEA5章_20
+;;-----------------------------------------
+# script "lisp"
+# background "town_night_2"
+# bgmfile "bgm214" "BgmAncientKillers001" 0
+;;-----------------------------------------
+;;スイハfeat
+# body 6401711
+# pos 6401711 2
+# scale 6401711 0.8 0
+# layer 6401711 2
+# mask 6401711 off
+# alpha 6401711 1 0
+;;神令ラグナロクシルエット
+# body 3103611
+# pos 3103611 4
+# scale 3103611 0.8 0
+# layer 3103611 3
+# alpha 3103611 1 0
+# brightness 3103611 0 0
+;;ミーミル
+# body 270
+# pos 270 2
+# scale 270 0.8 0
+# layer 270 5
+# mask 270 off
+# alpha 270 0 0
+;;マナナン
+# body 6504011
+# pos 6504011 5
+# scale 6504011 0.8 0
+# layer 6504011 3
+# alpha 6504011 0 0
+;;マクリル
+# body 6603811
+# pos 6603811 3
+# scale 6603811 0.8 0
+# layer 6603811 4
+# alpha 6603811 0 0
+;;ミネルヴァ
+# body 302511
+# pos 302511 4
+# scale 302511 0.8 0
+# layer 302511 2
+# mask 302511 off
+# alpha 302511 0 0
+;;フライシュッツ
+# body 502711
+# pos 502711 3
+# scale 502711 0.8 0
+# layer 502711 3
+# mask 502711 off
+# alpha 502711 0 0
+;;ダモクレス
+# body 103511
+# pos 103511 3
+# scale 103511 0.8 0
+# layer 103511 3
+# mask 103511 off
+# alpha 103511 0 0
+;;グラーシーザ
+# body 302611
+# pos 302611 3
+# scale 302611 0.8 0
+# layer 302611 3
+# mask 302611 off
+# alpha 302611 0 0
+;;ネス
+# body 602011
+# pos 602011 3
+# scale 602011 0.8 0
+# layer 602011 3
+# mask 602011 off
+# alpha 602011 0 0
+;;神令エルキュール
+# body 3202511
+# pos 3202511 4
+# scale 3202511 0.8 0
+# layer 3202511 4
+# alpha 3202511 0 0
+;;-----------------------------------------
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 3
+;;-----------------------------------------
+;;背景：町（夜）
+# textwindow "close"
+# fadein "black" 1
+# waitandnext 1
+
+# voice 4017 "suiha_0029"
+# se "SE_4300"
+# face 6401711 "angry"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+@スイハ
+たああああっ！
+
+# se "SE_4301"
+# textboxarrow 0 3
+@？？？？？
+…………
+
+;;神令ラグナロクに矢が刺さる
+# se "SE_4817"
+# move 3103611 5 0.3
+# fadein "red" 0.5
+# waitandnext 1.5
+
+# alpha 6401711 0 0.3
+# alpha 3103611 0 0.3
+# face 270 "surprise"
+# alpha 270 1 0.3
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# textboxarrow 0 1
+@ミーミル
+スイハさんの矢が、当たりました！
+
+# textboxarrow 0 3
+@ミネルヴァ
+“彼女”にも攻撃は通じるようですね
+
+# textboxarrow 0 1
+@ミーミル
+あっ！
+ネスさん達の様子が…
+
+# move 270 1 0.5
+# alpha 270 0 0.3
+# move 302511 5 0.5
+# alpha 302511 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# face 602011 "sad"
+# alpha 602011 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ネス
+うぅっ…あああ…
+
+;;ネスが倒れる
+# se "SE_3001"
+# scale 602011 0.75 1
+# alpha 602011 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# face 502711 "sad"
+# alpha 502711 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@フライシュッツ
+はぁ…
+
+;;フライシュッツが倒れる
+# se "SE_3001"
+# scale 502711 0.75 1
+# alpha 502711 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# face 103511 "sad"
+# alpha 103511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ダモクレス
+ううーん…
+
+;;ダモクレスが倒れる
+# se "SE_3001"
+# scale 103511 0.75 1
+# alpha 103511 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# face 302611 "sad"
+# alpha 302611 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@グラーシーザ
+むぅ…
+
+;;グラーシーザが倒れる
+# se "SE_3001"
+# scale 302611 0.75 1
+# alpha 302611 0 0.3
+# textwindow "close"
+# waitandnext 1
+
+# move 6401711 1 0
+# move 3103611 5 0
+# move 302511 3 0
+# mask 302511 off
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ミネルヴァ
+４人とも倒れてしまいましたね
+“彼女”との繋がりが
+切れたのかもしれません
+
+;;スイハと神令ラグナロクが対峙する
+# alpha 302511 0 0.3
+# move 6401711 2 0.5
+# face 6401711 "angry"
+# alpha 6401711 1 0.3
+# move 3103611 4 0.5
+# alpha 3103611 1 0.3
+# textboxarrow 0 1
+@スイハ
+ごめんなさい…
+あなたを攻撃するのは、
+心苦しいのですけれど…
+
+# textboxarrow 0 1
+@スイハ
+今のあなたは…違う！
+私達の求める“彼女”ではありません
+ですからっ
+
+;;スイハが矢を放つ
+# se "SE_4301"
+# fadein "white" 0.5
+# textboxarrow 0 0
+# waitandnext 1
+
+# bgm "stop"
+# se "SE_4100"
+# move 3103611 5 0.5
+# alpha 3103611 0 0.5
+# move 3202511 4 0.2
+# face 3202511 "angry"
+# alpha 3202511 1 0.2
+# textboxarrow 0 3
+@エルキュール
+はああああああああ！
+
+;;エルキュールが矢を切り払う
+# se "SE_3006"
+# effectbody 1000 1 0 0 0
+# effectstart 1000
+# waitandnext 1
+
+# voice 4017 "suiha_0022"
+# face 6401711 "surprise"
+# textboxarrow 0 1
+@スイハ
+エルキュール…！
+
+# textboxarrow 0 3
+@エルキュール
+何をしているんですか、スイハ！？
+“彼女”に向かって矢を放つなんて
+
+# textboxarrow 0 3
+@エルキュール
+“彼女”をこの世界に取り戻す
+それが私達の願いだったはずです！
+
+# face 6401711 "angry"
+# textboxarrow 0 1
+@スイハ
+分かっています
+ですが、そこにいるのは――
+
+# textboxarrow 0 3
+@エルキュール
+どんな理由だろうと、
+“彼女”を傷つけることは
+許しません！
+
+;;エルキュールがスイハに迫る
+;;暗転挟む
+# se "SE_9021"
+# move 6401711 1 0.4
+# move 3202511 3 0.2
+# fadeout "black" 1
+# waitandnext 1
+
+# textwindow "close"
+# alpha 6401711 0 0
+# alpha 3202511 0 0
+# waitandnext 0.2
+
+# fadein "black" 1
+# waitandnext 1.5
+
+# voice 1035 "damocles_0015"
+# scale 103511 0.8 1
+# face 103511 "normal"
+# alpha 103511 1 0.3
+# textwindow "nomal"
+# textboxarrow 0 2
+@ダモクレス
+うぅーん…
+ハッ！
+
+# bgm "bgm005" 0
+# alpha 103511 0 0.3
+# move 302511 4 0
+# scale 302511 0.8 0
+# mask 302511 on
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# move 502711 2 0
+# scale 502711 0.8 0
+# mask 502711 on
+# face 502711 "normal"
+# alpha 502711 1 0.3
+# textboxarrow 0 3
+@ミネルヴァ
+目を覚ましましたか、ダモクレス？
+
+# voice 5027 "freischotz_0005"
+# face 502711 "happy"
+# textboxarrow 0 1
+@フライシュッツ
+ダモクレスちゃんも目が覚めて
+良かったよ～っ
+
+# alpha 302511 0 0.3
+# alpha 502711 0 0.3
+# voice 3026 "grayside_0003"
+# scale 302611 0.8 0
+# face 302611 "normal"
+# alpha 302611 1 0.3
+# textboxarrow 0 2
+@グラーシーザ
+うむ！
+そくさいでなによりだ
+
+# alpha 302611 0 0.3
+# move 103511 2 0
+# mask 103511 on
+# face 103511 "usual"
+# alpha 103511 1 0.3
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# textboxarrow 0 1
+@ダモクレス
+クレス、胸がぎゅーってして
+苦しかったんだけど…
+まだ生きてるんだね
+
+# textboxarrow 0 3
+@ミネルヴァ
+スイハのお陰ですよ
+彼女があなた達を「揺らぎ」の
+影響から遠ざけてくれました
+
+# alpha 302511 0 0.3
+# voice 6020 "ness_0027"
+# move 602011 4 0
+# mask 602011 on
+# face 602011 "sad"
+# alpha 602011 1 0.3
+# textboxarrow 0 3
+@ネス
+うぅっ…
+わたしとしたことが、
+規律を乱してしまいました…
+
+# alpha 103511 0 0.3
+# move 270 2 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+@ミーミル
+そんなに気に病まないで下さい
+それだけ皆さんが―――――さんの
+ことを思っているということですので
+
+# alpha 270 0 0.3
+# alpha 602011 0 0.3
+# move 103511 3 0
+# mask 103511 off
+# face 103511 "normal"
+# alpha 103511 1 0.3
+# textboxarrow 0 2
+@ダモクレス
+ん？
+何て？
+
+# alpha 103511 0 0.3
+# move 302511 3 0
+# layer 302511 2
+# mask 302511 off
+# face 302511 "angry"
+# alpha 302511 1 0.3
+# textboxarrow 0 2
+@ミネルヴァ
+一部、聞き取れなかったのは
+気にしないで下さい
+それより…
+
+# textboxarrow 0 2
+@ミネルヴァ
+すぐに対処しなければ
+ならないことがあります
+
+# alpha 302511 0 0.3
+# voice 9917 "mimir_navikan_0003"
+# move 270 3 0
+# face 270 "normal"
+# alpha 270 1 0.3
+# textboxarrow 0 2
+@ミーミル
+エルキュールさんのこと、
+そして―――――さんのことですね
+
+# bgmfile "bgm602_block" "BgmSecretlyEverAfter002" 0
+# sedelay "bgm602_basic_on" 2
+# alpha 270 0 0.3
+# voice 3025 "minerva_0003"
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# textboxarrow 0 2
+@ミネルヴァ
+はい
+マナナン、マクリル、
+聞きたいことがあります
+
+# move 302511 1 0.5
+# face 6504011 "usual"
+# alpha 6504011 1 0.3
+# face 6603811 "usual"
+# alpha 6603811 1 0.3
+# textboxarrow 0 3
+@マナナン
+な～に～？
+
+# textboxarrow 0 1
+@ミネルヴァ
+先程、あなた達はエルキュールが
+開いた裂け目を「穴」として
+安定させましたね
+
+# textboxarrow 0 2
+@マクリル
+そうだよ…
+それが私達の役割だもの…
+
+# textboxarrow 0 1
+@ミネルヴァ
+では、その「穴」を閉じることは
+できるのでしょうか？
+
+# voice 650401 "manannan_ura_0028"
+# face 6504011 "sad"
+# textboxarrow 0 3
+@マナナン
+うーん…
+できるけど…
+
+# voice 3025 "minerva_0022"
+# face 302511 "surprise"
+# textboxarrow 0 1
+@ミネルヴァ
+何か問題が？
+
+# face 6504011 "usual"
+# textboxarrow 0 3
+@マナナン
+今は“彼女”が中途半端に
+こっちに来てる状態だからね～
+
+# textboxarrow 0 2
+@マクリル
+今、こっちと「裏側」の道を閉じたら
+“彼女”を形成するマナも中途半端な
+まま放置されるよ…
+
+# textboxarrow 0 3
+@マナナン
+中途半端な状態だと、
+存在を維持できなくて
+そのうち消えちゃうね
+
+# move 270 1 0
+# textboxarrow 0 2
+@マクリル
+もう二度と“彼女”に会えなくても
+いいのなら、閉じるよ…
+
+# alpha 302511 0 0.3
+# alpha 6603811 0 0.3
+# move 270 2 0.3
+# face 270 "angry"
+# alpha 270 1 0.3
+# textboxarrow 0 1
+# textsize 28
+@ミーミル
+それはダメです！
+
+# voice 650401 "manannan_ura_0023"
+# move 6504011 4 0.5
+# face 6504011 "surprise"
+# textboxarrow 0 3
+# textsize 24
+@マナナン
+わ！
+何でミーミルが叫ぶの？
+
+# voice 9917 "mimir_navikan_0031"
+# face 270 "sad"
+# textboxarrow 0 1
+@ミーミル
+申し訳ございません…
+ですが、それは誰も
+望んでおられないことと存じます
+
+# alpha 270 0 0.3
+# alpha 6504011 0 0.3
+# move 302511 3 0
+# mask 302511 off
+# face 302511 "sad"
+# voice 3025 "minerva_0003"
+# alpha 302511 1 0.3
+# textboxarrow 0 2
+@ミネルヴァ
+そうですね
+“彼女”を失えば、今度こそ
+エルキュールは壊れてしまうでしょう
+
+# face 302511 "normal"
+# textboxarrow 0 2
+@ミネルヴァ
+それに…私も“彼女”のことが
+気になって仕方ありません
+
+# alpha 302511 0 0.3
+# move 103511 4 0
+# mask 103511 on
+# face 103511 "normal"
+# alpha 103511 1 0.3
+# move 502711 2 0
+# face 502711 "sad"
+# alpha 502711 1 0.3
+# textboxarrow 0 3
+@ダモクレス
+クレスも！
+思い出したくてムズムズしてるんだ
+
+# voice 5027 "freischotz_0034"
+# textboxarrow 0 1
+@フライシュッツ
+大切な存在だったような気がするのに
+思い出せないのは辛いよー…
+
+# alpha 103511 0 0.3
+# alpha 502711 0 0.3
+# move 602011 4 0
+# mask 602011 on
+# face 602011 "angry"
+# alpha 602011 1 0.3
+# move 302611 2 0
+# mask 302611 on
+# face 302611 "normal"
+# alpha 302611 1 0.3
+# textboxarrow 0 3
+@ネス
+わたしも胸のモヤモヤを晴らして
+規律を取り戻したいですっ
+
+# textboxarrow 0 1
+@グラーシーザ
+それがあたしたちのせいぎだ！
+
+# alpha 602011 0 0.3
+# alpha 302611 0 0.3
+# move 302511 4 0
+# mask 302511 on
+# face 302511 "normal"
+# alpha 302511 1 0.3
+# voice 660381 "maclir_ura_0028"
+# move 6603811 2 0
+# face 6603811 "usual"
+# alpha 6603811 1 0.3
+# textboxarrow 0 1
+@マクリル
+でも、じゃあ、どうするの…？
+
+# textboxarrow 0 3
+@ミネルヴァ
+不完全なまま“彼女”をこちらに
+呼び寄せたのが間違いだったんです
+ここは一旦…
+
+# textboxarrow 0 3
+@ミネルヴァ
+“彼女”を「裏側」へ
+押し戻しましょう
+
+# fadeout "black" 1
+# waitandnext 1

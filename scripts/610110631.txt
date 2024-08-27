@@ -1,0 +1,616 @@
+;;-----------------------------------------
+;;ファンキル学園
+;;3_1
+;;-----------------------------------------
+# script "lisp"
+# bgm "bgm005" 0
+# background "presidentroom"
+;;-----------------------------------------
+;;デュリン
+# body 0
+# pos 0 3
+# scale 0 0.8 0
+# layer 0 3
+# mask 0 off
+# alpha 0 0 0
+;;マサムネ
+# body 101
+# pos 101 3
+# scale 101 0.8 0
+# layer 101 3
+# mask 101 off
+# alpha 101 0 0
+;;メギド
+# body 500621
+# alpha 500621 0 0
+;;ウコンバサラ
+# body 201021
+# pos 201021 3
+# scale 201021 0.8 0
+# layer 201021 3
+# mask 201021 off
+# alpha 201021 0 0
+;;-----------------------------------------
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;-----------------------------------------
+;;【EP.3】トイレに潜む悪霊の怪
+;;背景：理事長室
+# textwindow "close"
+# fadein "black" 2
+# waitandnext 2
+
+;;ＳＥ：コンコン、ガチャ（ドアをノックして入ってくる音）
+# se "SE_0679"
+# waitandnext 1.3
+
+# se "SE_0914"
+# alpha 101 1 0.5
+# waitandnext 1
+
+# se "SE_0915"
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 2
+# voice 1001 "masamune_0002"
+@マサムネ
+失礼いたします
+不肖マサムネ、
+ただいま参上いたしました
+
+# alpha 101 0 0.5
+# alpha 0 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 0 "usual2"
+# voice 9999 "durin_0044"
+@デュリン
+お、待ってたわ！
+座って座って！
+
+# textboxarrow 0 0
+# move 101 2 0
+# mask 101 on
+# alpha 101 1 0.5
+# move 0 4 0.5
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 3
+@デュリン
+呼び出しちゃって悪いわね
+実はちょっと緊急事態で…
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1001 "masamune_0003"
+@マサムネ
+存じております
+例の銅像の件…ですか？
+
+# se "SE_6502"
+# emotionbody 1000 2 0 30 170
+# effectpattern 1000 1 1
+# effectstart 1000
+# textflame 1 1
+# textboxarrow 0 3
+# face 0 "serious"
+@デュリン
+あれ？もう知ってるの？
+噂って流れるの早いわね…
+
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+芭蕉扇が、
+私より先に盗んだの、誰よ
+と騒いでいましたから
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 0 "sad"
+@デュリン
+…そ、そう
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 0 "serious"
+@デュリン
+でもそれだけじゃないの
+いま学園の中で
+変な事件がいくつも起こってる
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 9999 "durin_0043"
+@デュリン
+詳細を説明するわね
+長くなるけど、聞いてちょうだい
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.7
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 1001 "masamune_0028"
+@マサムネ
+ふむ…
+あの空き教室で左様なことが…
+
+# textflame 1 1
+# textboxarrow 0 3
+@デュリン
+それだけじゃないの
+昨日の放課後にも
+いろいろあったみたいでね
+
+# textflame 1 1
+# textboxarrow 0 3
+@デュリン
+すすり泣く声が聞こえたり、
+謎の大きな音が響いたり…
+そんな怪現象が次々に起こってる
+
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+それらの現象と像の消失に、
+何か関連があると？
+
+# textflame 1 1
+# textboxarrow 0 3
+@デュリン
+確証はないわ、でも…
+その可能性も捨てられないのよ
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1001 "masamune_0040"
+@マサムネ
+なるほど…
+承知いたしました
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 101 "angry"
+@マサムネ
+マサムネの名にかけて、
+必ずや事件を
+解決してみせましょう
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 0 "usual2"
+# voice 9999 "durin_0036"
+@デュリン
+ええ
+よろしくお願いね！
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 101 0 0
+# alpha 0 0 0
+;;背景：廊下
+# background "corridor_daytime"
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# move 101 2 0
+# alpha 101 1 0.5
+# face 101 "normal"
+# move 201021 4 0
+# mask 201021 on
+# alpha 201021 1 0.5
+# face 201021 "sad"
+# waitandnext 0.5
+
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 1001 "masamune_0003"
+@マサムネ
+では、今朝の一件以降は
+何も起きていないのだな
+
+# textflame 1 1
+# textboxarrow 0 3
+# voice 2010 "ukonbasara_0003"
+@ウコンバサラ
+うん…
+今のところはだけどね
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1001 "masamune_0028"
+@マサムネ
+奇怪な話だ…
+木くずの残骸、消えた銅像
+
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+そして、すすり泣く声と
+謎の大きな音…
+まったくもって統一性がない
+
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+犯人の目的も一向に見えぬ
+果たして何を狙っているのだ？
+
+# se "SE_6502"
+# emotionbody 1001 2 201021 10 260
+# effectpattern 1001 1 1
+# effectstart 1001
+# textflame 1 1
+# textboxarrow 0 3
+# voice 2010 "ukonbasara_0028"
+@ウコンバサラ
+そうだね…いったい誰なんだろう？
+やっぱり人じゃなくて
+お化けだったり…？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1001 "masamune_0007"
+@マサムネ
+この学園にそのようなものが
+存在するとは思えんな
+
+# textflame 1 1
+# textboxarrow 0 3
+@ウコンバサラ
+あのマスターの銅像が
+呪われてたのかも
+
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+ふむ、仮にそうだとしても
+その時は拙者の刀で
+叩き斬ってやるまでだ
+
+# textflame 1 1
+# textboxarrow 0 3
+@ウコンバサラ
+お化けに刀って
+効くのかなぁ…？
+
+;;モノローグ
+# serif 0
+# textwindow "close"
+# serif 1
+@
+ふふふふふ…
+
+# se "SE_6502"
+# emotionbody 1002 2 101 10 290
+# effectpattern 1002 1 1
+# effectstart 1002
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# face 101 "surprise"
+@マサムネ
+…ん？
+
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1001 "masamune_0009"
+@マサムネ
+いま、何か聞こえなかったか？
+笑い声のような…
+
+;;モノローグ
+# serif 0
+# textwindow "close"
+# serif 1
+@
+ふふふふふ…
+
+# se "SE_6525"
+# emotionbody 1003 11 201021 -90 240
+# effectpattern 1003 2 0
+# effectstart 1003
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 201021 "surprise"
+# voice 2010 "ukonbasara_0024"
+@ウコンバサラ
+ひっ！
+わ、私も聞こえた…！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 101 "angry"
+# voice 1001 "masamune_0013"
+@マサムネ
+不埒者が尻尾を出したようだ
+いざ迎え撃とう
+
+# textflame 1 1
+# textboxarrow 0 3
+@ウコンバサラ
+わ、私も行く！
+
+;;演出：場面転換
+# imagealpha 0 1 0
+# imagepos 0 0 30
+# imageleftin 0 0.5
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 0.5
+
+# alpha 101 0 0
+# alpha 201021 0 0
+;;背景：廊下（※トイレの背景が無いようなので、代用です）
+# background "stairs_day"
+# bgmfile "bgm373" "BgmGakuen005" 0
+# waitandnext 0.2
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+;;モノローグ
+# serif 1
+@
+ふふふふふ…
+
+# se "SE_6500"
+# emotionbody 1004 1 201021 10 310
+# effectpattern 1004 1 0
+# effectstart 1004
+# alpha 101 1 0.5
+# alpha 201021 1 0.5
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+@ウコンバサラ
+ここだ！
+トイレの中から聞こえる…！
+
+# textflame 1 1
+# textboxarrow 0 3
+@ウコンバサラ
+これってもしかして…
+“トイレのキル子さん”なんじゃ？
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 101 "surprise"
+@マサムネ
+キル子さん？
+何奴だそれは
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 201021 "sad"
+@ウコンバサラ
+有名な怪談だよ
+トイレに潜んでる悪霊の話…
+
+# textflame 1 1
+# textboxarrow 0 3
+@ウコンバサラ
+誰もいないはずの
+トイレの個室から、
+不気味な笑い声が聞こえてくるの
+
+# textflame 1 1
+# textboxarrow 0 3
+@ウコンバサラ
+その声を聞いた人が、
+キル子さんがいる個室のドアを
+開けたら最期…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 201021 "surprise"
+# voice 2010 "ukonbasara_0015"
+@ウコンバサラ
+全身をバラバラに斬り刻まれて、
+こ、殺されちゃうんだって…！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 101 "normal"
+# voice 1001 "masamune_0026"
+@マサムネ
+なんだそれは…
+くだらん作り話だな
+
+;;ＳＥ：コツコツコツ（トイレに入っていく音）
+# alpha 101 0 0.5
+# se "SE_0740"
+# textwindow "close"
+# waitandnext 1
+
+# se "SE_6501"
+# emotionbody 1005 1 201021 10 310
+# effectpattern 1005 2 0
+# effectstart 1005
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 3
+# face 201021 "angry"
+# voice 2010 "ukonbasara_0025"
+@ウコンバサラ
+えっ！？
+あ、開けちゃうの！？
+
+# alpha 101 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1001 "masamune_0007"
+@マサムネ
+当然だ。事件の犯人が
+ここにいるかもしれぬのだからな
+
+# textflame 1 1
+# textboxarrow 0 1
+@マサムネ
+ドアが閉まっているのは
+ここだけか…
+
+;;ＳＥ：コンコン（マサムネがノックする音）
+# textboxarrow 0 0
+# se "SE_0679"
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 101 "angry"
+# voice 1001 "masamune_0009"
+@マサムネ
+おいっ！
+もう逃げ場はないぞ！
+観念して出てくるがいい！
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 201021 "surprise"
+# voice 2010 "ukonbasara_0015"
+@ウコンバサラ
+あ、あわわ…
+
+;;モノローグ
+# serif 0
+# textwindow "close"
+# serif 1
+@
+ふふふふふ…
+
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 1001 "masamune_0013"
+@マサムネ
+貴様…
+拙者の声が聞こえないのか？
+出てこいと言っておるのだ！
+
+;;ＳＥ：ドンドン！（マサムネが強くノックする音）
+# shake 0 0.5
+# textboxarrow 0 0
+# se "SE_0831"
+# waitandnext 1
+
+;;モノローグ
+# serif 0
+# textwindow "close"
+# serif 1
+@
+ふふふふふ…
+ふふふふふ…
+
+# se "SE_6510"
+# emotionbody 1006 6 101 50 250
+# effectpattern 1006 2 1
+# effectstart 1006
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 1001 "masamune_0010"
+@マサムネ
+くうっ…愚弄しおってっ！！
+良かろう、貴様がその気なら…！
+
+;;ＳＥ：ガチャガチャッ（マサムネがドアノブを握る音）
+# shake 0 1
+# textboxarrow 0 0
+# se "SE_0916"
+# waitandnext 1
+
+# textflame 1 1
+# textboxarrow 0 3
+@ウコンバサラ
+ああっ、待ってっ！
+開けちゃダメ―
+
+# effectskip 1006
+;;@？？？（メギド）
+# serif 1
+# textwindow "toge"
+@？？？
+いやああああああああっ！！
+
+# se "SE_6501"
+# emotionbody 1007 1 101 10 310
+# effectpattern 1007 2 0
+# effectstart 1007
+# serif 1
+# textwindow "close"
+# serif 0
+# textflame 1 1
+# textwindow "nomal"
+# textboxarrow 0 1
+# voice 1001 "masamune_0023"
+@マサムネ
+っ！？
+なんだ、今の悲鳴は！？
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 201021 "angry"
+@ウコンバサラ
+ト、トイレの外からだ…！
+行こう！
+
+;;ＳＥ：タッタッタッ（二人が走っていく音）
+# alpha 101 0 0.5
+# alpha 201021 0 0.5
+# se "SE_5575"
+# sedelay "SE_5575" 0.1
+# serif 0
+# textwindow "close"
+# waitandnext 1
+
+;;モノローグ
+# serif 1
+# textwindow "nomal"
+@
+ふふふふふ…
+ふふふふふ…
+ふふふふふ…
+
+# fadeout "black" 1
+# waitandnext 1.2

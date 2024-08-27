@@ -1,0 +1,161 @@
+;;----------------------------------------------
+;;100302051
+;;第2話　タイトル：不可思議な戦場
+;;2-5-1
+;;----------------------------------------------
+# script "lisp"
+# background "300_devil_daytime02"
+# bgm "bgm003" 0
+;;アルマス
+# body 3103811
+# pos 3103811 3
+# scale 3103811 0.8 0
+# layer 3103811 4
+# alpha 3103811 1 0
+# mask 3103811 off
+;;ギル
+# body 137
+# pos 137 3
+# scale 137 0.8 0
+# layer 137 1
+# alpha 137 0 0
+# mask 137 off
+;;ティターニア
+# body 139
+# pos 139 3
+# scale 139 0.8 0
+# layer 139 5
+# alpha 139 0 0
+# mask 139 on
+;;アロンダイト
+# body 3100711
+# pos 3100711 3
+# scale 3100711 0.8 0
+# layer 3100711 2
+# alpha 3100711 0 0
+# mask 3100711 off
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 5
+;;◆背景：ケイオスリオン街中------------------------------------------------
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103811 "normal"
+# voice 1038 "almace_0001"
+# chara 3103811
+@アルマス
+ケイオスリオンに入ったけれど、
+これからどうするかが問題よね
+マスター、なにか意見はないの？
+
+;;選択肢-----------------------------------------------------
+# select "奴隷区に行こう" "select_label_01" "アロンダイトに聞こう" "select_label_02" "街を見て回ろう" "select_label_03"
+ケイオスリオンに入ったけれど、
+これからどうするかが問題よね
+マスター、なにか意見はないの？
+
+;;選択肢１---------------------------------------------------
+# label "select_label_01"
+# labeljump "select_label_end"
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103811 "happy1"
+# voice 1038 "almace_0004"
+# chara 3103811
+@アルマス
+奴隷区…虐げられている人達から
+情報を得られるかもしれないわね
+たまには良いこと言うじゃない！
+
+;;選択肢２---------------------------------------------------
+# label "select_label_02"
+# labeljump "select_label_end"
+# alpha 3103811 0 0.5
+# alpha 3100711 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3100711 "normal"
+# voice 310071 "arondaito_ge_0002"
+# chara 3100711
+@アロンダイト
+まず奴隷区に行くべきです
+ケイオスリオン人から話を聞くより
+情報を引き出しやすいでしょう
+
+;;選択肢３---------------------------------------------------
+# label "select_label_03"
+# labeljump "select_label_end"
+# alpha 3103811 0 0.5
+# alpha 137 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 137 "usual"
+# voice 9969 "gill_0004"
+# chara 137
+@ギル
+街の人に話を聞くのは基本だよな！
+そうだ！トレイセーマのときみたいに
+奴隷区に行こうぜ
+
+;;合流-------------------------------------------------------
+# label "select_label_end"
+# alpha 3103811 0 0.5
+# alpha 3100711 0 0.5
+# alpha 137 0 0.5
+# alpha 139 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 139 "normal"
+# voice 9967 "titania_0004"
+# chara 139
+@ティターニア
+ひとまずの方針は決まりましたね
+
+# alpha 139 0 0.5
+# pos 3100711 4
+# mask 3100711 on
+# alpha 3100711 1 0.5
+# pos 137 2
+# alpha 137 1 0.5
+# face 137 "normal"
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100711 "happy"
+# voice 310071 "arondaito_ge_0033"
+# chara 3100711
+@アロンダイト
+道案内は任せて下さい
+ケイオスリオンの地理は
+調べてありますので
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 137 "surprise"
+# voice 9969 "gill_0001"
+# chara 137
+@ギル
+やっぱ三国も争い合ってんのかな
+他国の地理まで調べるなんて
+怖いぜ…
+
+# textflame 1 1
+# textboxarrow 0 3
+# face 3100711 "normal"
+# voice 310071 "arondaito_ge_0032"
+# chara 3100711
+@アロンダイト
+全ては平等社会を作り上げるためです
+それが実現した暁には、きっと…
+
+# alpha 137 0 0.5
+# alpha 3100711 0 0.5
+# alpha 3103811 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3103811 "sad"
+# voice 1038 "almace_0007"
+# chara 3103811
+@アルマス
+…………

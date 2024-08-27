@@ -1,0 +1,658 @@
+;;2_1_1　背景：王都
+;;※黒奏官を追い、関所から出てくる一行。視界がまばゆい光に包まれる。
+# script "lisp"
+# background "imperial_city"
+# bgmfile "bgm217" "BgmTower001" 0
+# body 4
+# pos 4 4
+# scale 4 0.8 0
+# body 28
+# pos 28 2
+# scale 28 0.8 0
+# alpha 4 0 0
+# alpha 28 0 0
+# body 101411
+# alpha 101411 0 0
+# face 4 "smile01"
+# face 28 "smile"
+# serif 0
+# textwindow "close"
+# serif 1
+# textwindow "close"
+# waitandnext 2
+
+# alpha 28 1 0.5
+# alpha 4 1 0.5
+# serif 0
+# textwindow "normal"
+# textboxarrow 0 3
+# voice 9998 "toto_0044"
+@トト
+…！？
+わ…！！
+
+# textboxarrow 0 1
+# voice 9984 "ren_0041"
+@レン
+す…すごい…！！
+
+;;※目の前に広がる光景…人民区とは比較にならぬ、高級そうな建物がズラリと並んでいる。
+# se "SE_5623"
+# body 128
+# pos 128 1
+# scale 128 0.8 0
+# alpha 128 0 0
+# fadeout "white" 1.5
+# layer 24 4
+# layer 0 5
+# waitandnext 2
+
+# fadein "white" 1
+# body 24
+# pos 24 3
+# scale 24 0.8 0
+# move 4 5 0
+# alpha 128 1 0
+# alpha 28 0 0
+# face 24 "surprise"
+# textboxarrow 0 2
+@ティルフィング
+これが…王都…！
+
+# face 24 "happy2"
+# voice 1014 "tyrufing_0075"
+@ティルフィング
+マスター…
+ここが、私達が目指してきた
+ラグナ大陸の中心なんですね…！
+
+# textboxarrow 0 3
+@トト
+高級そうな建物ばっかり…
+こんなの、初めて見たよ…！
+
+# textboxarrow 0 1
+@ノーブル
+このあたりは、まださほどでもない
+
+@ノーブル
+王政府やラグナロクの
+大聖堂のある中心部に行けば、
+より荘厳な建物ばかりとなる
+
+@ノーブル
+まったく…
+無駄遣い、この上ない
+
+# alpha 24 0 0.5
+# move 28 3 0
+# alpha 28 1 0.5
+# body 6
+# pos 6 5
+# scale 6 0.8 0
+# alpha 6 0 0
+# face 6 "angry"
+# face 28 "surprise"
+# textboxarrow 0 2
+@レン
+これ以上に、豪華になるっての…！？
+ウソでしょ…！？
+
+# alpha 6 1 0.5
+# alpha 4 0 0.5
+# textboxarrow 0 3
+# voice 9997 "deen_0011"
+@ディーン
+なに、呑気に喋ってんだよ！
+遊びに来てんじゃねぇんだぞ、バカ！
+
+# body 0
+# pos 0 1
+# scale 0 0.8 0
+# alpha 0 0 0
+# face 0 "serious2"
+# face 24 "normal"
+# face 28 "worry"
+# textboxarrow 0 2
+@レン
+わ、わかってるわよ！
+
+# bgm "bgm005" 0
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagescale 0 10 0
+# alpha 0 1 0.5
+# alpha 128 0 0.5
+# textboxarrow 0 1
+@デュリン
+どこよ、黒奏官は…！？
+まだ、近くにいるはずよ…！
+
+;;※ジッと気配を探るティルフィング。その視線の先に、駆けてゆく黒奏官とラースの姿。
+# fadein "white" 0.5
+# alpha 0 0 0
+# alpha 6 0 0
+# alpha 24 1 0
+# alpha 28 0 0
+# layer 24 4
+# textwindow "close"
+# waitandnext 1
+
+# se "SE_9014"
+# body 41
+# pos 41 4
+# scale 41 0.8 0
+# alpha 41 0 0
+# body 100161
+# pos 100161 2
+# scale 100161 0.8 0
+# alpha 100161 0 0
+# imagealpha 0 1 2
+# imagepos 0 0 0
+# waitandnext 2.5
+
+# fadein "white" 0.5
+# imagealpha 0 0 0
+# alpha 24 0 0
+# alpha 41 1 0
+# alpha 100161 1 0
+# waitandnext 1
+
+# se "SE_5575"
+# sedelay "SE_5575" 0.2
+# leftout 41 0.5
+# leftout 100161 0.5
+# waitandnext 1
+
+# textwindow "normal"
+# fadein "white" 0.5
+# alpha 24 1 0
+# face 24 "angry"
+# textboxarrow 0 2
+@ティルフィング
+…いた！
+二時の方角…！
+あのマサムネとともにいるわ…！
+
+# fadeout "black" 1.5
+# waitandnext 2
+
+# fadein "black" 1
+;;※マサムネとともに駆けている黒奏官。
+# alpha 24 0 0
+# alpha 100161 1 0
+# alpha 41 1 0
+# move 41 4 0
+# move 100161 2 0
+# face 100161 "usual"
+# textboxarrow 0 1
+# voice 10016 "masamune_k_0001"
+@ラース
+…どうやら、
+こちらに気付いたようです
+
+# face 41 "smile"
+# textboxarrow 0 3
+# voice 9983 "kokusohkan_0003"
+@黒奏官
+案ずるな。この距離だ…
+追いつかれなければ、
+なにも問題はない
+
+;;※再び、黒奏官達を追う一行。
+# body 40
+# pos 40 3
+# scale 40 0.8 0
+# alpha 40 0 0
+# fadeout "black" 1.5
+# waitandnext 2
+
+# alpha 6 1 0
+# alpha 40 1 0
+# alpha 0 1 0
+# alpha 41 0 0
+# alpha 100161 0 0
+# fadein "black" 1
+# textboxarrow 0 3
+# layer 40 3
+@ディーン
+おい、ヤベェぞ！
+ここであのヤロウを逃せば、
+面倒なことに…！
+
+# face 40 "irregular"
+# textboxarrow 0 2
+# voice 9982 "edgar_0002"
+@エドガー
+…！？
+待て…あれを見ろ！！
+
+# body 100941
+# pos 100941 5
+# scale 100941 0.8 0
+# alpha 100941 0 0
+# body 400131
+# pos 400131 1
+# scale 400131 0.8 0
+# face 400131 "nutual"
+# alpha 400131 0 0
+# textboxarrow 0 1
+@デュリン
+え？
+
+;;※去ろうとする黒奏官の前に、ズラリと現れる無数のキラープリンセス達。
+# alpha 0 0 0
+# alpha 6 0 0
+# alpha 40 0 0
+# move 41 3 0
+# alpha 41 1 0
+# alpha 100941 1 0
+# alpha 400131 1 0
+# layer 41 5
+# layer 24 3
+# layer 6 2
+# layer 400131 1
+# face 41 "normal"
+# fadein "white" 0.5
+# textboxarrow 0 2
+@黒奏官
+…！
+
+# alpha 400131 0 0.5
+# alpha 100941 0 0.5
+# alpha 41 0 0.5
+# alpha 24 1 0.5
+# alpha 6 1 0.5
+# alpha 28 1 0.5
+# move 28 1 0
+# face 24 "surprise"
+# face 28 "normal"
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0022"
+@ティルフィング
+あれは…
+王都のキラープリンセス…！？
+
+# face 6 "smile"
+# textboxarrow 0 3
+# voice 9997 "deen_0046"
+@ディーン
+王都の部隊だ！
+すげぇ数だぜ…！
+
+# face 28 "smile"
+# textboxarrow 0 1
+@レン
+やった…！
+あの数相手じゃ、
+アイツらも逃げられやしないわ！！
+
+# textboxarrow 0 1
+# alpha 28 0 0.5
+# alpha 0 1 0.5
+# face 0 "worry"
+@デュリン
+…いや…
+
+;;※キラープリンセス達の中から、アルテミスが歩み出る。
+# se "SE_0719"
+# bgm "bgm023" 0
+# alpha 400131 1 0.5
+# alpha 100941 1 0.5
+# alpha 41 1 0.5
+# alpha 24 0 0.5
+# alpha 6 0 0.5
+# alpha 0 0 0.5
+# face 400131 "angry"
+# face 4 "angry"
+# textboxarrow 0 1
+@アルテミス
+…リベリオン、
+及びその協力者どもを確認！！
+全軍、迎撃態勢を取れ！！
+
+;;※各々の武器を構えるキラープリンセス達。
+# se "SE_5205"
+# alpha 400131 0 0.5
+# alpha 100941 0 0.5
+# alpha 41 0 0.5
+# alpha 24 1 0.5
+# move 4 5 0
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 2
+@ティルフィング
+え…？
+
+# alpha 400131 1 0.5
+# alpha 100941 1 0.5
+# alpha 41 1 0.5
+# alpha 24 0 0.5
+# alpha 0 0 0.5
+# alpha 4 0 0.5
+# textboxarrow 0 2
+@黒奏官
+…いいところに来た
+危うく、ヤツらの手に
+かかるところだったぞ
+
+# face 24 "angry"
+# face 4 "angry"
+# face 400131 "nutual"
+# textboxarrow 0 1
+@アルテミス
+よくぞ、ご無事で…
+後のことはお任せください
+
+;;※黒奏官を庇うように、一行の前に立ちはだかるキラープリンセス達。
+# alpha 400131 0 0.5
+# alpha 100941 0 0.5
+# alpha 41 0 0.5
+# alpha 24 1 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# textboxarrow 0 3
+# voice 9998 "toto_0019"
+@トト
+な…！？
+ま、待ってよ…！
+なんで、そいつらを…
+
+# textboxarrow 0 1
+# alpha 400131 1 0.5
+# alpha 100941 1 0.5
+# alpha 41 1 0.5
+# alpha 24 0 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# face 400131 "angry"
+@アルテミス
+王政府、そしてラグナロク教会の
+崩壊を画策するとは…！
+
+# voice 4001 "arutemisu_0009"
+@アルテミス
+同じキラープリンセスとして、
+こんなにも嘆かわしいことはないわ！
+
+# textboxarrow 0 1
+# alpha 400131 0 0.5
+# alpha 100941 0 0.5
+# alpha 41 0 0.5
+# alpha 24 1 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# face 0 "sad"
+@デュリン
+くっ…、忘れちゃいけないわ、
+あの男がラグナロク教会に籍を置く
+人間だってことを…！
+
+# face 24 "sad"
+# textboxarrow 0 2
+@ティルフィング
+つまり、王都の
+キラープリンセス達が…
+皆、敵になるということ…！？
+
+# alpha 400131 1 0.5
+# alpha 100941 1 0.5
+# alpha 41 1 0.5
+# alpha 24 0 0.5
+# alpha 4 0 0.5
+# alpha 0 0 0.5
+# textboxarrow 0 1
+@アルテミス
+…これより殲滅を開始する！！
+一人として逃すな！！！
+
+# alpha 400131 0 0.5
+# alpha 100941 0 0.5
+# alpha 41 0 0.5
+# alpha 24 1 0.5
+# alpha 4 1 0.5
+# alpha 0 1 0.5
+# face 6 "angry"
+# face 24 "angry"
+# face 28 "trouble"
+# textboxarrow 0 2
+@ティルフィング
+！！！
+
+# move 28 2 0
+# move 6 4 0
+# alpha 0 0 0.5
+# alpha 4 0 0.5
+# alpha 24 0 0.5
+# alpha 28 1 0.5
+# alpha 6 1 0.5
+# face 28 "surprise"
+# textboxarrow 0 1
+@レン
+な！？
+ま、待って…！違うわ！
+対するべきは、私達じゃ…
+
+# move 0 3 0
+# alpha 400131 0 0.5
+# alpha 28 0 0.5
+# alpha 41 1 0.5
+# alpha 4 0 0.5
+# alpha 6 0 0.5
+# face 41 "smile"
+# textboxarrow 0 2
+# voice 9983 "kokusohkan_0004"
+@黒奏官
+クク…
+世の平穏を脅かす輩を、
+始末しに来たまで…
+
+@黒奏官
+組織としては、
+しごく当然のことではないか？
+
+# textboxarrow 0 3
+# alpha 28 1 0.5
+# alpha 41 0 0.5
+# alpha 6 1 0.5
+# face 6 "angry"
+@ディーン
+テメェ…！
+
+# alpha 28 0 0.5
+# alpha 41 1 0.5
+# alpha 6 0 0.5
+# alpha 0 0 0.5
+# textboxarrow 0 2
+@黒奏官
+私の言葉は、教皇様の命と同義！
+さぁ、不遜の輩を始末せよ！
+
+;;※ザッと構えるキラープリンセス達。
+# se "SE_5205"
+# se "SE_5206"
+# alpha 400131 1 0.5
+# move 400131 1 0
+# alpha 100941 1 0.5
+# face 100941 "angry"
+# waitandnext 1.5
+
+# alpha 400131 0 0.5
+# alpha 41 0 0.5
+# alpha 100941 0 0.5
+# alpha 0 1 0.5
+# face 0 "worry"
+# textboxarrow 0 2
+@デュリン
+クッ…！
+
+# alpha 0 0 0.5
+# alpha 41 1 0.5
+# alpha 100161 1 0.5
+# move 41 4 0
+# face 41 "normal"
+# textboxarrow 0 3
+@黒奏官
+…後は任せた
+行くぞ、ラース
+
+# face 100161 "angry"
+# textboxarrow 0 1
+@ラース
+はっ！
+
+;;※去ってゆく黒奏官とラース。
+# se "SE_5586"
+# alpha 41 0 0.5
+# alpha 100161 0 0.5
+# textboxarrow 0 0
+# waitandnext 0.7
+
+# se "SE_5586"
+# waitandnext 0.8
+
+# move 6 5 0
+# alpha 6 1 0.5
+# alpha 40 1 0.5
+# alpha 0 1 0.5
+# move 0 1 0
+# face 0 "sad"
+# textboxarrow 0 3
+@ディーン
+お、おい！！
+待ちやがれ！！
+
+# textboxarrow 0 2
+@エドガー
+よせ！
+分が悪過ぎる！
+
+# face 6 "sad"
+# textboxarrow 0 3
+@ディーン
+けどよ…！
+
+# face 0 "worry"
+# textboxarrow 0 1
+@デュリン
+あれだけの数を相手にする気…！？
+
+# face 0 "angry"
+# voice 9999 "durin_0010"
+@デュリン
+なにより、こっちには
+守らなきゃならない人間が
+わんさかいるのよ！？
+
+# textboxarrow 0 1
+# alpha 0 0 0.5
+# alpha 128 1 0.5
+@ノーブル
+うぬ…！
+
+# textboxarrow 0 1
+# move 28 1 0
+# alpha 128 0 0.5
+# alpha 28 1 0.5
+# face 28 "worry"
+@レン
+ア、アタシ達のことなら…
+その…なんとかするわよ！
+
+# face 6 "angry"
+# textboxarrow 0 3
+# voice 9997 "deen_0010"
+@ディーン
+クソッ！
+ここまで追い詰めたってのに…！
+
+# body 75
+# pos 75 5
+# scale 75 0.8 0
+# alpha 75 0 0
+# alpha 6 0 0.5
+# alpha 28 0 0.5
+# alpha 40 0 0.5
+# alpha 400131 1 0.5
+# move 400131 3 0
+# textboxarrow 0 2
+@アルテミス
+…かかれーっ！！
+
+;;※ドッと駆け出してくるキラープリンセス達。
+# alpha 400131 0 0.5
+# alpha 40 1 0.5
+# alpha 24 1 0.5
+# move 40 1 0
+# alpha 75 1 0.5
+# textboxarrow 0 1
+@エドガー
+マズい…！
+シェキナー、ミョルニル！！
+
+# bgm "stop"
+# face 24 "mad2"
+# textboxarrow 0 2
+@ティルフィング
+待ってください！！
+
+# face 40 "normal"
+# textboxarrow 0 1
+@エドガー
+え…？
+
+# bgm "bgm035" 0
+# textboxarrow 0 2
+@ティルフィング
+彼女達王都のキラープリンセスに
+罪はありません！
+
+# face 24 "angry"
+@ティルフィング
+無用な戦いは避け、
+ここは退くべきです！
+…マスター！
+
+# textboxarrow 0 3
+@リベリオン
+俺も同感だ
+
+@リベリオン
+なにより俺は、
+彼女達キラープリンセスを
+救いに来たんだからな
+
+# textboxarrow 0 1
+# move 6 1 0
+# alpha 6 1 0.5
+# alpha 40 0 0.5
+@ディーン
+じゃあ、
+どうしろって言うんだよ！？
+
+# face 75 "sad"
+# textboxarrow 0 3
+@リベリオン
+決まってんだろ…
+彼女らを救うには、
+その大元を正さなきゃ始まらないんだ
+
+# textboxarrow 0 1
+# alpha 0 1 0.5
+# alpha 6 0 0.5
+# face 0 "serious"
+@デュリン
+ラグナロク大聖堂…！
+
+# face 75 "normal"
+# textboxarrow 0 3
+@リベリオン
+ああ…
+さぁ、考えている暇はないぜ？
+
+# face 24 "normal"
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0001"
+@ティルフィング
+行きましょう、マスター！
+

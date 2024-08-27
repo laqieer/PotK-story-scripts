@@ -1,0 +1,257 @@
+;;-----------------------------------------
+;;【PUNK】インテグラルノア編
+;;コマンドキラーズサイドストーリー後編
+;;第6話　タイトル：集いし者
+;;6_1_3
+;;スクリプト最後の背景：花畑
+;;-----------------------------------------
+# script "lisp"
+# background "flower_garden"
+# bgm "bgm023" 0
+;;-----------------------------------------
+;;ロジェスティラ
+# body 235
+# pos 235 3
+# scale 235 0.8 0
+# layer 235 3
+# alpha 235 0 0
+# mask 235 off
+;;ロジェスティラ・神令・スクルド（ボイス用）
+# body 5503711
+# alpha 5503711 0 0
+;;イチイバル
+# body 233
+# pos 233 3
+# scale 233 0.8 0
+# layer 233 2
+# alpha 233 0 0
+# mask 233 off
+;;イチイバル・神令・オーディン（ボイス用）
+# body 5402211
+# alpha 5402211 0 0
+;;オルフェウス
+# body 234
+# pos 234 3
+# scale 234 0.8 0
+# layer 234 2
+# alpha 234 0 0
+# mask 234 off
+;;オルフェウス・神令・フォルセティ（ボイス用）
+# body 5603211
+# alpha 5603211 0 0
+;;異族
+# body 810004
+# pos 810004 3
+# scale 810004 0.8 0
+# layer 810004 2
+# alpha 810004 0 0
+# mask 810004 off
+;;ヒョウハ
+# body 231
+# pos 231 3
+# scale 231 0.8 0
+# layer 231 2
+# alpha 231 0 0
+# mask 231 off
+;;ヒョウハ・神令・テュール
+# body 5402011
+# alpha 5402011 0 0
+;;-----------------------------------------
+# se "SE_4301"
+# move 233 2 0
+# face 233 "angry"
+# alpha 233 1 0
+# mask 233 on
+# textflame 1 1
+# textboxarrow 0 1
+# move 234 4 0
+# face 234 "angry"
+# alpha 234 1 0
+# mask 234 on
+# voice 540221 "ichiibal_c_battle_0006"
+@イチイバル
+せいっ！
+…倒しても倒してもキリがないな
+
+# textboxarrow 0 3
+# voice 560321 "orpheus_c_0011"
+@オルフェウス
+元を断たないと、
+幾らでも増えてくるみたいっ
+
+# alpha 233 0 0.5
+# alpha 234 0 0.5
+# move 235 3 0
+# face 235 "angry"
+# alpha 235 1 0.5
+# mask 235 off
+# textboxarrow 0 2
+# voice 550371 "logistille_c_0037"
+@ロジェスティラ
+あ…あのあのっ…
+あっちにも横穴があるので、
+一度、避難を――
+
+# se "SE_0618"
+# alpha 235 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# textboxarrow 0 2
+@異族
+ガアアアアアアアアアア！
+
+# alpha 810004 0 0.5
+# move 235 3 0
+# face 235 "surprise"
+# alpha 235 1 0.5
+# mask 235 off
+# textboxarrow 0 2
+@ロジェスティラ
+あ…
+
+# alpha 235 0 0.5
+# move 233 3 0
+# face 233 "angry"
+# alpha 233 1 0.5
+# mask 233 off
+# textboxarrow 0 2
+@イチイバル
+ロジェ！
+
+;;//イチイバルがロジェスティラを庇う
+# textwindow "close"
+# rightout 233 0.5
+# waitandnext 0.5
+
+# alpha 233 0 0.5
+# move 235 3 0
+# face 235 "surprise"
+# alpha 235 1 0.5
+# mask 235 on
+# waitandnext 0.5
+
+# move 233 3 0
+# face 233 "angry"
+# alpha 233 1 0
+# mask 233 on
+# leftin 233 0.5
+# waitandnext 0.4
+
+# move 235 4 0.1
+# waitandnext 0.2
+
+# se "SE_4824"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+# voice 540221 "ichiibal_c_battle_0008"
+@イチイバル
+ぐうっ…
+
+# face 235 "sad"
+# textboxarrow 0 3
+# voice 550371 "logistille_c_0015"
+@ロジェスティラ
+イチイバルさん…！
+わたしなんかのために…
+
+# textwindow "close"
+# move 233 2 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 1
+# textwindow "normal"
+@イチイバル
+キミが無事なら…それでいい…
+二人とも、先に逃げてくれ
+
+# textboxarrow 0 1
+@イチイバル
+ここはボクが…食い止める…！
+
+# textboxarrow 0 3
+# voice 550371 "logistille_c_0017"
+@ロジェスティラ
+そんなの、イヤですっ…
+
+# alpha 233 0 0.5
+# alpha 235 0 0.5
+# move 234 3 0
+# face 234 "angry"
+# alpha 234 1 0.5
+# mask 234 off
+# textboxarrow 0 2
+# voice 560321 "orpheus_c_0013"
+@オルフェウス
+それに…相手も逃がしてくれる気は
+ないみたい…
+
+# se "SE_0618"
+# alpha 234 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# textboxarrow 0 2
+@異族
+ガアアアアアアアアア！
+
+# alpha 810004 0 0.5
+# move 233 3 0
+# face 233 "irregular"
+# alpha 233 1 0.5
+# mask 233 off
+# textboxarrow 0 2
+# voice 540221 "ichiibal_c_battle_0005"
+@イチイバル
+囲まれたね
+さて、困ったな…
+
+# textboxarrow 0 2
+@イチイバル
+ロジェスティラとオルフェウスだけ
+でも、何とかして逃がさ――
+
+# bgm "stop"
+# alpha 233 0 0.5
+# move 231 3 0
+# face 231 "angry"
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+# voice 540201 "hyoha_c_battle_0001"
+@ヒョウハ
+せいっ！
+
+;;//ヒョウハの矢が異族を撃つ
+# se "SE_4301"
+# waitandnext 0.5
+
+# textwindow "close"
+# alpha 231 0 0.5
+# move 810004 3 0
+# alpha 810004 1 0.5
+# mask 810004 off
+# waitandnext 0.6
+
+# se "SE_4817"
+# shake 0 0.5
+# fadein "white" 0.5
+# waitandnext 0.5
+
+# textboxarrow 0 2
+# textwindow "normal"
+@異族
+ゴギャッ！？
+
+# alpha 810004 0 0.5
+# move 231 3 0
+# alpha 231 1 0.5
+# mask 231 off
+# textboxarrow 0 2
+@ヒョウハ
+ほらほら、異族ども！
+あたしはこっちだよ

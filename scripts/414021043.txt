@@ -1,0 +1,732 @@
+;;-----------------------------------------
+;;414021043
+;;業果の斬ル姫【EP4】バトル後
+;;-----------------------------------------
+# script "lisp"
+# background "300_devil_night02"
+# bgmfile "bgm295" "BgmLostRagnarokBattle003" 0
+;;アスカロン
+# body 3102311
+# pos 3102311 2
+# scale 3102311 0.8 0
+# layer 3102311 5
+# mask 3102311 on
+# alpha 3102311 0 0
+;;フェイルノート
+# body 167
+# pos 167 4
+# scale 167 0.8 0
+# layer 167 3
+# mask 167 on
+# alpha 167 0 0
+;;シユウ
+# body 3201911
+# pos 3201911 3
+# scale 3201911 0.8 0
+# layer 3201911 4
+# mask 3201911 off
+# alpha 3201911 1 0
+;;グリモワール
+# body 3501711
+# pos 3501711 3
+# scale 3501711 0.8 0
+# layer 3501711 3
+# mask 3501711 on
+# alpha 3501711 0 0
+;;ケイオス兵
+# body 3820001
+# pos 3820001 2
+# scale 3820001 0.8 0
+# layer 3820001 1
+# mask 3820001 on
+# alpha 3820001 0 0
+# reversal 3820001 0
+;;ケイオスリオン兵2
+# entry 938200019 3820001
+# pos 938200019 4
+# scale 938200019 0.8 0
+# layer 938200019 1
+# mask 938200019 on
+# alpha 938200019 0 0
+;;トレイセーマ兵
+# body 3830001
+# pos 3830001 5
+# scale 3830001 0.8 0
+# layer 3830001 2
+# mask 3830001 on
+# alpha 3830001 0 0
+;;トレイセーマ兵2
+# entry 938300019 3830001
+# pos 938300019 1
+# scale 938300019 0.8 0
+# layer 938300019 1
+# mask 938300019 on
+# alpha 938300019 0 0
+;;カーテンフェード
+# imageset 0 "black"
+# imagealpha 0 0 0
+# imagelayer 0 1
+;;剣閃（シユウ）
+# effectbody 1000 2 50 0 1
+# effectbody 1001 1 -50 0 1
+# effectbody 1002 3 0 0 1
+;;炎１
+# envbody 2000 7 14
+# effectpattern 2000 1 14
+;;炎２
+# envbody 2001 7 14
+# effectpattern 2001 1 14
+;;炎３
+# envbody 2002 7 14
+# effectpattern 2002 1 14
+;;火の粉
+# envbody 2003 6 0
+# effectpattern 2003 1 0
+# envbody 2004 6 0
+# effectpattern 2004 1 0
+# envbody 2005 6 0
+# effectpattern 2005 1 0
+;;◆背景：ケイオスリオン街中夜-----------------------------
+# textflame 1 1
+# textboxarrow 0 2
+# face 3201911 "usual"
+# voice 320191 "chihyu_a_0004"
+# chara 3201911
+@シユウ
+おろかものめっ！
+
+;;演出：シユウが敵兵をなぎ倒す
+# textwindow "close"
+# se "SE_5204"
+# leftout 3201911 0.3
+# waitandnext 0.3
+
+# voice 320191 "chihyu_a_battle_0002"
+# alpha 3820001 1 0.5
+# pos 3201911 3
+# mask 3201911 on
+# rightin 3201911 0.5
+# waitandnext 0.4
+
+# voice 382000 "demon_battle_0007"
+# face 3201911 "normal"
+# se "SE_9019"
+# effectstart 1000
+# shake 0 0.6
+# alpha 3820001 0 0.3
+# fadein "white" 0.6
+# waitandnext 0.9
+
+# textwindow "normal"
+# textflame 0 0
+@
+シユウの暴食は
+まさに底なしだった
+
+# shake 0 0.6
+# se "SE_5223"
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 2
+# face 3201911 "angry"
+# chara 3201911
+@シユウ
+うがあああああっ！！
+
+;;演出：シユウが敵兵をなぎ倒す
+# textwindow "close"
+# se "SE_5204"
+# rightout 3201911 0.3
+# waitandnext 0.3
+
+# voice 320191 "chihyu_a_battle_0003"
+# alpha 938200019 1 0.5
+# pos 3201911 3
+# leftin 3201911 0.5
+# waitandnext 0.4
+
+# voice 382000 "demon_0037"
+# face 3201911 "usual"
+# se "SE_9019"
+# effectstart 1001
+# shake 0 0.6
+# alpha 938200019 0 0.3
+# fadein "white" 0.6
+# waitandnext 0.9
+
+# textwindow "normal"
+# textflame 0 0
+@
+それこそ日が暮れるほど
+闘いは続いているのに
+
+# textflame 0 0
+@
+先のアスカロンとの戦闘の傷や
+疲労をひきずりながら
+それでも斧を振るい続けている
+
+# se "SE_4600"
+# pos 938200019 5
+# alpha 938200019 1 0.5
+# pos 3820001 1
+# alpha 3820001 1 0.5
+# textflame 0 0
+@
+都中の悪魔人が
+シユウに集まっていく
+
+# textflame 1 1
+# textwindow "toge"
+# textboxarrow 0 2
+# face 3201911 "angry"
+# voice 320191 "chihyu_a_0029"
+# chara 3201911
+@シユウ
+いっくぞおおおっ！
+
+;;演出：シユウが敵兵をなぎ倒す
+# textwindow "close"
+# se "SE_9019"
+# effectstart 1002
+# waitandnext 0.5
+
+# se "SE_4759"
+# voice 382000 "demon_0038"
+# mask 3201911 off
+# move 3201911 3 0
+# shake 1 0.6
+# alpha 938200019 0 0.3
+# alpha 3820001 0 0.3
+# fadein "white" 0.6
+# waitandnext 0.9
+
+# textwindow "normal"
+# textflame 0 0
+@
+しかしシユウの敵ではなかった
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3201911 "happy"
+# voice 320191 "chihyu_a_0020"
+# chara 3201911
+@シユウ
+もののかずではない
+というやつだ！
+
+# textflame 0 0
+@
+シユウが吼え
+その優勢は続くかに思えた
+
+# textflame 0 0
+@
+しかし…
+
+;;立ち絵なし
+# brightness 3201911 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 0 0
+# voice 350171 "grimoire_ge_0027"
+# chara 3501711
+@グリモワール
+下賤な…
+
+;;演出・SE：シユウに炎が降り注ぐ
+# se "SE_5838"
+# face 3201911 "surprise"
+# effectstart 2000
+# shake 0 0.6
+# subfillrect 1 "red" 0.3 0.4 0
+# waitandnext 0.6
+
+# serif 0
+# textwindow "normal"
+# brightness 3201911 1.0 0.3
+# se "SE_5643"
+# se "SE_4759"
+# shake 1 0.6
+# fadein "white" 0.6
+# textflame 1 1
+# textboxarrow 0 2
+# face 3201911 "normal"
+# voice 320191 "chihyu_a_battle_0006"
+# chara 3201911
+@シユウ
+がはぁっ！？
+
+# textflame 0 0
+@
+突如、シユウが
+降り来た豪炎に飲み込まれる
+
+;;立ち絵なし
+# brightness 3201911 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 0 0
+# voice 350171 "grimoire_ge_0030"
+# chara 3501711
+@グリモワール
+感謝するわァ
+惨めに町をかけずりまわって
+炙り出てきてくれて
+
+# serif 1
+# textwindow "normal"
+# textboxarrow 0 0
+# chara 3501711
+@グリモワール
+憤怒を纏う邪龍
+ニーズヘッグの炎
+召し上がれ？　たァんとね
+
+# se "SE_5643"
+# se "SE_4759"
+# shake 1 0.6
+# subfillrect 1 "red" 0.6 0.4 0
+# brightness 3201911 1.0 0.3
+# serif 0
+# textflame 1 1
+# textwindow "normal"
+# textboxarrow 0 2
+# face 3201911 "angry"
+# voice 320191 "chihyu_a_battle_0007"
+# chara 3201911
+@シユウ
+うっ、うがああああああっ！！
+
+# textflame 0 0
+@
+シユウは大斧を振り回し
+炎を撒き散らして、身を引く
+
+# textwindow "top_close"
+# textwindow "bottom_close"
+# se "SE_5204"
+# fadein "white" 0.6
+# effectskip 2000
+# effectstart 2005
+# rightout 3201911 0.4
+# waitandnext 0.4
+
+# se "SE_9146"
+# pos 3201911 3
+# face 3201911 "usual"
+# leftin 3201911 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 320191 "chihyu_a_0037"
+# chara 3201911
+@シユウ
+ハァーッ…ハァーッ…ハァーッ！！
+
+# se "SE_2019"
+# shake 0 0.3
+# textflame 0 0
+@
+致命傷は避けたまでも
+その場にひざをついてしまうシユウ
+
+# brightness 3201911 0.6 0.3
+# serif 1
+# textwindow "normal"
+# textboxarrow 0 0
+# voice 350171 "grimoire_ge_0040"
+# chara 3501711
+@グリモワール
+ワタシの炎が食べられないってェ？
+暴食を司るって聞いたのに
+
+# brightness 3201911 1.0 0.3
+# serif 0
+# textflame 1 1
+# textboxarrow 0 2
+# face 3201911 "normal"
+# voice 320191 "chihyu_a_0007"
+# chara 3201911
+@シユウ
+くちにあわん！！
+
+;;◆グリモＩＮ---------------------------------------------
+# textwindow "top_close"
+# textwindow "bottom_close"
+# alpha 3201911 0 0.5
+# waitandnext 0.5
+
+# se "SE_0719"
+# alpha 3501711 1 0.8
+# alpha 938300019 1 0.8
+# alpha 3830001 1 0.8
+# waitandnext 0.8
+
+# textwindow "normal"
+# textflame 0 0
+@
+グリモワールがトレイセーマ兵を
+大勢引き連れ、ゆっくり歩いてくる
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0004"
+# face 3501711 "angry"
+# chara 3501711
+@グリモワール
+そこの物陰で
+息を潜めている二人も…
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3501711
+@グリモワール
+バレてるんだから
+
+# alpha 3501711 0 0.5
+# alpha 938300019 0 0.5
+# alpha 3830001 0 0.5
+# textflame 0 0
+@
+彼女は指先をクイッと
+瓦礫の山に向ける
+
+# se "SE_5838"
+# effectstart 2001
+# effectskip 2005
+# shake 0 0.8
+# subfillrect 1 "red" 0.6 0.4 0
+# textflame 0 0
+@
+それに追従するように
+炎の塊が一面に叩きつけられる
+
+# effectskip 2001
+# effectstart 2004
+# se "SE_5643"
+# se "SE_4759"
+# shake 1 0.8
+# fadein "white" 0.6
+# voice 4019 "failnaught_a_0037"
+# alpha 167 1 0.3
+# face 167 "angry"
+# alpha 3102311 1 0.3
+# face 3102311 "angry"
+# textflame 1 1
+# textboxarrow 0 3
+# chara 167
+@フェイルノート
+ク…ッ！！
+
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "sad"
+# voice 310231 "ascalon_a_0025"
+# chara 3102311
+@アスカロン
+きゃああっ！？
+
+# textflame 0 0
+@
+文字通り、フェイルノートと
+アスカロンはその場から
+炙り出される
+
+# alpha 167 0 0.5
+# alpha 3102311 0 0.5
+# mask 3201911 on
+# alpha 3201911 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3201911 "normal"
+# voice 320191 "chihyu_a_battle_0005"
+# chara 3201911
+@シユウ
+アスカロン…！
+フェイルノート…！
+
+# textwindow "close"
+# se "SE_5575"
+# move 3201911 5 0.5
+# pos 167 3
+# mask 167 on
+# face 167 "normal"
+# alpha 167 1 0.5
+# pos 3102311 1
+# mask 3102311 on
+# alpha 3102311 1 0.5
+# face 3102311 "normal"
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 0 0
+@
+二人はそのまま
+ボロボロのシユウの元へ集まる
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_battle_0007"
+# face 3102311 "angry"
+# chara 3102311
+@アスカロン
+し、シユウ、大丈夫ですか…！？
+
+# se "SE_5643"
+# shake 0 0.6
+# subfillrect 1 "red" 0.6 0.4 0
+# alpha 167 0 0.5
+# alpha 3102311 0 0.5
+# alpha 3201911 0 0.5
+# pos 3501711 3
+# mask 3501711 off
+# face 3501711 "normal"
+# alpha 3501711 1 0.5
+# textflame 0 0
+@
+天から降った炎はそのまま地を焼き
+燃え上がり、そして
+グリモワールの周囲へと
+
+# textflame 1 1
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0007"
+# chara 3501711
+@グリモワール
+さァ
+「鍵」を渡してよ
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3501711
+@グリモワール
+そうすれば
+ワタシの国でお勉強させてアゲル
+
+# alpha 3501711 0 0.5
+# alpha 167 1 0.5
+# alpha 3102311 1 0.5
+# alpha 3201911 1 0.5
+# face 3201911 "normal"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "normal"
+# chara 3102311
+@アスカロン
+…勉強…？
+
+# alpha 3102311 0 0.5
+# alpha 3201911 0 0.5
+# alpha 167 0 0.5
+# alpha 3501711 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "normal"
+# voice 350171 "grimoire_ge_0003"
+# chara 3501711
+@グリモワール
+幻獣国トレイセーマの得意分野
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3501711
+@グリモワール
+獣だって手なずける
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "angry"
+# chara 3501711
+@グリモワール
+「洗脳」してあげるって
+言ってんのよ
+
+# alpha 3501711 0 0.5
+# alpha 3102311 1 0.5
+# alpha 167 1 0.5
+# alpha 3201911 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "angry"
+# voice 310231 "ascalon_a_battle_0005"
+# chara 3102311
+@アスカロン
+…ッ！
+
+# se "SE_5205"
+# textflame 0 0
+@
+反射的に
+アスカロンはフェイルノートをかばう
+
+# alpha 3102311 0 0.5
+# alpha 167 0 0.5
+# alpha 3201911 0 0.5
+# alpha 3501711 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "normal"
+# chara 3501711
+@グリモワール
+主人をかばうの？
+身を呈して
+
+# alpha 3501711 0 0.5
+# alpha 3102311 1 0.5
+# alpha 167 1 0.5
+# alpha 3201911 1 0.5
+# textflame 1 1
+# textboxarrow 0 1
+# voice 310231 "ascalon_a_0026"
+# chara 3102311
+@アスカロン
+当たり前です…！
+
+# voice 4019 "failnaught_a_0022"
+# textflame 1 1
+# textboxarrow 0 2
+# face 167 "angry"
+# chara 167
+@フェイルノート
+…！
+
+# alpha 3102311 0 0.5
+# alpha 167 0 0.5
+# alpha 3201911 0 0.5
+# alpha 3501711 1 0.5
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "angry"
+# voice 350171 "grimoire_ge_0010"
+# chara 3501711
+@グリモワール
+イライラするわ、その偽善
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3501711
+@グリモワール
+どうせ理不尽に使われるだけの
+駒のくせに…！
+
+# se "SE_5643"
+# shake 0 0.6
+# effectstart 2002
+# effectskip 2004
+# subfillrect 1 "red" 0.6 0.4 0
+# textflame 0 0
+@
+地面の四方八方から炎が吹き出
+アスカロンたちの逃げ道を塞ぐ
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "normal"
+# voice 350171 "grimoire_ge_0005"
+# chara 3501711
+@グリモワール
+八方ふさがり、ね？
+
+# textflame 0 0
+@
+グリモワールは両手を
+振り下ろす
+
+# alpha 3501711 0 0.5
+# alpha 3102311 1 0.5
+# alpha 167 1 0.5
+# face 167 "angry"
+# alpha 3201911 1 0.5
+# face 3201911 "surprise"
+# textflame 1 1
+# textboxarrow 0 1
+# face 3102311 "angry"
+# voice 310231 "ascalon_a_0024"
+# chara 3102311
+@アスカロン
+ッ！？
+
+;;◆背景：黒バック（炎）-----------------------------------
+;;演出・SE：アスカロンたちを炎が飲み込む
+# textwindow "close"
+# se "SE_8015"
+# shake 1 1.2
+# fadeout "white" 1.0
+# waitandnext 1.0
+
+# se "SE_5643"
+# alpha 3102311 0 0
+# alpha 3201911 0 0
+# alpha 167 0 0
+# subfillrect 1 "red" 0 0 0.3
+# background "bg_black"
+# waitandnext 0.5
+
+# se "SE_0753"
+# fadein "white" 1.0
+# waitandnext 1.0
+
+# textwindow "normal"
+# textflame 0 0
+@
+舞い上がった炎は
+瞬く間に赤き壁となり
+アスカロン達の姿を飲み込んだ
+
+;;◆背景：ケイオスリオン街中夜-----------------------------
+# imagepos 0 0 30
+# imagealpha 0 1 0
+# imageleftin 0 0.5
+# textwindow "close"
+# waitandnext 0.5
+
+# subfillrect 1 "red" 0 0.3 0
+# alpha 3501711 1 0
+# face 3501711 "sad"
+# background "300_devil_night02"
+# waitandnext 0.5
+
+# imagealpha 0 0 0.5
+# imagerightout 0 0.5
+# waitandnext 0.5
+
+# textwindow "normal"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0028"
+# chara 3501711
+@グリモワール
+………あーあ
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3501711
+@グリモワール
+御し切れず
+「鍵」まで巻き込んじゃったあ
+
+# textflame 1 1
+# textboxarrow 0 2
+# chara 3501711
+@グリモワール
+これじゃあ家に帰れなァ～い
+
+# textflame 1 1
+# textboxarrow 0 2
+# face 3501711 "normal"
+# chara 3501711
+@グリモワール
+な～んて
+
+# sestop "SE_0753"
+# textflame 1 1
+# textboxarrow 0 2
+# voice 350171 "grimoire_ge_0020"
+# face 3501711 "happy"
+# chara 3501711
+@グリモワール
+あ～はははっー！！

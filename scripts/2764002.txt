@@ -1,0 +1,251 @@
+;;-----------------------------------------
+;;【このすばEP1･戦闘後】
+;;スクリプトID:2764002
+;;スクリプト最後の背景：sea_beach_day
+;;背景：ビーチ
+;;-----------------------------------------
+# script "lisp"
+# background "sea_beach_day"
+# bgmfile "bgm208" "BgmKScollabo001" 0
+;;海上編ティルフィング
+# body 2101411
+# pos 2101411 4
+# scale 2101411 0.8 0
+# alpha 2101411 0 0
+# mask 2101411 off
+# face 2101411 "sad"
+;;デュリン
+# body 0
+# pos 0 2
+# scale 0 0.8 0
+# alpha 0 0 0
+# layer 0 3
+# mask 0 off
+# face 0 "worry"
+;;水着アスクレピオス
+# body 2600111
+# pos 2600111 4
+# scale 2600111 0.8 0
+# alpha 2600111 1 0
+# face 2600111 "angry"
+;;水着めぐみん
+# body 2502511
+# pos 2502511 3
+# scale 2502511 0.8 0
+# alpha 2502511 0 0
+# mask 2502511 off
+;;水着ダクネス
+# body 2103411
+# pos 2103411 2
+# scale 2103411 0.8 0
+# alpha 2103411 1 0
+# layer 2103411 4
+# face 2103411 "shy"
+;;◆背景：ビーチ（昼）---------------------
+# textflame 1 1
+# textboxarrow 0 1
+# voice 1034 "dakunesu_0021"
+@ダクネス
+ふぅ…みんなのおかげで
+異族は撃退できたようだな
+…ハァハァ
+
+# emotionbody 1001 1 2600111 0 300
+# effectpattern 1001 1 0
+# effectstart 1001
+# voice 6001 "asukurepiosu_0010"
+# textboxarrow 0 3
+@アスクレピオス
+ちょっと！あなたどうして
+あんな無茶を？傷だらけじゃない！
+私、警告したはずだけど！？
+
+# emotionbody 1002 3 2103411 0 300
+# effectpattern 1002 1 0
+# effectstart 1002
+# textboxarrow 0 1
+@ダクネス
+ふっふっふ…クルセイダーは
+敵の攻撃から皆を守るのが仕事
+おかげで最高の気分だ…
+
+# alpha 2600111 0 0.5
+# alpha 2103411 0 0.5
+# alpha 0 1 0.5
+# alpha 2101411 1 0.5
+# textboxarrow 0 3
+# voice 1014 "tyrufing_0002"
+@ティルフィング
+大丈夫ですか、ダクネスさん
+
+# emotionbody 1003 8 0 0 220
+# effectpattern 1003 1 0
+# effectstart 1003
+# textboxarrow 0 1
+@デュリン
+まったく避ける素振りもなく
+攻撃しても全然当たらなくて
+ボコボコにされてたみたいだけど？
+
+# effectskip 1003
+# alpha 0 0 0.5
+# alpha 2101411 0 0.5
+# alpha 2502511 1 0.5
+# textboxarrow 0 2
+@めぐみん
+ご心配は無用です
+ダクネスは頑丈なので
+
+# alpha 2502511 0 0.5
+# alpha 2103411 1 0.5
+# alpha 2600111 1 0.5
+# face 2600111 "normal"
+# textboxarrow 0 3
+@アスクレピオス
+しょうがないわね
+今すぐ治療してあげるから
+
+# emotionbody 1004 11 2103411 60 230
+# effectpattern 1004 1 0
+# effectstart 1004
+# face 2103411 "sad"
+# textboxarrow 0 1
+# voice 1034 "dakunesu_0022"
+@ダクネス
+ま、待て！ここまでの傷を
+負ったのは久しぶりなのだ！
+もう少しだけ堪能しても…
+
+# emotionbody 1005 2 2600111 35 260
+# effectpattern 1005 1 0
+# effectstart 1005
+# face 2600111 "angry"
+# textboxarrow 0 3
+@アスクレピオス
+は？
+
+# textboxarrow 0 1
+@ダクネス
+…ささっ
+
+;;//ダクネスどっか行こうとする
+# move 2103411 1 0.6
+# textwindow "close"
+# waitandnext 0.4
+
+# emotionbody 1006 6 2600111 30 250
+# effectpattern 1006 1 0
+# effectstart 1006
+# move 2600111 3 0.3
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 6001 "asukurepiosu_0012"
+@アスクレピオス
+こら！逃げるな！
+おとなしく私の術を受けなさい！
+
+# emotionbody 1007 1 2103411 0 250
+# effectpattern 1007 2 0
+# effectstart 1007
+# face 2103411 "shy"
+# textboxarrow 0 1
+@ダクネス
+はっ！？何をする！？
+
+# emotionbody 1008 4 2103411 0 250
+# effectpattern 1008 1 0
+# effectstart 1008
+@ダクネス
+無理やり引き戻されて
+治療を施されるというのも
+それはそれで辱めだっ…
+
+# emotionbody 1009 11 2600111 30 250
+# effectpattern 1009 1 0
+# effectstart 1009
+# textboxarrow 0 2
+@アスクレピオス
+な、なんで赤い顔してるのよ！
+熱でもあるんじゃないの！？
+
+# emotionbody 1010 3 2103411 0 250
+# effectpattern 1010 1 0
+# effectstart 1010
+# textboxarrow 0 1
+@ダクネス
+ああ、きっとそうに違いない！
+だから、その太い注射を
+私にぶち込んでくれても構わない！
+
+# emotionbody 1011 9 2600111 30 250
+# effectpattern 1011 3 0
+# effectstart 1011
+# textboxarrow 0 2
+@アスクレピオス
+こ、これは
+ただのフロートで、飾りだから！
+本物の注射器じゃないから！
+
+# alpha 2600111 0 0.5
+# alpha 2103411 0 0.5
+# move 2101411 3 0
+# alpha 2101411 1 0.5
+# face 2101411 "smile"
+# textboxarrow 0 2
+# voice 1014 "tyrufing_0004"
+@ティルフィング
+ふふっ、ダクネスさん…
+怒られないうちに適当なところで
+観念したほうがいいですよ
+
+# alpha 2101411 0 0.5
+# alpha 2600111 1 0.5
+# alpha 2103411 1 0.5
+# face 2103411 "sad"
+# textboxarrow 0 2
+@アスクレピオス
+わ、私は怒ったりしないわよ！
+ただ治療したいだけなんだから！
+…ほんとよ？
+
+# face 2600111 "normal"
+@アスクレピオス
+ほ、ほら、腕を出しなさい
+面倒かけさせないで
+
+# textboxarrow 0 1
+@ダクネス
+わ、分かった…
+私だって味方を怒らせたい訳ではない
+言うとおりにしよう
+
+# fadein "white" 0.8
+# textwindow "close"
+# se "SE_4781"
+# waitandnext 0.8
+
+# face 2600111 "angry"
+# textwindow "normal"
+# textboxarrow 0 2
+# voice 6001 "asukurepiosu_0013"
+@アスクレピオス
+…はい！応急処置終わり！
+もう勝手に無茶しちゃダメよ？
+分かった！？分かったわね！？
+
+# textboxarrow 0 1
+@ダクネス
+ひ、ひゃい！
+
+# alpha 2600111 0 0.5
+# alpha 2103411 0 0.5
+# alpha 0 1 0.5
+# move 2101411 4 0
+# alpha 2101411 1 0.5
+# voice 9999 "durin_0027"
+@デュリン
+…なにやってるんだか
+
+# textboxarrow 0 3
+@ティルフィング
+仲良しになれそうですね、あの二人
