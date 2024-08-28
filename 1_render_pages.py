@@ -50,6 +50,19 @@ def parse_script_files(extracted_folder):
                 else:
                     f_page.write(line)
 
+def build_index_page():
+    script_ids = sorted([int(file[:-4]) for file in os.listdir('scripts/') if file.endswith('.txt')])
+    index_page_path = 'scripts/index.md'
+    with open(index_page_path, 'w', encoding='utf-8') as f_index:
+        f_index.write("# Scripts\n\n")
+        for script_id in script_ids:
+            f_index.write(f"- [{script_id}]({script_id}.txt)\n")
+    index_page_path = 'pages/index.md'
+    with open(index_page_path, 'w', encoding='utf-8') as f_index:
+        f_index.write("# Pages\n\n")
+        for script_id in script_ids:
+            f_index.write(f"- [{script_id}]({script_id}.md)\n")
+
 
 # Check if the input folder path is provided as a command line argument
 if len(sys.argv) > 1:
@@ -61,3 +74,5 @@ else:
 extracted_folder = os.path.join(extracted_folder, 'extracted/')
 
 parse_script_files(extracted_folder)
+
+build_index_page()
