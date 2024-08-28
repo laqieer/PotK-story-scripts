@@ -3,15 +3,15 @@ import sys
 import shutil
 import warnings
 
+script_ids = sorted([int(file[:-4]) for file in os.listdir('scripts/') if file.endswith('.txt')])
+
 def parse_script_files(extracted_folder):
-    script_folder = "scripts/"
-    script_files = [file for file in os.listdir(script_folder) if file.endswith('.txt')]
-    for script_file in script_files:
-        script_file_path = os.path.join(script_folder, script_file)
-        page_file_path = os.path.join('pages/', script_file[:-4] + ".md")
-        print(f"Processing {script_file_path}")
-        with open(script_file_path, "r", encoding='utf-8') as f_script, open(page_file_path, 'w', encoding='utf-8') as f_page:
-            f_page.write(f"[View script in lisp](../scripts/{script_file})\n")
+    for i, script_id in enumerate(script_ids):
+        script_file = os.path.join('scripts/', f"{script_id}.txt")
+        page_file = os.path.join('pages/', f"{script_id}.md")
+        print(f"Processing {script_file}")
+        with open(script_file, "r", encoding='utf-8') as f_script, open(page_file, 'w', encoding='utf-8') as f_page:
+            f_page.write(f"[View script in lisp](../scripts/{script_id}.txt)\n")
             lines = f_script.readlines()
             for line in lines:
                 if not line.strip() or line.startswith(';;'):
@@ -49,16 +49,18 @@ def parse_script_files(extracted_folder):
                         f_page.write("\n")
                 else:
                     f_page.write(line)
+            if i < len(script_ids) - 1:
+                f_page.write(f"\n\nNext: [{script_ids[i+1]}]({script_ids[i+1]}.md)")
+            f_page.write("\n\n[Back to index](index.md)\n")
 
 def build_index_page():
-    script_ids = sorted([int(file[:-4]) for file in os.listdir('scripts/') if file.endswith('.txt')])
-    index_page_path = 'scripts/index.md'
-    with open(index_page_path, 'w', encoding='utf-8') as f_index:
+    index_page = 'scripts/index.md'
+    with open(index_page, 'w', encoding='utf-8') as f_index:
         f_index.write("# Scripts\n\n")
         for script_id in script_ids:
             f_index.write(f"- [{script_id}]({script_id}.txt)\n")
-    index_page_path = 'pages/index.md'
-    with open(index_page_path, 'w', encoding='utf-8') as f_index:
+    index_page = 'pages/index.md'
+    with open(index_page, 'w', encoding='utf-8') as f_index:
         f_index.write("# Pages\n\n")
         for script_id in script_ids:
             f_index.write(f"- [{script_id}]({script_id}.md)\n")
