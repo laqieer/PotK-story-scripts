@@ -11,6 +11,7 @@ def parse_script_files(extracted_folder):
         page_file_path = os.path.join('pages/', script_file[:-4] + ".md")
         print(f"Processing {script_file_path}")
         with open(script_file_path, "r", encoding='utf-8') as f_script, open(page_file_path, 'w', encoding='utf-8') as f_page:
+            f_page.write(f"[View script in lisp](../scripts/{script_file})\n")
             lines = f_script.readlines()
             for line in lines:
                 if not line.strip() or line.startswith(';;'):
