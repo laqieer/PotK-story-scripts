@@ -61,7 +61,7 @@ def build_index_page():
     with open(index_page_path, 'w', encoding='utf-8') as f_index:
         f_index.write("# Pages\n\n")
         for script_id in script_ids:
-            f_index.write(f"- [{script_id}]({script_id}.md)\n")
+            f_index.write(f"- [{script_id}]({script_id})\n")
 
 
 # Check if the input folder path is provided as a command line argument
