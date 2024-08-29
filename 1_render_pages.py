@@ -21,7 +21,7 @@ def load_unit_data(masterdata_folder):
 
 def parse_script_files(masterdata_folder, extracted_folder):
     unit_data, unit_ids_by_name = load_unit_data(masterdata_folder)
-    for i, script_id in enumerate(script_ids):
+    for script_index, script_id in enumerate(script_ids):
         script_file = os.path.join('scripts/', f"{script_id}.txt")
         page_file = os.path.join('pages/', f"{script_id}.md")
         print(f"Processing {script_file}")
@@ -158,8 +158,8 @@ def parse_script_files(masterdata_folder, extracted_folder):
                         f_page.write("\n")
                 else:
                     f_page.write(line)
-            if i < len(script_ids) - 1:
-                f_page.write(f"\n\nNext: [{script_ids[i+1]}]({script_ids[i+1]}.md)")
+            if script_index < len(script_ids) - 1:
+                f_page.write(f"\n\nNext: [{script_ids[script_index + 1]}]({script_ids[script_index + 1]}.md)")
             f_page.write("\n\n[Back to index](index.md)\n")
 
 def build_index_page():
