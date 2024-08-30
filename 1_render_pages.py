@@ -152,8 +152,8 @@ def parse_script_files(masterdata_folder, extracted_folder):
                                         except FileNotFoundError:
                                             warnings.warn(f"Unit {res_ref_unit_id} thumbnail not found")
                                     # f_page.write(f"\n![{res_ref_unit_id}.png](../{unit_thumb})")
-                                    f_page.write(f'\n<img src="../{unit_thumb}" alt="{res_ref_unit_id}.png" height="34"/>\n')
-                        f_page.write(f"\n**【{speaker}】**\n")
+                                    f_page.write(f'\n<img src="../{unit_thumb}" alt="{res_ref_unit_id}.png" height="34"/>')
+                        f_page.write(f"\n【{speaker}】\n")
                     else:
                         f_page.write("\n")
                 else:
