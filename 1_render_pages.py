@@ -216,7 +216,7 @@ def build_index_page(masterdata_folder):
     with open(index_EarthQuestStoryPlayback, 'w', encoding='utf-8') as f_index:
         f_index.write(f"# {QuestStoryXL[2]['name']}\n\n")
         f_index.write(f"earth_prologue_5\n\n{videos['earth_prologue_5']}\n\n")
-        for chapter in EarthQuestChapter.values():
+        for chapter in sorted(EarthQuestChapter.values(), key=lambda x: x['ID']):
             f_index.write(f"## {chapter['chapter']} {chapter['chapter_name']}\n\n")
             for episode_id in chapter['episode_ids']:
                 episode = EarthQuestEpisode[episode_id]
@@ -240,7 +240,8 @@ def build_index_page(masterdata_folder):
             d['QuestCharacterS'] = []
             QuestCharacterM[d['ID']] = d
     QuestCharacterL = {}
-    for character_id, characterM in QuestCharacterM.items():
+    for character_id in sorted(QuestCharacterM.keys()):
+        characterM = QuestCharacterM[character_id]
         if characterM['name'].strip() not in QuestCharacterL:
             QuestCharacterL[characterM['name'].strip()] = {
                 'QuestCharacterM': [],
@@ -269,7 +270,8 @@ def build_index_page(masterdata_folder):
     index_StoryPlaybackCharacterDetail = 'pages/StoryPlaybackCharacterDetail.md'
     with open(index_StoryPlaybackCharacterDetail, 'w', encoding='utf-8') as f_index:
         f_index.write("# StoryPlaybackCharacterDetail\n\n")
-        for characterL_name, characterL in QuestCharacterL.items():
+        for characterL_name in sorted(QuestCharacterL.keys(), key=lambda x: min(QuestCharacterL[x]['QuestCharacterM'])):
+            characterL = QuestCharacterL[characterL_name]
             f_index.write(f"## {characterL_name}\n\n")
             for characterM_id in characterL['QuestCharacterM']:
                 characterM = QuestCharacterM[characterM_id]
