@@ -170,6 +170,7 @@ def build_index_page(masterdata_folder):
         data = json.load(f_QuestStoryXL)
         for d in data:
             QuestStoryXL[d['ID']] = d
+    # index for EarthQuestStoryPlayback
     EarthQuestChapter = {}
     with open(os.path.join(masterdata_folder, 'EarthQuestChapter.json'), 'r', encoding='utf-8') as f_EarthQuestChapter:
         data = json.load(f_EarthQuestChapter)
@@ -204,11 +205,70 @@ def build_index_page(masterdata_folder):
                     script_names[script_id] = ' '.join([str(script_id), QuestStoryXL[2]['name'], chapter['chapter'], chapter['chapter_name'], story['title']])
                 if len(episode['story_ids']) > 0:
                     f_index.write("\n")
+    # index for StoryPlaybackCharacterDetail
+    QuestCharacterM = {}
+    with open(os.path.join(masterdata_folder, 'QuestCharacterM.json'), 'r', encoding='utf-8') as f_QuestCharacterM:
+        data = json.load(f_QuestCharacterM)
+        for d in data:
+            d['QuestCharacterS'] = []
+            QuestCharacterM[d['ID']] = d
+    QuestCharacterL = {}
+    for character_id, characterM in QuestCharacterM.items():
+        if characterM['name'].strip() not in QuestCharacterL:
+            QuestCharacterL[characterM['name'].strip()] = {
+                'QuestCharacterM': [],
+            }
+        QuestCharacterL[characterM['name'].strip()]['QuestCharacterM'].append(character_id)
+    QuestCharacterS = {}
+    with open(os.path.join(masterdata_folder, 'QuestCharacterS.json'), 'r', encoding='utf-8') as f_QuestCharacterS:
+        data = json.load(f_QuestCharacterS)
+        for d in data:
+            d['StoryPlaybackCharacter'] = []
+            QuestCharacterS[d['ID']] = d
+            QuestCharacterM[d['quest_m_QuestCharacterM']]['QuestCharacterS'].append(d['ID'])
+    StoryPlaybackCharacter = {}
+    with open(os.path.join(masterdata_folder, 'StoryPlaybackCharacter.json'), 'r', encoding='utf-8') as f_StoryPlaybackCharacter:
+        data = json.load(f_StoryPlaybackCharacter)
+        for d in data:
+            d['StoryPlaybackCharacterDetail'] = []
+            StoryPlaybackCharacter[d['ID']] = d
+            QuestCharacterS[d['quest_QuestCharacterS']]['StoryPlaybackCharacter'].append(d['ID'])
+    StoryPlaybackCharacterDetail = {}
+    with open(os.path.join(masterdata_folder, 'StoryPlaybackCharacterDetail.json'), 'r', encoding='utf-8') as f_StoryPlaybackCharacterDetail:
+        data = json.load(f_StoryPlaybackCharacterDetail)
+        for d in data:
+            StoryPlaybackCharacterDetail[d['ID']] = d
+            StoryPlaybackCharacter[d['character_StoryPlaybackCharacter']]['StoryPlaybackCharacterDetail'].append(d['ID'])
+    index_StoryPlaybackCharacterDetail = 'pages/StoryPlaybackCharacterDetail.md'
+    with open(index_StoryPlaybackCharacterDetail, 'w', encoding='utf-8') as f_index:
+        f_index.write("# StoryPlaybackCharacterDetail\n\n")
+        for characterL_name, characterL in QuestCharacterL.items():
+            f_index.write(f"## {characterL_name}\n\n")
+            for characterM_id in characterL['QuestCharacterM']:
+                characterM = QuestCharacterM[characterM_id]
+                # f_index.write(f"## {characterM['name']}\n\n")
+                for characterS_id in characterM['QuestCharacterS']:
+                    characterS = QuestCharacterS[characterS_id]
+                    if len(characterS['StoryPlaybackCharacter']) > 0:
+                        assert characterS['name'].strip() == characterM['name'].strip()
+                        # f_index.write(f"## {characterS['name'].strip()}\n\n")
+                    for characterStory_id in characterS['StoryPlaybackCharacter']:
+                        characterStory = StoryPlaybackCharacter[characterStory_id]
+                        f_index.write(f"### {characterStory['name']}\n\n")
+                        for characterStoryDetail_id in characterStory['StoryPlaybackCharacterDetail']:
+                            characterStoryDetail = StoryPlaybackCharacterDetail[characterStoryDetail_id]
+                            script_id = characterStoryDetail['script_id']
+                            f_index.write(f"- [{script_id} {characterStoryDetail['name']}]({script_id}.md)\n")
+                            script_names[script_id] = ' '.join([str(script_id), characterStory['name'], characterStoryDetail['name']])
+                        if len(characterStory['StoryPlaybackCharacterDetail']) > 0:
+                            f_index.write("\n")
     # index for contents
     index_contents = 'contents.md'
     with open(index_contents, 'w', encoding='utf-8') as f_index:
         f_index.write("# Contents\n\n")
+        f_index.write("## ストーリークエスト\n\n")
         f_index.write(f"- [{QuestStoryXL[2]['name']}]({index_EarthQuestStoryPlayback})\n")
+        f_index.write(f"\n## [キャラクタークエスト]({index_StoryPlaybackCharacterDetail})\n")
     # index for all scripts
     index_page = 'scripts/index.md'
     with open(index_page, 'w', encoding='utf-8') as f_index:
@@ -242,4 +302,4 @@ extracted_folder = os.path.join(extracted_folder, 'extracted/')
 
 build_index_page(masterdata_folder)
 
-parse_script_files(masterdata_folder, extracted_folder)
+# parse_script_files(masterdata_folder, extracted_folder)
