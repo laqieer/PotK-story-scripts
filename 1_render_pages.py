@@ -5,6 +5,7 @@ import shutil
 import warnings
 
 script_ids = sorted([int(file[:-4]) for file in os.listdir('scripts/') if file.endswith('.txt')])
+script_names = {}
 
 def load_unit_data(masterdata_folder):
     unit_data = {}
@@ -26,6 +27,7 @@ def parse_script_files(masterdata_folder, extracted_folder):
         page_file = os.path.join('pages/', f"{script_id}.md")
         print(f"Processing {script_file}")
         with open(script_file, "r", encoding='utf-8') as f_script, open(page_file, 'w', encoding='utf-8') as f_page:
+            f_page.write(f"{script_names.get(script_id, script_id)}\n\n")
             f_page.write(f"[View script in lisp](../scripts/{script_id}.txt)\n")
             lines = f_script.readlines()
             units = {}
@@ -162,17 +164,62 @@ def parse_script_files(masterdata_folder, extracted_folder):
                 f_page.write(f"\n\nNext: [{script_ids[script_index + 1]}]({script_ids[script_index + 1]}.md)")
             f_page.write("\n\n[Back to index](index.md)\n")
 
-def build_index_page():
+def build_index_page(masterdata_folder):
+    QuestStoryXL = {}
+    with open(os.path.join(masterdata_folder, 'QuestStoryXL.json'), 'r', encoding='utf-8') as f_QuestStoryXL:
+        data = json.load(f_QuestStoryXL)
+        for d in data:
+            QuestStoryXL[d['ID']] = d
+    EarthQuestChapter = {}
+    with open(os.path.join(masterdata_folder, 'EarthQuestChapter.json'), 'r', encoding='utf-8') as f_EarthQuestChapter:
+        data = json.load(f_EarthQuestChapter)
+        for d in data:
+            d['episode_ids'] = []
+            EarthQuestChapter[d['ID']] = d
+    EarthQuestEpisode = {}
+    with open(os.path.join(masterdata_folder, 'EarthQuestEpisode.json'), 'r', encoding='utf-8') as f_EarthQuestEpisode:
+        data = json.load(f_EarthQuestEpisode)
+        for d in data:
+            d['story_ids'] = []
+            EarthQuestEpisode[d['ID']] = d
+            EarthQuestChapter[d['chapter_EarthQuestChapter']]['episode_ids'].append(d['ID'])
+    EarthQuestStoryPlayback = {}
+    with open(os.path.join(masterdata_folder, 'EarthQuestStoryPlayback.json'), 'r', encoding='utf-8') as f_EarthQuestStoryPlayback:
+        data = json.load(f_EarthQuestStoryPlayback)
+        for d in data:
+            EarthQuestStoryPlayback[d['ID']] = d
+            EarthQuestEpisode[d['episode_EarthQuestEpisode']]['story_ids'].append(d['ID'])
+    index_EarthQuestStoryPlayback = 'pages/EarthQuestStoryPlayback.md'
+    with open(index_EarthQuestStoryPlayback, 'w', encoding='utf-8') as f_index:
+        f_index.write(f"# {QuestStoryXL[2]['name']}\n\n")
+        for chapter in EarthQuestChapter.values():
+            f_index.write(f"## {chapter['chapter']} {chapter['chapter_name']}\n\n")
+            for episode_id in chapter['episode_ids']:
+                episode = EarthQuestEpisode[episode_id]
+                f_index.write(f"### {episode['episode_name']}\n\n")
+                for story_id in episode['story_ids']:
+                    story = EarthQuestStoryPlayback[story_id]
+                    script_id = story['script_id']
+                    f_index.write(f"- [{script_id} {story['title']}]({script_id}.md)\n")
+                    script_names[script_id] = ' '.join([str(script_id), QuestStoryXL[2]['name'], chapter['chapter'], chapter['chapter_name'], story['title']])
+                if len(episode['story_ids']) > 0:
+                    f_index.write("\n")
+    # index for contents
+    index_contents = 'contents.md'
+    with open(index_contents, 'w', encoding='utf-8') as f_index:
+        f_index.write("# Contents\n\n")
+        f_index.write(f"- [{QuestStoryXL[2]['name']}]({index_EarthQuestStoryPlayback})\n")
+    # index for all scripts
     index_page = 'scripts/index.md'
     with open(index_page, 'w', encoding='utf-8') as f_index:
         f_index.write("# Scripts\n\n")
         for script_id in script_ids:
-            f_index.write(f"- [{script_id}]({script_id}.txt)\n")
+            f_index.write(f"- [{script_names.get(script_id, script_id)}]({script_id}.txt)\n")
     index_page = 'pages/index.md'
     with open(index_page, 'w', encoding='utf-8') as f_index:
         f_index.write("# Pages\n\n")
         for script_id in script_ids:
-            f_index.write(f"- [{script_id}]({script_id}.md)\n")
+            f_index.write(f"- [{script_names.get(script_id, script_id)}]({script_id}.md)\n")
 
 
 # Check if the input folder path is provided as a command line argument
@@ -193,6 +240,6 @@ else:
 
 extracted_folder = os.path.join(extracted_folder, 'extracted/')
 
-parse_script_files(masterdata_folder, extracted_folder)
+build_index_page(masterdata_folder)
 
-build_index_page()
+parse_script_files(masterdata_folder, extracted_folder)
