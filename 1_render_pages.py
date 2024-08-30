@@ -198,7 +198,7 @@ def build_index_page(masterdata_folder):
             for episode_id in chapter['episode_ids']:
                 episode = EarthQuestEpisode[episode_id]
                 f_index.write(f"### {episode['episode_name']}\n\n")
-                for story_id in episode['story_ids']:
+                for story_id in sorted(episode['story_ids'], key=lambda x: EarthQuestStoryPlayback[x]['timing_StoryPlaybackTiming']):
                     story = EarthQuestStoryPlayback[story_id]
                     script_id = story['script_id']
                     f_index.write(f"- [{script_id} {story['title']}]({script_id}.md)\n")
