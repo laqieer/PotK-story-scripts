@@ -4,6 +4,21 @@ import sys
 import shutil
 import warnings
 
+videos_url = 'https://github.com/laqieer/PotK-story-scripts/wiki/Videos'
+videos = {}
+
+# get videos from videos_url
+import requests
+from bs4 import BeautifulSoup
+response = requests.get(videos_url)
+soup = BeautifulSoup(response.text, 'html.parser')
+for details in soup.find_all('details'):
+    summary = details.find('summary')
+    if summary:
+        video_name = summary.text.strip()
+        if video_name.endswith('.mp4'):
+            videos[video_name[:-4]] = details.find('video')
+
 script_ids = sorted([int(file[:-4]) for file in os.listdir('scripts/') if file.endswith('.txt')])
 script_names = {}
 
@@ -184,6 +199,11 @@ def build_index_page(masterdata_folder):
             d['story_ids'] = []
             EarthQuestEpisode[d['ID']] = d
             EarthQuestChapter[d['chapter_EarthQuestChapter']]['episode_ids'].append(d['ID'])
+    with open(os.path.join(masterdata_folder, 'EarthQuestPologue.json'), 'r', encoding='utf-8') as f_EarthQuestPrologue:
+        data = json.load(f_EarthQuestPrologue)
+        for d in data:
+            if d['type'] == 'movie':
+                EarthQuestEpisode[d['episode_EarthQuestEpisode']]['EarthQuestPrologue'] = d['arg1']
     EarthQuestStoryPlayback = {}
     with open(os.path.join(masterdata_folder, 'EarthQuestStoryPlayback.json'), 'r', encoding='utf-8') as f_EarthQuestStoryPlayback:
         data = json.load(f_EarthQuestStoryPlayback)
@@ -193,11 +213,15 @@ def build_index_page(masterdata_folder):
     index_EarthQuestStoryPlayback = 'pages/EarthQuestStoryPlayback.md'
     with open(index_EarthQuestStoryPlayback, 'w', encoding='utf-8') as f_index:
         f_index.write(f"# {QuestStoryXL[2]['name']}\n\n")
+        f_index.write(f"{videos['earth_prologue_5']}\n\n")
         for chapter in EarthQuestChapter.values():
             f_index.write(f"## {chapter['chapter']} {chapter['chapter_name']}\n\n")
             for episode_id in chapter['episode_ids']:
                 episode = EarthQuestEpisode[episode_id]
                 f_index.write(f"### {episode['episode_name']}\n\n")
+                if 'EarthQuestPrologue' in episode:
+                    assert episode['EarthQuestPrologue'] in videos, f"Video {episode['EarthQuestPrologue']} not found"
+                    f_index.write(f"{videos[episode['EarthQuestPrologue']]}\n\n")
                 for story_id in sorted(episode['story_ids'], key=lambda x: EarthQuestStoryPlayback[x]['timing_StoryPlaybackTiming']):
                     story = EarthQuestStoryPlayback[story_id]
                     script_id = story['script_id']
@@ -205,6 +229,7 @@ def build_index_page(masterdata_folder):
                     script_names[script_id] = ' '.join([str(script_id), QuestStoryXL[2]['name'], chapter['chapter'], chapter['chapter_name'], story['title']])
                 if len(episode['story_ids']) > 0:
                     f_index.write("\n")
+        f_index.write(f"{videos['earth_endroll']}\n\n")
     # index for StoryPlaybackCharacterDetail
     QuestCharacterM = {}
     with open(os.path.join(masterdata_folder, 'QuestCharacterM.json'), 'r', encoding='utf-8') as f_QuestCharacterM:
@@ -302,4 +327,4 @@ extracted_folder = os.path.join(extracted_folder, 'extracted/')
 
 build_index_page(masterdata_folder)
 
-# parse_script_files(masterdata_folder, extracted_folder)
+parse_script_files(masterdata_folder, extracted_folder)
