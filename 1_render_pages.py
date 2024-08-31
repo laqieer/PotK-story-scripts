@@ -399,18 +399,20 @@ def build_index_page(masterdata_folder):
                 f_index.write(f"### 【{category['name']}】 {questExtraM['name']}\n\n")
                 for questExtraS_id in questExtraM['QuestExtraS']:
                     questExtraS = QuestExtraS[questExtraS_id]
-                    questExtraL = QuestExtraL[questExtraS['quest_l_QuestExtraL']]
-                    f_index.write(f"#### 【{questExtraL['name']}】 {questExtraS['name']}\n\n")
-                    for story_id in questExtraS['StoryPlaybackExtra']:
-                        story = StoryPlaybackExtra[story_id]
-                        f_index.write(f"##### {story['name']}\n\n")
-                        for storyDetail_id in sorted(story['StoryPlaybackExtraDetail'], key=lambda x: StoryPlaybackExtraDetail[x]['timing_StoryPlaybackTiming']):
-                            storyDetail = StoryPlaybackExtraDetail[storyDetail_id]
-                            script_id = storyDetail['script_id']
-                            f_index.write(f"- [{script_id} {storyDetail['name']}]({script_id}.md)\n")
-                            script_names[script_id] = ' '.join([str(script_id), category['name'], questExtraLL['name'], questExtraL['name'], questExtraM['name'], questExtraS['name'], story['name'], storyDetail['name']])
-                        if len(story['StoryPlaybackExtraDetail']) > 0:
-                            f_index.write("\n")
+                    if len(questExtraS['StoryPlaybackExtraDetail']) > 0:
+                        questExtraL = QuestExtraL[questExtraS['quest_l_QuestExtraL']]
+                        f_index.write(f"#### 【{questExtraL['name']}】 {questExtraS['name']}\n\n")
+                        for story_id in questExtraS['StoryPlaybackExtra']:
+                            story = StoryPlaybackExtra[story_id]
+                            if len(story['StoryPlaybackExtraDetail']) > 0:
+                                f_index.write(f"##### {story['name']}\n\n")
+                                for storyDetail_id in sorted(story['StoryPlaybackExtraDetail'], key=lambda x: StoryPlaybackExtraDetail[x]['timing_StoryPlaybackTiming']):
+                                    storyDetail = StoryPlaybackExtraDetail[storyDetail_id]
+                                    script_id = storyDetail['script_id']
+                                    f_index.write(f"- [{script_id} {storyDetail['name']}]({script_id}.md)\n")
+                                    script_names[script_id] = ' '.join([str(script_id), category['name'], questExtraLL['name'], questExtraL['name'], questExtraM['name'], questExtraS['name'], story['name'], storyDetail['name']])
+                                if len(story['StoryPlaybackExtraDetail']) > 0:
+                                    f_index.write("\n")
     # index for contents
     index_contents = 'contents.md'
     with open(index_contents, 'w', encoding='utf-8') as f_index:
