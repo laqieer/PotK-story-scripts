@@ -561,18 +561,18 @@ def build_index_page(masterdata_folder):
                     questExtraS = QuestExtraS[questExtraS_id]
                     if len(questExtraS['StoryPlaybackExtraDetail']) > 0:
                         questExtraL = QuestExtraL[questExtraS['quest_l_QuestExtraL']]
-                        f_index.write(f"#### 【{questExtraL['name']}】 {questExtraS['name']}\n\n")
-                        for story_id in questExtraS['StoryPlaybackExtra']:
-                            story = StoryPlaybackExtra[story_id]
-                            if len(story['StoryPlaybackExtraDetail']) > 0:
-                                f_index.write(f"##### {story['name']}\n\n")
-                                for storyDetail_id in sorted(story['StoryPlaybackExtraDetail'], key=lambda x: StoryPlaybackExtraDetail[x]['timing_StoryPlaybackTiming']):
-                                    storyDetail = StoryPlaybackExtraDetail[storyDetail_id]
-                                    script_id = storyDetail['script_id']
-                                    f_index.write(f"- [{script_id} {storyDetail['name']}]({script_id}.md)\n")
-                                    script_names[script_id] = ' '.join([str(script_id), category['name'], questExtraLL['name'], questExtraL['name'], questExtraM['name'], questExtraS['name'], story['name'], storyDetail['name']])
-                                if len(story['StoryPlaybackExtraDetail']) > 0:
-                                    f_index.write("\n")
+                        f_index.write(f"#### 【{questExtraL['name']}】 {questExtraS['number_s']} - {questExtraS['name']}\n\n")
+                        # for story_id in questExtraS['StoryPlaybackExtra']:
+                        #     story = StoryPlaybackExtra[story_id]
+                        #     if len(story['StoryPlaybackExtraDetail']) > 0:
+                        #         f_index.write(f"##### {story['name']}\n\n")
+                        for storyDetail_id in questExtraS['StoryPlaybackExtraDetail']:
+                            storyDetail = StoryPlaybackExtraDetail[storyDetail_id]
+                            story = StoryPlaybackExtra[storyDetail['extra_StoryPlaybackExtra']]
+                            script_id = storyDetail['script_id']
+                            f_index.write(f"- [{script_id} {storyDetail['name']}]({script_id}.md)\n")
+                            script_names[script_id] = ' '.join([str(script_id), category['name'], questExtraLL['name'], questExtraL['name'], questExtraM['name'], str(questExtraS['number_s']), '-', questExtraS['name'], story['name'], storyDetail['name']])
+                        f_index.write("\n")
 
     # index for StoryPlaybackHarmonyDetail
     QuestHarmonyM = {}
