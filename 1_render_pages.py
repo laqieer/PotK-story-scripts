@@ -668,6 +668,25 @@ def build_index_page(masterdata_folder):
             f_index.write(f"- [{script_id} T{storyDetail['stage_TowerStage']} {storyDetail['name']}]({script_id}.md)\n")
             script_names[script_id] = ' '.join([str(script_id), 'Tower', str(storyDetail['stage_TowerStage']), storyDetail['name']])
 
+    # index for UnitSEASkill
+    UnitSEASkill = {}
+    with open(os.path.join(masterdata_folder, 'UnitSEASkill.json'), 'r', encoding='utf-8') as f_UnitSEASkill:
+        data = json.load(f_UnitSEASkill)
+        for d in data:
+            UnitSEASkill[d['ID']] = d
+    unit_data, _ = load_unit_data(masterdata_folder)
+    index_UnitSEASkill = 'pages/UnitSEASkill.md'
+    with open(index_UnitSEASkill, 'w', encoding='utf-8') as f_index:
+        f_index.write("# UnitSEASkill\n\n")
+        for unitSEASkill_id in sorted(UnitSEASkill.keys()):
+            unitSEASkill = UnitSEASkill[unitSEASkill_id]
+            script_id = unitSEASkill['script_id']
+            if script_id > 0:
+                unit = unit_data[unitSEASkill_id * 10 + 1]
+                assert unit['same_character_id'] == unitSEASkill_id
+                f_index.write(f"- [{script_id} Unit {unitSEASkill_id} {unit['name']}]({script_id}.md)\n")
+                script_names[script_id] = ' '.join([str(script_id), 'unitSEASkill', str(unitSEASkill_id), unit['name']])
+
     # index for contents
     index_contents = 'contents.md'
     with open(index_contents, 'w', encoding='utf-8') as f_index:
@@ -684,6 +703,7 @@ def build_index_page(masterdata_folder):
         f_index.write(f"\n## [ギルドレイド]({index_StoryPlaybackRaidDetail})\n")
         f_index.write(f"\n## [Tower]({index_TowerPlaybackStoryDetail})\n")
         f_index.write(f"\n## [Event Play]({index_StoryPlaybackEventPlay})\n")
+        f_index.write(f"\n## [UnitSEASkill]({index_UnitSEASkill})\n")
 
     # index for all scripts
     index_page = 'scripts/index.md'
