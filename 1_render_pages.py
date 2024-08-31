@@ -326,12 +326,98 @@ def build_index_page(masterdata_folder):
             script_id = eventPlay['script_id']
             f_index.write(f"- [{script_id} {eventPlay['scene_name']} {eventPlay['start_at']} ~ {eventPlay['end_at']}]({script_id}.md)\n")
             script_names[script_id] = ' '.join([str(script_id), "Event Play", f"#{eventPlay['ID']}", eventPlay['scene_name'], eventPlay['start_at'], '~', eventPlay['end_at']])
+    # index for StoryPlaybackExtraDetail
+    QuestExtraCategory = {}
+    with open(os.path.join(masterdata_folder, 'QuestExtraCategory.json'), 'r', encoding='utf-8') as f_QuestExtraCategory:
+        data = json.load(f_QuestExtraCategory)
+        for d in data:
+            d['QuestExtraL'] = []
+            d['QuestExtraM'] = []
+            QuestExtraCategory[d['ID']] = d
+    QuestExtraLL = {
+        0: {
+		    "ID": 0,
+		    "name": "",
+            "QuestExtraL": [],
+            "QuestExtraM": [],
+        }
+    }
+    with open(os.path.join(masterdata_folder, 'QuestExtraLL.json'), 'r', encoding='utf-8') as f_QuestExtraLL:
+        data = json.load(f_QuestExtraLL)
+        for d in data:
+            d['QuestExtraL'] = []
+            d['QuestExtraM'] = []
+            QuestExtraLL[d['ID']] = d
+    QuestExtraL = {}
+    with open(os.path.join(masterdata_folder, 'QuestExtraL.json'), 'r', encoding='utf-8') as f_QuestExtraL:
+        data = json.load(f_QuestExtraL)
+        for d in data:
+            d['QuestExtraS'] = []
+            QuestExtraL[d['ID']] = d
+            QuestExtraLL[d['quest_ll_QuestExtraLL']]['QuestExtraL'].append(d['ID'])
+            QuestExtraCategory[d['category_QuestExtraCategory']]['QuestExtraL'].append(d['ID'])
+    QuestExtraM = {}
+    with open(os.path.join(masterdata_folder, 'QuestExtraM.json'), 'r', encoding='utf-8') as f_QuestExtraM:
+        data = json.load(f_QuestExtraM)
+        for d in data:
+            d['QuestExtraS'] = []
+            QuestExtraM[d['ID']] = d
+            QuestExtraLL[d['quest_ll_QuestExtraLL']]['QuestExtraM'].append(d['ID'])
+            QuestExtraCategory[d['category_QuestExtraCategory']]['QuestExtraM'].append(d['ID'])
+    QuestExtraS = {}
+    with open(os.path.join(masterdata_folder, 'QuestExtraS.json'), 'r', encoding='utf-8') as f_QuestExtraS:
+        data = json.load(f_QuestExtraS)
+        for d in data:
+            d['StoryPlaybackExtra'] = []
+            d['StoryPlaybackExtraDetail'] = []
+            QuestExtraS[d['ID']] = d
+            QuestExtraM[d['quest_m_QuestExtraM']]['QuestExtraS'].append(d['ID'])
+            QuestExtraL[d['quest_l_QuestExtraL']]['QuestExtraS'].append(d['ID'])
+    StoryPlaybackExtra = {}
+    with open(os.path.join(masterdata_folder, 'StoryPlaybackExtra.json'), 'r', encoding='utf-8') as f_StoryPlaybackExtra:
+        data = json.load(f_StoryPlaybackExtra)
+        for d in data:
+            d['StoryPlaybackExtraDetail'] = []
+            StoryPlaybackExtra[d['ID']] = d
+            QuestExtraS[d['quest_QuestExtraS']]['StoryPlaybackExtra'].append(d['ID'])
+    StoryPlaybackExtraDetail = {}
+    with open(os.path.join(masterdata_folder, 'StoryPlaybackExtraDetail.json'), 'r', encoding='utf-8') as f_StoryPlaybackExtraDetail:
+        data = json.load(f_StoryPlaybackExtraDetail)
+        for d in data:
+            StoryPlaybackExtraDetail[d['ID']] = d
+            StoryPlaybackExtra[d['extra_StoryPlaybackExtra']]['StoryPlaybackExtraDetail'].append(d['ID'])
+            QuestExtraS[d['quest_QuestExtraS']]['StoryPlaybackExtraDetail'].append(d['ID'])
+    index_StoryPlaybackExtraDetail = 'pages/StoryPlaybackExtraDetail.md'
+    with open(index_StoryPlaybackExtraDetail, 'w', encoding='utf-8') as f_index:
+        f_index.write("# エクストラクエスト\n\n")
+        for questExtraLL_id in sorted(QuestExtraLL.keys()):
+            questExtraLL = QuestExtraLL[questExtraLL_id]
+            f_index.write(f"## {questExtraLL['name']}\n\n")
+            for questExtraM_id in questExtraLL['QuestExtraM']:
+                questExtraM = QuestExtraM[questExtraM_id]
+                category = QuestExtraCategory[questExtraM['category_QuestExtraCategory']]
+                f_index.write(f"### 【{category['name']}】 {questExtraM['name']}\n\n")
+                for questExtraS_id in questExtraM['QuestExtraS']:
+                    questExtraS = QuestExtraS[questExtraS_id]
+                    questExtraL = QuestExtraL[questExtraS['quest_l_QuestExtraL']]
+                    f_index.write(f"#### 【{questExtraL['name']}】 {questExtraS['name']}\n\n")
+                    for story_id in questExtraS['StoryPlaybackExtra']:
+                        story = StoryPlaybackExtra[story_id]
+                        f_index.write(f"##### {story['name']}\n\n")
+                        for storyDetail_id in sorted(story['StoryPlaybackExtraDetail'], key=lambda x: StoryPlaybackExtraDetail[x]['timing_StoryPlaybackTiming']):
+                            storyDetail = StoryPlaybackExtraDetail[storyDetail_id]
+                            script_id = storyDetail['script_id']
+                            f_index.write(f"- [{script_id} {storyDetail['name']}]({script_id}.md)\n")
+                            script_names[script_id] = ' '.join([str(script_id), category['name'], questExtraLL['name'], questExtraL['name'], questExtraM['name'], questExtraS['name'], story['name'], storyDetail['name']])
+                        if len(story['StoryPlaybackExtraDetail']) > 0:
+                            f_index.write("\n")
     # index for contents
     index_contents = 'contents.md'
     with open(index_contents, 'w', encoding='utf-8') as f_index:
         f_index.write("# Contents\n\n")
         f_index.write("## ストーリークエスト\n\n")
         f_index.write(f"- [{QuestStoryXL[2]['name']}]({index_EarthQuestStoryPlayback})\n")
+        f_index.write(f"\n## [エクストラクエスト]({index_StoryPlaybackExtraDetail})\n")
         f_index.write(f"\n## [キャラクタークエスト]({index_StoryPlaybackCharacterDetail})\n")
         f_index.write(f"\n## [Event Play]({index_StoryPlaybackEventPlay})\n")
     # index for all scripts
