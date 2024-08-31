@@ -3,6 +3,7 @@
 ## ストーリークエスト
 
 - [地上編](pages/EarthQuestStoryPlayback.md)
+- [海上編](pages/StoryPlaybackSeaDetail.md)
 
 ## [エクストラクエスト](pages/StoryPlaybackExtraDetail.md)
 
