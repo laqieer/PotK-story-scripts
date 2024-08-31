@@ -312,6 +312,20 @@ def build_index_page(masterdata_folder):
                             script_names[script_id] = ' '.join([str(script_id), characterStory['name'], characterStoryDetail['name']])
                         if len(characterStory['StoryPlaybackCharacterDetail']) > 0:
                             f_index.write("\n")
+    # index for StoryPlaybackEventPlay
+    StoryPlaybackEventPlay = {}
+    with open(os.path.join(masterdata_folder, 'StoryPlaybackEventPlay.json'), 'r', encoding='utf-8') as f_StoryPlaybackEventPlay:
+        data = json.load(f_StoryPlaybackEventPlay)
+        for d in data:
+            StoryPlaybackEventPlay[d['ID']] = d
+    index_StoryPlaybackEventPlay = 'pages/StoryPlaybackEventPlay.md'
+    with open(index_StoryPlaybackEventPlay, 'w', encoding='utf-8') as f_index:
+        f_index.write("# Event Play\n\n")
+        for eventPlay_id in sorted(StoryPlaybackEventPlay.keys()):
+            eventPlay = StoryPlaybackEventPlay[eventPlay_id]
+            script_id = eventPlay['script_id']
+            f_index.write(f"- [{script_id} {eventPlay['scene_name']} {eventPlay['start_at']} ~ {eventPlay['end_at']}]({script_id}.md)\n")
+            script_names[script_id] = ' '.join([str(script_id), "Event Play", f"#{eventPlay['ID']}", eventPlay['scene_name'], eventPlay['start_at'], '~', eventPlay['end_at']])
     # index for contents
     index_contents = 'contents.md'
     with open(index_contents, 'w', encoding='utf-8') as f_index:
@@ -319,6 +333,7 @@ def build_index_page(masterdata_folder):
         f_index.write("## ストーリークエスト\n\n")
         f_index.write(f"- [{QuestStoryXL[2]['name']}]({index_EarthQuestStoryPlayback})\n")
         f_index.write(f"\n## [キャラクタークエスト]({index_StoryPlaybackCharacterDetail})\n")
+        f_index.write(f"\n## [Event Play]({index_StoryPlaybackEventPlay})\n")
     # index for all scripts
     index_page = 'scripts/index.md'
     with open(index_page, 'w', encoding='utf-8') as f_index:
