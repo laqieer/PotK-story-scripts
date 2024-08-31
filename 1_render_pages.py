@@ -203,6 +203,24 @@ def parse_script_files(masterdata_folder, extracted_folder):
             f_page.write("\n\n[Back to index](index.md)\n")
 
 def build_index_page(masterdata_folder):
+    QuestMoviePath = {}
+    with open(os.path.join(masterdata_folder, 'QuestMoviePath.json'), 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        for d in data:
+            QuestMoviePath[d['ID']] = d
+    QuestMovieQuest = {}
+    with open(os.path.join(masterdata_folder, 'QuestMovieQuest.json'), 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        for d in data:
+            QuestMovieQuest[d['ID']] = d
+    quest_s_videos = {}
+    for questMovieQuest_id in sorted(QuestMovieQuest.keys()):
+        questMovieQuest = QuestMovieQuest[questMovieQuest_id]
+        questMoviePath = QuestMoviePath[questMovieQuest['movie_path_QuestMoviePath']]
+        if questMovieQuest['quest_s_id'] not in quest_s_videos:
+            quest_s_videos[questMovieQuest['quest_s_id']] = []
+        quest_s_videos[questMovieQuest['quest_s_id']].append(os.path.basename(questMoviePath['android_path']))
+
     QuestStoryXL = {}
     with open(os.path.join(masterdata_folder, 'QuestStoryXL.json'), 'r', encoding='utf-8') as f_QuestStoryXL:
         data = json.load(f_QuestStoryXL)
@@ -394,8 +412,12 @@ def build_index_page(masterdata_folder):
                                 f_index.write(f"#### {questStoryM['short_name']} {questStoryM['name']}\n\n")
                                 for questStoryS_id in questStoryM['QuestStoryS']:
                                     questStoryS = QuestStoryS[questStoryS_id]
+                                    f_index.write(f"##### {questStoryL['number_l']}-{questStoryM['number_m']}-{questStoryS['number_s']} {questStoryS['name']}\n\n")
+                                    if questStoryS_id in quest_s_videos:
+                                        for quest_s_video in quest_s_videos[questStoryS_id]:
+                                            assert quest_s_video in videos, f"Video {quest_s_video} not found"
+                                            f_index.write(f"{quest_s_video}\n\n{videos[quest_s_video]}\n\n")
                                     if len(questStoryS['StoryPlaybackStoryDetail']) > 0:
-                                        f_index.write(f"##### {questStoryL['number_l']}-{questStoryM['number_m']}-{questStoryS['number_s']} {questStoryS['name']}\n\n")
                                         # for story_id in questStoryS['StoryPlaybackStory']:
                                             # story = StoryPlaybackStory[story_id]
                                             # if len(story['StoryPlaybackStoryDetail']) > 0:
@@ -738,4 +760,4 @@ extracted_folder = os.path.join(extracted_folder, 'extracted/')
 
 build_index_page(masterdata_folder)
 
-parse_script_files(masterdata_folder, extracted_folder)
+# parse_script_files(masterdata_folder, extracted_folder)
