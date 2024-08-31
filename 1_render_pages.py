@@ -497,7 +497,7 @@ def build_index_page(masterdata_folder):
     QuestExtraLL = {
         0: {
 		    "ID": 0,
-		    "name": "",
+		    "name": "未分類",
             "QuestExtraL": [],
             "QuestExtraM": [],
         }
