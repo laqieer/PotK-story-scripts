@@ -18,7 +18,7 @@ with open('wiki/Videos.md', 'r', encoding='utf-8') as f:
         elif 'http' in line:
             video_url = line
             assert video_name is not None
-            videos[video_name] = f'<video controls><source src="{video_url}" type="video/mp4"></video>'
+            videos[video_name] = f'<video controls src="{video_url}" type="video/mp4"></video>'
             video_name = None
 
 script_ids = sorted([int(file[:-4]) for file in os.listdir('scripts/') if file.endswith('.txt')])

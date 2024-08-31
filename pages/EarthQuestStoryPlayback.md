@@ -2,7 +2,7 @@
 
 earth_prologue_5
 
-<video controls><source src="https://github.com/user-attachments/assets/af97a2b5-d0e1-4f2c-95a7-ff223a819fb3" type="video/mp4"></video>
+<video controls src="https://github.com/user-attachments/assets/af97a2b5-d0e1-4f2c-95a7-ff223a819fb3" type="video/mp4"></video>
 
 ## 序章 ０％から始まる希望
 
@@ -10,25 +10,25 @@ earth_prologue_5
 
 earth_prologue_1
 
-<video controls><source src="https://github.com/user-attachments/assets/fc8f5db9-39b2-4677-ad9c-ab07766a0974" type="video/mp4"></video>
+<video controls src="https://github.com/user-attachments/assets/fc8f5db9-39b2-4677-ad9c-ab07766a0974" type="video/mp4"></video>
 
 ### 召し上げられた神器
 
 earth_prologue_2
 
-<video controls><source src="https://github.com/user-attachments/assets/aa31d7f7-5cbb-4fd7-827f-a9cf68b139e7" type="video/mp4"></video>
+<video controls src="https://github.com/user-attachments/assets/aa31d7f7-5cbb-4fd7-827f-a9cf68b139e7" type="video/mp4"></video>
 
 ### 天上世界への道
 
 earth_prologue_3
 
-<video controls><source src="https://github.com/user-attachments/assets/3457efda-78bd-47e0-b7e8-ba406992aa25" type="video/mp4"></video>
+<video controls src="https://github.com/user-attachments/assets/3457efda-78bd-47e0-b7e8-ba406992aa25" type="video/mp4"></video>
 
 ### 七魔王
 
 earth_prologue_4
 
-<video controls><source src="https://github.com/user-attachments/assets/1639f983-54b0-4405-a7e9-233f7d740da6" type="video/mp4"></video>
+<video controls src="https://github.com/user-attachments/assets/1639f983-54b0-4405-a7e9-233f7d740da6" type="video/mp4"></video>
 
 - [900030001 七魔王　開始前](900030001.md)
 - [900030002 七魔王　開始時](900030002.md)
@@ -330,5 +330,5 @@ earth_prologue_4
 
 earth_endroll
 
-<video controls><source src="https://github.com/user-attachments/assets/031e182e-b38f-46b9-af09-c42921678e37" type="video/mp4"></video>
+<video controls src="https://github.com/user-attachments/assets/031e182e-b38f-46b9-af09-c42921678e37" type="video/mp4"></video>
 
