@@ -413,6 +413,56 @@ def build_index_page(masterdata_folder):
                                     script_names[script_id] = ' '.join([str(script_id), category['name'], questExtraLL['name'], questExtraL['name'], questExtraM['name'], questExtraS['name'], story['name'], storyDetail['name']])
                                 if len(story['StoryPlaybackExtraDetail']) > 0:
                                     f_index.write("\n")
+    # index for StoryPlaybackHarmonyDetail
+    QuestHarmonyM = {}
+    with open(os.path.join(masterdata_folder, 'QuestHarmonyM.json'), 'r', encoding='utf-8') as f_QuestHarmonyM:
+        data = json.load(f_QuestHarmonyM)
+        for d in data:
+            d['QuestHarmonyS'] = []
+            QuestHarmonyM[d['ID']] = d
+    QuestHarmonyS = {}
+    with open(os.path.join(masterdata_folder, 'QuestHarmonyS.json'), 'r', encoding='utf-8') as f_QuestHarmonyS:
+        data = json.load(f_QuestHarmonyS)
+        for d in data:
+            d['StoryPlaybackHarmony'] = []
+            d['StoryPlaybackHarmonyDetail'] = []
+            QuestHarmonyS[d['ID']] = d
+            QuestHarmonyM[d['quest_m_QuestHarmonyM']]['QuestHarmonyS'].append(d['ID'])
+    StoryPlaybackHarmony = {}
+    with open(os.path.join(masterdata_folder, 'StoryPlaybackHarmony.json'), 'r', encoding='utf-8') as f_StoryPlaybackHarmony:
+        data = json.load(f_StoryPlaybackHarmony)
+        for d in data:
+            d['StoryPlaybackHarmonyDetail'] = []
+            StoryPlaybackHarmony[d['ID']] = d
+            QuestHarmonyS[d['quest_QuestHarmonyS']]['StoryPlaybackHarmony'].append(d['ID'])
+    StoryPlaybackHarmonyDetail = {}
+    with open(os.path.join(masterdata_folder, 'StoryPlaybackHarmonyDetail.json'), 'r', encoding='utf-8') as f_StoryPlaybackHarmonyDetail:
+        data = json.load(f_StoryPlaybackHarmonyDetail)
+        for d in data:
+            StoryPlaybackHarmonyDetail[d['ID']] = d
+            StoryPlaybackHarmony[d['harmony_StoryPlaybackHarmony']]['StoryPlaybackHarmonyDetail'].append(d['ID'])
+            QuestHarmonyS[d['quest_QuestHarmonyS']]['StoryPlaybackHarmonyDetail'].append(d['ID'])
+    index_StoryPlaybackHarmonyDetail = 'pages/StoryPlaybackHarmonyDetail.md'
+    with open(index_StoryPlaybackHarmonyDetail, 'w', encoding='utf-8') as f_index:
+        f_index.write("# Harmony Quest\n\n")
+        for questHarmonyM_id in sorted(QuestHarmonyM.keys()):
+            questHarmonyM = QuestHarmonyM[questHarmonyM_id]
+            # f_index.write(f"## {questHarmonyM['name']}\n\n")
+            for questHarmonyS_id in questHarmonyM['QuestHarmonyS']:
+                questHarmonyS = QuestHarmonyS[questHarmonyS_id]
+                if len(questHarmonyS['StoryPlaybackHarmonyDetail']) > 0:
+                    # f_index.write(f"### {questHarmonyS['name']}\n\n")
+                    for story_id in questHarmonyS['StoryPlaybackHarmony']:
+                        story = StoryPlaybackHarmony[story_id]
+                        if len(story['StoryPlaybackHarmonyDetail']) > 0:
+                            f_index.write(f"## {story['name']}\n\n")
+                            for storyDetail_id in sorted(story['StoryPlaybackHarmonyDetail'], key=lambda x: StoryPlaybackHarmonyDetail[x]['timing_StoryPlaybackTiming']):
+                                storyDetail = StoryPlaybackHarmonyDetail[storyDetail_id]
+                                script_id = storyDetail['script_id']
+                                f_index.write(f"- [{script_id} {storyDetail['name']}]({script_id}.md)\n")
+                                script_names[script_id] = ' '.join([str(script_id), questHarmonyM['name'], questHarmonyS['name'], story['name'], storyDetail['name']])
+                            if len(story['StoryPlaybackHarmonyDetail']) > 0:
+                                f_index.write("\n")
     # index for contents
     index_contents = 'contents.md'
     with open(index_contents, 'w', encoding='utf-8') as f_index:
@@ -421,6 +471,7 @@ def build_index_page(masterdata_folder):
         f_index.write(f"- [{QuestStoryXL[2]['name']}]({index_EarthQuestStoryPlayback})\n")
         f_index.write(f"\n## [エクストラクエスト]({index_StoryPlaybackExtraDetail})\n")
         f_index.write(f"\n## [キャラクタークエスト]({index_StoryPlaybackCharacterDetail})\n")
+        f_index.write(f"\n## [Harmony Quest]({index_StoryPlaybackHarmonyDetail})\n")
         f_index.write(f"\n## [Event Play]({index_StoryPlaybackEventPlay})\n")
     # index for all scripts
     index_page = 'scripts/index.md'

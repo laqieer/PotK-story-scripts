@@ -8,4 +8,6 @@
 
 ## [キャラクタークエスト](pages/StoryPlaybackCharacterDetail.md)
 
+## [Harmony Quest](pages/StoryPlaybackHarmonyDetail.md)
+
 ## [Event Play](pages/StoryPlaybackEventPlay.md)
