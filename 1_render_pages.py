@@ -134,49 +134,52 @@ def parse_script_files(masterdata_folder, extracted_folder):
                 elif line.startswith('@'):
                     speaker = line[1:].strip()
                     if speaker:
-                        # active_units = [units[eid]['uid'] for eid in units if not units[eid]['hidden']]
-                        active_units = [units[eid]['uid'] for eid in units]
-                        active_unit = None
-                        if len(active_units) > 0: # has face
-                            for uid in active_units:
-                                if uid in unit_data and unit_data[uid]['name'] == speaker:
-                                    active_unit = uid
-                                    break
-                            for uid in active_units:
-                                # if uid in unit_data and speaker in [unit_data[unit_id]['name'] for unit_id in unit_data if unit_data[unit_id]['same_character_id'] == unit_data[uid]['same_character_id']]:
-                                if uid in unit_data and speaker in unit_ids_by_name:
-                                    for unit_id in unit_ids_by_name[speaker]:
-                                        if unit_data[unit_id]['same_character_id'] == unit_data[uid]['same_character_id'] or unit_data[unit_id]['resource_reference_unit_id_UnitUnit'] == unit_data[uid]['resource_reference_unit_id_UnitUnit']:
+                        if speaker == '%(userName)s':
+                            speaker = 'ユーザー名'
+                        else:
+                            # active_units = [units[eid]['uid'] for eid in units if not units[eid]['hidden']]
+                            active_units = [units[eid]['uid'] for eid in units]
+                            active_unit = None
+                            if len(active_units) > 0: # has face
+                                for uid in active_units:
+                                    if uid in unit_data and unit_data[uid]['name'] == speaker:
+                                        active_unit = uid
+                                        break
+                                for uid in active_units:
+                                    # if uid in unit_data and speaker in [unit_data[unit_id]['name'] for unit_id in unit_data if unit_data[unit_id]['same_character_id'] == unit_data[uid]['same_character_id']]:
+                                    if uid in unit_data and speaker in unit_ids_by_name:
+                                        for unit_id in unit_ids_by_name[speaker]:
+                                            if unit_data[unit_id]['same_character_id'] == unit_data[uid]['same_character_id'] or unit_data[unit_id]['resource_reference_unit_id_UnitUnit'] == unit_data[uid]['resource_reference_unit_id_UnitUnit']:
+                                                active_unit = uid
+                                                break
+                                        if active_unit is not None:
+                                            break
+                                if active_unit is None:
+                                    for uid in active_units:
+                                        if uid in unit_data and unit_data[uid]['name'].startswith(speaker):
                                             active_unit = uid
                                             break
-                                    if active_unit is not None:
-                                        break
-                            if active_unit is None:
-                                for uid in active_units:
-                                    if uid in unit_data and unit_data[uid]['name'].startswith(speaker):
-                                        active_unit = uid
-                                        break
-                            if active_unit is None:
-                                for uid in active_units:
-                                    if uid in unit_data and speaker in unit_data[uid]['name']:
-                                        active_unit = uid
-                                        break
-                            if active_unit is not None:
-                                if active_unit in unit_data: # not mob unit
-                                    res_ref_unit_id = unit_data[active_unit]['resource_reference_unit_id_UnitUnit']
-                                    unit_thumb = f'images/units/{res_ref_unit_id}.png'
-                                    if not os.path.exists(unit_thumb):
-                                        try:
-                                            shutil.copy(os.path.join(extracted_folder, f'StreamingAssets/AssetBundle/Resources/Units/{res_ref_unit_id}/2D/c_thum.png'), unit_thumb)
-                                        except FileNotFoundError:
-                                            warnings.warn(f"Unit {res_ref_unit_id} thumbnail not found")
-                                    # f_page.write(f"\n![{res_ref_unit_id}.png](../{unit_thumb})")
-                                    f_page.write(f'\n<img src="../{unit_thumb}" alt="{res_ref_unit_id}.png" height="34"/>')
+                                if active_unit is None:
+                                    for uid in active_units:
+                                        if uid in unit_data and speaker in unit_data[uid]['name']:
+                                            active_unit = uid
+                                            break
+                                if active_unit is not None:
+                                    if active_unit in unit_data: # not mob unit
+                                        res_ref_unit_id = unit_data[active_unit]['resource_reference_unit_id_UnitUnit']
+                                        unit_thumb = f'images/units/{res_ref_unit_id}.png'
+                                        if not os.path.exists(unit_thumb):
+                                            try:
+                                                shutil.copy(os.path.join(extracted_folder, f'StreamingAssets/AssetBundle/Resources/Units/{res_ref_unit_id}/2D/c_thum.png'), unit_thumb)
+                                            except FileNotFoundError:
+                                                warnings.warn(f"Unit {res_ref_unit_id} thumbnail not found")
+                                        # f_page.write(f"\n![{res_ref_unit_id}.png](../{unit_thumb})")
+                                        f_page.write(f'\n<img src="../{unit_thumb}" alt="{res_ref_unit_id}.png" height="34"/>')
                         f_page.write(f"\n【{speaker}】\n")
                     else:
                         f_page.write("\n")
                 else:
-                    f_page.write(line)
+                    f_page.write(line.replace('%(userName)s','[ユーザー名]'))
             if script_index < len(script_ids) - 1:
                 f_page.write(f"\n\nNext: [{script_ids[script_index + 1]}]({script_ids[script_index + 1]}.md)")
             f_page.write("\n\n[Back to index](index.md)\n")
