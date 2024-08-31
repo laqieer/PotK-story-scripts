@@ -324,17 +324,17 @@ def build_index_page(masterdata_folder):
                         questSeaS = QuestSeaS[questSeaS_id]
                         if len(questSeaS['StoryPlaybackSeaDetail']) > 0:
                             f_index.write(f"#### {questSeaS['name']}\n\n")
-                            for story_id in questSeaS['StoryPlaybackSea']:
-                                story = StoryPlaybackSea[story_id]
-                                if len(story['StoryPlaybackSeaDetail']) > 0:
-                                    f_index.write(f"##### {story['name']}\n\n")
-                                    for storyDetail_id in sorted(story['StoryPlaybackSeaDetail'], key=lambda x: StoryPlaybackSeaDetail[x]['timing_StoryPlaybackTiming']):
-                                        storyDetail = StoryPlaybackSeaDetail[storyDetail_id]
-                                        script_id = storyDetail['script_id']
-                                        f_index.write(f"- [{script_id} {storyDetail['name']}]({script_id}.md)\n")
-                                        script_names[script_id] = ' '.join([str(script_id), questSeaXL['name'], questSeaL['name'], questSeaM['name'], questSeaS['name'], story['name'], storyDetail['name']])
-                                    if len(story['StoryPlaybackSeaDetail']) > 0:
-                                        f_index.write("\n")
+                            # for story_id in questSeaS['StoryPlaybackSea']:
+                            #     story = StoryPlaybackSea[story_id]
+                            #     if len(story['StoryPlaybackSeaDetail']) > 0:
+                            #         f_index.write(f"##### {story['name']}\n\n")
+                            for storyDetail_id in sorted(questSeaS['StoryPlaybackSeaDetail'], key=lambda x: StoryPlaybackSeaDetail[x]['timing_StoryPlaybackTiming']):
+                                storyDetail = StoryPlaybackSeaDetail[storyDetail_id]
+                                story = StoryPlaybackSea[storyDetail['story_StoryPlaybackSea']]
+                                script_id = storyDetail['script_id']
+                                f_index.write(f"- [{script_id} {storyDetail['name']}]({script_id}.md)\n")
+                                script_names[script_id] = ' '.join([str(script_id), questSeaXL['name'], questSeaL['name'], questSeaM['name'], storyDetail['name']])
+                            f_index.write("\n")
 
     # index for StoryPlaybackStoryDetail
     QuestStoryL = {}
