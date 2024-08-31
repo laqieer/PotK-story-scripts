@@ -15,10 +15,11 @@ with open('wiki/Videos.md', 'r', encoding='utf-8') as f:
             continue
         if '.mp4' in line:
             video_name = line[:-4]
-        elif 'http' in line:
-            video_url = line
-            assert video_name is not None
-            videos[video_name] = f'<video controls src="{video_url}" type="video/mp4"></video>'
+        elif 'http' in line and video_name is not None:
+            if line.startswith('http'):
+                videos[video_name] = f'<video controls src="{line.strip()}" type="video/mp4"></video>'
+            else:
+                videos[video_name] = line
             video_name = None
 
 script_ids = sorted([int(file[:-4]) for file in os.listdir('scripts/') if file.endswith('.txt')])
@@ -140,6 +141,15 @@ def parse_script_files(masterdata_folder, extracted_folder):
                                         units[uid]['hidden'] = True
                                 except ValueError:
                                     pass
+                        case 'movieplay':
+                            video = lispAction[1].replace('"','')
+                            if video not in videos:
+                                video_path = f'videos/{video}.mp4'
+                                if not os.path.exists(video_path):
+                                    os.makedirs('videos', exist_ok=True)
+                                    shutil.copy(os.path.join(extracted_folder, f'StreamingAssets/android/{video}.mp4'), video_path)
+                                videos[video] = f'<video controls src="../{video_path}" type="video/mp4"></video>'
+                            f_page.write(f"\n\n{video}\n\n{videos[video]}\n\n")
                 elif line.startswith('@'):
                     speaker = line[1:].strip()
                     if speaker:
@@ -760,4 +770,4 @@ extracted_folder = os.path.join(extracted_folder, 'extracted/')
 
 build_index_page(masterdata_folder)
 
-# parse_script_files(masterdata_folder, extracted_folder)
+parse_script_files(masterdata_folder, extracted_folder)
