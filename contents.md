@@ -18,4 +18,6 @@
 
 ## [ギルドレイド](pages/StoryPlaybackRaidDetail.md)
 
+## [Tower](pages/TowerPlaybackStoryDetail.md)
+
 ## [Event Play](pages/StoryPlaybackEventPlay.md)

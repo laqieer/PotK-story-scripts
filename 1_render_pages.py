@@ -653,6 +653,21 @@ def build_index_page(masterdata_folder):
                 if len(raid['StoryPlaybackRaidDetail']) > 0:
                     f_index.write("\n")
 
+    # index for TowerPlaybackStoryDetail
+    TowerPlaybackStoryDetail = {}
+    with open(os.path.join(masterdata_folder, 'TowerPlaybackStoryDetail.json'), 'r', encoding='utf-8') as f_TowerPlaybackStoryDetail:
+        data = json.load(f_TowerPlaybackStoryDetail)
+        for d in data:
+            TowerPlaybackStoryDetail[d['ID']] = d
+    index_TowerPlaybackStoryDetail = 'pages/TowerPlaybackStoryDetail.md'
+    with open(index_TowerPlaybackStoryDetail, 'w', encoding='utf-8') as f_index:
+        f_index.write("# Tower\n\n")
+        for storyDetail_id in sorted(TowerPlaybackStoryDetail.keys()):
+            storyDetail = TowerPlaybackStoryDetail[storyDetail_id]
+            script_id = storyDetail['script_id']
+            f_index.write(f"- [{script_id} T{storyDetail['stage_TowerStage']} {storyDetail['name']}]({script_id}.md)\n")
+            script_names[script_id] = ' '.join([str(script_id), 'Tower', str(storyDetail['stage_TowerStage']), storyDetail['name']])
+
     # index for contents
     index_contents = 'contents.md'
     with open(index_contents, 'w', encoding='utf-8') as f_index:
@@ -667,6 +682,7 @@ def build_index_page(masterdata_folder):
         f_index.write(f"\n## [キャラクタークエスト]({index_StoryPlaybackCharacterDetail})\n")
         f_index.write(f"\n## [Harmony Quest]({index_StoryPlaybackHarmonyDetail})\n")
         f_index.write(f"\n## [ギルドレイド]({index_StoryPlaybackRaidDetail})\n")
+        f_index.write(f"\n## [Tower]({index_TowerPlaybackStoryDetail})\n")
         f_index.write(f"\n## [Event Play]({index_StoryPlaybackEventPlay})\n")
 
     # index for all scripts
