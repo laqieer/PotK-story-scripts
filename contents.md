@@ -10,4 +10,6 @@
 
 ## [Harmony Quest](pages/StoryPlaybackHarmonyDetail.md)
 
+## [ギルドレイド](pages/StoryPlaybackRaidDetail.md)
+
 ## [Event Play](pages/StoryPlaybackEventPlay.md)

@@ -463,6 +463,33 @@ def build_index_page(masterdata_folder):
                                 script_names[script_id] = ' '.join([str(script_id), questHarmonyM['name'], questHarmonyS['name'], story['name'], storyDetail['name']])
                             if len(story['StoryPlaybackHarmonyDetail']) > 0:
                                 f_index.write("\n")
+    # index for StoryPlaybackRaidDetail
+    RaidPlaybackStory = {}
+    with open(os.path.join(masterdata_folder, 'RaidPlaybackStory.json'), 'r', encoding='utf-8') as f_RaidPlaybackStory:
+        data = json.load(f_RaidPlaybackStory)
+        for d in data:
+            d['StoryPlaybackRaidDetail'] = []
+            RaidPlaybackStory[d['ID']] = d
+    StoryPlaybackRaidDetail = {}
+    with open(os.path.join(masterdata_folder, 'StoryPlaybackRaidDetail.json'), 'r', encoding='utf-8') as f_StoryPlaybackRaidDetail:
+        data = json.load(f_StoryPlaybackRaidDetail)
+        for d in data:
+            StoryPlaybackRaidDetail[d['ID']] = d
+            RaidPlaybackStory[d['story_id']]['StoryPlaybackRaidDetail'].append(d['ID'])
+    index_StoryPlaybackRaidDetail = 'pages/StoryPlaybackRaidDetail.md'
+    with open(index_StoryPlaybackRaidDetail, 'w', encoding='utf-8') as f_index:
+        f_index.write("# ギルドレイド\n\n")
+        for raid_id in sorted(RaidPlaybackStory.keys()):
+            raid = RaidPlaybackStory[raid_id]
+            if len(raid['StoryPlaybackRaidDetail']) > 0:
+                f_index.write(f"## {raid['name']}\n\n")
+                for storyDetail_id in raid['StoryPlaybackRaidDetail']:
+                    storyDetail = StoryPlaybackRaidDetail[storyDetail_id]
+                    script_id = storyDetail['script_id']
+                    f_index.write(f"- [{script_id} {storyDetail['name']}]({script_id}.md)\n")
+                    script_names[script_id] = ' '.join([str(script_id), raid['name'], storyDetail['name']])
+                if len(raid['StoryPlaybackRaidDetail']) > 0:
+                    f_index.write("\n")
     # index for contents
     index_contents = 'contents.md'
     with open(index_contents, 'w', encoding='utf-8') as f_index:
@@ -472,6 +499,7 @@ def build_index_page(masterdata_folder):
         f_index.write(f"\n## [エクストラクエスト]({index_StoryPlaybackExtraDetail})\n")
         f_index.write(f"\n## [キャラクタークエスト]({index_StoryPlaybackCharacterDetail})\n")
         f_index.write(f"\n## [Harmony Quest]({index_StoryPlaybackHarmonyDetail})\n")
+        f_index.write(f"\n## [ギルドレイド]({index_StoryPlaybackRaidDetail})\n")
         f_index.write(f"\n## [Event Play]({index_StoryPlaybackEventPlay})\n")
     # index for all scripts
     index_page = 'scripts/index.md'
