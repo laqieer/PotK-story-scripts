@@ -37,8 +37,17 @@ def load_unit_data(masterdata_folder):
             unit_ids_by_name[unit['name']].append(unit['ID'])
     return unit_data, unit_ids_by_name
 
+def load_mob_unit_data():
+    mob_unit_data = {}
+    with open('MobUnits.json', 'r', encoding='utf-8') as f_mob_unit:
+        data = json.load(f_mob_unit)
+        for mob_unit in data:
+            mob_unit_data[mob_unit['ID']] = mob_unit
+    return mob_unit_data
+
 def parse_script_files(masterdata_folder, extracted_folder):
     unit_data, unit_ids_by_name = load_unit_data(masterdata_folder)
+    mob_unit_data = load_mob_unit_data()
     for script_index, script_id in enumerate(script_ids):
         script_file = os.path.join('scripts/', f"{script_id}.txt")
         page_file = os.path.join('pages/', f"{script_id}.md")
@@ -164,6 +173,11 @@ def parse_script_files(masterdata_folder, extracted_folder):
                                         if uid in unit_data and speaker in unit_data[uid]['name']:
                                             active_unit = uid
                                             break
+                                if active_unit is None:
+                                    for uid in active_units:
+                                        if uid in mob_unit_data and speaker in mob_unit_data[uid]['name']:
+                                            active_unit = uid
+                                            break
                                 if active_unit is not None:
                                     if active_unit in unit_data: # not mob unit
                                         res_ref_unit_id = unit_data[active_unit]['resource_reference_unit_id_UnitUnit']
@@ -175,6 +189,10 @@ def parse_script_files(masterdata_folder, extracted_folder):
                                                 warnings.warn(f"Unit {res_ref_unit_id} thumbnail not found")
                                         # f_page.write(f"\n![{res_ref_unit_id}.png](../{unit_thumb})")
                                         f_page.write(f'\n<img src="../{unit_thumb}" alt="{res_ref_unit_id}.png" height="34"/>')
+                                    elif active_unit in mob_unit_data:
+                                        mob_unit_thumb = f'images/units/{active_unit}.png'
+                                        assert os.path.exists(mob_unit_thumb), f"Mob unit {active_unit} thumbnail not found"
+                                        f_page.write(f'\n<img src="../{mob_unit_thumb}" alt="{active_unit}.png" height="34"/>')
                         f_page.write(f"\n【{speaker}】\n")
                     else:
                         f_page.write("\n")
