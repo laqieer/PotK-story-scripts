@@ -328,7 +328,3 @@ earth_prologue_4
 
 - [907100003 第10話 ――ZERO―― 終了後](907100003.md)
 
-earth_endroll
-
-<video controls src="https://github.com/user-attachments/assets/031e182e-b38f-46b9-af09-c42921678e37" type="video/mp4"></video>
-

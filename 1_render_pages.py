@@ -284,7 +284,6 @@ def build_index_page(masterdata_folder):
                     script_names[script_id] = ' '.join([str(script_id), QuestStoryXL[2]['name'], chapter['chapter'], chapter['chapter_name'], story['title']])
                 if len(episode['story_ids']) > 0:
                     f_index.write("\n")
-        f_index.write(f"earth_endroll\n\n{videos['earth_endroll']}\n\n")
 
     # index for StoryPlaybackSeaDetail
     QuestSeaXL = {}
