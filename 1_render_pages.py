@@ -277,6 +277,9 @@ def build_index_page(masterdata_folder):
                 if 'EarthQuestPrologue' in episode:
                     assert episode['EarthQuestPrologue'] in videos, f"Video {episode['EarthQuestPrologue']} not found"
                     f_index.write(f"{episode['EarthQuestPrologue']}\n\n{videos[episode['EarthQuestPrologue']]}\n\n")
+                if episode['script'] > 0:
+                    f_index.write(f"- [{episode['script']} {episode['episode_name']}]({episode['script']}.md)\n")
+                    script_names[episode['script']] = ' '.join([str(episode['script']), QuestStoryXL[2]['name'], chapter['chapter'], chapter['chapter_name'], episode['episode_name']])
                 for story_id in sorted(episode['story_ids'], key=lambda x: EarthQuestStoryPlayback[x]['timing_StoryPlaybackTiming']):
                     story = EarthQuestStoryPlayback[story_id]
                     script_id = story['script_id']
