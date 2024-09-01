@@ -1,6 +1,6 @@
 # 学園編
 
-![logo](../images/story/logo-gakuen.png)
+<img height="96" alt="logo" src="../images/story/logo-gakuen.png">
 
 ![thumb](../images/story/thum04.jpg)
 

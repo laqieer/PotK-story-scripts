@@ -1,6 +1,6 @@
 # 海上編
 
-![logo](../images/story/logo-kaijou.png)
+<img height="64" alt="logo" src="../images/story/logo-kaijou.png">
 
 ![thumb](../images/story/thum03.jpg)
 

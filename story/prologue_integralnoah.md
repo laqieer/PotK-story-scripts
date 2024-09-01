@@ -1,6 +1,6 @@
 # インテグラルノア編
 
-![logo](../images/story/logo-integu.png)
+<img width="32" alt="logo" src="../images/story/logo-integu.png">
 
 ![thumb](../images/story/thum06.jpg)
 
@@ -34,7 +34,7 @@
 
 ![キル姫に宿るキラーズと適合するバイブスを持つ者「奏官」という役目を生みだす](../images/story/prologue_integralnoah/txt11.png)
 
-[![キラーズ](../images/story/prologue_integralnoah/link3.png)![バイブス](../images/story/prologue_integralnoah/link4.png)](prologue.md#キラーズとバイブス)
+[![キラーズ](../images/story/prologue_integralnoah/link3.png)![バイブス](../images/story/prologue_integralnoah/link4.png)](prologue.md)
 
 ![しかし、強大な力を持つキル姫を従えた奏官たちの中には教会の意志に背く者も現れ、](../images/story/prologue_integralnoah/txt12.png)
 
