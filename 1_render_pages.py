@@ -745,6 +745,17 @@ def build_index_page(masterdata_folder):
                 f_index.write(f"- [{script_id} Unit {unitSEASkill_id} {unit['name']}]({script_id}.md)\n")
                 script_names[script_id] = ' '.join([str(script_id), 'unitSEASkill', str(unitSEASkill_id), unit['name']])
 
+    # index for Unit666
+    index_Unit666 = 'pages/Unit666.md'
+    with open(index_Unit666, 'w', encoding='utf-8') as f_index:
+        f_index.write("# Unit666\n\n")
+        for script_id in script_ids:
+            if script_id >= 66600000 and script_id < 66700000:
+                with open(f"scripts/{script_id}.txt", 'r', encoding='utf-8') as f_script:
+                    unit_name = f_script.readlines()[1][2:].strip()
+                    f_index.write(f"- [{script_id} Unit666 {unit_name}]({script_id}.md)\n")
+                    script_names[script_id] = ' '.join([str(script_id), 'Unit666', unit_name])
+
     # index for contents
     index_contents = 'contents.md'
     with open(index_contents, 'w', encoding='utf-8') as f_index:
@@ -763,6 +774,7 @@ def build_index_page(masterdata_folder):
         f_index.write(f"\n## [Tower]({index_TowerPlaybackStoryDetail})\n")
         f_index.write(f"\n## [Event Play]({index_StoryPlaybackEventPlay})\n")
         f_index.write(f"\n## [UnitSEASkill]({index_UnitSEASkill})\n")
+        f_index.write(f"\n## [Unit666]({index_Unit666})\n")
 
     # index for all scripts
     index_page = 'scripts/index.md'

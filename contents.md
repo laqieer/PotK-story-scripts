@@ -24,3 +24,5 @@
 ## [Event Play](pages/StoryPlaybackEventPlay.md)
 
 ## [UnitSEASkill](pages/UnitSEASkill.md)
+
+## [Unit666](pages/Unit666.md)
