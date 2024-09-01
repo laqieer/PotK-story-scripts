@@ -8,7 +8,7 @@
 - [ロストラグナロク編(失われた千年王国編)](pages/StoryPlaybackStoryDetail.md#ロストラグナロク編失われた千年王国編)
 - [新章チュートリアル](pages/StoryPlaybackStoryDetail.md#新章チュートリアル)
 - [インテグラルノア編(擬彩されし不可逆世界編)](pages/StoryPlaybackStoryDetail.md#インテグラルノア編擬彩されし不可逆世界編)
-- [シークレットリーエバーアフター(SecretlyEverAfter)(SEA編)](pages/StoryPlaybackStoryDetail.md#シークレットリーエバーアフターSecretlyEverAfterSEA編)
+- [シークレットリーエバーアフター(Secretly Ever After)(SEA編)](pages/StoryPlaybackStoryDetail.md#シークレットリーエバーアフターsecretly-ever-aftersea編)
 
 ## [エクストラクエスト](pages/StoryPlaybackExtraDetail.md)
 - [ファンキル学園(学園編)(ファントムオブスクール)](pages/StoryPlaybackExtraDetail.md#ファンキル学園学園編ファントムオブスクール)

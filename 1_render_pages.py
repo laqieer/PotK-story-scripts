@@ -4,6 +4,12 @@ import sys
 import shutil
 import warnings
 
+def title_to_anchor(title):
+    return title.replace('(', '').replace(')', '').replace(' ', '-').lower()
+
+def fix_name(name): # to avoid conflict with html tag
+    return name.replace('<', '＜').replace('>', '＞')
+
 videos = {}
 
 # get videos from wiki
@@ -242,7 +248,7 @@ def build_index_page(masterdata_folder):
     QuestStoryXL[3]['name'] += '(ファントム オブ ラブ)'
     QuestStoryXL[4]['name'] += '(失われた千年王国編)'   
     QuestStoryXL[6]['name'] += '(擬彩されし不可逆世界編)'
-    QuestStoryXL[7]['name'] += '(SecretlyEverAfter)(SEA編)'
+    QuestStoryXL[7]['name'] += '(Secretly Ever After)(SEA編)'
     QuestStoryXL[1]['story'] = 'prologue'
     QuestStoryXL[2]['story'] = 'earth'
     QuestStoryXL[3]['story'] = 'love'
@@ -699,8 +705,9 @@ def build_index_page(masterdata_folder):
                 for storyDetail_id in raid['StoryPlaybackRaidDetail']:
                     storyDetail = StoryPlaybackRaidDetail[storyDetail_id]
                     script_id = storyDetail['script_id']
-                    f_index.write(f"- [{script_id} {storyDetail['name']}]({script_id}.md)\n")
+                    f_index.write(f"- [{script_id} {fix_name(storyDetail['name'])}]({script_id}.md)\n")
                     script_names[script_id] = ' '.join([str(script_id), raid['name'], storyDetail['name']])
+                    script_names[script_id] = fix_name(script_names[script_id])
                 if len(raid['StoryPlaybackRaidDetail']) > 0:
                     f_index.write("\n")
 
@@ -743,13 +750,13 @@ def build_index_page(masterdata_folder):
     with open(index_contents, 'w', encoding='utf-8') as f_index:
         f_index.write("# Contents\n\n")
         f_index.write(f"## [ストーリークエスト]({index_StoryPlaybackStoryDetail})\n\n")
-        f_index.write(f"- [{QuestStoryXL[1]['name']}]({index_StoryPlaybackStoryDetail}#{QuestStoryXL[1]['name']})\n")
+        f_index.write(f"- [{QuestStoryXL[1]['name']}]({index_StoryPlaybackStoryDetail}#{title_to_anchor(QuestStoryXL[1]['name'])})\n")
         f_index.write(f"- [{QuestStoryXL[2]['name']}]({index_EarthQuestStoryPlayback})\n")
         f_index.write(f"- [{QuestStoryXL[3]['name']}]({index_StoryPlaybackSeaDetail})\n")
         for i in range(4, max(QuestStoryXL.keys()) + 1):
-            f_index.write(f"- [{QuestStoryXL[i]['name']}]({index_StoryPlaybackStoryDetail}#{QuestStoryXL[i]['name'].replace('(', '').replace(')', '')})\n")
+            f_index.write(f"- [{QuestStoryXL[i]['name']}]({index_StoryPlaybackStoryDetail}#{title_to_anchor(QuestStoryXL[i]['name'])})\n")
         f_index.write(f"\n## [エクストラクエスト]({index_StoryPlaybackExtraDetail})\n")
-        f_index.write(f"- [{QuestExtraLL[1]['name']}]({index_StoryPlaybackExtraDetail}#ファンキル学園学園編ファントムオブスクール)\n")
+        f_index.write(f"- [{QuestExtraLL[1]['name']}]({index_StoryPlaybackExtraDetail}#{title_to_anchor(QuestExtraLL[1]['name'])})\n")
         f_index.write(f"\n## [キャラクタークエスト]({index_StoryPlaybackCharacterDetail})\n")
         f_index.write(f"\n## [Harmony Quest]({index_StoryPlaybackHarmonyDetail})\n")
         f_index.write(f"\n## [ギルドレイド]({index_StoryPlaybackRaidDetail})\n")

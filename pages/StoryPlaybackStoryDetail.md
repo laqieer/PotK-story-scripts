@@ -6305,7 +6305,7 @@ op_fix_2_360x640
 
 ##### 20-99-100 EX編
 
-## シークレットリーエバーアフター(SecretlyEverAfter)(SEA編)
+## シークレットリーエバーアフター(Secretly Ever After)(SEA編)
 
 ###  プロローグ
 
