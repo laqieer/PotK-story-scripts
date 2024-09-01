@@ -1,4 +1,4 @@
-# 地上編
+# [地上編](../story/earth.md)
 
 earth_prologue_5
 

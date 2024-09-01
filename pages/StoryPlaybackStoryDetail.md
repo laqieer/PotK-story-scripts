@@ -1,6 +1,6 @@
 # StoryPlaybackStoryDetail
 
-## 天上編
+## [天上編](../story/prologue.md)
 
 ### 第１章 ラグナの脅威
 
@@ -1281,9 +1281,9 @@ Shortmovie_007
 
 ## [地上編](EarthQuestStoryPlayback.md)
 
-## [海上編](StoryPlaybackSeaDetail.md)
+## [海上編(ファントム オブ ラブ)](StoryPlaybackSeaDetail.md)
 
-## ロストラグナロク編
+## [ロストラグナロク編(失われた千年王国編)](../story/lost_ragnarok.md)
 
 ### 第１章 ネオ・リベリオン
 
@@ -3868,7 +3868,7 @@ op_fix_2_360x640
 
 ##### 1-1-2 新章チュートリアル2
 
-## インテグラルノア編
+## [インテグラルノア編(擬彩されし不可逆世界編)](../story/prologue_integralnoah.md)
 
 ###  プロローグ
 
@@ -6305,7 +6305,7 @@ op_fix_2_360x640
 
 ##### 20-99-100 EX編
 
-## シークレットリーエバーアフター
+## シークレットリーエバーアフター(SecretlyEverAfter)(SEA編)
 
 ###  プロローグ
 

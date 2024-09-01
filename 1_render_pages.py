@@ -239,6 +239,15 @@ def build_index_page(masterdata_folder):
             d['QuestStoryM'] = []
             d['QuestStoryS'] = []
             QuestStoryXL[d['ID']] = d
+    QuestStoryXL[3]['name'] += '(ファントム オブ ラブ)'
+    QuestStoryXL[4]['name'] += '(失われた千年王国編)'   
+    QuestStoryXL[6]['name'] += '(擬彩されし不可逆世界編)'
+    QuestStoryXL[7]['name'] += '(SecretlyEverAfter)(SEA編)'
+    QuestStoryXL[1]['story'] = 'prologue'
+    QuestStoryXL[2]['story'] = 'earth'
+    QuestStoryXL[3]['story'] = 'love'
+    QuestStoryXL[4]['story'] = 'lost_ragnarok'
+    QuestStoryXL[6]['story'] = 'prologue_integralnoah'
     
     # index for EarthQuestStoryPlayback
     EarthQuestChapter = {}
@@ -267,7 +276,7 @@ def build_index_page(masterdata_folder):
             EarthQuestEpisode[d['episode_EarthQuestEpisode']]['story_ids'].append(d['ID'])
     index_EarthQuestStoryPlayback = 'pages/EarthQuestStoryPlayback.md'
     with open(index_EarthQuestStoryPlayback, 'w', encoding='utf-8') as f_index:
-        f_index.write(f"# {QuestStoryXL[2]['name']}\n\n")
+        f_index.write(f"# [{QuestStoryXL[2]['name']}](../story/{QuestStoryXL[2]['story']}.md)\n\n")
         f_index.write(f"earth_prologue_5\n\n{videos['earth_prologue_5']}\n\n")
         for chapter in sorted(EarthQuestChapter.values(), key=lambda x: x['ID']):
             f_index.write(f"## {chapter['chapter']} {chapter['chapter_name']}\n\n")
@@ -339,7 +348,7 @@ def build_index_page(masterdata_folder):
             QuestSeaS[d['quest_s_id_QuestSeaS']]['StoryPlaybackSeaDetail'].append(d['ID'])
     index_StoryPlaybackSeaDetail = 'pages/StoryPlaybackSeaDetail.md'
     with open(index_StoryPlaybackSeaDetail, 'w', encoding='utf-8') as f_index:
-        f_index.write(f"# {QuestStoryXL[3]['name']}\n\n")
+        f_index.write(f"# [{QuestStoryXL[3]['name']}](../story/{QuestStoryXL[3]['story']}.md)\n\n")
         for questSeaXL_id in sorted(QuestSeaXL.keys()):
             questSeaXL = QuestSeaXL[questSeaXL_id]
             assert questSeaXL['name']
@@ -413,7 +422,10 @@ def build_index_page(masterdata_folder):
         for questStoryXL_id in sorted(QuestStoryXL.keys()):
             questStoryXL = QuestStoryXL[questStoryXL_id]
             if len(questStoryXL['QuestStoryS']) > 0:
-                f_index.write(f"## {questStoryXL['name']}\n\n")
+                if 'story' in questStoryXL:
+                    f_index.write(f"## [{questStoryXL['name']}](../story/{questStoryXL['story']}.md)\n\n")
+                else:
+                    f_index.write(f"## {questStoryXL['name']}\n\n")
                 for questStoryL_id in questStoryXL['QuestStoryL']:
                     questStoryL = QuestStoryL[questStoryL_id]
                     if len(questStoryL['QuestStoryS']) > 0 and questStoryL['quest_mode_CommonQuestMode'] == 1:
@@ -542,6 +554,8 @@ def build_index_page(masterdata_folder):
             d['QuestExtraL'] = []
             d['QuestExtraM'] = []
             QuestExtraLL[d['ID']] = d
+    QuestExtraLL[1]['name'] += '(学園編)(ファントムオブスクール)'
+    QuestExtraLL[1]['story'] = 'school'
     QuestExtraL = {}
     with open(os.path.join(masterdata_folder, 'QuestExtraL.json'), 'r', encoding='utf-8') as f_QuestExtraL:
         data = json.load(f_QuestExtraL)
@@ -586,7 +600,10 @@ def build_index_page(masterdata_folder):
         f_index.write("# エクストラクエスト\n\n")
         for questExtraLL_id in sorted(QuestExtraLL.keys()):
             questExtraLL = QuestExtraLL[questExtraLL_id]
-            f_index.write(f"## {questExtraLL['name']}\n\n")
+            if 'story' in questExtraLL:
+                f_index.write(f"## [{questExtraLL['name']}](../story/{questExtraLL['story']}.md)\n\n")
+            else:
+                f_index.write(f"## {questExtraLL['name']}\n\n")
             for questExtraM_id in questExtraLL['QuestExtraM']:
                 questExtraM = QuestExtraM[questExtraM_id]
                 category = QuestExtraCategory[questExtraM['category_QuestExtraCategory']]
@@ -730,8 +747,9 @@ def build_index_page(masterdata_folder):
         f_index.write(f"- [{QuestStoryXL[2]['name']}]({index_EarthQuestStoryPlayback})\n")
         f_index.write(f"- [{QuestStoryXL[3]['name']}]({index_StoryPlaybackSeaDetail})\n")
         for i in range(4, max(QuestStoryXL.keys()) + 1):
-            f_index.write(f"- [{QuestStoryXL[i]['name']}]({index_StoryPlaybackStoryDetail}#{QuestStoryXL[i]['name']})\n")
+            f_index.write(f"- [{QuestStoryXL[i]['name']}]({index_StoryPlaybackStoryDetail}#{QuestStoryXL[i]['name'].replace('(', '').replace(')', '')})\n")
         f_index.write(f"\n## [エクストラクエスト]({index_StoryPlaybackExtraDetail})\n")
+        f_index.write(f"- [{QuestExtraLL[1]['name']}]({index_StoryPlaybackExtraDetail}#ファンキル学園学園編ファントムオブスクール)\n")
         f_index.write(f"\n## [キャラクタークエスト]({index_StoryPlaybackCharacterDetail})\n")
         f_index.write(f"\n## [Harmony Quest]({index_StoryPlaybackHarmonyDetail})\n")
         f_index.write(f"\n## [ギルドレイド]({index_StoryPlaybackRaidDetail})\n")
