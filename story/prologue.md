@@ -120,3 +120,94 @@
 彼女たちは、同じ姿かたち・能力を持った存在が無数におり、最後のひとりとなるまで闘い・統合することを宿命づけられているという。
 
 ティルフィングからキラープリンセスの力を引き出す能力「バイブス」の持ち主であると告げられた主人公は、彼女の闘いの手助けをし、そして自らの記憶を取り戻すために長い長い旅に出ることになる。
+
+## Character
+
+[![ティルフィング](../images/story/character/thumb1.png)](#detail_1)
+[![デュリン](../images/story/character/thumb2.png)](#detail_2)
+[![マサムネ](../images/story/character/thumb3.png)](#detail_3)
+[![パラシュ](../images/story/character/thumb4.png)](#detail_4)
+[![ロンギヌス](../images/story/character/thumb5.png)](#detail_5)
+[![フライクーゲル](../images/story/character/thumb6.png)](#detail_6)
+[![レーヴァテイン](../images/story/character/thumb7.png)](#detail_7)
+[![アルテミス](../images/story/character/thumb8.png)](#detail_8)
+[![エロース](../images/story/character/thumb9.png)](#detail_9)
+[![テュルソス](../images/story/character/thumb10.png)](#detail_10)
+
+## ![ティルフィング](../images/story/character/name1.png)
+
+![ティルフィング](../images/story/character/image1.png)
+
+![](../images/story/character/txt1.png)
+
+![](../images/story/character/c1/c_0.png)
+
+## ![デュリン](../images/story/character/name2.png)
+
+![デュリン](../images/story/character/image2.png)
+
+![](../images/story/character/txt2.png)
+
+## ![マサムネ](../images/story/character/name3.png)
+
+![マサムネ](../images/story/character/image3.png)
+
+![](../images/story/character/txt3.png)
+
+![](../images/story/character/c3/c_0.png)
+
+## ![パラシュ](../images/story/character/name4.png)
+
+![パラシュ](../images/story/character/image4.png)
+
+![](../images/story/character/txt4.png)
+
+![](../images/story/character/c4/c_0.png)
+
+## ![ロンギヌス](../images/story/character/name5.png)
+
+![ロンギヌス](../images/story/character/image5.png)
+
+![](../images/story/character/txt5.png)
+
+![](../images/story/character/c5/c_0.png)
+
+## ![フライクーゲル](../images/story/character/name6.png)
+
+![フライクーゲル](../images/story/character/image6.png)
+
+![](../images/story/character/txt6.png)
+
+![](../images/story/character/c6/c_0.png)
+
+## ![レーヴァテイン](../images/story/character/name7.png)
+
+![レーヴァテイン](../images/story/character/image7.png)
+
+![](../images/story/character/txt7.png)
+
+![](../images/story/character/c7/c_0.png)
+
+## ![アルテミス](../images/story/character/name8.png)
+
+![アルテミス](../images/story/character/image8.png)
+
+![](../images/story/character/txt8.png)
+
+![](../images/story/character/c8/c_0.png)
+
+## ![エロース](../images/story/character/name9.png)
+
+![エロース](../images/story/character/image9.png)
+
+![](../images/story/character/txt9.png)
+
+![](../images/story/character/c9/c_0.png)
+
+## ![テュルソス](../images/story/character/name10.png)
+
+![テュルソス](../images/story/character/image10.png)
+
+![](../images/story/character/txt10.png)
+
+![](../images/story/character/c10/c_0.png)
