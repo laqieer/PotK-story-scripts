@@ -123,16 +123,16 @@
 
 ## Character
 
-[![ティルフィング](../images/story/character/thumb1.png)](#detail_1)
-[![デュリン](../images/story/character/thumb2.png)](#detail_2)
-[![マサムネ](../images/story/character/thumb3.png)](#detail_3)
-[![パラシュ](../images/story/character/thumb4.png)](#detail_4)
-[![ロンギヌス](../images/story/character/thumb5.png)](#detail_5)
-[![フライクーゲル](../images/story/character/thumb6.png)](#detail_6)
-[![レーヴァテイン](../images/story/character/thumb7.png)](#detail_7)
-[![アルテミス](../images/story/character/thumb8.png)](#detail_8)
-[![エロース](../images/story/character/thumb9.png)](#detail_9)
-[![テュルソス](../images/story/character/thumb10.png)](#detail_10)
+[![ティルフィング](../images/story/character/thumb1.png)](#ティルフィング)
+[![デュリン](../images/story/character/thumb2.png)](#デュリン)
+[![マサムネ](../images/story/character/thumb3.png)](#マサムネ)
+[![パラシュ](../images/story/character/thumb4.png)](#パラシュ)
+[![ロンギヌス](../images/story/character/thumb5.png)](#ロンギヌス)
+[![フライクーゲル](../images/story/character/thumb6.png)](#フライクーゲル)
+[![レーヴァテイン](../images/story/character/thumb7.png)](#レーヴァテイン)
+[![アルテミス](../images/story/character/thumb8.png)](#アルテミス)
+[![エロース](../images/story/character/thumb9.png)](#エロース)
+[![テュルソス](../images/story/character/thumb10.png)](#テュルソス)
 
 ## ![ティルフィング](../images/story/character/name1.png)
 
