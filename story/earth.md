@@ -107,17 +107,21 @@
 
 ## ![TVCM](../images/story/project_zero/tvcm_title.png)
 
+## TVCM 第一弾「登場篇」
+
 [![TVCM 第一弾](../images/story/project_zero/tvcm_view01.png)](https://www.youtube.com/embed/PZW9bO3MGYw)
 
-## ![TVCM 第一弾](../images/story/project_zero/tvcm_view_title01.png)
+![TVCM 第一弾](../images/story/project_zero/tvcm_view_title01.png)
 
 ![TVCM 第一弾](../images/story/project_zero/tvcm_thumb01.png)
 
 ![TVCM 第一弾](../images/story/project_zero/tvcm_thumb_title01.png)
 
+## TVCM 第二弾「抗え篇」
+
 [![TVCM 第二弾](../images/story/project_zero/tvcm_view02.png)](https://www.youtube.com/embed/Y8pFKAU9ATk)
 
-## ![TVCM 第二弾](../images/story/project_zero/tvcm_view_title02.png)
+![TVCM 第二弾](../images/story/project_zero/tvcm_view_title02.png)
 
 ![TVCM 第二弾](../images/story/project_zero/tvcm_thumb02.png)
 
